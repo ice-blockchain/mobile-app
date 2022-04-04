@@ -1,11 +1,11 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import Home from 'src/screens/Home';
-import Team from 'src/screens/Team';
-import News from 'src/screens/News';
-import Profile from 'src/screens/Profile';
-import WebView from 'src/screens/WebView';
+import WebView from '@screens/WebView';
+import Home from '@screens/Home';
+import Team from '@screens/Team';
+import News from '@screens/News';
+import Profile from '@screens/Profile';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();

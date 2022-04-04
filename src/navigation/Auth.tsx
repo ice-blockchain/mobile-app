@@ -1,12 +1,12 @@
 import React from 'react';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import Intro from 'src/screens/KYC/Intro';
 import CheckEmail from 'src/screens/KYC/CheckEmail';
 import ClaimNickname from 'src/screens/KYC/ClaimNickname';
 import Invite from 'src/screens/KYC/Invite';
 import Welcome from 'src/screens/KYC/Welcome';
-// import WebView from 'src/screens/WebView';
-import KYCGetInitialScreen from 'src/utils/KYCGetInitialScreen';
+import WebView from 'src/screens/WebView';
+import AuthNavigationHelper from 'src/utils/AuthNavigationHelper';
+import Intro from 'src/screens/KYC/Intro';
 
 const Stack = createStackNavigator();
 
@@ -19,7 +19,7 @@ const screenOptions = {
 };
 
 function Signup() {
-  const initial = KYCGetInitialScreen();
+  const initial = AuthNavigationHelper();
   return (
     <Stack.Navigator screenOptions={screenOptions} initialRouteName={initial}>
       <Stack.Screen name="Intro" component={Intro} />
@@ -31,7 +31,7 @@ function Signup() {
   );
 }
 
-export default function KYC() {
+export default function AuthNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{
@@ -39,7 +39,7 @@ export default function KYC() {
         ...TransitionPresets.ModalSlideFromBottomIOS,
       }}>
       <Stack.Screen name="Signup" component={Signup} />
-      {/* <Stack.Screen name="WebView" component={WebView} /> */}
+      <Stack.Screen name="WebView" component={WebView} />
     </Stack.Navigator>
   );
 }
