@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 import React from 'react';
 import {AppState} from 'react-native';
 import {isAppActive} from 'src/utils/helpers';

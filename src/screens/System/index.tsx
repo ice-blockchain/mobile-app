@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 import React from 'react';
 import NetworkListener from './NetworkListener';
 import AppStateListener from './AppStateListener';

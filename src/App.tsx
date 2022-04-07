@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import Router from '@navigation/Router';

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 import {AppState} from 'react-native';
 // import env from 'src/constants/env';
 

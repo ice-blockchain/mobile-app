@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 // import store from 'src/store';
 
 export default () => {
