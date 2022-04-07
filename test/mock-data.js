@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: BUSL-1.1
 const testUser = {
   user: {
     name: 'Test User',

@@ -1,8 +1,3 @@
-//
-//  File.swift
-//  ICE
-//
-//  Created by Oleg Panfyorov on 04.04.2022.
-//
+// SPDX-License-Identifier: BUSL-1.1
 
 import Foundation
