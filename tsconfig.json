@@ -43,6 +43,7 @@
       // "@hooks": ["app/hooks"],
       /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
       "@components/*": ["src/components/*"],
+      "@api/*": ["src/api/*"],
       "@services/*": ["src/services/*"],
       "@navigation/*": ["src/navigation/*"],
       "@screens/*": ["src/screens/*"],
@@ -54,7 +55,6 @@
       // "@redux/*": ["src/redux/*"],
       // "@styles/*": ["src/styles/*"],
       // "@config/*": ["src/config/*"],
-      // "@api/*": ["src/api/*"],
     },
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
     // "typeRoots": [],                       /* List of folders to include type definitions from. */
