@@ -3,6 +3,7 @@
 import React from 'react';
 import NetworkListener from './NetworkListener';
 import AppStateListener from './AppStateListener';
+import AppStatusListener from './AppStatusListener';
 
 /**
  * System layer, should be used for global listeners and overlays
@@ -15,6 +16,7 @@ export default function System() {
     <>
       <AppStateListener />
       <NetworkListener />
+      <AppStatusListener />
     </>
   );
 }

@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {isAppActive} from '@utils/helpers';
 import React from 'react';
 import {AppState} from 'react-native';
-import {isAppActive} from 'src/utils/helpers';
 
-export default function AppLaunchListener() {
+export default function AppStateListener() {
   const handleAppStateChanged = async () => {
     const active = isAppActive();
     if (!active) {
@@ -15,9 +15,12 @@ export default function AppLaunchListener() {
   };
 
   React.useEffect(() => {
-    AppState.addEventListener('change', handleAppStateChanged);
+    const stateListener = AppState.addEventListener(
+      'change',
+      handleAppStateChanged,
+    );
     return () => {
-      AppState.removeListener('change', handleAppStateChanged);
+      stateListener.remove();
     };
   }, []);
 
