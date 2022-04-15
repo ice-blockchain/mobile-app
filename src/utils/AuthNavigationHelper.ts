@@ -7,7 +7,7 @@ export default () => {
   const token = ''; //TODO: get from store
   const profile = {}; //TODO: get from store
 
-  if (profile?.kyc_finished) {
+  if (profile?.profile_filled) {
     return '';
   }
 

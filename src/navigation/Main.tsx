@@ -8,6 +8,7 @@ import Home from '@screens/Home';
 import Team from '@screens/Team';
 import News from '@screens/News';
 import Profile from '@screens/Profile';
+import Settings from '@screens/Settings';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -50,6 +51,7 @@ const ProfileTab = () => (
     screenOptions={tabOptions}
     detachInactiveScreens={false}>
     <Tabs.Screen name="Profile" component={Profile} />
+    <Tabs.Screen name="Settings" component={Settings} />
   </Tabs.Navigator>
 );
 

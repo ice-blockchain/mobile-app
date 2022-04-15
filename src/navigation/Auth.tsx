@@ -2,13 +2,13 @@
 
 import React from 'react';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import CheckEmail from 'src/screens/KYC/CheckEmail';
-import ClaimNickname from 'src/screens/KYC/ClaimNickname';
-import Invite from 'src/screens/KYC/Invite';
-import Welcome from 'src/screens/KYC/Welcome';
+import CheckEmail from '@screens/AuthFlow/CheckEmail';
+import ClaimNickname from '@screens/AuthFlow/ClaimNickname';
+import Invite from '@screens/AuthFlow/Invite';
+import Welcome from '@screens/AuthFlow/Welcome';
 import WebView from 'src/screens/WebView';
 import AuthNavigationHelper from 'src/utils/AuthNavigationHelper';
-import Intro from 'src/screens/KYC/Intro';
+import Intro from '@screens/AuthFlow/Intro';
 
 const Stack = createStackNavigator();
 
