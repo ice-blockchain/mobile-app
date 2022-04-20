@@ -1,9 +1,16 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import React from 'react';
+import NewsActions from '@modules/News/actions';
+import React, {useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import {useDispatch} from 'react-redux';
 
 const News = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(NewsActions.NEWS_LOAD.START.create({isRefresh: true}));
+  }, [dispatch]);
+
   return (
     <View style={styles.container}>
       <Text>News</Text>

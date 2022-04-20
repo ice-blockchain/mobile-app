@@ -1,0 +1,40 @@
+// SPDX-License-Identifier: BUSL-1.1
+
+import {Action} from 'redux';
+import {
+  fork,
+  take,
+  cancel,
+  ActionPattern,
+  HelperWorkerParameters,
+} from 'redux-saga/effects';
+
+export function takeLatestEveryUnique<
+  A extends Action,
+  Fn extends (...args: any[]) => any,
+>(
+  patternOrChannel: ActionPattern,
+  worker: Fn,
+  ...args: HelperWorkerParameters<A, Fn>
+) {
+  return fork(function* () {
+    const tasksSet = new Map();
+
+    while (true) {
+      const action = yield take(patternOrChannel);
+      const {id} = action;
+
+      if (tasksSet.has(id)) {
+        yield cancel(tasksSet.get(id)); // cancel is no-op if the task has already terminated
+        tasksSet.delete(id);
+      }
+
+      const task = yield fork<Fn>(
+        worker,
+        ...(args.concat(action) as Parameters<Fn>),
+      );
+
+      tasksSet.set(id, task);
+    }
+  });
+}

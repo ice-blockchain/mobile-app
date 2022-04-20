@@ -13,6 +13,16 @@ export interface User {
 }
 
 /**
+ * The news post type
+ */
+export interface NewsPost {
+  id: string;
+  title: string | null;
+  description: string | null;
+  placeholderUrl: string | null;
+}
+
+/**
  * Entire application state
  */
 export type StoreState = {};

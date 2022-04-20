@@ -3,6 +3,8 @@
 import {combineReducers} from 'redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {persistReducer} from 'redux-persist';
+import news from '@modules/News/reducer';
+import utilityProcessStatuses from '@modules/UtilityProcessStatuses/reducer';
 
 const persistConfig = {
   key: 'root',
@@ -11,7 +13,10 @@ const persistConfig = {
   whitelist: [],
 };
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  news,
+  utilityProcessStatuses,
+});
 
 export type RootState = ReturnType<typeof rootReducer>;
 

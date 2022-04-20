@@ -50,6 +50,7 @@
       "@images/*": ["src/images/*"],
       "@translations/*": ["src/translations/*"],
       "@utils/*": ["src/utils/*"],
+      "@modules/*": ["src/modules/*"],
       "mock-data": ["test/mock-data"],
       "types": ["src/types"]
       // "@redux/*": ["src/redux/*"],
