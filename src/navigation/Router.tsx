@@ -3,7 +3,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import Main from './Main';
-// import selectors from 'src/store/selectors';
+// import selectors from '@store/selectors';
 // import AuthFlow from './AuthFlow';
 
 function ActiveNavigator() {

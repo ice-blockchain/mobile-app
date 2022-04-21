@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-// import store from 'src/store';
+// import store from '@store';
 
 export default () => {
   // const { token, profile } = store.getState().auth;

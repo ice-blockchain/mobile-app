@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import ActionSubtype from '@modules/utils/actions/subtypes';
+import {RootState} from '@store/rootReducer';
+import ActionSubtype from '@store/utils/actions/subtypes';
 import lodashGet from 'lodash/get';
-import {RootState} from 'src/rootReducer';
 
-import {ActionData} from './reducer';
+import {ActionData} from '../reducer';
 
 interface Action {
   id?: string | number;

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {createAction} from '@store/utils/actions/createAction';
 import {NewsPost} from 'src/types/store';
-import {createAction} from '../utils/actions/createAction';
 
 const NEWS_LOAD = createAction('NEWS_LOAD', {
   START: (payload: {isRefresh: boolean}) => payload,

@@ -4,8 +4,8 @@ import {all, takeLeading} from 'redux-saga/effects';
 
 import loadNewsPostSaga from './loadNewsPostSaga';
 import loadNewsSaga from './loadNewsSaga';
-import {takeLatestEveryUnique} from '@modules/utils/sagas/effects';
 import NewsActions from '../actions';
+import {takeLatestEveryUnique} from '@store/utils/sagas/effects';
 
 export default function* rootSaga() {
   yield all([

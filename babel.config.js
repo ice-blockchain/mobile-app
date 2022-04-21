@@ -24,7 +24,6 @@ module.exports = api => {
             '@store': './src/store',
             '@translations': './src/translations',
             '@utils': './src/utils',
-            '@modules': './src/modules',
             'mock-data': './test/mock-data',
             types: './src/types',
           },

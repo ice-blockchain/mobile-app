@@ -50,10 +50,10 @@
       "@images/*": ["src/images/*"],
       "@translations/*": ["src/translations/*"],
       "@utils/*": ["src/utils/*"],
-      "@modules/*": ["src/modules/*"],
+      "@store/*": ["src/store/*"],
       "mock-data": ["test/mock-data"],
       "types": ["src/types"]
-      // "@redux/*": ["src/redux/*"],
+
       // "@styles/*": ["src/styles/*"],
       // "@config/*": ["src/config/*"],
     },

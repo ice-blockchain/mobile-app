@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import NewsActions from '@modules/News/actions';
+import NewsActions from '@store/modules/News/actions';
 import React, {useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {useDispatch} from 'react-redux';

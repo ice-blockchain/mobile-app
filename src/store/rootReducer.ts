@@ -3,8 +3,8 @@
 import {combineReducers} from 'redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {persistReducer} from 'redux-persist';
-import news from '@modules/News/reducer';
-import utilityProcessStatuses from '@modules/UtilityProcessStatuses/reducer';
+import news from '../store/modules/News/reducer';
+import utilityProcessStatuses from '../store/modules/UtilityProcessStatuses/reducer';
 
 const persistConfig = {
   key: 'root',

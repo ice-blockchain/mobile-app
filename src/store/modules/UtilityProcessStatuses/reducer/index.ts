@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {ACTION_DIVIDER} from '@modules/utils/actions/createAction';
+import {ACTION_DIVIDER} from '@store/utils/actions/createAction';
 import lodashHead from 'lodash/head';
 import lodashLast from 'lodash/last';
 // TODO: connect auth actions

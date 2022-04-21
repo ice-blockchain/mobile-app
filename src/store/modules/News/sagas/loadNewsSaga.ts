@@ -4,7 +4,7 @@ import {put, select} from 'redux-saga/effects';
 // import AuthSelectors from 'src/modules/Auth/selectors';
 // import Api from 'src/api';
 // import {ApiNews, LIMIT} from 'src/api/news/getNews';
-import NewsSelectors from '../selectors';
+// import NewsSelectors from '../selectors';
 import NewsActions from '../actions';
 import {NewsPost} from 'src/types/store';
 

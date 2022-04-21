@@ -2,8 +2,8 @@
 
 import {put} from 'redux-saga/effects';
 // TODO: connect API
-import Api from 'src/api';
-import {NewsPost} from 'src/types/store';
+// import Api from 'src/api';
+// import {NewsPost} from 'src/types/store';
 import NewsActions from '../actions';
 
 const actionCreator = NewsActions.NEWS_POST_LOAD(null).START.create;
