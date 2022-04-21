@@ -6,7 +6,7 @@ import {put, select} from 'redux-saga/effects';
 // import {ApiNews, LIMIT} from 'src/api/news/getNews';
 // import NewsSelectors from '../selectors';
 import NewsActions from '../actions';
-import {NewsPost} from 'src/types/store';
+import {NewsPost} from '@store/types';
 
 export default function* loadNewsSaga(
   action: ReturnType<typeof NewsActions.NEWS_LOAD.START.create>,

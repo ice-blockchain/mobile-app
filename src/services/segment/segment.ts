@@ -10,7 +10,7 @@ import {
   getPageNameAndProperties,
   getShareEventProperties,
 } from '@services/segment/utils';
-import {Content, StoreState, User} from 'src/types/store';
+import {Content, StoreState, User} from '@store/types';
 
 const SEGMENT_DEV_KEY = 'HqCDEAupMC9XrnZuKlIgtoMEiUESoexp';
 

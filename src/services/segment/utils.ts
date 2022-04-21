@@ -2,7 +2,7 @@
 
 import {ShareResourceType} from '@services/segment/types';
 import {JsonMap} from '@segment/analytics-react-native';
-import {Content, StoreState, User} from 'src/types/store';
+import {Content, StoreState, User} from '@store/types';
 
 export function getPageName(
   routeName: string,

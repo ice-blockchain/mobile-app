@@ -52,8 +52,7 @@
       "@utils/*": ["src/utils/*"],
       "@store/*": ["src/store/*"],
       "mock-data": ["test/mock-data"],
-      "types": ["src/types"]
-
+      "types": ["src/store/types"]
       // "@styles/*": ["src/styles/*"],
       // "@config/*": ["src/config/*"],
     },
