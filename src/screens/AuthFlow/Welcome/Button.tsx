@@ -1,5 +1,7 @@
 import React from 'react';
 import {Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {FONTS} from '@constants/fonts';
+import {COLORS} from '@constants/colors';
 
 interface ButtonProps {
   onPress: () => void;
@@ -22,7 +24,7 @@ export default Button;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#073e91',
+    backgroundColor: COLORS.primary,
     borderRadius: 11,
     paddingVertical: 12,
     flexDirection: 'row',
@@ -31,7 +33,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
   },
   text: {
-    color: '#FFF',
+    fontFamily: FONTS.primary.black,
+    color: COLORS.white,
     fontSize: 14,
     paddingHorizontal: 4,
   },

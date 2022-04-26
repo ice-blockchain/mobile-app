@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
 import {View, StyleSheet} from 'react-native';
 
+import {COLORS} from '@constants/colors';
 interface DotsProps {
   amount: number;
   activeIndex: number;
@@ -31,9 +32,9 @@ const styles = StyleSheet.create({
     height: 5,
     borderRadius: 4,
     marginRight: 3,
-    backgroundColor: '#707489',
+    backgroundColor: COLORS.greyText,
   },
   activeDot: {
-    backgroundColor: '#0D265E',
+    backgroundColor: COLORS.primary,
   },
 });

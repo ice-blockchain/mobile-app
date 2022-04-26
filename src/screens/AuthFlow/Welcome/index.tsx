@@ -10,6 +10,8 @@ import WelcomeItem from './WelcomeItem';
 
 import {Images} from '@images/index';
 import LogoIconSvg from '@svg/logoIcon';
+import {FONTS, WEIGHTS} from '@constants/fonts';
+import {COLORS} from '@constants/colors';
 
 const Welcome = () => {
   //TODO use i18n
@@ -195,6 +197,10 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     lineHeight: 24,
+    fontFamily: FONTS.primary.regular,
+    fontWeight: WEIGHTS.medium,
+    fontSize: 14,
+    color: COLORS.greyText,
   },
 });
 

@@ -1,6 +1,8 @@
 import * as React from 'react';
 import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 
+import {FONTS, WEIGHTS} from '@constants/fonts';
+import {COLORS} from '@constants/colors';
 interface NotNowButtonProps {
   onPress: () => void;
   disabled: boolean;
@@ -25,6 +27,8 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
   },
   text: {
-    color: '#0D265E',
+    color: COLORS.primary,
+    fontFamily: FONTS.primary.regular,
+    fontWeight: WEIGHTS.medium,
   },
 });

@@ -2,6 +2,8 @@ import * as React from 'react';
 import {Text, View, StyleSheet, Image, ImageRequireSource} from 'react-native';
 import {screenWidth} from 'rn-units';
 
+import {FONTS} from '@constants/fonts';
+import {COLORS} from '@constants/colors';
 interface WelcomeItemProps {
   title: string;
   image: ImageRequireSource;
@@ -42,8 +44,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
+    fontFamily: FONTS.primary.black,
     fontSize: 28,
     textAlign: 'center',
     marginBottom: 21,
+    color: COLORS.primary,
   },
 });
