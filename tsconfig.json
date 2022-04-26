@@ -48,6 +48,7 @@
       "@navigation/*": ["src/navigation/*"],
       "@screens/*": ["src/screens/*"],
       "@images/*": ["src/images/*"],
+      "@svg/*": ["src/svg/*"],
       "@translations/*": ["src/translations/*"],
       "@utils/*": ["src/utils/*"],
       "@store/*": ["src/store/*"],

@@ -23,5 +23,5 @@ export default () => {
     initialScreen = 'Welcome';
   }
 
-  return initialScreen;
+  return 'Welcome';
 };

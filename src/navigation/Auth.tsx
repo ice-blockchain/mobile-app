@@ -6,8 +6,8 @@ import CheckEmail from '@screens/AuthFlow/CheckEmail';
 import ClaimNickname from '@screens/AuthFlow/ClaimNickname';
 import Invite from '@screens/AuthFlow/Invite';
 import Welcome from '@screens/AuthFlow/Welcome';
-import WebView from 'src/screens/WebView';
-import AuthNavigationHelper from 'src/utils/AuthNavigationHelper';
+import AuthNavigationHelper from '@utils/AuthNavigationHelper';
+import WebView from '@screens/WebView';
 import Intro from '@screens/AuthFlow/Intro';
 
 const Stack = createStackNavigator();

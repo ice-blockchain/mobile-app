@@ -20,6 +20,7 @@ module.exports = api => {
             '@services': './src/services',
             '@navigation': './src/navigation',
             '@images': './src/images',
+            '@svg': './src/svg',
             '@screens': './src/screens',
             '@store': './src/store',
             '@translations': './src/translations',

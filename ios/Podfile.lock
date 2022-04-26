@@ -291,6 +291,8 @@ PODS:
     - React-Core
   - react-native-netinfo (8.2.0):
     - React-Core
+  - react-native-pager-view (5.4.15):
+    - React-Core
   - react-native-safe-area-context (4.2.4):
     - RCT-Folly
     - RCTRequired
@@ -417,6 +419,8 @@ PODS:
   - RNSentry (3.4.1):
     - React-Core
     - Sentry (= 7.11.0)
+  - RNSVG (12.3.0):
+    - React-Core
   - Segment-Mixpanel (1.7.2):
     - Analytics
     - Mixpanel (~> 3.9.0)
@@ -476,6 +480,7 @@ DEPENDENCIES:
   - react-native-config (from `../node_modules/react-native-config`)
   - react-native-flipper (from `../node_modules/react-native-flipper`)
   - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
+  - react-native-pager-view (from `../node_modules/react-native-pager-view`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-webview (from `../node_modules/react-native-webview`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -500,6 +505,7 @@ DEPENDENCIES:
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - "RNSentry (from `../node_modules/@sentry/react-native`)"
+  - RNSVG (from `../node_modules/react-native-svg`)
   - "sovran-react-native (from `../node_modules/@segment/sovran-react-native`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -568,6 +574,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-flipper"
   react-native-netinfo:
     :path: "../node_modules/@react-native-community/netinfo"
+  react-native-pager-view:
+    :path: "../node_modules/react-native-pager-view"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-webview:
@@ -616,6 +624,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-screens"
   RNSentry:
     :path: "../node_modules/@sentry/react-native"
+  RNSVG:
+    :path: "../node_modules/react-native-svg"
   sovran-react-native:
     :path: "../node_modules/@segment/sovran-react-native"
   Yoga:
@@ -658,6 +668,7 @@ SPEC CHECKSUMS:
   react-native-config: 6502b1879f97ed5ac570a029961fc35ea606cd14
   react-native-flipper: 6504d02aadad2cce9083b6437fc1927f8e2083bb
   react-native-netinfo: e922cb2e3eaf9ccdf16b8d4744a89657377aa4a1
+  react-native-pager-view: b1914469643f40042e65d78cbf3d3dfebd6fb0d9
   react-native-safe-area-context: f98b0b16d1546d208fc293b4661e3f81a895afd9
   react-native-webview: 0b7bd2bffced115aefd393e1841babd9b9a557b1
   React-perflogger: 15cb741d6c2379f4d3fc8f9e4d4e1110ef3020cb
@@ -682,6 +693,7 @@ SPEC CHECKSUMS:
   RNReanimated: e7d8afaf8fed4b3bf1a46e06adb2e04a2b248f1c
   RNScreens: 40a2cb40a02a609938137a1e0acfbf8fc9eebf19
   RNSentry: fbbdcd7213058e3de5fbaa452b25a06a16b4b382
+  RNSVG: 302bfc9905bd8122f08966dc2ce2d07b7b52b9f8
   Segment-Mixpanel: c08a6e23e4eeb2140a2bb87f5b1c859103b3ecc5
   Sentry: 0c5cd63d714187b4a39c331c1f0eb04ba7868341
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
