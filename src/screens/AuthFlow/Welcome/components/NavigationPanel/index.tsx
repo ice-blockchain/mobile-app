@@ -1,9 +1,9 @@
 import * as React from 'react';
 import {View, StyleSheet} from 'react-native';
 
-import Button from './Button';
-import Dots from './dots';
-import NotNowButton from './NotNowButton';
+import Dots from './components/dots';
+import NotNowButton from './components/NotNowButton';
+import Button from './components/Button';
 
 import NextArrowSvg from '@svg/nextArrow';
 

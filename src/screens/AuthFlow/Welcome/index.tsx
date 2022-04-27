@@ -5,8 +5,8 @@ import {StyleSheet, Text, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
 
-import NavigationPanel from './NavigationPanel';
-import WelcomeItem from './WelcomeItem';
+import WelcomeItem from './components/WelcomeItem';
+import NavigationPanel from './components/NavigationPanel';
 
 import {Images} from '@images/index';
 import LogoIconSvg from '@svg/logoIcon';
