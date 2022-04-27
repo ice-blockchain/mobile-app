@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import {Text, View, StyleSheet, Image, ImageRequireSource} from 'react-native';
-import {screenWidth} from 'rn-units';
+import {rem, font, combineStyles} from 'rn-units';
 
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
@@ -11,15 +11,24 @@ interface WelcomeItemProps {
   image: ImageRequireSource;
   text: JSX.Element;
   index: string;
+  imageSize: {
+    height: number;
+    width: number;
+  };
 }
 
-const WelcomeItem = ({title, image, text}: WelcomeItemProps) => {
+const DESCRIPTION_MARGIN_TOP = 70;
+
+const WelcomeItem = ({title, image, text, imageSize}: WelcomeItemProps) => {
   return (
     <View style={styles.container}>
-      <View style={styles.imageContainer}>
+      <View
+        style={combineStyles(styles.imageContainer, {
+          marginTop: rem(429 - imageSize.height - DESCRIPTION_MARGIN_TOP),
+        })}>
         <Image
           source={image}
-          style={{width: screenWidth - 80, height: screenWidth - 80}}
+          style={{width: imageSize.width, height: imageSize.height}}
           resizeMode={'contain'}
         />
       </View>
@@ -38,18 +47,17 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   imageContainer: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
   description: {
-    flex: 1,
+    marginTop: rem(DESCRIPTION_MARGIN_TOP),
   },
   title: {
     fontFamily: FONTS.primary.black,
-    fontSize: 28,
+    fontSize: font(28),
     textAlign: 'center',
-    marginBottom: 21,
-    color: COLORS.primary,
+    marginBottom: rem(21),
+    color: COLORS.darkBlue,
   },
 });

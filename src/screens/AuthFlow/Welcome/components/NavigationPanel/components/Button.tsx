@@ -2,6 +2,8 @@
 
 import React from 'react';
 import {Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {rem, font} from 'rn-units';
+
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
 
@@ -26,18 +28,19 @@ export default Button;
 
 const styles = StyleSheet.create({
   container: {
+    width: rem(96),
+    height: rem(41),
     backgroundColor: COLORS.primary,
     borderRadius: 11,
-    paddingVertical: 12,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: 14,
   },
   text: {
     fontFamily: FONTS.primary.black,
     color: COLORS.white,
-    fontSize: 14,
-    paddingHorizontal: 4,
+    fontSize: font(14),
+    paddingHorizontal: rem(4),
+    lineHeight: 17,
   },
 });

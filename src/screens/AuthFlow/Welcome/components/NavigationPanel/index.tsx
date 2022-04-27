@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import {View, StyleSheet} from 'react-native';
+import {rem} from 'rn-units';
 
 import Dots from './components/dots';
 import NotNowButton from './components/NotNowButton';
@@ -54,10 +55,7 @@ export default NavigationPanel;
 
 const styles = StyleSheet.create({
   navigationPanel: {
-    position: 'absolute',
-    bottom: 32,
-    left: 0,
-    right: 0,
+    paddingHorizontal: rem(64),
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -65,5 +63,5 @@ const styles = StyleSheet.create({
   hiddenElement: {
     opacity: 0,
   },
-  wrapper: {flex: 1, alignItems: 'center'},
+  wrapper: {alignItems: 'center'},
 });

@@ -3,6 +3,7 @@
 import {COLORS} from '@constants/colors';
 import React, {useEffect, useRef} from 'react';
 import {StyleSheet, Animated} from 'react-native';
+import {rem} from 'rn-units';
 
 interface DotProps {
   isActive: boolean;
@@ -39,13 +40,13 @@ export default Dot;
 
 const styles = StyleSheet.create({
   dot: {
-    height: 5,
-    borderRadius: 4,
-    marginRight: 3,
-    width: 5,
+    height: rem(5),
+    borderRadius: rem(4),
+    marginRight: rem(3),
+    width: rem(5),
     backgroundColor: COLORS.greyText,
   },
   activeDot: {
-    backgroundColor: COLORS.primary,
+    backgroundColor: COLORS.darkBlue,
   },
 });

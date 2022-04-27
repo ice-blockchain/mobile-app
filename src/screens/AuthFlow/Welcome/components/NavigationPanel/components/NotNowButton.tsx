@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import {Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {rem} from 'rn-units';
 
 import {FONTS, WEIGHTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
@@ -25,11 +26,11 @@ export default NotNowButton;
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 18,
-    paddingVertical: 12,
+    paddingHorizontal: rem(18),
+    paddingVertical: rem(12),
   },
   text: {
-    color: COLORS.primary,
+    color: COLORS.darkBlue,
     fontFamily: FONTS.primary.regular,
     fontWeight: WEIGHTS.medium,
   },
