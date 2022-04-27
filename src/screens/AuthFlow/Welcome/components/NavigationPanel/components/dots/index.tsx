@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 import React, {useRef} from 'react';
 import {View, StyleSheet} from 'react-native';
 import Dot from './dot';

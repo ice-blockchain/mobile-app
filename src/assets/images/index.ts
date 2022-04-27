@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 export const Images = {
   welcome: {
     welcome1: require('./welcome/welcome1.png'),

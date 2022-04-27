@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 import * as React from 'react';
 import {Svg, Path} from 'react-native-svg';
 

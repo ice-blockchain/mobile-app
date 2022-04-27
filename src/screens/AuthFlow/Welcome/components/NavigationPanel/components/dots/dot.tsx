@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 import {COLORS} from '@constants/colors';
 import React, {useEffect, useRef} from 'react';
 import {StyleSheet, Animated} from 'react-native';

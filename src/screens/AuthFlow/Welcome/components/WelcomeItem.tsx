@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 import * as React from 'react';
 import {Text, View, StyleSheet, Image, ImageRequireSource} from 'react-native';
 import {screenWidth} from 'rn-units';

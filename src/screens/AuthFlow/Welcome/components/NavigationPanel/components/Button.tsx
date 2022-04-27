@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 import React from 'react';
 import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {FONTS} from '@constants/fonts';
