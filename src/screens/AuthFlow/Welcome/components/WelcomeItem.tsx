@@ -1,14 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import * as React from 'react';
-import {
-  Text,
-  View,
-  StyleSheet,
-  Image,
-  ImageRequireSource,
-  StatusBar,
-} from 'react-native';
+import {Text, View, StyleSheet, Image, ImageRequireSource} from 'react-native';
 import {rem, font, combineStyles, screenHeight} from 'rn-units';
 
 import {FONTS} from '@constants/fonts';

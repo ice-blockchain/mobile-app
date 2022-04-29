@@ -2,6 +2,7 @@
 
 import React, {useRef} from 'react';
 import {View, StyleSheet} from 'react-native';
+import {rem} from 'rn-units';
 import Dot from './dot';
 
 interface DotsProps {
@@ -25,5 +26,6 @@ export default Dots;
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
+    width: rem(60),
   },
 });
