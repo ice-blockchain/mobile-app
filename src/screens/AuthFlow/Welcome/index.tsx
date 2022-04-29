@@ -19,7 +19,7 @@ const Welcome = () => {
   const welcomeScreenData = [
     {
       key: '1',
-      title: 'Welcome to ICE',
+      title: 'Welcome to ice',
       image: Images.welcome.welcome1,
       imageSize: {
         width: rem(272),
@@ -30,14 +30,14 @@ const Welcome = () => {
           <View style={styles.textContainerWithIcon}>
             <LogoIconSvg />
             <View style={styles.textContainer}>
-              <Text style={styles.mediumText}>{' ICE'}</Text>
+              <Text style={styles.mediumText}>{' ice'}</Text>
               <Text style={styles.text}>
                 {' is a digital currency that you can mine'}
               </Text>
             </View>
           </View>
           <Text style={styles.text}>
-            {'on your phone. ICE is owned and operated by'}
+            {'on your phone. ice is owned and operated by'}
           </Text>
           <Text style={styles.text}>{'every day users like yourself.'}</Text>
         </>
@@ -56,7 +56,7 @@ const Welcome = () => {
           <View style={styles.textContainerWithIcon}>
             <LogoIconSvg />
             <View style={styles.textContainer}>
-              <Text style={styles.mediumText}>{' ICE'}</Text>
+              <Text style={styles.mediumText}>{' ice'}</Text>
               <Text style={styles.text}>
                 {' is inherently more energy efficient than BTC'}
               </Text>
@@ -92,7 +92,7 @@ const Welcome = () => {
             <Text style={styles.text}>{'Everything that we develop at '}</Text>
             <LogoIconSvg />
             <View style={styles.textContainer}>
-              <Text style={styles.mediumText}>{' ICE'}</Text>
+              <Text style={styles.mediumText}>{' ice'}</Text>
               <Text style={styles.text}>{' will be'}</Text>
             </View>
           </View>
@@ -124,7 +124,7 @@ const Welcome = () => {
             {'energy-light mobile app. Your daily tap ensures'}
           </Text>
           <Text style={styles.text}>
-            {'that ICE ends up in the hands of real'}
+            {'that ice ends up in the hands of real'}
           </Text>
           <Text style={styles.text}>{'humans, not bots.'}</Text>
         </>
@@ -159,7 +159,7 @@ const Welcome = () => {
           <View style={styles.textContainerWithIcon}>
             <LogoIconSvg />
             <View style={styles.textContainer}>
-              <Text style={styles.mediumText}>{' ICE'}</Text>
+              <Text style={styles.mediumText}>{' ice'}</Text>
               <Text style={styles.text}>
                 {' mining sessions only last for 24 hours.'}
               </Text>

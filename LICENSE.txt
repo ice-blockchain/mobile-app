@@ -7,10 +7,10 @@ License text copyright (c) 2017 MariaDB Corporation Ab, All Rights Reserved.
 
 Parameters
 
-Licensor:             ICE Labs
+Licensor:             ice labs
 
-Licensed Work:        ICE-Blockchain Mobile App 
-                      The Licensed Work is (c) 2022 ICE Labs
+Licensed Work:        ice-blockchain mobile app 
+                      The Licensed Work is (c) 2022 ice labs
 
 Additional Use Grant: Any uses listed and defined at
                       license-grants.ice.io

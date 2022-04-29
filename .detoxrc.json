@@ -5,8 +5,8 @@
   "apps": {
     "ios": {
       "type": "ios.app",
-      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/ICE.app",
-      "build": "xcodebuild -workspace ios/ICE.xcworkspace -scheme ICE -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 13' -derivedDataPath ios/build"
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/ice.app",
+      "build": "xcodebuild -workspace ios/ice.xcworkspace -scheme ice -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 13' -derivedDataPath ios/build"
     },
     "android": {
       "type": "android.apk",

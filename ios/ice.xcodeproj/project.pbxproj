@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* ICETests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ICETests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-ICE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-ICE.a */; };
+		00E356F31AD99517003FC87E /* iceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* iceTests.m */; };
+		0C80B921A6F3F58F76C31292 /* libPods-ice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-ice.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-ICE-ICETests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ICE-ICETests.a */; };
-		7C8E699827FB23F9001ECB36 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E699727FB23F9001ECB36 /* File.swift */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		E4F1E7D4DBE04890A57C5A68 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E8237CE3FE34E13A77C34E2 /* Lato-Black.ttf */; };
+		1DFCA5764FE448E2957E5B08 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDC8E58F23184740A8049FB4 /* Lato-ThinItalic.ttf */; };
+		21F1C086111E40A2845F0FBF /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAE25433D98549B6B7190283 /* Lato-Italic.ttf */; };
+		227D243D672645E2A778F50A /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EF3278C28334651A9662E83 /* Lato-LightItalic.ttf */; };
+		23DB4E9722EC470E97209B60 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE439656D064DF6893C64DD /* Lato-Light.ttf */; };
 		29220779DEAA404289585A7D /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A28D3F1C44B14B588205001B /* Lato-BlackItalic.ttf */; };
 		46D741F9DE9E49E78A8D7271 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5133CDDAEEA842E2B2A90F10 /* Lato-Bold.ttf */; };
+		7699B88040F8A987B510C191 /* libPods-ice-iceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ice-iceTests.a */; };
+		7C8E699827FB23F9001ECB36 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E699727FB23F9001ECB36 /* File.swift */; };
 		7F1BCC2AE1094DCABE9BAB93 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DC12EDEBE514DE4BD5F1D94 /* Lato-BoldItalic.ttf */; };
-		21F1C086111E40A2845F0FBF /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAE25433D98549B6B7190283 /* Lato-Italic.ttf */; };
-		23DB4E9722EC470E97209B60 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE439656D064DF6893C64DD /* Lato-Light.ttf */; };
-		227D243D672645E2A778F50A /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EF3278C28334651A9662E83 /* Lato-LightItalic.ttf */; };
-		EA11AECE15C84C0D8AFC2AD9 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D4ED4EE618B4BA8893577CF /* Lato-Regular.ttf */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		CD818713C9F142BAB1A5BCFA /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 343F9A956B7045398C5D1043 /* Lato-Thin.ttf */; };
-		1DFCA5764FE448E2957E5B08 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDC8E58F23184740A8049FB4 /* Lato-ThinItalic.ttf */; };
+		E4F1E7D4DBE04890A57C5A68 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E8237CE3FE34E13A77C34E2 /* Lato-Black.ttf */; };
+		EA11AECE15C84C0D8AFC2AD9 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D4ED4EE618B4BA8893577CF /* Lato-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,40 +33,40 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = ICE;
+			remoteInfo = ice;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* ICETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ICETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* iceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* ICETests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICETests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* ICE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ICE.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ICE/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ICE/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ICE/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ICE/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ICE/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-ICE-ICETests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ICE-ICETests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4392A12AC88292D35C810B /* Pods-ICE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICE.debug.xcconfig"; path = "Target Support Files/Pods-ICE/Pods-ICE.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-ICE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICE.release.xcconfig"; path = "Target Support Files/Pods-ICE/Pods-ICE.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-ICE-ICETests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICE-ICETests.debug.xcconfig"; path = "Target Support Files/Pods-ICE-ICETests/Pods-ICE-ICETests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-ICE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ICE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C8E699627FB23F9001ECB36 /* ICE-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ICE-Bridging-Header.h"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* iceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iceTests.m; sourceTree = "<group>"; };
+		0DC12EDEBE514DE4BD5F1D94 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BoldItalic.ttf"; path = "../src/assets/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		0EF3278C28334651A9662E83 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-LightItalic.ttf"; path = "../src/assets/fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* ice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ice/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ice/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ice/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ice/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ice/main.m; sourceTree = "<group>"; };
+		19F6CBCC0A4E27FBF8BF4A61 /* libPods-ice-iceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ice-iceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		343F9A956B7045398C5D1043 /* Lato-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Thin.ttf"; path = "../src/assets/fonts/Lato-Thin.ttf"; sourceTree = "<group>"; };
+		3B4392A12AC88292D35C810B /* Pods-ice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ice.debug.xcconfig"; path = "Target Support Files/Pods-ice/Pods-ice.debug.xcconfig"; sourceTree = "<group>"; };
+		4BE439656D064DF6893C64DD /* Lato-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Light.ttf"; path = "../src/assets/fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
+		4E8237CE3FE34E13A77C34E2 /* Lato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Black.ttf"; path = "../src/assets/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
+		5133CDDAEEA842E2B2A90F10 /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../src/assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		5709B34CF0A7D63546082F79 /* Pods-ice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ice.release.xcconfig"; path = "Target Support Files/Pods-ice/Pods-ice.release.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-ice-iceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ice-iceTests.debug.xcconfig"; path = "Target Support Files/Pods-ice-iceTests/Pods-ice-iceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5DCACB8F33CDC322A6C60F78 /* libPods-ice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ice.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D4ED4EE618B4BA8893577CF /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../src/assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		7C8E699627FB23F9001ECB36 /* ice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ice-Bridging-Header.h"; sourceTree = "<group>"; };
 		7C8E699727FB23F9001ECB36 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ICE/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-ICE-ICETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ICE-ICETests.release.xcconfig"; path = "Target Support Files/Pods-ICE-ICETests/Pods-ICE-ICETests.release.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ice/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-ice-iceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ice-iceTests.release.xcconfig"; path = "Target Support Files/Pods-ice-iceTests/Pods-ice-iceTests.release.xcconfig"; sourceTree = "<group>"; };
+		A28D3F1C44B14B588205001B /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BlackItalic.ttf"; path = "../src/assets/fonts/Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		CDC8E58F23184740A8049FB4 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-ThinItalic.ttf"; path = "../src/assets/fonts/Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		4E8237CE3FE34E13A77C34E2 /* Lato-Black.ttf */ = {isa = PBXFileReference; name = "Lato-Black.ttf"; path = "../src/assets/fonts/Lato-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A28D3F1C44B14B588205001B /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Lato-BlackItalic.ttf"; path = "../src/assets/fonts/Lato-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5133CDDAEEA842E2B2A90F10 /* Lato-Bold.ttf */ = {isa = PBXFileReference; name = "Lato-Bold.ttf"; path = "../src/assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0DC12EDEBE514DE4BD5F1D94 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Lato-BoldItalic.ttf"; path = "../src/assets/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FAE25433D98549B6B7190283 /* Lato-Italic.ttf */ = {isa = PBXFileReference; name = "Lato-Italic.ttf"; path = "../src/assets/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4BE439656D064DF6893C64DD /* Lato-Light.ttf */ = {isa = PBXFileReference; name = "Lato-Light.ttf"; path = "../src/assets/fonts/Lato-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0EF3278C28334651A9662E83 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; name = "Lato-LightItalic.ttf"; path = "../src/assets/fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		6D4ED4EE618B4BA8893577CF /* Lato-Regular.ttf */ = {isa = PBXFileReference; name = "Lato-Regular.ttf"; path = "../src/assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		343F9A956B7045398C5D1043 /* Lato-Thin.ttf */ = {isa = PBXFileReference; name = "Lato-Thin.ttf"; path = "../src/assets/fonts/Lato-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CDC8E58F23184740A8049FB4 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Lato-ThinItalic.ttf"; path = "../src/assets/fonts/Lato-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FAE25433D98549B6B7190283 /* Lato-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Italic.ttf"; path = "../src/assets/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-ICE-ICETests.a in Frameworks */,
+				7699B88040F8A987B510C191 /* libPods-ice-iceTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,20 +82,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-ICE.a in Frameworks */,
+				0C80B921A6F3F58F76C31292 /* libPods-ice.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* ICETests */ = {
+		00E356EF1AD99517003FC87E /* iceTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* ICETests.m */,
+				00E356F21AD99517003FC87E /* iceTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = ICETests;
+			path = iceTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -106,7 +106,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* ICE */ = {
+		13B07FAE1A68108700A75B9A /* ice */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -116,66 +116,23 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				7C8E699727FB23F9001ECB36 /* File.swift */,
-				7C8E699627FB23F9001ECB36 /* ICE-Bridging-Header.h */,
+				7C8E699627FB23F9001ECB36 /* ice-Bridging-Header.h */,
 			);
-			name = ICE;
+			name = ice;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-ICE.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-ICE-ICETests.a */,
+				5DCACB8F33CDC322A6C60F78 /* libPods-ice.a */,
+				19F6CBCC0A4E27FBF8BF4A61 /* libPods-ice-iceTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Libraries;
-			sourceTree = "<group>";
-		};
-		83CBB9F61A601CBA00E9B192 = {
-			isa = PBXGroup;
-			children = (
-				13B07FAE1A68108700A75B9A /* ICE */,
-				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* ICETests */,
-				83CBBA001A601CBA00E9B192 /* Products */,
-				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				BBD78D7AC51CEA395F1C20DB /* Pods */,
-				7141AB5077354762B49CDA7B /* Resources */,
-			);
-			indentWidth = 2;
-			sourceTree = "<group>";
-			tabWidth = 2;
-			usesTabs = 0;
-		};
-		83CBBA001A601CBA00E9B192 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				13B07F961A680F5B00A75B9A /* ICE.app */,
-				00E356EE1AD99517003FC87E /* ICETests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3B4392A12AC88292D35C810B /* Pods-ICE.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-ICE.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-ICE-ICETests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-ICE-ICETests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		7141AB5077354762B49CDA7B /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				4E8237CE3FE34E13A77C34E2 /* Lato-Black.ttf */,
 				A28D3F1C44B14B588205001B /* Lato-BlackItalic.ttf */,
@@ -190,14 +147,56 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* ice */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* iceTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				7141AB5077354762B49CDA7B /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* ice.app */,
+				00E356EE1AD99517003FC87E /* iceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B4392A12AC88292D35C810B /* Pods-ice.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-ice.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-ice-iceTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-ice-iceTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* ICETests */ = {
+		00E356ED1AD99517003FC87E /* iceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ICETests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "iceTests" */;
 			buildPhases = (
 				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -211,14 +210,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = ICETests;
-			productName = ICETests;
-			productReference = 00E356EE1AD99517003FC87E /* ICETests.xctest */;
+			name = iceTests;
+			productName = iceTests;
+			productReference = 00E356EE1AD99517003FC87E /* iceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* ICE */ = {
+		13B07F861A680F5B00A75B9A /* ice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ICE" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ice" */;
 			buildPhases = (
 				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -234,9 +233,9 @@
 			);
 			dependencies = (
 			);
-			name = ICE;
-			productName = ICE;
-			productReference = 13B07F961A680F5B00A75B9A /* ICE.app */;
+			name = ice;
+			productName = ice;
+			productReference = 13B07F961A680F5B00A75B9A /* ice.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -256,7 +255,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Ice" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ice" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -269,8 +268,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* ICE */,
-				00E356ED1AD99517003FC87E /* ICETests */,
+				13B07F861A680F5B00A75B9A /* ice */,
+				00E356ED1AD99517003FC87E /* iceTests */,
 			);
 		};
 /* End PBXProject section */
@@ -325,15 +324,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ICE/Pods-ICE-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ice/Pods-ice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ICE/Pods-ICE-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ice/Pods-ice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ICE/Pods-ICE-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ice/Pods-ice-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A448A76FB3B94657AFCC01BF /* Upload Debug Symbols to Sentry */ = {
@@ -365,7 +364,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ICE-ICETests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ice-iceTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -387,7 +386,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ICE-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ice-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -400,15 +399,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ICE-ICETests/Pods-ICE-ICETests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ice-iceTests/Pods-ice-iceTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ICE-ICETests/Pods-ICE-ICETests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ice-iceTests/Pods-ice-iceTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ICE-ICETests/Pods-ICE-ICETests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ice-iceTests/Pods-ice-iceTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
@@ -417,15 +416,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ICE/Pods-ICE-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ice/Pods-ice-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ICE/Pods-ICE-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ice/Pods-ice-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ICE/Pods-ICE-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ice/Pods-ice-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
@@ -434,15 +433,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ICE-ICETests/Pods-ICE-ICETests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ice-iceTests/Pods-ice-iceTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ICE-ICETests/Pods-ICE-ICETests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ice-iceTests/Pods-ice-iceTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ICE-ICETests/Pods-ICE-ICETests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ice-iceTests/Pods-ice-iceTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -471,7 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* ICETests.m in Sources */,
+				00E356F31AD99517003FC87E /* iceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,7 +489,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* ICE */;
+			target = 13B07F861A680F5B00A75B9A /* ice */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -498,14 +497,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-ICE-ICETests.debug.xcconfig */;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-ice-iceTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ICETests/Info.plist;
+				INFOPLIST_FILE = iceTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -519,17 +518,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ICE.app/ICE";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ice.app/ice";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-ICE-ICETests.release.xcconfig */;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-ice-iceTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = ICETests/Info.plist;
+				INFOPLIST_FILE = iceTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -543,19 +542,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ICE.app/ICE";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ice.app/ice";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-ICE.debug.xcconfig */;
+			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-ice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = ICE/Info.plist;
+				INFOPLIST_FILE = ice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -566,8 +565,8 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = ICE;
-				SWIFT_OBJC_BRIDGING_HEADER = "ICE-Bridging-Header.h";
+				PRODUCT_NAME = ice;
+				SWIFT_OBJC_BRIDGING_HEADER = "ice-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -576,12 +575,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-ICE.release.xcconfig */;
+			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-ice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = ICE/Info.plist;
+				INFOPLIST_FILE = ice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -592,8 +591,8 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = ICE;
-				SWIFT_OBJC_BRIDGING_HEADER = "ICE-Bridging-Header.h";
+				PRODUCT_NAME = ice;
+				SWIFT_OBJC_BRIDGING_HEADER = "ice-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -737,7 +736,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ICETests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "iceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -746,7 +745,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ICE" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -755,7 +754,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Ice" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
