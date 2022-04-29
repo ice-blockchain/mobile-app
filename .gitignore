@@ -43,7 +43,6 @@ buck-out/
 !debug.keystore
 
 # keys
-app.json
 android/gradle.properties
 gradle.properties
 
