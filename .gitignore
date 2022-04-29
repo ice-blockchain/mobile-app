@@ -42,6 +42,10 @@ buck-out/
 *.keystore
 !debug.keystore
 
+# keys
+android/gradle.properties
+gradle.properties
+
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
@@ -64,3 +68,16 @@ buck-out/
 .env
 .env.development
 .env.production
+
+# Build related files
+android/app/src/main/assets/app.bundle
+android/app/src/main/assets/index.android.bundle
+ios/framey/Supporting/app.bundle
+ios/framey/Supporting/app.manifest
+android/app/release
+android/app/src/main/assets/app.manifest
+*.jks
+
+coverage/
+
+.history
