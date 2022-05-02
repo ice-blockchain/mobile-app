@@ -3,7 +3,6 @@
 import * as React from 'react';
 import {Text, View, StyleSheet, Image, ImageRequireSource} from 'react-native';
 import {rem, font, combineStyles, screenHeight} from 'rn-units';
-
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
 interface WelcomeItemProps {
@@ -17,13 +16,24 @@ interface WelcomeItemProps {
   };
 }
 
-const SMALL_SCREEEN = screenHeight < 800;
-const DESCRIPTION_MARGIN_TOP = SMALL_SCREEEN ? 50 : 70;
+const DESIGN_SCREEN_HEIGHT = 812;
+const SMALL_SCREEEN = screenHeight < DESIGN_SCREEN_HEIGHT;
+const IMAGE_TITLE_DISTANCE = 70;
+const IMAGE_TITLE_DISTANCE_SMALL_SCREEN = 70;
+const DESCRIPTION_MARGIN_TOP = SMALL_SCREEEN
+  ? IMAGE_TITLE_DISTANCE_SMALL_SCREEN
+  : IMAGE_TITLE_DISTANCE;
+const STATUSBAR_TITLE_DISTANCE = 429;
 
 const WelcomeItem = ({title, image, text, imageSize}: WelcomeItemProps) => {
   const marginTop = SMALL_SCREEEN
-    ? rem(429 - imageSize.height - DESCRIPTION_MARGIN_TOP - 40)
-    : rem(429 - imageSize.height - DESCRIPTION_MARGIN_TOP);
+    ? rem(
+        STATUSBAR_TITLE_DISTANCE -
+          imageSize.height -
+          DESCRIPTION_MARGIN_TOP -
+          40,
+      )
+    : rem(STATUSBAR_TITLE_DISTANCE - imageSize.height - DESCRIPTION_MARGIN_TOP);
   return (
     <View style={styles.container}>
       <View style={combineStyles(styles.imageContainer, {marginTop})}>

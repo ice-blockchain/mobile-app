@@ -3,12 +3,11 @@
 import * as React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
-
 import Dots from './components/dots';
 import NotNowButton from './components/NotNowButton';
 import Button from './components/Button';
-
 import NextArrowSvg from '@svg/nextArrow';
+import {translate} from '@utils/i18n';
 
 interface NavigationPanelProps {
   amount: number;
@@ -40,11 +39,11 @@ const NavigationPanel = ({
         {!isLastPage ? (
           <Button
             onPress={nextPress}
-            text={'Next'}
+            text={translate('global.next_btn')}
             rightIcon={<NextArrowSvg />}
           />
         ) : (
-          <Button onPress={yesPleasePress} text={'Yes, please'} />
+          <Button onPress={yesPleasePress} text={translate('global.yes_btn')} />
         )}
       </View>
     </View>
