@@ -3,12 +3,15 @@
 import * as React from 'react';
 import {Text, View, StyleSheet, Image, ImageRequireSource} from 'react-native';
 import {rem, font, combineStyles, screenHeight} from 'rn-units';
+
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
+import WelcomeItemDescription from './components/WelcomeItemDescription';
+
 interface WelcomeItemProps {
   title: string;
   image: ImageRequireSource;
-  text: JSX.Element;
+  description: Array<String | Array<String | number>>; // where 1 is icon with text 'ice';
   index: string;
   imageSize: {
     height: number;
@@ -25,7 +28,12 @@ const DESCRIPTION_MARGIN_TOP = SMALL_SCREEEN
   : IMAGE_TITLE_DISTANCE;
 const STATUSBAR_TITLE_DISTANCE = 429;
 
-const WelcomeItem = ({title, image, text, imageSize}: WelcomeItemProps) => {
+const WelcomeItem = ({
+  title,
+  image,
+  description,
+  imageSize,
+}: WelcomeItemProps) => {
   const marginTop = SMALL_SCREEEN
     ? rem(
         STATUSBAR_TITLE_DISTANCE -
@@ -45,7 +53,7 @@ const WelcomeItem = ({title, image, text, imageSize}: WelcomeItemProps) => {
       </View>
       <View style={styles.description}>
         <Text style={styles.title}>{title}</Text>
-        {text}
+        <WelcomeItemDescription items={description} />
       </View>
     </View>
   );
