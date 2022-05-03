@@ -22,11 +22,7 @@ const Welcome = () => {
         width: rem(272),
         height: rem(290),
       },
-      description: [
-        [1, translate('welcome.page1.description_row1')],
-        translate('welcome.page1.description_row2'),
-        translate('welcome.page1.description_row3'),
-      ],
+      description: [' ', 0, 1, translate('welcome.page1.description')],
     },
     {
       key: '2',
@@ -36,13 +32,7 @@ const Welcome = () => {
         width: rem(280),
         height: rem(309),
       },
-      description: [
-        [1, translate('welcome.page2.description_row1')],
-        translate('welcome.page2.description_row2'),
-        translate('welcome.page2.description_row3'),
-        translate('welcome.page2.description_row4'),
-        translate('welcome.page2.description_row5'),
-      ],
+      description: [' ', 0, 1, translate('welcome.page2.description')],
     },
     {
       key: '3',
@@ -53,14 +43,10 @@ const Welcome = () => {
         height: rem(233),
       },
       description: [
-        translate('welcome.page2.description_row1'),
-        [
-          translate('welcome.page3.description_row2_part1'),
-          1,
-          translate('welcome.page3.description_row2_part2'),
-        ],
-        translate('welcome.page3.description_row3'),
-        translate('welcome.page3.description_row4'),
+        translate('welcome.page3.description_part1'),
+        0,
+        1,
+        translate('welcome.page3.description_part2'),
       ],
     },
     {
@@ -72,14 +58,9 @@ const Welcome = () => {
         height: rem(280),
       },
       description: [
-        [
-          translate('welcome.page4.description_row1_part1'),
-          0,
-          translate('welcome.page4.description_row1_part2'),
-        ],
-        translate('welcome.page4.description_row2'),
-        translate('welcome.page4.description_row3'),
-        translate('welcome.page4.description_row4'),
+        translate('welcome.page4.description_part1'),
+        0,
+        translate('welcome.page4.description_part2'),
       ],
     },
     {
@@ -90,7 +71,7 @@ const Welcome = () => {
         width: rem(302),
         height: rem(222),
       },
-      description: [translate('welcome.page5.description_row1')],
+      description: [translate('welcome.page5.description')],
     },
     {
       key: '6',
@@ -100,12 +81,7 @@ const Welcome = () => {
         width: rem(281),
         height: rem(262),
       },
-      description: [
-        [1, translate('welcome.page6.description_row1')],
-        translate('welcome.page6.description_row2'),
-        translate('welcome.page6.description_row3'),
-        translate('welcome.page6.description_row4'),
-      ],
+      description: [' ', 0, 1, translate('welcome.page6.description')],
     },
   ];
 

@@ -17,7 +17,7 @@ const NotNowButton = ({onPress, disabled}: NotNowButtonProps) => {
       disabled={disabled}
       onPress={onPress}
       style={styles.container}>
-      <Text style={styles.text}>{translate('global.not_now_btn')}</Text>
+      <Text style={styles.text}>{translate('button.not_now_btn')}</Text>
     </TouchableOpacity>
   );
 };

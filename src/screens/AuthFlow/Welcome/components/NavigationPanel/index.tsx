@@ -39,11 +39,11 @@ const NavigationPanel = ({
         {!isLastPage ? (
           <Button
             onPress={nextPress}
-            text={translate('global.next_btn')}
+            text={translate('button.next_btn')}
             rightIcon={<NextArrowSvg />}
           />
         ) : (
-          <Button onPress={yesPleasePress} text={translate('global.yes_btn')} />
+          <Button onPress={yesPleasePress} text={translate('button.yes_btn')} />
         )}
       </View>
     </View>

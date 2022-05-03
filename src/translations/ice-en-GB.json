@@ -2,48 +2,35 @@
   "welcome": {
       "page1": {
           "title": "Welcome to ice",
-          "description_row1": " is a digital currency that you can mine",
-          "description_row2": "on your phone. ice is owned and operated by",
-          "description_row3": "every day users like yourself."
+          "description": "is a digital currency that you can mine \non your phone. ice is owned and operated by\nevery day users like yourself. "
       },
       "page2": {
           "title": "Planet Friendly",
-          "description_row1": " is inherently more energy efficient than BTC",
-          "description_row2": "as it uses a “Proof of Stake” consensus mechanism.",
-          "description_row3": "With proof-of-stake (POS), cryptocurrency",
-          "description_row4": "owners validate block transactions based on the",
-          "description_row5": "number of coins a validator stakes."
+          "description": "is inherently more energy efficient than BTC\nas it uses a “Proof of Stake” consensus mechanism.\nWith proof-of-stake (POS), cryptocurrency\nowners validate block transactions based on the\nnumber of coins a validator stakes."
       },
       "page3": {
           "title": "People’s Coin",
-          "description_row1": "The power is in your hands.",
-          "description_row2_part1": "Everything that we develop at ",
-          "description_row2_part2": " will be",
-          "description_row3": "open source & controlled by the Decentralized",
-          "description_row4": "Autonomous Organization (DAO)."
+          "description_part1": "The power is in your hands. Everything that we develop at",
+          "description_part2": "will be open source & controlled by the Decentralized Autonomous Organization (DAO). "
       },
       "page4": {
           "title": "Stay Connected",
-          "description_row1_part1": "Tap ",
-          "description_row1_part2": " and start mining today with our free,",
-          "description_row2": "energy-light mobile app. Your daily tap ensures",
-          "description_row3": "that ice ends up in the hands of real",
-          "description_row4": "humans, not bots."
+          "description_part1": "Tap ",
+          "description_part2": "and start mining today with our free, \nenergy-light mobile app. Your daily tap ensures\nthat ice ends up in the hands of real\nhumans, not bots."
       },
       "page5": {
           "title": "Refer & Earn",
-          "description_row1": "Invite your friends and earn(both of you) up to\n25% bonus on your base mining rate for\neach friend that joins your team."
+          "description": "Invite your friends and earn(both of you) up to\n25% bonus on your base mining rate for\neach friend that joins your team."
       },
       "page6": {
           "title": "Notifications",
-          "description_row1": " mining sessions only last for 24 hours.",
-          "description_row2": "Would you like to receive a notification when",
-          "description_row3": "your current session ends? Don’t worry,",
-          "description_row4": "we will not spam you!"
+          "description": "mining sessions only last for 24 hours.\nWould you like to receive a notification when\nyour current session ends? Don’t worry,\nwe will not spam you!"
       }
   },
   "global": {
-      "project_name": " ice",
+      "project_name": " ice"
+  },
+  "button": {
       "yes_btn": "Yes, please",
       "next_btn": "Next",
       "not_now_btn": "not now"

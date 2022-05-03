@@ -71,6 +71,8 @@ const styles = StyleSheet.create({
   },
   description: {
     marginTop: rem(DESCRIPTION_MARGIN_TOP),
+    paddingHorizontal: rem(30),
+    alignItems: 'center',
   },
   title: {
     fontFamily: FONTS.primary.black,
