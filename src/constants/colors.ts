@@ -5,4 +5,5 @@ export const COLORS = {
   primary: '#073e91',
   darkBlue: '#0D265E',
   greyText: '#707489',
+  greyBorder: '#B6B4BA',
 };

@@ -20,8 +20,8 @@ export default () => {
   if (profile?.email) {
     initialScreen = 'ClaimNickname';
   } else {
-    initialScreen = 'Welcome';
+    initialScreen = 'SignIn';
   }
 
-  return 'Welcome';
+  return 'SignIn';
 };

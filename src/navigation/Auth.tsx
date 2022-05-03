@@ -6,6 +6,7 @@ import CheckEmail from '@screens/AuthFlow/CheckEmail';
 import ClaimNickname from '@screens/AuthFlow/ClaimNickname';
 import Invite from '@screens/AuthFlow/Invite';
 import Welcome from '@screens/AuthFlow/Welcome';
+import SignIn from '@screens/AuthFlow/SignIn';
 import AuthNavigationHelper from '@utils/AuthNavigationHelper';
 import WebView from '@screens/WebView';
 import Intro from '@screens/AuthFlow/Intro';
@@ -29,6 +30,7 @@ function Signup() {
       <Stack.Screen name="ClaimNickname" component={ClaimNickname} />
       <Stack.Screen name="Invite" component={Invite} />
       <Stack.Screen name="Welcome" component={Welcome} />
+      <Stack.Screen name="SignIn" component={SignIn} />
     </Stack.Navigator>
   );
 }
