@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import axios from 'src/api/utils/axios';
+import {patch} from '@api/client';
 
 interface Params {
   userId: string;
@@ -8,7 +8,7 @@ interface Params {
 }
 
 export default function updateProfile({userId, username}: Params) {
-  return axios.patch(`/profile/${userId}`, {
+  return patch(`/profile/${userId}`, {
     username,
   });
 }
