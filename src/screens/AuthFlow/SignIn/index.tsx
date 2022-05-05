@@ -17,15 +17,16 @@ import MagicIconSvg from '@svg/magicIcon';
 import {translate} from '@utils/i18n';
 
 import SocialSignIn, {ESocialType} from './components/socialSignIn';
+import {loginUser} from '@services/magicLink';
 
 const SignIn = () => {
   const [email, onChangeEmail] = useState('');
 
-  const onSignIn = () => {};
+  const onSignIn = () => {
+    loginUser(email);
+  };
   const onPhonePress = () => {};
   const onSocialSignInPress = (type: ESocialType) => {
-    console.log('bla type', type);
-
     switch (type) {
       case ESocialType.apple:
         break;

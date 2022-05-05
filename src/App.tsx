@@ -7,6 +7,7 @@ import System from '@screens/System';
 import StoreConfig from './store/configureStore';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
+import magic from '@services/magicLink';
 
 export default function App(): React.ReactNode {
   return (
@@ -15,6 +16,7 @@ export default function App(): React.ReactNode {
         <PersistGate loading={null} persistor={StoreConfig.persistor}>
           <Router />
           <System />
+          <magic.Relayer />
         </PersistGate>
       </Provider>
     </SafeAreaProvider>
