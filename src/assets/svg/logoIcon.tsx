@@ -5,7 +5,7 @@ import {Svg, Path} from 'react-native-svg';
 
 const LogoIconSvg = () => {
   return (
-    <Svg width="23" height="23" viewBox="0 0 23 23" fill="none">
+    <Svg width="18" height="18" viewBox="0 0 23 23" fill="none">
       <Path
         d="M11.5 0L10.4248 7.17459L11.5 10.7777L12.5752 7.17459L11.5 0Z"
         fill="#1B47C3"

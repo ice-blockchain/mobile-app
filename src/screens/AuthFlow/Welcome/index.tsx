@@ -18,30 +18,18 @@ const Welcome = () => {
       key: '1',
       title: translate('welcome.page1.title'),
       image: Images.welcome.welcome1,
-      imageSize: {
-        width: rem(272),
-        height: rem(290),
-      },
-      description: [' ', 0, 1, translate('welcome.page1.description')],
+      description: [0, 1, translate('welcome.page1.description')],
     },
     {
       key: '2',
       title: translate('welcome.page2.title'),
       image: Images.welcome.welcome2,
-      imageSize: {
-        width: rem(280),
-        height: rem(309),
-      },
-      description: [' ', 0, 1, translate('welcome.page2.description')],
+      description: [0, 1, translate('welcome.page2.description')],
     },
     {
       key: '3',
       title: translate('welcome.page3.title'),
       image: Images.welcome.welcome3,
-      imageSize: {
-        width: rem(305),
-        height: rem(233),
-      },
       description: [
         translate('welcome.page3.description_part1'),
         0,
@@ -53,10 +41,6 @@ const Welcome = () => {
       key: '4',
       title: translate('welcome.page4.title'),
       image: Images.welcome.welcome4,
-      imageSize: {
-        width: rem(309),
-        height: rem(280),
-      },
       description: [
         translate('welcome.page4.description_part1'),
         0,
@@ -67,21 +51,13 @@ const Welcome = () => {
       key: '5',
       title: translate('welcome.page5.title'),
       image: Images.welcome.welcome5,
-      imageSize: {
-        width: rem(302),
-        height: rem(222),
-      },
       description: [translate('welcome.page5.description')],
     },
     {
       key: '6',
       title: translate('welcome.page6.title'),
       image: Images.welcome.welcome6,
-      imageSize: {
-        width: rem(281),
-        height: rem(262),
-      },
-      description: [' ', 0, 1, translate('welcome.page6.description')],
+      description: [0, 1, translate('welcome.page6.description')],
     },
   ];
 
@@ -115,7 +91,6 @@ const Welcome = () => {
               image={v.image}
               description={v.description}
               index={v.key}
-              imageSize={v.imageSize}
             />
           </View>
         ))}
@@ -135,7 +110,6 @@ const Welcome = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-end',
     marginBottom: rem(20),
   },
 });

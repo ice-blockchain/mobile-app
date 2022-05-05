@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import {Text, View, StyleSheet, Image, ImageRequireSource} from 'react-native';
-import {rem, font, combineStyles, screenHeight} from 'rn-units';
+import {rem, font, screenHeight} from 'rn-units';
 
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
@@ -11,45 +11,30 @@ import WelcomeItemDescription from './components/WelcomeItemDescription';
 interface WelcomeItemProps {
   title: string;
   image: ImageRequireSource;
-  description: Array<String | Array<String | number>>; // where 1 is icon with text 'ice';
+  description: Array<String | number>; // where 1 is icon with text 'ice';
   index: string;
-  imageSize: {
-    height: number;
-    width: number;
-  };
 }
 
 const DESIGN_SCREEN_HEIGHT = 812;
+const ORIGINAL_IMAGE_HEIGHT = 380;
+const ORIGINAL_IMAGE_WIDTH = 375;
+const DESIGN_MARGIN_TOP = 22;
 const SMALL_SCREEEN = screenHeight < DESIGN_SCREEN_HEIGHT;
-const IMAGE_TITLE_DISTANCE = 70;
-const IMAGE_TITLE_DISTANCE_SMALL_SCREEN = 70;
-const DESCRIPTION_MARGIN_TOP = SMALL_SCREEEN
-  ? IMAGE_TITLE_DISTANCE_SMALL_SCREEN
-  : IMAGE_TITLE_DISTANCE;
-const STATUSBAR_TITLE_DISTANCE = 429;
+const IMAGE_HEIGHT = SMALL_SCREEEN
+  ? (screenHeight / DESIGN_SCREEN_HEIGHT) * ORIGINAL_IMAGE_HEIGHT
+  : ORIGINAL_IMAGE_HEIGHT;
+const IMAGE_WIDTH = SMALL_SCREEEN
+  ? (screenHeight / DESIGN_SCREEN_HEIGHT) * ORIGINAL_IMAGE_WIDTH
+  : ORIGINAL_IMAGE_WIDTH;
+const MARGIN_TOP = SMALL_SCREEEN
+  ? (screenHeight / DESIGN_SCREEN_HEIGHT) * DESIGN_MARGIN_TOP
+  : DESIGN_MARGIN_TOP;
 
-const WelcomeItem = ({
-  title,
-  image,
-  description,
-  imageSize,
-}: WelcomeItemProps) => {
-  const marginTop = SMALL_SCREEEN
-    ? rem(
-        STATUSBAR_TITLE_DISTANCE -
-          imageSize.height -
-          DESCRIPTION_MARGIN_TOP -
-          40,
-      )
-    : rem(STATUSBAR_TITLE_DISTANCE - imageSize.height - DESCRIPTION_MARGIN_TOP);
+const WelcomeItem = ({title, image, description}: WelcomeItemProps) => {
   return (
     <View style={styles.container}>
-      <View style={combineStyles(styles.imageContainer, {marginTop})}>
-        <Image
-          source={image}
-          style={{width: imageSize.width, height: imageSize.height}}
-          resizeMode={'contain'}
-        />
+      <View style={styles.imageContainer}>
+        <Image source={image} style={styles.image} resizeMode={'contain'} />
       </View>
       <View style={styles.description}>
         <Text style={styles.title}>{title}</Text>
@@ -70,7 +55,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   description: {
-    marginTop: rem(DESCRIPTION_MARGIN_TOP),
+    marginTop: rem(MARGIN_TOP),
     paddingHorizontal: rem(30),
     alignItems: 'center',
   },
@@ -78,7 +63,8 @@ const styles = StyleSheet.create({
     fontFamily: FONTS.primary.black,
     fontSize: font(28),
     textAlign: 'center',
-    marginBottom: rem(21),
+    marginBottom: rem(MARGIN_TOP),
     color: COLORS.darkBlue,
   },
+  image: {width: rem(IMAGE_WIDTH), height: rem(IMAGE_HEIGHT)},
 });
