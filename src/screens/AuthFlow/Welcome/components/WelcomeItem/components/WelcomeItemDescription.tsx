@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import * as React from 'react';
-import {Text, StyleSheet} from 'react-native';
+import {Text, StyleSheet, View} from 'react-native';
 import {font, rem, isAndroid} from 'rn-units';
 
 import {COLORS} from '@constants/colors';
@@ -16,18 +16,18 @@ interface WelcomeItemDescriptionProps {
 const WelcomeItemDescription = ({items}: WelcomeItemDescriptionProps) => {
   return (
     <Text style={styles.textContainerWithIcon}>
-      {items.map(item => {
+      {items.map((item, index) => {
         if (typeof item === 'string') {
-          return <Text style={styles.text}>{item}</Text>;
+          return <Text style={styles.text} key={`${index}-item`}>{item}</Text>;
         } else {
           return item === 1 ? (
-            <Text style={styles.mediumText}>{`${translate(
+            <Text style={styles.mediumText} key={`${index}-item`}>{`${translate(
               'global.project_name',
             )} `}</Text>
           ) : (
-            <>
+            <View key={`${index}-item`}>
               <LogoIconSvg />
-            </>
+            </View>
           );
         }
       })}
