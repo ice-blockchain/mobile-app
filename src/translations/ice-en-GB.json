@@ -1,4 +1,13 @@
 {
+  "signIn": {
+    "welcomeBack": "Welcome back",
+    "emailAddress": "Email address",
+    "logInSignUp": "Log in / Sign up",
+    "phone": "Phone",
+    "or": "or",
+    "securedBy": "Secured by ",
+    "welcome": "Welcome"
+  },
   "welcome": {
     "page1": {
       "title": "Welcome to ice",
