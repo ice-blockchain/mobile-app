@@ -7,7 +7,7 @@ import {rem} from 'rn-units';
 import {FONTS, WEIGHTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
 interface NotNowButtonProps {
-  onPress: () => void;
+  onPress?: () => void;
   disabled: boolean;
 }
 

@@ -13,5 +13,15 @@
       "title": "Welcome to ice",
       "description": "is a digital currency that you can mine on your phone. ice is owned and operated by every day users like yourself."
     }
+  },
+  "claimNickname": {
+    "title": "Claim nickname",
+    "description": "Your friends will need to use this\nnickname to join your team.",
+    "inputPlaceholder": "Enter your nickname"
+  },
+  "whoInvitedYou": {
+    "title": "Who invited you?",
+    "description": "Enter the nickname of the person who\ninvited you.",
+    "inputPlaceholder": "Enter nickname"
   }
 }
