@@ -22,6 +22,9 @@
   "whoInvitedYou": {
     "title": "Who invited you?",
     "description": "Enter the nickname of the person who\ninvited you.",
-    "inputPlaceholder": "Enter nickname"
+    "inputPlaceholder": "Enter nickname",
+    "dontHaveInvitationCode": "Don't have an invitation code? ",
+    "tapHere": " Tap here!",
+    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
   }
 }
