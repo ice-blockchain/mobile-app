@@ -1,7 +1,13 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import React, {ReactNode} from 'react';
-import {TextInput, StyleSheet, View, StyleProp} from 'react-native';
+import {
+  TextInput,
+  StyleSheet,
+  View,
+  StyleProp,
+  KeyboardTypeOptions,
+} from 'react-native';
 import {rem, font} from 'rn-units';
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
@@ -14,6 +20,7 @@ interface CommonInputProps {
   placeholder: string;
   placeholderColor?: string;
   containerStyle?: StyleProp<ViewStyle>;
+  keyboardType?: KeyboardTypeOptions;
 }
 
 const CommonInput = ({
@@ -22,6 +29,7 @@ const CommonInput = ({
   value,
   placeholder,
   containerStyle,
+  keyboardType,
 }: CommonInputProps) => {
   return (
     <View style={[styles.container, containerStyle]}>
@@ -31,6 +39,8 @@ const CommonInput = ({
         value={value}
         placeholder={placeholder}
         style={styles.input}
+        keyboardType={keyboardType}
+        autoCapitalize="none"
       />
     </View>
   );
@@ -54,6 +64,7 @@ const styles = StyleSheet.create({
     paddingLeft: rem(6),
     fontSize: font(15),
     lineHeight: rem(18),
+    flex: 1,
     fontFamily: FONTS.primary.regular,
   },
 });

@@ -4,7 +4,6 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, View, StatusBar} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {rem, font} from 'rn-units';
-
 import LogoSvg from '@svg/logo';
 import EmailSvg from '@svg/emailIcon';
 import PhoneSvg from '@svg/phoneIcon';
@@ -15,24 +14,42 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import MagicIconSvg from '@svg/magicIcon';
 import {translate} from '@utils/i18n';
-
+import {StackNavigationProp} from '@react-navigation/stack';
+import {SignUpStackParamList} from '@navigation/Auth';
 import SocialSignIn, {ESocialType} from './components/socialSignIn';
-import {loginUser} from '@services/magicLink';
+import {
+  loginUser,
+  googleLogin,
+  facebookLogin,
+  appleLogin,
+} from '@services/magicLink';
 
-const SignIn = () => {
+type Props = {
+  navigation: StackNavigationProp<SignUpStackParamList, 'SignIn'>;
+};
+
+const SignIn = ({navigation}: Props) => {
   const [email, onChangeEmail] = useState('');
 
-  const onSignIn = () => {
-    loginUser(email);
+  const onSignIn = async () => {
+    try {
+      await loginUser(email);
+      navigation.navigate('Welcome');
+    } catch (error) {
+      console.error(error);
+    }
   };
   const onPhonePress = () => {};
   const onSocialSignInPress = (type: ESocialType) => {
     switch (type) {
       case ESocialType.apple:
+        appleLogin();
         break;
       case ESocialType.facebook:
+        facebookLogin();
         break;
       case ESocialType.google:
+        googleLogin();
         break;
       case ESocialType.twitter:
         break;
@@ -64,6 +81,7 @@ const SignIn = () => {
           placeholder={translate('signIn.emailAddress')}
           placeholderColor={COLORS.greyBorder}
           containerStyle={styles.input}
+          keyboardType="email-address"
         />
 
         <PrimaryButton
