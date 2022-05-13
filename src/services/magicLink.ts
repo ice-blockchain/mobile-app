@@ -2,7 +2,7 @@
 
 import {Magic} from '@magic-sdk/react-native';
 
-const magic = new Magic('pk_live_9816E034A57FC5C2');
+const magic = new Magic('API_KEY');
 
 class MagicLink {
   token: string = '';

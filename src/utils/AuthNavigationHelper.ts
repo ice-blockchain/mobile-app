@@ -23,5 +23,5 @@ export default () => {
     initialScreen = 'SignIn';
   }
 
-  return 'ClaimNickname';
+  return 'SignIn';
 };

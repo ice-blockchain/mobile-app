@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import React, {ReactNode} from 'react';
-import {TextInput, StyleSheet, View, StyleProp} from 'react-native';
+import {TextInput, StyleSheet, View, StyleProp, Text} from 'react-native';
 import {rem, font} from 'rn-units';
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
@@ -14,6 +14,7 @@ interface CommonInputProps {
   placeholder: string;
   placeholderColor?: string;
   containerStyle?: StyleProp<ViewStyle>;
+  errorText?: string;
 }
 
 const CommonInput = ({
@@ -22,38 +23,55 @@ const CommonInput = ({
   value,
   placeholder,
   containerStyle,
+  errorText,
 }: CommonInputProps) => {
   return (
-    <View style={[styles.container, containerStyle]}>
-      <View style={styles.icon}>{icon}</View>
-      <TextInput
-        onChangeText={onChangeText}
-        value={value}
-        placeholder={placeholder}
-        style={styles.input}
-      />
+    <View
+      style={[
+        styles.container,
+        containerStyle,
+        errorText ? styles.inputError : null,
+      ]}>
+      {icon || null}
+      <View>
+        <TextInput
+          onChangeText={onChangeText}
+          value={value}
+          placeholder={placeholder}
+          style={styles.input}
+        />
+        {errorText ? <Text style={styles.errorText}>{errorText}</Text> : null}
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    flexDirection: 'row',
     width: rem(247),
+    paddingHorizontal: rem(13),
+    alignItems: 'center',
+    borderRadius: rem(13),
     borderWidth: rem(1.5),
     borderColor: COLORS.greyBorder,
-    borderRadius: rem(13),
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  icon: {
-    paddingLeft: rem(12),
+    minHeight: rem(46),
   },
   input: {
-    paddingBottom: rem(15),
-    paddingTop: rem(14),
     paddingLeft: rem(6),
-    fontSize: font(15),
-    lineHeight: rem(18),
+    flex: 1,
+    color: COLORS.darkBlue,
+    fontSize: font(16),
+    lineHeight: rem(19),
+    fontFamily: FONTS.primary.regular,
+  },
+  inputError: {
+    borderColor: COLORS.error,
+  },
+  errorText: {
+    color: COLORS.error,
+    fontSize: font(11),
+    paddingLeft: rem(6),
     fontFamily: FONTS.primary.regular,
   },
 });

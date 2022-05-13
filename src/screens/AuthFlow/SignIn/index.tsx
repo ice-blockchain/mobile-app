@@ -17,13 +17,13 @@ import MagicIconSvg from '@svg/magicIcon';
 import {translate} from '@utils/i18n';
 
 import SocialSignIn, {ESocialType} from './components/socialSignIn';
-import {loginUser} from '@services/magicLink';
+import {magicLink} from '@services/magicLink';
 
 const SignIn = () => {
   const [email, onChangeEmail] = useState('');
 
   const onSignIn = () => {
-    loginUser(email);
+    magicLink.loginUser(email);
   };
   const onPhonePress = () => {};
   const onSocialSignInPress = (type: ESocialType) => {

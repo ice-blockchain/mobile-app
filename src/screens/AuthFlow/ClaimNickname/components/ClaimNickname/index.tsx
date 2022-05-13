@@ -8,14 +8,19 @@ import ClaimNicknameSvg from '@svg/claimNickname';
 import {translate} from '@utils/i18n';
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
-import CommonInput from '../input';
+import CommonInput from '@components/CommonInput';
 import ManIconSvg from '@svg/manIcon';
 
 interface ClaimNickNameProps {
   inputValue: string;
   onInputChange: (v: string) => void;
+  errorText?: string;
 }
-const ClaimNickName = ({inputValue, onInputChange}: ClaimNickNameProps) => {
+const ClaimNickName = ({
+  inputValue,
+  onInputChange,
+  errorText,
+}: ClaimNickNameProps) => {
   return (
     <View style={styles.container}>
       <ClaimNicknameSvg width={rem(258)} height={rem(291)} />
@@ -29,9 +34,9 @@ const ClaimNickName = ({inputValue, onInputChange}: ClaimNickNameProps) => {
         placeholder={translate('claimNickname.inputPlaceholder')}
         value={inputValue}
         onChangeText={onInputChange}
-        leftIcon={<ManIconSvg />}
+        icon={<ManIconSvg />}
         containerStyle={styles.input}
-        // errorText={'asf'}
+        errorText={errorText}
       />
     </View>
   );
