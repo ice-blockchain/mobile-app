@@ -1,0 +1,27 @@
+// SPDX-License-Identifier: BUSL-1.1
+
+import {post} from '@api/client';
+
+interface Params {
+  email: string;
+  fullName: string;
+  phoneNumber: string;
+  referredBy: string;
+  username: string;
+}
+
+export default function createUser({
+  email,
+  fullName,
+  phoneNumber,
+  referredBy,
+  username,
+}: Params) {
+  return post('/users', {
+    email,
+    fullName,
+    phoneNumber,
+    referredBy,
+    username,
+  });
+}

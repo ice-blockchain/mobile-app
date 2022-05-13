@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {RequestConfig} from '@api/types';
-import axios from 'src/api/utils/axios';
+import axios from '@api/utils/axios';
 import {handleServiceError} from './ApiServiceErrors';
 
 export async function post<TRequest, TResponse>(
@@ -38,7 +38,9 @@ export async function put<TRequest, TResponse>(
   payload: TRequest,
 ): Promise<TResponse> {
   try {
+    console.log(path, payload);
     const response = await axios.put<TResponse>(path, payload);
+    console.log(response);
     return response.data;
   } catch (error) {
     handleServiceError(error);
@@ -49,6 +51,18 @@ export async function put<TRequest, TResponse>(
 export async function get<TResponse>(path: string): Promise<TResponse> {
   try {
     const response = await axios.get<TResponse>(path);
+    return response.data;
+  } catch (error) {
+    handleServiceError(error);
+  }
+  return {} as TResponse;
+}
+
+export async function deleteRequest<TResponse>(
+  path: string,
+): Promise<TResponse> {
+  try {
+    const response = await axios.delete<TResponse>(path);
     return response.data;
   } catch (error) {
     handleServiceError(error);
