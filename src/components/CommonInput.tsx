@@ -33,7 +33,7 @@ const CommonInput = ({
         errorText ? styles.inputError : null,
       ]}>
       {icon || null}
-      <View>
+      <View style={styles.inputWrapper}>
         <TextInput
           onChangeText={onChangeText}
           value={value}
@@ -73,6 +73,9 @@ const styles = StyleSheet.create({
     fontSize: font(11),
     paddingLeft: rem(6),
     fontFamily: FONTS.primary.regular,
+  },
+  inputWrapper: {
+    flex: 1,
   },
 });
 

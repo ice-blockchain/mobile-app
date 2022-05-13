@@ -26,5 +26,9 @@
     "dontHaveInvitationCode": "Don't have an invitation code? ",
     "tapHere": " Tap here!",
     "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+  },
+  "errors": {
+    "nicknameSize": "Nickname size: 4-20 characters.",
+    "removeInvalidCharacters": "Remove invalid characters."
   }
 }

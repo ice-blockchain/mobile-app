@@ -1,5 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {font, rem} from 'rn-units';
+import React, {useState} from 'react';
+
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import InfoIconSvg from '@svg/infoIcon';
@@ -7,16 +11,7 @@ import TicketIconSvg from '@svg/ticket';
 import TipTriangleIconSvg from '@svg/tipTriangle';
 import WhoInvitedYouSvg from '@svg/whoInvitedYou';
 import {translate} from '@utils/i18n';
-import React, {useState} from 'react';
-import {
-  View,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-} from 'react-native';
-import {font, rem} from 'rn-units';
-import CommonInput from '../input';
+import CommonInput from '@components/CommonInput';
 
 interface WhoInvitedYouProps {
   inputValue: string;
@@ -44,9 +39,8 @@ const WhoInvitedYou = ({inputValue, onInputChange}: WhoInvitedYouProps) => {
           placeholder={translate('whoInvitedYou.inputPlaceholder')}
           value={inputValue}
           onChangeText={onInputChange}
-          leftIcon={<TicketIconSvg />}
+          icon={<TicketIconSvg />}
           containerStyle={styles.input}
-          // errorText={'adf'}
         />
 
         <View style={styles.dontHaveCodeContainer}>
