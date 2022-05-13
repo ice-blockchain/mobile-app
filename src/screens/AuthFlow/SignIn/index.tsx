@@ -18,12 +18,32 @@ import {translate} from '@utils/i18n';
 
 import SocialSignIn, {ESocialType} from './components/socialSignIn';
 import {magicLink} from '@services/magicLink';
+import {useDispatch, useSelector} from 'react-redux';
+import AuthActions from '@store/modules/Auth/actions';
+import {RootState} from '@store/rootReducer';
+import {useNavigation} from '@react-navigation/native';
 
 const SignIn = () => {
   const [email, onChangeEmail] = useState('');
+  const dispatch = useDispatch();
+  const usersInfo = useSelector((state: RootState) => state.auth.usersInfo);
+  const navigation = useNavigation();
 
-  const onSignIn = () => {
-    magicLink.loginUser(email);
+  const onSignIn = async () => {
+    const success = await magicLink.loginUser(email);
+    if (success) {
+      const emailLowerCase = email.toLowerCase();
+      if (!usersInfo[emailLowerCase]?.profileFilled) {
+        navigation.navigate('ClaimNickname');
+      } else if (!usersInfo[emailLowerCase]?.welcomeSeen) {
+        navigation.navigate('Welcome');
+      }
+      dispatch(
+        AuthActions.STORE_USER_DATA.STATE.create({
+          email: emailLowerCase,
+        }),
+      );
+    }
   };
   const onPhonePress = () => {};
   const onSocialSignInPress = (type: ESocialType) => {
@@ -65,6 +85,7 @@ const SignIn = () => {
           placeholderColor={COLORS.greyBorder}
           containerStyle={styles.input}
           keyboardType={'email-address'}
+          autoCapitalize={'none'}
         />
 
         <PrimaryButton

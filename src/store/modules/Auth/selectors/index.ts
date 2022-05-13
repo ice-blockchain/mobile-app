@@ -11,8 +11,8 @@ export const isSignUpCompletedSelector = createSelector(
     const {email} = auth.userData;
     return (
       !!email &&
-      auth.usersInfo[email].profileFilled &&
-      auth.usersInfo[email].welcomeSeen
+      auth.usersInfo[email]?.profileFilled &&
+      auth.usersInfo[email]?.welcomeSeen
     );
   },
 );

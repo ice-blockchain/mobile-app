@@ -12,7 +12,6 @@ class MagicLink {
       const isLoggedIn = await magic.user.isLoggedIn();
       if (isLoggedIn) {
         const r = await magic.user.getMetadata();
-        console.log('bla r', r);
         this.token = await this.getToken();
         return {email: r.email};
       }
@@ -25,9 +24,11 @@ class MagicLink {
 
   loginUser = async (email: string) => {
     try {
-      return await magic.auth.loginWithMagicLink({email});
+      await magic.auth.loginWithMagicLink({email});
+      return true;
     } catch (err) {
-      throw new Error('Login failed');
+      // throw new Error('Login failed');
+      return false;
     }
   };
 

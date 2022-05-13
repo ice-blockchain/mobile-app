@@ -3,9 +3,10 @@
 import {all, call, spawn} from 'redux-saga/effects';
 import NewsSaga from './modules/News/sagas';
 import UsersSaga from './modules/Users/sagas';
+import AuthSaga from './modules/Auth/sagas';
 
 export default function* rootSaga() {
-  const sagas = [NewsSaga, UsersSaga];
+  const sagas = [NewsSaga, UsersSaga, AuthSaga];
   yield all([
     ...sagas.map((saga, index) =>
       spawn(function* () {

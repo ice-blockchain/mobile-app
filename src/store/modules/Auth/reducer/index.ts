@@ -14,10 +14,12 @@ export interface State {
     // publicAddress: string;
   };
   usersInfo: {
-    [k: string]: {
-      profileFilled: boolean;
-      welcomeSeen: boolean;
-    };
+    [k: string]:
+      | {
+          profileFilled: boolean;
+          welcomeSeen: boolean;
+        }
+      | undefined;
   };
   initialization: boolean;
 }
@@ -28,6 +30,7 @@ type Actions = ReturnType<
   | typeof actionCreatorStoreUserData
   | typeof AuthActions.STORE_CLAIM_NICKNAME_DONE.STATE.create
   | typeof AuthActions.STORE_WELCOME_SEEN.STATE.create
+  | typeof AuthActions.SIGN_OUT.SUCCESS.create
 >;
 
 const INITIAL_STATE: State = {
@@ -67,10 +70,13 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
           welcomeSeen: true,
         };
         break;
-      // TODO: connect log out
-      // case AuthActions.SIGN_OUT.SUCCESS.type: {
-      //   return INITIAL_STATE;
-      // }
+      case AuthActions.SIGN_OUT.SUCCESS.type: {
+        return {
+          ...INITIAL_STATE,
+          usersInfo: draft.usersInfo,
+          initialization: false,
+        };
+      }
     }
   });
 }

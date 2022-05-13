@@ -37,8 +37,6 @@ const SignUp = () => {
 
   const [error, setError] = useState<string>();
   const onNextPress = () => {
-    console.log('lba myNickname', myNickname);
-
     if (myNickname.trim().length > 20 || myNickname.trim().length < 4) {
       setError(translate('errors.nicknameSize'));
       return;

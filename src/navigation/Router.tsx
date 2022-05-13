@@ -18,10 +18,9 @@ import {isSignUpCompletedSelector} from '@store/modules/Auth/selectors';
 
 function ActiveNavigator() {
   const dispatch = useDispatch();
-  const initialization = useSelector((state: RootState) => {
-    console.log('bla state.auth.', state.auth);
-    return state.auth.initialization;
-  });
+  const initialization = useSelector(
+    (state: RootState) => state.auth.initialization,
+  );
   const isSignUpCompleted = useSelector(isSignUpCompletedSelector);
   useEffect(() => {
     const getUserData = async () => {
