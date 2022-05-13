@@ -14,8 +14,11 @@ interface NavigationPanelProps {
   amount: number;
   activeIndex: number;
   nextPress: () => void;
-  notNowPress: () => void;
+  notNowPress?: () => void;
   yesPleasePress: () => void;
+  withError?: boolean;
+  lastPageButtonText?: string;
+  isButtonActive?: boolean;
 }
 
 const NavigationPanel = ({
@@ -23,16 +26,19 @@ const NavigationPanel = ({
   activeIndex,
   notNowPress,
   nextPress,
+  withError,
   yesPleasePress,
+  lastPageButtonText = 'Yes, please',
+  isButtonActive = true,
 }: NavigationPanelProps) => {
   const isLastPage = activeIndex >= amount - 1;
   return (
     <View style={styles.navigationPanel}>
       <View style={styles.wrapper}>
-        <Dots amount={amount} activeIndex={activeIndex} />
+        <Dots amount={amount} activeIndex={activeIndex} withError={withError} />
       </View>
 
-      <View style={!isLastPage ? styles.hiddenElement : null}>
+      <View style={isLastPage && notNowPress ? null : styles.hiddenElement}>
         <NotNowButton onPress={notNowPress} disabled={!isLastPage} />
       </View>
 
@@ -41,10 +47,15 @@ const NavigationPanel = ({
           <Button
             onPress={nextPress}
             text={'Next'}
+            disabled={!isButtonActive}
             rightIcon={<NextArrowSvg />}
           />
         ) : (
-          <Button onPress={yesPleasePress} text={'Yes, please'} />
+          <Button
+            onPress={yesPleasePress}
+            text={lastPageButtonText}
+            disabled={!isButtonActive}
+          />
         )}
       </View>
     </View>

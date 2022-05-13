@@ -1,0 +1,158 @@
+// SPDX-License-Identifier: BUSL-1.1
+
+import {COLORS} from '@constants/colors';
+import {FONTS} from '@constants/fonts';
+import InfoIconSvg from '@svg/infoIcon';
+import TicketIconSvg from '@svg/ticket';
+import TipTriangleIconSvg from '@svg/tipTriangle';
+import WhoInvitedYouSvg from '@svg/whoInvitedYou';
+import {translate} from '@utils/i18n';
+import React, {useState} from 'react';
+import {
+  View,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+} from 'react-native';
+import {font, rem} from 'rn-units';
+import CommonInput from '../input';
+
+interface WhoInvitedYouProps {
+  inputValue: string;
+  onInputChange: (v: string) => void;
+}
+
+const WhoInvitedYou = ({inputValue, onInputChange}: WhoInvitedYouProps) => {
+  const [isTipVisible, setTipVisibility] = useState(false);
+  const showTip = () => {
+    setTipVisibility(true);
+  };
+  const hideTip = () => {
+    setTipVisibility(false);
+  };
+  return (
+    <View style={styles.container}>
+      <WhoInvitedYouSvg width={rem(236)} height={rem(275)} />
+      <View>
+        <Text style={styles.title}>{translate('whoInvitedYou.title')}</Text>
+        <Text style={styles.description}>
+          {translate('whoInvitedYou.description')}
+        </Text>
+
+        <CommonInput
+          placeholder={translate('whoInvitedYou.inputPlaceholder')}
+          value={inputValue}
+          onChangeText={onInputChange}
+          leftIcon={<TicketIconSvg />}
+          containerStyle={styles.input}
+          // errorText={'adf'}
+        />
+
+        <View style={styles.dontHaveCodeContainer}>
+          <TouchableOpacity style={styles.infoButton} onPress={showTip}>
+            <InfoIconSvg />
+          </TouchableOpacity>
+          <Text style={styles.dontHaveCodeText}>
+            {translate('whoInvitedYou.dontHaveInvitationCode')}
+          </Text>
+
+          <TouchableOpacity>
+            <Text style={styles.tapHere}>
+              {translate('whoInvitedYou.tapHere')}
+            </Text>
+          </TouchableOpacity>
+        </View>
+        {isTipVisible ? (
+          <View style={styles.tipWrapper}>
+            <View style={styles.tipContainer}>
+              <Text style={styles.tipText}>
+                {translate('whoInvitedYou.dontHaveCodeTip')}
+              </Text>
+            </View>
+            <View style={styles.tipTriangle}>
+              <TipTriangleIconSvg />
+            </View>
+          </View>
+        ) : null}
+      </View>
+
+      {isTipVisible ? (
+        <TouchableOpacity
+          style={StyleSheet.absoluteFill}
+          onPress={hideTip}
+          activeOpacity={1}>
+          <View />
+        </TouchableOpacity>
+      ) : null}
+    </View>
+  );
+};
+
+export default WhoInvitedYou;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    paddingTop: rem(100),
+  },
+  title: {
+    marginTop: rem(24),
+    marginBottom: rem(23),
+    fontFamily: FONTS.primary.black,
+    color: COLORS.darkBlue,
+    fontSize: font(28),
+    textAlign: 'center',
+  },
+  description: {
+    fontFamily: FONTS.primary.regular,
+    color: COLORS.greyText,
+    fontSize: font(14),
+    lineHeight: rem(24),
+    textAlign: 'center',
+  },
+  input: {
+    marginTop: rem(30),
+  },
+  dontHaveCodeContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  infoButton: {
+    padding: rem(9),
+  },
+  dontHaveCodeText: {
+    fontFamily: FONTS.primary.regular,
+    color: COLORS.darkBlue,
+    fontSize: font(12.5),
+    lineHeight: rem(24),
+  },
+  tapHere: {
+    fontFamily: FONTS.primary.bold,
+    color: COLORS.darkBlue,
+    fontSize: font(12.5),
+    lineHeight: rem(24),
+  },
+  tipText: {
+    fontFamily: FONTS.primary.regular,
+    color: COLORS.white,
+    fontSize: font(11.5),
+    lineHeight: rem(18),
+    textAlign: 'center',
+  },
+  tipContainer: {
+    backgroundColor: COLORS.darkBlue,
+    paddingHorizontal: rem(17.5),
+    paddingTop: rem(9),
+    paddingBottom: rem(13),
+    borderRadius: rem(13),
+  },
+  tipTriangle: {
+    marginLeft: rem(15),
+  },
+  tipWrapper: {
+    position: 'absolute',
+    bottom: rem(20),
+  },
+});

@@ -7,9 +7,10 @@ import {rem} from 'rn-units';
 
 interface DotProps {
   isActive: boolean;
+  withError?: boolean;
 }
 
-const Dot = ({isActive}: DotProps) => {
+const Dot = ({isActive, withError}: DotProps) => {
   const widthAnimation = useRef(new Animated.Value(isActive ? 1 : 0)).current;
 
   useEffect(() => {
@@ -25,6 +26,7 @@ const Dot = ({isActive}: DotProps) => {
       style={[
         styles.dot,
         isActive ? styles.activeDot : null,
+        isActive && withError ? styles.error : null,
         {
           width: widthAnimation.interpolate({
             inputRange: [0, 1],
@@ -48,5 +50,8 @@ const styles = StyleSheet.create({
   },
   activeDot: {
     backgroundColor: COLORS.darkBlue,
+  },
+  error: {
+    backgroundColor: COLORS.error,
   },
 });
