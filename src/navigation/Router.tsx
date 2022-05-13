@@ -1,28 +1,50 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-// import Main from './Main';
+import Main from './Main';
 // import selectors from '@store/selectors';
 import AuthFlow from './Auth';
-// import {magicLink} from '@services/magicLink';
-// import AuthActions from '@store/modules/Auth/actions';
+import {magicLink} from '@services/magicLink';
+import AuthActions from '@store/modules/Auth/actions';
+import {useDispatch, useSelector} from 'react-redux';
+import Initialization from '@screens/AuthFlow/Initialization';
+import {RootState} from '@store/rootReducer';
+import {isSignUpCompletedSelector} from '@store/modules/Auth/selectors';
 
 // type Params = {
 //   email: string | null;
 // };
 
 function ActiveNavigator() {
-  // useEffect(() => {
-  //   magicLink.checkUser(AuthActions.STORE_USER_DATA.STATE.create);
-  // }, []);
+  const dispatch = useDispatch();
+  const initialization = useSelector((state: RootState) => {
+    console.log('bla state.auth.', state.auth);
+    return state.auth.initialization;
+  });
+  const isSignUpCompleted = useSelector(isSignUpCompletedSelector);
+  useEffect(() => {
+    const getUserData = async () => {
+      const {email} = await magicLink.checkUser();
+      dispatch(
+        AuthActions.STORE_USER_DATA.STATE.create({
+          email: email ? email.toLowerCase() : null,
+        }),
+      );
+    };
+    getUserData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // const profile = selectors.profile();
 
   // console.log(user);
-
-  // if (user.email && user.email.length) {
-  //   return <Main />;
-  // }
+  if (initialization) {
+    return <Initialization />;
+  }
+  if (isSignUpCompleted) {
+    return <Main />;
+  }
   return <AuthFlow />;
 }
 

@@ -64,6 +64,7 @@ const SignIn = () => {
           placeholder={translate('signIn.emailAddress')}
           placeholderColor={COLORS.greyBorder}
           containerStyle={styles.input}
+          keyboardType={'email-address'}
         />
 
         <PrimaryButton

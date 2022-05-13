@@ -20,18 +20,20 @@ import {translate} from '@utils/i18n';
 import WhoInvitedYou from './components/WhoInvitedYou';
 import ClaimNickname from './components/ClaimNickname';
 import NavigationPanel from '../Welcome/components/NavigationPanel';
-// import {useDispatch} from 'react-redux';
-// import UsersActions from '@store/modules/Users/actions';
+import {useDispatch} from 'react-redux';
+import AuthActions from '@store/modules/Auth/actions';
+import {useNavigation} from '@react-navigation/native';
 
 const nicknameRegularExp = /^[A-Za-z0-9]+([A-Za-z0-9]*|[._-]?[A-Za-z0-9]+)*$/;
 
 const SignUp = () => {
   const pagerViewRef = useRef<PagerView>(null);
+  const navigation = useNavigation();
   const [myNickname, setMyNickname] = useState('');
   const [invitedNickname, setInvitedNickname] = useState('');
   const [currentPage, setCurrentPage] = useState(0);
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const [error, setError] = useState<string>();
   const onNextPress = () => {
@@ -60,7 +62,10 @@ const SignUp = () => {
     setMyNickname(v);
   };
 
-  const onComplete = () => {};
+  const onComplete = () => {
+    dispatch(AuthActions.STORE_CLAIM_NICKNAME_DONE.STATE.create());
+    navigation.navigate('Welcome');
+  };
   const isNextButtonActive =
     (currentPage === 0 && myNickname.length > 0) ||
     (currentPage === 1 && invitedNickname.length > 0);

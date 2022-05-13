@@ -7,17 +7,19 @@ const magic = new Magic('API_KEY');
 class MagicLink {
   token: string = '';
 
-  checkUser = async (cb: (param: {email: string | null}) => void) => {
+  checkUser = async (): Promise<{email: string | null}> => {
     try {
       const isLoggedIn = await magic.user.isLoggedIn();
       if (isLoggedIn) {
         const r = await magic.user.getMetadata();
-        console.log(r);
-        cb({email: r.email});
+        console.log('bla r', r);
         this.token = await this.getToken();
+        return {email: r.email};
       }
+      return {email: null};
     } catch (err) {
-      throw new Error('User is not logged in');
+      // throw new Error('User is not logged in');
+      return {email: null};
     }
   };
 

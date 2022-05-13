@@ -8,12 +8,15 @@ import StoreConfig from './store/configureStore';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
 import magic from '@services/magicLink';
+import Initialization from '@screens/AuthFlow/Initialization';
 
 export default function App(): React.ReactNode {
   return (
     <SafeAreaProvider>
       <Provider store={StoreConfig.store}>
-        <PersistGate loading={null} persistor={StoreConfig.persistor}>
+        <PersistGate
+          loading={<Initialization />}
+          persistor={StoreConfig.persistor}>
           <Router />
           <System />
           <magic.Relayer />

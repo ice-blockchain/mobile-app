@@ -1,13 +1,20 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import React, {ReactNode} from 'react';
-import {TextInput, StyleSheet, View, StyleProp, Text} from 'react-native';
+import {
+  TextInput,
+  StyleSheet,
+  View,
+  StyleProp,
+  Text,
+  TextInputProps,
+} from 'react-native';
 import {rem, font} from 'rn-units';
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
 import {ViewStyle} from 'react-native';
 
-interface CommonInputProps {
+interface CommonInputProps extends TextInputProps {
   onChangeText: (description: string) => void;
   icon: ReactNode;
   value: string;
@@ -24,6 +31,7 @@ const CommonInput = ({
   placeholder,
   containerStyle,
   errorText,
+  ...props
 }: CommonInputProps) => {
   return (
     <View
@@ -39,6 +47,7 @@ const CommonInput = ({
           value={value}
           placeholder={placeholder}
           style={styles.input}
+          {...props}
         />
         {errorText ? <Text style={styles.errorText}>{errorText}</Text> : null}
       </View>

@@ -13,6 +13,8 @@ import {Images} from '@images/index';
 import LogoIconSvg from '@svg/logoIcon';
 import {FONTS, WEIGHTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
+import {useDispatch} from 'react-redux';
+import AuthActions from '@store/modules/Auth/actions';
 
 const Welcome = () => {
   //TODO use i18n
@@ -179,6 +181,8 @@ const Welcome = () => {
 
   const pagerViewRef = useRef<PagerView>(null);
   const [currentPage, setCurrentPage] = useState(0);
+  const dispatch = useDispatch();
+
   const onNextPress = () => {
     const nextPage = currentPage + 1;
     if (nextPage < welcomeScreenData.length) {
@@ -189,6 +193,12 @@ const Welcome = () => {
 
   const onPageSelected = (e: PagerViewOnPageSelectedEvent) => {
     setCurrentPage(e.nativeEvent.position);
+  };
+  const notNowPress = () => {
+    dispatch(AuthActions.STORE_WELCOME_SEEN.STATE.create());
+  };
+  const yesPleasePress = () => {
+    dispatch(AuthActions.STORE_WELCOME_SEEN.STATE.create());
   };
 
   return (
@@ -217,8 +227,8 @@ const Welcome = () => {
         amount={welcomeScreenData.length}
         activeIndex={currentPage}
         nextPress={onNextPress}
-        notNowPress={() => {}}
-        yesPleasePress={() => {}}
+        notNowPress={notNowPress}
+        yesPleasePress={yesPleasePress}
       />
     </SafeAreaView>
   );

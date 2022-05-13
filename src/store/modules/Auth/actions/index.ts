@@ -3,19 +3,27 @@
 import {createAction} from '@store/utils/actions/createAction';
 
 type Params = {
-  email: string;
-  isMfaEnabled: boolean;
-  issuer: string;
-  phoneNumber: string | null;
-  publicAddress: string;
+  email: string | null;
+  isMfaEnabled?: boolean;
+  issuer?: string;
+  phoneNumber?: string | null;
+  publicAddress?: string;
 };
 
 const STORE_USER_DATA = createAction('STORE_USER_DATA', {
   STATE: (data: Params) => ({data}),
 });
+const STORE_CLAIM_NICKNAME_DONE = createAction('STORE_CLAIM_NICKNAME_DONE', {
+  STATE: () => {},
+});
+const STORE_WELCOME_SEEN = createAction('STORE_WELCOME_SEEN', {
+  STATE: () => {},
+});
 
 const AuthActions = Object.freeze({
   STORE_USER_DATA,
+  STORE_CLAIM_NICKNAME_DONE,
+  STORE_WELCOME_SEEN,
 });
 
 export default AuthActions;
