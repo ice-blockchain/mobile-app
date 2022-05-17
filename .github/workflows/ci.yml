@@ -1,0 +1,28 @@
+name: ice CI
+on:
+  pull_request:
+    branches:
+      - master
+      - 'releases/v*'
+  commit:
+    branches:
+      - 'releases/v*'
+jobs:
+  tests-and-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@master
+      - uses: c-hive/gha-yarn-cache@v2
+      - name: Install npm dependencies
+        run: |
+          yarn
+      - name: Check types
+        run: |
+          yarn check-types
+      - name: Lint
+        run: |
+          yarn lint-staged
+      - name: Run tests
+        run: |
+          yarn test

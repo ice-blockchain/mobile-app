@@ -1,13 +1,15 @@
-name: ice iOS Dev Build
-on: [push]
+name: Staging distribution
+on:
+  push:
+    branches:
+      - master
 jobs:
-  ios-build:
-    name: ice iOS Dev Build
+  ios:
+    name: ice iOS Staging Build
     runs-on: macOS-latest
     defaults:
       run:
         working-directory: ios
-
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
@@ -58,7 +60,7 @@ jobs:
           team-id: ${{ secrets.IOS_TEAM_ID }}
           certificate-password: ${{ secrets.IOS_CERTIFICATE_PASSWORD }}
           workspace-path: ios/ice.xcworkspace
-          scheme: ice
+          scheme: ice-dev
 
       - name: 'Upload app to TestFlight'
         uses: apple-actions/upload-testflight-build@v1
@@ -67,3 +69,39 @@ jobs:
           issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
           api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
           api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@master
+      - uses: c-hive/gha-yarn-cache@v2
+      - name: Install npm dependencies
+        run: |
+          yarn
+      - name: Cache Gradle Wrapper
+        uses: actions/cache@v2
+        with:
+          path: ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-wrapper-${{
+            hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
+      - name: Cache Gradle Dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-caches-${{
+            hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-caches-
+      - name: Make Gradlew Executable
+        run: cd android && chmod +x ./gradlew
+      - name: Restore gradle.properties
+        env:
+          GRADLE_PROPERTIES: ${{ secrets.GRADLE_PROPERTIES }}
+        shell: bash
+        run: |
+          mkdir -p ~/.gradle/
+          echo "GRADLE_USER_HOME=${HOME}/.gradle" >> $GITHUB_ENV
+          echo "${GRADLE_PROPERTIES}" > ~/.gradle/gradle.properties
+      - name: Build Android App Bundle
+        run: |
+          cd android && ./gradlew bundleRelease --no-daemon
