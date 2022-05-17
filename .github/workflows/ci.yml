@@ -1,11 +1,9 @@
 name: ice CI
 on:
   pull_request:
+    types: [opened, reopened, synchronize]
     branches:
       - master
-      - 'releases/v*'
-  commit:
-    branches:
       - 'releases/v*'
 jobs:
   tests-and-checks:
