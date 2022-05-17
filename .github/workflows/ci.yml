@@ -20,7 +20,7 @@ jobs:
           yarn check-types
       - name: Lint
         run: |
-          yarn lint-staged
+          yarn lint
       - name: Run tests
         run: |
           yarn test
