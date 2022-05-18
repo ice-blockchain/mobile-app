@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {font, rem} from 'rn-units';
+import {font, rem, screenHeight} from 'rn-units';
 import React, {useState} from 'react';
 
 import {COLORS} from '@constants/colors';
@@ -18,6 +18,9 @@ interface WhoInvitedYouProps {
   onInputChange: (v: string) => void;
 }
 
+const h = (screenHeight * 275) / 811;
+const w = (h * 236) / 275;
+
 const WhoInvitedYou = ({inputValue, onInputChange}: WhoInvitedYouProps) => {
   const [isTipVisible, setTipVisibility] = useState(false);
   const showTip = () => {
@@ -28,7 +31,7 @@ const WhoInvitedYou = ({inputValue, onInputChange}: WhoInvitedYouProps) => {
   };
   return (
     <View style={styles.container}>
-      <WhoInvitedYouSvg width={rem(236)} height={rem(275)} />
+      <WhoInvitedYouSvg width={h} height={w} />
       <View>
         <Text style={styles.title}>{translate('whoInvitedYou.title')}</Text>
         <Text style={styles.description}>
@@ -89,7 +92,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    paddingTop: rem(100),
+    paddingTop: rem(80),
   },
   title: {
     marginTop: rem(24),
