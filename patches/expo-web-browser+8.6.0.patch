@@ -1,0 +1,825 @@
+diff --git a/node_modules/expo-web-browser/android/build.gradle b/node_modules/expo-web-browser/android/build.gradle
+index 7b10990..33a1ce5 100644
+--- a/node_modules/expo-web-browser/android/build.gradle
++++ b/node_modules/expo-web-browser/android/build.gradle
+@@ -1,5 +1,5 @@
+ apply plugin: 'com.android.library'
+-apply plugin: 'maven'
++apply plugin: 'maven-publish'
+ apply plugin: 'kotlin-android'
+ 
+ group = 'host.exp.exponent'
+@@ -21,27 +21,16 @@ buildscript {
+   }
+ }
+ 
+-// Upload android library to maven with javadoc and android sources
+-configurations {
+-  deployerJars
+-}
+-
+ // Creating sources with comments
+ task androidSourcesJar(type: Jar) {
+-  classifier = 'sources'
++  archiveClassifier = 'sources'
+   from android.sourceSets.main.java.srcDirs
+ }
+ 
+-// Put the androidSources and javadoc to the artifacts
+-artifacts {
+-  archives androidSourcesJar
+-}
+-
+-uploadArchives {
+-  repositories {
+-    mavenDeployer {
+-      configuration = configurations.deployerJars
+-      repository(url: mavenLocal().url)
++publishing {
++  publications {
++    maven(MavenPublication) {
++      artifact androidSourcesJar
+     }
+   }
+ }
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/915037e3a8c9ac8b4b60ea5b6efa2362/results.bin b/node_modules/expo-web-browser/android/build/.transforms/915037e3a8c9ac8b4b60ea5b6efa2362/results.bin
+new file mode 100644
+index 0000000..1ed65e0
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/.transforms/915037e3a8c9ac8b4b60ea5b6efa2362/results.bin
+@@ -0,0 +1 @@
++i/
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/results.bin b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/results.bin
+new file mode 100644
+index 0000000..5ff383e
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/results.bin
+@@ -0,0 +1 @@
++o/debug
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/BuildConfig.dex b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/BuildConfig.dex
+new file mode 100644
+index 0000000..3cd17c1
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/BuildConfig.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/CustomTabsActivitiesHelper.dex b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/CustomTabsActivitiesHelper.dex
+new file mode 100644
+index 0000000..81caa2f
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/CustomTabsActivitiesHelper.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/CustomTabsConnectionHelper.dex b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/CustomTabsConnectionHelper.dex
+new file mode 100644
+index 0000000..5c87e74
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/CustomTabsConnectionHelper.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/DeferredClientActionsQueue.dex b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/DeferredClientActionsQueue.dex
+new file mode 100644
+index 0000000..cbae0f6
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/DeferredClientActionsQueue.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/InternalCustomTabsActivitiesHelper.dex b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/InternalCustomTabsActivitiesHelper.dex
+new file mode 100644
+index 0000000..b23e024
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/InternalCustomTabsActivitiesHelper.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/InternalCustomTabsConnectionHelper.dex b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/InternalCustomTabsConnectionHelper.dex
+new file mode 100644
+index 0000000..eb7bee7
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/InternalCustomTabsConnectionHelper.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/WebBrowserModule.dex b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/WebBrowserModule.dex
+new file mode 100644
+index 0000000..8a733f3
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/WebBrowserModule.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/WebBrowserPackage.dex b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/WebBrowserPackage.dex
+new file mode 100644
+index 0000000..4bfca59
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/WebBrowserPackage.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/error/NoPreferredPackageFound.dex b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/error/NoPreferredPackageFound.dex
+new file mode 100644
+index 0000000..e0ae7ab
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/error/NoPreferredPackageFound.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/error/PackageManagerNotFoundException.dex b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/error/PackageManagerNotFoundException.dex
+new file mode 100644
+index 0000000..fa1203f
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/debug/expo/modules/webbrowser/error/PackageManagerNotFoundException.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/desugar_graph.bin b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/desugar_graph.bin
+new file mode 100644
+index 0000000..601f245
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/95e0d35442f14ac5411561e4c75bba4e/transformed/desugar_graph.bin differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/results.bin b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/results.bin
+new file mode 100644
+index 0000000..5ff383e
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/results.bin
+@@ -0,0 +1 @@
++o/debug
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/BuildConfig.dex b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/BuildConfig.dex
+new file mode 100644
+index 0000000..3cd17c1
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/BuildConfig.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/CustomTabsActivitiesHelper.dex b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/CustomTabsActivitiesHelper.dex
+new file mode 100644
+index 0000000..81caa2f
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/CustomTabsActivitiesHelper.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/CustomTabsConnectionHelper.dex b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/CustomTabsConnectionHelper.dex
+new file mode 100644
+index 0000000..5c87e74
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/CustomTabsConnectionHelper.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/DeferredClientActionsQueue.dex b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/DeferredClientActionsQueue.dex
+new file mode 100644
+index 0000000..cbae0f6
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/DeferredClientActionsQueue.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/InternalCustomTabsActivitiesHelper.dex b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/InternalCustomTabsActivitiesHelper.dex
+new file mode 100644
+index 0000000..b23e024
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/InternalCustomTabsActivitiesHelper.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/InternalCustomTabsConnectionHelper.dex b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/InternalCustomTabsConnectionHelper.dex
+new file mode 100644
+index 0000000..eb7bee7
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/InternalCustomTabsConnectionHelper.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/WebBrowserModule.dex b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/WebBrowserModule.dex
+new file mode 100644
+index 0000000..8a733f3
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/WebBrowserModule.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/WebBrowserPackage.dex b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/WebBrowserPackage.dex
+new file mode 100644
+index 0000000..4bfca59
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/WebBrowserPackage.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/error/NoPreferredPackageFound.dex b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/error/NoPreferredPackageFound.dex
+new file mode 100644
+index 0000000..e0ae7ab
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/error/NoPreferredPackageFound.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/error/PackageManagerNotFoundException.dex b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/error/PackageManagerNotFoundException.dex
+new file mode 100644
+index 0000000..fa1203f
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/debug/expo/modules/webbrowser/error/PackageManagerNotFoundException.dex differ
+diff --git a/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/desugar_graph.bin b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/desugar_graph.bin
+new file mode 100644
+index 0000000..601f245
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/.transforms/d8e79e3b6f5820c4599ef357d5ba2b8f/transformed/desugar_graph.bin differ
+diff --git a/node_modules/expo-web-browser/android/build/generated/source/buildConfig/debug/expo/modules/webbrowser/BuildConfig.java b/node_modules/expo-web-browser/android/build/generated/source/buildConfig/debug/expo/modules/webbrowser/BuildConfig.java
+new file mode 100644
+index 0000000..fae0ce1
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/generated/source/buildConfig/debug/expo/modules/webbrowser/BuildConfig.java
+@@ -0,0 +1,10 @@
++/**
++ * Automatically generated file. DO NOT MODIFY
++ */
++package expo.modules.webbrowser;
++
++public final class BuildConfig {
++  public static final boolean DEBUG = Boolean.parseBoolean("true");
++  public static final String LIBRARY_PACKAGE_NAME = "expo.modules.webbrowser";
++  public static final String BUILD_TYPE = "debug";
++}
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml b/node_modules/expo-web-browser/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml
+new file mode 100644
+index 0000000..484d985
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="expo.modules.webbrowser" >
++
++    <uses-sdk
++        android:minSdkVersion="23"
++        android:targetSdkVersion="31" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json b/node_modules/expo-web-browser/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json
+new file mode 100644
+index 0000000..67d33fc
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json
+@@ -0,0 +1,18 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "AAPT_FRIENDLY_MERGED_MANIFESTS",
++    "kind": "Directory"
++  },
++  "applicationId": "expo.modules.webbrowser",
++  "variantName": "debug",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "outputFile": "AndroidManifest.xml"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/aar_metadata/debug/aar-metadata.properties b/node_modules/expo-web-browser/android/build/intermediates/aar_metadata/debug/aar-metadata.properties
+new file mode 100644
+index 0000000..d8f70c0
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/aar_metadata/debug/aar-metadata.properties
+@@ -0,0 +1,3 @@
++aarFormatVersion=1.0
++aarMetadataVersion=1.0
++minCompileSdk=1
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/annotation_processor_list/debug/annotationProcessors.json b/node_modules/expo-web-browser/android/build/intermediates/annotation_processor_list/debug/annotationProcessors.json
+new file mode 100644
+index 0000000..9e26dfe
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/annotation_processor_list/debug/annotationProcessors.json
+@@ -0,0 +1 @@
++{}
+\ No newline at end of file
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/compile_library_classes_jar/debug/classes.jar b/node_modules/expo-web-browser/android/build/intermediates/compile_library_classes_jar/debug/classes.jar
+new file mode 100644
+index 0000000..5eedda6
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/compile_library_classes_jar/debug/classes.jar differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/compile_r_class_jar/debug/R.jar b/node_modules/expo-web-browser/android/build/intermediates/compile_r_class_jar/debug/R.jar
+new file mode 100644
+index 0000000..52f4502
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/compile_r_class_jar/debug/R.jar differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/compile_symbol_list/debug/R.txt b/node_modules/expo-web-browser/android/build/intermediates/compile_symbol_list/debug/R.txt
+new file mode 100644
+index 0000000..7c9eaea
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/compile_symbol_list/debug/R.txt
+@@ -0,0 +1,189 @@
++int attr alpha 0x0
++int attr font 0x0
++int attr fontProviderAuthority 0x0
++int attr fontProviderCerts 0x0
++int attr fontProviderFetchStrategy 0x0
++int attr fontProviderFetchTimeout 0x0
++int attr fontProviderPackage 0x0
++int attr fontProviderQuery 0x0
++int attr fontStyle 0x0
++int attr fontVariationSettings 0x0
++int attr fontWeight 0x0
++int attr ttcIndex 0x0
++int color browser_actions_bg_grey 0x0
++int color browser_actions_divider_color 0x0
++int color browser_actions_text_color 0x0
++int color browser_actions_title_color 0x0
++int color notification_action_color_filter 0x0
++int color notification_icon_bg_color 0x0
++int color ripple_material_light 0x0
++int color secondary_text_default_material_light 0x0
++int dimen browser_actions_context_menu_max_width 0x0
++int dimen browser_actions_context_menu_min_padding 0x0
++int dimen compat_button_inset_horizontal_material 0x0
++int dimen compat_button_inset_vertical_material 0x0
++int dimen compat_button_padding_horizontal_material 0x0
++int dimen compat_button_padding_vertical_material 0x0
++int dimen compat_control_corner_material 0x0
++int dimen compat_notification_large_icon_max_height 0x0
++int dimen compat_notification_large_icon_max_width 0x0
++int dimen notification_action_icon_size 0x0
++int dimen notification_action_text_size 0x0
++int dimen notification_big_circle_margin 0x0
++int dimen notification_content_margin_start 0x0
++int dimen notification_large_icon_height 0x0
++int dimen notification_large_icon_width 0x0
++int dimen notification_main_column_padding_top 0x0
++int dimen notification_media_narrow_margin 0x0
++int dimen notification_right_icon_size 0x0
++int dimen notification_right_side_padding_top 0x0
++int dimen notification_small_icon_background_padding 0x0
++int dimen notification_small_icon_size_as_large 0x0
++int dimen notification_subtext_size 0x0
++int dimen notification_top_pad 0x0
++int dimen notification_top_pad_large_text 0x0
++int drawable notification_action_background 0x0
++int drawable notification_bg 0x0
++int drawable notification_bg_low 0x0
++int drawable notification_bg_low_normal 0x0
++int drawable notification_bg_low_pressed 0x0
++int drawable notification_bg_normal 0x0
++int drawable notification_bg_normal_pressed 0x0
++int drawable notification_icon_background 0x0
++int drawable notification_template_icon_bg 0x0
++int drawable notification_template_icon_low_bg 0x0
++int drawable notification_tile_bg 0x0
++int drawable notify_panel_notification_icon_bg 0x0
++int id accessibility_action_clickable_span 0x0
++int id accessibility_custom_action_0 0x0
++int id accessibility_custom_action_1 0x0
++int id accessibility_custom_action_10 0x0
++int id accessibility_custom_action_11 0x0
++int id accessibility_custom_action_12 0x0
++int id accessibility_custom_action_13 0x0
++int id accessibility_custom_action_14 0x0
++int id accessibility_custom_action_15 0x0
++int id accessibility_custom_action_16 0x0
++int id accessibility_custom_action_17 0x0
++int id accessibility_custom_action_18 0x0
++int id accessibility_custom_action_19 0x0
++int id accessibility_custom_action_2 0x0
++int id accessibility_custom_action_20 0x0
++int id accessibility_custom_action_21 0x0
++int id accessibility_custom_action_22 0x0
++int id accessibility_custom_action_23 0x0
++int id accessibility_custom_action_24 0x0
++int id accessibility_custom_action_25 0x0
++int id accessibility_custom_action_26 0x0
++int id accessibility_custom_action_27 0x0
++int id accessibility_custom_action_28 0x0
++int id accessibility_custom_action_29 0x0
++int id accessibility_custom_action_3 0x0
++int id accessibility_custom_action_30 0x0
++int id accessibility_custom_action_31 0x0
++int id accessibility_custom_action_4 0x0
++int id accessibility_custom_action_5 0x0
++int id accessibility_custom_action_6 0x0
++int id accessibility_custom_action_7 0x0
++int id accessibility_custom_action_8 0x0
++int id accessibility_custom_action_9 0x0
++int id action_container 0x0
++int id action_divider 0x0
++int id action_image 0x0
++int id action_text 0x0
++int id actions 0x0
++int id async 0x0
++int id blocking 0x0
++int id browser_actions_header_text 0x0
++int id browser_actions_menu_item_icon 0x0
++int id browser_actions_menu_item_text 0x0
++int id browser_actions_menu_items 0x0
++int id browser_actions_menu_view 0x0
++int id chronometer 0x0
++int id dialog_button 0x0
++int id forever 0x0
++int id icon 0x0
++int id icon_group 0x0
++int id info 0x0
++int id italic 0x0
++int id line1 0x0
++int id line3 0x0
++int id normal 0x0
++int id notification_background 0x0
++int id notification_main_column 0x0
++int id notification_main_column_container 0x0
++int id right_icon 0x0
++int id right_side 0x0
++int id tag_accessibility_actions 0x0
++int id tag_accessibility_clickable_spans 0x0
++int id tag_accessibility_heading 0x0
++int id tag_accessibility_pane_title 0x0
++int id tag_screen_reader_focusable 0x0
++int id tag_transition_group 0x0
++int id tag_unhandled_key_event_manager 0x0
++int id tag_unhandled_key_listeners 0x0
++int id text 0x0
++int id text2 0x0
++int id time 0x0
++int id title 0x0
++int integer status_bar_notification_info_maxnum 0x0
++int layout browser_actions_context_menu_page 0x0
++int layout browser_actions_context_menu_row 0x0
++int layout custom_dialog 0x0
++int layout notification_action 0x0
++int layout notification_action_tombstone 0x0
++int layout notification_template_custom_big 0x0
++int layout notification_template_icon_group 0x0
++int layout notification_template_part_chronometer 0x0
++int layout notification_template_part_time 0x0
++int string copy_toast_msg 0x0
++int string fallback_menu_item_copy_link 0x0
++int string fallback_menu_item_open_in_browser 0x0
++int string fallback_menu_item_share_link 0x0
++int string status_bar_notification_info_overflow 0x0
++int style TextAppearance_Compat_Notification 0x0
++int style TextAppearance_Compat_Notification_Info 0x0
++int style TextAppearance_Compat_Notification_Line2 0x0
++int style TextAppearance_Compat_Notification_Time 0x0
++int style TextAppearance_Compat_Notification_Title 0x0
++int style Widget_Compat_NotificationActionContainer 0x0
++int style Widget_Compat_NotificationActionText 0x0
++int[] styleable ColorStateListItem { 0x0, 0x101031f, 0x10101a5 }
++int styleable ColorStateListItem_alpha 0
++int styleable ColorStateListItem_android_alpha 1
++int styleable ColorStateListItem_android_color 2
++int[] styleable FontFamily { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
++int styleable FontFamily_fontProviderAuthority 0
++int styleable FontFamily_fontProviderCerts 1
++int styleable FontFamily_fontProviderFetchStrategy 2
++int styleable FontFamily_fontProviderFetchTimeout 3
++int styleable FontFamily_fontProviderPackage 4
++int styleable FontFamily_fontProviderQuery 5
++int[] styleable FontFamilyFont { 0x1010532, 0x101053f, 0x1010570, 0x1010533, 0x101056f, 0x0, 0x0, 0x0, 0x0, 0x0 }
++int styleable FontFamilyFont_android_font 0
++int styleable FontFamilyFont_android_fontStyle 1
++int styleable FontFamilyFont_android_fontVariationSettings 2
++int styleable FontFamilyFont_android_fontWeight 3
++int styleable FontFamilyFont_android_ttcIndex 4
++int styleable FontFamilyFont_font 5
++int styleable FontFamilyFont_fontStyle 6
++int styleable FontFamilyFont_fontVariationSettings 7
++int styleable FontFamilyFont_fontWeight 8
++int styleable FontFamilyFont_ttcIndex 9
++int[] styleable GradientColor { 0x101020b, 0x10101a2, 0x10101a3, 0x101019e, 0x1010512, 0x1010513, 0x10101a4, 0x101019d, 0x1010510, 0x1010511, 0x1010201, 0x10101a1 }
++int styleable GradientColor_android_centerColor 0
++int styleable GradientColor_android_centerX 1
++int styleable GradientColor_android_centerY 2
++int styleable GradientColor_android_endColor 3
++int styleable GradientColor_android_endX 4
++int styleable GradientColor_android_endY 5
++int styleable GradientColor_android_gradientRadius 6
++int styleable GradientColor_android_startColor 7
++int styleable GradientColor_android_startX 8
++int styleable GradientColor_android_startY 9
++int styleable GradientColor_android_tileMode 10
++int styleable GradientColor_android_type 11
++int[] styleable GradientColorItem { 0x10101a5, 0x1010514 }
++int styleable GradientColorItem_android_color 0
++int styleable GradientColorItem_android_offset 1
++int xml image_share_filepaths 0x0
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml b/node_modules/expo-web-browser/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+new file mode 100644
+index 0000000..c257b20
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/debug/jniLibs"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/incremental/mergeDebugShaders/merger.xml b/node_modules/expo-web-browser/android/build/intermediates/incremental/mergeDebugShaders/merger.xml
+new file mode 100644
+index 0000000..8dc94ce
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/incremental/mergeDebugShaders/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/shaders"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/debug/shaders"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/incremental/packageDebugAssets/merger.xml b/node_modules/expo-web-browser/android/build/intermediates/incremental/packageDebugAssets/merger.xml
+new file mode 100644
+index 0000000..fa98e4a
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/incremental/packageDebugAssets/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/assets"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/build/intermediates/shader_assets/debug/out"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/debug/assets"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/incremental/packageDebugResources/compile-file-map.properties b/node_modules/expo-web-browser/android/build/intermediates/incremental/packageDebugResources/compile-file-map.properties
+new file mode 100644
+index 0000000..5cd92bc
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/incremental/packageDebugResources/compile-file-map.properties
+@@ -0,0 +1 @@
++#Wed May 18 18:48:19 EEST 2022
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/incremental/packageDebugResources/merger.xml b/node_modules/expo-web-browser/android/build/intermediates/incremental/packageDebugResources/merger.xml
+new file mode 100644
+index 0000000..8f19200
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/incremental/packageDebugResources/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/res"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/build/generated/res/rs/debug"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/res"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/build/generated/res/rs/debug"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/debug/res"/></dataSet><mergedItems/></merger>
+\ No newline at end of file
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/BuildConfig.class b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/BuildConfig.class
+new file mode 100644
+index 0000000..b0f702a
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/BuildConfig.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/CustomTabsActivitiesHelper.class b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/CustomTabsActivitiesHelper.class
+new file mode 100644
+index 0000000..fa6075f
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/CustomTabsActivitiesHelper.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/CustomTabsConnectionHelper.class b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/CustomTabsConnectionHelper.class
+new file mode 100644
+index 0000000..2028d4a
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/CustomTabsConnectionHelper.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/DeferredClientActionsQueue.class b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/DeferredClientActionsQueue.class
+new file mode 100644
+index 0000000..dbfed6c
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/DeferredClientActionsQueue.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/InternalCustomTabsActivitiesHelper.class b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/InternalCustomTabsActivitiesHelper.class
+new file mode 100644
+index 0000000..be55a3f
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/InternalCustomTabsActivitiesHelper.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/InternalCustomTabsConnectionHelper.class b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/InternalCustomTabsConnectionHelper.class
+new file mode 100644
+index 0000000..8f9d5e3
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/InternalCustomTabsConnectionHelper.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/WebBrowserModule.class b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/WebBrowserModule.class
+new file mode 100644
+index 0000000..fb4e6dc
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/WebBrowserModule.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/WebBrowserPackage.class b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/WebBrowserPackage.class
+new file mode 100644
+index 0000000..8ff7f6b
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/WebBrowserPackage.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/error/NoPreferredPackageFound.class b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/error/NoPreferredPackageFound.class
+new file mode 100644
+index 0000000..e513be0
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/error/NoPreferredPackageFound.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/error/PackageManagerNotFoundException.class b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/error/PackageManagerNotFoundException.class
+new file mode 100644
+index 0000000..6597120
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/javac/debug/classes/expo/modules/webbrowser/error/PackageManagerNotFoundException.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/local_only_symbol_list/debug/R-def.txt b/node_modules/expo-web-browser/android/build/intermediates/local_only_symbol_list/debug/R-def.txt
+new file mode 100644
+index 0000000..78ac5b8
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/local_only_symbol_list/debug/R-def.txt
+@@ -0,0 +1,2 @@
++R_DEF: Internal format may change without notice
++local
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt b/node_modules/expo-web-browser/android/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+new file mode 100644
+index 0000000..0f1de62
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+@@ -0,0 +1,11 @@
++1<?xml version="1.0" encoding="utf-8"?>
++2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++3    package="expo.modules.webbrowser" >
++4
++5    <uses-sdk
++6        android:minSdkVersion="23"
++6-->/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml
++7        android:targetSdkVersion="31" />
++7-->/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml
++8
++9</manifest>
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml b/node_modules/expo-web-browser/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+new file mode 100644
+index 0000000..484d985
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="expo.modules.webbrowser" >
++
++    <uses-sdk
++        android:minSdkVersion="23"
++        android:targetSdkVersion="31" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/navigation_json/debug/navigation.json b/node_modules/expo-web-browser/android/build/intermediates/navigation_json/debug/navigation.json
+new file mode 100644
+index 0000000..0637a08
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/navigation_json/debug/navigation.json
+@@ -0,0 +1 @@
++[]
+\ No newline at end of file
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/packaged_manifests/debug/output-metadata.json b/node_modules/expo-web-browser/android/build/intermediates/packaged_manifests/debug/output-metadata.json
+new file mode 100644
+index 0000000..ce02eb3
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/packaged_manifests/debug/output-metadata.json
+@@ -0,0 +1,18 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "PACKAGED_MANIFESTS",
++    "kind": "Directory"
++  },
++  "applicationId": "expo.modules.webbrowser",
++  "variantName": "debug",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "outputFile": "../../merged_manifest/debug/AndroidManifest.xml"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/BuildConfig.class b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/BuildConfig.class
+new file mode 100644
+index 0000000..b0f702a
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/BuildConfig.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/CustomTabsActivitiesHelper.class b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/CustomTabsActivitiesHelper.class
+new file mode 100644
+index 0000000..fa6075f
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/CustomTabsActivitiesHelper.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/CustomTabsConnectionHelper.class b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/CustomTabsConnectionHelper.class
+new file mode 100644
+index 0000000..2028d4a
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/CustomTabsConnectionHelper.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/DeferredClientActionsQueue.class b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/DeferredClientActionsQueue.class
+new file mode 100644
+index 0000000..dbfed6c
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/DeferredClientActionsQueue.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/InternalCustomTabsActivitiesHelper.class b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/InternalCustomTabsActivitiesHelper.class
+new file mode 100644
+index 0000000..be55a3f
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/InternalCustomTabsActivitiesHelper.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/InternalCustomTabsConnectionHelper.class b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/InternalCustomTabsConnectionHelper.class
+new file mode 100644
+index 0000000..8f9d5e3
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/InternalCustomTabsConnectionHelper.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/WebBrowserModule.class b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/WebBrowserModule.class
+new file mode 100644
+index 0000000..fb4e6dc
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/WebBrowserModule.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/WebBrowserPackage.class b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/WebBrowserPackage.class
+new file mode 100644
+index 0000000..8ff7f6b
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/WebBrowserPackage.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/error/NoPreferredPackageFound.class b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/error/NoPreferredPackageFound.class
+new file mode 100644
+index 0000000..e513be0
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/error/NoPreferredPackageFound.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/error/PackageManagerNotFoundException.class b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/error/PackageManagerNotFoundException.class
+new file mode 100644
+index 0000000..6597120
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/webbrowser/error/PackageManagerNotFoundException.class differ
+diff --git a/node_modules/expo-web-browser/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt b/node_modules/expo-web-browser/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt
+new file mode 100644
+index 0000000..c6dab61
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt
+@@ -0,0 +1,157 @@
++expo.modules.webbrowser
++attr alpha
++attr font
++attr fontProviderAuthority
++attr fontProviderCerts
++attr fontProviderFetchStrategy
++attr fontProviderFetchTimeout
++attr fontProviderPackage
++attr fontProviderQuery
++attr fontStyle
++attr fontVariationSettings
++attr fontWeight
++attr ttcIndex
++color browser_actions_bg_grey
++color browser_actions_divider_color
++color browser_actions_text_color
++color browser_actions_title_color
++color notification_action_color_filter
++color notification_icon_bg_color
++color ripple_material_light
++color secondary_text_default_material_light
++dimen browser_actions_context_menu_max_width
++dimen browser_actions_context_menu_min_padding
++dimen compat_button_inset_horizontal_material
++dimen compat_button_inset_vertical_material
++dimen compat_button_padding_horizontal_material
++dimen compat_button_padding_vertical_material
++dimen compat_control_corner_material
++dimen compat_notification_large_icon_max_height
++dimen compat_notification_large_icon_max_width
++dimen notification_action_icon_size
++dimen notification_action_text_size
++dimen notification_big_circle_margin
++dimen notification_content_margin_start
++dimen notification_large_icon_height
++dimen notification_large_icon_width
++dimen notification_main_column_padding_top
++dimen notification_media_narrow_margin
++dimen notification_right_icon_size
++dimen notification_right_side_padding_top
++dimen notification_small_icon_background_padding
++dimen notification_small_icon_size_as_large
++dimen notification_subtext_size
++dimen notification_top_pad
++dimen notification_top_pad_large_text
++drawable notification_action_background
++drawable notification_bg
++drawable notification_bg_low
++drawable notification_bg_low_normal
++drawable notification_bg_low_pressed
++drawable notification_bg_normal
++drawable notification_bg_normal_pressed
++drawable notification_icon_background
++drawable notification_template_icon_bg
++drawable notification_template_icon_low_bg
++drawable notification_tile_bg
++drawable notify_panel_notification_icon_bg
++id accessibility_action_clickable_span
++id accessibility_custom_action_0
++id accessibility_custom_action_1
++id accessibility_custom_action_10
++id accessibility_custom_action_11
++id accessibility_custom_action_12
++id accessibility_custom_action_13
++id accessibility_custom_action_14
++id accessibility_custom_action_15
++id accessibility_custom_action_16
++id accessibility_custom_action_17
++id accessibility_custom_action_18
++id accessibility_custom_action_19
++id accessibility_custom_action_2
++id accessibility_custom_action_20
++id accessibility_custom_action_21
++id accessibility_custom_action_22
++id accessibility_custom_action_23
++id accessibility_custom_action_24
++id accessibility_custom_action_25
++id accessibility_custom_action_26
++id accessibility_custom_action_27
++id accessibility_custom_action_28
++id accessibility_custom_action_29
++id accessibility_custom_action_3
++id accessibility_custom_action_30
++id accessibility_custom_action_31
++id accessibility_custom_action_4
++id accessibility_custom_action_5
++id accessibility_custom_action_6
++id accessibility_custom_action_7
++id accessibility_custom_action_8
++id accessibility_custom_action_9
++id action_container
++id action_divider
++id action_image
++id action_text
++id actions
++id async
++id blocking
++id browser_actions_header_text
++id browser_actions_menu_item_icon
++id browser_actions_menu_item_text
++id browser_actions_menu_items
++id browser_actions_menu_view
++id chronometer
++id dialog_button
++id forever
++id icon
++id icon_group
++id info
++id italic
++id line1
++id line3
++id normal
++id notification_background
++id notification_main_column
++id notification_main_column_container
++id right_icon
++id right_side
++id tag_accessibility_actions
++id tag_accessibility_clickable_spans
++id tag_accessibility_heading
++id tag_accessibility_pane_title
++id tag_screen_reader_focusable
++id tag_transition_group
++id tag_unhandled_key_event_manager
++id tag_unhandled_key_listeners
++id text
++id text2
++id time
++id title
++integer status_bar_notification_info_maxnum
++layout browser_actions_context_menu_page
++layout browser_actions_context_menu_row
++layout custom_dialog
++layout notification_action
++layout notification_action_tombstone
++layout notification_template_custom_big
++layout notification_template_icon_group
++layout notification_template_part_chronometer
++layout notification_template_part_time
++string copy_toast_msg
++string fallback_menu_item_copy_link
++string fallback_menu_item_open_in_browser
++string fallback_menu_item_share_link
++string status_bar_notification_info_overflow
++style TextAppearance_Compat_Notification
++style TextAppearance_Compat_Notification_Info
++style TextAppearance_Compat_Notification_Line2
++style TextAppearance_Compat_Notification_Time
++style TextAppearance_Compat_Notification_Title
++style Widget_Compat_NotificationActionContainer
++style Widget_Compat_NotificationActionText
++styleable ColorStateListItem alpha android_alpha android_color
++styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
++styleable FontFamilyFont android_font android_fontStyle android_fontVariationSettings android_fontWeight android_ttcIndex font fontStyle fontVariationSettings fontWeight ttcIndex
++styleable GradientColor android_centerColor android_centerX android_centerY android_endColor android_endX android_endY android_gradientRadius android_startColor android_startX android_startY android_tileMode android_type
++styleable GradientColorItem android_color android_offset
++xml image_share_filepaths
+diff --git a/node_modules/expo-web-browser/android/build/outputs/logs/manifest-merger-debug-report.txt b/node_modules/expo-web-browser/android/build/outputs/logs/manifest-merger-debug-report.txt
+new file mode 100644
+index 0000000..f2340e9
+--- /dev/null
++++ b/node_modules/expo-web-browser/android/build/outputs/logs/manifest-merger-debug-report.txt
+@@ -0,0 +1,25 @@
++-- Merging decision tree log ---
++manifest
++ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml:1:1-3:12
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml:1:1-3:12
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml:1:1-3:12
++	package
++		ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml:1:11-44
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml
++	xmlns:android
++		ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml:1:1-3:12
++uses-sdk
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml
++	android:targetSdkVersion
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml
++		ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml
++	android:minSdkVersion
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml
++		ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-web-browser/android/src/main/AndroidManifest.xml
+diff --git a/node_modules/expo-web-browser/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin b/node_modules/expo-web-browser/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin
+new file mode 100644
+index 0000000..78f15cf
+Binary files /dev/null and b/node_modules/expo-web-browser/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin differ

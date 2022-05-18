@@ -1,0 +1,1371 @@
+diff --git a/node_modules/@unimodules/core/android/build.gradle b/node_modules/@unimodules/core/android/build.gradle
+index e12c9bb..9fa5eb4 100644
+--- a/node_modules/@unimodules/core/android/build.gradle
++++ b/node_modules/@unimodules/core/android/build.gradle
+@@ -1,6 +1,6 @@
+ apply plugin: 'com.android.library'
+ apply plugin: 'kotlin-android'
+-apply plugin: 'maven'
++apply plugin: 'maven-publish'
+ 
+ group = 'org.unimodules'
+ version = '7.1.2'
+@@ -20,27 +20,16 @@ buildscript {
+   }
+ }
+ 
+-//Upload android library to maven with javadoc and android sources
+-configurations {
+-  deployerJars
+-}
+-
+ //Creating sources with comments
+ task androidSourcesJar(type: Jar) {
+-  classifier = 'sources'
++  archiveClassifier = 'sources'
+   from android.sourceSets.main.java.srcDirs
+ }
+ 
+-//Put the androidSources and javadoc to the artifacts
+-artifacts {
+-  archives androidSourcesJar
+-}
+-
+-uploadArchives {
+-  repositories {
+-    mavenDeployer {
+-      configuration = configurations.deployerJars
+-      repository(url: mavenLocal().url)
++publishing {
++  publications {
++    maven(MavenPublication) {
++      artifact androidSourcesJar
+     }
+   }
+ }
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/results.bin b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/results.bin
+new file mode 100644
+index 0000000..5ff383e
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/results.bin
+@@ -0,0 +1 @@
++o/debug
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ArgumentsHelper.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ArgumentsHelper.dex
+new file mode 100644
+index 0000000..0bd2f17
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ArgumentsHelper.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/BasePackage.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/BasePackage.dex
+new file mode 100644
+index 0000000..8ba415a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/BasePackage.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/BuildConfig.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/BuildConfig.dex
+new file mode 100644
+index 0000000..b339a74
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/BuildConfig.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ExportedModule$MethodInfo.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ExportedModule$MethodInfo.dex
+new file mode 100644
+index 0000000..142b548
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ExportedModule$MethodInfo.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ExportedModule.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ExportedModule.dex
+new file mode 100644
+index 0000000..04aaf0f
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ExportedModule.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/MapHelper.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/MapHelper.dex
+new file mode 100644
+index 0000000..60376a0
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/MapHelper.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ModuleRegistry.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ModuleRegistry.dex
+new file mode 100644
+index 0000000..3704ab7
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ModuleRegistry.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ModuleRegistryDelegate$getFromModuleRegistry$1.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ModuleRegistryDelegate$getFromModuleRegistry$1.dex
+new file mode 100644
+index 0000000..2991b6b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ModuleRegistryDelegate$getFromModuleRegistry$1.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ModuleRegistryDelegate.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ModuleRegistryDelegate.dex
+new file mode 100644
+index 0000000..e53fb32
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ModuleRegistryDelegate.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ModuleRegistryProvider.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ModuleRegistryProvider.dex
+new file mode 100644
+index 0000000..cea4726
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ModuleRegistryProvider.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/Promise.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/Promise.dex
+new file mode 100644
+index 0000000..978b644
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/Promise.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ViewManager$PropSetterInfo.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ViewManager$PropSetterInfo.dex
+new file mode 100644
+index 0000000..b379116
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ViewManager$PropSetterInfo.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ViewManager$ViewManagerType.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ViewManager$ViewManagerType.dex
+new file mode 100644
+index 0000000..29a9545
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ViewManager$ViewManagerType.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ViewManager.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ViewManager.dex
+new file mode 100644
+index 0000000..f47ed1c
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/ViewManager.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/arguments/MapArguments.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/arguments/MapArguments.dex
+new file mode 100644
+index 0000000..1441820
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/arguments/MapArguments.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/arguments/ReadableArguments.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/arguments/ReadableArguments.dex
+new file mode 100644
+index 0000000..52bc176
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/arguments/ReadableArguments.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/CodedException.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/CodedException.dex
+new file mode 100644
+index 0000000..f87cff9
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/CodedException.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/CodedRuntimeException.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/CodedRuntimeException.dex
+new file mode 100644
+index 0000000..786edd6
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/CodedRuntimeException.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/CurrentActivityNotFoundException.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/CurrentActivityNotFoundException.dex
+new file mode 100644
+index 0000000..767d283
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/CurrentActivityNotFoundException.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/InvalidArgumentException.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/InvalidArgumentException.dex
+new file mode 100644
+index 0000000..ddd76fa
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/InvalidArgumentException.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/ModuleNotFoundException.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/ModuleNotFoundException.dex
+new file mode 100644
+index 0000000..87df13e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/errors/ModuleNotFoundException.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/ActivityEventListener.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/ActivityEventListener.dex
+new file mode 100644
+index 0000000..73abc58
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/ActivityEventListener.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/ActivityProvider.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/ActivityProvider.dex
+new file mode 100644
+index 0000000..768422b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/ActivityProvider.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/Arguments.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/Arguments.dex
+new file mode 100644
+index 0000000..ef2b32e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/Arguments.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/CodedThrowable.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/CodedThrowable.dex
+new file mode 100644
+index 0000000..7ae3b19
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/CodedThrowable.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/Consumer.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/Consumer.dex
+new file mode 100644
+index 0000000..fb46f2a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/Consumer.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/DoNotStrip.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/DoNotStrip.dex
+new file mode 100644
+index 0000000..5c527eb
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/DoNotStrip.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/ExpoMethod.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/ExpoMethod.dex
+new file mode 100644
+index 0000000..eeff1dd
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/ExpoMethod.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/ExpoProp.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/ExpoProp.dex
+new file mode 100644
+index 0000000..ea32eb9
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/ExpoProp.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/Function.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/Function.dex
+new file mode 100644
+index 0000000..309db5c
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/Function.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/InternalModule.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/InternalModule.dex
+new file mode 100644
+index 0000000..b407291
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/InternalModule.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/JavaScriptContextProvider.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/JavaScriptContextProvider.dex
+new file mode 100644
+index 0000000..a858abe
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/JavaScriptContextProvider.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/LifecycleEventListener.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/LifecycleEventListener.dex
+new file mode 100644
+index 0000000..4a87773
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/LifecycleEventListener.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/Package.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/Package.dex
+new file mode 100644
+index 0000000..3ed6c05
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/Package.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/RegistryLifecycleListener.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/RegistryLifecycleListener.dex
+new file mode 100644
+index 0000000..e713d67
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/RegistryLifecycleListener.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface$PlatformVersion.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface$PlatformVersion.dex
+new file mode 100644
+index 0000000..5713756
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface$PlatformVersion.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface.dex
+new file mode 100644
+index 0000000..aac0b0b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/SingletonModule.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/SingletonModule.dex
+new file mode 100644
+index 0000000..2b78f6f
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/SingletonModule.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter$BaseEvent.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter$BaseEvent.dex
+new file mode 100644
+index 0000000..b67ca32
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter$BaseEvent.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter$Event.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter$Event.dex
+new file mode 100644
+index 0000000..19da5d9
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter$Event.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter.dex
+new file mode 100644
+index 0000000..20fd05b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/KeepAwakeManager.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/KeepAwakeManager.dex
+new file mode 100644
+index 0000000..5ba9f2a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/KeepAwakeManager.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/UIManager$GroupUIBlock.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/UIManager$GroupUIBlock.dex
+new file mode 100644
+index 0000000..a31db17
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/UIManager$GroupUIBlock.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/UIManager$UIBlock.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/UIManager$UIBlock.dex
+new file mode 100644
+index 0000000..c1991a2
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/UIManager$UIBlock.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/UIManager$ViewHolder.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/UIManager$ViewHolder.dex
+new file mode 100644
+index 0000000..53b81f6
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/UIManager$ViewHolder.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/UIManager.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/UIManager.dex
+new file mode 100644
+index 0000000..f3a32ea
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/interfaces/services/UIManager.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/utilities/FileUtilities.dex b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/utilities/FileUtilities.dex
+new file mode 100644
+index 0000000..6fd2043
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/debug/org/unimodules/core/utilities/FileUtilities.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/desugar_graph.bin b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/desugar_graph.bin
+new file mode 100644
+index 0000000..601f245
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/089e48f186ae79afd858cb719c7c6105/transformed/desugar_graph.bin differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/8411168e78067801b3b0797cadcfca6e/results.bin b/node_modules/@unimodules/core/android/build/.transforms/8411168e78067801b3b0797cadcfca6e/results.bin
+new file mode 100644
+index 0000000..1ed65e0
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/.transforms/8411168e78067801b3b0797cadcfca6e/results.bin
+@@ -0,0 +1 @@
++i/
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/results.bin b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/results.bin
+new file mode 100644
+index 0000000..5ff383e
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/results.bin
+@@ -0,0 +1 @@
++o/debug
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ArgumentsHelper.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ArgumentsHelper.dex
+new file mode 100644
+index 0000000..0bd2f17
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ArgumentsHelper.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/BasePackage.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/BasePackage.dex
+new file mode 100644
+index 0000000..8ba415a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/BasePackage.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/BuildConfig.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/BuildConfig.dex
+new file mode 100644
+index 0000000..b339a74
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/BuildConfig.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ExportedModule$MethodInfo.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ExportedModule$MethodInfo.dex
+new file mode 100644
+index 0000000..142b548
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ExportedModule$MethodInfo.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ExportedModule.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ExportedModule.dex
+new file mode 100644
+index 0000000..04aaf0f
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ExportedModule.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/MapHelper.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/MapHelper.dex
+new file mode 100644
+index 0000000..60376a0
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/MapHelper.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ModuleRegistry.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ModuleRegistry.dex
+new file mode 100644
+index 0000000..3704ab7
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ModuleRegistry.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ModuleRegistryDelegate$getFromModuleRegistry$1.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ModuleRegistryDelegate$getFromModuleRegistry$1.dex
+new file mode 100644
+index 0000000..2991b6b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ModuleRegistryDelegate$getFromModuleRegistry$1.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ModuleRegistryDelegate.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ModuleRegistryDelegate.dex
+new file mode 100644
+index 0000000..e53fb32
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ModuleRegistryDelegate.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ModuleRegistryProvider.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ModuleRegistryProvider.dex
+new file mode 100644
+index 0000000..cea4726
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ModuleRegistryProvider.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/Promise.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/Promise.dex
+new file mode 100644
+index 0000000..978b644
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/Promise.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ViewManager$PropSetterInfo.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ViewManager$PropSetterInfo.dex
+new file mode 100644
+index 0000000..b379116
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ViewManager$PropSetterInfo.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ViewManager$ViewManagerType.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ViewManager$ViewManagerType.dex
+new file mode 100644
+index 0000000..29a9545
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ViewManager$ViewManagerType.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ViewManager.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ViewManager.dex
+new file mode 100644
+index 0000000..f47ed1c
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/ViewManager.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/arguments/MapArguments.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/arguments/MapArguments.dex
+new file mode 100644
+index 0000000..1441820
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/arguments/MapArguments.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/arguments/ReadableArguments.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/arguments/ReadableArguments.dex
+new file mode 100644
+index 0000000..52bc176
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/arguments/ReadableArguments.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/CodedException.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/CodedException.dex
+new file mode 100644
+index 0000000..f87cff9
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/CodedException.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/CodedRuntimeException.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/CodedRuntimeException.dex
+new file mode 100644
+index 0000000..786edd6
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/CodedRuntimeException.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/CurrentActivityNotFoundException.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/CurrentActivityNotFoundException.dex
+new file mode 100644
+index 0000000..767d283
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/CurrentActivityNotFoundException.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/InvalidArgumentException.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/InvalidArgumentException.dex
+new file mode 100644
+index 0000000..ddd76fa
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/InvalidArgumentException.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/ModuleNotFoundException.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/ModuleNotFoundException.dex
+new file mode 100644
+index 0000000..87df13e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/errors/ModuleNotFoundException.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/ActivityEventListener.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/ActivityEventListener.dex
+new file mode 100644
+index 0000000..73abc58
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/ActivityEventListener.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/ActivityProvider.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/ActivityProvider.dex
+new file mode 100644
+index 0000000..768422b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/ActivityProvider.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/Arguments.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/Arguments.dex
+new file mode 100644
+index 0000000..ef2b32e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/Arguments.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/CodedThrowable.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/CodedThrowable.dex
+new file mode 100644
+index 0000000..7ae3b19
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/CodedThrowable.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/Consumer.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/Consumer.dex
+new file mode 100644
+index 0000000..fb46f2a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/Consumer.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/DoNotStrip.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/DoNotStrip.dex
+new file mode 100644
+index 0000000..5c527eb
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/DoNotStrip.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/ExpoMethod.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/ExpoMethod.dex
+new file mode 100644
+index 0000000..eeff1dd
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/ExpoMethod.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/ExpoProp.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/ExpoProp.dex
+new file mode 100644
+index 0000000..ea32eb9
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/ExpoProp.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/Function.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/Function.dex
+new file mode 100644
+index 0000000..309db5c
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/Function.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/InternalModule.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/InternalModule.dex
+new file mode 100644
+index 0000000..b407291
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/InternalModule.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/JavaScriptContextProvider.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/JavaScriptContextProvider.dex
+new file mode 100644
+index 0000000..a858abe
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/JavaScriptContextProvider.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/LifecycleEventListener.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/LifecycleEventListener.dex
+new file mode 100644
+index 0000000..4a87773
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/LifecycleEventListener.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/Package.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/Package.dex
+new file mode 100644
+index 0000000..3ed6c05
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/Package.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/RegistryLifecycleListener.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/RegistryLifecycleListener.dex
+new file mode 100644
+index 0000000..e713d67
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/RegistryLifecycleListener.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface$PlatformVersion.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface$PlatformVersion.dex
+new file mode 100644
+index 0000000..5713756
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface$PlatformVersion.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface.dex
+new file mode 100644
+index 0000000..aac0b0b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/SingletonModule.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/SingletonModule.dex
+new file mode 100644
+index 0000000..2b78f6f
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/SingletonModule.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter$BaseEvent.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter$BaseEvent.dex
+new file mode 100644
+index 0000000..b67ca32
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter$BaseEvent.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter$Event.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter$Event.dex
+new file mode 100644
+index 0000000..19da5d9
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter$Event.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter.dex
+new file mode 100644
+index 0000000..20fd05b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/EventEmitter.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/KeepAwakeManager.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/KeepAwakeManager.dex
+new file mode 100644
+index 0000000..5ba9f2a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/KeepAwakeManager.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/UIManager$GroupUIBlock.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/UIManager$GroupUIBlock.dex
+new file mode 100644
+index 0000000..a31db17
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/UIManager$GroupUIBlock.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/UIManager$UIBlock.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/UIManager$UIBlock.dex
+new file mode 100644
+index 0000000..c1991a2
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/UIManager$UIBlock.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/UIManager$ViewHolder.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/UIManager$ViewHolder.dex
+new file mode 100644
+index 0000000..53b81f6
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/UIManager$ViewHolder.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/UIManager.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/UIManager.dex
+new file mode 100644
+index 0000000..f3a32ea
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/interfaces/services/UIManager.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/utilities/FileUtilities.dex b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/utilities/FileUtilities.dex
+new file mode 100644
+index 0000000..6fd2043
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/debug/org/unimodules/core/utilities/FileUtilities.dex differ
+diff --git a/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/desugar_graph.bin b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/desugar_graph.bin
+new file mode 100644
+index 0000000..601f245
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/.transforms/9f91b8dea9c7a00eafe47359127c5c7b/transformed/desugar_graph.bin differ
+diff --git a/node_modules/@unimodules/core/android/build/generated/source/buildConfig/debug/org/unimodules/core/BuildConfig.java b/node_modules/@unimodules/core/android/build/generated/source/buildConfig/debug/org/unimodules/core/BuildConfig.java
+new file mode 100644
+index 0000000..6ff0623
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/generated/source/buildConfig/debug/org/unimodules/core/BuildConfig.java
+@@ -0,0 +1,10 @@
++/**
++ * Automatically generated file. DO NOT MODIFY
++ */
++package org.unimodules.core;
++
++public final class BuildConfig {
++  public static final boolean DEBUG = Boolean.parseBoolean("true");
++  public static final String LIBRARY_PACKAGE_NAME = "org.unimodules.core";
++  public static final String BUILD_TYPE = "debug";
++}
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml b/node_modules/@unimodules/core/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml
+new file mode 100644
+index 0000000..1eade66
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="org.unimodules.core" >
++
++    <uses-sdk
++        android:minSdkVersion="23"
++        android:targetSdkVersion="31" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json b/node_modules/@unimodules/core/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json
+new file mode 100644
+index 0000000..b1534db
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json
+@@ -0,0 +1,18 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "AAPT_FRIENDLY_MERGED_MANIFESTS",
++    "kind": "Directory"
++  },
++  "applicationId": "org.unimodules.core",
++  "variantName": "debug",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "outputFile": "AndroidManifest.xml"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/aar_metadata/debug/aar-metadata.properties b/node_modules/@unimodules/core/android/build/intermediates/aar_metadata/debug/aar-metadata.properties
+new file mode 100644
+index 0000000..d8f70c0
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/aar_metadata/debug/aar-metadata.properties
+@@ -0,0 +1,3 @@
++aarFormatVersion=1.0
++aarMetadataVersion=1.0
++minCompileSdk=1
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/annotation_processor_list/debug/annotationProcessors.json b/node_modules/@unimodules/core/android/build/intermediates/annotation_processor_list/debug/annotationProcessors.json
+new file mode 100644
+index 0000000..9e26dfe
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/annotation_processor_list/debug/annotationProcessors.json
+@@ -0,0 +1 @@
++{}
+\ No newline at end of file
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/compile_library_classes_jar/debug/classes.jar b/node_modules/@unimodules/core/android/build/intermediates/compile_library_classes_jar/debug/classes.jar
+new file mode 100644
+index 0000000..4ae1850
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/compile_library_classes_jar/debug/classes.jar differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/compile_r_class_jar/debug/R.jar b/node_modules/@unimodules/core/android/build/intermediates/compile_r_class_jar/debug/R.jar
+new file mode 100644
+index 0000000..0c0f063
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/compile_r_class_jar/debug/R.jar differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/compile_symbol_list/debug/R.txt b/node_modules/@unimodules/core/android/build/intermediates/compile_symbol_list/debug/R.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml b/node_modules/@unimodules/core/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+new file mode 100644
+index 0000000..599534b
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/debug/jniLibs"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/incremental/mergeDebugShaders/merger.xml b/node_modules/@unimodules/core/android/build/intermediates/incremental/mergeDebugShaders/merger.xml
+new file mode 100644
+index 0000000..215f3b6
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/incremental/mergeDebugShaders/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/shaders"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/debug/shaders"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/incremental/packageDebugAssets/merger.xml b/node_modules/@unimodules/core/android/build/intermediates/incremental/packageDebugAssets/merger.xml
+new file mode 100644
+index 0000000..99b8824
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/incremental/packageDebugAssets/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/assets"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/build/intermediates/shader_assets/debug/out"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/debug/assets"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/incremental/packageDebugResources/compile-file-map.properties b/node_modules/@unimodules/core/android/build/intermediates/incremental/packageDebugResources/compile-file-map.properties
+new file mode 100644
+index 0000000..5cd92bc
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/incremental/packageDebugResources/compile-file-map.properties
+@@ -0,0 +1 @@
++#Wed May 18 18:48:19 EEST 2022
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/incremental/packageDebugResources/merger.xml b/node_modules/@unimodules/core/android/build/intermediates/incremental/packageDebugResources/merger.xml
+new file mode 100644
+index 0000000..c70acab
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/incremental/packageDebugResources/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/res"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/build/generated/res/rs/debug"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/res"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/build/generated/res/rs/debug"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/debug/res"/></dataSet><mergedItems/></merger>
+\ No newline at end of file
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ArgumentsHelper.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ArgumentsHelper.class
+new file mode 100644
+index 0000000..394ee46
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ArgumentsHelper.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/BasePackage.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/BasePackage.class
+new file mode 100644
+index 0000000..a591534
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/BasePackage.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/BuildConfig.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/BuildConfig.class
+new file mode 100644
+index 0000000..f8b0841
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/BuildConfig.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ExportedModule$MethodInfo.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ExportedModule$MethodInfo.class
+new file mode 100644
+index 0000000..426a8f0
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ExportedModule$MethodInfo.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ExportedModule.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ExportedModule.class
+new file mode 100644
+index 0000000..802414f
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ExportedModule.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/MapHelper.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/MapHelper.class
+new file mode 100644
+index 0000000..6ea6be1
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/MapHelper.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ModuleRegistry.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ModuleRegistry.class
+new file mode 100644
+index 0000000..4fba707
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ModuleRegistry.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ModuleRegistryProvider.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ModuleRegistryProvider.class
+new file mode 100644
+index 0000000..8047575
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ModuleRegistryProvider.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/Promise.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/Promise.class
+new file mode 100644
+index 0000000..036604a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/Promise.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ViewManager$PropSetterInfo.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ViewManager$PropSetterInfo.class
+new file mode 100644
+index 0000000..201a73e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ViewManager$PropSetterInfo.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ViewManager$ViewManagerType.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ViewManager$ViewManagerType.class
+new file mode 100644
+index 0000000..2a7afdf
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ViewManager$ViewManagerType.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ViewManager.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ViewManager.class
+new file mode 100644
+index 0000000..b327bf2
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/ViewManager.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/arguments/MapArguments.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/arguments/MapArguments.class
+new file mode 100644
+index 0000000..51be78f
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/arguments/MapArguments.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/arguments/ReadableArguments.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/arguments/ReadableArguments.class
+new file mode 100644
+index 0000000..355d8f1
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/arguments/ReadableArguments.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/CodedException.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/CodedException.class
+new file mode 100644
+index 0000000..1294d79
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/CodedException.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/CodedRuntimeException.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/CodedRuntimeException.class
+new file mode 100644
+index 0000000..b1b2dca
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/CodedRuntimeException.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/CurrentActivityNotFoundException.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/CurrentActivityNotFoundException.class
+new file mode 100644
+index 0000000..b6a649c
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/CurrentActivityNotFoundException.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/InvalidArgumentException.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/InvalidArgumentException.class
+new file mode 100644
+index 0000000..8cfce5a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/InvalidArgumentException.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/ModuleNotFoundException.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/ModuleNotFoundException.class
+new file mode 100644
+index 0000000..27f31bf
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/errors/ModuleNotFoundException.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/ActivityEventListener.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/ActivityEventListener.class
+new file mode 100644
+index 0000000..41950f6
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/ActivityEventListener.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/ActivityProvider.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/ActivityProvider.class
+new file mode 100644
+index 0000000..c2b8997
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/ActivityProvider.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/Arguments.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/Arguments.class
+new file mode 100644
+index 0000000..ea18dfa
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/Arguments.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/CodedThrowable.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/CodedThrowable.class
+new file mode 100644
+index 0000000..c55886a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/CodedThrowable.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/Consumer.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/Consumer.class
+new file mode 100644
+index 0000000..877c6be
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/Consumer.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/DoNotStrip.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/DoNotStrip.class
+new file mode 100644
+index 0000000..144e1cb
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/DoNotStrip.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/ExpoMethod.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/ExpoMethod.class
+new file mode 100644
+index 0000000..3de8767
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/ExpoMethod.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/ExpoProp.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/ExpoProp.class
+new file mode 100644
+index 0000000..7bb13e7
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/ExpoProp.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/Function.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/Function.class
+new file mode 100644
+index 0000000..bed19bb
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/Function.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/InternalModule.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/InternalModule.class
+new file mode 100644
+index 0000000..26e1bb7
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/InternalModule.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/JavaScriptContextProvider.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/JavaScriptContextProvider.class
+new file mode 100644
+index 0000000..8cb7536
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/JavaScriptContextProvider.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/LifecycleEventListener.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/LifecycleEventListener.class
+new file mode 100644
+index 0000000..48a43ac
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/LifecycleEventListener.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/Package.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/Package.class
+new file mode 100644
+index 0000000..30eba0e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/Package.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/RegistryLifecycleListener.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/RegistryLifecycleListener.class
+new file mode 100644
+index 0000000..ef8ae7f
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/RegistryLifecycleListener.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/RuntimeEnvironmentInterface$PlatformVersion.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/RuntimeEnvironmentInterface$PlatformVersion.class
+new file mode 100644
+index 0000000..61bae1a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/RuntimeEnvironmentInterface$PlatformVersion.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/RuntimeEnvironmentInterface.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/RuntimeEnvironmentInterface.class
+new file mode 100644
+index 0000000..37da90b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/RuntimeEnvironmentInterface.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/SingletonModule.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/SingletonModule.class
+new file mode 100644
+index 0000000..8b2bd4b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/SingletonModule.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/EventEmitter$BaseEvent.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/EventEmitter$BaseEvent.class
+new file mode 100644
+index 0000000..bec0f94
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/EventEmitter$BaseEvent.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/EventEmitter$Event.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/EventEmitter$Event.class
+new file mode 100644
+index 0000000..4d0a1dc
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/EventEmitter$Event.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/EventEmitter.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/EventEmitter.class
+new file mode 100644
+index 0000000..039e189
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/EventEmitter.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/KeepAwakeManager.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/KeepAwakeManager.class
+new file mode 100644
+index 0000000..2299ab5
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/KeepAwakeManager.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/UIManager$GroupUIBlock.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/UIManager$GroupUIBlock.class
+new file mode 100644
+index 0000000..373c1c2
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/UIManager$GroupUIBlock.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/UIManager$UIBlock.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/UIManager$UIBlock.class
+new file mode 100644
+index 0000000..8995155
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/UIManager$UIBlock.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/UIManager$ViewHolder.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/UIManager$ViewHolder.class
+new file mode 100644
+index 0000000..671b4ac
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/UIManager$ViewHolder.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/UIManager.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/UIManager.class
+new file mode 100644
+index 0000000..d6c7edc
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/interfaces/services/UIManager.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/utilities/FileUtilities.class b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/utilities/FileUtilities.class
+new file mode 100644
+index 0000000..2f655c7
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/javac/debug/classes/org/unimodules/core/utilities/FileUtilities.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/library_java_res/debug/res.jar b/node_modules/@unimodules/core/android/build/intermediates/library_java_res/debug/res.jar
+new file mode 100644
+index 0000000..34a0fdc
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/library_java_res/debug/res.jar differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/local_only_symbol_list/debug/R-def.txt b/node_modules/@unimodules/core/android/build/intermediates/local_only_symbol_list/debug/R-def.txt
+new file mode 100644
+index 0000000..78ac5b8
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/local_only_symbol_list/debug/R-def.txt
+@@ -0,0 +1,2 @@
++R_DEF: Internal format may change without notice
++local
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt b/node_modules/@unimodules/core/android/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+new file mode 100644
+index 0000000..5890593
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+@@ -0,0 +1,11 @@
++1<?xml version="1.0" encoding="utf-8"?>
++2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++3    package="org.unimodules.core" >
++4
++5    <uses-sdk
++6        android:minSdkVersion="23"
++6-->/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml
++7        android:targetSdkVersion="31" />
++7-->/Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml
++8
++9</manifest>
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml b/node_modules/@unimodules/core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+new file mode 100644
+index 0000000..1eade66
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="org.unimodules.core" >
++
++    <uses-sdk
++        android:minSdkVersion="23"
++        android:targetSdkVersion="31" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/navigation_json/debug/navigation.json b/node_modules/@unimodules/core/android/build/intermediates/navigation_json/debug/navigation.json
+new file mode 100644
+index 0000000..0637a08
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/navigation_json/debug/navigation.json
+@@ -0,0 +1 @@
++[]
+\ No newline at end of file
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/packaged_manifests/debug/output-metadata.json b/node_modules/@unimodules/core/android/build/intermediates/packaged_manifests/debug/output-metadata.json
+new file mode 100644
+index 0000000..5d2636d
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/packaged_manifests/debug/output-metadata.json
+@@ -0,0 +1,18 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "PACKAGED_MANIFESTS",
++    "kind": "Directory"
++  },
++  "applicationId": "org.unimodules.core",
++  "variantName": "debug",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "outputFile": "../../merged_manifest/debug/AndroidManifest.xml"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/META-INF/unimodules-core_debug.kotlin_module b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/META-INF/unimodules-core_debug.kotlin_module
+new file mode 100644
+index 0000000..609d952
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/META-INF/unimodules-core_debug.kotlin_module differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ArgumentsHelper.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ArgumentsHelper.class
+new file mode 100644
+index 0000000..394ee46
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ArgumentsHelper.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/BasePackage.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/BasePackage.class
+new file mode 100644
+index 0000000..a591534
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/BasePackage.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/BuildConfig.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/BuildConfig.class
+new file mode 100644
+index 0000000..f8b0841
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/BuildConfig.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ExportedModule$MethodInfo.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ExportedModule$MethodInfo.class
+new file mode 100644
+index 0000000..426a8f0
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ExportedModule$MethodInfo.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ExportedModule.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ExportedModule.class
+new file mode 100644
+index 0000000..802414f
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ExportedModule.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/MapHelper.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/MapHelper.class
+new file mode 100644
+index 0000000..6ea6be1
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/MapHelper.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ModuleRegistry.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ModuleRegistry.class
+new file mode 100644
+index 0000000..4fba707
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ModuleRegistry.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ModuleRegistryDelegate$getFromModuleRegistry$1.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ModuleRegistryDelegate$getFromModuleRegistry$1.class
+new file mode 100644
+index 0000000..f8d4b0e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ModuleRegistryDelegate$getFromModuleRegistry$1.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ModuleRegistryDelegate.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ModuleRegistryDelegate.class
+new file mode 100644
+index 0000000..2ba5a3e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ModuleRegistryDelegate.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ModuleRegistryProvider.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ModuleRegistryProvider.class
+new file mode 100644
+index 0000000..8047575
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ModuleRegistryProvider.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/Promise.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/Promise.class
+new file mode 100644
+index 0000000..036604a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/Promise.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ViewManager$PropSetterInfo.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ViewManager$PropSetterInfo.class
+new file mode 100644
+index 0000000..201a73e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ViewManager$PropSetterInfo.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ViewManager$ViewManagerType.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ViewManager$ViewManagerType.class
+new file mode 100644
+index 0000000..2a7afdf
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ViewManager$ViewManagerType.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ViewManager.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ViewManager.class
+new file mode 100644
+index 0000000..b327bf2
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/ViewManager.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/arguments/MapArguments.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/arguments/MapArguments.class
+new file mode 100644
+index 0000000..51be78f
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/arguments/MapArguments.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/arguments/ReadableArguments.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/arguments/ReadableArguments.class
+new file mode 100644
+index 0000000..355d8f1
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/arguments/ReadableArguments.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/CodedException.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/CodedException.class
+new file mode 100644
+index 0000000..1294d79
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/CodedException.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/CodedRuntimeException.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/CodedRuntimeException.class
+new file mode 100644
+index 0000000..b1b2dca
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/CodedRuntimeException.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/CurrentActivityNotFoundException.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/CurrentActivityNotFoundException.class
+new file mode 100644
+index 0000000..b6a649c
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/CurrentActivityNotFoundException.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/InvalidArgumentException.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/InvalidArgumentException.class
+new file mode 100644
+index 0000000..8cfce5a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/InvalidArgumentException.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/ModuleNotFoundException.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/ModuleNotFoundException.class
+new file mode 100644
+index 0000000..27f31bf
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/errors/ModuleNotFoundException.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/ActivityEventListener.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/ActivityEventListener.class
+new file mode 100644
+index 0000000..41950f6
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/ActivityEventListener.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/ActivityProvider.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/ActivityProvider.class
+new file mode 100644
+index 0000000..c2b8997
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/ActivityProvider.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/Arguments.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/Arguments.class
+new file mode 100644
+index 0000000..ea18dfa
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/Arguments.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/CodedThrowable.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/CodedThrowable.class
+new file mode 100644
+index 0000000..c55886a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/CodedThrowable.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/Consumer.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/Consumer.class
+new file mode 100644
+index 0000000..877c6be
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/Consumer.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/DoNotStrip.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/DoNotStrip.class
+new file mode 100644
+index 0000000..144e1cb
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/DoNotStrip.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/ExpoMethod.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/ExpoMethod.class
+new file mode 100644
+index 0000000..3de8767
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/ExpoMethod.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/ExpoProp.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/ExpoProp.class
+new file mode 100644
+index 0000000..7bb13e7
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/ExpoProp.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/Function.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/Function.class
+new file mode 100644
+index 0000000..bed19bb
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/Function.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/InternalModule.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/InternalModule.class
+new file mode 100644
+index 0000000..26e1bb7
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/InternalModule.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/JavaScriptContextProvider.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/JavaScriptContextProvider.class
+new file mode 100644
+index 0000000..8cb7536
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/JavaScriptContextProvider.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/LifecycleEventListener.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/LifecycleEventListener.class
+new file mode 100644
+index 0000000..48a43ac
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/LifecycleEventListener.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/Package.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/Package.class
+new file mode 100644
+index 0000000..30eba0e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/Package.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/RegistryLifecycleListener.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/RegistryLifecycleListener.class
+new file mode 100644
+index 0000000..ef8ae7f
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/RegistryLifecycleListener.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface$PlatformVersion.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface$PlatformVersion.class
+new file mode 100644
+index 0000000..61bae1a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface$PlatformVersion.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface.class
+new file mode 100644
+index 0000000..37da90b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/RuntimeEnvironmentInterface.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/SingletonModule.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/SingletonModule.class
+new file mode 100644
+index 0000000..8b2bd4b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/SingletonModule.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/EventEmitter$BaseEvent.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/EventEmitter$BaseEvent.class
+new file mode 100644
+index 0000000..bec0f94
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/EventEmitter$BaseEvent.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/EventEmitter$Event.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/EventEmitter$Event.class
+new file mode 100644
+index 0000000..4d0a1dc
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/EventEmitter$Event.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/EventEmitter.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/EventEmitter.class
+new file mode 100644
+index 0000000..039e189
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/EventEmitter.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/KeepAwakeManager.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/KeepAwakeManager.class
+new file mode 100644
+index 0000000..2299ab5
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/KeepAwakeManager.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/UIManager$GroupUIBlock.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/UIManager$GroupUIBlock.class
+new file mode 100644
+index 0000000..373c1c2
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/UIManager$GroupUIBlock.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/UIManager$UIBlock.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/UIManager$UIBlock.class
+new file mode 100644
+index 0000000..8995155
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/UIManager$UIBlock.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/UIManager$ViewHolder.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/UIManager$ViewHolder.class
+new file mode 100644
+index 0000000..671b4ac
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/UIManager$ViewHolder.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/UIManager.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/UIManager.class
+new file mode 100644
+index 0000000..d6c7edc
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/interfaces/services/UIManager.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/utilities/FileUtilities.class b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/utilities/FileUtilities.class
+new file mode 100644
+index 0000000..2f655c7
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/intermediates/runtime_library_classes_dir/debug/org/unimodules/core/utilities/FileUtilities.class differ
+diff --git a/node_modules/@unimodules/core/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt b/node_modules/@unimodules/core/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt
+new file mode 100644
+index 0000000..8bc8bfe
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt
+@@ -0,0 +1 @@
++org.unimodules.core
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/build-history.bin b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/build-history.bin
+new file mode 100644
+index 0000000..b6ab13e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/build-history.bin differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab
+new file mode 100644
+index 0000000..bdf584a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream
+new file mode 100644
+index 0000000..eb25015
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len
+new file mode 100644
+index 0000000..81031c2
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.len
+new file mode 100644
+index 0000000..2a17e6e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.values.at b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.values.at
+new file mode 100644
+index 0000000..ad3b6bb
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.values.at differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i
+new file mode 100644
+index 0000000..acc53c5
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab
+new file mode 100644
+index 0000000..4d04f7a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream
+new file mode 100644
+index 0000000..c662689
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len
+new file mode 100644
+index 0000000..826d10c
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len
+new file mode 100644
+index 0000000..01bdaa1
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at
+new file mode 100644
+index 0000000..7641ca7
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i
+new file mode 100644
+index 0000000..34382fa
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab
+new file mode 100644
+index 0000000..bdf584a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab.keystream b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab.keystream
+new file mode 100644
+index 0000000..0d0e07b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab.keystream differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab.keystream.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab.keystream.len
+new file mode 100644
+index 0000000..5b8e1ac
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab.keystream.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab.len
+new file mode 100644
+index 0000000..2a17e6e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab.values.at b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab.values.at
+new file mode 100644
+index 0000000..4c5a6ad
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab.values.at differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab_i b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab_i
+new file mode 100644
+index 0000000..1d7da13
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab_i differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab_i.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/inline-functions.tab_i.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab
+new file mode 100644
+index 0000000..4d04f7a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream
+new file mode 100644
+index 0000000..66d4816
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len
+new file mode 100644
+index 0000000..7ab8050
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len
+new file mode 100644
+index 0000000..01bdaa1
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at
+new file mode 100644
+index 0000000..fc8ef38
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i
+new file mode 100644
+index 0000000..ba18bf9
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab
+new file mode 100644
+index 0000000..bdf584a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream
+new file mode 100644
+index 0000000..5fc422f
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len
+new file mode 100644
+index 0000000..68d7fbd
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.len
+new file mode 100644
+index 0000000..2a17e6e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at
+new file mode 100644
+index 0000000..c414e1b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i
+new file mode 100644
+index 0000000..87fd055
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab
+new file mode 100644
+index 0000000..0812fbb
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream
+new file mode 100644
+index 0000000..c1b9ebd
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len
+new file mode 100644
+index 0000000..3f68fd9
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.len
+new file mode 100644
+index 0000000..01bdaa1
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at
+new file mode 100644
+index 0000000..31da11e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i
+new file mode 100644
+index 0000000..aba9902
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab
+new file mode 100644
+index 0000000..41ad2f6
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream
+new file mode 100644
+index 0000000..61cd255
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len
+new file mode 100644
+index 0000000..1ed7de9
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len
+new file mode 100644
+index 0000000..01bdaa1
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at
+new file mode 100644
+index 0000000..9ce53c8
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i
+new file mode 100644
+index 0000000..5cd52f4
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/counters.tab b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/counters.tab
+new file mode 100644
+index 0000000..166c057
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/counters.tab
+@@ -0,0 +1,2 @@
++1
++0
+\ No newline at end of file
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab
+new file mode 100644
+index 0000000..bdf584a
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream
+new file mode 100644
+index 0000000..eb25015
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len
+new file mode 100644
+index 0000000..81031c2
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.len
+new file mode 100644
+index 0000000..2a17e6e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at
+new file mode 100644
+index 0000000..5875372
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i
+new file mode 100644
+index 0000000..571e1a9
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab
+new file mode 100644
+index 0000000..8aad32b
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream
+new file mode 100644
+index 0000000..08e7df1
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len
+new file mode 100644
+index 0000000..b7da01d
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.len
+new file mode 100644
+index 0000000..2a17e6e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at
+new file mode 100644
+index 0000000..b3d8776
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab
+new file mode 100644
+index 0000000..27f4b2e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream
+new file mode 100644
+index 0000000..8a55a3c
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream.len
+new file mode 100644
+index 0000000..b8872cd
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.len
+new file mode 100644
+index 0000000..62cf1e5
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.at b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.at
+new file mode 100644
+index 0000000..6062bbf
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.at differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i
+new file mode 100644
+index 0000000..6aff285
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i.len b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i.len differ
+diff --git a/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/last-build.bin b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/last-build.bin
+new file mode 100644
+index 0000000..46d9881
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/kotlin/compileDebugKotlin/last-build.bin differ
+diff --git a/node_modules/@unimodules/core/android/build/outputs/logs/manifest-merger-debug-report.txt b/node_modules/@unimodules/core/android/build/outputs/logs/manifest-merger-debug-report.txt
+new file mode 100644
+index 0000000..f2c0fde
+--- /dev/null
++++ b/node_modules/@unimodules/core/android/build/outputs/logs/manifest-merger-debug-report.txt
+@@ -0,0 +1,25 @@
++-- Merging decision tree log ---
++manifest
++ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml:2:1-4:12
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml:2:1-4:12
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml:2:1-4:12
++	package
++		ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml:2:11-40
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml
++	xmlns:android
++		ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml:2:1-4:12
++uses-sdk
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml
++	android:targetSdkVersion
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml
++		ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml
++	android:minSdkVersion
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml
++		ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/@unimodules/core/android/src/main/AndroidManifest.xml
+diff --git a/node_modules/@unimodules/core/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin b/node_modules/@unimodules/core/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin
+new file mode 100644
+index 0000000..cd2bb75
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin differ
+diff --git a/node_modules/@unimodules/core/android/build/tmp/kotlin-classes/debug/META-INF/unimodules-core_debug.kotlin_module b/node_modules/@unimodules/core/android/build/tmp/kotlin-classes/debug/META-INF/unimodules-core_debug.kotlin_module
+new file mode 100644
+index 0000000..609d952
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/tmp/kotlin-classes/debug/META-INF/unimodules-core_debug.kotlin_module differ
+diff --git a/node_modules/@unimodules/core/android/build/tmp/kotlin-classes/debug/org/unimodules/core/ModuleRegistryDelegate$getFromModuleRegistry$1.class b/node_modules/@unimodules/core/android/build/tmp/kotlin-classes/debug/org/unimodules/core/ModuleRegistryDelegate$getFromModuleRegistry$1.class
+new file mode 100644
+index 0000000..f8d4b0e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/tmp/kotlin-classes/debug/org/unimodules/core/ModuleRegistryDelegate$getFromModuleRegistry$1.class differ
+diff --git a/node_modules/@unimodules/core/android/build/tmp/kotlin-classes/debug/org/unimodules/core/ModuleRegistryDelegate.class b/node_modules/@unimodules/core/android/build/tmp/kotlin-classes/debug/org/unimodules/core/ModuleRegistryDelegate.class
+new file mode 100644
+index 0000000..2ba5a3e
+Binary files /dev/null and b/node_modules/@unimodules/core/android/build/tmp/kotlin-classes/debug/org/unimodules/core/ModuleRegistryDelegate.class differ
