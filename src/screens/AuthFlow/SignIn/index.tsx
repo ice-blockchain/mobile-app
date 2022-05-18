@@ -21,13 +21,12 @@ import {magicLink} from '@services/magicLink';
 import {useDispatch, useSelector} from 'react-redux';
 import AuthActions from '@store/modules/Auth/actions';
 import {RootState} from '@store/rootReducer';
-import {useNavigation} from '@react-navigation/native';
+import navigation from '@navigation/index';
 
 const SignIn = () => {
   const [email, onChangeEmail] = useState('');
   const dispatch = useDispatch();
   const usersInfo = useSelector((state: RootState) => state.auth.usersInfo);
-  const navigation = useNavigation();
 
   const onSignIn = async () => {
     const success = await magicLink.loginUser(email);
@@ -125,7 +124,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     marginBottom: rem(59),
-    marginTop: rem(111),
+    marginTop: rem(50),
   },
   title: {
     fontFamily: FONTS.primary.black,
@@ -147,7 +146,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: rem(153),
+    marginTop: rem(50),
   },
   securedByText: {
     fontFamily: FONTS.primary.regular,

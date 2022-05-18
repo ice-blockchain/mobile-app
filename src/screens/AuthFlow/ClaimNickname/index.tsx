@@ -22,13 +22,12 @@ import ClaimNickname from './components/ClaimNickname';
 import NavigationPanel from '../Welcome/components/NavigationPanel';
 import {useDispatch} from 'react-redux';
 import AuthActions from '@store/modules/Auth/actions';
-import {useNavigation} from '@react-navigation/native';
+import navigation from '@navigation/index';
 
 const nicknameRegularExp = /^[A-Za-z0-9]+([A-Za-z0-9]*|[._-]?[A-Za-z0-9]+)*$/;
 
 const SignUp = () => {
   const pagerViewRef = useRef<PagerView>(null);
-  const navigation = useNavigation();
   const [myNickname, setMyNickname] = useState('');
   const [invitedNickname, setInvitedNickname] = useState('');
   const [currentPage, setCurrentPage] = useState(0);
