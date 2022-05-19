@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import {View, StyleSheet} from 'react-native';
-import {rem} from 'rn-units';
+import {rem, isAndroid} from 'rn-units';
 import Dots from './components/dots';
 import NotNowButton from './components/NotNowButton';
 import Button from './components/Button';
@@ -55,6 +55,7 @@ export default NavigationPanel;
 const styles = StyleSheet.create({
   navigationPanel: {
     paddingHorizontal: rem(64),
+    marginBottom: isAndroid ? rem(10) : rem(4),
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',

@@ -18,7 +18,11 @@ const WelcomeItemDescription = ({items}: WelcomeItemDescriptionProps) => {
     <Text style={styles.textContainerWithIcon}>
       {items.map((item, index) => {
         if (typeof item === 'string') {
-          return <Text style={styles.text} key={`${index}-item`}>{item}</Text>;
+          return (
+            <Text style={styles.text} key={`${index}-item`}>
+              {item}
+            </Text>
+          );
         } else {
           return item === 1 ? (
             <Text style={styles.mediumText} key={`${index}-item`}>{`${translate(

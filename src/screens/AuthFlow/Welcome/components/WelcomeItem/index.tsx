@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import {Text, View, StyleSheet, Image, ImageRequireSource} from 'react-native';
-import {rem, font, screenHeight} from 'rn-units';
+import {rem, font, screenHeight, isAndroid} from 'rn-units';
 
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
@@ -18,7 +18,7 @@ interface WelcomeItemProps {
 const DESIGN_SCREEN_HEIGHT = 812;
 const ORIGINAL_IMAGE_HEIGHT = 380;
 const ORIGINAL_IMAGE_WIDTH = 375;
-const DESIGN_MARGIN_TOP = 22;
+const DESIGN_MARGIN_TOP = isAndroid ? 15 : 22;
 const SMALL_SCREEEN = screenHeight < DESIGN_SCREEN_HEIGHT;
 const IMAGE_HEIGHT = SMALL_SCREEEN
   ? (screenHeight / DESIGN_SCREEN_HEIGHT) * ORIGINAL_IMAGE_HEIGHT
@@ -60,11 +60,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontFamily: FONTS.primary.black,
+    fontFamily: FONTS.primary.regular,
+    fontWeight: '900',
     fontSize: font(28),
+    lineHeight: font(34),
     textAlign: 'center',
     marginBottom: rem(MARGIN_TOP),
     color: COLORS.darkBlue,
   },
-  image: {width: rem(IMAGE_WIDTH), height: rem(IMAGE_HEIGHT)},
+  image: {width: IMAGE_WIDTH, height: IMAGE_HEIGHT},
 });
