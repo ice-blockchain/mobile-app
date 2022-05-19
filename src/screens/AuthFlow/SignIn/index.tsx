@@ -31,9 +31,19 @@ import {useDispatch, useSelector} from 'react-redux';
 import AuthActions from '@store/modules/Auth/actions';
 import {RootState} from '@store/rootReducer';
 import {useNavigation} from '@react-navigation/native';
+import PhoneNumberInput from '@components/PhoneNumberInput';
+import {phoneNumberCountries} from '@constants/countries';
+import PhoneNumberSearch from '@components/PhoneNumberSearch';
 
 const SignIn = () => {
   const [email, onChangeEmail] = useState('');
+  const [selectedCountry, setSelectedCountry] = useState(
+    phoneNumberCountries[0],
+  );
+  const [inputType, setInputType] = useState<'email' | 'phone'>('email');
+  const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
+    useState<boolean>(false);
+
   const dispatch = useDispatch();
   const usersInfo = useSelector((state: RootState) => state.auth.usersInfo);
   const navigation = useNavigation();
@@ -55,7 +65,13 @@ const SignIn = () => {
       );
     }
   };
-  const onPhonePress = () => {};
+  const onPhonePress = () => {
+    if (inputType === 'email') {
+      setInputType('phone');
+    } else {
+      setInputType('email');
+    }
+  };
   const onSocialSignInPress = (type: ESocialType) => {
     switch (type) {
       case ESocialType.apple:
@@ -72,6 +88,13 @@ const SignIn = () => {
     }
   };
 
+  const showCountryCodeSearch = () => {
+    setCountryCodeSearchVisibility(true);
+  };
+  const hideCountryCodeSearch = () => {
+    setCountryCodeSearchVisibility(false);
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor={COLORS.white} barStyle="dark-content" />
@@ -82,7 +105,8 @@ const SignIn = () => {
           <ScrollView
             bounces={false}
             contentContainerStyle={styles.content}
-            keyboardShouldPersistTaps={'always'}>
+            keyboardShouldPersistTaps={'handled'}
+            keyboardDismissMode={'none'}>
             <View style={styles.logo}>
               <LogoSvg />
             </View>
@@ -95,37 +119,56 @@ const SignIn = () => {
               </Text>
             </View>
 
-            <CommonInput
-              icon={<EmailSvg />}
-              onChangeText={onChangeEmail}
-              value={email}
-              placeholder={translate('signIn.emailAddress')}
-              placeholderColor={COLORS.greyBorder}
-              containerStyle={styles.input}
-              keyboardType={'email-address'}
-              autoCapitalize={'none'}
-            />
+            <View style={{flex: 1}}>
+              {inputType === 'email' ? (
+                <CommonInput
+                  icon={<EmailSvg />}
+                  onChangeText={onChangeEmail}
+                  value={email}
+                  placeholder={translate('signIn.emailAddress')}
+                  placeholderColor={COLORS.greyBorder}
+                  containerStyle={styles.input}
+                  keyboardType={'email-address'}
+                  autoCapitalize={'none'}
+                />
+              ) : (
+                <PhoneNumberInput
+                  selectedCountry={selectedCountry}
+                  containerStyle={styles.input}
+                  showCountryCodeSearch={showCountryCodeSearch}
+                />
+              )}
 
-            <PrimaryButton
-              onPress={onSignIn}
-              text={translate('signIn.logInSignUp')}
-            />
+              <PrimaryButton
+                onPress={onSignIn}
+                text={translate('signIn.logInSignUp')}
+              />
 
-            <Text style={styles.text}>or</Text>
+              <Text style={styles.text}>or</Text>
 
-            <BorderedButton
-              icon={<PhoneSvg />}
-              onPress={onPhonePress}
-              text={translate('signIn.phone')}
-            />
+              <BorderedButton
+                icon={<PhoneSvg />}
+                onPress={onPhonePress}
+                text={translate('signIn.phone')}
+              />
 
-            <SocialSignIn onPress={onSocialSignInPress} />
+              <SocialSignIn onPress={onSocialSignInPress} />
 
-            <View style={styles.securedBy}>
-              <Text style={styles.securedByText}>
-                {translate('signIn.securedBy')}
-              </Text>
-              <MagicIconSvg />
+              <View style={styles.securedBy}>
+                <Text style={styles.securedByText}>
+                  {translate('signIn.securedBy')}
+                </Text>
+                <MagicIconSvg />
+              </View>
+
+              {isCountryCodeSearchVisible ? (
+                <PhoneNumberSearch
+                  containerStyle={styles.phoneNumberSeatch}
+                  selectedCountry={selectedCountry}
+                  close={hideCountryCodeSearch}
+                  setCountryCode={setSelectedCountry}
+                />
+              ) : null}
             </View>
           </ScrollView>
         </TouchableWithoutFeedback>
@@ -175,6 +218,12 @@ const styles = StyleSheet.create({
     fontSize: font(13),
     lineHeight: rem(16),
     color: '#B6B4BA',
+  },
+  phoneNumberSeatch: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
   },
 });
 
