@@ -1,0 +1,12 @@
+platform :ios do
+    desc “Build a ice.ipa file”
+    lane :staging do
+        build_app(scheme: “ice-staging”,
+        workspace: “ice.xcworkspace”,
+        include_bitcode: true)
+
+    lane :production do
+        build_app(scheme: “ice,
+        workspace: “ice.xcworkspace”,
+        include_bitcode: true)
+end
