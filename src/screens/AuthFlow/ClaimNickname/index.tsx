@@ -68,7 +68,7 @@ const SignUp = () => {
     (currentPage === 1 && invitedNickname.length > 0);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['bottom']}>
       <StatusBar backgroundColor={COLORS.white} barStyle="dark-content" />
       <KeyboardAvoidingView
         behavior={isIOS ? 'padding' : 'height'}
@@ -116,6 +116,7 @@ const SignUp = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingBottom: 12,
   },
 });
 

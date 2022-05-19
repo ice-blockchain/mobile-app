@@ -1,9 +1,18 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, StatusBar} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback,
+  Keyboard,
+  ScrollView,
+} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {rem, font} from 'rn-units';
+import {rem, font, isIOS} from 'rn-units';
 
 import LogoSvg from '@svg/logo';
 import EmailSvg from '@svg/emailIcon';
@@ -29,6 +38,7 @@ const SignIn = () => {
   const usersInfo = useSelector((state: RootState) => state.auth.usersInfo);
 
   const onSignIn = async () => {
+    Keyboard.dismiss();
     const success = await magicLink.loginUser(email);
     if (success) {
       const emailLowerCase = email.toLowerCase();
@@ -64,51 +74,61 @@ const SignIn = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor={COLORS.white} barStyle="dark-content" />
+      <KeyboardAvoidingView
+        behavior={isIOS ? 'padding' : 'height'}
+        style={styles.container}>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+          <ScrollView
+            bounces={false}
+            contentContainerStyle={styles.content}
+            keyboardShouldPersistTaps={'always'}>
+            <View style={styles.logo}>
+              <LogoSvg />
+            </View>
 
-      <View style={styles.logo}>
-        <LogoSvg />
-      </View>
+            <View>
+              <Text style={styles.title}>
+                {true
+                  ? translate('signIn.welcome')
+                  : translate('signIn.welcomeBack')}
+              </Text>
+            </View>
 
-      <View>
-        <Text style={styles.title}>
-          {true ? translate('signIn.welcome') : translate('signIn.welcomeBack')}
-        </Text>
-      </View>
+            <CommonInput
+              icon={<EmailSvg />}
+              onChangeText={onChangeEmail}
+              value={email}
+              placeholder={translate('signIn.emailAddress')}
+              placeholderColor={COLORS.greyBorder}
+              containerStyle={styles.input}
+              keyboardType={'email-address'}
+              autoCapitalize={'none'}
+            />
 
-      <View>
-        <CommonInput
-          icon={<EmailSvg />}
-          onChangeText={onChangeEmail}
-          value={email}
-          placeholder={translate('signIn.emailAddress')}
-          placeholderColor={COLORS.greyBorder}
-          containerStyle={styles.input}
-          keyboardType={'email-address'}
-          autoCapitalize={'none'}
-        />
+            <PrimaryButton
+              onPress={onSignIn}
+              text={translate('signIn.logInSignUp')}
+            />
 
-        <PrimaryButton
-          onPress={onSignIn}
-          text={translate('signIn.logInSignUp')}
-        />
+            <Text style={styles.text}>or</Text>
 
-        <Text style={styles.text}>or</Text>
+            <BorderedButton
+              icon={<PhoneSvg />}
+              onPress={onPhonePress}
+              text={translate('signIn.phone')}
+            />
 
-        <BorderedButton
-          icon={<PhoneSvg />}
-          onPress={onPhonePress}
-          text={translate('signIn.phone')}
-        />
+            <SocialSignIn onPress={onSocialSignInPress} />
 
-        <SocialSignIn onPress={onSocialSignInPress} />
-
-        <View style={styles.securedBy}>
-          <Text style={styles.securedByText}>
-            {translate('signIn.securedBy')}
-          </Text>
-          <MagicIconSvg />
-        </View>
-      </View>
+            <View style={styles.securedBy}>
+              <Text style={styles.securedByText}>
+                {translate('signIn.securedBy')}
+              </Text>
+              <MagicIconSvg />
+            </View>
+          </ScrollView>
+        </TouchableWithoutFeedback>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };
@@ -116,8 +136,10 @@ const SignIn = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginBottom: rem(20),
+  },
+  content: {
     alignItems: 'center',
+    flexGrow: 1,
   },
   input: {
     marginBottom: rem(21),
@@ -146,7 +168,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: rem(50),
   },
   securedByText: {
     fontFamily: FONTS.primary.regular,

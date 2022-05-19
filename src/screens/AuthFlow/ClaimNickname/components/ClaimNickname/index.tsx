@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
-import {font, rem} from 'rn-units';
+import {font, rem, screenHeight} from 'rn-units';
 
 import ClaimNicknameSvg from '@svg/claimNickname';
 import {translate} from '@utils/i18n';
@@ -10,6 +10,9 @@ import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
 import CommonInput from '@components/CommonInput';
 import ManIconSvg from '@svg/manIcon';
+
+const h = (screenHeight * 291) / 811;
+const w = (h * 258) / 291;
 
 interface ClaimNickNameProps {
   inputValue: string;
@@ -23,7 +26,7 @@ const ClaimNickName = ({
 }: ClaimNickNameProps) => {
   return (
     <View style={styles.container}>
-      <ClaimNicknameSvg width={rem(258)} height={rem(291)} />
+      <ClaimNicknameSvg width={w} height={h} />
 
       <Text style={styles.title}>{translate('claimNickname.title')}</Text>
       <Text style={styles.description}>
@@ -48,7 +51,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    marginTop: rem(100),
+    marginTop: rem(80),
+    paddingBottom: 10,
   },
   title: {
     marginTop: rem(24),
