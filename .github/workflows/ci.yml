@@ -24,7 +24,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           mkdir $GITHUB_WORKSPACE/main-repo/configuration
-          cp -a $GITHUB_WORKSPACE/mobile-app-secrets/configuration/. $GITHUB_WORKSPACE/main-repo/configuration/
+          cp -R $GITHUB_WORKSPACE/mobile-app-secrets/configuration $GITHUB_WORKSPACE/main-repo/configuration/
           ls -l $GITHUB_WORKSPACE/main-repo/configuration
       - uses: actions/setup-node@master
       - name: Install npm dependencies
