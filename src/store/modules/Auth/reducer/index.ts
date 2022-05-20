@@ -8,9 +8,9 @@ import AuthActions from '../actions';
 export interface State {
   userData: {
     email: string | null;
+    phoneNumber: string | null;
     // isMfaEnabled: boolean;
     // issuer: string;
-    // phoneNumber: string | null;
     // publicAddress: string;
   };
   usersInfo: {
@@ -36,6 +36,7 @@ type Actions = ReturnType<
 const INITIAL_STATE: State = {
   userData: {
     email: null,
+    phoneNumber: null,
     // isMfaEnabled: false,
     // issuer: '',
     // phoneNumber: null,
@@ -57,18 +58,34 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case AuthActions.STORE_CLAIM_NICKNAME_DONE.STATE.type:
         console.log('STORE_CLAIM_NICKNAME_DONE.STATE');
 
-        draft.usersInfo[draft.userData.email!] = {
-          profileFilled: true,
-          welcomeSeen: false,
-        };
+        if (draft.userData.email) {
+          draft.usersInfo[draft.userData.email] = {
+            profileFilled: true,
+            welcomeSeen: false,
+          };
+        }
+        if (draft.userData.phoneNumber) {
+          draft.usersInfo[draft.userData.phoneNumber] = {
+            profileFilled: true,
+            welcomeSeen: false,
+          };
+        }
         break;
       case AuthActions.STORE_WELCOME_SEEN.STATE.type:
         console.log('STORE_WELCOME_SEEN.STATE');
 
-        draft.usersInfo[draft.userData.email!] = {
-          profileFilled: true,
-          welcomeSeen: true,
-        };
+        if (draft.userData.email) {
+          draft.usersInfo[draft.userData.email] = {
+            profileFilled: true,
+            welcomeSeen: true,
+          };
+        }
+        if (draft.userData.phoneNumber) {
+          draft.usersInfo[draft.userData.phoneNumber] = {
+            profileFilled: true,
+            welcomeSeen: true,
+          };
+        }
         break;
       case AuthActions.SIGN_OUT.SUCCESS.type: {
         return {

@@ -7,7 +7,6 @@ import {
   View,
   StatusBar,
   KeyboardAvoidingView,
-  TouchableWithoutFeedback,
   Keyboard,
   ScrollView,
 } from 'react-native';
@@ -31,14 +30,13 @@ import {useDispatch, useSelector} from 'react-redux';
 import AuthActions from '@store/modules/Auth/actions';
 import {RootState} from '@store/rootReducer';
 import PhoneNumberInput from '@components/PhoneNumberInput';
-import {phoneNumberCountries} from '@constants/countries';
+import {countriesCode} from '@constants/countries';
 import PhoneNumberSearch from '@components/PhoneNumberSearch';
 
 const SignIn = ({navigation}) => {
   const [email, onChangeEmail] = useState('');
-  const [selectedCountry, setSelectedCountry] = useState(
-    phoneNumberCountries[0],
-  );
+  const [phone, setPhone] = useState('');
+  const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
   const [inputType, setInputType] = useState<'email' | 'phone'>('email');
   const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
     useState<boolean>(false);
@@ -48,19 +46,38 @@ const SignIn = ({navigation}) => {
 
   const onSignIn = async () => {
     Keyboard.dismiss();
-    const success = await magicLink.loginUser(email);
-    if (success) {
-      const emailLowerCase = email.toLowerCase();
-      if (!usersInfo[emailLowerCase]?.profileFilled) {
-        navigation.navigate('ClaimNickname');
-      } else if (!usersInfo[emailLowerCase]?.welcomeSeen) {
-        navigation.navigate('Welcome');
+    if (inputType === 'email') {
+      const success = await magicLink.loginUser(email);
+      if (success) {
+        const emailLowerCase = email.toLowerCase();
+        if (!usersInfo[emailLowerCase]?.profileFilled) {
+          navigation.navigate('ClaimNickname');
+        } else if (!usersInfo[emailLowerCase]?.welcomeSeen) {
+          navigation.navigate('Welcome');
+        }
+        dispatch(
+          AuthActions.STORE_USER_DATA.STATE.create({
+            email: emailLowerCase,
+            phoneNumber: null,
+          }),
+        );
       }
-      dispatch(
-        AuthActions.STORE_USER_DATA.STATE.create({
-          email: emailLowerCase,
-        }),
-      );
+    } else {
+      const phoneNumber = `${selectedCountry.code}${phone}`;
+      const success = await magicLink.loginUserPhoneNumber(phoneNumber);
+      if (success) {
+        if (!usersInfo[phoneNumber]?.profileFilled) {
+          navigation.navigate('ClaimNickname');
+        } else if (!usersInfo[phoneNumber]?.welcomeSeen) {
+          navigation.navigate('Welcome');
+        }
+        dispatch(
+          AuthActions.STORE_USER_DATA.STATE.create({
+            email: null,
+            phoneNumber,
+          }),
+        );
+      }
     }
   };
   const onPhonePress = () => {
@@ -99,77 +116,77 @@ const SignIn = ({navigation}) => {
       <KeyboardAvoidingView
         behavior={isIOS ? 'padding' : 'height'}
         style={styles.container}>
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-          <ScrollView
-            bounces={false}
-            contentContainerStyle={styles.content}
-            keyboardShouldPersistTaps={'handled'}
-            keyboardDismissMode={'none'}>
-            <View style={styles.logo}>
-              <LogoSvg />
-            </View>
+        <ScrollView
+          bounces={false}
+          contentContainerStyle={styles.content}
+          keyboardShouldPersistTaps={'handled'}
+          keyboardDismissMode={'none'}>
+          <View style={styles.logo}>
+            <LogoSvg />
+          </View>
 
-            <View>
-              <Text style={styles.title}>
-                {true
-                  ? translate('signIn.welcome')
-                  : translate('signIn.welcomeBack')}
+          <View>
+            <Text style={styles.title}>
+              {true
+                ? translate('signIn.welcome')
+                : translate('signIn.welcomeBack')}
+            </Text>
+          </View>
+
+          <View style={{flex: 1}}>
+            {inputType === 'email' ? (
+              <CommonInput
+                icon={<EmailSvg />}
+                onChangeText={onChangeEmail}
+                value={email}
+                placeholder={translate('signIn.emailAddress')}
+                placeholderColor={COLORS.greyBorder}
+                containerStyle={styles.input}
+                keyboardType={'email-address'}
+                autoCapitalize={'none'}
+              />
+            ) : (
+              <PhoneNumberInput
+                selectedCountry={selectedCountry}
+                containerStyle={styles.input}
+                showCountryCodeSearch={showCountryCodeSearch}
+                value={phone}
+                onValueChange={setPhone}
+              />
+            )}
+
+            <PrimaryButton
+              onPress={onSignIn}
+              text={translate('signIn.logInSignUp')}
+            />
+
+            <Text style={styles.text}>or</Text>
+
+            <BorderedButton
+              icon={inputType === 'email' ? <PhoneSvg /> : <EmailSvg />}
+              onPress={onPhonePress}
+              text={inputType === 'email' ? translate('signIn.phone') : 'Email'}
+            />
+
+            <SocialSignIn onPress={onSocialSignInPress} />
+
+            <View style={styles.securedBy}>
+              <Text style={styles.securedByText}>
+                {translate('signIn.securedBy')}
               </Text>
+              <MagicIconSvg />
             </View>
 
-            <View style={{flex: 1}}>
-              {inputType === 'email' ? (
-                <CommonInput
-                  icon={<EmailSvg />}
-                  onChangeText={onChangeEmail}
-                  value={email}
-                  placeholder={translate('signIn.emailAddress')}
-                  placeholderColor={COLORS.greyBorder}
-                  containerStyle={styles.input}
-                  keyboardType={'email-address'}
-                  autoCapitalize={'none'}
-                />
-              ) : (
-                <PhoneNumberInput
-                  selectedCountry={selectedCountry}
-                  containerStyle={styles.input}
-                  showCountryCodeSearch={showCountryCodeSearch}
-                />
-              )}
-
-              <PrimaryButton
-                onPress={onSignIn}
-                text={translate('signIn.logInSignUp')}
+            {isCountryCodeSearchVisible ? (
+              <PhoneNumberSearch
+                containerStyle={styles.phoneNumberSeatch}
+                selectedCountry={selectedCountry}
+                close={hideCountryCodeSearch}
+                setCountryCode={setSelectedCountry}
               />
-
-              <Text style={styles.text}>or</Text>
-
-              <BorderedButton
-                icon={<PhoneSvg />}
-                onPress={onPhonePress}
-                text={translate('signIn.phone')}
-              />
-
-              <SocialSignIn onPress={onSocialSignInPress} />
-
-              <View style={styles.securedBy}>
-                <Text style={styles.securedByText}>
-                  {translate('signIn.securedBy')}
-                </Text>
-                <MagicIconSvg />
-              </View>
-
-              {isCountryCodeSearchVisible ? (
-                <PhoneNumberSearch
-                  containerStyle={styles.phoneNumberSeatch}
-                  selectedCountry={selectedCountry}
-                  close={hideCountryCodeSearch}
-                  setCountryCode={setSelectedCountry}
-                />
-              ) : null}
-            </View>
-          </ScrollView>
-        </TouchableWithoutFeedback>
+            ) : null}
+          </View>
+        </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );

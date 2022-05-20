@@ -1,10 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {phoneNumberCountries} from '@constants/countries';
+import {COLORS} from '@constants/colors';
+import {countriesCode, ICountryCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
 import CloseIconSvg from '@svg/closeIcon';
 import SearchIconSvg from '@svg/searchIcon';
-import React from 'react';
+import {debounce} from 'lodash';
+import React, {useEffect, useState} from 'react';
 import {
   Text,
   View,
@@ -14,16 +16,13 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {ScrollView, TextInput} from 'react-native-gesture-handler';
+import {font, rem} from 'rn-units';
 
 interface PhoneNumberSearchProps {
-  selectedCountry: {
-    name: string;
-    code: string;
-    icon: string;
-  };
+  selectedCountry: ICountryCode;
   containerStyle?: StyleProp<ViewStyle>;
   close: () => void;
-  setCountryCode: (v: {name: string; code: string; icon: string}) => void;
+  setCountryCode: (v: ICountryCode) => void;
 }
 
 const PhoneNumberSearch = ({
@@ -32,10 +31,32 @@ const PhoneNumberSearch = ({
   close,
   setCountryCode,
 }: PhoneNumberSearchProps) => {
-  const onItemPress = (v: {name: string; code: string; icon: string}) => () => {
+  const [searchValue, setSearchValue] = useState('');
+  const [countriesCodeItems, setCountriesCodeItems] = useState(countriesCode);
+
+  useEffect(
+    () =>
+      debounce(() => {
+        if (!isNaN(+searchValue)) {
+          setCountriesCodeItems(
+            countriesCode.filter(v => v.code.includes(searchValue)),
+          );
+        } else {
+          setCountriesCodeItems(
+            countriesCode.filter(v =>
+              v.name.toLowerCase().startsWith(searchValue.toLowerCase()),
+            ),
+          );
+        }
+      }, 500)(),
+    [searchValue],
+  );
+
+  const onItemPress = (v: ICountryCode) => () => {
     setCountryCode(v);
     close();
   };
+
   return (
     <View style={[styles.container, containerStyle]}>
       <View style={styles.header}>
@@ -50,11 +71,16 @@ const PhoneNumberSearch = ({
       <View style={styles.search}>
         <SearchIconSvg />
 
-        <TextInput placeholder={'Search for country'} style={styles.input} />
+        <TextInput
+          value={searchValue}
+          placeholder={'Search for country'}
+          style={styles.input}
+          onChangeText={setSearchValue}
+        />
       </View>
 
-      <ScrollView>
-        {phoneNumberCountries.map(v => (
+      <ScrollView keyboardShouldPersistTaps={'handled'}>
+        {countriesCodeItems.map(v => (
           <TouchableOpacity
             key={v.name}
             style={styles.searchItem}
@@ -77,50 +103,51 @@ const styles = StyleSheet.create({
   container: {
     borderWidth: 1.5,
     borderRadius: 13,
-    borderColor: '#B6B4BA',
+    borderColor: COLORS.greyBorder,
     height: 311,
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
   },
   countryIcon: {
-    fontSize: 24,
+    fontSize: font(24),
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingLeft: 15,
+    paddingLeft: rem(15),
     borderBottomWidth: 1,
-    borderBottomColor: '#B6B4BA',
+    borderBottomColor: COLORS.greyBorder,
   },
   name: {
-    fontSize: 15,
+    fontSize: font(15),
     fontFamily: FONTS.primary.regular,
     flex: 1,
-    marginLeft: 4,
+    marginLeft: font(4),
     color: '#707489',
   },
   closeButton: {
-    paddingHorizontal: 12,
-    paddingVertical: 20,
+    paddingHorizontal: font(12),
+    paddingVertical: font(20),
   },
   search: {
-    paddingHorizontal: 16,
-    paddingVertical: 14,
+    paddingHorizontal: font(16),
+    paddingVertical: font(14),
     flexDirection: 'row',
     alignItems: 'center',
   },
   input: {
-    paddingLeft: 9,
-    fontSize: 15,
+    paddingLeft: font(9),
+    fontSize: font(15),
     fontFamily: FONTS.primary.regular,
-    color: '#0D265E',
+    color: COLORS.darkBlue,
+    flex: 1,
   },
   searchItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingLeft: 12,
-    paddingBottom: 15,
+    paddingLeft: font(12),
+    paddingBottom: font(15),
   },
   code: {
-    color: '#0D265E',
+    color: COLORS.darkBlue,
   },
 });
