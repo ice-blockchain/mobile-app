@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {ApiProfile} from '../utils/types';
-import axios from 'src/api/utils/axios';
+import {get} from '@api/client';
 
 export default function getProfile(profileId: string) {
-  return axios.get<ApiProfile>(`/profile/${profileId}`);
+  return get<ApiProfile>(`/profile/${profileId}`);
 }
