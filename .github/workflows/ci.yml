@@ -24,8 +24,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           mkdir $GITHUB_WORKSPACE/main-repo/configuration
-          ls -l $GITHUB_WORKSPACE/main-repo/configuration
-          ls -l $GITHUB_WORKSPACE/mobile-app-secrets/configuration
+          ls -l $GITHUB_WORKSPACE/main-repo/configuration/
+          ls -l $GITHUB_WORKSPACE/mobile-app-secrets/configuration/
           cp -rf $GITHUB_WORKSPACE/mobile-app-secrets/configuration/* $GITHUB_WORKSPACE/main-repo/configuration/
           ls -l $GITHUB_WORKSPACE/main-repo/configuration/
       - uses: actions/setup-node@master
