@@ -170,13 +170,6 @@ const SignIn = ({navigation}) => {
 
             <SocialSignIn onPress={onSocialSignInPress} />
 
-            <View style={styles.securedBy}>
-              <Text style={styles.securedByText}>
-                {translate('signIn.securedBy')}
-              </Text>
-              <MagicIconSvg />
-            </View>
-
             {isCountryCodeSearchVisible ? (
               <PhoneNumberSearch
                 containerStyle={styles.phoneNumberSeatch}
@@ -188,6 +181,12 @@ const SignIn = ({navigation}) => {
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
+      <View style={styles.securedBy}>
+        <Text style={styles.securedByText}>
+          {translate('signIn.securedBy')}
+        </Text>
+        <MagicIconSvg />
+      </View>
     </SafeAreaView>
   );
 };
@@ -232,7 +231,7 @@ const styles = StyleSheet.create({
     fontFamily: FONTS.primary.regular,
     fontSize: font(13),
     lineHeight: rem(16),
-    color: '#B6B4BA',
+    color: COLORS.greyBorder,
   },
   phoneNumberSeatch: {
     position: 'absolute',

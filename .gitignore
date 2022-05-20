@@ -72,8 +72,6 @@ gradle.properties
 # Build related files
 android/app/src/main/assets/app.bundle
 android/app/src/main/assets/index.android.bundle
-ios/framey/Supporting/app.bundle
-ios/framey/Supporting/app.manifest
 android/app/release
 android/app/src/main/assets/app.manifest
 *.jks

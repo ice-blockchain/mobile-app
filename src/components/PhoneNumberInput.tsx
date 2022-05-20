@@ -61,7 +61,7 @@ export default PhoneNumberInput;
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    borderWidth: 1.5,
+    borderWidth: rem(1.5),
     borderRadius: 13,
     borderColor: COLORS.greyBorder,
     alignItems: 'center',
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   },
   countryIconContainer: {
     height: '100%',
-    borderRightWidth: 1.5,
+    borderRightWidth: rem(1.5),
     borderRightColor: COLORS.greyBorder,
     paddingLeft: 15,
     paddingRight: 12,

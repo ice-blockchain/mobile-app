@@ -15,9 +15,9 @@ interface BorderedButtonProps {
 const BorderedButton = ({onPress, text, icon}: BorderedButtonProps) => {
   return (
     <TouchableOpacity onPress={onPress} style={styles.button}>
-      <View>{icon}</View>
+      <View style={styles.icon}>{icon}</View>
       <Text style={styles.text}>{text}</Text>
-      <View />
+      <View style={styles.icon} />
     </TouchableOpacity>
   );
 };
@@ -33,6 +33,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     padding: rem(14),
+  },
+  icon: {
+    width: 16,
+    height: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
     fontFamily: FONTS.primary.black,
