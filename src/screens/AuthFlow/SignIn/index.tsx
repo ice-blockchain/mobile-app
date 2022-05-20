@@ -101,7 +101,7 @@ const SignIn = () => {
         <ScrollView
           bounces={false}
           contentContainerStyle={styles.content}
-          // keyboardShouldPersistTaps={'handled'}
+          keyboardShouldPersistTaps={'handled'}
           keyboardDismissMode={'none'}>
           <View style={styles.logo}>
             <LogoSvg />
@@ -143,7 +143,7 @@ const SignIn = () => {
             <Text style={styles.text}>or</Text>
 
             <BorderedButton
-              icon={<PhoneSvg />}
+              icon={inputType === 'email' ? <PhoneSvg /> : <EmailSvg />}
               onPress={onPhonePress}
               text={inputType === 'email' ? translate('signIn.phone') : 'Email'}
             />

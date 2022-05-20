@@ -79,7 +79,7 @@ const PhoneNumberSearch = ({
         />
       </View>
 
-      <ScrollView>
+      <ScrollView keyboardShouldPersistTaps={'handled'}>
         {countriesCodeItems.map(v => (
           <TouchableOpacity
             key={v.name}
@@ -139,6 +139,7 @@ const styles = StyleSheet.create({
     fontSize: font(15),
     fontFamily: FONTS.primary.regular,
     color: COLORS.darkBlue,
+    flex: 1,
   },
   searchItem: {
     flexDirection: 'row',
