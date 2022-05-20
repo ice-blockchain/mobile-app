@@ -27,7 +27,6 @@ jobs:
           cp -a $GITHUB_WORKSPACE/mobile-app-secrets/configuration/. $GITHUB_WORKSPACE/main-repo/configuration/
           ls -l $GITHUB_WORKSPACE/main-repo
       - uses: actions/setup-node@master
-      - uses: c-hive/gha-yarn-cache@v2
       - name: Install npm dependencies
         run: |
           yarn
