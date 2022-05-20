@@ -21,12 +21,6 @@ jobs:
           token: ${{ secrets.ICE_CI_CD_BOT_GH_PAT }}
           path: mobile-app-secrets
           fetch-depth: 0
-      - name: Check secrets repo structure structure
-        run: |
-          ls -l $GITHUB_WORKSPACE/mobile-app-secrets
-      - name: Check main repo structure structure
-        run: |
-          ls -l $GITHUB_WORKSPACE/main-repo
       - name: Run a multi-line script
         run: |
           mkdir $GITHUB_WORKSPACE/main-repo/configuration
