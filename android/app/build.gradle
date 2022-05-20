@@ -215,18 +215,20 @@ android {
     }
     signingConfigs {
         release {
-            if (project.hasProperty('ICE_UPLOAD_STORE_FILE')) {
-                storeFile file(ICE_UPLOAD_STORE_FILE)
-                storePassword ICE_UPLOAD_STORE_PASSWORD
-                keyAlias ICE_UPLOAD_KEY_ALIAS
-                keyPassword ICE_UPLOAD_KEY_PASSWORD
+            if (project.hasProperty('ICE_RELEASE_UPLOAD_STORE_FILE')) {
+                storeFile file(ICE_RELEASE_UPLOAD_STORE_FILE)
+                storePassword ICE_RELEASE_UPLOAD_STORE_PASSWORD
+                keyAlias ICE_RELEASE_UPLOAD_KEY_ALIAS
+                keyPassword ICE_RELEASE_UPLOAD_KEY_PASSWORD
             }
         }
         debug {
-            storeFile file('debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
+            if (project.hasProperty('ICE_DEBUG_UPLOAD_STORE_FILE')) {
+                storeFile file(ICE_DEBUG_UPLOAD_STORE_FILE)
+                storePassword ICE_DEBUG_UPLOAD_STORE_PASSWORD
+                keyAlias ICE_DEBUG_UPLOAD_KEY_ALIAS
+                keyPassword ICE_DEBUG_UPLOAD_KEY_PASSWORD
+            }
         }
     }
     buildTypes {
