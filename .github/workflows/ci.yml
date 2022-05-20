@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           path: main-repo
       - name: Checkout the target 'master' branch of 'mobile-app-secrets'
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           repository: ice-blockchain/mobile-app-secrets
           ref: master
