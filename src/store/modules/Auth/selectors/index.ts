@@ -8,11 +8,14 @@ const authRootSelector = (state: RootState) => state.auth;
 export const isSignUpCompletedSelector = createSelector(
   authRootSelector,
   auth => {
-    const {email} = auth.userData;
+    const {email, phoneNumber} = auth.userData;
     return (
-      !!email &&
-      auth.usersInfo[email]?.profileFilled &&
-      auth.usersInfo[email]?.welcomeSeen
+      (!!email &&
+        auth.usersInfo[email]?.profileFilled &&
+        auth.usersInfo[email]?.welcomeSeen) ||
+      (!!phoneNumber &&
+        auth.usersInfo[phoneNumber]?.profileFilled &&
+        auth.usersInfo[phoneNumber]?.welcomeSeen)
     );
   },
 );

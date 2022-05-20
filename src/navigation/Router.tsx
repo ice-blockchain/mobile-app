@@ -24,10 +24,11 @@ function ActiveNavigator() {
   const isSignUpCompleted = useSelector(isSignUpCompletedSelector);
   useEffect(() => {
     const getUserData = async () => {
-      const {email} = await magicLink.checkUser();
+      const {email, phoneNumber} = await magicLink.checkUser();
       dispatch(
         AuthActions.STORE_USER_DATA.STATE.create({
           email: email ? email.toLowerCase() : null,
+          phoneNumber,
         }),
       );
     };

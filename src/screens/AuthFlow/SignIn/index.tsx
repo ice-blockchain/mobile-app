@@ -36,6 +36,7 @@ import PhoneNumberSearch from '@components/PhoneNumberSearch';
 
 const SignIn = () => {
   const [email, onChangeEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
   const [inputType, setInputType] = useState<'email' | 'phone'>('email');
   const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
@@ -47,19 +48,38 @@ const SignIn = () => {
 
   const onSignIn = async () => {
     Keyboard.dismiss();
-    const success = await magicLink.loginUser(email);
-    if (success) {
-      const emailLowerCase = email.toLowerCase();
-      if (!usersInfo[emailLowerCase]?.profileFilled) {
-        navigation.navigate('ClaimNickname');
-      } else if (!usersInfo[emailLowerCase]?.welcomeSeen) {
-        navigation.navigate('Welcome');
+    if (inputType === 'email') {
+      const success = await magicLink.loginUser(email);
+      if (success) {
+        const emailLowerCase = email.toLowerCase();
+        if (!usersInfo[emailLowerCase]?.profileFilled) {
+          navigation.navigate('ClaimNickname');
+        } else if (!usersInfo[emailLowerCase]?.welcomeSeen) {
+          navigation.navigate('Welcome');
+        }
+        dispatch(
+          AuthActions.STORE_USER_DATA.STATE.create({
+            email: emailLowerCase,
+            phoneNumber: null,
+          }),
+        );
       }
-      dispatch(
-        AuthActions.STORE_USER_DATA.STATE.create({
-          email: emailLowerCase,
-        }),
-      );
+    } else {
+      const phoneNumber = `${selectedCountry.code}${phone}`;
+      const success = await magicLink.loginUserPhoneNumber(phoneNumber);
+      if (success) {
+        if (!usersInfo[phoneNumber]?.profileFilled) {
+          navigation.navigate('ClaimNickname');
+        } else if (!usersInfo[phoneNumber]?.welcomeSeen) {
+          navigation.navigate('Welcome');
+        }
+        dispatch(
+          AuthActions.STORE_USER_DATA.STATE.create({
+            email: null,
+            phoneNumber,
+          }),
+        );
+      }
     }
   };
   const onPhonePress = () => {
@@ -132,6 +152,8 @@ const SignIn = () => {
                 selectedCountry={selectedCountry}
                 containerStyle={styles.input}
                 showCountryCodeSearch={showCountryCodeSearch}
+                value={phone}
+                onValueChange={setPhone}
               />
             )}
 

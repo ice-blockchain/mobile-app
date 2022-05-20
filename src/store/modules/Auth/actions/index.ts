@@ -4,9 +4,9 @@ import {createAction} from '@store/utils/actions/createAction';
 
 type Params = {
   email: string | null;
+  phoneNumber: string | null;
   isMfaEnabled?: boolean;
   issuer?: string;
-  phoneNumber?: string | null;
   publicAddress?: string;
 };
 

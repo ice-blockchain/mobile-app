@@ -20,12 +20,16 @@ interface PhoneNumberInputProps {
   selectedCountry: ICountryCode;
   containerStyle?: StyleProp<ViewStyle>;
   showCountryCodeSearch: () => void;
+  value: string;
+  onValueChange: (v: string) => void;
 }
 
 const PhoneNumberInput = ({
   selectedCountry,
   containerStyle,
   showCountryCodeSearch,
+  value,
+  onValueChange,
 }: PhoneNumberInputProps) => {
   return (
     <View style={[styles.container, containerStyle]}>
@@ -45,6 +49,8 @@ const PhoneNumberInput = ({
         placeholder={'| Phone Number'}
         keyboardType={'phone-pad'}
         style={styles.phone}
+        value={value}
+        onChangeText={onValueChange}
       />
     </View>
   );
