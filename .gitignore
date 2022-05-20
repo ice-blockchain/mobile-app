@@ -67,7 +67,6 @@ GoogleService-Info.plist
 /vendor/bundle/
 
 # Environments
-configuration/
 
 # Build related files
 android/app/src/main/assets/app.bundle
