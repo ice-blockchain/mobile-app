@@ -1,6 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-export const phoneNumberCountries = [
+export interface ICountryCode {
+  icon: string;
+  code: string;
+  name: string;
+}
+
+export const countriesCode = [
   {
     icon: '🇺🇸',
     code: '+1',
@@ -105,5 +111,10 @@ export const phoneNumberCountries = [
     icon: '🇦🇷',
     code: '+54',
     name: 'Argentina3',
+  },
+  {
+    icon: '🇺🇦',
+    code: '+380',
+    name: 'Ukraine',
   },
 ];
