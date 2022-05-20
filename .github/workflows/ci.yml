@@ -27,7 +27,7 @@ jobs:
           ls -l $GITHUB_WORKSPACE/main-repo
           ls -l $GITHUB_WORKSPACE/mobile-app-secrets
           cp -a $GITHUB_WORKSPACE/mobile-app-secrets/configuration/. $GITHUB_WORKSPACE/main-repo/configuration/
-          ls -l $GITHUB_WORKSPACE/main-repo
+          ls -l $GITHUB_WORKSPACE/main-repo/configuration
       - uses: actions/setup-node@master
       - name: Install npm dependencies
         run: |
