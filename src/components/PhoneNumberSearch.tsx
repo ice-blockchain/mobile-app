@@ -39,7 +39,7 @@ const PhoneNumberSearch = ({
       debounce(() => {
         if (!isNaN(+searchValue)) {
           setCountriesCodeItems(
-            countriesCode.filter(v => v.code.includes(searchValue)),
+            countriesCode.filter(v => v.iddCode.includes(searchValue)),
           );
         } else {
           setCountriesCodeItems(
@@ -60,7 +60,7 @@ const PhoneNumberSearch = ({
   return (
     <View style={[styles.container, containerStyle]}>
       <View style={styles.header}>
-        <Text style={styles.countryIcon}>{selectedCountry.icon}</Text>
+        <Text style={styles.countryIcon}>{selectedCountry.flag}</Text>
 
         <Text style={styles.name}>{selectedCountry.name}</Text>
 
@@ -85,10 +85,10 @@ const PhoneNumberSearch = ({
             key={v.name}
             style={styles.searchItem}
             onPress={onItemPress(v)}>
-            <Text style={styles.countryIcon}>{v.icon}</Text>
+            <Text style={styles.countryIcon}>{v.flag}</Text>
             <Text style={styles.name}>
               {v.name}
-              <Text style={styles.code}>{` (${v.code})`}</Text>
+              <Text style={styles.code}>{` (${v.iddCode})`}</Text>
             </Text>
           </TouchableOpacity>
         ))}

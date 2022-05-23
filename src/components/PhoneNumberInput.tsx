@@ -37,13 +37,13 @@ const PhoneNumberInput = ({
         style={styles.countryIconContainer}
         onPress={showCountryCodeSearch}>
         <View style={styles.countryCodeWrapper}>
-          <Text style={styles.countryIcon}>{selectedCountry.icon}</Text>
+          <Text style={styles.countryIcon}>{selectedCountry.flag}</Text>
 
           <ArrowDownIcon />
         </View>
       </TouchableOpacity>
 
-      <Text style={styles.code}>{selectedCountry.code}</Text>
+      <Text style={styles.code}>{selectedCountry.iddCode}</Text>
 
       <TextInput
         placeholder={'| Phone Number'}

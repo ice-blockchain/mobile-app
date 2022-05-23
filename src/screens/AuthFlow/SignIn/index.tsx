@@ -31,8 +31,14 @@ import {RootState} from '@store/rootReducer';
 import PhoneNumberInput from '@components/PhoneNumberInput';
 import {countriesCode} from '@constants/countries';
 import PhoneNumberSearch from '@components/PhoneNumberSearch';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {SignUpStackParamList} from '@navigation/Auth';
 
-const SignIn = ({navigation}) => {
+type Props = {
+  navigation: StackNavigationProp<SignUpStackParamList, 'SignIn'>;
+};
+
+const SignIn = ({navigation}: Props) => {
   const [email, onChangeEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
@@ -62,7 +68,7 @@ const SignIn = ({navigation}) => {
         );
       }
     } else {
-      const phoneNumber = `${selectedCountry.code}${phone}`;
+      const phoneNumber = `${selectedCountry.iddCode}${phone}`;
       const success = await magicLink.loginUserPhoneNumber(phoneNumber);
       if (success) {
         if (!usersInfo[phoneNumber]?.profileFilled) {
@@ -135,7 +141,7 @@ const SignIn = ({navigation}) => {
             </Text>
           </View>
 
-          <View style={{flex: 1}}>
+          <View style={styles.inputContainer}>
             {inputType === 'email' ? (
               <CommonInput
                 icon={<EmailSvg />}
@@ -200,6 +206,9 @@ const styles = StyleSheet.create({
   content: {
     alignItems: 'center',
     flexGrow: 1,
+  },
+  inputContainer: {
+    flex: 1,
   },
   input: {
     marginBottom: rem(21),
