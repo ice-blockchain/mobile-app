@@ -5,7 +5,14 @@ module.exports = {
   plugins: ['@typescript-eslint', 'detox', 'simple-import-sort'],
   overrides: [
     {
-      files: ['*.ts', '*.tsx', '*.e2e.js'],
+      files: [
+        '*.ts',
+        '*.tsx',
+        '*.e2e.js',
+        '**/*.spec.js',
+        '**/*.spec.jsx',
+        '**/tools.js',
+      ],
       rules: {
         '@typescript-eslint/no-shadow': ['error'],
         'react-hooks/exhaustive-deps': 'error',
