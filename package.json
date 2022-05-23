@@ -6,7 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest tests --coverage --updateSnapshot",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "check-types": "tsc --build --clean",
     "postinstall": "npx jetify && npx patch-package",
