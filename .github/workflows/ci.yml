@@ -33,14 +33,18 @@ jobs:
       - uses: actions/setup-node@master
       - name: Install npm dependencies
         run: |
+          cd main-repo
           yarn
 
       - name: Check types
         run: |
+          cd main-repo
           yarn check-types
       - name: Lint
         run: |
+          cd main-repo
           yarn lint
       - name: Run tests
         run: |
+          cd main-repo
           yarn test
