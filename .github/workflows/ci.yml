@@ -23,9 +23,13 @@ jobs:
           fetch-depth: 0
       - name: Run script to copy the configuration folder
         run: |
-          mkdir $GITHUB_WORKSPACE/main-repo/configuration
-          cp -a $GITHUB_WORKSPACE/mobile-app-secrets/configuration/. $GITHUB_WORKSPACE/main-repo/configuration/
-          ls -l $GITHUB_WORKSPACE/main-repo/configuration
+          set -o xtrace
+          # ls -l $GITHUB_WORKSPACE/main-repo
+          # mkdir -p $GITHUB_WORKSPACE/main-repo/configuration && ls -l $GITHUB_WORKSPACE/main-repo/configuration
+          # ls -l $GITHUB_WORKSPACE/mobile-app-secrets
+          ls -la $GITHUB_WORKSPACE/mobile-app-secrets/configuration
+          cp -rfp $GITHUB_WORKSPACE/mobile-app-secrets/configuration $GITHUB_WORKSPACE/main-repo/
+          ls -la $GITHUB_WORKSPACE/main-repo/configuration
       - uses: actions/setup-node@master
       - name: Install npm dependencies
         run: |
