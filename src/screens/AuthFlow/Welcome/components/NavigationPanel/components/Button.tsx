@@ -3,10 +3,8 @@
 import React from 'react';
 import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 import {rem, font} from 'rn-units';
-
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
-
 interface ButtonProps {
   onPress: () => void;
   text: string;
@@ -31,7 +29,7 @@ const styles = StyleSheet.create({
     width: rem(96),
     height: rem(41),
     backgroundColor: COLORS.primary,
-    borderRadius: 11,
+    borderRadius: rem(11),
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -41,6 +39,6 @@ const styles = StyleSheet.create({
     color: COLORS.white,
     fontSize: font(14),
     paddingHorizontal: rem(4),
-    lineHeight: 17,
+    lineHeight: rem(17),
   },
 });

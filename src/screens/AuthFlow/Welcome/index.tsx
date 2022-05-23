@@ -1,179 +1,63 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import React, {useRef, useState} from 'react';
-import {StyleSheet, Text, View, StatusBar} from 'react-native';
+import {StyleSheet, View, StatusBar} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
-import {rem, font} from 'rn-units';
+import {rem} from 'rn-units';
 
 import WelcomeItem from './components/WelcomeItem';
 import NavigationPanel from './components/NavigationPanel';
-
 import {Images} from '@images/index';
-import LogoIconSvg from '@svg/logoIcon';
-import {FONTS, WEIGHTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
+import {translate} from '@utils/i18n';
 
 const Welcome = () => {
-  //TODO use i18n
   const welcomeScreenData = [
     {
       key: '1',
-      title: 'Welcome to ice',
+      title: translate('welcome.page1.title'),
       image: Images.welcome.welcome1,
-      imageSize: {
-        width: rem(272),
-        height: rem(290),
-      },
-      text: (
-        <>
-          <View style={styles.textContainerWithIcon}>
-            <LogoIconSvg />
-            <View style={styles.textContainer}>
-              <Text style={styles.mediumText}>{' ice'}</Text>
-              <Text style={styles.text}>
-                {' is a digital currency that you can mine'}
-              </Text>
-            </View>
-          </View>
-          <Text style={styles.text}>
-            {'on your phone. ice is owned and operated by'}
-          </Text>
-          <Text style={styles.text}>{'every day users like yourself.'}</Text>
-        </>
-      ),
+      description: [0, 1, translate('welcome.page1.description')],
     },
     {
       key: '2',
-      title: 'Planet Friendly',
+      title: translate('welcome.page2.title'),
       image: Images.welcome.welcome2,
-      imageSize: {
-        width: rem(280),
-        height: rem(309),
-      },
-      text: (
-        <>
-          <View style={styles.textContainerWithIcon}>
-            <LogoIconSvg />
-            <View style={styles.textContainer}>
-              <Text style={styles.mediumText}>{' ice'}</Text>
-              <Text style={styles.text}>
-                {' is inherently more energy efficient than BTC'}
-              </Text>
-            </View>
-          </View>
-          <Text style={styles.text}>
-            {'as it uses a “Proof of Stake” consensus mechanism.'}
-          </Text>
-          <Text style={styles.text}>
-            {'With proof-of-stake (POS), cryptocurrency'}
-          </Text>
-          <Text style={styles.text}>
-            {'owners validate block transactions based on the'}
-          </Text>
-          <Text style={styles.text}>
-            {'number of coins a validator stakes.'}
-          </Text>
-        </>
-      ),
+      description: [0, 1, translate('welcome.page2.description')],
     },
     {
       key: '3',
-      title: 'People’s Coin',
+      title: translate('welcome.page3.title'),
       image: Images.welcome.welcome3,
-      imageSize: {
-        width: rem(305),
-        height: rem(233),
-      },
-      text: (
-        <>
-          <Text style={styles.text}>{'The power is in your hands.'}</Text>
-          <View style={styles.textContainerWithIcon}>
-            <Text style={styles.text}>{'Everything that we develop at '}</Text>
-            <LogoIconSvg />
-            <View style={styles.textContainer}>
-              <Text style={styles.mediumText}>{' ice'}</Text>
-              <Text style={styles.text}>{' will be'}</Text>
-            </View>
-          </View>
-          <Text style={styles.text}>
-            {'open source & controlled by the Decentralized'}
-          </Text>
-          <Text style={styles.text}>{'Autonomous Organization (DAO).'}</Text>
-        </>
-      ),
+      description: [
+        translate('welcome.page3.description_part1'),
+        0,
+        1,
+        translate('welcome.page3.description_part2'),
+      ],
     },
     {
       key: '4',
-      title: 'Stay Connected',
+      title: translate('welcome.page4.title'),
       image: Images.welcome.welcome4,
-      imageSize: {
-        width: rem(309),
-        height: rem(280),
-      },
-      text: (
-        <>
-          <View style={styles.textContainerWithIcon}>
-            <Text style={styles.text}>{'Tap '}</Text>
-            <LogoIconSvg />
-            <Text style={styles.text}>
-              {' and start mining today with our free,'}
-            </Text>
-          </View>
-          <Text style={styles.text}>
-            {'energy-light mobile app. Your daily tap ensures'}
-          </Text>
-          <Text style={styles.text}>
-            {'that ice ends up in the hands of real'}
-          </Text>
-          <Text style={styles.text}>{'humans, not bots.'}</Text>
-        </>
-      ),
+      description: [
+        translate('welcome.page4.description_part1'),
+        0,
+        translate('welcome.page4.description_part2'),
+      ],
     },
     {
       key: '5',
-      title: 'Refer & Earn',
+      title: translate('welcome.page5.title'),
       image: Images.welcome.welcome5,
-      imageSize: {
-        width: rem(302),
-        height: rem(222),
-      },
-      text: (
-        <Text style={styles.text}>
-          {
-            'Invite your friends and earn up to 25% bonus\non your base mining rate for each friend\nthat joins your team.'
-          }
-        </Text>
-      ),
+      description: [translate('welcome.page5.description')],
     },
     {
       key: '6',
-      title: 'Notifications',
+      title: translate('welcome.page6.title'),
       image: Images.welcome.welcome6,
-      imageSize: {
-        width: rem(281),
-        height: rem(262),
-      },
-      text: (
-        <>
-          <View style={styles.textContainerWithIcon}>
-            <LogoIconSvg />
-            <View style={styles.textContainer}>
-              <Text style={styles.mediumText}>{' ice'}</Text>
-              <Text style={styles.text}>
-                {' mining sessions only last for 24 hours.'}
-              </Text>
-            </View>
-          </View>
-          <Text style={styles.text}>
-            {'Would you like to receive a notification when'}
-          </Text>
-          <Text style={styles.text}>
-            {'your current session ends? Don’t worry,'}
-          </Text>
-          <Text style={styles.text}>{'we will not spam you!'}</Text>
-        </>
-      ),
+      description: [0, 1, translate('welcome.page6.description')],
     },
   ];
 
@@ -205,9 +89,8 @@ const Welcome = () => {
               key={v.key}
               title={v.title}
               image={v.image}
-              text={v.text}
+              description={v.description}
               index={v.key}
-              imageSize={v.imageSize}
             />
           </View>
         ))}
@@ -227,33 +110,8 @@ const Welcome = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-end',
     marginBottom: rem(20),
-  },
-  textContainerWithIcon: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  textContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    textAlign: 'center',
-    lineHeight: 24,
-    fontFamily: FONTS.primary.regular,
-    fontSize: font(14),
-    color: COLORS.greyText,
-  },
-  mediumText: {
-    fontWeight: WEIGHTS.medium,
-    textAlign: 'center',
-    lineHeight: 24,
-    fontFamily: FONTS.primary.regular,
-    fontSize: font(14),
-    color: COLORS.greyText,
+    marginTop: rem(10),
   },
 });
 
