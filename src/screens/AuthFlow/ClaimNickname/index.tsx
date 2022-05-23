@@ -22,6 +22,8 @@ import ClaimNickname from './components/ClaimNickname';
 import NavigationPanel from '../Welcome/components/NavigationPanel';
 import {useDispatch} from 'react-redux';
 import AuthActions from '@store/modules/Auth/actions';
+// import ValidationActions from '@store/modules/Validation/actions';
+// import AccountActions from '@store/modules/Accounts/actions';
 import navigation from '@navigation/index';
 
 const nicknameRegularExp = /^[A-Za-z0-9]+([A-Za-z0-9]*|[._-]?[A-Za-z0-9]+)*$/;
@@ -46,7 +48,7 @@ const SignUp = () => {
       return;
     }
 
-    // await dispatch(UsersActions.USERNAME_VALIDATION.START.create(myNickname));
+    // await dispatch(ValidationActions.USERNAME_VALIDATION.START.create(myNickname));
 
     pagerViewRef.current?.setPage(1);
     setCurrentPage(1);
@@ -60,6 +62,7 @@ const SignUp = () => {
   };
 
   const onComplete = () => {
+    // await dispatch(AccountActions.CREATE_USER.START.create());
     dispatch(AuthActions.STORE_CLAIM_NICKNAME_DONE.STATE.create());
     navigation.navigate('Welcome');
   };

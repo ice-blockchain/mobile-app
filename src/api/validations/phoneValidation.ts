@@ -7,7 +7,7 @@ interface Params {
   validationCode: string;
 }
 
-export default function validateUsername({
+export default function validatePhoneNumber({
   phoneNumber,
   validationCode,
 }: Params) {

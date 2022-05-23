@@ -10,18 +10,8 @@ interface Params {
   username: string;
 }
 
-export default function createUser({
-  email,
-  fullName,
-  phoneNumber,
-  referredBy,
-  username,
-}: Params) {
+export default function createUser(userInfo: Params) {
   return post('/users', {
-    email,
-    fullName,
-    phoneNumber,
-    referredBy,
-    username,
+    ...userInfo,
   });
 }

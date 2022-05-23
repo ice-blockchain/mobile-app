@@ -3,12 +3,17 @@
 import {all, takeLatest} from 'redux-saga/effects';
 
 import usernameValidationSaga from './usernameValidationSaga';
-import UsersActions from '../actions';
+import phoneValidationSaga from './phoneValidationSaga';
+import ValidationActions from '../actions';
 
 export default function* rootSaga() {
   yield all([
     takeLatest(
-      UsersActions.USERNAME_VALIDATION.START.type,
+      ValidationActions.PHONE_VALIDATION.START.type,
+      phoneValidationSaga,
+    ),
+    takeLatest(
+      ValidationActions.USERNAME_VALIDATION.START.type,
       usernameValidationSaga,
     ),
   ]);

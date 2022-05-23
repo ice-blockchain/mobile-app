@@ -7,14 +7,6 @@ interface Params {
   formData: FormData;
 }
 
-// {
-//   email,
-//   fullName,
-//   phoneNumber,
-//   username,
-//   profilePicture,
-// }
-
 export default function updateUser({userId, formData}: Params) {
   return patch(`/users/${userId}`, formData);
 }
