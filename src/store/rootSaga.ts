@@ -4,10 +4,19 @@ import {all, call, spawn} from 'redux-saga/effects';
 import NewsSaga from './modules/News/sagas';
 import AccountSaga from './modules/Accounts/sagas';
 import ValidationSaga from './modules/Validation/sagas';
+import ReferralsSaga from './modules/Referrals/sagas';
+import StatisticsSaga from './modules/Statistics/sagas';
 import AuthSaga from './modules/Auth/sagas';
 
 export default function* rootSaga() {
-  const sagas = [NewsSaga, AccountSaga, ValidationSaga, AuthSaga];
+  const sagas = [
+    NewsSaga,
+    AccountSaga,
+    ValidationSaga,
+    ReferralsSaga,
+    StatisticsSaga,
+    AuthSaga,
+  ];
   yield all([
     ...sagas.map((saga, index) =>
       spawn(function* () {

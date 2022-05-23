@@ -6,6 +6,8 @@ import {persistReducer} from 'redux-persist';
 import news from '../store/modules/News/reducer';
 import account from '../store/modules/Accounts/reducer';
 import validation from '../store/modules/Validation/reducer';
+import statistics from '../store/modules/Statistics/reducer';
+import referrals from '../store/modules/Referrals/reducer';
 import auth from '../store/modules/Auth/reducer';
 import utilityProcessStatuses from '../store/modules/UtilityProcessStatuses/reducer';
 
@@ -21,6 +23,8 @@ const rootReducer = combineReducers({
   news,
   account,
   validation,
+  statistics,
+  referrals,
   utilityProcessStatuses,
 });
 
