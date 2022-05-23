@@ -3,9 +3,9 @@
 import * as React from 'react';
 import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
-
 import {FONTS, WEIGHTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
+import {translate} from '@utils/i18n';
 interface NotNowButtonProps {
   onPress?: () => void;
   disabled: boolean;
@@ -17,7 +17,7 @@ const NotNowButton = ({onPress, disabled}: NotNowButtonProps) => {
       disabled={disabled}
       onPress={onPress}
       style={styles.container}>
-      <Text style={styles.text}>not now</Text>
+      <Text style={styles.text}>{translate('button.not_now_btn')}</Text>
     </TouchableOpacity>
   );
 };

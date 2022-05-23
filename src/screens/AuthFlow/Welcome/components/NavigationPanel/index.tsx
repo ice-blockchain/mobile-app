@@ -2,13 +2,12 @@
 
 import * as React from 'react';
 import {View, StyleSheet} from 'react-native';
-import {rem} from 'rn-units';
-
+import {rem, isAndroid} from 'rn-units';
 import Dots from './components/dots';
 import NotNowButton from './components/NotNowButton';
 import Button from './components/Button';
-
 import NextArrowSvg from '@svg/nextArrow';
+import {translate} from '@utils/i18n';
 
 interface NavigationPanelProps {
   amount: number;
@@ -28,7 +27,7 @@ const NavigationPanel = ({
   nextPress,
   withError,
   yesPleasePress,
-  lastPageButtonText = 'Yes, please',
+  lastPageButtonText = translate('button.yes_btn'),
   isButtonActive = true,
 }: NavigationPanelProps) => {
   const isLastPage = activeIndex >= amount - 1;
@@ -46,7 +45,7 @@ const NavigationPanel = ({
         {!isLastPage ? (
           <Button
             onPress={nextPress}
-            text={'Next'}
+            text={translate('button.next_btn')}
             disabled={!isButtonActive}
             rightIcon={<NextArrowSvg />}
           />
@@ -67,6 +66,7 @@ export default NavigationPanel;
 const styles = StyleSheet.create({
   navigationPanel: {
     paddingHorizontal: rem(64),
+    marginBottom: isAndroid ? rem(10) : rem(4),
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
