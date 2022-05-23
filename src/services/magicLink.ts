@@ -1,8 +1,11 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Magic} from '@magic-sdk/react-native';
+import {OAuthExtension, OAuthProvider} from '@magic-ext/react-native-oauth';
 
-const magic = new Magic('API_KEY');
+const magic = new Magic('API_KEY', {
+  extensions: [new OAuthExtension()],
+});
 
 class MagicLink {
   token: string = '';
@@ -58,6 +61,23 @@ class MagicLink {
       return await magic.user.getIdToken();
     } catch (err) {
       throw new Error('Authenticate current session failed');
+    }
+  };
+
+  socialLogin = async (provider: OAuthProvider) => {
+    try {
+      const result = await magic.oauth.loginWithPopup({
+        provider,
+        redirectURI:
+          'https://auth.magic.link/v1/oauth2/SuvuIDFD3HTuY0n8umtDXv7NO3pqf4LR82WhAfvRr6w=/callback',
+      });
+
+      console.log(result);
+
+      return true;
+    } catch (error) {
+      // throw new Error('Login failed');
+      return false;
     }
   };
 }

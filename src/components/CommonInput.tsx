@@ -8,6 +8,7 @@ import {
   StyleProp,
   Text,
   TextInputProps,
+  KeyboardTypeOptions,
 } from 'react-native';
 import {rem, font} from 'rn-units';
 import {FONTS} from '@constants/fonts';
@@ -22,6 +23,7 @@ interface CommonInputProps extends TextInputProps {
   placeholderColor?: string;
   containerStyle?: StyleProp<ViewStyle>;
   errorText?: string;
+  keyboardType?: KeyboardTypeOptions;
 }
 
 const CommonInput = ({
@@ -31,6 +33,7 @@ const CommonInput = ({
   placeholder,
   containerStyle,
   errorText,
+  keyboardType,
   ...props
 }: CommonInputProps) => {
   return (
@@ -47,6 +50,8 @@ const CommonInput = ({
           value={value}
           placeholder={placeholder}
           style={styles.input}
+          keyboardType={keyboardType}
+          autoCapitalize="none"
           {...props}
         />
         {errorText ? <Text style={styles.errorText}>{errorText}</Text> : null}

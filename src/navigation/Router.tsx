@@ -12,10 +12,6 @@ import Initialization from '@screens/AuthFlow/Initialization';
 import {RootState} from '@store/rootReducer';
 import {isSignUpCompletedSelector} from '@store/modules/Auth/selectors';
 
-// type Params = {
-//   email: string | null;
-// };
-
 function ActiveNavigator() {
   const dispatch = useDispatch();
   const initialization = useSelector(

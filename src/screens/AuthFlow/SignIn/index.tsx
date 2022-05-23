@@ -23,7 +23,6 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import MagicIconSvg from '@svg/magicIcon';
 import {translate} from '@utils/i18n';
-
 import SocialSignIn, {ESocialType} from './components/socialSignIn';
 import {magicLink} from '@services/magicLink';
 import {useDispatch, useSelector} from 'react-redux';
@@ -87,13 +86,16 @@ const SignIn = ({navigation}) => {
       setInputType('email');
     }
   };
-  const onSocialSignInPress = (type: ESocialType) => {
+  const onSocialSignInPress = async (type: ESocialType) => {
     switch (type) {
       case ESocialType.apple:
+        await magicLink.socialLogin('apple');
         break;
       case ESocialType.facebook:
+        await magicLink.socialLogin('facebook');
         break;
       case ESocialType.google:
+        await magicLink.socialLogin('google');
         break;
       case ESocialType.twitter:
         break;

@@ -21,6 +21,15 @@ const screenOptions = {
   ...TransitionPresets.SlideFromRightIOS,
 };
 
+export type SignUpStackParamList = {
+  Intro: undefined;
+  CheckEmail: undefined;
+  ClaimNickname: undefined;
+  Invite: undefined;
+  Welcome: undefined;
+  SignIn: undefined;
+};
+
 function Signup() {
   const initial = AuthNavigationHelper();
   return (
