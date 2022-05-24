@@ -68,16 +68,13 @@ class MagicLink {
     try {
       const result = await magic.oauth.loginWithPopup({
         provider,
-        redirectURI:
-          'https://auth.magic.link/v1/oauth2/SuvuIDFD3HTuY0n8umtDXv7NO3pqf4LR82WhAfvRr6w=/callback',
+        redirectURI: 'iceapp://login',
       });
 
-      console.log(result);
-
-      return true;
+      return {success: true, authInfo: result};
     } catch (error) {
       // throw new Error('Login failed');
-      return false;
+      return {success: false, authInfo: null};
     }
   };
 }

@@ -33,6 +33,7 @@ import {countriesCode} from '@constants/countries';
 import PhoneNumberSearch from '@components/PhoneNumberSearch';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {SignUpStackParamList} from '@navigation/Auth';
+import {OAuthRedirectResult} from '@magic-ext/react-native-oauth';
 
 type Props = {
   navigation: StackNavigationProp<SignUpStackParamList, 'SignIn'>;
@@ -93,21 +94,42 @@ const SignIn = ({navigation}: Props) => {
     }
   };
   const onSocialSignInPress = async (type: ESocialType) => {
+    let response: {success: boolean; authInfo: null | OAuthRedirectResult} = {
+      success: false,
+      authInfo: null,
+    };
     switch (type) {
       case ESocialType.apple:
-        await magicLink.socialLogin('apple');
+        response = await magicLink.socialLogin('apple');
         break;
       case ESocialType.facebook:
-        await magicLink.socialLogin('facebook');
+        response = await magicLink.socialLogin('facebook');
         break;
       case ESocialType.google:
-        await magicLink.socialLogin('google');
+        response = await magicLink.socialLogin('google');
         break;
       case ESocialType.twitter:
         break;
 
       default:
         break;
+    }
+    if (response.success) {
+      if (
+        !usersInfo[`${response.authInfo?.oauth.userInfo.email}`]?.profileFilled
+      ) {
+        navigation.navigate('ClaimNickname');
+      } else if (
+        !usersInfo[`${response.authInfo?.oauth.userInfo.email}`]?.welcomeSeen
+      ) {
+        navigation.navigate('Welcome');
+      }
+      dispatch(
+        AuthActions.STORE_USER_DATA.STATE.create({
+          email: response.authInfo?.oauth.userInfo.email,
+          phoneNumber: null,
+        }),
+      );
     }
   };
 
