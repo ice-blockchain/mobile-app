@@ -1,8 +1,31 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {RequestConfig} from '@api/types';
-import axios from '@api/utils/axios';
+import {RequestConfig} from '@api/apiClientTypes';
 import {handleServiceError} from './ApiServiceErrors';
+import {Platform} from 'react-native';
+import axios, {AxiosInstance} from 'axios';
+import DeviceInfo from 'react-native-device-info';
+import env from 'src/constants/env';
+import requestInterceptor from './interceptors/request';
+import responseInterceptor from './interceptors/response';
+
+function setupApiClient(clientInstance: AxiosInstance) {
+  clientInstance.interceptors.request.use(requestInterceptor.onFulfilled);
+
+  clientInstance.interceptors.response.use(
+    responseInterceptor.onFulfilled,
+    responseInterceptor.onRejected(clientInstance),
+  );
+}
+
+const client = axios.create({
+  baseURL: `${env.BASE_URL}/api`,
+  headers: {
+    'Mobile-App-Version': `${Platform.OS} - ${DeviceInfo.getVersion()}`,
+  },
+});
+
+setupApiClient(client);
 
 export async function post<TRequest, TResponse>(
   path: string,
@@ -11,8 +34,8 @@ export async function post<TRequest, TResponse>(
 ): Promise<TResponse> {
   try {
     const response = config
-      ? await axios.post<TResponse>(path, payload, config)
-      : await axios.post<TResponse>(path, payload);
+      ? await client.post<TResponse>(path, payload, config)
+      : await client.post<TResponse>(path, payload);
     return response.data;
   } catch (error) {
     handleServiceError(error);
@@ -25,7 +48,7 @@ export async function patch<TRequest, TResponse>(
   payload: TRequest,
 ): Promise<TResponse> {
   try {
-    const response = await axios.patch<TResponse>(path, payload);
+    const response = await client.patch<TResponse>(path, payload);
     return response.data;
   } catch (error) {
     handleServiceError(error);
@@ -38,9 +61,7 @@ export async function put<TRequest, TResponse>(
   payload: TRequest,
 ): Promise<TResponse> {
   try {
-    console.log(path, payload);
-    const response = await axios.put<TResponse>(path, payload);
-    console.log(response);
+    const response = await client.put<TResponse>(path, payload);
     return response.data;
   } catch (error) {
     handleServiceError(error);
@@ -50,7 +71,7 @@ export async function put<TRequest, TResponse>(
 
 export async function get<TResponse>(path: string): Promise<TResponse> {
   try {
-    const response = await axios.get<TResponse>(path);
+    const response = await client.get<TResponse>(path);
     return response.data;
   } catch (error) {
     handleServiceError(error);
