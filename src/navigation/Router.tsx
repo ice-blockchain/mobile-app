@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import React, {useEffect} from 'react';
+import {Linking} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import Main from './Main';
 // import selectors from '@store/selectors';
@@ -45,8 +46,17 @@ function ActiveNavigator() {
 }
 
 export default function Router() {
+  const initializeDynamicLinks = async () => {
+    Linking.addEventListener('url', ({url}) => console.log(url));
+    Linking.getInitialURL().then(url => {
+      if (url) {
+        console.log(url);
+      }
+    });
+  };
+
   return (
-    <NavigationContainer>
+    <NavigationContainer onReady={initializeDynamicLinks}>
       <ActiveNavigator />
     </NavigationContainer>
   );
