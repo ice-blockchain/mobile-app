@@ -1,12 +1,30 @@
 platform :ios do
-    desc “Build a ice.ipa file”
-    lane :staging do
-        build_app(scheme: “ice-staging”,
-        workspace: “ice.xcworkspace”,
+    desc "Build a ice.ipa file"
+    lane :buildStaging do
+        build_app(scheme: "ice-staging",
+        workspace: "ios/ice.xcworkspace",
         include_bitcode: true)
+    end
 
-    lane :production do
-        build_app(scheme: “ice,
-        workspace: “ice.xcworkspace”,
+    lane :buildProduction do
+        build_app(scheme: "ice",
+        workspace: "ios/ice.xcworkspace",
         include_bitcode: true)
+    end
+
+    desc "Push a new staging build to TestFlight"
+    lane :stagingTestFlight do
+        increment_build_number(xcodeproj: "ice.xcodeproj")
+        match(type: "appstore")
+        gym(workspace: "ice.xcworkspace", scheme: "ice-staging")
+        pilot(skip_submission: true)
+    end
+
+    desc "Push a new prod build to TestFlight"
+    lane :prodTestFlight do
+        increment_build_number(xcodeproj: "ice.xcodeproj")
+        match(type: "appstore")
+        gym(workspace: "ice.xcworkspace", scheme: "ice")
+        pilot(skip_submission: true)
+    end
 end
