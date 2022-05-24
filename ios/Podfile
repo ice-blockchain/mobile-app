@@ -9,6 +9,8 @@ target 'ice' do
   use_unimodules!
   config = use_native_modules!
 
+  pod 'React-RCTLinking', :path => '../node_modules/react-native/Libraries/LinkingIOS'
+
   # Flags change depending on the env values.
   flags = get_default_flags()
 
