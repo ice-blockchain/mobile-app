@@ -22,13 +22,18 @@ import ClaimNickname from './components/ClaimNickname';
 import NavigationPanel from '../Welcome/components/NavigationPanel';
 import {useDispatch} from 'react-redux';
 import AuthActions from '@store/modules/Auth/actions';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {SignUpStackParamList} from '@navigation/Auth';
 // import ValidationActions from '@store/modules/Validation/actions';
 // import AccountActions from '@store/modules/Accounts/actions';
-import navigation from '@navigation/index';
 
 const nicknameRegularExp = /^[A-Za-z0-9]+([A-Za-z0-9]*|[._-]?[A-Za-z0-9]+)*$/;
 
-const SignUp = () => {
+type Props = {
+  navigation: StackNavigationProp<SignUpStackParamList, 'SignIn'>;
+};
+
+const SignUp = ({navigation}: Props) => {
   const pagerViewRef = useRef<PagerView>(null);
   const [myNickname, setMyNickname] = useState('');
   const [invitedNickname, setInvitedNickname] = useState('');

@@ -8,7 +8,7 @@ import GoogleIconSvg from '@svg/googleIcon';
 import FacebookIconSvg from '@svg/facebookIcon';
 import TwitterIconSvg from '@svg/twitterIcon';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import {rem} from 'rn-units';
+import {rem, isIOS} from 'rn-units';
 
 export enum ESocialType {
   apple,
@@ -25,11 +25,13 @@ const SocialSignIn = ({onPress}: SocialSignInProps) => {
   const iconPress = (type: ESocialType) => () => onPress(type);
   return (
     <View style={styles.container}>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={iconPress(ESocialType.apple)}>
-        <AppleSvg />
-      </TouchableOpacity>
+      {isIOS ? (
+        <TouchableOpacity
+          style={styles.button}
+          onPress={iconPress(ESocialType.apple)}>
+          <AppleSvg />
+        </TouchableOpacity>
+      ) : null}
 
       <TouchableOpacity
         style={styles.button}
