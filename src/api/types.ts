@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-export type HttpHeaders = {
-  [key: string]: string;
-};
-
-export type RequestConfig = {
-  headers: HttpHeaders;
-};
+export interface ApiProfile {
+  id: string;
+  username: string | null;
+  email: string | null;
+  level: number;
+  globalRank: number;
+  refferalsCount: number;
+}
