@@ -31,9 +31,10 @@ jobs:
           cp -rfp $GITHUB_WORKSPACE/mobile-app-secrets/configuration $GITHUB_WORKSPACE/main-repo/
           ls -la $GITHUB_WORKSPACE/main-repo/configuration
       - uses: actions/setup-node@master
-      - uses: c-hive/gha-yarn-cache@v2
-          with:
-            path: main-repo
+      - name: Cache yarn
+        uses: c-hive/gha-yarn-cache@v2
+        with:
+          path: main-repo
       - name: Install npm dependencies
         run: |
           cd main-repo
