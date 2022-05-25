@@ -34,7 +34,7 @@ jobs:
       - name: Cache yarn
         uses: c-hive/gha-yarn-cache@v2
         with:
-          path: main-repo
+          directory: main-repo
       - name: Install npm dependencies
         run: |
           cd main-repo
