@@ -52,6 +52,9 @@ jobs:
         run: |
           cd main-repo
           yarn test
+      - uses: ruby/setup-ruby@v1
+        with:
+        ruby-version: '2.7.4'
       - name: Deploy iOS Staging to TestFlight via Fastlane
         uses: maierj/fastlane-action@v2.2.1
         with:
