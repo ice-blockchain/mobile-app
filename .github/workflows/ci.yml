@@ -56,18 +56,28 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.7.4'
-      - name: Install bundle
+      - name: Install Fastlane and required plugins
         run: |
-          cd main-repo
-          bundle install
-      # - name: Update fastlane
-      #   run: |
-      #     cd main-repo
-      #     bundle update fastlane
+          sudo gem install bundler
+          bundle install --path vendor/bundle
+        working-directory: main-repo
+
       - name: Deploy iOS Staging to TestFlight via Fastlane
-        run: |
-          cd main-repo
-          bundle exec fastlane buildStagingTestFlight
+        run: bundle exec fastlane buildStagingTestFlight
+        working-directory: main-repo
+
+        # - name: Install bundle
+        #   run: |
+        #     cd main-repo
+        #     bundle install
+        # - name: Update fastlane
+        #   run: |
+        #     cd main-repo
+        #     bundle update fastlane
+        # - name: Deploy iOS Staging to TestFlight via Fastlane
+        #   run: |
+        #     cd main-repo
+        #     bundle exec fastlane buildStagingTestFlight
         # - name: Deploy iOS Staging to TestFlight via Fastlane
         #   uses: maierj/fastlane-action@v2.2.1
         #   with:
