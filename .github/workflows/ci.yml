@@ -53,7 +53,7 @@ jobs:
           cd main-repo
           yarn test
       - name: Deploy iOS Staging to TestFlight via Fastlane
-        uses: maierj/fastlane-action@v1.4.0
+        uses: maierj/fastlane-action@v2.2.1
         with:
           lane: buildStagingTestFlight
           subdirectory: 'main-repo'
