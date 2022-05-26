@@ -46,6 +46,7 @@ platform :ios do
 
     desc "Push a new staging build to TestFlight"
     lane :buildStagingTestFlight do
+        ruby_version("2.7.4")
         keychain_name = TEMP_KEYCHAIN_USER
         keychain_password = TEMP_KEYCHAIN_PASSWORD
         ensure_temp_keychain(keychain_name, keychain_password)
