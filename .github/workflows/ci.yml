@@ -60,10 +60,10 @@ jobs:
         run: |
           cd main-repo
           bundle install
-      - name: Update fastlane
-        run: |
-          cd main-repo
-          bundle update fastlane
+      # - name: Update fastlane
+      #   run: |
+      #     cd main-repo
+      #     bundle update fastlane
       - name: Deploy iOS Staging to TestFlight via Fastlane
         run: |
           cd main-repo
