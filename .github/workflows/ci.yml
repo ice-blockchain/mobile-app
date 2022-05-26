@@ -30,6 +30,10 @@ jobs:
           ls -la $GITHUB_WORKSPACE/mobile-app-secrets/configuration
           cp -rfp $GITHUB_WORKSPACE/mobile-app-secrets/configuration $GITHUB_WORKSPACE/main-repo/
           ls -la $GITHUB_WORKSPACE/main-repo/configuration
+      - name: Install bundle
+        run: |
+          cd main-repo
+          bundle install
       - uses: actions/setup-node@master
       - name: Cache yarn
         uses: c-hive/gha-yarn-cache@v2
