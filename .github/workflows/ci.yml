@@ -62,12 +62,10 @@ jobs:
       - name: CocoaPods dependencies
         run: bundle exec pod install
       - name: Deploy iOS Staging to TestFlight via Fastlane
-        run: 
         run: |
           cd main-repo
           bundle exec fastlane buildStagingTestFlight
         # working-directory: main-repo
-
         env:
           APP_STORE_CONNECT_TEAM_ID: '${{ secrets.APP_STORE_CONNECT_TEAM_ID }}'
           DEVELOPER_APP_ID: '${{ secrets.DEVELOPER_APP_ID }}'
