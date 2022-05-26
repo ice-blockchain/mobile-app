@@ -58,9 +58,13 @@ jobs:
           ruby-version: '2.7.4'
 
       - name: Bundle dependencies
-        run: bundle install
+        run: |
+          cd main-repo
+          bundle install
       - name: CocoaPods dependencies
-        run: bundle exec pod install
+        run: |
+          cd main-repo
+          bundle exec pod install
       - name: Deploy iOS Staging to TestFlight via Fastlane
         run: |
           cd main-repo
