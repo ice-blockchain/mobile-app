@@ -30,10 +30,6 @@ jobs:
           ls -la $GITHUB_WORKSPACE/mobile-app-secrets/configuration
           cp -rfp $GITHUB_WORKSPACE/mobile-app-secrets/configuration $GITHUB_WORKSPACE/main-repo/
           ls -la $GITHUB_WORKSPACE/main-repo/configuration
-      - name: Install bundle
-        run: |
-          cd main-repo
-          bundle install
       - uses: actions/setup-node@master
       - name: Cache yarn
         uses: c-hive/gha-yarn-cache@v2
@@ -60,6 +56,10 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.7.4'
+      - name: Install bundle
+        run: |
+          cd main-repo
+          bundle install
       - name: Deploy iOS Staging to TestFlight via Fastlane
         uses: maierj/fastlane-action@v2.2.1
         with:
