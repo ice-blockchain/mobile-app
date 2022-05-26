@@ -1,7 +1,7 @@
 default_platform(:ios)
 
-DEVELOPER_APP_ID = ENV["DEVELOPER_APP_ID"]
-DEVELOPER_APP_IDENTIFIER = ENV["DEVELOPER_APP_IDENTIFIER"]
+DEVELOPER_APP_ID_STAGING = ENV["DEVELOPER_APP_ID_STAGING"]
+DEVELOPER_APP_IDENTIFIER_STAGING = ENV["DEVELOPER_APP_IDENTIFIER_STAGING"]
 PROVISIONING_PROFILE_SPECIFIER = ENV["PROVISIONING_PROFILE_SPECIFIER"]
 TEMP_KEYCHAIN_USER = ENV["TEMP_KEYCHAIN_USER"]
 TEMP_KEYCHAIN_PASSWORD = ENV["TEMP_KEYCHAIN_PASSWORD"]
@@ -45,7 +45,7 @@ platform :ios do
     end
 
     desc "Push a new staging build to TestFlight"
-    lane :stagingTestFlight do
+    lane :buildStagingTestFlight do
         keychain_name = TEMP_KEYCHAIN_USER
         keychain_password = TEMP_KEYCHAIN_PASSWORD
         ensure_temp_keychain(keychain_name, keychain_password)
@@ -66,7 +66,7 @@ platform :ios do
         
         match(
             type: 'appstore',
-            app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
+            app_identifier: "#{DEVELOPER_APP_IDENTIFIER_STAGING}",
             git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
             readonly: true,
             keychain_name: keychain_name,
@@ -81,14 +81,14 @@ platform :ios do
             export_method: "app-store",
             export_options: {
               provisioningProfiles: { 
-                  DEVELOPER_APP_ID => PROVISIONING_PROFILE_SPECIFIER
+                DEVELOPER_APP_ID_STAGING => PROVISIONING_PROFILE_SPECIFIER
               }
             }
           )
 
         pilot(
-            apple_id: "#{DEVELOPER_APP_ID}",
-            app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
+            apple_id: "#{DEVELOPER_APP_ID_STAGING}",
+            app_identifier: "#{DEVELOPER_APP_IDENTIFIER_STAGING}",
             skip_waiting_for_build_processing: true,
             skip_submission: true,
             distribute_external: false,
@@ -98,7 +98,7 @@ platform :ios do
     end
 
     desc "Push a new prod build to TestFlight"
-    lane :prodTestFlight do
+    lane :buildProdTestFlight do
         # increment_build_number(xcodeproj: "ice.xcodeproj")
         match(type: "appstore")
         gym(workspace: "ice.xcworkspace", scheme: "ice")
