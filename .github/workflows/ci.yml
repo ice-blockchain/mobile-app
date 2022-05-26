@@ -54,9 +54,9 @@ jobs:
           yarn test
       - name: Deploy iOS Staging to TestFlight via Fastlane
         uses: maierj/fastlane-action@v1.4.0
-        subdirectory: 'main-repo'
         with:
           lane: buildStagingTestFlight
+          subdirectory: 'main-repo'
 
         env:
           APP_STORE_CONNECT_TEAM_ID: '${{ secrets.APP_STORE_CONNECT_TEAM_ID }}'
