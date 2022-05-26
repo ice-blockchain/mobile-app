@@ -61,10 +61,10 @@ jobs:
         run: |
           cd main-repo
           bundle install
-      - name: CocoaPods dependencies
-        run: |
-          cd main-repo/ios
-          bundle exec pod install
+      # - name: CocoaPods dependencies
+      #   run: |
+      #     cd main-repo/ios
+      #     bundle exec pod install
       - name: Deploy iOS Staging to TestFlight via Fastlane
         run: |
           ls
