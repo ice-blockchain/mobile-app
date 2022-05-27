@@ -26,7 +26,7 @@ interface CommonInputProps extends TextInputProps {
   keyboardType?: KeyboardTypeOptions;
 }
 
-const CommonInput = ({
+export const CommonInput = ({
   onChangeText,
   icon,
   value,
@@ -92,5 +92,3 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-
-export default CommonInput;

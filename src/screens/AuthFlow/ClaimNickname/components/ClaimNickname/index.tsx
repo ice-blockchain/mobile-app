@@ -8,7 +8,7 @@ import {ClaimNicknameSvg} from '@svg/ClaimNickname';
 import {translate} from '@utils/i18n';
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
-import CommonInput from '@components/CommonInput';
+import {CommonInput} from '@components/CommonInput';
 import {ManIconSvg} from '@svg/ManIcon';
 
 const h = (screenHeight * 291) / 811;

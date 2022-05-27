@@ -24,7 +24,7 @@ interface PhoneNumberInputProps {
   onValueChange: (v: string) => void;
 }
 
-const PhoneNumberInput = ({
+export const PhoneNumberInput = ({
   selectedCountry,
   containerStyle,
   showCountryCodeSearch,
@@ -55,8 +55,6 @@ const PhoneNumberInput = ({
     </View>
   );
 };
-
-export default PhoneNumberInput;
 
 const styles = StyleSheet.create({
   container: {

@@ -3,7 +3,7 @@
 import testIDs from '../../../e2e/testIDs';
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import PrimaryButton from '@components/PrimaryButton';
+import {PrimaryButton} from '@components/PrimaryButton';
 import {useDispatch, useSelector} from 'react-redux';
 import AuthActions from '@store/modules/Auth/actions';
 import {RootState} from '@store/rootReducer';

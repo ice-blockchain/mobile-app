@@ -11,7 +11,7 @@ import {TicketIconSvg} from '@svg/Ticket';
 import {TipTriangleIconSvg} from '@svg/TipTriangle';
 import {WhoInvitedYouSvg} from '@svg/WhoInvitedYou';
 import {translate} from '@utils/i18n';
-import CommonInput from '@components/CommonInput';
+import {CommonInput} from '@components/CommonInput';
 
 interface WhoInvitedYouProps {
   inputValue: string;

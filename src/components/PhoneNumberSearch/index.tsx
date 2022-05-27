@@ -25,7 +25,7 @@ interface PhoneNumberSearchProps {
   setCountryCode: (v: ICountryCode) => void;
 }
 
-const PhoneNumberSearch = ({
+export const PhoneNumberSearch = ({
   selectedCountry,
   containerStyle,
   close,
@@ -96,8 +96,6 @@ const PhoneNumberSearch = ({
     </View>
   );
 };
-
-export default PhoneNumberSearch;
 
 const styles = StyleSheet.create({
   container: {
