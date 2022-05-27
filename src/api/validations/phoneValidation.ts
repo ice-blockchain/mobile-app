@@ -7,10 +7,7 @@ interface Params {
   validationCode: string;
 }
 
-export default function validatePhoneNumber({
-  phoneNumber,
-  validationCode,
-}: Params) {
+export function phoneValidation({phoneNumber, validationCode}: Params) {
   return put('/user-validations/phone-number', {
     phoneNumber,
     validationCode,

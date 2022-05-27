@@ -3,9 +3,9 @@
 import * as React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {rem, isAndroid} from 'rn-units';
-import Dots from './components/dots';
-import NotNowButton from './components/NotNowButton';
-import Button from './components/Button';
+import {Dots} from './components/dots';
+import {NotNowButton} from './components/NotNowButton';
+import {Button} from './components/Button';
 import {NextArrowSvg} from '@svg/NextArrow';
 import {translate} from '@utils/i18n';
 
@@ -20,7 +20,7 @@ interface NavigationPanelProps {
   isButtonActive?: boolean;
 }
 
-const NavigationPanel = ({
+export const NavigationPanel = ({
   amount,
   activeIndex,
   notNowPress,
@@ -60,8 +60,6 @@ const NavigationPanel = ({
     </View>
   );
 };
-
-export default NavigationPanel;
 
 const styles = StyleSheet.create({
   navigationPanel: {

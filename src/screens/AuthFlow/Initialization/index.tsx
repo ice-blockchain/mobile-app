@@ -4,7 +4,7 @@ import {LogoSvg} from '@svg/Logo';
 import React, {useEffect, useRef} from 'react';
 import {View, StyleSheet, Animated, Easing} from 'react-native';
 
-const Initialization = () => {
+export const Initialization = () => {
   const spinValue = useRef(new Animated.Value(0));
 
   useEffect(() => {
@@ -31,8 +31,6 @@ const Initialization = () => {
     </View>
   );
 };
-
-export default Initialization;
 
 const styles = StyleSheet.create({
   container: {

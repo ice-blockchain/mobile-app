@@ -2,7 +2,6 @@
 
 import * as React from 'react';
 import {View, StyleSheet} from 'react-native';
-
 import {AppleSvg} from '@svg/AppleIcon';
 import {GoogleIconSvg} from '@svg/GoogleIcon';
 import {FacebookIconSvg} from '@svg/FacebookIcon';
@@ -21,7 +20,7 @@ interface SocialSignInProps {
   onPress: (type: ESocialType) => void;
 }
 
-const SocialSignIn = ({onPress}: SocialSignInProps) => {
+export const SocialSignIn = ({onPress}: SocialSignInProps) => {
   const iconPress = (type: ESocialType) => () => onPress(type);
   return (
     <View style={styles.container}>
@@ -53,8 +52,6 @@ const SocialSignIn = ({onPress}: SocialSignInProps) => {
     </View>
   );
 };
-
-export default SocialSignIn;
 
 const styles = StyleSheet.create({
   container: {

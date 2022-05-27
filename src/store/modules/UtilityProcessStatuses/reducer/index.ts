@@ -50,7 +50,7 @@ function reduceAction(
       };
 }
 
-export default function reducer(state = INITIAL_STATE, action: Action) {
+export function processStatusesReducer(state = INITIAL_STATE, action: Action) {
   // TODO: connect auth actions
   // if (action.type === AuthActions.SIGN_OUT.SUCCESS.type) {
   //   return INITIAL_STATE;

@@ -11,7 +11,7 @@ interface NotNowButtonProps {
   disabled: boolean;
 }
 
-const NotNowButton = ({onPress, disabled}: NotNowButtonProps) => {
+export const NotNowButton = ({onPress, disabled}: NotNowButtonProps) => {
   return (
     <TouchableOpacity
       disabled={disabled}
@@ -21,8 +21,6 @@ const NotNowButton = ({onPress, disabled}: NotNowButtonProps) => {
     </TouchableOpacity>
   );
 };
-
-export default NotNowButton;
 
 const styles = StyleSheet.create({
   container: {

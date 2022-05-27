@@ -3,9 +3,9 @@
 import {useEffect} from 'react';
 import NetInfo from '@react-native-community/netinfo';
 import {isAppActive} from '@utils/helpers';
-import checkNetwork from '@utils/checkNetwork';
+import {checkNetwork} from '@utils/checkNetwork';
 
-export default function NetworkListener() {
+export function NetworkListener() {
   const check = async () => {
     const active = isAppActive();
     if (!active) {

@@ -3,13 +3,13 @@
 import {combineReducers} from 'redux';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {persistReducer} from 'redux-persist';
-import news from '../store/modules/News/reducer';
-import account from '../store/modules/Accounts/reducer';
-import validation from '../store/modules/Validation/reducer';
-import statistics from '../store/modules/Statistics/reducer';
-import referrals from '../store/modules/Referrals/reducer';
-import auth from '../store/modules/Auth/reducer';
-import utilityProcessStatuses from '../store/modules/UtilityProcessStatuses/reducer';
+import {newsReducer} from '../store/modules/News/reducer';
+import {accountReducer} from '../store/modules/Accounts/reducer';
+import {validationReducer} from '../store/modules/Validation/reducer';
+import {statisticsReducer} from '../store/modules/Statistics/reducer';
+import {referralsReducer} from '../store/modules/Referrals/reducer';
+import {authReducer} from '../store/modules/Auth/reducer';
+import {processStatusesReducer} from '../store/modules/UtilityProcessStatuses/reducer';
 
 const persistConfig = {
   key: 'root',
@@ -19,15 +19,15 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-  auth,
-  news,
-  account,
-  validation,
-  statistics,
-  referrals,
-  utilityProcessStatuses,
+  auth: authReducer,
+  news: newsReducer,
+  account: accountReducer,
+  validation: validationReducer,
+  statistics: statisticsReducer,
+  referrals: referralsReducer,
+  utilityProcessStatuses: processStatusesReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
 
-export default persistReducer(persistConfig, rootReducer);
+export const persistedRootReducer = persistReducer(persistConfig, rootReducer);

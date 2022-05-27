@@ -3,8 +3,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
-import AuthActions from '../../Auth/actions';
-import ValidationActions from '../actions';
+import {AuthActions} from '../../Auth/actions';
+import {ValidationActions} from '../actions';
 
 export interface State {
   isUsernameValid: boolean | null;
@@ -41,4 +41,4 @@ const persistConfig = {
   whitelist: ['usersInfo'],
 };
 
-export default persistReducer(persistConfig, reducer);
+export const validationReducer = persistReducer(persistConfig, reducer);

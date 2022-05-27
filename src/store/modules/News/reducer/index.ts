@@ -2,7 +2,7 @@
 
 import produce from 'immer';
 import {NewsPost} from '@store/types';
-import NewsActions from '../actions';
+import {NewsActions} from '../actions';
 
 export interface State {
   items: {
@@ -31,7 +31,7 @@ const INITIAL_STATE: State = {
   searchQuery: '',
 };
 
-function reducer(state = INITIAL_STATE, action: Actions): State {
+export function newsReducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
       case NewsActions.NEWS_LOAD.SUCCESS.type:
@@ -56,5 +56,3 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
     }
   });
 }
-
-export default reducer;

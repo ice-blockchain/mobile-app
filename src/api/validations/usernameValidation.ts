@@ -6,13 +6,8 @@ interface Params {
   username: string;
 }
 
-export default async function validateUsername({username}: Params) {
-  console.log(username);
-
-  const r = await put('/user-validations/username', {
+export function usernameValidation({username}: Params) {
+  return put('/user-validations/username', {
     username,
   });
-
-  console.log(r);
-  return r;
 }

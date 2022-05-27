@@ -26,11 +26,9 @@ const SIGN_OUT = createAction('SIGN_OUT', {
   FAILED: true,
 });
 
-const AuthActions = Object.freeze({
+export const AuthActions = Object.freeze({
   STORE_USER_DATA,
   STORE_CLAIM_NICKNAME_DONE,
   STORE_WELCOME_SEEN,
   SIGN_OUT,
 });
-
-export default AuthActions;

@@ -12,7 +12,6 @@ import {
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {rem, font, isIOS} from 'rn-units';
-
 import {LogoSvg} from '@svg/Logo';
 import {EmailIconSvg} from '@svg/EmailIcon';
 import {PhoneIconSvg} from '@svg/PhoneIcon';
@@ -23,10 +22,10 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {MagicIconSvg} from '@svg/MagicIcon';
 import {translate} from '@utils/i18n';
-import SocialSignIn, {ESocialType} from './components/socialSignIn';
+import {SocialSignIn, ESocialType} from './components/socialSignIn';
 import {magicLink} from '@services/magicLink';
 import {useDispatch, useSelector} from 'react-redux';
-import AuthActions from '@store/modules/Auth/actions';
+import {AuthActions} from '@store/modules/Auth/actions';
 import {RootState} from '@store/rootReducer';
 import {PhoneNumberInput} from '@components/PhoneNumberInput';
 import {countriesCode} from '@constants/countries';
@@ -39,7 +38,7 @@ type Props = {
   navigation: StackNavigationProp<SignUpStackParamList, 'SignIn'>;
 };
 
-const SignIn = ({navigation}: Props) => {
+export const SignIn = ({navigation}: Props) => {
   const [email, onChangeEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
@@ -273,5 +272,3 @@ const styles = StyleSheet.create({
     right: 0,
   },
 });
-
-export default SignIn;

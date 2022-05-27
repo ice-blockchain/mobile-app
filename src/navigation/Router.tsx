@@ -3,13 +3,13 @@
 import React, {useEffect} from 'react';
 import {Linking} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import Main from './Main';
+import {Main} from './Main';
 // import selectors from '@store/selectors';
-import AuthFlow from './Auth';
+import {AuthNavigator} from './Auth';
 import {magicLink} from '@services/magicLink';
-import AuthActions from '@store/modules/Auth/actions';
+import {AuthActions} from '@store/modules/Auth/actions';
 import {useDispatch, useSelector} from 'react-redux';
-import Initialization from '@screens/AuthFlow/Initialization';
+import {Initialization} from '@screens/AuthFlow/Initialization';
 import {RootState} from '@store/rootReducer';
 import {isSignUpCompletedSelector} from '@store/modules/Auth/selectors';
 
@@ -42,10 +42,10 @@ function ActiveNavigator() {
   if (isSignUpCompleted) {
     return <Main />;
   }
-  return <AuthFlow />;
+  return <AuthNavigator />;
 }
 
-export default function Router() {
+export function Router() {
   const initializeDynamicLinks = async () => {
     Linking.addEventListener('url', ({url}) => console.log(url));
     Linking.getInitialURL().then(url => {

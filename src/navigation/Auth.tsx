@@ -2,14 +2,14 @@
 
 import React from 'react';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import CheckEmail from '@screens/AuthFlow/CheckEmail';
-import ClaimNickname from '@screens/AuthFlow/ClaimNickname';
-import Invite from '@screens/AuthFlow/Invite';
-import Welcome from '@screens/AuthFlow/Welcome';
-import SignIn from '@screens/AuthFlow/SignIn';
-import AuthNavigationHelper from '@utils/AuthNavigationHelper';
-import WebView from '@screens/WebView';
-import Intro from '@screens/AuthFlow/Intro';
+import {CheckEmail} from '@screens/AuthFlow/CheckEmail';
+import {ClaimNickname} from '@screens/AuthFlow/ClaimNickname';
+import {Invite} from '@screens/AuthFlow/Invite';
+import {Welcome} from '@screens/AuthFlow/Welcome';
+import {SignIn} from '@screens/AuthFlow/SignIn';
+import {AuthNavigationHelper} from '@utils/AuthNavigationHelper';
+import {WebView} from '@screens/WebView';
+import {Intro} from '@screens/AuthFlow/Intro';
 
 const Stack = createStackNavigator();
 
@@ -44,7 +44,7 @@ function Signup() {
   );
 }
 
-export default function AuthNavigator() {
+export function AuthNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{

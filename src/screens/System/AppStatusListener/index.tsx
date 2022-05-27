@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import {View, StyleSheet} from 'react-native';
 import RNBootSplash from 'react-native-bootsplash';
 
-export default function AppStatusListener() {
+export function AppStatusListener() {
   const [ready, setReady] = useState(false);
 
   const onAppDidOpen = async () => {

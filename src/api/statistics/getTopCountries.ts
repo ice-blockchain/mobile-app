@@ -2,6 +2,6 @@
 
 import {get} from '@api/client';
 
-export default function getTopCountries() {
+export function getTopCountries() {
   return get('/user-statistics/top-countries');
 }

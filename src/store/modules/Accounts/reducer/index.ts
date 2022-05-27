@@ -3,8 +3,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
-import AccountActions from '../actions';
-import AuthActions from '../../Auth/actions';
+import {AccountActions} from '../actions';
+import {AuthActions} from '../../Auth/actions';
 
 export interface State {
   email: string;
@@ -52,4 +52,4 @@ const persistConfig = {
   timeout: 120000,
 };
 
-export default persistReducer(persistConfig, reducer);
+export const accountReducer = persistReducer(persistConfig, reducer);

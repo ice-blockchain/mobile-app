@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux';
 
 // import store from '@store';
 
-export default () => {
+export const AuthNavigationHelper = () => {
   // const { token, profile } = store.getState().auth;
   const email = useSelector((state: RootState) => state.auth.userData.email);
   const phoneNumber = useSelector(

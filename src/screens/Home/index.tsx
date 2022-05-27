@@ -5,10 +5,10 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {useDispatch, useSelector} from 'react-redux';
-import AuthActions from '@store/modules/Auth/actions';
+import {AuthActions} from '@store/modules/Auth/actions';
 import {RootState} from '@store/rootReducer';
 
-const Home = () => {
+export const Home = () => {
   const {email} = useSelector((state: RootState) => state.auth.userData);
   const dispatch = useDispatch();
   const logOutPress = () => {
@@ -37,5 +37,3 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 });
-
-export default Home;

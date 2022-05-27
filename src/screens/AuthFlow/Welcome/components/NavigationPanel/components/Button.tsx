@@ -22,7 +22,7 @@ interface ButtonProps {
   leftIcon?: JSX.Element;
 }
 
-const Button = ({
+export const Button = ({
   onPress,
   text,
   rightIcon,
@@ -45,8 +45,6 @@ const Button = ({
     </TouchableOpacity>
   );
 };
-
-export default Button;
 
 const styles = StyleSheet.create({
   container: {

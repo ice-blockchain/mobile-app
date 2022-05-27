@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import Api from '@api/index';
+import {Api} from '@api/index';
 import {put} from 'redux-saga/effects';
-import AccountActions from '../actions';
+import {AccountActions} from '../actions';
 
 const actionCreator = AccountActions.GET_PUBLIC_INFO_BY_USERNAME.START.create;
 
-export default function* phoneValidationSaga(
+export function* getPublicInfoByUsernameSaga(
   action: ReturnType<typeof actionCreator>,
 ) {
   try {

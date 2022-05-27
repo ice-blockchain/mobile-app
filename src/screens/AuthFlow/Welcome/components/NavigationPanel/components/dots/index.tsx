@@ -3,7 +3,7 @@
 import React, {useRef} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
-import Dot from './dot';
+import {Dot} from './dot';
 
 interface DotsProps {
   amount: number;
@@ -11,7 +11,7 @@ interface DotsProps {
   withError?: boolean;
 }
 
-const Dots = ({amount, activeIndex, withError}: DotsProps) => {
+export const Dots = ({amount, activeIndex, withError}: DotsProps) => {
   const dots = useRef(new Array(amount).fill('')).current;
   return (
     <View style={styles.container}>
@@ -25,8 +25,6 @@ const Dots = ({amount, activeIndex, withError}: DotsProps) => {
     </View>
   );
 };
-
-export default Dots;
 
 const styles = StyleSheet.create({
   container: {

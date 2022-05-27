@@ -10,7 +10,7 @@ interface DotProps {
   withError?: boolean;
 }
 
-const Dot = ({isActive, withError}: DotProps) => {
+export const Dot = ({isActive, withError}: DotProps) => {
   const widthAnimation = useRef(new Animated.Value(isActive ? 1 : 0)).current;
 
   useEffect(() => {
@@ -37,8 +37,6 @@ const Dot = ({isActive, withError}: DotProps) => {
     />
   );
 };
-
-export default Dot;
 
 const styles = StyleSheet.create({
   dot: {

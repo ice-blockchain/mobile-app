@@ -13,7 +13,9 @@ interface WelcomeItemDescriptionProps {
   items: Array<String | number>; // where 1 is icon with text 'ice'
 }
 
-const WelcomeItemDescription = ({items}: WelcomeItemDescriptionProps) => {
+export const WelcomeItemDescription = ({
+  items,
+}: WelcomeItemDescriptionProps) => {
   return (
     <Text style={styles.textContainerWithIcon}>
       {items.map((item, index) => {
@@ -38,8 +40,6 @@ const WelcomeItemDescription = ({items}: WelcomeItemDescriptionProps) => {
     </Text>
   );
 };
-
-export default WelcomeItemDescription;
 
 const styles = StyleSheet.create({
   textContainerWithIcon: {

@@ -4,7 +4,7 @@ import {isAppActive} from '@utils/helpers';
 import React from 'react';
 import {AppState} from 'react-native';
 
-export default function AppStateListener() {
+export function AppStateListener() {
   const handleAppStateChanged = async () => {
     const active = isAppActive();
     if (!active) {

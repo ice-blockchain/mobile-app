@@ -3,7 +3,7 @@
 import {Magic} from '@magic-sdk/react-native';
 import {OAuthExtension, OAuthProvider} from '@magic-ext/react-native-oauth';
 
-const magic = new Magic('API_KEY', {
+export const magic = new Magic('API_KEY', {
   extensions: [new OAuthExtension()],
 });
 
@@ -80,5 +80,3 @@ class MagicLink {
 }
 
 export const magicLink = new MagicLink();
-
-export default magic;

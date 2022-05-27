@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import Api from '@api/index';
+import {Api} from '@api/index';
 import {put} from 'redux-saga/effects';
-import StatisticsActions from '../actions';
+import {StatisticsActions} from '../actions';
 import {Country} from '../reducer';
 
-export default function* getTopCountriesSaga() {
+export function* getTopCountriesSaga() {
   try {
     const response: Country[] = yield Api.statistics.getTopCountries();
     yield put(StatisticsActions.GET_TOP_COUNTRIES.SUCCESS.create(response));

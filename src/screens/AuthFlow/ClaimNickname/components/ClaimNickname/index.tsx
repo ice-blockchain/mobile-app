@@ -3,7 +3,6 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {font, rem, screenHeight} from 'rn-units';
-
 import {ClaimNicknameSvg} from '@svg/ClaimNickname';
 import {translate} from '@utils/i18n';
 import {FONTS} from '@constants/fonts';
@@ -19,7 +18,7 @@ interface ClaimNickNameProps {
   onInputChange: (v: string) => void;
   errorText?: string;
 }
-const ClaimNickName = ({
+export const ClaimNickName = ({
   inputValue,
   onInputChange,
   errorText,
@@ -44,8 +43,6 @@ const ClaimNickName = ({
     </View>
   );
 };
-
-export default ClaimNickName;
 
 const styles = StyleSheet.create({
   container: {

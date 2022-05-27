@@ -82,12 +82,10 @@ const GET_USER_ACCOUNT = createAction('GET_USER_ACCOUNT', {
   }),
 });
 
-const AccountActions = Object.freeze({
+export const AccountActions = Object.freeze({
   CREATE_USER,
   DELETE_USER,
   UPDATE_USER,
   GET_PUBLIC_INFO_BY_USERNAME,
   GET_USER_ACCOUNT,
 });
-
-export default AccountActions;

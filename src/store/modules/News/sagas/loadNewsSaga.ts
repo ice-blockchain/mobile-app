@@ -5,10 +5,10 @@ import {put, select} from 'redux-saga/effects';
 // import Api from 'src/api';
 // import {ApiNews, LIMIT} from 'src/api/news/getNews';
 // import NewsSelectors from '../selectors';
-import NewsActions from '../actions';
+import {NewsActions} from '../actions';
 import {NewsPost} from '@store/types';
 
-export default function* loadNewsSaga(
+export function* loadNewsSaga(
   action: ReturnType<typeof NewsActions.NEWS_LOAD.START.create>,
 ) {
   const {isRefresh} = action.payload;

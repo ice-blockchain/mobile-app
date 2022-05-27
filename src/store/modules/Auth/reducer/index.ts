@@ -3,7 +3,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
-import AuthActions from '../actions';
+import {AuthActions} from '../actions';
 
 export interface State {
   userData: {
@@ -39,7 +39,6 @@ const INITIAL_STATE: State = {
     phoneNumber: null,
     // isMfaEnabled: false,
     // issuer: '',
-    // phoneNumber: null,
     // publicAddress: '',
   },
   usersInfo: {},
@@ -105,4 +104,4 @@ const persistConfig = {
   whitelist: ['usersInfo'],
 };
 
-export default persistReducer(persistConfig, reducer);
+export const authReducer = persistReducer(persistConfig, reducer);

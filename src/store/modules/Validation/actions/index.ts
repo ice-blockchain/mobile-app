@@ -21,9 +21,7 @@ const PHONE_VALIDATION = createAction('PHONE_VALIDATION', {
   }),
 });
 
-const ValidationActions = Object.freeze({
+export const ValidationActions = Object.freeze({
   USERNAME_VALIDATION,
   PHONE_VALIDATION,
 });
-
-export default ValidationActions;

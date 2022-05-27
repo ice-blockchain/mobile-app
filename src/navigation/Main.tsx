@@ -3,12 +3,12 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import WebView from '@screens/WebView';
-import Home from '@screens/Home';
-import Team from '@screens/Team';
-import News from '@screens/News';
-import Profile from '@screens/Profile';
-import Settings from '@screens/Settings';
+import {WebView} from '@screens/WebView';
+import {Home} from '@screens/Home';
+import {Team} from '@screens/Team';
+import {News} from '@screens/News';
+import {Profile} from '@screens/Profile';
+import {Settings} from '@screens/Settings';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -72,7 +72,7 @@ const screenOptions = {
   ...TransitionPresets.ModalSlideFromBottomIOS,
 };
 
-export default function Main() {
+export function Main() {
   return (
     <Stack.Navigator screenOptions={screenOptions}>
       <Stack.Screen name="Main" component={MainNavigator} />

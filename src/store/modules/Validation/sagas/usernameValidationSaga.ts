@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import Api from '@api/index';
+import {Api} from '@api/index';
 import {put} from 'redux-saga/effects';
-import ValidationActions from '../actions';
+import {ValidationActions} from '../actions';
 
 const actionCreator = ValidationActions.USERNAME_VALIDATION.START.create;
 
-export default function* usernameValidationSaga(
+export function* usernameValidationSaga(
   action: ReturnType<typeof actionCreator>,
 ) {
   try {

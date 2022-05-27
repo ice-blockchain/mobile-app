@@ -1,13 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {all, takeLeading} from 'redux-saga/effects';
-
-import loadNewsPostSaga from './loadNewsPostSaga';
-import loadNewsSaga from './loadNewsSaga';
-import NewsActions from '../actions';
+import {loadNewsPostSaga} from './loadNewsPostSaga';
+import {loadNewsSaga} from './loadNewsSaga';
+import {NewsActions} from '../actions';
 import {takeLatestEveryUnique} from '@store/utils/sagas/effects';
 
-export default function* rootSaga() {
+export function* rootNewsSaga() {
   yield all([
     takeLatestEveryUnique(
       NewsActions.NEWS_POST_LOAD(null).START.type,

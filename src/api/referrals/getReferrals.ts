@@ -6,6 +6,6 @@ interface Params {
   userId: string;
 }
 
-export default function getReferrals({userId}: Params) {
+export function getReferrals({userId}: Params) {
   return get(`/users/${userId}/referrals`);
 }

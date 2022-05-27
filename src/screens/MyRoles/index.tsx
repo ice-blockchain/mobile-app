@@ -3,7 +3,7 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const MyRoles = () => {
+export const MyRoles = () => {
   return (
     <View style={styles.container}>
       <Text>MyRoles</Text>
@@ -19,5 +19,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#2c3e50',
   },
 });
-
-export default MyRoles;

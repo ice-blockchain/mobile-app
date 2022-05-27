@@ -3,8 +3,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
-import ReferralsActions from '../actions';
-import AuthActions from '../../Auth/actions';
+import {ReferralsActions} from '../actions';
+import {AuthActions} from '../../Auth/actions';
 
 export type ReferralHistory = {
   date: string;
@@ -47,4 +47,4 @@ const persistConfig = {
   whitelist: ['usersInfo'],
 };
 
-export default persistReducer(persistConfig, reducer);
+export const referralsReducer = persistReducer(persistConfig, reducer);

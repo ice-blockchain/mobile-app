@@ -1,12 +1,11 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {all, takeLatest} from 'redux-saga/effects';
+import {usernameValidationSaga} from './usernameValidationSaga';
+import {phoneValidationSaga} from './phoneValidationSaga';
+import {ValidationActions} from '../actions';
 
-import usernameValidationSaga from './usernameValidationSaga';
-import phoneValidationSaga from './phoneValidationSaga';
-import ValidationActions from '../actions';
-
-export default function* rootSaga() {
+export function* rootValidationSaga() {
   yield all([
     takeLatest(
       ValidationActions.PHONE_VALIDATION.START.type,

@@ -6,6 +6,6 @@ interface Params {
   userId: string;
 }
 
-export default function deleteUser({userId}: Params) {
+export function deleteUser({userId}: Params) {
   return deleteRequest(`/users/${userId}`);
 }

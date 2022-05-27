@@ -3,9 +3,9 @@
 import {Platform} from 'react-native';
 import axios, {AxiosInstance} from 'axios';
 import DeviceInfo from 'react-native-device-info';
-import env from '@constants/env';
-import requestInterceptor from './interceptors/request';
-import responseInterceptor from './interceptors/response';
+import {ENV} from '@constants/env';
+import {requestInterceptor} from '../../client/interceptors/request';
+import {responseInterceptor} from '../../client/interceptors/response';
 import {magicLink} from '@services/magicLink';
 
 export function setupInstance(instance: AxiosInstance) {
@@ -17,8 +17,8 @@ export function setupInstance(instance: AxiosInstance) {
   );
 }
 
-const instance = axios.create({
-  baseURL: `${env.BASE_URL}/api`,
+export const instance = axios.create({
+  baseURL: `${ENV.BASE_URL}/api`,
   headers: {
     'Mobile-App-Version': `${Platform.OS} - ${DeviceInfo.getVersion()}`,
     Authorization: `Bearer ${magicLink.token}`,
@@ -26,5 +26,3 @@ const instance = axios.create({
 });
 
 setupInstance(instance);
-
-export default instance;

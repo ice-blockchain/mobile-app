@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {createSelector} from 'reselect';
-import getNewsPostsByIds from './getNewsPostsByIds';
+import {getNewsPostsByIds} from './getNewsPostsByIds';
 
 interface NewsPostItem {
   type: 'newsPost';
   id: string;
 }
 
-export default createSelector(
+export const getNewsListData = createSelector(
   [getNewsPostsByIds],
   (postsByIds): NewsPostItem[] => {
     const result: NewsPostItem[] = [];

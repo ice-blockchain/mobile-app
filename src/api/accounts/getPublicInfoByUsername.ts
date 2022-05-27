@@ -6,6 +6,6 @@ interface Params {
   username: string;
 }
 
-export default function getPublicInfoByUsername({username}: Params) {
+export function getPublicInfoByUsername({username}: Params) {
   return get(`/user-views/username?${username}`);
 }

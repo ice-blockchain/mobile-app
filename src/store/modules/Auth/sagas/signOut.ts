@@ -2,10 +2,9 @@
 
 import {magicLink} from '@services/magicLink';
 import {put} from 'redux-saga/effects';
+import {AuthActions} from '../actions';
 
-import AuthActions from '../actions';
-
-export default function* usernameValidationSaga() {
+export function* signOutSaga() {
   try {
     yield magicLink.logoutUser();
     yield put(AuthActions.SIGN_OUT.SUCCESS.create());

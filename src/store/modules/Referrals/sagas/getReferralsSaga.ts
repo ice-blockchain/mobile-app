@@ -1,14 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import Api from '@api/index';
+import {Api} from '@api/index';
 import {put} from 'redux-saga/effects';
-import ReferralsActions from '../actions';
+import {ReferralsActions} from '../actions';
 
 const actionCreator = ReferralsActions.GET_REFERRALS.START.create;
 
-export default function* getReferralsSaga(
-  action: ReturnType<typeof actionCreator>,
-) {
+export function* getReferralsSaga(action: ReturnType<typeof actionCreator>) {
   try {
     const {userId} = action.payload;
     yield Api.referrals.getReferrals({userId});

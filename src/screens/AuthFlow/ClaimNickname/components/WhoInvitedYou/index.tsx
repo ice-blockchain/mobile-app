@@ -3,7 +3,6 @@
 import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {font, rem, screenHeight} from 'rn-units';
 import React, {useState} from 'react';
-
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {InfoIconSvg} from '@svg/InfoIcon';
@@ -21,7 +20,10 @@ interface WhoInvitedYouProps {
 const h = (screenHeight * 275) / 811;
 const w = (h * 236) / 275;
 
-const WhoInvitedYou = ({inputValue, onInputChange}: WhoInvitedYouProps) => {
+export const WhoInvitedYou = ({
+  inputValue,
+  onInputChange,
+}: WhoInvitedYouProps) => {
   const [isTipVisible, setTipVisibility] = useState(false);
   const showTip = () => {
     setTipVisibility(true);
@@ -85,8 +87,6 @@ const WhoInvitedYou = ({inputValue, onInputChange}: WhoInvitedYouProps) => {
     </View>
   );
 };
-
-export default WhoInvitedYou;
 
 const styles = StyleSheet.create({
   container: {

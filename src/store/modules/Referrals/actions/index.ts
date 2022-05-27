@@ -22,9 +22,7 @@ const GET_REFERRALS_HISTORY_BY_USER_ID = createAction(
   },
 );
 
-const ReferralsActions = Object.freeze({
+export const ReferralsActions = Object.freeze({
   GET_REFERRALS,
   GET_REFERRALS_HISTORY_BY_USER_ID,
 });
-
-export default ReferralsActions;

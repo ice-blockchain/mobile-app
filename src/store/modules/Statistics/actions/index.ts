@@ -11,8 +11,6 @@ const GET_TOP_COUNTRIES = createAction('GET_TOP_COUNTRIES', {
   }),
 });
 
-const StatisticsActions = Object.freeze({
+export const StatisticsActions = Object.freeze({
   GET_TOP_COUNTRIES,
 });
-
-export default StatisticsActions;

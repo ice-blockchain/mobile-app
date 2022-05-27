@@ -7,6 +7,6 @@ interface Params {
   formData: FormData;
 }
 
-export default function updateUser({userId, formData}: Params) {
+export function updateUser({userId, formData}: Params) {
   return patch(`/users/${userId}`, formData);
 }

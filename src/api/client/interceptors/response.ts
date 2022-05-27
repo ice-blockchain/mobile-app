@@ -53,7 +53,4 @@ function onRejected(instance: AxiosInstance) {
   };
 }
 
-export default {
-  onFulfilled,
-  onRejected,
-};
+export const responseInterceptor = {onFulfilled, onRejected};

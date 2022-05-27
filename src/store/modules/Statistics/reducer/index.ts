@@ -3,8 +3,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
-import StatisticsActions from '../actions';
-import AuthActions from '../../Auth/actions';
+import {StatisticsActions} from '../actions';
+import {AuthActions} from '../../Auth/actions';
 
 export type Country = {
   country: string;
@@ -46,4 +46,4 @@ const persistConfig = {
   whitelist: ['usersInfo'],
 };
 
-export default persistReducer(persistConfig, reducer);
+export const statisticsReducer = persistReducer(persistConfig, reducer);

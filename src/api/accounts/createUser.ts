@@ -10,7 +10,7 @@ interface Params {
   username: string;
 }
 
-export default function createUser(userInfo: Params) {
+export function createUser(userInfo: Params) {
   return post('/users', {
     ...userInfo,
   });

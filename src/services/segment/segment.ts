@@ -4,7 +4,7 @@ import {InteractionManager} from 'react-native';
 import analytics from '@segment/analytics-react-native';
 import Mixpanel from '@segment/analytics-react-native-mixpanel';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import env from 'src/constants/env';
+import {ENV} from 'src/constants/env';
 import {PushAction, ShareResourceType} from '@services/segment/types';
 import {
   getPageNameAndProperties,
@@ -22,7 +22,7 @@ export function setupSegment({user, doAlias}: {user: User; doAlias: boolean}) {
   if (!hasBeenSetUp) {
     hasBeenSetUp = true;
     return analytics
-      .setup(env.SEGMENT_KEY ?? SEGMENT_DEV_KEY, {
+      .setup(ENV.SEGMENT_KEY ?? SEGMENT_DEV_KEY, {
         trackAppLifecycleEvents: true,
         using: [Mixpanel],
       })

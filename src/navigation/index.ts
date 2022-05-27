@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import ref from './ref';
+import {ref} from './ref';
 
 class Navigation {
   _navigation;
@@ -30,4 +30,4 @@ class Navigation {
   }
 }
 
-export default new Navigation(ref);
+export const navigation = new Navigation(ref);

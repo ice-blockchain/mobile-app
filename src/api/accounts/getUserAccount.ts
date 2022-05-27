@@ -6,6 +6,6 @@ interface Params {
   userId: string;
 }
 
-export default function getUserAccount({userId}: Params) {
+export function getUserAccount({userId}: Params) {
   return get(`/users/${userId}`);
 }

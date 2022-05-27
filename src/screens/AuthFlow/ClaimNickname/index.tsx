@@ -13,19 +13,17 @@ import {
 import {SafeAreaView} from 'react-native-safe-area-context';
 import PagerView from 'react-native-pager-view';
 import {isIOS} from 'rn-units';
-
 import {COLORS} from '@constants/colors';
 import {translate} from '@utils/i18n';
-
-import WhoInvitedYou from './components/WhoInvitedYou';
-import ClaimNickname from './components/ClaimNickname';
-import NavigationPanel from '../Welcome/components/NavigationPanel';
+import {WhoInvitedYou} from './components/WhoInvitedYou';
+import {ClaimNickName} from './components/ClaimNickname';
+import {NavigationPanel} from '../Welcome/components/NavigationPanel';
 import {useDispatch} from 'react-redux';
-import AuthActions from '@store/modules/Auth/actions';
+import {AuthActions} from '@store/modules/Auth/actions';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {SignUpStackParamList} from '@navigation/Auth';
-// import ValidationActions from '@store/modules/Validation/actions';
-// import AccountActions from '@store/modules/Accounts/actions';
+// import {ValidationActions} from '@store/modules/Validation/actions';
+// import {AccountActions} from '@store/modules/Accounts/actions';
 
 const nicknameRegularExp = /^[A-Za-z0-9]+([A-Za-z0-9]*|[._-]?[A-Za-z0-9]+)*$/;
 
@@ -33,7 +31,7 @@ type Props = {
   navigation: StackNavigationProp<SignUpStackParamList, 'SignIn'>;
 };
 
-const SignUp = ({navigation}: Props) => {
+export const ClaimNickname = ({navigation}: Props) => {
   const pagerViewRef = useRef<PagerView>(null);
   const [myNickname, setMyNickname] = useState('');
   const [invitedNickname, setInvitedNickname] = useState('');
@@ -89,7 +87,7 @@ const SignUp = ({navigation}: Props) => {
             scrollEnabled={false}>
             <View key={'claimNickname'} style={styles.container}>
               <ScrollView>
-                <ClaimNickname
+                <ClaimNickName
                   inputValue={myNickname}
                   onInputChange={onMyNicknameChange}
                   errorText={error}
@@ -127,5 +125,3 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
   },
 });
-
-export default SignUp;
