@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import LogoSvg from '@svg/logo';
+import {LogoSvg} from '@svg/Logo';
 import React, {useEffect, useRef} from 'react';
 import {View, StyleSheet, Animated, Easing} from 'react-native';
 

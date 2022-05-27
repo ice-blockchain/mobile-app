@@ -6,7 +6,7 @@ import {rem, isAndroid} from 'rn-units';
 import Dots from './components/dots';
 import NotNowButton from './components/NotNowButton';
 import Button from './components/Button';
-import NextArrowSvg from '@svg/nextArrow';
+import {NextArrowSvg} from '@svg/NextArrow';
 import {translate} from '@utils/i18n';
 
 interface NavigationPanelProps {

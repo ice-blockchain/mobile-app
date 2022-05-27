@@ -3,7 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {ICountryCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
-import ArrowDownIcon from '@svg/arrowDownIcon';
+import {ArrowDownIcon} from '@svg/ArrowDownIcon';
 import * as React from 'react';
 import {
   Text,

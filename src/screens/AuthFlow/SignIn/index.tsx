@@ -13,15 +13,15 @@ import {
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {rem, font, isIOS} from 'rn-units';
 
-import LogoSvg from '@svg/logo';
-import EmailSvg from '@svg/emailIcon';
-import PhoneSvg from '@svg/phoneIcon';
+import {LogoSvg} from '@svg/Logo';
+import {EmailIconSvg} from '@svg/EmailIcon';
+import {PhoneIconSvg} from '@svg/PhoneIcon';
 import CommonInput from '@components/CommonInput';
 import PrimaryButton from '@components/PrimaryButton';
 import BorderedButton from '@components/BorderedButton';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
-import MagicIconSvg from '@svg/magicIcon';
+import {MagicIconSvg} from '@svg/MagicIcon';
 import {translate} from '@utils/i18n';
 import SocialSignIn, {ESocialType} from './components/socialSignIn';
 import {magicLink} from '@services/magicLink';
@@ -166,7 +166,7 @@ const SignIn = ({navigation}: Props) => {
           <View style={styles.inputContainer}>
             {inputType === 'email' ? (
               <CommonInput
-                icon={<EmailSvg />}
+                icon={<EmailIconSvg />}
                 onChangeText={onChangeEmail}
                 value={email}
                 placeholder={translate('signIn.emailAddress')}
@@ -193,7 +193,7 @@ const SignIn = ({navigation}: Props) => {
             <Text style={styles.text}>or</Text>
 
             <BorderedButton
-              icon={inputType === 'email' ? <PhoneSvg /> : <EmailSvg />}
+              icon={inputType === 'email' ? <PhoneIconSvg /> : <EmailIconSvg />}
               onPress={onPhonePress}
               text={inputType === 'email' ? translate('signIn.phone') : 'Email'}
             />

@@ -4,12 +4,12 @@ import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {font, rem, screenHeight} from 'rn-units';
 
-import ClaimNicknameSvg from '@svg/claimNickname';
+import {ClaimNicknameSvg} from '@svg/ClaimNickname';
 import {translate} from '@utils/i18n';
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
 import CommonInput from '@components/CommonInput';
-import ManIconSvg from '@svg/manIcon';
+import {ManIconSvg} from '@svg/ManIcon';
 
 const h = (screenHeight * 291) / 811;
 const w = (h * 258) / 291;

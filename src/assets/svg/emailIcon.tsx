@@ -3,7 +3,7 @@
 import * as React from 'react';
 import {Svg, Path} from 'react-native-svg';
 
-const EmailIconSvg = () => {
+export const EmailIconSvg = () => {
   return (
     <Svg width="16" height="11" viewBox="0 0 16 11" fill="none">
       <Path
@@ -15,5 +15,3 @@ const EmailIconSvg = () => {
     </Svg>
   );
 };
-
-export default EmailIconSvg;

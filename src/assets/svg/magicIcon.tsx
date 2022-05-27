@@ -13,8 +13,6 @@ const xml = `<svg width="67" height="30" viewBox="0 0 67 30" fill="none" xmlns="
 </defs>
 </svg>`;
 
-const MagicIconSvg = () => {
+export const MagicIconSvg = () => {
   return <SvgXml width="67" height="30" xml={xml} />;
 };
-
-export default MagicIconSvg;

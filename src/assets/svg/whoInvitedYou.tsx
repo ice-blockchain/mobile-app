@@ -3,7 +3,7 @@
 import * as React from 'react';
 import {Svg, Path} from 'react-native-svg';
 
-const WhoInvitedYouSvg = ({width = 236, height = 275}) => {
+export const WhoInvitedYouSvg = ({width = 236, height = 275}) => {
   return (
     <Svg width={width} height={height} viewBox="0 0 236 275" fill="none">
       <Path
@@ -518,5 +518,3 @@ const WhoInvitedYouSvg = ({width = 236, height = 275}) => {
     </Svg>
   );
 };
-
-export default WhoInvitedYouSvg;

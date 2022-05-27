@@ -3,7 +3,7 @@
 import * as React from 'react';
 import {Svg, Path} from 'react-native-svg';
 
-const CloseIconSvg = () => {
+export const CloseIconSvg = () => {
   return (
     <Svg width="9" height="10" viewBox="0 0 9 10" fill="none">
       <Path
@@ -21,5 +21,3 @@ const CloseIconSvg = () => {
     </Svg>
   );
 };
-
-export default CloseIconSvg;

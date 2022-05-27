@@ -3,7 +3,7 @@
 import * as React from 'react';
 import {Svg, Path} from 'react-native-svg';
 
-const TipTriangleIconSvg = () => {
+export const TipTriangleIconSvg = () => {
   return (
     <Svg width="15" height="10" viewBox="0 0 15 10" fill="none">
       <Path
@@ -13,5 +13,3 @@ const TipTriangleIconSvg = () => {
     </Svg>
   );
 };
-
-export default TipTriangleIconSvg;

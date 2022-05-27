@@ -3,10 +3,10 @@
 import * as React from 'react';
 import {View, StyleSheet} from 'react-native';
 
-import AppleSvg from '@svg/appleIcon';
-import GoogleIconSvg from '@svg/googleIcon';
-import FacebookIconSvg from '@svg/facebookIcon';
-import TwitterIconSvg from '@svg/twitterIcon';
+import {AppleSvg} from '@svg/AppleIcon';
+import {GoogleIconSvg} from '@svg/GoogleIcon';
+import {FacebookIconSvg} from '@svg/FacebookIcon';
+import {TwitterIconSvg} from '@svg/TwitterIcon';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {rem, isIOS} from 'rn-units';
 

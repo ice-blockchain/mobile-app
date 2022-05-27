@@ -3,7 +3,7 @@
 import * as React from 'react';
 import {Svg, Path, Rect, G, Defs, ClipPath} from 'react-native-svg';
 
-const ClaimNicknameSvg = ({width = 258, height = 292}) => {
+export const ClaimNicknameSvg = ({width = 258, height = 292}) => {
   return (
     <Svg width={width} height={height} viewBox="0 0 258 292" fill="none">
       <G clip-path="url(#clip0_687_10607)">
@@ -1119,5 +1119,3 @@ const ClaimNicknameSvg = ({width = 258, height = 292}) => {
     </Svg>
   );
 };
-
-export default ClaimNicknameSvg;

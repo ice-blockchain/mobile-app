@@ -3,7 +3,7 @@
 import * as React from 'react';
 import {Svg, Path} from 'react-native-svg';
 
-const ArrowDownIcon = () => {
+export const ArrowDownIcon = () => {
   return (
     <Svg width="8" height="6" viewBox="0 0 8 6" fill="none">
       <Path
@@ -21,5 +21,3 @@ const ArrowDownIcon = () => {
     </Svg>
   );
 };
-
-export default ArrowDownIcon;

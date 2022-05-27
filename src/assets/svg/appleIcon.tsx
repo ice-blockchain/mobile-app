@@ -13,8 +13,6 @@ const xml = `<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="
 </defs>
 </svg>`;
 
-const AppleSvg = () => {
+export const AppleSvg = () => {
   return <SvgXml width="26" height="26" xml={xml} />;
 };
-
-export default AppleSvg;

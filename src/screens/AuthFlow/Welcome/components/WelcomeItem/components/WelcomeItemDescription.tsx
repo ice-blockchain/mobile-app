@@ -6,7 +6,7 @@ import {font, rem, isAndroid} from 'rn-units';
 
 import {COLORS} from '@constants/colors';
 import {FONTS, WEIGHTS} from '@constants/fonts';
-import LogoIconSvg from '@svg/logoIcon';
+import {LogoIconSvg} from '@svg/LogoIcon';
 import {translate} from '@utils/i18n';
 
 interface WelcomeItemDescriptionProps {

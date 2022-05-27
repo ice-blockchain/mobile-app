@@ -13,8 +13,6 @@ const xml = `<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="
 </defs>
 </svg>`;
 
-const FacebookIconSvg = () => {
+export const FacebookIconSvg = () => {
   return <SvgXml width="26" height="26" xml={xml} />;
 };
-
-export default FacebookIconSvg;

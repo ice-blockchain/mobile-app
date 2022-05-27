@@ -3,7 +3,7 @@
 import * as React from 'react';
 import {Svg, Path, Circle} from 'react-native-svg';
 
-const InfoIconSvg = () => {
+export const InfoIconSvg = () => {
   return (
     <Svg width="11" height="11" viewBox="0 0 11 11" fill="none">
       <Circle
@@ -21,5 +21,3 @@ const InfoIconSvg = () => {
     </Svg>
   );
 };
-
-export default InfoIconSvg;

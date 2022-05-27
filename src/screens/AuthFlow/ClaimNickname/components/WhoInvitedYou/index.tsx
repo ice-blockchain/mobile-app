@@ -6,10 +6,10 @@ import React, {useState} from 'react';
 
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
-import InfoIconSvg from '@svg/infoIcon';
-import TicketIconSvg from '@svg/ticket';
-import TipTriangleIconSvg from '@svg/tipTriangle';
-import WhoInvitedYouSvg from '@svg/whoInvitedYou';
+import {InfoIconSvg} from '@svg/InfoIcon';
+import {TicketIconSvg} from '@svg/Ticket';
+import {TipTriangleIconSvg} from '@svg/TipTriangle';
+import {WhoInvitedYouSvg} from '@svg/WhoInvitedYou';
 import {translate} from '@utils/i18n';
 import CommonInput from '@components/CommonInput';
 

@@ -3,8 +3,8 @@
 import {COLORS} from '@constants/colors';
 import {countriesCode, ICountryCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
-import CloseIconSvg from '@svg/closeIcon';
-import SearchIconSvg from '@svg/searchIcon';
+import {CloseIconSvg} from '@svg/CloseIcon';
+import {SearchIconSvg} from '@svg/SearchIcon';
 import {debounce} from 'lodash';
 import React, {useEffect, useState} from 'react';
 import {

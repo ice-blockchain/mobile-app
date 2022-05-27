@@ -3,7 +3,7 @@
 import * as React from 'react';
 import {Svg, Path, Circle, Rect} from 'react-native-svg';
 
-const PhoneIconSvg = () => {
+export const PhoneIconSvg = () => {
   return (
     <Svg width="10" height="13" viewBox="0 0 10 13" fill="none">
       <Rect x="0.5" y="0.5" width="9" height="12" rx="2.5" stroke="#B6B4BA" />
@@ -12,5 +12,3 @@ const PhoneIconSvg = () => {
     </Svg>
   );
 };
-
-export default PhoneIconSvg;
