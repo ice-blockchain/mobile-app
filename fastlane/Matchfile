@@ -1,0 +1,2 @@
+git_url("https://github.com/ice-blockchain/mobile-app-fastlane.git")
+username("admin@ice.io")
