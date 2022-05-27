@@ -45,6 +45,8 @@ buck-out/
 android/gradle.properties
 android/sentry.properties
 gradle.properties
+google-services.json
+GoogleService-Info.plist
 
 # fastlane
 #
