@@ -5,9 +5,9 @@ import {handleServiceError} from './ApiServiceErrors';
 import {Platform} from 'react-native';
 import axios, {AxiosInstance} from 'axios';
 import DeviceInfo from 'react-native-device-info';
-import env from 'src/constants/env';
 import requestInterceptor from './interceptors/request';
 import responseInterceptor from './interceptors/response';
+import env from '@constants/env';
 
 function setupApiClient(clientInstance: AxiosInstance) {
   clientInstance.interceptors.request.use(requestInterceptor.onFulfilled);
