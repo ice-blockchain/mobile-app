@@ -8,7 +8,6 @@ module.exports = api => {
       },
     },
     plugins: [
-      ['module:react-native-dotenv'],
       '@babel/plugin-transform-runtime',
       [
         'module-resolver',
