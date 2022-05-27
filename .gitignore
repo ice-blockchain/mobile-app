@@ -76,5 +76,6 @@ android/app/src/main/assets/app.manifest
 *.jks
 
 coverage/
+configuration/
 
 .history
