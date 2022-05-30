@@ -12,7 +12,6 @@ import {
 
 export function takeLatestEveryUnique<
   A extends Action,
-  // eslint-disable-next-line @typescript-eslint/no-shadow
   Fn extends (...args: any[]) => any,
 >(
   patternOrChannel: ActionPattern,
