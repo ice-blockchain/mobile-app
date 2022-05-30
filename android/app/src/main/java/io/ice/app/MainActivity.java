@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 package io.ice.app;
 
 import com.facebook.react.ReactActivity;

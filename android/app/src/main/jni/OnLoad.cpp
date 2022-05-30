@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 #include <fbjni/fbjni.h>
 #include "MainApplicationTurboModuleManagerDelegate.h"
 #include "MainComponentsRegistry.h"

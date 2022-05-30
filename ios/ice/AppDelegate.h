@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 #import <React/RCTBridgeDelegate.h>
 #import <UIKit/UIKit.h>
 #import <UMCore/UMAppDelegateWrapper.h>

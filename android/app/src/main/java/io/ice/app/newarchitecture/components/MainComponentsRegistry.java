@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 package io.ice.app.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
