@@ -94,9 +94,9 @@ PODS:
     - FlipperKit/FlipperKitNetworkPlugin
   - fmt (6.2.1)
   - glog (0.3.5)
-  - GoogleDataTransport (9.1.2):
-    - GoogleUtilities/Environment (~> 7.2)
-    - nanopb (~> 2.30908.0)
+  - GoogleDataTransport (9.1.4):
+    - GoogleUtilities/Environment (~> 7.7)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
   - GoogleUtilities/Environment (7.7.0):
     - PromisesObjC (< 3.0, >= 1.2)
@@ -717,7 +717,7 @@ SPEC CHECKSUMS:
   FlipperKit: de934d365bfc0af358d3b7b7d453c24ffddd7cac
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 476ee3e89abb49e07f822b48323c51c57124b572
-  GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
+  GoogleDataTransport: 5fffe35792f8b96ec8d6775f5eccd83c998d5a3b
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
@@ -776,10 +776,6 @@ SPEC CHECKSUMS:
   Yoga: 6671cf077f614314c22fd09ddf87d7abeee64e96
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-<<<<<<< HEAD
-PODFILE CHECKSUM: 54531bf7df65bc41bd491ccfb373dc12a13ee7ff
-=======
-PODFILE CHECKSUM: 7229837abf568b7df67f6649ea0744389a2d756c
->>>>>>> deb4dce (ci: fix get bundle id on ci)
+PODFILE CHECKSUM: 2178e6b6b488f0906203396074f252f717638e59
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.11.2
