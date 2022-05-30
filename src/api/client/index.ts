@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {RequestConfig} from '@api/apiClientTypes';
+import {RequestConfig} from '@api/client/apiClientTypes';
 import {ENV} from '@constants/env';
 import axios, {AxiosInstance} from 'axios';
 import {Platform} from 'react-native';
