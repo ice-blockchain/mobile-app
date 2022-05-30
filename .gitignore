@@ -47,6 +47,8 @@ android/sentry.properties
 gradle.properties
 google-services.json
 GoogleService-Info.plist
+Info.plist
+sentry.properties
 
 # fastlane
 #
