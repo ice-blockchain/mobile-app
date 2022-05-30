@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {magicLink} from '@services/magicLink';
+import {AuthActions} from '@store/modules/Auth/actions';
 import {put} from 'redux-saga/effects';
-
-import {AuthActions} from '../actions';
 
 export function* signOutSaga() {
   try {

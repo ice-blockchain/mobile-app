@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {AccountActions} from '@store/modules/Accounts/actions';
+import {AuthActions} from '@store/modules/Auth/actions';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
-
-import {AuthActions} from '../../Auth/actions';
-import {AccountActions} from '../actions';
 
 export interface State {
   email: string;

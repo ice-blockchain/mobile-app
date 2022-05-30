@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {AuthActions} from '@store/modules/Auth/actions';
+import {ValidationActions} from '@store/modules/Validation/actions';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
-
-import {AuthActions} from '../../Auth/actions';
-import {ValidationActions} from '../actions';
 
 export interface State {
   isUsernameValid: boolean | null;

@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Api} from '@api/index';
+import {AccountActions} from '@store/modules/Accounts/actions';
 import {put} from 'redux-saga/effects';
-
-import {AccountActions} from '../actions';
 
 const actionCreator = AccountActions.UPDATE_USER.START.create;
 

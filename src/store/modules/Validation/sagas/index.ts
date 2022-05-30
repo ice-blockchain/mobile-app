@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {ValidationActions} from '@store/modules/Validation/actions';
 import {all, takeLatest} from 'redux-saga/effects';
 
-import {ValidationActions} from '../actions';
 import {phoneValidationSaga} from './phoneValidationSaga';
 import {usernameValidationSaga} from './usernameValidationSaga';
 

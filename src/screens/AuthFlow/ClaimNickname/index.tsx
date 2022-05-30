@@ -3,6 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {SignUpStackParamList} from '@navigation/Auth';
 import {StackNavigationProp} from '@react-navigation/stack';
+import {NavigationPanel} from '@screens/AuthFlow/Welcome/components/NavigationPanel';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {translate} from '@utils/i18n';
 import React, {useRef, useState} from 'react';
@@ -20,7 +21,6 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {useDispatch} from 'react-redux';
 import {isIOS} from 'rn-units';
 
-import {NavigationPanel} from '../Welcome/components/NavigationPanel';
 import {ClaimNickName} from './components/ClaimNickname';
 import {WhoInvitedYou} from './components/WhoInvitedYou';
 
