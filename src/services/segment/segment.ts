@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {InteractionManager} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import analytics from '@segment/analytics-react-native';
 import Mixpanel from '@segment/analytics-react-native-mixpanel';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import {ENV} from 'src/constants/env';
 import {PushAction, ShareResourceType} from '@services/segment/types';
 import {
   getPageNameAndProperties,
   getShareEventProperties,
 } from '@services/segment/utils';
 import {Content, StoreState, User} from '@store/types';
+import {InteractionManager} from 'react-native';
+import {ENV} from 'src/constants/env';
 
 const SEGMENT_DEV_KEY = 'HqCDEAupMC9XrnZuKlIgtoMEiUESoexp';
 

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import * as React from 'react';
-import {Svg, Rect} from 'react-native-svg';
+import {Rect, Svg} from 'react-native-svg';
 
 export const NextArrowSvg = () => {
   return (

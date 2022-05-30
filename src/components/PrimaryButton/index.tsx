@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import React from 'react';
-import {TouchableOpacity, StyleSheet, Text} from 'react-native';
-import {rem, font} from 'rn-units';
-import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
+import {FONTS} from '@constants/fonts';
+import React from 'react';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {font, rem} from 'rn-units';
 
 interface PrimaryButtonProps {
   onPress: () => void;

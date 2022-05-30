@@ -1,17 +1,18 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import React, {useRef, useState} from 'react';
-import {StyleSheet, View, StatusBar} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
-import {rem} from 'rn-units';
-import {WelcomeItem} from './components/WelcomeItem';
-import {NavigationPanel} from './components/NavigationPanel';
-import {Images} from '@images/index';
 import {COLORS} from '@constants/colors';
-import {useDispatch} from 'react-redux';
+import {Images} from '@images/index';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {translate} from '@utils/i18n';
+import React, {useRef, useState} from 'react';
+import {StatusBar, StyleSheet, View} from 'react-native';
+import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {useDispatch} from 'react-redux';
+import {rem} from 'rn-units';
+
+import {NavigationPanel} from './components/NavigationPanel';
+import {WelcomeItem} from './components/WelcomeItem';
 
 export const Welcome = () => {
   const welcomeScreenData = [

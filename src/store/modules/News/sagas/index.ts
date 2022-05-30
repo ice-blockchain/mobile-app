@@ -1,10 +1,11 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {NewsActions} from '@store/modules/News/actions';
+import {takeLatestEveryUnique} from '@store/utils/sagas/effects';
 import {all, takeLeading} from 'redux-saga/effects';
+
 import {loadNewsPostSaga} from './loadNewsPostSaga';
 import {loadNewsSaga} from './loadNewsSaga';
-import {NewsActions} from '../actions';
-import {takeLatestEveryUnique} from '@store/utils/sagas/effects';
 
 export function* rootNewsSaga() {
   yield all([

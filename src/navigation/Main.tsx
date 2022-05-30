@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import {WebView} from '@screens/WebView';
 import {Home} from '@screens/Home';
-import {Team} from '@screens/Team';
 import {News} from '@screens/News';
 import {Profile} from '@screens/Profile';
 import {Settings} from '@screens/Settings';
+import {Team} from '@screens/Team';
+import {WebView} from '@screens/WebView';
+import React from 'react';
 
 const Tabs = createBottomTabNavigator();
 const Stack = createStackNavigator();

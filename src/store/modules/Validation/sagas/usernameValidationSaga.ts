@@ -2,6 +2,7 @@
 
 import {Api} from '@api/index';
 import {put} from 'redux-saga/effects';
+
 import {ValidationActions} from '../actions';
 
 const actionCreator = ValidationActions.USERNAME_VALIDATION.START.create;

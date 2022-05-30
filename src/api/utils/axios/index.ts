@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {Platform} from 'react-native';
-import axios, {AxiosInstance} from 'axios';
-import DeviceInfo from 'react-native-device-info';
 import {ENV} from '@constants/env';
+import {magicLink} from '@services/magicLink';
+import axios, {AxiosInstance} from 'axios';
+import {Platform} from 'react-native';
+import DeviceInfo from 'react-native-device-info';
+
 import {requestInterceptor} from '../../client/interceptors/request';
 import {responseInterceptor} from '../../client/interceptors/response';
-import {magicLink} from '@services/magicLink';
 
 export function setupInstance(instance: AxiosInstance) {
   instance.interceptors.request.use(requestInterceptor.onFulfilled);

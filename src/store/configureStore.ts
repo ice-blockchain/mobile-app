@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {createStore, applyMiddleware, compose} from 'redux';
-import createSagaMiddleware from 'redux-saga';
+import {applyMiddleware, compose, createStore} from 'redux';
 import {persistStore} from 'redux-persist';
+import createSagaMiddleware from 'redux-saga';
+
 import {persistedRootReducer} from './rootReducer';
 import {rootSaga} from './rootSaga';
 

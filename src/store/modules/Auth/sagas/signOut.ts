@@ -2,6 +2,7 @@
 
 import {magicLink} from '@services/magicLink';
 import {put} from 'redux-saga/effects';
+
 import {AuthActions} from '../actions';
 
 export function* signOutSaga() {

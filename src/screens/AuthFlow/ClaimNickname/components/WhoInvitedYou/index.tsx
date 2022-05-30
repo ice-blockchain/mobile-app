@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {font, rem, screenHeight} from 'rn-units';
-import React, {useState} from 'react';
+import {CommonInput} from '@components/CommonInput';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {InfoIconSvg} from '@svg/InfoIcon';
@@ -10,7 +8,9 @@ import {TicketIconSvg} from '@svg/Ticket';
 import {TipTriangleIconSvg} from '@svg/TipTriangle';
 import {WhoInvitedYouSvg} from '@svg/WhoInvitedYou';
 import {translate} from '@utils/i18n';
-import {CommonInput} from '@components/CommonInput';
+import React, {useState} from 'react';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {font, rem, screenHeight} from 'rn-units';
 
 interface WhoInvitedYouProps {
   inputValue: string;

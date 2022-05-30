@@ -1,19 +1,19 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {COLORS} from '@constants/colors';
+import {FONTS} from '@constants/fonts';
 import React, {ReactNode} from 'react';
 import {
-  TextInput,
-  StyleSheet,
-  View,
-  StyleProp,
-  Text,
-  TextInputProps,
   KeyboardTypeOptions,
+  StyleProp,
+  StyleSheet,
+  Text,
+  TextInput,
+  TextInputProps,
+  View,
 } from 'react-native';
-import {rem, font} from 'rn-units';
-import {FONTS} from '@constants/fonts';
-import {COLORS} from '@constants/colors';
 import {ViewStyle} from 'react-native';
+import {font, rem} from 'rn-units';
 
 interface CommonInputProps extends TextInputProps {
   onChangeText: (description: string) => void;

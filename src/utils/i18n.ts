@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import RNLocalize from 'react-native-localize';
+// eslint-disable-next-line no-restricted-imports
 import i18n from 'i18n-js';
+import RNLocalize from 'react-native-localize';
 
 const locales = {
   en: require('@translations/ice-en-GB.json'),

@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {all, call, spawn} from 'redux-saga/effects';
-import {rootNewsSaga} from './modules/News/sagas';
+
 import {rootAccountsSaga} from './modules/Accounts/sagas';
-import {rootValidationSaga} from './modules/Validation/sagas';
+import {rootAuthSaga} from './modules/Auth/sagas';
+import {rootNewsSaga} from './modules/News/sagas';
 import {rootReferralsSaga} from './modules/Referrals/sagas';
 import {rootStatisticsSaga} from './modules/Statistics/sagas';
-import {rootAuthSaga} from './modules/Auth/sagas';
+import {rootValidationSaga} from './modules/Validation/sagas';
 
 export function* rootSaga() {
   const sagas = [

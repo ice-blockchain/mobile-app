@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {all, takeLatest} from 'redux-saga/effects';
-import {deleteUserSaga} from './deleteUserSaga';
-import {createUserSaga} from './createUserSaga';
-import {updateUserSaga} from './updateUserSaga';
-import {getUserAccountSaga} from './getUserAccountSaga';
-import {getPublicInfoByUsernameSaga} from './getPublicInfoByUsernameSaga';
+
 import {AccountActions} from '../actions';
+import {createUserSaga} from './createUserSaga';
+import {deleteUserSaga} from './deleteUserSaga';
+import {getPublicInfoByUsernameSaga} from './getPublicInfoByUsernameSaga';
+import {getUserAccountSaga} from './getUserAccountSaga';
+import {updateUserSaga} from './updateUserSaga';
 
 export function* rootAccountsSaga() {
   yield all([
