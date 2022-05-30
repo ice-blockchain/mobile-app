@@ -35,7 +35,7 @@ module.exports = {
         'no-restricted-modules': [
           'error',
           {
-            patterns: ['assets/images/*', 'assets/svg/*'],
+            patterns: ['assets/images/*'],
           },
         ],
       },
