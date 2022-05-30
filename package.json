@@ -14,7 +14,8 @@
     "e2e-build-ios-debug": "detox build --configuration ios",
     "e2e-test-ios-debug": "detox test --configuration ios",
     "e2e-build-android-debug": "detox build --configuration android",
-    "e2e-test-android-debug": "detox test --configuration android"
+    "e2e-test-android-debug": "detox test --configuration android",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@magic-ext/react-native-oauth": "^2.2.1",
