@@ -4,7 +4,7 @@ on:
     types: [opened, reopened, synchronize]
     branches:
       - master
-      - 'releases/v*'
+      - 'release/v*'
 jobs:
   tests-and-checks:
     runs-on: ubuntu-latest
