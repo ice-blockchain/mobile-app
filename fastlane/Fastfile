@@ -9,7 +9,7 @@ APPLE_ISSUER_ID = ENV["APPLE_ISSUER_ID"]
 APPLE_KEY_ID = ENV["APPLE_KEY_ID"]
 APPLE_KEY_CONTENT = ENV["APPLE_KEY_CONTENT"]
 GIT_AUTHORIZATION = ENV["GIT_AUTHORIZATION"]
-BASEBASIC_AUTH_AUTH = ENV["BASIC_AUTH"]
+BASIC_AUTH = ENV["BASIC_AUTH"]
 
 def delete_temp_keychain(name)
     delete_keychain(
@@ -75,7 +75,6 @@ platform :ios do
             keychain_password: keychain_password,
             api_key: api_key,
             git_basic_authorization: "#{BASIC_AUTH}",
-            username: "OlehPanforov"
         )
 
         gym(
@@ -85,7 +84,7 @@ platform :ios do
             export_method: "app-store",
             export_options: {
               provisioningProfiles: { 
-                DEVELOPER_APP_ID_STAGING => PROVISIONING_PROFILE_SPECIFIER
+                DEVELOPER_APP_IDENTIFIER_STAGING => PROVISIONING_PROFILE_SPECIFIER
               }
             }
           )
