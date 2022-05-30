@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import {Action} from 'redux';
 import {
@@ -11,6 +12,7 @@ import {
 
 export function takeLatestEveryUnique<
   A extends Action,
+  // eslint-disable-next-line @typescript-eslint/no-shadow
   Fn extends (...args: any[]) => any,
 >(
   patternOrChannel: ActionPattern,
@@ -21,6 +23,7 @@ export function takeLatestEveryUnique<
     const tasksSet = new Map();
 
     while (true) {
+      // @ts-ignore
       const action = yield take(patternOrChannel);
       const {id} = action;
 

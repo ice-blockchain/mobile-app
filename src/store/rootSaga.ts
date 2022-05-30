@@ -29,8 +29,10 @@ export function* rootSaga() {
             console.log('One of rootSaga will be restarted. Error:', error);
 
             const logError = new Error();
-            logError.message = `Crash of Saga #${index} // name: ${saga.name} // Error: ${error.message}`;
-            logError.stack = error.stack;
+            logError.message = `Crash of Saga #${index} // name: ${
+              saga.name
+            } // Error: ${(error as Error).message}`;
+            logError.stack = (error as Error).stack;
 
             console.log(`Log this error to Crashlytics ${logError}`);
           }

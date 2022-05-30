@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Api} from '@api/index';
+import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {put} from 'redux-saga/effects';
-
-import {ReferralsActions} from '../actions';
 
 const actionCreator = ReferralsActions.GET_REFERRALS.START.create;
 

@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {all, takeLatest} from 'redux-saga/effects';
 
-import {ReferralsActions} from '../actions';
 import {getReferralsSaga} from './getReferralsSaga';
 
 export function* rootReferralsSaga() {

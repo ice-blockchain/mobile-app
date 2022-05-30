@@ -1,14 +1,13 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {AuthActions} from '@store/modules/Auth/actions';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
 
-import {AuthActions} from '../actions';
-
 export interface State {
   userData: {
-    email: string | null;
+    email: string | null | undefined;
     phoneNumber: string | null;
     // isMfaEnabled: boolean;
     // issuer: string;

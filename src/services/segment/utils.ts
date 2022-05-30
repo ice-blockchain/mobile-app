@@ -29,7 +29,7 @@ export async function getPageNameAndProperties({
   routName: string;
   parentRouteName?: string;
   params: Record<string, unknown>;
-}): Promise<{pageName: string; props: JsonMap}> {
+}): Promise<{pageName: string; props: {[key: string]: unknown}}> {
   const pageName = getPageName(routName, parentRouteName);
   try {
     switch (pageName) {

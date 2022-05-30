@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {AccountActions} from '@store/modules/Accounts/actions';
 import {all, takeLatest} from 'redux-saga/effects';
 
-import {AccountActions} from '../actions';
 import {createUserSaga} from './createUserSaga';
 import {deleteUserSaga} from './deleteUserSaga';
 import {getPublicInfoByUsernameSaga} from './getPublicInfoByUsernameSaga';

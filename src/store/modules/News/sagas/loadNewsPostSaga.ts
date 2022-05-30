@@ -12,7 +12,7 @@ export function* loadNewsPostSaga(action: ReturnType<typeof actionCreator>) {
   // const {postId} = action.payload;
   try {
     // const response: NewsPost = yield Api.news.getNewsPost(postId);
-    const response = {};
+    const response = {id: '1', title: '', description: '', placeholderUrl: ''};
     yield put(
       NewsActions.NEWS_POST_LOAD(action.id).SUCCESS.create({
         newsPost: response,
@@ -20,7 +20,9 @@ export function* loadNewsPostSaga(action: ReturnType<typeof actionCreator>) {
     );
   } catch (error) {
     yield put(
-      NewsActions.NEWS_POST_LOAD(action.id).FAILED.create(error.message),
+      NewsActions.NEWS_POST_LOAD(action.id).FAILED.create(
+        error instanceof Error ? error.message : '', // TODO::add error parse util
+      ),
     );
   }
 }

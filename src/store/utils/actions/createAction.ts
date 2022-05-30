@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import lodashReduce from 'lodash/reduce';
 
 export const ACTION_DIVIDER = ' -> ';

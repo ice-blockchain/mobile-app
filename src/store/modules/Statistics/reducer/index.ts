@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {AuthActions} from '@store/modules/Auth/actions';
+import {StatisticsActions} from '@store/modules/Statistics/actions';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
-
-import {AuthActions} from '../../Auth/actions';
-import {StatisticsActions} from '../actions';
 
 export type Country = {
   country: string;

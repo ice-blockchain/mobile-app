@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {AuthActions} from '@store/modules/Auth/actions';
+import {ReferralsActions} from '@store/modules/Referrals/actions';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
-
-import {AuthActions} from '../../Auth/actions';
-import {ReferralsActions} from '../actions';
 
 export type ReferralHistory = {
   date: string;

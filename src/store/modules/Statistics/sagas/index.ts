@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {StatisticsActions} from '@store/modules/Statistics/actions';
 import {all, takeLatest} from 'redux-saga/effects';
 
-import {StatisticsActions} from '../actions';
 import {getTopCountriesSaga} from './getTopCountriesSaga';
 
 export function* rootStatisticsSaga() {

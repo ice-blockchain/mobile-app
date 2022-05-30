@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {ReferralHistory} from '@store/modules/Referrals/reducer';
 import {createAction} from '@store/utils/actions/createAction';
-
-import {ReferralHistory} from '../reducer';
 
 const GET_REFERRALS = createAction('GET_TOP_COUNTRIES', {
   START: (userId: string) => ({userId}),
