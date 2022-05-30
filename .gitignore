@@ -63,12 +63,14 @@ fastlane/screenshots
 
 # Bundle artifact
 *.jsbundle
+artifacts/
 
 # Ruby / CocoaPods
 /ios/Pods/
 /vendor/bundle/
 
 # Environments
+.env
 
 # Build related files
 android/app/src/main/assets/app.bundle
@@ -80,8 +82,10 @@ android/app/src/main/assets/app.manifest
 coverage/
 configuration/
 .env
+*.env
 
 .history
 
 #
 *.dSYM.zip
+!/src/translations/translations.json

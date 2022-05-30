@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {NextArrowSvg} from '@svg/NextArrow';
-import {translate} from '@utils/i18n';
+import {translate} from '@translations/i18n';
 import * as React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {isAndroid, rem} from 'rn-units';

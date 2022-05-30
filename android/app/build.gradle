@@ -2,7 +2,6 @@
 
 apply plugin: "com.android.application"
 apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
-apply plugin: 'com.google.gms.google-services'
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
 import com.android.build.OutputFile
@@ -144,9 +143,10 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.0"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
-
+        testBuildType System.getProperty('testBuildType', 'releasestagingE2E')
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         if (isNewArchitectureEnabled()) {
             // We configure the NDK build only if you decide to opt-in for the New Architecture.
             externalNativeBuild {
@@ -238,13 +238,27 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
+            applicationIdSuffix ".staging"
         }
         release {
+            minifyEnabled true
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
             signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+        releasestaging {
+            initWith release
+            matchingFallbacks = ['release']
+            applicationIdSuffix ".staging"
+        }
+        releasestagingE2E {
+            initWith release
+            matchingFallbacks = ['release']
+            applicationIdSuffix ".staging"
+            // Detox-specific additions to pro-guard
+            proguardFile "${rootProject.projectDir}/../node_modules/detox/android/detox/proguard-rules-app.pro"
         }
     }
 
@@ -273,7 +287,7 @@ dependencies {
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
     implementation "androidx.core:core-splashscreen:1.0.0-beta01"
-
+    implementation 'androidx.appcompat:appcompat:1.4.2'
     addUnimodulesDependencies()
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
@@ -293,9 +307,12 @@ dependencies {
         def hermesPath = "../../node_modules/hermes-engine/android/";
         debugImplementation files(hermesPath + "hermes-debug.aar")
         releaseImplementation files(hermesPath + "hermes-release.aar")
+        releasestagingImplementation files(hermesPath + "hermes-release.aar")
+        releasestagingE2EImplementation files(hermesPath + "hermes-release.aar")
     } else {
         implementation jscFlavor
     }
+    androidTestImplementation('com.wix:detox:+')
 }
 
 if (isNewArchitectureEnabled()) {

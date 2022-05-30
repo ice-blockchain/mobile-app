@@ -5,7 +5,7 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {ClaimNicknameSvg} from '@svg/ClaimNickname';
 import {ManIconSvg} from '@svg/ManIcon';
-import {translate} from '@utils/i18n';
+import {translate} from '@translations/i18n';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font, rem, screenHeight} from 'rn-units';

@@ -7,7 +7,7 @@ import {InfoIconSvg} from '@svg/InfoIcon';
 import {TicketIconSvg} from '@svg/Ticket';
 import {TipTriangleIconSvg} from '@svg/TipTriangle';
 import {WhoInvitedYouSvg} from '@svg/WhoInvitedYou';
-import {translate} from '@utils/i18n';
+import {translate} from '@translations/i18n';
 import React, {useState} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {font, rem, screenHeight} from 'rn-units';

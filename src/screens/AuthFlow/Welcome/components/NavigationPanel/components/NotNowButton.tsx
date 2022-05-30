@@ -2,7 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {FONTS, WEIGHTS} from '@constants/fonts';
-import {translate} from '@utils/i18n';
+import {translate} from '@translations/i18n';
 import * as React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {rem} from 'rn-units';
