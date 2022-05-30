@@ -15,7 +15,7 @@ export function takeLatestEveryUnique<
 >(
   patternOrChannel: ActionPattern,
   worker: Fn,
-  ...args: HelperWorkerParameters<A, Fn>
+  ...params: HelperWorkerParameters<A, Fn>
 ) {
   return fork(function* () {
     const tasksSet = new Map();
@@ -31,7 +31,7 @@ export function takeLatestEveryUnique<
 
       const task = yield fork<Fn>(
         worker,
-        ...(args.concat(action) as Parameters<Fn>),
+        ...(params.concat(action) as Parameters<Fn>),
       );
 
       tasksSet.set(id, task);

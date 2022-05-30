@@ -2,7 +2,7 @@
 
 import {JsonMap} from '@segment/analytics-react-native';
 import {ShareResourceType} from '@services/segment/types';
-import {Content, StoreState, User} from '@store/types';
+import {Content, User} from '@store/types';
 
 export function getPageName(
   routeName: string,
@@ -25,12 +25,10 @@ export async function getPageNameAndProperties({
   routName,
   parentRouteName,
   params,
-  state,
 }: {
   routName: string;
   parentRouteName?: string;
   params: Record<string, unknown>;
-  state: StoreState;
 }): Promise<{pageName: string; props: JsonMap}> {
   const pageName = getPageName(routName, parentRouteName);
   try {

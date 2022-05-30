@@ -9,7 +9,7 @@ import {put} from 'redux-saga/effects';
 const actionCreator = NewsActions.NEWS_POST_LOAD(null).START.create;
 
 export function* loadNewsPostSaga(action: ReturnType<typeof actionCreator>) {
-  const {postId} = action.payload;
+  // const {postId} = action.payload;
   try {
     // const response: NewsPost = yield Api.news.getNewsPost(postId);
     const response = {};

@@ -33,18 +33,4 @@ export const AuthNavigationHelper = () => {
   }
 
   return 'SignIn';
-
-  // let initialScreen = 'Intro';
-
-  // if (token) {
-  //   initialScreen = 'CheckEmail';
-  // }
-
-  // if (profile?.email) {
-  //   initialScreen = 'ClaimNickname';
-  // } else {
-  //   initialScreen = 'SignIn';
-  // }
-
-  // return 'SignIn';
 };
