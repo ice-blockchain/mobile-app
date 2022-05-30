@@ -22,8 +22,6 @@ import {useDispatch} from 'react-redux';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {SignUpStackParamList} from '@navigation/Auth';
-// import {ValidationActions} from '@store/modules/Validation/actions';
-// import {AccountActions} from '@store/modules/Accounts/actions';
 
 const nicknameRegularExp = /^[A-Za-z0-9]+([A-Za-z0-9]*|[._-]?[A-Za-z0-9]+)*$/;
 
@@ -50,9 +48,6 @@ export const ClaimNickname = ({navigation}: Props) => {
       setError(translate('errors.removeInvalidCharacters'));
       return;
     }
-
-    // await dispatch(ValidationActions.USERNAME_VALIDATION.START.create(myNickname));
-
     pagerViewRef.current?.setPage(1);
     setCurrentPage(1);
   };
@@ -65,7 +60,6 @@ export const ClaimNickname = ({navigation}: Props) => {
   };
 
   const onComplete = () => {
-    // await dispatch(AccountActions.CREATE_USER.START.create());
     dispatch(AuthActions.STORE_CLAIM_NICKNAME_DONE.STATE.create());
     navigation.navigate('Welcome');
   };

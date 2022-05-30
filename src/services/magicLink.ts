@@ -2,8 +2,9 @@
 
 import {Magic} from '@magic-sdk/react-native';
 import {OAuthExtension, OAuthProvider} from '@magic-ext/react-native-oauth';
+import {ENV} from '@constants/env';
 
-export const magic = new Magic('API_KEY', {
+export const magic = new Magic(ENV.MAGIC_LINK_KEY, {
   extensions: [new OAuthExtension()],
 });
 

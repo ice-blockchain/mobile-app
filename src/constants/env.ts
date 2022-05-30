@@ -5,4 +5,5 @@ import config from 'react-native-config';
 export const ENV = {
   BASE_URL: config.BASE_URL,
   SEGMENT_KEY: config.SEGMENT_KEY,
+  MAGIC_LINK_KEY: config.MAGIC_LINK_KEY,
 };
