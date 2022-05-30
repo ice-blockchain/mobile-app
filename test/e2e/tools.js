@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: BUSL-1.1
+
 export const wait = (timeout = 0) =>
   new Promise(resolve => setTimeout(resolve, timeout));
 
