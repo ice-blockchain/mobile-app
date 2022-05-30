@@ -18,7 +18,7 @@ import {EmailIconSvg} from '@svg/EmailIcon';
 import {LogoSvg} from '@svg/Logo';
 import {MagicIconSvg} from '@svg/MagicIcon';
 import {PhoneIconSvg} from '@svg/PhoneIcon';
-import {translate} from '@utils/i18n';
+import {translate} from '@translations/i18n';
 import React, {useState} from 'react';
 import {
   Keyboard,
@@ -145,7 +145,8 @@ export const SignIn = ({navigation}: Props) => {
       <StatusBar backgroundColor={COLORS.white} barStyle="dark-content" />
       <KeyboardAvoidingView
         behavior={isIOS ? 'padding' : 'height'}
-        style={styles.container}>
+        style={styles.container}
+        testID="signin">
         <ScrollView
           bounces={false}
           contentContainerStyle={styles.content}
@@ -155,12 +156,8 @@ export const SignIn = ({navigation}: Props) => {
             <LogoSvg />
           </View>
 
-          <View>
-            <Text style={styles.title}>
-              {true
-                ? translate('signIn.welcome')
-                : translate('signIn.welcomeBack')}
-            </Text>
+          <View testID="welcome_title">
+            <Text style={styles.title}>{translate('signIn.welcome')}</Text>
           </View>
 
           <View style={styles.inputContainer}>

@@ -5,7 +5,7 @@ import {SignUpStackParamList} from '@navigation/Auth';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {NavigationPanel} from '@screens/AuthFlow/Welcome/components/NavigationPanel';
 import {AuthActions} from '@store/modules/Auth/actions';
-import {translate} from '@utils/i18n';
+import {translate} from '@translations/i18n';
 import React, {useRef, useState} from 'react';
 import {
   Keyboard,

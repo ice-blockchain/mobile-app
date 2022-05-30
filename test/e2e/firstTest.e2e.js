@@ -1,15 +1,14 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-describe('Example', () => {
-  beforeAll(async () => {
+const {seconds, wait} = require('test/e2e/tools');
+
+describe('Sign in', () => {
+  beforeEach(async () => {
     await device.launchApp();
   });
 
-  beforeEach(async () => {
-    await device.reloadReactNative();
-  });
-
-  it('should have home screen', async () => {
-    await expect(element(by.id('TestId'))).toBeVisible();
+  it('should have "Sign in" title', async () => {
+    await wait(seconds(15));
+    await waitFor(element(by.id('welcome_title'))).toBeVisible();
   });
 });

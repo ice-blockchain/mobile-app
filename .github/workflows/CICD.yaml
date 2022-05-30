@@ -1,0 +1,363 @@
+name: CI/CD
+on:
+  push:
+    branches:
+      - master
+      - 'release/v*'
+  pull_request:
+    branches:
+      - master
+      - 'release/v*'
+jobs:
+  react-native:
+    name: React Native -- verify, build, test
+    if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
+    runs-on: macOS-latest
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Checkout main repo
+        uses: actions/checkout@v3
+        with:
+          path: main-repo
+      - name: Checkout the target 'master' branch of 'mobile-app-secrets'
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ secrets.MOBILE_APP_SECRETS_REPO }}
+          ref: master
+          token: ${{ secrets.ICE_CI_CD_BOT_GH_PAT }}
+          path: mobile-app-secrets
+          fetch-depth: 0
+      - name: Detect APP environment and set it to ENV
+        run: |
+          if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
+            then
+               echo "APP_ENV=production" >> $GITHUB_ENV
+            else
+               echo "APP_ENV=staging" >> $GITHUB_ENV
+          fi
+      - name: Configure APP environment
+        run: |
+          cd main-repo
+          yarn configure:$APP_ENV
+      - name: Cache yarn
+        uses: c-hive/gha-yarn-cache@v2
+        with:
+          directory: main-repo
+      - name: Install npm dependencies
+        run: |
+          cd main-repo
+          yarn
+          yarn fetch-translations
+          yarn check-license
+      - name: Check types
+        run: |
+          cd main-repo
+          yarn check-types
+      - name: Lint
+        run: |
+          cd main-repo
+          yarn lint
+      - name: Run tests
+        run: |
+          cd main-repo
+          yarn test
+      - uses: actions/cache@v3
+        id: cache_all
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+  ios-e2e-test:
+    needs: [react-native]
+    name: iOS -- E2E test
+    if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/cache@v3
+        id: cache_all
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install Pod Dependencies
+        run: cd ./main-repo/ios && pod install && cd ..
+      - name: Install Detox Dependencies
+        run: |
+          brew tap wix/brew
+          brew install applesimutils
+      - name: Configure APP environment for e2e tests
+        run: |
+          cd main-repo
+          yarn configure:staging
+      - name: Run Detox Build
+        run: |
+          cd main-repo
+          yarn e2e-build-ios-release
+      - name: Run Detox Test(s)
+        run: |
+          cd main-repo
+          bash run-e2e-ios-release.sh
+      - name: Slack Notification For Failure
+        if: ${{ failure() && github.event_name == 'push' }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_TITLE: iOS E2E test failed
+          SLACK_USERNAME: ${{ github.event.repository.name }}-cicd-bot
+          SLACK_ICON: https://avatars.githubusercontent.com/u/102382658?s=400&u=62e73f4cb845c48a07a19e03c6f84b721e40c0a6&v=4
+          SLACK_ICON_EMOJI: ':sob:'
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_FOOTER: ice ${{ github.event.repository.name }}
+      - name: Slack Notification For Cancellation
+        if: ${{ cancelled() && github.event_name == 'push' }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_TITLE: iOS E2E test cancelled
+          SLACK_USERNAME: ${{ github.event.repository.name }}-cicd-bot
+          SLACK_ICON: https://avatars.githubusercontent.com/u/102382658?s=400&u=62e73f4cb845c48a07a19e03c6f84b721e40c0a6&v=4
+          SLACK_ICON_EMOJI: ':X:'
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_FOOTER: ice ${{ github.event.repository.name }}
+  android-e2e-test:
+    needs: [react-native]
+    name: Android -- E2E test
+    # TODO: Fix this, then uncomment it, cuz android E2E with detox is not working.
+    # if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
+    if: ${{ 1 == 0  }}
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/cache@v3
+        id: cache_all
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+          check-latest: true
+        env:
+          # https://github.com/actions/toolkit/issues/641#issuecomment-728963957
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+      - name: Configure APP environment for e2e tests
+        run: |
+          cd main-repo
+          yarn configure:staging
+      - name: Run Detox Build
+        run: |
+          cd main-repo
+          yarn e2e-build-android-release
+      - name: Run Detox Test(s)
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          working-directory: main-repo
+          api-level: 28
+          target: google_apis
+          profile: Nexus 6
+          enable-hw-keyboard: true
+          disable-animations: false
+          arch: x86
+          script: bash ${{ github.workspace }}/main-repo/run-e2e-android-release.sh
+      - name: Slack Notification For Failure
+        if: ${{ failure() && github.event_name == 'push' }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_TITLE: Android E2E test failed
+          SLACK_USERNAME: ${{ github.event.repository.name }}-cicd-bot
+          SLACK_ICON: https://avatars.githubusercontent.com/u/102382658?s=400&u=62e73f4cb845c48a07a19e03c6f84b721e40c0a6&v=4
+          SLACK_ICON_EMOJI: ':sob:'
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_FOOTER: ice ${{ github.event.repository.name }}
+      - name: Slack Notification For Cancellation
+        if: ${{ cancelled() && github.event_name == 'push' }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_TITLE: Android E2E test cancelled
+          SLACK_USERNAME: ${{ github.event.repository.name }}-cicd-bot
+          SLACK_ICON: https://avatars.githubusercontent.com/u/102382658?s=400&u=62e73f4cb845c48a07a19e03c6f84b721e40c0a6&v=4
+          SLACK_ICON_EMOJI: ':X:'
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_FOOTER: ice ${{ github.event.repository.name }}
+  ios-cicd:
+    name: iOS -- build, deploy
+    needs: [ios-e2e-test]
+    if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/cache@v3
+        id: cache_all
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+      - name: Setup Ruby version
+        uses: ruby/setup-ruby@v1
+        with:
+          working-directory: main-repo
+          ruby-version: '2.7.4'
+          bundler-cache: true
+      - name: Detect context and set APP environment variables
+        run: |
+          if [[ ${{ github.event_name == 'pull_request' && github.event.pull_request.draft == false}} == true ]]
+            then
+               echo "IOS_SIGN_TYPE=adhoc" >> $GITHUB_ENV
+               echo "DEPLOY_TARGET=firebase" >> $GITHUB_ENV
+               echo "APP_VERSION=0.0.0" >> $GITHUB_ENV
+               echo "RELEASE_NOTES=release_notes:${{ github.head_ref }}" >> $GITHUB_ENV
+            else
+               echo "IOS_SIGN_TYPE=appstore" >> $GITHUB_ENV
+               echo "DEPLOY_TARGET=testflight" >> $GITHUB_ENV
+               echo "APP_VERSION=$(echo ${GITHUB_REF_NAME#*v})" >> $GITHUB_ENV
+          fi
+          if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
+            then
+               echo "APP_ENV=production" >> $GITHUB_ENV
+            else
+               echo "APP_ENV=staging" >> $GITHUB_ENV
+          fi
+      - name: Bump version to v${{ env.APP_VERSION }}
+        run: |
+          cd main-repo
+          bundle exec fastlane bump_android_version build_number:${{ github.run_number }} version_number:$APP_VERSION
+      - name: Build iOS App (${{env.IOS_SIGN_TYPE}})
+        run: |
+          cd main-repo
+          bundle exec fastlane ios build sign_type:$IOS_SIGN_TYPE
+      - name: Deploy iOS App to ${{env.DEPLOY_TARGET}}
+        run: |
+          cd main-repo
+          bundle exec fastlane ios deploy target:$DEPLOY_TARGET $RELEASE_NOTES
+      - name: Slack Notification For Success
+        if: ${{ success() && github.event_name == 'push' }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_TITLE: ${{env.DEPLOY_TARGET }} - ${{env.APP_ENV}} - iOS deployed
+          SLACK_USERNAME: ${{ github.event.repository.name }}-cicd-bot
+          SLACK_ICON: https://avatars.githubusercontent.com/u/102382658?s=400&u=62e73f4cb845c48a07a19e03c6f84b721e40c0a6&v=4
+          SLACK_ICON_EMOJI: ':rocket:'
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_FOOTER: ice ${{ github.event.repository.name }}
+      - name: Slack Notification For Failure
+        if: ${{ failure() && github.event_name == 'push' }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_TITLE: ${{env.DEPLOY_TARGET }} - ${{env.APP_ENV}} - iOS deployment failed
+          SLACK_USERNAME: ${{ github.event.repository.name }}-cicd-bot
+          SLACK_ICON: https://avatars.githubusercontent.com/u/102382658?s=400&u=62e73f4cb845c48a07a19e03c6f84b721e40c0a6&v=4
+          SLACK_ICON_EMOJI: ':sob:'
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_FOOTER: ice ${{ github.event.repository.name }}
+      - name: Slack Notification For Cancellation
+        if: ${{ cancelled() && github.event_name == 'push' }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_TITLE: ${{env.DEPLOY_TARGET }} - ${{env.APP_ENV}} - iOS deployment cancelled
+          SLACK_USERNAME: ${{ github.event.repository.name }}-cicd-bot
+          SLACK_ICON: https://avatars.githubusercontent.com/u/102382658?s=400&u=62e73f4cb845c48a07a19e03c6f84b721e40c0a6&v=4
+          SLACK_ICON_EMOJI: ':X:'
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_FOOTER: ice ${{ github.event.repository.name }}
+  android-cicd:
+    name: Android -- build, deploy
+    # TODO: uncomment this after android-e2e-test gets fixed.
+    # needs: [android-e2e-test]
+    needs: [react-native]
+    if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/cache@v3
+        id: cache_all
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+          check-latest: true
+      - name: Setup Ruby version
+        uses: ruby/setup-ruby@v1
+        with:
+          working-directory: main-repo
+          ruby-version: '2.7.4'
+          bundler-cache: true
+      - name: Detect context and set APP environment variables
+        run: |
+          if [[ ${{ github.event_name == 'pull_request' && github.event.pull_request.draft == false}} == true ]]
+            then
+              echo "ANDROID_ARCHIVE_TYPE=apk" >> $GITHUB_ENV
+              echo "DEPLOY_TARGET=firebase" >> $GITHUB_ENV
+              echo "APP_VERSION=0.0.0" >> $GITHUB_ENV
+              echo "RELEASE_NOTES=release_notes:${{ github.head_ref }}" >> $GITHUB_ENV
+            else
+              echo "ANDROID_ARCHIVE_TYPE=bundle" >> $GITHUB_ENV
+              echo "DEPLOY_TARGET=playstore" >> $GITHUB_ENV
+              echo "APP_VERSION=$(echo ${GITHUB_REF_NAME#*v})" >> $GITHUB_ENV
+          fi
+          if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
+            then
+               echo "APP_ENV=production" >> $GITHUB_ENV
+            else
+               echo "APP_ENV=staging" >> $GITHUB_ENV
+          fi
+      - name: Bump version to v${{ env.APP_VERSION }}
+        run: |
+          cd main-repo
+          bundle exec fastlane bump_android_version build_number:${{ github.run_number }} version_number:$APP_VERSION
+      - name: Build Android App (${{env.ANDROID_ARCHIVE_TYPE}})
+        run: |
+          cd main-repo
+          bundle exec fastlane android build type:$ANDROID_ARCHIVE_TYPE
+      - name: Deploy Android App to ${{env.DEPLOY_TARGET}}
+        run: |
+          cd main-repo
+          bundle exec fastlane android deploy target:$DEPLOY_TARGET $RELEASE_NOTES
+      - name: Slack Notification For Success
+        if: ${{ success() && github.event_name == 'push' }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_TITLE: ${{env.DEPLOY_TARGET }} - ${{env.APP_ENV}} - Android deployed
+          SLACK_USERNAME: ${{ github.event.repository.name }}-cicd-bot
+          SLACK_ICON: https://avatars.githubusercontent.com/u/102382658?s=400&u=62e73f4cb845c48a07a19e03c6f84b721e40c0a6&v=4
+          SLACK_ICON_EMOJI: ':rocket:'
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_FOOTER: ice ${{ github.event.repository.name }}
+      - name: Slack Notification For Failure
+        if: ${{ failure() && github.event_name == 'push' }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_TITLE: ${{env.DEPLOY_TARGET }} - ${{env.APP_ENV}} - Android deployment failed
+          SLACK_USERNAME: ${{ github.event.repository.name }}-cicd-bot
+          SLACK_ICON: https://avatars.githubusercontent.com/u/102382658?s=400&u=62e73f4cb845c48a07a19e03c6f84b721e40c0a6&v=4
+          SLACK_ICON_EMOJI: ':sob:'
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_FOOTER: ice ${{ github.event.repository.name }}
+      - name: Slack Notification For Cancellation
+        if: ${{ cancelled() && github.event_name == 'push' }}
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_TITLE: ${{env.DEPLOY_TARGET }} - ${{env.APP_ENV}} - Android deployment cancelled
+          SLACK_USERNAME: ${{ github.event.repository.name }}-cicd-bot
+          SLACK_ICON: https://avatars.githubusercontent.com/u/102382658?s=400&u=62e73f4cb845c48a07a19e03c6f84b721e40c0a6&v=4
+          SLACK_ICON_EMOJI: ':X:'
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_FOOTER: ice ${{ github.event.repository.name }}

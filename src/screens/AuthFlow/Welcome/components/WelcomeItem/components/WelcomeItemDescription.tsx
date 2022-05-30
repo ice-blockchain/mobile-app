@@ -3,7 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {FONTS, WEIGHTS} from '@constants/fonts';
 import {LogoIconSvg} from '@svg/LogoIcon';
-import {translate} from '@utils/i18n';
+import {translate} from '@translations/i18n';
 import * as React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font, isAndroid, rem} from 'rn-units';

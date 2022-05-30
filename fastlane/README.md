@@ -13,15 +13,56 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-## iOS
-
-### ios buildStagingTestFlight
+### bump_$platform_version
 
 ```sh
-[bundle exec] fastlane ios buildStagingTestFlight
+[bundle exec] fastlane bump_ios_version
+[bundle exec] fastlane bump_android_version
 ```
 
-Push a new staging build to TestFlight
+Bump iOS and Android version
+
+----
+
+
+## iOS
+
+### ios build
+
+```sh
+[bundle exec] fastlane ios build
+```
+
+Build iOS app
+
+### ios deploy
+
+```sh
+[bundle exec] fastlane ios deploy
+```
+
+Deploy iOS app
+
+----
+
+
+## Android
+
+### android build
+
+```sh
+[bundle exec] fastlane android build
+```
+
+Build Android app
+
+### android deploy
+
+```sh
+[bundle exec] fastlane android deploy
+```
+
+Deploy Android app
 
 ----
 

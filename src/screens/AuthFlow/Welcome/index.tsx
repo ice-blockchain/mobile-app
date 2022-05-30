@@ -3,7 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {Images} from '@images';
 import {AuthActions} from '@store/modules/Auth/actions';
-import {translate} from '@utils/i18n';
+import {translate} from '@translations/i18n';
 import React, {useRef, useState} from 'react';
 import {StatusBar, StyleSheet, View} from 'react-native';
 import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
