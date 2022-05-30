@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import {Action} from 'redux';
 import {
