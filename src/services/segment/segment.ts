@@ -12,8 +12,6 @@ import {Content, StoreState, User} from '@store/types';
 import {InteractionManager} from 'react-native';
 import {ENV} from 'src/constants/env';
 
-const SEGMENT_DEV_KEY = 'HqCDEAupMC9XrnZuKlIgtoMEiUESoexp';
-
 const ALIAS_KEY = 'segment:alias_used';
 
 let hasBeenSetUp = false;
@@ -22,7 +20,7 @@ export function setupSegment({user, doAlias}: {user: User; doAlias: boolean}) {
   if (!hasBeenSetUp) {
     hasBeenSetUp = true;
     return analytics
-      .setup(ENV.SEGMENT_KEY ?? SEGMENT_DEV_KEY, {
+      .setup(ENV.SEGMENT_KEY ?? ENV.SEGMENT_DEV_KEY, {
         trackAppLifecycleEvents: true,
         using: [Mixpanel],
       })
