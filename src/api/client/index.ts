@@ -2,6 +2,7 @@
 
 import {RequestConfig} from '@api/client/apiClientTypes';
 import {ENV} from '@constants/env';
+import {magicLink} from '@services/magicLink';
 import axios, {AxiosInstance} from 'axios';
 import {Platform} from 'react-native';
 import DeviceInfo from 'react-native-device-info';
@@ -23,6 +24,7 @@ const client = axios.create({
   baseURL: `${ENV.BASE_URL}/api`,
   headers: {
     'Mobile-App-Version': `${Platform.OS} - ${DeviceInfo.getVersion()}`,
+    Authorization: `Bearer ${magicLink.token}`,
   },
 });
 
