@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: BUSL-1.1
+
 default_platform(:ios)
 
 TEMP_KEYCHAIN_USER = ENV["TEMP_KEYCHAIN_USER"]
@@ -6,6 +8,7 @@ APPLE_ISSUER_ID = ENV["APPLE_ISSUER_ID"]
 APPLE_KEY_ID = ENV["APPLE_KEY_ID"]
 APPLE_KEY_CONTENT = ENV["APPLE_KEY_CONTENT"]
 BASIC_AUTH = ENV["BASIC_AUTH"]
+FASTLANE_REPO_URL = ENV["FASTLANE_REPO_URL"]
 
 def delete_temp_keychain(name)
     delete_keychain(
@@ -58,9 +61,9 @@ platform :ios do
         )
 
         match(
-            type: "appstore",
-            app_identifier: main_bundle_id,
+            git_url: FASTLANE_REPO_URL,
             readonly: true,
+            app_identifier: main_bundle_id,
             keychain_name: TEMP_KEYCHAIN_USER,
             keychain_password: TEMP_KEYCHAIN_PASSWORD,
             api_key: api_key,
