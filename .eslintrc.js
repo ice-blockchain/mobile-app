@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   extends: '@react-native-community',
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'detox'],
+  plugins: ['@typescript-eslint', 'detox', 'simple-import-sort'],
   overrides: [
     {
       files: ['*.ts', '*.tsx', '*.e2e.js'],
@@ -11,6 +11,8 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'no-shadow': 'off',
         'no-undef': 'off',
+        'simple-import-sort/imports': 'error',
+        'simple-import-sort/exports': 'error',
         'no-restricted-imports': [
           'error',
           {
