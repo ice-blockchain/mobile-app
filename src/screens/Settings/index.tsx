@@ -3,7 +3,7 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 
-const Settings = () => {
+export const Settings = () => {
   return <View style={styles.container} />;
 };
 
@@ -15,5 +15,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#2c3e50',
   },
 });
-
-export default Settings;

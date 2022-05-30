@@ -2,4 +2,4 @@
 
 import React from 'react';
 
-export default React.createRef();
+export const ref = React.createRef();

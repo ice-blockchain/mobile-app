@@ -19,6 +19,4 @@ async function onFulfilled(config: AxiosRequestConfig) {
   return config;
 }
 
-export default {
-  onFulfilled,
-};
+export const requestInterceptor = {onFulfilled};

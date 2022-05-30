@@ -2,4 +2,4 @@
 
 import {RootState} from '@store/rootReducer';
 
-export default (state: RootState) => state.news;
+export const rootSelector = (state: RootState) => state.news;

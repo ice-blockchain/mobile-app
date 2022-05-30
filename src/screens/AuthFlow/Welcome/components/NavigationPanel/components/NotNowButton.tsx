@@ -7,11 +7,11 @@ import {FONTS, WEIGHTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
 import {translate} from '@utils/i18n';
 interface NotNowButtonProps {
-  onPress: () => void;
+  onPress?: () => void;
   disabled: boolean;
 }
 
-const NotNowButton = ({onPress, disabled}: NotNowButtonProps) => {
+export const NotNowButton = ({onPress, disabled}: NotNowButtonProps) => {
   return (
     <TouchableOpacity
       disabled={disabled}
@@ -21,8 +21,6 @@ const NotNowButton = ({onPress, disabled}: NotNowButtonProps) => {
     </TouchableOpacity>
   );
 };
-
-export default NotNowButton;
 
 const styles = StyleSheet.create({
   container: {

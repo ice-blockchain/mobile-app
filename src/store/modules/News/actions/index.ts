@@ -35,9 +35,7 @@ const NEWS_POST_LOAD = createAction(
   },
 );
 
-const NewsActions = Object.freeze({
+export const NewsActions = Object.freeze({
   NEWS_LOAD,
   NEWS_POST_LOAD,
 });
-
-export default NewsActions;

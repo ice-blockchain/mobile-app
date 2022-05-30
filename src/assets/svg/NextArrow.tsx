@@ -3,7 +3,7 @@
 import * as React from 'react';
 import {Svg, Rect} from 'react-native-svg';
 
-const NextArrowSvg = () => {
+export const NextArrowSvg = () => {
   return (
     <Svg width="12" height="11" viewBox="0 0 12 11" fill="none">
       <Rect y="5" width="11" height="1.5" rx="0.75" fill="white" />
@@ -26,5 +26,3 @@ const NextArrowSvg = () => {
     </Svg>
   );
 };
-
-export default NextArrowSvg;

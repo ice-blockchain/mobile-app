@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {RootState} from '@store/rootReducer';
-import ActionSubtype from '@store/utils/actions/subtypes';
+import {ActionSubtype} from '@store/utils/actions/subtypes';
 import lodashGet from 'lodash/get';
-
 import {ActionData} from '../reducer';
 
 interface Action {
@@ -84,7 +83,7 @@ const getFailedReasonSelector = (
   return undefined;
 };
 
-const UtilsProcessStatusSelectors = Object.freeze({
+export const UtilsProcessStatusSelectors = Object.freeze({
   getActionPayloadSelector,
   getActionTimestampSelector,
   getFailedReasonSelector,
@@ -93,5 +92,3 @@ const UtilsProcessStatusSelectors = Object.freeze({
   isLoadingSelector,
   isSuccessSelector,
 });
-
-export default UtilsProcessStatusSelectors;

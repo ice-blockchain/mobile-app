@@ -3,7 +3,7 @@
 import * as React from 'react';
 import {Svg, Path} from 'react-native-svg';
 
-const LogoIconSvg = () => {
+export const LogoIconSvg = () => {
   return (
     <Svg width="18" height="18" viewBox="0 0 23 23" fill="none">
       <Path
@@ -41,5 +41,3 @@ const LogoIconSvg = () => {
     </Svg>
   );
 };
-
-export default LogoIconSvg;

@@ -5,14 +5,15 @@ import {StyleSheet, View, StatusBar} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
 import {rem} from 'rn-units';
-
-import WelcomeItem from './components/WelcomeItem';
-import NavigationPanel from './components/NavigationPanel';
+import {WelcomeItem} from './components/WelcomeItem';
+import {NavigationPanel} from './components/NavigationPanel';
 import {Images} from '@images/index';
 import {COLORS} from '@constants/colors';
+import {useDispatch} from 'react-redux';
+import {AuthActions} from '@store/modules/Auth/actions';
 import {translate} from '@utils/i18n';
 
-const Welcome = () => {
+export const Welcome = () => {
   const welcomeScreenData = [
     {
       key: '1',
@@ -63,6 +64,8 @@ const Welcome = () => {
 
   const pagerViewRef = useRef<PagerView>(null);
   const [currentPage, setCurrentPage] = useState(0);
+  const dispatch = useDispatch();
+
   const onNextPress = () => {
     const nextPage = currentPage + 1;
     if (nextPage < welcomeScreenData.length) {
@@ -73,6 +76,12 @@ const Welcome = () => {
 
   const onPageSelected = (e: PagerViewOnPageSelectedEvent) => {
     setCurrentPage(e.nativeEvent.position);
+  };
+  const notNowPress = () => {
+    dispatch(AuthActions.STORE_WELCOME_SEEN.STATE.create());
+  };
+  const yesPleasePress = () => {
+    dispatch(AuthActions.STORE_WELCOME_SEEN.STATE.create());
   };
 
   return (
@@ -100,8 +109,8 @@ const Welcome = () => {
         amount={welcomeScreenData.length}
         activeIndex={currentPage}
         nextPress={onNextPress}
-        notNowPress={() => {}}
-        yesPleasePress={() => {}}
+        notNowPress={notNowPress}
+        yesPleasePress={yesPleasePress}
       />
     </SafeAreaView>
   );
@@ -114,5 +123,3 @@ const styles = StyleSheet.create({
     marginTop: rem(10),
   },
 });
-
-export default Welcome;

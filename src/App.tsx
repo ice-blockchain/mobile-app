@@ -2,19 +2,24 @@
 
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import Router from '@navigation/Router';
-import System from '@screens/System';
-import StoreConfig from './store/configureStore';
+import {Router} from '@navigation/Router';
+import {System} from '@screens/System';
+import {configuredStore} from './store/configureStore';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
+import {magic} from '@services/magicLink';
+import {Initialization} from '@screens/AuthFlow/Initialization';
 
-export default function App(): React.ReactNode {
+export function App(): React.ReactNode {
   return (
     <SafeAreaProvider>
-      <Provider store={StoreConfig.store}>
-        <PersistGate loading={null} persistor={StoreConfig.persistor}>
+      <Provider store={configuredStore.store}>
+        <PersistGate
+          loading={<Initialization />}
+          persistor={configuredStore.persistor}>
           <Router />
           <System />
+          <magic.Relayer />
         </PersistGate>
       </Provider>
     </SafeAreaProvider>

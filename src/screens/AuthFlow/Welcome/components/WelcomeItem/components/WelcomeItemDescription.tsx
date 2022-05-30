@@ -6,14 +6,16 @@ import {font, rem, isAndroid} from 'rn-units';
 
 import {COLORS} from '@constants/colors';
 import {FONTS, WEIGHTS} from '@constants/fonts';
-import LogoIconSvg from '@svg/logoIcon';
+import {LogoIconSvg} from '@svg/LogoIcon';
 import {translate} from '@utils/i18n';
 
 interface WelcomeItemDescriptionProps {
   items: Array<String | number>; // where 1 is icon with text 'ice'
 }
 
-const WelcomeItemDescription = ({items}: WelcomeItemDescriptionProps) => {
+export const WelcomeItemDescription = ({
+  items,
+}: WelcomeItemDescriptionProps) => {
   return (
     <Text style={styles.textContainerWithIcon}>
       {items.map((item, index) => {
@@ -38,8 +40,6 @@ const WelcomeItemDescription = ({items}: WelcomeItemDescriptionProps) => {
     </Text>
   );
 };
-
-export default WelcomeItemDescription;
 
 const styles = StyleSheet.create({
   textContainerWithIcon: {

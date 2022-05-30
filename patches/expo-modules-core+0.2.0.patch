@@ -1,0 +1,1263 @@
+diff --git a/node_modules/expo-modules-core/android/build.gradle b/node_modules/expo-modules-core/android/build.gradle
+index 582976f..82ab3d8 100644
+--- a/node_modules/expo-modules-core/android/build.gradle
++++ b/node_modules/expo-modules-core/android/build.gradle
+@@ -1,6 +1,6 @@
+ apply plugin: 'com.android.library'
+ apply plugin: 'kotlin-android'
+-apply plugin: 'maven'
++apply plugin: 'maven-publish'
+ 
+ group = 'host.exp.exponent'
+ version = '0.2.0'
+@@ -20,27 +20,15 @@ buildscript {
+   }
+ }
+ 
+-//Upload android library to maven with javadoc and android sources
+-configurations {
+-  deployerJars
+-}
+-
+ //Creating sources with comments
+ task androidSourcesJar(type: Jar) {
+-  classifier = 'sources'
++  archiveClassifier = 'sources'
+   from android.sourceSets.main.java.srcDirs
+ }
+-
+-//Put the androidSources and javadoc to the artifacts
+-artifacts {
+-  archives androidSourcesJar
+-}
+-
+-uploadArchives {
+-  repositories {
+-    mavenDeployer {
+-      configuration = configurations.deployerJars
+-      repository(url: mavenLocal().url)
++publishing {
++  publications {
++    maven(MavenPublication) {
++      artifact androidSourcesJar
+     }
+   }
+ }
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/results.bin b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/results.bin
+new file mode 100644
+index 0000000..5ff383e
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/results.bin
+@@ -0,0 +1 @@
++o/debug
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/BuildConfig.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/BuildConfig.dex
+new file mode 100644
+index 0000000..876680f
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/BuildConfig.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerInterface.dex
+new file mode 100644
+index 0000000..96c0797
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerProviderInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerProviderInterface.dex
+new file mode 100644
+index 0000000..6090163
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerProviderInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerResult.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerResult.dex
+new file mode 100644
+index 0000000..16a11cd
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerResult.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettings.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettings.dex
+new file mode 100644
+index 0000000..82ae2a6
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettings.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettingsKey.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettingsKey.dex
+new file mode 100644
+index 0000000..42576f3
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettingsKey.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/camera/CameraViewInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/camera/CameraViewInterface.dex
+new file mode 100644
+index 0000000..e59be89
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/camera/CameraViewInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/constants/ConstantsInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/constants/ConstantsInterface.dex
+new file mode 100644
+index 0000000..08199d0
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/constants/ConstantsInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionError.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionError.dex
+new file mode 100644
+index 0000000..9f8674a
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionError.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionSkipped.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionSkipped.dex
+new file mode 100644
+index 0000000..26deff0
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionSkipped.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionUnspecifiedError.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionUnspecifiedError.dex
+new file mode 100644
+index 0000000..74dfdc7
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionUnspecifiedError.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectorInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectorInterface.dex
+new file mode 100644
+index 0000000..a1e31d8
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectorInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectorProviderInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectorProviderInterface.dex
+new file mode 100644
+index 0000000..67978d4
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectorProviderInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FacesDetectionCompleted.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FacesDetectionCompleted.dex
+new file mode 100644
+index 0000000..3c18543
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/facedetector/FacesDetectionCompleted.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/filesystem/FilePermissionModuleInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/filesystem/FilePermissionModuleInterface.dex
+new file mode 100644
+index 0000000..3006908
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/filesystem/FilePermissionModuleInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/filesystem/Permission.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/filesystem/Permission.dex
+new file mode 100644
+index 0000000..5bf9be6
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/filesystem/Permission.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/font/FontManagerInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/font/FontManagerInterface.dex
+new file mode 100644
+index 0000000..627a806
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/font/FontManagerInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface$ResultListener.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface$ResultListener.dex
+new file mode 100644
+index 0000000..0ab952e
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface$ResultListener.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface.dex
+new file mode 100644
+index 0000000..d35e9eb
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/Permissions.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/Permissions.dex
+new file mode 100644
+index 0000000..4ea93c3
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/Permissions.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponse$Companion.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponse$Companion.dex
+new file mode 100644
+index 0000000..1475982
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponse$Companion.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponse.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponse.dex
+new file mode 100644
+index 0000000..4bb18c0
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponse.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponseListener.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponseListener.dex
+new file mode 100644
+index 0000000..e5bfb10
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponseListener.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/PermissionsStatus.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/PermissionsStatus.dex
+new file mode 100644
+index 0000000..e3ca63a
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/permissions/PermissionsStatus.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/SensorServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/SensorServiceInterface.dex
+new file mode 100644
+index 0000000..69d07b7
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/SensorServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/SensorServiceSubscriptionInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/SensorServiceSubscriptionInterface.dex
+new file mode 100644
+index 0000000..ba556c3
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/SensorServiceSubscriptionInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/AccelerometerServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/AccelerometerServiceInterface.dex
+new file mode 100644
+index 0000000..d85348b
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/AccelerometerServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/BarometerServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/BarometerServiceInterface.dex
+new file mode 100644
+index 0000000..e1fb835
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/BarometerServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/GravitySensorServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/GravitySensorServiceInterface.dex
+new file mode 100644
+index 0000000..5b5cfb4
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/GravitySensorServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/GyroscopeServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/GyroscopeServiceInterface.dex
+new file mode 100644
+index 0000000..1a5ddcb
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/GyroscopeServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/LinearAccelerationSensorServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/LinearAccelerationSensorServiceInterface.dex
+new file mode 100644
+index 0000000..6b762b8
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/LinearAccelerationSensorServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/MagnetometerServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/MagnetometerServiceInterface.dex
+new file mode 100644
+index 0000000..a703f5d
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/MagnetometerServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/MagnetometerUncalibratedServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/MagnetometerUncalibratedServiceInterface.dex
+new file mode 100644
+index 0000000..8226455
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/MagnetometerUncalibratedServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/PedometerServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/PedometerServiceInterface.dex
+new file mode 100644
+index 0000000..90c5327
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/PedometerServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/RotationVectorSensorServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/RotationVectorSensorServiceInterface.dex
+new file mode 100644
+index 0000000..d6b236b
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/sensors/services/RotationVectorSensorServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskConsumer.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskConsumer.dex
+new file mode 100644
+index 0000000..62d9b38
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskConsumer.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskConsumerInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskConsumerInterface.dex
+new file mode 100644
+index 0000000..e463185
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskConsumerInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskExecutionCallback.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskExecutionCallback.dex
+new file mode 100644
+index 0000000..f51cffc
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskExecutionCallback.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskInterface.dex
+new file mode 100644
+index 0000000..a62062b
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskManagerInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskManagerInterface.dex
+new file mode 100644
+index 0000000..349a545
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskManagerInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskManagerUtilsInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskManagerUtilsInterface.dex
+new file mode 100644
+index 0000000..55f54a5
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskManagerUtilsInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskServiceInterface.dex
+new file mode 100644
+index 0000000..be36c09
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/debug/expo/modules/interfaces/taskManager/TaskServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/desugar_graph.bin b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/desugar_graph.bin
+new file mode 100644
+index 0000000..601f245
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/5d8f847b957a95b7d6567a3046a05b54/transformed/desugar_graph.bin differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/results.bin b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/results.bin
+new file mode 100644
+index 0000000..5ff383e
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/results.bin
+@@ -0,0 +1 @@
++o/debug
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/BuildConfig.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/BuildConfig.dex
+new file mode 100644
+index 0000000..876680f
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/BuildConfig.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerInterface.dex
+new file mode 100644
+index 0000000..96c0797
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerProviderInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerProviderInterface.dex
+new file mode 100644
+index 0000000..6090163
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerProviderInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerResult.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerResult.dex
+new file mode 100644
+index 0000000..16a11cd
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerResult.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettings.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettings.dex
+new file mode 100644
+index 0000000..82ae2a6
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettings.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettingsKey.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettingsKey.dex
+new file mode 100644
+index 0000000..42576f3
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettingsKey.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/camera/CameraViewInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/camera/CameraViewInterface.dex
+new file mode 100644
+index 0000000..e59be89
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/camera/CameraViewInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/constants/ConstantsInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/constants/ConstantsInterface.dex
+new file mode 100644
+index 0000000..08199d0
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/constants/ConstantsInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionError.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionError.dex
+new file mode 100644
+index 0000000..9f8674a
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionError.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionSkipped.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionSkipped.dex
+new file mode 100644
+index 0000000..26deff0
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionSkipped.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionUnspecifiedError.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionUnspecifiedError.dex
+new file mode 100644
+index 0000000..74dfdc7
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectionUnspecifiedError.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectorInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectorInterface.dex
+new file mode 100644
+index 0000000..a1e31d8
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectorInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectorProviderInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectorProviderInterface.dex
+new file mode 100644
+index 0000000..67978d4
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FaceDetectorProviderInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FacesDetectionCompleted.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FacesDetectionCompleted.dex
+new file mode 100644
+index 0000000..3c18543
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/facedetector/FacesDetectionCompleted.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/filesystem/FilePermissionModuleInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/filesystem/FilePermissionModuleInterface.dex
+new file mode 100644
+index 0000000..3006908
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/filesystem/FilePermissionModuleInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/filesystem/Permission.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/filesystem/Permission.dex
+new file mode 100644
+index 0000000..5bf9be6
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/filesystem/Permission.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/font/FontManagerInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/font/FontManagerInterface.dex
+new file mode 100644
+index 0000000..627a806
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/font/FontManagerInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface$ResultListener.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface$ResultListener.dex
+new file mode 100644
+index 0000000..0ab952e
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface$ResultListener.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface.dex
+new file mode 100644
+index 0000000..d35e9eb
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/Permissions.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/Permissions.dex
+new file mode 100644
+index 0000000..4ea93c3
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/Permissions.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponse$Companion.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponse$Companion.dex
+new file mode 100644
+index 0000000..1475982
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponse$Companion.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponse.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponse.dex
+new file mode 100644
+index 0000000..4bb18c0
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponse.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponseListener.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponseListener.dex
+new file mode 100644
+index 0000000..e5bfb10
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/PermissionsResponseListener.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/PermissionsStatus.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/PermissionsStatus.dex
+new file mode 100644
+index 0000000..e3ca63a
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/permissions/PermissionsStatus.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/SensorServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/SensorServiceInterface.dex
+new file mode 100644
+index 0000000..69d07b7
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/SensorServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/SensorServiceSubscriptionInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/SensorServiceSubscriptionInterface.dex
+new file mode 100644
+index 0000000..ba556c3
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/SensorServiceSubscriptionInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/AccelerometerServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/AccelerometerServiceInterface.dex
+new file mode 100644
+index 0000000..d85348b
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/AccelerometerServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/BarometerServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/BarometerServiceInterface.dex
+new file mode 100644
+index 0000000..e1fb835
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/BarometerServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/GravitySensorServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/GravitySensorServiceInterface.dex
+new file mode 100644
+index 0000000..5b5cfb4
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/GravitySensorServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/GyroscopeServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/GyroscopeServiceInterface.dex
+new file mode 100644
+index 0000000..1a5ddcb
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/GyroscopeServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/LinearAccelerationSensorServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/LinearAccelerationSensorServiceInterface.dex
+new file mode 100644
+index 0000000..6b762b8
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/LinearAccelerationSensorServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/MagnetometerServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/MagnetometerServiceInterface.dex
+new file mode 100644
+index 0000000..a703f5d
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/MagnetometerServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/MagnetometerUncalibratedServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/MagnetometerUncalibratedServiceInterface.dex
+new file mode 100644
+index 0000000..8226455
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/MagnetometerUncalibratedServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/PedometerServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/PedometerServiceInterface.dex
+new file mode 100644
+index 0000000..90c5327
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/PedometerServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/RotationVectorSensorServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/RotationVectorSensorServiceInterface.dex
+new file mode 100644
+index 0000000..d6b236b
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/sensors/services/RotationVectorSensorServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskConsumer.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskConsumer.dex
+new file mode 100644
+index 0000000..62d9b38
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskConsumer.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskConsumerInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskConsumerInterface.dex
+new file mode 100644
+index 0000000..e463185
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskConsumerInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskExecutionCallback.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskExecutionCallback.dex
+new file mode 100644
+index 0000000..f51cffc
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskExecutionCallback.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskInterface.dex
+new file mode 100644
+index 0000000..a62062b
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskManagerInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskManagerInterface.dex
+new file mode 100644
+index 0000000..349a545
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskManagerInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskManagerUtilsInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskManagerUtilsInterface.dex
+new file mode 100644
+index 0000000..55f54a5
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskManagerUtilsInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskServiceInterface.dex b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskServiceInterface.dex
+new file mode 100644
+index 0000000..be36c09
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/debug/expo/modules/interfaces/taskManager/TaskServiceInterface.dex differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/desugar_graph.bin b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/desugar_graph.bin
+new file mode 100644
+index 0000000..601f245
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/.transforms/6423855b4eff44484db359023b37ff09/transformed/desugar_graph.bin differ
+diff --git a/node_modules/expo-modules-core/android/build/.transforms/9dc5a471c18c530a7296326452574cb5/results.bin b/node_modules/expo-modules-core/android/build/.transforms/9dc5a471c18c530a7296326452574cb5/results.bin
+new file mode 100644
+index 0000000..1ed65e0
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/.transforms/9dc5a471c18c530a7296326452574cb5/results.bin
+@@ -0,0 +1 @@
++i/
+diff --git a/node_modules/expo-modules-core/android/build/generated/source/buildConfig/debug/expo/modules/BuildConfig.java b/node_modules/expo-modules-core/android/build/generated/source/buildConfig/debug/expo/modules/BuildConfig.java
+new file mode 100644
+index 0000000..616a551
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/generated/source/buildConfig/debug/expo/modules/BuildConfig.java
+@@ -0,0 +1,10 @@
++/**
++ * Automatically generated file. DO NOT MODIFY
++ */
++package expo.modules;
++
++public final class BuildConfig {
++  public static final boolean DEBUG = Boolean.parseBoolean("true");
++  public static final String LIBRARY_PACKAGE_NAME = "expo.modules";
++  public static final String BUILD_TYPE = "debug";
++}
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml b/node_modules/expo-modules-core/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml
+new file mode 100644
+index 0000000..4719048
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="expo.modules" >
++
++    <uses-sdk
++        android:minSdkVersion="23"
++        android:targetSdkVersion="31" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json b/node_modules/expo-modules-core/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json
+new file mode 100644
+index 0000000..abb1565
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output-metadata.json
+@@ -0,0 +1,18 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "AAPT_FRIENDLY_MERGED_MANIFESTS",
++    "kind": "Directory"
++  },
++  "applicationId": "expo.modules",
++  "variantName": "debug",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "outputFile": "AndroidManifest.xml"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/aar_metadata/debug/aar-metadata.properties b/node_modules/expo-modules-core/android/build/intermediates/aar_metadata/debug/aar-metadata.properties
+new file mode 100644
+index 0000000..d8f70c0
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/aar_metadata/debug/aar-metadata.properties
+@@ -0,0 +1,3 @@
++aarFormatVersion=1.0
++aarMetadataVersion=1.0
++minCompileSdk=1
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/annotation_processor_list/debug/annotationProcessors.json b/node_modules/expo-modules-core/android/build/intermediates/annotation_processor_list/debug/annotationProcessors.json
+new file mode 100644
+index 0000000..9e26dfe
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/annotation_processor_list/debug/annotationProcessors.json
+@@ -0,0 +1 @@
++{}
+\ No newline at end of file
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/compile_library_classes_jar/debug/classes.jar b/node_modules/expo-modules-core/android/build/intermediates/compile_library_classes_jar/debug/classes.jar
+new file mode 100644
+index 0000000..585d258
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/compile_library_classes_jar/debug/classes.jar differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/compile_r_class_jar/debug/R.jar b/node_modules/expo-modules-core/android/build/intermediates/compile_r_class_jar/debug/R.jar
+new file mode 100644
+index 0000000..bf9c303
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/compile_r_class_jar/debug/R.jar differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/compile_symbol_list/debug/R.txt b/node_modules/expo-modules-core/android/build/intermediates/compile_symbol_list/debug/R.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml b/node_modules/expo-modules-core/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+new file mode 100644
+index 0000000..e465e09
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/debug/jniLibs"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/incremental/mergeDebugShaders/merger.xml b/node_modules/expo-modules-core/android/build/intermediates/incremental/mergeDebugShaders/merger.xml
+new file mode 100644
+index 0000000..5ff82f9
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/incremental/mergeDebugShaders/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/shaders"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/debug/shaders"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/incremental/packageDebugAssets/merger.xml b/node_modules/expo-modules-core/android/build/intermediates/incremental/packageDebugAssets/merger.xml
+new file mode 100644
+index 0000000..cad20a3
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/incremental/packageDebugAssets/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/assets"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/build/intermediates/shader_assets/debug/out"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/debug/assets"/></dataSet></merger>
+\ No newline at end of file
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/incremental/packageDebugResources/compile-file-map.properties b/node_modules/expo-modules-core/android/build/intermediates/incremental/packageDebugResources/compile-file-map.properties
+new file mode 100644
+index 0000000..5cd92bc
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/incremental/packageDebugResources/compile-file-map.properties
+@@ -0,0 +1 @@
++#Wed May 18 18:48:19 EEST 2022
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/incremental/packageDebugResources/merger.xml b/node_modules/expo-modules-core/android/build/intermediates/incremental/packageDebugResources/merger.xml
+new file mode 100644
+index 0000000..cf53a82
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/incremental/packageDebugResources/merger.xml
+@@ -0,0 +1,2 @@
++<?xml version="1.0" encoding="utf-8"?>
++<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/res"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/build/generated/res/rs/debug"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/res"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/build/generated/res/rs/debug"/><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/debug/res"/></dataSet><mergedItems/></merger>
+\ No newline at end of file
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/BuildConfig.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/BuildConfig.class
+new file mode 100644
+index 0000000..216e8b7
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/BuildConfig.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerInterface.class
+new file mode 100644
+index 0000000..787582a
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerProviderInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerProviderInterface.class
+new file mode 100644
+index 0000000..ca100c5
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerProviderInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerResult.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerResult.class
+new file mode 100644
+index 0000000..00f07b2
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerResult.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerSettings.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerSettings.class
+new file mode 100644
+index 0000000..21db7b4
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerSettings.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerSettingsKey.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerSettingsKey.class
+new file mode 100644
+index 0000000..f8f330e
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/barcodescanner/BarCodeScannerSettingsKey.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/camera/CameraViewInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/camera/CameraViewInterface.class
+new file mode 100644
+index 0000000..a73e992
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/camera/CameraViewInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/constants/ConstantsInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/constants/ConstantsInterface.class
+new file mode 100644
+index 0000000..15c8371
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/constants/ConstantsInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectionError.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectionError.class
+new file mode 100644
+index 0000000..9d98490
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectionError.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectionSkipped.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectionSkipped.class
+new file mode 100644
+index 0000000..c86191c
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectionSkipped.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectionUnspecifiedError.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectionUnspecifiedError.class
+new file mode 100644
+index 0000000..7919c6b
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectionUnspecifiedError.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectorInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectorInterface.class
+new file mode 100644
+index 0000000..e9b837c
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectorInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectorProviderInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectorProviderInterface.class
+new file mode 100644
+index 0000000..8abfc58
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FaceDetectorProviderInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FacesDetectionCompleted.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FacesDetectionCompleted.class
+new file mode 100644
+index 0000000..9e30323
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/facedetector/FacesDetectionCompleted.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/filesystem/FilePermissionModuleInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/filesystem/FilePermissionModuleInterface.class
+new file mode 100644
+index 0000000..c3939ab
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/filesystem/FilePermissionModuleInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/filesystem/Permission.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/filesystem/Permission.class
+new file mode 100644
+index 0000000..889b66f
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/filesystem/Permission.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/font/FontManagerInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/font/FontManagerInterface.class
+new file mode 100644
+index 0000000..8930d85
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/font/FontManagerInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/imageloader/ImageLoaderInterface$ResultListener.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/imageloader/ImageLoaderInterface$ResultListener.class
+new file mode 100644
+index 0000000..528a8f2
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/imageloader/ImageLoaderInterface$ResultListener.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/imageloader/ImageLoaderInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/imageloader/ImageLoaderInterface.class
+new file mode 100644
+index 0000000..494003c
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/imageloader/ImageLoaderInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/permissions/Permissions.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/permissions/Permissions.class
+new file mode 100644
+index 0000000..0a9a6e5
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/permissions/Permissions.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/permissions/PermissionsResponseListener.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/permissions/PermissionsResponseListener.class
+new file mode 100644
+index 0000000..bf507f3
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/permissions/PermissionsResponseListener.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/permissions/PermissionsStatus.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/permissions/PermissionsStatus.class
+new file mode 100644
+index 0000000..95bd61f
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/permissions/PermissionsStatus.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/SensorServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/SensorServiceInterface.class
+new file mode 100644
+index 0000000..f445422
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/SensorServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/SensorServiceSubscriptionInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/SensorServiceSubscriptionInterface.class
+new file mode 100644
+index 0000000..7e46457
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/SensorServiceSubscriptionInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/AccelerometerServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/AccelerometerServiceInterface.class
+new file mode 100644
+index 0000000..0f8f900
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/AccelerometerServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/BarometerServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/BarometerServiceInterface.class
+new file mode 100644
+index 0000000..abbab12
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/BarometerServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/GravitySensorServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/GravitySensorServiceInterface.class
+new file mode 100644
+index 0000000..8e73583
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/GravitySensorServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/GyroscopeServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/GyroscopeServiceInterface.class
+new file mode 100644
+index 0000000..37abef8
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/GyroscopeServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/LinearAccelerationSensorServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/LinearAccelerationSensorServiceInterface.class
+new file mode 100644
+index 0000000..f74c51a
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/LinearAccelerationSensorServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/MagnetometerServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/MagnetometerServiceInterface.class
+new file mode 100644
+index 0000000..089378f
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/MagnetometerServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/MagnetometerUncalibratedServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/MagnetometerUncalibratedServiceInterface.class
+new file mode 100644
+index 0000000..c830759
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/MagnetometerUncalibratedServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/PedometerServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/PedometerServiceInterface.class
+new file mode 100644
+index 0000000..a255de6
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/PedometerServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/RotationVectorSensorServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/RotationVectorSensorServiceInterface.class
+new file mode 100644
+index 0000000..38d8a1b
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/sensors/services/RotationVectorSensorServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskConsumer.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskConsumer.class
+new file mode 100644
+index 0000000..8ce0132
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskConsumer.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskConsumerInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskConsumerInterface.class
+new file mode 100644
+index 0000000..2d24b38
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskConsumerInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskExecutionCallback.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskExecutionCallback.class
+new file mode 100644
+index 0000000..e1c08a6
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskExecutionCallback.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskInterface.class
+new file mode 100644
+index 0000000..0b0ab37
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskManagerInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskManagerInterface.class
+new file mode 100644
+index 0000000..eb3d144
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskManagerInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskManagerUtilsInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskManagerUtilsInterface.class
+new file mode 100644
+index 0000000..77ed295
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskManagerUtilsInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskServiceInterface.class
+new file mode 100644
+index 0000000..32bc118
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/javac/debug/classes/expo/modules/interfaces/taskManager/TaskServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/library_java_res/debug/res.jar b/node_modules/expo-modules-core/android/build/intermediates/library_java_res/debug/res.jar
+new file mode 100644
+index 0000000..699f46b
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/library_java_res/debug/res.jar differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/local_only_symbol_list/debug/R-def.txt b/node_modules/expo-modules-core/android/build/intermediates/local_only_symbol_list/debug/R-def.txt
+new file mode 100644
+index 0000000..78ac5b8
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/local_only_symbol_list/debug/R-def.txt
+@@ -0,0 +1,2 @@
++R_DEF: Internal format may change without notice
++local
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt b/node_modules/expo-modules-core/android/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+new file mode 100644
+index 0000000..9888193
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
+@@ -0,0 +1,11 @@
++1<?xml version="1.0" encoding="utf-8"?>
++2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++3    package="expo.modules" >
++4
++5    <uses-sdk
++6        android:minSdkVersion="23"
++6-->/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml
++7        android:targetSdkVersion="31" />
++7-->/Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml
++8
++9</manifest>
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml b/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+new file mode 100644
+index 0000000..4719048
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="expo.modules" >
++
++    <uses-sdk
++        android:minSdkVersion="23"
++        android:targetSdkVersion="31" />
++
++</manifest>
+\ No newline at end of file
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/navigation_json/debug/navigation.json b/node_modules/expo-modules-core/android/build/intermediates/navigation_json/debug/navigation.json
+new file mode 100644
+index 0000000..0637a08
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/navigation_json/debug/navigation.json
+@@ -0,0 +1 @@
++[]
+\ No newline at end of file
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/packaged_manifests/debug/output-metadata.json b/node_modules/expo-modules-core/android/build/intermediates/packaged_manifests/debug/output-metadata.json
+new file mode 100644
+index 0000000..00e1ce3
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/packaged_manifests/debug/output-metadata.json
+@@ -0,0 +1,18 @@
++{
++  "version": 3,
++  "artifactType": {
++    "type": "PACKAGED_MANIFESTS",
++    "kind": "Directory"
++  },
++  "applicationId": "expo.modules",
++  "variantName": "debug",
++  "elements": [
++    {
++      "type": "SINGLE",
++      "filters": [],
++      "attributes": [],
++      "outputFile": "../../merged_manifest/debug/AndroidManifest.xml"
++    }
++  ],
++  "elementType": "File"
++}
+\ No newline at end of file
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/META-INF/expo-modules-core_debug.kotlin_module b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/META-INF/expo-modules-core_debug.kotlin_module
+new file mode 100644
+index 0000000..609d952
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/META-INF/expo-modules-core_debug.kotlin_module differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/BuildConfig.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/BuildConfig.class
+new file mode 100644
+index 0000000..216e8b7
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/BuildConfig.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerInterface.class
+new file mode 100644
+index 0000000..787582a
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerProviderInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerProviderInterface.class
+new file mode 100644
+index 0000000..ca100c5
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerProviderInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerResult.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerResult.class
+new file mode 100644
+index 0000000..00f07b2
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerResult.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettings.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettings.class
+new file mode 100644
+index 0000000..21db7b4
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettings.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettingsKey.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettingsKey.class
+new file mode 100644
+index 0000000..f8f330e
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/barcodescanner/BarCodeScannerSettingsKey.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/camera/CameraViewInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/camera/CameraViewInterface.class
+new file mode 100644
+index 0000000..a73e992
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/camera/CameraViewInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/constants/ConstantsInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/constants/ConstantsInterface.class
+new file mode 100644
+index 0000000..15c8371
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/constants/ConstantsInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectionError.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectionError.class
+new file mode 100644
+index 0000000..9d98490
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectionError.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectionSkipped.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectionSkipped.class
+new file mode 100644
+index 0000000..c86191c
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectionSkipped.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectionUnspecifiedError.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectionUnspecifiedError.class
+new file mode 100644
+index 0000000..7919c6b
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectionUnspecifiedError.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectorInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectorInterface.class
+new file mode 100644
+index 0000000..e9b837c
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectorInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectorProviderInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectorProviderInterface.class
+new file mode 100644
+index 0000000..8abfc58
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FaceDetectorProviderInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FacesDetectionCompleted.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FacesDetectionCompleted.class
+new file mode 100644
+index 0000000..9e30323
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/facedetector/FacesDetectionCompleted.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/filesystem/FilePermissionModuleInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/filesystem/FilePermissionModuleInterface.class
+new file mode 100644
+index 0000000..c3939ab
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/filesystem/FilePermissionModuleInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/filesystem/Permission.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/filesystem/Permission.class
+new file mode 100644
+index 0000000..889b66f
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/filesystem/Permission.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/font/FontManagerInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/font/FontManagerInterface.class
+new file mode 100644
+index 0000000..8930d85
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/font/FontManagerInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface$ResultListener.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface$ResultListener.class
+new file mode 100644
+index 0000000..528a8f2
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface$ResultListener.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface.class
+new file mode 100644
+index 0000000..494003c
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/imageloader/ImageLoaderInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/Permissions.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/Permissions.class
+new file mode 100644
+index 0000000..0a9a6e5
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/Permissions.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/PermissionsResponse$Companion.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/PermissionsResponse$Companion.class
+new file mode 100644
+index 0000000..d5a9994
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/PermissionsResponse$Companion.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/PermissionsResponse.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/PermissionsResponse.class
+new file mode 100644
+index 0000000..8c25117
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/PermissionsResponse.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/PermissionsResponseListener.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/PermissionsResponseListener.class
+new file mode 100644
+index 0000000..bf507f3
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/PermissionsResponseListener.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/PermissionsStatus.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/PermissionsStatus.class
+new file mode 100644
+index 0000000..95bd61f
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/permissions/PermissionsStatus.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/SensorServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/SensorServiceInterface.class
+new file mode 100644
+index 0000000..f445422
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/SensorServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/SensorServiceSubscriptionInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/SensorServiceSubscriptionInterface.class
+new file mode 100644
+index 0000000..7e46457
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/SensorServiceSubscriptionInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/AccelerometerServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/AccelerometerServiceInterface.class
+new file mode 100644
+index 0000000..0f8f900
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/AccelerometerServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/BarometerServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/BarometerServiceInterface.class
+new file mode 100644
+index 0000000..abbab12
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/BarometerServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/GravitySensorServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/GravitySensorServiceInterface.class
+new file mode 100644
+index 0000000..8e73583
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/GravitySensorServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/GyroscopeServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/GyroscopeServiceInterface.class
+new file mode 100644
+index 0000000..37abef8
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/GyroscopeServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/LinearAccelerationSensorServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/LinearAccelerationSensorServiceInterface.class
+new file mode 100644
+index 0000000..f74c51a
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/LinearAccelerationSensorServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/MagnetometerServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/MagnetometerServiceInterface.class
+new file mode 100644
+index 0000000..089378f
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/MagnetometerServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/MagnetometerUncalibratedServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/MagnetometerUncalibratedServiceInterface.class
+new file mode 100644
+index 0000000..c830759
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/MagnetometerUncalibratedServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/PedometerServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/PedometerServiceInterface.class
+new file mode 100644
+index 0000000..a255de6
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/PedometerServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/RotationVectorSensorServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/RotationVectorSensorServiceInterface.class
+new file mode 100644
+index 0000000..38d8a1b
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/sensors/services/RotationVectorSensorServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskConsumer.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskConsumer.class
+new file mode 100644
+index 0000000..8ce0132
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskConsumer.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskConsumerInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskConsumerInterface.class
+new file mode 100644
+index 0000000..2d24b38
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskConsumerInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskExecutionCallback.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskExecutionCallback.class
+new file mode 100644
+index 0000000..e1c08a6
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskExecutionCallback.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskInterface.class
+new file mode 100644
+index 0000000..0b0ab37
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskManagerInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskManagerInterface.class
+new file mode 100644
+index 0000000..eb3d144
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskManagerInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskManagerUtilsInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskManagerUtilsInterface.class
+new file mode 100644
+index 0000000..77ed295
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskManagerUtilsInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskServiceInterface.class b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskServiceInterface.class
+new file mode 100644
+index 0000000..32bc118
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/intermediates/runtime_library_classes_dir/debug/expo/modules/interfaces/taskManager/TaskServiceInterface.class differ
+diff --git a/node_modules/expo-modules-core/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt b/node_modules/expo-modules-core/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt
+new file mode 100644
+index 0000000..eeeb776
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt
+@@ -0,0 +1 @@
++expo.modules
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/build-history.bin b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/build-history.bin
+new file mode 100644
+index 0000000..eca499f
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/build-history.bin differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab
+new file mode 100644
+index 0000000..bdf584a
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream
+new file mode 100644
+index 0000000..e21ff30
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len
+new file mode 100644
+index 0000000..8d116c5
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.keystream.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.len
+new file mode 100644
+index 0000000..2a17e6e
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.values.at b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.values.at
+new file mode 100644
+index 0000000..84b8771
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.values.at differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i
+new file mode 100644
+index 0000000..f0726eb
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab_i.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab
+new file mode 100644
+index 0000000..fcb01ac
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream
+new file mode 100644
+index 0000000..2a310bc
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len
+new file mode 100644
+index 0000000..faaff93
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len
+new file mode 100644
+index 0000000..01bdaa1
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at
+new file mode 100644
+index 0000000..97af4bc
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i
+new file mode 100644
+index 0000000..85434cc
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab
+new file mode 100644
+index 0000000..ce95448
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream
+new file mode 100644
+index 0000000..94c362f
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream.len
+new file mode 100644
+index 0000000..748b0e7
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.keystream.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.len
+new file mode 100644
+index 0000000..2a17e6e
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.values.at b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.values.at
+new file mode 100644
+index 0000000..d4a5285
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.values.at differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab_i b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab_i
+new file mode 100644
+index 0000000..8b5f8b0
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab_i differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab_i.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab_i.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab
+new file mode 100644
+index 0000000..fcb01ac
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream
+new file mode 100644
+index 0000000..bc2a19c
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len
+new file mode 100644
+index 0000000..faaff93
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len
+new file mode 100644
+index 0000000..01bdaa1
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at
+new file mode 100644
+index 0000000..97af4bc
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i
+new file mode 100644
+index 0000000..6053f08
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab
+new file mode 100644
+index 0000000..1511e4b
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream
+new file mode 100644
+index 0000000..eb3a5cd
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len
+new file mode 100644
+index 0000000..701a27c
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.len
+new file mode 100644
+index 0000000..a9f80ae
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at
+new file mode 100644
+index 0000000..c0311d8
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i
+new file mode 100644
+index 0000000..4193bbf
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab
+new file mode 100644
+index 0000000..bdf584a
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream
+new file mode 100644
+index 0000000..e21ff30
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len
+new file mode 100644
+index 0000000..8d116c5
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len
+new file mode 100644
+index 0000000..2a17e6e
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at
+new file mode 100644
+index 0000000..3b37e11
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i
+new file mode 100644
+index 0000000..f0726eb
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/counters.tab b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/counters.tab
+new file mode 100644
+index 0000000..166c057
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/counters.tab
+@@ -0,0 +1,2 @@
++1
++0
+\ No newline at end of file
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab
+new file mode 100644
+index 0000000..bdf584a
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream
+new file mode 100644
+index 0000000..e21ff30
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len
+new file mode 100644
+index 0000000..8d116c5
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.len
+new file mode 100644
+index 0000000..2a17e6e
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at
+new file mode 100644
+index 0000000..5875372
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i
+new file mode 100644
+index 0000000..04e9e82
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab
+new file mode 100644
+index 0000000..8aad32b
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream
+new file mode 100644
+index 0000000..08e7df1
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len
+new file mode 100644
+index 0000000..b7da01d
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.len
+new file mode 100644
+index 0000000..2a17e6e
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at
+new file mode 100644
+index 0000000..a7b8426
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab
+new file mode 100644
+index 0000000..b1d43fa
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream
+new file mode 100644
+index 0000000..afe7d31
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream.len
+new file mode 100644
+index 0000000..9ce7b83
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.len
+new file mode 100644
+index 0000000..eb0b8a0
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.at b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.at
+new file mode 100644
+index 0000000..886e38e
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.at differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i
+new file mode 100644
+index 0000000..bca4b47
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i.len b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i.len
+new file mode 100644
+index 0000000..131e265
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i.len differ
+diff --git a/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/last-build.bin b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/last-build.bin
+new file mode 100644
+index 0000000..9d85341
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/kotlin/compileDebugKotlin/last-build.bin differ
+diff --git a/node_modules/expo-modules-core/android/build/outputs/logs/manifest-merger-debug-report.txt b/node_modules/expo-modules-core/android/build/outputs/logs/manifest-merger-debug-report.txt
+new file mode 100644
+index 0000000..01c0c51
+--- /dev/null
++++ b/node_modules/expo-modules-core/android/build/outputs/logs/manifest-merger-debug-report.txt
+@@ -0,0 +1,25 @@
++-- Merging decision tree log ---
++manifest
++ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml:1:1-3:12
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml:1:1-3:12
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml:1:1-3:12
++	package
++		ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml:1:11-33
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml
++	xmlns:android
++		ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml:1:1-3:12
++uses-sdk
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml
++INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml
++	android:targetSdkVersion
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml
++		ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml
++	android:minSdkVersion
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml
++		ADDED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml
++		INJECTED from /Users/nikitasubbotin/Projects/mobile-app/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml
+diff --git a/node_modules/expo-modules-core/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin b/node_modules/expo-modules-core/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin
+new file mode 100644
+index 0000000..2685cbd
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin differ
+diff --git a/node_modules/expo-modules-core/android/build/tmp/kotlin-classes/debug/META-INF/expo-modules-core_debug.kotlin_module b/node_modules/expo-modules-core/android/build/tmp/kotlin-classes/debug/META-INF/expo-modules-core_debug.kotlin_module
+new file mode 100644
+index 0000000..609d952
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/tmp/kotlin-classes/debug/META-INF/expo-modules-core_debug.kotlin_module differ
+diff --git a/node_modules/expo-modules-core/android/build/tmp/kotlin-classes/debug/expo/modules/interfaces/permissions/PermissionsResponse$Companion.class b/node_modules/expo-modules-core/android/build/tmp/kotlin-classes/debug/expo/modules/interfaces/permissions/PermissionsResponse$Companion.class
+new file mode 100644
+index 0000000..d5a9994
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/tmp/kotlin-classes/debug/expo/modules/interfaces/permissions/PermissionsResponse$Companion.class differ
+diff --git a/node_modules/expo-modules-core/android/build/tmp/kotlin-classes/debug/expo/modules/interfaces/permissions/PermissionsResponse.class b/node_modules/expo-modules-core/android/build/tmp/kotlin-classes/debug/expo/modules/interfaces/permissions/PermissionsResponse.class
+new file mode 100644
+index 0000000..8c25117
+Binary files /dev/null and b/node_modules/expo-modules-core/android/build/tmp/kotlin-classes/debug/expo/modules/interfaces/permissions/PermissionsResponse.class differ

@@ -3,35 +3,41 @@
 import * as React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {rem, isAndroid} from 'rn-units';
-import Dots from './components/dots';
-import NotNowButton from './components/NotNowButton';
-import Button from './components/Button';
-import NextArrowSvg from '@svg/nextArrow';
+import {Dots} from './components/dots';
+import {NotNowButton} from './components/NotNowButton';
+import {Button} from './components/Button';
+import {NextArrowSvg} from '@svg/NextArrow';
 import {translate} from '@utils/i18n';
 
 interface NavigationPanelProps {
   amount: number;
   activeIndex: number;
   nextPress: () => void;
-  notNowPress: () => void;
+  notNowPress?: () => void;
   yesPleasePress: () => void;
+  withError?: boolean;
+  lastPageButtonText?: string;
+  isButtonActive?: boolean;
 }
 
-const NavigationPanel = ({
+export const NavigationPanel = ({
   amount,
   activeIndex,
   notNowPress,
   nextPress,
+  withError,
   yesPleasePress,
+  lastPageButtonText = translate('button.yes_btn'),
+  isButtonActive = true,
 }: NavigationPanelProps) => {
   const isLastPage = activeIndex >= amount - 1;
   return (
     <View style={styles.navigationPanel}>
       <View style={styles.wrapper}>
-        <Dots amount={amount} activeIndex={activeIndex} />
+        <Dots amount={amount} activeIndex={activeIndex} withError={withError} />
       </View>
 
-      <View style={!isLastPage ? styles.hiddenElement : null}>
+      <View style={isLastPage && notNowPress ? null : styles.hiddenElement}>
         <NotNowButton onPress={notNowPress} disabled={!isLastPage} />
       </View>
 
@@ -40,17 +46,20 @@ const NavigationPanel = ({
           <Button
             onPress={nextPress}
             text={translate('button.next_btn')}
+            disabled={!isButtonActive}
             rightIcon={<NextArrowSvg />}
           />
         ) : (
-          <Button onPress={yesPleasePress} text={translate('button.yes_btn')} />
+          <Button
+            onPress={yesPleasePress}
+            text={lastPageButtonText}
+            disabled={!isButtonActive}
+          />
         )}
       </View>
     </View>
   );
 };
-
-export default NavigationPanel;
 
 const styles = StyleSheet.create({
   navigationPanel: {

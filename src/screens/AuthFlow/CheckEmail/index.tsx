@@ -3,7 +3,7 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const CheckEmail = () => {
+export const CheckEmail = () => {
   return (
     <View style={styles.container}>
       <Text>CheckEmail</Text>
@@ -19,5 +19,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#2c3e50',
   },
 });
-
-export default CheckEmail;

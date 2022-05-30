@@ -5,9 +5,9 @@ import {handleServiceError} from './ApiServiceErrors';
 import {Platform} from 'react-native';
 import axios, {AxiosInstance} from 'axios';
 import DeviceInfo from 'react-native-device-info';
-import env from 'src/constants/env';
-import requestInterceptor from './interceptors/request';
-import responseInterceptor from './interceptors/response';
+import {requestInterceptor} from './interceptors/request';
+import {responseInterceptor} from './interceptors/response';
+import {ENV} from '@constants/env';
 
 function setupApiClient(clientInstance: AxiosInstance) {
   clientInstance.interceptors.request.use(requestInterceptor.onFulfilled);
@@ -19,7 +19,7 @@ function setupApiClient(clientInstance: AxiosInstance) {
 }
 
 const client = axios.create({
-  baseURL: `${env.BASE_URL}/api`,
+  baseURL: `${ENV.BASE_URL}/api`,
   headers: {
     'Mobile-App-Version': `${Platform.OS} - ${DeviceInfo.getVersion()}`,
   },
@@ -72,6 +72,18 @@ export async function put<TRequest, TResponse>(
 export async function get<TResponse>(path: string): Promise<TResponse> {
   try {
     const response = await client.get<TResponse>(path);
+    return response.data;
+  } catch (error) {
+    handleServiceError(error);
+  }
+  return {} as TResponse;
+}
+
+export async function deleteRequest<TResponse>(
+  path: string,
+): Promise<TResponse> {
+  try {
+    const response = await axios.delete<TResponse>(path);
     return response.data;
   } catch (error) {
     handleServiceError(error);

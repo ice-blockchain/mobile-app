@@ -3,10 +3,9 @@
 import * as React from 'react';
 import {Text, View, StyleSheet, Image, ImageRequireSource} from 'react-native';
 import {rem, font, screenHeight, isAndroid} from 'rn-units';
-
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
-import WelcomeItemDescription from './components/WelcomeItemDescription';
+import {WelcomeItemDescription} from './components/WelcomeItemDescription';
 
 interface WelcomeItemProps {
   title: string;
@@ -30,7 +29,7 @@ const MARGIN_TOP = SMALL_SCREEEN
   ? (screenHeight / DESIGN_SCREEN_HEIGHT) * DESIGN_MARGIN_TOP
   : DESIGN_MARGIN_TOP;
 
-const WelcomeItem = ({title, image, description}: WelcomeItemProps) => {
+export const WelcomeItem = ({title, image, description}: WelcomeItemProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
@@ -43,8 +42,6 @@ const WelcomeItem = ({title, image, description}: WelcomeItemProps) => {
     </View>
   );
 };
-
-export default WelcomeItem;
 
 const styles = StyleSheet.create({
   container: {

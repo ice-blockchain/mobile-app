@@ -2,9 +2,9 @@
 
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import navigation from '@navigation/index';
+import {navigation} from '@navigation/index';
 
-const Profile = () => {
+export const Profile = () => {
   const openSettings = () => {
     navigation.navigate('Settings');
   };
@@ -28,5 +28,3 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 });
-
-export default Profile;

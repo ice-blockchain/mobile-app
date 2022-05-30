@@ -1,28 +1,50 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import React from 'react';
-import {Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  TextStyle,
+  StyleProp,
+  ViewStyle,
+} from 'react-native';
 import {rem, font} from 'rn-units';
 import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
 interface ButtonProps {
   onPress: () => void;
   text: string;
+  disabled?: boolean;
+  style?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
   rightIcon?: JSX.Element;
   leftIcon?: JSX.Element;
 }
 
-const Button = ({onPress, text, rightIcon, leftIcon}: ButtonProps) => {
+export const Button = ({
+  onPress,
+  text,
+  rightIcon,
+  leftIcon,
+  style,
+  textStyle,
+  disabled,
+}: ButtonProps) => {
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity
+      style={[styles.container, style, disabled ? styles.disabled : null]}
+      onPress={onPress}
+      disabled={disabled}>
       {leftIcon || null}
-      <Text style={styles.text}>{text}</Text>
+      <Text
+        style={[styles.text, textStyle, disabled ? styles.disabledText : null]}>
+        {text}
+      </Text>
       {rightIcon || null}
     </TouchableOpacity>
   );
 };
-
-export default Button;
 
 const styles = StyleSheet.create({
   container: {
@@ -40,5 +62,11 @@ const styles = StyleSheet.create({
     fontSize: font(14),
     paddingHorizontal: rem(4),
     lineHeight: rem(17),
+  },
+  disabled: {
+    backgroundColor: COLORS.greyBorder,
+  },
+  disabledText: {
+    color: COLORS.white,
   },
 });
