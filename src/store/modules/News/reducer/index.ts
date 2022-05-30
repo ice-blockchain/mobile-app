@@ -2,7 +2,7 @@
 
 import produce from 'immer';
 import {NewsPost} from '@store/types';
-import {NewsActions} from '../actions';
+import {NewsActions} from '@store/modules/News/actions';
 
 export interface State {
   items: {

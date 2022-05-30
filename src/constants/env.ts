@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+// eslint-disable-next-line no-restricted-imports
 import config from 'react-native-config';
 
 export const ENV = {

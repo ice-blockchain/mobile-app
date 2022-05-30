@@ -8,8 +8,36 @@ module.exports = {
       files: ['*.ts', '*.tsx', '*.e2e.js'],
       rules: {
         '@typescript-eslint/no-shadow': ['error'],
+        'react-hooks/exhaustive-deps': 'error',
         'no-shadow': 'off',
         'no-undef': 'off',
+        'no-restricted-imports': [
+          'error',
+          {
+            patterns: [
+              {
+                group: ['..*', './../*'],
+                message: 'Please use absolute import with @ instead',
+              },
+            ],
+            paths: [
+              {
+                name: 'i18n-js',
+                message: 'Please use custom wrapper from @utils/i18n',
+              },
+              {
+                name: 'react-native-config',
+                message: 'Please use custom wrapper from @constants/env',
+              },
+            ],
+          },
+        ],
+        'no-restricted-modules': [
+          'error',
+          {
+            patterns: ['assets/images/*', 'assets/svg/*'],
+          },
+        ],
       },
       env: {
         'detox/detox': true,

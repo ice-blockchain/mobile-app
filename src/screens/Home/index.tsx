@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import testIDs from '../../../e2e/testIDs';
+import testIDs from 'e2e/testIDs';
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {PrimaryButton} from '@components/PrimaryButton';

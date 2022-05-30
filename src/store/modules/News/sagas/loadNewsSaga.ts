@@ -1,12 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {put, select} from 'redux-saga/effects';
-// import AuthSelectors from 'src/modules/Auth/selectors';
-// import Api from 'src/api';
-// import {ApiNews, LIMIT} from 'src/api/news/getNews';
+import {put} from 'redux-saga/effects';
 // import NewsSelectors from '../selectors';
-import {NewsActions} from '../actions';
 import {NewsPost} from '@store/types';
+import {NewsActions} from '@store/modules/News/actions';
 
 export function* loadNewsSaga(
   action: ReturnType<typeof NewsActions.NEWS_LOAD.START.create>,
