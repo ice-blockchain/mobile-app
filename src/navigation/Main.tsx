@@ -18,6 +18,11 @@ const tabOptions = {
   lazy: true,
 };
 
+export type MainStackParamList = {
+  Profile: undefined;
+  Settings: undefined;
+};
+
 const HomeTab = () => (
   <Tabs.Navigator
     tabBar={() => null}

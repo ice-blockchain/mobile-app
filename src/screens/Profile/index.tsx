@@ -1,10 +1,16 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {navigation} from '@navigation/index';
+import {MainStackParamList} from '@navigation/Main';
+import {StackNavigationProp} from '@react-navigation/stack';
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-export const Profile = () => {
+type Props = {
+  navigation: StackNavigationProp<MainStackParamList, 'Profile'>;
+};
+
+export const Profile = ({navigation}: Props) => {
+  //TODO::add useAppNavigation
   const openSettings = () => {
     navigation.navigate('Settings');
   };

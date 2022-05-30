@@ -20,6 +20,7 @@ module.exports = {
         'no-undef': 'off',
         'simple-import-sort/imports': 'error',
         'simple-import-sort/exports': 'error',
+        '@typescript-eslint/no-explicit-any': 'error',
         'no-restricted-imports': [
           'error',
           {

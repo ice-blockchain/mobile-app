@@ -7,7 +7,7 @@ import {persistReducer} from 'redux-persist';
 
 export interface State {
   userData: {
-    email: string | null;
+    email: string | null | undefined;
     phoneNumber: string | null;
     // isMfaEnabled: boolean;
     // issuer: string;
