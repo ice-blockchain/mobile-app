@@ -79,3 +79,6 @@ coverage/
 configuration/
 
 .history
+
+#
+*.dSYM.zip
