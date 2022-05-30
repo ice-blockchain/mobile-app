@@ -28,14 +28,20 @@ def ensure_temp_keychain(name, password)
     create_temp_keychain(name, password)
 end
 
+def product_bundle_id(xcodeproj)
+    project = Xcodeproj::Project.open(xcodeproj)
+    scheme = project.native_targets[0]
+    build_configuration = scheme.build_configurations.first
+    build_configuration.build_settings['PRODUCT_BUNDLE_IDENTIFIER']
+end
+
 platform :ios do
     desc "Push a new staging build to TestFlight"
     lane :buildStagingTestFlight do
         ruby_version("2.7.4")
-        main_info_plist = "./ios/Ice/Info.plist"
-        xcodeproj = "./ios/ice.xcodeproj"
+        xcodeproj = "../ios/ice.xcodeproj"
         workspace = "./ios/ice.xcworkspace"
-        main_bundle_id = get_info_plist_value(path: main_info_plist, key: "CFBundleIdentifier")
+        main_bundle_id = product_bundle_id(xcodeproj)
 
         ensure_temp_keychain(TEMP_KEYCHAIN_USER, TEMP_KEYCHAIN_PASSWORD)
 
@@ -51,7 +57,7 @@ platform :ios do
             clean_install: true,
             podfile: "./ios/Podfile",
         )
-        
+
         match(
             type: "appstore",
             app_identifier: main_bundle_id,

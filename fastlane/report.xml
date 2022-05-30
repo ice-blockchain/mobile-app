@@ -5,37 +5,61 @@
     
     
       
+<<<<<<< HEAD
       <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000545">
+=======
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000504">
+>>>>>>> deb4dce (ci: fix get bundle id on ci)
         
       </testcase>
     
       
+<<<<<<< HEAD
       <testcase classname="fastlane.lanes" name="1: Verifying Ruby version" time="0.000367">
+=======
+      <testcase classname="fastlane.lanes" name="1: Verifying Ruby version" time="0.000308">
+>>>>>>> deb4dce (ci: fix get bundle id on ci)
         
       </testcase>
     
       
+<<<<<<< HEAD
       <testcase classname="fastlane.lanes" name="2: delete_keychain" time="0.034104">
+=======
+      <testcase classname="fastlane.lanes" name="2: delete_keychain" time="0.019725">
+>>>>>>> deb4dce (ci: fix get bundle id on ci)
         
       </testcase>
     
       
+<<<<<<< HEAD
       <testcase classname="fastlane.lanes" name="3: create_keychain" time="0.112511">
+=======
+      <testcase classname="fastlane.lanes" name="3: create_keychain" time="0.087536">
+>>>>>>> deb4dce (ci: fix get bundle id on ci)
         
       </testcase>
     
       
+<<<<<<< HEAD
       <testcase classname="fastlane.lanes" name="4: app_store_connect_api_key" time="0.009052">
+=======
+      <testcase classname="fastlane.lanes" name="4: app_store_connect_api_key" time="0.00443">
+>>>>>>> deb4dce (ci: fix get bundle id on ci)
         
       </testcase>
     
       
+<<<<<<< HEAD
       <testcase classname="fastlane.lanes" name="5: cocoapods" time="15.078256">
         
       </testcase>
     
       
       <testcase classname="fastlane.lanes" name="6: match" time="1.492352">
+=======
+      <testcase classname="fastlane.lanes" name="5: match" time="1.443559">
+>>>>>>> deb4dce (ci: fix get bundle id on ci)
         
       </testcase>
     

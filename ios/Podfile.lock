@@ -776,6 +776,10 @@ SPEC CHECKSUMS:
   Yoga: 6671cf077f614314c22fd09ddf87d7abeee64e96
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
+<<<<<<< HEAD
 PODFILE CHECKSUM: 54531bf7df65bc41bd491ccfb373dc12a13ee7ff
+=======
+PODFILE CHECKSUM: 7229837abf568b7df67f6649ea0744389a2d756c
+>>>>>>> deb4dce (ci: fix get bundle id on ci)
 
 COCOAPODS: 1.11.3
