@@ -1,4 +1,4 @@
-package com.ice.generated;
+package io.ice.app.generated;
 
 import java.util.Arrays;
 import java.util.List;

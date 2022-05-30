@@ -1,4 +1,4 @@
-package com.ice;
+package io.ice.app;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
