@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {createSelector} from 'reselect';
+
 import {getNewsPostsByIds} from './getNewsPostsByIds';
 
 interface NewsPostItem {

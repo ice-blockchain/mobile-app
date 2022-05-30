@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
-import {font, rem, screenHeight} from 'rn-units';
-import {ClaimNicknameSvg} from '@svg/ClaimNickname';
-import {translate} from '@utils/i18n';
-import {FONTS} from '@constants/fonts';
-import {COLORS} from '@constants/colors';
 import {CommonInput} from '@components/CommonInput';
+import {COLORS} from '@constants/colors';
+import {FONTS} from '@constants/fonts';
+import {ClaimNicknameSvg} from '@svg/ClaimNickname';
 import {ManIconSvg} from '@svg/ManIcon';
+import {translate} from '@utils/i18n';
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+import {font, rem, screenHeight} from 'rn-units';
 
 const h = (screenHeight * 291) / 811;
 const w = (h * 258) / 291;

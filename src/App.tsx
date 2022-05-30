@@ -1,14 +1,15 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {Router} from '@navigation/Router';
+import {Initialization} from '@screens/AuthFlow/Initialization';
+import {System} from '@screens/System';
+import {magic} from '@services/magicLink';
 import React from 'react';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {Router} from '@navigation/Router';
-import {System} from '@screens/System';
-import {configuredStore} from './store/configureStore';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
-import {magic} from '@services/magicLink';
-import {Initialization} from '@screens/AuthFlow/Initialization';
+
+import {configuredStore} from './store/configureStore';
 
 export function App(): React.ReactNode {
   return (

@@ -2,7 +2,7 @@
 
 import {LogoSvg} from '@svg/Logo';
 import React, {useEffect, useRef} from 'react';
-import {View, StyleSheet, Animated, Easing} from 'react-native';
+import {Animated, Easing, StyleSheet, View} from 'react-native';
 
 export const Initialization = () => {
   const spinValue = useRef(new Animated.Value(0));

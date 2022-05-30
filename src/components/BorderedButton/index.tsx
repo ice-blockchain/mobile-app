@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import React, {ReactNode} from 'react';
-import {TouchableOpacity, StyleSheet, Text, View} from 'react-native';
-import {rem, font} from 'rn-units';
-import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
+import {FONTS} from '@constants/fonts';
+import React, {ReactNode} from 'react';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {font, rem} from 'rn-units';
 
 interface BorderedButtonProps {
   onPress: () => void;

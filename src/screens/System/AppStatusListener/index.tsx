@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import React, {useState} from 'react';
-import {View, StyleSheet} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import RNBootSplash from 'react-native-bootsplash';
 
 export function AppStatusListener() {

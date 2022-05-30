@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {COLORS} from '@constants/colors';
+import {FONTS} from '@constants/fonts';
 import React from 'react';
 import {
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  TextStyle,
   StyleProp,
+  StyleSheet,
+  Text,
+  TextStyle,
+  TouchableOpacity,
   ViewStyle,
 } from 'react-native';
-import {rem, font} from 'rn-units';
-import {FONTS} from '@constants/fonts';
-import {COLORS} from '@constants/colors';
+import {font, rem} from 'rn-units';
 interface ButtonProps {
   onPress: () => void;
   text: string;

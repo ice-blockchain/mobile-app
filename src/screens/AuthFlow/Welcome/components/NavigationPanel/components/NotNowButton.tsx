@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import * as React from 'react';
-import {Text, TouchableOpacity, StyleSheet} from 'react-native';
-import {rem} from 'rn-units';
-import {FONTS, WEIGHTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
+import {FONTS, WEIGHTS} from '@constants/fonts';
 import {translate} from '@utils/i18n';
+import * as React from 'react';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {rem} from 'rn-units';
 interface NotNowButtonProps {
   onPress?: () => void;
   disabled: boolean;

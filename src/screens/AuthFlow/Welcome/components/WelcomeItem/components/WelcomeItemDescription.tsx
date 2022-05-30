@@ -1,13 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import * as React from 'react';
-import {Text, StyleSheet, View} from 'react-native';
-import {font, rem, isAndroid} from 'rn-units';
-
 import {COLORS} from '@constants/colors';
 import {FONTS, WEIGHTS} from '@constants/fonts';
 import {LogoIconSvg} from '@svg/LogoIcon';
 import {translate} from '@utils/i18n';
+import * as React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+import {font, isAndroid, rem} from 'rn-units';
 
 interface WelcomeItemDescriptionProps {
   items: Array<String | number>; // where 1 is icon with text 'ice'

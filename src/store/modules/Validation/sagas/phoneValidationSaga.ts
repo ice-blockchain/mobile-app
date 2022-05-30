@@ -2,6 +2,7 @@
 
 import {Api} from '@api/index';
 import {put} from 'redux-saga/effects';
+
 import {ValidationActions} from '../actions';
 
 const actionCreator = ValidationActions.PHONE_VALIDATION.START.create;

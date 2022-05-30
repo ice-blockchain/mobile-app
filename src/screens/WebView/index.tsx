@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+// import RNWebView from 'react-native-webview';
+import {navigation} from '@navigation/index';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
-// import RNWebView from 'react-native-webview';
-import {navigation} from '@navigation/index';
 // import BackButton from 'src/components/BackButton';
 
 export function WebView() {

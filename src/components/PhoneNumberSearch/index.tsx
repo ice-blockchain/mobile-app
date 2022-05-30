@@ -8,12 +8,12 @@ import {SearchIconSvg} from '@svg/SearchIcon';
 import {debounce} from 'lodash';
 import React, {useEffect, useState} from 'react';
 import {
-  Text,
-  View,
-  StyleSheet,
   StyleProp,
-  ViewStyle,
+  StyleSheet,
+  Text,
   TouchableOpacity,
+  View,
+  ViewStyle,
 } from 'react-native';
 import {ScrollView, TextInput} from 'react-native-gesture-handler';
 import {font, rem} from 'rn-units';

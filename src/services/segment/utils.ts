@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {ShareResourceType} from '@services/segment/types';
 import {JsonMap} from '@segment/analytics-react-native';
+import {ShareResourceType} from '@services/segment/types';
 import {Content, StoreState, User} from '@store/types';
 
 export function getPageName(

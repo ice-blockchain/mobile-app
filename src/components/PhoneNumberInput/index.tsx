@@ -6,12 +6,12 @@ import {FONTS} from '@constants/fonts';
 import {ArrowDownIcon} from '@svg/ArrowDownIcon';
 import * as React from 'react';
 import {
-  Text,
-  View,
+  StyleProp,
   StyleSheet,
+  Text,
   TextInput,
   TouchableOpacity,
-  StyleProp,
+  View,
   ViewStyle,
 } from 'react-native';
 import {font, rem} from 'rn-units';

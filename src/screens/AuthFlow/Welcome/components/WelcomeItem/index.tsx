@@ -1,10 +1,11 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import * as React from 'react';
-import {Text, View, StyleSheet, Image, ImageRequireSource} from 'react-native';
-import {rem, font, screenHeight, isAndroid} from 'rn-units';
-import {FONTS} from '@constants/fonts';
 import {COLORS} from '@constants/colors';
+import {FONTS} from '@constants/fonts';
+import * as React from 'react';
+import {Image, ImageRequireSource, StyleSheet, Text, View} from 'react-native';
+import {font, isAndroid, rem, screenHeight} from 'rn-units';
+
 import {WelcomeItemDescription} from './components/WelcomeItemDescription';
 
 interface WelcomeItemProps {

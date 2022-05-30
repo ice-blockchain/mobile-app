@@ -1,38 +1,39 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {BorderedButton} from '@components/BorderedButton';
+import {CommonInput} from '@components/CommonInput';
+import {PhoneNumberInput} from '@components/PhoneNumberInput';
+import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
+import {PrimaryButton} from '@components/PrimaryButton';
+import {COLORS} from '@constants/colors';
+import {countriesCode} from '@constants/countries';
+import {FONTS} from '@constants/fonts';
+import {OAuthRedirectResult} from '@magic-ext/react-native-oauth';
+import {SignUpStackParamList} from '@navigation/Auth';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {magicLink} from '@services/magicLink';
+import {AuthActions} from '@store/modules/Auth/actions';
+import {RootState} from '@store/rootReducer';
+import {EmailIconSvg} from '@svg/EmailIcon';
+import {LogoSvg} from '@svg/Logo';
+import {MagicIconSvg} from '@svg/MagicIcon';
+import {PhoneIconSvg} from '@svg/PhoneIcon';
+import {translate} from '@utils/i18n';
 import React, {useState} from 'react';
 import {
+  Keyboard,
+  KeyboardAvoidingView,
+  ScrollView,
+  StatusBar,
   StyleSheet,
   Text,
   View,
-  StatusBar,
-  KeyboardAvoidingView,
-  Keyboard,
-  ScrollView,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {rem, font, isIOS} from 'rn-units';
-import {LogoSvg} from '@svg/Logo';
-import {EmailIconSvg} from '@svg/EmailIcon';
-import {PhoneIconSvg} from '@svg/PhoneIcon';
-import {CommonInput} from '@components/CommonInput';
-import {PrimaryButton} from '@components/PrimaryButton';
-import {BorderedButton} from '@components/BorderedButton';
-import {COLORS} from '@constants/colors';
-import {FONTS} from '@constants/fonts';
-import {MagicIconSvg} from '@svg/MagicIcon';
-import {translate} from '@utils/i18n';
-import {SocialSignIn, ESocialType} from './components/socialSignIn';
-import {magicLink} from '@services/magicLink';
 import {useDispatch, useSelector} from 'react-redux';
-import {AuthActions} from '@store/modules/Auth/actions';
-import {RootState} from '@store/rootReducer';
-import {PhoneNumberInput} from '@components/PhoneNumberInput';
-import {countriesCode} from '@constants/countries';
-import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {SignUpStackParamList} from '@navigation/Auth';
-import {OAuthRedirectResult} from '@magic-ext/react-native-oauth';
+import {font, isIOS, rem} from 'rn-units';
+
+import {ESocialType, SocialSignIn} from './components/socialSignIn';
 
 type Props = {
   navigation: StackNavigationProp<SignUpStackParamList, 'SignIn'>;

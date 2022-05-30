@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {RequestConfig} from '@api/apiClientTypes';
-import {handleServiceError} from './ApiServiceErrors';
-import {Platform} from 'react-native';
+import {ENV} from '@constants/env';
 import axios, {AxiosInstance} from 'axios';
+import {Platform} from 'react-native';
 import DeviceInfo from 'react-native-device-info';
+
+import {handleServiceError} from './ApiServiceErrors';
 import {requestInterceptor} from './interceptors/request';
 import {responseInterceptor} from './interceptors/response';
-import {ENV} from '@constants/env';
 
 function setupApiClient(clientInstance: AxiosInstance) {
   clientInstance.interceptors.request.use(requestInterceptor.onFulfilled);

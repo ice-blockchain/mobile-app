@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import * as React from 'react';
-import {Svg, Path, Rect, G, Defs, ClipPath} from 'react-native-svg';
+import {ClipPath, Defs, G, Path, Rect, Svg} from 'react-native-svg';
 
 export const ClaimNicknameSvg = ({width = 258, height = 292}) => {
   return (

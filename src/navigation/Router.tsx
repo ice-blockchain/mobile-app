@@ -1,17 +1,18 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import React, {useEffect} from 'react';
-import {Linking} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import {Main} from './Main';
-// import selectors from '@store/selectors';
-import {AuthNavigator} from './Auth';
+import {Initialization} from '@screens/AuthFlow/Initialization';
 import {magicLink} from '@services/magicLink';
 import {AuthActions} from '@store/modules/Auth/actions';
-import {useDispatch, useSelector} from 'react-redux';
-import {Initialization} from '@screens/AuthFlow/Initialization';
-import {RootState} from '@store/rootReducer';
 import {isSignUpCompletedSelector} from '@store/modules/Auth/selectors';
+import {RootState} from '@store/rootReducer';
+import React, {useEffect} from 'react';
+import {Linking} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
+
+// import selectors from '@store/selectors';
+import {AuthNavigator} from './Auth';
+import {Main} from './Main';
 
 function ActiveNavigator() {
   const dispatch = useDispatch();

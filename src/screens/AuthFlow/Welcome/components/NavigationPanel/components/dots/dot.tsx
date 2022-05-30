@@ -2,7 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import React, {useEffect, useRef} from 'react';
-import {StyleSheet, Animated} from 'react-native';
+import {Animated, StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
 interface DotProps {

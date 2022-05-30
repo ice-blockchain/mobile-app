@@ -2,11 +2,11 @@
 
 import {Action} from 'redux';
 import {
-  fork,
-  take,
-  cancel,
   ActionPattern,
+  cancel,
+  fork,
   HelperWorkerParameters,
+  take,
 } from 'redux-saga/effects';
 
 export function takeLatestEveryUnique<

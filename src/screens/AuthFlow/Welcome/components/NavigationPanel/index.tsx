@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import * as React from 'react';
-import {View, StyleSheet} from 'react-native';
-import {rem, isAndroid} from 'rn-units';
-import {Dots} from './components/dots';
-import {NotNowButton} from './components/NotNowButton';
-import {Button} from './components/Button';
 import {NextArrowSvg} from '@svg/NextArrow';
 import {translate} from '@utils/i18n';
+import * as React from 'react';
+import {StyleSheet, View} from 'react-native';
+import {isAndroid, rem} from 'rn-units';
+
+import {Button} from './components/Button';
+import {Dots} from './components/dots';
+import {NotNowButton} from './components/NotNowButton';
 
 interface NavigationPanelProps {
   amount: number;

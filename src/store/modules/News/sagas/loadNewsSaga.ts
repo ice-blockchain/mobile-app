@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {put} from 'redux-saga/effects';
+import {NewsActions} from '@store/modules/News/actions';
 // import NewsSelectors from '../selectors';
 import {NewsPost} from '@store/types';
-import {NewsActions} from '@store/modules/News/actions';
+import {put} from 'redux-saga/effects';
 
 export function* loadNewsSaga(
   action: ReturnType<typeof NewsActions.NEWS_LOAD.START.create>,

@@ -3,8 +3,9 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
-import {AccountActions} from '../actions';
+
 import {AuthActions} from '../../Auth/actions';
+import {AccountActions} from '../actions';
 
 export interface State {
   email: string;

@@ -1,27 +1,28 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {COLORS} from '@constants/colors';
+import {SignUpStackParamList} from '@navigation/Auth';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {AuthActions} from '@store/modules/Auth/actions';
+import {translate} from '@utils/i18n';
 import React, {useRef, useState} from 'react';
 import {
-  View,
-  StyleSheet,
-  StatusBar,
-  KeyboardAvoidingView,
-  TouchableWithoutFeedback,
   Keyboard,
+  KeyboardAvoidingView,
   ScrollView,
+  StatusBar,
+  StyleSheet,
+  TouchableWithoutFeedback,
+  View,
 } from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import PagerView from 'react-native-pager-view';
-import {isIOS} from 'rn-units';
-import {COLORS} from '@constants/colors';
-import {translate} from '@utils/i18n';
-import {WhoInvitedYou} from './components/WhoInvitedYou';
-import {ClaimNickName} from './components/ClaimNickname';
-import {NavigationPanel} from '../Welcome/components/NavigationPanel';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {useDispatch} from 'react-redux';
-import {AuthActions} from '@store/modules/Auth/actions';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {SignUpStackParamList} from '@navigation/Auth';
+import {isIOS} from 'rn-units';
+
+import {NavigationPanel} from '../Welcome/components/NavigationPanel';
+import {ClaimNickName} from './components/ClaimNickname';
+import {WhoInvitedYou} from './components/WhoInvitedYou';
 
 const nicknameRegularExp = /^[A-Za-z0-9]+([A-Za-z0-9]*|[._-]?[A-Za-z0-9]+)*$/;
 

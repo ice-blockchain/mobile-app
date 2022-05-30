@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import React from 'react';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {CheckEmail} from '@screens/AuthFlow/CheckEmail';
 import {ClaimNickname} from '@screens/AuthFlow/ClaimNickname';
-import {Invite} from '@screens/AuthFlow/Invite';
-import {Welcome} from '@screens/AuthFlow/Welcome';
-import {SignIn} from '@screens/AuthFlow/SignIn';
-import {AuthNavigationHelper} from '@utils/AuthNavigationHelper';
-import {WebView} from '@screens/WebView';
 import {Intro} from '@screens/AuthFlow/Intro';
+import {Invite} from '@screens/AuthFlow/Invite';
+import {SignIn} from '@screens/AuthFlow/SignIn';
+import {Welcome} from '@screens/AuthFlow/Welcome';
+import {WebView} from '@screens/WebView';
+import {AuthNavigationHelper} from '@utils/AuthNavigationHelper';
+import React from 'react';
 
 const Stack = createStackNavigator();
 
