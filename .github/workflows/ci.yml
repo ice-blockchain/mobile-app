@@ -1,0 +1,84 @@
+name: ice CI
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches:
+      - master
+      - 'release/v*'
+jobs:
+  tests-and-checks:
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout main repo
+        uses: actions/checkout@v3
+        with:
+          path: main-repo
+      - name: Checkout the target 'master' branch of 'mobile-app-secrets'
+        uses: actions/checkout@v3
+        with:
+          repository: ice-blockchain/mobile-app-secrets
+          ref: master
+          token: ${{ secrets.ICE_CI_CD_BOT_GH_PAT }}
+          path: mobile-app-secrets
+          fetch-depth: 0
+      - name: Run script to copy the configuration folder
+        run: |
+          set -o xtrace
+          # ls -l $GITHUB_WORKSPACE/main-repo
+          # mkdir -p $GITHUB_WORKSPACE/main-repo/configuration && ls -l $GITHUB_WORKSPACE/main-repo/configuration
+          # ls -l $GITHUB_WORKSPACE/mobile-app-secrets
+          ls -la $GITHUB_WORKSPACE/mobile-app-secrets/configuration
+          cp -rfp $GITHUB_WORKSPACE/mobile-app-secrets/configuration $GITHUB_WORKSPACE/main-repo/
+          ls -la $GITHUB_WORKSPACE/main-repo/configuration
+      - uses: actions/setup-node@master
+      - name: Cache yarn
+        uses: c-hive/gha-yarn-cache@v2
+        with:
+          directory: main-repo
+      - name: Install npm dependencies
+        run: |
+          cd main-repo
+          yarn
+
+      - name: Check types
+        run: |
+          cd main-repo
+          yarn check-types
+      - name: Lint
+        run: |
+          cd main-repo
+          yarn lint
+      - name: Run tests
+        run: |
+          cd main-repo
+          yarn test
+      - name: Setup Ruby version
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7.4'
+
+      - name: Bundle dependencies
+        run: |
+          cd main-repo
+          bundle install
+      - name: Deploy iOS Staging to TestFlight via Fastlane
+        run: |
+          ls
+          cd main-repo
+          bundle exec fastlane buildStagingTestFlight
+        env:
+          APP_STORE_CONNECT_TEAM_ID: '${{ secrets.APP_STORE_CONNECT_TEAM_ID }}'
+          DEVELOPER_APP_ID: '${{ secrets.DEVELOPER_APP_ID }}'
+          DEVELOPER_APP_IDENTIFIER: '${{ secrets.DEVELOPER_APP_IDENTIFIER }}'
+          DEVELOPER_PORTAL_TEAM_ID: '${{ secrets.DEVELOPER_PORTAL_TEAM_ID }}'
+          FASTLANE_APPLE_ID: '${{ secrets.FASTLANE_APPLE_ID }}'
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: '${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}'
+          MATCH_PASSWORD: '${{ secrets.MATCH_PASSWORD }}'
+          GIT_AUTHORIZATION: '${{ secrets.GIT_AUTHORIZATION }}'
+          PROVISIONING_PROFILE_SPECIFIER: '${{ secrets.PROVISIONING_PROFILE_SPECIFIER }}'
+          TEMP_KEYCHAIN_PASSWORD: '${{ secrets.TEMP_KEYCHAIN_PASSWORD }}'
+          TEMP_KEYCHAIN_USER: '${{ secrets.TEMP_KEYCHAIN_USER }}'
+          APPLE_KEY_ID: '${{ secrets.APPLE_KEY_ID }}'
+          APPLE_ISSUER_ID: '${{ secrets.APPLE_ISSUER_ID }}'
+          APPLE_KEY_CONTENT: '${{ secrets.APPLE_KEY_CONTENT }}'
+          BASIC_AUTH: '${{ secrets.BASIC_AUTH }}'
