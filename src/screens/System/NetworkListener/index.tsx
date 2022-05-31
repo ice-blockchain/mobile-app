@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import NetInfo from '@react-native-community/netinfo';
-import {checkNetwork} from '@utils/checkNetwork';
-import {isAppActive} from '@utils/helpers';
+import {isAppActive} from '@utils/application';
+import {checkNetwork} from '@utils/network';
 import {useEffect} from 'react';
 
 export function NetworkListener() {

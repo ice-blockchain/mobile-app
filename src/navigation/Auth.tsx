@@ -8,8 +8,8 @@ import {Invite} from '@screens/AuthFlow/Invite';
 import {SignIn} from '@screens/AuthFlow/SignIn';
 import {Welcome} from '@screens/AuthFlow/Welcome';
 import {WebView} from '@screens/WebView';
-import {AuthNavigationHelper} from '@utils/AuthNavigationHelper';
 import React from 'react';
+import {useInitialRouteName} from 'src/hooks/useInitialRouteName';
 
 const Stack = createStackNavigator();
 
@@ -31,9 +31,11 @@ export type SignUpStackParamList = {
 };
 
 function Signup() {
-  const initial = AuthNavigationHelper();
+  const initialRouteName = useInitialRouteName();
   return (
-    <Stack.Navigator screenOptions={screenOptions} initialRouteName={initial}>
+    <Stack.Navigator
+      screenOptions={screenOptions}
+      initialRouteName={initialRouteName}>
       <Stack.Screen name="Intro" component={Intro} />
       <Stack.Screen name="CheckEmail" component={CheckEmail} />
       <Stack.Screen name="ClaimNickname" component={ClaimNickname} />

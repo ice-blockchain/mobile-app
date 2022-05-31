@@ -34,9 +34,6 @@ function ActiveNavigator() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // const profile = selectors.profile();
-
-  // console.log(user);
   if (initialization) {
     return <Initialization />;
   }
