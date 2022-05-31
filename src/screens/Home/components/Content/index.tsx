@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import InviteFriendsButton from '@screens/Home/components/Content/components/InviteFriendsButton';
+import {TeamHomeScreen} from '@screens/Home/components/Content/components/Team';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -11,6 +12,7 @@ export const HomeContent = ({}: HomeContentProps) => {
   return (
     <View style={styles.container}>
       <InviteFriendsButton />
+      <TeamHomeScreen />
     </View>
   );
 };
@@ -18,6 +20,5 @@ export const HomeContent = ({}: HomeContentProps) => {
 const styles = StyleSheet.create({
   container: {
     paddingTop: rem(24),
-    marginHorizontal: rem(23),
   },
 });
