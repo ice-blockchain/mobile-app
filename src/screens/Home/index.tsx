@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
+import {HomeContent} from '@screens/Home/components/Content';
 import React, {useRef} from 'react';
 import {Animated, StyleSheet, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -38,42 +39,8 @@ export const Home = () => {
             ],
             {useNativeDriver: false},
           )}>
-          <View
-            style={{
-              height: 200,
-              backgroundColor: 'rgba(34,255,0,1)',
-              marginLeft: 40,
-              width: 200,
-              marginBottom: 50,
-            }}
-          />
-          <View
-            style={{
-              height: 300,
-              backgroundColor: 'rgba(34,255,0,1)',
-              marginLeft: 140,
-              width: 150,
-              marginBottom: 50,
-            }}
-          />
-          <View
-            style={{
-              height: 400,
-              backgroundColor: 'rgba(34,255,0,1)',
-              marginLeft: 10,
-              width: 150,
-              marginBottom: 50,
-            }}
-          />
-          <View
-            style={{
-              height: 400,
-              backgroundColor: 'rgba(34,255,0,1)',
-              marginLeft: 40,
-              width: 200,
-              marginBottom: 50,
-            }}
-          />
+          <View style={{height: rem(224)}} />
+          <HomeContent />
         </Animated.ScrollView>
 
         <HomeTiles scrolling={scrolling} />
