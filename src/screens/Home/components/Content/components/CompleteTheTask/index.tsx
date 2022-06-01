@@ -3,6 +3,8 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {
+  itemHeight,
+  itemLeftPosition,
   TaskItem,
   TCompleteTheTask,
 } from '@screens/Home/components/Content/components/CompleteTheTask/TaskItem';
@@ -21,7 +23,7 @@ const taskItems: TCompleteTheTask[] = [
   {type: 'invite5Friends', completed: false, isActive: false},
   {type: 'socialShare', completed: false, isActive: false},
 ];
-const itemHeight = 58;
+
 const halfHeaderHeight = 59 / 2;
 
 export const CompleteTheTask = ({}: CompleteTheTaskProps) => {
@@ -79,7 +81,7 @@ const styles = StyleSheet.create({
     marginBottom: 48,
   },
   amountWrapper: {
-    marginLeft: 28,
+    marginLeft: itemLeftPosition - 49 / 2,
     width: 49,
     height: 49,
     justifyContent: 'center',
@@ -137,13 +139,13 @@ const styles = StyleSheet.create({
   },
   finishedTasksLine: {
     position: 'absolute',
-    left: 52,
+    left: itemLeftPosition,
     width: 1,
     backgroundColor: COLORS.finishedTasksLine,
   },
   upcomingTasksLine: {
     position: 'absolute',
-    left: 52,
+    left: itemLeftPosition,
     width: 1,
     backgroundColor: COLORS.upcomingTasksLine,
   },

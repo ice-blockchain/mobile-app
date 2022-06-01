@@ -39,6 +39,17 @@ interface TaskItemProps {
   task: TCompleteTheTask;
 }
 
+const iconSize = 36;
+const iconPaddingVertical = rem(11);
+
+const itemMarginHorizontal = rem(28);
+const itemPaddingHorizontal = rem(13);
+const doneIconSize = 23;
+
+export const itemLeftPosition =
+  itemMarginHorizontal + itemPaddingHorizontal + doneIconSize / 2;
+export const itemHeight = iconSize + iconPaddingVertical * 2;
+
 export const TaskItem = ({task}: TaskItemProps) => {
   const getContent = (
     type: TCompleteTheTaskTypes,
@@ -137,8 +148,8 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginHorizontal: 28,
-    paddingHorizontal: 13,
+    marginHorizontal: itemMarginHorizontal,
+    paddingHorizontal: itemPaddingHorizontal,
     borderRadius: 16,
   },
   containerInactive: {
@@ -159,11 +170,11 @@ const styles = StyleSheet.create({
   },
   iconWrapper: {
     paddingHorizontal: 9,
-    paddingVertical: 11,
+    paddingVertical: iconPaddingVertical,
   },
   iconContainer: {
-    width: 36,
-    height: 36,
+    width: iconSize,
+    height: iconSize,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
