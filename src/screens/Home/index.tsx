@@ -24,7 +24,7 @@ export const Home = () => {
       <Animated.View
         style={[styles.back, {transform: [{translateY: translation}]}]}
       />
-      <View style={{flex: 1}}>
+      <View style={styles.content}>
         <Animated.ScrollView
           scrollEventThrottle={32}
           onScroll={Animated.event(
@@ -53,6 +53,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1B47C3',
+  },
+  content: {
+    flex: 1,
   },
   back: {
     backgroundColor: COLORS.white,

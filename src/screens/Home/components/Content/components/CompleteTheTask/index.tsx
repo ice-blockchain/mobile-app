@@ -8,6 +8,7 @@ import {
   TaskItem,
   TCompleteTheTask,
 } from '@screens/Home/components/Content/components/CompleteTheTask/TaskItem';
+import {ProgressCircleSvg} from '@svg/ProgressCircle';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -31,6 +32,8 @@ export const CompleteTheTask = ({}: CompleteTheTaskProps) => {
   const completedTasksAmount = taskItems.filter(v => v.completed).length;
   const activeLineHeight =
     halfHeaderHeight + itemHeight * (activeItem - 1) + itemHeight / 2;
+
+  const progreccInPercent = (completedTasksAmount / taskItems.length) * 100;
   return (
     <View style={styles.container}>
       <View
@@ -59,6 +62,9 @@ export const CompleteTheTask = ({}: CompleteTheTaskProps) => {
               <Text style={styles.amountTextSmall}>{' of '}</Text>
               {taskItems.length}
             </Text>
+          </View>
+          <View style={styles.progress}>
+            <ProgressCircleSvg progress={progreccInPercent} />
           </View>
         </View>
         <View>
@@ -148,5 +154,8 @@ const styles = StyleSheet.create({
     left: itemLeftPosition,
     width: 1,
     backgroundColor: COLORS.upcomingTasksLine,
+  },
+  progress: {
+    position: 'absolute',
   },
 });
