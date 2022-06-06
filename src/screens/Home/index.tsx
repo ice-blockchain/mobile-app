@@ -8,42 +8,43 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
 
 import HomeHeader from './components/Header';
-import {HomeTiles} from './components/HomeCards';
+import {HomeCards} from './components/HomeCards';
 
 export const Home = () => {
   const scrolling = useRef(new Animated.Value(0)).current;
   const translation = scrolling.interpolate({
     inputRange: [0, 230],
-    outputRange: [rem(253), rem(137)], // to 137
+    outputRange: [rem(145), rem(0)],
     extrapolate: 'clamp',
   });
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
       <HomeHeader />
-      <Animated.View
-        style={[styles.back, {transform: [{translateY: translation}]}]}
-      />
-      <View style={styles.content}>
-        <Animated.ScrollView
-          scrollEventThrottle={32}
-          onScroll={Animated.event(
-            [
-              {
-                nativeEvent: {
-                  contentOffset: {
-                    y: scrolling,
+      <View style={styles.contentWrapper}>
+        <View style={styles.content}>
+          <Animated.View
+            style={[styles.back, {transform: [{translateY: translation}]}]}
+          />
+          <Animated.ScrollView
+            contentContainerStyle={styles.scrollContent}
+            scrollEventThrottle={32}
+            onScroll={Animated.event(
+              [
+                {
+                  nativeEvent: {
+                    contentOffset: {
+                      y: scrolling,
+                    },
                   },
                 },
-              },
-            ],
-            {useNativeDriver: false},
-          )}>
-          <View style={{height: rem(224)}} />
-          <HomeContent />
-        </Animated.ScrollView>
-
-        <HomeTiles scrolling={scrolling} />
+              ],
+              {useNativeDriver: false},
+            )}>
+            <HomeContent />
+          </Animated.ScrollView>
+        </View>
+        <HomeCards scrolling={scrolling} />
       </View>
     </SafeAreaView>
   );
@@ -56,6 +57,10 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
+    marginTop: rem(19),
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+    overflow: 'hidden',
   },
   back: {
     backgroundColor: COLORS.white,
@@ -66,5 +71,12 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     top: 0,
+  },
+  contentWrapper: {
+    flex: 1,
+    marginTop: 29,
+  },
+  scrollContent: {
+    paddingTop: rem(205),
   },
 });

@@ -9,11 +9,11 @@ import {LevelCard} from './LevelCard';
 import {RefferalsCard} from './RefferalsCard';
 import {WalletCard} from './WalletCard';
 
-interface HomeTilesProps {
+interface HomeCardsProps {
   scrolling: Animated.Value;
 }
 
-export const HomeTiles = ({scrolling}: HomeTilesProps) => {
+export const HomeCards = ({scrolling}: HomeCardsProps) => {
   const heightInterpolation = scrolling.interpolate({
     inputRange: [0, 130],
     outputRange: [rem(224), rem(37)],
