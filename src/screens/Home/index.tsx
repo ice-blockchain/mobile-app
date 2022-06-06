@@ -3,7 +3,6 @@
 import {PrimaryButton} from '@components/PrimaryButton';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {RootState} from '@store/rootReducer';
-import testIDs from '@test/e2e/testIDs';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
@@ -15,10 +14,8 @@ export const Home = () => {
     dispatch(AuthActions.SIGN_OUT.START.create());
   };
   return (
-    <View style={styles.container} testID={testIDs.screens.home.screen}>
-      <Text style={styles.email} testID="hello">
-        {email}
-      </Text>
+    <View style={styles.container}>
+      <Text style={styles.email}>{email}</Text>
       <PrimaryButton text="Log out" onPress={logOutPress} />
     </View>
   );
