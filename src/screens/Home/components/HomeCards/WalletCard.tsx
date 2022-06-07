@@ -54,7 +54,7 @@ export const WalletCard = ({
             ],
           },
         ]}>
-        <LogoIconSvg color={COLORS.white} width={69} height={69} />
+        <LogoIconSvg color={COLORS.white} width={rem(69)} height={rem(69)} />
         <Text style={styles.balance}>{'20,249,999.99 ice'}</Text>
 
         <View style={styles.row}>
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
   balance: {
     fontFamily: FONTS.primary.bold,
     color: COLORS.white,
-    fontSize: font(20),
+    fontSize: font(18),
     lineHeight: rem(24),
     marginVertical: rem(4),
   },
