@@ -128,7 +128,6 @@ const styles = StyleSheet.create({
   },
   search: {
     paddingHorizontal: font(16),
-    paddingVertical: font(14),
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -138,6 +137,7 @@ const styles = StyleSheet.create({
     fontFamily: FONTS.primary.regular,
     color: COLORS.darkBlue,
     flex: 1,
+    paddingVertical: font(14),
   },
   searchItem: {
     flexDirection: 'row',
