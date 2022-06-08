@@ -31,7 +31,7 @@ export const HomeCards = ({scrolling}: HomeCardsProps) => {
   });
   const translateYInterpolation = scrolling.interpolate({
     inputRange: [0, 230],
-    outputRange: [-15, 0],
+    outputRange: [0, 0],
     extrapolate: 'clamp',
   });
 
