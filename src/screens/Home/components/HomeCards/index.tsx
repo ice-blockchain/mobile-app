@@ -35,12 +35,6 @@ export const HomeCards = ({scrolling}: HomeCardsProps) => {
     extrapolate: 'clamp',
   });
 
-  const translateXInterpolation = scrolling.interpolate({
-    inputRange: [0, 230],
-    outputRange: [45, 0],
-    extrapolate: 'clamp',
-  });
-
   const opacityInInterpolation = scrolling.interpolate({
     inputRange: [0, 230],
     outputRange: [0, 1],
@@ -57,7 +51,6 @@ export const HomeCards = ({scrolling}: HomeCardsProps) => {
         opacityOutInterpolation={opacityOutInterpolation}
         scaleInterpolation={scaleInterpolation}
         translateYInterpolation={translateYInterpolation}
-        translateXInterpolation={translateXInterpolation}
         opacityInInterpolation={opacityInInterpolation}
       />
       <LevelCard

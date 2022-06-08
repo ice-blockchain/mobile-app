@@ -14,7 +14,6 @@ interface WalletCardProps {
   opacityOutInterpolation: Animated.AnimatedInterpolation;
   scaleInterpolation: Animated.AnimatedInterpolation;
   translateYInterpolation: Animated.AnimatedInterpolation;
-  translateXInterpolation: Animated.AnimatedInterpolation;
   opacityInInterpolation: Animated.AnimatedInterpolation;
 }
 
@@ -23,7 +22,6 @@ export const WalletCard = ({
   opacityOutInterpolation,
   scaleInterpolation,
   translateYInterpolation,
-  translateXInterpolation,
   opacityInInterpolation,
 }: WalletCardProps) => {
   return (
@@ -37,7 +35,6 @@ export const WalletCard = ({
         <Animated.View
           style={{
             opacity: opacityInInterpolation,
-            transform: [{translateX: translateXInterpolation}],
           }}>
           <InfoSvg width={16} height={16} />
         </Animated.View>
