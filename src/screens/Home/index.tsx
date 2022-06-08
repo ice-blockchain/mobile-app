@@ -2,15 +2,8 @@
 
 import {COLORS} from '@constants/colors';
 import {HomeContent} from '@screens/Home/components/Content';
-import {throttle} from 'lodash';
 import React, {useRef} from 'react';
-import {
-  Animated,
-  NativeScrollEvent,
-  NativeSyntheticEvent,
-  StyleSheet,
-  View,
-} from 'react-native';
+import {Animated, StyleSheet, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
 
@@ -19,36 +12,11 @@ import {HomeCards} from './components/HomeCards';
 
 export const Home = () => {
   const scrolling = useRef(new Animated.Value(0)).current;
-  const animation = useRef(new Animated.Value(1)).current;
-  const animationPosition = useRef<1 | 0>(1);
   const translation = scrolling.interpolate({
     inputRange: [0, 230],
     outputRange: [rem(145), rem(0)],
     extrapolate: 'clamp',
   });
-
-  const hideShowCards = throttle((yOffset: number) => {
-    if (yOffset > 80 && animationPosition.current === 1) {
-      animationPosition.current = 0;
-      Animated.timing(animation, {
-        toValue: 0,
-        useNativeDriver: false,
-        duration: 400,
-      }).start();
-    }
-    if (yOffset < 80 && animationPosition.current === 0) {
-      animationPosition.current = 1;
-      Animated.timing(animation, {
-        toValue: 1,
-        useNativeDriver: false,
-        duration: 400,
-      }).start();
-    }
-  }, 100);
-
-  const handleScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
-    hideShowCards(e.nativeEvent.contentOffset.y);
-  };
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
@@ -72,14 +40,13 @@ export const Home = () => {
                 },
               ],
               {
-                useNativeDriver: true,
-                listener: handleScroll,
+                useNativeDriver: false,
               },
             )}>
             <HomeContent />
           </Animated.ScrollView>
         </View>
-        <HomeCards scrolling={animation} />
+        <HomeCards scrolling={scrolling} />
       </View>
     </SafeAreaView>
   );

@@ -15,35 +15,35 @@ interface HomeCardsProps {
 
 export const HomeCards = ({scrolling}: HomeCardsProps) => {
   const heightInterpolation = scrolling.interpolate({
-    inputRange: [0, 1],
-    outputRange: [rem(37), rem(224)],
+    inputRange: [0, 230],
+    outputRange: [rem(224), rem(37)],
     extrapolate: 'clamp',
   });
   const opacityOutInterpolation = scrolling.interpolate({
-    inputRange: [0, 1],
-    outputRange: [0, 1],
+    inputRange: [100, 120],
+    outputRange: [1, 0],
     extrapolate: 'clamp',
   });
   const scaleInterpolation = scrolling.interpolate({
-    inputRange: [0, 1],
-    outputRange: [0.3, 1],
+    inputRange: [0, 230],
+    outputRange: [1, 0.3],
     extrapolate: 'clamp',
   });
   const translateYInterpolation = scrolling.interpolate({
-    inputRange: [0, 1],
+    inputRange: [0, 230],
     outputRange: [-15, 0],
     extrapolate: 'clamp',
   });
 
   const translateXInterpolation = scrolling.interpolate({
-    inputRange: [0, 1],
-    outputRange: [0, 45],
+    inputRange: [0, 230],
+    outputRange: [45, 0],
     extrapolate: 'clamp',
   });
 
   const opacityInInterpolation = scrolling.interpolate({
-    inputRange: [0, 1],
-    outputRange: [1, 0],
+    inputRange: [0, 230],
+    outputRange: [0, 1],
     extrapolate: 'clamp',
   });
   return (
