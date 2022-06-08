@@ -29,6 +29,7 @@ import {
   Text,
   View,
 } from 'react-native';
+import RNLocalize from 'react-native-localize';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {useDispatch, useSelector} from 'react-redux';
 import {font, isIOS, rem} from 'rn-units';
@@ -42,10 +43,15 @@ type Props = {
 export const SignIn = ({navigation}: Props) => {
   const [email, onChangeEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
   const [inputType, setInputType] = useState<'email' | 'phone'>('email');
   const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
     useState<boolean>(false);
+
+  const countryCode = RNLocalize.getCountry();
+  const [preselectedCountry] = countriesCode.filter(
+    country => country.isoCode === countryCode,
+  );
+  const [selectedCountry, setSelectedCountry] = useState(preselectedCountry);
 
   const dispatch = useDispatch();
   const usersInfo = useSelector((state: RootState) => state.auth.usersInfo);
