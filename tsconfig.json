@@ -54,6 +54,11 @@
       "@utils/*": ["src/utils/*"],
       "@store/*": ["src/store/*"],
       "@hooks/*": ["src/hooks/*"],
+      "mock-data": ["test/mock-data"],
+      "types": ["src/store/types"],
+      "test": ["test"]
+      // "@styles/*": ["src/styles/*"],
+      // "@config/*": ["src/config/*"],
     },
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
     "typeRoots": ["./types", "./node_modules/@types"]                        /* List of folders to include type definitions from. */,
