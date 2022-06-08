@@ -13,7 +13,6 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
-import {rem} from 'rn-units';
 
 export const TabBarMiningItem = () => {
   const [miningActive, setMiningActive] = useState(false);
@@ -82,7 +81,7 @@ export const TabBarMiningItem = () => {
         </Animated.View>
         <Animated.View
           style={[styles.inactiveIcon, {opacity: staticIconFadeAnim}]}>
-          <MiningInactiveIcon size={rem(79)} />
+          <MiningInactiveIcon size={79} />
         </Animated.View>
       </TouchableOpacity>
     </ImageBackground>
@@ -96,21 +95,21 @@ const styles = StyleSheet.create({
   },
   button: {
     position: 'absolute',
-    left: rem(6),
-    top: rem(-42),
-    height: rem(100),
-    width: rem(100),
+    left: 1,
+    top: -42,
+    height: 100,
+    width: 100,
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1,
   },
   animation: {
-    width: rem(67),
-    height: rem(67),
+    width: 67,
+    height: 67,
   },
   inactiveIcon: {
     position: 'absolute',
-    top: rem(11),
-    left: rem(11),
+    top: 11,
+    left: 11,
   },
 });
