@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
-import {Images} from '@images/index';
+import {Images} from '@images';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {translate} from '@utils/i18n';
 import React, {useRef, useState} from 'react';

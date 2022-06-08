@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {useInitialRouteName} from '@hooks/useInitialRouteName';
+import {useInitialRouteName} from '@navigation/hooks/useInitialRouteName';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {CheckEmail} from '@screens/AuthFlow/CheckEmail';
 import {ClaimNickname} from '@screens/AuthFlow/ClaimNickname';

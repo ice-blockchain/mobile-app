@@ -79,6 +79,7 @@ android/app/src/main/assets/app.manifest
 
 coverage/
 configuration/
+.env
 
 .history
 

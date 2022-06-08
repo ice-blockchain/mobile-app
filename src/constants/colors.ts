@@ -7,4 +7,7 @@ export const COLORS = {
   greyText: '#707489',
   greyBorder: '#B6B4BA',
   error: '#FD4E4E',
+  pomegranate: '#F53333',
+  persianBlue: '#1B47C3',
+  gulfBlue: '#080754',
 };
