@@ -6,8 +6,9 @@ import {TabBarMiningItem} from '@navigation/components/MainTabBar/components/Tab
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
+import {rem} from 'rn-units';
 
-export const MAIN_TAB_BAR_HEIGHT = 68;
+export const MAIN_TAB_BAR_HEIGHT = rem(74);
 
 export const MainTabBar = ({
   state,
@@ -50,7 +51,9 @@ export const MainTabBar = ({
           />
         ))}
       </View>
-      <View style={[{height: Math.min(insets.bottom, 8)}, styles.offset]} />
+      <View
+        style={[{height: Math.min(insets.bottom, rem(8))}, styles.offset]}
+      />
     </View>
   );
 };
@@ -71,9 +74,9 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   firstButton: {
-    paddingLeft: 10,
+    paddingLeft: rem(10),
   },
   lastButton: {
-    paddingRight: 10,
+    paddingRight: rem(10),
   },
 });

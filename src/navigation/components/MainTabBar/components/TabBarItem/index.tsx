@@ -12,8 +12,9 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
+import {rem} from 'rn-units';
 
-const SHADOW_HEIGHT = 7;
+const SHADOW_HEIGHT = rem(7);
 
 type Props = {
   index: number;
@@ -93,6 +94,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingBottom: 8,
+    paddingBottom: rem(8),
   },
 });
