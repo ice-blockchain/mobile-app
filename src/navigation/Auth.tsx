@@ -3,8 +3,6 @@
 import {useInitialRouteName} from '@navigation/hooks/useInitialRouteName';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {ClaimNickname} from '@screens/AuthFlow/ClaimNickname';
-import {Intro} from '@screens/AuthFlow/Intro';
-import {Invite} from '@screens/AuthFlow/Invite';
 import {SignIn} from '@screens/AuthFlow/SignIn';
 import {Welcome} from '@screens/AuthFlow/Welcome';
 import {WebView} from '@screens/WebView';
@@ -40,9 +38,7 @@ function Signup() {
     <SignUpStack.Navigator
       screenOptions={screenOptions}
       initialRouteName={initialRouteName}>
-      <SignUpStack.Screen name="Intro" component={Intro} />
       <SignUpStack.Screen name="ClaimNickname" component={ClaimNickname} />
-      <SignUpStack.Screen name="Invite" component={Invite} />
       <SignUpStack.Screen name="Welcome" component={Welcome} />
       <SignUpStack.Screen name="SignIn" component={SignIn} />
     </SignUpStack.Navigator>
