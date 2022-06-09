@@ -2,7 +2,6 @@
 
 import {useInitialRouteName} from '@navigation/hooks/useInitialRouteName';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import {CheckEmail} from '@screens/AuthFlow/CheckEmail';
 import {ClaimNickname} from '@screens/AuthFlow/ClaimNickname';
 import {Intro} from '@screens/AuthFlow/Intro';
 import {Invite} from '@screens/AuthFlow/Invite';
@@ -18,7 +17,6 @@ export type AuthStackParamList = {
 
 export type SignUpStackParamList = {
   Intro: undefined;
-  CheckEmail: undefined;
   ClaimNickname: undefined;
   Invite: undefined;
   Welcome: undefined;
@@ -43,7 +41,6 @@ function Signup() {
       screenOptions={screenOptions}
       initialRouteName={initialRouteName}>
       <SignUpStack.Screen name="Intro" component={Intro} />
-      <SignUpStack.Screen name="CheckEmail" component={CheckEmail} />
       <SignUpStack.Screen name="ClaimNickname" component={ClaimNickname} />
       <SignUpStack.Screen name="Invite" component={Invite} />
       <SignUpStack.Screen name="Welcome" component={Welcome} />
