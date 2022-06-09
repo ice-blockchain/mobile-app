@@ -10,6 +10,7 @@ type Props = {
   focused: boolean;
 };
 
+const PROFILE_IMAGE_SIZE = 22;
 const DEV_PROFILE_IMAGE =
   'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/08/26/13/mr-bean.jpg';
 
@@ -48,8 +49,8 @@ const styles = StyleSheet.create({
     borderColor: COLORS.persianBlue,
   },
   image: {
-    width: 22,
-    height: 22,
-    borderRadius: 11,
+    width: PROFILE_IMAGE_SIZE,
+    height: PROFILE_IMAGE_SIZE,
+    borderRadius: PROFILE_IMAGE_SIZE / 2,
   },
 });
