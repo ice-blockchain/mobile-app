@@ -12,14 +12,12 @@ interface LevelCardProps {
   heightInterpolation: Animated.AnimatedInterpolation;
   opacityOutInterpolation: Animated.AnimatedInterpolation;
   scaleInterpolation: Animated.AnimatedInterpolation;
-  translateYInterpolation: Animated.AnimatedInterpolation;
 }
 
 export const LevelCard = ({
   heightInterpolation,
   opacityOutInterpolation,
   scaleInterpolation,
-  translateYInterpolation,
 }: LevelCardProps) => {
   return (
     <Animated.View style={[styles.container, {height: heightInterpolation}]}>
@@ -39,7 +37,6 @@ export const LevelCard = ({
             transform: [
               {scaleY: scaleInterpolation},
               {scaleX: scaleInterpolation},
-              {translateY: translateYInterpolation},
             ],
           },
         ]}>

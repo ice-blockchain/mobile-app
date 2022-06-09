@@ -14,14 +14,12 @@ interface AdoptionCardProps {
   heightInterpolation: Animated.AnimatedInterpolation;
   opacityOutInterpolation: Animated.AnimatedInterpolation;
   scaleInterpolation: Animated.AnimatedInterpolation;
-  translateYInterpolation: Animated.AnimatedInterpolation;
 }
 
 export const AdoptionCard = ({
   heightInterpolation,
   opacityOutInterpolation,
   scaleInterpolation,
-  translateYInterpolation,
 }: AdoptionCardProps) => {
   const animatedValue = useRef(new Animated.Value(0)).current;
   const cardPosition = useRef<'front' | 'back'>('front');
@@ -66,7 +64,6 @@ export const AdoptionCard = ({
                 transform: [
                   {scaleY: scaleInterpolation},
                   {scaleX: scaleInterpolation},
-                  {translateY: translateYInterpolation},
                 ],
               },
             ]}>
@@ -89,7 +86,6 @@ export const AdoptionCard = ({
                 transform: [
                   {scaleY: scaleInterpolation},
                   {scaleX: scaleInterpolation},
-                  {translateY: translateYInterpolation},
                 ],
               },
             ]}>

@@ -13,7 +13,6 @@ interface WalletCardProps {
   heightInterpolation: Animated.AnimatedInterpolation;
   opacityOutInterpolation: Animated.AnimatedInterpolation;
   scaleInterpolation: Animated.AnimatedInterpolation;
-  translateYInterpolation: Animated.AnimatedInterpolation;
   opacityInInterpolation: Animated.AnimatedInterpolation;
 }
 
@@ -21,7 +20,6 @@ export const WalletCard = ({
   heightInterpolation,
   opacityOutInterpolation,
   scaleInterpolation,
-  translateYInterpolation,
   opacityInInterpolation,
 }: WalletCardProps) => {
   return (
@@ -47,7 +45,6 @@ export const WalletCard = ({
             transform: [
               {scaleY: scaleInterpolation},
               {scaleX: scaleInterpolation},
-              {translateY: translateYInterpolation},
             ],
           },
         ]}>

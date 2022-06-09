@@ -12,10 +12,10 @@ import {WalletCard} from './WalletCard';
 interface HomeCardsProps {
   scrolling: Animated.Value;
 }
-
+export const scrollInterpolationTopPosition = rem(187);
 export const HomeCards = ({scrolling}: HomeCardsProps) => {
   const heightInterpolation = scrolling.interpolate({
-    inputRange: [0, 230],
+    inputRange: [0, scrollInterpolationTopPosition],
     outputRange: [rem(224), rem(37)],
     extrapolate: 'clamp',
   });
@@ -25,18 +25,13 @@ export const HomeCards = ({scrolling}: HomeCardsProps) => {
     extrapolate: 'clamp',
   });
   const scaleInterpolation = scrolling.interpolate({
-    inputRange: [0, 230],
+    inputRange: [0, scrollInterpolationTopPosition],
     outputRange: [1, 0.3],
-    extrapolate: 'clamp',
-  });
-  const translateYInterpolation = scrolling.interpolate({
-    inputRange: [0, 230],
-    outputRange: [0, 0],
     extrapolate: 'clamp',
   });
 
   const opacityInInterpolation = scrolling.interpolate({
-    inputRange: [0, 230],
+    inputRange: [0, scrollInterpolationTopPosition],
     outputRange: [0, 1],
     extrapolate: 'clamp',
   });
@@ -50,26 +45,22 @@ export const HomeCards = ({scrolling}: HomeCardsProps) => {
         heightInterpolation={heightInterpolation}
         opacityOutInterpolation={opacityOutInterpolation}
         scaleInterpolation={scaleInterpolation}
-        translateYInterpolation={translateYInterpolation}
         opacityInInterpolation={opacityInInterpolation}
       />
       <LevelCard
         heightInterpolation={heightInterpolation}
         opacityOutInterpolation={opacityOutInterpolation}
         scaleInterpolation={scaleInterpolation}
-        translateYInterpolation={translateYInterpolation}
       />
       <RefferalsCard
         heightInterpolation={heightInterpolation}
         opacityOutInterpolation={opacityOutInterpolation}
         scaleInterpolation={scaleInterpolation}
-        translateYInterpolation={translateYInterpolation}
       />
       <AdoptionCard
         heightInterpolation={heightInterpolation}
         opacityOutInterpolation={opacityOutInterpolation}
         scaleInterpolation={scaleInterpolation}
-        translateYInterpolation={translateYInterpolation}
       />
     </ScrollView>
   );

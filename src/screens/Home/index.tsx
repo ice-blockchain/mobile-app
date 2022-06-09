@@ -8,12 +8,15 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
 
 import HomeHeader from './components/Header';
-import {HomeCards} from './components/HomeCards';
+import {
+  HomeCards,
+  scrollInterpolationTopPosition,
+} from './components/HomeCards';
 
 export const Home = () => {
   const scrolling = useRef(new Animated.Value(0)).current;
   const translation = scrolling.interpolate({
-    inputRange: [0, 230],
+    inputRange: [0, scrollInterpolationTopPosition],
     outputRange: [rem(145), rem(0)],
     extrapolate: 'clamp',
   });

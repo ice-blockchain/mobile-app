@@ -12,14 +12,12 @@ interface RefferalsCardProps {
   heightInterpolation: Animated.AnimatedInterpolation;
   opacityOutInterpolation: Animated.AnimatedInterpolation;
   scaleInterpolation: Animated.AnimatedInterpolation;
-  translateYInterpolation: Animated.AnimatedInterpolation;
 }
 
 export const RefferalsCard = ({
   heightInterpolation,
   opacityOutInterpolation,
   scaleInterpolation,
-  translateYInterpolation,
 }: RefferalsCardProps) => {
   return (
     <Animated.View style={[styles.container, {height: heightInterpolation}]}>
@@ -35,7 +33,6 @@ export const RefferalsCard = ({
             transform: [
               {scaleY: scaleInterpolation},
               {scaleX: scaleInterpolation},
-              {translateY: translateYInterpolation},
             ],
           },
         ]}>
