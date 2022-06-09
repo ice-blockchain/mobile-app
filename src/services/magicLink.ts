@@ -69,7 +69,7 @@ class MagicLink {
     try {
       const result = await magic.oauth.loginWithPopup({
         provider,
-        redirectURI: 'iceapp://login',
+        redirectURI: `${ENV.DEEPLINK_SCHEME}://login`,
       });
 
       return {success: true, authInfo: result};
