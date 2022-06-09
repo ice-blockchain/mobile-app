@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {Initialization} from '@components/Initialization';
 import {Router} from '@navigation/Router';
-import {Initialization} from '@screens/AuthFlow/Initialization';
 import {System} from '@screens/System';
 import {magic} from '@services/magicLink';
 import React from 'react';

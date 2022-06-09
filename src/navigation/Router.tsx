@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {Initialization} from '@components/Initialization';
 import {NavigationContainer} from '@react-navigation/native';
-import {Initialization} from '@screens/AuthFlow/Initialization';
 import {magicLink} from '@services/magicLink';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {isSignUpCompletedSelector} from '@store/modules/Auth/selectors';
