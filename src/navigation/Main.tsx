@@ -14,13 +14,20 @@ import {Team} from '@screens/Team';
 import {WebView} from '@screens/WebView';
 import React from 'react';
 
-export type MainStackParamList = {
-  Profile: undefined;
-  Settings: undefined;
+export type MainTabsParamList = {
+  HomeTab: undefined;
+  TeamTab: undefined;
+  NewsTab: undefined;
+  ProfileTab: undefined;
 };
 
-const Tabs = createBottomTabNavigator();
-const Stack = createStackNavigator();
+export type MainStackParamList = {
+  Main: undefined;
+  WebView: undefined;
+};
+
+const Tabs = createBottomTabNavigator<MainTabsParamList>();
+const MainStack = createStackNavigator<MainStackParamList>();
 
 const tabOptions = {
   headerShown: false,
@@ -59,9 +66,9 @@ const MainTabs = () => (
 
 export function Main() {
   return (
-    <Stack.Navigator screenOptions={screenOptions}>
-      <Stack.Screen name="Main" component={MainTabs} />
-      <Stack.Screen name="WebView" component={WebView} />
-    </Stack.Navigator>
+    <MainStack.Navigator screenOptions={screenOptions}>
+      <MainStack.Screen name="Main" component={MainTabs} />
+      <MainStack.Screen name="WebView" component={WebView} />
+    </MainStack.Navigator>
   );
 }
