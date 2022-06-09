@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {COLORS} from '@constants/colors';
 import {Images} from '@images';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
 import React from 'react';
 import {
-  Image,
+  ImageBackground,
   StyleProp,
   StyleSheet,
   TouchableOpacity,
@@ -58,19 +57,22 @@ export const TabBarItem = ({
 
   return (
     <View style={styles.container}>
-      <Image style={styles.shadow} source={Images.tabbar.shadow} />
-      <View style={styles.body}>
-        <TouchableOpacity
-          accessibilityRole="button"
-          accessibilityState={isFocused ? {selected: true} : {}}
-          accessibilityLabel={options.tabBarAccessibilityLabel}
-          testID={options.tabBarTestID}
-          onPress={onPress}
-          onLongPress={onLongPress}
-          style={[styles.button, buttonStyle]}>
-          {icon}
-        </TouchableOpacity>
-      </View>
+      <ImageBackground
+        style={styles.container}
+        source={Images.tabbar.itemBackground}>
+        <View style={styles.body}>
+          <TouchableOpacity
+            accessibilityRole="button"
+            accessibilityState={isFocused ? {selected: true} : {}}
+            accessibilityLabel={options.tabBarAccessibilityLabel}
+            testID={options.tabBarTestID}
+            onPress={onPress}
+            onLongPress={onLongPress}
+            style={[styles.button, buttonStyle]}>
+            {icon}
+          </TouchableOpacity>
+        </View>
+      </ImageBackground>
     </View>
   );
 };
@@ -78,17 +80,11 @@ export const TabBarItem = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  shadow: {
-    height: SHADOW_HEIGHT,
-    position: 'absolute',
-    top: 0,
-    width: '100%',
+    overflow: 'hidden',
   },
   body: {
-    marginTop: SHADOW_HEIGHT,
-    backgroundColor: COLORS.white,
     flex: 1,
+    marginTop: SHADOW_HEIGHT,
   },
   button: {
     flex: 1,

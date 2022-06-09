@@ -4,7 +4,7 @@ import * as React from 'react';
 import Svg, {Circle, Path} from 'react-native-svg';
 
 export const ProfileInactiveIcon = () => (
-  <Svg width={27} height={28} fill="none">
+  <Svg width={29} height={30} viewBox="0 0 27 28" fill="none">
     <Circle
       cx={13.5}
       cy={14}

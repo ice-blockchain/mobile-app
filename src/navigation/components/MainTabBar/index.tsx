@@ -8,7 +8,7 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
-export const MAIN_TAB_BAR_HEIGHT = rem(74);
+export const MAIN_TAB_BAR_HEIGHT = rem(75);
 
 export const MainTabBar = ({
   state,
@@ -52,7 +52,7 @@ export const MainTabBar = ({
         ))}
       </View>
       <View
-        style={[{height: Math.min(insets.bottom, rem(8))}, styles.offset]}
+        style={[{height: Math.min(insets.bottom, rem(12))}, styles.offset]}
       />
     </View>
   );

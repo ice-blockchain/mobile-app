@@ -38,7 +38,7 @@ export const ProfileIcon = ({focused}: Props) => {
 
 const styles = StyleSheet.create({
   imageBorder: {
-    borderRadius: 14,
+    borderRadius: 15,
     borderWidth: 1.5,
     paddingVertical: 2,
     paddingHorizontal: 2,
@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     borderColor: COLORS.persianBlue,
   },
   image: {
-    width: 20,
-    height: 20,
-    borderRadius: 10,
+    width: 22,
+    height: 22,
+    borderRadius: 11,
   },
 });

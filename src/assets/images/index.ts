@@ -11,7 +11,7 @@ export const Images = {
     logoIcon: require('./logo-icon.png'),
   },
   tabbar: {
-    shadow: require('./tabbar/shadow.png'),
+    itemBackground: require('./tabbar/item-background.png'),
     miningBackground: require('./tabbar/mining-background.png'),
   },
 };

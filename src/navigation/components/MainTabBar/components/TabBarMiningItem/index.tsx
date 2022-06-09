@@ -92,11 +92,11 @@ export const TabBarMiningItem = () => {
 const styles = StyleSheet.create({
   container: {
     height: MAIN_TAB_BAR_HEIGHT,
-    width: MAIN_TAB_BAR_HEIGHT * 1.5,
+    width: rem(112),
   },
   button: {
     position: 'absolute',
-    left: rem(6),
+    left: rem(7),
     top: rem(-42),
     height: rem(100),
     width: rem(100),
