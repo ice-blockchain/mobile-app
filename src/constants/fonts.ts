@@ -15,16 +15,15 @@ type Weight =
 
 const FONTS = {
   primary: {
-    black: 'Lato-Black',
-    blackItalic: 'Lato-BlackItalic',
-    bold: 'Lato-Bold',
-    boldItalic: 'Lato-BoldItalic',
-    italic: 'Lato-Italic',
-    light: 'Lato-Light',
-    lightItalic: 'Lato-LightItalic',
-    regular: 'Lato-Regular',
-    thin: 'Lato-Thin',
-    thinItalic: 'Lato-ThinItalic',
+    hairline: 'Lato-Hairline', // 100
+    thin: 'Lato-Thin', // 200
+    light: 'Lato-Light', // 300
+    regular: 'Lato-Regular', // 400
+    medium: 'Lato-Medium', // 500
+    semibold: 'Lato-Semibold', // 600
+    bold: 'Lato-Bold', // 700
+    heavy: 'Lato-Heavy', // 800
+    black: 'Lato-Black', // 900
   },
 };
 
