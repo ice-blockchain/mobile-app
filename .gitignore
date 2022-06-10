@@ -80,6 +80,7 @@ android/app/src/main/assets/app.manifest
 coverage/
 configuration/
 .env
+src/translations/
 
 .history
 
