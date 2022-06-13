@@ -25,10 +25,10 @@ export const Home = () => {
     <SafeAreaView style={styles.container} edges={['top']}>
       <HomeHeader />
       <View style={styles.contentWrapper}>
+        <Animated.View
+          style={[styles.back, {transform: [{translateY: translation}]}]}
+        />
         <View style={styles.content}>
-          <Animated.View
-            style={[styles.back, {transform: [{translateY: translation}]}]}
-          />
           <Animated.ScrollView
             contentContainerStyle={styles.scrollContent}
             scrollEventThrottle={2}
@@ -62,9 +62,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    marginTop: rem(19),
-    borderTopRightRadius: 20,
-    borderTopLeftRadius: 20,
+    marginTop: rem(54),
     overflow: 'hidden',
   },
   back: {
@@ -75,13 +73,13 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    top: 0,
+    top: rem(37 / 2),
   },
   contentWrapper: {
     flex: 1,
     marginTop: 29,
   },
   scrollContent: {
-    paddingTop: rem(205),
+    paddingTop: rem(170),
   },
 });
