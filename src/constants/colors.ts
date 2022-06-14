@@ -10,4 +10,5 @@ export const COLORS = {
   pomegranate: '#F53333',
   persianBlue: '#1B47C3',
   gulfBlue: '#080754',
+  midnight: '#011542',
 };
