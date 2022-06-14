@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
+import {FONTS} from '@constants/fonts';
 import React from 'react';
 import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 
@@ -27,9 +28,9 @@ const styles = StyleSheet.create({
   },
   valueText: {
     fontSize: 10,
-    fontWeight: 'bold',
     color: COLORS.white,
     textAlign: 'center',
-    marginHorizontal: 4,
+    marginHorizontal: 2,
+    fontFamily: FONTS.primary.black,
   },
 });

@@ -3,6 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import {HeaderRightButtons} from '@screens/Profile/components/HeaderRightButtons';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
@@ -11,7 +12,7 @@ export const Profile = () => {
 
   return (
     <View style={styles.container}>
-      <Header color={COLORS.white} title={'My team'} />
+      <Header color={COLORS.white} renderRightButtons={HeaderRightButtons} />
     </View>
   );
 };

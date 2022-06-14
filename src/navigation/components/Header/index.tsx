@@ -4,7 +4,7 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {BackButton} from '@navigation/components/Header/components/BackButton';
-import React, {ReactNode, useMemo} from 'react';
+import React, {memo, ReactNode, useMemo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {font, rem} from 'rn-units';
@@ -14,43 +14,45 @@ type Props = {
   title?: string;
   hasBackButton?: boolean;
   titleOffset?: number;
-  rightButtons?: ReactNode;
+  renderRightButtons?: () => ReactNode;
 };
 
-export const Header = ({
-  title,
-  rightButtons,
-  color = COLORS.darkBlue,
-  hasBackButton = true,
-  titleOffset = rem(20),
-}: Props) => {
-  const {top: topInset} = useSafeAreaInsets();
-  const dynamicStyle = useMemo(
-    () =>
-      StyleSheet.create({
-        titleText: {
-          color,
-          marginHorizontal: titleOffset,
-        },
-      }),
-    [color, titleOffset],
-  );
-  return (
-    <View style={[styles.container, {marginTop: topInset}]}>
-      <Text
-        style={[styles.titleText, dynamicStyle.titleText]}
-        numberOfLines={2}>
-        {title}
-      </Text>
-      {hasBackButton && (
-        <BackButton containerStyle={styles.backButton} color={color} />
-      )}
-      {Boolean(rightButtons) && (
-        <View style={styles.rightButtons}>{rightButtons}</View>
-      )}
-    </View>
-  );
-};
+export const Header = memo(
+  ({
+    title,
+    renderRightButtons,
+    color = COLORS.darkBlue,
+    hasBackButton = true,
+    titleOffset = rem(20),
+  }: Props) => {
+    const {top: topInset} = useSafeAreaInsets();
+    const dynamicStyle = useMemo(
+      () =>
+        StyleSheet.create({
+          titleText: {
+            color,
+            marginHorizontal: titleOffset,
+          },
+        }),
+      [color, titleOffset],
+    );
+    return (
+      <View style={[styles.container, {marginTop: topInset}]}>
+        <Text
+          style={[styles.titleText, dynamicStyle.titleText]}
+          numberOfLines={2}>
+          {title}
+        </Text>
+        {hasBackButton && (
+          <BackButton containerStyle={styles.backButton} color={color} />
+        )}
+        {Boolean(renderRightButtons) && (
+          <View style={styles.rightButtons}>{renderRightButtons?.()}</View>
+        )}
+      </View>
+    );
+  },
+);
 
 const styles = StyleSheet.create({
   container: {

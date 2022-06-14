@@ -14,11 +14,11 @@ export const BackButton = ({containerStyle, color}: Props) => {
   const navigation = useNavigation();
   return (
     <View style={containerStyle}>
-      <TouchableOpacity onPress={navigation.goBack} hitSlop={backButtonHitSlop}>
+      <TouchableOpacity onPress={navigation.goBack} hitSlop={buttonHitSlop}>
         <BackButtonArrow fill={color} />
       </TouchableOpacity>
     </View>
   );
 };
 
-const backButtonHitSlop = {top: 15, left: 15, bottom: 15, right: 15};
+const buttonHitSlop = {top: 15, left: 15, bottom: 15, right: 15};
