@@ -2,19 +2,28 @@
 
 import {COLORS} from '@constants/colors';
 import {Header} from '@navigation/components/Header';
+import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {HeaderRightButtons} from '@screens/Profile/components/HeaderRightButtons';
 import {UserInfo} from '@screens/Profile/components/UserInfo';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
+import {rem} from 'rn-units';
 
 export const Profile = () => {
   useFocusStatusBar('light-content');
+  const bottomOffset = useBottomTabBarOffsetStyle({extraOffset: rem(36)});
 
   return (
     <View style={styles.container}>
       <Header color={COLORS.white} renderRightButtons={HeaderRightButtons} />
-      <UserInfo />
+      <ScrollView
+        contentContainerStyle={bottomOffset.current}
+        showsVerticalScrollIndicator={false}>
+        <UserInfo />
+        <View style={styles.card} />
+      </ScrollView>
     </View>
   );
 };
@@ -23,5 +32,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.persianBlue,
+  },
+  card: {
+    marginTop: rem(16),
+    borderTopLeftRadius: rem(20),
+    borderTopRightRadius: rem(20),
+    backgroundColor: COLORS.white,
+    // make bottom overscroll area white, otherwise it'd be of container color
+    paddingBottom: 2000,
+    marginBottom: -2000,
   },
 });

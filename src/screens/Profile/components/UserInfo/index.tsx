@@ -24,14 +24,16 @@ export const UserInfo = () => {
         </View>
       </TouchableOpacity>
       <View style={styles.ladder}>
-        <View>
+        <View style={styles.ladderLeft}>
           <Text style={styles.ladderValueText}>606,683</Text>
           <Text style={styles.ladderLabelText}>GLOBAL TANK</Text>
         </View>
         <Level value={21} />
-        <View>
-          <Text style={styles.ladderValueText}>1,024</Text>
-          <Text style={styles.ladderLabelText}>REFERRALS</Text>
+        <View style={styles.ladderRight}>
+          <View>
+            <Text style={styles.ladderValueText}>1,024</Text>
+            <Text style={styles.ladderLabelText}>REFERRALS</Text>
+          </View>
         </View>
       </View>
     </View>
@@ -54,9 +56,15 @@ const styles = StyleSheet.create({
   },
   ladder: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: rem(20),
+  },
+  ladderLeft: {
+    flex: 1,
+  },
+  ladderRight: {
+    flex: 1,
+    alignItems: 'flex-end',
   },
   ladderValueText: {
     fontFamily: FONTS.primary.black,
