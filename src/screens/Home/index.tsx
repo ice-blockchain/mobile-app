@@ -16,8 +16,26 @@ import {
 export const Home = () => {
   const scrolling = useRef(new Animated.Value(0)).current;
   const translation = scrolling.interpolate({
-    inputRange: [0, scrollInterpolationTopPosition],
+    inputRange: [0, rem(145)],
     outputRange: [rem(145), rem(0)],
+    extrapolate: 'clamp',
+  });
+
+  const shadowIOS = scrolling.interpolate({
+    inputRange: [
+      scrollInterpolationTopPosition / 2,
+      scrollInterpolationTopPosition,
+    ],
+    outputRange: [0, 0.4],
+    extrapolate: 'clamp',
+  });
+
+  const shadowAndroid = scrolling.interpolate({
+    inputRange: [
+      scrollInterpolationTopPosition / 2,
+      scrollInterpolationTopPosition,
+    ],
+    outputRange: [0, 3],
     extrapolate: 'clamp',
   });
 
@@ -26,8 +44,17 @@ export const Home = () => {
       <HomeHeader />
       <View style={styles.contentWrapper}>
         <Animated.View
-          style={[styles.back, {transform: [{translateY: translation}]}]}
-        />
+          style={[styles.back, {transform: [{translateY: translation}]}]}>
+          <Animated.View
+            style={[
+              styles.whiteSpaceShadow,
+              {
+                shadowOpacity: shadowIOS,
+                elevation: shadowAndroid,
+              },
+            ]}
+          />
+        </Animated.View>
         <View style={styles.content}>
           <Animated.ScrollView
             contentContainerStyle={styles.scrollContent}
@@ -62,7 +89,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    marginTop: rem(54),
+    marginTop: rem(44),
     overflow: 'hidden',
   },
   back: {
@@ -75,11 +102,22 @@ const styles = StyleSheet.create({
     right: 0,
     top: rem(37 / 2),
   },
+  whiteSpaceShadow: {
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+    height: rem(37 / 2 + 44 - 37),
+    backgroundColor: '#fff',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowRadius: 4,
+  },
   contentWrapper: {
     flex: 1,
     marginTop: 29,
   },
   scrollContent: {
-    paddingTop: rem(170),
+    paddingTop: rem(180),
   },
 });
