@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: BUSL-1.1
+
+import {useNavigation} from '@react-navigation/native';
+import {BackButtonArrow} from '@svg/BackButtonIcon';
+import React from 'react';
+import {StyleProp, TouchableOpacity, View, ViewStyle} from 'react-native';
+
+type Props = {
+  containerStyle?: StyleProp<ViewStyle>;
+  color?: string;
+};
+
+export const BackButton = ({containerStyle, color}: Props) => {
+  const navigation = useNavigation();
+  return (
+    <View style={containerStyle}>
+      <TouchableOpacity onPress={navigation.goBack} hitSlop={backButtonHitSlop}>
+        <BackButtonArrow fill={color} />
+      </TouchableOpacity>
+    </View>
+  );
+};
+
+const backButtonHitSlop = {top: 15, left: 15, bottom: 15, right: 15};
