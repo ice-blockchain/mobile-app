@@ -119,5 +119,6 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     paddingTop: rem(180),
+    paddingBottom: rem(60),
   },
 });
