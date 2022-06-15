@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import * as React from 'react';
-import Svg, {Path} from 'react-native-svg';
+import Svg, {Path, SvgProps} from 'react-native-svg';
 
-export const IceBreaker = () => (
-  <Svg width={104} height={106} viewBox="0 0 104 106" fill="none">
+export const IceBreaker = (props: SvgProps) => (
+  <Svg viewBox="0 0 104 106" fill="none" {...props}>
     <Path
       fillRule="evenodd"
       clipRule="evenodd"

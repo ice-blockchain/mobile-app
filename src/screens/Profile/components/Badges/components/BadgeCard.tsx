@@ -5,6 +5,7 @@ import {FONTS} from '@constants/fonts';
 import {commonStyles} from '@constants/styles';
 import React, {memo, ReactNode} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {SvgProps} from 'react-native-svg';
 import {font, rem} from 'rn-units';
 
 type Props = {
@@ -12,7 +13,7 @@ type Props = {
   category: string;
   progressText: string;
   progressValue: number;
-  renderIcon: () => ReactNode;
+  renderIcon: (props: SvgProps) => ReactNode;
 };
 
 export const BadgeCard = memo(
@@ -25,7 +26,7 @@ export const BadgeCard = memo(
           adjustsFontSizeToFit={true}>
           {title}
         </Text>
-        {renderIcon()}
+        {renderIcon({style: styles.icon})}
         <View style={styles.progressHeader}>
           <Text
             style={styles.categoryText}
@@ -67,6 +68,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginHorizontal: rem(12),
   },
+  icon: {
+    flexGrow: 1,
+    width: '100%',
+  },
   categoryText: {
     flex: 1,
     fontFamily: FONTS.primary.regular,
@@ -87,6 +92,7 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(12),
     alignSelf: 'stretch',
     marginTop: rem(4),
+    marginBottom: rem(10),
   },
   progressValue: {
     height: rem(8),
