@@ -69,7 +69,6 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    justifyContent: 'flex-end',
     paddingBottom: rem(17),
   },
   text: {
@@ -79,10 +78,13 @@ const styles = StyleSheet.create({
     fontFamily: FONTS.primary.regular,
     paddingHorizontal: rem(14),
     textAlign: 'center',
+    marginTop: rem(30),
   },
   chart: {
     alignItems: 'center',
-    flex: 1,
+    marginTop: rem(35),
+    marginBottom: rem(15),
+    // flex: 1,
     justifyContent: 'center',
   },
 });

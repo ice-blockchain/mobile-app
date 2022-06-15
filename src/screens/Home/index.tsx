@@ -23,17 +23,17 @@ export const Home = () => {
 
   const shadowIOS = scrolling.interpolate({
     inputRange: [
-      scrollInterpolationTopPosition - 30,
       scrollInterpolationTopPosition,
+      scrollInterpolationTopPosition + 30,
     ],
-    outputRange: [0, 0.4],
+    outputRange: [0, 0.3],
     extrapolate: 'clamp',
   });
 
   const shadowAndroid = scrolling.interpolate({
     inputRange: [
-      scrollInterpolationTopPosition - 30,
       scrollInterpolationTopPosition,
+      scrollInterpolationTopPosition + 30,
     ],
     outputRange: [0, 3],
     extrapolate: 'clamp',
@@ -119,6 +119,6 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     paddingTop: rem(180),
-    paddingBottom: rem(60),
+    paddingBottom: rem(80),
   },
 });

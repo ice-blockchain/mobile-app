@@ -46,8 +46,6 @@ export const LevelCard = ({
         </View>
         <Text style={styles.globalRankText}>{'GLOBAL RANK'}</Text>
 
-        <View style={styles.centralEmptySpace} />
-
         <Text style={styles.refferalsText}>{'REFERRALS'}</Text>
         <Text style={styles.refferalsAmount}>{'125'}</Text>
         <Text style={styles.refferalsDescription}>
@@ -122,6 +120,7 @@ const styles = StyleSheet.create({
     minHeight: 50,
   },
   refferalsText: {
+    marginTop: rem(50),
     fontSize: rem(10),
     lineHeight: rem(12),
     fontFamily: FONTS.primary.bold,
