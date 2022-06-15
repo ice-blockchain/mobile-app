@@ -3,7 +3,7 @@
 import {Images} from '@images';
 import {LottieAnimations} from '@lottie';
 import {MAIN_TAB_BAR_HEIGHT} from '@navigation/components/MainTabBar';
-import {MiningInactiveIcon} from '@svg/MiningInactiveIcon';
+import {MiningInactiveIcon} from '@svg/TabBar/MiningInactiveIcon';
 import LottieView from 'lottie-react-native';
 import React, {useEffect, useRef, useState} from 'react';
 import {

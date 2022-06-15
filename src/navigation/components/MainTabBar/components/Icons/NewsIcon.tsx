@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Badge} from '@components/Badge';
-import {LampActiveIcon} from '@svg/LampActiveIcon';
-import {LampInactiveIcon} from '@svg/LampInactiveIcon';
+import {LampActiveIcon} from '@svg/TabBar/LampActiveIcon';
+import {LampInactiveIcon} from '@svg/TabBar/LampInactiveIcon';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {HomeActiveIcon} from '@svg/HomeActiveIcon';
-import {HomeInactiveIcon} from '@svg/HomeInactiveIcon';
+import {HomeActiveIcon} from '@svg/TabBar/HomeActiveIcon';
+import {HomeInactiveIcon} from '@svg/TabBar/HomeInactiveIcon';
 import React from 'react';
 
 type Props = {

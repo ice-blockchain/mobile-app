@@ -4,6 +4,7 @@ import {COLORS} from '@constants/colors';
 import {Header} from '@navigation/components/Header';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import {Badges} from '@screens/Profile/components/Badges';
 import {HeaderRightButtons} from '@screens/Profile/components/HeaderRightButtons';
 import {UserInfo} from '@screens/Profile/components/UserInfo';
 import React from 'react';
@@ -22,7 +23,9 @@ export const Profile = () => {
         contentContainerStyle={bottomOffset.current}
         showsVerticalScrollIndicator={false}>
         <UserInfo />
-        <View style={styles.card} />
+        <View style={styles.card}>
+          <Badges />
+        </View>
       </ScrollView>
     </View>
   );

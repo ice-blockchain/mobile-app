@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
-import {ProfileActiveIcon} from '@svg/ProfileActiveIcon';
-import {ProfileInactiveIcon} from '@svg/ProfileInactiveIcon';
+import {ProfileActiveIcon} from '@svg/TabBar/ProfileActiveIcon';
+import {ProfileInactiveIcon} from '@svg/TabBar/ProfileInactiveIcon';
 import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 
