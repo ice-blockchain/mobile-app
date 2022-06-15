@@ -5,6 +5,7 @@ import {FONTS} from '@constants/fonts';
 import {commonStyles} from '@constants/styles';
 import React, {memo, ReactNode} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {SvgProps} from 'react-native-svg';
 import {font, rem} from 'rn-units';
 
@@ -42,6 +43,12 @@ export const BadgeCard = memo(
       </View>
     );
   },
+);
+
+export const BadgeCardSkeleton = () => (
+  <SkeletonPlaceholder>
+    <View style={styles.container} />
+  </SkeletonPlaceholder>
 );
 
 export const CARD_OFFSET = rem(8);
