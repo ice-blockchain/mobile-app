@@ -23,7 +23,7 @@ export const Home = () => {
 
   const shadowIOS = scrolling.interpolate({
     inputRange: [
-      scrollInterpolationTopPosition / 2,
+      scrollInterpolationTopPosition - 30,
       scrollInterpolationTopPosition,
     ],
     outputRange: [0, 0.4],
@@ -32,7 +32,7 @@ export const Home = () => {
 
   const shadowAndroid = scrolling.interpolate({
     inputRange: [
-      scrollInterpolationTopPosition / 2,
+      scrollInterpolationTopPosition - 30,
       scrollInterpolationTopPosition,
     ],
     outputRange: [0, 3],

@@ -46,13 +46,13 @@ export const LevelCard = ({
         </View>
         <Text style={styles.globalRankText}>{'GLOBAL RANK'}</Text>
 
-        <View style={[styles.bottom]}>
-          <Text style={styles.refferalsText}>{'REFERRALS'}</Text>
-          <Text style={styles.refferalsAmount}>{'125'}</Text>
-          <Text style={styles.refferalsDescription}>
-            {'The more users you reffer, the more ice you earn.'}
-          </Text>
-        </View>
+        <View style={styles.centralEmptySpace} />
+
+        <Text style={styles.refferalsText}>{'REFERRALS'}</Text>
+        <Text style={styles.refferalsAmount}>{'125'}</Text>
+        <Text style={styles.refferalsDescription}>
+          {'The more users you reffer, the more ice you earn.'}
+        </Text>
       </Animated.View>
     </Animated.View>
   );
@@ -144,5 +144,9 @@ const styles = StyleSheet.create({
     color: COLORS.white,
     textAlign: 'center',
     marginBottom: rem(17),
+  },
+  centralEmptySpace: {
+    flex: 1,
+    minHeight: rem(30),
   },
 });
