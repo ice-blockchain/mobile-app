@@ -9,33 +9,19 @@ import {rem} from 'rn-units';
 
 import HomeHeader from './components/Header';
 import {
+  collapsedCardHeight,
   HomeCards,
   scrollInterpolationTopPosition,
 } from './components/HomeCards';
 
 export const Home = () => {
   const scrolling = useRef(new Animated.Value(0)).current;
-  const translation = scrolling.interpolate({
-    inputRange: [0, rem(145)],
-    outputRange: [rem(145), rem(0)],
-    extrapolate: 'clamp',
-  });
-
-  const shadowIOS = scrolling.interpolate({
+  const shadowOpacity = scrolling.interpolate({
     inputRange: [
       scrollInterpolationTopPosition,
-      scrollInterpolationTopPosition + 30,
+      scrollInterpolationTopPosition + 10,
     ],
-    outputRange: [0, 0.3],
-    extrapolate: 'clamp',
-  });
-
-  const shadowAndroid = scrolling.interpolate({
-    inputRange: [
-      scrollInterpolationTopPosition,
-      scrollInterpolationTopPosition + 30,
-    ],
-    outputRange: [0, 3],
+    outputRange: [0, 1],
     extrapolate: 'clamp',
   });
 
@@ -43,21 +29,13 @@ export const Home = () => {
     <SafeAreaView style={styles.container} edges={['top']}>
       <HomeHeader />
       <View style={styles.contentWrapper}>
-        <Animated.View
-          style={[styles.back, {transform: [{translateY: translation}]}]}>
-          <Animated.View
-            style={[
-              styles.whiteSpaceShadow,
-              {
-                shadowOpacity: shadowIOS,
-                elevation: shadowAndroid,
-              },
-            ]}
-          />
-        </Animated.View>
         <View style={styles.content}>
+          <View style={styles.safeAreaShadowContainer}>
+            <Animated.View
+              style={[styles.safeAreaShadow, {opacity: shadowOpacity}]}
+            />
+          </View>
           <Animated.ScrollView
-            contentContainerStyle={styles.scrollContent}
             scrollEventThrottle={2}
             onScroll={Animated.event(
               [
@@ -73,7 +51,9 @@ export const Home = () => {
                 useNativeDriver: false,
               },
             )}>
-            <HomeContent />
+            <View style={styles.scrollContent}>
+              <HomeContent />
+            </View>
           </Animated.ScrollView>
         </View>
         <HomeCards scrolling={scrolling} />
@@ -85,40 +65,44 @@ export const Home = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1B47C3',
+    backgroundColor: COLORS.persianBlue,
   },
   content: {
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
     flex: 1,
-    marginTop: rem(44),
+    marginTop: collapsedCardHeight / 2,
     overflow: 'hidden',
   },
-  back: {
-    backgroundColor: COLORS.white,
-    borderTopRightRadius: 20,
-    borderTopLeftRadius: 20,
+  contentWrapper: {
+    flex: 1,
+    marginTop: 29,
+  },
+  safeAreaShadowContainer: {
+    paddingBottom: 5,
     position: 'absolute',
-    bottom: 0,
+    top: 0,
     left: 0,
     right: 0,
-    top: rem(37 / 2),
+    zIndex: 1,
   },
-  whiteSpaceShadow: {
-    borderTopRightRadius: 20,
-    borderTopLeftRadius: 20,
-    height: rem(37 / 2 + 44 - 37),
+  safeAreaShadow: {
+    height: collapsedCardHeight / 2 + 6,
     backgroundColor: '#fff',
     shadowOffset: {
       width: 0,
       height: 1,
     },
     shadowRadius: 4,
-  },
-  contentWrapper: {
-    flex: 1,
-    marginTop: 29,
+    shadowOpacity: 0.3,
+    elevation: 3,
   },
   scrollContent: {
-    paddingTop: rem(180),
+    marginTop: rem(180),
+    backgroundColor: '#fff',
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+    paddingTop: rem(20),
     paddingBottom: rem(80),
   },
 });

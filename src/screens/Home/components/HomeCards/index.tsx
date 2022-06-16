@@ -12,11 +12,14 @@ import {WalletCard} from './WalletCard';
 interface HomeCardsProps {
   scrolling: Animated.Value;
 }
+export const collapsedCardHeight = rem(37);
+const cardHeight = rem(224);
 export const scrollInterpolationTopPosition = rem(187);
+
 export const HomeCards = ({scrolling}: HomeCardsProps) => {
   const heightInterpolation = scrolling.interpolate({
     inputRange: [0, scrollInterpolationTopPosition],
-    outputRange: [rem(224), rem(37)],
+    outputRange: [cardHeight, collapsedCardHeight],
     extrapolate: 'clamp',
   });
   const opacityOutInterpolation = scrolling.interpolate({
