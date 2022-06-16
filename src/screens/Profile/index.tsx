@@ -6,6 +6,7 @@ import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffse
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Badges} from '@screens/Profile/components/Badges';
 import {HeaderRightButtons} from '@screens/Profile/components/HeaderRightButtons';
+import {InviteButton} from '@screens/Profile/components/InviteButton';
 import {Role} from '@screens/Profile/components/Role';
 import {UserInfo} from '@screens/Profile/components/UserInfo';
 import React from 'react';
@@ -27,6 +28,7 @@ export const Profile = () => {
         <View style={styles.card}>
           <Badges />
           <Role />
+          <InviteButton />
         </View>
       </ScrollView>
     </View>
