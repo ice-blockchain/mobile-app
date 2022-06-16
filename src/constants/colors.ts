@@ -15,4 +15,5 @@ export const COLORS = {
   periwinkleGray: '#C1CDE1',
   linkWater: '#E3EBF8',
   shamrock: '#35D487',
+  emperor: '#535353',
 };
