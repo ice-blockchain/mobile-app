@@ -5,6 +5,7 @@ import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Avatar} from '@screens/Profile/components/UserInfo/components/Avatar';
 import {Level} from '@screens/Profile/components/UserInfo/components/Level';
+import {formatNumber} from '@utils/number';
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -25,13 +26,13 @@ export const UserInfo = () => {
       </TouchableOpacity>
       <View style={styles.ladder}>
         <View style={styles.ladderLeft}>
-          <Text style={styles.ladderValueText}>606,683</Text>
+          <Text style={styles.ladderValueText}>{formatNumber(606683)}</Text>
           <Text style={styles.ladderLabelText}>GLOBAL TANK</Text>
         </View>
         <Level value={21} />
         <View style={styles.ladderRight}>
           <View>
-            <Text style={styles.ladderValueText}>1,024</Text>
+            <Text style={styles.ladderValueText}>{formatNumber(1024)}</Text>
             <Text style={styles.ladderLabelText}>REFERRALS</Text>
           </View>
         </View>

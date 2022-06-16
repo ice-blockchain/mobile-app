@@ -3,25 +3,63 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {CheckBox} from '@screens/Profile/components/MiningCalculator/components/Checkbox';
 import {Slider} from '@screens/Profile/components/MiningCalculator/components/Slider';
 import {MiningIcon} from '@svg/MiningIcon';
 import {TierOneIcon} from '@svg/TierOneIcon';
 import {TierTwoIcon} from '@svg/TierTwoIcon';
-import React, {useState} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {formatNumber} from '@utils/number';
+import React, {useEffect, useState} from 'react';
+import {ActivityIndicator, StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
+let timer: null | ReturnType<typeof setTimeout> = null;
 export const MiningCalculator = () => {
+  const [loading, setLoading] = useState(false);
+  const [activeInviter, setActiveInviter] = useState(true);
   const [tierOneNumber, setTierOneNumber] = useState(5);
   const [tierTwoNumber, setTierTwoNumber] = useState(15);
+  const [result, setResult] = useState<number | null>(null);
+
+  const calculateResult = () => {
+    setLoading(true);
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => {
+      setResult(tierOneNumber * tierTwoNumber * (activeInviter ? 100 : 50));
+      setLoading(false);
+    }, 1000);
+  };
+
+  useEffect(() => {
+    calculateResult();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeInviter]);
 
   return (
     <View style={[styles.containder, commonStyles.shadow]}>
       <Text style={styles.resultLabelText}>You will earn:</Text>
-      <Text style={styles.resultValueText}>14,050 ice/h</Text>
-      <View style={styles.checkbox}>
-        <MiningIcon />
-        <Text style={styles.checkboxLabelText}>Active inviter</Text>
+      <View style={styles.resultValue}>
+        {loading ? (
+          <ActivityIndicator />
+        ) : (
+          <Text style={styles.resultValueText}>
+            {result !== null ? `${formatNumber(result)} ice/h` : null}
+          </Text>
+        )}
+      </View>
+      <View style={styles.checkboxWrapper}>
+        <CheckBox
+          value={activeInviter}
+          onValueChange={setActiveInviter}
+          LabelComponent={
+            <View style={styles.checkboxLabel}>
+              <MiningIcon />
+              <Text style={styles.checkboxLabelText}>Active inviter</Text>
+            </View>
+          }
+        />
       </View>
       <View style={styles.sliders}>
         <View style={styles.sliderInfo}>
@@ -36,6 +74,7 @@ export const MiningCalculator = () => {
           maximumValue={30}
           step={1}
           onValueChange={setTierOneNumber}
+          onSlidingComplete={calculateResult}
         />
         <View style={styles.sliderInfo}>
           <TierTwoIcon />
@@ -49,6 +88,7 @@ export const MiningCalculator = () => {
           maximumValue={30}
           step={1}
           onValueChange={setTierTwoNumber}
+          onSlidingComplete={calculateResult}
         />
       </View>
     </View>
@@ -73,6 +113,10 @@ const styles = StyleSheet.create({
     marginTop: rem(34),
     textAlign: 'center',
   },
+  resultValue: {
+    height: rem(26),
+    alignItems: 'center',
+  },
   resultValueText: {
     fontSize: font(22),
     lineHeight: font(26),
@@ -80,8 +124,10 @@ const styles = StyleSheet.create({
     color: COLORS.white,
     textAlign: 'center',
   },
-  checkbox: {
-    marginTop: rem(28),
+  checkboxWrapper: {
+    paddingTop: rem(28),
+  },
+  checkboxLabel: {
     flexDirection: 'row',
     alignItems: 'center',
   },
