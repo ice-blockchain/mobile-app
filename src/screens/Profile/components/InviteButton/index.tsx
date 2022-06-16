@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     marginHorizontal: SCREEN_SIDE_OFFSET,
+    marginTop: rem(38),
     height: rem(64),
     borderRadius: rem(15),
     alignItems: 'center',

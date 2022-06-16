@@ -38,9 +38,9 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     borderRadius: rem(8),
     marginHorizontal: SCREEN_SIDE_OFFSET,
-    marginVertical: SCREEN_SIDE_OFFSET,
     height: rem(73),
     flexDirection: 'row',
+    marginTop: rem(12),
   },
   icon: {
     marginLeft: 10,

@@ -8,7 +8,9 @@ import {Badges} from '@screens/Profile/components/Badges';
 import {HeaderRightButtons} from '@screens/Profile/components/HeaderRightButtons';
 import {InviteButton} from '@screens/Profile/components/InviteButton';
 import {InviteNote} from '@screens/Profile/components/InviteNote';
+import {MiningCalculator} from '@screens/Profile/components/MiningCalculator';
 import {Role} from '@screens/Profile/components/Role';
+import {SectionHeader} from '@screens/Profile/components/SectionHeader';
 import {UserInfo} from '@screens/Profile/components/UserInfo';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -17,7 +19,7 @@ import {rem} from 'rn-units';
 
 export const Profile = () => {
   useFocusStatusBar('light-content');
-  const bottomOffset = useBottomTabBarOffsetStyle({extraOffset: rem(36)});
+  const bottomOffset = useBottomTabBarOffsetStyle({extraOffset: rem(46)});
 
   return (
     <View style={styles.container}>
@@ -27,10 +29,22 @@ export const Profile = () => {
         showsVerticalScrollIndicator={false}>
         <UserInfo />
         <View style={styles.card}>
+          <SectionHeader
+            title="MY BADGES"
+            showViewAll={true}
+            onViewAllPress={() => {}}
+          />
           <Badges />
+          <SectionHeader
+            title="MY ROLE"
+            showViewAll={true}
+            onViewAllPress={() => {}}
+          />
           <Role />
           <InviteButton />
           <InviteNote />
+          <SectionHeader title="MINING CALCULATOR" showViewAll={false} />
+          <MiningCalculator />
         </View>
       </ScrollView>
     </View>

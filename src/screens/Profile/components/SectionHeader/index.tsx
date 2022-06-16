@@ -5,29 +5,40 @@ import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {font} from 'rn-units';
+import {font, rem} from 'rn-units';
 
-type Props = {
-  title: string;
-  onViewAllPress: () => void;
-};
+type Props =
+  | {
+      title: string;
+      showViewAll: false;
+    }
+  | {
+      title: string;
+      showViewAll: true;
+      onViewAllPress: () => void;
+    };
 
-export const SectionHeader = ({title, onViewAllPress}: Props) => {
+export const SectionHeader = (props: Props) => {
   return (
-    <View style={styles.header}>
-      <Text style={styles.titleText}>{title}</Text>
-      <TouchableOpacity hitSlop={viewAllHitSlop} onPress={onViewAllPress}>
-        <Text style={styles.viewAllText}>view all</Text>
-      </TouchableOpacity>
+    <View style={styles.container}>
+      <Text style={styles.titleText}>{props.title}</Text>
+      {props.showViewAll && (
+        <TouchableOpacity
+          hitSlop={viewAllHitSlop}
+          onPress={props.onViewAllPress}>
+          <Text style={styles.viewAllText}>view all</Text>
+        </TouchableOpacity>
+      )}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  header: {
+  container: {
     flexDirection: 'row',
     marginHorizontal: SCREEN_SIDE_OFFSET,
     justifyContent: 'space-between',
+    marginTop: rem(28),
   },
   titleText: {
     fontFamily: FONTS.primary.black,
