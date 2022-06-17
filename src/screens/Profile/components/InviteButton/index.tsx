@@ -12,19 +12,17 @@ import {font, rem} from 'rn-units';
 
 export const InviteButton = () => {
   return (
-    <TouchableOpacity>
-      <View style={[styles.container, commonStyles.shadow]}>
-        <View style={styles.iconWrapper}>
-          <InviteIcon style={styles.icon} />
-        </View>
-        <View style={styles.body}>
-          <Text style={styles.mainText}>Invite Friends</Text>
-          <Text style={styles.noteText}>
-            Earn extra ice by inviting your friends.
-          </Text>
-        </View>
-        <StarTransparentIcon style={styles.backgroundIcon} />
+    <TouchableOpacity style={[styles.container, commonStyles.shadow]}>
+      <View style={styles.iconWrapper}>
+        <InviteIcon style={styles.icon} />
       </View>
+      <View style={styles.body}>
+        <Text style={styles.mainText}>Invite Friends</Text>
+        <Text style={styles.noteText}>
+          Earn extra ice by inviting your friends.
+        </Text>
+      </View>
+      <StarTransparentIcon style={styles.backgroundIcon} />
     </TouchableOpacity>
   );
 };

@@ -3,7 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
-import React from 'react';
+import React, {memo} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
@@ -18,7 +18,7 @@ type Props =
       onViewAllPress: () => void;
     };
 
-export const SectionHeader = (props: Props) => {
+export const SectionHeader = memo((props: Props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.titleText}>{props.title}</Text>
@@ -31,7 +31,7 @@ export const SectionHeader = (props: Props) => {
       )}
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {
