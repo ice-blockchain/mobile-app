@@ -1,21 +1,23 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
+import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {HomeContent} from '@screens/Home/components/Content';
 import React, {useRef} from 'react';
 import {Animated, StyleSheet, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
 
-import HomeHeader from './components/Header';
 import {
+  Cards,
   collapsedCardHeight,
-  HomeCards,
   scrollInterpolationTopPosition,
-} from './components/HomeCards';
+} from './components/Cards';
+import {HomeHeader} from './components/Header';
 
 export const Home = () => {
   const scrolling = useRef(new Animated.Value(0)).current;
+  const tabBarOffset = useBottomTabBarOffsetStyle();
   const shadowOpacity = scrolling.interpolate({
     inputRange: [
       scrollInterpolationTopPosition,
@@ -51,12 +53,12 @@ export const Home = () => {
                 useNativeDriver: false,
               },
             )}>
-            <View style={styles.scrollContent}>
+            <View style={[styles.scrollContent, tabBarOffset.current]}>
               <HomeContent />
             </View>
           </Animated.ScrollView>
         </View>
-        <HomeCards scrolling={scrolling} />
+        <Cards scrolling={scrolling} />
       </View>
     </SafeAreaView>
   );
@@ -88,7 +90,7 @@ const styles = StyleSheet.create({
   },
   safeAreaShadow: {
     height: collapsedCardHeight / 2 + 6,
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
     shadowOffset: {
       width: 0,
       height: 1,
@@ -99,10 +101,9 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     marginTop: rem(180),
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
     paddingTop: rem(20),
-    paddingBottom: rem(80),
   },
 });

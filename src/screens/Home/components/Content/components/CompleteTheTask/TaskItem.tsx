@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {commonStyles} from '@constants/styles';
 import {InviteFriendsSvg} from '@svg/InviteFriends';
 import {LockSvg} from '@svg/Lock';
 import {LogoIconSvg} from '@svg/LogoIcon';
@@ -158,15 +159,7 @@ const styles = StyleSheet.create({
   },
   containerActive: {
     backgroundColor: COLORS.white,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-
-    elevation: 3,
+    ...commonStyles.shadow,
   },
   iconWrapper: {
     paddingHorizontal: 9,
@@ -188,7 +181,7 @@ const styles = StyleSheet.create({
     color: COLORS.darkBlue,
   },
   titleActive: {
-    color: '#4A86EF',
+    color: COLORS.cornflowerBlue,
   },
   description: {
     fontSize: font(12),
@@ -201,7 +194,7 @@ const styles = StyleSheet.create({
     width: 18,
     height: 18,
     borderRadius: 9,
-    backgroundColor: '#1B47C3',
+    backgroundColor: COLORS.persianBlue,
     justifyContent: 'center',
     alignItems: 'center',
     bottom: 4,
@@ -210,24 +203,24 @@ const styles = StyleSheet.create({
     borderColor: COLORS.white,
   },
   claimNickNameBC: {
-    backgroundColor: '#256FF8',
+    backgroundColor: COLORS.dodgerBlue,
   },
   startMiningBC: {
-    backgroundColor: '#0A2155',
+    backgroundColor: COLORS.downriver,
   },
   profilePictureBC: {
-    backgroundColor: '#98A4BB',
+    backgroundColor: COLORS.gullGray,
   },
   joinTelegramBC: {
-    backgroundColor: '#6556EE',
+    backgroundColor: COLORS.royalBlue,
   },
   followTwitterBC: {
-    backgroundColor: '#113B98',
+    backgroundColor: COLORS.toreaBay,
   },
   invite5FriendsBC: {
-    backgroundColor: '#5F5DB1',
+    backgroundColor: COLORS.blueViolet,
   },
   socialShareBC: {
-    backgroundColor: '#FF6969',
+    backgroundColor: COLORS.bittersweet,
   },
 });

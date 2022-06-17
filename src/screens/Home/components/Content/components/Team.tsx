@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     right: 0,
-    backgroundColor: '#1B47C3',
+    backgroundColor: COLORS.persianBlue,
     width: rem(23),
     height: rem(23),
     justifyContent: 'center',

@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {BellSvg} from '@svg/Bell';
 import {ChatBubblesSvg} from '@svg/ChatBubbles';
 import {StatsSvg} from '@svg/Stats';
@@ -11,7 +12,7 @@ import {font, rem} from 'rn-units';
 
 interface HomeHeaderProps {}
 
-const HomeHeader = ({}: HomeHeaderProps) => {
+export const HomeHeader = ({}: HomeHeaderProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.info}>
@@ -39,11 +40,9 @@ const HomeHeader = ({}: HomeHeaderProps) => {
   );
 };
 
-export default HomeHeader;
-
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: rem(23),
+    paddingHorizontal: SCREEN_SIDE_OFFSET,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -56,7 +55,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginRight: rem(8),
     borderColor: COLORS.white,
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.white,
   },
   info: {
     flexDirection: 'row',

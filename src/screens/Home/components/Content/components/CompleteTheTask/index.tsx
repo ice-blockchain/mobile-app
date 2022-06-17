@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {commonStyles} from '@constants/styles';
 import {
   itemHeight,
   itemLeftPosition,
@@ -94,24 +95,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 49 / 2,
     marginRight: 10,
+    ...commonStyles.shadow,
 
     backgroundColor: COLORS.white,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-
-    elevation: 3,
   },
   amountContainer: {
     width: 36,
     height: 36,
     borderRadius: 36 / 2,
     borderWidth: 1,
-    borderColor: '#EBEBEB',
+    borderColor: COLORS.gallery,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -123,7 +116,7 @@ const styles = StyleSheet.create({
   },
   amountTextSmall: {
     fontSize: font(6),
-    lineHeight: rem(7),
+    lineHeight: rem(11),
     fontFamily: FONTS.primary.regular,
   },
   header: {
