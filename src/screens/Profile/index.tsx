@@ -19,7 +19,7 @@ import {rem} from 'rn-units';
 
 export const Profile = () => {
   useFocusStatusBar('light-content');
-  const bottomOffset = useBottomTabBarOffsetStyle({extraOffset: rem(46)});
+  const bottomOffset = useBottomTabBarOffsetStyle();
 
   return (
     <View style={styles.container}>
