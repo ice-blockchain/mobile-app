@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
+import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
@@ -12,19 +13,15 @@ import {MiningCalculator} from '@screens/Profile/components/MiningCalculator';
 import {Role} from '@screens/Profile/components/Role';
 import {SectionHeader} from '@screens/Profile/components/SectionHeader';
 import {UserInfo} from '@screens/Profile/components/UserInfo';
-import {useScrollShadow} from '@screens/Profile/hooks/useScrollShadow';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
 export const Profile = () => {
-  useFocusStatusBar({
-    style: 'light-content',
-    backgroundColor: COLORS.persianBlue,
-  });
+  useFocusStatusBar({style: 'light-content', backgorund: COLORS.persianBlue});
   const bottomOffset = useBottomTabBarOffsetStyle();
-  const {scrollHandler, animatedStyle} = useScrollShadow({scrollOffset: 50});
+  const {scrollHandler, animatedStyle} = useScrollShadow();
 
   return (
     <View style={styles.container}>

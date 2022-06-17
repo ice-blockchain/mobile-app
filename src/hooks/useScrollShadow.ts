@@ -10,12 +10,14 @@ import {
   useDerivedValue,
   useSharedValue,
 } from 'react-native-reanimated';
+import {rem} from 'rn-units';
 
-type Props = {
-  scrollOffset: number;
+type Params = {
+  scrollOffset?: number;
 };
 
-export const useScrollShadow = ({scrollOffset}: Props) => {
+export const useScrollShadow = (params?: Params) => {
+  const scrollOffset = params?.scrollOffset ?? rem(50);
   const translationY = useSharedValue(0);
   const scrollHandler = useAnimatedScrollHandler(event => {
     translationY.value = event.contentOffset.y;
