@@ -3,6 +3,7 @@
 export const COLORS = {
   black: '#000000',
   white: '#FFFFFF',
+  white02opacity: 'rgba(255,255,255,  0.2)',
   primary: '#073e91',
   darkBlue: '#0D265E',
   greyText: '#707489',
@@ -21,4 +22,15 @@ export const COLORS = {
   mischka: '#D8DCE3',
   finishedTasksLine: '#24D495',
   upcomingTasksLine: '#C1C8D6',
+  mariner: '#2D62D9',
+  black: '#000',
+  cornflowerBlue: '#4A86EF',
+  dodgerBlue: '#256FF8',
+  downriver: '#0A2155',
+  gullGray: '#98A4BB',
+  royalBlue: '#6556EE',
+  toreaBay: '#113B98',
+  blueViolet: '#5F5DB1',
+  bittersweet: '#FF6969',
+  gallery: '#EBEBEB',
 };
