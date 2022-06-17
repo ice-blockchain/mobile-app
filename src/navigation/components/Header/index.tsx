@@ -5,7 +5,8 @@ import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {BackButton} from '@navigation/components/Header/components/BackButton';
 import React, {memo, ReactNode, useMemo} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
+import Animated from 'react-native-reanimated';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {font, rem} from 'rn-units';
 
@@ -15,6 +16,7 @@ type Props = {
   hasBackButton?: boolean;
   titleOffset?: number;
   renderRightButtons?: () => ReactNode;
+  containerStyle?: StyleProp<ViewStyle>;
 };
 
 export const Header = memo(
@@ -24,6 +26,7 @@ export const Header = memo(
     color = COLORS.darkBlue,
     hasBackButton = true,
     titleOffset = rem(20),
+    containerStyle,
   }: Props) => {
     const {top: topInset} = useSafeAreaInsets();
     const dynamicStyle = useMemo(
@@ -37,25 +40,31 @@ export const Header = memo(
       [color, titleOffset],
     );
     return (
-      <View style={[styles.container, {marginTop: topInset}]}>
-        <Text
-          style={[styles.titleText, dynamicStyle.titleText]}
-          numberOfLines={2}>
-          {title}
-        </Text>
-        {hasBackButton && (
-          <BackButton containerStyle={styles.backButton} color={color} />
-        )}
-        {Boolean(renderRightButtons) && (
-          <View style={styles.rightButtons}>{renderRightButtons?.()}</View>
-        )}
-      </View>
+      <Animated.View
+        style={[styles.container, {paddingTop: topInset}, containerStyle]}>
+        <View style={[styles.body]}>
+          <Text
+            style={[styles.titleText, dynamicStyle.titleText]}
+            numberOfLines={2}>
+            {title}
+          </Text>
+          {hasBackButton && (
+            <BackButton containerStyle={styles.backButton} color={color} />
+          )}
+          {Boolean(renderRightButtons) && (
+            <View style={styles.rightButtons}>{renderRightButtons?.()}</View>
+          )}
+        </View>
+      </Animated.View>
     );
   },
 );
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: COLORS.persianBlue,
+  },
+  body: {
     flexDirection: 'row',
     alignItems: 'center',
     marginHorizontal: SCREEN_SIDE_OFFSET,

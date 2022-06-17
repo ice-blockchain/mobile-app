@@ -12,19 +12,26 @@ import {MiningCalculator} from '@screens/Profile/components/MiningCalculator';
 import {Role} from '@screens/Profile/components/Role';
 import {SectionHeader} from '@screens/Profile/components/SectionHeader';
 import {UserInfo} from '@screens/Profile/components/UserInfo';
+import {useScrollShadow} from '@screens/Profile/hooks/useScrollShadow';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
+import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
 export const Profile = () => {
   useFocusStatusBar('light-content');
   const bottomOffset = useBottomTabBarOffsetStyle();
+  const {scrollHandler, animatedStyle} = useScrollShadow({scrollOffset: 50});
 
   return (
     <View style={styles.container}>
-      <Header color={COLORS.white} renderRightButtons={HeaderRightButtons} />
-      <ScrollView
+      <Header
+        containerStyle={animatedStyle}
+        color={COLORS.white}
+        renderRightButtons={HeaderRightButtons}
+      />
+      <Animated.ScrollView
+        onScroll={scrollHandler}
         contentContainerStyle={bottomOffset.current}
         showsVerticalScrollIndicator={false}>
         <UserInfo />
@@ -46,7 +53,7 @@ export const Profile = () => {
           <SectionHeader title="MINING CALCULATOR" showViewAll={false} />
           <MiningCalculator />
         </View>
-      </ScrollView>
+      </Animated.ScrollView>
     </View>
   );
 };
