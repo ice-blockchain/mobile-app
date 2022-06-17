@@ -19,7 +19,10 @@ import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
 export const Profile = () => {
-  useFocusStatusBar('light-content');
+  useFocusStatusBar({
+    style: 'light-content',
+    backgroundColor: COLORS.persianBlue,
+  });
   const bottomOffset = useBottomTabBarOffsetStyle();
   const {scrollHandler, animatedStyle} = useScrollShadow({scrollOffset: 50});
 

@@ -4,13 +4,16 @@ import {useFocusEffect} from '@react-navigation/native';
 import {useCallback} from 'react';
 import {StatusBar, StatusBarStyle} from 'react-native';
 
-export const useFocusStatusBar = (
-  style: StatusBarStyle,
-  animated?: boolean | undefined,
-) =>
+type Props = {
+  style: StatusBarStyle;
+  backgroundColor: string;
+  animated?: boolean | undefined;
+};
+
+export const useFocusStatusBar = ({style, backgroundColor, animated}: Props) =>
   useFocusEffect(
-    useCallback(
-      () => StatusBar.setBarStyle(style, animated),
-      [animated, style],
-    ),
+    useCallback(() => {
+      StatusBar.setBarStyle(style, animated);
+      StatusBar.setBackgroundColor(backgroundColor);
+    }, [animated, backgroundColor, style]),
   );
