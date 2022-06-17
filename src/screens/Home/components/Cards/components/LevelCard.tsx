@@ -58,7 +58,7 @@ export const LevelCard = ({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#256FF8',
+    backgroundColor: COLORS.dodgerBlue,
     width: rem(175),
     marginHorizontal: rem(8),
     borderRadius: 13,

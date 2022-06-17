@@ -4,10 +4,10 @@ import React from 'react';
 import {Animated, ScrollView, StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
-import {AdoptionCard} from './AdoptionCard';
-import {LevelCard} from './LevelCard';
-import {RefferalsCard} from './RefferalsCard';
-import {WalletCard} from './WalletCard';
+import {AdoptionCard} from './components/AdoptionCard';
+import {LevelCard} from './components/LevelCard';
+import {RefferalsCard} from './components/RefferalsCard';
+import {WalletCard} from './components/WalletCard';
 
 interface HomeCardsProps {
   scrolling: Animated.Value;
@@ -16,7 +16,7 @@ export const collapsedCardHeight = rem(37);
 const cardHeight = rem(224);
 export const scrollInterpolationTopPosition = rem(187);
 
-export const HomeCards = ({scrolling}: HomeCardsProps) => {
+export const Cards = ({scrolling}: HomeCardsProps) => {
   const heightInterpolation = scrolling.interpolate({
     inputRange: [0, scrollInterpolationTopPosition],
     outputRange: [cardHeight, collapsedCardHeight],

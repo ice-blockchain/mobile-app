@@ -70,7 +70,7 @@ export const WalletCard = ({
 const styles = StyleSheet.create({
   container: {
     width: rem(175),
-    backgroundColor: '#0A2155',
+    backgroundColor: COLORS.downriver,
     marginHorizontal: rem(8),
     borderRadius: 13,
     paddingHorizontal: rem(11),
