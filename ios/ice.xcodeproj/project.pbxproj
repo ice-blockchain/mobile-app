@@ -671,7 +671,6 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.ice.app.staging;
 				PRODUCT_NAME = ice;
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore io.ice.appstaging";
 				SWIFT_OBJC_BRIDGING_HEADER = "ice-Bridging-Header.h";
@@ -766,7 +765,6 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.ice.app.staging;
 				PRODUCT_NAME = ice;
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore io.ice.app.staging";
 				SWIFT_OBJC_BRIDGING_HEADER = "ice-Bridging-Header.h";
