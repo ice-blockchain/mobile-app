@@ -12,6 +12,7 @@ import {font, rem} from 'rn-units';
 
 type Props = {
   color?: string;
+  backgroundColor?: string;
   title?: string;
   hasBackButton?: boolean;
   titleOffset?: number;
@@ -24,6 +25,7 @@ export const Header = memo(
     title,
     renderRightButtons,
     color = COLORS.darkBlue,
+    backgroundColor = COLORS.persianBlue,
     hasBackButton = true,
     titleOffset = rem(20),
     containerStyle,
@@ -41,7 +43,7 @@ export const Header = memo(
     );
     return (
       <Animated.View
-        style={[styles.container, {paddingTop: topInset}, containerStyle]}>
+        style={[{paddingTop: topInset, backgroundColor}, containerStyle]}>
         <View style={[styles.body]}>
           <Text
             style={[styles.titleText, dynamicStyle.titleText]}
@@ -61,9 +63,6 @@ export const Header = memo(
 );
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: COLORS.persianBlue,
-  },
   body: {
     flexDirection: 'row',
     alignItems: 'center',

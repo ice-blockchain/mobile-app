@@ -35,6 +35,7 @@ export const Profile = () => {
       />
       <Animated.ScrollView
         onScroll={scrollHandler}
+        scrollEventThrottle={16}
         contentContainerStyle={bottomOffset.current}
         showsVerticalScrollIndicator={false}>
         <UserInfo />

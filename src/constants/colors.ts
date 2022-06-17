@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 export const COLORS = {
+  black: '#000000',
   white: '#FFFFFF',
   primary: '#073e91',
   darkBlue: '#0D265E',

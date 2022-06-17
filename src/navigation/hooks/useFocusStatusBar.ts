@@ -2,7 +2,7 @@
 
 import {useFocusEffect} from '@react-navigation/native';
 import {useCallback} from 'react';
-import {StatusBar, StatusBarStyle} from 'react-native';
+import {Platform, StatusBar, StatusBarStyle} from 'react-native';
 
 type Props = {
   style: StatusBarStyle;
@@ -14,6 +14,8 @@ export const useFocusStatusBar = ({style, backgroundColor, animated}: Props) =>
   useFocusEffect(
     useCallback(() => {
       StatusBar.setBarStyle(style, animated);
-      StatusBar.setBackgroundColor(backgroundColor);
+      if (Platform.OS === 'android') {
+        StatusBar.setBackgroundColor(backgroundColor);
+      }
     }, [animated, backgroundColor, style]),
   );

@@ -9,16 +9,31 @@ import {MiningIcon} from '@svg/MiningIcon';
 import {TierOneIcon} from '@svg/TierOneIcon';
 import {TierTwoIcon} from '@svg/TierTwoIcon';
 import {formatNumber} from '@utils/number';
-import React, {useEffect, useState} from 'react';
-import {ActivityIndicator, StyleSheet, Text, View} from 'react-native';
+import React, {useEffect, useRef, useState} from 'react';
+import {
+  ActivityIndicator,
+  Platform,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from 'react-native';
+import {useSharedValue} from 'react-native-reanimated';
 import {font, rem} from 'rn-units';
+
+const TIER_ONE_MAX = 30;
+const TIER_ONE_DEFAULT = 10;
+const TIER_TWO_MAX = 20;
+const TIER_TWO_DEFAULT = 15;
 
 let timer: null | ReturnType<typeof setTimeout> = null;
 export const MiningCalculator = () => {
+  const tierOneElementRef = useRef<TextInput | null>(null);
+  const tierTwoElementRef = useRef<TextInput | null>(null);
+  const tierOneValueRef = useRef(TIER_ONE_DEFAULT);
+  const tierTwoValueRef = useRef(TIER_TWO_DEFAULT);
   const [loading, setLoading] = useState(false);
   const [activeInviter, setActiveInviter] = useState(true);
-  const [tierOneNumber, setTierOneNumber] = useState(5);
-  const [tierTwoNumber, setTierTwoNumber] = useState(15);
   const [result, setResult] = useState<number | null>(null);
 
   const calculateResult = () => {
@@ -27,15 +42,16 @@ export const MiningCalculator = () => {
       clearTimeout(timer);
     }
     timer = setTimeout(() => {
-      setResult(tierOneNumber * tierTwoNumber * (activeInviter ? 100 : 50));
+      setResult(
+        tierOneValueRef.current *
+          tierTwoValueRef.current *
+          (activeInviter ? 100 : 50),
+      );
       setLoading(false);
     }, 1000);
   };
 
-  useEffect(() => {
-    calculateResult();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeInviter]);
+  useEffect(calculateResult, [activeInviter]);
 
   return (
     <View style={[styles.containder, commonStyles.shadow]}>
@@ -61,36 +77,50 @@ export const MiningCalculator = () => {
           }
         />
       </View>
-      <View style={styles.sliders}>
-        <View style={styles.sliderInfo}>
-          <TierOneIcon />
-          <Text style={styles.sliderLabelText}>Tier 1 active referrals</Text>
-          <Text style={styles.sliderValueText}>{tierOneNumber}</Text>
-        </View>
-        <Slider
-          style={styles.slider}
-          value={tierOneNumber}
-          minimumValue={0}
-          maximumValue={30}
-          step={1}
-          onValueChange={setTierOneNumber}
-          onSlidingComplete={calculateResult}
-        />
-        <View style={styles.sliderInfo}>
-          <TierTwoIcon />
-          <Text style={styles.sliderLabelText}>Tier 1 active referrals</Text>
-          <Text style={styles.sliderValueText}>{tierTwoNumber}</Text>
-        </View>
-        <Slider
-          style={styles.slider}
-          value={tierTwoNumber}
-          minimumValue={0}
-          maximumValue={30}
-          step={1}
-          onValueChange={setTierTwoNumber}
-          onSlidingComplete={calculateResult}
+      <View style={styles.sliderInfo}>
+        <TierOneIcon />
+        <Text style={styles.sliderLabelText}>Tier 1 active referrals</Text>
+        <TextInput
+          style={styles.sliderValueText}
+          ref={tierOneElementRef}
+          editable={false}
+          defaultValue={tierOneValueRef.current.toString()}
         />
       </View>
+      <Slider
+        style={styles.slider}
+        progress={useSharedValue(TIER_ONE_DEFAULT)}
+        minimumValue={useSharedValue(0)}
+        maximumValue={useSharedValue(TIER_ONE_MAX)}
+        step={TIER_ONE_MAX}
+        onValueChange={value => {
+          tierOneValueRef.current = value;
+          tierOneElementRef.current?.setNativeProps({text: value.toString()});
+        }}
+        onSlidingComplete={calculateResult}
+      />
+      <View style={styles.sliderInfo}>
+        <TierTwoIcon />
+        <Text style={styles.sliderLabelText}>Tier 1 active referrals</Text>
+        <TextInput
+          style={styles.sliderValueText}
+          ref={tierTwoElementRef}
+          editable={false}
+          defaultValue={tierTwoValueRef.current.toString()}
+        />
+      </View>
+      <Slider
+        style={styles.slider}
+        progress={useSharedValue(TIER_TWO_DEFAULT)}
+        minimumValue={useSharedValue(0)}
+        maximumValue={useSharedValue(TIER_TWO_MAX)}
+        step={TIER_TWO_MAX}
+        onValueChange={value => {
+          tierTwoValueRef.current = value;
+          tierTwoElementRef.current?.setNativeProps({text: value.toString()});
+        }}
+        onSlidingComplete={calculateResult}
+      />
     </View>
   );
 };
@@ -137,16 +167,13 @@ const styles = StyleSheet.create({
     fontFamily: FONTS.primary.regular,
     color: COLORS.white,
   },
-  sliders: {
-    marginTop: rem(17),
-  },
   sliderInfo: {
-    marginTop: rem(10),
+    marginTop: Platform.OS === 'android' ? rem(17) : rem(27),
     flexDirection: 'row',
     alignItems: 'center',
   },
   slider: {
-    marginTop: -rem(8),
+    marginTop: Platform.OS === 'android' ? rem(3) : rem(10),
     marginLeft: rem(6),
   },
   sliderLabelText: {
@@ -158,7 +185,6 @@ const styles = StyleSheet.create({
   sliderValueText: {
     flex: 1,
     fontSize: font(13),
-    lineHeight: font(24),
     fontFamily: FONTS.primary.bold,
     color: COLORS.periwinkleGray,
     textAlign: 'right',

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {COLORS} from '@constants/colors';
 import {Platform} from 'react-native';
 import {
   Extrapolate,
@@ -15,29 +16,38 @@ type Props = {
 };
 
 export const useScrollShadow = ({scrollOffset}: Props) => {
-  const scrollY = useSharedValue(0);
+  const translationY = useSharedValue(0);
   const scrollHandler = useAnimatedScrollHandler(event => {
-    scrollY.value = event.contentOffset.y;
+    translationY.value = event.contentOffset.y;
   });
   const shadowOpacity = useDerivedValue(() =>
     Platform.OS === 'ios'
       ? interpolate(
-          scrollY.value,
+          translationY.value,
           [0, scrollOffset],
           [0, 0.2],
           Extrapolate.CLAMP,
         )
       : interpolate(
-          scrollY.value,
+          translationY.value,
           [0, scrollOffset],
           [0, 3],
           Extrapolate.CLAMP,
         ),
   );
-  const animatedStyle = useAnimatedStyle(() => ({
-    shadowOpacity: shadowOpacity.value,
-    elevation: shadowOpacity.value,
-  }));
+  const animatedStyle = useAnimatedStyle(() =>
+    Platform.OS === 'ios'
+      ? {
+          shadowColor: COLORS.black,
+          shadowOffset: {
+            width: 0,
+            height: 2,
+          },
+          shadowRadius: 4,
+          shadowOpacity: shadowOpacity.value,
+        }
+      : {elevation: shadowOpacity.value},
+  );
 
-  return {scrollY, scrollHandler, animatedStyle};
+  return {translationY, scrollHandler, animatedStyle};
 };
