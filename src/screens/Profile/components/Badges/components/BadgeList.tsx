@@ -7,6 +7,8 @@ import {
   CARD_OFFSET,
 } from '@screens/Profile/components/Badges/components/BadgeCard';
 import {IceBreaker} from '@svg/Badges/IceBreaker';
+import {SnowyPlow} from '@svg/Badges/SnowyPlow';
+import {TroubleMaker} from '@svg/Badges/TroubleMaker';
 import React, {useCallback} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
@@ -26,15 +28,41 @@ export const BadgeList = ({loading, data}: Props) => {
       return <BadgeCardSkeleton />;
     }
 
-    return (
-      <BadgeCard
-        renderIcon={IceBreaker}
-        title={'Ice Breaker'}
-        category={'Social'}
-        progressText={'2 of 5'}
-        progressValue={60}
-      />
-    );
+    switch (item) {
+      case 1: {
+        return (
+          <BadgeCard
+            renderIcon={IceBreaker}
+            title={'Ice Breaker'}
+            category={'Social'}
+            progressText={'2 of 5'}
+            progressValue={60}
+          />
+        );
+      }
+      case 2: {
+        return (
+          <BadgeCard
+            renderIcon={TroubleMaker}
+            title={'Trouble Maker'}
+            category={'Coins'}
+            progressText={'3 of 16'}
+            progressValue={20}
+          />
+        );
+      }
+      default: {
+        return (
+          <BadgeCard
+            renderIcon={SnowyPlow}
+            title={'Snowy Plow'}
+            category={'Level'}
+            progressText={'4 of 5'}
+            progressValue={80}
+          />
+        );
+      }
+    }
   }, []);
   return (
     <FlatList

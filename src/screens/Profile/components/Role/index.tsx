@@ -4,6 +4,7 @@ import {
   RoleCard,
   RoleCardSkeleton,
 } from '@screens/Profile/components/Role/components/RoleCard';
+import {ViewAllButton} from '@screens/Profile/components/Role/components/ViewAllButton';
 import {Pioneer} from '@svg/Roles/Pioneer';
 import React, {useState} from 'react';
 
@@ -22,6 +23,7 @@ export const Role = () => {
           description={'Are you flesh and blood?'}
         />
       )}
+      <ViewAllButton />
     </>
   );
 };

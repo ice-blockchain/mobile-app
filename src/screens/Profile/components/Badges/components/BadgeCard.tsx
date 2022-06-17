@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
   icon: {
     flexGrow: 1,
     width: '100%',
+    marginVertical: rem(11),
   },
   categoryText: {
     flex: 1,

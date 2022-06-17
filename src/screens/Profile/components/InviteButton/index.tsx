@@ -12,26 +12,30 @@ import {font, rem} from 'rn-units';
 
 export const InviteButton = () => {
   return (
-    <TouchableOpacity style={[styles.container, commonStyles.shadow]}>
-      <View style={styles.iconWrapper}>
-        <InviteIcon style={styles.icon} />
-      </View>
-      <View style={styles.body}>
-        <Text style={styles.mainText}>Invite Friends</Text>
-        <Text style={styles.noteText}>
-          Earn extra ice by inviting your friends.
-        </Text>
-      </View>
-      <StarTransparentIcon style={styles.backgroundIcon} />
-    </TouchableOpacity>
+    <View style={styles.container}>
+      <TouchableOpacity style={[styles.button, commonStyles.shadow]}>
+        <View style={styles.iconWrapper}>
+          <InviteIcon style={styles.icon} />
+        </View>
+        <View style={styles.body}>
+          <Text style={styles.mainText}>Invite Friends</Text>
+          <Text style={styles.noteText}>
+            Earn extra ice by inviting your friends.
+          </Text>
+        </View>
+        <StarTransparentIcon style={styles.backgroundIcon} />
+      </TouchableOpacity>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: rem(38),
+  },
+  button: {
     flexDirection: 'row',
     marginHorizontal: SCREEN_SIDE_OFFSET,
-    marginTop: rem(38),
     height: rem(64),
     borderRadius: rem(15),
     alignItems: 'center',

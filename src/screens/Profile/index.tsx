@@ -43,11 +43,7 @@ export const Profile = () => {
             onViewAllPress={() => {}}
           />
           <Badges />
-          <SectionHeader
-            title="MY ROLE"
-            showViewAll={true}
-            onViewAllPress={() => {}}
-          />
+          <SectionHeader title="MY ROLE" showViewAll={false} />
           <Role />
           <InviteButton />
           <InviteNote />
