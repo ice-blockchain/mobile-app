@@ -20,7 +20,11 @@ export const CheckBox = ({value, onValueChange, LabelComponent}: Props) => {
         {LabelComponent}
       </TouchableOpacity>
       <TouchableOpacity onPress={() => onValueChange(!value)}>
-        <View style={styles.checkFrame}>
+        <View
+          style={[
+            styles.checkFrame,
+            {borderColor: value ? COLORS.shamrock : COLORS.white},
+          ]}>
           {value ? (
             <CheckMarkIcon
               style={styles.checkIcon}
@@ -45,7 +49,6 @@ const styles = StyleSheet.create({
     height: rem(14),
     borderWidth: rem(2),
     borderRadius: rem(4),
-    borderColor: COLORS.shamrock,
     alignItems: 'center',
     justifyContent: 'center',
     marginVertical: rem(10),
