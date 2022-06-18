@@ -10,7 +10,7 @@ type Props = {
   color?: string;
 };
 
-export const BackButton = ({containerStyle, color}: Props) => {
+export const BackButton = ({containerStyle, color}: Props = {}) => {
   const navigation = useNavigation();
   return (
     <View style={containerStyle}>

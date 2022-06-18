@@ -20,9 +20,17 @@ export const MainTabBar = ({
   const NUMBER_OF_RIGHT_ICONS = 2;
   const leftRoutes = state.routes.slice(0, NUMBER_OF_LEFT_ICONS);
   const rightRoutes = state.routes.slice(-NUMBER_OF_RIGHT_ICONS);
+  const bottomOffset = Math.min(rem(12), insets.bottom);
   return (
     <View style={styles.container}>
-      <View style={styles.buttons}>
+      <View
+        style={[
+          styles.buttons,
+          {
+            height: MAIN_TAB_BAR_HEIGHT + bottomOffset,
+            borderBottomWidth: bottomOffset,
+          },
+        ]}>
         {leftRoutes.map((route, index) => (
           <TabBarItem
             key={route.key}
@@ -51,9 +59,6 @@ export const MainTabBar = ({
           />
         ))}
       </View>
-      <View
-        style={[{height: Math.min(insets.bottom, rem(12))}, styles.offset]}
-      />
     </View>
   );
 };
@@ -68,10 +73,7 @@ const styles = StyleSheet.create({
   },
   buttons: {
     flexDirection: 'row',
-    height: MAIN_TAB_BAR_HEIGHT,
-  },
-  offset: {
-    backgroundColor: COLORS.white,
+    borderBottomColor: COLORS.white,
   },
   firstButton: {
     paddingLeft: rem(10),

@@ -12,7 +12,7 @@ type Props = {
   color?: string;
 };
 
-export const SettingsButton = ({containerStyle, color}: Props) => {
+export const SettingsButton = ({containerStyle, color}: Props = {}) => {
   const navigation =
     useNavigation<BottomTabNavigationProp<MainTabsParamList>>();
   return (

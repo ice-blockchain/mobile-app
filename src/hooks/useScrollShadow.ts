@@ -16,8 +16,7 @@ type Params = {
   scrollOffset?: number;
 };
 
-export const useScrollShadow = (params?: Params) => {
-  const scrollOffset = params?.scrollOffset ?? rem(50);
+export const useScrollShadow = ({scrollOffset = rem(50)}: Params = {}) => {
   const translationY = useSharedValue(0);
   const scrollHandler = useAnimatedScrollHandler(event => {
     translationY.value = event.contentOffset.y;
