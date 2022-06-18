@@ -9,9 +9,10 @@ type Params = {
   extraOffset?: number;
 };
 
-export const useBottomTabBarOffsetStyle = (params?: Params) => {
+export const useBottomTabBarOffsetStyle = ({
+  extraOffset = rem(64),
+}: Params = {}) => {
   const tabBarHeight = useBottomTabBarHeight();
-  const extraOffset = params?.extraOffset ?? rem(64);
   return useMemo(
     () =>
       StyleSheet.create({
