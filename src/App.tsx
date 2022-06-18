@@ -5,6 +5,7 @@ import {Router} from '@navigation/Router';
 import {System} from '@screens/System';
 import {magic} from '@services/magicLink';
 import React from 'react';
+import {StatusBar} from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
@@ -18,6 +19,7 @@ export function App(): React.ReactNode {
         <PersistGate
           loading={<Initialization />}
           persistor={configuredStore.persistor}>
+          <StatusBar translucent backgroundColor="transparent" />
           <Router />
           <System />
           <magic.Relayer />
