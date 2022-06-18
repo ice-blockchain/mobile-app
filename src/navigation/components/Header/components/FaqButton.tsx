@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {COLORS} from '@constants/colors';
 import {MainTabsParamList} from '@navigation/Main';
 import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
 import {useNavigation} from '@react-navigation/native';
@@ -12,7 +13,10 @@ type Props = {
   color?: string;
 };
 
-export const FaqButton = ({containerStyle, color}: Props = {}) => {
+export const FaqButton = ({
+  containerStyle,
+  color = COLORS.darkBlue,
+}: Props = {}) => {
   const navigation =
     useNavigation<BottomTabNavigationProp<MainTabsParamList>>();
   return (

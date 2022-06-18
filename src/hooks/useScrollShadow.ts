@@ -36,7 +36,7 @@ export const useScrollShadow = ({scrollOffset = rem(50)}: Params = {}) => {
           Extrapolate.CLAMP,
         ),
   );
-  const animatedStyle = useAnimatedStyle(() =>
+  const shadowStyle = useAnimatedStyle(() =>
     Platform.OS === 'ios'
       ? {
           shadowColor: COLORS.black,
@@ -50,5 +50,5 @@ export const useScrollShadow = ({scrollOffset = rem(50)}: Params = {}) => {
       : {elevation: shadowOpacity.value},
   );
 
-  return {translationY, scrollHandler, animatedStyle};
+  return {translationY, scrollHandler, shadowStyle};
 };

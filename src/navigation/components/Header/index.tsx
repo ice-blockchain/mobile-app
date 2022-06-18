@@ -20,6 +20,12 @@ type Props = {
   containerStyle?: StyleProp<ViewStyle>;
 };
 
+const HEADER_HEIGHT = rem(54);
+
+/**
+ * Using absolute positioned View to make "elevation" display properly
+ * And add static View with the same height to add offset for the rest of content
+ */
 export const Header = memo(
   ({
     title,
@@ -38,36 +44,52 @@ export const Header = memo(
             color,
             marginHorizontal: titleOffset,
           },
+          container: {
+            paddingTop: topInset,
+            backgroundColor,
+          },
+          offset: {height: HEADER_HEIGHT + topInset},
         }),
-      [color, titleOffset],
+      [color, titleOffset, topInset, backgroundColor],
     );
+
     return (
-      <Animated.View
-        style={[{paddingTop: topInset, backgroundColor}, containerStyle]}>
-        <View style={[styles.body]}>
-          <Text
-            style={[styles.titleText, dynamicStyle.titleText]}
-            numberOfLines={2}>
-            {title}
-          </Text>
-          {hasBackButton && (
-            <BackButton containerStyle={styles.backButton} color={color} />
-          )}
-          {Boolean(renderRightButtons) && (
-            <View style={styles.rightButtons}>{renderRightButtons?.()}</View>
-          )}
-        </View>
-      </Animated.View>
+      <>
+        <View style={dynamicStyle.offset} />
+        <Animated.View
+          style={[dynamicStyle.container, styles.container, containerStyle]}>
+          <View style={[styles.body]}>
+            <Text
+              style={[styles.titleText, dynamicStyle.titleText]}
+              numberOfLines={2}>
+              {title}
+            </Text>
+            {hasBackButton && (
+              <BackButton containerStyle={styles.backButton} color={color} />
+            )}
+            {Boolean(renderRightButtons) && (
+              <View style={styles.rightButtons}>{renderRightButtons?.()}</View>
+            )}
+          </View>
+        </Animated.View>
+      </>
     );
   },
 );
 
 const styles = StyleSheet.create({
+  container: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    left: 0,
+    zIndex: 1,
+  },
   body: {
     flexDirection: 'row',
     alignItems: 'center',
     marginHorizontal: SCREEN_SIDE_OFFSET,
-    height: rem(54),
+    height: HEADER_HEIGHT,
   },
   titleText: {
     fontFamily: FONTS.primary.black,

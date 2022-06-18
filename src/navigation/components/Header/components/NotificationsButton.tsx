@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Badge} from '@components/Badge';
+import {COLORS} from '@constants/colors';
 import {MainTabsParamList} from '@navigation/Main';
 import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
 import {useNavigation} from '@react-navigation/native';
@@ -19,7 +20,10 @@ type Props = {
   color?: string;
 };
 
-export const NotificationsButton = ({containerStyle, color}: Props = {}) => {
+export const NotificationsButton = ({
+  containerStyle,
+  color = COLORS.darkBlue,
+}: Props = {}) => {
   const navigation =
     useNavigation<BottomTabNavigationProp<MainTabsParamList>>();
   return (
