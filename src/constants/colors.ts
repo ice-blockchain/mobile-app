@@ -17,4 +17,5 @@ export const COLORS = {
   linkWater: '#E3EBF8',
   shamrock: '#35D487',
   emperor: '#535353',
+  alabaster: '#F8F8F8',
 };

@@ -22,12 +22,12 @@ import {rem} from 'rn-units';
 export const Profile = () => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
-  const {scrollHandler, animatedStyle} = useScrollShadow();
+  const {scrollHandler, shadowStyle} = useScrollShadow();
 
   return (
     <View style={styles.container}>
       <Header
-        containerStyle={animatedStyle}
+        containerStyle={shadowStyle}
         color={COLORS.white}
         renderRightButtons={HeaderRightButtons}
       />

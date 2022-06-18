@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {COLORS} from '@constants/colors';
 import {FaqButton} from '@navigation/components/Header/components/FaqButton';
 import {NotificationsButton} from '@navigation/components/Header/components/NotificationsButton';
 import {SettingsButton} from '@navigation/components/Header/components/SettingsButton';
@@ -9,9 +10,12 @@ import {StyleSheet, View} from 'react-native';
 export const HeaderRightButtons = () => {
   return (
     <View style={styles.container}>
-      <NotificationsButton />
-      <SettingsButton containerStyle={styles.settingsButton} />
-      <FaqButton containerStyle={styles.faqButton} />
+      <NotificationsButton color={COLORS.white} />
+      <SettingsButton
+        containerStyle={styles.settingsButton}
+        color={COLORS.white}
+      />
+      <FaqButton containerStyle={styles.faqButton} color={COLORS.white} />
     </View>
   );
 };
