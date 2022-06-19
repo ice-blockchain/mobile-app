@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {InviteButton} from '@components/InviteButton';
 import {COLORS} from '@constants/colors';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
@@ -7,7 +8,6 @@ import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffse
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Badges} from '@screens/Profile/components/Badges';
 import {HeaderRightButtons} from '@screens/Profile/components/HeaderRightButtons';
-import {InviteButton} from '@screens/Profile/components/InviteButton';
 import {InviteNote} from '@screens/Profile/components/InviteNote';
 import {MiningCalculator} from '@screens/Profile/components/MiningCalculator';
 import {Role} from '@screens/Profile/components/Role';
@@ -49,7 +49,7 @@ export const Profile = () => {
             showViewAll={false}
           />
           <Role />
-          <InviteButton />
+          <InviteButton style={styles.inviteButton} />
           <InviteNote />
           <SectionHeader
             title={t('profile.mining_calculator').toUpperCase()}
@@ -75,5 +75,8 @@ const styles = StyleSheet.create({
     // make bottom overscroll area white, otherwise it'd be of container color
     paddingBottom: 2000,
     marginBottom: -2000,
+  },
+  inviteButton: {
+    marginTop: rem(38),
   },
 });

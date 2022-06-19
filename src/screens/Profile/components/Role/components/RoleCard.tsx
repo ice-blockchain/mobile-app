@@ -64,5 +64,6 @@ const styles = StyleSheet.create({
     lineHeight: font(15),
     fontFamily: FONTS.primary.regular,
     color: COLORS.emperor,
+    marginTop: rem(4),
   },
 });

@@ -7,33 +7,30 @@ import {InviteIcon} from '@svg/InviteIcon';
 import {StarTransparentIcon} from '@svg/StarTransparentIcon';
 import {t} from '@utils/i18n';
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {font, rem} from 'rn-units';
 
-export const InviteButton = () => {
+type Props = {
+  style?: StyleProp<ViewStyle>;
+};
+
+export const InviteButton = ({style}: Props = {}) => {
   return (
-    <View style={styles.container}>
-      <TouchableOpacity style={[styles.button, commonStyles.shadow]}>
-        <View style={styles.iconWrapper}>
-          <InviteIcon style={styles.icon} />
-        </View>
-        <View style={styles.body}>
-          <Text style={styles.mainText}>{t('profile.invite_friends')}</Text>
-          <Text style={styles.noteText}>
-            {t('profile.invite_friends_note')}
-          </Text>
-        </View>
-        <StarTransparentIcon style={styles.backgroundIcon} />
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity style={[styles.button, commonStyles.shadow, style]}>
+      <View style={styles.iconWrapper}>
+        <InviteIcon style={styles.icon} />
+      </View>
+      <View style={styles.body}>
+        <Text style={styles.mainText}>{t('profile.invite_friends')}</Text>
+        <Text style={styles.noteText}>{t('profile.invite_friends_note')}</Text>
+      </View>
+      <StarTransparentIcon style={styles.backgroundIcon} />
+    </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    marginTop: rem(38),
-  },
   button: {
     flexDirection: 'row',
     marginHorizontal: SCREEN_SIDE_OFFSET,
