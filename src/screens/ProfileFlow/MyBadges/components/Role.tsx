@@ -3,7 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {CheckMark} from '@screens/MyRoles/components/CheckMark';
+import {CheckMark} from '@screens/ProfileFlow/MyRoles/components/CheckMark';
 import React, {ReactNode} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {SvgProps} from 'react-native-svg';

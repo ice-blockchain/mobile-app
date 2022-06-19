@@ -8,9 +8,10 @@ import {TeamIcon} from '@navigation/components/MainTabBar/components/Icons/TeamI
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {Home} from '@screens/Home';
-import {MyRoles} from '@screens/MyRoles';
 import {News} from '@screens/News';
-import {Profile} from '@screens/Profile';
+import {MyBadges} from '@screens/ProfileFlow/MyBadges';
+import {MyRoles} from '@screens/ProfileFlow/MyRoles';
+import {Profile} from '@screens/ProfileFlow/Profile';
 import {Team} from '@screens/Team';
 import {WebView} from '@screens/WebView';
 import React from 'react';
@@ -27,6 +28,7 @@ export type MainStackParamList = {
   Main: undefined;
   WebView: undefined;
   MyRoles: undefined;
+  MyBadges: undefined;
 };
 
 const Tabs = createBottomTabNavigator<MainTabsParamList>();
@@ -81,6 +83,7 @@ export function Main() {
         options={modalOptions}
       />
       <MainStack.Screen name="MyRoles" component={MyRoles} />
+      <MainStack.Screen name="MyBadges" component={MyBadges} />
     </MainStack.Navigator>
   );
 }

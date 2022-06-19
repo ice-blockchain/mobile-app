@@ -3,15 +3,15 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {Avatar} from '@screens/Profile/components/UserInfo/components/Avatar';
-import {Level} from '@screens/Profile/components/UserInfo/components/Level';
+import {Avatar} from '@screens/ProfileFlow/Profile/components/UserInfo/components/Avatar';
+import {Level} from '@screens/ProfileFlow/Profile/components/UserInfo/components/Level';
 import {t} from '@utils/i18n';
 import {formatNumber} from '@utils/number';
-import React from 'react';
+import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
-export const UserInfo = () => {
+export const UserInfo = memo(() => {
   return (
     <View style={styles.container}>
       <View style={styles.body}>
@@ -42,7 +42,7 @@ export const UserInfo = () => {
       </View>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {

@@ -6,9 +6,11 @@ import {StackNavigationProp} from '@react-navigation/stack';
 import {
   RoleCard,
   RoleCardSkeleton,
-} from '@screens/Profile/components/Role/components/RoleCard';
-import {ViewAllButton} from '@screens/Profile/components/Role/components/ViewAllButton';
+} from '@screens/ProfileFlow/Profile/components/Role/components/RoleCard';
+import {ViewAllButton} from '@screens/ProfileFlow/Profile/components/Role/components/ViewAllButton';
+import {SectionHeader} from '@screens/ProfileFlow/Profile/components/SectionHeader';
 import {Pioneer} from '@svg/Roles/Pioneer';
+import {t} from '@utils/i18n';
 import React, {memo, useState} from 'react';
 
 export const Role = memo(() => {
@@ -18,6 +20,10 @@ export const Role = memo(() => {
 
   return (
     <>
+      <SectionHeader
+        title={t('profile.my_role').toUpperCase()}
+        showViewAll={false}
+      />
       {loading ? (
         <RoleCardSkeleton />
       ) : (

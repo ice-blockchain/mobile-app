@@ -5,7 +5,7 @@ import {
   BadgeCard,
   BadgeCardSkeleton,
   CARD_OFFSET,
-} from '@screens/Profile/components/Badges/components/BadgeCard';
+} from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeCard';
 import {IceBreaker} from '@svg/Badges/IceBreaker';
 import {SnowyPlow} from '@svg/Badges/SnowyPlow';
 import {TroubleMaker} from '@svg/Badges/TroubleMaker';

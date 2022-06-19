@@ -5,7 +5,7 @@ import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {FaqButton} from '@navigation/components/Header/components/FaqButton';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {Role} from '@screens/MyRoles/components/Role';
+import {Role} from '@screens/ProfileFlow/MyRoles/components/Role';
 import {Ambassador} from '@svg/Roles/Ambassador';
 import {Pioneer} from '@svg/Roles/Pioneer';
 import {t} from '@utils/i18n';

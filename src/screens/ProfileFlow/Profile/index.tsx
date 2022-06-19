@@ -1,25 +1,22 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {InviteButton} from '@components/InviteButton';
 import {COLORS} from '@constants/colors';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {Badges} from '@screens/Profile/components/Badges';
-import {HeaderRightButtons} from '@screens/Profile/components/HeaderRightButtons';
-import {InviteNote} from '@screens/Profile/components/InviteNote';
-import {MiningCalculator} from '@screens/Profile/components/MiningCalculator';
-import {Role} from '@screens/Profile/components/Role';
-import {SectionHeader} from '@screens/Profile/components/SectionHeader';
-import {UserInfo} from '@screens/Profile/components/UserInfo';
-import {t} from '@utils/i18n';
-import React from 'react';
+import {Badges} from '@screens/ProfileFlow/Profile/components/Badges';
+import {HeaderRightButtons} from '@screens/ProfileFlow/Profile/components/HeaderRightButtons';
+import {Invite} from '@screens/ProfileFlow/Profile/components/Invite';
+import {MiningCalculator} from '@screens/ProfileFlow/Profile/components/MiningCalculator';
+import {Role} from '@screens/ProfileFlow/Profile/components/Role';
+import {UserInfo} from '@screens/ProfileFlow/Profile/components/UserInfo';
+import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
-export const Profile = () => {
+export const Profile = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
   const {scrollHandler, shadowStyle} = useScrollShadow();
@@ -38,29 +35,15 @@ export const Profile = () => {
         showsVerticalScrollIndicator={false}>
         <UserInfo />
         <View style={styles.card}>
-          <SectionHeader
-            title={t('profile.my_badges').toUpperCase()}
-            showViewAll={true}
-            onViewAllPress={() => {}}
-          />
           <Badges />
-          <SectionHeader
-            title={t('profile.my_role').toUpperCase()}
-            showViewAll={false}
-          />
           <Role />
-          <InviteButton style={styles.inviteButton} />
-          <InviteNote />
-          <SectionHeader
-            title={t('profile.mining_calculator').toUpperCase()}
-            showViewAll={false}
-          />
+          <Invite />
           <MiningCalculator />
         </View>
       </Animated.ScrollView>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {
@@ -75,8 +58,5 @@ const styles = StyleSheet.create({
     // make bottom overscroll area white, otherwise it'd be of container color
     paddingBottom: 2000,
     marginBottom: -2000,
-  },
-  inviteButton: {
-    marginTop: rem(38),
   },
 });
