@@ -37,12 +37,14 @@ export const MyRoles = () => {
           description="Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot."
           renderIcon={Pioneer}
           backgroundColor={COLORS.white}
+          checked={true}
         />
         <Role
           title="Ambassador"
           tagline="Invite friends to join your team."
           description="You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features."
           renderIcon={Ambassador}
+          checked={true}
         />
       </Animated.ScrollView>
     </View>

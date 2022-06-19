@@ -3,6 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {CheckMark} from '@screens/MyRoles/components/CheckMark';
 import React, {ReactNode} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {SvgProps} from 'react-native-svg';
@@ -14,6 +15,7 @@ type Props = {
   description: string;
   renderIcon: (props: SvgProps) => ReactNode;
   backgroundColor?: string;
+  checked?: boolean;
 };
 
 export const Role = ({
@@ -22,11 +24,15 @@ export const Role = ({
   description,
   renderIcon,
   backgroundColor,
+  checked = false,
 }: Props) => {
   return (
     <View style={[styles.container, {backgroundColor}]}>
       <Text style={styles.titleText}>{title}</Text>
-      {renderIcon({style: styles.icon})}
+      <View>
+        {renderIcon({style: styles.icon})}
+        {checked && <CheckMark style={styles.checkmark} />}
+      </View>
       <Text style={styles.taglineText}>{tagline}</Text>
       <Text style={styles.descriptionText}>{description}</Text>
     </View>
@@ -49,6 +55,11 @@ const styles = StyleSheet.create({
     marginTop: rem(12),
     width: rem(150),
     height: rem(140),
+  },
+  checkmark: {
+    position: 'absolute',
+    bottom: rem(5),
+    right: rem(10),
   },
   taglineText: {
     marginTop: rem(8),
