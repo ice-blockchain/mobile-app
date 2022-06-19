@@ -1,17 +1,16 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {IconCard, IconCardSkeleton} from '@components/Cards/IconCard';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
-import {
-  RoleCard,
-  RoleCardSkeleton,
-} from '@screens/ProfileFlow/Profile/components/Role/components/RoleCard';
 import {ViewAllButton} from '@screens/ProfileFlow/Profile/components/Role/components/ViewAllButton';
 import {SectionHeader} from '@screens/ProfileFlow/Profile/components/SectionHeader';
 import {Pioneer} from '@svg/Roles/Pioneer';
 import {t} from '@utils/i18n';
 import React, {memo, useState} from 'react';
+import {StyleSheet} from 'react-native';
+import {rem} from 'rn-units';
 
 export const Role = memo(() => {
   const navigation = useNavigation<StackNavigationProp<MainStackParamList>>();
@@ -25,12 +24,13 @@ export const Role = memo(() => {
         showViewAll={false}
       />
       {loading ? (
-        <RoleCardSkeleton />
+        <IconCardSkeleton containerStyle={styles.card} />
       ) : (
-        <RoleCard
+        <IconCard
           renderIcon={Pioneer}
           title={'Pioneer'}
           description={'Are you flesh and blood?'}
+          containerStyle={styles.card}
         />
       )}
       <ViewAllButton
@@ -40,4 +40,10 @@ export const Role = memo(() => {
       />
     </>
   );
+});
+
+const styles = StyleSheet.create({
+  card: {
+    marginTop: rem(12),
+  },
 });

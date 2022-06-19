@@ -4,7 +4,7 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import React, {ReactNode} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {SvgProps} from 'react-native-svg';
 import {font, rem} from 'rn-units';
@@ -13,23 +13,44 @@ type Props = {
   title: string;
   description: string;
   renderIcon: (props: SvgProps) => ReactNode;
+  renderBody?: () => ReactNode;
+  containerStyle?: StyleProp<ViewStyle>;
 };
 
-export const RoleCard = ({title, description, renderIcon}: Props) => {
+export const IconCard = ({
+  title,
+  description,
+  renderIcon,
+  renderBody,
+  containerStyle,
+}: Props) => {
   return (
-    <View style={[styles.container, commonStyles.shadow]}>
+    <View style={[styles.container, containerStyle, commonStyles.shadow]}>
       {renderIcon({style: styles.icon})}
       <View style={styles.info}>
-        <Text style={styles.titleText}>{title}</Text>
-        <Text style={styles.descriptionText}>{description}</Text>
+        <Text
+          style={styles.titleText}
+          numberOfLines={2}
+          adjustsFontSizeToFit={true}>
+          {title}
+        </Text>
+        <Text
+          style={styles.descriptionText}
+          numberOfLines={2}
+          adjustsFontSizeToFit={true}>
+          {description}
+        </Text>
       </View>
+      {renderBody?.()}
     </View>
   );
 };
 
-export const RoleCardSkeleton = () => (
+export const IconCardSkeleton = ({
+  containerStyle,
+}: {containerStyle?: StyleProp<ViewStyle>} = {}) => (
   <SkeletonPlaceholder>
-    <View style={styles.container} />
+    <View style={[styles.container, containerStyle]} />
   </SkeletonPlaceholder>
 );
 
@@ -40,7 +61,7 @@ const styles = StyleSheet.create({
     marginHorizontal: SCREEN_SIDE_OFFSET,
     height: rem(73),
     flexDirection: 'row',
-    marginTop: rem(12),
+    marginVertical: rem(10),
   },
   icon: {
     marginLeft: 10,

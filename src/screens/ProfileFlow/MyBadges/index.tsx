@@ -1,14 +1,19 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {IconCard} from '@components/Cards/IconCard';
+import {InviteButton} from '@components/InviteButton';
 import {COLORS} from '@constants/colors';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {FaqButton} from '@navigation/components/Header/components/FaqButton';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import {BadgeProgress} from '@screens/ProfileFlow/MyBadges/components/BadgeProgress';
+import {IceBreaker} from '@svg/Badges/IceBreaker';
 import {t} from '@utils/i18n';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
+import {rem} from 'rn-units';
 
 export const MyBadges = () => {
   useFocusStatusBar({style: 'dark-content'});
@@ -26,8 +31,15 @@ export const MyBadges = () => {
       <Animated.ScrollView
         onScroll={scrollHandler}
         scrollEventThrottle={16}
-        showsVerticalScrollIndicator={false}
-      />
+        showsVerticalScrollIndicator={false}>
+        <IconCard
+          title="Ice Breaker"
+          description="Below 3 ice friends"
+          renderIcon={IceBreaker}
+          renderBody={() => <BadgeProgress value={11.23} />}
+        />
+        <InviteButton style={styles.inviteButton} />
+      </Animated.ScrollView>
     </View>
   );
 };
@@ -35,5 +47,8 @@ export const MyBadges = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  inviteButton: {
+    marginTop: rem(38),
   },
 });
