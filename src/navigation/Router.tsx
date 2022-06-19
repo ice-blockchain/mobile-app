@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Initialization} from '@components/Initialization';
+import {theme} from '@navigation/theme';
 import {NavigationContainer} from '@react-navigation/native';
 import {magicLink} from '@services/magicLink';
 import {AuthActions} from '@store/modules/Auth/actions';
@@ -54,7 +55,7 @@ export function Router() {
   };
 
   return (
-    <NavigationContainer onReady={initializeDynamicLinks}>
+    <NavigationContainer onReady={initializeDynamicLinks} theme={theme}>
       <ActiveNavigator />
     </NavigationContainer>
   );
