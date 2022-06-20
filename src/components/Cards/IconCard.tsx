@@ -61,11 +61,11 @@ const styles = StyleSheet.create({
     marginHorizontal: SCREEN_SIDE_OFFSET,
     height: rem(73),
     flexDirection: 'row',
+    alignItems: 'center',
   },
   icon: {
-    marginLeft: 10,
-    marginTop: 10,
-    height: rem(54),
+    marginLeft: rem(10),
+    height: rem(55),
     width: rem(55),
   },
   info: {

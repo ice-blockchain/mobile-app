@@ -84,6 +84,6 @@ const styles = StyleSheet.create({
     marginVertical: rem(10),
   },
   inviteButton: {
-    marginTop: rem(38),
+    marginTop: rem(18),
   },
 });

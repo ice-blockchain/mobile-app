@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
-import {CheckMarkIcon} from '@svg/CheckMarkIcon';
+import {CheckMarkThinIcon} from '@svg/CheckMarkThinIcon';
 import React from 'react';
 import {StyleProp, StyleSheet, View, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
@@ -13,16 +13,16 @@ type Props = {
 export const CheckMark = ({style}: Props = {}) => {
   return (
     <View style={[styles.container, style]}>
-      <CheckMarkIcon fill={COLORS.white} width={rem(16)} height={rem(16)} />
+      <CheckMarkThinIcon fill={COLORS.white} width={rem(12)} height={rem(12)} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    width: rem(26),
-    height: rem(26),
-    borderRadius: rem(26) / 2,
+    width: rem(22),
+    height: rem(22),
+    borderRadius: rem(22) / 2,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: COLORS.darkBlue,

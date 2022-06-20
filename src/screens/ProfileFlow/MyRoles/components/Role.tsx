@@ -53,8 +53,8 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginTop: rem(12),
-    width: rem(150),
-    height: rem(140),
+    width: rem(130),
+    height: rem(130),
   },
   checkmark: {
     position: 'absolute',
