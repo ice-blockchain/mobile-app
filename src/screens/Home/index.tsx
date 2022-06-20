@@ -31,6 +31,7 @@ export const Home = () => {
     <SafeAreaView style={styles.container} edges={['top']}>
       <HomeHeader />
       <View style={styles.contentWrapper}>
+        <View style={styles.backBottomLayout} />
         <View style={styles.content}>
           <View style={styles.safeAreaShadowContainer}>
             <Animated.View
@@ -105,5 +106,13 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
     paddingTop: rem(20),
+  },
+  backBottomLayout: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 300,
+    backgroundColor: COLORS.white,
   },
 });
