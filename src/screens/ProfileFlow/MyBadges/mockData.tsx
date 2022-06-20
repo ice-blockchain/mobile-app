@@ -2,6 +2,7 @@
 
 import {BadgeCategory} from '@screens/ProfileFlow/MyBadges/components/CategorySwitcher';
 import {IceBreaker} from '@svg/Badges/IceBreaker';
+import {InactiveBadge} from '@svg/Badges/InactiveBadge';
 import {TroubleMaker} from '@svg/Badges/TroubleMaker';
 import {ReactNode} from 'react';
 import {SvgProps} from 'react-native-svg';
@@ -33,14 +34,14 @@ export const BADGES: {[key in BadgeCategory]: Badge[]} = {
     {
       title: 'Ice Breaker',
       description: 'Below 3 ice friends',
-      renderIcon: IceBreaker,
+      renderIcon: InactiveBadge,
       progress: 72.23,
       active: false,
     },
     {
       title: 'Ice Breaker',
       description: 'Below 3 ice friends',
-      renderIcon: IceBreaker,
+      renderIcon: InactiveBadge,
       progress: 72.23,
       active: false,
     },
@@ -70,21 +71,21 @@ export const BADGES: {[key in BadgeCategory]: Badge[]} = {
     {
       title: 'Trouble Maker',
       description: '4-9 ice friends',
-      renderIcon: TroubleMaker,
+      renderIcon: InactiveBadge,
       progress: 42.23,
       active: false,
     },
     {
       title: 'Trouble Maker',
       description: '4-9 ice friends',
-      renderIcon: TroubleMaker,
+      renderIcon: InactiveBadge,
       progress: 42.23,
       active: false,
     },
     {
       title: 'Trouble Maker',
       description: '4-9 ice friends',
-      renderIcon: TroubleMaker,
+      renderIcon: InactiveBadge,
       progress: 72.23,
       active: false,
     },
@@ -114,21 +115,21 @@ export const BADGES: {[key in BadgeCategory]: Badge[]} = {
     {
       title: 'Snowy Plower',
       description: '10-24 ice friends',
-      renderIcon: IceBreaker,
+      renderIcon: InactiveBadge,
       progress: 26.11,
       active: false,
     },
     {
       title: 'Snowy Plower',
       description: '10-24 ice friends',
-      renderIcon: IceBreaker,
+      renderIcon: InactiveBadge,
       progress: 26.11,
       active: false,
     },
     {
       title: 'Snowy Plower',
       description: '10-24 ice friends',
-      renderIcon: IceBreaker,
+      renderIcon: InactiveBadge,
       progress: 26.11,
       active: false,
     },
