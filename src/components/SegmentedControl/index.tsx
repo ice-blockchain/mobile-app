@@ -3,11 +3,9 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {commonStyles} from '@constants/styles';
-import React, {ReactNode, useMemo, useRef, useState} from 'react';
+import React, {memo, ReactNode, useMemo, useState} from 'react';
 import {
-  Animated,
   FlexStyle,
-  LayoutChangeEvent,
   StyleProp,
   StyleSheet,
   Text,
@@ -15,91 +13,108 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
+import Animated, {
+  useAnimatedStyle,
+  useSharedValue,
+  withSpring,
+} from 'react-native-reanimated';
 import {font} from 'rn-units';
 
 const DEFAULT_MARGIN = 8;
 const CONTROL_HEIGHT = 55;
 
-type Segment = {text: string | ReactNode; key: string};
+type Segment = {
+  text?: string;
+  renderText?: (active: boolean) => ReactNode;
+  key: string;
+};
 
 export type SegmentedControlProps = {
   segments: Segment[] | ReadonlyArray<Segment>;
   onChange?: (index: number) => void;
+  initialIndex?: number;
   style?: StyleProp<ViewStyle | FlexStyle>;
 };
 
-export const SegmentedControl = ({
-  segments = [],
-  style,
-  onChange = () => {},
-}: SegmentedControlProps) => {
-  const controlWidth = useRef(0);
-  const [translateValue] = useState(new Animated.Value(0));
-  const [activeIndex, setActiveIndex] = useState(0);
+export const SegmentedControl = memo(
+  ({
+    segments = [],
+    initialIndex = 0,
+    style,
+    onChange = () => {},
+  }: SegmentedControlProps) => {
+    const segmentWidthPerc = 100 / segments.length;
+    const translateX = useSharedValue(segmentWidthPerc * initialIndex);
+    const [activeIndex, setActiveIndex] = useState(initialIndex);
 
-  const dynamicStyle = useMemo(
-    () =>
-      StyleSheet.create({
-        indicator: {
-          width: 100 / segments.length + '%',
-        },
-      }),
-    [segments.length],
-  );
+    const onSegmentPress = (index: number) => {
+      setActiveIndex(index);
+      translateX.value = withSpring(segmentWidthPerc * index, {
+        velocity: 10,
+      });
 
-  const onSegmentSelect = async (index: number) => {
-    Animated.spring(translateValue, {
-      toValue: index * (controlWidth.current / segments.length),
-      velocity: 10,
-      useNativeDriver: true,
-    }).start();
-    setActiveIndex(index);
-  };
+      /**
+       * Postpone onChange to give time for React to update segment styles
+       * according to the new activeIndex -> usually triggering onChange leads to a huge
+       * VDOM changes that lead to temp blocking JS thread and hence UI glitches.
+       */
+      setTimeout(() => {
+        onChange(index);
+      });
+    };
 
-  const onLayout = (event: LayoutChangeEvent) => {
-    const {width} = event.nativeEvent.layout;
-    controlWidth.current = width;
-  };
-
-  const renderSegment = (segment: Segment, index: number) => {
-    const isActive = activeIndex === index;
-    return (
-      <TouchableOpacity
-        key={segment.key}
-        onPress={() => {
-          if (!isActive) {
-            onSegmentSelect(index);
-            onChange(index);
-          }
-        }}
-        style={styles.segment}>
-        <Text
-          style={[
-            styles.text,
-            isActive ? styles.activeText : styles.inactiveText,
-          ]}>
-          {segment.text}
-        </Text>
-      </TouchableOpacity>
+    const dynamicStyles = useMemo(
+      () =>
+        StyleSheet.create({
+          indicator: {
+            width: `${segmentWidthPerc}%`,
+          },
+        }),
+      [segmentWidthPerc],
     );
-  };
 
-  return (
-    <View style={[styles.container, commonStyles.shadow, style]}>
-      <View style={styles.body} onLayout={onLayout}>
-        <Animated.View
-          style={[
-            dynamicStyle.indicator,
-            styles.indicator,
-            StyleSheet.absoluteFill,
-            {transform: [{translateX: translateValue}]},
-          ]}
-        />
-        {segments.map(renderSegment)}
+    const animatedStyles = useAnimatedStyle(() => {
+      return {
+        left: translateX.value + '%',
+      };
+    });
+
+    const renderSegment = (segment: Segment, index: number) => {
+      const active = activeIndex === index;
+      return (
+        <TouchableOpacity
+          key={segment.key}
+          onPress={() => {
+            onSegmentPress(index);
+          }}
+          style={styles.segment}>
+          {typeof segment.renderText === 'function' ? (
+            segment.renderText(active)
+          ) : (
+            <Text
+              style={[
+                styles.text,
+                active ? styles.activeText : styles.inactiveText,
+              ]}>
+              {segment.text ?? ''}
+            </Text>
+          )}
+        </TouchableOpacity>
+      );
+    };
+
+    return (
+      <View style={[styles.container, commonStyles.shadow, style]}>
+        <View style={styles.body}>
+          <Animated.View
+            style={[styles.indicator, dynamicStyles.indicator, animatedStyles]}
+          />
+          {segments.map(renderSegment)}
+        </View>
       </View>
-    </View>
-  );
-};
+    );
+  },
+);
 
 const styles = StyleSheet.create({
   container: {
@@ -116,6 +131,10 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.primary,
     borderRadius: 12,
     marginVertical: DEFAULT_MARGIN,
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
   },
   segment: {
     flex: 1,

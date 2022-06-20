@@ -25,7 +25,7 @@ export const IconCard = ({
   containerStyle,
 }: Props) => {
   return (
-    <View style={[styles.container, containerStyle, commonStyles.shadow]}>
+    <View style={[styles.container, commonStyles.shadow, containerStyle]}>
       {renderIcon({style: styles.icon})}
       <View style={styles.info}>
         <Text

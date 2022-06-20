@@ -8,14 +8,20 @@ import {t} from '@utils/i18n';
 import {capitalizeFirstLetter} from '@utils/string';
 import React from 'react';
 
+export enum BadgeCategory {
+  social = 'social',
+  coins = 'coins',
+  level = 'level',
+}
+
 export const CATEGORIES = [
-  {text: capitalizeFirstLetter(t('global.social')), key: 'social'},
-  {text: capitalizeFirstLetter(t('global.coins')), key: 'coins'},
-  {text: capitalizeFirstLetter(t('global.level')), key: 'level'},
+  {text: capitalizeFirstLetter(t('global.social')), key: BadgeCategory.social},
+  {text: capitalizeFirstLetter(t('global.coins')), key: BadgeCategory.coins},
+  {text: capitalizeFirstLetter(t('global.level')), key: BadgeCategory.level},
 ] as const;
 
 export const CategorySwitcher = (
   props: Omit<SegmentedControlProps, 'segments'>,
 ) => {
-  return <SegmentedControl segments={CATEGORIES} {...props} />;
+  return <SegmentedControl initialIndex={0} segments={CATEGORIES} {...props} />;
 };

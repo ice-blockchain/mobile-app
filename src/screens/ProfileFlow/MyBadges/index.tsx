@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {IconCard} from '@components/Cards/IconCard';
 import {InviteButton} from '@components/InviteButton';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
@@ -8,14 +7,15 @@ import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {FaqButton} from '@navigation/components/Header/components/FaqButton';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {BadgeProgress} from '@screens/ProfileFlow/MyBadges/components/BadgeProgress';
+import {BadgeCard} from '@screens/ProfileFlow/MyBadges/components/BadgeCard';
 import {
+  BadgeCategory,
   CATEGORIES,
   CategorySwitcher,
 } from '@screens/ProfileFlow/MyBadges/components/CategorySwitcher';
-import {IceBreaker} from '@svg/Badges/IceBreaker';
+import {Badge, BADGES} from '@screens/ProfileFlow/MyBadges/mockData';
 import {t} from '@utils/i18n';
-import React from 'react';
+import React, {useCallback, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
@@ -23,10 +23,29 @@ import {rem} from 'rn-units';
 export const MyBadges = () => {
   useFocusStatusBar({style: 'dark-content'});
   const {scrollHandler, shadowStyle} = useScrollShadow();
-  const onCategoryChange = (index: number) => {
-    const category = CATEGORIES[index];
-    console.log('%c index', 'background: #ff6347', category);
+  const [category, setCategory] = useState(BadgeCategory.social);
+
+  const onCategoryChange = useCallback((index: number) => {
+    setCategory(CATEGORIES[index].key);
+  }, []);
+
+  const renderItem = ({item}: {item: Badge}) => {
+    return <BadgeCard {...item} />;
   };
+
+  const renderHeader = useCallback(
+    () => (
+      <CategorySwitcher
+        style={styles.categorySwitcher}
+        onChange={onCategoryChange}
+      />
+    ),
+    [onCategoryChange],
+  );
+
+  const renderFooter = useCallback(() => {
+    return <InviteButton style={styles.inviteButton} />;
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -37,37 +56,16 @@ export const MyBadges = () => {
         renderRightButtons={FaqButton}
         title={t('my_badges.title')}
       />
-      <CategorySwitcher
-        style={styles.categorySwitcher}
-        onChange={onCategoryChange}
-      />
-      <Animated.ScrollView
+      <Animated.FlatList
+        data={BADGES[category]}
+        renderItem={renderItem}
         onScroll={scrollHandler}
         scrollEventThrottle={16}
-        showsVerticalScrollIndicator={false}>
-        <IconCard
-          title="Ice Breaker"
-          description="Below 3 ice friends"
-          renderIcon={IceBreaker}
-          renderBody={() => <BadgeProgress value={11.23} />}
-          containerStyle={styles.card}
-        />
-        <IconCard
-          title="Ice Breaker"
-          description="Below 3 ice friends"
-          renderIcon={IceBreaker}
-          renderBody={() => <BadgeProgress value={11.23} />}
-          containerStyle={styles.card}
-        />
-        <IconCard
-          title="Ice Breaker"
-          description="Below 3 ice friends"
-          renderIcon={IceBreaker}
-          renderBody={() => <BadgeProgress value={11.23} />}
-          containerStyle={styles.card}
-        />
-        <InviteButton style={styles.inviteButton} />
-      </Animated.ScrollView>
+        showsVerticalScrollIndicator={false}
+        ListHeaderComponent={renderHeader}
+        ListFooterComponent={renderFooter}
+        contentContainerStyle={styles.listContent}
+      />
     </View>
   );
 };
@@ -77,11 +75,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   categorySwitcher: {
-    marginTop: rem(10),
+    marginBottom: rem(30),
     marginHorizontal: SCREEN_SIDE_OFFSET,
   },
-  card: {
-    marginVertical: rem(10),
+  listContent: {
+    paddingTop: rem(10),
+    paddingBottom: rem(40),
   },
   inviteButton: {
     marginTop: rem(18),
