@@ -8,7 +8,7 @@ import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {MiningIcon} from '@svg/MiningIcon';
 import {TierOneIcon} from '@svg/TierOneIcon';
 import {TierTwoIcon} from '@svg/TierTwoIcon';
-import {t} from '@utils/i18n';
+import {t} from '@translations/i18n';
 import {formatNumber} from '@utils/number';
 import React, {memo, useEffect, useRef, useState} from 'react';
 import {

@@ -10,7 +10,7 @@ import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {ViewAllButton} from '@screens/ProfileFlow/Profile/components/Role/components/ViewAllButton';
 import {SectionHeader} from '@screens/ProfileFlow/Profile/components/SectionHeader';
-import {t} from '@utils/i18n';
+import {t} from '@translations/i18n';
 import React, {memo, useState} from 'react';
 import {StyleSheet} from 'react-native';
 import {rem} from 'rn-units';

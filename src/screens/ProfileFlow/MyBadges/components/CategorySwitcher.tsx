@@ -4,7 +4,7 @@ import {
   SegmentedControl,
   SegmentedControlProps,
 } from '@components/SegmentedControl';
-import {t} from '@utils/i18n';
+import {t} from '@translations/i18n';
 import {capitalizeFirstLetter} from '@utils/string';
 import React from 'react';
 

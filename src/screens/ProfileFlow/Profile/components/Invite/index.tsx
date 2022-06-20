@@ -4,7 +4,7 @@ import {InviteButton} from '@components/InviteButton';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {t} from '@utils/i18n';
+import {t} from '@translations/i18n';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';

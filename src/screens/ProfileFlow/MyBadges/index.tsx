@@ -14,7 +14,7 @@ import {
   CategorySwitcher,
 } from '@screens/ProfileFlow/MyBadges/components/CategorySwitcher';
 import {BADGES} from '@screens/ProfileFlow/MyBadges/mockData';
-import {t} from '@utils/i18n';
+import {t} from '@translations/i18n';
 import React, {useCallback, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';

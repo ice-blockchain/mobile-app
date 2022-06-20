@@ -2,7 +2,7 @@
 
 import {Calculator} from '@screens/ProfileFlow/Profile/components/MiningCalculator/components/Calculator';
 import {SectionHeader} from '@screens/ProfileFlow/Profile/components/SectionHeader';
-import {t} from '@utils/i18n';
+import {t} from '@translations/i18n';
 import React, {memo, useCallback, useState} from 'react';
 
 let timer: null | ReturnType<typeof setTimeout> = null;

@@ -5,7 +5,7 @@ import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Avatar} from '@screens/ProfileFlow/Profile/components/UserInfo/components/Avatar';
 import {Level} from '@screens/ProfileFlow/Profile/components/UserInfo/components/Level';
-import {t} from '@utils/i18n';
+import {t} from '@translations/i18n';
 import {formatNumber} from '@utils/number';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';

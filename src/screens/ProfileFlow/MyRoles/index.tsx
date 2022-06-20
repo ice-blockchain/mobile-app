@@ -7,7 +7,7 @@ import {Header} from '@navigation/components/Header';
 import {FaqButton} from '@navigation/components/Header/components/FaqButton';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Role} from '@screens/ProfileFlow/MyRoles/components/Role';
-import {t} from '@utils/i18n';
+import {t} from '@translations/i18n';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';

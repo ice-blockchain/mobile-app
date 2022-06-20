@@ -5,7 +5,7 @@ import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {BadgeList} from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeList';
 import {SectionHeader} from '@screens/ProfileFlow/Profile/components/SectionHeader';
-import {t} from '@utils/i18n';
+import {t} from '@translations/i18n';
 import React, {memo, useCallback, useState} from 'react';
 
 export const Badges = memo(() => {

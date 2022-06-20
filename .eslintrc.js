@@ -33,7 +33,7 @@ module.exports = {
             paths: [
               {
                 name: 'i18n-js',
-                message: 'Please use custom wrapper from @utils/i18n',
+                message: 'Please use custom wrapper from @translations/i18n',
               },
               {
                 name: 'react-native-config',

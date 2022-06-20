@@ -2,7 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {InfoIconHollow} from '@svg/InfoIconHollow';
-import {t} from '@utils/i18n';
+import {t} from '@translations/i18n';
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {font, rem} from 'rn-units';
