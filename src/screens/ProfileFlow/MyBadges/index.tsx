@@ -3,11 +3,13 @@
 import {IconCard} from '@components/Cards/IconCard';
 import {InviteButton} from '@components/InviteButton';
 import {COLORS} from '@constants/colors';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {FaqButton} from '@navigation/components/Header/components/FaqButton';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {BadgeProgress} from '@screens/ProfileFlow/MyBadges/components/BadgeProgress';
+import {CategorySwitcher} from '@screens/ProfileFlow/MyBadges/components/CategorySwitcher';
 import {IceBreaker} from '@svg/Badges/IceBreaker';
 import {t} from '@utils/i18n';
 import React from 'react';
@@ -28,6 +30,7 @@ export const MyBadges = () => {
         renderRightButtons={FaqButton}
         title={t('my_badges.title')}
       />
+      <CategorySwitcher style={styles.categorySwitcher} />
       <Animated.ScrollView
         onScroll={scrollHandler}
         scrollEventThrottle={16}
@@ -62,6 +65,10 @@ export const MyBadges = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  categorySwitcher: {
+    merginTop: rem(10),
+    marginHorizontal: SCREEN_SIDE_OFFSET,
   },
   card: {
     marginVertical: rem(10),
