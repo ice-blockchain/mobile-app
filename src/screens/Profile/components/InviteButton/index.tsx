@@ -5,6 +5,7 @@ import {FONTS} from '@constants/fonts';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {InviteIcon} from '@svg/InviteIcon';
 import {StarTransparentIcon} from '@svg/StarTransparentIcon';
+import {t} from '@utils/i18n';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -18,9 +19,9 @@ export const InviteButton = () => {
           <InviteIcon style={styles.icon} />
         </View>
         <View style={styles.body}>
-          <Text style={styles.mainText}>Invite Friends</Text>
+          <Text style={styles.mainText}>{t('profile.invite_friends')}</Text>
           <Text style={styles.noteText}>
-            Earn extra ice by inviting your friends.
+            {t('profile.invite_friends_note')}
           </Text>
         </View>
         <StarTransparentIcon style={styles.backgroundIcon} />

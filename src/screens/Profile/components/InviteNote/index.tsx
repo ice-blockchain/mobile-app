@@ -3,15 +3,13 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {t} from '@utils/i18n';
 import React from 'react';
 import {StyleSheet, Text} from 'react-native';
 import {font, rem} from 'rn-units';
 
 export const InviteNote = () => (
-  <Text style={styles.text}>
-    Spread the word and invite your friends. The more refferals, the more you’ll
-    earn!
-  </Text>
+  <Text style={styles.text}>{t('profile.invite_friends_engage')}</Text>
 );
 
 const styles = StyleSheet.create({

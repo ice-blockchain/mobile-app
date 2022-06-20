@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {t} from '@utils/i18n';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -16,7 +17,7 @@ export const Level = ({value}: Props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.valueText}>{value}</Text>
-      <Text style={styles.labelText}>LEVEL</Text>
+      <Text style={styles.labelText}>{t('global.level').toUpperCase()}</Text>
     </View>
   );
 };

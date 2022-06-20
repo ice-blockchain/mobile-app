@@ -3,6 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {t} from '@utils/i18n';
 import React, {memo} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -26,7 +27,7 @@ export const SectionHeader = memo((props: Props) => {
         <TouchableOpacity
           hitSlop={viewAllHitSlop}
           onPress={props.onViewAllPress}>
-          <Text style={styles.viewAllText}>view all</Text>
+          <Text style={styles.viewAllText}>{t('button.view_all')}</Text>
         </TouchableOpacity>
       )}
     </View>

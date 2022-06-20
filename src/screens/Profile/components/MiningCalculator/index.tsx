@@ -8,6 +8,7 @@ import {Slider} from '@screens/Profile/components/MiningCalculator/components/Sl
 import {MiningIcon} from '@svg/MiningIcon';
 import {TierOneIcon} from '@svg/TierOneIcon';
 import {TierTwoIcon} from '@svg/TierTwoIcon';
+import {t} from '@utils/i18n';
 import {formatNumber} from '@utils/number';
 import React, {useEffect, useRef, useState} from 'react';
 import {
@@ -55,13 +56,17 @@ export const MiningCalculator = () => {
 
   return (
     <View style={[styles.containder, commonStyles.shadow]}>
-      <Text style={styles.resultLabelText}>You will earn:</Text>
+      <Text style={styles.resultLabelText}>
+        {t('mining_calculator.result_label')}:
+      </Text>
       <View style={styles.resultValue}>
         {loading ? (
           <ActivityIndicator />
         ) : (
           <Text style={styles.resultValueText}>
-            {result !== null ? `${formatNumber(result)} ice/h` : null}
+            {result !== null
+              ? `${formatNumber(result)} ${t('mining_calculator.currency')}`
+              : null}
           </Text>
         )}
       </View>
@@ -72,14 +77,18 @@ export const MiningCalculator = () => {
           LabelComponent={
             <View style={styles.checkboxLabel}>
               <MiningIcon />
-              <Text style={styles.checkboxLabelText}>Active inviter</Text>
+              <Text style={styles.checkboxLabelText}>
+                {t('mining_calculator.active_inviter')}
+              </Text>
             </View>
           }
         />
       </View>
       <View style={styles.sliderInfo}>
         <TierOneIcon />
-        <Text style={styles.sliderLabelText}>Tier 1 active referrals</Text>
+        <Text style={styles.sliderLabelText}>
+          {t('mining_calculator.tier_1_ref')}
+        </Text>
         <TextInput
           style={styles.sliderValueText}
           ref={tierOneElementRef}
@@ -101,7 +110,9 @@ export const MiningCalculator = () => {
       />
       <View style={styles.sliderInfo}>
         <TierTwoIcon />
-        <Text style={styles.sliderLabelText}>Tier 1 active referrals</Text>
+        <Text style={styles.sliderLabelText}>
+          {t('mining_calculator.tier_2_ref')}
+        </Text>
         <TextInput
           style={styles.sliderValueText}
           ref={tierTwoElementRef}

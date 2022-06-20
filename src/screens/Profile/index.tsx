@@ -13,13 +13,14 @@ import {MiningCalculator} from '@screens/Profile/components/MiningCalculator';
 import {Role} from '@screens/Profile/components/Role';
 import {SectionHeader} from '@screens/Profile/components/SectionHeader';
 import {UserInfo} from '@screens/Profile/components/UserInfo';
+import {t} from '@utils/i18n';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
 export const Profile = () => {
-  useFocusStatusBar({style: 'light-content', backgorund: COLORS.persianBlue});
+  useFocusStatusBar({style: 'light-content', background: COLORS.persianBlue});
   const bottomOffset = useBottomTabBarOffsetStyle();
   const {scrollHandler, animatedStyle} = useScrollShadow();
 
@@ -38,16 +39,22 @@ export const Profile = () => {
         <UserInfo />
         <View style={styles.card}>
           <SectionHeader
-            title="MY BADGES"
+            title={t('profile.my_badges').toUpperCase()}
             showViewAll={true}
             onViewAllPress={() => {}}
           />
           <Badges />
-          <SectionHeader title="MY ROLE" showViewAll={false} />
+          <SectionHeader
+            title={t('profile.my_role').toUpperCase()}
+            showViewAll={false}
+          />
           <Role />
           <InviteButton />
           <InviteNote />
-          <SectionHeader title="MINING CALCULATOR" showViewAll={false} />
+          <SectionHeader
+            title={t('profile.mining_calculator').toUpperCase()}
+            showViewAll={false}
+          />
           <MiningCalculator />
         </View>
       </Animated.ScrollView>

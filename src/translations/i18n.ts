@@ -21,3 +21,5 @@ export default i18n;
 
 export const translate = (scope: string, options?: TranslateOptions) =>
   i18n.t(scope, options);
+
+export const t = translate;

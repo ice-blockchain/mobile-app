@@ -6,16 +6,16 @@ import {Platform, StatusBar, StatusBarStyle} from 'react-native';
 
 type Props = {
   style: StatusBarStyle;
-  backgorund: string;
+  background: string;
   animated?: boolean | undefined;
 };
 
-export const useFocusStatusBar = ({style, backgorund, animated}: Props) =>
+export const useFocusStatusBar = ({style, background, animated}: Props) =>
   useFocusEffect(
     useCallback(() => {
       StatusBar.setBarStyle(style, animated);
       if (Platform.OS === 'android') {
-        StatusBar.setBackgroundColor(backgorund);
+        StatusBar.setBackgroundColor(background);
       }
-    }, [animated, backgorund, style]),
+    }, [animated, background, style]),
   );
