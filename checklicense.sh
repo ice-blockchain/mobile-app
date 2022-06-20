@@ -12,3 +12,4 @@ rm -rf files.cnt
 exit 1
 fi
 rm -rf files.cnt
+
