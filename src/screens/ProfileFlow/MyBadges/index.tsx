@@ -9,7 +9,10 @@ import {Header} from '@navigation/components/Header';
 import {FaqButton} from '@navigation/components/Header/components/FaqButton';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {BadgeProgress} from '@screens/ProfileFlow/MyBadges/components/BadgeProgress';
-import {CategorySwitcher} from '@screens/ProfileFlow/MyBadges/components/CategorySwitcher';
+import {
+  CATEGORIES,
+  CategorySwitcher,
+} from '@screens/ProfileFlow/MyBadges/components/CategorySwitcher';
 import {IceBreaker} from '@svg/Badges/IceBreaker';
 import {t} from '@utils/i18n';
 import React from 'react';
@@ -20,6 +23,10 @@ import {rem} from 'rn-units';
 export const MyBadges = () => {
   useFocusStatusBar({style: 'dark-content'});
   const {scrollHandler, shadowStyle} = useScrollShadow();
+  const onCategoryChange = (index: number) => {
+    const category = CATEGORIES[index];
+    console.log('%c index', 'background: #ff6347', category);
+  };
 
   return (
     <View style={styles.container}>
@@ -30,7 +37,10 @@ export const MyBadges = () => {
         renderRightButtons={FaqButton}
         title={t('my_badges.title')}
       />
-      <CategorySwitcher style={styles.categorySwitcher} />
+      <CategorySwitcher
+        style={styles.categorySwitcher}
+        onChange={onCategoryChange}
+      />
       <Animated.ScrollView
         onScroll={scrollHandler}
         scrollEventThrottle={16}
@@ -67,7 +77,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   categorySwitcher: {
-    merginTop: rem(10),
+    marginTop: rem(10),
     marginHorizontal: SCREEN_SIDE_OFFSET,
   },
   card: {

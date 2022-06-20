@@ -1,19 +1,19 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {SegmentedControl} from '@components/SegmentedControl';
+import {
+  SegmentedControl,
+  SegmentedControlProps,
+} from '@components/SegmentedControl';
 import React from 'react';
-import {StyleProp, ViewStyle} from 'react-native';
 
-type Props = {
-  style?: StyleProp<ViewStyle>;
-};
-
-const CATEGORIES = [
-  {text: 'social', key: 'social'},
-  {text: 'coins', key: 'coins'},
-  {text: 'level', key: 'level'},
+export const CATEGORIES = [
+  {text: 'global.social', key: 'social'},
+  {text: 'global.coins', key: 'coins'},
+  {text: 'global.level', key: 'level'},
 ] as const;
 
-export const CategorySwitcher = ({style}: Props) => {
-  return <SegmentedControl segments={CATEGORIES} style={style} />;
+export const CategorySwitcher = (
+  props: Omit<SegmentedControlProps, 'segments'>,
+) => {
+  return <SegmentedControl segments={CATEGORIES} {...props} />;
 };

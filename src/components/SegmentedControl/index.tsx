@@ -23,17 +23,17 @@ const CONTROL_HEIGHT = 55;
 
 type Segment = {text: string; key: string};
 
-type Props = {
-  segments: ReadonlyArray<Segment>;
-  onPress?: (index: number) => void;
+export type SegmentedControlProps = {
+  segments: Segment[] | ReadonlyArray<Segment>;
+  onChange?: (index: number) => void;
   style?: StyleProp<ViewStyle | FlexStyle>;
 };
 
 export const SegmentedControl = ({
   segments = [],
   style,
-  onPress = () => {},
-}: Props) => {
+  onChange = () => {},
+}: SegmentedControlProps) => {
   const controlWidth = useRef(0);
   const [translateValue] = useState(new Animated.Value(0));
   const [activeIndex, setActiveIndex] = useState(0);
@@ -68,8 +68,10 @@ export const SegmentedControl = ({
       <TouchableOpacity
         key={segment.key}
         onPress={() => {
-          onSegmentSelect(index);
-          onPress(index);
+          if (!isActive) {
+            onSegmentSelect(index);
+            onChange(index);
+          }
         }}
         style={styles.segment}>
         <Text
