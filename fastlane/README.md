@@ -13,19 +13,15 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
-### bump_$platform_version
+## iOS
+
+### ios bump_version
 
 ```sh
-[bundle exec] fastlane bump_ios_version
-[bundle exec] fastlane bump_android_version
+[bundle exec] fastlane ios bump_version
 ```
 
-Bump iOS and Android version
-
-----
-
-
-## iOS
+Bump iOS version
 
 ### ios build
 
@@ -47,6 +43,14 @@ Deploy iOS app
 
 
 ## Android
+
+### android bump_version
+
+```sh
+[bundle exec] fastlane android bump_version
+```
+
+Bump Android version
 
 ### android build
 

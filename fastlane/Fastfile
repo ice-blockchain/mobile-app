@@ -35,69 +35,36 @@ def product_bundle_id(xcodeproj)
     build_configuration.build_settings['PRODUCT_BUNDLE_IDENTIFIER']
 end
 
-desc "Bump iOS version"
-lane :bump_ios_version do |options|
-    xcodeproj = "./ios/ice.xcodeproj"
-    version_number = options[:version_number] || "0.0.0"
-    next_build_number = options[:build_number]
-
-    raise "Version number is not provided." if version_number.nil?
-
-    if next_build_number.nil?
-        puts "Please specify new build number: "
-        next_build_number = STDIN.gets.chomp
-        raise "Build number should be int." if next_build_number.nil? || next_build_number.scan(/\d+/).length == 0
-    end
-
-    puts "Setting build number to #{next_build_number}".yellow
-    puts "Setting version to #{version_number}".yellow
-
-    # iOS
-    increment_build_number(
-        build_number: next_build_number,
-        xcodeproj: xcodeproj,
-    )
-
-    # iOS
-    increment_version_number(
-        version_number: version_number,
-        xcodeproj: xcodeproj,
-    )
-
-end
-
-desc "Bump Android version"
-lane :bump_android_version do |options|
-    build_gradle = "./android/app/build.gradle"
-    version_number = options[:version_number] || "0.0.0"
-    next_build_number = options[:build_number]
-
-    raise "Version number is not provided." if version_number.nil?
-
-    if next_build_number.nil?
-        puts "Please specify new build number: "
-        next_build_number = STDIN.gets.chomp
-        raise "Build number should be int." if next_build_number.nil? || next_build_number.scan(/\d+/).length == 0
-    end
-
-    puts "Setting build number to #{next_build_number}".yellow
-    puts "Setting version to #{version_number}".yellow
-
-    # Android
-    increment_version_code(
-        version_code: next_build_number,
-        gradle_file_path: build_gradle,
-    )
-
-    # Android
-    increment_version_name(
-        version_name: version_number,
-        gradle_file_path: build_gradle,
-    )
-
-end
-
 platform :ios do
+    desc "Bump iOS version"
+    lane :bump_version do |options|
+        xcodeproj = "./ios/ice.xcodeproj"
+        version_number = options[:version_number] || "0.0.0"
+        next_build_number = options[:build_number]
+
+        raise "Version number is not provided." if version_number.nil?
+
+        if next_build_number.nil?
+            puts "Please specify new build number: "
+            next_build_number = STDIN.gets.chomp
+            raise "Build number should be int." if next_build_number.nil? || next_build_number.scan(/\d+/).length == 0
+        end
+
+        puts "Setting build number to #{next_build_number}".yellow
+        puts "Setting version to #{version_number}".yellow
+
+        increment_build_number(
+            build_number: next_build_number,
+            xcodeproj: xcodeproj,
+        )
+
+        increment_version_number(
+            version_number: version_number,
+            xcodeproj: xcodeproj,
+        )
+
+    end
+
     desc "Build iOS app"
     lane :build do |options|
         temp_keystore_user = 'match_keystore_user'
@@ -183,6 +150,35 @@ platform :ios do
 end
 
 platform :android do
+    desc "Bump Android version"
+    lane :bump_version do |options|
+        build_gradle = "./android/app/build.gradle"
+        version_number = options[:version_number] || "0.0.0"
+        next_build_number = options[:build_number]
+
+        raise "Version number is not provided." if version_number.nil?
+
+        if next_build_number.nil?
+            puts "Please specify new build number: "
+            next_build_number = STDIN.gets.chomp
+            raise "Build number should be int." if next_build_number.nil? || next_build_number.scan(/\d+/).length == 0
+        end
+
+        puts "Setting build number to #{next_build_number}".yellow
+        puts "Setting version to #{version_number}".yellow
+
+        increment_version_code(
+            version_code: next_build_number,
+            gradle_file_path: build_gradle,
+        )
+
+        increment_version_name(
+            version_name: version_number,
+            gradle_file_path: build_gradle,
+        )
+
+    end
+
     desc "Build Android app"
     lane :build do |options|
         case options[:type]
