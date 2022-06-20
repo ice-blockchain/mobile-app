@@ -3,8 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {commonStyles} from '@constants/styles';
-import {t} from '@utils/i18n';
-import React, {useMemo, useRef, useState} from 'react';
+import React, {ReactNode, useMemo, useRef, useState} from 'react';
 import {
   Animated,
   FlexStyle,
@@ -21,7 +20,7 @@ import {font} from 'rn-units';
 const DEFAULT_MARGIN = 8;
 const CONTROL_HEIGHT = 55;
 
-type Segment = {text: string; key: string};
+type Segment = {text: string | ReactNode; key: string};
 
 export type SegmentedControlProps = {
   segments: Segment[] | ReadonlyArray<Segment>;
@@ -79,7 +78,7 @@ export const SegmentedControl = ({
             styles.text,
             isActive ? styles.activeText : styles.inactiveText,
           ]}>
-          {t(segment.text)}
+          {segment.text}
         </Text>
       </TouchableOpacity>
     );

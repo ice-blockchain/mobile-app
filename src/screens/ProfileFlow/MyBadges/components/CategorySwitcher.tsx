@@ -4,12 +4,14 @@ import {
   SegmentedControl,
   SegmentedControlProps,
 } from '@components/SegmentedControl';
+import {t} from '@utils/i18n';
+import {capitalizeFirstLetter} from '@utils/string';
 import React from 'react';
 
 export const CATEGORIES = [
-  {text: 'global.social', key: 'social'},
-  {text: 'global.coins', key: 'coins'},
-  {text: 'global.level', key: 'level'},
+  {text: capitalizeFirstLetter(t('global.social')), key: 'social'},
+  {text: capitalizeFirstLetter(t('global.coins')), key: 'coins'},
+  {text: capitalizeFirstLetter(t('global.level')), key: 'level'},
 ] as const;
 
 export const CategorySwitcher = (
