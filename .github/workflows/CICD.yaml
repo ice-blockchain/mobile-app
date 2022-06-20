@@ -219,7 +219,12 @@ jobs:
             else
                echo "IOS_SIGN_TYPE=appstore" >> $GITHUB_ENV
                echo "DEPLOY_TARGET=testflight" >> $GITHUB_ENV
-               echo "APP_VERSION=$(echo ${GITHUB_REF_NAME#*v})" >> $GITHUB_ENV
+               if [[ ${{ github.ref_name == 'master' }} == true ]]
+                  then
+                    echo "APP_VERSION=0.0.0" >> $GITHUB_ENV
+                  else
+                    echo "APP_VERSION=$(echo ${GITHUB_REF_NAME#*v})" >> $GITHUB_ENV
+               fi
           fi
           if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
             then
@@ -230,7 +235,7 @@ jobs:
       - name: Bump version to v${{ env.APP_VERSION }}
         run: |
           cd main-repo
-          bundle exec fastlane bump_android_version build_number:${{ github.run_number }} version_number:$APP_VERSION
+          bundle exec fastlane bump_ios_version build_number:${{ github.run_number }} version_number:$APP_VERSION
       - name: Build iOS App (${{env.IOS_SIGN_TYPE}})
         run: |
           cd main-repo
@@ -308,7 +313,12 @@ jobs:
             else
               echo "ANDROID_ARCHIVE_TYPE=bundle" >> $GITHUB_ENV
               echo "DEPLOY_TARGET=playstore" >> $GITHUB_ENV
-              echo "APP_VERSION=$(echo ${GITHUB_REF_NAME#*v})" >> $GITHUB_ENV
+              if [[ ${{ github.ref_name == 'master' }} == true ]]
+                then
+                  echo "APP_VERSION=0.0.0" >> $GITHUB_ENV
+                else
+                  echo "APP_VERSION=$(echo ${GITHUB_REF_NAME#*v})" >> $GITHUB_ENV
+              fi
           fi
           if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
             then
