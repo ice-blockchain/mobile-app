@@ -37,6 +37,21 @@ export const MyBadges = () => {
           description="Below 3 ice friends"
           renderIcon={IceBreaker}
           renderBody={() => <BadgeProgress value={11.23} />}
+          containerStyle={styles.card}
+        />
+        <IconCard
+          title="Ice Breaker"
+          description="Below 3 ice friends"
+          renderIcon={IceBreaker}
+          renderBody={() => <BadgeProgress value={11.23} />}
+          containerStyle={styles.card}
+        />
+        <IconCard
+          title="Ice Breaker"
+          description="Below 3 ice friends"
+          renderIcon={IceBreaker}
+          renderBody={() => <BadgeProgress value={11.23} />}
+          containerStyle={styles.card}
         />
         <InviteButton style={styles.inviteButton} />
       </Animated.ScrollView>
@@ -47,6 +62,9 @@ export const MyBadges = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  card: {
+    marginVertical: rem(10),
   },
   inviteButton: {
     marginTop: rem(38),

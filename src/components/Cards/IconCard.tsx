@@ -61,7 +61,6 @@ const styles = StyleSheet.create({
     marginHorizontal: SCREEN_SIDE_OFFSET,
     height: rem(73),
     flexDirection: 'row',
-    marginVertical: rem(10),
   },
   icon: {
     marginLeft: 10,
