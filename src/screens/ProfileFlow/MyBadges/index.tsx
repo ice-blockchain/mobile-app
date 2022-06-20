@@ -40,7 +40,11 @@ export const MyBadges = () => {
   );
 
   const renderFooter = useCallback(() => {
-    return <InviteButton style={styles.inviteButton} />;
+    return (
+      <View style={styles.inviteButton}>
+        <InviteButton />
+      </View>
+    );
   }, []);
 
   return (
