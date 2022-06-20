@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   categorySwitcher: {
-    marginBottom: rem(30),
+    marginBottom: rem(12),
     marginHorizontal: SCREEN_SIDE_OFFSET,
   },
   inviteButton: {

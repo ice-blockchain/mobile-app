@@ -63,7 +63,7 @@ export const BadgeCard = ({
 
 const styles = StyleSheet.create({
   containerActive: {
-    marginVertical: rem(11),
+    marginVertical: rem(12),
   },
   containerInactive: {
     backgroundColor: 'transparent',
