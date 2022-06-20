@@ -8,11 +8,13 @@ import {TeamIcon} from '@navigation/components/MainTabBar/components/Icons/TeamI
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import {Home} from '@screens/Home';
+import {MyRoles} from '@screens/MyRoles';
 import {News} from '@screens/News';
 import {Profile} from '@screens/Profile';
 import {Team} from '@screens/Team';
 import {WebView} from '@screens/WebView';
 import React from 'react';
+import {Platform} from 'react-native';
 
 export type MainTabsParamList = {
   HomeTab: undefined;
@@ -24,6 +26,7 @@ export type MainTabsParamList = {
 export type MainStackParamList = {
   Main: undefined;
   WebView: undefined;
+  MyRoles: undefined;
 };
 
 const Tabs = createBottomTabNavigator<MainTabsParamList>();
@@ -36,8 +39,12 @@ const tabOptions = {
 
 const screenOptions = {
   headerShown: false,
-  ...TransitionPresets.ModalSlideFromBottomIOS,
 };
+
+const modalOptions =
+  Platform.OS === 'ios'
+    ? TransitionPresets.ModalSlideFromBottomIOS
+    : TransitionPresets.ScaleFromCenterAndroid;
 
 const MainTabs = () => (
   <Tabs.Navigator screenOptions={tabOptions} tabBar={MainTabBar}>
@@ -68,7 +75,12 @@ export function Main() {
   return (
     <MainStack.Navigator screenOptions={screenOptions}>
       <MainStack.Screen name="Main" component={MainTabs} />
-      <MainStack.Screen name="WebView" component={WebView} />
+      <MainStack.Screen
+        name="WebView"
+        component={WebView}
+        options={modalOptions}
+      />
+      <MainStack.Screen name="MyRoles" component={MyRoles} />
     </MainStack.Navigator>
   );
 }

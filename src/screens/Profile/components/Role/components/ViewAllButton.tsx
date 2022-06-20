@@ -7,9 +7,16 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {font, rem} from 'rn-units';
 
-export const ViewAllButton = () => {
+type Props = {
+  onPress: () => void;
+};
+
+export const ViewAllButton = ({onPress}: Props) => {
   return (
-    <TouchableOpacity style={styles.viewAll} hitSlop={hitSlop}>
+    <TouchableOpacity
+      style={styles.viewAll}
+      hitSlop={hitSlop}
+      onPress={onPress}>
       <Text style={styles.viewAllText}>{t('profile.view_all_roles')}</Text>
       <InfoIconHollow style={styles.infoIcon} />
     </TouchableOpacity>
