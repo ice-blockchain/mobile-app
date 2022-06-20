@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {IconCard} from '@components/Cards/IconCard';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {BadgeProgress} from '@screens/ProfileFlow/MyBadges/components/BadgeCardProgress';
 import React, {ReactNode} from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {SvgProps} from 'react-native-svg';
 import {rem} from 'rn-units';
 
@@ -13,6 +14,10 @@ type Props = {
   progress: number;
   active?: boolean;
   renderIcon: (props: SvgProps) => ReactNode;
+  connector: {
+    top?: string | null;
+    bottom?: string | null;
+  };
 };
 
 export const BadgeCard = ({
@@ -21,30 +26,61 @@ export const BadgeCard = ({
   renderIcon,
   progress,
   active = true,
+  connector = {},
 }: Props) => {
   return (
-    <IconCard
-      title={title}
-      description={description}
-      renderIcon={renderIcon}
-      renderBody={() => <BadgeProgress value={progress} />}
-      containerStyle={[
-        styles.container,
-        active ? styles.containerActive : styles.containerInactive,
-      ]}
-    />
+    <>
+      {connector.top && (
+        <View
+          style={[
+            styles.connector,
+            styles.connectorTop,
+            {backgroundColor: connector.top},
+          ]}
+        />
+      )}
+      {connector.bottom && (
+        <View
+          style={[
+            styles.connector,
+            styles.connectorBottom,
+            {backgroundColor: connector.bottom},
+          ]}
+        />
+      )}
+      <IconCard
+        title={title}
+        description={description}
+        renderIcon={renderIcon}
+        renderBody={() => <BadgeProgress value={progress} />}
+        containerStyle={[
+          active ? styles.containerActive : styles.containerInactive,
+        ]}
+      />
+    </>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {},
+  containerActive: {
+    marginVertical: rem(11),
+  },
   containerInactive: {
     backgroundColor: 'transparent',
     elevation: 0,
     shadowOpacity: 0,
-    marginBottom: rem(0),
   },
-  containerActive: {
-    marginBottom: rem(22),
+  connector: {
+    position: 'absolute',
+    width: 1,
+    left: SCREEN_SIDE_OFFSET + rem(35),
+  },
+  connectorTop: {
+    top: 0,
+    bottom: '50%',
+  },
+  connectorBottom: {
+    top: '50%',
+    bottom: 0,
   },
 });

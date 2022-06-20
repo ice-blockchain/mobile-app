@@ -18,4 +18,5 @@ export const COLORS = {
   shamrock: '#35D487',
   emperor: '#535353',
   alabaster: '#F8F8F8',
+  mischka: '#D8DCE3',
 };

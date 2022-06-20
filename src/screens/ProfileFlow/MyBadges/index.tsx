@@ -7,31 +7,27 @@ import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {FaqButton} from '@navigation/components/Header/components/FaqButton';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {BadgeCard} from '@screens/ProfileFlow/MyBadges/components/BadgeCard';
+import {BadgeList} from '@screens/ProfileFlow/MyBadges/components/BadgeList';
 import {
   BadgeCategory,
   CATEGORIES,
   CategorySwitcher,
 } from '@screens/ProfileFlow/MyBadges/components/CategorySwitcher';
-import {Badge, BADGES} from '@screens/ProfileFlow/MyBadges/mockData';
+import {BADGES} from '@screens/ProfileFlow/MyBadges/mockData';
 import {t} from '@utils/i18n';
 import React, {useCallback, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
 export const MyBadges = () => {
   useFocusStatusBar({style: 'dark-content'});
   const {scrollHandler, shadowStyle} = useScrollShadow();
   const [category, setCategory] = useState(BadgeCategory.social);
+  const categoryBadges = BADGES[category];
 
   const onCategoryChange = useCallback((index: number) => {
     setCategory(CATEGORIES[index].key);
   }, []);
-
-  const renderItem = ({item}: {item: Badge}) => {
-    return <BadgeCard {...item} />;
-  };
 
   const renderHeader = useCallback(
     () => (
@@ -56,15 +52,13 @@ export const MyBadges = () => {
         renderRightButtons={FaqButton}
         title={t('my_badges.title')}
       />
-      <Animated.FlatList
-        data={BADGES[category]}
-        renderItem={renderItem}
+      <BadgeList
+        data={categoryBadges}
         onScroll={scrollHandler}
         scrollEventThrottle={16}
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={renderHeader}
         ListFooterComponent={renderFooter}
-        contentContainerStyle={styles.listContent}
       />
     </View>
   );
@@ -77,10 +71,6 @@ const styles = StyleSheet.create({
   categorySwitcher: {
     marginBottom: rem(30),
     marginHorizontal: SCREEN_SIDE_OFFSET,
-  },
-  listContent: {
-    paddingTop: rem(10),
-    paddingBottom: rem(40),
   },
   inviteButton: {
     marginTop: rem(18),
