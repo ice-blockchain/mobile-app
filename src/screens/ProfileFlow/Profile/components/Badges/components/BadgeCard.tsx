@@ -3,10 +3,9 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {commonStyles} from '@constants/styles';
-import React, {memo, ReactNode} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import React, {memo} from 'react';
+import {Image, ImageSourcePropType, StyleSheet, Text, View} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
-import {SvgProps} from 'react-native-svg';
 import {font, rem} from 'rn-units';
 
 type Props = {
@@ -14,11 +13,11 @@ type Props = {
   category: string;
   progressText: string;
   progressValue: number;
-  renderIcon: (props: SvgProps) => ReactNode;
+  imageSource: ImageSourcePropType;
 };
 
 export const BadgeCard = memo(
-  ({renderIcon, title, category, progressText, progressValue}: Props) => {
+  ({imageSource, title, category, progressText, progressValue}: Props) => {
     return (
       <View style={[styles.container, commonStyles.shadow]}>
         <Text
@@ -27,7 +26,12 @@ export const BadgeCard = memo(
           adjustsFontSizeToFit={true}>
           {title}
         </Text>
-        {renderIcon({style: styles.icon})}
+
+        <Image
+          source={imageSource}
+          style={styles.icon}
+          resizeMode={'contain'}
+        />
         <View style={styles.progressHeader}>
           <Text
             style={styles.categoryText}
@@ -76,9 +80,9 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(12),
   },
   icon: {
+    marginHorizontal: rem(11),
     flexGrow: 1,
-    width: '100%',
-    marginVertical: rem(11),
+    backgroundColor: 'red',
   },
   categoryText: {
     flex: 1,

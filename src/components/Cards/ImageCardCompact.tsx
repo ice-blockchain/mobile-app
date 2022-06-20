@@ -4,29 +4,36 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import React, {ReactNode} from 'react';
-import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
+import {
+  Image,
+  ImageSourcePropType,
+  StyleProp,
+  StyleSheet,
+  Text,
+  View,
+  ViewStyle,
+} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
-import {SvgProps} from 'react-native-svg';
 import {font, rem} from 'rn-units';
 
 type Props = {
   title: string;
   description: string;
-  renderIcon: (props: SvgProps) => ReactNode;
+  imageSource: ImageSourcePropType;
   renderBody?: () => ReactNode;
   containerStyle?: StyleProp<ViewStyle>;
 };
 
-export const IconCard = ({
+export const ImageCardCompact = ({
   title,
   description,
-  renderIcon,
+  imageSource,
   renderBody,
   containerStyle,
 }: Props) => {
   return (
     <View style={[styles.container, commonStyles.shadow, containerStyle]}>
-      {renderIcon({style: styles.icon})}
+      <Image source={imageSource} style={styles.icon} />
       <View style={styles.info}>
         <Text
           style={styles.titleText}
@@ -46,7 +53,7 @@ export const IconCard = ({
   );
 };
 
-export const IconCardSkeleton = ({
+export const ImageCardCompactSkeleton = ({
   containerStyle,
 }: {containerStyle?: StyleProp<ViewStyle>} = {}) => (
   <SkeletonPlaceholder>

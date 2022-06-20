@@ -2,12 +2,11 @@
 
 import {COLORS} from '@constants/colors';
 import {useScrollShadow} from '@hooks/useScrollShadow';
+import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {FaqButton} from '@navigation/components/Header/components/FaqButton';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Role} from '@screens/ProfileFlow/MyRoles/components/Role';
-import {Ambassador} from '@svg/Roles/Ambassador';
-import {Pioneer} from '@svg/Roles/Pioneer';
 import {t} from '@utils/i18n';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -35,7 +34,7 @@ export const MyRoles = () => {
           title="Pioneer"
           tagline="Are you flesh and blood?"
           description="Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot."
-          renderIcon={Pioneer}
+          imageSource={Images.roles.pioneer}
           backgroundColor={COLORS.white}
           checked={true}
         />
@@ -43,7 +42,7 @@ export const MyRoles = () => {
           title="Ambassador"
           tagline="Invite friends to join your team."
           description="You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features."
-          renderIcon={Ambassador}
+          imageSource={Images.roles.ambassador}
           checked={true}
         />
       </Animated.ScrollView>

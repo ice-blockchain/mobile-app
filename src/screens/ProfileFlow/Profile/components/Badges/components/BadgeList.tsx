@@ -1,14 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {Images} from '@images';
 import {
   BadgeCard,
   BadgeCardSkeleton,
   CARD_OFFSET,
 } from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeCard';
-import {IceBreaker} from '@svg/Badges/IceBreaker';
-import {SnowyPlow} from '@svg/Badges/SnowyPlow';
-import {TroubleMaker} from '@svg/Badges/TroubleMaker';
 import React, {useCallback} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
@@ -32,7 +30,7 @@ export const BadgeList = ({loading, data}: Props) => {
       case 1: {
         return (
           <BadgeCard
-            renderIcon={IceBreaker}
+            imageSource={Images.roles.ambassador}
             title={'Ice Breaker'}
             category={'Social'}
             progressText={'2 of 5'}
@@ -43,7 +41,7 @@ export const BadgeList = ({loading, data}: Props) => {
       case 2: {
         return (
           <BadgeCard
-            renderIcon={TroubleMaker}
+            imageSource={Images.roles.ambassador}
             title={'Trouble Maker'}
             category={'Coins'}
             progressText={'3 of 16'}
@@ -54,7 +52,7 @@ export const BadgeList = ({loading, data}: Props) => {
       default: {
         return (
           <BadgeCard
-            renderIcon={SnowyPlow}
+            imageSource={Images.roles.ambassador}
             title={'Snowy Plow'}
             category={'Level'}
             progressText={'4 of 5'}

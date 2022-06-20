@@ -1,12 +1,15 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {IconCard, IconCardSkeleton} from '@components/Cards/IconCard';
+import {
+  ImageCardCompact,
+  ImageCardCompactSkeleton,
+} from '@components/Cards/ImageCardCompact';
+import {Images} from '@images';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {ViewAllButton} from '@screens/ProfileFlow/Profile/components/Role/components/ViewAllButton';
 import {SectionHeader} from '@screens/ProfileFlow/Profile/components/SectionHeader';
-import {Pioneer} from '@svg/Roles/Pioneer';
 import {t} from '@utils/i18n';
 import React, {memo, useState} from 'react';
 import {StyleSheet} from 'react-native';
@@ -24,10 +27,10 @@ export const Role = memo(() => {
         showViewAll={false}
       />
       {loading ? (
-        <IconCardSkeleton containerStyle={styles.card} />
+        <ImageCardCompactSkeleton containerStyle={styles.card} />
       ) : (
-        <IconCard
-          renderIcon={Pioneer}
+        <ImageCardCompact
+          imageSource={Images.roles.pioneer}
           title={'Pioneer'}
           description={'Are you flesh and blood?'}
           containerStyle={styles.card}

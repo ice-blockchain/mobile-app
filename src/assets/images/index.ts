@@ -14,4 +14,8 @@ export const Images = {
     itemBackground: require('./tabbar/item-background.png'),
     miningBackground: require('./tabbar/mining-background.png'),
   },
+  roles: {
+    ambassador: require('./roles/ambassador.png'),
+    pioneer: require('./roles/pioneer.png'),
+  },
 };

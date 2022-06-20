@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {IconCard} from '@components/Cards/IconCard';
+import {ImageCardCompact} from '@components/Cards/ImageCardCompact';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {BadgeProgress} from '@screens/ProfileFlow/MyBadges/components/BadgeCardProgress';
-import React, {ReactNode} from 'react';
-import {StyleSheet, View} from 'react-native';
-import {SvgProps} from 'react-native-svg';
+import React from 'react';
+import {ImageSourcePropType, StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -13,7 +12,7 @@ type Props = {
   description: string;
   progress: number;
   active?: boolean;
-  renderIcon: (props: SvgProps) => ReactNode;
+  imageSource: ImageSourcePropType;
   connector: {
     top?: string | null;
     bottom?: string | null;
@@ -23,7 +22,7 @@ type Props = {
 export const BadgeCard = ({
   title,
   description,
-  renderIcon,
+  imageSource,
   progress,
   active = true,
   connector = {},
@@ -48,10 +47,10 @@ export const BadgeCard = ({
           ]}
         />
       )}
-      <IconCard
+      <ImageCardCompact
         title={title}
         description={description}
-        renderIcon={renderIcon}
+        imageSource={imageSource}
         renderBody={() => <BadgeProgress value={progress} />}
         containerStyle={[
           active ? styles.containerActive : styles.containerInactive,
