@@ -2,9 +2,23 @@
 
 import Text from '@components/Text';
 import Touchable from '@components/Touchable';
-import React from 'react';
-import {FlexStyle, StyleProp, StyleSheet, View, ViewStyle} from 'react-native';
-import {font, isIOS, rem} from 'rn-units';
+import {COLORS} from '@constants/colors';
+import {FONTS} from '@constants/fonts';
+import React, {useState} from 'react';
+import {
+  Animated,
+  FlexStyle,
+  StyleProp,
+  StyleSheet,
+  View,
+  ViewStyle,
+} from 'react-native';
+import {font, isIOS, rem, screenWidth, wait} from 'rn-units';
+
+const TAB_BAR_WIDTH = screenWidth - 48;
+const DEFAULT_TAB_MARGIN = 9;
+const TAB_BAR_HEIGHT = 55;
+const ANIMATION_DELAY = 500;
 
 type Tab = {
   text: String;
@@ -12,69 +26,83 @@ type Tab = {
 };
 
 type TabBar = {
-  active?: number;
   tabs: Array<Tab>;
   onPress?: (tab?: Tab, index?: number) => void;
   style?: StyleProp<ViewStyle | FlexStyle>;
-  opacity?: number;
   lightBg?: string;
   lightInactiveColor?: string;
-  prefix?: string;
-  postfix?: string;
 };
 
 export default function TabBar({
-  active = 0,
   tabs = [],
   style = null,
   onPress = () => false,
-  opacity = 0.3,
-}: // prefix = '',
-// postfix = '',
-TabBar): React.ReactElement {
+}: TabBar): React.ReactElement {
+  const [translateValue] = useState(new Animated.Value(0));
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const background = {
     backgroundColor: 'white',
   };
   const inactiveText = {
-    color: '#cd9da5',
+    color: COLORS.darkBlue,
   };
   const activeText = {
-    color: '#383b5f',
+    color: COLORS.white,
   };
-  // const inactiveTab = {
-  //   backgroundColor: 'transparent',
-  // };
-  // const activeTab = {
-  //   backgroundColor: '#666081',
-  // };
+
+  const indicatorStyle = {
+    width: TAB_BAR_WIDTH / tabs.length,
+    height: TAB_BAR_HEIGHT - DEFAULT_TAB_MARGIN * 2,
+  };
+
+  const combinedIndicatorSubStyle = [
+    indicatorStyle,
+    styles.indicatorSubContainer,
+  ];
+
+  const tabSelected = async (index: number) => {
+    Animated.spring(translateValue, {
+      toValue: index * (TAB_BAR_WIDTH / tabs.length),
+      velocity: 10,
+      useNativeDriver: true,
+    }).start();
+    wait(ANIMATION_DELAY);
+    setActiveIndex(index);
+  };
 
   const renderTab = (tab: Tab, index: number) => {
-    const isActive = active === index;
-    // const {children, ...rest} = tab;
+    const isActive = activeIndex === index;
+    const {text} = tab;
     return (
       <Touchable
         key={`tab_${index}`}
-        onPress={() => onPress(tab, index)}
-        // testID={testIDs.components.tab(index, prefix, postfix)}
-        style={
-          [
-            // styles.tab,
-            // isActive && styles.shadow,
-            // isActive ? activeTab : inactiveTab,
-          ]
-        }>
+        onPress={() => {
+          tabSelected(index);
+          onPress(tab, index);
+        }}
+        delay={ANIMATION_DELAY}
+        style={styles.tab}>
         <Text
-          // {...rest}
+          text={`${text}`}
           style={[styles.text, isActive ? activeText : inactiveText]}
         />
-        {/* {children} */}
       </Touchable>
     );
   };
 
   return (
     <View style={[styles.wrapper, style]}>
-      <View style={[styles.background, background, {opacity}]} />
+      <View style={[styles.background, background]} />
+      <View style={styles.indicatorContainer}>
+        <Animated.View
+          style={[
+            combinedIndicatorSubStyle,
+            {transform: [{translateX: translateValue}]},
+          ]}>
+          <View style={styles.indicator} />
+        </Animated.View>
+      </View>
       {tabs.map(renderTab)}
     </View>
   );
@@ -84,36 +112,48 @@ const styles = StyleSheet.create({
   wrapper: {
     alignItems: 'center',
     flexDirection: 'row',
-    borderRadius: rem(5),
-    overflow: 'hidden',
+    borderRadius: 16,
+    width: TAB_BAR_WIDTH,
+    height: TAB_BAR_HEIGHT,
+    backgroundColor: COLORS.white,
+    shadowOpacity: 1,
+    shadowColor: 'rgba(0, 0, 0, 0.15)',
+    shadowOffset: {width: 0, height: 2},
+    shadowRadius: 10,
+    elevation: 1,
+    alignSelf: 'center',
+    marginTop: rem(24),
+  },
+  indicatorContainer: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    flexDirection: 'column',
+  },
+  indicatorSubContainer: {
+    marginTop: DEFAULT_TAB_MARGIN,
+  },
+  indicator: {
+    backgroundColor: COLORS.darkBlue,
+    flex: 1,
+    marginHorizontal: DEFAULT_TAB_MARGIN,
+    borderRadius: 10,
   },
   background: {
     ...StyleSheet.absoluteFillObject,
   },
   tab: {
     flex: 1,
-    borderRadius: rem(5),
-    margin: rem(5),
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    padding: rem(5),
-    height: rem(40),
+    height: TAB_BAR_HEIGHT,
   },
   text: {
     fontSize: font(16),
-    textTransform: 'uppercase',
-    letterSpacing: 1.5,
     marginTop: isIOS ? 0 : 3,
-  },
-  shadow: {
-    shadowRadius: 2,
-    shadowOffset: {
-      width: 2,
-      height: 2,
-    },
-    shadowColor: '#000',
-    shadowOpacity: 0.3,
-    elevation: 4,
+    fontFamily: FONTS.primary.bold,
   },
 });

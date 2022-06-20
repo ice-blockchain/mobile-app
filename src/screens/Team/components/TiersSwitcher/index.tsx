@@ -2,18 +2,18 @@
 
 import TabBar from '@components/TabBar';
 import React from 'react';
-import {StyleProp, StyleSheet, ViewStyle} from 'react-native';
-import {rem, screenWidth} from 'rn-units';
+import {StyleProp, ViewStyle} from 'react-native';
 
-type TiersSwitcherProps = {style: StyleProp<ViewStyle>};
+type TiersSwitcherProps = {style?: StyleProp<ViewStyle>};
 
 export default function TiersSwitcher({
+  style = {},
   ...rest
 }: TiersSwitcherProps): React.ReactElement {
   return (
     <TabBar
       {...rest}
-      style={styles.wrapper}
+      style={style}
       tabs={[
         {
           text: 'team.contacts',
@@ -34,15 +34,3 @@ export default function TiersSwitcher({
     />
   );
 }
-
-const styles = StyleSheet.create({
-  wrapper: {
-    alignSelf: 'center',
-    width: screenWidth - 48,
-  },
-  counter: {
-    position: 'absolute',
-    marginTop: rem(3),
-    right: rem(15),
-  },
-});

@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import React from 'react';
-import {StyleProp, TouchableOpacity, ViewProps} from 'react-native';
+import {FlexStyle, StyleProp, TouchableOpacity, ViewStyle} from 'react-native';
 
 type TouchableProps = {
   onPress?: () => void;
   onLongPress?: () => {};
   delay?: number;
   children?: React.ReactNode;
-  style?: StyleProp<ViewProps>;
+  style?: StyleProp<ViewStyle | FlexStyle>;
   hitSlop?: object;
   disabled?: boolean;
 };
