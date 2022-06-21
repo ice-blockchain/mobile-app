@@ -26,7 +26,6 @@ export const BadgeCard = memo(
           adjustsFontSizeToFit={true}>
           {title}
         </Text>
-
         <Image
           source={imageSource}
           style={styles.icon}
@@ -80,9 +79,9 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(12),
   },
   icon: {
-    marginHorizontal: rem(11),
-    flexGrow: 1,
-    backgroundColor: 'red',
+    marginHorizontal: rem(10),
+    marginVertical: rem(10),
+    flex: 1,
   },
   categoryText: {
     flex: 1,

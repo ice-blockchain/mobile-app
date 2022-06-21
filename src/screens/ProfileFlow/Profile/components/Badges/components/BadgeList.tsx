@@ -1,66 +1,38 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {Images} from '@images';
 import {
   BadgeCard,
   BadgeCardSkeleton,
   CARD_OFFSET,
 } from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeCard';
+import {BadgeCategory} from '@screens/ProfileFlow/Profile/components/Badges/mockData';
 import React, {useCallback} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
-type Badge = number;
-
 type Props = {
   loading: boolean;
-  data: Badge[];
+  data: BadgeCategory[];
 };
 
 const NUMBER_OF_SKELETONS = 5;
 
 export const BadgeList = ({loading, data}: Props) => {
-  const renderItem = useCallback(({item}: {item: Badge | null}) => {
+  const renderItem = useCallback(({item}: {item: BadgeCategory | null}) => {
     if (item === null) {
       return <BadgeCardSkeleton />;
     }
 
-    switch (item) {
-      case 1: {
-        return (
-          <BadgeCard
-            imageSource={Images.roles.ambassador}
-            title={'Ice Breaker'}
-            category={'Social'}
-            progressText={'2 of 5'}
-            progressValue={60}
-          />
-        );
-      }
-      case 2: {
-        return (
-          <BadgeCard
-            imageSource={Images.roles.ambassador}
-            title={'Trouble Maker'}
-            category={'Coins'}
-            progressText={'3 of 16'}
-            progressValue={20}
-          />
-        );
-      }
-      default: {
-        return (
-          <BadgeCard
-            imageSource={Images.roles.ambassador}
-            title={'Snowy Plow'}
-            category={'Level'}
-            progressText={'4 of 5'}
-            progressValue={80}
-          />
-        );
-      }
-    }
+    return (
+      <BadgeCard
+        imageSource={item.imageSource}
+        title={item.title}
+        category={item.category}
+        progressText={item.progressText}
+        progressValue={item.progressValue}
+      />
+    );
   }, []);
   return (
     <FlatList
