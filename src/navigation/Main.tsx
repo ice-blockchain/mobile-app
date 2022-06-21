@@ -31,8 +31,15 @@ export type MainStackParamList = {
   MyBadges: undefined;
 };
 
+export type ProfileStackParamList = {
+  Profile: undefined;
+  MyRoles: undefined;
+  MyBadges: undefined;
+};
+
 const Tabs = createBottomTabNavigator<MainTabsParamList>();
 const MainStack = createStackNavigator<MainStackParamList>();
+const ProfileStack = createStackNavigator<ProfileStackParamList>();
 
 const tabOptions = {
   headerShown: false,
@@ -47,6 +54,16 @@ const modalOptions =
   Platform.OS === 'ios'
     ? TransitionPresets.ModalSlideFromBottomIOS
     : TransitionPresets.ScaleFromCenterAndroid;
+
+const ProfileFlow = () => {
+  return (
+    <ProfileStack.Navigator screenOptions={screenOptions}>
+      <ProfileStack.Screen name="Profile" component={Profile} />
+      <ProfileStack.Screen name="MyRoles" component={MyRoles} />
+      <ProfileStack.Screen name="MyBadges" component={MyBadges} />
+    </ProfileStack.Navigator>
+  );
+};
 
 const MainTabs = () => (
   <Tabs.Navigator screenOptions={tabOptions} tabBar={MainTabBar}>
@@ -67,7 +84,7 @@ const MainTabs = () => (
     />
     <Tabs.Screen
       name="ProfileTab"
-      component={Profile}
+      component={ProfileFlow}
       options={{tabBarIcon: ProfileIcon}}
     />
   </Tabs.Navigator>
@@ -82,8 +99,6 @@ export function Main() {
         component={WebView}
         options={modalOptions}
       />
-      <MainStack.Screen name="MyRoles" component={MyRoles} />
-      <MainStack.Screen name="MyBadges" component={MyBadges} />
     </MainStack.Navigator>
   );
 }
