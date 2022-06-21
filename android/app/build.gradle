@@ -151,6 +151,10 @@ android {
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
         testBuildType System.getProperty('testBuildType', 'releasestagingE2E')
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        // https://github.com/luggit/react-native-config#advanced-android-setup
+        resValue "string", "build_config_package", "io.ice.app"
+
         if (isNewArchitectureEnabled()) {
             // We configure the NDK build only if you decide to opt-in for the New Architecture.
             externalNativeBuild {
