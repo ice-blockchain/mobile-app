@@ -81,7 +81,7 @@ export const MyBadges = () => {
         title={t('my_badges.title')}
       />
       <PanGestureHandler activeOffsetX={[-70, 70]} onEnded={onPanEnded}>
-        <View>
+        <View style={styles.container}>
           <BadgeList
             data={categoryBadges}
             onScroll={scrollHandler}
