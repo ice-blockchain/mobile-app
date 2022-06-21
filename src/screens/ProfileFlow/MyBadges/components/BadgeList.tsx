@@ -10,11 +10,14 @@ import {rem} from 'rn-units';
 
 type Props = Omit<FlatListProps<Badge>, 'renderItem'>;
 
-export const BadgeList = (props: Props) => {
+export const BadgeList = ({
+  data,
+  contentContainerStyle,
+  ...restProps
+}: Props) => {
   const renderItem = useCallback(
     ({item, index}: {item: Badge; index: number}) => {
-      const nextBadge =
-        props.data && index < props.data.length ? props.data[index + 1] : null;
+      const nextBadge = data && index < data.length ? data[index + 1] : null;
       return (
         <BadgeCard
           {...item}
@@ -34,14 +37,15 @@ export const BadgeList = (props: Props) => {
         />
       );
     },
-    [props.data],
+    [data],
   );
 
   return (
     <Animated.FlatList
-      {...props}
+      {...restProps}
+      data={data}
       renderItem={renderItem}
-      contentContainerStyle={styles.listContent}
+      contentContainerStyle={[contentContainerStyle, styles.listContent]}
     />
   );
 };
@@ -49,6 +53,5 @@ export const BadgeList = (props: Props) => {
 const styles = StyleSheet.create({
   listContent: {
     paddingTop: rem(10),
-    paddingBottom: rem(40),
   },
 });

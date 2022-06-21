@@ -5,6 +5,7 @@ import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {FaqButton} from '@navigation/components/Header/components/FaqButton';
+import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Role} from '@screens/ProfileFlow/MyRoles/components/Role';
 import {t} from '@translations/i18n';
@@ -14,6 +15,7 @@ import Animated from 'react-native-reanimated';
 
 export const MyRoles = () => {
   useFocusStatusBar({style: 'dark-content'});
+  const bottomOffset = useBottomTabBarOffsetStyle();
   const {scrollHandler, shadowStyle} = useScrollShadow();
 
   return (
@@ -29,7 +31,7 @@ export const MyRoles = () => {
         onScroll={scrollHandler}
         scrollEventThrottle={16}
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.scrollContent}>
+        contentContainerStyle={[styles.scrollContent, bottomOffset.current]}>
         <Role
           title="Pioneer"
           tagline="Are you flesh and blood?"

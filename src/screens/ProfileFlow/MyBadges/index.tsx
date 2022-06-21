@@ -6,6 +6,7 @@ import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {FaqButton} from '@navigation/components/Header/components/FaqButton';
+import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {BadgeList} from '@screens/ProfileFlow/MyBadges/components/BadgeList';
 import {
@@ -21,6 +22,7 @@ import {rem} from 'rn-units';
 
 export const MyBadges = () => {
   useFocusStatusBar({style: 'dark-content'});
+  const bottomOffset = useBottomTabBarOffsetStyle();
   const {scrollHandler, shadowStyle} = useScrollShadow();
   const [category, setCategory] = useState(BadgeCategory.social);
   const categoryBadges = BADGES[category];
@@ -61,6 +63,7 @@ export const MyBadges = () => {
         onScroll={scrollHandler}
         scrollEventThrottle={16}
         showsVerticalScrollIndicator={false}
+        contentContainerStyle={bottomOffset.current}
         ListHeaderComponent={renderHeader}
         ListFooterComponent={renderFooter}
       />
