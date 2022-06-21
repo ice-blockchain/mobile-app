@@ -10,7 +10,7 @@
     "configure:production": "cp -rf ../mobile-app-secrets/production/* ./ && cp -a ../mobile-app-secrets/production/ ./ && source .env",
     "match:read": "bundler exec fastlane match appstore --readonly && bundler exec fastlane match adhoc --readonly",
     "match:renew": "bundler exec fastlane match adhoc --force_for_new_devices",
-    "test": "jest tests --coverage --updateSnapshot",
+    "test": "jest tests --coverage --updateSnapshot --passWithNoTests",
     "fetch-translations": "source .env && curl \"https://localise.biz/api/export/all.json?format=multi&status=translated&fallback=en-GB&key=$LOCALIZE_BIZ_TOKEN\" --output src/translations/translations.json",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "check-types": "tsc",
