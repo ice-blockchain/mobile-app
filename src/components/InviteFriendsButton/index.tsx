@@ -5,6 +5,7 @@ import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {InviteFriendsSvg} from '@svg/InviteFriends';
 import {LogoIconSvg} from '@svg/LogoIcon';
+import {translate} from '@translations/i18n';
 import * as React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -24,10 +25,12 @@ export const InviteFriendsButton = ({}: InviteFriendsButtonProps) => {
         </View>
 
         <View>
-          <Text style={styles.title}>{'Invite Friends'}</Text>
+          <Text style={styles.title}>
+            {translate('button.invite_friend.title')}
+          </Text>
 
           <Text style={styles.description}>
-            {'Earn extra ice by inviting your friends.'}
+            {translate('button.invite_friend.description')}
           </Text>
         </View>
       </View>
