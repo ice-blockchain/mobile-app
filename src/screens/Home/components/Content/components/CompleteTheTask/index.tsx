@@ -10,6 +10,7 @@ import {
   TCompleteTheTask,
 } from '@screens/Home/components/Content/components/CompleteTheTask/TaskItem';
 import {ProgressCircleSvg} from '@svg/ProgressCircle';
+import {translate} from '@translations/i18n';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -69,9 +70,9 @@ export const CompleteTheTask = ({}: CompleteTheTaskProps) => {
           </View>
         </View>
         <View>
-          <Text style={styles.title}>{'Start here'}</Text>
+          <Text style={styles.title}>{translate('home.steps.title')}</Text>
           <Text style={styles.description}>
-            {'Complete the tasks below and earn 250 ice.'}
+            {translate('home.steps.description')}
           </Text>
         </View>
       </View>

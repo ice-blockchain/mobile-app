@@ -4,6 +4,7 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {RefferalsWhiteLineSvg} from '@svg/RefferalsWhiteLine';
 import {TrophySvg} from '@svg/Trophy';
+import {translate} from '@translations/i18n';
 import React from 'react';
 import {Animated, StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -23,7 +24,9 @@ export const RefferalsCard = ({
     <Animated.View style={[styles.container, {height: heightInterpolation}]}>
       <View style={styles.header}>
         <TrophySvg />
-        <Text style={styles.headerText}>{'REFFERALS'}</Text>
+        <Text style={styles.headerText}>
+          {translate('home.referrals.title')}
+        </Text>
       </View>
       <Animated.View
         style={[
@@ -40,7 +43,7 @@ export const RefferalsCard = ({
           <RefferalsWhiteLineSvg width={rem(175 - 28)} />
         </View>
         <Text style={styles.text}>
-          {'Referral stats for the previous 5 days.'}
+          {translate('home.referrals.description')}
         </Text>
       </Animated.View>
     </Animated.View>

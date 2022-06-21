@@ -13,6 +13,7 @@ import {TelegramSvg} from '@svg/Telegram';
 import {TwitterSvg} from '@svg/Twitter';
 import {UserCircleSvg} from '@svg/UserCircle';
 import {VerifiedUserSvg} from '@svg/VerifiedUser';
+import {translate} from '@translations/i18n';
 import React from 'react';
 import {
   StyleSheet,
@@ -65,54 +66,54 @@ export const TaskItem = ({task}: TaskItemProps) => {
         return {
           Icon: <LogoIconSvg color={COLORS.white} width={24} height={24} />,
           iconBackground: styles.startMiningBC,
-          title: 'Start mining',
-          description: 'Your first mining session.',
+          title: translate('home.steps.step_one.title'),
+          description: translate('home.steps.step_one.description'),
         };
 
       case 'profilePicture':
         return {
           Icon: <UserCircleSvg />,
           iconBackground: styles.profilePictureBC,
-          title: 'Profile picture',
-          description: 'Upload your profile image.',
+          title: translate('home.steps.step_two.title'),
+          description: translate('home.steps.step_two.description'),
         };
 
       case 'joinTelegram':
         return {
           Icon: <TelegramSvg />,
           iconBackground: styles.joinTelegramBC,
-          title: 'Join Telegram',
-          description: 'Be part of our community and join now.',
+          title: translate('home.steps.step_three.title'),
+          description: translate('home.steps.step_three.description'),
         };
 
       case 'followUsTwitter':
         return {
           Icon: <TwitterSvg />,
           iconBackground: styles.followTwitterBC,
-          title: 'Follow us on Twitter',
-          description: 'Let’s keep in touch, follow us on twitter.',
+          title: translate('home.steps.step_four.title'),
+          description: translate('home.steps.step_four.description'),
         };
       case 'invite5Friends':
         return {
           Icon: <InviteFriendsSvg color={COLORS.white} />,
           iconBackground: styles.invite5FriendsBC,
-          title: 'Invite 5 Friends',
-          description: 'Create your team and increase your earnings.',
+          title: translate('home.steps.step_five.title'),
+          description: translate('home.steps.step_five.description'),
         };
       case 'socialShare':
         return {
           Icon: <ShareSvg />,
           iconBackground: styles.socialShareBC,
-          title: 'Social Share',
-          description: 'Share it with your friends on social media.',
+          title: translate('home.steps.step_six.title'),
+          description: translate('home.steps.step_six.description'),
         };
       case 'claimYourNickname':
       default:
         return {
           Icon: <VerifiedUserSvg />,
           iconBackground: styles.claimNickNameBC,
-          title: 'Claim your nickname',
-          description: 'Set it and start earning from your invite.',
+          title: translate('home.steps.step_seven.title'),
+          description: translate('home.steps.step_seven.description'),
         };
     }
   };

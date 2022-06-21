@@ -6,6 +6,7 @@ import {AdoptionCardSvg} from '@svg/AdoptionCard';
 import {AdoptionCardBackSvg} from '@svg/AdoptionCardBack';
 import {AutoGraphSvg} from '@svg/AutoGraph';
 import {UsersSvg} from '@svg/Users';
+import {translate} from '@translations/i18n';
 import React, {useRef} from 'react';
 import {Animated, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -72,7 +73,9 @@ export const AdoptionCard = ({
           <View style={styles.header}>
             <View style={styles.row}>
               <AutoGraphSvg />
-              <Text style={styles.headerText}>{'ADOPTION'}</Text>
+              <Text style={styles.headerText}>
+                {translate('home.adoption.title')}
+              </Text>
             </View>
           </View>
         </Animated.View>
@@ -94,7 +97,9 @@ export const AdoptionCard = ({
           <View style={styles.header}>
             <View style={styles.row}>
               <AutoGraphSvg />
-              <Text style={styles.headerText}>{'ADOPTION'}</Text>
+              <Text style={styles.headerText}>
+                {translate('home.adoption.title')}
+              </Text>
             </View>
 
             <View style={styles.row}>

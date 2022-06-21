@@ -4,6 +4,7 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {ArrowUpRightCircleSvg} from '@svg/ArrowUpRightCircle';
 import {PioneerSvg} from '@svg/Pioneer';
+import {translate} from '@translations/i18n';
 import React from 'react';
 import {Animated, StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -24,7 +25,9 @@ export const LevelCard = ({
       <View style={styles.header}>
         <View style={styles.level}>
           <PioneerSvg />
-          <Text style={styles.levelName}>{'pioneer'}</Text>
+          <Text style={styles.levelName}>
+            {translate('home.pioneer.title')}
+          </Text>
         </View>
 
         <Text style={styles.levelText}>{'LEVEL 1'}</Text>
@@ -44,12 +47,16 @@ export const LevelCard = ({
           <Text style={styles.globalRankAmount}>{'606,683'}</Text>
           <ArrowUpRightCircleSvg />
         </View>
-        <Text style={styles.globalRankText}>{'GLOBAL RANK'}</Text>
+        <Text style={styles.globalRankText}>
+          {translate('home.pioneer.rank')}
+        </Text>
 
-        <Text style={styles.refferalsText}>{'REFERRALS'}</Text>
+        <Text style={styles.refferalsText}>
+          {translate('home.pioneer.referrals')}
+        </Text>
         <Text style={styles.refferalsAmount}>{'125'}</Text>
         <Text style={styles.refferalsDescription}>
-          {'The more users you reffer, the more ice you earn.'}
+          {translate('home.pioneer.description')}
         </Text>
       </Animated.View>
     </Animated.View>

@@ -5,6 +5,7 @@ import {FONTS} from '@constants/fonts';
 import {InfoSvg} from '@svg/Info';
 import {LogoIconSvg} from '@svg/LogoIcon';
 import {WalletSvg} from '@svg/Wallet';
+import {translate} from '@translations/i18n';
 import React from 'react';
 import {Animated, StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -27,7 +28,9 @@ export const WalletCard = ({
       <View style={styles.header}>
         <View style={styles.row}>
           <WalletSvg />
-          <Text style={styles.headerText}>{'wallet'}</Text>
+          <Text style={styles.headerText}>
+            {translate('home.wallet.title')}
+          </Text>
         </View>
 
         <Animated.View
@@ -53,14 +56,14 @@ export const WalletCard = ({
 
         <View style={styles.row}>
           <Text style={[styles.text, styles.textCurrentBalance]}>
-            {'CURRENT BALANCE'}
+            {translate('home.wallet.balance')}
           </Text>
           <InfoSvg />
         </View>
 
         <View style={styles.devider} />
 
-        <Text style={styles.text}>{'CURRENT BALANCE'}</Text>
+        <Text style={styles.text}>{translate('home.wallet.rate')}</Text>
         <Text style={styles.iceHr}>{'+29.99 ice/hr'}</Text>
       </Animated.View>
     </Animated.View>
