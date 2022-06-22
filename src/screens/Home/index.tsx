@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {PrimaryButton} from '@components/PrimaryButton';
-import {magicLink} from '@services/magicLink';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {RootState} from '@store/rootReducer';
 import React from 'react';
@@ -13,7 +12,6 @@ export const Home = () => {
   const dispatch = useDispatch();
   const logOutPress = async () => {
     dispatch(AuthActions.SIGN_OUT.START.create());
-    await magicLink.logoutUser();
   };
   return (
     <View style={styles.container}>
