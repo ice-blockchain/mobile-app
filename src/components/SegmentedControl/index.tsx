@@ -64,7 +64,14 @@ export const SegmentedControl = forwardRef<
     const translateX = useSharedValue(segmentWidthPerc * initialIndex);
     const [activeIndex, setActiveIndex] = useState(initialIndex);
 
-    useImperativeHandle(forwardedRef, () => ({changeSegment}));
+    useImperativeHandle(forwardedRef, () => ({
+      changeSegment: (index: number) => {
+        setActiveIndex(index);
+        translateX.value = withSpring(segmentWidthPerc * index, {
+          velocity: 10,
+        });
+      },
+    }));
 
     const changeSegment = (index: number) => {
       setActiveIndex(index);

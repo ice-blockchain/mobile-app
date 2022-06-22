@@ -5,8 +5,7 @@ import {Router} from '@navigation/Router';
 import {System} from '@screens/System';
 import {magic} from '@services/magicLink';
 import React from 'react';
-import {StatusBar, StyleSheet} from 'react-native';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {StatusBar} from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
@@ -21,9 +20,7 @@ export function App(): React.ReactNode {
           loading={<Initialization />}
           persistor={configuredStore.persistor}>
           <StatusBar translucent backgroundColor="transparent" />
-          <GestureHandlerRootView style={styles.container}>
-            <Router />
-          </GestureHandlerRootView>
+          <Router />
           <System />
           <magic.Relayer />
         </PersistGate>
@@ -31,7 +28,3 @@ export function App(): React.ReactNode {
     </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {flex: 1},
-});

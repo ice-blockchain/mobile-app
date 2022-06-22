@@ -120,6 +120,13 @@ export const BADGES: {[key in BadgeCategory]: Badge[]} = {
       progress: 72.23,
       active: false,
     },
+    {
+      title: 'Trouble Maker',
+      description: '4-9 ice friends',
+      imageSource: Images.roles.ambassador,
+      progress: 72.23,
+      active: false,
+    },
   ],
   level: [
     {
@@ -142,6 +149,13 @@ export const BADGES: {[key in BadgeCategory]: Badge[]} = {
       imageSource: Images.roles.ambassador,
       progress: 26.11,
       active: true,
+    },
+    {
+      title: 'Snowy Plower',
+      description: '10-24 ice friends',
+      imageSource: Images.roles.ambassador,
+      progress: 26.11,
+      active: false,
     },
     {
       title: 'Snowy Plower',

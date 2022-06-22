@@ -4,9 +4,8 @@ import {COLORS} from '@constants/colors';
 import {BadgeCard} from '@screens/ProfileFlow/MyBadges/components/BadgeCard';
 import {Badge} from '@screens/ProfileFlow/MyBadges/mockData';
 import React, {useCallback} from 'react';
-import {FlatListProps, StyleSheet} from 'react-native';
+import {FlatListProps} from 'react-native';
 import Animated from 'react-native-reanimated';
-import {rem} from 'rn-units';
 
 type Props = Omit<FlatListProps<Badge>, 'renderItem'>;
 
@@ -45,13 +44,7 @@ export const BadgeList = ({
       {...restProps}
       data={data}
       renderItem={renderItem}
-      contentContainerStyle={[contentContainerStyle, styles.listContent]}
+      contentContainerStyle={contentContainerStyle}
     />
   );
 };
-
-const styles = StyleSheet.create({
-  listContent: {
-    paddingTop: rem(10),
-  },
-});

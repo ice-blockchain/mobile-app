@@ -15,60 +15,24 @@ import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {BadgeList} from '@screens/ProfileFlow/MyBadges/components/BadgeList';
 import {BADGES, CATEGORIES} from '@screens/ProfileFlow/MyBadges/mockData';
 import {t} from '@translations/i18n';
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {
-  HandlerStateChangeEvent,
-  PanGestureHandler,
-  PanGestureHandlerEventPayload,
-} from 'react-native-gesture-handler';
+import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
 import {rem} from 'rn-units';
 
 export const MyBadges = () => {
   useFocusStatusBar({style: 'dark-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
   const {scrollHandler, shadowStyle} = useScrollShadow();
-  const [categoryIndex, setCategoryIndex] = useState(0);
   const switcherRef = useRef<SegmentedControlMethods>(null);
-  const categoryBadges = BADGES[CATEGORIES[categoryIndex].key];
+  const pagerRef = useRef<PagerView>(null);
 
   const onCategoryChange = useCallback((index: number) => {
-    setCategoryIndex(index);
+    pagerRef.current?.setPage(index);
   }, []);
 
-  const renderHeader = useCallback(
-    () => (
-      <SegmentedControl
-        segments={CATEGORIES}
-        ref={switcherRef}
-        style={styles.categorySwitcher}
-        onChange={onCategoryChange}
-      />
-    ),
-    [onCategoryChange],
-  );
-
-  const renderFooter = useCallback(() => {
-    return (
-      <View style={styles.inviteButton}>
-        <InviteButton />
-      </View>
-    );
-  }, []);
-
-  const onPanEnded = (event: HandlerStateChangeEvent) => {
-    if (
-      (event.nativeEvent as unknown as PanGestureHandlerEventPayload)
-        .translationX > 0
-    ) {
-      if (categoryIndex > 0) {
-        switcherRef.current?.changeSegment(categoryIndex - 1);
-      }
-    } else {
-      if (categoryIndex < CATEGORIES.length - 1) {
-        switcherRef.current?.changeSegment(categoryIndex + 1);
-      }
-    }
+  const onPageChange = (event: PagerViewOnPageSelectedEvent) => {
+    switcherRef.current?.changeSegment(event.nativeEvent.position);
   };
 
   return (
@@ -80,19 +44,34 @@ export const MyBadges = () => {
         renderRightButtons={FaqButton}
         title={t('my_badges.title')}
       />
-      <PanGestureHandler activeOffsetX={[-70, 70]} onEnded={onPanEnded}>
-        <View style={styles.container}>
-          <BadgeList
-            data={categoryBadges}
-            onScroll={scrollHandler}
-            scrollEventThrottle={16}
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={bottomOffset.current}
-            ListHeaderComponent={renderHeader}
-            ListFooterComponent={renderFooter}
-          />
-        </View>
-      </PanGestureHandler>
+      <SegmentedControl
+        segments={CATEGORIES}
+        ref={switcherRef}
+        style={styles.categorySwitcher}
+        onChange={onCategoryChange}
+      />
+      <PagerView
+        initialPage={0}
+        style={styles.container}
+        ref={pagerRef}
+        onPageSelected={onPageChange}>
+        {CATEGORIES.map((category, index) => (
+          <View key={index + 1} style={styles.container}>
+            <BadgeList
+              data={BADGES[category.key]}
+              onScroll={scrollHandler}
+              scrollEventThrottle={16}
+              showsVerticalScrollIndicator={false}
+              contentContainerStyle={bottomOffset.current}
+              ListFooterComponent={
+                <View style={styles.inviteButton}>
+                  <InviteButton />
+                </View>
+              }
+            />
+          </View>
+        ))}
+      </PagerView>
     </View>
   );
 };
@@ -102,7 +81,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   categorySwitcher: {
-    marginBottom: rem(12),
+    marginVertical: rem(12),
     marginHorizontal: SCREEN_SIDE_OFFSET,
   },
   inviteButton: {
