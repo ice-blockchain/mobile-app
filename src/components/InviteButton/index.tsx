@@ -7,8 +7,14 @@ import {InviteIcon} from '@svg/InviteIcon';
 import {StarTransparentIcon} from '@svg/StarTransparentIcon';
 import {t} from '@translations/i18n';
 import React from 'react';
-import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {
+  StyleProp,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from 'react-native';
 import {font, rem} from 'rn-units';
 
 type Props = {

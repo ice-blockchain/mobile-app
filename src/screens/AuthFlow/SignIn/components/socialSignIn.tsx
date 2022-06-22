@@ -5,8 +5,7 @@ import {FacebookIconSvg} from '@svg/FacebookIcon';
 import {GoogleIconSvg} from '@svg/GoogleIcon';
 import {TwitterIconSvg} from '@svg/TwitterIcon';
 import * as React from 'react';
-import {StyleSheet, View} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {isIOS, rem} from 'rn-units';
 
 export enum ESocialType {

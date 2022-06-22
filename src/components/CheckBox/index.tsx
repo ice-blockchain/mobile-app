@@ -3,8 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {CheckMarkIcon} from '@svg/CheckMarkIcon';
 import React, {ReactNode} from 'react';
-import {StyleSheet, View} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
