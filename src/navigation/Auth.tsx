@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {useInitialRouteName} from '@navigation/hooks/useInitialRouteName';
-import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {ClaimNickname} from '@screens/AuthFlow/ClaimNickname';
 import {SignIn} from '@screens/AuthFlow/SignIn';
 import {Welcome} from '@screens/AuthFlow/Welcome';
@@ -21,16 +21,19 @@ export type SignUpStackParamList = {
   SignIn: undefined;
 };
 
-const AuthStack = createStackNavigator<AuthStackParamList>();
-const SignUpStack = createStackNavigator<SignUpStackParamList>();
+const AuthStack = createNativeStackNavigator<AuthStackParamList>();
+const SignUpStack = createNativeStackNavigator<SignUpStackParamList>();
 
 const screenOptions = {
   headerShown: false,
   cardStyle: {
     backgroundColor: 'white',
   },
-  ...TransitionPresets.SlideFromRightIOS,
 };
+
+const modalOptions = {
+  presentation: 'fullScreenModal',
+} as const;
 
 function Signup() {
   const initialRouteName = useInitialRouteName();
@@ -50,10 +53,13 @@ export function AuthNavigator() {
     <AuthStack.Navigator
       screenOptions={{
         ...screenOptions,
-        ...TransitionPresets.ModalSlideFromBottomIOS,
       }}>
       <AuthStack.Screen name="Signup" component={Signup} />
-      <AuthStack.Screen name="WebView" component={WebView} />
+      <AuthStack.Screen
+        options={modalOptions}
+        name="WebView"
+        component={WebView}
+      />
     </AuthStack.Navigator>
   );
 }

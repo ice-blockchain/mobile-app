@@ -36,7 +36,7 @@ export const MyBadges = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} hitSlop={{left: -50}}>
       <Header
         containerStyle={shadowStyle}
         color={COLORS.darkBlue}

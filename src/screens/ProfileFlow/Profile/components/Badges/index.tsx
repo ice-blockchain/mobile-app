@@ -2,7 +2,7 @@
 
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {BadgeList} from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeList';
 import {BADGE_CATEGORIES} from '@screens/ProfileFlow/Profile/components/Badges/mockData';
 import {SectionHeader} from '@screens/ProfileFlow/Profile/components/SectionHeader';
@@ -10,7 +10,8 @@ import {t} from '@translations/i18n';
 import React, {memo, useCallback, useState} from 'react';
 
 export const Badges = memo(() => {
-  const navigation = useNavigation<StackNavigationProp<MainStackParamList>>();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
   const onViewAllPress = useCallback(
     () => navigation.navigate('MyBadges'),
     [navigation],

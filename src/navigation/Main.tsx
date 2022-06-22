@@ -6,7 +6,7 @@ import {NewsIcon} from '@navigation/components/MainTabBar/components/Icons/NewsI
 import {ProfileIcon} from '@navigation/components/MainTabBar/components/Icons/ProfileIcon';
 import {TeamIcon} from '@navigation/components/MainTabBar/components/Icons/TeamIcon';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Home} from '@screens/Home';
 import {News} from '@screens/News';
 import {MyBadges} from '@screens/ProfileFlow/MyBadges';
@@ -15,7 +15,6 @@ import {Profile} from '@screens/ProfileFlow/Profile';
 import {Team} from '@screens/Team';
 import {WebView} from '@screens/WebView';
 import React from 'react';
-import {Platform} from 'react-native';
 
 export type MainTabsParamList = {
   HomeTab: undefined;
@@ -38,8 +37,8 @@ export type ProfileStackParamList = {
 };
 
 const Tabs = createBottomTabNavigator<MainTabsParamList>();
-const MainStack = createStackNavigator<MainStackParamList>();
-const ProfileStack = createStackNavigator<ProfileStackParamList>();
+const MainStack = createNativeStackNavigator<MainStackParamList>();
+const ProfileStack = createNativeStackNavigator<ProfileStackParamList>();
 
 const tabOptions = {
   headerShown: false,
@@ -50,17 +49,22 @@ const screenOptions = {
   headerShown: false,
 };
 
-const modalOptions =
-  Platform.OS === 'ios'
-    ? TransitionPresets.ModalSlideFromBottomIOS
-    : TransitionPresets.ScaleFromCenterAndroid;
+const modalOptions = {
+  presentation: 'fullScreenModal',
+} as const;
 
 const ProfileFlow = () => {
   return (
     <ProfileStack.Navigator screenOptions={screenOptions}>
       <ProfileStack.Screen name="Profile" component={Profile} />
       <ProfileStack.Screen name="MyRoles" component={MyRoles} />
-      <ProfileStack.Screen name="MyBadges" component={MyBadges} />
+      <ProfileStack.Screen
+        name="MyBadges"
+        component={MyBadges}
+        // need to be here to enable swipe to go back over PagerView
+        // patches/react-native-screens.patch is also a part of the fix
+        options={{fullScreenGestureEnabled: true}}
+      />
     </ProfileStack.Navigator>
   );
 };
@@ -96,8 +100,8 @@ export function Main() {
       <MainStack.Screen name="Main" component={MainTabs} />
       <MainStack.Screen
         name="WebView"
-        component={WebView}
         options={modalOptions}
+        component={WebView}
       />
     </MainStack.Navigator>
   );

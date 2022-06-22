@@ -7,7 +7,7 @@ import {
 import {Images} from '@images';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
-import {StackNavigationProp} from '@react-navigation/stack';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {ViewAllButton} from '@screens/ProfileFlow/Profile/components/Role/components/ViewAllButton';
 import {SectionHeader} from '@screens/ProfileFlow/Profile/components/SectionHeader';
 import {t} from '@translations/i18n';
@@ -16,7 +16,8 @@ import {StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
 export const Role = memo(() => {
-  const navigation = useNavigation<StackNavigationProp<MainStackParamList>>();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
   const [loading, setLoading] = useState(true);
   setTimeout(() => setLoading(false), 2000);
 

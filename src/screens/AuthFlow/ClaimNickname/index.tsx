@@ -2,7 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {SignUpStackParamList} from '@navigation/Auth';
-import {StackNavigationProp} from '@react-navigation/stack';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {NavigationPanel} from '@screens/AuthFlow/Welcome/components/NavigationPanel';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {translate} from '@translations/i18n';
@@ -27,7 +27,7 @@ import {WhoInvitedYou} from './components/WhoInvitedYou';
 const nicknameRegularExp = /^[A-Za-z0-9]+([A-Za-z0-9]*|[._-]?[A-Za-z0-9]+)*$/;
 
 type Props = {
-  navigation: StackNavigationProp<SignUpStackParamList, 'SignIn'>;
+  navigation: NativeStackNavigationProp<SignUpStackParamList, 'SignIn'>;
 };
 
 export const ClaimNickname = ({navigation}: Props) => {

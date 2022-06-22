@@ -10,7 +10,7 @@ import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
 import {OAuthRedirectResult} from '@magic-ext/react-native-oauth';
 import {SignUpStackParamList} from '@navigation/Auth';
-import {StackNavigationProp} from '@react-navigation/stack';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {magicLink} from '@services/magicLink';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {RootState} from '@store/rootReducer';
@@ -36,7 +36,7 @@ import {font, isIOS, rem} from 'rn-units';
 import {ESocialType, SocialSignIn} from './components/socialSignIn';
 
 type Props = {
-  navigation: StackNavigationProp<SignUpStackParamList, 'SignIn'>;
+  navigation: NativeStackNavigationProp<SignUpStackParamList, 'SignIn'>;
 };
 
 export const SignIn = ({navigation}: Props) => {
