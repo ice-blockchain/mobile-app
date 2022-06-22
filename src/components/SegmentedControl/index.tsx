@@ -64,20 +64,17 @@ export const SegmentedControl = forwardRef<
     const translateX = useSharedValue(segmentWidthPerc * initialIndex);
     const [activeIndex, setActiveIndex] = useState(initialIndex);
 
-    useImperativeHandle(forwardedRef, () => ({
-      changeSegment: (index: number) => {
-        setActiveIndex(index);
-        translateX.value = withSpring(segmentWidthPerc * index, {
-          velocity: 10,
-        });
-      },
-    }));
-
     const changeSegment = (index: number) => {
       setActiveIndex(index);
       translateX.value = withSpring(segmentWidthPerc * index, {
         velocity: 10,
       });
+    };
+
+    useImperativeHandle(forwardedRef, () => ({changeSegment}));
+
+    const onSegmentPress = (index: number) => {
+      changeSegment(index);
 
       /**
        * Postpone onChange to give time for React to update segment styles
@@ -99,11 +96,9 @@ export const SegmentedControl = forwardRef<
       [segmentWidthPerc],
     );
 
-    const animatedStyles = useAnimatedStyle(() => {
-      return {
-        left: translateX.value + '%',
-      };
-    });
+    const animatedStyles = useAnimatedStyle(() => ({
+      left: `${translateX.value}%`,
+    }));
 
     const renderSegment = (segment: Segment, index: number) => {
       const active = activeIndex === index;
@@ -111,7 +106,7 @@ export const SegmentedControl = forwardRef<
         <TouchableOpacity
           key={segment.key}
           onPress={() => {
-            changeSegment(index);
+            onSegmentPress(index);
           }}
           style={styles.segment}>
           {typeof segment.renderText === 'function' ? (
