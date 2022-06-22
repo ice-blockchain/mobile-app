@@ -21,7 +21,7 @@ function setupApiClient(clientInstance: AxiosInstance) {
 }
 
 const client = axios.create({
-  baseURL: `${ENV.BASE_URL}/api`,
+  baseURL: `${ENV.BASE_WRITE_API_URL}/api`,
   headers: {
     'Mobile-App-Version': `${Platform.OS} - ${DeviceInfo.getVersion()}`,
     Authorization: `Bearer ${magicLink.token}`,

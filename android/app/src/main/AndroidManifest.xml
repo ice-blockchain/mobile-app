@@ -28,7 +28,7 @@
           <action android:name="android.intent.action.VIEW" />
           <category android:name="android.intent.category.DEFAULT" />
           <category android:name="android.intent.category.BROWSABLE" />
-          <data android:scheme="@string/DEEPLINK_SCHEME" />
+          <data android:scheme="@string/MAGIC_DEEPLINK_SCHEME" />
         </intent-filter>
       </activity>
     </application>

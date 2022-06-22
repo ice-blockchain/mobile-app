@@ -1,8 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 apply plugin: "com.android.application"
-apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
+
+// https://github.com/luggit/react-native-config#extra-step-for-android
+project.ext.defaultEnvFile = ".env.app"
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
+apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
 
 import com.android.build.OutputFile
 

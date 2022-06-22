@@ -4,9 +4,8 @@
 import config from 'react-native-config';
 
 export const ENV = {
-  BASE_URL: config.BASE_URL,
-  SEGMENT_KEY: config.SEGMENT_KEY,
-  SEGMENT_DEV_KEY: config.SEGMENT_KEY,
+  BASE_READ_API_URL: config.BASE_BASE_READ_API_URL,
+  BASE_WRITE_API_URL: config.BASE_WRITE_API_URL,
   MAGIC_LINK_KEY: config.MAGIC_LINK_KEY,
-  DEEPLINK_SCHEME: config.DEEPLINK_SCHEME,
+  MAGIC_DEEPLINK_SCHEME: config.DEEPLINK_SCHEME,
 };

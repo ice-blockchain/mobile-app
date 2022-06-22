@@ -1,13 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {ENV} from '@constants/env';
 import {createClient, JsonValue} from '@segment/analytics-react-native';
 import {PushAction} from '@services/segment/types';
 import {getPageNameAndProperties} from '@services/segment/utils';
 import {InteractionManager} from 'react-native';
 
 const segmentClient = createClient({
-  writeKey: ENV.SEGMENT_DEV_KEY,
+  writeKey: '',
 });
 
 export function setupSegment() {
