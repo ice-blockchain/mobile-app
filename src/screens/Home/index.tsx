@@ -1,36 +1,100 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {PrimaryButton} from '@components/PrimaryButton';
-import {AuthActions} from '@store/modules/Auth/actions';
-import {RootState} from '@store/rootReducer';
-import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
+import {COLORS} from '@constants/colors';
+import React, {useRef} from 'react';
+import {Animated, StyleSheet, View} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {rem} from 'rn-units';
+
+import HomeHeader from './components/Header';
+import {HomeTiles} from './components/HomeCards';
 
 export const Home = () => {
-  const {email} = useSelector((state: RootState) => state.auth.userData);
-  const dispatch = useDispatch();
-  const logOutPress = async () => {
-    dispatch(AuthActions.SIGN_OUT.START.create());
-  };
+  const scrolling = useRef(new Animated.Value(0)).current;
+  const translation = scrolling.interpolate({
+    inputRange: [0, 230],
+    outputRange: [rem(253), rem(137)], // to 137
+    extrapolate: 'clamp',
+  });
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.email}>{email}</Text>
-      <PrimaryButton text="Log out" onPress={logOutPress} />
-    </View>
+    <SafeAreaView style={styles.container} edges={['top']}>
+      <HomeHeader />
+      <Animated.View
+        style={[styles.back, {transform: [{translateY: translation}]}]}
+      />
+      <View style={{flex: 1}}>
+        <Animated.ScrollView
+          scrollEventThrottle={32}
+          onScroll={Animated.event(
+            [
+              {
+                nativeEvent: {
+                  contentOffset: {
+                    y: scrolling,
+                  },
+                },
+              },
+            ],
+            {useNativeDriver: false},
+          )}>
+          <View
+            style={{
+              height: 200,
+              backgroundColor: 'rgba(34,255,0,1)',
+              marginLeft: 40,
+              width: 200,
+              marginBottom: 50,
+            }}
+          />
+          <View
+            style={{
+              height: 300,
+              backgroundColor: 'rgba(34,255,0,1)',
+              marginLeft: 140,
+              width: 150,
+              marginBottom: 50,
+            }}
+          />
+          <View
+            style={{
+              height: 400,
+              backgroundColor: 'rgba(34,255,0,1)',
+              marginLeft: 10,
+              width: 150,
+              marginBottom: 50,
+            }}
+          />
+          <View
+            style={{
+              height: 400,
+              backgroundColor: 'rgba(34,255,0,1)',
+              marginLeft: 40,
+              width: 200,
+              marginBottom: 50,
+            }}
+          />
+        </Animated.ScrollView>
+
+        <HomeTiles scrolling={scrolling} />
+      </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#1B47C3',
   },
-  email: {
-    fontSize: 24,
-    color: '#fff',
-    marginBottom: 20,
+  back: {
+    backgroundColor: COLORS.white,
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    top: 0,
   },
 });
