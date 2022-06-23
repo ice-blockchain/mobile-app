@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {CheckBox} from '@components/CheckBox';
 import {Slider} from '@components/Slider';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
@@ -10,7 +9,7 @@ import {TierOneIcon} from '@svg/TierOneIcon';
 import {TierTwoIcon} from '@svg/TierTwoIcon';
 import {t} from '@translations/i18n';
 import {formatNumber} from '@utils/number';
-import React, {memo, useEffect, useRef, useState} from 'react';
+import React, {memo, useEffect, useRef} from 'react';
 import {
   ActivityIndicator,
   Platform,
@@ -22,16 +21,21 @@ import {
 import {useSharedValue} from 'react-native-reanimated';
 import {font, rem} from 'rn-units';
 
+const TIER_ONE_MIN = 0;
 const TIER_ONE_MAX = 30;
 const TIER_ONE_DEFAULT = 10;
+const TIER_TWO_MIN = 0;
 const TIER_TWO_MAX = 20;
 const TIER_TWO_DEFAULT = 15;
+const ACTIVE_MINERS_MIN = 0;
+const ACTIVE_MINERS_MAX = 100;
+const ACTIVE_MINERS_DEFAULT = 30;
 
 type Props = {
   onCalculateResult: (data: {
-    activeInviter: boolean;
     tierOneValue: number;
     tierTwoValue: number;
+    activeMinersPerc: number;
   }) => void;
   result: number | null;
   loading: boolean;
@@ -41,21 +45,21 @@ export const Calculator = memo(
   ({result, onCalculateResult, loading}: Props) => {
     const tierOneElementRef = useRef<TextInput | null>(null);
     const tierTwoElementRef = useRef<TextInput | null>(null);
+    const activeMinersElementRef = useRef<TextInput | null>(null);
     const tierOneValueRef = useRef(TIER_ONE_DEFAULT);
     const tierTwoValueRef = useRef(TIER_TWO_DEFAULT);
-
-    const [activeInviter, setActiveInviter] = useState(true);
+    const activeMinersValueRef = useRef(ACTIVE_MINERS_DEFAULT);
 
     const calculateResult = () => {
       onCalculateResult({
-        activeInviter,
         tierOneValue: tierOneValueRef.current,
         tierTwoValue: tierTwoValueRef.current,
+        activeMinersPerc: activeMinersValueRef.current,
       });
     };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(calculateResult, [activeInviter]);
+    useEffect(calculateResult, []);
 
     return (
       <View style={[styles.containder, commonStyles.shadow]}>
@@ -73,20 +77,6 @@ export const Calculator = memo(
             </Text>
           )}
         </View>
-        <View style={styles.checkboxWrapper}>
-          <CheckBox
-            value={activeInviter}
-            onValueChange={setActiveInviter}
-            LabelComponent={
-              <View style={styles.checkboxLabel}>
-                <MiningIcon />
-                <Text style={styles.checkboxLabelText}>
-                  {t('mining_calculator.active_inviter')}
-                </Text>
-              </View>
-            }
-          />
-        </View>
         <View style={styles.sliderInfo}>
           <TierOneIcon />
           <Text style={styles.sliderLabelText}>
@@ -102,7 +92,7 @@ export const Calculator = memo(
         <Slider
           style={styles.slider}
           progress={useSharedValue(TIER_ONE_DEFAULT)}
-          minimumValue={useSharedValue(0)}
+          minimumValue={useSharedValue(TIER_ONE_MIN)}
           maximumValue={useSharedValue(TIER_ONE_MAX)}
           step={TIER_ONE_MAX}
           onValueChange={value => {
@@ -126,12 +116,38 @@ export const Calculator = memo(
         <Slider
           style={styles.slider}
           progress={useSharedValue(TIER_TWO_DEFAULT)}
-          minimumValue={useSharedValue(0)}
+          minimumValue={useSharedValue(TIER_TWO_MIN)}
           maximumValue={useSharedValue(TIER_TWO_MAX)}
           step={TIER_TWO_MAX}
           onValueChange={value => {
             tierTwoValueRef.current = value;
             tierTwoElementRef.current?.setNativeProps({text: value.toString()});
+          }}
+          onSlidingComplete={calculateResult}
+        />
+        <View style={styles.sliderInfo}>
+          <MiningIcon />
+          <Text style={styles.sliderLabelText}>
+            {t('mining_calculator.active_miners')}
+          </Text>
+          <TextInput
+            style={styles.sliderValueText}
+            ref={activeMinersElementRef}
+            editable={false}
+            defaultValue={`${activeMinersValueRef.current}%`}
+          />
+        </View>
+        <Slider
+          style={styles.slider}
+          progress={useSharedValue(ACTIVE_MINERS_DEFAULT)}
+          minimumValue={useSharedValue(ACTIVE_MINERS_MIN)}
+          maximumValue={useSharedValue(ACTIVE_MINERS_MAX)}
+          step={100}
+          onValueChange={value => {
+            activeMinersValueRef.current = Math.round(value); // https://0.30000000000000004.com/
+            activeMinersElementRef.current?.setNativeProps({
+              text: `${activeMinersValueRef.current}%`,
+            });
           }}
           onSlidingComplete={calculateResult}
         />

@@ -11,13 +11,21 @@ export const MiningCalculator = memo(() => {
   const [loading, setLoading] = useState(false);
 
   const calculateResult = useCallback(
-    ({activeInviter, tierOneValue, tierTwoValue}) => {
+    ({
+      tierOneValue,
+      tierTwoValue,
+      activeMinersPerc,
+    }: {
+      tierOneValue: number;
+      tierTwoValue: number;
+      activeMinersPerc: number;
+    }) => {
       setLoading(true);
       if (timer) {
         clearTimeout(timer);
       }
       timer = setTimeout(() => {
-        setResult(tierOneValue * tierTwoValue * (activeInviter ? 100 : 50));
+        setResult(tierOneValue * tierTwoValue * activeMinersPerc);
         setLoading(false);
       }, 1000);
     },
