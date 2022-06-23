@@ -68,6 +68,8 @@ export const SegmentedControl = forwardRef<
       setActiveIndex(index);
       translateX.value = withSpring(segmentWidthPerc * index, {
         velocity: 10,
+        damping: 30,
+        stiffness: 500,
       });
     };
 
