@@ -19,3 +19,13 @@ export const isSignUpCompletedSelector = createSelector(
     );
   },
 );
+
+export const userDataSelector = createSelector(
+  authRootSelector,
+  auth => auth.userData,
+);
+
+export const getInitSelector = createSelector(
+  authRootSelector,
+  auth => auth.initialization,
+);

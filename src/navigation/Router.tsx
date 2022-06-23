@@ -1,39 +1,18 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Initialization} from '@components/Initialization';
+import {useMagicAuth} from '@navigation/hooks/useMagicAuth';
 import {theme} from '@navigation/theme';
 import {NavigationContainer} from '@react-navigation/native';
-import {magicLink} from '@services/magicLink';
-import {AuthActions} from '@store/modules/Auth/actions';
-import {isSignUpCompletedSelector} from '@store/modules/Auth/selectors';
-import {RootState} from '@store/rootReducer';
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Linking} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
 
 // import selectors from '@store/selectors';
 import {AuthNavigator} from './Auth';
 import {Main} from './Main';
 
 function ActiveNavigator() {
-  const dispatch = useDispatch();
-  const initialization = useSelector(
-    (state: RootState) => state.auth.initialization,
-  );
-  const isSignUpCompleted = useSelector(isSignUpCompletedSelector);
-  useEffect(() => {
-    const getUserData = async () => {
-      const {email, phoneNumber} = await magicLink.checkUser();
-      dispatch(
-        AuthActions.STORE_USER_DATA.STATE.create({
-          email: email ? email.toLowerCase() : null,
-          phoneNumber,
-        }),
-      );
-    };
-    getUserData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const [initialization, isSignUpCompleted] = useMagicAuth();
 
   if (initialization) {
     return <Initialization />;

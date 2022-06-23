@@ -11,21 +11,12 @@ export const magic = new Magic(ENV.MAGIC_LINK_KEY, {
 class MagicLink {
   token: string = '';
 
-  checkUser = async (): Promise<{
-    email: string | null;
-    phoneNumber: string | null;
-  }> => {
+  checkUser = async (): Promise<boolean> => {
     try {
-      const isLoggedIn = await magic.user.isLoggedIn();
-      if (isLoggedIn) {
-        const r = await magic.user.getMetadata();
-        this.token = await this.getToken();
-        return {email: r.email, phoneNumber: r.phoneNumber};
-      }
-      return {email: null, phoneNumber: null};
+      return await magic.user.isLoggedIn();
     } catch (err) {
       // throw new Error('User is not logged in');
-      return {email: null, phoneNumber: null};
+      return false;
     }
   };
 
@@ -59,7 +50,7 @@ class MagicLink {
 
   getToken = async () => {
     try {
-      return await magic.user.getIdToken();
+      this.token = await magic.user.getIdToken();
     } catch (err) {
       throw new Error('Authenticate current session failed');
     }

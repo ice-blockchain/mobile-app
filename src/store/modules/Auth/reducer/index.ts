@@ -49,14 +49,10 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
       case AuthActions.STORE_USER_DATA.STATE.type:
-        console.log('STORE_USER_DATA.STATE');
-
         draft.userData = action.payload.data;
         draft.initialization = false;
         break;
       case AuthActions.STORE_CLAIM_NICKNAME_DONE.STATE.type:
-        console.log('STORE_CLAIM_NICKNAME_DONE.STATE');
-
         if (draft.userData.email) {
           draft.usersInfo[draft.userData.email] = {
             profileFilled: true,
@@ -71,8 +67,6 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         }
         break;
       case AuthActions.STORE_WELCOME_SEEN.STATE.type:
-        console.log('STORE_WELCOME_SEEN.STATE');
-
         if (draft.userData.email) {
           draft.usersInfo[draft.userData.email] = {
             profileFilled: true,
@@ -101,7 +95,7 @@ const persistConfig = {
   key: 'auth',
   storage: AsyncStorage,
   timeout: 120000,
-  whitelist: ['usersInfo'],
+  blacklist: ['initialization'],
 };
 
 export const authReducer = persistReducer(persistConfig, reducer);
