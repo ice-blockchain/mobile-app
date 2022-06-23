@@ -8,18 +8,21 @@ import {PrimaryButton} from '@components/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
-import {OAuthRedirectResult} from '@magic-ext/react-native-oauth';
 import {SignUpStackParamList} from '@navigation/Auth';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {magicLink} from '@services/magicLink';
 import {AuthActions} from '@store/modules/Auth/actions';
-import {RootState} from '@store/rootReducer';
+import {
+  isSignInSuccessedSelector,
+  isSocialInfoExistsSelector,
+  socialInfoSelector,
+  userInfoSelector,
+} from '@store/modules/Auth/selectors';
 import {EmailIconSvg} from '@svg/EmailIcon';
 import {LogoSvg} from '@svg/Logo';
 import {MagicIconSvg} from '@svg/MagicIcon';
 import {PhoneIconSvg} from '@svg/PhoneIcon';
 import {translate} from '@translations/i18n';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   Keyboard,
   KeyboardAvoidingView,
@@ -48,42 +51,55 @@ export const SignIn = ({navigation}: Props) => {
     useState<boolean>(false);
 
   const dispatch = useDispatch();
-  const usersInfo = useSelector((state: RootState) => state.auth.usersInfo);
+  const usersInfo = useSelector(userInfoSelector);
+  const isSignInSuccessed = useSelector(isSignInSuccessedSelector);
+  const isSocialInfoExists = useSelector(isSocialInfoExistsSelector);
+  const socialInfo = useSelector(socialInfoSelector);
+
+  const phoneNumber = `${selectedCountry.iddCode}${phone}`;
+
+  useEffect(() => {
+    if (inputType === 'email' && isSignInSuccessed) {
+      const emailLowerCase = email.toLowerCase();
+      if (!usersInfo[emailLowerCase]?.profileFilled) {
+        navigation.navigate('ClaimNickname');
+      } else if (!usersInfo[emailLowerCase]?.welcomeSeen) {
+        navigation.navigate('Welcome');
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isSignInSuccessed]);
+
+  useEffect(() => {
+    if (inputType === 'phone' && isSignInSuccessed) {
+      if (!usersInfo[phoneNumber]?.profileFilled) {
+        navigation.navigate('ClaimNickname');
+      } else if (!usersInfo[phoneNumber]?.welcomeSeen) {
+        navigation.navigate('Welcome');
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isSignInSuccessed]);
+
+  useEffect(() => {
+    if (isSocialInfoExists && isSignInSuccessed) {
+      if (!usersInfo[`${socialInfo?.oauth.userInfo.email}`]?.profileFilled) {
+        navigation.navigate('ClaimNickname');
+      } else if (
+        !usersInfo[`${socialInfo?.oauth.userInfo.email}`]?.welcomeSeen
+      ) {
+        navigation.navigate('Welcome');
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isSignInSuccessed, isSocialInfoExists]);
 
   const onSignIn = async () => {
     Keyboard.dismiss();
     if (inputType === 'email') {
-      const success = await magicLink.loginUser(email);
-      if (success) {
-        const emailLowerCase = email.toLowerCase();
-        if (!usersInfo[emailLowerCase]?.profileFilled) {
-          navigation.navigate('ClaimNickname');
-        } else if (!usersInfo[emailLowerCase]?.welcomeSeen) {
-          navigation.navigate('Welcome');
-        }
-        dispatch(
-          AuthActions.STORE_USER_DATA.STATE.create({
-            email: emailLowerCase,
-            phoneNumber: null,
-          }),
-        );
-      }
+      await dispatch(AuthActions.SIGN_IN_EMAIL.START.create(email));
     } else {
-      const phoneNumber = `${selectedCountry.iddCode}${phone}`;
-      const success = await magicLink.loginUserPhoneNumber(phoneNumber);
-      if (success) {
-        if (!usersInfo[phoneNumber]?.profileFilled) {
-          navigation.navigate('ClaimNickname');
-        } else if (!usersInfo[phoneNumber]?.welcomeSeen) {
-          navigation.navigate('Welcome');
-        }
-        dispatch(
-          AuthActions.STORE_USER_DATA.STATE.create({
-            email: null,
-            phoneNumber,
-          }),
-        );
-      }
+      await dispatch(AuthActions.SIGN_IN_PHONE.START.create(phoneNumber));
     }
   };
   const onPhonePress = () => {
@@ -94,42 +110,21 @@ export const SignIn = ({navigation}: Props) => {
     }
   };
   const onSocialSignInPress = async (type: ESocialType) => {
-    let response: {success: boolean; authInfo: null | OAuthRedirectResult} = {
-      success: false,
-      authInfo: null,
-    };
     switch (type) {
       case ESocialType.apple:
-        response = await magicLink.socialLogin('apple');
+        await dispatch(AuthActions.SIGN_IN_SOCIAL.START.create('apple'));
         break;
       case ESocialType.facebook:
-        response = await magicLink.socialLogin('facebook');
+        await dispatch(AuthActions.SIGN_IN_SOCIAL.START.create('facebook'));
         break;
       case ESocialType.google:
-        response = await magicLink.socialLogin('google');
+        await dispatch(AuthActions.SIGN_IN_SOCIAL.START.create('google'));
         break;
       case ESocialType.twitter:
         break;
 
       default:
         break;
-    }
-    if (response.success) {
-      if (
-        !usersInfo[`${response.authInfo?.oauth.userInfo.email}`]?.profileFilled
-      ) {
-        navigation.navigate('ClaimNickname');
-      } else if (
-        !usersInfo[`${response.authInfo?.oauth.userInfo.email}`]?.welcomeSeen
-      ) {
-        navigation.navigate('Welcome');
-      }
-      dispatch(
-        AuthActions.STORE_USER_DATA.STATE.create({
-          email: response.authInfo?.oauth.userInfo.email,
-          phoneNumber: null,
-        }),
-      );
     }
   };
 

@@ -9,7 +9,7 @@ export const magic = new Magic(ENV.MAGIC_LINK_KEY, {
 });
 
 class MagicLink {
-  token: string = '';
+  token: string | null = '';
 
   checkUser = async (): Promise<boolean> => {
     try {
@@ -22,8 +22,11 @@ class MagicLink {
 
   loginUser = async (email: string) => {
     try {
-      await magic.auth.loginWithMagicLink({email});
-      return true;
+      this.token = await magic.auth.loginWithMagicLink({email});
+
+      const authInfo = {email, phoneNumber: null};
+
+      return {success: true, authInfo};
     } catch (err) {
       // throw new Error('Login failed');
       return false;
@@ -32,8 +35,11 @@ class MagicLink {
 
   loginUserPhoneNumber = async (phoneNumber: string) => {
     try {
-      await magic.auth.loginWithSMS({phoneNumber});
-      return true;
+      this.token = await magic.auth.loginWithSMS({phoneNumber});
+
+      const authInfo = {email: null, phoneNumber};
+
+      return {success: true, authInfo};
     } catch (err) {
       // throw new Error('Login failed');
       return false;
@@ -63,7 +69,11 @@ class MagicLink {
         redirectURI: `${ENV.MAGIC_DEEPLINK_SCHEME}://login`,
       });
 
-      return {success: true, authInfo: result};
+      const {email} = result.oauth.userInfo;
+
+      const authInfo = {email, phoneNumber: null};
+
+      return {success: true, authInfo, socialLoginInfo: result};
     } catch (error) {
       // throw new Error('Login failed');
       return {success: false, authInfo: null};

@@ -5,7 +5,7 @@ import {theme} from '@navigation/theme';
 import {NavigationContainer} from '@react-navigation/native';
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {
-  getInitSelector,
+  isInitializedSelector,
   isSignUpCompletedSelector,
 } from '@store/modules/Auth/selectors';
 import React, {useEffect} from 'react';
@@ -17,7 +17,7 @@ import {Main} from './Main';
 
 function ActiveNavigator() {
   const dispatch = useDispatch();
-  const initialization = useSelector(getInitSelector);
+  const initialization = useSelector(isInitializedSelector);
   const isSignUpCompleted = useSelector(isSignUpCompletedSelector);
 
   useEffect(() => {

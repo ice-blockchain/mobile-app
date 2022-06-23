@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {OAuthRedirectResult} from '@magic-ext/react-native-oauth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthActions} from '@store/modules/Auth/actions';
 import produce from 'immer';
@@ -22,7 +23,9 @@ export interface AuthState {
         }
       | undefined;
   };
-  initialization: boolean;
+  isInitialized: boolean;
+  signInSuccessed: boolean;
+  socialLoginInfo: undefined | OAuthRedirectResult;
 }
 
 const actionCreatorStoreUserData = AuthActions.STORE_USER_DATA.STATE.create;
@@ -32,6 +35,9 @@ type Actions = ReturnType<
   | typeof AuthActions.STORE_CLAIM_NICKNAME_DONE.STATE.create
   | typeof AuthActions.STORE_WELCOME_SEEN.STATE.create
   | typeof AuthActions.SIGN_OUT.SUCCESS.create
+  | typeof AuthActions.SIGN_IN_EMAIL.SUCCESS.create
+  | typeof AuthActions.SIGN_IN_PHONE.SUCCESS.create
+  | typeof AuthActions.SIGN_IN_SOCIAL.SUCCESS.create
 >;
 
 const INITIAL_STATE: AuthState = {
@@ -43,15 +49,22 @@ const INITIAL_STATE: AuthState = {
     // publicAddress: '',
   },
   usersInfo: {},
-  initialization: true,
+  isInitialized: true,
+  signInSuccessed: false,
+  socialLoginInfo: undefined,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): AuthState {
   return produce(state, draft => {
     switch (action.type) {
+      case AuthActions.SIGN_IN_SOCIAL.SUCCESS.type:
+      case AuthActions.SIGN_IN_EMAIL.SUCCESS.type:
+      case AuthActions.SIGN_IN_PHONE.SUCCESS.type:
       case AuthActions.STORE_USER_DATA.STATE.type:
-        draft.userData = action.payload.data;
-        draft.initialization = false;
+        draft.userData = action.payload.result.authInfo;
+        draft.signInSuccessed = action.payload.result.success;
+        draft.socialLoginInfo = action.payload.result.socialLoginInfo;
+        draft.isInitialized = false;
         break;
       case AuthActions.STORE_CLAIM_NICKNAME_DONE.STATE.type:
         if (draft.userData.email) {
@@ -85,7 +98,7 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
         return {
           ...INITIAL_STATE,
           usersInfo: draft.usersInfo,
-          initialization: false,
+          isInitialized: false,
         };
       }
     }
@@ -96,7 +109,7 @@ const persistConfig = {
   key: 'auth',
   storage: AsyncStorage,
   timeout: 120000,
-  blacklist: ['initialization'],
+  blacklist: ['isInitialized'],
 };
 
 export const authReducer = persistReducer(persistConfig, reducer);

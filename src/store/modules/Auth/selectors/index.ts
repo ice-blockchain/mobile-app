@@ -20,12 +20,18 @@ export const isSignUpCompletedSelector = createSelector(
   },
 );
 
-export const userDataSelector = createSelector(
-  authRootSelector,
-  auth => auth.userData,
-);
+export const userDataSelector = (state: RootState) => state.auth.userData;
 
-export const getInitSelector = createSelector(
-  authRootSelector,
-  auth => auth.initialization,
-);
+export const userInfoSelector = (state: RootState) => state.auth.usersInfo;
+
+export const isInitializedSelector = (state: RootState) =>
+  state.auth.isInitialized;
+
+export const isSignInSuccessedSelector = (state: RootState) =>
+  state.auth.signInSuccessed;
+
+export const isSocialInfoExistsSelector = (state: RootState) =>
+  !!state.auth.socialLoginInfo;
+
+export const socialInfoSelector = (state: RootState) =>
+  state.auth.socialLoginInfo;

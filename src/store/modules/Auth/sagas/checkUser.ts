@@ -15,23 +15,32 @@ export function* checkUserSaga() {
     if (isLoggedIn) {
       yield put(
         AuthActions.STORE_USER_DATA.STATE.create({
-          email: usersData.email ? usersData.email.toLowerCase() : null,
-          phoneNumber: usersData.phoneNumber,
+          success: true,
+          authInfo: {
+            email: usersData.email ? usersData.email.toLowerCase() : null,
+            phoneNumber: usersData.phoneNumber,
+          },
         }),
       );
     } else {
       yield put(
         AuthActions.STORE_USER_DATA.STATE.create({
-          email: null,
-          phoneNumber: null,
+          success: false,
+          authInfo: {
+            email: null,
+            phoneNumber: null,
+          },
         }),
       );
     }
   } catch (error) {
     yield put(
       AuthActions.STORE_USER_DATA.STATE.create({
-        email: null,
-        phoneNumber: null,
+        success: false,
+        authInfo: {
+          email: null,
+          phoneNumber: null,
+        },
       }),
     );
   }
