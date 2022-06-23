@@ -5,14 +5,15 @@ import {AuthActions} from '@store/modules/Auth/actions';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
 
-export interface State {
-  userData: {
-    email: string | null | undefined;
-    phoneNumber: string | null;
-    // isMfaEnabled: boolean;
-    // issuer: string;
-    // publicAddress: string;
-  };
+export type UserDataType = {
+  email: string | null | undefined;
+  phoneNumber: string | null;
+  // isMfaEnabled: boolean;
+  // issuer: string;
+  // publicAddress: string;
+};
+export interface AuthState {
+  userData: UserDataType;
   usersInfo: {
     [k: string]:
       | {
@@ -33,7 +34,7 @@ type Actions = ReturnType<
   | typeof AuthActions.SIGN_OUT.SUCCESS.create
 >;
 
-const INITIAL_STATE: State = {
+const INITIAL_STATE: AuthState = {
   userData: {
     email: null,
     phoneNumber: null,
@@ -45,7 +46,7 @@ const INITIAL_STATE: State = {
   initialization: true,
 };
 
-function reducer(state = INITIAL_STATE, action: Actions): State {
+function reducer(state = INITIAL_STATE, action: Actions): AuthState {
   return produce(state, draft => {
     switch (action.type) {
       case AuthActions.STORE_USER_DATA.STATE.type:

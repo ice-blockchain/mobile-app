@@ -1,18 +1,29 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Initialization} from '@components/Initialization';
-import {useMagicAuth} from '@navigation/hooks/useMagicAuth';
 import {theme} from '@navigation/theme';
 import {NavigationContainer} from '@react-navigation/native';
-import React from 'react';
+import {AppCommonActions} from '@store/modules/AppCommon/actions';
+import {
+  getInitSelector,
+  isSignUpCompletedSelector,
+} from '@store/modules/Auth/selectors';
+import React, {useEffect} from 'react';
 import {Linking} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
 
-// import selectors from '@store/selectors';
 import {AuthNavigator} from './Auth';
 import {Main} from './Main';
 
 function ActiveNavigator() {
-  const [initialization, isSignUpCompleted] = useMagicAuth();
+  const dispatch = useDispatch();
+  const initialization = useSelector(getInitSelector);
+  const isSignUpCompleted = useSelector(isSignUpCompletedSelector);
+
+  useEffect(() => {
+    dispatch(AppCommonActions.APP_LOADED.STATE.create());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (initialization) {
     return <Initialization />;

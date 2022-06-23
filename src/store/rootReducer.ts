@@ -2,6 +2,7 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {accountReducer} from '@store/modules/Accounts/reducer';
+import {appCommonReducer} from '@store/modules/AppCommon/reducer';
 import {authReducer} from '@store/modules/Auth/reducer';
 import {newsReducer} from '@store/modules/News/reducer';
 import {referralsReducer} from '@store/modules/Referrals/reducer';
@@ -19,6 +20,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
+  appCommon: appCommonReducer,
   auth: authReducer,
   news: newsReducer,
   account: accountReducer,
