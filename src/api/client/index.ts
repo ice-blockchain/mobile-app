@@ -21,6 +21,7 @@ function setupApiClient(clientInstance: AxiosInstance) {
 }
 
 const client = axios.create({
+  // TODO:: configure write + read api clients
   baseURL: `${ENV.BASE_WRITE_API_URL}/api`,
   headers: {
     'Mobile-App-Version': `${Platform.OS} - ${DeviceInfo.getVersion()}`,
