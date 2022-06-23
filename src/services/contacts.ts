@@ -5,9 +5,6 @@ import {isEmpty} from 'lodash';
 import RNContacts from 'react-native-contacts';
 import RNPermissions, {PERMISSIONS} from 'react-native-permissions';
 import {isIOS} from 'rn-units';
-// import logger from 'src/utils/logger';
-// import permissionsHelpers from 'src/utils/permissionsHelpers';
-// import {formatCellNumber} from 'src/utils/phoneNumber';
 
 interface IContact {
   lastName: string;
@@ -50,46 +47,9 @@ export const getContacts = async (): Promise<Array<IContact>> => {
       });
     }
   });
-  console.log('bla here', formatted);
 
   return formatted;
 };
-
-// export const getPhoneNumbers = async useLibphonenumberModel => {
-//   let numbers = [];
-//   const contacts = await getContacts();
-//   contacts.forEach(contact => {
-//     const {phoneNumbers} = contact;
-//     if (!phoneNumbers) {
-//       return;
-//     }
-
-//     const mobileNumber = phoneNumbers.find(number => number.label === 'mobile');
-//     const firstNumber = phoneNumbers[0];
-//     const phone = mobileNumber || firstNumber;
-
-//     if (phone) {
-//       let parsedNumber;
-//       let error;
-//       try {
-//         const number = formatCellNumber(phone.number);
-//         parsedNumber = parsePhoneNumberFromString(number);
-//       } catch (e) {
-//         error = e.message || e;
-//       }
-
-//       if (parsedNumber) {
-//         numbers.push(
-//           useLibphonenumberModel ? parsedNumber : parsedNumber.number,
-//         );
-//       } else {
-//         // logger.warn('Failed to parse phone number: ', phone.number, error);
-//       }
-//     }
-//   });
-
-//   return numbers;
-// };
 
 export const contactsPermission = isIOS
   ? PERMISSIONS.IOS.CONTACTS
