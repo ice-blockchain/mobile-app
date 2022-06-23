@@ -28,8 +28,10 @@ export const InviteButton = ({style}: Props = {}) => {
         <InviteIcon style={styles.icon} />
       </View>
       <View style={styles.body}>
-        <Text style={styles.mainText}>{t('profile.invite_friends')}</Text>
-        <Text style={styles.noteText}>{t('profile.invite_friends_note')}</Text>
+        <Text style={styles.mainText}>{t('button.invite_friend.title')}</Text>
+        <Text style={styles.noteText}>
+          {t('button.invite_friend.description')}
+        </Text>
       </View>
       <StarTransparentIcon style={styles.backgroundIcon} />
     </TouchableOpacity>

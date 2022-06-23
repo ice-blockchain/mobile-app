@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {InviteFriendsButton} from '@components/InviteFriendsButton';
+import {InviteButton} from '@components/InviteButton';
 import {CompleteTheTask} from '@screens/Home/components/Content/components/CompleteTheTask';
 import {TeamHomeScreen} from '@screens/Home/components/Content/components/Team';
 import React from 'react';
@@ -12,7 +12,7 @@ interface HomeContentProps {}
 export const HomeContent = ({}: HomeContentProps) => {
   return (
     <View style={styles.container}>
-      <InviteFriendsButton />
+      <InviteButton />
       <TeamHomeScreen />
       <CompleteTheTask />
     </View>
