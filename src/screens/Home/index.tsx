@@ -17,7 +17,7 @@ import {
 import {HomeHeader} from './components/Header';
 
 export const Home = () => {
-  useFocusStatusBar({style: 'light-content', backgorund: COLORS.persianBlue});
+  useFocusStatusBar({style: 'light-content'});
   const scrolling = useRef(new Animated.Value(0)).current;
   const tabBarOffset = useBottomTabBarOffsetStyle();
   const shadowOpacity = scrolling.interpolate({

@@ -141,13 +141,13 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: itemLeftPosition,
     width: 1,
-    backgroundColor: COLORS.finishedTasksLine,
+    backgroundColor: COLORS.shamrock,
   },
   upcomingTasksLine: {
     position: 'absolute',
     left: itemLeftPosition,
     width: 1,
-    backgroundColor: COLORS.upcomingTasksLine,
+    backgroundColor: COLORS.heather,
   },
   progress: {
     position: 'absolute',
