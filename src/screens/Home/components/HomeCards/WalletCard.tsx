@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(8),
     borderRadius: 13,
     paddingHorizontal: rem(11),
-    paddingVertical: rem(14),
+    paddingVertical: rem(12),
     overflow: 'hidden',
   },
   header: {

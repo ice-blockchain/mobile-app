@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     width: rem(175),
     marginHorizontal: rem(8),
     borderRadius: 13,
-    paddingTop: rem(10),
+    paddingTop: rem(8),
     paddingHorizontal: rem(10),
   },
   header: {

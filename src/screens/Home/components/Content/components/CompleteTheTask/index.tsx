@@ -32,24 +32,22 @@ export const CompleteTheTask = ({}: CompleteTheTaskProps) => {
   return (
     <View style={styles.container}>
       <View
-        style={{
-          position: 'absolute',
-          top: halfHeaderHeight,
-          bottom: itemHeight / 2,
-          left: 52,
-          width: 1,
-          backgroundColor: '#C1C8D6',
-        }}
+        style={[
+          styles.upcomingTasksLine,
+          {
+            top: halfHeaderHeight,
+            bottom: itemHeight / 2,
+          },
+        ]}
       />
       <View
-        style={{
-          position: 'absolute',
-          top: halfHeaderHeight,
-          height: activeLineHeight,
-          left: 52,
-          width: 1,
-          backgroundColor: '#24D495',
-        }}
+        style={[
+          styles.finishedTasksLine,
+          {
+            top: halfHeaderHeight,
+            height: activeLineHeight,
+          },
+        ]}
       />
       <View style={styles.header}>
         <View style={styles.amountWrapper}>
@@ -136,5 +134,17 @@ const styles = StyleSheet.create({
     lineHeight: rem(14),
     fontFamily: FONTS.primary.regular,
     color: COLORS.darkBlue,
+  },
+  finishedTasksLine: {
+    position: 'absolute',
+    left: 52,
+    width: 1,
+    backgroundColor: COLORS.finishedTasksLine,
+  },
+  upcomingTasksLine: {
+    position: 'absolute',
+    left: 52,
+    width: 1,
+    backgroundColor: COLORS.upcomingTasksLine,
   },
 });

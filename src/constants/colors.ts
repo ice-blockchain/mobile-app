@@ -19,4 +19,6 @@ export const COLORS = {
   emperor: '#535353',
   alabaster: '#F8F8F8',
   mischka: '#D8DCE3',
+  finishedTasksLine: '#24D495',
+  upcomingTasksLine: '#C1C8D6',
 };
