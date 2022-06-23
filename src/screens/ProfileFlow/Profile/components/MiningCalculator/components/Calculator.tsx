@@ -142,7 +142,7 @@ export const Calculator = memo(
           progress={useSharedValue(ACTIVE_MINERS_DEFAULT)}
           minimumValue={useSharedValue(ACTIVE_MINERS_MIN)}
           maximumValue={useSharedValue(ACTIVE_MINERS_MAX)}
-          step={100}
+          step={ACTIVE_MINERS_MAX}
           onValueChange={value => {
             activeMinersValueRef.current = Math.round(value); // https://0.30000000000000004.com/
             activeMinersElementRef.current?.setNativeProps({
