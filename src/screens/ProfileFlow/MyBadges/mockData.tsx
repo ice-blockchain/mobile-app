@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Images} from '@images';
-import {BadgeCategory} from '@screens/ProfileFlow/MyBadges/components/CategorySwitcher';
+import {t} from '@translations/i18n';
+import {capitalizeFirstLetter} from '@utils/string';
 import {ImageSourcePropType} from 'react-native';
 
 export type Badge = {
@@ -11,6 +12,18 @@ export type Badge = {
   progress: number;
   active: boolean;
 };
+
+export enum BadgeCategory {
+  social = 'social',
+  coins = 'coins',
+  level = 'level',
+}
+
+export const CATEGORIES = [
+  {text: capitalizeFirstLetter(t('global.social')), key: BadgeCategory.social},
+  {text: capitalizeFirstLetter(t('global.coins')), key: BadgeCategory.coins},
+  {text: capitalizeFirstLetter(t('global.level')), key: BadgeCategory.level},
+] as const;
 
 export const BADGES: {[key in BadgeCategory]: Badge[]} = {
   social: [

@@ -3,7 +3,14 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {commonStyles} from '@constants/styles';
-import React, {memo, ReactNode, useMemo, useState} from 'react';
+import React, {
+  forwardRef,
+  ReactNode,
+  Ref,
+  useImperativeHandle,
+  useMemo,
+  useState,
+} from 'react';
 import {
   FlexStyle,
   StyleProp,
@@ -29,6 +36,10 @@ type Segment = {
   key: string;
 };
 
+export type SegmentedControlMethods = {
+  changeSegment: (index: number) => void;
+};
+
 export type SegmentedControlProps = {
   segments: Segment[] | ReadonlyArray<Segment>;
   onChange?: (index: number) => void;
@@ -36,18 +47,26 @@ export type SegmentedControlProps = {
   style?: StyleProp<ViewStyle | FlexStyle>;
 };
 
-export const SegmentedControl = memo(
-  ({
-    segments = [],
-    initialIndex = 0,
-    style,
-    onChange = () => {},
-  }: SegmentedControlProps) => {
+export const SegmentedControl = forwardRef<
+  SegmentedControlMethods,
+  SegmentedControlProps
+>(
+  (
+    {
+      segments = [],
+      initialIndex = 0,
+      style,
+      onChange = () => {},
+    }: SegmentedControlProps,
+    forwardedRef: Ref<SegmentedControlMethods>,
+  ) => {
     const segmentWidthPerc = 100 / segments.length;
     const translateX = useSharedValue(segmentWidthPerc * initialIndex);
     const [activeIndex, setActiveIndex] = useState(initialIndex);
 
-    const onSegmentPress = (index: number) => {
+    useImperativeHandle(forwardedRef, () => ({changeSegment}));
+
+    const changeSegment = (index: number) => {
       setActiveIndex(index);
       translateX.value = withSpring(segmentWidthPerc * index, {
         velocity: 10,
@@ -85,7 +104,7 @@ export const SegmentedControl = memo(
         <TouchableOpacity
           key={segment.key}
           onPress={() => {
-            onSegmentPress(index);
+            changeSegment(index);
           }}
           style={styles.segment}>
           {typeof segment.renderText === 'function' ? (
