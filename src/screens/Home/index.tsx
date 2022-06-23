@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
+import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {HomeContent} from '@screens/Home/components/Content';
 import React, {useRef} from 'react';
 import {Animated, StyleSheet, View} from 'react-native';
@@ -16,6 +17,7 @@ import {
 import {HomeHeader} from './components/Header';
 
 export const Home = () => {
+  useFocusStatusBar({style: 'light-content', backgorund: COLORS.persianBlue});
   const scrolling = useRef(new Animated.Value(0)).current;
   const tabBarOffset = useBottomTabBarOffsetStyle();
   const shadowOpacity = scrolling.interpolate({
