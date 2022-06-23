@@ -6,14 +6,6 @@ import {
 } from '@magic-ext/react-native-oauth';
 import {createAction} from '@store/utils/actions/createAction';
 
-// type Params = {
-//   email: string | null | undefined;
-//   phoneNumber: string | null;
-//   isMfaEnabled?: boolean;
-//   issuer?: string;
-//   publicAddress?: string;
-// };
-
 type CommonSignInResultType = {
   phoneNumber: string | null;
   email: string | null;

@@ -9,12 +9,10 @@ import {persistReducer} from 'redux-persist';
 export type UserDataType = {
   email: string | null | undefined;
   phoneNumber: string | null;
-  // isMfaEnabled: boolean;
-  // issuer: string;
-  // publicAddress: string;
 };
 export interface AuthState {
   userData: UserDataType;
+  // TODO:: remove when we have api
   usersInfo: {
     [k: string]:
       | {
@@ -44,9 +42,6 @@ const INITIAL_STATE: AuthState = {
   userData: {
     email: null,
     phoneNumber: null,
-    // isMfaEnabled: false,
-    // issuer: '',
-    // publicAddress: '',
   },
   usersInfo: {},
   isInitialized: true,

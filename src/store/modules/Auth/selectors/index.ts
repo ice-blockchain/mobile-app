@@ -1,24 +1,18 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {RootState} from '@store/rootReducer';
-import {createSelector} from 'reselect';
 
-const authRootSelector = (state: RootState) => state.auth;
-
-export const isSignUpCompletedSelector = createSelector(
-  authRootSelector,
-  auth => {
-    const {email, phoneNumber} = auth.userData;
-    return (
-      (!!email &&
-        auth.usersInfo[email]?.profileFilled &&
-        auth.usersInfo[email]?.welcomeSeen) ||
-      (!!phoneNumber &&
-        auth.usersInfo[phoneNumber]?.profileFilled &&
-        auth.usersInfo[phoneNumber]?.welcomeSeen)
-    );
-  },
-);
+export const isSignUpCompletedSelector = (state: RootState) => {
+  const {email, phoneNumber} = state.auth.userData;
+  return (
+    (!!email &&
+      state.auth.usersInfo[email]?.profileFilled &&
+      state.auth.usersInfo[email]?.welcomeSeen) ||
+    (!!phoneNumber &&
+      state.auth.usersInfo[phoneNumber]?.profileFilled &&
+      state.auth.usersInfo[phoneNumber]?.welcomeSeen)
+  );
+};
 
 export const userDataSelector = (state: RootState) => state.auth.userData;
 
