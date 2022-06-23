@@ -4,11 +4,12 @@ import {magic} from '@services/magicLink';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {put} from 'redux-saga/effects';
 
-export function* signOutSaga() {
+export function* getTokenSaga() {
   try {
-    yield magic.user.logout();
-    yield put(AuthActions.SIGN_OUT.SUCCESS.create());
+    const token: string = yield magic.user.getIdToken();
+
+    yield put(AuthActions.GET_TOKEN.SUCCESS.create(token));
   } catch (error) {
-    yield put(AuthActions.SIGN_OUT.FAILED.create());
+    yield put(AuthActions.GET_TOKEN.FAILED.create());
   }
 }

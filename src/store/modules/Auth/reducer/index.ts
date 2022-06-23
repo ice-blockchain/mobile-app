@@ -24,6 +24,7 @@ export interface AuthState {
   isInitialized: boolean;
   signInSuccessed: boolean;
   socialLoginInfo: undefined | OAuthRedirectResult;
+  token: string | null;
 }
 
 const actionCreatorStoreUserData = AuthActions.STORE_USER_DATA.STATE.create;
@@ -36,6 +37,8 @@ type Actions = ReturnType<
   | typeof AuthActions.SIGN_IN_EMAIL.SUCCESS.create
   | typeof AuthActions.SIGN_IN_PHONE.SUCCESS.create
   | typeof AuthActions.SIGN_IN_SOCIAL.SUCCESS.create
+  | typeof AuthActions.GET_TOKEN.SUCCESS.create
+  | typeof AuthActions.STORE_TOKEN.STATE.create
 >;
 
 const INITIAL_STATE: AuthState = {
@@ -47,11 +50,16 @@ const INITIAL_STATE: AuthState = {
   isInitialized: true,
   signInSuccessed: false,
   socialLoginInfo: undefined,
+  token: null,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): AuthState {
   return produce(state, draft => {
     switch (action.type) {
+      case AuthActions.GET_TOKEN.SUCCESS.type:
+      case AuthActions.STORE_TOKEN.STATE.type:
+        draft.token = action.payload.token;
+        break;
       case AuthActions.SIGN_IN_SOCIAL.SUCCESS.type:
       case AuthActions.SIGN_IN_EMAIL.SUCCESS.type:
       case AuthActions.SIGN_IN_PHONE.SUCCESS.type:

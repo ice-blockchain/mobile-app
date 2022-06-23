@@ -8,7 +8,7 @@ import {createAction} from '@store/utils/actions/createAction';
 
 type CommonSignInResultType = {
   phoneNumber: string | null;
-  email: string | null;
+  email: string | null | undefined;
 };
 
 export type SignInResultType = {
@@ -19,6 +19,9 @@ export type SignInResultType = {
 
 const STORE_USER_DATA = createAction('STORE_USER_DATA', {
   STATE: (result: SignInResultType) => ({result}),
+});
+const STORE_TOKEN = createAction('STORE_TOKEN', {
+  STATE: (token: string) => ({token}),
 });
 const STORE_CLAIM_NICKNAME_DONE = createAction('STORE_CLAIM_NICKNAME_DONE', {
   STATE: () => {},
@@ -55,7 +58,15 @@ const SIGN_IN_SOCIAL = createAction('SIGN_IN_SOCIAL', {
   FAILED: true,
 });
 
+const GET_TOKEN = createAction('GET_TOKEN', {
+  START: true,
+  SUCCESS: (token: string) => ({token}),
+  FAILED: true,
+});
+
 export const AuthActions = Object.freeze({
+  GET_TOKEN,
+  STORE_TOKEN,
   SIGN_IN_EMAIL,
   SIGN_IN_PHONE,
   SIGN_IN_SOCIAL,
