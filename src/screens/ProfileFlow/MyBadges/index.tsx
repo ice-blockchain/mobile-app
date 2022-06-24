@@ -12,6 +12,8 @@ import {Header} from '@navigation/components/Header';
 import {FaqButton} from '@navigation/components/Header/components/FaqButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import {ProfileStackParamList} from '@navigation/Main';
+import {RouteProp, useRoute} from '@react-navigation/native';
 import {BadgeList} from '@screens/ProfileFlow/MyBadges/components/BadgeList';
 import {BADGES, CATEGORIES} from '@screens/ProfileFlow/MyBadges/mockData';
 import {t} from '@translations/i18n';
@@ -23,6 +25,10 @@ import {rem} from 'rn-units';
 export const MyBadges = () => {
   useFocusStatusBar({style: 'dark-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
+  const route = useRoute<RouteProp<ProfileStackParamList, 'MyBadges'>>();
+  const initialCategory = route.params?.category ?? 'social';
+  const initialIndex = CATEGORIES.findIndex(c => c.key === initialCategory);
+
   const {scrollHandler, shadowStyle} = useScrollShadow();
   const switcherRef = useRef<SegmentedControlMethods>(null);
   const pagerRef = useRef<PagerView>(null);
@@ -49,9 +55,10 @@ export const MyBadges = () => {
         ref={switcherRef}
         style={styles.categorySwitcher}
         onChange={onCategoryChange}
+        initialIndex={initialIndex}
       />
       <PagerView
-        initialPage={0}
+        initialPage={initialIndex}
         style={styles.container}
         ref={pagerRef}
         onPageSelected={onPageChange}>

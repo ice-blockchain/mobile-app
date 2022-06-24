@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {BadgeCategory} from '@api/badges/types';
 import {MainTabBar} from '@navigation/components/MainTabBar';
 import {HomeIcon} from '@navigation/components/MainTabBar/components/Icons/HomeIcon';
 import {NewsIcon} from '@navigation/components/MainTabBar/components/Icons/NewsIcon';
@@ -33,7 +34,7 @@ export type MainStackParamList = {
 export type ProfileStackParamList = {
   Profile: undefined;
   MyRoles: undefined;
-  MyBadges: undefined;
+  MyBadges: {category?: BadgeCategory} | undefined;
 };
 
 const Tabs = createBottomTabNavigator<MainTabsParamList>();

@@ -1,25 +1,25 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {Badge} from '@api/badges/types';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {
   BadgeCard,
   BadgeCardSkeleton,
   CARD_OFFSET,
 } from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeCard';
-import {BadgeCategory} from '@screens/ProfileFlow/Profile/components/Badges/mockData';
 import React, {useCallback} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
   loading: boolean;
-  data: BadgeCategory[];
+  data: Badge[];
 };
 
 const NUMBER_OF_SKELETONS = 5;
 
 export const BadgeList = ({loading, data}: Props) => {
-  const renderItem = useCallback(({item}: {item: BadgeCategory | null}) => {
+  const renderItem = useCallback(({item}: {item: Badge | null}) => {
     if (item === null) {
       return <BadgeCardSkeleton />;
     }

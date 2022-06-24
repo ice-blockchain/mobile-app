@@ -10,7 +10,7 @@ import {rem} from 'rn-units';
 type Props = {
   title: string;
   description: string;
-  progress: number;
+  progressValue: number;
   active?: boolean;
   imageSource: ImageSourcePropType;
   connector: {
@@ -23,7 +23,7 @@ export const BadgeCard = ({
   title,
   description,
   imageSource,
-  progress,
+  progressValue,
   active = true,
   connector = {},
 }: Props) => {
@@ -51,7 +51,7 @@ export const BadgeCard = ({
         title={title}
         description={description}
         imageSource={imageSource}
-        renderBody={() => <BadgeProgress value={progress} />}
+        renderBody={() => <BadgeProgress value={progressValue} />}
         containerStyle={[
           active ? styles.containerActive : styles.containerInactive,
         ]}

@@ -1,16 +1,21 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {BadgeCategory} from '@api/badges/types';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {commonStyles} from '@constants/styles';
+import {ProfileStackParamList} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import React, {memo} from 'react';
 import {Image, ImageSourcePropType, StyleSheet, Text, View} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {font, rem} from 'rn-units';
 
 type Props = {
   title: string;
-  category: string;
+  category: BadgeCategory;
   progressText: string;
   progressValue: number;
   imageSource: ImageSourcePropType;
@@ -18,32 +23,40 @@ type Props = {
 
 export const BadgeCard = memo(
   ({imageSource, title, category, progressText, progressValue}: Props) => {
+    const navigation =
+      useNavigation<NativeStackNavigationProp<ProfileStackParamList>>();
+
     return (
-      <View style={[styles.container, commonStyles.shadow]}>
-        <Text
-          style={styles.titleText}
-          numberOfLines={1}
-          adjustsFontSizeToFit={true}>
-          {title}
-        </Text>
-        <Image
-          source={imageSource}
-          style={styles.icon}
-          resizeMode={'contain'}
-        />
-        <View style={styles.progressHeader}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('MyBadges', {category})}>
+        <View style={[styles.container, commonStyles.shadow]}>
           <Text
-            style={styles.categoryText}
+            style={styles.titleText}
             numberOfLines={1}
             adjustsFontSizeToFit={true}>
-            {category}
+            {title}
           </Text>
-          <Text style={styles.progressText}>{progressText}</Text>
+          <Image
+            source={imageSource}
+            style={styles.icon}
+            resizeMode={'contain'}
+          />
+          <View style={styles.progressHeader}>
+            <Text
+              style={styles.categoryText}
+              numberOfLines={1}
+              adjustsFontSizeToFit={true}>
+              {category}
+            </Text>
+            <Text style={styles.progressText}>{progressText}</Text>
+          </View>
+          <View style={styles.progressBody}>
+            <View
+              style={[styles.progressValue, {width: `${progressValue}%`}]}
+            />
+          </View>
         </View>
-        <View style={styles.progressBody}>
-          <View style={[styles.progressValue, {width: `${progressValue}%`}]} />
-        </View>
-      </View>
+      </TouchableOpacity>
     );
   },
 );

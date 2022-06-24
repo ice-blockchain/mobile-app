@@ -76,16 +76,18 @@ export const SegmentedControl = forwardRef<
     useImperativeHandle(forwardedRef, () => ({changeSegment}));
 
     const onSegmentPress = (index: number) => {
-      changeSegment(index);
+      if (index !== activeIndex) {
+        changeSegment(index);
 
-      /**
-       * Postpone onChange to give time for React to update segment styles
-       * according to the new activeIndex -> usually triggering onChange leads to a huge
-       * VDOM changes that lead to temp blocking JS thread and hence UI glitches.
-       */
-      setTimeout(() => {
-        onChange(index);
-      });
+        /**
+         * Postpone onChange to give time for React to update segment styles
+         * according to the new activeIndex -> usually triggering onChange leads to a huge
+         * VDOM changes that lead to temp blocking JS thread and hence UI glitches.
+         */
+        setTimeout(() => {
+          onChange(index);
+        });
+      }
     };
 
     const dynamicStyles = useMemo(
