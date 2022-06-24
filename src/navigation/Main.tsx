@@ -13,6 +13,7 @@ import {News} from '@screens/News';
 import {MyBadges} from '@screens/ProfileFlow/MyBadges';
 import {MyRoles} from '@screens/ProfileFlow/MyRoles';
 import {Profile} from '@screens/ProfileFlow/Profile';
+import {Settings} from '@screens/SettingsFlow/Settings';
 import {Team} from '@screens/Team';
 import {WebView} from '@screens/WebView';
 import React from 'react';
@@ -31,15 +32,32 @@ export type MainStackParamList = {
   MyBadges: undefined;
 };
 
-export type ProfileStackParamList = {
+export type HomeTabStackParamList = {
+  Home: undefined;
   Profile: undefined;
   MyRoles: undefined;
   MyBadges: {category?: BadgeCategory} | undefined;
 };
 
+export type TeamTabStackParamList = {
+  Team: undefined;
+  Profile: undefined;
+  MyRoles: undefined;
+  MyBadges: undefined;
+};
+
+export type ProfileTabStackParamList = {
+  Profile: undefined;
+  MyRoles: undefined;
+  MyBadges: undefined;
+  Settings: undefined;
+};
+
 const Tabs = createBottomTabNavigator<MainTabsParamList>();
 const MainStack = createNativeStackNavigator<MainStackParamList>();
-const ProfileStack = createNativeStackNavigator<ProfileStackParamList>();
+const HomeTabStack = createNativeStackNavigator<HomeTabStackParamList>();
+const TeamTabStack = createNativeStackNavigator<TeamTabStackParamList>();
+const ProfileTabStack = createNativeStackNavigator<ProfileTabStackParamList>();
 
 const tabOptions = {
   headerShown: false,
@@ -54,32 +72,61 @@ const modalOptions = {
   presentation: 'fullScreenModal',
 } as const;
 
-const ProfileFlow = () => {
-  return (
-    <ProfileStack.Navigator screenOptions={screenOptions}>
-      <ProfileStack.Screen name="Profile" component={Profile} />
-      <ProfileStack.Screen name="MyRoles" component={MyRoles} />
-      <ProfileStack.Screen
-        name="MyBadges"
-        component={MyBadges}
-        // need to be here to enable swipe to go back over PagerView
-        // patches/react-native-screens.patch is also a part of the fix
-        options={{fullScreenGestureEnabled: true}}
-      />
-    </ProfileStack.Navigator>
-  );
-};
+/**
+ * Needs to be on MyBadges screen to enable swipe to go back over PagerView
+ * Note: patches/react-native-screens.patch is also a part of the fix
+ */
+const myBadgesOptions = {fullScreenGestureEnabled: true};
+
+const HomeTabStackNavigator = () => (
+  <HomeTabStack.Navigator screenOptions={screenOptions}>
+    <HomeTabStack.Screen name="Home" component={Home} />
+    <HomeTabStack.Screen name="Profile" component={Profile} />
+    <HomeTabStack.Screen name="MyRoles" component={MyRoles} />
+    <HomeTabStack.Screen
+      name="MyBadges"
+      component={MyBadges}
+      options={myBadgesOptions}
+    />
+  </HomeTabStack.Navigator>
+);
+
+const TeamTabStackNavigator = () => (
+  <TeamTabStack.Navigator screenOptions={screenOptions}>
+    <TeamTabStack.Screen name="Team" component={Team} />
+    <TeamTabStack.Screen name="Profile" component={Profile} />
+    <TeamTabStack.Screen name="MyRoles" component={MyRoles} />
+    <TeamTabStack.Screen
+      name="MyBadges"
+      component={MyBadges}
+      options={myBadgesOptions}
+    />
+  </TeamTabStack.Navigator>
+);
+
+const ProfileTabStackNavigator = () => (
+  <ProfileTabStack.Navigator screenOptions={screenOptions}>
+    <ProfileTabStack.Screen name="Profile" component={Profile} />
+    <ProfileTabStack.Screen name="MyRoles" component={MyRoles} />
+    <ProfileTabStack.Screen
+      name="MyBadges"
+      component={MyBadges}
+      options={myBadgesOptions}
+    />
+    <ProfileTabStack.Screen name="Settings" component={Settings} />
+  </ProfileTabStack.Navigator>
+);
 
 const MainTabs = () => (
   <Tabs.Navigator screenOptions={tabOptions} tabBar={MainTabBar}>
     <Tabs.Screen
       name="HomeTab"
-      component={Home}
+      component={HomeTabStackNavigator}
       options={{tabBarIcon: HomeIcon}}
     />
     <Tabs.Screen
       name="TeamTab"
-      component={Team}
+      component={TeamTabStackNavigator}
       options={{tabBarIcon: TeamIcon}}
     />
     <Tabs.Screen
@@ -89,7 +136,7 @@ const MainTabs = () => (
     />
     <Tabs.Screen
       name="ProfileTab"
-      component={ProfileFlow}
+      component={ProfileTabStackNavigator}
       options={{tabBarIcon: ProfileIcon}}
     />
   </Tabs.Navigator>
