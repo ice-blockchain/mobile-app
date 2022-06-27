@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   icon: {
     width: rem(200),
     height: rem(170),
-    marginTop: rem(48),
+    marginTop: rem(16),
   },
   title: {
     fontSize: font(24),
