@@ -2,6 +2,7 @@
 
 import {Contacts} from '@screens/Team/components/Contacts';
 import {Tier, TierType} from '@screens/Team/components/Tier';
+import {TierOneList} from '@screens/Team/components/TierOneList';
 import {TABS, TiersSwitcher} from '@screens/Team/components/TiersSwitcher';
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -14,7 +15,7 @@ export const Tiers = () => {
       <TiersSwitcher onChange={setSelectedIndex} style={styles.tabbar} />
       <View style={styles.container}>
         {selectedTab.key === 'Contacts' && <Contacts />}
-        {selectedTab.key === 'TierOne' && <Tier type={TierType.tierOne} />}
+        {selectedTab.key === 'TierOne' && <TierOneList />}
         {selectedTab.key === 'TierTwo' && <Tier type={TierType.tierTwo} />}
       </View>
     </View>
