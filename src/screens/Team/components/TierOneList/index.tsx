@@ -69,6 +69,7 @@ export const TierOneList = ({}: TierOneListProps) => {
   return (
     <View style={styles.container}>
       <FlatList
+        showsVerticalScrollIndicator={false}
         contentContainerStyle={{paddingBottom: pb.current.paddingBottom}}
         ListHeaderComponent={() => <ListHeader />}
         style={styles.flatListStyle}

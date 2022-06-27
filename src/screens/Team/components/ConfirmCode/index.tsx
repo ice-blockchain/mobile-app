@@ -3,6 +3,7 @@
 import {CommonInput} from '@components/CommonInput';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {FONTS} from '@constants/fonts';
+import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {TicketIconSvg} from '@svg/Ticket';
 import {translate} from '@translations/i18n';
 import React, {useState} from 'react';
@@ -23,8 +24,13 @@ export function ConfirmCode({
   const handleOnPress = () => {
     confirmCodePress();
   };
+  const tabbarOffest = useBottomTabBarOffsetStyle();
   return (
-    <ScrollView>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{
+        paddingBottom: tabbarOffest.current.paddingBottom,
+      }}>
       <View style={styles.container}>
         <Image source={icon} style={styles.icon} />
         <Text style={styles.title}>{translate('team.confirm_code.title')}</Text>

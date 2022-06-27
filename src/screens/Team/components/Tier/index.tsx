@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {EmptyTier} from '@screens/Team/components/EmptyTier';
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 
 export enum TierType {
   'tierOne',
@@ -14,14 +15,25 @@ type TierProps = {
 };
 
 export function Tier({type}: TierProps): React.ReactElement {
+  const tabbarOffest = useBottomTabBarOffsetStyle();
   return (
-    <View style={styles.container}>
-      <EmptyTier type={type} />
-    </View>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      style={styles.scrollView}
+      contentContainerStyle={{
+        paddingBottom: tabbarOffest.current.paddingBottom,
+      }}>
+      <View style={styles.container}>
+        <EmptyTier type={type} />
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  scrollView: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     justifyContent: 'center',

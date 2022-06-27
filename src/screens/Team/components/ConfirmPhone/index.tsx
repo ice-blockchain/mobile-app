@@ -5,6 +5,7 @@ import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
+import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {translate} from '@translations/i18n';
 import React, {useState} from 'react';
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
@@ -33,11 +34,16 @@ export function ConfirmPhone({
   const hideCountryCodeSearch = () => {
     setCountryCodeSearchVisibility(false);
   };
+
+  const tabbarOffest = useBottomTabBarOffsetStyle();
   return (
     <ScrollView
-      contentContainerStyle={
-        isCountryCodeSearchVisible ? styles.scrollAdditionalPadding : null
-      }>
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{
+        paddingBottom: isCountryCodeSearchVisible
+          ? tabbarOffest.current.paddingBottom + 150
+          : tabbarOffest.current.paddingBottom,
+      }}>
       <View style={styles.container}>
         <Image source={icon} style={styles.icon} />
         <Text style={styles.title}>
