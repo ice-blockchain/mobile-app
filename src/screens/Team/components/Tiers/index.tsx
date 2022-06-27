@@ -7,10 +7,11 @@ import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 
 export const Tiers = () => {
-  const [selectedTab, setSelectedTab] = useState<typeof TABS[number]>(TABS[0]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const selectedTab = TABS[selectedIndex];
   return (
     <View style={styles.container}>
-      <TiersSwitcher onPress={setSelectedTab} style={styles.tabbar} />
+      <TiersSwitcher onChange={setSelectedIndex} style={styles.tabbar} />
       <View style={styles.container}>
         {selectedTab.key === 'Contacts' && <Contacts />}
         {selectedTab.key === 'TierOne' && <Tier type={TierType.tierOne} />}

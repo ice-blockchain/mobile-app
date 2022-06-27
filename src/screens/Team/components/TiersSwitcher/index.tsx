@@ -1,13 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {SegmentedControl} from '@components/SegmentedControl';
+import {
+  SegmentedControl,
+  SegmentedControlProps,
+} from '@components/SegmentedControl';
 import React from 'react';
-import {StyleProp, ViewStyle} from 'react-native';
-
-type Props = {
-  style?: StyleProp<ViewStyle>;
-  onPress: (tab: typeof TABS[number]) => void;
-};
 
 export const TABS = [
   {
@@ -24,19 +21,8 @@ export const TABS = [
   },
 ] as const;
 
-export function TiersSwitcher({
-  style = {},
-  onPress,
-  ...rest
-}: Props): React.ReactElement {
-  return (
-    <SegmentedControl
-      {...rest}
-      style={style}
-      segments={TABS}
-      onPress={index => {
-        onPress(TABS[index]);
-      }}
-    />
-  );
+export function TiersSwitcher(
+  props: Omit<SegmentedControlProps, 'segments'>,
+): React.ReactElement {
+  return <SegmentedControl {...props} segments={TABS} />;
 }
