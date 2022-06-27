@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     borderRadius: rem(11),
     borderWidth: 1,
     borderColor: COLORS.white,
-    backgroundColor: COLORS.blue,
+    backgroundColor: COLORS.persianBlue,
     alignItems: 'center',
     justifyContent: 'center',
   },
