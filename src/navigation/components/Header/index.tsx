@@ -32,7 +32,6 @@ export const Header = memo(
     renderRightButtons,
     color = COLORS.darkBlue,
     backgroundColor = COLORS.persianBlue,
-    hasBackButton = true,
     titleOffset = rem(20),
     containerStyle,
   }: Props) => {
@@ -64,9 +63,7 @@ export const Header = memo(
               numberOfLines={2}>
               {title}
             </Text>
-            {hasBackButton && (
-              <BackButton containerStyle={styles.backButton} color={color} />
-            )}
+            <BackButton containerStyle={styles.backButton} color={color} />
             {Boolean(renderRightButtons) && (
               <View style={styles.rightButtons}>{renderRightButtons?.()}</View>
             )}

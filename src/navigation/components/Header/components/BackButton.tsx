@@ -12,6 +12,11 @@ type Props = {
 
 export const BackButton = ({containerStyle, color}: Props = {}) => {
   const navigation = useNavigation();
+
+  if (!navigation.canGoBack()) {
+    return null;
+  }
+
   return (
     <View style={containerStyle}>
       <TouchableOpacity onPress={navigation.goBack} hitSlop={buttonHitSlop}>
