@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {SegmentedControl} from '@components/TabBar';
+import {SegmentedControl} from '@components/SegmentedControl';
 import React from 'react';
 import {StyleProp, ViewStyle} from 'react-native';
 
