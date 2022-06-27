@@ -1,41 +1,41 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {Tab, TabBar} from '@components/TabBar';
+import {SegmentedControl} from '@components/TabBar';
 import React from 'react';
 import {StyleProp, ViewStyle} from 'react-native';
 
-type TiersSwitcherProps = {
+type Props = {
   style?: StyleProp<ViewStyle>;
-  onPress?: (tab?: Tab, index?: number) => void;
+  onPress: (tab: typeof TABS[number]) => void;
 };
 
-export const Tabs = {
-  contacts: {
+export const TABS = [
+  {
     text: 'team.contacts_tab',
-    screen: 'Contacts',
+    key: 'Contacts',
   },
-  tierOne: {
+  {
     text: 'team.tierOne_tab',
-    screen: 'TierOne',
+    key: 'TierOne',
   },
-  tierTwo: {
+  {
     text: 'team.tierTwo_tab',
-    screen: 'TierTwo',
+    key: 'TierTwo',
   },
-};
+] as const;
 
 export function TiersSwitcher({
   style = {},
-  onPress = () => {},
+  onPress,
   ...rest
-}: TiersSwitcherProps): React.ReactElement {
+}: Props): React.ReactElement {
   return (
-    <TabBar
+    <SegmentedControl
       {...rest}
       style={style}
-      tabs={Object.values(Tabs)}
-      onPress={tab => {
-        onPress(tab);
+      segments={TABS}
+      onPress={index => {
+        onPress(TABS[index]);
       }}
     />
   );

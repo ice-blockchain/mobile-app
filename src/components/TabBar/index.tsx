@@ -1,159 +1,134 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import Text from '@components/Text';
-import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
-import React, {useState} from 'react';
+import {commonStyles} from '@constants/styles';
+import React, {useMemo, useRef, useState} from 'react';
 import {
   Animated,
   FlexStyle,
+  LayoutChangeEvent,
   StyleProp,
   StyleSheet,
+  TouchableOpacity,
   View,
   ViewStyle,
 } from 'react-native';
-import {font, isIOS, screenWidth, wait} from 'rn-units';
+import {font} from 'rn-units';
 
-const TAB_BAR_WIDTH = screenWidth - 48;
-const DEFAULT_TAB_MARGIN = 9;
-const TAB_BAR_HEIGHT = 55;
-const ANIMATION_DELAY = 500;
+const DEFAULT_MARGIN = 8;
+const CONTROL_HEIGHT = 55;
 
-export type Tab = {
-  text: String;
-  screen: String;
-};
+type Segment = {text: string; key: string};
 
-type TabBar = {
-  tabs: Array<Tab>;
-  onPress?: (tab?: Tab, index?: number) => void;
+type Props = {
+  segments: ReadonlyArray<Segment>;
+  onPress?: (index: number) => void;
   style?: StyleProp<ViewStyle | FlexStyle>;
-  lightBg?: string;
-  lightInactiveColor?: string;
 };
 
-export function TabBar({
-  tabs = [],
-  style = null,
-  onPress = () => false,
-}: TabBar): React.ReactElement {
+export const SegmentedControl = ({
+  segments = [],
+  style,
+  onPress = () => {},
+}: Props) => {
+  const controlWidth = useRef(0);
   const [translateValue] = useState(new Animated.Value(0));
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const background = {
-    backgroundColor: 'white',
-  };
-  const inactiveText = {
-    color: COLORS.darkBlue,
-  };
-  const activeText = {
-    color: COLORS.white,
-  };
+  const dynamicStyle = useMemo(
+    () =>
+      StyleSheet.create({
+        indicator: {
+          width: 100 / segments.length + '%',
+        },
+      }),
+    [segments.length],
+  );
 
-  const indicatorStyle = {
-    width: TAB_BAR_WIDTH / tabs.length,
-    height: TAB_BAR_HEIGHT - DEFAULT_TAB_MARGIN * 2,
-  };
-
-  const combinedIndicatorSubStyle = [
-    indicatorStyle,
-    styles.indicatorSubContainer,
-  ];
-
-  const tabSelected = async (index: number) => {
+  const onSegmentSelect = async (index: number) => {
     Animated.spring(translateValue, {
-      toValue: index * (TAB_BAR_WIDTH / tabs.length),
+      toValue: index * (controlWidth.current / segments.length),
       velocity: 10,
       useNativeDriver: true,
     }).start();
-    wait(ANIMATION_DELAY);
     setActiveIndex(index);
   };
 
-  const renderTab = (tab: Tab, index: number) => {
+  const onLayout = (event: LayoutChangeEvent) => {
+    const {width} = event.nativeEvent.layout;
+    controlWidth.current = width;
+  };
+
+  const renderSegment = (segment: Segment, index: number) => {
     const isActive = activeIndex === index;
-    const {text} = tab;
     return (
-      <Touchable
-        key={`tab_${index}`}
+      <TouchableOpacity
+        key={segment.key}
         onPress={() => {
-          tabSelected(index);
-          onPress(tab, index);
+          onSegmentSelect(index);
+          onPress(index);
         }}
-        delay={ANIMATION_DELAY}
-        style={styles.tab}>
+        style={styles.segment}>
         <Text
-          text={`${text}`}
-          style={[styles.text, isActive ? activeText : inactiveText]}
+          text={segment.text}
+          style={[
+            styles.text,
+            isActive ? styles.activeText : styles.inactiveText,
+          ]}
         />
-      </Touchable>
+      </TouchableOpacity>
     );
   };
 
   return (
-    <View style={[styles.wrapper, style]}>
-      <View style={[styles.background, background]} />
-      <View style={styles.indicatorContainer}>
+    <View style={[styles.container, commonStyles.shadow, style]}>
+      <View style={styles.body} onLayout={onLayout}>
         <Animated.View
           style={[
-            combinedIndicatorSubStyle,
+            dynamicStyle.indicator,
+            styles.indicator,
+            StyleSheet.absoluteFill,
             {transform: [{translateX: translateValue}]},
-          ]}>
-          <View style={styles.indicator} />
-        </Animated.View>
+          ]}
+        />
+        {segments.map(renderSegment)}
       </View>
-      {tabs.map(renderTab)}
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  wrapper: {
-    alignItems: 'center',
-    flexDirection: 'row',
+  container: {
     borderRadius: 16,
-    width: TAB_BAR_WIDTH,
-    height: TAB_BAR_HEIGHT,
     backgroundColor: COLORS.white,
-    shadowOpacity: 1,
-    shadowColor: 'rgba(0, 0, 0, 0.15)',
-    shadowOffset: {width: 0, height: 2},
-    shadowRadius: 10,
-    elevation: 1,
-    alignSelf: 'center',
-    marginTop: 24,
+    paddingHorizontal: DEFAULT_MARGIN,
+    height: CONTROL_HEIGHT,
   },
-  indicatorContainer: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    flexDirection: 'column',
-  },
-  indicatorSubContainer: {
-    marginTop: DEFAULT_TAB_MARGIN,
+  body: {
+    flexDirection: 'row',
+    flex: 1,
   },
   indicator: {
-    backgroundColor: COLORS.darkBlue,
-    flex: 1,
-    marginHorizontal: DEFAULT_TAB_MARGIN,
-    borderRadius: 10,
+    backgroundColor: COLORS.primary,
+    borderRadius: 12,
+    marginVertical: DEFAULT_MARGIN,
   },
-  background: {
-    ...StyleSheet.absoluteFillObject,
-  },
-  tab: {
+  segment: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    height: TAB_BAR_HEIGHT,
   },
   text: {
     fontSize: font(16),
-    marginTop: isIOS ? 0 : 3,
     fontFamily: FONTS.primary.bold,
+  },
+  activeText: {
+    color: COLORS.white,
+  },
+  inactiveText: {
+    color: COLORS.darkBlue,
   },
 });
