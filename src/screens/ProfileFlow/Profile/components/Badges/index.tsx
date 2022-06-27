@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {MainStackParamList} from '@navigation/Main';
+import {ProfileStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {BadgeList} from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeList';
@@ -11,7 +11,7 @@ import React, {memo, useCallback, useState} from 'react';
 
 export const Badges = memo(() => {
   const navigation =
-    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
+    useNavigation<NativeStackNavigationProp<ProfileStackParamList>>();
   const onViewAllPress = useCallback(
     () => navigation.navigate('MyBadges'),
     [navigation],

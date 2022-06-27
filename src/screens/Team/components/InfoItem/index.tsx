@@ -3,7 +3,7 @@
 import Text from '@components/Text';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
-import i18n from '@utils/i18n';
+import i18n from '@translations/i18n';
 import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import {rem, screenWidth} from 'rn-units';

@@ -4,19 +4,27 @@ import {
   SegmentedControl,
   SegmentedControlProps,
 } from '@components/SegmentedControl';
+import {InfoIconSvg} from '@svg/InfoIcon';
+import {translate} from '@translations/i18n';
 import React from 'react';
+import {Text} from 'react-native';
 
 export const TABS = [
   {
-    text: 'team.contacts_tab',
+    text: (
+      <>
+        <InfoIconSvg />
+        <Text>{translate('team.contacts_tab')}</Text>
+      </>
+    ),
     key: 'Contacts',
   },
   {
-    text: 'team.tierOne_tab',
+    text: translate('team.tierOne_tab'),
     key: 'TierOne',
   },
   {
-    text: 'team.tierTwo_tab',
+    text: translate('team.tierTwo_tab'),
     key: 'TierTwo',
   },
 ] as const;
