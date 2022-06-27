@@ -13,7 +13,8 @@ type Props = {
 export const BackButton = ({containerStyle, color}: Props = {}) => {
   const navigation = useNavigation();
 
-  if (!navigation.canGoBack()) {
+  // navigation.canGoBack also takes in account tabs, but getState().routes contains only stack routes
+  if (navigation.getState().routes.length === 1) {
     return null;
   }
 

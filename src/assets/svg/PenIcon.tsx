@@ -1,27 +1,13 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {COLORS} from '@constants/colors';
 import * as React from 'react';
 import Svg, {Path, SvgProps} from 'react-native-svg';
 
-type Props = {
-  color?: string;
-  width?: number;
-  height?: number;
-} & SvgProps;
-
-export const PenIcon = ({
-  color = COLORS.darkBlue,
-  width = 13,
-  height = 13,
-  ...props
-}: Props) => (
-  <Svg width={width} height={height} viewBox="0 0 13 13" fill="none" {...props}>
+export const PenIcon = (props: SvgProps) => (
+  <Svg width={10} height={10} fill="none" viewBox="0 0 10 10" {...props}>
     <Path
-      d="M11.878 3.376 9.74 1.23a.753.753 0 0 0-1.062 0L1.105 8.792l-.691 2.984a.75.75 0 0 0 .728.91.787.787 0 0 0 .156 0l3.017-.692 7.563-7.555a.754.754 0 0 0 0-1.063ZM3.95 11.34l-2.828.593.645-2.773 5.666-5.644 2.184 2.183L3.95 11.34Zm6.154-6.169L7.922 2.987l1.266-1.26 2.147 2.184-1.23 1.26Z"
-      fill={color}
-      stroke={color}
-      strokeWidth={0.468}
+      d="M1.172 6.445.645 8.722a.572.572 0 0 0 .555.695c.04.004.08.004.12 0l2.291-.528 4.4-4.383-2.455-2.45-4.384 4.389ZM9.395 2.311 7.755.672a.575.575 0 0 0-.81 0l-.912.911 2.453 2.453.911-.91a.575.575 0 0 0-.002-.815Z"
+      fill="#fff"
     />
   </Svg>
 );

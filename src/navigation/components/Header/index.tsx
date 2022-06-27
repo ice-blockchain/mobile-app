@@ -18,7 +18,7 @@ type Props = {
   titleOffset?: number;
   renderRightButtons?: () => ReactNode;
   containerStyle?: StyleProp<ViewStyle>;
-  titlePreset: 'small' | 'big';
+  titlePreset?: 'small' | 'big';
 };
 
 const HEADER_HEIGHT = rem(54);
