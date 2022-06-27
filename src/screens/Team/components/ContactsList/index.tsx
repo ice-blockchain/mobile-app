@@ -29,7 +29,7 @@ export const ContactsList = ({}: ContactsListProps) => {
   const contactsByIds = useSelector(getContactsByIdsSelector);
   const iceFriends = useSelector(getIceFriendsSelector);
 
-  const pb = useBottomTabBarOffsetStyle({extraOffset: 20});
+  const tabbarOffset = useBottomTabBarOffsetStyle({extraOffset: 20});
 
   const sections = useGetContacts();
 
@@ -93,7 +93,7 @@ export const ContactsList = ({}: ContactsListProps) => {
   return (
     <View style={styles.container}>
       <SectionList
-        contentContainerStyle={{paddingBottom: pb.current.paddingBottom}}
+        contentContainerStyle={tabbarOffset.current}
         style={styles.sectionListStyle}
         sections={sections}
         renderItem={renderItem}

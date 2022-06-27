@@ -28,9 +28,7 @@ export function ConfirmCode({
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
-      contentContainerStyle={{
-        paddingBottom: tabbarOffest.current.paddingBottom,
-      }}>
+      contentContainerStyle={tabbarOffest.current}>
       <View style={styles.container}>
         <Image source={icon} style={styles.icon} />
         <Text style={styles.title}>{translate('team.confirm_code.title')}</Text>

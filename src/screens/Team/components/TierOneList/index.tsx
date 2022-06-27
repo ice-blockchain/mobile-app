@@ -14,7 +14,7 @@ import {
 } from '@store/modules/Team/selectors';
 import {WhiteLogoSvg} from '@svg/WhiteLogo';
 import {getRandomColor} from '@utils/getRandomColor';
-import React from 'react';
+import React, {useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
@@ -25,53 +25,56 @@ export const TierOneList = ({}: TierOneListProps) => {
   const contactsByIds = useSelector(getContactsByIdsSelector);
   const iceFriends = useSelector(getIceFriendsSelector);
 
-  const pb = useBottomTabBarOffsetStyle({extraOffset: 20});
+  const tabbarOffest = useBottomTabBarOffsetStyle({extraOffset: 20});
 
-  if (!iceFriends.length) {
-    return <Tier type={TierType.tierOne} />;
-  }
-
-  const renderItem = ({item, index}: {item: string; index: number}) => {
-    const contact = contactsByIds[item];
-    return (
-      <ContactItem
-        index={index}
-        item={contact}
-        backgroundColor={getRandomColor()}
-        leftIconContent={<WhiteLogoSvg />}
-        indicatorContent={
-          <View
-            style={[
-              styles.activityIndicatorContainer,
-              {
-                backgroundColor: contact?.isActive
-                  ? COLORS.shamrock
-                  : COLORS.cadetBlue,
-              },
-            ]}
-          />
-        }
-        rightSideButton={
-          <ContactsInviteButton
-            icon={<RingIcon />}
-            text={'PING'}
-            onPress={() => onPress(item)}
-          />
-        }
-      />
-    );
-  };
+  const renderItem = useCallback(
+    ({item, index}: {item: string; index: number}) => {
+      const contact = contactsByIds[item];
+      return (
+        <ContactItem
+          index={index}
+          item={contact}
+          backgroundColor={getRandomColor()}
+          leftIconContent={<WhiteLogoSvg />}
+          indicatorContent={
+            <View
+              style={[
+                styles.activityIndicatorContainer,
+                {
+                  backgroundColor: contact?.isActive
+                    ? COLORS.shamrock
+                    : COLORS.cadetBlue,
+                },
+              ]}
+            />
+          }
+          rightSideButton={
+            <ContactsInviteButton
+              icon={<RingIcon />}
+              text={'PING'}
+              onPress={() => onPress(item)}
+            />
+          }
+        />
+      );
+    },
+    [contactsByIds],
+  );
 
   const onPress = (id: string) => {
     console.log(id);
   };
 
+  if (!iceFriends.length) {
+    return <Tier type={TierType.tierOne} />;
+  }
+
   return (
     <View style={styles.container}>
       <FlatList
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{paddingBottom: pb.current.paddingBottom}}
-        ListHeaderComponent={() => <ListHeader />}
+        contentContainerStyle={tabbarOffest.current}
+        ListHeaderComponent={ListHeader}
         style={styles.flatListStyle}
         data={iceFriends}
         renderItem={renderItem}

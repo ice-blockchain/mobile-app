@@ -4,6 +4,7 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import React, {ReactNode} from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {font} from 'rn-units';
 
 type ContactsInviteButtonProps = {
   icon: ReactNode;
@@ -41,14 +42,14 @@ const styles = StyleSheet.create({
     paddingVertical: 2,
   },
   buttonText: {
-    fontSize: 12,
+    fontSize: font(12),
     fontFamily: FONTS.primary.bold,
     color: COLORS.darkBlue,
     paddingLeft: 3,
     textTransform: 'uppercase',
   },
   disabledButton: {
-    fontSize: 12,
+    fontSize: font(12),
     fontFamily: FONTS.primary.bold,
     color: COLORS.cadetBlue,
     paddingLeft: 3,

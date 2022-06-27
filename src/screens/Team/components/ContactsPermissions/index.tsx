@@ -26,9 +26,7 @@ export function ContactsPermissions({
     <ScrollView
       showsVerticalScrollIndicator={false}
       style={styles.scrollView}
-      contentContainerStyle={{
-        paddingBottom: tabbarOffest.current.paddingBottom,
-      }}>
+      contentContainerStyle={tabbarOffest.current}>
       <View style={styles.container}>
         <Image source={icon} style={styles.icon} />
         <Text style={styles.title} text="team.contacts.empty_title" />
@@ -63,14 +61,14 @@ const styles = StyleSheet.create({
     fontSize: font(24),
     fontFamily: FONTS.primary.black,
     textAlign: 'center',
-    marginHorizontal: 24,
+    marginHorizontal: rem(24),
     marginTop: rem(2),
   },
   description: {
     fontSize: font(14),
     fontFamily: FONTS.primary.regular,
     textAlign: 'center',
-    marginHorizontal: 24,
+    marginHorizontal: rem(24),
     marginTop: rem(7),
     lineHeight: rem(24),
   },

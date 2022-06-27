@@ -4,6 +4,7 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import React from 'react';
 import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
+import {font} from 'rn-units';
 
 type Props = {
   value: number | string;
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   valueText: {
-    fontSize: 10,
+    fontSize: font(10),
     color: COLORS.white,
     textAlign: 'center',
     marginHorizontal: 2,
