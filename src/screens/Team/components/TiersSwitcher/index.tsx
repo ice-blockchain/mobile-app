@@ -4,7 +4,10 @@ import {
   SegmentedControl,
   SegmentedControlProps,
 } from '@components/SegmentedControl';
-import {InfoIconSvg} from '@svg/InfoIcon';
+import {COLORS} from '@constants/colors';
+import {ContactsIcon} from '@screens/Team/assets/Contacts';
+import {TierOneIcon} from '@svg/TierOneIcon';
+import {TierTwoIcon} from '@svg/TierTwoIcon';
 import {translate} from '@translations/i18n';
 import React from 'react';
 import {Text} from 'react-native';
@@ -16,8 +19,8 @@ export const TABS = [
      */
     renderText: (active: boolean) => (
       <>
-        <InfoIconSvg fill={active ? 'white' : 'blue'} />
-        <Text style={{color: active ? 'white' : 'blue'}}>
+        <ContactsIcon fill={active ? COLORS.white : COLORS.darkBlue} />
+        <Text style={{color: active ? COLORS.white : COLORS.darkBlue}}>
           {translate('team.contacts_tab')}
         </Text>
       </>
@@ -25,11 +28,25 @@ export const TABS = [
     key: 'Contacts',
   },
   {
-    text: translate('team.tierOne_tab'),
+    renderText: (active: boolean) => (
+      <>
+        <TierOneIcon fill={active ? COLORS.white : COLORS.darkBlue} />
+        <Text style={{color: active ? COLORS.white : COLORS.darkBlue}}>
+          {translate('team.tierOne_tab')}
+        </Text>
+      </>
+    ),
     key: 'TierOne',
   },
   {
-    text: translate('team.tierTwo_tab'),
+    renderText: (active: boolean) => (
+      <>
+        <TierTwoIcon fill={active ? COLORS.white : COLORS.darkBlue} />
+        <Text style={{color: active ? COLORS.white : COLORS.darkBlue}}>
+          {translate('team.tierTwo_tab')}
+        </Text>
+      </>
+    ),
     key: 'TierTwo',
   },
 ] as const;

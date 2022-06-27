@@ -2,11 +2,11 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {SearchIconSvg} from '@svg/SearchIcon';
 import {translate} from '@translations/i18n';
 import React from 'react';
 import {
   FlexStyle,
-  Image,
   StyleProp,
   StyleSheet,
   TextInput,
@@ -14,8 +14,6 @@ import {
   ViewStyle,
 } from 'react-native';
 import {isIOS, rem} from 'rn-units';
-
-const icon = require('../../assets/teamSearchBarIcon.png');
 
 type SearchProps = {
   value: string;
@@ -35,7 +33,7 @@ export default function Search({
   return (
     <View style={[styles.wrapper, style]}>
       <Touchable onPress={focus} style={styles.btn}>
-        <Image source={icon} style={styles.icon} />
+        <SearchIconSvg />
       </Touchable>
       <TextInput
         ref={textInputRef}
@@ -56,7 +54,6 @@ const styles = StyleSheet.create({
     borderRadius: rem(15),
     backgroundColor: COLORS.white,
     height: rem(45),
-    marginHorizontal: 24,
     alignSelf: 'center',
     marginTop: 55,
   },

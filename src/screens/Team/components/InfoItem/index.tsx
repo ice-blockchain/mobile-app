@@ -3,13 +3,12 @@
 import Text from '@components/Text';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {TeamHeaderEarningsIcon} from '@screens/Team/assets/TeamHeaderEarningsIcon';
+import {TeamHeaderReferralsIcon} from '@screens/Team/assets/TeamHeaderReferralsIcon';
 import i18n from '@translations/i18n';
 import React from 'react';
-import {Image, StyleSheet, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {rem, screenWidth} from 'rn-units';
-
-const refIcon = require('../../assets/teamHeaderReferralsIcon.png');
-const earningsIcon = require('../../assets/teamHeaderEarningsIcon.png');
 
 export enum InfoItemType {
   'referrals',
@@ -27,9 +26,9 @@ export function InfoItem({type}: InfoItemProps): React.ReactElement {
   const asset = () => {
     switch (type) {
       case InfoItemType.referrals:
-        return refIcon;
+        return <TeamHeaderReferralsIcon />;
       case InfoItemType.earnings:
-        return earningsIcon;
+        return <TeamHeaderEarningsIcon />;
     }
   };
 
@@ -56,7 +55,7 @@ export function InfoItem({type}: InfoItemProps): React.ReactElement {
 
   return (
     <View style={styles.container}>
-      <Image source={asset()} style={styles.icon} />
+      {asset()}
       <View style={styles.valuesContainer}>
         <Text text={title()} style={styles.title} />
         {value()}
