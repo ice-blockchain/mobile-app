@@ -12,8 +12,12 @@ install! 'cocoapods', :deterministic_uuids => false, :warn_for_unused_master_spe
 target 'ice' do
   use_unimodules!
   config = use_native_modules!
+  
+  permissions_path = '../node_modules/react-native-permissions/ios'
 
   pod 'React-RCTLinking', :path => '../node_modules/react-native/Libraries/LinkingIOS'
+  pod 'react-native-contacts', :path => '../node_modules/react-native-contacts'
+  pod 'Permission-Contacts', :path => "#{permissions_path}/Contacts"
 
   # Flags change depending on the env values.
   flags = get_default_flags()

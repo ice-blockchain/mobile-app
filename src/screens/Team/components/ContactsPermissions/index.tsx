@@ -3,6 +3,7 @@
 import {PrimaryButton} from '@components/PrimaryButton';
 import Text from '@components/Text';
 import {FONTS} from '@constants/fonts';
+import {requestContactsAccessPermission} from '@services/contacts';
 import {translate} from '@translations/i18n';
 import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
@@ -14,6 +15,7 @@ type ContactsPermissionsProps = {};
 
 export function ContactsPermissions({}: ContactsPermissionsProps): React.ReactElement {
   const handleOnPress = () => {
+    requestContactsAccessPermission();
     //TODO: handle contact permissions request
   };
   return (
