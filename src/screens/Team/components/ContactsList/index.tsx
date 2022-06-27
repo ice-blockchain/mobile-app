@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {InviteFriendsButton} from '@components/InviteFriendsButton';
+import {InviteButton} from '@components/InviteButton';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
@@ -39,9 +39,7 @@ export const ContactsList = ({}: ContactsListProps) => {
 
   const renderItem = ({item, index}: {item: string; index: number}) => {
     if (item === 'InviteFriendsButton') {
-      return (
-        <InviteFriendsButton containerStyle={styles.inviteButtonContainer} />
-      );
+      return <InviteButton style={styles.inviteButtonContainer} />;
     }
     const contact = contactsByIds[item];
     const isFriend = iceFriends.includes(item);
