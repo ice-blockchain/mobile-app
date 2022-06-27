@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import * as React from 'react';
-import {Circle, Path, Svg} from 'react-native-svg';
+import {Circle, Path, Svg, SvgProps} from 'react-native-svg';
 
-export const InfoIconSvg = () => {
+export const InfoIconSvg = (props: SvgProps) => {
   return (
-    <Svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+    <Svg width="11" height="11" viewBox="0 0 11 11" fill="none" {...props}>
       <Circle
         cx="5.5"
         cy="5.5"
         r="5.1"
-        fill="#0D265E"
+        fill={props.fill ?? '#0D265E'}
         stroke="#0D265E"
         strokeWidth="0.8"
       />

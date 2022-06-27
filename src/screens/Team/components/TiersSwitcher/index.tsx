@@ -11,10 +11,15 @@ import {Text} from 'react-native';
 
 export const TABS = [
   {
-    text: (
+    /**
+     * Custom render example
+     */
+    renderText: (active: boolean) => (
       <>
-        <InfoIconSvg />
-        <Text>{translate('team.contacts_tab')}</Text>
+        <InfoIconSvg fill={active ? 'white' : 'blue'} />
+        <Text style={{color: active ? 'white' : 'blue'}}>
+          {translate('team.contacts_tab')}
+        </Text>
       </>
     ),
     key: 'Contacts',
