@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ConfirmCode} from '@screens/Team/components/ConfirmCode';
 import {ConfirmPhone} from '@screens/Team/components/ConfirmPhone';
-import ContactsList from '@screens/Team/components/ContactsList';
+import {ContactsList} from '@screens/Team/components/ContactsList';
 import {ContactsPermissions} from '@screens/Team/components/ContactsPermissions';
 import {
   hasContactsAccessPermission,
@@ -11,7 +12,7 @@ import {
 import {TeamActions} from '@store/modules/Team/actions';
 import {selectorIsPhoneNumberVerified} from '@store/modules/Team/selectors';
 import React, {useEffect, useRef, useState} from 'react';
-import {ActivityIndicator, Animated, StyleSheet} from 'react-native';
+import {ActivityIndicator, Animated, Linking, StyleSheet} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 type TContactsFlow =
@@ -78,9 +79,30 @@ export const Contacts = () => {
   };
 
   const requestContactsAccessPermissionPress = async () => {
-    const granted = await requestContactsAccessPermission();
-    if (granted) {
+    const hasPermissions = await hasContactsAccessPermission();
+
+    const isContactsPermissionsAsked = await AsyncStorage.getItem(
+      'isContactsPermissionsAsked',
+    );
+
+    if (isContactsPermissionsAsked) {
+      if (!hasPermissions) {
+        Linking.openSettings();
+      }
+    }
+
+    if (hasPermissions) {
       showNewFlow('ConfirmPhone');
+    } else if (!hasPermissions) {
+      const granted = await requestContactsAccessPermission();
+
+      await AsyncStorage.setItem('isContactsPermissionsAsked', 'true');
+
+      if (granted) {
+        showNewFlow('ConfirmPhone');
+      } else {
+        return;
+      }
     }
   };
   return (
