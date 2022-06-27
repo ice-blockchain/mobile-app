@@ -35,15 +35,13 @@ export function ConfirmPhone({
     setCountryCodeSearchVisibility(false);
   };
 
-  const tabbarOffest = useBottomTabBarOffsetStyle();
+  const tabbarOffest = useBottomTabBarOffsetStyle({
+    extraOffset: isCountryCodeSearchVisible ? 150 : 0,
+  });
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
-      contentContainerStyle={{
-        paddingBottom: isCountryCodeSearchVisible
-          ? tabbarOffest.current.paddingBottom + 150
-          : tabbarOffest.current.paddingBottom,
-      }}>
+      contentContainerStyle={tabbarOffest.current}>
       <View style={styles.container}>
         <Image source={icon} style={styles.icon} />
         <Text style={styles.title}>
