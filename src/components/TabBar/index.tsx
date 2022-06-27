@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import Text from '@components/Text';
-import Touchable from '@components/Touchable';
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import React, {useState} from 'react';
@@ -13,14 +13,14 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import {font, isIOS, rem, screenWidth, wait} from 'rn-units';
+import {font, isIOS, screenWidth, wait} from 'rn-units';
 
 const TAB_BAR_WIDTH = screenWidth - 48;
 const DEFAULT_TAB_MARGIN = 9;
 const TAB_BAR_HEIGHT = 55;
 const ANIMATION_DELAY = 500;
 
-type Tab = {
+export type Tab = {
   text: String;
   screen: String;
 };
@@ -33,7 +33,7 @@ type TabBar = {
   lightInactiveColor?: string;
 };
 
-export default function TabBar({
+export function TabBar({
   tabs = [],
   style = null,
   onPress = () => false,
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     elevation: 1,
     alignSelf: 'center',
-    marginTop: rem(24),
+    marginTop: 24,
   },
   indicatorContainer: {
     position: 'absolute',

@@ -3,7 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {Header} from '@screens/Team/components/Header';
-import {Tears} from '@screens/Team/components/Tears';
+import {Tiers} from '@screens/Team/components/Tiers';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
@@ -12,7 +12,7 @@ export const Team = () => {
     <View style={styles.container}>
       <Header />
       <View style={commonStyles.baseSubScreen}>
-        <Tears />
+        <Tiers />
       </View>
     </View>
   );

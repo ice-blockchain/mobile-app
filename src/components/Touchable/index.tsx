@@ -13,7 +13,7 @@ type TouchableProps = {
   disabled?: boolean;
 };
 
-export default function Touchable({
+export function Touchable({
   onPress,
   onLongPress,
   delay = 300,
