@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {PrimaryButton} from '@components/PrimaryButton';
-import Text from '@components/Text';
+import {Text} from '@components/Text';
 import {FONTS} from '@constants/fonts';
 import {translate} from '@translations/i18n';
 import React from 'react';

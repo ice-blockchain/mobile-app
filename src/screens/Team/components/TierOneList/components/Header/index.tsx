@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {translate} from '@translations/i18n';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -9,8 +10,12 @@ import {font, rem} from 'rn-units';
 export const ListHeader = () => {
   return (
     <View style={styles.header}>
-      <Text style={styles.title}>Active: 2/25</Text>
-      <Text style={styles.title}>Tier 1 Earnings: 94,412 ice</Text>
+      <Text style={styles.title}>{`${translate(
+        'team.tier_one.header_list.title_active',
+      )}: 2/25`}</Text>
+      <Text style={styles.title}>{`${translate(
+        'team.tier_one.header_list.title_earnings',
+      )}: 94,412 ice`}</Text>
     </View>
   );
 };

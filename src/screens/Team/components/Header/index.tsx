@@ -2,7 +2,7 @@
 
 import {defaultSubScreenTopOffset, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {InfoItem, InfoItemType} from '@screens/Team/components/InfoItem';
-import Search from '@screens/Team/components/Search';
+import {Search} from '@screens/Team/components/Search';
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 

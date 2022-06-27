@@ -5,6 +5,7 @@ import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
+import {translate} from '@translations/i18n';
 import React, {useState} from 'react';
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -39,9 +40,11 @@ export function ConfirmPhone({
       }>
       <View style={styles.container}>
         <Image source={icon} style={styles.icon} />
-        <Text style={styles.title}>Confirm Phone</Text>
+        <Text style={styles.title}>
+          {translate('team.confirm_phone.title')}
+        </Text>
         <Text style={styles.description}>
-          Please confirm your country code and enter your phone number.
+          {translate('team.confirm_phone.description')}
         </Text>
         <View style={styles.inputContainer}>
           <PhoneNumberInput
@@ -52,7 +55,7 @@ export function ConfirmPhone({
             onValueChange={setPhone}
           />
           <PrimaryButton
-            text={'Confirm country and phone'}
+            text={translate('team.confirm_phone.button')}
             onPress={handleOnPress}
             style={styles.allowAccessButton}
           />

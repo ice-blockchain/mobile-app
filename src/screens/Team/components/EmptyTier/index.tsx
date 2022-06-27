@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {PrimaryButton} from '@components/PrimaryButton';
-import Text from '@components/Text';
+import {Text} from '@components/Text';
 import {FONTS} from '@constants/fonts';
 import {useNavigation} from '@react-navigation/native';
 import {TierType} from '@screens/Team/components/Tier';

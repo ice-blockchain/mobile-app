@@ -14,7 +14,7 @@ type TextProps = {
   onPress?: () => void;
 };
 
-export default function Text({
+export function Text({
   text,
   options,
   children,

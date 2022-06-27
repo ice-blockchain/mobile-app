@@ -22,7 +22,7 @@ type SearchProps = {
   onChangeText: (value: string) => void;
 };
 
-export default function Search({
+export function Search({
   style,
   placeholder = 'team.header.search_placeholder',
   ...rest

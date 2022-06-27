@@ -4,6 +4,7 @@ import {CommonInput} from '@components/CommonInput';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {FONTS} from '@constants/fonts';
 import {TicketIconSvg} from '@svg/Ticket';
+import {translate} from '@translations/i18n';
 import React, {useState} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
@@ -26,20 +27,20 @@ export function ConfirmCode({
     <ScrollView>
       <View style={styles.container}>
         <Image source={icon} style={styles.icon} />
-        <Text style={styles.title}>Confirm Code</Text>
+        <Text style={styles.title}>{translate('team.confirm_code.title')}</Text>
         <Text style={styles.description}>
-          Please enter the confirmation code you have received on your phone.
+          {translate('team.confirm_code.description')}
         </Text>
         <View style={styles.inputContainer}>
           <CommonInput
-            placeholder={'Enter the code'}
+            placeholder={translate('team.confirm_code.placeholder')}
             value={inputValue}
             onChangeText={onInputChange}
             icon={<TicketIconSvg />}
             containerStyle={styles.input}
           />
           <PrimaryButton
-            text={'Confirm your code now'}
+            text={translate('team.confirm_code.button')}
             onPress={handleOnPress}
             style={styles.allowAccessButton}
           />
