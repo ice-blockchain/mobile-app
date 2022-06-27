@@ -18,6 +18,7 @@ type Props = {
   titleOffset?: number;
   renderRightButtons?: () => ReactNode;
   containerStyle?: StyleProp<ViewStyle>;
+  titlePreset: 'small' | 'big';
 };
 
 const HEADER_HEIGHT = rem(54);
@@ -34,6 +35,7 @@ export const Header = memo(
     backgroundColor = COLORS.persianBlue,
     titleOffset = rem(20),
     containerStyle,
+    titlePreset = 'big',
   }: Props) => {
     const {top: topInset} = useSafeAreaInsets();
     const dynamicStyle = useMemo(
@@ -59,7 +61,11 @@ export const Header = memo(
           style={[dynamicStyle.container, styles.container, containerStyle]}>
           <View style={[styles.body]}>
             <Text
-              style={[styles.titleText, dynamicStyle.titleText]}
+              style={[
+                styles.titleText,
+                styles[`titleText_${titlePreset}`],
+                dynamicStyle.titleText,
+              ]}
               numberOfLines={2}>
               {title}
             </Text>
@@ -89,10 +95,16 @@ const styles = StyleSheet.create({
     height: HEADER_HEIGHT,
   },
   titleText: {
-    fontFamily: FONTS.primary.black,
-    fontSize: font(22),
     flex: 1,
     textAlign: 'center',
+  },
+  titleText_big: {
+    fontFamily: FONTS.primary.black,
+    fontSize: font(22),
+  },
+  titleText_small: {
+    fontFamily: FONTS.primary.bold,
+    fontSize: font(18),
   },
   backButton: {
     position: 'absolute',
