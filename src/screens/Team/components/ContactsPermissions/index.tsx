@@ -40,12 +40,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   icon: {
-    width: rem(200),
-    height: rem(170),
+    width: rem(100),
+    height: rem(85),
     marginTop: rem(16),
   },
   title: {
-    fontSize: font(24),
+    fontSize: font(12),
     fontFamily: FONTS.primary.black,
     textAlign: 'center',
     marginHorizontal: 24,

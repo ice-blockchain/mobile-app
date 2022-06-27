@@ -2,11 +2,11 @@
 
 import {E164Number, parsePhoneNumberFromString} from 'libphonenumber-js';
 import {isEmpty} from 'lodash';
-import RNContacts from 'react-native-contacts';
-import RNPermissions, {PERMISSIONS} from 'react-native-permissions';
+import Contacts from 'react-native-contacts';
+import Permissions, {PERMISSIONS, RESULTS} from 'react-native-permissions';
 import {isIOS} from 'rn-units';
 
-interface IContact {
+export interface IContact {
   lastName: string;
   firstName: string;
   name: string;
@@ -15,7 +15,7 @@ interface IContact {
 }
 export const getContacts = async (): Promise<Array<IContact>> => {
   const formatted: IContact[] = [];
-  const contacts = await RNContacts.getAllWithoutPhotos().catch(() => []);
+  const contacts = await Contacts.getAllWithoutPhotos().catch(() => []);
   contacts.forEach(contact => {
     const firstName = contact.givenName || '';
     const lastName = contact.familyName || '';
@@ -56,19 +56,16 @@ export const contactsPermission = isIOS
   : PERMISSIONS.ANDROID.READ_CONTACTS;
 
 export const hasContactsAccessPermission = async () => {
-  const permission = await RNPermissions.check(contactsPermission);
-  return permission === 'granted';
-  // return permissionsHelpers.isGranted(permission);
+  const permission = await Permissions.check(contactsPermission);
+  return permission === RESULTS.GRANTED;
 };
 
 export const requestContactsAccessPermission = async () => {
-  const permission = await RNPermissions.request(contactsPermission);
-  return permission === 'granted';
-  // return permissionsHelpers.isGranted(permission);
+  const permission = await Permissions.request(contactsPermission);
+  return permission === RESULTS.GRANTED;
 };
 
 export const hasContactsAccessDeclined = async () => {
-  const permission = await RNPermissions.request(contactsPermission);
-  return permission === 'blocked';
-  // return permissionsHelpers.isRejected(permission);
+  const permission = await Permissions.request(contactsPermission);
+  return permission === RESULTS.DENIED;
 };

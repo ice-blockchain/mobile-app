@@ -24,7 +24,6 @@ export function ConfirmPhone({
     useState<boolean>(false);
   const handleOnPress = () => {
     confirmPhonePress();
-    //TODO: handle contact permissions request
   };
 
   const showCountryCodeSearch = () => {

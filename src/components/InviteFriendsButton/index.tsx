@@ -6,14 +6,25 @@ import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {InviteFriendsSvg} from '@svg/InviteFriends';
 import {LogoIconSvg} from '@svg/LogoIcon';
 import * as React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  StyleProp,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from 'react-native';
 import {font, rem} from 'rn-units';
 
-interface InviteFriendsButtonProps {}
+interface InviteFriendsButtonProps {
+  containerStyle?: StyleProp<ViewStyle>;
+}
 
-export const InviteFriendsButton = ({}: InviteFriendsButtonProps) => {
+export const InviteFriendsButton = ({
+  containerStyle,
+}: InviteFriendsButtonProps) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={[styles.container, containerStyle]}>
       <View style={styles.logo}>
         <LogoIconSvg color={COLORS.white02opacity} width={52} height={52} />
       </View>

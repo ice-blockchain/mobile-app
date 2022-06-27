@@ -29,4 +29,6 @@ export const COLORS = {
   blueViolet: '#5F5DB1',
   bittersweet: '#FF6969',
   gallery: '#EBEBEB',
+  scorpion: '#575757',
+  cadetBlue: '#A6B0C2',
 };
