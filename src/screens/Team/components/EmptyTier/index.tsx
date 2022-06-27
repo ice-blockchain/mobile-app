@@ -3,6 +3,7 @@
 import {PrimaryButton} from '@components/PrimaryButton';
 import Text from '@components/Text';
 import {FONTS} from '@constants/fonts';
+import {useNavigation} from '@react-navigation/native';
 import {TierType} from '@screens/Team/components/Tier';
 import {translate} from '@translations/i18n';
 import React from 'react';
@@ -16,9 +17,11 @@ type EmptyTierProps = {
 };
 
 export function EmptyTier({type}: EmptyTierProps): React.ReactElement {
+  const navigation = useNavigation();
   const handleOnPress = () => {
-    // navigation.navigate('Invite')
+    navigation.navigate({key: 'Invite'});
   };
+
   return (
     <View style={styles.container}>
       <Image source={icon} style={styles.icon} />

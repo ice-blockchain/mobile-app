@@ -1,22 +1,22 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-//import liraries
 import {defaultSubScreenTopOffset} from '@constants/styles';
-import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import Search from '@screens/Team/components/Search';
+import React, {useState} from 'react';
+import {StyleSheet, View} from 'react-native';
 
 export const Header = () => {
+  const [query, setQuery] = useState('');
+
   return (
     <View style={styles.container}>
-      <Text>Header</Text>
+      <Search value={query} onChangeText={setQuery} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
-    alignItems: 'center',
     height: defaultSubScreenTopOffset,
   },
 });

@@ -9,6 +9,7 @@ import {TeamIcon} from '@navigation/components/MainTabBar/components/Icons/TeamI
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Home} from '@screens/Home';
+import {Invite} from '@screens/Invite';
 import {News} from '@screens/News';
 import {MyBadges} from '@screens/ProfileFlow/MyBadges';
 import {MyRoles} from '@screens/ProfileFlow/MyRoles';
@@ -31,8 +32,7 @@ export type MainTabsParamList = {
 export type MainStackParamList = {
   Main: undefined;
   WebView: undefined;
-  MyRoles: undefined;
-  MyBadges: undefined;
+  Invite: undefined;
 };
 
 export type HomeTabStackParamList = {
@@ -171,6 +171,7 @@ export function Main() {
         options={modalOptions}
         component={WebView}
       />
+      <MainStack.Screen name="Invite" component={Invite} />
     </MainStack.Navigator>
   );
 }
