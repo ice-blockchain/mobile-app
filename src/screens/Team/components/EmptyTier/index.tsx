@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {PrimaryButton} from '@components/PrimaryButton';
 import {Text} from '@components/Text';
+import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {useNavigation} from '@react-navigation/native';
 import {TierType} from '@screens/Team/components/Tier';
+import {InviteTierTwoIcon} from '@svg/InviteTierTwoIcon';
 import {translate} from '@translations/i18n';
 import React from 'react';
-import {Image, StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
 const icon = require('../../assets/teamTier2.png');
@@ -35,11 +36,11 @@ export function EmptyTier({type}: EmptyTierProps): React.ReactElement {
         />
         <Text text="team.empty.title_part2" />
       </Text>
-      <PrimaryButton
-        text={translate('team.empty.button_title')}
-        onPress={handleOnPress}
-        style={styles.inviteButton}
-      />
+
+      <TouchableOpacity onPress={handleOnPress} style={styles.inviteButton}>
+        <InviteTierTwoIcon />
+        <Text style={styles.text}>{translate('team.empty.button_title')}</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -67,5 +68,19 @@ const styles = StyleSheet.create({
   },
   inviteButton: {
     marginTop: rem(35),
+    width: rem(253),
+    height: rem(55),
+    backgroundColor: COLORS.primary,
+    borderRadius: 11,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  text: {
+    fontFamily: FONTS.primary.black,
+    color: COLORS.white,
+    fontSize: font(14),
+    lineHeight: rem(16.8),
+    marginLeft: 10,
   },
 });
