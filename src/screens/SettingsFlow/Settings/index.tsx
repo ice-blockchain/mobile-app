@@ -23,6 +23,7 @@ import {NotificationsIcon} from '@svg/NotificationsIcon';
 import {PersonIcon} from '@svg/PersonIcon';
 import {PrivacyIcon} from '@svg/PrivacyIcon';
 import {TermsIcon} from '@svg/TermsIcon';
+import {t} from '@translations/i18n';
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
@@ -37,7 +38,7 @@ export const Settings = memo(() => {
     <View style={styles.container}>
       <Header
         color={COLORS.white}
-        title={'Settings'}
+        title={t('settings.title')}
         titlePreset={'small'}
         renderRightButtons={LangButton}
         containerStyle={shadowStyle}
@@ -53,52 +54,52 @@ export const Settings = memo(() => {
             uri="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo="
             style={[styles.avatar, commonStyles.shadow]}
           />
-          <SectionTitle text="PROFILE" />
+          <SectionTitle text={t('settings.profile').toUpperCase()} />
           <SectionCard>
             <MenuItem
-              title="Personal Information"
-              description="Change your first and last name"
+              title={t('settings.personal_information_title')}
+              description={t('settings.personal_information_description')}
               renderIcon={PersonIcon}
               onPress={() => {}}
             />
             <MenuItemSeparator />
             <MenuItem
-              title="Notifications"
-              description="Manage your notifications here"
+              title={t('settings.notifications_title')}
+              description={t('settings.notifications_description')}
               renderIcon={() => (
                 <NotificationsIcon fill={COLORS.persianBlue} width={20} />
               )}
               onPress={() => {}}
             />
           </SectionCard>
-          <SectionTitle text="LEGAL" />
+          <SectionTitle text={t('settings.legal').toUpperCase()} />
           <SectionCard>
             <MenuItem
-              title="Terms of Service"
-              description="Terms of use and conditions"
+              title={t('settings.terms_title')}
+              description={t('settings.terms_description')}
               renderIcon={TermsIcon}
               onPress={() => {}}
             />
             <MenuItemSeparator />
             <MenuItem
-              title="Privacy Policy"
-              description="Read all about our privacy policy"
+              title={t('settings.privacy_title')}
+              description={t('settings.privacy_description')}
               renderIcon={PrivacyIcon}
               onPress={() => {}}
             />
           </SectionCard>
-          <SectionTitle text="SUPPORT" />
+          <SectionTitle text={t('settings.support').toUpperCase()} />
           <SectionCard>
             <MenuItem
-              title="Send Feedback"
-              description="Help us improve our mining app"
+              title={t('settings.feedback_title')}
+              description={t('settings.feedback_description')}
               renderIcon={FeedbackIcon}
               onPress={() => {}}
             />
             <MenuItemSeparator />
             <MenuItem
-              title="Invite a Friend"
-              description="Earn extra ice by inviting your friends"
+              title={t('settings.invite_title')}
+              description={t('button.invite_friend.description')}
               renderIcon={() => (
                 <InviteIcon fill={COLORS.persianBlue} width={23} height={22} />
               )}
@@ -106,26 +107,26 @@ export const Settings = memo(() => {
             />
             <MenuItemSeparator />
             <MenuItem
-              title="Delete Account"
-              description="Erase your ice account"
+              title={t('settings.delete_title')}
+              description={t('settings.delete_description')}
               renderIcon={EraseIcon}
               onPress={() => {}}
               confirmation={{
-                title: 'Are you sure you want to remove the account?',
-                yesText: 'Yes, erase',
-                noText: 'No',
+                title: t('settings.delete_confirmation_title'),
+                yesText: t('settings.delete_confirmation_yes'),
+                noText: t('button.no'),
               }}
             />
             <MenuItemSeparator />
             <MenuItem
-              title="Log Out"
-              description="Sign off and take a break"
+              title={t('settings.logout_title')}
+              description={t('settings.logout_description')}
               renderIcon={LogOutIcon}
               onPress={() => {}}
               confirmation={{
-                title: 'Are you sure you want to sign off?',
-                yesText: 'Yes, log out',
-                noText: 'No',
+                title: t('settings.logout_confirmation_title'),
+                yesText: t('settings.logout_confirmation_yes'),
+                noText: t('button.no'),
               }}
             />
           </SectionCard>
