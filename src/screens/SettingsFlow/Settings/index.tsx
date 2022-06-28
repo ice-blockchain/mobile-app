@@ -15,7 +15,14 @@ import {
 } from '@screens/SettingsFlow/Settings/components/MenuItem.tsx';
 import {SectionCard} from '@screens/SettingsFlow/Settings/components/SectionCard.tsx';
 import {SectionTitle} from '@screens/SettingsFlow/Settings/components/SectionTitle';
-import {CheckMarkIcon} from '@svg/CheckMarkIcon';
+import {EraseIcon} from '@svg/EraseIcon';
+import {FeedbackIcon} from '@svg/FeedbackIcon';
+import {InviteIcon} from '@svg/InviteIcon';
+import {LogOutIcon} from '@svg/LogOutIcon';
+import {NotificationsIcon} from '@svg/NotificationsIcon';
+import {PersonIcon} from '@svg/PersonIcon';
+import {PrivacyIcon} from '@svg/PrivacyIcon';
+import {TermsIcon} from '@svg/TermsIcon';
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
@@ -51,14 +58,16 @@ export const Settings = memo(() => {
             <MenuItem
               title="Personal Information"
               description="Change your first and last name"
-              renderIcon={CheckMarkIcon}
+              renderIcon={PersonIcon}
               onPress={() => {}}
             />
             <MenuItemSeparator />
             <MenuItem
-              title="Personal Information"
-              description="Change your first and last name"
-              renderIcon={CheckMarkIcon}
+              title="Notifications"
+              description="Manage your notifications here"
+              renderIcon={() => (
+                <NotificationsIcon fill={COLORS.persianBlue} width={20} />
+              )}
               onPress={() => {}}
             />
           </SectionCard>
@@ -67,14 +76,14 @@ export const Settings = memo(() => {
             <MenuItem
               title="Terms of Service"
               description="Terms of use and conditions"
-              renderIcon={CheckMarkIcon}
+              renderIcon={TermsIcon}
               onPress={() => {}}
             />
             <MenuItemSeparator />
             <MenuItem
               title="Privacy Policy"
               description="Read all about our privacy policy"
-              renderIcon={CheckMarkIcon}
+              renderIcon={PrivacyIcon}
               onPress={() => {}}
             />
           </SectionCard>
@@ -83,28 +92,30 @@ export const Settings = memo(() => {
             <MenuItem
               title="Send Feedback"
               description="Help us improve our mining app"
-              renderIcon={CheckMarkIcon}
+              renderIcon={FeedbackIcon}
               onPress={() => {}}
             />
             <MenuItemSeparator />
             <MenuItem
               title="Invite a Friend"
               description="Earn extra ice by inviting your friends"
-              renderIcon={CheckMarkIcon}
+              renderIcon={() => (
+                <InviteIcon fill={COLORS.persianBlue} width={23} height={22} />
+              )}
               onPress={() => {}}
             />
             <MenuItemSeparator />
             <MenuItem
               title="Delete Account"
               description="Erase your ice account"
-              renderIcon={CheckMarkIcon}
+              renderIcon={EraseIcon}
               onPress={() => {}}
             />
             <MenuItemSeparator />
             <MenuItem
               title="Log Out"
               description="Are you sure you want to sign off?"
-              renderIcon={CheckMarkIcon}
+              renderIcon={LogOutIcon}
               onPress={() => {}}
             />
           </SectionCard>
