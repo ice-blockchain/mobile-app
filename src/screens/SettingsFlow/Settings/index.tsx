@@ -110,13 +110,23 @@ export const Settings = memo(() => {
               description="Erase your ice account"
               renderIcon={EraseIcon}
               onPress={() => {}}
+              confirmation={{
+                title: 'Are you sure you want to remove the account?',
+                yesText: 'Yes, erase',
+                noText: 'No',
+              }}
             />
             <MenuItemSeparator />
             <MenuItem
               title="Log Out"
-              description="Are you sure you want to sign off?"
+              description="Sign off and take a break"
               renderIcon={LogOutIcon}
               onPress={() => {}}
+              confirmation={{
+                title: 'Are you sure you want to sign off?',
+                yesText: 'Yes, log out',
+                noText: 'No',
+              }}
             />
           </SectionCard>
           <AppVersion />
