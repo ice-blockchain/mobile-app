@@ -49,7 +49,7 @@ export type TeamTabStackParamList = {
 export type ProfileTabStackParamList = {
   Profile: undefined;
   MyRoles: undefined;
-  MyBadges: undefined;
+  MyBadges?: {category?: BadgeCategory};
   Settings: undefined;
 };
 

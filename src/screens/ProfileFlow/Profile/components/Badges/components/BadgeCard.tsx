@@ -4,7 +4,7 @@ import {BadgeCategory} from '@api/badges/types';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {commonStyles} from '@constants/styles';
-import {ProfileStackParamList} from '@navigation/Main';
+import {ProfileTabStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import React, {memo} from 'react';
@@ -24,7 +24,7 @@ type Props = {
 export const BadgeCard = memo(
   ({imageSource, title, category, progressText, progressValue}: Props) => {
     const navigation =
-      useNavigation<NativeStackNavigationProp<ProfileStackParamList>>();
+      useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
 
     return (
       <TouchableOpacity

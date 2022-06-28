@@ -12,7 +12,7 @@ import {Header} from '@navigation/components/Header';
 import {FaqButton} from '@navigation/components/Header/components/FaqButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {ProfileStackParamList} from '@navigation/Main';
+import {ProfileTabStackParamList} from '@navigation/Main';
 import {RouteProp, useRoute} from '@react-navigation/native';
 import {BadgeList} from '@screens/ProfileFlow/MyBadges/components/BadgeList';
 import {BADGES, CATEGORIES} from '@screens/ProfileFlow/MyBadges/mockData';
@@ -25,7 +25,7 @@ import {rem} from 'rn-units';
 export const MyBadges = () => {
   useFocusStatusBar({style: 'dark-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
-  const route = useRoute<RouteProp<ProfileStackParamList, 'MyBadges'>>();
+  const route = useRoute<RouteProp<ProfileTabStackParamList, 'MyBadges'>>();
   const initialCategory = route.params?.category ?? 'social';
   const initialIndex = CATEGORIES.findIndex(c => c.key === initialCategory);
 
