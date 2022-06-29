@@ -3,7 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {ListControlBase} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlBase';
-import React, {memo} from 'react';
+import React, {memo, useCallback, useRef} from 'react';
 import {StyleSheet, TextInputProps} from 'react-native';
 import {TextInput} from 'react-native-gesture-handler';
 import {font, rem} from 'rn-units';
@@ -13,9 +13,13 @@ type Props = {
 } & TextInputProps;
 
 export const ListControlInput = memo(({label, ...inputProps}: Props) => {
+  const inputRef = useRef<TextInput>(null);
+  const focusInput = useCallback(() => {
+    inputRef.current?.focus();
+  }, []);
   return (
-    <ListControlBase label={label}>
-      <TextInput style={styles.input} {...inputProps} />
+    <ListControlBase label={label} onLabelPress={focusInput}>
+      <TextInput style={styles.input} {...inputProps} ref={inputRef} />
     </ListControlBase>
   );
 });

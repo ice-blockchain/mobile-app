@@ -42,11 +42,23 @@ export const PersonalInformation = memo(() => {
             style={styles.avatar}
           />
           <SectionCard>
-            <ListControlInput label="First name aaa" textContentType="name" />
+            <ListControlInput
+              label="First name"
+              textContentType="name"
+              defaultValue="Johnny Alexander"
+            />
             <ListControlSeparator />
-            <ListControlInput label="Last name" textContentType="familyName" />
+            <ListControlInput
+              label="Last name"
+              textContentType="familyName"
+              defaultValue="Smithsonian"
+            />
             <ListControlSeparator />
-            <ListControlInput label="City" textContentType="addressCity" />
+            <ListControlInput
+              label="City"
+              textContentType="addressCity"
+              defaultValue="Beverly Hills"
+            />
           </SectionCard>
         </View>
       </Animated.ScrollView>
