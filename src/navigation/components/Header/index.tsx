@@ -20,7 +20,7 @@ type Props = {
   containerStyle?: StyleProp<ViewStyle>;
 };
 
-const HEADER_HEIGHT = rem(54);
+export const HEADER_HEIGHT = rem(54);
 
 /**
  * Using absolute positioned View to make "elevation" display properly
