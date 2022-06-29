@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
+import {commonStyles} from '@constants/styles';
 import {PenIcon} from '@svg/PenIcon';
 import React from 'react';
 import {
@@ -25,7 +26,7 @@ type Props = {
 
 export const Avatar = ({uri, style, showPen, onPenPress}: Props) => {
   return (
-    <View style={style}>
+    <View style={[style, commonStyles.shadow]}>
       <View style={styles.avatarWrapper}>
         <Image source={{uri}} style={styles.image} />
       </View>
