@@ -79,8 +79,8 @@ export async function put<TRequest, TResponse>(
 }
 
 export async function get<TResponse>(
-    path: string,
-    config?: RequestConfig,
+  path: string,
+  config?: RequestConfig,
 ): Promise<TResponse> {
   try {
     const response = await readClient.get<TResponse>(path, config);
@@ -92,8 +92,8 @@ export async function get<TResponse>(
 }
 
 export async function del<TResponse>(
-    path: string,
-    config?: RequestConfig,
+  path: string,
+  config?: RequestConfig,
 ): Promise<TResponse> {
   try {
     const response = await writeClient.delete<TResponse>(path, config);
