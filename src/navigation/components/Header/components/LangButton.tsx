@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
 import {MainTabsParamList} from '@navigation/Main';
 import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
 import {useNavigation} from '@react-navigation/native';
@@ -32,7 +33,7 @@ export const LangButton = ({
   return (
     <TouchableOpacity
       onPress={() => navigation.navigate('HomeTab')}
-      hitSlop={buttonHitSlop}>
+      hitSlop={SMALL_BUTTON_HIT_SLOP}>
       <View style={[styles.container, containerStyle]}>
         <Text style={[styles.langText, {color}]}>EN</Text>
         <WorldIcon fill={color} style={styles.worldIcon} />
@@ -41,8 +42,6 @@ export const LangButton = ({
     </TouchableOpacity>
   );
 };
-
-const buttonHitSlop = {top: 4, left: 4, bottom: 4, right: 4};
 
 const styles = StyleSheet.create({
   container: {

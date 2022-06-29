@@ -2,6 +2,7 @@
 
 import {Badge} from '@components/Badge';
 import {COLORS} from '@constants/colors';
+import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
 import {MainTabsParamList} from '@navigation/Main';
 import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
 import {useNavigation} from '@react-navigation/native';
@@ -30,7 +31,7 @@ export const NotificationsButton = ({
     <View style={containerStyle}>
       <TouchableOpacity
         onPress={() => navigation.navigate('TeamTab')}
-        hitSlop={buttonHitSlop}>
+        hitSlop={SMALL_BUTTON_HIT_SLOP}>
         <NotificationsIcon fill={color} />
       </TouchableOpacity>
       <Badge value={'9+'} style={styles.badge} />
@@ -45,5 +46,3 @@ const styles = StyleSheet.create({
     right: -5,
   },
 });
-
-const buttonHitSlop = {top: 4, left: 4, bottom: 4, right: 4};
