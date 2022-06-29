@@ -124,7 +124,9 @@ const ProfileTabStackNavigator = () => (
 );
 
 const MainTabs = () => (
-  <Tabs.Navigator screenOptions={tabOptions} tabBar={MainTabBar}>
+  <Tabs.Navigator
+    screenOptions={tabOptions}
+    tabBar={props => <MainTabBar {...props} />}>
     <Tabs.Screen
       name="HomeTab"
       component={HomeTabStackNavigator}

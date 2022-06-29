@@ -7,8 +7,11 @@ import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import {ListControlSeparator} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlBase';
+import {ListControlInput} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlInput';
+import {SectionCard} from '@screens/SettingsFlow/PersonalInformation/components/SectionCard.tsx';
 import React, {memo} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {KeyboardAvoidingView, Platform, StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
@@ -16,9 +19,10 @@ export const PersonalInformation = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
   const {scrollHandler, shadowStyle} = useScrollShadow();
-
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      style={styles.container}>
       <Header
         color={COLORS.white}
         title={'Personal Information'}
@@ -29,7 +33,7 @@ export const PersonalInformation = memo(() => {
       <Animated.ScrollView
         onScroll={scrollHandler}
         scrollEventThrottle={16}
-        contentContainerStyle={bottomOffset.current}
+        contentContainerStyle={[bottomOffset.current, styles.scrollContent]}
         showsVerticalScrollIndicator={false}>
         <View style={styles.card}>
           <Avatar
@@ -37,9 +41,16 @@ export const PersonalInformation = memo(() => {
             uri="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo="
             style={styles.avatar}
           />
+          <SectionCard>
+            <ListControlInput label="First name aaa" textContentType="name" />
+            <ListControlSeparator />
+            <ListControlInput label="Last name" textContentType="familyName" />
+            <ListControlSeparator />
+            <ListControlInput label="City" textContentType="addressCity" />
+          </SectionCard>
         </View>
       </Animated.ScrollView>
-    </View>
+    </KeyboardAvoidingView>
   );
 });
 
@@ -47,6 +58,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.persianBlue,
+  },
+  scrollContent: {
+    flexGrow: 1,
   },
   card: {
     marginTop: rem(80),

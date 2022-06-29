@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
+import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
 import {TabBarItem} from '@navigation/components/MainTabBar/components/TabBarItem';
 import {TabBarMiningItem} from '@navigation/components/MainTabBar/components/TabBarMiningItem';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
@@ -21,6 +22,12 @@ export const MainTabBar = ({
   const leftRoutes = state.routes.slice(0, NUMBER_OF_LEFT_ICONS);
   const rightRoutes = state.routes.slice(-NUMBER_OF_RIGHT_ICONS);
   const bottomOffset = Math.min(rem(12), insets.bottom);
+  const isKeyboardShown = useIsKeyboardShown();
+
+  if (isKeyboardShown) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
       <View
