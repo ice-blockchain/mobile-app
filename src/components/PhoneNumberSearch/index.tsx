@@ -103,6 +103,8 @@ export const PhoneNumberSearch = ({
           style={styles.input}
           onChangeText={setSearchValue}
           autoFocus
+          autoCorrect={false}
+          spellCheck={false}
         />
       </View>
       <FlatList
@@ -110,6 +112,7 @@ export const PhoneNumberSearch = ({
         renderItem={renderCountry}
         maxToRenderPerBatch={30}
         getItemLayout={getItemLayout}
+        keyboardShouldPersistTaps={'handled'}
       />
     </View>
   );
@@ -148,12 +151,12 @@ const styles = StyleSheet.create({
   },
   search: {
     paddingHorizontal: rem(16),
-    paddingVertical: rem(14),
     flexDirection: 'row',
     alignItems: 'center',
   },
   input: {
     paddingLeft: rem(9),
+    paddingVertical: rem(10),
     fontSize: font(15),
     fontFamily: FONTS.primary.regular,
     color: COLORS.darkBlue,

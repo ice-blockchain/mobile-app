@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
     fontSize: font(15),
     fontFamily: FONTS.primary.regular,
     color: COLORS.darkBlue,
+    flex: 1,
   },
   countryCodeWrapper: {
     alignItems: 'center',

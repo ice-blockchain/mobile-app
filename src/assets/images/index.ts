@@ -8,7 +8,6 @@ export const Images = {
     welcome4: require('./welcome/welcome4.png'),
     welcome5: require('./welcome/welcome5.png'),
     welcome6: require('./welcome/welcome6.png'),
-    logoIcon: require('./logo-icon.png'),
   },
   tabbar: {
     itemBackground: require('./tabbar/item-background.png'),
@@ -40,5 +39,9 @@ export const Images = {
     mastermind: {
       inactive: require('./badges/mastermind-inactive.png'),
     },
+  },
+  phone: {
+    confirmCode: require('./phone/confirmCode.png'),
+    confirmPhone: require('./phone/confirmPhone.png'),
   },
 } as const;

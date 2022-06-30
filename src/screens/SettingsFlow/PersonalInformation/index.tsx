@@ -7,12 +7,15 @@ import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import {ProfileTabStackParamList} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {ListControlAction} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlAction';
 import {ListControlSeparator} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlBase';
 import {ListControlCountry} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlCountry';
 import {ListControlInput} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlInput';
 import {SectionCard} from '@screens/SettingsFlow/PersonalInformation/components/SectionCard.tsx';
-import React, {memo} from 'react';
+import React, {memo, useCallback} from 'react';
 import {KeyboardAvoidingView, Platform, StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
@@ -21,6 +24,14 @@ export const PersonalInformation = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
   const {scrollHandler, shadowStyle} = useScrollShadow();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
+
+  const onChangePhonePress = useCallback(
+    () => navigation.navigate('ConfirmNewPhone'),
+    [navigation],
+  );
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -60,7 +71,7 @@ export const PersonalInformation = memo(() => {
               label="Phone"
               action="CHANGE"
               value={'+1 0712 345 678'}
-              onPress={() => {}}
+              onPress={onChangePhonePress}
             />
             <ListControlSeparator />
             <ListControlCountry label="Country" />
