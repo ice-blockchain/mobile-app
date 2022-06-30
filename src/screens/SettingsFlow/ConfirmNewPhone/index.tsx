@@ -30,11 +30,11 @@ export const ConfirmNewPhone = memo(() => {
   const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
     useState(false);
   const [phone, setPhone] = useState('');
+
   return (
     <KeyboardAvoidingView
       style={styles.container}
-      keyboardVerticalOffset={-bottomOffset.current.paddingBottom + rem(20)}
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <Header
         color={COLORS.white}
         title={'Personal Information'}

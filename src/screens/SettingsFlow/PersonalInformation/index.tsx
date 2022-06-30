@@ -38,6 +38,7 @@ export const PersonalInformation = memo(() => {
   );
 
   const isKeyboardShown = useIsKeyboardShown();
+  // use only one sharedValue and interpolate to styles
   const marginTop = useSharedValue(rem(80));
   const bodyMarginTop = useSharedValue(rem(80));
   const avatarOpacity = useSharedValue(1);
