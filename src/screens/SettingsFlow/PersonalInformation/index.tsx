@@ -8,6 +8,7 @@ import {LangButton} from '@navigation/components/Header/components/LangButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {ListControlSeparator} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlBase';
+import {ListControlCountry} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlCountry';
 import {ListControlInput} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlInput';
 import {SectionCard} from '@screens/SettingsFlow/PersonalInformation/components/SectionCard.tsx';
 import React, {memo} from 'react';
@@ -53,6 +54,8 @@ export const PersonalInformation = memo(() => {
               textContentType="familyName"
               defaultValue="Smithsonian"
             />
+            <ListControlSeparator />
+            <ListControlCountry label="Country" />
             <ListControlSeparator />
             <ListControlInput
               label="City"

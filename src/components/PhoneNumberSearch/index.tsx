@@ -1,26 +1,34 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {
+  COUNTRY_ITEM_HEIGHT,
+  CountryListItem,
+} from '@components/PhoneNumberSearch/components/CountryListItem';
 import {COLORS} from '@constants/colors';
 import {countriesCode, ICountryCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
 import {CloseIconSvg} from '@svg/CloseIcon';
 import {SearchIconSvg} from '@svg/SearchIcon';
+import {t} from '@translations/i18n';
 import {debounce} from 'lodash';
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import {
   StyleProp,
   StyleSheet,
   Text,
+  TextInput,
   TouchableOpacity,
   View,
   ViewStyle,
 } from 'react-native';
-import {ScrollView, TextInput} from 'react-native-gesture-handler';
+import {FlatList} from 'react-native-gesture-handler';
 import {font, rem} from 'rn-units';
 
 interface PhoneNumberSearchProps {
   selectedCountry: ICountryCode;
   containerStyle?: StyleProp<ViewStyle>;
+  headerStyle?: StyleProp<ViewStyle>;
+  showCode?: boolean;
   close: () => void;
   setCountryCode: (v: ICountryCode) => void;
 }
@@ -28,81 +36,91 @@ interface PhoneNumberSearchProps {
 export const PhoneNumberSearch = ({
   selectedCountry,
   containerStyle,
+  headerStyle,
+  showCode = true,
   close,
   setCountryCode,
 }: PhoneNumberSearchProps) => {
-  const [searchValue, setSearchValue] = useState('');
   const [countriesCodeItems, setCountriesCodeItems] = useState(countriesCode);
 
-  useEffect(
-    () =>
-      debounce(() => {
-        if (!isNaN(+searchValue)) {
-          setCountriesCodeItems(
-            countriesCode.filter(v => v.iddCode.includes(searchValue)),
-          );
-        } else {
-          setCountriesCodeItems(
-            countriesCode.filter(v =>
-              v.name.toLowerCase().startsWith(searchValue.toLowerCase()),
-            ),
-          );
-        }
-      }, 500)(),
-    [searchValue],
+  const setSearchValue = (searchValue: string) =>
+    debounce(() => {
+      if (!isNaN(+searchValue)) {
+        setCountriesCodeItems(
+          countriesCode.filter(v => v.iddCode.includes(searchValue)),
+        );
+      } else {
+        setCountriesCodeItems(
+          countriesCode.filter(v =>
+            v.name.toLowerCase().startsWith(searchValue.toLowerCase()),
+          ),
+        );
+      }
+    }, 500)();
+
+  const onCountryPress = useCallback(
+    (country: ICountryCode) => {
+      setCountryCode(country);
+      close();
+    },
+    [close, setCountryCode],
   );
 
-  const onItemPress = (v: ICountryCode) => () => {
-    setCountryCode(v);
-    close();
-  };
+  const renderCountry = useCallback(
+    ({item}: {item: ICountryCode}) => {
+      return (
+        <CountryListItem
+          onPress={onCountryPress}
+          showCode={showCode}
+          country={item}
+        />
+      );
+    },
+    [onCountryPress, showCode],
+  );
+
+  const getItemLayout = useCallback((data, index) => {
+    return {
+      length: COUNTRY_ITEM_HEIGHT,
+      offset: COUNTRY_ITEM_HEIGHT * index,
+      index,
+    };
+  }, []);
 
   return (
     <View style={[styles.container, containerStyle]}>
-      <View style={styles.header}>
+      <View style={[styles.header, headerStyle]}>
         <Text style={styles.countryIcon}>{selectedCountry.flag}</Text>
-
         <Text style={styles.name}>{selectedCountry.name}</Text>
-
         <TouchableOpacity style={styles.closeButton} onPress={close}>
           <CloseIconSvg />
         </TouchableOpacity>
       </View>
       <View style={styles.search}>
         <SearchIconSvg />
-
         <TextInput
-          value={searchValue}
-          placeholder={'Search for country'}
+          placeholder={t('button.search_country')}
           style={styles.input}
           onChangeText={setSearchValue}
+          autoFocus
         />
       </View>
-
-      <ScrollView keyboardShouldPersistTaps={'handled'}>
-        {countriesCodeItems.map(v => (
-          <TouchableOpacity
-            key={v.name}
-            style={styles.searchItem}
-            onPress={onItemPress(v)}>
-            <Text style={styles.countryIcon}>{v.flag}</Text>
-            <Text style={styles.name}>
-              {v.name}
-              <Text style={styles.code}>{` (${v.iddCode})`}</Text>
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
+      <FlatList
+        data={countriesCodeItems}
+        renderItem={renderCountry}
+        maxToRenderPerBatch={30}
+        getItemLayout={getItemLayout}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    borderWidth: 1.5,
-    borderRadius: 13,
+    borderWidth: 1,
+    borderRadius: rem(13),
     borderColor: COLORS.greyBorder,
-    height: 311,
+    height: rem(311),
     backgroundColor: COLORS.white,
   },
   countryIcon: {
@@ -114,38 +132,31 @@ const styles = StyleSheet.create({
     paddingLeft: rem(15),
     borderBottomWidth: 1,
     borderBottomColor: COLORS.greyBorder,
+    paddingVertical: rem(8),
   },
   name: {
     fontSize: font(15),
     fontFamily: FONTS.primary.regular,
     flex: 1,
-    marginLeft: font(4),
-    color: '#707489',
+    marginLeft: rem(4),
+    color: COLORS.greyText,
   },
   closeButton: {
-    paddingHorizontal: font(12),
-    paddingVertical: font(20),
+    paddingHorizontal: rem(12),
+    alignSelf: 'stretch',
+    justifyContent: 'center',
   },
   search: {
-    paddingHorizontal: font(16),
-    paddingVertical: font(14),
+    paddingHorizontal: rem(16),
+    paddingVertical: rem(14),
     flexDirection: 'row',
     alignItems: 'center',
   },
   input: {
-    paddingLeft: font(9),
+    paddingLeft: rem(9),
     fontSize: font(15),
     fontFamily: FONTS.primary.regular,
     color: COLORS.darkBlue,
     flex: 1,
-  },
-  searchItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingLeft: font(12),
-    paddingBottom: font(15),
-  },
-  code: {
-    color: COLORS.darkBlue,
   },
 });

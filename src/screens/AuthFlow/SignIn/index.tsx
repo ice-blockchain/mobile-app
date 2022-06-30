@@ -22,7 +22,7 @@ import {LogoSvg} from '@svg/Logo';
 import {MagicIconSvg} from '@svg/MagicIcon';
 import {PhoneIconSvg} from '@svg/PhoneIcon';
 import {translate} from '@translations/i18n';
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {
   Keyboard,
   KeyboardAvoidingView,
@@ -48,7 +48,7 @@ export const SignIn = ({navigation}: Props) => {
   const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
   const [inputType, setInputType] = useState<'email' | 'phone'>('email');
   const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
-    useState<boolean>(false);
+    useState(false);
 
   const dispatch = useDispatch();
   const usersInfo = useSelector(userInfoSelector);
@@ -131,9 +131,9 @@ export const SignIn = ({navigation}: Props) => {
   const showCountryCodeSearch = () => {
     setCountryCodeSearchVisibility(true);
   };
-  const hideCountryCodeSearch = () => {
+  const hideCountryCodeSearch = useCallback(() => {
     setCountryCodeSearchVisibility(false);
-  };
+  }, []);
 
   return (
     <SafeAreaView style={styles.container}>
