@@ -1,23 +1,49 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {
+  SegmentedControl,
+  SegmentedControlMethods,
+} from '@components/SegmentedControl';
 import {Contacts} from '@screens/Team/components/Contacts';
 import {Tier, TierType} from '@screens/Team/components/Tier';
 import {TierOneList} from '@screens/Team/components/TierOneList';
-import {TABS, TiersSwitcher} from '@screens/Team/components/TiersSwitcher';
-import React, {useState} from 'react';
+import React, {useCallback, useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
+import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
+
+import {TABS} from './mockData';
 
 export const Tiers = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const selectedTab = TABS[selectedIndex];
+  const switcherRef = useRef<SegmentedControlMethods>(null);
+  const pagerRef = useRef<PagerView>(null);
+
+  const onCategoryChange = useCallback((index: number) => {
+    pagerRef.current?.setPage(index);
+  }, []);
+
+  const onPageChange = (event: PagerViewOnPageSelectedEvent) => {
+    switcherRef.current?.changeSegment(event.nativeEvent.position);
+  };
+
   return (
     <View style={styles.container}>
-      <TiersSwitcher onChange={setSelectedIndex} style={styles.tabbar} />
-      <View style={styles.container}>
-        {selectedTab.key === 'Contacts' && <Contacts />}
-        {selectedTab.key === 'TierOne' && <TierOneList />}
-        {selectedTab.key === 'TierTwo' && <Tier type={TierType.tierTwo} />}
-      </View>
+      <SegmentedControl
+        segments={TABS}
+        ref={switcherRef}
+        style={styles.tabbar}
+        onChange={onCategoryChange}
+        initialIndex={0}
+      />
+
+      <PagerView
+        initialPage={0}
+        style={styles.container}
+        ref={pagerRef}
+        onPageSelected={onPageChange}>
+        <Contacts />
+        <TierOneList />
+        <Tier type={TierType.tierTwo} />
+      </PagerView>
     </View>
   );
 };

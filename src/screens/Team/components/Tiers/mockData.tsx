@@ -1,9 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {
-  SegmentedControl,
-  SegmentedControlProps,
-} from '@components/SegmentedControl';
 import {COLORS} from '@constants/colors';
 import {ContactsIcon} from '@screens/Team/assets/svg/Contacts';
 import {TierOneIcon} from '@svg/TierOneIcon';
@@ -50,9 +46,3 @@ export const TABS = [
     key: 'TierTwo',
   },
 ] as const;
-
-export function TiersSwitcher(
-  props: Omit<SegmentedControlProps, 'segments'>,
-): React.ReactElement {
-  return <SegmentedControl {...props} segments={TABS} />;
-}
