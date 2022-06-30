@@ -2,8 +2,10 @@
 
 import {COLORS} from '@constants/colors';
 import {HEADER_HEIGHT} from '@navigation/components/Header';
+import {INVITE_CARD_TOP_OFFSET} from '@screens/InviteFlow/InviteFriend';
 import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
 
 //TODO: replace with profile url
@@ -15,7 +17,14 @@ interface InviteAvaProps {
   profileUrl: string;
 }
 export const InviteAva = ({}: InviteAvaProps) => {
-  const topOffset = {top: HEADER_HEIGHT + AVA_SIDE_DIMENSION / 2};
+  const {top: topInset} = useSafeAreaInsets();
+  const topOffset = {
+    top:
+      HEADER_HEIGHT +
+      topInset +
+      INVITE_CARD_TOP_OFFSET -
+      AVA_CONTAINER_SIDE_DIMENSION / 2,
+  };
   return (
     <View style={[styles.container, topOffset]}>
       <Image source={tempAva} style={styles.avaImage} />

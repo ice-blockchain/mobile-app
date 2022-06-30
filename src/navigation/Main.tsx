@@ -9,6 +9,8 @@ import {TeamIcon} from '@navigation/components/MainTabBar/components/Icons/TeamI
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Home} from '@screens/Home';
+import {InviteFriend} from '@screens/InviteFlow/InviteFriend';
+import {InviteShare} from '@screens/InviteFlow/InviteShare';
 import {News} from '@screens/News';
 import {MyBadges} from '@screens/ProfileFlow/MyBadges';
 import {MyRoles} from '@screens/ProfileFlow/MyRoles';
@@ -37,9 +39,16 @@ export type ProfileStackParamList = {
   MyBadges: {category?: BadgeCategory} | undefined;
 };
 
+export type TeamStackParamList = {
+  Team: undefined;
+  InviteFriend: undefined;
+  InviteShare: undefined;
+};
+
 const Tabs = createBottomTabNavigator<MainTabsParamList>();
 const MainStack = createNativeStackNavigator<MainStackParamList>();
 const ProfileStack = createNativeStackNavigator<ProfileStackParamList>();
+const TeamStack = createNativeStackNavigator<TeamStackParamList>();
 
 const tabOptions = {
   headerShown: false,
@@ -70,6 +79,24 @@ const ProfileFlow = () => {
   );
 };
 
+const TeamFlow = () => {
+  return (
+    <TeamStack.Navigator screenOptions={screenOptions}>
+      <TeamStack.Screen name="Team" component={Team} />
+      <TeamStack.Screen
+        name="InviteFriend"
+        component={InviteFriend}
+        options={modalOptions}
+      />
+      <TeamStack.Screen
+        name="InviteShare"
+        component={InviteShare}
+        options={modalOptions}
+      />
+    </TeamStack.Navigator>
+  );
+};
+
 const MainTabs = () => (
   <Tabs.Navigator screenOptions={tabOptions} tabBar={MainTabBar}>
     <Tabs.Screen
@@ -79,7 +106,7 @@ const MainTabs = () => (
     />
     <Tabs.Screen
       name="TeamTab"
-      component={Team}
+      component={TeamFlow}
       options={{tabBarIcon: TeamIcon}}
     />
     <Tabs.Screen
