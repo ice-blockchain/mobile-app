@@ -145,12 +145,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
-  text: {
-    fontSize: font(10),
-    lineHeight: rem(12),
-    color: COLORS.white,
-    fontFamily: FONTS.primary.bold,
-  },
   frontView: {
     flex: 1,
     backfaceVisibility: 'hidden',

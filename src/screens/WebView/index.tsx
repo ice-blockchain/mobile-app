@@ -4,7 +4,6 @@
 // import {navigation} from '@navigation/index';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {rem} from 'rn-units';
 // import BackButton from 'src/components/BackButton';
 
 export function WebView() {
@@ -20,13 +19,5 @@ export function WebView() {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-  },
-  container: {
-    flex: 1,
-  },
-  back: {
-    position: 'absolute',
-    top: rem(45),
-    left: rem(10),
   },
 });

@@ -14,6 +14,7 @@ module.exports = {
         '**/tools.js',
       ],
       rules: {
+        'react-native/no-unused-styles': 'error',
         '@typescript-eslint/no-shadow': ['error'],
         'react-hooks/exhaustive-deps': 'error',
         'no-shadow': 'off',

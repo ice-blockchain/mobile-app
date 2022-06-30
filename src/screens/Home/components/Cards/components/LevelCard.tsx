@@ -121,11 +121,6 @@ const styles = StyleSheet.create({
     color: COLORS.white,
     textAlign: 'center',
   },
-  bottom: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    minHeight: 50,
-  },
   refferalsText: {
     marginTop: rem(50),
     fontSize: rem(10),
@@ -150,9 +145,5 @@ const styles = StyleSheet.create({
     color: COLORS.white,
     textAlign: 'center',
     marginBottom: rem(17),
-  },
-  centralEmptySpace: {
-    flex: 1,
-    minHeight: rem(30),
   },
 });

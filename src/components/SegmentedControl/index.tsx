@@ -93,6 +93,7 @@ export const SegmentedControl = forwardRef<
     const dynamicStyles = useMemo(
       () =>
         StyleSheet.create({
+          // eslint-disable-next-line react-native/no-unused-styles
           indicator: {
             width: `${segmentWidthPerc}%`,
           },
