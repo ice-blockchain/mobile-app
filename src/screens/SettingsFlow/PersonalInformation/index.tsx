@@ -7,6 +7,7 @@ import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import {ListControlAction} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlAction';
 import {ListControlSeparator} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlBase';
 import {ListControlCountry} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlCountry';
 import {ListControlInput} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlInput';
@@ -53,6 +54,13 @@ export const PersonalInformation = memo(() => {
               label="Last name"
               textContentType="familyName"
               defaultValue="Smithsonian"
+            />
+            <ListControlSeparator />
+            <ListControlAction
+              label="Phone"
+              action="CHANGE"
+              value={'+1 0712 345 678'}
+              onPress={() => {}}
             />
             <ListControlSeparator />
             <ListControlCountry label="Country" />
