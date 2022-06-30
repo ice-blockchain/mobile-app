@@ -2,7 +2,9 @@
 
 import {Avatar} from '@components/Avatar';
 import {COLORS} from '@constants/colors';
-import {useScrollShadow} from '@hooks/useScrollShadow';
+import {FONTS} from '@constants/fonts';
+import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
 import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
@@ -14,16 +16,19 @@ import {ListControlAction} from '@screens/SettingsFlow/PersonalInformation/compo
 import {ListControlSeparator} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlBase';
 import {ListControlCountry} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlCountry';
 import {ListControlInput} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlInput';
-import {SectionCard} from '@screens/SettingsFlow/PersonalInformation/components/SectionCard.tsx';
-import React, {memo, useCallback} from 'react';
-import {KeyboardAvoidingView, Platform, StyleSheet, View} from 'react-native';
-import Animated from 'react-native-reanimated';
-import {rem} from 'rn-units';
+import React, {memo, useCallback, useEffect} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
+import Animated, {
+  useAnimatedStyle,
+  useSharedValue,
+  withTiming,
+} from 'react-native-reanimated';
+import {font, rem} from 'rn-units';
 
 export const PersonalInformation = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
-  const {scrollHandler, shadowStyle} = useScrollShadow();
   const navigation =
     useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
 
@@ -32,29 +37,51 @@ export const PersonalInformation = memo(() => {
     [navigation],
   );
 
+  const isKeyboardShown = useIsKeyboardShown();
+  const marginTop = useSharedValue(rem(80));
+  const bodyMarginTop = useSharedValue(rem(80));
+  const avatarOpacity = useSharedValue(1);
+  const animatedCardStyle = useAnimatedStyle(() => ({
+    marginTop: marginTop.value,
+  }));
+  const animatedBodyStyle = useAnimatedStyle(() => ({
+    marginTop: bodyMarginTop.value,
+  }));
+  const animatedAvatarStyle = useAnimatedStyle(() => ({
+    opacity: avatarOpacity.value,
+  }));
+
+  useEffect(() => {
+    marginTop.value = withTiming(isKeyboardShown ? 0 : rem(80));
+    bodyMarginTop.value = withTiming(isKeyboardShown ? 0 : rem(80));
+    avatarOpacity.value = withTiming(isKeyboardShown ? 0 : 1);
+  }, [isKeyboardShown, bodyMarginTop, marginTop, avatarOpacity]);
+
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      style={styles.container}>
+    <View style={styles.container}>
       <Header
         color={COLORS.white}
         title={'Personal Information'}
         titlePreset={'small'}
         renderRightButtons={LangButton}
-        containerStyle={shadowStyle}
       />
-      <Animated.ScrollView
-        onScroll={scrollHandler}
-        scrollEventThrottle={16}
-        contentContainerStyle={[bottomOffset.current, styles.scrollContent]}
-        showsVerticalScrollIndicator={false}>
-        <View style={styles.card}>
-          <Avatar
-            showPen
-            uri="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo="
-            style={styles.avatar}
-          />
-          <SectionCard>
+      <Animated.View
+        style={[styles.card, animatedCardStyle, bottomOffset.current]}>
+        <Avatar
+          showPen
+          uri="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo="
+          style={[styles.avatar, animatedAvatarStyle]}
+        />
+        <Animated.View
+          style={[styles.body, animatedBodyStyle, commonStyles.shadow]}>
+          <View style={styles.bodyInner}>
+            <View style={styles.buttonPosition}>
+              <TouchableOpacity>
+                <View style={styles.button}>
+                  <Text style={styles.buttonText}>Save</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
             <ListControlInput
               label="First name"
               textContentType="name"
@@ -81,10 +108,10 @@ export const PersonalInformation = memo(() => {
               textContentType="addressCity"
               defaultValue="Beverly Hills"
             />
-          </SectionCard>
-        </View>
-      </Animated.ScrollView>
-    </KeyboardAvoidingView>
+          </View>
+        </Animated.View>
+      </Animated.View>
+    </View>
   );
 });
 
@@ -93,23 +120,45 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.persianBlue,
   },
-  scrollContent: {
-    flexGrow: 1,
-  },
   card: {
     marginTop: rem(80),
     paddingTop: rem(12),
     borderTopLeftRadius: rem(20),
     borderTopRightRadius: rem(20),
     backgroundColor: COLORS.white,
-    // make bottom overscroll area white, otherwise it'd be of container color
-    paddingBottom: 2000,
-    marginBottom: -2000,
+    flex: 1,
   },
   avatar: {
     position: 'absolute',
     top: -rem(43),
     left: '50%',
     marginLeft: -rem(43),
+  },
+  body: {
+    marginTop: rem(80),
+    borderRadius: rem(16),
+    marginHorizontal: SCREEN_SIDE_OFFSET,
+    backgroundColor: COLORS.white,
+  },
+  bodyInner: {
+    borderRadius: rem(16),
+  },
+  buttonPosition: {
+    position: 'absolute',
+    right: 0,
+    bottom: -rem(60),
+  },
+  button: {
+    height: rem(40),
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: rem(33),
+    backgroundColor: COLORS.primary,
+    borderRadius: rem(11),
+  },
+  buttonText: {
+    fontFamily: FONTS.primary.black,
+    fontSize: font(14),
+    color: COLORS.white,
   },
 });

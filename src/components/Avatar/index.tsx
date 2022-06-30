@@ -12,6 +12,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
+import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
 const AVATAR_SIZE = rem(86);
@@ -26,7 +27,7 @@ type Props = {
 
 export const Avatar = ({uri, style, showPen, onPenPress}: Props) => {
   return (
-    <View style={style}>
+    <Animated.View style={style}>
       <View style={[styles.avatarWrapper, commonStyles.shadow]}>
         <Image source={{uri}} style={styles.image} />
       </View>
@@ -37,7 +38,7 @@ export const Avatar = ({uri, style, showPen, onPenPress}: Props) => {
           </View>
         </TouchableOpacity>
       )}
-    </View>
+    </Animated.View>
   );
 };
 
