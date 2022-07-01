@@ -2,6 +2,7 @@
 
 import {Avatar} from '@components/Avatar';
 import {COLORS} from '@constants/colors';
+import {commonStyles} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
@@ -52,7 +53,7 @@ export const Settings = memo(() => {
         scrollEventThrottle={16}
         contentContainerStyle={bottomOffset.current}
         showsVerticalScrollIndicator={false}>
-        <View style={styles.card}>
+        <View style={[styles.card, commonStyles.baseSubScreen]}>
           <Avatar
             showPen
             uri="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo="
@@ -149,9 +150,6 @@ const styles = StyleSheet.create({
   card: {
     marginTop: rem(80),
     paddingTop: rem(12),
-    borderTopLeftRadius: rem(20),
-    borderTopRightRadius: rem(20),
-    backgroundColor: COLORS.white,
     // make bottom overscroll area white, otherwise it'd be of container color
     paddingBottom: 2000,
     marginBottom: -2000,

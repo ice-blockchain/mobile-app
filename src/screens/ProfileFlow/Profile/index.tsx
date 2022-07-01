@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
+import {commonStyles} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
@@ -34,7 +35,7 @@ export const Profile = memo(() => {
         contentContainerStyle={bottomOffset.current}
         showsVerticalScrollIndicator={false}>
         <UserInfo />
-        <View style={styles.card}>
+        <View style={[styles.card, commonStyles.baseSubScreen]}>
           <Badges />
           <Role />
           <Invite />
@@ -52,9 +53,6 @@ const styles = StyleSheet.create({
   },
   card: {
     marginTop: rem(16),
-    borderTopLeftRadius: rem(20),
-    borderTopRightRadius: rem(20),
-    backgroundColor: COLORS.white,
     // make bottom overscroll area white, otherwise it'd be of container color
     paddingBottom: 2000,
     marginBottom: -2000,

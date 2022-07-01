@@ -4,12 +4,14 @@ import {Avatar} from '@components/Avatar';
 import {CommonInput} from '@components/CommonInput';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {commonStyles} from '@constants/styles';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {TicketIconSvg} from '@svg/Ticket';
+import {t} from '@translations/i18n';
 import React, {memo} from 'react';
 import {
   Image,
@@ -35,11 +37,16 @@ export const ConfirmPhoneCode = memo(() => {
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <Header
           color={COLORS.white}
-          title={'Personal Information'}
+          title={t('personal_information.title')}
           titlePreset={'small'}
           renderRightButtons={LangButton}
         />
-        <View style={[styles.card, bottomOffset.current]}>
+        <View
+          style={[
+            styles.card,
+            commonStyles.baseSubScreen,
+            bottomOffset.current,
+          ]}>
           <Avatar
             showPen
             uri="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo="
@@ -54,10 +61,11 @@ export const ConfirmPhoneCode = memo(() => {
               />
             </View>
             <View>
-              <Text style={styles.titleText}>Confirm Code</Text>
+              <Text style={styles.titleText}>
+                {t('team.confirm_code.title')}
+              </Text>
               <Text style={styles.noteText}>
-                Please enter the confirmation code you have received on your
-                phone.
+                {t('team.confirm_code.description')}
               </Text>
               <View
                 style={styles.controlWrapper}
@@ -65,10 +73,12 @@ export const ConfirmPhoneCode = memo(() => {
                 onTouchEnd={e => e.stopPropagation()}>
                 <CommonInput
                   icon={<TicketIconSvg />}
-                  placeholder={'Enter the code'}
+                  placeholder={t('team.confirm_code.placeholder')}
                 />
                 <TouchableOpacity style={styles.button} onPress={() => {}}>
-                  <Text style={styles.buttonText}>Confirm your code now</Text>
+                  <Text style={styles.buttonText}>
+                    {t('team.confirm_code.button')}
+                  </Text>
                 </TouchableOpacity>
               </View>
             </View>
@@ -86,10 +96,6 @@ const styles = StyleSheet.create({
   },
   card: {
     marginTop: rem(80),
-    borderTopLeftRadius: rem(20),
-    borderTopRightRadius: rem(20),
-    backgroundColor: COLORS.white,
-    flex: 1,
   },
   avatar: {
     position: 'absolute',

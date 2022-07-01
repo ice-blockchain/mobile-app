@@ -6,6 +6,7 @@ import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
 import {COLORS} from '@constants/colors';
 import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
+import {commonStyles} from '@constants/styles';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
@@ -14,6 +15,7 @@ import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {ProfileTabStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {t} from '@translations/i18n';
 import React, {memo, useRef, useState} from 'react';
 import {
   Image,
@@ -48,11 +50,16 @@ export const ConfirmNewPhone = memo(() => {
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <Header
           color={COLORS.white}
-          title={'Personal Information'}
+          title={t('personal_information.title')}
           titlePreset={'small'}
           renderRightButtons={LangButton}
         />
-        <View style={[styles.card, bottomOffset.current]}>
+        <View
+          style={[
+            styles.card,
+            commonStyles.baseSubScreen,
+            bottomOffset.current,
+          ]}>
           <Avatar
             showPen
             uri="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo="
@@ -67,10 +74,11 @@ export const ConfirmNewPhone = memo(() => {
               />
             </View>
             <View>
-              <Text style={styles.titleText}>Confirm New Phone</Text>
+              <Text style={styles.titleText}>
+                {t('settings.confirm_phone.title')}
+              </Text>
               <Text style={styles.noteText}>
-                Please confirm your country code and enter your new phone
-                number.
+                {t('settings.confirm_phone.description')}
               </Text>
               <View
                 style={styles.controlWrapper}
@@ -98,7 +106,7 @@ export const ConfirmNewPhone = memo(() => {
                   style={styles.button}
                   onPress={() => navigation.navigate('ConfirmPhoneCode')}>
                   <Text style={styles.buttonText}>
-                    Confirm new phone number
+                    {t('settings.confirm_phone.button')}
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -117,10 +125,6 @@ const styles = StyleSheet.create({
   },
   card: {
     marginTop: rem(80),
-    borderTopLeftRadius: rem(20),
-    borderTopRightRadius: rem(20),
-    backgroundColor: COLORS.white,
-    flex: 1,
   },
   avatar: {
     position: 'absolute',

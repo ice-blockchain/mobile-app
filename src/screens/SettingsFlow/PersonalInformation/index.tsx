@@ -17,6 +17,7 @@ import {ListControlCountry} from '@screens/SettingsFlow/PersonalInformation/comp
 import {ListControlInput} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlInput';
 import {SaveButton} from '@screens/SettingsFlow/PersonalInformation/components/SaveButton';
 import {useKeyboardAnimatedStyles} from '@screens/SettingsFlow/PersonalInformation/hooks/useKeyboardAnimatedStyles';
+import {t} from '@translations/i18n';
 import React, {memo, useCallback, useState} from 'react';
 import {
   Keyboard,
@@ -64,7 +65,7 @@ export const PersonalInformation = memo(() => {
       <View style={styles.container}>
         <Header
           color={COLORS.white}
-          title={'Personal Information'}
+          title={t('personal_information.title')}
           titlePreset={'small'}
           renderRightButtons={LangButton}
         />
@@ -92,34 +93,34 @@ export const PersonalInformation = memo(() => {
                 )
               }
               <ListControlInput
-                label="First name"
+                label={t('personal_information.first_name')}
                 textContentType="name"
                 defaultValue={mockUserData.name}
                 onChangeText={onChangeSomething}
               />
               <ListControlSeparator />
               <ListControlInput
-                label="Last name"
+                label={t('personal_information.last_name')}
                 textContentType="familyName"
                 defaultValue={mockUserData.surname}
                 onChangeText={onChangeSomething}
               />
               <ListControlSeparator />
               <ListControlAction
-                label="Phone"
-                action="CHANGE"
+                label={t('personal_information.phone')}
+                action={t('buttons.change').toUpperCase()}
                 value={'+1 0712 345 678'}
                 onPress={onChangePhonePress}
               />
               <ListControlSeparator />
               <ListControlCountry
-                label="Country"
+                label={t('personal_information.country')}
                 selectedCountry={selectedCountry}
                 onCountrySelect={onCountrySelect}
               />
               <ListControlSeparator />
               <ListControlInput
-                label="City"
+                label={t('personal_information.city')}
                 textContentType="addressCity"
                 defaultValue={mockUserData.city}
                 onChangeText={onChangeSomething}

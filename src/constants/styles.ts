@@ -7,6 +7,12 @@ import {rem} from 'rn-units';
 export const SCREEN_SIDE_OFFSET = rem(23);
 
 export const commonStyles = StyleSheet.create({
+  baseSubScreen: {
+    backgroundColor: COLORS.white,
+    borderTopLeftRadius: rem(20),
+    borderTopRightRadius: rem(20),
+    flexGrow: 1,
+  },
   shadow: {
     shadowColor: COLORS.mariner,
     shadowOffset: {
