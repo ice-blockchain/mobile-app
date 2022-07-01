@@ -13,7 +13,6 @@ export function* rootPermissionsSaga() {
       PermissionsActions.GET_CONTACTS_PERMISSIONS.START.type,
       getContactsPermissionsSaga,
     ),
-    takeLatest(AppCommonActions.APP_LOADED.STATE.type, checkAllPermissionsSaga),
     takeLatest(
       AppCommonActions.APP_STATE_CHANGE.STATE.type,
       checkAllPermissionsSaga,

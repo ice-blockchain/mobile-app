@@ -4,7 +4,7 @@ import {PrimaryButton} from '@components/PrimaryButton';
 import {Text} from '@components/Text';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
-import {RATIO} from '@constants/styles';
+import {RATIO, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {TierType} from '@screens/Team/components/Tier';
 import {InviteTierTwoIcon} from '@svg/InviteTierTwoIcon';
 import {t} from '@translations/i18n';
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     fontSize: font(14 * RATIO),
     fontFamily: FONTS.primary.regular,
     textAlign: 'center',
-    marginHorizontal: rem(24),
+    marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(20 * RATIO),
     lineHeight: font(24 * RATIO),
   },

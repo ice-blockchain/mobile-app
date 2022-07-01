@@ -3,7 +3,7 @@
 import {PrimaryButton} from '@components/PrimaryButton';
 import {Text} from '@components/Text';
 import {FONTS} from '@constants/fonts';
-import {RATIO} from '@constants/styles';
+import {RATIO, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {t} from '@translations/i18n';
 import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
@@ -49,14 +49,14 @@ const styles = StyleSheet.create({
     fontSize: font(24 * RATIO),
     fontFamily: FONTS.primary.black,
     textAlign: 'center',
-    marginHorizontal: rem(24),
+    marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(2),
   },
   description: {
     fontSize: font(14 * RATIO),
     fontFamily: FONTS.primary.regular,
     textAlign: 'center',
-    marginHorizontal: rem(24),
+    marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(7 * RATIO),
     lineHeight: rem(24 * RATIO),
   },

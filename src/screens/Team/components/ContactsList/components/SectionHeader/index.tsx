@@ -23,10 +23,10 @@ const IceFriendsHeader = () => {
 export const SectionHeader = ({section}: {section: {title: string}}) => {
   return (
     <View style={styles.titleContainer}>
-      {section.title === t('team.contacts_list.all_contacts') ? (
-        <Text style={styles.title}>{section.title}</Text>
-      ) : (
+      {section.title === 'iceFriends' ? (
         <IceFriendsHeader />
+      ) : (
+        <Text style={styles.title}>{section.title}</Text>
       )}
     </View>
   );

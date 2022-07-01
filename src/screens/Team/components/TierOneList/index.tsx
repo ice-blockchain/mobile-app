@@ -18,7 +18,7 @@ import {getRandomColor} from '@utils/getRandomColor';
 import React, {useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import {useSelector} from 'react-redux';
-import {rem} from 'rn-units';
+import {rem, screenWidth} from 'rn-units';
 
 interface TierOneListProps {}
 
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: SCREEN_SIDE_OFFSET,
   },
   flatListStyle: {
-    width: '100%',
+    width: screenWidth - rem(48),
     marginTop: 22,
   },
   activityIndicatorContainer: {

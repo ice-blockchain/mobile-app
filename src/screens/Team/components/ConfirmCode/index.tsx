@@ -3,7 +3,7 @@
 import {CommonInput} from '@components/CommonInput';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {FONTS} from '@constants/fonts';
-import {IS_SMALL_SCREEN, RATIO} from '@constants/styles';
+import {IS_SMALL_SCREEN, RATIO, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {TicketIconSvg} from '@svg/Ticket';
 import {t} from '@translations/i18n';
 import React, {useState} from 'react';
@@ -67,14 +67,14 @@ const styles = StyleSheet.create({
     fontSize: font(24 * RATIO),
     fontFamily: FONTS.primary.black,
     textAlign: 'center',
-    marginHorizontal: rem(24),
+    marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(2 * RATIO),
   },
   description: {
     fontSize: font(14 * RATIO),
     fontFamily: FONTS.primary.regular,
     textAlign: 'center',
-    marginHorizontal: rem(24),
+    marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(7 * RATIO),
     lineHeight: rem(24 * RATIO),
   },

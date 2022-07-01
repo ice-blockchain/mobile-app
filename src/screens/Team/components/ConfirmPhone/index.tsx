@@ -5,7 +5,7 @@ import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
-import {IS_SMALL_SCREEN, RATIO} from '@constants/styles';
+import {IS_SMALL_SCREEN, RATIO, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {t} from '@translations/i18n';
 import React, {useState} from 'react';
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     fontSize: font(24 * RATIO),
     fontFamily: FONTS.primary.black,
     textAlign: 'center',
-    marginHorizontal: rem(24),
+    marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(2),
   },
   description: {

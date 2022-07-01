@@ -20,7 +20,7 @@ import {WhiteLogoSvg} from '@svg/WhiteLogo';
 import React from 'react';
 import {SectionList, StyleSheet, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import {font, rem} from 'rn-units';
+import {font, rem, screenWidth} from 'rn-units';
 
 interface ContactsListProps {}
 
@@ -112,8 +112,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: SCREEN_SIDE_OFFSET,
   },
   sectionListStyle: {
-    width: '100%',
-    marginTop: 22,
+    width: screenWidth - rem(48),
+    marginTop: rem(22),
   },
   inviteButtonContainer: {
     marginHorizontal: 0,

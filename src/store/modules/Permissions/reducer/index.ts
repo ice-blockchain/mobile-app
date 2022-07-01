@@ -1,12 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   PermissionsActions,
   PermissionTypes,
 } from '@store/modules/Permissions/actions';
 import produce from 'immer';
-import {persistReducer} from 'redux-persist';
 
 export interface State {
   contacts: PermissionTypes | null;
@@ -21,7 +19,10 @@ const INITIAL_STATE: State = {
   contacts: null,
 };
 
-function reducer(state = INITIAL_STATE, action: Actions): State {
+export function permissionsReducer(
+  state = INITIAL_STATE,
+  action: Actions,
+): State {
   return produce(state, draft => {
     switch (action.type) {
       case PermissionsActions.GET_CONTACTS_PERMISSIONS.SUCCESS.type:
@@ -33,11 +34,3 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
     }
   });
 }
-
-const persistConfig = {
-  key: 'permissions',
-  storage: AsyncStorage,
-  timeout: 120000,
-};
-
-export const permissionsReducer = persistReducer(persistConfig, reducer);

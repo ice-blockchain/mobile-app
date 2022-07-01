@@ -9,21 +9,15 @@ import {
 } from '@store/modules/Team/selectors';
 import {t} from '@translations/i18n';
 import {getRandomColor} from '@utils/getRandomColor';
-import {useEffect} from 'react';
+import {useCallback, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
 export const useGetContacts = () => {
   const iceFriends = useSelector(getIceFriendsSelector);
   const contactsIds = useSelector(getContactsIdsSelector);
   const dispatch = useDispatch();
-  useEffect(() => {
-    if (!contactsIds.length) {
-      getContactList();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
-  const getContactList = async () => {
+  const getContactList = useCallback(async () => {
     const contactsList = await getContacts();
 
     const contactsByIds: ContactById = {};
@@ -40,7 +34,13 @@ export const useGetContacts = () => {
 
     dispatch(TeamActions.SET_CONTACTS_BY_IDS.STATE.create(contactsByIds));
     dispatch(TeamActions.SET_CONTACTS_IDS.STATE.create(contactIds));
-  };
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (!contactsIds.length) {
+      getContactList();
+    }
+  }, [contactsIds.length, getContactList]);
 
   const sections = [
     {
@@ -51,12 +51,12 @@ export const useGetContacts = () => {
 
   if (iceFriends.length) {
     sections.unshift({
-      title: 'ice friends',
+      title: 'iceFriends',
       data: iceFriends,
     });
   } else {
     sections.unshift({
-      title: 'ice friends',
+      title: 'iceFriends',
       data: ['InviteFriendsButton'],
     });
   }

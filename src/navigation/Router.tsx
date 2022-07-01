@@ -4,6 +4,7 @@ import {Initialization} from '@components/Initialization';
 import {theme} from '@navigation/theme';
 import {NavigationContainer} from '@react-navigation/native';
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
+import {useAppStateListener} from '@store/modules/AppCommon/hooks/useAppStateListener';
 import {
   isInitializedSelector,
   isWelcomeSeenSelector,
@@ -45,6 +46,8 @@ export function Router() {
       }
     });
   };
+
+  useAppStateListener();
 
   return (
     <NavigationContainer onReady={initializeDynamicLinks} theme={theme}>
