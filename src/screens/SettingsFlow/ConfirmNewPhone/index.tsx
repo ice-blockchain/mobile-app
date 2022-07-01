@@ -11,13 +11,16 @@ import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import React, {memo, useState} from 'react';
+import React, {memo, useRef, useState} from 'react';
 import {
   Image,
+  Keyboard,
   KeyboardAvoidingView,
   Platform,
   StyleSheet,
   Text,
+  TextInput,
+  TouchableWithoutFeedback,
   View,
 } from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -26,65 +29,72 @@ import {font, rem} from 'rn-units';
 export const ConfirmNewPhone = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
+  const phoneNumberInputRef = useRef<TextInput | null>(null);
   const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
-  const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
-    useState(false);
+  const [isCountrySearchVisible, setCountrySearchVisibility] = useState(false);
   const [phone, setPhone] = useState('');
 
   return (
-    <KeyboardAvoidingView
-      style={styles.container}
-      behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-      <Header
-        color={COLORS.white}
-        title={'Personal Information'}
-        titlePreset={'small'}
-        renderRightButtons={LangButton}
-      />
-      <View style={[styles.card, bottomOffset.current]}>
-        <View style={styles.body}>
-          <View style={styles.imageWrapper}>
-            <Image
-              source={Images.phone.confirmPhone}
-              style={styles.image}
-              resizeMode={'contain'}
-            />
-          </View>
-          <View>
-            <Text style={styles.titleText}>Confirm New Phone</Text>
-            <Text style={styles.noteText}>
-              Please confirm your country code and enter your new phone number.
-            </Text>
-            <View style={styles.controlWrapper}>
-              <PhoneNumberInput
-                selectedCountry={selectedCountry}
-                showCountryCodeSearch={() =>
-                  setCountryCodeSearchVisibility(true)
-                }
-                value={phone}
-                onValueChange={setPhone}
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+      <KeyboardAvoidingView
+        style={styles.container}
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+        <Header
+          color={COLORS.white}
+          title={'Personal Information'}
+          titlePreset={'small'}
+          renderRightButtons={LangButton}
+        />
+        <View style={[styles.card, bottomOffset.current]}>
+          <Avatar
+            showPen
+            uri="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo="
+            style={styles.avatar}
+          />
+          <View style={styles.body}>
+            <View style={styles.imageWrapper}>
+              <Image
+                source={Images.phone.confirmPhone}
+                style={styles.image}
+                resizeMode={'contain'}
               />
-              {isCountryCodeSearchVisible && (
-                <PhoneNumberSearch
-                  containerStyle={styles.phoneNumberSearch}
+            </View>
+            <View>
+              <Text style={styles.titleText}>Confirm New Phone</Text>
+              <Text style={styles.noteText}>
+                Please confirm your country code and enter your new phone
+                number.
+              </Text>
+              <View style={styles.controlWrapper}>
+                <PhoneNumberInput
                   selectedCountry={selectedCountry}
-                  close={() => setCountryCodeSearchVisibility(false)}
-                  setCountryCode={setSelectedCountry}
+                  showCountryCodeSearch={() => setCountrySearchVisibility(true)}
+                  value={phone}
+                  onValueChange={setPhone}
+                  ref={phoneNumberInputRef}
                 />
-              )}
-              <TouchableOpacity style={styles.button} onPress={() => {}}>
-                <Text style={styles.buttonText}>Confirm new phone number</Text>
-              </TouchableOpacity>
+                {isCountrySearchVisible && (
+                  <PhoneNumberSearch
+                    containerStyle={styles.phoneNumberSearch}
+                    selectedCountry={selectedCountry}
+                    close={() => setCountrySearchVisibility(false)}
+                    setCountryCode={c => {
+                      phoneNumberInputRef.current?.focus();
+                      setSelectedCountry(c);
+                    }}
+                  />
+                )}
+                <TouchableOpacity style={styles.button} onPress={() => {}}>
+                  <Text style={styles.buttonText}>
+                    Confirm new phone number
+                  </Text>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
         </View>
-        <Avatar
-          showPen
-          uri="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo="
-          style={styles.avatar}
-        />
-      </View>
-    </KeyboardAvoidingView>
+      </KeyboardAvoidingView>
+    </TouchableWithoutFeedback>
   );
 });
 

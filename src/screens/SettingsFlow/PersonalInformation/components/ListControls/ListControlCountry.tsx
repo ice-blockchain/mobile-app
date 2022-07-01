@@ -16,21 +16,20 @@ type Props = {
 
 export const ListControlCountry = memo(({label}: Props) => {
   const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
-  const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
-    useState(false);
+  const [isCountrySearchVisible, setCountrySearchVisibility] = useState(false);
 
   return (
     <>
-      <TouchableOpacity onPress={() => setCountryCodeSearchVisibility(true)}>
+      <TouchableOpacity onPress={() => setCountrySearchVisibility(true)}>
         <ListControlBase label={label}>
           <Text style={styles.countryText}>{selectedCountry.name}</Text>
         </ListControlBase>
       </TouchableOpacity>
-      {isCountryCodeSearchVisible && (
+      {isCountrySearchVisible && (
         <PhoneNumberSearch
           containerStyle={styles.countrySearch}
           selectedCountry={selectedCountry}
-          close={() => setCountryCodeSearchVisibility(false)}
+          close={() => setCountrySearchVisibility(false)}
           setCountryCode={setSelectedCountry}
           headerStyle={styles.searchHeader}
           showCode={false}
