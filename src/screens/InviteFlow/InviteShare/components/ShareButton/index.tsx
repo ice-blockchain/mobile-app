@@ -6,7 +6,7 @@ import {t} from '@translations/i18n';
 import React from 'react';
 import {Image, StyleSheet, Text} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-// import Share from 'react-native-share';
+import Share, {ShareSingleOptions, Social} from 'react-native-share';
 import {font, rem, screenWidth} from 'rn-units';
 
 const BUTTON_LEFT_OFFSET = 32;
@@ -26,7 +26,7 @@ export type SocialShareButtonType = {
   type: SocialType;
   title: string;
   icon: number;
-  social?: string;
+  social?: Social;
 };
 
 interface ShareButtonProps {
@@ -34,17 +34,52 @@ interface ShareButtonProps {
 }
 export const ShareButton = ({button}: ShareButtonProps) => {
   const onButtonClick = async () => {
-    if (button.type === 'More') {
-    } else if (button.type === 'CopyLink') {
-    } else {
-      //   const shareOptions = {
-      //     title: 'Share via',
-      //     message: 'some message',
-      //     url: 'some share url',
-      //     appId: '',
-      //     social: button.social || '',
-      //   };
-      //   await Share.shareSingle(shareOptions);
+    const baseOptions = {
+      message: 'Invitation link:',
+      url: 'https://www.google.com/',
+    };
+    switch (button.type) {
+      case 'More':
+        break;
+      case 'CopyLink':
+        break;
+      case 'Telegram':
+        let telegramOptions: ShareSingleOptions = {
+          message: 'Invitation link: https://www.google.com/',
+          social: Social.Telegram,
+        };
+        await Share.shareSingle(telegramOptions);
+        break;
+      case 'Twitter':
+        let twitterOptions: ShareSingleOptions = {
+          ...baseOptions,
+          social: Social.Twitter,
+        };
+        await Share.shareSingle(twitterOptions);
+        break;
+      case 'WhatsApp':
+        let whatsappOptions: ShareSingleOptions = {
+          ...baseOptions,
+          social: Social.Whatsapp,
+        };
+        await Share.shareSingle(whatsappOptions);
+        break;
+      case 'Email':
+        let emailOptions: ShareSingleOptions = {
+          ...baseOptions,
+          social: Social.Email,
+        };
+        await Share.shareSingle(emailOptions);
+        break;
+      case 'FB':
+        let fbOptions: ShareSingleOptions = {
+          ...baseOptions,
+          social: Social.Facebook,
+        };
+        await Share.shareSingle(fbOptions);
+        break;
+      default:
+        break;
     }
   };
 

@@ -24,31 +24,26 @@ const buttons: SocialShareButtonType[] = [
     type: 'Telegram',
     title: 'invite_share.telegram',
     icon: telegramIcon,
-    social: Share.Social.TELEGRAM,
   },
   {
     type: 'Twitter',
     title: 'invite_share.twitter',
     icon: twitterIcon,
-    social: Share.Social.TWITTER,
   },
   {
     type: 'WhatsApp',
     title: 'invite_share.whatsapp',
     icon: whatsAppIcon,
-    social: Share.Social.WHATSAPP,
   },
   {
     type: 'Instagram',
     title: 'invite_share.instagram',
     icon: instagramIcon,
-    social: Share.Social.INSTAGRAM,
   },
   {
     type: 'Email',
     title: 'invite_share.email',
     icon: emailIcon,
-    social: Share.Social.EMAIL,
   },
   {
     type: 'FB',
@@ -73,7 +68,7 @@ const ShareCard = () => {
     <View style={styles.card}>
       <View style={styles.buttonsContainer}>
         {buttons.map(button => (
-          <ShareButton button={button} />
+          <ShareButton button={button} key={button.type} />
         ))}
       </View>
     </View>
