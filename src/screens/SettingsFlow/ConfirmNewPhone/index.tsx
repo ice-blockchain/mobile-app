@@ -65,7 +65,10 @@ export const ConfirmNewPhone = memo(() => {
                 Please confirm your country code and enter your new phone
                 number.
               </Text>
-              <View style={styles.controlWrapper}>
+              <View
+                style={styles.controlWrapper}
+                onStartShouldSetResponder={_ => true}
+                onTouchEnd={e => e.stopPropagation()}>
                 <PhoneNumberInput
                   selectedCountry={selectedCountry}
                   showCountryCodeSearch={() => setCountrySearchVisibility(true)}

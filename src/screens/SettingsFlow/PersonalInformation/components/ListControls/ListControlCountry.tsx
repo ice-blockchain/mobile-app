@@ -2,7 +2,7 @@
 
 import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
 import {COLORS} from '@constants/colors';
-import {countriesCode} from '@constants/countries';
+import {ICountryCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
 import {ListControlBase} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlBase';
 import React, {memo, useState} from 'react';
@@ -12,38 +12,42 @@ import {font, rem} from 'rn-units';
 
 type Props = {
   label: string;
+  selectedCountry: ICountryCode;
+  onCountrySelect: (country: ICountryCode) => void;
 };
 
-export const ListControlCountry = memo(({label}: Props) => {
-  const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
-  const [isCountrySearchVisible, setCountrySearchVisibility] = useState(false);
+export const ListControlCountry = memo(
+  ({label, selectedCountry, onCountrySelect}: Props) => {
+    const [isCountrySearchVisible, setCountrySearchVisibility] =
+      useState(false);
 
-  return (
-    <>
-      <TouchableOpacity onPress={() => setCountrySearchVisibility(true)}>
-        <ListControlBase label={label}>
-          <Text style={styles.countryText}>{selectedCountry.name}</Text>
-        </ListControlBase>
-      </TouchableOpacity>
-      {isCountrySearchVisible && (
-        <PhoneNumberSearch
-          containerStyle={styles.countrySearch}
-          selectedCountry={selectedCountry}
-          close={() => setCountrySearchVisibility(false)}
-          setCountryCode={setSelectedCountry}
-          headerStyle={styles.searchHeader}
-          showCode={false}
-        />
-      )}
-    </>
-  );
-});
+    return (
+      <>
+        <TouchableOpacity onPress={() => setCountrySearchVisibility(true)}>
+          <ListControlBase label={label}>
+            <Text style={styles.countryText}>{selectedCountry.name}</Text>
+          </ListControlBase>
+        </TouchableOpacity>
+        {isCountrySearchVisible && (
+          <PhoneNumberSearch
+            containerStyle={styles.countrySearch}
+            selectedCountry={selectedCountry}
+            close={() => setCountrySearchVisibility(false)}
+            setCountryCode={onCountrySelect}
+            headerStyle={styles.searchHeader}
+            showCode={false}
+          />
+        )}
+      </>
+    );
+  },
+);
 
 const styles = StyleSheet.create({
   countryText: {
     color: COLORS.greyText,
     fontFamily: FONTS.primary.bold,
-    fontSize: font(12),
+    fontSize: font(14),
     alignSelf: 'center',
   },
   countrySearch: {

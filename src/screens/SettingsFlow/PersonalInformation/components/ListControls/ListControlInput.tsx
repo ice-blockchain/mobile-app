@@ -27,8 +27,10 @@ const styles = StyleSheet.create({
   input: {
     color: COLORS.greyText,
     fontFamily: FONTS.primary.bold,
-    fontSize: font(12),
-    lineHeight: font(16),
+    fontSize: font(14),
     paddingLeft: 0,
+    paddingTop: 0,
+    paddingBottom: 0,
+    flex: 1,
   },
 });

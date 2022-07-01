@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   valueText: {
     color: COLORS.greyText,
     fontFamily: FONTS.primary.bold,
-    fontSize: font(12),
+    fontSize: font(14),
     flex: 1,
   },
   actionText: {

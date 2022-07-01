@@ -2,7 +2,7 @@
 
 import {Avatar} from '@components/Avatar';
 import {COLORS} from '@constants/colors';
-import {FONTS} from '@constants/fonts';
+import {countriesCode, ICountryCode} from '@constants/countries';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
@@ -15,22 +15,30 @@ import {ListControlAction} from '@screens/SettingsFlow/PersonalInformation/compo
 import {ListControlSeparator} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlBase';
 import {ListControlCountry} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlCountry';
 import {ListControlInput} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlInput';
+import {SaveButton} from '@screens/SettingsFlow/PersonalInformation/components/SaveButton';
 import {useKeyboardAnimatedStyles} from '@screens/SettingsFlow/PersonalInformation/hooks/useKeyboardAnimatedStyles';
-import React, {memo, useCallback} from 'react';
+import React, {memo, useCallback, useState} from 'react';
 import {
   Keyboard,
   StyleSheet,
-  Text,
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 import Animated from 'react-native-reanimated';
-import {font, rem} from 'rn-units';
+import {rem} from 'rn-units';
+
+const mockUserData = {
+  name: 'Johnny Alexander',
+  surname: 'Smithsonian',
+  country: countriesCode[0],
+  city: 'Beverly Hills',
+};
 
 export const PersonalInformation = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
+  const [hasChanges, setHasChanges] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
   const navigation =
     useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
 
@@ -38,6 +46,15 @@ export const PersonalInformation = memo(() => {
     () => navigation.navigate('ConfirmNewPhone'),
     [navigation],
   );
+
+  const onCountrySelect = useCallback((country: ICountryCode) => {
+    setSelectedCountry(country);
+    setHasChanges(true);
+  }, []);
+
+  const onChangeSomething = useCallback((_: string) => {
+    setHasChanges(true);
+  }, []);
 
   const {animatedCardStyle, animatedAvatarStyle, animatedBodyStyle} =
     useKeyboardAnimatedStyles();
@@ -65,23 +82,27 @@ export const PersonalInformation = memo(() => {
               style={styles.bodyInner}
               onStartShouldSetResponder={_ => true}
               onTouchEnd={e => e.stopPropagation()}>
-              <View style={styles.buttonPosition}>
-                <TouchableOpacity onPress={() => {}}>
-                  <View style={styles.button}>
-                    <Text style={styles.buttonText}>Save</Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
+              {
+                // place button here with absolute positioning so it'd be underneath phone country select
+                hasChanges && (
+                  <SaveButton
+                    style={styles.buttonPosition}
+                    onPress={() => {}}
+                  />
+                )
+              }
               <ListControlInput
                 label="First name"
                 textContentType="name"
-                defaultValue="Johnny Alexander"
+                defaultValue={mockUserData.name}
+                onChangeText={onChangeSomething}
               />
               <ListControlSeparator />
               <ListControlInput
                 label="Last name"
                 textContentType="familyName"
-                defaultValue="Smithsonian"
+                defaultValue={mockUserData.surname}
+                onChangeText={onChangeSomething}
               />
               <ListControlSeparator />
               <ListControlAction
@@ -91,12 +112,17 @@ export const PersonalInformation = memo(() => {
                 onPress={onChangePhonePress}
               />
               <ListControlSeparator />
-              <ListControlCountry label="Country" />
+              <ListControlCountry
+                label="Country"
+                selectedCountry={selectedCountry}
+                onCountrySelect={onCountrySelect}
+              />
               <ListControlSeparator />
               <ListControlInput
                 label="City"
                 textContentType="addressCity"
-                defaultValue="Beverly Hills"
+                defaultValue={mockUserData.city}
+                onChangeText={onChangeSomething}
               />
             </View>
           </Animated.View>
@@ -136,18 +162,5 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 0,
     bottom: -rem(60),
-  },
-  button: {
-    height: rem(40),
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: rem(33),
-    backgroundColor: COLORS.primary,
-    borderRadius: rem(11),
-  },
-  buttonText: {
-    fontFamily: FONTS.primary.black,
-    fontSize: font(14),
-    color: COLORS.white,
   },
 });

@@ -29,11 +29,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   labelText: {
-    width: '25%',
+    width: '28%',
     color: COLORS.darkBlue,
     fontFamily: FONTS.primary.bold,
-    fontSize: font(12),
-    lineHeight: font(14),
+    fontSize: font(14),
     marginLeft: rem(28),
     marginRight: rem(6),
   },
