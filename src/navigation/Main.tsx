@@ -14,6 +14,7 @@ import {MyBadges} from '@screens/ProfileFlow/MyBadges';
 import {MyRoles} from '@screens/ProfileFlow/MyRoles';
 import {Profile} from '@screens/ProfileFlow/Profile';
 import {ConfirmNewPhone} from '@screens/SettingsFlow/ConfirmNewPhone';
+import {ConfirmPhoneCode} from '@screens/SettingsFlow/ConfirmPhoneCode';
 import {PersonalInformation} from '@screens/SettingsFlow/PersonalInformation';
 import {Settings} from '@screens/SettingsFlow/Settings';
 import {Team} from '@screens/Team';
@@ -55,6 +56,7 @@ export type ProfileTabStackParamList = {
   Settings: undefined;
   PersonalInformation: undefined;
   ConfirmNewPhone: undefined;
+  ConfirmPhoneCode: undefined;
 };
 
 const Tabs = createBottomTabNavigator<MainTabsParamList>();
@@ -125,6 +127,10 @@ const ProfileTabStackNavigator = () => (
     <ProfileTabStack.Screen
       name="ConfirmNewPhone"
       component={ConfirmNewPhone}
+    />
+    <ProfileTabStack.Screen
+      name="ConfirmPhoneCode"
+      component={ConfirmPhoneCode}
     />
   </ProfileTabStack.Navigator>
 );

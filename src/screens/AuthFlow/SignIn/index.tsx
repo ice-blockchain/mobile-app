@@ -162,7 +162,6 @@ export const SignIn = ({navigation}: Props) => {
                 onChangeText={onChangeEmail}
                 value={email}
                 placeholder={translate('signIn.emailAddress')}
-                placeholderColor={COLORS.greyBorder}
                 containerStyle={styles.input}
                 keyboardType={'email-address'}
                 autoCapitalize={'none'}
@@ -226,6 +225,7 @@ const styles = StyleSheet.create({
   },
   input: {
     marginBottom: rem(21),
+    width: rem(247),
   },
   logo: {
     marginBottom: rem(59),

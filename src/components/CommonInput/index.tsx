@@ -4,7 +4,6 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import React, {ReactNode} from 'react';
 import {
-  KeyboardTypeOptions,
   StyleProp,
   StyleSheet,
   Text,
@@ -16,24 +15,15 @@ import {ViewStyle} from 'react-native';
 import {font, rem} from 'rn-units';
 
 interface CommonInputProps extends TextInputProps {
-  onChangeText: (description: string) => void;
-  icon: ReactNode;
-  value: string;
-  placeholder: string;
-  placeholderColor?: string;
+  icon?: ReactNode;
   containerStyle?: StyleProp<ViewStyle>;
   errorText?: string;
-  keyboardType?: KeyboardTypeOptions;
 }
 
 export const CommonInput = ({
-  onChangeText,
   icon,
-  value,
-  placeholder,
   containerStyle,
   errorText,
-  keyboardType,
   ...props
 }: CommonInputProps) => {
   return (
@@ -46,12 +36,9 @@ export const CommonInput = ({
       {icon || null}
       <View style={styles.inputWrapper}>
         <TextInput
-          onChangeText={onChangeText}
-          value={value}
-          placeholder={placeholder}
           style={styles.input}
-          keyboardType={keyboardType}
           autoCapitalize="none"
+          placeholderTextColor={COLORS.greyBorder}
           {...props}
         />
         {errorText ? <Text style={styles.errorText}>{errorText}</Text> : null}
@@ -63,7 +50,6 @@ export const CommonInput = ({
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    width: rem(247),
     paddingHorizontal: rem(13),
     alignItems: 'center',
     borderRadius: rem(13),

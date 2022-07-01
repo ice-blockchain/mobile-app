@@ -111,6 +111,7 @@ const styles = StyleSheet.create({
   },
   input: {
     marginTop: rem(30),
+    width: rem(247),
   },
   dontHaveCodeContainer: {
     flexDirection: 'row',

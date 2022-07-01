@@ -1,20 +1,16 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Avatar} from '@components/Avatar';
-import {PhoneNumberInput} from '@components/PhoneNumberInput';
-import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
+import {CommonInput} from '@components/CommonInput';
 import {COLORS} from '@constants/colors';
-import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {ProfileTabStackParamList} from '@navigation/Main';
-import {useNavigation} from '@react-navigation/native';
-import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import React, {memo, useRef, useState} from 'react';
+import {TicketIconSvg} from '@svg/Ticket';
+import React, {memo} from 'react';
 import {
   Image,
   Keyboard,
@@ -22,24 +18,15 @@ import {
   Platform,
   StyleSheet,
   Text,
-  TextInput,
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {font, rem} from 'rn-units';
 
-export const ConfirmNewPhone = memo(() => {
+export const ConfirmPhoneCode = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
-  const navigation =
-    useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
-
-  const phoneNumberInputRef = useRef<TextInput | null>(null);
-
-  const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
-  const [isCountrySearchVisible, setCountrySearchVisibility] = useState(false);
-  const [phone, setPhone] = useState('');
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -67,39 +54,21 @@ export const ConfirmNewPhone = memo(() => {
               />
             </View>
             <View>
-              <Text style={styles.titleText}>Confirm New Phone</Text>
+              <Text style={styles.titleText}>Confirm Code</Text>
               <Text style={styles.noteText}>
-                Please confirm your country code and enter your new phone
-                number.
+                Please enter the confirmation code you have received on your
+                phone.
               </Text>
               <View
                 style={styles.controlWrapper}
                 onStartShouldSetResponder={_ => true}
                 onTouchEnd={e => e.stopPropagation()}>
-                <PhoneNumberInput
-                  selectedCountry={selectedCountry}
-                  showCountryCodeSearch={() => setCountrySearchVisibility(true)}
-                  value={phone}
-                  onValueChange={setPhone}
-                  ref={phoneNumberInputRef}
+                <CommonInput
+                  icon={<TicketIconSvg />}
+                  placeholder={'Enter the code'}
                 />
-                {isCountrySearchVisible && (
-                  <PhoneNumberSearch
-                    containerStyle={styles.phoneNumberSearch}
-                    selectedCountry={selectedCountry}
-                    close={() => setCountrySearchVisibility(false)}
-                    setCountryCode={c => {
-                      phoneNumberInputRef.current?.focus();
-                      setSelectedCountry(c);
-                    }}
-                  />
-                )}
-                <TouchableOpacity
-                  style={styles.button}
-                  onPress={() => navigation.navigate('ConfirmPhoneCode')}>
-                  <Text style={styles.buttonText}>
-                    Confirm new phone number
-                  </Text>
+                <TouchableOpacity style={styles.button} onPress={() => {}}>
+                  <Text style={styles.buttonText}>Confirm your code now</Text>
                 </TouchableOpacity>
               </View>
             </View>
