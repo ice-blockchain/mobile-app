@@ -1,15 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {getContacts, IContact} from '@services/contacts';
 import {TeamActions} from '@store/modules/Team/actions';
-import {ContactById} from '@store/modules/Team/reducer';
 import {
   getContactsIdsSelector,
   getIceFriendsSelector,
 } from '@store/modules/Team/selectors';
 import {t} from '@translations/i18n';
-import {getRandomColor} from '@utils/getRandomColor';
-import {useCallback, useEffect} from 'react';
+import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
 export const useGetContacts = () => {
@@ -17,30 +14,11 @@ export const useGetContacts = () => {
   const contactsIds = useSelector(getContactsIdsSelector);
   const dispatch = useDispatch();
 
-  const getContactList = useCallback(async () => {
-    const contactsList = await getContacts();
-
-    const contactsByIds: ContactById = {};
-    const contactIds: string[] = [];
-
-    contactsList.forEach((contact: IContact) => {
-      contactsByIds[contact.id] = {
-        ...contact,
-        isActive: false,
-        backgroundColor: getRandomColor(),
-      };
-      contactIds.push(contact.id);
-    });
-
-    dispatch(TeamActions.SET_CONTACTS_BY_IDS.STATE.create(contactsByIds));
-    dispatch(TeamActions.SET_CONTACTS_IDS.STATE.create(contactIds));
-  }, [dispatch]);
-
   useEffect(() => {
     if (!contactsIds.length) {
-      getContactList();
+      dispatch(TeamActions.GET_CONTACTS.START.create());
     }
-  }, [contactsIds.length, getContactList]);
+  }, [contactsIds.length, dispatch]);
 
   const sections = [
     {
