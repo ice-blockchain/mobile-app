@@ -7,6 +7,7 @@ import {rootNewsSaga} from './modules/News/sagas';
 import {rootPermissionsSaga} from './modules/Permissions/sagas';
 import {rootReferralsSaga} from './modules/Referrals/sagas';
 import {rootStatisticsSaga} from './modules/Statistics/sagas';
+import {rootTeamSaga} from './modules/Team/sagas';
 import {rootValidationSaga} from './modules/Validation/sagas';
 
 export function* rootSaga() {
@@ -16,6 +17,7 @@ export function* rootSaga() {
     rootPermissionsSaga,
     rootReferralsSaga,
     rootStatisticsSaga,
+    rootTeamSaga,
     rootValidationSaga,
   ];
   yield all([
