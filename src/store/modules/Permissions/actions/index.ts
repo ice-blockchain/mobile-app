@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {PermissionType} from '@store/modules/Permissions/sagas/getPermissionsSaga';
 import {createAction} from '@store/utils/actions/createAction';
 
 export type PermissionTypes =
@@ -13,8 +14,8 @@ export type PermissionsType = {
   contacts: PermissionTypes;
 };
 
-const GET_CONTACTS_PERMISSIONS = createAction('GET_CONTACTS_PERMISSIONS', {
-  START: true,
+const GET_PERMISSIONS = createAction('GET_PERMISSIONS', {
+  START: (type: PermissionType) => ({type}),
   SUCCESS: (status: PermissionTypes) => ({status}),
   FAILED: (errorMessage: string) => ({
     errorMessage,
@@ -30,6 +31,6 @@ const CHECK_ALL_PERMISSIONS = createAction('CHECK_ALL_PERMISSIONS', {
 });
 
 export const PermissionsActions = Object.freeze({
-  GET_CONTACTS_PERMISSIONS,
+  GET_PERMISSIONS,
   CHECK_ALL_PERMISSIONS,
 });

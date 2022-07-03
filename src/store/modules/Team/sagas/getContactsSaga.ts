@@ -75,8 +75,6 @@ export function* getContactsSaga() {
       contactIds.push(contact.id);
     });
 
-    console.log(contactsByIds, contactIds, contactsList);
-
     yield put(TeamActions.SET_CONTACTS_BY_IDS.STATE.create(contactsByIds));
     yield put(TeamActions.SET_CONTACTS_IDS.STATE.create(contactIds));
     yield put(TeamActions.GET_CONTACTS.SUCCESS.create(contactsList));

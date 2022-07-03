@@ -5,17 +5,18 @@ import {PermissionsActions} from '@store/modules/Permissions/actions';
 import {all, takeLatest} from 'redux-saga/effects';
 
 import {checkAllPermissionsSaga} from './checkAllPermissionsSaga';
-import {getContactsPermissionsSaga} from './getContactsPermissionsSaga';
+import {getPermissionsSaga} from './getPermissionsSaga';
 
 export function* rootPermissionsSaga() {
   yield all([
     takeLatest(
-      PermissionsActions.GET_CONTACTS_PERMISSIONS.START.type,
-      getContactsPermissionsSaga,
+      PermissionsActions.GET_PERMISSIONS.START.type,
+      getPermissionsSaga,
     ),
     takeLatest(
       AppCommonActions.APP_STATE_CHANGE.STATE.type,
       checkAllPermissionsSaga,
     ),
+    takeLatest(AppCommonActions.APP_LOADED.STATE.type, checkAllPermissionsSaga),
   ]);
 }

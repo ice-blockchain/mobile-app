@@ -11,7 +11,7 @@ export interface State {
 }
 
 type Actions = ReturnType<
-  | typeof PermissionsActions.GET_CONTACTS_PERMISSIONS.SUCCESS.create
+  | typeof PermissionsActions.GET_PERMISSIONS.SUCCESS.create
   | typeof PermissionsActions.CHECK_ALL_PERMISSIONS.SUCCESS.create
 >;
 
@@ -25,12 +25,11 @@ export function permissionsReducer(
 ): State {
   return produce(state, draft => {
     switch (action.type) {
-      case PermissionsActions.GET_CONTACTS_PERMISSIONS.SUCCESS.type:
+      case PermissionsActions.GET_PERMISSIONS.SUCCESS.type:
         draft.contacts = action.payload.status;
         break;
       case PermissionsActions.CHECK_ALL_PERMISSIONS.SUCCESS.type:
-        draft = action.payload.permissions;
-        break;
+        return action.payload.permissions;
     }
   });
 }

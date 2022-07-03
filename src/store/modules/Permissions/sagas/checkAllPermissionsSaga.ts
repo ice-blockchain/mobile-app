@@ -1,21 +1,29 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {hasContactsAccessPermission} from '@services/contacts';
-import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
+import {
+  isAppActiveSelector,
+  isAppLoadedSelector,
+} from '@store/modules/AppCommon/selectors';
 import {
   PermissionsActions,
   PermissionTypes,
 } from '@store/modules/Permissions/actions';
+import {PERMISSIONS_LIST} from '@store/modules/Permissions/sagas/getPermissionsSaga';
+import Permissions from 'react-native-permissions';
 import {put, select} from 'redux-saga/effects';
 
 export function* checkAllPermissionsSaga() {
   try {
     const isAppActive: boolean = yield select(isAppActiveSelector);
+    const isAppLoaded: boolean = yield select(isAppLoadedSelector);
 
-    if (isAppActive) {
-      const contacts: PermissionTypes = yield hasContactsAccessPermission();
+    if (isAppActive || isAppLoaded) {
+      const contacts: PermissionTypes = yield Permissions.check(
+        PERMISSIONS_LIST.contacts,
+      );
+
       const permissions = {
-        contacts: contacts,
+        contacts,
       };
       yield put(
         PermissionsActions.CHECK_ALL_PERMISSIONS.SUCCESS.create(permissions),
