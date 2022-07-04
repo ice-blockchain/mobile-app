@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
-import {Images} from '@images';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {translate} from '@translations/i18n';
 import React, {useRef, useState} from 'react';
@@ -14,24 +13,33 @@ import {rem} from 'rn-units';
 import {NavigationPanel} from './components/NavigationPanel';
 import {WelcomeItem} from './components/WelcomeItem';
 
+const images = {
+  welcome1: require('./assets/images/welcome1.png'),
+  welcome2: require('./assets/images/welcome2.png'),
+  welcome3: require('./assets/images/welcome3.png'),
+  welcome4: require('./assets/images/welcome4.png'),
+  welcome5: require('./assets/images/welcome5.png'),
+  welcome6: require('./assets/images/welcome6.png'),
+};
+
 export const Welcome = () => {
   const welcomeScreenData = [
     {
       key: '1',
       title: translate('welcome.page1.title'),
-      image: Images.welcome.welcome1,
+      image: images.welcome1,
       description: [0, 1, translate('welcome.page1.description')],
     },
     {
       key: '2',
       title: translate('welcome.page2.title'),
-      image: Images.welcome.welcome2,
+      image: images.welcome2,
       description: [0, 1, translate('welcome.page2.description')],
     },
     {
       key: '3',
       title: translate('welcome.page3.title'),
-      image: Images.welcome.welcome3,
+      image: images.welcome3,
       description: [
         translate('welcome.page3.description_part1'),
         0,
@@ -42,7 +50,7 @@ export const Welcome = () => {
     {
       key: '4',
       title: translate('welcome.page4.title'),
-      image: Images.welcome.welcome4,
+      image: images.welcome4,
       description: [
         translate('welcome.page4.description_part1'),
         0,
@@ -52,13 +60,13 @@ export const Welcome = () => {
     {
       key: '5',
       title: translate('welcome.page5.title'),
-      image: Images.welcome.welcome5,
+      image: images.welcome5,
       description: [translate('welcome.page5.description')],
     },
     {
       key: '6',
       title: translate('welcome.page6.title'),
-      image: Images.welcome.welcome6,
+      image: images.welcome6,
       description: [0, 1, translate('welcome.page6.description')],
     },
   ];
