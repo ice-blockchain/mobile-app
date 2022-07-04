@@ -6,7 +6,6 @@ import {PermissionsActions} from '@store/modules/Permissions/actions';
 import {TeamActions} from '@store/modules/Team/actions';
 import {IFormattedContact} from '@store/modules/Team/sagas/getContactsSaga';
 import produce from 'immer';
-import {RESULTS} from 'react-native-permissions';
 import {persistReducer} from 'redux-persist';
 
 export interface ContactById {
@@ -15,18 +14,11 @@ export interface ContactById {
     backgroundColor: string;
   };
 }
-
-type TContactsFlow =
-  | 'ContactsPermissions'
-  | 'ConfirmPhone'
-  | 'ConfirmCode'
-  | 'ContactsList';
 export interface State {
   isPhoneNumberVerified: boolean;
   iceFriends: string[];
   contactsByIds: ContactById;
   contactsIds: string[];
-  contactScreenState: TContactsFlow;
 }
 
 type Actions = ReturnType<
@@ -42,20 +34,11 @@ const INITIAL_STATE: State = {
   iceFriends: [],
   contactsByIds: {},
   contactsIds: [],
-  contactScreenState: 'ContactsPermissions',
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
-      case PermissionsActions.GET_PERMISSIONS.SUCCESS.type: {
-        const activeScreen =
-          action.payload.status === RESULTS.GRANTED
-            ? 'ConfirmPhone'
-            : 'ContactsPermissions';
-        draft.contactScreenState = activeScreen;
-        break;
-      }
       case TeamActions.SET_CONTACTS_BY_IDS.STATE.type: {
         draft.contactsByIds = action.payload.contactsByIds;
         break;
