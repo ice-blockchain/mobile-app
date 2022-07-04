@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Avatar} from '@components/Avatar';
+import {KeyboardDismiss, stopPropagination} from '@components/KeyboardDismiss';
 import {COLORS} from '@constants/colors';
 import {countriesCode, ICountryCode} from '@constants/countries';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
@@ -19,12 +20,7 @@ import {SaveButton} from '@screens/SettingsFlow/PersonalInformation/components/S
 import {useKeyboardAnimatedStyles} from '@screens/SettingsFlow/PersonalInformation/hooks/useKeyboardAnimatedStyles';
 import {t} from '@translations/i18n';
 import React, {memo, useCallback, useState} from 'react';
-import {
-  Keyboard,
-  StyleSheet,
-  TouchableWithoutFeedback,
-  View,
-} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
@@ -63,12 +59,7 @@ export const PersonalInformation = memo(() => {
     useKeyboardAnimatedStyles();
 
   return (
-    <TouchableWithoutFeedback
-      onPress={() => {
-        Keyboard.dismiss();
-        setCountrySearchVisibility(false);
-      }}
-      accessible={false}>
+    <KeyboardDismiss onDismiss={() => setCountrySearchVisibility(false)}>
       <View style={styles.container}>
         <Header
           color={COLORS.white}
@@ -86,10 +77,7 @@ export const PersonalInformation = memo(() => {
           </Animated.View>
           <Animated.View
             style={[styles.body, animatedBodyStyle, commonStyles.shadow]}>
-            <View
-              style={styles.bodyInner}
-              onStartShouldSetResponder={_ => true}
-              onTouchEnd={e => e.stopPropagation()}>
+            <View style={styles.bodyInner} {...stopPropagination}>
               {
                 // place button here with absolute positioning so it'd be underneath phone country select
                 hasChanges && (
@@ -138,7 +126,7 @@ export const PersonalInformation = memo(() => {
           </Animated.View>
         </Animated.View>
       </View>
-    </TouchableWithoutFeedback>
+    </KeyboardDismiss>
   );
 });
 

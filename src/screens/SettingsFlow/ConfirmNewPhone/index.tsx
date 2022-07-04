@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Avatar} from '@components/Avatar';
+import {KeyboardDismiss, stopPropagination} from '@components/KeyboardDismiss';
 import {PhoneNumberInput} from '@components/PhoneNumberInput';
 import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
 import {COLORS} from '@constants/colors';
@@ -19,13 +20,11 @@ import {t} from '@translations/i18n';
 import React, {memo, useRef, useState} from 'react';
 import {
   Image,
-  Keyboard,
   KeyboardAvoidingView,
   Platform,
   StyleSheet,
   Text,
   TextInput,
-  TouchableWithoutFeedback,
   View,
 } from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
@@ -44,12 +43,7 @@ export const ConfirmNewPhone = memo(() => {
   const [phone, setPhone] = useState('');
 
   return (
-    <TouchableWithoutFeedback
-      onPress={() => {
-        Keyboard.dismiss();
-        setCountrySearchVisibility(false);
-      }}
-      accessible={false}>
+    <KeyboardDismiss onDismiss={() => setCountrySearchVisibility(false)}>
       <KeyboardAvoidingView
         style={styles.container}
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
@@ -85,10 +79,7 @@ export const ConfirmNewPhone = memo(() => {
               <Text style={styles.noteText}>
                 {t('settings.confirm_phone.description')}
               </Text>
-              <View
-                style={styles.controlWrapper}
-                onStartShouldSetResponder={_ => true}
-                onTouchEnd={e => e.stopPropagation()}>
+              <View style={styles.controlWrapper} {...stopPropagination}>
                 <PhoneNumberInput
                   selectedCountry={selectedCountry}
                   showCountryCodeSearch={() => setCountrySearchVisibility(true)}
@@ -119,7 +110,7 @@ export const ConfirmNewPhone = memo(() => {
           </View>
         </View>
       </KeyboardAvoidingView>
-    </TouchableWithoutFeedback>
+    </KeyboardDismiss>
   );
 });
 
