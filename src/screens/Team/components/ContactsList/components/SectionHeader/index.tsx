@@ -6,7 +6,7 @@ import {LogoIconSvg} from '@svg/LogoIcon';
 import {t} from '@translations/i18n';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {font} from 'rn-units';
+import {font, rem} from 'rn-units';
 
 const IceFriendsHeader = () => {
   return (
@@ -26,10 +26,10 @@ export const SectionHeader = ({
   section: {title: string; data: string[]};
 }) => {
   const [iceFriendsContent] = section.data;
+  const isHeaderHidden = iceFriendsContent === 'InviteFriendsButton';
   return (
-    <View style={styles.titleContainer}>
-      {iceFriendsContent === 'InviteFriendsButton' ? null : section.title ===
-        'iceFriends' ? (
+    <View style={isHeaderHidden ? styles.hiddenHeader : styles.titleContainer}>
+      {isHeaderHidden ? null : section.title === 'iceFriends' ? (
         <IceFriendsHeader />
       ) : (
         <Text style={styles.title}>{section.title}</Text>
@@ -39,9 +39,12 @@ export const SectionHeader = ({
 };
 
 const styles = StyleSheet.create({
+  hiddenHeader: {
+    backgroundColor: COLORS.white,
+  },
   titleContainer: {
     backgroundColor: COLORS.white,
-    marginBottom: 24,
+    marginBottom: rem(24),
   },
   title: {
     color: COLORS.darkBlue,

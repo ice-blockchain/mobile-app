@@ -8,6 +8,65 @@ import {isEmpty} from 'lodash';
 import Contacts from 'react-native-contacts';
 import {call, put} from 'redux-saga/effects';
 
+const mockContacts = [
+  {
+    firstName: 'Alice',
+    name: 'Alice',
+    lastName: '',
+    phoneNumbers: ['+4 0728128471', '+4 0721005330', '+4 0728899080'],
+    id: 'contact_1',
+  },
+  {
+    firstName: 'Aerial',
+    name: 'Aerial',
+    lastName: 'Nocta',
+    phoneNumbers: ['+4 0711774775'],
+    id: 'contact_2',
+  },
+  {
+    firstName: 'Ada',
+    name: 'Ada',
+    lastName: 'Dwight Beasly',
+    phoneNumbers: ['+4 0728069967'],
+    id: 'contact_3',
+  },
+  {
+    firstName: 'Alexis',
+    name: 'Alexis',
+    lastName: 'Morrison',
+    phoneNumbers: ['+4 0728128471'],
+    id: 'contact_4',
+  },
+  {
+    firstName: 'Alexander',
+    name: 'Alexander',
+    lastName: 'Vermillion',
+    phoneNumbers: ['+4 0766214532'],
+    id: 'contact_5',
+  },
+  {
+    firstName: 'Beatrice',
+    name: 'Beatrice',
+    lastName: 'Mistral',
+    phoneNumbers: ['+4 0745877590'],
+    id: 'contact_6',
+  },
+  {
+    firstName: 'Bernard',
+    name: 'Bernard',
+    lastName: 'Belgique',
+    phoneNumbers: ['+4 0736221547'],
+    id: 'contact_7',
+  },
+  {
+    firstName: 'Boris',
+    name: 'Boris',
+    lastName: 'Sollmyr',
+    phoneNumbers: ['+4 0718334592'],
+    id: 'contact_8',
+  },
+];
+
 export interface IFormattedContact {
   lastName: string;
   firstName: string;
@@ -66,7 +125,9 @@ export function* getContactsSaga() {
     const contactsByIds: ContactById = {};
     const contactIds: string[] = [];
 
-    contactsList.forEach((contact: IFormattedContact) => {
+    const contactArray = contactsList.length ? contactsList : mockContacts;
+
+    contactArray.forEach((contact: IFormattedContact) => {
       contactsByIds[contact.id] = {
         ...contact,
         isActive: false,

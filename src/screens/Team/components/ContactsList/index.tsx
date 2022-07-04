@@ -17,12 +17,15 @@ import {
   getIceFriendsSelector,
 } from '@store/modules/Team/selectors';
 import {WhiteLogoSvg} from '@svg/WhiteLogo';
+import {t} from '@translations/i18n';
 import React, {useCallback} from 'react';
 import {SectionList, StyleSheet, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {font, rem, screenWidth} from 'rn-units';
 
 interface ContactsListProps {}
+
+type Section = {title: string; data: string[]};
 
 export const ContactsList = ({}: ContactsListProps) => {
   const dispatch = useDispatch();
@@ -40,20 +43,28 @@ export const ContactsList = ({}: ContactsListProps) => {
     [dispatch],
   );
 
-  const renderSectionHeader = useCallback(
-    ({section}: {section: {title: string; data: string[]}}) => {
-      return <SectionHeader section={section} />;
-    },
-    [],
-  );
+  const renderSectionHeader = useCallback(({section}: {section: Section}) => {
+    return <SectionHeader section={section} />;
+  }, []);
 
   const renderItem = useCallback(
-    ({item, index}: {item: string; index: number}) => {
+    ({
+      item,
+      index,
+      section,
+    }: {
+      item: string;
+      index: number;
+      section: Section;
+    }) => {
       if (item === 'InviteFriendsButton') {
         return <InviteButton style={styles.inviteButtonContainer} />;
       }
       const contact = contactsByIds[item];
       const isFriend = iceFriends.includes(item);
+      const multipleNumbers = contact.phoneNumbers.length > 1;
+      const isIceSection =
+        section.title !== t('team.contacts_list.all_contacts');
       return (
         <ContactItem
           index={index}
@@ -78,9 +89,7 @@ export const ContactsList = ({}: ContactsListProps) => {
             )
           }
           indicatorContent={
-            contact.phoneNumbers.length > 1 && !isFriend ? (
-              <MultipleNumbers />
-            ) : isFriend ? (
+            isIceSection && isFriend ? (
               <View
                 style={[
                   styles.activityIndicatorContainer,
@@ -91,6 +100,8 @@ export const ContactsList = ({}: ContactsListProps) => {
                   },
                 ]}
               />
+            ) : multipleNumbers ? (
+              <MultipleNumbers />
             ) : null
           }
         />

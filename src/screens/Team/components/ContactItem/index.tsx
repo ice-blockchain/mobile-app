@@ -9,6 +9,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  TouchableWithoutFeedback,
   View,
 } from 'react-native';
 import {font, rem} from 'rn-units';
@@ -41,35 +42,37 @@ export const ContactItem = ({
     }
   };
   return (
-    <View style={styles.contactContainer}>
-      <View style={styles.contactInfo}>
-        <View style={[styles.contactIcon, {backgroundColor}]}>
-          {leftIconContent}
-          <TouchableOpacity
-            disabled={item.phoneNumbers.length === 1}
-            onPress={showAllNumbers}
-            style={styles.indicator}>
-            {indicatorContent}
-          </TouchableOpacity>
-        </View>
-        <View>
-          <Text
-            style={styles.name}>{`${item.firstName} ${item.lastName}`}</Text>
-          <Text style={styles.phoneNumber}>{item.phoneNumbers[0]}</Text>
+    <TouchableWithoutFeedback>
+      <View style={styles.contactContainer}>
+        <View style={styles.contactInfo}>
+          <View style={[styles.contactIcon, {backgroundColor}]}>
+            {leftIconContent}
+            <TouchableOpacity
+              disabled={item.phoneNumbers.length === 1}
+              onPress={showAllNumbers}
+              style={styles.indicator}>
+              {indicatorContent}
+            </TouchableOpacity>
+          </View>
+          <View>
+            <Text
+              style={styles.name}>{`${item.firstName} ${item.lastName}`}</Text>
+            <Text style={styles.phoneNumber}>{item.phoneNumbers[0]}</Text>
 
-          {item.phoneNumbers.length === 1 ? null : (
-            <View style={{height}}>
-              {[...item.phoneNumbers.slice(1, item.phoneNumbers.length)].map(
-                num => {
-                  return <Text style={styles.phoneNumber}>{num}</Text>;
-                },
-              )}
-            </View>
-          )}
+            {item.phoneNumbers.length === 1 ? null : (
+              <View style={{height}}>
+                {[...item.phoneNumbers.slice(1, item.phoneNumbers.length)].map(
+                  num => {
+                    return <Text style={styles.phoneNumber}>{num}</Text>;
+                  },
+                )}
+              </View>
+            )}
+          </View>
         </View>
+        <View style={styles.rightButtonContainer}>{rightSideButton}</View>
       </View>
-      <View style={styles.rightButtonContainer}>{rightSideButton}</View>
-    </View>
+    </TouchableWithoutFeedback>
   );
 };
 
@@ -77,7 +80,7 @@ const styles = StyleSheet.create({
   contactContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 14,
+    marginBottom: rem(14),
   },
   contactInfo: {
     flexDirection: 'row',
@@ -88,13 +91,13 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight: 14,
+    marginRight: rem(14),
   },
   name: {
     fontSize: font(16),
     fontFamily: FONTS.primary.bold,
     color: COLORS.darkBlue,
-    paddingBottom: 3,
+    paddingBottom: rem(3),
   },
   phoneNumber: {
     fontSize: font(14),
