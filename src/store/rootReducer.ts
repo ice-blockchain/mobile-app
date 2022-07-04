@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {accountReducer} from '@store/modules/Accounts/reducer';
 import {appCommonReducer} from '@store/modules/AppCommon/reducer';
 import {authReducer} from '@store/modules/Auth/reducer';
 import {newsReducer} from '@store/modules/News/reducer';
@@ -23,7 +22,6 @@ const rootReducer = combineReducers({
   appCommon: appCommonReducer,
   auth: authReducer,
   news: newsReducer,
-  account: accountReducer,
   validation: validationReducer,
   statistics: statisticsReducer,
   referrals: referralsReducer,

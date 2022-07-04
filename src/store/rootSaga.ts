@@ -2,7 +2,6 @@
 
 import {all, call, spawn} from 'redux-saga/effects';
 
-import {rootAccountsSaga} from './modules/Accounts/sagas';
 import {rootAuthSaga} from './modules/Auth/sagas';
 import {rootNewsSaga} from './modules/News/sagas';
 import {rootReferralsSaga} from './modules/Referrals/sagas';
@@ -12,7 +11,6 @@ import {rootValidationSaga} from './modules/Validation/sagas';
 export function* rootSaga() {
   const sagas = [
     rootNewsSaga,
-    rootAccountsSaga,
     rootValidationSaga,
     rootReferralsSaga,
     rootStatisticsSaga,
