@@ -58,14 +58,7 @@ const SIGN_IN_SOCIAL = createAction('SIGN_IN_SOCIAL', {
   FAILED: true,
 });
 
-const GET_TOKEN = createAction('GET_TOKEN', {
-  START: true,
-  SUCCESS: (token: string) => ({token}),
-  FAILED: true,
-});
-
 export const AuthActions = Object.freeze({
-  GET_TOKEN,
   STORE_TOKEN,
   SIGN_IN_EMAIL,
   SIGN_IN_PHONE,
