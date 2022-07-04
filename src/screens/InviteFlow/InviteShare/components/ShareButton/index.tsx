@@ -4,7 +4,7 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {t} from '@translations/i18n';
 import React from 'react';
-import {Image, StyleSheet, Text} from 'react-native';
+import {Image, Share as ShareMore, StyleSheet, Text} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Share, {ShareSingleOptions, Social} from 'react-native-share';
 import {font, rem, screenWidth} from 'rn-units';
@@ -31,21 +31,27 @@ export type SocialShareButtonType = {
 
 interface ShareButtonProps {
   button: SocialShareButtonType;
+  onPress: (type: SocialType) => void;
 }
-export const ShareButton = ({button}: ShareButtonProps) => {
+export const ShareButton = ({button, onPress}: ShareButtonProps) => {
   const onButtonClick = async () => {
     const baseOptions = {
-      message: 'Invitation link:',
-      url: 'https://www.google.com/',
+      message: t('invite_share.share_message'),
+      url: t('invite_share.share_url'),
     };
     switch (button.type) {
       case 'More':
+        let moreOptions = {
+          ...baseOptions,
+          title: t('invite_share.share_message'),
+        };
+        ShareMore.share(moreOptions);
         break;
       case 'CopyLink':
         break;
       case 'Telegram':
         let telegramOptions: ShareSingleOptions = {
-          message: 'Invitation link: https://www.google.com/',
+          message: t('invite_share.share_full_text'),
           social: Social.Telegram,
         };
         await Share.shareSingle(telegramOptions);
@@ -78,9 +84,21 @@ export const ShareButton = ({button}: ShareButtonProps) => {
         };
         await Share.shareSingle(fbOptions);
         break;
+      case 'Instagram':
+        //TODO: replace image
+        const instagramOptions = {
+          backgroundImage:
+            'https://e7.pngegg.com/pngimages/223/378/png-clipart-three-ice-cubes-three-ice-cubes-ice.png',
+          attributionURL: t('invite_share.share_url'),
+          social: Share.Social.INSTAGRAM_STORIES,
+        };
+        await Share.shareSingle(instagramOptions);
+        break;
+
       default:
         break;
     }
+    onPress(button.type);
   };
 
   return (

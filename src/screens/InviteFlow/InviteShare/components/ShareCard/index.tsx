@@ -1,11 +1,13 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
+import Copied from '@screens/InviteFlow/InviteShare/components/Copied';
 import {
   ShareButton,
   SocialShareButtonType,
+  SocialType,
 } from '@screens/InviteFlow/InviteShare/components/ShareButton';
-import React from 'react';
+import React, {useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Share from 'react-native-share';
 import {rem, screenWidth} from 'rn-units';
@@ -64,27 +66,48 @@ const buttons: SocialShareButtonType[] = [
 ];
 
 const ShareCard = () => {
+  const copiedRef = useRef<Copied>(null);
+
   return (
-    <View style={styles.card}>
-      <View style={styles.buttonsContainer}>
-        {buttons.map(button => (
-          <ShareButton button={button} key={button.type} />
-        ))}
+    <View style={styles.fullCard}>
+      <Copied ref={copiedRef} />
+      <View style={styles.shareCard}>
+        <View style={styles.buttonsContainer}>
+          {buttons.map(button => (
+            <ShareButton
+              button={button}
+              key={button.type}
+              onPress={(type: SocialType) => {
+                if (type === 'CopyLink' && copiedRef) {
+                  copiedRef.current?.updateVisibleState(true);
+                }
+              }}
+            />
+          ))}
+        </View>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  card: {
+  fullCard: {
     position: 'absolute',
-    borderTopLeftRadius: rem(20),
-    borderTopRightRadius: rem(20),
-    backgroundColor: COLORS.white,
+    backgroundColor: 'transparent',
     left: 0,
     bottom: 0,
     width: screenWidth,
+    height: rem(292),
+  },
+  shareCard: {
+    width: screenWidth,
     height: rem(242),
+    borderTopLeftRadius: rem(20),
+    borderTopRightRadius: rem(20),
+    backgroundColor: COLORS.white,
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
   },
   buttonsContainer: {
     flexDirection: 'row',

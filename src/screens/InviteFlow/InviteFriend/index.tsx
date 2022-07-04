@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
     width: ICON_WIDTH,
     height: ICON_HEIGHT,
     alignSelf: 'center',
+    marginTop: rem(20),
   },
   description: {
     fontFamily: FONTS.primary.regular,
