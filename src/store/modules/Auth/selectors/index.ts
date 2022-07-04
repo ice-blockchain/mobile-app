@@ -29,3 +29,5 @@ export const isSocialInfoExistsSelector = (state: RootState) =>
 
 export const socialInfoSelector = (state: RootState) =>
   state.auth.socialLoginInfo;
+
+export const authTokenSelector = (state: RootState) => state.auth.token;

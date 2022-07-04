@@ -24,7 +24,7 @@ if (__DEV__) {
   middlewares.push(createDebugger());
 }
 
-const store = configureStore({
+export const store = configureStore({
   reducer: persistedRootReducer,
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

@@ -1,20 +1,20 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {store} from '@store/configureStore';
+import {authTokenSelector} from '@store/modules/Auth/selectors';
 import {AxiosRequestConfig} from 'axios';
 
-// import StoreConfig from 'src/configureStore'; //TODO: configure redux store
-// import AuthSelectors from '~/modules/Auth/selectors'; //TODO: configure redux store
-
 async function onFulfilled(config: AxiosRequestConfig) {
-  // if (!config.headers.Authorization) {
-  //   const accessToken = AuthSelectors.getAccessToken(
-  //     StoreConfig.store.getState(),
-  //   );
+  if (!config.headers?.Authorization) {
+    const accessToken = authTokenSelector(store.getState());
 
-  //   if (accessToken) {
-  //     config.headers.Authorization = `Bearer ${accessToken}`;
-  //   }
-  // }
+    if (accessToken) {
+      config.headers = {
+        ...config.headers,
+        Authorization: `Bearer ${accessToken}`,
+      };
+    }
+  }
 
   return config;
 }
