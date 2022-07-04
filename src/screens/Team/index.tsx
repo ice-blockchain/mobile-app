@@ -2,24 +2,34 @@
 
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
+import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Header} from '@screens/Team/components/Header';
 import {Tiers} from '@screens/Team/components/Tiers';
 import React from 'react';
-import {KeyboardAvoidingView, StyleSheet, View} from 'react-native';
+import {
+  Keyboard,
+  KeyboardAvoidingView,
+  StyleSheet,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 import {isIOS} from 'rn-units';
 
 export const Team = () => {
+  useFocusStatusBar({style: 'light-content'});
   return (
-    <KeyboardAvoidingView
-      style={styles.wrapper}
-      behavior={isIOS ? 'padding' : 'height'}>
-      <View style={styles.container}>
-        <Header />
-        <View style={commonStyles.baseSubScreen}>
-          <Tiers />
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+      <KeyboardAvoidingView
+        style={styles.wrapper}
+        behavior={isIOS ? 'padding' : undefined}>
+        <View style={styles.container}>
+          <Header />
+          <View style={commonStyles.baseSubScreen}>
+            <Tiers />
+          </View>
         </View>
-      </View>
-    </KeyboardAvoidingView>
+      </KeyboardAvoidingView>
+    </TouchableWithoutFeedback>
   );
 };
 

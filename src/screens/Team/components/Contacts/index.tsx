@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {ConfirmCode} from '@screens/Team/components/ConfirmCode';
 import {ConfirmPhone} from '@screens/Team/components/ConfirmPhone';
 import {ContactsList} from '@screens/Team/components/ContactsList';
@@ -48,7 +47,7 @@ export const Contacts = () => {
   }, [hasContactsPermissions, isPhoneNumberVerified, phoneVerificationStep]);
 
   const [visibleFlow, setVisibleFlow] = useState<TContactsFlow>(
-    'ContactsPermissions',
+    getCurrentScreen(),
   );
 
   const fadeAnimation = useRef(new Animated.Value(1)).current;
@@ -104,15 +103,8 @@ export const Contacts = () => {
     dispatch(PermissionsActions.GET_PERMISSIONS.START.create('contacts'));
   };
 
-  const tabbarOffest = useBottomTabBarOffsetStyle();
-
   return (
-    <Animated.View
-      style={[
-        styles.container,
-        tabbarOffest.current,
-        {opacity: fadeAnimation},
-      ]}>
+    <Animated.View style={[styles.container, {opacity: fadeAnimation}]}>
       {visibleFlow === 'ContactsPermissions' && (
         <ContactsPermissions
           requestContactsAccessPermissionPress={

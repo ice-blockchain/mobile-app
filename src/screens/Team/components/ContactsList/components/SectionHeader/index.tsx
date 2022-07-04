@@ -20,10 +20,16 @@ const IceFriendsHeader = () => {
   );
 };
 
-export const SectionHeader = ({section}: {section: {title: string}}) => {
+export const SectionHeader = ({
+  section,
+}: {
+  section: {title: string; data: string[]};
+}) => {
+  const [iceFriendsContent] = section.data;
   return (
     <View style={styles.titleContainer}>
-      {section.title === 'iceFriends' ? (
+      {iceFriendsContent === 'InviteFriendsButton' ? null : section.title ===
+        'iceFriends' ? (
         <IceFriendsHeader />
       ) : (
         <Text style={styles.title}>{section.title}</Text>

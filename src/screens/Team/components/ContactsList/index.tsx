@@ -17,7 +17,7 @@ import {
   getIceFriendsSelector,
 } from '@store/modules/Team/selectors';
 import {WhiteLogoSvg} from '@svg/WhiteLogo';
-import React from 'react';
+import React, {useCallback} from 'react';
 import {SectionList, StyleSheet, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {font, rem, screenWidth} from 'rn-units';
@@ -33,62 +33,71 @@ export const ContactsList = ({}: ContactsListProps) => {
 
   const sections = useGetContacts();
 
-  const renderSectionHeader = ({section}: {section: {title: string}}) => (
-    <SectionHeader section={section} />
+  const invite = useCallback(
+    (id: string) => {
+      dispatch(TeamActions.INVITE_CONTACT.STATE.create(id));
+    },
+    [dispatch],
   );
 
-  const renderItem = ({item, index}: {item: string; index: number}) => {
-    if (item === 'InviteFriendsButton') {
-      return <InviteButton style={styles.inviteButtonContainer} />;
-    }
-    const contact = contactsByIds[item];
-    const isFriend = iceFriends.includes(item);
-    return (
-      <ContactItem
-        index={index}
-        item={contact}
-        backgroundColor={contact.backgroundColor}
-        leftIconContent={
-          isFriend ? (
-            <WhiteLogoSvg />
-          ) : (
-            <Text style={styles.contactIconText}>{`${contact.firstName.charAt(
-              0,
-            )}${contact.lastName.charAt(0)}`}</Text>
-          )
-        }
-        rightSideButton={
-          isFriend ? null : (
-            <ContactsInviteButton
-              text={'invite'}
-              icon={<TeamContactInvite />}
-              onPress={() => invite(contact.id)}
-            />
-          )
-        }
-        indicatorContent={
-          contact.phoneNumbers.length > 1 && !isFriend ? (
-            <MultipleNumbers />
-          ) : isFriend ? (
-            <View
-              style={[
-                styles.activityIndicatorContainer,
-                {
-                  backgroundColor: contact?.isActive
-                    ? COLORS.shamrock
-                    : COLORS.cadetBlue,
-                },
-              ]}
-            />
-          ) : null
-        }
-      />
-    );
-  };
+  const renderSectionHeader = useCallback(
+    ({section}: {section: {title: string; data: string[]}}) => {
+      return <SectionHeader section={section} />;
+    },
+    [],
+  );
 
-  const invite = (id: string) => {
-    dispatch(TeamActions.INVITE_CONTACT.STATE.create(id));
-  };
+  const renderItem = useCallback(
+    ({item, index}: {item: string; index: number}) => {
+      if (item === 'InviteFriendsButton') {
+        return <InviteButton style={styles.inviteButtonContainer} />;
+      }
+      const contact = contactsByIds[item];
+      const isFriend = iceFriends.includes(item);
+      return (
+        <ContactItem
+          index={index}
+          item={contact}
+          backgroundColor={contact.backgroundColor}
+          leftIconContent={
+            isFriend ? (
+              <WhiteLogoSvg />
+            ) : (
+              <Text style={styles.contactIconText}>{`${contact.firstName.charAt(
+                0,
+              )}${contact.lastName.charAt(0)}`}</Text>
+            )
+          }
+          rightSideButton={
+            isFriend ? null : (
+              <ContactsInviteButton
+                text={'invite'}
+                icon={<TeamContactInvite />}
+                onPress={() => invite(contact.id)}
+              />
+            )
+          }
+          indicatorContent={
+            contact.phoneNumbers.length > 1 && !isFriend ? (
+              <MultipleNumbers />
+            ) : isFriend ? (
+              <View
+                style={[
+                  styles.activityIndicatorContainer,
+                  {
+                    backgroundColor: contact?.isActive
+                      ? COLORS.shamrock
+                      : COLORS.cadetBlue,
+                  },
+                ]}
+              />
+            ) : null
+          }
+        />
+      );
+    },
+    [contactsByIds, iceFriends, invite],
+  );
 
   return (
     <View style={styles.container}>

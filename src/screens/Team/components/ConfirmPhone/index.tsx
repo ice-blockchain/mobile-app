@@ -5,19 +5,11 @@ import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
-import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {IS_SMALL_SCREEN, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {t} from '@translations/i18n';
 import React, {useEffect, useRef, useState} from 'react';
-import {
-  Animated,
-  Image,
-  Keyboard,
-  KeyboardAvoidingView,
-  StyleSheet,
-  Text,
-  TouchableWithoutFeedback,
-  View,
-} from 'react-native';
+import {Animated, Image, Keyboard, StyleSheet, Text, View} from 'react-native';
 import {font, isIOS, rem, screenWidth} from 'rn-units';
 
 const confirmPhoneImage = require('../../../../assets/images/phone/confirmPhone.png');
@@ -71,64 +63,61 @@ export function ConfirmPhone({
   useEffect(() => {
     if (isKeyboardVisible) {
       Animated.timing(translation, {
-        toValue: isCountryCodeSearchVisible ? -20 : 0,
-        duration: 0,
-        useNativeDriver: true,
-      }).start();
-    } else {
-      Animated.timing(translation, {
-        toValue: isCountryCodeSearchVisible ? -140 : 0,
-        duration: 0,
+        toValue: isCountryCodeSearchVisible ? (isIOS ? -80 : -140) : 0,
+        duration: 100,
         useNativeDriver: true,
       }).start();
     }
   }, [isCountryCodeSearchVisible, isKeyboardVisible, translation]);
 
-  return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-      <KeyboardAvoidingView
-        style={styles.container}
-        behavior={isIOS ? 'padding' : undefined}>
-        <Animated.View style={[styles.container]}>
-          <View style={styles.container}>
-            <View style={styles.imageContainer}>
-              <Image
-                source={confirmPhoneImage}
-                style={styles.image}
-                resizeMode="contain"
-              />
-            </View>
-            <Text style={styles.title}>{t('team.confirm_phone.title')}</Text>
-            <Text style={styles.description}>
-              {t('team.confirm_phone.description')}
-            </Text>
+  const tabbarOffest = useBottomTabBarOffsetStyle({
+    extraOffset: IS_SMALL_SCREEN ? (isIOS ? undefined : 20) : undefined,
+  });
 
-            <View style={styles.inputContainer}>
-              <PhoneNumberInput
-                selectedCountry={selectedCountry}
-                showCountryCodeSearch={showCountryCodeSearch}
-                value={phone}
-                containerStyle={styles.input}
-                onValueChange={setPhone}
-              />
-              <PrimaryButton
-                text={t('team.confirm_phone.button')}
-                onPress={handleOnPress}
-                style={styles.allowAccessButton}
-              />
-              {isCountryCodeSearchVisible ? (
-                <PhoneNumberSearch
-                  containerStyle={styles.phoneNumberSearch}
-                  selectedCountry={selectedCountry}
-                  close={hideCountryCodeSearch}
-                  setCountryCode={setSelectedCountry}
-                />
-              ) : null}
-            </View>
-          </View>
-        </Animated.View>
-      </KeyboardAvoidingView>
-    </TouchableWithoutFeedback>
+  return (
+    <Animated.View
+      style={[
+        styles.container,
+        {transform: [{translateY: translation}]},
+        tabbarOffest.current,
+      ]}>
+      <View style={styles.container}>
+        <View style={styles.imageContainer}>
+          <Image
+            source={confirmPhoneImage}
+            style={styles.image}
+            resizeMode="contain"
+          />
+        </View>
+        <Text style={styles.title}>{t('team.confirm_phone.title')}</Text>
+        <Text style={styles.description}>
+          {t('team.confirm_phone.description')}
+        </Text>
+
+        <View style={styles.inputContainer}>
+          <PhoneNumberInput
+            selectedCountry={selectedCountry}
+            showCountryCodeSearch={showCountryCodeSearch}
+            value={phone}
+            containerStyle={styles.input}
+            onValueChange={setPhone}
+          />
+          <PrimaryButton
+            text={t('team.confirm_phone.button')}
+            onPress={handleOnPress}
+            style={styles.allowAccessButton}
+          />
+          {isCountryCodeSearchVisible ? (
+            <PhoneNumberSearch
+              containerStyle={styles.phoneNumberSearch}
+              selectedCountry={selectedCountry}
+              close={hideCountryCodeSearch}
+              setCountryCode={setSelectedCountry}
+            />
+          ) : null}
+        </View>
+      </View>
+    </Animated.View>
   );
 }
 
@@ -166,13 +155,13 @@ const styles = StyleSheet.create({
   },
   allowAccessButton: {
     marginTop: rem(25),
-    width: screenWidth - 54,
+    width: screenWidth - rem(54),
   },
   input: {
-    width: screenWidth - 54,
+    width: screenWidth - rem(54),
   },
   phoneNumberSearch: {
-    marginHorizontal: rem(27),
+    marginHorizontal: SCREEN_SIDE_OFFSET,
     position: 'absolute',
     top: 0,
     left: 0,

@@ -3,12 +3,13 @@
 import {PrimaryButton} from '@components/PrimaryButton';
 import {Text} from '@components/Text';
 import {FONTS} from '@constants/fonts';
-import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {IS_SMALL_SCREEN, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {TeamAllowContactsButtonIcon} from '@screens/Team/assets/svg/TeamAllowContactsButtonIcon';
 import {t} from '@translations/i18n';
 import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
-import {font, rem} from 'rn-units';
+import {font, isIOS, rem} from 'rn-units';
 
 const icon = require('../../assets/images/teamAgendaNotShared.png');
 
@@ -22,8 +23,11 @@ export function ContactsPermissions({
   const handleOnPress = () => {
     requestContactsAccessPermissionPress();
   };
+  const tabbarOffest = useBottomTabBarOffsetStyle({
+    extraOffset: IS_SMALL_SCREEN ? (isIOS ? undefined : 20) : undefined,
+  });
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, tabbarOffest.current]}>
       <View style={styles.imageContainer}>
         <Image source={icon} style={styles.image} resizeMode="contain" />
       </View>
