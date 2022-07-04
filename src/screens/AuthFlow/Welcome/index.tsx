@@ -98,7 +98,7 @@ export const Welcome = () => {
       <StatusBar backgroundColor={COLORS.white} barStyle="dark-content" />
       <PagerView
         ref={pagerViewRef}
-        style={styles.container}
+        style={styles.pagerView}
         initialPage={0}
         onPageSelected={onPageSelected}>
         {welcomeScreenData.map(v => (
@@ -127,6 +127,9 @@ export const Welcome = () => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+  },
+  pagerView: {
     flex: 1,
     marginBottom: rem(20),
     marginTop: rem(10),
