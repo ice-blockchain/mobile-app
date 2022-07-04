@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {t} from '@translations/i18n';
 import React from 'react';
 import {
   StyleProp,
@@ -22,7 +23,7 @@ export const SaveButton = ({onPress, style}: Props) => {
   return (
     <TouchableOpacity onPress={onPress} style={style}>
       <View style={styles.button}>
-        <Text style={styles.buttonText}>Save</Text>
+        <Text style={styles.buttonText}>{t('button.save')}</Text>
       </View>
     </TouchableOpacity>
   );
