@@ -12,6 +12,9 @@ type Props = {
 export const useFocusStatusBar = ({style, animated}: Props) =>
   useFocusEffect(
     useCallback(() => {
-      StatusBar.setBarStyle(style, animated);
+      const entry = StatusBar.pushStackEntry({barStyle: style, animated});
+      return () => {
+        StatusBar.popStackEntry(entry);
+      };
     }, [animated, style]),
   );
