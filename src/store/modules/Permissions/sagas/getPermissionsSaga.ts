@@ -31,7 +31,7 @@ export function* getPermissionsSaga(action: ReturnType<typeof actionCreator>) {
     const {type} = action.payload;
 
     const permission: PermissionTypes = yield Permissions.check(
-      PERMISSIONS_LIST[`${type}`],
+      PERMISSIONS_LIST[type],
     );
 
     if (permission === RESULTS.BLOCKED) {
@@ -42,7 +42,7 @@ export function* getPermissionsSaga(action: ReturnType<typeof actionCreator>) {
       yield put(PermissionsActions.GET_PERMISSIONS.SUCCESS.create(permission));
     } else if (permission === RESULTS.DENIED) {
       const status: PermissionTypes = yield Permissions.request(
-        PERMISSIONS_LIST[`${type}`],
+        PERMISSIONS_LIST[type],
       );
 
       yield put(PermissionsActions.GET_PERMISSIONS.SUCCESS.create(status));

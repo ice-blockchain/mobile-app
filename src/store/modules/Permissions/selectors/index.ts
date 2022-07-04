@@ -6,5 +6,5 @@ import {RESULTS} from 'react-native-permissions';
 
 export const permissionSelector =
   (type: PermissionType) => (state: RootState) => {
-    return state.permissions[`${type}`] === RESULTS.GRANTED;
+    return state.permissions[type] === RESULTS.GRANTED;
   };
