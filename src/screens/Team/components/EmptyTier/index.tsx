@@ -6,7 +6,7 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {TierType} from '@screens/Team/components/Tier';
-import {InviteTierTwoIcon} from '@svg/InviteTierTwoIcon';
+import {InviteIcon} from '@svg/InviteIcon';
 import {t} from '@translations/i18n';
 import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
@@ -41,7 +41,9 @@ export function EmptyTier({type}: EmptyTierProps): React.ReactElement {
         onPress={handleOnPress}
         style={styles.inviteButton}
         textStyle={styles.text}
-        icon={<InviteTierTwoIcon />}
+        icon={
+          <InviteIcon fill={COLORS.white} width={rem(28)} height={rem(28)} />
+        }
       />
     </View>
   );
