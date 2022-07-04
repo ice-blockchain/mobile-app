@@ -4,6 +4,7 @@ import {COLORS} from '@constants/colors';
 import {ICountryCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
 import {ArrowDownIcon} from '@svg/ArrowDownIcon';
+import {t} from '@translations/i18n';
 import * as React from 'react';
 import {forwardRef, Ref} from 'react';
 import {
@@ -51,7 +52,7 @@ export const PhoneNumberInput = forwardRef(
         <Text style={styles.code}>{selectedCountry.iddCode}</Text>
 
         <TextInput
-          placeholder={'| Phone Number'}
+          placeholder={`| ${t('global.phone_number')}`}
           keyboardType={'phone-pad'}
           style={styles.phone}
           value={value}
