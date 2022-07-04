@@ -69,6 +69,8 @@ const styles = StyleSheet.create({
     borderColor: COLORS.error,
   },
   errorText: {
+    position: 'absolute',
+    bottom: 0,
     color: COLORS.error,
     fontSize: font(11),
     paddingLeft: rem(6),
