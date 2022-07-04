@@ -15,7 +15,7 @@ export const ListControlBase = ({label, children}: Props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.labelText}>{label}</Text>
-      {children}
+      <View style={styles.body}>{children}</View>
     </View>
   );
 };
@@ -29,12 +29,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   labelText: {
-    width: '28%',
+    flex: 28,
     color: COLORS.darkBlue,
     fontFamily: FONTS.primary.bold,
     fontSize: font(14),
     marginLeft: rem(28),
     marginRight: rem(6),
+  },
+  body: {
+    flex: 72,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   separator: {
     height: 1,
