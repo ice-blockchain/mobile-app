@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {BorderedButton} from '@components/BorderedButton';
 import {CommonInput} from '@components/CommonInput';
 import {PhoneNumberInput} from '@components/PhoneNumberInput';
 import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
@@ -10,6 +9,7 @@ import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
 import {SignUpStackParamList} from '@navigation/Auth';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {BorderedButton} from '@screens/AuthFlow/SignIn/components/BorderedButton';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {userDataSelector} from '@store/modules/Auth/selectors';
 import {EmailIconSvg} from '@svg/EmailIcon';
