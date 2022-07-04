@@ -9,7 +9,7 @@ import {
 
 type Props = {
   children: ReactNode;
-  onDismiss: () => void;
+  onDismiss?: () => void;
 };
 
 export const KeyboardDismiss = ({children, onDismiss}: Props) => {
@@ -17,7 +17,7 @@ export const KeyboardDismiss = ({children, onDismiss}: Props) => {
     <TouchableWithoutFeedback
       onPress={() => {
         Keyboard.dismiss();
-        onDismiss();
+        onDismiss?.();
       }}
       accessible={false}>
       {children}
