@@ -4,6 +4,7 @@ import {
   SegmentedControl,
   SegmentedControlMethods,
 } from '@components/SegmentedControl';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Contacts} from '@screens/Team/components/Contacts';
 import {Tier, TierType} from '@screens/Team/components/Tier';
 import {TierOneList} from '@screens/Team/components/TierOneList';
@@ -61,6 +62,6 @@ const styles = StyleSheet.create({
   },
   tabbar: {
     marginTop: rem(24),
-    marginHorizontal: 24,
+    marginHorizontal: SCREEN_SIDE_OFFSET,
   },
 });

@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     fontSize: font(14),
     fontFamily: FONTS.primary.regular,
     textAlign: 'center',
-    marginHorizontal: 24,
+    marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(7),
     lineHeight: rem(24),
   },
