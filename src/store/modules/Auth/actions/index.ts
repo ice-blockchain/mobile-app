@@ -1,33 +1,22 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {
-  OAuthProvider,
-  OAuthRedirectResult,
-} from '@magic-ext/react-native-oauth';
+import {OAuthProvider} from '@magic-ext/react-native-oauth';
 import {createAction} from '@store/utils/actions/createAction';
 
-type CommonSignInResultType = {
-  phoneNumber: string | null;
-  email: string | null | undefined;
+type SignInResult = {
+  userData: {phoneNumber: string | null; email: string | null};
+  token: string;
 };
 
-export type SignInResultType = {
-  success: boolean;
-  authInfo: CommonSignInResultType;
-  socialLoginInfo?: OAuthRedirectResult;
-};
-
-const STORE_USER_DATA = createAction('STORE_USER_DATA', {
-  STATE: (result: SignInResultType) => ({result}),
-});
-const STORE_TOKEN = createAction('STORE_TOKEN', {
-  STATE: (token: string) => ({token}),
-});
-const STORE_CLAIM_NICKNAME_DONE = createAction('STORE_CLAIM_NICKNAME_DONE', {
-  STATE: () => {},
-});
 const STORE_WELCOME_SEEN = createAction('STORE_WELCOME_SEEN', {
   STATE: () => {},
+});
+
+const LOAD_USER = createAction('LOAD_USER', {
+  STATE: (
+    token?: string,
+    userData?: {email: string | null; phoneNumber: string | null},
+  ) => ({token, userData}),
 });
 
 const SIGN_OUT = createAction('SIGN_OUT', {
@@ -38,7 +27,7 @@ const SIGN_OUT = createAction('SIGN_OUT', {
 
 const SIGN_IN_EMAIL = createAction('SIGN_IN_EMAIL', {
   START: (email: string) => ({email}),
-  SUCCESS: (result: SignInResultType) => ({
+  SUCCESS: (result: SignInResult) => ({
     result,
   }),
   FAILED: true,
@@ -46,7 +35,7 @@ const SIGN_IN_EMAIL = createAction('SIGN_IN_EMAIL', {
 
 const SIGN_IN_PHONE = createAction('SIGN_IN_PHONE', {
   START: (phone: string) => ({phone}),
-  SUCCESS: (result: SignInResultType) => ({
+  SUCCESS: (result: SignInResult) => ({
     result,
   }),
   FAILED: true,
@@ -54,17 +43,15 @@ const SIGN_IN_PHONE = createAction('SIGN_IN_PHONE', {
 
 const SIGN_IN_SOCIAL = createAction('SIGN_IN_SOCIAL', {
   START: (provider: OAuthProvider) => ({provider}),
-  SUCCESS: (result: SignInResultType) => ({result}),
+  SUCCESS: (result: SignInResult) => ({result}),
   FAILED: true,
 });
 
 export const AuthActions = Object.freeze({
-  STORE_TOKEN,
+  LOAD_USER,
+  STORE_WELCOME_SEEN,
   SIGN_IN_EMAIL,
   SIGN_IN_PHONE,
   SIGN_IN_SOCIAL,
-  STORE_USER_DATA,
-  STORE_CLAIM_NICKNAME_DONE,
-  STORE_WELCOME_SEEN,
   SIGN_OUT,
 });

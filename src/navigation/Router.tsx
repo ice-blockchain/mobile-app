@@ -6,7 +6,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {
   isInitializedSelector,
-  isSignUpCompletedSelector,
+  isWelcomeSeenSelector,
+  userDataSelector,
 } from '@store/modules/Auth/selectors';
 import React, {useEffect} from 'react';
 import {Linking} from 'react-native';
@@ -17,18 +18,19 @@ import {Main} from './Main';
 
 function ActiveNavigator() {
   const dispatch = useDispatch();
-  const initialization = useSelector(isInitializedSelector);
-  const isSignUpCompleted = useSelector(isSignUpCompletedSelector);
+  const isInitialized = useSelector(isInitializedSelector);
+  const isWelcomeSeen = useSelector(isWelcomeSeenSelector);
+  const userData = useSelector(userDataSelector);
 
   useEffect(() => {
     dispatch(AppCommonActions.APP_LOADED.STATE.create());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  if (initialization) {
+  if (!isInitialized) {
     return <Initialization />;
   }
-  if (isSignUpCompleted) {
+  if (userData && isWelcomeSeen) {
     return <Main />;
   }
   return <AuthNavigator />;

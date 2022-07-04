@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {useInitialRouteName} from '@navigation/hooks/useInitialRouteName';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {ClaimNickname} from '@screens/AuthFlow/ClaimNickname';
 import {SignIn} from '@screens/AuthFlow/SignIn';
 import {Welcome} from '@screens/AuthFlow/Welcome';
 import {WebView} from '@screens/WebView';
+import {userDataSelector} from '@store/modules/Auth/selectors';
 import React from 'react';
+import {useSelector} from 'react-redux';
 
 export type AuthStackParamList = {
   Signup: undefined;
@@ -36,11 +37,11 @@ const modalOptions = {
 } as const;
 
 function Signup() {
-  const initialRouteName = useInitialRouteName();
+  const userData = useSelector(userDataSelector);
   return (
     <SignUpStack.Navigator
       screenOptions={screenOptions}
-      initialRouteName={initialRouteName}>
+      initialRouteName={userData ? 'Welcome' : 'SignIn'}>
       <SignUpStack.Screen name="ClaimNickname" component={ClaimNickname} />
       <SignUpStack.Screen name="Welcome" component={Welcome} />
       <SignUpStack.Screen name="SignIn" component={SignIn} />

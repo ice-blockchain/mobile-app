@@ -13,11 +13,9 @@ export function* signInPhoneSaga(action: ReturnType<typeof actionCreator>) {
       phoneNumber: phone,
     });
 
-    const authInfo = {email: null, phoneNumber: phone};
-    const result = {success: true, authInfo};
+    const result = {userData: {email: null, phoneNumber: phone}, token};
 
     yield put(AuthActions.SIGN_IN_PHONE.SUCCESS.create(result));
-    yield put(AuthActions.STORE_TOKEN.STATE.create(token));
   } catch (error) {
     yield put(AuthActions.SIGN_IN_PHONE.FAILED.create());
   }

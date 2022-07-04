@@ -18,14 +18,14 @@ export function* signInSocialSaga(action: ReturnType<typeof actionCreator>) {
         redirectURI: `${ENV.MAGIC_DEEPLINK_SCHEME}://login`,
       });
 
-    const {email} = socialLoginInfo.oauth.userInfo;
-    const authInfo = {email, phoneNumber: null};
-    const result = {success: true, authInfo, socialLoginInfo};
+    const {email, phoneNumber} = socialLoginInfo.oauth.userInfo;
+    const userData = {email: email ?? null, phoneNumber: phoneNumber ?? null};
+    const result = {
+      userData,
+      token: socialLoginInfo.magic.idToken,
+    };
 
     yield put(AuthActions.SIGN_IN_SOCIAL.SUCCESS.create(result));
-    yield put(
-      AuthActions.STORE_TOKEN.STATE.create(socialLoginInfo.magic.idToken),
-    );
   } catch (error) {
     yield put(AuthActions.SIGN_IN_SOCIAL.FAILED.create());
   }

@@ -13,11 +13,9 @@ export function* signInEmailSaga(action: ReturnType<typeof actionCreator>) {
       email,
     });
 
-    const authInfo = {email, phoneNumber: null};
-    const result = {success: true, authInfo};
+    const result = {userData: {email, phoneNumber: null}, token};
 
     yield put(AuthActions.SIGN_IN_EMAIL.SUCCESS.create(result));
-    yield put(AuthActions.STORE_TOKEN.STATE.create(token));
   } catch (error) {
     yield put(AuthActions.SIGN_IN_EMAIL.FAILED.create());
   }

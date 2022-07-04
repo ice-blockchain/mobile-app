@@ -4,7 +4,6 @@ import {COLORS} from '@constants/colors';
 import {SignUpStackParamList} from '@navigation/Auth';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {NavigationPanel} from '@screens/AuthFlow/Welcome/components/NavigationPanel';
-import {AuthActions} from '@store/modules/Auth/actions';
 import {translate} from '@translations/i18n';
 import React, {useRef, useState} from 'react';
 import {
@@ -18,7 +17,6 @@ import {
 } from 'react-native';
 import PagerView from 'react-native-pager-view';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {useDispatch} from 'react-redux';
 import {isIOS} from 'rn-units';
 
 import {ClaimNickName} from './components/ClaimNickname';
@@ -35,8 +33,6 @@ export const ClaimNickname = ({navigation}: Props) => {
   const [myNickname, setMyNickname] = useState('');
   const [invitedNickname, setInvitedNickname] = useState('');
   const [currentPage, setCurrentPage] = useState(0);
-
-  const dispatch = useDispatch();
 
   const [error, setError] = useState<string>();
   const onNextPress = () => {
@@ -61,7 +57,6 @@ export const ClaimNickname = ({navigation}: Props) => {
   };
 
   const onComplete = () => {
-    dispatch(AuthActions.STORE_CLAIM_NICKNAME_DONE.STATE.create());
     navigation.navigate('Welcome');
   };
   const isNextButtonActive =

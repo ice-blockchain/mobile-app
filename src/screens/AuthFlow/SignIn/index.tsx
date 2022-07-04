@@ -11,12 +11,7 @@ import {FONTS} from '@constants/fonts';
 import {SignUpStackParamList} from '@navigation/Auth';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AuthActions} from '@store/modules/Auth/actions';
-import {
-  isSignInSuccessedSelector,
-  isSocialInfoExistsSelector,
-  socialInfoSelector,
-  userInfoSelector,
-} from '@store/modules/Auth/selectors';
+import {userDataSelector} from '@store/modules/Auth/selectors';
 import {EmailIconSvg} from '@svg/EmailIcon';
 import {LogoSvg} from '@svg/Logo';
 import {MagicIconSvg} from '@svg/MagicIcon';
@@ -51,48 +46,15 @@ export const SignIn = ({navigation}: Props) => {
     useState(false);
 
   const dispatch = useDispatch();
-  const usersInfo = useSelector(userInfoSelector);
-  const isSignInSuccessed = useSelector(isSignInSuccessedSelector);
-  const isSocialInfoExists = useSelector(isSocialInfoExistsSelector);
-  const socialInfo = useSelector(socialInfoSelector);
+  const userData = useSelector(userDataSelector);
 
   const phoneNumber = `${selectedCountry.iddCode}${phone}`;
 
   useEffect(() => {
-    if (inputType === 'email' && isSignInSuccessed) {
-      const emailLowerCase = email.toLowerCase();
-      if (!usersInfo[emailLowerCase]?.profileFilled) {
-        navigation.navigate('ClaimNickname');
-      } else if (!usersInfo[emailLowerCase]?.welcomeSeen) {
-        navigation.navigate('Welcome');
-      }
+    if (userData) {
+      navigation.navigate('ClaimNickname');
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isSignInSuccessed]);
-
-  useEffect(() => {
-    if (inputType === 'phone' && isSignInSuccessed) {
-      if (!usersInfo[phoneNumber]?.profileFilled) {
-        navigation.navigate('ClaimNickname');
-      } else if (!usersInfo[phoneNumber]?.welcomeSeen) {
-        navigation.navigate('Welcome');
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isSignInSuccessed]);
-
-  useEffect(() => {
-    if (isSocialInfoExists && isSignInSuccessed) {
-      if (!usersInfo[`${socialInfo?.oauth.userInfo.email}`]?.profileFilled) {
-        navigation.navigate('ClaimNickname');
-      } else if (
-        !usersInfo[`${socialInfo?.oauth.userInfo.email}`]?.welcomeSeen
-      ) {
-        navigation.navigate('Welcome');
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isSignInSuccessed, isSocialInfoExists]);
+  }, [navigation, userData]);
 
   const onSignIn = async () => {
     Keyboard.dismiss();
@@ -121,9 +83,6 @@ export const SignIn = ({navigation}: Props) => {
         await dispatch(AuthActions.SIGN_IN_SOCIAL.START.create('google'));
         break;
       case ESocialType.twitter:
-        break;
-
-      default:
         break;
     }
   };
