@@ -44,7 +44,12 @@ export const ConfirmNewPhone = memo(() => {
   const [phone, setPhone] = useState('');
 
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+    <TouchableWithoutFeedback
+      onPress={() => {
+        Keyboard.dismiss();
+        setCountrySearchVisibility(false);
+      }}
+      accessible={false}>
       <KeyboardAvoidingView
         style={styles.container}
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}>

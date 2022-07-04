@@ -5,7 +5,7 @@ import {COLORS} from '@constants/colors';
 import {ICountryCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
 import {ListControlBase} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlBase';
-import React, {memo, useState} from 'react';
+import React, {memo} from 'react';
 import {StyleSheet, Text} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {font, rem} from 'rn-units';
@@ -13,14 +13,19 @@ import {font, rem} from 'rn-units';
 type Props = {
   label: string;
   selectedCountry: ICountryCode;
+  isCountrySearchVisible: boolean;
+  setCountrySearchVisibility: (visible: boolean) => void;
   onCountrySelect: (country: ICountryCode) => void;
 };
 
 export const ListControlCountry = memo(
-  ({label, selectedCountry, onCountrySelect}: Props) => {
-    const [isCountrySearchVisible, setCountrySearchVisibility] =
-      useState(false);
-
+  ({
+    label,
+    selectedCountry,
+    isCountrySearchVisible,
+    setCountrySearchVisibility,
+    onCountrySelect,
+  }: Props) => {
     return (
       <>
         <TouchableOpacity onPress={() => setCountrySearchVisibility(true)}>

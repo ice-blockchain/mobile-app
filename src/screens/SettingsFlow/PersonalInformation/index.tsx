@@ -38,10 +38,12 @@ const mockUserData = {
 export const PersonalInformation = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
-  const [hasChanges, setHasChanges] = useState(false);
-  const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
   const navigation =
     useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
+
+  const [hasChanges, setHasChanges] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
+  const [isCountrySearchVisible, setCountrySearchVisibility] = useState(false);
 
   const onChangePhonePress = useCallback(
     () => navigation.navigate('ConfirmNewPhone'),
@@ -61,7 +63,12 @@ export const PersonalInformation = memo(() => {
     useKeyboardAnimatedStyles();
 
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+    <TouchableWithoutFeedback
+      onPress={() => {
+        Keyboard.dismiss();
+        setCountrySearchVisibility(false);
+      }}
+      accessible={false}>
       <View style={styles.container}>
         <Header
           color={COLORS.white}
@@ -116,6 +123,8 @@ export const PersonalInformation = memo(() => {
               <ListControlCountry
                 label={t('personal_information.country')}
                 selectedCountry={selectedCountry}
+                isCountrySearchVisible={isCountrySearchVisible}
+                setCountrySearchVisibility={setCountrySearchVisibility}
                 onCountrySelect={onCountrySelect}
               />
               <ListControlSeparator />
