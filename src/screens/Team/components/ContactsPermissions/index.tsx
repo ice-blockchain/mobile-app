@@ -4,6 +4,7 @@ import {PrimaryButton} from '@components/PrimaryButton';
 import {Text} from '@components/Text';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {TeamAllowContactsButtonIcon} from '@screens/Team/assets/svg/TeamAllowContactsButtonIcon';
 import {t} from '@translations/i18n';
 import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
@@ -32,6 +33,8 @@ export function ContactsPermissions({
         text={t('team.contacts.empty_button_title')}
         onPress={handleOnPress}
         style={styles.allowAccessButton}
+        textStyle={styles.buttonText}
+        icon={<TeamAllowContactsButtonIcon />}
       />
     </View>
   );
@@ -67,5 +70,14 @@ const styles = StyleSheet.create({
   },
   allowAccessButton: {
     marginTop: rem(25),
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  buttonText: {
+    fontFamily: FONTS.primary.black,
+    fontSize: font(18),
+    lineHeight: rem(25),
+    marginLeft: rem(10),
   },
 });
