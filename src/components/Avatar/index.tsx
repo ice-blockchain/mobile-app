@@ -6,6 +6,7 @@ import {PenIcon} from '@svg/PenIcon';
 import React from 'react';
 import {
   Image,
+  Platform,
   StyleProp,
   StyleSheet,
   TouchableOpacity,
@@ -26,8 +27,12 @@ type Props = {
 
 export const Avatar = ({uri, style, showPen, onPenPress}: Props) => {
   return (
-    <View style={style}>
-      <View style={[styles.avatarWrapper, commonStyles.shadow]}>
+    <View style={[style, Platform.OS === 'ios' && commonStyles.shadow]}>
+      <View
+        style={[
+          styles.avatarWrapper,
+          Platform.OS === 'android' && commonStyles.shadow,
+        ]}>
         <Image source={{uri}} style={styles.image} />
       </View>
       {showPen && (
