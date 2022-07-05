@@ -6,69 +6,48 @@ import {PrimaryButton} from '@components/PrimaryButton';
 import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
 import {IS_SMALL_SCREEN, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
+import {Images} from '@images';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {t} from '@translations/i18n';
 import React, {useEffect, useRef, useState} from 'react';
-import {Animated, Image, Keyboard, StyleSheet, Text, View} from 'react-native';
+import {Animated, Image, StyleSheet, Text, View} from 'react-native';
 import {font, isIOS, rem, screenWidth} from 'rn-units';
-
-const confirmPhoneImage = require('../../../../assets/images/phone/confirmPhone.png');
 
 type ConfirmPhoneProps = {
   confirmPhonePress: (phone: string) => void;
+  showCountriesList: (t: boolean) => void;
+  isCountriesVisible: boolean;
 };
 
 export function ConfirmPhone({
   confirmPhonePress,
+  showCountriesList,
+  isCountriesVisible,
 }: ConfirmPhoneProps): React.ReactElement {
   const [phone, setPhone] = useState('');
   const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
-  const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
-    useState<boolean>(false);
   const handleOnPress = () => {
     confirmPhonePress(phone);
   };
-
-  const [isKeyboardVisible, setKeyboardVisible] = useState(false);
-
-  useEffect(() => {
-    const keyboardDidShowListener = Keyboard.addListener(
-      'keyboardDidShow',
-      () => {
-        setKeyboardVisible(true); // or some other action
-      },
-    );
-    const keyboardDidHideListener = Keyboard.addListener(
-      'keyboardDidHide',
-      () => {
-        setKeyboardVisible(false); // or some other action
-      },
-    );
-
-    return () => {
-      keyboardDidHideListener.remove();
-      keyboardDidShowListener.remove();
-    };
-  }, []);
+  const isKeyboardVisible = useIsKeyboardShown();
 
   const showCountryCodeSearch = () => {
-    setCountryCodeSearchVisibility(true);
+    showCountriesList(true);
   };
   const hideCountryCodeSearch = () => {
-    setCountryCodeSearchVisibility(false);
+    showCountriesList(false);
   };
 
   const translation = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    if (isKeyboardVisible) {
-      Animated.timing(translation, {
-        toValue: isCountryCodeSearchVisible ? (isIOS ? -80 : -140) : 0,
-        duration: 100,
-        useNativeDriver: true,
-      }).start();
-    }
-  }, [isCountryCodeSearchVisible, isKeyboardVisible, translation]);
+    Animated.timing(translation, {
+      toValue: isCountriesVisible ? (isIOS ? -80 : -140) : 0,
+      duration: 100,
+      useNativeDriver: true,
+    }).start();
+  }, [isCountriesVisible, isKeyboardVisible, translation]);
 
   const tabbarOffest = useBottomTabBarOffsetStyle({
     extraOffset: IS_SMALL_SCREEN ? (isIOS ? undefined : 20) : undefined,
@@ -84,7 +63,7 @@ export function ConfirmPhone({
       <View style={styles.container}>
         <View style={styles.imageContainer}>
           <Image
-            source={confirmPhoneImage}
+            source={Images.phone.confirmPhone}
             style={styles.image}
             resizeMode="contain"
           />
@@ -107,7 +86,7 @@ export function ConfirmPhone({
             onPress={handleOnPress}
             style={styles.allowAccessButton}
           />
-          {isCountryCodeSearchVisible ? (
+          {isCountriesVisible ? (
             <PhoneNumberSearch
               containerStyle={styles.phoneNumberSearch}
               selectedCountry={selectedCountry}

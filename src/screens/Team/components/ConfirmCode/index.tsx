@@ -4,14 +4,13 @@ import {CommonInput} from '@components/CommonInput';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {FONTS} from '@constants/fonts';
 import {IS_SMALL_SCREEN, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {Images} from '@images';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {TicketIconSvg} from '@svg/Ticket';
 import {t} from '@translations/i18n';
 import React, {useState} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {font, isIOS, rem, screenWidth} from 'rn-units';
-
-const icon = require('../../../../assets/images/phone/confirmCode.png');
 
 type ConfirmCodeProps = {
   confirmCodePress: () => void;
@@ -31,7 +30,11 @@ export function ConfirmCode({
   return (
     <View style={[styles.container, tabbarOffest.current]}>
       <View style={styles.imageContainer}>
-        <Image source={icon} style={styles.image} resizeMode="contain" />
+        <Image
+          source={Images.phone.confirmCode}
+          style={styles.image}
+          resizeMode="contain"
+        />
       </View>
       <Text style={styles.title}>{t('team.confirm_code.title')}</Text>
       <Text style={styles.description}>

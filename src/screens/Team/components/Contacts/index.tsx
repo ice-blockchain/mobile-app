@@ -20,8 +20,15 @@ type TContactsFlow =
   | 'ConfirmPhone'
   | 'ConfirmCode'
   | 'ContactsList';
+type ContactsProps = {
+  showCountriesList: (t: boolean) => void;
+  isCountriesVisible: boolean;
+};
 
-export const Contacts = () => {
+export const Contacts = ({
+  showCountriesList,
+  isCountriesVisible,
+}: ContactsProps) => {
   const [isLoading, setLoading] = useState(false);
 
   const dispatch = useDispatch();
@@ -113,7 +120,11 @@ export const Contacts = () => {
         />
       )}
       {visibleFlow === 'ConfirmPhone' && (
-        <ConfirmPhone confirmPhonePress={confirmPhonePress} />
+        <ConfirmPhone
+          showCountriesList={showCountriesList}
+          isCountriesVisible={isCountriesVisible}
+          confirmPhonePress={confirmPhonePress}
+        />
       )}
       {visibleFlow === 'ConfirmCode' && (
         <ConfirmCode confirmCodePress={confirmCodePress} />

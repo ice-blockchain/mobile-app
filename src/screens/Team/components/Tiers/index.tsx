@@ -15,7 +15,12 @@ import {rem} from 'rn-units';
 
 import {TABS} from './mockData';
 
-export const Tiers = () => {
+type TiersProps = {
+  showCountriesList: (t: boolean) => void;
+  isCountriesVisible: boolean;
+};
+
+export const Tiers = (props: TiersProps) => {
   const switcherRef = useRef<SegmentedControlMethods>(null);
   const pagerRef = useRef<PagerView>(null);
 
@@ -43,7 +48,7 @@ export const Tiers = () => {
         ref={pagerRef}
         onPageSelected={onPageChange}>
         <View style={styles.container}>
-          <Contacts />
+          <Contacts {...props} />
         </View>
         <View style={styles.container}>
           <TierOneList />
