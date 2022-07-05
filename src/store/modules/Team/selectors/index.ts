@@ -13,3 +13,6 @@ export const getContactsByIdsSelector = (state: RootState) =>
 
 export const getContactsIdsSelector = (state: RootState) =>
   state.team.contactsIds;
+
+export const getContactsScreenStateSelector = (state: RootState) =>
+  state.team.contactScreenState;

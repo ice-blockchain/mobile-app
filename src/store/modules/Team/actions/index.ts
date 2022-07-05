@@ -6,6 +6,9 @@ import {createAction} from '@store/utils/actions/createAction';
 const SET_PHONE_NUMBER_VERIFIED = createAction('SET_PHONE_NUMBER_VERIFIED', {
   STATE: () => {},
 });
+const SET_CODE_VERIFIED = createAction('SET_CODE_VERIFIED', {
+  STATE: () => {},
+});
 const INVITE_CONTACT = createAction('INVITE_CONTACT', {
   STATE: (id: string) => ({id}),
 });
@@ -19,6 +22,7 @@ const SET_CONTACTS_IDS = createAction('SET_CONTACTS_IDS', {
 
 export const TeamActions = Object.freeze({
   SET_PHONE_NUMBER_VERIFIED,
+  SET_CODE_VERIFIED,
   INVITE_CONTACT,
   SET_CONTACTS_BY_IDS,
   SET_CONTACTS_IDS,

@@ -1,18 +1,14 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ConfirmCode} from '@screens/Team/components/ConfirmCode';
 import {ConfirmPhone} from '@screens/Team/components/ConfirmPhone';
 import {ContactsList} from '@screens/Team/components/ContactsList';
 import {ContactsPermissions} from '@screens/Team/components/ContactsPermissions';
-import {
-  hasContactsAccessPermission,
-  requestContactsAccessPermission,
-} from '@services/contacts';
+import {PermissionsActions} from '@store/modules/Permissions/actions';
 import {TeamActions} from '@store/modules/Team/actions';
-import {selectorIsPhoneNumberVerified} from '@store/modules/Team/selectors';
-import React, {useEffect, useRef, useState} from 'react';
-import {ActivityIndicator, Animated, Linking, StyleSheet} from 'react-native';
+import {getContactsScreenStateSelector} from '@store/modules/Team/selectors';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import {ActivityIndicator, Animated, StyleSheet} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 type TContactsFlow =
@@ -23,49 +19,44 @@ type TContactsFlow =
 
 export const Contacts = () => {
   const [isLoading, setLoading] = useState(false);
-  const [visibleFlow, setVisibleFlow] = useState<TContactsFlow>(
-    'ContactsPermissions',
-  );
+
   const dispatch = useDispatch();
-  const isPhoneNumberVerified = useSelector(selectorIsPhoneNumberVerified);
+  const contactScreenState = useSelector(getContactsScreenStateSelector);
+
+  const [visibleFlow, setVisibleFlow] =
+    useState<TContactsFlow>(contactScreenState);
 
   const fadeAnimation = useRef(new Animated.Value(1)).current;
 
-  const showNewFlow = (newVisibleFlow: TContactsFlow) => {
-    Animated.timing(fadeAnimation, {
-      toValue: 0,
-      duration: 500,
-      useNativeDriver: true,
-    }).start(() => {
-      setVisibleFlow(newVisibleFlow);
+  const showNewFlow = useCallback(
+    (newVisibleFlow: TContactsFlow) => {
       Animated.timing(fadeAnimation, {
-        toValue: 1,
+        toValue: 0,
         duration: 500,
         useNativeDriver: true,
-      }).start();
-    });
-  };
+      }).start(() => {
+        setVisibleFlow(newVisibleFlow);
+        Animated.timing(fadeAnimation, {
+          toValue: 1,
+          duration: 500,
+          useNativeDriver: true,
+        }).start();
+      });
+    },
+    [fadeAnimation],
+  );
 
   useEffect(() => {
-    if (isPhoneNumberVerified) {
-      setVisibleFlow('ContactsList');
-    } else {
-      hasContactsAccessPermission()
-        .then(granted => {
-          if (granted) {
-            setVisibleFlow('ConfirmPhone');
-          }
-        })
-        .catch(() => {});
+    if (contactScreenState !== visibleFlow) {
+      showNewFlow(contactScreenState);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [showNewFlow, contactScreenState, visibleFlow]);
 
   const confirmPhonePress = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      showNewFlow('ConfirmCode');
+      dispatch(TeamActions.SET_PHONE_NUMBER_VERIFIED.STATE.create());
     }, 1500);
   };
 
@@ -73,37 +64,12 @@ export const Contacts = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      dispatch(TeamActions.SET_PHONE_NUMBER_VERIFIED.STATE.create());
-      showNewFlow('ContactsList');
+      dispatch(TeamActions.SET_CODE_VERIFIED.STATE.create());
     }, 1500);
   };
 
   const requestContactsAccessPermissionPress = async () => {
-    const hasPermissions = await hasContactsAccessPermission();
-
-    const isContactsPermissionsAsked = await AsyncStorage.getItem(
-      'isContactsPermissionsAsked',
-    );
-
-    if (isContactsPermissionsAsked) {
-      if (!hasPermissions) {
-        Linking.openSettings();
-      }
-    }
-
-    if (hasPermissions) {
-      showNewFlow('ConfirmPhone');
-    } else if (!hasPermissions) {
-      const granted = await requestContactsAccessPermission();
-
-      await AsyncStorage.setItem('isContactsPermissionsAsked', 'true');
-
-      if (granted) {
-        showNewFlow('ConfirmPhone');
-      } else {
-        return;
-      }
-    }
+    dispatch(PermissionsActions.GET_CONTACTS_PERMISSIONS.START.create());
   };
   return (
     <Animated.View style={[styles.container, {opacity: fadeAnimation}]}>
