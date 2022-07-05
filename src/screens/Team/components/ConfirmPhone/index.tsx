@@ -6,12 +6,12 @@ import {PrimaryButton} from '@components/PrimaryButton';
 import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
-import {translate} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import React, {useState} from 'react';
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
-import {font, rem} from 'rn-units';
+import {font, rem, screenWidth} from 'rn-units';
 
-const icon = require('../../assets/teamConfirmPhone.png');
+const icon = require('../../assets/images/teamConfirmPhone.png');
 
 type ConfirmPhoneProps = {
   confirmPhonePress: () => void;
@@ -44,11 +44,9 @@ export function ConfirmPhone({
       contentContainerStyle={tabbarOffest.current}>
       <View style={styles.container}>
         <Image source={icon} style={styles.icon} />
-        <Text style={styles.title}>
-          {translate('team.confirm_phone.title')}
-        </Text>
+        <Text style={styles.title}>{t('team.confirm_phone.title')}</Text>
         <Text style={styles.description}>
-          {translate('team.confirm_phone.description')}
+          {t('team.confirm_phone.description')}
         </Text>
         <View style={styles.inputContainer}>
           <PhoneNumberInput
@@ -59,7 +57,7 @@ export function ConfirmPhone({
             onValueChange={setPhone}
           />
           <PrimaryButton
-            text={translate('team.confirm_phone.button')}
+            text={t('team.confirm_phone.button')}
             onPress={handleOnPress}
             style={styles.allowAccessButton}
           />
@@ -89,7 +87,7 @@ const styles = StyleSheet.create({
     paddingBottom: 400,
   },
   inputContainer: {
-    width: '100%',
+    width: screenWidth,
     marginTop: 25,
     paddingHorizontal: rem(27),
   },
@@ -102,7 +100,7 @@ const styles = StyleSheet.create({
     fontSize: font(24),
     fontFamily: FONTS.primary.black,
     textAlign: 'center',
-    marginHorizontal: 24,
+    marginHorizontal: rem(24),
     marginTop: rem(2),
   },
   description: {
@@ -115,10 +113,10 @@ const styles = StyleSheet.create({
   },
   allowAccessButton: {
     marginTop: rem(25),
-    width: '100%',
+    width: screenWidth - 54,
   },
   input: {
-    width: '100%',
+    width: screenWidth - 54,
   },
   phoneNumberSearch: {
     marginHorizontal: rem(27),

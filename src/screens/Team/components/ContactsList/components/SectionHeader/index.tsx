@@ -3,7 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {LogoIconSvg} from '@svg/LogoIcon';
-import {translate} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font} from 'rn-units';
@@ -12,11 +12,9 @@ const IceFriendsHeader = () => {
   return (
     <View style={styles.friendsHeader}>
       <LogoIconSvg />
-      <Text style={styles.ice}>
-        {translate('team.contacts_list.ice_header.ice')}
-      </Text>
+      <Text style={styles.ice}>{t('team.contacts_list.ice_header.ice')}</Text>
       <Text style={styles.title}>
-        {translate('team.contacts_list.ice_header.friends')}
+        {t('team.contacts_list.ice_header.friends')}
       </Text>
     </View>
   );
@@ -25,7 +23,7 @@ const IceFriendsHeader = () => {
 export const SectionHeader = ({section}: {section: {title: string}}) => {
   return (
     <View style={styles.titleContainer}>
-      {section.title === 'All contacts' ? (
+      {section.title === t('team.contacts_list.all_contacts') ? (
         <Text style={styles.title}>{section.title}</Text>
       ) : (
         <IceFriendsHeader />

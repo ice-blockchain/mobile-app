@@ -3,9 +3,9 @@
 import {Text} from '@components/Text';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
-import {TeamHeaderEarningsIcon} from '@screens/Team/assets/TeamHeaderEarningsIcon';
-import {TeamHeaderReferralsIcon} from '@screens/Team/assets/TeamHeaderReferralsIcon';
-import {translate} from '@translations/i18n';
+import {TeamHeaderEarningsIcon} from '@screens/Team/assets/svg/TeamHeaderEarningsIcon';
+import {TeamHeaderReferralsIcon} from '@screens/Team/assets/svg/TeamHeaderReferralsIcon';
+import {t} from '@translations/i18n';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem, screenWidth} from 'rn-units';
@@ -46,7 +46,7 @@ export function InfoItem({type}: InfoItemProps): React.ReactElement {
       case InfoItemType.referrals:
         return <Text value={`${refsCount}`} style={styles.referrals} />;
       case InfoItemType.earnings:
-        const earningsLocalized = `${earningsValue.toLocaleString()}${translate(
+        const earningsLocalized = `${earningsValue.toLocaleString()}${t(
           'team.header.earnings_token',
         )}`;
         return <Text value={earningsLocalized} style={styles.earnings} />;

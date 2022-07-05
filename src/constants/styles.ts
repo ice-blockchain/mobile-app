@@ -4,7 +4,7 @@ import {COLORS} from '@constants/colors';
 import {StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
-export const defaultSubScreenTopOffset = rem(200);
+export const DEFAULT_SUB_SCREEN_TOP_OFFSET = rem(200);
 
 export const SCREEN_SIDE_OFFSET = rem(23);
 

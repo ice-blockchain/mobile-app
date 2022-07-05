@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
-import {MultipleNumbersIcon} from '@screens/Team/components/ContactsList/assets/MultipleNumbersIcon';
+import {MultipleNumbersIcon} from '@screens/Team/components/ContactsList/assets/svg/MultipleNumbersIcon';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';

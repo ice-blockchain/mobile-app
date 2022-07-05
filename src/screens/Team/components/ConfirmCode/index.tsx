@@ -5,13 +5,13 @@ import {PrimaryButton} from '@components/PrimaryButton';
 import {FONTS} from '@constants/fonts';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {TicketIconSvg} from '@svg/Ticket';
-import {translate} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import React, {useState} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
-import {font, rem} from 'rn-units';
+import {font, rem, screenWidth} from 'rn-units';
 
-const icon = require('../../assets/teamConfirmCode.png');
+const icon = require('../../assets/images/teamConfirmCode.png');
 
 type ConfirmCodeProps = {
   confirmCodePress: () => void;
@@ -31,20 +31,20 @@ export function ConfirmCode({
       contentContainerStyle={tabbarOffest.current}>
       <View style={styles.container}>
         <Image source={icon} style={styles.icon} />
-        <Text style={styles.title}>{translate('team.confirm_code.title')}</Text>
+        <Text style={styles.title}>{t('team.confirm_code.title')}</Text>
         <Text style={styles.description}>
-          {translate('team.confirm_code.description')}
+          {t('team.confirm_code.description')}
         </Text>
         <View style={styles.inputContainer}>
           <CommonInput
-            placeholder={translate('team.confirm_code.placeholder')}
+            placeholder={t('team.confirm_code.placeholder')}
             value={inputValue}
             onChangeText={onInputChange}
             icon={<TicketIconSvg />}
             containerStyle={styles.input}
           />
           <PrimaryButton
-            text={translate('team.confirm_code.button')}
+            text={t('team.confirm_code.button')}
             onPress={handleOnPress}
             style={styles.allowAccessButton}
           />
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   inputContainer: {
-    width: '100%',
+    width: screenWidth,
     marginTop: 25,
     paddingHorizontal: rem(27),
   },
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     fontSize: font(24),
     fontFamily: FONTS.primary.black,
     textAlign: 'center',
-    marginHorizontal: 24,
+    marginHorizontal: rem(24),
     marginTop: rem(2),
   },
   description: {
@@ -86,9 +86,9 @@ const styles = StyleSheet.create({
   },
   allowAccessButton: {
     marginTop: rem(25),
-    width: '100%',
+    width: screenWidth - rem(48),
   },
   input: {
-    width: '100%',
+    width: screenWidth - rem(48),
   },
 });

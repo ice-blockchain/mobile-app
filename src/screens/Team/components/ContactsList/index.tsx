@@ -6,7 +6,7 @@ import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {ContactItem} from '@screens/Team/components/ContactItem';
-import {TeamContactInvite} from '@screens/Team/components/ContactsList/assets/TeamContactInvite';
+import {TeamContactInvite} from '@screens/Team/components/ContactsList/assets/svg/TeamContactInvite';
 import {ContactsInviteButton} from '@screens/Team/components/ContactsList/components/ContactsInviteButton';
 import {MultipleNumbers} from '@screens/Team/components/ContactsList/components/MultipleNumbers';
 import {SectionHeader} from '@screens/Team/components/ContactsList/components/SectionHeader';

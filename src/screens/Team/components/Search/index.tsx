@@ -3,7 +3,7 @@
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {SearchIconSvg} from '@svg/SearchIcon';
-import {translate} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import React from 'react';
 import {
   FlexStyle,
@@ -39,7 +39,7 @@ export function Search({
         ref={textInputRef}
         style={[styles.input]}
         placeholderTextColor={COLORS.heather}
-        placeholder={placeholder ? translate(placeholder) : ''}
+        placeholder={placeholder ? t(placeholder) : ''}
         {...rest}
       />
     </View>

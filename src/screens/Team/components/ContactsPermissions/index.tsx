@@ -4,12 +4,12 @@ import {PrimaryButton} from '@components/PrimaryButton';
 import {Text} from '@components/Text';
 import {FONTS} from '@constants/fonts';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
-import {translate} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import React from 'react';
 import {Image, ScrollView, StyleSheet, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
-const icon = require('../../assets/teamAgendaNotShared.png');
+const icon = require('../../assets/images/teamAgendaNotShared.png');
 
 type ContactsPermissionsProps = {
   requestContactsAccessPermissionPress: () => void;
@@ -35,7 +35,7 @@ export function ContactsPermissions({
           text="team.contacts.empty_description"
         />
         <PrimaryButton
-          text={translate('team.contacts.empty_button_title')}
+          text={t('team.contacts.empty_button_title')}
           onPress={handleOnPress}
           style={styles.allowAccessButton}
         />

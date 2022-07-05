@@ -4,7 +4,7 @@ import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {ContactItem} from '@screens/Team/components/ContactItem';
-import {RingIcon} from '@screens/Team/components/ContactsList/assets/Ring';
+import {RingIcon} from '@screens/Team/components/ContactsList/assets/svg/Ring';
 import {ContactsInviteButton} from '@screens/Team/components/ContactsList/components/ContactsInviteButton';
 import {Tier, TierType} from '@screens/Team/components/Tier';
 import {ListHeader} from '@screens/Team/components/TierOneList/components/Header';
@@ -13,6 +13,7 @@ import {
   getIceFriendsSelector,
 } from '@store/modules/Team/selectors';
 import {WhiteLogoSvg} from '@svg/WhiteLogo';
+import {t} from '@translations/i18n';
 import {getRandomColor} from '@utils/getRandomColor';
 import React, {useCallback} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
@@ -51,8 +52,8 @@ export const TierOneList = ({}: TierOneListProps) => {
           rightSideButton={
             <ContactsInviteButton
               icon={<RingIcon />}
-              text={'PING'}
-              onPress={() => onPress(item)}
+              text={t('team.tier_one.ping')}
+              onPress={onPress}
             />
           }
         />
@@ -61,9 +62,7 @@ export const TierOneList = ({}: TierOneListProps) => {
     [contactsByIds],
   );
 
-  const onPress = (id: string) => {
-    console.log(id);
-  };
+  const onPress = () => {};
 
   if (!iceFriends.length) {
     return <Tier type={TierType.tierOne} />;

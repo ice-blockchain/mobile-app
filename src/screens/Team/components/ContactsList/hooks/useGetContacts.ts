@@ -7,6 +7,7 @@ import {
   getContactsIdsSelector,
   getIceFriendsSelector,
 } from '@store/modules/Team/selectors';
+import {t} from '@translations/i18n';
 import {getRandomColor} from '@utils/getRandomColor';
 import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
@@ -43,7 +44,7 @@ export const useGetContacts = () => {
 
   const sections = [
     {
-      title: 'All contacts',
+      title: t('team.contacts_list.all_contacts'),
       data: contactsIds,
     },
   ];

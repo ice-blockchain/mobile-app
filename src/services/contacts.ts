@@ -57,12 +57,12 @@ export const contactsPermission = isIOS
 
 export const hasContactsAccessPermission = async () => {
   const permission = await Permissions.check(contactsPermission);
-  return permission === RESULTS.GRANTED;
+  return permission;
 };
 
 export const requestContactsAccessPermission = async () => {
   const permission = await Permissions.request(contactsPermission);
-  return permission === RESULTS.GRANTED;
+  return permission;
 };
 
 export const hasContactsAccessDeclined = async () => {
