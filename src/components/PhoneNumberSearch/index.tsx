@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: rem(13),
     borderColor: COLORS.greyBorder,
-    height: IS_SMALL_SCREEN ? rem(270) : rem(311),
+    height: IS_SMALL_SCREEN ? rem(240) : rem(311),
     backgroundColor: COLORS.white,
   },
   countryIcon: {
