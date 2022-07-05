@@ -74,6 +74,9 @@ const styles = StyleSheet.create({
   },
   allowAccessButton: {
     marginTop: rem(25),
+    width: rem(253),
+    height: rem(55),
+    borderRadius: 11,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
