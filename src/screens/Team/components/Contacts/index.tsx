@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {DEFAULT_SUB_SCREEN_TOP_OFFSET} from '@constants/styles';
 import {ConfirmCode} from '@screens/Team/components/ConfirmCode';
 import {ConfirmPhone} from '@screens/Team/components/ConfirmPhone';
 import {ContactsList} from '@screens/Team/components/ContactsList';
@@ -11,7 +10,6 @@ import {getContactsScreenStateSelector} from '@store/modules/Team/selectors';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {ActivityIndicator, Animated, StyleSheet} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import {screenHeight, screenWidth} from 'rn-units';
 
 type TContactsFlow =
   | 'ContactsPermissions'
@@ -102,8 +100,7 @@ export const Contacts = () => {
 
 const styles = StyleSheet.create({
   container: {
-    width: screenWidth,
-    height: screenHeight - DEFAULT_SUB_SCREEN_TOP_OFFSET,
+    flex: 1,
   },
   loading: {
     backgroundColor: 'rgba(0,0,0,0.2)',

@@ -1,10 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {
-  DEFAULT_SUB_SCREEN_TOP_OFFSET,
-  RATIO,
-  SCREEN_SIDE_OFFSET,
-} from '@constants/styles';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {InfoItem, InfoItemType} from '@screens/Team/components/InfoItem';
 import {Search} from '@screens/Team/components/Search';
 import React, {useState} from 'react';
@@ -26,7 +22,6 @@ export const Header = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: DEFAULT_SUB_SCREEN_TOP_OFFSET * RATIO,
     paddingHorizontal: SCREEN_SIDE_OFFSET,
   },
   infoItems: {
