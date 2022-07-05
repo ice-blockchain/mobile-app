@@ -3,7 +3,7 @@
 import {PrimaryButton} from '@components/PrimaryButton';
 import {Text} from '@components/Text';
 import {FONTS} from '@constants/fonts';
-import {RATIO, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {t} from '@translations/i18n';
 import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
@@ -23,7 +23,9 @@ export function ContactsPermissions({
   };
   return (
     <View style={styles.container}>
-      <Image source={icon} style={styles.icon} />
+      <View style={styles.imageContainer}>
+        <Image source={icon} style={styles.image} resizeMode="contain" />
+      </View>
       <Text style={styles.title} text="team.contacts.empty_title" />
       <Text style={styles.description} text="team.contacts.empty_description" />
       <PrimaryButton
@@ -40,27 +42,30 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
-  icon: {
-    width: rem(200 * RATIO),
-    height: rem(170 * RATIO),
-    marginTop: rem(16 * RATIO),
+  imageContainer: {
+    flex: 1,
+    maxHeight: rem(200),
+    marginTop: rem(16),
+  },
+  image: {
+    flex: 1,
   },
   title: {
-    fontSize: font(24 * RATIO),
+    fontSize: font(24),
     fontFamily: FONTS.primary.black,
     textAlign: 'center',
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(2),
   },
   description: {
-    fontSize: font(14 * RATIO),
+    fontSize: font(14),
     fontFamily: FONTS.primary.regular,
     textAlign: 'center',
     marginHorizontal: SCREEN_SIDE_OFFSET,
-    marginTop: rem(7 * RATIO),
-    lineHeight: rem(24 * RATIO),
+    marginTop: rem(7),
+    lineHeight: rem(24),
   },
   allowAccessButton: {
-    marginTop: rem(25 * RATIO),
+    marginTop: rem(25),
   },
 });

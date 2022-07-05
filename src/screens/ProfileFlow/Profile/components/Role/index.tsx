@@ -5,7 +5,7 @@ import {
   ImageCardCompactSkeleton,
 } from '@components/Cards/ImageCardCompact';
 import {Images} from '@images';
-import {ProfileStackParamList} from '@navigation/Main';
+import {ProfileTabStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {ViewAllButton} from '@screens/ProfileFlow/Profile/components/Role/components/ViewAllButton';
@@ -17,7 +17,7 @@ import {rem} from 'rn-units';
 
 export const Role = memo(() => {
   const navigation =
-    useNavigation<NativeStackNavigationProp<ProfileStackParamList>>();
+    useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
   const [loading, setLoading] = useState(true);
   setTimeout(() => setLoading(false), 2000);
 

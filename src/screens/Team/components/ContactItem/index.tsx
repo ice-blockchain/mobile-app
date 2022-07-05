@@ -2,7 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
-import {IContact} from '@services/contacts';
+import {IFormattedContact} from '@store/modules/Team/sagas/getContactsSaga';
 import React, {ReactNode, useState} from 'react';
 import {
   LayoutAnimation,
@@ -22,7 +22,7 @@ export const ContactItem = ({
   indicatorContent,
 }: {
   index: number;
-  item: IContact;
+  item: IFormattedContact;
   backgroundColor: string;
   rightSideButton?: ReactNode;
   leftIconContent?: ReactNode;

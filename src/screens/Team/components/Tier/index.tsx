@@ -3,7 +3,7 @@
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {EmptyTier} from '@screens/Team/components/EmptyTier';
 import React from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
 export enum TierType {
   'tierOne',
@@ -17,25 +17,16 @@ type TierProps = {
 export function Tier({type}: TierProps): React.ReactElement {
   const tabbarOffest = useBottomTabBarOffsetStyle();
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      style={styles.scrollView}
-      contentContainerStyle={tabbarOffest.current}
-      scrollEnabled={false}>
-      <View style={[styles.container, tabbarOffest.current]}>
-        <EmptyTier type={type} />
-      </View>
-    </ScrollView>
+    <View style={[styles.container, tabbarOffest.current]}>
+      <EmptyTier type={type} />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  scrollView: {
-    flex: 1,
-  },
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
 });

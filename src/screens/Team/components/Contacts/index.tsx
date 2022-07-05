@@ -1,12 +1,17 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {ConfirmCode} from '@screens/Team/components/ConfirmCode';
 import {ConfirmPhone} from '@screens/Team/components/ConfirmPhone';
 import {ContactsList} from '@screens/Team/components/ContactsList';
 import {ContactsPermissions} from '@screens/Team/components/ContactsPermissions';
+import {AccountActions} from '@store/modules/Accounts/actions';
+import {
+  isPhoneNumberVerifiedSelector,
+  phoneVerificationStepSelector,
+} from '@store/modules/Accounts/selectors';
 import {PermissionsActions} from '@store/modules/Permissions/actions';
-import {TeamActions} from '@store/modules/Team/actions';
-import {getContactsScreenStateSelector} from '@store/modules/Team/selectors';
+import {permissionSelector} from '@store/modules/Permissions/selectors';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {ActivityIndicator, Animated, StyleSheet} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
@@ -21,10 +26,30 @@ export const Contacts = () => {
   const [isLoading, setLoading] = useState(false);
 
   const dispatch = useDispatch();
-  const contactScreenState = useSelector(getContactsScreenStateSelector);
 
-  const [visibleFlow, setVisibleFlow] =
-    useState<TContactsFlow>(contactScreenState);
+  const hasContactsPermissions = useSelector(permissionSelector('contacts'));
+  const isPhoneNumberVerified = useSelector(isPhoneNumberVerifiedSelector);
+  const phoneVerificationStep = useSelector(phoneVerificationStepSelector);
+
+  const getCurrentScreen = useCallback(() => {
+    if (hasContactsPermissions) {
+      if (isPhoneNumberVerified) {
+        return 'ContactsList';
+      } else {
+        if (phoneVerificationStep === 'phone') {
+          return 'ConfirmPhone';
+        } else {
+          return 'ConfirmCode';
+        }
+      }
+    } else {
+      return 'ContactsPermissions';
+    }
+  }, [hasContactsPermissions, isPhoneNumberVerified, phoneVerificationStep]);
+
+  const [visibleFlow, setVisibleFlow] = useState<TContactsFlow>(
+    'ContactsPermissions',
+  );
 
   const fadeAnimation = useRef(new Animated.Value(1)).current;
 
@@ -46,17 +71,24 @@ export const Contacts = () => {
     [fadeAnimation],
   );
 
-  useEffect(() => {
-    if (contactScreenState !== visibleFlow) {
-      showNewFlow(contactScreenState);
-    }
-  }, [showNewFlow, contactScreenState, visibleFlow]);
+  const setScreen = useCallback(
+    (screen: TContactsFlow) => {
+      if (screen !== visibleFlow) {
+        showNewFlow(screen);
+      }
+    },
+    [showNewFlow, visibleFlow],
+  );
 
-  const confirmPhonePress = () => {
+  useEffect(() => {
+    setScreen(getCurrentScreen());
+  }, [getCurrentScreen, setScreen]);
+
+  const confirmPhonePress = (phone: string) => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      dispatch(TeamActions.SET_PHONE_NUMBER_VERIFIED.STATE.create());
+      dispatch(AccountActions.SET_PHONE_NUMBER_VERIFIED.STATE.create(phone));
     }, 1500);
   };
 
@@ -64,15 +96,23 @@ export const Contacts = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      dispatch(TeamActions.SET_CODE_VERIFIED.STATE.create());
+      dispatch(AccountActions.SET_CODE_VERIFIED.STATE.create());
     }, 1500);
   };
 
   const requestContactsAccessPermissionPress = async () => {
-    dispatch(PermissionsActions.GET_CONTACTS_PERMISSIONS.START.create());
+    dispatch(PermissionsActions.GET_PERMISSIONS.START.create('contacts'));
   };
+
+  const tabbarOffest = useBottomTabBarOffsetStyle();
+
   return (
-    <Animated.View style={[styles.container, {opacity: fadeAnimation}]}>
+    <Animated.View
+      style={[
+        styles.container,
+        tabbarOffest.current,
+        {opacity: fadeAnimation},
+      ]}>
       {visibleFlow === 'ContactsPermissions' && (
         <ContactsPermissions
           requestContactsAccessPermissionPress={

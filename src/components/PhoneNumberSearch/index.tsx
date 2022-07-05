@@ -7,6 +7,7 @@ import {
 import {COLORS} from '@constants/colors';
 import {countriesCode, ICountryCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
+import {IS_SMALL_SCREEN} from '@constants/styles';
 import {CloseIconSvg} from '@svg/CloseIcon';
 import {SearchIconSvg} from '@svg/SearchIcon';
 import {t} from '@translations/i18n';
@@ -105,6 +106,7 @@ export const PhoneNumberSearch = ({
           autoFocus
           autoCorrect={false}
           spellCheck={false}
+          keyboardType="name-phone-pad"
         />
       </View>
       <FlatList
@@ -123,7 +125,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: rem(13),
     borderColor: COLORS.greyBorder,
-    height: rem(311),
+    height: IS_SMALL_SCREEN ? rem(270) : rem(311),
     backgroundColor: COLORS.white,
   },
   countryIcon: {

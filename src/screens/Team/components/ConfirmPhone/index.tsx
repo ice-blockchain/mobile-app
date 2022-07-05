@@ -5,17 +5,25 @@ import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
-import {IS_SMALL_SCREEN, SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {t} from '@translations/i18n';
-import React, {useState} from 'react';
-import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
-import {font, rem, screenWidth} from 'rn-units';
+import React, {useEffect, useRef, useState} from 'react';
+import {
+  Animated,
+  Image,
+  Keyboard,
+  KeyboardAvoidingView,
+  StyleSheet,
+  Text,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
+import {font, isIOS, rem, screenWidth} from 'rn-units';
 
-const icon = require('../../assets/images/teamConfirmPhone.png');
+const confirmPhoneImage = require('../../../../assets/images/phone/confirmPhone.png');
 
 type ConfirmPhoneProps = {
-  confirmPhonePress: () => void;
+  confirmPhonePress: (phone: string) => void;
 };
 
 export function ConfirmPhone({
@@ -26,8 +34,30 @@ export function ConfirmPhone({
   const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
     useState<boolean>(false);
   const handleOnPress = () => {
-    confirmPhonePress();
+    confirmPhonePress(phone);
   };
+
+  const [isKeyboardVisible, setKeyboardVisible] = useState(false);
+
+  useEffect(() => {
+    const keyboardDidShowListener = Keyboard.addListener(
+      'keyboardDidShow',
+      () => {
+        setKeyboardVisible(true); // or some other action
+      },
+    );
+    const keyboardDidHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      () => {
+        setKeyboardVisible(false); // or some other action
+      },
+    );
+
+    return () => {
+      keyboardDidHideListener.remove();
+      keyboardDidShowListener.remove();
+    };
+  }, []);
 
   const showCountryCodeSearch = () => {
     setCountryCodeSearchVisibility(true);
@@ -36,49 +66,69 @@ export function ConfirmPhone({
     setCountryCodeSearchVisibility(false);
   };
 
-  const tabbarOffest = useBottomTabBarOffsetStyle({
-    extraOffset: isCountryCodeSearchVisible
-      ? IS_SMALL_SCREEN
-        ? 300
-        : 150
-      : IS_SMALL_SCREEN
-      ? 100
-      : 0,
-  });
+  const translation = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    if (isKeyboardVisible) {
+      Animated.timing(translation, {
+        toValue: isCountryCodeSearchVisible ? -20 : 0,
+        duration: 0,
+        useNativeDriver: true,
+      }).start();
+    } else {
+      Animated.timing(translation, {
+        toValue: isCountryCodeSearchVisible ? -140 : 0,
+        duration: 0,
+        useNativeDriver: true,
+      }).start();
+    }
+  }, [isCountryCodeSearchVisible, isKeyboardVisible, translation]);
+
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={tabbarOffest.current}>
-      <View style={styles.container}>
-        <Image source={icon} style={styles.icon} />
-        <Text style={styles.title}>{t('team.confirm_phone.title')}</Text>
-        <Text style={styles.description}>
-          {t('team.confirm_phone.description')}
-        </Text>
-        <View style={styles.inputContainer}>
-          <PhoneNumberInput
-            selectedCountry={selectedCountry}
-            showCountryCodeSearch={showCountryCodeSearch}
-            value={phone}
-            containerStyle={styles.input}
-            onValueChange={setPhone}
-          />
-          <PrimaryButton
-            text={t('team.confirm_phone.button')}
-            onPress={handleOnPress}
-            style={styles.allowAccessButton}
-          />
-          {isCountryCodeSearchVisible ? (
-            <PhoneNumberSearch
-              containerStyle={styles.phoneNumberSearch}
-              selectedCountry={selectedCountry}
-              close={hideCountryCodeSearch}
-              setCountryCode={setSelectedCountry}
-            />
-          ) : null}
-        </View>
-      </View>
-    </ScrollView>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+      <KeyboardAvoidingView
+        style={styles.container}
+        behavior={isIOS ? 'padding' : undefined}>
+        <Animated.View style={[styles.container]}>
+          <View style={styles.container}>
+            <View style={styles.imageContainer}>
+              <Image
+                source={confirmPhoneImage}
+                style={styles.image}
+                resizeMode="contain"
+              />
+            </View>
+            <Text style={styles.title}>{t('team.confirm_phone.title')}</Text>
+            <Text style={styles.description}>
+              {t('team.confirm_phone.description')}
+            </Text>
+
+            <View style={styles.inputContainer}>
+              <PhoneNumberInput
+                selectedCountry={selectedCountry}
+                showCountryCodeSearch={showCountryCodeSearch}
+                value={phone}
+                containerStyle={styles.input}
+                onValueChange={setPhone}
+              />
+              <PrimaryButton
+                text={t('team.confirm_phone.button')}
+                onPress={handleOnPress}
+                style={styles.allowAccessButton}
+              />
+              {isCountryCodeSearchVisible ? (
+                <PhoneNumberSearch
+                  containerStyle={styles.phoneNumberSearch}
+                  selectedCountry={selectedCountry}
+                  close={hideCountryCodeSearch}
+                  setCountryCode={setSelectedCountry}
+                />
+              ) : null}
+            </View>
+          </View>
+        </Animated.View>
+      </KeyboardAvoidingView>
+    </TouchableWithoutFeedback>
   );
 }
 
@@ -92,10 +142,12 @@ const styles = StyleSheet.create({
     marginTop: rem(25),
     paddingHorizontal: rem(27),
   },
-  icon: {
-    width: rem(200),
-    height: rem(170),
-    marginTop: rem(16),
+  imageContainer: {
+    flex: 1,
+    maxHeight: rem(200),
+  },
+  image: {
+    flex: 1,
   },
   title: {
     fontSize: font(24),

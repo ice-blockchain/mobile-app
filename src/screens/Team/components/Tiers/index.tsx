@@ -4,7 +4,6 @@ import {
   SegmentedControl,
   SegmentedControlMethods,
 } from '@components/SegmentedControl';
-import {RATIO} from '@constants/styles';
 import {Contacts} from '@screens/Team/components/Contacts';
 import {Tier, TierType} from '@screens/Team/components/Tier';
 import {TierOneList} from '@screens/Team/components/TierOneList';
@@ -42,9 +41,15 @@ export const Tiers = () => {
         style={styles.container}
         ref={pagerRef}
         onPageSelected={onPageChange}>
-        <Contacts />
-        <TierOneList />
-        <Tier type={TierType.tierTwo} />
+        <View style={styles.container}>
+          <Contacts />
+        </View>
+        <View style={styles.container}>
+          <TierOneList />
+        </View>
+        <View style={styles.container}>
+          <Tier type={TierType.tierTwo} />
+        </View>
       </PagerView>
     </View>
   );
@@ -55,7 +60,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   tabbar: {
-    marginTop: rem(24 * RATIO),
+    marginTop: rem(24),
     marginHorizontal: 24,
   },
 });
