@@ -20,8 +20,9 @@ export function Tier({type}: TierProps): React.ReactElement {
     <ScrollView
       showsVerticalScrollIndicator={false}
       style={styles.scrollView}
-      contentContainerStyle={tabbarOffest.current}>
-      <View style={styles.container}>
+      contentContainerStyle={tabbarOffest.current}
+      scrollEnabled={false}>
+      <View style={[styles.container, tabbarOffest.current]}>
         <EmptyTier type={type} />
       </View>
     </ScrollView>

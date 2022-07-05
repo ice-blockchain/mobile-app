@@ -4,12 +4,14 @@ import {
   SegmentedControl,
   SegmentedControlMethods,
 } from '@components/SegmentedControl';
+import {RATIO} from '@constants/styles';
 import {Contacts} from '@screens/Team/components/Contacts';
 import {Tier, TierType} from '@screens/Team/components/Tier';
 import {TierOneList} from '@screens/Team/components/TierOneList';
 import React, {useCallback, useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
 import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
+import {rem} from 'rn-units';
 
 import {TABS} from './mockData';
 
@@ -53,7 +55,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   tabbar: {
-    marginTop: 24,
+    marginTop: rem(24 * RATIO),
     marginHorizontal: 24,
   },
 });

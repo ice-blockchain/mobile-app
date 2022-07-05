@@ -3,12 +3,13 @@
 import {Text} from '@components/Text';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {RATIO} from '@constants/styles';
 import {TeamHeaderEarningsIcon} from '@screens/Team/assets/svg/TeamHeaderEarningsIcon';
 import {TeamHeaderReferralsIcon} from '@screens/Team/assets/svg/TeamHeaderReferralsIcon';
 import {t} from '@translations/i18n';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {rem, screenWidth} from 'rn-units';
+import {font, rem, screenWidth} from 'rn-units';
 
 export enum InfoItemType {
   'referrals',
@@ -68,11 +69,11 @@ const styles = StyleSheet.create({
   container: {
     width: screenWidth / 2,
     flexDirection: 'row',
-    marginVertical: rem(30),
+    marginVertical: rem(30 * RATIO),
   },
   icon: {
-    width: rem(40),
-    height: rem(40),
+    width: rem(40 * RATIO),
+    height: rem(40 * RATIO),
     marginLeft: 18,
   },
   valuesContainer: {
@@ -80,20 +81,20 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: FONTS.primary.medium,
-    fontSize: rem(14),
+    fontSize: font(14 * RATIO),
     color: COLORS.white,
     marginLeft: rem(8.5),
   },
   referrals: {
     color: COLORS.white,
     fontFamily: FONTS.primary.semibold,
-    fontSize: rem(22),
+    fontSize: font(22 * RATIO),
     marginLeft: rem(8.5),
   },
   earnings: {
     color: COLORS.white,
     fontFamily: FONTS.primary.medium,
-    fontSize: rem(14),
+    fontSize: font(14 * RATIO),
     marginLeft: rem(8.5),
     marginTop: rem(5),
   },

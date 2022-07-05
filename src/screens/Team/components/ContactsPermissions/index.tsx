@@ -3,10 +3,10 @@
 import {PrimaryButton} from '@components/PrimaryButton';
 import {Text} from '@components/Text';
 import {FONTS} from '@constants/fonts';
-import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
+import {RATIO} from '@constants/styles';
 import {t} from '@translations/i18n';
 import React from 'react';
-import {Image, ScrollView, StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
 const icon = require('../../assets/images/teamAgendaNotShared.png');
@@ -21,58 +21,46 @@ export function ContactsPermissions({
   const handleOnPress = () => {
     requestContactsAccessPermissionPress();
   };
-  const tabbarOffest = useBottomTabBarOffsetStyle();
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      style={styles.scrollView}
-      contentContainerStyle={tabbarOffest.current}>
-      <View style={styles.container}>
-        <Image source={icon} style={styles.icon} />
-        <Text style={styles.title} text="team.contacts.empty_title" />
-        <Text
-          style={styles.description}
-          text="team.contacts.empty_description"
-        />
-        <PrimaryButton
-          text={t('team.contacts.empty_button_title')}
-          onPress={handleOnPress}
-          style={styles.allowAccessButton}
-        />
-      </View>
-    </ScrollView>
+    <View style={styles.container}>
+      <Image source={icon} style={styles.icon} />
+      <Text style={styles.title} text="team.contacts.empty_title" />
+      <Text style={styles.description} text="team.contacts.empty_description" />
+      <PrimaryButton
+        text={t('team.contacts.empty_button_title')}
+        onPress={handleOnPress}
+        style={styles.allowAccessButton}
+      />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  scrollView: {
-    flex: 1,
-  },
   container: {
     flex: 1,
     alignItems: 'center',
   },
   icon: {
-    width: rem(200),
-    height: rem(170),
-    marginTop: rem(16),
+    width: rem(200 * RATIO),
+    height: rem(170 * RATIO),
+    marginTop: rem(16 * RATIO),
   },
   title: {
-    fontSize: font(24),
+    fontSize: font(24 * RATIO),
     fontFamily: FONTS.primary.black,
     textAlign: 'center',
     marginHorizontal: rem(24),
     marginTop: rem(2),
   },
   description: {
-    fontSize: font(14),
+    fontSize: font(14 * RATIO),
     fontFamily: FONTS.primary.regular,
     textAlign: 'center',
     marginHorizontal: rem(24),
-    marginTop: rem(7),
-    lineHeight: rem(24),
+    marginTop: rem(7 * RATIO),
+    lineHeight: rem(24 * RATIO),
   },
   allowAccessButton: {
-    marginTop: rem(25),
+    marginTop: rem(25 * RATIO),
   },
 });

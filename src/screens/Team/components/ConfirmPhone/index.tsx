@@ -5,6 +5,7 @@ import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
+import {IS_SMALL_SCREEN, RATIO} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {t} from '@translations/i18n';
 import React, {useState} from 'react';
@@ -36,7 +37,13 @@ export function ConfirmPhone({
   };
 
   const tabbarOffest = useBottomTabBarOffsetStyle({
-    extraOffset: isCountryCodeSearchVisible ? 150 : 0,
+    extraOffset: isCountryCodeSearchVisible
+      ? IS_SMALL_SCREEN
+        ? 300
+        : 150
+      : IS_SMALL_SCREEN
+      ? 100
+      : 0,
   });
   return (
     <ScrollView
@@ -83,36 +90,33 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
-  scrollAdditionalPadding: {
-    paddingBottom: 400,
-  },
   inputContainer: {
     width: screenWidth,
-    marginTop: 25,
+    marginTop: rem(25 * RATIO),
     paddingHorizontal: rem(27),
   },
   icon: {
-    width: rem(200),
-    height: rem(170),
+    width: rem(200 * RATIO),
+    height: rem(170 * RATIO),
     marginTop: rem(16),
   },
   title: {
-    fontSize: font(24),
+    fontSize: font(24 * RATIO),
     fontFamily: FONTS.primary.black,
     textAlign: 'center',
     marginHorizontal: rem(24),
     marginTop: rem(2),
   },
   description: {
-    fontSize: font(14),
+    fontSize: font(14 * RATIO),
     fontFamily: FONTS.primary.regular,
     textAlign: 'center',
     marginHorizontal: 24,
-    marginTop: rem(7),
-    lineHeight: rem(24),
+    marginTop: rem(7 * RATIO),
+    lineHeight: rem(24 * RATIO),
   },
   allowAccessButton: {
-    marginTop: rem(25),
+    marginTop: rem(25 * RATIO),
     width: screenWidth - 54,
   },
   input: {

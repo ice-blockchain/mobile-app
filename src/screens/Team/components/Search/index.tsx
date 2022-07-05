@@ -2,6 +2,7 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {RATIO} from '@constants/styles';
 import {SearchIconSvg} from '@svg/SearchIcon';
 import {t} from '@translations/i18n';
 import React from 'react';
@@ -53,9 +54,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: rem(15),
     backgroundColor: COLORS.white,
-    height: rem(45),
+    height: rem(45 * RATIO),
     alignSelf: 'center',
-    marginTop: 55,
+    marginTop: rem(55 * RATIO),
   },
   input: {
     flex: 1,
@@ -66,8 +67,8 @@ const styles = StyleSheet.create({
     fontSize: rem(13),
   },
   icon: {
-    width: rem(15),
-    height: rem(15),
+    width: rem(15 * RATIO),
+    height: rem(15 * RATIO),
   },
   btn: {
     paddingLeft: rem(14),

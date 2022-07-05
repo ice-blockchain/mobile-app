@@ -3,12 +3,11 @@
 import {CommonInput} from '@components/CommonInput';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {FONTS} from '@constants/fonts';
-import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
+import {IS_SMALL_SCREEN, RATIO} from '@constants/styles';
 import {TicketIconSvg} from '@svg/Ticket';
 import {t} from '@translations/i18n';
 import React, {useState} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
 import {font, rem, screenWidth} from 'rn-units';
 
 const icon = require('../../assets/images/teamConfirmCode.png');
@@ -24,33 +23,28 @@ export function ConfirmCode({
   const handleOnPress = () => {
     confirmCodePress();
   };
-  const tabbarOffest = useBottomTabBarOffsetStyle();
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={tabbarOffest.current}>
-      <View style={styles.container}>
-        <Image source={icon} style={styles.icon} />
-        <Text style={styles.title}>{t('team.confirm_code.title')}</Text>
-        <Text style={styles.description}>
-          {t('team.confirm_code.description')}
-        </Text>
-        <View style={styles.inputContainer}>
-          <CommonInput
-            placeholder={t('team.confirm_code.placeholder')}
-            value={inputValue}
-            onChangeText={onInputChange}
-            icon={<TicketIconSvg />}
-            containerStyle={styles.input}
-          />
-          <PrimaryButton
-            text={t('team.confirm_code.button')}
-            onPress={handleOnPress}
-            style={styles.allowAccessButton}
-          />
-        </View>
+    <View style={styles.container}>
+      <Image source={icon} style={styles.icon} />
+      <Text style={styles.title}>{t('team.confirm_code.title')}</Text>
+      <Text style={styles.description}>
+        {t('team.confirm_code.description')}
+      </Text>
+      <View style={styles.inputContainer}>
+        <CommonInput
+          placeholder={t('team.confirm_code.placeholder')}
+          value={inputValue}
+          onChangeText={onInputChange}
+          icon={<TicketIconSvg />}
+          containerStyle={styles.input}
+        />
+        <PrimaryButton
+          text={t('team.confirm_code.button')}
+          onPress={handleOnPress}
+          style={styles.allowAccessButton}
+        />
       </View>
-    </ScrollView>
+    </View>
   );
 }
 
@@ -61,31 +55,31 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     width: screenWidth,
-    marginTop: 25,
+    marginTop: IS_SMALL_SCREEN ? rem(10) : rem(25),
     paddingHorizontal: rem(27),
   },
   icon: {
-    width: rem(200),
-    height: rem(170),
-    marginTop: rem(16),
+    width: rem(200 * RATIO),
+    height: rem(170 * RATIO),
+    marginTop: IS_SMALL_SCREEN ? rem(6) : rem(16),
   },
   title: {
-    fontSize: font(24),
+    fontSize: font(24 * RATIO),
     fontFamily: FONTS.primary.black,
     textAlign: 'center',
     marginHorizontal: rem(24),
-    marginTop: rem(2),
+    marginTop: rem(2 * RATIO),
   },
   description: {
-    fontSize: font(14),
+    fontSize: font(14 * RATIO),
     fontFamily: FONTS.primary.regular,
     textAlign: 'center',
-    marginHorizontal: 24,
-    marginTop: rem(7),
-    lineHeight: rem(24),
+    marginHorizontal: rem(24),
+    marginTop: rem(7 * RATIO),
+    lineHeight: rem(24 * RATIO),
   },
   allowAccessButton: {
-    marginTop: rem(25),
+    marginTop: IS_SMALL_SCREEN ? rem(10) : rem(25),
     width: screenWidth - rem(48),
   },
   input: {

@@ -4,6 +4,7 @@ import {PrimaryButton} from '@components/PrimaryButton';
 import {Text} from '@components/Text';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {RATIO} from '@constants/styles';
 import {TierType} from '@screens/Team/components/Tier';
 import {InviteTierTwoIcon} from '@svg/InviteTierTwoIcon';
 import {t} from '@translations/i18n';
@@ -50,23 +51,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   icon: {
-    width: rem(200),
-    height: rem(170),
-    marginTop: rem(48),
+    width: rem(200 * RATIO),
+    height: rem(170 * RATIO),
+    marginTop: rem(48 * RATIO),
   },
   title: {
-    fontSize: font(14),
+    fontSize: font(14 * RATIO),
     fontFamily: FONTS.primary.regular,
     textAlign: 'center',
-    marginHorizontal: 24,
-    marginTop: rem(20),
-    lineHeight: font(24),
+    marginHorizontal: rem(24),
+    marginTop: rem(20 * RATIO),
+    lineHeight: font(24 * RATIO),
   },
   boldTitle: {
     fontFamily: FONTS.primary.bold,
   },
   inviteButton: {
-    marginTop: rem(35),
+    marginTop: rem(35 * RATIO),
     width: rem(253),
     height: rem(55),
     backgroundColor: COLORS.primary,

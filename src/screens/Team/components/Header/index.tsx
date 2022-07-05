@@ -2,6 +2,7 @@
 
 import {
   DEFAULT_SUB_SCREEN_TOP_OFFSET,
+  RATIO,
   SCREEN_SIDE_OFFSET,
 } from '@constants/styles';
 import {InfoItem, InfoItemType} from '@screens/Team/components/InfoItem';
@@ -25,7 +26,7 @@ export const Header = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: DEFAULT_SUB_SCREEN_TOP_OFFSET,
+    height: DEFAULT_SUB_SCREEN_TOP_OFFSET * RATIO,
     paddingHorizontal: SCREEN_SIDE_OFFSET,
   },
   infoItems: {
