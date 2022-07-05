@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
-import {FONTS, WEIGHTS} from '@constants/fonts';
+import {FONTS} from '@constants/fonts';
 import {translate} from '@translations/i18n';
 import * as React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
   },
   text: {
     color: COLORS.darkBlue,
-    fontFamily: FONTS.primary.regular,
-    fontWeight: WEIGHTS.medium,
+    fontFamily: FONTS.primary.medium,
   },
 });

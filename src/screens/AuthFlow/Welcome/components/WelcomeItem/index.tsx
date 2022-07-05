@@ -58,8 +58,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontFamily: FONTS.primary.regular,
-    fontWeight: '900',
+    fontFamily: FONTS.primary.black,
     fontSize: font(28),
     lineHeight: font(34),
     textAlign: 'center',

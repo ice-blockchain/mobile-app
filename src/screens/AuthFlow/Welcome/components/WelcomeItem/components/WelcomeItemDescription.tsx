@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
-import {FONTS, WEIGHTS} from '@constants/fonts';
+import {FONTS} from '@constants/fonts';
 import {LogoIconSvg} from '@svg/LogoIcon';
 import {translate} from '@translations/i18n';
 import * as React from 'react';
@@ -55,9 +55,8 @@ const styles = StyleSheet.create({
     color: COLORS.greyText,
   },
   mediumText: {
-    fontWeight: WEIGHTS.medium,
     lineHeight: rem(24),
-    fontFamily: isAndroid ? FONTS.primary.bold : FONTS.primary.regular,
+    fontFamily: isAndroid ? FONTS.primary.bold : FONTS.primary.medium,
     fontSize: font(14),
     color: COLORS.greyText,
   },
