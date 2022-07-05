@@ -31,7 +31,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {useDispatch, useSelector} from 'react-redux';
 import {font, isIOS, rem} from 'rn-units';
 
-import {ESocialType, SocialSignIn} from './components/socialSignIn';
+import {ESocialType, SocialSignIn} from './components/SocialSignIn';
 
 type Props = {
   navigation: NativeStackNavigationProp<SignUpStackParamList, 'SignIn'>;
