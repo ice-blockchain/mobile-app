@@ -3,7 +3,6 @@
 import {Text} from '@components/Text';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
-import {RATIO} from '@constants/styles';
 import {TeamHeaderEarningsIcon} from '@screens/Team/assets/svg/TeamHeaderEarningsIcon';
 import {TeamHeaderReferralsIcon} from '@screens/Team/assets/svg/TeamHeaderReferralsIcon';
 import {t} from '@translations/i18n';
@@ -69,32 +68,27 @@ const styles = StyleSheet.create({
   container: {
     width: screenWidth / 2,
     flexDirection: 'row',
-    marginVertical: rem(30 * RATIO),
-  },
-  icon: {
-    width: rem(40 * RATIO),
-    height: rem(40 * RATIO),
-    marginLeft: 18,
+    marginVertical: rem(30),
   },
   valuesContainer: {
     flexDirection: 'column',
   },
   title: {
     fontFamily: FONTS.primary.medium,
-    fontSize: font(14 * RATIO),
+    fontSize: font(14),
     color: COLORS.white,
     marginLeft: rem(8.5),
   },
   referrals: {
     color: COLORS.white,
     fontFamily: FONTS.primary.semibold,
-    fontSize: font(22 * RATIO),
+    fontSize: font(22),
     marginLeft: rem(8.5),
   },
   earnings: {
     color: COLORS.white,
     fontFamily: FONTS.primary.medium,
-    fontSize: font(14 * RATIO),
+    fontSize: font(14),
     marginLeft: rem(8.5),
     marginTop: rem(5),
   },

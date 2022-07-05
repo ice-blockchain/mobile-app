@@ -5,7 +5,7 @@ import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
-import {IS_SMALL_SCREEN, RATIO, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {IS_SMALL_SCREEN, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {t} from '@translations/i18n';
 import React, {useState} from 'react';
@@ -83,40 +83,37 @@ export function ConfirmPhone({
 }
 
 const styles = StyleSheet.create({
-  wrapper: {
-    flex: 1,
-  },
   container: {
     flex: 1,
     alignItems: 'center',
   },
   inputContainer: {
     width: screenWidth,
-    marginTop: rem(25 * RATIO),
+    marginTop: rem(25),
     paddingHorizontal: rem(27),
   },
   icon: {
-    width: rem(200 * RATIO),
-    height: rem(170 * RATIO),
+    width: rem(200),
+    height: rem(170),
     marginTop: rem(16),
   },
   title: {
-    fontSize: font(24 * RATIO),
+    fontSize: font(24),
     fontFamily: FONTS.primary.black,
     textAlign: 'center',
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(2),
   },
   description: {
-    fontSize: font(14 * RATIO),
+    fontSize: font(14),
     fontFamily: FONTS.primary.regular,
     textAlign: 'center',
     marginHorizontal: 24,
-    marginTop: rem(7 * RATIO),
-    lineHeight: rem(24 * RATIO),
+    marginTop: rem(7),
+    lineHeight: rem(24),
   },
   allowAccessButton: {
-    marginTop: rem(25 * RATIO),
+    marginTop: rem(25),
     width: screenWidth - 54,
   },
   input: {

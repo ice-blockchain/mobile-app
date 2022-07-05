@@ -31,7 +31,4 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.persianBlue,
     flex: 1,
   },
-  subContainer: {
-    backgroundColor: COLORS.white,
-  },
 });
