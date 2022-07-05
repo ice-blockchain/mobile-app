@@ -8,8 +8,6 @@ const DESIGN_SCREEN_HEIGHT = 812;
 
 export const IS_SMALL_SCREEN = DESIGN_SCREEN_HEIGHT > screenHeight;
 
-export const DEFAULT_SUB_SCREEN_TOP_OFFSET = rem(200);
-
 export const SCREEN_SIDE_OFFSET = rem(23);
 
 export const commonStyles = StyleSheet.create({
