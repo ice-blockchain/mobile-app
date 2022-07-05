@@ -11,14 +11,19 @@ import {font, rem} from 'rn-units';
 
 const icon = require('../../assets/teamConfirmPhone.png');
 
-type ConfirmPhoneProps = {};
+type ConfirmPhoneProps = {
+  confirmPhonePress: () => void;
+};
 
-export function ConfirmPhone({}: ConfirmPhoneProps): React.ReactElement {
+export function ConfirmPhone({
+  confirmPhonePress,
+}: ConfirmPhoneProps): React.ReactElement {
   const [phone, setPhone] = useState('');
   const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
   const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
     useState<boolean>(false);
   const handleOnPress = () => {
+    confirmPhonePress();
     //TODO: handle contact permissions request
   };
 
@@ -29,7 +34,10 @@ export function ConfirmPhone({}: ConfirmPhoneProps): React.ReactElement {
     setCountryCodeSearchVisibility(false);
   };
   return (
-    <ScrollView>
+    <ScrollView
+      contentContainerStyle={
+        isCountryCodeSearchVisible ? styles.scrollAdditionalPadding : null
+      }>
       <View style={styles.container}>
         <Image source={icon} style={styles.icon} />
         <Text style={styles.title}>Confirm Phone</Text>
@@ -64,9 +72,15 @@ export function ConfirmPhone({}: ConfirmPhoneProps): React.ReactElement {
 }
 
 const styles = StyleSheet.create({
+  wrapper: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     alignItems: 'center',
+  },
+  scrollAdditionalPadding: {
+    paddingBottom: 400,
   },
   inputContainer: {
     width: '100%',

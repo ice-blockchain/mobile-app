@@ -6,39 +6,46 @@ import {FONTS} from '@constants/fonts';
 import {TicketIconSvg} from '@svg/Ticket';
 import React, {useState} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
 import {font, rem} from 'rn-units';
 
 const icon = require('../../assets/teamConfirmCode.png');
 
-type ConfirmCodeProps = {};
+type ConfirmCodeProps = {
+  confirmCodePress: () => void;
+};
 
-export function ConfirmCode({}: ConfirmCodeProps): React.ReactElement {
+export function ConfirmCode({
+  confirmCodePress,
+}: ConfirmCodeProps): React.ReactElement {
   const [inputValue, onInputChange] = useState('');
   const handleOnPress = () => {
-    // handle request
+    confirmCodePress();
   };
   return (
-    <View style={styles.container}>
-      <Image source={icon} style={styles.icon} />
-      <Text style={styles.title}>Confirm Code</Text>
-      <Text style={styles.description}>
-        Please enter the confirmation code you have received on your phone.
-      </Text>
-      <View style={styles.inputContainer}>
-        <CommonInput
-          placeholder={'Enter the code'}
-          value={inputValue}
-          onChangeText={onInputChange}
-          icon={<TicketIconSvg />}
-          containerStyle={styles.input}
-        />
-        <PrimaryButton
-          text={'Confirm your code now'}
-          onPress={handleOnPress}
-          style={styles.allowAccessButton}
-        />
+    <ScrollView>
+      <View style={styles.container}>
+        <Image source={icon} style={styles.icon} />
+        <Text style={styles.title}>Confirm Code</Text>
+        <Text style={styles.description}>
+          Please enter the confirmation code you have received on your phone.
+        </Text>
+        <View style={styles.inputContainer}>
+          <CommonInput
+            placeholder={'Enter the code'}
+            value={inputValue}
+            onChangeText={onInputChange}
+            icon={<TicketIconSvg />}
+            containerStyle={styles.input}
+          />
+          <PrimaryButton
+            text={'Confirm your code now'}
+            onPress={handleOnPress}
+            style={styles.allowAccessButton}
+          />
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
