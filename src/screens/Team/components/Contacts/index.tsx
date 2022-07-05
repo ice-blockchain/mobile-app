@@ -4,11 +4,11 @@ import {ConfirmCode} from '@screens/Team/components/ConfirmCode';
 import {ConfirmPhone} from '@screens/Team/components/ConfirmPhone';
 import {ContactsList} from '@screens/Team/components/ContactsList';
 import {ContactsPermissions} from '@screens/Team/components/ContactsPermissions';
-import {AccountActions} from '@store/modules/Accounts/actions';
+import {AuthActions} from '@store/modules/Auth/actions';
 import {
   isPhoneNumberVerifiedSelector,
   phoneVerificationStepSelector,
-} from '@store/modules/Accounts/selectors';
+} from '@store/modules/Auth/selectors';
 import {PermissionsActions} from '@store/modules/Permissions/actions';
 import {permissionSelector} from '@store/modules/Permissions/selectors';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
@@ -87,7 +87,7 @@ export const Contacts = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      dispatch(AccountActions.SET_PHONE_NUMBER_VERIFIED.STATE.create(phone));
+      dispatch(AuthActions.SET_PHONE_NUMBER_VERIFIED.STATE.create(phone));
     }, 1500);
   };
 
@@ -95,7 +95,7 @@ export const Contacts = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      dispatch(AccountActions.SET_CODE_VERIFIED.STATE.create());
+      dispatch(AuthActions.SET_CODE_VERIFIED.STATE.create());
     }, 1500);
   };
 

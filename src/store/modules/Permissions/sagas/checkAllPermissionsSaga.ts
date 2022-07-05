@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
+import {
+  isAppActiveSelector,
+  isAppLoadedSelector,
+} from '@store/modules/AppCommon/selectors';
 import {
   PermissionsActions,
   PermissionTypes,
@@ -12,8 +15,9 @@ import {put, select} from 'redux-saga/effects';
 export function* checkAllPermissionsSaga() {
   try {
     const isAppActive: boolean = yield select(isAppActiveSelector);
+    const isAppLoaded: boolean = yield select(isAppLoadedSelector);
 
-    if (isAppActive) {
+    if (isAppActive || isAppLoaded) {
       const contacts: PermissionTypes = yield Permissions.check(
         PERMISSIONS_LIST.contacts,
       );

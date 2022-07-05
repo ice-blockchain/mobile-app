@@ -7,15 +7,19 @@ import {persistReducer} from 'redux-persist';
 
 export interface AuthState {
   userData: {
-    email: string | null;
+    email?: string | null;
     phoneNumber: string | null;
   } | null;
   token: string | null;
   isInitialized: boolean;
   isWelcomeSeen: boolean;
+  phoneVerificationStep: string;
+  isPhoneNumberVerified: boolean;
 }
 
 type Actions = ReturnType<
+  | typeof AuthActions.SET_PHONE_NUMBER_VERIFIED.STATE.create
+  | typeof AuthActions.SET_CODE_VERIFIED.STATE.create
   | typeof AuthActions.STORE_WELCOME_SEEN.STATE.create
   | typeof AuthActions.SIGN_OUT.SUCCESS.create
   | typeof AuthActions.SIGN_IN_EMAIL.SUCCESS.create
@@ -29,6 +33,8 @@ const INITIAL_STATE: AuthState = {
   token: null,
   isInitialized: false,
   isWelcomeSeen: false,
+  phoneVerificationStep: 'phone',
+  isPhoneNumberVerified: false,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): AuthState {
@@ -48,6 +54,13 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
         draft.userData = action.payload.result.userData;
         draft.token = action.payload.result.token;
         break;
+      case AuthActions.SET_PHONE_NUMBER_VERIFIED.STATE.type:
+        draft.userData = {phoneNumber: action.payload.phone};
+        draft.phoneVerificationStep = 'code';
+        break;
+      case AuthActions.SET_CODE_VERIFIED.STATE.type:
+        draft.isPhoneNumberVerified = true;
+        break;
       case AuthActions.SIGN_OUT.SUCCESS.type: {
         return {
           ...INITIAL_STATE,
@@ -63,7 +76,7 @@ const persistConfig = {
   key: 'auth',
   storage: AsyncStorage,
   timeout: 120000,
-  whitelist: ['isWelcomeSeen'],
+  whitelist: ['isWelcomeSeen', 'isPhoneNumberVerified', 'userData'],
 };
 
 export const authReducer = persistReducer(persistConfig, reducer);

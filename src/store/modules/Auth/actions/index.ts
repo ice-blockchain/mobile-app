@@ -47,6 +47,13 @@ const SIGN_IN_SOCIAL = createAction('SIGN_IN_SOCIAL', {
   FAILED: true,
 });
 
+const SET_PHONE_NUMBER_VERIFIED = createAction('SET_PHONE_NUMBER_VERIFIED', {
+  STATE: (phone: string) => ({phone}),
+});
+const SET_CODE_VERIFIED = createAction('SET_CODE_VERIFIED', {
+  STATE: () => {},
+});
+
 export const AuthActions = Object.freeze({
   LOAD_USER,
   STORE_WELCOME_SEEN,
@@ -54,4 +61,6 @@ export const AuthActions = Object.freeze({
   SIGN_IN_PHONE,
   SIGN_IN_SOCIAL,
   SIGN_OUT,
+  SET_PHONE_NUMBER_VERIFIED,
+  SET_CODE_VERIFIED,
 });
