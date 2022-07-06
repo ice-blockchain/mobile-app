@@ -105,7 +105,12 @@ export function* getContactsSaga() {
           if (formatedNumber) {
             const phoneNumber = parsePhoneNumberFromString(formatedNumber);
             if (phoneNumber) {
-              numbers.push(phoneNumber.number);
+              const internationalPhoneNumber =
+                phoneNumber.formatInternational();
+              const [coutryCode, prefix, ...restNumber] =
+                internationalPhoneNumber.split(' ');
+              const number = restNumber.join(' ');
+              numbers.push(`${coutryCode} (${prefix}) ${number}`);
             }
           }
         }
