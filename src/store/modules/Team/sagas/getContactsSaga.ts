@@ -88,7 +88,7 @@ export interface IContact {
 
 export function* getContactsSaga() {
   try {
-    const contactsList: IFormattedContact[] = [];
+    let contactsList: IFormattedContact[] = [];
     const contacts: IContact[] = yield call(Contacts.getAllWithoutPhotos);
     contacts.forEach((contact: IContact) => {
       const firstName = contact.givenName || '';
@@ -124,6 +124,10 @@ export function* getContactsSaga() {
 
     const contactsByIds: ContactById = {};
     const contactIds: string[] = [];
+
+    contactsList = contactsList.sort((a, b) =>
+      a.firstName.localeCompare(b.firstName),
+    );
 
     const contactArray = contactsList.length ? contactsList : mockContacts;
 
