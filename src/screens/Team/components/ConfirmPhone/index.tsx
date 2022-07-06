@@ -10,6 +10,7 @@ import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
 import {Images} from '@images';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {t} from '@translations/i18n';
+import {formatPhoneNumberForInput} from '@utils/number';
 import React, {useEffect, useRef, useState} from 'react';
 import {Animated, Image, StyleSheet, Text, View} from 'react-native';
 import {font, isIOS, rem, screenWidth} from 'rn-units';
@@ -53,6 +54,10 @@ export function ConfirmPhone({
     extraOffset: IS_SMALL_SCREEN ? (isIOS ? undefined : 20) : undefined,
   });
 
+  const onPhoneNumberChange = (v: string) => {
+    setPhone(formatPhoneNumberForInput(v, selectedCountry));
+  };
+
   return (
     <Animated.View
       style={[
@@ -79,7 +84,7 @@ export function ConfirmPhone({
             showCountryCodeSearch={showCountryCodeSearch}
             value={phone}
             containerStyle={styles.input}
-            onValueChange={setPhone}
+            onValueChange={onPhoneNumberChange}
           />
           <PrimaryButton
             text={t('team.confirm_phone.button')}
