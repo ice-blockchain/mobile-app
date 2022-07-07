@@ -50,3 +50,8 @@ export interface DeviceMetadata {
   userAgent: string | null;
   userId: string;
 }
+
+export interface DeviceId {
+  userId: string;
+  deviceUniqueId: string;
+}

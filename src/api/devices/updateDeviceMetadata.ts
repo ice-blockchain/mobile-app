@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {put} from '@api/client';
-import {DeviceMetadata} from '@api/devices/types';
+import {DeviceId, DeviceMetadata} from '@api/devices/types';
 
 interface Params {
-  userId: string;
-  deviceUniqueId: string;
+  deviceId: DeviceId;
   metadata: DeviceMetadata;
 }
 
@@ -14,8 +13,7 @@ interface Params {
  */
 
 export function updateDeviceMetadata({
-  userId,
-  deviceUniqueId,
+  deviceId: {userId, deviceUniqueId},
   metadata,
 }: Params) {
   return put(`/users/${userId}/devices/${deviceUniqueId}/metadata`, {
