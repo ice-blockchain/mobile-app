@@ -80,13 +80,16 @@ export const ContactsList = ({}: ContactsListProps) => {
             )
           }
           rightSideButton={
-            isFriend ? null : (
-              <ContactsInviteButton
-                text={'invite'}
-                icon={<TeamContactInvite />}
-                onPress={() => invite(contact.id)}
-              />
-            )
+            <ContactsInviteButton
+              text={t('team.contacts_list.invite')}
+              icon={
+                <TeamContactInvite
+                  fill={isFriend ? COLORS.cadetBlue : COLORS.darkBlue}
+                />
+              }
+              onPress={() => invite(contact.id)}
+              disabled={isFriend}
+            />
           }
           indicatorContent={
             isIceSection && isFriend ? (

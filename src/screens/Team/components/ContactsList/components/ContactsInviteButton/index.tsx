@@ -10,21 +10,25 @@ type ContactsInviteButtonProps = {
   icon: ReactNode;
   text: string;
   onPress: () => void;
-  isActive?: boolean;
+  disabled?: boolean;
 };
 
 export const ContactsInviteButton = ({
   icon,
   text,
   onPress,
-  isActive,
+  disabled,
 }: ContactsInviteButtonProps) => {
   return (
     <TouchableOpacity
-      style={isActive ? styles.disabledButton : styles.button}
+      disabled={disabled}
+      style={disabled ? styles.disabledButton : styles.button}
+      activeOpacity={0.4}
       onPress={onPress}>
       {icon}
-      <Text style={styles.buttonText}>{text}</Text>
+      <Text style={disabled ? styles.disabledText : styles.buttonText}>
+        {text}
+      </Text>
     </TouchableOpacity>
   );
 };
@@ -41,6 +45,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 11,
     paddingVertical: 2,
   },
+  disabledButton: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    borderWidth: 1,
+    borderColor: COLORS.cadetBlue,
+    borderRadius: 9,
+    paddingHorizontal: 11,
+    paddingVertical: 2,
+  },
   buttonText: {
     fontSize: font(12),
     fontFamily: FONTS.primary.bold,
@@ -48,7 +63,7 @@ const styles = StyleSheet.create({
     paddingLeft: 3,
     textTransform: 'uppercase',
   },
-  disabledButton: {
+  disabledText: {
     fontSize: font(12),
     fontFamily: FONTS.primary.bold,
     color: COLORS.cadetBlue,
