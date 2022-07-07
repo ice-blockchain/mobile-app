@@ -129,6 +129,8 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  */
 def enableHermes = project.ext.react.get("enableHermes", false);
 
+def FLIPPER_VERSION = '0.153.0'
+
 /**
  * Architectures to build native code for.
  */
