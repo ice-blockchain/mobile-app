@@ -18,6 +18,7 @@ import {
 } from '@store/modules/Team/selectors';
 import {WhiteLogoSvg} from '@svg/WhiteLogo';
 import {t} from '@translations/i18n';
+import {hapticFeedback} from '@utils/hapticFeedback';
 import React, {useCallback} from 'react';
 import {SectionList, StyleSheet, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
@@ -38,6 +39,7 @@ export const ContactsList = ({}: ContactsListProps) => {
 
   const invite = useCallback(
     (id: string) => {
+      hapticFeedback();
       dispatch(TeamActions.INVITE_CONTACT.STATE.create(id));
     },
     [dispatch],
