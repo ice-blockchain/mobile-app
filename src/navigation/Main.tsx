@@ -7,7 +7,11 @@ import {NewsIcon} from '@navigation/components/MainTabBar/components/Icons/NewsI
 import {ProfileIcon} from '@navigation/components/MainTabBar/components/Icons/ProfileIcon';
 import {TeamIcon} from '@navigation/components/MainTabBar/components/Icons/TeamIcon';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {
+  createNativeStackNavigator,
+  NativeStackNavigationOptions,
+} from '@react-navigation/native-stack';
+import {Confirm, ConfirmButton} from '@screens/Dialogs/Confirm';
 import {Home} from '@screens/Home';
 import {News} from '@screens/News';
 import {MyBadges} from '@screens/ProfileFlow/MyBadges';
@@ -32,6 +36,11 @@ export type MainTabsParamList = {
 export type MainStackParamList = {
   Main: undefined;
   WebView: undefined;
+  Confirm: {
+    title?: string;
+    subtitle?: string;
+    buttons?: ConfirmButton[];
+  };
 };
 
 export type HomeTabStackParamList = {
@@ -71,8 +80,9 @@ const screenOptions = {
   headerShown: false,
 };
 
-const modalOptions = {
-  presentation: 'fullScreenModal',
+const modalOptions: NativeStackNavigationOptions = {
+  presentation: 'transparentModal',
+  animation: 'fade',
 } as const;
 
 /**
@@ -161,6 +171,11 @@ export function Main() {
         name="WebView"
         options={modalOptions}
         component={WebView}
+      />
+      <MainStack.Screen
+        name="Confirm"
+        options={modalOptions}
+        component={Confirm}
       />
     </MainStack.Navigator>
   );

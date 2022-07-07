@@ -8,6 +8,13 @@ import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import {MainStackParamList} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {
+  DEFAULT_CONFIRM_NO_BUTTON,
+  DEFAULT_CONFIRM_YES_BUTTON,
+} from '@screens/Dialogs/Confirm';
 import React, {memo, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -15,6 +22,8 @@ import {rem} from 'rn-units';
 export const Notifications = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
   const [value, setValue] = useState(false);
 
   return (
@@ -33,7 +42,24 @@ export const Notifications = memo(() => {
           style={styles.avatar}
         />
         <View style={styles.body}>
-          <Switch value={value} onValueChange={setValue} />
+          <Switch
+            value={value}
+            onValueChange={v => {
+              setValue(v);
+              navigation.navigate('Confirm', {
+                title: 'Notifications',
+                subtitle:
+                  'Notifications are not allowed. Do you want to enable them?',
+                buttons: [
+                  {
+                    ...DEFAULT_CONFIRM_YES_BUTTON,
+                    onPress: () => console.log('confirm'),
+                  },
+                  DEFAULT_CONFIRM_NO_BUTTON,
+                ],
+              });
+            }}
+          />
         </View>
       </View>
     </View>
