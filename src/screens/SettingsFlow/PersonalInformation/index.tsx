@@ -76,53 +76,49 @@ export const PersonalInformation = memo(() => {
             />
           </Animated.View>
           <Animated.View
-            style={[styles.body, animatedBodyStyle, commonStyles.shadow]}>
-            <View style={styles.bodyInner} {...stopPropagination}>
-              {
-                // place button here with absolute positioning so it'd be underneath phone country select
-                hasChanges && (
-                  <SaveButton
-                    style={styles.buttonPosition}
-                    onPress={() => {}}
-                  />
-                )
-              }
-              <ListControlInput
-                label={t('personal_information.first_name')}
-                textContentType="name"
-                defaultValue={mockUserData.name}
-                onChangeText={onChangeSomething}
-              />
-              <ListControlSeparator />
-              <ListControlInput
-                label={t('personal_information.last_name')}
-                textContentType="familyName"
-                defaultValue={mockUserData.surname}
-                onChangeText={onChangeSomething}
-              />
-              <ListControlSeparator />
-              <ListControlAction
-                label={t('personal_information.phone')}
-                action={t('buttons.change').toUpperCase()}
-                value={'+1 0712 345 678'}
-                onPress={onChangePhonePress}
-              />
-              <ListControlSeparator />
-              <ListControlCountry
-                label={t('personal_information.country')}
-                selectedCountry={selectedCountry}
-                isCountrySearchVisible={isCountrySearchVisible}
-                setCountrySearchVisibility={setCountrySearchVisibility}
-                onCountrySelect={onCountrySelect}
-              />
-              <ListControlSeparator />
-              <ListControlInput
-                label={t('personal_information.city')}
-                textContentType="addressCity"
-                defaultValue={mockUserData.city}
-                onChangeText={onChangeSomething}
-              />
-            </View>
+            style={[styles.body, animatedBodyStyle, commonStyles.shadow]}
+            {...stopPropagination}>
+            {
+              // place button here with absolute positioning so it'd be underneath phone country select
+              hasChanges && (
+                <SaveButton style={styles.buttonPosition} onPress={() => {}} />
+              )
+            }
+            <ListControlInput
+              label={t('personal_information.first_name')}
+              textContentType="name"
+              defaultValue={mockUserData.name}
+              onChangeText={onChangeSomething}
+            />
+            <ListControlSeparator />
+            <ListControlInput
+              label={t('personal_information.last_name')}
+              textContentType="familyName"
+              defaultValue={mockUserData.surname}
+              onChangeText={onChangeSomething}
+            />
+            <ListControlSeparator />
+            <ListControlAction
+              label={t('personal_information.phone')}
+              action={t('buttons.change').toUpperCase()}
+              value={'+1 0712 345 678'}
+              onPress={onChangePhonePress}
+            />
+            <ListControlSeparator />
+            <ListControlCountry
+              label={t('personal_information.country')}
+              selectedCountry={selectedCountry}
+              isCountrySearchVisible={isCountrySearchVisible}
+              setCountrySearchVisibility={setCountrySearchVisibility}
+              onCountrySelect={onCountrySelect}
+            />
+            <ListControlSeparator />
+            <ListControlInput
+              label={t('personal_information.city')}
+              textContentType="addressCity"
+              defaultValue={mockUserData.city}
+              onChangeText={onChangeSomething}
+            />
           </Animated.View>
         </Animated.View>
       </View>
@@ -152,9 +148,6 @@ const styles = StyleSheet.create({
     borderRadius: rem(16),
     marginHorizontal: SCREEN_SIDE_OFFSET,
     backgroundColor: COLORS.white,
-  },
-  bodyInner: {
-    borderRadius: rem(16),
   },
   buttonPosition: {
     position: 'absolute',
