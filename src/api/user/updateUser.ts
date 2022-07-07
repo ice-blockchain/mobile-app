@@ -1,10 +1,11 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {patch} from '@api/client';
+import {UserProfile} from '@api/user/types';
 
 interface Params {
   userId: string;
-  username: string | null;
+  username: string;
 }
 
 /**
@@ -12,7 +13,7 @@ interface Params {
  */
 
 export function updateUser({userId, username}: Params) {
-  return patch(`/users/${userId}`, {
+  return patch<{username: string}, UserProfile>(`/users/${userId}`, {
     username,
   });
 }
