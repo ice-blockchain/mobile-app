@@ -2,7 +2,7 @@
 
 import {Api} from '@api/index';
 import {DeviceActions} from '@store/modules/Devices/actions';
-import {call, put, SagaReturnType} from 'redux-saga/effects';
+import {call, delay, put, SagaReturnType} from 'redux-saga/effects';
 
 const actionCreator = DeviceActions.GET_SETTINGS.START.create;
 
@@ -11,6 +11,7 @@ export function* getDeviceSettingsSaga(
   action: ReturnType<typeof actionCreator>,
 ) {
   try {
+    yield delay(2000);
     const settings: SagaReturnType<typeof Api.devices.getDeviceSettings> =
       yield call(Api.devices.getDeviceSettings, {
         userId: '',
