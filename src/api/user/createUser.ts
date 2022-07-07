@@ -7,6 +7,7 @@ interface Params {
   phoneNumber?: string;
   phoneNumberHash?: string;
   username: string;
+  referredBy: string;
 }
 
 /**
@@ -18,11 +19,13 @@ export function createUser({
   email,
   phoneNumber,
   phoneNumberHash,
+  referredBy,
 }: Params) {
   return post('/users', {
     username,
     email,
     phoneNumber,
     phoneNumberHash,
+    referredBy,
   });
 }

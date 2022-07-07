@@ -3,14 +3,14 @@
 import {createUser} from './createUser';
 import {deleteUser} from './deleteUser';
 import {getUserById} from './getUserById';
-import {getUserViews} from './getUserViews';
+import {getUserByUsername} from './getUserByUsername';
 import {searchUsers} from './searchUsers';
 import {updateUser} from './updateUser';
 
 export const user = Object.freeze({
   deleteUser,
   getUserById,
-  getUserViews,
+  getUserByUsername,
   searchUsers,
   updateUser,
   createUser,

@@ -8,6 +8,6 @@ import {UserProfile} from '@api/user/types';
  * based on an username, making sure the username is valid first.
  */
 
-export function getUserViews(username: string) {
+export function getUserByUsername(username: string) {
   return get<UserProfile>(`/user-views/${username}`);
 }

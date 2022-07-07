@@ -1,16 +1,27 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-export interface DeviceSettings {
-  deviceUniqueId: string;
-  language: string;
-  notificationSettings: NotificationChannels;
-  userId: string;
-}
-
-export interface NotificationChannels {
+export type NotificationChannel = {
   email: boolean;
+  inApp: boolean;
   push: boolean;
-}
+  sms: boolean;
+};
+
+export type NotificationChannelType =
+  | 'additionalProp1'
+  | 'additionalProp2'
+  | 'additionalProp3';
+
+export type DeviceSettings = {
+  deviceUniqueId: string;
+  disableAllNotifications: boolean;
+  language: string;
+  notificationSettings: {
+    [key in NotificationChannelType]: NotificationChannel;
+  };
+  updatedAt: string;
+  userId: string;
+};
 
 export interface DeviceLocation {
   city: string;
