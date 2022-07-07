@@ -12,10 +12,10 @@ export function* getDeviceSettingsSaga(
 ) {
   try {
     yield delay(2000);
-    const settings: SagaReturnType<typeof Api.devices.getDeviceSettings> =
-      yield call(Api.devices.getDeviceSettings, {
+    const settings: SagaReturnType<typeof Api.devices.getUserDeviceSettings> =
+      yield call(Api.devices.getUserDeviceSettings, {
         userId: '',
-        deviceId: '',
+        deviceUniqueId: '',
       });
     yield put(DeviceActions.GET_SETTINGS.SUCCESS.create(settings));
   } catch (error) {

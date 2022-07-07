@@ -34,7 +34,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.7)
     - GoogleUtilities/Logger (~> 7.7)
     - nanopb (~> 2.30908.0)
-  - Flipper (0.142.0):
+  - Flipper (0.153.0):
     - Flipper-Folly (~> 2.6)
   - Flipper-Boost-iOSX (1.76.0.1.11)
   - Flipper-DoubleConversion (3.2.0)
@@ -50,48 +50,48 @@ PODS:
   - Flipper-PeerTalk (0.0.4)
   - Flipper-RSocket (1.4.3):
     - Flipper-Folly (~> 2.6)
-  - FlipperKit (0.142.0):
-    - FlipperKit/Core (= 0.142.0)
-  - FlipperKit/Core (0.142.0):
-    - Flipper (~> 0.142.0)
+  - FlipperKit (0.153.0):
+    - FlipperKit/Core (= 0.153.0)
+  - FlipperKit/Core (0.153.0):
+    - Flipper (~> 0.153.0)
     - FlipperKit/CppBridge
     - FlipperKit/FBCxxFollyDynamicConvert
     - FlipperKit/FBDefines
     - FlipperKit/FKPortForwarding
     - SocketRocket (~> 0.6.0)
-  - FlipperKit/CppBridge (0.142.0):
-    - Flipper (~> 0.142.0)
-  - FlipperKit/FBCxxFollyDynamicConvert (0.142.0):
+  - FlipperKit/CppBridge (0.153.0):
+    - Flipper (~> 0.153.0)
+  - FlipperKit/FBCxxFollyDynamicConvert (0.153.0):
     - Flipper-Folly (~> 2.6)
-  - FlipperKit/FBDefines (0.142.0)
-  - FlipperKit/FKPortForwarding (0.142.0):
+  - FlipperKit/FBDefines (0.153.0)
+  - FlipperKit/FKPortForwarding (0.153.0):
     - CocoaAsyncSocket (~> 7.6)
     - Flipper-PeerTalk (~> 0.0.4)
-  - FlipperKit/FlipperKitHighlightOverlay (0.142.0)
-  - FlipperKit/FlipperKitLayoutHelpers (0.142.0):
+  - FlipperKit/FlipperKitHighlightOverlay (0.153.0)
+  - FlipperKit/FlipperKitLayoutHelpers (0.153.0):
     - FlipperKit/Core
     - FlipperKit/FlipperKitHighlightOverlay
     - FlipperKit/FlipperKitLayoutTextSearchable
-  - FlipperKit/FlipperKitLayoutIOSDescriptors (0.142.0):
+  - FlipperKit/FlipperKitLayoutIOSDescriptors (0.153.0):
     - FlipperKit/Core
     - FlipperKit/FlipperKitHighlightOverlay
     - FlipperKit/FlipperKitLayoutHelpers
     - YogaKit (~> 1.18)
-  - FlipperKit/FlipperKitLayoutPlugin (0.142.0):
+  - FlipperKit/FlipperKitLayoutPlugin (0.153.0):
     - FlipperKit/Core
     - FlipperKit/FlipperKitHighlightOverlay
     - FlipperKit/FlipperKitLayoutHelpers
     - FlipperKit/FlipperKitLayoutIOSDescriptors
     - FlipperKit/FlipperKitLayoutTextSearchable
     - YogaKit (~> 1.18)
-  - FlipperKit/FlipperKitLayoutTextSearchable (0.142.0)
-  - FlipperKit/FlipperKitNetworkPlugin (0.142.0):
+  - FlipperKit/FlipperKitLayoutTextSearchable (0.153.0)
+  - FlipperKit/FlipperKitNetworkPlugin (0.153.0):
     - FlipperKit/Core
-  - FlipperKit/FlipperKitReactPlugin (0.142.0):
+  - FlipperKit/FlipperKitReactPlugin (0.153.0):
     - FlipperKit/Core
-  - FlipperKit/FlipperKitUserDefaultsPlugin (0.142.0):
+  - FlipperKit/FlipperKitUserDefaultsPlugin (0.153.0):
     - FlipperKit/Core
-  - FlipperKit/SKIOSNetworkPlugin (0.142.0):
+  - FlipperKit/SKIOSNetworkPlugin (0.153.0):
     - FlipperKit/Core
     - FlipperKit/FlipperKitNetworkPlugin
   - fmt (6.2.1)
@@ -513,7 +513,7 @@ DEPENDENCIES:
   - EXWebBrowser (from `../node_modules/expo-web-browser/ios`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
-  - Flipper (= 0.142.0)
+  - Flipper (= 0.153.0)
   - Flipper-Boost-iOSX (= 1.76.0.1.11)
   - Flipper-DoubleConversion (= 3.2.0)
   - Flipper-Fmt (= 7.1.7)
@@ -521,19 +521,19 @@ DEPENDENCIES:
   - Flipper-Glog (= 0.5.0.4)
   - Flipper-PeerTalk (= 0.0.4)
   - Flipper-RSocket (= 1.4.3)
-  - FlipperKit (= 0.142.0)
-  - FlipperKit/Core (= 0.142.0)
-  - FlipperKit/CppBridge (= 0.142.0)
-  - FlipperKit/FBCxxFollyDynamicConvert (= 0.142.0)
-  - FlipperKit/FBDefines (= 0.142.0)
-  - FlipperKit/FKPortForwarding (= 0.142.0)
-  - FlipperKit/FlipperKitHighlightOverlay (= 0.142.0)
-  - FlipperKit/FlipperKitLayoutPlugin (= 0.142.0)
-  - FlipperKit/FlipperKitLayoutTextSearchable (= 0.142.0)
-  - FlipperKit/FlipperKitNetworkPlugin (= 0.142.0)
-  - FlipperKit/FlipperKitReactPlugin (= 0.142.0)
-  - FlipperKit/FlipperKitUserDefaultsPlugin (= 0.142.0)
-  - FlipperKit/SKIOSNetworkPlugin (= 0.142.0)
+  - FlipperKit (= 0.153.0)
+  - FlipperKit/Core (= 0.153.0)
+  - FlipperKit/CppBridge (= 0.153.0)
+  - FlipperKit/FBCxxFollyDynamicConvert (= 0.153.0)
+  - FlipperKit/FBDefines (= 0.153.0)
+  - FlipperKit/FKPortForwarding (= 0.153.0)
+  - FlipperKit/FlipperKitHighlightOverlay (= 0.153.0)
+  - FlipperKit/FlipperKitLayoutPlugin (= 0.153.0)
+  - FlipperKit/FlipperKitLayoutTextSearchable (= 0.153.0)
+  - FlipperKit/FlipperKitNetworkPlugin (= 0.153.0)
+  - FlipperKit/FlipperKitReactPlugin (= 0.153.0)
+  - FlipperKit/FlipperKitUserDefaultsPlugin (= 0.153.0)
+  - FlipperKit/SKIOSNetworkPlugin (= 0.153.0)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - hermes-engine (~> 0.11.0)
   - libevent (~> 2.1.12)
@@ -769,7 +769,7 @@ SPEC CHECKSUMS:
   Firebase: 5f8193dff4b5b7c5d5ef72ae54bb76c08e2b841d
   FirebaseCore: 5743c5785c074a794d35f2fff7ecc254a91e08b1
   FirebaseCoreDiagnostics: 92e07a649aeb66352b319d43bdd2ee3942af84cb
-  Flipper: e383397490f64c7d527b756596e135d34d43dd20
+  Flipper: 4c883eb3c81b0091a474ff992ba66b402a0535fd
   Flipper-Boost-iOSX: fd1e2b8cbef7e662a122412d7ac5f5bea715403c
   Flipper-DoubleConversion: 3d3d04a078d4f3a1b6c6916587f159dc11f232c4
   Flipper-Fmt: 60cbdd92fc254826e61d669a5d87ef7015396a9b
@@ -777,7 +777,7 @@ SPEC CHECKSUMS:
   Flipper-Glog: 87bc98ff48de90cb5b0b5114ed3da79d85ee2dd4
   Flipper-PeerTalk: 116d8f857dc6ef55c7a5a75ea3ceaafe878aadc9
   Flipper-RSocket: d9d9ade67cbecf6ac10730304bf5607266dd2541
-  FlipperKit: de934d365bfc0af358d3b7b7d453c24ffddd7cac
+  FlipperKit: 0564d557c8a9a10ab906dc2c29ec368ace9e9fb9
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 476ee3e89abb49e07f822b48323c51c57124b572
   GoogleDataTransport: 5fffe35792f8b96ec8d6775f5eccd83c998d5a3b
@@ -848,6 +848,6 @@ SPEC CHECKSUMS:
   Yoga: 6671cf077f614314c22fd09ddf87d7abeee64e96
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: f4dd8b2b29c0c5c2c9dbe0e918d2158f6f255c07
+PODFILE CHECKSUM: 0627627a1a67673d5770781a13d9fe9f874deff9
 
 COCOAPODS: 1.11.3
