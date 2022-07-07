@@ -18,6 +18,7 @@ import {
 } from '@screens/SettingsFlow/Settings/components/MenuItem.tsx';
 import {SectionCard} from '@screens/SettingsFlow/Settings/components/SectionCard.tsx';
 import {SectionTitle} from '@screens/SettingsFlow/Settings/components/SectionTitle';
+import {AuthActions} from '@store/modules/Auth/actions';
 import {EraseIcon} from '@svg/EraseIcon';
 import {FeedbackIcon} from '@svg/FeedbackIcon';
 import {InviteIcon} from '@svg/InviteIcon';
@@ -30,9 +31,11 @@ import {t} from '@translations/i18n';
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
+import {useDispatch} from 'react-redux';
 import {rem} from 'rn-units';
 
 export const Settings = memo(() => {
+  const dispatch = useDispatch();
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
   const {scrollHandler, shadowStyle} = useScrollShadow();
@@ -127,7 +130,9 @@ export const Settings = memo(() => {
               title={t('settings.logout_title')}
               description={t('settings.logout_description')}
               renderIcon={LogOutIcon}
-              onPress={() => {}}
+              onPress={async () => {
+                await dispatch(AuthActions.SIGN_OUT.START.create());
+              }}
               confirmation={{
                 title: t('settings.logout_confirmation_title'),
                 yesText: t('settings.logout_confirmation_yes'),

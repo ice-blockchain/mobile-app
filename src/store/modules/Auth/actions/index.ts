@@ -50,8 +50,17 @@ const SIGN_IN_SOCIAL = createAction('SIGN_IN_SOCIAL', {
 const SET_PHONE_NUMBER_VERIFIED = createAction('SET_PHONE_NUMBER_VERIFIED', {
   STATE: (phone: string) => ({phone}),
 });
+
 const SET_CODE_VERIFIED = createAction('SET_CODE_VERIFIED', {
   STATE: () => {},
+});
+
+const DELETE_ACCOUNT = createAction('DELETE_ACCOUNT', {
+  START: (userId: string) => ({userId}),
+  SUCCESS: true,
+  FAILED: (errorMessage: string) => ({
+    errorMessage,
+  }),
 });
 
 export const AuthActions = Object.freeze({
@@ -63,4 +72,5 @@ export const AuthActions = Object.freeze({
   SIGN_OUT,
   SET_PHONE_NUMBER_VERIFIED,
   SET_CODE_VERIFIED,
+  DELETE_ACCOUNT,
 });
