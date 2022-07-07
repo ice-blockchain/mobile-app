@@ -3,13 +3,27 @@
 import {put} from '@api/client';
 
 interface Params {
+  userId: string;
   phoneNumber: string;
+  phoneNumberHash: string;
   validationCode: string;
 }
 
-export function phoneValidation({phoneNumber, validationCode}: Params) {
-  return put('/user-validations/phone-number', {
+/**
+ * Validates a provided phone number by a one time code
+ * previously provided to the user via SMS.
+ */
+
+export function phoneValidation({
+  userId,
+  phoneNumber,
+  phoneNumberHash,
+  validationCode,
+}: Params) {
+  return put(`/user-validations/${userId}/phone-number`, {
+    userId,
     phoneNumber,
+    phoneNumberHash,
     validationCode,
   });
 }

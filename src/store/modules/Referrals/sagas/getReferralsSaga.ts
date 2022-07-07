@@ -8,8 +8,8 @@ const actionCreator = ReferralsActions.GET_REFERRALS.START.create;
 
 export function* getReferralsSaga(action: ReturnType<typeof actionCreator>) {
   try {
-    const {userId} = action.payload;
-    yield Api.referrals.getReferrals({userId});
+    const {userId, type} = action.payload;
+    yield Api.referrals.getReferrals({userId, type});
     yield put(ReferralsActions.GET_REFERRALS.SUCCESS.create());
   } catch (error) {
     let errorMessage = 'Failed';

@@ -11,7 +11,8 @@ const USERNAME_VALIDATION = createAction('USERNAME_VALIDATION', {
 });
 
 const PHONE_VALIDATION = createAction('PHONE_VALIDATION', {
-  START: (phoneNumber: string, validationCode: string) => ({
+  START: (userId: string, phoneNumber: string, validationCode: string) => ({
+    userId,
     phoneNumber,
     validationCode,
   }),

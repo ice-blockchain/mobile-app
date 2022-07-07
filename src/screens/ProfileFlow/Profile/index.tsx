@@ -6,6 +6,7 @@ import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import {useFocusEffect} from '@react-navigation/native';
 import {Badges} from '@screens/ProfileFlow/Profile/components/Badges';
 import {HeaderRightButtons} from '@screens/ProfileFlow/Profile/components/HeaderRightButtons';
 import {Invite} from '@screens/ProfileFlow/Profile/components/Invite';
@@ -21,6 +22,8 @@ export const Profile = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
   const {scrollHandler, shadowStyle} = useScrollShadow();
+
+  useFocusEffect(() => {});
 
   return (
     <View style={styles.container}>

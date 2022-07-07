@@ -478,6 +478,8 @@ PODS:
   - RNSentry (3.4.1):
     - React-Core
     - Sentry (= 7.11.0)
+  - RNSha256 (1.4.7):
+    - React
   - RNSVG (12.3.0):
     - React-Core
   - segment-analytics-react-native (2.1.11):
@@ -583,6 +585,7 @@ DEPENDENCIES:
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - "RNSentry (from `../node_modules/@sentry/react-native`)"
+  - RNSha256 (from `../node_modules/react-native-sha256`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - "segment-analytics-react-native (from `../node_modules/@segment/analytics-react-native`)"
   - "sovran-react-native (from `../node_modules/@segment/sovran-react-native`)"
@@ -730,6 +733,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-screens"
   RNSentry:
     :path: "../node_modules/@sentry/react-native"
+  RNSha256:
+    :path: "../node_modules/react-native-sha256"
   RNSVG:
     :path: "../node_modules/react-native-svg"
   segment-analytics-react-native:
@@ -824,6 +829,7 @@ SPEC CHECKSUMS:
   RNReanimated: 64573e25e078ae6bec03b891586d50b9ec284393
   RNScreens: 40a2cb40a02a609938137a1e0acfbf8fc9eebf19
   RNSentry: fbbdcd7213058e3de5fbaa452b25a06a16b4b382
+  RNSha256: bf2c90a9e0cec6dcbcc4100e4e19715ae7feaa34
   RNSVG: 302bfc9905bd8122f08966dc2ce2d07b7b52b9f8
   segment-analytics-react-native: b251b9e7277a8cbf0a8379d9bca155f0aa1d5d4a
   Sentry: 0c5cd63d714187b4a39c331c1f0eb04ba7868341

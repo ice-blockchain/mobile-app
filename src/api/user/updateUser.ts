@@ -7,8 +7,12 @@ interface Params {
   username: string | null;
 }
 
-export function updateProfile({userId, username}: Params) {
-  return patch(`/profile/${userId}`, {
+/**
+ * Modifies an user account
+ */
+
+export function updateUser({userId, username}: Params) {
+  return patch(`/users/${userId}`, {
     username,
   });
 }
