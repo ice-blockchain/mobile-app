@@ -5,7 +5,7 @@ import {all, takeLatest} from 'redux-saga/effects';
 
 import {getDeviceSettingsSaga} from './getDeviceSettings';
 
-export function* rootReferralsSaga() {
+export function* rootDevicesSaga() {
   yield all([
     takeLatest(DeviceActions.GET_SETTINGS.START.type, getDeviceSettingsSaga),
   ]);

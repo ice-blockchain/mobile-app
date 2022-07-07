@@ -8,14 +8,29 @@ import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {NotificationControls} from '@screens/SettingsFlow/Notifications/components/NotificationControls';
-import React, {memo} from 'react';
+import {
+  NotificationControls,
+  NotificationControlsSkeleton,
+} from '@screens/SettingsFlow/Notifications/components/NotificationControls';
+import {DeviceActions} from '@store/modules/Devices/actions';
+import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
+import React, {memo, useEffect} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
 import {font, rem} from 'rn-units';
 
 export const Notifications = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(DeviceActions.GET_SETTINGS.START.create());
+  }, [dispatch]);
+
+  const isLoading = useSelector(
+    isLoadingSelector.bind(null, DeviceActions.GET_SETTINGS),
+  );
 
   return (
     <View style={styles.container}>
@@ -33,7 +48,11 @@ export const Notifications = memo(() => {
           style={styles.avatar}
         />
         <Text style={styles.titleText}>NOTIFICATIONS</Text>
-        <NotificationControls />
+        {isLoading ? (
+          <NotificationControlsSkeleton />
+        ) : (
+          <NotificationControls />
+        )}
       </View>
     </View>
   );

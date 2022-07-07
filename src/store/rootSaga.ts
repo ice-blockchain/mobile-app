@@ -3,6 +3,7 @@
 import {all, call, spawn} from 'redux-saga/effects';
 
 import {rootAuthSaga} from './modules/Auth/sagas';
+import {rootDevicesSaga} from './modules/Devices/sagas';
 import {rootNewsSaga} from './modules/News/sagas';
 import {rootPermissionsSaga} from './modules/Permissions/sagas';
 import {rootReferralsSaga} from './modules/Referrals/sagas';
@@ -19,6 +20,7 @@ export function* rootSaga() {
     rootStatisticsSaga,
     rootTeamSaga,
     rootValidationSaga,
+    rootDevicesSaga,
   ];
   yield all([
     ...sagas.map((saga, index) =>
