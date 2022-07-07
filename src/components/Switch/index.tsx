@@ -3,7 +3,12 @@
 import {COLORS} from '@constants/colors';
 import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
 import React, {useEffect} from 'react';
-import {StyleSheet, TouchableWithoutFeedback} from 'react-native';
+import {
+  StyleProp,
+  StyleSheet,
+  TouchableWithoutFeedback,
+  ViewStyle,
+} from 'react-native';
 import Animated, {
   interpolate,
   interpolateColor,
@@ -16,6 +21,7 @@ import {rem} from 'rn-units';
 export type SwitchProps = {
   value: boolean;
   onValueChange: (value: boolean) => void;
+  style?: StyleProp<ViewStyle>;
 };
 
 const CONTAINER_WIDTH = rem(18);
@@ -25,7 +31,7 @@ const CONTAINER_BORDER_WIDTH = 1;
 const BALL_SIZE = rem(8);
 const BALL_SIDE_OFFSET = 1;
 
-export const Switch = ({value, onValueChange}: SwitchProps) => {
+export const Switch = ({value, onValueChange, style}: SwitchProps) => {
   const stateSharedValue = useSharedValue(0);
 
   const animatedBallStyles = useAnimatedStyle(() => {
@@ -71,7 +77,7 @@ export const Switch = ({value, onValueChange}: SwitchProps) => {
     <TouchableWithoutFeedback
       onPress={() => onValueChange(!value)}
       hitSlop={SMALL_BUTTON_HIT_SLOP}>
-      <Animated.View style={[styles.container, animatedContainerStyles]}>
+      <Animated.View style={[styles.container, animatedContainerStyles, style]}>
         <Animated.View style={[styles.ball, animatedBallStyles]} />
       </Animated.View>
     </TouchableWithoutFeedback>
