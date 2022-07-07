@@ -13,7 +13,7 @@ interface Action {
 const processStatusesRootSelector = (state: RootState) =>
   state.utilityProcessStatuses;
 
-export const getProcessStatusForActionSelector = (
+export const processStatusForActionSelector = (
   state: RootState,
   action: Action,
 ): ActionData | undefined =>
@@ -23,59 +23,59 @@ export const getProcessStatusForActionSelector = (
   ) as ActionData;
 
 export const isLoadingSelector = (action: Action, state: RootState) => {
-  const requestData = getProcessStatusForActionSelector(state, action);
+  const requestData = processStatusForActionSelector(state, action);
 
   return !!(requestData && requestData.status === ActionSubtype.START);
 };
 
 export const isSuccessSelector = (action: Action, state: RootState) => {
-  const requestData = getProcessStatusForActionSelector(state, action);
+  const requestData = processStatusForActionSelector(state, action);
 
   return !!(requestData && requestData.status === ActionSubtype.SUCCESS);
 };
 
 export const isFailedSelector = (action: Action, state: RootState) => {
-  const requestData = getProcessStatusForActionSelector(state, action);
+  const requestData = processStatusForActionSelector(state, action);
 
   return !!(requestData && requestData.status === ActionSubtype.FAILED);
 };
 
-export const getActionPayloadSelector = (action: Action, state: RootState) => {
-  const requestData = getProcessStatusForActionSelector(state, action);
+export const actionPayloadSelector = (action: Action, state: RootState) => {
+  const requestData = processStatusForActionSelector(state, action);
 
   return lodashGet(requestData, 'payload');
 };
 
-export const getActionTimestampSelector = (
+export const actionTimestampSelector = (
   action: Action,
   state: RootState,
 ): number => {
-  const requestData = getProcessStatusForActionSelector(state, action);
+  const requestData = processStatusForActionSelector(state, action);
 
   return lodashGet(requestData, 'timestamp', 0);
 };
 
-export const getSuccessActionTimestampSelector = (
+export const successActionTimestampSelector = (
   action: Action,
   state: RootState,
 ): number => {
   const isSuccess = isSuccessSelector(action, state);
 
   if (isSuccess) {
-    return getActionTimestampSelector(action, state);
+    return actionTimestampSelector(action, state);
   }
 
   return 0;
 };
 
-export const getFailedReasonSelector = (
+export const failedReasonSelector = (
   action: Action,
   state: RootState,
 ): string | undefined => {
   const isFailed = isFailedSelector(action, state);
 
   if (isFailed) {
-    const requestData = getProcessStatusForActionSelector(state, action);
+    const requestData = processStatusForActionSelector(state, action);
 
     return lodashGet(requestData?.payload, 'errorMessage');
   }
