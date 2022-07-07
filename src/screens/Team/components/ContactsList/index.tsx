@@ -19,6 +19,7 @@ import {
 import {WhiteLogoSvg} from '@svg/WhiteLogo';
 import {t} from '@translations/i18n';
 import {hapticFeedback} from '@utils/hapticFeedback';
+import {openSMS} from '@utils/openSms';
 import React, {useCallback} from 'react';
 import {SectionList, StyleSheet, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
@@ -40,9 +41,15 @@ export const ContactsList = ({}: ContactsListProps) => {
   const invite = useCallback(
     (id: string) => {
       hapticFeedback();
+      const contact = contactsByIds[id];
+      const text = `${t('team.contacts_list.hi')} ${contact.firstName}, ${t(
+        'team.contacts_list.invitation_text',
+      )}`;
+      const [phone] = contact.phoneNumbers;
+      openSMS(phone, text);
       dispatch(TeamActions.INVITE_CONTACT.STATE.create(id));
     },
-    [dispatch],
+    [contactsByIds, dispatch],
   );
 
   const renderSectionHeader = useCallback(({section}: {section: Section}) => {
