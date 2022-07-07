@@ -3,16 +3,16 @@
 import {Initialization} from '@components/Initialization';
 import {theme} from '@navigation/theme';
 import {NavigationContainer} from '@react-navigation/native';
-import {AppCommonActions} from '@store/modules/AppCommon/actions';
+import {useAppLoadedDispatcher} from '@store/modules/AppCommon/hooks/useAppLoadedDispatcher';
 import {useAppStateListener} from '@store/modules/AppCommon/hooks/useAppStateListener';
 import {
   isInitializedSelector,
   isWelcomeSeenSelector,
   userDataSelector,
 } from '@store/modules/Auth/selectors';
-import React, {useEffect} from 'react';
+import React from 'react';
 import {LogBox} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 /**
  * We don't use state persistence or deep links to the screen which accepts functions in params,
@@ -27,15 +27,9 @@ import {AuthNavigator} from './Auth';
 import {Main} from './Main';
 
 function ActiveNavigator() {
-  const dispatch = useDispatch();
   const isInitialized = useSelector(isInitializedSelector);
   const isWelcomeSeen = useSelector(isWelcomeSeenSelector);
   const userData = useSelector(userDataSelector);
-
-  useEffect(() => {
-    dispatch(AppCommonActions.APP_LOADED.STATE.create());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   if (!isInitialized) {
     return <Initialization />;
@@ -47,6 +41,7 @@ function ActiveNavigator() {
 }
 
 export function Router() {
+  useAppLoadedDispatcher();
   useAppStateListener();
   return (
     <NavigationContainer theme={theme}>
