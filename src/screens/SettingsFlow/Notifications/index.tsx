@@ -8,19 +8,14 @@ import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {AllNotifications} from '@screens/SettingsFlow/Notifications/components/AllNotifications';
-import {
-  NotificationRow,
-  NotificationRowSeparator,
-} from '@screens/SettingsFlow/Notifications/components/NotificationRow';
-import React, {memo, useState} from 'react';
+import {NotificationControls} from '@screens/SettingsFlow/Notifications/components/NotificationControls';
+import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
 export const Notifications = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
-  const [value, setValue] = useState(false);
 
   return (
     <View style={styles.container}>
@@ -38,36 +33,7 @@ export const Notifications = memo(() => {
           style={styles.avatar}
         />
         <Text style={styles.titleText}>NOTIFICATIONS</Text>
-        <View style={[styles.list, commonStyles.shadow]}>
-          <NotificationRow
-            label="Notifications type 1"
-            pushEnabled={value}
-            emailEnabled={value}
-            onPushEnabledChange={setValue}
-            onEmailEnabledChange={setValue}
-          />
-          <NotificationRowSeparator />
-          <NotificationRow
-            label="Notifications type 1"
-            pushEnabled={value}
-            emailEnabled={value}
-            onPushEnabledChange={setValue}
-            onEmailEnabledChange={setValue}
-          />
-          <NotificationRowSeparator />
-          <NotificationRow
-            label="Notifications type 1"
-            pushEnabled={value}
-            emailEnabled={value}
-            onPushEnabledChange={setValue}
-            onEmailEnabledChange={setValue}
-          />
-        </View>
-        <AllNotifications
-          label={'TURN OFF ALL NOTIFICATIONS'}
-          value={value}
-          onValueChange={setValue}
-        />
+        <NotificationControls />
       </View>
     </View>
   );
@@ -94,11 +60,5 @@ const styles = StyleSheet.create({
     color: COLORS.darkBlue,
     marginTop: rem(54),
     marginHorizontal: SCREEN_SIDE_OFFSET,
-  },
-  list: {
-    marginHorizontal: SCREEN_SIDE_OFFSET,
-    marginTop: rem(21),
-    borderRadius: rem(16),
-    backgroundColor: COLORS.white,
   },
 });
