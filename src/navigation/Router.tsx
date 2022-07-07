@@ -11,7 +11,17 @@ import {
   userDataSelector,
 } from '@store/modules/Auth/selectors';
 import React, {useEffect} from 'react';
+import {LogBox} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
+
+/**
+ * We don't use state persistence or deep links to the screen which accepts functions in params,
+ * so the warning doesn't affect us and we can safely ignore it
+ * https://reactnavigation.org/docs/troubleshooting/#i-get-the-warning-non-serializable-values-were-found-in-the-navigation-state
+ */
+LogBox.ignoreLogs([
+  'Non-serializable values were found in the navigation state',
+]);
 
 import {AuthNavigator} from './Auth';
 import {Main} from './Main';
