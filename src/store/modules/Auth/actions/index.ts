@@ -4,7 +4,7 @@ import {OAuthProvider} from '@magic-ext/react-native-oauth';
 import {createAction} from '@store/utils/actions/createAction';
 
 type SignInResult = {
-  userData: {phoneNumber: string | null; email: string | null};
+  userData: {phoneNumber: string | null; email: string | null; userId: string};
   token: string;
 };
 
@@ -15,7 +15,11 @@ const STORE_WELCOME_SEEN = createAction('STORE_WELCOME_SEEN', {
 const LOAD_USER = createAction('LOAD_USER', {
   STATE: (
     token?: string,
-    userData?: {email: string | null; phoneNumber: string | null},
+    userData?: {
+      email: string | null;
+      phoneNumber: string | null;
+      userId: string;
+    },
   ) => ({token, userData}),
 });
 

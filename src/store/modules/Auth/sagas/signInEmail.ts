@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {MagicUserMetadata} from '@magic-sdk/react-native';
 import {magic} from '@services/magicLink';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {put} from 'redux-saga/effects';
@@ -12,8 +13,12 @@ export function* signInEmailSaga(action: ReturnType<typeof actionCreator>) {
     const token: string = yield magic.auth.loginWithMagicLink({
       email,
     });
+    const metadata: MagicUserMetadata = yield magic.user.getMetadata();
 
-    const result = {userData: {email, phoneNumber: null}, token};
+    const result = {
+      userData: {email, phoneNumber: null, userId: metadata.issuer ?? ''},
+      token,
+    };
 
     yield put(AuthActions.SIGN_IN_EMAIL.SUCCESS.create(result));
   } catch (error) {

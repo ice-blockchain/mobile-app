@@ -15,6 +15,7 @@ export function* loadUserSaga() {
       ]);
       yield put(
         AuthActions.LOAD_USER.STATE.create(token, {
+          userId: metadata.issuer ?? '',
           email: metadata.email,
           phoneNumber: metadata.phoneNumber,
         }),

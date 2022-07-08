@@ -7,6 +7,7 @@ import {persistReducer} from 'redux-persist';
 
 export interface AuthState {
   userData: {
+    userId: string;
     email?: string | null;
     phoneNumber: string | null;
   } | null;
@@ -55,7 +56,9 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
         draft.token = action.payload.result.token;
         break;
       case AuthActions.SET_PHONE_NUMBER_VERIFIED.STATE.type:
-        draft.userData = {phoneNumber: action.payload.phone};
+        if (draft.userData) {
+          draft.userData.phoneNumber = action.payload.phone;
+        }
         draft.phoneVerificationStep = 'code';
         break;
       case AuthActions.SET_CODE_VERIFIED.STATE.type:
