@@ -5,7 +5,11 @@ import {IFormattedContact} from '@store/modules/Team/sagas/getContactsSaga';
 import {createAction} from '@store/utils/actions/createAction';
 
 const INVITE_CONTACT = createAction('INVITE_CONTACT', {
-  STATE: (id: string) => ({id}),
+  START: (id: string) => ({id}),
+  SUCCESS: (id: string) => ({id}),
+  FAILED: (errorMessage: string) => ({
+    errorMessage,
+  }),
 });
 
 const SET_CONTACTS_BY_IDS = createAction('SET_CONTACTS_BY_IDS', {

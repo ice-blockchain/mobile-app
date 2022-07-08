@@ -22,7 +22,7 @@ export interface State {
 }
 
 type Actions = ReturnType<
-  | typeof TeamActions.INVITE_CONTACT.STATE.create
+  | typeof TeamActions.INVITE_CONTACT.SUCCESS.create
   | typeof TeamActions.SET_CONTACTS_BY_IDS.STATE.create
   | typeof TeamActions.SET_CONTACTS_IDS.STATE.create
   | typeof AuthActions.SIGN_OUT.SUCCESS.create
@@ -47,7 +47,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.contactsIds = action.payload.contactsIds;
         break;
       }
-      case TeamActions.INVITE_CONTACT.STATE.type: {
+      case TeamActions.INVITE_CONTACT.SUCCESS.type: {
         draft.iceFriends = [...draft.iceFriends, action.payload.id];
         break;
       }
