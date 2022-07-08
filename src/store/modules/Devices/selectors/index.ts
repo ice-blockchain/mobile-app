@@ -4,3 +4,6 @@ import {RootState} from '@store/rootReducer';
 
 export const deviceSettingsSelector = (state: RootState) =>
   state.devices.settings;
+
+export const deviceUniqueIdSelector = (state: RootState) =>
+  state.devices.deviceUniqueId;
