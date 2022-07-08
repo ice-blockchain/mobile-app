@@ -54,7 +54,12 @@ export const Notifications = memo(() => {
         {isLoading ? (
           <NotificationControlsSkeleton />
         ) : (
-          <NotificationControls />
+          !!settings && (
+            <NotificationControls
+              notificationSettings={settings.notificationSettings}
+              disableAllNotifications={settings.disableAllNotifications}
+            />
+          )
         )}
       </View>
     </View>

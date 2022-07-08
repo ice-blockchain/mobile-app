@@ -32,7 +32,7 @@ const BALL_SIZE = rem(8);
 const BALL_SIDE_OFFSET = 1;
 
 export const Switch = ({value, onValueChange, style}: SwitchProps) => {
-  const stateSharedValue = useSharedValue(0);
+  const stateSharedValue = useSharedValue(value ? 1 : 0);
 
   const animatedBallStyles = useAnimatedStyle(() => {
     return {

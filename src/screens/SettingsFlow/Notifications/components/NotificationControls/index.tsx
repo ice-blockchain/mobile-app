@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {NotificationSettings} from '@api/devices/types';
 import {COLORS} from '@constants/colors';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {AllNotifications} from '@screens/SettingsFlow/Notifications/components/NotificationControls/components/AllNotifications';
@@ -12,51 +13,47 @@ import {StyleSheet, View} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {rem} from 'rn-units';
 
-export const NotificationControls = memo(() => {
-  const [value, setValue] = useState(false);
-  return (
-    <>
-      <View style={[styles.list, commonStyles.shadow]}>
-        <NotificationRow
-          label="Notifications type 1"
-          pushEnabled={value}
-          emailEnabled={value}
-          onPushEnabledChange={setValue}
-          onEmailEnabledChange={setValue}
+type Props = {
+  disableAllNotifications: boolean;
+  notificationSettings: NotificationSettings;
+};
+
+export const NotificationControls = memo(
+  ({disableAllNotifications, notificationSettings}: Props) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [value, setValue] = useState(false);
+    const notificationChannels = Object.keys(
+      notificationSettings,
+    ) as (keyof typeof notificationSettings)[];
+
+    return (
+      <>
+        <View style={[styles.list, commonStyles.shadow]}>
+          {notificationChannels.map((channel, index) => {
+            const channelSettings = notificationSettings[channel];
+            return (
+              <React.Fragment key={channel}>
+                {index !== 0 && <NotificationRowSeparator />}
+                <NotificationRow
+                  label={channel}
+                  pushEnabled={channelSettings.push}
+                  emailEnabled={channelSettings.email}
+                  onPushEnabledChange={setValue}
+                  onEmailEnabledChange={setValue}
+                />
+              </React.Fragment>
+            );
+          })}
+        </View>
+        <AllNotifications
+          label={'TURN OFF ALL NOTIFICATIONS'}
+          value={disableAllNotifications}
+          onValueChange={setValue}
         />
-        <NotificationRowSeparator />
-        <NotificationRow
-          label="Notifications type 1"
-          pushEnabled={value}
-          emailEnabled={value}
-          onPushEnabledChange={setValue}
-          onEmailEnabledChange={setValue}
-        />
-        <NotificationRowSeparator />
-        <NotificationRow
-          label="Notifications type 1"
-          pushEnabled={value}
-          emailEnabled={value}
-          onPushEnabledChange={setValue}
-          onEmailEnabledChange={setValue}
-        />
-        <NotificationRowSeparator />
-        <NotificationRow
-          label="Notifications type 1"
-          pushEnabled={value}
-          emailEnabled={value}
-          onPushEnabledChange={setValue}
-          onEmailEnabledChange={setValue}
-        />
-      </View>
-      <AllNotifications
-        label={'TURN OFF ALL NOTIFICATIONS'}
-        value={value}
-        onValueChange={setValue}
-      />
-    </>
-  );
-});
+      </>
+    );
+  },
+);
 
 export const NotificationControlsSkeleton = () => (
   <SkeletonPlaceholder>
@@ -77,7 +74,7 @@ const styles = StyleSheet.create({
   },
   allNotificationsSkeleton: {
     marginTop: rem(42),
-    height: 20,
+    height: rem(20),
     borderRadius: rem(10),
     marginHorizontal: SCREEN_SIDE_OFFSET,
   },
