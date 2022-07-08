@@ -8,17 +8,20 @@ export type NotificationChannel = {
 };
 
 export type NotificationChannelType =
-  | 'additionalProp1'
-  | 'additionalProp2'
-  | 'additionalProp3';
+  | 'ACHIEVEMENTS'
+  | 'NEWS'
+  | 'REMINDERS'
+  | 'TEAM';
+
+export type NotificationSettings = {
+  [key in NotificationChannelType]: NotificationChannel;
+};
 
 export type DeviceSettings = {
   deviceUniqueId: string;
   disableAllNotifications: boolean;
   language: string;
-  notificationSettings: {
-    [key in NotificationChannelType]: NotificationChannel;
-  };
+  notificationSettings: NotificationSettings;
   updatedAt: string;
   userId: string;
 };
