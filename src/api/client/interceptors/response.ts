@@ -2,13 +2,6 @@
 
 import {AxiosInstance, AxiosRequestConfig, AxiosResponse} from 'axios';
 
-// import StoreConfig from 'src/configureStore'; //TODO: configure redux store
-// import AuthSelectors from 'src/modules/Auth/selectors'; //TODO: configure redux store
-
-function onFulfilled(response: AxiosResponse) {
-  return response.data;
-}
-
 function onRejected(instance: AxiosInstance) {
   return async (error: {
     message: string;
@@ -53,4 +46,4 @@ function onRejected(instance: AxiosInstance) {
   };
 }
 
-export const responseInterceptor = {onFulfilled, onRejected};
+export const responseInterceptor = {onRejected};

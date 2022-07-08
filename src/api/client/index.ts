@@ -14,7 +14,7 @@ function setupApiClient(clientInstance: AxiosInstance) {
   clientInstance.interceptors.request.use(requestInterceptor.onFulfilled);
 
   clientInstance.interceptors.response.use(
-    responseInterceptor.onFulfilled,
+    undefined,
     responseInterceptor.onRejected(clientInstance),
   );
 }

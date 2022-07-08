@@ -19,7 +19,11 @@ export function* signInSocialSaga(action: ReturnType<typeof actionCreator>) {
       });
 
     const {email, phoneNumber} = socialLoginInfo.oauth.userInfo;
-    const userData = {email: email ?? null, phoneNumber: phoneNumber ?? null};
+    const userData = {
+      email: email ?? null,
+      phoneNumber: phoneNumber ?? null,
+      userId: socialLoginInfo.magic.userMetadata.issuer ?? '',
+    };
     const result = {
       userData,
       token: socialLoginInfo.magic.idToken,

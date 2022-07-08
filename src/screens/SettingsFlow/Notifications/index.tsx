@@ -13,6 +13,7 @@ import {
   NotificationControlsSkeleton,
 } from '@screens/SettingsFlow/Notifications/components/NotificationControls';
 import {DeviceActions} from '@store/modules/Devices/actions';
+import {deviceSettingsSelector} from '@store/modules/Devices/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import React, {memo, useEffect} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -28,6 +29,8 @@ export const Notifications = memo(() => {
     dispatch(DeviceActions.GET_SETTINGS.START.create());
   }, [dispatch]);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const settings = useSelector(deviceSettingsSelector);
   const isLoading = useSelector(
     isLoadingSelector.bind(null, DeviceActions.GET_SETTINGS),
   );
