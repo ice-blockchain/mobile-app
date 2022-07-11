@@ -12,7 +12,7 @@ const GET_SETTINGS = createAction('GET_SETTINGS', {
 
 const UPDATE_SETTINGS = createAction('SET_SETTINGS', {
   START: (settings: DeepPartial<DeviceSettings>) => settings,
-  SUCCESS: (payload: DeepPartial<DeviceSettings>) => payload,
+  SUCCESS: (settings: DeviceSettings) => settings,
   FAILED: (errorMessage: string) => ({errorMessage}),
 });
 

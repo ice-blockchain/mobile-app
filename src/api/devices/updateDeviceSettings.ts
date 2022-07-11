@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {patch} from '@api/client';
-import {DeviceId, DeviceMetadata} from '@api/devices/types';
+import {DeviceId, DeviceMetadata, DeviceSettings} from '@api/devices/types';
 import {DeepPartial} from 'redux';
 
 interface Params {
@@ -13,7 +13,10 @@ export function updateDeviceSettings({
   deviceId: {userId, deviceUniqueId},
   metadata,
 }: Params) {
-  return patch(`/users/${userId}/devices/${deviceUniqueId}/settings`, {
-    ...metadata,
-  });
+  return patch<DeepPartial<DeviceMetadata>, DeviceSettings>(
+    `/users/${userId}/devices/${deviceUniqueId}/settings`,
+    {
+      ...metadata,
+    },
+  );
 }
