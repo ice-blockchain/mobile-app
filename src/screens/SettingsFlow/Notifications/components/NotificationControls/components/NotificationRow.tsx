@@ -1,32 +1,30 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {
+  NotificationChannelType,
+  NotificationSettings,
+} from '@api/devices/types';
 import {Switch} from '@components/Switch';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {DeepPartial} from 'redux';
 import {font, rem} from 'rn-units';
 
 type Props = {
-  label: string;
+  channel: NotificationChannelType;
   pushEnabled: boolean;
   emailEnabled: boolean;
-  onPushEnabledChange: (value: boolean) => void;
-  onEmailEnabledChange: (value: boolean) => void;
+  onChange: (changedSettings: DeepPartial<NotificationSettings>) => void;
 };
 
 export const NotificationRow = memo(
-  ({
-    label,
-    pushEnabled,
-    emailEnabled,
-    onPushEnabledChange,
-    onEmailEnabledChange,
-  }: Props) => {
+  ({channel, pushEnabled, emailEnabled, onChange}: Props) => {
     return (
       <View style={styles.container}>
         <Text style={styles.labelText} numberOfLines={2}>
-          {label}
+          {channel}
         </Text>
         <View style={[styles.section, styles.section_left]}>
           <Text
@@ -35,7 +33,10 @@ export const NotificationRow = memo(
             adjustsFontSizeToFit>
             PUSH
           </Text>
-          <Switch value={pushEnabled} onValueChange={onPushEnabledChange} />
+          <Switch
+            value={pushEnabled}
+            onValueChange={value => onChange({[channel]: {push: value}})}
+          />
         </View>
         <View style={styles.section}>
           <Text
@@ -44,7 +45,10 @@ export const NotificationRow = memo(
             adjustsFontSizeToFit>
             EMAIL
           </Text>
-          <Switch value={emailEnabled} onValueChange={onEmailEnabledChange} />
+          <Switch
+            value={emailEnabled}
+            onValueChange={value => onChange({[channel]: {email: value}})}
+          />
         </View>
       </View>
     );
