@@ -50,7 +50,7 @@ export const Notifications = memo(() => {
           style={styles.avatar}
         />
         <Text style={styles.titleText}>NOTIFICATIONS</Text>
-        {isLoading ? (
+        {isLoading && !settings ? (
           <NotificationControlsSkeleton />
         ) : (
           !!settings && (
