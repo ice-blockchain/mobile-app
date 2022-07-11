@@ -4,6 +4,7 @@ import {Avatar} from '@components/Avatar';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
@@ -17,12 +18,14 @@ import {deviceSettingsSelector} from '@store/modules/Devices/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import React, {memo, useEffect} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import Animated from 'react-native-reanimated';
 import {useDispatch, useSelector} from 'react-redux';
 import {font, rem} from 'rn-units';
 
 export const Notifications = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
+  const {scrollHandler, shadowStyle} = useScrollShadow();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -40,27 +43,33 @@ export const Notifications = memo(() => {
         color={COLORS.white}
         title={'Notifications'}
         titlePreset={'small'}
+        containerStyle={shadowStyle}
         renderRightButtons={LangButton}
       />
-      <View
-        style={[styles.card, commonStyles.baseSubScreen, bottomOffset.current]}>
-        <Avatar
-          showPen
-          uri="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo="
-          style={styles.avatar}
-        />
-        <Text style={styles.titleText}>NOTIFICATIONS</Text>
-        {isLoading && !settings ? (
-          <NotificationControlsSkeleton />
-        ) : (
-          !!settings && (
-            <NotificationControls
-              notificationSettings={settings.notificationSettings}
-              disableAllNotifications={settings.disableAllNotifications}
-            />
-          )
-        )}
-      </View>
+      <Animated.ScrollView
+        onScroll={scrollHandler}
+        scrollEventThrottle={16}
+        contentContainerStyle={[bottomOffset.current, styles.scrollContent]}
+        showsVerticalScrollIndicator={false}>
+        <View style={[styles.card, commonStyles.baseSubScreen]}>
+          <Avatar
+            showPen
+            uri="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo="
+            style={styles.avatar}
+          />
+          <Text style={styles.titleText}>NOTIFICATIONS</Text>
+          {isLoading && !settings ? (
+            <NotificationControlsSkeleton />
+          ) : (
+            !!settings && (
+              <NotificationControls
+                notificationSettings={settings.notificationSettings}
+                disableAllNotifications={settings.disableAllNotifications}
+              />
+            )
+          )}
+        </View>
+      </Animated.ScrollView>
     </View>
   );
 });
@@ -72,6 +81,12 @@ const styles = StyleSheet.create({
   },
   card: {
     marginTop: rem(80),
+    // make bottom overscroll area white, otherwise it'd be of container color
+    paddingBottom: 2000,
+    marginBottom: -2000,
+  },
+  scrollContent: {
+    flexGrow: 1,
   },
   avatar: {
     position: 'absolute',
