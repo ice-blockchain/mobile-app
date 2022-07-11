@@ -13,6 +13,7 @@ import {
   call,
   flush,
   put,
+  SagaReturnType,
   select,
   take,
 } from 'redux-saga/effects';
@@ -52,11 +53,13 @@ export function* updateDeviceSettingsSaga(
       > = yield take(DeviceActions.SET_DEVICE_UNIQUE_ID.STATE.type);
       deviceUniqueId = action.payload.deviceUniqueId;
     }
-    yield call(Api.devices.updateDeviceSettings, {
+    const updatedSetings: SagaReturnType<
+      typeof Api.devices.updateDeviceSettings
+    > = yield call(Api.devices.updateDeviceSettings, {
       deviceId: {userId, deviceUniqueId},
       metadata: settings,
     });
-    yield put(DeviceActions.UPDATE_SETTINGS.SUCCESS.create(settings));
+    yield put(DeviceActions.UPDATE_SETTINGS.SUCCESS.create(updatedSetings));
   } catch (error) {
     //TODO:: get error message
     yield put(
