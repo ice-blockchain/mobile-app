@@ -55,7 +55,10 @@ export const Confirm = () => {
                 styles[`button_${button.preset ?? 'default'}`],
                 button.containerStyle,
               ]}
-              onPress={button.onPress ?? navigation.goBack}>
+              onPress={() => {
+                navigation.goBack();
+                button.onPress?.();
+              }}>
               <Text
                 style={[
                   styles.buttonLabelText,

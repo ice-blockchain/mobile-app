@@ -4,13 +4,13 @@ import {
   isAppActiveSelector,
   isAppLoadedSelector,
 } from '@store/modules/AppCommon/selectors';
-import {
-  PermissionsActions,
-  PermissionTypes,
-} from '@store/modules/Permissions/actions';
+import {PermissionsActions} from '@store/modules/Permissions/actions';
 import {PERMISSIONS_LIST} from '@store/modules/Permissions/sagas/getPermissionsSaga';
-import Permissions from 'react-native-permissions';
-import {put, select} from 'redux-saga/effects';
+import Permissions, {
+  checkNotifications,
+  PermissionStatus,
+} from 'react-native-permissions';
+import {put, SagaReturnType, select} from 'redux-saga/effects';
 
 export function* checkAllPermissionsSaga() {
   try {
@@ -18,12 +18,17 @@ export function* checkAllPermissionsSaga() {
     const isAppLoaded: boolean = yield select(isAppLoadedSelector);
 
     if (isAppActive || isAppLoaded) {
-      const contacts: PermissionTypes = yield Permissions.check(
+      const contacts: PermissionStatus = yield Permissions.check(
         PERMISSIONS_LIST.contacts,
       );
 
+      const pushNotificationsResponse: SagaReturnType<
+        typeof checkNotifications
+      > = yield checkNotifications();
+
       const permissions = {
         contacts,
+        pushNotifications: pushNotificationsResponse.status,
       };
       yield put(
         PermissionsActions.CHECK_ALL_PERMISSIONS.SUCCESS.create(permissions),

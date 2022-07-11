@@ -2,21 +2,16 @@
 
 import {PermissionType} from '@store/modules/Permissions/sagas/getPermissionsSaga';
 import {createAction} from '@store/utils/actions/createAction';
-
-export type PermissionTypes =
-  | 'unavailable'
-  | 'blocked'
-  | 'denied'
-  | 'granted'
-  | 'limited';
+import {PermissionStatus} from 'react-native-permissions';
 
 export type PermissionsType = {
-  contacts: PermissionTypes;
+  contacts: PermissionStatus;
+  pushNotifications: PermissionStatus;
 };
 
 const GET_PERMISSIONS = createAction('GET_PERMISSIONS', {
   START: (type: PermissionType) => ({type}),
-  SUCCESS: (status: PermissionTypes) => ({status}),
+  SUCCESS: (status: PermissionStatus) => ({status}),
   FAILED: (errorMessage: string) => ({
     errorMessage,
   }),
