@@ -1,6 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {NotificationSettings} from '@api/devices/types';
+import {
+  NotificationChannel,
+  NotificationChannelType,
+  NotificationSettings,
+} from '@api/devices/types';
 import {COLORS} from '@constants/colors';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {AllNotifications} from '@screens/SettingsFlow/Notifications/components/NotificationControls/components/AllNotifications';
@@ -8,12 +12,13 @@ import {
   NotificationRow,
   NotificationRowSeparator,
 } from '@screens/SettingsFlow/Notifications/components/NotificationControls/components/NotificationRow';
+import {useConfirmNotificationsDlg} from '@screens/SettingsFlow/Notifications/components/NotificationControls/hooks/useConfirmNotificationsDlg';
 import {DeviceActions} from '@store/modules/Devices/actions';
+import {permissionSelector} from '@store/modules/Permissions/selectors';
 import React, {memo, useCallback} from 'react';
 import {StyleSheet, View} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
-import {useDispatch} from 'react-redux';
-import {DeepPartial} from 'redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -24,6 +29,13 @@ type Props = {
 export const NotificationControls = memo(
   ({disableAllNotifications, notificationSettings}: Props) => {
     const dispatch = useDispatch();
+
+    const hasPushPermissions = useSelector(
+      permissionSelector('pushNotifications'),
+    );
+
+    const {openConfirmationDlg} = useConfirmNotificationsDlg();
+
     const notificationChannels = Object.keys(
       notificationSettings,
     ) as (keyof typeof notificationSettings)[];
@@ -40,14 +52,22 @@ export const NotificationControls = memo(
     );
 
     const changeNotificationSettings = useCallback(
-      (changedSettings: DeepPartial<NotificationSettings>) => {
-        dispatch(
-          DeviceActions.UPDATE_SETTINGS.START.create({
-            notificationSettings: changedSettings,
-          }),
-        );
+      (
+        channel: NotificationChannelType,
+        key: keyof NotificationChannel,
+        value: boolean,
+      ) => {
+        if (key === 'push' && !hasPushPermissions) {
+          openConfirmationDlg();
+        } else {
+          dispatch(
+            DeviceActions.UPDATE_SETTINGS.START.create({
+              notificationSettings: {[channel]: {[key]: value}},
+            }),
+          );
+        }
       },
-      [dispatch],
+      [dispatch, hasPushPermissions, openConfirmationDlg],
     );
 
     return (
@@ -60,7 +80,7 @@ export const NotificationControls = memo(
                 {index !== 0 && <NotificationRowSeparator />}
                 <NotificationRow
                   channel={channel}
-                  pushEnabled={channelSettings.push}
+                  pushEnabled={hasPushPermissions && channelSettings.push}
                   emailEnabled={channelSettings.email}
                   onChange={changeNotificationSettings}
                 />

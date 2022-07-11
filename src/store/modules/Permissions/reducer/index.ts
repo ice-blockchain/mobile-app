@@ -1,13 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {
-  PermissionsActions,
-  PermissionTypes,
-} from '@store/modules/Permissions/actions';
+import {PermissionsActions} from '@store/modules/Permissions/actions';
 import produce from 'immer';
+import {PermissionStatus} from 'react-native-permissions';
 
 export interface State {
-  contacts: PermissionTypes | null;
+  contacts: PermissionStatus | null;
+  pushNotifications: PermissionStatus | null;
 }
 
 type Actions = ReturnType<
@@ -17,6 +16,7 @@ type Actions = ReturnType<
 
 const INITIAL_STATE: State = {
   contacts: null,
+  pushNotifications: null,
 };
 
 export function permissionsReducer(

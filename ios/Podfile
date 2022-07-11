@@ -17,6 +17,7 @@ target 'ice' do
 
   pod 'React-RCTLinking', :path => '../node_modules/react-native/Libraries/LinkingIOS'
   pod 'Permission-Contacts', :path => "#{permissions_path}/Contacts"
+  pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications"
 
   # Flags change depending on the env values.
   flags = get_default_flags()

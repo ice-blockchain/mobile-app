@@ -1,23 +1,25 @@
 // SPDX-License-Identifier: BUSL-1.1
-import {
-  PermissionsActions,
-  PermissionTypes,
-} from '@store/modules/Permissions/actions';
+import {PermissionsActions} from '@store/modules/Permissions/actions';
 import {Linking} from 'react-native';
-import Permissions, {
+import {
+  check,
+  checkNotifications,
   Permission,
   PERMISSIONS,
+  PermissionStatus,
+  request,
+  requestNotifications,
   RESULTS,
 } from 'react-native-permissions';
-import {put} from 'redux-saga/effects';
+import {put, SagaReturnType} from 'redux-saga/effects';
 import {isIOS} from 'rn-units';
 
 const actionCreator = PermissionsActions.GET_PERMISSIONS.START.create;
 
-export type PermissionType = 'contacts';
+export type PermissionType = 'contacts' | 'pushNotifications';
 
 type PermissionsListType = {
-  [contacts in PermissionType]: Permission;
+  contacts: Permission;
 };
 
 export const PERMISSIONS_LIST: PermissionsListType = {
@@ -30,9 +32,14 @@ export function* getPermissionsSaga(action: ReturnType<typeof actionCreator>) {
   try {
     const {type} = action.payload;
 
-    const permission: PermissionTypes = yield Permissions.check(
-      PERMISSIONS_LIST[type],
-    );
+    let permission: PermissionStatus;
+    if (type === 'pushNotifications') {
+      const notificationResponse: SagaReturnType<typeof checkNotifications> =
+        yield checkNotifications();
+      permission = notificationResponse.status;
+    } else {
+      permission = yield check(PERMISSIONS_LIST[type]);
+    }
 
     if (permission === RESULTS.BLOCKED) {
       Linking.openSettings();
@@ -41,11 +48,15 @@ export function* getPermissionsSaga(action: ReturnType<typeof actionCreator>) {
     if (permission === RESULTS.GRANTED) {
       yield put(PermissionsActions.GET_PERMISSIONS.SUCCESS.create(permission));
     } else if (permission === RESULTS.DENIED) {
-      const status: PermissionTypes = yield Permissions.request(
-        PERMISSIONS_LIST[type],
-      );
+      if (type === 'pushNotifications') {
+        const notificationResponse: SagaReturnType<typeof checkNotifications> =
+          yield requestNotifications(['alert', 'badge', 'sound']);
+        permission = notificationResponse.status;
+      } else {
+        permission = yield request(PERMISSIONS_LIST[type]);
+      }
 
-      yield put(PermissionsActions.GET_PERMISSIONS.SUCCESS.create(status));
+      yield put(PermissionsActions.GET_PERMISSIONS.SUCCESS.create(permission));
     } else if (
       permission === RESULTS.LIMITED ||
       permission === RESULTS.UNAVAILABLE

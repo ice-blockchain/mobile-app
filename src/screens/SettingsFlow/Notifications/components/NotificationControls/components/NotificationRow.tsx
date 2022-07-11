@@ -1,22 +1,22 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {
-  NotificationChannelType,
-  NotificationSettings,
-} from '@api/devices/types';
+import {NotificationChannel, NotificationChannelType} from '@api/devices/types';
 import {Switch} from '@components/Switch';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {DeepPartial} from 'redux';
 import {font, rem} from 'rn-units';
 
 type Props = {
   channel: NotificationChannelType;
   pushEnabled: boolean;
   emailEnabled: boolean;
-  onChange: (changedSettings: DeepPartial<NotificationSettings>) => void;
+  onChange: (
+    channel: NotificationChannelType,
+    key: keyof NotificationChannel,
+    value: boolean,
+  ) => void;
 };
 
 export const NotificationRow = memo(
@@ -35,7 +35,7 @@ export const NotificationRow = memo(
           </Text>
           <Switch
             value={pushEnabled}
-            onValueChange={value => onChange({[channel]: {push: value}})}
+            onValueChange={value => onChange(channel, 'push', value)}
           />
         </View>
         <View style={styles.section}>
@@ -47,7 +47,7 @@ export const NotificationRow = memo(
           </Text>
           <Switch
             value={emailEnabled}
-            onValueChange={value => onChange({[channel]: {email: value}})}
+            onValueChange={value => onChange(channel, 'email', value)}
           />
         </View>
       </View>
