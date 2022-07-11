@@ -20,15 +20,14 @@ import {
 type Action = ReturnType<typeof DeviceActions.UPDATE_SETTINGS.START.create>;
 
 export function* watchUpdateDeviceSettings() {
-  const updateChannel: TakeableChannel<Action> = yield actionChannel(
-    DeviceActions.UPDATE_SETTINGS.START.type,
-    buffers.expanding(10),
-  );
+  const updateChannel: TakeableChannel<Action> & FlushableChannel<Action> =
+    yield actionChannel(
+      DeviceActions.UPDATE_SETTINGS.START.type,
+      buffers.expanding(10),
+    );
   while (true) {
     const nextAction: Action = yield take(updateChannel);
-    const bufferedActions: Action[] = yield flush<unknown>(
-      updateChannel as unknown as FlushableChannel<Action>,
-    );
+    const bufferedActions: Action[] = yield flush<Action>(updateChannel);
     const mergedChange: DeepPartial<DeviceSettings> = [
       nextAction,
       ...bufferedActions,
