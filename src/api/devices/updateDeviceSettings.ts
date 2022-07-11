@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {put} from '@api/client';
+import {patch} from '@api/client';
 import {DeviceId, DeviceMetadata} from '@api/devices/types';
 import {DeepPartial} from 'redux';
 
@@ -9,15 +9,11 @@ interface Params {
   metadata: DeepPartial<DeviceMetadata>;
 }
 
-/**
- * Replaces existing device metadata with the provided one.
- */
-
-export function updateDeviceMetadata({
+export function updateDeviceSettings({
   deviceId: {userId, deviceUniqueId},
   metadata,
 }: Params) {
-  return put(`/users/${userId}/devices/${deviceUniqueId}/metadata`, {
+  return patch(`/users/${userId}/devices/${deviceUniqueId}/settings`, {
     ...metadata,
   });
 }

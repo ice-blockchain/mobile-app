@@ -3,6 +3,7 @@
 import {DeviceSettings} from '@api/devices/types';
 import {DeviceActions} from '@store/modules/Devices/actions';
 import produce from 'immer';
+import {merge} from 'lodash';
 
 export interface State {
   settings: DeviceSettings | null;
@@ -12,6 +13,7 @@ export interface State {
 type Actions = ReturnType<
   | typeof DeviceActions.GET_SETTINGS.SUCCESS.create
   | typeof DeviceActions.SET_DEVICE_UNIQUE_ID.STATE.create
+  | typeof DeviceActions.UPDATE_SETTINGS.START.create
 >;
 
 const INITIAL_STATE: State = {
@@ -27,6 +29,11 @@ export function devicesReducer(state = INITIAL_STATE, action: Actions): State {
         break;
       case DeviceActions.SET_DEVICE_UNIQUE_ID.STATE.type:
         draft.deviceUniqueId = action.payload.deviceUniqueId;
+        break;
+      case DeviceActions.UPDATE_SETTINGS.START.type:
+        if (state.settings) {
+          draft.settings = merge(draft.settings, action.payload);
+        }
         break;
     }
   });

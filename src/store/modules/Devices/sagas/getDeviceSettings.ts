@@ -23,6 +23,7 @@ export function* getDeviceSettingsSaga() {
       yield call(Api.devices.getUserDeviceSettings, {userId, deviceUniqueId});
     yield put(DeviceActions.GET_SETTINGS.SUCCESS.create(settings));
   } catch (error) {
+    //TODO:: get error message
     yield put(DeviceActions.GET_SETTINGS.FAILED.create('error message here'));
   }
 }

@@ -29,7 +29,6 @@ export const Notifications = memo(() => {
     dispatch(DeviceActions.GET_SETTINGS.START.create());
   }, [dispatch]);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const settings = useSelector(deviceSettingsSelector);
   const isLoading = useSelector(
     isLoadingSelector.bind(null, DeviceActions.GET_SETTINGS),

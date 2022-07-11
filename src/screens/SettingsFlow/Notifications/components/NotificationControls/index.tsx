@@ -8,9 +8,12 @@ import {
   NotificationRow,
   NotificationRowSeparator,
 } from '@screens/SettingsFlow/Notifications/components/NotificationControls/components/NotificationRow';
-import React, {memo, useState} from 'react';
+import {DeviceActions} from '@store/modules/Devices/actions';
+import React, {memo, useCallback} from 'react';
 import {StyleSheet, View} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
+import {useDispatch} from 'react-redux';
+import {DeepPartial} from 'redux';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -20,11 +23,32 @@ type Props = {
 
 export const NotificationControls = memo(
   ({disableAllNotifications, notificationSettings}: Props) => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [value, setValue] = useState(false);
+    const dispatch = useDispatch();
     const notificationChannels = Object.keys(
       notificationSettings,
     ) as (keyof typeof notificationSettings)[];
+
+    const setAllNotifications = useCallback(
+      (value: boolean) => {
+        dispatch(
+          DeviceActions.UPDATE_SETTINGS.START.create({
+            disableAllNotifications: value,
+          }),
+        );
+      },
+      [dispatch],
+    );
+
+    const changeNotificationSettings = useCallback(
+      (changedSettings: DeepPartial<NotificationSettings>) => {
+        dispatch(
+          DeviceActions.UPDATE_SETTINGS.START.create({
+            notificationSettings: changedSettings,
+          }),
+        );
+      },
+      [dispatch],
+    );
 
     return (
       <>
@@ -35,11 +59,10 @@ export const NotificationControls = memo(
               <React.Fragment key={channel}>
                 {index !== 0 && <NotificationRowSeparator />}
                 <NotificationRow
-                  label={channel}
+                  channel={channel}
                   pushEnabled={channelSettings.push}
                   emailEnabled={channelSettings.email}
-                  onPushEnabledChange={setValue}
-                  onEmailEnabledChange={setValue}
+                  onChange={changeNotificationSettings}
                 />
               </React.Fragment>
             );
@@ -48,7 +71,7 @@ export const NotificationControls = memo(
         <AllNotifications
           label={'TURN OFF ALL NOTIFICATIONS'}
           value={disableAllNotifications}
-          onValueChange={setValue}
+          onValueChange={setAllNotifications}
         />
       </>
     );
