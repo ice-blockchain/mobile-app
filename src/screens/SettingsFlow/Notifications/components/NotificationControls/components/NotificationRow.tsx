@@ -25,14 +25,14 @@ export const NotificationRow = memo(
     return (
       <View style={styles.container}>
         <Text style={styles.labelText} numberOfLines={2}>
-          {t(`notifications.channel_${channel}`)}
+          {t(`settings.notifications.channel_${channel.toLowerCase()}`)}
         </Text>
         <View style={[styles.section, styles.section_left]}>
           <Text
             style={styles.switchText}
             numberOfLines={1}
             adjustsFontSizeToFit>
-            {t('notifications.type_push')}
+            {t('settings.notifications.type_push')}
           </Text>
           <Switch
             value={pushEnabled}
@@ -44,7 +44,7 @@ export const NotificationRow = memo(
             style={styles.switchText}
             numberOfLines={1}
             adjustsFontSizeToFit>
-            {t('notifications.type_email')}
+            {t('settings.notifications.type_email')}
           </Text>
           <Switch
             value={emailEnabled}
