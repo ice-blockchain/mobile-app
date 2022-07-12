@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {NotificationChannel, NotificationChannelType} from '@api/devices/types';
+import {NotificationChannel} from '@api/devices/types';
 import {Switch} from '@components/Switch';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
@@ -10,11 +10,11 @@ import {StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
 type Props = {
-  channel: NotificationChannelType;
+  channel: string;
   pushEnabled: boolean;
   emailEnabled: boolean;
   onChange: (
-    channel: NotificationChannelType,
+    channel: string,
     key: keyof NotificationChannel,
     value: boolean,
   ) => void;

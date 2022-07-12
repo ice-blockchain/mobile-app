@@ -1,10 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {
-  NotificationChannel,
-  NotificationChannelType,
-  NotificationSettings,
-} from '@api/devices/types';
+import {NotificationChannel, NotificationSettings} from '@api/devices/types';
 import {COLORS} from '@constants/colors';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {AllNotifications} from '@screens/SettingsFlow/Notifications/components/NotificationControls/components/AllNotifications';
@@ -37,9 +33,7 @@ export const NotificationControls = memo(
 
     const {openConfirmationDlg} = useConfirmNotificationsDlg();
 
-    const notificationChannels = Object.keys(
-      notificationSettings,
-    ) as (keyof typeof notificationSettings)[];
+    const notificationChannels: string[] = Object.keys(notificationSettings);
 
     const setAllNotifications = useCallback(
       (value: boolean) => {
@@ -53,11 +47,7 @@ export const NotificationControls = memo(
     );
 
     const changeNotificationSettings = useCallback(
-      (
-        channel: NotificationChannelType,
-        key: keyof NotificationChannel,
-        value: boolean,
-      ) => {
+      (channel: string, key: keyof NotificationChannel, value: boolean) => {
         if (key === 'push' && !hasPushPermissions) {
           openConfirmationDlg();
         } else {
