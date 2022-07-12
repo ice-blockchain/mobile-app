@@ -54,7 +54,7 @@ export const Switch = ({value, onValueChange, style}: SwitchProps) => {
       backgroundColor: interpolateColor(
         stateSharedValue.value,
         [0, 1],
-        [COLORS.white, COLORS.darkBlue],
+        [COLORS.darkBlue, COLORS.white],
       ),
     };
   });
@@ -64,7 +64,7 @@ export const Switch = ({value, onValueChange, style}: SwitchProps) => {
       backgroundColor: interpolateColor(
         stateSharedValue.value,
         [0, 1],
-        [COLORS.darkBlue, COLORS.white],
+        [COLORS.white, COLORS.darkBlue],
       ),
     };
   });
