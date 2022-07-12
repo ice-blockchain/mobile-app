@@ -10,3 +10,14 @@ export interface UserProfile {
   referralCount: number;
   username: string | null;
 }
+
+export interface UserUpdateResult extends UserProfile {
+  agendaPhoneNumberHashes: string;
+  createdAt: string;
+  email: string;
+  lastMiningStartedAt: string;
+  lastPingAt: string;
+  phoneNumberHash: string;
+  referredBy: string;
+  updatedAt: string;
+}
