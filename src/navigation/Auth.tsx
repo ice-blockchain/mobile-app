@@ -5,7 +5,10 @@ import {ClaimNickname} from '@screens/AuthFlow/ClaimNickname';
 import {SignIn} from '@screens/AuthFlow/SignIn';
 import {Welcome} from '@screens/AuthFlow/Welcome';
 import {WebView} from '@screens/WebView';
-import {userDataSelector} from '@store/modules/Auth/selectors';
+import {
+  isWelcomeSeenSelector,
+  userDataSelector,
+} from '@store/modules/Auth/selectors';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
@@ -38,10 +41,21 @@ const modalOptions = {
 
 function Signup() {
   const userData = useSelector(userDataSelector);
+  const isWelcomeSeen = useSelector(isWelcomeSeenSelector);
+
+  const initialAuthRoute = () => {
+    if (!isWelcomeSeen && userData) {
+      return 'Welcome';
+    } else if (userData && !userData.username) {
+      return 'ClaimNickname';
+    }
+    return 'SignIn';
+  };
+
   return (
     <SignUpStack.Navigator
       screenOptions={screenOptions}
-      initialRouteName={userData ? 'Welcome' : 'SignIn'}>
+      initialRouteName={initialAuthRoute()}>
       <SignUpStack.Screen name="ClaimNickname" component={ClaimNickname} />
       <SignUpStack.Screen name="Welcome" component={Welcome} />
       <SignUpStack.Screen name="SignIn" component={SignIn} />
