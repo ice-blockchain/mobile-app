@@ -1,13 +1,15 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {CountryCode} from 'libphonenumber-js';
+
 export interface ICountryCode {
   name: string;
   flag: string;
-  isoCode: string;
+  isoCode: CountryCode | string;
   iddCode: string;
 }
 
-export const countriesCode = [
+export const countriesCode: ICountryCode[] = [
   {
     name: 'Andorra',
     flag: '🇦🇩',
