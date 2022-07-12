@@ -8,6 +8,7 @@ import {
   DEFAULT_CONFIRM_YES_BUTTON,
 } from '@screens/Dialogs/Confirm';
 import {PermissionsActions} from '@store/modules/Permissions/actions';
+import {t} from '@translations/i18n';
 import {useDispatch} from 'react-redux';
 
 export const useConfirmNotificationsDlg = () => {
@@ -17,8 +18,8 @@ export const useConfirmNotificationsDlg = () => {
   return {
     openConfirmationDlg: () => {
       navigation.navigate('Confirm', {
-        title: 'Notifications',
-        subtitle: 'Notifications are not allowed. Do you want to enable them?',
+        title: t('settings.notifications_title'),
+        subtitle: t('notifications.enable_prompt'),
         buttons: [
           {
             ...DEFAULT_CONFIRM_YES_BUTTON,

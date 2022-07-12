@@ -15,6 +15,7 @@ import {
 import {useConfirmNotificationsDlg} from '@screens/SettingsFlow/Notifications/components/NotificationControls/hooks/useConfirmNotificationsDlg';
 import {DeviceActions} from '@store/modules/Devices/actions';
 import {permissionSelector} from '@store/modules/Permissions/selectors';
+import {t} from '@translations/i18n';
 import React, {memo, useCallback} from 'react';
 import {StyleSheet, View} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
@@ -89,7 +90,7 @@ export const NotificationControls = memo(
           })}
         </View>
         <AllNotifications
-          label={'TURN OFF ALL NOTIFICATIONS'}
+          label={t('notifications.turn_off_all')}
           value={disableAllNotifications}
           onValueChange={setAllNotifications}
         />
