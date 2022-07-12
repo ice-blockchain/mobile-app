@@ -4,6 +4,7 @@ import {NotificationChannel, NotificationChannelType} from '@api/devices/types';
 import {Switch} from '@components/Switch';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {t} from '@translations/i18n';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -24,14 +25,14 @@ export const NotificationRow = memo(
     return (
       <View style={styles.container}>
         <Text style={styles.labelText} numberOfLines={2}>
-          {channel}
+          {t(`notifications.channel_${channel}`)}
         </Text>
         <View style={[styles.section, styles.section_left]}>
           <Text
             style={styles.switchText}
             numberOfLines={1}
             adjustsFontSizeToFit>
-            PUSH
+            {t('notifications.type_push')}
           </Text>
           <Switch
             value={pushEnabled}
@@ -43,7 +44,7 @@ export const NotificationRow = memo(
             style={styles.switchText}
             numberOfLines={1}
             adjustsFontSizeToFit>
-            EMAIL
+            {t('notifications.type_email')}
           </Text>
           <Switch
             value={emailEnabled}
