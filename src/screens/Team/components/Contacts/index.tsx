@@ -35,7 +35,7 @@ export const Contacts = ({
   const isLoading = useSelector((state: RootState) =>
     UtilsProcessStatusSelectors.isLoadingSelector(
       state,
-      AuthActions.UPDATE_ACCOUNT,
+      AuthActions.UPDATE_ACCOUNT || ValidationActions.PHONE_VALIDATION,
     ),
   );
 
