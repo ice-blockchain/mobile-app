@@ -19,7 +19,7 @@ export const useConfirmNotificationsDlg = () => {
     openConfirmationDlg: () => {
       navigation.navigate('Confirm', {
         title: t('settings.notifications_title'),
-        subtitle: t('notifications.enable_prompt'),
+        subtitle: t('settings.notifications.enable_prompt'),
         buttons: [
           {
             ...DEFAULT_CONFIRM_YES_BUTTON,

@@ -80,7 +80,7 @@ export const NotificationControls = memo(
           })}
         </View>
         <AllNotifications
-          label={t('notifications.turn_off_all')}
+          label={t('settings.notifications.turn_off_all')}
           value={disableAllNotifications}
           onValueChange={setAllNotifications}
         />
