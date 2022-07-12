@@ -9,6 +9,7 @@ export interface State {
   settings: DeviceSettings | null;
   rollBackSettings: DeviceSettings | null;
   deviceUniqueId: string | null;
+  isInitialized: boolean;
 }
 
 type Actions = ReturnType<
@@ -23,6 +24,7 @@ const INITIAL_STATE: State = {
   settings: null,
   rollBackSettings: null,
   deviceUniqueId: null,
+  isInitialized: false,
 };
 
 export function devicesReducer(state = INITIAL_STATE, action: Actions): State {
@@ -34,6 +36,7 @@ export function devicesReducer(state = INITIAL_STATE, action: Actions): State {
         break;
       case DeviceActions.SET_DEVICE_UNIQUE_ID.STATE.type:
         draft.deviceUniqueId = action.payload.deviceUniqueId;
+        draft.isInitialized = true;
         break;
       case DeviceActions.UPDATE_SETTINGS.SUCCESS.type:
         draft.rollBackSettings = action.payload;

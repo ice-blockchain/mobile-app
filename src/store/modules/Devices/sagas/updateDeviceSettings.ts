@@ -45,14 +45,8 @@ export function* updateDeviceSettingsSaga(
     const userId: ReturnType<typeof userIdSelector> = yield select(
       userIdSelector,
     );
-    let deviceUniqueId: ReturnType<typeof deviceUniqueIdSelector> =
+    const deviceUniqueId: ReturnType<typeof deviceUniqueIdSelector> =
       yield select(deviceUniqueIdSelector);
-    if (!deviceUniqueId) {
-      const action: ReturnType<
-        typeof DeviceActions.SET_DEVICE_UNIQUE_ID.STATE.create
-      > = yield take(DeviceActions.SET_DEVICE_UNIQUE_ID.STATE.type);
-      deviceUniqueId = action.payload.deviceUniqueId;
-    }
     const updatedSetings: SagaReturnType<
       typeof Api.devices.updateDeviceSettings
     > = yield call(Api.devices.updateDeviceSettings, {
