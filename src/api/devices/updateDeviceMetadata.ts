@@ -2,11 +2,10 @@
 
 import {put} from '@api/client';
 import {DeviceId, DeviceMetadata} from '@api/devices/types';
-import {DeepPartial} from 'redux';
 
 interface Params {
   deviceId: DeviceId;
-  metadata: DeepPartial<DeviceMetadata>;
+  metadata: DeviceMetadata;
 }
 
 /**

@@ -57,7 +57,7 @@ export function* updateDeviceSettingsSaga(
       typeof Api.devices.updateDeviceSettings
     > = yield call(Api.devices.updateDeviceSettings, {
       deviceId: {userId, deviceUniqueId},
-      metadata: settings,
+      settings,
     });
     yield put(DeviceActions.UPDATE_SETTINGS.SUCCESS.create(updatedSetings));
   } catch (error) {
