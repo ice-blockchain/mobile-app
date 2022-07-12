@@ -15,8 +15,12 @@ export function* signInEmailSaga(action: ReturnType<typeof actionCreator>) {
     });
     const metadata: MagicUserMetadata = yield magic.user.getMetadata();
 
+    if (!metadata.issuer) {
+      throw new Error('metadata.issuer is empty');
+    }
+
     const result = {
-      userData: {email, phoneNumber: null, userId: metadata.issuer ?? ''},
+      userData: {email, phoneNumber: null, userId: metadata.issuer},
       token,
     };
 

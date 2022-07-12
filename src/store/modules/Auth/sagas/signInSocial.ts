@@ -19,10 +19,15 @@ export function* signInSocialSaga(action: ReturnType<typeof actionCreator>) {
       });
 
     const {email, phoneNumber} = socialLoginInfo.oauth.userInfo;
+
+    if (!socialLoginInfo.magic.userMetadata.issuer) {
+      throw new Error('metadata.issuer is empty');
+    }
+
     const userData = {
       email: email ?? null,
       phoneNumber: phoneNumber ?? null,
-      userId: socialLoginInfo.magic.userMetadata.issuer ?? '',
+      userId: socialLoginInfo.magic.userMetadata.issuer,
     };
     const result = {
       userData,
