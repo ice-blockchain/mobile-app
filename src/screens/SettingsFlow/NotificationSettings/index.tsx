@@ -12,7 +12,7 @@ import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {
   NotificationControls,
   NotificationControlsSkeleton,
-} from '@screens/SettingsFlow/Notifications/components/NotificationControls';
+} from '@screens/SettingsFlow/NotificationSettings/components/NotificationControls';
 import {DeviceActions} from '@store/modules/Devices/actions';
 import {deviceSettingsSelector} from '@store/modules/Devices/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
@@ -23,7 +23,7 @@ import Animated from 'react-native-reanimated';
 import {useDispatch, useSelector} from 'react-redux';
 import {font, rem} from 'rn-units';
 
-export const Notifications = memo(() => {
+export const NotificationSettings = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
   const {scrollHandler, shadowStyle} = useScrollShadow();

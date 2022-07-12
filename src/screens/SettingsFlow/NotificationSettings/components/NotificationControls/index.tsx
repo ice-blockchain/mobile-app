@@ -3,12 +3,12 @@
 import {NotificationChannel, NotificationSettings} from '@api/devices/types';
 import {COLORS} from '@constants/colors';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {AllNotifications} from '@screens/SettingsFlow/Notifications/components/NotificationControls/components/AllNotifications';
+import {AllNotifications} from '@screens/SettingsFlow/NotificationSettings/components/NotificationControls/components/AllNotifications';
 import {
   NotificationRow,
   NotificationRowSeparator,
-} from '@screens/SettingsFlow/Notifications/components/NotificationControls/components/NotificationRow';
-import {useConfirmNotificationsDlg} from '@screens/SettingsFlow/Notifications/components/NotificationControls/hooks/useConfirmNotificationsDlg';
+} from '@screens/SettingsFlow/NotificationSettings/components/NotificationControls/components/NotificationRow';
+import {useConfirmNotificationsDlg} from '@screens/SettingsFlow/NotificationSettings/components/NotificationControls/hooks/useConfirmNotificationsDlg';
 import {DeviceActions} from '@store/modules/Devices/actions';
 import {permissionSelector} from '@store/modules/Permissions/selectors';
 import {t} from '@translations/i18n';
