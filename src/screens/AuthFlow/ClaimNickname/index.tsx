@@ -4,8 +4,10 @@ import {COLORS} from '@constants/colors';
 import {SignUpStackParamList} from '@navigation/Auth';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {NavigationPanel} from '@screens/AuthFlow/Welcome/components/NavigationPanel';
+import {ValidationActions} from '@store/modules/Validation/actions';
+import {isUsernameValidSelector} from '@store/modules/Validation/selectors';
 import {translate} from '@translations/i18n';
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {
   Keyboard,
   KeyboardAvoidingView,
@@ -17,6 +19,7 @@ import {
 } from 'react-native';
 import PagerView from 'react-native-pager-view';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {useDispatch, useSelector} from 'react-redux';
 import {isIOS} from 'rn-units';
 
 import {ClaimNickName} from './components/ClaimNickname';
@@ -33,20 +36,34 @@ export const ClaimNickname = ({navigation}: Props) => {
   const [myNickname, setMyNickname] = useState('');
   const [invitedNickname, setInvitedNickname] = useState('');
   const [currentPage, setCurrentPage] = useState(0);
-
+  const isUsernameValid = useSelector(isUsernameValidSelector);
+  const dispatch = useDispatch();
   const [error, setError] = useState<string>();
-  const onNextPress = () => {
-    if (myNickname.trim().length > 20 || myNickname.trim().length < 4) {
-      setError(translate('errors.nicknameSize'));
-      return;
-    }
 
-    if (!nicknameRegularExp.test(myNickname)) {
-      setError(translate('errors.removeInvalidCharacters'));
-      return;
+  useEffect(() => {
+    if (isUsernameValid) {
+      pagerViewRef.current?.setPage(1);
+      setCurrentPage(1);
     }
-    pagerViewRef.current?.setPage(1);
-    setCurrentPage(1);
+  }, [isUsernameValid]);
+
+  const onNextPress = async () => {
+    if (currentPage === 0) {
+      if (myNickname.trim().length > 20 || myNickname.trim().length < 4) {
+        setError(translate('errors.nicknameSize'));
+        return;
+      } else {
+        //TODO:
+        await dispatch(
+          ValidationActions.USERNAME_VALIDATION.START.create(myNickname),
+        );
+      }
+    } else {
+      if (!nicknameRegularExp.test(myNickname)) {
+        setError(translate('errors.removeInvalidCharacters'));
+        return;
+      }
+    }
   };
 
   const onMyNicknameChange = (v: string) => {

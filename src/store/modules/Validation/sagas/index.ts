@@ -4,7 +4,7 @@ import {ValidationActions} from '@store/modules/Validation/actions';
 import {all, takeLatest} from 'redux-saga/effects';
 
 import {phoneValidationSaga} from './phoneValidationSaga';
-import {usernameValidationSaga} from './usernameValidationSaga';
+import {validateUsernameSaga} from './validateUsernameSaga';
 
 export function* rootValidationSaga() {
   yield all([
@@ -14,7 +14,7 @@ export function* rootValidationSaga() {
     ),
     takeLatest(
       ValidationActions.USERNAME_VALIDATION.START.type,
-      usernameValidationSaga,
+      validateUsernameSaga,
     ),
   ]);
 }

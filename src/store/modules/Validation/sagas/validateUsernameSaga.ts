@@ -6,13 +6,13 @@ import {put} from 'redux-saga/effects';
 
 const actionCreator = ValidationActions.USERNAME_VALIDATION.START.create;
 
-export function* usernameValidationSaga(
+export function* validateUsernameSaga(
   action: ReturnType<typeof actionCreator>,
 ) {
   try {
     const {username} = action.payload;
-    yield Api.validations.usernameValidation({username});
-    yield put(ValidationActions.USERNAME_VALIDATION.SUCCESS.create());
+    yield Api.validations.validateUsername({username});
+    yield put(ValidationActions.USERNAME_VALIDATION.SUCCESS.create(username));
   } catch (error) {
     let errorMessage = 'Failed';
     if (error instanceof Error) {

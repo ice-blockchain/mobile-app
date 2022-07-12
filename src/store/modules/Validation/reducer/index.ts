@@ -8,15 +8,26 @@ import {persistReducer} from 'redux-persist';
 
 export interface State {
   isUsernameValid: boolean | null;
+  username: string | null;
+  refUsername: string | null;
+  usernameValidationError: string | null;
+  refUsernameValidationError: string | null;
 }
 
 type Actions = ReturnType<
   | typeof ValidationActions.USERNAME_VALIDATION.SUCCESS.create
+  | typeof ValidationActions.USERNAME_VALIDATION.FAILED.create
+  | typeof ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.create
+  | typeof ValidationActions.REF_USERNAME_VALIDATION.FAILED.create
   | typeof AuthActions.SIGN_OUT.SUCCESS.create
 >;
 
 const INITIAL_STATE: State = {
   isUsernameValid: null,
+  username: null,
+  refUsername: null,
+  usernameValidationError: null,
+  refUsernameValidationError: null,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -24,6 +35,17 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
     switch (action.type) {
       case ValidationActions.USERNAME_VALIDATION.SUCCESS.type:
         draft.isUsernameValid = true;
+        draft.username = action.payload.username;
+        break;
+      case ValidationActions.USERNAME_VALIDATION.FAILED.type:
+        draft.usernameValidationError = action.payload.errorMessage;
+        break;
+      case ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.type:
+        draft.isUsernameValid = true;
+        draft.refUsername = action.payload.refUsername;
+        break;
+      case ValidationActions.REF_USERNAME_VALIDATION.FAILED.type:
+        draft.refUsernameValidationError = action.payload.errorMessage;
         break;
       case AuthActions.SIGN_OUT.SUCCESS.type: {
         return {
