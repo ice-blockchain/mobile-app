@@ -14,7 +14,6 @@ i18n.defaultLocale = 'en-GB';
 i18n.locale = locale?.languageTag || i18n.defaultLocale;
 i18n.fallbacks = true;
 i18n.translations = locales;
-i18n.missingTranslation = (scope: string) => scope;
 
 export default i18n;
 
