@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {ValidationActions} from '@store/modules/Validation/actions';
 import produce from 'immer';
+import {isEmpty} from 'lodash';
 import {persistReducer} from 'redux-persist';
 
 export interface State {
@@ -35,14 +36,17 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
     switch (action.type) {
       case ValidationActions.USERNAME_VALIDATION.SUCCESS.type:
         draft.isUsernameValid = true;
-        draft.username = action.payload.username;
+        draft.username = isEmpty(action.payload.username)
+          ? null
+          : action.payload.username;
         break;
       case ValidationActions.USERNAME_VALIDATION.FAILED.type:
         draft.usernameValidationError = action.payload.errorMessage;
         break;
       case ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.type:
-        draft.isUsernameValid = true;
-        draft.refUsername = action.payload.refUsername;
+        draft.refUsername = isEmpty(action.payload.refUsername)
+          ? null
+          : action.payload.refUsername;
         break;
       case ValidationActions.REF_USERNAME_VALIDATION.FAILED.type:
         draft.refUsernameValidationError = action.payload.errorMessage;

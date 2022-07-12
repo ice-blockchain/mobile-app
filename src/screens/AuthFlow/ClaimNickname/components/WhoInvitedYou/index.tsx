@@ -15,6 +15,7 @@ import {font, rem, screenHeight} from 'rn-units';
 interface WhoInvitedYouProps {
   inputValue: string;
   onInputChange: (v: string) => void;
+  onSkip: () => void;
 }
 
 const h = (screenHeight * 275) / 811;
@@ -23,6 +24,7 @@ const w = (h * 236) / 275;
 export const WhoInvitedYou = ({
   inputValue,
   onInputChange,
+  onSkip,
 }: WhoInvitedYouProps) => {
   const [isTipVisible, setTipVisibility] = useState(false);
   const showTip = () => {
@@ -56,7 +58,10 @@ export const WhoInvitedYou = ({
             {translate('whoInvitedYou.dontHaveInvitationCode')}
           </Text>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              onSkip();
+            }}>
             <Text style={styles.tapHere}>
               {translate('whoInvitedYou.tapHere')}
             </Text>

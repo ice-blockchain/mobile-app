@@ -47,23 +47,48 @@ export const ClaimNickname = ({navigation}: Props) => {
     }
   }, [isUsernameValid]);
 
+  const isValidName = (name: string) => {
+    if (name.trim().length > 20 || name.trim().length < 4) {
+      setError(translate('errors.nicknameSize'));
+      return false;
+    }
+
+    if (!nicknameRegularExp.test(name)) {
+      setError(translate('errors.removeInvalidCharacters'));
+      return false;
+    }
+
+    return true;
+  };
+
   const onNextPress = async () => {
     if (currentPage === 0) {
-      if (myNickname.trim().length > 20 || myNickname.trim().length < 4) {
-        setError(translate('errors.nicknameSize'));
-        return;
-      } else {
-        //TODO:
+      const isValidUsername = isValidName(myNickname);
+      if (isValidUsername) {
         await dispatch(
           ValidationActions.USERNAME_VALIDATION.START.create(myNickname),
         );
       }
     } else {
-      if (!nicknameRegularExp.test(myNickname)) {
-        setError(translate('errors.removeInvalidCharacters'));
-        return;
+      const isValidRefname = isValidName(invitedNickname);
+      if (isValidRefname) {
+        await dispatch(
+          ValidationActions.REF_USERNAME_VALIDATION.START.create(
+            invitedNickname,
+            false,
+          ),
+        );
       }
     }
+  };
+
+  const skipRefInvitation = async () => {
+    await dispatch(
+      ValidationActions.REF_USERNAME_VALIDATION.START.create(
+        invitedNickname,
+        true,
+      ),
+    );
   };
 
   const onMyNicknameChange = (v: string) => {
@@ -106,6 +131,7 @@ export const ClaimNickname = ({navigation}: Props) => {
                 <WhoInvitedYou
                   inputValue={invitedNickname}
                   onInputChange={setInvitedNickname}
+                  onSkip={skipRefInvitation}
                 />
               </ScrollView>
             </View>
