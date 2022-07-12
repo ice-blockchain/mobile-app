@@ -3,6 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {Images} from '@images';
 import {AuthActions} from '@store/modules/Auth/actions';
+import {PermissionsActions} from '@store/modules/Permissions/actions';
 import {translate} from '@translations/i18n';
 import React, {useRef, useState} from 'react';
 import {StatusBar, StyleSheet, View} from 'react-native';
@@ -82,6 +83,9 @@ export const Welcome = () => {
     dispatch(AuthActions.STORE_WELCOME_SEEN.STATE.create());
   };
   const yesPleasePress = () => {
+    dispatch(
+      PermissionsActions.GET_PERMISSIONS.START.create('pushNotifications'),
+    );
     dispatch(AuthActions.STORE_WELCOME_SEEN.STATE.create());
   };
 
