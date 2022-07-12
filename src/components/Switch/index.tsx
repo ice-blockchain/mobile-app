@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
-import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
 import React, {useEffect} from 'react';
 import {
   StyleProp,
@@ -76,7 +75,7 @@ export const Switch = ({value, onValueChange, style}: SwitchProps) => {
   return (
     <TouchableWithoutFeedback
       onPress={() => onValueChange(!value)}
-      hitSlop={SMALL_BUTTON_HIT_SLOP}>
+      hitSlop={SWITCH_HIT_SLOP}>
       <Animated.View style={[styles.container, animatedContainerStyles, style]}>
         <Animated.View style={[styles.ball, animatedBallStyles]} />
       </Animated.View>
@@ -99,3 +98,5 @@ const styles = StyleSheet.create({
     borderRadius: BALL_SIZE / 2,
   },
 });
+
+const SWITCH_HIT_SLOP = {top: 15, right: 15, bottom: 15, left: 15};
