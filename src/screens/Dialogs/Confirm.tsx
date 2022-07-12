@@ -5,6 +5,7 @@ import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {MainStackParamList} from '@navigation/Main';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
+import {t} from '@translations/i18n';
 import React from 'react';
 import {
   StyleProp,
@@ -25,10 +26,12 @@ export type ConfirmButton = {
   labelStyle?: StyleProp<TextStyle>;
 };
 
-export const DEFAULT_CONFIRM_YES_BUTTON: ConfirmButton = {label: 'Yes'};
+export const DEFAULT_CONFIRM_YES_BUTTON: ConfirmButton = {
+  label: t('button.yes'),
+};
 
 export const DEFAULT_CONFIRM_NO_BUTTON: ConfirmButton = {
-  label: 'No, cancel',
+  label: t('buttons.no_cancel'),
   preset: 'destructive',
 };
 
