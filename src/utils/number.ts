@@ -18,10 +18,13 @@ export const formatNumber = (input: number | string, step = 3) => {
   return figures.join('');
 };
 
-export const formatPhoneNumberForInput = (v: string, country: ICountryCode) => {
+export const formatPhoneNumberForInput = (
+  phone: string,
+  country: ICountryCode,
+) => {
   const isoCode = country.isoCode as CountryCode;
   const phoneNumberWithCountryCode = formatIncompletePhoneNumber(
-    `${country.iddCode}${v}`,
+    `${country.iddCode}${phone}`,
     isoCode,
   );
   const splitedPhoneNumber = phoneNumberWithCountryCode.split(' ');
