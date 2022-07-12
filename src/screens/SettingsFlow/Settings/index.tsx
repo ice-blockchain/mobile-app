@@ -77,7 +77,7 @@ export const Settings = memo(() => {
               renderIcon={() => (
                 <NotificationsIcon fill={COLORS.persianBlue} width={20} />
               )}
-              onPress={() => navigation.navigate('Notifications')}
+              onPress={() => navigation.navigate('NotificationSettings')}
             />
           </SectionCard>
           <SectionTitle text={t('settings.legal').toUpperCase()} />
