@@ -32,7 +32,7 @@ export function* watchUpdateDeviceSettings() {
     const mergedChange: DeepPartial<DeviceSettings> = [
       nextAction,
       ...bufferedActions,
-    ].reduce((summ, action) => merge(summ, action.payload), {});
+    ].reduce((snapshot, action) => merge(snapshot, action.payload), {});
 
     yield call(updateDeviceSettingsSaga, mergedChange);
   }
