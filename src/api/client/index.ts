@@ -46,8 +46,8 @@ export async function post<TRequest, TResponse>(
     return response.data;
   } catch (error) {
     handleServiceError(error);
+    throw error;
   }
-  return {} as TResponse;
 }
 
 export async function patch<TRequest, TResponse>(
@@ -60,8 +60,8 @@ export async function patch<TRequest, TResponse>(
     return response.data;
   } catch (error) {
     handleServiceError(error);
+    throw error;
   }
-  return {} as TResponse;
 }
 
 export async function put<TRequest, TResponse>(
@@ -74,8 +74,8 @@ export async function put<TRequest, TResponse>(
     return response.data;
   } catch (error) {
     handleServiceError(error);
+    throw error;
   }
-  return {} as TResponse;
 }
 
 export async function get<TResponse>(
@@ -87,8 +87,8 @@ export async function get<TResponse>(
     return response.data;
   } catch (error) {
     handleServiceError(error);
+    throw error;
   }
-  return {} as TResponse;
 }
 
 export async function del<TResponse>(
@@ -100,6 +100,6 @@ export async function del<TResponse>(
     return response.data;
   } catch (error) {
     handleServiceError(error);
+    throw error;
   }
-  return {} as TResponse;
 }
