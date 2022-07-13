@@ -6,6 +6,8 @@ export const userDataSelector = (state: RootState) => state.auth.userData;
 
 export const userIdSelector = (state: RootState) => state.auth.userData!.userId;
 
+export const isAuthorizedSelector = (state: RootState) => !!state.auth.userData;
+
 export const isAuthInitializedSelector = (state: RootState) =>
   state.auth.isInitialized;
 

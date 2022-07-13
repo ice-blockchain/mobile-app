@@ -11,7 +11,8 @@ import {SignUpStackParamList} from '@navigation/Auth';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {BorderedButton} from '@screens/AuthFlow/SignIn/components/BorderedButton';
 import {AuthActions} from '@store/modules/Auth/actions';
-import {userDataSelector} from '@store/modules/Auth/selectors';
+import {isAuthorizedSelector} from '@store/modules/Auth/selectors';
+import {deviceSettingsSelector} from '@store/modules/Devices/selectors';
 import {EmailIconSvg} from '@svg/EmailIcon';
 import {LogoSvg} from '@svg/Logo';
 import {MagicIconSvg} from '@svg/MagicIcon';
@@ -46,15 +47,16 @@ export const SignIn = ({navigation}: Props) => {
     useState(false);
 
   const dispatch = useDispatch();
-  const userData = useSelector(userDataSelector);
+  const isAuthorized = useSelector(isAuthorizedSelector);
+  const deviceSettings = useSelector(deviceSettingsSelector);
 
   const phoneNumber = `${selectedCountry.iddCode}${phone}`;
 
   useEffect(() => {
-    if (userData) {
+    if (isAuthorized && deviceSettings) {
       navigation.navigate('ClaimNickname');
     }
-  }, [navigation, userData]);
+  }, [navigation, isAuthorized, deviceSettings]);
 
   const onSignIn = async () => {
     Keyboard.dismiss();
