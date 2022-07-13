@@ -16,12 +16,15 @@ const UPDATE_SETTINGS = createAction('SET_SETTINGS', {
   FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
-const SET_DEVICE_UNIQUE_ID = createAction('SET_DEVICE_UNIQUE_ID', {
-  STATE: (deviceUniqueId: string) => ({deviceUniqueId}),
+const INIT_DEVICE = createAction('INIT_DEVICE', {
+  STATE: (deviceUniqueId: string, settings: DeviceSettings | null) => ({
+    deviceUniqueId,
+    settings,
+  }),
 });
 
 export const DeviceActions = Object.freeze({
   GET_SETTINGS,
   UPDATE_SETTINGS,
-  SET_DEVICE_UNIQUE_ID,
+  INIT_DEVICE,
 });

@@ -166,7 +166,7 @@ const MainTabs = () => (
   </Tabs.Navigator>
 );
 
-export function Main() {
+export function MainNavigator() {
   return (
     <MainStack.Navigator screenOptions={screenOptions}>
       <MainStack.Screen name="Main" component={MainTabs} />

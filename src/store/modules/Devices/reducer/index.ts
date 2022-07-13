@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {DeviceSettings} from '@api/devices/types';
+import {AuthActions} from '@store/modules/Auth/actions';
 import {DeviceActions} from '@store/modules/Devices/actions';
 import produce from 'immer';
 import {merge} from 'lodash';
@@ -14,10 +15,11 @@ export interface State {
 
 type Actions = ReturnType<
   | typeof DeviceActions.GET_SETTINGS.SUCCESS.create
-  | typeof DeviceActions.SET_DEVICE_UNIQUE_ID.STATE.create
+  | typeof DeviceActions.INIT_DEVICE.STATE.create
   | typeof DeviceActions.UPDATE_SETTINGS.START.create
   | typeof DeviceActions.UPDATE_SETTINGS.SUCCESS.create
   | typeof DeviceActions.UPDATE_SETTINGS.FAILED.create
+  | typeof AuthActions.SIGN_OUT.SUCCESS.create
 >;
 
 const INITIAL_STATE: State = {
@@ -34,8 +36,10 @@ export function devicesReducer(state = INITIAL_STATE, action: Actions): State {
         draft.rollBackSettings = action.payload;
         draft.settings = action.payload;
         break;
-      case DeviceActions.SET_DEVICE_UNIQUE_ID.STATE.type:
+      case DeviceActions.INIT_DEVICE.STATE.type:
         draft.deviceUniqueId = action.payload.deviceUniqueId;
+        draft.rollBackSettings = action.payload.settings;
+        draft.settings = action.payload.settings;
         draft.isInitialized = true;
         break;
       case DeviceActions.UPDATE_SETTINGS.SUCCESS.type:
@@ -49,6 +53,12 @@ export function devicesReducer(state = INITIAL_STATE, action: Actions): State {
       case DeviceActions.UPDATE_SETTINGS.FAILED.type:
         draft.settings = state.rollBackSettings;
         break;
+      case AuthActions.SIGN_OUT.SUCCESS.type:
+        return {
+          ...INITIAL_STATE,
+          deviceUniqueId: state.deviceUniqueId,
+          isInitialized: true,
+        };
     }
   });
 }
