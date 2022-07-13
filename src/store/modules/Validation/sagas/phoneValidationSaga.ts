@@ -3,16 +3,14 @@
 import {Api} from '@api/index';
 import {ValidationActions} from '@store/modules/Validation/actions';
 import {sha256} from 'react-native-sha256';
-import {put} from 'redux-saga/effects';
+import {call, put} from 'redux-saga/effects';
 
 const actionCreator = ValidationActions.PHONE_VALIDATION.START.create;
 
-export async function* phoneValidationSaga(
-  action: ReturnType<typeof actionCreator>,
-) {
+export function* phoneValidationSaga(action: ReturnType<typeof actionCreator>) {
   try {
     const {userId, phoneNumber, validationCode} = action.payload;
-    const phoneNumberHash = await sha256(phoneNumber);
+    const phoneNumberHash: string = yield call(sha256, phoneNumber);
     yield Api.validations.phoneValidation({
       userId,
       phoneNumber,
