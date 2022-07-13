@@ -12,9 +12,6 @@ function onRejected(instance: AxiosInstance) {
     };
     isAxiosError: boolean;
   }) => {
-    const errorData =
-      error?.response?.data || error.message || error?.response?.statusText;
-
     switch (error.response?.status) {
       case 401:
         {
@@ -42,7 +39,7 @@ function onRejected(instance: AxiosInstance) {
         break;
     }
 
-    return Promise.reject(errorData || error);
+    return Promise.reject(error);
   };
 }
 
