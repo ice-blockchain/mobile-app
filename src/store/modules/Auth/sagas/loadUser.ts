@@ -7,12 +7,11 @@ import {put} from 'redux-saga/effects';
 
 export function* loadUserSaga() {
   try {
-    const isLoggedIn: boolean = yield magic.user.isLoggedIn();
-    if (isLoggedIn) {
-      const [token, metadata]: [string, MagicUserMetadata] = yield Promise.all([
-        magic.user.getIdToken(),
-        magic.user.getMetadata(),
-      ]);
+    const [token, metadata]: [string, MagicUserMetadata] = yield Promise.all([
+      magic.user.getIdToken(),
+      magic.user.getMetadata(),
+    ]);
+    if (token) {
       yield put(
         AuthActions.LOAD_USER.STATE.create(token, {
           userId: metadata.issuer ?? '',

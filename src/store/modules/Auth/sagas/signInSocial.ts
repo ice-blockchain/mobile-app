@@ -32,6 +32,7 @@ export function* signInSocialSaga(action: ReturnType<typeof actionCreator>) {
     const result = {
       userData,
       token: socialLoginInfo.magic.idToken,
+      error: null,
     };
 
     yield put(AuthActions.SIGN_IN_SOCIAL.SUCCESS.create(result));

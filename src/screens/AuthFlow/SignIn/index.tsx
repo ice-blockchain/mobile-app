@@ -12,7 +12,11 @@ import {SignUpStackParamList} from '@navigation/Auth';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {isAuthorizedSelector} from '@store/modules/Auth/selectors';
-import {deviceSettingsSelector} from '@store/modules/Devices/selectors';
+import {DeviceActions} from '@store/modules/Devices/actions';
+import {
+  deviceLocationSelector,
+  deviceSettingsSelector,
+} from '@store/modules/Devices/selectors';
 import {EmailIconSvg} from '@svg/EmailIcon';
 import {LogoSvg} from '@svg/Logo';
 import {MagicIconSvg} from '@svg/MagicIcon';
@@ -49,14 +53,33 @@ export const SignIn = ({navigation}: Props) => {
   const dispatch = useDispatch();
   const isAuthorized = useSelector(isAuthorizedSelector);
   const deviceSettings = useSelector(deviceSettingsSelector);
+  const location = useSelector(deviceLocationSelector);
 
   const phoneNumber = `${selectedCountry.iddCode}${phone}`;
+
+  useEffect(() => {
+    if (inputType === 'phone') {
+      dispatch(DeviceActions.UPDATE_DEVICE_LOCATION.START.create());
+    }
+  }, [inputType, dispatch]);
 
   useEffect(() => {
     if (isAuthorized && deviceSettings) {
       navigation.navigate('ClaimNickname');
     }
   }, [navigation, isAuthorized, deviceSettings]);
+
+  useEffect(() => {
+    if (location) {
+      const countries = countriesCode;
+      const currentCountry = countries.find(country => {
+        return country.isoCode === location.country;
+      });
+      if (currentCountry) {
+        setSelectedCountry(currentCountry);
+      }
+    }
+  }, [location]);
 
   const onSignIn = async () => {
     Keyboard.dismiss();

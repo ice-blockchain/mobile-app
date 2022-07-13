@@ -26,6 +26,7 @@ export function* signInPhoneSaga(action: ReturnType<typeof actionCreator>) {
         userId: metadata.issuer,
       },
       token,
+      error: null,
     };
 
     yield put(AuthActions.SIGN_IN_PHONE.SUCCESS.create(result));

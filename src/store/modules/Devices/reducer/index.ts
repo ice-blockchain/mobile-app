@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {DeviceSettings} from '@api/devices/types';
+import {DeviceLocation, DeviceSettings} from '@api/devices/types';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {DeviceActions} from '@store/modules/Devices/actions';
 import produce from 'immer';
@@ -11,6 +11,7 @@ export interface State {
   rollBackSettings: DeviceSettings | null;
   deviceUniqueId: string | null;
   isInitialized: boolean;
+  location: DeviceLocation | null;
 }
 
 type Actions = ReturnType<
@@ -20,6 +21,7 @@ type Actions = ReturnType<
   | typeof DeviceActions.UPDATE_SETTINGS.SUCCESS.create
   | typeof DeviceActions.UPDATE_SETTINGS.FAILED.create
   | typeof AuthActions.SIGN_OUT.SUCCESS.create
+  | typeof DeviceActions.UPDATE_DEVICE_LOCATION.SUCCESS.create
 >;
 
 const INITIAL_STATE: State = {
@@ -27,6 +29,7 @@ const INITIAL_STATE: State = {
   rollBackSettings: null,
   deviceUniqueId: null,
   isInitialized: false,
+  location: null,
 };
 
 export function devicesReducer(state = INITIAL_STATE, action: Actions): State {
@@ -52,6 +55,9 @@ export function devicesReducer(state = INITIAL_STATE, action: Actions): State {
         break;
       case DeviceActions.UPDATE_SETTINGS.FAILED.type:
         draft.settings = state.rollBackSettings;
+        break;
+      case DeviceActions.UPDATE_DEVICE_LOCATION.SUCCESS.type:
+        draft.location = action.payload;
         break;
       case AuthActions.SIGN_OUT.SUCCESS.type:
         return {

@@ -60,6 +60,6 @@ export interface DeviceMetadata {
 }
 
 export interface DeviceId {
-  userId: string;
-  deviceUniqueId: string;
+  userId: string | null;
+  deviceUniqueId: string | null;
 }

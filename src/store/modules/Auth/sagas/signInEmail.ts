@@ -22,6 +22,7 @@ export function* signInEmailSaga(action: ReturnType<typeof actionCreator>) {
     const result = {
       userData: {email, phoneNumber: null, userId: metadata.issuer},
       token,
+      error: null,
     };
 
     yield put(AuthActions.SIGN_IN_EMAIL.SUCCESS.create(result));

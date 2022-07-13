@@ -11,6 +11,7 @@ export interface AuthState {
     email?: string | null;
     phoneNumber: string | null;
   } | null;
+  error: string | null;
   token: string | null;
   isInitialized: boolean;
   isWelcomeSeen: boolean;
@@ -32,6 +33,7 @@ type Actions = ReturnType<
 const INITIAL_STATE: AuthState = {
   userData: null,
   token: null,
+  error: null,
   isInitialized: false,
   isWelcomeSeen: false,
   phoneVerificationStep: 'phone',
@@ -45,6 +47,7 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
         draft.userData = action.payload.userData ?? null;
         draft.token = action.payload.token ?? null;
         draft.isInitialized = true;
+        draft.error = action.payload.error ?? null;
         break;
       case AuthActions.STORE_WELCOME_SEEN.STATE.type:
         draft.isWelcomeSeen = true;
