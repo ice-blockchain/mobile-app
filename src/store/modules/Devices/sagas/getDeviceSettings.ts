@@ -7,7 +7,6 @@ import {userIdSelector} from '@store/modules/Auth/selectors';
 import {DeviceActions} from '@store/modules/Devices/actions';
 import {deviceUniqueIdSelector} from '@store/modules/Devices/selectors';
 import i18n from '@translations/i18n';
-import axios from 'axios';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
 export function* getDeviceSettingsSaga() {
@@ -43,12 +42,7 @@ export function* getOrCreateDeviceSettings({
       i18n.locale = settings.language;
     }
   } catch (error) {
-    if (
-      axios.isAxiosError(error) &&
-      error.response?.status === 404 &&
-      isApiError(error.response?.data) &&
-      error.response?.data.code === 'DEVICE_SETTINGS_NOT_FOUND'
-    ) {
+    if (isApiError(error, 404, 'DEVICE_SETTINGS_NOT_FOUND')) {
       settings = yield call(
         Api.devices.createUserDeviceSettings,
         {userId, deviceUniqueId},
