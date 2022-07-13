@@ -3,13 +3,16 @@
 import {CommonInput} from '@components/CommonInput';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {ValidationActions} from '@store/modules/Validation/actions';
+import {refUsernameValidationErrorSelector} from '@store/modules/Validation/selectors';
 import {InfoIconSvg} from '@svg/InfoIcon';
 import {TicketIconSvg} from '@svg/Ticket';
 import {TipTriangleIconSvg} from '@svg/TipTriangle';
 import {WhoInvitedYouSvg} from '@svg/WhoInvitedYou';
 import {translate} from '@translations/i18n';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
 import {font, rem, screenHeight} from 'rn-units';
 
 interface WhoInvitedYouProps {
@@ -27,12 +30,30 @@ export const WhoInvitedYou = ({
   onSkip,
 }: WhoInvitedYouProps) => {
   const [isTipVisible, setTipVisibility] = useState(false);
+  const [refUsernameError, setRefUsernameError] = useState('');
+  const dispatch = useDispatch();
+
+  const refError = useSelector(refUsernameValidationErrorSelector);
+
+  useEffect(() => {
+    if (refError) {
+      setRefUsernameError(refError);
+    }
+  }, [refError]);
+
+  const wipeErrors = () => {
+    dispatch(ValidationActions.RESET_VALIDATION_ERRORS.STATE.create());
+    setRefUsernameError('');
+  };
+
   const showTip = () => {
     setTipVisibility(true);
   };
+
   const hideTip = () => {
     setTipVisibility(false);
   };
+
   return (
     <View style={styles.container}>
       <WhoInvitedYouSvg width={h} height={w} />
@@ -48,6 +69,12 @@ export const WhoInvitedYou = ({
           onChangeText={onInputChange}
           icon={<TicketIconSvg />}
           containerStyle={styles.input}
+          errorText={refUsernameError}
+          onFocus={() => {
+            if (refUsernameError) {
+              wipeErrors();
+            }
+          }}
         />
 
         <View style={styles.dontHaveCodeContainer}>

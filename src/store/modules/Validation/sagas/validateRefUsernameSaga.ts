@@ -18,17 +18,20 @@ export function* validateRefUsernameSaga(
       );
     } else {
       yield Api.validations.validateUsername({username: refUsername});
+      yield put(
+        ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.create(refUsername),
+      );
     }
   } catch (error) {
     if (isApiError(error, 404, 'USER_NOT_FOUND')) {
       yield put(
-        ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.create(refUsername),
+        ValidationActions.REF_USERNAME_VALIDATION.FAILED.create(
+          'Nickname not found',
+        ),
       );
     } else {
       yield put(
-        ValidationActions.REF_USERNAME_VALIDATION.FAILED.create(
-          'SOME ERROR validateRefUsernameSaga',
-        ),
+        ValidationActions.REF_USERNAME_VALIDATION.FAILED.create('SOME ERROR'),
       );
     }
   }
