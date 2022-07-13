@@ -30,12 +30,12 @@ export const NotificationSettings = memo(() => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(DeviceActions.GET_SETTINGS.START.create());
+    dispatch(DeviceActions.GET_OR_CREATE_SETTINGS.START.create());
   }, [dispatch]);
 
   const settings = useSelector(deviceSettingsSelector);
   const isLoading = useSelector(
-    isLoadingSelector.bind(null, DeviceActions.GET_SETTINGS),
+    isLoadingSelector.bind(null, DeviceActions.GET_OR_CREATE_SETTINGS),
   );
 
   return (

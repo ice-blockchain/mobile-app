@@ -14,7 +14,7 @@ export interface State {
 }
 
 type Actions = ReturnType<
-  | typeof DeviceActions.GET_SETTINGS.SUCCESS.create
+  | typeof DeviceActions.GET_OR_CREATE_SETTINGS.SUCCESS.create
   | typeof DeviceActions.INIT_DEVICE.STATE.create
   | typeof DeviceActions.UPDATE_SETTINGS.START.create
   | typeof DeviceActions.UPDATE_SETTINGS.SUCCESS.create
@@ -32,7 +32,7 @@ const INITIAL_STATE: State = {
 export function devicesReducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
-      case DeviceActions.GET_SETTINGS.SUCCESS.type:
+      case DeviceActions.GET_OR_CREATE_SETTINGS.SUCCESS.type:
         draft.rollBackSettings = action.payload;
         draft.settings = action.payload;
         break;
