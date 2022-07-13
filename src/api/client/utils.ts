@@ -1,12 +1,15 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {ApiError} from '@api/client/types';
+import axios from 'axios';
 
-export const isApiError = (error: unknown): error is ApiError => {
+export const isApiError = (
+  error: unknown,
+  expectedStatus?: number,
+  expectedCode?: string,
+): boolean => {
   return (
-    error !== null &&
-    typeof error === 'object' &&
-    'code' in error &&
-    'error' in error
+    axios.isAxiosError(error) &&
+    (!expectedStatus || error.response?.status === expectedStatus) &&
+    (!expectedCode || error.response?.data.code === expectedCode)
   );
 };
