@@ -16,10 +16,8 @@ export function* getDeviceSettingsSaga() {
     );
     const deviceUniqueId: ReturnType<typeof deviceUniqueIdSelector> =
       yield select(deviceUniqueIdSelector);
-    const settings: SagaReturnType<typeof getDeviceSettings> = yield call(
-      getDeviceSettings,
-      {userId, deviceUniqueId},
-    );
+    const settings: SagaReturnType<typeof getOrCreateDeviceSettings> =
+      yield call(getOrCreateDeviceSettings, {userId, deviceUniqueId});
     yield put(DeviceActions.GET_SETTINGS.SUCCESS.create(settings));
   } catch (error) {
     //TODO:: get error message
@@ -27,7 +25,7 @@ export function* getDeviceSettingsSaga() {
   }
 }
 
-export function* getDeviceSettings({
+export function* getOrCreateDeviceSettings({
   userId,
   deviceUniqueId,
 }: {

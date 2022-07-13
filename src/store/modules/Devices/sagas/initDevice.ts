@@ -6,7 +6,7 @@ import {
   userIdSelector,
 } from '@store/modules/Auth/selectors';
 import {DeviceActions} from '@store/modules/Devices/actions';
-import {getDeviceSettings} from '@store/modules/Devices/sagas/getDeviceSettings';
+import {getOrCreateDeviceSettings} from '@store/modules/Devices/sagas/getDeviceSettings';
 import {syncUniqueId} from 'react-native-device-info';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
@@ -24,7 +24,10 @@ export function* initDeviceSaga() {
       const userId: ReturnType<typeof userIdSelector> = yield select(
         userIdSelector,
       );
-      settings = yield call(getDeviceSettings, {userId, deviceUniqueId});
+      settings = yield call(getOrCreateDeviceSettings, {
+        userId,
+        deviceUniqueId,
+      });
     }
 
     yield put(DeviceActions.INIT_DEVICE.STATE.create(deviceUniqueId, settings));
