@@ -3,5 +3,4 @@
 export type ApiError = {
   code: string;
   error: string;
-  data?: {[key: string]: unknown};
 };
