@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {DeviceSettings} from '@api/devices/types';
+import {DeviceLocation, DeviceSettings} from '@api/devices/types';
 import {createAction} from '@store/utils/actions/createAction';
 import {DeepPartial} from 'redux';
 
@@ -23,8 +23,15 @@ const INIT_DEVICE = createAction('INIT_DEVICE', {
   }),
 });
 
+const UPDATE_DEVICE_LOCATION = createAction('UPDATE_DEVICE_LOCATION', {
+  START: (deviceUniqueId?: string) => ({deviceUniqueId}),
+  SUCCESS: (payload: DeviceLocation) => payload,
+  FAILED: (errorMessage: string) => ({errorMessage}),
+});
+
 export const DeviceActions = Object.freeze({
   GET_OR_CREATE_SETTINGS,
   UPDATE_SETTINGS,
   INIT_DEVICE,
+  UPDATE_DEVICE_LOCATION,
 });

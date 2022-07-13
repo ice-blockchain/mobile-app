@@ -6,6 +6,7 @@ import {createAction} from '@store/utils/actions/createAction';
 type SignInResult = {
   userData: {phoneNumber: string | null; email: string | null; userId: string};
   token: string;
+  error: string | null;
 };
 
 const STORE_WELCOME_SEEN = createAction('STORE_WELCOME_SEEN', {
@@ -20,7 +21,26 @@ const LOAD_USER = createAction('LOAD_USER', {
       phoneNumber: string | null;
       userId: string;
     },
-  ) => ({token, userData}),
+    error?: string | null,
+  ) => ({token, userData, error}),
+});
+
+const CREATE_USER = createAction('CREATE_USER', {
+  START: (
+    username: string,
+    email?: string,
+    phoneNumber?: string,
+    referredBy?: string,
+  ) => ({
+    username,
+    email,
+    phoneNumber,
+    referredBy,
+  }),
+  SUCCESS: true,
+  FAILED: (errorMessage: string) => ({
+    errorMessage,
+  }),
 });
 
 const SIGN_OUT = createAction('SIGN_OUT', {
@@ -77,4 +97,5 @@ export const AuthActions = Object.freeze({
   SET_PHONE_NUMBER_VERIFIED,
   SET_CODE_VERIFIED,
   DELETE_ACCOUNT,
+  CREATE_USER,
 });

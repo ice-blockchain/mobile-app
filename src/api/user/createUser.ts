@@ -4,11 +4,11 @@ import {post} from '@api/client';
 import {UserProfile} from '@api/user/types';
 
 interface Params {
+  username: string;
   email?: string;
   phoneNumber?: string;
   phoneNumberHash?: string;
-  username: string;
-  referredBy: string;
+  referredBy?: string;
 }
 
 /**

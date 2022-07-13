@@ -10,3 +10,6 @@ export const deviceUniqueIdSelector = (state: RootState) =>
 
 export const isDevicesInitializedSelector = (state: RootState) =>
   state.devices.isInitialized;
+
+export const deviceLocationSelector = (state: RootState) =>
+  state.devices.location;
