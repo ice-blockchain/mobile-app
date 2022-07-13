@@ -9,7 +9,7 @@ import {deviceUniqueIdSelector} from '@store/modules/Devices/selectors';
 import i18n from '@translations/i18n';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
-export function* getDeviceSettingsSaga() {
+export function* getOrCreateDeviceSettingsSaga() {
   try {
     const userId: ReturnType<typeof userIdSelector> = yield select(
       userIdSelector,
@@ -18,10 +18,12 @@ export function* getDeviceSettingsSaga() {
       yield select(deviceUniqueIdSelector);
     const settings: SagaReturnType<typeof getOrCreateDeviceSettings> =
       yield call(getOrCreateDeviceSettings, {userId, deviceUniqueId});
-    yield put(DeviceActions.GET_SETTINGS.SUCCESS.create(settings));
+    yield put(DeviceActions.GET_OR_CREATE_SETTINGS.SUCCESS.create(settings));
   } catch (error) {
     //TODO:: get error message
-    yield put(DeviceActions.GET_SETTINGS.FAILED.create('error message here'));
+    yield put(
+      DeviceActions.GET_OR_CREATE_SETTINGS.FAILED.create('error message here'),
+    );
   }
 }
 

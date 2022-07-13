@@ -4,7 +4,7 @@ import {DeviceSettings} from '@api/devices/types';
 import {createAction} from '@store/utils/actions/createAction';
 import {DeepPartial} from 'redux';
 
-const GET_SETTINGS = createAction('GET_SETTINGS', {
+const GET_OR_CREATE_SETTINGS = createAction('GET_OR_CREATE_SETTINGS', {
   START: () => {},
   SUCCESS: (settings: DeviceSettings) => settings,
   FAILED: (errorMessage: string) => ({errorMessage}),
@@ -24,7 +24,7 @@ const INIT_DEVICE = createAction('INIT_DEVICE', {
 });
 
 export const DeviceActions = Object.freeze({
-  GET_SETTINGS,
+  GET_OR_CREATE_SETTINGS,
   UPDATE_SETTINGS,
   INIT_DEVICE,
 });
