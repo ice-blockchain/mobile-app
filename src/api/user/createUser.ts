@@ -5,10 +5,10 @@ import {UserProfile} from '@api/user/types';
 
 interface Params {
   username: string;
-  email?: string;
-  phoneNumber?: string;
-  phoneNumberHash?: string;
-  referredBy?: string;
+  email?: string | null;
+  phoneNumber?: string | null;
+  phoneNumberHash?: string | null;
+  referredBy?: string | null;
 }
 
 /**
