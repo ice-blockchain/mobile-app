@@ -9,9 +9,9 @@ import {
 } from '@store/modules/Validation/selectors';
 import {isEmpty} from 'lodash';
 import {sha256} from 'react-native-sha256';
-import {put, select} from 'redux-saga/effects';
+import {call, put, select} from 'redux-saga/effects';
 
-export async function* createUserSaga() {
+export function* createUserSaga() {
   try {
     const userData: ReturnType<typeof userDataSelector> = yield select(
       userDataSelector,
@@ -29,7 +29,7 @@ export async function* createUserSaga() {
     console.log(refUsername);
 
     let phoneNumber = null;
-    let phoneNumberHash = null;
+    let phoneNumberHash: string | null = null;
     let email = null;
 
     if (userData) {
@@ -39,7 +39,7 @@ export async function* createUserSaga() {
       email = !isEmpty(userData.email) ? userData.email : null;
 
       if (phoneNumber) {
-        phoneNumberHash = await sha256(phoneNumber);
+        phoneNumberHash = yield call(sha256, phoneNumber);
       }
     }
 
