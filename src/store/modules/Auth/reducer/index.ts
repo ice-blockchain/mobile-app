@@ -7,9 +7,10 @@ import {persistReducer} from 'redux-persist';
 
 export interface AuthState {
   userData: {
+    phoneNumber: string | null;
     userId: string;
     email?: string | null;
-    phoneNumber: string | null;
+    username?: string | null;
   } | null;
   error: string | null;
   token: string | null;

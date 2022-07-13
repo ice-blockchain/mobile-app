@@ -29,6 +29,7 @@ export function* signInSocialSaga(action: ReturnType<typeof actionCreator>) {
       phoneNumber: phoneNumber ?? null,
       userId: socialLoginInfo.magic.userMetadata.issuer,
     };
+
     const result = {
       userData,
       token: socialLoginInfo.magic.idToken,
