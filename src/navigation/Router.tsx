@@ -7,8 +7,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {useAppLoadedDispatcher} from '@store/modules/AppCommon/hooks/useAppLoadedDispatcher';
 import {useAppStateListener} from '@store/modules/AppCommon/hooks/useAppStateListener';
 import {
-  isAuthorizedSelector,
   isWelcomeSeenSelector,
+  userDataSelector,
 } from '@store/modules/Auth/selectors';
 import React from 'react';
 import {LogBox} from 'react-native';
@@ -29,12 +29,12 @@ import {MainNavigator} from './Main';
 function ActiveNavigator() {
   const {isAppInitialized} = useIsAppInitialized();
   const isWelcomeSeen = useSelector(isWelcomeSeenSelector);
-  const isAuthorized = useSelector(isAuthorizedSelector);
+  const userData = useSelector(userDataSelector);
 
   if (!isAppInitialized) {
     return <Initialization />;
   }
-  if (isAuthorized && isWelcomeSeen) {
+  if (userData && userData.username && isWelcomeSeen) {
     return <MainNavigator />;
   }
   return <AuthNavigator />;
