@@ -26,17 +26,7 @@ const LOAD_USER = createAction('LOAD_USER', {
 });
 
 const CREATE_USER = createAction('CREATE_USER', {
-  START: (
-    username: string,
-    email?: string,
-    phoneNumber?: string,
-    referredBy?: string,
-  ) => ({
-    username,
-    email,
-    phoneNumber,
-    referredBy,
-  }),
+  START: () => {},
   SUCCESS: true,
   FAILED: (errorMessage: string) => ({
     errorMessage,

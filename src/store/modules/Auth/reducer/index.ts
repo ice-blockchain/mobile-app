@@ -18,6 +18,7 @@ export interface AuthState {
   isWelcomeSeen: boolean;
   phoneVerificationStep: string;
   isPhoneNumberVerified: boolean;
+  profile: null;
 }
 
 type Actions = ReturnType<
@@ -29,6 +30,8 @@ type Actions = ReturnType<
   | typeof AuthActions.SIGN_IN_PHONE.SUCCESS.create
   | typeof AuthActions.SIGN_IN_SOCIAL.SUCCESS.create
   | typeof AuthActions.LOAD_USER.STATE.create
+  | typeof AuthActions.CREATE_USER.SUCCESS.create
+  | typeof AuthActions.CREATE_USER.FAILED.create
 >;
 
 const INITIAL_STATE: AuthState = {
@@ -39,6 +42,7 @@ const INITIAL_STATE: AuthState = {
   isWelcomeSeen: false,
   phoneVerificationStep: 'phone',
   isPhoneNumberVerified: false,
+  profile: null,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): AuthState {
@@ -67,6 +71,10 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
         break;
       case AuthActions.SET_CODE_VERIFIED.STATE.type:
         draft.isPhoneNumberVerified = true;
+        break;
+      case AuthActions.CREATE_USER.SUCCESS.type:
+        console.log(action.payload);
+        draft.profile = action.payload ?? null;
         break;
       case AuthActions.SIGN_OUT.SUCCESS.type: {
         return {

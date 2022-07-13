@@ -31,7 +31,7 @@ type Props = {
   navigation: NativeStackNavigationProp<SignUpStackParamList, 'SignIn'>;
 };
 
-export const ClaimNickname = ({navigation}: Props) => {
+export const ClaimNickname = ({}: Props) => {
   const pagerViewRef = useRef<PagerView>(null);
   const [myNickname, setMyNickname] = useState('');
   const [invitedNickname, setInvitedNickname] = useState('');
@@ -69,16 +69,6 @@ export const ClaimNickname = ({navigation}: Props) => {
           ValidationActions.USERNAME_VALIDATION.START.create(myNickname),
         );
       }
-    } else {
-      const isValidRefname = isValidName(invitedNickname);
-      if (isValidRefname) {
-        await dispatch(
-          ValidationActions.REF_USERNAME_VALIDATION.START.create(
-            invitedNickname,
-            false,
-          ),
-        );
-      }
     }
   };
 
@@ -98,9 +88,18 @@ export const ClaimNickname = ({navigation}: Props) => {
     setMyNickname(v);
   };
 
-  const onComplete = () => {
-    navigation.navigate('Welcome');
+  const onComplete = async () => {
+    const isValidRefname = isValidName(invitedNickname);
+    if (isValidRefname) {
+      await dispatch(
+        ValidationActions.REF_USERNAME_VALIDATION.START.create(
+          invitedNickname,
+          false,
+        ),
+      );
+    }
   };
+
   const isNextButtonActive =
     (currentPage === 0 && myNickname.length > 0) ||
     (currentPage === 1 && invitedNickname.length > 0);

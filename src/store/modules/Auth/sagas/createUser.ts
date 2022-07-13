@@ -2,27 +2,53 @@
 
 import {Api} from '@api/index';
 import {AuthActions} from '@store/modules/Auth/actions';
+import {userDataSelector} from '@store/modules/Auth/selectors';
+import {
+  refUsernameSelector,
+  usernameSelector,
+} from '@store/modules/Validation/selectors';
+import {isEmpty} from 'lodash';
 import {sha256} from 'react-native-sha256';
-import {put} from 'redux-saga/effects';
+import {put, select} from 'redux-saga/effects';
 
-const actionCreator = AuthActions.CREATE_USER.START.create;
-
-export async function* createUserSaga(
-  action: ReturnType<typeof actionCreator>,
-) {
+export async function* createUserSaga() {
   try {
-    const {username, phoneNumber, referredBy, email} = action.payload;
-    let phoneNumberHash;
-    if (phoneNumber) {
-      phoneNumberHash = await sha256(phoneNumber);
+    const userData: ReturnType<typeof userDataSelector> = yield select(
+      userDataSelector,
+    );
+    console.log(userData);
+
+    const username: ReturnType<typeof usernameSelector> = yield select(
+      usernameSelector,
+    );
+    console.log(username);
+
+    const refUsername: ReturnType<typeof refUsernameSelector> = yield select(
+      refUsernameSelector,
+    );
+    console.log(refUsername);
+
+    let phoneNumber = null;
+    let phoneNumberHash = null;
+    let email = null;
+
+    if (userData) {
+      phoneNumber = !isEmpty(userData.phoneNumber)
+        ? userData.phoneNumber
+        : null;
+      email = !isEmpty(userData.email) ? userData.email : null;
+
+      if (phoneNumber) {
+        phoneNumberHash = await sha256(phoneNumber);
+      }
     }
 
     yield Api.user.createUser({
-      username,
-      phoneNumber,
-      phoneNumberHash,
-      referredBy,
-      email,
+      username: username || '',
+      email: email,
+      phoneNumber: phoneNumber,
+      phoneNumberHash: phoneNumberHash,
+      referredBy: refUsername,
     });
     yield put(AuthActions.CREATE_USER.SUCCESS.create());
   } catch (error) {

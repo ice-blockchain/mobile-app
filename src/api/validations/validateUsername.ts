@@ -7,5 +7,5 @@ interface Params {
 }
 
 export function validateUsername({username}: Params) {
-  return get(`/user-views/${username}`);
+  return get(`/user-views/username?username=${username}`);
 }
