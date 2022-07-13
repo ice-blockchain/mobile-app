@@ -33,8 +33,13 @@ const PHONE_VALIDATION = createAction('PHONE_VALIDATION', {
   }),
 });
 
+const RESET_VALIDATION_ERRORS = createAction('RESET_VALIDATION_ERRORS', {
+  STATE: () => {},
+});
+
 export const ValidationActions = Object.freeze({
   USERNAME_VALIDATION,
   REF_USERNAME_VALIDATION,
   PHONE_VALIDATION,
+  RESET_VALIDATION_ERRORS,
 });

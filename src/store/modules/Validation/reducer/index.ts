@@ -20,6 +20,7 @@ type Actions = ReturnType<
   | typeof ValidationActions.USERNAME_VALIDATION.FAILED.create
   | typeof ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.create
   | typeof ValidationActions.REF_USERNAME_VALIDATION.FAILED.create
+  | typeof ValidationActions.RESET_VALIDATION_ERRORS.STATE.create
   | typeof AuthActions.SIGN_OUT.SUCCESS.create
 >;
 
@@ -47,6 +48,10 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.refUsername = isEmpty(action.payload.refUsername)
           ? null
           : action.payload.refUsername;
+        break;
+      case ValidationActions.RESET_VALIDATION_ERRORS.STATE.type:
+        draft.usernameValidationError = null;
+        draft.refUsernameValidationError = null;
         break;
       case ValidationActions.REF_USERNAME_VALIDATION.FAILED.type:
         draft.refUsernameValidationError = action.payload.errorMessage;

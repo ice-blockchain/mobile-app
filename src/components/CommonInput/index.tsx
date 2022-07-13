@@ -12,7 +12,7 @@ import {
   View,
 } from 'react-native';
 import {ViewStyle} from 'react-native';
-import {font, rem} from 'rn-units';
+import {font, isAndroid, rem} from 'rn-units';
 
 interface CommonInputProps extends TextInputProps {
   icon?: ReactNode;
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     borderRadius: rem(13),
     borderWidth: rem(1.5),
     borderColor: COLORS.greyBorder,
-    minHeight: rem(46),
+    minHeight: rem(56),
   },
   input: {
     paddingLeft: rem(6),
@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
     fontSize: font(16),
     lineHeight: rem(19),
     fontFamily: FONTS.primary.regular,
+    height: rem(36),
   },
   inputError: {
     borderColor: COLORS.error,
@@ -75,6 +76,7 @@ const styles = StyleSheet.create({
     fontSize: font(11),
     paddingLeft: rem(6),
     fontFamily: FONTS.primary.regular,
+    marginBottom: isAndroid ? rem(6) : 0,
   },
   inputWrapper: {
     flex: 1,
