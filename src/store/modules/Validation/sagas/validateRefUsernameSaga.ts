@@ -2,8 +2,9 @@
 
 import {isApiError} from '@api/client/utils';
 import {Api} from '@api/index';
+import {UserProfile} from '@api/user/types';
 import {ValidationActions} from '@store/modules/Validation/actions';
-import {put} from 'redux-saga/effects';
+import {call, put} from 'redux-saga/effects';
 
 const actionCreator = ValidationActions.REF_USERNAME_VALIDATION.START.create;
 
@@ -13,13 +14,13 @@ export function* validateRefUsernameSaga(
   const {refUsername, skipValidation} = action.payload;
   try {
     if (skipValidation) {
-      yield put(
-        ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.create(refUsername),
-      );
+      yield put(ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.create(null));
     } else {
-      yield Api.validations.validateUsername({username: refUsername});
+      let refUser: UserProfile = yield call(Api.validations.validateUsername, {
+        username: refUsername,
+      });
       yield put(
-        ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.create(refUsername),
+        ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.create(refUser),
       );
     }
   } catch (error) {

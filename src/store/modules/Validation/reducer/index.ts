@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {UserProfile} from '@api/user/types';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {ValidationActions} from '@store/modules/Validation/actions';
@@ -10,7 +11,7 @@ import {persistReducer} from 'redux-persist';
 export interface State {
   isUsernameValid: boolean | null;
   username: string | null;
-  refUsername: string | null;
+  refUser: UserProfile | null;
   usernameValidationError: string | null;
   refUsernameValidationError: string | null;
 }
@@ -27,7 +28,7 @@ type Actions = ReturnType<
 const INITIAL_STATE: State = {
   isUsernameValid: null,
   username: null,
-  refUsername: null,
+  refUser: null,
   usernameValidationError: null,
   refUsernameValidationError: null,
 };
@@ -45,9 +46,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.usernameValidationError = action.payload.errorMessage;
         break;
       case ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.type:
-        draft.refUsername = isEmpty(action.payload.refUsername)
-          ? null
-          : action.payload.refUsername;
+        draft.refUser = action.payload.refUser;
         break;
       case ValidationActions.RESET_VALIDATION_ERRORS.STATE.type:
         draft.usernameValidationError = null;

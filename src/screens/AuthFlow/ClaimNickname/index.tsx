@@ -61,19 +61,19 @@ export const ClaimNickname = ({}: Props) => {
     return true;
   };
 
-  const onNextPress = async () => {
+  const onNextPress = () => {
     if (currentPage === 0) {
       const isValidUsername = isValidName(myNickname);
       if (isValidUsername) {
-        await dispatch(
+        dispatch(
           ValidationActions.USERNAME_VALIDATION.START.create(myNickname),
         );
       }
     }
   };
 
-  const skipRefInvitation = async () => {
-    await dispatch(
+  const skipRefInvitation = () => {
+    dispatch(
       ValidationActions.REF_USERNAME_VALIDATION.START.create(
         invitedNickname,
         true,
@@ -88,10 +88,10 @@ export const ClaimNickname = ({}: Props) => {
     setMyNickname(v);
   };
 
-  const onComplete = async () => {
+  const onComplete = () => {
     const isValidRefname = isValidName(invitedNickname);
     if (isValidRefname) {
-      await dispatch(
+      dispatch(
         ValidationActions.REF_USERNAME_VALIDATION.START.create(
           invitedNickname,
           false,

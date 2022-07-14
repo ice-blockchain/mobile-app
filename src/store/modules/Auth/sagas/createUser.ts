@@ -4,7 +4,7 @@ import {Api} from '@api/index';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {userDataSelector} from '@store/modules/Auth/selectors';
 import {
-  refUsernameSelector,
+  refUserSelector,
   usernameSelector,
 } from '@store/modules/Validation/selectors';
 import {isEmpty} from 'lodash';
@@ -23,14 +23,15 @@ export function* createUserSaga() {
     );
     console.log(username);
 
-    const refUsername: ReturnType<typeof refUsernameSelector> = yield select(
-      refUsernameSelector,
+    const refUser: ReturnType<typeof refUserSelector> = yield select(
+      refUserSelector,
     );
-    console.log(refUsername);
+    console.log(refUser);
 
     let phoneNumber = null;
     let phoneNumberHash: string | null = null;
     let email = null;
+    let refUserId = null;
 
     if (userData) {
       phoneNumber = !isEmpty(userData.phoneNumber)
@@ -43,12 +44,16 @@ export function* createUserSaga() {
       }
     }
 
+    if (refUser && refUser.id) {
+      refUserId = refUser.id;
+    }
+
     yield Api.user.createUser({
       username: username || '',
       email: email,
       phoneNumber: phoneNumber,
       phoneNumberHash: phoneNumberHash,
-      referredBy: refUsername,
+      referredBy: refUserId,
     });
     yield put(AuthActions.CREATE_USER.SUCCESS.create());
   } catch (error) {
