@@ -4,7 +4,7 @@ import {ICountryCode} from '@constants/countries';
 import {CountryCode, formatIncompletePhoneNumber} from 'libphonenumber-js';
 
 /**
- * 1428156 -> 1,428,156
+ * 1428156 -> 14,28,156 ??????
  */
 export const formatNumber = (input: number | string, step = 3) => {
   if (input.toString().length === 0) {
@@ -16,6 +16,23 @@ export const formatNumber = (input: number | string, step = 3) => {
     figures.splice(figures.length - step - step * i, 0, ',');
   }
   return figures.join('');
+};
+
+/**
+ * 1428156 -> 1,428,156
+ */
+
+export const numberWithCommas = (x: number | string): string => {
+  try {
+    const value = +x;
+    if (!isNaN(value)) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    } else {
+      return '0';
+    }
+  } catch (error) {
+    return '0';
+  }
 };
 
 export const formatPhoneNumberForInput = (v: string, country: ICountryCode) => {
