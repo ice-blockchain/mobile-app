@@ -20,7 +20,7 @@ export function* signInEmailSaga(action: ReturnType<typeof actionCreator>) {
     }
 
     const result = {
-      userData: {email, phoneNumber: null, userId: metadata.issuer},
+      magicUser: {email, phoneNumber: null, userId: metadata.issuer},
       token,
       error: null,
     };

@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {UserProfile} from '@api/user/types';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthActions} from '@store/modules/Auth/actions';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
 
 export interface AuthState {
-  userData: {
+  magicUser: {
     phoneNumber: string | null;
     userId: string;
     email?: string | null;
@@ -18,7 +19,7 @@ export interface AuthState {
   isWelcomeSeen: boolean;
   phoneVerificationStep: string;
   isPhoneNumberVerified: boolean;
-  profile: null;
+  profile: UserProfile | null;
 }
 
 type Actions = ReturnType<
@@ -35,7 +36,7 @@ type Actions = ReturnType<
 >;
 
 const INITIAL_STATE: AuthState = {
-  userData: null,
+  magicUser: null,
   token: null,
   error: null,
   isInitialized: false,
@@ -49,7 +50,7 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
   return produce(state, draft => {
     switch (action.type) {
       case AuthActions.LOAD_USER.STATE.type:
-        draft.userData = action.payload.userData ?? null;
+        draft.magicUser = action.payload.magicUser ?? null;
         draft.token = action.payload.token ?? null;
         draft.isInitialized = true;
         draft.error = action.payload.error ?? null;
@@ -60,12 +61,12 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
       case AuthActions.SIGN_IN_SOCIAL.SUCCESS.type:
       case AuthActions.SIGN_IN_EMAIL.SUCCESS.type:
       case AuthActions.SIGN_IN_PHONE.SUCCESS.type:
-        draft.userData = action.payload.result.userData;
+        draft.magicUser = action.payload.result.magicUser;
         draft.token = action.payload.result.token;
         break;
       case AuthActions.SET_PHONE_NUMBER_VERIFIED.STATE.type:
-        if (draft.userData) {
-          draft.userData.phoneNumber = action.payload.phone;
+        if (draft.magicUser) {
+          draft.magicUser.phoneNumber = action.payload.phone;
         }
         draft.phoneVerificationStep = 'code';
         break;
@@ -73,8 +74,7 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
         draft.isPhoneNumberVerified = true;
         break;
       case AuthActions.CREATE_USER.SUCCESS.type:
-        console.log(action.payload);
-        draft.profile = action.payload ?? null;
+        draft.profile = action.payload.result ?? null;
         break;
       case AuthActions.SIGN_OUT.SUCCESS.type: {
         return {
@@ -91,7 +91,7 @@ const persistConfig = {
   key: 'auth',
   storage: AsyncStorage,
   timeout: 120000,
-  whitelist: ['isWelcomeSeen', 'isPhoneNumberVerified', 'userData'],
+  whitelist: ['isWelcomeSeen', 'isPhoneNumberVerified', 'magicUser', 'profile'],
 };
 
 export const authReducer = persistReducer(persistConfig, reducer);

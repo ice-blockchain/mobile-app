@@ -2,8 +2,10 @@
 
 import {COLORS} from '@constants/colors';
 import {SignUpStackParamList} from '@navigation/Auth';
+import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {NavigationPanel} from '@screens/AuthFlow/Welcome/components/NavigationPanel';
+import {profileSelector} from '@store/modules/Auth/selectors';
 import {ValidationActions} from '@store/modules/Validation/actions';
 import {isUsernameValidSelector} from '@store/modules/Validation/selectors';
 import {translate} from '@translations/i18n';
@@ -37,7 +39,10 @@ export const ClaimNickname = ({}: Props) => {
   const [invitedNickname, setInvitedNickname] = useState('');
   const [currentPage, setCurrentPage] = useState(0);
   const isUsernameValid = useSelector(isUsernameValidSelector);
+  const profile = useSelector(profileSelector);
   const dispatch = useDispatch();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<SignUpStackParamList>>();
   const [error, setError] = useState<string>();
 
   useEffect(() => {
@@ -46,6 +51,12 @@ export const ClaimNickname = ({}: Props) => {
       setCurrentPage(1);
     }
   }, [isUsernameValid]);
+
+  useEffect(() => {
+    if (profile) {
+      navigation.navigate('Welcome');
+    }
+  }, [profile, navigation]);
 
   const isValidName = (name: string) => {
     if (name.trim().length > 20 || name.trim().length < 4) {

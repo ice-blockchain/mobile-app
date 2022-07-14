@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Api} from '@api/index';
+import {UserProfile} from '@api/user/types';
 import {AuthActions} from '@store/modules/Auth/actions';
-import {userDataSelector} from '@store/modules/Auth/selectors';
+import {magicUserSelector} from '@store/modules/Auth/selectors';
 import {
   refUserSelector,
   usernameSelector,
@@ -13,31 +14,28 @@ import {call, put, select} from 'redux-saga/effects';
 
 export function* createUserSaga() {
   try {
-    const userData: ReturnType<typeof userDataSelector> = yield select(
-      userDataSelector,
+    const magicUser: ReturnType<typeof magicUserSelector> = yield select(
+      magicUserSelector,
     );
-    console.log(userData);
 
     const username: ReturnType<typeof usernameSelector> = yield select(
       usernameSelector,
     );
-    console.log(username);
 
     const refUser: ReturnType<typeof refUserSelector> = yield select(
       refUserSelector,
     );
-    console.log(refUser);
 
     let phoneNumber = null;
     let phoneNumberHash: string | null = null;
     let email = null;
     let refUserId = null;
 
-    if (userData) {
-      phoneNumber = !isEmpty(userData.phoneNumber)
-        ? userData.phoneNumber
+    if (magicUser) {
+      phoneNumber = !isEmpty(magicUser.phoneNumber)
+        ? magicUser.phoneNumber
         : null;
-      email = !isEmpty(userData.email) ? userData.email : null;
+      email = !isEmpty(magicUser.email) ? magicUser.email : null;
 
       if (phoneNumber) {
         phoneNumberHash = yield call(sha256, phoneNumber);
@@ -48,14 +46,14 @@ export function* createUserSaga() {
       refUserId = refUser.id;
     }
 
-    yield Api.user.createUser({
+    const createdUser: UserProfile = yield call(Api.user.createUser, {
       username: username || '',
       email: email,
       phoneNumber: phoneNumber,
       phoneNumberHash: phoneNumberHash,
       referredBy: refUserId,
     });
-    yield put(AuthActions.CREATE_USER.SUCCESS.create());
+    yield put(AuthActions.CREATE_USER.SUCCESS.create(createdUser));
   } catch (error) {
     let errorMessage = 'Failed';
     if (error instanceof Error) {

@@ -24,14 +24,14 @@ export function* signInSocialSaga(action: ReturnType<typeof actionCreator>) {
       throw new Error('metadata.issuer is empty');
     }
 
-    const userData = {
+    const magicUser = {
       email: email ?? null,
       phoneNumber: phoneNumber ?? null,
       userId: socialLoginInfo.magic.userMetadata.issuer,
     };
 
     const result = {
-      userData,
+      magicUser,
       token: socialLoginInfo.magic.idToken,
       error: null,
     };

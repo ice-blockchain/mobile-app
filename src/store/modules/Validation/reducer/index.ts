@@ -68,7 +68,7 @@ const persistConfig = {
   key: 'validation',
   storage: AsyncStorage,
   timeout: 120000,
-  whitelist: ['usersInfo'],
+  whitelist: [],
 };
 
 export const validationReducer = persistReducer(persistConfig, reducer);

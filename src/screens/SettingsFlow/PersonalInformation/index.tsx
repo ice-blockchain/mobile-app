@@ -24,7 +24,7 @@ import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
-const mockUserData = {
+const mockUser = {
   name: 'Johnny Alexander',
   surname: 'Smithsonian',
   country: countriesCode[0],
@@ -87,14 +87,14 @@ export const PersonalInformation = memo(() => {
             <ListControlInput
               label={t('personal_information.first_name')}
               textContentType="name"
-              defaultValue={mockUserData.name}
+              defaultValue={mockUser.name}
               onChangeText={onChangeSomething}
             />
             <ListControlSeparator />
             <ListControlInput
               label={t('personal_information.last_name')}
               textContentType="familyName"
-              defaultValue={mockUserData.surname}
+              defaultValue={mockUser.surname}
               onChangeText={onChangeSomething}
             />
             <ListControlSeparator />
@@ -116,7 +116,7 @@ export const PersonalInformation = memo(() => {
             <ListControlInput
               label={t('personal_information.city')}
               textContentType="addressCity"
-              defaultValue={mockUserData.city}
+              defaultValue={mockUser.city}
               onChangeText={onChangeSomething}
             />
           </Animated.View>

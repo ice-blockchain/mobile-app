@@ -7,7 +7,7 @@ import {Welcome} from '@screens/AuthFlow/Welcome';
 import {WebView} from '@screens/WebView';
 import {
   isWelcomeSeenSelector,
-  userDataSelector,
+  magicUserSelector,
 } from '@store/modules/Auth/selectors';
 import React from 'react';
 import {useSelector} from 'react-redux';
@@ -40,13 +40,13 @@ const modalOptions = {
 } as const;
 
 function Signup() {
-  const userData = useSelector(userDataSelector);
+  const magicUser = useSelector(magicUserSelector);
   const isWelcomeSeen = useSelector(isWelcomeSeenSelector);
 
   const initialAuthRoute = () => {
-    if (!isWelcomeSeen && userData) {
+    if (!isWelcomeSeen && magicUser) {
       return 'Welcome';
-    } else if (userData && !userData.username) {
+    } else if (magicUser && !magicUser.username) {
       return 'ClaimNickname';
     }
     return 'SignIn';
