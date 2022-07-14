@@ -40,7 +40,7 @@ export function* fetchUserProfile(userId: string) {
     const profile: UserProfile = yield call(Api.user.getUserById, userId);
     return profile;
   } catch (error) {
-    if (isApiError(error, 404, 'DEVICE_SETTINGS_NOT_FOUND')) {
+    if (isApiError(error, 404, 'USER_NOT_FOUND')) {
       return null;
     } else {
       throw error;
