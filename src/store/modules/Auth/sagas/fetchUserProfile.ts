@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {isApiError} from '@api/client/utils';
 import {Api} from '@api/index';
 import {UserProfile} from '@api/user/types';
 import {AuthActions} from '@store/modules/Auth/actions';
@@ -31,5 +32,18 @@ export function* fetchUserProfileSaga() {
       errorMessage = error.message;
     }
     yield put(AuthActions.FETCH_USER_PROFILE.FAILED.create(errorMessage));
+  }
+}
+
+export function* fetchUserProfile(userId: string) {
+  try {
+    const profile: UserProfile = yield call(Api.user.getUserById, userId);
+    return profile;
+  } catch (error) {
+    if (isApiError(error, 404, 'DEVICE_SETTINGS_NOT_FOUND')) {
+      return null;
+    } else {
+      throw error;
+    }
   }
 }

@@ -6,8 +6,8 @@ import {createAction} from '@store/utils/actions/createAction';
 
 type SignInResult = {
   magicUser: {phoneNumber: string | null; email: string | null; userId: string};
+  profile: UserProfile | null;
   token: string;
-  error: string | null;
 };
 
 const STORE_WELCOME_SEEN = createAction('STORE_WELCOME_SEEN', {
@@ -22,8 +22,8 @@ const LOAD_USER = createAction('LOAD_USER', {
       phoneNumber: string | null;
       userId: string;
     },
-    error?: string | null,
-  ) => ({token, magicUser, error}),
+    profile?: UserProfile,
+  ) => ({token, magicUser, profile}),
 });
 
 const CREATE_USER = createAction('CREATE_USER', {

@@ -3,7 +3,8 @@
 import {MagicUserMetadata} from '@magic-sdk/react-native';
 import {magic} from '@services/magicLink';
 import {AuthActions} from '@store/modules/Auth/actions';
-import {put} from 'redux-saga/effects';
+import {fetchUserProfile} from '@store/modules/Auth/sagas/fetchUserProfile';
+import {call, put, SagaReturnType} from 'redux-saga/effects';
 
 const actionCreator = AuthActions.SIGN_IN_EMAIL.START.create;
 
@@ -19,10 +20,15 @@ export function* signInEmailSaga(action: ReturnType<typeof actionCreator>) {
       throw new Error('metadata.issuer is empty');
     }
 
+    const profile: SagaReturnType<typeof fetchUserProfile> = yield call(
+      fetchUserProfile,
+      metadata.issuer,
+    );
+
     const result = {
       magicUser: {email, phoneNumber: null, userId: metadata.issuer},
       token,
-      error: null,
+      profile,
     };
 
     yield put(AuthActions.SIGN_IN_EMAIL.SUCCESS.create(result));

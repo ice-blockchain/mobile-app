@@ -4,7 +4,8 @@ import {ENV} from '@constants/env';
 import {OAuthRedirectResult} from '@magic-ext/react-native-oauth';
 import {magic} from '@services/magicLink';
 import {AuthActions} from '@store/modules/Auth/actions';
-import {put} from 'redux-saga/effects';
+import {fetchUserProfile} from '@store/modules/Auth/sagas/fetchUserProfile';
+import {call, put, SagaReturnType} from 'redux-saga/effects';
 
 const actionCreator = AuthActions.SIGN_IN_SOCIAL.START.create;
 
@@ -24,16 +25,19 @@ export function* signInSocialSaga(action: ReturnType<typeof actionCreator>) {
       throw new Error('metadata.issuer is empty');
     }
 
-    const magicUser = {
-      email: email ?? null,
-      phoneNumber: phoneNumber ?? null,
-      userId: socialLoginInfo.magic.userMetadata.issuer,
-    };
+    const profile: SagaReturnType<typeof fetchUserProfile> = yield call(
+      fetchUserProfile,
+      socialLoginInfo.magic.userMetadata.issuer,
+    );
 
     const result = {
-      magicUser,
+      magicUser: {
+        email: email ?? null,
+        phoneNumber: phoneNumber ?? null,
+        userId: socialLoginInfo.magic.userMetadata.issuer,
+      },
       token: socialLoginInfo.magic.idToken,
-      error: null,
+      profile,
     };
 
     yield put(AuthActions.SIGN_IN_SOCIAL.SUCCESS.create(result));

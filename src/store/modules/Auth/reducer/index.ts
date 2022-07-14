@@ -13,7 +13,6 @@ export interface AuthState {
     email?: string | null;
     username?: string | null;
   } | null;
-  error: string | null;
   token: string | null;
   isInitialized: boolean;
   isWelcomeSeen: boolean;
@@ -39,7 +38,6 @@ type Actions = ReturnType<
 const INITIAL_STATE: AuthState = {
   magicUser: null,
   token: null,
-  error: null,
   isInitialized: false,
   isWelcomeSeen: false,
   phoneVerificationStep: 'phone',
@@ -54,7 +52,7 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
         draft.magicUser = action.payload.magicUser ?? null;
         draft.token = action.payload.token ?? null;
         draft.isInitialized = true;
-        draft.error = action.payload.error ?? null;
+        draft.profile = action.payload.profile ?? null;
         break;
       case AuthActions.STORE_WELCOME_SEEN.STATE.type:
         draft.isWelcomeSeen = true;
