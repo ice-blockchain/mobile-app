@@ -1,60 +1,44 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
+import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
 import {CheckMarkIcon} from '@svg/CheckMarkIcon';
-import React, {ReactNode} from 'react';
+import React from 'react';
+import {StyleProp, ViewStyle} from 'react-native';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
   value: boolean;
   onValueChange: (value: boolean) => void;
-  LabelComponent?: ReactNode;
+  style?: StyleProp<ViewStyle>;
 };
 
-export const CheckBox = ({value, onValueChange, LabelComponent}: Props) => {
+export const CheckBox = ({value, onValueChange, style}: Props) => {
   return (
-    <View style={styles.container}>
-      <TouchableOpacity onPress={() => onValueChange(!value)}>
-        {LabelComponent}
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => onValueChange(!value)}>
-        <View
-          style={[
-            styles.checkFrame,
-            {borderColor: value ? COLORS.shamrock : COLORS.white},
-          ]}>
-          {value ? (
-            <CheckMarkIcon
-              style={styles.checkIcon}
-              width={rem(8)}
-              height={rem(7)}
-            />
-          ) : null}
-        </View>
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity
+      onPress={() => onValueChange(!value)}
+      hitSlop={SMALL_BUTTON_HIT_SLOP}>
+      <View style={[styles.checkFrame, style]}>
+        {value ? (
+          <CheckMarkIcon
+            width={rem(13)}
+            height={rem(10)}
+            fill={COLORS.persianBlue}
+          />
+        ) : null}
+      </View>
+    </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
   checkFrame: {
-    width: rem(14),
-    height: rem(14),
-    borderWidth: rem(2),
-    borderRadius: rem(4),
+    width: rem(25),
+    height: rem(25),
+    borderRadius: rem(9),
     alignItems: 'center',
     justifyContent: 'center',
-    marginVertical: rem(10),
-    marginLeft: rem(10),
-  },
-  checkIcon: {
-    width: rem(8),
-    height: rem(7),
+    backgroundColor: COLORS.linkWater,
   },
 });

@@ -33,7 +33,7 @@ export const NotificationSettings = memo(() => {
     dispatch(DeviceActions.GET_OR_CREATE_SETTINGS.START.create());
   }, [dispatch]);
 
-  const settings = useSelector(deviceSettingsSelector);
+  const deviceSettings = useSelector(deviceSettingsSelector);
   const isLoading = useSelector(
     isLoadingSelector.bind(null, DeviceActions.GET_OR_CREATE_SETTINGS),
   );
@@ -61,13 +61,13 @@ export const NotificationSettings = memo(() => {
           <Text style={styles.titleText}>
             {t('settings.notifications_title').toUpperCase()}
           </Text>
-          {isLoading && !settings ? (
+          {isLoading && !deviceSettings ? (
             <NotificationControlsSkeleton />
           ) : (
-            !!settings && (
+            !!deviceSettings && (
               <NotificationControls
-                notificationSettings={settings.notificationSettings}
-                disableAllNotifications={settings.disableAllNotifications}
+                notificationSettings={deviceSettings.notificationSettings}
+                disableAllNotifications={deviceSettings.disableAllNotifications}
               />
             )
           )}
