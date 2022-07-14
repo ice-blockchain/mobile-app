@@ -42,6 +42,10 @@ export const Settings = memo(() => {
   const navigation =
     useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
 
+  const deleteAccount = () => {
+    dispatch(AuthActions.DELETE_ACCOUNT.START);
+  };
+
   return (
     <View style={styles.container}>
       <Header
@@ -118,7 +122,7 @@ export const Settings = memo(() => {
               title={t('settings.delete_title')}
               description={t('settings.delete_description')}
               renderIcon={EraseIcon}
-              onPress={() => {}}
+              onPress={deleteAccount}
               confirmation={{
                 title: t('settings.delete_confirmation_title'),
                 yesText: t('settings.delete_confirmation_yes'),

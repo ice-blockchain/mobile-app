@@ -33,6 +33,7 @@ type Actions = ReturnType<
   | typeof AuthActions.LOAD_USER.STATE.create
   | typeof AuthActions.CREATE_USER.SUCCESS.create
   | typeof AuthActions.CREATE_USER.FAILED.create
+  | typeof AuthActions.FETCH_USER_PROFILE.SUCCESS.create
 >;
 
 const INITIAL_STATE: AuthState = {
@@ -74,6 +75,7 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
         draft.isPhoneNumberVerified = true;
         break;
       case AuthActions.CREATE_USER.SUCCESS.type:
+      case AuthActions.FETCH_USER_PROFILE.SUCCESS.type:
         draft.profile = action.payload.result ?? null;
         break;
       case AuthActions.SIGN_OUT.SUCCESS.type: {

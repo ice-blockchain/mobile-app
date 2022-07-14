@@ -34,6 +34,14 @@ const CREATE_USER = createAction('CREATE_USER', {
   }),
 });
 
+const FETCH_USER_PROFILE = createAction('FETCH_USER_PROFILE', {
+  START: () => {},
+  SUCCESS: (result: UserProfile) => ({result}),
+  FAILED: (errorMessage: string) => ({
+    errorMessage,
+  }),
+});
+
 const SIGN_OUT = createAction('SIGN_OUT', {
   START: true,
   SUCCESS: true,
@@ -80,6 +88,7 @@ const DELETE_ACCOUNT = createAction('DELETE_ACCOUNT', {
 
 export const AuthActions = Object.freeze({
   LOAD_USER,
+  FETCH_USER_PROFILE,
   STORE_WELCOME_SEEN,
   SIGN_IN_EMAIL,
   SIGN_IN_PHONE,

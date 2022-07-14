@@ -2,14 +2,16 @@
 
 import {Api} from '@api/index';
 import {AuthActions} from '@store/modules/Auth/actions';
-import {put} from 'redux-saga/effects';
+import {userIdSelector} from '@store/modules/Auth/selectors';
+import {call, put, select} from 'redux-saga/effects';
 
-const actionCreator = AuthActions.DELETE_ACCOUNT.START.create;
-
-export function* deleteAccountSaga(action: ReturnType<typeof actionCreator>) {
+export function* deleteAccountSaga() {
   try {
-    const {userId} = action.payload;
-    yield Api.user.deleteUser(userId);
+    let userId: ReturnType<typeof userIdSelector> = yield select(
+      userIdSelector,
+    );
+
+    yield call(Api.user.deleteUser, userId);
     yield put(AuthActions.DELETE_ACCOUNT.SUCCESS.create());
     yield put(AuthActions.SIGN_OUT.START.create());
   } catch (error) {
