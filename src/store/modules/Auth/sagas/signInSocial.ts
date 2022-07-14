@@ -5,7 +5,7 @@ import {OAuthRedirectResult} from '@magic-ext/react-native-oauth';
 import {magic} from '@services/magicLink';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {fetchUserProfile} from '@store/modules/Auth/sagas/fetchUserProfile';
-import {call, put, SagaReturnType} from 'redux-saga/effects';
+import {call, delay, put, SagaReturnType} from 'redux-saga/effects';
 
 const actionCreator = AuthActions.SIGN_IN_SOCIAL.START.create;
 
@@ -21,9 +21,15 @@ export function* signInSocialSaga(action: ReturnType<typeof actionCreator>) {
 
     const {email, phoneNumber} = socialLoginInfo.oauth.userInfo;
 
+    yield put(
+      AuthActions.SET_TOKEN.STATE.create(socialLoginInfo.magic.idToken),
+    );
+
     if (!socialLoginInfo.magic.userMetadata.issuer) {
       throw new Error('metadata.issuer is empty');
     }
+
+    yield delay(1000);
 
     const profile: SagaReturnType<typeof fetchUserProfile> = yield call(
       fetchUserProfile,
@@ -36,7 +42,6 @@ export function* signInSocialSaga(action: ReturnType<typeof actionCreator>) {
         phoneNumber: phoneNumber ?? null,
         userId: socialLoginInfo.magic.userMetadata.issuer,
       },
-      token: socialLoginInfo.magic.idToken,
       profile,
     };
 

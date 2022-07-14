@@ -14,6 +14,9 @@ export function* signInEmailSaga(action: ReturnType<typeof actionCreator>) {
     const token: string = yield magic.auth.loginWithMagicLink({
       email,
     });
+
+    yield put(AuthActions.SET_TOKEN.STATE.create(token));
+
     const metadata: MagicUserMetadata = yield magic.user.getMetadata();
 
     if (!metadata.issuer) {
@@ -27,7 +30,6 @@ export function* signInEmailSaga(action: ReturnType<typeof actionCreator>) {
 
     const result = {
       magicUser: {email, phoneNumber: null, userId: metadata.issuer},
-      token,
       profile,
     };
 

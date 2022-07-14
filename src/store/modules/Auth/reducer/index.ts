@@ -22,6 +22,7 @@ export interface AuthState {
 }
 
 type Actions = ReturnType<
+  | typeof AuthActions.SET_TOKEN.STATE.create
   | typeof AuthActions.SET_PHONE_NUMBER_VERIFIED.STATE.create
   | typeof AuthActions.SET_CODE_VERIFIED.STATE.create
   | typeof AuthActions.STORE_WELCOME_SEEN.STATE.create
@@ -48,9 +49,11 @@ const INITIAL_STATE: AuthState = {
 function reducer(state = INITIAL_STATE, action: Actions): AuthState {
   return produce(state, draft => {
     switch (action.type) {
+      case AuthActions.SET_TOKEN.STATE.type:
+        draft.token = action.payload.token;
+        break;
       case AuthActions.LOAD_USER.STATE.type:
         draft.magicUser = action.payload.magicUser ?? null;
-        draft.token = action.payload.token ?? null;
         draft.isInitialized = true;
         draft.profile = action.payload.profile ?? null;
         break;
@@ -61,7 +64,7 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
       case AuthActions.SIGN_IN_EMAIL.SUCCESS.type:
       case AuthActions.SIGN_IN_PHONE.SUCCESS.type:
         draft.magicUser = action.payload.result.magicUser;
-        draft.token = action.payload.result.token;
+        draft.profile = action.payload.result.profile ?? null;
         break;
       case AuthActions.SET_PHONE_NUMBER_VERIFIED.STATE.type:
         if (draft.magicUser) {

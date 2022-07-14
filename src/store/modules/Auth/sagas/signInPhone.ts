@@ -14,6 +14,9 @@ export function* signInPhoneSaga(action: ReturnType<typeof actionCreator>) {
     const token: string = yield magic.auth.loginWithSMS({
       phoneNumber: phone,
     });
+
+    yield put(AuthActions.SET_TOKEN.STATE.create(token));
+
     const metadata: MagicUserMetadata = yield magic.user.getMetadata();
 
     if (!metadata.issuer) {
@@ -31,7 +34,6 @@ export function* signInPhoneSaga(action: ReturnType<typeof actionCreator>) {
         phoneNumber: phone,
         userId: metadata.issuer,
       },
-      token,
       profile,
     };
 

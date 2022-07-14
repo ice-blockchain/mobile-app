@@ -27,12 +27,6 @@ export function* rootAuthSaga() {
       ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.type,
       createUserSaga,
     ),
-    takeLatest(
-      [
-        AuthActions.LOAD_USER.STATE.type,
-        AuthActions.FETCH_USER_PROFILE.START.type,
-      ],
-      fetchUserProfileSaga,
-    ),
+    takeLatest(AuthActions.FETCH_USER_PROFILE.START.type, fetchUserProfileSaga),
   ]);
 }

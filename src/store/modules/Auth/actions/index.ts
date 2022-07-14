@@ -7,8 +7,11 @@ import {createAction} from '@store/utils/actions/createAction';
 type SignInResult = {
   magicUser: {phoneNumber: string | null; email: string | null; userId: string};
   profile: UserProfile | null;
-  token: string;
 };
+
+const SET_TOKEN = createAction('SET_TOKEN', {
+  STATE: token => ({token}),
+});
 
 const STORE_WELCOME_SEEN = createAction('STORE_WELCOME_SEEN', {
   STATE: () => {},
@@ -16,14 +19,13 @@ const STORE_WELCOME_SEEN = createAction('STORE_WELCOME_SEEN', {
 
 const LOAD_USER = createAction('LOAD_USER', {
   STATE: (
-    token?: string,
     magicUser?: {
       email: string | null;
       phoneNumber: string | null;
       userId: string;
     },
     profile?: UserProfile,
-  ) => ({token, magicUser, profile}),
+  ) => ({magicUser, profile}),
 });
 
 const CREATE_USER = createAction('CREATE_USER', {
@@ -87,6 +89,7 @@ const DELETE_ACCOUNT = createAction('DELETE_ACCOUNT', {
 });
 
 export const AuthActions = Object.freeze({
+  SET_TOKEN,
   LOAD_USER,
   FETCH_USER_PROFILE,
   STORE_WELCOME_SEEN,
