@@ -7,8 +7,13 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {NavigationPanel} from '@screens/AuthFlow/Welcome/components/NavigationPanel';
 import {profileSelector} from '@store/modules/Auth/selectors';
 import {ValidationActions} from '@store/modules/Validation/actions';
-import {isUsernameValidSelector} from '@store/modules/Validation/selectors';
+import {
+  isUsernameValidSelector,
+  refUsernameValidationErrorSelector,
+  usernameValidationErrorSelector,
+} from '@store/modules/Validation/selectors';
 import {translate} from '@translations/i18n';
+import {isEmpty} from 'lodash';
 import React, {useEffect, useRef, useState} from 'react';
 import {
   Keyboard,
@@ -43,7 +48,39 @@ export const ClaimNickname = ({}: Props) => {
   const dispatch = useDispatch();
   const navigation =
     useNavigation<NativeStackNavigationProp<SignUpStackParamList>>();
-  const [error, setError] = useState<string>();
+  const [error, setError] = useState<string>('');
+  const [claimError, setClaimError] = useState<string>('');
+  const [refError, setRefError] = useState<string>('');
+
+  const claimValidationError = useSelector(usernameValidationErrorSelector);
+  const refValidationError = useSelector(refUsernameValidationErrorSelector);
+
+  useEffect(() => {
+    if (claimValidationError) {
+      setClaimError(claimValidationError);
+    }
+  }, [claimValidationError]);
+
+  useEffect(() => {
+    if (refValidationError) {
+      setRefError(refValidationError);
+    }
+  }, [refValidationError]);
+
+  const wipeErrors = () => {
+    if (!isEmpty(claimValidationError) || !isEmpty(refValidationError)) {
+      dispatch(ValidationActions.RESET_VALIDATION_ERRORS.STATE.create());
+    }
+    if (!isEmpty(claimError)) {
+      setClaimError('');
+    }
+    if (!isEmpty(error)) {
+      setError('');
+    }
+    if (!isEmpty(refError)) {
+      setRefError('');
+    }
+  };
 
   useEffect(() => {
     if (isUsernameValid) {
@@ -93,9 +130,7 @@ export const ClaimNickname = ({}: Props) => {
   };
 
   const onMyNicknameChange = (v: string) => {
-    if (error) {
-      setError(undefined);
-    }
+    wipeErrors();
     setMyNickname(v);
   };
 
@@ -132,7 +167,8 @@ export const ClaimNickname = ({}: Props) => {
                 <ClaimNickName
                   inputValue={myNickname}
                   onInputChange={onMyNicknameChange}
-                  errorText={error}
+                  errorText={error || claimError}
+                  onFocus={wipeErrors}
                 />
               </ScrollView>
             </View>
@@ -142,6 +178,8 @@ export const ClaimNickname = ({}: Props) => {
                   inputValue={invitedNickname}
                   onInputChange={setInvitedNickname}
                   onSkip={skipRefInvitation}
+                  errorText={error || refError}
+                  onFocus={wipeErrors}
                 />
               </ScrollView>
             </View>
@@ -155,7 +193,7 @@ export const ClaimNickname = ({}: Props) => {
         nextPress={onNextPress}
         lastPageButtonText={'Complete'}
         yesPleasePress={onComplete}
-        withError={!!error}
+        withError={!!error || !!claimError || !!refError}
         isButtonActive={isNextButtonActive}
       />
     </SafeAreaView>

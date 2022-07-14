@@ -16,11 +16,13 @@ const w = (h * 258) / 291;
 interface ClaimNickNameProps {
   inputValue: string;
   onInputChange: (v: string) => void;
-  errorText?: string;
+  onFocus: () => void;
+  errorText: string;
 }
 export const ClaimNickName = ({
   inputValue,
   onInputChange,
+  onFocus,
   errorText,
 }: ClaimNickNameProps) => {
   return (
@@ -39,6 +41,7 @@ export const ClaimNickName = ({
         icon={<ManIconSvg />}
         containerStyle={styles.input}
         errorText={errorText}
+        onFocus={onFocus}
       />
     </View>
   );
