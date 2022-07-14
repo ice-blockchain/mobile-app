@@ -41,6 +41,7 @@ export function* getOrCreateDeviceSettings({
       deviceUniqueId,
     });
     if (settings.language !== i18n.currentLocale()) {
+      //TODO::check RTL
       i18n.locale = settings.language;
     }
   } catch (error) {

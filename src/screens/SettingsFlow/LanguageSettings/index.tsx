@@ -10,29 +10,24 @@ import {
   LanguageListItem,
   LanguageListItemSeparator,
 } from '@screens/SettingsFlow/LanguageSettings/components/LanguageListItem';
+import {useConfirmChangeLangDlg} from '@screens/SettingsFlow/LanguageSettings/hooks/useConfirmChangeLangDlg';
 import {DeviceActions} from '@store/modules/Devices/actions';
 import {deviceSettingsSelector} from '@store/modules/Devices/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {availableLocales, t} from '@translations/i18n';
-import React, {useCallback} from 'react';
+import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 export const LanguageSettings = () => {
   useFocusStatusBar({style: 'dark-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
   const {scrollHandler, shadowStyle} = useScrollShadow();
-  const dispatch = useDispatch();
   const deviceSettings = useSelector(deviceSettingsSelector);
 
-  const updateSettings = useCallback(
-    language => {
-      dispatch(DeviceActions.UPDATE_SETTINGS.START.create({language}));
-    },
-    [dispatch],
-  );
+  const {openConfirmationDlg} = useConfirmChangeLangDlg();
 
   const isLoading = useSelector(
     isLoadingSelector.bind(null, DeviceActions.UPDATE_SETTINGS),
@@ -58,7 +53,7 @@ export const LanguageSettings = () => {
               <LanguageListItem
                 selected={deviceSettings?.language === language}
                 language={language}
-                onSelect={updateSettings}
+                onSelect={openConfirmationDlg}
                 loading={isLoading}
               />
             </React.Fragment>

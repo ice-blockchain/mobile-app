@@ -54,6 +54,9 @@ export function* updateDeviceSettingsSaga(
       settings,
     });
     yield put(DeviceActions.UPDATE_SETTINGS.SUCCESS.create(updatedSetings));
+    if (settings.language) {
+      //TODO::restart the app
+    }
   } catch (error) {
     //TODO:: get error message
     yield put(

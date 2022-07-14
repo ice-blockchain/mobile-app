@@ -42,13 +42,13 @@ export function devicesReducer(state = INITIAL_STATE, action: Actions): State {
         draft.settings = action.payload.settings;
         draft.isInitialized = true;
         break;
-      case DeviceActions.UPDATE_SETTINGS.SUCCESS.type:
-        draft.rollBackSettings = action.payload;
-        break;
       case DeviceActions.UPDATE_SETTINGS.START.type:
         if (state.settings) {
           draft.settings = merge(draft.settings, action.payload);
         }
+        break;
+      case DeviceActions.UPDATE_SETTINGS.SUCCESS.type:
+        draft.rollBackSettings = action.payload;
         break;
       case DeviceActions.UPDATE_SETTINGS.FAILED.type:
         draft.settings = state.rollBackSettings;
