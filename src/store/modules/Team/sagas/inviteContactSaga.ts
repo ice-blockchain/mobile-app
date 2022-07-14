@@ -14,9 +14,9 @@ export function* inviteContactSaga(action: ReturnType<typeof actionCreator>) {
     const {id} = action.payload;
     const contactsByIds: ContactById = yield select(getContactsByIdsSelector);
     const contact = contactsByIds[id];
-    const text = `${t('team.contacts_list.hi')} ${contact.firstName}, ${t(
-      'team.contacts_list.invitation_text',
-    )}`;
+    const text = `${t('team.contacts_list.invitation_text', {
+      name: contact.firstName,
+    })}}`;
     const [phone] = contact.phoneNumbers;
     openSMS(phone, text);
 
