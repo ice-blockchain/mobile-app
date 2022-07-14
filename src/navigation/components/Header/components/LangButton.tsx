@@ -3,9 +3,9 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
-import {MainTabsParamList} from '@navigation/Main';
-import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
+import {ProfileTabStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {DropdownIcon} from '@svg/DropdownIcon';
 import {WorldIcon} from '@svg/WorldIcon';
 import React from 'react';
@@ -29,10 +29,10 @@ export const LangButton = ({
   color = COLORS.white,
 }: Props = {}) => {
   const navigation =
-    useNavigation<BottomTabNavigationProp<MainTabsParamList>>();
+    useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
   return (
     <TouchableOpacity
-      onPress={() => navigation.navigate('HomeTab')}
+      onPress={() => navigation.navigate('LanguageSettings')}
       hitSlop={SMALL_BUTTON_HIT_SLOP}>
       <View style={[styles.container, containerStyle]}>
         <Text style={[styles.langText, {color}]}>EN</Text>
