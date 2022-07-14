@@ -21,14 +21,13 @@ import React, {memo, useRef, useState} from 'react';
 import {
   Image,
   KeyboardAvoidingView,
-  Platform,
   StyleSheet,
   Text,
   TextInput,
   View,
 } from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import {font, rem} from 'rn-units';
+import {font, isIOS, rem} from 'rn-units';
 
 export const ConfirmNewPhone = memo(() => {
   useFocusStatusBar({style: 'light-content'});
@@ -46,7 +45,7 @@ export const ConfirmNewPhone = memo(() => {
     <KeyboardDismiss onDismiss={() => setCountrySearchVisibility(false)}>
       <KeyboardAvoidingView
         style={styles.container}
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+        behavior={isIOS ? 'padding' : undefined}>
         <Header
           color={COLORS.white}
           title={t('personal_information.title')}

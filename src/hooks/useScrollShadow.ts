@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
-import {Platform} from 'react-native';
 import {
   Extrapolate,
   interpolate,
@@ -10,7 +9,7 @@ import {
   useDerivedValue,
   useSharedValue,
 } from 'react-native-reanimated';
-import {rem} from 'rn-units';
+import {isIOS, rem} from 'rn-units';
 
 type Params = {
   scrollOffset?: number;
@@ -22,7 +21,7 @@ export const useScrollShadow = ({scrollOffset = rem(50)}: Params = {}) => {
     translationY.value = event.contentOffset.y;
   });
   const shadowOpacity = useDerivedValue(() =>
-    Platform.OS === 'ios'
+    isIOS
       ? interpolate(
           translationY.value,
           [0, scrollOffset],
@@ -37,7 +36,7 @@ export const useScrollShadow = ({scrollOffset = rem(50)}: Params = {}) => {
         ),
   );
   const shadowStyle = useAnimatedStyle(() =>
-    Platform.OS === 'ios'
+    isIOS
       ? {
           shadowColor: COLORS.black,
           shadowOffset: {

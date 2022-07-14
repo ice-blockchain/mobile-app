@@ -12,14 +12,13 @@ import {formatNumber} from '@utils/number';
 import React, {memo, useEffect, useRef} from 'react';
 import {
   ActivityIndicator,
-  Platform,
   StyleSheet,
   Text,
   TextInput,
   View,
 } from 'react-native';
 import {useSharedValue} from 'react-native-reanimated';
-import {font, rem} from 'rn-units';
+import {font, isAndroid, rem} from 'rn-units';
 
 const TIER_ONE_MIN = 0;
 const TIER_ONE_MAX = 30;
@@ -199,12 +198,12 @@ const styles = StyleSheet.create({
     color: COLORS.white,
   },
   sliderInfo: {
-    marginTop: Platform.OS === 'android' ? rem(17) : rem(27),
+    marginTop: isAndroid ? rem(17) : rem(27),
     flexDirection: 'row',
     alignItems: 'center',
   },
   slider: {
-    marginTop: Platform.OS === 'android' ? rem(3) : rem(10),
+    marginTop: isAndroid ? rem(3) : rem(10),
     marginLeft: rem(6),
   },
   sliderLabelText: {

@@ -6,14 +6,13 @@ import {PenIcon} from '@svg/PenIcon';
 import React from 'react';
 import {
   Image,
-  Platform,
   StyleProp,
   StyleSheet,
   TouchableOpacity,
   View,
   ViewStyle,
 } from 'react-native';
-import {rem} from 'rn-units';
+import {isAndroid, isIOS, rem} from 'rn-units';
 
 const AVATAR_SIZE = rem(86);
 const PEN_SIZE = rem(22);
@@ -27,12 +26,8 @@ type Props = {
 
 export const Avatar = ({uri, style, showPen, onPenPress}: Props) => {
   return (
-    <View style={[style, Platform.OS === 'ios' && commonStyles.shadow]}>
-      <View
-        style={[
-          styles.avatarWrapper,
-          Platform.OS === 'android' && commonStyles.shadow,
-        ]}>
+    <View style={[style, isIOS && commonStyles.shadow]}>
+      <View style={[styles.avatarWrapper, isAndroid && commonStyles.shadow]}>
         <Image source={{uri}} style={styles.image} />
       </View>
       {showPen && (

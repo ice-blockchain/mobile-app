@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import React, {useState} from 'react';
-import {EmitterSubscription, Keyboard, Platform} from 'react-native';
+import {EmitterSubscription, Keyboard} from 'react-native';
+import {isIOS} from 'rn-units';
 
 export default function useIsKeyboardShown() {
   const [isKeyboardShown, setIsKeyboardShown] = useState(false);
@@ -12,7 +13,7 @@ export default function useIsKeyboardShown() {
 
     let subscriptions: EmitterSubscription[];
 
-    if (Platform.OS === 'ios') {
+    if (isIOS) {
       subscriptions = [
         Keyboard.addListener('keyboardWillShow', handleKeyboardShow),
         Keyboard.addListener('keyboardWillHide', handleKeyboardHide),
