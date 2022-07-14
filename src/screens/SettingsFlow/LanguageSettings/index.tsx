@@ -12,6 +12,7 @@ import {
 } from '@screens/SettingsFlow/LanguageSettings/components/LanguageListItem';
 import {DeviceActions} from '@store/modules/Devices/actions';
 import {deviceSettingsSelector} from '@store/modules/Devices/selectors';
+import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {availableLocales, t} from '@translations/i18n';
 import React, {useCallback} from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -31,6 +32,10 @@ export const LanguageSettings = () => {
       dispatch(DeviceActions.UPDATE_SETTINGS.START.create({language}));
     },
     [dispatch],
+  );
+
+  const isLoading = useSelector(
+    isLoadingSelector.bind(null, DeviceActions.UPDATE_SETTINGS),
   );
 
   return (
@@ -54,6 +59,7 @@ export const LanguageSettings = () => {
                 selected={deviceSettings?.language === language}
                 language={language}
                 onSelect={updateSettings}
+                loading={isLoading}
               />
             </React.Fragment>
           ))}

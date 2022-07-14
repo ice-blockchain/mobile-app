@@ -5,17 +5,18 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {t} from '@translations/i18n';
 import React, {memo} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {ActivityIndicator, StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
 type Props = {
   language: string;
   selected: boolean;
+  loading: boolean;
   onSelect: (value: string) => void;
 };
 
 export const LanguageListItem = memo(
-  ({language, selected, onSelect}: Props) => {
+  ({language, selected, loading, onSelect}: Props) => {
     return (
       <View style={styles.container}>
         <Text
@@ -24,13 +25,17 @@ export const LanguageListItem = memo(
             selected && styles.languageText_selected,
           ]}
           numberOfLines={1}>
-          {t('welcome.page1.title', {locale: language})}
+          {t('global.language', {locale: language})}
         </Text>
-        <CheckBox
-          value={selected}
-          onValueChange={() => onSelect(language)}
-          style={styles.checkbox}
-        />
+        {!loading || !selected ? (
+          <CheckBox
+            value={selected}
+            onValueChange={() => onSelect(language)}
+            style={styles.checkbox}
+          />
+        ) : (
+          <ActivityIndicator style={styles.loader} />
+        )}
       </View>
     );
   },
@@ -58,6 +63,9 @@ const styles = StyleSheet.create({
   },
   checkbox: {
     marginHorizontal: rem(25),
+  },
+  loader: {
+    marginRight: rem(28),
   },
   separator: {
     height: 1,
