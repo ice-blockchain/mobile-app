@@ -8,7 +8,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {DropdownIcon} from '@svg/DropdownIcon';
 import {WorldIcon} from '@svg/WorldIcon';
-import {t} from '@translations/i18n';
+import i18n from '@translations/i18n';
 import React from 'react';
 import {
   StyleProp,
@@ -37,7 +37,7 @@ export const LangButton = ({
       hitSlop={SMALL_BUTTON_HIT_SLOP}>
       <View style={[styles.container, containerStyle]}>
         <Text style={[styles.langText, {color}]}>
-          {t('global.language_code').toUpperCase()}
+          {i18n.currentLocale().toUpperCase()}
         </Text>
         <WorldIcon fill={color} style={styles.worldIcon} />
         <DropdownIcon fill={color} style={styles.dropdownIcon} />
