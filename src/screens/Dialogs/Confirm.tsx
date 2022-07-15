@@ -55,7 +55,9 @@ export const Confirm = () => {
               key={button.label}
               style={[
                 styles.button,
-                styles[`button_${button.preset ?? 'default'}`],
+                button.preset === 'destructive'
+                  ? styles.button_destructive
+                  : styles.button_default,
                 button.containerStyle,
               ]}
               onPress={() => {
@@ -65,7 +67,9 @@ export const Confirm = () => {
               <Text
                 style={[
                   styles.buttonLabelText,
-                  styles[`buttonLabelText_${button.preset ?? 'default'}`],
+                  button.preset === 'destructive'
+                    ? styles.buttonLabelText_destructive
+                    : styles.buttonLabelText_default,
                   button.labelStyle,
                 ]}>
                 {button.label}
@@ -121,11 +125,9 @@ const styles = StyleSheet.create({
     marginTop: rem(10),
     justifyContent: 'center',
   },
-  // eslint-disable-next-line react-native/no-unused-styles
   button_default: {
     backgroundColor: COLORS.primary,
   },
-  // eslint-disable-next-line react-native/no-unused-styles
   button_destructive: {
     backgroundColor: COLORS.white,
     borderWidth: 1,
@@ -137,11 +139,9 @@ const styles = StyleSheet.create({
     fontFamily: FONTS.primary.black,
     textAlign: 'center',
   },
-  // eslint-disable-next-line react-native/no-unused-styles
   buttonLabelText_default: {
     color: COLORS.white,
   },
-  // eslint-disable-next-line react-native/no-unused-styles
   buttonLabelText_destructive: {
     color: COLORS.pomegranate,
   },
