@@ -357,6 +357,8 @@ PODS:
     - React-Core
   - react-native-pager-view (5.4.24):
     - React-Core
+  - react-native-restart (0.0.24):
+    - React-Core
   - react-native-safe-area-context (4.2.5):
     - RCT-Folly
     - RCTRequired
@@ -565,6 +567,7 @@ DEPENDENCIES:
   - react-native-flipper (from `../node_modules/react-native-flipper`)
   - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-pager-view (from `../node_modules/react-native-pager-view`)
+  - react-native-restart (from `../node_modules/react-native-restart`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-webview (from `../node_modules/react-native-webview`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -691,6 +694,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/netinfo"
   react-native-pager-view:
     :path: "../node_modules/react-native-pager-view"
+  react-native-restart:
+    :path: "../node_modules/react-native-restart"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-webview:
@@ -815,6 +820,7 @@ SPEC CHECKSUMS:
   react-native-flipper: 6504d02aadad2cce9083b6437fc1927f8e2083bb
   react-native-netinfo: 3671b091c4843fda5e153612866ef4024b8f5d62
   react-native-pager-view: 95d0418c3c74279840abec6926653d32447bafb6
+  react-native-restart: 45c8dca02491980f2958595333cbccd6877cb57e
   react-native-safe-area-context: ebf8c413eb8b5f7c392a036a315eb7b46b96845f
   react-native-webview: 8ec7ddf9eb4ddcd92b32cee7907efec19a9ec7cb
   React-perflogger: 15cb741d6c2379f4d3fc8f9e4d4e1110ef3020cb
