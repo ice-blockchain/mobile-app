@@ -31,7 +31,7 @@ export const DEFAULT_CONFIRM_YES_BUTTON: ConfirmButton = {
 };
 
 export const DEFAULT_CONFIRM_NO_BUTTON: ConfirmButton = {
-  label: t('buttons.no_cancel'),
+  label: t('button.no_cancel'),
   preset: 'destructive',
 };
 

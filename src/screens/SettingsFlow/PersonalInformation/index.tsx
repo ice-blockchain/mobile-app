@@ -100,7 +100,7 @@ export const PersonalInformation = memo(() => {
             <ListControlSeparator />
             <ListControlAction
               label={t('personal_information.phone')}
-              action={t('buttons.change').toUpperCase()}
+              action={t('button.change').toUpperCase()}
               value={'+1 0712 345 678'}
               onPress={onChangePhonePress}
             />
