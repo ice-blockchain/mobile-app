@@ -9,7 +9,7 @@ import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
 import {SignUpStackParamList} from '@navigation/Auth';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {BorderedButton} from '@screens/AuthFlow/SignIn/components/BorderedButton';
+import {BorderedButton} from '@screens/UserRegistrationFlow/SignIn/components/BorderedButton';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {isAuthorizedSelector} from '@store/modules/Auth/selectors';
 import {DeviceActions} from '@store/modules/Devices/actions';
@@ -65,7 +65,7 @@ export const SignIn = ({navigation}: Props) => {
 
   useEffect(() => {
     if (isAuthorized && deviceSettings) {
-      navigation.navigate('ClaimNickname');
+      navigation.navigate('UserRegistration');
     }
   }, [navigation, isAuthorized, deviceSettings]);
 
@@ -73,7 +73,7 @@ export const SignIn = ({navigation}: Props) => {
     if (location) {
       const countries = countriesCode;
       const currentCountry = countries.find(country => {
-        return country.isoCode === location.country;
+        return country.isoCode.toLowerCase() === location.country.toLowerCase();
       });
       if (currentCountry) {
         setSelectedCountry(currentCountry);

@@ -4,6 +4,7 @@ import {isApiError} from '@api/client/utils';
 import {Api} from '@api/index';
 import {UserProfile} from '@api/user/types';
 import {ValidationActions} from '@store/modules/Validation/actions';
+import {t} from '@translations/i18n';
 import {call, put} from 'redux-saga/effects';
 
 const actionCreator = ValidationActions.REF_USERNAME_VALIDATION.START.create;
@@ -16,7 +17,7 @@ export function* validateRefUsernameSaga(
     if (skipValidation) {
       yield put(ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.create(null));
     } else {
-      let refUser: UserProfile = yield call(Api.validations.validateUsername, {
+      let refUser: UserProfile = yield call(Api.user.getUserByUsername, {
         username: refUsername,
       });
       yield put(
@@ -27,7 +28,7 @@ export function* validateRefUsernameSaga(
     if (isApiError(error, 404, 'USER_NOT_FOUND')) {
       yield put(
         ValidationActions.REF_USERNAME_VALIDATION.FAILED.create(
-          'Nickname not found',
+          t('username.error.not_found'),
         ),
       );
     } else {

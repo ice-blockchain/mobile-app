@@ -8,10 +8,10 @@ import {searchUsers} from './searchUsers';
 import {updateUser} from './updateUser';
 
 export const user = Object.freeze({
+  createUser,
   deleteUser,
   getUserById,
   getUserByUsername,
   searchUsers,
   updateUser,
-  createUser,
 });

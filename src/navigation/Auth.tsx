@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {ClaimNickname} from '@screens/AuthFlow/ClaimNickname';
-import {SignIn} from '@screens/AuthFlow/SignIn';
-import {Welcome} from '@screens/AuthFlow/Welcome';
+import {SignIn} from '@screens/UserRegistrationFlow/SignIn';
+import {UserRegistration} from '@screens/UserRegistrationFlow/UserRegistration';
+import {Welcome} from '@screens/UserRegistrationFlow/Welcome';
 import {WebView} from '@screens/WebView';
 import {
   isWelcomeSeenSelector,
@@ -19,7 +19,7 @@ export type AuthStackParamList = {
 
 export type SignUpStackParamList = {
   Intro: undefined;
-  ClaimNickname: undefined;
+  UserRegistration: undefined;
   Invite: undefined;
   Welcome: undefined;
   SignIn: undefined;
@@ -47,7 +47,7 @@ function Signup() {
     if (!isWelcomeSeen && magicUser) {
       return 'Welcome';
     } else if (magicUser && !magicUser.username) {
-      return 'ClaimNickname';
+      return 'UserRegistration';
     }
     return 'SignIn';
   };
@@ -56,7 +56,10 @@ function Signup() {
     <SignUpStack.Navigator
       screenOptions={screenOptions}
       initialRouteName={initialAuthRoute()}>
-      <SignUpStack.Screen name="ClaimNickname" component={ClaimNickname} />
+      <SignUpStack.Screen
+        name="UserRegistration"
+        component={UserRegistration}
+      />
       <SignUpStack.Screen name="Welcome" component={Welcome} />
       <SignUpStack.Screen name="SignIn" component={SignIn} />
     </SignUpStack.Navigator>

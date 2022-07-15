@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {isApiError} from '@api/client/utils';
 import {Api} from '@api/index';
 import {UserProfile} from '@api/user/types';
 import {AuthActions} from '@store/modules/Auth/actions';
@@ -8,6 +9,7 @@ import {
   refUserSelector,
   usernameSelector,
 } from '@store/modules/Validation/selectors';
+import {t} from '@translations/i18n';
 import {isEmpty} from 'lodash';
 import {sha256} from 'react-native-sha256';
 import {call, put, select} from 'redux-saga/effects';
@@ -47,7 +49,7 @@ export function* createUserSaga() {
     }
 
     const createdUser: UserProfile = yield call(Api.user.createUser, {
-      username: username || '',
+      username: username,
       email: email,
       phoneNumber: phoneNumber,
       phoneNumberHash: phoneNumberHash,
@@ -55,10 +57,12 @@ export function* createUserSaga() {
     });
     yield put(AuthActions.CREATE_USER.SUCCESS.create(createdUser));
   } catch (error) {
-    let errorMessage = 'Failed';
-    if (error instanceof Error) {
-      errorMessage = error.message;
+    let localizedError = '';
+    if (isApiError(error, 409)) {
+      localizedError = t('error.user_exist');
+    } else {
+      localizedError = t('error.general_error');
     }
-    yield put(AuthActions.CREATE_USER.FAILED.create(errorMessage));
+    yield put(AuthActions.CREATE_USER.FAILED.create(localizedError));
   }
 }

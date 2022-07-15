@@ -3,11 +3,10 @@
 import {get} from '@api/client';
 import {UserProfile} from '@api/user/types';
 
-/**
- * Returns public information about an user account
- * based on an username, making sure the username is valid first.
- */
+interface Params {
+  username: string;
+}
 
-export function getUserByUsername(username: string) {
-  return get<UserProfile>(`/user-views/${username}`);
+export function getUserByUsername({username}: Params) {
+  return get<UserProfile>(`/user-views/username?username=${username}`);
 }
