@@ -11,7 +11,7 @@ import {
 } from '@store/modules/Auth/selectors';
 import {PermissionsActions} from '@store/modules/Permissions/actions';
 import {permissionSelector} from '@store/modules/Permissions/selectors';
-import {UtilsProcessStatusSelectors} from '@store/modules/UtilityProcessStatuses/selectors';
+import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {ValidationActions} from '@store/modules/Validation/actions';
 import {RootState} from '@store/rootReducer';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
@@ -33,9 +33,9 @@ export const Contacts = ({
   isCountriesVisible,
 }: ContactsProps) => {
   const isLoading = useSelector((state: RootState) =>
-    UtilsProcessStatusSelectors.isLoadingSelector(
-      state,
+    isLoadingSelector(
       AuthActions.UPDATE_ACCOUNT || ValidationActions.PHONE_VALIDATION,
+      state,
     ),
   );
 
