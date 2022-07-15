@@ -51,7 +51,10 @@ export const LanguageSettings = () => {
             <React.Fragment key={language}>
               {index !== 0 && <LanguageListItemSeparator />}
               <LanguageListItem
-                selected={deviceSettings?.language === language}
+                selected={
+                  deviceSettings?.language.toLowerCase() ===
+                  language.toLowerCase()
+                }
                 language={language}
                 onSelect={openConfirmationDlg}
                 loading={isLoading}
