@@ -20,7 +20,7 @@ export function* fetchUserProfileSaga() {
         userIdSelector,
       );
 
-      const profile: UserProfile = yield call(Api.user.getUserById, userId);
+      const profile: UserProfile = yield call(fetchUserProfile, userId);
 
       yield put(AuthActions.FETCH_USER_PROFILE.SUCCESS.create(profile));
     } else {

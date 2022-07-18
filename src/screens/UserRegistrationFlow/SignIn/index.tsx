@@ -12,7 +12,6 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {BorderedButton} from '@screens/UserRegistrationFlow/SignIn/components/BorderedButton';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {isAuthorizedSelector} from '@store/modules/Auth/selectors';
-import {DeviceActions} from '@store/modules/Devices/actions';
 import {
   deviceLocationSelector,
   deviceSettingsSelector,
@@ -56,12 +55,6 @@ export const SignIn = ({navigation}: Props) => {
   const location = useSelector(deviceLocationSelector);
 
   const phoneNumber = `${selectedCountry.iddCode}${phone}`;
-
-  useEffect(() => {
-    if (inputType === 'phone') {
-      dispatch(DeviceActions.UPDATE_DEVICE_LOCATION.START.create());
-    }
-  }, [inputType, dispatch]);
 
   useEffect(() => {
     if (isAuthorized && deviceSettings) {
