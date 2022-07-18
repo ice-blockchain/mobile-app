@@ -60,7 +60,7 @@ export async function post<TRequest, TResponse>(
 ): Promise<TResponse> {
   try {
     const response = await backOff(
-      () => writeClient.post<TResponse>(path, payload, config),
+      async () => writeClient.post<TResponse>(path, payload, config),
       backOffOptions,
     );
     return response.data;
@@ -77,7 +77,7 @@ export async function patch<TRequest, TResponse>(
 ): Promise<TResponse> {
   try {
     const response = await backOff(
-      () => writeClient.patch<TResponse>(path, payload, config),
+      async () => writeClient.patch<TResponse>(path, payload, config),
       backOffOptions,
     );
     return response.data;
@@ -94,7 +94,7 @@ export async function put<TRequest, TResponse>(
 ): Promise<TResponse> {
   try {
     const response = await backOff(
-      () => writeClient.put<TResponse>(path, payload, config),
+      async () => writeClient.put<TResponse>(path, payload, config),
       backOffOptions,
     );
     return response.data;
@@ -110,7 +110,7 @@ export async function get<TResponse>(
 ): Promise<TResponse> {
   try {
     const response = await backOff(
-      () => readClient.get<TResponse>(path, config),
+      async () => readClient.get<TResponse>(path, config),
       backOffOptions,
     );
     return response.data;
@@ -126,7 +126,7 @@ export async function del<TResponse>(
 ): Promise<TResponse> {
   try {
     const response = await backOff(
-      () => writeClient.delete<TResponse>(path, config),
+      async () => writeClient.delete<TResponse>(path, config),
       backOffOptions,
     );
     return response.data;
