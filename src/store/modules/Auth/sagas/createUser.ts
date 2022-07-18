@@ -60,8 +60,8 @@ export function* createUserSaga() {
     let localizedError = '';
     if (isApiError(error, 409)) {
       localizedError = t('error.user_exist');
-    } else {
-      localizedError = t('error.general_error');
+    } else if (isApiError(error, 400)) {
+      localizedError = t('errors.validation_error');
     }
     yield put(AuthActions.CREATE_USER.FAILED.create(localizedError));
   }

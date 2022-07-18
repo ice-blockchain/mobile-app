@@ -3,12 +3,29 @@
 import {RequestConfig} from '@api/client/apiClientTypes';
 import {ENV} from '@constants/env';
 import axios, {AxiosInstance} from 'axios';
+import {backOff} from 'exponential-backoff';
 import {Platform} from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 
 import {handleServiceError} from './ApiServiceErrors';
 import {requestInterceptor} from './interceptors/request';
 import {responseInterceptor} from './interceptors/response';
+
+const backOffOptions = {
+  delayFirstAttempt: true,
+  jitter: 'full',
+  numOfAttempts: 25,
+  maxDelay: 1000,
+  startingDelay: 10,
+  timeMultiple: 5,
+  retry: (error: unknown) => {
+    return (
+      axios.isAxiosError(error) &&
+      error.response?.status != null &&
+      error.response?.status >= 500
+    );
+  },
+} as const;
 
 function setupApiClient(clientInstance: AxiosInstance) {
   clientInstance.interceptors.request.use(requestInterceptor.onFulfilled);
@@ -42,7 +59,10 @@ export async function post<TRequest, TResponse>(
   config?: RequestConfig,
 ): Promise<TResponse> {
   try {
-    const response = await writeClient.post<TResponse>(path, payload, config);
+    const response = await backOff(
+      () => writeClient.post<TResponse>(path, payload, config),
+      backOffOptions,
+    );
     return response.data;
   } catch (error) {
     handleServiceError(error);
@@ -56,7 +76,10 @@ export async function patch<TRequest, TResponse>(
   config?: RequestConfig,
 ): Promise<TResponse> {
   try {
-    const response = await writeClient.patch<TResponse>(path, payload, config);
+    const response = await backOff(
+      () => writeClient.patch<TResponse>(path, payload, config),
+      backOffOptions,
+    );
     return response.data;
   } catch (error) {
     handleServiceError(error);
@@ -70,7 +93,10 @@ export async function put<TRequest, TResponse>(
   config?: RequestConfig,
 ): Promise<TResponse> {
   try {
-    const response = await writeClient.put<TResponse>(path, payload, config);
+    const response = await backOff(
+      () => writeClient.put<TResponse>(path, payload, config),
+      backOffOptions,
+    );
     return response.data;
   } catch (error) {
     handleServiceError(error);
@@ -83,7 +109,10 @@ export async function get<TResponse>(
   config?: RequestConfig,
 ): Promise<TResponse> {
   try {
-    const response = await readClient.get<TResponse>(path, config);
+    const response = await backOff(
+      () => readClient.get<TResponse>(path, config),
+      backOffOptions,
+    );
     return response.data;
   } catch (error) {
     handleServiceError(error);
@@ -96,7 +125,10 @@ export async function del<TResponse>(
   config?: RequestConfig,
 ): Promise<TResponse> {
   try {
-    const response = await writeClient.delete<TResponse>(path, config);
+    const response = await backOff(
+      () => writeClient.delete<TResponse>(path, config),
+      backOffOptions,
+    );
     return response.data;
   } catch (error) {
     handleServiceError(error);
