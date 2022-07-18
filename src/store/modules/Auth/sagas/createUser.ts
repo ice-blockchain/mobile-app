@@ -62,6 +62,8 @@ export function* createUserSaga() {
       localizedError = t('error.user_exist');
     } else if (isApiError(error, 400)) {
       localizedError = t('errors.validation_error');
+    } else if (isApiError(error, 404, 'REFERRAL_NOT_FOUND')) {
+      localizedError = t('errors.ref_not_found');
     }
     yield put(AuthActions.CREATE_USER.FAILED.create(localizedError));
   }

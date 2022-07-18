@@ -12,6 +12,7 @@ import {
   usernameSelector,
   usernameValidationErrorSelector,
 } from '@store/modules/Validation/selectors';
+import {t} from '@translations/i18n';
 import {isEmpty} from 'lodash';
 import React, {useEffect, useRef, useState} from 'react';
 import {
@@ -161,7 +162,7 @@ export const UserRegistration = ({}: Props) => {
         amount={2}
         activeIndex={currentPage}
         nextPress={onNextPress}
-        lastPageButtonText={'Complete'}
+        lastPageButtonText={t('button.complete')}
         yesPleasePress={onComplete}
         withError={!!claimError || !!refError}
         isButtonActive={isNextButtonActive}

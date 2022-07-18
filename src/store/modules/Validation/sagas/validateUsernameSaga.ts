@@ -25,7 +25,7 @@ export function* validateUsernameSaga(
   } catch (error) {
     if (isApiError(error, 404, 'USER_NOT_FOUND')) {
       yield put(ValidationActions.USERNAME_VALIDATION.SUCCESS.create(username));
-    } else if (isApiError(error, 400, 'VALIDATION_ERROR')) {
+    } else if (isApiError(error, 400, 'INVALID_USERNAME')) {
       ValidationActions.USERNAME_VALIDATION.FAILED.create(
         t('username.error.invalid_characters'),
       );
