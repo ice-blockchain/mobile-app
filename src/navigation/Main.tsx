@@ -24,8 +24,10 @@ import {NotificationSettings} from '@screens/SettingsFlow/NotificationSettings';
 import {PersonalInformation} from '@screens/SettingsFlow/PersonalInformation';
 import {Settings} from '@screens/SettingsFlow/Settings';
 import {Team} from '@screens/Team';
+import {Tooltip} from '@screens/Tooltip';
 import {WebView} from '@screens/WebView';
-import React from 'react';
+import React, {ReactNode, RefObject} from 'react';
+import {View} from 'react-native';
 
 export type MainTabsParamList = {
   HomeTab: undefined;
@@ -41,6 +43,12 @@ export type MainStackParamList = {
     title?: string;
     subtitle?: string;
     buttons?: ConfirmButton[];
+  };
+  Tooltip: {
+    descriptionPosition: 'above' | 'below';
+    targetRef: RefObject<View>;
+    TargetComponent: ReactNode;
+    DescriptionComponent: ReactNode;
   };
 };
 
@@ -185,6 +193,11 @@ export function MainNavigator() {
         name="Confirm"
         options={modalOptions}
         component={Confirm}
+      />
+      <MainStack.Screen
+        name="Tooltip"
+        options={modalOptions}
+        component={Tooltip}
       />
     </MainStack.Navigator>
   );
