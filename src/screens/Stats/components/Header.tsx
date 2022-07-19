@@ -6,7 +6,7 @@ import {useNavigation} from '@react-navigation/native';
 import {BackButtonArrow} from '@svg/BackButtonIcon';
 import {LogoIconSvg} from '@svg/LogoIcon';
 import {TeamHeaderRefferalsSvg} from '@svg/TeamHeaderRefferals';
-import {translate} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -22,9 +22,7 @@ export const StatsHeader = ({}: StatsHeaderProps) => {
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
       <View>
-        <Text style={styles.titleHeader}>
-          {translate('stats.header_title')}
-        </Text>
+        <Text style={styles.titleHeader}>{t('stats.header_title')}</Text>
         <TouchableOpacity style={styles.backButton} onPress={backPress}>
           <BackButtonArrow />
         </TouchableOpacity>
@@ -34,7 +32,7 @@ export const StatsHeader = ({}: StatsHeaderProps) => {
         <View style={styles.infoPart}>
           <LogoIconSvg color={COLORS.white} width={rem(32)} height={rem(32)} />
           <View style={styles.textContainer}>
-            <Text style={styles.title}>{translate('stats.online')}</Text>
+            <Text style={styles.title}>{t('stats.online')}</Text>
             <View>
               <Text style={styles.textCount}>{'25,141'}</Text>
             </View>
@@ -44,7 +42,7 @@ export const StatsHeader = ({}: StatsHeaderProps) => {
         <View style={styles.infoPart}>
           <TeamHeaderRefferalsSvg />
           <View style={styles.textContainer}>
-            <Text style={styles.title}>{translate('stats.total')}</Text>
+            <Text style={styles.title}>{t('stats.total')}</Text>
             <Text style={styles.textCount}>{'139,205'}</Text>
           </View>
         </View>

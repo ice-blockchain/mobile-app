@@ -3,7 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {StatsGraphUserSvg} from '@svg/StatsGraphUser';
-import {translate} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import {round} from 'lodash';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -79,7 +79,7 @@ export const StatsGraph = ({}: StatsGraphProps) => {
   return (
     <View>
       <View style={styles.titleContainer}>
-        <Text style={styles.title}>{translate('stats.user_growth')}</Text>
+        <Text style={styles.title}>{t('stats.user_growth')}</Text>
         <Text style={styles.period}>24 Mar - 31 Mar</Text>
       </View>
 

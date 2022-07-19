@@ -9,7 +9,7 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {TopCountriesItem} from '@screens/Stats/components/TopCountriesItem';
 import {topFiveCoutriesSelector} from '@store/modules/Statistics/selectors';
 import {ArrowRightStatsSvg} from '@svg/ArrowRightStats';
-import {translate} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import * as React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useSelector} from 'react-redux';
@@ -25,10 +25,8 @@ export const TopCountries = ({}: TopCountriesProps) => {
   const topFiveCountries = useSelector(topFiveCoutriesSelector);
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{translate('stats.top_countries')}</Text>
-      <Text style={styles.description}>
-        {translate('stats.most_active_countries')}
-      </Text>
+      <Text style={styles.title}>{t('stats.top_countries')}</Text>
+      <Text style={styles.description}>{t('stats.most_active_countries')}</Text>
 
       <View style={[styles.countries, commonStyles.shadow]}>
         {topFiveCountries.map(country => (
@@ -42,7 +40,7 @@ export const TopCountries = ({}: TopCountriesProps) => {
 
         <TouchableOpacity style={styles.seeAllCountries} onPress={onPress}>
           <Text style={styles.seeAllCountriesText}>
-            {translate('stats.see_all_countries')}
+            {t('stats.see_all_countries')}
           </Text>
           <ArrowRightStatsSvg />
         </TouchableOpacity>

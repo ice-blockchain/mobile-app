@@ -9,7 +9,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {TopMinersItem} from '@screens/Stats/components/TopMinersItem';
 import {ArrowRightStatsSvg} from '@svg/ArrowRightStats';
-import {translate} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import * as React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -50,10 +50,8 @@ export const TopMiners = ({}: TopMinersProps) => {
   const onPress = () => navigation.navigate('TopMiners');
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{translate('stats.top_miners')}</Text>
-      <Text style={styles.description}>
-        {translate('stats.most_active_users')}
-      </Text>
+      <Text style={styles.title}>{t('stats.top_miners')}</Text>
+      <Text style={styles.description}>{t('stats.most_active_users')}</Text>
 
       <View style={[styles.users, commonStyles.shadow]}>
         {topMiners.map(miner => (
@@ -67,7 +65,7 @@ export const TopMiners = ({}: TopMinersProps) => {
 
         <TouchableOpacity style={styles.seeAllUsers} onPress={onPress}>
           <Text style={styles.seeAllUsersText}>
-            {translate('stats.see_all_active_users')}
+            {t('stats.see_all_active_users')}
           </Text>
           <ArrowRightStatsSvg />
         </TouchableOpacity>
