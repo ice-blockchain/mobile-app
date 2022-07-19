@@ -2,9 +2,14 @@
 
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {commonStyles} from '@constants/styles';
+import {Images} from '@images';
+import {HomeTabStackParamList} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {TopMinersItem} from '@screens/Stats/components/TopMinersItem';
 import {ArrowRightStatsSvg} from '@svg/ArrowRightStats';
 import {translate} from '@translations/i18n';
-import {numberWithCommas} from '@utils/number';
 import * as React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -14,7 +19,7 @@ interface TopMinersProps {}
 const topMiners = [
   {
     nickname: 'iulianflyby',
-    photoUrl: '',
+    photoUrl: Images.topMiners.yoda,
     ice: 214114114,
   },
   {
@@ -24,7 +29,7 @@ const topMiners = [
   },
   {
     nickname: 'andremary',
-    photoUrl: '',
+    photoUrl: Images.topMiners.monkey,
     ice: 94541009,
   },
   {
@@ -40,6 +45,9 @@ const topMiners = [
 ];
 
 export const TopMiners = ({}: TopMinersProps) => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<HomeTabStackParamList>>();
+  const onPress = () => navigation.navigate('TopMiners');
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{translate('stats.top_miners')}</Text>
@@ -47,18 +55,17 @@ export const TopMiners = ({}: TopMinersProps) => {
         {translate('stats.most_active_users')}
       </Text>
 
-      <View style={styles.users}>
-        {topMiners.map(v => (
-          <View key={v.nickname} style={styles.user}>
-            <View style={styles.userInfo}>
-              <View style={styles.icon} />
-              <Text style={styles.nickname}>{v.nickname}</Text>
-            </View>
-            <Text style={styles.ice}>{`${numberWithCommas(v.ice)} ice`}</Text>
-          </View>
+      <View style={[styles.users, commonStyles.shadow]}>
+        {topMiners.map(miner => (
+          <TopMinersItem
+            key={miner.nickname}
+            miners={miner.ice}
+            nickname={miner.nickname}
+            photo={miner.photoUrl}
+          />
         ))}
 
-        <TouchableOpacity style={styles.seeAllUsers}>
+        <TouchableOpacity style={styles.seeAllUsers} onPress={onPress}>
           <Text style={styles.seeAllUsersText}>
             {translate('stats.see_all_active_users')}
           </Text>
@@ -89,45 +96,6 @@ const styles = StyleSheet.create({
   users: {
     backgroundColor: COLORS.white,
     borderRadius: 16,
-
-    shadowColor: COLORS.mariner,
-    shadowOffset: {
-      width: 1,
-      height: 2,
-    },
-    shadowRadius: 2,
-    shadowOpacity: 0.2,
-    elevation: 2,
-  },
-  user: {
-    flexDirection: 'row',
-    paddingHorizontal: rem(24),
-    alignItems: 'center',
-    paddingVertical: rem(13),
-    justifyContent: 'space-between',
-    borderBottomWidth: 1,
-    borderBottomColor: '#F0F4FB',
-  },
-  icon: {
-    width: rem(29),
-    height: rem(29),
-    borderRadius: 9,
-    backgroundColor: COLORS.gullGray,
-  },
-  userInfo: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  nickname: {
-    fontSize: font(12),
-    color: COLORS.darkBlue,
-    fontFamily: FONTS.primary.bold,
-    marginLeft: rem(8),
-  },
-  ice: {
-    fontSize: font(12),
-    color: COLORS.greyText,
-    fontFamily: FONTS.primary.semibold,
   },
   seeAllUsers: {
     paddingHorizontal: rem(26),

@@ -5,22 +5,20 @@ import {StatisticsActions} from '@store/modules/Statistics/actions';
 import {Country} from '@store/modules/Statistics/reducer';
 import {put} from 'redux-saga/effects';
 
-const actionCreator = StatisticsActions.GET_TOP_COUNTRIES.START.create;
+const actionCreator = StatisticsActions.SEARCH_COUNTRIES.START.create;
 
-export function* getTopCountriesSaga(action: ReturnType<typeof actionCreator>) {
+export function* searchCountriesSaga(action: ReturnType<typeof actionCreator>) {
   try {
-    const {query, limit, offset} = action.payload;
+    const {query} = action.payload;
     const response: Country[] = yield Api.statistics.getTopCountries({
       query,
-      limit,
-      offset,
     });
-    yield put(StatisticsActions.GET_TOP_COUNTRIES.SUCCESS.create(response));
+    yield put(StatisticsActions.SEARCH_COUNTRIES.SUCCESS.create(response));
   } catch (error) {
     let errorMessage = 'Failed';
     if (error instanceof Error) {
       errorMessage = error.message;
     }
-    yield put(StatisticsActions.GET_TOP_COUNTRIES.FAILED.create(errorMessage));
+    yield put(StatisticsActions.SEARCH_COUNTRIES.FAILED.create(errorMessage));
   }
 }

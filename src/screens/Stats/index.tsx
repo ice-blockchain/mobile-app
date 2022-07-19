@@ -4,12 +4,19 @@ import {StatsGraph} from '@screens/Stats/components/Graph';
 import {StatsHeader} from '@screens/Stats/components/Header';
 import {TopCountries} from '@screens/Stats/components/TopCountries';
 import {TopMiners} from '@screens/Stats/components/TopMiners';
-import React from 'react';
+import {StatisticsActions} from '@store/modules/Statistics/actions';
+import React, {useEffect} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
+import {useDispatch} from 'react-redux';
 
 interface StatsScreenProps {}
 
 export const StatsScreen = ({}: StatsScreenProps) => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(StatisticsActions.GET_TOP_COUNTRIES.START.create(''));
+  }, [dispatch]);
   return (
     <View style={styles.container}>
       <StatsHeader />
