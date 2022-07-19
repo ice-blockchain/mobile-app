@@ -10,6 +10,7 @@ import {
   usernameSelector,
 } from '@store/modules/Validation/selectors';
 import {t} from '@translations/i18n';
+import {AxiosError} from 'axios';
 import {sha256} from 'react-native-sha256';
 import {call, put, select} from 'redux-saga/effects';
 
@@ -55,8 +56,22 @@ export function* createUserSaga() {
     yield put(AuthActions.CREATE_USER.SUCCESS.create(createdUser));
   } catch (error) {
     let localizedError = '';
-    if (isApiError(error, 409)) {
-      localizedError = t('error.user_exist');
+    if (isApiError(error, 409, 'CONFLICT_WITH_ANOTHER_USER')) {
+      const apiError = error as AxiosError;
+      const {response} = apiError;
+      if (
+        response?.data &&
+        response?.data.data &&
+        response?.data.data.field === 'username'
+      ) {
+        localizedError = t('error.user_exist');
+      } else if (
+        response?.data &&
+        response?.data.data &&
+        response?.data.data.field === 'id'
+      ) {
+        yield put(AuthActions.FETCH_USER_PROFILE.START.create());
+      }
     } else if (isApiError(error, 400)) {
       localizedError = t('errors.validation_error');
     } else if (isApiError(error, 404, 'REFERRAL_NOT_FOUND')) {
