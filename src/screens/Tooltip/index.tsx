@@ -7,7 +7,7 @@ import React from 'react';
 import {useState} from 'react';
 import {useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {rem} from 'rn-units';
+import {rem, screenHeight} from 'rn-units';
 
 const DESCRIPTION_OFFSET = rem(10);
 
@@ -29,8 +29,8 @@ export const Tooltip = () => {
   } | null>(null);
 
   useEffect(() => {
-    targetRef.current?.measure((x, y, width, height) => {
-      setTargetData({x, y, width, height});
+    targetRef.current?.measure((_x, _y, width, height, pageX, pageY) => {
+      setTargetData({x: pageX, y: pageY, width, height});
     });
   }, [targetRef]);
 
@@ -38,7 +38,7 @@ export const Tooltip = () => {
     <View style={styles.container}>
       {targetData && (
         <View style={[styles.target, {top: targetData.y, left: targetData.x}]}>
-          {TargetComponent}
+          {TargetComponent()}
         </View>
       )}
       {targetData && (
@@ -50,10 +50,10 @@ export const Tooltip = () => {
                   top: targetData.y + targetData.height + DESCRIPTION_OFFSET,
                 }
               : {
-                  bottom: targetData.y + DESCRIPTION_OFFSET,
+                  bottom: screenHeight - targetData.y + DESCRIPTION_OFFSET,
                 },
           ]}>
-          {DescriptionComponent}
+          {DescriptionComponent()}
         </View>
       )}
     </View>
@@ -70,5 +70,7 @@ const styles = StyleSheet.create({
   },
   description: {
     position: 'absolute',
+    left: 0,
+    right: 0,
   },
 });

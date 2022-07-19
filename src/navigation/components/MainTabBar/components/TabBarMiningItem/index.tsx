@@ -3,64 +3,30 @@
 import {Images} from '@images';
 import {LottieAnimations} from '@lottie';
 import {MAIN_TAB_BAR_HEIGHT} from '@navigation/components/MainTabBar';
+import {useFadeLottie} from '@navigation/components/MainTabBar/components/TabBarMiningItem/hooks/useFadeLottie';
+import {MainStackParamList} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {MiningInactiveIcon} from '@svg/TabBar/MiningInactiveIcon';
 import LottieView from 'lottie-react-native';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {
   Animated,
-  AppState,
   ImageBackground,
   StyleSheet,
   TouchableOpacity,
+  View,
 } from 'react-native';
 import {rem} from 'rn-units';
 
 export const TabBarMiningItem = () => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
   const [miningActive, setMiningActive] = useState(false);
-  const staticIconFadeAnim = useRef(new Animated.Value(1)).current;
-  const lottieFadeAnim = useRef(new Animated.Value(1)).current;
+
   const lottieRef = useRef<LottieView>(null);
-
-  /**
-   * Fade in / out of inactive icon overlay above the mining animation
-   * If the mining is not active -> stop the animation
-   */
-  useEffect(() => {
-    Animated.parallel([
-      Animated.timing(lottieFadeAnim, {
-        toValue: miningActive ? 1 : 0,
-        duration: 300,
-        useNativeDriver: true,
-      }),
-      Animated.timing(staticIconFadeAnim, {
-        toValue: miningActive ? 0 : 1,
-        duration: 300,
-        useNativeDriver: true,
-      }),
-    ]).start(({finished}) => {
-      if (finished) {
-        if (miningActive) {
-          lottieRef.current?.play();
-        } else {
-          lottieRef.current?.pause();
-        }
-      }
-    });
-  }, [miningActive, staticIconFadeAnim, lottieFadeAnim]);
-
-  /**
-   * Lottie stops playing if the app goes background so we resume it manually
-   */
-  useEffect(() => {
-    if (miningActive) {
-      const listener = AppState.addEventListener('change', nextAppState => {
-        if (nextAppState === 'active') {
-          lottieRef.current?.play();
-        }
-      });
-      return listener.remove;
-    }
-  }, [miningActive]);
+  const lottieWrapperRef = useRef<View>(null);
+  const {animatedOpacity} = useFadeLottie(miningActive, lottieRef);
 
   return (
     <ImageBackground
@@ -70,8 +36,33 @@ export const TabBarMiningItem = () => {
         accessibilityRole="button"
         style={styles.button}
         activeOpacity={1}
-        onPress={() => setMiningActive(state => !state)}>
-        <Animated.View style={{opacity: lottieFadeAnim}}>
+        onPress={() => {
+          if (miningActive) {
+            navigation.navigate('Tooltip', {
+              descriptionPosition: 'above',
+              targetRef: lottieWrapperRef,
+              TargetComponent: () => (
+                <LottieView
+                  style={styles.animation}
+                  source={LottieAnimations.minings}
+                  autoPlay={true}
+                  loop={true}
+                  ref={lottieRef}
+                />
+              ),
+              DescriptionComponent: () => (
+                <View
+                  style={{backgroundColor: 'red', width: '100', height: 100}}
+                />
+              ),
+            });
+          } else {
+            setMiningActive(state => !state);
+          }
+        }}>
+        <Animated.View
+          style={{opacity: animatedOpacity}}
+          ref={lottieWrapperRef}>
           <LottieView
             style={styles.animation}
             source={LottieAnimations.minings}
@@ -81,7 +72,15 @@ export const TabBarMiningItem = () => {
           />
         </Animated.View>
         <Animated.View
-          style={[styles.inactiveIcon, {opacity: staticIconFadeAnim}]}>
+          style={[
+            styles.inactiveIcon,
+            {
+              opacity: animatedOpacity.interpolate({
+                inputRange: [0, 1],
+                outputRange: [1, 0],
+              }),
+            },
+          ]}>
           <MiningInactiveIcon size={rem(79)} />
         </Animated.View>
       </TouchableOpacity>
