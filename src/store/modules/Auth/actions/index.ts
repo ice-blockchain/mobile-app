@@ -81,7 +81,7 @@ const SET_CODE_VERIFIED = createAction('SET_CODE_VERIFIED', {
 });
 
 const DELETE_ACCOUNT = createAction('DELETE_ACCOUNT', {
-  START: (userId: string) => ({userId}),
+  START: true,
   SUCCESS: true,
   FAILED: (errorMessage: string) => ({
     errorMessage,
