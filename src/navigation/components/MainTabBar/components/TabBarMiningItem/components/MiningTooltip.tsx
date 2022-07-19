@@ -8,7 +8,7 @@ import {useNavigation} from '@react-navigation/native';
 import {CloseIconSvg} from '@svg/CloseIcon';
 import {StakeIcon} from '@svg/StakeIcon';
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
 export const MiningTooltip = ({}) => {
@@ -16,27 +16,51 @@ export const MiningTooltip = ({}) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <View style={styles.headerCell}>
+        <View style={styles.dataCell}>
           <Text style={styles.headerLabelText}>TIME LEFT</Text>
           <Text style={styles.headerValueText}>21h14m3s</Text>
         </View>
         <View style={styles.headerSeparator} />
-        <View style={[styles.headerCell, styles.headerCell_right]}>
+        <View style={[styles.dataCell, styles.dataCell_right]}>
           <Text style={styles.headerLabelText}>MINING RATE</Text>
           <Text style={styles.headerValueText}>+29.99 ice/hr</Text>
         </View>
       </View>
-      <Text style={styles.titleText}>Boost your mining rate</Text>
-      <Text style={styles.noteText}>
-        Stake your mining rewards for up to 5 years and increase your mining
-        rate by up to 500%.
-      </Text>
-      <PrimaryButton
-        onPress={() => {}}
-        text={'Stake Now!'}
-        style={styles.button}
-        icon={<StakeIcon />}
-      />
+      {false ? (
+        <>
+          <Text style={styles.titleText}>Boost your mining rate</Text>
+          <Text style={styles.noteText}>
+            Stake your mining rewards for up to 5 years and increase your mining
+            rate by up to 500%.
+          </Text>
+          <PrimaryButton
+            onPress={() => {}}
+            text={'Stake Now!'}
+            style={styles.button}
+            icon={<StakeIcon />}
+          />
+        </>
+      ) : (
+        <>
+          <Image
+            style={styles.stakeManImage}
+            source={require('../assets/images/stakeMan.png')}
+          />
+          <Text style={styles.bonusText}>
+            STAKING BONUS: <Text style={styles.bonusText_value}>+200%</Text>
+          </Text>
+          <View style={styles.footer}>
+            <View style={styles.dataCell}>
+              <Text style={styles.headerLabelText}>STAKED PERIOD</Text>
+              <Text style={styles.headerValueText}>2 years</Text>
+            </View>
+            <View style={[styles.dataCell, styles.dataCell_right]}>
+              <Text style={styles.headerLabelText}>STAKED BALANCE</Text>
+              <Text style={styles.headerValueText}>241,241 ice</Text>
+            </View>
+          </View>
+        </>
+      )}
       <TouchableOpacity
         hitSlop={SMALL_BUTTON_HIT_SLOP}
         style={styles.closeButton}
@@ -52,17 +76,17 @@ const styles = StyleSheet.create({
     marginHorizontal: SCREEN_SIDE_OFFSET,
     backgroundColor: COLORS.darkBlue,
     borderRadius: rem(20),
-    paddingVertical: rem(24),
+    paddingTop: rem(24),
     paddingHorizontal: rem(25),
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
   },
-  headerCell: {
+  dataCell: {
     flex: 1,
   },
-  headerCell_right: {
+  dataCell_right: {
     alignItems: 'flex-end',
   },
   headerSeparator: {
@@ -105,6 +129,7 @@ const styles = StyleSheet.create({
     height: rem(41),
     alignSelf: 'center',
     paddingLeft: rem(14),
+    marginBottom: rem(24),
   },
   closeButton: {
     position: 'absolute',
@@ -116,5 +141,30 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  footer: {
+    flexDirection: 'row',
+    position: 'absolute',
+    left: rem(25),
+    right: rem(25),
+    bottom: rem(24),
+  },
+  stakeManImage: {
+    width: rem(118),
+    height: rem(140),
+    marginTop: rem(8),
+    alignSelf: 'center',
+  },
+  bonusText: {
+    fontSize: font(10),
+    lineHeight: font(12),
+    color: COLORS.white,
+    fontFamily: FONTS.primary.regular,
+    textAlign: 'center',
+    marginTop: rem(10),
+    marginBottom: rem(6),
+  },
+  bonusText_value: {
+    color: COLORS.shamrock,
   },
 });
