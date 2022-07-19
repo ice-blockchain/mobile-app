@@ -61,5 +61,5 @@ export interface DeviceMetadata {
 
 export interface DeviceId {
   userId: string;
-  deviceUniqueId: string | null;
+  deviceUniqueId: string;
 }

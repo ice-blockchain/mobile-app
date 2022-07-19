@@ -13,7 +13,6 @@ import {
   usernameValidationErrorSelector,
 } from '@store/modules/Validation/selectors';
 import {t} from '@translations/i18n';
-import {isEmpty} from 'lodash';
 import React, {useEffect, useRef, useState} from 'react';
 import {
   Keyboard,
@@ -64,13 +63,13 @@ export const UserRegistration = ({}: Props) => {
   }, [refValidationError]);
 
   const wipeErrors = () => {
-    if (!isEmpty(claimValidationError) || !isEmpty(refValidationError)) {
+    if (claimValidationError || refValidationError) {
       dispatch(ValidationActions.RESET_VALIDATION_ERRORS.STATE.create());
     }
-    if (!isEmpty(claimError)) {
+    if (claimError) {
       setClaimError('');
     }
-    if (!isEmpty(refError)) {
+    if (refError) {
       setRefError('');
     }
   };

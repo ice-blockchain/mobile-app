@@ -3,25 +3,27 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {profileSelector} from '@store/modules/Auth/selectors';
 import {BellSvg} from '@svg/Bell';
 import {ChatBubblesSvg} from '@svg/ChatBubbles';
 import {StatsSvg} from '@svg/Stats';
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {useSelector} from 'react-redux';
 import {font, rem} from 'rn-units';
 
 interface HomeHeaderProps {}
 
 export const HomeHeader = ({}: HomeHeaderProps) => {
+  const profile = useSelector(profileSelector);
   return (
     <View style={styles.container}>
       <View style={styles.info}>
-        {/** image */}
         <View style={styles.image} />
         <View>
+          {/** TODO: remove hardcoded greetings */}
           <Text style={styles.greetings}>{'Good evening,'}</Text>
-          {/** nick */}
-          <Text style={styles.nick}>{'@elementalmaster'}</Text>
+          {profile && <Text style={styles.nick}>{`@${profile.username}`}</Text>}
         </View>
       </View>
 

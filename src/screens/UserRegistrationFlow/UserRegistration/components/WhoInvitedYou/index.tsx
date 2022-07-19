@@ -66,11 +66,7 @@ export const WhoInvitedYou = ({
           <Text style={styles.dontHaveCodeText}>
             {translate('whoInvitedYou.dontHaveInvitationCode')}
           </Text>
-
-          <TouchableOpacity
-            onPress={() => {
-              onSkip();
-            }}>
+          <TouchableOpacity onPress={onSkip}>
             <Text style={styles.tapHere}>
               {translate('whoInvitedYou.tapHere')}
             </Text>
