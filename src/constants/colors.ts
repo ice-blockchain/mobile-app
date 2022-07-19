@@ -33,4 +33,5 @@ export const COLORS = {
   scorpion: '#575757',
   cadetBlue: '#A6B0C2',
   white02opacity: 'rgba(255,255,255, .2)',
+  wildSand: '#f5f5f5',
 };

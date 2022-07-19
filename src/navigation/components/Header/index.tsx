@@ -19,6 +19,7 @@ type Props = {
   renderRightButtons?: () => ReactNode;
   containerStyle?: StyleProp<ViewStyle>;
   titlePreset?: 'small' | 'big';
+  icon?: ReactNode;
 };
 
 const HEADER_HEIGHT = rem(54);
@@ -36,6 +37,7 @@ export const Header = memo(
     titleOffset = rem(20),
     containerStyle,
     titlePreset = 'big',
+    icon,
   }: Props) => {
     const {top: topInset} = useSafeAreaInsets();
     const dynamicStyle = useMemo(
@@ -60,15 +62,17 @@ export const Header = memo(
         <Animated.View
           style={[dynamicStyle.container, styles.container, containerStyle]}>
           <View style={[styles.body]}>
-            <Text
-              style={[
-                styles.titleText,
-                styles[`titleText_${titlePreset}`],
-                dynamicStyle.titleText,
-              ]}
-              numberOfLines={2}>
-              {title}
-            </Text>
+            <View style={styles.titleContainer}>
+              {icon ? icon : null}
+              <Text
+                style={[
+                  styles[`titleText_${titlePreset}`],
+                  dynamicStyle.titleText,
+                ]}
+                numberOfLines={2}>
+                {title}
+              </Text>
+            </View>
             <BackButton containerStyle={styles.backButton} color={color} />
             {Boolean(renderRightButtons) && (
               <View style={styles.rightButtons}>{renderRightButtons?.()}</View>
@@ -94,9 +98,12 @@ const styles = StyleSheet.create({
     marginHorizontal: SCREEN_SIDE_OFFSET,
     height: HEADER_HEIGHT,
   },
-  titleText: {
+  titleContainer: {
     flex: 1,
-    textAlign: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
   },
   titleText_big: {
     fontFamily: FONTS.primary.black,

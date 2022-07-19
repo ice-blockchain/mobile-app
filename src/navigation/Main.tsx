@@ -23,7 +23,10 @@ import {LanguageSettings} from '@screens/SettingsFlow/LanguageSettings';
 import {NotificationSettings} from '@screens/SettingsFlow/NotificationSettings';
 import {PersonalInformation} from '@screens/SettingsFlow/PersonalInformation';
 import {Settings} from '@screens/SettingsFlow/Settings';
+import {StatsScreen} from '@screens/Stats';
 import {Team} from '@screens/Team';
+import {TopCountriesScreen} from '@screens/TopCountries';
+import {TopMinersScreen} from '@screens/TopMiners';
 import {WebView} from '@screens/WebView';
 import React from 'react';
 
@@ -48,6 +51,9 @@ export type HomeTabStackParamList = {
   Home: undefined;
   Profile: undefined;
   MyRoles: undefined;
+  Stats: undefined;
+  TopCountries: undefined;
+  TopMiners: undefined;
   MyBadges: {category?: BadgeCategory} | undefined;
 };
 
@@ -98,6 +104,9 @@ const HomeTabStackNavigator = () => (
     <HomeTabStack.Screen name="Home" component={Home} />
     <HomeTabStack.Screen name="Profile" component={Profile} />
     <HomeTabStack.Screen name="MyRoles" component={MyRoles} />
+    <HomeTabStack.Screen name="Stats" component={StatsScreen} />
+    <HomeTabStack.Screen name="TopCountries" component={TopCountriesScreen} />
+    <HomeTabStack.Screen name="TopMiners" component={TopMinersScreen} />
     <HomeTabStack.Screen
       name="MyBadges"
       component={MyBadges}

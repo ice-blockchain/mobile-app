@@ -20,11 +20,17 @@ type SearchProps = {
   style?: StyleProp<ViewStyle | FlexStyle>;
   placeholder?: string;
   onChangeText: (value: string) => void;
+  placeholderTextColor?: string;
+  iconColor?: string;
 };
 
 export function Search({
   style,
   placeholder = 'team.header.search_placeholder',
+  iconColor,
+  placeholderTextColor,
+  onChangeText,
+  value,
   ...rest
 }: SearchProps): React.ReactElement {
   const textInputRef: React.RefObject<TextInput> = React.createRef();
@@ -33,13 +39,15 @@ export function Search({
   return (
     <View style={[styles.wrapper, style]}>
       <Touchable onPress={focus} style={styles.btn}>
-        <SearchIconSvg />
+        <SearchIconSvg fill={iconColor} />
       </Touchable>
       <TextInput
         ref={textInputRef}
         style={[styles.input]}
-        placeholderTextColor={COLORS.heather}
+        placeholderTextColor={placeholderTextColor ?? COLORS.heather}
         placeholder={placeholder ? t(placeholder) : ''}
+        onChangeText={onChangeText}
+        value={value}
         {...rest}
       />
     </View>

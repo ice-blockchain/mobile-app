@@ -6,7 +6,14 @@ import {CountryStatistics} from '@api/statistics/types';
 /**
  * Returns the paginated view of users per country.
  */
+type Params = {
+  query: string;
+  offset?: number;
+  limit?: number;
+};
 
-export function getTopCountries() {
-  return get<CountryStatistics>('/user-statistics/top-countries');
+export function getTopCountries({query = '', offset = 0, limit = 10}: Params) {
+  return get<CountryStatistics>(
+    `/user-statistics/top-countries?keyword=${query}&limit=${limit}&offset=${offset}`,
+  );
 }

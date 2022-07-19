@@ -3,6 +3,9 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {HomeTabStackParamList} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {BellSvg} from '@svg/Bell';
 import {ChatBubblesSvg} from '@svg/ChatBubbles';
 import {StatsSvg} from '@svg/Stats';
@@ -13,6 +16,12 @@ import {font, rem} from 'rn-units';
 interface HomeHeaderProps {}
 
 export const HomeHeader = ({}: HomeHeaderProps) => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<HomeTabStackParamList>>();
+  const statsPress = () => {
+    navigation.navigate('Stats');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.info}>
@@ -29,7 +38,7 @@ export const HomeHeader = ({}: HomeHeaderProps) => {
         <TouchableOpacity style={styles.icon}>
           <BellSvg />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.icon}>
+        <TouchableOpacity onPress={statsPress} style={styles.icon}>
           <StatsSvg />
         </TouchableOpacity>
         <TouchableOpacity style={styles.icon}>

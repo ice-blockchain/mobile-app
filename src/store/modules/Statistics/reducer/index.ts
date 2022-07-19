@@ -13,15 +13,18 @@ export type Country = {
 
 export interface State {
   topCountries: Country[];
+  searchedCountries: Country[];
 }
 
 type Actions = ReturnType<
   | typeof StatisticsActions.GET_TOP_COUNTRIES.SUCCESS.create
+  | typeof StatisticsActions.SEARCH_COUNTRIES.SUCCESS.create
   | typeof AuthActions.SIGN_OUT.SUCCESS.create
 >;
 
 const INITIAL_STATE: State = {
   topCountries: [],
+  searchedCountries: [],
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -29,6 +32,9 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
     switch (action.type) {
       case StatisticsActions.GET_TOP_COUNTRIES.SUCCESS.type:
         draft.topCountries = action.payload.topCountries;
+        break;
+      case StatisticsActions.SEARCH_COUNTRIES.SUCCESS.type:
+        draft.searchedCountries = action.payload.searchedCountries;
         break;
       case AuthActions.SIGN_OUT.SUCCESS.type: {
         return {
