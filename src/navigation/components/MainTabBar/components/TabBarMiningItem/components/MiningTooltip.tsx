@@ -3,13 +3,16 @@
 import {PrimaryButton} from '@components/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
-import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {SCREEN_SIDE_OFFSET, SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
+import {useNavigation} from '@react-navigation/native';
+import {CloseIconSvg} from '@svg/CloseIcon';
 import {StakeIcon} from '@svg/StakeIcon';
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
 export const MiningTooltip = ({}) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -34,6 +37,12 @@ export const MiningTooltip = ({}) => {
         style={styles.button}
         icon={<StakeIcon />}
       />
+      <TouchableOpacity
+        hitSlop={SMALL_BUTTON_HIT_SLOP}
+        style={styles.closeButton}
+        onPress={navigation.goBack}>
+        <CloseIconSvg fill={COLORS.darkBlue} />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -96,5 +105,16 @@ const styles = StyleSheet.create({
     height: rem(41),
     alignSelf: 'center',
     paddingLeft: rem(14),
+  },
+  closeButton: {
+    position: 'absolute',
+    top: -rem(5),
+    right: -rem(5),
+    width: rem(22),
+    height: rem(22),
+    borderRadius: rem(11),
+    backgroundColor: COLORS.white,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
