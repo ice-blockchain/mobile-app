@@ -36,4 +36,8 @@ export const Images = {
     confirmCode: require('./phone/confirmCode.png'),
     confirmPhone: require('./phone/confirmPhone.png'),
   },
+  topMiners: {
+    monkey: require('./topMiners/monkey.jpeg'),
+    yoda: require('./topMiners/yoda.png'),
+  },
 } as const;
