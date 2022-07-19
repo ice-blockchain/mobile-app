@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Images} from '@images';
-import {LottieAnimations} from '@lottie';
 import {MAIN_TAB_BAR_HEIGHT} from '@navigation/components/MainTabBar';
+import {MiningAnimation} from '@navigation/components/MainTabBar/components/TabBarMiningItem/components/MiningAnimation';
+import {MiningTooltip} from '@navigation/components/MainTabBar/components/TabBarMiningItem/components/MiningTooltip';
 import {useFadeLottie} from '@navigation/components/MainTabBar/components/TabBarMiningItem/hooks/useFadeLottie';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -41,20 +42,10 @@ export const TabBarMiningItem = () => {
             navigation.navigate('Tooltip', {
               descriptionPosition: 'above',
               targetRef: lottieWrapperRef,
-              TargetComponent: () => (
-                <LottieView
-                  style={styles.animation}
-                  source={LottieAnimations.minings}
-                  autoPlay={true}
-                  loop={true}
-                  ref={lottieRef}
-                />
-              ),
-              DescriptionComponent: () => (
-                <View
-                  style={{backgroundColor: 'red', width: '100', height: 100}}
-                />
-              ),
+              descriptionOffset: rem(30),
+              targetCircleSize: rem(92),
+              TargetComponent: () => <MiningAnimation />,
+              DescriptionComponent: () => <MiningTooltip />,
             });
           } else {
             setMiningActive(state => !state);
@@ -63,13 +54,7 @@ export const TabBarMiningItem = () => {
         <Animated.View
           style={{opacity: animatedOpacity}}
           ref={lottieWrapperRef}>
-          <LottieView
-            style={styles.animation}
-            source={LottieAnimations.minings}
-            autoPlay={true}
-            loop={true}
-            ref={lottieRef}
-          />
+          <MiningAnimation />
         </Animated.View>
         <Animated.View
           style={[
@@ -102,10 +87,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flex: 1,
-  },
-  animation: {
-    width: rem(67),
-    height: rem(67),
   },
   inactiveIcon: {
     position: 'absolute',

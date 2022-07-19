@@ -76,15 +76,10 @@ const styles = StyleSheet.create({
     marginTop: rem(25),
     width: rem(253),
     height: rem(55),
-    borderRadius: 11,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
   },
   buttonText: {
     fontFamily: FONTS.primary.black,
     fontSize: font(18),
     lineHeight: rem(25),
-    marginLeft: rem(10),
   },
 });

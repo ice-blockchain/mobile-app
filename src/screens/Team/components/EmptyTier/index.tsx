@@ -78,16 +78,11 @@ const styles = StyleSheet.create({
     width: rem(253),
     height: rem(55),
     backgroundColor: COLORS.primary,
-    borderRadius: 11,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
   },
   text: {
     fontFamily: FONTS.primary.black,
     color: COLORS.white,
     fontSize: font(18),
     lineHeight: rem(21.6),
-    marginLeft: rem(10),
   },
 });

@@ -26,7 +26,7 @@ import {Settings} from '@screens/SettingsFlow/Settings';
 import {Team} from '@screens/Team';
 import {Tooltip} from '@screens/Tooltip';
 import {WebView} from '@screens/WebView';
-import React, {ReactNode, RefObject} from 'react';
+import React, {ComponentType, RefObject} from 'react';
 import {View} from 'react-native';
 
 export type MainTabsParamList = {
@@ -47,8 +47,10 @@ export type MainStackParamList = {
   Tooltip: {
     descriptionPosition: 'above' | 'below';
     targetRef: RefObject<View>;
-    TargetComponent: ReactNode;
-    DescriptionComponent: ReactNode;
+    TargetComponent: ComponentType<unknown>;
+    DescriptionComponent: ComponentType<unknown>;
+    targetCircleSize?: number;
+    descriptionOffset?: number;
   };
 };
 

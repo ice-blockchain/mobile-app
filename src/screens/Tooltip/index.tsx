@@ -9,8 +9,6 @@ import {useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem, screenHeight} from 'rn-units';
 
-const DESCRIPTION_OFFSET = rem(10);
-
 export const Tooltip = () => {
   const {
     params: {
@@ -18,6 +16,8 @@ export const Tooltip = () => {
       targetRef,
       TargetComponent,
       DescriptionComponent,
+      targetCircleSize,
+      descriptionOffset = rem(20),
     },
   } = useRoute<RouteProp<MainStackParamList, 'Tooltip'>>();
 
@@ -37,8 +37,24 @@ export const Tooltip = () => {
   return (
     <View style={styles.container}>
       {targetData && (
-        <View style={[styles.target, {top: targetData.y, left: targetData.x}]}>
-          {TargetComponent()}
+        <View
+          style={[
+            styles.target,
+            {top: targetData.y, left: targetData.x, width: targetData.width},
+          ]}>
+          {targetCircleSize && (
+            <View
+              style={[
+                styles.targetCircle,
+                {
+                  width: rem(targetCircleSize),
+                  height: rem(targetCircleSize),
+                  borderRadius: rem(targetCircleSize) / 2,
+                },
+              ]}
+            />
+          )}
+          <TargetComponent />
         </View>
       )}
       {targetData && (
@@ -47,13 +63,13 @@ export const Tooltip = () => {
             styles.description,
             descriptionPosition === 'below'
               ? {
-                  top: targetData.y + targetData.height + DESCRIPTION_OFFSET,
+                  top: targetData.y + targetData.height + descriptionOffset,
                 }
               : {
-                  bottom: screenHeight - targetData.y + DESCRIPTION_OFFSET,
+                  bottom: screenHeight - targetData.y + descriptionOffset,
                 },
           ]}>
-          {DescriptionComponent()}
+          <DescriptionComponent />
         </View>
       )}
     </View>
@@ -67,6 +83,12 @@ const styles = StyleSheet.create({
   },
   target: {
     position: 'absolute',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  targetCircle: {
+    position: 'absolute',
+    backgroundColor: COLORS.white,
   },
   description: {
     position: 'absolute',

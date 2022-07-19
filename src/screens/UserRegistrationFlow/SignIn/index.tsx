@@ -154,6 +154,7 @@ export const SignIn = ({navigation}: Props) => {
             )}
 
             <PrimaryButton
+              style={styles.button}
               onPress={onSignIn}
               text={translate('signIn.logInSignUp')}
             />
@@ -240,5 +241,8 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
+  },
+  button: {
+    width: rem(247),
   },
 });
