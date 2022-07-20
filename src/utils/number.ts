@@ -13,7 +13,7 @@ export const formatNumber = (input: number | string, step = 3) => {
   const figures = input.toString().split('');
   const insertsCount = Math.floor((figures.length - 1) / step);
   for (let i = 0; i < insertsCount; i++) {
-    figures.splice(figures.length - step - step * i, 0, ',');
+    figures.splice(figures.length - step - step * i - i, 0, ',');
   }
   return figures.join('');
 };

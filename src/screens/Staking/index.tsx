@@ -6,7 +6,7 @@ import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Footer} from '@screens/Staking/components/Footer';
 import {Intro} from '@screens/Staking/components/Intro';
-import {Calculator} from '@screens/Staking/components/StakingCalculator/components/Calculator';
+import {StakingCalculator} from '@screens/Staking/components/StakingCalculator';
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
@@ -25,11 +25,7 @@ export const Staking = memo(() => {
         showsVerticalScrollIndicator={false}>
         <Intro />
         <View style={styles.card}>
-          <Calculator
-            onCalculateResult={() => {}}
-            result={null}
-            loading={false}
-          />
+          <StakingCalculator />
           <Footer />
         </View>
       </Animated.ScrollView>

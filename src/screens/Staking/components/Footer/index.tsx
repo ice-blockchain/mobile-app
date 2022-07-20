@@ -13,8 +13,11 @@ export const Footer = memo(() => {
   return (
     <View style={styles.container}>
       <Text style={styles.noteText}>
-        By clicking Stake Now, you agree to the ice Staking Terms. Your ice
-        holdings will be locked for the selected period.
+        By clicking Stake Now, you agree to the ice{' '}
+        <Text style={styles.termsLink} onPress={() => {}}>
+          Staking Terms
+        </Text>
+        . Your ice holdings will be locked for the selected period.
       </Text>
       <PrimaryButton
         onPress={() => {}}
@@ -37,6 +40,9 @@ const styles = StyleSheet.create({
     fontFamily: FONTS.primary.regular,
     color: COLORS.black,
     textAlign: 'center',
+  },
+  termsLink: {
+    color: COLORS.persianBlue,
   },
   button: {
     marginTop: rem(14),

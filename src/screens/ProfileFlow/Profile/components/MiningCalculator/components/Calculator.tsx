@@ -159,8 +159,7 @@ const styles = StyleSheet.create({
   containder: {
     marginTop: rem(12),
     marginHorizontal: SCREEN_SIDE_OFFSET,
-    paddingRight: rem(42),
-    paddingLeft: rem(36),
+    paddingHorizontal: rem(42),
     borderRadius: rem(15),
     backgroundColor: COLORS.persianBlue,
     paddingBottom: rem(42),
