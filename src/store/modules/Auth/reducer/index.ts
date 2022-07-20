@@ -83,7 +83,7 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
         return {
           ...INITIAL_STATE,
           isInitialized: true,
-          welcomeSeen: true,
+          isWelcomeSeen: true,
         };
       }
     }
