@@ -2,7 +2,6 @@
 
 import {Initialization} from '@components/Initialization';
 import {Router} from '@navigation/Router';
-import {System} from '@screens/System';
 import {magic} from '@services/magicLink';
 import React from 'react';
 import {StatusBar, StyleSheet} from 'react-native';
@@ -24,7 +23,6 @@ export function App(): React.ReactNode {
           <GestureHandlerRootView style={styles.container}>
             <Router />
           </GestureHandlerRootView>
-          <System />
           <magic.Relayer />
         </PersistGate>
       </Provider>

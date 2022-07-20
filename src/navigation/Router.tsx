@@ -12,6 +12,7 @@ import {
 } from '@store/modules/Auth/selectors';
 import React from 'react';
 import {LogBox} from 'react-native';
+import RNBootSplash from 'react-native-bootsplash';
 import {useSelector} from 'react-redux';
 
 /**
@@ -44,7 +45,7 @@ export function Router() {
   useAppLoadedDispatcher();
   useAppStateListener();
   return (
-    <NavigationContainer theme={theme}>
+    <NavigationContainer theme={theme} onReady={RNBootSplash.hide}>
       <ActiveNavigator />
     </NavigationContainer>
   );
