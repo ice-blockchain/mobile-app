@@ -5,6 +5,7 @@ import {Api} from '@api/index';
 import {UserProfile} from '@api/user/types';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {magicUserSelector} from '@store/modules/Auth/selectors';
+import {ValidationActions} from '@store/modules/Validation/actions';
 import {
   refUserSelector,
   usernameSelector,
@@ -59,6 +60,11 @@ export function* createUserSaga() {
       const {response} = error;
       if (response?.data?.data?.field === 'username') {
         localizedError = t('error.user_exist');
+        yield put(
+          ValidationActions.USERNAME_VALIDATION.FAILED.create(
+            t('username.error.already_taken'),
+          ),
+        );
       } else if (response?.data?.data?.field === 'id') {
         yield put(AuthActions.FETCH_USER_PROFILE.START.create());
       }

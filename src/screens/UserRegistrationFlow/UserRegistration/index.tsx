@@ -54,7 +54,11 @@ export const UserRegistration = ({}: Props) => {
     if (claimValidationError) {
       setClaimError(claimValidationError);
     }
-  }, [claimValidationError]);
+
+    if (claimValidationError && currentPage === 1) {
+      navigation.goBack();
+    }
+  }, [claimValidationError, currentPage, navigation]);
 
   useEffect(() => {
     if (refValidationError) {
