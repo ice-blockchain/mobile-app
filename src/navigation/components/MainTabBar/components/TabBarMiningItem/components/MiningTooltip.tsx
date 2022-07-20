@@ -4,7 +4,9 @@ import {PrimaryButton} from '@components/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET, SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
+import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {CloseIconSvg} from '@svg/CloseIcon';
 import {StakeIcon} from '@svg/StakeIcon';
 import React from 'react';
@@ -12,7 +14,8 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
 export const MiningTooltip = ({}) => {
-  const navigation = useNavigation();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -26,7 +29,7 @@ export const MiningTooltip = ({}) => {
           <Text style={styles.headerValueText}>+29.99 ice/hr</Text>
         </View>
       </View>
-      {false ? (
+      {true ? (
         <>
           <Text style={styles.titleText}>Boost your mining rate</Text>
           <Text style={styles.noteText}>
@@ -34,7 +37,10 @@ export const MiningTooltip = ({}) => {
             rate by up to 500%.
           </Text>
           <PrimaryButton
-            onPress={() => {}}
+            onPress={() => {
+              navigation.goBack();
+              setTimeout(() => navigation.navigate('Staking'));
+            }}
             text={'Stake Now!'}
             style={styles.button}
             icon={<StakeIcon />}

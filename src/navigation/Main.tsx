@@ -23,6 +23,7 @@ import {LanguageSettings} from '@screens/SettingsFlow/LanguageSettings';
 import {NotificationSettings} from '@screens/SettingsFlow/NotificationSettings';
 import {PersonalInformation} from '@screens/SettingsFlow/PersonalInformation';
 import {Settings} from '@screens/SettingsFlow/Settings';
+import {Staking} from '@screens/Staking';
 import {Team} from '@screens/Team';
 import {Tooltip} from '@screens/Tooltip';
 import {WebView} from '@screens/WebView';
@@ -37,7 +38,7 @@ export type MainTabsParamList = {
 };
 
 export type MainStackParamList = {
-  Main: undefined;
+  MainTabs: undefined;
   WebView: undefined;
   Confirm: {
     title?: string;
@@ -52,6 +53,7 @@ export type MainStackParamList = {
     targetCircleSize?: number;
     descriptionOffset?: number;
   };
+  Staking: undefined;
 };
 
 export type HomeTabStackParamList = {
@@ -185,7 +187,7 @@ const MainTabs = () => (
 export function MainNavigator() {
   return (
     <MainStack.Navigator screenOptions={screenOptions}>
-      <MainStack.Screen name="Main" component={MainTabs} />
+      <MainStack.Screen name="MainTabs" component={MainTabs} />
       <MainStack.Screen
         name="WebView"
         options={modalOptions}
@@ -201,6 +203,7 @@ export function MainNavigator() {
         options={modalOptions}
         component={Tooltip}
       />
+      <MainStack.Screen name="Staking" component={Staking} />
     </MainStack.Navigator>
   );
 }

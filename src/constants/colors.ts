@@ -13,6 +13,7 @@ export const COLORS = {
   persianBlue: '#1B47C3',
   gulfBlue: '#080754',
   midnight: '#011542',
+  madison: '#0D256B',
   mariner: '#2D62D9',
   periwinkleGray: '#C1CDE1',
   heather: '#C1C8D6',
