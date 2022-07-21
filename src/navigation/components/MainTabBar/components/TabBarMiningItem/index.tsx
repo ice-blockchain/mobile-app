@@ -29,6 +29,21 @@ export const TabBarMiningItem = () => {
   const lottieWrapperRef = useRef<View>(null);
   const {animatedOpacity} = useFadeLottie(miningActive, lottieRef);
 
+  const onButtonPress = () => {
+    if (miningActive) {
+      navigation.navigate('Tooltip', {
+        descriptionPosition: 'above',
+        targetRef: lottieWrapperRef,
+        descriptionOffset: rem(30),
+        targetCircleSize: rem(92),
+        TargetComponent: () => <MiningAnimation />,
+        DescriptionComponent: () => <MiningTooltip />,
+      });
+    } else {
+      setMiningActive(state => !state);
+    }
+  };
+
   return (
     <ImageBackground
       style={styles.container}
@@ -37,20 +52,7 @@ export const TabBarMiningItem = () => {
         accessibilityRole="button"
         style={styles.button}
         activeOpacity={1}
-        onPress={() => {
-          if (miningActive) {
-            navigation.navigate('Tooltip', {
-              descriptionPosition: 'above',
-              targetRef: lottieWrapperRef,
-              descriptionOffset: rem(30),
-              targetCircleSize: rem(92),
-              TargetComponent: () => <MiningAnimation />,
-              DescriptionComponent: () => <MiningTooltip />,
-            });
-          } else {
-            setMiningActive(state => !state);
-          }
-        }}>
+        onPress={onButtonPress}>
         <Animated.View
           style={{opacity: animatedOpacity}}
           ref={lottieWrapperRef}>

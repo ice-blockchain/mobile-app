@@ -9,6 +9,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {CloseIconSvg} from '@svg/CloseIcon';
 import {StakeIcon} from '@svg/StakeIcon';
+import {t} from '@translations/i18n';
 import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -20,21 +21,24 @@ export const MiningTooltip = ({}) => {
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.dataCell}>
-          <Text style={styles.headerLabelText}>TIME LEFT</Text>
+          <Text style={styles.headerLabelText}>
+            {t('staking.time_left').toUpperCase()}
+          </Text>
           <Text style={styles.headerValueText}>21h14m3s</Text>
         </View>
         <View style={styles.headerSeparator} />
         <View style={[styles.dataCell, styles.dataCell_right]}>
-          <Text style={styles.headerLabelText}>MINING RATE</Text>
+          <Text style={styles.headerLabelText}>
+            {t('staking.mining_rate').toUpperCase()}
+          </Text>
           <Text style={styles.headerValueText}>+29.99 ice/hr</Text>
         </View>
       </View>
       {true ? (
         <>
-          <Text style={styles.titleText}>Boost your mining rate</Text>
+          <Text style={styles.titleText}>{t('staking.appeal')}</Text>
           <Text style={styles.noteText}>
-            Stake your mining rewards for up to 5 years and increase your mining
-            rate by up to 500%.
+            {t('staking.benefits_description')}
           </Text>
           <PrimaryButton
             onPress={() => {
@@ -53,15 +57,20 @@ export const MiningTooltip = ({}) => {
             source={require('../assets/images/stakeMan.png')}
           />
           <Text style={styles.bonusText}>
-            STAKING BONUS: <Text style={styles.bonusText_value}>+200%</Text>
+            {t('stakings.bonus_label')}:{' '}
+            <Text style={styles.bonusText_value}>+200%</Text>
           </Text>
           <View style={styles.footer}>
             <View style={styles.dataCell}>
-              <Text style={styles.headerLabelText}>STAKED PERIOD</Text>
+              <Text style={styles.headerLabelText}>
+                {t('staking.period_label')}
+              </Text>
               <Text style={styles.headerValueText}>2 years</Text>
             </View>
             <View style={[styles.dataCell, styles.dataCell_right]}>
-              <Text style={styles.headerLabelText}>STAKED BALANCE</Text>
+              <Text style={styles.headerLabelText}>
+                {t('staking.balance_label')}
+              </Text>
               <Text style={styles.headerValueText}>241,241 ice</Text>
             </View>
           </View>

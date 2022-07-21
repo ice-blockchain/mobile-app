@@ -4,6 +4,7 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {LogoIconSvg} from '@svg/LogoIcon';
+import {t} from '@translations/i18n';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -13,12 +14,9 @@ export const Intro = memo(() => {
     <View style={styles.container}>
       <View style={styles.title}>
         <LogoIconSvg color={COLORS.white} width={rem(26)} height={rem(26)} />
-        <Text style={styles.titleText}>Staking</Text>
+        <Text style={styles.titleText}>{t('staking.title')}</Text>
       </View>
-      <Text style={styles.noteText}>
-        Stake your mining rewards for up to five years and increase your mining
-        rate by up to 500%.
-      </Text>
+      <Text style={styles.noteText}>{t('staking.benefits_description')}</Text>
     </View>
   );
 });

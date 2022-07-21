@@ -71,10 +71,12 @@ export const Calculator = memo(
             </Text>
           )}
         </View>
-        <Text style={styles.currentRateText}>CURRENT RATE: 7,120 ice/h</Text>
+        <Text style={styles.currentRateText}>
+          {t('current_rate').toUpperCase()}: 7,120 ice/h
+        </Text>
         <View style={styles.sliderInfo}>
           <YearsIcon />
-          <Text style={styles.sliderLabelText}>Years</Text>
+          <Text style={styles.sliderLabelText}>{t('global.years')}</Text>
           <TextInput
             style={styles.sliderValueText}
             ref={yearsElementRef}
@@ -96,7 +98,7 @@ export const Calculator = memo(
         />
         <View style={styles.sliderInfo}>
           <ChartIcon />
-          <Text style={styles.sliderLabelText}>Allocation</Text>
+          <Text style={styles.sliderLabelText}>{t('staking.allocation')}</Text>
           <TextInput
             style={styles.sliderValueText}
             ref={allocationElementRef}
@@ -118,10 +120,7 @@ export const Calculator = memo(
           }}
           onSlidingComplete={calculateResult}
         />
-        <Text style={styles.descriptionText}>
-          Staking is a process that involves committing your crypto assets to
-          support a blockchain network and confirm transactions.
-        </Text>
+        <Text style={styles.descriptionText}>{t('staking.description')}</Text>
       </View>
     );
   },
