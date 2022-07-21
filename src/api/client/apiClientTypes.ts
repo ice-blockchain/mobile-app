@@ -6,4 +6,5 @@ export type HttpHeaders = {
 
 export type RequestConfig = {
   headers: HttpHeaders;
+  signal?: AbortSignal;
 };

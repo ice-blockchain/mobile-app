@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {RequestConfig} from '@api/client/apiClientTypes';
+import {getHeaders} from '@api/client/getHeaders';
 import {ENV} from '@constants/env';
 import axios, {AxiosInstance} from 'axios';
 import {backOff} from 'exponential-backoff';
-import {Platform} from 'react-native';
-import DeviceInfo from 'react-native-device-info';
 
 import {handleServiceError} from './ApiServiceErrors';
 import {requestInterceptor} from './interceptors/request';
@@ -38,16 +37,12 @@ function setupApiClient(clientInstance: AxiosInstance) {
 
 const writeClient = axios.create({
   baseURL: `${ENV.BASE_WRITE_API_URL}`,
-  headers: {
-    'Mobile-App-Version': `${Platform.OS} - ${DeviceInfo.getVersion()}`,
-  },
+  headers: getHeaders(),
 });
 
 const readClient = axios.create({
   baseURL: `${ENV.BASE_READ_API_URL}`,
-  headers: {
-    'Mobile-App-Version': `${Platform.OS} - ${DeviceInfo.getVersion()}`,
-  },
+  headers: getHeaders(),
 });
 
 setupApiClient(writeClient);

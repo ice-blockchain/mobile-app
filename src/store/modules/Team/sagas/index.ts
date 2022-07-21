@@ -5,10 +5,12 @@ import {all, takeLatest} from 'redux-saga/effects';
 
 import {getContactsSaga} from './getContactsSaga';
 import {inviteContactSaga} from './inviteContactSaga';
+import {searchUsersSaga} from './searchUsersSaga';
 
 export function* rootTeamSaga() {
   yield all([
     takeLatest(TeamActions.GET_CONTACTS.START.type, getContactsSaga),
     takeLatest(TeamActions.INVITE_CONTACT.START.type, inviteContactSaga),
+    takeLatest(TeamActions.SEARCH_USERS.START.type, searchUsersSaga),
   ]);
 }

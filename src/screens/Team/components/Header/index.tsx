@@ -1,13 +1,31 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {useCancelRequest} from '@hooks/useCancelRequest';
 import {InfoItem, InfoItemType} from '@screens/Team/components/InfoItem';
 import {Search} from '@screens/Team/components/Search';
-import React, {useState} from 'react';
+import {TeamActions} from '@store/modules/Team/actions';
+import {throttle} from 'lodash';
+import React, {useCallback, useEffect, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
+import {useDispatch} from 'react-redux';
 
 export const Header = () => {
   const [query, setQuery] = useState('');
+  const dispatch = useDispatch();
+
+  const signal: AbortSignal = useCancelRequest();
+
+  const search = throttle((searchQuery: string) => {
+    dispatch(TeamActions.SEARCH_USERS.START.create(searchQuery, signal));
+  }, 600);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const onSearch = useCallback(search, []);
+
+  useEffect(() => {
+    onSearch(query);
+  }, [onSearch, query]);
 
   return (
     <View style={styles.container}>
