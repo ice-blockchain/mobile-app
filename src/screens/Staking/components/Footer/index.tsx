@@ -5,6 +5,7 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {StakeIcon} from '@svg/StakeIcon';
+import {t} from '@translations/i18n';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
@@ -13,15 +14,15 @@ export const Footer = memo(() => {
   return (
     <View style={styles.container}>
       <Text style={styles.noteText}>
-        By clicking Stake Now, you agree to the ice{' '}
+        {t('staking.terms_agree')}{' '}
         <Text style={styles.termsLink} onPress={() => {}}>
-          Staking Terms
+          {t('staking.staking_terms')}
         </Text>
-        . Your ice holdings will be locked for the selected period.
+        . {t('stake.lock_note')}
       </Text>
       <PrimaryButton
         onPress={() => {}}
-        text={'Stake Now!'}
+        text={t('staking.stake_now')}
         style={styles.button}
         icon={<StakeIcon />}
       />

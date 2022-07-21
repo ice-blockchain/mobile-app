@@ -45,7 +45,7 @@ export const MiningTooltip = ({}) => {
               navigation.goBack();
               setTimeout(() => navigation.navigate('Staking'));
             }}
-            text={'Stake Now!'}
+            text={t('staking.stake_now')}
             style={styles.button}
             icon={<StakeIcon />}
           />
