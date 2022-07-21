@@ -7,6 +7,7 @@ import {SCREEN_SIDE_OFFSET, SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {IS_STAKING_ACTIVE} from '@screens/Staking/components/Footer';
 import {CloseIconSvg} from '@svg/CloseIcon';
 import {StakeIcon} from '@svg/StakeIcon';
 import {t} from '@translations/i18n';
@@ -34,7 +35,7 @@ export const MiningTooltip = ({}) => {
           <Text style={styles.headerValueText}>+29.99 ice/hr</Text>
         </View>
       </View>
-      {true ? (
+      {!IS_STAKING_ACTIVE.current ? (
         <>
           <Text style={styles.titleText}>{t('staking.appeal')}</Text>
           <Text style={styles.noteText}>

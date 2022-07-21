@@ -4,13 +4,17 @@ import {PrimaryButton} from '@components/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {useNavigation} from '@react-navigation/native';
 import {StakeIcon} from '@svg/StakeIcon';
 import {t} from '@translations/i18n';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
+export const IS_STAKING_ACTIVE = {current: false};
+
 export const Footer = memo(() => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Text style={styles.noteText}>
@@ -21,7 +25,10 @@ export const Footer = memo(() => {
         . {t('stake.lock_note')}
       </Text>
       <PrimaryButton
-        onPress={() => {}}
+        onPress={() => {
+          navigation.goBack();
+          IS_STAKING_ACTIVE.current = true;
+        }}
         text={t('staking.stake_now')}
         style={styles.button}
         icon={<StakeIcon />}
