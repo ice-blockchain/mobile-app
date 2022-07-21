@@ -34,6 +34,7 @@ type Actions = ReturnType<
   | typeof AuthActions.CREATE_USER.SUCCESS.create
   | typeof AuthActions.CREATE_USER.FAILED.create
   | typeof AuthActions.FETCH_USER_PROFILE.SUCCESS.create
+  | typeof AuthActions.UPDATE_ACCOUNT.SUCCESS.create
 >;
 
 const INITIAL_STATE: AuthState = {
@@ -78,6 +79,13 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
       case AuthActions.CREATE_USER.SUCCESS.type:
       case AuthActions.FETCH_USER_PROFILE.SUCCESS.type:
         draft.profile = action.payload.result ?? null;
+        break;
+      case AuthActions.UPDATE_ACCOUNT.SUCCESS.type:
+        draft.magicUser = {
+          userId: action.payload.result.id,
+          email: action.payload.result.email,
+          phoneNumber: action.payload.result.phoneNumber,
+        };
         break;
       case AuthActions.SIGN_OUT.SUCCESS.type: {
         return {

@@ -13,6 +13,7 @@ import {signInEmailSaga} from './signInEmail';
 import {signInPhoneSaga} from './signInPhone';
 import {signInSocialSaga} from './signInSocial';
 import {signOutSaga} from './signOut';
+import {updateAccountSaga} from './updateAccount';
 
 export function* rootAuthSaga() {
   yield all([
@@ -28,5 +29,6 @@ export function* rootAuthSaga() {
       createUserSaga,
     ),
     takeLatest(AuthActions.FETCH_USER_PROFILE.START.type, fetchUserProfileSaga),
+    takeLatest(AuthActions.UPDATE_ACCOUNT.START.type, updateAccountSaga),
   ]);
 }

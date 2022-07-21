@@ -9,6 +9,30 @@ type SignInResult = {
   profile: UserProfile | null;
 };
 
+enum UserUpdateEnum {
+  agendaPhoneNumberHashes = 'agendaPhoneNumberHashes',
+  city = 'city',
+  country = 'country',
+  email = 'email',
+  firstName = 'firstName',
+  lastName = 'lastName',
+  phoneNumber = 'phoneNumber',
+  phoneNumberHash = 'phoneNumberHash',
+  username = 'username',
+  profilePicture = 'profilePicture',
+  createdAt = 'createdAt',
+  id = 'id',
+  lastMiningStartedAt = 'lastMiningStartedAt',
+  lastPingAt = 'lastPingAt',
+  profilePictureURL = 'profilePictureURL',
+  referredBy = 'referredBy',
+  updatedAt = 'updatedAt',
+}
+
+export type UserUpdate = {
+  [v in UserUpdateEnum]?: string;
+};
+
 const SET_TOKEN = createAction('SET_TOKEN', {
   STATE: token => ({token}),
 });
@@ -88,6 +112,14 @@ const DELETE_ACCOUNT = createAction('DELETE_ACCOUNT', {
   }),
 });
 
+const UPDATE_ACCOUNT = createAction('UPDATE_ACCOUNT', {
+  START: (userInfo: UserUpdate) => ({userInfo}),
+  SUCCESS: (result: UserProfile) => ({result}),
+  FAILED: (errorMessage: string) => ({
+    errorMessage,
+  }),
+});
+
 export const AuthActions = Object.freeze({
   SET_TOKEN,
   LOAD_USER,
@@ -101,4 +133,5 @@ export const AuthActions = Object.freeze({
   SET_CODE_VERIFIED,
   DELETE_ACCOUNT,
   CREATE_USER,
+  UPDATE_ACCOUNT,
 });

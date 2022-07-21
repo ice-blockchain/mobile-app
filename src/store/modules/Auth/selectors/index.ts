@@ -13,6 +13,9 @@ export const isAuthorizedSelector = (state: RootState) =>
 export const isAuthInitializedSelector = (state: RootState) =>
   state.auth.isInitialized;
 
+export const userPhoneNumberSelector = (state: RootState) =>
+  state.auth.userData!.phoneNumber;
+
 export const isWelcomeSeenSelector = (state: RootState) =>
   state.auth.isWelcomeSeen;
 
