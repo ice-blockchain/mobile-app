@@ -15,6 +15,7 @@ import {DeviceActions} from '@store/modules/Devices/actions';
 import {deviceSettingsSelector} from '@store/modules/Devices/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {availableLocales, t} from '@translations/i18n';
+import {noop} from 'lodash';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
@@ -33,6 +34,22 @@ export const LanguageSettings = () => {
     isLoadingSelector.bind(null, DeviceActions.UPDATE_SETTINGS),
   );
 
+  const renderLanguageListItem = (language: string, index: number) => {
+    const isSelected =
+      deviceSettings?.language.toLowerCase() === language.toLowerCase();
+    return (
+      <React.Fragment key={language}>
+        {index !== 0 && <LanguageListItemSeparator />}
+        <LanguageListItem
+          selected={isSelected}
+          language={language}
+          onSelect={isSelected ? noop : openConfirmationDlg}
+          loading={isLoading}
+        />
+      </React.Fragment>
+    );
+  };
+
   return (
     <View style={styles.container}>
       <Header
@@ -47,20 +64,7 @@ export const LanguageSettings = () => {
         scrollEventThrottle={16}
         showsVerticalScrollIndicator={false}>
         <View style={styles.listContent}>
-          {availableLocales.map((language, index) => (
-            <React.Fragment key={language}>
-              {index !== 0 && <LanguageListItemSeparator />}
-              <LanguageListItem
-                selected={
-                  deviceSettings?.language.toLowerCase() ===
-                  language.toLowerCase()
-                }
-                language={language}
-                onSelect={openConfirmationDlg}
-                loading={isLoading}
-              />
-            </React.Fragment>
-          ))}
+          {availableLocales.map(renderLanguageListItem)}
         </View>
       </Animated.ScrollView>
     </View>
