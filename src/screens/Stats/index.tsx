@@ -15,7 +15,7 @@ export const StatsScreen = ({}: StatsScreenProps) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(StatisticsActions.GET_TOP_COUNTRIES.START.create(''));
+    dispatch(StatisticsActions.GET_TOP_COUNTRIES.START.create());
   }, [dispatch]);
   return (
     <View style={styles.container}>

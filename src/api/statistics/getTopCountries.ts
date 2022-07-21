@@ -7,7 +7,7 @@ import {CountryStatistics} from '@api/statistics/types';
  * Returns the paginated view of users per country.
  */
 type Params = {
-  query: string;
+  query?: string;
   offset?: number;
   limit?: number;
 };

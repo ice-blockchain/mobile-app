@@ -3,12 +3,14 @@
 import {Country} from '@store/modules/Statistics/reducer';
 import {createAction} from '@store/utils/actions/createAction';
 
+type GetCountriesParams = {
+  query?: string;
+  offset?: number;
+  limit?: number;
+};
+
 const GET_TOP_COUNTRIES = createAction('GET_TOP_COUNTRIES', {
-  START: (query: string, offset?: number, limit?: number) => ({
-    query,
-    limit,
-    offset,
-  }),
+  START: (params?: GetCountriesParams) => ({...params}),
   SUCCESS: (topCountries: Country[]) => ({topCountries}),
   FAILED: (errorMessage: string) => ({
     errorMessage,

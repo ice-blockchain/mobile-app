@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {SpinLogoAnimation} from '@components/SpinLogoAnimation';
 import {COLORS} from '@constants/colors';
-import {commonStyles} from '@constants/styles';
+import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
@@ -14,7 +15,7 @@ import {
 } from '@store/modules/Statistics/selectors';
 import {TopCountriesIcon} from '@svg/TopCountriesIcon';
 import {t} from '@translations/i18n';
-import {throttle} from 'lodash';
+import debounce from 'lodash/debounce';
 import React, {useCallback, useEffect, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
@@ -35,7 +36,7 @@ export const TopCountriesScreen = ({}: TopCountriesScreenProps) => {
 
   const countries = query ? searchedCountries : topCoutries;
 
-  const search = throttle((searchQuery: string) => {
+  const search = debounce((searchQuery: string) => {
     dispatch(StatisticsActions.SEARCH_COUNTRIES.START.create(searchQuery));
   }, 600);
 
@@ -46,7 +47,10 @@ export const TopCountriesScreen = ({}: TopCountriesScreenProps) => {
     onSearch(query);
   }, [onSearch, query]);
 
-  const loadMore = () => {};
+  const loadMore = () => {
+    const offset = topCoutries.length;
+    dispatch(StatisticsActions.GET_TOP_COUNTRIES.START.create({offset}));
+  };
 
   const renderItem = ({
     item,
@@ -97,6 +101,11 @@ export const TopCountriesScreen = ({}: TopCountriesScreenProps) => {
         }
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={[styles.content, tabbarOffset.current]}
+        ListFooterComponent={
+          <View style={styles.activityIndicator}>
+            <SpinLogoAnimation width={20} height={20} />
+          </View>
+        }
         onEndReached={loadMore}
         onEndReachedThreshold={0.2}
       />
@@ -109,12 +118,20 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   content: {
-    marginHorizontal: 24,
+    marginHorizontal: SCREEN_SIDE_OFFSET,
     borderRadius: 16,
   },
   search: {
-    marginBottom: 20,
+    marginBottom: rem(20),
     backgroundColor: COLORS.wildSand,
+    marginTop: rem(10),
+  },
+  activityIndicator: {
+    width: rem(25),
+    height: rem(25),
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
     marginTop: rem(10),
   },
 });

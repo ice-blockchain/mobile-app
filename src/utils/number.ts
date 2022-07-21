@@ -4,7 +4,7 @@ import {ICountryCode} from '@constants/countries';
 import {CountryCode, formatIncompletePhoneNumber} from 'libphonenumber-js';
 
 /**
- * 1428156 -> 14,28,156 ??????
+ * 1428156 -> 14,28,156
  */
 export const formatNumber = (input: number | string, step = 3) => {
   if (input.toString().length === 0) {

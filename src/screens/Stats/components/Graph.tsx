@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+// TODO: this part will be changed
+
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {StatsGraphUserSvg} from '@svg/StatsGraphUser';

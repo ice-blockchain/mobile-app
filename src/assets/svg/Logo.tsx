@@ -2,10 +2,11 @@
 
 import * as React from 'react';
 import {Circle, Path, Svg} from 'react-native-svg';
+import {rem} from 'rn-units';
 
-export const LogoSvg = () => {
+export const LogoSvg = ({width = rem(74), height = rem(74)}) => {
   return (
-    <Svg width="74" height="74" viewBox="0 0 74 74" fill="none">
+    <Svg width={width} height={height} viewBox="0 0 74 74" fill="none">
       <Circle cx="37" cy="37" r="37" fill="#1B47C3" />
       <Path
         d="M37 13L34.7561 27.973L37 35.4927L39.2439 27.973L37 13Z"

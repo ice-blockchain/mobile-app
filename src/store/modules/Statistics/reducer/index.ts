@@ -31,7 +31,10 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
       case StatisticsActions.GET_TOP_COUNTRIES.SUCCESS.type:
-        draft.topCountries = action.payload.topCountries;
+        draft.topCountries = [
+          ...draft.topCountries,
+          ...action.payload.topCountries,
+        ];
         break;
       case StatisticsActions.SEARCH_COUNTRIES.SUCCESS.type:
         draft.searchedCountries = action.payload.searchedCountries;
@@ -49,7 +52,6 @@ const persistConfig = {
   key: 'statistics',
   storage: AsyncStorage,
   timeout: 120000,
-  whitelist: ['usersInfo'],
 };
 
 export const statisticsReducer = persistReducer(persistConfig, reducer);
