@@ -23,9 +23,7 @@ const REF_USERNAME_VALIDATION = createAction('REF_USERNAME_VALIDATION', {
 });
 
 const PHONE_VALIDATION = createAction('PHONE_VALIDATION', {
-  START: (userId: string, phoneNumber: string, validationCode: string) => ({
-    userId,
-    phoneNumber,
+  START: (validationCode: string) => ({
     validationCode,
   }),
   SUCCESS: true,

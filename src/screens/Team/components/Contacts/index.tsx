@@ -11,6 +11,9 @@ import {
 } from '@store/modules/Auth/selectors';
 import {PermissionsActions} from '@store/modules/Permissions/actions';
 import {permissionSelector} from '@store/modules/Permissions/selectors';
+import {UtilsProcessStatusSelectors} from '@store/modules/UtilityProcessStatuses/selectors';
+import {ValidationActions} from '@store/modules/Validation/actions';
+import {RootState} from '@store/rootReducer';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {ActivityIndicator, Animated, StyleSheet} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
@@ -29,7 +32,12 @@ export const Contacts = ({
   showCountriesList,
   isCountriesVisible,
 }: ContactsProps) => {
-  const [isLoading, setLoading] = useState(false);
+  const isLoading = useSelector((state: RootState) =>
+    UtilsProcessStatusSelectors.isLoadingSelector(
+      state,
+      AuthActions.UPDATE_ACCOUNT,
+    ),
+  );
 
   const dispatch = useDispatch();
 
@@ -91,19 +99,11 @@ export const Contacts = ({
   }, [getCurrentScreen, setScreen]);
 
   const confirmPhonePress = (phone: string) => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      dispatch(AuthActions.SET_PHONE_NUMBER_VERIFIED.STATE.create(phone));
-    }, 1500);
+    dispatch(AuthActions.UPDATE_ACCOUNT.START.create({phoneNumber: phone}));
   };
 
-  const confirmCodePress = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      dispatch(AuthActions.SET_CODE_VERIFIED.STATE.create());
-    }, 1500);
+  const confirmCodePress = (code: string) => {
+    dispatch(ValidationActions.PHONE_VALIDATION.START.create(code));
   };
 
   const requestContactsAccessPermissionPress = async () => {

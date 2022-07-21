@@ -13,15 +13,15 @@ import {Image, StyleSheet, Text, View} from 'react-native';
 import {font, isIOS, rem, screenWidth} from 'rn-units';
 
 type ConfirmCodeProps = {
-  confirmCodePress: () => void;
+  confirmCodePress: (code: string) => void;
 };
 
 export function ConfirmCode({
   confirmCodePress,
 }: ConfirmCodeProps): React.ReactElement {
-  const [inputValue, onInputChange] = useState('');
+  const [code, onCodeChange] = useState('');
   const handleOnPress = () => {
-    confirmCodePress();
+    confirmCodePress(code);
   };
 
   const tabbarOffest = useBottomTabBarOffsetStyle({
@@ -43,8 +43,8 @@ export function ConfirmCode({
       <View style={styles.inputContainer}>
         <CommonInput
           placeholder={t('team.confirm_code.placeholder')}
-          value={inputValue}
-          onChangeText={onInputChange}
+          value={code}
+          onChangeText={onCodeChange}
           icon={<TicketIconSvg />}
           containerStyle={styles.input}
           autoCorrect={false}
