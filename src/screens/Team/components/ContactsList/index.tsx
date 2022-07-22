@@ -14,7 +14,7 @@ import {useGetContacts} from '@screens/Team/components/ContactsList/hooks/useGet
 import {TeamActions} from '@store/modules/Team/actions';
 import {
   getContactsByIdsSelector,
-  getIceFriendsSelector,
+  getInvitedFriendsSelector,
 } from '@store/modules/Team/selectors';
 import {WhiteLogoSvg} from '@svg/WhiteLogo';
 import {t} from '@translations/i18n';
@@ -31,7 +31,7 @@ type Section = {title: string; data: string[]};
 export const ContactsList = ({}: ContactsListProps) => {
   const dispatch = useDispatch();
   const contactsByIds = useSelector(getContactsByIdsSelector);
-  const iceFriends = useSelector(getIceFriendsSelector);
+  const invitedFriends = useSelector(getInvitedFriendsSelector);
 
   const tabbarOffset = useBottomTabBarOffsetStyle({extraOffset: 20});
 
@@ -63,7 +63,7 @@ export const ContactsList = ({}: ContactsListProps) => {
         return <InviteButton style={styles.inviteButtonContainer} />;
       }
       const contact = contactsByIds[item];
-      const isFriend = iceFriends.includes(item);
+      const isFriend = invitedFriends.includes(item);
       const multipleNumbers = contact.phoneNumbers.length > 1;
       const isIceSection =
         section.title !== t('team.contacts_list.all_contacts');
@@ -112,7 +112,7 @@ export const ContactsList = ({}: ContactsListProps) => {
         />
       );
     },
-    [contactsByIds, iceFriends, invite],
+    [contactsByIds, invitedFriends, invite],
   );
 
   return (

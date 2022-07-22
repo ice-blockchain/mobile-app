@@ -5,8 +5,10 @@ import {RootState} from '@store/rootReducer';
 export const selectorIsPhoneNumberVerified = (state: RootState) =>
   state.team.isPhoneNumberVerified;
 
-export const getIceFriendsSelector = (state: RootState) =>
-  state.team.iceFriends;
+export const getInvitedFriendsSelector = (state: RootState) =>
+  state.team.invitedFriends;
+
+export const getIceUsersSelector = (state: RootState) => state.team.iceUsers;
 
 export const getContactsByIdsSelector = (state: RootState) =>
   state.team.contactsByIds;

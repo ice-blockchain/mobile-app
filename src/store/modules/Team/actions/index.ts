@@ -1,22 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {UserSearchInfo} from '@api/user/types';
 import {ContactById} from '@store/modules/Team/reducer';
 import {IFormattedContact} from '@store/modules/Team/sagas/getContactsSaga';
 import {createAction} from '@store/utils/actions/createAction';
-
-export interface UserSearchResult {
-  active: boolean;
-  city: string;
-  country: string;
-  firstName: string;
-  id: string;
-  lastName: string;
-  phoneNumber: string;
-  pingAllowed: boolean;
-  profilePictureURL: string;
-  referralType: string;
-  username: string;
-}
 
 const INVITE_CONTACT = createAction('INVITE_CONTACT', {
   START: (id: string) => ({id}),
@@ -42,8 +29,8 @@ const GET_CONTACTS = createAction('GET_CONTACTS', {
 });
 
 const SEARCH_USERS = createAction('SEARCH_USERS', {
-  START: (query: string, signal?: AbortSignal) => ({query, signal}),
-  SUCCESS: (contacts: UserSearchResult[]) => ({contacts}),
+  START: (query: string) => ({query}),
+  SUCCESS: (contacts: UserSearchInfo[]) => ({contacts}),
   FAILED: (errorMessage: string) => ({
     errorMessage,
   }),

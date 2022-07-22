@@ -32,11 +32,10 @@ export const Contacts = ({
   showCountriesList,
   isCountriesVisible,
 }: ContactsProps) => {
-  const isLoading = useSelector((state: RootState) =>
-    isLoadingSelector(
-      AuthActions.UPDATE_ACCOUNT || ValidationActions.PHONE_VALIDATION,
-      state,
-    ),
+  const isLoading = useSelector(
+    (state: RootState) =>
+      isLoadingSelector(AuthActions.UPDATE_ACCOUNT, state) ||
+      isLoadingSelector(ValidationActions.PHONE_VALIDATION, state),
   );
 
   const dispatch = useDispatch();
@@ -61,9 +60,7 @@ export const Contacts = ({
     }
   }, [hasContactsPermissions, isPhoneNumberVerified, phoneVerificationStep]);
 
-  const [visibleFlow, setVisibleFlow] = useState<TContactsFlow>(
-    getCurrentScreen(),
-  );
+  const [visibleFlow, setVisibleFlow] = useState<TContactsFlow>('ContactsList');
 
   const fadeAnimation = useRef(new Animated.Value(1)).current;
 
