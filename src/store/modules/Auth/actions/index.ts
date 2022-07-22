@@ -1,36 +1,16 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {UserProfile} from '@api/user/types';
+import {UserProfile, UserProfileUpdate} from '@api/user/types';
 import {OAuthProvider} from '@magic-ext/react-native-oauth';
 import {createAction} from '@store/utils/actions/createAction';
 
 type SignInResult = {
-  magicUser: {phoneNumber: string | null; email: string | null; userId: string};
+  magicUser: {
+    phoneNumber: string | null | undefined;
+    email: string | null;
+    userId: string;
+  };
   profile: UserProfile | null;
-};
-
-enum UserUpdateEnum {
-  agendaPhoneNumberHashes = 'agendaPhoneNumberHashes',
-  city = 'city',
-  country = 'country',
-  email = 'email',
-  firstName = 'firstName',
-  lastName = 'lastName',
-  phoneNumber = 'phoneNumber',
-  phoneNumberHash = 'phoneNumberHash',
-  username = 'username',
-  profilePicture = 'profilePicture',
-  createdAt = 'createdAt',
-  id = 'id',
-  lastMiningStartedAt = 'lastMiningStartedAt',
-  lastPingAt = 'lastPingAt',
-  profilePictureURL = 'profilePictureURL',
-  referredBy = 'referredBy',
-  updatedAt = 'updatedAt',
-}
-
-export type UserUpdate = {
-  [v in UserUpdateEnum]?: string;
 };
 
 const SET_TOKEN = createAction('SET_TOKEN', {
@@ -45,7 +25,7 @@ const LOAD_USER = createAction('LOAD_USER', {
   STATE: (
     magicUser?: {
       email: string | null;
-      phoneNumber: string | null;
+      phoneNumber: string | null | undefined;
       userId: string;
     },
     profile?: UserProfile,
@@ -96,10 +76,6 @@ const SIGN_IN_SOCIAL = createAction('SIGN_IN_SOCIAL', {
   FAILED: true,
 });
 
-const SET_PHONE_NUMBER_VERIFIED = createAction('SET_PHONE_NUMBER_VERIFIED', {
-  STATE: (phone: string) => ({phone}),
-});
-
 const SET_CODE_VERIFIED = createAction('SET_CODE_VERIFIED', {
   STATE: () => {},
 });
@@ -113,7 +89,7 @@ const DELETE_ACCOUNT = createAction('DELETE_ACCOUNT', {
 });
 
 const UPDATE_ACCOUNT = createAction('UPDATE_ACCOUNT', {
-  START: (userInfo: UserUpdate) => ({userInfo}),
+  START: (userInfo: UserProfileUpdate) => ({userInfo}),
   SUCCESS: (result: UserProfile) => ({result}),
   FAILED: (errorMessage: string) => ({
     errorMessage,
@@ -129,7 +105,6 @@ export const AuthActions = Object.freeze({
   SIGN_IN_PHONE,
   SIGN_IN_SOCIAL,
   SIGN_OUT,
-  SET_PHONE_NUMBER_VERIFIED,
   SET_CODE_VERIFIED,
   DELETE_ACCOUNT,
   CREATE_USER,

@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Api} from '@api/index';
-import {UserUpdateResult} from '@api/user/types';
-import {AuthActions, UserUpdate} from '@store/modules/Auth/actions';
+import {UserProfile, UserProfileUpdate} from '@api/user/types';
+import {AuthActions} from '@store/modules/Auth/actions';
 import {userIdSelector} from '@store/modules/Auth/selectors';
 import {sha256} from 'react-native-sha256';
 import {put, select} from 'redux-saga/effects';
@@ -21,7 +21,7 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       phoneNumberHash = yield sha256(userInfo.phoneNumber);
     }
 
-    let data: UserUpdate = userInfo;
+    let data: UserProfileUpdate = userInfo;
 
     if (phoneNumberHash) {
       data = {
@@ -31,15 +31,11 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
     }
 
     for (let key in data) {
-      formData.append(key, data[key as keyof UserUpdate]);
+      formData.append(key, data[key as keyof UserProfileUpdate]);
     }
 
-    const result: UserUpdateResult = yield Api.user.updateUser({
-      userId,
-      formData,
-    });
+    const result: UserProfile = yield Api.user.modifyUser(userId, formData);
     yield put(AuthActions.UPDATE_ACCOUNT.SUCCESS.create(result));
-    yield put(AuthActions.SET_PHONE_NUMBER_VERIFIED.STATE.create());
   } catch (error) {
     let errorMessage = 'Failed';
     if (error instanceof Error) {

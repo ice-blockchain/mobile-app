@@ -3,12 +3,13 @@
 import {UserProfile} from '@api/user/types';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthActions} from '@store/modules/Auth/actions';
+import {ValidationActions} from '@store/modules/Validation/actions';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
 
 export interface AuthState {
   magicUser: {
-    phoneNumber: string | null;
+    phoneNumber?: string | null;
     userId: string;
     email?: string | null;
     username?: string | null;
@@ -23,7 +24,6 @@ export interface AuthState {
 
 type Actions = ReturnType<
   | typeof AuthActions.SET_TOKEN.STATE.create
-  | typeof AuthActions.SET_PHONE_NUMBER_VERIFIED.STATE.create
   | typeof AuthActions.SET_CODE_VERIFIED.STATE.create
   | typeof AuthActions.STORE_WELCOME_SEEN.STATE.create
   | typeof AuthActions.SIGN_OUT.SUCCESS.create
@@ -35,6 +35,7 @@ type Actions = ReturnType<
   | typeof AuthActions.CREATE_USER.FAILED.create
   | typeof AuthActions.FETCH_USER_PROFILE.SUCCESS.create
   | typeof AuthActions.UPDATE_ACCOUNT.SUCCESS.create
+  | typeof ValidationActions.PHONE_VALIDATION.SUCCESS.create
 >;
 
 const INITIAL_STATE: AuthState = {
@@ -43,7 +44,7 @@ const INITIAL_STATE: AuthState = {
   isInitialized: false,
   isWelcomeSeen: false,
   phoneVerificationStep: 'phone',
-  isPhoneNumberVerified: false,
+  isPhoneNumberVerified: true,
   profile: null,
 };
 
@@ -67,13 +68,7 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
         draft.magicUser = action.payload.result.magicUser;
         draft.profile = action.payload.result.profile ?? null;
         break;
-      case AuthActions.SET_PHONE_NUMBER_VERIFIED.STATE.type:
-        if (draft.magicUser) {
-          draft.magicUser.phoneNumber = action.payload.phone;
-        }
-        draft.phoneVerificationStep = 'code';
-        break;
-      case AuthActions.SET_CODE_VERIFIED.STATE.type:
+      case ValidationActions.PHONE_VALIDATION.SUCCESS.type:
         draft.isPhoneNumberVerified = true;
         break;
       case AuthActions.CREATE_USER.SUCCESS.type:
@@ -86,6 +81,9 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
           email: action.payload.result.email,
           phoneNumber: action.payload.result.phoneNumber,
         };
+        if (action.payload.result.phoneNumber) {
+          draft.phoneVerificationStep = 'code';
+        }
         break;
       case AuthActions.SIGN_OUT.SUCCESS.type: {
         return {

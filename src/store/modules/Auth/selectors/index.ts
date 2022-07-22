@@ -14,7 +14,7 @@ export const isAuthInitializedSelector = (state: RootState) =>
   state.auth.isInitialized;
 
 export const userPhoneNumberSelector = (state: RootState) =>
-  state.auth.userData!.phoneNumber;
+  state.auth.magicUser!.phoneNumber;
 
 export const isWelcomeSeenSelector = (state: RootState) =>
   state.auth.isWelcomeSeen;
