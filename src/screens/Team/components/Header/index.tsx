@@ -1,12 +1,11 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {useCancelRequest} from '@hooks/useCancelRequest';
 import {InfoItem, InfoItemType} from '@screens/Team/components/InfoItem';
 import {Search} from '@screens/Team/components/Search';
 import {TeamActions} from '@store/modules/Team/actions';
-import {throttle} from 'lodash';
-import React, {useCallback, useEffect, useState} from 'react';
+import debounce from 'lodash/debounce';
+import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {useDispatch} from 'react-redux';
 
@@ -14,22 +13,18 @@ export const Header = () => {
   const [query, setQuery] = useState('');
   const dispatch = useDispatch();
 
-  const signal: AbortSignal = useCancelRequest();
-
-  const search = throttle((searchQuery: string) => {
-    dispatch(TeamActions.SEARCH_USERS.START.create(searchQuery, signal));
+  const search = debounce((searchQuery: string) => {
+    dispatch(TeamActions.SEARCH_USERS.START.create(searchQuery));
   }, 600);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const onSearch = useCallback(search, []);
-
-  useEffect(() => {
-    onSearch(query);
-  }, [onSearch, query]);
+  const onSearch = (text: string) => {
+    setQuery(text);
+    search(text);
+  };
 
   return (
     <View style={styles.container}>
-      <Search value={query} onChangeText={setQuery} />
+      <Search value={query} onChangeText={onSearch} />
       <View style={styles.infoItems}>
         <InfoItem type={InfoItemType.referrals} />
         <InfoItem type={InfoItemType.earnings} />
