@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {magic} from '@services/magicLink';
+import {isAuthorizedSelector} from '@store/modules/Auth/selectors';
 import {AxiosInstance, AxiosRequestConfig, AxiosResponse} from 'axios';
+import {useSelector} from 'react-redux';
 
 function onRejected(instance: AxiosInstance) {
   return async (error: {
@@ -17,21 +20,12 @@ function onRejected(instance: AxiosInstance) {
         {
           const originalRequest = error.config;
 
-          // TODO: handle authorization
-          const isSignedIn = true;
-          // const isSignedIn = AuthSelectors.isSignedIn(
-          //   StoreConfig.store.getState(),
-          // );
-
-          if (
-            isSignedIn &&
-            originalRequest &&
-            !originalRequest.pliantRequestRetry
-          ) {
-            // const accessToken = ''; //TODO: get from storage
+          const isAuthorized = useSelector(isAuthorizedSelector);
+          if (isAuthorized && originalRequest) {
+            const refreshedToken = await magic.user.getIdToken();
 
             originalRequest.pliantRequestRetry = true;
-            // originalRequest.headers.Authorization = `${accessToken}`;
+            originalRequest.headers!.Authorization = `${refreshedToken}`;
 
             return instance(originalRequest);
           }
