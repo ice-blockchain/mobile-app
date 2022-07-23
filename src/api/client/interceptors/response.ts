@@ -25,7 +25,7 @@ function onRejected(instance: AxiosInstance) {
             const refreshedToken = await magic.user.getIdToken();
 
             originalRequest.pliantRequestRetry = true;
-            originalRequest.headers!.Authorization = `${refreshedToken}`;
+            originalRequest.headers!.Authorization = `Bearer ${refreshedToken}`;
 
             return instance(originalRequest);
           }
