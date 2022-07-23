@@ -13,6 +13,10 @@ const SET_TOKEN = createAction('SET_TOKEN', {
   STATE: token => ({token}),
 });
 
+const SET_10YEARS_TOKEN = createAction('SET_10YEARS_TOKEN', {
+  STATE: token => ({token}),
+});
+
 const STORE_WELCOME_SEEN = createAction('STORE_WELCOME_SEEN', {
   STATE: () => {},
 });
@@ -90,6 +94,7 @@ const DELETE_ACCOUNT = createAction('DELETE_ACCOUNT', {
 
 export const AuthActions = Object.freeze({
   SET_TOKEN,
+  SET_10YEARS_TOKEN,
   LOAD_USER,
   FETCH_USER_PROFILE,
   STORE_WELCOME_SEEN,

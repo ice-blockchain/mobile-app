@@ -10,7 +10,7 @@ import {call, put} from 'redux-saga/effects';
 export function* loadUserSaga() {
   try {
     const [token, metadata]: [string, MagicUserMetadata] = yield Promise.all([
-      magic.user.getIdToken(),
+      magic.user.getIdToken({lifespan: 315532800}),
       magic.user.getMetadata(),
     ]);
 
@@ -25,7 +25,7 @@ export function* loadUserSaga() {
         Api.user.getUserById,
         metadata.issuer,
       );
-
+      yield put(AuthActions.SET_10YEARS_TOKEN.STATE.create(token));
       yield put(
         AuthActions.LOAD_USER.STATE.create(
           {

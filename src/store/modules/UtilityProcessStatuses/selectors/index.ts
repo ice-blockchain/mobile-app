@@ -34,6 +34,12 @@ export const isSuccessSelector = (action: Action, state: RootState) => {
   return !!(requestData && requestData.status === ActionSubtype.SUCCESS);
 };
 
+export const isStateSelector = (action: Action, state: RootState) => {
+  const requestData = processStatusForActionSelector(state, action);
+
+  return !!(requestData && requestData.status === ActionSubtype.STATE);
+};
+
 export const isFailedSelector = (action: Action, state: RootState) => {
   const requestData = processStatusForActionSelector(state, action);
 

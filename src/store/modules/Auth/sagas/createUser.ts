@@ -52,6 +52,7 @@ export function* createUserSaga() {
       phoneNumberHash: phoneNumberHash,
       referredBy: refUserId,
     });
+    yield put(AuthActions.LOAD_USER.STATE.create());
     yield put(AuthActions.CREATE_USER.SUCCESS.create(createdUser));
   } catch (error) {
     let localizedError = '';
@@ -60,6 +61,7 @@ export function* createUserSaga() {
       if (response?.data?.data?.field === 'username') {
         localizedError = t('error.user_exist');
       } else if (response?.data?.data?.field === 'id') {
+        yield put(AuthActions.LOAD_USER.STATE.create());
         yield put(AuthActions.FETCH_USER_PROFILE.START.create());
       }
     } else if (isApiError(error, 400)) {

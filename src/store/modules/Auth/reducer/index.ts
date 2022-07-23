@@ -14,6 +14,7 @@ export interface AuthState {
     username?: string | null;
   } | null;
   token: string | null;
+  longLivedToken: string | null;
   isInitialized: boolean;
   isWelcomeSeen: boolean;
   phoneVerificationStep: string;
@@ -23,6 +24,7 @@ export interface AuthState {
 
 type Actions = ReturnType<
   | typeof AuthActions.SET_TOKEN.STATE.create
+  | typeof AuthActions.SET_10YEARS_TOKEN.STATE.create
   | typeof AuthActions.SET_PHONE_NUMBER_VERIFIED.STATE.create
   | typeof AuthActions.SET_CODE_VERIFIED.STATE.create
   | typeof AuthActions.STORE_WELCOME_SEEN.STATE.create
@@ -39,6 +41,7 @@ type Actions = ReturnType<
 const INITIAL_STATE: AuthState = {
   magicUser: null,
   token: null,
+  longLivedToken: null,
   isInitialized: false,
   isWelcomeSeen: false,
   phoneVerificationStep: 'phone',
@@ -52,6 +55,10 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
       case AuthActions.SET_TOKEN.STATE.type:
         draft.token = action.payload.token;
         break;
+      case AuthActions.SET_10YEARS_TOKEN.STATE.type:
+        draft.longLivedToken = action.payload.token;
+        break;
+
       case AuthActions.LOAD_USER.STATE.type:
         draft.magicUser = action.payload.magicUser ?? null;
         draft.isInitialized = true;

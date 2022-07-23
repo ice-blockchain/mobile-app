@@ -25,3 +25,6 @@ export const phoneVerificationStepSelector = (state: RootState) =>
   state.auth.phoneVerificationStep;
 
 export const profileSelector = (state: RootState) => state.auth.profile;
+
+export const longLiveTokenSelector = (state: RootState) =>
+  state.auth.longLivedToken;

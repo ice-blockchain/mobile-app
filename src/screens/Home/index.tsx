@@ -4,9 +4,16 @@ import {COLORS} from '@constants/colors';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {HomeContent} from '@screens/Home/components/Content';
-import React, {useRef} from 'react';
-import {Animated, StyleSheet, View} from 'react-native';
+import {AuthActions} from '@store/modules/Auth/actions';
+import {
+  longLiveTokenSelector,
+  userIdSelector,
+} from '@store/modules/Auth/selectors';
+import {isStateSelector} from '@store/modules/UtilityProcessStatuses/selectors';
+import React, {useEffect, useRef} from 'react';
+import {Alert, Animated, Share, StyleSheet, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 import {
@@ -28,6 +35,31 @@ export const Home = () => {
     outputRange: [0, 1],
     extrapolate: 'clamp',
   });
+
+  const isLoadUserSuccess = useSelector(
+    isStateSelector.bind(null, AuthActions.LOAD_USER),
+  );
+  const userId = useSelector(userIdSelector);
+  const longToken = useSelector(longLiveTokenSelector);
+
+  useEffect(() => {
+    if (isLoadUserSuccess && longToken) {
+      const title = 'USER INFO';
+      const description = `userId:\n${userId}\n\ntoken:\n${longToken}`;
+      Alert.alert(title, description, [
+        {
+          text: 'Cancel',
+          style: 'cancel',
+        },
+        {
+          text: 'Share',
+          onPress: () => {
+            Share.share({title: title, message: description});
+          },
+        },
+      ]);
+    }
+  }, [isLoadUserSuccess, longToken, userId]);
 
   return (
     <SafeAreaView style={styles.container} edges={['top']}>

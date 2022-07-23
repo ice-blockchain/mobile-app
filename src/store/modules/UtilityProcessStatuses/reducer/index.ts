@@ -1,12 +1,11 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {AuthActions} from '@store/modules/Auth/actions';
 import {ACTION_DIVIDER} from '@store/utils/actions/createAction';
 import lodashHead from 'lodash/head';
 import lodashLast from 'lodash/last';
-// TODO: connect auth actions
-// import AuthActions from '../Auth/actions';
 
-type ProcessingActionStatus = 'START' | 'SUCCESS' | 'FAILED';
+type ProcessingActionStatus = 'START' | 'SUCCESS' | 'FAILED' | 'STATE';
 
 interface Action {
   type: string;
@@ -51,10 +50,9 @@ function reduceAction(
 }
 
 export function processStatusesReducer(state = INITIAL_STATE, action: Action) {
-  // TODO: connect auth actions
-  // if (action.type === AuthActions.SIGN_OUT.SUCCESS.type) {
-  //   return INITIAL_STATE;
-  // }
+  if (action.type === AuthActions.SIGN_OUT.SUCCESS.type) {
+    return INITIAL_STATE;
+  }
 
   const actionParts = action.type.split(ACTION_DIVIDER);
 
@@ -68,6 +66,7 @@ export function processStatusesReducer(state = INITIAL_STATE, action: Action) {
   switch (status) {
     case 'START':
     case 'SUCCESS':
+    case 'STATE':
     case 'FAILED':
       return {
         ...state,
