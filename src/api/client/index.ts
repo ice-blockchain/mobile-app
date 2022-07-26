@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {RequestConfig} from '@api/client/apiClientTypes';
 import {getHeaders} from '@api/client/getHeaders';
 import {ENV} from '@constants/env';
-import axios, {AxiosInstance} from 'axios';
+import axios, {AxiosInstance, AxiosRequestConfig} from 'axios';
 import {backOff} from 'exponential-backoff';
 
 import {handleServiceError} from './ApiServiceErrors';
@@ -51,7 +50,7 @@ setupApiClient(readClient);
 export async function post<TRequest, TResponse>(
   path: string,
   payload: TRequest,
-  config?: RequestConfig,
+  config?: AxiosRequestConfig,
 ): Promise<TResponse> {
   try {
     const response = await backOff(
@@ -68,7 +67,7 @@ export async function post<TRequest, TResponse>(
 export async function patch<TRequest, TResponse>(
   path: string,
   payload: TRequest,
-  config?: RequestConfig,
+  config?: AxiosRequestConfig,
 ): Promise<TResponse> {
   try {
     const response = await backOff(
@@ -85,7 +84,7 @@ export async function patch<TRequest, TResponse>(
 export async function put<TRequest, TResponse>(
   path: string,
   payload: TRequest,
-  config?: RequestConfig,
+  config?: AxiosRequestConfig,
 ): Promise<TResponse> {
   try {
     const response = await backOff(
@@ -101,7 +100,7 @@ export async function put<TRequest, TResponse>(
 
 export async function get<TResponse>(
   path: string,
-  config?: RequestConfig,
+  config?: AxiosRequestConfig,
 ): Promise<TResponse> {
   try {
     const response = await backOff(
@@ -117,7 +116,7 @@ export async function get<TResponse>(
 
 export async function del<TResponse>(
   path: string,
-  config?: RequestConfig,
+  config?: AxiosRequestConfig,
 ): Promise<TResponse> {
   try {
     const response = await backOff(

@@ -3,8 +3,3 @@
 export type HttpHeaders = {
   [key: string]: string;
 };
-
-export type RequestConfig = {
-  headers: HttpHeaders;
-  transformRequest?: (data: FormData) => FormData;
-};
