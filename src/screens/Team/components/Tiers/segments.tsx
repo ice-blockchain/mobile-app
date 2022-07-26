@@ -8,7 +8,7 @@ import {t} from '@translations/i18n';
 import React from 'react';
 import {Text} from 'react-native';
 
-export const TABS = [
+export const SEGMENTS = [
   {
     /**
      * Custom render example

@@ -134,7 +134,7 @@ export function* getContactsSaga() {
       a.firstName.localeCompare(b.firstName),
     );
 
-    const contactArray = contactsList.length ? contactsList : mockContacts;
+    const contactArray = __DEV__ ? mockContacts : contactsList;
 
     contactArray.forEach((contact: IFormattedContact) => {
       contactsByIds[contact.id] = {

@@ -13,7 +13,7 @@ import {StyleSheet, View} from 'react-native';
 import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
 import {rem} from 'rn-units';
 
-import {TABS} from './mockData';
+import {SEGMENTS} from './segments';
 
 type TiersProps = {
   showCountriesList: (t: boolean) => void;
@@ -35,7 +35,7 @@ export const Tiers = (props: TiersProps) => {
   return (
     <View style={styles.container}>
       <SegmentedControl
-        segments={TABS}
+        segments={SEGMENTS}
         ref={switcherRef}
         style={styles.tabbar}
         onChange={onCategoryChange}
