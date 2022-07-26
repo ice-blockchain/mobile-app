@@ -62,9 +62,11 @@ export const ContactItem = ({
             {item.phoneNumbers.length === 1 ? null : (
               <View style={{height}}>
                 {[...item.phoneNumbers.slice(1, item.phoneNumbers.length)].map(
-                  num => {
-                    return <Text style={styles.phoneNumber}>{num}</Text>;
-                  },
+                  num => (
+                    <Text style={styles.phoneNumber} key={num}>
+                      {num}
+                    </Text>
+                  ),
                 )}
               </View>
             )}
