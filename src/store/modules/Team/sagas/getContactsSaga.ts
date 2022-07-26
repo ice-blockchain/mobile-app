@@ -3,7 +3,7 @@
 import {TeamActions} from '@store/modules/Team/actions';
 import {ContactById} from '@store/modules/Team/reducer';
 import {getRandomColor} from '@utils/getRandomColor';
-import {E164Number, parsePhoneNumberFromString} from 'libphonenumber-js';
+import {E164Number, parsePhoneNumberFromString} from 'libphonenumber-js/min';
 import {isEmpty} from 'lodash';
 import Contacts from 'react-native-contacts';
 import {call, put} from 'redux-saga/effects';

@@ -10,8 +10,8 @@ import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
 import {Images} from '@images';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {t} from '@translations/i18n';
-import {formatPhoneNumberForInput} from '@utils/number';
-import {CountryCode, formatIncompletePhoneNumber} from 'libphonenumber-js';
+import {formatPhoneNumber} from '@utils/phoneNumber';
+import {CountryCode, formatIncompletePhoneNumber} from 'libphonenumber-js/min';
 import React, {useEffect, useRef, useState} from 'react';
 import {Animated, Image, StyleSheet, Text, View} from 'react-native';
 import {font, isIOS, rem, screenWidth} from 'rn-units';
@@ -61,7 +61,14 @@ export function ConfirmPhone({
   });
 
   const onPhoneNumberChange = (phoneNumber: string) => {
-    setPhone(formatPhoneNumberForInput(phoneNumber, selectedCountry));
+    setPhone(
+      formatPhoneNumber(
+        `${selectedCountry.iddCode}${phoneNumber}`,
+        selectedCountry.isoCode,
+      )
+        .replace(selectedCountry.iddCode, '')
+        .trim(),
+    );
   };
 
   return (

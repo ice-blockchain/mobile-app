@@ -8,7 +8,7 @@ import {MiningIcon} from '@svg/MiningIcon';
 import {TierOneIcon} from '@svg/TierOneIcon';
 import {TierTwoIcon} from '@svg/TierTwoIcon';
 import {t} from '@translations/i18n';
-import {formatNumber} from '@utils/number';
+import {formatAsCurrency} from '@utils/number';
 import React, {memo, useEffect, useRef} from 'react';
 import {
   ActivityIndicator,
@@ -71,7 +71,9 @@ export const Calculator = memo(
           ) : (
             <Text style={styles.resultValueText}>
               {result !== null
-                ? `${formatNumber(result)} ${t('mining_calculator.currency')}`
+                ? `${formatAsCurrency(result)} ${t(
+                    'mining_calculator.currency',
+                  )}`
                 : null}
             </Text>
           )}

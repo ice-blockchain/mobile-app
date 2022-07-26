@@ -4,8 +4,8 @@ import {Api} from '@api/index';
 import {UserProfile, UserProfileUpdate} from '@api/user/types';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {userIdSelector} from '@store/modules/Auth/selectors';
-import {sha256} from 'react-native-sha256';
-import {put, select} from 'redux-saga/effects';
+import {hashPhoneNumber} from '@utils/phoneNumber';
+import {call, put, select} from 'redux-saga/effects';
 
 const actionCreator = AuthActions.UPDATE_ACCOUNT.START.create;
 
@@ -18,7 +18,7 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
     let phoneNumberHash: string | undefined;
 
     if (userInfo.phoneNumber) {
-      phoneNumberHash = yield sha256(userInfo.phoneNumber);
+      phoneNumberHash = yield call(hashPhoneNumber, userInfo.phoneNumber);
     }
 
     let data: UserProfileUpdate = userInfo;

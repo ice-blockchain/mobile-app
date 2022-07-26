@@ -10,7 +10,7 @@ import {
   usernameSelector,
 } from '@store/modules/Validation/selectors';
 import {t} from '@translations/i18n';
-import {sha256} from 'react-native-sha256';
+import {hashPhoneNumber} from '@utils/phoneNumber';
 import {call, put, select} from 'redux-saga/effects';
 
 export function* createUserSaga() {
@@ -37,7 +37,7 @@ export function* createUserSaga() {
       email = magicUser.email;
 
       if (phoneNumber) {
-        phoneNumberHash = yield call(sha256, phoneNumber);
+        phoneNumberHash = yield call(hashPhoneNumber, phoneNumber);
       }
     }
 
