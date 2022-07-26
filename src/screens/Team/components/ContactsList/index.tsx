@@ -5,33 +5,30 @@ import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
-import {ContactItem} from '@screens/Team/components/ContactItem';
 import {TeamContactInvite} from '@screens/Team/components/ContactsList/assets/svg/TeamContactInvite';
+import {ContactItem} from '@screens/Team/components/ContactsList/components/ContactItem';
 import {ContactsInviteButton} from '@screens/Team/components/ContactsList/components/ContactsInviteButton';
 import {MultipleNumbers} from '@screens/Team/components/ContactsList/components/MultipleNumbers';
 import {SectionHeader} from '@screens/Team/components/ContactsList/components/SectionHeader';
 import {useGetContacts} from '@screens/Team/components/ContactsList/hooks/useGetContacts';
 import {TeamActions} from '@store/modules/Team/actions';
-import {
-  getContactsByIdsSelector,
-  getInvitedFriendsSelector,
-} from '@store/modules/Team/selectors';
-import {WhiteLogoSvg} from '@svg/WhiteLogo';
 import {t} from '@translations/i18n';
 import {hapticFeedback} from '@utils/hapticFeedback';
 import React, {useCallback} from 'react';
-import {SectionList, StyleSheet, Text, View} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
+import {
+  SectionList,
+  SectionListData,
+  SectionListRenderItemInfo,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+import {Contact} from 'react-native-contacts';
+import {useDispatch} from 'react-redux';
 import {font, rem, screenWidth} from 'rn-units';
 
-interface ContactsListProps {}
-
-type Section = {title: string; data: string[]};
-
-export const ContactsList = ({}: ContactsListProps) => {
+export const ContactsList = () => {
   const dispatch = useDispatch();
-  const contactsByIds = useSelector(getContactsByIdsSelector);
-  const invitedFriends = useSelector(getInvitedFriendsSelector);
 
   const tabbarOffset = useBottomTabBarOffsetStyle({extraOffset: 20});
 
@@ -45,79 +42,77 @@ export const ContactsList = ({}: ContactsListProps) => {
     [dispatch],
   );
 
-  const renderSectionHeader = useCallback(({section}: {section: Section}) => {
-    return <SectionHeader section={section} />;
-  }, []);
+  const renderSectionHeader = useCallback(
+    ({
+      section,
+    }: {
+      section: SectionListData<Contact | string, {title: string}>;
+    }) => {
+      return <SectionHeader section={section} />;
+    },
+    [],
+  );
 
   const renderItem = useCallback(
     ({
       item,
       index,
       section,
-    }: {
-      item: string;
-      index: number;
-      section: Section;
-    }) => {
+    }: SectionListRenderItemInfo<Contact | string, {title: string}>) => {
       if (item === 'InviteFriendsButton') {
         return <InviteButton style={styles.inviteButtonContainer} />;
       }
-      const contact = contactsByIds[item];
-      const isFriend = invitedFriends.includes(item);
-      const multipleNumbers = contact.phoneNumbers.length > 1;
-      const isIceSection =
-        section.title !== t('team.contacts_list.all_contacts');
-      return (
-        <ContactItem
-          index={index}
-          item={contact}
-          backgroundColor={contact.backgroundColor}
-          leftIconContent={
-            isFriend ? (
-              <WhiteLogoSvg />
-            ) : (
-              <Text style={styles.contactIconText}>{`${contact.firstName.charAt(
+
+      if (typeof item !== 'string') {
+        const multipleNumbers = item.phoneNumbers.length > 1;
+        const isIceSection =
+          section.title !== t('team.contacts_list.all_contacts');
+        return (
+          <ContactItem
+            index={index}
+            phoneNumbers={item.phoneNumbers.map(n => n.number)}
+            backgroundColor={'#f0f0f0'} // TODO::generate depending on name
+            name={item.givenName}
+            leftIconContent={
+              <Text style={styles.contactIconText}>{`${item.givenName.charAt(
                 0,
-              )}${contact.lastName.charAt(0)}`}</Text>
-            )
-          }
-          rightSideButton={
-            <ContactsInviteButton
-              text={t('team.contacts_list.invite')}
-              icon={
-                <TeamContactInvite
-                  fill={isFriend ? COLORS.cadetBlue : COLORS.darkBlue}
-                />
-              }
-              onPress={() => invite(contact.id)}
-              disabled={isFriend}
-            />
-          }
-          indicatorContent={
-            isIceSection && isFriend ? (
-              <View
-                style={[
-                  styles.activityIndicatorContainer,
-                  {
-                    backgroundColor: contact?.isActive
-                      ? COLORS.shamrock
-                      : COLORS.cadetBlue,
-                  },
-                ]}
+              )}${item.familyName.charAt(0)}`}</Text>
+            }
+            rightSideButton={
+              <ContactsInviteButton
+                text={t('team.contacts_list.invite')}
+                icon={<TeamContactInvite fill={COLORS.darkBlue} />}
+                onPress={() => invite(item.recordID)}
               />
-            ) : multipleNumbers ? (
-              <MultipleNumbers />
-            ) : null
-          }
-        />
-      );
+            }
+            indicatorContent={
+              isIceSection ? (
+                <View
+                  style={[
+                    styles.activityIndicatorContainer,
+                    {
+                      backgroundColor: true
+                        ? COLORS.shamrock
+                        : COLORS.cadetBlue,
+                    },
+                  ]}
+                />
+              ) : multipleNumbers ? (
+                <MultipleNumbers />
+              ) : null
+            }
+          />
+        );
+      }
+
+      return null;
     },
-    [contactsByIds, invitedFriends, invite],
+    [invite],
   );
 
   return (
     <View style={styles.container}>
-      <SectionList
+      <SectionList<Contact | string, {title: string}>
         contentContainerStyle={tabbarOffset.current}
         style={styles.sectionListStyle}
         sections={sections}

@@ -1,24 +1,29 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {TeamActions} from '@store/modules/Team/actions';
-import {ContactById} from '@store/modules/Team/reducer';
-import {getContactsByIdsSelector} from '@store/modules/Team/selectors';
 import {t} from '@translations/i18n';
+import {getContactName} from '@utils/contacts';
 import {openSMS} from '@utils/openSms';
-import {put, select} from 'redux-saga/effects';
+import {Contact, getContactById} from 'react-native-contacts';
+import {call, put} from 'redux-saga/effects';
 
 const actionCreator = TeamActions.INVITE_CONTACT.START.create;
 
 export function* inviteContactSaga(action: ReturnType<typeof actionCreator>) {
   try {
     const {id} = action.payload;
-    const contactsByIds: ContactById = yield select(getContactsByIdsSelector);
-    const contact = contactsByIds[id];
+    const contact: Contact | null = yield call(getContactById, id);
+    if (!contact) {
+      throw new Error('Contact not found');
+    }
+    if (!contact.phoneNumbers.length) {
+      throw new Error('Contact has no phone numbers');
+    }
     const text = `${t('team.contacts_list.invitation_text', {
-      name: contact.firstName,
+      name: getContactName(contact),
     })}}`;
-    const [phone] = contact.phoneNumbers;
-    openSMS(phone, text);
+    const [{number}] = contact.phoneNumbers;
+    openSMS(number, text);
 
     yield put(TeamActions.INVITE_CONTACT.SUCCESS.create(id));
   } catch (error) {

@@ -2,7 +2,6 @@
 
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
-import {IFormattedContact} from '@store/modules/Team/sagas/getContactsSaga';
 import React, {ReactNode, useState} from 'react';
 import {
   LayoutAnimation,
@@ -16,14 +15,16 @@ import {font, rem} from 'rn-units';
 
 export const ContactItem = ({
   index,
-  item,
+  name,
+  phoneNumbers,
   backgroundColor,
   rightSideButton,
   leftIconContent,
   indicatorContent,
 }: {
   index: number;
-  item: IFormattedContact;
+  name: string;
+  phoneNumbers: string[];
   backgroundColor: string;
   rightSideButton?: ReactNode;
   leftIconContent?: ReactNode;
@@ -38,7 +39,7 @@ export const ContactItem = ({
       setActiveHeight(0);
     } else {
       setActiveIndex(index);
-      setActiveHeight(item.phoneNumbers.length * 14);
+      setActiveHeight(phoneNumbers.length * 14);
     }
   };
   return (
@@ -48,26 +49,23 @@ export const ContactItem = ({
           <View style={[styles.contactIcon, {backgroundColor}]}>
             {leftIconContent}
             <TouchableOpacity
-              disabled={item.phoneNumbers.length === 1}
+              disabled={phoneNumbers.length === 1}
               onPress={showAllNumbers}
               style={styles.indicator}>
               {indicatorContent}
             </TouchableOpacity>
           </View>
           <View>
-            <Text
-              style={styles.name}>{`${item.firstName} ${item.lastName}`}</Text>
-            <Text style={styles.phoneNumber}>{item.phoneNumbers[0]}</Text>
+            <Text style={styles.name}>{name}</Text>
+            <Text style={styles.phoneNumber}>{phoneNumbers[0]}</Text>
 
-            {item.phoneNumbers.length === 1 ? null : (
+            {phoneNumbers.length === 1 ? null : (
               <View style={{height}}>
-                {[...item.phoneNumbers.slice(1, item.phoneNumbers.length)].map(
-                  num => (
-                    <Text style={styles.phoneNumber} key={num}>
-                      {num}
-                    </Text>
-                  ),
-                )}
+                {[...phoneNumbers.slice(1, phoneNumbers.length)].map(num => (
+                  <Text style={styles.phoneNumber} key={num}>
+                    {num}
+                  </Text>
+                ))}
               </View>
             )}
           </View>

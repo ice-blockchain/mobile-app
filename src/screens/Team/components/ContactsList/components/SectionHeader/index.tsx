@@ -20,16 +20,10 @@ const IceFriendsHeader = () => {
   );
 };
 
-export const SectionHeader = ({
-  section,
-}: {
-  section: {title: string; data: string[]};
-}) => {
-  const [iceFriendsContent] = section.data;
-  const isHeaderHidden = iceFriendsContent === 'InviteFriendsButton';
+export const SectionHeader = ({section}: {section: {title: string}}) => {
   return (
-    <View style={isHeaderHidden ? styles.hiddenHeader : styles.titleContainer}>
-      {isHeaderHidden ? null : section.title === 'iceFriends' ? (
+    <View style={styles.titleContainer}>
+      {section.title === 'iceFriends' ? (
         <IceFriendsHeader />
       ) : (
         <Text style={styles.title}>{section.title}</Text>
@@ -39,9 +33,6 @@ export const SectionHeader = ({
 };
 
 const styles = StyleSheet.create({
-  hiddenHeader: {
-    backgroundColor: COLORS.white,
-  },
   titleContainer: {
     backgroundColor: COLORS.white,
     marginBottom: rem(24),
