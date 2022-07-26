@@ -16,7 +16,6 @@ import {
 import {isIOS, rem} from 'rn-units';
 
 type SearchProps = {
-  value: string;
   style?: StyleProp<ViewStyle | FlexStyle>;
   placeholder?: string;
   onChangeText: (value: string) => void;
@@ -59,11 +58,11 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
-    paddingVertical: 0,
     paddingHorizontal: 0,
     marginTop: rem(isIOS ? 0 : 5),
     backgroundColor: 'transparent',
     fontSize: rem(13),
+    alignSelf: 'stretch',
   },
   btn: {
     paddingLeft: rem(14),

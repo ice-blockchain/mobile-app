@@ -44,20 +44,19 @@ export const PhoneNumberSearch = ({
 }: PhoneNumberSearchProps) => {
   const [countriesCodeItems, setCountriesCodeItems] = useState(countriesCode);
 
-  const setSearchValue = (searchValue: string) =>
-    debounce(() => {
-      if (!isNaN(+searchValue)) {
-        setCountriesCodeItems(
-          countriesCode.filter(v => v.iddCode.includes(searchValue)),
-        );
-      } else {
-        setCountriesCodeItems(
-          countriesCode.filter(v =>
-            v.name.toLowerCase().startsWith(searchValue.toLowerCase()),
-          ),
-        );
-      }
-    }, 500)();
+  const setSearchValue = debounce((searchValue: string) => {
+    if (!isNaN(+searchValue)) {
+      setCountriesCodeItems(
+        countriesCode.filter(v => v.iddCode.includes(searchValue)),
+      );
+    } else {
+      setCountriesCodeItems(
+        countriesCode.filter(v =>
+          v.name.toLowerCase().startsWith(searchValue.toLowerCase()),
+        ),
+      );
+    }
+  }, 500);
 
   const onCountryPress = useCallback(
     (country: ICountryCode) => {

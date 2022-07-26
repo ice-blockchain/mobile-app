@@ -6,11 +6,11 @@ import {commonStyles} from '@constants/styles';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Header} from '@screens/Team/components/Header';
 import {Tiers} from '@screens/Team/components/Tiers';
-import React, {useState} from 'react';
+import React, {memo, useState} from 'react';
 import {KeyboardAvoidingView, StyleSheet, View} from 'react-native';
 import {isIOS} from 'rn-units';
 
-export const Team = () => {
+export const Team = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
     useState<boolean>(false);
@@ -31,7 +31,7 @@ export const Team = () => {
       </KeyboardAvoidingView>
     </KeyboardDismiss>
   );
-};
+});
 
 const styles = StyleSheet.create({
   wrapper: {
