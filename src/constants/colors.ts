@@ -2,8 +2,10 @@
 
 export const COLORS = {
   black: '#000000',
+  black02opacity: 'rgba(0,0,0,.2)',
   black04opacity: 'rgba(0,0,0,.4)',
   white: '#FFFFFF',
+  white02opacity: 'rgba(255,255,255, .2)',
   primary: '#073e91',
   darkBlue: '#0D265E',
   greyText: '#707489',
@@ -33,5 +35,4 @@ export const COLORS = {
   gallery: '#EBEBEB',
   scorpion: '#575757',
   cadetBlue: '#A6B0C2',
-  white02opacity: 'rgba(255,255,255, .2)',
 };

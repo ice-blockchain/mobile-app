@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {COLORS} from '@constants/colors';
 import {ConfirmCode} from '@screens/Team/components/ConfirmCode';
 import {ConfirmPhone} from '@screens/Team/components/ConfirmPhone';
 import {ContactsList} from '@screens/Team/components/ContactsList';
@@ -14,7 +15,7 @@ import {permissionSelector} from '@store/modules/Permissions/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {ValidationActions} from '@store/modules/Validation/actions';
 import {RootState} from '@store/rootReducer';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {ActivityIndicator, Animated, StyleSheet} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
@@ -44,23 +45,19 @@ export const Contacts = ({
   const isPhoneNumberVerified = useSelector(isPhoneNumberVerifiedSelector);
   const phoneVerificationStep = useSelector(phoneVerificationStepSelector);
 
-  const getCurrentScreen = useCallback(() => {
-    if (hasContactsPermissions) {
-      if (isPhoneNumberVerified) {
-        return 'ContactsList';
-      } else {
-        if (phoneVerificationStep === 'phone') {
-          return 'ConfirmPhone';
-        } else {
-          return 'ConfirmCode';
-        }
-      }
-    } else {
+  const currentScreen = useMemo(() => {
+    if (!hasContactsPermissions) {
       return 'ContactsPermissions';
+    } else if (isPhoneNumberVerified) {
+      return 'ContactsList';
+    } else if (phoneVerificationStep === 'phone') {
+      return 'ConfirmPhone';
+    } else {
+      return 'ConfirmCode';
     }
   }, [hasContactsPermissions, isPhoneNumberVerified, phoneVerificationStep]);
 
-  const [visibleFlow, setVisibleFlow] = useState<TContactsFlow>('ContactsList');
+  const [visibleFlow, setVisibleFlow] = useState<TContactsFlow>(currentScreen);
 
   const fadeAnimation = useRef(new Animated.Value(1)).current;
 
@@ -92,8 +89,8 @@ export const Contacts = ({
   );
 
   useEffect(() => {
-    setScreen(getCurrentScreen());
-  }, [getCurrentScreen, setScreen]);
+    setScreen(currentScreen);
+  }, [currentScreen, setScreen]);
 
   const confirmPhonePress = (phone: string) => {
     dispatch(AuthActions.UPDATE_ACCOUNT.START.create({phoneNumber: phone}));
@@ -143,6 +140,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   loading: {
-    backgroundColor: 'rgba(0,0,0,0.2)',
+    backgroundColor: COLORS.black02opacity,
   },
 });
