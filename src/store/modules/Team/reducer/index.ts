@@ -7,7 +7,7 @@ import produce from 'immer';
 import {Contact} from 'react-native-contacts';
 
 export interface State {
-  iceUsers: User[];
+  search: User[];
   contacts: Contact[];
 }
 
@@ -18,7 +18,7 @@ type Actions = ReturnType<
 >;
 
 const INITIAL_STATE: State = {
-  iceUsers: [],
+  search: [],
   contacts: [],
 };
 
@@ -30,7 +30,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         break;
       }
       case TeamActions.SEARCH_USERS.SUCCESS.type: {
-        draft.iceUsers = action.payload.contacts;
+        draft.search = action.payload.contacts;
         break;
       }
       case AuthActions.SIGN_OUT.SUCCESS.type: {

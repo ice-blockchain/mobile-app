@@ -6,31 +6,47 @@ import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffse
 import {EmptyTier} from '@screens/Team/components/EmptyTier';
 import {IceUserItem} from '@screens/Team/components/IceUserItem';
 import {ListHeader} from '@screens/Team/components/TierOneList/components/Header';
-import {getIceUsersSelector} from '@store/modules/Team/selectors';
+import {userIdSelector} from '@store/modules/Auth/selectors';
+import {ReferralsActions} from '@store/modules/Referrals/actions';
+import {referralsSelector} from '@store/modules/Referrals/selectors';
 import {getRandomColor} from '@utils/getRandomColor';
-import React, {useCallback} from 'react';
+import React, {useCallback, useEffect, useMemo} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {rem, screenWidth} from 'rn-units';
 
+// TODO:: add loading
 export const TierOneList = () => {
-  const iceFriends = useSelector(getIceUsersSelector);
-
+  const dispatch = useDispatch();
   const tabbarOffest = useBottomTabBarOffsetStyle({extraOffset: 20});
+
+  const userId = useSelector(userIdSelector);
+  const referrals = useSelector(referralsSelector(userId, 'T1'));
+
+  useEffect(() => {
+    dispatch(ReferralsActions.GET_REFERRALS.START.create(userId, 'T1', 0));
+  }, [dispatch, userId]);
 
   const renderItem = useCallback(({item}: {item: User}) => {
     return (
       <IceUserItem
         item={item}
         backgroundColor={getRandomColor()}
-        onPress={onPress}
+        onPress={() => {}}
       />
     );
   }, []);
 
-  const onPress = () => {};
+  const Header = useMemo(() => {
+    return (
+      <ListHeader
+        total={referrals?.total ?? 0}
+        active={referrals?.active ?? 0}
+      />
+    );
+  }, [referrals?.active, referrals?.total]);
 
-  if (!iceFriends.length) {
+  if (!referrals?.total) {
     return <EmptyTier title={'team.tierOne_tab'} />;
   }
 
@@ -39,9 +55,9 @@ export const TierOneList = () => {
       <FlatList
         showsVerticalScrollIndicator={false}
         contentContainerStyle={tabbarOffest.current}
-        ListHeaderComponent={ListHeader}
+        ListHeaderComponent={Header}
         style={styles.flatListStyle}
-        data={iceFriends}
+        data={referrals.referrals}
         renderItem={renderItem}
       />
     </View>

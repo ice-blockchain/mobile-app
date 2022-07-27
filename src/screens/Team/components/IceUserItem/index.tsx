@@ -17,7 +17,6 @@ import {
 } from 'react-native';
 import {font, rem} from 'rn-units';
 
-//TODO::make more generic, use for contacts friends (instead of ConcatsItem), tier 1 and 2 lists
 export const IceUserItem = ({
   item,
   backgroundColor,

@@ -2,6 +2,6 @@
 
 import {RootState} from '@store/rootReducer';
 
-export const getIceUsersSelector = (state: RootState) => state.team.iceUsers;
+export const searchUsersSelector = (state: RootState) => state.team.search;
 
-export const getContactsSelector = (state: RootState) => state.team.contacts;
+export const contactsSelector = (state: RootState) => state.team.contacts;

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {User} from '@api/user/types';
 import {InviteButton} from '@components/InviteButton';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
@@ -46,7 +47,7 @@ export const ContactsList = () => {
     ({
       section,
     }: {
-      section: SectionListData<Contact | string, {title: string}>;
+      section: SectionListData<Contact | User | string, {title: string}>;
     }) => {
       return <SectionHeader section={section} />;
     },
@@ -58,12 +59,12 @@ export const ContactsList = () => {
       item,
       index,
       section,
-    }: SectionListRenderItemInfo<Contact | string, {title: string}>) => {
+    }: SectionListRenderItemInfo<Contact | User | string, {title: string}>) => {
       if (item === 'InviteFriendsButton') {
         return <InviteButton style={styles.inviteButtonContainer} />;
       }
 
-      if (typeof item !== 'string') {
+      if (typeof item !== 'string' && 'phoneNumbers' in item) {
         const multipleNumbers = item.phoneNumbers.length > 1;
         const isIceSection =
           section.title !== t('team.contacts_list.all_contacts');
@@ -112,7 +113,7 @@ export const ContactsList = () => {
 
   return (
     <View style={styles.container}>
-      <SectionList<Contact | string, {title: string}>
+      <SectionList<Contact | User | string, {title: string}>
         contentContainerStyle={tabbarOffset.current}
         style={styles.sectionListStyle}
         sections={sections}

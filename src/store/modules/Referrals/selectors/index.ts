@@ -5,4 +5,4 @@ import {RootState} from '@store/rootReducer';
 
 export const referralsSelector =
   (userId: string, referralType: ReferralType) => (state: RootState) =>
-    state.referrals.data[userId][referralType];
+    state.referrals.data[userId]?.[referralType];

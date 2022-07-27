@@ -7,12 +7,17 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
-export const ListHeader = () => {
+type Props = {
+  total: number;
+  active: number;
+};
+
+export const ListHeader = ({total, active}: Props) => {
   return (
     <View style={styles.header}>
       <Text style={styles.title}>{`${t(
         'team.tier_one.header_list.title_active',
-      )}: 2/25`}</Text>
+      )}: ${active}/${total}`}</Text>
       <Text style={styles.title}>{`${t(
         'team.tier_one.header_list.title_earnings',
       )}: 94,412 ice`}</Text>
