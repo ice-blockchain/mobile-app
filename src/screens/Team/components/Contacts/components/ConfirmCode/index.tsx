@@ -16,6 +16,7 @@ type ConfirmCodeProps = {
   confirmCodePress: (code: string) => void;
 };
 
+//TODO::check reusability with settings
 export function ConfirmCode({
   confirmCodePress,
 }: ConfirmCodeProps): React.ReactElement {

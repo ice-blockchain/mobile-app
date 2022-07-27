@@ -29,6 +29,8 @@ export const TierList = memo(
     const userId = useSelector(userIdSelector);
     const referrals = useSelector(referralsSelector(userId, referralType));
 
+    //TDOO::add pagination
+    //TODO::request when the segment becomes active
     useEffect(() => {
       dispatch(
         ReferralsActions.GET_REFERRALS.START.create(userId, referralType, 0),

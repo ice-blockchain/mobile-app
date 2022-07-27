@@ -14,6 +14,7 @@ import {SectionHeader} from '@screens/Team/components/Contacts/components/Contac
 import {useGetContacts} from '@screens/Team/components/Contacts/components/ContactsList/hooks/useGetContacts';
 import {TeamActions} from '@store/modules/Team/actions';
 import {t} from '@translations/i18n';
+import {getContactAcronym} from '@utils/contacts';
 import {hapticFeedback} from '@utils/hapticFeedback';
 import React, {useCallback} from 'react';
 import {
@@ -75,9 +76,9 @@ export const ContactsList = () => {
             backgroundColor={'#f0f0f0'} // TODO::generate depending on name
             name={item.givenName}
             leftIconContent={
-              <Text style={styles.contactIconText}>{`${item.givenName.charAt(
-                0,
-              )}${item.familyName.charAt(0)}`}</Text>
+              <Text style={styles.contactIconText}>
+                {getContactAcronym(item)}
+              </Text>
             }
             rightSideButton={
               <ContactsInviteButton
