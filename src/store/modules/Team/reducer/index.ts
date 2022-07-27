@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {UserSearchInfo} from '@api/user/types';
+import {User} from '@api/user/types';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {TeamActions} from '@store/modules/Team/actions';
@@ -9,7 +9,7 @@ import {Contact} from 'react-native-contacts';
 import {persistReducer} from 'redux-persist';
 
 export interface State {
-  iceUsers: UserSearchInfo[];
+  iceUsers: User[];
   contacts: Contact[];
 }
 

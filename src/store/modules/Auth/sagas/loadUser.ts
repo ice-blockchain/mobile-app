@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Api} from '@api/index';
-import {UserProfile} from '@api/user/types';
 import {MagicUserMetadata} from '@magic-sdk/react-native';
 import {magic} from '@services/magicLink';
 import {AuthActions} from '@store/modules/Auth/actions';
-import {call, put} from 'redux-saga/effects';
+import {call, put, SagaReturnType} from 'redux-saga/effects';
 
 export function* loadUserSaga() {
   try {
@@ -21,7 +20,7 @@ export function* loadUserSaga() {
     if (token) {
       yield put(AuthActions.SET_TOKEN.STATE.create(token));
 
-      const profile: UserProfile = yield call(
+      const profile: SagaReturnType<typeof Api.user.getUserById> = yield call(
         Api.user.getUserById,
         metadata.issuer,
       );

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Api} from '@api/index';
-import {UserSearchInfo} from '@api/user/types';
+import {User} from '@api/user/types';
 import {TeamActions} from '@store/modules/Team/actions';
 import {put} from 'redux-saga/effects';
 
@@ -11,7 +11,7 @@ export function* searchUsersSaga(action: ReturnType<typeof actionCreator>) {
   try {
     const {query} = action.payload;
 
-    const result: UserSearchInfo[] = yield Api.user.searchUsers(query);
+    const result: User[] = yield Api.user.searchUsers(query);
     yield put(TeamActions.SEARCH_USERS.SUCCESS.create(result));
   } catch (error) {
     let errorMessage = 'Failed';

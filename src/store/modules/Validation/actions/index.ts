@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {UserProfile} from '@api/user/types';
+import {User} from '@api/user/types';
 import {createAction} from '@store/utils/actions/createAction';
 
 const USERNAME_VALIDATION = createAction('USERNAME_VALIDATION', {
@@ -16,7 +16,7 @@ const REF_USERNAME_VALIDATION = createAction('REF_USERNAME_VALIDATION', {
     refUsername,
     skipValidation,
   }),
-  SUCCESS: (refUser: UserProfile | null) => ({refUser}),
+  SUCCESS: (refUser: User | null) => ({refUser}),
   FAILED: (errorMessage: string) => ({
     errorMessage,
   }),

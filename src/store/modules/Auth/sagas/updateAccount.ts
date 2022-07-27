@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Api} from '@api/index';
-import {UserProfile, UserProfileUpdate} from '@api/user/types';
+import {User} from '@api/user/types';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {userIdSelector} from '@store/modules/Auth/selectors';
 import {hashPhoneNumber} from '@utils/phoneNumber';
@@ -21,7 +21,7 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       phoneNumberHash = yield call(hashPhoneNumber, userInfo.phoneNumber);
     }
 
-    let data: UserProfileUpdate = userInfo;
+    let data: User = userInfo;
 
     if (phoneNumberHash) {
       data = {
@@ -31,10 +31,10 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
     }
 
     for (let key in data) {
-      formData.append(key, data[key as keyof UserProfileUpdate]);
+      formData.append(key, data[key as keyof User]);
     }
 
-    const result: UserProfile = yield Api.user.modifyUser(userId, formData);
+    const result: User = yield Api.user.modifyUser(userId, formData);
     yield put(AuthActions.UPDATE_ACCOUNT.SUCCESS.create(result));
   } catch (error) {
     let errorMessage = 'Failed';

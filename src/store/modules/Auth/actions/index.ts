@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {UserProfile, UserProfileUpdate} from '@api/user/types';
+import {User} from '@api/user/types';
 import {OAuthProvider} from '@magic-ext/react-native-oauth';
 import {createAction} from '@store/utils/actions/createAction';
 
@@ -10,7 +10,7 @@ type SignInResult = {
     email: string | null;
     userId: string;
   };
-  profile: UserProfile | null;
+  profile: User | null;
 };
 
 const SET_TOKEN = createAction('SET_TOKEN', {
@@ -28,13 +28,13 @@ const LOAD_USER = createAction('LOAD_USER', {
       phoneNumber: string | null | undefined;
       userId: string;
     },
-    profile?: UserProfile,
+    profile?: User,
   ) => ({magicUser, profile}),
 });
 
 const CREATE_USER = createAction('CREATE_USER', {
   START: () => {},
-  SUCCESS: (result: UserProfile) => ({result}),
+  SUCCESS: (result: User) => ({result}),
   FAILED: (errorMessage: string) => ({
     errorMessage,
   }),
@@ -42,7 +42,7 @@ const CREATE_USER = createAction('CREATE_USER', {
 
 const FETCH_USER_PROFILE = createAction('FETCH_USER_PROFILE', {
   START: () => {},
-  SUCCESS: (result: UserProfile) => ({result}),
+  SUCCESS: (result: User) => ({result}),
   FAILED: (errorMessage: string) => ({
     errorMessage,
   }),
@@ -89,8 +89,8 @@ const DELETE_ACCOUNT = createAction('DELETE_ACCOUNT', {
 });
 
 const UPDATE_ACCOUNT = createAction('UPDATE_ACCOUNT', {
-  START: (userInfo: UserProfileUpdate) => ({userInfo}),
-  SUCCESS: (result: UserProfile) => ({result}),
+  START: (userInfo: User) => ({userInfo}),
+  SUCCESS: (result: User) => ({result}),
   FAILED: (errorMessage: string) => ({
     errorMessage,
   }),

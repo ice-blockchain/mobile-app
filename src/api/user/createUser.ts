@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {post} from '@api/client';
-import {UserProfile} from '@api/user/types';
+import {User} from '@api/user/types';
 
 interface Params {
   username: string;
@@ -22,7 +22,7 @@ export function createUser({
   phoneNumberHash,
   referredBy,
 }: Params) {
-  return post<Params, UserProfile>('/users', {
+  return post<Params, User>('/users', {
     username,
     email,
     phoneNumber,

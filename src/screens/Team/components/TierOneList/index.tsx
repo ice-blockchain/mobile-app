@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {UserSearchInfo} from '@api/user/types';
+import {User} from '@api/user/types';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {EmptyTier} from '@screens/Team/components/EmptyTier';
@@ -18,7 +18,7 @@ export const TierOneList = () => {
 
   const tabbarOffest = useBottomTabBarOffsetStyle({extraOffset: 20});
 
-  const renderItem = useCallback(({item}: {item: UserSearchInfo}) => {
+  const renderItem = useCallback(({item}: {item: User}) => {
     return (
       <IceUserItem
         item={item}

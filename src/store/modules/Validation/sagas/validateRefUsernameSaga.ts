@@ -2,7 +2,7 @@
 
 import {isApiError} from '@api/client/utils';
 import {Api} from '@api/index';
-import {UserProfile} from '@api/user/types';
+import {User} from '@api/user/types';
 import {ValidationActions} from '@store/modules/Validation/actions';
 import {usernameSelector} from '@store/modules/Validation/selectors';
 import {t} from '@translations/i18n';
@@ -30,7 +30,7 @@ export function* validateRefUsernameSaga(
           ),
         );
       } else {
-        let refUser: UserProfile = yield call(Api.user.getUserByUsername, {
+        let refUser: User = yield call(Api.user.getUserByUsername, {
           username: refUsername,
         });
         yield put(

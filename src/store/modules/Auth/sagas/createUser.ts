@@ -2,7 +2,7 @@
 
 import {isApiError} from '@api/client/utils';
 import {Api} from '@api/index';
-import {UserProfile} from '@api/user/types';
+import {User} from '@api/user/types';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {magicUserSelector} from '@store/modules/Auth/selectors';
 import {
@@ -45,7 +45,7 @@ export function* createUserSaga() {
       refUserId = refUser.id;
     }
 
-    const createdUser: UserProfile = yield call(Api.user.createUser, {
+    const createdUser: User = yield call(Api.user.createUser, {
       username: username,
       email: email,
       phoneNumber: phoneNumber,

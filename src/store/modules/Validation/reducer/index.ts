@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {UserProfile} from '@api/user/types';
+import {User} from '@api/user/types';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {ValidationActions} from '@store/modules/Validation/actions';
@@ -9,7 +9,7 @@ import {persistReducer} from 'redux-persist';
 
 export interface State {
   username: string | null;
-  refUser: UserProfile | null;
+  refUser: User | null;
   usernameValidationError: string | null;
   refUsernameValidationError: string | null;
 }

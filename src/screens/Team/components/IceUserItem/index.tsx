@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {UserSearchInfo} from '@api/user/types';
+import {User} from '@api/user/types';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {RingIcon} from '@screens/Team/components/Contacts/components/ContactsList/assets/svg/Ring';
@@ -23,7 +23,7 @@ export const IceUserItem = ({
   backgroundColor,
   onPress,
 }: {
-  item: UserSearchInfo;
+  item: User;
   backgroundColor: string;
   onPress: () => void;
 }) => {

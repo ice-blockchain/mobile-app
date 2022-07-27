@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {UserSearchInfo} from '@api/user/types';
+import {User} from '@api/user/types';
 import {createAction} from '@store/utils/actions/createAction';
 import {Contact} from 'react-native-contacts';
 
@@ -22,7 +22,7 @@ const GET_CONTACTS = createAction('GET_CONTACTS', {
 
 const SEARCH_USERS = createAction('SEARCH_USERS', {
   START: (query: string) => ({query}),
-  SUCCESS: (contacts: UserSearchInfo[]) => ({contacts}),
+  SUCCESS: (contacts: User[]) => ({contacts}),
   FAILED: (errorMessage: string) => ({
     errorMessage,
   }),

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {UserProfile} from '@api/user/types';
+import {User} from '@api/user/types';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {ValidationActions} from '@store/modules/Validation/actions';
@@ -19,7 +19,7 @@ export interface AuthState {
   isWelcomeSeen: boolean;
   phoneVerificationStep: string;
   isPhoneNumberVerified: boolean;
-  profile: UserProfile | null;
+  profile: User | null;
 }
 
 type Actions = ReturnType<
@@ -77,7 +77,7 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
         break;
       case AuthActions.UPDATE_ACCOUNT.SUCCESS.type:
         draft.magicUser = {
-          userId: action.payload.result.id,
+          userId: action.payload.result.id as string,
           email: action.payload.result.email,
           phoneNumber: action.payload.result.phoneNumber,
         };

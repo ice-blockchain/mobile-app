@@ -2,7 +2,7 @@
 
 import {isApiError} from '@api/client/utils';
 import {Api} from '@api/index';
-import {UserProfile} from '@api/user/types';
+import {User} from '@api/user/types';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {
   isAuthorizedSelector,
@@ -20,7 +20,7 @@ export function* fetchUserProfileSaga() {
         userIdSelector,
       );
 
-      const profile: UserProfile = yield call(fetchUserProfile, userId);
+      const profile: User = yield call(fetchUserProfile, userId);
 
       yield put(AuthActions.FETCH_USER_PROFILE.SUCCESS.create(profile));
     } else {
@@ -37,7 +37,7 @@ export function* fetchUserProfileSaga() {
 
 export function* fetchUserProfile(userId: string) {
   try {
-    const profile: UserProfile = yield call(Api.user.getUserById, userId);
+    const profile: User = yield call(Api.user.getUserById, userId);
     return profile;
   } catch (error) {
     if (isApiError(error, 404, 'USER_NOT_FOUND')) {
