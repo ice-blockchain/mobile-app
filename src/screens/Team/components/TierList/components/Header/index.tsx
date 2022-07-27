@@ -10,17 +10,16 @@ import {font, rem} from 'rn-units';
 type Props = {
   total: number;
   active: number;
+  title: string;
 };
 
-export const ListHeader = ({total, active}: Props) => {
+export const ListHeader = ({total, active, title}: Props) => {
   return (
     <View style={styles.header}>
       <Text style={styles.title}>{`${t(
         'team.tier_one.header_list.title_active',
       )}: ${active}/${total}`}</Text>
-      <Text style={styles.title}>{`${t(
-        'team.tier_one.header_list.title_earnings',
-      )}: 94,412 ice`}</Text>
+      <Text style={styles.title}>{`${t(title)}: 94,412 ice`}</Text>
     </View>
   );
 };

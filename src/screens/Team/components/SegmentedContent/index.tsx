@@ -6,8 +6,7 @@ import {
 } from '@components/SegmentedControl';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Contacts} from '@screens/Team/components/Contacts';
-import {TierOneList} from '@screens/Team/components/TierOneList';
-import {TierTwoList} from '@screens/Team/components/TierTwoList';
+import {TierList} from '@screens/Team/components/TierList';
 import React, {useCallback, useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
 import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
@@ -51,10 +50,18 @@ export const SegmentedContent = (props: TiersProps) => {
           <Contacts {...props} />
         </View>
         <View style={styles.container}>
-          <TierOneList />
+          <TierList
+            referralType="T1"
+            emptyTitle="team.tierOne_tab"
+            headerTitle="team.tier_one.header_list.title_earnings"
+          />
         </View>
         <View style={styles.container}>
-          <TierTwoList />
+          <TierList
+            referralType="T2"
+            emptyTitle="team.tierTwo_tab"
+            headerTitle="team.tier_two.header_list.title_earnings"
+          />
         </View>
       </PagerView>
     </View>

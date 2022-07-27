@@ -12,7 +12,7 @@ import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
-const icon = require('../../assets/images/teamTier2.png');
+const icon = require('../../../../assets/images/teamTier2.png');
 
 type Props = {
   title: string;
