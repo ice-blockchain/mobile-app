@@ -1,12 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {User} from '@api/user/types';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {TeamActions} from '@store/modules/Team/actions';
 import produce from 'immer';
 import {Contact} from 'react-native-contacts';
-import {persistReducer} from 'redux-persist';
 
 export interface State {
   iceUsers: User[];
@@ -44,11 +42,4 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
   });
 }
 
-const persistConfig = {
-  key: 'team',
-  storage: AsyncStorage,
-  timeout: 120000,
-  blacklist: ['contactsByIds, contactsIds'],
-};
-
-export const teamReducer = persistReducer(persistConfig, reducer);
+export const teamReducer = reducer;
