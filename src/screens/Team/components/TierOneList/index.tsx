@@ -9,7 +9,6 @@ import {ListHeader} from '@screens/Team/components/TierOneList/components/Header
 import {userIdSelector} from '@store/modules/Auth/selectors';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {referralsSelector} from '@store/modules/Referrals/selectors';
-import {getRandomColor} from '@utils/getRandomColor';
 import React, {useCallback, useEffect, useMemo} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
@@ -28,13 +27,7 @@ export const TierOneList = () => {
   }, [dispatch, userId]);
 
   const renderItem = useCallback(({item}: {item: User}) => {
-    return (
-      <IceUserItem
-        item={item}
-        backgroundColor={getRandomColor()}
-        onPress={() => {}}
-      />
-    );
+    return <IceUserItem user={item} onPress={() => {}} />;
   }, []);
 
   const Header = useMemo(() => {

@@ -16,7 +16,7 @@ export type User = {
   phoneNumberHash?: string | null;
 
   profilePicture?: string | null;
-  profilePictureUrl?: string | null;
+  profilePictureUrl?: string;
 
   referralCount?: number | null;
   agendaPhoneNumberHashes?: string | null;

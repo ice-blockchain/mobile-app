@@ -1,61 +1,51 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {User} from '@api/user/types';
+import {RemoteImage} from '@components/RemoteImage';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {RingIcon} from '@screens/Team/components/Contacts/components/ContactsList/assets/svg/Ring';
 import {ContactsInviteButton} from '@screens/Team/components/Contacts/components/ContactsList/components/ContactsInviteButton';
-import {WhiteLogoSvg} from '@svg/WhiteLogo';
 import {t} from '@translations/i18n';
 import React from 'react';
-import {
-  Image,
-  StyleSheet,
-  Text,
-  TouchableWithoutFeedback,
-  View,
-} from 'react-native';
+import {StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
 import {font, rem} from 'rn-units';
 
 export const IceUserItem = ({
-  item,
-  backgroundColor,
+  user,
   onPress,
 }: {
-  item: User;
-  backgroundColor: string;
+  user: User;
   onPress: () => void;
 }) => {
   return (
     <TouchableWithoutFeedback>
       <View style={styles.contactContainer}>
         <View style={styles.contactInfo}>
-          <View style={[styles.contactIcon, {backgroundColor}]}>
-            {item.profilePictureUrl ? (
-              <Image
-                source={{uri: item.profilePictureUrl}}
+          <View style={styles.contactIcon}>
+            {user.profilePictureUrl && (
+              <RemoteImage
+                uri={user.profilePictureUrl}
+                width={rem(46)}
+                height={rem(46)}
                 style={styles.image}
               />
-            ) : (
-              <WhiteLogoSvg />
             )}
-            <View style={styles.activityIndicatorContainer}>
-              <View
-                style={[
-                  styles.indicator,
-                  {
-                    backgroundColor: item?.active
-                      ? COLORS.shamrock
-                      : COLORS.cadetBlue,
-                  },
-                ]}
-              />
-            </View>
+            <View
+              style={[
+                styles.indicator,
+                {
+                  backgroundColor: user?.active
+                    ? COLORS.shamrock
+                    : COLORS.cadetBlue,
+                },
+              ]}
+            />
           </View>
           <View>
-            <Text style={styles.name}>{item.username}</Text>
+            <Text style={styles.name}>{user.username}</Text>
             <Text style={styles.status}>
-              {item.active
+              {user.active
                 ? t('team.tier_one.active')
                 : t('team.tier_one.inactive')}
             </Text>
@@ -63,10 +53,10 @@ export const IceUserItem = ({
         </View>
         <View style={styles.rightButtonContainer}>
           <ContactsInviteButton
-            disabled={item.pinged}
+            disabled={user.pinged}
             icon={
               <RingIcon
-                fill={item.pinged ? COLORS.cadetBlue : COLORS.darkBlue}
+                fill={user.pinged ? COLORS.cadetBlue : COLORS.darkBlue}
               />
             }
             text={t('team.tier_one.ping')}
@@ -100,19 +90,19 @@ const styles = StyleSheet.create({
     height: rem(46),
     borderRadius: 16,
   },
-  rightButtonContainer: {alignSelf: 'flex-start', marginTop: rem(12)},
+  rightButtonContainer: {
+    alignSelf: 'flex-start',
+    marginTop: rem(12),
+  },
   indicator: {
     width: rem(15),
     height: rem(15),
     borderRadius: rem(7.5),
     borderWidth: 2,
     borderColor: COLORS.white,
-  },
-  activityIndicatorContainer: {
     position: 'absolute',
     right: -2,
     bottom: -2,
-    zIndex: 10,
   },
   name: {
     fontSize: font(16),
