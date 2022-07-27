@@ -5,7 +5,7 @@ import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Header} from '@screens/Team/components/Header';
-import {Tiers} from '@screens/Team/components/Tiers';
+import {SegmentedContent} from '@screens/Team/components/SegmentedContent';
 import React, {memo, useState} from 'react';
 import {KeyboardAvoidingView, StyleSheet, View} from 'react-native';
 import {isIOS} from 'rn-units';
@@ -22,7 +22,7 @@ export const Team = memo(() => {
         <View style={styles.container}>
           <Header />
           <View style={commonStyles.baseSubScreen}>
-            <Tiers
+            <SegmentedContent
               showCountriesList={setCountryCodeSearchVisibility}
               isCountriesVisible={isCountryCodeSearchVisible}
             />

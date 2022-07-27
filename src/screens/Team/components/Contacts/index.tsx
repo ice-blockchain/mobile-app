@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {COLORS} from '@constants/colors';
-import {ConfirmCode} from '@screens/Team/components/ConfirmCode';
-import {ConfirmPhone} from '@screens/Team/components/ConfirmPhone';
-import {ContactsList} from '@screens/Team/components/ContactsList';
-import {ContactsPermissions} from '@screens/Team/components/ContactsPermissions';
+import {ConfirmCode} from '@screens/Team/components/Contacts/components/ConfirmCode';
+import {ConfirmPhone} from '@screens/Team/components/Contacts/components/ConfirmPhone';
+import {ContactsList} from '@screens/Team/components/Contacts/components/ContactsList';
+import {ContactsPermissions} from '@screens/Team/components/Contacts/components/ContactsPermissions';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {
   isPhoneNumberVerifiedSelector,

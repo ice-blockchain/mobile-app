@@ -3,8 +3,8 @@
 import {UserSearchInfo} from '@api/user/types';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
+import {EmptyTier} from '@screens/Team/components/EmptyTier';
 import {IceUserItem} from '@screens/Team/components/IceUserItem';
-import {Tier, TierType} from '@screens/Team/components/Tier';
 import {ListHeader} from '@screens/Team/components/TierOneList/components/Header';
 import {getIceUsersSelector} from '@store/modules/Team/selectors';
 import {getRandomColor} from '@utils/getRandomColor';
@@ -13,9 +13,7 @@ import {FlatList, StyleSheet, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem, screenWidth} from 'rn-units';
 
-interface TierOneListProps {}
-
-export const TierOneList = ({}: TierOneListProps) => {
+export const TierOneList = () => {
   const iceFriends = useSelector(getIceUsersSelector);
 
   const tabbarOffest = useBottomTabBarOffsetStyle({extraOffset: 20});
@@ -33,7 +31,7 @@ export const TierOneList = ({}: TierOneListProps) => {
   const onPress = () => {};
 
   if (!iceFriends.length) {
-    return <Tier type={TierType.tierOne} />;
+    return <EmptyTier title={'team.tierOne_tab'} />;
   }
 
   return (

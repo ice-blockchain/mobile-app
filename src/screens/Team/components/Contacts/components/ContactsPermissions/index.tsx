@@ -11,7 +11,7 @@ import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import {font, isIOS, rem} from 'rn-units';
 
-const icon = require('../../assets/images/teamAgendaNotShared.png');
+const icon = require('../../../../assets/images/teamAgendaNotShared.png');
 
 type ContactsPermissionsProps = {
   requestContactsAccessPermissionPress: () => void;

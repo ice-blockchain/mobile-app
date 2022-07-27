@@ -6,8 +6,8 @@ import {
 } from '@components/SegmentedControl';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Contacts} from '@screens/Team/components/Contacts';
-import {Tier, TierType} from '@screens/Team/components/Tier';
 import {TierOneList} from '@screens/Team/components/TierOneList';
+import {TierTwoList} from '@screens/Team/components/TierTwoList';
 import React, {useCallback, useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
 import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
@@ -20,7 +20,7 @@ type TiersProps = {
   isCountriesVisible: boolean;
 };
 
-export const Tiers = (props: TiersProps) => {
+export const SegmentedContent = (props: TiersProps) => {
   const switcherRef = useRef<SegmentedControlMethods>(null);
   const pagerRef = useRef<PagerView>(null);
 
@@ -54,7 +54,7 @@ export const Tiers = (props: TiersProps) => {
           <TierOneList />
         </View>
         <View style={styles.container}>
-          <Tier type={TierType.tierTwo} />
+          <TierTwoList />
         </View>
       </PagerView>
     </View>

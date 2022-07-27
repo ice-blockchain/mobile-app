@@ -5,7 +5,7 @@ import {Text} from '@components/Text';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {TierType} from '@screens/Team/components/Tier';
+import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {InviteIcon} from '@svg/InviteIcon';
 import {t} from '@translations/i18n';
 import React from 'react';
@@ -14,25 +14,21 @@ import {font, rem} from 'rn-units';
 
 const icon = require('../../assets/images/teamTier2.png');
 
-type EmptyTierProps = {
-  type: TierType;
+type Props = {
+  title: string;
 };
 
-export function EmptyTier({type}: EmptyTierProps): React.ReactElement {
+export function EmptyTier({title}: Props) {
+  const tabbarOffest = useBottomTabBarOffsetStyle();
   const handleOnPress = () => {};
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, tabbarOffest.current]}>
       <View style={styles.imageContainer}>
         <Image source={icon} style={styles.image} resizeMode="contain" />
       </View>
       <Text style={styles.title}>
         <Text text="team.empty.title_part1" />
-        <Text
-          style={styles.boldTitle}
-          text={
-            type === TierType.tierOne ? 'team.tierOne_tab' : 'team.tierTwo_tab'
-          }
-        />
+        <Text style={styles.boldTitle} text={title} />
         <Text text="team.empty.title_part2" />
       </Text>
 

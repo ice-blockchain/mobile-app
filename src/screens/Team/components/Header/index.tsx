@@ -1,8 +1,11 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {InfoItem, InfoItemType} from '@screens/Team/components/InfoItem';
-import {Search} from '@screens/Team/components/Search';
+import {
+  InfoItem,
+  InfoItemType,
+} from '@screens/Team/components/Header/components/InfoItem';
+import {Search} from '@screens/Team/components/Header/components/Search';
 import {TeamActions} from '@store/modules/Team/actions';
 import debounce from 'lodash/debounce';
 import React from 'react';
