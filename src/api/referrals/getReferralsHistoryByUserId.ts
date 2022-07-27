@@ -12,9 +12,11 @@ interface Params {
  */
 
 export function getReferralsHistoryByUserId({userId}: Params) {
-  return get<{
-    date: string;
-    t1: number;
-    t2: number;
-  }>(`/users/${userId}/referral-acquisition-history`);
+  return get<
+    {
+      date: string;
+      t1: number;
+      t2: number;
+    }[]
+  >(`/users/${userId}/referral-acquisition-history`);
 }

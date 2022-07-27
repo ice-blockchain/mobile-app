@@ -25,5 +25,7 @@ export type User = {
   pingAllowed?: boolean;
   pinged?: boolean;
 
-  referralType?: 'CONTACTS' | 'T1' | 'T2';
+  referralType?: ReferralType;
 };
+
+export type ReferralType = 'CONTACTS' | 'T1' | 'T2';
