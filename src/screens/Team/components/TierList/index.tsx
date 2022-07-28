@@ -1,18 +1,19 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {ReferralType, User} from '@api/user/types';
+import {UserListItem, UserListItemSkeleton} from '@components/UserListItem';
+import {UserListItemButton} from '@components/UserListItem/components/UserListItemButton';
+import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {EmptyTier} from '@screens/Team/components/TierList/components/EmptyTier';
 import {ListHeader} from '@screens/Team/components/TierList/components/Header';
-import {
-  IceUserItem,
-  IceUserItemSkeleton,
-} from '@screens/Team/components/TierList/components/IceUserItem';
 import {userIdSelector} from '@store/modules/Auth/selectors';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {referralsSelector} from '@store/modules/Referrals/selectors';
 import {failedReasonSelector} from '@store/modules/UtilityProcessStatuses/selectors';
+import {PingIcon} from '@svg/PingIcon';
+import {t} from '@translations/i18n';
 import React, {memo, useCallback, useEffect, useMemo} from 'react';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
@@ -54,7 +55,23 @@ export const TierList = memo(
     }, [dispatch, referralType, userId, focused]);
 
     const renderItem = useCallback(({item}: {item: User}) => {
-      return <IceUserItem user={item} onPress={() => {}} />;
+      return (
+        <UserListItem
+          user={item}
+          rightButton={
+            <UserListItemButton
+              disabled={item.pinged}
+              icon={
+                <PingIcon
+                  fill={item.pinged ? COLORS.cadetBlue : COLORS.darkBlue}
+                />
+              }
+              text={t('team.tier_one.ping')}
+              onPress={() => {}}
+            />
+          }
+        />
+      );
     }, []);
 
     const Header = useMemo(() => {
@@ -78,7 +95,7 @@ export const TierList = memo(
           {Array(5)
             .fill(null)
             .map((_, index) => (
-              <IceUserItemSkeleton key={index} />
+              <UserListItemSkeleton key={index} />
             ))}
         </>
       );

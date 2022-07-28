@@ -11,3 +11,9 @@ export const getContactName = (contact: Contact) => {
 export const getContactAcronym = (contact: Contact) => {
   return contact.givenName.charAt(0) + contact.familyName.charAt(0);
 };
+
+//TODO::complete
+export const getColorForContact = (contact: Contact) => {
+  console.log('%c contact', 'background: #ff6347', contact);
+  return '#0f0f0f';
+};

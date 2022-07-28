@@ -4,10 +4,8 @@ import {User} from '@api/user/types';
 import {RemoteImage} from '@components/RemoteImage';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
-import {RingIcon} from '@screens/Team/components/Contacts/components/ContactsList/assets/svg/Ring';
-import {ContactsInviteButton} from '@screens/Team/components/Contacts/components/ContactsList/components/ContactsInviteButton';
 import {t} from '@translations/i18n';
-import React from 'react';
+import React, {ReactNode} from 'react';
 import {
   StyleProp,
   StyleSheet,
@@ -19,12 +17,12 @@ import {
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {font, rem, screenWidth} from 'rn-units';
 
-export const IceUserItem = ({
+export const UserListItem = ({
   user,
-  onPress,
+  rightButton,
 }: {
   user: User;
-  onPress: () => void;
+  rightButton?: ReactNode;
 }) => {
   return (
     <TouchableWithoutFeedback>
@@ -59,24 +57,15 @@ export const IceUserItem = ({
             </Text>
           </View>
         </View>
-        <View style={styles.rightButtonContainer}>
-          <ContactsInviteButton
-            disabled={user.pinged}
-            icon={
-              <RingIcon
-                fill={user.pinged ? COLORS.cadetBlue : COLORS.darkBlue}
-              />
-            }
-            text={t('team.tier_one.ping')}
-            onPress={onPress}
-          />
-        </View>
+        {rightButton && (
+          <View style={styles.rightButtonContainer}>{rightButton}</View>
+        )}
       </View>
     </TouchableWithoutFeedback>
   );
 };
 
-export const IceUserItemSkeleton = ({
+export const UserListItemSkeleton = ({
   containerStyle,
 }: {containerStyle?: StyleProp<ViewStyle>} = {}) => (
   <SkeletonPlaceholder>

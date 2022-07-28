@@ -6,19 +6,14 @@ import React, {ReactNode} from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {font} from 'rn-units';
 
-type ContactsInviteButtonProps = {
+type Props = {
   icon: ReactNode;
   text: string;
   onPress: () => void;
   disabled?: boolean;
 };
 
-export const ContactsInviteButton = ({
-  icon,
-  text,
-  onPress,
-  disabled,
-}: ContactsInviteButtonProps) => {
+export const UserListItemButton = ({icon, text, onPress, disabled}: Props) => {
   return (
     <TouchableOpacity
       disabled={disabled}

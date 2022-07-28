@@ -1,8 +1,17 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {UserListItemButton} from '@components/UserListItem/components/UserListItemButton';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
-import React, {ReactNode, useState} from 'react';
+import {TeamContactInvite} from '@screens/Team/components/Contacts/components/ContactsList/assets/svg/TeamContactInvite';
+import {MultipleNumbers} from '@screens/Team/components/Contacts/components/ContactsList/components/MultipleNumbers';
+import {t} from '@translations/i18n';
+import {
+  getColorForContact,
+  getContactAcronym,
+  getContactName,
+} from '@utils/contacts';
+import React, {memo, useState} from 'react';
 import {
   LayoutAnimation,
   StyleSheet,
@@ -11,70 +20,80 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
+import {Contact} from 'react-native-contacts';
 import {font, rem} from 'rn-units';
 
-export const ContactItem = ({
-  index,
-  name,
-  phoneNumbers,
-  backgroundColor,
-  rightSideButton,
-  leftIconContent,
-  indicatorContent,
-}: {
-  index: number;
-  name: string;
-  phoneNumbers: string[];
-  backgroundColor: string;
-  rightSideButton?: ReactNode;
-  leftIconContent?: ReactNode;
-  indicatorContent?: ReactNode;
-}) => {
-  const [activeIndex, setActiveIndex] = useState<number | undefined>(undefined);
-  const [height, setActiveHeight] = useState<number | undefined>(0);
-  const showAllNumbers = () => {
-    LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
-    if (activeIndex === index) {
-      setActiveIndex(undefined);
-      setActiveHeight(0);
-    } else {
-      setActiveIndex(index);
-      setActiveHeight(phoneNumbers.length * 14);
-    }
-  };
-  return (
-    <TouchableWithoutFeedback>
-      <View style={styles.contactContainer}>
-        <View style={styles.contactInfo}>
-          <View style={[styles.contactIcon, {backgroundColor}]}>
-            {leftIconContent}
-            <TouchableOpacity
-              disabled={phoneNumbers.length === 1}
-              onPress={showAllNumbers}
-              style={styles.indicator}>
-              {indicatorContent}
-            </TouchableOpacity>
-          </View>
-          <View>
-            <Text style={styles.name}>{name}</Text>
-            <Text style={styles.phoneNumber}>{phoneNumbers[0]}</Text>
+export const ContactItem = memo(
+  ({
+    index,
+    contact,
+    onInvite,
+  }: {
+    index: number;
+    contact: Contact;
+    onInvite: (contactId: string) => void;
+  }) => {
+    const [activeIndex, setActiveIndex] = useState<number | undefined>(
+      undefined,
+    );
+    const [height, setActiveHeight] = useState<number | undefined>(0);
+    const phoneNumbers = contact.phoneNumbers.map(n => n.number);
+    const showAllNumbers = () => {
+      LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
+      if (activeIndex === index) {
+        setActiveIndex(undefined);
+        setActiveHeight(0);
+      } else {
+        setActiveIndex(index);
+        setActiveHeight(phoneNumbers.length * font(14));
+      }
+    };
+    return (
+      <TouchableWithoutFeedback>
+        <View style={styles.contactContainer}>
+          <View style={styles.contactInfo}>
+            <View
+              style={[
+                styles.contactIcon,
+                {backgroundColor: getColorForContact(contact)},
+              ]}>
+              <Text style={styles.contactIconText}>
+                {getContactAcronym(contact)}
+              </Text>
+              <TouchableOpacity
+                disabled={phoneNumbers.length === 1}
+                onPress={showAllNumbers}
+                style={styles.indicator}>
+                {phoneNumbers.length > 1 && <MultipleNumbers />}
+              </TouchableOpacity>
+            </View>
+            <View>
+              <Text style={styles.name}>{getContactName(contact)}</Text>
+              <Text style={styles.phoneNumber}>{phoneNumbers[0]}</Text>
 
-            {phoneNumbers.length === 1 ? null : (
-              <View style={{height}}>
-                {[...phoneNumbers.slice(1, phoneNumbers.length)].map(num => (
-                  <Text style={styles.phoneNumber} key={num}>
-                    {num}
-                  </Text>
-                ))}
-              </View>
-            )}
+              {phoneNumbers.length === 1 ? null : (
+                <View style={{height}}>
+                  {[...phoneNumbers.slice(1, phoneNumbers.length)].map(num => (
+                    <Text style={styles.phoneNumber} key={num}>
+                      {num}
+                    </Text>
+                  ))}
+                </View>
+              )}
+            </View>
+          </View>
+          <View style={styles.rightButtonContainer}>
+            <UserListItemButton
+              text={t('team.contacts_list.invite')}
+              icon={<TeamContactInvite fill={COLORS.darkBlue} />}
+              onPress={() => onInvite(contact.recordID)}
+            />
           </View>
         </View>
-        <View style={styles.rightButtonContainer}>{rightSideButton}</View>
-      </View>
-    </TouchableWithoutFeedback>
-  );
-};
+      </TouchableWithoutFeedback>
+    );
+  },
+);
 
 const styles = StyleSheet.create({
   contactContainer: {
@@ -110,5 +129,10 @@ const styles = StyleSheet.create({
     right: -2,
     bottom: -2,
     zIndex: 10,
+  },
+  contactIconText: {
+    color: COLORS.white,
+    fontFamily: FONTS.primary.regular,
+    fontSize: font(15),
   },
 });
