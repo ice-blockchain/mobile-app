@@ -14,10 +14,17 @@ interface Params {
  * Returns the referrals of an user.
  */
 
-export function getReferrals({userId, referralType}: Params) {
+export function getReferrals({
+  userId,
+  referralType,
+  limit = 10,
+  offset = 0,
+}: Params) {
   return get<{
     active: number;
     referrals: User[];
     total: number;
-  }>(`/users/${userId}/referrals?type=${referralType}`);
+  }>(`/users/${userId}/referrals`, {
+    params: {type: referralType, limit, offset},
+  });
 }

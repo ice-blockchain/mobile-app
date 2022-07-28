@@ -8,15 +8,11 @@ import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {EmptyTier} from '@screens/Team/components/TierList/components/EmptyTier';
 import {ListHeader} from '@screens/Team/components/TierList/components/Header';
-import {userIdSelector} from '@store/modules/Auth/selectors';
-import {ReferralsActions} from '@store/modules/Referrals/actions';
-import {referralsSelector} from '@store/modules/Referrals/selectors';
-import {failedReasonSelector} from '@store/modules/UtilityProcessStatuses/selectors';
+import {useReferrals} from '@screens/Team/components/TierList/hooks/useReferrals';
 import {PingIcon} from '@svg/PingIcon';
 import {t} from '@translations/i18n';
-import React, {memo, useCallback, useEffect, useMemo} from 'react';
+import React, {memo, useCallback, useMemo} from 'react';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
 import {rem, screenWidth} from 'rn-units';
 
 type Props = {
@@ -28,31 +24,8 @@ type Props = {
 
 export const TierList = memo(
   ({referralType, emptyTitle, headerTitle, focused}: Props) => {
-    const dispatch = useDispatch();
     const tabbarOffset = useBottomTabBarOffsetStyle({extraOffset: 20});
-
-    const userId = useSelector(userIdSelector);
-    const referrals = useSelector(referralsSelector(userId, referralType));
-
-    const failedReason = useSelector(
-      failedReasonSelector.bind(
-        null,
-        ReferralsActions.GET_REFERRALS(referralType),
-      ),
-    );
-
-    //TDOO::add pagination
-    useEffect(() => {
-      if (focused) {
-        dispatch(
-          ReferralsActions.GET_REFERRALS(referralType).START.create(
-            userId,
-            referralType,
-            0,
-          ),
-        );
-      }
-    }, [dispatch, referralType, userId, focused]);
+    const {referrals, error, loadNext} = useReferrals(referralType, focused);
 
     const renderItem = useCallback(({item}: {item: User}) => {
       return (
@@ -85,9 +58,9 @@ export const TierList = memo(
     }, [referrals?.total, referrals?.active, headerTitle]);
 
     if (!referrals) {
-      if (failedReason) {
+      if (error) {
         //TODO::error handling (component?)
-        return <Text>{failedReason}</Text>;
+        return <Text>{error}</Text>;
       } else {
         return (
           <View style={styles.loadingContainer}>
@@ -112,6 +85,7 @@ export const TierList = memo(
               style={styles.flatListStyle}
               data={referrals.referrals}
               renderItem={renderItem}
+              onEndReached={loadNext}
             />
           </View>
         );
