@@ -6,11 +6,8 @@ import {FONTS} from '@constants/fonts';
 import {TeamContactInvite} from '@screens/Team/components/Contacts/components/ContactsList/assets/svg/TeamContactInvite';
 import {MultipleNumbers} from '@screens/Team/components/Contacts/components/ContactsList/components/MultipleNumbers';
 import {t} from '@translations/i18n';
-import {
-  getColorForContact,
-  getContactAcronym,
-  getContactName,
-} from '@utils/contacts';
+import {getContactAcronym, getContactName} from '@utils/contacts';
+import {stringToColor} from '@utils/string';
 import React, {memo, useState} from 'react';
 import {
   LayoutAnimation,
@@ -55,7 +52,7 @@ export const ContactItem = memo(
             <View
               style={[
                 styles.contactIcon,
-                {backgroundColor: getColorForContact(contact)},
+                {backgroundColor: stringToColor(contact.givenName)},
               ]}>
               <Text style={styles.contactIconText}>
                 {getContactAcronym(contact)}
