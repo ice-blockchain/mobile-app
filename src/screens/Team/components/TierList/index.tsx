@@ -5,7 +5,10 @@ import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {EmptyTier} from '@screens/Team/components/TierList/components/EmptyTier';
 import {ListHeader} from '@screens/Team/components/TierList/components/Header';
-import {IceUserItem} from '@screens/Team/components/TierList/components/IceUserItem';
+import {
+  IceUserItem,
+  IceUserItemSkeleton,
+} from '@screens/Team/components/TierList/components/IceUserItem';
 import {userIdSelector} from '@store/modules/Auth/selectors';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {referralsSelector} from '@store/modules/Referrals/selectors';
@@ -21,7 +24,6 @@ type Props = {
   headerTitle: string;
 };
 
-// TODO:: add loading
 export const TierList = memo(
   ({referralType, emptyTitle, headerTitle}: Props) => {
     const dispatch = useDispatch();
@@ -49,8 +51,6 @@ export const TierList = memo(
       ),
     );
 
-    console.log('%c isLoading', 'background: #ff6347', isLoading, referralType);
-
     const renderItem = useCallback(({item}: {item: User}) => {
       return <IceUserItem user={item} onPress={() => {}} />;
     }, []);
@@ -64,6 +64,18 @@ export const TierList = memo(
         />
       );
     }, [referrals?.total, referrals?.active, headerTitle]);
+
+    if (isLoading && !referrals) {
+      return (
+        <>
+          {Array(5)
+            .fill(null)
+            .map((_, index) => (
+              <IceUserItemSkeleton key={index} />
+            ))}
+        </>
+      );
+    }
 
     if (!referrals?.total) {
       return <EmptyTier title={emptyTitle} />;
@@ -93,6 +105,6 @@ const styles = StyleSheet.create({
   },
   flatListStyle: {
     width: screenWidth - rem(48),
-    marginTop: 22,
+    marginTop: rem(22),
   },
 });

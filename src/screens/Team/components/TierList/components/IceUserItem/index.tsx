@@ -8,8 +8,16 @@ import {RingIcon} from '@screens/Team/components/Contacts/components/ContactsLis
 import {ContactsInviteButton} from '@screens/Team/components/Contacts/components/ContactsList/components/ContactsInviteButton';
 import {t} from '@translations/i18n';
 import React from 'react';
-import {StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
-import {font, rem} from 'rn-units';
+import {
+  StyleProp,
+  StyleSheet,
+  Text,
+  TouchableWithoutFeedback,
+  View,
+  ViewStyle,
+} from 'react-native';
+import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
+import {font, rem, screenWidth} from 'rn-units';
 
 export const IceUserItem = ({
   user,
@@ -68,6 +76,14 @@ export const IceUserItem = ({
   );
 };
 
+export const IceUserItemSkeleton = ({
+  containerStyle,
+}: {containerStyle?: StyleProp<ViewStyle>} = {}) => (
+  <SkeletonPlaceholder>
+    <View style={[styles.skeleton, containerStyle]} />
+  </SkeletonPlaceholder>
+);
+
 const styles = StyleSheet.create({
   contactContainer: {
     flexDirection: 'row',
@@ -88,7 +104,7 @@ const styles = StyleSheet.create({
   image: {
     width: rem(46),
     height: rem(46),
-    borderRadius: 16,
+    borderRadius: rem(16),
   },
   rightButtonContainer: {
     alignSelf: 'flex-start',
@@ -114,5 +130,12 @@ const styles = StyleSheet.create({
     fontSize: font(13.5),
     fontFamily: FONTS.primary.medium,
     color: COLORS.emperor,
+  },
+  skeleton: {
+    height: rem(46),
+    borderRadius: rem(16),
+    width: screenWidth - rem(48),
+    marginTop: rem(14),
+    alignSelf: 'center',
   },
 });
