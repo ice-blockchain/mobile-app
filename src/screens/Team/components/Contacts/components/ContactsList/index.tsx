@@ -29,12 +29,16 @@ import {Contact} from 'react-native-contacts';
 import {useDispatch} from 'react-redux';
 import {font, rem, screenWidth} from 'rn-units';
 
-export const ContactsList = () => {
+type Props = {
+  focused: boolean;
+};
+
+export const ContactsList = ({focused}: Props) => {
   const dispatch = useDispatch();
 
   const tabbarOffset = useBottomTabBarOffsetStyle({extraOffset: 20});
 
-  const sections = useGetContacts();
+  const sections = useGetContacts(focused);
 
   const invite = useCallback(
     (id: string) => {

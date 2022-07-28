@@ -24,14 +24,17 @@ type TContactsFlow =
   | 'ConfirmPhone'
   | 'ConfirmCode'
   | 'ContactsList';
+
 type ContactsProps = {
   showCountriesList: (t: boolean) => void;
   isCountriesVisible: boolean;
+  focused: boolean;
 };
 
 export const Contacts = ({
   showCountriesList,
   isCountriesVisible,
+  focused,
 }: ContactsProps) => {
   const isLoading = useSelector(
     (state: RootState) =>
@@ -123,7 +126,7 @@ export const Contacts = ({
       {visibleFlow === 'ConfirmCode' && (
         <ConfirmCode confirmCodePress={confirmCodePress} />
       )}
-      {visibleFlow === 'ContactsList' && <ContactsList />}
+      {visibleFlow === 'ContactsList' && <ContactsList focused={focused} />}
 
       {isLoading ? (
         <ActivityIndicator

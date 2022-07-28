@@ -49,7 +49,7 @@ export const SegmentedContent = (props: TiersProps) => {
         ref={pagerRef}
         onPageSelected={onPageChange}>
         <View style={styles.container}>
-          <Contacts {...props} />
+          <Contacts {...props} focused={activeIndex === 0} />
         </View>
         <View style={styles.container}>
           <TierList
