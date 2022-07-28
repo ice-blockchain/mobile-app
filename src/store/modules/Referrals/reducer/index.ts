@@ -17,9 +17,10 @@ export interface State {
   };
 }
 
+const getReferralsActionCreator =
+  ReferralsActions.GET_REFERRALS(null).SUCCESS.create;
 type Actions = ReturnType<
-  | typeof ReferralsActions.GET_REFERRALS.SUCCESS.create
-  | typeof AuthActions.SIGN_OUT.SUCCESS.create
+  typeof getReferralsActionCreator | typeof AuthActions.SIGN_OUT.SUCCESS.create
 >;
 
 const INITIAL_STATE: State = {
@@ -29,7 +30,7 @@ const INITIAL_STATE: State = {
 function reducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
-      case ReferralsActions.GET_REFERRALS.SUCCESS.type:
+      case ReferralsActions.GET_REFERRALS(null).SUCCESS.type:
         const {userId, referralType, offset, result} = action.payload;
         if (offset === 0) {
           draft.data[userId] = {

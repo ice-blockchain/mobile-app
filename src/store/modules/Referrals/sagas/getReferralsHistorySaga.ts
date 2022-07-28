@@ -6,7 +6,9 @@ import {put, SagaReturnType} from 'redux-saga/effects';
 
 const actionCreator = ReferralsActions.GET_REFERRALS_HISTORY.START.create;
 
-export function* getReferralsSaga(action: ReturnType<typeof actionCreator>) {
+export function* getReferralsHistorySaga(
+  action: ReturnType<typeof actionCreator>,
+) {
   try {
     const {userId} = action.payload;
     const response: SagaReturnType<

@@ -4,6 +4,7 @@
 import {Action} from 'redux';
 import {
   ActionPattern,
+  call,
   cancel,
   fork,
   HelperWorkerParameters,
@@ -37,6 +38,32 @@ export function takeLatestEveryUnique<
       );
 
       tasksSet.set(id, task);
+    }
+  });
+}
+
+export function takeLeadingEveryUnique<
+  A extends Action,
+  Fn extends (...args: any[]) => any,
+>(
+  patternOrChannel: ActionPattern,
+  worker: Fn,
+  ...params: HelperWorkerParameters<A, Fn>
+) {
+  return fork(function* () {
+    const tasksSet = new Map();
+
+    while (true) {
+      // @ts-ignore
+      const action = yield take(patternOrChannel);
+      const {id} = action;
+      if (!tasksSet.has(id)) {
+        yield fork(function* () {
+          tasksSet.set(id, true);
+          yield call<Fn>(worker, ...(params.concat(action) as Parameters<Fn>));
+          tasksSet.delete(id);
+        });
+      }
     }
   });
 }

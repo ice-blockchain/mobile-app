@@ -1,9 +1,12 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {all, fork} from 'redux-saga/effects';
-
-import {watchGetReferrals} from './getReferralsSaga';
+import {ReferralsActions} from '@store/modules/Referrals/actions';
+import {getReferralsSaga} from '@store/modules/Referrals/sagas/getReferralsSaga';
+import {takeLeadingEveryUnique} from '@store/utils/sagas/effects';
 
 export function* rootReferralsSaga() {
-  yield all([fork(watchGetReferrals)]);
+  yield takeLeadingEveryUnique(
+    ReferralsActions.GET_REFERRALS(null).START.type,
+    getReferralsSaga,
+  );
 }

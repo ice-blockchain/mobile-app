@@ -9,6 +9,7 @@ import {IceUserItem} from '@screens/Team/components/TierList/components/IceUserI
 import {userIdSelector} from '@store/modules/Auth/selectors';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {referralsSelector} from '@store/modules/Referrals/selectors';
+import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import React, {memo, useCallback, useEffect, useMemo} from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
@@ -33,9 +34,22 @@ export const TierList = memo(
     //TODO::request when the segment becomes active
     useEffect(() => {
       dispatch(
-        ReferralsActions.GET_REFERRALS.START.create(userId, referralType, 0),
+        ReferralsActions.GET_REFERRALS(referralType).START.create(
+          userId,
+          referralType,
+          0,
+        ),
       );
     }, [dispatch, referralType, userId]);
+
+    const isLoading = useSelector(
+      isLoadingSelector.bind(
+        null,
+        ReferralsActions.GET_REFERRALS(referralType),
+      ),
+    );
+
+    console.log('%c isLoading', 'background: #ff6347', isLoading, referralType);
 
     const renderItem = useCallback(({item}: {item: User}) => {
       return <IceUserItem user={item} onPress={() => {}} />;

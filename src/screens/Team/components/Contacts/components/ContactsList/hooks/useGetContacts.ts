@@ -18,7 +18,11 @@ export const useGetContacts = () => {
   useEffect(() => {
     dispatch(TeamActions.GET_CONTACTS.START.create());
     dispatch(
-      ReferralsActions.GET_REFERRALS.START.create(userId, 'CONTACTS', 0),
+      ReferralsActions.GET_REFERRALS('CONTACTS').START.create(
+        userId,
+        'CONTACTS',
+        0,
+      ),
     );
   }, [dispatch, userId]);
 
