@@ -7,7 +7,7 @@ import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {ChartIcon} from '@svg/ChartIcon';
 import {YearsIcon} from '@svg/YearsIcon';
 import {t} from '@translations/i18n';
-import {formatNumber} from '@utils/number';
+import {formatAsCurrency} from '@utils/number';
 import React, {memo, useEffect, useRef} from 'react';
 import {
   ActivityIndicator,
@@ -64,7 +64,9 @@ export const Calculator = memo(
               adjustsFontSizeToFit>
               {result != null && (
                 <>
-                  {`${formatNumber(result)} ${t('mining_calculator.currency')}`}
+                  {`${formatAsCurrency(result)} ${t(
+                    'mining_calculator.currency',
+                  )}`}
                   <Text style={styles.resultValueText_bonus}> (+145%)</Text>
                 </>
               )}
