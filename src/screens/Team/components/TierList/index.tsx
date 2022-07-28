@@ -12,9 +12,9 @@ import {
 import {userIdSelector} from '@store/modules/Auth/selectors';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {referralsSelector} from '@store/modules/Referrals/selectors';
-import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
+import {failedReasonSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import React, {memo, useCallback, useEffect, useMemo} from 'react';
-import {FlatList, StyleSheet, View} from 'react-native';
+import {FlatList, StyleSheet, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem, screenWidth} from 'rn-units';
 
@@ -22,34 +22,36 @@ type Props = {
   referralType: ReferralType;
   emptyTitle: string;
   headerTitle: string;
+  focused: boolean;
 };
 
 export const TierList = memo(
-  ({referralType, emptyTitle, headerTitle}: Props) => {
+  ({referralType, emptyTitle, headerTitle, focused}: Props) => {
     const dispatch = useDispatch();
     const tabbarOffset = useBottomTabBarOffsetStyle({extraOffset: 20});
 
     const userId = useSelector(userIdSelector);
     const referrals = useSelector(referralsSelector(userId, referralType));
 
-    //TDOO::add pagination
-    //TODO::request when the segment becomes active
-    useEffect(() => {
-      dispatch(
-        ReferralsActions.GET_REFERRALS(referralType).START.create(
-          userId,
-          referralType,
-          0,
-        ),
-      );
-    }, [dispatch, referralType, userId]);
-
-    const isLoading = useSelector(
-      isLoadingSelector.bind(
+    const failderReason = useSelector(
+      failedReasonSelector.bind(
         null,
         ReferralsActions.GET_REFERRALS(referralType),
       ),
     );
+
+    //TDOO::add pagination
+    useEffect(() => {
+      if (focused) {
+        dispatch(
+          ReferralsActions.GET_REFERRALS(referralType).START.create(
+            userId,
+            referralType,
+            0,
+          ),
+        );
+      }
+    }, [dispatch, referralType, userId, focused]);
 
     const renderItem = useCallback(({item}: {item: User}) => {
       return <IceUserItem user={item} onPress={() => {}} />;
@@ -65,7 +67,12 @@ export const TierList = memo(
       );
     }, [referrals?.total, referrals?.active, headerTitle]);
 
-    if (isLoading && !referrals) {
+    if (failderReason) {
+      //TODO::error handling (component?)
+      return <Text>{failderReason}</Text>;
+    }
+
+    if (!referrals && !failderReason) {
       return (
         <>
           {Array(5)

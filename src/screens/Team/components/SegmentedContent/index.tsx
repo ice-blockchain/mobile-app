@@ -7,7 +7,7 @@ import {
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Contacts} from '@screens/Team/components/Contacts';
 import {TierList} from '@screens/Team/components/TierList';
-import React, {useCallback, useRef} from 'react';
+import React, {useCallback, useRef, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
 import {rem} from 'rn-units';
@@ -20,6 +20,7 @@ type TiersProps = {
 };
 
 export const SegmentedContent = (props: TiersProps) => {
+  const [activeIndex, setActiveIndex] = useState(0);
   const switcherRef = useRef<SegmentedControlMethods>(null);
   const pagerRef = useRef<PagerView>(null);
 
@@ -28,6 +29,7 @@ export const SegmentedContent = (props: TiersProps) => {
   }, []);
 
   const onPageChange = (event: PagerViewOnPageSelectedEvent) => {
+    setActiveIndex(event.nativeEvent.position);
     switcherRef.current?.changeSegment(event.nativeEvent.position);
   };
 
@@ -54,6 +56,7 @@ export const SegmentedContent = (props: TiersProps) => {
             referralType="T1"
             emptyTitle="team.tierOne_tab"
             headerTitle="team.tier_one.header_list.title_earnings"
+            focused={activeIndex === 1}
           />
         </View>
         <View style={styles.container}>
@@ -61,6 +64,7 @@ export const SegmentedContent = (props: TiersProps) => {
             referralType="T2"
             emptyTitle="team.tierTwo_tab"
             headerTitle="team.tier_two.header_list.title_earnings"
+            focused={activeIndex === 2}
           />
         </View>
       </PagerView>
