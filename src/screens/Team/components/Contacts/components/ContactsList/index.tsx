@@ -2,12 +2,12 @@
 
 import {User} from '@api/user/types';
 import {InviteButton} from '@components/InviteButton';
-import {UserListItem} from '@components/UserListItem';
+import {UserListItem, UserListItemSkeleton} from '@components/UserListItem';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {ContactItem} from '@screens/Team/components/Contacts/components/ContactsList/components/ContactItem';
 import {SectionHeader} from '@screens/Team/components/Contacts/components/ContactsList/components/SectionHeader';
-import {useGetContacts} from '@screens/Team/components/Contacts/components/ContactsList/hooks/useGetContacts';
+import {useGetContactSegments} from '@screens/Team/components/Contacts/components/ContactsList/hooks/useGetContactSegments';
 import {TeamActions} from '@store/modules/Team/actions';
 import {hapticFeedback} from '@utils/hapticFeedback';
 import React, {useCallback} from 'react';
@@ -15,6 +15,7 @@ import {
   SectionList,
   SectionListRenderItemInfo,
   StyleSheet,
+  Text,
   View,
 } from 'react-native';
 import {Contact} from 'react-native-contacts';
@@ -30,7 +31,7 @@ export const ContactsList = ({focused}: Props) => {
 
   const tabbarOffset = useBottomTabBarOffsetStyle({extraOffset: 20});
 
-  const sections = useGetContacts(focused);
+  const sections = useGetContactSegments(focused);
 
   const invite = useCallback(
     (id: string) => {
@@ -55,8 +56,10 @@ export const ContactsList = ({focused}: Props) => {
       if (typeof item === 'string') {
         if (item === 'InviteFriendsButton') {
           return <InviteButton style={styles.inviteButtonContainer} />;
+        } else if (item === 'Loading') {
+          return <UserListItemSkeleton />;
         } else {
-          return null;
+          return <Text>{item}</Text>;
         }
       } else if ('recordID' in item) {
         return <ContactItem contact={item} index={index} onInvite={invite} />;
@@ -91,11 +94,8 @@ const styles = StyleSheet.create({
   },
   sectionListStyle: {
     width: screenWidth - rem(48),
-    marginTop: rem(22),
   },
   inviteButtonContainer: {
     marginHorizontal: 0,
-    marginBottom: rem(28),
-    marginTop: rem(4),
   },
 });

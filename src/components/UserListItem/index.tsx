@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   contactContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: rem(14),
+    marginTop: rem(14),
   },
   contactInfo: {
     flexDirection: 'row',
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     height: rem(46),
     borderRadius: rem(16),
     width: screenWidth - rem(48),
-    marginTop: rem(14),
+    marginBottom: rem(14),
     alignSelf: 'center',
   },
 });

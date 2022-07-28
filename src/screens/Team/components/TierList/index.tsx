@@ -34,7 +34,7 @@ export const TierList = memo(
     const userId = useSelector(userIdSelector);
     const referrals = useSelector(referralsSelector(userId, referralType));
 
-    const failderReason = useSelector(
+    const failedReason = useSelector(
       failedReasonSelector.bind(
         null,
         ReferralsActions.GET_REFERRALS(referralType),
@@ -84,39 +84,39 @@ export const TierList = memo(
       );
     }, [referrals?.total, referrals?.active, headerTitle]);
 
-    if (failderReason) {
-      //TODO::error handling (component?)
-      return <Text>{failderReason}</Text>;
+    if (!referrals) {
+      if (failedReason) {
+        //TODO::error handling (component?)
+        return <Text>{failedReason}</Text>;
+      } else {
+        return (
+          <View style={styles.loadingContainer}>
+            {Array(5)
+              .fill(null)
+              .map((_, index) => (
+                <UserListItemSkeleton key={index} />
+              ))}
+          </View>
+        );
+      }
+    } else {
+      if (!referrals.total) {
+        return <EmptyTier title={emptyTitle} />;
+      } else {
+        return (
+          <View style={styles.container}>
+            <FlatList
+              showsVerticalScrollIndicator={false}
+              contentContainerStyle={tabbarOffset.current}
+              ListHeaderComponent={Header}
+              style={styles.flatListStyle}
+              data={referrals.referrals}
+              renderItem={renderItem}
+            />
+          </View>
+        );
+      }
     }
-
-    if (!referrals && !failderReason) {
-      return (
-        <>
-          {Array(5)
-            .fill(null)
-            .map((_, index) => (
-              <UserListItemSkeleton key={index} />
-            ))}
-        </>
-      );
-    }
-
-    if (!referrals?.total) {
-      return <EmptyTier title={emptyTitle} />;
-    }
-
-    return (
-      <View style={styles.container}>
-        <FlatList
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={tabbarOffset.current}
-          ListHeaderComponent={Header}
-          style={styles.flatListStyle}
-          data={referrals.referrals}
-          renderItem={renderItem}
-        />
-      </View>
-    );
   },
 );
 
@@ -129,6 +129,9 @@ const styles = StyleSheet.create({
   },
   flatListStyle: {
     width: screenWidth - rem(48),
+    marginTop: rem(22),
+  },
+  loadingContainer: {
     marginTop: rem(22),
   },
 });

@@ -34,6 +34,7 @@ export const SectionHeader = ({section}: {section: {title: string}}) => {
 
 const styles = StyleSheet.create({
   titleContainer: {
+    marginTop: rem(22),
     backgroundColor: COLORS.white,
     marginBottom: rem(24),
   },
