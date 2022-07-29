@@ -15,14 +15,17 @@ export type User = {
   phoneNumber?: string | null;
   phoneNumberHash?: string | null;
 
-  profilePicture?: string | null;
+  profilePicture?: {
+    uri: string;
+    name: string;
+    type: string;
+  } | null;
   profilePictureUrl?: string;
 
   referralCount?: number | null;
   agendaPhoneNumberHashes?: string | null;
 
   active?: boolean;
-  pingAllowed?: boolean;
   pinged?: boolean;
 
   referralType?: ReferralType;

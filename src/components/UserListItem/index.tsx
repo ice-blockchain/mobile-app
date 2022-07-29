@@ -25,7 +25,6 @@ export const UserListItem = ({
           <RemoteImage
             uri={user.profilePictureUrl}
             width={rem(46)}
-            height={rem(46)}
             style={styles.image}
           />
         )}

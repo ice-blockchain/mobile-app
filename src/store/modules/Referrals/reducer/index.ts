@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {ReferralType, User} from '@api/user/types';
+import {Referrals} from '@api/referrals/types';
+import {ReferralType} from '@api/user/types';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import produce from 'immer';
@@ -8,11 +9,7 @@ import produce from 'immer';
 export interface State {
   data: {
     [userId: string]: {
-      [key in ReferralType]?: {
-        active: number;
-        total: number;
-        referrals: User[];
-      };
+      [key in ReferralType]?: Referrals;
     };
   };
 }

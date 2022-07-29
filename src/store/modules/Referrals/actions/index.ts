@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {ReferralType, User} from '@api/user/types';
+import {Referrals} from '@api/referrals/types';
+import {ReferralType} from '@api/user/types';
 import {createAction} from '@store/utils/actions/createAction';
 
 const GET_REFERRALS = createAction(
@@ -15,7 +16,7 @@ const GET_REFERRALS = createAction(
       userId: string,
       referralType: ReferralType,
       offset: number,
-      result: {active: number; total: number; referrals: User[]},
+      result: Referrals,
     ) => ({userId, referralType, offset, result}),
     FAILED: (errorMessage: string) => ({
       errorMessage,

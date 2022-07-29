@@ -5,14 +5,16 @@ import {Image, ImageProps, PixelRatio} from 'react-native';
 
 type Props = {
   uri: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 } & Omit<ImageProps, 'source'>;
 
 export const RemoteImage = memo(
   ({uri, width, height, ...imageProps}: Props) => {
-    const pixelWidth = PixelRatio.getPixelSizeForLayoutSize(width);
-    const pixelHeight = PixelRatio.getPixelSizeForLayoutSize(height);
+    const pixelWidth = width ? PixelRatio.getPixelSizeForLayoutSize(width) : '';
+    const pixelHeight = height
+      ? PixelRatio.getPixelSizeForLayoutSize(height)
+      : '';
     return (
       <Image
         source={{
