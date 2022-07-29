@@ -12,7 +12,7 @@ const INVITE_CONTACT = createAction('INVITE_CONTACT', {
   }),
 });
 
-const GET_CONTACTS = createAction('GET_CONTACTS', {
+const SYNC_CONTACTS = createAction('SYNC_CONTACTS', {
   START: true,
   SUCCESS: (contacts: Contact[]) => ({contacts}),
   FAILED: (errorMessage: string) => ({
@@ -30,6 +30,6 @@ const SEARCH_USERS = createAction('SEARCH_USERS', {
 
 export const TeamActions = Object.freeze({
   INVITE_CONTACT,
-  GET_CONTACTS,
+  SYNC_CONTACTS,
   SEARCH_USERS,
 });
