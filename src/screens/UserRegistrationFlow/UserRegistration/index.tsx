@@ -43,7 +43,7 @@ export const UserRegistration = ({}: Props) => {
   const magicUser = useSelector(magicUserSelector);
   const nickNameToPrefill =
     magicUser && magicUser.email
-      ? magicUser.email.split('@')[0].replace(/[^a-zA-Z0-9]/g, '')
+      ? magicUser.email.split('@')[0].replace(/[^a-zA-Z0-9-_.]/g, '')
       : '';
   const [myNickname, setMyNickname] = useState(
     magicUser?.preferredUsername
