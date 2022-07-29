@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {KeyboardDismiss} from '@components/KeyboardDismiss';
+import {KeyboardDismiss, stopPropagination} from '@components/KeyboardDismiss';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
@@ -21,7 +21,7 @@ export const Team = memo(() => {
         behavior={isIOS ? 'padding' : undefined}>
         <View style={styles.container}>
           <Header />
-          <View style={commonStyles.baseSubScreen}>
+          <View style={commonStyles.baseSubScreen} {...stopPropagination}>
             <SegmentedContent
               showCountriesList={setCountryCodeSearchVisibility}
               isCountriesVisible={isCountryCodeSearchVisible}

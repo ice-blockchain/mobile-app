@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {stopPropagination} from '@components/KeyboardDismiss';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {t} from '@translations/i18n';
@@ -15,11 +16,13 @@ type Props = {
 
 export const ListHeader = ({total, active, title}: Props) => {
   return (
-    <View style={styles.header}>
-      <Text style={styles.title}>{`${t(
-        'team.tier_one.header_list.title_active',
-      )}: ${active}/${total}`}</Text>
-      <Text style={styles.title}>{`${t(title)}: 94,412 ice`}</Text>
+    <View {...stopPropagination}>
+      <View style={styles.header}>
+        <Text style={styles.title}>{`${t(
+          'team.tier_one.header_list.title_active',
+        )}: ${active}/${total}`}</Text>
+        <Text style={styles.title}>{`${t(title)}: 94,412 ice`}</Text>
+      </View>
     </View>
   );
 };

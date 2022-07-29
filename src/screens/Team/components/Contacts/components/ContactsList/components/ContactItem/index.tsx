@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {stopPropagination} from '@components/KeyboardDismiss';
 import {UserListItemButton} from '@components/UserListItem/components/UserListItemButton';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
@@ -14,7 +15,6 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  TouchableWithoutFeedback,
   View,
 } from 'react-native';
 import {Contact} from 'react-native-contacts';
@@ -46,48 +46,46 @@ export const ContactItem = memo(
       }
     };
     return (
-      <TouchableWithoutFeedback>
-        <View style={styles.contactContainer}>
-          <View style={styles.contactInfo}>
-            <View
-              style={[
-                styles.contactIcon,
-                {backgroundColor: stringToColor(contact.givenName)},
-              ]}>
-              <Text style={styles.contactIconText}>
-                {getContactAcronym(contact)}
-              </Text>
-              <TouchableOpacity
-                disabled={phoneNumbers.length === 1}
-                onPress={showAllNumbers}
-                style={styles.indicator}>
-                {phoneNumbers.length > 1 && <MultipleNumbers />}
-              </TouchableOpacity>
-            </View>
-            <View>
-              <Text style={styles.name}>{getContactName(contact)}</Text>
-              <Text style={styles.phoneNumber}>{phoneNumbers[0]}</Text>
-
-              {phoneNumbers.length === 1 ? null : (
-                <View style={{height}}>
-                  {[...phoneNumbers.slice(1, phoneNumbers.length)].map(num => (
-                    <Text style={styles.phoneNumber} key={num}>
-                      {num}
-                    </Text>
-                  ))}
-                </View>
-              )}
-            </View>
+      <View style={styles.contactContainer} {...stopPropagination}>
+        <View style={styles.contactInfo}>
+          <View
+            style={[
+              styles.contactIcon,
+              {backgroundColor: stringToColor(contact.givenName)},
+            ]}>
+            <Text style={styles.contactIconText}>
+              {getContactAcronym(contact)}
+            </Text>
+            <TouchableOpacity
+              disabled={phoneNumbers.length === 1}
+              onPress={showAllNumbers}
+              style={styles.indicator}>
+              {phoneNumbers.length > 1 && <MultipleNumbers />}
+            </TouchableOpacity>
           </View>
-          <View style={styles.rightButtonContainer}>
-            <UserListItemButton
-              text={t('team.contacts_list.invite')}
-              icon={<TeamContactInvite fill={COLORS.darkBlue} />}
-              onPress={() => onInvite(contact.recordID)}
-            />
+          <View>
+            <Text style={styles.name}>{getContactName(contact)}</Text>
+            <Text style={styles.phoneNumber}>{phoneNumbers[0]}</Text>
+
+            {phoneNumbers.length === 1 ? null : (
+              <View style={{height}}>
+                {[...phoneNumbers.slice(1, phoneNumbers.length)].map(num => (
+                  <Text style={styles.phoneNumber} key={num}>
+                    {num}
+                  </Text>
+                ))}
+              </View>
+            )}
           </View>
         </View>
-      </TouchableWithoutFeedback>
+        <View style={styles.rightButtonContainer}>
+          <UserListItemButton
+            text={t('team.contacts_list.invite')}
+            icon={<TeamContactInvite fill={COLORS.darkBlue} />}
+            onPress={() => onInvite(contact.recordID)}
+          />
+        </View>
+      </View>
     );
   },
 );
@@ -96,7 +94,7 @@ const styles = StyleSheet.create({
   contactContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: rem(14),
+    paddingBottom: rem(14),
   },
   contactInfo: {
     flexDirection: 'row',

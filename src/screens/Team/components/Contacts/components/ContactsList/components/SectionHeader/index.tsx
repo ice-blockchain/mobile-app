@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {stopPropagination} from '@components/KeyboardDismiss';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {LogoIconSvg} from '@svg/LogoIcon';
@@ -22,19 +23,21 @@ const IceFriendsHeader = () => {
 
 export const SectionHeader = ({section}: {section: {title: string}}) => {
   return (
-    <View style={styles.titleContainer}>
-      {section.title === 'iceFriends' ? (
-        <IceFriendsHeader />
-      ) : (
-        <Text style={styles.title}>{section.title}</Text>
-      )}
+    <View {...stopPropagination}>
+      <View style={styles.titleContainer}>
+        {section.title === 'iceFriends' ? (
+          <IceFriendsHeader />
+        ) : (
+          <Text style={styles.title}>{section.title}</Text>
+        )}
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   titleContainer: {
-    marginTop: rem(22),
+    paddingTop: rem(22),
     backgroundColor: COLORS.white,
     marginBottom: rem(24),
   },

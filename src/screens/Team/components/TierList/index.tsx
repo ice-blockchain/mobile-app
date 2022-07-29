@@ -13,7 +13,7 @@ import {PingIcon} from '@svg/PingIcon';
 import {t} from '@translations/i18n';
 import React, {memo, useCallback, useMemo} from 'react';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   referralType: ReferralType;
@@ -24,7 +24,7 @@ type Props = {
 
 export const TierList = memo(
   ({referralType, emptyTitle, headerTitle, focused}: Props) => {
-    const tabbarOffset = useBottomTabBarOffsetStyle({extraOffset: 20});
+    const tabbarOffset = useBottomTabBarOffsetStyle();
     const {referrals, error, loadNext} = useReferrals(referralType, focused);
 
     const renderItem = useCallback(({item}: {item: User}) => {
@@ -63,7 +63,7 @@ export const TierList = memo(
         return <Text>{error}</Text>;
       } else {
         return (
-          <View style={styles.loadingContainer}>
+          <View style={styles.userList}>
             {Array(5)
               .fill(null)
               .map((_, index) => (
@@ -77,17 +77,15 @@ export const TierList = memo(
         return <EmptyTier title={emptyTitle} />;
       } else {
         return (
-          <View style={styles.container}>
-            <FlatList
-              showsVerticalScrollIndicator={false}
-              contentContainerStyle={tabbarOffset.current}
-              ListHeaderComponent={Header}
-              style={styles.flatListStyle}
-              data={referrals.referrals}
-              renderItem={renderItem}
-              onEndReached={loadNext}
-            />
-          </View>
+          <FlatList
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={[tabbarOffset.current]}
+            ListHeaderComponent={Header}
+            style={styles.userList}
+            data={referrals.referrals}
+            renderItem={renderItem}
+            onEndReached={loadNext}
+          />
         );
       }
     }
@@ -95,17 +93,9 @@ export const TierList = memo(
 );
 
 const styles = StyleSheet.create({
-  container: {
+  userList: {
+    marginTop: rem(22),
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingHorizontal: SCREEN_SIDE_OFFSET,
-  },
-  flatListStyle: {
-    width: screenWidth - rem(48),
-    marginTop: rem(22),
-  },
-  loadingContainer: {
-    marginTop: rem(22),
+    marginHorizontal: SCREEN_SIDE_OFFSET,
   },
 });

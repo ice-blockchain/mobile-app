@@ -1,21 +1,15 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {User} from '@api/user/types';
+import {stopPropagination} from '@components/KeyboardDismiss';
 import {RemoteImage} from '@components/RemoteImage';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {t} from '@translations/i18n';
 import React, {ReactNode} from 'react';
-import {
-  StyleProp,
-  StyleSheet,
-  Text,
-  TouchableWithoutFeedback,
-  View,
-  ViewStyle,
-} from 'react-native';
+import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
-import {font, rem, screenWidth} from 'rn-units';
+import {font, rem} from 'rn-units';
 
 export const UserListItem = ({
   user,
@@ -25,43 +19,41 @@ export const UserListItem = ({
   rightButton?: ReactNode;
 }) => {
   return (
-    <TouchableWithoutFeedback>
-      <View style={styles.contactContainer}>
-        <View style={styles.contactInfo}>
-          <View style={styles.contactIcon}>
-            {user.profilePictureUrl && (
-              <RemoteImage
-                uri={user.profilePictureUrl}
-                width={rem(46)}
-                height={rem(46)}
-                style={styles.image}
-              />
-            )}
-            <View
-              style={[
-                styles.indicator,
-                {
-                  backgroundColor: user?.active
-                    ? COLORS.shamrock
-                    : COLORS.cadetBlue,
-                },
-              ]}
+    <View style={styles.container} {...stopPropagination}>
+      <View style={styles.body}>
+        <View style={styles.imageContainer}>
+          {user.profilePictureUrl && (
+            <RemoteImage
+              uri={user.profilePictureUrl}
+              width={rem(46)}
+              height={rem(46)}
+              style={styles.image}
             />
-          </View>
-          <View>
-            <Text style={styles.name}>{user.username}</Text>
-            <Text style={styles.status}>
-              {user.active
-                ? t('team.tier_one.active')
-                : t('team.tier_one.inactive')}
-            </Text>
-          </View>
+          )}
+          <View
+            style={[
+              styles.indicator,
+              {
+                backgroundColor: user?.active
+                  ? COLORS.shamrock
+                  : COLORS.cadetBlue,
+              },
+            ]}
+          />
         </View>
-        {rightButton && (
-          <View style={styles.rightButtonContainer}>{rightButton}</View>
-        )}
+        <View>
+          <Text style={styles.name}>{user.username}</Text>
+          <Text style={styles.status}>
+            {user.active
+              ? t('team.tier_one.active')
+              : t('team.tier_one.inactive')}
+          </Text>
+        </View>
       </View>
-    </TouchableWithoutFeedback>
+      {rightButton && (
+        <View style={styles.rightButtonContainer}>{rightButton}</View>
+      )}
+    </View>
   );
 };
 
@@ -74,20 +66,17 @@ export const UserListItemSkeleton = ({
 );
 
 const styles = StyleSheet.create({
-  contactContainer: {
+  container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: rem(14),
+    paddingTop: rem(14),
   },
-  contactInfo: {
+  body: {
     flexDirection: 'row',
   },
-  contactIcon: {
+  imageContainer: {
     width: rem(46),
     height: rem(46),
-    borderRadius: 16,
-    justifyContent: 'center',
-    alignItems: 'center',
     marginRight: rem(14),
   },
   image: {
@@ -123,8 +112,7 @@ const styles = StyleSheet.create({
   skeleton: {
     height: rem(46),
     borderRadius: rem(16),
-    width: screenWidth - rem(48),
-    marginBottom: rem(14),
-    alignSelf: 'center',
+    marginTop: rem(14),
+    alignSelf: 'stretch',
   },
 });
