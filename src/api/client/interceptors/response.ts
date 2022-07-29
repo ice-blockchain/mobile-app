@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {magic} from '@services/magicLink';
-import {isAuthorizedSelector} from '@store/modules/Auth/selectors';
+import {store} from '@store/configureStore';
+import {AuthActions} from '@store/modules/Auth/actions';
 import {AxiosInstance, AxiosRequestConfig, AxiosResponse} from 'axios';
-import {useSelector} from 'react-redux';
 
 function onRejected(instance: AxiosInstance) {
   return async (error: {
@@ -18,16 +18,17 @@ function onRejected(instance: AxiosInstance) {
     switch (error.response?.status) {
       case 401:
         {
-          const originalRequest = error.config;
+          const originalRequest = error.config ?? {};
 
-          const isAuthorized = useSelector(isAuthorizedSelector);
-          if (isAuthorized && originalRequest) {
-            const refreshedToken = await magic.user.getIdToken();
+          if (!originalRequest.pliantRequestRetry) {
+            const token = await magic.user.getIdToken();
 
             originalRequest.pliantRequestRetry = true;
-            originalRequest.headers!.Authorization = `Bearer ${refreshedToken}`;
-
+            originalRequest.headers!.Authorization = `Bearer ${token}`;
+            store.dispatch(AuthActions.SET_TOKEN.STATE.create(token));
             return instance(originalRequest);
+          } else {
+            store.dispatch(AuthActions.SIGN_OUT.START.create());
           }
         }
         break;
