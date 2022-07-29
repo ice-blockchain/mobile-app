@@ -20,39 +20,37 @@ export const UserListItem = ({
 }) => {
   return (
     <View style={styles.container} {...stopPropagination}>
-      <View style={styles.body}>
-        <View style={styles.imageContainer}>
-          {user.profilePictureUrl && (
-            <RemoteImage
-              uri={user.profilePictureUrl}
-              width={rem(46)}
-              height={rem(46)}
-              style={styles.image}
-            />
-          )}
-          <View
-            style={[
-              styles.indicator,
-              {
-                backgroundColor: user?.active
-                  ? COLORS.shamrock
-                  : COLORS.cadetBlue,
-              },
-            ]}
+      <View style={styles.imageContainer}>
+        {user.profilePictureUrl && (
+          <RemoteImage
+            uri={user.profilePictureUrl}
+            width={rem(46)}
+            height={rem(46)}
+            style={styles.image}
           />
-        </View>
-        <View>
-          <Text style={styles.name}>{user.username}</Text>
-          <Text style={styles.status}>
-            {user.active
-              ? t('team.tier_one.active')
-              : t('team.tier_one.inactive')}
-          </Text>
-        </View>
+        )}
+        <View
+          style={[
+            styles.indicator,
+            {
+              backgroundColor: user?.active
+                ? COLORS.shamrock
+                : COLORS.cadetBlue,
+            },
+          ]}
+        />
       </View>
-      {rightButton && (
-        <View style={styles.rightButtonContainer}>{rightButton}</View>
-      )}
+      <View style={styles.body}>
+        <Text style={styles.name} numberOfLines={1}>
+          {user.username}
+        </Text>
+        <Text style={styles.status}>
+          {user.active
+            ? t('team.tier_one.active')
+            : t('team.tier_one.inactive')}
+        </Text>
+      </View>
+      {rightButton}
     </View>
   );
 };
@@ -68,11 +66,11 @@ export const UserListItemSkeleton = ({
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     paddingTop: rem(14),
+    alignItems: 'center',
   },
   body: {
-    flexDirection: 'row',
+    flex: 1,
   },
   imageContainer: {
     width: rem(46),
@@ -83,10 +81,6 @@ const styles = StyleSheet.create({
     width: rem(46),
     height: rem(46),
     borderRadius: rem(16),
-  },
-  rightButtonContainer: {
-    alignSelf: 'flex-start',
-    marginTop: rem(12),
   },
   indicator: {
     width: rem(15),

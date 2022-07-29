@@ -3,7 +3,6 @@
 import {userIdSelector} from '@store/modules/Auth/selectors';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {referralsSelector} from '@store/modules/Referrals/selectors';
-import {TeamActions} from '@store/modules/Team/actions';
 import {contactsSelector} from '@store/modules/Team/selectors';
 import {failedReasonSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {t} from '@translations/i18n';
@@ -21,8 +20,6 @@ export const useGetContactSegments = (focused: boolean) => {
 
   useEffect(() => {
     if (focused) {
-      dispatch(TeamActions.GET_CONTACTS.START.create());
-      //TODO::add Contacts->BE sync, dispatch on app startup, state change
       dispatch(
         ReferralsActions.GET_REFERRALS('CONTACTS').START.create(
           userId,

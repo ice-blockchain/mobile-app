@@ -47,48 +47,46 @@ export const ContactItem = memo(
     };
     return (
       <View style={styles.contactContainer} {...stopPropagination}>
-        <View style={styles.contactInfo}>
-          <View
-            style={[
-              styles.contactIcon,
-              {
-                backgroundColor: stringToColor(
-                  contact.givenName || phoneNumbers[0],
-                ),
-              },
-            ]}>
-            <Text style={styles.contactIconText}>
-              {getContactAcronym(contact)}
-            </Text>
-            <TouchableOpacity
-              disabled={phoneNumbers.length === 1}
-              onPress={showAllNumbers}
-              style={styles.indicator}>
-              {phoneNumbers.length > 1 && <MultipleNumbers />}
-            </TouchableOpacity>
-          </View>
-          <View>
-            <Text style={styles.name}>{getContactName(contact)}</Text>
-            <Text style={styles.phoneNumber}>{phoneNumbers[0]}</Text>
+        <View
+          style={[
+            styles.contactIcon,
+            {
+              backgroundColor: stringToColor(
+                contact.givenName || phoneNumbers[0],
+              ),
+            },
+          ]}>
+          <Text style={styles.contactIconText}>
+            {getContactAcronym(contact)}
+          </Text>
+          <TouchableOpacity
+            disabled={phoneNumbers.length === 1}
+            onPress={showAllNumbers}
+            style={styles.indicator}>
+            {phoneNumbers.length > 1 && <MultipleNumbers />}
+          </TouchableOpacity>
+        </View>
+        <View style={styles.body}>
+          <Text style={styles.name} numberOfLines={1}>
+            {getContactName(contact)}
+          </Text>
+          <Text style={styles.phoneNumber}>{phoneNumbers[0]}</Text>
 
-            {phoneNumbers.length === 1 ? null : (
-              <View style={{height}}>
-                {[...phoneNumbers.slice(1, phoneNumbers.length)].map(num => (
-                  <Text style={styles.phoneNumber} key={num}>
-                    {num}
-                  </Text>
-                ))}
-              </View>
-            )}
-          </View>
+          {phoneNumbers.length === 1 ? null : (
+            <View style={{height}}>
+              {[...phoneNumbers.slice(1, phoneNumbers.length)].map(num => (
+                <Text style={styles.phoneNumber} key={num}>
+                  {num}
+                </Text>
+              ))}
+            </View>
+          )}
         </View>
-        <View style={styles.rightButtonContainer}>
-          <UserListItemButton
-            text={t('team.contacts_list.invite')}
-            icon={<TeamContactInvite fill={COLORS.darkBlue} />}
-            onPress={() => onInvite(contact.recordID)}
-          />
-        </View>
+        <UserListItemButton
+          text={t('team.contacts_list.invite')}
+          icon={<TeamContactInvite fill={COLORS.darkBlue} />}
+          onPress={() => onInvite(contact.recordID)}
+        />
       </View>
     );
   },
@@ -97,11 +95,11 @@ export const ContactItem = memo(
 const styles = StyleSheet.create({
   contactContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    alignItems: 'center',
     paddingBottom: rem(14),
   },
-  contactInfo: {
-    flexDirection: 'row',
+  body: {
+    flex: 1,
   },
   contactIcon: {
     width: rem(46),
@@ -116,13 +114,13 @@ const styles = StyleSheet.create({
     fontFamily: FONTS.primary.bold,
     color: COLORS.darkBlue,
     paddingBottom: rem(3),
+    marginRight: rem(4),
   },
   phoneNumber: {
     fontSize: font(14),
     fontFamily: FONTS.primary.medium,
     color: COLORS.scorpion,
   },
-  rightButtonContainer: {alignSelf: 'flex-start', marginTop: rem(12)},
   indicator: {
     position: 'absolute',
     right: -2,

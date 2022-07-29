@@ -20,7 +20,7 @@ import {
 } from 'react-native';
 import {Contact} from 'react-native-contacts';
 import {useDispatch} from 'react-redux';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   focused: boolean;
@@ -88,12 +88,10 @@ export const ContactsList = ({focused}: Props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingHorizontal: SCREEN_SIDE_OFFSET,
+    marginHorizontal: SCREEN_SIDE_OFFSET,
   },
   sectionListStyle: {
-    width: screenWidth - rem(48),
+    marginTop: rem(10),
   },
   inviteButtonContainer: {
     marginHorizontal: 0,

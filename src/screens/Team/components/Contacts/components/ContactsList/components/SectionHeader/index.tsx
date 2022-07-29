@@ -37,9 +37,10 @@ export const SectionHeader = ({section}: {section: {title: string}}) => {
 
 const styles = StyleSheet.create({
   titleContainer: {
-    paddingTop: rem(22),
+    paddingTop: rem(26),
     backgroundColor: COLORS.white,
-    marginBottom: rem(24),
+    marginBottom: rem(18),
+    paddingBottom: rem(6),
   },
   title: {
     color: COLORS.darkBlue,
@@ -49,6 +50,7 @@ const styles = StyleSheet.create({
   friendsHeader: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginTop: -rem(14),
   },
   ice: {
     fontFamily: FONTS.primary.heavy,
