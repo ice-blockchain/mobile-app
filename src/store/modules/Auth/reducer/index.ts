@@ -12,6 +12,7 @@ export interface AuthState {
     userId: string;
     email?: string | null;
     username?: string | null;
+    preferredUsername?: string | null;
   } | null;
   token: string | null;
   isInitialized: boolean;

@@ -123,6 +123,7 @@ export const SignIn = ({navigation}: Props) => {
         await dispatch(AuthActions.SIGN_IN_SOCIAL.START.create('google'));
         break;
       case ESocialType.twitter:
+        await dispatch(AuthActions.SIGN_IN_SOCIAL.START.create('twitter'));
         break;
     }
   };
