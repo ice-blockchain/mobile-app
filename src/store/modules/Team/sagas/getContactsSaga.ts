@@ -11,7 +11,9 @@ export function* getContactsSaga() {
       ? mockContacts
       : yield call(getAllWithoutPhotos);
 
-    contacts.sort((a, b) => a.givenName.localeCompare(b.givenName));
+    contacts
+      .filter(c => c.phoneNumbers.length > 0)
+      .sort((a, b) => a.givenName.localeCompare(b.givenName));
 
     yield put(TeamActions.GET_CONTACTS.SUCCESS.create(contacts));
   } catch (error) {

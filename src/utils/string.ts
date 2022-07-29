@@ -5,7 +5,7 @@ export const capitalizeFirstLetter = (input: string) => {
   return input.charAt(0).toUpperCase() + input.slice(1);
 };
 
-export const stringToColor = (input: string) => {
+export const stringToColor = (input: string = '') => {
   let hash = 0;
   for (let i = 0; i < input.length; i++) {
     hash = input.charCodeAt(i) + ((hash << 5) - hash);

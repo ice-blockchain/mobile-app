@@ -51,7 +51,11 @@ export const ContactItem = memo(
           <View
             style={[
               styles.contactIcon,
-              {backgroundColor: stringToColor(contact.givenName)},
+              {
+                backgroundColor: stringToColor(
+                  contact.givenName || phoneNumbers[0],
+                ),
+              },
             ]}>
             <Text style={styles.contactIconText}>
               {getContactAcronym(contact)}
