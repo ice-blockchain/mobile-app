@@ -11,30 +11,17 @@ const actionCreator = AuthActions.UPDATE_ACCOUNT.START.create;
 
 export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
   try {
-    const {userInfo} = action.payload;
     const userId: string = yield select(userIdSelector);
-    const formData: FormData = new FormData();
-
-    let phoneNumberHash: string | undefined;
+    const userInfo = {...action.payload.userInfo};
 
     if (userInfo.phoneNumber) {
-      phoneNumberHash = yield call(hashPhoneNumber, userInfo.phoneNumber);
+      userInfo.phoneNumberHash = yield call(
+        hashPhoneNumber,
+        userInfo.phoneNumber,
+      );
     }
 
-    let data: User = userInfo;
-
-    if (phoneNumberHash) {
-      data = {
-        ...userInfo,
-        phoneNumberHash,
-      };
-    }
-
-    for (let key in data) {
-      formData.append(key, data[key as keyof User]);
-    }
-
-    const result: User = yield Api.user.modifyUser(userId, formData);
+    const result: User = yield Api.user.modifyUser(userId, userInfo);
     yield put(AuthActions.UPDATE_ACCOUNT.SUCCESS.create(result));
   } catch (error) {
     let errorMessage = 'Failed';

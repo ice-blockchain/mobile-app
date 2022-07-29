@@ -51,9 +51,9 @@ export function* syncContactsSaga() {
       ),
     );
 
-    const formData: FormData = new FormData();
-    formData.append('agendaPhoneNumberHashes', phoneNumberHashes.join(','));
-    yield call(Api.user.modifyUser, userId, formData);
+    yield call(Api.user.modifyUser, userId, {
+      agendaPhoneNumberHashes: phoneNumberHashes.join(','),
+    });
 
     yield put(TeamActions.SYNC_CONTACTS.SUCCESS.create(contacts));
   } catch (error) {
