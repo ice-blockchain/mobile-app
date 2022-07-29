@@ -13,7 +13,7 @@ export function* rootTeamSaga() {
     takeLatest(
       [
         TeamActions.GET_CONTACTS.START.type,
-        AppCommonActions.APP_LOADED.STATE.type,
+        AppCommonActions.APP_INITIALIZED.STATE.type,
       ],
       getContactsSaga,
     ),
