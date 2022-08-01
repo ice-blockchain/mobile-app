@@ -11,14 +11,16 @@ type Props = {
 
 export const RemoteImage = memo(
   ({uri, width, height, ...imageProps}: Props) => {
-    const pixelWidth = width ? PixelRatio.getPixelSizeForLayoutSize(width) : '';
-    const pixelHeight = height
-      ? PixelRatio.getPixelSizeForLayoutSize(height)
+    const queryWidth = width
+      ? `&width=${PixelRatio.getPixelSizeForLayoutSize(width)}`
+      : '';
+    const queryHeight = height
+      ? `&height=${PixelRatio.getPixelSizeForLayoutSize(height)}`
       : '';
     return (
       <Image
         source={{
-          uri: `${uri}?width=${pixelWidth}&height=${pixelHeight}&quality=100`,
+          uri: `${uri}?quality=100${queryHeight}${queryWidth}`,
         }}
         {...imageProps}
       />
