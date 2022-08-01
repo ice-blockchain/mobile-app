@@ -40,6 +40,11 @@ import {font, isIOS, rem} from 'rn-units';
 
 import {ESocialType, SocialSignIn} from './components/SocialSignIn';
 
+enum SignInInputType {
+  'phone',
+  'email',
+}
+
 type Props = {
   navigation: NativeStackNavigationProp<SignUpStackParamList, 'SignIn'>;
 };
@@ -48,7 +53,9 @@ export const SignIn = ({navigation}: Props) => {
   const [email, onChangeEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
-  const [inputType, setInputType] = useState<'email' | 'phone'>('email');
+  const [inputType, setInputType] = useState<SignInInputType>(
+    SignInInputType.email,
+  );
   const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
     useState(false);
 
@@ -98,29 +105,35 @@ export const SignIn = ({navigation}: Props) => {
 
   const onSignIn = async () => {
     Keyboard.dismiss();
-    if (inputType === 'email') {
+    if (inputType === SignInInputType.email) {
       await dispatch(AuthActions.SIGN_IN_EMAIL.START.create(email));
     } else {
       await dispatch(AuthActions.SIGN_IN_PHONE.START.create(phoneNumber));
     }
   };
   const onPhonePress = () => {
-    if (inputType === 'email') {
-      setInputType('phone');
-    } else {
-      setInputType('email');
-    }
+    const nextType =
+      inputType === SignInInputType.email
+        ? SignInInputType.phone
+        : SignInInputType.email;
+    setInputType(nextType);
   };
   const onSocialSignInPress = async (type: ESocialType) => {
     switch (type) {
       case ESocialType.apple:
         await dispatch(AuthActions.SIGN_IN_SOCIAL.START.create('apple'));
         break;
+      case ESocialType.google:
+        await dispatch(AuthActions.SIGN_IN_SOCIAL.START.create('google'));
+        break;
+      case ESocialType.discord:
+        await dispatch(AuthActions.SIGN_IN_SOCIAL.START.create('discord'));
+        break;
       case ESocialType.facebook:
         await dispatch(AuthActions.SIGN_IN_SOCIAL.START.create('facebook'));
         break;
-      case ESocialType.google:
-        await dispatch(AuthActions.SIGN_IN_SOCIAL.START.create('google'));
+      case ESocialType.microsoft:
+        await dispatch(AuthActions.SIGN_IN_SOCIAL.START.create('microsoft'));
         break;
       case ESocialType.twitter:
         await dispatch(AuthActions.SIGN_IN_SOCIAL.START.create('twitter'));
@@ -156,7 +169,7 @@ export const SignIn = ({navigation}: Props) => {
           </View>
 
           <View style={styles.inputContainer}>
-            {inputType === 'email' ? (
+            {inputType === SignInInputType.email ? (
               <CommonInput
                 icon={<EmailIconSvg />}
                 onChangeText={onChangeEmail}
@@ -185,9 +198,19 @@ export const SignIn = ({navigation}: Props) => {
             <Text style={styles.text}>or</Text>
 
             <BorderedButton
-              icon={inputType === 'email' ? <PhoneIconSvg /> : <EmailIconSvg />}
+              icon={
+                inputType === SignInInputType.email ? (
+                  <PhoneIconSvg />
+                ) : (
+                  <EmailIconSvg />
+                )
+              }
               onPress={onPhonePress}
-              text={inputType === 'email' ? translate('signIn.phone') : 'Email'}
+              text={
+                inputType === SignInInputType.email
+                  ? translate('signIn.phone')
+                  : translate('signIn.email')
+              }
             />
 
             <SocialSignIn onPress={onSocialSignInPress} />
@@ -229,6 +252,7 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     flex: 1,
+    alignItems: 'center',
   },
   input: {
     marginBottom: rem(21),
