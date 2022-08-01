@@ -97,7 +97,7 @@ export async function put<TRequest, TResponse>(
 
 export async function get<TResponse>(
   path: string,
-  queryParams?: unknown,
+  queryParams?: {[key: string]: string | number},
 ): Promise<TResponse> {
   try {
     const response = await backOff(
@@ -113,7 +113,7 @@ export async function get<TResponse>(
 
 export async function del<TResponse>(
   path: string,
-  queryParams?: unknown,
+  queryParams?: {[key: string]: string | number},
 ): Promise<TResponse> {
   try {
     const response = await backOff(
