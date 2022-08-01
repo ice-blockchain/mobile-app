@@ -7,7 +7,6 @@ import {Avatar} from '@screens/ProfileFlow/Profile/components/UserInfo/component
 import {Level} from '@screens/ProfileFlow/Profile/components/UserInfo/components/Level';
 import {profileSelector} from '@store/modules/Auth/selectors';
 import {t} from '@translations/i18n';
-import {formatAsCurrency} from '@utils/number';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
@@ -30,7 +29,7 @@ export const UserInfo = memo(() => {
       </View>
       <View style={styles.ladder}>
         <View style={styles.ladderLeft}>
-          <Text style={styles.ladderValueText}>{formatAsCurrency(606683)}</Text>
+          <Text style={styles.ladderValueText}>606,683</Text>
           <Text style={styles.ladderLabelText}>
             {t('profile.global_rank').toUpperCase()}
           </Text>
@@ -38,7 +37,7 @@ export const UserInfo = memo(() => {
         <Level value={21} />
         <View style={styles.ladderRight}>
           <View>
-            <Text style={styles.ladderValueText}>{formatAsCurrency(1024)}</Text>
+            <Text style={styles.ladderValueText}>1,024</Text>
             <Text style={styles.ladderLabelText}>
               {t('global.referrals').toUpperCase()}
             </Text>
