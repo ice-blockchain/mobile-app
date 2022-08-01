@@ -97,11 +97,11 @@ export async function put<TRequest, TResponse>(
 
 export async function get<TResponse>(
   path: string,
-  urlParams?: unknown,
+  queryParams?: unknown,
 ): Promise<TResponse> {
   try {
     const response = await backOff(
-      async () => readClient.get<TResponse>(path, {params: urlParams}),
+      async () => readClient.get<TResponse>(path, {params: queryParams}),
       backOffOptions,
     );
     return response.data;
@@ -113,11 +113,11 @@ export async function get<TResponse>(
 
 export async function del<TResponse>(
   path: string,
-  urlParams?: unknown,
+  queryParams?: unknown,
 ): Promise<TResponse> {
   try {
     const response = await backOff(
-      async () => writeClient.delete<TResponse>(path, {params: urlParams}),
+      async () => writeClient.delete<TResponse>(path, {params: queryParams}),
       backOffOptions,
     );
     return response.data;
