@@ -20,6 +20,8 @@ import {
 import {Contact} from 'react-native-contacts';
 import {font, rem} from 'rn-units';
 
+const phoneNumberLineHeight = font(20);
+
 export const ContactItem = memo(
   ({
     index,
@@ -42,7 +44,7 @@ export const ContactItem = memo(
         setActiveHeight(0);
       } else {
         setActiveIndex(index);
-        setActiveHeight(phoneNumbers.length * font(14));
+        setActiveHeight((phoneNumbers.length - 1) * phoneNumberLineHeight);
       }
     };
     return (
@@ -73,8 +75,8 @@ export const ContactItem = memo(
           <Text style={styles.phoneNumber}>{phoneNumbers[0]}</Text>
 
           {phoneNumbers.length === 1 ? null : (
-            <View style={{height}}>
-              {[...phoneNumbers.slice(1, phoneNumbers.length)].map(num => (
+            <View style={[styles.hiddenNumbers, {height}]}>
+              {phoneNumbers.slice(1).map(num => (
                 <Text style={styles.phoneNumber} key={num}>
                   {num}
                 </Text>
@@ -116,8 +118,12 @@ const styles = StyleSheet.create({
     paddingBottom: rem(3),
     marginRight: rem(4),
   },
+  hiddenNumbers: {
+    overflow: 'hidden',
+  },
   phoneNumber: {
     fontSize: font(14),
+    height: phoneNumberLineHeight,
     fontFamily: FONTS.primary.medium,
     color: COLORS.scorpion,
   },
