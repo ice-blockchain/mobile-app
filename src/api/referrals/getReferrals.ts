@@ -22,6 +22,8 @@ export function getReferrals({
   offset = 0,
 }: Params) {
   return get<Referrals>(`/users/${userId}/referrals`, {
-    params: {type: referralType, limit, offset},
+    type: referralType,
+    limit,
+    offset,
   });
 }

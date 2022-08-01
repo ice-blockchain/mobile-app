@@ -12,10 +12,5 @@ export function modifyUser(userId: string, user: Partial<User>) {
   for (let key in user) {
     formData.append(key, user[key as keyof User]);
   }
-  return patch<FormData, User>(`/users/${userId}`, formData, {
-    headers: {
-      'Content-Type': 'multipart/form-data',
-    },
-    transformRequest: (data: FormData) => data,
-  });
+  return patch<FormData, User>(`/users/${userId}`, formData);
 }

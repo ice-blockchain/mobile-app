@@ -2,7 +2,7 @@
 
 import {getHeaders} from '@api/client/getHeaders';
 import {ENV} from '@constants/env';
-import axios, {AxiosInstance, AxiosRequestConfig} from 'axios';
+import axios, {AxiosInstance} from 'axios';
 import {backOff} from 'exponential-backoff';
 
 import {handleServiceError} from './ApiServiceErrors';
@@ -50,11 +50,10 @@ setupApiClient(readClient);
 export async function post<TRequest, TResponse>(
   path: string,
   payload: TRequest,
-  config?: AxiosRequestConfig,
 ): Promise<TResponse> {
   try {
     const response = await backOff(
-      async () => writeClient.post<TResponse>(path, payload, config),
+      async () => writeClient.post<TResponse>(path, payload),
       backOffOptions,
     );
     return response.data;
@@ -67,11 +66,10 @@ export async function post<TRequest, TResponse>(
 export async function patch<TRequest, TResponse>(
   path: string,
   payload: TRequest,
-  config?: AxiosRequestConfig,
 ): Promise<TResponse> {
   try {
     const response = await backOff(
-      async () => writeClient.patch<TResponse>(path, payload, config),
+      async () => writeClient.patch<TResponse>(path, payload),
       backOffOptions,
     );
     return response.data;
@@ -84,11 +82,10 @@ export async function patch<TRequest, TResponse>(
 export async function put<TRequest, TResponse>(
   path: string,
   payload: TRequest,
-  config?: AxiosRequestConfig,
 ): Promise<TResponse> {
   try {
     const response = await backOff(
-      async () => writeClient.put<TResponse>(path, payload, config),
+      async () => writeClient.put<TResponse>(path, payload),
       backOffOptions,
     );
     return response.data;
@@ -100,11 +97,11 @@ export async function put<TRequest, TResponse>(
 
 export async function get<TResponse>(
   path: string,
-  config?: AxiosRequestConfig,
+  urlParams?: unknown,
 ): Promise<TResponse> {
   try {
     const response = await backOff(
-      async () => readClient.get<TResponse>(path, config),
+      async () => readClient.get<TResponse>(path, {params: urlParams}),
       backOffOptions,
     );
     return response.data;
@@ -116,11 +113,11 @@ export async function get<TResponse>(
 
 export async function del<TResponse>(
   path: string,
-  config?: AxiosRequestConfig,
+  urlParams?: unknown,
 ): Promise<TResponse> {
   try {
     const response = await backOff(
-      async () => writeClient.delete<TResponse>(path, config),
+      async () => writeClient.delete<TResponse>(path, {params: urlParams}),
       backOffOptions,
     );
     return response.data;

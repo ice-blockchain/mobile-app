@@ -16,6 +16,14 @@ async function onFulfilled(config: AxiosRequestConfig) {
     }
   }
 
+  if (config.data instanceof FormData) {
+    config.headers = {
+      ...config.headers,
+      'Content-Type': 'multipart/form-data',
+    };
+    config.transformRequest = (data: FormData) => data;
+  }
+
   return config;
 }
 

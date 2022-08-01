@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {Referrals} from '@api/referrals/types';
+import {ReferralHistoryRecord, Referrals} from '@api/referrals/types';
 import {ReferralType} from '@api/user/types';
 import {createAction} from '@store/utils/actions/createAction';
 
@@ -27,7 +27,7 @@ const GET_REFERRALS = createAction(
 
 const GET_REFERRALS_HISTORY = createAction('GET_REFERRALS_HISTORY', {
   START: (userId: string) => ({userId}),
-  SUCCESS: (history: {date: string; t1: number; t2: number}[]) => ({history}),
+  SUCCESS: (history: ReferralHistoryRecord[]) => ({history}),
   FAILED: (errorMessage: string) => ({
     errorMessage,
   }),
