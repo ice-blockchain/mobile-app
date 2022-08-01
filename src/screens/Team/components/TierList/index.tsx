@@ -39,7 +39,7 @@ export const TierList = memo(
                   fill={item.pinged ? COLORS.cadetBlue : COLORS.darkBlue}
                 />
               }
-              text={t('team.tier_one.ping')}
+              text={t('users.ping')}
               onPress={() => {}}
             />
           }

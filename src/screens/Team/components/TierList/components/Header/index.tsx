@@ -19,7 +19,7 @@ export const ListHeader = ({total, active, title}: Props) => {
     <View {...stopPropagination}>
       <View style={styles.header}>
         <Text style={styles.title}>{`${t(
-          'team.tier_one.header_list.title_active',
+          'users.active',
         )}: ${active}/${total}`}</Text>
         <Text style={styles.title}>{`${t(title)}: 94,412 ice`}</Text>
       </View>

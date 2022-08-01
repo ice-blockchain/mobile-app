@@ -44,9 +44,7 @@ export const UserListItem = ({
           {user.username}
         </Text>
         <Text style={styles.status}>
-          {user.active
-            ? t('team.tier_one.active')
-            : t('team.tier_one.inactive')}
+          {user.active ? t('users.active') : t('users.inactive')}
         </Text>
       </View>
       {rightButton}
