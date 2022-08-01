@@ -12,10 +12,12 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {BorderedButton} from '@screens/UserRegistrationFlow/SignIn/components/BorderedButton';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {isAuthorizedSelector} from '@store/modules/Auth/selectors';
+import {DeviceActions} from '@store/modules/Devices/actions';
 import {
   deviceLocationSelector,
   deviceSettingsSelector,
 } from '@store/modules/Devices/selectors';
+import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {EmailIconSvg} from '@svg/EmailIcon';
 import {LogoSvg} from '@svg/Logo';
 import {MagicIconSvg} from '@svg/MagicIcon';
@@ -23,6 +25,7 @@ import {PhoneIconSvg} from '@svg/PhoneIcon';
 import {translate} from '@translations/i18n';
 import React, {useCallback, useEffect, useState} from 'react';
 import {
+  ActivityIndicator,
   Keyboard,
   KeyboardAvoidingView,
   ScrollView,
@@ -48,6 +51,13 @@ export const SignIn = ({navigation}: Props) => {
   const [inputType, setInputType] = useState<'email' | 'phone'>('email');
   const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
     useState(false);
+  const isEmailSignInLoading = useSelector(
+    isLoadingSelector.bind(null, AuthActions.SIGN_IN_EMAIL),
+  );
+
+  const isCreatingSettings = useSelector(
+    isLoadingSelector.bind(null, DeviceActions.GET_OR_CREATE_SETTINGS),
+  );
 
   const dispatch = useDispatch();
   const isAuthorized = useSelector(isAuthorizedSelector);
@@ -186,6 +196,12 @@ export const SignIn = ({navigation}: Props) => {
         </Text>
         <MagicIconSvg />
       </View>
+      {isEmailSignInLoading || isCreatingSettings ? (
+        <ActivityIndicator
+          style={[StyleSheet.absoluteFill, styles.loading]}
+          size={'large'}
+        />
+      ) : null}
     </SafeAreaView>
   );
 };
@@ -244,5 +260,8 @@ const styles = StyleSheet.create({
   },
   button: {
     width: rem(247),
+  },
+  loading: {
+    backgroundColor: 'rgba(0,0,0,0.2)',
   },
 });
