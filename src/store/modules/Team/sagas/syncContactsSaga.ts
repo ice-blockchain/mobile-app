@@ -3,9 +3,9 @@
 import {Api} from '@api/index';
 import {
   isAuthorizedSelector,
+  profileSelector,
   userIdSelector,
 } from '@store/modules/Auth/selectors';
-import {deviceLocationSelector} from '@store/modules/Devices/selectors';
 import {permissionSelector} from '@store/modules/Permissions/selectors';
 import {TeamActions} from '@store/modules/Team/actions';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
@@ -34,8 +34,9 @@ export function* syncContactsSaga() {
     const userId: SagaReturnType<typeof userIdSelector> = yield select(
       userIdSelector,
     );
-    const location: SagaReturnType<typeof deviceLocationSelector> =
-      yield select(deviceLocationSelector);
+    const profile: SagaReturnType<typeof profileSelector> = yield select(
+      profileSelector,
+    );
     let contacts: SagaReturnType<typeof getAllWithoutPhotos> = yield call(
       getAllWithoutPhotos,
     );
@@ -50,7 +51,7 @@ export function* syncContactsSaga() {
           try {
             return [
               ...contactNumbers,
-              e164PhoneNumber(record.number, location?.country),
+              e164PhoneNumber(record.number, profile?.country),
             ];
           } catch {
             // skip number in case of error
@@ -64,9 +65,13 @@ export function* syncContactsSaga() {
       e164PhoneNumbers.map(hashPhoneNumber),
     );
 
-    yield call(Api.user.modifyUser, userId, {
-      agendaPhoneNumberHashes: phoneNumberHashes.join(','),
-    });
+    const phoneNumberHashesString = phoneNumberHashes.join(',');
+
+    if (phoneNumberHashesString !== profile?.agendaPhoneNumberHashes) {
+      yield call(Api.user.modifyUser, userId, {
+        agendaPhoneNumberHashes: phoneNumberHashesString,
+      });
+    }
 
     yield put(TeamActions.SYNC_CONTACTS.SUCCESS.create(contacts));
   } catch (error) {

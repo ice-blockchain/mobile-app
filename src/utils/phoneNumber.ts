@@ -17,7 +17,7 @@ export const formatPhoneNumber = (phone: string, countryCode?: string) => {
  */
 export const e164PhoneNumber = (
   phone: string,
-  defaultCountryCode?: string,
+  defaultCountryCode?: string | null,
 ): string => {
   return parsePhoneNumberWithError(
     phone,
