@@ -65,7 +65,7 @@ export const UserListItemSkeleton = ({
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    paddingTop: rem(14),
+    paddingBottom: rem(14),
     alignItems: 'center',
   },
   body: {
