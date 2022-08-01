@@ -10,7 +10,12 @@ export function* getReferralsSaga(action: ReturnType<typeof actionCreator>) {
   const {userId, referralType, offset} = action.payload;
   try {
     const result: SagaReturnType<typeof Api.referrals.getReferrals> =
-      yield Api.referrals.getReferrals({userId, referralType, offset});
+      yield Api.referrals.getReferrals({
+        userId,
+        referralType,
+        offset,
+        limit: 20,
+      });
     yield put(
       ReferralsActions.GET_REFERRALS(referralType).SUCCESS.create(
         userId,
