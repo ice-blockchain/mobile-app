@@ -12,3 +12,6 @@ export const usernameValidationErrorSelector = (state: RootState) =>
 
 export const refUsernameValidationErrorSelector = (state: RootState) =>
   state.validation.refUsernameValidationError;
+
+export const phoneVerificationStepSelector = (state: RootState) =>
+  state.validation.phoneVerificationStep;

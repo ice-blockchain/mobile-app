@@ -1,17 +1,16 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {User} from '@api/user/types';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AuthActions} from '@store/modules/Auth/actions';
 import {ValidationActions} from '@store/modules/Validation/actions';
 import produce from 'immer';
-import {persistReducer} from 'redux-persist';
 
 export interface State {
   username: string | null;
   refUser: User | null;
   usernameValidationError: string | null;
   refUsernameValidationError: string | null;
+  phoneVerificationStep: 'phone' | 'code';
 }
 
 type Actions = ReturnType<
@@ -20,6 +19,7 @@ type Actions = ReturnType<
   | typeof ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.create
   | typeof ValidationActions.REF_USERNAME_VALIDATION.FAILED.create
   | typeof ValidationActions.RESET_VALIDATION_ERRORS.STATE.create
+  | typeof AuthActions.UPDATE_ACCOUNT.SUCCESS.create
   | typeof AuthActions.SIGN_OUT.SUCCESS.create
 >;
 
@@ -28,6 +28,7 @@ const INITIAL_STATE: State = {
   refUser: null,
   usernameValidationError: null,
   refUsernameValidationError: null,
+  phoneVerificationStep: 'phone',
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -49,6 +50,11 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case ValidationActions.REF_USERNAME_VALIDATION.FAILED.type:
         draft.refUsernameValidationError = action.payload.errorMessage;
         break;
+      case AuthActions.UPDATE_ACCOUNT.SUCCESS.type:
+        if (action.payload.result.phoneNumber) {
+          draft.phoneVerificationStep = 'code';
+        }
+        break;
       case AuthActions.SIGN_OUT.SUCCESS.type: {
         return {
           ...INITIAL_STATE,
@@ -58,11 +64,4 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
   });
 }
 
-const persistConfig = {
-  key: 'validation',
-  storage: AsyncStorage,
-  timeout: 120000,
-  whitelist: [],
-};
-
-export const validationReducer = persistReducer(persistConfig, reducer);
+export const validationReducer = reducer;

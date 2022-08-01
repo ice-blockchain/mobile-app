@@ -6,14 +6,12 @@ import {ConfirmPhone} from '@screens/Team/components/Contacts/components/Confirm
 import {ContactsList} from '@screens/Team/components/Contacts/components/ContactsList';
 import {ContactsPermissions} from '@screens/Team/components/Contacts/components/ContactsPermissions';
 import {AuthActions} from '@store/modules/Auth/actions';
-import {
-  isPhoneNumberVerifiedSelector,
-  phoneVerificationStepSelector,
-} from '@store/modules/Auth/selectors';
+import {isPhoneNumberVerifiedSelector} from '@store/modules/Auth/selectors';
 import {PermissionsActions} from '@store/modules/Permissions/actions';
 import {permissionSelector} from '@store/modules/Permissions/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {ValidationActions} from '@store/modules/Validation/actions';
+import {phoneVerificationStepSelector} from '@store/modules/Validation/selectors';
 import {RootState} from '@store/rootReducer';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {ActivityIndicator, Animated, StyleSheet} from 'react-native';

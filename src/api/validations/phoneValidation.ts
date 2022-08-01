@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {put} from '@api/client';
+import {User} from '@api/user/types';
 
 interface Params {
   userId: string;
@@ -20,7 +21,7 @@ export function phoneValidation({
   phoneNumberHash,
   validationCode,
 }: Params) {
-  return put(`/user-validations/${userId}/phone-number`, {
+  return put<Params, User>(`/user-validations/${userId}/phone-number`, {
     userId,
     phoneNumber,
     phoneNumberHash,

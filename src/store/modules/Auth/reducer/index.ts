@@ -17,8 +17,6 @@ export interface AuthState {
   token: string | null;
   isInitialized: boolean;
   isWelcomeSeen: boolean;
-  phoneVerificationStep: string;
-  isPhoneNumberVerified: boolean;
   profile: User | null;
 }
 
@@ -43,8 +41,6 @@ const INITIAL_STATE: AuthState = {
   token: null,
   isInitialized: false,
   isWelcomeSeen: false,
-  phoneVerificationStep: 'phone',
-  isPhoneNumberVerified: true,
   profile: null,
 };
 
@@ -69,7 +65,7 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
         draft.profile = action.payload.result.profile ?? null;
         break;
       case ValidationActions.PHONE_VALIDATION.SUCCESS.type:
-        draft.isPhoneNumberVerified = true;
+        draft.profile = action.payload.result;
         break;
       case AuthActions.CREATE_USER.SUCCESS.type:
       case AuthActions.FETCH_USER_PROFILE.SUCCESS.type:
@@ -81,9 +77,6 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
           email: action.payload.result.email,
           phoneNumber: action.payload.result.phoneNumber,
         };
-        if (action.payload.result.phoneNumber) {
-          draft.phoneVerificationStep = 'code';
-        }
         break;
       case AuthActions.SIGN_OUT.SUCCESS.type: {
         return {
@@ -100,7 +93,7 @@ const persistConfig = {
   key: 'auth',
   storage: AsyncStorage,
   timeout: 120000,
-  whitelist: ['isWelcomeSeen', 'isPhoneNumberVerified', 'magicUser', 'profile'],
+  whitelist: ['isWelcomeSeen'],
 };
 
 export const authReducer = persistReducer(persistConfig, reducer);

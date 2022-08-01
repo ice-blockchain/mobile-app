@@ -26,7 +26,7 @@ const PHONE_VALIDATION = createAction('PHONE_VALIDATION', {
   START: (validationCode: string) => ({
     validationCode,
   }),
-  SUCCESS: true,
+  SUCCESS: (result: User) => ({result}),
   FAILED: (errorMessage: string) => ({
     errorMessage,
   }),
