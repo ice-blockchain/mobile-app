@@ -51,13 +51,25 @@ export const SignIn = ({navigation}: Props) => {
   const [inputType, setInputType] = useState<'email' | 'phone'>('email');
   const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
     useState(false);
+
   const isEmailSignInLoading = useSelector(
     isLoadingSelector.bind(null, AuthActions.SIGN_IN_EMAIL),
   );
-
+  const isPhoneSignInLoading = useSelector(
+    isLoadingSelector.bind(null, AuthActions.SIGN_IN_PHONE),
+  );
+  const isSocialSignInLoading = useSelector(
+    isLoadingSelector.bind(null, AuthActions.SIGN_IN_SOCIAL),
+  );
   const isCreatingSettings = useSelector(
     isLoadingSelector.bind(null, DeviceActions.GET_OR_CREATE_SETTINGS),
   );
+
+  const isLoading =
+    isEmailSignInLoading ||
+    isPhoneSignInLoading ||
+    isSocialSignInLoading ||
+    isCreatingSettings;
 
   const dispatch = useDispatch();
   const isAuthorized = useSelector(isAuthorizedSelector);
@@ -196,7 +208,7 @@ export const SignIn = ({navigation}: Props) => {
         </Text>
         <MagicIconSvg />
       </View>
-      {isEmailSignInLoading || isCreatingSettings ? (
+      {isLoading ? (
         <ActivityIndicator
           style={[StyleSheet.absoluteFill, styles.loading]}
           size={'large'}
