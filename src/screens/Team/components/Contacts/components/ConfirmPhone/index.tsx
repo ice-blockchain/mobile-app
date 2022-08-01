@@ -11,7 +11,6 @@ import {Images} from '@images';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {t} from '@translations/i18n';
 import {formatPhoneNumber} from '@utils/phoneNumber';
-import {CountryCode, formatIncompletePhoneNumber} from 'libphonenumber-js/min';
 import React, {useEffect, useRef, useState} from 'react';
 import {Animated, Image, StyleSheet, Text, View} from 'react-native';
 import {font, isIOS, rem, screenWidth} from 'rn-units';
@@ -30,12 +29,7 @@ export function ConfirmPhone({
   const [phone, setPhone] = useState('');
   const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
   const handleOnPress = () => {
-    const isoCode = selectedCountry.isoCode as CountryCode;
-    const phoneNumberWithCountryCode = formatIncompletePhoneNumber(
-      `${selectedCountry.iddCode}${phone}`,
-      isoCode,
-    );
-    confirmPhonePress(phoneNumberWithCountryCode.split(' ').join(''));
+    confirmPhonePress(selectedCountry.iddCode + phone);
   };
   const isKeyboardVisible = useIsKeyboardShown();
 

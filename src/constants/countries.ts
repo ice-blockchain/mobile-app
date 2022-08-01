@@ -1,11 +1,9 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {CountryCode} from 'libphonenumber-js/min';
-
 export interface ICountryCode {
   name: string;
   flag: string;
-  isoCode: CountryCode | string;
+  isoCode: string;
   iddCode: string;
 }
 

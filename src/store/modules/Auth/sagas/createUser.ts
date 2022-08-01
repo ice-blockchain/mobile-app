@@ -10,7 +10,7 @@ import {
   usernameSelector,
 } from '@store/modules/Validation/selectors';
 import {t} from '@translations/i18n';
-import {hashPhoneNumber} from '@utils/phoneNumber';
+import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import {call, put, select} from 'redux-saga/effects';
 
 export function* createUserSaga() {
@@ -18,39 +18,26 @@ export function* createUserSaga() {
     const magicUser: ReturnType<typeof magicUserSelector> = yield select(
       magicUserSelector,
     );
-
     const username: ReturnType<typeof usernameSelector> = yield select(
       usernameSelector,
     );
-
     const refUser: ReturnType<typeof refUserSelector> = yield select(
       refUserSelector,
     );
 
-    let phoneNumber = null;
+    let phoneNumber: string | null = null;
     let phoneNumberHash: string | null = null;
-    let email = null;
-    let refUserId = null;
-
-    if (magicUser) {
-      phoneNumber = magicUser.phoneNumber;
-      email = magicUser.email;
-
-      if (phoneNumber) {
-        phoneNumberHash = yield call(hashPhoneNumber, phoneNumber);
-      }
-    }
-
-    if (refUser && refUser.id) {
-      refUserId = refUser.id;
+    if (magicUser?.phoneNumber) {
+      phoneNumber = e164PhoneNumber(magicUser.phoneNumber);
+      phoneNumberHash = yield call(hashPhoneNumber, phoneNumber);
     }
 
     const createdUser: User = yield call(Api.user.createUser, {
       username: username,
-      email: email,
+      email: magicUser?.email,
       phoneNumber: phoneNumber,
       phoneNumberHash: phoneNumberHash,
-      referredBy: refUserId,
+      referredBy: refUser?.id,
     });
     yield put(AuthActions.CREATE_USER.SUCCESS.create(createdUser));
   } catch (error) {

@@ -34,9 +34,8 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         break;
       }
       case AuthActions.SIGN_OUT.SUCCESS.type: {
-        return {
-          ...INITIAL_STATE,
-        };
+        draft.search = [];
+        break;
       }
     }
   });
