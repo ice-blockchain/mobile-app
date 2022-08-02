@@ -18,10 +18,12 @@ import {ListControlCountry} from '@screens/SettingsFlow/PersonalInformation/comp
 import {ListControlInput} from '@screens/SettingsFlow/PersonalInformation/components/ListControls/ListControlInput';
 import {SaveButton} from '@screens/SettingsFlow/PersonalInformation/components/SaveButton';
 import {useKeyboardAnimatedStyles} from '@screens/SettingsFlow/PersonalInformation/hooks/useKeyboardAnimatedStyles';
+import {deviceCountrySelector} from '@store/modules/Devices/selectors';
 import {t} from '@translations/i18n';
 import React, {memo, useCallback, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 const mockUser = {
@@ -37,8 +39,10 @@ export const PersonalInformation = memo(() => {
   const navigation =
     useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
 
+  const deviceCountry = useSelector(deviceCountrySelector);
+
   const [hasChanges, setHasChanges] = useState(false);
-  const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
+  const [selectedCountry, setSelectedCountry] = useState(deviceCountry);
   const [isCountrySearchVisible, setCountrySearchVisibility] = useState(false);
 
   const onChangePhonePress = useCallback(

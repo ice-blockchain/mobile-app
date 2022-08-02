@@ -3,16 +3,17 @@
 import {PhoneNumberInput} from '@components/PhoneNumberInput';
 import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
 import {PrimaryButton} from '@components/PrimaryButton';
-import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
 import {IS_SMALL_SCREEN, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
 import {Images} from '@images';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
+import {deviceCountrySelector} from '@store/modules/Devices/selectors';
 import {t} from '@translations/i18n';
 import {formatPhoneNumber} from '@utils/phoneNumber';
 import React, {useEffect, useRef, useState} from 'react';
 import {Animated, Image, StyleSheet, Text, View} from 'react-native';
+import {useSelector} from 'react-redux';
 import {font, isIOS, rem, screenWidth} from 'rn-units';
 
 type ConfirmPhoneProps = {
@@ -27,7 +28,8 @@ export function ConfirmPhone({
   isCountriesVisible,
 }: ConfirmPhoneProps): React.ReactElement {
   const [phone, setPhone] = useState('');
-  const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
+  const deviceCountry = useSelector(deviceCountrySelector);
+  const [selectedCountry, setSelectedCountry] = useState(deviceCountry);
   const handleOnPress = () => {
     confirmPhonePress(selectedCountry.iddCode + phone);
   };

@@ -13,6 +13,7 @@ import {BorderedButton} from '@screens/UserRegistrationFlow/SignIn/components/Bo
 import {AuthActions} from '@store/modules/Auth/actions';
 import {isAuthorizedSelector} from '@store/modules/Auth/selectors';
 import {
+  deviceCountrySelector,
   deviceLocationSelector,
   deviceSettingsSelector,
 } from '@store/modules/Devices/selectors';
@@ -42,9 +43,10 @@ type Props = {
 };
 
 export const SignIn = ({navigation}: Props) => {
+  const deviceCountry = useSelector(deviceCountrySelector);
   const [email, onChangeEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
+  const [selectedCountry, setSelectedCountry] = useState(deviceCountry);
   const [inputType, setInputType] = useState<'email' | 'phone'>('email');
   const [isCountryCodeSearchVisible, setCountryCodeSearchVisibility] =
     useState(false);

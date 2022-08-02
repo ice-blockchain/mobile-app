@@ -5,7 +5,6 @@ import {KeyboardDismiss, stopPropagination} from '@components/KeyboardDismiss';
 import {PhoneNumberInput} from '@components/PhoneNumberInput';
 import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
 import {COLORS} from '@constants/colors';
-import {countriesCode} from '@constants/countries';
 import {FONTS} from '@constants/fonts';
 import {commonStyles} from '@constants/styles';
 import {Images} from '@images';
@@ -16,6 +15,7 @@ import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {ProfileTabStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {deviceCountrySelector} from '@store/modules/Devices/selectors';
 import {t} from '@translations/i18n';
 import React, {memo, useRef, useState} from 'react';
 import {
@@ -27,6 +27,7 @@ import {
   View,
 } from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import {useSelector} from 'react-redux';
 import {font, isIOS, rem} from 'rn-units';
 
 export const ConfirmNewPhone = memo(() => {
@@ -36,8 +37,9 @@ export const ConfirmNewPhone = memo(() => {
     useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
 
   const phoneNumberInputRef = useRef<TextInput | null>(null);
+  const deviceCountry = useSelector(deviceCountrySelector);
 
-  const [selectedCountry, setSelectedCountry] = useState(countriesCode[0]);
+  const [selectedCountry, setSelectedCountry] = useState(deviceCountry);
   const [isCountrySearchVisible, setCountrySearchVisibility] = useState(false);
   const [phone, setPhone] = useState('');
 
