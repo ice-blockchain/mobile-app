@@ -33,7 +33,8 @@ export const ContactsList = ({focused}: Props) => {
 
   const tabbarOffset = useBottomTabBarOffsetStyle({extraOffset: 20});
 
-  const sections = useGetContactSegments(focused);
+  const {sections, loadNext, refresh, refreshing} =
+    useGetContactSegments(focused);
 
   const invite = useCallback(
     (id: string) => {
@@ -82,6 +83,9 @@ export const ContactsList = ({focused}: Props) => {
         renderItem={renderItem}
         renderSectionHeader={renderSectionHeader}
         showsVerticalScrollIndicator={false}
+        onEndReached={loadNext}
+        onRefresh={refresh}
+        refreshing={refreshing}
       />
     </View>
   );
