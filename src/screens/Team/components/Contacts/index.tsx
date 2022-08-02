@@ -119,14 +119,10 @@ export const Contacts = ({
           showCountriesList={showCountriesList}
           isCountriesVisible={isCountriesVisible}
           confirmPhonePress={confirmPhonePress}
-          hideBodyOnKeyboardOpen={true}
         />
       )}
       {visibleFlow === 'ConfirmCode' && (
-        <ConfirmCode
-          confirmCodePress={confirmCodePress}
-          hideBodyOnKeyboardOpen={true}
-        />
+        <ConfirmCode confirmCodePress={confirmCodePress} />
       )}
       {visibleFlow === 'ContactsList' && <ContactsList focused={focused} />}
 

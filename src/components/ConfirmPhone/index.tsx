@@ -5,7 +5,6 @@ import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {FONTS} from '@constants/fonts';
 import {IS_SMALL_SCREEN, SCREEN_SIDE_OFFSET} from '@constants/styles';
-import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
 import {Images} from '@images';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {deviceCountrySelector} from '@store/modules/Devices/selectors';
@@ -20,21 +19,17 @@ type ConfirmPhoneProps = {
   confirmPhonePress: (phone: string) => void;
   showCountriesList: (t: boolean) => void;
   isCountriesVisible: boolean;
-  hideBodyOnKeyboardOpen?: boolean;
 };
 
 export function ConfirmPhone({
   confirmPhonePress,
   showCountriesList,
   isCountriesVisible,
-  hideBodyOnKeyboardOpen = false,
 }: ConfirmPhoneProps): React.ReactElement {
   const deviceCountry = useSelector(deviceCountrySelector);
 
   const [phone, setPhone] = useState('');
   const [selectedCountry, setSelectedCountry] = useState(deviceCountry);
-
-  const isKeyboardShown = useIsKeyboardShown();
 
   const phoneNumberInputRef = useRef<TextInput | null>(null);
 
@@ -65,22 +60,18 @@ export function ConfirmPhone({
 
   return (
     <View style={[styles.container, tabbarOffest.current]}>
-      {(!isKeyboardShown || !hideBodyOnKeyboardOpen) && (
-        <>
-          <View style={styles.imageContainer}>
-            <Image
-              source={Images.phone.confirmPhone}
-              style={styles.image}
-              resizeMode="contain"
-            />
-          </View>
+      <View style={styles.imageContainer}>
+        <Image
+          source={Images.phone.confirmPhone}
+          style={styles.image}
+          resizeMode="contain"
+        />
+      </View>
 
-          <Text style={styles.title}>{t('team.confirm_phone.title')}</Text>
-          <Text style={styles.description}>
-            {t('team.confirm_phone.description')}
-          </Text>
-        </>
-      )}
+      <Text style={styles.title}>{t('team.confirm_phone.title')}</Text>
+      <Text style={styles.description}>
+        {t('team.confirm_phone.description')}
+      </Text>
       <PhoneNumberInput
         selectedCountry={selectedCountry}
         showCountryCodeSearch={showCountryCodeSearch}
