@@ -14,7 +14,10 @@ export function* rootPermissionsSaga() {
       getPermissionsSaga,
     ),
     takeLatest(
-      AppCommonActions.APP_STATE_CHANGE.STATE.type,
+      [
+        AppCommonActions.APP_STATE_CHANGE.STATE.type,
+        AppCommonActions.APP_LOADED.STATE.type,
+      ],
       checkAllPermissionsSaga,
     ),
     takeLatest(AppCommonActions.APP_LOADED.STATE.type, checkAllPermissionsSaga),

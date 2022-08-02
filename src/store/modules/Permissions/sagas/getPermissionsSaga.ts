@@ -46,7 +46,9 @@ export function* getPermissionsSaga(action: ReturnType<typeof actionCreator>) {
     }
 
     if (permission === RESULTS.GRANTED) {
-      yield put(PermissionsActions.GET_PERMISSIONS.SUCCESS.create(permission));
+      yield put(
+        PermissionsActions.GET_PERMISSIONS.SUCCESS.create(type, permission),
+      );
     } else if (permission === RESULTS.DENIED) {
       if (type === 'pushNotifications') {
         const notificationResponse: SagaReturnType<typeof checkNotifications> =
@@ -56,7 +58,9 @@ export function* getPermissionsSaga(action: ReturnType<typeof actionCreator>) {
         permission = yield request(PERMISSIONS_LIST[type]);
       }
 
-      yield put(PermissionsActions.GET_PERMISSIONS.SUCCESS.create(permission));
+      yield put(
+        PermissionsActions.GET_PERMISSIONS.SUCCESS.create(type, permission),
+      );
     } else if (
       permission === RESULTS.LIMITED ||
       permission === RESULTS.UNAVAILABLE

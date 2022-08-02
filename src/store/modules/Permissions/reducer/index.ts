@@ -26,7 +26,7 @@ export function permissionsReducer(
   return produce(state, draft => {
     switch (action.type) {
       case PermissionsActions.GET_PERMISSIONS.SUCCESS.type:
-        draft.contacts = action.payload.status;
+        draft[action.payload.type] = action.payload.status;
         break;
       case PermissionsActions.CHECK_ALL_PERMISSIONS.SUCCESS.type:
         return action.payload.permissions;

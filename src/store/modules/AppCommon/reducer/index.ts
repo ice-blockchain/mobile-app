@@ -17,7 +17,7 @@ type Actions = ReturnType<
 const INITIAL_STATE: State = {
   isAppLoaded: false,
   isAppInitialized: false,
-  appState: null,
+  appState: 'active',
 };
 
 export function appCommonReducer(

@@ -11,7 +11,7 @@ export type PermissionsType = {
 
 const GET_PERMISSIONS = createAction('GET_PERMISSIONS', {
   START: (type: PermissionType) => ({type}),
-  SUCCESS: (status: PermissionStatus) => ({status}),
+  SUCCESS: (type: PermissionType, status: PermissionStatus) => ({type, status}),
   FAILED: (errorMessage: string) => ({
     errorMessage,
   }),

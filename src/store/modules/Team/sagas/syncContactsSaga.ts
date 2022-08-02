@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Api} from '@api/index';
+import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {
   isAuthorizedSelector,
   profileSelector,
@@ -22,7 +23,8 @@ import {
 function* readyToSync(): Generator<SelectEffect, boolean, boolean> {
   const hasPermissions: boolean = yield select(permissionSelector('contacts'));
   const isAuthorized: boolean = yield select(isAuthorizedSelector);
-  return hasPermissions && isAuthorized;
+  const isAppActive: boolean = yield select(isAppActiveSelector);
+  return hasPermissions && isAuthorized && isAppActive;
 }
 
 export function* syncContactsSaga() {
@@ -66,7 +68,6 @@ export function* syncContactsSaga() {
     );
 
     const phoneNumberHashesString = phoneNumberHashes.join(',');
-
     if (phoneNumberHashesString !== profile?.agendaPhoneNumberHashes) {
       yield call(Api.user.modifyUser, userId, {
         agendaPhoneNumberHashes: phoneNumberHashesString,

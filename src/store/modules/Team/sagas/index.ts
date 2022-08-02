@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
+import {AuthActions} from '@store/modules/Auth/actions';
 import {TeamActions} from '@store/modules/Team/actions';
 import {all, takeLatest} from 'redux-saga/effects';
 
@@ -12,8 +13,9 @@ export function* rootTeamSaga() {
   yield all([
     takeLatest(
       [
-        TeamActions.SYNC_CONTACTS.START.type,
+        AppCommonActions.APP_STATE_CHANGE.STATE.type,
         AppCommonActions.APP_INITIALIZED.STATE.type,
+        AuthActions.SIGN_OUT.SUCCESS.type,
       ],
       syncContactsSaga,
     ),
