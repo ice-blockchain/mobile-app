@@ -5,7 +5,10 @@ import {SignUpStackParamList} from '@navigation/Auth';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {NavigationPanel} from '@screens/UserRegistrationFlow/Welcome/components/NavigationPanel';
-import {profileSelector} from '@store/modules/Auth/selectors';
+import {
+  magicUserSelector,
+  profileSelector,
+} from '@store/modules/Auth/selectors';
 import {ValidationActions} from '@store/modules/Validation/actions';
 import {
   refUsernameValidationErrorSelector,
@@ -37,7 +40,16 @@ type Props = {
 
 export const UserRegistration = ({}: Props) => {
   const pagerViewRef = useRef<PagerView>(null);
-  const [myNickname, setMyNickname] = useState('');
+  const magicUser = useSelector(magicUserSelector);
+  const nickNameToPrefill =
+    magicUser && magicUser.email
+      ? magicUser.email.split('@')[0].replace(/[^a-zA-Z0-9-_.]/g, '')
+      : '';
+  const [myNickname, setMyNickname] = useState(
+    magicUser?.preferredUsername
+      ? magicUser.preferredUsername
+      : nickNameToPrefill,
+  );
   const [invitedNickname, setInvitedNickname] = useState('');
   const [currentPage, setCurrentPage] = useState(0);
   const profile = useSelector(profileSelector);
@@ -54,7 +66,11 @@ export const UserRegistration = ({}: Props) => {
     if (claimValidationError) {
       setClaimError(claimValidationError);
     }
-  }, [claimValidationError]);
+
+    if (claimValidationError && currentPage === 1) {
+      navigation.goBack();
+    }
+  }, [claimValidationError, currentPage, navigation]);
 
   useEffect(() => {
     if (refValidationError) {

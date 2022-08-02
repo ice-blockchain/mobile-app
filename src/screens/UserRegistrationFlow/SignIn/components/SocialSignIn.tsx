@@ -1,8 +1,10 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {AppleSvg} from '@svg/AppleIcon';
+import {AppleIconSvg} from '@svg/AppleIcon';
+import {DiscordIconSvg} from '@svg/DiscordIcon';
 import {FacebookIconSvg} from '@svg/FacebookIcon';
 import {GoogleIconSvg} from '@svg/GoogleIcon';
+import {MicrosoftIconSvg} from '@svg/MicrosoftIcon';
 import {TwitterIconSvg} from '@svg/TwitterIcon';
 import * as React from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
@@ -11,7 +13,9 @@ import {isIOS, rem} from 'rn-units';
 export enum ESocialType {
   apple,
   google,
+  discord,
   facebook,
+  microsoft,
   twitter,
 }
 
@@ -27,7 +31,7 @@ export const SocialSignIn = ({onPress}: SocialSignInProps) => {
         <TouchableOpacity
           style={styles.button}
           onPress={iconPress(ESocialType.apple)}>
-          <AppleSvg />
+          <AppleIconSvg />
         </TouchableOpacity>
       ) : null}
 
@@ -39,8 +43,20 @@ export const SocialSignIn = ({onPress}: SocialSignInProps) => {
 
       <TouchableOpacity
         style={styles.button}
+        onPress={iconPress(ESocialType.discord)}>
+        <DiscordIconSvg />
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.button}
         onPress={iconPress(ESocialType.facebook)}>
         <FacebookIconSvg />
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={iconPress(ESocialType.microsoft)}>
+        <MicrosoftIconSvg />
       </TouchableOpacity>
 
       <TouchableOpacity
@@ -57,7 +73,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: rem(4),
+    marginTop: rem(10),
   },
   button: {
     padding: rem(9),

@@ -39,6 +39,8 @@ export function* signInSocialSaga(action: ReturnType<typeof actionCreator>) {
         email: email ?? null,
         phoneNumber: phoneNumber ?? null,
         userId: socialLoginInfo.magic.userMetadata.issuer,
+        preferredUsername:
+          socialLoginInfo.oauth?.userInfo?.preferredUsername ?? null,
       },
       profile,
     };
