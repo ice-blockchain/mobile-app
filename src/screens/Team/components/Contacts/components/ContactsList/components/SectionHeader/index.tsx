@@ -3,6 +3,7 @@
 import {stopPropagination} from '@components/KeyboardDismiss';
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
+import {ContactSection} from '@screens/Team/components/Contacts/components/ContactsList/hooks/useGetContactSegments';
 import {LogoIconSvg} from '@svg/LogoIcon';
 import {t} from '@translations/i18n';
 import React from 'react';
@@ -21,11 +22,11 @@ const IceFriendsHeader = () => {
   );
 };
 
-export const SectionHeader = ({section}: {section: {title: string}}) => {
+export const SectionHeader = ({section}: {section: ContactSection}) => {
   return (
     <View {...stopPropagination}>
       <View style={styles.titleContainer}>
-        {section.title === 'iceFriends' ? (
+        {section.id === 'friends' ? (
           <IceFriendsHeader />
         ) : (
           <Text style={styles.title}>{section.title}</Text>

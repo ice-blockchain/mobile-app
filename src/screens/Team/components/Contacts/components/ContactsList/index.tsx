@@ -1,13 +1,16 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {User} from '@api/user/types';
 import {InviteButton} from '@components/InviteButton';
 import {UserListItem, UserListItemSkeleton} from '@components/UserListItem';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {ContactItem} from '@screens/Team/components/Contacts/components/ContactsList/components/ContactItem';
 import {SectionHeader} from '@screens/Team/components/Contacts/components/ContactsList/components/SectionHeader';
-import {useGetContactSegments} from '@screens/Team/components/Contacts/components/ContactsList/hooks/useGetContactSegments';
+import {
+  ContactSection,
+  ContactSectionDataItem,
+  useGetContactSegments,
+} from '@screens/Team/components/Contacts/components/ContactsList/hooks/useGetContactSegments';
 import {TeamActions} from '@store/modules/Team/actions';
 import {hapticFeedback} from '@utils/hapticFeedback';
 import React, {useCallback} from 'react';
@@ -18,7 +21,6 @@ import {
   Text,
   View,
 } from 'react-native';
-import {Contact} from 'react-native-contacts';
 import {useDispatch} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -42,7 +44,7 @@ export const ContactsList = ({focused}: Props) => {
   );
 
   const renderSectionHeader = useCallback(
-    ({section}: {section: {title: string}}) => (
+    ({section}: {section: ContactSection}) => (
       <SectionHeader section={section} />
     ),
     [],
@@ -52,14 +54,14 @@ export const ContactsList = ({focused}: Props) => {
     ({
       item,
       index,
-    }: SectionListRenderItemInfo<Contact | User | string, {title: string}>) => {
-      if (typeof item === 'string') {
-        if (item === 'InviteFriendsButton') {
+    }: SectionListRenderItemInfo<ContactSectionDataItem, ContactSection>) => {
+      if ('element' in item) {
+        if (item.element === 'InviteFriendsButton') {
           return <InviteButton style={styles.inviteButtonContainer} />;
-        } else if (item === 'Loading') {
+        } else if (item.element === 'Loading') {
           return <UserListItemSkeleton />;
-        } else {
-          return <Text>{item}</Text>;
+        } else if (item.element === 'Error') {
+          return <Text>{item.message}</Text>;
         }
       } else if ('recordID' in item) {
         return <ContactItem contact={item} index={index} onInvite={invite} />;
@@ -73,7 +75,7 @@ export const ContactsList = ({focused}: Props) => {
 
   return (
     <View style={styles.container}>
-      <SectionList<Contact | User | string, {title: string}>
+      <SectionList<ContactSectionDataItem, ContactSection>
         contentContainerStyle={tabbarOffset.current}
         style={styles.sectionListStyle}
         sections={sections}
