@@ -19,8 +19,14 @@ type TiersProps = {
   isCountriesVisible: boolean;
 };
 
+enum SegmentIndex {
+  ContactList,
+  Tier1List,
+  Tier2List,
+}
+
 export const SegmentedContent = (props: TiersProps) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<SegmentIndex>(0);
   const switcherRef = useRef<SegmentedControlMethods>(null);
   const pagerRef = useRef<PagerView>(null);
 
@@ -49,14 +55,17 @@ export const SegmentedContent = (props: TiersProps) => {
         ref={pagerRef}
         onPageSelected={onPageChange}>
         <View style={styles.container}>
-          <Contacts {...props} focused={activeIndex === 0} />
+          <Contacts
+            {...props}
+            focused={activeIndex === SegmentIndex.ContactList}
+          />
         </View>
         <View style={styles.container}>
           <TierList
             referralType="T1"
             emptyTitle="team.tierOne_tab"
             headerTitle="team.tier_one.header_list.title_earnings"
-            focused={activeIndex === 1}
+            focused={activeIndex === SegmentIndex.Tier1List}
           />
         </View>
         <View style={styles.container}>
@@ -64,7 +73,7 @@ export const SegmentedContent = (props: TiersProps) => {
             referralType="T2"
             emptyTitle="team.tierTwo_tab"
             headerTitle="team.tier_two.header_list.title_earnings"
-            focused={activeIndex === 2}
+            focused={activeIndex === SegmentIndex.Tier2List}
           />
         </View>
       </PagerView>
