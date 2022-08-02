@@ -32,7 +32,7 @@ type Props = {
 export const ContactsList = ({focused}: Props) => {
   const dispatch = useDispatch();
 
-  const tabbarOffset = useBottomTabBarOffsetStyle({extraOffset: 20});
+  const tabbarOffset = useBottomTabBarOffsetStyle();
 
   const {sections, loadNext, loadNextLoading, refresh, refreshing} =
     useGetContactSegments(focused);
