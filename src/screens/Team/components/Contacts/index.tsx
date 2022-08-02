@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
+import {ConfirmCode} from '@components/ConfirmCode';
 import {ConfirmPhone} from '@components/ConfirmPhone';
 import {COLORS} from '@constants/colors';
-import {ConfirmCode} from '@screens/Team/components/Contacts/components/ConfirmCode';
 import {ContactsList} from '@screens/Team/components/Contacts/components/ContactsList';
 import {ContactsPermissions} from '@screens/Team/components/Contacts/components/ContactsPermissions';
 import {AuthActions} from '@store/modules/Auth/actions';
@@ -119,11 +119,14 @@ export const Contacts = ({
           showCountriesList={showCountriesList}
           isCountriesVisible={isCountriesVisible}
           confirmPhonePress={confirmPhonePress}
-          hideTextOnKeyboard={true}
+          hideBodyOnKeyboardOpen={true}
         />
       )}
       {visibleFlow === 'ConfirmCode' && (
-        <ConfirmCode confirmCodePress={confirmCodePress} />
+        <ConfirmCode
+          confirmCodePress={confirmCodePress}
+          hideBodyOnKeyboardOpen={true}
+        />
       )}
       {visibleFlow === 'ContactsList' && <ContactsList focused={focused} />}
 

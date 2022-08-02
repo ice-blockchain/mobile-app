@@ -20,14 +20,14 @@ type ConfirmPhoneProps = {
   confirmPhonePress: (phone: string) => void;
   showCountriesList: (t: boolean) => void;
   isCountriesVisible: boolean;
-  hideTextOnKeyboard?: boolean;
+  hideBodyOnKeyboardOpen?: boolean;
 };
 
 export function ConfirmPhone({
   confirmPhonePress,
   showCountriesList,
   isCountriesVisible,
-  hideTextOnKeyboard = false,
+  hideBodyOnKeyboardOpen = false,
 }: ConfirmPhoneProps): React.ReactElement {
   const deviceCountry = useSelector(deviceCountrySelector);
 
@@ -65,7 +65,7 @@ export function ConfirmPhone({
 
   return (
     <View style={[styles.container, tabbarOffest.current]}>
-      {(!isKeyboardShown || !hideTextOnKeyboard) && (
+      {(!isKeyboardShown || !hideBodyOnKeyboardOpen) && (
         <>
           <View style={styles.imageContainer}>
             <Image
