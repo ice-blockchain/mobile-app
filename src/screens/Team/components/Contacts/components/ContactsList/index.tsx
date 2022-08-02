@@ -15,6 +15,7 @@ import {TeamActions} from '@store/modules/Team/actions';
 import {hapticFeedback} from '@utils/hapticFeedback';
 import React, {useCallback} from 'react';
 import {
+  ActivityIndicator,
   SectionList,
   SectionListRenderItemInfo,
   StyleSheet,
@@ -33,7 +34,7 @@ export const ContactsList = ({focused}: Props) => {
 
   const tabbarOffset = useBottomTabBarOffsetStyle({extraOffset: 20});
 
-  const {sections, loadNext, refresh, refreshing} =
+  const {sections, loading, loadNext, refresh, refreshing} =
     useGetContactSegments(focused);
 
   const invite = useCallback(
@@ -82,6 +83,7 @@ export const ContactsList = ({focused}: Props) => {
         sections={sections}
         renderItem={renderItem}
         renderSectionHeader={renderSectionHeader}
+        ListFooterComponent={loading && !refreshing ? ActivityIndicator : null}
         showsVerticalScrollIndicator={false}
         onEndReached={loadNext}
         onRefresh={refresh}

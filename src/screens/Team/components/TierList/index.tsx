@@ -12,7 +12,13 @@ import {useReferrals} from '@screens/Team/components/TierList/hooks/useReferrals
 import {PingIcon} from '@svg/PingIcon';
 import {t} from '@translations/i18n';
 import React, {memo, useCallback, useMemo} from 'react';
-import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {
+  ActivityIndicator,
+  FlatList,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -25,10 +31,8 @@ type Props = {
 export const TierList = memo(
   ({referralType, emptyTitle, headerTitle, focused}: Props) => {
     const tabbarOffset = useBottomTabBarOffsetStyle();
-    const {referrals, error, loadNext, refresh, refreshing} = useReferrals(
-      referralType,
-      focused,
-    );
+    const {referrals, error, loading, loadNext, refresh, refreshing} =
+      useReferrals(referralType, focused);
 
     const renderItem = useCallback(({item}: {item: User}) => {
       return (
@@ -84,6 +88,9 @@ export const TierList = memo(
             showsVerticalScrollIndicator={false}
             contentContainerStyle={[tabbarOffset.current]}
             ListHeaderComponent={Header}
+            ListFooterComponent={
+              loading && !refreshing ? ActivityIndicator : null
+            }
             style={styles.userList}
             data={referrals.referrals}
             renderItem={renderItem}

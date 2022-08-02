@@ -28,6 +28,10 @@ export const useReferrals = (referralType: ReferralType, focused: boolean) => {
     isLoadingSelector.bind(null, ReferralsActions.GET_REFERRALS(referralType)),
   );
 
+  if (refreshingRef.current && !loading) {
+    refreshingRef.current = false;
+  }
+
   useEffect(() => {
     if (focused) {
       dispatch(
@@ -39,10 +43,6 @@ export const useReferrals = (referralType: ReferralType, focused: boolean) => {
       );
     }
   }, [dispatch, referralType, userId, focused]);
-
-  if (refreshingRef.current && !loading) {
-    refreshingRef.current = false;
-  }
 
   const loadNext = useCallback(() => {
     if (referrals && referrals.total > referrals.referrals.length) {

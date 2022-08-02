@@ -39,6 +39,10 @@ export const useGetContactSegments = (focused: boolean) => {
     isLoadingSelector.bind(null, ReferralsActions.GET_REFERRALS('CONTACTS')),
   );
 
+  if (refreshingRef.current && !loading) {
+    refreshingRef.current = false;
+  }
+
   useEffect(() => {
     if (focused) {
       dispatch(
