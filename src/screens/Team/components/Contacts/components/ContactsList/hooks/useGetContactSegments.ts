@@ -29,6 +29,7 @@ export type ContactSectionDataItem =
 export const useGetContactSegments = (focused: boolean) => {
   const dispatch = useDispatch();
   const refreshingRef = useRef(false);
+  const loadNextLoadingRef = useRef(false);
   const userId = useSelector(userIdSelector);
   const contacts = useSelector(contactsSelector);
   const referrals = useSelector(referralsSelector(userId, 'CONTACTS'));
@@ -41,6 +42,10 @@ export const useGetContactSegments = (focused: boolean) => {
 
   if (refreshingRef.current && !loading) {
     refreshingRef.current = false;
+  }
+
+  if (loadNextLoadingRef.current && !loading) {
+    loadNextLoadingRef.current = false;
   }
 
   useEffect(() => {
@@ -57,6 +62,7 @@ export const useGetContactSegments = (focused: boolean) => {
 
   const loadNext = useCallback(() => {
     if (referrals && referrals.total > referrals.referrals.length) {
+      loadNextLoadingRef.current = true;
       dispatch(
         ReferralsActions.GET_REFERRALS('CONTACTS').START.create(
           userId,
@@ -79,6 +85,7 @@ export const useGetContactSegments = (focused: boolean) => {
   }, [dispatch, userId]);
 
   const refreshing = loading && refreshingRef.current;
+  const loadNextLoading = loading && loadNextLoadingRef.current;
 
   let iceFriends: ContactSectionDataItem[] = [];
   if (!referrals) {
@@ -113,5 +120,5 @@ export const useGetContactSegments = (focused: boolean) => {
     });
   }
 
-  return {sections, loading, loadNext, refresh, refreshing};
+  return {sections, loading, loadNext, loadNextLoading, refresh, refreshing};
 };

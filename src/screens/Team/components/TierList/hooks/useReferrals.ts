@@ -16,6 +16,7 @@ export const useReferrals = (referralType: ReferralType, focused: boolean) => {
   const userId = useSelector(userIdSelector);
   const referrals = useSelector(referralsSelector(userId, referralType));
   const refreshingRef = useRef(false);
+  const loadNextLoadingRef = useRef(false);
 
   const error = useSelector(
     failedReasonSelector.bind(
@@ -32,6 +33,10 @@ export const useReferrals = (referralType: ReferralType, focused: boolean) => {
     refreshingRef.current = false;
   }
 
+  if (loadNextLoadingRef.current && !loading) {
+    loadNextLoadingRef.current = false;
+  }
+
   useEffect(() => {
     if (focused) {
       dispatch(
@@ -46,6 +51,7 @@ export const useReferrals = (referralType: ReferralType, focused: boolean) => {
 
   const loadNext = useCallback(() => {
     if (referrals && referrals.total > referrals.referrals.length) {
+      loadNextLoadingRef.current = true;
       dispatch(
         ReferralsActions.GET_REFERRALS(referralType).START.create(
           userId,
@@ -68,6 +74,15 @@ export const useReferrals = (referralType: ReferralType, focused: boolean) => {
   }, [dispatch, referralType, userId]);
 
   const refreshing = loading && refreshingRef.current;
+  const loadNextLoading = loading && loadNextLoadingRef.current;
 
-  return {referrals, error, loading, loadNext, refresh, refreshing};
+  return {
+    referrals,
+    error,
+    loading,
+    loadNext,
+    loadNextLoading,
+    refresh,
+    refreshing,
+  };
 };
