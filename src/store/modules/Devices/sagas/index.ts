@@ -22,10 +22,7 @@ export function* rootDevicesSaga() {
     ),
     takeLatest(AuthActions.LOAD_USER.STATE.type, initDeviceSaga),
     takeLatest(
-      [
-        DeviceActions.UPDATE_DEVICE_LOCATION.START.type,
-        AppCommonActions.APP_LOADED.STATE.type,
-      ],
+      AppCommonActions.APP_LOADED.STATE.type,
       updateDeviceLocationSaga,
     ),
     fork(watchUpdateDeviceSettings),

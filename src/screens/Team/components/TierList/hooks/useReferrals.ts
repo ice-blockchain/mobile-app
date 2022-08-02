@@ -4,20 +4,28 @@ import {ReferralType} from '@api/user/types';
 import {userIdSelector} from '@store/modules/Auth/selectors';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {referralsSelector} from '@store/modules/Referrals/selectors';
-import {failedReasonSelector} from '@store/modules/UtilityProcessStatuses/selectors';
-import {useCallback, useEffect} from 'react';
+import {
+  failedReasonSelector,
+  isLoadingSelector,
+} from '@store/modules/UtilityProcessStatuses/selectors';
+import {useCallback, useEffect, useRef} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
 export const useReferrals = (referralType: ReferralType, focused: boolean) => {
   const dispatch = useDispatch();
   const userId = useSelector(userIdSelector);
   const referrals = useSelector(referralsSelector(userId, referralType));
+  const refreshingRef = useRef(false);
 
   const error = useSelector(
     failedReasonSelector.bind(
       null,
       ReferralsActions.GET_REFERRALS(referralType),
     ),
+  );
+
+  const loading = useSelector(
+    isLoadingSelector.bind(null, ReferralsActions.GET_REFERRALS(referralType)),
   );
 
   useEffect(() => {
@@ -32,6 +40,10 @@ export const useReferrals = (referralType: ReferralType, focused: boolean) => {
     }
   }, [dispatch, referralType, userId, focused]);
 
+  if (refreshingRef.current && !loading) {
+    refreshingRef.current = false;
+  }
+
   const loadNext = useCallback(() => {
     if (referrals && referrals.total > referrals.referrals.length) {
       dispatch(
@@ -44,5 +56,18 @@ export const useReferrals = (referralType: ReferralType, focused: boolean) => {
     }
   }, [dispatch, referralType, referrals, userId]);
 
-  return {referrals, error, loadNext};
+  const refresh = useCallback(() => {
+    refreshingRef.current = true;
+    dispatch(
+      ReferralsActions.GET_REFERRALS(referralType).START.create(
+        userId,
+        referralType,
+        0,
+      ),
+    );
+  }, [dispatch, referralType, userId]);
+
+  const refreshing = loading && refreshingRef.current;
+
+  return {referrals, error, loading, loadNext, refresh, refreshing};
 };

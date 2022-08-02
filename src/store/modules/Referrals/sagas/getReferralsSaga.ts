@@ -16,6 +16,7 @@ export function* getReferralsSaga(action: ReturnType<typeof actionCreator>) {
         offset,
         limit: 20,
       });
+
     yield put(
       ReferralsActions.GET_REFERRALS(referralType).SUCCESS.create(
         userId,

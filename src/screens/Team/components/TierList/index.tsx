@@ -25,7 +25,10 @@ type Props = {
 export const TierList = memo(
   ({referralType, emptyTitle, headerTitle, focused}: Props) => {
     const tabbarOffset = useBottomTabBarOffsetStyle();
-    const {referrals, error, loadNext} = useReferrals(referralType, focused);
+    const {referrals, error, loadNext, refresh, refreshing} = useReferrals(
+      referralType,
+      focused,
+    );
 
     const renderItem = useCallback(({item}: {item: User}) => {
       return (
@@ -85,6 +88,8 @@ export const TierList = memo(
             data={referrals.referrals}
             renderItem={renderItem}
             onEndReached={loadNext}
+            onRefresh={refresh}
+            refreshing={refreshing}
           />
         );
       }
