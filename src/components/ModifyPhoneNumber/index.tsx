@@ -4,7 +4,7 @@ import {PhoneNumberInput} from '@components/PhoneNumberInput';
 import {PhoneNumberSearch} from '@components/PhoneNumberSearch';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {FONTS} from '@constants/fonts';
-import {IS_SMALL_SCREEN, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {deviceCountrySelector} from '@store/modules/Devices/selectors';
@@ -13,7 +13,7 @@ import {formatPhoneNumber} from '@utils/phoneNumber';
 import React, {useRef, useState} from 'react';
 import {Image, StyleSheet, Text, TextInput, View} from 'react-native';
 import {useSelector} from 'react-redux';
-import {font, isIOS, rem, screenWidth} from 'rn-units';
+import {font, rem} from 'rn-units';
 
 type Props = {
   onSubmitPress: (phone: string) => void;
@@ -29,6 +29,7 @@ export function ModifyPhoneNumber({
   const deviceCountry = useSelector(deviceCountrySelector);
 
   const [phone, setPhone] = useState('');
+  const [focused, setFocused] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState(deviceCountry);
 
   const phoneNumberInputRef = useRef<TextInput | null>(null);
@@ -43,9 +44,7 @@ export function ModifyPhoneNumber({
     showCountriesList(false);
   };
 
-  const tabbarOffest = useBottomTabBarOffsetStyle({
-    extraOffset: IS_SMALL_SCREEN ? (isIOS ? undefined : 20) : undefined,
-  });
+  const tabbarOffest = useBottomTabBarOffsetStyle();
 
   const onPhoneNumberChange = (phoneNumber: string) => {
     setPhone(
@@ -59,24 +58,27 @@ export function ModifyPhoneNumber({
 
   return (
     <View style={[styles.container, tabbarOffest.current]}>
-      <View style={styles.imageContainer}>
+      {!focused && (
         <Image
           source={Images.phone.modifyPhoneNumber}
           style={styles.image}
           resizeMode="contain"
         />
-      </View>
-
+      )}
       <Text style={styles.title}>{t('team.confirm_phone.title')}</Text>
-      <Text style={styles.description}>
-        {t('team.confirm_phone.description')}
-      </Text>
+      {!focused && (
+        <Text style={styles.description}>
+          {t('team.confirm_phone.description')}
+        </Text>
+      )}
       <PhoneNumberInput
         selectedCountry={selectedCountry}
         showCountryCodeSearch={showCountryCodeSearch}
         value={phone}
         containerStyle={styles.input}
         onValueChange={onPhoneNumberChange}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
         ref={phoneNumberInputRef}
       />
       <PrimaryButton
@@ -89,6 +91,8 @@ export function ModifyPhoneNumber({
           containerStyle={styles.phoneNumberSearch}
           selectedCountry={selectedCountry}
           close={hideCountryCodeSearch}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
           setCountryCode={c => {
             phoneNumberInputRef.current?.focus();
             setSelectedCountry(c);
@@ -105,14 +109,11 @@ const styles = StyleSheet.create({
     marginTop: rem(25),
     marginBottom: rem(15),
     marginHorizontal: rem(27),
-    alignItems: 'center',
-  },
-  imageContainer: {
-    flex: 1,
-    maxHeight: rem(200),
   },
   image: {
+    alignSelf: 'center',
     flex: 1,
+    maxHeight: rem(200),
   },
   title: {
     fontSize: font(24),
@@ -126,16 +127,13 @@ const styles = StyleSheet.create({
     fontFamily: FONTS.primary.regular,
     textAlign: 'center',
     marginHorizontal: SCREEN_SIDE_OFFSET,
-    marginTop: rem(7),
-    marginBottom: rem(20),
     lineHeight: rem(24),
   },
   allowAccessButton: {
     marginTop: rem(25),
-    width: screenWidth - rem(54),
   },
   input: {
-    width: screenWidth - rem(54),
+    marginTop: rem(20),
   },
   phoneNumberSearch: {
     position: 'absolute',

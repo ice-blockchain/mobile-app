@@ -18,6 +18,7 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  TextInputProps,
   TouchableOpacity,
   View,
   ViewStyle,
@@ -25,7 +26,7 @@ import {
 import {FlatList} from 'react-native-gesture-handler';
 import {font, rem} from 'rn-units';
 
-interface PhoneNumberSearchProps {
+interface PhoneNumberSearchProps extends TextInputProps {
   selectedCountry: ICountryCode;
   containerStyle?: StyleProp<ViewStyle>;
   headerStyle?: StyleProp<ViewStyle>;
@@ -41,6 +42,7 @@ export const PhoneNumberSearch = ({
   showCode = true,
   close,
   setCountryCode,
+  ...textInputProps
 }: PhoneNumberSearchProps) => {
   const [countriesCodeItems, setCountriesCodeItems] = useState(countriesCode);
 
@@ -106,6 +108,7 @@ export const PhoneNumberSearch = ({
           autoCorrect={false}
           spellCheck={false}
           keyboardType="name-phone-pad"
+          {...textInputProps}
         />
       </View>
       <FlatList

@@ -12,17 +12,17 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  TextInputProps,
   TouchableOpacity,
   View,
   ViewStyle,
 } from 'react-native';
 import {font, rem} from 'rn-units';
 
-interface PhoneNumberInputProps {
+interface PhoneNumberInputProps extends TextInputProps {
   selectedCountry: ICountryCode;
   containerStyle?: StyleProp<ViewStyle>;
   showCountryCodeSearch: () => void;
-  value: string;
   onValueChange: (v: string) => void;
 }
 
@@ -32,8 +32,8 @@ export const PhoneNumberInput = forwardRef(
       selectedCountry,
       containerStyle,
       showCountryCodeSearch,
-      value,
       onValueChange,
+      ...textInputProps
     }: PhoneNumberInputProps,
     forwardedRef: Ref<TextInput>,
   ) => {
@@ -55,9 +55,9 @@ export const PhoneNumberInput = forwardRef(
           placeholder={`| ${t('global.phone_number')}`}
           keyboardType={'phone-pad'}
           style={styles.phone}
-          value={value}
           onChangeText={onValueChange}
           ref={forwardedRef}
+          {...textInputProps}
         />
       </View>
     );

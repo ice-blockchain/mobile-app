@@ -3,7 +3,7 @@
 import {CommonInput} from '@components/CommonInput';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {FONTS} from '@constants/fonts';
-import {IS_SMALL_SCREEN, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
 import {Images} from '@images';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
@@ -11,7 +11,7 @@ import {TicketIconSvg} from '@svg/Ticket';
 import {t} from '@translations/i18n';
 import React, {useState} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {font, isIOS, rem} from 'rn-units';
+import {font, rem} from 'rn-units';
 
 type Props = {
   onSubmitPress: (code: string) => void;
@@ -23,31 +23,32 @@ export function ConfirmPhoneNumber({
   hideBodyOnKeyboardOpen = false,
 }: Props) {
   const [code, onCodeChange] = useState('');
+  const [focused, setFocused] = useState(false);
   const isKeyboardShown = useIsKeyboardShown();
 
   const handleOnPress = () => {
     onSubmitPress(code);
   };
 
-  const tabbarOffest = useBottomTabBarOffsetStyle({
-    extraOffset: IS_SMALL_SCREEN ? (isIOS ? undefined : 20) : undefined,
-  });
+  const tabbarOffest = useBottomTabBarOffsetStyle();
 
   return (
     <View style={[styles.container, tabbarOffest.current]}>
       {(!isKeyboardShown || !hideBodyOnKeyboardOpen) && (
         <>
-          <View style={styles.imageContainer}>
+          {!focused && (
             <Image
               source={Images.phone.confirmPhoneNumber}
               style={styles.image}
               resizeMode="contain"
             />
-          </View>
+          )}
           <Text style={styles.title}>{t('team.confirm_code.title')}</Text>
-          <Text style={styles.description}>
-            {t('team.confirm_code.description')}
-          </Text>
+          {!focused && (
+            <Text style={styles.description}>
+              {t('team.confirm_code.description')}
+            </Text>
+          )}
         </>
       )}
       <CommonInput
@@ -59,6 +60,9 @@ export function ConfirmPhoneNumber({
         keyboardType="name-phone-pad"
         returnKeyType="done"
         onSubmitEditing={handleOnPress}
+        containerStyle={styles.input}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
       />
       <PrimaryButton
         text={t('team.confirm_code.button')}
@@ -75,13 +79,10 @@ const styles = StyleSheet.create({
     marginTop: rem(25),
     paddingHorizontal: rem(27),
   },
-  imageContainer: {
+  image: {
+    alignSelf: 'center',
     flex: 1,
     maxHeight: rem(200),
-    alignItems: 'center',
-  },
-  image: {
-    flex: 1,
   },
   title: {
     fontSize: font(24),
@@ -96,8 +97,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(7),
-    marginBottom: rem(20),
     lineHeight: rem(24),
+  },
+  input: {
+    marginTop: rem(20),
   },
   allowAccessButton: {
     marginTop: rem(25),

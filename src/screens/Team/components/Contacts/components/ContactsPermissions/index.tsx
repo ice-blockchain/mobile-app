@@ -3,13 +3,13 @@
 import {PrimaryButton} from '@components/PrimaryButton';
 import {Text} from '@components/Text';
 import {FONTS} from '@constants/fonts';
-import {IS_SMALL_SCREEN, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {TeamAllowContactsButtonIcon} from '@screens/Team/assets/svg/TeamAllowContactsButtonIcon';
 import {t} from '@translations/i18n';
 import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
-import {font, isIOS, rem} from 'rn-units';
+import {font, rem} from 'rn-units';
 
 const icon = require('../../../../assets/images/teamAgendaNotShared.png');
 
@@ -20,12 +20,7 @@ type ContactsPermissionsProps = {
 export function ContactsPermissions({
   requestContactsAccessPermissionPress,
 }: ContactsPermissionsProps): React.ReactElement {
-  const handleOnPress = () => {
-    requestContactsAccessPermissionPress();
-  };
-  const tabbarOffest = useBottomTabBarOffsetStyle({
-    extraOffset: IS_SMALL_SCREEN ? (isIOS ? undefined : 20) : undefined,
-  });
+  const tabbarOffest = useBottomTabBarOffsetStyle();
   return (
     <View style={[styles.container, tabbarOffest.current]}>
       <View style={styles.imageContainer}>
@@ -35,7 +30,7 @@ export function ContactsPermissions({
       <Text style={styles.description} text="team.contacts.empty_description" />
       <PrimaryButton
         text={t('team.contacts.empty_button_title')}
-        onPress={handleOnPress}
+        onPress={requestContactsAccessPermissionPress}
         style={styles.allowAccessButton}
         textStyle={styles.buttonText}
         icon={<TeamAllowContactsButtonIcon />}
