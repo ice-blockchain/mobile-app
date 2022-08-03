@@ -63,6 +63,7 @@ export function devicesReducer(state = INITIAL_STATE, action: Actions): State {
         return {
           ...INITIAL_STATE,
           deviceUniqueId: state.deviceUniqueId,
+          location: state.location,
           isInitialized: true,
         };
     }
