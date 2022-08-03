@@ -39,16 +39,18 @@ export const TierList = memo(
         <UserListItem
           user={item}
           rightButton={
-            <UserListItemButton
-              disabled={item.pinged}
-              icon={
-                <PingIcon
-                  fill={item.pinged ? COLORS.cadetBlue : COLORS.darkBlue}
-                />
-              }
-              text={t('users.ping')}
-              onPress={() => {}}
-            />
+            item.pinged != null && (
+              <UserListItemButton
+                disabled={item.pinged}
+                icon={
+                  <PingIcon
+                    fill={item.pinged ? COLORS.cadetBlue : COLORS.darkBlue}
+                  />
+                }
+                text={t('users.ping')}
+                onPress={() => {}}
+              />
+            )
           }
         />
       );

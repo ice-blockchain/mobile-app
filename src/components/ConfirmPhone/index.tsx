@@ -52,7 +52,7 @@ export function ConfirmPhone({
       formatPhoneNumber(
         `${selectedCountry.iddCode}${phoneNumber}`,
         selectedCountry.isoCode,
-        false,
+        selectedCountry.iddCode,
       ),
     );
   };

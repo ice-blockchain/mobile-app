@@ -9,17 +9,17 @@ import {sha256} from 'react-native-sha256';
 
 export const formatPhoneNumber = (
   phone: string,
-  countryCode?: string,
-  keepCountryCode = true,
+  countryIsoCode?: string,
+  countryIddCode?: string,
 ) => {
   const formatted = formatIncompletePhoneNumber(
     phone,
-    countryCode as CountryCode,
+    countryIsoCode as CountryCode,
   );
-  if (!countryCode || !keepCountryCode) {
-    return formatted;
+  if (countryIddCode) {
+    return formatted.replace(countryIddCode, '').trim();
   } else {
-    return formatted.replace(countryCode, '').trim();
+    return formatted;
   }
 };
 
