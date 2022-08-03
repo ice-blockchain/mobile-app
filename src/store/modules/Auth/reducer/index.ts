@@ -17,7 +17,7 @@ export interface AuthState {
   token: string | null;
   isInitialized: boolean;
   isWelcomeSeen: boolean;
-  profile: User | null;
+  user: User | null;
 }
 
 type Actions = ReturnType<
@@ -31,7 +31,7 @@ type Actions = ReturnType<
   | typeof AuthActions.LOAD_USER.STATE.create
   | typeof AuthActions.CREATE_USER.SUCCESS.create
   | typeof AuthActions.CREATE_USER.FAILED.create
-  | typeof AuthActions.FETCH_USER_PROFILE.SUCCESS.create
+  | typeof AuthActions.FETCH_USER.SUCCESS.create
   | typeof AuthActions.UPDATE_ACCOUNT.SUCCESS.create
   | typeof ValidationActions.PHONE_VALIDATION.SUCCESS.create
 >;
@@ -41,7 +41,7 @@ const INITIAL_STATE: AuthState = {
   token: null,
   isInitialized: false,
   isWelcomeSeen: false,
-  profile: null,
+  user: null,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): AuthState {
@@ -53,7 +53,7 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
       case AuthActions.LOAD_USER.STATE.type:
         draft.magicUser = action.payload.magicUser ?? null;
         draft.isInitialized = true;
-        draft.profile = action.payload.profile ?? null;
+        draft.user = action.payload.user ?? null;
         break;
       case AuthActions.STORE_WELCOME_SEEN.STATE.type:
         draft.isWelcomeSeen = true;
@@ -62,14 +62,14 @@ function reducer(state = INITIAL_STATE, action: Actions): AuthState {
       case AuthActions.SIGN_IN_EMAIL.SUCCESS.type:
       case AuthActions.SIGN_IN_PHONE.SUCCESS.type:
         draft.magicUser = action.payload.result.magicUser;
-        draft.profile = action.payload.result.profile ?? null;
+        draft.user = action.payload.result.user ?? null;
         break;
       case ValidationActions.PHONE_VALIDATION.SUCCESS.type:
-        draft.profile = action.payload.result;
+        draft.user = action.payload.result;
         break;
       case AuthActions.CREATE_USER.SUCCESS.type:
-      case AuthActions.FETCH_USER_PROFILE.SUCCESS.type:
-        draft.profile = action.payload.result ?? null;
+      case AuthActions.FETCH_USER.SUCCESS.type:
+        draft.user = action.payload.result ?? null;
         break;
       case AuthActions.UPDATE_ACCOUNT.SUCCESS.type:
         draft.magicUser = {

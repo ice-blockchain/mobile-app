@@ -20,7 +20,7 @@ export function* loadUserSaga() {
     if (token) {
       yield put(AuthActions.SET_TOKEN.STATE.create(token));
 
-      const profile: SagaReturnType<typeof Api.user.getUserById> = yield call(
+      const user: SagaReturnType<typeof Api.user.getUserById> = yield call(
         Api.user.getUserById,
         metadata.issuer,
       );
@@ -32,7 +32,7 @@ export function* loadUserSaga() {
             email: metadata.email,
             phoneNumber: metadata.phoneNumber,
           },
-          profile,
+          user,
         ),
       );
     } else {

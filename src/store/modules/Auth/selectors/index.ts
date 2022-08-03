@@ -21,7 +21,7 @@ export const isWelcomeSeenSelector = (state: RootState) =>
 
 export const authTokenSelector = (state: RootState) => state.auth.token;
 
-export const profileSelector = (state: RootState) => state.auth.profile;
+export const userSelector = (state: RootState) => state.auth.user;
 
 export const isPhoneNumberVerifiedSelector = (state: RootState) =>
-  state.auth.profile?.phoneNumber;
+  state.auth.user?.phoneNumber;

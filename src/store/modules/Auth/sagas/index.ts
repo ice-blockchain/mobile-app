@@ -7,7 +7,7 @@ import {all, takeLatest} from 'redux-saga/effects';
 
 import {createUserSaga} from './createUser';
 import {deleteAccountSaga} from './deleteAccount';
-import {fetchUserProfileSaga} from './fetchUserProfile';
+import {fetchUserSaga} from './fetchUser';
 import {loadUserSaga} from './loadUser';
 import {signInEmailSaga} from './signInEmail';
 import {signInPhoneSaga} from './signInPhone';
@@ -28,7 +28,7 @@ export function* rootAuthSaga() {
       ValidationActions.REF_USERNAME_VALIDATION.SUCCESS.type,
       createUserSaga,
     ),
-    takeLatest(AuthActions.FETCH_USER_PROFILE.START.type, fetchUserProfileSaga),
+    takeLatest(AuthActions.FETCH_USER.START.type, fetchUserSaga),
     takeLatest(AuthActions.UPDATE_ACCOUNT.START.type, updateAccountSaga),
   ]);
 }

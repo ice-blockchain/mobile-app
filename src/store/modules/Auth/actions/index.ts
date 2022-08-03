@@ -10,7 +10,7 @@ type SignInResult = {
     email: string | null;
     userId: string;
   };
-  profile: User | null;
+  user: User | null;
 };
 
 const SET_TOKEN = createAction('SET_TOKEN', {
@@ -28,8 +28,8 @@ const LOAD_USER = createAction('LOAD_USER', {
       phoneNumber: string | null | undefined;
       userId: string;
     },
-    profile?: User,
-  ) => ({magicUser, profile}),
+    user?: User,
+  ) => ({magicUser, user}),
 });
 
 const CREATE_USER = createAction('CREATE_USER', {
@@ -40,7 +40,7 @@ const CREATE_USER = createAction('CREATE_USER', {
   }),
 });
 
-const FETCH_USER_PROFILE = createAction('FETCH_USER_PROFILE', {
+const FETCH_USER = createAction('FETCH_USER', {
   START: () => {},
   SUCCESS: (result: User) => ({result}),
   FAILED: (errorMessage: string) => ({
@@ -99,7 +99,7 @@ const UPDATE_ACCOUNT = createAction('UPDATE_ACCOUNT', {
 export const AuthActions = Object.freeze({
   SET_TOKEN,
   LOAD_USER,
-  FETCH_USER_PROFILE,
+  FETCH_USER,
   STORE_WELCOME_SEEN,
   SIGN_IN_EMAIL,
   SIGN_IN_PHONE,

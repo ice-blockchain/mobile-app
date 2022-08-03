@@ -8,7 +8,7 @@ import {useAppStateListener} from '@store/modules/AppCommon/hooks/useAppStateLis
 import {isAppInitializedSelector} from '@store/modules/AppCommon/selectors';
 import {
   isWelcomeSeenSelector,
-  profileSelector,
+  userSelector,
 } from '@store/modules/Auth/selectors';
 import React from 'react';
 import {LogBox} from 'react-native';
@@ -30,12 +30,12 @@ import {MainNavigator} from './Main';
 function ActiveNavigator() {
   const isAppInitialized = useSelector(isAppInitializedSelector);
   const isWelcomeSeen = useSelector(isWelcomeSeenSelector);
-  const profile = useSelector(profileSelector);
+  const user = useSelector(userSelector);
 
   if (!isAppInitialized) {
     return <Initialization />;
   }
-  if (profile && isWelcomeSeen) {
+  if (user && isWelcomeSeen) {
     return <MainNavigator />;
   }
   return <AuthNavigator />;

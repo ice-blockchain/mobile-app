@@ -10,7 +10,7 @@ import {
 } from '@store/modules/Auth/selectors';
 import {call, put, select} from 'redux-saga/effects';
 
-export function* fetchUserProfileSaga() {
+export function* fetchUserSaga() {
   try {
     const isAuthorized: ReturnType<typeof isAuthorizedSelector> = yield select(
       isAuthorizedSelector,
@@ -20,25 +20,25 @@ export function* fetchUserProfileSaga() {
         userIdSelector,
       );
 
-      const profile: User = yield call(fetchUserProfile, userId);
+      const user: User = yield call(fetchUser, userId);
 
-      yield put(AuthActions.FETCH_USER_PROFILE.SUCCESS.create(profile));
+      yield put(AuthActions.FETCH_USER.SUCCESS.create(user));
     } else {
-      yield put(AuthActions.FETCH_USER_PROFILE.FAILED.create('Not authorized'));
+      yield put(AuthActions.FETCH_USER.FAILED.create('Not authorized'));
     }
   } catch (error) {
     let errorMessage = 'Failed';
     if (error instanceof Error) {
       errorMessage = error.message;
     }
-    yield put(AuthActions.FETCH_USER_PROFILE.FAILED.create(errorMessage));
+    yield put(AuthActions.FETCH_USER.FAILED.create(errorMessage));
   }
 }
 
-export function* fetchUserProfile(userId: string) {
+export function* fetchUser(userId: string) {
   try {
-    const profile: User = yield call(Api.user.getUserById, userId);
-    return profile;
+    const user: User = yield call(Api.user.getUserById, userId);
+    return user;
   } catch (error) {
     if (isApiError(error, 404, 'USER_NOT_FOUND')) {
       return null;

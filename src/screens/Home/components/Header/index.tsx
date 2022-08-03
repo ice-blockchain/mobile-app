@@ -3,7 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {FONTS} from '@constants/fonts';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {profileSelector} from '@store/modules/Auth/selectors';
+import {userSelector} from '@store/modules/Auth/selectors';
 import {BellSvg} from '@svg/Bell';
 import {ChatBubblesSvg} from '@svg/ChatBubbles';
 import {StatsSvg} from '@svg/Stats';
@@ -15,7 +15,7 @@ import {font, rem} from 'rn-units';
 interface HomeHeaderProps {}
 
 export const HomeHeader = ({}: HomeHeaderProps) => {
-  const profile = useSelector(profileSelector);
+  const user = useSelector(userSelector);
   return (
     <View style={styles.container}>
       <View style={styles.info}>
@@ -23,7 +23,7 @@ export const HomeHeader = ({}: HomeHeaderProps) => {
         <View>
           {/** TODO: remove hardcoded greetings */}
           <Text style={styles.greetings}>{'Good evening,'}</Text>
-          {profile && <Text style={styles.nick}>{`@${profile.username}`}</Text>}
+          {user && <Text style={styles.nick}>{`@${user.username}`}</Text>}
         </View>
       </View>
 

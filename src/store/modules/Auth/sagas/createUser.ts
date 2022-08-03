@@ -47,7 +47,7 @@ export function* createUserSaga() {
       if (response?.data?.data?.field === 'username') {
         localizedError = t('error.user_exist');
       } else if (response?.data?.data?.field === 'id') {
-        yield put(AuthActions.FETCH_USER_PROFILE.START.create());
+        yield put(AuthActions.FETCH_USER.START.create());
       }
     } else if (isApiError(error, 400)) {
       localizedError = t('errors.validation_error');

@@ -5,7 +5,7 @@ import {SignUpStackParamList} from '@navigation/Auth';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {NavigationPanel} from '@screens/UserRegistrationFlow/Welcome/components/NavigationPanel';
-import {profileSelector} from '@store/modules/Auth/selectors';
+import {userSelector} from '@store/modules/Auth/selectors';
 import {ValidationActions} from '@store/modules/Validation/actions';
 import {
   refUsernameValidationErrorSelector,
@@ -40,7 +40,7 @@ export const UserRegistration = ({}: Props) => {
   const [myNickname, setMyNickname] = useState('');
   const [invitedNickname, setInvitedNickname] = useState('');
   const [currentPage, setCurrentPage] = useState(0);
-  const profile = useSelector(profileSelector);
+  const user = useSelector(userSelector);
   const dispatch = useDispatch();
   const navigation =
     useNavigation<NativeStackNavigationProp<SignUpStackParamList>>();
@@ -82,10 +82,10 @@ export const UserRegistration = ({}: Props) => {
   }, [username]);
 
   useEffect(() => {
-    if (profile) {
+    if (user) {
       navigation.navigate('Welcome');
     }
-  }, [profile, navigation]);
+  }, [user, navigation]);
 
   const onNextPress = () => {
     if (currentPage === 0) {

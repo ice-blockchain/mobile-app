@@ -8,7 +8,7 @@ import {WebView} from '@screens/WebView';
 import {
   isWelcomeSeenSelector,
   magicUserSelector,
-  profileSelector,
+  userSelector,
 } from '@store/modules/Auth/selectors';
 import React from 'react';
 import {useSelector} from 'react-redux';
@@ -42,13 +42,13 @@ const modalOptions = {
 
 function Signup() {
   const magicUser = useSelector(magicUserSelector);
-  const profile = useSelector(profileSelector);
+  const user = useSelector(userSelector);
   const isWelcomeSeen = useSelector(isWelcomeSeenSelector);
 
   const initialAuthRoute = () => {
     if (!isWelcomeSeen && magicUser) {
       return 'Welcome';
-    } else if (magicUser && (!profile || !profile.username)) {
+    } else if (magicUser && (!user || !user.username)) {
       return 'UserRegistration';
     }
     return 'SignIn';

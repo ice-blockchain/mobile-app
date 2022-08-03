@@ -4,8 +4,8 @@ import {Api} from '@api/index';
 import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {
   isAuthorizedSelector,
-  profileSelector,
   userIdSelector,
+  userSelector,
 } from '@store/modules/Auth/selectors';
 import {permissionSelector} from '@store/modules/Permissions/selectors';
 import {TeamActions} from '@store/modules/Team/actions';
@@ -36,8 +36,8 @@ export function* syncContactsSaga() {
     const userId: SagaReturnType<typeof userIdSelector> = yield select(
       userIdSelector,
     );
-    const profile: SagaReturnType<typeof profileSelector> = yield select(
-      profileSelector,
+    const user: SagaReturnType<typeof userSelector> = yield select(
+      userSelector,
     );
     let contacts: SagaReturnType<typeof getAllWithoutPhotos> = yield call(
       getAllWithoutPhotos,
@@ -53,7 +53,7 @@ export function* syncContactsSaga() {
           try {
             return [
               ...contactNumbers,
-              e164PhoneNumber(record.number, profile?.country),
+              e164PhoneNumber(record.number, user?.country),
             ];
           } catch {
             // skip number in case of error
@@ -68,7 +68,7 @@ export function* syncContactsSaga() {
     );
 
     const phoneNumberHashesString = phoneNumberHashes.join(',');
-    if (phoneNumberHashesString !== profile?.agendaPhoneNumberHashes) {
+    if (phoneNumberHashesString !== user?.agendaPhoneNumberHashes) {
       yield call(Api.user.modifyUser, userId, {
         agendaPhoneNumberHashes: phoneNumberHashesString,
       });
