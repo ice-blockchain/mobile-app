@@ -13,20 +13,20 @@ import React, {useState} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {font, isIOS, rem} from 'rn-units';
 
-type ConfirmCodeProps = {
-  confirmCodePress: (code: string) => void;
+type Props = {
+  onSubmitPress: (code: string) => void;
   hideBodyOnKeyboardOpen?: boolean;
 };
 
-export function ConfirmCode({
-  confirmCodePress,
+export function ConfirmPhoneNumber({
+  onSubmitPress,
   hideBodyOnKeyboardOpen = false,
-}: ConfirmCodeProps): React.ReactElement {
+}: Props) {
   const [code, onCodeChange] = useState('');
   const isKeyboardShown = useIsKeyboardShown();
 
   const handleOnPress = () => {
-    confirmCodePress(code);
+    onSubmitPress(code);
   };
 
   const tabbarOffest = useBottomTabBarOffsetStyle({
@@ -39,7 +39,7 @@ export function ConfirmCode({
         <>
           <View style={styles.imageContainer}>
             <Image
-              source={Images.phone.confirmCode}
+              source={Images.phone.confirmPhoneNumber}
               style={styles.image}
               resizeMode="contain"
             />

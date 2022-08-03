@@ -33,7 +33,7 @@ export const Images = {
     },
   },
   phone: {
-    confirmCode: require('./phone/confirmCode.png'),
-    confirmPhone: require('./phone/confirmPhone.png'),
+    confirmPhoneNumber: require('./phone/confirmPhoneNumber.png'),
+    modifyPhoneNumber: require('./phone/modifyPhoneNumber.png'),
   },
 } as const;

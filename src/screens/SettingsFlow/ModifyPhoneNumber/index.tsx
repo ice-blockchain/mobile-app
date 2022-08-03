@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: BUSL-1.1
 
 import {Avatar} from '@components/Avatar';
-import {ConfirmPhone} from '@components/ConfirmPhone';
 import {KeyboardDismiss} from '@components/KeyboardDismiss';
+import {ModifyPhoneNumber as ModifyPhoneNumberComponent} from '@components/ModifyPhoneNumber';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
@@ -16,7 +16,7 @@ import React, {memo, useState} from 'react';
 import {KeyboardAvoidingView, StyleSheet, View} from 'react-native';
 import {isIOS, rem} from 'rn-units';
 
-export const ConfirmNewPhone = memo(() => {
+export const ModifyPhoneNumber = memo(() => {
   useFocusStatusBar({style: 'light-content'});
 
   const navigation =
@@ -40,10 +40,10 @@ export const ConfirmNewPhone = memo(() => {
             uri="https://media.istockphoto.com/photos/millennial-male-team-leader-organize-virtual-workshop-with-employees-picture-id1300972574?b=1&k=20&m=1300972574&s=170667a&w=0&h=2nBGC7tr0kWIU8zRQ3dMg-C5JLo9H2sNUuDjQ5mlYfo="
             style={styles.avatar}
           />
-          <ConfirmPhone
+          <ModifyPhoneNumberComponent
             showCountriesList={setCountrySearchVisibility}
             isCountriesVisible={isCountrySearchVisible}
-            confirmPhonePress={() => navigation.navigate('ConfirmPhoneCode')}
+            onSubmitPress={() => navigation.navigate('ConfirmPhoneNumber')}
           />
         </View>
       </KeyboardAvoidingView>

@@ -17,9 +17,9 @@ import {News} from '@screens/News';
 import {MyBadges} from '@screens/ProfileFlow/MyBadges';
 import {MyRoles} from '@screens/ProfileFlow/MyRoles';
 import {Profile} from '@screens/ProfileFlow/Profile';
-import {ConfirmNewPhone} from '@screens/SettingsFlow/ConfirmNewPhone';
-import {ConfirmPhoneCode} from '@screens/SettingsFlow/ConfirmPhoneCode';
+import {ConfirmPhoneNumber} from '@screens/SettingsFlow/ConfirmPhoneNumber';
 import {LanguageSettings} from '@screens/SettingsFlow/LanguageSettings';
+import {ModifyPhoneNumber} from '@screens/SettingsFlow/ModifyPhoneNumber';
 import {NotificationSettings} from '@screens/SettingsFlow/NotificationSettings';
 import {PersonalInformation} from '@screens/SettingsFlow/PersonalInformation';
 import {Settings} from '@screens/SettingsFlow/Settings';
@@ -73,8 +73,8 @@ export type ProfileTabStackParamList = {
   MyBadges?: {category?: BadgeCategory};
   Settings: undefined;
   PersonalInformation: undefined;
-  ConfirmNewPhone: undefined;
-  ConfirmPhoneCode: undefined;
+  ModifyPhoneNumber: undefined;
+  ConfirmPhoneNumber: undefined;
   NotificationSettings: undefined;
   LanguageSettings: undefined;
 };
@@ -139,12 +139,12 @@ const ProfileTabStackNavigator = () => (
       component={PersonalInformation}
     />
     <ProfileTabStack.Screen
-      name="ConfirmNewPhone"
-      component={ConfirmNewPhone}
+      name="ModifyPhoneNumber"
+      component={ModifyPhoneNumber}
     />
     <ProfileTabStack.Screen
-      name="ConfirmPhoneCode"
-      component={ConfirmPhoneCode}
+      name="ConfirmPhoneNumber"
+      component={ConfirmPhoneNumber}
     />
     <ProfileTabStack.Screen
       name="NotificationSettings"

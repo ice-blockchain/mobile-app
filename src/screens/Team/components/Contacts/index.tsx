@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: BUSL-1.1
 
-import {ConfirmCode} from '@components/ConfirmCode';
-import {ConfirmPhone} from '@components/ConfirmPhone';
+import {ConfirmPhoneNumber} from '@components/ConfirmPhoneNumber';
+import {ModifyPhoneNumber} from '@components/ModifyPhoneNumber';
 import {COLORS} from '@constants/colors';
 import {ContactsList} from '@screens/Team/components/Contacts/components/ContactsList';
 import {ContactsPermissions} from '@screens/Team/components/Contacts/components/ContactsPermissions';
@@ -19,8 +19,8 @@ import {useDispatch, useSelector} from 'react-redux';
 
 type TContactsFlow =
   | 'ContactsPermissions'
-  | 'ConfirmPhone'
-  | 'ConfirmCode'
+  | 'ModifyPhoneNumber'
+  | 'ConfirmPhoneNumber'
   | 'ContactsList';
 
 type ContactsProps = {
@@ -52,9 +52,9 @@ export const Contacts = ({
     } else if (isPhoneNumberVerified) {
       return 'ContactsList';
     } else if (phoneVerificationStep === 'phone') {
-      return 'ConfirmPhone';
+      return 'ModifyPhoneNumber';
     } else {
-      return 'ConfirmCode';
+      return 'ConfirmPhoneNumber';
     }
   }, [hasContactsPermissions, isPhoneNumberVerified, phoneVerificationStep]);
 
@@ -93,11 +93,11 @@ export const Contacts = ({
     setScreen(currentScreen);
   }, [currentScreen, setScreen]);
 
-  const confirmPhonePress = (phone: string) => {
+  const onModifyPhonePress = (phone: string) => {
     dispatch(AuthActions.UPDATE_ACCOUNT.START.create({phoneNumber: phone}));
   };
 
-  const confirmCodePress = (code: string) => {
+  const onConfirmPhonePress = (code: string) => {
     dispatch(ValidationActions.PHONE_VALIDATION.START.create(code));
   };
 
@@ -114,15 +114,15 @@ export const Contacts = ({
           }
         />
       )}
-      {visibleFlow === 'ConfirmPhone' && (
-        <ConfirmPhone
+      {visibleFlow === 'ModifyPhoneNumber' && (
+        <ModifyPhoneNumber
           showCountriesList={showCountriesList}
           isCountriesVisible={isCountriesVisible}
-          confirmPhonePress={confirmPhonePress}
+          onSubmitPress={onModifyPhonePress}
         />
       )}
-      {visibleFlow === 'ConfirmCode' && (
-        <ConfirmCode confirmCodePress={confirmCodePress} />
+      {visibleFlow === 'ConfirmPhoneNumber' && (
+        <ConfirmPhoneNumber onSubmitPress={onConfirmPhonePress} />
       )}
       {visibleFlow === 'ContactsList' && <ContactsList focused={focused} />}
 

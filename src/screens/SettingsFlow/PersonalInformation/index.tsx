@@ -46,7 +46,7 @@ export const PersonalInformation = memo(() => {
   const [isCountrySearchVisible, setCountrySearchVisibility] = useState(false);
 
   const onChangePhonePress = useCallback(
-    () => navigation.navigate('ConfirmNewPhone'),
+    () => navigation.navigate('ModifyPhoneNumber'),
     [navigation],
   );
 

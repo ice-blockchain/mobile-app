@@ -15,17 +15,17 @@ import {Image, StyleSheet, Text, TextInput, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {font, isIOS, rem, screenWidth} from 'rn-units';
 
-type ConfirmPhoneProps = {
-  confirmPhonePress: (phone: string) => void;
+type Props = {
+  onSubmitPress: (phone: string) => void;
   showCountriesList: (t: boolean) => void;
   isCountriesVisible: boolean;
 };
 
-export function ConfirmPhone({
-  confirmPhonePress,
+export function ModifyPhoneNumber({
+  onSubmitPress,
   showCountriesList,
   isCountriesVisible,
-}: ConfirmPhoneProps): React.ReactElement {
+}: Props) {
   const deviceCountry = useSelector(deviceCountrySelector);
 
   const [phone, setPhone] = useState('');
@@ -34,7 +34,7 @@ export function ConfirmPhone({
   const phoneNumberInputRef = useRef<TextInput | null>(null);
 
   const handleOnPress = () => {
-    confirmPhonePress(selectedCountry.iddCode + phone);
+    onSubmitPress(selectedCountry.iddCode + phone);
   };
   const showCountryCodeSearch = () => {
     showCountriesList(true);
@@ -61,7 +61,7 @@ export function ConfirmPhone({
     <View style={[styles.container, tabbarOffest.current]}>
       <View style={styles.imageContainer}>
         <Image
-          source={Images.phone.confirmPhone}
+          source={Images.phone.modifyPhoneNumber}
           style={styles.image}
           resizeMode="contain"
         />
