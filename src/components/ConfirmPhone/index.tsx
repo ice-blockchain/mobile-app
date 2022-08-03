@@ -52,9 +52,8 @@ export function ConfirmPhone({
       formatPhoneNumber(
         `${selectedCountry.iddCode}${phoneNumber}`,
         selectedCountry.isoCode,
-      )
-        .replace(selectedCountry.iddCode, '')
-        .trim(),
+        false,
+      ),
     );
   };
 

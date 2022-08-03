@@ -7,8 +7,20 @@ import {
 } from 'libphonenumber-js/min';
 import {sha256} from 'react-native-sha256';
 
-export const formatPhoneNumber = (phone: string, countryCode?: string) => {
-  return formatIncompletePhoneNumber(phone, countryCode as CountryCode);
+export const formatPhoneNumber = (
+  phone: string,
+  countryCode?: string,
+  keepCountryCode = true,
+) => {
+  const formatted = formatIncompletePhoneNumber(
+    phone,
+    countryCode as CountryCode,
+  );
+  if (!countryCode || !keepCountryCode) {
+    return formatted;
+  } else {
+    return formatted.replace(countryCode, '').trim();
+  }
 };
 
 /**
