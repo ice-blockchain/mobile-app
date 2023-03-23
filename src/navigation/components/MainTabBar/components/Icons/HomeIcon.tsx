@@ -3,21 +3,18 @@
 import {HomeActiveIcon} from '@svg/HomeActiveIcon';
 import {HomeInactiveIcon} from '@svg/HomeInactiveIcon';
 import React from 'react';
-import {StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
   focused: boolean;
 };
 
+const ICON_SIZE = rem(40);
+
 export const HomeIcon = ({focused}: Props) => {
   return focused ? (
-    <HomeActiveIcon style={styles.icon} width={rem(40)} height={rem(40)} />
+    <HomeActiveIcon width={ICON_SIZE} height={ICON_SIZE} />
   ) : (
-    <HomeInactiveIcon style={styles.icon} width={rem(40)} height={rem(40)} />
+    <HomeInactiveIcon width={ICON_SIZE} height={ICON_SIZE} />
   );
 };
-
-const styles = StyleSheet.create({
-  icon: {marginLeft: rem(8)},
-});

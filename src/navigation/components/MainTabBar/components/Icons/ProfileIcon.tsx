@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
     paddingVertical: 1.5,
     paddingHorizontal: 1.5,
     borderColor: COLORS.secondary,
-    marginRight: rem(8),
   },
   imageBorderFocused: {
     borderColor: COLORS.primaryLight,

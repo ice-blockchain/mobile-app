@@ -33,7 +33,7 @@ export const useActiveUsersWalkthrough = ({
               measurements.pageY - WALKTHROUGH_ELEMENT_CONTAINER_PADDING * 2
             );
           },
-          render: measurements => {
+          render: ({measurements}) => {
             const left =
               measurements.pageX - WALKTHROUGH_ELEMENT_CONTAINER_PADDING * 2;
             return (

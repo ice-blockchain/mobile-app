@@ -14,8 +14,13 @@ import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const Engagement = memo(() => {
+type Props = {
+  darkMode?: boolean;
+};
+
+export const Engagement = memo(({darkMode}: Props) => {
   const miningSummary = useSelector(miningSummarySelector);
+  const color = darkMode ? COLORS.primaryDark : COLORS.white;
 
   const animatedMiningSummaryMiningStreak = useAnimatedNumber(
     miningSummary?.miningStreak ?? 0,
@@ -38,22 +43,32 @@ export const Engagement = memo(() => {
   return (
     <View style={[commonStyles.baseSubScreen, styles.container]}>
       <View style={styles.titleContainer}>
-        <MiningHammerIcon />
-        <Text style={styles.engagementText}>{t('home.engagement.title')}</Text>
+        <MiningHammerIcon color={color} />
+        <Text style={[styles.engagementText, darkMode && styles.darkModeText]}>
+          {t('home.engagement.title')}
+        </Text>
       </View>
       <View style={styles.valuesContainer}>
         <View style={styles.titleValueContainer}>
-          <Text style={styles.title}>{t('home.engagement.streak')}</Text>
-          <Text style={styles.value}>{animatedMiningSummaryMiningStreak}</Text>
+          <Text style={[styles.title, darkMode && styles.darkModeText]}>
+            {t('home.engagement.streak')}
+          </Text>
+          <Text style={[styles.value, darkMode && styles.darkModeText]}>
+            {animatedMiningSummaryMiningStreak}
+          </Text>
         </View>
         <View style={[styles.titleValueContainer, styles.daysOff]}>
-          <Text style={styles.title}>{t('home.engagement.days_off')}</Text>
-          <Text style={styles.value}>
+          <Text style={[styles.title, darkMode && styles.darkModeText]}>
+            {t('home.engagement.days_off')}
+          </Text>
+          <Text style={[styles.value, darkMode && styles.darkModeText]}>
             {animatedMiningSummaryRemainingFreeMiningSessions}
           </Text>
         </View>
       </View>
-      <Text style={styles.description}>{t('home.engagement.description')}</Text>
+      <Text style={darkMode ? styles.descriptionDarkMode : styles.description}>
+        {t('home.engagement.description')}
+      </Text>
     </View>
   );
 });
@@ -68,6 +83,9 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'flex-end',
+  },
+  darkModeText: {
+    color: COLORS.primaryDark,
   },
   engagementText: {
     marginTop: rem(30),
@@ -88,6 +106,12 @@ const styles = StyleSheet.create({
     marginTop: rem(9),
     ...font(11, 13, 'regular'),
     marginHorizontal: rem(40),
+    textAlign: 'center',
+  },
+  descriptionDarkMode: {
+    marginTop: rem(9),
+    ...font(11, 13, 'regular', 'primaryDark'),
+    marginHorizontal: rem(20),
     textAlign: 'center',
   },
   valuesContainer: {

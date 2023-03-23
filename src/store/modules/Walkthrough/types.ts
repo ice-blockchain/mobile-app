@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {HomeWalkthroughStepKey} from '@store/modules/Walkthrough/steps/home';
 import {NewsWalkthroughStepKey} from '@store/modules/Walkthrough/steps/news';
 import {TeamWalkthroughStepKey} from '@store/modules/Walkthrough/steps/team';
 import {ReactNode, RefObject} from 'react';
@@ -17,12 +18,19 @@ export type ElementMeasurements = {
 export type WalkthroughElementData = {
   getRef: () => RefObject<View> | null;
   getTop: (measurements: ElementMeasurements) => number;
-  render: (measurements: ElementMeasurements) => ReactNode;
+  render: ({
+    measurements,
+    onNext,
+  }: {
+    measurements: ElementMeasurements;
+    onNext: () => void;
+  }) => ReactNode;
 };
 
 export type WalkthroughStepKey =
   | TeamWalkthroughStepKey
-  | NewsWalkthroughStepKey;
+  | NewsWalkthroughStepKey
+  | HomeWalkthroughStepKey;
 
 export type WalkthroughStepStaticData<T> = {
   key: T;
@@ -34,6 +42,7 @@ export type WalkthroughStepStaticData<T> = {
   circlePosition?: 'top' | 'bottom'; // otherwise automatically
   before?: () => void;
   after?: () => void;
+  isActive?: () => boolean;
 };
 
 export interface WalkthroughStep

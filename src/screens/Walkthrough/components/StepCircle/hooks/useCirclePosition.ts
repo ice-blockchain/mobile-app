@@ -3,7 +3,8 @@
 import {
   CIRCLE_DIAMETER,
   CIRCLE_TO_ELEMENT_OFFSET,
-  MAX_CIRCLE_OFFSCREEN,
+  MAX_CIRCLE_OFFSCREEN_BOTTOM,
+  MAX_CIRCLE_OFFSCREEN_TOP,
 } from '@screens/Walkthrough/constants';
 import {useMemo} from 'react';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
@@ -41,7 +42,7 @@ export function useCirclePosition({
           return {
             top: Math.max(
               aboveSpace - CIRCLE_DIAMETER - CIRCLE_TO_ELEMENT_OFFSET,
-              topInset - MAX_CIRCLE_OFFSCREEN,
+              topInset - MAX_CIRCLE_OFFSCREEN_TOP,
             ),
           };
         }
@@ -57,7 +58,7 @@ export function useCirclePosition({
           return {
             top: Math.min(
               elementTop + elementHeight + CIRCLE_TO_ELEMENT_OFFSET,
-              screenHeight - CIRCLE_DIAMETER + MAX_CIRCLE_OFFSCREEN,
+              screenHeight - CIRCLE_DIAMETER + MAX_CIRCLE_OFFSCREEN_BOTTOM,
             ),
           };
         }

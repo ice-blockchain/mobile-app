@@ -14,6 +14,8 @@ type Props = {
   focused: boolean;
 };
 
+const ICON_SIZE = rem(40);
+
 export const NewsIcon = ({focused}: Props) => {
   const dispatch = useDispatch();
 
@@ -24,11 +26,11 @@ export const NewsIcon = ({focused}: Props) => {
   }, [dispatch]);
 
   return (
-    <View style={styles.icon}>
+    <View>
       {focused ? (
-        <LampActiveIcon width={rem(40)} height={rem(40)} />
+        <LampActiveIcon width={ICON_SIZE} height={ICON_SIZE} />
       ) : (
-        <LampInactiveIcon width={rem(40)} height={rem(40)} />
+        <LampInactiveIcon width={ICON_SIZE} height={ICON_SIZE} />
       )}
 
       {count > 0 ? <Badge style={styles.badge} value={count} /> : null}
@@ -42,5 +44,4 @@ const styles = StyleSheet.create({
     top: 2,
     right: 2,
   },
-  icon: {marginRight: rem(26)},
 });

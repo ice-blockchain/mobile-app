@@ -38,11 +38,13 @@ export const TaskItem = ({
   active,
   isLastItem,
   areAllBeforeCompleted,
+  highlightActiveTask,
 }: {
   task: Task;
   active: boolean;
   isLastItem: boolean;
   areAllBeforeCompleted: boolean;
+  highlightActiveTask?: boolean;
 }) => {
   const {iconBgColor, activeBgColor, title, description, onPress} = useTaskItem(
     task.type,
@@ -60,6 +62,7 @@ export const TaskItem = ({
       style={[
         styles.container,
         active && styles.containerActive,
+        active && highlightActiveTask && styles.activeHighlighted,
         active && commonStyles.shadow,
         isLastItem && styles.lastItem,
       ]}
@@ -111,6 +114,10 @@ const styles = StyleSheet.create({
   containerInactive: {
     opacity: 0.5,
     backgroundColor: COLORS.white,
+  },
+  activeHighlighted: {
+    borderWidth: 1,
+    borderColor: COLORS.shamrock,
   },
   containerActive: {
     backgroundColor: COLORS.white,

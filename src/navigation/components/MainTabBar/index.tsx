@@ -41,6 +41,7 @@ export const MainTabBar = ({
         {leftRoutes.map((route, index) => (
           <TabBarItem
             key={route.key}
+            name={route.name}
             index={index}
             navigation={navigation}
             state={state}
@@ -54,6 +55,7 @@ export const MainTabBar = ({
         {rightRoutes.map((route, index) => (
           <TabBarItem
             key={route.key}
+            name={route.name}
             index={index + NUMBER_OF_LEFT_ICONS}
             navigation={navigation}
             state={state}

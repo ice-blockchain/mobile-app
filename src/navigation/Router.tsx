@@ -2,6 +2,7 @@
 
 import {InitializationError} from '@components/InitializationError';
 import {AuthNavigator} from '@navigation/Auth';
+import {useRouteNameChange} from '@navigation/hooks/useRouteNameChange';
 import {MainNavigator} from '@navigation/Main';
 import {theme} from '@navigation/theme';
 import {navigationReadyResolver, navigationRef} from '@navigation/utils';
@@ -13,15 +14,17 @@ import {
   isRegistrationCompleteSelector,
   userSelector,
 } from '@store/modules/Account/selectors';
-import {useTrackScreenView} from '@store/modules/Analytics/hooks/useTrackScreenView';
+import {ActiveTabActions} from '@store/modules/ActiveTab/actions';
+import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {useAppLoadedListener} from '@store/modules/AppCommon/hooks/useAppLoadedListener';
 import {useAppStateListener} from '@store/modules/AppCommon/hooks/useAppStateListener';
 import {appInitStateSelector} from '@store/modules/AppCommon/selectors';
 import {useOpenUrlListener} from '@store/modules/Linking/hooks/useOpenUrlListener';
 import {useInitNotifications} from '@store/modules/PushNotifications/hooks/useInitNotifications';
+import {WalkthroughActions} from '@store/modules/Walkthrough/actions';
 import React, {useCallback, useEffect} from 'react';
 import RNBootSplash from 'react-native-bootsplash';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 function ActiveNavigator() {
   const user = useSelector(userSelector);
@@ -65,10 +68,19 @@ export function Router() {
     RNBootSplash.hide();
   }, []);
 
-  const trackScreenView = useTrackScreenView();
+  const dispatch = useDispatch();
+  const onRouteNameChange = useRouteNameChange({
+    onRouteChange: screenName => {
+      AnalyticsEventLogger.trackViewScreen({screenName});
+      dispatch(ActiveTabActions.SET_CURRENT_SCREEN.STATE.create(screenName));
+      if (screenName !== 'Walkthrough' && screenName !== 'PopUp') {
+        dispatch(WalkthroughActions.RESTART_WALKTHROUGH.STATE.create());
+      }
+    },
+  });
   const onStateChange = useCallback(() => {
-    trackScreenView();
-  }, [trackScreenView]);
+    onRouteNameChange();
+  }, [onRouteNameChange]);
 
   return (
     <NavigationContainer

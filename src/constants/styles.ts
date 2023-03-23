@@ -24,6 +24,7 @@ export const commonStyles = StyleSheet.create({
         shadowOpacity: 0.15,
       }
     : {elevation: 4},
+  flexOne: {flex: 1},
 });
 
 export const SMALL_BUTTON_HIT_SLOP = {top: 4, left: 4, bottom: 4, right: 4};

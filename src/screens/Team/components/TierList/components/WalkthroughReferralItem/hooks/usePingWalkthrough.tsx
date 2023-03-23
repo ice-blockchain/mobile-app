@@ -23,7 +23,7 @@ export const usePingWalkthrough = ({userId}: {userId: string}) => {
         getTop: measurements => {
           return measurements.pageY - CONTAINER_PADDING * 2;
         },
-        render: measurements => {
+        render: ({measurements}) => {
           const left = measurements.pageX - CONTAINER_PADDING * 2;
           return (
             <WalkthroughElementContainer

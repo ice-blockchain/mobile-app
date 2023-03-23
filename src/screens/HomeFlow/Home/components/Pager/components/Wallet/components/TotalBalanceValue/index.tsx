@@ -11,9 +11,10 @@ import {useSelector} from 'react-redux';
 
 interface Props {
   style?: StyleProp<TextStyle>;
+  darkMode?: boolean;
 }
 
-export const TotalBalanceValue = ({style}: Props) => {
+export const TotalBalanceValue = ({style, darkMode}: Props) => {
   const balanceSummary = useSelector(balanceSummarySelector);
 
   const animatedBalanceSummary = useAnimatedNumber(
@@ -25,8 +26,10 @@ export const TotalBalanceValue = ({style}: Props) => {
     <FormattedNumber
       containerStyle={style}
       number={animatedBalanceSummary}
-      bodyStyle={styles.bodyStyle}
-      decimalsStyle={styles.decimalsStyle}
+      bodyStyle={darkMode ? styles.bodyStyleDarkMode : styles.bodyStyle}
+      decimalsStyle={
+        darkMode ? styles.decimalsStyleDarkMode : styles.decimalsStyle
+      }
       trim
     />
   );
@@ -36,9 +39,16 @@ const styles = StyleSheet.create({
   bodyStyle: {
     ...font(32, 38.4, 'black'),
   },
+  bodyStyleDarkMode: {
+    ...font(32, 38.4, 'black', 'primaryDark'),
+  },
 
   decimalsStyle: {
     alignSelf: 'flex-start',
     ...font(15, 20, 'semibold'),
+  },
+  decimalsStyleDarkMode: {
+    alignSelf: 'flex-start',
+    ...font(15, 20, 'semibold', 'primaryDark'),
   },
 });

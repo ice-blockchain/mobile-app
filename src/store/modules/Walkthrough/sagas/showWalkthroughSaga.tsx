@@ -1,12 +1,16 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {User} from '@api/user/types';
-import {getCurrentRoute, goBack, navigate} from '@navigation/utils';
+import {
+  getCurrentRoute,
+  goBack,
+  navigate,
+  removeScreenByName,
+} from '@navigation/utils';
 import {AccountActions} from '@store/modules/Account/actions';
 import {userSelector} from '@store/modules/Account/selectors';
 import {WalkthroughActions} from '@store/modules/Walkthrough/actions';
 import {walkthroughStepCandidatesSelector} from '@store/modules/Walkthrough/selectors';
-import {WALKTHROUGH_STEPS} from '@store/modules/Walkthrough/steps';
 import {
   WalkthroughStep,
   WalkthroughStepKey,
@@ -27,16 +31,12 @@ export function* showWalkthroughSaga() {
       waitForSelector,
       state => walkthroughStepCandidatesSelector(state).length > 0,
       {
-        takePattern:
+        takePattern: [
           WalkthroughActions.SET_WALKTHROUGH_STEP_ELEMENT_DATA.STATE.type,
+          WalkthroughActions.RESTART_WALKTHROUGH.STATE.type,
+        ],
       },
     );
-
-    /**
-     * Navigating to Walkthrough as soon as we get step candidates
-     * to block the ui from changing the screen / scrolling / etc
-     */
-    yield navigate({name: 'Walkthrough', params: undefined});
 
     /**
      * Waiting 1 second so all the candidates on the screen are set.
@@ -86,7 +86,7 @@ export function* showWalkthroughSaga() {
         yield call(closeWalkthrough);
 
         if (action.type === WalkthroughActions.SKIP_WALKTHROUGH.STATE.type) {
-          yield call(markAllWalkthroughSteps, user);
+          yield call(markAllWalkthroughSteps, user, steps);
         }
 
         break;
@@ -104,6 +104,8 @@ function* closeWalkthrough() {
    */
   if (currentRoute?.name === 'Walkthrough') {
     yield goBack();
+  } else {
+    yield removeScreenByName('Walkthrough');
   }
 }
 
@@ -137,8 +139,14 @@ function* markWalkthroughStep(user: User, step: WalkthroughStep) {
   );
 }
 
-function* markAllWalkthroughSteps(user: User) {
-  const walkthroughProgress = WALKTHROUGH_STEPS.reduce<{
+function* markAllWalkthroughSteps(user: User, steps: WalkthroughStep[]) {
+  yield put(
+    WalkthroughActions.SKIP_WALKTHROUGH.STATE.create({
+      stepsKeys: steps.map((step: WalkthroughStep) => step.key),
+    }),
+  );
+
+  const walkthroughProgress = steps.reduce<{
     [key in WalkthroughStepKey]?: {version: number};
   }>((result, step) => {
     result[step.key] = {version: step.version};
@@ -151,7 +159,7 @@ function* markAllWalkthroughSteps(user: User) {
         clientData: {...(user.clientData ?? {}), walkthroughProgress},
       },
       function* (freshUser) {
-        markAllWalkthroughSteps(freshUser);
+        markAllWalkthroughSteps(freshUser, steps);
         return {retry: true};
       },
     ),

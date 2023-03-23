@@ -17,7 +17,11 @@ import {LayoutChangeEvent, StyleSheet, View} from 'react-native';
 import Animated, {useAnimatedStyle, withTiming} from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
-export const Tasks = memo(() => {
+type Props = {
+  highlightActiveTask?: boolean;
+};
+
+export const Tasks = memo(({highlightActiveTask}: Props) => {
   const {
     tasks,
     currentActiveTaskIndex,
@@ -107,6 +111,7 @@ export const Tasks = memo(() => {
               <TaskItem
                 key={task.type}
                 task={task}
+                highlightActiveTask={highlightActiveTask}
                 active={index === currentActiveTaskIndex}
                 isLastItem={index === tasks.length - 1}
                 areAllBeforeCompleted={allBeforeCompleted}

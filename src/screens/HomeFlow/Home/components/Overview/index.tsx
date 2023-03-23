@@ -6,8 +6,11 @@ import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
+import {ActiveOverviewCard, HomeTabStackParamList} from '@navigation/Main';
+import {RouteProp, useRoute} from '@react-navigation/native';
 import {AdoptionCard} from '@screens/HomeFlow/Home/components/Overview/components/AdoptionCard';
 import {
+  CARD_MARGIN_RIGHT_WIDTH,
   CARD_WIDTH,
   CARDS_COLLAPSED_HEIGHT,
   CARDS_TOTAL_HEIGHT,
@@ -16,11 +19,21 @@ import {LevelCard} from '@screens/HomeFlow/Home/components/Overview/components/L
 import {OnlineUsersHistory} from '@screens/HomeFlow/Home/components/Overview/components/OnlineUsersHistory';
 import {ReferralAcquisitionHistory} from '@screens/HomeFlow/Home/components/Overview/components/ReferralAcquisitionHistory';
 import {ReferralsCard} from '@screens/HomeFlow/Home/components/Overview/components/ReferralsCard';
+import {useAdoptionCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useAdoptionCardWalkthrough';
 import {useCardTranslateY} from '@screens/HomeFlow/Home/components/Overview/hooks/useCardTranslateY';
+import {useInviteFriendsWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useInviteFriendsWalkthrough';
+import {useProfileCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useProfileCardWalkthrough';
+import {useReferralsCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useReferralsCardWalkthrough';
 import {useScrollCollapse} from '@screens/HomeFlow/Home/components/Overview/hooks/useScrollCollapse';
 import {t} from '@translations/i18n';
-import React, {memo, useRef, useState} from 'react';
-import {Image, LayoutChangeEvent, Platform, StyleSheet} from 'react-native';
+import React, {memo, useEffect, useRef, useState} from 'react';
+import {
+  Image,
+  LayoutChangeEvent,
+  Platform,
+  StyleSheet,
+  View,
+} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import {isAndroid, isIOS, rem, screenWidth} from 'rn-units';
 
@@ -43,8 +56,41 @@ const SCROLL_BOTTOM_PADDING = rem(8);
 const SCROLL_BOTTOM_MARGIN = rem(24);
 const OVERSCROLL = isIOS ? 1000 : 0;
 
+export function getActiveOffset(
+  activeOverviewCard: ActiveOverviewCard | undefined,
+): number {
+  if (activeOverviewCard != null) {
+    switch (activeOverviewCard) {
+      case 'profile':
+        return OVERSCROLL;
+      case 'referral':
+        return OVERSCROLL + CARD_WIDTH - CARD_MARGIN_RIGHT_WIDTH;
+      case 'adoption':
+        return OVERSCROLL + CARD_WIDTH * 2 - CARD_MARGIN_RIGHT_WIDTH;
+    }
+  }
+  return 0;
+}
+
 export const Overview = memo(({translateY, topOffset}: Props) => {
-  const adoptionCardRef = useRef<FlipCardMethods>(null);
+  const adoptionFlipCardRef = useRef<FlipCardMethods>(null);
+
+  const scrollViewRef = useRef<Animated.ScrollView>(null);
+  const route = useRoute<RouteProp<HomeTabStackParamList, 'Home'>>();
+  useEffect(() => {
+    if (route.params?.activeOverviewCard && scrollViewRef.current) {
+      scrollViewRef.current.scrollTo({
+        x: getActiveOffset(route.params?.activeOverviewCard),
+        y: 0,
+        animated: true,
+      });
+    }
+  }, [route.params?.activeOverviewCard]);
+
+  const {onProfileCardLayout, profileCardRef} = useProfileCardWalkthrough();
+  const {onAdoptionCardLayout, adoptionCardRef} = useAdoptionCardWalkthrough();
+  const {onReferralsCardLayout, referralsCardRef} =
+    useReferralsCardWalkthrough();
 
   const [positionYInnerContent, setPositionYInnerContent] = useState(0);
 
@@ -62,12 +108,14 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
   });
 
   const handleAdoptionPress = () => {
-    adoptionCardRef.current?.changeSide();
+    adoptionFlipCardRef.current?.changeSide();
   };
 
   const onLayoutContentContainer = (event: LayoutChangeEvent) => {
     setPositionYInnerContent(event.nativeEvent.layout.y);
   };
+
+  const {onElementLayout, elementRef} = useInviteFriendsWalkthrough();
 
   return (
     <>
@@ -84,6 +132,7 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
         onLayout={onLayoutContentContainer}>
         <Animated.ScrollView
           horizontal
+          ref={scrollViewRef}
           showsHorizontalScrollIndicator={false}
           contentInset={contentInset}
           style={[
@@ -92,31 +141,41 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
             isAndroid && shadowStyle,
           ]}
           contentContainerStyle={styles.scrolledContent}>
-          <LevelCard isCollapsed={isCollapsed} />
-
-          <FlipCard
-            disabled={isCollapsed}
-            stylesContainer={styles.flipCardContainer}
-            front={<ReferralsCard isCollapsed={isCollapsed} />}
-            back={<ReferralAcquisitionHistory isCollapsed={isCollapsed} />}
+          <LevelCard
+            isCollapsed={isCollapsed}
+            onLayout={onProfileCardLayout}
+            ref={profileCardRef}
           />
 
-          <FlipCard
-            disabled={isCollapsed}
-            stylesContainer={styles.flipCardContainer}
-            front={
-              <AdoptionCard
-                isCollapsed={isCollapsed}
-                onPress={handleAdoptionPress}
-              />
-            }
-            back={<OnlineUsersHistory />}
-            ref={adoptionCardRef}
-          />
+          <View onLayout={onReferralsCardLayout} ref={referralsCardRef}>
+            <FlipCard
+              disabled={isCollapsed}
+              stylesContainer={styles.flipCardContainer}
+              front={<ReferralsCard isCollapsed={isCollapsed} />}
+              back={<ReferralAcquisitionHistory isCollapsed={isCollapsed} />}
+            />
+          </View>
+
+          <View ref={adoptionCardRef} onLayout={onAdoptionCardLayout}>
+            <FlipCard
+              disabled={isCollapsed}
+              stylesContainer={styles.flipCardContainer}
+              front={
+                <AdoptionCard
+                  isCollapsed={isCollapsed}
+                  onPress={handleAdoptionPress}
+                />
+              }
+              back={<OnlineUsersHistory />}
+              ref={adoptionFlipCardRef}
+            />
+          </View>
         </Animated.ScrollView>
       </Animated.View>
 
-      <InviteButton />
+      <View ref={elementRef} onLayout={onElementLayout}>
+        <InviteButton />
+      </View>
     </>
   );
 });
@@ -126,7 +185,7 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
  */
 const contentInset = {left: -OVERSCROLL, top: 0, bottom: 0, right: -OVERSCROLL};
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   headerTopImage: {
     width: screenWidth,
     height: screenWidth * 0.08,
@@ -160,7 +219,7 @@ const styles = StyleSheet.create({
   },
   flipCardContainer: {
     width: CARD_WIDTH,
-    marginRight: rem(16),
+    marginRight: CARD_MARGIN_RIGHT_WIDTH,
     borderRadius: rem(20),
     overflow: 'hidden',
     flexGrow: 1,

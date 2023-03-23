@@ -25,7 +25,7 @@ const COMPLETE_WALKTHROUGH_STEP = createAction('COMPLETE_WALKTHROUGH_STEP', {
 });
 
 const SKIP_WALKTHROUGH = createAction('SKIP_WALKTHROUGH', {
-  STATE: true,
+  STATE: (payload: {stepsKeys: WalkthroughStepKey[]}) => payload,
 });
 
 const RESTART_WALKTHROUGH = createAction('RESTART_WALKTHROUGH', {

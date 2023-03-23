@@ -56,17 +56,32 @@ import {useSubscribeToPushNotifications} from '@store/modules/PushNotifications/
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {WalkthroughStep} from '@store/modules/Walkthrough/types';
 import React, {ComponentType, ReactNode, RefObject} from 'react';
-import {Image, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
 import Animated from 'react-native-reanimated';
 import {SvgProps} from 'react-native-svg';
 import {useDispatch} from 'react-redux';
+import {rem} from 'rn-units/index';
 
 export type MainTabsParamList = {
   HomeTab: NavigatorScreenParams<HomeTabStackParamList> | undefined;
   TeamTab: NavigatorScreenParams<TeamTabStackParamList> | undefined;
-  NewsTab: undefined;
+  NewsTab: NavigatorScreenParams<NewsTabStackParamList> | undefined;
   ProfileTab: NavigatorScreenParams<ProfileTabStackParamList> | undefined;
+};
+
+export type ContextualMenuButton = {
+  icon?: ReactNode;
+  label: string;
+  onPress: () => void;
+  id?: 'help' | 'staking' | 'notifications' | 'stats';
+};
+
+export type Coordinates = {
+  top?: number;
+  right?: number;
+  bottom?: number;
+  left?: number;
 };
 
 export type MainStackParamList = {
@@ -104,12 +119,8 @@ export type MainStackParamList = {
   InviteFriend: {contact: Contact};
   InviteShare: undefined;
   ContextualMenu: {
-    coords: {top?: number; right?: number; bottom?: number; left?: number};
-    buttons: {
-      icon?: ReactNode;
-      label: string;
-      onPress: () => void;
-    }[];
+    coords: Coordinates;
+    buttons: ContextualMenuButton[];
     onClose?: () => void;
   };
   Notifications: undefined;
@@ -127,8 +138,18 @@ export type MainStackParamList = {
   ProfilePrivacyEditStep3: undefined;
 };
 
+export type ActivePagerCard = 'wallet' | 'earning' | 'engagement';
+export type ActiveOverviewCard = 'profile' | 'referral' | 'adoption';
+export type HomeTabScrollPosition = 'overview';
+
 export type HomeTabStackParamList = {
-  Home: undefined;
+  Home:
+    | {
+        activePagerCard?: ActivePagerCard;
+        activeOverviewCard?: ActiveOverviewCard;
+        scrollTo?: HomeTabScrollPosition;
+      }
+    | undefined;
   Stats: undefined;
   TopMiners: undefined;
   TopCountries: undefined;
@@ -141,6 +162,10 @@ export type HomeTabStackParamList = {
 
 export type TeamTabStackParamList = {
   Team: {snapPoint?: number} | undefined;
+};
+
+export type NewsTabStackParamList = {
+  News: undefined;
 };
 
 export type ProfileTabStackParamList = {
@@ -163,6 +188,7 @@ export type MainNavigationParams = MainTabsParamList &
   MainStackParamList &
   ProfileTabStackParamList &
   TeamTabStackParamList &
+  NewsTabStackParamList &
   HomeTabStackParamList;
 
 const Tabs = createBottomTabNavigator<MainTabsParamList>();
@@ -253,25 +279,37 @@ const MainTabs = () => {
       <Tabs.Screen
         name="HomeTab"
         component={HomeTabStackNavigator}
-        options={{tabBarIcon: HomeIcon}}
+        options={{
+          tabBarIcon: HomeIcon,
+          tabBarIconStyle: iconStyles.homeIconStyle,
+        }}
         listeners={getListeners('home')}
       />
       <Tabs.Screen
         name="TeamTab"
         component={TeamTabStackNavigator}
-        options={{tabBarIcon: TeamIcon}}
+        options={{
+          tabBarIcon: TeamIcon,
+          tabBarIconStyle: iconStyles.teamIconStyle,
+        }}
         listeners={getListeners('team')}
       />
       <Tabs.Screen
         name="NewsTab"
         component={News}
-        options={{tabBarIcon: NewsIcon}}
+        options={{
+          tabBarIcon: NewsIcon,
+          tabBarIconStyle: iconStyles.newsIconStyle,
+        }}
         listeners={getListeners('news')}
       />
       <Tabs.Screen
         name="ProfileTab"
         component={ProfileTabStackNavigator}
-        options={{tabBarIcon: ProfileIcon}}
+        options={{
+          tabBarIcon: ProfileIcon,
+          tabBarIconStyle: iconStyles.profileIconStyle,
+        }}
         listeners={getListeners('profile')}
       />
     </Tabs.Navigator>
@@ -367,3 +405,12 @@ export function MainNavigator() {
     </MainStack.Navigator>
   );
 }
+
+export const iconStyles = StyleSheet.create({
+  homeIconStyle: {marginLeft: rem(8)},
+  teamIconStyle: {marginLeft: rem(26)},
+  newsIconStyle: {marginRight: rem(26)},
+  profileIconStyle: {
+    marginRight: rem(8),
+  },
+});

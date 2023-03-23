@@ -1,24 +1,19 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Avatar} from '@components/Avatar/Avatar';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {IceLabel} from '@components/Labels/IceLabel';
-import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useTopOffsetStyle} from '@navigation/hooks/useTopOffsetStyle';
-import {MainTabsParamList} from '@navigation/Main';
-import {useNavigation} from '@react-navigation/native';
-import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {GreetingText} from '@screens/HomeFlow/Home/components/Header/components/GreetingText';
+import {useUserGreetingWalkthrough} from '@screens/HomeFlow/Home/components/Header/components/hooks/useUserGreetingWalkthrough';
 import {MenuButton} from '@screens/HomeFlow/Home/components/Header/components/MenuButton';
+import {UserGreeting} from '@screens/HomeFlow/Home/components/Header/components/UserGreeting';
 import {useTransitionAnimation} from '@screens/HomeFlow/Home/components/Header/hooks/useTransitionAnimation';
-import {userSelector} from '@store/modules/Account/selectors';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
@@ -31,11 +26,7 @@ type Props = {
 };
 
 export const HomeHeader = memo(({translateY, transitionOffset}: Props) => {
-  const navigation =
-    useNavigation<NativeStackNavigationProp<MainTabsParamList>>();
-
   const topOffset = useTopOffsetStyle();
-  const user = useSelector(userSelector);
   const balanceSummary = useSelector(balanceSummarySelector);
 
   const {currentAnimationState, fromAnimatedStyle, toAnimatedStyle} =
@@ -44,33 +35,20 @@ export const HomeHeader = memo(({translateY, transitionOffset}: Props) => {
       transitionOffset,
     });
 
-  const openProfile = () => {
-    navigation.navigate('ProfileTab');
-  };
+  const {elementRef, onElementLayout} = useUserGreetingWalkthrough();
 
   return (
     <View style={[styles.container, topOffset.current]}>
       <View style={styles.body}>
-        {user?.profilePictureUrl && (
-          <Touchable onPress={openProfile}>
-            <Avatar
-              uri={user.profilePictureUrl}
-              size={rem(36)}
-              borderRadius={rem(16)}
-              allowFullScreen={false}
-            />
-          </Touchable>
-        )}
-        <Animated.View style={[styles.greeting, fromAnimatedStyle]}>
-          <Touchable
+        <View
+          ref={elementRef}
+          onLayout={onElementLayout}
+          style={styles.userGreetingContainer}>
+          <UserGreeting
             disabled={currentAnimationState !== 'from'}
-            onPress={openProfile}>
-            <GreetingText />
-            {user && (
-              <Text style={styles.usernameText}>{`@${user.username}`}</Text>
-            )}
-          </Touchable>
-        </Animated.View>
+            animatedStyle={fromAnimatedStyle}
+          />
+        </View>
 
         <Animated.View
           pointerEvents={'none'}
@@ -121,19 +99,15 @@ const styles = StyleSheet.create({
   currencyText: {
     ...font(13, 21, 'semibold', 'primaryDark'),
   },
-  greeting: {
-    marginLeft: rem(10),
-    flex: 1,
-  },
-  usernameText: {
-    marginTop: rem(3),
-    ...font(15, 18, 'bold', 'downriver'),
-  },
   icons: {
     flexDirection: 'row',
     alignItems: 'center',
   },
   icon: {
     padding: rem(7),
+  },
+  userGreetingContainer: {
+    flex: 1,
+    flexDirection: 'row',
   },
 });

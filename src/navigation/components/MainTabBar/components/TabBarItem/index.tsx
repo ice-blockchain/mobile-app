@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Touchable} from '@components/Touchable';
 import {Images} from '@images';
+import {TabBarIcon} from '@navigation/components/MainTabBar/components/TabBarItem/components/TabBarIcon';
+import {useTabBarWalkthrough} from '@navigation/components/MainTabBar/hooks/useTabBarWalkthrough';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
 import React from 'react';
 import {
@@ -18,6 +19,7 @@ const SHADOW_HEIGHT = rem(7);
 type Props = {
   index: number;
   buttonStyle?: StyleProp<ViewStyle>;
+  name: string;
 } & BottomTabBarProps;
 
 export const TabBarItem = ({
@@ -26,6 +28,7 @@ export const TabBarItem = ({
   navigation,
   index,
   buttonStyle,
+  name,
 }: Props) => {
   const route = state.routes[index];
   const isFocused = state.index === index;
@@ -55,23 +58,30 @@ export const TabBarItem = ({
     });
   };
 
+  const {onElementLayout, elementRef} = useTabBarWalkthrough({
+    tabName: name,
+    onPress,
+    onLongPress,
+    icon: options.tabBarIcon
+      ? options.tabBarIcon({focused: true, color: '', size: 20})
+      : null,
+  });
+
   return (
-    <View style={styles.container}>
+    <View style={styles.container} ref={elementRef} onLayout={onElementLayout}>
       <ImageBackground
         style={styles.container}
         source={Images.tabbar.itemBackground}>
         <View style={styles.body}>
-          <Touchable
-            accessibilityRole="button"
-            accessibilityState={isFocused ? {selected: true} : {}}
-            accessibilityLabel={options.tabBarAccessibilityLabel}
-            testID={options.tabBarTestID}
-            onPress={onPress}
+          <TabBarIcon
+            icon={<View style={options.tabBarIconStyle}>{icon}</View>}
+            tabBarTestID={options.tabBarTestID}
+            tabBarAccessibilityLabel={options.tabBarAccessibilityLabel}
             onLongPress={onLongPress}
-            style={[styles.button, buttonStyle]}
-            activeOpacity={1}>
-            {icon}
-          </Touchable>
+            onPress={onPress}
+            isFocused={isFocused}
+            buttonStyle={buttonStyle}
+          />
         </View>
       </ImageBackground>
     </View>
@@ -86,11 +96,5 @@ const styles = StyleSheet.create({
   body: {
     flex: 1,
     marginTop: SHADOW_HEIGHT,
-  },
-  button: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingBottom: rem(12),
   },
 });

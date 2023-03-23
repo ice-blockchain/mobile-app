@@ -49,7 +49,7 @@ export const useSegmentedControlWalkthrough = () => {
               INNER_VERTICAL_PADDING
             );
           },
-          render: measurements => {
+          render: ({measurements}) => {
             const sectionWidth =
               (measurements.width - SEGMENTED_CONTROL_HORIZONTAL_OFFSET * 2) /
               SEGMENTS.length;
