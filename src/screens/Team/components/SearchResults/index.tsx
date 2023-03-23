@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {TeamUserType, User} from '@api/user/types';
-import {ListItemSkeleton} from '@components/ListItems/ListItemSkeleton';
 import {UserListItem} from '@components/ListItems/UserListItem';
 import {UserListPingButton} from '@components/ListItems/UserListItem/components/UserListPingButton';
-import {COLORS} from '@constants/colors';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {BottomSheetSectionList} from '@gorhom/bottom-sheet';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -15,30 +14,23 @@ import {
   IceFriendsTitle,
   SectionHeader,
 } from '@screens/Team/components/Contacts/components/ContactsList/components/SectionHeader';
-import {SEARCH_HEIGHT} from '@screens/Team/components/Header/components/Search';
+import {SearchPlaceholder} from '@screens/Team/components/SearchResults/components/SearchPlaceholder';
 import {
   SearchResultsSection,
   useGetSearchResultsSegments,
 } from '@screens/Team/components/SearchResults/hooks/useGetSearchResultsSegments';
+import {LogoIcon} from '@svg/LogoIcon';
 import {MagnifierZoomOutEmptyIcon} from '@svg/MagnifierZoomOutEmptyIcon';
 import {MagnifierZoomOutIcon} from '@svg/MagnifierZoomOutIcon';
 import {t} from '@translations/i18n';
 import {hapticFeedback} from '@utils/device';
-import {font} from '@utils/styles';
 import React, {memo, useCallback} from 'react';
-import {
-  SectionList,
-  SectionListRenderItem,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {SectionListRenderItem, StyleSheet} from 'react-native';
 import {Contact} from 'react-native-contacts';
 import Animated, {FadeIn, FadeOut} from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
 export const SEARCH_RESULTS_OFFSET = rem(16);
-const ICON_SIZE = rem(28);
 
 function getTitleByUserConnection(userConnection: TeamUserType) {
   switch (userConnection) {
@@ -57,9 +49,7 @@ function getTitleByUserConnection(userConnection: TeamUserType) {
 const VIEW_PORT_ITEMS_SIZE = 12;
 
 export const SearchResults = memo(() => {
-  const tabbarOffset = useBottomTabBarOffsetStyle({
-    extraOffset: SEARCH_HEIGHT + rem(64),
-  });
+  const tabbarOffset = useBottomTabBarOffsetStyle();
   const {sections, searchQuery, loading, refresh, refreshing} =
     useGetSearchResultsSegments();
 
@@ -103,38 +93,25 @@ export const SearchResults = memo(() => {
   const renderEmptyList = useCallback(() => {
     if (!searchQuery) {
       return (
-        <View style={styles.emptyContainer}>
-          <MagnifierZoomOutIcon
-            width={ICON_SIZE}
-            height={ICON_SIZE}
-            color={COLORS.secondary}
-          />
-          <Text style={styles.emptyContainerText}>{t('search.empty')}</Text>
-        </View>
+        <SearchPlaceholder
+          Icon={<MagnifierZoomOutIcon width={rem(28)} height={rem(28)} />}
+          label={t('search.empty')}
+        />
       );
     }
     if (loading) {
       return (
-        <>
-          {Array(VIEW_PORT_ITEMS_SIZE)
-            .fill(null)
-            .map((_, index) => (
-              <ListItemSkeleton key={index} />
-            ))}
-        </>
+        <SearchPlaceholder
+          Icon={<LogoIcon width={rem(69)} height={rem(69)} />}
+          label={t('search.loading')}
+        />
       );
     }
     return (
-      <View style={styles.emptyContainer}>
-        <MagnifierZoomOutEmptyIcon
-          width={ICON_SIZE}
-          height={ICON_SIZE}
-          color={COLORS.secondary}
-        />
-        <Text style={styles.emptyContainerText}>
-          {t('search.nothing_is_found')}
-        </Text>
-      </View>
+      <SearchPlaceholder
+        Icon={<MagnifierZoomOutEmptyIcon width={rem(28)} height={rem(28)} />}
+        label={t('search.nothing_is_found')}
+      />
     );
   }, [loading, searchQuery]);
 
@@ -154,7 +131,7 @@ export const SearchResults = memo(() => {
       ]}
       entering={FadeIn}
       exiting={FadeOut}>
-      <SectionList
+      <BottomSheetSectionList
         showsVerticalScrollIndicator={false}
         contentContainerStyle={tabbarOffset.current}
         keyboardDismissMode={'on-drag'}
@@ -177,16 +154,5 @@ const styles = StyleSheet.create({
     zIndex: 1,
     paddingHorizontal: SCREEN_SIDE_OFFSET,
     paddingVertical: rem(24),
-  },
-  emptyContainer: {
-    flex: 1,
-    alignItems: 'center',
-    paddingTop: rem(200),
-  },
-  emptyContainerText: {
-    ...font(14, 17, 'medium', 'secondary'),
-    textAlign: 'center',
-    paddingTop: rem(16),
-    paddingHorizontal: SCREEN_SIDE_OFFSET,
   },
 });

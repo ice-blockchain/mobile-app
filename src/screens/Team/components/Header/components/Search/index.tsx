@@ -62,6 +62,14 @@ export const Search = ({
 
   return (
     <View style={topOffset.current}>
+      <Animated.View style={[styles.cancelButtonWrapper, animatedCancelStyle]}>
+        <Touchable
+          onPress={closeSearch}
+          hitSlop={MIDDLE_BUTTON_HIT_SLOP}
+          activeOpacity={1}>
+          <Text style={styles.cancelText}>{t('button.cancel')}</Text>
+        </Touchable>
+      </Animated.View>
       <Animated.View style={[animatedContainerStyle, styles.container]}>
         <SearchInput
           loading={loading}
@@ -70,14 +78,6 @@ export const Search = ({
           onSubmitEditing={handleSubmit}
           {...textInputProps}
         />
-      </Animated.View>
-      <Animated.View style={[styles.cancelButtonWrapper, animatedCancelStyle]}>
-        <Touchable
-          onPress={closeSearch}
-          hitSlop={MIDDLE_BUTTON_HIT_SLOP}
-          activeOpacity={1}>
-          <Text style={styles.cancelText}>{t('button.cancel')}</Text>
-        </Touchable>
       </Animated.View>
     </View>
   );

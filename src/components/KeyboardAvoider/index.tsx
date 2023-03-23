@@ -6,17 +6,13 @@ import {
   KeyboardAvoidingViewProps,
   StyleSheet,
 } from 'react-native';
-import {isIOS} from 'rn-units';
 
 type Props = {
   children: ReactNode;
 } & KeyboardAvoidingViewProps;
 
 export const KeyboardAvoider = ({children, ...props}: Props) => (
-  <KeyboardAvoidingView
-    style={styles.flex}
-    behavior={isIOS ? 'padding' : undefined}
-    {...props}>
+  <KeyboardAvoidingView style={styles.flex} behavior={'padding'} {...props}>
     {children}
   </KeyboardAvoidingView>
 );

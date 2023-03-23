@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {commonStyles, windowHeight} from '@constants/styles';
+import {commonStyles} from '@constants/styles';
 import BottomSheet from '@gorhom/bottom-sheet';
 import {HEADER_HEIGHT} from '@navigation/components/Header';
 import {CARD_BODY_TOP_OFFSET} from '@screens/HomeFlow/BalanceHistory/components/CardBody';
@@ -9,8 +9,10 @@ import {
   PAGER_HEADER_HEIGHT,
 } from '@screens/HomeFlow/BalanceHistory/components/PagerHeader';
 import React, {ReactNode, useMemo} from 'react';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {isIOS} from 'rn-units';
+import {
+  useSafeAreaFrame,
+  useSafeAreaInsets,
+} from 'react-native-safe-area-context';
 
 type Props = {
   children: ReactNode;
@@ -18,23 +20,20 @@ type Props = {
 
 export const DynamicHeight = ({children}: Props) => {
   const {top: topInset} = useSafeAreaInsets();
+  const frame = useSafeAreaFrame();
 
   const positions = useMemo(() => {
-    /**
-     * On Android topInset is not included to the windowHeight
-     */
-    const windowTopInset = isIOS ? topInset : 0;
     return {
-      expanded: windowHeight - windowTopInset - HEADER_HEIGHT,
+      expanded: frame.height - topInset - HEADER_HEIGHT,
       collapsed:
-        windowHeight -
-        windowTopInset -
+        frame.height -
+        topInset -
         HEADER_HEIGHT -
         PAGER_HEADER_HEIGHT / 2 -
         PAGER_HEADER_BUMP_HEIGHT -
         CARD_BODY_TOP_OFFSET,
     };
-  }, [topInset]);
+  }, [frame.height, topInset]);
 
   const snapPoints = useMemo(
     () => [positions.collapsed, positions.expanded],

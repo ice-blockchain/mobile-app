@@ -10,8 +10,11 @@ import {
 import {createAction} from '@store/utils/actions/createAction';
 
 const GET_MINING_SUMMARY = createAction('GET_MINING_SUMMARY', {
-  START: (payload?: {forceUpdate?: boolean}) => payload,
-  SUCCESS: (miningSummary: MiningSummary | null) => ({miningSummary}),
+  START: true,
+  SUCCESS: (payload: {
+    miningSummary: MiningSummary;
+    claimDailyBonus?: boolean;
+  }) => payload,
   FAILED: (errorMessage: string) => ({errorMessage}),
   RESET: true,
 });
@@ -72,6 +75,10 @@ const UPDATE_AGREE_WITH_EARLY_ACCESS = createAction(
   },
 );
 
+const CLAIM_DAILY_BONUS = createAction('CLAIM_DAILY_BONUS', {
+  STATE: true,
+});
+
 export const TokenomicsActions = Object.freeze({
   GET_MINING_SUMMARY,
   GET_BALANCE_SUMMARY,
@@ -81,4 +88,5 @@ export const TokenomicsActions = Object.freeze({
   START_MINING_SESSION,
   START_OR_UPDATE_PRE_STAKING,
   UPDATE_AGREE_WITH_EARLY_ACCESS,
+  CLAIM_DAILY_BONUS,
 });

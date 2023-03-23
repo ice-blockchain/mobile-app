@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {windowHeight} from '@constants/styles';
 import {Header, HEADER_HEIGHT} from '@navigation/components/Header';
 import {MainStackParamList} from '@navigation/Main';
 import {RouteProp, useRoute} from '@react-navigation/native';
@@ -13,7 +12,11 @@ import React, {useMemo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {GestureDetector} from 'react-native-gesture-handler';
 import Animated from 'react-native-reanimated';
-import {SafeAreaView, useSafeAreaInsets} from 'react-native-safe-area-context';
+import {
+  SafeAreaView,
+  useSafeAreaFrame,
+  useSafeAreaInsets,
+} from 'react-native-safe-area-context';
 import {screenWidth} from 'rn-units';
 
 export const ImageView = () => {
@@ -23,7 +26,8 @@ export const ImageView = () => {
 
   const {top: topInset, bottom: bottomInset} = useSafeAreaInsets();
   const viewPortWidth = screenWidth;
-  const viewPortHeight = windowHeight - topInset - bottomInset - HEADER_HEIGHT;
+  const frame = useSafeAreaFrame();
+  const viewPortHeight = frame.height - topInset - bottomInset - HEADER_HEIGHT;
 
   const {imageMeasure} = useImageMeasure(imageRef, topInset + HEADER_HEIGHT);
   const {imageUri} = useImageSizedUri(uri, size);

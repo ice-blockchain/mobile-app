@@ -5,8 +5,12 @@ import {navigate} from '@navigation/utils';
 import {isSignInWithEmailLink, isUpdateEmailLink} from '@services/auth';
 import {logError} from '@services/logging';
 import {AccountActions} from '@store/modules/Account/actions';
-import {isSplashHiddenSelector} from '@store/modules/AppCommon/selectors';
+import {
+  isAppActiveSelector,
+  isSplashHiddenSelector,
+} from '@store/modules/AppCommon/selectors';
 import {LinkingActions} from '@store/modules/Linking/actions';
+import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {waitForSelector} from '@store/utils/sagas/effects';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {Linking} from 'react-native';
@@ -33,6 +37,7 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
   }
 
   yield call(waitForSelector, isSplashHiddenSelector);
+  yield call(waitForSelector, isAppActiveSelector);
 
   switch (path.toLowerCase()) {
     case 'browser':
@@ -91,6 +96,13 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
             });
         }
       }
+      break;
+    case 'claim-daily-bonus':
+      navigate({
+        name: 'HomeTab',
+        params: {screen: 'Home'},
+      });
+      yield put(TokenomicsActions.CLAIM_DAILY_BONUS.STATE.create());
       break;
     default:
       if (!handledInApp) {

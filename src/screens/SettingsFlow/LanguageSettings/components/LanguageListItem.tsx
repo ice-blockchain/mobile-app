@@ -16,9 +16,6 @@ type Props = {
   onSelect: (value: SupportedLocale) => void;
 };
 
-const FLAG_WIDTH = rem(21);
-const FLAG_HEIGHT = (FLAG_WIDTH / 20) * 14;
-
 export const LanguageListItem = memo(
   ({language, selected, loading, onSelect}: Props) => {
     const {flag, name} = localeConfig[language];
@@ -45,9 +42,9 @@ const styles = StyleSheet.create({
     paddingVertical: rem(10),
   },
   flag: {
-    marginLeft: rem(12),
-    width: FLAG_WIDTH,
-    height: FLAG_HEIGHT,
+    marginLeft: rem(16),
+    width: rem(20),
+    height: rem(14),
     borderRadius: 2,
     borderWidth: 1,
     borderColor: COLORS.black01opacity,

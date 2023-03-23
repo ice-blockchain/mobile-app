@@ -109,7 +109,9 @@ function* processRaceCondition({
   const miningSummary: SagaReturnType<typeof Api.tokenomics.getMiningSummary> =
     yield call(Api.tokenomics.getMiningSummary, {userId});
 
-  yield put(TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.create(miningSummary));
+  yield put(
+    TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.create({miningSummary}),
+  );
 
   const isMiningActive: ReturnType<typeof isMiningActiveSelector> =
     yield select(isMiningActiveSelector);

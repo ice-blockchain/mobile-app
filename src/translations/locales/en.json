@@ -75,6 +75,7 @@
     "empty": {
       "title_part1": "You currently don't have any\n",
       "title_part2": " referrals!",
+      "contacts": "You currently don't have any contacts.",
       "button_title": "Invite Friends"
     },
     "contacts": {
@@ -530,7 +531,8 @@
     "empty": "Search for contacts, ice friends and members of your micro-community",
     "nothing_is_found": "Nothing was found for your query",
     "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "search_for_users": "Search for users",
+    "loading": "Searching…"
   },
   "tabbar": {
     "mining_inactive_tooltip": "Tap here to start your first check-in session",

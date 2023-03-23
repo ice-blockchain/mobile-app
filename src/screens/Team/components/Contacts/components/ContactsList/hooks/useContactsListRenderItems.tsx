@@ -8,6 +8,7 @@ import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {ContactItem} from '@screens/Team/components/Contacts/components/ContactsList/components/ContactItem';
+import {EmptyContacts} from '@screens/Team/components/Contacts/components/ContactsList/components/EmptyContacts';
 import {SectionHeader} from '@screens/Team/components/Contacts/components/ContactsList/components/SectionHeader';
 import {
   ContactSection,
@@ -61,6 +62,9 @@ export const useContactsListRenderItems = () => {
 
           case 'Error':
             return <Text>{item.message}</Text>;
+
+          case 'NoContacts':
+            return <EmptyContacts />;
         }
       }
 

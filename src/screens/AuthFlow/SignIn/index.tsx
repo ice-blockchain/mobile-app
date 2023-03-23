@@ -24,7 +24,7 @@ import {rem} from 'rn-units';
 export const SignIn = () => {
   useFocusStatusBar({style: 'light-content'});
   const {scrollRef} = useScrollEndOnKeyboardShown();
-  const {isSocialAuthLoading, selectedSocialType} = useSocialAuth();
+  const {isSocialAuthLoading} = useSocialAuth();
   const {
     phoneNumberBody,
     onChangePhone,
@@ -84,9 +84,7 @@ export const SignIn = () => {
         </View>
         <PrivacyTerms />
       </ScrollView>
-      {isSocialAuthLoading && selectedSocialType !== 'apple' && (
-        <FullScreenLoading />
-      )}
+      {isSocialAuthLoading && <FullScreenLoading />}
     </KeyboardAvoider>
   );
 };
