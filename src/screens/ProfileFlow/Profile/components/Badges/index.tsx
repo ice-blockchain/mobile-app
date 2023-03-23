@@ -9,7 +9,7 @@ import {BadgeList} from '@screens/ProfileFlow/Profile/components/Badges/componen
 import {userSelector} from '@store/modules/Account/selectors';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {t} from '@translations/i18n';
-import React, {memo, useCallback, useState} from 'react';
+import React, {memo, useCallback} from 'react';
 import {StyleSheet} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
@@ -32,8 +32,6 @@ export const Badges = memo(({user}: Props) => {
     () => navigation.navigate('Badges', {userId: user?.id}),
     [navigation, user],
   );
-  const [loading, setLoading] = useState(false);
-  setTimeout(() => setLoading(false), 0);
 
   const title = isOwner
     ? t('profile.my_badges.title')
@@ -47,7 +45,7 @@ export const Badges = memo(({user}: Props) => {
         onActionPress={onViewAllPress}
         style={styles.header}
       />
-      <BadgeList loading={loading} user={user} data={badgesSummary} />
+      <BadgeList loading={!!badgesSummary} user={user} data={badgesSummary} />
     </>
   );
 });

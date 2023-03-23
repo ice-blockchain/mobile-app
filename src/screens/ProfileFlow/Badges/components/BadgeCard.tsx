@@ -83,6 +83,7 @@ export const BadgeCard = ({
       } ${t(`profile.badge_types.${type}.description`)}`;
     }
     if (!achievingRange?.toInclusive && achievingRange?.fromInclusive) {
+      // TODO: check plus
       description = `${achievingRange?.fromInclusive - 1}+ ${t(
         `profile.badge_types.${type}.description`,
       )}`;

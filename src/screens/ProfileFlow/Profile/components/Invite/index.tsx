@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     marginBottom: rem(10),
   },
   infoButton: {
-    paddingLeft: 5,
+    paddingLeft: rem(5),
     alignSelf: 'flex-end',
   },
 });
