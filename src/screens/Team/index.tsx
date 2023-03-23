@@ -7,6 +7,7 @@ import {DynamicHeight} from '@screens/Team/components/DynamicHeight';
 import {Header} from '@screens/Team/components/Header';
 import {SearchResults} from '@screens/Team/components/SearchResults';
 import {SegmentedContent} from '@screens/Team/components/SegmentedContent';
+import {useFocusAndroidSoftInputMode} from '@screens/Team/hooks/useFocusAndroidSoftInputMode';
 import {useOnChangeToCollapsedSnapPoint} from '@screens/Team/hooks/useOnChangeToCollapsedSnapPoint';
 import {useOnRefresh} from '@screens/Team/hooks/useOnRefresh';
 import React, {memo, useState} from 'react';
@@ -19,6 +20,8 @@ import {
 
 export const Team = memo(() => {
   useFocusStatusBar({style: 'light-content'});
+  useFocusAndroidSoftInputMode();
+
   const [isSearchActive, setIsSearchActive] = useState(false);
 
   const animatedIndex = useSharedValue(0);
