@@ -1,0 +1,50 @@
+ice License
+
+Version 1.0, January 2023
+
+-----------------------------------------------------------------------------
+
+
+Licensor:             ice Labs Limited
+
+Licensed Work:        ice Network
+                      The Licensed Work is (c) 2023 ice Labs Limited
+
+-----------------------------------------------------------------------------
+
+
+Permission is hereby granted by the application Software Developer, ice Labs
+Limited, free of charge, to any person obtaining a copy of this application,
+software, and associated documentation files (the Software), which was
+developed by the Software Developer (ice Labs Limited) for use on ice Network
+whereby the purpose of this license is to permit the development of
+derivative works based on the Software, including the right to use, copy,
+modify, merge, publish, distribute, sub-license, and/or sell copies of such
+derivative works and any Software components incorporated therein, and to
+permit persons to whom such derivative works are furnished to do so, in each
+case, solely to develop, use, and market applications for the official ice
+Network.
+
+All Derivative Works developed under this License for use on the ice Network
+may only be released after the official launch of the ice Network’s Mainnet.
+
+For purposes of this license, ice Network shall mean any application,
+software, or another present or future platform developed, owned, or managed
+by ice Labs Limited, and its parents, affiliates, or subsidiaries.
+
+Disclaimer of Warranty. Unless required by applicable law or agreed to in
+writing, Licensor provides the Software on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including,
+without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT,
+MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely
+responsible for determining the appropriateness of using or redistributing
+the Software and assume any risks associated with Your exercise of
+permissions under this License.
+
+Limitation of Liability. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH
+THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.

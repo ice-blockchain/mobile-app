@@ -1,0 +1,5 @@
+# SPDX-License-Identifier: ice License 1.0
+
+type("appstore")
+
+app_identifier(["io.ice.app.staging", "io.ice.app", "io.ice.app.staging.FirebaseNotificationService", "io.ice.app.FirebaseNotificationService"])

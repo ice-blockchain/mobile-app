@@ -1,0 +1,62 @@
+{
+  "testRunner": "jest",
+  "runnerConfig": "test/e2e/config.json",
+  "skipLegacyWorkersInjection": true,
+  "apps": {
+    "ios.release": {
+      "type": "ios.app",
+      "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/ice.app",
+      "build": "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -workspace ios/ice.xcworkspace -scheme ice -UseNewBuildSystem=NO -configuration Release -destination 'platform=iOS Simulator,name=iPhone 13' -sdk iphonesimulator -derivedDataPath ios/build -quiet"
+    },
+    "ios.debug": {
+      "type": "ios.app",
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/ice.app",
+      "build": "xcodebuild -workspace ios/ice.xcworkspace -scheme ice -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 13' -derivedDataPath ios/build"
+    },
+    "android.debug": {
+      "type": "android.apk",
+      "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+      "testBinaryPath": "android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk",
+      "build": "cd android ; ./gradlew assembleDebug && ./gradlew assembleDebugAndroidTest -DtestBuildType=debug ; cd -"
+    },
+    "android.release": {
+      "type": "android.apk",
+      "binaryPath": "android/app/build/outputs/apk/releasestagingE2E/app-releasestagingE2E.apk",
+      "testBinaryPath": "android/app/build/outputs/apk/androidTest/releasestagingE2E/app-releasestagingE2E-androidTest.apk",
+      "build": "cd android ; ./gradlew assembleReleasestagingE2E && ./gradlew assembleAndroidTest -DtestBuildType=releasestagingE2E ; cd -"
+    }
+  },
+  "devices": {
+    "simulator": {
+      "type": "ios.simulator",
+      "device": {
+        "type": "iPhone 13"
+      }
+    },
+    "emulator": {
+      "type": "android.emulator",
+      "device": {
+        "avdName": "test"
+      }
+    }
+  },
+  "configurations": {
+    "ios.debug": {
+      "device": "simulator",
+      "app": "ios.debug"
+    },
+    "ios.release": {
+      "device": "simulator",
+      "app": "ios.release",
+      "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/ice.app"
+    },
+    "android.debug": {
+      "device": "emulator",
+      "app": "android.debug"
+    },
+    "android.release": {
+      "device": "emulator",
+      "app": "android.release"
+    }
+  }
+}

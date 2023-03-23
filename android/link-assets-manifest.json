@@ -1,0 +1,41 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Lato-Black.ttf",
+      "sha1": "b9c952639741f5b7479e1ff6d1561a3df7e8f83a"
+    },
+    {
+      "path": "src/assets/fonts/Lato-Bold.ttf",
+      "sha1": "6b2c7b124cbf0aaeba48d57fb0fa19f2c6c69683"
+    },
+    {
+      "path": "src/assets/fonts/Lato-Hairline.ttf",
+      "sha1": "79c1dd6a9c740ef36272a9742504864a6f912be7"
+    },
+    {
+      "path": "src/assets/fonts/Lato-Heavy.ttf",
+      "sha1": "068af974d1346b61d9ee1e097374f2f3cac6c442"
+    },
+    {
+      "path": "src/assets/fonts/Lato-Light.ttf",
+      "sha1": "a405c8288a8a90881407f93b6ee02b29e26a8735"
+    },
+    {
+      "path": "src/assets/fonts/Lato-Medium.ttf",
+      "sha1": "c78e94b7cc0b782eef4f9f2be371c3cf9c3f6eaf"
+    },
+    {
+      "path": "src/assets/fonts/Lato-Regular.ttf",
+      "sha1": "f59f9e4f3cbee981a5e6f58a279f9b9613f22599"
+    },
+    {
+      "path": "src/assets/fonts/Lato-Semibold.ttf",
+      "sha1": "96569e2cfcc3a298bb1aea21103d0d1e3c7e2ed4"
+    },
+    {
+      "path": "src/assets/fonts/Lato-Thin.ttf",
+      "sha1": "dbe1f622faef3ea3f286d848da6b10f104405060"
+    }
+  ]
+}

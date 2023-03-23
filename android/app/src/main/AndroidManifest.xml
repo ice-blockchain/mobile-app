@@ -1,0 +1,72 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="io.ice.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <!-- disable advertising id permission obtaining -->
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
+
+    <queries> <intent> <action android:name="android.support.customtabs.action.CustomTabsService" /> </intent> </queries>
+
+    <application
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:allowBackup="false"
+      android:theme="@style/BootTheme"
+      android:fullBackupContent="@xml/com_moengage_backup_descriptor"
+      android:dataExtractionRules="@xml/com_moengage_data_extraction_rules">
+
+      <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/FACEBOOK_APP_ID"/>
+      <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/FACEBOOK_CLIENT_TOKEN"/>
+      <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_notification"
+            tools:replace="android:resource" />
+      <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/splashscreen_bg"
+            tools:replace="android:resource"/>
+      <service android:name="com.moengage.firebase.MoEFireBaseMessagingService"
+               android:exported="false">
+          <intent-filter>
+              <action android:name="com.google.firebase.MESSAGING_EVENT" />
+          </intent-filter>
+      </service>
+
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+        android:launchMode="singleTask"
+        android:windowSoftInputMode="adjustResize"
+        android:exported="true">
+        <intent-filter>
+          <action android:name="android.intent.action.MAIN" />
+          <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        <intent-filter android:autoVerify="true">
+          <action android:name="android.intent.action.VIEW"/>
+          <category android:name="android.intent.category.DEFAULT"/>
+          <category android:name="android.intent.category.BROWSABLE"/>
+          <data android:host="@string/DEEPLINK_DOMAIN" android:scheme="http"/>
+          <data android:host="@string/DEEPLINK_DOMAIN" android:scheme="https"/>
+        </intent-filter>
+
+        <intent-filter>
+          <action android:name="android.intent.action.VIEW"/>
+          <category android:name="android.intent.category.DEFAULT"/>
+          <category android:name="android.intent.category.BROWSABLE"/>
+          <data android:host="*" android:scheme="@string/DEEPLINK_SCHEME"/>
+        </intent-filter>
+      </activity>
+    </application>
+</manifest>

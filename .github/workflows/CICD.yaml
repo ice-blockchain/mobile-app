@@ -1,0 +1,411 @@
+name: CI/CD
+on:
+  push:
+    branches:
+      - master
+      - 'release/v*'
+  pull_request:
+    branches:
+      - master
+      - 'release/v*'
+jobs:
+  react-native:
+    name: React Native -- verify, build, test
+    if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
+    runs-on: macOS-latest
+    steps:
+      - name: Setup Node
+        id: setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Checkout main repo
+        id: checkout-main-repo
+        uses: actions/checkout@v3
+        with:
+          path: main-repo
+      - name: Checkout the target 'master' branch of 'mobile-app-secrets'
+        id: checkout-secrets
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ secrets.MOBILE_APP_SECRETS_REPO }}
+          ref: master
+          token: ${{ secrets.ICE_CI_CD_BOT_GH_PAT }}
+          path: mobile-app-secrets
+          fetch-depth: 0
+      - name: Detect APP environment and set it to ENV
+        id: detect-env
+        run: |
+          if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
+            then
+               echo "APP_ENV=production" >> $GITHUB_ENV
+            else
+               echo "APP_ENV=staging" >> $GITHUB_ENV
+          fi
+      - name: Configure APP environment
+        id: setup-env
+        run: |
+          cd main-repo
+          yarn configure:$APP_ENV
+      - name: Mask APP environment and configuration values in logs
+        id: mask-secrets
+        run: |
+          cd main-repo
+          cat .env | awk '!/^\s*#/' | awk '!/^\s*$/' | while IFS='' read -r line; do
+            value=$(echo "$line" | cut -d '=' -f 2-)
+            echo "::add-mask::$value"
+          done
+          for file in ./configuration/*.json
+          do
+            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && console.log("::add-mask::"+val)))' "$(cat $file)"
+          done
+      - name: Cache yarn
+        id: cache-yarn
+        uses: c-hive/gha-yarn-cache@v2
+        with:
+          directory: main-repo
+      - name: Install npm dependencies
+        id: install-npm-dependencies
+        run: |
+          cd main-repo
+          yarn
+          yarn check-license
+      - name: Check types
+        id: run-check-types
+        run: |
+          cd main-repo
+          yarn check-types
+      - name: Lint
+        id: run-lint
+        run: |
+          cd main-repo
+          yarn lint
+      - name: Run tests
+        id: run-test
+        run: |
+          cd main-repo
+          yarn test
+      - uses: actions/cache@v3
+        id: cache_all
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+      - name: Slack Notification
+        if: ${{ github.event_name == 'push' && success() == false}}
+        uses: act10ns/slack@v2
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_MESSAGE_TITLE: React Native Verifying & Building
+        with:
+          config: main-repo/.github/slack.yml
+          status: ${{ job.status }}
+          steps: ${{ '{}' }}
+  ios-e2e-test:
+    needs: [react-native]
+    name: iOS -- E2E test
+    # TODO: uncomment this when we start testing.
+    # if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
+    if: ${{ 1 == 0  }}
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/cache@v3
+        id: cache_all
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+      - name: Mask APP environment and configuration values in logs
+        id: mask-secrets
+        run: |
+          cd main-repo
+          cat .env | awk '!/^\s*#/' | awk '!/^\s*$/' | while IFS='' read -r line; do
+            value=$(echo "$line" | cut -d '=' -f 2-)
+            echo "::add-mask::$value"
+          done
+          for file in ./configuration/*.json
+          do
+            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && console.log("::add-mask::"+val)))' "$(cat $file)"
+          done
+      - name: Setup Node
+        id: setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install Pod Dependencies
+        id: install-pod-dependencies
+        run: cd ./main-repo/ios && pod install && cd ..
+      - name: Install Detox Dependencies
+        id: install-detox-dependencies
+        run: |
+          brew tap wix/brew
+          brew install applesimutils
+      - name: Configure APP environment for e2e tests
+        id: setup-env
+        run: |
+          cd main-repo
+          yarn configure:staging
+      - name: Run Detox Build
+        id: build-app
+        run: |
+          cd main-repo
+          yarn e2e-build-ios-release
+      - name: Run Detox Test(s)
+        id: run-test
+        run: |
+          cd main-repo
+          bash scripts/run-e2e-ios-release.sh
+      - name: Slack Notification
+        if: ${{ github.event_name == 'push' && success() == false}}
+        uses: act10ns/slack@v2
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_MESSAGE_TITLE: E2E testing iOS App
+        with:
+          config: main-repo/.github/slack.yml
+          status: ${{ job.status }}
+          steps: ${{ '{}' }}
+  android-e2e-test:
+    needs: [react-native]
+    name: Android -- E2E test
+    # TODO: Fix this, then uncomment it, cuz android E2E with detox is not working.
+    # if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
+    if: ${{ 1 == 0  }}
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/cache@v3
+        id: cache_all
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+      - name: Mask APP environment and configuration values in logs
+        id: mask-secrets
+        run: |
+          cd main-repo
+          cat .env | awk '!/^\s*#/' | awk '!/^\s*$/' | while IFS='' read -r line; do
+            value=$(echo "$line" | cut -d '=' -f 2-)
+            echo "::add-mask::$value"
+          done
+          for file in ./configuration/*.json
+          do
+            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && console.log("::add-mask::"+val)))' "$(cat $file)"
+          done
+      - name: Setup Node
+        id: setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Setup Java
+        id: setup-java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+          check-latest: true
+        env:
+          # https://github.com/actions/toolkit/issues/641#issuecomment-728963957
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+      - name: Configure APP environment for e2e tests
+        id: setup-env
+        run: |
+          cd main-repo
+          yarn configure:staging
+      - name: Run Detox Build
+        id: build-app
+        run: |
+          cd main-repo
+          yarn e2e-build-android-release
+      - name: Run Detox Test(s)
+        id: run-test
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          working-directory: main-repo
+          api-level: 28
+          target: google_apis
+          profile: Nexus 6
+          enable-hw-keyboard: true
+          disable-animations: false
+          arch: x86
+          script: bash ${{ github.workspace }}/main-repo/scripts/run-e2e-android-release.sh
+      - name: Slack Notification
+        if: ${{ github.event_name == 'push' && success() == false }}
+        uses: act10ns/slack@v2
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_MESSAGE_TITLE: E2E testing Android App
+        with:
+          config: main-repo/.github/slack.yml
+          status: ${{ job.status }}
+          steps: ${{ '{}' }}
+  ios-cicd:
+    name: iOS -- build, deploy
+    # TODO: uncomment this when we start testing.
+    # needs: [ios-e2e-test]
+    needs: [react-native]
+    if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
+    runs-on: macOS-latest
+    env:
+      FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 180
+      FASTLANE_XCODEBUILD_SETTINGS_RETRIES: 10
+    steps:
+      - uses: actions/cache@v3
+        id: cache_all
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+      - name: Mask APP environment and configuration values in logs
+        id: mask-secrets
+        run: |
+          cd main-repo
+          cat .env | awk '!/^\s*#/' | awk '!/^\s*$/' | while IFS='' read -r line; do
+            value=$(echo "$line" | cut -d '=' -f 2-)
+            echo "::add-mask::$value"
+          done
+          for file in ./configuration/*.json
+          do
+            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && console.log("::add-mask::"+val)))' "$(cat $file)"
+          done
+      - name: Setup Ruby version
+        id: setup-ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          working-directory: main-repo
+          ruby-version: '3.1.3'
+          bundler-cache: true
+      - name: Detect context and set APP environment variables
+        id: setup-env
+        run: |
+          if [[ ${{ github.event_name == 'pull_request' && github.event.pull_request.draft == false}} == true ]]
+            then
+               echo "IOS_SIGN_TYPE=adhoc" >> $GITHUB_ENV
+               echo "DEPLOY_TARGET=firebase" >> $GITHUB_ENV
+               echo "APP_VERSION=0.0.0" >> $GITHUB_ENV
+               echo "RELEASE_NOTES=release_notes:${{ github.head_ref }}" >> $GITHUB_ENV
+            else
+               echo "IOS_SIGN_TYPE=appstore" >> $GITHUB_ENV
+               echo "DEPLOY_TARGET=testflight" >> $GITHUB_ENV
+               if [[ ${{ github.ref_name == 'master' }} == true ]]
+                  then
+                    echo "APP_VERSION=0.0.0" >> $GITHUB_ENV
+                  else
+                    echo "APP_VERSION=$(echo ${GITHUB_REF_NAME#*v})" >> $GITHUB_ENV
+               fi
+          fi
+          if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
+            then
+               echo "APP_ENV=production" >> $GITHUB_ENV
+            else
+               echo "APP_ENV=staging" >> $GITHUB_ENV
+          fi
+      - name: Bump version to v${{ env.APP_VERSION }}
+        id: bump-version
+        run: |
+          cd main-repo
+          bundle exec fastlane ios bump_version build_number:${{ github.run_number }} version_number:$APP_VERSION
+      - name: Build iOS App (${{env.IOS_SIGN_TYPE}})
+        id: build-app
+        run: |
+          cd main-repo
+          bundle exec fastlane ios build sign_type:$IOS_SIGN_TYPE
+      - name: Deploy iOS App to ${{env.DEPLOY_TARGET}}
+        id: deploy-app
+        run: |
+          cd main-repo
+          bundle exec fastlane ios deploy target:$DEPLOY_TARGET $RELEASE_NOTES
+      - name: Slack Notification
+        if: ${{ always() && github.event_name == 'push' }}
+        uses: act10ns/slack@v2
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_MESSAGE_TITLE: iOS App Deployment
+        with:
+          config: main-repo/.github/slack.yml
+          status: ${{ job.status }}
+          steps: ${{ '{}' }}
+  android-cicd:
+    name: Android -- build, deploy
+    # TODO: uncomment this after android-e2e-test gets fixed.
+    # needs: [android-e2e-test]
+    needs: [react-native]
+    if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/cache@v3
+        id: cache_all
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+      - name: Mask APP environment and configuration values in logs
+        id: mask-secrets
+        run: |
+          cd main-repo
+          cat .env | awk '!/^\s*#/' | awk '!/^\s*$/' | while IFS='' read -r line; do
+            value=$(echo "$line" | cut -d '=' -f 2-)
+            echo "::add-mask::$value"
+          done
+          for file in ./configuration/*.json
+          do
+            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && console.log("::add-mask::"+val)))' "$(cat $file)"
+          done
+      - name: Setup Java
+        id: setup-java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+          check-latest: true
+      - name: Setup Ruby version
+        id: setup-ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          working-directory: main-repo
+          ruby-version: '3.1.3'
+          bundler-cache: true
+      - name: Detect context and set APP environment variables
+        id: setup-env
+        run: |
+          if [[ ${{ github.event_name == 'pull_request' && github.event.pull_request.draft == false}} == true ]]
+            then
+              echo "ANDROID_ARCHIVE_TYPE=apk" >> $GITHUB_ENV
+              echo "DEPLOY_TARGET=firebase" >> $GITHUB_ENV
+              echo "APP_VERSION=0.0.0" >> $GITHUB_ENV
+              echo "RELEASE_NOTES=release_notes:${{ github.head_ref }}" >> $GITHUB_ENV
+            else
+              echo "ANDROID_ARCHIVE_TYPE=bundle" >> $GITHUB_ENV
+              echo "DEPLOY_TARGET=playstore" >> $GITHUB_ENV
+              if [[ ${{ github.ref_name == 'master' }} == true ]]
+                then
+                  echo "APP_VERSION=0.0.0" >> $GITHUB_ENV
+                else
+                  echo "APP_VERSION=$(echo ${GITHUB_REF_NAME#*v})" >> $GITHUB_ENV
+              fi
+          fi
+          if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
+            then
+               echo "APP_ENV=production" >> $GITHUB_ENV
+            else
+               echo "APP_ENV=staging" >> $GITHUB_ENV
+          fi
+      - name: Bump version to v${{ env.APP_VERSION }}
+        id: bump-version
+        run: |
+          cd main-repo
+          bundle exec fastlane android bump_version build_number:${{ github.run_number }} version_number:$APP_VERSION
+      - name: Build Android App (${{env.ANDROID_ARCHIVE_TYPE}})
+        id: build-app
+        run: |
+          cd main-repo
+          bundle exec fastlane android build type:$ANDROID_ARCHIVE_TYPE
+      - name: Deploy Android App to ${{env.DEPLOY_TARGET}}
+        id: deploy-app
+        run: |
+          cd main-repo
+          bundle exec fastlane android deploy target:$DEPLOY_TARGET $RELEASE_NOTES
+      - name: Slack Notification
+        if: ${{ always() && github.event_name == 'push' }}
+        uses: act10ns/slack@v2
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
+          SLACK_MESSAGE_TITLE: Android App Deployment
+        with:
+          config: main-repo/.github/slack.yml
+          status: ${{ job.status }}
+          steps: ${{ '{}' }}

@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+yarn run check-license
+yarn run generate-translation-types
+yarn run lint
+yarn run check-types
+yarn run check-git-email
+yarn pretty-staged

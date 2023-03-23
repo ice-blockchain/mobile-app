@@ -1,0 +1,93 @@
+// SPDX-License-Identifier: ice License 1.0
+
+import {BarLabel} from '@components/BarGraph/components/BarLabel';
+import {COLORS} from '@constants/colors';
+import {formatNumber} from '@utils/numbers';
+import React, {useMemo} from 'react';
+import {StyleSheet, View} from 'react-native';
+import Animated, {
+  interpolate,
+  SharedValue,
+  useAnimatedStyle,
+} from 'react-native-reanimated';
+import {rem} from 'rn-units';
+
+type Props = {
+  maxValue: number;
+  value: number;
+  maxWidth: number;
+  sharedValue: SharedValue<number>;
+  doAnimate: boolean;
+};
+
+export const Bar = ({
+  maxValue,
+  maxWidth,
+  value,
+  sharedValue,
+  doAnimate,
+}: Props) => {
+  const isLabelOutside = value / maxValue < 0.2;
+  const width = useMemo(
+    () => maxWidth * (value / maxValue),
+    [maxValue, maxWidth, value],
+  );
+  const animatedStyle = useAnimatedStyle(() => ({
+    transform: [
+      {translateX: interpolate(sharedValue.value, [-1, 0], [-width, 0])},
+    ],
+  }));
+  const backgroundColor = useMemo(() => {
+    const valuePercentage = Math.floor((value / maxValue) * 100);
+    const red = 100 - Math.round((60 * valuePercentage) / 100);
+    const green = 200 - Math.round((90 * valuePercentage) / 100);
+    return StyleSheet.create({
+      // eslint-disable-next-line react-native/no-unused-styles
+      current: {
+        backgroundColor: `rgba(${red},${green},255,1)`,
+      },
+    });
+  }, [value, maxValue]);
+
+  if (!value) {
+    return null;
+  }
+
+  const barLabel = formatNumber(value, {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 1,
+    notation: 'compact',
+  });
+
+  return (
+    <View style={styles.container}>
+      <Animated.View
+        style={[
+          styles.bar,
+          backgroundColor.current,
+          doAnimate && animatedStyle,
+          {width},
+        ]}>
+        {!isLabelOutside && <BarLabel value={barLabel} color={COLORS.white} />}
+      </Animated.View>
+      {isLabelOutside && (
+        <BarLabel value={barLabel} color={COLORS.primaryLight} />
+      )}
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    flex: 1,
+    overflow: 'hidden',
+    borderRadius: rem(10),
+  },
+  bar: {
+    height: rem(24),
+    borderRadius: rem(10),
+    justifyContent: 'center',
+    alignItems: 'flex-end',
+  },
+});
