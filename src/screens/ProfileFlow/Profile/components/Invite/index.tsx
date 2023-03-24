@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {InviteButton} from '@components/InviteButton';
+import {Touchable} from '@components/Touchable';
 import {LINKS} from '@constants/links';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {BorderedInfoIcon} from '@svg/BorderedInfoIcon';
@@ -8,14 +9,7 @@ import {t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
-import {
-  Pressable,
-  StyleProp,
-  StyleSheet,
-  Text,
-  View,
-  ViewStyle,
-} from 'react-native';
+import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -27,7 +21,7 @@ export const Invite = memo(({style}: Props) => (
     <InviteButton />
     <Text style={styles.text}>
       {t('profile.invite_friends_engage')}
-      <Pressable
+      <Touchable
         style={styles.infoButton}
         onPress={() =>
           openLinkWithInAppBrowser({
@@ -35,7 +29,7 @@ export const Invite = memo(({style}: Props) => (
           })
         }>
         <BorderedInfoIcon />
-      </Pressable>
+      </Touchable>
     </Text>
   </View>
 ));
