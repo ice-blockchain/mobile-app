@@ -1,7 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-// SPDX-License-Identifier: BUSL-1.1
-
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import teamEmptyImage from '@screens/Team/assets/images/teamEmpty.png';
 import {t} from '@translations/i18n';
