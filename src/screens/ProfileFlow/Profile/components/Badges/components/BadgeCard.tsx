@@ -27,8 +27,8 @@ import {rem} from 'rn-units';
 type Props = {
   title: string;
   category: BadgeType;
-  progressText: string;
-  progressValue: number;
+  index: number;
+  lastIndex: number;
   hidden?: boolean;
   isProfilePrivacyEditMode?: boolean;
   style?: StyleProp<ViewStyle>;
@@ -38,8 +38,8 @@ export const BadgeCard = memo(
   ({
     title,
     category,
-    progressText,
-    progressValue,
+    index,
+    lastIndex,
     hidden = false,
     isProfilePrivacyEditMode = false,
     style,
@@ -62,6 +62,11 @@ export const BadgeCard = memo(
     const inactiveImage = `${category}0_achieved_false` as const;
     const ActiveImage = Images.badges[image];
     const InactiveImage = Images.badges[inactiveImage];
+
+    const value = index + 1;
+    const total = lastIndex + 1;
+
+    const progressValue = (value * 100) / total;
 
     return (
       <Touchable onPress={onBadgePress}>
@@ -102,7 +107,12 @@ export const BadgeCard = memo(
                   adjustsFontSizeToFit={true}>
                   {categoryTranslation}
                 </Text>
-                <Text style={styles.progressText}>{progressText}</Text>
+                <Text style={styles.progressText}>
+                  {t('profile.progress_text', {
+                    value,
+                    total,
+                  })}
+                </Text>
               </View>
             </>
           )}

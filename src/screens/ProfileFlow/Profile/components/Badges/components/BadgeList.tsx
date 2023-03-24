@@ -8,7 +8,6 @@ import {
   BadgeCardSkeleton,
 } from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeCard';
 import {isPrivacyInfoShownSelector} from '@store/modules/Account/selectors';
-import {t} from '@translations/i18n';
 import React, {useCallback} from 'react';
 import {FlatList, ListRenderItem, StyleSheet} from 'react-native';
 import {useSelector} from 'react-redux';
@@ -39,16 +38,13 @@ export const BadgeList = ({
         return <BadgeCardSkeleton />;
       }
 
-      const value = item.index + 1;
-      const total = item.lastIndex + 1;
-
       return (
         <BadgeCard
           style={index === 0 && styles.firstItem}
           title={item.name}
           category={item.type}
-          progressText={t('profile.progress_text', {value, total})}
-          progressValue={(value * 100) / total}
+          index={item.index}
+          lastIndex={item.lastIndex}
           hidden={hidden}
           isProfilePrivacyEditMode={isProfilePrivacyEditMode}
         />
