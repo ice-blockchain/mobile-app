@@ -11,7 +11,6 @@ import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, ImageSourcePropType, StyleSheet, Text, View} from 'react-native';
-import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -95,16 +94,6 @@ export const CurrentRoleCard = ({
     </View>
   );
 };
-
-export const CurrentRoleSkeleton = () => (
-  <SkeletonPlaceholder>
-    <View style={styles.outerContainer}>
-      <View style={styles.innerContainer}>
-        <View style={styles.container} />
-      </View>
-    </View>
-  </SkeletonPlaceholder>
-);
 
 const styles = StyleSheet.create({
   container: {
