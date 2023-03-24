@@ -22,7 +22,7 @@ type Props = {
 
 const NUMBER_OF_SKELETONS = 5;
 
-export const BadgeList = ({
+export const BadgeSummariesList = ({
   loading,
   data,
   isProfilePrivacyEditMode,

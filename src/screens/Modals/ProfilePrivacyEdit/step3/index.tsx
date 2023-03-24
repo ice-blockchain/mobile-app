@@ -7,7 +7,7 @@ import {useNavigation} from '@react-navigation/native';
 import {CancelButton} from '@screens/Modals/ProfilePrivacyEdit/components/CancelButton';
 import {Description} from '@screens/Modals/ProfilePrivacyEdit/components/Description';
 import {NextButton} from '@screens/Modals/ProfilePrivacyEdit/components/NextButton';
-import {BadgeList} from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeList';
+import {BadgeSummariesList} from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeSummariesList';
 import {userSelector} from '@store/modules/Account/selectors';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {t} from '@translations/i18n';
@@ -36,7 +36,7 @@ export const ProfilePrivacyEditStep3 = () => {
           description={t('profile_privacy_edit.step3.description')}
         />
         <View style={styles.badgesContainer}>
-          <BadgeList
+          <BadgeSummariesList
             isProfilePrivacyEditMode
             loading={false}
             data={badgesSummary}

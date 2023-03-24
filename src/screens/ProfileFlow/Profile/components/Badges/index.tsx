@@ -5,7 +5,7 @@ import {SectionHeader} from '@components/SectionHeader';
 import {ProfileTabStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {BadgeList} from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeList';
+import {BadgeSummariesList} from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeSummariesList';
 import {userSelector} from '@store/modules/Account/selectors';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {t} from '@translations/i18n';
@@ -45,7 +45,7 @@ export const Badges = memo(({user}: Props) => {
         onActionPress={onViewAllPress}
         style={styles.header}
       />
-      <BadgeList
+      <BadgeSummariesList
         loading={!badgesSummary || badgesSummary.length === 0}
         user={user}
         data={badgesSummary}
