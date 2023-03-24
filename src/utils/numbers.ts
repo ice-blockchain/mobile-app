@@ -71,7 +71,3 @@ export function formatNumberString(input: string, fractionDigits: number = 2) {
     (decimals ?? '').substring(0, fractionDigits).padEnd(fractionDigits, '0')
   );
 }
-
-export function thousandsSeparator(value: number) {
-  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-}

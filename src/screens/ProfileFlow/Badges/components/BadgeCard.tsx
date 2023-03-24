@@ -7,7 +7,7 @@ import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
 import {BadgeProgress} from '@screens/ProfileFlow/Badges/components/BadgeCardProgress';
 import {t} from '@translations/i18n';
-import {formatNumber, thousandsSeparator} from '@utils/numbers';
+import {formatNumber} from '@utils/numbers';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -42,57 +42,20 @@ export const BadgeCard = ({
 
   let description = '';
 
-  if (type === 'level') {
-    if (achievingRange.fromInclusive && achievingRange.toInclusive) {
-      description = `${t(`profile.badge_types.${type}.description`)} ${
-        achievingRange.fromInclusive
-      }-${achievingRange.toInclusive}`;
-    }
-    if (!achievingRange?.toInclusive && achievingRange?.fromInclusive) {
-      description = `${t(`profile.badge_types.${type}.description`)} ${
-        achievingRange?.fromInclusive - 1
-      }+`;
-    }
-    if (!achievingRange?.fromInclusive && achievingRange?.toInclusive) {
-      description = `${t(`profile.badge_types.${type}.description`)} < ${
-        achievingRange?.toInclusive + 1
-      } `;
-    }
-  } else if (type === 'coin') {
-    if (achievingRange.fromInclusive && achievingRange.toInclusive) {
-      description = `${thousandsSeparator(
-        achievingRange.fromInclusive,
-      )}-${thousandsSeparator(achievingRange.toInclusive)} ${t(
-        `profile.badge_types.${type}.description`,
-      )}`;
-    }
-    if (!achievingRange?.toInclusive && achievingRange?.fromInclusive) {
-      description = `${thousandsSeparator(
-        achievingRange?.fromInclusive - 1,
-      )}+ ${t(`profile.badge_types.${type}.description`)}`;
-    }
-    if (!achievingRange?.fromInclusive && achievingRange?.toInclusive) {
-      description = `< ${thousandsSeparator(
-        achievingRange?.toInclusive + 1,
-      )} ${t(`profile.badge_types.${type}.description`)}`;
-    }
-  } else {
-    if (achievingRange.fromInclusive && achievingRange.toInclusive) {
-      description = `${achievingRange.fromInclusive}-${
-        achievingRange.toInclusive
-      } ${t(`profile.badge_types.${type}.description`)}`;
-    }
-    if (!achievingRange?.toInclusive && achievingRange?.fromInclusive) {
-      // TODO: check plus
-      description = `${achievingRange?.fromInclusive - 1}+ ${t(
-        `profile.badge_types.${type}.description`,
-      )}`;
-    }
-    if (!achievingRange?.fromInclusive && achievingRange?.toInclusive) {
-      description = `< ${achievingRange?.toInclusive + 1} ${t(
-        `profile.badge_types.${type}.description`,
-      )}`;
-    }
+  if (achievingRange.fromInclusive && achievingRange.toInclusive) {
+    description = `${achievingRange.fromInclusive}-${
+      achievingRange.toInclusive
+    } ${t(`profile.badge_types.${type}.description`)}`;
+  }
+  if (!achievingRange?.toInclusive && achievingRange?.fromInclusive) {
+    description = `${achievingRange?.fromInclusive - 1}+ ${t(
+      `profile.badge_types.${type}.description`,
+    )}`;
+  }
+  if (!achievingRange?.fromInclusive && achievingRange?.toInclusive) {
+    description = `< ${achievingRange?.toInclusive + 1} ${t(
+      `profile.badge_types.${type}.description`,
+    )}`;
   }
 
   const image = Images.badges[imagePath];
