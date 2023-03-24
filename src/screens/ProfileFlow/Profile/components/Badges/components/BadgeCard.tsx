@@ -56,7 +56,7 @@ export const BadgeCard = memo(
       }
     }, [category, isProfilePrivacyEditMode, onUpdate, navigation]);
 
-    const categoryTransaltion = t(`profile.badge_types.${category}.title`);
+    const categoryTranslation = t(`profile.badge_types.${category}.title`);
 
     const image = `${category}0_achieved_true` as const;
     const inactiveImage = `${category}0_achieved_false` as const;
@@ -100,7 +100,7 @@ export const BadgeCard = memo(
                   style={styles.categoryText}
                   numberOfLines={1}
                   adjustsFontSizeToFit={true}>
-                  {categoryTransaltion}
+                  {categoryTranslation}
                 </Text>
                 <Text style={styles.progressText}>{progressText}</Text>
               </View>
