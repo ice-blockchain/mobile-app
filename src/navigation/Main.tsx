@@ -8,7 +8,6 @@ import {HomeIcon} from '@navigation/components/MainTabBar/components/Icons/HomeI
 import {NewsIcon} from '@navigation/components/MainTabBar/components/Icons/NewsIcon';
 import {ProfileIcon} from '@navigation/components/MainTabBar/components/Icons/ProfileIcon';
 import {TeamIcon} from '@navigation/components/MainTabBar/components/Icons/TeamIcon';
-import {useUpdateRequiredListener} from '@navigation/hooks/useUpdateRequiredListener';
 import {modalOptions, screenOptions, tabOptions} from '@navigation/options';
 import {
   BottomTabBarProps,
@@ -315,7 +314,6 @@ export function MainNavigator() {
   //    If so, then it should be called here instead of Router.tsx or even better, via sagas
   //    + calling in Router.tsx leads to splash screen hanging if user doesn't have internet connection during the app opening
   // useGetstreamListener();
-  useUpdateRequiredListener();
   return (
     <MainStack.Navigator screenOptions={screenOptions}>
       <MainStack.Screen name="MainTabs" component={MainTabs} />

@@ -146,7 +146,7 @@ export function* updateDeviceMetadataSaga(action: Action) {
       yield put(
         DeviceActions.UPDATE_DEVICE_METADATA.FAILED.create(errorMessage),
       );
+      throw error;
     }
-    throw error;
   }
 }
