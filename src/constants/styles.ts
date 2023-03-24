@@ -25,6 +25,7 @@ export const commonStyles = StyleSheet.create({
       }
     : {elevation: 4},
   flexOne: {flex: 1},
+  darkText: {color: COLORS.primaryDark},
 });
 
 export const SMALL_BUTTON_HIT_SLOP = {top: 4, left: 4, bottom: 4, right: 4};

@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
+import {commonStyles} from '@constants/styles';
 import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {formatNumberString, parseNumber} from '@utils/numbers';
@@ -26,10 +27,8 @@ export const TotalBalanceValue = ({style, darkMode}: Props) => {
     <FormattedNumber
       containerStyle={style}
       number={animatedBalanceSummary}
-      bodyStyle={darkMode ? styles.bodyStyleDarkMode : styles.bodyStyle}
-      decimalsStyle={
-        darkMode ? styles.decimalsStyleDarkMode : styles.decimalsStyle
-      }
+      bodyStyle={[styles.bodyStyle, darkMode && commonStyles.darkText]}
+      decimalsStyle={[styles.decimalsStyle, darkMode && commonStyles.darkText]}
       trim
     />
   );
@@ -39,16 +38,9 @@ const styles = StyleSheet.create({
   bodyStyle: {
     ...font(32, 38.4, 'black'),
   },
-  bodyStyleDarkMode: {
-    ...font(32, 38.4, 'black', 'primaryDark'),
-  },
 
   decimalsStyle: {
     alignSelf: 'flex-start',
     ...font(15, 20, 'semibold'),
-  },
-  decimalsStyleDarkMode: {
-    alignSelf: 'flex-start',
-    ...font(15, 20, 'semibold', 'primaryDark'),
   },
 });

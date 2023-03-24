@@ -44,29 +44,30 @@ export const Engagement = memo(({darkMode}: Props) => {
     <View style={[commonStyles.baseSubScreen, styles.container]}>
       <View style={styles.titleContainer}>
         <MiningHammerIcon color={color} />
-        <Text style={[styles.engagementText, darkMode && styles.darkModeText]}>
+        <Text
+          style={[styles.engagementText, darkMode && commonStyles.darkText]}>
           {t('home.engagement.title')}
         </Text>
       </View>
       <View style={styles.valuesContainer}>
         <View style={styles.titleValueContainer}>
-          <Text style={[styles.title, darkMode && styles.darkModeText]}>
+          <Text style={[styles.title, darkMode && commonStyles.darkText]}>
             {t('home.engagement.streak')}
           </Text>
-          <Text style={[styles.value, darkMode && styles.darkModeText]}>
+          <Text style={[styles.value, darkMode && commonStyles.darkText]}>
             {animatedMiningSummaryMiningStreak}
           </Text>
         </View>
         <View style={[styles.titleValueContainer, styles.daysOff]}>
-          <Text style={[styles.title, darkMode && styles.darkModeText]}>
+          <Text style={[styles.title, darkMode && commonStyles.darkText]}>
             {t('home.engagement.days_off')}
           </Text>
-          <Text style={[styles.value, darkMode && styles.darkModeText]}>
+          <Text style={[styles.value, darkMode && commonStyles.darkText]}>
             {animatedMiningSummaryRemainingFreeMiningSessions}
           </Text>
         </View>
       </View>
-      <Text style={darkMode ? styles.descriptionDarkMode : styles.description}>
+      <Text style={[styles.description, darkMode && commonStyles.darkText]}>
         {t('home.engagement.description')}
       </Text>
     </View>
@@ -83,9 +84,6 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'flex-end',
-  },
-  darkModeText: {
-    color: COLORS.primaryDark,
   },
   engagementText: {
     marginTop: rem(30),
@@ -106,12 +104,6 @@ const styles = StyleSheet.create({
     marginTop: rem(9),
     ...font(11, 13, 'regular'),
     marginHorizontal: rem(40),
-    textAlign: 'center',
-  },
-  descriptionDarkMode: {
-    marginTop: rem(9),
-    ...font(11, 13, 'regular', 'primaryDark'),
-    marginHorizontal: rem(20),
     textAlign: 'center',
   },
   valuesContainer: {

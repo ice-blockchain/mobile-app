@@ -41,7 +41,8 @@ export const Wallet = memo(({darkMode}: Props) => {
 
   return (
     <View style={[commonStyles.baseSubScreen, styles.container]}>
-      <Text style={[styles.balanceLabelText, darkMode && styles.darkModeText]}>
+      <Text
+        style={[styles.balanceLabelText, darkMode && commonStyles.darkText]}>
         {t('home.wallet.balance')}
       </Text>
       <View style={styles.balanceContainer}>
@@ -115,9 +116,6 @@ const styles = StyleSheet.create({
   balanceLabelText: {
     marginTop: rem(32),
     ...font(12, 14.4, 'semibold', 'white'),
-  },
-  darkModeText: {
-    color: COLORS.primaryDark,
   },
   balanceContainer: {
     paddingHorizontal: INFO_ICON_SIZE - rem(2),

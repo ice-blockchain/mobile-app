@@ -51,7 +51,8 @@ export const MiningRate = memo(({darkMode}: Props) => {
     <View style={[commonStyles.baseSubScreen, styles.container]}>
       <View style={styles.titleContainer}>
         <MiningHammerIcon color={color} />
-        <Text style={[styles.miningRateText, darkMode && styles.darkModeText]}>
+        <Text
+          style={[styles.miningRateText, darkMode && commonStyles.darkText]}>
           {t('home.mining_rate.title')}
         </Text>
       </View>
@@ -84,7 +85,7 @@ export const MiningRate = memo(({darkMode}: Props) => {
         )}
       </View>
       <View style={styles.baseContainer}>
-        <Text style={[styles.baseTitleText, darkMode && styles.darkModeText]}>
+        <Text style={[styles.baseTitleText, darkMode && commonStyles.darkText]}>
           {t('home.mining_rate.base')}
         </Text>
         <MiningRateValue
@@ -152,9 +153,6 @@ const styles = StyleSheet.create({
     marginTop: rem(25),
     flexDirection: 'row',
     alignItems: 'flex-end',
-  },
-  darkModeText: {
-    color: COLORS.primaryDark,
   },
   miningRateText: {
     ...font(12, 14, 'semibold'),
