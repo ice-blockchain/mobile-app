@@ -46,6 +46,8 @@ export type HomeWalkthroughStepKey =
 
 export const HOME_WALKTHROUGH_SCREEN_NAME = 'Home';
 
+const DELAY = 500;
+
 export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughStepKey>[] =
   [
     {
@@ -165,7 +167,7 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
       description: t('walkthrough.home.wallet.description'),
       before: function* () {
         yield navigate({name: 'Home', params: {activePagerCard: 'wallet'}});
-        yield delay(500);
+        yield delay(DELAY);
       },
     },
     {
@@ -182,7 +184,7 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
       description: t('walkthrough.home.earning.description'),
       before: function* () {
         yield navigate({name: 'Home', params: {activePagerCard: 'earning'}});
-        yield delay(500);
+        yield delay(DELAY);
       },
     },
     {
@@ -199,7 +201,7 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
       description: t('walkthrough.home.engagement.description'),
       before: function* () {
         yield navigate({name: 'Home', params: {activePagerCard: 'engagement'}});
-        yield delay(500);
+        yield delay(DELAY);
       },
     },
     {
@@ -212,7 +214,7 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
       description: t('walkthrough.home.balancehistory.description'),
       before: function* () {
         yield navigate({name: 'Home', params: {activePagerCard: 'wallet'}});
-        yield delay(500);
+        yield delay(DELAY);
       },
     },
     {
@@ -228,7 +230,7 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
           name: 'Home',
           params: {activeOverviewCard: 'profile', scrollTo: 'overview'},
         });
-        yield delay(500);
+        yield delay(DELAY);
       },
     },
     {
@@ -244,7 +246,7 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
           name: 'Home',
           params: {activeOverviewCard: 'referral', scrollTo: 'overview'},
         });
-        yield delay(500);
+        yield delay(DELAY);
       },
     },
     {
@@ -258,7 +260,7 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
           name: 'Home',
           params: {activeOverviewCard: 'adoption', scrollTo: 'overview'},
         });
-        yield delay(500);
+        yield delay(DELAY);
       },
     },
     {
@@ -274,7 +276,7 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
           name: 'Home',
           params: {scrollTo: 'overview'},
         });
-        yield delay(500);
+        yield delay(DELAY);
       },
     },
   ];

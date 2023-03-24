@@ -95,7 +95,7 @@ export const useTabBarWalkthrough = ({
 };
 
 const INNER_CONTAINER_SIZE = rem(40);
-const OUTER_CONTAINER_SIZE = rem(40) + rem(12) * 2;
+const OUTER_CONTAINER_SIZE = INNER_CONTAINER_SIZE + rem(12) * 2;
 
 const styles = StyleSheet.create({
   innerContainer: {
