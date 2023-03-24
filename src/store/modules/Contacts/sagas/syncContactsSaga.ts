@@ -12,6 +12,7 @@ import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors'
 import {waitForSelector} from '@store/utils/sagas/effects';
 import {getErrorMessage} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
+import {runInChunks} from '@utils/promise';
 import {Contact, getAll} from 'react-native-contacts';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
@@ -42,6 +43,7 @@ export function* syncContactsSaga() {
     const phoneNumberHashes = new Set(user.agendaPhoneNumberHashes?.split(','));
 
     const contacts: SagaReturnType<typeof getAll> = yield call(getAll);
+
     const agendaPhoneNumbers: string[] = [];
     const filteredContacts: Contact[] = contacts
       .map<Contact | null>((contact: Contact) => {
@@ -82,8 +84,10 @@ export function* syncContactsSaga() {
       .filter(notNull)
       .sort(contactsComparator);
 
-    const agendaPhoneNumberHashes: string[] = yield Promise.all(
-      agendaPhoneNumbers.map(hashPhoneNumber),
+    const agendaPhoneNumberHashes: string[] = yield runInChunks(
+      agendaPhoneNumbers,
+      hashPhoneNumber,
+      500,
     );
 
     const numberOfHashes = phoneNumberHashes.size;
