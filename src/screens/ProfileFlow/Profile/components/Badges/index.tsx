@@ -45,7 +45,11 @@ export const Badges = memo(({user}: Props) => {
         onActionPress={onViewAllPress}
         style={styles.header}
       />
-      <BadgeList loading={!!badgesSummary} user={user} data={badgesSummary} />
+      <BadgeList
+        loading={!badgesSummary || badgesSummary.length === 0}
+        user={user}
+        data={badgesSummary}
+      />
     </>
   );
 });
