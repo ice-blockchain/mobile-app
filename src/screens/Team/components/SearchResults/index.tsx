@@ -14,14 +14,11 @@ import {
   IceFriendsTitle,
   SectionHeader,
 } from '@screens/Team/components/Contacts/components/ContactsList/components/SectionHeader';
-import {SearchPlaceholder} from '@screens/Team/components/SearchResults/components/SearchPlaceholder';
+import {EmptyList} from '@screens/Team/components/SearchResults/components/EmptyList';
 import {
   SearchResultsSection,
   useGetSearchResultsSegments,
 } from '@screens/Team/components/SearchResults/hooks/useGetSearchResultsSegments';
-import {LogoIcon} from '@svg/LogoIcon';
-import {MagnifierZoomOutEmptyIcon} from '@svg/MagnifierZoomOutEmptyIcon';
-import {MagnifierZoomOutIcon} from '@svg/MagnifierZoomOutIcon';
 import {t} from '@translations/i18n';
 import {hapticFeedback} from '@utils/device';
 import React, {memo, useCallback} from 'react';
@@ -90,31 +87,6 @@ export const SearchResults = memo(() => {
       [onInvitePress],
     );
 
-  const renderEmptyList = useCallback(() => {
-    if (!searchQuery) {
-      return (
-        <SearchPlaceholder
-          Icon={<MagnifierZoomOutIcon width={rem(28)} height={rem(28)} />}
-          label={t('search.empty')}
-        />
-      );
-    }
-    if (loading) {
-      return (
-        <SearchPlaceholder
-          Icon={<LogoIcon width={rem(69)} height={rem(69)} />}
-          label={t('search.loading')}
-        />
-      );
-    }
-    return (
-      <SearchPlaceholder
-        Icon={<MagnifierZoomOutEmptyIcon width={rem(28)} height={rem(28)} />}
-        label={t('search.nothing_is_found')}
-      />
-    );
-  }, [loading, searchQuery]);
-
   const renderSectionHeader = useCallback(
     ({section}: {section: SearchResultsSection}) => (
       <SectionHeader title={getTitleByUserConnection(section.key)} />
@@ -131,18 +103,22 @@ export const SearchResults = memo(() => {
       ]}
       entering={FadeIn}
       exiting={FadeOut}>
-      <BottomSheetSectionList
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={tabbarOffset.current}
-        keyboardDismissMode={'on-drag'}
-        renderItem={renderItem}
-        renderSectionHeader={renderSectionHeader}
-        ListEmptyComponent={renderEmptyList}
-        refreshing={refreshing}
-        onRefresh={searchQuery ? refresh : () => {}}
-        sections={sections}
-        initialNumToRender={VIEW_PORT_ITEMS_SIZE}
-      />
+      {sections.length === 0 ? (
+        <EmptyList loading={loading} hasSearchQuery={!!searchQuery} />
+      ) : (
+        <BottomSheetSectionList
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={tabbarOffset.current}
+          keyboardDismissMode={'on-drag'}
+          renderItem={renderItem}
+          renderSectionHeader={renderSectionHeader}
+          refreshing={refreshing}
+          onRefresh={searchQuery ? refresh : null}
+          sections={sections}
+          initialNumToRender={VIEW_PORT_ITEMS_SIZE}
+          windowSize={11}
+        />
+      )}
     </Animated.View>
   );
 });
