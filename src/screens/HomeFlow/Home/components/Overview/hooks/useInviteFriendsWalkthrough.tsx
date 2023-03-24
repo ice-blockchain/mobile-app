@@ -11,15 +11,15 @@ import {screenWidth} from 'rn-units';
 const CONTAINER_PADDING = SCREEN_SIDE_OFFSET / 2;
 
 export const useInviteFriendsWalkthrough = () => {
-  const elementRef = useRef<View>(null);
+  const inviteFriendsRef = useRef<View>(null);
 
   const {setWalkthroughElementData} = useSetWalkthroughElementData();
 
-  const onElementLayout = () => {
+  const onInviteFriendsLayout = () => {
     setWalkthroughElementData({
       stepKey: 'inviteFriends',
       elementData: {
-        getRef: () => elementRef,
+        getRef: () => inviteFriendsRef,
         getTop: measurements => measurements.pageY - CONTAINER_PADDING * 2,
         render: () => (
           <WalkthroughElementContainer
@@ -33,8 +33,8 @@ export const useInviteFriendsWalkthrough = () => {
   };
 
   return {
-    onElementLayout,
-    elementRef,
+    onInviteFriendsLayout,
+    inviteFriendsRef,
   };
 };
 

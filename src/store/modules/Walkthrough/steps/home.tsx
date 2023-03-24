@@ -44,6 +44,8 @@ export type HomeWalkthroughStepKey =
   | 'balanceHistory'
   | 'achievements';
 
+export const HOME_WALKTHROUGH_SCREEN_NAME = 'Home';
+
 export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughStepKey>[] =
   [
     {

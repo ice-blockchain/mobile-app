@@ -5,14 +5,11 @@ import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
 import {MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
-import {
-  ContextualMenuButton,
-  HomeTabStackParamList,
-  MainStackParamList,
-} from '@navigation/Main';
+import {HomeTabStackParamList, MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {useMenuButtonWalkthrough} from '@screens/HomeFlow/Home/components/Header/components/hooks/useMenuButtonWalkthrough';
+import {ContextualMenuButton} from '@screens/Modals/ContextualMenu/types';
 import {CandyBoxMenuIcon} from '@svg/CandyBoxMenuIcon';
 import {ChatBubblesIcon} from '@svg/ChatBubblesIcon';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';

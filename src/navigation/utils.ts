@@ -21,6 +21,10 @@ export const getCurrentRoute = async () => {
   return navigationRef.getCurrentRoute();
 };
 
+export const getCurrentRouteSync = () => {
+  return navigationRef.getCurrentRoute();
+};
+
 export const removeScreenByName = async (screenName: string) => {
   await navigationReady;
   const currentStack = navigationRef.getState();

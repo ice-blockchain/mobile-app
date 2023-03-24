@@ -6,8 +6,6 @@ import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
-import {ActiveOverviewCard, HomeTabStackParamList} from '@navigation/Main';
-import {RouteProp, useRoute} from '@react-navigation/native';
 import {AdoptionCard} from '@screens/HomeFlow/Home/components/Overview/components/AdoptionCard';
 import {
   CARD_MARGIN_RIGHT_WIDTH,
@@ -19,14 +17,16 @@ import {LevelCard} from '@screens/HomeFlow/Home/components/Overview/components/L
 import {OnlineUsersHistory} from '@screens/HomeFlow/Home/components/Overview/components/OnlineUsersHistory';
 import {ReferralAcquisitionHistory} from '@screens/HomeFlow/Home/components/Overview/components/ReferralAcquisitionHistory';
 import {ReferralsCard} from '@screens/HomeFlow/Home/components/Overview/components/ReferralsCard';
+import {OVERSCROLL} from '@screens/HomeFlow/Home/components/Overview/constants';
 import {useAdoptionCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useAdoptionCardWalkthrough';
 import {useCardTranslateY} from '@screens/HomeFlow/Home/components/Overview/hooks/useCardTranslateY';
+import {useHandleActiveOverviewCardParam} from '@screens/HomeFlow/Home/components/Overview/hooks/useHandleActiveOverviewCardParam';
 import {useInviteFriendsWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useInviteFriendsWalkthrough';
 import {useProfileCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useProfileCardWalkthrough';
 import {useReferralsCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useReferralsCardWalkthrough';
 import {useScrollCollapse} from '@screens/HomeFlow/Home/components/Overview/hooks/useScrollCollapse';
 import {t} from '@translations/i18n';
-import React, {memo, useEffect, useRef, useState} from 'react';
+import React, {memo, useRef, useState} from 'react';
 import {
   Image,
   LayoutChangeEvent,
@@ -54,43 +54,18 @@ type Props = {
 const SCROLL_TOP_MARGIN = rem(16);
 const SCROLL_BOTTOM_PADDING = rem(8);
 const SCROLL_BOTTOM_MARGIN = rem(24);
-const OVERSCROLL = isIOS ? 1000 : 0;
-
-export function getActiveOffset(
-  activeOverviewCard: ActiveOverviewCard | undefined,
-): number {
-  if (activeOverviewCard != null) {
-    switch (activeOverviewCard) {
-      case 'profile':
-        return OVERSCROLL;
-      case 'referral':
-        return OVERSCROLL + CARD_WIDTH - CARD_MARGIN_RIGHT_WIDTH;
-      case 'adoption':
-        return OVERSCROLL + CARD_WIDTH * 2 - CARD_MARGIN_RIGHT_WIDTH;
-    }
-  }
-  return 0;
-}
 
 export const Overview = memo(({translateY, topOffset}: Props) => {
   const adoptionFlipCardRef = useRef<FlipCardMethods>(null);
 
-  const scrollViewRef = useRef<Animated.ScrollView>(null);
-  const route = useRoute<RouteProp<HomeTabStackParamList, 'Home'>>();
-  useEffect(() => {
-    if (route.params?.activeOverviewCard && scrollViewRef.current) {
-      scrollViewRef.current.scrollTo({
-        x: getActiveOffset(route.params?.activeOverviewCard),
-        y: 0,
-        animated: true,
-      });
-    }
-  }, [route.params?.activeOverviewCard]);
+  const {scrollViewRef} = useHandleActiveOverviewCardParam();
 
   const {onProfileCardLayout, profileCardRef} = useProfileCardWalkthrough();
   const {onAdoptionCardLayout, adoptionCardRef} = useAdoptionCardWalkthrough();
   const {onReferralsCardLayout, referralsCardRef} =
     useReferralsCardWalkthrough();
+  const {onInviteFriendsLayout, inviteFriendsRef} =
+    useInviteFriendsWalkthrough();
 
   const [positionYInnerContent, setPositionYInnerContent] = useState(0);
 
@@ -114,8 +89,6 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
   const onLayoutContentContainer = (event: LayoutChangeEvent) => {
     setPositionYInnerContent(event.nativeEvent.layout.y);
   };
-
-  const {onElementLayout, elementRef} = useInviteFriendsWalkthrough();
 
   return (
     <>
@@ -173,7 +146,7 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
         </Animated.ScrollView>
       </Animated.View>
 
-      <View ref={elementRef} onLayout={onElementLayout}>
+      <View ref={inviteFriendsRef} onLayout={onInviteFriendsLayout}>
         <InviteButton />
       </View>
     </>

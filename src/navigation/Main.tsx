@@ -18,6 +18,11 @@ import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
 import {Home} from '@screens/HomeFlow/Home';
+import {
+  ActiveOverviewCard,
+  ActivePagerCard,
+  HomeTabScrollPosition,
+} from '@screens/HomeFlow/Home/types';
 import {Stats} from '@screens/HomeFlow/Stats';
 import {TopCountries} from '@screens/HomeFlow/TopCountries';
 import {TopMiners} from '@screens/HomeFlow/TopMiners';
@@ -27,6 +32,10 @@ import {InviteFriend} from '@screens/InviteFlow/InviteFriend';
 import {InviteShare} from '@screens/InviteFlow/InviteShare';
 import {ActionSheet} from '@screens/Modals/ActionSheet';
 import {ContextualMenu} from '@screens/Modals/ContextualMenu';
+import {
+  ContextualMenuButton,
+  Coordinates,
+} from '@screens/Modals/ContextualMenu/types';
 import {CountrySelect} from '@screens/Modals/CountrySelect';
 import {DateSelect} from '@screens/Modals/DateSelector';
 import {JoinTelegramPopUp} from '@screens/Modals/JoinTelegramPopUp';
@@ -55,7 +64,7 @@ import {ActiveTabActions, Tab} from '@store/modules/ActiveTab/actions';
 import {useSubscribeToPushNotifications} from '@store/modules/PushNotifications/hooks/useSubscribeToPushNotifications';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {WalkthroughStep} from '@store/modules/Walkthrough/types';
-import React, {ComponentType, ReactNode, RefObject} from 'react';
+import React, {ComponentType, RefObject} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
 import Animated from 'react-native-reanimated';
@@ -68,20 +77,6 @@ export type MainTabsParamList = {
   TeamTab: NavigatorScreenParams<TeamTabStackParamList> | undefined;
   NewsTab: NavigatorScreenParams<NewsTabStackParamList> | undefined;
   ProfileTab: NavigatorScreenParams<ProfileTabStackParamList> | undefined;
-};
-
-export type ContextualMenuButton = {
-  icon?: ReactNode;
-  label: string;
-  onPress: () => void;
-  id?: 'help' | 'staking' | 'notifications' | 'stats';
-};
-
-export type Coordinates = {
-  top?: number;
-  right?: number;
-  bottom?: number;
-  left?: number;
 };
 
 export type MainStackParamList = {
@@ -137,10 +132,6 @@ export type MainStackParamList = {
   ProfilePrivacyEditStep2: undefined;
   ProfilePrivacyEditStep3: undefined;
 };
-
-export type ActivePagerCard = 'wallet' | 'earning' | 'engagement';
-export type ActiveOverviewCard = 'profile' | 'referral' | 'adoption';
-export type HomeTabScrollPosition = 'overview';
 
 export type HomeTabStackParamList = {
   Home:

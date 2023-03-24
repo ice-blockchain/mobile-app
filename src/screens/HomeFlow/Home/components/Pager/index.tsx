@@ -3,12 +3,13 @@
 import {PagerIndicators} from '@components/PagerIndicators';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import {ActivePagerCard, HomeTabStackParamList} from '@navigation/Main';
+import {HomeTabStackParamList} from '@navigation/Main';
 import {RouteProp, useRoute} from '@react-navigation/native';
 import {Engagement} from '@screens/HomeFlow/Home/components/Pager/components/Engagement';
 import {MiningRate} from '@screens/HomeFlow/Home/components/Pager/components/MiningRate';
 import {Wallet} from '@screens/HomeFlow/Home/components/Pager/components/Wallet';
 import {usePagerCardsWalkthrough} from '@screens/HomeFlow/Home/components/Pager/hooks/usePagerCardsWalkthrough';
+import {ActivePagerCard} from '@screens/HomeFlow/Home/types';
 import React, {useEffect, useRef, useState} from 'react';
 import {PixelRatio} from 'react-native';
 import {StyleSheet, View} from 'react-native';

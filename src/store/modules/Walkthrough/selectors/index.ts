@@ -1,12 +1,23 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {getCurrentRouteSync} from '@navigation/utils';
 import {createSelector} from '@reduxjs/toolkit';
 import {userSelector} from '@store/modules/Account/selectors';
 import {Tab} from '@store/modules/ActiveTab/actions';
+import {activeTabSelector} from '@store/modules/ActiveTab/selectors';
 import {WALKTHROUGH_STEPS} from '@store/modules/Walkthrough/steps';
-import {HOME_WALKTHROUGH_STEPS} from '@store/modules/Walkthrough/steps/home';
-import {NEWS_WALKTHROUGH_STEPS} from '@store/modules/Walkthrough/steps/news';
-import {TEAM_WALKTHROUGH_STEPS} from '@store/modules/Walkthrough/steps/team';
+import {
+  HOME_WALKTHROUGH_SCREEN_NAME,
+  HOME_WALKTHROUGH_STEPS,
+} from '@store/modules/Walkthrough/steps/home';
+import {
+  NEWS_WALKTHROUGH_SCREEN_NAME,
+  NEWS_WALKTHROUGH_STEPS,
+} from '@store/modules/Walkthrough/steps/news';
+import {
+  TEAM_WALKTHROUGH_SCREEN_NAME,
+  TEAM_WALKTHROUGH_STEPS,
+} from '@store/modules/Walkthrough/steps/team';
 import {
   WalkthroughStep,
   WalkthroughStepKey,
@@ -15,24 +26,24 @@ import {RootState} from '@store/rootReducer';
 
 function getStepsByActiveTabAndScreenName({
   activeTab,
-  currentScreenName,
 }: {
   activeTab: Tab;
-  currentScreenName: string;
 }): WalkthroughStep[] {
+  const currentRoute = getCurrentRouteSync();
+  const currentScreenName = currentRoute?.name;
   switch (activeTab) {
     case 'home':
-      if (currentScreenName === 'Home') {
+      if (currentScreenName === HOME_WALKTHROUGH_SCREEN_NAME) {
         return HOME_WALKTHROUGH_STEPS;
       }
       break;
     case 'team':
-      if (currentScreenName === 'Team') {
+      if (currentScreenName === TEAM_WALKTHROUGH_SCREEN_NAME) {
         return TEAM_WALKTHROUGH_STEPS;
       }
       break;
     case 'news':
-      if (currentScreenName === 'News') {
+      if (currentScreenName === NEWS_WALKTHROUGH_SCREEN_NAME) {
         return NEWS_WALKTHROUGH_STEPS;
       }
       break;
@@ -45,17 +56,15 @@ export const walkthroughStepCandidatesSelector = createSelector(
     userSelector,
     (state: RootState) => state.walkthrough.stepElements,
     (state: RootState) => state.walkthrough.seenSteps,
-    (state: RootState) => state.activeTab.activeTab,
-    (state: RootState) => state.activeTab.currentScreenName,
+    activeTabSelector,
   ],
-  (user, stepElements, seenSteps, activeTab, currentScreenName) => {
+  (user, stepElements, seenSteps, activeTab) => {
     if (!user) {
       return [];
     }
 
     return getStepsByActiveTabAndScreenName({
       activeTab,
-      currentScreenName,
     }).reduce<WalkthroughStep[]>((result, step) => {
       const stepSeenVersion =
         user.clientData?.walkthroughProgress?.[step.key]?.version ?? 0;

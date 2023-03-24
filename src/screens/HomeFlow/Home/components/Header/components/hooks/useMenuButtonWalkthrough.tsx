@@ -2,11 +2,11 @@
 
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import {ContextualMenuButton} from '@navigation/Main';
 import {
   Menu,
   ROUNDED_TRIANGLE_OFFSET,
 } from '@screens/Modals/ContextualMenu/components/Menu';
+import {ContextualMenuButton} from '@screens/Modals/ContextualMenu/types';
 import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/useSetWalkthroughElementData';
 import {WalkthroughStepKey} from '@store/modules/Walkthrough/types';
 import {CandyBoxMenuIcon} from '@svg/CandyBoxMenuIcon';

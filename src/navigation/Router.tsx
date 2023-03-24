@@ -14,17 +14,16 @@ import {
   isRegistrationCompleteSelector,
   userSelector,
 } from '@store/modules/Account/selectors';
-import {ActiveTabActions} from '@store/modules/ActiveTab/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {useAppLoadedListener} from '@store/modules/AppCommon/hooks/useAppLoadedListener';
 import {useAppStateListener} from '@store/modules/AppCommon/hooks/useAppStateListener';
 import {appInitStateSelector} from '@store/modules/AppCommon/selectors';
 import {useOpenUrlListener} from '@store/modules/Linking/hooks/useOpenUrlListener';
 import {useInitNotifications} from '@store/modules/PushNotifications/hooks/useInitNotifications';
-import {WalkthroughActions} from '@store/modules/Walkthrough/actions';
+import {useDispatchRestartWalkthrough} from '@store/modules/Walkthrough/hooks/useDispatchRestartWalkthrough';
 import React, {useCallback, useEffect} from 'react';
 import RNBootSplash from 'react-native-bootsplash';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 function ActiveNavigator() {
   const user = useSelector(userSelector);
@@ -68,14 +67,11 @@ export function Router() {
     RNBootSplash.hide();
   }, []);
 
-  const dispatch = useDispatch();
+  const dispatchRestartWalkthrough = useDispatchRestartWalkthrough();
   const onRouteNameChange = useRouteNameChange({
-    onRouteChange: screenName => {
-      AnalyticsEventLogger.trackViewScreen({screenName});
-      dispatch(ActiveTabActions.SET_CURRENT_SCREEN.STATE.create(screenName));
-      if (screenName !== 'Walkthrough' && screenName !== 'PopUp') {
-        dispatch(WalkthroughActions.RESTART_WALKTHROUGH.STATE.create());
-      }
+    onRouteChange: ({newRouteName, prevRouteName}) => {
+      AnalyticsEventLogger.trackViewScreen({screenName: newRouteName});
+      dispatchRestartWalkthrough({newRouteName, prevRouteName});
     },
   });
   const onStateChange = useCallback(() => {

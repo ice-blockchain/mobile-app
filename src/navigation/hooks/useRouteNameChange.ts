@@ -4,7 +4,13 @@ import {getCurrentRoute} from '@navigation/utils';
 import {useCallback, useRef} from 'react';
 
 type Props = {
-  onRouteChange?: (newRouteName: string) => void;
+  onRouteChange?: ({
+    newRouteName,
+    prevRouteName,
+  }: {
+    newRouteName: string;
+    prevRouteName?: string;
+  }) => void;
 };
 
 export function useRouteNameChange({onRouteChange}: Props) {
@@ -16,7 +22,10 @@ export function useRouteNameChange({onRouteChange}: Props) {
     if (currentRoute?.name && previousRouteName !== currentRoute.name) {
       routeNameRef.current = currentRoute.name;
       if (onRouteChange) {
-        onRouteChange(routeNameRef.current);
+        onRouteChange({
+          newRouteName: routeNameRef.current,
+          prevRouteName: previousRouteName,
+        });
       }
     }
   }, [onRouteChange]);
