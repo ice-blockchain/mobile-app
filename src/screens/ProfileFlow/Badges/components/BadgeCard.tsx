@@ -7,7 +7,7 @@ import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
 import {BadgeProgress} from '@screens/ProfileFlow/Badges/components/BadgeCardProgress';
 import {t} from '@translations/i18n';
-import {thousandsSeparator} from '@utils/numbers';
+import {formatNumber, thousandsSeparator} from '@utils/numbers';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -97,6 +97,13 @@ export const BadgeCard = ({
 
   const image = Images.badges[imagePath];
 
+  const percentageProgress =
+    percentageOfUsersInProgress > 100
+      ? 100
+      : formatNumber(percentageOfUsersInProgress, {
+          maximumFractionDigits: 2,
+        });
+
   return (
     <>
       {connector.top && (
@@ -109,7 +116,7 @@ export const BadgeCard = ({
         title={name}
         description={description}
         image={image}
-        renderBody={() => <BadgeProgress value={percentageOfUsersInProgress} />}
+        renderBody={() => <BadgeProgress value={Number(percentageProgress)} />}
         containerStyle={styles.containerActive}
       />
     </>
