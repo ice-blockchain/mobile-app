@@ -31,7 +31,7 @@ export const MenuButton = memo(() => {
 
   const buttons: ContextualMenuButton[] = useMemo(() => {
     return [
-      // TODO: Hide until functionality is ready
+      // TODO: Hide until notifications functionality is ready
       //
       // import {BellIcon} from '@svg/BellIcon';
       //
@@ -74,7 +74,7 @@ export const MenuButton = memo(() => {
 
   const {onElementLayout, elementRef} = useMenuButtonWalkthrough({buttons});
 
-  // TODO: Hide until functionality is ready
+  // TODO: Hide until notifications functionality is ready
   // const badgeCount = useSelector(notificationsCountSelector);
   const badgeCount = 0;
 

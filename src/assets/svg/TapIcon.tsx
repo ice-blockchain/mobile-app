@@ -3,10 +3,11 @@
 import {COLORS} from '@constants/colors';
 import * as React from 'react';
 import Svg, {Path, SvgProps} from 'react-native-svg';
+import {rem} from 'rn-units';
 
 export const TapIcon = ({
-  width = 64,
-  height = 56,
+  width = rem(64),
+  height = rem(56),
   color = COLORS.white,
   ...props
 }: SvgProps) => (

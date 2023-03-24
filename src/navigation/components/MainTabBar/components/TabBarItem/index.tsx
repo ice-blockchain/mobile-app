@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {COLORS} from '@constants/colors';
 import {Images} from '@images';
 import {TabBarIcon} from '@navigation/components/MainTabBar/components/TabBarItem/components/TabBarIcon';
 import {useTabBarWalkthrough} from '@navigation/components/MainTabBar/hooks/useTabBarWalkthrough';
@@ -63,7 +64,7 @@ export const TabBarItem = ({
     onPress,
     onLongPress,
     icon: options.tabBarIcon
-      ? options.tabBarIcon({focused: true, color: '', size: 20})
+      ? options.tabBarIcon({focused: true, color: COLORS.white, size: 20})
       : null,
   });
 

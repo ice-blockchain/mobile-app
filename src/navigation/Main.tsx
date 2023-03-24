@@ -317,7 +317,7 @@ const MainTabs = () => {
 };
 
 export function MainNavigator() {
-  // TODO: Hide until functionality is ready
+  // TODO: Hide until notifications functionality is ready
   // Warning! Calling this hook with no internet leads to the app hanging (setTimeout, button handles, requests don't work)
   // So:
   //  1. The problem should be investigated

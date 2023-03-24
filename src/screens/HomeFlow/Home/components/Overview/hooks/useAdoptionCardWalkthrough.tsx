@@ -16,9 +16,6 @@ import React, {useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
-const TAB_ICON_WIDTH = rem(64);
-const TAB_ICON_HEIGHT = rem(56);
-
 function AdoptionCardWalkthroughElement() {
   const adoptionCardRef = useRef<FlipCardMethods>(null);
   const handleAdoptionPress = () => {
@@ -52,12 +49,7 @@ export const useAdoptionCardWalkthrough = () => {
               <View style={styles.container}>
                 <AdoptionCardWalkthroughElement />
                 <View style={styles.tapIconContainer} pointerEvents={'none'}>
-                  <TapIcon
-                    pointerEvents={'none'}
-                    color={COLORS.white}
-                    width={TAB_ICON_WIDTH}
-                    height={TAB_ICON_HEIGHT}
-                  />
+                  <TapIcon pointerEvents={'none'} color={COLORS.white} />
                 </View>
               </View>
             </View>
