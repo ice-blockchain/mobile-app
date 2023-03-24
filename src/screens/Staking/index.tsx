@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     flexGrow: 1,
+    paddingBottom: rem(16),
   },
   card: {
     marginTop: rem(104),

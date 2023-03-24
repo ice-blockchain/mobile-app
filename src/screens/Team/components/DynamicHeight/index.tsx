@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {commonStyles, windowHeight} from '@constants/styles';
+import {commonStyles} from '@constants/styles';
 import BottomSheet from '@gorhom/bottom-sheet';
 import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
 import {TeamTabStackParamList} from '@navigation/Main';
@@ -12,10 +12,11 @@ import {
 } from '@screens/Team/components/Header/components/Search';
 import {SEARCH_RESULTS_OFFSET} from '@screens/Team/components/SearchResults';
 import React, {ReactNode, useEffect, useMemo, useRef} from 'react';
-import {Platform} from 'react-native';
 import {SharedValue} from 'react-native-reanimated';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {isIOS} from 'rn-units';
+import {
+  useSafeAreaFrame,
+  useSafeAreaInsets,
+} from 'react-native-safe-area-context';
 
 type Props = {
   children: ReactNode;
@@ -32,19 +33,15 @@ export const DynamicHeight = ({
 
   const sheetRef = useRef<BottomSheet>(null);
   const {top: topInset} = useSafeAreaInsets();
+  const frame = useSafeAreaFrame();
 
   const positions = useMemo(() => {
-    /**
-     * On Android topInset is not included to the windowHeight
-     */
-    const windowTopInset = isIOS ? topInset : 0;
     return {
-      expanded: windowHeight - windowTopInset - SEARCH_INPUT_TOP_OFFSET,
-      collapsed: windowHeight - windowTopInset - SEARCH_HEIGHT - INFO_HEIGHT,
-      search:
-        windowHeight - windowTopInset - SEARCH_HEIGHT - SEARCH_RESULTS_OFFSET,
+      expanded: frame.height - topInset - SEARCH_INPUT_TOP_OFFSET,
+      collapsed: frame.height - topInset - SEARCH_HEIGHT - INFO_HEIGHT,
+      search: frame.height - topInset - SEARCH_HEIGHT - SEARCH_RESULTS_OFFSET,
     };
-  }, [topInset]);
+  }, [frame.height, topInset]);
 
   const snapPoints = useMemo(
     () =>
@@ -57,28 +54,14 @@ export const DynamicHeight = ({
   const isKeyboardShown = useIsKeyboardShown();
 
   useEffect(() => {
-    /**
-     * On Android focusing an input inside the BottomSheet conflicts with native
-     * android:windowSoftInputMode="adjustResize" behaviour
-     * BottomSheetTextInput + BottomSheet.keyboardBehavior doesn't work either
-     * TODO:: try to get rid of the setTimeout hack (try BottomSheet v5 when it's released)
-     */
     if (isKeyboardShown && !isSearchActive) {
-      if (Platform.OS === 'android') {
-        setTimeout(() => sheetRef.current?.snapToIndex(1), 500);
-      } else {
-        sheetRef.current?.snapToIndex(1);
-      }
+      sheetRef.current?.snapToIndex(1);
     }
 
     if (isSearchActive) {
       sheetRef.current?.snapToPosition(positions.search);
     } else {
-      if (Platform.OS === 'android') {
-        setTimeout(() => sheetRef.current?.snapToIndex(0), 100);
-      } else {
-        sheetRef.current?.snapToIndex(0);
-      }
+      sheetRef.current?.snapToIndex(0);
     }
   }, [isKeyboardShown, isSearchActive, positions.search]);
 

@@ -5,6 +5,7 @@ import {Api} from '@api/index';
 import {ResurrectRequiredData} from '@api/tokenomics/types';
 import {ENV} from '@constants/env';
 import {navigationRef} from '@navigation/utils';
+import {dayjs} from '@services/dayjs';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
@@ -17,9 +18,6 @@ import {openConfirmResurrectNo} from '@store/modules/Tokenomics/utils/openConfir
 import {openConfirmResurrectYes} from '@store/modules/Tokenomics/utils/openConfirmResurrectYes';
 import {openEarlyAccess} from '@store/modules/Tokenomics/utils/openEarlyAccess';
 import {getErrorMessage, showError} from '@utils/errors';
-/** We shouldn't handle the timezone here, its already handled by API in this case */
-// eslint-disable-next-line no-restricted-imports
-import dayjs from 'dayjs';
 import {call, delay, put, SagaReturnType, select} from 'redux-saga/effects';
 
 export function* startMiningSessionSaga(
@@ -109,7 +107,9 @@ function* processRaceCondition({
   const miningSummary: SagaReturnType<typeof Api.tokenomics.getMiningSummary> =
     yield call(Api.tokenomics.getMiningSummary, {userId});
 
-  yield put(TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.create(miningSummary));
+  yield put(
+    TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.create({miningSummary}),
+  );
 
   const isMiningActive: ReturnType<typeof isMiningActiveSelector> =
     yield select(isMiningActiveSelector);

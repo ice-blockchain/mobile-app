@@ -16,8 +16,8 @@ import {StyleSheet, Text} from 'react-native';
 import {rem} from 'rn-units';
 
 export const openClaimBonus = () => {
-  let resultResolve: () => void;
-  const resultPromise = new Promise<void>(r => (resultResolve = r));
+  let resultResolve: (value: 'yes' | 'no') => void;
+  const resultPromise = new Promise<'yes' | 'no'>(r => (resultResolve = r));
 
   const message = replaceString(
     t('extra_bonus.claim_message'),
@@ -51,6 +51,7 @@ export const openClaimBonus = () => {
         {
           ...button,
           onPress: () => {
+            resultResolve('yes');
             navigate({
               name: 'PopUp',
               params: {buttons: [{...button, loading: true}]},
@@ -62,7 +63,7 @@ export const openClaimBonus = () => {
       dismissOnOutsideTouch: false,
       dismissOnAndroidHardwareBack: false,
       dismissOnButtonPress: false,
-      onDismiss: () => resultResolve(),
+      onDismiss: () => resultResolve('no'),
     },
   });
 

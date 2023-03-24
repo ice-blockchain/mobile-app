@@ -44,9 +44,7 @@ export const MiningInfo = () => {
 
   useEffect(() => {
     if (isCountdownOver) {
-      dispatch(
-        TokenomicsActions.GET_MINING_SUMMARY.START.create({forceUpdate: true}),
-      );
+      dispatch(TokenomicsActions.GET_MINING_SUMMARY.START.create());
       navigation.goBack();
     }
   }, [dispatch, isCountdownOver, navigation]);

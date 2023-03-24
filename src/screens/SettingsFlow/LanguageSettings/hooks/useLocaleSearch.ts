@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {SupportedLocale} from '@translations/localeConfig';
+import {localeConfig, SupportedLocale} from '@translations/localeConfig';
 import {debounce} from 'lodash';
 import {useMemo, useState} from 'react';
 
@@ -13,7 +13,7 @@ export const useLocaleSearch = (availableLocales: SupportedLocale[]) => {
         setLocales(
           term
             ? availableLocales.filter(l =>
-                l.toLowerCase().includes(term.toLowerCase()),
+                localeConfig[l].name.toLowerCase().includes(term.toLowerCase()),
               )
             : availableLocales,
         );

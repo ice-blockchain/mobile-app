@@ -25,6 +25,13 @@ export function* rootTokenomicsSaga() {
       ],
       getMiningSummarySaga,
     ),
+    /**
+     * Separate flow to get rid of messing with the main getMiningSummary flow
+     */
+    takeLatest(
+      TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type,
+      getMiningSummarySaga,
+    ),
     takeLatest(
       [
         AppCommonActions.APP_STATE_CHANGE.STATE.type,

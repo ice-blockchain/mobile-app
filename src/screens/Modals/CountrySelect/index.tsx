@@ -68,7 +68,7 @@ export const CountrySelect = () => {
       <Header
         title={t('country_select.title')}
         backLabel={t('button.back')}
-        topMargin={0}
+        topMargin={isIOS ? 0 : undefined}
       />
       <SearchInput
         onChangeText={search}

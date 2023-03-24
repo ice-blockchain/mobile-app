@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {Dimensions, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {isIOS, rem, screenHeight} from 'rn-units';
 
 export const SCREEN_SIDE_OFFSET = rem(20);
@@ -33,9 +33,5 @@ export const MIDDLE_BUTTON_HIT_SLOP = {
   bottom: 12,
   right: 32,
 };
-
-// on Android screenHeight includes the size used by bottom navigation bar
-// so we need to use windowHeight if we need to get the viewport height
-export const windowHeight = Dimensions.get('window').height;
 
 export const smallHeightDevice = screenHeight < 680;

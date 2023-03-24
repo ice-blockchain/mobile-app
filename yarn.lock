@@ -8920,6 +8920,11 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+rn-android-keyboard-adjust@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/rn-android-keyboard-adjust/-/rn-android-keyboard-adjust-2.1.2.tgz#f2b792628700dcb026215420192317ce43fd954f"
+  integrity sha512-pUYiMT7aucw5YnV4geGdalyl6o6rEwRYhDnw2oPQwDym1BZHtmKsxFLupky1Kj2ZNkNKadpEyoyHOElLo+f3sA==
+
 rn-units@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/rn-units/-/rn-units-2.0.5.tgz#a2f4a73b3eccf354fb3a5e48e4601b1a3cf07f44"

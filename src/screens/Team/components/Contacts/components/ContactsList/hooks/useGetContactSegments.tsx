@@ -22,6 +22,7 @@ export type ContactSectionDataItem =
   | string
   | {element: 'Loading'}
   | {element: 'InviteFriendsButton'}
+  | {element: 'NoContacts'}
   | {element: 'Error'; message: string};
 
 const FETCH_COLLECTION_ARGS = {
@@ -66,22 +67,31 @@ export const useGetContactSegments = (focused: boolean) => {
     iceFriends = referrals;
   }
 
-  const sections: (ContactSection & {data: ContactSectionDataItem[]})[] = [
-    {
+  const sections: (ContactSection & {data: ContactSectionDataItem[]})[] = [];
+
+  if (contacts.length) {
+    sections.push({
       id: 'friends',
       title: referrals.length ? <IceFriendsTitle /> : null,
       data: iceFriends,
-    },
-  ];
+    });
+  }
 
-  /**
-   * Populate contacts section only when all the referrals are loaded or were failed to load
-   */
-  if (!hasNext || error) {
+  if (contacts.length) {
+    /**
+     * Populate contacts section only when all the referrals are loaded or were failed to load
+     */
+    if (!hasNext || error) {
+      sections.push({
+        id: 'contacts',
+        title: t('team.contacts_list.all_contacts'),
+        data: contacts,
+      });
+    }
+  } else {
     sections.push({
       id: 'contacts',
-      title: t('team.contacts_list.all_contacts'),
-      data: contacts,
+      data: [{element: 'NoContacts'}],
     });
   }
 
