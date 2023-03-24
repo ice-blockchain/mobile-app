@@ -93,6 +93,7 @@
     "react-native-share": "^8.0.0",
     "react-native-skeleton-placeholder": "^5.2.4",
     "react-native-sound": "^0.11.2",
+    "react-native-store-version": "^1.4.1",
     "react-native-svg": "^13.6.0",
     "react-redux": "^8.0.5",
     "react-string-replace": "^1.1.0",
