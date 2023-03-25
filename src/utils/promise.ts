@@ -17,6 +17,7 @@ export const runInChunks = async <T>(
 
   const result = [];
   for (let i = 0; i < chunks.length; i++) {
+    await new Promise(requestAnimationFrame);
     const chunkResult = await Promise.all(chunks[i].map(processor));
     result.push(...chunkResult);
   }

@@ -14,21 +14,7 @@ import {getErrorMessage} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import {runInChunks} from '@utils/promise';
 import {Contact, getAll} from 'react-native-contacts';
-import {call, put, SagaReturnType, select} from 'redux-saga/effects';
-
-function notNull<V>(value: V | null): value is V {
-  return value !== null;
-}
-
-function contactsComparator(c1: Contact, c2: Contact) {
-  const displayName1 = ((c1.givenName || c1.familyName || c1.middleName) ?? '')
-    .toLowerCase()
-    .trim();
-  const displayName2 = ((c2.givenName || c2.familyName || c2.middleName) ?? '')
-    .toLowerCase()
-    .trim();
-  return displayName1.localeCompare(displayName2);
-}
+import {call, fork, put, SagaReturnType, select} from 'redux-saga/effects';
 
 export function* syncContactsSaga() {
   try {
@@ -40,22 +26,27 @@ export function* syncContactsSaga() {
     });
 
     const user: User = yield select(userSelector);
-    const phoneNumberHashes = new Set(user.agendaPhoneNumberHashes?.split(','));
 
     const contacts: SagaReturnType<typeof getAll> = yield call(getAll);
 
     const agendaPhoneNumbers: string[] = [];
-    const filteredContacts: Contact[] = contacts
-      .map<Contact | null>((contact: Contact) => {
+    const filteredContacts: Contact[] = [];
+
+    yield runInChunks(
+      contacts,
+      function (contact) {
         if (
-          contact.givenName.trim() === '' &&
-          contact.familyName.trim() === '' &&
-          contact.middleName.trim() === ''
+          (
+            contact.givenName +
+            contact.familyName +
+            contact.middleName
+          ).trim() === ''
         ) {
-          return null;
+          return;
         }
 
         let hasUserNumber = false;
+
         const validNumbers = contact.phoneNumbers.filter(record => {
           if (record.number?.trim()?.length) {
             const e164FormattedForHash = e164PhoneNumber(
@@ -74,50 +65,77 @@ export function* syncContactsSaga() {
         });
 
         if (hasUserNumber) {
-          return null;
+          return;
         }
-        if (validNumbers.length > 0) {
-          return {...contact, phoneNumbers: validNumbers};
-        }
-        return null;
-      })
-      .filter(notNull)
-      .sort(contactsComparator);
 
-    const agendaPhoneNumberHashes: string[] = yield runInChunks(
-      agendaPhoneNumbers,
-      hashPhoneNumber,
-      500,
+        if (validNumbers.length > 0) {
+          filteredContacts.push({...contact, phoneNumbers: validNumbers});
+        }
+      },
+      200,
     );
 
-    const numberOfHashes = phoneNumberHashes.size;
-    agendaPhoneNumberHashes.forEach(hash => phoneNumberHashes.add(hash));
+    const sortedFilteredContacts = filteredContacts.sort(contactsComparator);
 
-    if (numberOfHashes !== phoneNumberHashes.size) {
-      yield put(
-        AccountActions.UPDATE_ACCOUNT.START.create(
-          {
-            agendaPhoneNumberHashes: [...phoneNumberHashes].join(','),
-          },
-          function* (freshUser) {
-            if (
-              freshUser.agendaPhoneNumberHashes?.length !==
-              user.agendaPhoneNumberHashes?.length
-            ) {
-              yield put(ContactsActions.SYNC_CONTACTS.START.create());
-              return {retry: false};
-            }
-            return {retry: true};
-          },
-        ),
-      );
-    }
+    yield fork(updateAgendaPhoneNumberHashes, agendaPhoneNumbers, user);
 
-    yield put(ContactsActions.SYNC_CONTACTS.SUCCESS.create(filteredContacts));
+    yield put(
+      ContactsActions.SYNC_CONTACTS.SUCCESS.create(sortedFilteredContacts),
+    );
   } catch (error) {
     yield put(
       ContactsActions.SYNC_CONTACTS.FAILED.create(getErrorMessage(error)),
     );
     throw error;
   }
+}
+
+function* updateAgendaPhoneNumberHashes(
+  agendaPhoneNumbers: string[],
+  user: User,
+): Generator<unknown, void, string[]> {
+  const phoneNumberHashes = new Set(user.agendaPhoneNumberHashes?.split(','));
+
+  const agendaPhoneNumberHashes: string[] = yield runInChunks(
+    agendaPhoneNumbers,
+    hashPhoneNumber,
+    200,
+  );
+
+  const numberOfHashes = phoneNumberHashes.size;
+  agendaPhoneNumberHashes.forEach(hash => phoneNumberHashes.add(hash));
+
+  if (numberOfHashes !== phoneNumberHashes.size) {
+    yield put(
+      AccountActions.UPDATE_ACCOUNT.START.create(
+        {
+          agendaPhoneNumberHashes: [...phoneNumberHashes].join(','),
+        },
+        function* (freshUser) {
+          if (
+            freshUser.agendaPhoneNumberHashes?.length !==
+            user.agendaPhoneNumberHashes?.length
+          ) {
+            yield call(
+              updateAgendaPhoneNumberHashes,
+              agendaPhoneNumberHashes,
+              freshUser,
+            );
+            return {retry: false};
+          }
+          return {retry: true};
+        },
+      ),
+    );
+  }
+}
+
+function contactsComparator(c1: Contact, c2: Contact) {
+  const displayName1 = ((c1.givenName || c1.familyName || c1.middleName) ?? '')
+    .toLowerCase()
+    .trim();
+  const displayName2 = ((c2.givenName || c2.familyName || c2.middleName) ?? '')
+    .toLowerCase()
+    .trim();
+  return displayName1.localeCompare(displayName2);
 }
