@@ -7,7 +7,6 @@ export const Images = {
   },
   roles: {
     ambassador: require('./roles/ambassador.png'),
-    // TODO: Add actual image once needed
     ambassadorInactive: require('./roles/pioneer-inactive.png'),
     snowman: require('./roles/pioneer.png'),
     snowmanInactive: require('./roles/pioneer-inactive.png'),
