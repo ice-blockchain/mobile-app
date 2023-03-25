@@ -25,23 +25,25 @@ import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {rem} from 'rn-units';
 
 type Props = {
-  title: string;
-  category: BadgeType;
-  index: number;
-  lastIndex: number;
+  title?: string;
+  category?: BadgeType;
+  index?: number;
+  lastIndex?: number;
   hidden?: boolean;
   isProfilePrivacyEditMode?: boolean;
   style?: StyleProp<ViewStyle>;
+  isPlaceholder?: boolean;
 };
 
 export const BadgeCard = memo(
   ({
-    title,
-    category,
-    index,
-    lastIndex,
+    title = '',
+    category = 'social',
+    index = 0,
+    lastIndex = 0,
     hidden = false,
     isProfilePrivacyEditMode = false,
+    isPlaceholder = false,
     style,
   }: Props) => {
     const navigation =
@@ -58,8 +60,10 @@ export const BadgeCard = memo(
 
     const categoryTranslation = t(`profile.badge_types.${category}.title`);
 
-    const image = `${category}0_achieved_true` as const;
-    const inactiveImage = `${category}0_achieved_false` as const;
+    const image = `${category}0_achieved_true` as keyof typeof Images.badges;
+    const inactiveImage = isPlaceholder
+      ? (`placeholder${index}` as keyof typeof Images.badges)
+      : (`${category}0_achieved_false` as keyof typeof Images.badges);
     const ActiveImage = Images.badges[image];
     const InactiveImage = Images.badges[inactiveImage];
 

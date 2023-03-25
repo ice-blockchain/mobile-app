@@ -12,7 +12,7 @@ const selector = createSelector(
   (achievements, userId) => {
     let roleType;
     if (userId && achievements && achievements[userId]) {
-      const activeRole = achievements[userId].levelsAndRoles?.roles.find(
+      const activeRole = achievements[userId].levelsAndRoles?.roles?.find(
         ({enabled}) => enabled,
       );
       roleType = activeRole?.type;

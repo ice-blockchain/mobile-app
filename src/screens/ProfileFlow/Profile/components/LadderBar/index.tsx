@@ -2,7 +2,10 @@
 
 import {User} from '@api/user/types';
 import {LadderItem} from '@screens/ProfileFlow/Profile/components/LadderBar/components/LadderItem';
-import {isPrivacyInfoShownSelector} from '@store/modules/Account/selectors';
+import {
+  isPrivacyInfoShownSelector,
+  userSelector,
+} from '@store/modules/Account/selectors';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {globalRankSelector} from '@store/modules/Tokenomics/selectors';
 import {t} from '@translations/i18n';
@@ -19,6 +22,7 @@ type Props = {
 
 export const LadderBar = memo(
   ({user, isProfilePrivacyEditMode = false}: Props) => {
+    const authUser = useSelector(userSelector);
     const globalRank = useSelector(globalRankSelector(user.id));
     const isPrivacyInfoShown = useSelector(isPrivacyInfoShownSelector);
     const hiddenElements = user.hiddenProfileElements || [];
@@ -26,6 +30,7 @@ export const LadderBar = memo(
     const achievements = useSelector(
       AchievementsSelectors.getAchievementsByUserId({userId: user.id}),
     );
+    const isOwner = user?.id === authUser?.id;
 
     return (
       <View style={styles.ladder}>
@@ -35,7 +40,11 @@ export const LadderBar = memo(
           enabled={isProfilePrivacyEditMode}
           isProfilePrivacyEditMode={isProfilePrivacyEditMode}
           privacyType="globalRank"
-          hidden={hiddenElements.includes('globalRank') && !isPrivacyInfoShown}
+          hidden={
+            isOwner
+              ? hiddenElements.includes('globalRank') && !isPrivacyInfoShown
+              : hiddenElements.includes('globalRank')
+          }
         />
         <LadderItem
           title={t('global.referrals').toUpperCase()}
@@ -44,16 +53,26 @@ export const LadderBar = memo(
           isProfilePrivacyEditMode={isProfilePrivacyEditMode}
           privacyType="referralCount"
           hidden={
-            hiddenElements.includes('referralCount') && !isPrivacyInfoShown
+            isOwner
+              ? hiddenElements.includes('referralCount') && !isPrivacyInfoShown
+              : hiddenElements.includes('referralCount')
           }
         />
         <LadderItem
           title={t('global.level').toUpperCase()}
-          value={achievements ? `${achievements.levelsAndRoles?.level}` : ''}
+          value={
+            achievements?.levelsAndRoles?.level
+              ? `${achievements?.levelsAndRoles?.level}`
+              : ''
+          }
           enabled={isProfilePrivacyEditMode}
           isProfilePrivacyEditMode={isProfilePrivacyEditMode}
           privacyType="level"
-          hidden={hiddenElements.includes('level') && !isPrivacyInfoShown}
+          hidden={
+            isOwner
+              ? hiddenElements.includes('level') && !isPrivacyInfoShown
+              : hiddenElements.includes('level')
+          }
         />
       </View>
     );

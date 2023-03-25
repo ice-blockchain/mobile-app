@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {getErrorMessage} from '@utils/errors';
@@ -23,6 +24,15 @@ export function* loadUserAchievements(
       },
     );
 
+    yield put(
+      AchievementsActions.USER_ACHIEVEMENTS_LOAD.SUCCESS.create({
+        userId,
+        achievements: {
+          levelsAndRoles: {level, roles: roles},
+        },
+      }),
+    );
+
     const getBadgesResult: SagaReturnType<
       typeof Api.achievements.getBadgeSummaries
     > = yield call(Api.achievements.getBadgeSummaries, {
@@ -33,16 +43,27 @@ export function* loadUserAchievements(
       AchievementsActions.USER_ACHIEVEMENTS_LOAD.SUCCESS.create({
         userId,
         achievements: {
-          levelsAndRoles: {level, roles: roles},
           badges: getBadgesResult || [],
         },
       }),
     );
   } catch (error) {
     const errorMessage = getErrorMessage(error);
-    yield put(
-      AchievementsActions.USER_ACHIEVEMENTS_LOAD.FAILED.create(errorMessage),
-    );
+
+    if (isApiError(error, 403, 'BADGES_HIDDEN')) {
+      yield put(
+        AchievementsActions.USER_ACHIEVEMENTS_LOAD.SUCCESS.create({
+          userId,
+          achievements: {
+            badges: [],
+          },
+        }),
+      );
+    } else {
+      yield put(
+        AchievementsActions.USER_ACHIEVEMENTS_LOAD.FAILED.create(errorMessage),
+      );
+    }
 
     throw error;
   }

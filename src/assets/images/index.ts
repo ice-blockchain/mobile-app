@@ -65,6 +65,10 @@ export const Images = {
     level3_achieved_false: require('./badges/level3_achieved_false.png'),
     level4_achieved_false: require('./badges/level4_achieved_false.png'),
     level5_achieved_false: require('./badges/level5_achieved_false.png'),
+    placeholder0: require('./badges/placeholder0.png'),
+    placeholder1: require('./badges/placeholder1.png'),
+    placeholder2: require('./badges/placeholder2.png'),
+    placeholder3: require('./badges/placeholder3.png'),
   },
   phone: {
     confirmPhoneNumber: require('./phone/confirmPhoneNumber.png'),

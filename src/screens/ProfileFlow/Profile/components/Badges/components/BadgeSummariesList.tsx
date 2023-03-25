@@ -18,26 +18,50 @@ type Props = {
   data: BadgeSummary[];
   user?: User | null;
   isProfilePrivacyEditMode?: boolean;
+  isOwner?: boolean;
 };
 
 const NUMBER_OF_SKELETONS = 5;
+const NUMBER_OF_PLACEHOLDERS = 4;
 
 export const BadgeSummariesList = ({
   loading,
   data,
   isProfilePrivacyEditMode,
   user,
+  isOwner,
 }: Props) => {
   const isPrivacyInfoShown = useSelector(isPrivacyInfoShownSelector);
-  const hidden =
-    user?.hiddenProfileElements?.includes('badges') && !isPrivacyInfoShown;
+  const hidden = isOwner
+    ? user?.hiddenProfileElements?.includes('badges') && !isPrivacyInfoShown
+    : user?.hiddenProfileElements?.includes('badges');
+
+  const showPlaceholders =
+    !isOwner && user?.hiddenProfileElements?.includes('badges');
+
+  const badgesData = loading
+    ? Array(NUMBER_OF_SKELETONS).fill(null)
+    : hidden
+    ? Array(NUMBER_OF_PLACEHOLDERS).fill(null)
+    : data;
 
   const renderItem: ListRenderItem<BadgeSummary> = useCallback(
     ({item, index}) => {
       if (!item || item === null) {
-        return <BadgeCardSkeleton />;
+        if (showPlaceholders) {
+          return (
+            <BadgeCard
+              style={index === 0 && styles.firstItem}
+              index={index}
+              hidden={true}
+              isProfilePrivacyEditMode={false}
+              isPlaceholder={true}
+            />
+          );
+        } else {
+          return <BadgeCardSkeleton />;
+        }
       }
-
       return (
         <BadgeCard
           style={index === 0 && styles.firstItem}
@@ -50,12 +74,12 @@ export const BadgeSummariesList = ({
         />
       );
     },
-    [hidden, isProfilePrivacyEditMode],
+    [hidden, isProfilePrivacyEditMode, showPlaceholders],
   );
 
   return (
     <FlatList
-      data={loading ? Array(NUMBER_OF_SKELETONS).fill(null) : data}
+      data={badgesData}
       renderItem={renderItem}
       horizontal={true}
       contentContainerStyle={styles.listContent}
