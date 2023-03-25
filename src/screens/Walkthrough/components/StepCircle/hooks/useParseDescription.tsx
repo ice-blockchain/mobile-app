@@ -11,6 +11,15 @@ type Props = {
   step: WalkthroughStep | undefined;
 };
 
+function getDescription(step: WalkthroughStep) {
+  // When ice label is first in the description then any custom text styles are not applied
+  // As a workaround adding a leading space here so text styles are applied
+  if (step.description.startsWith('[[:ice]]')) {
+    return ` ${step.description}`;
+  }
+  return step.description;
+}
+
 export function useParseDescription({step}: Props) {
   return useMemo(() => {
     if (!step) {
@@ -18,7 +27,7 @@ export function useParseDescription({step}: Props) {
     }
 
     let parsedDescription = replaceString(
-      step.description,
+      getDescription(step),
       tagRegex('ice'),
       (match, index) => (
         <IceLabel
