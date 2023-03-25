@@ -5,6 +5,7 @@ import {getAchievementsByUserId} from './getAchievementsByUserId';
 import {getBadgesForType} from './getBadgesForType';
 import {getBadgesSummary} from './getBadgesSummary';
 import {getLevel} from './getLevel';
+import {getRolesByUserId} from './getRolesByUserId';
 import {getRoleType} from './getRoleType';
 import {getRoleTypeByUserId} from './getRoleTypeByUserId';
 import {getTaskByType} from './getTaskByType';
@@ -22,4 +23,5 @@ export const AchievementsSelectors = Object.freeze({
   getAchievementsByUserId,
   getBadgesSummary,
   getBadgesForType,
+  getRolesByUserId,
 });

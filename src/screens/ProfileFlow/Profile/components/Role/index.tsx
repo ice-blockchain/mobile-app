@@ -31,7 +31,7 @@ export const Role = memo(({user, isOwner}: Props) => {
         imageSource={Images.roles[roleType]}
         imageSourceHidden={Images.roles[`${roleType}Inactive`]}
         title={t(`roles.${roleType}.title`)}
-        description={t(`roles.${roleType}.description`)}
+        description={t(`roles.${roleType}.subtitle`)}
         user={user}
         onNextPress={() => {
           navigation.navigate('Roles', {userId: user?.id});
