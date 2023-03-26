@@ -9,7 +9,7 @@ import {syncContactsSaga} from './syncContactsSaga';
 
 export function* rootTeamSaga() {
   yield all([
-    takeLatest(AppCommonActions.APP_LOADED.STATE.type, syncContactsSaga),
+    takeLatest(AppCommonActions.APP_INITIALIZED.SUCCESS.type, syncContactsSaga),
     takeLatest(ContactsActions.INVITE_CONTACT.START.type, inviteContactSaga),
   ]);
 }
