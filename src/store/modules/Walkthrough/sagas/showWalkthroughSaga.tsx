@@ -47,10 +47,6 @@ export function* showWalkthroughSaga() {
 
     const steps: ReturnType<typeof walkthroughStepCandidatesSelector> =
       yield select(walkthroughStepCandidatesSelector);
-    console.log(
-      'steps',
-      steps.map(s => s.key),
-    );
 
     for (let i = 0; i < steps.length; i++) {
       const step = steps[i];
