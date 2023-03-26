@@ -37,9 +37,9 @@ export function* syncContactsSaga() {
       function (contact) {
         if (
           (
-            contact.givenName +
-            contact.familyName +
-            contact.middleName
+            (contact.givenName ?? '') +
+            (contact.familyName ?? '') +
+            (contact.middleName ?? '')
           ).trim() === ''
         ) {
           return;
