@@ -593,8 +593,7 @@
   },
   "invalid_link": {
     "title": "Ungültiger Link",
-    "description": "Leider ist dieser Link ungültig, bitte geben Sie Ihre E-Mail-Adresse erneut ein und wir senden Ihnen einen neuen Link.",
-    "back_button_title": "Zurück zur Anmeldung"
+    "description": "Leider ist dieser Link ungültig, bitte geben Sie Ihre E-Mail-Adresse erneut ein und wir senden Ihnen einen neuen Link."
   },
   "confirm_code": {
     "title": "Code bestätigen",

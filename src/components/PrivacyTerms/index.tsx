@@ -5,16 +5,20 @@ import {t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
 
-export const PrivacyTerms = () => {
+type Props = {
+  containerStyle?: StyleProp<ViewStyle>;
+};
+
+export const PrivacyTerms = ({containerStyle}: Props) => {
   const handlePress = (url: string) => () => {
     openLinkWithInAppBrowser({url});
   };
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, containerStyle]}>
       <Text style={styles.text}>
         {t('signIn.privacy.description')}
         <Text style={styles.link} onPress={handlePress(LINKS.TERMS)}>

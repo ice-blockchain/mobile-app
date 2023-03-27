@@ -11,6 +11,7 @@ import {
 import {ConfirmEmailLink} from '@screens/AuthFlow/ConfirmEmailLink';
 import {ConfirmPhone} from '@screens/AuthFlow/ConfirmPhone';
 import {InvalidLink} from '@screens/AuthFlow/InvalidLink';
+import {ResetPasswordLink} from '@screens/AuthFlow/ResetPasswordLink';
 import {SignIn} from '@screens/AuthFlow/SignIn';
 import {CountrySelect} from '@screens/Modals/CountrySelect';
 import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
@@ -24,6 +25,7 @@ import {useSelector} from 'react-redux';
 export type AuthStackParamList = {
   SignIn?: {flow?: 'main' | 'resetPassword'};
   ConfirmEmailLink: undefined;
+  ResetPasswordLink: {email: string};
   ConfirmPhone: undefined;
   CountrySelect: {
     onSelect: (country: Country) => void;
@@ -64,6 +66,10 @@ export function AuthNavigator() {
       initialRouteName={authRoute}>
       <AuthStack.Screen name="SignIn" component={SignIn} />
       <AuthStack.Screen name="ConfirmEmailLink" component={ConfirmEmailLink} />
+      <AuthStack.Screen
+        name="ResetPasswordLink"
+        component={ResetPasswordLink}
+      />
       <AuthStack.Screen name="ConfirmPhone" component={ConfirmPhone} />
       <AuthStack.Screen
         name="CountrySelect"

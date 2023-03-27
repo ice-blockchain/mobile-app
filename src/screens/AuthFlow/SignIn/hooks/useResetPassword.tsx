@@ -42,10 +42,10 @@ export const useResetPassword = () => {
   const initialRender = useRef(true);
   useEffect(() => {
     if (isResetPasswordSuccess && !initialRender.current) {
-      navigation.navigate('SignIn', {flow: 'main'});
+      navigation.navigate('ResetPasswordLink', {email});
     }
     initialRender.current = false;
-  }, [isResetPasswordSuccess, navigation]);
+  }, [email, isResetPasswordSuccess, navigation]);
 
   return {
     email,

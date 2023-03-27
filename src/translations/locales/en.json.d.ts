@@ -50,6 +50,7 @@ export type Translations = {
   'button.disable': null;
   'button.agree': null;
   'button.learn_more': null;
+  'button.back_to_login': null;
   'team.contacts_tab': null;
   'team.tierOne_tab': null;
   'team.tierTwo_tab': null;
@@ -437,12 +438,13 @@ export type Translations = {
   'confirm_email.wrong_email': null;
   'confirm_email.check_email': null;
   'confirm_email.emailed_link_to': null;
+  'confirm_email.emailed_steps_to': null;
   'confirm_email.link_instruction': null;
+  'confirm_email.reset_link_instruction': null;
   'confirm_email.modify_title': null;
   'confirm_email.modify_description': null;
   'invalid_link.title': null;
   'invalid_link.description': null;
-  'invalid_link.back_button_title': null;
   'confirm_code.title': null;
   'confirm_code.description': null;
   'confirm_code.send_code_again': null;
