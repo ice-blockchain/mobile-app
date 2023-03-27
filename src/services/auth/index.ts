@@ -120,7 +120,7 @@ export const signInWithEmailAndPassword = async (
   password: string,
 ) => {
   try {
-    return auth().createUserWithEmailAndPassword(email, password);
+    await auth().createUserWithEmailAndPassword(email, password);
   } catch (error) {
     if (
       checkProp(error, 'code') &&
