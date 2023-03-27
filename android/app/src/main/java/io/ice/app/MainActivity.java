@@ -19,6 +19,15 @@ public class MainActivity extends ReactActivity {
   }
 
   /**
+   * react-native-screens override
+   * https://github.com/software-mansion/react-native-screens#android
+   */
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(null);
+  }
+
+  /**
    * Returns the instance of the {@link ReactActivityDelegate}. There the RootView is created and
    * you can specify the rendered you wish to use (Fabric or the older renderer).
    */
