@@ -2,6 +2,7 @@
 
 package io.ice.app;
 
+import android.os.Bundle;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
@@ -16,6 +17,15 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "ice";
+  }
+
+  /**
+   * react-native-screens override
+   * https://github.com/software-mansion/react-native-screens#android
+   */
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
   }
 
   /**

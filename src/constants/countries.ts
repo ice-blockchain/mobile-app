@@ -741,6 +741,12 @@ export const countries: Country[] = [
     iddCode: '+82',
   },
   {
+    name: 'Republic of Kosovo',
+    flag: '🇽🇰',
+    isoCode: 'XK',
+    iddCode: '+383',
+  },
+  {
     name: 'Kuwait',
     flag: '🇰🇼',
     isoCode: 'KW',

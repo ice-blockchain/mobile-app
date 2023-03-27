@@ -99,7 +99,9 @@ export function* verifyBeforeUpdateEmailSaga({
       ),
     );
 
-    throw error;
+    if (!validateError) {
+      throw error;
+    }
   }
 }
 
