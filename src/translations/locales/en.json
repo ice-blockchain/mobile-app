@@ -545,6 +545,7 @@
   "news": {
     "news_feed": "News Feed",
     "read_more": "Read more",
+    "no_more_news": "this is the last entry of the news feed",
     "views": "{{viewsCount}} views"
   },
   "search": {

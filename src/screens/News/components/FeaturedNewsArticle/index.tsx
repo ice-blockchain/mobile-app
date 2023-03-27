@@ -15,17 +15,37 @@ import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import Animated, {SharedValue} from 'react-native-reanimated';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const FeaturedNewsArticle = memo(() => {
+import {useLayoutAnimation} from './hooks/useLayoutAnimation';
+
+export const FEATURED_HEADER_EXPANDED_HEIGHT = rem(374);
+export const FEATURED_HEADER_COLLAPSED_HEIGHT = rem(64);
+
+interface Props {
+  animatedIndex: SharedValue<number>;
+}
+
+export const FeaturedNewsArticle = memo(({animatedIndex}: Props) => {
   const safeAreaInsets = useSafeAreaInsets();
 
   const featuredNewsArticle = useSelector(NewsSelectors.getFeaturedNewsArticle);
 
   const {openNewsArticle} = useNewsBrowser(featuredNewsArticle);
+
+  const {
+    titleStyle,
+    contentStyle,
+    valuesContainerStyle,
+    onTitleLayout,
+    onButtonLayout,
+  } = useLayoutAnimation({
+    animatedIndex,
+  });
 
   if (!featuredNewsArticle) {
     return <FeaturedNewsArticleSkeleton />;
@@ -52,49 +72,55 @@ export const FeaturedNewsArticle = memo(() => {
         colors={[COLORS.black, COLORS.blackTransparent]}
       />
 
-      <View style={styles.content}>
+      <Animated.View style={[styles.content, contentStyle]}>
         <LinearGradient
           style={StyleSheet.absoluteFill}
-          colors={[COLORS.blackTransparent, COLORS.black]}
+          colors={[COLORS.primaryDarkTransparent, COLORS.primaryDark]}
         />
 
-        <Text style={styles.title} numberOfLines={2}>
-          {title}
-        </Text>
+        <Animated.Text
+          style={[styles.title, titleStyle]}
+          numberOfLines={2}
+          onLayout={onTitleLayout}>
+          {title + title + title}
+        </Animated.Text>
 
         <View style={styles.details}>
-          {viewed ? null : (
-            <NewsFeaturedNewBadge
-              style={styles.newBadge}
-              width={rem(28)}
-              height={rem(18)}
-            />
-          )}
+          <Animated.View style={[styles.valuesContainer, valuesContainerStyle]}>
+            {viewed ? null : (
+              <NewsFeaturedNewBadge
+                style={styles.newBadge}
+                width={rem(28)}
+                height={rem(18)}
+              />
+            )}
 
-          <ClockIcon width={rem(16)} height={rem(16)} color={COLORS.white} />
+            <ClockIcon width={rem(16)} height={rem(16)} color={COLORS.white} />
 
-          <Text style={styles.value} numberOfLines={1}>
-            {dayjs(createdAt).isToday()
-              ? t('global.date.today')
-              : dayjs(createdAt).fromNow()}
-          </Text>
+            <Text style={styles.value} numberOfLines={1}>
+              {dayjs(createdAt).isToday()
+                ? t('global.date.today')
+                : dayjs(createdAt).fromNow()}
+            </Text>
 
-          <EyeIcon width={rem(16)} height={rem(16)} fill={COLORS.white} />
+            <EyeIcon width={rem(16)} height={rem(16)} fill={COLORS.white} />
 
-          <Text style={styles.value} numberOfLines={1}>
-            {t('news.views', {
-              viewsCount: formatNumber(views),
-            })}
-          </Text>
+            <Text style={styles.value} numberOfLines={1}>
+              {t('news.views', {
+                viewsCount: formatNumber(views),
+              })}
+            </Text>
+          </Animated.View>
 
           <Touchable
             hitSlop={SMALL_BUTTON_HIT_SLOP}
             style={styles.readMore}
+            onLayout={onButtonLayout}
             onPress={openNewsArticle}>
             <Text style={styles.readMoreText}>{t('news.read_more')}</Text>
           </Touchable>
         </View>
-      </View>
+      </Animated.View>
     </View>
   );
 });
@@ -103,7 +129,7 @@ export const FeaturedNewsArticleSkeleton = () => (
   <View style={styles.container}>
     <LinearGradient
       style={StyleSheet.absoluteFill}
-      colors={[COLORS.primaryLight, COLORS.toreaBay1]}
+      colors={[COLORS.primaryLight, COLORS.primaryDark]}
     />
 
     <SkeletonPlaceholder>
@@ -124,7 +150,7 @@ export const FeaturedNewsArticleSkeleton = () => (
 
 const styles = StyleSheet.create({
   container: {
-    height: rem(407),
+    height: FEATURED_HEADER_EXPANDED_HEIGHT,
     justifyContent: 'flex-end',
     backgroundColor: COLORS.white,
   },
@@ -139,7 +165,13 @@ const styles = StyleSheet.create({
   content: {
     paddingTop: rem(16),
     paddingHorizontal: rem(20),
-    paddingBottom: rem(24 + 18),
+    paddingBottom: rem(16),
+  },
+
+  valuesContainer: {
+    flexDirection: 'row',
+    flex: 1,
+    alignItems: 'center',
   },
 
   newBadge: {
