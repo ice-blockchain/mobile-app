@@ -3,7 +3,8 @@
 import {AccountActions} from '@store/modules/Account/actions';
 import {deleteAccountSaga} from '@store/modules/Account/sagas/deleteAccount';
 import {getAccountSaga} from '@store/modules/Account/sagas/getAccount';
-import {signInEmailSaga} from '@store/modules/Account/sagas/signInEmail';
+import {signInEmailLinkSaga} from '@store/modules/Account/sagas/signInEmailLink';
+import {signInEmailPasswordSaga} from '@store/modules/Account/sagas/signInEmailPassword';
 import {signInPhoneSaga} from '@store/modules/Account/sagas/signInPhone';
 import {signInSocialSaga} from '@store/modules/Account/sagas/signInSocial';
 import {signOutSaga} from '@store/modules/Account/sagas/signOut';
@@ -18,7 +19,14 @@ import {all, fork, takeLatest} from 'redux-saga/effects';
 
 export function* rootAuthSaga() {
   yield all([
-    takeLatest(AccountActions.SIGN_IN_EMAIL.START.type, signInEmailSaga),
+    takeLatest(
+      AccountActions.SIGN_IN_EMAIL_LINK.START.type,
+      signInEmailLinkSaga,
+    ),
+    takeLatest(
+      AccountActions.SIGN_IN_EMAIL_PASSWORD.START.type,
+      signInEmailPasswordSaga,
+    ),
     takeLatest(AccountActions.SIGN_IN_PHONE.START.type, signInPhoneSaga),
     takeLatest(AccountActions.SIGN_IN_SOCIAL.START.type, signInSocialSaga),
     takeLatest(AccountActions.SIGN_OUT.START.type, signOutSaga),

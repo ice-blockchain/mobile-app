@@ -23,7 +23,7 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
   const {url, handledInApp} = action.payload;
 
   if (isSignInWithEmailLink(url)) {
-    yield put(AccountActions.SIGN_IN_EMAIL.CONFIRM_TEMP_EMAIL.create(url));
+    yield put(AccountActions.SIGN_IN_EMAIL_LINK.CONFIRM_TEMP_EMAIL.create(url));
     return;
   }
 

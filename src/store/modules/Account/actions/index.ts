@@ -25,13 +25,22 @@ const SIGN_OUT = createAction('SIGN_OUT', {
   FAILED: true,
 });
 
-const SIGN_IN_EMAIL = createAction('SIGN_IN_EMAIL', {
+const SIGN_IN_EMAIL_LINK = createAction('SIGN_IN_EMAIL_LINK', {
   START: (email: string) => ({email}),
   SET_TEMP_EMAIL: (email: string) => ({email}),
   CONFIRM_TEMP_EMAIL: (link: string) => ({link}),
   SUCCESS: true,
   FAILED: (errorMessage: string) => ({errorMessage}),
   RESET: true,
+});
+
+const SIGN_IN_EMAIL_PASSWORD = createAction('SIGN_IN_EMAIL_PASSWORD', {
+  START: (params: {email: string; password: string}) => params,
+  SUCCESS: true,
+  FAILED: (errorMessage: string, data: {field: 'email' | 'password'}) => ({
+    errorMessage,
+    ...data,
+  }),
 });
 
 const SIGN_IN_PHONE = createAction('SIGN_IN_PHONE', {
@@ -116,7 +125,8 @@ const VERIFY_PHONE_NUMBER = createAction('VERIFY_PHONE_NUMBER', {
 
 export const AccountActions = Object.freeze({
   SET_TOKEN,
-  SIGN_IN_EMAIL,
+  SIGN_IN_EMAIL_LINK,
+  SIGN_IN_EMAIL_PASSWORD,
   SIGN_IN_PHONE,
   SIGN_IN_SOCIAL,
   SIGN_OUT,

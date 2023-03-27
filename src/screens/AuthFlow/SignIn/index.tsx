@@ -2,6 +2,7 @@
 
 import {FullScreenLoading} from '@components/FullScreenLoading';
 import {EmailInput} from '@components/Inputs/EmailInput';
+import {PasswordInput} from '@components/Inputs/PasswordInput';
 import {PhoneNumberInput} from '@components/Inputs/PhoneNumberInput';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {PrivacyTerms} from '@components/PrivacyTerms';
@@ -35,9 +36,13 @@ export const SignIn = () => {
   const {
     email,
     setEmail,
+    password,
+    setPassword,
+    emailFlow,
     signInWithEmail,
     isEmailAuthLoading,
     emailAuthFailedReason,
+    failedField,
   } = useEmailAuth();
   const [activeTab, setActiveTab] = useState<Tab>('email');
 
@@ -56,23 +61,45 @@ export const SignIn = () => {
             selected={activeTab}
             containerStyle={styles.tabs}
           />
-          <View style={styles.input}>
-            {activeTab === 'email' ? (
+          {activeTab === 'email' ? (
+            emailFlow === 'password' ? (
+              <>
+                <EmailInput
+                  value={email}
+                  onChangeText={setEmail}
+                  errorText={
+                    failedField === 'email' ? emailAuthFailedReason : ''
+                  }
+                  editable={!isEmailAuthLoading}
+                  containerStyle={styles.input}
+                />
+                <PasswordInput
+                  value={password}
+                  onChangeText={setPassword}
+                  errorText={
+                    failedField === 'password' ? emailAuthFailedReason : ''
+                  }
+                  editable={!isEmailAuthLoading}
+                  containerStyle={styles.input}
+                />
+              </>
+            ) : (
               <EmailInput
                 value={email}
                 onChangeText={setEmail}
                 errorText={emailAuthFailedReason}
                 editable={!isEmailAuthLoading}
+                containerStyle={styles.input}
               />
-            ) : (
-              <PhoneNumberInput
-                value={phoneNumberBody}
-                onChangePhone={onChangePhone}
-                errorText={phoneAuthFailedReason}
-                editable={!isPhoneAuthLoading}
-              />
-            )}
-          </View>
+            )
+          ) : (
+            <PhoneNumberInput
+              value={phoneNumberBody}
+              onChangePhone={onChangePhone}
+              errorText={phoneAuthFailedReason}
+              editable={!isPhoneAuthLoading}
+            />
+          )}
           <SubmitButton
             onPress={
               activeTab === 'phone' ? signInWithPhoneNumber : signInWithEmail
@@ -103,9 +130,10 @@ const styles = StyleSheet.create({
   },
   tabs: {
     marginTop: rem(36),
+    marginBottom: rem(10),
   },
   input: {
-    marginTop: rem(30),
+    marginTop: rem(10),
     marginHorizontal: rem(20),
   },
 });

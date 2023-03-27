@@ -137,6 +137,8 @@ export type Translations = {
   'errors.user_token_expired': null;
   'errors.requires_recent_login': null;
   'errors.same_email': null;
+  'errors.weak_password': null;
+  'errors.wrong_password': null;
   'profile.my_roles.title': null;
   'profile.mining_calculator': null;
   'profile.invite_friends': null;
@@ -158,6 +160,7 @@ export type Translations = {
   'global.of': null;
   'global.attention': null;
   'global.email_address': null;
+  'global.password': null;
   'global.data_hidden': null;
   'global.pull_to_refresh': null;
   'global.comingSoon': null;

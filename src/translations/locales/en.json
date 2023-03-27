@@ -187,7 +187,9 @@
     "email_already_in_use": "The email address is already in use by another account.",
     "user_token_expired": "Your credentials is no longer valid. Please sign in again",
     "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "same_email": "You can’t use the same e-mail",
+    "weak_password": "Weak password",
+    "wrong_password": "Wrong password"
   },
   "profile": {
     "my_roles": {
@@ -223,6 +225,7 @@
     "of": "of",
     "attention": "Attention",
     "email_address": "Email address",
+    "password": "Password",
     "data_hidden": "data is hidden",
     "pull_to_refresh": "pull to update",
     "comingSoon": "Coming soon",

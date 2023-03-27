@@ -10,7 +10,7 @@ export const useBackHandler = () => {
   const dispatch = useDispatch();
 
   const goBack = () => {
-    dispatch(AccountActions.SIGN_IN_EMAIL.RESET.create());
+    dispatch(AccountActions.SIGN_IN_EMAIL_LINK.RESET.create());
   };
 
   useFocusEffect(
@@ -18,7 +18,7 @@ export const useBackHandler = () => {
       const subscription = BackHandler.addEventListener(
         'hardwareBackPress',
         () => {
-          dispatch(AccountActions.SIGN_IN_EMAIL.RESET.create());
+          dispatch(AccountActions.SIGN_IN_EMAIL_LINK.RESET.create());
           return true;
         },
       );
