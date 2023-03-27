@@ -31,8 +31,6 @@ export function useLayoutAnimation({
 
   const titleMinHeight = useSharedValue(Number.MAX_SAFE_INTEGER);
 
-  // const [titleMinHeight, setTitleMinHeight] = useState(Number.MAX_SAFE_INTEGER);
-
   const onTitleLayout = useCallback(
     ({
       nativeEvent: {
@@ -40,8 +38,6 @@ export function useLayoutAnimation({
       },
     }: LayoutChangeEvent) => {
       titleMinHeight.value = Math.min(height, titleMinHeight.value);
-
-      // setTitleMinHeight(currentValue => Math.min(height, currentValue));
     },
     [titleMinHeight],
   );

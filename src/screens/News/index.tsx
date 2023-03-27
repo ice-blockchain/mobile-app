@@ -3,7 +3,7 @@
 import {ActivityIndicator} from '@components/ActivityIndicator';
 import {RefreshIceIcon} from '@components/RefreshControl';
 import {COLORS} from '@constants/colors';
-import {commonStyles, windowHeight} from '@constants/styles';
+import {commonStyles} from '@constants/styles';
 import BottomSheet, {BottomSheetFlatList} from '@gorhom/bottom-sheet';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
@@ -19,7 +19,10 @@ import {
   useDerivedValue,
   useSharedValue,
 } from 'react-native-reanimated';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {
+  useSafeAreaFrame,
+  useSafeAreaInsets,
+} from 'react-native-safe-area-context';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -36,6 +39,8 @@ export const News = () => {
 
   const safeAreaInsets = useSafeAreaInsets();
 
+  const frame = useSafeAreaFrame();
+
   const tabBarOffset = useBottomTabBarOffsetStyle();
 
   const animatedIndex = useSharedValue(0);
@@ -51,13 +56,13 @@ export const News = () => {
   const data = useSelector(NewsSelectors.getNewsIds);
 
   const snapPoints = useMemo(() => {
-    const collapsed = windowHeight - FEATURED_HEADER_EXPANDED_HEIGHT;
+    const collapsed = frame.height - FEATURED_HEADER_EXPANDED_HEIGHT;
 
     const expanded =
-      windowHeight - safeAreaInsets.top - FEATURED_HEADER_COLLAPSED_HEIGHT;
+      frame.height - safeAreaInsets.top - FEATURED_HEADER_COLLAPSED_HEIGHT;
 
     return [collapsed, expanded];
-  }, [safeAreaInsets.top]);
+  }, [frame.height, safeAreaInsets.top]);
 
   const renderEmptyList = useCallback(() => {
     return (

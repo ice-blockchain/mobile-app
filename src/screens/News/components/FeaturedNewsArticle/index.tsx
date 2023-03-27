@@ -82,7 +82,7 @@ export const FeaturedNewsArticle = memo(({animatedIndex}: Props) => {
           style={[styles.title, titleStyle]}
           numberOfLines={2}
           onLayout={onTitleLayout}>
-          {title + title + title}
+          {title}
         </Animated.Text>
 
         <View style={styles.details}>
