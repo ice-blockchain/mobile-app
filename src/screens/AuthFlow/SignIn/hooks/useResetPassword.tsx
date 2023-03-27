@@ -31,20 +31,17 @@ export const useResetPassword = () => {
     isSuccessSelector.bind(null, AccountActions.RESET_PASSWORD),
   );
 
+  const resetPasswordButtonPressedRef = useRef(false);
   const resetPassword = () => {
+    resetPasswordButtonPressedRef.current = true;
     dispatch(AccountActions.RESET_PASSWORD.START.create({email}));
   };
 
-  /**
-   * Skipping initialRender so it won't redirect us back
-   * if we already reset password in the past
-   */
-  const initialRender = useRef(true);
   useEffect(() => {
-    if (isResetPasswordSuccess && !initialRender.current) {
+    if (isResetPasswordSuccess && resetPasswordButtonPressedRef.current) {
       navigation.navigate('ResetPasswordLink', {email});
+      resetPasswordButtonPressedRef.current = false;
     }
-    initialRender.current = false;
   }, [email, isResetPasswordSuccess, navigation]);
 
   return {
