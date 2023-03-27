@@ -57,7 +57,7 @@ export const Badges = memo(({user}: Props) => {
         style={styles.header}
       />
       <BadgeSummariesList
-        loading={isLoading}
+        loading={isLoading && badgesSummary.length === 0}
         user={user}
         data={badgesSummary}
         isOwner={isOwner}

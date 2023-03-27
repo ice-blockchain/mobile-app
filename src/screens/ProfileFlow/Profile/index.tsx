@@ -7,7 +7,7 @@ import {commonStyles} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {MainStackParamList} from '@navigation/Main';
-import {RouteProp, useRoute} from '@react-navigation/native';
+import {RouteProp, useFocusEffect, useRoute} from '@react-navigation/native';
 import {AgendaContactTooltip} from '@screens/ProfileFlow/Profile/components/AgendaContactTooltip';
 import {AvatarHeader} from '@screens/ProfileFlow/Profile/components/AvatarHeader';
 import {Badges} from '@screens/ProfileFlow/Profile/components/Badges';
@@ -25,7 +25,7 @@ import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors
 import {t} from '@translations/i18n';
 import {e164PhoneNumber} from '@utils/phoneNumber';
 import {font} from '@utils/styles';
-import React, {memo, useEffect, useState} from 'react';
+import React, {memo, useCallback, useEffect, useState} from 'react';
 import {Image, PixelRatio, StyleSheet, Text, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
 import Animated, {
@@ -43,6 +43,7 @@ export const Profile = memo(() => {
   const authUser = useSelector(userSelector) as User;
   const route = useRoute<RouteProp<MainStackParamList, 'UserProfile'>>();
   const isOwner = !route.params || route.params.userId === authUser?.id;
+  const userId = isOwner ? authUser.id : route.params?.userId;
 
   const bottomOffset = useBottomTabBarOffsetStyle();
 
@@ -74,13 +75,7 @@ export const Profile = memo(() => {
         }),
       );
     }
-
-    dispatch(
-      AchievementsActions.USER_ACHIEVEMENTS_LOAD.START.create(
-        isOwner ? authUser.id : route.params?.userId,
-      ),
-    );
-  }, [authUser, dispatch, isOwner, route.params]);
+  }, [userId, dispatch, isOwner, route.params]);
 
   useEffect(() => {
     if (user && user.phoneNumber && contacts?.length > 0) {
@@ -98,6 +93,12 @@ export const Profile = memo(() => {
       }
     }
   }, [contacts, user]);
+
+  useFocusEffect(
+    useCallback(() => {
+      dispatch(AchievementsActions.USER_ACHIEVEMENTS_LOAD.START.create(userId));
+    }, [dispatch, userId]),
+  );
 
   return (
     <View style={styles.container}>
