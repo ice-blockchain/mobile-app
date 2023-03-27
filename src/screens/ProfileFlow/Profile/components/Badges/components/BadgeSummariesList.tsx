@@ -39,11 +39,14 @@ export const BadgeSummariesList = ({
   const showPlaceholders =
     !isOwner && user?.hiddenProfileElements?.includes('badges');
 
+  const badgeData =
+    data.length === 0 ? Array(NUMBER_OF_SKELETONS).fill(null) : data;
+
   const badgesData = loading
-    ? Array(NUMBER_OF_SKELETONS).fill(null)
+    ? badgeData
     : hidden
     ? Array(NUMBER_OF_PLACEHOLDERS).fill(null)
-    : data;
+    : badgeData;
 
   const renderItem: ListRenderItem<BadgeSummary> = useCallback(
     ({item, index}) => {
