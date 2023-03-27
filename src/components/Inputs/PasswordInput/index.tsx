@@ -20,6 +20,7 @@ export const PasswordInput = (props: Omit<CommonInputProps, 'label'>) => {
       textContentType={'password'}
       autoComplete={'password'}
       autoCapitalize={'none'}
+      keyboardType={'default'}
       autoCorrect={false}
       secureTextEntry={secureTextEntry}
       postfix={
