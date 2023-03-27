@@ -16,7 +16,6 @@ import React, {memo} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Animated, {SharedValue} from 'react-native-reanimated';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
@@ -31,8 +30,6 @@ interface Props {
 }
 
 export const FeaturedNewsArticle = memo(({animatedIndex}: Props) => {
-  const safeAreaInsets = useSafeAreaInsets();
-
   const featuredNewsArticle = useSelector(NewsSelectors.getFeaturedNewsArticle);
 
   const {openNewsArticle} = useNewsBrowser(featuredNewsArticle);
@@ -60,16 +57,6 @@ export const FeaturedNewsArticle = memo(({animatedIndex}: Props) => {
         source={{
           uri: imageUrl,
         }}
-      />
-
-      <LinearGradient
-        style={[
-          styles.topGradient,
-          {
-            height: safeAreaInsets.top,
-          },
-        ]}
-        colors={[COLORS.black, COLORS.blackTransparent]}
       />
 
       <Animated.View style={[styles.content, contentStyle]}>
@@ -153,13 +140,6 @@ const styles = StyleSheet.create({
     height: FEATURED_HEADER_EXPANDED_HEIGHT,
     justifyContent: 'flex-end',
     backgroundColor: COLORS.white,
-  },
-
-  topGradient: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
   },
 
   content: {
