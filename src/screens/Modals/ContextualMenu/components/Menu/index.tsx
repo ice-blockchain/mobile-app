@@ -14,7 +14,7 @@ import {StyleSheet, Text, View, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
-  onPress: () => void;
+  onPress?: () => void;
   coordinates: Coordinates;
   buttons: ContextualMenuButton[];
   style?: ViewStyle;
@@ -31,7 +31,9 @@ export const Menu = memo(({coordinates, onPress, buttons, style}: Props) => {
           key={button.label}
           style={styles.menuItem}
           onPress={() => {
-            onPress();
+            if (onPress) {
+              onPress();
+            }
             setTimeout(button.onPress, 100);
           }}>
           {button.icon && (

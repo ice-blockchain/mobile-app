@@ -83,9 +83,6 @@ export const useMenuButtonWalkthrough = ({
                         top: 0,
                       }}
                       buttons={[button]}
-                      onPress={() => {
-                        // DO nothing. We don't want it to be pressable here
-                      }}
                       style={styles.menuContainer}
                     />
                   </View>
