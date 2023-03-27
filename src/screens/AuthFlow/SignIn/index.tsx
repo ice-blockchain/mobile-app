@@ -5,7 +5,9 @@ import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {PrivacyTerms} from '@components/PrivacyTerms';
 import {COLORS} from '@constants/colors';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
+import {AuthStackParamList} from '@navigation/Auth';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import {RouteProp, useRoute} from '@react-navigation/native';
 import {Header} from '@screens/AuthFlow/SignIn/components/Header';
 import {SocialButtons} from '@screens/AuthFlow/SignIn/components/SocialButtons';
 import {SOCIAL_BUTTON_SIZE} from '@screens/AuthFlow/SignIn/components/SocialButtons/components/SocialButton';
@@ -15,41 +17,39 @@ import {SignInEmailLinkForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailLin
 import {SignInEmailPasswordForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailPasswordForm';
 import {SignInPhoneForm} from '@screens/AuthFlow/SignIn/forms/SignInPhoneForm';
 import {useSocialAuth} from '@screens/AuthFlow/SignIn/hooks/useSocialAuth';
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
 export const SignIn = () => {
   useFocusStatusBar({style: 'light-content'});
+
+  const {params} = useRoute<RouteProp<AuthStackParamList, 'SignIn'>>();
+  const isResetPassword = params?.flow === 'resetPassword';
+
   const {scrollRef} = useScrollEndOnKeyboardShown();
 
   const {isSocialAuthLoading} = useSocialAuth();
 
   const [activeTab, setActiveTab] = useState<Tab>('email');
 
-  const [isResetPassword, setIsResetPassword] = useState(false);
-
   const emailFlow = 'password';
 
-  const renderForm = () => {
+  const Form = useMemo(() => {
     if (isResetPassword) {
-      return <ResetPasswordForm />;
+      return ResetPasswordForm;
     }
 
     if (activeTab === 'phone') {
-      return <SignInPhoneForm />;
+      return SignInPhoneForm;
     }
 
     if (emailFlow === 'password') {
-      return (
-        <SignInEmailPasswordForm
-          onResetPasswordPress={() => setIsResetPassword(true)}
-        />
-      );
+      return SignInEmailPasswordForm;
     } else {
-      return <SignInEmailLinkForm />;
+      return SignInEmailLinkForm;
     }
-  };
+  }, [activeTab, isResetPassword]);
 
   return (
     <KeyboardAvoider keyboardVerticalOffset={rem(15) - SOCIAL_BUTTON_SIZE}>
@@ -67,7 +67,9 @@ export const SignIn = () => {
             hiddenTab={isResetPassword ? 'phone' : null}
             containerStyle={styles.tabs}
           />
-          <View style={styles.form}>{renderForm()}</View>
+          <View style={styles.form}>
+            <Form />
+          </View>
           {!isResetPassword && <SocialButtons />}
         </View>
         <PrivacyTerms />

@@ -22,7 +22,7 @@ import React, {useEffect, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
 export type AuthStackParamList = {
-  SignIn: undefined;
+  SignIn?: {flow?: 'main' | 'resetPassword'};
   ConfirmEmailLink: undefined;
   ConfirmPhone: undefined;
   CountrySelect: {

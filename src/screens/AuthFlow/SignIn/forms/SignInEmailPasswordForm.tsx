@@ -2,6 +2,9 @@
 
 import {EmailInput} from '@components/Inputs/EmailInput';
 import {PasswordInput} from '@components/Inputs/PasswordInput';
+import {AuthStackParamList} from '@navigation/Auth';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {Divider} from '@screens/AuthFlow/SignIn/components/Divider';
 import {SubmitButton} from '@screens/AuthFlow/SignIn/components/SubmitButton';
 import {useEmailPasswordAuth} from '@screens/AuthFlow/SignIn/hooks/useEmailPasswordAuth';
@@ -11,11 +14,10 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
-type Props = {
-  onResetPasswordPress: () => void;
-};
+export const SignInEmailPasswordForm = () => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
 
-export const SignInEmailPasswordForm = ({onResetPasswordPress}: Props) => {
   const {
     email,
     setEmail,
@@ -50,7 +52,7 @@ export const SignInEmailPasswordForm = ({onResetPasswordPress}: Props) => {
       <Divider
         label={t('signIn.reset_password')}
         textStyle={styles.resetPasswordText}
-        onPress={onResetPasswordPress}
+        onPress={() => navigation.navigate('SignIn', {flow: 'resetPassword'})}
       />
     </>
   );

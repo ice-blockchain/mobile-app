@@ -5,8 +5,8 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
-export const SubmitButton = (props: PrimaryButtonProps) => {
-  return <PrimaryButton style={styles.button} {...props} />;
+export const SubmitButton = ({style, ...props}: PrimaryButtonProps) => {
+  return <PrimaryButton style={[styles.button, style]} {...props} />;
 };
 
 const styles = StyleSheet.create({
