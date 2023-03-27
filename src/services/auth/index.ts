@@ -132,6 +132,10 @@ export const signInWithEmailAndPassword = async (
   }
 };
 
+export const sendPasswordResetEmail = (emailLink: string) => {
+  return auth().sendPasswordResetEmail(emailLink);
+};
+
 export const isUpdateEmailLink = (
   query: Record<string, string | undefined>,
 ) => {

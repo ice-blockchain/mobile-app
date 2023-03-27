@@ -123,6 +123,12 @@ const VERIFY_PHONE_NUMBER = createAction('VERIFY_PHONE_NUMBER', {
   RESET: true,
 });
 
+const RESET_PASSWORD = createAction('RESET_PASSWORD', {
+  START: (params: {email: string}) => params,
+  SUCCESS: (params: {email: string}) => params,
+  FAILED: (errorMessage: string) => ({errorMessage}),
+});
+
 export const AccountActions = Object.freeze({
   SET_TOKEN,
   SIGN_IN_EMAIL_LINK,
@@ -137,4 +143,5 @@ export const AccountActions = Object.freeze({
   USER_STATE_CHANGE,
   VERIFY_BEFORE_UPDATE_EMAIL,
   VERIFY_PHONE_NUMBER,
+  RESET_PASSWORD,
 });

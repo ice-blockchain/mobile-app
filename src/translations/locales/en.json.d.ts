@@ -78,6 +78,7 @@ export type Translations = {
   'signIn.logInSignUp': null;
   'signIn.phone': null;
   'signIn.or': null;
+  'signIn.reset_password': null;
   'signIn.welcome': null;
   'signIn.email': null;
   'signIn.slogan': null;

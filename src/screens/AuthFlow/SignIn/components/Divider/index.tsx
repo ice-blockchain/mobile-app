@@ -1,19 +1,28 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {smallHeightDevice} from '@constants/styles';
-import {t} from '@translations/i18n';
+import {Touchable} from '@components/Touchable';
+import {MIDDLE_BUTTON_HIT_SLOP, smallHeightDevice} from '@constants/styles';
 import {font} from '@utils/styles';
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleProp, StyleSheet, Text, TextStyle} from 'react-native';
 import {rem} from 'rn-units';
 
 export const DIVIDER_VERTICAL_MARGIN = smallHeightDevice ? rem(18) : rem(28);
 
-export const Divider = () => {
+type Props = {
+  label: string;
+  onPress?: () => void;
+  textStyle?: StyleProp<TextStyle>;
+};
+
+export const Divider = ({label, onPress, textStyle}: Props) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.orText}>{t('signIn.or')}</Text>
-    </View>
+    <Touchable
+      style={styles.container}
+      onPress={onPress}
+      hitSlop={MIDDLE_BUTTON_HIT_SLOP}>
+      <Text style={[styles.orText, textStyle]}>{label}</Text>
+    </Touchable>
   );
 };
 

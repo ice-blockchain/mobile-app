@@ -10,24 +10,17 @@ import {checkProp} from '@utils/guards';
 import {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
-export const useEmailAuth = () => {
+export const useEmailPasswordAuth = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const emailFlow: 'password' | 'link' = 'password'; // TODO: set depending on device.lang
-
-  const action =
-    emailFlow === 'password'
-      ? AccountActions.SIGN_IN_EMAIL_PASSWORD
-      : AccountActions.SIGN_IN_EMAIL_LINK;
-
   const emailAuthFailedReason = useSelector(
-    failedReasonSelector.bind(null, action),
+    failedReasonSelector.bind(null, AccountActions.SIGN_IN_EMAIL_PASSWORD),
   );
 
   const emailAuthFailedReasonPayload = useSelector(
-    actionPayloadSelector.bind(null, action),
+    actionPayloadSelector.bind(null, AccountActions.SIGN_IN_EMAIL_PASSWORD),
   );
 
   const failedField =
@@ -35,16 +28,14 @@ export const useEmailAuth = () => {
       ? emailAuthFailedReasonPayload.field
       : null;
 
-  const isEmailAuthLoading = useSelector(isLoadingSelector.bind(null, action));
+  const isEmailAuthLoading = useSelector(
+    isLoadingSelector.bind(null, AccountActions.SIGN_IN_EMAIL_PASSWORD),
+  );
 
   const signInWithEmail = () => {
-    if (emailFlow === 'password') {
-      dispatch(
-        AccountActions.SIGN_IN_EMAIL_PASSWORD.START.create({email, password}),
-      );
-    } else {
-      dispatch(AccountActions.SIGN_IN_EMAIL_LINK.START.create(email));
-    }
+    dispatch(
+      AccountActions.SIGN_IN_EMAIL_PASSWORD.START.create({email, password}),
+    );
   };
 
   return {
@@ -52,7 +43,6 @@ export const useEmailAuth = () => {
     setEmail,
     password,
     setPassword,
-    emailFlow,
     signInWithEmail,
     isEmailAuthLoading,
     emailAuthFailedReason,

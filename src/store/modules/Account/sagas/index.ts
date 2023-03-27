@@ -3,6 +3,7 @@
 import {AccountActions} from '@store/modules/Account/actions';
 import {deleteAccountSaga} from '@store/modules/Account/sagas/deleteAccount';
 import {getAccountSaga} from '@store/modules/Account/sagas/getAccount';
+import {resetPasswordSaga} from '@store/modules/Account/sagas/resetPassword';
 import {signInEmailLinkSaga} from '@store/modules/Account/sagas/signInEmailLink';
 import {signInEmailPasswordSaga} from '@store/modules/Account/sagas/signInEmailPassword';
 import {signInPhoneSaga} from '@store/modules/Account/sagas/signInPhone';
@@ -55,7 +56,7 @@ export function* rootAuthSaga() {
       AccountActions.VERIFY_PHONE_NUMBER.START.type,
       verifyPhoneNumberSaga,
     ),
-
+    takeLatest(AccountActions.RESET_PASSWORD.START.type, resetPasswordSaga),
     fork(syncLanguageCodeSaga),
   ]);
 }
