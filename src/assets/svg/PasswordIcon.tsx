@@ -9,7 +9,12 @@ export const PasswordIcon = ({
   color = COLORS.secondary,
   ...props
 }: SvgProps) => (
-  <Svg width={rem(24)} height={rem(24)} fill="none" {...props}>
+  <Svg
+    width={rem(24)}
+    height={rem(24)}
+    viewBox={'0 0 24 24'}
+    fill="none"
+    {...props}>
     <Path
       d="M21 13V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h7"
       stroke={color}

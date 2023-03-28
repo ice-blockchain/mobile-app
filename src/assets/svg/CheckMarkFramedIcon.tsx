@@ -9,7 +9,12 @@ export const CheckMarkFramedIcon = ({
   color = COLORS.white,
   ...props
 }: SvgProps) => (
-  <Svg width={rem(24)} height={rem(24)} fill="none" {...props}>
+  <Svg
+    width={rem(24)}
+    height={rem(24)}
+    viewBox={'0 0 24 24'}
+    fill="none"
+    {...props}>
     <Path
       d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12"
       stroke={color}
