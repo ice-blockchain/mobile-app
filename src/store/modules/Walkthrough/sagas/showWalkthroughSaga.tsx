@@ -156,7 +156,13 @@ function* markAllWalkthroughSteps(user: User, steps: WalkthroughStep[]) {
   yield put(
     AccountActions.UPDATE_ACCOUNT.START.create(
       {
-        clientData: {...(user.clientData ?? {}), walkthroughProgress},
+        clientData: {
+          ...(user.clientData ?? {}),
+          walkthroughProgress: {
+            ...(user.clientData?.walkthroughProgress ?? {}),
+            ...walkthroughProgress,
+          },
+        },
       },
       function* (freshUser) {
         markAllWalkthroughSteps(freshUser, steps);
