@@ -30,6 +30,8 @@ export type TeamWalkthroughStepKey =
   | 'tierOneEarnings'
   | 'ping';
 
+export const TEAM_WALKTHROUGH_SCREEN_NAME = 'Team';
+
 export const TEAM_WALKTHROUGH_STEPS: WalkthroughStepStaticData<TeamWalkthroughStepKey>[] =
   [
     {

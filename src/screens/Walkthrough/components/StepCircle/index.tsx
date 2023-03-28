@@ -81,7 +81,6 @@ const styles = StyleSheet.create({
     width: screenWidth,
     height: CIRCLE_DIAMETER,
     paddingHorizontal: rem(30),
-    zIndex: 1,
   },
   backgroundImage: {
     width: CIRCLE_DIAMETER,

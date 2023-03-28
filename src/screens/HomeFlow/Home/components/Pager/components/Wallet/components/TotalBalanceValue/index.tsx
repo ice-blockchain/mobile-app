@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
+import {commonStyles} from '@constants/styles';
 import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {formatNumberString, parseNumber} from '@utils/numbers';
@@ -11,9 +12,10 @@ import {useSelector} from 'react-redux';
 
 interface Props {
   style?: StyleProp<TextStyle>;
+  darkMode?: boolean;
 }
 
-export const TotalBalanceValue = ({style}: Props) => {
+export const TotalBalanceValue = ({style, darkMode}: Props) => {
   const balanceSummary = useSelector(balanceSummarySelector);
 
   const animatedBalanceSummary = useAnimatedNumber(
@@ -25,8 +27,8 @@ export const TotalBalanceValue = ({style}: Props) => {
     <FormattedNumber
       containerStyle={style}
       number={animatedBalanceSummary}
-      bodyStyle={styles.bodyStyle}
-      decimalsStyle={styles.decimalsStyle}
+      bodyStyle={[styles.bodyStyle, darkMode && commonStyles.darkText]}
+      decimalsStyle={[styles.decimalsStyle, darkMode && commonStyles.darkText]}
       trim
     />
   );

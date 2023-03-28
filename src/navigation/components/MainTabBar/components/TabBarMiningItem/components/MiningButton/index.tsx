@@ -12,9 +12,10 @@ import {View} from 'react-native';
 
 interface Props {
   onPress?(): void;
+  onPressCallback?: () => void;
 }
 
-export const MiningButton = ({onPress}: Props) => {
+export const MiningButton = ({onPress, onPressCallback}: Props) => {
   const userInteractedWithButton = useRef(false);
   const {
     stateConfig,
@@ -37,6 +38,9 @@ export const MiningButton = ({onPress}: Props) => {
 
   const gestureHandler = (gesture: 'onTap' | 'onLongPress') => {
     return async () => {
+      if (onPressCallback) {
+        onPressCallback();
+      }
       if (onPress && gesture === 'onTap') {
         onPress();
         return null;

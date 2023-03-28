@@ -21,6 +21,28 @@ export const getCurrentRoute = async () => {
   return navigationRef.getCurrentRoute();
 };
 
+export const getCurrentRouteSync = () => {
+  return navigationRef.getCurrentRoute();
+};
+
+export const removeScreenByName = async (screenName: string) => {
+  await navigationReady;
+  const currentStack = navigationRef.getState();
+  const screenIndex = currentStack.routes.findIndex(
+    route => route.name === screenName,
+  );
+  if (screenIndex !== -1) {
+    const newStack = {
+      ...currentStack,
+      routes: currentStack.routes.filter(route => route.name !== screenName),
+    };
+    if (newStack.index >= newStack.routes.length) {
+      newStack.index = newStack.routes.length - 1;
+    }
+    navigationRef.reset(newStack);
+  }
+};
+
 export const navigate = async (...params: NavigationParams) => {
   await navigationReady;
   return navigationRef.navigate(...params);

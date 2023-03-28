@@ -628,90 +628,134 @@
   "walkthrough": {
     "news": {
       "step_1": {
-        "title": "Weiterlesen",
-        "description": "Hier sehen Sie die neuesten Nachrichten von unserem Team. "
+        "title": "Read more",
+        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
       },
       "step_2": {
-        "description": "Tippen Sie auf jeden einzelnen Nachrichtentitel und lesen Sie die Vollversion davon. ",
-        "title": "Veröffentlichte Nachrichten"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Kontakte zulassen",
-        "description": "Synchronisieren Sie Ihre Kontakte und sehen Sie, wer bereits auf [[:ice]] ist. "
-      },
-      "step_2": {
-        "title": "Empfehlungen",
-        "description": "Hier sehen Sie, wie viele Empfehlungen Sie insgesamt haben. "
-      },
-      "step_3": {
-        "title": "Verdienste",
-        "description": "Ihr aktuelles Guthaben wird stündlich aktualisiert und hier angezeigt. "
-      },
-      "step_4": {
-        "title": "Kontakte",
-        "description": "Dies ist die Liste mit all Ihren Kontakten, diejenigen, die die App bereits haben, werden oben in der Liste angezeigt."
-      },
-      "step_5": {
-        "title": "Stufe 1",
-        "description": "Hier sehen Sie die Liste Ihrer Tier 1-Empfehlungen. "
-      },
-      "step_6": {
-        "title": "Rang 2",
-        "description": "Hier sehen Sie die Liste Ihrer Tier-2-Empfehlungen. "
-      },
-      "step_7": {
-        "title": "Aktive Benutzer",
-        "description": "Dies ist der aktuelle Status Ihrer Empfehlungs-Mining-Aktivität. "
-      },
-      "step_8": {
-        "title": "Tier-1-Einnahmen",
-        "description": "Hier sehen Sie die Liste Ihrer Tier 1-Empfehlungen. "
-      },
-      "step_9": {
-        "title": "Ping-Taste",
-        "description": "Benachrichtigen Sie Ihre Empfehlungen, um ihre Mining-Sitzungen zu starten. "
+        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
+        "title": "Released news"
       }
     },
     "team": {
-      "step_1": {
-        "title": "Kontakte zulassen",
-        "description": "Synchronisieren Sie Ihre Kontakte und sehen Sie, wer bereits auf [[:ice]] ist. "
+      "allow_contacts": {
+        "title": "Allow contacts",
+        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
       },
-      "step_2": {
-        "title": "Empfehlungen",
-        "description": "Hier sehen Sie, wie viele Empfehlungen Sie insgesamt haben. "
+      "confirm_phone": {
+        "title": "Confirm phone",
+        "description": "Confirm your identity and allow your contacts to know that you are also a member of the ice network. Your phone number will not be shared with other third parties."
       },
-      "step_3": {
-        "title": "Verdienste",
-        "description": "Ihr aktuelles Guthaben wird stündlich aktualisiert und hier angezeigt. "
+      "contacts_list": {
+        "title": "List of contacts",
+        "description": "This is the list with all your contacts, those who already joined the [[:ice]] network being displayed on top of the list."
       },
-      "step_4": {
-        "title": "Kontakte",
-        "description": "Dies ist die Liste mit all Ihren Kontakten, diejenigen, die die App bereits haben, werden oben in der Liste angezeigt."
+      "referrals": {
+        "title": "Referrals",
+        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
       },
-      "step_5": {
-        "title": "Stufe 1",
-        "description": "Hier sehen Sie die Liste Ihrer Tier 1-Empfehlungen. ",
-        "url": "https://ice.io/"
+      "earnings": {
+        "title": "Earnings",
+        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
       },
-      "step_6": {
-        "title": "Rang 2",
-        "description": "Hier sehen Sie die Liste Ihrer Tier-2-Empfehlungen. ",
-        "url": "https://ice.io/"
+      "segmented_control_tier_one": {
+        "title": "Tier 1",
+        "description": "Here you can see the list of your Tier 1 referrals. For each friend checking-in at the same time with you, you will get extra 25% on your base current adoption earning rate. [[:link]]Read more[[/:link]]",
+        "url": "https://ice.io/#invite"
       },
-      "step_7": {
-        "title": "Aktive Benutzer",
-        "description": "Dies ist der aktuelle Status Ihrer Empfehlungs-Mining-Aktivität. "
+      "segmented_control_tier_two": {
+        "title": "Tier 2",
+        "description": "Here you can see the list of your Tier 2 referrals. For each friend checking-in at the same time with you, you will get extra 5% on your base current adoption earning rate. [[:link]]Read more[[/:link]]",
+        "url": "https://ice.io/#invite"
       },
-      "step_8": {
-        "title": "Tier-1-Einnahmen",
-        "description": "Hier sehen Sie die Liste Ihrer Tier 1-Empfehlungen. "
+      "active_users": {
+        "title": "Active Users",
+        "description": "This is the current status of your referrals check-in activity. They count as active when they have an active check-in session."
       },
-      "step_9": {
-        "title": "Ping-Taste",
-        "description": "Benachrichtigen Sie Ihre Empfehlungen, um ihre Mining-Sitzungen zu starten. "
+      "tier_one_earnings": {
+        "title": "Tier 1 Earnings",
+        "description": "Here you can see the list of your Tier 1 referrals. For each member checking-in at the same time with you, you will both get extra 25% on your base current adoption earning rate."
+      },
+      "ping": {
+        "title": "Ping Button",
+        "description": "Notify your referrals to start their check-in sessions. You can send one notification to each referral every 24h."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Home",
+        "description": "Welcome to [[:ice]]. On the home screen you can find all the statistics about your balance, the current earning rate, your global rank along with your team."
+      },
+      "invite": {
+        "title": "Invite",
+        "description": "For every person that you invite, you will both earn up to 25% on your base earning rate. The more people you invite, the more you will earn."
+      },
+      "team": {
+        "title": "Team",
+        "description": "[[:ice]] is better with friends. On this page you can see the status of your team members from both Tier 1 and Tier 2 levels. You can also ping them from here."
+      },
+      "news": {
+        "title": "News",
+        "description": "Stay up to date on all our news and polls. As we are a Decentralized Autonomous Organization, you will be able to vote here for the future features."
+      },
+      "profile": {
+        "title": "Profile",
+        "description": "Customize your profile details and see all your achievements and badges that you have earned. Use the calculator from here, so you can estimate your earnings."
+      },
+      "earningicestart": {
+        "title": "Earning ice",
+        "description": "You can start the [[:ice]] check-in session every 24 hours by tapping this button. Don’t forget to come back each day and start earning!"
+      },
+      "earningiceseemore": {
+        "title": "Earning ice",
+        "description": "Tap again and see more details about your current check-in session."
+      },
+      "stats": {
+        "title": "Stats",
+        "description": "On the stats page you can see Total and Active users that checked-in each day along with Top countries and users."
+      },
+      "help": {
+        "title": "Help",
+        "description": "Do you have any questions? Check out our list of frequently asked questions. If you can't find what you're looking for, don't hesitate to reach out to us at hi@ice.io."
+      },
+      "preStaking": {
+        "title": "Pre-Staking",
+        "description": "Maximize your returns by pre-staking your earning rewards. Select your allocation and staking period to receive a bonus on top of your earnings."
+      },
+      "wallet": {
+        "title": "Wallet Card",
+        "description": "You can find here your current [[:ice]] balance, together with the earning rate. The more referrals from your team are online, the higher the earning rate."
+      },
+      "earning": {
+        "title": "Earning Card",
+        "description": "Stay up to date on your earning rate and bonuses! Here you can check out your current rate, our base rate, and bonus rates for various activities in the app."
+      },
+      "engagement": {
+        "title": "Engagement Card",
+        "description": "Keep track of your check-in sessions streak and days off! Check this section for more details about your consecutive check-in sessions and to see how many available days off you have."
+      },
+      "profilecard": {
+        "title": "Profile Card",
+        "description": "You can keep track of your profile status by following this card. It displays your current global rank, together with your role, level and total referrals."
+      },
+      "referralscard": {
+        "title": "Referral Card",
+        "description": "See the evolution of your referral stats for the previous 5 days for both Tier 1 and Tier 2 referrals by tapping this card."
+      },
+      "adoptioncard": {
+        "title": "Adoption Card",
+        "description": "Based on the average of the last week total of active Snowmen, you can see the current [[:ice]] earning rate. The earning rate is halved when reached the next threshold."
+      },
+      "nickname": {
+        "title": "Nickname",
+        "description": "The nickname is what makes you unique. Your friends will need to use it in order to join your team. You can also use this shortcut to open your profile."
+      },
+      "balancehistory": {
+        "title": "Balance History",
+        "description": "You can find here your current [[:ice]] balance on local wallet and blockchain. The local wallet balance is updated every hour, while the blockchain balance is updated every 24 hours."
+      },
+      "achievements": {
+        "title": "Achievements",
+        "description": "Complete the tasks below and level up! Start your first check-in session now!"
       }
     }
   },

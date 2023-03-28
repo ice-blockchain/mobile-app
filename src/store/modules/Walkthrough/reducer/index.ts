@@ -2,7 +2,6 @@
 
 import {AccountActions} from '@store/modules/Account/actions';
 import {WalkthroughActions} from '@store/modules/Walkthrough/actions';
-import {WALKTHROUGH_STEPS} from '@store/modules/Walkthrough/steps';
 import {
   WalkthroughElementData,
   WalkthroughStepKey,
@@ -52,10 +51,14 @@ function reducer(state = INITIAL_STATE, action: Actions): WalkthroughState {
         break;
       }
       case WalkthroughActions.SKIP_WALKTHROUGH.STATE.type: {
-        draft.seenSteps = WALKTHROUGH_STEPS.reduce(
-          (result, step) => ({...result, [step.key]: true}),
+        const newSeenSteps = action.payload.stepsKeys.reduce(
+          (result, stepKey) => ({...result, [stepKey]: true}),
           {},
         );
+        draft.seenSteps = {
+          ...state.seenSteps,
+          ...newSeenSteps,
+        };
         break;
       }
       case AccountActions.SIGN_OUT.SUCCESS.type: {

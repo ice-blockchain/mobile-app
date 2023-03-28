@@ -20,7 +20,11 @@ import {rem} from 'rn-units';
 import {IconValueText} from './components/IconValueText';
 import {MiningRateValue} from './components/MiningRateValue';
 
-export const MiningRate = memo(() => {
+type Props = {
+  darkMode?: boolean;
+};
+
+export const MiningRate = memo(({darkMode}: Props) => {
   const miningRates = useSelector(miningRatesSelector);
 
   const rateValueTextStyle = useMemo(() => {
@@ -41,11 +45,16 @@ export const MiningRate = memo(() => {
     return null;
   }
 
+  const color = darkMode ? COLORS.primaryDark : COLORS.white;
+
   return (
     <View style={[commonStyles.baseSubScreen, styles.container]}>
       <View style={styles.titleContainer}>
-        <MiningHammerIcon />
-        <Text style={styles.miningRateText}>{t('home.mining_rate.title')}</Text>
+        <MiningHammerIcon color={color} />
+        <Text
+          style={[styles.miningRateText, darkMode && commonStyles.darkText]}>
+          {t('home.mining_rate.title')}
+        </Text>
       </View>
       <View style={styles.miningRate}>
         <MiningRateValue
@@ -76,17 +85,25 @@ export const MiningRate = memo(() => {
         )}
       </View>
       <View style={styles.baseContainer}>
-        <Text style={styles.baseTitleText}>{t('home.mining_rate.base')}</Text>
-
+        <Text style={[styles.baseTitleText, darkMode && commonStyles.darkText]}>
+          {t('home.mining_rate.base')}
+        </Text>
         <MiningRateValue
           style={styles.baseValueContainer}
-          bodyStyle={styles.baseValueText}
-          decimalsStyle={styles.baseDecimalsText}
+          bodyStyle={
+            darkMode ? styles.baseValueTextDarkMode : styles.baseValueText
+          }
+          decimalsStyle={
+            darkMode ? styles.baseDecimalsTextDarkMode : styles.baseDecimalsText
+          }
           value={parseNumber(miningRates?.base.amount ?? '0')}
         />
 
         <IceLabel
-          textStyle={styles.baseValueText}
+          textStyle={
+            darkMode ? styles.baseValueTextDarkMode : styles.baseValueText
+          }
+          color={color}
           iconOffsetY={-1}
           iconSize={12}
           label={t('general.ice_per_hour')}
@@ -94,7 +111,7 @@ export const MiningRate = memo(() => {
       </View>
       <View style={styles.iconsContainer}>
         <View style={styles.iconContainer}>
-          <TeamIcon />
+          <TeamIcon color={color} />
 
           <IconValueText
             style={styles.iconValueText}
@@ -105,7 +122,7 @@ export const MiningRate = memo(() => {
           />
         </View>
         <View style={styles.iconContainer}>
-          <StarIcon />
+          <StarIcon color={color} />
 
           <IconValueText
             style={styles.iconValueText}
@@ -113,11 +130,7 @@ export const MiningRate = memo(() => {
           />
         </View>
         <View style={styles.iconContainer}>
-          <CoinsStackIcon
-            fill={COLORS.white}
-            width={rem(14)}
-            height={rem(14)}
-          />
+          <CoinsStackIcon color={color} width={rem(14)} height={rem(14)} />
 
           <IconValueText
             style={styles.iconValueText}
@@ -182,8 +195,16 @@ const styles = StyleSheet.create({
   baseValueText: {
     ...font(12, 14.4, 'medium'),
   },
+  baseValueTextDarkMode: {
+    ...font(12, 14.4, 'medium', 'primaryDark'),
+  },
   baseDecimalsText: {
     ...font(7, 9, 'bold'),
+    alignSelf: 'flex-start',
+    marginRight: rem(4),
+  },
+  baseDecimalsTextDarkMode: {
+    ...font(7, 9, 'bold', 'primaryDark'),
     alignSelf: 'flex-start',
     marginRight: rem(4),
   },

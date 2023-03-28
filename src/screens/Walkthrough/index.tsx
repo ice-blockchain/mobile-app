@@ -2,13 +2,15 @@
 
 import {COLORS} from '@constants/colors';
 import {MainStackParamList} from '@navigation/Main';
-import {RouteProp, useRoute} from '@react-navigation/native';
+import {RouteProp, useFocusEffect, useRoute} from '@react-navigation/native';
 import {StepCircle} from '@screens/Walkthrough/components/StepCircle';
+import {ANIMATION_DELAY} from '@screens/Walkthrough/constants';
 import {useAnimatedStyles} from '@screens/Walkthrough/hooks/useAnimatedStyles';
 import {WalkthroughActions} from '@store/modules/Walkthrough/actions';
 import {ElementMeasurements} from '@store/modules/Walkthrough/types';
-import React, {useEffect, useState} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {debounce} from 'lodash';
+import React, {useCallback, useEffect, useState} from 'react';
+import {BackHandler, StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {useDispatch} from 'react-redux';
 
@@ -21,12 +23,24 @@ export function Walkthrough() {
 
   const dispatch = useDispatch();
 
+  useFocusEffect(
+    useCallback(() => {
+      const subscription = BackHandler.addEventListener(
+        'hardwareBackPress',
+        () => {
+          return true;
+        },
+      );
+      return () => subscription.remove();
+    }, []),
+  );
+
   const [elementHeight, setElementHeight] = useState<number>();
 
   const {elementAnimatedStyle, circleAnimatedStyle, runCloseAnimation} =
     useAnimatedStyles({step, elementHeight});
 
-  const onNext = () => {
+  const onNext = debounce(() => {
     runCloseAnimation(() => {
       if (step) {
         dispatch(
@@ -36,11 +50,13 @@ export function Walkthrough() {
         );
       }
     });
-  };
+  }, ANIMATION_DELAY);
 
   const onSkip = () => {
     runCloseAnimation(() => {
-      dispatch(WalkthroughActions.SKIP_WALKTHROUGH.STATE.create());
+      dispatch(
+        WalkthroughActions.SKIP_WALKTHROUGH.STATE.create({stepsKeys: []}),
+      );
     });
   };
 
@@ -100,7 +116,7 @@ export function Walkthrough() {
         onLayout={({nativeEvent}) => {
           setElementHeight(nativeEvent.layout.height);
         }}>
-        {step.elementData.render(elementMeasurements)}
+        {step.elementData.render({measurements: elementMeasurements, onNext})}
       </Animated.View>
     </View>
   );

@@ -1,20 +1,17 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {IceLabel} from '@components/Labels/IceLabel';
-import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {commonStyles, SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
-import {MainNavigationParams} from '@navigation/Main';
-import {useNavigation} from '@react-navigation/native';
-import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {commonStyles} from '@constants/styles';
 import {PAGE_HEIGHT} from '@screens/HomeFlow/Home/components/Pager';
+import {BalanceHistoryButton} from '@screens/HomeFlow/Home/components/Pager/components/Wallet/components/BalanceHistoryButton';
+import {useBalanceHistoryWalkthrough} from '@screens/HomeFlow/Home/components/Pager/components/Wallet/hooks/useBalanceHistoryWalkthrough';
 import {
   balanceSummarySelector,
   miningRatesSelector,
 } from '@store/modules/Tokenomics/selectors';
 import {ArrowDown} from '@svg/ArrowDown';
 import {ArrowUp} from '@svg/ArrowUp';
-import {InfoOutlineIcon} from '@svg/InfoOutlineIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
@@ -27,12 +24,15 @@ import {TotalMiningRateValue} from './components/TotalMiningRateValue';
 
 const INFO_ICON_SIZE = rem(16);
 
-export const Wallet = memo(() => {
+type Props = {
+  darkMode?: boolean;
+};
+
+export const Wallet = memo(({darkMode}: Props) => {
   const balanceSummary = useSelector(balanceSummarySelector);
   const miningRates = useSelector(miningRatesSelector);
 
-  const navigation =
-    useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
+  const {elementRef, onElementLayout} = useBalanceHistoryWalkthrough();
 
   if (!balanceSummary || !miningRates) {
     //TODO: add loading
@@ -41,7 +41,10 @@ export const Wallet = memo(() => {
 
   return (
     <View style={[commonStyles.baseSubScreen, styles.container]}>
-      <Text style={styles.balanceLabelText}>{t('home.wallet.balance')}</Text>
+      <Text
+        style={[styles.balanceLabelText, darkMode && commonStyles.darkText]}>
+        {t('home.wallet.balance')}
+      </Text>
       <View style={styles.balanceContainer}>
         <View style={styles.balanceValue}>
           {
@@ -64,24 +67,28 @@ export const Wallet = memo(() => {
             }[miningRates.type]
           }
 
-          <TotalBalanceValue style={styles.balanceValueContainer} />
+          <TotalBalanceValue
+            darkMode={darkMode}
+            style={styles.balanceValueContainer}
+          />
 
           <IceLabel
-            textStyle={styles.balanceCurrencyText}
+            color={darkMode ? COLORS.primaryDark : COLORS.white}
+            textStyle={
+              darkMode
+                ? styles.balanceCurrencyTextDarkMode
+                : styles.balanceCurrencyText
+            }
             iconOffsetY={isAndroid ? -2 : 0}
             iconSize={rem(20)}
           />
         </View>
-        <Touchable
-          hitSlop={SMALL_BUTTON_HIT_SLOP}
-          style={styles.infoButton}
-          onPress={() => navigation.navigate('BalanceHistory')}>
-          <InfoOutlineIcon
-            color={COLORS.shamrock}
-            width={INFO_ICON_SIZE}
-            height={INFO_ICON_SIZE}
-          />
-        </Touchable>
+        <View
+          ref={elementRef}
+          onLayout={onElementLayout}
+          style={styles.infoButton}>
+          <BalanceHistoryButton />
+        </View>
       </View>
       <View style={styles.miningRate}>
         <Text style={styles.rateLabelText}>{t('home.wallet.rate')}</Text>
@@ -131,8 +138,15 @@ const styles = StyleSheet.create({
     marginLeft: rem(10),
     marginRight: rem(6),
   },
+  balanceValueDecimalsTextDarkMode: {
+    alignSelf: 'flex-start',
+    ...font(15, 20, 'semibold', 'primaryDark'),
+  },
   balanceCurrencyText: {
     ...font(24, 28.8, 'semibold'),
+  },
+  balanceCurrencyTextDarkMode: {
+    ...font(24, 28.8, 'semibold', 'primaryDark'),
   },
   miningRate: {
     marginTop: rem(10),

@@ -4,6 +4,8 @@ import {WalkthroughStepStaticData} from '@store/modules/Walkthrough/types';
 
 export type NewsWalkthroughStepKey = 'newsReadMore' | 'releasedNews';
 
+export const NEWS_WALKTHROUGH_SCREEN_NAME = 'News';
+
 export const NEWS_WALKTHROUGH_STEPS: WalkthroughStepStaticData<NewsWalkthroughStepKey>[] =
   [
     {

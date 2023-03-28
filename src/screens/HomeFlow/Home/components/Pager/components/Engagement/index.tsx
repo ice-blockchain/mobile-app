@@ -14,8 +14,13 @@ import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const Engagement = memo(() => {
+type Props = {
+  darkMode?: boolean;
+};
+
+export const Engagement = memo(({darkMode}: Props) => {
   const miningSummary = useSelector(miningSummarySelector);
+  const color = darkMode ? COLORS.primaryDark : COLORS.white;
 
   const animatedMiningSummaryMiningStreak = useAnimatedNumber(
     miningSummary?.miningStreak ?? 0,
@@ -38,22 +43,33 @@ export const Engagement = memo(() => {
   return (
     <View style={[commonStyles.baseSubScreen, styles.container]}>
       <View style={styles.titleContainer}>
-        <MiningHammerIcon />
-        <Text style={styles.engagementText}>{t('home.engagement.title')}</Text>
+        <MiningHammerIcon color={color} />
+        <Text
+          style={[styles.engagementText, darkMode && commonStyles.darkText]}>
+          {t('home.engagement.title')}
+        </Text>
       </View>
       <View style={styles.valuesContainer}>
         <View style={styles.titleValueContainer}>
-          <Text style={styles.title}>{t('home.engagement.streak')}</Text>
-          <Text style={styles.value}>{animatedMiningSummaryMiningStreak}</Text>
+          <Text style={[styles.title, darkMode && commonStyles.darkText]}>
+            {t('home.engagement.streak')}
+          </Text>
+          <Text style={[styles.value, darkMode && commonStyles.darkText]}>
+            {animatedMiningSummaryMiningStreak}
+          </Text>
         </View>
         <View style={[styles.titleValueContainer, styles.daysOff]}>
-          <Text style={styles.title}>{t('home.engagement.days_off')}</Text>
-          <Text style={styles.value}>
+          <Text style={[styles.title, darkMode && commonStyles.darkText]}>
+            {t('home.engagement.days_off')}
+          </Text>
+          <Text style={[styles.value, darkMode && commonStyles.darkText]}>
             {animatedMiningSummaryRemainingFreeMiningSessions}
           </Text>
         </View>
       </View>
-      <Text style={styles.description}>{t('home.engagement.description')}</Text>
+      <Text style={[styles.description, darkMode && commonStyles.darkText]}>
+        {t('home.engagement.description')}
+      </Text>
     </View>
   );
 });

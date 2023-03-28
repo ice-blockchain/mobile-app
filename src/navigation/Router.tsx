@@ -2,6 +2,7 @@
 
 import {InitializationError} from '@components/InitializationError';
 import {AuthNavigator} from '@navigation/Auth';
+import {useRouteNameChange} from '@navigation/hooks/useRouteNameChange';
 import {MainNavigator} from '@navigation/Main';
 import {theme} from '@navigation/theme';
 import {navigationReadyResolver, navigationRef} from '@navigation/utils';
@@ -13,12 +14,13 @@ import {
   isRegistrationCompleteSelector,
   userSelector,
 } from '@store/modules/Account/selectors';
-import {useTrackScreenView} from '@store/modules/Analytics/hooks/useTrackScreenView';
+import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {useAppLoadedListener} from '@store/modules/AppCommon/hooks/useAppLoadedListener';
 import {useAppStateListener} from '@store/modules/AppCommon/hooks/useAppStateListener';
 import {appInitStateSelector} from '@store/modules/AppCommon/selectors';
 import {useOpenUrlListener} from '@store/modules/Linking/hooks/useOpenUrlListener';
 import {useInitNotifications} from '@store/modules/PushNotifications/hooks/useInitNotifications';
+import {useDispatchRestartWalkthrough} from '@store/modules/Walkthrough/hooks/useDispatchRestartWalkthrough';
 import React, {useCallback, useEffect} from 'react';
 import RNBootSplash from 'react-native-bootsplash';
 import {useSelector} from 'react-redux';
@@ -65,10 +67,16 @@ export function Router() {
     RNBootSplash.hide();
   }, []);
 
-  const trackScreenView = useTrackScreenView();
+  const dispatchRestartWalkthrough = useDispatchRestartWalkthrough();
+  const onRouteNameChange = useRouteNameChange({
+    onRouteChange: ({newRouteName, prevRouteName}) => {
+      AnalyticsEventLogger.trackViewScreen({screenName: newRouteName});
+      dispatchRestartWalkthrough({newRouteName, prevRouteName});
+    },
+  });
   const onStateChange = useCallback(() => {
-    trackScreenView();
-  }, [trackScreenView]);
+    onRouteNameChange();
+  }, [onRouteNameChange]);
 
   return (
     <NavigationContainer

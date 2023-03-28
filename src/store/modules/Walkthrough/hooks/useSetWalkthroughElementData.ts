@@ -20,10 +20,7 @@ export function useSetWalkthroughElementData() {
       stepKey: WalkthroughStepKey;
       elementData: WalkthroughElementData;
     }) => {
-      const isStepHasToBeShown = shouldDisplayStepSelector(stepKey)(
-        store.getState(),
-      );
-      if (isStepHasToBeShown) {
+      if (shouldDisplayStepSelector(stepKey)(store.getState())) {
         dispatch(
           WalkthroughActions.SET_WALKTHROUGH_STEP_ELEMENT_DATA.STATE.create({
             elementData,

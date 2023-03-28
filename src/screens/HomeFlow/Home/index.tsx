@@ -10,6 +10,8 @@ import {Overview} from '@screens/HomeFlow/Home/components/Overview';
 import {PAGE_HEIGHT, Pager} from '@screens/HomeFlow/Home/components/Pager';
 import {Tasks} from '@screens/HomeFlow/Home/components/Tasks';
 import {Team} from '@screens/HomeFlow/Home/components/Team';
+import {useAchievementsWalkthrough} from '@screens/HomeFlow/Home/hooks/useAchievementsWalkthrough';
+import {useHandleScrollToParam} from '@screens/HomeFlow/Home/hooks/useHandleScrollToParam';
 import {useHomeRefresh} from '@screens/HomeFlow/Home/hooks/useHomeRefresh';
 import {useScrollHandler} from '@screens/HomeFlow/Home/hooks/useScrollHandler';
 import React, {memo} from 'react';
@@ -22,10 +24,14 @@ export const Home = memo(() => {
   const {scrollHandler, translateY} = useScrollHandler();
   const {onRefresh, refreshing} = useHomeRefresh();
 
+  const {scrollViewRef} = useHandleScrollToParam();
+  const {elementRef, onElementLayout} = useAchievementsWalkthrough();
+
   return (
     <View style={styles.container}>
       <HomeHeader translateY={translateY} transitionOffset={PAGE_HEIGHT} />
       <Animated.ScrollView
+        ref={scrollViewRef}
         style={styles.container}
         contentContainerStyle={tabBarOffset.current}
         scrollEventThrottle={16}
@@ -42,7 +48,9 @@ export const Home = memo(() => {
         <View style={commonStyles.baseSubScreen}>
           <Overview translateY={translateY} topOffset={PAGE_HEIGHT} />
           <Team />
-          <Tasks />
+          <View ref={elementRef} onLayout={onElementLayout}>
+            <Tasks />
+          </View>
         </View>
       </Animated.ScrollView>
     </View>
