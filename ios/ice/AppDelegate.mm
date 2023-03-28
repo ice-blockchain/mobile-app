@@ -120,6 +120,15 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
     return self.moeDeeplink;
 }
 
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+       willPresentNotification:(UNNotification *)notification
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler{
+
+           //This is to only to display Alert and enable notification sound
+           completionHandler((UNNotificationPresentationOptionSound
+                       | UNNotificationPresentationOptionAlert ));
+}
+
 - (BOOL)application:(UIApplication *)application
    openURL:(NSURL *)url
    options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
