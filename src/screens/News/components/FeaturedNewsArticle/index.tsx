@@ -22,95 +22,115 @@ import {rem} from 'rn-units';
 
 import {useLayoutAnimation} from './hooks/useLayoutAnimation';
 
-export const FEATURED_HEADER_EXPANDED_HEIGHT = rem(374);
+/**
+ * Border radius of bottom sheet view
+ */
+export const FEATURED_HEADER_OVERLAP = rem(24);
+export const FEATURED_HEADER_EXPANDED_HEIGHT =
+  rem(374) + FEATURED_HEADER_OVERLAP;
 export const FEATURED_HEADER_COLLAPSED_HEIGHT = rem(64);
 
 interface Props {
   animatedIndex: SharedValue<number>;
+  deltaPositions: number;
 }
 
-export const FeaturedNewsArticle = memo(({animatedIndex}: Props) => {
-  const featuredNewsArticle = useSelector(NewsSelectors.getFeaturedNewsArticle);
+export const FeaturedNewsArticle = memo(
+  ({animatedIndex, deltaPositions}: Props) => {
+    const featuredNewsArticle = useSelector(
+      NewsSelectors.getFeaturedNewsArticle,
+    );
 
-  const {openNewsArticle} = useNewsBrowser(featuredNewsArticle);
+    const {openNewsArticle} = useNewsBrowser(featuredNewsArticle);
 
-  const {
-    titleStyle,
-    contentStyle,
-    valuesContainerStyle,
-    onTitleLayout,
-    onButtonLayout,
-  } = useLayoutAnimation({
-    animatedIndex,
-  });
+    const {
+      titleStyle,
+      contentStyle,
+      valuesContainerStyle,
+      onTitleLayout,
+      onButtonLayout,
+    } = useLayoutAnimation({
+      animatedIndex,
+      deltaPositions,
+    });
 
-  if (!featuredNewsArticle) {
-    return <FeaturedNewsArticleSkeleton />;
-  }
+    if (!featuredNewsArticle) {
+      return <FeaturedNewsArticleSkeleton />;
+    }
 
-  const {imageUrl, title, createdAt, views, viewed} = featuredNewsArticle;
+    const {imageUrl, title, createdAt, views, viewed} = featuredNewsArticle;
 
-  return (
-    <View style={styles.container}>
-      <Image
-        style={StyleSheet.absoluteFill}
-        source={{
-          uri: imageUrl,
-        }}
-      />
-
-      <Animated.View style={[styles.content, contentStyle]}>
-        <LinearGradient
+    return (
+      <View style={styles.container}>
+        <Image
           style={StyleSheet.absoluteFill}
-          colors={[COLORS.primaryDarkTransparent, COLORS.primaryDark]}
+          source={{
+            uri: imageUrl,
+          }}
         />
 
-        <Animated.Text
-          style={[styles.title, titleStyle]}
-          numberOfLines={2}
-          onLayout={onTitleLayout}>
-          {title}
-        </Animated.Text>
+        <Animated.View style={[styles.content, contentStyle]}>
+          <LinearGradient
+            style={StyleSheet.absoluteFill}
+            colors={[
+              'rgba(0, 0, 0, 0)',
+              'rgba(0, 0, 0, 0.35)',
+              'rgba(0, 0, 0, 0.95)',
+            ]}
+          />
 
-        <View style={styles.details}>
-          <Animated.View style={[styles.valuesContainer, valuesContainerStyle]}>
-            {viewed ? null : (
-              <NewsFeaturedNewBadge
-                style={styles.newBadge}
-                width={rem(28)}
-                height={rem(18)}
+          <Animated.Text
+            style={[styles.title, titleStyle]}
+            numberOfLines={2}
+            onLayout={onTitleLayout}>
+            {title}
+          </Animated.Text>
+
+          <View style={styles.details}>
+            <Animated.View
+              style={[styles.valuesContainer, valuesContainerStyle]}>
+              {viewed ? null : (
+                <NewsFeaturedNewBadge
+                  style={styles.newBadge}
+                  width={rem(28)}
+                  height={rem(18)}
+                />
+              )}
+
+              <ClockIcon
+                width={rem(16)}
+                height={rem(16)}
+                color={COLORS.white}
               />
-            )}
 
-            <ClockIcon width={rem(16)} height={rem(16)} color={COLORS.white} />
+              <Text style={styles.value} numberOfLines={1}>
+                {dayjs(createdAt).isToday()
+                  ? t('global.date.today')
+                  : dayjs(createdAt).fromNow()}
+              </Text>
 
-            <Text style={styles.value} numberOfLines={1}>
-              {dayjs(createdAt).isToday()
-                ? t('global.date.today')
-                : dayjs(createdAt).fromNow()}
-            </Text>
+              <EyeIcon width={rem(16)} height={rem(16)} fill={COLORS.white} />
 
-            <EyeIcon width={rem(16)} height={rem(16)} fill={COLORS.white} />
+              <Text style={styles.value} numberOfLines={1}>
+                {t('news.views', {
+                  viewsCount: formatNumber(views),
+                })}
+              </Text>
+            </Animated.View>
 
-            <Text style={styles.value} numberOfLines={1}>
-              {t('news.views', {
-                viewsCount: formatNumber(views),
-              })}
-            </Text>
-          </Animated.View>
-
-          <Touchable
-            hitSlop={SMALL_BUTTON_HIT_SLOP}
-            style={styles.readMore}
-            onLayout={onButtonLayout}
-            onPress={openNewsArticle}>
-            <Text style={styles.readMoreText}>{t('news.read_more')}</Text>
-          </Touchable>
-        </View>
-      </Animated.View>
-    </View>
-  );
-});
+            <Touchable
+              hitSlop={SMALL_BUTTON_HIT_SLOP}
+              style={styles.readMore}
+              onLayout={onButtonLayout}
+              onPress={openNewsArticle}>
+              <Text style={styles.readMoreText}>{t('news.read_more')}</Text>
+            </Touchable>
+          </View>
+        </Animated.View>
+      </View>
+    );
+  },
+);
 
 export const FeaturedNewsArticleSkeleton = () => (
   <View style={styles.container}>
@@ -145,7 +165,7 @@ const styles = StyleSheet.create({
   content: {
     paddingTop: rem(16),
     paddingHorizontal: rem(20),
-    paddingBottom: rem(16),
+    paddingBottom: rem(16) + FEATURED_HEADER_OVERLAP,
   },
 
   valuesContainer: {

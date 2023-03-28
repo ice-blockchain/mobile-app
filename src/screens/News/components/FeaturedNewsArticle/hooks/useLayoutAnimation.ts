@@ -1,10 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {COLORS} from '@constants/colors';
-import {
-  FEATURED_HEADER_COLLAPSED_HEIGHT,
-  FEATURED_HEADER_EXPANDED_HEIGHT,
-} from '@screens/News/components/FeaturedNewsArticle';
 import {useCallback, useState} from 'react';
 import {LayoutChangeEvent, LayoutRectangle} from 'react-native';
 import {
@@ -14,21 +9,18 @@ import {
   useAnimatedStyle,
   useSharedValue,
 } from 'react-native-reanimated';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
-
-const COLLAPSED_CONTENT_BOTTOM_BORDER_WIDTH = rem(30);
 
 const EXPANDED_TITLE_FONT_SIZE = rem(28);
 const COLLAPSED_TITLE_FONT_SIZE = rem(15);
 
 export function useLayoutAnimation({
   animatedIndex,
+  deltaPositions,
 }: {
   animatedIndex: SharedValue<number>;
+  deltaPositions: number;
 }) {
-  const safeAreaInsets = useSafeAreaInsets();
-
   const titleMinHeight = useSharedValue(Number.MAX_SAFE_INTEGER);
 
   const onTitleLayout = useCallback(
@@ -57,30 +49,13 @@ export function useLayoutAnimation({
   );
 
   const contentStyle = useAnimatedStyle(() => {
-    const deltaPositions =
-      FEATURED_HEADER_EXPANDED_HEIGHT -
-      (safeAreaInsets.top + FEATURED_HEADER_COLLAPSED_HEIGHT);
-
-    const startMovingPoint =
-      COLLAPSED_CONTENT_BOTTOM_BORDER_WIDTH / deltaPositions;
-
     return {
-      borderColor: COLORS.primaryDark,
-      borderBottomWidth: interpolate(
-        animatedIndex.value,
-        [0, startMovingPoint],
-        [0, COLLAPSED_CONTENT_BOTTOM_BORDER_WIDTH],
-        {
-          extrapolateLeft: Extrapolation.CLAMP,
-          extrapolateRight: Extrapolation.CLAMP,
-        },
-      ),
       transform: [
         {
           translateY: interpolate(
             animatedIndex.value,
-            [0, startMovingPoint, 1],
-            [0, 0, COLLAPSED_CONTENT_BOTTOM_BORDER_WIDTH - deltaPositions],
+            [0, 1],
+            [0, -deltaPositions],
             {
               extrapolateLeft: Extrapolation.CLAMP,
               extrapolateRight: Extrapolation.CLAMP,
@@ -89,7 +64,7 @@ export function useLayoutAnimation({
         },
       ],
     };
-  });
+  }, [deltaPositions]);
 
   const valuesContainerStyle = useAnimatedStyle(() => {
     return {

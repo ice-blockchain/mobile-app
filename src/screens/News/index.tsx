@@ -29,6 +29,7 @@ import {rem} from 'rn-units';
 import {
   FEATURED_HEADER_COLLAPSED_HEIGHT,
   FEATURED_HEADER_EXPANDED_HEIGHT,
+  FEATURED_HEADER_OVERLAP,
   FeaturedNewsArticle,
 } from './components/FeaturedNewsArticle';
 import {NewsArticle, NewsArticleSkeleton} from './components/NewsArticle';
@@ -55,13 +56,17 @@ export const News = () => {
 
   const data = useSelector(NewsSelectors.getNewsIds);
 
-  const snapPoints = useMemo(() => {
-    const collapsed = frame.height - FEATURED_HEADER_EXPANDED_HEIGHT;
+  const snapPointsData = useMemo(() => {
+    const collapsed =
+      frame.height - FEATURED_HEADER_EXPANDED_HEIGHT + FEATURED_HEADER_OVERLAP;
 
     const expanded =
       frame.height - safeAreaInsets.top - FEATURED_HEADER_COLLAPSED_HEIGHT;
 
-    return [collapsed, expanded];
+    return {
+      points: [collapsed, expanded],
+      delta: Math.abs(collapsed - expanded),
+    };
   }, [frame.height, safeAreaInsets.top]);
 
   const renderEmptyList = useCallback(() => {
@@ -117,18 +122,25 @@ export const News = () => {
 
   return (
     <View style={styles.container}>
-      <FeaturedNewsArticle animatedIndex={animatedIndex} />
+      <FeaturedNewsArticle
+        animatedIndex={animatedIndex}
+        deltaPositions={snapPointsData.delta}
+      />
 
-      <View style={styles.refreshIceIconContainer}>
+      <View
+        style={[
+          styles.bottomSheetBackgroundStyle,
+          styles.refreshIceIconContainer,
+        ]}>
         <RefreshIceIcon
-          theme={'dark-content'}
+          theme={'light-content'}
           refreshing={refreshing}
           translateY={translateY}
         />
       </View>
 
       <BottomSheet
-        snapPoints={snapPoints}
+        snapPoints={snapPointsData.points}
         handleComponent={null}
         handleHeight={0}
         animateOnMount={false}
@@ -161,11 +173,17 @@ export const News = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.primaryDark,
+    backgroundColor: COLORS.black,
   },
 
   refreshIceIconContainer: {
-    height: 0,
+    transform: [
+      {
+        translateY: -FEATURED_HEADER_OVERLAP,
+      },
+    ],
+    flex: 1,
+    backgroundColor: COLORS.white,
   },
 
   bottomSheetBackgroundStyle: {
