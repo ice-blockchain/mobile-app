@@ -16,15 +16,18 @@ import {useSelector} from 'react-redux';
 
 type Props = {
   user: User | null;
+  isOwner?: boolean;
 };
 
-export const Role = memo(({user}: Props) => {
+export const Role = memo(({user, isOwner}: Props) => {
   const navigation =
     useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
   const [loading, setLoading] = useState(true);
-  setTimeout(() => setLoading(false), 2000);
+  setTimeout(() => setLoading(false), 0);
 
-  const roleType = useSelector(AchievementsSelectors.getRoleType);
+  const roleType = useSelector(
+    AchievementsSelectors.getRoleTypeByUserId({userId: user?.id}),
+  );
 
   return (
     <>
@@ -32,6 +35,7 @@ export const Role = memo(({user}: Props) => {
         <CurrentRoleSkeleton />
       ) : (
         <CurrentRoleCard
+          isOwner={isOwner}
           imageSource={Images.roles[roleType]}
           imageSourceHidden={Images.roles[`${roleType}Inactive`]}
           title={t(`roles.${roleType}.title`)}

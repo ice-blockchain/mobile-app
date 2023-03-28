@@ -5,8 +5,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {MenuItem} from '@screens/SettingsFlow/Settings/components/MenuItem.tsx';
 import {SectionTitle} from '@screens/SettingsFlow/Settings/components/SectionTitle';
-// uncomment when privacy section will be ready
-// import {CertificateIcon} from '@svg/CertificateIcon';
+import {CertificateIcon} from '@svg/CertificateIcon';
 import {EmailNotificationIcon} from '@svg/EmailNotificationIcon';
 import {PersonIcon} from '@svg/PersonIcon';
 import {PushNotificationIcon} from '@svg/PushNotificationIcon';
@@ -45,8 +44,7 @@ export const ProfileMenuSection = () => {
           })
         }
       />
-      {/* TODO: uncomment when needed */}
-      {/* <MenuItem
+      <MenuItem
         title={t('settings.inapp_privacy_title')}
         description={t('settings.inapp_privacy_description')}
         renderIcon={CertificateIcon}
@@ -54,7 +52,7 @@ export const ProfileMenuSection = () => {
           navigation.goBack();
           navigation.push('ProfilePrivacyEditStep1');
         }}
-      /> */}
+      />
     </>
   );
 };

@@ -11,15 +11,14 @@ interface Props {
   bodyStyle?: StyleProp<TextStyle>;
   decimalsStyle?: StyleProp<TextStyle>;
   value: number;
-  signRequired?: boolean;
 }
 
 export const MiningRateValue = memo(
-  ({style, bodyStyle, decimalsStyle, value, signRequired = false}: Props) => {
+  ({style, bodyStyle, decimalsStyle, value}: Props) => {
     const animatedValue = useAnimatedNumber(
       value,
       initialValue =>
-        `${initialValue > 0 && signRequired ? '+' : ''}${formatNumberString(
+        `${initialValue > 0 ? '+' : ''}${formatNumberString(
           String(initialValue),
         )}`,
     );

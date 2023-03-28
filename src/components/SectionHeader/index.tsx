@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {Touchable} from '@components/Touchable';
-import {SCREEN_SIDE_OFFSET, SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
+import {MIDDLE_BUTTON_HIT_SLOP, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {font} from '@utils/styles';
 import React, {memo, ReactNode} from 'react';
 import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
@@ -22,7 +22,7 @@ export const SectionHeader = memo(
       <View style={[styles.container, style]}>
         <Text style={styles.titleText}>{title.toUpperCase()}</Text>
         {typeof action === 'string' ? (
-          <Touchable hitSlop={SMALL_BUTTON_HIT_SLOP} onPress={onActionPress}>
+          <Touchable hitSlop={MIDDLE_BUTTON_HIT_SLOP} onPress={onActionPress}>
             <Text style={styles.actionText}>{action}</Text>
           </Touchable>
         ) : (
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     height: SECTION_HEADER_HEIGHT,
   },
   titleText: {
-    ...font(15, 18, 'heavy', 'primaryDark'),
+    ...font(15, 18, 'black', 'primaryDark'),
   },
   actionText: {
     ...font(12.5, 14.4, 'medium', 'primaryDark'),

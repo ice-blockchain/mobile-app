@@ -1,19 +1,27 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {BadgeType} from '@api/achievements/types';
 import {ImageCardCompact} from '@components/Cards/ImageCardCompact';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {Images} from '@images';
 import {BadgeProgress} from '@screens/ProfileFlow/Badges/components/BadgeCardProgress';
+import {t} from '@translations/i18n';
+import {thousandsSeparator} from '@utils/numbers';
 import React from 'react';
-import {ImageSourcePropType, StyleSheet, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
-  title: string;
-  description: string;
-  progressValue: number;
-  active?: boolean;
-  imageSource: ImageSourcePropType;
+  name: string;
+  type: BadgeType;
+  achieved: boolean;
+  percentageOfUsersInProgress: number;
+  achievingRange: {
+    fromInclusive?: number;
+    toInclusive?: number;
+  };
+  index: number;
   connector: {
     top?: boolean | null;
     bottom?: boolean | null;
@@ -21,12 +29,73 @@ type Props = {
 };
 
 export const BadgeCard = ({
-  title,
-  description,
-  imageSource,
-  progressValue,
+  name,
+  index,
+  type,
+  achieved,
+  percentageOfUsersInProgress,
+  achievingRange,
   connector = {},
 }: Props) => {
+  const imagePath =
+    `${type}${index}_achieved_${achieved}` as keyof typeof Images.badges;
+
+  let description = '';
+
+  if (type === 'level') {
+    if (achievingRange.fromInclusive && achievingRange.toInclusive) {
+      description = `${t(`profile.badge_types.${type}.description`)} ${
+        achievingRange.fromInclusive
+      }-${achievingRange.toInclusive}`;
+    }
+    if (!achievingRange?.toInclusive && achievingRange?.fromInclusive) {
+      description = `${t(`profile.badge_types.${type}.description`)} ${
+        achievingRange?.fromInclusive - 1
+      }+`;
+    }
+    if (!achievingRange?.fromInclusive && achievingRange?.toInclusive) {
+      description = `${t(`profile.badge_types.${type}.description`)} < ${
+        achievingRange?.toInclusive + 1
+      } `;
+    }
+  } else if (type === 'coin') {
+    if (achievingRange.fromInclusive && achievingRange.toInclusive) {
+      description = `${thousandsSeparator(
+        achievingRange.fromInclusive,
+      )}-${thousandsSeparator(achievingRange.toInclusive)} ${t(
+        `profile.badge_types.${type}.description`,
+      )}`;
+    }
+    if (!achievingRange?.toInclusive && achievingRange?.fromInclusive) {
+      description = `${thousandsSeparator(
+        achievingRange?.fromInclusive - 1,
+      )}+ ${t(`profile.badge_types.${type}.description`)}`;
+    }
+    if (!achievingRange?.fromInclusive && achievingRange?.toInclusive) {
+      description = `< ${thousandsSeparator(
+        achievingRange?.toInclusive + 1,
+      )} ${t(`profile.badge_types.${type}.description`)}`;
+    }
+  } else {
+    if (achievingRange.fromInclusive && achievingRange.toInclusive) {
+      description = `${achievingRange.fromInclusive}-${
+        achievingRange.toInclusive
+      } ${t(`profile.badge_types.${type}.description`)}`;
+    }
+    if (!achievingRange?.toInclusive && achievingRange?.fromInclusive) {
+      description = `${achievingRange?.fromInclusive - 1}+ ${t(
+        `profile.badge_types.${type}.description`,
+      )}`;
+    }
+    if (!achievingRange?.fromInclusive && achievingRange?.toInclusive) {
+      description = `< ${achievingRange?.toInclusive + 1} ${t(
+        `profile.badge_types.${type}.description`,
+      )}`;
+    }
+  }
+
+  const image = Images.badges[imagePath];
+
   return (
     <>
       {connector.top && (
@@ -36,10 +105,10 @@ export const BadgeCard = ({
         <View style={[styles.connector, styles.connectorBottom]} />
       )}
       <ImageCardCompact
-        title={title}
+        title={name}
         description={description}
-        imageSource={imageSource}
-        renderBody={() => <BadgeProgress value={progressValue} />}
+        image={image}
+        renderBody={() => <BadgeProgress value={percentageOfUsersInProgress} />}
         containerStyle={styles.containerActive}
       />
     </>

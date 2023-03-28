@@ -4,6 +4,7 @@ import {UserAvatarHeader} from '@components/UserAvatarHeader';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
+import {useUpdateAvatar} from '@hooks/useUpdateAvatar';
 import {Header} from '@navigation/components/Header';
 import {LangButton} from '@navigation/components/Header/components/LangButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
@@ -13,7 +14,6 @@ import {DeveloperMenuSection} from '@screens/SettingsFlow/Settings/components/Se
 import {LegalMenuSection} from '@screens/SettingsFlow/Settings/components/SettingsMenuSections/LegalMenuSection';
 import {ProfileMenuSection} from '@screens/SettingsFlow/Settings/components/SettingsMenuSections/ProfileMenuSection';
 import {SupportMenuSection} from '@screens/SettingsFlow/Settings/components/SettingsMenuSections/SupportMenuSection';
-import {useUpdateAvatar} from '@screens/SettingsFlow/Settings/hooks/useUpdateAvatar';
 import {isAdminSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import React, {memo} from 'react';

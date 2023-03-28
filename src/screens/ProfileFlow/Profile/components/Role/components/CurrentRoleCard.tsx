@@ -4,6 +4,7 @@ import {User} from '@api/user/types';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {useUpdateHiddenProfileElements} from '@store/modules/Account/hooks/useUpdateHiddenProfileElements';
+import {isPrivacyInfoShownSelector} from '@store/modules/Account/selectors';
 import {ClosedEye} from '@svg/ClosedEye';
 import {RightArrowSvg} from '@svg/RightArrow';
 import {t} from '@translations/i18n';
@@ -11,6 +12,7 @@ import {font} from '@utils/styles';
 import React from 'react';
 import {Image, ImageSourcePropType, StyleSheet, Text, View} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -21,6 +23,7 @@ type Props = {
   onNextPress?: () => void;
   imageSourceHidden?: ImageSourcePropType;
   isProfilePrivacyEditMode?: boolean;
+  isOwner?: boolean;
 };
 
 export const CurrentRoleCard = ({
@@ -31,10 +34,13 @@ export const CurrentRoleCard = ({
   imageSourceHidden,
   isProfilePrivacyEditMode = false,
   user,
+  isOwner,
 }: Props) => {
   const {onUpdate} = useUpdateHiddenProfileElements();
+  const isPrivacyInfoShown = useSelector(isPrivacyInfoShownSelector);
 
-  const hidden = user?.hiddenProfileElements?.includes('role');
+  const hidden =
+    user?.hiddenProfileElements?.includes('role') && !isPrivacyInfoShown;
   return (
     <View
       style={[
@@ -58,7 +64,7 @@ export const CurrentRoleCard = ({
             <View style={styles.info}>
               {hidden ? (
                 <View style={styles.hiddenContainer}>
-                  <ClosedEye height={24} width={24} />
+                  <ClosedEye height={rem(24)} width={rem(24)} />
                   <Text style={styles.hiddenText}>
                     {t('global.data_hidden')}
                   </Text>
@@ -80,7 +86,7 @@ export const CurrentRoleCard = ({
                 </>
               )}
             </View>
-            {!isProfilePrivacyEditMode && (
+            {!isProfilePrivacyEditMode && isOwner && (
               <RightArrowSvg style={styles.arrowNext} />
             )}
           </View>

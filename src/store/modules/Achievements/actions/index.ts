@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {RoleType} from '@api/achievements/types';
+import {Achievements, RoleType} from '@api/achievements/types';
 import {Task, TaskData, TaskType} from '@api/tasks/types';
 import {createAction} from '@store/utils/actions/createAction';
 
@@ -12,6 +12,21 @@ const LEVELS_AND_ROLES_LOAD = createAction(
     FAILED: (errorMessage: string) => ({errorMessage}),
   },
 );
+
+const USER_ACHIEVEMENTS_LOAD = createAction(
+  'ACHIEVEMENTS/USER_ACHIEVEMENTS_LOAD',
+  {
+    START: (userId: string) => ({userId}),
+    SUCCESS: (payload: {userId: string; achievements: Achievements}) => payload,
+    FAILED: (errorMessage: string) => ({errorMessage}),
+  },
+);
+
+const ALL_BADGES_LOAD = createAction('ACHIEVEMENTS/ALL_BADGES_LOAD', {
+  START: (userId: string) => ({userId}),
+  SUCCESS: (payload: {userId: string; achievements: Achievements}) => payload,
+  FAILED: (errorMessage: string) => ({errorMessage}),
+});
 
 const TASKS_LOAD = createAction('ACHIEVEMENTS/TASKS_LOAD', {
   START: true,
@@ -32,4 +47,6 @@ export const AchievementsActions = Object.freeze({
   LEVELS_AND_ROLES_LOAD,
   TASKS_LOAD,
   TASK_MARK_COMPLETED,
+  USER_ACHIEVEMENTS_LOAD,
+  ALL_BADGES_LOAD,
 });

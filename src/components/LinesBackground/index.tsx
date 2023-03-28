@@ -9,6 +9,8 @@ type Props = {
   style?: StyleProp<ImageStyle>;
 };
 
+const RATIO = 1.12;
+
 export const LinesBackground = ({style}: Props) => {
   return (
     <Image
@@ -23,7 +25,6 @@ const styles = StyleSheet.create({
   background: {
     position: 'absolute',
     width: screenWidth,
-    height: undefined,
-    aspectRatio: 375 / 420,
+    height: screenWidth * RATIO,
   },
 });

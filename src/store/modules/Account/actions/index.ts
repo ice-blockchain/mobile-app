@@ -129,6 +129,10 @@ const RESET_PASSWORD = createAction('RESET_PASSWORD', {
   FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
+const SET_PRIVACY_INFO_SHOW = createAction('SET_PRIVACY_INFO_SHOW', {
+  STATE: (isPrivacyInfoShown: boolean) => ({isPrivacyInfoShown}),
+});
+
 export const AccountActions = Object.freeze({
   SET_TOKEN,
   SIGN_IN_EMAIL_LINK,
@@ -144,4 +148,5 @@ export const AccountActions = Object.freeze({
   VERIFY_BEFORE_UPDATE_EMAIL,
   VERIFY_PHONE_NUMBER,
   RESET_PASSWORD,
+  SET_PRIVACY_INFO_SHOW,
 });

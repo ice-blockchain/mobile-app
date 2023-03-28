@@ -12,7 +12,7 @@ import {TeamIcon} from '@svg/TeamIcon';
 import {t} from '@translations/i18n';
 import {parseNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
-import React, {memo, useMemo} from 'react';
+import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
@@ -26,19 +26,6 @@ type Props = {
 
 export const MiningRate = memo(({darkMode}: Props) => {
   const miningRates = useSelector(miningRatesSelector);
-
-  const rateValueTextStyle = useMemo(() => {
-    switch (miningRates?.type) {
-      case 'positive':
-        return styles.miningValuePositive;
-
-      case 'negative':
-        return styles.miningValueNegative;
-
-      default:
-        return styles.miningValueNeutral;
-    }
-  }, [miningRates?.type]);
 
   if (!miningRates) {
     //TODO: add loading
@@ -59,9 +46,8 @@ export const MiningRate = memo(({darkMode}: Props) => {
       <View style={styles.miningRate}>
         <MiningRateValue
           style={styles.miningValueContainer}
-          bodyStyle={[styles.miningValueText, rateValueTextStyle]}
-          decimalsStyle={[styles.miningValueDecimalsText, rateValueTextStyle]}
-          signRequired
+          bodyStyle={styles.miningValueText}
+          decimalsStyle={styles.miningValueDecimalsText}
           value={
             parseNumber(miningRates?.total.amount ?? '0') *
             {
@@ -169,17 +155,6 @@ const styles = StyleSheet.create({
     ...font(8, 10, 'bold'),
     marginRight: rem(4),
   },
-
-  miningValuePositive: {
-    color: COLORS.shamrock,
-  },
-  miningValueNegative: {
-    color: COLORS.attention,
-  },
-  miningValueNeutral: {
-    color: COLORS.white,
-  },
-
   baseContainer: {
     marginTop: rem(6),
     flexDirection: 'row',

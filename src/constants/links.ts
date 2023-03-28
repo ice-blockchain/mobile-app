@@ -15,7 +15,7 @@ export const LINKS = {
   KNOWLEDGE_BASE: 'https://ice.io/knowledge-base',
   BONUSES: 'https://ice.io/bonuses',
   TEAM: 'https://ice.io/team',
-  FEEDBACK_EMAIL: 'feedback@ice.io',
+  FEEDBACK_EMAIL: 'hi@ice.io',
   CONFIRM_EMAIL: 'https://ice.io/firebase-confirm-email',
   VERIFY_EMAIL: `https://${ENV.DEEPLINK_DOMAIN}/verify-email`,
   TWITTER_SCHEME: 'twitter://',
@@ -24,4 +24,5 @@ export const LINKS = {
   TELEGRAM_PROFILE_URL: 'https://t.me/iceblockchain',
   EARLY_ACCESS: 'https://ice.io/early-release-version',
   CHANGELOG: 'https://ice.io/changelog',
+  ICE_FAQ: 'https://ice.io/faq',
 };

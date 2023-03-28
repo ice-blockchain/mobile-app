@@ -113,7 +113,6 @@ export const PersonalInformation = memo(() => {
             containerStyle={styles.input}
             icon={<EmailIcon width={rem(24)} height={rem(14)} />}
             onChange={onEmailPress}
-            numberOfLines={1}
           />
           <CommonInput
             label={t('personal_information.country')}

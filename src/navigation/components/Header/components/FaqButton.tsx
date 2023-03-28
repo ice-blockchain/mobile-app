@@ -2,11 +2,10 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {LINKS} from '@constants/links';
 import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
-import {MainTabsParamList} from '@navigation/Main';
-import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
-import {useNavigation} from '@react-navigation/native';
 import {FaqIcon} from '@svg/FaqIcon';
+import {openLinkWithInAppBrowser} from '@utils/device';
 import React from 'react';
 import {StyleProp, View, ViewStyle} from 'react-native';
 
@@ -19,12 +18,10 @@ export const FaqButton = ({
   containerStyle,
   color = COLORS.primaryDark,
 }: Props = {}) => {
-  const navigation =
-    useNavigation<BottomTabNavigationProp<MainTabsParamList>>();
   return (
     <View style={containerStyle}>
       <Touchable
-        onPress={() => navigation.navigate('HomeTab')}
+        onPress={() => openLinkWithInAppBrowser({url: LINKS.ICE_FAQ})}
         hitSlop={SMALL_BUTTON_HIT_SLOP}>
         <FaqIcon fill={color} />
       </Touchable>

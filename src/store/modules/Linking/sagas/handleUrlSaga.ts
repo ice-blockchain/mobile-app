@@ -40,6 +40,13 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
   yield call(waitForSelector, isAppActiveSelector);
 
   switch (path.toLowerCase()) {
+    case 'users':
+    case 'pinged':
+      navigate({
+        name: 'UserProfile',
+        params: {userId: query.id ?? ''},
+      });
+      break;
     case 'browser':
       if (query.url) {
         const browserUrl = decodeURIComponent(query.url);

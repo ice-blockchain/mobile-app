@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {BadgeCategory} from '@api/badges/types';
+import {BadgeType} from '@api/achievements/types';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
+import {Images} from '@images';
 import {ProfileTabStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -12,31 +13,36 @@ import {ClosedEye} from '@svg/ClosedEye';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo, useCallback} from 'react';
-import {Image, ImageSourcePropType, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  StyleProp,
+  StyleSheet,
+  Text,
+  View,
+  ViewStyle,
+} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {rem} from 'rn-units';
 
 type Props = {
   title: string;
-  category: BadgeCategory;
+  category: BadgeType;
   progressText: string;
   progressValue: number;
-  imageSource: ImageSourcePropType;
-  imageInactive?: ImageSourcePropType;
   hidden?: boolean;
   isProfilePrivacyEditMode?: boolean;
+  style?: StyleProp<ViewStyle>;
 };
 
 export const BadgeCard = memo(
   ({
-    imageSource,
-    imageInactive,
     title,
     category,
     progressText,
     progressValue,
     hidden = false,
     isProfilePrivacyEditMode = false,
+    style,
   }: Props) => {
     const navigation =
       useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
@@ -48,17 +54,35 @@ export const BadgeCard = memo(
       } else {
         navigation.navigate('Badges', {category});
       }
-    }, [category, navigation, onUpdate, isProfilePrivacyEditMode]);
+    }, [category, isProfilePrivacyEditMode, onUpdate, navigation]);
+
+    const categoryTransaltion = t(`profile.badge_types.${category}.title`);
+
+    const image = `${category}0_achieved_true` as const;
+    const inactiveImage = `${category}0_achieved_false` as const;
+    const ActiveImage = Images.badges[image];
+    const InactiveImage = Images.badges[inactiveImage];
 
     return (
       <Touchable onPress={onBadgePress}>
-        <View style={[styles.container, commonStyles.shadow]}>
+        <View style={[styles.container, commonStyles.shadow, style]}>
           <Image
-            source={hidden ? imageInactive || {} : imageSource}
             style={styles.icon}
-            resizeMode={'contain'}
+            resizeMode="contain"
+            source={hidden ? InactiveImage : ActiveImage}
           />
-          {!hidden ? (
+          {hidden ? (
+            <>
+              <ClosedEye
+                height={rem(20)}
+                width={rem(20)}
+                color={COLORS.secondary}
+              />
+              <Text style={styles.hiddenText} numberOfLines={1}>
+                {t('profile.data_is_hidden')}
+              </Text>
+            </>
+          ) : (
             <>
               <Text
                 style={styles.titleText}
@@ -76,17 +100,10 @@ export const BadgeCard = memo(
                   style={styles.categoryText}
                   numberOfLines={1}
                   adjustsFontSizeToFit={true}>
-                  {category}
+                  {categoryTransaltion}
                 </Text>
                 <Text style={styles.progressText}>{progressText}</Text>
               </View>
-            </>
-          ) : (
-            <>
-              <ClosedEye height={20} width={20} color={COLORS.secondary} />
-              <Text style={styles.hiddenText} numberOfLines={1}>
-                {t('profile.data_is_hidden')}
-              </Text>
             </>
           )}
         </View>

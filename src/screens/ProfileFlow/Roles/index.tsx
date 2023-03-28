@@ -42,18 +42,19 @@ export const Roles = () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={[styles.scrollContent, bottomOffset.current]}>
         <Role
-          title="Snowman"
-          tagline="Are you flesh and blood?"
-          description="Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot."
+          title={t('roles.snowman.title')}
+          tagline={t('roles.snowman.subtitle')}
+          description={t('roles.snowman.description')}
           imageSource={Images.roles.snowman}
           backgroundColor={COLORS.white}
           checked={true}
         />
         <Role
-          title="Ambassador"
-          tagline="Invite friends to join your team."
-          description="You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features."
+          title={t('roles.ambassador.title')}
+          tagline={t('roles.ambassador.subtitle')}
+          description={t('roles.ambassador.description')}
           imageSource={Images.roles.ambassador}
+          containerStyle={styles.lastRole}
         />
       </Animated.ScrollView>
     </View>
@@ -69,5 +70,8 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     paddingHorizontal: rem(20),
     paddingTop: rem(10),
+  },
+  lastRole: {
+    marginBottom: 0,
   },
 });

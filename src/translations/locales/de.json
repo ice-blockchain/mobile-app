@@ -179,6 +179,7 @@
     "global_rank": "Globaler Rang",
     "view_all_roles": "alle Rollen anzeigen",
     "data_is_hidden": "Daten werden ausgeblendet",
+    "progress_text": "{{value}} of {{total}}",
     "not_found": {
       "title": "Benutzer wurde nicht gefunden",
       "description": "Hoppla, wir konnten diesen Benutzer nicht finden"
@@ -191,12 +192,26 @@
     },
     "roles": {
       "title": "Rollen"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "Coins",
+        "description": "coins"
+      },
+      "social": {
+        "title": "Social",
+        "description": "friends"
+      },
+      "level": {
+        "title": "Level",
+        "description": "Level"
+      }
     }
   },
   "global": {
     "level": "level",
     "referrals": "referrals",
-    "coins": "Coins",
+    "coin": "Coins",
     "social": "Social",
     "phone_number": "Phone number",
     "years": "Years",
@@ -610,6 +625,18 @@
   },
   "country_select": {
     "title": "Land auswählen"
+  },
+  "roles": {
+    "snowman": {
+      "title": "Snowman",
+      "subtitle": "Build a snow empire",
+      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+    },
+    "ambassador": {
+      "title": "Ambassador",
+      "subtitle": "Ruler of the snow empire",
+      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+    }
   },
   "confirm_phone": {
     "modify_title": "Neues Telefon bestätigen",

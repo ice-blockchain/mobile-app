@@ -27,7 +27,6 @@ export function* loadLevelsAndRolesSaga() {
     yield put(
       AchievementsActions.LEVELS_AND_ROLES_LOAD.SUCCESS.create({
         level,
-
         roleType: activeRole?.type || 'snowman',
       }),
     );

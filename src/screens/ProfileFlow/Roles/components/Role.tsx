@@ -4,7 +4,15 @@ import {CheckMark} from '@components/CheckMark';
 import {COLORS} from '@constants/colors';
 import {font} from '@utils/styles';
 import React from 'react';
-import {Image, ImageSourcePropType, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  ImageSourcePropType,
+  StyleProp,
+  StyleSheet,
+  Text,
+  View,
+  ViewStyle,
+} from 'react-native';
 import {isIOS, rem} from 'rn-units';
 
 type Props = {
@@ -14,6 +22,7 @@ type Props = {
   imageSource: ImageSourcePropType;
   backgroundColor?: string;
   checked?: boolean;
+  containerStyle?: StyleProp<ViewStyle>;
 };
 
 export const Role = ({
@@ -22,9 +31,15 @@ export const Role = ({
   description,
   imageSource,
   checked = false,
+  containerStyle,
 }: Props) => {
   return (
-    <View style={[styles.container, checked ? styles.selectedBox : styles.box]}>
+    <View
+      style={[
+        styles.container,
+        checked ? styles.selectedBox : styles.box,
+        containerStyle,
+      ]}>
       <Image source={imageSource} style={styles.icon} />
       <Text style={styles.titleText}>{title}</Text>
       <Text style={styles.taglineText}>{tagline}</Text>

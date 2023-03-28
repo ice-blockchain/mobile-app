@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Badge} from '@api/badges/types';
+import {Badge} from '@api/achievements/types';
 import {BadgeCard} from '@screens/ProfileFlow/Badges/components/BadgeCard';
 import React, {useCallback} from 'react';
 import {FlatListProps} from 'react-native';
@@ -23,6 +23,7 @@ export const BadgeList = ({
             top: index > 0,
             bottom: !!nextBadge,
           }}
+          index={index}
         />
       );
     },

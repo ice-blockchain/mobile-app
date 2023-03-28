@@ -2,6 +2,8 @@
 
 import {AccountActions} from '@store/modules/Account/actions';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
+import {loadAllBadges} from '@store/modules/Achievements/sagas/loadAllBadgesSaga';
+import {loadUserAchievements} from '@store/modules/Achievements/sagas/loadUserAchievements';
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {all, takeLatest, takeLeading} from 'redux-saga/effects';
@@ -50,5 +52,10 @@ export function* rootAchievementsSaga() {
       AchievementsActions.TASK_MARK_COMPLETED.TELEGRAM.type,
       completeJoinTelegramTaskSaga,
     ),
+    takeLeading(
+      AchievementsActions.USER_ACHIEVEMENTS_LOAD.START.type,
+      loadUserAchievements,
+    ),
+    takeLeading(AchievementsActions.ALL_BADGES_LOAD.START.type, loadAllBadges),
   ]);
 }
