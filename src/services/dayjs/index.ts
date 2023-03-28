@@ -26,14 +26,6 @@ export const setDayjsLocale = (locale: SupportedLocale) => {
       require('dayjs/locale/en');
       break;
 
-    case 'ro':
-      require('dayjs/locale/ro');
-      break;
-
-    case 'de':
-      require('dayjs/locale/de');
-      break;
-
     default:
       logError(`Setup '${locale}' locale properly for 'dayjs'`);
   }
