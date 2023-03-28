@@ -295,11 +295,17 @@ jobs:
             else
                echo "APP_ENV=staging" >> $GITHUB_ENV
           fi
+      - name: Set BUILD_NUMBER environment variable
+        id: set-build-number
+        env:
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
+        run: |
+          echo ::set-env name=BUILD_NUMBER::$(($GITHUB_RUN_NUMBER+2000))
       - name: Bump version to v${{ env.APP_VERSION }}
         id: bump-version
         run: |
           cd main-repo
-          bundle exec fastlane ios bump_version build_number:${{ github.run_number }} version_number:$APP_VERSION
+          bundle exec fastlane ios bump_version build_number:$BUILD_NUMBER version_number:$APP_VERSION
       - name: Build iOS App (${{env.IOS_SIGN_TYPE}})
         id: build-app
         run: |
@@ -384,11 +390,17 @@ jobs:
             else
                echo "APP_ENV=staging" >> $GITHUB_ENV
           fi
+      - name: Set BUILD_NUMBER environment variable
+        id: set-build-number
+        env:
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
+        run: |
+          echo ::set-env name=BUILD_NUMBER::$(($GITHUB_RUN_NUMBER+2000))
       - name: Bump version to v${{ env.APP_VERSION }}
         id: bump-version
         run: |
           cd main-repo
-          bundle exec fastlane android bump_version build_number:${{ github.run_number }} version_number:$APP_VERSION
+          bundle exec fastlane android bump_version build_number:$BUILD_NUMBER version_number:$APP_VERSION
       - name: Build Android App (${{env.ANDROID_ARCHIVE_TYPE}})
         id: build-app
         run: |
