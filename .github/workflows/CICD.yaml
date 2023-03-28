@@ -297,9 +297,12 @@ jobs:
           fi
       - name: Bump version to v${{ env.APP_VERSION }}
         id: bump-version
+        env:
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
         run: |
           cd main-repo
-          bundle exec fastlane ios bump_version build_number:${{ github.run_number }} version_number:$APP_VERSION
+          echo ::set-env name=GITHUB_RUN_NUMBER_WITH_OFFSET::$(($GITHUB_RUN_NUMBER+2000))
+          bundle exec fastlane ios bump_version build_number:$GITHUB_RUN_NUMBER_WITH_OFFSET version_number:$APP_VERSION
       - name: Build iOS App (${{env.IOS_SIGN_TYPE}})
         id: build-app
         run: |
@@ -386,9 +389,12 @@ jobs:
           fi
       - name: Bump version to v${{ env.APP_VERSION }}
         id: bump-version
+        env:
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
         run: |
           cd main-repo
-          bundle exec fastlane android bump_version build_number:${{ github.run_number }} version_number:$APP_VERSION
+          echo ::set-env name=GITHUB_RUN_NUMBER_WITH_OFFSET::$(($GITHUB_RUN_NUMBER+2000))
+          bundle exec fastlane android bump_version build_number:$GITHUB_RUN_NUMBER_WITH_OFFSET version_number:$APP_VERSION
       - name: Build Android App (${{env.ANDROID_ARCHIVE_TYPE}})
         id: build-app
         run: |
