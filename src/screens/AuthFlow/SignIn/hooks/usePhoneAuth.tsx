@@ -5,7 +5,6 @@ import {
   failedReasonSelector,
   isLoadingSelector,
 } from '@store/modules/UtilityProcessStatuses/selectors';
-import {smsSentTimestampSelector} from '@store/modules/Validation/selectors';
 import {useRef, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
@@ -21,8 +20,6 @@ export const usePhoneAuth = () => {
   const isPhoneAuthLoading = useSelector(
     isLoadingSelector.bind(null, AccountActions.SIGN_IN_PHONE),
   );
-
-  const smsSentTimestamp = useSelector(smsSentTimestampSelector);
 
   const resetError = () => {
     if (phoneAuthFailedReason) {
@@ -45,6 +42,5 @@ export const usePhoneAuth = () => {
     signInWithPhoneNumber,
     isPhoneAuthLoading,
     phoneAuthFailedReason,
-    smsSentTimestamp,
   };
 };

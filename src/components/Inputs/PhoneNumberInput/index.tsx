@@ -20,6 +20,7 @@ export const PhoneNumberInput = ({
   value,
   selectedCountry,
   onChangePhone,
+  containerStyle,
   ...props
 }: Omit<CommonInputProps, 'label' | 'onChangeText'> & {
   selectedCountry?: Country | null;
@@ -58,7 +59,7 @@ export const PhoneNumberInput = ({
       autoComplete={'tel'}
       autoCapitalize={'none'}
       autoCorrect={true}
-      containerStyle={styles.inputContainer}
+      containerStyle={[styles.inputContainer, containerStyle]}
       onFocus={() => {
         setPrefix(country.iddCode);
       }}

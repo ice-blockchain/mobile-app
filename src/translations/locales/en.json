@@ -66,7 +66,8 @@
     "view_changelog": "View Changelog",
     "disable": "Disable",
     "agree": "I Agree",
-    "learn_more": "Learn More"
+    "learn_more": "Learn More",
+    "back_to_login": "Back to Login"
   },
   "team": {
     "contacts_tab": "Contacts",
@@ -121,6 +122,7 @@
     "logInSignUp": "Log in / Sign up",
     "phone": "Phone",
     "or": "or",
+    "reset_password": "Reset password",
     "welcome": "Welcome to ice",
     "email": "Email",
     "slogan": "Global Currency Reset",
@@ -187,7 +189,9 @@
     "email_already_in_use": "The email address is already in use by another account.",
     "user_token_expired": "Your credentials is no longer valid. Please sign in again",
     "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "same_email": "You can’t use the same e-mail",
+    "weak_password": "Weak password",
+    "wrong_password": "Wrong password"
   },
   "profile": {
     "my_roles": {
@@ -223,6 +227,7 @@
     "of": "of",
     "attention": "Attention",
     "email_address": "Email address",
+    "password": "Password",
     "data_hidden": "data is hidden",
     "pull_to_refresh": "pull to update",
     "comingSoon": "Coming soon",
@@ -617,14 +622,15 @@
     "wrong_email": "Wrong email?",
     "check_email": "Check your email",
     "emailed_link_to": "We emailed a magic link to",
+    "emailed_steps_to": "We emailed the steps to",
     "link_instruction": "Click the link to log in or sign up.",
+    "reset_link_instruction": "Click the link to reset your password.",
     "modify_title": "Confirm New Email",
     "modify_description": "Please enter your new email address"
   },
   "invalid_link": {
     "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link."
   },
   "confirm_code": {
     "title": "Confirm code",

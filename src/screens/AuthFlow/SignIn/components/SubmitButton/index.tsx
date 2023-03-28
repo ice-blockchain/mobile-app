@@ -1,25 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {PrimaryButton} from '@components/PrimaryButton';
-import {t} from '@translations/i18n';
+import {PrimaryButton, PrimaryButtonProps} from '@components/PrimaryButton';
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
-type Props = {
-  onPress: () => void;
-  loading: boolean;
-};
-
-export const SubmitButton = ({onPress, loading}: Props) => {
-  return (
-    <PrimaryButton
-      text={t('signIn.logInSignUp')}
-      onPress={onPress}
-      style={[styles.button]}
-      loading={loading}
-    />
-  );
+export const SubmitButton = ({style, ...props}: PrimaryButtonProps) => {
+  return <PrimaryButton style={[styles.button, style]} {...props} />;
 };
 
 const styles = StyleSheet.create({

@@ -15,26 +15,41 @@ export type Tab = 'email' | 'phone';
 type Props = {
   onSelect: (tab: Tab) => void;
   selected: Tab;
+  hiddenTab?: Tab | null;
   containerStyle?: StyleProp<ViewStyle>;
 };
 
-const tabData: {id: Tab; icon: ReactNode; label: string}[] = [
-  {
-    id: 'email',
-    icon: <EmailIcon width={rem(17)} height={rem(12)} />,
-    label: t('signIn.email'),
-  },
-  {
-    id: 'phone',
-    icon: <PhoneIcon width={rem(12)} height={rem(19)} />,
-    label: t('signIn.phone'),
-  },
-];
+const tabData: {id: Tab; icon: (color: string) => ReactNode; label: string}[] =
+  [
+    {
+      id: 'email',
+      icon: color => (
+        <EmailIcon width={rem(17)} height={rem(12)} color={color} />
+      ),
+      label: t('signIn.email'),
+    },
+    {
+      id: 'phone',
+      icon: color => (
+        <PhoneIcon width={rem(12)} height={rem(19)} color={color} />
+      ),
+      label: t('signIn.phone'),
+    },
+  ];
 
-export const Tabs = ({onSelect, selected, containerStyle}: Props) => {
+export const Tabs = ({
+  onSelect,
+  selected,
+  hiddenTab,
+  containerStyle,
+}: Props) => {
+  const visibleTabs = hiddenTab
+    ? tabData.filter(tab => tab.id !== hiddenTab)
+    : tabData;
+
   return (
     <View style={[styles.container, containerStyle]}>
-      {tabData.map(tab => {
+      {visibleTabs.map(tab => {
         const isActive = selected === tab.id;
         return (
           <Touchable
@@ -42,7 +57,7 @@ export const Tabs = ({onSelect, selected, containerStyle}: Props) => {
             key={tab.id}
             onPress={() => onSelect(tab.id)}>
             <View style={styles.buttonBody}>
-              {tab.icon}
+              {tab.icon(isActive ? COLORS.primaryDark : COLORS.secondary)}
               <Text
                 style={[
                   styles.buttonText,

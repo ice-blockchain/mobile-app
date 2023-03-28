@@ -24,7 +24,7 @@ export const InvalidLink = () => {
       </Text>
       <PrimaryButton
         onPress={goBack}
-        text={t('invalid_link.back_button_title')}
+        text={t('button.back_to_login')}
         style={styles.backToLogin}
       />
     </View>

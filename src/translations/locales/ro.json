@@ -611,8 +611,7 @@
   },
   "invalid_link": {
     "title": "Link invalid",
-    "description": "Din păcate, acest link este invalid, vă rugăm să introduceți din nou adresa de e-mail și vă vom trimite un nou link.",
-    "back_button_title": "Înapoi la autentificare"
+    "description": "Din păcate, acest link este invalid, vă rugăm să introduceți din nou adresa de e-mail și vă vom trimite un nou link."
   },
   "confirm_code": {
     "title": "Confirmați codul",

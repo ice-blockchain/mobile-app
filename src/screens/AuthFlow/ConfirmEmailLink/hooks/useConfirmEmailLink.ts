@@ -21,17 +21,17 @@ export const useConfirmEmailLink = () => {
   const email = useSelector(temporaryEmailSelector, () => true);
 
   const validateError = useSelector(
-    failedReasonSelector.bind(null, AccountActions.SIGN_IN_EMAIL),
+    failedReasonSelector.bind(null, AccountActions.SIGN_IN_EMAIL_LINK),
   );
 
   const validateLoading = useSelector(
     (state: RootState) =>
-      processStatusForActionSelector(state, AccountActions.SIGN_IN_EMAIL)
+      processStatusForActionSelector(state, AccountActions.SIGN_IN_EMAIL_LINK)
         ?.status === 'CONFIRM_TEMP_EMAIL',
   );
 
   const goBack = () => {
-    dispatch(AccountActions.SIGN_IN_EMAIL.RESET.create());
+    dispatch(AccountActions.SIGN_IN_EMAIL_LINK.RESET.create());
   };
 
   useFocusEffect(
@@ -39,7 +39,7 @@ export const useConfirmEmailLink = () => {
       const subscription = BackHandler.addEventListener(
         'hardwareBackPress',
         () => {
-          dispatch(AccountActions.SIGN_IN_EMAIL.RESET.create());
+          dispatch(AccountActions.SIGN_IN_EMAIL_LINK.RESET.create());
           return true;
         },
       );

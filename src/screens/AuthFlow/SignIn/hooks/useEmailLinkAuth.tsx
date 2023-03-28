@@ -8,20 +8,21 @@ import {
 import {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
-export const useEmailAuth = () => {
+export const useEmailLinkAuth = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
 
   const emailAuthFailedReason = useSelector(
-    failedReasonSelector.bind(null, AccountActions.SIGN_IN_EMAIL),
+    failedReasonSelector.bind(null, AccountActions.SIGN_IN_EMAIL_LINK),
   );
 
   const isEmailAuthLoading = useSelector(
-    isLoadingSelector.bind(null, AccountActions.SIGN_IN_EMAIL),
+    isLoadingSelector.bind(null, AccountActions.SIGN_IN_EMAIL_LINK),
   );
 
-  const signInWithEmail = () =>
-    dispatch(AccountActions.SIGN_IN_EMAIL.START.create(email));
+  const signInWithEmail = () => {
+    dispatch(AccountActions.SIGN_IN_EMAIL_LINK.START.create(email));
+  };
 
   return {
     email,

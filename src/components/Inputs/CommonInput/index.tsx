@@ -32,6 +32,7 @@ export type CommonInputProps = TextInputProps & {
   containerStyle?: StyleProp<ViewStyle>;
   icon?: ReactNode;
   prefix?: ReactNode;
+  postfix?: ReactNode;
 };
 
 export const CommonInput = ({
@@ -42,6 +43,7 @@ export const CommonInput = ({
   loading,
   icon,
   prefix,
+  postfix,
   onChange,
   onBlur,
   onFocus,
@@ -122,6 +124,7 @@ export const CommonInput = ({
             </Text>
           </Touchable>
         )}
+        {postfix}
         {loading && <ActivityIndicator />}
         {(!!errorText || validated) && !loading && (
           <View
