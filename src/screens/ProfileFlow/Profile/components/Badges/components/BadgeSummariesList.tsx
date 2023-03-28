@@ -74,10 +74,11 @@ export const BadgeSummariesList = ({
           lastIndex={item.lastIndex}
           hidden={hidden}
           isProfilePrivacyEditMode={isProfilePrivacyEditMode}
+          userId={user?.id}
         />
       );
     },
-    [areBadgesHidden, hidden, isProfilePrivacyEditMode],
+    [areBadgesHidden, hidden, isProfilePrivacyEditMode, user?.id],
   );
 
   return (

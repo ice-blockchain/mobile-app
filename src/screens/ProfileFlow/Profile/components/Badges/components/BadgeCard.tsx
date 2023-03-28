@@ -25,6 +25,7 @@ import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {rem} from 'rn-units';
 
 type Props = {
+  userId?: string;
   title?: string;
   category?: BadgeType;
   index?: number;
@@ -37,6 +38,7 @@ type Props = {
 
 export const BadgeCard = memo(
   ({
+    userId = '',
     title = '',
     category = 'social',
     index = 0,
@@ -54,9 +56,9 @@ export const BadgeCard = memo(
       if (isProfilePrivacyEditMode) {
         onUpdate('badges');
       } else {
-        navigation.navigate('Badges', {category});
+        navigation.navigate('Badges', {category, userId});
       }
-    }, [category, isProfilePrivacyEditMode, onUpdate, navigation]);
+    }, [category, isProfilePrivacyEditMode, onUpdate, navigation, userId]);
 
     const categoryTranslation = t(`profile.badge_types.${category}.title`);
 
