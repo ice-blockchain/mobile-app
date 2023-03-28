@@ -3,7 +3,7 @@
 import {flags} from '@flags';
 import {Translations} from '@translations/locales/en.json';
 
-export type SupportedLocale = 'en' | 'ro' | 'de';
+export type SupportedLocale = 'en';
 
 type LocalConfig = {
   [key in SupportedLocale]: {
@@ -21,22 +21,6 @@ export const localeConfig: LocalConfig = {
     },
     name: 'English',
     flag: flags.us,
-    isRTL: false,
-  },
-  ro: {
-    get translations() {
-      return require('./locales/ro.json');
-    },
-    name: 'Romanian',
-    flag: flags.ro,
-    isRTL: false,
-  },
-  de: {
-    get translations() {
-      return require('./locales/de.json');
-    },
-    name: 'German',
-    flag: flags.de,
     isRTL: false,
   },
 } as const;
