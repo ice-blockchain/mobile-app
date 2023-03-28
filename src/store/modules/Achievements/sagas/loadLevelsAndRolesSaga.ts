@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {Api} from '@api/index';
+import {Attributes} from '@services/analytics';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
@@ -36,6 +37,12 @@ export function* loadLevelsAndRolesSaga(
           levelsAndRoles: {level, roles: roles},
         },
       }),
+    );
+    yield call(Attributes.trackUserAttribute, 'Current Level', level);
+    yield call(
+      Attributes.trackUserAttribute,
+      'Current Role',
+      activeRole?.type || 'snowman',
     );
   } catch (error) {
     const errorMessage = getErrorMessage(error);

@@ -1,8 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Attributes} from '@services/analytics';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
-import {put, select} from 'redux-saga/effects';
+import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
+import {call, put, select} from 'redux-saga/effects';
 
 const actionCreator = AchievementsActions.TASK_MARK_COMPLETED.TELEGRAM.create;
 
@@ -25,6 +27,14 @@ export function* completeJoinTelegramTaskSaga(
           telegramUserHandle,
         },
       }),
+    );
+    yield call(AnalyticsEventLogger.trackShareTelegramUsername, {
+      tgUsername: telegramUserHandle,
+    });
+    yield call(
+      Attributes.trackUserAttribute,
+      'Telegram Username',
+      telegramUserHandle,
     );
   }
 }

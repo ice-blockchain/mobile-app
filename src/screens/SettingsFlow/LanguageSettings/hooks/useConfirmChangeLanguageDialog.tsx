@@ -5,6 +5,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {DEFAULT_DIALOG_NO_BUTTON} from '@screens/Modals/PopUp/components/PopUpButton';
 import {AccountActions} from '@store/modules/Account/actions';
+import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {t} from '@translations/i18n';
 import {SupportedLocale} from '@translations/localeConfig';
 import {useCallback} from 'react';
@@ -30,6 +31,9 @@ export const useConfirmChangeLanguageDialog = () => {
                     language,
                   }),
                 );
+                AnalyticsEventLogger.trackChangeLanguage({
+                  newLanguage: language,
+                });
               },
             },
           ],
