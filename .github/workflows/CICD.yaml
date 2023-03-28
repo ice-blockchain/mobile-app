@@ -272,6 +272,8 @@ jobs:
           bundler-cache: true
       - name: Detect context and set APP environment variables
         id: setup-env
+        env:
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
         run: |
           if [[ ${{ github.event_name == 'pull_request' && github.event.pull_request.draft == false}} == true ]]
             then
@@ -295,11 +297,12 @@ jobs:
             else
                echo "APP_ENV=staging" >> $GITHUB_ENV
           fi
+          echo "BUILD_NUMBER=$(echo $((GITHUB_RUN_NUMBER+2000)))" >> $GITHUB_ENV
       - name: Bump version to v${{ env.APP_VERSION }}
         id: bump-version
         run: |
           cd main-repo
-          bundle exec fastlane ios bump_version build_number:${{ github.run_number }} version_number:$APP_VERSION
+          bundle exec fastlane ios bump_version build_number:$BUILD_NUMBER version_number:$APP_VERSION
       - name: Build iOS App (${{env.IOS_SIGN_TYPE}})
         id: build-app
         run: |
@@ -361,6 +364,8 @@ jobs:
           bundler-cache: true
       - name: Detect context and set APP environment variables
         id: setup-env
+        env:
+          GITHUB_RUN_NUMBER: ${{ github.run_number }}
         run: |
           if [[ ${{ github.event_name == 'pull_request' && github.event.pull_request.draft == false}} == true ]]
             then
@@ -384,11 +389,12 @@ jobs:
             else
                echo "APP_ENV=staging" >> $GITHUB_ENV
           fi
+          echo "BUILD_NUMBER=$(echo $((GITHUB_RUN_NUMBER+2000)))" >> $GITHUB_ENV
       - name: Bump version to v${{ env.APP_VERSION }}
         id: bump-version
         run: |
           cd main-repo
-          bundle exec fastlane android bump_version build_number:${{ github.run_number }} version_number:$APP_VERSION
+          bundle exec fastlane android bump_version build_number:$BUILD_NUMBER version_number:$APP_VERSION
       - name: Build Android App (${{env.ANDROID_ARCHIVE_TYPE}})
         id: build-app
         run: |
