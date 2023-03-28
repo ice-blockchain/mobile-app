@@ -17,9 +17,12 @@ import {SignInEmailLinkForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailLin
 import {SignInEmailPasswordForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailPasswordForm';
 import {SignInPhoneForm} from '@screens/AuthFlow/SignIn/forms/SignInPhoneForm';
 import {useSocialAuth} from '@screens/AuthFlow/SignIn/hooks/useSocialAuth';
+import {deviceMainLocale} from '@translations/i18n';
 import React, {useMemo, useState} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
+
+const isEmailPasswordSignIn = deviceMainLocale.languageCode === 'zh';
 
 export const SignIn = () => {
   useFocusStatusBar({style: 'light-content'});
@@ -33,8 +36,6 @@ export const SignIn = () => {
 
   const [activeTab, setActiveTab] = useState<Tab>('email');
 
-  const emailFlow = 'password';
-
   const Form = useMemo(() => {
     if (isResetPassword) {
       return ResetPasswordForm;
@@ -44,7 +45,7 @@ export const SignIn = () => {
       return SignInPhoneForm;
     }
 
-    if (emailFlow === 'password') {
+    if (isEmailPasswordSignIn) {
       return SignInEmailPasswordForm;
     } else {
       return SignInEmailLinkForm;
