@@ -17,12 +17,11 @@ import {SignInEmailLinkForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailLin
 import {SignInEmailPasswordForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailPasswordForm';
 import {SignInPhoneForm} from '@screens/AuthFlow/SignIn/forms/SignInPhoneForm';
 import {useSocialAuth} from '@screens/AuthFlow/SignIn/hooks/useSocialAuth';
-import {deviceMainLocale} from '@translations/i18n';
 import React, {useMemo, useState} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
-const isEmailPasswordSignIn = deviceMainLocale.languageCode === 'zh';
+const isEmailPasswordSignIn = true; // deviceMainLocale.languageCode === 'zh';
 
 export const SignIn = () => {
   useFocusStatusBar({style: 'light-content'});
