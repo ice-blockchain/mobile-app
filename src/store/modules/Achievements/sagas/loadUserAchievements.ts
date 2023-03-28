@@ -14,24 +14,7 @@ export function* loadUserAchievements(
   const {userId} = action.payload;
 
   try {
-    const {
-      level,
-      roles,
-    }: SagaReturnType<typeof Api.achievements.getLevelsAndRoles> = yield call(
-      Api.achievements.getLevelsAndRoles,
-      {
-        userId,
-      },
-    );
-
-    yield put(
-      AchievementsActions.USER_ACHIEVEMENTS_LOAD.SUCCESS.create({
-        userId,
-        achievements: {
-          levelsAndRoles: {level, roles: roles},
-        },
-      }),
-    );
+    yield put(AchievementsActions.LEVELS_AND_ROLES_LOAD.START.create({userId}));
 
     const getBadgesResult: SagaReturnType<
       typeof Api.achievements.getBadgeSummaries

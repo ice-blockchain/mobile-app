@@ -9,6 +9,7 @@ import {CancelButton} from '@screens/Modals/ProfilePrivacyEdit/components/Cancel
 import {Description} from '@screens/Modals/ProfilePrivacyEdit/components/Description';
 import {NextButton} from '@screens/Modals/ProfilePrivacyEdit/components/NextButton';
 import {CurrentRoleCard} from '@screens/ProfileFlow/Profile/components/Role/components/CurrentRoleCard';
+import {userIdSelector} from '@store/modules/Account/selectors';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {t} from '@translations/i18n';
 import React from 'react';
@@ -20,7 +21,11 @@ export const ProfilePrivacyEditStep2 = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
 
-  const roleType = useSelector(AchievementsSelectors.getRoleType);
+  const userId = useSelector(userIdSelector);
+
+  const roleType = useSelector(
+    AchievementsSelectors.getRoleTypeByUserId({userId}),
+  );
 
   const goNext = () => {
     navigation.replace('ProfilePrivacyEditStep3');

@@ -5,7 +5,7 @@ import {dayjs} from '@services/dayjs';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {RootState} from '@store/rootReducer';
 import {StartActionFactories} from '@store/utils/actions/createAction';
-import {useEffect, useRef, useState} from 'react';
+import {useCallback, useEffect, useRef, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
 export const useRefresh = (refreshActions: StartActionFactories[]) => {
@@ -13,7 +13,7 @@ export const useRefresh = (refreshActions: StartActionFactories[]) => {
   const dispatch = useDispatch();
   const [refreshing, setRefreshing] = useState(false);
 
-  const onRefresh = () => {
+  const onRefresh = useCallback(() => {
     const now = dayjs().valueOf();
     if (now - refreshTime.current > HOME_REFRESH_MIN_INTERVAL_SEC * 1000) {
       refreshTime.current = now;
@@ -24,7 +24,7 @@ export const useRefresh = (refreshActions: StartActionFactories[]) => {
         dispatch(action.START.create());
       });
     }
-  };
+  }, [dispatch, refreshActions]);
 
   const isManualUpdateLoading = useSelector((state: RootState) => {
     return !!refreshActions.find(action => isLoadingSelector(action, state));

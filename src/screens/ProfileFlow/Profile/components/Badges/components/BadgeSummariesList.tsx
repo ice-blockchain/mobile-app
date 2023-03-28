@@ -8,7 +8,7 @@ import {
   BadgeCardSkeleton,
 } from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeCard';
 import {isPrivacyInfoShownSelector} from '@store/modules/Account/selectors';
-import React, {useCallback} from 'react';
+import React, {useCallback, useMemo} from 'react';
 import {FlatList, ListRenderItem, StyleSheet} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
@@ -40,11 +40,13 @@ export const BadgeSummariesList = ({
   const defaultData =
     data.length === 0 ? Array(NUMBER_OF_SKELETONS).fill(null) : data;
 
-  const badgesData = loading
-    ? defaultData
-    : hidden
-    ? Array(NUMBER_OF_PLACEHOLDERS).fill(null)
-    : defaultData;
+  const badgesData = useMemo(() => {
+    return loading
+      ? defaultData
+      : hidden
+      ? Array(NUMBER_OF_PLACEHOLDERS).fill(null)
+      : defaultData;
+  }, [defaultData, hidden, loading]);
 
   const renderItem: ListRenderItem<BadgeSummary> = useCallback(
     ({item, index}) => {

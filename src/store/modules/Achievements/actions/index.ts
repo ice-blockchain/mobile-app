@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Achievements, RoleType} from '@api/achievements/types';
+import {Achievements} from '@api/achievements/types';
 import {Task, TaskData, TaskType} from '@api/tasks/types';
 import {createAction} from '@store/utils/actions/createAction';
 
 const LEVELS_AND_ROLES_LOAD = createAction(
   'ACHIEVEMENTS/LEVELS_AND_ROLES_LOAD',
   {
-    START: true,
-    SUCCESS: (payload: {level: number; roleType: RoleType}) => payload,
+    START: (payload?: {userId: string}) => payload,
+    SUCCESS: (payload: {userId: string; achievements: Achievements}) => payload,
     FAILED: (errorMessage: string) => ({errorMessage}),
   },
 );
