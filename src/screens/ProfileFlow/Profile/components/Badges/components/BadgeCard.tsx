@@ -60,10 +60,10 @@ export const BadgeCard = memo(
 
     const categoryTranslation = t(`profile.badge_types.${category}.title`);
 
-    const image = `${category}0_achieved_true` as keyof typeof Images.badges;
+    const image = `${category}0_achieved_true` as const;
     const inactiveImage = isPlaceholder
       ? (`placeholder${index}` as keyof typeof Images.badges)
-      : (`${category}0_achieved_false` as keyof typeof Images.badges);
+      : (`${category}0_achieved_false` as const);
     const ActiveImage = Images.badges[image];
     const InactiveImage = Images.badges[inactiveImage];
 

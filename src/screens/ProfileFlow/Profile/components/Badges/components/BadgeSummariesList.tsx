@@ -32,11 +32,10 @@ export const BadgeSummariesList = ({
   isOwner,
 }: Props) => {
   const isPrivacyInfoShown = useSelector(isPrivacyInfoShownSelector);
+  const areBadgesHidden = user?.hiddenProfileElements?.includes('badges');
   const hidden = isOwner
-    ? user?.hiddenProfileElements?.includes('badges') && !isPrivacyInfoShown
-    : user?.hiddenProfileElements?.includes('badges');
-
-  const showPlaceholders = user?.hiddenProfileElements?.includes('badges');
+    ? areBadgesHidden && !isPrivacyInfoShown
+    : areBadgesHidden;
 
   const defaultData =
     data.length === 0 ? Array(NUMBER_OF_SKELETONS).fill(null) : data;
@@ -50,7 +49,7 @@ export const BadgeSummariesList = ({
   const renderItem: ListRenderItem<BadgeSummary> = useCallback(
     ({item, index}) => {
       if (!item || item === null) {
-        if (showPlaceholders) {
+        if (areBadgesHidden) {
           return (
             <BadgeCard
               style={index === 0 && styles.firstItem}
@@ -76,7 +75,7 @@ export const BadgeSummariesList = ({
         />
       );
     },
-    [hidden, isProfilePrivacyEditMode, showPlaceholders],
+    [areBadgesHidden, hidden, isProfilePrivacyEditMode],
   );
 
   return (
