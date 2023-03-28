@@ -10,7 +10,11 @@ import {t} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
+import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {rem} from 'rn-units';
+
+const BADGE_VERTICAL_MARGIN = rem(19);
+const BADGE_CELL_HEIGHT = rem(68);
 
 type Props = {
   name: string;
@@ -104,10 +108,23 @@ export const BadgeCard = ({
   );
 };
 
+export const BadgeListSkeleton = () => (
+  <SkeletonPlaceholder>
+    <View style={styles.skeleton} />
+  </SkeletonPlaceholder>
+);
+
 const styles = StyleSheet.create({
   containerActive: {
     marginTop: rem(19),
     marginBottom: rem(20),
+  },
+  skeleton: {
+    marginVertical: BADGE_VERTICAL_MARGIN,
+    borderRadius: rem(16),
+    height: BADGE_CELL_HEIGHT,
+    marginHorizontal: SCREEN_SIDE_OFFSET,
+    backgroundColor: 'green',
   },
   connector: {
     position: 'absolute',

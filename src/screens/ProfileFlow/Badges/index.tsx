@@ -28,6 +28,8 @@ import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
+const NUMBER_OF_SKELETONS = 6;
+
 const CATEGORIES: ReadonlyArray<{text: string; key: BadgeType}> = [
   {text: capitalizeFirstLetter(t('global.social')), key: 'social'},
   {text: capitalizeFirstLetter(t('global.coin')), key: 'coin'},
@@ -117,7 +119,11 @@ export const Badges = () => {
           return (
             <View key={index + 1} style={styles.container}>
               <BadgeList
-                data={data}
+                data={
+                  data && data.length === 0
+                    ? Array(NUMBER_OF_SKELETONS).fill(null)
+                    : data
+                }
                 onScroll={scrollHandler}
                 scrollEventThrottle={16}
                 showsVerticalScrollIndicator={false}
