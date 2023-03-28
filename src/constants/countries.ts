@@ -177,7 +177,7 @@ export const countries: Country[] = [
     iddCode: '+673',
   },
   {
-    name: 'Bolivia (Plurinational State of)',
+    name: 'Bolivia',
     flag: '🇧🇴',
     isoCode: 'BO',
     iddCode: '+591',
@@ -243,7 +243,7 @@ export const countries: Country[] = [
     iddCode: '+61',
   },
   {
-    name: 'Congo (Democratic Republic of the)',
+    name: 'Democratic Republic of the Congo',
     flag: '🇨🇩',
     isoCode: 'CD',
     iddCode: '+243',
@@ -441,7 +441,7 @@ export const countries: Country[] = [
     iddCode: '+500',
   },
   {
-    name: 'Micronesia (Federated States of)',
+    name: 'Federated States of Micronesia',
     flag: '🇫🇲',
     isoCode: 'FM',
     iddCode: '+691',
@@ -465,7 +465,7 @@ export const countries: Country[] = [
     iddCode: '+241',
   },
   {
-    name: 'United Kingdom of Great Britain and Northern Ireland',
+    name: 'United Kingdom',
     flag: '🇬🇧',
     isoCode: 'GB',
     iddCode: '+44',
@@ -651,7 +651,7 @@ export const countries: Country[] = [
     iddCode: '+964',
   },
   {
-    name: 'Iran (Islamic Republic of)',
+    name: 'Islamic Republic of Iran',
     flag: '🇮🇷',
     isoCode: 'IR',
     iddCode: '+98',
@@ -729,13 +729,13 @@ export const countries: Country[] = [
     iddCode: '+1',
   },
   {
-    name: "Korea (Democratic People's Republic of)",
+    name: "Democratic People's Republic of Korea",
     flag: '🇰🇵',
     isoCode: 'KP',
     iddCode: '+850',
   },
   {
-    name: 'Korea (Republic of)',
+    name: 'Republic of Korea',
     flag: '🇰🇷',
     isoCode: 'KR',
     iddCode: '+82',
@@ -843,7 +843,7 @@ export const countries: Country[] = [
     iddCode: '+377',
   },
   {
-    name: 'Moldova (Republic of)',
+    name: 'Republic of Moldova',
     flag: '🇲🇩',
     isoCode: 'MD',
     iddCode: '+373',
@@ -1107,7 +1107,7 @@ export const countries: Country[] = [
     iddCode: '+1',
   },
   {
-    name: 'Palestine, State of',
+    name: 'State of Palestine',
     flag: '🇵🇸',
     isoCode: 'PS',
     iddCode: '+970',
@@ -1383,7 +1383,7 @@ export const countries: Country[] = [
     iddCode: '+886',
   },
   {
-    name: 'Tanzania, United Republic of',
+    name: 'United Republic of Tanzania',
     flag: '🇹🇿',
     isoCode: 'TZ',
     iddCode: '+255',
@@ -1437,19 +1437,19 @@ export const countries: Country[] = [
     iddCode: '+1',
   },
   {
-    name: 'Venezuela (Bolivarian Republic of)',
+    name: 'Venezuela',
     flag: '🇻🇪',
     isoCode: 'VE',
     iddCode: '+58',
   },
   {
-    name: 'Virgin Islands (British)',
+    name: 'British Virgin Islands',
     flag: '🇻🇬',
     isoCode: 'VG',
     iddCode: '+1',
   },
   {
-    name: 'Virgin Islands (U.S.)',
+    name: 'United States Virgin Islands',
     flag: '🇻🇮',
     isoCode: 'VI',
     iddCode: '+1',

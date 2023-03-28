@@ -30,16 +30,17 @@ export const TotalMiningRateValue = ({style}: Props) => {
   );
 
   const rateValueTextStyle = useMemo(() => {
-    switch (animatedMiningRatesTotalAmount.slice(0, 1)) {
-      case '+':
+    switch (miningRates?.type) {
+      case 'positive':
         return styles.positive;
 
-      case '-':
+      case 'negative':
         return styles.negative;
-    }
 
-    return styles.neutral;
-  }, [animatedMiningRatesTotalAmount]);
+      default:
+        return styles.neutral;
+    }
+  }, [miningRates?.type]);
 
   return (
     <FormattedNumber

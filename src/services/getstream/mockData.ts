@@ -34,7 +34,7 @@ export const mockedNotifications = [
     verb: 'joined',
     foreign_id: 'joined:id:1',
     extra: {
-      description: '**@Robert** and **3 others** have joined your team',
+      description: '**@John** and **3 others** have joined your team',
       imageUrls: [
         'https://laughingsquid.com/wp-content/uploads/2013/07/20130722-12002032-flag.jpg',
         'https://w0.peakpx.com/wallpaper/286/639/HD-wallpaper-black-and-white-beautiful-girl-portrait-of-a-girl-face.jpg',
@@ -49,7 +49,7 @@ export const mockedNotifications = [
     verb: 'joined',
     foreign_id: 'joined:id:2',
     extra: {
-      description: '**@oleh** has joined your team',
+      description: '**@Doe** has joined your team',
       deeplink: 'staging.ice.app://users/0123ba01-c196-4a37-b0d4-63936b8e6ac9',
       imageUrl:
         'https://www.sony.co.uk/alphauniverse/assets/resized/2022/02/Davide-Oricchio-profile_square_582x582.jpg',

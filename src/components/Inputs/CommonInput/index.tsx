@@ -73,7 +73,9 @@ export const CommonInput = ({
           <View style={styles.inputWrapper}>
             {prefix}
             {onChange ? (
-              <Text style={styles.input}>{value}</Text>
+              <Text style={styles.input} {...textInputProps}>
+                {value}
+              </Text>
             ) : (
               <TextInput
                 value={value}
