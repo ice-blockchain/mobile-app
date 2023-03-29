@@ -7,25 +7,17 @@ import {all, call, put, SagaReturnType} from 'redux-saga/effects';
 
 const actionCreator = AchievementsActions.ALL_BADGES_LOAD.START.create;
 
+type BadgesReturnType = SagaReturnType<typeof Api.achievements.getBadgesByType>;
+
 export function* loadAllBadges(action: ReturnType<typeof actionCreator>) {
   const {userId} = action.payload;
 
   try {
-    let getBadgesByTypeResultCoin: SagaReturnType<
-      typeof Api.achievements.getBadgesByType
-    >;
-    let getBadgesByTypeResultLevel: SagaReturnType<
-      typeof Api.achievements.getBadgesByType
-    >;
-    let getBadgesByTypeResultSocial: SagaReturnType<
-      typeof Api.achievements.getBadgesByType
-    >;
-
-    [
-      getBadgesByTypeResultCoin,
-      getBadgesByTypeResultLevel,
+    const [
       getBadgesByTypeResultSocial,
-    ] = yield all([
+      getBadgesByTypeResultLevel,
+      getBadgesByTypeResultCoin,
+    ]: [BadgesReturnType, BadgesReturnType, BadgesReturnType] = yield all([
       call(Api.achievements.getBadgesByType, {
         type: 'coin',
         userId,
@@ -44,9 +36,9 @@ export function* loadAllBadges(action: ReturnType<typeof actionCreator>) {
       AchievementsActions.ALL_BADGES_LOAD.SUCCESS.create({
         userId,
         achievements: {
-          socialBadges: getBadgesByTypeResultSocial || [],
+          coinBadges: getBadgesByTypeResultSocial || [],
           levelBadges: getBadgesByTypeResultLevel || [],
-          coinBadges: getBadgesByTypeResultCoin || [],
+          socialBadges: getBadgesByTypeResultCoin || [],
         },
       }),
     );

@@ -41,11 +41,13 @@ export const BadgeSummariesList = ({
     data.length === 0 ? Array(NUMBER_OF_SKELETONS).fill(null) : data;
 
   const badgesData = useMemo(() => {
-    return loading
-      ? defaultData
-      : hidden
-      ? Array(NUMBER_OF_PLACEHOLDERS).fill(null)
-      : defaultData;
+    if (loading) {
+      return defaultData;
+    }
+    if (hidden) {
+      return Array(NUMBER_OF_PLACEHOLDERS).fill(null);
+    }
+    return defaultData;
   }, [defaultData, hidden, loading]);
 
   const renderItem: ListRenderItem<BadgeSummary> = useCallback(
