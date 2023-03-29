@@ -18,8 +18,8 @@ import {rem} from 'rn-units';
 
 type Props = {
   title: string;
-  description: string;
-  imageSource: ImageSourcePropType;
+  description: string | ReactNode;
+  image: ImageSourcePropType;
   renderBody?: () => ReactNode;
   containerStyle?: StyleProp<ViewStyle>;
 };
@@ -27,13 +27,14 @@ type Props = {
 export const ImageCardCompact = ({
   title,
   description,
-  imageSource,
+  image,
   renderBody,
   containerStyle,
 }: Props) => {
   return (
     <View style={[styles.container, commonStyles.shadow, containerStyle]}>
-      <Image source={imageSource} style={styles.icon} />
+      <Image style={styles.icon} resizeMode="contain" source={image} />
+
       <View style={styles.info}>
         <Text
           style={styles.titleText}
@@ -71,14 +72,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   icon: {
-    marginLeft: rem(4),
+    marginLeft: rem(9),
     marginTop: -rem(16),
     height: rem(76),
     width: rem(76),
   },
   info: {
     flex: 1,
-    marginLeft: rem(20),
+    marginLeft: rem(14),
     marginTop: rem(4),
     justifyContent: 'center',
   },
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
     ...font(16, 19, 'bold', 'primaryDark'),
   },
   descriptionText: {
-    ...font(12, 15, 'regular', 'secondary'),
+    ...font(12, 14.4, 'medium', 'secondary'),
     marginTop: rem(4),
   },
 });

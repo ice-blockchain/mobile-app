@@ -5,12 +5,16 @@ import {SectionHeader} from '@components/SectionHeader';
 import {ProfileTabStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {BadgeList} from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeList';
-import {LAST_BADGES} from '@screens/ProfileFlow/Profile/components/Badges/mockData';
+import {BadgeSummariesList} from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeSummariesList';
 import {userSelector} from '@store/modules/Account/selectors';
+import {AchievementsActions} from '@store/modules/Achievements/actions';
+import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
+import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {t} from '@translations/i18n';
-import React, {memo, useCallback, useState} from 'react';
+import React, {memo, useCallback} from 'react';
+import {StyleSheet} from 'react-native';
 import {useSelector} from 'react-redux';
+import {rem} from 'rn-units';
 
 type Props = {
   user: User | null;
@@ -19,6 +23,13 @@ type Props = {
 export const Badges = memo(({user}: Props) => {
   const authUser = useSelector(userSelector);
   const isOwner = user?.id === authUser?.id;
+  const badgesSummary = useSelector(
+    AchievementsSelectors.getBadgesSummary({userId: user?.id}),
+  );
+
+  const isLoading = useSelector(
+    isLoadingSelector.bind(null, AchievementsActions.USER_ACHIEVEMENTS_LOAD),
+  );
 
   const navigation =
     useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
@@ -27,21 +38,37 @@ export const Badges = memo(({user}: Props) => {
     () => navigation.navigate('Badges', {userId: user?.id}),
     [navigation, user],
   );
-  const [loading, setLoading] = useState(true);
-  setTimeout(() => setLoading(false), 2000);
 
   const title = isOwner
     ? t('profile.my_badges.title')
     : t('profile.badges.title');
 
+  let action: String | undefined = t('button.view_all');
+  if (!isOwner && user?.hiddenProfileElements?.includes('badges')) {
+    action = undefined;
+  }
+
   return (
     <>
       <SectionHeader
         title={title.toUpperCase()}
-        action={t('button.view_all')}
+        action={action}
         onActionPress={onViewAllPress}
+        style={styles.header}
       />
-      <BadgeList loading={loading} user={user} data={LAST_BADGES} />
+      <BadgeSummariesList
+        loading={isLoading && badgesSummary.length === 0}
+        user={user}
+        data={badgesSummary}
+        isOwner={isOwner}
+      />
     </>
   );
+});
+
+const styles = StyleSheet.create({
+  header: {
+    paddingTop: rem(5),
+    height: rem(24),
+  },
 });

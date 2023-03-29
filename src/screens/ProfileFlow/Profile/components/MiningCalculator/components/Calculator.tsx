@@ -169,7 +169,7 @@ export const Calculator = memo(
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: rem(12),
+    marginTop: rem(16),
     marginHorizontal: 16,
     paddingHorizontal: rem(20),
     borderRadius: rem(20),

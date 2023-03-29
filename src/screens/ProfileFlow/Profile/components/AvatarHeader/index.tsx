@@ -1,27 +1,30 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {User} from '@api/user/types';
+import {ActivityIndicator} from '@components/ActivityIndicator';
 import {Avatar, AvatarSkeleton} from '@components/Avatar/Avatar';
 import {ContactAvatar} from '@components/ContactAvatar';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {commonStyles} from '@constants/styles';
+import {commonStyles, MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
+import {useActionSheetUpdateAvatar} from '@hooks/useActionSheetUpdateAvatar';
 import {useScrollShadow} from '@hooks/useScrollShadow';
+import {useUpdateAvatar} from '@hooks/useUpdateAvatar';
 import {HEADER_HEIGHT} from '@navigation/components/Header';
 import {BackButton} from '@navigation/components/Header/components/BackButton';
 import {SettingsButton} from '@navigation/components/Header/components/SettingsButton';
+import {ShowPrivacyButton} from '@navigation/components/Header/components/ShowPrivacyButton';
+import {
+  AVATAR_RADIUS,
+  PEN_SIZE,
+  useAnimatedStyles,
+} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useAnimatedStyles';
+import {AnimatedCameraIcon} from '@svg/AnimatedCameraIcon';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
-import {Image, StyleSheet, View, ViewStyle} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
-import Animated, {
-  AnimatedStyleProp,
-  Extrapolate,
-  interpolate,
-  SharedValue,
-  useAnimatedStyle,
-  useDerivedValue,
-} from 'react-native-reanimated';
+import Animated, {SharedValue} from 'react-native-reanimated';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {rem, screenWidth} from 'rn-units';
 
@@ -30,9 +33,9 @@ const AnimatedTouchable = Animated.createAnimatedComponent(Touchable);
 const NOT_FOUND = require('../../assets/images/notFoundPlaceholder.png');
 
 export const AVATAR_SIZE = rem(122);
-const AVATAR_SMALL_SIZE = rem(36);
-const AVATAR_SMALL_RADIUS = rem(16);
-const AVATAR_RADIUS = rem(41);
+
+const MIN_WIDTH_SIDE_CONTAINERS = rem(80);
+const MIN_WIDTH_SMALL_SIDE_CONTAINERS = rem(40);
 
 type Props = {
   user?: User | null;
@@ -44,8 +47,6 @@ type Props = {
   onContactPress: () => void;
 };
 
-const MAX_SCROLL = 160;
-const SCROLL_STEP_1 = 140;
 export const AvatarHeader = memo(
   ({
     user,
@@ -59,124 +60,78 @@ export const AvatarHeader = memo(
     const {shadowStyle} = useScrollShadow({translateY: scrollY});
     const {top: topInset} = useSafeAreaInsets();
 
-    const imageSize = useDerivedValue(() =>
-      interpolate(
-        scrollY.value,
-        [0, MAX_SCROLL],
-        [AVATAR_SIZE, AVATAR_SMALL_SIZE],
-        Extrapolate.CLAMP,
-      ),
-    );
-
-    const marginTop = useDerivedValue(() =>
-      interpolate(
-        scrollY.value,
-        [0, MAX_SCROLL],
-        [AVATAR_SIZE / 2 + HEADER_HEIGHT / 2 + 8, 0],
-        Extrapolate.CLAMP,
-      ),
-    );
-
-    const borderWidth = useDerivedValue(() =>
-      interpolate(scrollY.value, [0, MAX_SCROLL], [5, 0], Extrapolate.CLAMP),
-    );
-
-    const borderRadius = useDerivedValue(() =>
-      interpolate(
-        scrollY.value,
-        [0, MAX_SCROLL],
-        [AVATAR_RADIUS, AVATAR_SMALL_RADIUS],
-        Extrapolate.CLAMP,
-      ),
-    );
-
-    const imageAnimatedStyle = useAnimatedStyle(() => {
-      return {
-        height: imageSize.value,
-        width: imageSize.value,
-        borderWidth: borderWidth.value,
-        borderRadius: borderRadius.value,
-        marginTop: marginTop.value,
-      };
-    });
-
-    const textOpacity = useDerivedValue(() =>
-      interpolate(
-        scrollY.value,
-        [130, SCROLL_STEP_1],
-        [0, 1],
-        Extrapolate.CLAMP,
-      ),
-    );
-
-    const lettersAvatarOpacity = useDerivedValue(() =>
-      interpolate(scrollY.value, [0, 5], [1, 0], Extrapolate.CLAMP),
-    );
-
-    const fontSize = useDerivedValue(() =>
-      interpolate(
-        scrollY.value,
-        [0, SCROLL_STEP_1],
-        [0.01, 17],
-        Extrapolate.CLAMP,
-      ),
-    );
-
-    const marginLeft = useDerivedValue(() =>
-      interpolate(scrollY.value, [0, MAX_SCROLL], [0, 12], Extrapolate.CLAMP),
-    );
-
-    const textStyle = useAnimatedStyle(() => ({
-      opacity: textOpacity.value,
-      fontSize: fontSize.value,
-      marginLeft: marginLeft.value,
-    }));
+    const {
+      imageAnimatedStyle,
+      penAnimatedStyle,
+      textStyle,
+      lettersAvatarStyle,
+      iconAnimatedColor,
+    } = useAnimatedStyles({scrollY});
 
     const extraPadding = {
       paddingTop: topInset,
       height: HEADER_HEIGHT + topInset,
     };
 
-    const lettersAvatarStyle: AnimatedStyleProp<ViewStyle> = useAnimatedStyle(
-      () => ({
-        opacity: lettersAvatarOpacity.value,
-      }),
-    );
+    const {updateAvatar, updateAvatarLoading} = useUpdateAvatar();
+
+    const {localImage, onEditPress} = useActionSheetUpdateAvatar({
+      onChange: updateAvatar,
+      uri,
+    });
 
     return (
       <Animated.View style={[styles.container, extraPadding, shadowStyle]}>
-        <View style={styles.leftContainer}>
+        <View
+          style={[
+            styles.leftContainer,
+            !user?.hiddenProfileElements?.length && styles.leftSmallContainer,
+          ]}>
           <BackButton
             containerStyle={styles.backButton}
             color={COLORS.primaryDark}
           />
         </View>
         <View style={styles.wrapper}>
-          <Animated.View style={[imageAnimatedStyle, styles.imageContainer]}>
-            {isLoading ? (
-              <AvatarSkeleton />
-            ) : (
-              <>
-                {user && (
-                  <Avatar
-                    uri={uri}
-                    style={styles.image}
-                    size={AVATAR_SIZE}
-                    borderRadius={AVATAR_RADIUS}
-                    touchableStyle={styles.touchableAvatar}
-                    allowFullScreen={true}
-                  />
+          <View>
+            <Animated.View style={[imageAnimatedStyle, styles.imageContainer]}>
+              {isLoading ? (
+                <AvatarSkeleton />
+              ) : (
+                <>
+                  {user ? (
+                    <Avatar
+                      uri={localImage?.path ?? uri}
+                      style={styles.image}
+                      size={AVATAR_SIZE}
+                      borderRadius={AVATAR_RADIUS}
+                      touchableStyle={styles.touchableAvatar}
+                      allowFullScreen={true}
+                    />
+                  ) : (
+                    <Image
+                      source={NOT_FOUND}
+                      resizeMode="stretch"
+                      style={styles.image}
+                    />
+                  )}
+                </>
+              )}
+            </Animated.View>
+            {isOwner && (
+              <AnimatedTouchable
+                style={[penAnimatedStyle, styles.penWrapper]}
+                onPress={onEditPress}
+                disabled={updateAvatarLoading}
+                hitSlop={MIDDLE_BUTTON_HIT_SLOP}>
+                {updateAvatarLoading ? (
+                  <ActivityIndicator style={StyleSheet.absoluteFill} />
+                ) : (
+                  <AnimatedCameraIcon animatedColor={iconAnimatedColor} />
                 )}
-                {!user && (
-                  <Image
-                    source={NOT_FOUND}
-                    resizeMode="stretch"
-                    style={styles.image}
-                  />
-                )}
-              </>
+              </AnimatedTouchable>
             )}
-          </Animated.View>
+          </View>
           {contact && (
             <AnimatedTouchable
               style={[styles.miniAvatarContainer, lettersAvatarStyle]}
@@ -195,11 +150,18 @@ export const AvatarHeader = memo(
             <Animated.Text
               style={[styles.usernameText, textStyle]}
               numberOfLines={1}>
-              {user?.username}
+              {`@${user?.username}`}
             </Animated.Text>
           )}
         </View>
-        <View style={styles.rightContainer}>
+        <View
+          style={[
+            styles.rightContainer,
+            !user?.hiddenProfileElements?.length && styles.rightSmallContainer,
+          ]}>
+          {isOwner && user && user?.hiddenProfileElements?.length && (
+            <ShowPrivacyButton containerStyle={styles.showPrivacyButton} />
+          )}
           {isOwner && user && <SettingsButton />}
         </View>
       </Animated.View>
@@ -216,7 +178,6 @@ const styles = StyleSheet.create({
     overflow: 'visible',
     backgroundColor: COLORS.white,
     zIndex: 1000,
-    marginTop: rem(4),
     ...commonStyles.shadow,
   },
   miniAvatarContainer: {
@@ -236,12 +197,20 @@ const styles = StyleSheet.create({
   rightContainer: {
     paddingRight: rem(16),
     alignSelf: 'center',
-    minWidth: rem(40),
+    minWidth: MIN_WIDTH_SIDE_CONTAINERS,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  rightSmallContainer: {
+    minWidth: MIN_WIDTH_SMALL_SIDE_CONTAINERS,
   },
   leftContainer: {
     paddingLeft: rem(16),
     alignSelf: 'center',
-    minWidth: rem(40),
+    minWidth: MIN_WIDTH_SIDE_CONTAINERS,
+  },
+  leftSmallContainer: {
+    minWidth: MIN_WIDTH_SMALL_SIDE_CONTAINERS,
   },
   imageContainer: {
     borderColor: COLORS.foam,
@@ -273,4 +242,19 @@ const styles = StyleSheet.create({
     right: -rem(3),
     position: 'absolute',
   },
+  penWrapper: {
+    position: 'absolute',
+    bottom: -rem(10),
+    right: -rem(10),
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: PEN_SIZE,
+    height: PEN_SIZE,
+    borderRadius: PEN_SIZE / 2,
+    borderColor: COLORS.white,
+    backgroundColor: COLORS.white,
+    marginHorizontal: rem(10),
+    marginVertical: rem(10),
+  },
+  showPrivacyButton: {marginRight: rem(16)},
 });

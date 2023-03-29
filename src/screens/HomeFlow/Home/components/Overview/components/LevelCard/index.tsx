@@ -31,9 +31,13 @@ export const LevelCard = forwardRef(
     const globalRank = useSelector(globalRankSelector(userId));
     const isSplashHidden = useSelector(isSplashHiddenSelector);
 
-    const userLevel = useSelector(AchievementsSelectors.getLevel);
+    const userLevel = useSelector(
+      AchievementsSelectors.getLevelByUserId({userId}),
+    );
 
-    const roleType = useSelector(AchievementsSelectors.getRoleType);
+    const roleType = useSelector(
+      AchievementsSelectors.getRoleTypeByUserId({userId}),
+    );
 
     const animatedUserReferralCount = useAnimatedNumber(
       userReferralCount,

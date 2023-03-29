@@ -12,6 +12,7 @@ export interface AccountState {
   // data that is taken from the auth providers (google / apple etc)
   // and used to populate / suggest User profile later on
   userInfo: SignInUserInfo | null;
+  isPrivacyInfoShown: boolean;
 }
 
 type Actions = ReturnType<
@@ -22,6 +23,7 @@ type Actions = ReturnType<
   | typeof AccountActions.USER_STATE_CHANGE.FAILED.create
   | typeof AccountActions.UPDATE_ACCOUNT.SUCCESS.create
   | typeof AccountActions.GET_ACCOUNT.SUCCESS.create
+  | typeof AccountActions.SET_PRIVACY_INFO_SHOW.STATE.create
 >;
 
 const INITIAL_STATE: AccountState = {
@@ -29,6 +31,7 @@ const INITIAL_STATE: AccountState = {
   token: null,
   user: null,
   userInfo: null,
+  isPrivacyInfoShown: true,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): AccountState {
@@ -49,6 +52,9 @@ function reducer(state = INITIAL_STATE, action: Actions): AccountState {
         break;
       case AccountActions.SIGN_IN_SOCIAL.SUCCESS.type:
         draft.userInfo = action.payload.userInfo;
+        break;
+      case AccountActions.SET_PRIVACY_INFO_SHOW.STATE.type:
+        draft.isPrivacyInfoShown = action.payload.isPrivacyInfoShown;
         break;
       case AccountActions.SIGN_OUT.SUCCESS.type: {
         return {

@@ -48,11 +48,9 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
   },
-
   label: {
     ...font(14, null, 'regular', 'secondary'),
   },
-
   value: {
     ...font(14, null, 'regular', 'primaryDark'),
   },

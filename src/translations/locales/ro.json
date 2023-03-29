@@ -189,6 +189,7 @@
     "global_rank": "rang global",
     "view_all_roles": "vezi toate rolurile",
     "data_is_hidden": "datele sunt ascunse",
+    "progress_text": "{{value}} of {{total}}",
     "not_found": {
       "title": "Utilizatorul nu a fost găsit",
       "description": "hopa, nu am putut găsi acest utilizator"
@@ -201,6 +202,20 @@
     },
     "roles": {
       "title": "Roluri"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "Coins",
+        "description": "coins"
+      },
+      "social": {
+        "title": "Social",
+        "description": "friends"
+      },
+      "level": {
+        "title": "Level",
+        "description": "Level"
+      }
     }
   },
   "global": {
@@ -628,6 +643,18 @@
   },
   "country_select": {
     "title": "Selecteaza tara"
+  },
+  "roles": {
+    "snowman": {
+      "title": "Snowman",
+      "subtitle": "Build a snow empire",
+      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+    },
+    "ambassador": {
+      "title": "Ambassador",
+      "subtitle": "Ruler of the snow empire",
+      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+    }
   },
   "confirm_phone": {
     "modify_title": "Confirmați telefonul nou",

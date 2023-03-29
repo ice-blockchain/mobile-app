@@ -69,8 +69,7 @@ export const TopMiners = memo(() => {
               <Touchable
                 key={user.userId ?? uniqueId()}
                 onPress={() => {
-                  // TODO: temp profile disabling
-                  if (user.userId && false) {
+                  if (user.userId) {
                     navigation.navigate('UserProfile', {userId: user.userId!});
                   }
                 }}>

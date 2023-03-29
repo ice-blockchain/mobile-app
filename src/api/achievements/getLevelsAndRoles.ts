@@ -2,15 +2,10 @@
 
 import {get} from '@api/client';
 
-import {Role} from './types';
+import {LevelsAndRoles} from './types';
 
 interface Params {
   userId: string;
-}
-
-interface LevelsAndRoles {
-  level: number;
-  roles: Role[];
 }
 
 export function getLevelsAndRoles({userId}: Params) {

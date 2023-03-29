@@ -1,19 +1,31 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {BadgeType} from '@api/achievements/types';
 import {ImageCardCompact} from '@components/Cards/ImageCardCompact';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {Images} from '@images';
 import {BadgeProgress} from '@screens/ProfileFlow/Badges/components/BadgeCardProgress';
+import {t} from '@translations/i18n';
+import {formatNumber} from '@utils/numbers';
 import React from 'react';
-import {ImageSourcePropType, StyleSheet, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {rem} from 'rn-units';
 
+const BADGE_VERTICAL_MARGIN = rem(19);
+const BADGE_CELL_HEIGHT = rem(68);
+
 type Props = {
-  title: string;
-  description: string;
-  progressValue: number;
-  active?: boolean;
-  imageSource: ImageSourcePropType;
+  name: string;
+  type: BadgeType;
+  achieved: boolean;
+  percentageOfUsersInProgress: number;
+  achievingRange: {
+    fromInclusive?: number;
+    toInclusive?: number;
+  };
+  index: number;
   connector: {
     top?: boolean | null;
     bottom?: boolean | null;
@@ -21,12 +33,62 @@ type Props = {
 };
 
 export const BadgeCard = ({
-  title,
-  description,
-  imageSource,
-  progressValue,
+  name,
+  index,
+  type,
+  achieved,
+  percentageOfUsersInProgress,
+  achievingRange,
   connector = {},
 }: Props) => {
+  const imagePath =
+    `${type}${index}_achieved_${achieved}` as keyof typeof Images.badges;
+
+  let description = '';
+
+  if (achievingRange.fromInclusive && achievingRange.toInclusive) {
+    if (type === 'level') {
+      description = `${t(`profile.badge_types.${type}.description`)} ${
+        achievingRange.fromInclusive
+      }-${achievingRange.toInclusive}`;
+    } else {
+      description = `${achievingRange.fromInclusive}-${
+        achievingRange.toInclusive
+      } ${t(`profile.badge_types.${type}.description`)}`;
+    }
+  }
+  if (!achievingRange?.toInclusive && achievingRange?.fromInclusive) {
+    if (type === 'level') {
+      description = `${t(`profile.badge_types.${type}.description`)} ${
+        achievingRange?.fromInclusive - 1
+      }+`;
+    } else {
+      description = `${achievingRange?.fromInclusive - 1}+ ${t(
+        `profile.badge_types.${type}.description`,
+      )}`;
+    }
+  }
+  if (!achievingRange?.fromInclusive && achievingRange?.toInclusive) {
+    if (type === 'level') {
+      description = `${t(`profile.badge_types.${type}.description`)} < ${
+        achievingRange?.toInclusive + 1
+      }`;
+    } else {
+      description = `< ${achievingRange?.toInclusive + 1} ${t(
+        `profile.badge_types.${type}.description`,
+      )}`;
+    }
+  }
+
+  const image = Images.badges[imagePath];
+
+  const percentageProgress =
+    percentageOfUsersInProgress > 100
+      ? 100
+      : formatNumber(percentageOfUsersInProgress, {
+          maximumFractionDigits: 2,
+        });
+
   return (
     <>
       {connector.top && (
@@ -36,20 +98,33 @@ export const BadgeCard = ({
         <View style={[styles.connector, styles.connectorBottom]} />
       )}
       <ImageCardCompact
-        title={title}
+        title={name}
         description={description}
-        imageSource={imageSource}
-        renderBody={() => <BadgeProgress value={progressValue} />}
+        image={image}
+        renderBody={() => <BadgeProgress value={Number(percentageProgress)} />}
         containerStyle={styles.containerActive}
       />
     </>
   );
 };
 
+export const BadgeListSkeleton = () => (
+  <SkeletonPlaceholder>
+    <View style={styles.skeleton} />
+  </SkeletonPlaceholder>
+);
+
 const styles = StyleSheet.create({
   containerActive: {
     marginTop: rem(19),
     marginBottom: rem(20),
+  },
+  skeleton: {
+    marginVertical: BADGE_VERTICAL_MARGIN,
+    borderRadius: rem(16),
+    height: BADGE_CELL_HEIGHT,
+    marginHorizontal: SCREEN_SIDE_OFFSET,
+    backgroundColor: 'green',
   },
   connector: {
     position: 'absolute',

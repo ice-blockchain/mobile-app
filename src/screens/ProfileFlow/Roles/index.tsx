@@ -11,6 +11,7 @@ import {ProfileTabStackParamList} from '@navigation/Main';
 import {RouteProp, useRoute} from '@react-navigation/native';
 import {Role} from '@screens/ProfileFlow/Roles/components/Role';
 import {userSelector} from '@store/modules/Account/selectors';
+import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {t} from '@translations/i18n';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -22,6 +23,10 @@ export const Roles = () => {
   const authUser = useSelector(userSelector);
   const route = useRoute<RouteProp<ProfileTabStackParamList, 'Roles'>>();
   const isOwner = !route.params || route.params.userId === authUser?.id;
+
+  const roles = useSelector(
+    AchievementsSelectors.getRolesByUserId({userId: route.params?.userId}),
+  );
 
   useFocusStatusBar({style: 'dark-content'});
   const bottomOffset = useBottomTabBarOffsetStyle();
@@ -41,20 +46,20 @@ export const Roles = () => {
         scrollEventThrottle={16}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={[styles.scrollContent, bottomOffset.current]}>
-        <Role
-          title="Snowman"
-          tagline="Are you flesh and blood?"
-          description="Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot."
-          imageSource={Images.roles.snowman}
-          backgroundColor={COLORS.white}
-          checked={true}
-        />
-        <Role
-          title="Ambassador"
-          tagline="Invite friends to join your team."
-          description="You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features."
-          imageSource={Images.roles.ambassador}
-        />
+        {roles.map((role, index) => {
+          return (
+            <Role
+              key={role.type}
+              title={t(`roles.${role.type}.title`)}
+              tagline={t(`roles.${role.type}.subtitle`)}
+              description={t(`roles.${role.type}.description`)}
+              imageSource={Images.roles[role.type]}
+              backgroundColor={COLORS.white}
+              checked={role.enabled}
+              containerStyle={index === roles.length - 1 && styles.lastRole}
+            />
+          );
+        })}
       </Animated.ScrollView>
     </View>
   );
@@ -69,5 +74,8 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     paddingHorizontal: rem(20),
     paddingTop: rem(10),
+  },
+  lastRole: {
+    marginBottom: 0,
   },
 });

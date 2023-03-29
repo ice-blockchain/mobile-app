@@ -48,3 +48,6 @@ export const isRegistrationCompleteSelector = (state: RootState) => {
     difference(REQUIRED_AUTH_STEPS, registrationFinalizedSteps).length === 0;
   return isRequiredAuthStepsPassed && isOnboardingViewed;
 };
+
+export const isPrivacyInfoShownSelector = (state: RootState) =>
+  state.account.isPrivacyInfoShown;

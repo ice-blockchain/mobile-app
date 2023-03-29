@@ -1,7 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Badge} from '@api/badges/types';
-import {BadgeCard} from '@screens/ProfileFlow/Badges/components/BadgeCard';
+import {Badge} from '@api/achievements/types';
+import {
+  BadgeCard,
+  BadgeListSkeleton,
+} from '@screens/ProfileFlow/Badges/components/BadgeCard';
 import React, {useCallback} from 'react';
 import {FlatListProps} from 'react-native';
 import Animated from 'react-native-reanimated';
@@ -15,16 +18,21 @@ export const BadgeList = ({
 }: Props) => {
   const renderItem = useCallback(
     ({item, index}: {item: Badge; index: number}) => {
-      const nextBadge = data && index < data.length ? data[index + 1] : null;
-      return (
-        <BadgeCard
-          {...item}
-          connector={{
-            top: index > 0,
-            bottom: !!nextBadge,
-          }}
-        />
-      );
+      if (item === null) {
+        return <BadgeListSkeleton />;
+      } else {
+        const nextBadge = data && index < data.length ? data[index + 1] : null;
+        return (
+          <BadgeCard
+            {...item}
+            connector={{
+              top: index > 0,
+              bottom: !!nextBadge,
+            }}
+            index={index}
+          />
+        );
+      }
     },
     [data],
   );

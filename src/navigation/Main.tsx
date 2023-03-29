@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {BadgeCategory} from '@api/badges/types';
+import {BadgeType} from '@api/achievements/types';
 import {NotificationDeliveryChannel} from '@api/devices/types';
 import {Country} from '@constants/countries';
 import {MainTabBar} from '@navigation/components/MainTabBar';
@@ -124,7 +124,7 @@ export type MainStackParamList = {
   };
   UserProfile: {userId: string} | undefined;
   Roles: {userId?: string} | undefined;
-  Badges: {category?: BadgeCategory; userId?: string};
+  Badges: {category?: BadgeType; userId?: string};
   Walkthrough:
     | {step: WalkthroughStep; total: number; index: number}
     | undefined;
@@ -162,7 +162,7 @@ export type NewsTabStackParamList = {
 export type ProfileTabStackParamList = {
   MyProfile: undefined;
   Roles: {userId?: string} | undefined;
-  Badges: {category?: BadgeCategory; userId?: string};
+  Badges: {category?: BadgeType; userId?: string};
   Settings: undefined;
   PersonalInformation: undefined;
   ModifyPhoneNumber: undefined;
@@ -208,8 +208,7 @@ const HomeTabStackNavigator = () => (
 const ProfileTabStackNavigator = () => (
   <ProfileTabStack.Navigator
     screenOptions={screenOptions}
-    // TODO: temp profile disabling -> remove initialRouteName or set MyProfile there
-    initialRouteName={'Settings'}>
+    initialRouteName={'MyProfile'}>
     <ProfileTabStack.Screen name="MyProfile" component={Profile} />
     <ProfileTabStack.Screen name="Roles" component={Roles} />
     <ProfileTabStack.Screen

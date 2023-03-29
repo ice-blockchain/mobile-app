@@ -169,7 +169,6 @@ const styles = StyleSheet.create({
     ...font(8, 10, 'bold'),
     marginRight: rem(4),
   },
-
   miningValuePositive: {
     color: COLORS.shamrock,
   },
@@ -179,7 +178,6 @@ const styles = StyleSheet.create({
   miningValueNeutral: {
     color: COLORS.white,
   },
-
   baseContainer: {
     marginTop: rem(6),
     flexDirection: 'row',

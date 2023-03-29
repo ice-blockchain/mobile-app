@@ -243,7 +243,7 @@ export const countries: Country[] = [
     iddCode: '+61',
   },
   {
-    name: 'Democratic Republic of the Congo',
+    name: 'Democratic Republic of the Congo',
     flag: '🇨🇩',
     isoCode: 'CD',
     iddCode: '+243',

@@ -203,6 +203,7 @@
     "global_rank": "global rank",
     "view_all_roles": "view all roles",
     "data_is_hidden": "data is hidden",
+    "progress_text": "{{value}} of {{total}}",
     "not_found": {
       "title": "User was not found",
       "description": "oops, we couldn't find this user"
@@ -215,12 +216,26 @@
     },
     "roles": {
       "title": "Roles"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "Coins",
+        "description": "coins"
+      },
+      "social": {
+        "title": "Social",
+        "description": "friends"
+      },
+      "level": {
+        "title": "Level",
+        "description": "Level"
+      }
     }
   },
   "global": {
     "level": "level",
     "referrals": "referrals",
-    "coins": "Coins",
+    "coin": "Coins",
     "social": "Social",
     "phone_number": "Phone number",
     "years": "Years",
@@ -604,15 +619,15 @@
   "profile_privacy_edit": {
     "step1": {
       "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to\nhide from public eyes"
+      "description": "Tap on the blocks you want to hide from public eyes"
     },
     "step2": {
-      "description": "Tap on this block to hide it\nfrom public eyes",
+      "description": "Tap on this block to hide it from public eyes",
       "title": "2. Your Current Role"
     },
     "step3": {
       "title": "3. Your Earned Badges",
-      "description": "Tap on this block to hide it\nfrom public eyes"
+      "description": "Tap here to hide your badges from public eyes"
     }
   },
   "confirm_email": {
@@ -649,13 +664,15 @@
     "title": "Select country"
   },
   "roles": {
-    "ambassador": {
-      "title": "Ambassador",
-      "description": "Ruler of the snow empire"
-    },
     "snowman": {
       "title": "Snowman",
-      "description": "Build a snow empire"
+      "subtitle": "Build a snow empire",
+      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+    },
+    "ambassador": {
+      "title": "Ambassador",
+      "subtitle": "Ruler of the snow empire",
+      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
     }
   },
   "confirm_phone": {

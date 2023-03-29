@@ -42,6 +42,7 @@ export const COLORS = {
   headerBackground: 'rgba(255, 255, 255, .96)',
   aliceBlue: '#EFF9FF',
   linkWater: '#F1F4FC',
+  azureishWhite: '#D7EAF4', // inactive badges color
   transparentBackground: 'rgba(8, 21, 50, .7)',
   wildSand: '#F5F5F5',
   primaryButtonGradientStart: '#02337C',

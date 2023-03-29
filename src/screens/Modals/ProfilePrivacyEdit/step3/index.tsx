@@ -1,20 +1,27 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {User} from '@api/user/types';
 import {COLORS} from '@constants/colors';
 import {Images} from '@images';
 import {useNavigation} from '@react-navigation/native';
 import {CancelButton} from '@screens/Modals/ProfilePrivacyEdit/components/CancelButton';
 import {Description} from '@screens/Modals/ProfilePrivacyEdit/components/Description';
 import {NextButton} from '@screens/Modals/ProfilePrivacyEdit/components/NextButton';
-import {BadgeList} from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeList';
-import {LAST_BADGES} from '@screens/ProfileFlow/Profile/components/Badges/mockData';
+import {BadgeSummariesList} from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeSummariesList';
+import {userSelector} from '@store/modules/Account/selectors';
+import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {t} from '@translations/i18n';
 import React from 'react';
 import {ImageBackground, StyleSheet, View} from 'react-native';
+import {useSelector} from 'react-redux';
 import {rem, screenWidth} from 'rn-units';
 
 export const ProfilePrivacyEditStep3 = () => {
   const navigation = useNavigation();
+  const authUser = useSelector(userSelector) as User;
+  const badgesSummary = useSelector(
+    AchievementsSelectors.getBadgesSummary({userId: authUser.id}),
+  );
 
   return (
     <View style={styles.background}>
@@ -29,10 +36,10 @@ export const ProfilePrivacyEditStep3 = () => {
           description={t('profile_privacy_edit.step3.description')}
         />
         <View style={styles.badgesContainer}>
-          <BadgeList
+          <BadgeSummariesList
             isProfilePrivacyEditMode
             loading={false}
-            data={LAST_BADGES}
+            data={badgesSummary}
           />
         </View>
         <NextButton

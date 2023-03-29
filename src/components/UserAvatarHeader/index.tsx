@@ -4,16 +4,16 @@ import {Avatar, DEFAULT_AVATAR_SIZE} from '@components/Avatar/Avatar';
 import {EditableAvatar} from '@components/Avatar/EditableAvatar';
 import {LinesBackground} from '@components/LinesBackground';
 import {COLORS} from '@constants/colors';
+import {CroppedImage} from '@hooks/useActionSheetUpdateAvatar';
 import {userSelector} from '@store/modules/Account/selectors';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {Image as CropImage} from 'react-native-image-crop-picker';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 type Props = {
-  onChange?: (image: CropImage | null) => void;
+  onChange?: (image: CroppedImage | null) => void;
   updateAvatarLoading?: boolean;
 };
 

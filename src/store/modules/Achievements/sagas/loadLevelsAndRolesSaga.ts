@@ -3,13 +3,21 @@
 import {Api} from '@api/index';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
+import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {getErrorMessage} from '@utils/errors';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
-export function* loadLevelsAndRolesSaga() {
-  const userId: ReturnType<typeof userIdSelector> = yield select(
+export function* loadLevelsAndRolesSaga(
+  action: ReturnType<
+    | typeof AchievementsActions.LEVELS_AND_ROLES_LOAD.START.create
+    | typeof AppCommonActions.INTERVAL_UPDATE.STATE.create
+  >,
+) {
+  const authenticatedUsedId: ReturnType<typeof userIdSelector> = yield select(
     userIdSelector,
   );
+
+  const userId = action.payload?.userId ?? authenticatedUsedId;
 
   try {
     const {
@@ -21,14 +29,12 @@ export function* loadLevelsAndRolesSaga() {
         userId,
       },
     );
-
-    const activeRole = roles.find(({enabled}) => enabled);
-
     yield put(
       AchievementsActions.LEVELS_AND_ROLES_LOAD.SUCCESS.create({
-        level,
-
-        roleType: activeRole?.type || 'snowman',
+        userId,
+        achievements: {
+          levelsAndRoles: {level, roles: roles},
+        },
       }),
     );
   } catch (error) {

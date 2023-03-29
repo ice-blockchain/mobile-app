@@ -11,7 +11,7 @@ import {getContactAcronym, getContactName} from '@utils/contacts';
 import {stringToColor} from '@utils/string';
 import {font} from '@utils/styles';
 import React, {memo, useState} from 'react';
-import {LayoutAnimation, Pressable, StyleSheet, Text, View} from 'react-native';
+import {LayoutAnimation, StyleSheet, Text, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
 import {rem} from 'rn-units';
 
@@ -46,7 +46,7 @@ export const ContactItem = memo(
       }
     };
     return (
-      <Pressable
+      <Touchable
         style={styles.contactContainer}
         onPress={() => onInvite(contact)}>
         <View
@@ -98,7 +98,7 @@ export const ContactItem = memo(
           icon={<TeamContactInvite fill={COLORS.primaryDark} />}
           onPress={() => onInvite(contact)}
         />
-      </Pressable>
+      </Touchable>
     );
   },
 );

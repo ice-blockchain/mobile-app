@@ -24,4 +24,5 @@ export const LINKS = {
   TELEGRAM_PROFILE_URL: 'https://t.me/iceblockchain',
   EARLY_ACCESS: 'https://ice.io/early-release-version',
   CHANGELOG: 'https://ice.io/changelog',
+  ICE_FAQ: 'https://ice.io/faq',
 };

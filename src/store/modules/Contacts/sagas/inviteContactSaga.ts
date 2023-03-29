@@ -16,7 +16,6 @@ export function* inviteContactSaga(
   const username: SagaReturnType<typeof usernameSelector> = yield select(
     usernameSelector,
   );
-
   try {
     const {id} = action.payload;
     const contact: Contact | null = yield call(getContactById, id);
