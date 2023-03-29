@@ -119,7 +119,6 @@ export function useLayoutAnimation({
     contentStyle,
     titleStyle,
     valuesContainerStyle,
-
     onTitleLayout,
     onButtonLayout,
   };
