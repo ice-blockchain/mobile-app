@@ -47,8 +47,16 @@ export const useMiningState = () => {
     );
   };
 
-  const startMiningSession = () => {
-    dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
+  const startMiningSession = ({
+    tapToMineActionType,
+  }: {
+    tapToMineActionType: 'Extended' | 'Default';
+  }) => {
+    dispatch(
+      TokenomicsActions.START_MINING_SESSION.START.create({
+        tapToMineActionType,
+      }),
+    );
   };
 
   const closeTooltip = () => {

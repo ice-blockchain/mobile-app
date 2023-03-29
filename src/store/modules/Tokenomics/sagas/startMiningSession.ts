@@ -8,6 +8,7 @@ import {navigationRef} from '@navigation/utils';
 import {dayjs} from '@services/dayjs';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
+import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {
   agreeWithEarlyAccessSelector,
@@ -42,6 +43,11 @@ export function* startMiningSessionSaga(
     yield put(
       TokenomicsActions.START_MINING_SESSION.SUCCESS.create(miningSummary),
     );
+    if (action.payload?.tapToMineActionType) {
+      AnalyticsEventLogger.trackTapToMine({
+        tapToMineActionType: action.payload?.tapToMineActionType,
+      });
+    }
 
     if (!agreeWithEarlyAccess) {
       /*
