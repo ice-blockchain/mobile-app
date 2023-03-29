@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {isApi4xxError, isNetworkError} from '@api/client';
+import {isApiError, isNetworkError} from '@api/client';
 import {isAuthError} from '@services/auth';
 import {logError} from '@services/logging';
 import {AccountActions} from '@store/modules/Account/actions';
@@ -58,7 +58,7 @@ export function* rootSaga(): SagaIterator {
             yield call(saga);
             break;
           } catch (error) {
-            if (isUnexpectedError(error)) {
+            if (shouldLog(error)) {
               logError(error);
             }
           }
@@ -77,13 +77,13 @@ export function* rootSaga(): SagaIterator {
 }
 
 /**
- * Check if error is actually a part of a problem
+ * Check if we need to log the error
  */
-const isUnexpectedError = (error: unknown) => {
+const shouldLog = (error: unknown) => {
   /**
-   * Client errors
+   * API errors
    */
-  if (isApi4xxError(error)) {
+  if (isApiError(error)) {
     return false;
   }
 

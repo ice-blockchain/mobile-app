@@ -4,8 +4,8 @@ import {isApiError} from '@api/client';
 import {DeviceMetadata} from '@api/devices/types';
 import {Api} from '@api/index';
 import {DEVICE_METADATA_UPDATE_TIMEOUT_HOURS} from '@constants/timeouts';
-import messaging from '@react-native-firebase/messaging';
 import {dayjs} from '@services/dayjs';
+import {getFcmToken} from '@services/firebase';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
   isAuthorizedSelector,
@@ -119,9 +119,7 @@ export function* updateDeviceMetadataSaga(action: Action) {
         systemName: DeviceInfo.getSystemName(),
         systemVersion: DeviceInfo.getSystemVersion(),
         pushNotificationToken:
-          hasPushPermissions && !clearDeviceMetadata
-            ? messaging().getToken()
-            : '',
+          hasPushPermissions && !clearDeviceMetadata ? getFcmToken() : '',
         tz: getTimezoneOffset(),
       };
 
