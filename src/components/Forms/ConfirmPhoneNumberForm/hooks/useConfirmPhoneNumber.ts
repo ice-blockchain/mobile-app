@@ -75,5 +75,6 @@ export const useConfirmPhoneNumber = ({onModifyPhoneNumber}: Props) => {
     validateLoading,
     isSuccessValidation,
     smsSentTimestamp,
+    clearError,
   };
 };
