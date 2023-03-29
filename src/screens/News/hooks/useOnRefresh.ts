@@ -1,7 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-// SPDX-License-Identifier: BUSL-1.1
-
 import {activeTabSelector} from '@store/modules/ActiveTab/selectors';
 import {NewsActions} from '@store/modules/News/actions';
 import {NewsSelectors} from '@store/modules/News/selectors';

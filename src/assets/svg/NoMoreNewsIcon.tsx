@@ -1,7 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-// SPDX-License-Identifier: BUSL-1.1
-
 import {COLORS} from '@constants/colors';
 import * as React from 'react';
 import Svg, {Path, SvgProps} from 'react-native-svg';
