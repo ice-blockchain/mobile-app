@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {BadgeSummary} from '@api/achievements/types';
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
+import {Attributes} from '@services/analytics';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {getErrorMessage} from '@utils/errors';
 import {call, put, SagaReturnType} from 'redux-saga/effects';
@@ -22,6 +24,9 @@ export function* loadUserAchievements(
       userId,
     });
 
+    (getBadgesResult ?? []).forEach((badgeSummary: BadgeSummary) =>
+      Attributes.trackBadgeAttribute({badgeSummary}),
+    );
     yield put(
       AchievementsActions.USER_ACHIEVEMENTS_LOAD.SUCCESS.create({
         userId,
