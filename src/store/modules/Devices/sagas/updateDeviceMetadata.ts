@@ -120,7 +120,9 @@ export function* updateDeviceMetadataSaga(action: Action) {
         systemVersion: DeviceInfo.getSystemVersion(),
         pushNotificationToken:
           hasPushPermissions && !clearDeviceMetadata
-            ? messaging().getToken()
+            ? messaging()
+                .getToken()
+                .catch(_ => '') // different errors might be throws due to lack of google services on device
             : '',
         tz: getTimezoneOffset(),
       };
