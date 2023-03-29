@@ -58,7 +58,7 @@ export function* rootSaga(): SagaIterator {
             yield call(saga);
             break;
           } catch (error) {
-            if (isUnexpectedError(error)) {
+            if (shouldLog(error)) {
               logError(error);
             }
           }
@@ -77,9 +77,9 @@ export function* rootSaga(): SagaIterator {
 }
 
 /**
- * Check if error is actually a part of a problem
+ * Check if we need to log the error
  */
-const isUnexpectedError = (error: unknown) => {
+const shouldLog = (error: unknown) => {
   /**
    * API errors
    */
