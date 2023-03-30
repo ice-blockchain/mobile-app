@@ -36,7 +36,7 @@ export const EVENT_NAMES = {
   CHANGE_LANGUAGE: 'Change Language',
   CHANGE_PROFILE_PICTURE: 'Change Profile Picture',
   SHARE_PROFILE_USERNAME: 'Share Telegram Username',
-  PING: 'PING',
+  PING: 'Ping',
 } as const;
 
 export const AnalyticsEventLogger = {
