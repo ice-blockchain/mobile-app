@@ -1,15 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
-import {
-  I18nManager,
-  StyleProp,
-  StyleSheet,
-  Text,
-  TextStyle,
-  View,
-} from 'react-native';
+import {StyleProp, StyleSheet, Text, TextStyle, View} from 'react-native';
 
 type Props = {
   number: number | string;
@@ -35,9 +29,12 @@ export const FormattedNumber = ({
   const hasDecimals = !!numberDecimals;
   return (
     <View style={[styles.container, containerStyle]}>
-      <Text style={[styles.integerText, bodyStyle]}>{`${space}${numberInteger}${
-        hasDecimals ? '.' : ''
-      }`}</Text>
+      <Text
+        style={[
+          styles.integerText,
+          bodyStyle,
+        ]}>{`${space}${numberInteger}`}</Text>
+      {hasDecimals && <Text style={[styles.dot, bodyStyle]}>.</Text>}
       {hasDecimals && (
         <Text style={[styles.fractionalText, decimalsStyle]}>
           {numberDecimals.substring(0, numberOfDecimals)}
@@ -49,7 +46,11 @@ export const FormattedNumber = ({
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row',
+    flexDirection: isRTL() ? 'row-reverse' : 'row',
+  },
+  dot: {
+    ...font(17, 20.4, 'bold'),
+    alignSelf: 'flex-end',
   },
   integerText: {
     ...font(17, 20.4, 'bold'),
