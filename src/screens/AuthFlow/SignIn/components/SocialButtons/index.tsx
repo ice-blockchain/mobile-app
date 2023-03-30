@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {SocialButton} from '@screens/AuthFlow/SignIn/components/SocialButtons/components/SocialButton';
+import {isPlayServicesAvailable} from '@services/firebase';
 import {AccountActions} from '@store/modules/Account/actions';
 import {AppleIcon} from '@svg/AppleIcon';
 import {FacebookIcon} from '@svg/FacebookIcon';
@@ -25,12 +26,14 @@ export const SocialButtons = () => {
         />
       ) : null}
 
-      <SocialButton
-        onPress={() =>
-          dispatch(AccountActions.SIGN_IN_SOCIAL.START.create('google'))
-        }
-        Icon={GoogleIcon}
-      />
+      {isPlayServicesAvailable && (
+        <SocialButton
+          onPress={() =>
+            dispatch(AccountActions.SIGN_IN_SOCIAL.START.create('google'))
+          }
+          Icon={GoogleIcon}
+        />
+      )}
 
       {
         // // TODO: temp facebook disabling until the provider is ready

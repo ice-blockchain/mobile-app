@@ -73,7 +73,7 @@ export const SignIn = () => {
           </View>
           {!isResetPassword && <SocialButtons />}
         </View>
-        <PrivacyTerms />
+        <PrivacyTerms containerStyle={styles.privacy} />
       </ScrollView>
       {isSocialAuthLoading && <FullScreenLoading />}
     </KeyboardAvoider>
@@ -98,5 +98,9 @@ const styles = StyleSheet.create({
   form: {
     marginTop: rem(20),
     marginHorizontal: rem(20),
+  },
+  privacy: {
+    marginTop: rem(24),
+    marginBottom: rem(12),
   },
 });

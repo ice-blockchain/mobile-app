@@ -5,9 +5,12 @@ import messaging from '@react-native-firebase/messaging';
 import {logError} from '@services/logging';
 import {isIOS} from 'rn-units';
 
+export const isPlayServicesAvailable =
+  firebaseApp.utils().playServicesAvailability.isAvailable;
+
 export const getFcmToken = () => {
   try {
-    if (isIOS || firebaseApp.utils().playServicesAvailability.isAvailable) {
+    if (isIOS || isPlayServicesAvailable) {
       return messaging().getToken();
     }
     return '';
