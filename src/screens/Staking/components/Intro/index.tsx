@@ -9,12 +9,12 @@ import {
 } from '@constants/staking';
 import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
 import {InfoOutlineIcon} from '@svg/InfoOutlineIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {StyleSheet, Text} from 'react-native';
-import {rem} from 'rn-units';
+import {isAndroid, rem} from 'rn-units';
 
 export const Intro = memo(() => {
   return (
@@ -43,6 +43,6 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(28),
     marginTop: rem(24),
     ...font(14, 20, 'regular', 'white'),
-    textAlign: 'center',
+    textAlign: isRTL() && isAndroid ? 'left' : 'center', // info icon doesn't align center on Android
   },
 });
