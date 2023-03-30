@@ -2,6 +2,7 @@
 
 import {BarLabel} from '@components/BarGraph/components/BarLabel';
 import {COLORS} from '@constants/colors';
+import {isRTL} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import React, {useMemo} from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -32,9 +33,12 @@ export const Bar = ({
     () => maxWidth * (value / maxValue),
     [maxValue, maxWidth, value],
   );
+  const output = isRTL() ? [width, 0] : [-width, 0];
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [
-      {translateX: interpolate(sharedValue.value, [-1, 0], [-width, 0])},
+      {
+        translateX: interpolate(sharedValue.value, [-1, 0], output),
+      },
     ],
   }));
   const backgroundColor = useMemo(() => {

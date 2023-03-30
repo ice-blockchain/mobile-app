@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {SearchIcon} from '@svg/SearchIcon';
+import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {forwardRef, Ref, useState} from 'react';
 import {
@@ -76,6 +77,7 @@ const styles = StyleSheet.create({
     paddingLeft: rem(46),
     height: SEARCH_INPUT_HEIGHT,
     ...font(16, 21, 'medium', 'primaryDark'),
+    textAlign: isRTL() ? 'right' : 'left',
   },
   searchButton: {
     justifyContent: 'center',
