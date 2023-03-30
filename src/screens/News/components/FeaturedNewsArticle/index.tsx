@@ -15,95 +15,128 @@ import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import Animated, {SharedValue} from 'react-native-reanimated';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const FeaturedNewsArticle = memo(() => {
-  const safeAreaInsets = useSafeAreaInsets();
+import {useLayoutAnimation} from './hooks/useLayoutAnimation';
 
-  const featuredNewsArticle = useSelector(NewsSelectors.getFeaturedNewsArticle);
+/**
+ * Border radius of bottom sheet view
+ */
+export const FEATURED_HEADER_OVERLAP = rem(24);
+export const FEATURED_HEADER_EXPANDED_HEIGHT =
+  rem(374) + FEATURED_HEADER_OVERLAP;
+export const FEATURED_HEADER_COLLAPSED_HEIGHT = rem(64);
 
-  const {openNewsArticle} = useNewsBrowser(featuredNewsArticle);
+interface Props {
+  animatedIndex: SharedValue<number>;
+  deltaPositions: number;
+}
 
-  if (!featuredNewsArticle) {
-    return <FeaturedNewsArticleSkeleton />;
-  }
+export const FeaturedNewsArticle = memo(
+  ({animatedIndex, deltaPositions}: Props) => {
+    const featuredNewsArticle = useSelector(
+      NewsSelectors.getFeaturedNewsArticle,
+    );
 
-  const {imageUrl, title, createdAt, views, viewed} = featuredNewsArticle;
+    const {openNewsArticle} = useNewsBrowser(featuredNewsArticle);
 
-  return (
-    <View style={styles.container}>
-      <Image
-        style={StyleSheet.absoluteFill}
-        source={{
-          uri: imageUrl,
-        }}
-      />
+    const {
+      titleStyle,
+      contentStyle,
+      valuesContainerStyle,
+      onTitleLayout,
+      onButtonLayout,
+    } = useLayoutAnimation({
+      animatedIndex,
+      deltaPositions,
+    });
 
-      <LinearGradient
-        style={[
-          styles.topGradient,
-          {
-            height: safeAreaInsets.top,
-          },
-        ]}
-        colors={[COLORS.black, COLORS.blackTransparent]}
-      />
+    if (!featuredNewsArticle) {
+      return <FeaturedNewsArticleSkeleton />;
+    }
 
-      <View style={styles.content}>
-        <LinearGradient
+    const {imageUrl, title, createdAt, views, viewed} = featuredNewsArticle;
+
+    return (
+      <View style={styles.container}>
+        <Image
           style={StyleSheet.absoluteFill}
-          colors={[COLORS.blackTransparent, COLORS.black]}
+          source={{
+            uri: imageUrl,
+          }}
         />
 
-        <Text style={styles.title} numberOfLines={2}>
-          {title}
-        </Text>
+        <Animated.View style={[styles.content, contentStyle]}>
+          <LinearGradient
+            style={StyleSheet.absoluteFill}
+            colors={[
+              'rgba(0, 0, 0, 0)',
+              'rgba(0, 0, 0, 0.35)',
+              'rgba(0, 0, 0, 0.95)',
+            ]}
+          />
 
-        <View style={styles.details}>
-          {viewed ? null : (
-            <NewsFeaturedNewBadge
-              style={styles.newBadge}
-              width={rem(28)}
-              height={rem(18)}
-            />
-          )}
+          <Animated.Text
+            style={[styles.title, titleStyle]}
+            numberOfLines={2}
+            onLayout={onTitleLayout}>
+            {title}
+          </Animated.Text>
 
-          <ClockIcon width={rem(16)} height={rem(16)} color={COLORS.white} />
+          <View style={styles.details}>
+            <Animated.View
+              style={[styles.valuesContainer, valuesContainerStyle]}>
+              {viewed ? null : (
+                <NewsFeaturedNewBadge
+                  style={styles.newBadge}
+                  width={rem(28)}
+                  height={rem(18)}
+                />
+              )}
 
-          <Text style={styles.value} numberOfLines={1}>
-            {dayjs(createdAt).isToday()
-              ? t('global.date.today')
-              : dayjs(createdAt).fromNow()}
-          </Text>
+              <ClockIcon
+                width={rem(16)}
+                height={rem(16)}
+                color={COLORS.white}
+              />
 
-          <EyeIcon width={rem(16)} height={rem(16)} fill={COLORS.white} />
+              <Text style={styles.value} numberOfLines={1}>
+                {dayjs(createdAt).isToday()
+                  ? t('global.date.today')
+                  : dayjs(createdAt).fromNow()}
+              </Text>
 
-          <Text style={styles.value} numberOfLines={1}>
-            {t('news.views', {
-              viewsCount: formatNumber(views),
-            })}
-          </Text>
+              <EyeIcon width={rem(16)} height={rem(16)} fill={COLORS.white} />
 
-          <Touchable
-            hitSlop={SMALL_BUTTON_HIT_SLOP}
-            style={styles.readMore}
-            onPress={openNewsArticle}>
-            <Text style={styles.readMoreText}>{t('news.read_more')}</Text>
-          </Touchable>
-        </View>
+              <Text style={styles.value} numberOfLines={1}>
+                {t('news.views', {
+                  viewsCount: formatNumber(views),
+                })}
+              </Text>
+            </Animated.View>
+
+            <Touchable
+              hitSlop={SMALL_BUTTON_HIT_SLOP}
+              style={styles.readMore}
+              onLayout={onButtonLayout}
+              onPress={openNewsArticle}>
+              <Text style={styles.readMoreText}>{t('news.read_more')}</Text>
+            </Touchable>
+          </View>
+        </Animated.View>
       </View>
-    </View>
-  );
-});
+    );
+  },
+);
 
 export const FeaturedNewsArticleSkeleton = () => (
   <View style={styles.container}>
     <LinearGradient
       style={StyleSheet.absoluteFill}
-      colors={[COLORS.primaryLight, COLORS.toreaBay1]}
+      colors={[COLORS.primaryLight, COLORS.primaryDark]}
     />
 
     <SkeletonPlaceholder>
@@ -124,22 +157,21 @@ export const FeaturedNewsArticleSkeleton = () => (
 
 const styles = StyleSheet.create({
   container: {
-    height: rem(407),
+    height: FEATURED_HEADER_EXPANDED_HEIGHT,
     justifyContent: 'flex-end',
     backgroundColor: COLORS.white,
-  },
-
-  topGradient: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
   },
 
   content: {
     paddingTop: rem(16),
     paddingHorizontal: rem(20),
-    paddingBottom: rem(24 + 18),
+    paddingBottom: rem(16) + FEATURED_HEADER_OVERLAP,
+  },
+
+  valuesContainer: {
+    flexDirection: 'row',
+    flex: 1,
+    alignItems: 'center',
   },
 
   newBadge: {

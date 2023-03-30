@@ -379,6 +379,7 @@ export type Translations = {
   'general.days_short': null;
   'news.news_feed': null;
   'news.read_more': null;
+  'news.no_more_news': null;
   'news.views': {viewsCount: number | string};
   'search.empty': null;
   'search.nothing_is_found': null;
