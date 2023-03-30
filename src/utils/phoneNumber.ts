@@ -48,6 +48,17 @@ export const e164PhoneNumber = (phone: string, countryCode?: string | null) => {
   );
 };
 
+export const InternationalPhoneNumber = (
+  phone: string,
+  countryCode?: string | null,
+) => {
+  return (
+    parsePhoneNumber(phone, countryCode as CountryCode)?.format(
+      'INTERNATIONAL',
+    ) ?? null
+  );
+};
+
 export const hashPhoneNumber = (phone: string) => {
   return sha256(phone);
 };
