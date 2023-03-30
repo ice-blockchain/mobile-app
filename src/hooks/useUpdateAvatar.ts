@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {AccountActions} from '@store/modules/Account/actions';
+import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {getFilenameFromPath} from '@utils/file';
 import {useCallback} from 'react';
@@ -24,6 +25,7 @@ export const useUpdateAvatar = () => {
           };
 
       dispatch(AccountActions.UPDATE_ACCOUNT.START.create(userInfo));
+      AnalyticsEventLogger.trackChangeProfilePicture();
     },
     [dispatch],
   );

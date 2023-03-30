@@ -69,11 +69,10 @@ export const MiningButton = ({onPress, onPressCallback}: Props) => {
       }
 
       if (gestureConfig.startMining) {
-        AnalyticsEventLogger.trackTapToMine({
+        startMiningSession({
           tapToMineActionType:
             gesture === 'onLongPress' ? 'Extended' : 'Default',
         });
-        startMiningSession();
       }
 
       if (!miningStateTooltipSeen) {

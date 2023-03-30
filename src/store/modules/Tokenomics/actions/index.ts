@@ -54,7 +54,10 @@ const GET_BALANCE_HISTORY = createAction('GET_BALANCE_HISTORY', {
 });
 
 const START_MINING_SESSION = createAction('START_MINING_SESSION', {
-  START: (params?: {resurrect?: boolean}) => params,
+  START: (params?: {
+    resurrect?: boolean;
+    tapToMineActionType?: 'Extended' | 'Default';
+  }) => params,
   SUCCESS: (miningSummary: MiningSummary | null) => ({miningSummary}),
   FAILED: (errorMessage: string) => ({errorMessage}),
 });

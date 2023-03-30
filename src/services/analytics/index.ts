@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {BadgeSummary} from '@api/achievements/types';
 import {EventNamesType} from '@store/modules/Analytics/types';
 import ReactMoE, {MoEProperties} from 'react-native-moengage';
 
@@ -33,6 +34,23 @@ export const Attributes = {
   },
   trackUserAttributeISODateString: (name: string, value: string) => {
     ReactMoE.setUserAttributeISODateString(name, value);
+  },
+  trackBadgeAttribute: ({badgeSummary}: {badgeSummary: BadgeSummary}) => {
+    const badgeTypeToAttributeName = () => {
+      switch (badgeSummary.type) {
+        case 'level':
+          return 'Current Level Badge';
+        case 'coin':
+          return 'Current Coins Badge';
+        case 'social':
+          return 'Current Social Badge';
+      }
+      return null;
+    };
+    const name = badgeTypeToAttributeName();
+    if (name) {
+      ReactMoE.setUserAttribute(name, badgeSummary.name);
+    }
   },
 };
 

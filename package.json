@@ -30,7 +30,8 @@
     "e2e-test-android-release": "source .env && detox test --configuration android.release --loglevel trace --record-logs all",
     "prepare": "husky install",
     "pod": "cd ios && pod install",
-    "pretty-staged": "pretty-quick --staged"
+    "pretty-staged": "pretty-quick --staged",
+    "rebase-master": "git fetch origin master && git rebase origin/master && yarn"
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^4",

@@ -9,6 +9,7 @@ import {SocialType} from '@screens/InviteFlow/InviteShare/components/ShareButton
 import {Attributes, trackEvent} from '@services/analytics';
 import {dayjs} from '@services/dayjs';
 import {store} from '@store/configureStore';
+import {appLocaleSelector} from '@store/modules/Account/selectors';
 import {
   ClaimBonusResult,
   EventNamesType,
@@ -32,6 +33,10 @@ export const EVENT_NAMES = {
   CLAIM_BONUS: 'Claim Bonus',
   TURN_OFF_NOTIFICATIONS: 'Turn Off Notifications',
   TURN_ON_NOTIFICATIONS: 'Turn On Notifications',
+  CHANGE_LANGUAGE: 'Change Language',
+  CHANGE_PROFILE_PICTURE: 'Change Profile Picture',
+  SHARE_PROFILE_USERNAME: 'Share Telegram Username',
+  PING: 'Ping',
 } as const;
 
 export const AnalyticsEventLogger = {
@@ -80,6 +85,37 @@ export const AnalyticsEventLogger = {
     trackEvent({
       eventName: EVENT_NAMES.CLAIM_BONUS,
       eventProps: {Result: claimBonusResult},
+    });
+  },
+  trackChangeLanguage: ({newLanguage}: {newLanguage: string}) => {
+    const currentLanguage = appLocaleSelector(store.getState());
+    trackEvent({
+      eventName: EVENT_NAMES.CHANGE_LANGUAGE,
+      eventProps: {
+        'Old language': currentLanguage,
+        'New language': newLanguage,
+      },
+    });
+  },
+  trackChangeProfilePicture: () => {
+    trackEvent({
+      eventName: EVENT_NAMES.CHANGE_PROFILE_PICTURE,
+    });
+  },
+  trackShareTelegramUsername: ({tgUsername}: {tgUsername: string}) => {
+    trackEvent({
+      eventName: EVENT_NAMES.SHARE_PROFILE_USERNAME,
+      eventProps: {
+        'Telegram Username': tgUsername,
+      },
+    });
+  },
+  trackPingUser: ({username}: {username: string}) => {
+    trackEvent({
+      eventName: EVENT_NAMES.PING,
+      eventProps: {
+        'Pinged User': username,
+      },
     });
   },
   trackNotificationSettingsUpdate: ({
