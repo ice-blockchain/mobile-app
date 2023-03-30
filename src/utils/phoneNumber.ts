@@ -48,6 +48,10 @@ export const e164PhoneNumber = (phone: string, countryCode?: string | null) => {
   );
 };
 
+export const hashPhoneNumber = (phone: string) => {
+  return sha256(phone);
+};
+
 export const InternationalPhoneNumber = (
   phone: string,
   countryCode?: string | null,
@@ -57,8 +61,4 @@ export const InternationalPhoneNumber = (
       'INTERNATIONAL',
     ) ?? null
   );
-};
-
-export const hashPhoneNumber = (phone: string) => {
-  return sha256(phone);
 };
