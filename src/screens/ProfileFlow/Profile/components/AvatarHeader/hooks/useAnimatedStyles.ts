@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {COLORS} from '@constants/colors';
 import {HEADER_HEIGHT} from '@navigation/components/Header';
 import {AVATAR_SIZE} from '@screens/ProfileFlow/Profile/components/AvatarHeader';
 import {ViewStyle} from 'react-native';
@@ -8,10 +7,8 @@ import {
   AnimatedStyleProp,
   Extrapolate,
   interpolate,
-  interpolateColor,
   SharedValue,
   useAnimatedStyle,
-  useDerivedValue,
 } from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
@@ -27,114 +24,114 @@ type Params = {
 };
 
 export const useAnimatedStyles = ({scrollY}: Params) => {
-  const imageSize = useDerivedValue(() =>
-    interpolate(
+  const imageAnimatedStyle = useAnimatedStyle(() => {
+    const size = interpolate(
       scrollY.value,
       [0, MAX_SCROLL],
       [AVATAR_SIZE, AVATAR_SMALL_SIZE],
       Extrapolate.CLAMP,
-    ),
-  );
+    );
 
-  const penSize = useDerivedValue(() =>
-    interpolate(
-      scrollY.value,
-      [0, MAX_SCROLL / 2],
-      [PEN_SIZE, 0],
-      Extrapolate.CLAMP,
-    ),
-  );
-
-  const marginTop = useDerivedValue(() =>
-    interpolate(
+    const borderWidth = interpolate(
       scrollY.value,
       [0, MAX_SCROLL],
-      [AVATAR_SIZE / 2 + HEADER_HEIGHT / 2 + 8, 0],
+      [5, 0],
       Extrapolate.CLAMP,
-    ),
-  );
+    );
 
-  const borderWidth = useDerivedValue(() =>
-    interpolate(scrollY.value, [0, MAX_SCROLL], [5, 0], Extrapolate.CLAMP),
-  );
-
-  const borderRadius = useDerivedValue(() =>
-    interpolate(
+    const borderRadius = interpolate(
       scrollY.value,
       [0, MAX_SCROLL],
       [AVATAR_RADIUS, AVATAR_SMALL_RADIUS],
       Extrapolate.CLAMP,
-    ),
-  );
+    );
 
-  const imageAnimatedStyle = useAnimatedStyle(() => {
-    return {
-      height: imageSize.value,
-      width: imageSize.value,
-      borderWidth: borderWidth.value,
-      borderRadius: borderRadius.value,
-      marginTop: marginTop.value,
-    };
+    const marginTop = interpolate(
+      scrollY.value,
+      [0, MAX_SCROLL],
+      [AVATAR_SIZE / 2 + HEADER_HEIGHT / 2 + 8, 0],
+      Extrapolate.CLAMP,
+    );
+
+    return {height: size, width: size, borderWidth, borderRadius, marginTop};
   });
-
-  const penOpacity = useDerivedValue(() =>
-    interpolate(scrollY.value, [0, MAX_SCROLL / 2], [1, 0], Extrapolate.CLAMP),
-  );
 
   const penAnimatedStyle = useAnimatedStyle(() => {
+    const size = interpolate(
+      scrollY.value,
+      [0, MAX_SCROLL / 2],
+      [PEN_SIZE, 0],
+      Extrapolate.CLAMP,
+    );
+
+    const opacity = interpolate(
+      scrollY.value,
+      [0, MAX_SCROLL / 2],
+      [1, 0],
+      Extrapolate.CLAMP,
+    );
+
     return {
-      height: penSize.value,
-      width: penSize.value,
-      opacity: penOpacity.value,
+      height: size,
+      width: size,
+      opacity,
     };
   });
 
-  const textOpacity = useDerivedValue(() =>
-    interpolate(scrollY.value, [130, SCROLL_STEP_1], [0, 1], Extrapolate.CLAMP),
-  );
+  const textStyle = useAnimatedStyle(() => {
+    const opacity = interpolate(
+      scrollY.value,
+      [130, SCROLL_STEP_1],
+      [0, 1],
+      Extrapolate.CLAMP,
+    );
 
-  const lettersAvatarOpacity = useDerivedValue(() =>
-    interpolate(scrollY.value, [0, 5], [1, 0], Extrapolate.CLAMP),
-  );
-
-  const fontSize = useDerivedValue(() =>
-    interpolate(
+    const fontSize = interpolate(
       scrollY.value,
       [0, SCROLL_STEP_1],
       [0.01, 17],
       Extrapolate.CLAMP,
-    ),
-  );
+    );
 
-  const marginLeft = useDerivedValue(() =>
-    interpolate(scrollY.value, [0, MAX_SCROLL], [0, 12], Extrapolate.CLAMP),
-  );
-
-  const textStyle = useAnimatedStyle(() => ({
-    opacity: textOpacity.value,
-    fontSize: fontSize.value,
-    marginLeft: marginLeft.value,
-  }));
-
-  const lettersAvatarStyle: AnimatedStyleProp<ViewStyle> = useAnimatedStyle(
-    () => ({
-      opacity: lettersAvatarOpacity.value,
-    }),
-  );
-
-  const iconAnimatedColor = useDerivedValue(() =>
-    interpolateColor(
+    const marginLeft = interpolate(
       scrollY.value,
       [0, MAX_SCROLL],
-      [COLORS.primaryDark, COLORS.alabaster],
-    ),
+      [0, 12],
+      Extrapolate.CLAMP,
+    );
+
+    return {opacity, fontSize, marginLeft};
+  });
+
+  const lettersAvatarStyle: AnimatedStyleProp<ViewStyle> = useAnimatedStyle(
+    () => {
+      const opacity = interpolate(
+        scrollY.value,
+        [0, 5],
+        [1, 0],
+        Extrapolate.CLAMP,
+      );
+
+      return {opacity};
+    },
   );
+
+  const iconAvatarStyle: AnimatedStyleProp<ViewStyle> = useAnimatedStyle(() => {
+    const opacity = interpolate(
+      scrollY.value,
+      [0, MAX_SCROLL],
+      [1, 0],
+      Extrapolate.CLAMP,
+    );
+
+    return {opacity};
+  });
 
   return {
     imageAnimatedStyle,
     penAnimatedStyle,
     textStyle,
     lettersAvatarStyle,
-    iconAnimatedColor,
+    iconAvatarStyle,
   };
 };

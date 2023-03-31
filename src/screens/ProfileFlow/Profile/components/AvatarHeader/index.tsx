@@ -65,7 +65,7 @@ export const AvatarHeader = memo(
       penAnimatedStyle,
       textStyle,
       lettersAvatarStyle,
-      iconAnimatedColor,
+      iconAvatarStyle,
     } = useAnimatedStyles({scrollY});
 
     const extraPadding = {
@@ -127,7 +127,7 @@ export const AvatarHeader = memo(
                 {updateAvatarLoading ? (
                   <ActivityIndicator style={StyleSheet.absoluteFill} />
                 ) : (
-                  <AnimatedCameraIcon animatedColor={iconAnimatedColor} />
+                  <AnimatedCameraIcon style={iconAvatarStyle} />
                 )}
               </AnimatedTouchable>
             )}
