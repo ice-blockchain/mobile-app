@@ -6,10 +6,7 @@ import {font} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text} from 'react-native';
 import {Social} from 'react-native-share';
-import {rem, screenWidth} from 'rn-units';
-
-const BUTTON_LEFT_OFFSET = 32;
-const BUTTON_SIDE_DIMENSION = (screenWidth - BUTTON_LEFT_OFFSET * 5) / 4;
+import {rem} from 'rn-units';
 
 export type SocialShareButtonType = {
   type: SocialType;
@@ -37,17 +34,17 @@ export const ShareButton = ({button, onPress}: ShareButtonProps) => {
 
 const styles = StyleSheet.create({
   button: {
-    width: BUTTON_SIDE_DIMENSION,
-    marginLeft: BUTTON_LEFT_OFFSET,
+    width: '25%',
+    alignItems: 'center',
+    justifyContent: 'center',
     marginTop: rem(35),
   },
   icon: {
-    width: BUTTON_SIDE_DIMENSION,
-    height: BUTTON_SIDE_DIMENSION,
+    width: rem(56),
+    height: rem(56),
   },
   buttonTitle: {
     marginTop: rem(8),
-    alignSelf: 'center',
-    ...font(11, null, 'regular', 'secondary'),
+    ...font(11, 18, 'regular', 'secondary'),
   },
 });

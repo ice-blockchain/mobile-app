@@ -3,13 +3,14 @@
 import {ContactAvatar} from '@components/ContactAvatar';
 import {Tooltip} from '@components/Tooltip';
 import {COLORS} from '@constants/colors';
+import {windowWidth} from '@constants/styles';
 import {AVATAR_SIZE} from '@screens/ProfileFlow/Profile/components/AvatarHeader';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 const MIN_TOOLTIP_WIDTH = rem(220);
 const CHEVRON_LEFT_OFFSET = MIN_TOOLTIP_WIDTH / 2 + AVATAR_SIZE / 2 - rem(23);
@@ -54,7 +55,7 @@ export const AgendaContactTooltip = ({contact}: AgendaContactTooltipProps) => {
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    maxWidth: screenWidth - rem(100),
+    maxWidth: windowWidth - rem(100),
     minWidth: MIN_TOOLTIP_WIDTH,
     alignSelf: 'center',
     flexDirection: 'row',

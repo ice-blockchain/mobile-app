@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {smallHeightDevice} from '@constants/styles';
+import {smallHeightDevice, windowWidth} from '@constants/styles';
 import {font} from '@utils/styles';
 import * as React from 'react';
 import {Image, ImageSourcePropType, StyleSheet, Text, View} from 'react-native';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   title: string | React.ReactNode;
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     ...font(14, 24, 'medium', 'white'),
   },
   image: {
-    width: screenWidth,
-    height: (screenWidth * 330) / 375,
+    width: windowWidth,
+    height: (windowWidth * 330) / 375,
   },
 });

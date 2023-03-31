@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {windowWidth} from '@constants/styles';
 import {useTopOffsetStyle} from '@hooks/useTopOffsetStyle';
 import {Images} from '@images';
 import {AttentionIcon} from '@svg/AttentionIcon';
@@ -8,7 +9,7 @@ import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 export const Header = () => {
   const topOffset = useTopOffsetStyle();
@@ -33,8 +34,8 @@ export const Header = () => {
 
 const styles = StyleSheet.create({
   background: {
-    width: screenWidth,
-    height: (screenWidth * 368) / 375,
+    width: windowWidth,
+    height: (windowWidth * 368) / 375,
     position: 'absolute',
     bottom: 0,
   },

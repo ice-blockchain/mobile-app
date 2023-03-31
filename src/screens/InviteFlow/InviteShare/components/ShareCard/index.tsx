@@ -29,7 +29,7 @@ import {openComposer} from 'react-native-email-link';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Share, {ShareSingleOptions, Social} from 'react-native-share';
 import {useSelector} from 'react-redux';
-import {isIOS, rem, screenWidth} from 'rn-units';
+import {isIOS, rem} from 'rn-units';
 
 const telegramIcon = require('../../assets/images/telegramIcon.png');
 const twitterIcon = require('../../assets/images/twitterIcon.png');
@@ -191,20 +191,20 @@ const ShareCard = () => {
 const styles = StyleSheet.create({
   fullCard: {
     position: 'absolute',
-    backgroundColor: 'transparent',
     left: 0,
     bottom: 0,
-    width: screenWidth,
+    right: 0,
   },
   shareCard: {
-    width: screenWidth,
     position: 'absolute',
     left: 0,
     bottom: 0,
+    right: 0,
   },
   buttonsContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    marginHorizontal: rem(12),
   },
 });
 

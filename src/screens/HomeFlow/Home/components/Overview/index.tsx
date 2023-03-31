@@ -4,7 +4,7 @@ import {FlipCard, FlipCardMethods} from '@components/FlipCard';
 import {InviteButton} from '@components/InviteButton';
 import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
-import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {AdoptionCard} from '@screens/HomeFlow/Home/components/Overview/components/AdoptionCard';
 import {
@@ -35,7 +35,7 @@ import {
   View,
 } from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
-import {isAndroid, isIOS, rem, screenWidth} from 'rn-units';
+import {isAndroid, isIOS, rem} from 'rn-units';
 
 const HEADER_RECTANGLE = require('../../assets/images/topRectangle.png');
 
@@ -160,8 +160,8 @@ const contentInset = {left: -OVERSCROLL, top: 0, bottom: 0, right: -OVERSCROLL};
 
 export const styles = StyleSheet.create({
   headerTopImage: {
-    width: screenWidth,
-    height: screenWidth * 0.08,
+    width: windowWidth,
+    height: windowWidth * 0.08,
     backgroundColor: COLORS.primaryLight,
   },
   sectionHeader: {

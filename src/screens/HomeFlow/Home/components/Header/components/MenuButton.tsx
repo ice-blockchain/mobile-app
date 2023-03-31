@@ -4,7 +4,7 @@ import {Badge} from '@components/Badge';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
-import {MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
+import {MIDDLE_BUTTON_HIT_SLOP, windowWidth} from '@constants/styles';
 import {HomeTabStackParamList, MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -18,7 +18,7 @@ import {t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import React, {memo, useMemo, useRef} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 export const MenuButton = memo(() => {
   const navigation =
@@ -81,7 +81,7 @@ export const MenuButton = memo(() => {
       navigation.navigate('ContextualMenu', {
         coords: {
           top: y + height + rem(16),
-          right: screenWidth - x - rem(16),
+          right: windowWidth - x - rem(16),
         },
         buttons,
       });

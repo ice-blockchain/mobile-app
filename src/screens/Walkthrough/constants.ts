@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {smallHeightDevice} from '@constants/styles';
-import {rem, screenWidth} from 'rn-units/index';
+import {smallHeightDevice, windowWidth} from '@constants/styles';
+import {rem} from 'rn-units/index';
 
-export const CIRCLE_DIAMETER = screenWidth * (smallHeightDevice ? 1 : 1.1);
+export const CIRCLE_DIAMETER = windowWidth * (smallHeightDevice ? 1 : 1.1);
 
 export const CIRCLE_TO_ELEMENT_OFFSET = rem(10);
 

@@ -4,7 +4,7 @@ import {IceLabel} from '@components/Labels/IceLabel';
 import {LinesBackground} from '@components/LinesBackground';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {COLORS} from '@constants/colors';
-import {commonStyles, smallHeightDevice} from '@constants/styles';
+import {commonStyles, smallHeightDevice, windowWidth} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
@@ -26,7 +26,7 @@ import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {useDispatch} from 'react-redux';
-import {isAndroid, rem, screenWidth} from 'rn-units';
+import {isAndroid, rem} from 'rn-units';
 
 const icon = require('./assets/images/inviteFromAgendaGrafik.png');
 export const INVITE_CARD_TOP_OFFSET = rem(63);
@@ -153,13 +153,13 @@ const styles = StyleSheet.create({
     paddingTop: smallHeightDevice ? rem(6) : rem(24),
   },
   button: {
-    width: screenWidth,
+    width: windowWidth,
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: smallHeightDevice ? rem(20) : rem(24),
   },
   inviteButton: {
-    width: screenWidth - rem(100),
+    width: windowWidth - rem(100),
     backgroundColor: COLORS.primaryLight,
     height: rem(56),
     borderRadius: rem(16),

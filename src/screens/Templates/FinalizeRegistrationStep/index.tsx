@@ -3,7 +3,7 @@
 import {BackButton} from '@components/BackButton';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {COLORS} from '@constants/colors';
-import {smallHeightDevice} from '@constants/styles';
+import {smallHeightDevice, windowWidth} from '@constants/styles';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {useScrollOpacity} from '@hooks/useScrollOpacity';
 import {Header} from '@navigation/components/Header';
@@ -13,7 +13,7 @@ import React, {ReactNode} from 'react';
 import {Image, ImageSourcePropType, StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   title: string;
@@ -96,8 +96,8 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   illustration: {
-    width: screenWidth,
-    height: (screenWidth * 250) / 375,
+    width: windowWidth,
+    height: (windowWidth * 250) / 375,
   },
   controls: {
     backgroundColor: COLORS.white,

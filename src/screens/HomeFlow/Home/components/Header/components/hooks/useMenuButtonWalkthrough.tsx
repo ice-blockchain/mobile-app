@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {commonStyles} from '@constants/styles';
+import {commonStyles, windowWidth} from '@constants/styles';
 import {
   Menu,
   ROUNDED_TRIANGLE_OFFSET,
@@ -12,7 +12,7 @@ import {WalkthroughStepKey} from '@store/modules/Walkthrough/types';
 import {CandyBoxMenuIcon} from '@svg/CandyBoxMenuIcon';
 import React, {useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 const MENU_ICON_SIZE = rem(24);
 const MENU_ICON_CONTAINER_SIZE = rem(40);
@@ -60,7 +60,7 @@ export const useMenuButtonWalkthrough = ({
                     styles.mainContainer,
                     {
                       paddingRight:
-                        screenWidth -
+                        windowWidth -
                         measurements.pageX -
                         MENU_ICON_SIZE -
                         EXTRA_PADDING,
@@ -102,7 +102,7 @@ export const useMenuButtonWalkthrough = ({
 };
 
 const styles = StyleSheet.create({
-  mainContainer: {width: screenWidth, flexDirection: 'row'},
+  mainContainer: {width: windowWidth, flexDirection: 'row'},
   boxMenuOuterContainer: {
     flex: 1,
     alignItems: 'flex-end',

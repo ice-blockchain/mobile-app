@@ -1,12 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
 import {UserGreeting} from '@screens/HomeFlow/Home/components/Header/components/UserGreeting';
 import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/useSetWalkthroughElementData';
 import React, {useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {screenWidth} from 'rn-units';
 import {rem} from 'rn-units/index';
 
 const PADDING = rem(12);
@@ -49,13 +48,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: PADDING,
-    width: screenWidth / 2,
+    width: windowWidth / 2,
   },
   container: {
     borderRadius: BORDER_RADIUS,
     backgroundColor: COLORS.white02opacity,
     padding: PADDING,
-    width: screenWidth / 2 + PADDING * 2,
+    width: windowWidth / 2 + PADDING * 2,
     marginLeft: SCREEN_SIDE_OFFSET - PADDING * 2,
   },
 });

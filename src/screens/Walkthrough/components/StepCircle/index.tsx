@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {Touchable} from '@components/Touchable';
-import {MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
+import {MIDDLE_BUTTON_HIT_SLOP, windowWidth} from '@constants/styles';
 import {Images} from '@images';
 import {NextButton} from '@screens/Walkthrough/components/StepCircle/components/NextButton';
 import {useCirclePosition} from '@screens/Walkthrough/components/StepCircle/hooks/useCirclePosition';
@@ -13,7 +13,7 @@ import {font} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text, View, ViewStyle} from 'react-native';
 import Animated, {AnimatedStyleProp} from 'react-native-reanimated';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   step: WalkthroughStep;
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   circleContainer: {
     position: 'absolute',
     justifyContent: 'center',
-    width: screenWidth,
+    width: windowWidth,
     height: CIRCLE_DIAMETER,
     paddingHorizontal: rem(30),
   },

@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {windowWidth} from '@constants/styles';
 import {Header, HEADER_HEIGHT} from '@navigation/components/Header';
 import {MainStackParamList} from '@navigation/Main';
 import {RouteProp, useRoute} from '@react-navigation/native';
@@ -17,7 +18,6 @@ import {
   useSafeAreaFrame,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
-import {screenWidth} from 'rn-units';
 
 export const ImageView = () => {
   const {
@@ -25,7 +25,7 @@ export const ImageView = () => {
   } = useRoute<RouteProp<MainStackParamList, 'ImageView'>>();
 
   const {top: topInset, bottom: bottomInset} = useSafeAreaInsets();
-  const viewPortWidth = screenWidth;
+  const viewPortWidth = windowWidth;
   const frame = useSafeAreaFrame();
   const viewPortHeight = frame.height - topInset - bottomInset - HEADER_HEIGHT;
 
