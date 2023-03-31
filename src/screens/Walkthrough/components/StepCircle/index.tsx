@@ -46,7 +46,12 @@ export const StepCircle = ({
 
   return (
     <Animated.View
-      style={[styles.circleContainer, animatedStyle, circlePosition]}>
+      style={[
+        styles.circleContainer,
+        animatedStyle,
+        circlePosition,
+        step.zIndex ? {zIndex: step.zIndex} : null,
+      ]}>
       <Image
         source={Images.backgrounds.walkthroughBg}
         style={styles.backgroundImage}

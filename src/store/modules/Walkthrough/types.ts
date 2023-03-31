@@ -43,6 +43,7 @@ export type WalkthroughStepStaticData<T> = {
   before?: () => void;
   after?: () => void;
   isActive?: () => boolean;
+  zIndex?: number;
 };
 
 export interface WalkthroughStep
