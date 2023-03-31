@@ -19,7 +19,7 @@ import React, {memo, useCallback, useEffect, useState} from 'react';
 import {InteractionManager, StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
-const MINERS_COUNT = 5;
+export const MINERS_COUNT = 5;
 
 const SKELETONS = Array(MINERS_COUNT)
   .fill(null)
