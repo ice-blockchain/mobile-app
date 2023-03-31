@@ -7,6 +7,7 @@ import {commonStyles} from '@constants/styles';
 import BottomSheet, {BottomSheetFlatList} from '@gorhom/bottom-sheet';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import {useReleasedNewsWalkthrough} from '@screens/News/hooks/useReleasedNewsWalkthrough';
 import {NEWS_LOAD_LIMIT} from '@store/modules/News/sagas/loadNewsSaga';
 import {NewsSelectors} from '@store/modules/News/selectors';
 import {NoMoreNewsIcon} from '@svg/NoMoreNewsIcon';
@@ -116,9 +117,23 @@ export const News = () => {
     return null;
   }, [data.length, hasMoreNews, refreshing]);
 
-  const renderItem: ListRenderItem<typeof data[0]> = useCallback(({item}) => {
-    return <NewsArticle newsArticleId={item} />;
-  }, []);
+  const {elementRef, onElementLayout} = useReleasedNewsWalkthrough({
+    newsArticleId: data?.[0],
+  });
+
+  const renderItem: ListRenderItem<typeof data[0]> = useCallback(
+    ({item, index}) => {
+      if (index === 0) {
+        return (
+          <View onLayout={onElementLayout} ref={elementRef}>
+            <NewsArticle newsArticleId={item} />
+          </View>
+        );
+      }
+      return <NewsArticle newsArticleId={item} />;
+    },
+    [elementRef, onElementLayout],
+  );
 
   return (
     <View style={styles.container}>
