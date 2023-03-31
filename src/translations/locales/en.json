@@ -191,7 +191,9 @@
     "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
     "same_email": "You can’t use the same e-mail",
     "weak_password": "Weak password",
-    "wrong_password": "Wrong password"
+    "wrong_password": "Wrong password",
+    "no_camera_permissions": "Camera permissions are not granted",
+    "no_library_permissions": "Library permissions are not granted"
   },
   "profile": {
     "my_roles": {

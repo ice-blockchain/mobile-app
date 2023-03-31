@@ -2,6 +2,8 @@
 
 import {FULL_SCREEN_IMAGE_SIZE} from '@constants/images';
 import {logError} from '@services/logging';
+import {t} from '@translations/i18n';
+import {showError} from '@utils/errors';
 import {checkProp} from '@utils/guards';
 import ImagePicker, {
   Image,
@@ -43,13 +45,26 @@ export const usePickImage = ({
       });
       onImageSelected(croppedImage);
     } catch (error) {
-      if (
-        checkProp(error, 'code') &&
-        (error.code as PickerErrorCode) !== 'E_PICKER_CANCELLED'
-      ) {
-        logError(error);
+      if (isPickerError(error)) {
+        switch (error.code) {
+          case 'E_PICKER_CANCELLED':
+            return;
+          case 'E_NO_CAMERA_PERMISSION':
+            return showError(t('errors.no_camera_permissions'));
+          case 'E_NO_LIBRARY_PERMISSION':
+            return showError(t('errors.no_library_permissions'));
+        }
       }
+      logError(error);
     }
   };
   return {openPicker, onImageSelected};
+};
+
+const isPickerError = (error: unknown): error is {code: PickerErrorCode} => {
+  return (
+    checkProp(error, 'code') &&
+    typeof error.code === 'string' &&
+    error.code.startsWith('E_')
+  );
 };
