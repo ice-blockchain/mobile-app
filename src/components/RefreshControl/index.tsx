@@ -130,7 +130,11 @@ const RefreshControlIos = ({
       refreshing={refreshing}
       onRefresh={onRefresh}
       {...props}>
-      <RefreshIceIcon refreshing={refreshing} translateY={translateY} />
+      <RefreshIceIcon
+        refreshing={refreshing}
+        translateY={translateY}
+        theme={props.theme}
+      />
     </RefreshControlBase>
   );
 };
