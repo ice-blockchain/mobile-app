@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {isPhoneNumberEnabled} from '@constants/featureFlags';
+import {isLinkPhoneNumberEnabled} from '@constants/featureFlags';
 import {BottomSheetScrollView} from '@gorhom/bottom-sheet';
 import {ConfirmPhoneNumber} from '@screens/Team/components/Contacts/components/ConfirmPhoneNumber';
 import {ContactsList} from '@screens/Team/components/Contacts/components/ContactsList';
@@ -36,7 +36,7 @@ export const Contacts = ({
   const currentScreen = useMemo(() => {
     if (!hasContactsPermissions) {
       return 'ContactsPermissions';
-    } else if (isPhoneNumberEnabled && !isPhoneNumberVerified) {
+    } else if (isLinkPhoneNumberEnabled && !isPhoneNumberVerified) {
       if (temporaryPhoneVerificationStep === 'phone') {
         return 'ModifyPhoneNumber';
       } else {
