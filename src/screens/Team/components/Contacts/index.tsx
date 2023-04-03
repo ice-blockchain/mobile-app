@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {isPhoneNumberEnabled} from '@constants/featureFlags';
 import {BottomSheetScrollView} from '@gorhom/bottom-sheet';
 import {ConfirmPhoneNumber} from '@screens/Team/components/Contacts/components/ConfirmPhoneNumber';
 import {ContactsList} from '@screens/Team/components/Contacts/components/ContactsList';
@@ -35,12 +36,14 @@ export const Contacts = ({
   const currentScreen = useMemo(() => {
     if (!hasContactsPermissions) {
       return 'ContactsPermissions';
-    } else if (isPhoneNumberVerified) {
-      return 'ContactsList';
-    } else if (temporaryPhoneVerificationStep === 'phone') {
-      return 'ModifyPhoneNumber';
+    } else if (isPhoneNumberEnabled && !isPhoneNumberVerified) {
+      if (temporaryPhoneVerificationStep === 'phone') {
+        return 'ModifyPhoneNumber';
+      } else {
+        return 'ConfirmPhoneNumber';
+      }
     } else {
-      return 'ConfirmPhoneNumber';
+      return 'ContactsList';
     }
   }, [
     hasContactsPermissions,

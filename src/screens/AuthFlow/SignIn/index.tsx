@@ -4,7 +4,7 @@ import {FullScreenLoading} from '@components/FullScreenLoading';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {PrivacyTerms} from '@components/PrivacyTerms';
 import {COLORS} from '@constants/colors';
-import {isEmailLinkSignIn} from '@constants/featureFlags';
+import {isEmailLinkSignIn, isPhoneNumberEnabled} from '@constants/featureFlags';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {AuthStackParamList} from '@navigation/Auth';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
@@ -63,7 +63,9 @@ export const SignIn = () => {
           <Tabs
             onSelect={setActiveTab}
             selected={activeTab}
-            hiddenTab={isResetPassword ? 'phone' : null}
+            hiddenTab={
+              isResetPassword || !isPhoneNumberEnabled ? 'phone' : null
+            }
             containerStyle={styles.tabs}
           />
           <View style={styles.form}>

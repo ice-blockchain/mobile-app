@@ -9,8 +9,8 @@ export const isEmailLinkSignIn = deviceMainLocale.languageCode !== 'zh';
 
 /**
  * Is enabled:
- * 	- Sign-in with phone number
- * 	- Link phone number on the Team Screen
- *  - Change phone number on the Settings Screen
+ *  - Sign-in with phone number
+ *  - Link phone number on the Team Screen
+ *  - Change phone number on the Personal Information Screen
  */
 export const isPhoneNumberEnabled = deviceMainLocale.languageCode !== 'zh';

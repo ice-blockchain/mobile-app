@@ -6,6 +6,7 @@ import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {UserAvatarHeader} from '@components/UserAvatarHeader';
 import {COLORS} from '@constants/colors';
+import {isPhoneNumberEnabled} from '@constants/featureFlags';
 import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
@@ -98,14 +99,16 @@ export const PersonalInformation = memo(() => {
             containerStyle={styles.input}
             icon={<PersonWithPenIcon width={rem(24)} height={rem(24)} />}
           />
-          <CommonInput
-            label={t('personal_information.phone')}
-            editable={!isUpdateLoading}
-            value={formatPhoneNumber(user.phoneNumber ?? '')}
-            containerStyle={styles.input}
-            icon={<PhoneIcon width={rem(24)} height={rem(19)} />}
-            onChange={onPhonePress}
-          />
+          {isPhoneNumberEnabled && (
+            <CommonInput
+              label={t('personal_information.phone')}
+              editable={!isUpdateLoading}
+              value={formatPhoneNumber(user.phoneNumber ?? '')}
+              containerStyle={styles.input}
+              icon={<PhoneIcon width={rem(24)} height={rem(19)} />}
+              onChange={onPhonePress}
+            />
+          )}
           <CommonInput
             label={t('personal_information.email')}
             editable={!isUpdateLoading}
