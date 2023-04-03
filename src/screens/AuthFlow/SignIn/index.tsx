@@ -4,6 +4,7 @@ import {FullScreenLoading} from '@components/FullScreenLoading';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {PrivacyTerms} from '@components/PrivacyTerms';
 import {COLORS} from '@constants/colors';
+import {isEmailLinkSignIn, isPhoneNumberEnabled} from '@constants/featureFlags';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {AuthStackParamList} from '@navigation/Auth';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
@@ -17,12 +18,9 @@ import {SignInEmailLinkForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailLin
 import {SignInEmailPasswordForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailPasswordForm';
 import {SignInPhoneForm} from '@screens/AuthFlow/SignIn/forms/SignInPhoneForm';
 import {useSocialAuth} from '@screens/AuthFlow/SignIn/hooks/useSocialAuth';
-import {deviceMainLocale} from '@translations/i18n';
 import React, {useMemo, useState} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
-
-const isEmailPasswordSignIn = deviceMainLocale.languageCode === 'zh';
 
 export const SignIn = () => {
   useFocusStatusBar({style: 'light-content'});
@@ -45,10 +43,10 @@ export const SignIn = () => {
       return SignInPhoneForm;
     }
 
-    if (isEmailPasswordSignIn) {
-      return SignInEmailPasswordForm;
-    } else {
+    if (isEmailLinkSignIn) {
       return SignInEmailLinkForm;
+    } else {
+      return SignInEmailPasswordForm;
     }
   }, [activeTab, isResetPassword]);
 
@@ -65,7 +63,9 @@ export const SignIn = () => {
           <Tabs
             onSelect={setActiveTab}
             selected={activeTab}
-            hiddenTab={isResetPassword ? 'phone' : null}
+            hiddenTab={
+              isResetPassword || !isPhoneNumberEnabled ? 'phone' : null
+            }
             containerStyle={styles.tabs}
           />
           <View style={styles.form}>
