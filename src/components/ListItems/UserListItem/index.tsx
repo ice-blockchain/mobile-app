@@ -46,7 +46,8 @@ export const UserListItem = memo(
       <View style={styles.container} {...stopPropagation}>
         <Touchable
           style={styles.touchArea}
-          onPress={() => navigation.navigate('UserProfile', {userId})}>
+          // TODO: temp profile disabling
+          onPress={() => false && navigation.navigate('UserProfile', {userId})}>
           <View style={styles.imageContainer}>
             {user.profilePictureUrl && (
               <Avatar

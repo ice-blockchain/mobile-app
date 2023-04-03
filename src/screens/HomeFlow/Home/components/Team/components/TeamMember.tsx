@@ -29,7 +29,9 @@ export const TeamMember = memo(({userId}: Props) => {
   );
 
   return (
-    <Touchable onPress={() => navigation.navigate('UserProfile', {userId})}>
+    <Touchable
+      // TODO: temp profile disabling
+      onPress={() => false && navigation.navigate('UserProfile', {userId})}>
       <View>
         <Avatar
           uri={profilePictureUrl}
