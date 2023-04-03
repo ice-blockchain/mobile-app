@@ -56,7 +56,6 @@ export type Translations = {
   'team.tierTwo_tab': null;
   'team.empty.title_part1': null;
   'team.empty.title_part2': null;
-  'team.empty.contacts': null;
   'team.empty.button_title': null;
   'team.contacts.empty_title': null;
   'team.contacts.empty_button_title': null;
@@ -387,7 +386,6 @@ export type Translations = {
   'search.nothing_is_found': null;
   'search.search_by_country': null;
   'search.search_for_users': null;
-  'search.loading': null;
   'tabbar.mining_inactive_tooltip': null;
   'tabbar.mining_reset_tooltip': null;
   'tabbar.mining_holiday_reset_tooltip': null;
