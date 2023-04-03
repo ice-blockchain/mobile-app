@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     marginBottom: rem(18),
   },
   buttonText: {
-    textAlign: 'center',
     ...font(15, 18, 'medium', 'secondary'),
+    textAlign: 'center',
   },
 });

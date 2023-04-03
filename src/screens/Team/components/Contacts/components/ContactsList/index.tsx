@@ -13,12 +13,13 @@ import {
   useGetContactSegments,
 } from '@screens/Team/components/Contacts/components/ContactsList/hooks/useGetContactSegments';
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleProp, StyleSheet, View, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
   focused: boolean;
   addCollapsedSnapPointListener: (key: string, listener: () => void) => void;
+  containerStyle?: StyleProp<ViewStyle>;
 };
 
 export const CONTACTS_LIST_PADDING_TOP = rem(16);
@@ -26,6 +27,7 @@ export const CONTACTS_LIST_PADDING_TOP = rem(16);
 export const ContactsList = ({
   focused,
   addCollapsedSnapPointListener,
+  containerStyle,
 }: Props) => {
   const tabbarOffset = useBottomTabBarOffsetStyle();
 
@@ -45,7 +47,11 @@ export const ContactsList = ({
     <BottomSheetSectionList<ContactSectionDataItem, ContactSection>
       ref={bottomSheetRef}
       onLayout={onContactsListLayout}
-      contentContainerStyle={[tabbarOffset.current, styles.container]}
+      contentContainerStyle={[
+        tabbarOffset.current,
+        styles.container,
+        containerStyle,
+      ]}
       sections={sections}
       renderItem={renderItem}
       renderSectionHeader={renderSectionHeader}

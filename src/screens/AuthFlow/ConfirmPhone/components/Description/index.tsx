@@ -25,11 +25,11 @@ export const Description = memo(({phone}: Props) => {
 const styles = StyleSheet.create({
   descriptionText: {
     marginTop: rem(24),
-    textAlign: 'center',
     ...font(16, 26, 'medium', 'secondary'),
+    textAlign: 'center',
   },
   phoneText: {
-    textAlign: 'center',
     ...font(16, 26, 'bold', 'codeFieldText'),
+    textAlign: 'center',
   },
 });

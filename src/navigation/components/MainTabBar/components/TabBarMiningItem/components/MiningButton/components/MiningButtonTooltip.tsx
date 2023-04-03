@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     bottom: rem(80),
   },
   tooltipText: {
-    textAlign: 'center',
     ...font(12, 15, 'black'),
+    textAlign: 'center',
   },
   chevron: {
     position: 'absolute',

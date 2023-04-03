@@ -24,7 +24,7 @@ import {
   useAnimatedStyles,
 } from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useAnimatedStyles';
 import {AnimatedCameraIcon} from '@svg/AnimatedCameraIcon';
-import {font} from '@utils/styles';
+import {font, mirrorTransform} from '@utils/styles';
 import React, {memo} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
@@ -232,6 +232,7 @@ const styles = StyleSheet.create({
   },
   backButton: {
     justifyContent: 'center',
+    ...mirrorTransform(),
   },
   touchableAvatar: {
     flex: 1,

@@ -15,7 +15,10 @@ import {Invite} from '@screens/ProfileFlow/Profile/components/Invite';
 import {LadderBar} from '@screens/ProfileFlow/Profile/components/LadderBar';
 import {MiningCalculator} from '@screens/ProfileFlow/Profile/components/MiningCalculator';
 import {Role} from '@screens/ProfileFlow/Profile/components/Role';
-import {userSelector} from '@store/modules/Account/selectors';
+import {
+  usernameWithPrefixSelector,
+  userSelector,
+} from '@store/modules/Account/selectors';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {contactsSelector} from '@store/modules/Contacts/selectors';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
@@ -41,6 +44,7 @@ export const Profile = memo(() => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [contactDetails, setContactDetails] = useState<Contact>();
   const authUser = useSelector(userSelector) as User;
+  const username = useSelector(usernameWithPrefixSelector);
   const route = useRoute<RouteProp<MainStackParamList, 'UserProfile'>>();
   const isOwner = !route.params || route.params.userId === authUser?.id;
   const userId = isOwner ? authUser.id : route.params?.userId;
@@ -133,7 +137,7 @@ export const Profile = memo(() => {
           <LinesBackground />
 
           <Text style={styles.usernameText} numberOfLines={1}>
-            {`@${user?.username}` || ''}
+            {username}
           </Text>
         </View>
         <View style={styles.ladderContainer}>

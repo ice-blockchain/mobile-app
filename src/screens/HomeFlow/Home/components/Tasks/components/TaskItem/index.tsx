@@ -148,6 +148,7 @@ const styles = StyleSheet.create({
   },
   title: {
     ...font(12, 14, 'bold', 'downriver'),
+    textAlign: 'left',
   },
   titleActive: {
     color: COLORS.cornflowerBlue,
@@ -155,6 +156,7 @@ const styles = StyleSheet.create({
   description: {
     marginTop: rem(4),
     ...font(12, 14, 'medium', 'toreaBay'),
+    textAlign: 'left',
   },
   lockIcon: {
     position: 'absolute',

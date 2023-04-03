@@ -10,6 +10,7 @@ import {MenuButton} from '@screens/HomeFlow/Home/components/Header/components/Me
 import {UserGreeting} from '@screens/HomeFlow/Home/components/Header/components/UserGreeting';
 import {useTransitionAnimation} from '@screens/HomeFlow/Home/components/Header/hooks/useTransitionAnimation';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
+import {isRTL} from '@translations/i18n';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
@@ -98,6 +99,17 @@ const styles = StyleSheet.create({
   },
   currencyText: {
     ...font(13, 21, 'semibold', 'primaryDark'),
+  },
+  greeting: {
+    marginLeft: rem(10),
+    flex: 1,
+    flexDirection: isRTL() ? 'row' : 'column',
+    justifyContent: isRTL() ? 'flex-start' : 'flex-end',
+  },
+  usernameText: {
+    marginTop: rem(3),
+    ...font(15, 18, 'bold', 'downriver'),
+    textAlign: 'left',
   },
   icons: {
     flexDirection: 'row',

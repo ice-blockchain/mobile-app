@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    textAlign: 'center',
     ...font(14, null, 'black', 'gulfBlue'),
+    textAlign: 'center',
   },
 });

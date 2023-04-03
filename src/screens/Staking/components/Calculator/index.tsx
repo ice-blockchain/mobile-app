@@ -8,7 +8,7 @@ import {useCalculatorSliderValues} from '@screens/Staking/components/Calculator/
 import {miningRatesSelector} from '@store/modules/Tokenomics/selectors';
 import {ChartIcon} from '@svg/ChartIcon';
 import {YearsIcon} from '@svg/YearsIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {formatNumber, formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import {throttle} from 'lodash';
@@ -174,8 +174,8 @@ const styles = StyleSheet.create({
   },
   resultLabelText: {
     marginTop: rem(30),
-    textAlign: 'center',
     ...font(13, 24, 'regular', 'periwinkleGray'),
+    textAlign: 'center',
   },
   resultValue: {
     minHeight: rem(36),
@@ -186,14 +186,16 @@ const styles = StyleSheet.create({
   },
   resultValueText: {
     ...font(28, 34, 'bold'),
+    textAlign: 'auto',
   },
   resultBonusText: {
     ...font(28, 34, 'bold', 'shamrock'),
+    textAlign: 'auto',
   },
   currentRateText: {
-    textAlign: 'center',
     marginVertical: rem(4),
     ...font(13, 18, 'bold', 'periwinkleGray'),
+    textAlign: 'center',
   },
   sliderInfo: {
     marginTop: rem(30),
@@ -209,12 +211,12 @@ const styles = StyleSheet.create({
   },
   sliderValueText: {
     flex: 1,
-    textAlign: 'right',
     ...font(17, 24, 'bold'),
+    textAlign: isRTL() ? 'left' : 'right',
   },
   descriptionText: {
     marginTop: rem(40),
-    textAlign: 'center',
     ...font(14, 19, 'regular', 'periwinkleGray'),
+    textAlign: 'center',
   },
 });

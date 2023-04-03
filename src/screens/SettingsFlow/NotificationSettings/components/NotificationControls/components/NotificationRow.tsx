@@ -56,8 +56,10 @@ const styles = StyleSheet.create({
   title: {
     ...font(16, 19, 'black', 'primaryDark'),
     paddingBottom: rem(4),
+    textAlign: 'left',
   },
   description: {
     ...font(14, 17, 'medium', 'secondary'),
+    textAlign: 'left',
   },
 });

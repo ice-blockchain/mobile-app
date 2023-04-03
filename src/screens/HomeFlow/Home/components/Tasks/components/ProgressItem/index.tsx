@@ -70,10 +70,12 @@ const styles = StyleSheet.create({
   },
   title: {
     ...font(14, 17, 'black', 'primaryDark'),
+    textAlign: 'left',
   },
   description: {
     marginTop: rem(4),
     ...font(12, 14, 'medium', 'toreaBay'),
+    textAlign: 'left',
   },
   progress: {
     position: 'absolute',

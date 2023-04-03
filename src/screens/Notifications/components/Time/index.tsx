@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: -5,
     top: -5,
-    textAlign: 'right',
     ...font(10, 12, 'regular', 'secondary'),
+    textAlign: 'right',
   },
 });

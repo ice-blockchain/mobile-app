@@ -21,9 +21,10 @@ import {PersonIcon} from '@svg/PersonIcon';
 import {PersonWithPenIcon} from '@svg/PersonWithPenIcon';
 import {PhoneIcon} from '@svg/PhoneIcon';
 import {WorldIcon} from '@svg/WorldIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {getCountryByCode} from '@utils/country';
 import {formatPhoneNumber} from '@utils/phoneNumber';
+import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {useSelector} from 'react-redux';
@@ -70,7 +71,8 @@ export const PersonalInformation = memo(() => {
             label={t('personal_information.username')}
             onChangeText={onChangeUsername}
             value={userDraft.username}
-            containerStyle={styles.input}
+            containerStyle={styles.inputContainer}
+            style={styles.input}
             loading={validateUsernameLoading}
             errorText={validateUsernameError}
             validated={validateUsernameSuccess}
@@ -87,7 +89,8 @@ export const PersonalInformation = memo(() => {
             textContentType="name"
             onChangeText={onChangeFirstName}
             value={userDraft.firstName ?? ''}
-            containerStyle={styles.input}
+            containerStyle={styles.inputContainer}
+            style={styles.input}
             icon={<PersonWithPenIcon width={rem(24)} height={rem(24)} />}
           />
           <CommonInput
@@ -96,7 +99,8 @@ export const PersonalInformation = memo(() => {
             onChangeText={onChangeLastName}
             editable={!isUpdateLoading}
             value={userDraft.lastName ?? ''}
-            containerStyle={styles.input}
+            containerStyle={styles.inputContainer}
+            style={styles.input}
             icon={<PersonWithPenIcon width={rem(24)} height={rem(24)} />}
           />
           {isChangePhoneNumberEnabled && (
@@ -104,7 +108,8 @@ export const PersonalInformation = memo(() => {
               label={t('personal_information.phone')}
               editable={!isUpdateLoading}
               value={formatPhoneNumber(user.phoneNumber ?? '')}
-              containerStyle={styles.input}
+              containerStyle={styles.inputContainer}
+              style={styles.input}
               icon={<PhoneIcon width={rem(24)} height={rem(19)} />}
               onChange={onPhonePress}
             />
@@ -113,7 +118,8 @@ export const PersonalInformation = memo(() => {
             label={t('personal_information.email')}
             editable={!isUpdateLoading}
             value={user.email ?? ''}
-            containerStyle={styles.input}
+            containerStyle={styles.inputContainer}
+            style={styles.input}
             icon={<EmailIcon width={rem(24)} height={rem(14)} />}
             onChange={onEmailPress}
             numberOfLines={1}
@@ -126,7 +132,8 @@ export const PersonalInformation = memo(() => {
                 ? getCountryByCode(userDraft.country).current?.name ?? ''
                 : ''
             }
-            containerStyle={styles.input}
+            containerStyle={styles.inputContainer}
+            style={styles.input}
             icon={<WorldIcon width={rem(24)} height={rem(16)} />}
             onChange={onCountryPress}
           />
@@ -136,7 +143,8 @@ export const PersonalInformation = memo(() => {
             onChangeText={onChangeCity}
             editable={!isUpdateLoading}
             value={userDraft.city ?? ''}
-            containerStyle={styles.input}
+            containerStyle={styles.inputContainer}
+            style={styles.input}
             icon={<LocationIcon width={rem(24)} height={rem(24)} />}
           />
           <PrimaryButton
@@ -159,9 +167,14 @@ const styles = StyleSheet.create({
   card: {
     paddingTop: rem(8),
   },
-  input: {
+  inputContainer: {
     marginTop: rem(16),
     marginHorizontal: rem(16),
+  },
+  input: {
+    // fix for RTL languages
+    flex: isRTL() ? 0 : 1,
+    ...font(16, 20, 'medium', 'primaryDark'),
   },
   button: {
     marginTop: rem(27),

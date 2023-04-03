@@ -46,14 +46,14 @@ export const ResendButton = ({
 
 const styles = StyleSheet.create({
   resendTimeText: {
-    textAlign: 'center',
     ...font(16, 26, 'medium', 'secondary'),
+    textAlign: 'center',
   },
   resendTimeText_value: {
     color: COLORS.primaryLight,
   },
   resendButtonText: {
-    textAlign: 'center',
     ...font(16, 26, 'medium', 'primaryLight'),
+    textAlign: 'center',
   },
 });
