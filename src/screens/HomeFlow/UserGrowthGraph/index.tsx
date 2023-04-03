@@ -9,6 +9,7 @@ import {
 } from '@components/BarGraph';
 import {useGetBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetBarGraphDataForStatsPeriod';
 import {LinesBackground} from '@components/LinesBackground';
+import {RefreshControl} from '@components/RefreshControl';
 import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
@@ -22,16 +23,28 @@ import {PeriodSelect} from '@screens/HomeFlow/Stats/components/UsersGrowthGraph/
 import {STATS_PERIODS} from '@store/modules/Stats/constants';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {t} from '@translations/i18n';
-import React, {memo, useEffect, useMemo, useRef, useState} from 'react';
+import React, {
+  memo,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import {
-  FlatList,
   InteractionManager,
   LayoutChangeEvent,
   StyleSheet,
   View,
 } from 'react-native';
-import {useSharedValue, withTiming} from 'react-native-reanimated';
+import Animated, {
+  useAnimatedScrollHandler,
+  useSharedValue,
+  withTiming,
+} from 'react-native-reanimated';
 import {rem, screenHeight} from 'rn-units';
+
+import {useOnRefresh} from './hooks/useOnRefresh';
 
 const PERIODS: {label: string; period: StatsPeriod}[] = STATS_PERIODS.map(
   (period: StatsPeriod) => ({label: t(`periods.${period}_days`), period}),
@@ -46,6 +59,16 @@ export const UserGrowthGraph = memo(() => {
   } = useRoute<RouteProp<HomeTabStackParamList, 'UserGrowthGraph'>>();
   const [periodIndex, setPeriodIndex] = useState(0);
   const [statsPeriod, setStatsPeriod] = useState(paramsStatsPeriod);
+
+  const translateY = useSharedValue(0);
+
+  const scrollHandler = useAnimatedScrollHandler(({contentOffset: {y}}) => {
+    translateY.value = y;
+  });
+
+  const {refreshing, onRefresh} = useOnRefresh({
+    statsPeriod,
+  });
 
   useEffect(() => {
     setStatsPeriod(paramsStatsPeriod);
@@ -88,6 +111,17 @@ export const UserGrowthGraph = memo(() => {
 
   const lastElement = data[data.length - 1];
 
+  const onLayout = useCallback(
+    ({
+      nativeEvent: {
+        layout: {width: layoutWidth},
+      },
+    }: LayoutChangeEvent) => {
+      setWidth(layoutWidth);
+    },
+    [],
+  );
+
   useEffect(() => {
     if (width && transitionEnd && lastElement?.value != null && data.length) {
       sharedValue.value = -1;
@@ -106,13 +140,16 @@ export const UserGrowthGraph = memo(() => {
         title={t('stats.user_growth')}
         backgroundColor={'transparent'}
       />
-      <FlatList
+      <Animated.FlatList
         showsVerticalScrollIndicator={false}
         initialNumToRender={14}
         contentContainerStyle={[styles.contentContainer, tabbarOffset.current]}
         style={styles.flatListContainer}
         data={data}
         removeClippedSubviews={false}
+        scrollEventThrottle={16}
+        onScroll={scrollHandler}
+        onLayout={onLayout}
         getItemLayout={(_, index) => ({
           length: ROW_HEIGHT,
           offset: ROW_HEIGHT * index,
@@ -148,9 +185,14 @@ export const UserGrowthGraph = memo(() => {
             />
           </View>
         }
-        onLayout={({nativeEvent}: LayoutChangeEvent) => {
-          setWidth(nativeEvent.layout.width);
-        }}
+        refreshControl={
+          <RefreshControl
+            theme={'light-content'}
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            translateY={translateY}
+          />
+        }
       />
     </View>
   );
