@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {isApiError, isNetworkError} from '@api/client';
-import {COLORS} from '@constants/colors';
 import {Images} from '@images';
 import {navigate} from '@navigation/utils';
 import {getAuthErrorMessage, isAuthError} from '@services/auth';
-import {Oops} from '@svg/PopUp/Oops';
+import {RestartIcon} from '@svg/RestartIcon';
 import {t} from '@translations/i18n';
 import {checkProp} from '@utils/guards';
 import React from 'react';
@@ -41,9 +40,7 @@ export const showError = (error: unknown) => {
         ? t('errors.network_error_title')
         : t('errors.general_error_title'),
       message: getErrorMessage(error),
-      buttons: [
-        {text: t('button.try_again'), icon: <Oops fill={COLORS.white} />},
-      ],
+      buttons: [{text: t('button.try_again'), icon: <RestartIcon />}],
       onDismiss: () => dismissResolve(),
     },
   });

@@ -3,6 +3,7 @@
 import {LINKS} from '@constants/links';
 import {AppUpdateActions} from '@store/modules/AppUpdate/actions';
 import {appVersionSelector} from '@store/modules/AppUpdate/selectors';
+import {openUpdateSuccessful} from '@store/modules/AppUpdate/utils/openUpdateSuccessful';
 import DeviceInfo from 'react-native-device-info';
 import RNLocalize from 'react-native-localize';
 import checkVersion from 'react-native-store-version';
@@ -41,6 +42,6 @@ export function* updateSuccessfulSaga() {
   );
 
   if (storeStatus.result === 'equal') {
-    //TODO::show success update
+    yield call(openUpdateSuccessful);
   }
 }
