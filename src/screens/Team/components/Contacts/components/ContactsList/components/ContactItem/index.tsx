@@ -35,7 +35,7 @@ export const ContactItem = memo(
     );
     const [height, setActiveHeight] = useState<number | undefined>(0);
     const phoneNumbers = contact.phoneNumbers.reduce<string[]>((result, n) => {
-      if (n.label === 'international') {
+      if (n.label === 'e164') {
         result.push(n.number);
       }
       return result;
