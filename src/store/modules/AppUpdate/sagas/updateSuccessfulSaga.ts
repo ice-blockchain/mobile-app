@@ -37,8 +37,7 @@ export function* updateSuccessfulSaga() {
       {
         version: currentVersion,
         iosStoreURL: LINKS.APP_STORE,
-        androidStoreURL:
-          'https://play.google.com/store/apps/details?id=io.ice.app', //TODO::revert
+        androidStoreURL: LINKS.PLAY_STORE,
         country: RNLocalize.getCountry(),
       },
     );
