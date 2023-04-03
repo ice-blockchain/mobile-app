@@ -12,7 +12,7 @@ import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   darkMode?: boolean;
@@ -69,6 +69,7 @@ export const Engagement = memo(({darkMode}: Props) => {
       </View>
       <Text
         style={[styles.description, darkMode && commonStyles.darkText]}
+        numberOfLines={2}
         adjustsFontSizeToFit>
         {t('home.engagement.description')}
       </Text>
@@ -104,7 +105,7 @@ const styles = StyleSheet.create({
   },
   description: {
     marginTop: rem(9),
-    width: screenWidth - rem(20) * 2,
+    marginHorizontal: rem(20),
     ...font(11, 13, 'regular'),
     textAlign: 'center',
   },

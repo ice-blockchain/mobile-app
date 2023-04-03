@@ -4,6 +4,7 @@ import {AdoptionMilestone} from '@api/statistics/types';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {commonStyles} from '@constants/styles';
 import {CARD_WIDTH} from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
 import {CheckMarkThinIcon} from '@svg/CheckMarkThinIcon';
 import {LockIcon} from '@svg/LockIcon';
@@ -76,7 +77,7 @@ export const LevelRow = React.memo(
                 />
               </View>
             </View>
-            <View style={styles.flankSpace} />
+            <View style={commonStyles.flexOne} />
           </View>
           <View>
             <View style={[styles.step, !active && styles.semitransparent]}>
@@ -97,7 +98,7 @@ export const LevelRow = React.memo(
             )}
           </View>
           <View style={[styles.flank, !active && styles.semitransparent]}>
-            <View style={styles.flankSpace} />
+            <View style={commonStyles.flexOne} />
             <Text style={styles.valueText}>
               {`${formatNumber(item.totalActiveUsers ?? 0)}`}
               <Text style={styles.valueCurrencyText}>
@@ -142,9 +143,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-  },
-  flankSpace: {
-    flex: 1,
   },
   valueText: {
     textAlign: 'center',
