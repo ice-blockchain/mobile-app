@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import {isIOS, rem, screenHeight} from 'rn-units';
 
 export const SCREEN_SIDE_OFFSET = rem(20);
@@ -35,5 +35,7 @@ export const MIDDLE_BUTTON_HIT_SLOP = {
   bottom: 12,
   right: 32,
 };
+
+export const windowWidth = Dimensions.get('window').width;
 
 export const smallHeightDevice = screenHeight < 680;

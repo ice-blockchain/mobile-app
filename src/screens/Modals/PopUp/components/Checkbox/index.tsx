@@ -1,11 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {windowWidth} from '@constants/styles';
 import {SquareCheckboxActiveIcon} from '@svg/SquareCheckboxActiveIcon';
 import {SquareCheckboxInactiveIcon} from '@svg/SquareCheckboxInactiveIcon';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   text: string;
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: rem(15),
     alignSelf: 'center',
-    width: screenWidth * 0.78,
+    width: windowWidth * 0.78,
     minHeight: rem(30),
   },
   checkBoxContainer: {

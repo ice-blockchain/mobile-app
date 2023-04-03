@@ -6,7 +6,11 @@ import {Avatar, AvatarSkeleton} from '@components/Avatar/Avatar';
 import {ContactAvatar} from '@components/ContactAvatar';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {commonStyles, MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
+import {
+  commonStyles,
+  MIDDLE_BUTTON_HIT_SLOP,
+  windowWidth,
+} from '@constants/styles';
 import {useActionSheetUpdateAvatar} from '@hooks/useActionSheetUpdateAvatar';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {useUpdateAvatar} from '@hooks/useUpdateAvatar';
@@ -26,7 +30,7 @@ import {Image, StyleSheet, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 const AnimatedTouchable = Animated.createAnimatedComponent(Touchable);
 
@@ -65,7 +69,7 @@ export const AvatarHeader = memo(
       penAnimatedStyle,
       textStyle,
       lettersAvatarStyle,
-      iconAnimatedColor,
+      iconAvatarStyle,
     } = useAnimatedStyles({scrollY});
 
     const extraPadding = {
@@ -127,7 +131,7 @@ export const AvatarHeader = memo(
                 {updateAvatarLoading ? (
                   <ActivityIndicator style={StyleSheet.absoluteFill} />
                 ) : (
-                  <AnimatedCameraIcon animatedColor={iconAnimatedColor} />
+                  <AnimatedCameraIcon style={iconAvatarStyle} />
                 )}
               </AnimatedTouchable>
             )}
@@ -174,7 +178,7 @@ const styles = StyleSheet.create({
     height: HEADER_HEIGHT,
     justifyContent: 'center',
     flexDirection: 'row',
-    width: screenWidth,
+    width: windowWidth,
     overflow: 'visible',
     backgroundColor: COLORS.white,
     zIndex: 1000,

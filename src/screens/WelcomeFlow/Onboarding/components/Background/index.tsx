@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {windowWidth} from '@constants/styles';
 import React from 'react';
 import {Image, StyleSheet} from 'react-native';
-import {screenWidth} from 'rn-units';
 
 export const Background = () => {
   return (
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     left: 0,
-    width: screenWidth,
-    height: (screenWidth / 375) * 650,
+    width: windowWidth,
+    height: (windowWidth / 375) * 650,
   },
 });

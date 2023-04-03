@@ -2,7 +2,7 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
+import {SMALL_BUTTON_HIT_SLOP, windowWidth} from '@constants/styles';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -10,7 +10,7 @@ import {ChevronSmallIcon} from '@svg/ChevronSmallIcon';
 import {font} from '@utils/styles';
 import React, {useRef, useState} from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   selectedIndex: number;
@@ -30,7 +30,7 @@ export const PeriodSelect = ({selectedIndex, options, onChange}: Props) => {
       navigation.navigate('ContextualMenu', {
         coords: {
           top: y + height + rem(16),
-          right: screenWidth - x - rem(46),
+          right: windowWidth - x - rem(46),
         },
         buttons: options.map((option, index) => ({
           label: option.label,

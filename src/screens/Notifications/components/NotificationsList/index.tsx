@@ -3,7 +3,7 @@
 import {Activity, ActivitySection} from '@api/notifications/types';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {commonStyles} from '@constants/styles';
+import {commonStyles, windowWidth} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {ClearButton} from '@navigation/components/Header/components/ClearButton';
@@ -26,7 +26,7 @@ import {
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 import LinearGradient from 'react-native-linear-gradient';
 import {useDispatch} from 'react-redux';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 export interface ActivityItemProps {
   activity: Activity;
@@ -176,7 +176,7 @@ export const NotificationsList = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: screenWidth,
+    width: windowWidth,
     marginTop: rem(15),
   },
   itemContainer: {
@@ -200,13 +200,13 @@ const styles = StyleSheet.create({
     paddingLeft: rem(15),
   },
   sectionTitle: {
-    width: screenWidth,
+    width: windowWidth,
     ...font(12, 14, 'regular', 'secondary'),
     textAlign: 'center',
     marginVertical: rem(9),
   },
   bottomGradient: {
-    width: screenWidth,
+    width: windowWidth,
     height: rem(85),
     position: 'absolute',
     bottom: 0,

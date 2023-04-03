@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {windowWidth} from '@constants/styles';
 import {Images} from '@images';
 import React from 'react';
 import {Image, ImageStyle, StyleProp, StyleSheet} from 'react-native';
-import {screenWidth} from 'rn-units';
 
 type Props = {
   style?: StyleProp<ImageStyle>;
@@ -24,7 +24,7 @@ export const LinesBackground = ({style}: Props) => {
 const styles = StyleSheet.create({
   background: {
     position: 'absolute',
-    width: screenWidth,
-    height: screenWidth * RATIO,
+    width: windowWidth,
+    height: windowWidth * RATIO,
   },
 });

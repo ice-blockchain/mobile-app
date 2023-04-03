@@ -2,6 +2,7 @@
 
 import {LottieView} from '@components/LottieView';
 import {COLORS} from '@constants/colors';
+import {windowWidth} from '@constants/styles';
 import {LottieAnimations} from '@lottie';
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {
@@ -12,7 +13,6 @@ import React, {useCallback, useState} from 'react';
 import {useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import {screenWidth} from 'rn-units';
 
 export const AnimatedSplash = () => {
   const appInitState = useSelector(appInitStateSelector);
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   animation: {
-    width: screenWidth,
-    height: screenWidth * 2.165,
+    width: windowWidth,
+    height: windowWidth * 2.165,
   },
 });

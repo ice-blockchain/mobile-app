@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {windowWidth} from '@constants/styles';
 import {Images} from '@images';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -14,7 +15,7 @@ import {t} from '@translations/i18n';
 import React from 'react';
 import {ImageBackground, StyleSheet, View} from 'react-native';
 import {useSelector} from 'react-redux';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 export const ProfilePrivacyEditStep1 = () => {
   const navigation =
@@ -52,7 +53,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.transparentBackground,
   },
   container: {
-    width: screenWidth,
+    width: windowWidth,
     height: rem(418),
     paddingBottom: rem(40),
   },

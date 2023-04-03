@@ -29,7 +29,7 @@ import {openComposer} from 'react-native-email-link';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Share, {ShareSingleOptions, Social} from 'react-native-share';
 import {useSelector} from 'react-redux';
-import {isIOS, rem, screenWidth} from 'rn-units';
+import {isAndroid, isIOS, rem} from 'rn-units';
 
 const telegramIcon = require('../../assets/images/telegramIcon.png');
 const twitterIcon = require('../../assets/images/twitterIcon.png');
@@ -157,8 +157,7 @@ const ShareCard = () => {
           break;
       }
     } catch (error) {
-      // Share.shareSingle throws this error on iOS if app is not installed and it opens AppStore
-      if (checkProp(error, 'code') && error.code === 'ECOM.RNSHARE1') {
+      if (isShareProviderNotInstalled(error)) {
         return;
       }
       logError(error);
@@ -188,23 +187,41 @@ const ShareCard = () => {
   );
 };
 
+const isShareProviderNotInstalled = (error: unknown) => {
+  if (
+    isAndroid &&
+    checkProp(error, 'error') &&
+    typeof error.error === 'string' &&
+    error.error.includes('No Activity found to handle Intent')
+  ) {
+    return true;
+  } else if (
+    isIOS &&
+    checkProp(error, 'code') &&
+    error.code === 'ECOM.RNSHARE1'
+  ) {
+    return true;
+  }
+  return false;
+};
+
 const styles = StyleSheet.create({
   fullCard: {
     position: 'absolute',
-    backgroundColor: 'transparent',
     left: 0,
     bottom: 0,
-    width: screenWidth,
+    right: 0,
   },
   shareCard: {
-    width: screenWidth,
     position: 'absolute',
     left: 0,
     bottom: 0,
+    right: 0,
   },
   buttonsContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    marginHorizontal: rem(12),
   },
 });
 
