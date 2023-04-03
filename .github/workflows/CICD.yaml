@@ -279,7 +279,7 @@ jobs:
             then
                echo "IOS_SIGN_TYPE=adhoc" >> $GITHUB_ENV
                echo "DEPLOY_TARGET=firebase" >> $GITHUB_ENV
-               echo "APP_VERSION=0.0.0" >> $GITHUB_ENV
+               echo "APP_VERSION=1.3.11" >> $GITHUB_ENV
                echo "RELEASE_NOTES=release_notes:${{ github.head_ref }}" >> $GITHUB_ENV
             else
                echo "IOS_SIGN_TYPE=appstore" >> $GITHUB_ENV
@@ -371,7 +371,7 @@ jobs:
             then
               echo "ANDROID_ARCHIVE_TYPE=apk" >> $GITHUB_ENV
               echo "DEPLOY_TARGET=firebase" >> $GITHUB_ENV
-              echo "APP_VERSION=0.0.0" >> $GITHUB_ENV
+              echo "APP_VERSION=1.3.11" >> $GITHUB_ENV
               echo "RELEASE_NOTES=release_notes:${{ github.head_ref }}" >> $GITHUB_ENV
             else
               echo "ANDROID_ARCHIVE_TYPE=bundle" >> $GITHUB_ENV
