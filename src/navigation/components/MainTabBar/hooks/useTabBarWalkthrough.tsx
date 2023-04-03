@@ -5,9 +5,10 @@ import {TabBarIcon} from '@navigation/components/MainTabBar/components/TabBarIte
 import {iconStyles} from '@navigation/Main';
 import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/useSetWalkthroughElementData';
 import {HomeWalkthroughStepKey} from '@store/modules/Walkthrough/steps/home';
+import {isRTL} from '@translations/i18n';
 import React, {useRef} from 'react';
 import {LayoutChangeEvent, StyleSheet, View, ViewStyle} from 'react-native';
-import {rem} from 'rn-units';
+import {rem, screenWidth} from 'rn-units';
 
 function tabNameToWalkthroughStepName(
   tabName: string,
@@ -70,7 +71,9 @@ export const useTabBarWalkthrough = ({
             style={{
               width: nativeEvent.layout.width,
               height: nativeEvent.layout.height,
-              marginLeft: nativeEvent.layout.x,
+              marginLeft: isRTL()
+                ? screenWidth - nativeEvent.layout.x - nativeEvent.layout.width
+                : nativeEvent.layout.x,
             }}>
             <TabBarIcon
               icon={
