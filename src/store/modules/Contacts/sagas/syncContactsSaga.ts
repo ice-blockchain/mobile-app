@@ -11,9 +11,13 @@ import {ContactsActions} from '@store/modules/Contacts/actions';
 import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';
 import {waitForSelector} from '@store/utils/sagas/effects';
 import {getErrorMessage} from '@utils/errors';
-import {hashPhoneNumber, InternationalPhoneNumber} from '@utils/phoneNumber';
+import {
+  e164PhoneNumber,
+  hashPhoneNumber,
+  InternationalPhoneNumber,
+} from '@utils/phoneNumber';
 import {runInChunks} from '@utils/promise';
-import {Contact, getAll} from 'react-native-contacts';
+import {Contact, getAll, PhoneNumber} from 'react-native-contacts';
 import {call, fork, put, SagaReturnType, select} from 'redux-saga/effects';
 
 export function* syncContactsSaga() {
@@ -47,9 +51,10 @@ export function* syncContactsSaga() {
 
         let hasUserNumber = false;
 
+        let validInternationalNumber: PhoneNumber[] = [];
         const validNumbers = contact.phoneNumbers.filter(record => {
           if (record.number?.trim()?.length) {
-            const e164FormattedForHash = InternationalPhoneNumber(
+            const e164FormattedForHash = e164PhoneNumber(
               record.number,
               user.country,
             );
@@ -57,6 +62,14 @@ export function* syncContactsSaga() {
               hasUserNumber = true;
             }
             if (e164FormattedForHash) {
+              const internationalNumber = InternationalPhoneNumber(
+                record.number,
+                user.country,
+              );
+              validInternationalNumber.push({
+                label: 'international',
+                number: internationalNumber || '',
+              });
               agendaPhoneNumbers.push(e164FormattedForHash);
               return true;
             }
@@ -69,7 +82,10 @@ export function* syncContactsSaga() {
         }
 
         if (validNumbers.length > 0) {
-          filteredContacts.push({...contact, phoneNumbers: validNumbers});
+          filteredContacts.push({
+            ...contact,
+            phoneNumbers: [...validNumbers, ...validInternationalNumber],
+          });
         }
       },
       200,

@@ -34,7 +34,12 @@ export const ContactItem = memo(
       undefined,
     );
     const [height, setActiveHeight] = useState<number | undefined>(0);
-    const phoneNumbers = contact.phoneNumbers.map(n => n.number);
+    const phoneNumbers = contact.phoneNumbers.reduce<string[]>((result, n) => {
+      if (n.label === 'international') {
+        result.push(n.number);
+      }
+      return result;
+    }, []);
     const showAllNumbers = () => {
       LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
       if (activeIndex === index) {
