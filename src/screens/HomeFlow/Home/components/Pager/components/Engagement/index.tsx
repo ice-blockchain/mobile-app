@@ -67,7 +67,10 @@ export const Engagement = memo(({darkMode}: Props) => {
           </Text>
         </View>
       </View>
-      <Text style={[styles.description, darkMode && commonStyles.darkText]}>
+      <Text
+        style={[styles.description, darkMode && commonStyles.darkText]}
+        numberOfLines={2}
+        adjustsFontSizeToFit>
         {t('home.engagement.description')}
       </Text>
     </View>
@@ -102,8 +105,8 @@ const styles = StyleSheet.create({
   },
   description: {
     marginTop: rem(9),
+    marginHorizontal: rem(20),
     ...font(11, 13, 'regular'),
-    marginHorizontal: rem(40),
     textAlign: 'center',
   },
   valuesContainer: {

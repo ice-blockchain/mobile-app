@@ -4,7 +4,7 @@ import {AdoptionMilestone} from '@api/statistics/types';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {Divider} from '@screens/HomeFlow/Home/components/Overview/components/AdoptionCard/components/Divider';
+import {commonStyles} from '@constants/styles';
 import {CARD_WIDTH} from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
 import {CheckMarkThinIcon} from '@svg/CheckMarkThinIcon';
 import {LockIcon} from '@svg/LockIcon';
@@ -64,7 +64,7 @@ export const LevelRow = React.memo(
           ]}
         />
         <Touchable style={styles.rowContent} onPress={onPress}>
-          <View style={[styles.flank, !active ? styles.semitransparent : null]}>
+          <View style={[styles.flank, !active && styles.semitransparent]}>
             <View style={styles.leftTextContainer}>
               <Text style={styles.valueText}>{`${formatNumberString(
                 item.baseMiningRate,
@@ -77,11 +77,10 @@ export const LevelRow = React.memo(
                 />
               </View>
             </View>
-            <Divider />
+            <View style={commonStyles.flexOne} />
           </View>
           <View>
-            <View
-              style={[styles.step, !active ? styles.semitransparent : null]}>
+            <View style={[styles.step, !active && styles.semitransparent]}>
               <Text style={styles.stepValueText}>{item.milestone}</Text>
               <Text style={styles.stepLabelText}>
                 {t('home.adoption.level')}
@@ -98,8 +97,8 @@ export const LevelRow = React.memo(
               </View>
             )}
           </View>
-          <View style={[styles.flank, !active ? styles.semitransparent : null]}>
-            <Divider />
+          <View style={[styles.flank, !active && styles.semitransparent]}>
+            <View style={commonStyles.flexOne} />
             <Text style={styles.valueText}>
               {`${formatNumber(item.totalActiveUsers ?? 0)}`}
               <Text style={styles.valueCurrencyText}>
