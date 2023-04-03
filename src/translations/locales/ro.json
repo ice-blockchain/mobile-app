@@ -671,11 +671,11 @@
   },
   "walkthrough": {
     "news": {
-      "step_1": {
+      "readmore": {
         "title": "Read more",
         "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
       },
-      "step_2": {
+      "releasednews": {
         "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
         "title": "Released news"
       }

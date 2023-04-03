@@ -476,10 +476,10 @@ export type Translations = {
   'confirm_phone.button': null;
   'confirm_phone.same_phone_error': null;
   'date_select.title': null;
-  'walkthrough.news.step_1.title': null;
-  'walkthrough.news.step_1.description': null;
-  'walkthrough.news.step_2.description': null;
-  'walkthrough.news.step_2.title': null;
+  'walkthrough.news.readmore.title': null;
+  'walkthrough.news.readmore.description': null;
+  'walkthrough.news.releasednews.title': null;
+  'walkthrough.news.releasednews.description': null;
   'walkthrough.team.allow_contacts.title': null;
   'walkthrough.team.allow_contacts.description': null;
   'walkthrough.team.confirm_phone.title': null;

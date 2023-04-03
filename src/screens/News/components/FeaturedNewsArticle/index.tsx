@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
+import {ReadMoreButton} from '@screens/News/components/FeaturedNewsArticle/components/ReadMoreButton';
+import {useReadMoreWalkthrough} from '@screens/News/components/FeaturedNewsArticle/hooks/useReadMoreWalkthrough';
 import {useNewsBrowser} from '@screens/News/hooks/useNewsBrowser';
 import {dayjs} from '@services/dayjs';
 import {NewsSelectors} from '@store/modules/News/selectors';
@@ -52,6 +52,10 @@ export const FeaturedNewsArticle = memo(
     } = useLayoutAnimation({
       animatedIndex,
       deltaPositions,
+    });
+
+    const {elementRef, onElementLayout} = useReadMoreWalkthrough({
+      onPress: openNewsArticle,
     });
 
     if (!featuredNewsArticle) {
@@ -118,13 +122,12 @@ export const FeaturedNewsArticle = memo(
               </Text>
             </Animated.View>
 
-            <Touchable
-              hitSlop={SMALL_BUTTON_HIT_SLOP}
-              style={styles.readMore}
-              onLayout={onButtonLayout}
-              onPress={openNewsArticle}>
-              <Text style={styles.readMoreText}>{t('news.read_more')}</Text>
-            </Touchable>
+            <View ref={elementRef} onLayout={onElementLayout}>
+              <ReadMoreButton
+                onButtonLayout={onButtonLayout}
+                onPress={openNewsArticle}
+              />
+            </View>
           </View>
         </Animated.View>
       </View>
@@ -193,15 +196,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: rem(6),
     flex: 1,
     ...font(12, null, 'medium', 'white'),
-  },
-  readMore: {
-    paddingVertical: rem(6),
-    paddingHorizontal: rem(16),
-    borderRadius: rem(16),
-    backgroundColor: COLORS.white,
-  },
-  readMoreText: {
-    ...font(15, 18, 'semibold', 'primaryLight'),
   },
 
   skeletonTitle1: {

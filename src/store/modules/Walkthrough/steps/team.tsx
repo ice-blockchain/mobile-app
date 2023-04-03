@@ -55,6 +55,7 @@ export const TEAM_WALKTHROUGH_STEPS: WalkthroughStepStaticData<TeamWalkthroughSt
       title: t('walkthrough.team.contacts_list.title'),
       description: t('walkthrough.team.contacts_list.description'),
       circlePosition: 'bottom',
+      zIndex: 1,
       before: function* () {
         yield navigate({name: 'Team', params: {snapPoint: 1}});
         yield delay(500);
