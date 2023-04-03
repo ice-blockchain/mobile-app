@@ -13,4 +13,4 @@ export const isEmailLinkSignIn = deviceMainLocale.languageCode !== 'zh';
  *  - Link phone number on the Team Screen
  *  - Change phone number on the Personal Information Screen
  */
-export const isPhoneNumberEnabled = deviceMainLocale.languageCode !== 'zh';
+export const isPhoneNumberEnabled = false;
