@@ -24,24 +24,30 @@ export function* updateSuccessfulSaga() {
       }) === 1
     : false;
 
-  if (!prevVersion || isUpdated) {
+  if (!prevVersion) {
     yield put(
       AppUpdateActions.SET_APP_VERSION.STATE.create({version: currentVersion}),
     );
     return;
   }
 
-  const storeStatus: SagaReturnType<typeof checkVersion> = yield call(
-    checkVersion,
-    {
-      version: currentVersion,
-      iosStoreURL: LINKS.APP_STORE,
-      androidStoreURL: LINKS.PLAY_STORE,
-      country: RNLocalize.getCountry(),
-    },
-  );
+  if (isUpdated) {
+    const storeStatus: SagaReturnType<typeof checkVersion> = yield call(
+      checkVersion,
+      {
+        version: currentVersion,
+        iosStoreURL: LINKS.APP_STORE,
+        androidStoreURL: LINKS.PLAY_STORE,
+        country: RNLocalize.getCountry(),
+      },
+    );
 
-  if (storeStatus.result === 'equal') {
-    yield call(openUpdateSuccessful);
+    if (storeStatus.result === 'equal') {
+      yield call(openUpdateSuccessful);
+    }
+
+    yield put(
+      AppUpdateActions.SET_APP_VERSION.STATE.create({version: currentVersion}),
+    );
   }
 }
