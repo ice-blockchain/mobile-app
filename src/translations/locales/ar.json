@@ -218,6 +218,7 @@
     "global_rank": "التصنيف العالمي",
     "view_all_roles": "عرض كل الأدوار",
     "data_is_hidden": "البيانات مخفية",
+    "progress_text": "{{value}} من {{total}}",
     "not_found": {
       "title": "لم يتم العثور على المستخدم",
       "description": "عفوًا ، لم نتمكن من العثور على هذا المستخدم"
@@ -230,12 +231,26 @@
     },
     "roles": {
       "title": "الأدوار"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "عملات معدنية",
+        "description": "عملات معدنية"
+      },
+      "social": {
+        "title": "اجتماعي",
+        "description": "أصدقاء"
+      },
+      "level": {
+        "title": "مستوى",
+        "description": "مستوى"
+      }
     }
   },
   "global": {
     "level": "مستوى",
     "referrals": "الإحالات",
-    "coins": "عملات معدنية",
+    "coin": "عملات معدنية",
     "social": "اجتماعي",
     "phone_number": "رقم التليفون",
     "years": "سنين",
