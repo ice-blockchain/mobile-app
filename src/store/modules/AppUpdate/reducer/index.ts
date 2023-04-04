@@ -6,6 +6,11 @@ import produce from 'immer';
 import {persistReducer} from 'redux-persist';
 
 export interface State {
+  /**
+   * Keep the app version persisted, so on the next app launch
+   * we could compare the actual app version with this value
+   * and figure out that app update took place
+   */
   appVersion: string | null;
 }
 
