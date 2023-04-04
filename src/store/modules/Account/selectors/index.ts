@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {RegistrationProcessFinalizedStep} from '@api/user/types';
+import {lastUsedLanguageSelector} from '@store/modules/Language/selectors';
 import {isOnboardingViewedSelector} from '@store/modules/Users/selectors';
 import {RootState} from '@store/rootReducer';
 import {getLocale, isRTL} from '@translations/i18n';
@@ -26,7 +27,7 @@ export const userSelector = (state: RootState) => state.account.user;
 export const appLocaleSelector = (state: RootState): SupportedLocale => {
   const user = userSelector(state);
 
-  return user?.language ?? getLocale();
+  return user?.language ?? lastUsedLanguageSelector(state) ?? getLocale();
 };
 
 export const isPhoneNumberVerifiedSelector = (state: RootState) =>

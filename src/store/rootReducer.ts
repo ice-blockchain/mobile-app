@@ -9,6 +9,7 @@ import {appUpdateReducer} from '@store/modules/AppUpdate/reducer';
 import {collectionsReducer} from '@store/modules/Collections/reducer';
 import {teamReducer} from '@store/modules/Contacts/reducer';
 import {devicesReducer} from '@store/modules/Devices/reducer';
+import {languageReducer} from '@store/modules/Language/reducer';
 import {linkingReducer} from '@store/modules/Linking/reducer';
 import {newsReducer} from '@store/modules/News/reducer';
 import {notificationsReducer} from '@store/modules/Notifications/reducer';
@@ -45,6 +46,7 @@ export const rootReducer = combineReducers({
   walkthrough: walkthroughReducer,
   achievements: achievementsReducer,
   appUpdate: appUpdateReducer,
+  language: languageReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
