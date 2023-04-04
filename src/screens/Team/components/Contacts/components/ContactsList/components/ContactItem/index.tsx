@@ -34,8 +34,12 @@ export const ContactItem = memo(
       undefined,
     );
     const [height, setActiveHeight] = useState<number | undefined>(0);
+
+    const extractDigits = (str: string) => str.replace(/\D/g, '');
+
     const phoneNumbers = contact.phoneNumbers.reduce<string[]>((result, n) => {
-      if (n.label === 'e164') {
+      const cleanedNumber = extractDigits(n.number);
+      if (!result.some(existing => extractDigits(existing) === cleanedNumber)) {
         result.push(n.number);
       }
       return result;

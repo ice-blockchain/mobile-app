@@ -13,7 +13,7 @@ import {waitForSelector} from '@store/utils/sagas/effects';
 import {getErrorMessage} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import {runInChunks} from '@utils/promise';
-import {Contact, getAll, PhoneNumber} from 'react-native-contacts';
+import {Contact, getAll} from 'react-native-contacts';
 import {call, fork, put, SagaReturnType, select} from 'redux-saga/effects';
 
 export function* syncContactsSaga() {
@@ -47,7 +47,6 @@ export function* syncContactsSaga() {
 
         let hasUserNumber = false;
 
-        let validInternationalNumber: PhoneNumber[] = [];
         const validNumbers = contact.phoneNumbers.filter(record => {
           if (record.number?.trim()?.length) {
             const e164FormattedForHash = e164PhoneNumber(
@@ -58,10 +57,6 @@ export function* syncContactsSaga() {
               hasUserNumber = true;
             }
             if (e164FormattedForHash) {
-              validInternationalNumber.push({
-                label: 'e164',
-                number: e164FormattedForHash || '',
-              });
               agendaPhoneNumbers.push(e164FormattedForHash);
               return true;
             }
@@ -76,7 +71,7 @@ export function* syncContactsSaga() {
         if (validNumbers.length > 0) {
           filteredContacts.push({
             ...contact,
-            phoneNumbers: [...validNumbers, ...validInternationalNumber],
+            phoneNumbers: validNumbers,
           });
         }
       },
