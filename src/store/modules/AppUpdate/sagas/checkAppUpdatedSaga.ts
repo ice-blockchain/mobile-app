@@ -9,7 +9,7 @@ import RNLocalize from 'react-native-localize';
 import checkVersion from 'react-native-store-version';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
-export function* updateSuccessfulSaga() {
+export function* checkAppUpdatedSaga() {
   const prevVersion: ReturnType<typeof appVersionSelector> = yield select(
     appVersionSelector,
   );
