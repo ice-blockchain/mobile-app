@@ -27,6 +27,9 @@ export const openUpdateSuccessful = () => {
           },
         },
       ],
+      showCloseButton: true,
+      dismissOnOutsideTouch: false,
+      dismissOnAndroidHardwareBack: false,
       onDismiss: () => resultResolve(),
     },
   });
