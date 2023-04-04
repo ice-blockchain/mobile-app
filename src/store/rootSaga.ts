@@ -16,6 +16,7 @@ import {all, call, cancel, spawn, take} from 'redux-saga/effects';
 import {rootAuthSaga} from './modules/Account/sagas';
 import {rootAchievementsSaga} from './modules/Achievements/sagas';
 import {rootAppCommonSaga} from './modules/AppCommon/sagas';
+import {rootAppUpdateSaga} from './modules/AppUpdate/sagas';
 import {rootCollectionsSaga} from './modules/Collections/sagas';
 import {rootTeamSaga} from './modules/Contacts/sagas';
 import {rootDevicesSaga} from './modules/Devices/sagas';
@@ -49,6 +50,7 @@ export function* rootSaga(): SagaIterator {
     rootRateAppSaga,
     rootWalkthroughSaga,
     rootAchievementsSaga,
+    rootAppUpdateSaga,
   ];
   const spawnedSagas = yield all([
     ...sagas.map(saga =>
