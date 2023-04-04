@@ -94,8 +94,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    // isRTL() ? 14 : 17 - for the Arabic language, because of the words outside of the button
-    ...font(isRTL() ? 14 : 17, 20, 'semibold', 'secondary'),
+    // isRTL ? 14 : 17 - for the Arabic language, because of the words outside of the button
+    ...font(isRTL ? 14 : 17, 20, 'semibold', 'secondary'),
     marginLeft: rem(4),
   },
   contactsIcon: {marginLeft: rem(-1)},

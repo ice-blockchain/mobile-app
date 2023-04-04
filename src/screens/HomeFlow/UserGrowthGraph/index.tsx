@@ -21,7 +21,7 @@ import {RouteProp, useRoute} from '@react-navigation/native';
 import {PeriodSelect} from '@screens/HomeFlow/Stats/components/UsersGrowthGraph/components/PeriodSelect';
 import {STATS_PERIODS} from '@store/modules/Stats/constants';
 import {StatsPeriod} from '@store/modules/Stats/types';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import React, {memo, useEffect, useMemo, useRef, useState} from 'react';
 import {
   FlatList,
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
   },
   flatListContainer: {
     paddingTop: rem(16),
-    paddingHorizontal: SCREEN_SIDE_OFFSET,
+    paddingHorizontal: isRTL ? 0 : SCREEN_SIDE_OFFSET,
     paddingBottom: SCREEN_SIDE_OFFSET,
     backgroundColor: COLORS.white,
     borderTopLeftRadius: rem(30),
@@ -171,6 +171,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     minHeight: screenHeight,
+    paddingHorizontal: isRTL ? SCREEN_SIDE_OFFSET : 0,
   },
   headerContainer: {
     marginHorizontal: -SCREEN_SIDE_OFFSET,

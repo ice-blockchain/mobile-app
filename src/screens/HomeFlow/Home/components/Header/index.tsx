@@ -103,8 +103,8 @@ const styles = StyleSheet.create({
   greeting: {
     marginLeft: rem(10),
     flex: 1,
-    flexDirection: isRTL() ? 'row' : 'column',
-    justifyContent: isRTL() ? 'flex-start' : 'flex-end',
+    flexDirection: isRTL ? 'row' : 'column',
+    justifyContent: isRTL ? 'flex-start' : 'flex-end',
   },
   usernameText: {
     marginTop: rem(3),

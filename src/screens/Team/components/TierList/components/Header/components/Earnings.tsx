@@ -26,7 +26,7 @@ export const Earnings = forwardRef(
       <View style={styles.container} ref={forwardedRef}>
         <Text style={styles.label}>{`${title}:`}</Text>
 
-        {isRTL() && <Text style={styles.value}> </Text>}
+        {isRTL && <Text style={styles.value}> </Text>}
 
         <FormattedNumber
           bodyStyle={styles.value}
@@ -34,7 +34,7 @@ export const Earnings = forwardRef(
           number={balance ? formatNumberString(balance) : '0'}
         />
 
-        {!isRTL() && <Text style={styles.value}> </Text>}
+        {!isRTL && <Text style={styles.value}> </Text>}
 
         <IceLabel
           textStyle={styles.value}

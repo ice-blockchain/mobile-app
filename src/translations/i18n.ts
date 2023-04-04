@@ -62,4 +62,4 @@ export const getLocale = (): SupportedLocale => {
   return i18n.locale as SupportedLocale;
 };
 
-export const isRTL = (): boolean => I18nManager.isRTL;
+export const isRTL: boolean = I18nManager.isRTL;

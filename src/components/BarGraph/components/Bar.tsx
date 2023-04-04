@@ -33,14 +33,16 @@ export const Bar = ({
     () => maxWidth * (value / maxValue),
     [maxValue, maxWidth, value],
   );
-  const output = isRTL() ? [width, 0] : [-width, 0];
-  const animatedStyle = useAnimatedStyle(() => ({
-    transform: [
-      {
-        translateX: interpolate(sharedValue.value, [-1, 0], output),
-      },
-    ],
-  }));
+  const animatedStyle = useAnimatedStyle(() => {
+    const output = isRTL ? [width, 0] : [-width, 0];
+    return {
+      transform: [
+        {
+          translateX: interpolate(sharedValue.value, [-1, 0], output),
+        },
+      ],
+    };
+  });
   const backgroundColor = useMemo(() => {
     const valuePercentage = Math.floor((value / maxValue) * 100);
     const red = 100 - Math.round((60 * valuePercentage) / 100);

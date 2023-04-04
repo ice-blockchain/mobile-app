@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   },
   cellDataRight: {
     marginLeft: rem(8),
-    alignItems: isRTL() ? 'flex-start' : 'flex-end',
+    alignItems: isRTL ? 'flex-start' : 'flex-end',
   },
   separator: {
     width: 1,
