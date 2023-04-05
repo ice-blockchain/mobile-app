@@ -14,6 +14,8 @@
 #import <TwitterKit/TWTRKit.h>
 #import <React/RCTLinkingManager.h>
 
+#import <RNBootSplash/RNBootSplash.h>
+
 #import <ReactNativeMoEngage/MoEngageInitializer.h>
 #import <MoEngageSDK/MoEngageSDK.h>
 #import "ReactNativeConfig.h"
@@ -105,9 +107,7 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
 
-  UIStoryboard *sb = [UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil];
-  UIViewController *vc = [sb instantiateInitialViewController];
-  rootView.loadingView = vc.view;
+  [RNBootSplash initWithStoryboard:@"LaunchScreen" rootView:rootView];
 
   return YES;
 }

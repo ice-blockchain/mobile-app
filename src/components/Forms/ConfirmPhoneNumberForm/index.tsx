@@ -31,6 +31,7 @@ export const ConfirmPhoneNumberForm = ({
     validateLoading,
     isSuccessValidation,
     smsSentTimestamp,
+    clearError,
   } = useConfirmPhoneNumber({onModifyPhoneNumber});
 
   return (
@@ -54,7 +55,14 @@ export const ConfirmPhoneNumberForm = ({
       }
       BackButton={
         <ConfirmCodeBack
-          onPress={onModifyPhoneNumber ?? navigation.goBack}
+          onPress={() => {
+            if (onModifyPhoneNumber) {
+              clearError();
+              onModifyPhoneNumber();
+            } else {
+              navigation.goBack();
+            }
+          }}
           text={t('confirm_code.wrong_number')}
         />
       }

@@ -8,12 +8,17 @@ import {TeamContactInvite} from '@screens/Team/components/Contacts/components/Co
 import {MultipleNumbers} from '@screens/Team/components/Contacts/components/ContactsList/components/MultipleNumbers';
 import {t} from '@translations/i18n';
 import {getContactAcronym, getContactName} from '@utils/contacts';
-import {stringToColor} from '@utils/string';
+import {extractDigits, stringToColor} from '@utils/string';
 import {font} from '@utils/styles';
 import React, {memo, useState} from 'react';
 import {LayoutAnimation, StyleSheet, Text, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
 import {rem} from 'rn-units';
+
+interface PhoneNumberReducerResult {
+  uniqueDigits: Set<string>;
+  numbers: string[];
+}
 
 const phoneNumberLineHeight = rem(20);
 
@@ -34,7 +39,19 @@ export const ContactItem = memo(
       undefined,
     );
     const [height, setActiveHeight] = useState<number | undefined>(0);
-    const phoneNumbers = contact.phoneNumbers.map(n => n.number);
+
+    const phoneNumbers = contact.phoneNumbers.reduce<PhoneNumberReducerResult>(
+      (result, n) => {
+        const cleanedNumber = extractDigits(n.number);
+        if (!result.uniqueDigits.has(cleanedNumber)) {
+          result.uniqueDigits.add(cleanedNumber);
+          result.numbers.push(n.number);
+        }
+        return result;
+      },
+      {uniqueDigits: new Set<string>(), numbers: [] as string[]},
+    ).numbers;
+
     const showAllNumbers = () => {
       LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
       if (activeIndex === index) {

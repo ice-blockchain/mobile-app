@@ -297,7 +297,7 @@ dependencies {
     implementation "com.facebook.react:react-native:+"
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
-    implementation "androidx.core:core-splashscreen:1.0.0-beta01"
+    implementation "androidx.core:core-splashscreen:1.0.0"
     implementation 'androidx.appcompat:appcompat:1.4.2'
 
     // MoEngage dependencies. Update those according to https://developers.moengage.com/hc/en-us/articles/4417450673940-Android-SDK-Installation

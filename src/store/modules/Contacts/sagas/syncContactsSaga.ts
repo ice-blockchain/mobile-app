@@ -69,7 +69,10 @@ export function* syncContactsSaga() {
         }
 
         if (validNumbers.length > 0) {
-          filteredContacts.push({...contact, phoneNumbers: validNumbers});
+          filteredContacts.push({
+            ...contact,
+            phoneNumbers: validNumbers,
+          });
         }
       },
       200,
