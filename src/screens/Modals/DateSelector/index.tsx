@@ -53,7 +53,7 @@ export const DateSelect = () => {
           entering={SlideInDown}
           style={[styles.container, bottomOffsetStyle.current]}>
           <View style={styles.header}>
-            <Text style={styles.titleText}>Choose date</Text>
+            <Text style={styles.titleText}>{t('date_select.title')}</Text>
             <Touchable hitSlop={MIDDLE_BUTTON_HIT_SLOP} onPress={onResetPress}>
               <Text style={styles.resetButtonText}>{t('button.reset')}</Text>
             </Touchable>
