@@ -6,7 +6,7 @@ import {
   NotificationDomainToggle,
 } from '@api/devices/types';
 import {SocialType} from '@screens/InviteFlow/InviteShare/components/ShareButton/types';
-import {Attributes, trackEvent} from '@services/analytics';
+import {Attributes, trackEvent, trackScreenView} from '@services/analytics';
 import {dayjs} from '@services/dayjs';
 import {store} from '@store/configureStore';
 import {appLocaleSelector} from '@store/modules/Account/selectors';
@@ -72,10 +72,7 @@ export const AnalyticsEventLogger = {
     }
   },
   trackViewScreen: ({screenName}: {screenName: string}) => {
-    trackEvent({
-      eventName: EVENT_NAMES.VIEW_SCREEN,
-      eventProps: {'Screen Name': screenName},
-    });
+    trackScreenView({screenName});
   },
   trackClaimBonus: ({
     claimBonusResult,

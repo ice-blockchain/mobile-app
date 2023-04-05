@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {BadgeSummary} from '@api/achievements/types';
+import analytics from '@react-native-firebase/analytics';
 import {EventNamesType} from '@store/modules/Analytics/types';
 import ReactMoE, {MoEProperties} from 'react-native-moengage';
 
@@ -62,6 +63,14 @@ export function trackEvent({eventName, eventProps}: TrackEventParams) {
     });
   }
   ReactMoE.trackEvent(eventName, properties);
+}
+
+export function trackScreenView({screenName}: {screenName: string}) {
+  trackEvent({
+    eventName: 'View Screen',
+    eventProps: {'Screen Name': screenName},
+  });
+  analytics().logScreenView({screen_name: screenName});
 }
 
 export function stopTrackingCurrentUser() {
