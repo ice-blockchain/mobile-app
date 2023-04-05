@@ -39,6 +39,16 @@ export const EVENT_NAMES = {
   PING: 'Ping',
 } as const;
 
+const NOT_TRACKABLE_SCREENS = new Set([
+  'PopUp',
+  'Tooltip',
+  'ImageView',
+  'ActionSheet',
+  'DateSelect',
+  'JoinTelegramPopUp',
+  'CountrySelect',
+]);
+
 export const AnalyticsEventLogger = {
   trackEvent: (params: {eventName: EventNamesType}) => {
     trackEvent(params);
@@ -72,7 +82,9 @@ export const AnalyticsEventLogger = {
     }
   },
   trackViewScreen: ({screenName}: {screenName: string}) => {
-    trackScreenView({screenName});
+    if (!NOT_TRACKABLE_SCREENS.has(screenName)) {
+      trackScreenView({screenName});
+    }
   },
   trackClaimBonus: ({
     claimBonusResult,
