@@ -26,3 +26,5 @@ export const validateUsername = (username: string) => {
   const validationRegex: RegExp = /^[a-zA-Z0-9.]+$/;
   return validationRegex.test(username);
 };
+
+export const extractDigits = (str: string) => str.replace(/\D/g, '');
