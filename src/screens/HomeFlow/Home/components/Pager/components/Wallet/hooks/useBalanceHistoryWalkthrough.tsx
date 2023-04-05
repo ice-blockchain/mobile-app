@@ -6,9 +6,10 @@ import {
   BalanceHistoryButton,
 } from '@screens/HomeFlow/Home/components/Pager/components/Wallet/components/BalanceHistoryButton';
 import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/useSetWalkthroughElementData';
+import {isRTL} from '@translations/i18n';
 import React, {useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {rem} from 'rn-units/index';
+import {rem, screenWidth} from 'rn-units/index';
 
 const PADDING = rem(12);
 
@@ -28,7 +29,11 @@ export const useBalanceHistoryWalkthrough = () => {
             <View
               style={[
                 styles.container,
-                {marginLeft: measurements.pageX - PADDING},
+                {
+                  marginLeft: isRTL
+                    ? screenWidth - measurements.pageX - MAIN_CONTAINER_SIZE
+                    : measurements.pageX - PADDING,
+                },
               ]}>
               <View style={styles.mainContainer}>
                 <BalanceHistoryButton />

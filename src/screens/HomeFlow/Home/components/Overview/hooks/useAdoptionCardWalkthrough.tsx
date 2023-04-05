@@ -12,6 +12,7 @@ import {
 import {OnlineUsersHistory} from '@screens/HomeFlow/Home/components/Overview/components/OnlineUsersHistory';
 import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/useSetWalkthroughElementData';
 import {TapIcon} from '@svg/TapIcon';
+import {mirrorTransform} from '@utils/styles';
 import React, {useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -70,6 +71,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: SCREEN_SIDE_OFFSET + rem(12),
     bottom: SCREEN_SIDE_OFFSET + rem(12),
+    ...mirrorTransform(),
   },
   mainContainer: {
     width: CARD_WIDTH,

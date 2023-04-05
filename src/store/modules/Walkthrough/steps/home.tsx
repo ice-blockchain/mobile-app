@@ -18,10 +18,10 @@ import {StatsIcon} from '@svg/StatsIcon';
 import {TeamActiveIcon} from '@svg/TeamActiveIcon';
 import {TrophyIcon} from '@svg/TrophyIcon';
 import {WalletIcon} from '@svg/WalletIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import React from 'react';
 import {delay} from 'redux-saga/effects';
-import {rem} from 'rn-units';
+import {isAndroid, rem} from 'rn-units';
 
 export type HomeWalkthroughStepKey =
   | 'home'
@@ -213,7 +213,10 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
       title: t('walkthrough.home.balancehistory.title'),
       description: t('walkthrough.home.balancehistory.description'),
       before: function* () {
-        yield navigate({name: 'Home', params: {activePagerCard: 'wallet'}});
+        yield navigate({
+          name: 'Home',
+          params: {activePagerCard: isRTL ? 'engagement' : 'wallet'},
+        });
         yield delay(DELAY);
       },
     },
@@ -228,7 +231,10 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
       before: function* () {
         yield navigate({
           name: 'Home',
-          params: {activeOverviewCard: 'profile', scrollTo: 'overview'},
+          params: {
+            activeOverviewCard: isAndroid && isRTL ? 'adoption' : 'profile',
+            scrollTo: 'overview',
+          },
         });
         yield delay(DELAY);
       },
@@ -258,7 +264,10 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
       before: function* () {
         yield navigate({
           name: 'Home',
-          params: {activeOverviewCard: 'adoption', scrollTo: 'overview'},
+          params: {
+            activeOverviewCard: isAndroid && isRTL ? 'profile' : 'adoption',
+            scrollTo: 'overview',
+          },
         });
         yield delay(DELAY);
       },
