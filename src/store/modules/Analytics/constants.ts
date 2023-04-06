@@ -47,6 +47,7 @@ const NOT_TRACKABLE_SCREENS = new Set([
   'DateSelect',
   'JoinTelegramPopUp',
   'CountrySelect',
+  'ContextualMenu',
 ]);
 
 export const AnalyticsEventLogger = {
