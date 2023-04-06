@@ -2,6 +2,7 @@
 
 import {ENV} from '@constants/env';
 import {userIdSelector} from '@store/modules/Account/selectors';
+import {AnalyticsAttributesLogger} from '@store/modules/Analytics/constants';
 import {DeviceActions} from '@store/modules/Devices/actions';
 import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';
 import {useSubscribeToChannelTopic} from '@store/modules/PushNotifications/hooks/useSubscribeToChannelTopic';
@@ -40,6 +41,9 @@ export function useInitNotifications() {
     dispatch(
       DeviceActions.UPDATE_DEVICE_METADATA.START.create({forceUpdate: true}),
     );
+    AnalyticsAttributesLogger.updateNotificationPreferences({
+      notificationDeliveryChannel: 'push',
+    });
   }, [dispatch, hasPushPermissions, userId]);
 
   useSubscribeToChannelTopic('news');
