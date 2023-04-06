@@ -6,7 +6,6 @@ import {MiningRate} from '@screens/HomeFlow/Home/components/Pager/components/Min
 import {Wallet} from '@screens/HomeFlow/Home/components/Pager/components/Wallet';
 import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/useSetWalkthroughElementData';
 import {WalkthroughStepKey} from '@store/modules/Walkthrough/types';
-import {isRTL} from '@translations/i18n';
 import React, {useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -20,18 +19,6 @@ const PAGER_CARDS_STEP_KEYS: WalkthroughStepKey[] = [
 ];
 
 function PagerCardWalkthroughElement({stepKey}: {stepKey: WalkthroughStepKey}) {
-  if (isRTL) {
-    switch (stepKey) {
-      case 'walletCard':
-        return <Engagement darkMode />;
-      case 'earningCard':
-        return <MiningRate darkMode />;
-      case 'engagementCard':
-        return <Wallet darkMode />;
-      default:
-        return null;
-    }
-  }
   switch (stepKey) {
     case 'walletCard':
       return <Wallet darkMode />;

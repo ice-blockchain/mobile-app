@@ -10,7 +10,6 @@ import {MiningRate} from '@screens/HomeFlow/Home/components/Pager/components/Min
 import {Wallet} from '@screens/HomeFlow/Home/components/Pager/components/Wallet';
 import {usePagerCardsWalkthrough} from '@screens/HomeFlow/Home/components/Pager/hooks/usePagerCardsWalkthrough';
 import {ActivePagerCard} from '@screens/HomeFlow/Home/types';
-import {isRTL} from '@translations/i18n';
 import React, {useEffect, useRef, useState} from 'react';
 import {PixelRatio} from 'react-native';
 import {StyleSheet, View} from 'react-native';
@@ -20,18 +19,6 @@ import {rem} from 'rn-units';
 export const PAGE_HEIGHT = PixelRatio.roundToNearestPixel(rem(160));
 
 function getActiveIndex(activePagerCard: ActivePagerCard | undefined): number {
-  if (isRTL) {
-    if (activePagerCard != null) {
-      switch (activePagerCard) {
-        case 'wallet':
-          return 2;
-        case 'earning':
-          return 1;
-        case 'engagement':
-          return 0;
-      }
-    }
-  }
   if (activePagerCard != null) {
     switch (activePagerCard) {
       case 'wallet':

@@ -166,7 +166,10 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
       title: t('walkthrough.home.wallet.title'),
       description: t('walkthrough.home.wallet.description'),
       before: function* () {
-        yield navigate({name: 'Home', params: {activePagerCard: 'wallet'}});
+        yield navigate({
+          name: 'Home',
+          params: {activePagerCard: 'wallet'},
+        });
         yield delay(DELAY);
       },
     },
@@ -213,10 +216,7 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
       title: t('walkthrough.home.balancehistory.title'),
       description: t('walkthrough.home.balancehistory.description'),
       before: function* () {
-        yield navigate({
-          name: 'Home',
-          params: {activePagerCard: isRTL ? 'engagement' : 'wallet'},
-        });
+        yield navigate({name: 'Home', params: {activePagerCard: 'wallet'}});
         yield delay(DELAY);
       },
     },
