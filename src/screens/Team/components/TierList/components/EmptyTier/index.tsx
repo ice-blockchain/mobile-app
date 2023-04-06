@@ -8,7 +8,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import teamEmptyImage from '@screens/Team/assets/images/teamEmpty.png';
 import {InviteIcon} from '@svg/InviteIcon';
-import {t} from '@translations/i18n';
+import {replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
@@ -30,9 +30,9 @@ export function EmptyTier({title}: Props) {
         resizeMode="contain"
       />
       <Text style={styles.title}>
-        <Text>{t('team.empty.title_part1')}</Text>
-        <Text style={styles.boldTitle}>{title}</Text>
-        <Text>{t('team.empty.title_part2')}</Text>
+        {replaceString(t('team.empty.title'), tagRegex('title'), () => (
+          <Text style={styles.boldTitle}>{title}</Text>
+        ))}
       </Text>
       <PrimaryButton
         text={t('team.empty.button_title')}

@@ -19,8 +19,7 @@ export type Translations = {
   'button.not_now': null;
   'button.view_all': null;
   'button.invite_friend.title': null;
-  'button.invite_friend.description_part1': null;
-  'button.invite_friend.description_part2': null;
+  'button.invite_friend.description': null;
   'button.no': null;
   'button.search_country': null;
   'button.save': null;
@@ -54,8 +53,7 @@ export type Translations = {
   'team.contacts_tab': null;
   'team.tierOne_tab': null;
   'team.tierTwo_tab': null;
-  'team.empty.title_part1': null;
-  'team.empty.title_part2': null;
+  'team.empty.title': null;
   'team.empty.contacts': null;
   'team.empty.button_title': null;
   'team.contacts.empty_title': null;
@@ -186,8 +184,7 @@ export type Translations = {
   'home.wallet.balance': null;
   'home.pioneer.rank': null;
   'home.pioneer.referrals': null;
-  'home.pioneer.description_part1': null;
-  'home.pioneer.description_part2': null;
+  'home.pioneer.description': null;
   'home.referrals.title': null;
   'home.referrals.description': null;
   'home.referrals.no_referrals_description': null;
@@ -319,8 +316,7 @@ export type Translations = {
   'invite_share.more': null;
   'invite_share.copied': null;
   'invite_share.share_message': null;
-  'invite_share.description_part1': null;
-  'invite_share.description_part2': null;
+  'invite_share.description': null;
   'users.ping': null;
   'users.active': null;
   'users.inactive': null;

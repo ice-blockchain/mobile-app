@@ -7,7 +7,7 @@ import {commonStyles, windowWidth} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import ShareCard from '@screens/InviteFlow/InviteShare/components/ShareCard';
-import {t} from '@translations/i18n';
+import {replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
@@ -28,9 +28,9 @@ export const InviteShare = memo(() => {
         <View style={styles.shareSubstrate} />
         <LinesBackground style={styles.bg} />
         <Text style={styles.description}>
-          {t('invite_share.description_part1')}
-          <IceLabel iconOffsetY={isAndroid ? 3 : 2} />
-          {t('invite_share.description_part2')}
+          {replaceString(t('invite_share.description'), tagRegex('ice'), () => (
+            <IceLabel iconOffsetY={isAndroid ? 3 : 2} />
+          ))}
         </Text>
         <Image source={icon} style={styles.icon} />
         <ShareCard />
