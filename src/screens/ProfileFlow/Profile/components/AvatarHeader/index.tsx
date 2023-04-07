@@ -44,7 +44,7 @@ const MIN_WIDTH_SMALL_SIDE_CONTAINERS = rem(40);
 type Props = {
   user?: User | null;
   uri?: string;
-  scrollY: SharedValue<number>;
+  animatedIndex: SharedValue<number>;
   isOwner: boolean;
   isLoading?: boolean;
   contact: Contact | undefined;
@@ -55,13 +55,13 @@ export const AvatarHeader = memo(
   ({
     user,
     uri,
-    scrollY,
+    animatedIndex,
     isOwner,
     isLoading = false,
     contact,
     onContactPress,
   }: Props) => {
-    const {shadowStyle} = useScrollShadow({translateY: scrollY});
+    const {shadowStyle} = useScrollShadow({translateY: animatedIndex});
     const {top: topInset} = useSafeAreaInsets();
 
     const {
@@ -70,7 +70,7 @@ export const AvatarHeader = memo(
       textStyle,
       lettersAvatarStyle,
       iconAvatarStyle,
-    } = useAnimatedStyles({scrollY});
+    } = useAnimatedStyles({animatedIndex});
 
     const extraPadding = {
       paddingTop: topInset,

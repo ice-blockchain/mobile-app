@@ -156,7 +156,7 @@ export const Profile = memo(() => {
       <View style={styles.touchArea}>
         <AvatarHeader
           user={user}
-          scrollY={animatedIndex}
+          animatedIndex={animatedIndex}
           uri={user?.profilePictureUrl}
           isLoading={isLoading}
           isOwner={isOwner}
