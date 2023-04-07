@@ -30,12 +30,16 @@ import {t} from '@translations/i18n';
 import {e164PhoneNumber} from '@utils/phoneNumber';
 import {font} from '@utils/styles';
 import React, {memo, useCallback, useEffect, useMemo, useState} from 'react';
-import {Image, PixelRatio, StyleSheet, Text, View} from 'react-native';
+import {LayoutChangeEvent} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
-import {
+import Animated, {
+  Extrapolate,
   interpolate,
+  useAnimatedStyle,
   useDerivedValue,
   useSharedValue,
+  withTiming,
 } from 'react-native-reanimated';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {useDispatch, useSelector} from 'react-redux';
@@ -43,9 +47,12 @@ import {rem, screenHeight} from 'rn-units';
 
 const NOT_FOUND_BG = require('./assets/images/notFoundBg.png');
 
+const DEFAULT_CORNER_RADIUS = rem(30);
+
 export const Profile = memo(() => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [contactDetails, setContactDetails] = useState<Contact>();
+  const [refreshYPosition, setRefreshYPosition] = useState(0);
   const tabBarOffset = useBottomTabBarOffsetStyle();
   const authUser = useSelector(userSelector) as User;
   const route = useRoute<RouteProp<MainStackParamList, 'UserProfile'>>();
@@ -58,7 +65,7 @@ export const Profile = memo(() => {
     interpolate(animatedIndex.value, [0, 0.1], [0, 100]),
   );
 
-  const {refreshing} = useOnRefresh(animatedIndex);
+  const {} = useOnRefresh(animatedIndex);
 
   const contacts = useSelector(contactsSelector);
   useFocusStatusBar({style: 'dark-content'});
@@ -74,7 +81,6 @@ export const Profile = memo(() => {
   );
 
   const userExist = !!user;
-
   useEffect(() => {
     if (!isOwner) {
       dispatch(UsersActions.GET_USER_BY_ID.START.create(route.params.userId));
@@ -112,13 +118,38 @@ export const Profile = memo(() => {
   const snapPointsData = useMemo(() => {
     const collapsed = screenHeight - HEADER_HEIGHT - topInset;
 
-    const expanded = 540;
+    const expanded =
+      screenHeight - refreshYPosition - HEADER_HEIGHT - topInset - rem(20);
 
     return {
       points: [expanded, collapsed],
       delta: Math.abs(collapsed - expanded),
     };
-  }, [topInset]);
+  }, [topInset, refreshYPosition]);
+
+  const animatedImageContainerStyle = useAnimatedStyle(() => ({
+    transform: [
+      {
+        translateY: interpolate(
+          animatedIndex.value,
+          [0, 1],
+          [0, -snapPointsData.delta],
+          {extrapolateLeft: Extrapolate.CLAMP},
+        ),
+      },
+    ],
+  }));
+
+  const animatedBorderRadius = useAnimatedStyle(() => {
+    const borderRadius = withTiming(
+      interpolate(animatedIndex.value, [0, 1], [DEFAULT_CORNER_RADIUS, 0]),
+      {duration: 100},
+    );
+    return {
+      borderTopLeftRadius: borderRadius,
+      borderTopRightRadius: borderRadius,
+    };
+  });
 
   return (
     <View style={styles.container}>
@@ -139,16 +170,9 @@ export const Profile = memo(() => {
         )}
       </View>
 
-      <View style={[styles.imageContainer, commonStyles.baseSubScreen]}>
+      <Animated.View
+        style={[styles.imageContainer, animatedImageContainerStyle]}>
         <LinesBackground />
-
-        <View style={[styles.refreshIceIconContainer]}>
-          <RefreshIceIcon
-            theme={'light-content'}
-            refreshing={refreshing}
-            translateY={translateY}
-          />
-        </View>
 
         <Text style={styles.usernameText} numberOfLines={1}>
           {`@${user?.username}` || ''}
@@ -157,7 +181,18 @@ export const Profile = memo(() => {
           {userExist && <LadderBar user={user} />}
           {!userExist && <View style={styles.emptyLadder} />}
         </View>
-      </View>
+
+        <View
+          onLayout={({nativeEvent}: LayoutChangeEvent) => {
+            setRefreshYPosition(nativeEvent.layout.y);
+          }}>
+          <RefreshIceIcon
+            theme={'dark-content'}
+            refreshing={false}
+            translateY={translateY}
+          />
+        </View>
+      </Animated.View>
 
       <BottomSheet
         snapPoints={snapPointsData.points}
@@ -167,15 +202,18 @@ export const Profile = memo(() => {
         enableOverDrag
         animatedIndex={animatedIndex}
         overDragResistanceFactor={10}
-        backgroundStyle={[
-          commonStyles.baseSubScreen,
-          styles.bottomSheetBackgroundStyle,
-        ]}
+        backgroundStyle={commonStyles.baseSubScreen}
         activeOffsetY={[-5, 5]}>
         <BottomSheetScrollView
           style={commonStyles.flexOne}
+          showsVerticalScrollIndicator={false}
           contentContainerStyle={tabBarOffset.current}>
-          <View style={commonStyles.flexOne}>
+          <Animated.View
+            style={[
+              commonStyles.flexOne,
+              animatedBorderRadius,
+              {backgroundColor: COLORS.white},
+            ]}>
             {userExist && (
               <>
                 <Role isOwner={isOwner} user={user} />
@@ -195,7 +233,7 @@ export const Profile = memo(() => {
                 </Text>
               </>
             )}
-          </View>
+          </Animated.View>
         </BottomSheetScrollView>
       </BottomSheet>
     </View>
@@ -214,12 +252,16 @@ const styles = StyleSheet.create({
 
   imageContainer: {
     marginTop: rem(20),
-    height: PixelRatio.roundToNearestPixel(rem(102)),
+    flexGrow: 1,
     overflow: 'hidden',
+    backgroundColor: COLORS.white,
+    borderTopLeftRadius: rem(30),
+    borderTopRightRadius: rem(30),
   },
 
   ladderContainer: {
     marginTop: rem(15),
+    marginBottom: rem(15),
   },
   usernameText: {
     marginTop: rem(67),
@@ -250,16 +292,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   inviteSection: {marginTop: rem(15)},
-  refreshIceIconContainer: {
-    transform: [
-      {
-        translateY: rem(20),
-      },
-    ],
-  },
-
-  bottomSheetBackgroundStyle: {
-    borderTopLeftRadius: rem(24),
-    borderTopRightRadius: rem(24),
-  },
 });

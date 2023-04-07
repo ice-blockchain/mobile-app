@@ -149,7 +149,7 @@ export const News = () => {
         ]}>
         <RefreshIceIcon
           theme={'light-content'}
-          refreshing={refreshing}
+          refreshing={false}
           translateY={translateY}
         />
       </View>
