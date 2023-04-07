@@ -2,8 +2,11 @@
 
 import {User} from '@api/user/types';
 import {LinesBackground} from '@components/LinesBackground';
+import {RefreshIceIcon} from '@components/RefreshControl';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
+import BottomSheet, {BottomSheetScrollView} from '@gorhom/bottom-sheet';
+import {HEADER_HEIGHT} from '@navigation/components/Header';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {MainStackParamList} from '@navigation/Main';
@@ -15,6 +18,7 @@ import {Invite} from '@screens/ProfileFlow/Profile/components/Invite';
 import {LadderBar} from '@screens/ProfileFlow/Profile/components/LadderBar';
 import {MiningCalculator} from '@screens/ProfileFlow/Profile/components/MiningCalculator';
 import {Role} from '@screens/ProfileFlow/Profile/components/Role';
+import {useOnRefresh} from '@screens/ProfileFlow/Profile/hooks/useOnRefresh';
 import {userSelector} from '@store/modules/Account/selectors';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {contactsSelector} from '@store/modules/Contacts/selectors';
@@ -25,35 +29,46 @@ import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors
 import {t} from '@translations/i18n';
 import {e164PhoneNumber} from '@utils/phoneNumber';
 import {font} from '@utils/styles';
-import React, {memo, useCallback, useEffect, useState} from 'react';
+import React, {memo, useCallback, useEffect, useMemo, useState} from 'react';
 import {Image, PixelRatio, StyleSheet, Text, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
-import Animated, {
-  useAnimatedScrollHandler,
+import {
+  interpolate,
+  useDerivedValue,
   useSharedValue,
 } from 'react-native-reanimated';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {useDispatch, useSelector} from 'react-redux';
-import {rem} from 'rn-units';
+import {rem, screenHeight} from 'rn-units';
 
 const NOT_FOUND_BG = require('./assets/images/notFoundBg.png');
 
 export const Profile = memo(() => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [contactDetails, setContactDetails] = useState<Contact>();
+  const tabBarOffset = useBottomTabBarOffsetStyle();
   const authUser = useSelector(userSelector) as User;
   const route = useRoute<RouteProp<MainStackParamList, 'UserProfile'>>();
   const isOwner = !route.params || route.params.userId === authUser?.id;
   const userId = isOwner ? authUser.id : route.params?.userId;
+  const animatedIndex = useSharedValue(0);
 
-  const bottomOffset = useBottomTabBarOffsetStyle();
+  const {top: topInset} = useSafeAreaInsets();
+  const translateY = useDerivedValue(() =>
+    interpolate(animatedIndex.value, [0, 0.1], [0, 100]),
+  );
+
+  const {refreshing} = useOnRefresh(animatedIndex);
+
+  // const bottomOffset = useBottomTabBarOffsetStyle();
 
   const contacts = useSelector(contactsSelector);
   useFocusStatusBar({style: 'dark-content'});
 
   const scrollY = useSharedValue(0);
-  const scrollHandler = useAnimatedScrollHandler(event => {
-    scrollY.value = event.contentOffset.y;
-  });
+  // const scrollHandler = useAnimatedScrollHandler(event => {
+  //   scrollY.value = event.contentOffset.y;
+  // });
   const dispatch = useDispatch();
 
   const user = useSelector(
@@ -100,6 +115,17 @@ export const Profile = memo(() => {
     }, [dispatch, userId]),
   );
 
+  const snapPointsData = useMemo(() => {
+    const collapsed = screenHeight - HEADER_HEIGHT - topInset;
+
+    const expanded = 540;
+
+    return {
+      points: [expanded, collapsed],
+      delta: Math.abs(collapsed - expanded),
+    };
+  }, [topInset]);
+
   return (
     <View style={styles.container}>
       <View style={styles.touchArea}>
@@ -118,50 +144,66 @@ export const Profile = memo(() => {
           <AgendaContactTooltip contact={contactDetails} />
         )}
       </View>
-      <Animated.ScrollView
-        scrollEventThrottle={16}
-        contentContainerStyle={[bottomOffset.current, styles.cardContainer]}
-        onScroll={scrollHandler}
-        showsVerticalScrollIndicator={false}
-        scrollEnabled={userExist}
-        onScrollBeginDrag={() => {
-          if (isTooltipVisible) {
-            setIsTooltipVisible(false);
-          }
-        }}>
-        <View style={[styles.imageContainer, commonStyles.baseSubScreen]}>
-          <LinesBackground />
 
-          <Text style={styles.usernameText} numberOfLines={1}>
-            {`@${user?.username}` || ''}
-          </Text>
+      <View style={[styles.imageContainer, commonStyles.baseSubScreen]}>
+        <LinesBackground />
+
+        <View style={[styles.refreshIceIconContainer]}>
+          <RefreshIceIcon
+            theme={'light-content'}
+            refreshing={refreshing}
+            translateY={translateY}
+          />
         </View>
+
+        <Text style={styles.usernameText} numberOfLines={1}>
+          {`@${user?.username}` || ''}
+        </Text>
         <View style={styles.ladderContainer}>
           {userExist && <LadderBar user={user} />}
           {!userExist && <View style={styles.emptyLadder} />}
         </View>
-        <View style={[styles.card, commonStyles.baseSubScreen]}>
-          {userExist && (
-            <>
-              <Role isOwner={isOwner} user={user} />
-              <Badges user={user} />
-              <Invite style={styles.inviteSection} />
-              <MiningCalculator />
-            </>
-          )}
-          {!userExist && !isLoading && (
-            <>
-              <Image source={NOT_FOUND_BG} style={styles.notFoundBg} />
-              <Text style={styles.notFoundTitle}>
-                {t('profile.not_found.title')}
-              </Text>
-              <Text style={styles.notFoundDescription}>
-                {t('profile.not_found.description')}
-              </Text>
-            </>
-          )}
-        </View>
-      </Animated.ScrollView>
+      </View>
+
+      <BottomSheet
+        snapPoints={snapPointsData.points}
+        handleComponent={null}
+        handleHeight={0}
+        animateOnMount={false}
+        enableOverDrag
+        animatedIndex={animatedIndex}
+        overDragResistanceFactor={10}
+        backgroundStyle={[
+          commonStyles.baseSubScreen,
+          styles.bottomSheetBackgroundStyle,
+        ]}
+        activeOffsetY={[-5, 5]}>
+        <BottomSheetScrollView
+          style={commonStyles.flexOne}
+          contentContainerStyle={tabBarOffset.current}>
+          <View style={commonStyles.flexOne}>
+            {userExist && (
+              <>
+                <Role isOwner={isOwner} user={user} />
+                <Badges user={user} />
+                <Invite style={styles.inviteSection} />
+                <MiningCalculator />
+              </>
+            )}
+            {!userExist && !isLoading && (
+              <>
+                <Image source={NOT_FOUND_BG} style={styles.notFoundBg} />
+                <Text style={styles.notFoundTitle}>
+                  {t('profile.not_found.title')}
+                </Text>
+                <Text style={styles.notFoundDescription}>
+                  {t('profile.not_found.description')}
+                </Text>
+              </>
+            )}
+          </View>
+        </BottomSheetScrollView>
+      </BottomSheet>
     </View>
   );
 });
@@ -173,22 +215,17 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     backgroundColor: COLORS.white,
+    flex: 1,
   },
-  card: {
-    // make bottom overscroll area white, otherwise it'd be of container color
-    paddingBottom: 2000,
-    marginBottom: -2000,
-    paddingTop: rem(2),
-    marginTop: -rem(23),
-  },
+
   imageContainer: {
     marginTop: rem(20),
     height: PixelRatio.roundToNearestPixel(rem(102)),
     overflow: 'hidden',
   },
+
   ladderContainer: {
-    backgroundColor: COLORS.primaryLight,
-    paddingBottom: rem(30),
+    marginTop: rem(15),
   },
   usernameText: {
     marginTop: rem(67),
@@ -219,4 +256,16 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   inviteSection: {marginTop: rem(15)},
+  refreshIceIconContainer: {
+    transform: [
+      {
+        translateY: rem(20),
+      },
+    ],
+  },
+
+  bottomSheetBackgroundStyle: {
+    borderTopLeftRadius: rem(24),
+    borderTopRightRadius: rem(24),
+  },
 });
