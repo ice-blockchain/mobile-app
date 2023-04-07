@@ -141,6 +141,11 @@ export const Profile = memo(() => {
   }));
 
   const animatedBorderRadius = useAnimatedStyle(() => {
+    /**
+     * withTiming is required here to make border radius
+     * animation more smooth
+     * Without it after animation completed - animated corner is blinking
+     */
     const borderRadius = withTiming(
       interpolate(animatedIndex.value, [0, 1], [DEFAULT_CORNER_RADIUS, 0]),
       {duration: 100},
