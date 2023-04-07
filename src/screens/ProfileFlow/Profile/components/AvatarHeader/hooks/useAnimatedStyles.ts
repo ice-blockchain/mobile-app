@@ -15,8 +15,8 @@ import {rem} from 'rn-units';
 export const AVATAR_RADIUS = rem(41);
 const AVATAR_SMALL_SIZE = rem(36);
 const AVATAR_SMALL_RADIUS = rem(16);
-const SCROLL_STEP_1 = 140;
-const MAX_SCROLL = 160;
+const SCROLL_STEP_1 = 0.87;
+const MAX_SCROLL = 1;
 export const PEN_SIZE = rem(32);
 
 type Params = {
@@ -81,7 +81,7 @@ export const useAnimatedStyles = ({scrollY}: Params) => {
   const textStyle = useAnimatedStyle(() => {
     const opacity = interpolate(
       scrollY.value,
-      [130, SCROLL_STEP_1],
+      [0.81, SCROLL_STEP_1],
       [0, 1],
       Extrapolate.CLAMP,
     );

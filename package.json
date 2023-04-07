@@ -16,7 +16,6 @@
     "test": "jest tests --coverage --updateSnapshot --passWithNoTests",
     "generate-translation-types": "node scripts/generateTranslationTypes/index.mjs src/translations/locales/en.json && eslint --fix src/translations/locales/en.json.d.ts",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint-fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "check-types": "tsc",
     "postinstall": "npx jetify && npx patch-package",
     "check-license": "./scripts/license/checklicense.sh",

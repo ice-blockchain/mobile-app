@@ -60,15 +60,9 @@ export const Profile = memo(() => {
 
   const {refreshing} = useOnRefresh(animatedIndex);
 
-  // const bottomOffset = useBottomTabBarOffsetStyle();
-
   const contacts = useSelector(contactsSelector);
   useFocusStatusBar({style: 'dark-content'});
 
-  const scrollY = useSharedValue(0);
-  // const scrollHandler = useAnimatedScrollHandler(event => {
-  //   scrollY.value = event.contentOffset.y;
-  // });
   const dispatch = useDispatch();
 
   const user = useSelector(
@@ -131,7 +125,7 @@ export const Profile = memo(() => {
       <View style={styles.touchArea}>
         <AvatarHeader
           user={user}
-          scrollY={scrollY}
+          scrollY={animatedIndex}
           uri={user?.profilePictureUrl}
           isLoading={isLoading}
           isOwner={isOwner}
