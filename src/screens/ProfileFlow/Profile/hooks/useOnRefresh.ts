@@ -1,5 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AchievementsActions} from '@store/modules/Achievements/actions';
+import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
+import {UsersActions} from '@store/modules/Users/actions';
+import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {hapticFeedback} from '@utils/device';
 import {useCallback, useRef} from 'react';
 import {
@@ -7,16 +11,45 @@ import {
   SharedValue,
   useAnimatedReaction,
 } from 'react-native-reanimated';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
-export const useOnRefresh = (animatedIndex: SharedValue<number>) => {
+type Props = {
+  animatedIndex: SharedValue<number>;
+  userId: string;
+  isOwner: boolean;
+};
+
+export const useOnRefresh = ({animatedIndex, userId, isOwner}: Props) => {
   const dispatch = useDispatch();
 
-  const refreshing = true; //replace with correct isLoadingSelector
+  const refreshingUserById = useSelector(
+    isLoadingSelector.bind(null, UsersActions.GET_USER_BY_ID),
+  );
+
+  const refreshingUserAchievements = useSelector(
+    isLoadingSelector.bind(null, AchievementsActions.USER_ACHIEVEMENTS_LOAD),
+  );
+
+  const refreshingSummary = useSelector(
+    isLoadingSelector.bind(null, TokenomicsActions.GET_RANKING_SUMMARY),
+  );
+
+  const refreshing =
+    refreshingUserById || refreshingUserAchievements || refreshingSummary;
 
   const onRefresh = useCallback(() => {
-    console.log('dispatch', dispatch);
-  }, [dispatch]);
+    if (!refreshing) {
+      dispatch(UsersActions.GET_USER_BY_ID.START.create(userId));
+      dispatch(AchievementsActions.USER_ACHIEVEMENTS_LOAD.START.create(userId));
+      if (!isOwner) {
+        dispatch(
+          TokenomicsActions.GET_RANKING_SUMMARY.START.create({
+            userId,
+          }),
+        );
+      }
+    }
+  }, [dispatch, isOwner, userId, refreshing]);
 
   const canBeActivatedRef = useRef(false);
   const hapticOnRefresh = () => {
