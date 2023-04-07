@@ -99,7 +99,7 @@ export const AvatarHeader = memo(
         <View style={styles.wrapper}>
           <View>
             <Animated.View style={[imageAnimatedStyle, styles.imageContainer]}>
-              {isLoading ? (
+              {isLoading && !uri ? (
                 <AvatarSkeleton />
               ) : (
                 <>
