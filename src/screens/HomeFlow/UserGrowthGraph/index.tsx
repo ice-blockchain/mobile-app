@@ -9,10 +9,10 @@ import {
 } from '@components/BarGraph';
 import {useGetBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetBarGraphDataForStatsPeriod';
 import {LinesBackground} from '@components/LinesBackground';
-import {RefreshControl} from '@components/RefreshControl';
+import {PullToRefreshContainer} from '@components/PullToRefreshContainer';
 import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
-import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
@@ -37,11 +37,7 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import Animated, {
-  useAnimatedScrollHandler,
-  useSharedValue,
-  withTiming,
-} from 'react-native-reanimated';
+import Animated, {useSharedValue, withTiming} from 'react-native-reanimated';
 import {rem, screenHeight} from 'rn-units';
 
 import {useOnRefresh} from './hooks/useOnRefresh';
@@ -59,12 +55,6 @@ export const UserGrowthGraph = memo(() => {
   } = useRoute<RouteProp<HomeTabStackParamList, 'UserGrowthGraph'>>();
   const [periodIndex, setPeriodIndex] = useState(0);
   const [statsPeriod, setStatsPeriod] = useState(paramsStatsPeriod);
-
-  const translateY = useSharedValue(0);
-
-  const scrollHandler = useAnimatedScrollHandler(({contentOffset: {y}}) => {
-    translateY.value = y;
-  });
 
   const {refreshing, onRefresh} = useOnRefresh({
     statsPeriod,
@@ -91,9 +81,7 @@ export const UserGrowthGraph = memo(() => {
 
   useEffect(() => {
     return () => {
-      if (handleRef.current) {
-        handleRef.current?.cancel();
-      }
+      handleRef.current?.cancel();
     };
   }, []);
 
@@ -140,60 +128,58 @@ export const UserGrowthGraph = memo(() => {
         title={t('stats.user_growth')}
         backgroundColor={'transparent'}
       />
-      <Animated.FlatList
-        showsVerticalScrollIndicator={false}
-        initialNumToRender={14}
-        contentContainerStyle={[styles.contentContainer, tabbarOffset.current]}
-        style={styles.flatListContainer}
-        data={data}
-        removeClippedSubviews={false}
-        scrollEventThrottle={16}
-        onScroll={scrollHandler}
-        onLayout={onLayout}
-        getItemLayout={(_, index) => ({
-          length: ROW_HEIGHT,
-          offset: ROW_HEIGHT * index,
-          index,
-        })}
-        renderItem={({item, index}) => (
-          <BarItem
-            item={item}
-            maxWidth={barWidth}
-            maxValue={lastXValue}
-            sharedValue={sharedValue}
-            doAnimate={Math.floor(screenHeight / ROW_HEIGHT) > index}
-          />
-        )}
-        ListFooterComponent={
-          <BarFooter
-            barWidth={barWidth}
-            stepValue={stepValue}
-            numberOfSteps={numberOfSteps}
-          />
-        }
-        ListHeaderComponent={
-          <View style={styles.headerContainer}>
-            <SectionHeader
-              title={isTotal ? t('stats.total') : t('stats.active')}
-              action={
-                <PeriodSelect
-                  selectedIndex={periodIndex}
-                  options={PERIODS}
-                  onChange={onPeriodChange}
-                />
-              }
+      <PullToRefreshContainer
+        style={commonStyles.flexOne}
+        theme={'dark-content'}
+        refreshing={refreshing}
+        onRefresh={onRefresh}>
+        <Animated.FlatList
+          showsVerticalScrollIndicator={false}
+          initialNumToRender={14}
+          contentContainerStyle={[
+            styles.contentContainer,
+            tabbarOffset.current,
+          ]}
+          data={data}
+          removeClippedSubviews={false}
+          onLayout={onLayout}
+          getItemLayout={(_, index) => ({
+            length: ROW_HEIGHT,
+            offset: ROW_HEIGHT * index,
+            index,
+          })}
+          renderItem={({item, index}) => (
+            <BarItem
+              item={item}
+              maxWidth={barWidth}
+              maxValue={lastXValue}
+              sharedValue={sharedValue}
+              doAnimate={Math.floor(screenHeight / ROW_HEIGHT) > index}
             />
-          </View>
-        }
-        refreshControl={
-          <RefreshControl
-            theme={'light-content'}
-            refreshing={refreshing}
-            onRefresh={onRefresh}
-            translateY={translateY}
-          />
-        }
-      />
+          )}
+          ListFooterComponent={
+            <BarFooter
+              barWidth={barWidth}
+              stepValue={stepValue}
+              numberOfSteps={numberOfSteps}
+            />
+          }
+          ListHeaderComponent={
+            <View style={styles.headerContainer}>
+              <SectionHeader
+                title={isTotal ? t('stats.total') : t('stats.active')}
+                action={
+                  <PeriodSelect
+                    selectedIndex={periodIndex}
+                    options={PERIODS}
+                    onChange={onPeriodChange}
+                  />
+                }
+              />
+            </View>
+          }
+        />
+      </PullToRefreshContainer>
     </View>
   );
 });
@@ -203,16 +189,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.white,
   },
-  flatListContainer: {
+  contentContainer: {
     paddingTop: rem(16),
     paddingHorizontal: SCREEN_SIDE_OFFSET,
     paddingBottom: SCREEN_SIDE_OFFSET,
-    backgroundColor: COLORS.white,
+    flexGrow: 1,
     borderTopLeftRadius: rem(30),
     borderTopRightRadius: rem(30),
-  },
-  contentContainer: {
-    minHeight: screenHeight,
+    backgroundColor: COLORS.white,
   },
   headerContainer: {
     marginHorizontal: -SCREEN_SIDE_OFFSET,
