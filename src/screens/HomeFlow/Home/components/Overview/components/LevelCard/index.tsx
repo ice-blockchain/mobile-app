@@ -11,7 +11,7 @@ import {isSplashHiddenSelector} from '@store/modules/AppCommon/selectors';
 import {userReferralCountSelector} from '@store/modules/Referrals/selectors';
 import {globalRankSelector} from '@store/modules/Tokenomics/selectors';
 import {PioneerIcon} from '@svg/PioneerIcon';
-import {t} from '@translations/i18n';
+import {replaceString, t, tagRegex} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {forwardRef, Ref} from 'react';
@@ -78,9 +78,13 @@ export const LevelCard = forwardRef(
               </View>
             </View>
             <Text style={styles.noteText}>
-              {t('home.pioneer.description_part1')}
-              <IceLabel iconSize={12} />
-              {t('home.pioneer.description_part2')}
+              {replaceString(
+                t('home.pioneer.description'),
+                tagRegex('ice'),
+                () => (
+                  <IceLabel iconSize={12} />
+                ),
+              )}
             </Text>
           </>
         )}

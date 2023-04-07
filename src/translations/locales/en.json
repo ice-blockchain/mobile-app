@@ -35,8 +35,7 @@
     "view_all": "view all",
     "invite_friend": {
       "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "description": "Earn extra [[:ice]] by inviting your friends."
     },
     "no": "No",
     "search_country": "Search for country",
@@ -74,8 +73,7 @@
     "tierOne_tab": "Tier 1",
     "tierTwo_tab": "Tier 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
+      "title": "You currently don't have any\n[[:title]] referrals!",
       "contacts": "You currently don't have any contacts.",
       "button_title": "Invite Friends"
     },
@@ -268,8 +266,7 @@
     "pioneer": {
       "rank": "GLOBAL RANK",
       "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "description": "The more users you refer, the more [[:ice]] you earn"
     },
     "referrals": {
       "title": "REFERRALS",
@@ -468,8 +465,7 @@
     "more": "More",
     "copied": "COPIED",
     "share_message": "Hi ☃️ Snowman! Join my team on ice and receive 10 ice coins when you sign-up using my referral code:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "description": "Spread the word and invite your friends. You earn [[:ice]] for each new referral you bring."
   },
   "users": {
     "ping": "PING",

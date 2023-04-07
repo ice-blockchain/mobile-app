@@ -35,8 +35,7 @@
     "view_all": "a vedea tot",
     "invite_friend": {
       "title": "Invita prieteni",
-      "description_part1": "Câștigați în plus ",
-      "description_part2": " invitându-ți prietenii."
+      "description": "Câștigați în plus [[:ice]] invitându-ți prietenii."
     },
     "no": "Nu",
     "search_country": "Cauta tara",
@@ -65,8 +64,7 @@
     "tierOne_tab": "Nivelul 1",
     "tierTwo_tab": "Nivelul 2",
     "empty": {
-      "title_part1": "Momentan nu ai niciunul\n",
-      "title_part2": " recomandari!",
+      "title": "Momentan nu ai niciunul\n[[:title]] recomandari!",
       "button_title": "Invita prieteni"
     },
     "contacts": {
@@ -247,8 +245,7 @@
     "pioneer": {
       "rank": "RANG GLOBAL",
       "referrals": "RECOMANDĂRI",
-      "description_part1": "Cu cât trimiteți mai mulți utilizatori, cu atât mai mulți ",
-      "description_part2": " Castigi"
+      "description": "Cu cât trimiteți mai mulți utilizatori, cu atât mai mulți [[:ice]] Castigi"
     },
     "referrals": {
       "title": "RECOMANDĂRI",
@@ -446,8 +443,7 @@
     "more": "Mai mult",
     "copied": "COPIAT",
     "share_message": "Bună ☃️ Omul de zăpadă! Alăturați-vă echipei mele pe gheață și primiți 10 monede de gheață când vă înscrieți folosind codul meu de recomandare:",
-    "description_part1": "Răspândește cuvântul și invită-ți prietenii.  ",
-    "description_part2": " pentru fiecare recomandare nouă pe care o aduceți."
+    "description": "Răspândește cuvântul și invită-ți prietenii. [[:ice]] pentru fiecare recomandare nouă pe care o aduceți."
   },
   "users": {
     "ping": "PING",

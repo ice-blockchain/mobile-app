@@ -35,8 +35,7 @@
     "view_all": "Alle ansehen",
     "invite_friend": {
       "title": "Freunde einladen",
-      "description_part1": "Verdienen Sie zusätzlich ",
-      "description_part2": " indem Sie Ihre Freunde einladen."
+      "description": "Verdienen Sie zusätzlich [[:ice]] indem Sie Ihre Freunde einladen."
     },
     "no": "Nein",
     "search_country": "Land suchen",
@@ -65,8 +64,7 @@
     "tierOne_tab": "Stufe 1",
     "tierTwo_tab": "Rang 2",
     "empty": {
-      "title_part1": "Sie haben derzeit keine\n",
-      "title_part2": " Empfehlungen!",
+      "title": "Sie haben derzeit keine\n[[:title]] Empfehlungen!",
       "button_title": "Freunde einladen"
     },
     "contacts": {
@@ -237,8 +235,7 @@
     "pioneer": {
       "rank": "GLOBALER RANG",
       "referrals": "EMPFEHLUNGEN",
-      "description_part1": "Je mehr Benutzer Sie empfehlen, desto mehr ",
-      "description_part2": " Du verdienst"
+      "description": "Je mehr Benutzer Sie empfehlen, desto mehr [[:ice]] Du verdienst"
     },
     "referrals": {
       "title": "EMPFEHLUNGEN",
@@ -428,8 +425,7 @@
     "more": "Mehr",
     "copied": "KOPIERT",
     "share_message": "Hallo ☃️ Schneemann! Treten Sie meinem Team auf Eis bei und erhalten Sie 10 Eismünzen, wenn Sie sich mit meinem Empfehlungscode anmelden:",
-    "description_part1": "Sagen Sie es weiter und laden Sie Ihre Freunde ein.  ",
-    "description_part2": " für jede neue Empfehlung, die Sie mitbringen."
+    "description": "Sagen Sie es weiter und laden Sie Ihre Freunde ein. [[:ice]] für jede neue Empfehlung, die Sie mitbringen."
   },
   "users": {
     "ping": "KLINGELN",

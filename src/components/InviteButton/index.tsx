@@ -13,7 +13,7 @@ import {
 } from '@store/modules/Analytics/constants';
 import {InviteIcon} from '@svg/InviteIcon';
 import {LogoTransparentIcon} from '@svg/LogoTransparentIcon';
-import {t} from '@translations/i18n';
+import {replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
@@ -44,9 +44,13 @@ export const InviteButton = ({style}: Props = {}) => {
       <View>
         <Text style={styles.mainText}>{t('button.invite_friend.title')}</Text>
         <Text style={styles.noteText}>
-          {t('button.invite_friend.description_part1')}
-          <IceLabel iconSize={14} iconOffsetY={isAndroid ? 3 : 2} />
-          {t('button.invite_friend.description_part2')}
+          {replaceString(
+            t('button.invite_friend.description'),
+            tagRegex('ice'),
+            () => (
+              <IceLabel iconSize={14} iconOffsetY={isAndroid ? 3 : 2} />
+            ),
+          )}
         </Text>
       </View>
     </Touchable>
