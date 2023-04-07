@@ -68,8 +68,8 @@ export const useOnRefresh = ({animatedIndex, userId, isOwner}: Props) => {
     () => {
       return animatedIndex.value <= -0.18;
     },
-    isNeedRefresh => {
-      if (isNeedRefresh) {
+    (result, previousResult) => {
+      if (result && result !== previousResult) {
         runOnJS(hapticOnRefresh)();
       }
     },
