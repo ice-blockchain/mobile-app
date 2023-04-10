@@ -23,20 +23,8 @@ import {PeriodSelect} from '@screens/HomeFlow/Stats/components/UsersGrowthGraph/
 import {STATS_PERIODS} from '@store/modules/Stats/constants';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {t} from '@translations/i18n';
-import React, {
-  memo,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
-import {
-  InteractionManager,
-  LayoutChangeEvent,
-  StyleSheet,
-  View,
-} from 'react-native';
+import React, {memo, useEffect, useMemo, useRef, useState} from 'react';
+import {InteractionManager, StyleSheet, View} from 'react-native';
 import Animated, {useSharedValue, withTiming} from 'react-native-reanimated';
 import {rem, screenHeight} from 'rn-units';
 
@@ -99,17 +87,6 @@ export const UserGrowthGraph = memo(() => {
 
   const lastElement = data[data.length - 1];
 
-  const onLayout = useCallback(
-    ({
-      nativeEvent: {
-        layout: {width: layoutWidth},
-      },
-    }: LayoutChangeEvent) => {
-      setWidth(layoutWidth);
-    },
-    [],
-  );
-
   useEffect(() => {
     if (width && transitionEnd && lastElement?.value != null && data.length) {
       sharedValue.value = -1;
@@ -134,15 +111,15 @@ export const UserGrowthGraph = memo(() => {
         refreshing={refreshing}
         onRefresh={onRefresh}>
         <Animated.FlatList
-          showsVerticalScrollIndicator={false}
-          initialNumToRender={14}
           contentContainerStyle={[
             styles.contentContainer,
             tabbarOffset.current,
           ]}
           data={data}
+          initialNumToRender={14}
+          showsVerticalScrollIndicator={false}
           removeClippedSubviews={false}
-          onLayout={onLayout}
+          onLayout={event => setWidth(event.nativeEvent.layout.width)}
           getItemLayout={(_, index) => ({
             length: ROW_HEIGHT,
             offset: ROW_HEIGHT * index,
