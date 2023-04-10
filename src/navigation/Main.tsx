@@ -63,7 +63,7 @@ import {ActiveTabActions, Tab} from '@store/modules/ActiveTab/actions';
 import {useSubscribeToPushNotifications} from '@store/modules/PushNotifications/hooks/useSubscribeToPushNotifications';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {WalkthroughStep} from '@store/modules/Walkthrough/types';
-import React, {ComponentType, RefObject} from 'react';
+import React, {ComponentType, RefObject, useEffect} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
 import Animated from 'react-native-reanimated';
@@ -263,6 +263,10 @@ const MainTabs = () => {
         dispatch(ActiveTabActions.SET_ACTIVE_TAB.STATE.create(tab)),
     });
   };
+
+  useEffect(() => {
+    dispatch(ActiveTabActions.SET_ACTIVE_TAB.STATE.create('home'));
+  }, [dispatch]);
   return (
     <Tabs.Navigator screenOptions={tabOptions} tabBar={MainTabBarComponent}>
       <Tabs.Screen

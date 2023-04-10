@@ -11,6 +11,9 @@ import {AccountActions} from '@store/modules/Account/actions';
 import {userSelector} from '@store/modules/Account/selectors';
 import {WalkthroughActions} from '@store/modules/Walkthrough/actions';
 import {walkthroughStepCandidatesSelector} from '@store/modules/Walkthrough/selectors';
+import {HOME_WALKTHROUGH_STEPS} from '@store/modules/Walkthrough/steps/home';
+import {NEWS_WALKTHROUGH_STEPS} from '@store/modules/Walkthrough/steps/news';
+import {TEAM_WALKTHROUGH_STEPS} from '@store/modules/Walkthrough/steps/team';
 import {
   WalkthroughStep,
   WalkthroughStepKey,
@@ -24,6 +27,18 @@ import {
   select,
   take,
 } from 'redux-saga/effects';
+
+export function getAllSteps({step}: {step: WalkthroughStep}) {
+  if (HOME_WALKTHROUGH_STEPS.some(homeStep => homeStep.key === step.key)) {
+    return HOME_WALKTHROUGH_STEPS;
+  }
+  if (TEAM_WALKTHROUGH_STEPS.some(teamStep => teamStep.key === step.key)) {
+    return TEAM_WALKTHROUGH_STEPS;
+  }
+  if (NEWS_WALKTHROUGH_STEPS.some(newsStep => newsStep.key === step.key)) {
+    return NEWS_WALKTHROUGH_STEPS;
+  }
+}
 
 export function* showWalkthroughSaga() {
   while (true) {
@@ -86,7 +101,11 @@ export function* showWalkthroughSaga() {
         yield call(closeWalkthrough);
 
         if (action.type === WalkthroughActions.SKIP_WALKTHROUGH.STATE.type) {
-          yield call(markAllWalkthroughSteps, user, steps);
+          yield call(
+            markAllWalkthroughSteps,
+            user,
+            getAllSteps({step}) ?? steps,
+          );
         }
 
         break;

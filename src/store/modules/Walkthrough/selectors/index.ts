@@ -62,7 +62,6 @@ export const walkthroughStepCandidatesSelector = createSelector(
     if (!user) {
       return [];
     }
-
     return getStepsByActiveTabAndScreenName({
       activeTab,
     }).reduce<WalkthroughStep[]>((result, step) => {
