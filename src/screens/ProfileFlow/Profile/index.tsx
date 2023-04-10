@@ -41,7 +41,9 @@ export const Profile = memo(() => {
       <StaticContainer animatedIndex={animatedIndex}>
         <UserInfo user={user} />
 
-        <RefreshIceIcon theme={'dark-content'} translateY={translateY} />
+        <View>
+          <RefreshIceIcon theme={'dark-content'} translateY={translateY} />
+        </View>
       </StaticContainer>
 
       <DynamicContainer animatedIndex={animatedIndex}>
