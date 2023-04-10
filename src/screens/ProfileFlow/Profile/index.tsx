@@ -65,7 +65,7 @@ export const Profile = memo(() => {
     interpolate(animatedIndex.value, [0, 0.1], [0, 100]),
   );
 
-  const {} = useOnRefresh({animatedIndex, userId, isOwner});
+  useOnRefresh({animatedIndex, userId, isOwner});
 
   const contacts = useSelector(contactsSelector);
   useFocusStatusBar({style: 'dark-content'});
