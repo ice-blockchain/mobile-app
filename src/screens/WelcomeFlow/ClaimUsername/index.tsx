@@ -23,11 +23,14 @@ export const ClaimUsername = () => {
     isUsernameUpdated,
     onChangeUsername,
     onSubmit,
+    onBack,
   } = useClaimUsername();
 
   return (
     <FinalizeRegistrationStep
       title={t('claimUsername.title')}
+      showBackButton={true}
+      onBackPress={onBack}
       header={
         <BigHeader
           title={t('claimUsername.title')}
