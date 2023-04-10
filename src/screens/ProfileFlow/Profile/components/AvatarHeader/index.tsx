@@ -18,16 +18,17 @@ import {HEADER_HEIGHT} from '@navigation/components/Header';
 import {BackButton} from '@navigation/components/Header/components/BackButton';
 import {SettingsButton} from '@navigation/components/Header/components/SettingsButton';
 import {ShowPrivacyButton} from '@navigation/components/Header/components/ShowPrivacyButton';
+import {AgendaContactTooltip} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/AgendaContactTooltip';
 import {
   AVATAR_RADIUS,
   PEN_SIZE,
   useAnimatedStyles,
 } from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useAnimatedStyles';
+import {useUserContactDetails} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useUserContactDetails';
 import {AnimatedCameraIcon} from '@svg/AnimatedCameraIcon';
 import {font} from '@utils/styles';
-import React, {memo} from 'react';
+import React, {memo, useState} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
-import {Contact} from 'react-native-contacts';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
@@ -42,27 +43,20 @@ const MIN_WIDTH_SIDE_CONTAINERS = rem(80);
 const MIN_WIDTH_SMALL_SIDE_CONTAINERS = rem(40);
 
 type Props = {
-  user?: User | null;
-  uri?: string;
+  user: User | null;
   animatedIndex: SharedValue<number>;
   isOwner: boolean;
   isLoading?: boolean;
-  contact: Contact | undefined;
-  onContactPress: () => void;
 };
 
 export const AvatarHeader = memo(
-  ({
-    user,
-    uri,
-    animatedIndex,
-    isOwner,
-    isLoading = false,
-    contact,
-    onContactPress,
-  }: Props) => {
+  ({user, animatedIndex, isOwner, isLoading = false}: Props) => {
     const {shadowStyle} = useScrollShadow({translateY: animatedIndex});
     const {top: topInset} = useSafeAreaInsets();
+
+    const uri = user?.profilePictureUrl;
+
+    const [isTooltipVisible, setIsTooltipVisible] = useState(false);
 
     const {
       imageAnimatedStyle,
@@ -71,6 +65,8 @@ export const AvatarHeader = memo(
       lettersAvatarStyle,
       iconAvatarStyle,
     } = useAnimatedStyles({animatedIndex});
+
+    const {contactDetails} = useUserContactDetails({user});
 
     const extraPadding = {
       paddingTop: topInset,
@@ -85,90 +81,98 @@ export const AvatarHeader = memo(
     });
 
     return (
-      <Animated.View style={[styles.container, extraPadding, shadowStyle]}>
-        <View
-          style={[
-            styles.leftContainer,
-            !user?.hiddenProfileElements?.length && styles.leftSmallContainer,
-          ]}>
-          <BackButton
-            containerStyle={styles.backButton}
-            color={COLORS.primaryDark}
-          />
-        </View>
-        <View style={styles.wrapper}>
-          <View>
-            <Animated.View style={[imageAnimatedStyle, styles.imageContainer]}>
-              {isLoading && !uri ? (
-                <AvatarSkeleton />
-              ) : (
-                <>
-                  {user ? (
-                    <Avatar
-                      uri={localImage?.path ?? uri}
-                      style={styles.image}
-                      size={AVATAR_SIZE}
-                      borderRadius={AVATAR_RADIUS}
-                      touchableStyle={styles.touchableAvatar}
-                      allowFullScreen={true}
-                    />
-                  ) : (
-                    <Image
-                      source={NOT_FOUND}
-                      resizeMode="stretch"
-                      style={styles.image}
-                    />
-                  )}
-                </>
-              )}
-            </Animated.View>
-            {isOwner && (
-              <AnimatedTouchable
-                style={[penAnimatedStyle, styles.penWrapper]}
-                onPress={onEditPress}
-                disabled={updateAvatarLoading}
-                hitSlop={MIDDLE_BUTTON_HIT_SLOP}>
-                {updateAvatarLoading ? (
-                  <ActivityIndicator style={StyleSheet.absoluteFill} />
+      <View style={styles.touchArea}>
+        <Animated.View style={[styles.container, extraPadding, shadowStyle]}>
+          <View
+            style={[
+              styles.leftContainer,
+              !user?.hiddenProfileElements?.length && styles.leftSmallContainer,
+            ]}>
+            <BackButton
+              containerStyle={styles.backButton}
+              color={COLORS.primaryDark}
+            />
+          </View>
+          <View style={styles.wrapper}>
+            <View>
+              <Animated.View
+                style={[imageAnimatedStyle, styles.imageContainer]}>
+                {isLoading && !uri ? (
+                  <AvatarSkeleton />
                 ) : (
-                  <AnimatedCameraIcon style={iconAvatarStyle} />
+                  <>
+                    {user ? (
+                      <Avatar
+                        uri={localImage?.path ?? uri}
+                        style={styles.image}
+                        size={AVATAR_SIZE}
+                        borderRadius={AVATAR_RADIUS}
+                        touchableStyle={styles.touchableAvatar}
+                        allowFullScreen={true}
+                      />
+                    ) : (
+                      <Image
+                        source={NOT_FOUND}
+                        resizeMode="stretch"
+                        style={styles.image}
+                      />
+                    )}
+                  </>
                 )}
+              </Animated.View>
+              {isOwner && (
+                <AnimatedTouchable
+                  style={[penAnimatedStyle, styles.penWrapper]}
+                  onPress={onEditPress}
+                  disabled={updateAvatarLoading}
+                  hitSlop={MIDDLE_BUTTON_HIT_SLOP}>
+                  {updateAvatarLoading ? (
+                    <ActivityIndicator style={StyleSheet.absoluteFill} />
+                  ) : (
+                    <AnimatedCameraIcon style={iconAvatarStyle} />
+                  )}
+                </AnimatedTouchable>
+              )}
+            </View>
+            {contactDetails && (
+              <AnimatedTouchable
+                style={[styles.miniAvatarContainer, lettersAvatarStyle]}
+                onPress={() => setIsTooltipVisible(state => !state)}>
+                <Animated.View
+                  style={[styles.lettersAvatar, lettersAvatarStyle]}>
+                  <ContactAvatar
+                    sideSize={rem(30)}
+                    borderRadius={rem(10)}
+                    textStyle={styles.avatarText}
+                    contact={contactDetails}
+                  />
+                </Animated.View>
               </AnimatedTouchable>
             )}
+            {user && (
+              <Animated.Text
+                style={[styles.usernameText, textStyle]}
+                numberOfLines={1}>
+                {`@${user?.username}`}
+              </Animated.Text>
+            )}
           </View>
-          {contact && (
-            <AnimatedTouchable
-              style={[styles.miniAvatarContainer, lettersAvatarStyle]}
-              onPress={onContactPress}>
-              <Animated.View style={[styles.lettersAvatar, lettersAvatarStyle]}>
-                <ContactAvatar
-                  sideSize={rem(30)}
-                  borderRadius={rem(10)}
-                  textStyle={styles.avatarText}
-                  contact={contact}
-                />
-              </Animated.View>
-            </AnimatedTouchable>
-          )}
-          {user && (
-            <Animated.Text
-              style={[styles.usernameText, textStyle]}
-              numberOfLines={1}>
-              {`@${user?.username}`}
-            </Animated.Text>
-          )}
-        </View>
-        <View
-          style={[
-            styles.rightContainer,
-            !user?.hiddenProfileElements?.length && styles.rightSmallContainer,
-          ]}>
-          {isOwner && user && user?.hiddenProfileElements?.length && (
-            <ShowPrivacyButton containerStyle={styles.showPrivacyButton} />
-          )}
-          {isOwner && user && <SettingsButton />}
-        </View>
-      </Animated.View>
+          <View
+            style={[
+              styles.rightContainer,
+              !user?.hiddenProfileElements?.length &&
+                styles.rightSmallContainer,
+            ]}>
+            {isOwner && user && user?.hiddenProfileElements?.length && (
+              <ShowPrivacyButton containerStyle={styles.showPrivacyButton} />
+            )}
+            {isOwner && user && <SettingsButton />}
+          </View>
+        </Animated.View>
+        {contactDetails && isTooltipVisible && !isOwner && (
+          <AgendaContactTooltip contact={contactDetails} />
+        )}
+      </View>
     );
   },
 );
@@ -261,4 +265,7 @@ const styles = StyleSheet.create({
     marginVertical: rem(10),
   },
   showPrivacyButton: {marginRight: rem(16)},
+  touchArea: {
+    zIndex: 1,
+  },
 });

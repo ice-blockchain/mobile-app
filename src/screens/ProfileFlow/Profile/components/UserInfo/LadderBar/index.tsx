@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {User} from '@api/user/types';
-import {LadderItem} from '@screens/ProfileFlow/Profile/components/LadderBar/components/LadderItem';
+import {LadderItem} from '@screens/ProfileFlow/Profile/components/UserInfo/LadderBar/components/LadderItem';
 import {
   isPrivacyInfoShownSelector,
   userSelector,

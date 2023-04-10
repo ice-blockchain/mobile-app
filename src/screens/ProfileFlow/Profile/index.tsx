@@ -9,27 +9,26 @@ import {HEADER_HEIGHT} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {MainStackParamList} from '@navigation/Main';
 import {RouteProp, useFocusEffect, useRoute} from '@react-navigation/native';
-import {AgendaContactTooltip} from '@screens/ProfileFlow/Profile/components/AgendaContactTooltip';
 import {AvatarHeader} from '@screens/ProfileFlow/Profile/components/AvatarHeader';
 import {Badges} from '@screens/ProfileFlow/Profile/components/Badges';
 import {DynamicHeight} from '@screens/ProfileFlow/Profile/components/DynamicHeight';
 import {Invite} from '@screens/ProfileFlow/Profile/components/Invite';
-import {LadderBar} from '@screens/ProfileFlow/Profile/components/LadderBar';
 import {MiningCalculator} from '@screens/ProfileFlow/Profile/components/MiningCalculator';
+import {NotFound} from '@screens/ProfileFlow/Profile/components/NotFound';
 import {Role} from '@screens/ProfileFlow/Profile/components/Role';
+import {
+  USER_INFO_HEIGHT,
+  UserInfo,
+} from '@screens/ProfileFlow/Profile/components/UserInfo';
 import {useOnRefresh} from '@screens/ProfileFlow/Profile/hooks/useOnRefresh';
-import {useUserContactDetails} from '@screens/ProfileFlow/Profile/hooks/useUserContactDetails';
 import {userSelector} from '@store/modules/Account/selectors';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {UsersActions} from '@store/modules/Users/actions';
 import {userByIdSelector} from '@store/modules/Users/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
-import {t} from '@translations/i18n';
-import {font} from '@utils/styles';
-import React, {memo, useCallback, useEffect, useMemo, useState} from 'react';
-import {LayoutChangeEvent} from 'react-native';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import React, {memo, useCallback, useEffect, useMemo} from 'react';
+import {StyleSheet, View} from 'react-native';
 import Animated, {
   Extrapolate,
   interpolate,
@@ -42,14 +41,7 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem, screenHeight} from 'rn-units';
 
-const NOT_FOUND_BG = require('./assets/images/notFoundBg.png');
-
-const DEFAULT_CORNER_RADIUS = rem(30);
-
 export const Profile = memo(() => {
-  const [isTooltipVisible, setIsTooltipVisible] = useState(false);
-  const [refreshYPosition, setRefreshYPosition] = useState(0);
-
   const authUser = useSelector(userSelector) as User;
   const route = useRoute<RouteProp<MainStackParamList, 'UserProfile'>>();
   const isOwner = !route.params || route.params.userId === authUser?.id;
@@ -75,7 +67,8 @@ export const Profile = memo(() => {
     isLoadingSelector.bind(null, UsersActions.GET_USER_BY_ID),
   );
 
-  const userExist = !!user;
+  const userExists = !!user;
+
   useEffect(() => {
     if (!isOwner) {
       dispatch(UsersActions.GET_USER_BY_ID.START.create(route.params.userId));
@@ -93,19 +86,17 @@ export const Profile = memo(() => {
     }, [dispatch, userId]),
   );
 
-  const {contactDetails} = useUserContactDetails({user});
-
   const snapPointsData = useMemo(() => {
     const collapsed = screenHeight - HEADER_HEIGHT - topInset;
 
     const expanded =
-      screenHeight - refreshYPosition - HEADER_HEIGHT - topInset - rem(20);
+      screenHeight - USER_INFO_HEIGHT - HEADER_HEIGHT - topInset - rem(20);
 
     return {
       points: [expanded, collapsed],
       delta: Math.abs(collapsed - expanded),
     };
-  }, [topInset, refreshYPosition]);
+  }, [topInset]);
 
   const animatedImageContainerStyle = useAnimatedStyle(() => ({
     transform: [
@@ -127,7 +118,11 @@ export const Profile = memo(() => {
      * Without it after animation completed - animated corner is blinking
      */
     const borderRadius = withTiming(
-      interpolate(animatedIndex.value, [0, 1], [DEFAULT_CORNER_RADIUS, 0]),
+      interpolate(
+        animatedIndex.value,
+        [0, 1],
+        [commonStyles.baseSubScreen.borderTopLeftRadius, 0],
+      ),
       {duration: 100},
     );
     return {
@@ -137,46 +132,25 @@ export const Profile = memo(() => {
   });
 
   return (
-    <View style={styles.container}>
-      <View style={styles.touchArea}>
-        <AvatarHeader
-          user={user}
-          animatedIndex={animatedIndex}
-          uri={user?.profilePictureUrl}
-          isLoading={isLoading}
-          isOwner={isOwner}
-          contact={contactDetails}
-          onContactPress={() => {
-            setIsTooltipVisible(state => !state);
-          }}
-        />
-        {contactDetails && isTooltipVisible && !isOwner && (
-          <AgendaContactTooltip contact={contactDetails} />
-        )}
-      </View>
+    <View style={commonStyles.flexOne}>
+      <AvatarHeader
+        user={user}
+        animatedIndex={animatedIndex}
+        isLoading={isLoading}
+        isOwner={isOwner}
+      />
 
       <Animated.View
         style={[styles.imageContainer, animatedImageContainerStyle]}>
         <LinesBackground />
 
-        <Text style={styles.usernameText} numberOfLines={1}>
-          {`@${user?.username}` || ''}
-        </Text>
-        <View style={styles.ladderContainer}>
-          {userExist && <LadderBar user={user} />}
-          {!userExist && <View style={styles.emptyLadder} />}
-        </View>
+        {userExists && <UserInfo user={user} />}
 
-        <View
-          onLayout={({nativeEvent}: LayoutChangeEvent) => {
-            setRefreshYPosition(nativeEvent.layout.y);
-          }}>
-          <RefreshIceIcon
-            theme={'dark-content'}
-            refreshing={false}
-            translateY={translateY}
-          />
-        </View>
+        <RefreshIceIcon
+          theme={'dark-content'}
+          refreshing={false}
+          translateY={translateY}
+        />
       </Animated.View>
 
       <DynamicHeight
@@ -188,7 +162,7 @@ export const Profile = memo(() => {
             animatedBorderRadius,
             {backgroundColor: COLORS.white},
           ]}>
-          {userExist && (
+          {userExists && (
             <>
               <Role isOwner={isOwner} user={user} />
               <Badges user={user} />
@@ -196,17 +170,7 @@ export const Profile = memo(() => {
               <MiningCalculator />
             </>
           )}
-          {!userExist && !isLoading && (
-            <>
-              <Image source={NOT_FOUND_BG} style={styles.notFoundBg} />
-              <Text style={styles.notFoundTitle}>
-                {t('profile.not_found.title')}
-              </Text>
-              <Text style={styles.notFoundDescription}>
-                {t('profile.not_found.description')}
-              </Text>
-            </>
-          )}
+          {!userExists && !isLoading && <NotFound />}
         </Animated.View>
       </DynamicHeight>
     </View>
@@ -214,15 +178,6 @@ export const Profile = memo(() => {
 });
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.white,
-  },
-  cardContainer: {
-    backgroundColor: COLORS.white,
-    flex: 1,
-  },
-
   imageContainer: {
     marginTop: rem(20),
     flexGrow: 1,
@@ -230,39 +185,6 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     borderTopLeftRadius: rem(30),
     borderTopRightRadius: rem(30),
-  },
-
-  ladderContainer: {
-    marginTop: rem(15),
-    marginBottom: rem(15),
-  },
-  usernameText: {
-    marginTop: rem(67),
-    alignSelf: 'center',
-    ...font(17, 20.4, 'semibold'),
-  },
-  touchArea: {
-    zIndex: 1,
-  },
-  emptyLadder: {
-    height: rem(75),
-  },
-  notFoundBg: {
-    alignSelf: 'center',
-    width: rem(245),
-    height: rem(219),
-  },
-  notFoundTitle: {
-    ...font(24, 29, 'black', 'primaryDark'),
-    marginHorizontal: rem(20),
-    textAlign: 'center',
-    marginTop: rem(20),
-    marginBottom: rem(16),
-  },
-  notFoundDescription: {
-    ...font(14, 20, 'medium', 'secondary'),
-    marginHorizontal: rem(20),
-    textAlign: 'center',
   },
   inviteSection: {marginTop: rem(15)},
 });
