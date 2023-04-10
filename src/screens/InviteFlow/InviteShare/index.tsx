@@ -28,9 +28,13 @@ export const InviteShare = memo(() => {
         <View style={styles.shareSubstrate} />
         <LinesBackground style={styles.bg} />
         <Text style={styles.description}>
-          {replaceString(t('invite_share.description'), tagRegex('ice'), () => (
-            <IceLabel iconOffsetY={isAndroid ? 3 : 2} />
-          ))}
+          {replaceString(
+            t('invite_share.description'),
+            tagRegex('ice'),
+            (match, index) => (
+              <IceLabel key={match + index} iconOffsetY={isAndroid ? 3 : 2} />
+            ),
+          )}
         </Text>
         <Image source={icon} style={styles.icon} />
         <ShareCard />
