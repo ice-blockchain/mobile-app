@@ -7,9 +7,11 @@ import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors
 import {hapticFeedback} from '@utils/device';
 import {useCallback, useRef} from 'react';
 import {
+  interpolate,
   runOnJS,
   SharedValue,
   useAnimatedReaction,
+  useDerivedValue,
 } from 'react-native-reanimated';
 import {useDispatch, useSelector} from 'react-redux';
 
@@ -64,6 +66,10 @@ export const useOnRefresh = ({animatedIndex, userId, isOwner}: Props) => {
     canBeActivatedRef.current = true;
   };
 
+  const translateY = useDerivedValue(() =>
+    interpolate(animatedIndex.value, [0, 0.1], [0, 100]),
+  );
+
   useAnimatedReaction(
     () => {
       return animatedIndex.value <= -0.18;
@@ -88,5 +94,5 @@ export const useOnRefresh = ({animatedIndex, userId, isOwner}: Props) => {
     [animatedIndex],
   );
 
-  return {onRefresh, refreshing};
+  return {onRefresh, refreshing, translateY};
 };

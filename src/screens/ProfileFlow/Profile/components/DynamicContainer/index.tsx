@@ -8,6 +8,7 @@ import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffse
 import {STATIC_CONTENT_TOP_OFFSET} from '@screens/ProfileFlow/Profile/components/StaticContainer';
 import {USER_INFO_HEIGHT} from '@screens/ProfileFlow/Profile/components/UserInfo';
 import React, {ReactNode, useMemo} from 'react';
+import {StyleSheet} from 'react-native';
 import Animated, {
   interpolate,
   SharedValue,
@@ -81,7 +82,7 @@ export const DynamicContainer = ({children, animatedIndex}: Props) => {
           style={[
             commonStyles.flexOne,
             animatedBorderRadius,
-            {backgroundColor: COLORS.linkWater},
+            styles.container,
           ]}>
           {children}
         </Animated.View>
@@ -89,3 +90,9 @@ export const DynamicContainer = ({children, animatedIndex}: Props) => {
     </BottomSheet>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: COLORS.white,
+  },
+});
