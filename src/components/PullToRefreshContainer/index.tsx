@@ -19,7 +19,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import {Gesture, GestureDetector} from 'react-native-gesture-handler';
-import {
+import Animated, {
   AnimateProps,
   cancelAnimation,
   Extrapolate,
@@ -45,6 +45,7 @@ interface Props {
     AnimateProps<ScrollViewProps | FlatListProps<unknown>>
   >;
   theme?: ActivityIndicatorTheme;
+  onScrollTranslateY?: Animated.SharedValue<number>;
 }
 
 /**
@@ -66,6 +67,7 @@ export const PullToRefreshContainer = ({
   refreshing,
   onRefresh: onRefreshProps,
   children,
+  onScrollTranslateY,
 }: Props) => {
   const [isContentScrolled, setContentScrolled] = useState(false);
 
@@ -75,6 +77,10 @@ export const PullToRefreshContainer = ({
 
   const scrollHandler = useAnimatedScrollHandler(({contentOffset: {y}}) => {
     translateYScrollable.value = y;
+
+    if (onScrollTranslateY) {
+      onScrollTranslateY.value = y;
+    }
   });
 
   const onRefresh = useCallback(() => {
