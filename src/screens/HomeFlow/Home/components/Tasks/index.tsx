@@ -112,7 +112,6 @@ export const Tasks = memo(({highlightActiveTask}: Props) => {
                 task={task}
                 highlightActiveTask={highlightActiveTask}
                 active={index === currentActiveTaskIndex}
-                isLastItem={index === tasks.length - 1}
                 areAllBeforeCompleted={allBeforeCompleted}
               />
             );

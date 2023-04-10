@@ -36,13 +36,11 @@ const TaskIcon = memo(({type}: TaskIconProps) => {
 export const TaskItem = ({
   task,
   active,
-  isLastItem,
   areAllBeforeCompleted,
   highlightActiveTask,
 }: {
   task: Task;
   active: boolean;
-  isLastItem: boolean;
   areAllBeforeCompleted: boolean;
   highlightActiveTask?: boolean;
 }) => {
@@ -64,7 +62,6 @@ export const TaskItem = ({
         active && styles.containerActive,
         active && highlightActiveTask && styles.activeHighlighted,
         active && commonStyles.shadow,
-        isLastItem && styles.lastItem,
       ]}
       disabled={!active}
       onPress={onPress}>
@@ -125,8 +122,8 @@ const styles = StyleSheet.create({
     ...Platform.select({
       android: {
         /*
-         * Added extra margin because shadow disapper
-         * when active tasks changes
+         * Added extra margin because shadow disappears
+         * when active tasks are changed
          */
         margin: StyleSheet.hairlineWidth,
       },
@@ -169,5 +166,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  lastItem: {marginBottom: rem(10)},
 });
