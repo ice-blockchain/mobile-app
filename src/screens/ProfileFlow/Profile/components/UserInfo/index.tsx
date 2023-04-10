@@ -8,7 +8,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
-  user: User;
+  user: User | null;
 };
 
 export const USER_INFO_HEIGHT = rem(173);
@@ -17,10 +17,10 @@ export const UserInfo = ({user}: Props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.usernameText} numberOfLines={1}>
-        {`@${user.username}`}
+        {`@${user?.username ?? ''}`}
       </Text>
       <View style={styles.ladderContainer}>
-        <LadderBar user={user} />
+        {!!user && <LadderBar user={user} />}
       </View>
     </View>
   );

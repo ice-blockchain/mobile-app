@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     ...font(14, 20, 'regular', 'primaryDark'),
   },
   container: {
-    marginTop: rem(26),
+    marginTop: rem(15),
     marginBottom: rem(10),
   },
   infoButton: {
