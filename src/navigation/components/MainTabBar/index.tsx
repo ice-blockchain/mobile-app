@@ -10,6 +10,7 @@ import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
 export const MAIN_TAB_BAR_HEIGHT = rem(74);
+export const MAIN_TAB_BAR_MAX_OFFSET = rem(12);
 
 export const MainTabBar = ({
   state,
@@ -21,7 +22,7 @@ export const MainTabBar = ({
   const NUMBER_OF_RIGHT_ICONS = 2;
   const leftRoutes = state.routes.slice(0, NUMBER_OF_LEFT_ICONS);
   const rightRoutes = state.routes.slice(-NUMBER_OF_RIGHT_ICONS);
-  const bottomOffset = Math.min(rem(12), insets.bottom);
+  const bottomOffset = Math.min(rem(MAIN_TAB_BAR_MAX_OFFSET), insets.bottom);
   const isKeyboardShown = useIsKeyboardShown();
 
   if (isKeyboardShown) {
