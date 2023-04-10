@@ -66,14 +66,18 @@ export const LevelRow = React.memo(
         <Touchable style={styles.rowContent} onPress={onPress}>
           <View style={[styles.flank, !active && styles.semitransparent]}>
             <View style={styles.leftTextContainer}>
-              <Text style={styles.valueText}>{`${formatNumberString(
-                item.baseMiningRate,
-              )}/${t('general.hours_short')}`}</Text>
+              <Text style={styles.valueText}>
+                {formatNumberString(item.baseMiningRate, {
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 3,
+                })}
+              </Text>
               <View style={styles.leftIconContainer}>
                 <IceLabel
                   iconOffsetY={isAndroid ? 4 : 2}
                   textStyle={styles.valueCurrencyText}
                   iconSize={rem(12)}
+                  label={t('general.ice_per_hour')}
                 />
               </View>
             </View>

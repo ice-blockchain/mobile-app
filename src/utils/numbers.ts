@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 import compactFormat from 'cldr-compact-number';
+import lodashDropRightWhile from 'lodash/dropRightWhile';
 import {isIOS} from 'rn-units';
 
 const formatters: {[key: string]: Intl.NumberFormat} = {};
@@ -50,7 +51,19 @@ export function parseNumber(input: string) {
  * 1,234,567.1 -> 1,234,567.10
  * 1234567.1 -> 1,234,567.10
  */
-export function formatNumberString(input: string, fractionDigits: number = 2) {
+export function formatNumberString(
+  input: string,
+  {
+    minimumFractionDigits,
+    maximumFractionDigits,
+  }: {
+    minimumFractionDigits: number;
+    maximumFractionDigits: number;
+  } = {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  },
+) {
   const [whole, decimals] = input.split('.');
 
   /**
@@ -61,13 +74,16 @@ export function formatNumberString(input: string, fractionDigits: number = 2) {
     .replace(/[^0-9+-]/g, '')
     .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-  if (!fractionDigits) {
+  if (maximumFractionDigits === 0) {
     return formattedWhole;
   }
 
-  return (
-    formattedWhole +
-    '.' +
-    (decimals ?? '').substring(0, fractionDigits).padEnd(fractionDigits, '0')
-  );
+  const formattedDecimals = lodashDropRightWhile(
+    (decimals ?? '')
+      .substring(0, maximumFractionDigits)
+      .padEnd(minimumFractionDigits, '0'),
+    (value, index) => value === '0' && index >= minimumFractionDigits,
+  ).join('');
+
+  return formattedWhole + (formattedDecimals ? `.${formattedDecimals}` : '');
 }
