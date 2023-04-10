@@ -6,7 +6,7 @@ import {
   NotificationDomainToggle,
 } from '@api/devices/types';
 import {SocialType} from '@screens/InviteFlow/InviteShare/components/ShareButton/types';
-import {Attributes, trackEvent} from '@services/analytics';
+import {Attributes, trackEvent, trackScreenView} from '@services/analytics';
 import {dayjs} from '@services/dayjs';
 import {store} from '@store/configureStore';
 import {appLocaleSelector} from '@store/modules/Account/selectors';
@@ -38,6 +38,17 @@ export const EVENT_NAMES = {
   SHARE_PROFILE_USERNAME: 'Share Telegram Username',
   PING: 'Ping',
 } as const;
+
+const NOT_TRACKABLE_SCREENS = new Set([
+  'PopUp',
+  'Tooltip',
+  'ImageView',
+  'ActionSheet',
+  'DateSelect',
+  'JoinTelegramPopUp',
+  'CountrySelect',
+  'ContextualMenu',
+]);
 
 export const AnalyticsEventLogger = {
   trackEvent: (params: {eventName: EventNamesType}) => {
@@ -72,10 +83,9 @@ export const AnalyticsEventLogger = {
     }
   },
   trackViewScreen: ({screenName}: {screenName: string}) => {
-    trackEvent({
-      eventName: EVENT_NAMES.VIEW_SCREEN,
-      eventProps: {'Screen Name': screenName},
-    });
+    if (!NOT_TRACKABLE_SCREENS.has(screenName)) {
+      trackScreenView({screenName});
+    }
   },
   trackClaimBonus: ({
     claimBonusResult,
