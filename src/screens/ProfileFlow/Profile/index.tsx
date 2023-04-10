@@ -5,34 +5,31 @@ import {LinesBackground} from '@components/LinesBackground';
 import {RefreshIceIcon} from '@components/RefreshControl';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import BottomSheet, {BottomSheetScrollView} from '@gorhom/bottom-sheet';
 import {HEADER_HEIGHT} from '@navigation/components/Header';
-import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {MainStackParamList} from '@navigation/Main';
 import {RouteProp, useFocusEffect, useRoute} from '@react-navigation/native';
 import {AgendaContactTooltip} from '@screens/ProfileFlow/Profile/components/AgendaContactTooltip';
 import {AvatarHeader} from '@screens/ProfileFlow/Profile/components/AvatarHeader';
 import {Badges} from '@screens/ProfileFlow/Profile/components/Badges';
+import {DynamicHeight} from '@screens/ProfileFlow/Profile/components/DynamicHeight';
 import {Invite} from '@screens/ProfileFlow/Profile/components/Invite';
 import {LadderBar} from '@screens/ProfileFlow/Profile/components/LadderBar';
 import {MiningCalculator} from '@screens/ProfileFlow/Profile/components/MiningCalculator';
 import {Role} from '@screens/ProfileFlow/Profile/components/Role';
 import {useOnRefresh} from '@screens/ProfileFlow/Profile/hooks/useOnRefresh';
+import {useUserContactDetails} from '@screens/ProfileFlow/Profile/hooks/useUserContactDetails';
 import {userSelector} from '@store/modules/Account/selectors';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
-import {contactsSelector} from '@store/modules/Contacts/selectors';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {UsersActions} from '@store/modules/Users/actions';
 import {userByIdSelector} from '@store/modules/Users/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {t} from '@translations/i18n';
-import {e164PhoneNumber} from '@utils/phoneNumber';
 import {font} from '@utils/styles';
 import React, {memo, useCallback, useEffect, useMemo, useState} from 'react';
 import {LayoutChangeEvent} from 'react-native';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {Contact} from 'react-native-contacts';
 import Animated, {
   Extrapolate,
   interpolate,
@@ -51,9 +48,8 @@ const DEFAULT_CORNER_RADIUS = rem(30);
 
 export const Profile = memo(() => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
-  const [contactDetails, setContactDetails] = useState<Contact>();
   const [refreshYPosition, setRefreshYPosition] = useState(0);
-  const tabBarOffset = useBottomTabBarOffsetStyle();
+
   const authUser = useSelector(userSelector) as User;
   const route = useRoute<RouteProp<MainStackParamList, 'UserProfile'>>();
   const isOwner = !route.params || route.params.userId === authUser?.id;
@@ -67,7 +63,6 @@ export const Profile = memo(() => {
 
   useOnRefresh({animatedIndex, userId, isOwner});
 
-  const contacts = useSelector(contactsSelector);
   useFocusStatusBar({style: 'dark-content'});
 
   const dispatch = useDispatch();
@@ -92,28 +87,13 @@ export const Profile = memo(() => {
     }
   }, [userId, dispatch, isOwner, route.params]);
 
-  useEffect(() => {
-    if (user && user.phoneNumber && contacts?.length > 0) {
-      const userContactDetails = contacts.find(contact => {
-        return contact.phoneNumbers.find(phoneNumber => {
-          const normalizedNumber = e164PhoneNumber(
-            phoneNumber.number,
-            user.country,
-          );
-          return normalizedNumber === user.phoneNumber;
-        });
-      });
-      if (userContactDetails) {
-        setContactDetails(userContactDetails);
-      }
-    }
-  }, [contacts, user]);
-
   useFocusEffect(
     useCallback(() => {
       dispatch(AchievementsActions.USER_ACHIEVEMENTS_LOAD.START.create(userId));
     }, [dispatch, userId]),
   );
+
+  const {contactDetails} = useUserContactDetails({user});
 
   const snapPointsData = useMemo(() => {
     const collapsed = screenHeight - HEADER_HEIGHT - topInset;
@@ -199,48 +179,36 @@ export const Profile = memo(() => {
         </View>
       </Animated.View>
 
-      <BottomSheet
+      <DynamicHeight
         snapPoints={snapPointsData.points}
-        handleComponent={null}
-        handleHeight={0}
-        animateOnMount={false}
-        enableOverDrag
-        animatedIndex={animatedIndex}
-        overDragResistanceFactor={10}
-        backgroundStyle={commonStyles.baseSubScreen}
-        activeOffsetY={[-5, 5]}>
-        <BottomSheetScrollView
-          style={commonStyles.flexOne}
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={tabBarOffset.current}>
-          <Animated.View
-            style={[
-              commonStyles.flexOne,
-              animatedBorderRadius,
-              {backgroundColor: COLORS.white},
-            ]}>
-            {userExist && (
-              <>
-                <Role isOwner={isOwner} user={user} />
-                <Badges user={user} />
-                <Invite style={styles.inviteSection} />
-                <MiningCalculator />
-              </>
-            )}
-            {!userExist && !isLoading && (
-              <>
-                <Image source={NOT_FOUND_BG} style={styles.notFoundBg} />
-                <Text style={styles.notFoundTitle}>
-                  {t('profile.not_found.title')}
-                </Text>
-                <Text style={styles.notFoundDescription}>
-                  {t('profile.not_found.description')}
-                </Text>
-              </>
-            )}
-          </Animated.View>
-        </BottomSheetScrollView>
-      </BottomSheet>
+        animatedIndex={animatedIndex}>
+        <Animated.View
+          style={[
+            commonStyles.flexOne,
+            animatedBorderRadius,
+            {backgroundColor: COLORS.white},
+          ]}>
+          {userExist && (
+            <>
+              <Role isOwner={isOwner} user={user} />
+              <Badges user={user} />
+              <Invite style={styles.inviteSection} />
+              <MiningCalculator />
+            </>
+          )}
+          {!userExist && !isLoading && (
+            <>
+              <Image source={NOT_FOUND_BG} style={styles.notFoundBg} />
+              <Text style={styles.notFoundTitle}>
+                {t('profile.not_found.title')}
+              </Text>
+              <Text style={styles.notFoundDescription}>
+                {t('profile.not_found.description')}
+              </Text>
+            </>
+          )}
+        </Animated.View>
+      </DynamicHeight>
     </View>
   );
 });
