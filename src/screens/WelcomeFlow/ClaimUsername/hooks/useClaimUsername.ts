@@ -53,6 +53,10 @@ export const useClaimUsername = () => {
     }
   };
 
+  const onBack = () => {
+    dispatch(AccountActions.SIGN_OUT.START.create());
+  };
+
   const resetError = () => {
     if (validationError) {
       dispatch(ValidationActions.USERNAME_VALIDATION.RESET.create());
@@ -118,5 +122,6 @@ export const useClaimUsername = () => {
     isUsernameUpdated,
     onChangeUsername,
     onSubmit,
+    onBack,
   };
 };
