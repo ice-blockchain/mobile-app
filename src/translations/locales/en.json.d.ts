@@ -384,7 +384,6 @@ export type Translations = {
   'search.nothing_is_found': null;
   'search.search_by_country': null;
   'search.search_for_users': null;
-  'search.loading': null;
   'tabbar.mining_inactive_tooltip': null;
   'tabbar.mining_reset_tooltip': null;
   'tabbar.mining_holiday_reset_tooltip': null;
