@@ -263,6 +263,7 @@ const MainTabs = () => {
         dispatch(ActiveTabActions.SET_ACTIVE_TAB.STATE.create(tab)),
     });
   };
+
   return (
     <Tabs.Navigator screenOptions={tabOptions} tabBar={MainTabBarComponent}>
       <Tabs.Screen
