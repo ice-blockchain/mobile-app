@@ -31,7 +31,7 @@ import {rem} from 'rn-units';
 
 type RefreshIceIconProps = {
   translateY: SharedValue<number>;
-  refreshing?: boolean;
+  refreshing: boolean;
   style?: StyleProp<ViewStyle>;
   theme?: ActivityIndicatorTheme;
 };

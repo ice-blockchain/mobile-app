@@ -42,7 +42,11 @@ export const Profile = memo(() => {
         <UserInfo user={user} />
 
         <View>
-          <RefreshIceIcon theme={'dark-content'} translateY={translateY} />
+          <RefreshIceIcon
+            theme={'dark-content'}
+            refreshing={false}
+            translateY={translateY}
+          />
         </View>
       </StaticContainer>
 
