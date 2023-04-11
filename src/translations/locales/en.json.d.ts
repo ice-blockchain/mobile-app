@@ -109,6 +109,7 @@ export type Translations = {
   'errors.validation_expired': null;
   'errors.validation_not_found': null;
   'errors.invalid_email': null;
+  'errors.invalid_password': null;
   'errors.invalid_ref_username': null;
   'errors.invalid_phone': null;
   'errors.user_disabled': null;
