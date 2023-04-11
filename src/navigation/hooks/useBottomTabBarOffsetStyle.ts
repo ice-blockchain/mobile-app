@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {
   MAIN_TAB_BAR_HEIGHT,
   MAIN_TAB_BAR_MAX_OFFSET,
@@ -8,7 +9,6 @@ import {TAB_BAR_MINING_ITEM_TOP_OFFSET} from '@navigation/components/MainTabBar/
 import {BottomTabBarHeightContext} from '@react-navigation/bottom-tabs';
 import {useContext, useMemo} from 'react';
 import {StyleSheet} from 'react-native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
 
 type Params = {

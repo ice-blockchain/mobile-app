@@ -16,6 +16,7 @@ import {permissionsReducer} from '@store/modules/Permissions/reducer';
 import {rateAppReducer} from '@store/modules/RateApp/reducer';
 import {referralsReducer} from '@store/modules/Referrals/reducer';
 import {statsReducer} from '@store/modules/Stats/reducer';
+import {statusNotice} from '@store/modules/StatusNotice/reducer';
 import {tokenomicsReducer} from '@store/modules/Tokenomics/reducer';
 import {usersReducer} from '@store/modules/Users/reducer';
 import {processStatusesReducer} from '@store/modules/UtilityProcessStatuses/reducer';
@@ -40,6 +41,7 @@ export const rootReducer = combineReducers({
   linking: linkingReducer,
   notifications: notificationsReducer,
   users: usersReducer,
+  statusNotice,
   tokenomics: tokenomicsReducer,
   rateApp: rateAppReducer,
   walkthrough: walkthroughReducer,

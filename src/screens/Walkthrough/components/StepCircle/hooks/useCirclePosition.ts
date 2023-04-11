@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {
   CIRCLE_DIAMETER,
   CIRCLE_TO_ELEMENT_OFFSET,
@@ -7,7 +8,6 @@ import {
   MAX_CIRCLE_OFFSCREEN_TOP,
 } from '@screens/Walkthrough/constants';
 import {useMemo} from 'react';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {screenHeight} from 'rn-units/index';
 
 type Props = {

@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {statusNotice} from '@api/statusNotice';
+
 import {achievements} from './achievements';
 import {devices} from './devices';
 import {news} from './news';
@@ -22,6 +24,7 @@ export const Api = Object.freeze({
   tokenomics,
   news,
   notifications,
+  statusNotice,
   tasks,
   time,
 });

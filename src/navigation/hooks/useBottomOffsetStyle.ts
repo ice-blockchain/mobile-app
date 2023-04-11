@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useMemo} from 'react';
 import {StyleSheet} from 'react-native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
 
 type Params = {
