@@ -160,6 +160,7 @@
     "validation_expired": "Validation expired",
     "validation_not_found": "Validation not found",
     "invalid_email": "Invalid email",
+    "invalid_password": "Invalid password",
     "invalid_ref_username": "Nickname is invalid.",
     "invalid_phone": "Invalid phone number",
     "user_disabled": "User has been disabled",

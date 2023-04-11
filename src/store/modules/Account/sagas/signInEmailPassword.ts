@@ -9,6 +9,7 @@ import {call, put} from 'redux-saga/effects';
 
 enum ValidateError {
   InvalidEmail,
+  InvalidPassword,
 }
 
 export function* signInEmailPasswordSaga(
@@ -23,17 +24,33 @@ export function* signInEmailPasswordSaga(
       throw {code: ValidateError.InvalidEmail};
     }
 
+    if (!password) {
+      throw {code: ValidateError.InvalidPassword};
+    }
+
     yield call(signInWithEmailAndPassword, email, password);
 
     yield put(AccountActions.SIGN_IN_EMAIL_PASSWORD.SUCCESS.create());
   } catch (error) {
-    if (checkProp(error, 'code') && error.code === ValidateError.InvalidEmail) {
-      yield put(
-        AccountActions.SIGN_IN_EMAIL_PASSWORD.FAILED.create(
-          t('errors.invalid_email'),
-          {field: 'email'},
-        ),
-      );
+    if (checkProp(error, 'code')) {
+      switch (error.code) {
+        case ValidateError.InvalidEmail:
+          yield put(
+            AccountActions.SIGN_IN_EMAIL_PASSWORD.FAILED.create(
+              t('errors.invalid_email'),
+              {field: 'email'},
+            ),
+          );
+          break;
+        case ValidateError.InvalidPassword:
+          yield put(
+            AccountActions.SIGN_IN_EMAIL_PASSWORD.FAILED.create(
+              t('errors.invalid_password'),
+              {field: 'password'},
+            ),
+          );
+          break;
+      }
     } else {
       yield put(
         AccountActions.SIGN_IN_EMAIL_PASSWORD.FAILED.create(
