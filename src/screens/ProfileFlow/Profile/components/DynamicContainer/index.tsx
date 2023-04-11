@@ -10,10 +10,10 @@ import {USER_INFO_HEIGHT} from '@screens/ProfileFlow/Profile/components/UserInfo
 import React, {ReactNode, useMemo} from 'react';
 import {StyleSheet} from 'react-native';
 import Animated, {
+  Extrapolate,
   interpolate,
   SharedValue,
   useAnimatedStyle,
-  withTiming,
 } from 'react-native-reanimated';
 import {
   useSafeAreaFrame,
@@ -44,18 +44,17 @@ export const DynamicContainer = ({children, animatedIndex}: Props) => {
   }, [frame.height, topInset]);
 
   const animatedBorderRadius = useAnimatedStyle(() => {
-    /**
-     * withTiming is required here to make border radius
-     * animation more smooth
-     * Without it after animation completed - animated corner is blinking
-     */
-    const borderRadius = withTiming(
-      interpolate(
-        animatedIndex.value,
-        [0, 1],
-        [commonStyles.baseSubScreen.borderTopLeftRadius, 0],
-      ),
-      {duration: 100},
+    const borderRadius = interpolate(
+      animatedIndex.value,
+      [0, 1],
+      [
+        commonStyles.baseSubScreen.borderTopLeftRadius,
+        /**
+         * If set to 0 (zero), animated corner is blinking
+         */
+        StyleSheet.hairlineWidth,
+      ],
+      Extrapolate.CLAMP,
     );
     return {
       borderTopLeftRadius: borderRadius,
