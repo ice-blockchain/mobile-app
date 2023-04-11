@@ -2,5 +2,8 @@
 
 import {RootState} from '@store/rootReducer';
 
-export const lastUsedLanguageSelector = (state: RootState) =>
-  state.language.lastUsedLanguage;
+export const lastUsedInAppLanguageSelector = (state: RootState) =>
+  state.language?.lastUsedInAppLanguage;
+
+export const lastUsedPhoneLanguageSelector = (state: RootState) =>
+  state.language?.lastUsedPhoneLanguage;
