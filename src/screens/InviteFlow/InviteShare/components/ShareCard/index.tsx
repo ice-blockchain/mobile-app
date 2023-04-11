@@ -2,6 +2,7 @@
 
 import {LINKS} from '@constants/links';
 import {commonStyles} from '@constants/styles';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import Clipboard from '@react-native-clipboard/clipboard';
 import {
   Copied,
@@ -26,7 +27,6 @@ import {
   View,
 } from 'react-native';
 import {openComposer} from 'react-native-email-link';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Share, {ShareSingleOptions, Social} from 'react-native-share';
 import {useSelector} from 'react-redux';
 import {isAndroid, isIOS, rem} from 'rn-units';

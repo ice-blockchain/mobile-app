@@ -5,6 +5,8 @@ import {RefreshIceIcon} from '@components/RefreshControl';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import BottomSheet, {BottomSheetFlatList} from '@gorhom/bottom-sheet';
+import {useSafeAreaFrame} from '@hooks/useSafeAreaFrame';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {useReleasedNewsWalkthrough} from '@screens/News/hooks/useReleasedNewsWalkthrough';
@@ -20,10 +22,6 @@ import {
   useDerivedValue,
   useSharedValue,
 } from 'react-native-reanimated';
-import {
-  useSafeAreaFrame,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 

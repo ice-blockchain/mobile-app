@@ -2,6 +2,7 @@
 
 import {Avatar} from '@components/Avatar/Avatar';
 import {COLORS} from '@constants/colors';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {HEADER_HEIGHT} from '@navigation/components/Header';
 import {INVITE_CARD_TOP_OFFSET} from '@screens/InviteFlow/InviteFriend';
 import {getContactAcronym} from '@utils/contacts';
@@ -10,7 +11,6 @@ import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
 
 const AVATAR_SIDE_DIMENSION = rem(112);

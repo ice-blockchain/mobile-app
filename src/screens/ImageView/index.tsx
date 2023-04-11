@@ -2,6 +2,8 @@
 
 import {COLORS} from '@constants/colors';
 import {windowWidth} from '@constants/styles';
+import {useSafeAreaFrame} from '@hooks/useSafeAreaFrame';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {Header, HEADER_HEIGHT} from '@navigation/components/Header';
 import {MainStackParamList} from '@navigation/Main';
 import {RouteProp, useRoute} from '@react-navigation/native';
@@ -13,11 +15,7 @@ import React, {useMemo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {GestureDetector} from 'react-native-gesture-handler';
 import Animated from 'react-native-reanimated';
-import {
-  SafeAreaView,
-  useSafeAreaFrame,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 export const ImageView = () => {
   const {

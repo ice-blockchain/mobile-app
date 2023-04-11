@@ -2,12 +2,12 @@
 
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {BackButton} from '@navigation/components/Header/components/BackButton';
 import {font} from '@utils/styles';
 import React, {memo, ReactNode, useMemo} from 'react';
 import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 import Animated from 'react-native-reanimated';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
 
 type Props = {
