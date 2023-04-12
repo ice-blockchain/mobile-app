@@ -153,7 +153,7 @@ export const AvatarHeader = memo(
               <Animated.Text
                 style={[styles.usernameText, textStyle]}
                 numberOfLines={1}>
-                {`@${user?.username}`}
+                {`@${user.username}`}
               </Animated.Text>
             )}
           </View>
