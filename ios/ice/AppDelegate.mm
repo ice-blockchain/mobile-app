@@ -5,6 +5,7 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import <React/RCTI18nUtil.h>
 
 #import <React/RCTAppSetupUtils.h>
 #import <React/RCTLinkingManager.h>
@@ -71,6 +72,8 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
    [[MoEngageInitializer sharedInstance] initializeDefaultSDKConfig:sdkConfig andLaunchOptions:launchOptions];
 
   [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+  
+  [[RCTI18nUtil sharedInstance] allowRTL:YES];
 
   RCTAppSetupPrepareApp(application);
 

@@ -16,6 +16,7 @@ import {waitForSelector} from '@store/utils/sagas/effects';
 import {getLocale, isRTL, setLocale} from '@translations/i18n';
 import {localeConfig} from '@translations/localeConfig';
 import {I18nManager} from 'react-native';
+import RNRestart from 'react-native-restart';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
 /**
@@ -34,14 +35,20 @@ export function* syncLanguageCodeSaga() {
     );
   }
 
-  if (localeConfig[getLocale()].isRTL !== isRTL) {
-    I18nManager.forceRTL(localeConfig[getLocale()].isRTL);
-  }
   while (true) {
     yield call(waitForSelector, state => {
       const appLocale = appLocaleSelector(state);
+      const user = userSelector(state);
 
-      return appLocale !== getLocale();
+      if (localeConfig[appLocale].isRTL !== isRTL) {
+        I18nManager.forceRTL(localeConfig[appLocale].isRTL);
+        !user && RNRestart.restart();
+      }
+
+      return (
+        appLocale !== getLocale() ||
+        (!user && lastUsedPhoneLocale !== getLocale())
+      );
     });
 
     const user: SagaReturnType<typeof userSelector> = yield select(
@@ -68,7 +75,9 @@ export function* syncLanguageCodeSaga() {
 
     setCalendarLocale(currentLocale);
 
-    I18nManager.forceRTL(localeConfig[currentLocale].isRTL);
+    if (localeConfig[currentLocale].isRTL !== isRTL) {
+      I18nManager.forceRTL(localeConfig[currentLocale].isRTL);
+    }
 
     /**
      * Sync locale with auth service
