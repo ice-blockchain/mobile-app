@@ -69,11 +69,17 @@ export const PullToRefreshContainer = ({
   children,
   onScrollTranslateY,
 }: Props) => {
+  const [isRefreshScrolled, setRefreshScrolled] = useState(false);
+
   const [isContentScrolled, setContentScrolled] = useState(false);
 
   const translateYPanGesture = useSharedValue(0);
 
   const translateYScrollable = useSharedValue(0);
+
+  const panEnabled = !refreshing && !isContentScrolled;
+
+  const scrollEnabled = refreshing || !isRefreshScrolled;
 
   const scrollHandler = useAnimatedScrollHandler(({contentOffset: {y}}) => {
     translateYScrollable.value = y;
@@ -115,7 +121,7 @@ export const PullToRefreshContainer = ({
       .onEnd(() => {
         runOnJS(runStaticPositionAnimation)();
       })
-      .enabled(!refreshing && !isContentScrolled);
+      .enabled(panEnabled);
 
     const nativeGesture = Gesture.Native();
 
@@ -123,11 +129,15 @@ export const PullToRefreshContainer = ({
       return nativeGesture;
     }
 
-    return Gesture.Simultaneous(panGesture, Gesture.Native());
+    return Gesture.Simultaneous(
+      panGesture,
+      Gesture.Native().enabled(scrollEnabled),
+    );
   }, [
     isContentScrolled,
-    refreshing,
+    panEnabled,
     runStaticPositionAnimation,
+    scrollEnabled,
     translateYPanGesture,
   ]);
 
@@ -152,6 +162,15 @@ export const PullToRefreshContainer = ({
     },
   );
 
+  useAnimatedReaction(
+    () => translateYPanGesture.value !== 0,
+    (result, previous) => {
+      if (result !== previous) {
+        runOnJS(setRefreshScrolled)(result);
+      }
+    },
+  );
+
   const containerAnimatedStyle = useAnimatedStyle(() => {
     return {
       flex: 1,
@@ -171,8 +190,9 @@ export const PullToRefreshContainer = ({
         onScroll: scrollHandler,
         bounces: false,
         alwaysBounceVertical: false,
+        scrollEnabled,
       }),
-    [children, containerAnimatedStyle, scrollHandler],
+    [children, containerAnimatedStyle, scrollEnabled, scrollHandler],
   );
 
   return (
