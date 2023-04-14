@@ -72,14 +72,6 @@ post_install do |installer|
       if target.name == 'react-native-config'
         config.build_settings['ENVFILE'] = '$(PODS_ROOT)/../../.env.app'
       end
-
-      # Remove when RN patches will be merged
-      # https://github.com/facebook/react-native/issues/34106
-      # In Xcode Version 14.3 its not compiling with reason:
-      # 'value' is unavailable: introduced in iOS 12.0
-
-      config.build_settings['SWIFT_VERSION'] = '5.0'
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.4'
     end
   end
 end

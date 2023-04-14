@@ -6,7 +6,6 @@ import {ProfileTabStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {BadgeSummariesList} from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeSummariesList';
-import {userSelector} from '@store/modules/Account/selectors';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
@@ -17,12 +16,11 @@ import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 type Props = {
-  user: User | null;
+  user: User;
+  isOwner: boolean;
 };
 
-export const Badges = memo(({user}: Props) => {
-  const authUser = useSelector(userSelector);
-  const isOwner = user?.id === authUser?.id;
+export const Badges = memo(({user, isOwner}: Props) => {
   const badgesSummary = useSelector(
     AchievementsSelectors.getBadgesSummary({userId: user?.id}),
   );

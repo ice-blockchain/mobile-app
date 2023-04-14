@@ -47,8 +47,12 @@ export const InviteButton = ({style}: Props = {}) => {
           {replaceString(
             t('button.invite_friend.description'),
             tagRegex('ice'),
-            () => (
-              <IceLabel iconSize={14} iconOffsetY={isAndroid ? 3 : 2} />
+            (match, index) => (
+              <IceLabel
+                key={match + index}
+                iconSize={14}
+                iconOffsetY={isAndroid ? 3 : 2}
+              />
             ),
           )}
         </Text>

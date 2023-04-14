@@ -30,9 +30,15 @@ export function EmptyTier({title}: Props) {
         resizeMode="contain"
       />
       <Text style={styles.title}>
-        {replaceString(t('team.empty.title'), tagRegex('title'), () => (
-          <Text style={styles.boldTitle}>{title}</Text>
-        ))}
+        {replaceString(
+          t('team.empty.title'),
+          tagRegex('title'),
+          (match, index) => (
+            <Text key={match + index} style={styles.boldTitle}>
+              {title}
+            </Text>
+          ),
+        )}
       </Text>
       <PrimaryButton
         text={t('team.empty.button_title')}

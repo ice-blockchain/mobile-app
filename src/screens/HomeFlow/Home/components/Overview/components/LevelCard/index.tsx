@@ -81,8 +81,8 @@ export const LevelCard = forwardRef(
               {replaceString(
                 t('home.pioneer.description'),
                 tagRegex('ice'),
-                () => (
-                  <IceLabel iconSize={12} />
+                (match, index) => (
+                  <IceLabel key={match + index} iconSize={12} />
                 ),
               )}
             </Text>

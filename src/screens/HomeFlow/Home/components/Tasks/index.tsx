@@ -11,7 +11,6 @@ import {
 } from '@screens/HomeFlow/Home/components/Tasks/components/TaskItem';
 import {useTasks} from '@screens/HomeFlow/Home/components/Tasks/hooks/useTasks';
 import {t} from '@translations/i18n';
-import {font} from '@utils/styles';
 import React, {memo, useEffect, useMemo, useState} from 'react';
 import {LayoutChangeEvent, StyleSheet, View} from 'react-native';
 import Animated, {useAnimatedStyle, withTiming} from 'react-native-reanimated';
@@ -113,7 +112,6 @@ export const Tasks = memo(({highlightActiveTask}: Props) => {
                 task={task}
                 highlightActiveTask={highlightActiveTask}
                 active={index === currentActiveTaskIndex}
-                isLastItem={index === tasks.length - 1}
                 areAllBeforeCompleted={allBeforeCompleted}
               />
             );
@@ -145,15 +143,5 @@ const styles = StyleSheet.create({
   },
   itemsContainer: {
     overflow: 'hidden',
-  },
-  comingSoonContainer: {
-    marginTop: rem(16),
-    padding: rem(16),
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  comingSoonText: {
-    marginTop: rem(11),
-    ...font(15, 18, 'medium', 'secondary'),
   },
 });

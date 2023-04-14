@@ -9,7 +9,7 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {CancelButton} from '@screens/Modals/ProfilePrivacyEdit/components/CancelButton';
 import {Description} from '@screens/Modals/ProfilePrivacyEdit/components/Description';
 import {NextButton} from '@screens/Modals/ProfilePrivacyEdit/components/NextButton';
-import {LadderBar} from '@screens/ProfileFlow/Profile/components/LadderBar';
+import {LadderBar} from '@screens/ProfileFlow/Profile/components/UserInfo/LadderBar';
 import {userSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import React from 'react';

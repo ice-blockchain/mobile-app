@@ -107,10 +107,7 @@ export const BadgeCard = memo(
                 />
               </View>
               <View style={styles.progressHeader}>
-                <Text
-                  style={styles.categoryText}
-                  numberOfLines={1}
-                  adjustsFontSizeToFit={true}>
+                <Text style={styles.categoryText} numberOfLines={1}>
                   {categoryTranslation}
                 </Text>
                 <Text style={styles.progressText}>
