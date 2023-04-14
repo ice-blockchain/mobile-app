@@ -74,7 +74,7 @@ export const LevelRow = React.memo(
               </Text>
               <View style={styles.leftIconContainer}>
                 <IceLabel
-                  iconOffsetY={isAndroid ? 4 : 2}
+                  iconOffsetY={isAndroid ? 3 : 2}
                   textStyle={styles.valueCurrencyText}
                   iconSize={rem(12)}
                   label={t('general.ice_per_hour')}
