@@ -102,8 +102,8 @@ const styles = StyleSheet.create({
   },
   titleText: {
     flex: 1,
-    textAlign: 'center',
     ...font(17, 21, 'semibold'),
+    textAlign: 'center',
   },
   backButton: {
     position: 'absolute',

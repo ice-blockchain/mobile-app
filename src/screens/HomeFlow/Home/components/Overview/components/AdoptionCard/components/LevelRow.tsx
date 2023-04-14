@@ -149,9 +149,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   valueText: {
-    textAlign: 'center',
     minWidth: rem(44),
     ...font(15, 18, 'medium'),
+    textAlign: 'center',
   },
   valueCurrencyText: {
     opacity: 0.8,

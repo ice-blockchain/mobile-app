@@ -3,7 +3,7 @@
 import {RegistrationProcessFinalizedStep} from '@api/user/types';
 import {isOnboardingViewedSelector} from '@store/modules/Users/selectors';
 import {RootState} from '@store/rootReducer';
-import {getLocale} from '@translations/i18n';
+import {getLocale, isRTL} from '@translations/i18n';
 import {SupportedLocale} from '@translations/localeConfig';
 import {difference} from 'lodash';
 
@@ -34,6 +34,18 @@ export const isPhoneNumberVerifiedSelector = (state: RootState) =>
 
 export const usernameSelector = (state: RootState) =>
   state.account.user?.username || '';
+
+export const usernameWithPrefixSelector = (state: RootState) => {
+  const username = usernameSelector(state);
+
+  if (username.length && isRTL()) {
+    return `${username}@`;
+  } else if (username.length && !isRTL()) {
+    return `@${username}`;
+  } else {
+    return username;
+  }
+};
 
 export const userInfoSelector = (state: RootState) => state.account.userInfo;
 

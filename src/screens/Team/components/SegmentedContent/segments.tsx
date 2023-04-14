@@ -4,7 +4,7 @@ import {COLORS} from '@constants/colors';
 import {ContactsIcon} from '@svg/ContactsIcon';
 import {TierOneIcon} from '@svg/TierOneIcon';
 import {TierTwoIcon} from '@svg/TierTwoIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -94,7 +94,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    ...font(17, 20, 'semibold', 'secondary'),
+    // isRTL() ? 14 : 17 - for the Arabic language, because of the words outside of the button
+    ...font(isRTL() ? 14 : 17, 20, 'semibold', 'secondary'),
     marginLeft: rem(4),
   },
   contactsIcon: {marginLeft: rem(-1)},

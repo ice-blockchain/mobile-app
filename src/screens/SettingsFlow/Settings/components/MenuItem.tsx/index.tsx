@@ -3,7 +3,7 @@
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {ChevronIcon} from '@svg/ChevronIcon';
-import {font} from '@utils/styles';
+import {font, mirrorTransform} from '@utils/styles';
 import React, {ReactNode, useEffect, useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import Animated, {
@@ -123,18 +123,20 @@ const styles = StyleSheet.create({
   titleText: {
     ...font(16, 19.2, 'black', 'primaryDark'),
     marginBottom: rem(4),
+    textAlign: 'left',
   },
   descriptionText: {
     ...font(12, 14.4, 'medium', 'secondary'),
+    textAlign: 'left',
   },
   chevron: {
     marginLeft: rem(10),
   },
   chevron_left: {
-    transform: [{rotate: '180deg'}],
+    ...mirrorTransform(true),
   },
   chevron_right: {
-    transform: [{rotate: '0deg'}],
+    ...mirrorTransform(),
   },
   buttons: {
     flexDirection: 'row',

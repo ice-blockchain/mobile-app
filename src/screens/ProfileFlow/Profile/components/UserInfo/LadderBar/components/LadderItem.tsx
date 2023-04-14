@@ -115,13 +115,13 @@ const styles = StyleSheet.create({
     ...font(20, 24, 'bold', 'primaryDark'),
   },
   ladderLabelText: {
-    textAlign: 'center',
     marginHorizontal: rem(4),
     ...font(10, 12, 'regular', 'periwinkleGray'),
+    textAlign: 'center',
   },
   ladderLabelTextPrivacyEdit: {
-    textAlign: 'center',
     marginHorizontal: rem(4),
     ...font(10, 12, 'regular', 'periwinkleGray'),
+    textAlign: 'center',
   },
 });

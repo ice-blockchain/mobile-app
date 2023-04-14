@@ -26,7 +26,7 @@ import {
 } from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useAnimatedStyles';
 import {useUserContactDetails} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useUserContactDetails';
 import {AnimatedCameraIcon} from '@svg/AnimatedCameraIcon';
-import {font} from '@utils/styles';
+import {font, mirrorTransform} from '@utils/styles';
 import React, {memo, useState} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
@@ -236,6 +236,7 @@ const styles = StyleSheet.create({
   },
   backButton: {
     justifyContent: 'center',
+    ...mirrorTransform(),
   },
   touchableAvatar: {
     flex: 1,

@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
   text: {
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(32),
-    textAlign: 'center',
     ...font(14, 20, 'regular', 'primaryDark'),
+    textAlign: 'center',
   },
   container: {
     marginTop: rem(15),

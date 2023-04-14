@@ -145,8 +145,8 @@ const styles = StyleSheet.create({
   },
   errorText: {
     marginHorizontal: rem(26),
-    textAlign: 'center',
     ...font(13, 15, 'medium', 'attention'),
+    textAlign: 'center',
   },
   cursorStyle: {
     color: COLORS.primaryLight,

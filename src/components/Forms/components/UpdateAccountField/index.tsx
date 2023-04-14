@@ -51,16 +51,16 @@ const styles = StyleSheet.create({
     height: smallHeightDevice ? rem(80) : rem(140),
   },
   title: {
-    textAlign: 'center',
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(2),
     ...font(24, 29, 'black', 'primaryDark'),
+    textAlign: 'center',
   },
   description: {
-    textAlign: 'center',
     marginHorizontal: rem(30),
     marginBottom: rem(24),
     ...font(14, 24, 'regular', 'secondary'),
+    textAlign: 'center',
   },
   button: {
     flexGrow: 1,

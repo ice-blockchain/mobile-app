@@ -162,6 +162,7 @@ const styles = StyleSheet.create({
   categoryText: {
     flex: 1,
     ...font(12, 14, 'regular', 'primaryDark'),
+    textAlign: 'left',
   },
   progressText: {
     ...font(12, 14, 'regular', 'periwinkleGray'),

@@ -58,19 +58,19 @@ const styles = StyleSheet.create({
     height: smallHeightDevice ? rem(80) : rem(140),
   },
   title: {
-    textAlign: 'center',
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(2),
     ...font(24, 29, 'black', 'primaryDark'),
+    textAlign: 'center',
   },
   codeSourceDescText: {
     marginTop: rem(10),
-    textAlign: 'center',
     ...font(16, 26, 'medium', 'secondary'),
+    textAlign: 'center',
   },
   codeSourceText: {
-    textAlign: 'center',
     ...font(16, 26, 'bold', 'codeFieldText'),
+    textAlign: 'center',
   },
   codeInput: {
     marginTop: rem(30),

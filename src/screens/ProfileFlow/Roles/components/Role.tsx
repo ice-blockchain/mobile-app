@@ -75,13 +75,13 @@ const styles = StyleSheet.create({
   },
   taglineText: {
     marginTop: rem(8),
-    textAlign: 'center',
     ...font(16, 20, 'medium', 'primaryDark'),
+    textAlign: 'center',
   },
   descriptionText: {
     marginTop: rem(14),
-    textAlign: 'center',
     ...font(14, 20, 'medium', 'secondary'),
+    textAlign: 'center',
   },
   selectedBox: {
     backgroundColor: COLORS.aliceBlue,

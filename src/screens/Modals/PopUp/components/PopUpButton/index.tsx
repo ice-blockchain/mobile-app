@@ -68,8 +68,8 @@ const styles = StyleSheet.create({
     borderColor: COLORS.attentionDark,
   },
   labelText: {
-    textAlign: 'center',
     ...font(14, 18, 'black'),
+    textAlign: 'center',
   },
   labelTextOutlined: {
     color: COLORS.secondary,

@@ -70,16 +70,16 @@ const styles = StyleSheet.create({
   },
   title: {
     marginTop: rem(16),
-    textAlign: 'center',
     ...font(24, 29, 'black', 'primaryDark'),
+    textAlign: 'center',
   },
   descriptionContainer: {
     paddingHorizontal: rem(10),
   },
   description: {
     marginTop: rem(12),
-    textAlign: 'center',
     ...font(14, 22, 'regular', 'secondary'),
+    textAlign: 'center',
   },
   buttonContainer: {
     marginTop: rem(36),

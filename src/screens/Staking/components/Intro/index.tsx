@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   noteText: {
     marginHorizontal: rem(28),
     marginTop: rem(24),
-    textAlign: 'center',
     ...font(14, 20, 'regular', 'white'),
+    textAlign: 'center',
   },
 });

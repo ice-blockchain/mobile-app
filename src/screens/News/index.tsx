@@ -219,6 +219,7 @@ const styles = StyleSheet.create({
 
   newsFeed: {
     ...font(15, 16, 'semibold', 'primaryDark'),
+    textAlign: 'left',
   },
 
   footerLoader: {

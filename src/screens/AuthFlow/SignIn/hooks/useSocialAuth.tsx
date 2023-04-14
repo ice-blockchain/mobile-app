@@ -10,7 +10,7 @@ import {
 import {RootState} from '@store/rootReducer';
 import {showError} from '@utils/errors';
 import {checkProp} from '@utils/guards';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 const AUTH_ACTIONS = [
@@ -19,6 +19,9 @@ const AUTH_ACTIONS = [
 ];
 
 export const useSocialAuth = () => {
+  const [selectedSocialType, setSelectedSocialType] =
+    useState<SocialSignInProvider>();
+
   const failedReason = useSelector((state: RootState) => {
     const failedAction = AUTH_ACTIONS.find(action =>
       failedReasonSelector(action, state),
@@ -29,12 +32,8 @@ export const useSocialAuth = () => {
     return null;
   });
 
-  const isSocialProviderLoading = useSelector(
-    isLoadingSelector.bind(null, AccountActions.SIGN_IN_SOCIAL),
-  );
-
-  const isUserAuthLoading = useSelector(
-    isLoadingSelector.bind(null, AccountActions.USER_STATE_CHANGE),
+  const isSocialAuthLoading = useSelector((state: RootState) =>
+    Boolean(AUTH_ACTIONS.find(action => isLoadingSelector(action, state))),
   );
 
   const socialPayload = useSelector(
@@ -47,14 +46,12 @@ export const useSocialAuth = () => {
     }
   }, [failedReason]);
 
-  /**
-   * Apple Sign In has it's own overlay that doesn't require loading on background
-   */
-  const isSocialAuthLoading =
-    (checkProp(socialPayload, 'provider') &&
-      (socialPayload.provider as SocialSignInProvider)) === 'apple'
-      ? isUserAuthLoading
-      : isSocialProviderLoading || isUserAuthLoading;
+  useEffect(() => {
+    if (checkProp(socialPayload, 'provider')) {
+      const provider = socialPayload.provider as SocialSignInProvider;
+      setSelectedSocialType(provider);
+    }
+  }, [socialPayload]);
 
-  return {isSocialAuthLoading};
+  return {isSocialAuthLoading, selectedSocialType};
 };
