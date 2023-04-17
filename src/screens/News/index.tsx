@@ -149,6 +149,7 @@ export const News = () => {
         ]}>
         <RefreshIceIcon
           theme={'light-content'}
+          // Loading state not implemented
           refreshing={false}
           translateY={translateY}
         />

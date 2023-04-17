@@ -23,7 +23,7 @@ export const SEGMENTS: ReadonlyArray<{text: string; key: GraphCategory}> = [
   {text: t('stats.active'), key: 'active'},
 ];
 
-const DEFAULT_USER_GROWTH_STATS_PERIOD = 3;
+export const DEFAULT_USER_GROWTH_STATS_PERIOD = 3;
 
 export const UsersGrowthGraph = memo(() => {
   const navigation =

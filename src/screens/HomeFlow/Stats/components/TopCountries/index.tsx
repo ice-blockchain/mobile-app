@@ -16,7 +16,7 @@ import React, {memo, useCallback, useEffect, useState} from 'react';
 import {InteractionManager, StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
-const COUNTRIES_COUNT = 5;
+export const COUNTRIES_COUNT = 5;
 
 const SKELETONS = Array(COUNTRIES_COUNT)
   .fill(null)

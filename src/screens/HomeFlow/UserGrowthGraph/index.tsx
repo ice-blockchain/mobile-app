@@ -9,9 +9,10 @@ import {
 } from '@components/BarGraph';
 import {useGetBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetBarGraphDataForStatsPeriod';
 import {LinesBackground} from '@components/LinesBackground';
+import {PullToRefreshContainer} from '@components/PullToRefreshContainer';
 import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
-import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
@@ -23,15 +24,11 @@ import {STATS_PERIODS} from '@store/modules/Stats/constants';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {t} from '@translations/i18n';
 import React, {memo, useEffect, useMemo, useRef, useState} from 'react';
-import {
-  FlatList,
-  InteractionManager,
-  LayoutChangeEvent,
-  StyleSheet,
-  View,
-} from 'react-native';
-import {useSharedValue, withTiming} from 'react-native-reanimated';
+import {InteractionManager, StyleSheet, View} from 'react-native';
+import Animated, {useSharedValue, withTiming} from 'react-native-reanimated';
 import {rem, screenHeight} from 'rn-units';
+
+import {useOnRefresh} from './hooks/useOnRefresh';
 
 const PERIODS: {label: string; period: StatsPeriod}[] = STATS_PERIODS.map(
   (period: StatsPeriod) => ({label: t(`periods.${period}_days`), period}),
@@ -46,6 +43,10 @@ export const UserGrowthGraph = memo(() => {
   } = useRoute<RouteProp<HomeTabStackParamList, 'UserGrowthGraph'>>();
   const [periodIndex, setPeriodIndex] = useState(0);
   const [statsPeriod, setStatsPeriod] = useState(paramsStatsPeriod);
+
+  const {refreshing, onRefresh} = useOnRefresh({
+    statsPeriod,
+  });
 
   useEffect(() => {
     setStatsPeriod(paramsStatsPeriod);
@@ -68,9 +69,7 @@ export const UserGrowthGraph = memo(() => {
 
   useEffect(() => {
     return () => {
-      if (handleRef.current) {
-        handleRef.current?.cancel();
-      }
+      handleRef.current?.cancel();
     };
   }, []);
 
@@ -106,52 +105,58 @@ export const UserGrowthGraph = memo(() => {
         title={t('stats.user_growth')}
         backgroundColor={'transparent'}
       />
-      <FlatList
-        showsVerticalScrollIndicator={false}
-        initialNumToRender={14}
-        contentContainerStyle={[styles.contentContainer, tabbarOffset.current]}
-        style={styles.flatListContainer}
-        data={data}
-        removeClippedSubviews={false}
-        getItemLayout={(_, index) => ({
-          length: ROW_HEIGHT,
-          offset: ROW_HEIGHT * index,
-          index,
-        })}
-        renderItem={({item, index}) => (
-          <BarItem
-            item={item}
-            maxWidth={barWidth}
-            maxValue={lastXValue}
-            sharedValue={sharedValue}
-            doAnimate={Math.floor(screenHeight / ROW_HEIGHT) > index}
-          />
-        )}
-        ListFooterComponent={
-          <BarFooter
-            barWidth={barWidth}
-            stepValue={stepValue}
-            numberOfSteps={numberOfSteps}
-          />
-        }
-        ListHeaderComponent={
-          <View style={styles.headerContainer}>
-            <SectionHeader
-              title={isTotal ? t('stats.total') : t('stats.active')}
-              action={
-                <PeriodSelect
-                  selectedIndex={periodIndex}
-                  options={PERIODS}
-                  onChange={onPeriodChange}
-                />
-              }
+      <PullToRefreshContainer
+        style={commonStyles.flexOne}
+        theme={'dark-content'}
+        refreshing={refreshing}
+        onRefresh={onRefresh}>
+        <Animated.FlatList
+          contentContainerStyle={[
+            styles.contentContainer,
+            tabbarOffset.current,
+          ]}
+          data={data}
+          initialNumToRender={14}
+          showsVerticalScrollIndicator={false}
+          removeClippedSubviews={false}
+          onLayout={event => setWidth(event.nativeEvent.layout.width)}
+          getItemLayout={(_, index) => ({
+            length: ROW_HEIGHT,
+            offset: ROW_HEIGHT * index,
+            index,
+          })}
+          renderItem={({item, index}) => (
+            <BarItem
+              item={item}
+              maxWidth={barWidth}
+              maxValue={lastXValue}
+              sharedValue={sharedValue}
+              doAnimate={Math.floor(screenHeight / ROW_HEIGHT) > index}
             />
-          </View>
-        }
-        onLayout={({nativeEvent}: LayoutChangeEvent) => {
-          setWidth(nativeEvent.layout.width);
-        }}
-      />
+          )}
+          ListFooterComponent={
+            <BarFooter
+              barWidth={barWidth}
+              stepValue={stepValue}
+              numberOfSteps={numberOfSteps}
+            />
+          }
+          ListHeaderComponent={
+            <View style={styles.headerContainer}>
+              <SectionHeader
+                title={isTotal ? t('stats.total') : t('stats.active')}
+                action={
+                  <PeriodSelect
+                    selectedIndex={periodIndex}
+                    options={PERIODS}
+                    onChange={onPeriodChange}
+                  />
+                }
+              />
+            </View>
+          }
+        />
+      </PullToRefreshContainer>
     </View>
   );
 });
@@ -161,16 +166,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.white,
   },
-  flatListContainer: {
+  contentContainer: {
     paddingTop: rem(16),
     paddingHorizontal: SCREEN_SIDE_OFFSET,
     paddingBottom: SCREEN_SIDE_OFFSET,
-    backgroundColor: COLORS.white,
+    flexGrow: 1,
     borderTopLeftRadius: rem(30),
     borderTopRightRadius: rem(30),
-  },
-  contentContainer: {
-    minHeight: screenHeight,
+    backgroundColor: COLORS.white,
   },
   headerContainer: {
     marginHorizontal: -SCREEN_SIDE_OFFSET,
