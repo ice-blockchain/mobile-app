@@ -6,7 +6,7 @@ import {COLORS} from '@constants/colors';
 import {commonStyles, windowWidth} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import ShareCard from '@screens/InviteFlow/InviteShare/components/ShareCard';
+import {ShareCard} from '@screens/InviteFlow/InviteShare/components/ShareCard';
 import {replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';

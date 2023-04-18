@@ -5,7 +5,7 @@ import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {QRCodePreview} from '@screens/ProfileFlow/QRCodeShare/components/QRCodePreview';
+import {QRCodePreview} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview';
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 

@@ -84,7 +84,7 @@ const buttons: SocialShareButtonType[] = [
   },
 ];
 
-const ShareCard = () => {
+export const ShareCard = () => {
   const copiedRef = useRef<CopiedMethods>(null);
   const {bottom: bottomInset} = useSafeAreaInsets();
   const username = useSelector(usernameSelector);
@@ -224,5 +224,3 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(12),
   },
 });
-
-export default ShareCard;

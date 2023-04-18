@@ -3,7 +3,7 @@
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
-import {ProfileTabStackParamList} from '@navigation/Main';
+import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {QRCodeIcon} from '@svg/QRCodeIcon';
@@ -20,7 +20,7 @@ export const QRCodeShareButton = ({
   color = COLORS.primaryDark,
 }: Props = {}) => {
   const navigation =
-    useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
+    useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
 
   return (
     <View style={containerStyle}>
