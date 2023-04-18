@@ -1,7 +1,7 @@
 {
   "welcome": {
     "page1": {
-      "title": "Bun venit la gheață",
+      "title": "Bun venit la ice",
       "description": "[[:ice]] este o monedă digitală pe care o poți câștiga cu telefonul tău. "
     },
     "page2": {
@@ -19,7 +19,7 @@
     },
     "page5": {
       "title": "Consultați",
-      "description": "Invitați-vă prietenii și câștigați (amândoi) până la {{value}}% bonus din rata de bază a câștigurilor pentru fiecare prieten care se alătură echipei tale."
+      "description": "Invitați-vă prietenii și câștigați (amândoi) până la {{value}}% bonus din rata de bază pentru fiecare prieten care se alătură echipei tale."
     },
     "page6": {
       "title": "Notificări",
@@ -35,10 +35,11 @@
     "view_all": "a vedea tot",
     "invite_friend": {
       "title": "Invita prieteni",
-      "description": "Câștigați în plus [[:ice]] invitându-ți prietenii."
+      "description_part1": "Câștigați în plus ",
+      "description_part2": " invitându-ți prietenii."
     },
     "no": "Nu",
-    "search_country": "Cauta tara",
+    "search_country": "Căutați țara",
     "save": "Salvați",
     "yes": "da",
     "change": "Schimbare",
@@ -155,7 +156,7 @@
     "inputPlaceholder": "Introduceți porecla",
     "dontHaveInvitationCode": "Prin parcurgerea acestui pas, tu și prietenul tău veți primi un {{value}}% bonus la rata de bază a câștigului atunci când amândoi vă înregistrați în același timp.",
     "confirm_text": "Sunteți sigur că doriți să setați un membru aleatoriu ca recomandare?\n\n",
-    "dontHaveCodeTip": "Dacă nu aveți un cod de invitație, îl vom avea\n"
+    "dontHaveCodeTip": "Dacă nu aveți un cod de invitație, vom avea\n"
   },
   "errors": {
     "nicknameSize": "Dimensiunea pseudonimului: 4-20 de caractere.",
@@ -180,7 +181,7 @@
     "user_not_found_for_email": "Nu există niciun utilizator care să corespundă e-mailului dat",
     "user_not_found": "Utilizator nu a fost găsit",
     "auth_in_progress": "Conectarea este deja în curs",
-    "google_play_services_not_available": "Serviciile Google Play nu sunt disponibile pe dispozitiv",
+    "google_play_services_not_available": "SERVICIILE Google Play nu sunt disponibile pe dispozitiv",
     "unknown_error_with_code": "Eroare necunoscută {{code}}",
     "no_such_provider": "Nu aveți acest furnizor conectat",
     "min_username": "Lungimea minimă este de 4 caractere.",
@@ -276,7 +277,8 @@
     "pioneer": {
       "rank": "RANG GLOBAL",
       "referrals": "RECOMANDĂRI",
-      "description": "Cu cât trimiteți mai mulți utilizatori, cu atât mai mulți [[:ice]] Castigi"
+      "description_part1": "Cu cât trimiteți mai mulți utilizatori, cu atât mai mulți ",
+      "description_part2": " Castigi"
     },
     "referrals": {
       "title": "RECOMANDĂRI",
@@ -308,8 +310,8 @@
         "description": "Setează-l și începe să câștigi din invitația ta"
       },
       "start_mining": {
-        "title": "Începeți mineritul",
-        "description": "Prima ta sesiune de minerit"
+        "title": "Începeți să câștigați",
+        "description": "Prima dvs. sesiune de check-in"
       },
       "upload_profile_picture": {
         "title": "Poză de profil",
@@ -372,7 +374,7 @@
     "feedback_title": "Trimite feedback",
     "feedback_description": "Împărtășește-ți gândurile cu noi",
     "invite_title": "Invita un prieten",
-    "invite_description": "Câștigă gheață suplimentară invitându-ți prietenii",
+    "invite_description": "Câștigă ice suplimentar invitându-ți prietenii",
     "delete_title": "Șterge cont",
     "delete_description": "Ștergeți-vă contul",
     "delete_confirmation_title": "Sigur doriți să eliminați contul?",
@@ -435,7 +437,7 @@
         },
         "system": {
           "title": "Sistem",
-          "description": "Primiți notificări importante despre aplicația de gheață"
+          "description": "Primiți notificări importante despre aplicația ice"
         }
       }
     },
@@ -474,8 +476,9 @@
     "copy_link": "Copiază legătură",
     "more": "Mai mult",
     "copied": "COPIAT",
-    "share_message": "Bună ☃️ Omul de zăpadă! Alăturați-vă echipei mele pe gheață și primiți 10 monede de gheață când vă înscrieți folosind codul meu de recomandare:",
-    "description": "Răspândește cuvântul și invită-ți prietenii. [[:ice]] pentru fiecare recomandare nouă pe care o aduceți."
+    "share_message": "Bună ☃️ Omul de zăpadă! ",
+    "description_part1": "Răspândește cuvântul și invită-ți prietenii.  ",
+    "description_part2": " pentru fiecare recomandare nouă pe care o aduceți."
   },
   "users": {
     "ping": "PING",
@@ -501,7 +504,7 @@
       "already_taken": "Porecla este deja luată.",
       "length": "Dimensiunea pseudonimului: 4-20 de caractere.",
       "invalid_characters": "Eliminați caracterele nevalide.",
-      "not_found": "Porecla nu a fost găsită.",
+      "not_found": "Pseudomul nu a fost găsit.",
       "some_error": "A apărut o eroare.",
       "refer_yourself": "Nu te poți referi"
     }
@@ -510,7 +513,7 @@
     "time_left": "Timp rămas",
     "mining_rate": "Rata de câștig",
     "appeal": "Creșteți-vă rata de câștig",
-    "benefits_description": "Mizați în avans recompensele de gheață până la {{periodYears}} ani și crește-ți rata de câștig cu până la {{ratePercentages}}%",
+    "benefits_description": "Mizați în avans recompensele ice până la {{periodYears}} ani și crește rata de câștig cu până la {{ratePercentages}}%",
     "bonus_label": "Bonus de pre-miză",
     "period_label": "Perioada mizată",
     "title": "Pre-Miza",
@@ -543,8 +546,8 @@
     "good_morning": "Buna dimineata",
     "good_afternoon": "Bună ziua",
     "good_evening": "Bună seara",
-    "ice": "gheaţă",
-    "ice_per_hour": "gheață/h",
+    "ice": "ice",
+    "ice_per_hour": "ice/h",
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
@@ -557,7 +560,7 @@
     "views": "{{viewsCount}} vederi"
   },
   "search": {
-    "empty": "Căutați contacte, prieteni de gheață și membri ai micro-comunității dvs",
+    "empty": "Căutați contacte, prieteni ice și membri ai micro-comunității dvs",
     "nothing_is_found": "Nu a fost găsit nimic pentru interogarea dvs",
     "search_by_country": "Căutați după țară",
     "search_for_users": "Căutați utilizatori",
@@ -593,7 +596,7 @@
     "resurrection_message": "Ai o singură șansă să învii și să primești [[:amount]] monede pe care le-ai pierdut în [[:period]] trecut",
     "resurrection_warning": "Nu poți reînvia decât o singură dată!",
     "please_confirm": "Vă rugăm să confirmați",
-    "resurrection_no_confirm_message": "Îți vei pierde [[:amount]] monedele pentru totdeauna. ",
+    "resurrection_no_confirm_message": "Îți vei pierde [[:amount]] monede pentru totdeauna. ",
     "resurrection_yes_confirm_message": "Nu poți reînvia decât o singură dată! "
   },
   "periods": {
@@ -628,15 +631,15 @@
   "profile_privacy_edit": {
     "step1": {
       "title": "1. Statisticile profilului dvs",
-      "description": "Atingeți blocurile pe care doriți\n"
+      "description": "Atingeți blocurile pe care doriți să le ascundeți de ochii publicului"
     },
     "step2": {
-      "description": "Atingeți acest bloc pentru a-l ascunde\n",
+      "description": "Atingeți acest bloc pentru a-l ascunde de ochii publicului",
       "title": "2. Rolul dvs. actual"
     },
     "step3": {
       "title": "3. Insignele pe care le-ați câștigat",
-      "description": "Atingeți acest bloc pentru a-l ascunde\n"
+      "description": "Atingeți aici pentru a vă ascunde insignele de ochii publicului"
     }
   },
   "confirm_email": {
@@ -666,7 +669,7 @@
   },
   "ice_bonus": {
     "title": "Recompensa de bun venit",
-    "description": "Felicitări, ați primit primele voastre monede [[:value]] [[:ice]], ceea ce demonstrează că avem [[:bold]]Încrederea[[/:bold]] în [[:bold]]Tu[[/:bold ",
+    "description": "Felicitări, ați primit primele voastre [[:value]] monede [[:ice]], ceea ce demonstrează că avem [[:bold]]Încredere[[/:bold]] în [[:bold]]tine[[/:bold]]",
     "balance_label": "Soldul dvs. actual"
   },
   "country_select": {
@@ -850,11 +853,11 @@
     "dialogs": {
       "unlinkLogin": {
         "title": "Deconectați autentificarea?",
-        "message": "Sigur doriți să deconectați datele de conectare prin {{providerName}} de la acest aparat?"
+        "message": "Sigur doriți să deconectați datele de conectare prin {{providerName}} de pe acest dispozitiv?"
       },
       "endSession": {
-        "title": "Sfârșitul sesiunii?",
-        "message": "Ești sigur că vrei să închei {{providerName}} sesiune de conectare de pe acest dispozitiv?"
+        "title": "Încheierea sesiunii?",
+        "message": "Ești sigur că vrei să închei {{providerName}} sesiune de conectare de pe acest dispozitiv ice?"
       }
     }
   },
