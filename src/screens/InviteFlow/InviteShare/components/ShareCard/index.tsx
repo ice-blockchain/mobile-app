@@ -12,10 +12,10 @@ import {
 } from '@screens/InviteFlow/InviteShare/components/Copied';
 import {ShareButton} from '@screens/InviteFlow/InviteShare/components/ShareButton';
 import {logError} from '@services/logging';
+import {shareSingle} from '@services/share';
 import {usernameSelector} from '@store/modules/Account/selectors';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {t} from '@translations/i18n';
-import {checkProp} from '@utils/guards';
 import React, {useRef} from 'react';
 import {
   Linking,
@@ -27,7 +27,7 @@ import {
 import {openComposer} from 'react-native-email-link';
 import Share, {ShareSingleOptions, Social} from 'react-native-share';
 import {useSelector} from 'react-redux';
-import {isAndroid, isIOS, rem} from 'rn-units';
+import {isIOS, rem} from 'rn-units';
 
 const buttons = [
   {
@@ -87,10 +87,9 @@ export const ShareCard = () => {
     try {
       switch (type) {
         case 'More':
-          let moreOptions = {
+          await ShareMore.share({
             message: `${t('invite_share.share_message')} ${url}`,
-          };
-          await ShareMore.share(moreOptions);
+          });
           break;
         case 'CopyLink':
           Clipboard.setString(url);
@@ -98,49 +97,42 @@ export const ShareCard = () => {
           copiedRef.current?.updateVisibleState(true);
           break;
         case 'Telegram':
-          let telegramOptions: ShareSingleOptions = {
+          await shareSingle({
             social: Social.Telegram,
             message: `${baseOptions.message} ${url}`,
-          };
-          await Share.shareSingle(telegramOptions);
+          });
           break;
         case 'Twitter':
-          let twitterOptions: ShareSingleOptions = {
+          await shareSingle({
             ...baseOptions,
             social: Social.Twitter,
-          };
-          await Share.shareSingle(twitterOptions);
+          });
           break;
         case 'WhatsApp':
-          let whatsappOptions: ShareSingleOptions = {
+          await shareSingle({
             ...baseOptions,
             social: Social.Whatsapp,
-          };
-          await Share.shareSingle(whatsappOptions);
+          });
           break;
         case 'Email':
-          let emailOptions: ShareSingleOptions = {
+          const emailOptions: ShareSingleOptions = {
             ...baseOptions,
             social: Social.Email,
           };
-
           await openComposer({
             subject: emailOptions.subject,
             body: `${emailOptions.message} ${url}`,
           });
           break;
         case 'FB':
-          let fbOptions: ShareSingleOptions = {
+          await shareSingle({
             ...baseOptions,
             social: Social.Facebook,
-          };
-          await Share.shareSingle(fbOptions);
+          });
           break;
         case 'Sms':
           const divider = isIOS ? '&' : '?';
-
           const path = `sms:${divider}body=${baseOptions.message} ${url}`;
-
           await Linking.openURL(path);
           break;
 
@@ -148,9 +140,6 @@ export const ShareCard = () => {
           break;
       }
     } catch (error) {
-      if (isShareProviderNotInstalled(error)) {
-        return;
-      }
       logError(error);
     }
   };
@@ -176,24 +165,6 @@ export const ShareCard = () => {
       </View>
     </View>
   );
-};
-
-const isShareProviderNotInstalled = (error: unknown) => {
-  if (
-    isAndroid &&
-    checkProp(error, 'error') &&
-    typeof error.error === 'string' &&
-    error.error.includes('No Activity found to handle Intent')
-  ) {
-    return true;
-  } else if (
-    isIOS &&
-    checkProp(error, 'code') &&
-    error.code === 'ECOM.RNSHARE1'
-  ) {
-    return true;
-  }
-  return false;
 };
 
 const styles = StyleSheet.create({
