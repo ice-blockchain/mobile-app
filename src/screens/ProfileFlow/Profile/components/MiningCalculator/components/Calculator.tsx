@@ -209,6 +209,6 @@ const styles = StyleSheet.create({
   sliderValueText: {
     flex: 1,
     ...font(17, 24, 'bold'),
-    textAlign: isRTL() ? 'left' : 'right',
+    textAlign: isRTL ? 'left' : 'right',
   },
 });

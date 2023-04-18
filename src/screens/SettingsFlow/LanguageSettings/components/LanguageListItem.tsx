@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.black01opacity,
   },
   languageText: {
-    flex: isRTL() ? 0 : 1,
+    flex: isRTL ? 0 : 1,
     marginLeft: rem(16),
     ...font(17, 22, 'regular', 'codeFieldText'),
   },

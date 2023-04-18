@@ -71,7 +71,7 @@ export const useTabBarWalkthrough = ({
             style={{
               width: nativeEvent.layout.width,
               height: nativeEvent.layout.height,
-              marginLeft: isRTL()
+              marginLeft: isRTL
                 ? screenWidth - nativeEvent.layout.x - nativeEvent.layout.width
                 : nativeEvent.layout.x,
             }}>

@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     paddingLeft: rem(46),
     height: SEARCH_INPUT_HEIGHT,
     ...font(16, 21, 'medium', 'primaryDark'),
-    textAlign: isRTL() ? 'right' : 'left',
+    textAlign: isRTL ? 'right' : 'left',
   },
   searchButton: {
     justifyContent: 'center',

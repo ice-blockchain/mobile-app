@@ -81,7 +81,7 @@ export const MenuButton = memo(() => {
       navigation.navigate('ContextualMenu', {
         coords: {
           top: y + height + rem(16),
-          right: isRTL() ? x : windowWidth - x - rem(16),
+          right: isRTL ? x : windowWidth - x - rem(16),
         },
         buttons,
       });

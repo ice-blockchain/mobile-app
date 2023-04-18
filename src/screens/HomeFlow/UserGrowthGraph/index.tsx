@@ -22,7 +22,7 @@ import {RouteProp, useRoute} from '@react-navigation/native';
 import {PeriodSelect} from '@screens/HomeFlow/Stats/components/UsersGrowthGraph/components/PeriodSelect';
 import {STATS_PERIODS} from '@store/modules/Stats/constants';
 import {StatsPeriod} from '@store/modules/Stats/types';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import React, {memo, useEffect, useMemo, useRef, useState} from 'react';
 import {InteractionManager, StyleSheet, View} from 'react-native';
 import Animated, {useSharedValue, withTiming} from 'react-native-reanimated';
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingTop: rem(16),
-    paddingHorizontal: SCREEN_SIDE_OFFSET,
+    paddingHorizontal: isRTL ? 0 : SCREEN_SIDE_OFFSET,
     paddingBottom: SCREEN_SIDE_OFFSET,
     flexGrow: 1,
     borderTopLeftRadius: rem(30),

@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(32),
     ...font(14, 20, 'regular', 'primaryDark'),
-    textAlign: isRTL() && isAndroid ? 'left' : 'center', // info icon doesn't align center on Android
+    textAlign: isRTL && isAndroid ? 'left' : 'center', // info icon doesn't align center on Android
   },
   container: {
     marginTop: rem(15),

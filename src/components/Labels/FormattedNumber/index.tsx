@@ -46,7 +46,7 @@ export const FormattedNumber = ({
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: isRTL() ? 'row-reverse' : 'row',
+    flexDirection: isRTL ? 'row-reverse' : 'row',
   },
   dot: {
     ...font(17, 20.4, 'bold'),

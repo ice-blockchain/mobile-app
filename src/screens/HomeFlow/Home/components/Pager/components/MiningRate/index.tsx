@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
   miningValueDecimalsText: {
     alignSelf: 'flex-start',
     ...font(8, 10, 'bold'),
-    marginRight: isRTL() ? 0 : rem(4),
+    marginRight: isRTL ? 0 : rem(4),
   },
   miningValuePositive: {
     color: COLORS.shamrock,

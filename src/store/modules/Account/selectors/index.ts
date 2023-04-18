@@ -39,9 +39,9 @@ export const usernameSelector = (state: RootState) =>
 export const usernameWithPrefixSelector = (state: RootState) => {
   const username = usernameSelector(state);
 
-  if (username.length && isRTL()) {
+  if (username.length && isRTL) {
     return `${username}@`;
-  } else if (username.length && !isRTL()) {
+  } else if (username.length && !isRTL) {
     return `@${username}`;
   } else {
     return username;

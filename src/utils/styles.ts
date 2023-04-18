@@ -33,10 +33,10 @@ export const font = (
 export const mirrorTransform = (isReverted?: boolean) => {
   if (isReverted) {
     return {
-      transform: [{scaleX: isRTL() ? 1 : -1}],
+      transform: [{scaleX: isRTL ? 1 : -1}],
     };
   }
   return {
-    transform: [{scaleX: isRTL() ? -1 : 1}],
+    transform: [{scaleX: isRTL ? -1 : 1}],
   };
 };

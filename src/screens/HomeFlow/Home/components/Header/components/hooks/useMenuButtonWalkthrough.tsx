@@ -61,7 +61,7 @@ export const useMenuButtonWalkthrough = ({
                   style={[
                     styles.mainContainer,
                     {
-                      paddingRight: isRTL()
+                      paddingRight: isRTL
                         ? EXTRA_PADDING + RTL_PADDING
                         : windowWidth -
                           measurements.pageX -
