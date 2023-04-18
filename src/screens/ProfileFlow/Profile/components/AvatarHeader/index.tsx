@@ -25,12 +25,14 @@ import {
   useAnimatedStyles,
 } from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useAnimatedStyles';
 import {useUserContactDetails} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useUserContactDetails';
+import {usernameWithPrefixSelector} from '@store/modules/Account/selectors';
 import {AnimatedCameraIcon} from '@svg/AnimatedCameraIcon';
 import {font, mirrorTransform} from '@utils/styles';
 import React, {memo, useState} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 const AnimatedTouchable = Animated.createAnimatedComponent(Touchable);
@@ -53,6 +55,7 @@ export const AvatarHeader = memo(
   ({user, animatedIndex, isOwner, isLoading = false}: Props) => {
     const {shadowStyle} = useScrollShadow({translateY: animatedIndex});
     const {top: topInset} = useSafeAreaInsets();
+    const username = useSelector(usernameWithPrefixSelector);
 
     const uri = user?.profilePictureUrl;
 
@@ -153,7 +156,7 @@ export const AvatarHeader = memo(
               <Animated.Text
                 style={[styles.usernameText, textStyle]}
                 numberOfLines={1}>
-                {`@${user.username}`}
+                {username}
               </Animated.Text>
             )}
           </View>
