@@ -8,6 +8,7 @@ import {useActionSheetUpdateAvatar} from '@hooks/useActionSheetUpdateAvatar';
 import {useUpdateAvatar} from '@hooks/useUpdateAvatar';
 import {HEADER_HEIGHT} from '@navigation/components/Header';
 import {BackButton} from '@navigation/components/Header/components/BackButton';
+import {QRCodeShareButton} from '@navigation/components/Header/components/QRCodeShareButton';
 import {SettingsButton} from '@navigation/components/Header/components/SettingsButton';
 import {ShowPrivacyButton} from '@navigation/components/Header/components/ShowPrivacyButton';
 import {useTopOffsetStyle} from '@navigation/hooks/useTopOffsetStyle';
@@ -137,10 +138,13 @@ export const AvatarHeader = memo(
               !user?.hiddenProfileElements?.length &&
                 styles.rightSmallContainer,
             ]}>
-            {isOwner && user && user?.hiddenProfileElements?.length && (
-              <ShowPrivacyButton containerStyle={styles.showPrivacyButton} />
+            {isOwner && user?.hiddenProfileElements?.length && (
+              <ShowPrivacyButton containerStyle={styles.navigationButton} />
             )}
-            {isOwner && user && <SettingsButton />}
+            {isOwner && (
+              <QRCodeShareButton containerStyle={styles.navigationButton} />
+            )}
+            {isOwner && <SettingsButton />}
           </View>
         </View>
         {contactDetails && isTooltipVisible && !isOwner && (
@@ -209,7 +213,7 @@ const styles = StyleSheet.create({
   touchableAvatar: {
     flex: 1,
   },
-  showPrivacyButton: {
+  navigationButton: {
     marginRight: rem(16),
   },
 });
