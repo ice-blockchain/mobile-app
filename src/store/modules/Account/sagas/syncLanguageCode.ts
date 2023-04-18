@@ -3,15 +3,11 @@
 import {getAuthLanguageCode, setAuthLanguageCode} from '@services/auth';
 import {setCalendarLocale} from '@services/calendar';
 import {setDayjsLocale} from '@services/dayjs';
-import {
-  appLocaleSelector,
-  userSelector,
-} from '@store/modules/Account/selectors';
+import {appLocaleSelector} from '@store/modules/Account/selectors';
 import {waitForSelector} from '@store/utils/sagas/effects';
 import {getLocale, isRTL, setLocale} from '@translations/i18n';
 import {localeConfig} from '@translations/localeConfig';
 import {I18nManager} from 'react-native';
-import RNRestart from 'react-native-restart';
 import {call, SagaReturnType, select} from 'redux-saga/effects';
 
 /**
@@ -23,12 +19,6 @@ export function* syncLanguageCodeSaga() {
   while (true) {
     yield call(waitForSelector, state => {
       const appLocale = appLocaleSelector(state);
-      const user = userSelector(state);
-
-      if (localeConfig[appLocale].isRTL !== isRTL) {
-        I18nManager.forceRTL(localeConfig[appLocale].isRTL);
-        !user && RNRestart.restart();
-      }
 
       return appLocale !== getLocale();
     });

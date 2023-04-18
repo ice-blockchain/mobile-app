@@ -10,6 +10,7 @@ import {signInPhoneSaga} from '@store/modules/Account/sagas/signInPhone';
 import {signInSocialSaga} from '@store/modules/Account/sagas/signInSocial';
 import {signOutSaga} from '@store/modules/Account/sagas/signOut';
 import {syncLanguageCodeSaga} from '@store/modules/Account/sagas/syncLanguageCode';
+import {syncRTLSaga} from '@store/modules/Account/sagas/syncRTL';
 import {updateAccountSaga} from '@store/modules/Account/sagas/updateAccount';
 import {updateRefByUsernameSaga} from '@store/modules/Account/sagas/updateRefByUsernameSaga';
 import {userStateChangeSaga} from '@store/modules/Account/sagas/userStateChange';
@@ -58,5 +59,6 @@ export function* rootAuthSaga() {
     ),
     takeLatest(AccountActions.RESET_PASSWORD.START.type, resetPasswordSaga),
     fork(syncLanguageCodeSaga),
+    fork(syncRTLSaga),
   ]);
 }
