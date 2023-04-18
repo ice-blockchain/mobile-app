@@ -174,8 +174,7 @@ const styles = StyleSheet.create({
   },
   resultLabelText: {
     marginTop: rem(30),
-    ...font(13, 24, 'regular', 'periwinkleGray'),
-    textAlign: 'center',
+    ...font(13, 24, 'regular', 'periwinkleGray', 'center'),
   },
   resultValue: {
     minHeight: rem(36),
@@ -185,17 +184,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   resultValueText: {
-    ...font(28, 34, 'bold'),
-    textAlign: 'auto',
+    ...font(28, 34, 'bold', 'white', 'auto'),
   },
   resultBonusText: {
-    ...font(28, 34, 'bold', 'shamrock'),
-    textAlign: 'auto',
+    ...font(28, 34, 'bold', 'shamrock', 'auto'),
   },
   currentRateText: {
     marginVertical: rem(4),
-    ...font(13, 18, 'bold', 'periwinkleGray'),
-    textAlign: 'center',
+    ...font(13, 18, 'bold', 'periwinkleGray', 'center'),
   },
   sliderInfo: {
     marginTop: rem(30),
@@ -211,12 +207,10 @@ const styles = StyleSheet.create({
   },
   sliderValueText: {
     flex: 1,
-    ...font(17, 24, 'bold'),
-    textAlign: isRTL ? 'left' : 'right',
+    ...font(17, 24, 'bold', 'white', isRTL ? 'left' : 'right'),
   },
   descriptionText: {
     marginTop: rem(40),
-    ...font(14, 19, 'regular', 'periwinkleGray'),
-    textAlign: 'center',
+    ...font(14, 19, 'regular', 'periwinkleGray', 'center'),
   },
 });

@@ -123,11 +123,9 @@ const styles = StyleSheet.create({
   titleText: {
     ...font(16, 19.2, 'black', 'primaryDark'),
     marginBottom: rem(4),
-    textAlign: 'left',
   },
   descriptionText: {
     ...font(12, 14.4, 'medium', 'secondary'),
-    textAlign: 'left',
   },
   chevron: {
     marginLeft: rem(10),

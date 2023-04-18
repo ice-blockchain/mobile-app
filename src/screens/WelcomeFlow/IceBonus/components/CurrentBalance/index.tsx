@@ -67,8 +67,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   labelText: {
-    ...font(12, 15, 'semibold'),
-    textAlign: 'center',
+    ...font(12, 15, 'semibold', 'white', 'center'),
   },
   valueText: {
     ...font(32, 39, 'black'),

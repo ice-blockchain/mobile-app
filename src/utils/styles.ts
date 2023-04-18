@@ -6,12 +6,20 @@ import {FontFamily, FONTS, FontWight} from '@constants/fonts';
 import {isRTL} from '@translations/i18n';
 import {rem} from 'rn-units';
 
+type TextAlignType =
+  | 'center'
+  | 'auto'
+  | 'left'
+  | 'right'
+  | 'justify'
+  | undefined;
+
 type FontResult = {
   fontSize: number;
   lineHeight: number | undefined;
   fontFamily: string;
   color: string;
-  textAlign: 'center' | 'auto' | 'left' | 'right' | 'justify' | undefined;
+  textAlign: TextAlignType;
 };
 
 export const font = (
@@ -19,6 +27,7 @@ export const font = (
   lineHeight?: number | null,
   fontWeight: FontWight = 'regular',
   color: keyof typeof COLORS = 'white',
+  textAlign: TextAlignType = 'left',
   fontFamily: FontFamily = 'primary',
 ): FontResult => {
   return {
@@ -26,7 +35,7 @@ export const font = (
     lineHeight: lineHeight != null ? rem(lineHeight) : undefined,
     fontFamily: FONTS[fontFamily][fontWeight],
     color: COLORS[color],
-    textAlign: 'left',
+    textAlign,
   };
 };
 

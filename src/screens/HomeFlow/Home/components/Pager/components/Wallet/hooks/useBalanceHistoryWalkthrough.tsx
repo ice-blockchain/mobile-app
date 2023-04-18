@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {windowWidth} from '@constants/styles';
 import {
   BALANCE_HISTORY_ICON_SIZE,
   BalanceHistoryButton,
@@ -9,7 +10,7 @@ import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/use
 import {isRTL} from '@translations/i18n';
 import React, {useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {rem, screenWidth} from 'rn-units/index';
+import {rem} from 'rn-units/index';
 
 const PADDING = rem(12);
 
@@ -31,7 +32,7 @@ export const useBalanceHistoryWalkthrough = () => {
                 styles.container,
                 {
                   marginLeft: isRTL
-                    ? screenWidth - measurements.pageX - MAIN_CONTAINER_SIZE
+                    ? windowWidth - measurements.pageX - MAIN_CONTAINER_SIZE
                     : measurements.pageX - PADDING,
                 },
               ]}>

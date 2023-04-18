@@ -53,14 +53,12 @@ const styles = StyleSheet.create({
   title: {
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(2),
-    ...font(24, 29, 'black', 'primaryDark'),
-    textAlign: 'center',
+    ...font(24, 29, 'black', 'primaryDark', 'center'),
   },
   description: {
     marginHorizontal: rem(30),
     marginBottom: rem(24),
-    ...font(14, 24, 'regular', 'secondary'),
-    textAlign: 'center',
+    ...font(14, 24, 'regular', 'secondary', 'center'),
   },
   button: {
     flexGrow: 1,

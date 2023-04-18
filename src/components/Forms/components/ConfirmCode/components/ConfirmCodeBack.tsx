@@ -21,7 +21,6 @@ export const ConfirmCodeBack = ({onPress, text, textStyle, style}: Props) => (
 
 const styles = StyleSheet.create({
   buttonText: {
-    ...font(15, 18, 'medium', 'secondary'),
-    textAlign: 'center',
+    ...font(15, 18, 'medium', 'secondary', 'center'),
   },
 });

@@ -60,17 +60,14 @@ const styles = StyleSheet.create({
   title: {
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(2),
-    ...font(24, 29, 'black', 'primaryDark'),
-    textAlign: 'center',
+    ...font(24, 29, 'black', 'primaryDark', 'center'),
   },
   codeSourceDescText: {
     marginTop: rem(10),
-    ...font(16, 26, 'medium', 'secondary'),
-    textAlign: 'center',
+    ...font(16, 26, 'medium', 'secondary', 'center'),
   },
   codeSourceText: {
-    ...font(16, 26, 'bold', 'codeFieldText'),
-    textAlign: 'center',
+    ...font(16, 26, 'bold', 'codeFieldText', 'center'),
   },
   codeInput: {
     marginTop: rem(30),

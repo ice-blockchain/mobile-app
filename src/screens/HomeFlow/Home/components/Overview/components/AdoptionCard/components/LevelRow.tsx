@@ -150,8 +150,7 @@ const styles = StyleSheet.create({
   },
   valueText: {
     minWidth: rem(44),
-    ...font(15, 18, 'medium'),
-    textAlign: 'center',
+    ...font(15, 18, 'medium', 'white', 'center'),
   },
   valueCurrencyText: {
     opacity: 0.8,

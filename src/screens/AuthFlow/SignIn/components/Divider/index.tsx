@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
   },
   orText: {
     textTransform: 'uppercase',
-    ...font(10, 12, 'regular', 'secondary'),
-    textAlign: 'center',
+    ...font(10, 12, 'regular', 'secondary', 'center'),
   },
 });

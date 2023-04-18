@@ -116,12 +116,10 @@ const styles = StyleSheet.create({
   },
   ladderLabelText: {
     marginHorizontal: rem(4),
-    ...font(10, 12, 'regular', 'periwinkleGray'),
-    textAlign: 'center',
+    ...font(10, 12, 'regular', 'periwinkleGray', 'center'),
   },
   ladderLabelTextPrivacyEdit: {
     marginHorizontal: rem(4),
-    ...font(10, 12, 'regular', 'periwinkleGray'),
-    textAlign: 'center',
+    ...font(10, 12, 'regular', 'periwinkleGray', 'center'),
   },
 });

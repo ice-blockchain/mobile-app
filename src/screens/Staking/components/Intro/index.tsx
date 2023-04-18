@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
   noteText: {
     marginHorizontal: rem(28),
     marginTop: rem(24),
-    ...font(14, 20, 'regular', 'white'),
-    textAlign: isRTL && isAndroid ? 'left' : 'center', // info icon doesn't align center on Android
+    ...font(14, 20, 'regular', 'white', isRTL && isAndroid ? 'left' : 'center'), // info icon doesn't align center on Android
   },
 });

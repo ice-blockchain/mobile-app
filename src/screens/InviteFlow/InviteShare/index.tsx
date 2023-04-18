@@ -49,8 +49,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: rem(30),
   },
   description: {
-    ...font(15, null, 'regular', 'white'),
-    textAlign: 'center',
+    ...font(15, null, 'regular', 'white', 'center'),
     marginTop: rem(45),
     marginHorizontal: rem(28),
   },

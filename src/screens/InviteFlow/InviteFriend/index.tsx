@@ -134,20 +134,17 @@ const styles = StyleSheet.create({
   },
   name: {
     marginTop: AVATAR_CONTAINER_SIDE_DIMENSION / 2 + rem(12),
-    ...font(17, 20, 'semibold', 'white'),
-    textAlign: 'center',
+    ...font(17, 20, 'semibold', 'white', 'center'),
   },
   number: {
-    ...font(13, 16, 'medium', 'secondaryFaint'),
-    textAlign: 'center',
+    ...font(13, 16, 'medium', 'secondaryFaint', 'center'),
     marginTop: rem(4),
   },
   descriptionContainer: {
     paddingHorizontal: smallHeightDevice ? rem(54) : rem(70),
   },
   description: {
-    ...font(17, 22, 'medium', 'primaryDark'),
-    textAlign: 'center',
+    ...font(17, 22, 'medium', 'primaryDark', 'center'),
   },
   buttonContainer: {
     paddingTop: smallHeightDevice ? rem(6) : rem(24),

@@ -178,8 +178,7 @@ const styles = StyleSheet.create({
   },
   resultLabelText: {
     marginTop: rem(28),
-    ...font(13, 24, 'regular', 'periwinkleGray'),
-    textAlign: 'center',
+    ...font(13, 24, 'regular', 'periwinkleGray', 'center'),
   },
   resultValue: {
     minHeight: rem(36),
@@ -187,8 +186,7 @@ const styles = StyleSheet.create({
   },
   resultValueText: {
     marginTop: rem(4),
-    ...font(28, 34, 'bold'),
-    textAlign: 'center',
+    ...font(28, 34, 'bold', 'white', 'center'),
   },
   sliderInfo: {
     marginTop: isAndroid ? rem(17) : rem(36),
@@ -208,7 +206,6 @@ const styles = StyleSheet.create({
   },
   sliderValueText: {
     flex: 1,
-    ...font(17, 24, 'bold'),
-    textAlign: isRTL ? 'left' : 'right',
+    ...font(17, 24, 'bold', 'white', isRTL ? 'left' : 'right'),
   },
 });

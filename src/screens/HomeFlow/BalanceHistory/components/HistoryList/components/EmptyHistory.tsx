@@ -28,8 +28,7 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(30),
   },
   labelText: {
-    ...font(14, 20, 'medium', 'secondary'),
-    textAlign: 'center',
+    ...font(14, 20, 'medium', 'secondary', 'center'),
     marginTop: rem(16),
   },
 });

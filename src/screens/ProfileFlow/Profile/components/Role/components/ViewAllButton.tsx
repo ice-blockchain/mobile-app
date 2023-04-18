@@ -4,9 +4,10 @@ import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {InfoOutlineIcon} from '@svg/InfoOutlineIcon';
 import {t} from '@translations/i18n';
+import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text} from 'react-native';
-import {font, rem} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   onPress: () => void;
@@ -29,9 +30,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   viewAllText: {
-    fontSize: font(12),
-    color: COLORS.primaryDark,
-    textAlign: 'center',
+    ...font(12, 14.4, 'regular', 'primaryDark', 'center'),
   },
   infoIcon: {
     marginLeft: rem(4),

@@ -66,8 +66,7 @@ const styles = StyleSheet.create({
   title: {
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(16),
-    ...font(14, 24, 'regular', 'primaryDark'),
-    textAlign: 'center',
+    ...font(14, 24, 'regular', 'primaryDark', 'center'),
   },
   boldTitle: {
     ...font(14, 24, 'bold', 'primaryDark'),

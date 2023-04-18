@@ -52,14 +52,12 @@ const styles = StyleSheet.create({
   titleText: {
     marginTop: rem(22),
     marginHorizontal: rem(32),
-    ...font(18, 22, 'black', 'primaryDark'),
-    textAlign: 'center',
+    ...font(18, 22, 'black', 'primaryDark', 'center'),
   },
   noteText: {
     marginTop: rem(14),
     marginHorizontal: rem(32),
-    ...font(12, 17, 'medium', 'secondary'),
-    textAlign: 'center',
+    ...font(12, 17, 'medium', 'secondary', 'center'),
   },
   button: {
     marginTop: rem(20),

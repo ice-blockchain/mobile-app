@@ -54,8 +54,7 @@ const styles = StyleSheet.create({
   usernameText: {
     marginTop: rem(5),
     width: rem(60),
-    ...font(10, 12, 'medium', 'secondary'),
-    textAlign: 'center',
+    ...font(10, 12, 'medium', 'secondary', 'center'),
   },
   friendIcon: {
     position: 'absolute',
