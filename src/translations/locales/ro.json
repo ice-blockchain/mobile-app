@@ -63,7 +63,10 @@
     "close": "Închide",
     "try_again": "Încearcă din nou",
     "view_changelog": "Vedeți jurnalul de modificări",
-    "disable": "Dezactivați"
+    "disable": "Dezactivați",
+    "agree": "Sunt de acord",
+    "learn_more": "Află mai multe",
+    "back_to_login": "Înapoi la autentificare"
   },
   "team": {
     "contacts_tab": "Contacte",
@@ -71,6 +74,7 @@
     "tierTwo_tab": "Nivelul 2",
     "empty": {
       "title": "Momentan nu ai niciunul\n[[:title]] recomandari!",
+      "contacts": "Momentan nu aveți persoane de contact.",
       "button_title": "Invita prieteni"
     },
     "contacts": {
@@ -126,6 +130,7 @@
     "logInSignUp": "Log In / Înregistrare",
     "phone": "Telefon",
     "or": "sau",
+    "reset_password": "Reseteaza parola",
     "welcome": "Bun venit la gheață",
     "email": "E-mail",
     "slogan": "Resetarea monedei globale",
@@ -192,7 +197,11 @@
     "email_already_in_use": "Adresa de e-mail este deja utilizată de un alt cont.",
     "user_token_expired": "Acreditările dvs. nu mai sunt valide. ",
     "requires_recent_login": "Această operațiune este sensibilă și necesită autentificare recentă. ",
-    "same_email": "Nu puteți folosi același e-mail"
+    "same_email": "Nu puteți folosi același e-mail",
+    "weak_password": "Parolă slabă",
+    "wrong_password": "Parola gresita",
+    "no_camera_permissions": "Permisiunile camerei nu sunt acordate",
+    "no_library_permissions": "Permisiunile bibliotecii nu sunt acordate"
   },
   "profile": {
     "my_roles": {
@@ -204,7 +213,7 @@
     "global_rank": "rang global",
     "view_all_roles": "vezi toate rolurile",
     "data_is_hidden": "datele sunt ascunse",
-    "progress_text": "{{value}} of {{total}}",
+    "progress_text": "{{value}} de {{total}}",
     "not_found": {
       "title": "Utilizatorul nu a fost găsit",
       "description": "hopa, nu am putut găsi acest utilizator"
@@ -220,29 +229,30 @@
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "Monede",
+        "description": "monede"
       },
       "social": {
         "title": "Social",
-        "description": "friends"
+        "description": "prieteni"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "Nivel",
+        "description": "Nivel"
       }
     }
   },
   "global": {
     "level": "nivel",
-    "referrals": "referiri",
-    "coins": "Monede",
+    "referrals": "trimiteri",
+    "coin": "Monede",
     "social": "Social",
     "phone_number": "Număr de telefon",
     "years": "Ani",
     "of": "de",
     "attention": "Atenţie",
     "email_address": "Adresa de e-mail",
+    "password": "Parola",
     "data_hidden": "datele sunt ascunse",
     "pull_to_refresh": "trage pentru a actualiza",
     "comingSoon": "In curand",
@@ -543,13 +553,15 @@
   "news": {
     "news_feed": "Fluxuri de stiri",
     "read_more": "Citeşte mai mult",
+    "no_more_news": "aceasta este ultima intrare din fluxul de știri",
     "views": "{{viewsCount}} vederi"
   },
   "search": {
     "empty": "Căutați contacte, prieteni de gheață și membri ai micro-comunității dvs",
     "nothing_is_found": "Nu a fost găsit nimic pentru interogarea dvs",
     "search_by_country": "Căutați după țară",
-    "search_for_users": "Căutați utilizatori"
+    "search_for_users": "Căutați utilizatori",
+    "loading": "In cautarea…"
   },
   "tabbar": {
     "mining_inactive_tooltip": "Atingeți aici pentru a începe prima dvs. sesiune de check-in",
@@ -634,7 +646,9 @@
     "wrong_email": "Email gresit?",
     "check_email": "Verifica-ti email-ul",
     "emailed_link_to": "Am trimis prin e-mail un link magic către",
+    "emailed_steps_to": "Am trimis pașii prin e-mail către",
     "link_instruction": "Faceți clic pe link pentru a vă autentifica sau pentru a vă înscrie.",
+    "reset_link_instruction": "Faceți clic pe link pentru a vă reseta parola.",
     "modify_title": "Confirmați e-mailul nou",
     "modify_description": "Vă rugăm să introduceți noua adresă de e-mail"
   },
@@ -660,14 +674,14 @@
   },
   "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "Om de zapada",
+      "subtitle": "Construiește un imperiu al zăpezii",
+      "description": "Câștigă prin înregistrarea la fiecare 24 de ore pentru a-ți arăta angajamentul față de rețeaua ice și pentru a dovedi că ești un om, nu un robot"
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "Ambasador",
+      "subtitle": "Conducătorul imperiului zăpezii",
+      "description": "Devii ambasador atunci când cel puțin 100 de persoane s-au alăturat echipei tale. "
     }
   },
   "confirm_phone": {
@@ -682,134 +696,144 @@
   "walkthrough": {
     "news": {
       "readmore": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+        "title": "Citeşte mai mult",
+        "description": "Aici puteți vedea ultimele știri ale echipei noastre. "
       },
       "releasednews": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
+        "title": "Stiri lansate",
+        "description": "Atingeți fiecare titlu individual de știri și citiți versiunea completă a acesteia. "
       }
     },
     "team": {
       "allow_contacts": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+        "title": "Permite contacte",
+        "description": "Sincronizează-ți contactele și vezi cine este deja pe [[:ice]]. "
       },
       "confirm_phone": {
-        "title": "Confirm phone",
-        "description": "Confirm your identity and allow your contacts to know that you are also a member of the ice network. Your phone number will not be shared with other third parties."
+        "title": "Confirmați telefonul",
+        "description": "Confirmați-vă identitatea și permiteți persoanelor de contact să știe că sunteți și membru al rețelei ice. "
       },
       "contacts_list": {
-        "title": "List of contacts",
-        "description": "This is the list with all your contacts, those who already joined the [[:ice]] network being displayed on top of the list."
+        "title": "Lista de contacte",
+        "description": "Aceasta este lista cu toate contactele dvs., cei care s-au alăturat deja rețelei [[:ice]] fiind afișați în partea de sus a listei."
       },
       "referrals": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+        "title": "Recomandări",
+        "description": "Aici vei vedea câte recomandări ai în total. "
       },
       "earnings": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "segmented_control_tier_one": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each friend checking-in at the same time with you, you will get extra 25% on your base current adoption earning rate. [[:link]]Read more[[/:link]]",
-        "url": "https://ice.io/#invite"
+        "title": "Câștiguri",
+        "description": "Soldul dvs. actual este actualizat la fiecare oră și este afișat aici. "
       },
       "segmented_control_tier_two": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each friend checking-in at the same time with you, you will get extra 5% on your base current adoption earning rate. [[:link]]Read more[[/:link]]",
-        "url": "https://ice.io/#invite"
+        "title": "Nivelul 2",
+        "description": "Aici puteți vedea lista recomandărilor dvs. de nivel 2. ",
+        "url": "https://ice.io/"
       },
       "active_users": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals check-in activity. They count as active when they have an active check-in session."
+        "title": "Utilizatori activi",
+        "description": "Acesta este starea actuală a activității dvs. de înregistrare a recomandărilor. "
       },
       "tier_one_earnings": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member checking-in at the same time with you, you will both get extra 25% on your base current adoption earning rate."
+        "title": "Câștiguri de nivel 1",
+        "description": "Aici puteți vedea lista recomandărilor dvs. de nivel 1. "
       },
       "ping": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their check-in sessions. You can send one notification to each referral every 24h."
+        "title": "Butonul Ping",
+        "description": "Notificați-vă recomandările pentru a începe sesiunile de check-in. "
+      },
+      "segmented_control_tier_one": {
+        "title": "Nivelul 1",
+        "description": "Aici puteți vedea lista recomandărilor dvs. de nivel 1. ",
+        "url": "https://ice.io/"
+      },
+      "segmented_control_tier_few": {
+        "title": "Nivelul 1",
+        "description": "Aici puteți vedea lista recomandărilor dvs. de nivel 1. ",
+        "url": "https://ice.io/"
+      },
+      "segmented_control_tier_other": {
+        "title": "Nivelul 1",
+        "description": "Aici puteți vedea lista recomandărilor dvs. de nivel 1. ",
+        "url": "https://ice.io/"
       }
     },
     "home": {
       "home": {
-        "title": "Home",
-        "description": "Welcome to [[:ice]]. On the home screen you can find all the statistics about your balance, the current earning rate, your global rank along with your team."
+        "title": "Acasă",
+        "description": "Bun venit la [[:ice]]. "
       },
       "invite": {
-        "title": "Invite",
-        "description": "For every person that you invite, you will both earn up to 25% on your base earning rate. The more people you invite, the more you will earn."
+        "title": "A invita",
+        "description": "Pentru fiecare persoană pe care o invitați, amândoi veți câștiga până la 25% din rata de bază a câștigurilor. "
       },
       "team": {
-        "title": "Team",
-        "description": "[[:ice]] is better with friends. On this page you can see the status of your team members from both Tier 1 and Tier 2 levels. You can also ping them from here."
+        "title": "Echipă",
+        "description": "[[:ice]] este mai bine cu prietenii. "
       },
       "news": {
-        "title": "News",
-        "description": "Stay up to date on all our news and polls. As we are a Decentralized Autonomous Organization, you will be able to vote here for the future features."
+        "title": "Știri",
+        "description": "Fiți la curent cu toate știrile și sondajele noastre. "
       },
       "profile": {
-        "title": "Profile",
-        "description": "Customize your profile details and see all your achievements and badges that you have earned. Use the calculator from here, so you can estimate your earnings."
+        "title": "Profil",
+        "description": "Personalizați-vă detaliile profilului și vedeți toate realizările și insignele pe care le-ați câștigat. "
       },
       "earningicestart": {
-        "title": "Earning ice",
-        "description": "You can start the [[:ice]] check-in session every 24 hours by tapping this button. Don’t forget to come back each day and start earning!"
+        "title": "Câștig ice",
+        "description": "Puteți începe sesiunea de check-in [[:ice]] la fiecare 24 de ore atingând acest buton. "
       },
       "earningiceseemore": {
-        "title": "Earning ice",
-        "description": "Tap again and see more details about your current check-in session."
+        "title": "Câștig ice",
+        "description": "Atingeți din nou și vedeți mai multe detalii despre sesiunea dvs. curentă de check-in."
       },
       "stats": {
-        "title": "Stats",
-        "description": "On the stats page you can see Total and Active users that checked-in each day along with Top countries and users."
+        "title": "Statistici",
+        "description": "Pe pagina de statistici puteți vedea utilizatorii totali și activi care s-au înregistrat în fiecare zi, împreună cu cele mai bune țări și utilizatori."
       },
       "help": {
-        "title": "Help",
-        "description": "Do you have any questions? Check out our list of frequently asked questions. If you can't find what you're looking for, don't hesitate to reach out to us at hi@ice.io."
+        "title": "Ajutor",
+        "description": "Aveti vreo intrebare? "
       },
       "preStaking": {
-        "title": "Pre-Staking",
-        "description": "Maximize your returns by pre-staking your earning rewards. Select your allocation and staking period to receive a bonus on top of your earnings."
+        "title": "Pre-Miza",
+        "description": "Maximizați-vă profiturile prin mizați anticipat recompensele câștigate. "
       },
       "wallet": {
-        "title": "Wallet Card",
-        "description": "You can find here your current [[:ice]] balance, together with the earning rate. The more referrals from your team are online, the higher the earning rate."
+        "title": "Card de portofel",
+        "description": "Puteți găsi aici soldul dvs. actual [[:ice]], împreună cu rata de câștig. "
       },
       "earning": {
-        "title": "Earning Card",
-        "description": "Stay up to date on your earning rate and bonuses! Here you can check out your current rate, our base rate, and bonus rates for various activities in the app."
+        "title": "Card de câștig",
+        "description": "Fii la curent cu rata de câștig și bonusuri! "
       },
       "engagement": {
-        "title": "Engagement Card",
-        "description": "Keep track of your check-in sessions streak and days off! Check this section for more details about your consecutive check-in sessions and to see how many available days off you have."
+        "title": "Card de logodnă",
+        "description": "Urmăriți seria de sesiuni de check-in și zilele libere! "
       },
       "profilecard": {
-        "title": "Profile Card",
-        "description": "You can keep track of your profile status by following this card. It displays your current global rank, together with your role, level and total referrals."
+        "title": "Card de profil",
+        "description": "Puteți urmări starea profilului dvs. urmând acest card. "
       },
       "referralscard": {
-        "title": "Referral Card",
-        "description": "See the evolution of your referral stats for the previous 5 days for both Tier 1 and Tier 2 referrals by tapping this card."
+        "title": "Card de recomandare",
+        "description": "Vedeți evoluția statisticilor dvs. de recomandare pentru ultimele 5 zile pentru recomandările de nivel 1 și de nivel 2 atingând acest card."
       },
       "adoptioncard": {
-        "title": "Adoption Card",
-        "description": "Based on the average of the last week total of active Snowmen, you can see the current [[:ice]] earning rate. The earning rate is halved when reached the next threshold."
+        "title": "Card de Adopție",
+        "description": "Pe baza mediei totale a oamenilor de zăpadă activi din ultima săptămână, puteți vedea rata actuală de câștig [[:ice]]. "
       },
       "nickname": {
-        "title": "Nickname",
-        "description": "The nickname is what makes you unique. Your friends will need to use it in order to join your team. You can also use this shortcut to open your profile."
+        "title": "Poreclă",
+        "description": "Porecla este ceea ce te face unic. "
       },
       "balancehistory": {
-        "title": "Balance History",
-        "description": "You can find here your current [[:ice]] balance on local wallet and blockchain. The local wallet balance is updated every hour, while the blockchain balance is updated every 24 hours."
+        "title": "Istoricul echilibrului",
+        "description": "Puteți găsi aici soldul dvs. actual [[:ice]] pe portofelul local și blockchain. "
       },
       "achievements": {
-        "title": "Achievements",
-        "description": "Complete the tasks below and level up! Start your first check-in session now!"
+        "title": "Realizări",
+        "description": "Completați sarcinile de mai jos și treceți la nivel! "
       }
     }
   },
@@ -848,5 +872,12 @@
     "expired_title": "Bonus a expirat",
     "expired_message": "Din păcate, bonusul de astăzi a expirat. ",
     "result_title": "Felicitări"
+  },
+  "early_access": {
+    "title": "Pre-acces",
+    "message_part1": "Priviți o prezentare a aplicației [[:bold]]ice[[/:bold]] înainte de lansarea noastră oficială pe [[:bold]]4 aprilie 2023[[/:bold]].",
+    "message_part2": "Toate soldurile vor fi resetate la 0 la data lansării. ",
+    "message_part3": "Iti multumesc pentru sprijin!",
+    "checkbox_description": "am recunoscut! "
   }
 }
