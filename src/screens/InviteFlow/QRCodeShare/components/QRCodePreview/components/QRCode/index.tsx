@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {QRCodeEye} from '@components/QRCode/components/QRCodeEye';
-import {QRCodeField} from '@components/QRCode/components/QRCodeField';
-import {QRCodeLogo} from '@components/QRCode/components/QRCodeLogo';
-import {generateQRCodeMatrix} from '@components/QRCode/utils';
 import {COLORS} from '@constants/colors';
+import {QRCodeEye} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/QRCode/components/QRCodeEye';
+import {QRCodeField} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/QRCode/components/QRCodeField';
+import {QRCodeLogo} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/QRCode/components/QRCodeLogo';
+import {generateQRCodeMatrix} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/QRCode/utils';
 import React from 'react';
 import {StyleProp, StyleSheet, View, ViewStyle} from 'react-native';
 

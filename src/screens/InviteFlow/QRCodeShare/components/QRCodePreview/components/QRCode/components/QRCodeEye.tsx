@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {EYE_CELLS} from '@components/QRCode/constants';
+import {EYE_CELLS} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/QRCode/constants';
 import {QRCodeEyeIcon} from '@svg/QRCodeEyeIcon';
 import React from 'react';
 import {StyleProp, ViewStyle} from 'react-native';

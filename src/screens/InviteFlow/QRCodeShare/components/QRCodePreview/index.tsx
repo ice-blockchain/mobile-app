@@ -2,9 +2,9 @@
 
 import {Avatar} from '@components/Avatar/Avatar';
 import {IceLabel} from '@components/Labels/IceLabel';
-import {QRCode} from '@components/QRCode';
 import {COLORS} from '@constants/colors';
 import {windowWidth} from '@constants/styles';
+import {QRCode} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/QRCode';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -17,7 +17,7 @@ import {rem} from 'rn-units';
 const AVATAR_SIZE = rem(82);
 
 export const QRCodePreview = () => {
-  const user = useSelector(unsafeUserSelector);
+  const user = useSelector(unsafeUserSelector); //TODO::use everywhere + combine buttons in components folder
   return (
     <View style={styles.container}>
       <Avatar

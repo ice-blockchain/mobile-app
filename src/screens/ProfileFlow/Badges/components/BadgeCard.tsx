@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {BadgeType} from '@api/achievements/types';
-import {ImageCardCompact} from '@components/Cards/ImageCardCompact';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
 import {BadgeProgress} from '@screens/ProfileFlow/Badges/components/BadgeCardProgress';
+import {ImageCardCompact} from '@screens/ProfileFlow/Badges/components/ImageCardCompact';
 import {t} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import React from 'react';
