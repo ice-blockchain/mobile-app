@@ -1,0 +1,783 @@
+{
+  "welcome": {
+    "page1": {
+      "title": "Selamat datang di es",
+      "description": "[[:ice]] adalah mata uang digital yang dapat Anda peroleh dengan ponsel Anda. "
+    },
+    "page2": {
+      "title": "Ramah Planet",
+      "description": "[[:ice]] secara inheren lebih hemat energi daripada BTC karena menggunakan mekanisme konsensus “Proof of Stake”. "
+    },
+    "page3": {
+      "title": "Koin Rakyat",
+      "description_part1": "Kekuatan ada di tangan Anda.",
+      "description_part2": "Semua yang kami kembangkan di [[:ice]] akan menjadi open source"
+    },
+    "page4": {
+      "title": "Tetap terhubung",
+      "description": "Ketuk [[:iceLogo]] untuk check-in harian Anda dengan aplikasi seluler ringan hemat energi kami. "
+    },
+    "page5": {
+      "title": "Merujuk",
+      "description": "Undang teman Anda dan hasilkan (kalian berdua) hingga {{value}}% bonus pada tingkat penghasilan dasar Anda untuk setiap teman yang bergabung dengan tim Anda."
+    },
+    "page6": {
+      "title": "Notifikasi",
+      "description_part1": "[[:ice]] sesi check-in hanya berlangsung selama {{value}} jam. ",
+      "description_part2": "Jangan khawatir, kami tidak akan mengirim spam kepada Anda!",
+      "not_now": "Tidak sekarang"
+    }
+  },
+  "button": {
+    "yes_btn": "Ya silahkan",
+    "next_btn": "Berikutnya",
+    "not_now": "Tidak sekarang",
+    "view_all": "Lihat semua",
+    "invite_friend": {
+      "title": "Mengundang teman-teman",
+      "description_part1": "Hasilkan ekstra ",
+      "description_part2": " dengan mengundang teman-teman Anda."
+    },
+    "no": "TIDAK",
+    "search_country": "Telusuri negara",
+    "save": "Menyimpan",
+    "yes": "Ya",
+    "change": "Mengubah",
+    "no_cancel": "Tidak, batalkan",
+    "complete": "Menyelesaikan",
+    "cancel": "Membatalkan",
+    "clear": "Jernih",
+    "finish": "Menyelesaikan",
+    "next_step": "Langkah berikutnya",
+    "see_all": "Lihat semua",
+    "back": "Kembali",
+    "search": "Mencari",
+    "continue": "Melanjutkan",
+    "apply": "Menerapkan",
+    "reset": "Mengatur ulang",
+    "skip_all": "Lewati semua",
+    "done": "Selesai",
+    "confirm": "Mengonfirmasi",
+    "do_this_later": "Lakukan ini nanti",
+    "resurrect_me": "Bangkitkan Aku",
+    "claim_bonus": "Klaim Bonus",
+    "close": "Menutup",
+    "try_again": "Coba lagi",
+    "view_changelog": "Lihat Changelog",
+    "disable": "Cacat"
+  },
+  "team": {
+    "contacts_tab": "Kontak",
+    "tierOne_tab": "Tingkat 1",
+    "tierTwo_tab": "Tingkat 2",
+    "empty": {
+      "title_part1": "Saat ini Anda tidak memilikinya\n",
+      "title_part2": " referensi!",
+      "button_title": "Mengundang teman-teman"
+    },
+    "contacts": {
+      "empty_title": "[[:ice]] lebih baik dengan teman",
+      "empty_button_title": "Izinkan akses kontak",
+      "empty_description": "Sinkronkan kontak Anda dan lihat siapa yang sudah menggunakan [[:ice]]. "
+    },
+    "header": {
+      "search_placeholder": "Telusuri pengguna",
+      "referrals": "Referensi",
+      "earnings": "Pendapatan"
+    },
+    "confirm_code": {
+      "title": "Konfirmasi Kode",
+      "description": "Silakan masukkan kode konfirmasi yang telah Anda terima di ponsel Anda.",
+      "placeholder": "Masukkan kode",
+      "button": "Konfirmasikan kode Anda sekarang"
+    },
+    "confirm_phone": {
+      "title": "Konfirmasi Telepon",
+      "description": "Harap konfirmasikan kode negara Anda dan masukkan nomor telepon Anda."
+    },
+    "contacts_list": {
+      "ice_header": {
+        "friends": "teman-teman"
+      },
+      "all_contacts": "Semua kontak",
+      "invite": "mengundang",
+      "invitation_text": "Hai {{name}}, Saya ingin mengundang Anda untuk bergabung dengan es."
+    },
+    "tier_two": {
+      "header_list": {
+        "title_earnings": "Penghasilan Tingkat 2"
+      }
+    },
+    "tier_other": {
+      "header_list": {
+        "title_earnings": "Penghasilan Tingkat 1"
+      }
+    }
+  },
+  "signIn": {
+    "logInSignUp": "Masuk daftar",
+    "phone": "Telepon",
+    "or": "atau",
+    "welcome": "Selamat datang di es",
+    "email": "Surel",
+    "slogan": "Reset Mata Uang Global",
+    "privacy": {
+      "description": "Dengan melanjutkan, Anda setuju dengan kami ",
+      "terms": "Ketentuan Layanan",
+      "and": " Dan ",
+      "policy": "Kebijakan pribadi"
+    }
+  },
+  "claimUsername": {
+    "title": "Klaim nama panggilan",
+    "description": "Teman Anda perlu menggunakan nama panggilan ini untuk bergabung dengan tim Anda",
+    "inputPlaceholder": "Masukkan nama panggilan Anda",
+    "note_part1": "Saat membuat nama panggilan, gunakan hanya huruf, angka, dan titik.",
+    "note_part2": "Contoh:",
+    "note_example": "nama.anda01"
+  },
+  "whoInvitedYou": {
+    "title": "Siapa yang mengundang kamu?",
+    "description": "Masukkan nama panggilan orang yang mengundang Anda",
+    "inputPlaceholder": "Masukkan nama panggilan",
+    "dontHaveInvitationCode": "Dengan menyelesaikan langkah ini, Anda dan teman Anda akan menerima a {{value}}% bonus pada tingkat perolehan dasar saat Anda berdua check-in pada waktu yang sama.",
+    "confirm_text": "Apakah Anda yakin ingin menetapkan anggota acak sebagai rujukan Anda?\n\n",
+    "dontHaveCodeTip": "Jika Anda tidak memiliki kode undangan, kami akan melakukannya\n"
+  },
+  "errors": {
+    "nicknameSize": "Ukuran nama panggilan: 4-20 karakter.",
+    "removeInvalidCharacters": "Hapus karakter yang tidak valid.",
+    "validation_error": "Beberapa kesalahan validasi",
+    "multiple_accounts": "Email/nomor telepon dikaitkan dengan akun lain. ",
+    "wrong_phone_number": "Nomor telepon tidak valid, harap coba lagi",
+    "invalid_username": "Nama panggilan tidak valid.",
+    "already_taken": "{{field}} telah diambil",
+    "phone_number_already_in_use": "Nomor telepon sudah digunakan",
+    "invalid_validation_code": "Nomor kode tidak valid, harap coba lagi!",
+    "validation_expired": "Validasi kedaluwarsa",
+    "validation_not_found": "Validasi tidak ditemukan",
+    "invalid_email": "Email tidak valid",
+    "invalid_ref_username": "Nama panggilan tidak valid.",
+    "invalid_phone": "Nomor telepon tidak valid",
+    "user_disabled": "Pengguna telah dinonaktifkan",
+    "expired_action_code": "OTP di tautan email kedaluwarsa",
+    "account_exists_with_different_credential": "Sudah ada akun dengan alamat email yang dinyatakan oleh kredensial",
+    "invalid_credential": "Kredensial rusak atau telah kedaluwarsa",
+    "operation_not_allowed": "Jenis akun yang sesuai dengan kredensial tidak diaktifkan",
+    "user_not_found_for_email": "Tidak ada pengguna yang sesuai dengan email yang diberikan",
+    "user_not_found": "Pengguna tidak ditemukan",
+    "auth_in_progress": "Proses masuk sedang berlangsung",
+    "google_play_services_not_available": "Layanan Google Play tidak tersedia di perangkat",
+    "unknown_error_with_code": "Kesalahan yang tidak diketahui {{code}}",
+    "no_such_provider": "Anda tidak menautkan penyedia ini",
+    "min_username": "Panjang minimum adalah 4 karakter.",
+    "max_username": "Panjang maksimum adalah 30 karakter.",
+    "code_expired": "Kode telah kedaluwarsa. ",
+    "too_many_requests": "Terlalu banyak permintaan. ",
+    "network_error_title": "Tidak ada koneksi internet",
+    "network_error_message": "Perangkat Anda tidak memiliki koneksi internet aktif",
+    "unknown_error": "Terjadi beberapa kesalahan, harap coba lagi nanti",
+    "general_error_title": "Ups...",
+    "general_error_message": "Sepertinya ada yang tidak beres. ",
+    "general_network_error": "Terjadi kesalahan jaringan. ",
+    "credential_already_in_use": "Kredensial ini sudah dikaitkan dengan akun pengguna lain.",
+    "email_already_in_use": "Alamat email sudah digunakan oleh akun lain.",
+    "user_token_expired": "Kredensial Anda tidak lagi valid. ",
+    "requires_recent_login": "Operasi ini sensitif dan memerlukan autentikasi terkini. ",
+    "same_email": "Anda tidak dapat menggunakan email yang sama"
+  },
+  "profile": {
+    "my_roles": {
+      "title": "Peran saya"
+    },
+    "mining_calculator": "kalkulator penghasilan",
+    "invite_friends": "Mengundang teman-teman",
+    "invite_friends_engage": "Sebarkan berita dan undang teman Anda. ",
+    "global_rank": "Peringkat global",
+    "view_all_roles": "melihat semua peran",
+    "data_is_hidden": "data disembunyikan",
+    "not_found": {
+      "title": "Pengguna tidak ditemukan",
+      "description": "ups, kami tidak dapat menemukan pengguna ini"
+    },
+    "my_badges": {
+      "title": "Lencana Saya"
+    },
+    "badges": {
+      "title": "Lencana"
+    },
+    "roles": {
+      "title": "Peran"
+    }
+  },
+  "global": {
+    "level": "tingkat",
+    "referrals": "referensi",
+    "coins": "Koin",
+    "social": "Sosial",
+    "phone_number": "Nomor telepon",
+    "years": "Bertahun-tahun",
+    "of": "dari",
+    "attention": "Perhatian",
+    "email_address": "Alamat email",
+    "data_hidden": "data disembunyikan",
+    "pull_to_refresh": "tarik untuk memperbarui",
+    "comingSoon": "Segera hadir",
+    "date": {
+      "today": "Hari ini"
+    }
+  },
+  "mining_calculator": {
+    "result_label": "Anda akan mendapatkan",
+    "active_inviter": "Pengundang aktif",
+    "tier_1_ref": "rujukan tingkat 1",
+    "tier_2_ref": "Rujukan tingkat 2",
+    "active_miners": "Referensi aktif"
+  },
+  "home": {
+    "wallet": {
+      "title": "DOMPET",
+      "rate": "TINGKAT PENGHASILAN",
+      "balance": "SALDO SAAT INI"
+    },
+    "pioneer": {
+      "title": "PELOPOR",
+      "rank": "PERINGKAT GLOBAL",
+      "referrals": "REFERAL",
+      "description_part1": "Semakin banyak pengguna yang Anda referensikan, semakin banyak ",
+      "description_part2": " kamu mendapat"
+    },
+    "referrals": {
+      "title": "REFERAL",
+      "description": "Statistik rujukan selama 5 hari sebelumnya",
+      "no_referrals_description": "Anda belum memiliki referensi",
+      "users_tier_1": "Pengguna tingkat 1",
+      "users_tier_2": "Pengguna tingkat 2"
+    },
+    "adoption": {
+      "title": "ADOPSI",
+      "level": "tingkat",
+      "users": "\npengguna"
+    },
+    "tasks": {
+      "achievements": "PRESTASI",
+      "title": "Kemajuan Anda",
+      "description": "Selesaikan tugas di bawah dan naik level!",
+      "completed": {
+        "title": "Selamat",
+        "description": "Tetap check-in setiap hari untuk mendapatkan hadiah tambahan!"
+      },
+      "popup": {
+        "title": "Bergabunglah dengan saluran Telegram kami",
+        "description": "Tentukan nama panggilan Anda yang digunakan di telegram",
+        "placeholder": "Nama panggilan"
+      },
+      "claim_username": {
+        "title": "Klaim nama panggilan Anda",
+        "description": "Tetapkan dan mulailah menghasilkan uang dari undangan Anda"
+      },
+      "start_mining": {
+        "title": "Mulai menambang",
+        "description": "Sesi penambangan pertama Anda"
+      },
+      "upload_profile_picture": {
+        "title": "Foto profil",
+        "description": "Unggah gambar profil Anda"
+      },
+      "join_telegram": {
+        "title": "Bergabunglah dengan Telegram",
+        "description": "Jadilah bagian dari komunitas kami dan bergabunglah sekarang"
+      },
+      "follow_us_on_twitter": {
+        "title": "Ikuti kami di Twitter",
+        "description": "Mari tetap berhubungan, ikuti kami di twitter"
+      },
+      "invite_friends": {
+        "title": "Ajak 5 Teman",
+        "description": "Buat tim Anda dan tingkatkan penghasilan Anda"
+      }
+    },
+    "overview": {
+      "title": "Ringkasan"
+    },
+    "menu": {
+      "notifications": "Notifikasi",
+      "staking": "Mempertaruhkan",
+      "stats": "Statistik",
+      "help": "Membantu"
+    },
+    "team": {
+      "title": "Tim",
+      "view_team": "tim tampilan"
+    },
+    "mining_rate": {
+      "title": "TINGKAT PENGHASILAN",
+      "base": "Basis"
+    },
+    "engagement": {
+      "title": "PERTUNANGAN",
+      "description": "Streak mengacu pada berapa hari berturut-turut Anda telah check-in.\n",
+      "streak": "GARIS",
+      "days_off": "HARI LIBUR"
+    }
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "profile": "Profil",
+    "legal": "Hukum",
+    "support": "Mendukung",
+    "personal_information_title": "Informasi pribadi",
+    "personal_information_description": "Kelola detail profil Anda",
+    "notifications_title": "Notifikasi",
+    "notifications_description": "Kelola notifikasi Anda di sini",
+    "push_notifications_title": "Pemberitahuan Dorong",
+    "push_notifications_description": "Sesuaikan pengaturan pemberitahuan push Anda",
+    "email_notifications_title": "notifikasi email",
+    "email_notifications_description": "Sesuaikan pengaturan pemberitahuan email Anda",
+    "terms_title": "Ketentuan Layanan",
+    "terms_description": "Tinjau persyaratan layanan kami",
+    "privacy_title": "Kebijakan pribadi",
+    "privacy_description": "Pelajari tentang kebijakan privasi kami",
+    "feedback_title": "Kirim Umpan Balik",
+    "feedback_description": "Bagikan pemikiran Anda dengan kami",
+    "invite_title": "Undang Seorang teman",
+    "invite_description": "Hasilkan es ekstra dengan mengundang teman Anda",
+    "delete_title": "Hapus akun",
+    "delete_description": "Hapus akun Anda",
+    "delete_confirmation_title": "Apakah Anda yakin ingin menghapus akun?",
+    "delete_confirmation_yes": "Ya, hapus",
+    "logout_title": "Keluar",
+    "logout_description": "Tanda tangani dan istirahat",
+    "logout_confirmation_title": "Anda yakin ingin keluar?",
+    "logout_confirmation_yes": "Ya, logout",
+    "confirm_phone": {
+      "title": "Konfirmasi Telepon Baru",
+      "description": "Konfirmasikan kode negara Anda dan masukkan nomor telepon baru Anda.",
+      "button": "Konfirmasi nomor telepon baru"
+    },
+    "notifications": {
+      "enable_prompt": "Notifikasi tidak diperbolehkan. ",
+      "channel_achievements": "Prestasi",
+      "channel_news": "Berita",
+      "channel_reminders": "Pengingat",
+      "channel_team": "Tim",
+      "type_push": "DORONGAN",
+      "type_email": "SUREL",
+      "disable_notifications": "Nonaktifkan Notifikasi?",
+      "disable_notifications_description": "Dengan menonaktifkan notifikasi, Anda tidak akan dapat menerima pembaruan saat Anda dapat memulai check-in, berita, atau informasi tim",
+      "domain": {
+        "disable_all": {
+          "title": "",
+          "description": ""
+        },
+        "weekly_stats": {
+          "title": "Statistik mingguan",
+          "description": "Terima pemberitahuan tentang aktivitas Anda"
+        },
+        "weekly_report": {
+          "title": "Laporan mingguan",
+          "description": "Terima pemberitahuan tentang aktivitas Anda"
+        },
+        "achievements": {
+          "title": "Prestasi",
+          "description": "Terima pemberitahuan tentang kemajuan Anda"
+        },
+        "promotions": {
+          "title": "Promosi",
+          "description": "Terima pemberitahuan tentang cara mengembangkan tim Anda dan menghasilkan lebih banyak"
+        },
+        "news": {
+          "title": "Berita",
+          "description": "Terima pemberitahuan dari tim kami"
+        },
+        "micro_community": {
+          "title": "Komunitas mikro",
+          "description": "Terima pemberitahuan tentang tim Anda"
+        },
+        "daily_bonus": {
+          "title": "Bonus Harian",
+          "description": "Terima pemberitahuan untuk mengklaim bonus harian Anda"
+        },
+        "mining": {
+          "title": "Status sesi",
+          "description": "Terima pemberitahuan tentang aktivitas check-in Anda"
+        },
+        "system": {
+          "title": "Sistem",
+          "description": "Terima pemberitahuan penting tentang aplikasi es"
+        }
+      }
+    },
+    "language_settings": "Pengaturan bahasa",
+    "change_lang_confirm": {
+      "title": "Ganti BAHASA",
+      "prompt": "Menerapkan pengaturan ini akan memulai ulang aplikasi"
+    },
+    "profile_image": "Gambar profil",
+    "inapp_privacy_title": "Pribadi",
+    "inapp_privacy_description": "Kelola informasi Anda di sini",
+    "developer": "Pengembang",
+    "user_id": "identitas pengguna",
+    "user_token": "Token Pengguna",
+    "profile_photo": {
+      "delete": "Menghapus foto",
+      "edit": "Mengedit foto profil",
+      "photo_gallery": "Galeri foto",
+      "camera": "Kamera"
+    },
+    "confirm_email_confirmation_title": "Konfirmasi email?",
+    "update_email_confirmation_title": "Perbarui email?",
+    "update_email_confirmation_subtitle": "Mengubah alamat email Anda akan mengharuskan Anda untuk masuk kembali. ",
+    "unlink_logins_title": "Putuskan Tautan Login",
+    "unlink_logins_description": "Anda dapat membatalkan tautan login Anda dari sini"
+  },
+  "invite_share": {
+    "title": "Undang Seorang teman",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "whatsapp": "Ada apa",
+    "instagram": "Instagram",
+    "email": "Surel",
+    "fb": "Umpan berita",
+    "sms": "SMS",
+    "copy_link": "Salin tautan",
+    "more": "Lagi",
+    "copied": "TERSALIN",
+    "share_message": "Hai ☃️ Manusia Salju! ",
+    "description_part1": "Sebarkan berita dan undang teman Anda.  ",
+    "description_part2": " untuk setiap referal baru yang Anda bawa."
+  },
+  "users": {
+    "ping": "PING",
+    "active": "Aktif",
+    "inactive": "Tidak aktif",
+    "referralType": {
+      "T1": "Tingkat 1",
+      "T2": "Tingkat 2"
+    }
+  },
+  "personal_information": {
+    "first_name": "Nama depan",
+    "last_name": "nama keluarga",
+    "country": "Negara",
+    "city": "Kota",
+    "title": "Informasi pribadi",
+    "phone": "Telepon",
+    "email": "Surel",
+    "username": "Nama panggilan"
+  },
+  "username": {
+    "error": {
+      "already_taken": "Nama panggilan sudah dipakai.",
+      "length": "Ukuran nama panggilan: 4-20 karakter.",
+      "invalid_characters": "Hapus karakter yang tidak valid.",
+      "not_found": "Nama panggilan tidak ditemukan.",
+      "some_error": "Beberapa kesalahan terjadi.",
+      "refer_yourself": "Anda tidak dapat merujuk diri sendiri"
+    }
+  },
+  "staking": {
+    "time_left": "Waktu tersisa",
+    "mining_rate": "Tingkat Penghasilan",
+    "appeal": "Tingkatkan tingkat penghasilan Anda",
+    "benefits_description": "Pra-pertaruhkan hadiah es Anda hingga {{periodYears}} tahun dan tingkatkan tingkat penghasilan Anda hingga {{ratePercentages}}%",
+    "bonus_label": "Bonus Pra-Staking",
+    "period_label": "Periode Dipertaruhkan",
+    "title": "Pra-Staking",
+    "current_rate": "Tarif Saat Ini",
+    "allocation": "Alokasi",
+    "description": "Staking adalah proses yang melibatkan penyerahan aset kripto Anda untuk mendukung jaringan blockchain dan mengonfirmasi transaksi",
+    "terms_agree": "Saya setuju dengan [[:ice]] [[:link]]. ",
+    "staking_terms": "Ketentuan Taruhan",
+    "stake_now": "Pra-Stake Sekarang!",
+    "balance_label": "Saldo dipertaruhkan",
+    "confirm_title": "Konfirmasi Pra-Stake",
+    "confirm_subtitle": "Apakah Anda yakin ingin mempertaruhkan koin Anda terlebih dahulu? "
+  },
+  "stats": {
+    "header_title": "Statistik",
+    "active": "Pengguna aktif",
+    "total": "Jumlah pengguna",
+    "user_growth": "Pertumbuhan pengguna",
+    "top_miners": "Pengguna teratas",
+    "top_countries": "Negara teratas",
+    "online_miners": "Pengguna online",
+    "detailed_information": "Informasi rinci"
+  },
+  "update_required": {
+    "title": "Harap Perbarui",
+    "description": "Anda menggunakan versi aplikasi lama dan perlu memperbaruinya agar dapat menggunakannya lebih lanjut.",
+    "button_title": "Memperbarui sekarang"
+  },
+  "general": {
+    "good_morning": "Selamat pagi",
+    "good_afternoon": "Selamat siang",
+    "good_evening": "Selamat malam",
+    "ice": "Es",
+    "ice_per_hour": "es/jam",
+    "seconds_short": "S",
+    "minutes_short": "M",
+    "hours_short": "H",
+    "days_short": "D"
+  },
+  "news": {
+    "news_feed": "Umpan Berita",
+    "read_more": "Baca selengkapnya",
+    "views": "{{viewsCount}} pandangan"
+  },
+  "search": {
+    "empty": "Cari kontak, teman es, dan anggota komunitas mikro Anda",
+    "nothing_is_found": "Tidak ada yang ditemukan untuk kueri Anda",
+    "search_by_country": "Cari berdasarkan negara",
+    "search_for_users": "Telusuri pengguna"
+  },
+  "tabbar": {
+    "mining_inactive_tooltip": "Ketuk di sini untuk memulai sesi check-in pertama Anda",
+    "mining_reset_tooltip": "Tekan selama 1 detik untuk memperpanjang sesi check-in Anda",
+    "mining_holiday_reset_tooltip": "Anda menggunakan Hari Libur! ",
+    "mining_holiday_active": "Anda menggunakan Hari Libur!"
+  },
+  "invite_friend": {
+    "invite_button": "Mengundang teman",
+    "button_title": "Mengundang teman",
+    "description": "Teman Anda belum menggunakan [[:ice]]. "
+  },
+  "balance_history": {
+    "title": "Riwayat Saldo",
+    "wallet": "Dompet",
+    "blockchain": "Blockchain",
+    "wallet_update_interval": "diperbarui setiap jam",
+    "blockchain_update_interval": "diperbarui setiap 24 jam",
+    "list_end_label": "ini adalah entri terakhir dari riwayat saldo",
+    "no_data": "Tidak ada data untuk ditampilkan\n"
+  },
+  "pop_up": {
+    "update_now": "Memperbarui sekarang",
+    "please_update": "Harap Perbarui",
+    "update_now_text": "Anda menggunakan versi aplikasi lama dan perlu memperbaruinya agar dapat menggunakannya lebih lanjut",
+    "you_are_up_to_date": "Anda up to date!",
+    "up_to_date_text": "Anda sekarang menggunakan versi terbaru. ",
+    "resurrection": "Kebangkitan",
+    "resurrection_message": "Anda memiliki kesempatan satu kali untuk membangkitkan dan menerima [[:amount]] koin yang hilang di masa lalu [[:periode]]",
+    "resurrection_warning": "Anda hanya dapat membangkitkan satu kali!",
+    "please_confirm": "Harap konfirmasi",
+    "resurrection_no_confirm_message": "Anda akan kehilangan [[:jumlah]] koin Anda selamanya. ",
+    "resurrection_yes_confirm_message": "Anda hanya dapat membangkitkan satu kali! "
+  },
+  "periods": {
+    "3_days": "3 hari",
+    "7_days": "7 hari",
+    "30_days": "30 hari",
+    "1_day": "1 hari",
+    "1_week": "1 minggu",
+    "1_month": "1 bulan",
+    "90_days": "90 hari",
+    "14_days": "14 hari"
+  },
+  "notifications": {
+    "joined": " telah bergabung dengan tim Anda",
+    "multiply": " Dan {{count}} orang lain telah bergabung dengan tim Anda",
+    "ping": " telah mem-ping Anda, bangun!",
+    "delete": "Menghapus",
+    "add_notifications": "Tambahkan pemberitahuan tiruan",
+    "no_notifications": "Tidak ada notifikasi untuk ditampilkan",
+    "add_announcements": "Tambahkan pengumuman tiruan",
+    "add_both": "Tambahkan pemberitahuan tiruan\n",
+    "clear_title": "Hapus semua notifikasi?",
+    "title": "Notifikasi"
+  },
+  "notification_feed_screen": {
+    "yesterday": "Kemarin",
+    "last_week": "Minggu lalu",
+    "this_month": "Bulan ini",
+    "last_month": "Bulan lalu",
+    "this_week": "Minggu ini"
+  },
+  "profile_privacy_edit": {
+    "step1": {
+      "title": "1. Statistik Profil Anda",
+      "description": "Ketuk pada blok yang Anda inginkan\n"
+    },
+    "step2": {
+      "description": "Ketuk blok ini untuk menyembunyikannya\n",
+      "title": "2. Peran Anda Saat Ini"
+    },
+    "step3": {
+      "title": "3. Lencana yang Anda Peroleh",
+      "description": "Ketuk blok ini untuk menyembunyikannya\n"
+    }
+  },
+  "confirm_email": {
+    "title": "Konfirmasi email Anda",
+    "description": "Silakan masukkan alamat email Anda dan kami akan mengirimkan kode ",
+    "note": "Jika Anda tidak menerima email di dalamnya {{value}} menit, silakan periksa folder spam Anda.",
+    "wrong_email": "email yang salah?",
+    "check_email": "Periksa email Anda",
+    "emailed_link_to": "Kami mengirim email tautan ajaib ke",
+    "link_instruction": "Klik tautan untuk masuk atau mendaftar.",
+    "modify_title": "konfirmasi email baru",
+    "modify_description": "Masukkan alamat email baru Anda"
+  },
+  "invalid_link": {
+    "title": "Tautan tidak valid",
+    "description": "Sayangnya, tautan ini tidak valid, harap masukkan kembali email Anda dan kami akan mengirimkan tautan baru kepada Anda.",
+    "back_button_title": "Kembali untuk masuk"
+  },
+  "confirm_code": {
+    "title": "Konfirmasi kode",
+    "description": "Masukkan kode yang dikirim ke",
+    "send_code_again": "Kirim kode lagi",
+    "resend_time_label": "Kode baru tersedia di ",
+    "enter_code": "Masukkan kode",
+    "wrong_number": "Salah nomor?"
+  },
+  "ice_bonus": {
+    "title": "Hadiah selamat datang",
+    "description": "Selamat, Anda telah menerima koin [[:value]] [[:ice]] pertama Anda yang membuktikan [[:bold]]Kepercayaan[[/:bold]] kami pada [[:bold]]Anda[[/:bold ",
+    "balance_label": "Saldo Anda saat ini"
+  },
+  "country_select": {
+    "title": "Pilih negara"
+  },
+  "role": {
+    "pioneer": {
+      "title": "Pelopor",
+      "description": "Apakah Anda daging dan darah?"
+    }
+  },
+  "confirm_phone": {
+    "modify_title": "Konfirmasi Telepon",
+    "modify_description": "Harap konfirmasikan kode negara Anda dan masukkan nomor telepon Anda",
+    "button": "Konfirmasi negara dan telepon",
+    "same_phone_error": "Anda tidak dapat menggunakan nomor yang sama"
+  },
+  "date_select": {
+    "title": "Pilih tanggal"
+  },
+  "walkthrough": {
+    "news": {
+      "step_1": {
+        "title": "Baca selengkapnya",
+        "description": "Di sini Anda dapat melihat berita terbaru kami dari tim kami. "
+      },
+      "step_2": {
+        "description": "Ketuk setiap judul berita dan baca versi lengkapnya. ",
+        "title": "Berita yang dirilis"
+      }
+    },
+    "teams": {
+      "step_1": {
+        "title": "Izinkan kontak",
+        "description": "Sinkronkan kontak Anda dan lihat siapa yang sudah menggunakan [[:ice]]. "
+      },
+      "step_2": {
+        "title": "Referensi",
+        "description": "Di sini Anda akan melihat berapa banyak referensi yang Anda miliki secara total. "
+      },
+      "step_3": {
+        "title": "Pendapatan",
+        "description": "Saldo Anda saat ini diperbarui setiap jam dan ditampilkan di sini. "
+      },
+      "step_4": {
+        "title": "Kontak",
+        "description": "Ini adalah daftar dengan semua kontak Anda, yang sudah memiliki aplikasi yang ditampilkan di atas daftar."
+      },
+      "step_5": {
+        "title": "Tingkat 1",
+        "description": "Di sini Anda dapat melihat daftar rujukan Tier 1 Anda. "
+      },
+      "step_6": {
+        "title": "Tingkat 2",
+        "description": "Di sini Anda dapat melihat daftar rujukan Tier 2 Anda. "
+      },
+      "step_7": {
+        "title": "Pengguna Aktif",
+        "description": "Ini adalah status aktivitas penambangan referensi Anda saat ini. "
+      },
+      "step_8": {
+        "title": "Penghasilan Tingkat 1",
+        "description": "Di sini Anda dapat melihat daftar rujukan Tier 1 Anda. "
+      },
+      "step_9": {
+        "title": "Tombol Ping",
+        "description": "Beri tahu referensi Anda untuk memulai sesi penambangan mereka. "
+      }
+    },
+    "team": {
+      "step_1": {
+        "title": "Izinkan kontak",
+        "description": "Sinkronkan kontak Anda dan lihat siapa yang sudah menggunakan [[:ice]]. "
+      },
+      "step_2": {
+        "title": "Referensi",
+        "description": "Di sini Anda akan melihat berapa banyak referensi yang Anda miliki secara total. "
+      },
+      "step_3": {
+        "title": "Pendapatan",
+        "description": "Saldo Anda saat ini diperbarui setiap jam dan ditampilkan di sini. "
+      },
+      "step_4": {
+        "title": "Kontak",
+        "description": "Ini adalah daftar dengan semua kontak Anda, yang sudah memiliki aplikasi yang ditampilkan di atas daftar."
+      },
+      "step_5": {
+        "title": "Tingkat 1",
+        "description": "Di sini Anda dapat melihat daftar rujukan Tier 1 Anda. ",
+        "url": "https://ice.io/"
+      },
+      "step_6": {
+        "title": "Tingkat 2",
+        "description": "Di sini Anda dapat melihat daftar rujukan Tier 2 Anda. ",
+        "url": "https://ice.io/"
+      },
+      "step_7": {
+        "title": "Pengguna Aktif",
+        "description": "Ini adalah status aktivitas penambangan referensi Anda saat ini. "
+      },
+      "step_8": {
+        "title": "Penghasilan Tingkat 1",
+        "description": "Di sini Anda dapat melihat daftar rujukan Tier 1 Anda. "
+      },
+      "step_9": {
+        "title": "Tombol Ping",
+        "description": "Beri tahu referensi Anda untuk memulai sesi penambangan mereka. "
+      }
+    }
+  },
+  "ActiveSessionsScreen": {
+    "title": "Putuskan Tautan Login",
+    "sessionName": "Masuk melalui {{providerName}}",
+    "buttons": {
+      "currentSession": "Sesi Sekarang",
+      "endSession": "Akhiri Sesi",
+      "loginUnlinked": "Masuk Tidak Ditautkan",
+      "sessionEnded": "Sesi Berakhir",
+      "unlink": "Batalkan tautan"
+    },
+    "dialogs": {
+      "unlinkLogin": {
+        "title": "Batalkan Tautan Masuk?",
+        "message": "Apakah Anda yakin ingin memutuskan tautan login melalui {{providerName}} dari perangkat ini?"
+      },
+      "endSession": {
+        "title": "Akhiri Sesi?",
+        "message": "Apakah Anda yakin ingin mengakhiri {{providerName}} sesi login dari perangkat ini?"
+      }
+    }
+  },
+  "links": {
+    "pre_staking": "https://ice.io/pre-staking/",
+    "privacy": "https://ice.io/privacy/",
+    "terms": "https://ice.io/terms/",
+    "main": "https://ice.io/"
+  },
+  "extra_bonus": {
+    "claim_title": "Bonus Hari Ini",
+    "claim_message": "Saatnya bonus Anda hari ini, silakan ketuk tombol [[:bold]]“Klaim Bonus”[[/:bold]] di bawah",
+    "link": "Temukan lebih banyak lagi",
+    "extra_message": "Anda telah menerima bonus ekstra harian Anda pada tingkat penghasilan Anda",
+    "expired_title": "Bonus Kedaluwarsa",
+    "expired_message": "Sayangnya, bonus hari ini telah kedaluwarsa. ",
+    "result_title": "Selamat"
+  }
+}

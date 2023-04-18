@@ -1,0 +1,783 @@
+{
+  "welcome": {
+    "page1": {
+      "title": "बर्फ में आपका स्वागत है",
+      "description": "[[:ice]] एक डिजिटल करेंसी है जिसे आप अपने फोन से कमा सकते हैं। "
+    },
+    "page2": {
+      "title": "ग्रह अनुकूल",
+      "description": "[[:ice]] बीटीसी की तुलना में स्वाभाविक रूप से अधिक ऊर्जा कुशल है क्योंकि यह \"प्रूफ ऑफ स्टेक\" सर्वसम्मति तंत्र का उपयोग करता है। "
+    },
+    "page3": {
+      "title": "जनता का सिक्का",
+      "description_part1": "शक्ति आपके हाथ में है।",
+      "description_part2": "[[:ice]] में हम जो कुछ भी विकसित करते हैं वह खुला स्रोत होगा"
+    },
+    "page4": {
+      "title": "जुड़े रहो",
+      "description": "हमारे मुफ़्त, एनर्जी-लाइट मोबाइल ऐप से अपने दैनिक चेक-इन के लिए [[:iceLogo]] पर टैप करें। "
+    },
+    "page5": {
+      "title": "उद्घृत करना",
+      "description": "अपने दोस्तों को आमंत्रित करें और (आप दोनों) तक कमाएं {{value}}आपकी टीम में शामिल होने वाले प्रत्येक मित्र के लिए आपकी मूल कमाई दर पर % बोनस।"
+    },
+    "page6": {
+      "title": "सूचनाएं",
+      "description_part1": "[[:ice]] चेक-इन सत्र केवल इतने समय तक चलता है {{value}} घंटे। ",
+      "description_part2": "चिंता न करें, हम आपको स्पैम नहीं करेंगे!",
+      "not_now": "अभी नहीं"
+    }
+  },
+  "button": {
+    "yes_btn": "जी कहिये",
+    "next_btn": "अगला",
+    "not_now": "अभी नहीं",
+    "view_all": "सभी को देखें",
+    "invite_friend": {
+      "title": "मित्रों को आमंत्रित करें",
+      "description_part1": "अतिरिक्त कमाएँ ",
+      "description_part2": " अपने दोस्तों को आमंत्रित करके।"
+    },
+    "no": "नहीं",
+    "search_country": "देश की खोज करें",
+    "save": "बचाना",
+    "yes": "हाँ",
+    "change": "परिवर्तन",
+    "no_cancel": "नहीं, रद्द करें",
+    "complete": "पूरा",
+    "cancel": "रद्द करना",
+    "clear": "साफ़",
+    "finish": "खत्म करना",
+    "next_step": "अगला कदम",
+    "see_all": "सभी देखें",
+    "back": "पीछे",
+    "search": "खोज",
+    "continue": "जारी रखना",
+    "apply": "आवेदन करना",
+    "reset": "रीसेट",
+    "skip_all": "सभी को छोड़ें",
+    "done": "पूर्ण",
+    "confirm": "पुष्टि करना",
+    "do_this_later": "इसे बाद में करें",
+    "resurrect_me": "मुझे पुनर्जीवित करें",
+    "claim_bonus": "दावा बोनस",
+    "close": "बंद करना",
+    "try_again": "पुनः प्रयास करें",
+    "view_changelog": "परिवर्तन लॉग देखें",
+    "disable": "अक्षम करना"
+  },
+  "team": {
+    "contacts_tab": "संपर्क",
+    "tierOne_tab": "टीयर 1",
+    "tierTwo_tab": "कतार 2",
+    "empty": {
+      "title_part1": "वर्तमान में आपके पास कोई नहीं है\n",
+      "title_part2": " रेफरल!",
+      "button_title": "मित्रों को आमंत्रित करें"
+    },
+    "contacts": {
+      "empty_title": "[[:ice]] दोस्तों के साथ बेहतर है",
+      "empty_button_title": "संपर्कों को एक्सेस करने दें",
+      "empty_description": "अपने संपर्कों को सिंक करें और देखें कि कौन पहले से [[:ice]] पर है। "
+    },
+    "header": {
+      "search_placeholder": "उपयोगकर्ताओं के लिए खोजें",
+      "referrals": "रेफरल",
+      "earnings": "आय"
+    },
+    "confirm_code": {
+      "title": "कोड की पुष्टि करें",
+      "description": "कृपया अपने फोन पर प्राप्त पुष्टिकरण कोड दर्ज करें।",
+      "placeholder": "कोड दर्ज करें",
+      "button": "अभी अपने कोड की पुष्टि करें"
+    },
+    "confirm_phone": {
+      "title": "फोन की पुष्टि करें",
+      "description": "कृपया अपने देश कोड की पुष्टि करें और अपना फ़ोन नंबर दर्ज करें।"
+    },
+    "contacts_list": {
+      "ice_header": {
+        "friends": "दोस्त"
+      },
+      "all_contacts": "सभी संपर्क",
+      "invite": "आमंत्रित करना",
+      "invitation_text": "नमस्ते {{name}}, मैं आपको बर्फ में शामिल होने के लिए आमंत्रित करना चाहता हूं।"
+    },
+    "tier_one": {
+      "header_list": {
+        "title_earnings": "टियर 1 कमाई"
+      }
+    },
+    "tier_two": {
+      "header_list": {
+        "title_earnings": "टियर 2 कमाई"
+      }
+    }
+  },
+  "signIn": {
+    "logInSignUp": "लॉगइन साइनअप",
+    "phone": "फ़ोन",
+    "or": "या",
+    "welcome": "बर्फ में आपका स्वागत है",
+    "email": "ईमेल",
+    "slogan": "वैश्विक मुद्रा रीसेट",
+    "privacy": {
+      "description": "जारी रखकर, आप हमारी सहमति देते हैं ",
+      "terms": "सेवा की शर्तें",
+      "and": " और ",
+      "policy": "गोपनीयता नीति"
+    }
+  },
+  "claimUsername": {
+    "title": "उपनाम का दावा करें",
+    "description": "आपकी टीम में शामिल होने के लिए आपके मित्रों को इस उपनाम का उपयोग करने की आवश्यकता होगी",
+    "inputPlaceholder": "अपना उपनाम दर्ज करें",
+    "note_part1": "उपनाम बनाते समय केवल अक्षरों, संख्याओं और पूर्णविरामों का उपयोग करें।",
+    "note_part2": "उदाहरण:",
+    "note_example": "आपका नाम01"
+  },
+  "whoInvitedYou": {
+    "title": "आप को किसने बुलाया है?",
+    "description": "उस व्यक्ति का उपनाम दर्ज करें जिसने आपको आमंत्रित किया था",
+    "inputPlaceholder": "उपनाम दर्ज करें",
+    "dontHaveInvitationCode": "इस चरण को पूरा करने पर, आपको और आपके मित्र को एक प्राप्त होगा {{value}}जब आप दोनों एक ही समय में चेक-इन कर रहे हों तो मूल कमाई दर पर % बोनस।",
+    "confirm_text": "क्या आप सुनिश्चित हैं कि आप अपने रेफ़रल के रूप में एक यादृच्छिक सदस्य सेट करना चाहते हैं?\n\n",
+    "dontHaveCodeTip": "यदि आपके पास निमंत्रण कोड नहीं है तो हम करेंगे\n"
+  },
+  "errors": {
+    "nicknameSize": "उपनाम का आकार: 4-20 अक्षर।",
+    "removeInvalidCharacters": "अमान्य वर्ण हटाएं।",
+    "validation_error": "कुछ सत्यापन त्रुटि",
+    "multiple_accounts": "ईमेल/फोन नंबर किसी अन्य खाते से संबद्ध है। ",
+    "wrong_phone_number": "अमान्य फ़ोन नंबर, कृपया पुन: प्रयास करें",
+    "invalid_username": "उपनाम अमान्य है।",
+    "already_taken": "{{field}} पहले से ही लिया जा चुका है",
+    "phone_number_already_in_use": "फ़ोन नंबर पहले से उपयोग में है",
+    "invalid_validation_code": "अमान्य कोड संख्या, कृपया पुन: प्रयास करें!",
+    "validation_expired": "सत्यापन समाप्त हो गया",
+    "validation_not_found": "सत्यापन नहीं मिला",
+    "invalid_email": "अमान्य ईमेल",
+    "invalid_ref_username": "उपनाम अमान्य है।",
+    "invalid_phone": "अवैध फोन नंबर",
+    "user_disabled": "उपयोगकर्ता अक्षम कर दिया गया है",
+    "expired_action_code": "ईमेल लिंक में ओटीपी की समय सीमा समाप्त हो गई है",
+    "account_exists_with_different_credential": "क्रेडेंशियल द्वारा प्रमाणित ईमेल पते वाला एक खाता पहले से मौजूद है",
+    "invalid_credential": "क्रेडेंशियल विकृत है या समाप्त हो गया है",
+    "operation_not_allowed": "क्रेडेंशियल से संबंधित खाते का प्रकार सक्षम नहीं है",
+    "user_not_found_for_email": "दिए गए ईमेल के अनुरूप कोई उपयोगकर्ता नहीं है",
+    "user_not_found": "उपयोगकर्ता नहीं मिला",
+    "auth_in_progress": "साइन-इन पहले से ही प्रगति पर है",
+    "google_play_services_not_available": "डिवाइस पर Google Play सेवाएं उपलब्ध नहीं हैं",
+    "unknown_error_with_code": "अज्ञात त्रुटि {{code}}",
+    "no_such_provider": "आपके पास यह प्रदाता लिंक नहीं है",
+    "min_username": "न्यूनतम लंबाई 4 वर्ण है।",
+    "max_username": "अधिकतम लंबाई 30 वर्ण है।",
+    "code_expired": "कोड समाप्त हो गया है। ",
+    "too_many_requests": "बहुत सारे अनुरोध। ",
+    "network_error_title": "कोई इंटरनेट कनेक्शन नहीं",
+    "network_error_message": "आपके डिवाइस में कोई सक्रिय इंटरनेट कनेक्शन नहीं है",
+    "unknown_error": "कुछ त्रुटि हुई, कृपया बाद में पुनः प्रयास करें",
+    "general_error_title": "उफ़...",
+    "general_error_message": "लगता है कुछ गलत हो गया। ",
+    "general_network_error": "एक नेटवर्क त्रुटि हुई है। ",
+    "credential_already_in_use": "यह क्रेडेंशियल पहले से ही किसी भिन्न उपयोगकर्ता खाते से संबद्ध है.",
+    "email_already_in_use": "ईमेल पता पहले से ही किसी अन्य खाते द्वारा उपयोग में है।",
+    "user_token_expired": "आपकी साख अब मान्य नहीं है। ",
+    "requires_recent_login": "यह ऑपरेशन संवेदनशील है और इसके लिए हाल ही में प्रमाणीकरण की आवश्यकता है। ",
+    "same_email": "आप उसी ई-मेल का उपयोग नहीं कर सकते"
+  },
+  "profile": {
+    "my_roles": {
+      "title": "मेरी भूमिका"
+    },
+    "mining_calculator": "आय कैलकुलेटर",
+    "invite_friends": "मित्रों को आमंत्रित करें",
+    "invite_friends_engage": "प्रचार करें और अपने दोस्तों को आमंत्रित करें। ",
+    "global_rank": "वैश्विक रैंक",
+    "view_all_roles": "सभी भूमिकाएँ देखें",
+    "data_is_hidden": "डेटा छिपा हुआ है",
+    "not_found": {
+      "title": "उपयोगकर्ता नहीं मिला",
+      "description": "ओह, हम इस उपयोगकर्ता को नहीं ढूंढ सके"
+    },
+    "my_badges": {
+      "title": "मेरे बैज"
+    },
+    "badges": {
+      "title": "बैज"
+    },
+    "roles": {
+      "title": "भूमिकाएँ"
+    }
+  },
+  "global": {
+    "level": "स्तर",
+    "referrals": "रेफरल",
+    "coins": "सिक्के",
+    "social": "सामाजिक",
+    "phone_number": "फ़ोन नंबर",
+    "years": "साल",
+    "of": "का",
+    "attention": "ध्यान",
+    "email_address": "मेल पता",
+    "data_hidden": "डेटा छिपा हुआ है",
+    "pull_to_refresh": "अद्यतन करने के लिए खींचो",
+    "comingSoon": "जल्द आ रहा है",
+    "date": {
+      "today": "आज"
+    }
+  },
+  "mining_calculator": {
+    "result_label": "आप कामाएंगे",
+    "active_inviter": "सक्रिय निमंत्रक",
+    "tier_1_ref": "टियर 1 रेफरल",
+    "tier_2_ref": "टियर 2 रेफरल",
+    "active_miners": "सक्रिय रेफरल"
+  },
+  "home": {
+    "wallet": {
+      "title": "बटुआ",
+      "rate": "कमाई दर",
+      "balance": "वर्तमान शेष"
+    },
+    "pioneer": {
+      "title": "प्रथम अन्वेषक",
+      "rank": "वैश्विक रैंक",
+      "referrals": "रेफरल",
+      "description_part1": "आप जितने अधिक उपयोगकर्ताओं को रेफर करेंगे, उतना ही अधिक ",
+      "description_part2": " आप प्राप्त करते हो"
+    },
+    "referrals": {
+      "title": "रेफरल",
+      "description": "पिछले 5 दिनों के लिए रेफ़रल आँकड़े",
+      "no_referrals_description": "आपके पास अभी तक कोई रेफ़रल नहीं है",
+      "users_tier_1": "उपयोगकर्ता स्तर 1",
+      "users_tier_2": "उपयोगकर्ता स्तर 2"
+    },
+    "adoption": {
+      "title": "दत्तक ग्रहण",
+      "level": "स्तर",
+      "users": "\nउपयोगकर्ताओं"
+    },
+    "tasks": {
+      "achievements": "उपलब्धियों",
+      "title": "आपकी प्रगति",
+      "description": "नीचे दिए गए कार्यों को पूरा करें और लेवल अप करें!",
+      "completed": {
+        "title": "बधाई हो",
+        "description": "अतिरिक्त पुरस्कार अर्जित करने के लिए प्रतिदिन चेक-इन करते रहें!"
+      },
+      "popup": {
+        "title": "हमारे टेलीग्राम चैनल से जुड़ें",
+        "description": "अपना उपनाम निर्दिष्ट करें जो टेलीग्राम में उपयोग किया जाता है",
+        "placeholder": "उपनाम"
+      },
+      "claim_username": {
+        "title": "अपने उपनाम का दावा करें",
+        "description": "इसे सेट करें और अपने आमंत्रण से कमाई करना शुरू करें"
+      },
+      "start_mining": {
+        "title": "खनन शुरू करो",
+        "description": "आपका पहला खनन सत्र"
+      },
+      "upload_profile_picture": {
+        "title": "प्रोफ़ाइल फोटो",
+        "description": "अपनी प्रोफ़ाइल छवि अपलोड करें"
+      },
+      "join_telegram": {
+        "title": "टेलीग्राम से जुड़ें",
+        "description": "हमारे समुदाय का हिस्सा बनें और अभी शामिल हों"
+      },
+      "follow_us_on_twitter": {
+        "title": "चहचहाना पर हमें का पालन करें",
+        "description": "आइए संपर्क में रहें, हमें ट्विटर पर फॉलो करें"
+      },
+      "invite_friends": {
+        "title": "5 दोस्तों को आमंत्रित करें",
+        "description": "अपनी टीम बनाएं और अपनी कमाई बढ़ाएं"
+      }
+    },
+    "overview": {
+      "title": "अवलोकन"
+    },
+    "menu": {
+      "notifications": "सूचनाएं",
+      "staking": "जताया",
+      "stats": "आँकड़े",
+      "help": "मदद"
+    },
+    "team": {
+      "title": "टीम",
+      "view_team": "प्रदर्शन समूह"
+    },
+    "mining_rate": {
+      "title": "कमाई दर",
+      "base": "आधार"
+    },
+    "engagement": {
+      "title": "सगाई",
+      "description": "स्ट्रीक से तात्पर्य है कि आपने लगातार कितने दिनों तक चेक-इन किया है।\n",
+      "streak": "धारी",
+      "days_off": "दिनों की छुट्टी"
+    }
+  },
+  "settings": {
+    "title": "समायोजन",
+    "profile": "प्रोफ़ाइल",
+    "legal": "कानूनी",
+    "support": "सहायता",
+    "personal_information_title": "व्यक्तिगत जानकारी",
+    "personal_information_description": "अपना प्रोफ़ाइल विवरण प्रबंधित करें",
+    "notifications_title": "सूचनाएं",
+    "notifications_description": "यहां अपनी सूचनाएं प्रबंधित करें",
+    "push_notifications_title": "सूचनाएं धक्का",
+    "push_notifications_description": "अपनी पुश अधिसूचना सेटिंग्स को अनुकूलित करें",
+    "email_notifications_title": "ईमेल सूचनाएं",
+    "email_notifications_description": "अपनी ईमेल अधिसूचना सेटिंग्स को अनुकूलित करें",
+    "terms_title": "सेवा की शर्तें",
+    "terms_description": "हमारी सेवा शर्तों की समीक्षा करें",
+    "privacy_title": "गोपनीयता नीति",
+    "privacy_description": "हमारी गोपनीयता नीति के बारे में जानें",
+    "feedback_title": "प्रतिक्रिया भेजें",
+    "feedback_description": "हमारे साथ अपने विचार साझा करें",
+    "invite_title": "किसी मित्र को आमंत्रित करें",
+    "invite_description": "अपने मित्रों को आमंत्रित करके अतिरिक्त बर्फ कमाएँ",
+    "delete_title": "खाता हटा दो",
+    "delete_description": "अपना खाता मिटा दें",
+    "delete_confirmation_title": "क्या आप वाकई खाता हटाना चाहते हैं?",
+    "delete_confirmation_yes": "हाँ, मिटा दो",
+    "logout_title": "लॉग आउट",
+    "logout_description": "साइन ऑफ करें और ब्रेक लें",
+    "logout_confirmation_title": "क्या आप वाकई साइन ऑफ करना चाहते हैं?",
+    "logout_confirmation_yes": "हाँ, लॉग आउट करें",
+    "confirm_phone": {
+      "title": "नए फोन की पुष्टि करें",
+      "description": "कृपया अपने देश कोड की पुष्टि करें और अपना नया फ़ोन नंबर दर्ज करें।",
+      "button": "नए फोन नंबर की पुष्टि करें"
+    },
+    "notifications": {
+      "enable_prompt": "सूचनाओं की अनुमति नहीं है। ",
+      "channel_achievements": "उपलब्धियों",
+      "channel_news": "समाचार",
+      "channel_reminders": "अनुस्मारक",
+      "channel_team": "टीम",
+      "type_push": "धकेलना",
+      "type_email": "ईमेल",
+      "disable_notifications": "नोटीफिकेशन निष्क्रिय किया गया?",
+      "disable_notifications_description": "सूचनाओं को अक्षम करने से जब आप चेक-इन, समाचार या टीम की जानकारी शुरू कर सकते हैं तो आप अपडेट प्राप्त नहीं कर पाएंगे",
+      "domain": {
+        "disable_all": {
+          "title": "",
+          "description": ""
+        },
+        "weekly_stats": {
+          "title": "साप्ताहिक आँकड़े",
+          "description": "अपनी गतिविधि के बारे में सूचनाएं प्राप्त करें"
+        },
+        "weekly_report": {
+          "title": "साप्ताहिक विवरण",
+          "description": "अपनी गतिविधि के बारे में सूचनाएं प्राप्त करें"
+        },
+        "achievements": {
+          "title": "उपलब्धियों",
+          "description": "अपनी प्रगति के बारे में सूचनाएं प्राप्त करें"
+        },
+        "promotions": {
+          "title": "प्रचार",
+          "description": "अपनी टीम को कैसे विकसित करें और अधिक कमाई करें, इस पर सूचनाएं प्राप्त करें"
+        },
+        "news": {
+          "title": "समाचार",
+          "description": "हमारी टीम से सूचनाएं प्राप्त करें"
+        },
+        "micro_community": {
+          "title": "सूक्ष्म समुदाय",
+          "description": "अपनी टीम के बारे में सूचनाएं प्राप्त करें"
+        },
+        "daily_bonus": {
+          "title": "प्रतिदिन लाभ",
+          "description": "अपने दैनिक बोनस का दावा करने के लिए सूचनाएं प्राप्त करें"
+        },
+        "mining": {
+          "title": "सत्र की स्थिति",
+          "description": "अपनी चेक-इन गतिविधि के बारे में सूचनाएं प्राप्त करें"
+        },
+        "system": {
+          "title": "प्रणाली",
+          "description": "आइस ऐप के बारे में महत्वपूर्ण सूचनाएं प्राप्त करें"
+        }
+      }
+    },
+    "language_settings": "भाषा सेटिंग्स",
+    "change_lang_confirm": {
+      "title": "भाषा बदलें",
+      "prompt": "इस सेटिंग को लागू करने से ऐप फिर से चालू हो जाएगा"
+    },
+    "profile_image": "प्रोफ़ाइल छवि",
+    "inapp_privacy_title": "गोपनीयता",
+    "inapp_privacy_description": "अपनी जानकारी यहां प्रबंधित करें",
+    "developer": "डेवलपर",
+    "user_id": "उपयोगकर्ता पहचान",
+    "user_token": "उपयोगकर्ता टोकन",
+    "profile_photo": {
+      "delete": "फोटो हटाएं",
+      "edit": "प्रोफ़ाइल फ़ोटो संपादित करें",
+      "photo_gallery": "फोटो गैलरी",
+      "camera": "कैमरा"
+    },
+    "confirm_email_confirmation_title": "ईमेल की पुष्टि करें?",
+    "update_email_confirmation_title": "ईमेल अपडेट करें?",
+    "update_email_confirmation_subtitle": "अपना ईमेल पता बदलने के लिए आपको फिर से लॉगिन करना होगा। ",
+    "unlink_logins_title": "लॉगिन अनलिंक करें",
+    "unlink_logins_description": "आप यहां से अपने लॉगिन को अनलिंक कर सकते हैं"
+  },
+  "invite_share": {
+    "title": "किसी मित्र को आमंत्रित करें",
+    "telegram": "तार",
+    "twitter": "ट्विटर",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "ईमेल",
+    "fb": "समाचार फ़ीड",
+    "sms": "एसएमएस",
+    "copy_link": "लिंक की प्रतिलिपि करें",
+    "more": "अधिक",
+    "copied": "की नकल की",
+    "share_message": "हाय ☃️ स्नोमैन! ",
+    "description_part1": "प्रचार करें और अपने दोस्तों को आमंत्रित करें।  ",
+    "description_part2": " आपके द्वारा लाए गए प्रत्येक नए रेफरल के लिए।"
+  },
+  "users": {
+    "ping": "गुनगुनाहट",
+    "active": "सक्रिय",
+    "inactive": "निष्क्रिय",
+    "referralType": {
+      "T1": "टीयर 1",
+      "T2": "कतार 2"
+    }
+  },
+  "personal_information": {
+    "first_name": "पहला नाम",
+    "last_name": "उपनाम",
+    "country": "देश",
+    "city": "शहर",
+    "title": "व्यक्तिगत जानकारी",
+    "phone": "फ़ोन",
+    "email": "ईमेल",
+    "username": "उपनाम"
+  },
+  "username": {
+    "error": {
+      "already_taken": "उपनाम पहले ही लिया जा चुका है।",
+      "length": "उपनाम का आकार: 4-20 अक्षर।",
+      "invalid_characters": "अमान्य वर्ण हटाएं।",
+      "not_found": "उपनाम नहीं मिला.",
+      "some_error": "कुछ त्रुटि हुई।",
+      "refer_yourself": "आप स्वयं को संदर्भित नहीं कर सकते"
+    }
+  },
+  "staking": {
+    "time_left": "शेष समय",
+    "mining_rate": "कमाई दर",
+    "appeal": "अपनी कमाई दर बढ़ाएँ",
+    "benefits_description": "तक के लिए अपने आइस रिवॉर्ड्स को प्री-स्टेक करें {{periodYears}} साल और अपनी कमाई की दर तक बढ़ाएँ {{ratePercentages}}%",
+    "bonus_label": "प्री-स्टेकिंग बोनस",
+    "period_label": "अटकी हुई अवधि",
+    "title": "पूर्व जताया",
+    "current_rate": "वर्तमान दर",
+    "allocation": "आवंटन",
+    "description": "स्टेकिंग एक ऐसी प्रक्रिया है जिसमें ब्लॉकचेन नेटवर्क का समर्थन करने और लेन-देन की पुष्टि करने के लिए आपकी क्रिप्टो संपत्तियों को कमिट करना शामिल है",
+    "terms_agree": "मैं [[:ice]] [[:link]] से सहमत हूं। ",
+    "staking_terms": "स्टेकिंग शर्तें",
+    "stake_now": "प्री-स्टेक नाउ!",
+    "balance_label": "अटका हुआ संतुलन",
+    "confirm_title": "प्री-स्टेक की पुष्टि करें",
+    "confirm_subtitle": "क्या आप सुनिश्चित हैं कि आप अपने सिक्कों को पूर्व-दांव पर लगाना चाहते हैं? "
+  },
+  "stats": {
+    "header_title": "आँकड़े",
+    "active": "सक्रिय उपयोगकर्ता",
+    "total": "कुल उपयोगकर्ता",
+    "user_growth": "उपयोगकर्ता वृद्धि",
+    "top_miners": "शीर्ष उपयोगकर्ता",
+    "top_countries": "शीर्ष देश",
+    "online_miners": "ऑनलाइन उपयोगकर्ता",
+    "detailed_information": "विस्तार में जानकारी"
+  },
+  "update_required": {
+    "title": "कृपया अद्यतन करें",
+    "description": "आप एक पुराने ऐप संस्करण का उपयोग कर रहे हैं और इसे आगे उपयोग करने के लिए इसे अपडेट करने की आवश्यकता है।",
+    "button_title": "अभी अद्यतन करें"
+  },
+  "general": {
+    "good_morning": "शुभ प्रभात",
+    "good_afternoon": "नमस्कार",
+    "good_evening": "नमस्ते",
+    "ice": "बर्फ़",
+    "ice_per_hour": "बर्फ/एच",
+    "seconds_short": "एस",
+    "minutes_short": "एम",
+    "hours_short": "एच",
+    "days_short": "डी"
+  },
+  "news": {
+    "news_feed": "समाचार फ़ीड",
+    "read_more": "और पढ़ें",
+    "views": "{{viewsCount}} दृश्य"
+  },
+  "search": {
+    "empty": "संपर्कों, बर्फ मित्रों और अपने माइक्रो-समुदाय के सदस्यों को खोजें",
+    "nothing_is_found": "आपकी क्वेरी के लिए कुछ नहीं मिला",
+    "search_by_country": "देश द्वारा खोजें",
+    "search_for_users": "उपयोगकर्ताओं के लिए खोजें"
+  },
+  "tabbar": {
+    "mining_inactive_tooltip": "अपना पहला चेक-इन सत्र शुरू करने के लिए यहां टैप करें",
+    "mining_reset_tooltip": "अपना चेक-इन सत्र बढ़ाने के लिए 1 सेकंड के लिए दबाएं",
+    "mining_holiday_reset_tooltip": "आप एक दिन की छुट्टी का उपयोग कर रहे हैं! ",
+    "mining_holiday_active": "आप एक दिन की छुट्टी का उपयोग कर रहे हैं!"
+  },
+  "invite_friend": {
+    "invite_button": "दोस्त को आमंत्रित करें",
+    "button_title": "दोस्त को आमंत्रित करें",
+    "description": "आपका मित्र अभी तक [[:ice]] पर नहीं है। "
+  },
+  "balance_history": {
+    "title": "संतुलन इतिहास",
+    "wallet": "बटुआ",
+    "blockchain": "ब्लॉकचेन",
+    "wallet_update_interval": "हर घंटे अपडेट किया गया",
+    "blockchain_update_interval": "हर 24 घंटे में अपडेट किया जाता है",
+    "list_end_label": "यह शेष इतिहास की अंतिम प्रविष्टि है",
+    "no_data": "प्रदर्शित करने के लिए कोई डेटा नहीं है\n"
+  },
+  "pop_up": {
+    "update_now": "अभी अद्यतन करें",
+    "please_update": "कृपया अद्यतन करें",
+    "update_now_text": "आप एक पुराने ऐप संस्करण का उपयोग कर रहे हैं और इसे आगे उपयोग करने के लिए इसे अपडेट करने की आवश्यकता है",
+    "you_are_up_to_date": "आप अद्यतन हैं!",
+    "up_to_date_text": "अब आप नवीनतम संस्करण का उपयोग कर रहे हैं। ",
+    "resurrection": "जी उठने",
+    "resurrection_message": "आपके पास एक बार फिर से जीवित होने और [[:amount]] सिक्के प्राप्त करने का मौका है जो आपने अतीत में खो दिए हैं [[:period]]",
+    "resurrection_warning": "आप केवल एक बार ही जीवित हो सकते हैं!",
+    "please_confirm": "कृपया पुष्टि करें",
+    "resurrection_no_confirm_message": "आप अपने [[:amount]] सिक्के हमेशा के लिए खो देंगे। ",
+    "resurrection_yes_confirm_message": "आप केवल एक बार ही जीवित हो सकते हैं! "
+  },
+  "periods": {
+    "3_days": "3 दिन",
+    "7_days": "7 दिन",
+    "30_days": "तीस दिन",
+    "1_day": "1 दिन",
+    "1_week": "1 सप्ताह",
+    "1_month": "1 महीना",
+    "90_days": "90 दिन",
+    "14_days": "14 दिन"
+  },
+  "notifications": {
+    "joined": " आपकी टीम में शामिल हो गया है",
+    "multiply": " और {{count}} अन्य आपकी टीम में शामिल हो गए हैं",
+    "ping": " आपको पिंग किया है, जागो!",
+    "delete": "मिटाना",
+    "add_notifications": "नकली सूचनाएं जोड़ें",
+    "no_notifications": "प्रदर्शित करने के लिए कोई सूचना नहीं है",
+    "add_announcements": "नकली घोषणाएं जोड़ें",
+    "add_both": "नकली सूचनाएं जोड़ें\n",
+    "clear_title": "सभी नोटिफ़िकेशन साफ़ करें?",
+    "title": "सूचनाएं"
+  },
+  "notification_feed_screen": {
+    "yesterday": "कल",
+    "last_week": "पिछले सप्ताह",
+    "this_month": "इस महीने",
+    "last_month": "पिछला महीना",
+    "this_week": "इस सप्ताह"
+  },
+  "profile_privacy_edit": {
+    "step1": {
+      "title": "1. आपका प्रोफ़ाइल आँकड़े",
+      "description": "उन ब्लॉक्स पर टैप करें जिन्हें आप करना चाहते हैं\n"
+    },
+    "step2": {
+      "description": "इसे छिपाने के लिए इस ब्लॉक पर टैप करें\n",
+      "title": "2. आपकी वर्तमान भूमिका"
+    },
+    "step3": {
+      "title": "3. आपका अर्जित बैज",
+      "description": "इसे छिपाने के लिए इस ब्लॉक पर टैप करें\n"
+    }
+  },
+  "confirm_email": {
+    "title": "आपके ईमेल की पुष्टि करें",
+    "description": "कृपया अपना ईमेल पता दर्ज करें और हम कोड भेज देंगे ",
+    "note": "यदि आपको भीतर ईमेल प्राप्त नहीं हुआ है {{value}} मिनट, कृपया अपना स्पैम फ़ोल्डर जांचें।",
+    "wrong_email": "गलत ईमेल?",
+    "check_email": "अपने ईमेल की जाँच करें",
+    "emailed_link_to": "हमने एक मैजिक लिंक ईमेल किया",
+    "link_instruction": "लॉग इन या साइन अप करने के लिए लिंक पर क्लिक करें।",
+    "modify_title": "नई ईमेल की पुष्टि करें",
+    "modify_description": "कृपया अपना नया ईमेल पता दर्ज करें"
+  },
+  "invalid_link": {
+    "title": "अमान्य लिंक",
+    "description": "दुर्भाग्य से, यह लिंक अमान्य है, कृपया अपना ईमेल दोबारा दर्ज करें और हम आपको एक नया लिंक भेजेंगे।",
+    "back_button_title": "लॉगिन पर वापस जाएं"
+  },
+  "confirm_code": {
+    "title": "कोड की पुष्टि करें",
+    "description": "कृपया भेजे गए कोड को दर्ज करें",
+    "send_code_again": "कोड दोबारा भेजें",
+    "resend_time_label": "में नया कोड उपलब्ध है ",
+    "enter_code": "कोड दर्ज करें",
+    "wrong_number": "गलत नंबर?"
+  },
+  "ice_bonus": {
+    "title": "स्वागत इनाम",
+    "description": "बधाई हो, आपको अपना पहला [[:मूल्य]] [[:बर्फ]] सिक्के प्राप्त हुए हैं जो [[:बोल्ड]]विश्वास[[/:बोल्ड]] को [[:बोल्ड]]आप[[/:बोल्ड] में साबित करता है ",
+    "balance_label": "आपका वर्तमान शेष"
+  },
+  "country_select": {
+    "title": "देश चुनें"
+  },
+  "role": {
+    "pioneer": {
+      "title": "प्रथम अन्वेषक",
+      "description": "क्या आप मांस और खून हैं?"
+    }
+  },
+  "confirm_phone": {
+    "modify_title": "फोन की पुष्टि करें",
+    "modify_description": "कृपया अपने देश कोड की पुष्टि करें और अपना फ़ोन नंबर दर्ज करें",
+    "button": "देश और फोन की पुष्टि करें",
+    "same_phone_error": "आप एक ही नंबर का उपयोग नहीं कर सकते"
+  },
+  "date_select": {
+    "title": "तिथि चुनें"
+  },
+  "walkthrough": {
+    "news": {
+      "step_1": {
+        "title": "और पढ़ें",
+        "description": "यहां आप हमारी टीम की ताजा खबरें देख सकते हैं। "
+      },
+      "step_2": {
+        "description": "प्रत्येक व्यक्तिगत समाचार शीर्षक पर टैप करें और उसका पूर्ण संस्करण पढ़ें। ",
+        "title": "जारी खबर"
+      }
+    },
+    "teams": {
+      "step_1": {
+        "title": "संपर्कों को अनुमति दें",
+        "description": "अपने संपर्कों को सिंक करें और देखें कि कौन पहले से [[:ice]] पर है। "
+      },
+      "step_2": {
+        "title": "रेफरल",
+        "description": "यहां आप देखेंगे कि आपके पास कुल कितने रेफ़रल हैं। "
+      },
+      "step_3": {
+        "title": "आय",
+        "description": "आपका वर्तमान बैलेंस हर घंटे अपडेट किया जाता है और यहां प्रदर्शित किया जाता है। "
+      },
+      "step_4": {
+        "title": "संपर्क",
+        "description": "यह आपके सभी संपर्कों के साथ सूची है, जिनके पास पहले से ही ऐप सूची के शीर्ष पर प्रदर्शित हो रहा है।"
+      },
+      "step_5": {
+        "title": "टीयर 1",
+        "description": "यहां आप अपने टियर 1 रेफ़रल की सूची देख सकते हैं। "
+      },
+      "step_6": {
+        "title": "कतार 2",
+        "description": "यहां आप अपने टियर 2 रेफ़रल की सूची देख सकते हैं। "
+      },
+      "step_7": {
+        "title": "सक्रिय उपयोगकर्ता",
+        "description": "यह आपके रेफ़रल खनन गतिविधि की वर्तमान स्थिति है। "
+      },
+      "step_8": {
+        "title": "टियर 1 कमाई",
+        "description": "यहां आप अपने टियर 1 रेफ़रल की सूची देख सकते हैं। "
+      },
+      "step_9": {
+        "title": "पिंग बटन",
+        "description": "अपने रेफ़रल को उनके खनन सत्र शुरू करने के लिए सूचित करें। "
+      }
+    },
+    "team": {
+      "step_1": {
+        "title": "संपर्कों को अनुमति दें",
+        "description": "अपने संपर्कों को सिंक करें और देखें कि कौन पहले से [[:ice]] पर है। "
+      },
+      "step_2": {
+        "title": "रेफरल",
+        "description": "यहां आप देखेंगे कि आपके पास कुल कितने रेफ़रल हैं। "
+      },
+      "step_3": {
+        "title": "आय",
+        "description": "आपका वर्तमान बैलेंस हर घंटे अपडेट किया जाता है और यहां प्रदर्शित किया जाता है। "
+      },
+      "step_4": {
+        "title": "संपर्क",
+        "description": "यह आपके सभी संपर्कों के साथ सूची है, जिनके पास पहले से ही ऐप सूची के शीर्ष पर प्रदर्शित हो रहा है।"
+      },
+      "step_5": {
+        "title": "टीयर 1",
+        "description": "यहां आप अपने टियर 1 रेफ़रल की सूची देख सकते हैं। ",
+        "url": "https://ice.io/"
+      },
+      "step_6": {
+        "title": "कतार 2",
+        "description": "यहां आप अपने टियर 2 रेफ़रल की सूची देख सकते हैं। ",
+        "url": "https://ice.io/"
+      },
+      "step_7": {
+        "title": "सक्रिय उपयोगकर्ता",
+        "description": "यह आपके रेफ़रल खनन गतिविधि की वर्तमान स्थिति है। "
+      },
+      "step_8": {
+        "title": "टियर 1 कमाई",
+        "description": "यहां आप अपने टियर 1 रेफ़रल की सूची देख सकते हैं। "
+      },
+      "step_9": {
+        "title": "पिंग बटन",
+        "description": "अपने रेफ़रल को उनके खनन सत्र शुरू करने के लिए सूचित करें। "
+      }
+    }
+  },
+  "ActiveSessionsScreen": {
+    "title": "लॉगिन अनलिंक करें",
+    "sessionName": "के माध्यम से लॉग इन करें {{providerName}}",
+    "buttons": {
+      "currentSession": "वर्तमान सत्र",
+      "endSession": "सत्र समाप्त",
+      "loginUnlinked": "लॉगिन अनलिंक्ड",
+      "sessionEnded": "सत्र समाप्त",
+      "unlink": "अनलिंक"
+    },
+    "dialogs": {
+      "unlinkLogin": {
+        "title": "लॉगिन अनलिंक करें?",
+        "message": "क्या आप सुनिश्चित हैं कि आप इसके द्वारा लॉगिन को अनलिंक करना चाहते हैं {{providerName}} इस डिवाइस से?"
+      },
+      "endSession": {
+        "title": "सत्र समाप्त करें?",
+        "message": "क्या आप वाकई इसे समाप्त करना चाहते हैं {{providerName}} इस डिवाइस से लॉगिन सत्र?"
+      }
+    }
+  },
+  "links": {
+    "pre_staking": "https://ice.io/pre-stake/",
+    "privacy": "https://ice.io/privacy/",
+    "terms": "https://ice.io/terms/",
+    "main": "https://ice.io/"
+  },
+  "extra_bonus": {
+    "claim_title": "आज का बोनस",
+    "claim_message": "आपके आज के बोनस का समय हो गया है, कृपया नीचे दिए गए [[:बोल्ड]]\"क्लेम बोनस\"[[/:बोल्ड]] बटन पर टैप करें",
+    "link": "और अधिक जानकारी प्राप्त करें",
+    "extra_message": "आपको अपनी कमाई की दर पर अपना दैनिक अतिरिक्त बोनस मिला है",
+    "expired_title": "बोनस समाप्त हो गया",
+    "expired_message": "दुर्भाग्य से, आज का बोनस समाप्त हो गया है। ",
+    "result_title": "बधाई हो"
+  }
+}

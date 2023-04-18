@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {flags} from '@flags';
+import {CountryFlagAbbreviation, flags} from '@flags';
 import {TierTwoIcon} from '@svg/TierTwoIcon';
 import {getCountryByCode} from '@utils/country';
 import {formatNumber} from '@utils/numbers';
@@ -47,7 +47,9 @@ export const CountryListItem = memo(
       <View style={[styles.container, containerStyle]}>
         <Image
           style={styles.flag}
-          source={flags[country.isoCode.toLowerCase()]}
+          source={
+            flags[country.isoCode.toLowerCase() as CountryFlagAbbreviation]
+          }
         />
         <Text style={[styles.nameText, nameStyle]} numberOfLines={1}>
           {country.name}

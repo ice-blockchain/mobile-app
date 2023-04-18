@@ -2,7 +2,7 @@
   "welcome": {
     "page1": {
       "title": "Bun venit la gheață",
-      "description": "[[:ice]] este o monedă digitală pe care o poți extrage pe telefon. "
+      "description": "[[:ice]] este o monedă digitală pe care o poți câștiga cu telefonul tău. "
     },
     "page2": {
       "title": "Planet Friendly",
@@ -15,15 +15,15 @@
     },
     "page4": {
       "title": "Rămâi conectat",
-      "description": "Atingeți [[:iceLogo]] și începeți azi mineritul cu aplicația noastră mobilă gratuită, ușoară. "
+      "description": "Atingeți [[:iceLogo]] pentru a vă face check-in zilnic cu aplicația noastră mobilă gratuită, ușoară. "
     },
     "page5": {
       "title": "Consultați",
-      "description": "Invitați-vă prietenii și câștigați (amândoi) până la {{value}}% bonus din rata de bază pentru fiecare prieten care se alătură echipei tale."
+      "description": "Invitați-vă prietenii și câștigați (amândoi) până la {{value}}% bonus din rata de bază a câștigurilor pentru fiecare prieten care se alătură echipei tale."
     },
     "page6": {
       "title": "Notificări",
-      "description_part1": "[[:ice]] sesiunile de minerit durează doar {{value}} ore. ",
+      "description_part1": "[[:ice]] sesiunile de check-in durează numai {{value}} ore. ",
       "description_part2": "Nu vă faceți griji, nu vă vom trimite spam!",
       "not_now": "Nu acum"
     }
@@ -31,7 +31,7 @@
   "button": {
     "yes_btn": "Da, te rog",
     "next_btn": "Următorul",
-    "not_now_btn": "nu acum",
+    "not_now": "Nu acum",
     "view_all": "a vedea tot",
     "invite_friend": {
       "title": "Invita prieteni",
@@ -39,7 +39,7 @@
     },
     "no": "Nu",
     "search_country": "Cauta tara",
-    "save": "salva",
+    "save": "Salvați",
     "yes": "da",
     "change": "Schimbare",
     "no_cancel": "Nu, anulează",
@@ -57,6 +57,12 @@
     "skip_all": "Sari peste tot",
     "done": "Terminat",
     "confirm": "A confirma",
+    "do_this_later": "Fă asta mai târziu",
+    "resurrect_me": "Înviază-Mă",
+    "claim_bonus": "Revendicare bonus",
+    "close": "Închide",
+    "try_again": "Încearcă din nou",
+    "view_changelog": "Vedeți jurnalul de modificări",
     "disable": "Dezactivați"
   },
   "team": {
@@ -93,7 +99,7 @@
       },
       "all_contacts": "Toate contactele",
       "invite": "a invita",
-      "invitation_text": "Salut {{name}}, aș dori să vă invit să vă alăturați ice."
+      "invitation_text": "Bună {{name}}, aș dori să vă invit să vă alăturați ice."
     },
     "tier_two": {
       "header_list": {
@@ -142,19 +148,19 @@
     "title": "Cine te-a invitat?",
     "description": "Introduceți porecla persoanei care v-a invitat",
     "inputPlaceholder": "Introduceți porecla",
-    "dontHaveInvitationCode": "Prin parcurgerea acestui pas, tu și prietenul tău veți primi amândoi un {{value}}% bonus la rata de minerit atunci când lucrați amândoi în minerit în același timp.",
+    "dontHaveInvitationCode": "Prin parcurgerea acestui pas, tu și prietenul tău veți primi un {{value}}% bonus la rata de bază a câștigului atunci când amândoi vă înregistrați în același timp.",
     "confirm_text": "Sunteți sigur că doriți să setați un membru aleatoriu ca recomandare?\n\n",
-    "dontHaveCodeTip": "Dacă nu aveți un cod de invitație, vom avea\n"
+    "dontHaveCodeTip": "Dacă nu aveți un cod de invitație, îl vom avea\n"
   },
   "errors": {
     "nicknameSize": "Dimensiunea pseudonimului: 4-20 de caractere.",
     "removeInvalidCharacters": "Eliminați caracterele nevalide.",
     "validation_error": "O eroare de validare",
     "multiple_accounts": "E-mailul/numărul de telefon este asociat cu alt cont. ",
-    "wrong_phone_number": "Număr de telefon greșit",
-    "wrong_phone_number_format": "Format greșit al numărului de telefon",
+    "wrong_phone_number": "Număr de telefon nevalid, încercați din nou",
     "invalid_username": "Porecla este nevalidă.",
     "already_taken": "{{field}} deja luate",
+    "phone_number_already_in_use": "Număr de telefon deja folosit",
     "invalid_validation_code": "Număr de cod nevalid, vă rugăm să încercați din nou!",
     "validation_expired": "Validarea a expirat",
     "validation_not_found": "Validarea nu a fost găsită",
@@ -175,13 +181,24 @@
     "min_username": "Lungimea minimă este de 4 caractere.",
     "max_username": "Lungimea maximă este de 30 de caractere.",
     "code_expired": "Codul a expirat. ",
-    "too_many_requests": "Prea multe cereri. "
+    "too_many_requests": "Prea multe cereri. ",
+    "network_error_title": "Fără conexiune internet",
+    "network_error_message": "Dispozitivul dvs. nu are nicio conexiune la internet activă",
+    "unknown_error": "A apărut o eroare, vă rugăm să încercați din nou mai târziu",
+    "general_error_title": "Oups...",
+    "general_error_message": "Se pare că ceva a mers prost. ",
+    "general_network_error": "A apărut o eroare de rețea. ",
+    "credential_already_in_use": "Această autentificare este deja asociată cu un alt cont de utilizator.",
+    "email_already_in_use": "Adresa de e-mail este deja utilizată de un alt cont.",
+    "user_token_expired": "Acreditările dvs. nu mai sunt valide. ",
+    "requires_recent_login": "Această operațiune este sensibilă și necesită autentificare recentă. ",
+    "same_email": "Nu puteți folosi același e-mail"
   },
   "profile": {
     "my_roles": {
       "title": "Rolul meu"
     },
-    "mining_calculator": "calculator de minerit",
+    "mining_calculator": "calculator de câștiguri",
     "invite_friends": "Invita prieteni",
     "invite_friends_engage": "Răspândește cuvântul și invită-ți prietenii. ",
     "global_rank": "rang global",
@@ -217,29 +234,33 @@
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
+    "level": "nivel",
+    "referrals": "referiri",
+    "coins": "Monede",
     "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update"
+    "phone_number": "Număr de telefon",
+    "years": "Ani",
+    "of": "de",
+    "attention": "Atenţie",
+    "email_address": "Adresa de e-mail",
+    "data_hidden": "datele sunt ascunse",
+    "pull_to_refresh": "trage pentru a actualiza",
+    "comingSoon": "In curand",
+    "date": {
+      "today": "Astăzi"
+    }
   },
   "mining_calculator": {
     "result_label": "Vei câștiga",
     "active_inviter": "Invitator activ",
     "tier_1_ref": "Recomandări de nivel 1",
     "tier_2_ref": "Recomandări de nivel 2",
-    "active_miners": "Mineri activi"
+    "active_miners": "Recomandări active"
   },
   "home": {
     "wallet": {
       "title": "PORTOFEL",
-      "rate": "RATA MINIERĂ",
+      "rate": "RATA DE CÂŞTIG",
       "balance": "SOLD CURENT"
     },
     "pioneer": {
@@ -259,44 +280,42 @@
       "level": "nivel",
       "users": "\nutilizatorii"
     },
-    "steps": {
-      "title": "Începe aici",
-      "description": "Completați sarcinile de mai jos și câștigați 250 ",
-      "step_two": {
+    "tasks": {
+      "achievements": "REALIZĂRI",
+      "title": "Progresul tău",
+      "description": "Completați sarcinile de mai jos și treceți la nivel!",
+      "completed": {
+        "title": "Felicitări",
+        "description": "Continuați să faceți check-in zilnic pentru a câștiga recompense suplimentare!"
+      },
+      "popup": {
+        "title": "Alăturați-vă canalului nostru Telegram",
+        "description": "Specificați porecla care este folosită în telegramă",
+        "placeholder": "Poreclă"
+      },
+      "claim_username": {
+        "title": "Revendicați-vă porecla",
+        "description": "Setează-l și începe să câștigi din invitația ta"
+      },
+      "start_mining": {
         "title": "Începeți mineritul",
-        "description": "Prima ta sesiune de minerit."
+        "description": "Prima ta sesiune de minerit"
       },
-      "step_three": {
+      "upload_profile_picture": {
         "title": "Poză de profil",
-        "description": "Încarcă imaginea ta de profil."
+        "description": "Încarcă imaginea ta de profil"
       },
-      "step_four": {
+      "join_telegram": {
         "title": "Alăturați-vă Telegramului",
-        "description": "Fii parte din comunitatea noastră și alătură-te acum."
+        "description": "Fii parte din comunitatea noastră și alătură-te acum"
       },
-      "step_five": {
+      "follow_us_on_twitter": {
         "title": "Urmărește-ne pe Twitter",
-        "description": "Să ținem legătura, urmăriți-ne pe twitter."
+        "description": "Să ținem legătura, urmăriți-ne pe twitter"
       },
-      "step_six": {
+      "invite_friends": {
         "title": "Invită 5 prieteni",
-        "description": "Creați-vă echipa și creșteți-vă câștigurile."
-      },
-      "step_seven": {
-        "title": "Distribuție socială",
-        "description": "Distribuie-l prietenilor tăi pe rețelele sociale."
-      },
-      "step_one": {
-        "title": "Revendicați-vă porecla",
-        "description": "Setează-l și începe să câștigi din invitația ta."
-      },
-      "step_few": {
-        "title": "Revendicați-vă porecla",
-        "description": "Setează-l și începe să câștigi din invitația ta."
-      },
-      "step_other": {
-        "title": "Revendicați-vă porecla",
-        "description": "Setează-l și începe să câștigi din invitația ta."
+        "description": "Creați-vă echipa și creșteți-vă câștigurile"
       }
     },
     "overview": {
@@ -304,131 +323,134 @@
     },
     "menu": {
       "notifications": "Notificări",
+      "staking": "Miza",
       "stats": "Statistici",
       "help": "Ajutor"
-    },
-    "tasks": {
-      "title": "SARCINI"
     },
     "team": {
       "title": "Echipă",
       "view_team": "Vezi echipa"
     },
     "mining_rate": {
-      "title": "RATA MINIERĂ",
+      "title": "RATA DE CÂŞTIG",
       "base": "Baza"
     },
     "engagement": {
       "title": "LOGODNĂ",
-      "description": "Streak se referă la câte zile consecutive ai minat.\n",
+      "description": "Streak se referă la câte zile consecutive te-ai înregistrat.\n",
       "streak": "STREAK",
       "days_off": "ZILE LIBERE"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
+    "title": "Setări",
+    "profile": "Profil",
     "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "support": "A sustine",
+    "personal_information_title": "Informații personale",
+    "personal_information_description": "Gestionați detaliile profilului dvs",
+    "notifications_title": "Notificări",
+    "notifications_description": "Gestionați-vă notificările aici",
+    "push_notifications_title": "Notificări",
+    "push_notifications_description": "Personalizați setările de notificare push",
+    "email_notifications_title": "notificări prin email",
+    "email_notifications_description": "Personalizați setările de notificare prin e-mail",
+    "terms_title": "Termenii serviciului",
+    "terms_description": "Consultați termenii și condițiile noastre",
+    "privacy_title": "Politica de confidențialitate",
+    "privacy_description": "Aflați despre politica noastră de confidențialitate",
+    "feedback_title": "Trimite feedback",
+    "feedback_description": "Împărtășește-ți gândurile cu noi",
+    "invite_title": "Invita un prieten",
+    "invite_description": "Câștigă gheață suplimentară invitându-ți prietenii",
+    "delete_title": "Șterge cont",
+    "delete_description": "Ștergeți-vă contul",
+    "delete_confirmation_title": "Sigur doriți să eliminați contul?",
+    "delete_confirmation_yes": "Da, șterge",
+    "logout_title": "Deconectați-vă",
+    "logout_description": "Închideți-vă și luați o pauză",
+    "logout_confirmation_title": "Sigur doriți să vă deconectați?",
+    "logout_confirmation_yes": "Da, deconectați-vă",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "Confirmați telefonul nou",
+      "description": "Vă rugăm să confirmați codul de țară și să introduceți noul număr de telefon.",
+      "button": "Confirmați noul număr de telefon"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
-      "type_push": "PUSH",
-      "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start mine, news or team information",
+      "enable_prompt": "Notificările nu sunt permise. ",
+      "channel_achievements": "Realizări",
+      "channel_news": "Știri",
+      "channel_reminders": "Mementouri",
+      "channel_team": "Echipă",
+      "type_push": "APĂSAŢI",
+      "type_email": "E-MAIL",
+      "disable_notifications": "Dezactivați notificările?",
+      "disable_notifications_description": "Prin dezactivarea notificărilor, nu veți putea primi actualizări când puteți începe înregistrarea, știri sau informații despre echipă",
       "domain": {
-        "weekly": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
-        },
-        "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
-        },
-        "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
-        },
-        "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
-        },
-        "community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
-        },
-        "bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
-        },
-        "mining": {
-          "title": "Mining status",
-          "description": "Receive notifications about your mining activity"
-        },
-        "system": {
-          "title": "System",
-          "description": "Receive important notifications about the ice app"
-        },
-        "disableAll": {
+        "disable_all": {
           "title": "",
           "description": ""
+        },
+        "weekly_stats": {
+          "title": "Statistici săptămânale",
+          "description": "Primiți notificări despre activitatea dvs"
+        },
+        "weekly_report": {
+          "title": "Raport saptamanal",
+          "description": "Primiți notificări despre activitatea dvs"
+        },
+        "achievements": {
+          "title": "Realizări",
+          "description": "Primiți notificări despre progresul dvs"
+        },
+        "promotions": {
+          "title": "Promoții",
+          "description": "Primiți notificări despre cum să vă dezvoltați echipa și să câștigați mai mult"
+        },
+        "news": {
+          "title": "Știri",
+          "description": "Primiți notificări de la echipa noastră"
+        },
+        "micro_community": {
+          "title": "Micro-comunitate",
+          "description": "Primiți notificări despre echipa dvs"
+        },
+        "daily_bonus": {
+          "title": "Bonus zilnic",
+          "description": "Primiți notificări pentru a vă revendica bonusul zilnic"
+        },
+        "mining": {
+          "title": "Starea sesiunii",
+          "description": "Primiți notificări despre activitatea dvs. de check-in"
+        },
+        "system": {
+          "title": "Sistem",
+          "description": "Primiți notificări importante despre aplicația de gheață"
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "Setările de limbă",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "Schimbați limba",
+      "prompt": "Aplicarea acestei setări va reporni aplicația"
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "Imagine de profil",
+    "inapp_privacy_title": "Confidențialitate",
+    "inapp_privacy_description": "Gestionați-vă informațiile aici",
+    "developer": "Dezvoltator",
+    "user_id": "ID-ul de utilizator",
+    "user_token": "Token de utilizator",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "Ștergeți fotografia",
+      "edit": "Editează fotografia de profil",
+      "photo_gallery": "Galerie foto",
+      "camera": "aparat foto"
     },
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "Confirmați adresa de e-mail?",
+    "update_email_confirmation_title": "Actualizați e-mailul?",
+    "update_email_confirmation_subtitle": "Schimbarea adresei de e-mail va necesita să vă reconectați. ",
+    "unlink_logins_title": "Deconectați login-urile",
+    "unlink_logins_description": "Vă puteți deconecta login-urile de aici"
   },
   "invite_share": {
     "title": "Invita un prieten",
@@ -437,8 +459,8 @@
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
     "email": "E-mail",
-    "sms": "SMS",
     "fb": "Fluxuri de stiri",
+    "sms": "SMS",
     "copy_link": "Copiază legătură",
     "more": "Mai mult",
     "copied": "COPIAT",
@@ -450,14 +472,13 @@
     "active": "Activ",
     "inactive": "Inactiv",
     "referralType": {
-      "T0": "Invitator",
       "T1": "Nivelul 1",
       "T2": "Nivelul 2"
     }
   },
   "personal_information": {
     "first_name": "Nume",
-    "last_name": "Numele de familie",
+    "last_name": "Nume",
     "country": "Țară",
     "city": "Oraș",
     "title": "Informații personale",
@@ -475,17 +496,11 @@
       "refer_yourself": "Nu te poți referi"
     }
   },
-  "error": {
-    "user_exist": "Numele de utilizator este deja folosit",
-    "general_error": "A apărut o eroare, vă rugăm să încercați din nou mai târziu",
-    "ref_not_found": "Recomandarea introdusă este nevalidă sau nu mai există",
-    "api_error": "Solicitarea a eșuat cu starea {{status}} și cod {{code}}"
-  },
   "staking": {
     "time_left": "Timp rămas",
-    "mining_rate": "Rata de minerit",
-    "appeal": "Creșteți rata de minerit",
-    "benefits_description": "Mizați-vă în avans recompensele miniere până la {{periodYears}} ani și crește rata de minerit cu până la {{ratePercentages}}%",
+    "mining_rate": "Rata de câștig",
+    "appeal": "Creșteți-vă rata de câștig",
+    "benefits_description": "Mizați în avans recompensele de gheață până la {{periodYears}} ani și crește-ți rata de câștig cu până la {{ratePercentages}}%",
     "bonus_label": "Bonus de pre-miză",
     "period_label": "Perioada mizată",
     "title": "Pre-Miza",
@@ -504,9 +519,9 @@
     "active": "Utilizatori activi",
     "total": "Total utilizatori",
     "user_growth": "Creșterea utilizatorilor",
-    "top_miners": "Mineri de top",
+    "top_miners": "Utilizatori de top",
     "top_countries": "Țări de top",
-    "online_miners": "Mineri online",
+    "online_miners": "Utilizatori online",
     "detailed_information": "Informatii detaliate"
   },
   "update_required": {
@@ -520,30 +535,32 @@
     "good_evening": "Bună seara",
     "ice": "gheaţă",
     "ice_per_hour": "gheață/h",
-    "seconds_short": "s"
+    "seconds_short": "s",
+    "minutes_short": "m",
+    "hours_short": "h",
+    "days_short": "d"
   },
   "news": {
     "news_feed": "Fluxuri de stiri",
     "read_more": "Citeşte mai mult",
-    "today": "Astăzi",
-    "views": "vederi"
+    "views": "{{viewsCount}} vederi"
   },
   "search": {
-    "nothing_is_found": "Nu s-a găsit nimic pentru \"{{query}}\"",
+    "empty": "Căutați contacte, prieteni de gheață și membri ai micro-comunității dvs",
+    "nothing_is_found": "Nu a fost găsit nimic pentru interogarea dvs",
     "search_by_country": "Căutați după țară",
     "search_for_users": "Căutați utilizatori"
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Atingeți aici pentru a începe prima dvs. sesiune de minerit",
-    "mining_reset_tooltip": "apasa pentru {{seconds}} secunde pentru a vă reseta sesiunea de mining",
-    "mining_holiday_reset_tooltip": "Folosiți o zi liberă!  {{seconds}} secunde pentru a vă reseta sesiunea de mining",
+    "mining_inactive_tooltip": "Atingeți aici pentru a începe prima dvs. sesiune de check-in",
+    "mining_reset_tooltip": "Apăsați timp de 1 secundă pentru a prelungi sesiunea de check-in",
+    "mining_holiday_reset_tooltip": "Folosiți o zi liberă! ",
     "mining_holiday_active": "Folosiți o zi liberă!"
   },
   "invite_friend": {
     "invite_button": "Invită un prieten",
     "button_title": "Invită un prieten",
-    "description_part1": "Prietenul tău nu are ",
-    "description_part2": ".\n"
+    "description": "Prietenul tău nu este încă pe [[:ice]]. "
   },
   "balance_history": {
     "title": "Istoricul echilibrului",
@@ -558,12 +575,14 @@
     "update_now": "Actualizează acum",
     "please_update": "Te rog actualizează",
     "update_now_text": "Utilizați o versiune veche a aplicației și trebuie să o actualizați pentru a o utiliza în continuare",
-    "try_again": "Încearcă din nou",
-    "ups": "Oups...",
-    "try_again_text": "Se pare că ceva a mers prost. \n{{errorIdentifier}}",
-    "view_changelog": "Vedeți jurnalul de modificări",
     "you_are_up_to_date": "Ești la curent!",
-    "up_to_date_text": "Acum utilizați cea mai recentă versiune. "
+    "up_to_date_text": "Acum utilizați cea mai recentă versiune. ",
+    "resurrection": "Înviere",
+    "resurrection_message": "Ai o singură șansă să învii și să primești [[:amount]] monede pe care le-ai pierdut în [[:period]] trecut",
+    "resurrection_warning": "Nu poți reînvia decât o singură dată!",
+    "please_confirm": "Vă rugăm să confirmați",
+    "resurrection_no_confirm_message": "Îți vei pierde [[:amount]] monedele pentru totdeauna. ",
+    "resurrection_yes_confirm_message": "Nu poți reînvia decât o singură dată! "
   },
   "periods": {
     "3_days": "3 zile",
@@ -588,12 +607,11 @@
     "title": "Notificări"
   },
   "notification_feed_screen": {
-    "today": "Astăzi",
     "yesterday": "Ieri",
     "last_week": "Săptămâna trecută",
     "this_month": "Luna aceasta",
     "last_month": "Luna trecuta",
-    "this_week": "Săptămâna aceasta"
+    "this_week": "În această săptămână"
   },
   "profile_privacy_edit": {
     "step1": {
@@ -653,14 +671,10 @@
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirmați telefonul nou",
-    "modify_description": "Vă rugăm să confirmați codul de țară și să introduceți noul număr de telefon"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Efectuat",
-      "description": "Felicitări, ai câștigat {{count}}"
-    }
+    "modify_title": "Confirmați telefonul",
+    "modify_description": "Vă rugăm să confirmați codul de țară și să introduceți numărul de telefon",
+    "button": "Confirmați țara și telefonul",
+    "same_phone_error": "Nu poți folosi același număr"
   },
   "date_select": {
     "title": "Alegeți data"
@@ -815,7 +829,7 @@
         "message": "Sigur doriți să deconectați datele de conectare prin {{providerName}} de la acest aparat?"
       },
       "endSession": {
-        "title": "Încheierea sesiunii?",
+        "title": "Sfârșitul sesiunii?",
         "message": "Ești sigur că vrei să închei {{providerName}} sesiune de conectare de pe acest dispozitiv?"
       }
     }
@@ -825,5 +839,14 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "extra_bonus": {
+    "claim_title": "Bonusul de azi",
+    "claim_message": "Este timpul pentru bonusul dvs. de astăzi, vă rugăm să atingeți butonul [[:bold]]„Revendicați bonusul”[[/:bold]] de mai jos",
+    "link": "Află mai multe",
+    "extra_message": "Ați primit bonusul suplimentar zilnic la rata de câștig",
+    "expired_title": "Bonus a expirat",
+    "expired_message": "Din păcate, bonusul de astăzi a expirat. ",
+    "result_title": "Felicitări"
   }
 }
