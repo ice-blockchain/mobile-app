@@ -14,14 +14,6 @@ type TextAlignType =
   | 'justify'
   | undefined;
 
-type FontResult = {
-  fontSize: number;
-  lineHeight: number | undefined;
-  fontFamily: string;
-  color: string;
-  textAlign: TextAlignType;
-};
-
 export const font = (
   fontSize: number,
   lineHeight?: number | null,
@@ -29,7 +21,7 @@ export const font = (
   color: keyof typeof COLORS = 'white',
   textAlign: TextAlignType = 'left',
   fontFamily: FontFamily = 'primary',
-): FontResult => {
+) => {
   return {
     fontSize: rem(fontSize),
     lineHeight: lineHeight != null ? rem(lineHeight) : undefined,
