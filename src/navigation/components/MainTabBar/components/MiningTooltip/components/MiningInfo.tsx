@@ -83,12 +83,7 @@ export const MiningInfo = () => {
             />
           )
         }
-        currency={
-          <IceLabel
-            color={COLORS.primaryDark}
-            label={t('general.ice_per_hour')}
-          />
-        }
+        currency={<IceLabel color={COLORS.primaryDark} />}
       />
     </View>
   );
