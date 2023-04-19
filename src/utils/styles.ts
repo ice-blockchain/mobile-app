@@ -4,22 +4,15 @@ import {COLORS} from '@constants/colors';
 // eslint-disable-next-line no-restricted-imports
 import {FontFamily, FONTS, FontWight} from '@constants/fonts';
 import {isRTL} from '@translations/i18n';
+import {TextStyle} from 'react-native';
 import {rem} from 'rn-units';
-
-type TextAlignType =
-  | 'center'
-  | 'auto'
-  | 'left'
-  | 'right'
-  | 'justify'
-  | undefined;
 
 export const font = (
   fontSize: number,
   lineHeight?: number | null,
   fontWeight: FontWight = 'regular',
   color: keyof typeof COLORS = 'white',
-  textAlign: TextAlignType = 'left',
+  textAlign: TextStyle['textAlign'] = 'left',
   fontFamily: FontFamily = 'primary',
 ) => {
   return {
