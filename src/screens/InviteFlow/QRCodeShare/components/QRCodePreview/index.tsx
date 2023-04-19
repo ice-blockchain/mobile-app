@@ -24,7 +24,7 @@ export const QRCodePreview = () => {
         uri={user.profilePictureUrl}
         style={styles.avatar}
         size={AVATAR_SIZE}
-        borderRadius={rem(30)}
+        borderRadius={rem(24)}
       />
       <Text style={styles.usernameText}>@{user.username}</Text>
       <QRCode
@@ -50,24 +50,24 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     borderRadius: rem(16),
     marginHorizontal: rem(16),
-    marginTop: rem(12),
+    marginTop: rem(20),
   },
   avatar: {
     position: 'absolute',
     top: -AVATAR_SIZE / 2,
     alignSelf: 'center',
-    borderWidth: 3,
+    borderWidth: rem(3),
     borderColor: COLORS.white,
   },
   usernameText: {
-    marginTop: rem(48),
+    marginTop: rem(54),
     ...font(17, 20.4, 'semibold', 'black'),
   },
   qrCode: {
     marginTop: rem(26),
   },
   descriptionText: {
-    marginTop: rem(20),
+    marginTop: rem(24),
     ...font(14, 16.8, 'semibold', 'black'),
   },
   iceLabel: {

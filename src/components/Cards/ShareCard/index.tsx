@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     marginHorizontal: rem(12),
-    marginVertical: rem(12),
+    marginTop: rem(12),
+    marginBottom: rem(20),
     backgroundColor: COLORS.white,
   },
   button: {
