@@ -10,7 +10,7 @@ import {call, SagaReturnType, select} from 'redux-saga/effects';
 /**
  * Check user.language property and react on locale change
  */
-export function* syncRTLSaga() {
+export function* syncRtlSaga() {
   while (true) {
     yield call(waitForSelector, state => {
       const appLocale = appLocaleSelector(state);
