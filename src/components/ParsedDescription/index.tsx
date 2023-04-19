@@ -3,6 +3,7 @@
 import {IceLabel} from '@components/Labels/IceLabel';
 import {replaceString, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
+import React from 'react';
 import {Platform, StyleSheet, Text} from 'react-native';
 
 type Props = {

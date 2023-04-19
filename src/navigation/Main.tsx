@@ -266,7 +266,7 @@ const MainTabs = () => {
   };
 
   return (
-    <>
+    <View style={styles.container}>
       <StatusNotice />
       <Tabs.Navigator screenOptions={tabOptions} tabBar={MainTabBarComponent}>
         <Tabs.Screen
@@ -306,7 +306,7 @@ const MainTabs = () => {
           listeners={getListeners('profile')}
         />
       </Tabs.Navigator>
-    </>
+    </View>
   );
 };
 
@@ -406,4 +406,7 @@ export const iconStyles = StyleSheet.create({
   profileIconStyle: {
     marginRight: rem(8),
   },
+});
+const styles = StyleSheet.create({
+  container: {flex: 1},
 });

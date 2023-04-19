@@ -2,7 +2,7 @@
 
 import {ParsedDescription} from '@components/ParsedDescription';
 import {WalkthroughStep} from '@store/modules/Walkthrough/types';
-import {memo} from 'react';
+import React, {memo} from 'react';
 
 type Props = {
   step: WalkthroughStep | undefined;
