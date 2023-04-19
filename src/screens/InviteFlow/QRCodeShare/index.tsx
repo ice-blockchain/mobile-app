@@ -6,6 +6,7 @@ import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {QRCodePreview} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview';
+import {QRShareCard} from '@screens/InviteFlow/QRCodeShare/components/QRShareCard';
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 
@@ -18,6 +19,7 @@ export const QRCodeShare = memo(() => {
       <Header color={COLORS.white} backgroundColor={'transparent'} />
       <View style={commonStyles.flexOne}>
         <QRCodePreview />
+        <QRShareCard />
       </View>
     </View>
   );

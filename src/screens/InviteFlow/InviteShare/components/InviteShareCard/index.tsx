@@ -54,7 +54,10 @@ const buttons: ShareButton<{url: string; message: string}>[] = [
     title: t('invite_share.email'),
     icon: Images.share.email,
     onPress: async ({url, message}) => {
-      openComposer({body: `${message} ${url}`});
+      openComposer({
+        subject: t('invite_share.share_subject'),
+        body: `${message} ${url}`,
+      });
     },
   },
   {

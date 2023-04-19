@@ -466,7 +466,9 @@
     "more": "More",
     "copied": "COPIED",
     "share_message": "Hi ☃️ Snowman! Join my team on ice and receive 10 ice coins when you sign-up using my referral code:",
-    "description": "Spread the word and invite your friends. You earn [[:ice]] for each new referral you bring."
+    "share_subject": "Join my team on ice",
+    "description": "Spread the word and invite your friends. You earn [[:ice]] for each new referral you bring.",
+    "download": "Download"
   },
   "users": {
     "ping": "PING",
