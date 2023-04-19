@@ -101,6 +101,6 @@ export const Images = {
     link: require('./share/link.png'),
     more: require('./share/more.png'),
     sms: require('./share/sms.png'),
-    download: require('./share/download.png'),
+    shareProviders: require('./share/share_providers.png'),
   },
 } as const;

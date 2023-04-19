@@ -319,7 +319,7 @@ export type Translations = {
   'invite_share.share_message': null;
   'invite_share.share_subject': null;
   'invite_share.description': null;
-  'invite_share.download': null;
+  'invite_share.share': null;
   'users.ping': null;
   'users.active': null;
   'users.inactive': null;

@@ -4,6 +4,7 @@ import {LinesBackground} from '@components/LinesBackground';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
+import {useBottomOffsetStyle} from '@navigation/hooks/useBottomOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {QRCodePreview} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview';
 import {QRShareCard} from '@screens/InviteFlow/QRCodeShare/components/QRShareCard';
@@ -13,10 +14,12 @@ import {StyleSheet, View} from 'react-native';
 export const QRCodeShare = memo(() => {
   useFocusStatusBar({style: 'light-content'});
 
+  const bottomOffset = useBottomOffsetStyle();
+
   const qrCodePreviewRef = useRef(null);
 
   return (
-    <View style={[styles.container]}>
+    <View style={[styles.container, bottomOffset.current]}>
       <LinesBackground />
       <Header color={COLORS.white} backgroundColor={'transparent'} />
       <View style={commonStyles.flexOne}>
