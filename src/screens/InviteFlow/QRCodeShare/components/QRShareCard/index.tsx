@@ -5,10 +5,12 @@ import {Images} from '@images';
 import {logError} from '@services/logging';
 import {shareSingle} from '@services/share';
 import {t} from '@translations/i18n';
-import React from 'react';
+import React, {RefObject} from 'react';
+import {View} from 'react-native';
 import {Linking, Share as ShareMore} from 'react-native';
 import {openComposer} from 'react-native-email-link';
 import {Social} from 'react-native-share';
+import {captureRef} from 'react-native-view-shot';
 import {isIOS} from 'rn-units';
 
 const buttons: ShareButton<{url: string}>[] = [
@@ -69,9 +71,18 @@ const buttons: ShareButton<{url: string}>[] = [
   },
 ];
 
-export const QRShareCard = () => {
+type Props = {
+  qrCodePreviewRef: RefObject<View>;
+};
+
+export const QRShareCard = ({qrCodePreviewRef}: Props) => {
   const onButtonPress = (button: typeof buttons[number]) => {
-    button.onPress({url: 'https://foo.com'}).catch(logError);
+    captureRef(qrCodePreviewRef, {result: 'tmpfile'})
+      .then(url => {
+        console.log(url);
+        button.onPress({url});
+      })
+      .catch(logError);
   };
 
   return <ShareCard buttons={buttons} onButtonPress={onButtonPress} />;

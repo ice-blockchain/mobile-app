@@ -8,49 +8,53 @@ import {QRCode} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/c
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
-import React from 'react';
-import {Text} from 'react-native';
-import {StyleSheet, View} from 'react-native';
+import React, {forwardRef, Ref} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 const AVATAR_SIZE = rem(82);
 
-export const QRCodePreview = () => {
+export const QRCodePreview = forwardRef((_, forwardedRef: Ref<View>) => {
   const user = useSelector(unsafeUserSelector); //TODO::use everywhere + combine buttons in components folder
   return (
-    <View style={styles.container}>
-      <Avatar
-        uri={user.profilePictureUrl}
-        style={styles.avatar}
-        size={AVATAR_SIZE}
-        borderRadius={rem(24)}
-      />
-      <Text style={styles.usernameText}>@{user.username}</Text>
-      <QRCode
-        size={windowWidth * 0.5}
-        input={user.username}
-        containerStyle={styles.qrCode}
-      />
-      <Text style={styles.descriptionText}>{t('qr_code.description')}</Text>
-      <Text style={styles.iceLabel}>
-        <IceLabel
-          color={COLORS.black}
-          iconSize={rem(30)}
-          textStyle={styles.iceLabelText}
+    <View style={styles.container} ref={forwardedRef}>
+      <View style={styles.body}>
+        <Avatar
+          uri={user.profilePictureUrl}
+          style={styles.avatar}
+          size={AVATAR_SIZE}
+          borderRadius={rem(24)}
         />
-      </Text>
+        <Text style={styles.usernameText}>@{user.username}</Text>
+        <QRCode
+          size={windowWidth * 0.5}
+          input={user.username}
+          containerStyle={styles.qrCode}
+        />
+        <Text style={styles.descriptionText}>{t('qr_code.description')}</Text>
+        <Text style={styles.iceLabel}>
+          <IceLabel
+            color={COLORS.black}
+            iconSize={rem(30)}
+            textStyle={styles.iceLabelText}
+          />
+        </Text>
+      </View>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {
+    marginHorizontal: rem(16),
+    marginTop: -rem(20),
+  },
+  body: {
     alignItems: 'center',
+    marginTop: AVATAR_SIZE / 2,
     backgroundColor: COLORS.white,
     borderRadius: rem(16),
-    marginHorizontal: rem(16),
-    marginTop: rem(20),
   },
   avatar: {
     position: 'absolute',
@@ -60,7 +64,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.white,
   },
   usernameText: {
-    marginTop: rem(54),
+    marginTop: rem(12) + AVATAR_SIZE / 2,
     ...font(17, 20.4, 'semibold', 'black'),
   },
   qrCode: {
