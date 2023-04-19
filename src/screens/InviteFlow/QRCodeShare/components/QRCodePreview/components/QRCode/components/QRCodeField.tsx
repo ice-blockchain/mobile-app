@@ -11,7 +11,7 @@ type Props = {
   dotSize?: number;
 };
 
-export const QRCodeField = ({size, matrix, color, dotSize = 3}: Props) => {
+export const QRCodeField = ({size, matrix, color, dotSize = 2}: Props) => {
   const matrixLength = matrix.length;
   const cellSize = size / matrixLength;
 
