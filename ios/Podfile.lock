@@ -518,6 +518,8 @@ PODS:
   - react-native-twitter-signin (1.2.0):
     - React
     - TwitterKit5
+  - react-native-view-shot (3.6.0):
+    - React-Core
   - React-perflogger (0.70.8)
   - React-RCTActionSheet (0.70.8):
     - React-Core/RCTActionSheetHeaders (= 0.70.8)
@@ -761,6 +763,7 @@ DEPENDENCIES:
   - react-native-restart (from `../node_modules/react-native-restart`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - "react-native-twitter-signin (from `../node_modules/@react-native-twitter-signin/twitter-signin`)"
+  - react-native-view-shot (from `../node_modules/react-native-view-shot`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -921,6 +924,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-twitter-signin:
     :path: "../node_modules/@react-native-twitter-signin/twitter-signin"
+  react-native-view-shot:
+    :path: "../node_modules/react-native-view-shot"
   React-perflogger:
     :path: "../node_modules/react-native/ReactCommon/reactperflogger"
   React-RCTActionSheet:
@@ -1076,6 +1081,7 @@ SPEC CHECKSUMS:
   react-native-restart: 7595693413fe3ca15893702f2c8306c62a708162
   react-native-safe-area-context: 99b24a0c5acd0d5dcac2b1a7f18c49ea317be99a
   react-native-twitter-signin: 423e8d20eb26fddc14852d3f1435a8b39358f49d
+  react-native-view-shot: 705f999ac2a24e4e6c909c0ca65c732ed33ca2ff
   React-perflogger: e9249a18e055cae96fdf685bf6145cbea62506c8
   React-RCTActionSheet: a6d2a544a4605a111ce80fa9319cc870ca3ea778
   React-RCTAnimation: 21b776b15aa5451a0b5bcb342fd2f346817c1101
