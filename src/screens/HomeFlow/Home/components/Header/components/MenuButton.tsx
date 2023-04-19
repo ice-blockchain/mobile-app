@@ -14,7 +14,7 @@ import {CandyBoxMenuIcon} from '@svg/CandyBoxMenuIcon';
 import {ChatBubblesIcon} from '@svg/ChatBubblesIcon';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
 import {StatsIcon} from '@svg/StatsIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import React, {memo, useMemo, useRef} from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
@@ -81,7 +81,7 @@ export const MenuButton = memo(() => {
       navigation.navigate('ContextualMenu', {
         coords: {
           top: y + height + rem(16),
-          right: windowWidth - x - rem(16),
+          right: isRTL ? x : windowWidth - x - rem(16),
         },
         buttons,
       });

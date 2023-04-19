@@ -50,16 +50,14 @@ export const PreStakingCall = () => {
 
 const styles = StyleSheet.create({
   titleText: {
-    textAlign: 'center',
     marginTop: rem(22),
     marginHorizontal: rem(32),
-    ...font(18, 22, 'black', 'primaryDark'),
+    ...font(18, 22, 'black', 'primaryDark', 'center'),
   },
   noteText: {
-    textAlign: 'center',
     marginTop: rem(14),
     marginHorizontal: rem(32),
-    ...font(12, 17, 'medium', 'secondary'),
+    ...font(12, 17, 'medium', 'secondary', 'center'),
   },
   button: {
     marginTop: rem(20),

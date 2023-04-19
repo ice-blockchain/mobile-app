@@ -15,8 +15,7 @@ export const Message = ({text}: Props) => {
 
 const styles = StyleSheet.create({
   messageText: {
-    ...font(14, 20, 'medium', 'secondary'),
-    textAlign: 'center',
+    ...font(14, 20, 'medium', 'secondary', 'center'),
     marginTop: rem(16),
     marginHorizontal: rem(30),
   },

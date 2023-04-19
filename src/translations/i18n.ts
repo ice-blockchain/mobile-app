@@ -4,6 +4,7 @@ import {localeConfig, SupportedLocale} from '@translations/localeConfig';
 import {Translations} from '@translations/locales/en.json';
 // eslint-disable-next-line no-restricted-imports
 import {I18n, TranslateOptions} from 'i18n-js';
+import {I18nManager} from 'react-native';
 import RNLocalize from 'react-native-localize';
 // eslint-disable-next-line no-restricted-imports
 import reactStringReplace from 'react-string-replace';
@@ -60,3 +61,5 @@ export const setLocale = (newLocale: SupportedLocale) => {
 export const getLocale = (): SupportedLocale => {
   return i18n.locale as SupportedLocale;
 };
+
+export const isRTL: boolean = I18nManager.isRTL;

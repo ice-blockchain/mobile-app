@@ -54,9 +54,8 @@ const styles = StyleSheet.create({
     ...font(14, 17, 'bold', 'primaryDark'),
   },
   percLabelText: {
-    textAlign: 'right',
-    marginRight: rem(6),
-    ...font(12, 15, 'medium', 'periwinkleGray'),
+    flex: 1,
+    ...font(12, 15, 'medium', 'periwinkleGray', 'right'),
   },
   progressBody: {
     height: rem(8),

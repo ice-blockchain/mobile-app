@@ -34,8 +34,7 @@ const styles = StyleSheet.create({
     marginBottom: DIVIDER_VERTICAL_MARGIN - rem(5),
   },
   orText: {
-    textAlign: 'center',
     textTransform: 'uppercase',
-    ...font(10, 12, 'regular', 'secondary'),
+    ...font(10, 12, 'regular', 'secondary', 'center'),
   },
 });

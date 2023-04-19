@@ -106,8 +106,7 @@ const styles = StyleSheet.create({
   description: {
     marginTop: rem(9),
     marginHorizontal: rem(20),
-    ...font(11, 13, 'regular'),
-    textAlign: 'center',
+    ...font(11, 13, 'regular', 'white', 'center'),
   },
   valuesContainer: {
     flexDirection: 'row',

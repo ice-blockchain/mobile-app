@@ -53,6 +53,7 @@ export const WhoInvitedYou = () => {
           value={refUsername}
           errorText={error}
           validated={isReferralUpdated}
+          style={styles.input}
         />
       }
       info={
@@ -84,5 +85,9 @@ const styles = StyleSheet.create({
   },
   infoTextContainer: {
     marginRight: SCREEN_SIDE_OFFSET,
+  },
+  input: {
+    // fix for RTL languages
+    textAlign: 'left',
   },
 });

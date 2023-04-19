@@ -60,8 +60,7 @@ const styles = StyleSheet.create({
   },
   descriptionText: {
     marginHorizontal: rem(12),
-    textAlign: 'center',
-    ...font(16, 26, 'medium', 'secondary'),
+    ...font(16, 26, 'medium', 'secondary', 'center'),
   },
   email: {
     marginTop: rem(4),
@@ -71,15 +70,13 @@ const styles = StyleSheet.create({
   },
   emailText: {
     flexShrink: 1,
-    textAlign: 'center',
-    ...font(16, 26, 'black', 'secondary'),
+    ...font(16, 26, 'black', 'secondary', 'center'),
   },
   emailIcon: {
     marginLeft: rem(14),
   },
   instructionText: {
-    textAlign: 'center',
-    ...font(16, 26, 'medium', 'secondary'),
+    ...font(16, 26, 'medium', 'secondary', 'center'),
     width: rem(180),
     alignSelf: 'center',
   },

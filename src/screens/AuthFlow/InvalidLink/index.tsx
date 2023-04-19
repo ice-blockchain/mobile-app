@@ -38,8 +38,7 @@ const styles = StyleSheet.create({
   descriptionText: {
     marginTop: rem(24),
     marginHorizontal: rem(42),
-    textAlign: 'center',
-    ...font(16, 26, 'medium', 'secondary'),
+    ...font(16, 26, 'medium', 'secondary', 'center'),
   },
   backToLogin: {
     width: rem(210),

@@ -40,9 +40,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    ...font(12, 14.4, 'regular', 'primaryDark'),
+    ...font(12, 14.4, 'regular', 'primaryDark', 'center'),
     marginHorizontal: rem(40),
-    textAlign: 'center',
   },
   link: {
     ...font(12, 14.4, 'regular', 'primaryLight'),

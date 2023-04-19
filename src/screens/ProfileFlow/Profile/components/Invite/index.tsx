@@ -5,12 +5,12 @@ import {Touchable} from '@components/Touchable';
 import {LINKS} from '@constants/links';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {BorderedInfoIcon} from '@svg/BorderedInfoIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
-import {rem} from 'rn-units';
+import {isAndroid, rem} from 'rn-units';
 
 type Props = {
   style?: StyleProp<ViewStyle>;
@@ -38,8 +38,13 @@ const styles = StyleSheet.create({
   text: {
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(32),
-    textAlign: 'center',
-    ...font(14, 20, 'regular', 'primaryDark'),
+    ...font(
+      14,
+      20,
+      'regular',
+      'primaryDark',
+      isRTL && isAndroid ? 'left' : 'center', // info icon doesn't align center on Android
+    ),
   },
   container: {
     marginTop: rem(15),

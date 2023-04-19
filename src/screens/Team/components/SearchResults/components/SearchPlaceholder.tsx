@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
   labelText: {
     marginTop: rem(16),
     marginHorizontal: SCREEN_SIDE_OFFSET,
-    textAlign: 'center',
-    ...font(14, 17, 'medium', 'secondary'),
+    ...font(14, 17, 'medium', 'secondary', 'center'),
   },
 });

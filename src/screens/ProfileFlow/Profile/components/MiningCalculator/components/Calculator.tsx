@@ -7,7 +7,7 @@ import {commonStyles} from '@constants/styles';
 import {MiningIcon} from '@svg/MiningIcon';
 import {TierOneIcon} from '@svg/TierOneIcon';
 import {TierTwoIcon} from '@svg/TierTwoIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import {throttle} from 'lodash';
@@ -178,17 +178,15 @@ const styles = StyleSheet.create({
   },
   resultLabelText: {
     marginTop: rem(28),
-    textAlign: 'center',
-    ...font(13, 24, 'regular', 'periwinkleGray'),
+    ...font(13, 24, 'regular', 'periwinkleGray', 'center'),
   },
   resultValue: {
     minHeight: rem(36),
     alignItems: 'center',
   },
   resultValueText: {
-    textAlign: 'center',
     marginTop: rem(4),
-    ...font(28, 34, 'bold'),
+    ...font(28, 34, 'bold', 'white', 'center'),
   },
   sliderInfo: {
     marginTop: isAndroid ? rem(17) : rem(36),
@@ -208,7 +206,6 @@ const styles = StyleSheet.create({
   },
   sliderValueText: {
     flex: 1,
-    textAlign: 'right',
-    ...font(17, 24, 'bold'),
+    ...font(17, 24, 'bold', 'white', isRTL ? 'left' : 'right'),
   },
 });

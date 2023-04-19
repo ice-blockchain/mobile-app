@@ -7,6 +7,7 @@ import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {ChevronSmallIcon} from '@svg/ChevronSmallIcon';
+import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {useRef, useState} from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
@@ -30,7 +31,7 @@ export const PeriodSelect = ({selectedIndex, options, onChange}: Props) => {
       navigation.navigate('ContextualMenu', {
         coords: {
           top: y + height + rem(16),
-          right: windowWidth - x - rem(46),
+          right: isRTL ? x : windowWidth - x - rem(46),
         },
         buttons: options.map((option, index) => ({
           label: option.label,

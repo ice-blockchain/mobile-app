@@ -34,9 +34,8 @@ const styles = StyleSheet.create({
     height: rem(170),
   },
   title: {
-    textAlign: 'center',
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(16),
-    ...font(14, 24, 'regular', 'primaryDark'),
+    ...font(14, 24, 'regular', 'primaryDark', 'center'),
   },
 });

@@ -8,7 +8,7 @@ import {isPrivacyInfoShownSelector} from '@store/modules/Account/selectors';
 import {ClosedEye} from '@svg/ClosedEye';
 import {RightArrowSvg} from '@svg/RightArrow';
 import {t} from '@translations/i18n';
-import {font} from '@utils/styles';
+import {font, mirrorTransform} from '@utils/styles';
 import React from 'react';
 import {Image, ImageSourcePropType, StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
@@ -134,6 +134,7 @@ const styles = StyleSheet.create({
   },
   arrowNext: {
     marginRight: rem(24),
+    ...mirrorTransform(),
   },
   hiddenContainer: {
     flexDirection: 'row',

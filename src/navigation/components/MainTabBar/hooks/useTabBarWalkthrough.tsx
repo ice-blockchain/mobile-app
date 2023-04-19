@@ -1,10 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {windowWidth} from '@constants/styles';
 import {TabBarIcon} from '@navigation/components/MainTabBar/components/TabBarItem/components/TabBarIcon';
 import {iconStyles} from '@navigation/Main';
 import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/useSetWalkthroughElementData';
 import {HomeWalkthroughStepKey} from '@store/modules/Walkthrough/steps/home';
+import {isRTL} from '@translations/i18n';
 import React, {useRef} from 'react';
 import {LayoutChangeEvent, StyleSheet, View, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
@@ -70,7 +72,9 @@ export const useTabBarWalkthrough = ({
             style={{
               width: nativeEvent.layout.width,
               height: nativeEvent.layout.height,
-              marginLeft: nativeEvent.layout.x,
+              marginLeft: isRTL
+                ? windowWidth - nativeEvent.layout.x - nativeEvent.layout.width
+                : nativeEvent.layout.x,
             }}>
             <TabBarIcon
               icon={

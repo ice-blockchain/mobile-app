@@ -10,6 +10,7 @@ import {ContextualMenuButton} from '@screens/Modals/ContextualMenu/types';
 import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/useSetWalkthroughElementData';
 import {WalkthroughStepKey} from '@store/modules/Walkthrough/types';
 import {CandyBoxMenuIcon} from '@svg/CandyBoxMenuIcon';
+import {isRTL} from '@translations/i18n';
 import React, {useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -18,6 +19,7 @@ const MENU_ICON_SIZE = rem(24);
 const MENU_ICON_CONTAINER_SIZE = rem(40);
 const OUTER_CONTAINER_PADDING = rem(12);
 const EXTRA_PADDING = (MENU_ICON_CONTAINER_SIZE - MENU_ICON_SIZE) / 2;
+const RTL_PADDING = rem(4);
 
 function contextualMenuButtonToStepKey(
   button: ContextualMenuButton,
@@ -59,11 +61,12 @@ export const useMenuButtonWalkthrough = ({
                   style={[
                     styles.mainContainer,
                     {
-                      paddingRight:
-                        windowWidth -
-                        measurements.pageX -
-                        MENU_ICON_SIZE -
-                        EXTRA_PADDING,
+                      paddingRight: isRTL
+                        ? EXTRA_PADDING + RTL_PADDING
+                        : windowWidth -
+                          measurements.pageX -
+                          MENU_ICON_SIZE -
+                          EXTRA_PADDING,
                     },
                   ]}>
                   <View style={commonStyles.flexOne} />

@@ -3,7 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {BackButton} from '@navigation/components/Header/components/BackButton';
-import {font} from '@utils/styles';
+import {font, mirrorTransform} from '@utils/styles';
 import React, {memo, ReactNode, useMemo} from 'react';
 import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 import Animated from 'react-native-reanimated';
@@ -102,8 +102,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     flex: 1,
-    textAlign: 'center',
-    ...font(17, 21, 'semibold'),
+    ...font(17, 21, 'semibold', 'white', 'center'),
   },
   backButton: {
     position: 'absolute',
@@ -111,6 +110,7 @@ const styles = StyleSheet.create({
     top: 0,
     bottom: 0,
     justifyContent: 'center',
+    ...mirrorTransform(),
   },
   rightButtons: {
     position: 'absolute',
