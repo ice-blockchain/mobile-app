@@ -9,7 +9,12 @@ export const QRCodeIcon = ({
   color = COLORS.primaryDark,
   ...props
 }: SvgProps) => (
-  <Svg width={rem(24)} height={rem(24)} fill="none" {...props}>
+  <Svg
+    width={rem(24)}
+    height={rem(24)}
+    viewBox="0 0 24 24"
+    fill="none"
+    {...props}>
     <Path
       fill={color}
       d="M10.889 16.444a1.111 1.111 0 1 1 2.222 0 1.111 1.111 0 0 1-2.222 0ZM10.889 20.889a1.111 1.111 0 1 1 2.222 0 1.111 1.111 0 0 1-2.222 0ZM20.889 10.889a1.111 1.111 0 1 1 0 2.222 1.111 1.111 0 0 1 0-2.222ZM16.445 10.889a1.111 1.111 0 1 1 0 2.222 1.111 1.111 0 0 1 0-2.222Z"
