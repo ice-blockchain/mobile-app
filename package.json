@@ -98,6 +98,7 @@
     "react-native-store-version": "^1.4.1",
     "react-native-svg": "^13.6.0",
     "react-native-view-shot": "^3.6.0",
+    "react-native-vision-camera": "^2.15.4",
     "react-redux": "^8.0.5",
     "react-string-replace": "^1.1.0",
     "redux": "^4.2.0",
