@@ -64,8 +64,7 @@ export const openMiningNotice = () => {
                   </Text>
                 ),
               )}
-              <Text>{'\n'}</Text>
-              <Text>{'\n'}</Text>
+              <Text>{'\n\n'}</Text>
               {getMiningNoticeMessageFooter()}
             </>
           }

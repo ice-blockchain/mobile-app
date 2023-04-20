@@ -12,7 +12,7 @@ function getDescription(step: WalkthroughStep) {
   // When ice label is first in the description then any custom text styles are not applied
   // As a workaround adding a leading space here so text styles are applied
   if (step.description.startsWith('[[:ice]]')) {
-    return ` ${step.description}`;
+    return `\u200B${step.description}`;
   }
   return step.description;
 }

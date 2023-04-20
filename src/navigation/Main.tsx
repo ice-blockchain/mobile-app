@@ -3,6 +3,7 @@
 import {BadgeType} from '@api/achievements/types';
 import {NotificationDeliveryChannel} from '@api/devices/types';
 import {Country} from '@constants/countries';
+import {commonStyles} from '@constants/styles';
 import {MainTabBar} from '@navigation/components/MainTabBar';
 import {HomeIcon} from '@navigation/components/MainTabBar/components/Icons/HomeIcon';
 import {NewsIcon} from '@navigation/components/MainTabBar/components/Icons/NewsIcon';
@@ -266,7 +267,7 @@ const MainTabs = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={commonStyles.flexOne}>
       <StatusNotice />
       <Tabs.Navigator screenOptions={tabOptions} tabBar={MainTabBarComponent}>
         <Tabs.Screen
@@ -406,7 +407,4 @@ export const iconStyles = StyleSheet.create({
   profileIconStyle: {
     marginRight: rem(8),
   },
-});
-const styles = StyleSheet.create({
-  container: {flex: 1},
 });
