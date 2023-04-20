@@ -108,6 +108,8 @@ export const PullToRefreshContainer = ({
 
   const gesture = useMemo(() => {
     const panGesture = Gesture.Pan()
+      .activeOffsetY([-10, 10])
+      .failOffsetX([-10, 10])
       .onUpdate(({translationY}) => {
         translateYPanGesture.value = interpolate(
           translationY,
@@ -123,16 +125,13 @@ export const PullToRefreshContainer = ({
       })
       .enabled(panEnabled);
 
-    const nativeGesture = Gesture.Native();
+    const nativeGesture = Gesture.Native().enabled(scrollEnabled);
 
     if (isContentScrolled && Platform.OS === 'ios') {
       return nativeGesture;
     }
 
-    return Gesture.Simultaneous(
-      panGesture,
-      Gesture.Native().enabled(scrollEnabled),
-    );
+    return Gesture.Simultaneous(panGesture, nativeGesture);
   }, [
     isContentScrolled,
     panEnabled,
