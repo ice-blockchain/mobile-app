@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {ResendButton} from '@components/Buttons/ResendButton';
 import {CodeInput} from '@components/Inputs/CodeInput';
-import {ResendButton} from '@components/ResendButton';
 import {COLORS} from '@constants/colors';
 import {FinalizeRegistrationStep} from '@screens/Templates/FinalizeRegistrationStep';
 import {BigHeader} from '@screens/Templates/FinalizeRegistrationStep/components/BigHeader';

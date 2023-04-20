@@ -2,7 +2,7 @@
 
 import {BadgeType} from '@api/achievements/types';
 import {User} from '@api/user/types';
-import {InviteButton} from '@components/InviteButton';
+import {InviteButton} from '@components/Buttons/InviteButton';
 import {
   SegmentedControl,
   SegmentedControlMethods,

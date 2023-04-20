@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {User} from '@api/user/types';
+import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {CommonInput} from '@components/Inputs/CommonInput';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
-import {PrimaryButton} from '@components/PrimaryButton';
 import {UserAvatarHeader} from '@components/UserAvatarHeader';
 import {COLORS} from '@constants/colors';
 import {isChangePhoneNumberEnabled} from '@constants/featureFlags';

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {PrimaryButton} from '@components/PrimaryButton';
+import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';

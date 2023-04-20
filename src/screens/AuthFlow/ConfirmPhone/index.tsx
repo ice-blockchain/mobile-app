@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {BackButton} from '@components/BackButton';
+import {BackButton} from '@components/Buttons/BackButton';
+import {ResendButton} from '@components/Buttons/ResendButton';
 import {CodeInput} from '@components/Inputs/CodeInput';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {LottieView} from '@components/LottieView';
 import {PrivacyTerms} from '@components/PrivacyTerms';
-import {ResendButton} from '@components/ResendButton';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {LottieAnimations} from '@lottie';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';

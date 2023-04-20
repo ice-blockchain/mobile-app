@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {UpdateAccountField} from '@components/Forms/components/UpdateAccountField';
 import {useModifyPhoneNumber} from '@components/Forms/ModifyPhoneNumberForm/hooks/useModifyPhoneNumber';
 import {PhoneNumberInput} from '@components/Inputs/PhoneNumberInput';
-import {PrimaryButton} from '@components/PrimaryButton';
 import {Country} from '@constants/countries';
 import {useResendCountdown} from '@hooks/useResendCountdown';
 import {t} from '@translations/i18n';

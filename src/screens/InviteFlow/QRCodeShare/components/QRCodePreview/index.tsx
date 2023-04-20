@@ -16,7 +16,7 @@ import {rem} from 'rn-units';
 const AVATAR_SIZE = rem(82);
 
 export const QRCodePreview = forwardRef((_, forwardedRef: Ref<View>) => {
-  const user = useSelector(unsafeUserSelector); //TODO::use everywhere + combine buttons in components folder
+  const user = useSelector(unsafeUserSelector);
   return (
     <View style={styles.container} ref={forwardedRef}>
       <View style={styles.body}>

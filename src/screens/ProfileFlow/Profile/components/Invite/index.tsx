@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {InviteButton} from '@components/InviteButton';
+import {InviteButton} from '@components/Buttons/InviteButton';
 import {Touchable} from '@components/Touchable';
 import {LINKS} from '@constants/links';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';

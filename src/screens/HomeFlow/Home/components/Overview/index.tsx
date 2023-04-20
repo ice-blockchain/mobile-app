@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {InviteButton} from '@components/Buttons/InviteButton';
 import {FlipCard, FlipCardMethods} from '@components/FlipCard';
-import {InviteButton} from '@components/InviteButton';
 import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';

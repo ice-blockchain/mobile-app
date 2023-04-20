@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {PrimaryButton} from '@components/PrimaryButton';
+import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {MainStackParamList} from '@navigation/Main';

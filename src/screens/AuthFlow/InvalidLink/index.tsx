@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {BackButton} from '@components/BackButton';
-import {PrimaryButton} from '@components/PrimaryButton';
+import {BackButton} from '@components/Buttons/BackButton';
+import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Header} from '@screens/AuthFlow/InvalidLink/components/Header';
 import {useBackHandler} from '@screens/AuthFlow/InvalidLink/hooks/useBackHandler';
