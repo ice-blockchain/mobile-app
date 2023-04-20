@@ -2,7 +2,7 @@
 
 import {User} from '@api/user/types';
 import {AccountActions} from '@store/modules/Account/actions';
-import {userSelector} from '@store/modules/Account/selectors';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {
   failedReasonSelector,
   isLoadingSelector,
@@ -15,7 +15,7 @@ import {wait} from 'rn-units';
 
 export const useClaimUsername = () => {
   const dispatch = useDispatch();
-  const user = useSelector(userSelector) as User;
+  const user = useSelector(unsafeUserSelector);
 
   const validationError = useSelector(
     failedReasonSelector.bind(null, ValidationActions.USERNAME_VALIDATION),

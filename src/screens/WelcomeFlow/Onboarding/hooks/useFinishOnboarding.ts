@@ -1,12 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {User} from '@api/user/types';
 import {
   OnboardingSlide,
   onboardingSlides,
 } from '@screens/WelcomeFlow/Onboarding/slides';
 import {AccountActions} from '@store/modules/Account/actions';
-import {userSelector} from '@store/modules/Account/selectors';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {PermissionsActions} from '@store/modules/Permissions/actions';
 import {canAskPermissionSelector} from '@store/modules/Permissions/selectors';
 import {UsersActions} from '@store/modules/Users/actions';
@@ -21,7 +20,7 @@ export const useFinishOnboarding = () => {
   const [slides, setSlides] = useState<OnboardingSlide[]>([]);
 
   const dispatch = useDispatch();
-  const user = useSelector(userSelector) as User;
+  const user = useSelector(unsafeUserSelector);
 
   const canAskNotificationPermission = useSelector(
     canAskPermissionSelector('pushNotifications'),
