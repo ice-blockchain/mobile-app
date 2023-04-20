@@ -7,7 +7,7 @@ import {
 } from '@store/modules/Stats/selectors';
 import {LogoIcon} from '@svg/LogoIcon';
 import {TeamInactiveIcon} from '@svg/TeamInactiveIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   },
   cellDataRight: {
     marginLeft: rem(8),
-    alignItems: 'flex-end',
+    alignItems: isRTL ? 'flex-start' : 'flex-end',
   },
   separator: {
     width: 1,

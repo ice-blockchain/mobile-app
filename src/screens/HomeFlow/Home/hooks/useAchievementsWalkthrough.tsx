@@ -5,6 +5,7 @@ import {Tasks} from '@screens/HomeFlow/Home/components/Tasks';
 import {ITEM_HEIGHT} from '@screens/HomeFlow/Home/components/Tasks/components/TaskItem';
 import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/useSetWalkthroughElementData';
 import {TapIcon} from '@svg/TapIcon';
+import {mirrorTransform} from '@utils/styles';
 import React, {useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units/index';
@@ -45,6 +46,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: ITEM_HEIGHT * 3.5,
     right: rem(20),
+    ...mirrorTransform(),
   },
   mainContainer: {
     backgroundColor: COLORS.white,

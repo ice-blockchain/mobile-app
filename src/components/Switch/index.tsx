@@ -2,6 +2,7 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {isRTL} from '@translations/i18n';
 import React, {useEffect} from 'react';
 import {StyleProp, StyleSheet, ViewStyle} from 'react-native';
 import Animated, {
@@ -30,20 +31,19 @@ export const Switch = ({value, onValueChange, style}: SwitchProps) => {
   const stateSharedValue = useSharedValue(value ? 1 : 0);
 
   const animatedBallStyles = useAnimatedStyle(() => {
+    const output = isRTL
+      ? [-BALL_SIZE + 5, 0]
+      : [
+          BALL_SIDE_OFFSET,
+          CONTAINER_WIDTH -
+            BALL_SIZE -
+            BALL_SIDE_OFFSET -
+            CONTAINER_BORDER_WIDTH * 2,
+        ];
     return {
       transform: [
         {
-          translateX: interpolate(
-            stateSharedValue.value,
-            [0, 1],
-            [
-              BALL_SIDE_OFFSET,
-              CONTAINER_WIDTH -
-                BALL_SIZE -
-                BALL_SIDE_OFFSET -
-                CONTAINER_BORDER_WIDTH * 2,
-            ],
-          ),
+          translateX: interpolate(stateSharedValue.value, [0, 1], output),
         },
       ],
     };

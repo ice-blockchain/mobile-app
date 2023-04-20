@@ -1,0 +1,877 @@
+{
+  "welcome": {
+    "page1": {
+      "title": "مرحبا بكم في الجليد",
+      "description": "[[:ice]] هي عملة رقمية يمكنك كسبها باستخدام هاتفك. "
+    },
+    "page2": {
+      "title": "صديق للكوكب",
+      "description": "[[:ice]] هي بطبيعتها أكثر كفاءة في استخدام الطاقة من BTC لأنها تستخدم آلية إجماع \"إثبات الحصة\". "
+    },
+    "page3": {
+      "title": "عملة الناس",
+      "description_part1": "القوة في يديك.",
+      "description_part2": "كل ما نطوره في [[:ice]] سيكون مفتوح المصدر"
+    },
+    "page4": {
+      "title": "ابق على اتصال",
+      "description": "انقر على [[:iceLogo]] لتسجيل وصولك اليومي من خلال تطبيق الهاتف المحمول المجاني الموفر للطاقة. "
+    },
+    "page5": {
+      "title": "يشير إلى",
+      "description": "ادعُ أصدقاءك واكسب (كلاكما) ما يصل إلى {{value}}٪ مكافأة على معدل ربحك الأساسي لكل صديق ينضم إلى فريقك."
+    },
+    "page6": {
+      "title": "إشعارات",
+      "description_part1": "[[:ice]] تدوم جلسات تسجيل الوصول فقط {{value}} ساعات. ",
+      "description_part2": "لا تقلق ، لن نرسل لك بريدًا عشوائيًا!",
+      "not_now": "ليس الآن"
+    }
+  },
+  "button": {
+    "yes_btn": "نعم من فضلك",
+    "next_btn": "التالي",
+    "not_now": "ليس الآن",
+    "view_all": "مشاهدة الكل",
+    "invite_friend": {
+      "title": "ادعو أصدقاء",
+      "description_part1": "اكسب المزيد ",
+      "description_part2": " بدعوة أصدقائك."
+    },
+    "no": "لا",
+    "search_country": "ابحث عن الدولة",
+    "save": "يحفظ",
+    "yes": "نعم",
+    "change": "يتغير",
+    "no_cancel": "لا ، إلغاء",
+    "complete": "مكتمل",
+    "cancel": "يلغي",
+    "clear": "واضح",
+    "finish": "ينهي",
+    "next_step": "الخطوة التالية",
+    "see_all": "اظهار الكل",
+    "back": "خلف",
+    "search": "يبحث",
+    "continue": "يكمل",
+    "apply": "يتقدم",
+    "reset": "إعادة ضبط",
+    "skip_all": "تخطي الكل",
+    "done": "منتهي",
+    "confirm": "يتأكد",
+    "do_this_later": "افعل هذا لاحقًا",
+    "resurrect_me": "بعثني",
+    "claim_bonus": "مكافأة المطالبة",
+    "close": "يغلق",
+    "try_again": "حاول ثانية",
+    "view_changelog": "مشاهدة ملف التغيير",
+    "disable": "إبطال",
+    "agree": "أنا موافق",
+    "learn_more": "يتعلم أكثر"
+  },
+  "team": {
+    "contacts_tab": "جهات الاتصال",
+    "tierOne_tab": "المستوى 1",
+    "tierTwo_tab": "المستوى 2",
+    "empty": {
+      "title_part1": "ليس لديك حاليا أي\n",
+      "title_part2": " الإحالات!",
+      "button_title": "ادعو أصدقاء"
+    },
+    "contacts": {
+      "empty_title": "[[:ice]] أفضل مع الأصدقاء",
+      "empty_button_title": "السماح بوصول جهات الاتصال",
+      "empty_description": "قم بمزامنة جهات الاتصال الخاصة بك ومعرفة من موجود بالفعل على [[:ice]]. "
+    },
+    "header": {
+      "search_placeholder": "ابحث عن المستخدمين",
+      "referrals": "الإحالات",
+      "earnings": "أرباح"
+    },
+    "confirm_code": {
+      "title": "تأكيد الرمز",
+      "description": "الرجاء إدخال رمز التأكيد الذي تلقيته على هاتفك.",
+      "placeholder": "ادخل الرمز",
+      "button": "قم بتأكيد الرمز الخاص بك الآن"
+    },
+    "confirm_phone": {
+      "title": "تأكيد الهاتف",
+      "description": "يرجى تأكيد رمز بلدك وإدخال رقم هاتفك."
+    },
+    "contacts_list": {
+      "ice_header": {
+        "friends": "أصدقاء"
+      },
+      "all_contacts": "كل الاتصالات",
+      "invite": "يدعو",
+      "invitation_text": "أهلاً {{name}}، أود أن أدعوكم للانضمام إلى الجليد."
+    },
+    "tier_two": {
+      "header_list": {
+        "title_earnings": "أرباح المستوى 1"
+      }
+    },
+    "tier_zero": {
+      "header_list": {
+        "title_earnings": "أرباح المستوى 1"
+      }
+    },
+    "tier_one": {
+      "header_list": {
+        "title_earnings": "أرباح المستوى 1"
+      }
+    },
+    "tier_few": {
+      "header_list": {
+        "title_earnings": "أرباح المستوى 1"
+      }
+    },
+    "tier_many": {
+      "header_list": {
+        "title_earnings": "أرباح المستوى 1"
+      }
+    },
+    "tier_other": {
+      "header_list": {
+        "title_earnings": "أرباح المستوى 1"
+      }
+    }
+  },
+  "signIn": {
+    "logInSignUp": "الدخول التسجيل فى الموقع",
+    "phone": "هاتف",
+    "or": "أو",
+    "welcome": "مرحبا بكم في الجليد",
+    "email": "بريد إلكتروني",
+    "slogan": "إعادة تعيين العملة العالمية",
+    "privacy": {
+      "description": "بالمتابعة ، فإنك توافق على ",
+      "terms": "شروط الخدمة",
+      "and": " و ",
+      "policy": "سياسة الخصوصية"
+    }
+  },
+  "claimUsername": {
+    "title": "لقب المطالبة",
+    "description": "سيحتاج أصدقاؤك إلى استخدام هذا اللقب للانضمام إلى فريقك",
+    "inputPlaceholder": "أدخل اسمك المستعار",
+    "note_part1": "عند إنشاء اسم مستعار ، استخدم الأحرف والأرقام والنقاط فقط.",
+    "note_part2": "مثال:",
+    "note_example": "your.name01"
+  },
+  "whoInvitedYou": {
+    "title": "من دعاك؟",
+    "description": "أدخل لقب الشخص الذي دعاك",
+    "inputPlaceholder": "أدخل كنية",
+    "dontHaveInvitationCode": "بإكمال هذه الخطوة ، ستحصل أنت وصديقك على ملف {{value}}مكافأة٪ على معدل الكسب الأساسي عندما تقومان بتسجيل الوصول في نفس الوقت.",
+    "confirm_text": "هل أنت متأكد من رغبتك في تعيين عضو عشوائي كإحالتك؟\n\n",
+    "dontHaveCodeTip": "إذا لم يكن لديك رمز دعوة فسنقوم بذلك\n"
+  },
+  "errors": {
+    "nicknameSize": "حجم اللقب: 4-20 حرفًا.",
+    "removeInvalidCharacters": "إزالة الأحرف غير الصالحة.",
+    "validation_error": "بعض أخطاء التحقق من الصحة",
+    "multiple_accounts": "رقم البريد الإلكتروني / الهاتف مرتبط بحساب آخر. ",
+    "wrong_phone_number": "رقم الهاتف غير صحيح ، يرجى المحاولة مرة أخرى",
+    "invalid_username": "اللقب غير صالح.",
+    "already_taken": "{{field}} مأخوذة",
+    "phone_number_already_in_use": "رقم الهاتف قيد الاستخدام بالفعل",
+    "invalid_validation_code": "رقم الكود غير صحيح ، يرجى المحاولة مرة أخرى!",
+    "validation_expired": "انتهت صلاحية التحقق",
+    "validation_not_found": "لم يتم العثور على التحقق",
+    "invalid_email": "بريد إلكتروني خاطئ",
+    "invalid_ref_username": "اللقب غير صالح.",
+    "invalid_phone": "رقم الهاتف غير صحيح",
+    "user_disabled": "تم تعطيل المستخدم",
+    "expired_action_code": "انتهت صلاحية رابط OTP في البريد الإلكتروني",
+    "account_exists_with_different_credential": "يوجد بالفعل حساب بعنوان البريد الإلكتروني الذي أكدته بيانات الاعتماد",
+    "invalid_credential": "بيانات الاعتماد مشوهة أو منتهية الصلاحية",
+    "operation_not_allowed": "لم يتم تمكين نوع الحساب المطابق لبيانات الاعتماد",
+    "user_not_found_for_email": "لا يوجد مستخدم مطابق للبريد الإلكتروني المحدد",
+    "user_not_found": "لم يتم العثور على المستخدم",
+    "auth_in_progress": "تسجيل الدخول قيد التقدم بالفعل",
+    "google_play_services_not_available": "خدمات Google Play غير متوفرة على الجهاز",
+    "unknown_error_with_code": "خطأ غير معروف {{code}}",
+    "no_such_provider": "ليس لديك هذا المزود مرتبط",
+    "min_username": "الحد الأدنى للطول هو 4 أحرف.",
+    "max_username": "الطول الأقصى 30 حرفًا.",
+    "code_expired": "انتهت صلاحية الرمز. ",
+    "too_many_requests": "طلبات كثيرة جدا. ",
+    "network_error_title": "لا يوجد اتصال بالإنترنت",
+    "network_error_message": "جهازك ليس به أي اتصال إنترنت نشط",
+    "unknown_error": "حدث خطأ ما ، يرجى المحاولة مرة أخرى في وقت لاحق",
+    "general_error_title": "عفوًا ...",
+    "general_error_message": "يبدو أنه حدث خطأ ما. ",
+    "general_network_error": "حدث خطأ في الشبكة. ",
+    "credential_already_in_use": "بيانات الاعتماد هذه مرتبطة بالفعل بحساب مستخدم مختلف.",
+    "email_already_in_use": "عنوان البريد الإلكتروني قيد الاستخدام بالفعل من قبل حساب آخر.",
+    "user_token_expired": "أوراق الاعتماد الخاصة بك لم تعد صالحة. ",
+    "requires_recent_login": "هذه العملية حساسة وتتطلب مصادقة حديثة. ",
+    "same_email": "لا يمكنك استخدام نفس البريد الإلكتروني"
+  },
+  "profile": {
+    "my_roles": {
+      "title": "دوري"
+    },
+    "mining_calculator": "حاسبة الأرباح",
+    "invite_friends": "ادعو أصدقاء",
+    "invite_friends_engage": "انشر الكلمة وادعو أصدقائك. ",
+    "global_rank": "التصنيف العالمي",
+    "view_all_roles": "عرض كل الأدوار",
+    "data_is_hidden": "البيانات مخفية",
+    "progress_text": "{{value}} من {{total}}",
+    "not_found": {
+      "title": "لم يتم العثور على المستخدم",
+      "description": "عفوًا ، لم نتمكن من العثور على هذا المستخدم"
+    },
+    "my_badges": {
+      "title": "شاراتي"
+    },
+    "badges": {
+      "title": "شارات"
+    },
+    "roles": {
+      "title": "الأدوار"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "عملات معدنية",
+        "description": "عملات معدنية"
+      },
+      "social": {
+        "title": "اجتماعي",
+        "description": "أصدقاء"
+      },
+      "level": {
+        "title": "مستوى",
+        "description": "مستوى"
+      }
+    }
+  },
+  "global": {
+    "level": "مستوى",
+    "referrals": "الإحالات",
+    "coin": "عملات معدنية",
+    "social": "اجتماعي",
+    "phone_number": "رقم التليفون",
+    "years": "سنين",
+    "of": "ل",
+    "attention": "انتباه",
+    "email_address": "عنوان البريد الإلكتروني",
+    "data_hidden": "البيانات مخفية",
+    "pull_to_refresh": "اسحب للتحديث",
+    "comingSoon": "قريباً",
+    "date": {
+      "today": "اليوم"
+    }
+  },
+  "mining_calculator": {
+    "result_label": "سوف تكسب",
+    "active_inviter": "الداعي النشط",
+    "tier_1_ref": "إحالات من المستوى 1",
+    "tier_2_ref": "إحالات من المستوى 2",
+    "active_miners": "الإحالات النشطة"
+  },
+  "home": {
+    "wallet": {
+      "title": "محفظة",
+      "rate": "معدل الربح",
+      "balance": "الرصيد الحالي"
+    },
+    "pioneer": {
+      "title": "رائد",
+      "rank": "التصنيف العالمي",
+      "referrals": "الإحالات",
+      "description_part1": "كلما زاد عدد المستخدمين الذين قمت بإحالتهم ، زاد عددهم ",
+      "description_part2": " تكسب"
+    },
+    "referrals": {
+      "title": "الإحالات",
+      "description": "احصائيات الإحالة للأيام الخمسة الماضية",
+      "no_referrals_description": "ليس لديك أي إحالات حتى الآن",
+      "users_tier_1": "المستخدمون من المستوى 1",
+      "users_tier_2": "المستخدمون من المستوى 2"
+    },
+    "adoption": {
+      "title": "تبني",
+      "level": "مستوى",
+      "users": "\nالمستخدمين"
+    },
+    "tasks": {
+      "achievements": "إنجازات",
+      "title": "التقدم المحرز الخاص بك",
+      "description": "أكمل المهام أدناه وارتق إلى المستوى الأعلى!",
+      "completed": {
+        "title": "تهانينا",
+        "description": "استمر في تسجيل الوصول يوميًا لكسب مكافآت إضافية!"
+      },
+      "popup": {
+        "title": "انضم إلى قناة Telegram الخاصة بنا",
+        "description": "حدد لقبك المستخدم في البرقية",
+        "placeholder": "كنية"
+      },
+      "claim_username": {
+        "title": "المطالبة بلقبك",
+        "description": "قم بتعيينه وابدأ في الكسب من دعوتك"
+      },
+      "start_mining": {
+        "title": "ابدأ التعدين",
+        "description": "أول جلسة تعدين لك"
+      },
+      "upload_profile_picture": {
+        "title": "الصوره الشخصيه",
+        "description": "قم بتحميل صورة ملفك الشخصي"
+      },
+      "join_telegram": {
+        "title": "انضم إلى Telegram",
+        "description": "كن جزءًا من مجتمعنا وانضم الآن"
+      },
+      "follow_us_on_twitter": {
+        "title": "تابعنا على تويتر",
+        "description": "دعونا نبقى على اتصال ، تابعنا على تويتر"
+      },
+      "invite_friends": {
+        "title": "ادعُ 5 أصدقاء",
+        "description": "قم بإنشاء فريقك وزيادة أرباحك"
+      }
+    },
+    "overview": {
+      "title": "ملخص"
+    },
+    "menu": {
+      "notifications": "إشعارات",
+      "staking": "ماسك",
+      "stats": "احصائيات",
+      "help": "يساعد"
+    },
+    "team": {
+      "title": "فريق",
+      "view_team": "عرض الفريق"
+    },
+    "mining_rate": {
+      "title": "معدل الربح",
+      "base": "قاعدة"
+    },
+    "engagement": {
+      "title": "ارتباط",
+      "description": "يشير الخط إلى عدد الأيام المتتالية التي قمت فيها بتسجيل الوصول.\n",
+      "streak": "أثَر",
+      "days_off": "يوم عطلة"
+    }
+  },
+  "settings": {
+    "title": "إعدادات",
+    "profile": "حساب تعريفي",
+    "legal": "قانوني",
+    "support": "يدعم",
+    "personal_information_title": "معلومات شخصية",
+    "personal_information_description": "إدارة تفاصيل ملفك الشخصي",
+    "notifications_title": "إشعارات",
+    "notifications_description": "إدارة الإخطارات الخاصة بك هنا",
+    "push_notifications_title": "دفع الإخطارات",
+    "push_notifications_description": "تخصيص إعدادات إعلام الدفع الخاصة بك",
+    "email_notifications_title": "اشعارات البريد الالكتروني",
+    "email_notifications_description": "تخصيص إعدادات إعلام البريد الإلكتروني الخاص بك",
+    "terms_title": "شروط الخدمة",
+    "terms_description": "مراجعة شروط الخدمة لدينا",
+    "privacy_title": "سياسة الخصوصية",
+    "privacy_description": "تعرف على سياسة الخصوصية الخاصة بنا",
+    "feedback_title": "ارسل رأيك",
+    "feedback_description": "شاركنا افكارك",
+    "invite_title": "أدع صديقا",
+    "invite_description": "اربح ثلجًا إضافيًا بدعوة أصدقائك",
+    "delete_title": "حذف الحساب",
+    "delete_description": "امسح حسابك",
+    "delete_confirmation_title": "هل أنت متأكد أنك تريد إزالة الحساب؟",
+    "delete_confirmation_yes": "نعم ، امسح",
+    "logout_title": "تسجيل خروج",
+    "logout_description": "قم بتسجيل الخروج وخذ قسط من الراحة",
+    "logout_confirmation_title": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+    "logout_confirmation_yes": "نعم ، تسجيل الخروج",
+    "confirm_phone": {
+      "title": "تأكيد الهاتف الجديد",
+      "description": "يرجى تأكيد رمز بلدك وإدخال رقم هاتفك الجديد.",
+      "button": "تأكيد رقم الهاتف الجديد"
+    },
+    "notifications": {
+      "enable_prompt": "الإخطارات غير مسموح بها. ",
+      "channel_achievements": "إنجازات",
+      "channel_news": "أخبار",
+      "channel_reminders": "تذكير",
+      "channel_team": "فريق",
+      "type_push": "يدفع",
+      "type_email": "بريد إلكتروني",
+      "disable_notifications": "أوقف التنبيهات؟",
+      "disable_notifications_description": "من خلال تعطيل الإشعارات ، لن تتمكن من تلقي التحديثات عندما يمكنك بدء تسجيل الوصول أو الأخبار أو معلومات الفريق",
+      "domain": {
+        "disable_all": {
+          "title": "",
+          "description": ""
+        },
+        "weekly_stats": {
+          "title": "احصائيات أسبوعية",
+          "description": "تلقي إخطارات حول نشاطك"
+        },
+        "weekly_report": {
+          "title": "تقرير أسبوعي",
+          "description": "تلقي إخطارات حول نشاطك"
+        },
+        "achievements": {
+          "title": "إنجازات",
+          "description": "تلقي إخطارات حول التقدم المحرز الخاص بك"
+        },
+        "promotions": {
+          "title": "الترقيات",
+          "description": "تلقي إشعارات حول كيفية تنمية فريقك وكسب المزيد"
+        },
+        "news": {
+          "title": "أخبار",
+          "description": "تلقي الإخطارات من فريقنا"
+        },
+        "micro_community": {
+          "title": "المجتمع الصغير",
+          "description": "تلقي إخطارات حول فريقك"
+        },
+        "daily_bonus": {
+          "title": "مكافأة اليومية",
+          "description": "تلقي إخطارات للمطالبة بمكافأتك اليومية"
+        },
+        "mining": {
+          "title": "حالة الجلسة",
+          "description": "تلقي إخطارات حول نشاط تسجيل الوصول الخاص بك"
+        },
+        "system": {
+          "title": "نظام",
+          "description": "تلقي إخطارات مهمة حول تطبيق الجليد"
+        }
+      }
+    },
+    "language_settings": "اعدادات اللغة",
+    "change_lang_confirm": {
+      "title": "تغيير اللغة",
+      "prompt": "سيؤدي تطبيق هذا الإعداد إلى إعادة تشغيل التطبيق"
+    },
+    "profile_image": "صورة الملف الشخصي",
+    "inapp_privacy_title": "خصوصية",
+    "inapp_privacy_description": "إدارة المعلومات الخاصة بك هنا",
+    "developer": "مطور",
+    "user_id": "معرف المستخدم",
+    "user_token": "رمز المستخدم",
+    "profile_photo": {
+      "delete": "حذف الصورة",
+      "edit": "تحرير صورة الملف الشخصي",
+      "photo_gallery": "معرض الصور",
+      "camera": "آلة تصوير"
+    },
+    "confirm_email_confirmation_title": "تأكيد عنوان البريد الإلكتروني؟",
+    "update_email_confirmation_title": "تحديث البريد الإلكتروني؟",
+    "update_email_confirmation_subtitle": "سيتطلب تغيير عنوان بريدك الإلكتروني إعادة تسجيل الدخول. ",
+    "unlink_logins_title": "إلغاء ربط عمليات تسجيل الدخول",
+    "unlink_logins_description": "يمكنك إلغاء ربط تسجيلات الدخول الخاصة بك من هنا"
+  },
+  "invite_share": {
+    "title": "أدع صديقا",
+    "telegram": "برقية",
+    "twitter": "تويتر",
+    "whatsapp": "ال WhatsApp",
+    "instagram": "انستغرام",
+    "email": "بريد إلكتروني",
+    "fb": "Newsfeed",
+    "sms": "رسالة قصيرة",
+    "copy_link": "نسخ الوصلة",
+    "more": "أكثر",
+    "copied": "نسخ",
+    "share_message": "مرحبًا ☃️ ثلج! ",
+    "description_part1": "انشر الكلمة وادعو أصدقائك.  ",
+    "description_part2": " لكل إحالة جديدة تحضرها."
+  },
+  "users": {
+    "ping": "بينغ",
+    "active": "نشيط",
+    "inactive": "غير نشط",
+    "referralType": {
+      "T1": "المستوى 1",
+      "T2": "المستوى 2"
+    }
+  },
+  "personal_information": {
+    "first_name": "الاسم الأول",
+    "last_name": "اسم العائلة",
+    "country": "دولة",
+    "city": "مدينة",
+    "title": "معلومات شخصية",
+    "phone": "هاتف",
+    "email": "بريد إلكتروني",
+    "username": "كنية"
+  },
+  "username": {
+    "error": {
+      "already_taken": "الاسم المستعار مستخدم بالفعل.",
+      "length": "حجم اللقب: 4-20 حرفًا.",
+      "invalid_characters": "إزالة الأحرف غير الصالحة.",
+      "not_found": "الاسم المستعار غير موجود.",
+      "some_error": "حدث خطأ ما.",
+      "refer_yourself": "لا يمكنك الرجوع لنفسك"
+    }
+  },
+  "staking": {
+    "time_left": "الوقت المتبقي",
+    "mining_rate": "معدل الكسب",
+    "appeal": "زيادة معدل الكسب الخاص بك",
+    "benefits_description": "ارهن مسبقًا بمكافآت الجليد الخاصة بك حتى {{periodYears}} سنوات وزيادة معدل أرباحك بنسبة تصل إلى {{ratePercentages}}٪",
+    "bonus_label": "مكافأة ما قبل التخزين",
+    "period_label": "فترة الرهان",
+    "title": "ما قبل ماسك",
+    "current_rate": "المعدل الحالي",
+    "allocation": "توزيع",
+    "description": "ماسك هي عملية تتضمن الالتزام بأصول التشفير الخاصة بك لدعم شبكة blockchain وتأكيد المعاملات",
+    "terms_agree": "أوافق على [[:ice]] [[:link]]. سيتم قفل حيازات الثلج الخاصة بك للفترة المحددة",
+    "staking_terms": "شروط ماسك",
+    "stake_now": "الرهان المسبق الآن!",
+    "balance_label": "رصيد ثابت",
+    "confirm_title": "تأكيد الرهان المسبق",
+    "confirm_subtitle": "هل أنت متأكد أنك تريد رهان عملاتك المعدنية مسبقًا؟ "
+  },
+  "stats": {
+    "header_title": "احصائيات",
+    "active": "المستخدمين النشطين",
+    "total": "إجمالي المستخدمين",
+    "user_growth": "نمو المستخدم",
+    "top_miners": "كبار المستخدمين",
+    "top_countries": "أعلى البلدان",
+    "online_miners": "مستخدمين على الهواء",
+    "detailed_information": "معلومات مفصلة"
+  },
+  "update_required": {
+    "title": "يرجى التحديث",
+    "description": "أنت تستخدم إصدارًا قديمًا للتطبيق وتحتاج إلى تحديثه لاستخدامه بشكل أكبر.",
+    "button_title": "تحديث الان"
+  },
+  "general": {
+    "good_morning": "صباح الخير",
+    "good_afternoon": "مساء الخير",
+    "good_evening": "مساء الخير",
+    "ice": "جليد",
+    "ice_per_hour": "الجليد / ح",
+    "seconds_short": "س",
+    "minutes_short": "م",
+    "hours_short": "ح",
+    "days_short": "د"
+  },
+  "news": {
+    "news_feed": "موجز الأخبار",
+    "read_more": "اقرأ أكثر",
+    "views": "{{viewsCount}} الآراء"
+  },
+  "search": {
+    "empty": "ابحث عن جهات الاتصال وأصدقاء الجليد وأعضاء مجتمعك الصغير",
+    "nothing_is_found": "لم يتم العثور على شيء لاستعلامك",
+    "search_by_country": "البحث عن طريق الدولة",
+    "search_for_users": "ابحث عن المستخدمين"
+  },
+  "tabbar": {
+    "mining_inactive_tooltip": "انقر هنا لبدء جلسة تسجيل الوصول الأولى",
+    "mining_reset_tooltip": "اضغط لمدة 1 ثانية لتمديد جلسة تسجيل الوصول الخاصة بك",
+    "mining_holiday_reset_tooltip": "أنت تستخدم يوم عطلة! ",
+    "mining_holiday_active": "أنت تستخدم يوم عطلة!"
+  },
+  "invite_friend": {
+    "invite_button": "قم بدعوة صديق",
+    "button_title": "قم بدعوة صديق",
+    "description": "صديقك ليس موجودًا بعد على [[:ice]]. "
+  },
+  "balance_history": {
+    "title": "تاريخ الرصيد",
+    "wallet": "محفظة",
+    "blockchain": "بلوكشين",
+    "wallet_update_interval": "يتم تحديثها كل ساعة",
+    "blockchain_update_interval": "يتم تحديثها كل 24 ساعة",
+    "list_end_label": "هذا هو الإدخال الأخير في تاريخ الرصيد",
+    "no_data": "لا توجد بيانات لعرضها\n"
+  },
+  "pop_up": {
+    "update_now": "تحديث الان",
+    "please_update": "يرجى التحديث",
+    "update_now_text": "أنت تستخدم إصدارًا قديمًا للتطبيق وتحتاج إلى تحديثه لاستخدامه بشكل أكبر",
+    "you_are_up_to_date": "كنت حتى الآن!",
+    "up_to_date_text": "أنت الآن تستخدم أحدث إصدار. ",
+    "resurrection": "القيامة",
+    "resurrection_message": "لديك فرصة لمرة واحدة لإحياء واستلام [[:amount]] عملات معدنية فقدتها في الماضي [[:period]]",
+    "resurrection_warning": "يمكنك البعث مرة واحدة فقط!",
+    "please_confirm": "يرجى تأكيد",
+    "resurrection_no_confirm_message": "ستفقد عملات [[:amount]] إلى الأبد. ",
+    "resurrection_yes_confirm_message": "يمكنك البعث مرة واحدة فقط! "
+  },
+  "periods": {
+    "3_days": "3 أيام",
+    "7_days": "7 أيام",
+    "30_days": "30 يوما",
+    "1_day": "يوم 1",
+    "1_week": "أسبوع 1",
+    "1_month": "1 شهر",
+    "90_days": "90 يومًا",
+    "14_days": "14 يوما"
+  },
+  "notifications": {
+    "joined": " انضم إلى فريقك",
+    "multiply": " و {{count}} انضم آخرون إلى فريقك",
+    "ping": " لقد أزعجك ، استيقظ!",
+    "delete": "يمسح",
+    "add_notifications": "أضف إخطارات السخرية",
+    "no_notifications": "لا توجد إخطارات لعرضها",
+    "add_announcements": "أضف الإعلانات السخرية",
+    "add_both": "أضف إخطارات السخرية\n",
+    "clear_title": "مسح كافة الإخطارات؟",
+    "title": "إشعارات"
+  },
+  "notification_feed_screen": {
+    "yesterday": "أمس",
+    "last_week": "الأسبوع الماضي",
+    "this_month": "هذا الشهر",
+    "last_month": "الشهر الماضي",
+    "this_week": "هذا الاسبوع"
+  },
+  "profile_privacy_edit": {
+    "step1": {
+      "title": "1. إحصائيات ملفك الشخصي",
+      "description": "اضغط على الكتل التي تريدها\n"
+    },
+    "step2": {
+      "description": "اضغط على هذه الكتلة لإخفائها\n",
+      "title": "2. دورك الحالي"
+    },
+    "step3": {
+      "title": "3. شاراتك المكتسبة",
+      "description": "اضغط على هذه الكتلة لإخفائها\n"
+    }
+  },
+  "confirm_email": {
+    "title": "قم بتأكيد بريدك الإلكتروني",
+    "description": "الرجاء إدخال عنوان بريدك الإلكتروني وسنرسل لك الرمز ",
+    "note": "إذا لم تتلق البريد الإلكتروني في الداخل {{value}} دقائق ، يرجى التحقق من مجلد البريد العشوائي الخاص بك.",
+    "wrong_email": "بريد إلكتروني خاطئ؟",
+    "check_email": "تحقق من بريدك الالكتروني",
+    "emailed_link_to": "أرسلنا عبر البريد الإلكتروني رابطًا سحريًا إلى",
+    "link_instruction": "انقر فوق الارتباط لتسجيل الدخول أو التسجيل.",
+    "modify_title": "تأكيد البريد الإلكتروني الجديد",
+    "modify_description": "الرجاء إدخال عنوان بريدك الإلكتروني الجديد"
+  },
+  "invalid_link": {
+    "title": "ارتباط غير صحيح",
+    "description": "للأسف ، هذا الرابط غير صالح ، يرجى إدخال بريدك الإلكتروني مرة أخرى وسنرسل لك ارتباطًا جديدًا.",
+    "back_button_title": "العودة إلى تسجيل الدخول"
+  },
+  "confirm_code": {
+    "title": "رمز التأكيد",
+    "description": "الرجاء إدخال الرمز المرسل إلى",
+    "send_code_again": "ارسل الرمز مجددا",
+    "resend_time_label": "كود جديد متاح في ",
+    "enter_code": "ادخل الرمز",
+    "wrong_number": "رقم غير صحيح؟"
+  },
+  "ice_bonus": {
+    "title": "مكافأة ترحيبية",
+    "description": "تهانينا ، لقد تلقيت أول [[:value]] [[:ice]] عملات معدنية تثبت [[:bold]]ثقتنا[[/:bold]] في [[:bold]]أنت[[/:bold]]",
+    "balance_label": "رصيدك الحالي"
+  },
+  "country_select": {
+    "title": "حدد الدولة"
+  },
+  "roles": {
+    "ambassador": {
+      "title": "سفير",
+      "subtitle": "حاكم امبراطورية الثلج",
+      "description": "تصبح سفيراً عندما ينضم ما لا يقل عن 100 شخص إلى فريقك. سيتمكن كل سفير من الوصول المبكر إلى الميزات الجديدة"
+    },
+    "snowman": {
+      "title": "الرجل الثلجي",
+      "subtitle": "بناء إمبراطورية الثلج",
+      "description": "اربح من خلال تسجيل الوصول كل 24 ساعة لإظهار التزامك بشبكة الجليد وإثبات أنك إنسان وليس روبوتًا"
+    }
+  },
+  "confirm_phone": {
+    "modify_title": "تأكيد الهاتف",
+    "modify_description": "يرجى تأكيد رمز بلدك وإدخال رقم هاتفك",
+    "button": "قم بتأكيد الدولة والهاتف",
+    "same_phone_error": "لا يمكنك استخدام نفس الرقم"
+  },
+  "date_select": {
+    "title": "اختر موعدا"
+  },
+  "walkthrough": {
+    "news": {
+      "step_1": {
+        "title": "اقرأ أكثر",
+        "description": "هنا يمكنك الاطلاع على آخر أخبارنا من فريقنا. "
+      },
+      "step_2": {
+        "description": "اضغط على كل عنوان أخبار فردي واقرأ النسخة الكاملة منه. ",
+        "title": "صدر الأخبار"
+      }
+    },
+    "team": {
+      "allow_contacts": {
+        "title": "السماح بجهات الاتصال",
+        "description": "قم بمزامنة جهات الاتصال الخاصة بك ومعرفة من موجود بالفعل على [[:ice]]. في المستقبل ستتمكن من إرسال [[:ice]] إلى أي من جهات الاتصال الخاصة بك"
+      },
+      "confirm_phone": {
+        "title": "تأكيد الهاتف",
+        "description": "قم بتأكيد هويتك واسمح لجهات الاتصال الخاصة بك بمعرفة أنك أيضًا عضو في شبكة الجليد. لن يتم مشاركة رقم هاتفك مع جهات خارجية أخرى."
+      },
+      "contacts_list": {
+        "title": "قائمة الاتصالات",
+        "description": "هذه قائمة بجميع جهات الاتصال الخاصة بك ، والذين انضموا بالفعل إلى شبكة [[:ice]] التي يتم عرضها أعلى القائمة."
+      },
+      "referrals": {
+        "title": "الإحالات",
+        "description": "هنا سترى عدد الإحالات لديك إجمالاً. كلما زاد عدد الأشخاص الذين تدعوهم ، زادت ربحك."
+      },
+      "earnings": {
+        "title": "أرباح",
+        "description": "يتم تحديث رصيدك الحالي كل ساعة ويتم عرضه هنا. يتضمن أرباحك المباشرة والرهينة بالإضافة إلى أرباح المستوى 1 والمستوى 2."
+      },
+      "segmented_control_tier_one": {
+        "title": "المستوى 1",
+        "description": "هنا يمكنك رؤية قائمة إحالاتك من المستوى 1. لكل صديق يقوم بتسجيل الوصول في نفس الوقت معك ، ستحصل على 25٪ إضافية على معدل الكسب الأساسي الحالي الخاص بك. [[:link]]اقرأ المزيد[[/:link]]",
+        "url": "https://ice.io/#invite"
+      },
+      "segmented_control_tier_two": {
+        "title": "المستوى 2",
+        "description": "هنا يمكنك رؤية قائمة الإحالات من المستوى 2. لكل صديق يقوم بتسجيل الوصول في نفس الوقت معك ، ستحصل على 5٪ إضافية على معدل الكسب الأساسي الحالي الخاص بك. [[:link]]اقرأ المزيد[[/:link]]",
+        "url": "https://ice.io/#invite"
+      },
+      "active_users": {
+        "title": "المستخدمين النشطين",
+        "description": "هذه هي الحالة الحالية لنشاط تسجيل وصول الإحالات الخاص بك. يتم احتسابهم على أنهم نشطون عندما يكون لديهم جلسة تسجيل وصول نشطة."
+      },
+      "tier_one_earnings": {
+        "title": "أرباح المستوى 1",
+        "description": "هنا يمكنك رؤية قائمة إحالاتك من المستوى 1. لكل عضو يقوم بتسجيل الوصول في نفس الوقت معك ، ستحصل كلاكما على 25٪ إضافية على معدل ربح التبني الحالي الأساسي."
+      },
+      "ping": {
+        "title": "زر بينغ",
+        "description": "قم بإخطار الإحالات الخاصة بك لبدء جلسات تسجيل الوصول الخاصة بهم. يمكنك إرسال إشعار واحد لكل إحالة كل 24 ساعة."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "بيت",
+        "description": "مرحبًا بك في [[:ice]]. "
+      },
+      "invite": {
+        "title": "يدعو",
+        "description": "لكل شخص تقوم بدعوته ، ستكسب كلاكما ما يصل إلى 25٪ من معدل ربحك الأساسي. "
+      },
+      "team": {
+        "title": "فريق",
+        "description": "[[:ice]] أفضل مع الأصدقاء. "
+      },
+      "news": {
+        "title": "أخبار",
+        "description": "ابق على اطلاع على جميع أخبارنا واستطلاعات الرأي. "
+      },
+      "profile": {
+        "title": "حساب تعريفي",
+        "description": "خصص تفاصيل ملفك الشخصي واطلع على جميع إنجازاتك وشاراتك التي حصلت عليها. "
+      },
+      "earningicestart": {
+        "title": "كسب الجليد",
+        "description": "يمكنك بدء جلسة تسجيل الوصول [[:ice]] كل 24 ساعة بالنقر فوق هذا الزر. "
+      },
+      "earningiceseemore": {
+        "title": "كسب الجليد",
+        "description": "انقر مرة أخرى واطلع على مزيد من التفاصيل حول جلسة تسجيل الوصول الحالية."
+      },
+      "stats": {
+        "title": "احصائيات",
+        "description": "في صفحة الإحصائيات ، يمكنك رؤية إجمالي المستخدمين والمستخدمين النشطين الذين سجلوا الوصول كل يوم إلى جانب أفضل البلدان والمستخدمين."
+      },
+      "help": {
+        "title": "يساعد",
+        "description": "هل لديك اسئلة؟ "
+      },
+      "preStaking": {
+        "title": "ما قبل Staking",
+        "description": "قم بزيادة عائداتك إلى الحد الأقصى عن طريق جمع مكافآت كسبها مسبقًا. "
+      },
+      "wallet": {
+        "title": "محفظة الكروت",
+        "description": "يمكنك أن تجد هنا رصيدك الحالي [[:ice]] ، بالإضافة إلى معدل الربح. "
+      },
+      "earning": {
+        "title": "بطاقة الكسب",
+        "description": "ابق على اطلاع على معدل الربح والمكافآت! "
+      },
+      "engagement": {
+        "title": "بطاقة خطوبة",
+        "description": "تتبع خط جلسات تسجيل الوصول وأيام العطلة! "
+      },
+      "profilecard": {
+        "title": "بطاقة الملف الشخصي",
+        "description": "يمكنك تتبع حالة ملفك الشخصي باتباع هذه البطاقة. "
+      },
+      "referralscard": {
+        "title": "بطاقة الإحالة",
+        "description": "شاهد تطور إحصائيات الإحالة الخاصة بك للأيام الخمسة السابقة لكل من إحالات المستوى 1 والمستوى 2 من خلال النقر على هذه البطاقة."
+      },
+      "adoptioncard": {
+        "title": "بطاقة التبني",
+        "description": "بناءً على متوسط ​​إجمالي الأسبوع الماضي لرجال الثلج النشطين ، يمكنك رؤية معدل ربح [[:ice]] الحالي. "
+      },
+      "nickname": {
+        "title": "كنية",
+        "description": "اللقب هو ما يجعلك فريدًا. "
+      },
+      "balancehistory": {
+        "title": "تاريخ الرصيد",
+        "description": "يمكنك أن تجد هنا رصيدك الحالي [[:ice]] في المحفظة المحلية و blockchain. "
+      },
+      "achievements": {
+        "title": "إنجازات",
+        "description": "أكمل المهام أدناه وارتق إلى المستوى الأعلى! "
+      }
+    }
+  },
+  "ActiveSessionsScreen": {
+    "title": "إلغاء ربط عمليات تسجيل الدخول",
+    "sessionName": "تسجيل الدخول عبر {{providerName}}",
+    "buttons": {
+      "currentSession": "الجلسة الحالية",
+      "endSession": "جلسة نهاية",
+      "loginUnlinked": "تسجيل الدخول غير مرتبط",
+      "sessionEnded": "انتهت الجلسة",
+      "unlink": "فك الارتباط"
+    },
+    "dialogs": {
+      "unlinkLogin": {
+        "title": "هل تريد إلغاء ارتباط تسجيل الدخول؟",
+        "message": "هل أنت متأكد أنك تريد إلغاء ربط تسجيل الدخول عبر {{providerName}} من هذا الجهاز؟"
+      },
+      "endSession": {
+        "title": "جلسة نهاية؟",
+        "message": "هل أنت متأكد أنك تريد إنهاء {{providerName}} جلسة تسجيل الدخول من هذا الجهاز؟"
+      }
+    }
+  },
+  "links": {
+    "pre_staking": "https://ice.io/pre-staking/",
+    "privacy": "https://ice.io/privacy/",
+    "terms": "https://ice.io/terms/",
+    "main": "https://ice.io/"
+  },
+  "extra_bonus": {
+    "claim_title": "مكافأة اليوم",
+    "claim_message": "حان وقت مكافأة اليوم ، يُرجى النقر على الزر [[:bold]] \"المطالبة بمكافأة\" [[/:bold]] أدناه",
+    "link": "اكتشف المزيد",
+    "extra_message": "لقد تلقيت مكافأتك اليومية الإضافية على معدل ربحك",
+    "expired_title": "انتهت المكافأة",
+    "expired_message": "لسوء الحظ ، انتهت صلاحية مكافأة اليوم. ",
+    "result_title": "تهانينا"
+  },
+  "early_access": {
+    "title": "الوصول المبكر",
+    "message_part1": "احصل على نظرة خاطفة على تطبيق [[:bold]]ice[[/:bold]] قبل إصدارنا الرسمي في [[:bold]]4 أبريل 2023[[/:bold]].",
+    "message_part2": "ستتم إعادة تعيين جميع الأرصدة إلى 0 في تاريخ الإصدار. فريقك ، مع ذلك ، سيبقى سليما.",
+    "message_part3": "شكرا لدعمكم!",
+    "checkbox_description": "لقد اعترفت! لا تظهر هذه النافذة المنبثقة مرة أخرى."
+  }
+}

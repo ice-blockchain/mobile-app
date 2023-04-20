@@ -47,9 +47,8 @@ const styles = StyleSheet.create({
   },
   labelText: {
     marginTop: rem(8),
-    ...font(12, 15, 'medium'),
+    ...font(12, 15, 'medium', 'white', 'center'),
     textTransform: 'uppercase',
-    textAlign: 'center',
   },
   value: {
     marginTop: rem(4),

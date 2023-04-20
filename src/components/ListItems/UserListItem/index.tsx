@@ -4,7 +4,7 @@ import {Avatar} from '@components/Avatar/Avatar';
 import {stopPropagation} from '@components/KeyboardDismiss';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {flags} from '@flags';
+import {CountryFlagAbbreviation, flags} from '@flags';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -80,7 +80,9 @@ export const UserListItem = memo(
         {user.country ? (
           <Image
             style={styles.flag}
-            source={flags[user.country?.toLowerCase()]}
+            source={
+              flags[user.country?.toLowerCase() as CountryFlagAbbreviation]
+            }
           />
         ) : null}
       </View>

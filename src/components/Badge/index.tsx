@@ -28,8 +28,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   valueText: {
-    ...font(10, null, 'black'),
-    textAlign: 'center',
+    ...font(10, null, 'black', 'white', 'center'),
     marginHorizontal: 3,
   },
 });

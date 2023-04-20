@@ -26,15 +26,13 @@ const styles = StyleSheet.create({
     height: rem(219),
   },
   notFoundTitle: {
-    ...font(24, 29, 'black', 'primaryDark'),
+    ...font(24, 29, 'black', 'primaryDark', 'center'),
     marginHorizontal: rem(20),
-    textAlign: 'center',
     marginTop: rem(20),
     marginBottom: rem(16),
   },
   notFoundDescription: {
-    ...font(14, 20, 'medium', 'secondary'),
+    ...font(14, 20, 'medium', 'secondary', 'center'),
     marginHorizontal: rem(20),
-    textAlign: 'center',
   },
 });

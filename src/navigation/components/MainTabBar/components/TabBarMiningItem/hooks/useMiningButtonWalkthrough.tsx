@@ -8,6 +8,7 @@ import {miningStateSelector} from '@store/modules/Tokenomics/selectors';
 import {WalkthroughActions} from '@store/modules/Walkthrough/actions';
 import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/useSetWalkthroughElementData';
 import {TapIcon} from '@svg/TapIcon';
+import {mirrorTransform} from '@utils/styles';
 import React, {useCallback, useEffect, useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
@@ -92,5 +93,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: -(TAB_BAR_MINING_BUTTON_SIZE / 2 + TAB_ICON_WIDTH / 4),
     bottom: -rem(12),
+    ...mirrorTransform(),
   },
 });

@@ -2,6 +2,7 @@
 
 import {SearchInput} from '@components/Inputs/SearchInput';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
+import {COLORS} from '@constants/colors';
 import {Header} from '@navigation/components/Header';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
@@ -51,7 +52,11 @@ export const LanguageSettings = () => {
 
   return (
     <KeyboardAvoider>
-      <Header title={t('settings.language_settings')} />
+      <Header
+        color={COLORS.primaryDark}
+        backgroundColor={COLORS.white}
+        title={t('settings.language_settings')}
+      />
       <SearchInput
         onChangeText={searchLocales}
         placeholder={t('button.search')}

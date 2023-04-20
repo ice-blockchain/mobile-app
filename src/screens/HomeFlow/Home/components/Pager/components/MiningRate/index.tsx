@@ -9,7 +9,7 @@ import {CoinsStackIcon} from '@svg/CoinsStackIcon';
 import {MiningHammerIcon} from '@svg/MiningHammerIcon';
 import {StarIcon} from '@svg/StarIcon';
 import {TeamIcon} from '@svg/TeamIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {parseNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo, useMemo} from 'react';
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
   miningValueDecimalsText: {
     alignSelf: 'flex-start',
     ...font(8, 10, 'bold'),
-    marginRight: rem(4),
+    marginRight: isRTL ? 0 : rem(4),
   },
   miningValuePositive: {
     color: COLORS.shamrock,

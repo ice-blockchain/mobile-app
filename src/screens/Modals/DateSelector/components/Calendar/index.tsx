@@ -6,7 +6,8 @@ import {FONT_WEIGHTS, FONTS} from '@constants/fonts';
 import {useCalendarRange} from '@screens/Modals/DateSelector/components/Calendar/hooks/useCalendarRange';
 import {buildDateRangeText} from '@screens/Modals/DateSelector/components/Calendar/utils/buildDateRangeText';
 import {ChevronIcon} from '@svg/ChevronIcon';
-import {font} from '@utils/styles';
+import {isRTL} from '@translations/i18n';
+import {font, mirrorTransform} from '@utils/styles';
 import React, {
   forwardRef,
   memo,
@@ -83,7 +84,7 @@ export const Calendar = memo(
           maxDate={maxDate}
           renderArrow={direction => (
             <ChevronIcon
-              style={direction === 'left' && styles.arrowLeft}
+              style={[styles.arrows, direction === 'left' && styles.arrowLeft]}
               width={rem(10)}
               height={rem(20)}
             />
@@ -100,8 +101,7 @@ const styles = StyleSheet.create({
     top: rem(20),
     left: 0,
     right: 0,
-    ...font(17, 21, 'semibold', 'primaryDark'),
-    textAlign: 'center',
+    ...font(17, 21, 'semibold', 'primaryDark', 'center'),
   },
   calendar: {
     marginTop: rem(40),
@@ -111,7 +111,10 @@ const styles = StyleSheet.create({
   header: {
     marginTop: rem(10),
   },
+  arrows: {
+    ...mirrorTransform(),
+  },
   arrowLeft: {
-    transform: [{rotate: '180deg'}],
+    transform: [{rotate: isRTL ? '0deg' : '180deg'}],
   },
 });

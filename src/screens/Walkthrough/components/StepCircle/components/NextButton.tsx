@@ -6,7 +6,7 @@ import {MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
 import {NextArrowIcon} from '@svg/NextArrowIcon';
 import {ProgressCircleSvg} from '@svg/ProgressCircle';
 import {t} from '@translations/i18n';
-import {font} from '@utils/styles';
+import {font, mirrorTransform} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -31,7 +31,7 @@ export const NextButton = ({totalSteps, stepIndex, onPress}: Props) => {
         {isLastStep ? t('button.done') : t('button.next_step')}
       </Text>
       {isLastStep ? (
-        <NextArrowIcon />
+        <NextArrowIcon style={styles.arrowIcon} />
       ) : (
         <View style={styles.progressContainer}>
           <ProgressCircleSvg
@@ -41,7 +41,7 @@ export const NextButton = ({totalSteps, stepIndex, onPress}: Props) => {
             radius={CIRCLE_RADIUS - PROGRESS_WIDTH / 2}
             style={styles.progressCircle}
           />
-          <NextArrowIcon />
+          <NextArrowIcon style={styles.arrowIcon} />
         </View>
       )}
     </Touchable>
@@ -68,5 +68,8 @@ const styles = StyleSheet.create({
   },
   progressCircle: {
     position: 'absolute',
+  },
+  arrowIcon: {
+    ...mirrorTransform(),
   },
 });

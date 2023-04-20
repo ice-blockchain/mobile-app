@@ -53,9 +53,8 @@ export const TeamMember = memo(({userId}: Props) => {
 const styles = StyleSheet.create({
   usernameText: {
     marginTop: rem(5),
-    textAlign: 'center',
     width: rem(60),
-    ...font(10, 12, 'medium', 'secondary'),
+    ...font(10, 12, 'medium', 'secondary', 'center'),
   },
   friendIcon: {
     position: 'absolute',

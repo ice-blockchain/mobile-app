@@ -54,12 +54,10 @@ const styles = StyleSheet.create({
   },
   titleText: {
     marginTop: rem(12),
-    ...font(24, 29, 'black', 'primaryDark'),
-    textAlign: 'center',
+    ...font(24, 29, 'black', 'primaryDark', 'center'),
   },
   messageText: {
-    ...font(14, 20, 'medium', 'secondary'),
-    textAlign: 'center',
+    ...font(14, 20, 'medium', 'secondary', 'center'),
     marginTop: rem(16),
   },
   button: {

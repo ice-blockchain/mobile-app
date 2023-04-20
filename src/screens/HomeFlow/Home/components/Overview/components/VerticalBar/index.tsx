@@ -90,7 +90,6 @@ const styles = StyleSheet.create({
     width: rem(16),
   },
   label: {
-    ...font(8, 9.6, 'medium', 'white'),
-    alignItems: 'center',
+    ...font(8, 9.6, 'medium', 'white', 'center'),
   },
 });

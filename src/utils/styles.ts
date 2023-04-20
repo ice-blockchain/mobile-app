@@ -3,6 +3,8 @@
 import {COLORS} from '@constants/colors';
 // eslint-disable-next-line no-restricted-imports
 import {FontFamily, FONTS, FontWight} from '@constants/fonts';
+import {isRTL} from '@translations/i18n';
+import {TextStyle} from 'react-native';
 import {rem} from 'rn-units';
 
 export const font = (
@@ -10,6 +12,7 @@ export const font = (
   lineHeight?: number | null,
   fontWeight: FontWight = 'regular',
   color: keyof typeof COLORS = 'white',
+  textAlign: TextStyle['textAlign'] = 'left',
   fontFamily: FontFamily = 'primary',
 ) => {
   return {
@@ -17,5 +20,17 @@ export const font = (
     lineHeight: lineHeight != null ? rem(lineHeight) : undefined,
     fontFamily: FONTS[fontFamily][fontWeight],
     color: COLORS[color],
+    textAlign,
+  };
+};
+
+export const mirrorTransform = (isReverted?: boolean) => {
+  if (isReverted) {
+    return {
+      transform: [{scaleX: isRTL ? 1 : -1}],
+    };
+  }
+  return {
+    transform: [{scaleX: isRTL ? -1 : 1}],
   };
 };

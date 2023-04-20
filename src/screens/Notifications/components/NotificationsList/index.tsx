@@ -201,8 +201,7 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     width: windowWidth,
-    ...font(12, 14, 'regular', 'secondary'),
-    textAlign: 'center',
+    ...font(12, 14, 'regular', 'secondary', 'center'),
     marginVertical: rem(9),
   },
   bottomGradient: {

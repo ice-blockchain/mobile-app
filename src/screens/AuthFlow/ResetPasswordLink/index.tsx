@@ -89,8 +89,7 @@ const styles = StyleSheet.create({
   descriptionText: {
     marginTop: rem(24),
     marginHorizontal: rem(12),
-    textAlign: 'center',
-    ...font(16, 26, 'medium', 'secondary'),
+    ...font(16, 26, 'medium', 'secondary', 'center'),
   },
   email: {
     flexDirection: 'row',
@@ -98,15 +97,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   emailText: {
-    textAlign: 'center',
-    ...font(16, 26, 'black', 'secondary'),
+    ...font(16, 26, 'black', 'secondary', 'center'),
   },
   emailIcon: {
     marginLeft: rem(14),
   },
   instructionText: {
-    textAlign: 'center',
-    ...font(16, 26, 'medium', 'secondary'),
+    ...font(16, 26, 'medium', 'secondary', 'center'),
     marginHorizontal: SCREEN_SIDE_OFFSET,
     alignSelf: 'center',
   },
