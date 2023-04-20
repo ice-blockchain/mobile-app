@@ -3,7 +3,7 @@
 import {User} from '@api/user/types';
 import {Avatar, AvatarSkeleton} from '@components/Avatar/Avatar';
 import {COLORS} from '@constants/colors';
-import {windowWidth} from '@constants/styles';
+import {commonStyles, windowWidth} from '@constants/styles';
 import {useActionSheetUpdateAvatar} from '@hooks/useActionSheetUpdateAvatar';
 import {useUpdateAvatar} from '@hooks/useUpdateAvatar';
 import {HEADER_HEIGHT} from '@navigation/components/Header';
@@ -31,9 +31,6 @@ import {rem} from 'rn-units';
 const NOT_FOUND = require('../../assets/images/notFoundPlaceholder.png');
 
 export const AVATAR_SIZE = rem(122);
-
-const MIN_WIDTH_SIDE_CONTAINERS = rem(80);
-const MIN_WIDTH_SMALL_SIDE_CONTAINERS = rem(40);
 
 type Props = {
   user: User | null;
@@ -71,16 +68,6 @@ export const AvatarHeader = memo(
     return (
       <View style={[topOffset.current, styles.outerContainer]}>
         <View style={styles.container}>
-          <View
-            style={[
-              styles.leftContainer,
-              !user?.hiddenProfileElements?.length && styles.leftSmallContainer,
-            ]}>
-            <BackButton
-              containerStyle={styles.backButton}
-              color={COLORS.primaryDark}
-            />
-          </View>
           <View style={styles.wrapper}>
             <View>
               <Animated.View
@@ -95,7 +82,7 @@ export const AvatarHeader = memo(
                         style={styles.image}
                         size={AVATAR_SIZE}
                         borderRadius={AVATAR_RADIUS}
-                        touchableStyle={styles.touchableAvatar}
+                        touchableStyle={commonStyles.flexOne}
                         allowFullScreen={true}
                       />
                     ) : (
@@ -134,9 +121,18 @@ export const AvatarHeader = memo(
           </View>
           <View
             style={[
-              styles.rightContainer,
-              !user?.hiddenProfileElements?.length &&
-                styles.rightSmallContainer,
+              styles.navigationContainer,
+              styles.navigationContainerLeft,
+            ]}>
+            <BackButton
+              color={COLORS.primaryDark}
+              containerStyle={styles.backButton}
+            />
+          </View>
+          <View
+            style={[
+              styles.navigationContainer,
+              styles.navigationContainerRight,
             ]}>
             {isOwner && user?.hiddenProfileElements?.length && (
               <ShowPrivacyButton containerStyle={styles.navigationButton} />
@@ -174,23 +170,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
   },
-  rightContainer: {
-    paddingRight: rem(16),
-    alignSelf: 'center',
-    minWidth: MIN_WIDTH_SIDE_CONTAINERS,
+  navigationContainer: {
+    position: 'absolute',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    alignItems: 'center',
+    right: rem(16),
+    top: 0,
+    bottom: 0,
   },
-  rightSmallContainer: {
-    minWidth: MIN_WIDTH_SMALL_SIDE_CONTAINERS,
+  navigationContainerLeft: {
+    left: rem(16),
   },
-  leftContainer: {
-    paddingLeft: rem(16),
-    alignSelf: 'center',
-    minWidth: MIN_WIDTH_SIDE_CONTAINERS,
-  },
-  leftSmallContainer: {
-    minWidth: MIN_WIDTH_SMALL_SIDE_CONTAINERS,
+  navigationContainerRight: {
+    right: rem(16),
   },
   imageContainer: {
     borderColor: COLORS.foam,
@@ -209,9 +201,6 @@ const styles = StyleSheet.create({
   backButton: {
     justifyContent: 'center',
     ...mirrorTransform(),
-  },
-  touchableAvatar: {
-    flex: 1,
   },
   navigationButton: {
     marginRight: rem(16),
