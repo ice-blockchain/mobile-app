@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {ShareButton, ShareCard} from '@components/Cards/ShareCard';
 import {LINKS} from '@constants/links';
 import {Images} from '@images';
 import Clipboard from '@react-native-clipboard/clipboard';
@@ -8,6 +7,10 @@ import {
   Copied,
   CopiedMethods,
 } from '@screens/InviteFlow/InviteShare/components/Copied';
+import {
+  ShareButton,
+  ShareCard,
+} from '@screens/InviteFlow/InviteShare/components/InviteShareCard/components/ShareCard';
 import {logError} from '@services/logging';
 import {shareSingle} from '@services/share';
 import {usernameSelector} from '@store/modules/Account/selectors';

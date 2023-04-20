@@ -6,6 +6,7 @@ import {COLORS} from '@constants/colors';
 import {MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
 import {Images} from '@images';
 import {logError} from '@services/logging';
+import {ShareIcon} from '@svg/ShareIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {RefObject} from 'react';
@@ -38,6 +39,7 @@ export const QRShareCard = ({qrCodePreviewRef}: Props) => {
       </Touchable>
       <PrimaryButton
         text={t('invite_share.share')}
+        icon={<ShareIcon />}
         onPress={onSharePress}
         customBackground={true}
         style={styles.button}
@@ -64,5 +66,6 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     ...font(14, 16.8, 'black', 'primaryDark'),
+    marginHorizontal: rem(4),
   },
 });
