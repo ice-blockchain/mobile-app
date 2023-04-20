@@ -863,5 +863,10 @@
     "message_part2": "All balances will be reset to 0 on the release date. Your team, however, will stay intact.",
     "message_part3": "Thank you for your support!",
     "checkbox_description": "I’ve acknowledged! Don’t show this pop-up again."
+  },
+  "mining_notice": {
+    "title": "Notice",
+    "message": "Thanks for your interest in mining [[:bold]]ice![[/:bold]] We are currently fine-tuning our technology and mining isn't available at the moment. This is your chance to focus on building your team and growing your micro-community.",
+    "message_footer": "Stay tuned for updates on our [[:twitter]]Twitter[[/:twitter]] and [[:telegram]]Telegram[[/:telegram]] channels."
   }
 }

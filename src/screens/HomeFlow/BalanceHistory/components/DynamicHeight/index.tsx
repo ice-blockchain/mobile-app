@@ -2,6 +2,8 @@
 
 import {commonStyles} from '@constants/styles';
 import BottomSheet from '@gorhom/bottom-sheet';
+import {useSafeAreaFrame} from '@hooks/useSafeAreaFrame';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {HEADER_HEIGHT} from '@navigation/components/Header';
 import {CARD_BODY_TOP_OFFSET} from '@screens/HomeFlow/BalanceHistory/components/CardBody';
 import {
@@ -9,10 +11,6 @@ import {
   PAGER_HEADER_HEIGHT,
 } from '@screens/HomeFlow/BalanceHistory/components/PagerHeader';
 import React, {ReactNode, useMemo} from 'react';
-import {
-  useSafeAreaFrame,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
 
 type Props = {
   children: ReactNode;

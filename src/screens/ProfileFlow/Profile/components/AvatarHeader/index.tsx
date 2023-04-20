@@ -12,6 +12,7 @@ import {
   windowWidth,
 } from '@constants/styles';
 import {useActionSheetUpdateAvatar} from '@hooks/useActionSheetUpdateAvatar';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {useUpdateAvatar} from '@hooks/useUpdateAvatar';
 import {HEADER_HEIGHT} from '@navigation/components/Header';
@@ -29,7 +30,6 @@ import React, {memo} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
 import Animated, {SharedValue} from 'react-native-reanimated';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
 
 const AnimatedTouchable = Animated.createAnimatedComponent(Touchable);

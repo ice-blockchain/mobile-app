@@ -4,12 +4,12 @@ import {ContactAvatar} from '@components/ContactAvatar';
 import {Tooltip} from '@components/Tooltip';
 import {COLORS} from '@constants/colors';
 import {windowWidth} from '@constants/styles';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {AVATAR_SIZE} from '@screens/ProfileFlow/Profile/components/AvatarHeader';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
 
 const MIN_TOOLTIP_WIDTH = rem(220);

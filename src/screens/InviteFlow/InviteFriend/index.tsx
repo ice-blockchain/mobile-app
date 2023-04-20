@@ -5,6 +5,7 @@ import {LinesBackground} from '@components/LinesBackground';
 import {PrimaryButton} from '@components/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {commonStyles, smallHeightDevice, windowWidth} from '@constants/styles';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
@@ -24,7 +25,6 @@ import {getContactName} from '@utils/contacts';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {useDispatch} from 'react-redux';
 import {isAndroid, rem} from 'rn-units';
 

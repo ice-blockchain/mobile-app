@@ -4,8 +4,8 @@ import {Touchable} from '@components/Touchable';
 import {MIDDLE_BUTTON_HIT_SLOP, windowWidth} from '@constants/styles';
 import {Images} from '@images';
 import {NextButton} from '@screens/Walkthrough/components/StepCircle/components/NextButton';
+import {StepParsedDescription} from '@screens/Walkthrough/components/StepCircle/components/StepParsedDescription';
 import {useCirclePosition} from '@screens/Walkthrough/components/StepCircle/hooks/useCirclePosition';
-import {useParseDescription} from '@screens/Walkthrough/components/StepCircle/hooks/useParseDescription';
 import {CIRCLE_DIAMETER} from '@screens/Walkthrough/constants';
 import {WalkthroughStep} from '@store/modules/Walkthrough/types';
 import {t} from '@translations/i18n';
@@ -42,8 +42,6 @@ export const StepCircle = ({
     circlePosition: step.circlePosition,
   });
 
-  const {parsedDescription} = useParseDescription({step});
-
   return (
     <Animated.View
       style={[
@@ -63,7 +61,7 @@ export const StepCircle = ({
         <Text style={styles.titleText}>{step.title}</Text>
       </View>
       <Text style={styles.description} numberOfLines={5}>
-        {parsedDescription}
+        <StepParsedDescription step={step} />
       </Text>
       <View style={styles.controls}>
         <Touchable onPress={onSkip} hitSlop={MIDDLE_BUTTON_HIT_SLOP}>

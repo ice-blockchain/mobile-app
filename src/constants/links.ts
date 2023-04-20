@@ -25,4 +25,6 @@ export const LINKS = {
   EARLY_ACCESS: 'https://ice.io/early-release-version',
   CHANGELOG: 'https://ice.io/changelog',
   ICE_FAQ: 'https://ice.io/faq',
+  STATUS_NOTICE: 'https://ice-production.b-cdn.net/assets/notice.json',
+  BETA_TESTING: 'https://ice.io/beta-testing',
 };
