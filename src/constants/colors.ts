@@ -9,6 +9,7 @@ export const COLORS = {
   primaryDark: '#0D265E',
   primaryLight: '#1B47C3',
   secondary: '#707489',
+  socialLink: '#3366CC',
   secondaryLight: '#B6B4BA',
   secondaryFaint: '#E3EBF8',
   attention: '#FD4E4E',

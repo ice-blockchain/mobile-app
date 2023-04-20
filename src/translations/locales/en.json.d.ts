@@ -568,4 +568,7 @@ export type Translations = {
   'early_access.message_part2': null;
   'early_access.message_part3': null;
   'early_access.checkbox_description': null;
+  'mining_notice.title': null;
+  'mining_notice.message': null;
+  'mining_notice.message_footer': null;
 };

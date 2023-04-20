@@ -56,6 +56,12 @@ module.exports = {
                 name: 'react-string-replace',
                 message: 'Please use replaceString from @translations/i18n',
               },
+              {
+                name: 'react-native-safe-area-context',
+                importNames: ['useSafeAreaFrame', 'useSafeAreaInsets'],
+                message:
+                  'Please use useSafeAreaFrame from @hooks/useSafeAreaFrame or useSafeAreaInsets from @hooks/useSafeAreaInsets',
+              },
             ],
           },
         ],

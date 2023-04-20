@@ -3,11 +3,13 @@
 import {BadgeType} from '@api/achievements/types';
 import {NotificationDeliveryChannel} from '@api/devices/types';
 import {Country} from '@constants/countries';
+import {commonStyles} from '@constants/styles';
 import {MainTabBar} from '@navigation/components/MainTabBar';
 import {HomeIcon} from '@navigation/components/MainTabBar/components/Icons/HomeIcon';
 import {NewsIcon} from '@navigation/components/MainTabBar/components/Icons/NewsIcon';
 import {ProfileIcon} from '@navigation/components/MainTabBar/components/Icons/ProfileIcon';
 import {TeamIcon} from '@navigation/components/MainTabBar/components/Icons/TeamIcon';
+import {StatusNotice} from '@navigation/components/StatusNotice';
 import {modalOptions, screenOptions, tabOptions} from '@navigation/options';
 import {
   BottomTabBarProps,
@@ -265,44 +267,47 @@ const MainTabs = () => {
   };
 
   return (
-    <Tabs.Navigator screenOptions={tabOptions} tabBar={MainTabBarComponent}>
-      <Tabs.Screen
-        name="HomeTab"
-        component={HomeTabStackNavigator}
-        options={{
-          tabBarIcon: HomeIcon,
-          tabBarIconStyle: iconStyles.homeIconStyle,
-        }}
-        listeners={getListeners('home')}
-      />
-      <Tabs.Screen
-        name="TeamTab"
-        component={TeamTabStackNavigator}
-        options={{
-          tabBarIcon: TeamIcon,
-          tabBarIconStyle: iconStyles.teamIconStyle,
-        }}
-        listeners={getListeners('team')}
-      />
-      <Tabs.Screen
-        name="NewsTab"
-        component={News}
-        options={{
-          tabBarIcon: NewsIcon,
-          tabBarIconStyle: iconStyles.newsIconStyle,
-        }}
-        listeners={getListeners('news')}
-      />
-      <Tabs.Screen
-        name="ProfileTab"
-        component={ProfileTabStackNavigator}
-        options={{
-          tabBarIcon: ProfileIcon,
-          tabBarIconStyle: iconStyles.profileIconStyle,
-        }}
-        listeners={getListeners('profile')}
-      />
-    </Tabs.Navigator>
+    <View style={commonStyles.flexOne}>
+      <StatusNotice />
+      <Tabs.Navigator screenOptions={tabOptions} tabBar={MainTabBarComponent}>
+        <Tabs.Screen
+          name="HomeTab"
+          component={HomeTabStackNavigator}
+          options={{
+            tabBarIcon: HomeIcon,
+            tabBarIconStyle: iconStyles.homeIconStyle,
+          }}
+          listeners={getListeners('home')}
+        />
+        <Tabs.Screen
+          name="TeamTab"
+          component={TeamTabStackNavigator}
+          options={{
+            tabBarIcon: TeamIcon,
+            tabBarIconStyle: iconStyles.teamIconStyle,
+          }}
+          listeners={getListeners('team')}
+        />
+        <Tabs.Screen
+          name="NewsTab"
+          component={News}
+          options={{
+            tabBarIcon: NewsIcon,
+            tabBarIconStyle: iconStyles.newsIconStyle,
+          }}
+          listeners={getListeners('news')}
+        />
+        <Tabs.Screen
+          name="ProfileTab"
+          component={ProfileTabStackNavigator}
+          options={{
+            tabBarIcon: ProfileIcon,
+            tabBarIconStyle: iconStyles.profileIconStyle,
+          }}
+          listeners={getListeners('profile')}
+        />
+      </Tabs.Navigator>
+    </View>
   );
 };
 

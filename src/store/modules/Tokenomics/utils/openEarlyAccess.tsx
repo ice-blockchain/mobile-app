@@ -76,10 +76,6 @@ const styles = StyleSheet.create({
   bold: {
     ...font(14, 20, 'bold', 'primaryDark'),
   },
-  button: {
-    flex: 1,
-    marginHorizontal: rem(52),
-  },
   imageStyle: {
     marginTop: -rem(73),
     width: rem(200),

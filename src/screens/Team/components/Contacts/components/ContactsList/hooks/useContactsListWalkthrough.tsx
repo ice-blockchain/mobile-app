@@ -5,6 +5,7 @@ import {
   SegmentedControl,
 } from '@components/SegmentedControl';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {CONTACTS_LIST_PADDING_TOP} from '@screens/Team/components/Contacts/components/ContactsList';
 import {useContactsListRenderItems} from '@screens/Team/components/Contacts/components/ContactsList/hooks/useContactsListRenderItems';
 import {useGetContactSegments} from '@screens/Team/components/Contacts/components/ContactsList/hooks/useGetContactSegments';
@@ -15,7 +16,6 @@ import {WalkthroughElementContainer} from '@screens/Walkthrough/components/Walkt
 import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/useSetWalkthroughElementData';
 import React from 'react';
 import {SectionList, StyleSheet, View} from 'react-native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
 
 const OUTER_CONTAINER_VERTICAL_PADDING = rem(16);

@@ -3,6 +3,8 @@
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import BottomSheet, {BottomSheetScrollView} from '@gorhom/bottom-sheet';
+import {useSafeAreaFrame} from '@hooks/useSafeAreaFrame';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {HEADER_HEIGHT} from '@navigation/components/Header';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {STATIC_CONTENT_TOP_OFFSET} from '@screens/ProfileFlow/Profile/components/StaticContainer';
@@ -15,10 +17,6 @@ import Animated, {
   SharedValue,
   useAnimatedStyle,
 } from 'react-native-reanimated';
-import {
-  useSafeAreaFrame,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
 
 type Props = {
   children: ReactNode;

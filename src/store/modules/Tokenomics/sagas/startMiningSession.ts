@@ -18,6 +18,7 @@ import {openConfirmResurrect} from '@store/modules/Tokenomics/utils/openConfirmR
 import {openConfirmResurrectNo} from '@store/modules/Tokenomics/utils/openConfirmResurrectNo';
 import {openConfirmResurrectYes} from '@store/modules/Tokenomics/utils/openConfirmResurrectYes';
 import {openEarlyAccess} from '@store/modules/Tokenomics/utils/openEarlyAccess';
+import {openMiningNotice} from '@store/modules/Tokenomics/utils/openMiningNotice';
 import {getErrorMessage, showError} from '@utils/errors';
 import {call, delay, put, SagaReturnType, select} from 'redux-saga/effects';
 
@@ -26,6 +27,10 @@ export function* startMiningSessionSaga(
     typeof TokenomicsActions.START_MINING_SESSION.START.create
   >,
 ) {
+  if (ENV.SHOW_MINING_NOTICE) {
+    yield call(openMiningNotice);
+    return;
+  }
   const userId: ReturnType<typeof userIdSelector> = yield select(
     userIdSelector,
   );

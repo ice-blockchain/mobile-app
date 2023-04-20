@@ -3,6 +3,8 @@
 import {commonStyles} from '@constants/styles';
 import BottomSheet from '@gorhom/bottom-sheet';
 import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
+import {useSafeAreaFrame} from '@hooks/useSafeAreaFrame';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {TeamTabStackParamList} from '@navigation/Main';
 import {RouteProp, useRoute} from '@react-navigation/native';
 import {INFO_HEIGHT} from '@screens/Team/components/Header/components/Info';
@@ -13,10 +15,6 @@ import {
 import {SEARCH_RESULTS_OFFSET} from '@screens/Team/components/SearchResults';
 import React, {ReactNode, useEffect, useMemo, useRef} from 'react';
 import {SharedValue} from 'react-native-reanimated';
-import {
-  useSafeAreaFrame,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
 
 type Props = {
   children: ReactNode;

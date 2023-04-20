@@ -12,6 +12,7 @@ import {
   windowWidth,
 } from '@constants/styles';
 import {useActionSheetUpdateAvatar} from '@hooks/useActionSheetUpdateAvatar';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {useUpdateAvatar} from '@hooks/useUpdateAvatar';
 import {HEADER_HEIGHT} from '@navigation/components/Header';
@@ -31,7 +32,6 @@ import {font, mirrorTransform} from '@utils/styles';
 import React, {memo, useState} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
