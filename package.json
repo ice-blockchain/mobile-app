@@ -108,6 +108,7 @@
     "rn-android-keyboard-adjust": "^2.1.2",
     "rn-units": "^2.0.5",
     "url-parse": "^1.5.10",
+    "vision-camera-code-scanner": "^0.2.0",
     "yarn": "^1.22.19"
   },
   "devDependencies": {

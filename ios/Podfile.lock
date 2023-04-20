@@ -188,10 +188,27 @@ PODS:
     - GoogleUtilities/Environment (~> 7.7)
     - nanopb (< 2.30910.0, >= 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleMLKit/BarcodeScanning (4.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitBarcodeScanning (~> 3.0.0)
+  - GoogleMLKit/MLKitCore (4.0.0):
+    - MLKitCommon (~> 9.0.0)
   - GoogleSignIn (6.2.4):
     - AppAuth (~> 1.5)
     - GTMAppAuth (~> 1.3)
     - GTMSessionFetcher/Core (< 3.0, >= 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.3.2):
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+  - GoogleToolboxForMac/Defines (2.3.2)
+  - GoogleToolboxForMac/Logger (2.3.2):
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+  - "GoogleToolboxForMac/NSData+zlib (2.3.2)":
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.3.2)":
+    - GoogleToolboxForMac/DebugUtils (= 2.3.2)
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.3.2)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.3.2)"
   - GoogleUtilities (7.11.1):
     - GoogleUtilities/AppDelegateSwizzler (= 7.11.1)
     - GoogleUtilities/Environment (= 7.11.1)
@@ -225,6 +242,8 @@ PODS:
     - GoogleUtilities/MethodSwizzler
   - GoogleUtilities/UserDefaults (7.11.1):
     - GoogleUtilities/Logger
+  - GoogleUtilitiesComponents (1.1.0):
+    - GoogleUtilities/Logger
   - GTMAppAuth (1.3.1):
     - AppAuth/Core (~> 1.6)
     - GTMSessionFetcher/Core (< 3.0, >= 1.5)
@@ -235,6 +254,24 @@ PODS:
   - lottie-react-native (5.1.4):
     - lottie-ios (~> 3.4.0)
     - React-Core
+  - MLImage (1.0.0-beta4)
+  - MLKitBarcodeScanning (3.0.0):
+    - MLKitCommon (~> 9.0)
+    - MLKitVision (~> 5.0)
+  - MLKitCommon (9.0.0):
+    - GoogleDataTransport (~> 9.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - GoogleUtilities/UserDefaults (~> 7.0)
+    - GoogleUtilitiesComponents (~> 1.0)
+    - GTMSessionFetcher/Core (< 3.0, >= 1.1)
+  - MLKitVision (5.0.0):
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GTMSessionFetcher/Core (< 3.0, >= 1.1)
+    - MLImage (= 1.0.0-beta4)
+    - MLKitCommon (~> 9.0)
   - MoEngage-iOS-SDK (9.4.1)
   - MoEngageInApp (4.4.0):
     - MoEngage-iOS-SDK (< 9.5.0, >= 9.4.0)
@@ -694,6 +731,9 @@ PODS:
   - TwitterCore (3.2.0)
   - TwitterKit5 (5.2.0):
     - TwitterCore (>= 3.1.0)
+  - vision-camera-code-scanner (0.2.0):
+    - GoogleMLKit/BarcodeScanning
+    - React-Core
   - VisionCamera (2.15.4):
     - React
     - React-callinvoker
@@ -806,6 +846,7 @@ DEPENDENCIES:
   - RNShare (from `../node_modules/react-native-share`)
   - RNSound (from `../node_modules/react-native-sound`)
   - RNSVG (from `../node_modules/react-native-svg`)
+  - vision-camera-code-scanner (from `../node_modules/vision-camera-code-scanner`)
   - VisionCamera (from `../node_modules/react-native-vision-camera`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -839,12 +880,19 @@ SPEC REPOS:
     - fmt
     - GoogleAppMeasurement
     - GoogleDataTransport
+    - GoogleMLKit
     - GoogleSignIn
+    - GoogleToolboxForMac
     - GoogleUtilities
+    - GoogleUtilitiesComponents
     - GTMAppAuth
     - GTMSessionFetcher
     - libevent
     - lottie-ios
+    - MLImage
+    - MLKitBarcodeScanning
+    - MLKitCommon
+    - MLKitVision
     - MoEngage-iOS-SDK
     - MoEngageInApp
     - MoEngagePluginBase
@@ -1007,6 +1055,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-sound"
   RNSVG:
     :path: "../node_modules/react-native-svg"
+  vision-camera-code-scanner:
+    :path: "../node_modules/vision-camera-code-scanner"
   VisionCamera:
     :path: "../node_modules/react-native-vision-camera"
   Yoga:
@@ -1047,14 +1097,21 @@ SPEC CHECKSUMS:
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
   GoogleAppMeasurement: 3bc3a6484b7bb20dd8489242c4dd3c92a3e5107b
   GoogleDataTransport: 8378d1fa8ac49753ea6ce70d65a7cb70ce5f66e6
+  GoogleMLKit: 2bd0dc6253c4d4f227aad460f69215a504b2980e
   GoogleSignIn: 5651ce3a61e56ca864160e79b484cd9ed3f49b7a
+  GoogleToolboxForMac: 8bef7c7c5cf7291c687cf5354f39f9db6399ad34
   GoogleUtilities: 9aa0ad5a7bc171f8bae016300bfcfa3fb8425749
+  GoogleUtilitiesComponents: 679b2c881db3b615a2777504623df6122dd20afe
   GTMAppAuth: 0ff230db599948a9ad7470ca667337803b3fc4dd
   GTMSessionFetcher: 3a63d75eecd6aa32c2fc79f578064e1214dfdec2
   hermes-engine: 0b19f33a9c2ec1dbdede3232606eeb1101db4cec
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   lottie-ios: 8f97d3271e155c2d688875c29cd3c74908aef5f8
   lottie-react-native: b702fab740cdb952a8e2354713d3beda63ff97b0
+  MLImage: 7bb7c4264164ade9bf64f679b40fb29c8f33ee9b
+  MLKitBarcodeScanning: 04e264482c5f3810cb89ebc134ef6b61e67db505
+  MLKitCommon: c1b791c3e667091918d91bda4bba69a91011e390
+  MLKitVision: 8baa5f46ee3352614169b85250574fde38c36f49
   MoEngage-iOS-SDK: b7af14646f44852527ba7420e52ff8bb56b7077d
   MoEngageInApp: 94f24b0b1a83ec247dc998f31b08124b09fcab96
   MoEngagePluginBase: e865f388c39d0cf2c7847610876e63b0e5e31c22
@@ -1133,6 +1190,7 @@ SPEC CHECKSUMS:
   TOCropViewController: edfd4f25713d56905ad1e0b9f5be3fbe0f59c863
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit5: 64095dfefcf39be2355711ef27112d55e340d90e
+  vision-camera-code-scanner: dda884a7f3ec8243a2a6d6489b91860648371bca
   VisionCamera: e9a95af10e00aaebe99d648ff4519fd336e16ffe
   Yoga: d6133108734e69e8c0becc6ba587294b94829687
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a

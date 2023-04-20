@@ -33,6 +33,9 @@ module.exports = api => {
         },
       ],
       'react-native-reanimated/plugin',
+      {
+        globals: ['__scanCodes'], // https://github.com/rodgomesc/vision-camera-code-scanner#installation
+      },
     ],
     exclude: ['**/*.png', '**/*.jpg', '**/*.gif'],
   };
