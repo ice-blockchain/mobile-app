@@ -3,14 +3,13 @@
 import {Images} from '@images';
 import {SocialType} from '@store/modules/Socials/types';
 import {t} from '@translations/i18n';
-import {ReactNode} from 'react';
 import {ImageSourcePropType} from 'react-native';
 
 export interface SocialData {
   image: ImageSourcePropType;
-  title: ReactNode;
-  description: ReactNode;
-  buttonTitle: ReactNode;
+  title: string;
+  description: string;
+  buttonTitle: string;
 }
 const facebookDescription = () => {
   return `${t('social_media.facebook.description_part1')}\n\n${t(
@@ -20,7 +19,7 @@ const facebookDescription = () => {
 
 const instagramDescription = () => {
   return `${t('social_media.instagram.description_part1')}\n\n${t(
-    'social_media.facebook.description_part2',
+    'social_media.instagram.description_part2',
   )}`;
 };
 

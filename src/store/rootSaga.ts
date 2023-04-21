@@ -8,6 +8,7 @@ import {rootAnalyticsSaga} from '@store/modules/Analytics/sagas';
 import {rootLinkingSaga} from '@store/modules/Linking/sagas';
 import {rootNotificationsSaga} from '@store/modules/Notifications/sagas';
 import {rootPushNotificationsSaga} from '@store/modules/PushNotifications/sagas';
+import {rootSocialsSaga} from '@store/modules/Socials/sagas';
 import {rootStatsSaga} from '@store/modules/Stats/sagas';
 import {rootStatusNoticeSaga} from '@store/modules/StatusNotice/sagas';
 import {AppState} from 'react-native';
@@ -53,6 +54,7 @@ export function* rootSaga(): SagaIterator {
     rootWalkthroughSaga,
     rootAchievementsSaga,
     rootAppUpdateSaga,
+    rootSocialsSaga,
   ];
   const spawnedSagas = yield all([
     ...sagas.map(saga =>

@@ -1,15 +1,14 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {LottieAnimations} from '@lottie';
 import {navigate} from '@navigation/utils';
 import {PopUpButtonProps} from '@screens/Modals/PopUp/components/PopUpButton';
 import {socialData} from '@store/modules/Socials/data';
 import {SocialType} from '@store/modules/Socials/types';
 import {InviteIcon} from '@svg/InviteIcon';
-import {t} from '@translations/i18n';
+import {font} from '@utils/styles';
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import {rem} from 'rn-units';
 
 export const openSocial = (type: SocialType) => {
@@ -17,17 +16,20 @@ export const openSocial = (type: SocialType) => {
   const resultPromise = new Promise<'yes' | 'no'>(r => (resultResolve = r));
 
   const button: PopUpButtonProps = {
-    icon: <InviteIcon style={styles.icon} />,
-    text: t('button.claim_bonus'),
+    icon: <InviteIcon style={styles.icon} fill={COLORS.white} />,
+    text: socialData[type].buttonTitle,
     style: styles.button,
   };
 
   navigate({
     name: 'PopUp',
     params: {
-      animationProps: {source: LottieAnimations.bonusClaim},
+      imageProps: {source: socialData[type].image},
+      imageStyle: {width: rem(230), height: rem(54), marginTop: 0},
       title: socialData[type].title,
-      message: socialData[type].description,
+      message: (
+        <Text style={styles.messageText}>{socialData[type].description}</Text>
+      ),
       buttons: [
         {
           ...button,
@@ -62,5 +64,10 @@ const styles = StyleSheet.create({
   icon: {
     width: rem(24),
     height: rem(24),
+  },
+  messageText: {
+    ...font(14, 20, 'medium', 'secondary', 'center'),
+    marginTop: rem(16),
+    marginHorizontal: rem(45),
   },
 });
