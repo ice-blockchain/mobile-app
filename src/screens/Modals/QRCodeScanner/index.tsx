@@ -43,7 +43,7 @@ export const QRCodeScanner = () => {
           frameProcessorFps={5}
         />
       ) : (
-        <View style={[commonStyles.flexOne, styles.stub]} />
+        <View style={[StyleSheet.absoluteFill, styles.stub]} />
       )}
     </View>
   );
