@@ -2,7 +2,12 @@
 
 import {logError} from '@services/logging';
 import {checkProp} from '@utils/guards';
-import Share, {ShareSingleOptions} from 'react-native-share';
+// eslint-disable-next-line no-restricted-imports
+import Share, {
+  ShareOptions,
+  ShareSingleOptions,
+  Social as SocialType,
+} from 'react-native-share';
 import {isAndroid, isIOS} from 'rn-units';
 
 export const shareSingle = async (options: ShareSingleOptions) => {
@@ -12,6 +17,14 @@ export const shareSingle = async (options: ShareSingleOptions) => {
     if (isShareProviderNotInstalled(error)) {
       return;
     }
+    logError(error);
+  }
+};
+
+export const openShareDialog = async (options: ShareOptions) => {
+  try {
+    await Share.open({failOnCancel: false, ...options});
+  } catch (error) {
     logError(error);
   }
 };
@@ -33,3 +46,5 @@ const isShareProviderNotInstalled = (error: unknown) => {
   }
   return false;
 };
+
+export const Social = SocialType;

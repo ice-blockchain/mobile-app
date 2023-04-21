@@ -1,28 +1,33 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {User} from '@api/user/types';
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
 import {Images} from '@images';
 import {logError} from '@services/logging';
+import {openShareDialog} from '@services/share';
 import {ShareIcon} from '@svg/ShareIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {RefObject} from 'react';
-import {Image, Share, StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import {captureRef} from 'react-native-view-shot';
 import {rem} from 'rn-units';
 
 type Props = {
+  user: User;
   qrCodePreviewRef: RefObject<View>;
 };
 
-export const QRShareCard = ({qrCodePreviewRef}: Props) => {
+export const QRShareCard = ({user, qrCodePreviewRef}: Props) => {
   const onSharePress = async () => {
     try {
-      const url = await captureRef(qrCodePreviewRef);
-      await Share.share({url});
+      const url = await captureRef(qrCodePreviewRef, {
+        fileName: `${user.username}_qr_code`,
+      });
+      await openShareDialog({url});
     } catch (error) {
       logError(error);
     }

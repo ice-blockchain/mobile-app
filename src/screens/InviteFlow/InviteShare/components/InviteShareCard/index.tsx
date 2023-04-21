@@ -12,14 +12,13 @@ import {
   ShareCard,
 } from '@screens/InviteFlow/InviteShare/components/InviteShareCard/components/ShareCard';
 import {logError} from '@services/logging';
-import {shareSingle} from '@services/share';
+import {shareSingle, Social} from '@services/share';
 import {usernameSelector} from '@store/modules/Account/selectors';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {t} from '@translations/i18n';
 import React, {createRef} from 'react';
 import {Linking, Share as ShareMore, Vibration} from 'react-native';
 import {openComposer} from 'react-native-email-link';
-import {Social} from 'react-native-share';
 import {useSelector} from 'react-redux';
 import {isIOS} from 'rn-units';
 

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {User} from '@api/user/types';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
 import {windowWidth} from '@constants/styles';
@@ -8,43 +9,47 @@ import {
   AVATAR_SIZE,
   QRCodeAvatar,
 } from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/QRCodeAvatar';
-import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {forwardRef, Ref} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const QRCodePreview = forwardRef((_, forwardedRef: Ref<View>) => {
-  const user = useSelector(unsafeUserSelector);
-  return (
-    <View style={styles.container} ref={forwardedRef}>
-      <View style={styles.body}>
-        <QRCodeAvatar uri={user.profilePictureUrl} />
-        <Text style={styles.usernameText}>@{user.username}</Text>
-        <QRCode
-          size={windowWidth * 0.5}
-          input={user.username}
-          containerStyle={styles.qrCode}
-        />
-        <Text style={styles.descriptionText}>{t('qr_code.description')}</Text>
-        <Text style={styles.iceLabel}>
-          <IceLabel
-            color={COLORS.black}
-            iconSize={rem(30)}
-            textStyle={styles.iceLabelText}
+type Props = {
+  user: User;
+};
+
+export const QRCodePreview = forwardRef(
+  ({user}: Props, forwardedRef: Ref<View>) => {
+    return (
+      <View style={styles.container} ref={forwardedRef}>
+        <View style={styles.body}>
+          <QRCodeAvatar uri={user.profilePictureUrl} />
+          <Text style={styles.usernameText}>@{user.username}</Text>
+          <QRCode
+            size={windowWidth * 0.5}
+            input={user.username}
+            containerStyle={styles.qrCode}
           />
-        </Text>
+          <Text style={styles.descriptionText}>{t('qr_code.description')}</Text>
+          <Text style={styles.iceLabel}>
+            <IceLabel
+              color={COLORS.black}
+              iconSize={rem(30)}
+              textStyle={styles.iceLabelText}
+            />
+          </Text>
+        </View>
       </View>
-    </View>
-  );
-});
+    );
+  },
+);
 
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: rem(16),
     marginTop: -rem(20),
+    backgroundColor: 'transparent', // has to be defined for android view-shot
   },
   body: {
     alignItems: 'center',
