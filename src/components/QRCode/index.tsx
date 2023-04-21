@@ -6,19 +6,25 @@ import {QRCodeLogo} from '@components/QRCode/components/QRCodeLogo';
 import {generateQRCodeMatrix} from '@components/QRCode/utils';
 import {COLORS} from '@constants/colors';
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleProp, StyleSheet, View, ViewStyle} from 'react-native';
 
 type Props = {
   input: string;
   size: number;
   color?: string;
+  containerStyle?: StyleProp<ViewStyle>;
 };
 
-export const QRCode = ({input, size, color = COLORS.black}: Props) => {
+export const QRCode = ({
+  input,
+  size,
+  color = COLORS.black,
+  containerStyle,
+}: Props) => {
   const matrix = generateQRCodeMatrix(input, {errorCorrectionLevel: 'H'});
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, containerStyle]}>
       <QRCodeField size={size} matrix={matrix} color={color} />
       <QRCodeEye
         size={size}

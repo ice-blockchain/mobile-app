@@ -49,6 +49,7 @@ import {News} from '@screens/News';
 import {Notifications} from '@screens/Notifications';
 import {Badges} from '@screens/ProfileFlow/Badges';
 import {Profile} from '@screens/ProfileFlow/Profile';
+import {QRCodeShare} from '@screens/ProfileFlow/QRCodeShare';
 import {Roles} from '@screens/ProfileFlow/Roles';
 import {ConfirmEmail} from '@screens/SettingsFlow/ConfirmEmail';
 import {ConfirmPhoneNumber} from '@screens/SettingsFlow/ConfirmPhoneNumber';
@@ -164,6 +165,7 @@ export type ProfileTabStackParamList = {
   MyProfile: undefined;
   Roles: {userId?: string} | undefined;
   Badges: {category?: BadgeType; userId?: string};
+  QRCodeShare: undefined;
   Settings: undefined;
   PersonalInformation: undefined;
   ModifyPhoneNumber: undefined;
@@ -212,6 +214,7 @@ const ProfileTabStackNavigator = () => (
     initialRouteName={'MyProfile'}>
     <ProfileTabStack.Screen name="MyProfile" component={Profile} />
     <ProfileTabStack.Screen name="Roles" component={Roles} />
+    <ProfileTabStack.Screen name="QRCodeShare" component={QRCodeShare} />
     <ProfileTabStack.Screen
       name="Badges"
       component={Badges}

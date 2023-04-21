@@ -571,4 +571,5 @@ export type Translations = {
   'mining_notice.title': null;
   'mining_notice.message': null;
   'mining_notice.message_footer': null;
+  'qr_code.description': null;
 };

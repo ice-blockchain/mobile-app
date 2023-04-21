@@ -865,5 +865,8 @@
     "title": "Notice",
     "message": "Thanks for your interest in mining [[:bold]]ice![[/:bold]] We are currently fine-tuning our technology and mining isn't available at the moment. This is your chance to focus on building your team and growing your micro-community.",
     "message_footer": "Stay tuned for updates on our [[:twitter]]Twitter[[/:twitter]] and [[:telegram]]Telegram[[/:telegram]] channels."
+  },
+  "qr_code": {
+    "description": "Scan QR code to join my team"
   }
 }

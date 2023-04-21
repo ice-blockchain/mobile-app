@@ -25,7 +25,7 @@ export const QRCodeShareButton = ({
   return (
     <View style={containerStyle}>
       <Touchable
-        onPress={() => navigation.navigate('Settings')}
+        onPress={() => navigation.navigate('QRCodeShare')}
         hitSlop={SMALL_BUTTON_HIT_SLOP}>
         <QRCodeIcon color={color} />
       </Touchable>
