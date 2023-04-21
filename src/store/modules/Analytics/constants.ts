@@ -15,6 +15,7 @@ import {
   EventNamesType,
   TapToMineActionType,
 } from '@store/modules/Analytics/types';
+import {isPreferencesEnabled} from '@store/modules/Analytics/utils';
 import {enabledNotificationDomainsSelector} from '@store/modules/Devices/selectors';
 
 export const EVENT_NAMES = {
@@ -163,29 +164,23 @@ export const AnalyticsEventLogger = {
 };
 
 export const AnalyticsAttributesLogger = {
-  updateNotificationPreferences: ({
+  updateNotificationPreferences: async ({
     notificationDeliveryChannel,
   }: {
     notificationDeliveryChannel: NotificationDeliveryChannel;
   }) => {
-    const enabledNotificationDomains = enabledNotificationDomainsSelector(
-      notificationDeliveryChannel,
-    )(store.getState());
+    const isEnabled = await isPreferencesEnabled({notificationDeliveryChannel});
+    const enabledNotificationDomains = isEnabled
+      ? enabledNotificationDomainsSelector(notificationDeliveryChannel)(
+          store.getState(),
+        )
+      : [];
     const attributeName =
       notificationDeliveryChannel === 'push'
         ? 'Push preferences'
         : 'Email preferences';
     Attributes.trackUserAttribute(
       attributeName,
-      enabledNotificationDomains.toString(),
-    );
-  },
-  updateEmailPreferences: () => {
-    const enabledNotificationDomains = enabledNotificationDomainsSelector(
-      'email',
-    )(store.getState());
-    Attributes.trackUserAttribute(
-      'Email preferences',
       enabledNotificationDomains.toString(),
     );
   },
