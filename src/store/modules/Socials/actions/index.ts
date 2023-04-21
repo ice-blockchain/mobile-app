@@ -4,7 +4,7 @@ import {SocialsShare} from '@store/modules/Socials/types';
 import {createAction} from '@store/utils/actions/createAction';
 
 const SOCIALS_SET_DEFAULT = createAction('SOCIALS/SOCIALS_SET_DEFAULT', {
-  STATE: (payload: {socials: SocialsShare[]}) => payload,
+  STATE: (payload: {userId: string; socials: SocialsShare[]}) => payload,
 });
 
 const SOCIALS_LOAD = createAction('SOCIALS/SOCIALS_LOAD', {

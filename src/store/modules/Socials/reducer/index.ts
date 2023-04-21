@@ -14,6 +14,7 @@ interface State {
 type Actions = ReturnType<
   | typeof SocialsActions.SOCIALS_LOAD.SUCCESS.create
   | typeof SocialsActions.SOCIALS_MARK_SHARED.SUCCESS.create
+  | typeof SocialsActions.SOCIALS_SET_DEFAULT.STATE.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
 >;
 
@@ -26,6 +27,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
     switch (action.type) {
       case SocialsActions.SOCIALS_LOAD.SUCCESS.type:
       case SocialsActions.SOCIALS_MARK_SHARED.SUCCESS.type:
+      case SocialsActions.SOCIALS_SET_DEFAULT.STATE.type:
         {
           const {userId, socials} = action.payload;
           draft.items[userId] = {...state.items[userId], ...socials};

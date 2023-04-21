@@ -40,6 +40,7 @@ export function* getSocialsSaga() {
       yield put(
         SocialsActions.SOCIALS_SET_DEFAULT.STATE.create({
           socials: defaultSocials,
+          userId: authenticatedUsedId,
         }),
       );
 

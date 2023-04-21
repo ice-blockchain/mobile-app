@@ -9,6 +9,7 @@ import {dayjs} from '@services/dayjs';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
+import {SocialsActions} from '@store/modules/Socials/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {
   agreeWithEarlyAccessSelector,
@@ -28,6 +29,7 @@ export function* startMiningSessionSaga(
   >,
 ) {
   if (ENV.SHOW_MINING_NOTICE) {
+    yield put(SocialsActions.SOCIALS_LOAD.START.create());
     yield call(openMiningNotice);
     return;
   }
