@@ -9,6 +9,10 @@ import {
 } from '@react-navigation/native-stack';
 import {ConfirmEmailLink} from '@screens/AuthFlow/ConfirmEmailLink';
 import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
+import {
+  QRCodeScanner,
+  QRCodeScannerParams,
+} from '@screens/Modals/QRCodeScanner';
 import {ClaimUsername} from '@screens/WelcomeFlow/ClaimUsername';
 import {IceBonus} from '@screens/WelcomeFlow/IceBonus';
 import {Onboarding} from '@screens/WelcomeFlow/Onboarding';
@@ -29,6 +33,7 @@ export type WelcomeStackParamList = {
   Onboarding: undefined;
   ErrorPopUp: {message: string};
   PopUp: PopUpProps;
+  QRCodeScanner: QRCodeScannerParams;
 };
 
 const WelcomeStack = createNativeStackNavigator<WelcomeStackParamList>();
@@ -111,6 +116,11 @@ export function WelcomeNavigator() {
         name="PopUp"
         options={modalOptions}
         component={PopUp}
+      />
+      <WelcomeStack.Screen
+        name="QRCodeScanner"
+        component={QRCodeScanner}
+        options={modalOptions}
       />
     </WelcomeStack.Navigator>
   );

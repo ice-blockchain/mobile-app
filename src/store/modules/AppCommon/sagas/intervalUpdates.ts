@@ -1,9 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {APP_AUTO_UPDATE_INTERVAL_SEC} from '@constants/timeouts';
-import {isAuthorizedSelector} from '@store/modules/Account/selectors';
+import {
+  isAuthorizedSelector,
+  isRegistrationCompleteSelector,
+} from '@store/modules/Account/selectors';
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
-import {delay, put, select} from 'redux-saga/effects';
+import {waitForSelector} from '@store/utils/sagas/effects';
+import {call, delay, put, select} from 'redux-saga/effects';
 
 export function* intervalUpdatesSaga() {
   const isAuthorized: ReturnType<typeof isAuthorizedSelector> = yield select(
@@ -11,6 +15,7 @@ export function* intervalUpdatesSaga() {
   );
 
   if (isAuthorized) {
+    yield call(waitForSelector, isRegistrationCompleteSelector);
     while (true) {
       yield delay(APP_AUTO_UPDATE_INTERVAL_SEC * 1000);
       yield put(AppCommonActions.INTERVAL_UPDATE.STATE.create());
