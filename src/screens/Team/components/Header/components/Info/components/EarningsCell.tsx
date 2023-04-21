@@ -2,18 +2,25 @@
 
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {COLORS} from '@constants/colors';
+import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {WalletIcon} from '@svg/WalletIcon';
 import {t} from '@translations/i18n';
-import {formatNumberString} from '@utils/numbers';
+import {formatNumberString, parseNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
-import React from 'react';
+import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const EarningsCell = ({color = COLORS.white}: {color?: string}) => {
+export const EarningsCell = memo(({color = COLORS.white}: {color?: string}) => {
   const balanceSummary = useSelector(balanceSummarySelector);
+
+  const animatedBalanceSummaryTotalReferrals = useAnimatedNumber(
+    parseNumber(balanceSummary?.totalReferrals || '0'),
+    initialValue => formatNumberString(String(initialValue)),
+  );
+
   return (
     <View style={styles.container}>
       <WalletIcon width={rem(25)} height={rem(25)} color={color} />
@@ -23,11 +30,7 @@ export const EarningsCell = ({color = COLORS.white}: {color?: string}) => {
         </Text>
         <View style={styles.bodyContainer}>
           <FormattedNumber
-            number={
-              balanceSummary
-                ? formatNumberString(balanceSummary.totalReferrals)
-                : ''
-            }
+            number={animatedBalanceSummaryTotalReferrals}
             bodyStyle={[styles.valueText, {color}]}
             decimalsStyle={[styles.decimalsText, {color}]}
             trim={true}
@@ -37,7 +40,7 @@ export const EarningsCell = ({color = COLORS.white}: {color?: string}) => {
       </View>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {
