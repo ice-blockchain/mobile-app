@@ -45,6 +45,7 @@ export type PopUpProps = {
   showCheckbox?: boolean;
   checkboxText?: string;
   onDismiss?: () => void;
+  onClose?: () => void;
 };
 
 export const PopUp = () => {
@@ -65,6 +66,7 @@ export const PopUp = () => {
       showCheckbox = false,
       checkboxText = '',
       onDismiss,
+      onClose,
     },
   } = useRoute<RouteProp<MainStackParamList, 'PopUp'>>();
   const navigation = useNavigation();
@@ -150,7 +152,14 @@ export const PopUp = () => {
               ))}
             </View>
           )}
-          {showCloseButton && <CloseButton style={styles.closeButton} />}
+          {showCloseButton && (
+            <CloseButton
+              style={styles.closeButton}
+              onPress={() => {
+                onClose?.();
+              }}
+            />
+          )}
         </View>
       </View>
     </TouchableWithoutFeedback>

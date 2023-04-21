@@ -46,7 +46,8 @@ export const openSocial = (type: SocialType) => {
       dismissOnOutsideTouch: false,
       dismissOnAndroidHardwareBack: false,
       dismissOnButtonPress: false,
-      onDismiss: () => resultResolve('no'),
+      showCloseButton: true,
+      onClose: () => resultResolve('no'),
     },
   });
 
