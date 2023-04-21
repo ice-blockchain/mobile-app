@@ -1,41 +1,31 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {User} from '@api/user/types';
-import {ActivityIndicator} from '@components/ActivityIndicator';
 import {Avatar, AvatarSkeleton} from '@components/Avatar/Avatar';
-import {ContactAvatar} from '@components/ContactAvatar';
-import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {
-  commonStyles,
-  MIDDLE_BUTTON_HIT_SLOP,
-  windowWidth,
-} from '@constants/styles';
+import {windowWidth} from '@constants/styles';
 import {useActionSheetUpdateAvatar} from '@hooks/useActionSheetUpdateAvatar';
-import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
-import {useScrollShadow} from '@hooks/useScrollShadow';
 import {useUpdateAvatar} from '@hooks/useUpdateAvatar';
 import {HEADER_HEIGHT} from '@navigation/components/Header';
 import {BackButton} from '@navigation/components/Header/components/BackButton';
 import {SettingsButton} from '@navigation/components/Header/components/SettingsButton';
 import {ShowPrivacyButton} from '@navigation/components/Header/components/ShowPrivacyButton';
+import {useTopOffsetStyle} from '@navigation/hooks/useTopOffsetStyle';
 import {AgendaContactTooltip} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/AgendaContactTooltip';
+import {ContactsAvatarButton} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/ContactsAvatarButton';
+import {EditAvatarButton} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/EditAvatarButton';
 import {
   AVATAR_RADIUS,
-  PEN_SIZE,
   useAnimatedStyles,
 } from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useAnimatedStyles';
 import {useUserContactDetails} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useUserContactDetails';
 import {usernameWithPrefixSelector} from '@store/modules/Account/selectors';
-import {AnimatedCameraIcon} from '@svg/AnimatedCameraIcon';
 import {font, mirrorTransform} from '@utils/styles';
 import React, {memo, useState} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
-
-const AnimatedTouchable = Animated.createAnimatedComponent(Touchable);
 
 const NOT_FOUND = require('../../assets/images/notFoundPlaceholder.png');
 
@@ -53,9 +43,8 @@ type Props = {
 
 export const AvatarHeader = memo(
   ({user, animatedIndex, isOwner, isLoading = false}: Props) => {
-    const {shadowStyle} = useScrollShadow({translateY: animatedIndex});
-    const {top: topInset} = useSafeAreaInsets();
     const username = useSelector(usernameWithPrefixSelector);
+    const topOffset = useTopOffsetStyle();
 
     const uri = user?.profilePictureUrl;
 
@@ -71,11 +60,6 @@ export const AvatarHeader = memo(
 
     const {contactDetails} = useUserContactDetails({user});
 
-    const extraPadding = {
-      paddingTop: topInset,
-      height: HEADER_HEIGHT + topInset,
-    };
-
     const {updateAvatar, updateAvatarLoading} = useUpdateAvatar();
 
     const {localImage, onEditPress} = useActionSheetUpdateAvatar({
@@ -84,8 +68,8 @@ export const AvatarHeader = memo(
     });
 
     return (
-      <View style={styles.touchArea}>
-        <Animated.View style={[styles.container, extraPadding, shadowStyle]}>
+      <View style={[topOffset.current, styles.outerContainer]}>
+        <View style={styles.container}>
           <View
             style={[
               styles.leftContainer,
@@ -124,34 +108,21 @@ export const AvatarHeader = memo(
                 )}
               </Animated.View>
               {isOwner && (
-                <AnimatedTouchable
-                  style={[penAnimatedStyle, styles.penWrapper]}
+                <EditAvatarButton
                   onPress={onEditPress}
-                  disabled={updateAvatarLoading}
-                  hitSlop={MIDDLE_BUTTON_HIT_SLOP}>
-                  {updateAvatarLoading ? (
-                    <ActivityIndicator style={StyleSheet.absoluteFill} />
-                  ) : (
-                    <AnimatedCameraIcon style={iconAvatarStyle} />
-                  )}
-                </AnimatedTouchable>
+                  loading={updateAvatarLoading}
+                  containerStyle={penAnimatedStyle}
+                  iconStyle={iconAvatarStyle}
+                />
+              )}
+              {contactDetails && (
+                <ContactsAvatarButton
+                  onPress={() => setIsTooltipVisible(state => !state)}
+                  contacts={contactDetails}
+                  containerStyle={lettersAvatarStyle}
+                />
               )}
             </View>
-            {contactDetails && (
-              <AnimatedTouchable
-                style={[styles.miniAvatarContainer, lettersAvatarStyle]}
-                onPress={() => setIsTooltipVisible(state => !state)}>
-                <Animated.View
-                  style={[styles.lettersAvatar, lettersAvatarStyle]}>
-                  <ContactAvatar
-                    sideSize={rem(30)}
-                    borderRadius={rem(10)}
-                    textStyle={styles.avatarText}
-                    contact={contactDetails}
-                  />
-                </Animated.View>
-              </AnimatedTouchable>
-            )}
             {user && (
               <Animated.Text
                 style={[styles.usernameText, textStyle]}
@@ -171,7 +142,7 @@ export const AvatarHeader = memo(
             )}
             {isOwner && user && <SettingsButton />}
           </View>
-        </Animated.View>
+        </View>
         {contactDetails && isTooltipVisible && !isOwner && (
           <AgendaContactTooltip contact={contactDetails} />
         )}
@@ -181,22 +152,16 @@ export const AvatarHeader = memo(
 );
 
 const styles = StyleSheet.create({
+  outerContainer: {
+    zIndex: 1,
+    backgroundColor: COLORS.white,
+  },
   container: {
     height: HEADER_HEIGHT,
     justifyContent: 'center',
     flexDirection: 'row',
-    width: windowWidth,
-    overflow: 'visible',
-    backgroundColor: COLORS.white,
     zIndex: 1000,
-    ...commonStyles.shadow,
-  },
-  miniAvatarContainer: {
-    width: AVATAR_SIZE,
-    height: AVATAR_SIZE,
-    alignSelf: 'center',
-    bottom: 0,
-    position: 'absolute',
+    width: windowWidth,
   },
   wrapper: {
     flexDirection: 'row',
@@ -244,32 +209,7 @@ const styles = StyleSheet.create({
   touchableAvatar: {
     flex: 1,
   },
-  avatarText: {
-    ...font(13, 16, 'regular'),
-  },
-  lettersAvatar: {
-    width: rem(30),
-    height: rem(30),
-    bottom: -rem(3),
-    right: -rem(3),
-    position: 'absolute',
-  },
-  penWrapper: {
-    position: 'absolute',
-    bottom: -rem(10),
-    right: -rem(10),
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: PEN_SIZE,
-    height: PEN_SIZE,
-    borderRadius: PEN_SIZE / 2,
-    borderColor: COLORS.white,
-    backgroundColor: COLORS.white,
-    marginHorizontal: rem(10),
-    marginVertical: rem(10),
-  },
-  showPrivacyButton: {marginRight: rem(16)},
-  touchArea: {
-    zIndex: 1,
+  showPrivacyButton: {
+    marginRight: rem(16),
   },
 });

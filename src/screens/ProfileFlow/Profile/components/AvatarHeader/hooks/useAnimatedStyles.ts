@@ -107,7 +107,7 @@ export const useAnimatedStyles = ({animatedIndex}: Params) => {
     () => {
       const opacity = interpolate(
         animatedIndex.value,
-        [0, 5],
+        [0, MAX_SCROLL / 2],
         [1, 0],
         Extrapolate.CLAMP,
       );
