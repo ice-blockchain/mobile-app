@@ -10,6 +10,12 @@ export function getPreviousDate(dayBack: number) {
   return date.format('MM/DD');
 }
 
+export function getNextDate(dayForward: number) {
+  const currentDate = dayjs();
+  const date = currentDate.set('date', currentDate.get('date') + dayForward);
+  return date.format('MM/DD');
+}
+
 export const getDurationString = (duration: Duration, numberOfUnits = 2) => {
   const parts = [
     {value: Math.floor(duration.asDays()), unit: t('general.days_short')},

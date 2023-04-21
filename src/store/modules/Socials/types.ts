@@ -1,11 +1,14 @@
 // SPDX-License-Identifier: ice License 1.0
 
-export type SocialType =
-  | 'tiktok'
-  | 'youtube'
-  | 'linkedin'
-  | 'facebook'
-  | 'instagram';
+export const socialsOrder = [
+  'tiktok',
+  'youtube',
+  'linkedin',
+  'facebook',
+  'instagram',
+] as const;
+
+export type SocialType = typeof socialsOrder[number];
 
 export type SocialsShare = {
   type: SocialType;
