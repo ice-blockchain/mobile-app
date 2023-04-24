@@ -13,7 +13,6 @@ export function* intervalUpdatesSaga() {
   const isAuthorized: ReturnType<typeof isAuthorizedSelector> = yield select(
     isAuthorizedSelector,
   );
-
   if (isAuthorized) {
     yield call(waitForSelector, isRegistrationCompleteSelector);
     while (true) {

@@ -24,6 +24,9 @@ export function* getSocialsSaga() {
   try {
     let typeToShow: SocialType | null = null;
 
+    /*
+     * if user has socials, we show first not shared social
+     */
     if (socials && socials.length > 0) {
       const socialsToShow: SocialsShare[] = socials.filter(
         social => !social.shared,
@@ -33,12 +36,15 @@ export function* getSocialsSaga() {
         typeToShow = socialsToShow[0].type;
       }
     } else {
+      /**
+       * if user has no socials, we create default socials
+       */
       const defaultSocials: SocialsShare[] = socialsOrder.map((type, index) => {
         return {type, shared: false, dateToShow: getNextDate(index)};
       });
 
       yield put(
-        SocialsActions.SOCIALS_SET_DEFAULT.STATE.create({
+        SocialsActions.SOCIALS_LOAD.SUCCESS.create({
           socials: defaultSocials,
           userId: authenticatedUsedId,
         }),
@@ -53,11 +59,15 @@ export function* getSocialsSaga() {
         typeToShow,
       );
 
-      if (result === 'yes') {
-        const userSocials: SocialsShare[] = yield select(
-          socialsByUserIdSelector(authenticatedUsedId),
-        );
+      const userSocials: SocialsShare[] = yield select(
+        socialsByUserIdSelector(authenticatedUsedId),
+      );
 
+      /*
+       * if user clicked on "share", we mark current social as shared
+       */
+
+      if (result === 'yes') {
         const updatedSocials: SocialsShare[] = userSocials.map(social => {
           if (social.type === typeToShow) {
             return {...social, shared: true};
@@ -67,7 +77,7 @@ export function* getSocialsSaga() {
         });
 
         yield put(
-          SocialsActions.SOCIALS_MARK_SHARED.SUCCESS.create({
+          SocialsActions.SOCIALS_LOAD.SUCCESS.create({
             userId: authenticatedUsedId,
             socials: updatedSocials,
           }),
@@ -77,6 +87,33 @@ export function* getSocialsSaga() {
          * user clicked on "close", we reschedule current social to be shown
          * last in order
          */
+        const latestShowDateSocial = userSocials.reduce((a, b) =>
+          a.dateToShow > b.dateToShow ? a : b,
+        );
+
+        if (latestShowDateSocial) {
+          const updatedSocials: SocialsShare[] = userSocials.map(social => {
+            if (social.type === typeToShow) {
+              console.log(
+                'nextDate',
+                getNextDate(1, latestShowDateSocial.dateToShow),
+              );
+
+              return {
+                ...social,
+                dateToShow: getNextDate(1, latestShowDateSocial.dateToShow),
+              };
+            }
+            return social;
+          });
+          yield put(
+            SocialsActions.SOCIALS_LOAD.SUCCESS.create({
+              userId: authenticatedUsedId,
+              socials: updatedSocials,
+            }),
+          );
+        } else {
+        }
       }
     }
   } catch (error) {

@@ -10,8 +10,8 @@ export function getPreviousDate(dayBack: number) {
   return date.format('MM/DD');
 }
 
-export function getNextDate(dayForward: number) {
-  const currentDate = dayjs();
+export function getNextDate(dayForward: number, fromDate?: string) {
+  const currentDate = fromDate ? dayjs(fromDate, 'MM/DD') : dayjs();
   const date = currentDate.set('date', currentDate.get('date') + dayForward);
   return date.format('MM/DD');
 }
