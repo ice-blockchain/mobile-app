@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {AccountActions} from '@store/modules/Account/actions';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {SocialsActions} from '@store/modules/Socials/actions';
 import {SocialsShare} from '@store/modules/Socials/types';
 import produce from 'immer';
+import {persistReducer} from 'redux-persist';
 
 interface State {
   items: {
@@ -11,10 +12,7 @@ interface State {
   };
 }
 
-type Actions = ReturnType<
-  | typeof SocialsActions.SOCIALS_LOAD.SUCCESS.create
-  | typeof AccountActions.SIGN_OUT.SUCCESS.create
->;
+type Actions = ReturnType<typeof SocialsActions.SOCIALS_LOAD.SUCCESS.create>;
 
 const INITIAL_STATE: State = {
   items: {},
@@ -29,14 +27,15 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
           draft.items[userId] = socials;
         }
         break;
-
-      case AccountActions.SIGN_OUT.SUCCESS.type: {
-        return {
-          ...INITIAL_STATE,
-        };
-      }
     }
   });
 }
 
-export const socialsReducer = reducer;
+export const socialsReducer = persistReducer(
+  {
+    key: 'socials',
+    storage: AsyncStorage,
+    whitelist: ['items'],
+  },
+  reducer,
+);

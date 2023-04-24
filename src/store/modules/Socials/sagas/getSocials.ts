@@ -33,7 +33,11 @@ export function* getSocialsSaga() {
       );
 
       if (socialsToShow.length > 0) {
-        typeToShow = socialsToShow[0].type;
+        const firstSocialToShow = socialsToShow.reduce((a, b) =>
+          a.dateToShow < b.dateToShow ? a : b,
+        );
+
+        typeToShow = firstSocialToShow.type;
       }
     } else {
       /**
