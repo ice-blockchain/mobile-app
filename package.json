@@ -51,7 +51,6 @@
     "@react-navigation/native-stack": "^6.9.2",
     "@reduxjs/toolkit": "^1.9.0",
     "@sentry/react-native": "^5.0.0",
-    "add": "^2.0.6",
     "axios": "1.2.0",
     "cldr-compact-number": "^0.4.0",
     "dayjs": "^1.11.6",
