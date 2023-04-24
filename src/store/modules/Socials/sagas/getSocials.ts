@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {LINKS} from '@constants/links';
+import {dayjs} from '@services/dayjs';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {SocialsActions} from '@store/modules/Socials/actions';
 import {socialsByUserIdSelector} from '@store/modules/Socials/selectors';
@@ -10,8 +11,6 @@ import {
   SocialType,
 } from '@store/modules/Socials/types';
 import {openSocial} from '@store/modules/Socials/utils/openSocial';
-import {getNextDate} from '@utils/date';
-import {getErrorMessage} from '@utils/errors';
 import {Linking} from 'react-native';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
@@ -49,7 +48,11 @@ export function* getSocialsSaga() {
        * if user has no socials, we create default socials
        */
       const defaultSocials: SocialsShare[] = socialsOrder.map((type, index) => {
-        return {type, shared: false, dateToShow: getNextDate(index)};
+        return {
+          type,
+          shared: false,
+          dateToShow: dayjs().add(index, 'day').toISOString(),
+        };
       });
 
       yield put(
@@ -156,10 +159,14 @@ export function* getSocialsSaga() {
            * if user has only one not share social,
            * we schedule it to be shown on next day
            */
-          const scheduleDate =
+          const scheduleDate = dayjs(
             notSharedSocials.length === 1
-              ? getNextDate(1)
-              : getNextDate(1, latestShowDateSocial.dateToShow);
+              ? undefined
+              : latestShowDateSocial.dateToShow,
+          )
+            .add(1, 'day')
+            .toISOString();
+
           const updatedSocials: SocialsShare[] = userSocials.map(social => {
             if (social.type === typeToShow) {
               return {
@@ -179,9 +186,6 @@ export function* getSocialsSaga() {
       }
     }
   } catch (error) {
-    yield put(
-      SocialsActions.SOCIALS_LOAD.FAILED.create(getErrorMessage(error)),
-    );
     throw error;
   }
 }

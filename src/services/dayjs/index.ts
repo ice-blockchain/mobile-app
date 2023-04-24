@@ -6,7 +6,6 @@ import {SupportedLocale} from '@translations/localeConfig';
 // eslint-disable-next-line no-restricted-imports
 import dayjs from 'dayjs';
 import calendar from 'dayjs/plugin/calendar';
-import customParseFormat from 'dayjs/plugin/customParseFormat';
 import duration from 'dayjs/plugin/duration';
 import isToday from 'dayjs/plugin/isToday';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
@@ -19,7 +18,6 @@ dayjs.extend(relativeTime);
 dayjs.extend(calendar);
 dayjs.extend(duration);
 dayjs.extend(utc);
-dayjs.extend(customParseFormat);
 
 /**
  * uncomment locales which have been added

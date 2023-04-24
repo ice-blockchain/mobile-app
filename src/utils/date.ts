@@ -1,20 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {dayjs} from '@services/dayjs';
 import {t} from '@translations/i18n';
 import {Duration} from 'dayjs/plugin/duration';
-
-export function getPreviousDate(dayBack: number) {
-  const currentDate = dayjs();
-  const date = currentDate.subtract(dayBack, 'day');
-  return date.format('MM/DD');
-}
-
-export function getNextDate(dayForward: number, fromDate?: string) {
-  const currentDate = fromDate ? dayjs(fromDate, 'MM/DD') : dayjs();
-  const date = currentDate.add(dayForward, 'day');
-  return date.format('MM/DD');
-}
 
 export const getDurationString = (duration: Duration, numberOfUnits = 2) => {
   const parts = [
