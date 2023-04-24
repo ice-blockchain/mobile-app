@@ -6,7 +6,12 @@ import Svg, {Path, SvgProps} from 'react-native-svg';
 import {rem} from 'rn-units';
 
 export const ShareIcon = ({color = COLORS.primaryDark, ...props}: SvgProps) => (
-  <Svg width={rem(24)} height={rem(24)} fill="none" {...props}>
+  <Svg
+    width={rem(24)}
+    height={rem(24)}
+    viewBox="0 0 24 24"
+    fill="none"
+    {...props}>
     <Path
       fill={color}
       fillRule="evenodd"
