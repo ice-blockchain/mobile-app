@@ -4,5 +4,5 @@ import {RootState} from '@store/rootReducer';
 
 export const socialsByUserIdSelector =
   (userId: string) => (state: RootState) => {
-    return state.socials.items[userId];
+    return state.socials.items[userId] || [];
   };

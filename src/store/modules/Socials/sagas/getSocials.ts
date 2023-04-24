@@ -19,7 +19,7 @@ export function* getSocialsSaga() {
     userIdSelector,
   );
 
-  const socials: SocialsShare[] | null = yield select(
+  const socials: SocialsShare[] = yield select(
     socialsByUserIdSelector(authenticatedUsedId),
   );
 
@@ -38,10 +38,36 @@ export function* getSocialsSaga() {
         const firstSocialToShow = socialsToShow.reduce((a, b) =>
           a.dateToShow < b.dateToShow ? a : b,
         );
-        /**
-         * show first not shared social sorted by closed date to show
-         */
-        typeToShow = firstSocialToShow.type;
+
+        if (dayjs().isAfter(firstSocialToShow.dateToShow)) {
+          /**
+           * if first not shared social is ready to show, we open it
+           * and update dateToShow for other not shared socials
+           */
+          const updatedSocials: SocialsShare[] = socials.map(
+            (social, index: number) => {
+              if (!social.shared && social.type !== firstSocialToShow.type) {
+                return {
+                  ...social,
+                  dateToShow: dayjs().add(index, 'day').toISOString(),
+                };
+              }
+              return social;
+            },
+          );
+
+          yield put(
+            SocialsActions.SOCIALS_LOAD.SUCCESS.create({
+              userId: authenticatedUsedId,
+              socials: updatedSocials,
+            }),
+          );
+
+          /**
+           * show first not shared social sorted by closed date to show
+           */
+          typeToShow = firstSocialToShow.type;
+        }
       }
     } else {
       /**
@@ -146,7 +172,7 @@ export function* getSocialsSaga() {
          * user clicked on "close", we reschedule current social to be shown
          * last in order
          */
-        const notSharedSocials: SocialsShare[] = (socials || []).filter(
+        const notSharedSocials: SocialsShare[] = socials.filter(
           social => !social.shared,
         );
 
@@ -167,19 +193,22 @@ export function* getSocialsSaga() {
             .add(1, 'day')
             .toISOString();
 
-          const updatedSocials: SocialsShare[] = userSocials.map(social => {
+          const actualSocials: SocialsShare[] = yield select(
+            socialsByUserIdSelector(authenticatedUsedId),
+          );
+
+          const updated: SocialsShare[] = actualSocials.map(social => {
             if (social.type === typeToShow) {
-              return {
-                ...social,
-                dateToShow: scheduleDate,
-              };
+              const modifiedSocial = Object.assign({}, social);
+              modifiedSocial.dateToShow = scheduleDate;
+              return modifiedSocial;
             }
             return social;
           });
           yield put(
             SocialsActions.SOCIALS_LOAD.SUCCESS.create({
               userId: authenticatedUsedId,
-              socials: updatedSocials,
+              socials: updated,
             }),
           );
         }
