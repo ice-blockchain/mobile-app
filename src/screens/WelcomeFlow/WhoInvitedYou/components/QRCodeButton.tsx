@@ -9,7 +9,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {QRCodeIcon} from '@svg/QRCodeIcon';
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {Keyboard, StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -19,6 +19,11 @@ type Props = {
 export const QRCodeButton = ({onUsernameDetect}: Props) => {
   const navigation =
     useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
+
+  const onButtonPress = () => {
+    Keyboard.dismiss();
+    navigation.navigate('QRCodeScanner', {onDetect});
+  };
 
   const onDetect = (content: string) => {
     const username = content.match(`${LINKS.MAIN}@(.+)`)?.[1];
@@ -31,7 +36,7 @@ export const QRCodeButton = ({onUsernameDetect}: Props) => {
     <Touchable
       style={styles.container}
       hitSlop={SMALL_BUTTON_HIT_SLOP}
-      onPress={() => navigation.navigate('QRCodeScanner', {onDetect})}>
+      onPress={onButtonPress}>
       <QRCodeIcon color={COLORS.secondary} width={rem(24)} height={rem(24)} />
     </Touchable>
   );
