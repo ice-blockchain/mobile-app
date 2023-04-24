@@ -6,13 +6,13 @@ import {Duration} from 'dayjs/plugin/duration';
 
 export function getPreviousDate(dayBack: number) {
   const currentDate = dayjs();
-  const date = currentDate.set('date', currentDate.get('date') - dayBack);
+  const date = currentDate.subtract(dayBack, 'day');
   return date.format('MM/DD');
 }
 
 export function getNextDate(dayForward: number, fromDate?: string) {
   const currentDate = fromDate ? dayjs(fromDate, 'MM/DD') : dayjs();
-  const date = currentDate.set('date', currentDate.get('date') + dayForward);
+  const date = currentDate.add(dayForward, 'day');
   return date.format('MM/DD');
 }
 

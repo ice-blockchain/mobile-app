@@ -39,7 +39,9 @@ export function* getSocialsSaga() {
         const firstSocialToShow = socialsToShow.reduce((a, b) =>
           a.dateToShow < b.dateToShow ? a : b,
         );
-
+        /**
+         * show first not shared social sorted by closed date to show
+         */
         typeToShow = firstSocialToShow.type;
       }
     } else {
@@ -57,7 +59,10 @@ export function* getSocialsSaga() {
         }),
       );
 
-      typeToShow = socialsOrder[0]; // show first social
+      /**
+       * show first default social
+       */
+      typeToShow = socialsOrder[0];
     }
 
     if (typeToShow) {
@@ -138,16 +143,28 @@ export function* getSocialsSaga() {
          * user clicked on "close", we reschedule current social to be shown
          * last in order
          */
-        const latestShowDateSocial = userSocials.reduce((a, b) =>
+        const notSharedSocials: SocialsShare[] = (socials || []).filter(
+          social => !social.shared,
+        );
+
+        const latestShowDateSocial = notSharedSocials.reduce((a, b) =>
           a.dateToShow > b.dateToShow ? a : b,
         );
 
         if (latestShowDateSocial) {
+          /**
+           * if user has only one not share social,
+           * we schedule it to be shown on next day
+           */
+          const scheduleDate =
+            notSharedSocials.length === 1
+              ? getNextDate(1)
+              : getNextDate(1, latestShowDateSocial.dateToShow);
           const updatedSocials: SocialsShare[] = userSocials.map(social => {
             if (social.type === typeToShow) {
               return {
                 ...social,
-                dateToShow: getNextDate(1, latestShowDateSocial.dateToShow),
+                dateToShow: scheduleDate,
               };
             }
             return social;
@@ -158,7 +175,6 @@ export function* getSocialsSaga() {
               socials: updatedSocials,
             }),
           );
-        } else {
         }
       }
     }
