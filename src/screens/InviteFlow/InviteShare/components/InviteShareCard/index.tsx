@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {LINKS} from '@constants/links';
 import {Images} from '@images';
 import Clipboard from '@react-native-clipboard/clipboard';
 import {
@@ -16,6 +15,7 @@ import {shareSingle, Social} from '@services/share';
 import {usernameSelector} from '@store/modules/Account/selectors';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {t} from '@translations/i18n';
+import {buildUsernameLink} from '@utils/username';
 import React, {createRef} from 'react';
 import {Linking, Share as ShareMore, Vibration} from 'react-native';
 import {openComposer} from 'react-native-email-link';
@@ -102,7 +102,7 @@ export const InviteShareCard = () => {
     button
       .onPress({
         message: t('invite_share.share_message'),
-        url: `${LINKS.MAIN}@${username}`,
+        url: buildUsernameLink(username),
       })
       .catch(logError);
   };

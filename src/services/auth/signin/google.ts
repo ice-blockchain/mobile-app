@@ -8,7 +8,7 @@ import {
 import {SocialSignInMethod} from '@services/auth/signin/types';
 import {t} from '@translations/i18n';
 import {checkProp} from '@utils/guards';
-import {removeInvalidUsernameCharacters} from '@utils/string';
+import {removeInvalidUsernameCharacters} from '@utils/username';
 
 GoogleSignin.configure({
   // to be able to receive idToken on Android, we need to pass webClientId

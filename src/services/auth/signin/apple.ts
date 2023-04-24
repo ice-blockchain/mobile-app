@@ -4,7 +4,7 @@ import appleAuth from '@invertase/react-native-apple-authentication';
 import {SocialSignInMethod} from '@services/auth/signin/types';
 import {t} from '@translations/i18n';
 import {checkProp} from '@utils/guards';
-import {removeInvalidUsernameCharacters} from '@utils/string';
+import {removeInvalidUsernameCharacters} from '@utils/username';
 
 export const startAppleSignIn: SocialSignInMethod<{
   token: string;

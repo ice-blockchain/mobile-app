@@ -3,7 +3,7 @@
 import {USERNAME_MAX_LENGTH, USERNAME_MIN_LENGTH} from '@constants/validations';
 import {ValidationActions} from '@store/modules/Validation/actions';
 import {t} from '@translations/i18n';
-import {validateUsername} from '@utils/string';
+import {validateUsername} from '@utils/username';
 import {put} from 'redux-saga/effects';
 
 const actionCreator = ValidationActions.USERNAME_VALIDATION.START.create;

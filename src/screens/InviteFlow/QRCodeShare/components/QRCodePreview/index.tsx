@@ -3,7 +3,6 @@
 import {User} from '@api/user/types';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
-import {LINKS} from '@constants/links';
 import {windowWidth} from '@constants/styles';
 import {QRCode} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/QRCode';
 import {
@@ -12,6 +11,7 @@ import {
 } from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/QRCodeAvatar';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
+import {buildUsernameLink} from '@utils/username';
 import React, {forwardRef, Ref} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -29,7 +29,7 @@ export const QRCodePreview = forwardRef(
           <Text style={styles.usernameText}>@{user.username}</Text>
           <QRCode
             size={windowWidth * 0.5}
-            input={`${LINKS.MAIN}@${user.username}`}
+            input={buildUsernameLink(user.username)}
             containerStyle={styles.qrCode}
           />
           <Text style={styles.descriptionText}>{t('qr_code.description')}</Text>

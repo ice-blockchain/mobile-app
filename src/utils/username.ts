@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: ice License 1.0
+
+import {LINKS} from '@constants/links';
+
+export const removeInvalidUsernameCharacters = (username: string) => {
+  return username.replace(/[^a-zA-Z0-9.]/g, '');
+};
+
+export const validateUsername = (username: string) => {
+  const validationRegex: RegExp = /^[a-zA-Z0-9.]+$/;
+  return validationRegex.test(username);
+};
+
+export const buildUsernameLink = (username: string) =>
+  `${LINKS.MAIN}@${username}`;
+
+export const getUsernameFromUsernameLink = (usernameLink: string) =>
+  usernameLink.match(`${LINKS.MAIN}@(.+)`)?.[1];

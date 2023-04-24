@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {SocialSignInMethod} from '@services/auth/signin/types';
-import {removeInvalidUsernameCharacters} from '@utils/string';
+import {removeInvalidUsernameCharacters} from '@utils/username';
 import {
   AccessToken,
   LoginManager,
