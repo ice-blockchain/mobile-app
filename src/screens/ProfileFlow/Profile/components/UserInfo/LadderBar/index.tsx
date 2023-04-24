@@ -9,7 +9,6 @@ import {
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {globalRankSelector} from '@store/modules/Tokenomics/selectors';
 import {t} from '@translations/i18n';
-import {formatNumber} from '@utils/numbers';
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {useSelector} from 'react-redux';
@@ -36,7 +35,7 @@ export const LadderBar = memo(
       <View style={styles.ladder}>
         <LadderItem
           title={t('profile.global_rank').toUpperCase()}
-          value={globalRank != null ? formatNumber(globalRank) : '1'}
+          value={globalRank ?? 1}
           enabled={isProfilePrivacyEditMode}
           isProfilePrivacyEditMode={isProfilePrivacyEditMode}
           privacyType="globalRank"
@@ -49,7 +48,7 @@ export const LadderBar = memo(
         <LadderItem
           title={t('global.referrals').toUpperCase()}
           enabled={isProfilePrivacyEditMode}
-          value={formatNumber(refNumber)}
+          value={refNumber}
           isProfilePrivacyEditMode={isProfilePrivacyEditMode}
           privacyType="referralCount"
           hidden={
@@ -60,11 +59,7 @@ export const LadderBar = memo(
         />
         <LadderItem
           title={t('global.level').toUpperCase()}
-          value={
-            achievements?.levelsAndRoles?.level
-              ? `${achievements?.levelsAndRoles?.level}`
-              : ''
-          }
+          value={achievements?.levelsAndRoles?.level ?? 0}
           enabled={isProfilePrivacyEditMode}
           isProfilePrivacyEditMode={isProfilePrivacyEditMode}
           privacyType="level"
