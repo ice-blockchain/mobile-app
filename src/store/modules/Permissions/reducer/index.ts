@@ -7,7 +7,10 @@ import {PermissionStatus} from 'react-native-permissions';
 export interface State {
   contacts: PermissionStatus | null;
   pushNotifications: PermissionStatus | null;
+  camera: PermissionStatus | null;
 }
+
+export type PermissionType = keyof State;
 
 type Actions = ReturnType<
   | typeof PermissionsActions.GET_PERMISSIONS.SUCCESS.create
@@ -17,6 +20,7 @@ type Actions = ReturnType<
 const INITIAL_STATE: State = {
   contacts: null,
   pushNotifications: null,
+  camera: null,
 };
 
 export function permissionsReducer(

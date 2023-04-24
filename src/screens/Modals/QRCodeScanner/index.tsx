@@ -5,6 +5,7 @@ import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {WelcomeStackParamList} from '@navigation/Welcome';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
+import {useCameraPermissions} from '@screens/Modals/QRCodeScanner/hooks/useCameraPermissions';
 import {useDetectBarcode} from '@screens/Modals/QRCodeScanner/hooks/useDetectBarcode';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -26,21 +27,30 @@ export const QRCodeScanner = () => {
     },
   });
 
+  const {permissionsGranted} = useCameraPermissions();
+
   const device = useCameraDevices().back;
-  if (!device) {
-    return null;
-  }
 
   return (
     <View style={commonStyles.flexOne}>
       <Header backgroundColor="transparent" color={COLORS.white} />
-      <Camera
-        style={StyleSheet.absoluteFill}
-        device={device}
-        isActive={true}
-        frameProcessor={frameProcessor}
-        frameProcessorFps={5}
-      />
+      {device && permissionsGranted ? (
+        <Camera
+          style={StyleSheet.absoluteFill}
+          device={device}
+          isActive={true}
+          frameProcessor={frameProcessor}
+          frameProcessorFps={5}
+        />
+      ) : (
+        <View style={[commonStyles.flexOne, styles.stub]} />
+      )}
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  stub: {
+    backgroundColor: COLORS.black,
+  },
+});

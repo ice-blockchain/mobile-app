@@ -286,6 +286,8 @@ PODS:
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
   - OpenSSL-Universal (1.1.1100)
+  - Permission-Camera (3.6.1):
+    - RNPermissions
   - Permission-Contacts (3.6.1):
     - RNPermissions
   - Permission-Notifications (3.6.1):
@@ -779,6 +781,7 @@ DEPENDENCIES:
   - lottie-react-native (from `../node_modules/lottie-react-native`)
   - MoEngageRichNotification
   - OpenSSL-Universal (= 1.1.1100)
+  - Permission-Camera (from `../node_modules/react-native-permissions/ios/Camera`)
   - Permission-Contacts (from `../node_modules/react-native-permissions/ios/Contacts`)
   - Permission-Notifications (from `../node_modules/react-native-permissions/ios/Notifications`)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
@@ -925,6 +928,8 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/sdks/hermes/hermes-engine.podspec"
   lottie-react-native:
     :path: "../node_modules/lottie-react-native"
+  Permission-Camera:
+    :path: "../node_modules/react-native-permissions/ios/Camera"
   Permission-Contacts:
     :path: "../node_modules/react-native-permissions/ios/Contacts"
   Permission-Notifications:
@@ -1118,6 +1123,7 @@ SPEC CHECKSUMS:
   MoEngageRichNotification: 007cb006358994209e017c6ce52808809cf0b3fc
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
+  Permission-Camera: bf6791b17c7f614b6826019fcfdcc286d3a107f6
   Permission-Contacts: 2484d274171688b1ca80978b949ac771259b51f0
   Permission-Notifications: 150484ae586eb9be4e32217582a78350a9bb31c3
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
@@ -1195,6 +1201,6 @@ SPEC CHECKSUMS:
   Yoga: d6133108734e69e8c0becc6ba587294b94829687
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: a0a70da9b17b6dcb979881a8adf8d0c60ce75015
+PODFILE CHECKSUM: f2f9a829491725083020e6fb3920d99dc7e56e4b
 
 COCOAPODS: 1.11.3

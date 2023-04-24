@@ -15,6 +15,7 @@ target 'ice' do
 
   pod 'React-RCTLinking', :path => '../node_modules/react-native/Libraries/LinkingIOS'
   pod 'Permission-Contacts', :path => "#{permissions_path}/Contacts"
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
   pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications"
   pod 'ReactNativeMoEngage', :path => '../node_modules/react-native-moengage'
 

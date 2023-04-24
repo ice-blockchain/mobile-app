@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {PermissionType} from '@store/modules/Permissions/sagas/getPermissionsSaga';
+import {PermissionType} from '@store/modules/Permissions/reducer';
 import {RootState} from '@store/rootReducer';
 import {RESULTS} from 'react-native-permissions';
 
