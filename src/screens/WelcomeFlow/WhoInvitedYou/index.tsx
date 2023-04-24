@@ -54,7 +54,7 @@ export const WhoInvitedYou = () => {
           value={refUsername}
           errorText={error}
           validated={isReferralUpdated}
-          postfix={<QRCodeButton onDetect={onChangeRefUsername} />}
+          postfix={<QRCodeButton onUsernameDetect={onChangeRefUsername} />}
           style={styles.input}
         />
       }

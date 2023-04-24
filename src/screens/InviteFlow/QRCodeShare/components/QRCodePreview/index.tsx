@@ -3,6 +3,7 @@
 import {User} from '@api/user/types';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
+import {LINKS} from '@constants/links';
 import {windowWidth} from '@constants/styles';
 import {QRCode} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/QRCode';
 import {
@@ -28,7 +29,7 @@ export const QRCodePreview = forwardRef(
           <Text style={styles.usernameText}>@{user.username}</Text>
           <QRCode
             size={windowWidth * 0.5}
-            input={user.username}
+            input={`${LINKS.MAIN}@${user.username}`}
             containerStyle={styles.qrCode}
           />
           <Text style={styles.descriptionText}>{t('qr_code.description')}</Text>

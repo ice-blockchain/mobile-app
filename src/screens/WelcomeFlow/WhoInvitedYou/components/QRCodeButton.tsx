@@ -2,6 +2,7 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {LINKS} from '@constants/links';
 import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
 import {WelcomeStackParamList} from '@navigation/Welcome';
 import {useNavigation} from '@react-navigation/native';
@@ -12,12 +13,19 @@ import {StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
-  onDetect: (content: string) => void;
+  onUsernameDetect: (content: string) => void;
 };
 
-export const QRCodeButton = ({onDetect}: Props) => {
+export const QRCodeButton = ({onUsernameDetect}: Props) => {
   const navigation =
     useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
+
+  const onDetect = (content: string) => {
+    const username = content.match(`${LINKS.MAIN}@(.+)`)?.[1];
+    if (username) {
+      onUsernameDetect(username);
+    }
+  };
 
   return (
     <Touchable
