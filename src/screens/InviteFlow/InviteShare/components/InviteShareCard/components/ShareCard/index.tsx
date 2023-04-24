@@ -3,7 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {useBottomOffsetStyle} from '@navigation/hooks/useBottomOffsetStyle';
-import {ShareButton} from '@screens/InviteFlow/InviteShare/components/InviteShareCard/components/ShareButton';
+import {ShareButton as ShareButtonComponent} from '@screens/InviteFlow/InviteShare/components/InviteShareCard/components/ShareButton';
 import React, {ReactNode} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -34,7 +34,7 @@ export const ShareCard = <P,>({buttons, onButtonPress, children}: Props<P>) => {
       {children}
       <View style={styles.buttonsContainer}>
         {buttons.map(button => (
-          <ShareButton
+          <ShareButtonComponent
             title={button.title}
             icon={button.icon}
             key={button.type}
