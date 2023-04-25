@@ -4,6 +4,7 @@ import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {PAGE_HEIGHT} from '@screens/HomeFlow/Home/components/Pager';
+import {PageSkeleton} from '@screens/HomeFlow/Home/components/Pager/components/PageSkeleton';
 import {miningRatesSelector} from '@store/modules/Tokenomics/selectors';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
 import {MiningHammerIcon} from '@svg/MiningHammerIcon';
@@ -41,8 +42,7 @@ export const MiningRate = memo(({darkMode}: Props) => {
   }, [miningRates?.type]);
 
   if (!miningRates) {
-    //TODO: add loading
-    return null;
+    return <PageSkeleton />;
   }
 
   const color = darkMode ? COLORS.primaryDark : COLORS.white;

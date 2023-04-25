@@ -4,6 +4,7 @@ import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {PAGE_HEIGHT} from '@screens/HomeFlow/Home/components/Pager';
+import {PageSkeleton} from '@screens/HomeFlow/Home/components/Pager/components/PageSkeleton';
 import {miningSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {MiningHammerIcon} from '@svg/MiningHammerIcon';
 import {t} from '@translations/i18n';
@@ -39,6 +40,10 @@ export const Engagement = memo(({darkMode}: Props) => {
         minimumFractionDigits: 0,
       }),
   );
+
+  if (!miningSummary) {
+    return <PageSkeleton />;
+  }
 
   return (
     <View style={[commonStyles.baseSubScreen, styles.container]}>
