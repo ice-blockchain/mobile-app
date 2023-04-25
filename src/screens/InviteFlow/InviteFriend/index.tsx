@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {LinesBackground} from '@components/LinesBackground';
-import {PrimaryButton} from '@components/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {commonStyles, smallHeightDevice, windowWidth} from '@constants/styles';
 import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';

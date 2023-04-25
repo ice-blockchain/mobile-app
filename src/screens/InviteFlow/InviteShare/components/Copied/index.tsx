@@ -58,7 +58,7 @@ export const Copied = forwardRef<CopiedMethods>(
                 {
                   translateY: slideUpValue.interpolate({
                     inputRange: [0, 1],
-                    outputRange: [rem(45), 0],
+                    outputRange: [0, -rem(45)],
                   }),
                 },
               ],
@@ -73,9 +73,9 @@ export const Copied = forwardRef<CopiedMethods>(
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'transparent',
-    alignItems: 'center',
+    position: 'absolute',
+    alignSelf: 'center',
+    top: 0,
   },
   copiedContainer: {
     height: rem(35),

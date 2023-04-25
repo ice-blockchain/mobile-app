@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {BackButton} from '@components/BackButton';
+import {BackButton} from '@components/Buttons/BackButton';
 import {PrivacyTerms} from '@components/PrivacyTerms';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';

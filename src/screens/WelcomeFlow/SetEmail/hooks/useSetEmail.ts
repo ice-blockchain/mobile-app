@@ -6,7 +6,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {DEFAULT_DIALOG_NO_BUTTON} from '@screens/Modals/PopUp/components/PopUpButton';
 import {AccountActions} from '@store/modules/Account/actions';
-import {userSelector} from '@store/modules/Account/selectors';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {
   failedReasonSelector,
   isLoadingSelector,
@@ -19,7 +19,7 @@ import {useDispatch, useSelector} from 'react-redux';
 
 export const useSetEmail = () => {
   const dispatch = useDispatch();
-  const user = useSelector(userSelector) as User;
+  const user = useSelector(unsafeUserSelector);
   const navigation =
     useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
 

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {AnimatedSplash} from '@components/AnimatedSplash';
+import {AnimatedSplash} from '@navigation/components/AnimatedSplash';
 import {Router} from '@navigation/Router';
 import {persistor, store} from '@store/configureStore';
 import React from 'react';

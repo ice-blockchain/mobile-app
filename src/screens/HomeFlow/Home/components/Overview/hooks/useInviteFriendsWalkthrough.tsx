@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {InviteButton} from '@components/InviteButton';
+import {InviteButton} from '@components/Buttons/InviteButton';
 import {SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
 import {WalkthroughElementContainer} from '@screens/Walkthrough/components/WalkthroughElementContainer';
 import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/useSetWalkthroughElementData';

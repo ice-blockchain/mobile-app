@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {CheckBox} from '@components/CheckBox';
 import {IceLabel} from '@components/Labels/IceLabel';
-import {PrimaryButton} from '@components/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
 import {STAKING_ALLOCATION_MAX, STAKING_YEARS_MAX} from '@constants/staking';

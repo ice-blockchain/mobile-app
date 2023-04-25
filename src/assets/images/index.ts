@@ -92,4 +92,15 @@ export const Images = {
     telegram: require('./popup/telegram.png'),
     earlyAccess: require('./popup/earlyAccess.png'),
   },
+  share: {
+    telegram: require('./share/telegram.png'),
+    twitter: require('./share/twitter.png'),
+    whatsApp: require('./share/whatsApp.png'),
+    email: require('./share/email.png'),
+    facebook: require('./share/facebook.png'),
+    link: require('./share/link.png'),
+    more: require('./share/more.png'),
+    sms: require('./share/sms.png'),
+    shareProviders: require('./share/share_providers.png'),
+  },
 } as const;

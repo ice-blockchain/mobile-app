@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {BadgeType} from '@api/achievements/types';
-import {User} from '@api/user/types';
-import {InviteButton} from '@components/InviteButton';
+import {InviteButton} from '@components/Buttons/InviteButton';
 import {
   SegmentedControl,
   SegmentedControlMethods,
@@ -17,7 +16,7 @@ import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {ProfileTabStackParamList} from '@navigation/Main';
 import {RouteProp, useRoute} from '@react-navigation/native';
 import {BadgeList} from '@screens/ProfileFlow/Badges/components/BadgeList';
-import {userSelector} from '@store/modules/Account/selectors';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {t} from '@translations/i18n';
@@ -42,7 +41,7 @@ export const Badges = () => {
   const bottomOffset = useBottomTabBarOffsetStyle();
   const route = useRoute<RouteProp<ProfileTabStackParamList, 'Badges'>>();
 
-  const authUser = useSelector(userSelector) as User;
+  const authUser = useSelector(unsafeUserSelector);
   const isOwner = !route.params || route.params.userId === authUser.id;
   const userId = isOwner ? authUser.id : route.params?.userId || '';
 

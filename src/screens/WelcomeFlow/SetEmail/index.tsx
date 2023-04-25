@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {EmailInput} from '@components/Inputs/EmailInput';
-import {PrimaryButton} from '@components/PrimaryButton';
 import {FinalizeRegistrationStep} from '@screens/Templates/FinalizeRegistrationStep';
 import {BigHeader} from '@screens/Templates/FinalizeRegistrationStep/components/BigHeader';
 import {Info} from '@screens/Templates/FinalizeRegistrationStep/components/Info';

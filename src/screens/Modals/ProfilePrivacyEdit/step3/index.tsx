@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {User} from '@api/user/types';
 import {COLORS} from '@constants/colors';
 import {windowWidth} from '@constants/styles';
 import {Images} from '@images';
@@ -9,7 +8,7 @@ import {CancelButton} from '@screens/Modals/ProfilePrivacyEdit/components/Cancel
 import {Description} from '@screens/Modals/ProfilePrivacyEdit/components/Description';
 import {NextButton} from '@screens/Modals/ProfilePrivacyEdit/components/NextButton';
 import {BadgeSummariesList} from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeSummariesList';
-import {userSelector} from '@store/modules/Account/selectors';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {t} from '@translations/i18n';
 import React from 'react';
@@ -19,7 +18,7 @@ import {rem} from 'rn-units';
 
 export const ProfilePrivacyEditStep3 = () => {
   const navigation = useNavigation();
-  const authUser = useSelector(userSelector) as User;
+  const authUser = useSelector(unsafeUserSelector);
   const badgesSummary = useSelector(
     AchievementsSelectors.getBadgesSummary({userId: authUser.id}),
   );

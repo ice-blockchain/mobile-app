@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {InviteButton} from '@components/InviteButton';
+import {InviteButton} from '@components/Buttons/InviteButton';
 import {ListItemSkeleton} from '@components/ListItems/ListItemSkeleton';
 import {UserListItem} from '@components/ListItems/UserListItem';
 import {UserListPingButton} from '@components/ListItems/UserListItem/components/UserListPingButton';

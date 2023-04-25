@@ -4,7 +4,7 @@ import {ENV} from '@constants/env';
 import RNTwitterSignIn from '@react-native-twitter-signin/twitter-signin';
 import {SocialSignInMethod} from '@services/auth/signin/types';
 import {checkProp} from '@utils/guards';
-import {removeInvalidUsernameCharacters} from '@utils/string';
+import {removeInvalidUsernameCharacters} from '@utils/username';
 
 RNTwitterSignIn.init(
   ENV.TWITTER_CONSUMER_KEY ?? '',

@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {User} from '@api/user/types';
+import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {CommonInput} from '@components/Inputs/CommonInput';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
-import {PrimaryButton} from '@components/PrimaryButton';
 import {UserAvatarHeader} from '@components/UserAvatarHeader';
 import {COLORS} from '@constants/colors';
 import {isChangePhoneNumberEnabled} from '@constants/featureFlags';
@@ -14,7 +13,7 @@ import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {useControlHandlers} from '@screens/SettingsFlow/PersonalInformation/hooks/useControlHandlers';
 import {useUpdateAccount} from '@screens/SettingsFlow/PersonalInformation/hooks/useUpdateAccount';
 import {useValidateUsername} from '@screens/SettingsFlow/PersonalInformation/hooks/useValidateUsername';
-import {userSelector} from '@store/modules/Account/selectors';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {EmailIcon} from '@svg/EmailIcon';
 import {LocationIcon} from '@svg/LocationIcon';
 import {PersonIcon} from '@svg/PersonIcon';
@@ -34,7 +33,7 @@ export const PersonalInformation = memo(() => {
   useFocusStatusBar({style: 'dark-content'});
   const tabbarOffset = useBottomTabBarOffsetStyle();
 
-  const user = useSelector(userSelector) as User;
+  const user = useSelector(unsafeUserSelector);
 
   const {
     userDraft,

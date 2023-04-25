@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {UpdateAccountField} from '@components/Forms/components/UpdateAccountField';
 import {Note} from '@components/Forms/ModifyEmailForm/components/Note';
 import {useModifyEmail} from '@components/Forms/ModifyEmailForm/hooks/useModifyEmail';
 import {EmailInput} from '@components/Inputs/EmailInput';
-import {PrimaryButton} from '@components/PrimaryButton';
 import {t} from '@translations/i18n';
 import React from 'react';
 

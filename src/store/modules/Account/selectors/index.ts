@@ -23,6 +23,13 @@ export const authTokenSelector = (state: RootState) => state.account.token;
 
 export const userSelector = (state: RootState) => state.account.user;
 
+export const unsafeUserSelector = (state: RootState) => {
+  if (!state.account.user) {
+    throw new Error('User is not set');
+  }
+  return state.account.user;
+};
+
 export const appLocaleSelector = (state: RootState): SupportedLocale => {
   const user = userSelector(state);
 

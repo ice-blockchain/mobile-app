@@ -5,7 +5,6 @@ import {
   NotificationDeliveryChannel,
   NotificationDomainToggle,
 } from '@api/devices/types';
-import {SocialType} from '@screens/InviteFlow/InviteShare/components/ShareButton/types';
 import {Attributes, trackEvent, trackScreenView} from '@services/analytics';
 import {dayjs} from '@services/dayjs';
 import {store} from '@store/configureStore';
@@ -55,7 +54,7 @@ export const AnalyticsEventLogger = {
   trackEvent: (params: {eventName: EventNamesType}) => {
     trackEvent(params);
   },
-  trackInvite: ({inviteAppType}: {inviteAppType: SocialType}) => {
+  trackInvite: ({inviteAppType}: {inviteAppType: string}) => {
     trackEvent({
       eventName: EVENT_NAMES.INVITE,
       eventProps: {App: inviteAppType},

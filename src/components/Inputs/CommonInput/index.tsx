@@ -124,7 +124,6 @@ export const CommonInput = ({
             </Text>
           </Touchable>
         )}
-        {postfix}
         {loading && <ActivityIndicator />}
         {(!!errorText || validated) && !loading && (
           <View
@@ -139,6 +138,7 @@ export const CommonInput = ({
             )}
           </View>
         )}
+        {postfix}
       </View>
     </TouchableWithoutFeedback>
   );

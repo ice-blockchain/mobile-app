@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {BackButton} from '@components/BackButton';
+import {BackButton} from '@components/Buttons/BackButton';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {COLORS} from '@constants/colors';
 import {smallHeightDevice, windowWidth} from '@constants/styles';

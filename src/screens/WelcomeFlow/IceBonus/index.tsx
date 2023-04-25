@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {IceLabel} from '@components/Labels/IceLabel';
-import {PrimaryButton} from '@components/PrimaryButton';
 import {FinalizeRegistrationStep} from '@screens/Templates/FinalizeRegistrationStep';
 import {BigHeader} from '@screens/Templates/FinalizeRegistrationStep/components/BigHeader';
 import {CurrentBalance} from '@screens/WelcomeFlow/IceBonus/components/CurrentBalance';

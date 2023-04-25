@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {PrimaryButton, PrimaryButtonProps} from '@components/PrimaryButton';
+import {
+  PrimaryButton,
+  PrimaryButtonProps,
+} from '@components/Buttons/PrimaryButton';
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {rem} from 'rn-units';

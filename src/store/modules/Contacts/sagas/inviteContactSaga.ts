@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {LINKS} from '@constants/links';
 import {usernameSelector} from '@store/modules/Account/selectors';
 import {ContactsActions} from '@store/modules/Contacts/actions';
 import {t} from '@translations/i18n';
 import {getContactName} from '@utils/contacts';
 import {openSMS} from '@utils/device';
 import {getErrorMessage, showError} from '@utils/errors';
+import {buildUsernameLink} from '@utils/username';
 import {Contact, getContactById} from 'react-native-contacts';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
@@ -26,7 +26,7 @@ export function* inviteContactSaga(
       throw new Error('Contact has no phone numbers');
     }
 
-    const url = `${LINKS.MAIN}@${username}`;
+    const url = buildUsernameLink(username);
 
     const text = `${t('team.contacts_list.invitation_text', {
       name: getContactName(contact),

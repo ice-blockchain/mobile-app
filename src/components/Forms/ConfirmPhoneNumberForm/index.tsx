@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {ResendButton} from '@components/Buttons/ResendButton';
 import {ConfirmCode} from '@components/Forms/components/ConfirmCode';
 import {ConfirmCodeBack} from '@components/Forms/components/ConfirmCode/components/ConfirmCodeBack';
 import {useConfirmPhoneNumber} from '@components/Forms/ConfirmPhoneNumberForm/hooks/useConfirmPhoneNumber';
 import {CodeInput} from '@components/Inputs/CodeInput';
-import {ResendButton} from '@components/ResendButton';
 import {COLORS} from '@constants/colors';
 import {useNavigation} from '@react-navigation/native';
 import {t} from '@translations/i18n';

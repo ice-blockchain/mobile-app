@@ -6,7 +6,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {DEFAULT_DIALOG_NO_BUTTON} from '@screens/Modals/PopUp/components/PopUpButton';
 import {AccountActions} from '@store/modules/Account/actions';
-import {userSelector} from '@store/modules/Account/selectors';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {
   failedReasonSelector,
   isLoadingSelector,
@@ -23,7 +23,7 @@ export const useWhoInvitedYou = () => {
   const dispatch = useDispatch();
   const navigation =
     useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
-  const user = useSelector(userSelector) as User;
+  const user = useSelector(unsafeUserSelector);
 
   const updateRefByUsernameError = useSelector(
     failedReasonSelector.bind(null, AccountActions.UPDATE_REF_BY_USERNAME),

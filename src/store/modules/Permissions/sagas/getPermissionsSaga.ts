@@ -17,16 +17,16 @@ import {isIOS} from 'rn-units';
 
 const actionCreator = PermissionsActions.GET_PERMISSIONS.START.create;
 
-export type PermissionType = 'contacts' | 'pushNotifications';
-
 type PermissionsListType = {
   contacts: Permission;
+  camera: Permission;
 };
 
 export const PERMISSIONS_LIST: PermissionsListType = {
   contacts: isIOS
     ? PERMISSIONS.IOS.CONTACTS
     : PERMISSIONS.ANDROID.READ_CONTACTS,
+  camera: isIOS ? PERMISSIONS.IOS.CAMERA : PERMISSIONS.ANDROID.CAMERA,
 };
 
 export function* getPermissionsSaga(action: ReturnType<typeof actionCreator>) {

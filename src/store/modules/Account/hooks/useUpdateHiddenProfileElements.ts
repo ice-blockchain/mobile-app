@@ -2,13 +2,13 @@
 
 import {HiddenProfileElement, User} from '@api/user/types';
 import {AccountActions} from '@store/modules/Account/actions';
-import {userSelector} from '@store/modules/Account/selectors';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {useDispatch, useSelector} from 'react-redux';
 
 export const useUpdateHiddenProfileElements = () => {
   const dispatch = useDispatch();
-  const user = useSelector(userSelector) as User;
+  const user = useSelector(unsafeUserSelector);
 
   const loading = useSelector(
     isLoadingSelector.bind(null, AccountActions.UPDATE_ACCOUNT),

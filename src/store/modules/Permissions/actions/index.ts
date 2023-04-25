@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {PermissionType} from '@store/modules/Permissions/sagas/getPermissionsSaga';
+import {PermissionType} from '@store/modules/Permissions/reducer';
 import {createAction} from '@store/utils/actions/createAction';
 import {PermissionStatus} from 'react-native-permissions';
 
 export type PermissionsType = {
   contacts: PermissionStatus;
   pushNotifications: PermissionStatus;
+  camera: PermissionStatus;
 };
 
 const GET_PERMISSIONS = createAction('GET_PERMISSIONS', {

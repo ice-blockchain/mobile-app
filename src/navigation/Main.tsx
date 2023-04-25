@@ -31,6 +31,7 @@ import {UserGrowthGraph} from '@screens/HomeFlow/UserGrowthGraph';
 import {ImageView} from '@screens/ImageView';
 import {InviteFriend} from '@screens/InviteFlow/InviteFriend';
 import {InviteShare} from '@screens/InviteFlow/InviteShare';
+import {QRCodeShare} from '@screens/InviteFlow/QRCodeShare';
 import {ActionSheet} from '@screens/Modals/ActionSheet';
 import {ContextualMenu} from '@screens/Modals/ContextualMenu';
 import {
@@ -114,6 +115,7 @@ export type MainStackParamList = {
   };
   InviteFriend: {contact: Contact};
   InviteShare: undefined;
+  QRCodeShare: undefined;
   ContextualMenu: {
     coords: Coordinates;
     buttons: ContextualMenuButton[];
@@ -351,6 +353,7 @@ export function MainNavigator() {
         options={modalOptions}
       />
       <MainStack.Screen name="InviteShare" component={InviteShare} />
+      <MainStack.Screen name="QRCodeShare" component={QRCodeShare} />
       <MainStack.Screen
         name="ContextualMenu"
         component={ContextualMenu}

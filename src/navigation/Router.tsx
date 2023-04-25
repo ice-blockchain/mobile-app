@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {InitializationError} from '@components/InitializationError';
 import {AuthNavigator} from '@navigation/Auth';
+import {InitializationError} from '@navigation/components/InitializationError';
 import {useRouteNameChange} from '@navigation/hooks/useRouteNameChange';
 import {MainNavigator} from '@navigation/Main';
 import {theme} from '@navigation/theme';

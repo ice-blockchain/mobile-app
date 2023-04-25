@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {CommonInput} from '@components/Inputs/CommonInput';
-import {PrimaryButton} from '@components/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {FinalizeRegistrationStep} from '@screens/Templates/FinalizeRegistrationStep';
 import {BigHeader} from '@screens/Templates/FinalizeRegistrationStep/components/BigHeader';
 import {Info} from '@screens/Templates/FinalizeRegistrationStep/components/Info';
+import {QRCodeButton} from '@screens/WelcomeFlow/WhoInvitedYou/components/QRCodeButton';
 import {useWhoInvitedYou} from '@screens/WelcomeFlow/WhoInvitedYou/hooks/useWhoInvitedYou';
 import {ManIcon} from '@svg/ManIcon';
 import {t} from '@translations/i18n';
@@ -53,6 +54,7 @@ export const WhoInvitedYou = () => {
           value={refUsername}
           errorText={error}
           validated={isReferralUpdated}
+          postfix={<QRCodeButton onUsernameDetect={onChangeRefUsername} />}
           style={styles.input}
         />
       }

@@ -62,6 +62,10 @@ module.exports = {
                 message:
                   'Please use useSafeAreaFrame from @hooks/useSafeAreaFrame or useSafeAreaInsets from @hooks/useSafeAreaInsets',
               },
+              {
+                name: 'react-native-share',
+                message: 'Please use custom wrapper from @services/share',
+              },
             ],
           },
         ],
