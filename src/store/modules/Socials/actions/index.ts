@@ -3,10 +3,10 @@
 import {SocialsShare} from '@store/modules/Socials/types';
 import {createAction} from '@store/utils/actions/createAction';
 
-const SOCIALS_LOAD = createAction('SOCIALS/SOCIALS_LOAD', {
-  SUCCESS: (payload: {userId: string; socials: SocialsShare[]}) => payload,
+const SET_SOCIALS = createAction('SOCIALS/SET_SOCIALS', {
+  STATE: (payload: {userId: string; socials: SocialsShare[]}) => payload,
 });
 
 export const SocialsActions = Object.freeze({
-  SOCIALS_LOAD,
+  SET_SOCIALS,
 });

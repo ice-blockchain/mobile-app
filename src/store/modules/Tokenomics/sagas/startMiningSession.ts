@@ -9,7 +9,7 @@ import {dayjs} from '@services/dayjs';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
-import {getSocialsSaga} from '@store/modules/Socials/sagas/getSocials';
+import {shareSocialsSaga} from '@store/modules/Socials/sagas/shareSocials';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {
   agreeWithEarlyAccessSelector,
@@ -36,7 +36,7 @@ export function* startMiningSessionSaga(
   /**
    * Check if we can show mining popup before we start/resume mining
    */
-  yield call(getSocialsSaga);
+  yield call(shareSocialsSaga);
 
   const userId: ReturnType<typeof userIdSelector> = yield select(
     userIdSelector,

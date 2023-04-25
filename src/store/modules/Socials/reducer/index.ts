@@ -12,7 +12,7 @@ interface State {
   };
 }
 
-type Actions = ReturnType<typeof SocialsActions.SOCIALS_LOAD.SUCCESS.create>;
+type Actions = ReturnType<typeof SocialsActions.SET_SOCIALS.STATE.create>;
 
 const INITIAL_STATE: State = {
   items: {},
@@ -21,7 +21,7 @@ const INITIAL_STATE: State = {
 function reducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
-      case SocialsActions.SOCIALS_LOAD.SUCCESS.type:
+      case SocialsActions.SET_SOCIALS.STATE.type:
         {
           const {userId, socials} = action.payload;
           draft.items[userId] = socials;

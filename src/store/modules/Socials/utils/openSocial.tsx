@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {goBack, navigate} from '@navigation/utils';
+import {navigate} from '@navigation/utils';
 import {PopUpButtonProps} from '@screens/Modals/PopUp/components/PopUpButton';
 import {socialData} from '@store/modules/Socials/data';
 import {SocialType} from '@store/modules/Socials/types';
@@ -25,7 +25,7 @@ export const openSocial = (type: SocialType) => {
     name: 'PopUp',
     params: {
       imageProps: {source: socialData[type].image},
-      imageStyle: {width: rem(230), height: rem(54), marginTop: 0},
+      imageStyle: styles.imageStyle,
       title: socialData[type].title,
       message: (
         <Text style={styles.messageText}>{socialData[type].description}</Text>
@@ -35,15 +35,14 @@ export const openSocial = (type: SocialType) => {
           ...button,
           onPress: () => {
             resultResolve('yes');
-            goBack();
           },
         },
       ],
       dismissOnOutsideTouch: false,
       dismissOnAndroidHardwareBack: false,
-      dismissOnButtonPress: false,
+      dismissOnButtonPress: true,
       showCloseButton: true,
-      onClose: () => resultResolve('no'),
+      onDismiss: () => resultResolve('no'),
     },
   });
 
@@ -66,5 +65,10 @@ const styles = StyleSheet.create({
     ...font(14, 20, 'medium', 'secondary', 'center'),
     marginTop: rem(16),
     marginHorizontal: rem(45),
+  },
+  imageStyle: {
+    width: rem(230),
+    height: rem(54),
+    marginTop: 0,
   },
 });
