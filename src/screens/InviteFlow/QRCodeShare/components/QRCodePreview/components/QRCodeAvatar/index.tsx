@@ -2,8 +2,7 @@
 
 import {Avatar} from '@components/Avatar/Avatar';
 import {COLORS} from '@constants/colors';
-import {PrivacyButton} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/QRCodeAvatar/components/PrivacyButton';
-import React, {useState} from 'react';
+import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
@@ -12,10 +11,10 @@ const AVATAR_BORDER_RADIUS = rem(24);
 
 type Props = {
   uri: string;
+  isShown: boolean;
 };
 
-export const QRCodeAvatar = ({uri}: Props) => {
-  const [isShown, setIsShown] = useState(true);
+export const QRCodeAvatar = ({uri, isShown}: Props) => {
   return (
     <View style={styles.container}>
       {isShown ? (
@@ -28,7 +27,6 @@ export const QRCodeAvatar = ({uri}: Props) => {
       ) : (
         <View style={[styles.avatar, styles.stub]} />
       )}
-      <PrivacyButton isShown={isShown} onPress={() => setIsShown(s => !s)} />
     </View>
   );
 };

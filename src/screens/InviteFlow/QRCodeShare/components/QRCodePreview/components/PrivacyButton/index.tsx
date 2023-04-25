@@ -6,21 +6,22 @@ import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
 import {ClosedPrivacyIcon} from '@svg/ClosedPrivacyIcon';
 import {OpenedPrivacyIcon} from '@svg/OpenedPrivacyIcon';
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleProp, StyleSheet, View, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
 
 const SIZE = rem(24);
 
 type Props = {
   onPress: () => void;
-  isShown: boolean;
+  isClosed: boolean;
+  style?: StyleProp<ViewStyle>;
 };
 
-export const PrivacyButton = ({onPress, isShown}: Props) => {
+export const PrivacyButton = ({onPress, isClosed, style}: Props) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       <Touchable onPress={onPress} hitSlop={SMALL_BUTTON_HIT_SLOP}>
-        {isShown ? (
+        {isClosed ? (
           <ClosedPrivacyIcon
             width={rem(15)}
             height={rem(15)}
