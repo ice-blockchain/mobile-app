@@ -150,14 +150,7 @@ export const PopUp = () => {
               ))}
             </View>
           )}
-          {showCloseButton && (
-            <CloseButton
-              style={styles.closeButton}
-              onPress={() => {
-                onDismiss?.();
-              }}
-            />
-          )}
+          {showCloseButton && <CloseButton style={styles.closeButton} />}
         </View>
       </View>
     </TouchableWithoutFeedback>
