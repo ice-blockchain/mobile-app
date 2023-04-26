@@ -66,7 +66,9 @@
     "disable": "Disable",
     "agree": "I Agree",
     "learn_more": "Learn More",
-    "back_to_login": "Back to Login"
+    "back_to_login": "Back to Login",
+    "follow_us": "Follow Us",
+    "subscribe": "Subscribe"
   },
   "team": {
     "contacts_tab": "Contacts",
@@ -870,5 +872,29 @@
   },
   "qr_code": {
     "description": "Scan QR code to join my team"
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Join us on TikTok",
+      "description_part1": "We just wanted to reach out and let you know about our exciting new community on TikTok. We're sharing fun and informative content about our digital currency, ice, and we would love for you to join us!"
+    },
+    "youtube": {
+      "title": "Join us on YouTube",
+      "description_part1": "From tutorials on how to mine ice, to updates about new features, and even fun community content, our YouTube channel is the perfect place to stay up-to-date on all things ice."
+    },
+    "linkedin": {
+      "title": "Join us on LinkedIn",
+      "description_part1": "Joining the ice community on LinkedIn is a great way to stay informed about the latest developments and to connect with like-minded individuals who are just as passionate about the future of digital currencies as you are."
+    },
+    "facebook": {
+      "title": "Join us on Facebook",
+      "description_part1": "We highly recommend giving our Facebook page a follow.",
+      "description_part2": "Not only will it help you stay up to date on everything that’s happening with the ice project, but it’s also a great way to connect with our community and be a part of the conversation"
+    },
+    "instagram": {
+      "title": "Join us on Instagram",
+      "description_part1": "Following us on Instagram is a great way to stay in the loop and connect with other users who are also passionate about ice.",
+      "description_part2": "Plus, you'll be the first to know about any new features or promotions that we're launching."
+    }
   }
 }

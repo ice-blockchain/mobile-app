@@ -50,6 +50,8 @@ export type Translations = {
   'button.agree': null;
   'button.learn_more': null;
   'button.back_to_login': null;
+  'button.follow_us': null;
+  'button.subscribe': null;
   'team.contacts_tab': null;
   'team.tierOne_tab': null;
   'team.tierTwo_tab': null;
@@ -574,4 +576,16 @@ export type Translations = {
   'mining_notice.message': null;
   'mining_notice.message_footer': null;
   'qr_code.description': null;
+  'social_media.tiktok.title': null;
+  'social_media.tiktok.description_part1': null;
+  'social_media.youtube.title': null;
+  'social_media.youtube.description_part1': null;
+  'social_media.linkedin.title': null;
+  'social_media.linkedin.description_part1': null;
+  'social_media.facebook.title': null;
+  'social_media.facebook.description_part1': null;
+  'social_media.facebook.description_part2': null;
+  'social_media.instagram.title': null;
+  'social_media.instagram.description_part1': null;
+  'social_media.instagram.description_part2': null;
 };

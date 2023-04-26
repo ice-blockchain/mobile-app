@@ -103,4 +103,11 @@ export const Images = {
     sms: require('./share/sms.png'),
     shareProviders: require('./share/share_providers.png'),
   },
+  social: {
+    tiktok: require('./social/tiktok.png'),
+    youtube: require('./social/youtube.png'),
+    linkedin: require('./social/linkedin.png'),
+    facebook: require('./social/facebook.png'),
+    instagram: require('./social/instagram.png'),
+  },
 } as const;
