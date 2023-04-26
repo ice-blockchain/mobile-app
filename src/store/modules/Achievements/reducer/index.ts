@@ -7,7 +7,7 @@ import {AchievementsActions} from '@store/modules/Achievements/actions';
 import produce from 'immer';
 
 interface State {
-  tasks: Task[];
+  tasks: Task[] | null;
   items: {
     [userId: string]: Achievements;
   };
@@ -22,7 +22,7 @@ type Actions = ReturnType<
 >;
 
 const INITIAL_STATE: State = {
-  tasks: [],
+  tasks: null,
   items: {},
 };
 

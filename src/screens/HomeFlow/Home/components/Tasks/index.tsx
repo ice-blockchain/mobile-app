@@ -9,6 +9,7 @@ import {
   ITEM_LEFT_POSITION,
   TaskItem,
 } from '@screens/HomeFlow/Home/components/Tasks/components/TaskItem';
+import {TasksSkeleton} from '@screens/HomeFlow/Home/components/Tasks/components/TasksSkeleton';
 import {useTasks} from '@screens/HomeFlow/Home/components/Tasks/hooks/useTasks';
 import {t} from '@translations/i18n';
 import React, {memo, useEffect, useMemo, useState} from 'react';
@@ -41,7 +42,7 @@ export const Tasks = memo(({highlightActiveTask}: Props) => {
   const countCompletedItemsBeforeCurrentActive =
     areAllTasksCompleted && isExpanded
       ? countCompletedItems
-      : tasks.findIndex(task => !task.completed) + 1;
+      : (tasks?.findIndex(task => !task.completed) ?? -1) + 1;
 
   const itemsContainerStyle = useAnimatedStyle(() => {
     return {
@@ -63,7 +64,7 @@ export const Tasks = memo(({highlightActiveTask}: Props) => {
 
   const completedByIndex = useMemo(() => {
     const result = [0];
-    tasks.forEach((_task, index) => {
+    tasks?.forEach((_task, index) => {
       if (index === 0) {
         return;
       }
@@ -75,48 +76,56 @@ export const Tasks = memo(({highlightActiveTask}: Props) => {
   return (
     <>
       <SectionHeader title={t('home.tasks.achievements')} />
-
       <View style={styles.container}>
-        <View style={styles.upcomingTasksLine} />
-        <View
-          style={[
-            styles.finishedTasksLine,
-            {
-              height:
-                ITEM_HEIGHT * (countCompletedItemsBeforeCurrentActive + 0.5),
-            },
-          ]}
-        />
+        {tasks ? (
+          <>
+            <View style={styles.upcomingTasksLine} />
+            <View
+              style={[
+                styles.finishedTasksLine,
+                {
+                  height:
+                    ITEM_HEIGHT *
+                    (countCompletedItemsBeforeCurrentActive + 0.5),
+                },
+              ]}
+            />
 
-        {areAllTasksCompleted ? (
-          <CompletedItem
-            onPress={handleCompletedPress}
-            isExpanded={isExpanded}
-          />
-        ) : (
-          <ProgressItem completed={countCompletedItems} total={tasks.length} />
-        )}
-
-        <Animated.View
-          style={[
-            styles.itemsContainer,
-            !!itemsContainerHeight && itemsContainerStyle,
-          ]}
-          onLayout={onItemsContainerLayout}>
-          {tasks.map((task, index) => {
-            const allBeforeCompleted = completedByIndex[index] === index;
-
-            return (
-              <TaskItem
-                key={task.type}
-                task={task}
-                highlightActiveTask={highlightActiveTask}
-                active={index === currentActiveTaskIndex}
-                areAllBeforeCompleted={allBeforeCompleted}
+            {areAllTasksCompleted ? (
+              <CompletedItem
+                onPress={handleCompletedPress}
+                isExpanded={isExpanded}
               />
-            );
-          })}
-        </Animated.View>
+            ) : (
+              <ProgressItem
+                completed={countCompletedItems}
+                total={tasks.length}
+              />
+            )}
+
+            <Animated.View
+              style={[
+                styles.itemsContainer,
+                !!itemsContainerHeight && itemsContainerStyle,
+              ]}
+              onLayout={onItemsContainerLayout}>
+              {tasks.map((task, index) => {
+                const allBeforeCompleted = completedByIndex[index] === index;
+                return (
+                  <TaskItem
+                    key={task.type}
+                    task={task}
+                    highlightActiveTask={highlightActiveTask}
+                    active={index === currentActiveTaskIndex}
+                    areAllBeforeCompleted={allBeforeCompleted}
+                  />
+                );
+              })}
+            </Animated.View>
+          </>
+        ) : (
+          <TasksSkeleton />
+        )}
       </View>
     </>
   );
@@ -124,7 +133,7 @@ export const Tasks = memo(({highlightActiveTask}: Props) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: rem(11),
+    marginTop: rem(20),
   },
   finishedTasksLine: {
     position: 'absolute',

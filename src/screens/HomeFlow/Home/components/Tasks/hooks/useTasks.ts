@@ -10,16 +10,16 @@ import {useDispatch, useSelector} from 'react-redux';
 export function useTasks() {
   const dispatch = useDispatch();
 
-  const [currentTasks, setCurrentTasks] = useState<Task[]>([]);
+  const [currentTasks, setCurrentTasks] = useState<Task[] | null>([]);
 
   const tasks: ReturnType<typeof AchievementsSelectors.getTasks> = useSelector(
     AchievementsSelectors.getTasks,
   );
 
   useEffect(() => {
-    if (tasks.length === 0) {
+    if (!tasks) {
       dispatch(AchievementsActions.TASKS_LOAD.START.create());
-    } else if (currentTasks.length === 0 && tasks.length > 0) {
+    } else if (!currentTasks && tasks.length > 0) {
       setCurrentTasks(tasks);
     }
   }, [dispatch, tasks, currentTasks]);
@@ -34,17 +34,15 @@ export function useTasks() {
   );
 
   const currentActiveTaskIndex = useMemo(() => {
-    return currentTasks.findIndex(task => !task.completed);
+    return currentTasks?.findIndex(task => !task.completed) ?? -1;
   }, [currentTasks]);
 
   const countCompletedItems = useMemo(() => {
-    return currentTasks.slice(0, currentActiveTaskIndex).length;
+    return currentTasks?.slice(0, currentActiveTaskIndex).length ?? 0;
   }, [currentActiveTaskIndex, currentTasks]);
 
   const areAllTasksCompleted = useMemo(() => {
-    return (
-      currentTasks.length > 0 && currentTasks.every(task => task.completed)
-    );
+    return currentTasks?.every(task => task.completed) ?? false;
   }, [currentTasks]);
 
   return {
