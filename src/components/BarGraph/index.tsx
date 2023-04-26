@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Bar} from '@components/BarGraph/components/Bar';
+import {HorizontalBar} from '@components/BarGraph/components/HorizontalBar';
 import {BarGraphData} from '@components/BarGraph/types';
 import {useScreenTransitionEnd} from '@navigation/hooks/useScreenTransitionEnd';
 import {formatNumber} from '@utils/numbers';
@@ -77,7 +77,7 @@ export const BarItem = memo(
     return (
       <View style={styles.row} key={`${label}${value}`}>
         <Text style={styles.yAxisText}>{label}</Text>
-        <Bar
+        <HorizontalBar
           maxValue={maxValue}
           maxWidth={maxWidth}
           value={value}

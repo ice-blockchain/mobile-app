@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {VerticalBar} from '@components/BarGraph/components/VerticalBar';
 import {useGetBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetBarGraphDataForStatsPeriod';
 import {COLORS} from '@constants/colors';
 import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {Images} from '@images';
 import {CardBase} from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
-import {VerticalBar} from '@screens/HomeFlow/Home/components/Overview/components/VerticalBar';
 import {isSplashHiddenSelector} from '@store/modules/AppCommon/selectors';
 import {totalActiveUsersSelector} from '@store/modules/Stats/selectors';
 import {FriendIcon} from '@svg/FriendIcon';

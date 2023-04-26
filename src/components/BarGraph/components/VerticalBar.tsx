@@ -2,8 +2,8 @@
 
 import {COLORS} from '@constants/colors';
 import {font} from '@utils/styles';
-import React, {useEffect, useMemo} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import React, {useEffect} from 'react';
+import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 import Animated, {
   useAnimatedStyle,
   useDerivedValue,
@@ -18,7 +18,7 @@ type Props = {
   active?: boolean;
   showLabel?: boolean;
   isUnited?: boolean;
-  bgColor?: string;
+  barStyle?: StyleProp<ViewStyle>;
 };
 
 export const VerticalBar = ({
@@ -27,7 +27,7 @@ export const VerticalBar = ({
   active = true,
   showLabel = true,
   isUnited = false,
-  bgColor = COLORS.shamrock,
+  barStyle,
 }: Props) => {
   const play = useSharedValue(false);
   const progress = useDerivedValue(() => {
@@ -36,13 +36,6 @@ export const VerticalBar = ({
   const animatedStyle = useAnimatedStyle(() => ({
     height: `${progress.value}%`,
   }));
-  const backgroundColor = useMemo(() => {
-    return {
-      current: {
-        backgroundColor: bgColor,
-      },
-    };
-  }, [bgColor]);
 
   useEffect(() => {
     if (active) {
@@ -56,9 +49,9 @@ export const VerticalBar = ({
       <Animated.View
         style={[
           styles.bar,
-          backgroundColor.current,
           animatedStyle,
           isUnited ? styles.barStyleUnited : styles.barStyle,
+          barStyle,
         ]}
       />
     </View>
@@ -81,6 +74,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'flex-end',
     marginBottom: rem(5),
+    backgroundColor: COLORS.shamrock,
   },
   barStyleUnited: {
     width: rem(10),

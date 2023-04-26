@@ -7,8 +7,8 @@ import {
   CardBaseSkeleton,
 } from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
 import {Tiers} from '@screens/HomeFlow/Home/components/Overview/components/ReferralAcquisitionHistory/components/Tiers';
+import {UnitedVerticalBar} from '@screens/HomeFlow/Home/components/Overview/components/ReferralAcquisitionHistory/components/UnitedVerticalBar';
 import {ReferralsEmptyState} from '@screens/HomeFlow/Home/components/Overview/components/ReferralsEmptyState';
-import {UnitedVerticalBar} from '@screens/HomeFlow/Home/components/Overview/components/UnitedVerticalBar';
 import {dayjs} from '@services/dayjs';
 import {isSplashHiddenSelector} from '@store/modules/AppCommon/selectors';
 import {ReferralsActions} from '@store/modules/Referrals/actions';

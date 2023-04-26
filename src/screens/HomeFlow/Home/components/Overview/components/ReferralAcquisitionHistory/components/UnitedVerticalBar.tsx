@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {VerticalBar} from '@components/BarGraph/components/VerticalBar';
 import {COLORS} from '@constants/colors';
-import {VerticalBar} from '@screens/HomeFlow/Home/components/Overview/components/VerticalBar';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -24,7 +24,7 @@ export const UnitedVerticalBar = ({
           valuePercentage={valuePercentageB2}
           showLabel={false}
           isUnited={true}
-          bgColor={COLORS.white}
+          barStyle={styles.whiteBar}
         />
         <VerticalBar
           valuePercentage={valuePercentageB1}
@@ -44,5 +44,8 @@ const styles = StyleSheet.create({
   },
   label: {
     ...font(8, 9.6, 'medium', 'white', 'center'),
+  },
+  whiteBar: {
+    backgroundColor: COLORS.white,
   },
 });
