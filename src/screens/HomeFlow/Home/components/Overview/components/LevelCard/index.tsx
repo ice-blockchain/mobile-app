@@ -39,6 +39,8 @@ export const LevelCard = forwardRef(
       AchievementsSelectors.getRoleTypeByUserId({userId}),
     );
 
+    const animatedUserLevel = useAnimatedNumber(userLevel, formatNumber);
+
     const animatedUserReferralCount = useAnimatedNumber(
       userReferralCount,
       formatNumber,
@@ -53,7 +55,7 @@ export const LevelCard = forwardRef(
         backgroundImageSource={Images.backgrounds.levelCardBg}
         headerTitle={t(`roles.${roleType}.title`).toUpperCase()}
         headerTitleIcon={<PioneerIcon fill={COLORS.white} />}
-        headerValue={`${t('global.level')} ${userLevel}`}
+        headerValue={`${t('global.level')} ${animatedUserLevel}`}
         isCollapsed={isCollapsed}>
         {isSplashHidden && (
           <>
