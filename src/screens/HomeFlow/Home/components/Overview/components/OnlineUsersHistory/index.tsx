@@ -43,6 +43,10 @@ export const OnlineUsersHistory = () => {
   const stepValue = data.length ? Math.ceil(maxValue / NUMBER_OF_STEPS_Y) : 0;
   const lastXValue = stepValue * NUMBER_OF_STEPS_Y;
 
+  if (!isSplashHidden) {
+    return null;
+  }
+
   return (
     <CardBase
       backgroundImageSource={Images.backgrounds.adoptionCardBg}
@@ -50,38 +54,36 @@ export const OnlineUsersHistory = () => {
       headerTitleIcon={<GraphIcon fill={COLORS.white} />}
       headerValue={animatedTotalActiveUsers}
       headerValueIcon={<FriendIcon fill={COLORS.shamrock} />}>
-      {isSplashHidden && (
-        <View style={styles.body}>
-          <View style={styles.yAxis}>
-            {Array(NUMBER_OF_STEPS_Y)
-              .fill('')
-              .map((_, i) => {
-                const currentValue = stepValue * i ? stepValue * i : minValue;
-                return (
-                  <Text key={i} style={styles.yAxisText}>
-                    {formatNumber(currentValue, {
-                      minimumFractionDigits: 0,
-                      maximumFractionDigits: 1,
-                      notation: 'compact',
-                    })}
-                  </Text>
-                );
-              })}
-          </View>
-          {data
-            .map(({label, value}, index) => {
+      <View style={styles.body}>
+        <View style={styles.yAxis}>
+          {Array(NUMBER_OF_STEPS_Y)
+            .fill('')
+            .map((_, i) => {
+              const currentValue = stepValue * i ? stepValue * i : minValue;
               return (
-                <View key={`${label}_${index}`} style={styles.column}>
-                  <VerticalBar
-                    valuePercentage={(value * 100) / lastXValue}
-                    label={label}
-                  />
-                </View>
+                <Text key={i} style={styles.yAxisText}>
+                  {formatNumber(currentValue, {
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 1,
+                    notation: 'compact',
+                  })}
+                </Text>
               );
-            })
-            .reverse()}
+            })}
         </View>
-      )}
+        {data
+          .map(({label, value}, index) => {
+            return (
+              <View key={`${label}_${index}`} style={styles.column}>
+                <VerticalBar
+                  valuePercentage={(value * 100) / lastXValue}
+                  label={label}
+                />
+              </View>
+            );
+          })
+          .reverse()}
+      </View>
     </CardBase>
   );
 };

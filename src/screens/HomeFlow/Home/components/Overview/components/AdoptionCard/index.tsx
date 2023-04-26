@@ -11,6 +11,7 @@ import {
 } from '@screens/HomeFlow/Home/components/Overview/components/AdoptionCard/components/LevelRow';
 import {
   CARD_WIDTH,
+  CardBaseSkeleton,
   CARDS_COLLAPSED_HEIGHT,
   CARDS_TOTAL_HEIGHT,
 } from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
@@ -171,6 +172,14 @@ export const AdoptionCard = ({isCollapsed, onPress}: AdoptionCardProps) => {
     [activeIndex, sharedItems, adoption?.milestones, isCollapsed, onPress],
   );
 
+  if (!isSplashHidden) {
+    return null;
+  }
+
+  if (!adoption) {
+    return <CardBaseSkeleton />;
+  }
+
   return (
     <View style={styles.cardContainer}>
       <Image
@@ -178,51 +187,45 @@ export const AdoptionCard = ({isCollapsed, onPress}: AdoptionCardProps) => {
         resizeMode={'cover'}
         style={styles.backgroundImage}
       />
-      {isSplashHidden && adoption && (
-        <>
-          <View style={[styles.scrollAbsoluteContainer, styles.card]}>
-            <Animated.FlatList
-              ref={refFlatList}
-              style={[styles.scrollContainer, animatedStyleFlatList]}
-              contentContainerStyle={styles.scrollContentContainerStyle}
-              data={adoption.milestones}
-              renderItem={renderItem}
-              keyExtractor={({milestone}) => milestone.toString()}
-              snapToInterval={VERTICAL_ITEM_PADDING + rem(3.5)}
-              snapToAlignment={'center'}
-              showsVerticalScrollIndicator={false}
-              viewabilityConfigCallbackPairs={
-                viewabilityConfigCallbackPairs.current
-              }
-              onScrollToIndexFailed={onScrollToIndexFailed}
-            />
-          </View>
-          <LinearGradient
-            colors={GRADIENT_COLORS}
-            start={GRADIENT_START}
-            end={GRADIENT_END}
-            style={[styles.gradient, styles.leftGradient]}
-            pointerEvents={'none'}
-          />
-          <LinearGradient
-            colors={GRADIENT_COLORS}
-            start={GRADIENT_START}
-            end={GRADIENT_END}
-            style={[styles.gradient, styles.rightGradient]}
-            pointerEvents={'none'}
-          />
-          <View style={styles.header} pointerEvents={'none'}>
-            <View style={styles.title}>
-              <GraphIcon fill={COLORS.white} />
-              <Text style={styles.titleText}>{t('home.adoption.title')}</Text>
-            </View>
-            <FriendsIcon fill={COLORS.white} />
-            <Text style={styles.valueText}>
-              {animatedAdoptionTotalActiveUsers}
-            </Text>
-          </View>
-        </>
-      )}
+      <View style={[styles.scrollAbsoluteContainer, styles.card]}>
+        <Animated.FlatList
+          ref={refFlatList}
+          style={[styles.scrollContainer, animatedStyleFlatList]}
+          contentContainerStyle={styles.scrollContentContainerStyle}
+          data={adoption.milestones}
+          renderItem={renderItem}
+          keyExtractor={({milestone}) => milestone.toString()}
+          snapToInterval={VERTICAL_ITEM_PADDING + rem(3.5)}
+          snapToAlignment={'center'}
+          showsVerticalScrollIndicator={false}
+          viewabilityConfigCallbackPairs={
+            viewabilityConfigCallbackPairs.current
+          }
+          onScrollToIndexFailed={onScrollToIndexFailed}
+        />
+      </View>
+      <LinearGradient
+        colors={GRADIENT_COLORS}
+        start={GRADIENT_START}
+        end={GRADIENT_END}
+        style={[styles.gradient, styles.leftGradient]}
+        pointerEvents={'none'}
+      />
+      <LinearGradient
+        colors={GRADIENT_COLORS}
+        start={GRADIENT_START}
+        end={GRADIENT_END}
+        style={[styles.gradient, styles.rightGradient]}
+        pointerEvents={'none'}
+      />
+      <View style={styles.header} pointerEvents={'none'}>
+        <View style={styles.title}>
+          <GraphIcon fill={COLORS.white} />
+          <Text style={styles.titleText}>{t('home.adoption.title')}</Text>
+        </View>
+        <FriendsIcon fill={COLORS.white} />
+        <Text style={styles.valueText}>{animatedAdoptionTotalActiveUsers}</Text>
+      </View>
     </View>
   );
 };

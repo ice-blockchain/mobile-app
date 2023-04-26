@@ -4,7 +4,10 @@ import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
 import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {Images} from '@images';
-import {CardBase} from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
+import {
+  CardBase,
+  CardBaseSkeleton,
+} from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {isSplashHiddenSelector} from '@store/modules/AppCommon/selectors';
@@ -48,6 +51,14 @@ export const LevelCard = forwardRef(
 
     const animatedGlobalRank = useAnimatedNumber(globalRank ?? 0, formatNumber);
 
+    if (!isSplashHidden) {
+      return null;
+    }
+
+    if (globalRank == null) {
+      return <CardBaseSkeleton />;
+    }
+
     return (
       <CardBase
         ref={forwardedRef}
@@ -57,39 +68,29 @@ export const LevelCard = forwardRef(
         headerTitleIcon={<PioneerIcon fill={COLORS.white} />}
         headerValue={`${t('global.level')} ${animatedUserLevel}`}
         isCollapsed={isCollapsed}>
-        {isSplashHidden && (
-          <>
-            <View style={styles.body}>
-              <View style={styles.column}>
-                <Text style={styles.labelText}>
-                  {t('home.pioneer.referrals')}
-                </Text>
-                <Text style={styles.valueText}>
-                  {animatedUserReferralCount}
-                </Text>
-              </View>
-              <View style={styles.column}>
-                {globalRank != null && (
-                  <>
-                    <Text style={styles.labelText}>
-                      {t('home.pioneer.rank')}
-                    </Text>
-                    <Text style={styles.valueText}>{animatedGlobalRank}</Text>
-                  </>
-                )}
-              </View>
-            </View>
-            <Text style={styles.noteText}>
-              {replaceString(
-                t('home.pioneer.description'),
-                tagRegex('ice'),
-                (match, index) => (
-                  <IceLabel key={match + index} iconSize={12} />
-                ),
-              )}
-            </Text>
-          </>
-        )}
+        <View style={styles.body}>
+          <View style={styles.column}>
+            <Text style={styles.labelText}>{t('home.pioneer.referrals')}</Text>
+            <Text style={styles.valueText}>{animatedUserReferralCount}</Text>
+          </View>
+          <View style={styles.column}>
+            {globalRank != null && (
+              <>
+                <Text style={styles.labelText}>{t('home.pioneer.rank')}</Text>
+                <Text style={styles.valueText}>{animatedGlobalRank}</Text>
+              </>
+            )}
+          </View>
+        </View>
+        <Text style={styles.noteText}>
+          {replaceString(
+            t('home.pioneer.description'),
+            tagRegex('ice'),
+            (match, index) => (
+              <IceLabel key={match + index} iconSize={12} />
+            ),
+          )}
+        </Text>
       </CardBase>
     );
   },

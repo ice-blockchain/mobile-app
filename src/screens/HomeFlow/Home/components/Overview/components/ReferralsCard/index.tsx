@@ -46,6 +46,10 @@ export const ReferralsCard = ({isCollapsed}: Props) => {
     formatNumber,
   );
 
+  if (!isSplashHidden) {
+    return null;
+  }
+
   return (
     <CardBase
       backgroundImageSource={Images.backgrounds.referralsCardBg}
@@ -54,35 +58,29 @@ export const ReferralsCard = ({isCollapsed}: Props) => {
       headerValue={animatedUserReferralCount}
       headerValueIcon={<FriendsIcon fill={COLORS.white} />}
       isCollapsed={isCollapsed}>
-      {isSplashHidden && (
+      {userReferralCount === 0 ? (
+        <ReferralsEmptyState />
+      ) : (
         <>
-          {userReferralCount === 0 ? (
-            <ReferralsEmptyState />
-          ) : (
-            <>
-              <View style={styles.body}>
-                <View style={styles.column}>
-                  <Text style={styles.labelText}>
-                    {t('home.referrals.users_tier_1')}
-                  </Text>
-                  <Text style={styles.valueText}>
-                    {animatedUserT1ReferralCount}
-                  </Text>
-                </View>
-                <View style={styles.column}>
-                  <Text style={styles.labelText}>
-                    {t('home.referrals.users_tier_2')}
-                  </Text>
-                  <Text style={styles.valueText}>
-                    {animatedUserT2ReferralCount}
-                  </Text>
-                </View>
-              </View>
-              <Text style={styles.noteText}>
-                {t('home.referrals.description')}
+          <View style={styles.body}>
+            <View style={styles.column}>
+              <Text style={styles.labelText}>
+                {t('home.referrals.users_tier_1')}
               </Text>
-            </>
-          )}
+              <Text style={styles.valueText}>
+                {animatedUserT1ReferralCount}
+              </Text>
+            </View>
+            <View style={styles.column}>
+              <Text style={styles.labelText}>
+                {t('home.referrals.users_tier_2')}
+              </Text>
+              <Text style={styles.valueText}>
+                {animatedUserT2ReferralCount}
+              </Text>
+            </View>
+          </View>
+          <Text style={styles.noteText}>{t('home.referrals.description')}</Text>
         </>
       )}
     </CardBase>
