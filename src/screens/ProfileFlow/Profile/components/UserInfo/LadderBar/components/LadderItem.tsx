@@ -3,10 +3,12 @@
 import {HiddenProfileElement} from '@api/user/types';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {useUpdateHiddenProfileElements} from '@store/modules/Account/hooks/useUpdateHiddenProfileElements';
 import {ClosedEye} from '@svg/ClosedEye';
+import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
-import React from 'react';
+import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
@@ -14,65 +16,74 @@ type Props = {
   hidden?: boolean;
   title: string;
   enabled?: boolean;
-  value: string;
+  /**
+   * Integer value to display with animation
+   */
+  value: number;
   isProfilePrivacyEditMode?: boolean;
   privacyType: HiddenProfileElement;
 };
 
-export const LadderItem = ({
-  hidden,
-  title,
-  value,
-  enabled = false,
-  isProfilePrivacyEditMode = false,
-  privacyType,
-}: Props) => {
-  const {onUpdate} = useUpdateHiddenProfileElements();
+export const LadderItem = memo(
+  ({
+    hidden,
+    title,
+    value,
+    enabled = false,
+    isProfilePrivacyEditMode = false,
+    privacyType,
+  }: Props) => {
+    const animatedValue = useAnimatedNumber(value, formatNumber);
 
-  const handlePress = () => {
-    if (enabled) {
-      onUpdate(privacyType);
-    }
-  };
+    const {onUpdate} = useUpdateHiddenProfileElements();
 
-  return (
-    <View
-      style={[
-        styles.outerContainer,
-        isProfilePrivacyEditMode && styles.editModeOuterContainer,
-      ]}>
-      <Touchable
-        onPress={handlePress}
+    const handlePress = () => {
+      if (enabled) {
+        onUpdate(privacyType);
+      }
+    };
+
+    return (
+      <View
         style={[
-          styles.container,
-          isProfilePrivacyEditMode && styles.editModeContainer,
+          styles.outerContainer,
+          isProfilePrivacyEditMode && styles.editModeOuterContainer,
         ]}>
-        <Text
-          style={
-            isProfilePrivacyEditMode
-              ? styles.ladderLabelTextPrivacyEdit
-              : styles.ladderLabelText
-          }>
-          {title}
-        </Text>
-        <View style={styles.ladderItem}>
-          {hidden ? (
-            <View style={styles.hiddenView}>
-              <ClosedEye />
-            </View>
-          ) : (
-            <Text
-              style={
-                isProfilePrivacyEditMode ? styles.textPrivacyEdit : styles.text
-              }>
-              {value}
-            </Text>
-          )}
-        </View>
-      </Touchable>
-    </View>
-  );
-};
+        <Touchable
+          onPress={handlePress}
+          style={[
+            styles.container,
+            isProfilePrivacyEditMode && styles.editModeContainer,
+          ]}>
+          <Text
+            style={
+              isProfilePrivacyEditMode
+                ? styles.ladderLabelTextPrivacyEdit
+                : styles.ladderLabelText
+            }>
+            {title}
+          </Text>
+          <View style={styles.ladderItem}>
+            {hidden ? (
+              <View style={styles.hiddenView}>
+                <ClosedEye />
+              </View>
+            ) : (
+              <Text
+                style={
+                  isProfilePrivacyEditMode
+                    ? styles.textPrivacyEdit
+                    : styles.text
+                }>
+                {animatedValue}
+              </Text>
+            )}
+          </View>
+        </Touchable>
+      </View>
+    );
+  },
+);
 
 const styles = StyleSheet.create({
   outerContainer: {
