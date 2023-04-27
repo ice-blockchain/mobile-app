@@ -5,7 +5,10 @@ import {useGetBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGe
 import {COLORS} from '@constants/colors';
 import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {Images} from '@images';
-import {CardBase} from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
+import {
+  CardBase,
+  CardBaseSkeleton,
+} from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
 import {isSplashHiddenSelector} from '@store/modules/AppCommon/selectors';
 import {totalActiveUsersSelector} from '@store/modules/Stats/selectors';
 import {FriendIcon} from '@svg/FriendIcon';
@@ -45,6 +48,10 @@ export const OnlineUsersHistory = () => {
 
   if (!isSplashHidden) {
     return null;
+  }
+
+  if (!data.length) {
+    return <CardBaseSkeleton />;
   }
 
   return (
