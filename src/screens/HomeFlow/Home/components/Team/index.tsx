@@ -7,7 +7,10 @@ import {useFetchCollection} from '@hooks/useFetchCollection';
 import {MainTabsParamList} from '@navigation/Main';
 import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
 import {useNavigation} from '@react-navigation/native';
-import {TeamMember} from '@screens/HomeFlow/Home/components/Team/components/TeamMember';
+import {
+  TeamMember,
+  TeamMemberSkeleton,
+} from '@screens/HomeFlow/Home/components/Team/components/TeamMember';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {referralsSelector} from '@store/modules/Referrals/selectors';
 import {t} from '@translations/i18n';
@@ -24,6 +27,7 @@ export const Team = memo(() => {
     fetch,
     data: referrals,
     loadNext,
+    hasNext,
     loadNextLoading,
   } = useFetchCollection(
     useMemo(
@@ -44,14 +48,11 @@ export const Team = memo(() => {
     [navigation],
   );
 
-  const renderItem: ListRenderItem<typeof referrals[0]> = useCallback(
-    ({item}) => {
-      return <TeamMember userId={item} />;
-    },
-    [],
-  );
+  const renderItem: ListRenderItem<string | null> = useCallback(({item}) => {
+    return item ? <TeamMember userId={item} /> : <TeamMemberSkeleton />;
+  }, []);
 
-  if (!referrals.length || referrals.length < 2) {
+  if (referrals.length < 2 && !hasNext) {
     return null;
   }
 
@@ -64,7 +65,7 @@ export const Team = memo(() => {
       />
       <FlatList
         horizontal
-        data={referrals}
+        data={referrals.length ? referrals : Array<null>(6).fill(null)}
         renderItem={renderItem}
         ItemSeparatorComponent={renderSeparator}
         ListFooterComponent={
