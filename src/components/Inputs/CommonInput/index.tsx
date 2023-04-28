@@ -14,6 +14,7 @@ import {
   Text,
   TextInput,
   TextInputProps,
+  TextStyle,
   TouchableWithoutFeedback,
   View,
   ViewStyle,
@@ -30,6 +31,7 @@ export type CommonInputProps = TextInputProps & {
   onValueChange?: (v: string) => void;
   onChange?: () => void;
   containerStyle?: StyleProp<ViewStyle>;
+  style?: StyleProp<TextStyle>;
   icon?: ReactNode;
   prefix?: ReactNode;
   postfix?: ReactNode;
@@ -50,6 +52,7 @@ export const CommonInput = ({
   onChangeText,
   containerStyle,
   editable = true,
+  style,
   ...textInputProps
 }: CommonInputProps) => {
   const [isFocused, setIsFocused] = useState(false);
@@ -79,7 +82,7 @@ export const CommonInput = ({
             ) : (
               <TextInput
                 value={value}
-                style={styles.input}
+                style={[styles.input, style]}
                 ref={inputRef}
                 autoCorrect={false}
                 autoComplete={'off'}
