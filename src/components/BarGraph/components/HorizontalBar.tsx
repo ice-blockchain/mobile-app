@@ -21,7 +21,7 @@ type Props = {
   doAnimate: boolean;
 };
 
-export const Bar = ({
+export const HorizontalBar = ({
   maxValue,
   maxWidth,
   value,

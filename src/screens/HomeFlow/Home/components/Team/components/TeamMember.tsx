@@ -11,6 +11,7 @@ import {LogoIcon} from '@svg/LogoIcon';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -18,7 +19,11 @@ interface Props {
   userId: string;
 }
 
+const TEAM_MEMBER_SIZE = rem(60);
+const TEAM_MEMBER_BORDER_RADIUS = rem(20);
 const DEFAULT_ICON_SIZE = rem(22);
+const USERNAME_OFFSET = rem(5);
+const USERNAME_LINE_HEIGHT = 12;
 
 export const TeamMember = memo(({userId}: Props) => {
   const navigation =
@@ -33,8 +38,8 @@ export const TeamMember = memo(({userId}: Props) => {
       <View>
         <Avatar
           uri={profilePictureUrl}
-          size={rem(60)}
-          borderRadius={rem(20)}
+          size={TEAM_MEMBER_SIZE}
+          borderRadius={TEAM_MEMBER_BORDER_RADIUS}
           allowFullScreen={false}
         />
         {!!phoneNumber && (
@@ -50,11 +55,17 @@ export const TeamMember = memo(({userId}: Props) => {
   );
 });
 
+export const TeamMemberSkeleton = () => (
+  <SkeletonPlaceholder borderRadius={TEAM_MEMBER_BORDER_RADIUS}>
+    <View style={styles.skeleton} />
+  </SkeletonPlaceholder>
+);
+
 const styles = StyleSheet.create({
   usernameText: {
-    marginTop: rem(5),
-    width: rem(60),
-    ...font(10, 12, 'medium', 'secondary', 'center'),
+    marginTop: USERNAME_OFFSET,
+    width: TEAM_MEMBER_SIZE,
+    ...font(10, USERNAME_LINE_HEIGHT, 'medium', 'secondary', 'center'),
   },
   friendIcon: {
     position: 'absolute',
@@ -68,5 +79,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.white,
     backgroundColor: COLORS.primaryLight,
+  },
+  skeleton: {
+    width: TEAM_MEMBER_SIZE,
+    height: TEAM_MEMBER_SIZE,
+    marginBottom: USERNAME_OFFSET + rem(USERNAME_LINE_HEIGHT),
   },
 });

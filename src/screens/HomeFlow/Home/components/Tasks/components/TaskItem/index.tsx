@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     height: STEP_ICON_SIZE,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 12,
+    borderRadius: rem(12),
     marginLeft: rem(12),
     marginRight: rem(10),
     marginVertical: ICON_VERTICAL_OFFSET,

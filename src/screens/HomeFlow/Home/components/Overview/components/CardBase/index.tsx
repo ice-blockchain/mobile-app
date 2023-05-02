@@ -11,6 +11,7 @@ import {
   View,
 } from 'react-native';
 import Animated, {useAnimatedStyle, withTiming} from 'react-native-reanimated';
+import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -28,6 +29,7 @@ export const CARDS_TOTAL_HEIGHT = rem(140);
 export const CARDS_COLLAPSED_HEIGHT = rem(42);
 export const CARD_WIDTH = rem(274);
 export const CARD_MARGIN_RIGHT_WIDTH = rem(16);
+export const CARD_BORDER_RADIUS = rem(20);
 
 export const CardBase = forwardRef(
   (
@@ -74,6 +76,14 @@ export const CardBase = forwardRef(
   },
 );
 
+export const CardBaseSkeleton = () => {
+  return (
+    <SkeletonPlaceholder borderRadius={CARD_BORDER_RADIUS}>
+      <View style={styles.skeleton} />
+    </SkeletonPlaceholder>
+  );
+};
+
 const styles = StyleSheet.create({
   container: {
     width: CARD_WIDTH,
@@ -111,5 +121,10 @@ const styles = StyleSheet.create({
   body: {
     flexGrow: 1,
     flexShrink: 0,
+  },
+  skeleton: {
+    width: CARD_WIDTH,
+    height: CARDS_TOTAL_HEIGHT,
+    marginRight: CARD_MARGIN_RIGHT_WIDTH,
   },
 });

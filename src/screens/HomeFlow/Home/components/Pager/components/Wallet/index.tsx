@@ -4,6 +4,7 @@ import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {PAGE_HEIGHT} from '@screens/HomeFlow/Home/components/Pager';
+import {PageSkeleton} from '@screens/HomeFlow/Home/components/Pager/components/PageSkeleton';
 import {BalanceHistoryButton} from '@screens/HomeFlow/Home/components/Pager/components/Wallet/components/BalanceHistoryButton';
 import {useBalanceHistoryWalkthrough} from '@screens/HomeFlow/Home/components/Pager/components/Wallet/hooks/useBalanceHistoryWalkthrough';
 import {
@@ -35,8 +36,7 @@ export const Wallet = memo(({darkMode}: Props) => {
   const {elementRef, onElementLayout} = useBalanceHistoryWalkthrough();
 
   if (!balanceSummary || !miningRates) {
-    //TODO: add loading
-    return null;
+    return <PageSkeleton />;
   }
 
   return (

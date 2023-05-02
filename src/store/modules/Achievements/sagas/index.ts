@@ -3,6 +3,7 @@
 import {AccountActions} from '@store/modules/Account/actions';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {loadAllBadges} from '@store/modules/Achievements/sagas/loadAllBadgesSaga';
+import {loadTasksSaga} from '@store/modules/Achievements/sagas/loadTasksSaga';
 import {loadUserAchievements} from '@store/modules/Achievements/sagas/loadUserAchievements';
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
@@ -14,7 +15,6 @@ import {completeJoinTelegramTaskSaga} from './completeJoinTelegramTaskSaga';
 import {completeStartMiningTaskSaga} from './completeStartMiningTaskSaga';
 import {completeUploadProfileTaskSaga} from './completeUploadProfileTaskSaga';
 import {loadLevelsAndRolesSaga} from './loadLevelsAndRolesSaga';
-import {loadTasksSaga} from './loadTasksSaga';
 import {taskMarkCompletedSaga} from './taskMarkCompletedSaga';
 
 export function* rootAchievementsSaga() {
@@ -26,7 +26,6 @@ export function* rootAchievementsSaga() {
       ],
       loadLevelsAndRolesSaga,
     ),
-
     takeLeading(AchievementsActions.TASKS_LOAD.START.type, loadTasksSaga),
     takeLeading(
       AchievementsActions.TASK_MARK_COMPLETED.START.type,

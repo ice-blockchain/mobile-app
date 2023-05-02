@@ -13,7 +13,7 @@ interface Options {
 const selector = createSelector(
   [getTasks, (_state: RootState, {type}: Options) => type],
   (tasks, type) => {
-    return tasks.find(task => task.type === type);
+    return tasks?.find(task => task.type === type);
   },
 );
 
