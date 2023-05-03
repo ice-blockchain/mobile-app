@@ -15,3 +15,7 @@ export type SocialsShare = {
   dateToShow: string;
   shared: boolean;
 };
+
+export type SocialsShareResult = {
+  status: 'opened' | 'closed' | 'skipped';
+};

@@ -33,10 +33,15 @@ const UPDATE_SPLASH_VISIBLE_STATE = createAction(
   },
 );
 
+const UPDATE_FORCE_START_MINING = createAction('UPDATE_FORCE_START_MINING', {
+  STATE: (payload: {forceStartMining: boolean}) => payload,
+});
+
 export const AppCommonActions = Object.freeze({
   APP_LOADED,
   APP_INITIALIZED,
   APP_STATE_CHANGE,
   INTERVAL_UPDATE,
   UPDATE_SPLASH_VISIBLE_STATE,
+  UPDATE_FORCE_START_MINING,
 });

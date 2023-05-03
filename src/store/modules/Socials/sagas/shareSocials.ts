@@ -82,5 +82,14 @@ export function* shareSocialsSaga() {
     }),
   );
 
-  yield call(openSocialSaga, typeToShow);
+  if (typeToShow) {
+    const result: ReturnType<typeof openSocialSaga> = yield call(
+      openSocialSaga,
+      typeToShow,
+    );
+
+    return result;
+  } else {
+    return {status: 'skipped'};
+  }
 }

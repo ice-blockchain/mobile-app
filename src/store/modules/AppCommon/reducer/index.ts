@@ -7,6 +7,7 @@ export interface State {
   appInitState: 'loading' | 'success' | 'error';
   appState: AppStateType | null;
   isSplashHidden: boolean;
+  forceStartMining: boolean;
 }
 
 type Actions = ReturnType<
@@ -15,6 +16,7 @@ type Actions = ReturnType<
   | typeof AppCommonActions.APP_INITIALIZED.FAILED.create
   | typeof AppCommonActions.APP_STATE_CHANGE.STATE.create
   | typeof AppCommonActions.UPDATE_SPLASH_VISIBLE_STATE.HIDE.create
+  | typeof AppCommonActions.UPDATE_FORCE_START_MINING.STATE.create
 >;
 
 const INITIAL_STATE: State = {
@@ -22,6 +24,7 @@ const INITIAL_STATE: State = {
   appInitState: 'loading',
   appState: 'active',
   isSplashHidden: false,
+  forceStartMining: false,
 };
 
 export function appCommonReducer(
@@ -44,6 +47,9 @@ export function appCommonReducer(
         break;
       case AppCommonActions.UPDATE_SPLASH_VISIBLE_STATE.HIDE.type:
         draft.isSplashHidden = true;
+        break;
+      case AppCommonActions.UPDATE_FORCE_START_MINING.STATE.type:
+        draft.forceStartMining = action.payload.forceStartMining;
         break;
     }
   });

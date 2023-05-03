@@ -9,7 +9,10 @@ import {dayjs} from '@services/dayjs';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
+import {AppCommonActions} from '@store/modules/AppCommon/actions';
+import {forceStartMiningSelector} from '@store/modules/AppCommon/selectors';
 import {shareSocialsSaga} from '@store/modules/Socials/sagas/shareSocials';
+import {SocialsShareResult} from '@store/modules/Socials/types';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {
   agreeWithEarlyAccessSelector,
@@ -32,11 +35,30 @@ export function* startMiningSessionSaga(
     yield call(openMiningNotice);
     return;
   }
+  const forceStartMining: ReturnType<typeof forceStartMiningSelector> =
+    yield select(forceStartMiningSelector);
 
-  /**
-   * Check if we can show mining popup before we start/resume mining
-   */
-  yield call(shareSocialsSaga);
+  if (forceStartMining) {
+    yield put(
+      AppCommonActions.UPDATE_FORCE_START_MINING.STATE.create({
+        forceStartMining: false,
+      }),
+    );
+  } else {
+    /**
+     * Check if we can show mining popup before we start/resume mining
+     */
+    const result: SocialsShareResult = yield call(shareSocialsSaga);
+
+    if (result.status === 'opened') {
+      yield put(
+        AppCommonActions.UPDATE_FORCE_START_MINING.STATE.create({
+          forceStartMining: true,
+        }),
+      );
+      return;
+    }
+  }
 
   const userId: ReturnType<typeof userIdSelector> = yield select(
     userIdSelector,

@@ -28,3 +28,6 @@ export const initSuccessSelector = (state: RootState) => {
 };
 export const isSplashHiddenSelector = (state: RootState) =>
   state.appCommon.isSplashHidden;
+
+export const forceStartMiningSelector = (state: RootState) =>
+  state.appCommon.forceStartMining;
