@@ -22,39 +22,49 @@ export const useAnimatedStyles = ({
   step: WalkthroughStep | undefined;
   elementHeight: number | undefined;
 }) => {
-  const opacity = useSharedValue(0);
+  const elementOpacity = useSharedValue(0);
+  const circleOpacity = useSharedValue(0);
 
   const elementAnimatedStyle = useAnimatedStyle(() => ({
-    opacity: opacity.value,
+    opacity: elementOpacity.value,
   }));
   const circleAnimatedStyle = useAnimatedStyle(() => ({
-    opacity: opacity.value,
+    opacity: circleOpacity.value,
   }));
 
   useEffect(() => {
     return () => {
-      cancelAnimation(opacity);
+      cancelAnimation(elementOpacity);
+      cancelAnimation(circleOpacity);
     };
-  }, [opacity]);
+  }, [circleOpacity, elementOpacity]);
 
   useEffect(() => {
     if (elementHeight) {
-      cancelAnimation(opacity);
-      opacity.value = withDelay(
+      cancelAnimation(elementOpacity);
+      cancelAnimation(circleOpacity);
+      elementOpacity.value = withDelay(
         ANIMATION_DELAY,
-        withTiming(1, ANIMATION_CONFIG),
+        withTiming(1, ANIMATION_CONFIG, () => {
+          circleOpacity.value = withDelay(
+            ANIMATION_DELAY,
+            withTiming(1, ANIMATION_CONFIG),
+          );
+        }),
       );
     }
-  }, [elementHeight, opacity, step]);
+  }, [circleOpacity, elementHeight, elementOpacity, step]);
 
   const runCloseAnimation = useCallback(
     (cb: () => void) => {
-      cancelAnimation(opacity);
-      opacity.value = withTiming(0, ANIMATION_CONFIG, () => {
+      cancelAnimation(elementOpacity);
+      cancelAnimation(circleOpacity);
+      circleOpacity.value = withTiming(0, ANIMATION_CONFIG);
+      elementOpacity.value = withTiming(0, ANIMATION_CONFIG, () => {
         runOnJS(cb)();
       });
     },
-    [opacity],
+    [elementOpacity, circleOpacity],
   );
 
   return {elementAnimatedStyle, circleAnimatedStyle, runCloseAnimation};
