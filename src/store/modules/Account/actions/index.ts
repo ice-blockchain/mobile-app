@@ -44,8 +44,11 @@ const SIGN_IN_EMAIL_PASSWORD = createAction('SIGN_IN_EMAIL_PASSWORD', {
 });
 
 const SIGN_IN_PHONE = createAction('SIGN_IN_PHONE', {
-  START: (phoneNumber: string) => ({phoneNumber}),
-  SET_TEMP_PHONE: (phoneNumber: string) => ({phoneNumber}),
+  START: (phoneNumber: string, isoCode: string) => ({phoneNumber, isoCode}),
+  SET_TEMP_PHONE_AND_ISO: (phoneNumber: string, isoCode: string) => ({
+    phoneNumber,
+    isoCode,
+  }),
   RESEND: true,
   RESEND_SUCCESS: true,
   CONFIRM_TEMP_PHONE: (code: string) => ({code}),

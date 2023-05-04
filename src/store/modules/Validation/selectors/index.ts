@@ -5,6 +5,9 @@ import {RootState} from '@store/rootReducer';
 export const temporaryPhoneNumberSelector = (state: RootState) =>
   state.validation.temporaryPhoneNumber;
 
+export const temporaryCountryIsoSelector = (state: RootState) =>
+  state.validation.temporaryPhoneIsoCode;
+
 export const temporaryVerificationIdSelector = (state: RootState) =>
   state.validation.temporaryVerificationId;
 
