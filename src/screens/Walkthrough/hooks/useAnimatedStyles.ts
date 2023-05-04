@@ -43,15 +43,12 @@ export const useAnimatedStyles = ({
     if (elementHeight) {
       cancelAnimation(elementOpacity);
       cancelAnimation(circleOpacity);
-      elementOpacity.value = withDelay(
-        ANIMATION_DELAY,
-        withTiming(1, ANIMATION_CONFIG, () => {
-          circleOpacity.value = withDelay(
-            ANIMATION_DELAY,
-            withTiming(1, ANIMATION_CONFIG),
-          );
-        }),
-      );
+      elementOpacity.value = withTiming(1, ANIMATION_CONFIG, () => {
+        circleOpacity.value = withDelay(
+          ANIMATION_DELAY,
+          withTiming(1, ANIMATION_CONFIG),
+        );
+      });
     }
   }, [circleOpacity, elementHeight, elementOpacity, step]);
 
@@ -59,13 +56,9 @@ export const useAnimatedStyles = ({
     (cb: () => void) => {
       cancelAnimation(elementOpacity);
       cancelAnimation(circleOpacity);
-      circleOpacity.value = withTiming(0, ANIMATION_CONFIG, () => {
-        elementOpacity.value = withDelay(
-          ANIMATION_DELAY,
-          withTiming(0, ANIMATION_CONFIG, () => {
-            runOnJS(cb)();
-          }),
-        );
+      circleOpacity.value = withTiming(0, ANIMATION_CONFIG);
+      elementOpacity.value = withTiming(0, ANIMATION_CONFIG, () => {
+        runOnJS(cb)();
       });
     },
     [elementOpacity, circleOpacity],
