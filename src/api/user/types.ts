@@ -25,6 +25,7 @@ export type User = {
 
   phoneNumber?: string | null;
   phoneNumberHash?: string | null;
+  phoneNumberIso?: string | null;
 
   profilePicture?: {
     uri: string;

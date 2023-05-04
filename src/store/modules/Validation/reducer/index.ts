@@ -9,7 +9,7 @@ export type TemporaryPhoneVerificationStepType = 'phone' | 'code';
 
 export interface State {
   temporaryPhoneNumber: string | null;
-  temporaryPhoneIsoCode: string | null;
+  temporaryPhoneNumberIso: string | null;
   temporaryVerificationId: string | null;
   temporaryEmail: string | null;
   temporaryPhoneVerificationStep: TemporaryPhoneVerificationStepType;
@@ -42,7 +42,7 @@ type Actions = ReturnType<
 
 const INITIAL_STATE: State = {
   temporaryPhoneNumber: null,
-  temporaryPhoneIsoCode: null,
+  temporaryPhoneNumberIso: null,
   temporaryVerificationId: null,
   temporaryEmail: null,
   smsSentTimestamp: null,
@@ -59,7 +59,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         break;
       case AccountActions.SIGN_IN_PHONE.SET_TEMP_PHONE_AND_ISO.type:
         draft.temporaryPhoneNumber = action.payload.phoneNumber;
-        draft.temporaryPhoneIsoCode = action.payload.isoCode;
+        draft.temporaryPhoneNumberIso = action.payload.isoCode;
         draft.temporaryPhoneVerificationStep = 'code';
         draft.smsSentTimestamp = dayjs().valueOf();
         break;

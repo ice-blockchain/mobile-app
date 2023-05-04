@@ -11,6 +11,7 @@ import {
   userSelector,
 } from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
+import {temporaryPhoneNumberIsoSelector} from '@store/modules/Validation/selectors';
 import {t} from '@translations/i18n';
 import {getErrorMessage, showError} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
@@ -38,11 +39,15 @@ export function* userStateChangeSaga() {
       }
 
       if (user === null) {
+        let phoneNumberIso: ReturnType<typeof temporaryPhoneNumberIsoSelector> =
+          yield select(temporaryPhoneNumberIsoSelector);
+
         user = yield call(createUser, {
           email: authenticatedUser.email,
           phoneNumber: authenticatedUser.phoneNumber,
           firstName: userInfo?.firstName ?? null,
           lastName: userInfo?.lastName ?? null,
+          phoneNumberIso: phoneNumberIso ?? null,
         });
         yield put(AnalyticsActions.TRACK_SIGN_UP.SUCCESS.create());
 
@@ -101,11 +106,13 @@ function* createUser({
   phoneNumber,
   firstName,
   lastName,
+  phoneNumberIso,
 }: {
   email: string | null;
   phoneNumber: string | null;
   firstName: string | null;
   lastName: string | null;
+  phoneNumberIso: string | null;
 }) {
   const appLocale: SagaReturnType<typeof appLocaleSelector> = yield select(
     appLocaleSelector,
@@ -132,6 +139,7 @@ function* createUser({
       phoneNumber: normalizedNumber,
       phoneNumberHash,
       language: appLocale,
+      phoneNumberIso,
     },
   );
 
