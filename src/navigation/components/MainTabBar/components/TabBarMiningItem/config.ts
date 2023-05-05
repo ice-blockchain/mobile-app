@@ -29,8 +29,6 @@ export const MiningButtonConfig: {
     tooltip: t('tabbar.mining_inactive_tooltip'),
     onTap: {
       startMining: true,
-      audioFeedback: loadLocalAudio(LocalAudio.startMining),
-      hapticFeedback: true,
     },
   },
   active: {

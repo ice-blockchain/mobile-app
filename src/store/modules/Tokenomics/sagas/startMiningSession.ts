@@ -3,8 +3,10 @@
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {ResurrectRequiredData} from '@api/tokenomics/types';
+import {LocalAudio} from '@audio';
 import {ENV} from '@constants/env';
 import {navigationRef} from '@navigation/utils';
+import {loadLocalAudio} from '@services/audio';
 import {dayjs} from '@services/dayjs';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
@@ -23,6 +25,7 @@ import {openConfirmResurrectNo} from '@store/modules/Tokenomics/utils/openConfir
 import {openConfirmResurrectYes} from '@store/modules/Tokenomics/utils/openConfirmResurrectYes';
 import {openEarlyAccess} from '@store/modules/Tokenomics/utils/openEarlyAccess';
 import {openMiningNotice} from '@store/modules/Tokenomics/utils/openMiningNotice';
+import {hapticFeedback} from '@utils/device';
 import {getErrorMessage, showError} from '@utils/errors';
 import {call, delay, put, SagaReturnType, select} from 'redux-saga/effects';
 
@@ -77,6 +80,21 @@ export function* startMiningSessionSaga(
     yield put(
       TokenomicsActions.START_MINING_SESSION.SUCCESS.create(miningSummary),
     );
+
+    /**
+     * play sound and vibrate after mining started successfully
+     */
+
+    const audio: SagaReturnType<typeof loadLocalAudio> = yield call(
+      loadLocalAudio,
+      LocalAudio.extendMining,
+    );
+
+    hapticFeedback();
+    if (audio) {
+      audio.play();
+    }
+
     if (action.payload?.tapToMineActionType) {
       AnalyticsEventLogger.trackTapToMine({
         tapToMineActionType: action.payload?.tapToMineActionType,
