@@ -78,7 +78,7 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
       navigate({name: 'TeamTab', params: {screen: 'Team'}});
       break;
     case 'news':
-      navigate({name: 'NewsTab', params: undefined});
+      navigate({name: 'News', params: undefined});
       break;
     case 'profile':
       const userId = searchParams.get('userId') ?? '';

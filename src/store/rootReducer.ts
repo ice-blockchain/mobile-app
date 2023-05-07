@@ -6,6 +6,7 @@ import {activeTab} from '@store/modules/ActiveTab/reducer';
 import {analyticsReducer} from '@store/modules/Analytics/reducer';
 import {appCommonReducer} from '@store/modules/AppCommon/reducer';
 import {appUpdateReducer} from '@store/modules/AppUpdate/reducer';
+import {chatReducer} from '@store/modules/Chat/reducer';
 import {collectionsReducer} from '@store/modules/Collections/reducer';
 import {teamReducer} from '@store/modules/Contacts/reducer';
 import {devicesReducer} from '@store/modules/Devices/reducer';
@@ -43,6 +44,7 @@ export const rootReducer = combineReducers({
   notifications: notificationsReducer,
   users: usersReducer,
   statusNotice,
+  chat: chatReducer,
   tokenomics: tokenomicsReducer,
   rateApp: rateAppReducer,
   walkthrough: walkthroughReducer,

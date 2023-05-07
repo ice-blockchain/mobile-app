@@ -2,7 +2,7 @@
 
 import {createAction} from '@store/utils/actions/createAction';
 
-export type Tab = 'home' | 'team' | 'news' | 'profile';
+export type Tab = 'home' | 'team' | 'chat' | 'profile';
 
 const SET_ACTIVE_TAB = createAction('SET_ACTIVE_TAB', {
   STATE: (tab: Tab) => ({tab}),

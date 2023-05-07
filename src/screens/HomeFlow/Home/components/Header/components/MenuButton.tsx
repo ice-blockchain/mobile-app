@@ -4,7 +4,7 @@ import {Badge} from '@components/Badge';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
-import {MIDDLE_BUTTON_HIT_SLOP, windowWidth} from '@constants/styles';
+import {HIT_SLOP, windowWidth} from '@constants/styles';
 import {HomeTabStackParamList, MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -90,10 +90,7 @@ export const MenuButton = memo(() => {
 
   return (
     <View ref={elementRef} onLayout={onElementLayout}>
-      <Touchable
-        hitSlop={MIDDLE_BUTTON_HIT_SLOP}
-        ref={buttonRef}
-        onPress={onMenuPress}>
+      <Touchable hitSlop={HIT_SLOP} ref={buttonRef} onPress={onMenuPress}>
         <CandyBoxMenuIcon stroke={COLORS.downriver} />
         {badgeCount > 0 && (
           <Badge

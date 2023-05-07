@@ -51,5 +51,6 @@ export const COLORS = {
   completed: '#B0DEC8',
   koromiko: '#FFBE6C',
   neonCarrot: '#FEA43A',
+  vibrantTangerine: '#FF9C00',
   danube: '#5c7cd4',
 };

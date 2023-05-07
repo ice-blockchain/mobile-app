@@ -893,5 +893,28 @@
       "description_part1": "Following us on Instagram is a great way to stay in the loop and connect with other users who are also passionate about ice",
       "description_part2": "Plus, you'll be the first to know about any new features or promotions that we're launching."
     }
+  },
+  "chat": {
+    "explore": {
+      "label": "Explore"
+    },
+    "messages": {
+      "label": "Messages",
+      "no_conversations": "You have no conversations yet",
+      "no_conversations_found": "No results found for this query",
+      "new_message": "New message",
+      "search_for_users": "Search for users",
+      "new_chat": "New Chat",
+      "no_results": "No results found for this query",
+      "no_messages": "You don't have any messages yet",
+      "message": "Message",
+      "search_placeholder": "Search for users",
+      "online": "online",
+      "last_seen": "last seen",
+      "banner": {
+        "title": "Expand your horizons",
+        "subtitle": "Join communities that match your interests"
+      }
+    }
   }
 }

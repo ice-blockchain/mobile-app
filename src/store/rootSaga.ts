@@ -5,6 +5,7 @@ import {isAuthError} from '@services/auth';
 import {logError} from '@services/logging';
 import {AccountActions} from '@store/modules/Account/actions';
 import {rootAnalyticsSaga} from '@store/modules/Analytics/sagas';
+import {rootChatSaga} from '@store/modules/Chat/sagas';
 import {rootLinkingSaga} from '@store/modules/Linking/sagas';
 import {rootNotificationsSaga} from '@store/modules/Notifications/sagas';
 import {rootPushNotificationsSaga} from '@store/modules/PushNotifications/sagas';
@@ -49,6 +50,7 @@ export function* rootSaga(): SagaIterator {
     rootUsersSaga,
     rootTokenomicsSaga,
     rootStatusNoticeSaga,
+    rootChatSaga,
     rootRateAppSaga,
     rootWalkthroughSaga,
     rootAchievementsSaga,

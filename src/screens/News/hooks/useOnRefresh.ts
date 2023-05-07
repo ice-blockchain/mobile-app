@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {activeTabSelector} from '@store/modules/ActiveTab/selectors';
 import {NewsActions} from '@store/modules/News/actions';
 import {NewsSelectors} from '@store/modules/News/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {hapticFeedback} from '@utils/device';
-import {useCallback, useEffect, useRef} from 'react';
+import {useCallback, useRef} from 'react';
 import {
   runOnJS,
   SharedValue,
@@ -78,13 +77,6 @@ export const useOnRefresh = (animatedIndex: SharedValue<number>) => {
     },
     [animatedIndex],
   );
-
-  const activeTab = useSelector(activeTabSelector);
-  useEffect(() => {
-    if (activeTab === 'news') {
-      onRefresh();
-    }
-  }, [activeTab, onRefresh]);
 
   return {onRefresh, refreshing, onLoadMore};
 };
