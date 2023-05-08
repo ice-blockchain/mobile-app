@@ -351,7 +351,6 @@ export type Translations = {
   'staking.allocation': null;
   'staking.description': null;
   'staking.terms_agree': null;
-  'staking.staking_terms': null;
   'staking.stake_now': null;
   'staking.balance_label': null;
   'staking.confirm_title': null;
