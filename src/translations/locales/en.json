@@ -342,7 +342,8 @@
     },
     "engagement": {
       "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
+      "description_part1": "Streak refers to how many consecutive days you have checked-in.",
+      "description_part2": "For each 6 consecutive days you receive one day off.",
       "streak": "STREAK",
       "days_off": "DAYS OFF"
     }

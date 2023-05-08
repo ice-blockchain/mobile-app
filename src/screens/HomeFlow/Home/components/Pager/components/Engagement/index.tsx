@@ -76,7 +76,9 @@ export const Engagement = memo(({darkMode}: Props) => {
         style={[styles.description, darkMode && commonStyles.darkText]}
         numberOfLines={2}
         adjustsFontSizeToFit>
-        {t('home.engagement.description')}
+        {`${t('home.engagement.description_part1')}\n${t(
+          'home.engagement.description_part2',
+        )}`}
       </Text>
     </View>
   );

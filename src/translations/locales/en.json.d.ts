@@ -227,7 +227,8 @@ export type Translations = {
   'home.mining_rate.title': null;
   'home.mining_rate.base': null;
   'home.engagement.title': null;
-  'home.engagement.description': null;
+  'home.engagement.description_part1': null;
+  'home.engagement.description_part2': null;
   'home.engagement.streak': null;
   'home.engagement.days_off': null;
   'settings.title': null;
