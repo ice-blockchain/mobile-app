@@ -9,9 +9,9 @@ export type Translations = {
   'welcome.page4.title': null;
   'welcome.page4.description': null;
   'welcome.page5.title': null;
-  'welcome.page5.description': {value: number | string};
+  'welcome.page5.description': null;
   'welcome.page6.title': null;
-  'welcome.page6.description_part1': {value: number | string};
+  'welcome.page6.description_part1': null;
   'welcome.page6.description_part2': null;
   'welcome.page6.not_now': null;
   'button.yes_btn': null;
@@ -20,6 +20,7 @@ export type Translations = {
   'button.view_all': null;
   'button.invite_friend.title': null;
   'button.invite_friend.description': null;
+  'button.see_all': null;
   'button.no': null;
   'button.search_country': null;
   'button.save': null;
@@ -31,7 +32,6 @@ export type Translations = {
   'button.clear': null;
   'button.finish': null;
   'button.next_step': null;
-  'button.see_all': null;
   'button.back': null;
   'button.search': null;
   'button.continue': null;
@@ -96,7 +96,7 @@ export type Translations = {
   'whoInvitedYou.title': null;
   'whoInvitedYou.description': null;
   'whoInvitedYou.inputPlaceholder': null;
-  'whoInvitedYou.dontHaveInvitationCode': {value: number | string};
+  'whoInvitedYou.dontHaveInvitationCode': null;
   'whoInvitedYou.confirm_text': null;
   'whoInvitedYou.dontHaveCodeTip': null;
   'errors.nicknameSize': null;
@@ -344,10 +344,7 @@ export type Translations = {
   'staking.time_left': null;
   'staking.mining_rate': null;
   'staking.appeal': null;
-  'staking.benefits_description': {
-    periodYears: number | string;
-    ratePercentages: number | string;
-  };
+  'staking.benefits_description': null;
   'staking.bonus_label': null;
   'staking.period_label': null;
   'staking.title': null;
