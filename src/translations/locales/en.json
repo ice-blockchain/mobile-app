@@ -612,7 +612,7 @@
     "add_notifications": "Add mocked notifications",
     "no_notifications": "No notifications to display.",
     "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
+    "add_both": "Add mocked notifications and announcements together",
     "clear_title": "Clear all notifications?",
     "title": "Notifications"
   },
