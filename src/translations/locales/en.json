@@ -153,8 +153,8 @@
     "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support.",
     "wrong_phone_number": "Invalid phone number, please try again.",
     "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken.",
-    "phone_number_already_in_use": "Phone number already in use.",
+    "email_already_taken": "Email already taken.",
+    "phone_number_already_taken": "Phone number already taken.",
     "invalid_validation_code": "Invalid code number, please try again!",
     "validation_expired": "Validation expired",
     "validation_not_found": "Validation not found",
@@ -491,7 +491,7 @@
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
+      "already_taken": "Nickname already taken.",
       "length": "Nickname size: 4-20 characters.",
       "invalid_characters": "Remove invalid characters.",
       "not_found": "Nickname not found.",

@@ -103,8 +103,8 @@ export type Translations = {
   'errors.multiple_accounts': null;
   'errors.wrong_phone_number': null;
   'errors.invalid_username': null;
-  'errors.already_taken': {field: number | string};
-  'errors.phone_number_already_in_use': null;
+  'errors.email_already_taken': null;
+  'errors.phone_number_already_taken': null;
   'errors.invalid_validation_code': null;
   'errors.validation_expired': null;
   'errors.validation_not_found': null;
