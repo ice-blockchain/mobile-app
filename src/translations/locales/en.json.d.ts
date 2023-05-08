@@ -440,7 +440,7 @@ export type Translations = {
   'profile_privacy_edit.step3.description': null;
   'confirm_email.title': null;
   'confirm_email.description': null;
-  'confirm_email.note': {value: number | string};
+  'confirm_email.note': null;
   'confirm_email.wrong_email': null;
   'confirm_email.check_email': null;
   'confirm_email.emailed_link_to': null;

@@ -634,7 +634,7 @@
   "confirm_email": {
     "title": "Confirm your email",
     "description": "Please enter your email address and we will send the code.",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
+    "note": "If you didn’t receive the email within 5 minutes, please check your spam folder.",
     "wrong_email": "Wrong email?",
     "check_email": "Check your email",
     "emailed_link_to": "We emailed a magic link to",
