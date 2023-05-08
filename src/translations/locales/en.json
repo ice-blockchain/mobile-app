@@ -127,12 +127,7 @@
     "welcome": "Welcome to ice",
     "email": "Email",
     "slogan": "The Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "privacy": "By continuing, you agree to our [[:link]]Terms of Service[[/:link]] and [[:link]]Privacy Policy[[/:link]]"
   },
   "claimUsername": {
     "title": "Claim nickname",

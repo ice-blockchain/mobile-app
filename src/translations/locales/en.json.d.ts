@@ -83,10 +83,7 @@ export type Translations = {
   'signIn.welcome': null;
   'signIn.email': null;
   'signIn.slogan': null;
-  'signIn.privacy.description': null;
-  'signIn.privacy.terms': null;
-  'signIn.privacy.and': null;
-  'signIn.privacy.policy': null;
+  'signIn.privacy': null;
   'claimUsername.title': null;
   'claimUsername.description': null;
   'claimUsername.inputPlaceholder': null;
