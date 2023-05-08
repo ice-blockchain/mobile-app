@@ -106,6 +106,7 @@ export const LevelRow = React.memo(
             <Text style={styles.valueText}>
               {`${formatNumber(item.totalActiveUsers ?? 0)}`}
               <Text style={styles.valueCurrencyText}>
+                {'\n'}
                 {t('home.adoption.users')}
               </Text>
             </Text>
