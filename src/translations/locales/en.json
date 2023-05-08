@@ -76,7 +76,7 @@
     "tierOne_tab": "Tier 1",
     "tierTwo_tab": "Tier 2",
     "empty": {
-      "title": "You currently don't have any\n[[:title]] referrals!",
+      "title": "You currently don't have any [[:title]] referrals!",
       "contacts": "You currently don't have any contacts.",
       "button_title": "Invite Friends"
     },
@@ -147,7 +147,8 @@
     "description": "Enter the nickname of the person who invited you.",
     "inputPlaceholder": "Enter nickname",
     "dontHaveInvitationCode": "By completing this step, you and your friend will receive a 25% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
+    "confirm_text_part1": "Are you sure that you would like to set a random member as your referral?",
+    "confirm_text_part2": "This cannot be undone!",
     "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
   },
   "errors": {
