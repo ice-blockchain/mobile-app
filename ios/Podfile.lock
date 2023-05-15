@@ -631,6 +631,8 @@ PODS:
     - React
   - RNAppleAuthentication (2.2.2):
     - React-Core
+  - RNBackgroundFetch (4.1.10):
+    - React-Core
   - RNBootSplash (4.5.3):
     - React-Core
   - RNCAsyncStorage (1.17.11):
@@ -825,6 +827,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - ReactNativeMoEngage (from `../node_modules/react-native-moengage`)
   - "RNAppleAuthentication (from `../node_modules/@invertase/react-native-apple-authentication`)"
+  - RNBackgroundFetch (from `../node_modules/react-native-background-fetch`)
   - RNBootSplash (from `../node_modules/react-native-bootsplash`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - "RNCClipboard (from `../node_modules/@react-native-clipboard/clipboard`)"
@@ -1012,6 +1015,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-moengage"
   RNAppleAuthentication:
     :path: "../node_modules/@invertase/react-native-apple-authentication"
+  RNBackgroundFetch:
+    :path: "../node_modules/react-native-background-fetch"
   RNBootSplash:
     :path: "../node_modules/react-native-bootsplash"
   RNCAsyncStorage:
@@ -1166,6 +1171,7 @@ SPEC CHECKSUMS:
   ReactCommon: c440e7f15075e81eb29802521c58a1f38b1aa903
   ReactNativeMoEngage: b24ccac9d1d41dc3673558f7100ae2d61cc20068
   RNAppleAuthentication: 0571c08da8c327ae2afc0261b48b4a515b0286a6
+  RNBackgroundFetch: 9fcdeee8aa00e1e1b3895ff9bbaaf10275288a87
   RNBootSplash: 8fb33325dc3620a01984c6660c42cbd93fadcc80
   RNCAsyncStorage: 8616bd5a58af409453ea4e1b246521bb76578d60
   RNCClipboard: 2834e1c4af68697089cdd455ee4a4cdd198fa7dd

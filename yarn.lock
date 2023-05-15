@@ -8185,6 +8185,11 @@ react-native-awesome-slider@^2.3.0:
   resolved "https://registry.yarnpkg.com/react-native-awesome-slider/-/react-native-awesome-slider-2.3.0.tgz#a971c04e37b1ca579b05f522f3443ca256559fa2"
   integrity sha512-FJAGx+85Qiq3yt2bSFjNFxD1DRsjluwQH4cy9whnwA7siLNzIv2sh4EkQXu88SKXoz3EuC/A/wjJmiWFzW72Bg==
 
+react-native-background-fetch@^4.1.10:
+  version "4.1.10"
+  resolved "https://registry.yarnpkg.com/react-native-background-fetch/-/react-native-background-fetch-4.1.10.tgz#12c7e85140af67fb05edb7cd9960e4f09a457797"
+  integrity sha512-Ug54vTctZuD/c06ZLk/VyvFdhw/hCVVOHYR5heyMqc6FlT/m9fVhFWyl4uH3JmPCzmWDVR3fO28CzrGpKOrusw==
+
 react-native-bootsplash@^4.5.3:
   version "4.5.3"
   resolved "https://registry.yarnpkg.com/react-native-bootsplash/-/react-native-bootsplash-4.5.3.tgz#9b55d68b9627e54daea7428f399d0e3ca3e86cc2"

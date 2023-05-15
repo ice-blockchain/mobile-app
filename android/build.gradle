@@ -56,5 +56,9 @@ allprojects {
         maven { url 'https://www.jitpack.io' }
         maven { url "$rootDir/../node_modules/detox/Detox-android" }
         maven { url 'https://maven.google.com' }
+        maven {
+            // react-native-background-fetch
+            url("${project(':react-native-background-fetch').projectDir}/libs")
+        }
     }
 }
