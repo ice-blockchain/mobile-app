@@ -379,7 +379,6 @@ const MainTabs = () => {
         />
         <Tabs.Screen
           name="ChatTab"
-          //component={ChatTabStackNavigator}
           component={ChatTabTabNavigator}
           options={{
             tabBarIcon: ChatIcon,

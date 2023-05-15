@@ -23,7 +23,17 @@ export function ChatTabBar(props: MaterialTopTabBarProps) {
     useNavigation<NativeStackNavigationProp<MainStackParamList>>();
   const topOffset = useTopOffsetStyle();
 
-  const dispath = useDispatch();
+  const dispatch = useDispatch();
+  const onSearch = () => {
+    dispatch(
+      ChatActions.SET_MESSAGES_SEARCH_VISIBLE.STATE.create({
+        visible: true,
+      }),
+    );
+  };
+  const onWriteMessage = () => {
+    navigation.navigate('NewChatSelector');
+  };
 
   return (
     <View style={[styles.container, topOffset.current]}>
@@ -32,23 +42,12 @@ export function ChatTabBar(props: MaterialTopTabBarProps) {
           <MaterialTopTabBar {...props} />
         </View>
         <View style={styles.actionsContainer}>
-          <TouchableOpacity
-            hitSlop={HIT_SLOP}
-            onPress={() => {
-              dispath(
-                ChatActions.SET_MESSAGES_SEARCH_VISIBLE.STATE.create({
-                  visible: true,
-                }),
-              );
-            }}>
+          <TouchableOpacity hitSlop={HIT_SLOP} onPress={onSearch}>
             <SearchIcon color={COLORS.primaryDark} strokeWidth={2} />
           </TouchableOpacity>
           <TouchableOpacity
             hitSlop={HIT_SLOP}
-            onPress={() => {
-              console.log('onPress');
-              navigation.navigate('NewChatSelector');
-            }}
+            onPress={onWriteMessage}
             style={styles.writeMessageContainer}>
             <WriteMessageIcon color={COLORS.primaryDark} />
           </TouchableOpacity>

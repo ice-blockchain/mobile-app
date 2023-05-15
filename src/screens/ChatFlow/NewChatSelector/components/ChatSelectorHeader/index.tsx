@@ -42,7 +42,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: SCREEN_SIDE_OFFSET,
   },
-  search: {width: '100%', marginTop: rem(24)},
+  search: {
+    width: '100%',
+    marginTop: rem(24),
+  },
   text: {
     ...font(16, 19, 'bold', 'primaryDark'),
   },
