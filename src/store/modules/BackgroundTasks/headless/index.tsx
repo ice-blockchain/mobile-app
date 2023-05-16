@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {logError} from '@services/logging';
+import {store} from '@store/configureStore';
+import {BackgroundTasksActions} from '@store/modules/BackgroundTasks/actions';
 import {BackgroundTask} from '@store/modules/BackgroundTasks/config';
 import BackgroundFetch, {HeadlessEvent} from 'react-native-background-fetch';
 
@@ -19,14 +21,18 @@ const BackgroundTasksHeadlessTask = async ({
 
   switch (taskId) {
     case BackgroundTask.ContactsSync: {
-      console.log(taskId);
-      // do stuff
+      store.dispatch(
+        BackgroundTasksActions.SYNC_CONTACTS_BACKGROUND_TASK.STATE.create({
+          finishTask: () => BackgroundFetch.finish(taskId),
+        }),
+      );
       break;
     }
-    default:
+    default: {
       logError(new Error(`Unknown background task with id ${taskId}`));
+      BackgroundFetch.finish(taskId);
+    }
   }
-  BackgroundFetch.finish(taskId);
 };
 
 export const registerBackgroundTasksHeadlessTask = () => {
