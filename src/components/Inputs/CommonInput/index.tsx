@@ -58,7 +58,10 @@ export const CommonInput = ({
   const [isFocused, setIsFocused] = useState(false);
   const inputRef = useRef<TextInput>(null);
 
-  const {animatedStyle} = useLabelAnimation(isFocused, value);
+  const {animatedStyle, onLayoutBody, onLayoutLabel} = useLabelAnimation(
+    isFocused,
+    value,
+  );
 
   return (
     <TouchableWithoutFeedback
@@ -71,8 +74,8 @@ export const CommonInput = ({
           !!errorText && styles.container_error,
           containerStyle,
         ]}>
-        {icon}
-        <View style={styles.body}>
+        {icon ? <View style={styles.iconContainer}>{icon}</View> : null}
+        <View style={styles.body} onLayout={onLayoutBody}>
           <View style={styles.inputWrapper}>
             {prefix}
             {onChange ? (
@@ -113,7 +116,8 @@ export const CommonInput = ({
               styles.label,
               errorText ? styles.label_error : null,
               animatedStyle,
-            ]}>
+            ]}
+            onLayout={onLayoutLabel}>
             {errorText || label}
           </Animated.Text>
         </View>
@@ -150,14 +154,15 @@ export const CommonInput = ({
 const RESULT_ICON_SIZE = rem(20);
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: rem(20),
-    height: rem(56),
-    borderWidth: 1,
-    borderRadius: rem(16),
-    backgroundColor: COLORS.wildSand,
+    paddingVertical: rem(12),
+    paddingHorizontal: rem(16),
+    minHeight: rem(56),
     flexDirection: 'row',
     alignItems: 'center',
+    borderWidth: 1,
+    borderRadius: rem(16),
     borderColor: COLORS.wildSand,
+    backgroundColor: COLORS.wildSand,
   },
   container_error: {
     borderColor: COLORS.attention,
@@ -165,9 +170,11 @@ const styles = StyleSheet.create({
   container_focused: {
     borderColor: COLORS.congressBlue,
   },
+  iconContainer: {
+    marginRight: rem(10),
+  },
   body: {
     flex: 1,
-    marginLeft: rem(10),
     justifyContent: 'center',
   },
   inputWrapper: {
@@ -183,6 +190,7 @@ const styles = StyleSheet.create({
   },
   label: {
     position: 'absolute',
+    top: 0,
     left: 0,
     ...font(16, 20, 'medium', 'secondary'),
   },

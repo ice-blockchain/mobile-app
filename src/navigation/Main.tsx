@@ -17,6 +17,7 @@ import {
 } from '@react-navigation/bottom-tabs';
 import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {CreateChannel} from '@screens/ChatFlow/CreateChannel';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
 import {Home} from '@screens/HomeFlow/Home';
 import {
@@ -134,6 +135,7 @@ export type MainStackParamList = {
   ProfilePrivacyEditStep1: undefined;
   ProfilePrivacyEditStep2: undefined;
   ProfilePrivacyEditStep3: undefined;
+  'Chat/CreateChannel': undefined;
 };
 
 export type HomeTabStackParamList = {
@@ -399,6 +401,7 @@ export function MainNavigator() {
         options={modalOptions}
         component={JoinTelegramPopUp}
       />
+      <MainStack.Screen name="Chat/CreateChannel" component={CreateChannel} />
     </MainStack.Navigator>
   );
 }
