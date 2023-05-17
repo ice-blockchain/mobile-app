@@ -2,6 +2,7 @@
 
 import {User} from '@api/user/types';
 import {AccountActions} from '@store/modules/Account/actions';
+import {updateAccountSaga} from '@store/modules/Account/sagas/updateAccount';
 import {
   isAuthorizedSelector,
   userSelector,
@@ -11,14 +12,7 @@ import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors'
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import {runInChunks} from '@utils/promise';
 import {getAllWithoutPhotos} from 'react-native-contacts';
-import {
-  call,
-  put,
-  race,
-  SagaReturnType,
-  select,
-  take,
-} from 'redux-saga/effects';
+import {call, SagaReturnType, select} from 'redux-saga/effects';
 
 const AGENDA_PHONE_NUMBER_DIVIDER = ',';
 
@@ -53,6 +47,7 @@ export function* syncContactsSaga(
 
     const agendaPhoneNumberHashes: Set<string> = new Set();
 
+    // Run e164PhoneNumber and hashPhoneNumber in chunks to avoid ANR
     yield runInChunks(
       contacts,
       async contact =>
@@ -74,24 +69,18 @@ export function* syncContactsSaga(
     );
 
     const newAgendaPhoneNumberHashes = [...agendaPhoneNumberHashes].filter(
-      agendaPhoneNumber => {
-        return userPhoneNumberHashes.has(agendaPhoneNumber);
-      },
+      agendaPhoneNumber => userPhoneNumberHashes.has(agendaPhoneNumber),
     );
 
-    yield put(
+    //TODO:: fix raceConditionStrategy processing -> get rid of dispatching UPDATE
+    yield call(
+      updateAccountSaga,
       AccountActions.UPDATE_ACCOUNT.START.create({
         agendaPhoneNumberHashes: [...newAgendaPhoneNumberHashes].join(
           AGENDA_PHONE_NUMBER_DIVIDER,
         ),
       }),
     );
-
-    yield race([
-      take(AccountActions.UPDATE_ACCOUNT.SUCCESS.type),
-      take(AccountActions.UPDATE_ACCOUNT.FAILED.type),
-      take(AccountActions.UPDATE_ACCOUNT.RESET.type),
-    ]);
   } finally {
     if (
       action.type ===
