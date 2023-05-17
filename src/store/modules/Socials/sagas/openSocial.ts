@@ -2,12 +2,12 @@
 
 import {dayjs} from '@services/dayjs';
 import {userIdSelector} from '@store/modules/Account/selectors';
-import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {SocialsActions} from '@store/modules/Socials/actions';
 import {socialData} from '@store/modules/Socials/data';
 import {socialsByUserIdSelector} from '@store/modules/Socials/selectors';
 import {SocialType} from '@store/modules/Socials/types';
 import {openSocial} from '@store/modules/Socials/utils/openSocial';
+import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {Linking} from 'react-native';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
@@ -48,7 +48,7 @@ export function* openSocialSaga(typeToShow: SocialType) {
     let linkApp = socialData[typeToShow].linkApp;
 
     yield put(
-      AppCommonActions.UPDATE_FORCE_START_MINING.STATE.create({
+      TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.create({
         forceStartMining: true,
       }),
     );

@@ -11,13 +11,12 @@ import {dayjs} from '@services/dayjs';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
-import {AppCommonActions} from '@store/modules/AppCommon/actions';
-import {forceStartMiningSelector} from '@store/modules/AppCommon/selectors';
 import {shareSocialsSaga} from '@store/modules/Socials/sagas/shareSocials';
 import {SocialsShareResult} from '@store/modules/Socials/types';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {
   agreeWithEarlyAccessSelector,
+  forceStartMiningSelector,
   isMiningActiveSelector,
 } from '@store/modules/Tokenomics/selectors';
 import {openConfirmResurrect} from '@store/modules/Tokenomics/utils/openConfirmResurrect';
@@ -43,7 +42,7 @@ export function* startMiningSessionSaga(
 
   if (forceStartMining) {
     yield put(
-      AppCommonActions.UPDATE_FORCE_START_MINING.STATE.create({
+      TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.create({
         forceStartMining: false,
       }),
     );
@@ -55,7 +54,7 @@ export function* startMiningSessionSaga(
 
     if (result.status === 'opened') {
       yield put(
-        AppCommonActions.UPDATE_FORCE_START_MINING.STATE.create({
+        TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.create({
           forceStartMining: true,
         }),
       );
