@@ -16,9 +16,9 @@ export function* initBackgroundTasksSaga() {
     {},
     taskId => {
       switch (taskId) {
-        case BackgroundTask.ContactsSync: {
+        case BackgroundTask.SyncContacts: {
           store.dispatch(
-            BackgroundTasksActions.CONTACTS_SYNC_BACKGROUND_TASK.STATE.create({
+            BackgroundTasksActions.SYNC_CONTACTS_BACKGROUND_TASK.STATE.create({
               finishTask: () => BackgroundFetch.finish(taskId),
             }),
           );

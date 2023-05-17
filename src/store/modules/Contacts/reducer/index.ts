@@ -11,7 +11,7 @@ export interface State {
 }
 
 type Actions = ReturnType<
-  | typeof ContactsActions.SYNC_CONTACTS.SUCCESS.create
+  | typeof ContactsActions.GET_CONTACTS.SUCCESS.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
 >;
 
@@ -23,7 +23,7 @@ const INITIAL_STATE: State = {
 function reducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
-      case ContactsActions.SYNC_CONTACTS.SUCCESS.type: {
+      case ContactsActions.GET_CONTACTS.SUCCESS.type: {
         draft.contacts = action.payload.contacts;
         break;
       }

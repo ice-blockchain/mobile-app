@@ -2,13 +2,13 @@
 
 import {createAction} from '@store/utils/actions/createAction';
 
-const CONTACTS_SYNC_BACKGROUND_TASK = createAction(
-  'CONTACTS_SYNC_BACKGROUND_TASK',
+const SYNC_CONTACTS_BACKGROUND_TASK = createAction(
+  'SYNC_CONTACTS_BACKGROUND_TASK',
   {
     STATE: (payload: {finishTask: () => void}) => payload,
   },
 );
 
 export const BackgroundTasksActions = Object.freeze({
-  CONTACTS_SYNC_BACKGROUND_TASK,
+  SYNC_CONTACTS_BACKGROUND_TASK,
 });

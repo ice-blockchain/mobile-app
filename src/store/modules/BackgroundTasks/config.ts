@@ -3,12 +3,12 @@
 import BackgroundFetch from 'react-native-background-fetch';
 
 export enum BackgroundTask {
-  ContactsSync = 'io.ice.contacts_sync',
+  SyncContacts = 'io.ice.bg_task.sync_contacts',
 }
 
 export const BACKGROUND_TASKS = [
   {
-    taskId: BackgroundTask.ContactsSync,
+    taskId: BackgroundTask.SyncContacts,
     delay: 60 * 60 * 1000, // milliseconds
     periodic: true,
     stopOnTerminate: false,
