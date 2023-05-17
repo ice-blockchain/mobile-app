@@ -6,7 +6,7 @@ import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {TeamContactInvite} from '@screens/Team/components/Contacts/components/ContactsList/assets/svg/TeamContactInvite';
 import {MultipleNumbers} from '@screens/Team/components/Contacts/components/ContactsList/components/MultipleNumbers';
-import {userSelector} from '@store/modules/Account/selectors';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {getContactAcronym, getContactName} from '@utils/contacts';
 import {extractDigits, stringToColor} from '@utils/string';
@@ -37,7 +37,7 @@ export const ContactItem = memo(
     contact: Contact;
     onInvite: (contact: Contact) => void;
   }) => {
-    const user = useSelector(userSelector);
+    const user = useSelector(unsafeUserSelector);
     const isoCode = user?.clientData?.phoneNumberIso ?? null;
 
     const [activeIndex, setActiveIndex] = useState<number | undefined>(
