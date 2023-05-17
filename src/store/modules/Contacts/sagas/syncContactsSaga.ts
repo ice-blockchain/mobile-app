@@ -1,19 +1,30 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {User} from '@api/user/types';
+import {AccountActions} from '@store/modules/Account/actions';
 import {
   isAuthorizedSelector,
   userSelector,
 } from '@store/modules/Account/selectors';
-import {ContactsActions} from '@store/modules/Contacts/actions';
+import {BackgroundTasksActions} from '@store/modules/BackgroundTasks/actions';
 import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';
-import {getErrorMessage} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import {runInChunks} from '@utils/promise';
 import {getAllWithoutPhotos} from 'react-native-contacts';
-import {call, put, SagaReturnType, select} from 'redux-saga/effects';
+import {
+  call,
+  put,
+  race,
+  SagaReturnType,
+  select,
+  take,
+} from 'redux-saga/effects';
 
-export function* syncContactsSaga() {
+export function* syncContactsSaga(
+  action: ReturnType<
+    typeof BackgroundTasksActions.SYNC_CONTACTS_BACKGROUND_TASK.STATE.create
+  >,
+) {
   try {
     const hasPermissions: ReturnType<
       ReturnType<typeof isPermissionGrantedSelector>
@@ -54,33 +65,22 @@ export function* syncContactsSaga() {
       200,
     );
 
-    //TODO:: send agendaPhoneNumberHashes
-    //  AccountActions.UPDATE_ACCOUNT.START.create(
-    //     {
-    //       agendaPhoneNumberHashes: [...phoneNumberHashes].join(','),
-    //     },
-    //     function* (freshUser) {
-    //       if (
-    //         freshUser.agendaPhoneNumberHashes?.length !==
-    //         user.agendaPhoneNumberHashes?.length
-    //       ) {
-    //         yield call(
-    //           updateAgendaPhoneNumberHashes,
-    //           agendaPhoneNumberHashes,
-    //           freshUser,
-    //         );
-    //         return {retry: false};
-    //       }
-    //       return {retry: true};
-    //     },
-    //   ),
-    // );
-
-    yield put(ContactsActions.SYNC_CONTACTS.SUCCESS.create());
-  } catch (error) {
     yield put(
-      ContactsActions.SYNC_CONTACTS.FAILED.create(getErrorMessage(error)),
+      AccountActions.UPDATE_ACCOUNT.START.create({
+        agendaPhoneNumberHashes: [...agendaPhoneNumberHashes].join(','),
+      }),
     );
-    throw error;
+
+    yield race([
+      take(AccountActions.UPDATE_ACCOUNT.SUCCESS.type),
+      take(AccountActions.UPDATE_ACCOUNT.FAILED.type),
+    ]);
+  } finally {
+    if (
+      action.type ===
+      BackgroundTasksActions.SYNC_CONTACTS_BACKGROUND_TASK.STATE.type
+    ) {
+      action.payload.finishTask();
+    }
   }
 }
