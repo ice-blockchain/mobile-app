@@ -20,6 +20,8 @@ import {
   take,
 } from 'redux-saga/effects';
 
+const AGENDA_PHONE_NUMBER_DIVIDER = ',';
+
 export function* syncContactsSaga(
   action: ReturnType<
     typeof BackgroundTasksActions.SYNC_CONTACTS_BACKGROUND_TASK.STATE.create
@@ -37,10 +39,16 @@ export function* syncContactsSaga(
       return;
     }
 
-    const user: User = yield select(userSelector);
-
     const contacts: SagaReturnType<typeof getAllWithoutPhotos> = yield call(
       getAllWithoutPhotos,
+    );
+
+    //TODO:: save numberOfSyncedContacts after sync and if equal to contacts.length, don't continue
+
+    const user: User = yield select(userSelector);
+
+    const userPhoneNumberHashes = new Set(
+      user.agendaPhoneNumberHashes?.split(AGENDA_PHONE_NUMBER_DIVIDER),
     );
 
     const agendaPhoneNumberHashes: Set<string> = new Set();
@@ -65,15 +73,24 @@ export function* syncContactsSaga(
       200,
     );
 
+    const newAgendaPhoneNumberHashes = [...agendaPhoneNumberHashes].filter(
+      agendaPhoneNumber => {
+        return userPhoneNumberHashes.has(agendaPhoneNumber);
+      },
+    );
+
     yield put(
       AccountActions.UPDATE_ACCOUNT.START.create({
-        agendaPhoneNumberHashes: [...agendaPhoneNumberHashes].join(','),
+        agendaPhoneNumberHashes: [...newAgendaPhoneNumberHashes].join(
+          AGENDA_PHONE_NUMBER_DIVIDER,
+        ),
       }),
     );
 
     yield race([
       take(AccountActions.UPDATE_ACCOUNT.SUCCESS.type),
       take(AccountActions.UPDATE_ACCOUNT.FAILED.type),
+      take(AccountActions.UPDATE_ACCOUNT.RESET.type),
     ]);
   } finally {
     if (
