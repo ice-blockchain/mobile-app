@@ -1,29 +1,40 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {ChatUserData, MessageData} from '@store/modules/Chat/types';
+import {
+  ChatDataType,
+  ChatUserData,
+  ExploreData,
+  ExploreDataType,
+  MessageData,
+} from '@store/modules/Chat/types';
 import {createAction} from '@store/utils/actions/createAction';
 
-const SET_MESSAGES_SEARCH_VISIBLE = createAction(
-  'SET_MESSAGES_SEARCH_VISIBLE',
-  {
-    STATE: (payload: {visible: boolean}) => payload,
-  },
-);
-
-const LOAD_MESSAGES_DATA = createAction('LOAD_MESSAGES_DATA', {
-  START: (initial?: boolean) => ({initial}),
-  SUCCESS: (payload: {messages?: MessageData[]; hasMore: boolean}) => payload,
-  FAILED: true,
+const SET_SEARCH_VISIBLE = createAction('SET_SEARCH_VISIBLE', {
+  STATE: (payload: {visible: boolean; dataType: ChatDataType}) => payload,
 });
 
-const LOAD_CHAT_USERS_DATA = createAction('LOAD_CHAT_USERS_DATA', {
-  START: (initial?: boolean) => ({initial}),
-  SUCCESS: (payload: {users?: ChatUserData[]; hasMore: boolean}) => payload,
-  FAILED: true,
+const SET_EXPLORE_DATA_TYPE = createAction('SET_EXPLORE_DATA_TYPE', {
+  STATE: (payload: {exploreDataType: ExploreDataType | null}) => payload,
+});
+
+const LOAD_CHAT_DATA = createAction('LOAD_CHAT_DATA', {
+  START: (payload: {
+    initial?: boolean;
+    dataType: ChatDataType;
+    searchValue: string;
+  }) => payload,
+  SUCCESS: (payload: {
+    exploreData?: ExploreData[];
+    userData?: ChatUserData[];
+    chatData?: MessageData[];
+    hasMore: boolean;
+    dataType: ChatDataType;
+  }) => payload,
+  FAILED: (payload: {dataType: ChatDataType}) => payload,
 });
 
 export const ChatActions = Object.freeze({
-  LOAD_MESSAGES_DATA,
-  LOAD_CHAT_USERS_DATA,
-  SET_MESSAGES_SEARCH_VISIBLE,
+  SET_SEARCH_VISIBLE,
+  SET_EXPLORE_DATA_TYPE,
+  LOAD_CHAT_DATA,
 });

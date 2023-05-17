@@ -1,32 +1,25 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {SearchInput} from '@components/Inputs/SearchInput';
-import {COLORS} from '@constants/colors';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {CHAT_TAB_BAR_PADDING} from '@navigation/components/ChatTabBar';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {ItemSeparator} from '@screens/ChatFlow/components/ItemSeparator';
 import {JoinCommunitiesBanner} from '@screens/ChatFlow/components/JoinCommunitiesBanner';
+import {SearchBar} from '@screens/ChatFlow/components/SearchBar';
 import {MessagesRow} from '@screens/ChatFlow/Messages/components/MessagesRow';
 import {NoConversationsScreen} from '@screens/ChatFlow/Messages/components/NoConversationsScreen';
-import {
-  SEARCH_HIDDEN_Y,
-  SEARCH_MARGIN_VERTICAL,
-} from '@screens/ChatFlow/Messages/constants';
+import {SEARCH_HIDDEN_Y} from '@screens/ChatFlow/Messages/constants';
 import {useAnimatedSearch} from '@screens/ChatFlow/Messages/hooks/useAnimatedSearch';
 import {ChatActions} from '@store/modules/Chat/actions';
 import {
+  getLoadingChatDataSelector,
   messagesDataSelector,
-  messagesLoadingSelector,
-  messagesSearchVisibleSelector,
 } from '@store/modules/Chat/selectors';
-import {MessageData} from '@store/modules/Chat/types';
-import {t} from '@translations/i18n';
+import {ChatDataType, MessageData} from '@store/modules/Chat/types';
 import debounce from 'lodash/debounce';
 import * as React from 'react';
 import {useEffect, useRef, useState} from 'react';
 import {ActivityIndicator, StyleSheet, View} from 'react-native';
-import Animated, {useSharedValue} from 'react-native-reanimated';
+import Animated from 'react-native-reanimated';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -34,13 +27,12 @@ function ListHeaderComponent() {
   return <JoinCommunitiesBanner isDark />;
 }
 
+const dataType: ChatDataType = 'chats';
+
 export function Messages() {
   const tabBarOffset = useBottomTabBarOffsetStyle();
   const messages = useSelector(messagesDataSelector);
-  const loading = useSelector(messagesLoadingSelector);
-  const searchVisible = useSelector(messagesSearchVisibleSelector);
-  const searchVisibleShared = useSharedValue(searchVisible);
-  searchVisibleShared.value = searchVisible;
+  const loading = useSelector(getLoadingChatDataSelector(dataType));
   const refreshingRef = useRef(false);
 
   const [searchValue, setSearchValue] = useState<string>('');
@@ -48,35 +40,31 @@ export function Messages() {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(ChatActions.LOAD_MESSAGES_DATA.START.create(true));
-  }, [dispatch]);
+    dispatch(
+      ChatActions.LOAD_CHAT_DATA.START.create({
+        initial: true,
+        dataType,
+        searchValue,
+      }),
+    );
+  }, [dispatch, searchValue]);
 
-  const {scrollHandler, animatedStyle} = useAnimatedSearch();
+  const {scrollHandler, animatedStyle, searchVisible} =
+    useAnimatedSearch(dataType);
 
   const renderItem = ({item}: {item: MessageData}) => {
-    return <MessagesRow messageData={item} />;
+    return <MessagesRow key={item.sourceName} messageData={item} />;
   };
 
-  const displayMessages = searchValue
-    ? messages.filter(message =>
-        message.sourceName.toLowerCase().includes(searchValue.toLowerCase()),
-      )
-    : messages;
   return (
     <View style={commonStyles.flexOne}>
       <Animated.View
         style={[
-          styles.animatedContainer,
+          commonStyles.flexOne,
           animatedStyle,
           !searchVisible ? styles.animatedContainerMargin : null,
         ]}>
-        <View style={[styles.searchContainer, commonStyles.shadow]}>
-          <SearchInput
-            onChangeText={onChangeText}
-            placeholder={t('button.search')}
-            containerStyle={styles.search}
-          />
-        </View>
+        <SearchBar onChangeText={onChangeText} />
         <Animated.FlatList
           style={commonStyles.flexOne}
           onScroll={scrollHandler}
@@ -85,17 +73,23 @@ export function Messages() {
           contentContainerStyle={[
             styles.listContent,
             tabBarOffset.current,
-            !displayMessages.length && !loading
-              ? commonStyles.fullHeight
-              : null,
+            !messages.length && !loading ? commonStyles.fullHeight : null,
           ]}
-          data={displayMessages}
+          data={messages}
           renderItem={renderItem}
           onEndReached={() => {
-            dispatch(ChatActions.LOAD_MESSAGES_DATA.START.create());
+            dispatch(
+              ChatActions.LOAD_CHAT_DATA.START.create({dataType, searchValue}),
+            );
           }}
           onRefresh={() => {
-            dispatch(ChatActions.LOAD_MESSAGES_DATA.START.create(true));
+            dispatch(
+              ChatActions.LOAD_CHAT_DATA.START.create({
+                initial: true,
+                dataType,
+                searchValue,
+              }),
+            );
             refreshingRef.current = true;
           }}
           refreshing={loading && refreshingRef.current}
@@ -108,9 +102,7 @@ export function Messages() {
               <NoConversationsScreen searchValue={searchValue} />
             ) : null
           }
-          ListHeaderComponent={
-            displayMessages.length ? ListHeaderComponent : null
-          }
+          ListHeaderComponent={messages.length ? ListHeaderComponent : null}
           initialNumToRender={20}
         />
       </Animated.View>
@@ -123,19 +115,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: SCREEN_SIDE_OFFSET,
     paddingTop: rem(16),
   },
-  searchContainer: {
-    borderTopWidth: 1,
-    borderTopColor: COLORS.secondaryFaint,
-    backgroundColor: COLORS.white,
-  },
-  animatedContainer: {
-    flex: 1,
-  },
   animatedContainerMargin: {
     marginBottom: SEARCH_HIDDEN_Y,
-  },
-  search: {
-    marginVertical: SEARCH_MARGIN_VERTICAL,
-    marginHorizontal: CHAT_TAB_BAR_PADDING,
   },
 });

@@ -76,7 +76,7 @@ import {Settings} from '@screens/SettingsFlow/Settings';
 import {Staking} from '@screens/Staking';
 import {Team} from '@screens/Team';
 import {Walkthrough} from '@screens/Walkthrough';
-import {ActiveTabActions, Tab} from '@store/modules/ActiveTab/actions';
+import {ActiveTabActions, ChatTab, Tab} from '@store/modules/ActiveTab/actions';
 import {useSubscribeToPushNotifications} from '@store/modules/PushNotifications/hooks/useSubscribeToPushNotifications';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {WalkthroughStep} from '@store/modules/Walkthrough/types';
@@ -300,6 +300,13 @@ const ChatTabBarComponent = (props: MaterialTopTabBarProps) => (
 );
 
 const ChatTabTabNavigator = () => {
+  const dispatch = useDispatch();
+  const getListeners = (tab: ChatTab) => {
+    return () => ({
+      tabPress: () =>
+        dispatch(ActiveTabActions.SET_ACTIVE_CHAT_TAB.STATE.create(tab)),
+    });
+  };
   return (
     <ChatTopTabs.Navigator
       screenOptions={{
@@ -328,6 +335,7 @@ const ChatTabTabNavigator = () => {
         options={{
           tabBarLabel: MessageTabChatTabBarLabel,
         }}
+        listeners={getListeners('messages')}
       />
       <ChatTopTabs.Screen
         name="ExploreTab"
@@ -335,6 +343,7 @@ const ChatTabTabNavigator = () => {
         options={{
           tabBarLabel: ExploreTabChatTabBarLabel,
         }}
+        listeners={getListeners('explore')}
       />
     </ChatTopTabs.Navigator>
   );

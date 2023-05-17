@@ -2,7 +2,8 @@
 
 import {SEARCH_HIDDEN_Y} from '@screens/ChatFlow/Messages/constants';
 import {ChatActions} from '@store/modules/Chat/actions';
-import {messagesSearchVisibleSelector} from '@store/modules/Chat/selectors';
+import {getSearchVisibleSelector} from '@store/modules/Chat/selectors';
+import {ChatDataType} from '@store/modules/Chat/types';
 import * as React from 'react';
 import {useEffect} from 'react';
 import {
@@ -15,8 +16,8 @@ import {
 } from 'react-native-reanimated';
 import {useDispatch, useSelector} from 'react-redux';
 
-export function useAnimatedSearch() {
-  const searchVisible = useSelector(messagesSearchVisibleSelector);
+export function useAnimatedSearch(dataType: ChatDataType) {
+  const searchVisible = useSelector(getSearchVisibleSelector(dataType));
   const translateY = useSharedValue(SEARCH_HIDDEN_Y);
   const sharedScrollPosition = useSharedValue(0);
   const animatedStyle = useAnimatedStyle(() => ({
@@ -36,11 +37,12 @@ export function useAnimatedSearch() {
   const dispatch = useDispatch();
   const setSearchBarHidden = React.useCallback(() => {
     dispatch(
-      ChatActions.SET_MESSAGES_SEARCH_VISIBLE.STATE.create({
+      ChatActions.SET_SEARCH_VISIBLE.STATE.create({
         visible: false,
+        dataType,
       }),
     );
-  }, [dispatch]);
+  }, [dataType, dispatch]);
 
   useAnimatedReaction(
     () => {
@@ -61,5 +63,5 @@ export function useAnimatedSearch() {
     sharedScrollPosition.value = event.contentOffset.y;
   });
 
-  return {scrollHandler, animatedStyle};
+  return {scrollHandler, animatedStyle, searchVisible};
 }

@@ -3,9 +3,11 @@
 import {COLORS} from '@constants/colors';
 import {CHAT_TAB_BAR_PADDING} from '@navigation/components/ChatTabBar';
 import {ParamListBase, TabNavigationState} from '@react-navigation/native';
+import {ActiveTabActions, ChatTab} from '@store/modules/ActiveTab/actions';
 import * as React from 'react';
 import {Animated, I18nManager, StyleSheet} from 'react-native';
 import {Route, TabBar} from 'react-native-tab-view';
+import {useDispatch} from 'react-redux';
 import {rem} from 'rn-units';
 
 export type GetTabWidth = (index: number) => number;
@@ -37,17 +39,24 @@ const getTranslateX = (
   return Animated.multiply(translateX, I18nManager.isRTL ? -1 : 1);
 };
 
-export function ChatTabBarIndicator({
-  getTabWidth,
-  layout,
-  state,
-  position,
-}: Omit<
-  Parameters<
-    NonNullable<React.ComponentProps<typeof TabBar>['renderIndicator']>
-  >[0],
-  'navigationState'
-> & {state: TabNavigationState<ParamListBase>}) {
+function getChatTab(routeName: string): ChatTab {
+  switch (routeName) {
+    case 'MessagesTab':
+      return 'messages';
+    default:
+      return 'explore';
+  }
+}
+
+export function ChatTabBarIndicator(
+  props: Omit<
+    Parameters<
+      NonNullable<React.ComponentProps<typeof TabBar>['renderIndicator']>
+    >[0],
+    'navigationState'
+  > & {state: TabNavigationState<ParamListBase>},
+) {
+  const {getTabWidth, layout, state, position} = props;
   const {routes} = state;
 
   const transform = [];
@@ -66,6 +75,17 @@ export function ChatTabBarIndicator({
     );
     transform.push({translateX});
   }
+  const dispatch = useDispatch();
+  position.addListener(({value}) => {
+    const route = routes[value];
+    if (route?.name) {
+      dispatch(
+        ActiveTabActions.SET_ACTIVE_CHAT_TAB.STATE.create(
+          getChatTab(route.name),
+        ),
+      );
+    }
+  });
   transform.push({
     scaleX: position.interpolate({
       inputRange,

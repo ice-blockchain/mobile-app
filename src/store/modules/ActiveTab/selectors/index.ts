@@ -4,3 +4,5 @@ import {RootState} from '@store/rootReducer';
 
 export const activeTabSelector = (state: RootState) =>
   state.activeTab.activeTab;
+export const activeChatTabSelector = (state: RootState) =>
+  state.activeTab.activeChatTab;

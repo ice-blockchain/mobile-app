@@ -8,26 +8,42 @@ import {MaterialTopTabBar} from '@react-navigation/material-top-tabs';
 import {MaterialTopTabBarProps} from '@react-navigation/material-top-tabs/lib/typescript/src/types';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {ChatTab} from '@store/modules/ActiveTab/actions';
+import {activeChatTabSelector} from '@store/modules/ActiveTab/selectors';
 import {ChatActions} from '@store/modules/Chat/actions';
+import {ChatDataType} from '@store/modules/Chat/types';
 import {SearchIcon} from '@svg/SearchIcon';
 import {WriteMessageIcon} from '@svg/WriteMessageIcon';
 import * as React from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 export const CHAT_TAB_BAR_PADDING = rem(16);
+
+function getDataType(chatTab: ChatTab): ChatDataType {
+  switch (chatTab) {
+    case 'explore':
+      return 'explore';
+    default:
+      return 'chats';
+  }
+}
 
 export function ChatTabBar(props: MaterialTopTabBarProps) {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainStackParamList>>();
   const topOffset = useTopOffsetStyle();
 
+  const activeChatTab = useSelector(activeChatTabSelector);
+  console.log('activeChatTab', {activeChatTab});
+
   const dispatch = useDispatch();
   const onSearch = () => {
     dispatch(
-      ChatActions.SET_MESSAGES_SEARCH_VISIBLE.STATE.create({
+      ChatActions.SET_SEARCH_VISIBLE.STATE.create({
         visible: true,
+        dataType: getDataType(activeChatTab),
       }),
     );
   };

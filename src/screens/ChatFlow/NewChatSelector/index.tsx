@@ -17,9 +17,9 @@ import {ChatSelectorRow} from '@screens/ChatFlow/NewChatSelector/components/Chat
 import {ChatActions} from '@store/modules/Chat/actions';
 import {
   chatUsersDataSelector,
-  chatUsersLoadingSelector,
+  getLoadingChatDataSelector,
 } from '@store/modules/Chat/selectors';
-import {ChatUserData} from '@store/modules/Chat/types';
+import {ChatDataType, ChatUserData} from '@store/modules/Chat/types';
 import debounce from 'lodash/debounce';
 import * as React from 'react';
 import {useEffect, useState} from 'react';
@@ -45,18 +45,26 @@ function BackdropComponent({animatedIndex}: BottomSheetBackdropProps) {
 
 const SNAP_POINTS = ['95%'];
 
+const dataType: ChatDataType = 'users';
+
 export function NewChatSelector() {
   const navigation = useNavigation();
   const tabBarOffset = useBottomTabBarOffsetStyle();
   const chatUsers = useSelector(chatUsersDataSelector);
-  const loading = useSelector(chatUsersLoadingSelector);
+  const loading = useSelector(getLoadingChatDataSelector(dataType));
   const [searchValue, setSearchValue] = useState('');
   const onChangeText = debounce(setSearchValue, 600);
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(ChatActions.LOAD_CHAT_USERS_DATA.START.create(true));
-  }, [dispatch]);
+    dispatch(
+      ChatActions.LOAD_CHAT_DATA.START.create({
+        initial: true,
+        dataType,
+        searchValue,
+      }),
+    );
+  }, [dispatch, searchValue]);
 
   const renderItem = ({item}: {item: ChatUserData}) => {
     return <ChatSelectorRow chatUser={item} />;
@@ -78,16 +86,12 @@ export function NewChatSelector() {
       <BottomSheetFlatList
         showsVerticalScrollIndicator={false}
         contentContainerStyle={[styles.listContent, tabBarOffset.current]}
-        data={
-          searchValue
-            ? chatUsers.filter(user =>
-                user.username.toLowerCase().includes(searchValue.toLowerCase()),
-              )
-            : chatUsers
-        }
+        data={chatUsers}
         renderItem={renderItem}
         onEndReached={() => {
-          dispatch(ChatActions.LOAD_CHAT_USERS_DATA.START.create());
+          dispatch(
+            ChatActions.LOAD_CHAT_DATA.START.create({dataType, searchValue}),
+          );
         }}
         ListHeaderComponent={JoinCommunitiesBanner}
         ListFooterComponent={

@@ -2,96 +2,113 @@
 
 import {AccountActions} from '@store/modules/Account/actions';
 import {ChatActions} from '@store/modules/Chat/actions';
-import {ChatUserData, MessageData} from '@store/modules/Chat/types';
+import {
+  ChatUserData,
+  ExploreData,
+  ExploreDataType,
+  MessageData,
+} from '@store/modules/Chat/types';
 import produce from 'immer';
 
 export interface State {
   messages: MessageData[];
-  hasMoreMessages: boolean;
-  loadingMessages: boolean;
-  messagesInitialLoad: boolean;
-  messagesSearchVisible: boolean;
-
   chatUsers: ChatUserData[];
-  hasMoreChatUsers: boolean;
-  loadingChatUsers: boolean;
-  chatUsersInitialLoad: boolean;
+  exploreData: ExploreData[];
+  exploreDatatype: ExploreDataType | null;
+
+  searchVisible: {[key: string]: boolean};
+  searchValue: {[key: string]: string};
+  hasMore: {[key: string]: boolean};
+  isLoading: {[key: string]: boolean};
+  isInitialLoad: {[key: string]: boolean};
 }
 
 type Actions = ReturnType<
-  | typeof ChatActions.LOAD_MESSAGES_DATA.START.create
-  | typeof ChatActions.LOAD_MESSAGES_DATA.SUCCESS.create
-  | typeof ChatActions.LOAD_MESSAGES_DATA.FAILED.create
-  | typeof ChatActions.LOAD_CHAT_USERS_DATA.START.create
-  | typeof ChatActions.LOAD_CHAT_USERS_DATA.SUCCESS.create
-  | typeof ChatActions.LOAD_CHAT_USERS_DATA.FAILED.create
-  | typeof ChatActions.SET_MESSAGES_SEARCH_VISIBLE.STATE.create
+  | typeof ChatActions.LOAD_CHAT_DATA.START.create
+  | typeof ChatActions.LOAD_CHAT_DATA.SUCCESS.create
+  | typeof ChatActions.LOAD_CHAT_DATA.FAILED.create
+  | typeof ChatActions.SET_EXPLORE_DATA_TYPE.STATE.create
+  | typeof ChatActions.SET_SEARCH_VISIBLE.STATE.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
 >;
 
 const INITIAL_STATE: State = {
+  searchVisible: {},
+  searchValue: {},
+  hasMore: {},
+  isLoading: {},
+  isInitialLoad: {},
+
   messages: [],
-  hasMoreMessages: false,
-  loadingMessages: false,
-  messagesInitialLoad: false,
-  messagesSearchVisible: false,
   chatUsers: [],
-  hasMoreChatUsers: false,
-  loadingChatUsers: false,
-  chatUsersInitialLoad: false,
+  exploreData: [],
+  exploreDatatype: null,
 };
+
+function combine<T>(a: T[], b: T[], override: boolean) {
+  if (override) {
+    return b;
+  }
+  return [...a, ...b];
+}
 
 export function chatReducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
-      case ChatActions.LOAD_MESSAGES_DATA.START.type:
-        draft.loadingMessages = true;
+      case ChatActions.LOAD_CHAT_DATA.START.type:
+        draft.isLoading[action.payload.dataType] = true;
         if (action.payload.initial) {
-          draft.messagesInitialLoad = true;
+          draft.isInitialLoad[action.payload.dataType] = true;
         }
         break;
-      case ChatActions.LOAD_CHAT_USERS_DATA.START.type:
-        draft.loadingChatUsers = true;
-        if (action.payload.initial) {
-          draft.chatUsersInitialLoad = true;
-        }
-        break;
-      case ChatActions.LOAD_MESSAGES_DATA.SUCCESS.type:
-        draft.loadingMessages = false;
-        if (action.payload.messages?.length) {
-          if (draft.messagesInitialLoad) {
-            draft.messages = action.payload.messages;
-          } else {
-            draft.messages = [...draft.messages, ...action.payload.messages];
+      case ChatActions.LOAD_CHAT_DATA.SUCCESS.type:
+        draft.isLoading[action.payload.dataType] = false;
+        const isInitialLoad = draft.isInitialLoad[action.payload.dataType];
+        switch (action.payload.dataType) {
+          case 'chats': {
+            if (action.payload.chatData) {
+              draft.messages = combine(
+                draft.messages,
+                action.payload.chatData,
+                isInitialLoad,
+              );
+            }
+            break;
+          }
+          case 'users': {
+            if (action.payload.userData) {
+              draft.chatUsers = combine(
+                draft.chatUsers,
+                action.payload.userData,
+                isInitialLoad,
+              );
+            }
+            break;
+          }
+          case 'explore': {
+            if (action.payload.exploreData) {
+              draft.exploreData = combine(
+                draft.exploreData,
+                action.payload.exploreData,
+                isInitialLoad,
+              );
+            }
+            break;
           }
         }
-        draft.messagesInitialLoad = false;
-        draft.hasMoreMessages = action.payload.hasMore;
+        draft.isInitialLoad[action.payload.dataType] = false;
+        draft.hasMore[action.payload.dataType] = action.payload.hasMore;
         break;
-      case ChatActions.LOAD_CHAT_USERS_DATA.SUCCESS.type:
-        draft.loadingChatUsers = false;
-        if (action.payload.users?.length) {
-          if (draft.chatUsersInitialLoad) {
-            draft.chatUsers = action.payload.users;
-          } else {
-            draft.chatUsers = [...draft.chatUsers, ...action.payload.users];
-          }
-        }
-        draft.chatUsersInitialLoad = false;
-        draft.hasMoreChatUsers = action.payload.hasMore;
+      case ChatActions.LOAD_CHAT_DATA.FAILED.type:
+        draft.isLoading[action.payload.dataType] = false;
+        draft.hasMore[action.payload.dataType] = false;
+        draft.isInitialLoad[action.payload.dataType] = false;
         break;
-      case ChatActions.LOAD_MESSAGES_DATA.FAILED.type:
-        draft.loadingMessages = false;
-        draft.hasMoreMessages = false;
-        draft.messagesInitialLoad = false;
+      case ChatActions.SET_SEARCH_VISIBLE.STATE.type:
+        draft.searchVisible[action.payload.dataType] = action.payload.visible;
         break;
-      case ChatActions.LOAD_CHAT_USERS_DATA.FAILED.type:
-        draft.loadingChatUsers = false;
-        draft.hasMoreChatUsers = false;
-        draft.chatUsersInitialLoad = false;
-        break;
-      case ChatActions.SET_MESSAGES_SEARCH_VISIBLE.STATE.type:
-        draft.messagesSearchVisible = action.payload.visible;
+      case ChatActions.SET_EXPLORE_DATA_TYPE.STATE.type:
+        draft.exploreDatatype = action.payload.exploreDataType;
         break;
       case AccountActions.SIGN_OUT.SUCCESS.type:
         return {

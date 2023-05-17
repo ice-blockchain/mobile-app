@@ -896,7 +896,13 @@
   },
   "chat": {
     "explore": {
-      "label": "Explore"
+      "label": "Explore",
+      "filter": {
+        "all": "All",
+        "channels": "Channels",
+        "groups": "Groups"
+      },
+      "subscribed_indicator": "you are subscribed"
     },
     "messages": {
       "label": "Messages",

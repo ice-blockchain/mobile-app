@@ -584,6 +584,10 @@ export type Translations = {
   'social_media.instagram.description_part1': null;
   'social_media.instagram.description_part2': null;
   'chat.explore.label': null;
+  'chat.explore.filter.all': null;
+  'chat.explore.filter.channels': null;
+  'chat.explore.filter.groups': null;
+  'chat.explore.subscribed_indicator': null;
   'chat.messages.label': null;
   'chat.messages.no_conversations': null;
   'chat.messages.no_conversations_found': null;

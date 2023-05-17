@@ -1,14 +1,17 @@
 // SPDX-License-Identifier: ice License 1.0
 
-export type MessageSourceType = 'channel' | 'group' | 'private';
+export type ChatSourceType = 'channel' | 'group' | 'private';
+export type ExploreDataType = 'channel' | 'group';
 export type MessageStatusType = 'sent' | 'received' | 'seen';
+
+export type ChatDataType = 'chats' | 'users' | 'explore';
 
 export type MessageData = {
   icon: string;
   sourceName: string;
   lastMessage: string;
   minutesAgo: number;
-  sourceType: MessageSourceType;
+  sourceType: ChatSourceType;
   unreadMessages: number;
   isVerified?: boolean;
   lastMessageStatus: MessageStatusType;
@@ -18,4 +21,13 @@ export type ChatUserData = {
   icon: string;
   username: string;
   lastSeenMinutesAgo: number;
+};
+
+export type ExploreData = {
+  icon: string;
+  type: ExploreDataType;
+  displayName: string;
+  membersNumber: number;
+  isSubscribed?: boolean;
+  isVerified?: boolean;
 };
