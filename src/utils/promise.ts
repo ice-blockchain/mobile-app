@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-const getChunks = <T>(input: Array<T>, chunkSize: number) => {
+export const getChunks = <T>(input: Array<T>, chunkSize: number) => {
   let results = [];
   while (input.length) {
     results.push(input.splice(0, chunkSize));

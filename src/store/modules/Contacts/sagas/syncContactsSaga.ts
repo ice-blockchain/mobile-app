@@ -10,7 +10,7 @@ import {
 import {BackgroundTasksActions} from '@store/modules/BackgroundTasks/actions';
 import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
-import {runInChunks} from '@utils/promise';
+import {getChunks, runInChunks} from '@utils/promise';
 import {getAllWithoutPhotos} from 'react-native-contacts';
 import {call, SagaReturnType, select} from 'redux-saga/effects';
 
@@ -72,15 +72,20 @@ export function* syncContactsSaga(
       agendaPhoneNumber => userPhoneNumberHashes.has(agendaPhoneNumber),
     );
 
-    //TODO:: fix raceConditionStrategy processing -> get rid of dispatching UPDATE
-    yield call(
-      updateAccountSaga,
-      AccountActions.UPDATE_ACCOUNT.START.create({
-        agendaPhoneNumberHashes: [...newAgendaPhoneNumberHashes].join(
-          AGENDA_PHONE_NUMBER_DIVIDER,
-        ),
-      }),
-    );
+    const updateChunks = getChunks(newAgendaPhoneNumberHashes, 500);
+
+    while (updateChunks.length) {
+      //TODO:: fix raceConditionStrategy processing -> get rid of dispatching UPDATE
+      const updateChunk = updateChunks.pop() ?? [];
+      yield call(
+        updateAccountSaga,
+        AccountActions.UPDATE_ACCOUNT.START.create({
+          agendaPhoneNumberHashes: [...updateChunk].join(
+            AGENDA_PHONE_NUMBER_DIVIDER,
+          ),
+        }),
+      );
+    }
   } finally {
     if (
       action.type ===
