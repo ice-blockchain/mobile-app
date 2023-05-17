@@ -22,7 +22,7 @@ const BackgroundTasksHeadlessTask = async ({
   switch (taskId) {
     case BackgroundTask.ContactsSync: {
       store.dispatch(
-        BackgroundTasksActions.SYNC_CONTACTS_BACKGROUND_TASK.STATE.create({
+        BackgroundTasksActions.CONTACTS_SYNC_BACKGROUND_TASK.STATE.create({
           finishTask: () => BackgroundFetch.finish(taskId),
         }),
       );
