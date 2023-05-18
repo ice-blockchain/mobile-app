@@ -9,9 +9,9 @@ export type Translations = {
   'welcome.page4.title': null;
   'welcome.page4.description': null;
   'welcome.page5.title': null;
-  'welcome.page5.description': {value: number | string};
+  'welcome.page5.description': null;
   'welcome.page6.title': null;
-  'welcome.page6.description_part1': {value: number | string};
+  'welcome.page6.description_part1': null;
   'welcome.page6.description_part2': null;
   'welcome.page6.not_now': null;
   'button.yes_btn': null;
@@ -20,6 +20,7 @@ export type Translations = {
   'button.view_all': null;
   'button.invite_friend.title': null;
   'button.invite_friend.description': null;
+  'button.see_all': null;
   'button.no': null;
   'button.search_country': null;
   'button.save': null;
@@ -31,7 +32,6 @@ export type Translations = {
   'button.clear': null;
   'button.finish': null;
   'button.next_step': null;
-  'button.see_all': null;
   'button.back': null;
   'button.search': null;
   'button.continue': null;
@@ -50,6 +50,8 @@ export type Translations = {
   'button.agree': null;
   'button.learn_more': null;
   'button.back_to_login': null;
+  'button.follow_us': null;
+  'button.subscribe': null;
   'team.contacts_tab': null;
   'team.tierOne_tab': null;
   'team.tierTwo_tab': null;
@@ -81,10 +83,7 @@ export type Translations = {
   'signIn.welcome': null;
   'signIn.email': null;
   'signIn.slogan': null;
-  'signIn.privacy.description': null;
-  'signIn.privacy.terms': null;
-  'signIn.privacy.and': null;
-  'signIn.privacy.policy': null;
+  'signIn.privacy': null;
   'claimUsername.title': null;
   'claimUsername.description': null;
   'claimUsername.inputPlaceholder': null;
@@ -94,8 +93,9 @@ export type Translations = {
   'whoInvitedYou.title': null;
   'whoInvitedYou.description': null;
   'whoInvitedYou.inputPlaceholder': null;
-  'whoInvitedYou.dontHaveInvitationCode': {value: number | string};
-  'whoInvitedYou.confirm_text': null;
+  'whoInvitedYou.dontHaveInvitationCode': null;
+  'whoInvitedYou.confirm_text_part1': null;
+  'whoInvitedYou.confirm_text_part2': null;
   'whoInvitedYou.dontHaveCodeTip': null;
   'errors.nicknameSize': null;
   'errors.removeInvalidCharacters': null;
@@ -103,8 +103,8 @@ export type Translations = {
   'errors.multiple_accounts': null;
   'errors.wrong_phone_number': null;
   'errors.invalid_username': null;
-  'errors.already_taken': {field: number | string};
-  'errors.phone_number_already_in_use': null;
+  'errors.email_already_taken': null;
+  'errors.phone_number_already_taken': null;
   'errors.invalid_validation_code': null;
   'errors.validation_expired': null;
   'errors.validation_not_found': null;
@@ -224,7 +224,8 @@ export type Translations = {
   'home.mining_rate.title': null;
   'home.mining_rate.base': null;
   'home.engagement.title': null;
-  'home.engagement.description': null;
+  'home.engagement.description_part1': null;
+  'home.engagement.description_part2': null;
   'home.engagement.streak': null;
   'home.engagement.days_off': null;
   'settings.title': null;
@@ -342,10 +343,7 @@ export type Translations = {
   'staking.time_left': null;
   'staking.mining_rate': null;
   'staking.appeal': null;
-  'staking.benefits_description': {
-    periodYears: number | string;
-    ratePercentages: number | string;
-  };
+  'staking.benefits_description': null;
   'staking.bonus_label': null;
   'staking.period_label': null;
   'staking.title': null;
@@ -353,7 +351,6 @@ export type Translations = {
   'staking.allocation': null;
   'staking.description': null;
   'staking.terms_agree': null;
-  'staking.staking_terms': null;
   'staking.stake_now': null;
   'staking.balance_label': null;
   'staking.confirm_title': null;
@@ -443,7 +440,7 @@ export type Translations = {
   'profile_privacy_edit.step3.description': null;
   'confirm_email.title': null;
   'confirm_email.description': null;
-  'confirm_email.note': {value: number | string};
+  'confirm_email.note': null;
   'confirm_email.wrong_email': null;
   'confirm_email.check_email': null;
   'confirm_email.emailed_link_to': null;
@@ -574,4 +571,16 @@ export type Translations = {
   'mining_notice.message': null;
   'mining_notice.message_footer': null;
   'qr_code.description': null;
+  'social_media.tiktok.title': null;
+  'social_media.tiktok.description_part1': null;
+  'social_media.youtube.title': null;
+  'social_media.youtube.description_part1': null;
+  'social_media.linkedin.title': null;
+  'social_media.linkedin.description_part1': null;
+  'social_media.facebook.title': null;
+  'social_media.facebook.description_part1': null;
+  'social_media.facebook.description_part2': null;
+  'social_media.instagram.title': null;
+  'social_media.instagram.description_part1': null;
+  'social_media.instagram.description_part2': null;
 };

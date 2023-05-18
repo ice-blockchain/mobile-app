@@ -92,11 +92,11 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
           localizedError = t('username.error.already_taken');
           break;
         case 'email':
-          localizedError = t('errors.already_taken', {field});
+          localizedError = t('errors.email_already_taken');
           break;
         case 'phoneNumberHash':
         case 'phoneNumber':
-          localizedError = t('errors.phone_number_already_in_use');
+          localizedError = t('errors.phone_number_already_taken');
           break;
       }
     }

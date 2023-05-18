@@ -30,5 +30,6 @@ const styles = StyleSheet.create({
   labelText: {
     ...font(14, 20, 'medium', 'secondary', 'center'),
     marginTop: rem(16),
+    maxWidth: rem(168),
   },
 });

@@ -67,6 +67,7 @@ export const WhoInvitedYou = () => {
           }
           textStyle={styles.infoTextContainer}
           tooltip={t('whoInvitedYou.dontHaveCodeTip')}
+          tooltipStyle={styles.tooltipStyle}
         />
       }
       button={
@@ -91,5 +92,9 @@ const styles = StyleSheet.create({
   input: {
     // fix for RTL languages
     textAlign: 'left',
+  },
+  tooltipStyle: {
+    width: rem(260),
+    marginBottom: rem(16),
   },
 });

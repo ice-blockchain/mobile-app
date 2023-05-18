@@ -70,9 +70,9 @@ export const Footer = memo(({parameters}: Props) => {
       ),
     );
 
-    return replaceString(text, tagRegex('link'), (match, index) => (
+    return replaceString(text, tagRegex('link', false), (match, index) => (
       <Text key={match + index} style={styles.termsLink} onPress={onTermsPress}>
-        {t('staking.staking_terms')}
+        {match}
       </Text>
     ));
   }, []);

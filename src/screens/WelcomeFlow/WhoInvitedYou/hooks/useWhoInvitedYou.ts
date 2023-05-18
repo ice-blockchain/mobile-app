@@ -76,9 +76,13 @@ export const useWhoInvitedYou = () => {
   };
 
   const onSkip = () => {
+    const message =
+      t('whoInvitedYou.confirm_text_part1') +
+      '\n\n' +
+      t('whoInvitedYou.confirm_text_part2');
     navigation.navigate('PopUp', {
       title: `${t('global.attention')}!`,
-      message: t('whoInvitedYou.confirm_text'),
+      message: message,
       buttons: [
         DEFAULT_DIALOG_NO_BUTTON,
         {

@@ -24,11 +24,18 @@ import {rem} from 'rn-units';
 type Props = {
   text: string | ReactNode;
   tooltip?: string | ReactNode;
+  tooltipStyle?: StyleProp<ViewStyle>;
   containerStyle?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
 };
 
-export const Info = ({text, tooltip, containerStyle, textStyle}: Props) => {
+export const Info = ({
+  text,
+  tooltip,
+  tooltipStyle,
+  containerStyle,
+  textStyle,
+}: Props) => {
   const [isTipVisible, setTipVisibility] = useState(false);
   return (
     <View style={[styles.container, containerStyle]}>
@@ -58,7 +65,7 @@ export const Info = ({text, tooltip, containerStyle, textStyle}: Props) => {
           </View>
           {isTipVisible && !!tooltip && (
             <Touchable
-              style={styles.tooltipWrapper}
+              style={[styles.tooltipWrapper, tooltipStyle]}
               onPress={() => setTipVisibility(false)}>
               <View style={styles.tooltipContainer}>
                 <Text style={styles.tooltipText}>{tooltip}</Text>

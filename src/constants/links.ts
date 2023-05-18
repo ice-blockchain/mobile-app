@@ -27,4 +27,13 @@ export const LINKS = {
   ICE_FAQ: 'https://ice.io/faq',
   STATUS_NOTICE: 'https://ice-production.b-cdn.net/assets/notice.json',
   BETA_TESTING: 'https://ice.io/beta-testing',
+  FACEBOOK_APP: `fb://profile/${ENV.FACEBOOK_PAGE_ID}`,
+  FACEBOOK_WEB: 'https://facebook.com/ice.blockchain',
+  INSTAGRAM_APP: 'instagram://user?username=ice.blockchain',
+  INSTAGRAM_WEB: 'https://www.instagram.com/ice.blockchain',
+  LINKEDIN_APP: 'linkedin://company/ice-blockchain',
+  LINKEDIN_WEB: 'https://linkedin.com/company/ice-blockchain',
+  YOUTUBE_APP: `vnd.youtube://channel/${ENV.YOUTUBE_CHANNEL_ID}`,
+  YOUTUBE_WEB: 'https://youtube.com/@ice.blockchain',
+  TIKTOK_WEB: 'https://www.tiktok.com/@ice.blockchain',
 };

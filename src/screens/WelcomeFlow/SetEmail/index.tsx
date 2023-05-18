@@ -39,7 +39,7 @@ export const SetEmail = () => {
           errorText={updateError}
         />
       }
-      info={<Info text={t('confirm_email.note', {value: 5})} />}
+      info={<Info text={t('confirm_email.note')} />}
       button={
         <PrimaryButton
           text={t('button.complete')}

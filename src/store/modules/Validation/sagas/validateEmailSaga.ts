@@ -51,8 +51,17 @@ export function* validateEmailSaga(action: ReturnType<typeof actionCreator>) {
       localizedError = t('errors.validation_not_found');
     } else if (isApiError(error, 409, 'CONFLICT_WITH_ANOTHER_USER')) {
       const field = error?.response?.data?.data?.field;
-      if (field === 'email') {
-        localizedError = t('errors.already_taken', {field});
+      switch (field) {
+        case 'username':
+          localizedError = t('username.error.already_taken');
+          break;
+        case 'email':
+          localizedError = t('errors.email_already_taken');
+          break;
+        case 'phoneNumberHash':
+        case 'phoneNumber':
+          localizedError = t('errors.phone_number_already_taken');
+          break;
       }
     }
 

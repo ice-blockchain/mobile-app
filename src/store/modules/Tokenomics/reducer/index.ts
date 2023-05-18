@@ -27,6 +27,7 @@ export interface State {
     endDate: string | null;
   };
   agreeWithEarlyAccess: boolean;
+  forceStartMining: boolean;
 }
 
 type Actions = ReturnType<
@@ -39,6 +40,7 @@ type Actions = ReturnType<
   | typeof TokenomicsActions.START_OR_UPDATE_PRE_STAKING.SUCCESS.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
   | typeof TokenomicsActions.UPDATE_AGREE_WITH_EARLY_ACCESS.STATE.create
+  | typeof TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.create
 >;
 
 const INITIAL_STATE: State = {
@@ -53,6 +55,7 @@ const INITIAL_STATE: State = {
     endDate: null,
   },
   agreeWithEarlyAccess: false,
+  forceStartMining: false,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -113,6 +116,9 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         break;
       case TokenomicsActions.UPDATE_AGREE_WITH_EARLY_ACCESS.STATE.type:
         draft.agreeWithEarlyAccess = true;
+        break;
+      case TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.type:
+        draft.forceStartMining = action.payload.forceStartMining;
         break;
       case AccountActions.SIGN_OUT.SUCCESS.type:
         return INITIAL_STATE;
