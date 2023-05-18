@@ -21,11 +21,13 @@ import {SignInEmailLinkForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailLin
 import {SignInEmailPasswordForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailPasswordForm';
 import {SignInPhoneForm} from '@screens/AuthFlow/SignIn/forms/SignInPhoneForm';
 import {useSocialAuth} from '@screens/AuthFlow/SignIn/hooks/useSocialAuth';
+import {useSubscribeToPushNotifications} from '@store/modules/PushNotifications/hooks/useSubscribeToPushNotifications';
 import React, {useMemo, useState} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
 export const SignIn = () => {
+  useSubscribeToPushNotifications();
   useFocusStatusBar({style: 'light-content'});
 
   const {params} = useRoute<RouteProp<AuthStackParamList, 'SignIn'>>();

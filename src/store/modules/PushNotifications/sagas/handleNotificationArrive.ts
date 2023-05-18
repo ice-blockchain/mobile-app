@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {LINKS} from '@constants/links';
 import {
   isAppActiveSelector,
   isSplashHiddenSelector,
@@ -21,9 +22,14 @@ export function* handleNotificationArriveSaga(
   const isActive: ReturnType<typeof isAppActiveSelector> = yield select(
     isAppActiveSelector,
   );
-  if (message?.data?.deeplink && !isActive) {
-    yield put(
-      LinkingActions.HANDLE_URL.STATE.create(message?.data?.deeplink, true),
-    );
+
+  const deeplinkUrl = message?.data?.deeplink;
+
+  if (deeplinkUrl) {
+    const isSignInUrl = deeplinkUrl.includes(LINKS.SIGN_IN);
+
+    if (isSignInUrl || (deeplinkUrl && !isActive)) {
+      yield put(LinkingActions.HANDLE_URL.STATE.create(deeplinkUrl, true));
+    }
   }
 }

@@ -8,6 +8,7 @@ import {startFacebookSignIn} from '@services/auth/signin/facebook';
 import {startGoogleSignIn} from '@services/auth/signin/google';
 import {startTwitterSignIn} from '@services/auth/signin/twitter';
 import {SocialSignInProvider} from '@services/auth/signin/types';
+import {getFcmToken} from '@services/firebase';
 import {t} from '@translations/i18n';
 import {SupportedLocale} from '@translations/localeConfig';
 import {checkProp} from '@utils/guards';
@@ -63,6 +64,7 @@ export const signInWithPhoneNumber = async (phoneNumber: string) => {
 };
 
 export const sendSignInLinkToEmail = async (email: string) => {
+  const token = await getFcmToken();
   return auth().sendSignInLinkToEmail(email, {
     dynamicLinkDomain: ENV.DEEPLINK_DOMAIN,
     handleCodeInApp: true,
@@ -73,7 +75,7 @@ export const sendSignInLinkToEmail = async (email: string) => {
       packageName: ENV.APP_ID ?? '',
       installApp: true,
     },
-    url: LINKS.FIREBASE_NOTICE,
+    url: `${LINKS.SIGN_IN}?token=${token}`,
   });
 };
 
