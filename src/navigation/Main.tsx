@@ -136,6 +136,12 @@ export type MainStackParamList = {
   ProfilePrivacyEditStep2: undefined;
   ProfilePrivacyEditStep3: undefined;
   'Chat/CreateChannel': undefined;
+  'Chat/ChannelType': {
+    channelId: string | null;
+  };
+  'Chat/ChannelAdmins': {
+    channelId: string | null;
+  };
 };
 
 export type HomeTabStackParamList = {
@@ -402,6 +408,8 @@ export function MainNavigator() {
         component={JoinTelegramPopUp}
       />
       <MainStack.Screen name="Chat/CreateChannel" component={CreateChannel} />
+      <MainStack.Screen name="Chat/ChannelType" component={CreateChannel} />
+      <MainStack.Screen name="Chat/ChannelAdmins" component={CreateChannel} />
     </MainStack.Navigator>
   );
 }

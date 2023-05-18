@@ -13,11 +13,16 @@ import {useEffect, useState} from 'react';
 export type CroppedImage = {mime: string; path: string};
 
 type Props = {
+  title?: string;
   onChange: (image: CroppedImage | null) => void;
   uri?: string;
 };
 
-export const useActionSheetUpdateAvatar = ({onChange, uri}: Props) => {
+export const useActionSheetUpdateAvatar = ({
+  title = t('settings.profile_photo.edit'),
+  onChange,
+  uri,
+}: Props) => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainStackParamList>>();
 
@@ -32,7 +37,7 @@ export const useActionSheetUpdateAvatar = ({onChange, uri}: Props) => {
 
   const onEditPress = () => {
     navigation.navigate('ActionSheet', {
-      title: t('settings.profile_photo.edit'),
+      title,
       buttons: [
         {
           icon: ImageIcon,

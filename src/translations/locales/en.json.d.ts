@@ -583,4 +583,13 @@ export type Translations = {
   'social_media.instagram.title': null;
   'social_media.instagram.description_part1': null;
   'social_media.instagram.description_part2': null;
+  'chat.createChannel.title': null;
+  'chat.createChannel.addChannelPhoto': null;
+  'chat.createChannel.labels.administrators': null;
+  'chat.createChannel.labels.channelType': null;
+  'chat.createChannel.labels.description': null;
+  'chat.createChannel.labels.title': null;
+  'chat.createChannel.buttons.createChannel': null;
+  'chat.createChannel.buttons.addPhoto': null;
+  'chat.createChannel.buttons.changePhoto': null;
 };

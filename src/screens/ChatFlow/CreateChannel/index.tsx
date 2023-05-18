@@ -9,8 +9,12 @@ import {commonStyles} from '@constants/styles';
 import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
+import {MainStackParamList} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AdminIcon} from '@svg/AdminIcon';
 import {SpeakerphoneIcon} from '@svg/SpeakerphoneIcon';
+import {t} from '@translations/i18n';
 import React, {useRef, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
@@ -22,6 +26,9 @@ import {ConfigRow} from './components/ConfigRow';
 export const CreateChannel = () => {
   const safeAreaInsets = useSafeAreaInsets();
 
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
+
   const {scrollHandler, shadowStyle} = useScrollShadow();
 
   const refDescription = useRef<CommonInputRef>(null);
@@ -30,11 +37,17 @@ export const CreateChannel = () => {
 
   const [description, setDescription] = useState('');
 
+  const [channelType, _setChannelType] = useState<'public' | 'private'>(
+    'public',
+  );
+
+  const [admins, _setAdmins] = useState<string[]>(['currentUser']);
+
   return (
     <KeyboardAvoider>
       <Header
         color={COLORS.primaryDark}
-        title={'_Creating a channel'}
+        title={t('chat.createChannel.title')}
         containerStyle={shadowStyle}
         backgroundColor={COLORS.white}
       />
@@ -59,7 +72,7 @@ export const CreateChannel = () => {
 
         <View style={styles.contentContainer}>
           <CommonInput
-            label={'_Title'}
+            label={t('chat.createChannel.labels.title')}
             value={title}
             onChangeText={setTitle}
             returnKeyType={'next'}
@@ -69,7 +82,7 @@ export const CreateChannel = () => {
           <CommonInput
             ref={refDescription}
             containerStyle={styles.item}
-            label={'_Description'}
+            label={t('chat.createChannel.labels.description')}
             value={description}
             onChangeText={setDescription}
             multiline
@@ -79,25 +92,35 @@ export const CreateChannel = () => {
           <ConfigRow
             style={styles.item}
             Icon={SpeakerphoneIcon}
-            title={'_Channel type'}
-            value={'Public'}
-            onPress={() => {}}
+            title={t('chat.createChannel.labels.channelType')}
+            value={channelType}
+            onPress={() => {
+              navigation.navigate('Chat/ChannelType', {
+                channelId: null,
+              });
+            }}
           />
 
           <ConfigRow
             style={styles.item}
             Icon={AdminIcon}
-            title={'_Administrator'}
-            value={'1'}
-            onPress={() => {}}
+            title={t('chat.createChannel.labels.administrators')}
+            value={admins.length}
+            onPress={() => {
+              navigation.navigate('Chat/ChannelAdmins', {
+                channelId: null,
+              });
+            }}
           />
 
           <View style={commonStyles.flexOne} />
 
           <PrimaryButton
             style={styles.item}
-            text={'_Create channel'}
-            onPress={() => {}}
+            text={t('chat.createChannel.buttons.createChannel')}
+            onPress={() => {
+              navigation.goBack();
+            }}
           />
         </View>
       </Animated.ScrollView>

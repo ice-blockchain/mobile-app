@@ -893,5 +893,22 @@
       "description_part1": "Following us on Instagram is a great way to stay in the loop and connect with other users who are also passionate about ice",
       "description_part2": "Plus, you'll be the first to know about any new features or promotions that we're launching."
     }
+  },
+  "chat": {
+    "createChannel": {
+      "title": "Creating a channel",
+      "addChannelPhoto": "Add channel photo",
+      "labels": {
+        "administrators": "Administrators",
+        "channelType": "Channel type",
+        "description": "Description",
+        "title": "Title"
+      },
+      "buttons": {
+        "createChannel": "Create channel",
+        "addPhoto": "Add photo",
+        "changePhoto": "Change photo"
+      }
+    }
   }
 }

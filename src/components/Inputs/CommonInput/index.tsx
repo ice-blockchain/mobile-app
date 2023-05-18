@@ -70,6 +70,7 @@ export const CommonInput = forwardRef<CommonInputRef, CommonInputProps>(
     ref,
   ) => {
     const [isFocused, setIsFocused] = useState(false);
+
     const inputRef = useRef<TextInput>(null);
 
     useImperativeHandle(ref, () => ({

@@ -2,30 +2,51 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {
+  CroppedImage,
+  useActionSheetUpdateAvatar,
+} from '@hooks/useActionSheetUpdateAvatar';
 import {CameraIcon} from '@svg/CameraIcon';
+import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
-import React, {useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
 export const CHANNEL_PHOTO_SIZE = rem(110);
 
 export const ChannelPhoto = () => {
-  const [photoUri, setPhotoUri] = useState('');
+  const [uri, setUri] = useState('');
 
-  const onSelectPhoto = () => {
-    setPhotoUri('https://picsum.photos/200/300');
-  };
+  const onChange = useCallback((image: CroppedImage | null) => {
+    setUri(image?.path ?? '');
+  }, []);
+
+  const {onEditPress, localImage} = useActionSheetUpdateAvatar({
+    title: t('chat.createChannel.addChannelPhoto'),
+    onChange,
+    uri,
+  });
+
+  const imageSource = useMemo(() => {
+    const currentUri = uri || localImage?.path;
+
+    if (!currentUri) {
+      return null;
+    }
+
+    return {
+      uri: currentUri,
+    };
+  }, [localImage?.path, uri]);
 
   return (
-    <Touchable style={styles.container} onPress={onSelectPhoto}>
+    <Touchable style={styles.container} onPress={onEditPress}>
       <View style={styles.photoContainer}>
-        {photoUri ? (
+        {imageSource ? (
           <Image
             style={styles.photo}
-            source={{
-              uri: photoUri,
-            }}
+            source={imageSource}
             resizeMode={'cover'}
           />
         ) : (
@@ -36,7 +57,9 @@ export const ChannelPhoto = () => {
       </View>
 
       <Text style={styles.text}>
-        {photoUri ? '_Change photo' : '_Add photo'}
+        {imageSource
+          ? t('chat.createChannel.buttons.changePhoto')
+          : t('chat.createChannel.buttons.addPhoto')}
       </Text>
     </Touchable>
   );
