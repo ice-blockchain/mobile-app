@@ -2,8 +2,9 @@
 
 export const getChunks = <T>(input: Array<T>, chunkSize: number) => {
   let results = [];
-  while (input.length) {
-    results.push(input.splice(0, chunkSize));
+  const inputCopy = [...input];
+  while (inputCopy.length) {
+    results.push(inputCopy.splice(0, chunkSize));
   }
   return results;
 };

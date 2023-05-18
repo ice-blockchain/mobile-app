@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AccountActions} from '@store/modules/Account/actions';
 import {ContactsActions} from '@store/modules/Contacts/actions';
 import produce from 'immer';
 import {Contact} from 'react-native-contacts';
+import {persistReducer} from 'redux-persist';
 
 export interface State {
   search: {active: boolean};
@@ -41,4 +43,11 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
   });
 }
 
-export const contactsReducer = reducer;
+export const contactsReducer = persistReducer(
+  {
+    key: 'contacts',
+    storage: AsyncStorage,
+    whitelist: ['numberOfSyncedContacts'],
+  },
+  reducer,
+);

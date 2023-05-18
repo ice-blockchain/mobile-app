@@ -84,7 +84,7 @@ export function* syncContactsSaga(
     );
 
     const newAgendaPhoneNumberHashes = [...agendaPhoneNumberHashes].filter(
-      agendaPhoneNumber => userPhoneNumberHashes.has(agendaPhoneNumber),
+      agendaPhoneNumber => !userPhoneNumberHashes.has(agendaPhoneNumber),
     );
 
     const updateChunks = getChunks(newAgendaPhoneNumberHashes, 500);

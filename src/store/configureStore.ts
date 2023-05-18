@@ -44,11 +44,13 @@ export const store = configureStore({
         ignoredActionPaths: [
           'payload.raceConditionStrategy',
           'payload.elementData',
+          'payload.finishTask',
         ],
         ignoredPaths: [
           'utilityProcessStatuses.UPDATE_ACCOUNT.payload.raceConditionStrategy',
           'utilityProcessStatuses.SET_WALKTHROUGH_STEP_ELEMENT_DATA.payload.elementData',
           'walkthrough.stepElements',
+          'utilityProcessStatuses.SYNC_CONTACTS_BACKGROUND_TASK.payload.finishTask',
         ],
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
