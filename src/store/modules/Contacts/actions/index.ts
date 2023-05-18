@@ -19,7 +19,16 @@ const GET_CONTACTS = createAction('GET_CONTACTS', {
   }),
 });
 
+const SYNC_CONTACTS = createAction('SYNC_CONTACTS', {
+  START: true,
+  SUCCESS: (payload: {numberOfSyncedContacts: number}) => payload,
+  FAILED: (errorMessage: string) => ({
+    errorMessage,
+  }),
+});
+
 export const ContactsActions = Object.freeze({
   INVITE_CONTACT,
   GET_CONTACTS,
+  SYNC_CONTACTS,
 });

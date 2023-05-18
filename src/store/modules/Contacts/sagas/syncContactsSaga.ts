@@ -2,17 +2,26 @@
 
 import {User} from '@api/user/types';
 import {AccountActions} from '@store/modules/Account/actions';
-import {updateAccountSaga} from '@store/modules/Account/sagas/updateAccount';
 import {
   isAuthorizedSelector,
   userSelector,
 } from '@store/modules/Account/selectors';
 import {BackgroundTasksActions} from '@store/modules/BackgroundTasks/actions';
+import {ContactsActions} from '@store/modules/Contacts/actions';
+import {numberOfSyncedContactsSelector} from '@store/modules/Contacts/selectors';
 import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';
+import {getErrorMessage} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import {getChunks, runInChunks} from '@utils/promise';
 import {getAllWithoutPhotos} from 'react-native-contacts';
-import {call, SagaReturnType, select} from 'redux-saga/effects';
+import {
+  call,
+  put,
+  race,
+  SagaReturnType,
+  select,
+  take,
+} from 'redux-saga/effects';
 
 const AGENDA_PHONE_NUMBER_DIVIDER = ',';
 
@@ -37,7 +46,13 @@ export function* syncContactsSaga(
       getAllWithoutPhotos,
     );
 
-    //TODO:: save numberOfSyncedContacts after sync and if equal to contacts.length, don't continue
+    const numberOfSyncedContacts: ReturnType<
+      typeof numberOfSyncedContactsSelector
+    > = yield select(numberOfSyncedContactsSelector);
+
+    if (numberOfSyncedContacts === contacts.length) {
+      return;
+    }
 
     const user: User = yield select(userSelector);
 
@@ -75,17 +90,39 @@ export function* syncContactsSaga(
     const updateChunks = getChunks(newAgendaPhoneNumberHashes, 500);
 
     while (updateChunks.length) {
-      //TODO:: fix raceConditionStrategy processing -> get rid of dispatching UPDATE
       const updateChunk = updateChunks.pop() ?? [];
-      yield call(
-        updateAccountSaga,
+
+      yield put(
         AccountActions.UPDATE_ACCOUNT.START.create({
           agendaPhoneNumberHashes: [...updateChunk].join(
             AGENDA_PHONE_NUMBER_DIVIDER,
           ),
         }),
       );
+
+      const {error} = yield race({
+        success: take(AccountActions.UPDATE_ACCOUNT.SUCCESS.type),
+        error: take([
+          AccountActions.UPDATE_ACCOUNT.FAILED.type,
+          AccountActions.UPDATE_ACCOUNT.RESET.type,
+        ]),
+      });
+
+      if (error) {
+        throw new Error('Error setting agendaPhoneNumberHashes');
+      }
     }
+
+    yield put(
+      ContactsActions.SYNC_CONTACTS.SUCCESS.create({
+        numberOfSyncedContacts: contacts.length,
+      }),
+    );
+  } catch (error) {
+    yield put(
+      ContactsActions.SYNC_CONTACTS.FAILED.create(getErrorMessage(error)),
+    );
+    throw error;
   } finally {
     if (
       action.type ===

@@ -8,16 +8,19 @@ import {Contact} from 'react-native-contacts';
 export interface State {
   search: {active: boolean};
   contacts: Contact[];
+  numberOfSyncedContacts: number | null;
 }
 
 type Actions = ReturnType<
   | typeof ContactsActions.GET_CONTACTS.SUCCESS.create
+  | typeof ContactsActions.SYNC_CONTACTS.SUCCESS.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
 >;
 
 const INITIAL_STATE: State = {
   search: {active: false},
   contacts: [],
+  numberOfSyncedContacts: null,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -27,6 +30,10 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.contacts = action.payload.contacts;
         break;
       }
+      case ContactsActions.SYNC_CONTACTS.SUCCESS.type: {
+        draft.numberOfSyncedContacts = action.payload.numberOfSyncedContacts;
+        break;
+      }
       case AccountActions.SIGN_OUT.SUCCESS.type: {
         return {...INITIAL_STATE};
       }
@@ -34,4 +41,4 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
   });
 }
 
-export const teamReducer = reducer;
+export const contactsReducer = reducer;
