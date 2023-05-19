@@ -895,20 +895,30 @@
     }
   },
   "chat": {
-    "createChannel": {
+    "channel": {
+      "type": {
+        "public": "Public",
+        "private": "Private"
+      }
+    },
+    "create_channel": {
       "title": "Creating a channel",
-      "addChannelPhoto": "Add channel photo",
+      "add_channel_photo": "Add channel photo",
       "labels": {
         "administrators": "Administrators",
-        "channelType": "Channel type",
+        "channel_type": "Channel type",
         "description": "Description",
         "title": "Title"
       },
       "buttons": {
-        "createChannel": "Create channel",
-        "addPhoto": "Add photo",
-        "changePhoto": "Change photo"
+        "create_channel": "Create channel",
+        "add_photo": "Add photo",
+        "change_photo": "Change photo"
       }
+    },
+    "channel_type": {
+      "title": "Choose type of channel",
+      "info": "Public channels can be found through search and any user can subscribe to them"
     }
   }
 }

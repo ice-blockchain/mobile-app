@@ -47,7 +47,7 @@ export const CreateChannel = () => {
     <KeyboardAvoider>
       <Header
         color={COLORS.primaryDark}
-        title={t('chat.createChannel.title')}
+        title={t('chat.create_channel.title')}
         containerStyle={shadowStyle}
         backgroundColor={COLORS.white}
       />
@@ -72,7 +72,7 @@ export const CreateChannel = () => {
 
         <View style={styles.contentContainer}>
           <CommonInput
-            label={t('chat.createChannel.labels.title')}
+            label={t('chat.create_channel.labels.title')}
             value={title}
             onChangeText={setTitle}
             returnKeyType={'next'}
@@ -82,7 +82,7 @@ export const CreateChannel = () => {
           <CommonInput
             ref={refDescription}
             containerStyle={styles.item}
-            label={t('chat.createChannel.labels.description')}
+            label={t('chat.create_channel.labels.description')}
             value={description}
             onChangeText={setDescription}
             multiline
@@ -92,8 +92,8 @@ export const CreateChannel = () => {
           <ConfigRow
             style={styles.item}
             Icon={SpeakerphoneIcon}
-            title={t('chat.createChannel.labels.channelType')}
-            value={channelType}
+            title={t('chat.create_channel.labels.channel_type')}
+            value={t(`chat.channel.type.${channelType}`)}
             onPress={() => {
               navigation.navigate('Chat/ChannelType', {
                 channelId: null,
@@ -104,7 +104,7 @@ export const CreateChannel = () => {
           <ConfigRow
             style={styles.item}
             Icon={AdminIcon}
-            title={t('chat.createChannel.labels.administrators')}
+            title={t('chat.create_channel.labels.administrators')}
             value={admins.length}
             onPress={() => {
               navigation.navigate('Chat/ChannelAdmins', {
@@ -117,7 +117,7 @@ export const CreateChannel = () => {
 
           <PrimaryButton
             style={styles.item}
-            text={t('chat.createChannel.buttons.createChannel')}
+            text={t('chat.create_channel.buttons.create_channel')}
             onPress={() => {
               navigation.goBack();
             }}

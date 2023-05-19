@@ -17,6 +17,7 @@ import {
 } from '@react-navigation/bottom-tabs';
 import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {ChannelTypeSelect} from '@screens/ChatFlow/ChannelTypeSelect';
 import {CreateChannel} from '@screens/ChatFlow/CreateChannel';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
 import {Home} from '@screens/HomeFlow/Home';
@@ -407,9 +408,13 @@ export function MainNavigator() {
         options={modalOptions}
         component={JoinTelegramPopUp}
       />
-      <MainStack.Screen name="Chat/CreateChannel" component={CreateChannel} />
-      <MainStack.Screen name="Chat/ChannelType" component={CreateChannel} />
-      <MainStack.Screen name="Chat/ChannelAdmins" component={CreateChannel} />
+      <MainStack.Screen name={'Chat/CreateChannel'} component={CreateChannel} />
+      <MainStack.Screen
+        name={'Chat/ChannelType'}
+        component={ChannelTypeSelect}
+        options={modalOptions}
+      />
+      <MainStack.Screen name={'Chat/ChannelAdmins'} component={CreateChannel} />
     </MainStack.Navigator>
   );
 }

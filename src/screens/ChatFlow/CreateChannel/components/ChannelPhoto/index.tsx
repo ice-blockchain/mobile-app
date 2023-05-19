@@ -23,7 +23,7 @@ export const ChannelPhoto = () => {
   }, []);
 
   const {onEditPress, localImage} = useActionSheetUpdateAvatar({
-    title: t('chat.createChannel.addChannelPhoto'),
+    title: t('chat.create_channel.add_channel_photo'),
     onChange,
     uri,
   });
@@ -58,8 +58,8 @@ export const ChannelPhoto = () => {
 
       <Text style={styles.text}>
         {imageSource
-          ? t('chat.createChannel.buttons.changePhoto')
-          : t('chat.createChannel.buttons.addPhoto')}
+          ? t('chat.create_channel.buttons.change_photo')
+          : t('chat.create_channel.buttons.add_photo')}
       </Text>
     </Touchable>
   );
