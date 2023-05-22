@@ -28,6 +28,7 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 import {MaterialTopTabBarProps} from '@react-navigation/material-top-tabs/lib/typescript/src/types';
 import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {Channel} from '@screens/ChatFlow/Channel';
 import {Explore} from '@screens/ChatFlow/Explore';
 import {Messages} from '@screens/ChatFlow/Messages';
 import {NewChatSelector} from '@screens/ChatFlow/NewChatSelector';
@@ -77,6 +78,7 @@ import {Staking} from '@screens/Staking';
 import {Team} from '@screens/Team';
 import {Walkthrough} from '@screens/Walkthrough';
 import {ActiveTabActions, ChatTab, Tab} from '@store/modules/ActiveTab/actions';
+import {ExploreData} from '@store/modules/Chat/types';
 import {useSubscribeToPushNotifications} from '@store/modules/PushNotifications/hooks/useSubscribeToPushNotifications';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {WalkthroughStep} from '@store/modules/Walkthrough/types';
@@ -157,6 +159,7 @@ export type MainStackParamList = {
   Roles: {userId?: string} | undefined;
   Badges: {category?: BadgeType; userId?: string};
   NewChatSelector: undefined;
+  Channel: {channelData: ExploreData};
   Walkthrough:
     | {step: WalkthroughStep; total: number; index: number}
     | undefined;
@@ -471,6 +474,7 @@ export function MainNavigator() {
         component={Badges}
         options={badgesOptions}
       />
+      <MainStack.Screen name="Channel" component={Channel} />
       <MainStack.Screen
         name="Walkthrough"
         component={Walkthrough}

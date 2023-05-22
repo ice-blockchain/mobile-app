@@ -2,7 +2,7 @@
 
 import {Avatar} from '@components/Avatar/Avatar';
 import {COLORS} from '@constants/colors';
-import {commonStyles} from '@constants/styles';
+import {commonStyles, HIT_SLOP} from '@constants/styles';
 import {ChatSourceType} from '@store/modules/Chat/types';
 import {ChannelIcon} from '@svg/ChannelIcon';
 import {PrivateConversationIcon} from '@svg/PrivateConversationIcon';
@@ -11,6 +11,7 @@ import {VerifiedIcon} from '@svg/VerifiedIcon';
 import {font} from '@utils/styles';
 import * as React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -21,6 +22,7 @@ type Props = {
   isVerified?: boolean;
   subtitle: string;
   subtitleIcon?: React.ReactNode;
+  onPress?: () => void;
 };
 
 function getSourceTypeIcon(sourceType: ChatSourceType) {
@@ -44,21 +46,31 @@ export function ChatTabRow({
   isVerified,
   subtitle,
   subtitleIcon,
+  onPress,
 }: Props) {
   return (
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Avatar
-          uri={icon}
-          size={rem(48)}
-          borderRadius={15}
-          allowFullScreen={false}
-        />
-        <View style={[styles.sourceTypeContainer, commonStyles.shadow]}>
-          {getSourceTypeIcon(sourceType)}
+    <TouchableWithoutFeedback
+      style={styles.container}
+      onPress={onPress}
+      hitSlop={HIT_SLOP}>
+      <View style={styles.imageMainContainer}>
+        <View style={styles.imageContainer}>
+          <Avatar
+            uri={icon}
+            size={rem(48)}
+            borderRadius={15}
+            allowFullScreen={false}
+          />
+          <View style={[styles.sourceTypeContainer, commonStyles.shadow]}>
+            {getSourceTypeIcon(sourceType)}
+          </View>
         </View>
       </View>
-      <View style={styles.titleContainer}>
+      <View
+        style={[
+          styles.titlesContainer,
+          rightComponent ? commonStyles.flexOne : null,
+        ]}>
         <View style={commonStyles.row}>
           <Text style={styles.title}>{title}</Text>
           {isVerified ? (
@@ -75,7 +87,7 @@ export function ChatTabRow({
         </View>
       </View>
       {rightComponent}
-    </View>
+    </TouchableWithoutFeedback>
   );
 }
 
@@ -83,11 +95,9 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     width: '100%',
-    justifyContent: 'center',
     alignItems: 'center',
   },
-  titleContainer: {
-    flex: 1,
+  titlesContainer: {
     paddingLeft: rem(10),
   },
   title: {
@@ -100,6 +110,9 @@ const styles = StyleSheet.create({
   subTitle: {
     paddingTop: rem(4),
     ...font(12, 19, 'medium', 'secondary'),
+  },
+  imageMainContainer: {
+    overflow: 'hidden',
   },
   imageContainer: {
     width: rem(48),

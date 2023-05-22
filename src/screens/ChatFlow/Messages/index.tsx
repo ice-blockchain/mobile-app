@@ -5,22 +5,17 @@ import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffse
 import {ItemSeparator} from '@screens/ChatFlow/components/ItemSeparator';
 import {JoinCommunitiesBanner} from '@screens/ChatFlow/components/JoinCommunitiesBanner';
 import {SearchBar} from '@screens/ChatFlow/components/SearchBar';
+import {useLoadChatData} from '@screens/ChatFlow/hooks/useLoadChatData';
 import {MessagesRow} from '@screens/ChatFlow/Messages/components/MessagesRow';
 import {NoConversationsScreen} from '@screens/ChatFlow/Messages/components/NoConversationsScreen';
 import {SEARCH_HIDDEN_Y} from '@screens/ChatFlow/Messages/constants';
 import {useAnimatedSearch} from '@screens/ChatFlow/Messages/hooks/useAnimatedSearch';
-import {ChatActions} from '@store/modules/Chat/actions';
-import {
-  getLoadingChatDataSelector,
-  messagesDataSelector,
-} from '@store/modules/Chat/selectors';
+import {messagesDataSelector} from '@store/modules/Chat/selectors';
 import {ChatDataType, MessageData} from '@store/modules/Chat/types';
-import debounce from 'lodash/debounce';
 import * as React from 'react';
-import {useEffect, useRef, useState} from 'react';
 import {ActivityIndicator, StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 function ListHeaderComponent() {
@@ -32,28 +27,20 @@ const dataType: ChatDataType = 'chats';
 export function Messages() {
   const tabBarOffset = useBottomTabBarOffsetStyle();
   const messages = useSelector(messagesDataSelector);
-  const loading = useSelector(getLoadingChatDataSelector(dataType));
-  const refreshingRef = useRef(false);
-
-  const [searchValue, setSearchValue] = useState<string>('');
-  const onChangeText = debounce(setSearchValue, 600);
-
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(
-      ChatActions.LOAD_CHAT_DATA.START.create({
-        initial: true,
-        dataType,
-        searchValue,
-      }),
-    );
-  }, [dispatch, searchValue]);
+  const {
+    onChangeText,
+    loading,
+    loadMore,
+    refreshing,
+    refreshData,
+    searchValue,
+  } = useLoadChatData(dataType);
 
   const {scrollHandler, animatedStyle, searchVisible} =
     useAnimatedSearch(dataType);
 
   const renderItem = ({item}: {item: MessageData}) => {
-    return <MessagesRow key={item.sourceName} messageData={item} />;
+    return <MessagesRow key={item.id} messageData={item} />;
   };
 
   return (
@@ -77,25 +64,12 @@ export function Messages() {
           ]}
           data={messages}
           renderItem={renderItem}
-          onEndReached={() => {
-            dispatch(
-              ChatActions.LOAD_CHAT_DATA.START.create({dataType, searchValue}),
-            );
-          }}
-          onRefresh={() => {
-            dispatch(
-              ChatActions.LOAD_CHAT_DATA.START.create({
-                initial: true,
-                dataType,
-                searchValue,
-              }),
-            );
-            refreshingRef.current = true;
-          }}
-          refreshing={loading && refreshingRef.current}
+          onEndReached={loadMore}
+          onRefresh={refreshData}
+          refreshing={refreshing}
           ItemSeparatorComponent={ItemSeparator}
           ListFooterComponent={
-            loading && !refreshingRef.current ? ActivityIndicator : null
+            loading && !refreshing ? ActivityIndicator : null
           }
           ListEmptyComponent={
             !loading ? (

@@ -36,7 +36,6 @@ export function ChatTabBar(props: MaterialTopTabBarProps) {
   const topOffset = useTopOffsetStyle();
 
   const activeChatTab = useSelector(activeChatTabSelector);
-  console.log('activeChatTab', {activeChatTab});
 
   const dispatch = useDispatch();
   const onSearch = () => {

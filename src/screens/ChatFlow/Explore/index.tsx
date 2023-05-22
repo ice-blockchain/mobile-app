@@ -1,28 +1,29 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {ListItemSkeleton} from '@components/ListItems/ListItemSkeleton';
+import {SKELETONS_PER_SCREEN} from '@components/ListItems/UserListItem';
+import {commonStyles} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {ItemSeparator} from '@screens/ChatFlow/components/ItemSeparator';
 import {SearchBar} from '@screens/ChatFlow/components/SearchBar';
 import {ExploreFilter} from '@screens/ChatFlow/Explore/components/ExploreFilter';
 import {ExploreRow} from '@screens/ChatFlow/Explore/components/ExploreRow';
 import {ExploreFilterType} from '@screens/ChatFlow/Explore/types';
+import {useLoadChatData} from '@screens/ChatFlow/hooks/useLoadChatData';
 import {SEARCH_HIDDEN_Y} from '@screens/ChatFlow/Messages/constants';
 import {useAnimatedSearch} from '@screens/ChatFlow/Messages/hooks/useAnimatedSearch';
 import {ChatActions} from '@store/modules/Chat/actions';
 import {
   exploreDataSelector,
   exploreDataTypeSelector,
-  getLoadingChatDataSelector,
 } from '@store/modules/Chat/selectors';
 import {
   ChatDataType,
   ExploreData,
   ExploreDataType,
 } from '@store/modules/Chat/types';
-import debounce from 'lodash/debounce';
 import * as React from 'react';
-import {useCallback, useEffect, useRef, useState} from 'react';
+import {useCallback} from 'react';
 import {ActivityIndicator, StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {useDispatch, useSelector} from 'react-redux';
@@ -59,12 +60,9 @@ export function Explore() {
   const tabBarOffset = useBottomTabBarOffsetStyle();
   const exploreData = useSelector(exploreDataSelector);
   const exploreDataType = useSelector(exploreDataTypeSelector);
-  const refreshingRef = useRef(false);
-  const loading = useSelector(getLoadingChatDataSelector(dataType));
   const dispatch = useDispatch();
-
-  const [searchValue, setSearchValue] = useState('');
-  const onChangeText = debounce(setSearchValue, 600);
+  const {onChangeText, loading, loadMore, refreshing, refreshData} =
+    useLoadChatData(dataType);
 
   const toggleFilter = useCallback(
     (filterType: ExploreFilterType) => {
@@ -73,23 +71,14 @@ export function Explore() {
           exploreDataType: getExploreDataType(filterType),
         }),
       );
+      refreshData();
     },
-    [dispatch],
+    [dispatch, refreshData],
   );
-
-  useEffect(() => {
-    dispatch(
-      ChatActions.LOAD_CHAT_DATA.START.create({
-        initial: true,
-        dataType,
-        searchValue,
-      }),
-    );
-  }, [dispatch, exploreDataType, searchValue]);
 
   const renderItem = ({item}: {item: ExploreData}) => {
     return (
-      <View key={item.displayName} style={styles.rowContainer}>
+      <View key={item.id} style={commonStyles.screenPadding}>
         <ExploreRow exploreData={item} />
       </View>
     );
@@ -115,25 +104,23 @@ export function Explore() {
           contentContainerStyle={tabBarOffset.current}
           data={exploreData}
           renderItem={renderItem}
-          onEndReached={() => {
-            dispatch(
-              ChatActions.LOAD_CHAT_DATA.START.create({dataType, searchValue}),
-            );
-          }}
-          onRefresh={() => {
-            dispatch(
-              ChatActions.LOAD_CHAT_DATA.START.create({
-                initial: true,
-                dataType,
-                searchValue,
-              }),
-            );
-            refreshingRef.current = true;
-          }}
-          refreshing={loading && refreshingRef.current}
+          onEndReached={loadMore}
+          onRefresh={refreshData}
+          refreshing={refreshing}
           ItemSeparatorComponent={ItemSeparator}
           ListFooterComponent={
-            loading && !refreshingRef.current ? ActivityIndicator : null
+            loading && !refreshing ? ActivityIndicator : null
+          }
+          ListEmptyComponent={
+            loading && !exploreData.length ? (
+              <View style={commonStyles.screenPadding}>
+                {Array(SKELETONS_PER_SCREEN)
+                  .fill(null)
+                  .map((_, index) => (
+                    <ListItemSkeleton key={index} />
+                  ))}
+              </View>
+            ) : null
           }
           ListHeaderComponent={
             <ExploreFilter
@@ -149,9 +136,6 @@ export function Explore() {
 }
 
 const styles = StyleSheet.create({
-  rowContainer: {
-    paddingHorizontal: SCREEN_SIDE_OFFSET,
-  },
   animatedContainerMargin: {
     marginBottom: SEARCH_HIDDEN_Y,
   },

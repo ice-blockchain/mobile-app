@@ -20,6 +20,7 @@ function getMockedRandomData() {
 
 const mockData: ExploreData[] = [
   {
+    id: 1,
     type: 'channel',
     displayName: 'ICE Official Channel',
     membersNumber: 44594,
@@ -27,6 +28,7 @@ const mockData: ExploreData[] = [
     ...getMockedRandomData(),
   },
   {
+    id: 2,
     type: 'group',
     displayName: 'Crypto Librarys Airdrop',
     membersNumber: 1544594,
@@ -34,54 +36,63 @@ const mockData: ExploreData[] = [
     ...getMockedRandomData(),
   },
   {
+    id: 3,
     type: 'group',
     displayName: 'ICE Coin crypto',
     membersNumber: 54844,
     ...getMockedRandomData(),
   },
   {
+    id: 4,
     type: 'channel',
     displayName: 'Crypto Channel Bitcoin',
     membersNumber: 144594,
     ...getMockedRandomData(),
   },
   {
+    id: 5,
     type: 'channel',
     displayName: 'Crypto Librarys Airdrop',
     membersNumber: 144594,
     ...getMockedRandomData(),
   },
   {
+    id: 6,
     type: 'group',
     displayName: 'Crypto world - Spain',
     membersNumber: 144594,
     ...getMockedRandomData(),
   },
   {
+    id: 7,
     type: 'group',
     displayName: 'Crypto - EUROPE',
     membersNumber: 144594,
     ...getMockedRandomData(),
   },
   {
+    id: 8,
     type: 'channel',
     displayName: 'Swiss on crypto',
     membersNumber: 144594,
     ...getMockedRandomData(),
   },
   {
+    id: 9,
     type: 'group',
     displayName: 'Berlin',
     membersNumber: 144594,
     ...getMockedRandomData(),
   },
   {
+    id: 10,
     type: 'group',
     displayName: 'Budapest',
     membersNumber: 84594,
     ...getMockedRandomData(),
   },
   {
+    id: 11,
     type: 'group',
     displayName: 'Bucharest',
     membersNumber: 15124,

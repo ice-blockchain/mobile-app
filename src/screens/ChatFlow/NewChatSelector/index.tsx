@@ -3,7 +3,7 @@
 import {ListItemSkeleton} from '@components/ListItems/ListItemSkeleton';
 import {SKELETONS_PER_SCREEN} from '@components/ListItems/UserListItem';
 import {COLORS} from '@constants/colors';
-import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {commonStyles} from '@constants/styles';
 import BottomSheet, {
   BottomSheetBackdropProps,
   BottomSheetFlatList,
@@ -12,24 +12,19 @@ import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffse
 import {useNavigation} from '@react-navigation/native';
 import {ItemSeparator} from '@screens/ChatFlow/components/ItemSeparator';
 import {JoinCommunitiesBanner} from '@screens/ChatFlow/components/JoinCommunitiesBanner';
+import {useLoadChatData} from '@screens/ChatFlow/hooks/useLoadChatData';
 import {ChatSelectorHeader} from '@screens/ChatFlow/NewChatSelector/components/ChatSelectorHeader';
 import {ChatSelectorRow} from '@screens/ChatFlow/NewChatSelector/components/ChatSelectorRow';
-import {ChatActions} from '@store/modules/Chat/actions';
-import {
-  chatUsersDataSelector,
-  getLoadingChatDataSelector,
-} from '@store/modules/Chat/selectors';
+import {chatUsersDataSelector} from '@store/modules/Chat/selectors';
 import {ChatDataType, ChatUserData} from '@store/modules/Chat/types';
-import debounce from 'lodash/debounce';
 import * as React from 'react';
-import {useEffect, useState} from 'react';
 import {ActivityIndicator, StyleSheet, View} from 'react-native';
 import Animated, {
   Extrapolate,
   interpolate,
   useAnimatedStyle,
 } from 'react-native-reanimated';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 function BackdropComponent({animatedIndex}: BottomSheetBackdropProps) {
   const containerAnimatedStyle = useAnimatedStyle(() => ({
@@ -51,23 +46,11 @@ export function NewChatSelector() {
   const navigation = useNavigation();
   const tabBarOffset = useBottomTabBarOffsetStyle();
   const chatUsers = useSelector(chatUsersDataSelector);
-  const loading = useSelector(getLoadingChatDataSelector(dataType));
-  const [searchValue, setSearchValue] = useState('');
-  const onChangeText = debounce(setSearchValue, 600);
 
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(
-      ChatActions.LOAD_CHAT_DATA.START.create({
-        initial: true,
-        dataType,
-        searchValue,
-      }),
-    );
-  }, [dispatch, searchValue]);
+  const {onChangeText, loading, loadMore} = useLoadChatData(dataType);
 
   const renderItem = ({item}: {item: ChatUserData}) => {
-    return <ChatSelectorRow chatUser={item} />;
+    return <ChatSelectorRow key={item.id} chatUser={item} />;
   };
 
   return (
@@ -85,21 +68,20 @@ export function NewChatSelector() {
       <ChatSelectorHeader onChangeText={onChangeText} />
       <BottomSheetFlatList
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={[styles.listContent, tabBarOffset.current]}
+        contentContainerStyle={[
+          commonStyles.screenPadding,
+          tabBarOffset.current,
+        ]}
         data={chatUsers}
         renderItem={renderItem}
-        onEndReached={() => {
-          dispatch(
-            ChatActions.LOAD_CHAT_DATA.START.create({dataType, searchValue}),
-          );
-        }}
+        onEndReached={loadMore}
         ListHeaderComponent={JoinCommunitiesBanner}
         ListFooterComponent={
           loading && chatUsers.length ? ActivityIndicator : null
         }
         ListEmptyComponent={
           loading && !chatUsers.length ? (
-            <View style={styles.flex}>
+            <View>
               {Array(SKELETONS_PER_SCREEN)
                 .fill(null)
                 .map((_, index) => (
@@ -116,10 +98,6 @@ export function NewChatSelector() {
 }
 
 const styles = StyleSheet.create({
-  flex: {
-    flex: 1,
-    marginHorizontal: SCREEN_SIDE_OFFSET,
-  },
   background: {
     backgroundColor: COLORS.transparentBackground,
     flex: 1,
@@ -130,8 +108,5 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-  },
-  listContent: {
-    paddingHorizontal: SCREEN_SIDE_OFFSET,
   },
 });

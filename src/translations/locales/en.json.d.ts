@@ -602,4 +602,13 @@ export type Translations = {
   'chat.messages.last_seen': null;
   'chat.messages.banner.title': null;
   'chat.messages.banner.subtitle': null;
+  'channel.comments': null;
+  'channel.edited': null;
+  'channel.photo': {count: number};
+  'channel.emoji': null;
+  'filesize.b': null;
+  'filesize.kb': null;
+  'filesize.mb': null;
+  'filesize.gb': null;
+  'filesize.tb': null;
 };

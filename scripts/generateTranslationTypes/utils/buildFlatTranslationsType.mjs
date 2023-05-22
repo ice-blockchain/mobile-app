@@ -11,9 +11,10 @@ export const buildFlatTranslationsType = (node, parentPath = '') => {
     if (typeof nodeContent === 'string') {
       results[currentPath] = buildParamsType(getParamsFromString(nodeContent));
     } else if (isPluralizationNode(nodeContent)) {
-      results[currentPath] = buildParamsType(
-        getParamsFromString(Object.values(nodeContent).join('')),
-      );
+      results[currentPath] =
+        buildParamsType(
+          getParamsFromString(Object.values(nodeContent).join('')),
+        ) ?? {};
       results[currentPath].count = COUNT_TYPE;
     } else {
       results = {

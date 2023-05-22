@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {dayjs} from '@services/dayjs';
 import {t} from '@translations/i18n';
 import {Duration} from 'dayjs/plugin/duration';
 
@@ -19,3 +20,19 @@ export const getDurationString = (duration: Duration, numberOfUnits = 2) => {
     .map(({value, unit}) => value + unit)
     .join(' ');
 };
+
+export function stripTimeFromTimestamp(timestamp: number): number {
+  const date = dayjs(timestamp).endOf('day');
+  return date.valueOf();
+}
+
+export function formatTimestamp({
+  timestamp,
+  format,
+}: {
+  timestamp: number;
+  format: string;
+}) {
+  const date = dayjs(timestamp);
+  return date.format(format);
+}

@@ -22,6 +22,7 @@ function getMockedRandomData() {
 
 const mockData: MessageData[] = [
   {
+    id: 1,
     sourceName: 'Crypto Channel Bitcoin',
     lastMessage: 'Today is official premiere of new coin.',
     sourceType: 'channel',
@@ -29,6 +30,7 @@ const mockData: MessageData[] = [
     ...getMockedRandomData(),
   },
   {
+    id: 2,
     sourceName: 'Dream team',
     lastMessage: 'Hi, Alex! How is it going?',
     sourceType: 'group',
@@ -36,6 +38,7 @@ const mockData: MessageData[] = [
     ...getMockedRandomData(),
   },
   {
+    id: 3,
     sourceName: '@elizavetacryptostar',
     lastMessage: 'Hi, Max! Where are you from?',
     sourceType: 'private',
@@ -44,6 +47,7 @@ const mockData: MessageData[] = [
     ...getMockedRandomData(),
   },
   {
+    id: 4,
     sourceName: 'Ice Official Channel',
     lastMessage: 'Today is official premiere of new coin.',
     sourceType: 'channel',
@@ -51,6 +55,7 @@ const mockData: MessageData[] = [
     ...getMockedRandomData(),
   },
   {
+    id: 5,
     sourceName: '@vadzinostrovskiy',
     lastMessage: 'Hi, Dima! How are you?',
     sourceType: 'private',
@@ -59,6 +64,7 @@ const mockData: MessageData[] = [
     ...getMockedRandomData(),
   },
   {
+    id: 6,
     sourceName: 'God of Crypto',
     lastMessage: 'Today is official premiere of new coin. ',
     sourceType: 'channel',
@@ -66,6 +72,7 @@ const mockData: MessageData[] = [
     ...getMockedRandomData(),
   },
   {
+    id: 7,
     sourceName: '@milananestrovskaya',
     lastMessage: 'Hi, cryprospecialyst! ',
     sourceType: 'private',
@@ -74,6 +81,7 @@ const mockData: MessageData[] = [
     ...getMockedRandomData(),
   },
   {
+    id: 8,
     sourceName: 'My best friends',
     lastMessage:
       'Hi, I have a lot of ice, what should I do. I have a lot of ice, what should I do',
@@ -82,6 +90,7 @@ const mockData: MessageData[] = [
     ...getMockedRandomData(),
   },
   {
+    id: 9,
     sourceName: '@alexandramoisevich',
     lastMessage:
       'Hi, Alex! How is it going? Where are you. Hi, Alex! How is it going? Where are you',
@@ -90,6 +99,7 @@ const mockData: MessageData[] = [
     ...getMockedRandomData(),
   },
   {
+    id: 10,
     sourceName: '@cryptoagnelworld',
     lastMessage: 'Hi, Sasha! How is it going? Hi, Sasha! How is it going?',
     sourceType: 'channel',

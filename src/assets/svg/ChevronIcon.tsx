@@ -10,7 +10,7 @@ export const ChevronIcon = (props: SvgProps) => {
       <Path
         d="M1.5 14.6667L7.75 8.00008L1.5 1.33342"
         stroke={props.color ?? COLORS.primary}
-        strokeWidth="2"
+        strokeWidth={props.strokeWidth ?? 2}
         strokeLinecap="round"
         strokeLinejoin="round"
       />

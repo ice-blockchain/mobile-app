@@ -7,6 +7,7 @@ export type MessageStatusType = 'sent' | 'received' | 'seen';
 export type ChatDataType = 'chats' | 'users' | 'explore';
 
 export type MessageData = {
+  id: number;
   icon: string;
   sourceName: string;
   lastMessage: string;
@@ -18,12 +19,14 @@ export type MessageData = {
 };
 
 export type ChatUserData = {
+  id: number;
   icon: string;
   username: string;
   lastSeenMinutesAgo: number;
 };
 
 export type ExploreData = {
+  id: number;
   icon: string;
   type: ExploreDataType;
   displayName: string;

@@ -922,5 +922,24 @@
         "subtitle": "Join communities that match your interests"
       }
     }
+  },
+  "channel": {
+    "comments": "Comments",
+    "edited": "edited",
+    "photo": {
+      "zero": "photos",
+      "one": "photo",
+      "few": "photos",
+      "many": "photos",
+      "other": "photos"
+    },
+    "emoji": "emoji"
+  },
+  "filesize": {
+    "b": "B",
+    "kb": "KB",
+    "mb": "MB",
+    "gb": "GB",
+    "tb": "TB"
   }
 }

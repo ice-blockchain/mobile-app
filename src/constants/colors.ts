@@ -13,6 +13,7 @@ export const COLORS = {
   secondaryLight: '#B6B4BA',
   secondaryFaint: '#E3EBF8',
   secondaryFaint05opacity: 'rgba(227, 235, 248, 0.5)',
+  feedBackground: '#F6F6F6',
   attention: '#FD4E4E',
   attentionDark: '#F53333',
   gulfBlue: '#080754',

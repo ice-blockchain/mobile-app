@@ -7,13 +7,14 @@ import {put, SagaReturnType, select} from 'redux-saga/effects';
 
 type Actions = ReturnType<typeof ChatActions.LOAD_CHAT_DATA.START.create>;
 
-function getMockedChatUser(username: string) {
+function getMockedChatUser(username: string, id: number) {
   const iconRandom = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
   const timeRandom = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
   return {
     username,
     icon: `https://ice-staging.b-cdn.net/profile/default-profile-picture-${iconRandom}.png`,
     lastSeenMinutesAgo: timeRandom,
+    id,
   };
 }
 
@@ -47,7 +48,9 @@ export function* loadChatUsersSaga(action: Actions) {
     return null;
   }
 
-  const userData = mockUserNames.map(getMockedChatUser);
+  const userData = mockUserNames.map((value, index) =>
+    getMockedChatUser(value, index),
+  );
 
   const normalizedSearchValue = normalizeSearchValue(searchValue);
 

@@ -25,6 +25,9 @@ export const commonStyles = StyleSheet.create({
       }
     : {elevation: 4},
   flexOne: {flex: 1},
+  screenPadding: {
+    paddingHorizontal: SCREEN_SIDE_OFFSET,
+  },
   row: {flexDirection: 'row'},
   darkText: {color: COLORS.primaryDark},
   fullHeight: {height: '100%'},
