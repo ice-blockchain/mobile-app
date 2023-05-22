@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import BackgroundFetch from 'react-native-background-fetch';
+import BackgroundFetch, {TaskConfig} from 'react-native-background-fetch';
 
 export enum BackgroundTask {
   SyncContacts = 'io.ice.bg_task.sync_contacts',
 }
 
-export const BACKGROUND_TASKS = [
+export const BACKGROUND_TASKS: TaskConfig[] = [
   {
     taskId: BackgroundTask.SyncContacts,
     delay: 60 * 60 * 1000, // milliseconds
