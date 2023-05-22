@@ -1,0 +1,3 @@
+
+#include "Pods/Target Support Files/Pods-FirebaseNotificationService/Pods-FirebaseNotificationService.debug.xcconfig"
+#include "./FirebaseNotificationService.custom.xcconfig"

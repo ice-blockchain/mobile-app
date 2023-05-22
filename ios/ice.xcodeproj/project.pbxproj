@@ -17,6 +17,12 @@
 		55DD1F642BFB410BBC8C8211 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E2A529FD591465E8CE7A75D /* Lato-Semibold.ttf */; };
 		631A346860214759A869C7B6 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C95B696590A34FF9BBA2AC63 /* Lato-Hairline.ttf */; };
 		6735949906804C778AC3FF59 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 16FE3532204645DDBC10F37C /* Lato-Thin.ttf */; };
+		6B337F5A2A1B8CCB000C3259 /* ice.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6B337F592A1B8CCB000C3259 /* ice.debug.xcconfig */; };
+		6B337F5C2A1B8CDA000C3259 /* ice.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6B337F5B2A1B8CDA000C3259 /* ice.release.xcconfig */; };
+		6B337F5E2A1B8D06000C3259 /* ice.custom.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6B337F5D2A1B8D06000C3259 /* ice.custom.xcconfig */; };
+		6B337F612A1B8DC2000C3259 /* FirebaseNotificationService.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6B337F602A1B8DC2000C3259 /* FirebaseNotificationService.debug.xcconfig */; };
+		6B337F632A1B8EDC000C3259 /* FirebaseNotificationService.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6B337F622A1B8EDC000C3259 /* FirebaseNotificationService.release.xcconfig */; };
+		6B337F652A1B8EF8000C3259 /* FirebaseNotificationService.custom.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6B337F642A1B8EF8000C3259 /* FirebaseNotificationService.custom.xcconfig */; };
 		6B8AFF3E29752D540021973D /* audio in Resources */ = {isa = PBXBuildFile; fileRef = 6B8AFF3D29752D530021973D /* audio */; };
 		7C8E699827FB23F9001ECB36 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E699727FB23F9001ECB36 /* File.swift */; };
 		7F431A4335AA4B72AA94DBA5 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377AD928FA0140078054EAEF /* Lato-Heavy.ttf */; };
@@ -81,6 +87,12 @@
 		57AFDF95BAAA6C10D454347E /* Pods-FirebaseNotificationService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseNotificationService.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseNotificationService/Pods-FirebaseNotificationService.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-ice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ice.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ECD7C4316248D8EA80E48B6 /* libPods-FirebaseNotificationService.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FirebaseNotificationService.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B337F592A1B8CCB000C3259 /* ice.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ice.debug.xcconfig; sourceTree = "<group>"; };
+		6B337F5B2A1B8CDA000C3259 /* ice.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ice.release.xcconfig; sourceTree = "<group>"; };
+		6B337F5D2A1B8D06000C3259 /* ice.custom.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ice.custom.xcconfig; sourceTree = "<group>"; };
+		6B337F602A1B8DC2000C3259 /* FirebaseNotificationService.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = FirebaseNotificationService.debug.xcconfig; sourceTree = "<group>"; };
+		6B337F622A1B8EDC000C3259 /* FirebaseNotificationService.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = FirebaseNotificationService.release.xcconfig; sourceTree = "<group>"; };
+		6B337F642A1B8EF8000C3259 /* FirebaseNotificationService.custom.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = FirebaseNotificationService.custom.xcconfig; sourceTree = "<group>"; };
 		6B8AFF3D29752D530021973D /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = audio; sourceTree = "<group>"; };
 		6E2A529FD591465E8CE7A75D /* Lato-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Semibold.ttf"; path = "../src/assets/fonts/Lato-Semibold.ttf"; sourceTree = "<group>"; };
 		7C00A9EE28B75AAA00D688B7 /* ice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ice.entitlements; path = ice/ice.entitlements; sourceTree = "<group>"; };
@@ -125,6 +137,7 @@
 		13B07FAE1A68108700A75B9A /* ice */ = {
 			isa = PBXGroup;
 			children = (
+				6B337F582A1B8CB0000C3259 /* Configurations */,
 				7C00A9EE28B75AAA00D688B7 /* ice.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -148,6 +161,26 @@
 				5ECD7C4316248D8EA80E48B6 /* libPods-FirebaseNotificationService.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B337F582A1B8CB0000C3259 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				6B337F592A1B8CCB000C3259 /* ice.debug.xcconfig */,
+				6B337F5B2A1B8CDA000C3259 /* ice.release.xcconfig */,
+				6B337F5D2A1B8D06000C3259 /* ice.custom.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		6B337F5F2A1B8D9A000C3259 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				6B337F602A1B8DC2000C3259 /* FirebaseNotificationService.debug.xcconfig */,
+				6B337F622A1B8EDC000C3259 /* FirebaseNotificationService.release.xcconfig */,
+				6B337F642A1B8EF8000C3259 /* FirebaseNotificationService.custom.xcconfig */,
+			);
+			name = Configurations;
 			sourceTree = "<group>";
 		};
 		7141AB5077354762B49CDA7B /* Resources */ = {
@@ -223,6 +256,7 @@
 		CEE923BA29A5E69900787805 /* FirebaseNotificationService */ = {
 			isa = PBXGroup;
 			children = (
+				6B337F5F2A1B8D9A000C3259 /* Configurations */,
 				CEE923C529A601DB00787805 /* FirebaseNotificationService.entitlements */,
 				CEE923BB29A5E69900787805 /* FirebaseNotificationService.h */,
 				CEE923BC29A5E69900787805 /* FirebaseNotificationService.m */,
@@ -320,8 +354,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F411E02283CCCCA00EB78E0 /* GoogleService-Info.plist in Resources */,
+				6B337F5E2A1B8D06000C3259 /* ice.custom.xcconfig in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				6B337F5C2A1B8CDA000C3259 /* ice.release.xcconfig in Resources */,
 				EF2A4EFD84224615B8057BAB /* Lato-Black.ttf in Resources */,
 				CE645E159ACA4677A888DD2F /* Lato-Bold.ttf in Resources */,
 				631A346860214759A869C7B6 /* Lato-Hairline.ttf in Resources */,
@@ -330,6 +366,7 @@
 				29B872DEA8B04ACCA30284C4 /* Lato-Medium.ttf in Resources */,
 				8CAB63684AB748F4ADF0694B /* Lato-Regular.ttf in Resources */,
 				55DD1F642BFB410BBC8C8211 /* Lato-Semibold.ttf in Resources */,
+				6B337F5A2A1B8CCB000C3259 /* ice.debug.xcconfig in Resources */,
 				6735949906804C778AC3FF59 /* Lato-Thin.ttf in Resources */,
 				6B8AFF3E29752D540021973D /* audio in Resources */,
 			);
@@ -339,6 +376,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B337F612A1B8DC2000C3259 /* FirebaseNotificationService.debug.xcconfig in Resources */,
+				6B337F632A1B8EDC000C3259 /* FirebaseNotificationService.release.xcconfig in Resources */,
+				6B337F652A1B8EF8000C3259 /* FirebaseNotificationService.custom.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,12 +559,12 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-ice.debug.xcconfig */;
+			baseConfigurationReference = 6B337F592A1B8CCB000C3259 /* ice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ice/ice.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution: ice Labs Limited (YJJ6X8TG5Y)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = YJJ6X8TG5Y;
@@ -627,12 +667,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-ice.release.xcconfig */;
+			baseConfigurationReference = 6B337F5B2A1B8CDA000C3259 /* ice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ice/ice.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution: ice Labs Limited (YJJ6X8TG5Y)";
+				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = YJJ6X8TG5Y;
@@ -864,7 +904,7 @@
 		};
 		CEE923C229A5E69900787805 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57AFDF95BAAA6C10D454347E /* Pods-FirebaseNotificationService.debug.xcconfig */;
+			baseConfigurationReference = 6B337F602A1B8DC2000C3259 /* FirebaseNotificationService.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -873,7 +913,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = FirebaseNotificationService/FirebaseNotificationService.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution: ice Labs Limited (YJJ6X8TG5Y)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -892,7 +932,6 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = io.ice.app.staging.FirebaseNotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -903,7 +942,7 @@
 		};
 		CEE923C329A5E69900787805 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38379A5A03D7768F563E756D /* Pods-FirebaseNotificationService.release.xcconfig */;
+			baseConfigurationReference = 6B337F622A1B8EDC000C3259 /* FirebaseNotificationService.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -912,7 +951,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = FirebaseNotificationService/FirebaseNotificationService.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution: ice Labs Limited (YJJ6X8TG5Y)";
+				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -931,7 +970,6 @@
 				);
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = io.ice.app.staging.FirebaseNotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;

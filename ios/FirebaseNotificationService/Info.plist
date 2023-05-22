@@ -10,6 +10,6 @@
 		<string>FirebaseNotificationService</string>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>io.ice.app.staging.FirebaseNotificationService</string>
+	<string>${PRODUCT_BUNDLE_IDENTIFIER}</string>
 </dict>
 </plist>

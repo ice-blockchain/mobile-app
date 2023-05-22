@@ -1,0 +1,3 @@
+
+#include "Pods/Target Support Files/Pods-ice/Pods-ice.release.xcconfig"
+#include "./ice.custom.xcconfig"
