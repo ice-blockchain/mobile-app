@@ -4,5 +4,5 @@ import {RootState} from '@store/rootReducer';
 
 export const contactsSelector = (state: RootState) => state.contacts.contacts;
 
-export const numberOfSyncedContactsSelector = (state: RootState) =>
-  state.contacts.numberOfSyncedContacts;
+export const syncedContactsNumbersSelector = (state: RootState) =>
+  state.contacts.syncedContactsPhoneNumbers;

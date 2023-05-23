@@ -21,7 +21,7 @@ const GET_CONTACTS = createAction('GET_CONTACTS', {
 
 const SYNC_CONTACTS = createAction('SYNC_CONTACTS', {
   START: true,
-  SUCCESS: (payload: {numberOfSyncedContacts: number}) => payload,
+  SUCCESS: (payload: {syncedContactsPhoneNumbers: string}) => payload,
   FAILED: (errorMessage: string) => ({
     errorMessage,
   }),

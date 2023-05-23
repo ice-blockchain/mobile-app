@@ -8,7 +8,7 @@ import {
 } from '@store/modules/Account/selectors';
 import {BackgroundTasksActions} from '@store/modules/BackgroundTasks/actions';
 import {ContactsActions} from '@store/modules/Contacts/actions';
-import {numberOfSyncedContactsSelector} from '@store/modules/Contacts/selectors';
+import {syncedContactsNumbersSelector} from '@store/modules/Contacts/selectors';
 import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';
 import {getErrorMessage} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
@@ -23,7 +23,7 @@ import {
   take,
 } from 'redux-saga/effects';
 
-const AGENDA_PHONE_NUMBER_DIVIDER = ',';
+export const CONTACTS_PHONE_NUMBERS_DIVIDER = ',';
 
 export function* syncContactsSaga(
   action: ReturnType<
@@ -42,60 +42,39 @@ export function* syncContactsSaga(
       return;
     }
 
-    const contacts: SagaReturnType<typeof getAllWithoutPhotos> = yield call(
-      getAllWithoutPhotos,
-    );
+    const user: User = yield select(userSelector);
 
-    const numberOfSyncedContacts: ReturnType<
-      typeof numberOfSyncedContactsSelector
-    > = yield select(numberOfSyncedContactsSelector);
+    const notSyncedPhoneNumbers: SagaReturnType<
+      typeof getNotSyncedPhoneNumbers
+    > = yield call(getNotSyncedPhoneNumbers);
 
-    if (numberOfSyncedContacts === contacts.length) {
+    if (!notSyncedPhoneNumbers.length) {
       return;
     }
 
-    const user: User = yield select(userSelector);
-
-    const userPhoneNumberHashes = new Set(
-      user.agendaPhoneNumberHashes?.split(AGENDA_PHONE_NUMBER_DIVIDER),
-    );
-
-    const agendaPhoneNumberHashes: Set<string> = new Set();
+    const notSyncedPhoneNumberHashes: string[] = [];
 
     // Run e164PhoneNumber and hashPhoneNumber in chunks to avoid ANR
     yield runInChunks(
-      contacts,
-      async contact =>
-        Promise.all(
-          contact.phoneNumbers.map(async record => {
-            if (record.number?.trim()) {
-              const e164FormattedForHash = e164PhoneNumber(
-                record.number,
-                user.country,
-              );
-              if (e164FormattedForHash) {
-                const hash = await hashPhoneNumber(e164FormattedForHash);
-                agendaPhoneNumberHashes.add(hash);
-              }
-            }
-          }),
-        ),
+      notSyncedPhoneNumbers,
+      async phoneNumber => {
+        const e164FormattedForHash = e164PhoneNumber(phoneNumber, user.country);
+        if (e164FormattedForHash) {
+          const hash = await hashPhoneNumber(e164FormattedForHash);
+          notSyncedPhoneNumberHashes.push(hash);
+        }
+      },
       200,
     );
 
-    const newAgendaPhoneNumberHashes = [...agendaPhoneNumberHashes].filter(
-      agendaPhoneNumber => !userPhoneNumberHashes.has(agendaPhoneNumber),
-    );
-
-    const updateChunks = getChunks(newAgendaPhoneNumberHashes, 500);
+    const updateChunks = getChunks(notSyncedPhoneNumberHashes, 500);
 
     while (updateChunks.length) {
       const updateChunk = updateChunks.pop() ?? [];
-
       yield put(
         AccountActions.UPDATE_ACCOUNT.START.create({
           agendaPhoneNumberHashes: [...updateChunk].join(
-            AGENDA_PHONE_NUMBER_DIVIDER,
+            CONTACTS_PHONE_NUMBERS_DIVIDER,
           ),
         }),
       );
@@ -115,7 +94,9 @@ export function* syncContactsSaga(
 
     yield put(
       ContactsActions.SYNC_CONTACTS.SUCCESS.create({
-        numberOfSyncedContacts: contacts.length,
+        syncedContactsPhoneNumbers: notSyncedPhoneNumbers.join(
+          CONTACTS_PHONE_NUMBERS_DIVIDER,
+        ),
       }),
     );
   } catch (error) {
@@ -131,4 +112,36 @@ export function* syncContactsSaga(
       action.payload.finishTask();
     }
   }
+}
+
+function* getNotSyncedPhoneNumbers() {
+  const contacts: SagaReturnType<typeof getAllWithoutPhotos> = yield call(
+    getAllWithoutPhotos,
+  );
+
+  const contactsPhoneNumbers = contacts.reduce<Set<string>>(
+    (phoneNumbers, contact) => {
+      contact.phoneNumbers.forEach(record => {
+        if (record.number) {
+          phoneNumbers.add(record.number);
+        }
+      });
+      return phoneNumbers;
+    },
+    new Set(),
+  );
+
+  const syncedPhoneNumbersRaw: ReturnType<
+    typeof syncedContactsNumbersSelector
+  > = yield select(syncedContactsNumbersSelector);
+
+  const syncedPhoneNumbers = new Set(
+    syncedPhoneNumbersRaw?.length
+      ? syncedPhoneNumbersRaw.split(CONTACTS_PHONE_NUMBERS_DIVIDER)
+      : null,
+  );
+
+  return [...contactsPhoneNumbers].filter(
+    contactsPhoneNumber => !syncedPhoneNumbers.has(contactsPhoneNumber),
+  );
 }

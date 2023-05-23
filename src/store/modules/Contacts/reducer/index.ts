@@ -3,6 +3,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AccountActions} from '@store/modules/Account/actions';
 import {ContactsActions} from '@store/modules/Contacts/actions';
+import {CONTACTS_PHONE_NUMBERS_DIVIDER} from '@store/modules/Contacts/sagas/syncContactsSaga';
 import produce from 'immer';
 import {Contact} from 'react-native-contacts';
 import {persistReducer} from 'redux-persist';
@@ -10,7 +11,7 @@ import {persistReducer} from 'redux-persist';
 export interface State {
   search: {active: boolean};
   contacts: Contact[];
-  numberOfSyncedContacts: number | null;
+  syncedContactsPhoneNumbers: string | null;
 }
 
 type Actions = ReturnType<
@@ -22,7 +23,7 @@ type Actions = ReturnType<
 const INITIAL_STATE: State = {
   search: {active: false},
   contacts: [],
-  numberOfSyncedContacts: null,
+  syncedContactsPhoneNumbers: null,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -33,7 +34,11 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         break;
       }
       case ContactsActions.SYNC_CONTACTS.SUCCESS.type: {
-        draft.numberOfSyncedContacts = action.payload.numberOfSyncedContacts;
+        draft.syncedContactsPhoneNumbers = state.syncedContactsPhoneNumbers
+          ? state.syncedContactsPhoneNumbers +
+            CONTACTS_PHONE_NUMBERS_DIVIDER +
+            action.payload.syncedContactsPhoneNumbers
+          : action.payload.syncedContactsPhoneNumbers;
         break;
       }
       case AccountActions.SIGN_OUT.SUCCESS.type: {
@@ -47,7 +52,7 @@ export const contactsReducer = persistReducer(
   {
     key: 'contacts',
     storage: AsyncStorage,
-    whitelist: ['numberOfSyncedContacts'],
+    whitelist: ['syncedContactsPhoneNumbers'],
   },
   reducer,
 );
