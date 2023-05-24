@@ -596,4 +596,9 @@ export type Translations = {
   'chat.create_channel.buttons.change_photo': null;
   'chat.channel_type.title': null;
   'chat.channel_type.info': null;
+  'chat.channel_administrators.title': null;
+  'chat.channel_administrators.buttons.add_administrator': null;
+  'chat.channel_administrators.dialogs.delete_administrator.title': null;
+  'chat.channel_administrators.dialogs.delete_administrator.message': null;
+  'chat.channel_administrators.dialogs.delete_administrator.buttons.delete': null;
 };

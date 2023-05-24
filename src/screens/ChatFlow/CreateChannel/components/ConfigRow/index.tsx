@@ -48,11 +48,11 @@ const styles = StyleSheet.create({
   title: {
     marginLeft: rem(12),
     flex: 1,
-    ...font(16, 19.2, 'black', 'primaryDark'),
+    ...font(16, 19.2, '900', 'primaryDark'),
   },
   value: {
     marginLeft: rem(12),
-    ...font(16, 19.2, 'regular', 'primaryLight'),
+    ...font(16, 19.2, '400', 'primaryLight'),
   },
   arrow: {
     marginLeft: rem(8),

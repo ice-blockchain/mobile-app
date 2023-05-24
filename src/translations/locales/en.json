@@ -919,6 +919,21 @@
     "channel_type": {
       "title": "Choose type of channel",
       "info": "Public channels can be found through search and any user can subscribe to them"
+    },
+    "channel_administrators": {
+      "title": "Channel Management",
+      "buttons": {
+        "add_administrator": "Add administrator"
+      },
+      "dialogs": {
+        "delete_administrator": {
+          "title": "Delete administrator?",
+          "message": "Delete this channel administrator?",
+          "buttons": {
+            "delete": "Delete"
+          }
+        }
+      }
     }
   }
 }

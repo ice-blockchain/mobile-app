@@ -17,6 +17,7 @@ import {
 } from '@react-navigation/bottom-tabs';
 import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {ChannelAdministrators} from '@screens/ChatFlow/ChannelAdministrators';
 import {ChannelTypeSelect} from '@screens/ChatFlow/ChannelTypeSelect';
 import {CreateChannel} from '@screens/ChatFlow/CreateChannel';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
@@ -140,7 +141,7 @@ export type MainStackParamList = {
   'Chat/ChannelType': {
     channelId: string | null;
   };
-  'Chat/ChannelAdmins': {
+  'Chat/ChannelAdministrators': {
     channelId: string | null;
   };
 };
@@ -414,7 +415,11 @@ export function MainNavigator() {
         component={ChannelTypeSelect}
         options={modalOptions}
       />
-      <MainStack.Screen name={'Chat/ChannelAdmins'} component={CreateChannel} />
+      <MainStack.Screen
+        name={'Chat/ChannelAdministrators'}
+        component={ChannelAdministrators}
+        options={modalOptions}
+      />
     </MainStack.Navigator>
   );
 }

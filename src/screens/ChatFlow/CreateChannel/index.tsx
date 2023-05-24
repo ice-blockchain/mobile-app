@@ -107,7 +107,7 @@ export const CreateChannel = () => {
             title={t('chat.create_channel.labels.administrators')}
             value={admins.length}
             onPress={() => {
-              navigation.navigate('Chat/ChannelAdmins', {
+              navigation.navigate('Chat/ChannelAdministrators', {
                 channelId: null,
               });
             }}

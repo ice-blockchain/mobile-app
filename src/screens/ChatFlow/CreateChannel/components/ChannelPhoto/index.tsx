@@ -84,11 +84,11 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#E3EBF8',
+    backgroundColor: COLORS.secondaryFaint,
   },
 
   text: {
     marginTop: rem(8),
-    ...font(17, 20.4, 'semibold', 'white'),
+    ...font(17, 20.4, '600', 'white'),
   },
 });

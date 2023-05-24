@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   titleText: {
-    ...font(14, 16.8, 'semibold', 'primaryDark'),
+    ...font(14, 16.8, '600', 'primaryDark'),
   },
 
   itemContainer: {
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   },
   itemText: {
     marginLeft: rem(12),
-    ...font(12, 14.4, 'regular', 'secondary'),
+    ...font(12, 14.4, '400', 'secondary'),
   },
 
   infoContainer: {
@@ -126,6 +126,6 @@ const styles = StyleSheet.create({
   },
   infoText: {
     marginLeft: rem(12),
-    ...font(12, 14.4, 'regular', 'secondary'),
+    ...font(12, 14.4, '400', 'secondary'),
   },
 });
