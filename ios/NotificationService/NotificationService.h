@@ -2,6 +2,6 @@
 
 #import <UserNotifications/UserNotifications.h>
 
-@interface FirebaseNotificationService : UNNotificationServiceExtension
+@interface NotificationService : UNNotificationServiceExtension
 
 @end

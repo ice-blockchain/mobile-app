@@ -80,8 +80,8 @@ GoogleService-Info.plist
 ios/ice/Info.plist
 ios/ice/ice.entitlements
 ios/Configurations/ice.custom.xcconfig
-ios/FirebaseNotificationService/FirebaseNotificationService.entitlements
-ios/FirebaseNotificationService/FirebaseNotificationService.custom.xcconfig
+ios/NotificationService/NotificationService.entitlements
+ios/NotificationService/NotificationService.custom.xcconfig
 
 sentry.properties
 

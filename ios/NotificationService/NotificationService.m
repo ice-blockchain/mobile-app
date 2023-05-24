@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: ice License 1.0
 
-#import "FirebaseNotificationService.h"
+#import "NotificationService.h"
 #import "FirebaseMessaging.h"
 @import MoEngageRichNotification;
 
-@interface FirebaseNotificationService ()
+@interface NotificationService ()
 
 @property (nonatomic, strong) void (^contentHandler)(UNNotificationContent *contentToDeliver);
 @property (nonatomic, strong) UNMutableNotificationContent *bestAttemptContent;
 
 @end
 
-@implementation FirebaseNotificationService
+@implementation NotificationService
 
 - (void)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(void (^)(UNNotificationContent * _Nonnull))contentHandler {
     self.contentHandler = contentHandler;

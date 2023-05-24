@@ -49,7 +49,7 @@ target 'ice' do
    )
 end
 
-target 'FirebaseNotificationService' do
+target 'NotificationService' do
   pod 'MoEngageRichNotification'
   pod 'GoogleUtilities', :modular_headers => true
   pod 'Firebase/Messaging'
