@@ -2,4 +2,4 @@
 
 type("appstore")
 
-app_identifier(["io.ice.app.staging", "io.ice.app", "io.ice.app.staging.FirebaseNotificationService", "io.ice.app.FirebaseNotificationService"])
+app_identifier(["io.ice.app.staging", "io.ice.app", "io.ice.app.staging.NotificationService", "io.ice.app.NotificationService"])

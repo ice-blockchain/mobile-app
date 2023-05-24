@@ -48,16 +48,6 @@ buck-out/
 \.buckd/
 *.keystore
 
-# keys
-android/gradle.properties
-android/sentry.properties
-gradle.properties
-google-services.json
-GoogleService-Info.plist
-ios/ice/Info.plist
-FirebaseNotificationService.entitlements
-sentry.properties
-
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
@@ -79,9 +69,21 @@ artifacts/
 /vendor/bundle/
 
 # Environments
-ios/ice/ice.entitlements
-configuration/
+
 *.env*
+configuration/
+android/gradle.properties
+android/sentry.properties
+gradle.properties
+google-services.json
+GoogleService-Info.plist
+ios/ice/Info.plist
+ios/ice/ice.entitlements
+ios/Configurations/ice.custom.xcconfig
+ios/NotificationService/NotificationService.entitlements
+ios/NotificationService/NotificationService.custom.xcconfig
+
+sentry.properties
 
 # Build related files
 android/app/src/main/assets/app.bundle

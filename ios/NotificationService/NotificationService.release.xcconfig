@@ -1,0 +1,2 @@
+#include "Pods/Target Support Files/Pods-NotificationService/Pods-NotificationService.release.xcconfig"
+#include "./NotificationService.custom.xcconfig"
