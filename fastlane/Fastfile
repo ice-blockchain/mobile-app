@@ -124,7 +124,10 @@ platform :ios do
     lane :deploy do |options|
         deploy_retry = 0
         google_app_id = get_info_plist_value(path: "./ios/GoogleService-Info.plist", key: "GOOGLE_APP_ID")
-        main_bundle_id = get_info_plist_value(path: "./ios/ice/Info.plist", key: "CFBundleIdentifier")
+        main_bundle_id = get_xcconfig_value(
+            path: './ios/Configurations/ice.custom.xcconfig',
+            name: 'PRODUCT_BUNDLE_IDENTIFIER'
+        )
 
         begin
             case options[:target]
