@@ -7,3 +7,4 @@ yarn run lint
 yarn run check-types
 yarn run check-git-email
 yarn pretty-staged
+yarn compress-staged-images

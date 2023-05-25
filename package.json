@@ -31,6 +31,7 @@
     "prepare": "husky install",
     "pod": "cd ios && pod install",
     "pretty-staged": "pretty-quick --staged",
+    "compress-staged-images": "./scripts/compress-staged-images.sh",
     "rebase-master": "git fetch origin master && git rebase origin/master && yarn"
   },
   "dependencies": {
