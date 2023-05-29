@@ -18,14 +18,14 @@ export const getInitialCollectionState = <T>(): {
 
 export type State = typeof CollectionsState;
 
-type Actions = ReturnType<
+type Action = ReturnType<
   | CollectionAction['SUCCESS']['create']
   | CollectionAction['START']['create']
   | CollectionAction['CLEAR']['create']
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
 >;
 
-function reducer(state = CollectionsState, action: Actions): State {
+function reducer(state = CollectionsState, action: Action): State {
   return produce(state, draft => {
     processCollectionStartAction(action, draft);
     processCollectionSuccessAction(action, draft, state);
@@ -36,63 +36,67 @@ function reducer(state = CollectionsState, action: Actions): State {
   });
 }
 
+const getStateKeyForAction = (
+  action: Action,
+  type: 'START' | 'SUCCESS' | 'CLEAR',
+) => {
+  const collectionAction = Object.values(CollectionActions).find(
+    ca => action.type === ca[type].type,
+  );
+
+  if (collectionAction) {
+    const {stateKey} = actionsMap.get(collectionAction) ?? {};
+    return stateKey;
+  }
+};
+
 const processCollectionStartAction = (
-  action: Actions,
+  action: Action,
   draft: WritableDraft<State>,
 ) => {
-  const collectionStartAction = Object.values(CollectionActions).find(
-    collectionAction => action.type === collectionAction.START.type,
-  );
-  if (collectionStartAction) {
-    const {stateKey} = actionsMap.get(collectionStartAction) ?? {};
-    if (stateKey && action.payload) {
-      draft[stateKey].query = action.payload.query;
-      if (action.payload.offset === 0) {
-        draft[stateKey].data = [];
-        draft[stateKey].hasNext = true;
-      }
+  const stateKey = getStateKeyForAction(action, 'START');
+  if (stateKey && action.payload) {
+    draft[stateKey].query = action.payload.query;
+    if (action.payload.offset === 0) {
+      draft[stateKey].data = [];
+      draft[stateKey].hasNext = true;
     }
   }
 };
 
 const processCollectionSuccessAction = (
-  action: Actions,
+  action: Action,
   draft: WritableDraft<State>,
   state: State,
 ) => {
-  const collectionSuccessAction = Object.values(CollectionActions).find(
-    collectionAction => action.type === collectionAction.SUCCESS.type,
-  );
-  if (collectionSuccessAction) {
-    const {stateKey} = actionsMap.get(collectionSuccessAction) ?? {};
-    if (stateKey) {
-      // @ts-ignore
-      const {offset, result, hasNext} = action.payload;
-      if (offset === 0) {
-        draft[stateKey].data = result;
-      } else {
-        draft[stateKey].data = [...state[stateKey].data, ...result];
-      }
-      draft[stateKey].hasNext = hasNext;
+  const stateKey = getStateKeyForAction(action, 'SUCCESS');
+  if (stateKey) {
+    const {offset, result, hasNext} = (
+      action as ReturnType<CollectionAction['SUCCESS']['create']>
+    ).payload;
+    if (offset === 0) {
+      draft[stateKey].data = result;
+    } else {
+      draft[stateKey].data = [
+        ...state[stateKey].data,
+        ...result,
+      ] as typeof result;
     }
+    draft[stateKey].hasNext = hasNext;
   }
 };
 
-const processCollectionClearAction = (
-  action: Actions,
+const processCollectionClearAction = <
+  T extends ReturnType<typeof getStateKeyForAction>,
+>(
+  action: Action,
   draft: WritableDraft<State>,
 ) => {
-  const collectionStartAction = Object.values(CollectionActions).find(
-    collectionAction => action.type === collectionAction.CLEAR.type,
-  );
-  if (collectionStartAction) {
-    const {stateKey} = actionsMap.get(collectionStartAction) ?? {};
-    if (stateKey) {
-      // @ts-ignore
-      draft[stateKey] = CollectionsState[stateKey];
-      draft[stateKey].query = '';
-      draft[stateKey].hasNext = false;
-    }
+  const stateKey = getStateKeyForAction(action, 'CLEAR') as T;
+  if (stateKey) {
+    draft[stateKey] = CollectionsState[stateKey];
+    draft[stateKey].query = '';
+    draft[stateKey].hasNext = false;
   }
 };
 
