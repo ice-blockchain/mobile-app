@@ -5,9 +5,8 @@ import {CountryStatistics, Miner} from '@api/statistics/types';
 import {User} from '@api/user/types';
 import {createCollectionAction} from '@store/modules/Collections/actions';
 import {getInitialCollectionState} from '@store/modules/Collections/reducer';
-import {CollectionApiRequest} from '@store/modules/Collections/sagas/getCollectionSaga';
 
-export const CollectionActions = Object.freeze({
+export const CollectionActions = {
   GET_TOP_STATS_COUNTRIES: createCollectionAction<
     CountryStatistics,
     'GET_TOP_STATS_COUNTRIES'
@@ -23,7 +22,7 @@ export const CollectionActions = Object.freeze({
     'SEARCH_MINERS',
   ),
   SEARCH_USERS: createCollectionAction<User, 'SEARCH_USERS'>('SEARCH_USERS'),
-});
+} as const;
 
 export const CollectionsState = {
   topStatsCountries: getInitialCollectionState<CountryStatistics>(),
@@ -31,7 +30,7 @@ export const CollectionsState = {
   topMiners: getInitialCollectionState<Miner>(),
   minersSearch: getInitialCollectionState<Miner>(),
   usersSearch: getInitialCollectionState<User>(),
-};
+} as const;
 
 export const actionsMap = new Map<
   CollectionAction,
@@ -69,3 +68,9 @@ actionsMap.set(CollectionActions.SEARCH_USERS, {
 
 export type CollectionAction =
   typeof CollectionActions[keyof typeof CollectionActions];
+
+export type CollectionApiRequest = (params: {
+  query: string;
+  limit: number;
+  offset: number;
+}) => Promise<typeof CollectionsState[keyof typeof CollectionsState]['data']>;

@@ -6,28 +6,28 @@ import {put, SagaReturnType} from 'redux-saga/effects';
 
 const DEFAULT_PAGE_SIZE = 20;
 
-export type CollectionApiRequest = (params: {
-  query: string;
-  limit: number;
-  offset: number;
-}) => Promise<unknown[]>;
+type UnionToIntersection<U> = (
+  U extends unknown ? (k: U) => void : never
+) extends (k: infer I) => void
+  ? I
+  : never;
 
-export function* getCollectionSaga(
-  action: CollectionAction,
-  {payload}: ReturnType<CollectionAction['START']['create']>,
-) {
+export function* getCollectionSaga<
+  A extends CollectionAction,
+  P extends ReturnType<A['START']['create']>,
+>(action: A, {payload}: P) {
   try {
     const {request, defaultPageSize = DEFAULT_PAGE_SIZE} =
       actionsMap.get(action) ?? {};
     const {offset, limit = defaultPageSize, query} = payload;
     if (request) {
-      const response: SagaReturnType<typeof request> = yield request({
-        query,
-        offset,
-        limit,
-      });
+      const response: UnionToIntersection<SagaReturnType<typeof request>> =
+        yield request({
+          query,
+          offset,
+          limit,
+        });
       const hasNext = response.length === limit;
-      // @ts-ignore
       yield put(action.SUCCESS.create(response, {query, offset, hasNext}));
     }
   } catch (error) {
