@@ -42,7 +42,7 @@ export type StartActionFactories = ActionFactories<
   {START: PayloadFunc | boolean}
 >;
 
-type ActionObject<
+export type ActionObject<
   ActionPartType,
   T extends StructureType,
   K extends keyof T,
