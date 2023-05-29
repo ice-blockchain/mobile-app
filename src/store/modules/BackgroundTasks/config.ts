@@ -16,6 +16,5 @@ export const BACKGROUND_TASKS: TaskConfig[] = [
     forceAlarmManager: false,
     enableHeadless: true,
     requiredNetworkType: BackgroundFetch.NETWORK_TYPE_ANY,
-    requiresDeviceIdle: true,
   },
 ];

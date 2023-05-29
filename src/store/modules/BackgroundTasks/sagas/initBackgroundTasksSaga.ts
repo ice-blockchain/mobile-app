@@ -13,7 +13,9 @@ import {all, call} from 'redux-saga/effects';
 export function* initBackgroundTasksSaga() {
   yield call(
     BackgroundFetch.configure,
-    {},
+    {
+      minimumFetchInterval: 3.156e7, // don't run the default background fetch
+    },
     taskId => {
       switch (taskId) {
         case BackgroundTask.SyncContacts: {
