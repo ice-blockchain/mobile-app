@@ -9,7 +9,6 @@ import {navigationReadyResolver, navigationRef} from '@navigation/utils';
 import {WelcomeNavigator} from '@navigation/Welcome';
 import {NavigationContainer} from '@react-navigation/native';
 import {routingInstrumentation} from '@services/logging';
-import {useUserChangedListener} from '@store/modules/Account/hooks/useUserChangedListener';
 import {
   isRegistrationCompleteSelector,
   userSelector,
@@ -59,7 +58,6 @@ export function Router() {
   useOpenUrlListener();
   useAppLoadedListener();
   useAppStateListener();
-  useUserChangedListener();
   useInitNotifications();
 
   const onReady = useCallback(() => {

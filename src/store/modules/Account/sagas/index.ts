@@ -9,6 +9,7 @@ import {signInEmailPasswordSaga} from '@store/modules/Account/sagas/signInEmailP
 import {signInPhoneSaga} from '@store/modules/Account/sagas/signInPhone';
 import {signInSocialSaga} from '@store/modules/Account/sagas/signInSocial';
 import {signOutSaga} from '@store/modules/Account/sagas/signOut';
+import {subscribeUserChangedSaga} from '@store/modules/Account/sagas/subscribeUserChanged';
 import {syncLanguageCodeSaga} from '@store/modules/Account/sagas/syncLanguageCode';
 import {syncRtlSaga} from '@store/modules/Account/sagas/syncRTL';
 import {updateAccountSaga} from '@store/modules/Account/sagas/updateAccount';
@@ -60,5 +61,6 @@ export function* rootAuthSaga() {
     takeLatest(AccountActions.RESET_PASSWORD.START.type, resetPasswordSaga),
     fork(syncLanguageCodeSaga),
     fork(syncRtlSaga),
+    fork(subscribeUserChangedSaga),
   ]);
 }

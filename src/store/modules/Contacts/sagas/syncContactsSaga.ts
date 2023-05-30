@@ -38,6 +38,8 @@ export function* syncContactsSaga(
       isAuthorizedSelector,
     );
 
+    // yield call(waitForSelector, isAuthorizedSelector);
+
     if (!isAuthorized || !hasPermissions) {
       return;
     }
