@@ -35,7 +35,7 @@
     "view_all": "view all",
     "invite_friend": {
       "title": "Invite Friends",
-      "description": "Earn extra [[:ice]] by inviting your friends."
+      "description": "Earn extra ice by inviting your friends."
     },
     "see_all": "see all",
 
@@ -873,7 +873,7 @@
   "social_media": {
     "tiktok": {
       "title": "Join us on TikTok",
-      "description_part1": "We just wanted to reach out and let you know about our exciting new community on TikTok. We're sharing fun and informative content about our digital currency, [[:ice]], and we would love for you to join us!"
+      "description_part1": "We just wanted to reach out and let you know about our exciting new community on TikTok. We're sharing fun and informative content about our digital currency, ice, and we would love for you to join us!"
     },
     "youtube": {
       "title": "Join us on YouTube",
