@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AppState} from 'react-native';
+
 export const getChunks = <T>(input: Array<T>, chunkSize: number) => {
   let results = [];
   const inputCopy = [...input];
@@ -18,7 +20,9 @@ export const runInChunks = async <T>(
 
   const result = [];
   for (let i = 0; i < chunks.length; i++) {
-    await new Promise(requestAnimationFrame);
+    if (AppState.currentState === 'active') {
+      await new Promise(requestAnimationFrame);
+    }
     const chunkResult = await Promise.all(chunks[i].map(processor));
     result.push(...chunkResult);
   }

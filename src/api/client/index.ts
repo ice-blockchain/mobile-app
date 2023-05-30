@@ -1,43 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {backOffWrapper, DEFAULT_BACK_OFF_OPTIONS} from '@api/client/backOff';
 import {getHeaders} from '@api/client/getHeaders';
 import {ENV} from '@constants/env';
-import {checkNetwork} from '@utils/network';
 import axios, {AxiosError, AxiosInstance} from 'axios';
-import {backOff} from 'exponential-backoff';
 
 import {requestInterceptor} from './interceptors/request';
 import {responseInterceptor} from './interceptors/response';
-
-export const DEFAULT_BACK_OFF_OPTIONS = {
-  delayFirstAttempt: true,
-  jitter: 'full',
-  numOfAttempts: 25,
-  maxDelay: 1000,
-  startingDelay: 10,
-  timeMultiple: 5,
-  retry: async (error: unknown) => {
-    if (
-      axios.isAxiosError(error) &&
-      error.response?.status != null &&
-      error.response?.status >= 500
-    ) {
-      return true;
-    }
-
-    /**
-     * This may happen when the app comes from background
-     * and we perform an api call right away
-     * e.g. as a result of handling a deeplink / push notification press
-     */
-    if (isNetworkError(error)) {
-      const isConnected = await checkNetwork();
-      return !!isConnected;
-    }
-
-    return false;
-  },
-} as const;
 
 function setupApiClient(clientInstance: AxiosInstance) {
   clientInstance.interceptors.request.use(requestInterceptor.onFulfilled);
@@ -66,7 +35,7 @@ export async function post<TRequest, TResponse>(
   payload: TRequest,
   backOffOptions = DEFAULT_BACK_OFF_OPTIONS,
 ): Promise<TResponse> {
-  const response = await backOff(
+  const response = await backOffWrapper(
     async () => writeClient.post<TResponse>(path, payload),
     backOffOptions,
   );
@@ -78,7 +47,7 @@ export async function patch<TRequest, TResponse>(
   payload: TRequest,
   backOffOptions = DEFAULT_BACK_OFF_OPTIONS,
 ): Promise<TResponse> {
-  const response = await backOff(
+  const response = await backOffWrapper(
     async () => writeClient.patch<TResponse>(path, payload),
     backOffOptions,
   );
@@ -90,7 +59,7 @@ export async function put<TRequest, TResponse>(
   payload: TRequest,
   backOffOptions = DEFAULT_BACK_OFF_OPTIONS,
 ): Promise<TResponse> {
-  const response = await backOff(
+  const response = await backOffWrapper(
     async () => writeClient.put<TResponse>(path, payload),
     backOffOptions,
   );
@@ -102,7 +71,7 @@ export async function get<TResponse>(
   queryParams?: {[key: string]: string | number | null | undefined} | null,
   backOffOptions = DEFAULT_BACK_OFF_OPTIONS,
 ): Promise<TResponse> {
-  const response = await backOff(
+  const response = await backOffWrapper(
     async () => readClient.get<TResponse>(path, {params: queryParams}),
     backOffOptions,
   );
@@ -114,7 +83,7 @@ export async function del<TResponse>(
   queryParams?: {[key: string]: string | number | null | undefined} | null,
   backOffOptions = DEFAULT_BACK_OFF_OPTIONS,
 ): Promise<TResponse> {
-  const response = await backOff(
+  const response = await backOffWrapper(
     async () => writeClient.delete<TResponse>(path, {params: queryParams}),
     backOffOptions,
   );
