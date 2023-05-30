@@ -901,19 +901,31 @@
         "private": "Private"
       }
     },
-    "create_channel": {
-      "title": "Creating a channel",
+    "edit_channel": {
+      "title_create": "Creating a channel",
+      "title_edit": "Channel editing",
       "add_channel_photo": "Add channel photo",
       "labels": {
         "administrators": "Administrators",
         "channel_type": "Channel type",
         "description": "Description",
+        "invitation_link": "Invitation link",
         "title": "Title"
       },
       "buttons": {
-        "create_channel": "Create channel",
         "add_photo": "Add photo",
-        "change_photo": "Change photo"
+        "change_photo": "Change photo",
+        "create_channel": "Create channel",
+        "save_changes": "Save changes"
+      },
+      "dialogs": {
+        "delete_channel": {
+          "title": "Delete channel?",
+          "message": "All publications and subscribers will be lost. Do you really want to delete the channel?",
+          "buttons": {
+            "delete": "Delete"
+          }
+        }
       }
     },
     "channel_type": {

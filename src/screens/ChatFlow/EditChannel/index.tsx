@@ -4,18 +4,20 @@ import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {CommonInput, CommonInputRef} from '@components/Inputs/CommonInput';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {LinesBackground} from '@components/LinesBackground';
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {MainStackParamList} from '@navigation/Main';
-import {useNavigation} from '@react-navigation/native';
+import {RouteProp} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AdminIcon} from '@svg/AdminIcon';
+import {BinIcon} from '@svg/BinIcon';
 import {SpeakerphoneIcon} from '@svg/SpeakerphoneIcon';
 import {t} from '@translations/i18n';
-import React, {useRef, useState} from 'react';
+import React, {useCallback, useRef, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
@@ -23,11 +25,15 @@ import {rem} from 'rn-units';
 import {CHANNEL_PHOTO_SIZE, ChannelPhoto} from './components/ChannelPhoto';
 import {ConfigRow} from './components/ConfigRow';
 
-export const CreateChannel = () => {
-  const safeAreaInsets = useSafeAreaInsets();
+interface Props {
+  navigation: NativeStackNavigationProp<MainStackParamList>;
+  route: RouteProp<MainStackParamList, 'Chat/EditChannel'>;
+}
 
-  const navigation =
-    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
+export const EditChannel = ({navigation, route}: Props) => {
+  const {channelId} = route.params;
+
+  const safeAreaInsets = useSafeAreaInsets();
 
   const {scrollHandler, shadowStyle} = useScrollShadow();
 
@@ -43,13 +49,51 @@ export const CreateChannel = () => {
 
   const [admins, _setAdmins] = useState<string[]>(['currentUser']);
 
+  const onDeleteChannel = useCallback(() => {
+    navigation.navigate('PopUp', {
+      title: t('chat.edit_channel.dialogs.delete_channel.title'),
+      message: t('chat.edit_channel.dialogs.delete_channel.message'),
+      buttons: [
+        {
+          text: t('button.cancel'),
+          preset: 'outlined',
+        },
+        {
+          text: t('chat.edit_channel.dialogs.delete_channel.buttons.delete'),
+          preset: 'destructive',
+          onPress: () => {
+            // TODO: Close all screens related to this channelId (if not null)
+            navigation.goBack();
+          },
+        },
+      ],
+    });
+  }, [navigation]);
+
+  const renderDeleteChannelButton = useCallback(() => {
+    if (!channelId) {
+      return null;
+    }
+
+    return (
+      <Touchable onPress={onDeleteChannel}>
+        <BinIcon width={rem(24)} height={rem(24)} color={COLORS.attention} />
+      </Touchable>
+    );
+  }, [channelId, onDeleteChannel]);
+
   return (
     <KeyboardAvoider>
       <Header
         color={COLORS.primaryDark}
-        title={t('chat.create_channel.title')}
+        title={
+          channelId
+            ? t('chat.edit_channel.title_edit')
+            : t('chat.edit_channel.title_create')
+        }
         containerStyle={shadowStyle}
         backgroundColor={COLORS.white}
+        renderRightButtons={renderDeleteChannelButton}
       />
 
       <Animated.ScrollView
@@ -72,7 +116,7 @@ export const CreateChannel = () => {
 
         <View style={styles.contentContainer}>
           <CommonInput
-            label={t('chat.create_channel.labels.title')}
+            label={t('chat.edit_channel.labels.title')}
             value={title}
             onChangeText={setTitle}
             returnKeyType={'next'}
@@ -82,7 +126,7 @@ export const CreateChannel = () => {
           <CommonInput
             ref={refDescription}
             containerStyle={styles.item}
-            label={t('chat.create_channel.labels.description')}
+            label={t('chat.edit_channel.labels.description')}
             value={description}
             onChangeText={setDescription}
             multiline
@@ -92,7 +136,7 @@ export const CreateChannel = () => {
           <ConfigRow
             style={styles.item}
             Icon={SpeakerphoneIcon}
-            title={t('chat.create_channel.labels.channel_type')}
+            title={t('chat.edit_channel.labels.channel_type')}
             value={t(`chat.channel.type.${channelType}`)}
             onPress={() => {
               navigation.navigate('Chat/ChannelType', {
@@ -104,7 +148,7 @@ export const CreateChannel = () => {
           <ConfigRow
             style={styles.item}
             Icon={AdminIcon}
-            title={t('chat.create_channel.labels.administrators')}
+            title={t('chat.edit_channel.labels.administrators')}
             value={admins.length}
             onPress={() => {
               navigation.navigate('Chat/ChannelAdministrators', {
@@ -117,7 +161,11 @@ export const CreateChannel = () => {
 
           <PrimaryButton
             style={styles.item}
-            text={t('chat.create_channel.buttons.create_channel')}
+            text={
+              channelId
+                ? t('chat.edit_channel.buttons.save_changes')
+                : t('chat.edit_channel.buttons.create_channel')
+            }
             onPress={() => {
               navigation.goBack();
             }}
