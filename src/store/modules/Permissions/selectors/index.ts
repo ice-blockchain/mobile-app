@@ -9,6 +9,11 @@ export const isPermissionGrantedSelector =
     return state.permissions[type] === RESULTS.GRANTED;
   };
 
+export const isPermissionFetchedSelector =
+  (type: PermissionType) => (state: RootState) => {
+    return state.permissions[type] !== null;
+  };
+
 export const canAskPermissionSelector =
   (type: PermissionType) => (state: RootState) => {
     return state.permissions[type] === RESULTS.DENIED;

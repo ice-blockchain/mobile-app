@@ -14,7 +14,6 @@ import {
   userSelector,
 } from '@store/modules/Account/selectors';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
-import {useAppLoadedListener} from '@store/modules/AppCommon/hooks/useAppLoadedListener';
 import {useAppStateListener} from '@store/modules/AppCommon/hooks/useAppStateListener';
 import {appInitStateSelector} from '@store/modules/AppCommon/selectors';
 import {useOpenUrlListener} from '@store/modules/Linking/hooks/useOpenUrlListener';
@@ -56,7 +55,6 @@ function ActiveNavigator() {
 
 export function Router() {
   useOpenUrlListener();
-  useAppLoadedListener();
   useAppStateListener();
   useInitNotifications();
 

@@ -6,10 +6,15 @@ import {
   isAuthorizedSelector,
   userSelector,
 } from '@store/modules/Account/selectors';
+import {isAppInitializedSelector} from '@store/modules/AppCommon/selectors';
 import {BackgroundTasksActions} from '@store/modules/BackgroundTasks/actions';
 import {ContactsActions} from '@store/modules/Contacts/actions';
 import {syncedContactsNumbersSelector} from '@store/modules/Contacts/selectors';
-import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';
+import {
+  isPermissionFetchedSelector,
+  isPermissionGrantedSelector,
+} from '@store/modules/Permissions/selectors';
+import {waitForSelector} from '@store/utils/sagas/effects';
 import {getErrorMessage} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import {getChunks, runInChunks} from '@utils/promise';
@@ -31,14 +36,14 @@ export function* syncContactsSaga(
   >,
 ) {
   try {
-    const hasPermissions: ReturnType<
+    yield call(waitForSelector, isAppInitializedSelector);
+    yield call(waitForSelector, isPermissionFetchedSelector('contacts'));
+
+    const isAuthorized: SagaReturnType<typeof isAuthorizedSelector> =
+      yield select(isAuthorizedSelector);
+    const hasPermissions: SagaReturnType<
       ReturnType<typeof isPermissionGrantedSelector>
     > = yield select(isPermissionGrantedSelector('contacts'));
-    const isAuthorized: ReturnType<typeof isAuthorizedSelector> = yield select(
-      isAuthorizedSelector,
-    );
-
-    // yield call(waitForSelector, isAuthorizedSelector);
 
     if (!isAuthorized || !hasPermissions) {
       return;
