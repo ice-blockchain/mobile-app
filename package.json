@@ -11,7 +11,7 @@
     "android:releasestaging": "bundle exec fastlane android build type:apk",
     "configure:staging": "cp -rf ../mobile-app-secrets/staging/* ./ && cp -a ../mobile-app-secrets/staging/ ./ && source .env",
     "configure:production": "cp -rf ../mobile-app-secrets/production/* ./ && cp -a ../mobile-app-secrets/production/ ./ && source .env",
-    "match:read": "bundler exec fastlane match appstore --readonly && bundler exec fastlane match adhoc --readonly",
+    "match:read": "bundler exec fastlane match appstore --readonly && bundler exec fastlane match adhoc --readonly && bundler exec fastlane match development --readonly",
     "match:renew": "bundler exec fastlane match adhoc --force_for_new_devices",
     "test": "jest tests --coverage --updateSnapshot --passWithNoTests",
     "generate-translation-types": "node scripts/generateTranslationTypes/index.mjs src/translations/locales/en.json && eslint --fix src/translations/locales/en.json.d.ts",
