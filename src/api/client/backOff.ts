@@ -42,9 +42,9 @@ export const DEFAULT_BACK_OFF_OPTIONS = {
  * So if app is not in the active state (not in foreground),
  * using requests directly, without delays and retries
  */
-export const backOffWrapper: typeof backOff = request => {
+export const backOffWrapper: typeof backOff = (request, options) => {
   if (AppState.currentState === 'active') {
-    return backOff(request);
+    return backOff(request, options);
   }
   return request();
 };
