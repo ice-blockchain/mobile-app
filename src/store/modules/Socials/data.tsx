@@ -30,7 +30,7 @@ export const socialData: Record<SocialType, SocialData> = {
   tiktok: {
     image: Images.social.tiktok,
     title: t('social_media.tiktok.title'),
-    description: t('social_media.tiktok.description_part1'),
+    description: t('social_media.tiktok.description'),
     buttonTitle: t('button.follow_us'),
     linkApp: LINKS.TIKTOK_WEB,
     linkWeb: LINKS.TIKTOK_WEB,
@@ -38,7 +38,7 @@ export const socialData: Record<SocialType, SocialData> = {
   youtube: {
     image: Images.social.youtube,
     title: t('social_media.youtube.title'),
-    description: t('social_media.youtube.description_part1'),
+    description: t('social_media.youtube.description'),
     buttonTitle: t('button.subscribe'),
     linkApp: LINKS.YOUTUBE_APP,
     linkWeb: LINKS.YOUTUBE_WEB,
@@ -46,7 +46,7 @@ export const socialData: Record<SocialType, SocialData> = {
   linkedin: {
     image: Images.social.linkedin,
     title: t('social_media.linkedin.title'),
-    description: t('social_media.linkedin.description_part1'),
+    description: t('social_media.linkedin.description'),
     buttonTitle: t('button.follow_us'),
     linkApp: LINKS.LINKEDIN_APP,
     linkWeb: LINKS.LINKEDIN_WEB,

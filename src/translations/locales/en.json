@@ -363,7 +363,7 @@
     "feedback_title": "Send Feedback",
     "feedback_description": "Share your thoughts with us.",
     "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra [[:ice]] by inviting your friends.",
+    "invite_description": "Earn extra ice by inviting your friends.",
     "delete_title": "Delete Account",
     "delete_description": "Erase your account.",
     "delete_confirmation_title": "Are you sure you want to remove the account?",
@@ -873,24 +873,24 @@
   "social_media": {
     "tiktok": {
       "title": "Join us on TikTok",
-      "description_part1": "We just wanted to reach out and let you know about our exciting new community on TikTok. We're sharing fun and informative content about our digital currency, [[:ice]], and we would love for you to join us!"
+      "description": "We just wanted to reach out and let you know about our exciting new community on TikTok. We're sharing fun and informative content about our digital currency, ice, and we would love for you to join us!"
     },
     "youtube": {
       "title": "Join us on YouTube",
-      "description_part1": "From tutorials on how to earn [[:ice]], to updates about new features, and even fun community content, our YouTube channel is the perfect place to stay up-to-date."
+      "description": "From tutorials on how to earn ice, to updates about new features, and even fun community content, our YouTube channel is the perfect place to stay up-to-date."
     },
     "linkedin": {
       "title": "Join us on LinkedIn",
-      "description_part1": "Joining the [[:ice]] community on LinkedIn is a great way to stay informed about the latest developments and to connect with like-minded individuals who are just as passionate about the future of digital currencies as you are."
+      "description": "Joining the ice community on LinkedIn is a great way to stay informed about the latest developments and to connect with like-minded individuals who are just as passionate about the future of digital currencies as you are."
     },
     "facebook": {
       "title": "Join us on Facebook",
       "description_part1": "We highly recommend giving our Facebook page a follow.",
-      "description_part2": "Not only will it help you stay up to date on everything that’s happening with the [[:ice]] project, but it’s also a great way to connect with our community and be a part of the conversation."
+      "description_part2": "Not only will it help you stay up to date on everything that’s happening with the ice project, but it’s also a great way to connect with our community and be a part of the conversation."
     },
     "instagram": {
       "title": "Join us on Instagram",
-      "description_part1": "Following us on Instagram is a great way to stay in the loop and connect with other users who are also passionate about [[:ice]].",
+      "description_part1": "Following us on Instagram is a great way to stay in the loop and connect with other users who are also passionate about ice",
       "description_part2": "Plus, you'll be the first to know about any new features or promotions that we're launching."
     }
   }
