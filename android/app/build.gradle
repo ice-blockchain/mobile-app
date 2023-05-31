@@ -253,11 +253,12 @@ android {
         }
         release {
             minifyEnabled true
-            // Caution! In production, you need to generate your own keystore file.
-            // see https://reactnative.dev/docs/signed-apk-android.
             signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            ndk {
+                abiFilters "armeabi-v7a", "arm64-v8a"
+            }
         }
         releasestaging {
             initWith release
