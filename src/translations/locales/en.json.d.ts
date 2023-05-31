@@ -572,11 +572,11 @@ export type Translations = {
   'mining_notice.message_footer': null;
   'qr_code.description': null;
   'social_media.tiktok.title': null;
-  'social_media.tiktok.description_part1': null;
+  'social_media.tiktok.description': null;
   'social_media.youtube.title': null;
-  'social_media.youtube.description_part1': null;
+  'social_media.youtube.description': null;
   'social_media.linkedin.title': null;
-  'social_media.linkedin.description_part1': null;
+  'social_media.linkedin.description': null;
   'social_media.facebook.title': null;
   'social_media.facebook.description_part1': null;
   'social_media.facebook.description_part2': null;
