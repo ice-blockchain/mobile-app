@@ -29,9 +29,12 @@ import {MaterialTopTabBarProps} from '@react-navigation/material-top-tabs/lib/ty
 import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Channel} from '@screens/ChatFlow/Channel';
+import {ChannelPostData} from '@screens/ChatFlow/Channel/components/ChannelFeed/type';
+import {ChannelPostHighlight} from '@screens/ChatFlow/Channel/components/ChannelPostHighlight';
 import {Explore} from '@screens/ChatFlow/Explore';
 import {Messages} from '@screens/ChatFlow/Messages';
 import {NewChatSelector} from '@screens/ChatFlow/NewChatSelector';
+import {EmojiSelector} from '@screens/EmojiSelector';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
 import {Home} from '@screens/HomeFlow/Home';
 import {
@@ -159,7 +162,18 @@ export type MainStackParamList = {
   Roles: {userId?: string} | undefined;
   Badges: {category?: BadgeType; userId?: string};
   NewChatSelector: undefined;
-  Channel: {channelData: ExploreData};
+  EmojiSelector: {
+    onSelected: (emoji: string) => void;
+  };
+  Channel: {
+    channelData: ExploreData;
+  };
+  ChannelPostHighlight: {
+    postData: ChannelPostData;
+    getPostData: (postId: number) => ChannelPostData | null;
+    updatePostData: (newPostData: ChannelPostData) => void;
+    deletePostData: (postId: number) => void;
+  };
   Walkthrough:
     | {step: WalkthroughStep; total: number; index: number}
     | undefined;
@@ -476,6 +490,11 @@ export function MainNavigator() {
       />
       <MainStack.Screen name="Channel" component={Channel} />
       <MainStack.Screen
+        name="ChannelPostHighlight"
+        component={ChannelPostHighlight}
+        options={modalOptions}
+      />
+      <MainStack.Screen
         name="Walkthrough"
         component={Walkthrough}
         options={modalOptions}
@@ -484,6 +503,11 @@ export function MainNavigator() {
         name="NewChatSelector"
         component={NewChatSelector}
         options={modalOptions}
+      />
+      <MainStack.Screen
+        name="EmojiSelector"
+        component={EmojiSelector}
+        options={{...modalOptions, animation: 'none'}}
       />
       <MainStack.Screen
         name="ProfilePrivacyEditStep1"

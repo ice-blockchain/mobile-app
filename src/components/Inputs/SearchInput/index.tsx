@@ -4,7 +4,7 @@ import {COLORS} from '@constants/colors';
 import {SearchIcon} from '@svg/SearchIcon';
 import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
-import React, {forwardRef, Ref, useState} from 'react';
+import React, {forwardRef, Ref} from 'react';
 import {
   NativeSyntheticEvent,
   StyleProp,
@@ -15,28 +15,47 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
+import Animated, {
+  interpolateColor,
+  useAnimatedStyle,
+  useSharedValue,
+  withSpring,
+} from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
 interface SearchInputProps extends TextInputProps {
   loading?: boolean;
+  focused?: Animated.SharedValue<number>;
   containerStyle?: StyleProp<ViewStyle>;
 }
 
 export const SEARCH_INPUT_HEIGHT = rem(46);
 
+const AnimatedTextInput = Animated.createAnimatedComponent(TextInput);
+
 export const SearchInput = forwardRef(
   (
-    {containerStyle, onFocus, onBlur, ...textInputProps}: SearchInputProps,
+    {
+      containerStyle,
+      onFocus,
+      onBlur,
+      focused: propsFocused,
+      ...textInputProps
+    }: SearchInputProps,
     forwardedRef: Ref<TextInput>,
   ) => {
-    const [focused, setFocused] = useState(false);
+    const focused = useSharedValue(0);
+    const animatedStyle = useAnimatedStyle(() => {
+      return {
+        borderColor: interpolateColor(
+          focused.value,
+          [0, 1],
+          [COLORS.wildSand, COLORS.primaryDark],
+        ),
+      };
+    });
     return (
-      <View
-        style={[
-          styles.container,
-          focused ? styles.container_focused : null,
-          containerStyle,
-        ]}>
+      <Animated.View style={[styles.container, animatedStyle, containerStyle]}>
         <View style={styles.searchButton}>
           <SearchIcon
             width={rem(24)}
@@ -44,21 +63,27 @@ export const SearchInput = forwardRef(
             color={COLORS.secondary}
           />
         </View>
-        <TextInput
+        <AnimatedTextInput
           style={styles.input}
           placeholderTextColor={COLORS.secondary}
           onFocus={(e: NativeSyntheticEvent<TextInputFocusEventData>) => {
-            setFocused(true);
+            focused.value = withSpring(1);
+            if (propsFocused) {
+              propsFocused.value = withSpring(1);
+            }
             onFocus?.(e);
           }}
           onBlur={(e: NativeSyntheticEvent<TextInputFocusEventData>) => {
-            setFocused(false);
+            focused.value = withSpring(0);
+            if (propsFocused) {
+              propsFocused.value = withSpring(0);
+            }
             onBlur?.(e);
           }}
           ref={forwardedRef}
           {...textInputProps}
         />
-      </View>
+      </Animated.View>
     );
   },
 );
@@ -68,10 +93,6 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.wildSand,
     borderRadius: rem(16),
     borderWidth: 1,
-    borderColor: COLORS.wildSand,
-  },
-  container_focused: {
-    borderColor: COLORS.primaryDark,
   },
   input: {
     paddingLeft: rem(46),

@@ -4,7 +4,7 @@ import {ChatActions} from '@store/modules/Chat/actions';
 import {getLoadingChatDataSelector} from '@store/modules/Chat/selectors';
 import {ChatDataType} from '@store/modules/Chat/types';
 import debounce from 'lodash/debounce';
-import {useCallback, useEffect, useRef, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
 export function useLoadChatData(dataType: ChatDataType) {
@@ -15,7 +15,7 @@ export function useLoadChatData(dataType: ChatDataType) {
   }
 
   const [searchValue, setSearchValue] = useState('');
-  const onChangeText = debounce(setSearchValue, 600);
+  const onChangeText = useMemo(() => debounce(setSearchValue, 600), []);
 
   const dispatch = useDispatch();
   const refreshData = useCallback(() => {
@@ -30,8 +30,12 @@ export function useLoadChatData(dataType: ChatDataType) {
   }, [dataType, dispatch, searchValue]);
 
   const loadMore = useCallback(() => {
-    dispatch(ChatActions.LOAD_CHAT_DATA.START.create({dataType, searchValue}));
-  }, [dataType, dispatch, searchValue]);
+    if (!loading) {
+      dispatch(
+        ChatActions.LOAD_CHAT_DATA.START.create({dataType, searchValue}),
+      );
+    }
+  }, [dataType, dispatch, searchValue, loading]);
 
   useEffect(refreshData, [refreshData]);
 

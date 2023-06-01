@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   darkContainer: {
     backgroundColor: COLORS.primaryLight,
-    borderRadius: 15,
+    borderRadius: rem(15),
   },
   messageContainer: {
     flex: 1,
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     width: rem(46),
     height: rem(46),
-    borderRadius: 15,
+    borderRadius: rem(15),
     backgroundColor: COLORS.primaryDark,
     justifyContent: 'center',
     alignItems: 'center',
@@ -81,8 +81,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: COLORS.white,
-    margin: rem(14),
-    marginRight: 0,
+    marginVertical: rem(14),
+    marginLeft: rem(14),
   },
   darkModeTextColor: {
     color: COLORS.white,

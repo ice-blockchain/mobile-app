@@ -34,7 +34,7 @@ function getStatusTypeIcon(lastMessageStatus: MessageStatusType) {
   }
 }
 
-export function MessagesRow({messageData}: Props) {
+export function ChatRow({messageData}: Props) {
   return (
     <ChatTabRow
       icon={messageData.icon}

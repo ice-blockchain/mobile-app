@@ -2,6 +2,7 @@
 
 import {AnimatedSplash} from '@navigation/components/AnimatedSplash';
 import {Router} from '@navigation/Router';
+import {initEmojiData} from '@screens/EmojiSelector/data';
 import {persistor, store} from '@store/configureStore';
 import React from 'react';
 import {StatusBar, StyleSheet} from 'react-native';
@@ -9,6 +10,8 @@ import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
+
+initEmojiData();
 
 export function App() {
   return (

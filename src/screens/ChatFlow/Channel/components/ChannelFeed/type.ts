@@ -1,5 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
+export type PostEmojiData = {
+  [emoji: string]: {
+    counter: number;
+    liked?: boolean;
+  };
+};
+
 export type ChannelPostData = {
   id: number;
   sourceName: string;
@@ -8,12 +15,7 @@ export type ChannelPostData = {
   edited?: boolean;
   totalComments: number;
   lastCommentatorsLogos: string[];
-  emojis: {
-    [emoji: string]: {
-      counter: number;
-      liked?: boolean;
-    };
-  };
+  emojis: PostEmojiData;
 
   postEmoji?: string;
   replyToPost?: number;

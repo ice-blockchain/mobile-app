@@ -25,7 +25,7 @@ export function Channel() {
       <View style={[commonStyles.shadow, styles.headerContainer]}>
         <ChannelHeader channelData={channelData} />
       </View>
-      <View style={{paddingTop: CHANNEL_HEADER_HEIGHT}}>
+      <View style={styles.feedContainer}>
         <ChannelFeed channelData={channelData} />
       </View>
     </View>
@@ -43,5 +43,8 @@ const styles = StyleSheet.create({
     width: '100%',
     top: 0,
     position: 'absolute',
+  },
+  feedContainer: {
+    paddingTop: CHANNEL_HEADER_HEIGHT + 1,
   },
 });

@@ -941,5 +941,20 @@
     "mb": "MB",
     "gb": "GB",
     "tb": "TB"
+  },
+  "emojis_selector": {
+    "title": "Emojis",
+    "categories": {
+      "recent": "recent reactions",
+      "smileys_people": "smileys & people",
+      "animals_nature": "animals & nature",
+      "food_drink": "food & drink",
+      "activities": "activities",
+      "travel_places": "travel & places",
+      "objects": "objects",
+      "symbols": "symbols",
+      "flags": "flags",
+      "search_results": "search results"
+    }
   }
 }

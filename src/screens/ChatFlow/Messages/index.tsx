@@ -6,13 +6,13 @@ import {ItemSeparator} from '@screens/ChatFlow/components/ItemSeparator';
 import {JoinCommunitiesBanner} from '@screens/ChatFlow/components/JoinCommunitiesBanner';
 import {SearchBar} from '@screens/ChatFlow/components/SearchBar';
 import {useLoadChatData} from '@screens/ChatFlow/hooks/useLoadChatData';
-import {MessagesRow} from '@screens/ChatFlow/Messages/components/MessagesRow';
+import {ChatRow} from '@screens/ChatFlow/Messages/components/ChatRow';
 import {NoConversationsScreen} from '@screens/ChatFlow/Messages/components/NoConversationsScreen';
 import {SEARCH_HIDDEN_Y} from '@screens/ChatFlow/Messages/constants';
 import {useAnimatedSearch} from '@screens/ChatFlow/Messages/hooks/useAnimatedSearch';
 import {messagesDataSelector} from '@store/modules/Chat/selectors';
 import {ChatDataType, MessageData} from '@store/modules/Chat/types';
-import * as React from 'react';
+import React from 'react';
 import {ActivityIndicator, StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
@@ -40,7 +40,7 @@ export function Messages() {
     useAnimatedSearch(dataType);
 
   const renderItem = ({item}: {item: MessageData}) => {
-    return <MessagesRow key={item.id} messageData={item} />;
+    return <ChatRow key={item.id} messageData={item} />;
   };
 
   return (

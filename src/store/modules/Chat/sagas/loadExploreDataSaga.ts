@@ -12,7 +12,7 @@ import {put, SagaReturnType, select} from 'redux-saga/effects';
 type Actions = ReturnType<typeof ChatActions.LOAD_CHAT_DATA.START.create>;
 
 function getMockedRandomData() {
-  const iconRandom = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
+  const iconRandom = Math.floor(Math.random() * 20) + 1;
   return {
     icon: `https://ice-staging.b-cdn.net/profile/default-profile-picture-${iconRandom}.png`,
   };

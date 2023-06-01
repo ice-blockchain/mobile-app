@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     width: rem(46),
     height: rem(46),
-    borderRadius: 15,
+    borderRadius: rem(15),
   },
   onlineIndicator: {
     position: 'absolute',

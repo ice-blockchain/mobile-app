@@ -10,14 +10,12 @@ import {Route, TabBar} from 'react-native-tab-view';
 import {useDispatch} from 'react-redux';
 import {rem} from 'rn-units';
 
-export type GetTabWidth = (index: number) => number;
-
 const WIDTH = rem(30);
 
 const getTranslateX = (
   position: Animated.AnimatedInterpolation<number>,
   routes: Route[],
-  getTabWidth: GetTabWidth,
+  getTabWidth: (index: number) => number,
   scaleOutputRange: number[],
 ) => {
   const inputRange = routes.map((_, i) => i);

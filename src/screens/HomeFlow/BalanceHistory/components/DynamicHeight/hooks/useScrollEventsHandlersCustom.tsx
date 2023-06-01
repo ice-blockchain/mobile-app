@@ -1,15 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {
-  ScrollEventHandlerCallbackType,
   ScrollEventsHandlersHookType,
   useScrollEventsHandlersDefault,
 } from '@gorhom/bottom-sheet';
-import {ScrollEventContextType} from '@gorhom/bottom-sheet/lib/typescript/hooks/useScrollEventsHandlersDefault';
 import {
   SharedValue,
+  useAnimatedReaction,
   useSharedValue,
-  useWorkletCallback,
 } from 'react-native-reanimated';
 
 export const useScrollEventsHandlersCustom: () => {
@@ -20,24 +18,18 @@ export const useScrollEventsHandlersCustom: () => {
 
   return {
     useDefaultHook: (scrollableRef, scrollableContentOffsetY) => {
-      const {handleOnScroll, ...rest} = useScrollEventsHandlersDefault(
+      useAnimatedReaction(
+        () => scrollableContentOffsetY.value,
+        result => {
+          scrollY.value = result;
+        },
+        [],
+      );
+
+      return useScrollEventsHandlersDefault(
         scrollableRef,
         scrollableContentOffsetY,
       );
-
-      const handleOnScrollCustom: ScrollEventHandlerCallbackType<ScrollEventContextType> =
-        useWorkletCallback(
-          (event, ctx) => {
-            scrollY.value = event.contentOffset.y;
-            handleOnScroll?.(event, ctx);
-          },
-          [handleOnScroll, scrollY],
-        );
-
-      return {
-        ...rest,
-        handleOnScroll: handleOnScrollCustom,
-      };
     },
     scrollY,
   };

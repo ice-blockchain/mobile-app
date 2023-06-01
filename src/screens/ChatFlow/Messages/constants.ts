@@ -8,5 +8,6 @@ export const SEARCH_MARGIN_VERTICAL = rem(12);
 export const SEARCH_HIDDEN_Y = -(
   SEARCH_INPUT_HEIGHT +
   SEARCH_MARGIN_VERTICAL * 2 +
+  // for the shadow to be visible
   1
 );

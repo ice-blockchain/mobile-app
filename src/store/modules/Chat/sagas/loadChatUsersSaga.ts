@@ -8,8 +8,8 @@ import {put, SagaReturnType, select} from 'redux-saga/effects';
 type Actions = ReturnType<typeof ChatActions.LOAD_CHAT_DATA.START.create>;
 
 function getMockedChatUser(username: string, id: number) {
-  const iconRandom = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
-  const timeRandom = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+  const iconRandom = Math.floor(Math.random() * 20) + 1;
+  const timeRandom = Math.floor(Math.random() * 12) + 1;
   return {
     username,
     icon: `https://ice-staging.b-cdn.net/profile/default-profile-picture-${iconRandom}.png`,

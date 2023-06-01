@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     width: rem(48),
     height: rem(48),
-    borderRadius: 15,
+    borderRadius: rem(15),
   },
   sourceTypeContainer: {
     position: 'absolute',

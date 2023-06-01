@@ -1,53 +1,84 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {MainStackParamList} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {CHANNEL_POST_SIDE_OFFSET} from '@screens/ChatFlow/Channel/components/ChannelFeed/constansts';
-import {ChannelPostData} from '@screens/ChatFlow/Channel/components/ChannelFeed/type';
+import {
+  ChannelPostData,
+  PostEmojiData,
+} from '@screens/ChatFlow/Channel/components/ChannelFeed/type';
 import {PlusIcon} from '@svg/PlusIcon';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import * as React from 'react';
-import {useState} from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {Pressable, StyleSheet, Text} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {rem} from 'rn-units';
 
 type Props = {
   postData: ChannelPostData;
+  updatePostData: (newPostData: ChannelPostData) => void;
 };
 
 const DEFAULT_EMOJIS = ['👍', '🔥', '😍', '👎'];
 
-export function PostEmojiBar({postData}: Props) {
-  const [emojis, setEmojis] = useState(postData.emojis);
+function getUpdatedEmojis({
+  emojiToSwitch,
+  emojis,
+}: {
+  emojiToSwitch: string;
+  emojis: PostEmojiData;
+}): PostEmojiData {
+  const emojiData = emojis[emojiToSwitch];
+  if (!emojiData) {
+    return {
+      ...emojis,
+      [emojiToSwitch]: {
+        counter: 1,
+        liked: true,
+      },
+    };
+  }
+  const isLiked = !!emojiData.liked;
+  return {
+    ...emojis,
+    [emojiToSwitch]: {
+      counter: isLiked ? emojiData.counter - 1 : emojiData.counter + 1,
+      liked: !isLiked,
+    },
+  };
+}
+
+function getDisplayEmojis(emojis: PostEmojiData) {
+  return [...new Set([...DEFAULT_EMOJIS, ...Object.keys(emojis)])];
+}
+
+export function PostEmojiBar({postData, updatePostData}: Props) {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
+  const {emojis} = postData;
   const onEmojiPressed = (emoji: string) => {
-    setEmojis(emojisData => {
-      const emojiData = emojisData[emoji];
-      if (!emojiData) {
-        return {
-          ...emojisData,
-          [emoji]: {
-            counter: 1,
-            liked: true,
-          },
-        };
-      }
-      const isLiked = !!emojiData.liked;
-      return {
-        ...emojisData,
-        [emoji]: {
-          counter: isLiked ? emojiData.counter - 1 : emojiData.counter + 1,
-          liked: !isLiked,
-        },
-      };
+    const newEmojis = getUpdatedEmojis({
+      emojiToSwitch: emoji,
+      emojis,
+    });
+    updatePostData({
+      ...postData,
+      emojis: newEmojis,
     });
   };
+  const onShowEmojiSelector = () =>
+    navigation.navigate('EmojiSelector', {
+      onSelected: onEmojiPressed,
+    });
   return (
     <ScrollView
       horizontal
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={styles.container}>
-      {DEFAULT_EMOJIS.map((emoji: string) => (
+      {getDisplayEmojis(emojis).map((emoji: string) => (
         <Pressable
           key={emoji}
           onPress={() => onEmojiPressed(emoji)}
@@ -69,9 +100,12 @@ export function PostEmojiBar({postData}: Props) {
           ) : null}
         </Pressable>
       ))}
-      <View key={'+'} style={[styles.emojiContainer, styles.plusContainer]}>
+      <Pressable
+        key={'+'}
+        style={[styles.emojiContainer, styles.plusContainer]}
+        onPress={onShowEmojiSelector}>
         <PlusIcon />
-      </View>
+      </Pressable>
     </ScrollView>
   );
 }

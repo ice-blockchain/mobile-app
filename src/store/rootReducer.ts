@@ -10,6 +10,7 @@ import {chatReducer} from '@store/modules/Chat/reducer';
 import {collectionsReducer} from '@store/modules/Collections/reducer';
 import {teamReducer} from '@store/modules/Contacts/reducer';
 import {devicesReducer} from '@store/modules/Devices/reducer';
+import {emojiHistoryReducer} from '@store/modules/EmojiHistory/reducer';
 import {linkingReducer} from '@store/modules/Linking/reducer';
 import {newsReducer} from '@store/modules/News/reducer';
 import {notificationsReducer} from '@store/modules/Notifications/reducer';
@@ -30,6 +31,7 @@ export const rootReducer = combineReducers({
   activeTab: activeTab,
   analytics: analyticsReducer,
   appCommon: appCommonReducer,
+  emojiHistory: emojiHistoryReducer,
   permissions: permissionsReducer,
   account: accountReducer,
   stats: statsReducer,

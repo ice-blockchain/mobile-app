@@ -9,7 +9,7 @@ function getDaysBackTimestamp(daysBack: number) {
 }
 
 function getMockedUserIcon() {
-  const iconRandom = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
+  const iconRandom = Math.floor(Math.random() * 20) + 1;
   return `https://ice-staging.b-cdn.net/profile/default-profile-picture-${iconRandom}.png`;
 }
 
@@ -273,6 +273,8 @@ export async function fetchChannelPosts({}: {
         'https://ice.io/wp-content/uploads/2023/02/The-ice-Network-A-Solution-to-Restore-Trust-in-Crypto-Assets-600x403.png',
         'https://ice.io/wp-content/uploads/2023/02/Is-it-too-late-to-get-into-the-crypto-game-600x403.png',
         'https://ice.io/wp-content/uploads/2023/02/The-Future-is-Now-600x403.png',
+        'https://ice.io/wp-content/uploads/2023/02/The-ice-Network-A-Solution-to-Restore-Trust-in-Crypto-Assets-600x403.png',
+        'https://ice.io/wp-content/uploads/2023/02/Is-it-too-late-to-get-into-the-crypto-game-600x403.png',
         'https://ice.io/wp-content/uploads/2023/02/The-ice-Network-A-Solution-to-Restore-Trust-in-Crypto-Assets-600x403.png',
         'https://ice.io/wp-content/uploads/2023/02/Is-it-too-late-to-get-into-the-crypto-game-600x403.png',
       ],

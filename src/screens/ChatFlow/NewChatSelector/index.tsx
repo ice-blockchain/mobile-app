@@ -25,6 +25,7 @@ import Animated, {
   useAnimatedStyle,
 } from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
+import {rem} from 'rn-units';
 
 function BackdropComponent({animatedIndex}: BottomSheetBackdropProps) {
   const containerAnimatedStyle = useAnimatedStyle(() => ({
@@ -106,7 +107,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     flex: 1,
     overflow: 'hidden',
-    borderTopRightRadius: 30,
-    borderTopLeftRadius: 30,
+    borderTopRightRadius: rem(30),
+    borderTopLeftRadius: rem(30),
   },
 });

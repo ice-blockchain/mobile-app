@@ -611,4 +611,15 @@ export type Translations = {
   'filesize.mb': null;
   'filesize.gb': null;
   'filesize.tb': null;
+  'emojis_selector.title': null;
+  'emojis_selector.categories.recent': null;
+  'emojis_selector.categories.smileys_people': null;
+  'emojis_selector.categories.animals_nature': null;
+  'emojis_selector.categories.food_drink': null;
+  'emojis_selector.categories.activities': null;
+  'emojis_selector.categories.travel_places': null;
+  'emojis_selector.categories.objects': null;
+  'emojis_selector.categories.symbols': null;
+  'emojis_selector.categories.flags': null;
+  'emojis_selector.categories.search_results': null;
 };

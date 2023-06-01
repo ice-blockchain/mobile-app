@@ -6,7 +6,10 @@ import {font} from '@utils/styles';
 import * as React from 'react';
 import {StyleSheet, Text} from 'react-native';
 
-type Props = {focused: boolean; label: string};
+type Props = {
+  focused: boolean;
+  label: string;
+};
 
 export function ChatTabBarLabel({focused, label}: Props) {
   return (

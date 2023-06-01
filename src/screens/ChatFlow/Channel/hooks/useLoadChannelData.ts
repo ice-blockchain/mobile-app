@@ -90,5 +90,6 @@ export function useLoadChannelData(channelId: number) {
     loading,
     channelPostsDataByDate,
     refreshing: loading && refreshingRef.current,
+    setChannelPostsDataByDate,
   };
 }

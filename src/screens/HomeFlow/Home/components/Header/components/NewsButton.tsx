@@ -8,10 +8,11 @@ import {HomeTabStackParamList, MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {NewsActions} from '@store/modules/News/actions';
+import {NewsSelectors} from '@store/modules/News/selectors';
 import {LampInactiveIcon} from '@svg/LampInactiveIcon';
 import React, {memo, useEffect} from 'react';
 import {StyleSheet} from 'react-native';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 export const NewsButton = memo(() => {
@@ -22,7 +23,7 @@ export const NewsButton = memo(() => {
 
   const dispatch = useDispatch();
 
-  const badgeCount = 1; //useSelector(NewsSelectors.getUnreadCount);
+  const badgeCount = useSelector(NewsSelectors.getUnreadCount);
 
   useEffect(() => {
     dispatch(NewsActions.UNREAD_NEWS_COUNT_LOAD.START.create());

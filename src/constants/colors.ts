@@ -8,6 +8,7 @@ export const COLORS = {
   primary: '#073e91',
   primaryDark: '#0D265E',
   primaryLight: '#1B47C3',
+  morningSkyBlue: '#CFD4DF',
   secondary: '#707489',
   socialLink: '#3366CC',
   secondaryLight: '#B6B4BA',

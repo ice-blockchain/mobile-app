@@ -10,9 +10,9 @@ type Actions = ReturnType<typeof ChatActions.LOAD_CHAT_DATA.START.create>;
 
 const messageStatuses: MessageStatusType[] = ['sent', 'received', 'seen'];
 function getMockedRandomData() {
-  const iconRandom = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
-  const timeRandom = Math.floor(Math.random() * (14400 - 1 + 1)) + 1;
-  const statusRandom = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+  const iconRandom = Math.floor(Math.random() * 20) + 1;
+  const timeRandom = Math.floor(Math.random() * 14400) + 1;
+  const statusRandom = Math.floor(Math.random() * 3) + 1;
   return {
     icon: `https://ice-staging.b-cdn.net/profile/default-profile-picture-${iconRandom}.png`,
     minutesAgo: timeRandom,

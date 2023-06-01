@@ -6,12 +6,17 @@ import {ChannelPost} from '@screens/ChatFlow/Channel/components/ChannelFeed/Chan
 import {ChannelSectionHeader} from '@screens/ChatFlow/Channel/components/ChannelFeed/ChannelSectionHeader';
 import {CHANNEL_POST_SIDE_OFFSET} from '@screens/ChatFlow/Channel/components/ChannelFeed/constansts';
 import {ChannelPostData} from '@screens/ChatFlow/Channel/components/ChannelFeed/type';
+import {
+  deletePostById,
+  findPostById,
+  updatePostById,
+} from '@screens/ChatFlow/Channel/components/ChannelFeed/utils';
 import {useLoadChannelData} from '@screens/ChatFlow/Channel/hooks/useLoadChannelData';
-import {ChannelPostDataByDate} from '@screens/ChatFlow/Channel/types';
 import {ExploreData} from '@store/modules/Chat/types';
 import * as React from 'react';
 import {useCallback, useRef} from 'react';
 import {ActivityIndicator, SectionList, StyleSheet, View} from 'react-native';
+import Animated from 'react-native-reanimated';
 
 type Props = {
   channelData: ExploreData;
@@ -21,25 +26,15 @@ function ChannelFeedItemSeparator() {
   return <View style={styles.separator} />;
 }
 
-function findPostById({
-  postId,
-  dataByDate,
-}: {
-  postId: number;
-  dataByDate: ChannelPostDataByDate[];
-}) {
-  for (const item of dataByDate) {
-    const foundPost = item.data.find(post => post.id === postId);
-    if (foundPost) {
-      return foundPost;
-    }
-  }
-  return null;
-}
-
 export function ChannelFeed({channelData}: Props) {
-  const {refreshData, loadMore, loading, channelPostsDataByDate, refreshing} =
-    useLoadChannelData(channelData.id);
+  const {
+    refreshData,
+    loadMore,
+    loading,
+    channelPostsDataByDate,
+    refreshing,
+    setChannelPostsDataByDate,
+  } = useLoadChannelData(channelData.id);
 
   const channelPostsDataByDateRef = useRef(channelPostsDataByDate);
   channelPostsDataByDateRef.current = channelPostsDataByDate;
@@ -51,9 +46,46 @@ export function ChannelFeed({channelData}: Props) {
     });
   }, []);
 
+  const updatePostData = useCallback(
+    (newPostData: ChannelPostData) => {
+      // TODO: update on the BE
+      setChannelPostsDataByDate(currentChannelPostsDataByDate =>
+        updatePostById({
+          newPostData,
+          dataByDate: currentChannelPostsDataByDate,
+        }),
+      );
+    },
+    [setChannelPostsDataByDate],
+  );
+
+  const deletePostData = useCallback(
+    (postId: number) => {
+      // TODO: delete on the BE
+      setChannelPostsDataByDate(currentChannelPostsDataByDate =>
+        deletePostById({
+          postId,
+          dataByDate: currentChannelPostsDataByDate,
+        }),
+      );
+    },
+    [setChannelPostsDataByDate],
+  );
+
   const renderItem = ({item}: {item: ChannelPostData}) => {
     return (
-      <ChannelPost key={item.id} postData={item} getPostData={getPostData} />
+      <Animated.View
+        key={item.id}
+        // sharedTransitionTag={`post${item.id}`}
+        // sharedTransitionStyle={sharedTransitionStyle}
+      >
+        <ChannelPost
+          postData={item}
+          getPostData={getPostData}
+          updatePostData={updatePostData}
+          deletePostData={deletePostData}
+        />
+      </Animated.View>
     );
   };
 
