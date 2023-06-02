@@ -6,11 +6,9 @@ import {MainTabsParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {GreetingText} from '@screens/HomeFlow/Home/components/Header/components/GreetingText';
-import {
-  usernameWithPrefixSelector,
-  userSelector,
-} from '@store/modules/Account/selectors';
+import {userSelector} from '@store/modules/Account/selectors';
 import {font} from '@utils/styles';
+import {buildUsernameWithPrefix} from '@utils/username';
 import React from 'react';
 import {ImageStyle, StyleSheet, Text, TextStyle, ViewStyle} from 'react-native';
 import Animated, {AnimatedStyleProp} from 'react-native-reanimated';
@@ -26,7 +24,6 @@ export function UserGreeting({disabled, animatedStyle}: Props) {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainTabsParamList>>();
   const user = useSelector(userSelector);
-  const username = useSelector(usernameWithPrefixSelector);
   const openProfile = () => {
     navigation.navigate('ProfileTab');
   };
@@ -46,7 +43,11 @@ export function UserGreeting({disabled, animatedStyle}: Props) {
       <Animated.View style={[styles.greeting, animatedStyle]}>
         <Touchable disabled={disabled} onPress={openProfile}>
           <GreetingText />
-          {user && <Text style={styles.usernameText}>{username}</Text>}
+          {user && (
+            <Text style={styles.usernameText}>
+              {buildUsernameWithPrefix(user.username)}
+            </Text>
+          )}
         </Touchable>
       </Animated.View>
     </>

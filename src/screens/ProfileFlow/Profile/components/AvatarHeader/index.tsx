@@ -20,12 +20,11 @@ import {
   useAnimatedStyles,
 } from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useAnimatedStyles';
 import {useUserContactDetails} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useUserContactDetails';
-import {usernameWithPrefixSelector} from '@store/modules/Account/selectors';
 import {font, mirrorTransform} from '@utils/styles';
+import {buildUsernameWithPrefix} from '@utils/username';
 import React, {memo, useState} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
-import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 const NOT_FOUND = require('../../assets/images/notFoundPlaceholder.png');
@@ -41,7 +40,6 @@ type Props = {
 
 export const AvatarHeader = memo(
   ({user, animatedIndex, isOwner, isLoading = false}: Props) => {
-    const username = useSelector(usernameWithPrefixSelector);
     const topOffset = useTopOffsetStyle();
 
     const uri = user?.profilePictureUrl;
@@ -115,7 +113,7 @@ export const AvatarHeader = memo(
               <Animated.Text
                 style={[styles.usernameText, textStyle]}
                 numberOfLines={1}>
-                {username}
+                {buildUsernameWithPrefix(user.username)}
               </Animated.Text>
             )}
           </View>
