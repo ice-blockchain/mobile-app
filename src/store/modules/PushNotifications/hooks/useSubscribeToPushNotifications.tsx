@@ -16,11 +16,13 @@ export function useSubscribeToPushNotifications() {
          */
     messaging()
       .getInitialNotification()
-      .then((message: FirebaseMessagingTypes.RemoteMessage | null) =>
-        dispatch(
-          PushNotificationsActions.NOTIFICATION_PRESS.STATE.create({message}),
-        ),
-      );
+      .then((message: FirebaseMessagingTypes.RemoteMessage | null) => {
+        if (message) {
+          dispatch(
+            PushNotificationsActions.NOTIFICATION_PRESS.STATE.create({message}),
+          );
+        }
+      });
     /*
       When the user presses a notification displayed via FCM, this listener will be called if the app
       has opened from a background state.

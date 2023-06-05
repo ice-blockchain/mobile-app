@@ -9,7 +9,7 @@ import {loadInAppNotificationsSaga} from '@store/modules/InAppNotifications/saga
 import {removeInAppNotificationsSaga} from '@store/modules/InAppNotifications/sagas/removeInAppNotificationsSaga';
 import {all, takeLeading} from 'redux-saga/effects';
 
-export function* rootNotificationsSaga() {
+export function* rootInAppNotificationsSaga() {
   yield all([
     takeLeading(
       InAppNotificationActions.IN_APP_NOTIFICATIONS_LOAD.START.type,

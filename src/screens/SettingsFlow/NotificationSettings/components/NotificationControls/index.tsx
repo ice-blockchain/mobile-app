@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {DISABLE_ALL_NOTIFICATION_DOMAIN} from '@api/notifications/constants';
 import {
   NotificationDeliveryChannel,
   NotificationDomainToggles,
-} from '@api/devices/types';
-import {DISABLE_ALL_NOTIFICATION_DOMAIN} from '@api/notifications/constants';
+} from '@api/notifications/types';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AllNotifications} from '@screens/SettingsFlow/NotificationSettings/components/NotificationControls/components/AllNotifications';
 import {NotificationRow} from '@screens/SettingsFlow/NotificationSettings/components/NotificationControls/components/NotificationRow';
 import {useConfirmNotificationsDlg} from '@screens/SettingsFlow/NotificationSettings/components/NotificationControls/hooks/useConfirmNotificationsDlg';
-import {DeviceActions} from '@store/modules/Devices/actions';
+import {NotificationActions} from '@store/modules/Notifications/actions';
 import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';
 import {t} from '@translations/i18n';
 import React, {useCallback} from 'react';
@@ -46,7 +46,7 @@ export const NotificationControls = ({
         openConfirmationDlg();
       } else {
         dispatch(
-          DeviceActions.UPDATE_NOTIFICATION_CHANNEL.START.create(
+          NotificationActions.UPDATE_NOTIFICATION_CHANNEL.START.create(
             {type, enabled: value},
             notificationDeliveryChannel,
           ),

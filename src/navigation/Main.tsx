@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {BadgeType} from '@api/achievements/types';
-import {NotificationDeliveryChannel} from '@api/devices/types';
+import {NotificationDeliveryChannel} from '@api/notifications/types';
 import {Country} from '@constants/countries';
 import {commonStyles} from '@constants/styles';
 import {MainTabBar} from '@navigation/components/MainTabBar';

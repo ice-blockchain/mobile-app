@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {NotificationDeliveryChannel} from '@api/devices/types';
+import {NotificationDeliveryChannel} from '@api/notifications/types';
 import {getFcmToken} from '@services/firebase';
 import {store} from '@store/configureStore';
 import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';

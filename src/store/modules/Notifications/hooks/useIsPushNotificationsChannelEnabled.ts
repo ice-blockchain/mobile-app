@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {NotificationDomain} from '@api/devices/types';
-import {pushNotificationByTypeSelector} from '@store/modules/Devices/selectors';
+import {NotificationDomain} from '@api/notifications/types';
+import {pushNotificationByTypeSelector} from '@store/modules/Notifications/selectors';
 import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';
 import {useSelector} from 'react-redux';
 
