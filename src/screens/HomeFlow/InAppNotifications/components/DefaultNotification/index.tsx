@@ -2,9 +2,9 @@
 
 import {Avatar} from '@components/Avatar/Avatar';
 import {Touchable} from '@components/Touchable';
-import {Description} from '@screens/Notifications/components/Description';
-import {ActivityItemProps} from '@screens/Notifications/components/NotificationsList';
-import {Time} from '@screens/Notifications/components/Time';
+import {Description} from '@screens/HomeFlow/InAppNotifications/components/Description';
+import {ActivityItemProps} from '@screens/HomeFlow/InAppNotifications/components/NotificationsList';
+import {Time} from '@screens/HomeFlow/InAppNotifications/components/Time';
 import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';

@@ -35,7 +35,7 @@ export const MenuButton = memo(() => {
       // {
       //   icon: <BellIcon color={COLORS.downriver} />,
       //   label: t('home.menu.notifications'),
-      //   onPress: () => navigation.navigate('Notifications'),
+      //   onPress: () => navigation.navigate('InAppNotifications'),
       //   id: 'notifications',
       // },
       {

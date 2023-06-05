@@ -2,7 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {NotificationsList} from '@screens/Notifications/components/NotificationsList';
+import {NotificationsList} from '@screens/HomeFlow/InAppNotifications/components/NotificationsList';
 import {InAppNotificationActions} from '@store/modules/InAppNotifications/actions';
 import {
   getInAppNotificationsListDataSelector,
@@ -13,7 +13,7 @@ import {StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {useDispatch, useSelector} from 'react-redux';
 
-export const Notifications = () => {
+export const InAppNotifications = () => {
   useFocusStatusBar({style: 'dark-content'});
   const dispatch = useDispatch();
 
