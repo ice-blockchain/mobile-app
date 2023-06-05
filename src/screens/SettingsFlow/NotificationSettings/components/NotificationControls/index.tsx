@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {DISABLE_ALL_NOTIFICATION_DOMAIN} from '@api/devices/constants';
 import {
   NotificationDeliveryChannel,
   NotificationDomainToggles,
 } from '@api/devices/types';
+import {DISABLE_ALL_NOTIFICATION_DOMAIN} from '@api/notifications/constants';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';

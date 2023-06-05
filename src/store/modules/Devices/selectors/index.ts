@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {DISABLE_ALL_NOTIFICATION_DOMAIN} from '@api/devices/constants';
 import {NotificationDeliveryChannel} from '@api/devices/types';
+import {DISABLE_ALL_NOTIFICATION_DOMAIN} from '@api/notifications/constants';
 import {RootState} from '@store/rootReducer';
 
 export const deviceUniqueIdSelector = (state: RootState) =>

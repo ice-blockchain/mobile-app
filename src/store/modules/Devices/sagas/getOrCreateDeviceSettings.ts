@@ -67,8 +67,8 @@ export function* getOrCreateDeviceSettings({
   let pushNotificationChannel: NotificationDomainToggles;
   try {
     [emailNotificationChannel, pushNotificationChannel] = yield all([
-      call(Api.devices.getUserNotificationChannels, 'email'),
-      call(Api.devices.getUserNotificationChannels, 'push'),
+      call(Api.notifications.getUserNotificationChannels, 'email'),
+      call(Api.notifications.getUserNotificationChannels, 'push'),
     ]);
   } catch (error) {
     throw error;

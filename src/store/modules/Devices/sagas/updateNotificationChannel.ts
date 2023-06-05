@@ -14,7 +14,7 @@ export function* updateNotificationChannel(
   const {notificationChannel, notificationDeliveryChannel} = action.payload;
   try {
     yield call(
-      Api.devices.toggleNotificationDomainOnOff,
+      Api.notifications.toggleNotificationDomainOnOff,
       notificationChannel,
       notificationDeliveryChannel,
     );

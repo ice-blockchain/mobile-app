@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {DISABLE_ALL_NOTIFICATION_DOMAIN} from '@api/devices/constants';
 import {
   NotificationDeliveryChannel,
   NotificationDomainToggle,
 } from '@api/devices/types';
+import {DISABLE_ALL_NOTIFICATION_DOMAIN} from '@api/notifications/constants';
 import {Attributes, trackEvent, trackScreenView} from '@services/analytics';
 import {dayjs} from '@services/dayjs';
 import {store} from '@store/configureStore';
