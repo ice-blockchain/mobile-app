@@ -2,6 +2,6 @@
 
 import {pingUser} from './pingUser';
 
-export const notifications = Object.freeze({
+export const inAppNotifications = Object.freeze({
   pingUser,
 });

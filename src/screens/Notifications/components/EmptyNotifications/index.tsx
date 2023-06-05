@@ -2,7 +2,7 @@
 
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
-import {NotificationActions} from '@store/modules/Notifications/actions';
+import {InAppNotificationActions} from '@store/modules/InAppNotifications/actions';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
@@ -14,16 +14,18 @@ export const EmptyNotifications = () => {
   const dispatch = useDispatch();
 
   const onGenerateNotificationsPress = async () => {
-    dispatch(NotificationActions.ADD_MOCKED_NOTIFICATIONS.STATE.create());
+    dispatch(
+      InAppNotificationActions.ADD_IN_APP_MOCKED_NOTIFICATIONS.STATE.create(),
+    );
   };
 
   const onGenerateAnnouncementsPress = async () => {
-    dispatch(NotificationActions.ADD_MOCKED_ANNOUNCEMENTS.STATE.create());
+    dispatch(InAppNotificationActions.ADD_MOCKED_ANNOUNCEMENTS.STATE.create());
   };
 
   const onGenerateBothPress = async () => {
     dispatch(
-      NotificationActions.ADD_NOTIFICATIONS_AND_ANNOUNCEMENTS.STATE.create(),
+      InAppNotificationActions.ADD_IN_APP_NOTIFICATIONS_AND_ANNOUNCEMENTS.STATE.create(),
     );
   };
 

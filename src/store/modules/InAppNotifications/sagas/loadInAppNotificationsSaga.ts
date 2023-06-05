@@ -1,20 +1,21 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Activity} from '@api/notifications/types';
-import {loadAnnouncements, loadNotifications} from '@services/getstream';
-import {NotificationActions} from '@store/modules/Notifications/actions';
+import {Activity} from '@api/inAppNotifications/types';
+import {loadAnnouncements, loadInAppNotifications} from '@services/getstream';
+import {InAppNotificationActions} from '@store/modules/InAppNotifications/actions';
 import {getErrorMessage} from '@utils/errors';
 import {call, put, SagaReturnType} from 'redux-saga/effects';
 
-const actionCreator = NotificationActions.NOTIFICATIONS_LOAD.START.create;
+const actionCreator =
+  InAppNotificationActions.IN_APP_NOTIFICATIONS_LOAD.START.create;
 
-export function* loadNotificationsSaga(
+export function* loadInAppNotificationsSaga(
   action: ReturnType<typeof actionCreator>,
 ) {
   try {
     const {isRefresh} = action.payload;
-    const notificationsData: SagaReturnType<typeof loadNotifications> =
-      yield call(loadNotifications);
+    const notificationsData: SagaReturnType<typeof loadInAppNotifications> =
+      yield call(loadInAppNotifications);
     const announcementsData: SagaReturnType<typeof loadAnnouncements> =
       yield call(loadAnnouncements);
 
@@ -45,7 +46,7 @@ export function* loadNotificationsSaga(
     );
 
     yield put(
-      NotificationActions.NOTIFICATIONS_LOAD.SUCCESS.create({
+      InAppNotificationActions.IN_APP_NOTIFICATIONS_LOAD.SUCCESS.create({
         notifications: activities,
         hasMore: false, //TODO: handle pagination
         isRefresh: isRefresh,
@@ -53,7 +54,7 @@ export function* loadNotificationsSaga(
     );
   } catch (error) {
     yield put(
-      NotificationActions.NOTIFICATIONS_LOAD.FAILED.create(
+      InAppNotificationActions.IN_APP_NOTIFICATIONS_LOAD.FAILED.create(
         getErrorMessage(error),
       ),
     );

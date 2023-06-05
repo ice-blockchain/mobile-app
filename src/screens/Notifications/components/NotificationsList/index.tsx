@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Activity, ActivitySection} from '@api/notifications/types';
+import {Activity, ActivitySection} from '@api/inAppNotifications/types';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles, windowWidth} from '@constants/styles';
@@ -9,8 +9,8 @@ import {Header} from '@navigation/components/Header';
 import {ClearButton} from '@navigation/components/Header/components/ClearButton';
 import {DefaultNotification} from '@screens/Notifications/components/DefaultNotification';
 import {EmptyNotifications} from '@screens/Notifications/components/EmptyNotifications';
+import {InAppNotificationActions} from '@store/modules/InAppNotifications/actions';
 import {LinkingActions} from '@store/modules/Linking/actions';
-import {NotificationActions} from '@store/modules/Notifications/actions';
 import {ClearIcon} from '@svg/ClearIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -92,7 +92,9 @@ export const NotificationsList = ({
           style={styles.rightAction}
           onPress={() => {
             dispatch(
-              NotificationActions.REMOVE_NOTIFICATIONS.START.create([item.id]),
+              InAppNotificationActions.REMOVE_IN_APP_NOTIFICATIONS.START.create(
+                [item.id],
+              ),
             );
           }}>
           <ClearIcon color={COLORS.white} />

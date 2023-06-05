@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Activity, ActivitySection} from '@api/notifications/types';
+import {Activity, ActivitySection} from '@api/inAppNotifications/types';
 import {dayjs} from '@services/dayjs';
 import {t} from '@translations/i18n';
 

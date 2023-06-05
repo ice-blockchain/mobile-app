@@ -2,8 +2,8 @@
 
 import {achievements} from '@api/achievements';
 import {devices} from '@api/devices';
+import {inAppNotifications} from '@api/inAppNotifications';
 import {news} from '@api/news';
-import {notifications} from '@api/notifications';
 import {referrals} from '@api/referrals';
 import {statistics} from '@api/statistics';
 import {statusNotice} from '@api/statusNotice';
@@ -22,7 +22,7 @@ export const Api = Object.freeze({
   devices,
   tokenomics,
   news,
-  notifications,
+  inAppNotifications,
   statusNotice,
   tasks,
   time,

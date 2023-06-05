@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Activity} from '@api/notifications/types';
-import {NotificationActions} from '@store/modules/Notifications/actions';
+import {Activity} from '@api/inAppNotifications/types';
+import {InAppNotificationActions} from '@store/modules/InAppNotifications/actions';
 import {getErrorMessage} from '@utils/errors';
 import {put} from 'redux-saga/effects';
 
-const actionCreator = NotificationActions.NOTIFICATIONS_ADD.STATE.create;
+const actionCreator =
+  InAppNotificationActions.IN_APP_NOTIFICATIONS_ADD.STATE.create;
 
-export function* addNotificationsSaga(
+export function* addInAppNotificationsSaga(
   action: ReturnType<typeof actionCreator>,
 ) {
   try {
@@ -22,7 +23,7 @@ export function* addNotificationsSaga(
     );
 
     yield put(
-      NotificationActions.NOTIFICATIONS_LOAD.SUCCESS.create({
+      InAppNotificationActions.IN_APP_NOTIFICATIONS_LOAD.SUCCESS.create({
         notifications: activities,
         hasMore: false, //TODO: handle pagination
         isRefresh: false,
@@ -30,7 +31,7 @@ export function* addNotificationsSaga(
     );
   } catch (error) {
     yield put(
-      NotificationActions.NOTIFICATIONS_LOAD.FAILED.create(
+      InAppNotificationActions.IN_APP_NOTIFICATIONS_LOAD.FAILED.create(
         getErrorMessage(error),
       ),
     );

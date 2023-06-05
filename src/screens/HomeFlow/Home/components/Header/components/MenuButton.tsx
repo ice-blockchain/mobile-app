@@ -72,7 +72,7 @@ export const MenuButton = memo(() => {
   const {onElementLayout, elementRef} = useMenuButtonWalkthrough({buttons});
 
   // TODO: Hide until notifications functionality is ready
-  // const badgeCount = useSelector(notificationsCountSelector);
+  // const badgeCount = useSelector(inAppNotificationsCountSelector);
   const badgeCount = 0;
 
   const buttonRef = useRef<TouchableOpacity>(null);

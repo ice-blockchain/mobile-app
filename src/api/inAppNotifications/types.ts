@@ -25,6 +25,7 @@ export interface Activity {
   foreign_id?: string;
   id: string;
 }
+
 export interface ActivityExtraPayload {
   description?: string;
   deeplink?: string | null;

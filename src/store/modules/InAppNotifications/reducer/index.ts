@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Activity} from '@api/notifications/types';
-import {NotificationActions} from '@store/modules/Notifications/actions';
+import {Activity} from '@api/inAppNotifications/types';
+import {InAppNotificationActions} from '@store/modules/InAppNotifications/actions';
 import produce from 'immer';
 
 export interface State {
@@ -12,13 +12,13 @@ export interface State {
 }
 
 const actionCreatorNotificationsLoad =
-  NotificationActions.NOTIFICATIONS_LOAD.SUCCESS.create;
+  InAppNotificationActions.IN_APP_NOTIFICATIONS_LOAD.SUCCESS.create;
 const actionCreatorFailedNotificationsLoad =
-  NotificationActions.NOTIFICATIONS_LOAD.FAILED.create;
+  InAppNotificationActions.IN_APP_NOTIFICATIONS_LOAD.FAILED.create;
 const actionCreatorClearNotifications =
-  NotificationActions.REMOVE_NOTIFICATIONS.SUCCESS.create;
+  InAppNotificationActions.REMOVE_IN_APP_NOTIFICATIONS.SUCCESS.create;
 const actionCreatorFailedClearNotifications =
-  NotificationActions.REMOVE_NOTIFICATIONS.FAILED.create;
+  InAppNotificationActions.REMOVE_IN_APP_NOTIFICATIONS.FAILED.create;
 
 type Actions =
   | ReturnType<typeof actionCreatorNotificationsLoad>
@@ -31,13 +31,13 @@ const INITIAL_STATE: State = {
   hasMore: true,
 };
 
-export function notificationsReducer(
+export function inAppNotificationsReducer(
   state = INITIAL_STATE,
   action: Actions,
 ): State {
   return produce(state, draft => {
     switch (action.type) {
-      case NotificationActions.NOTIFICATIONS_LOAD.SUCCESS.type:
+      case InAppNotificationActions.IN_APP_NOTIFICATIONS_LOAD.SUCCESS.type:
         {
           const {notifications, hasMore, isRefresh} = action.payload;
 
@@ -52,7 +52,7 @@ export function notificationsReducer(
           draft.hasMore = hasMore;
         }
         break;
-      case NotificationActions.REMOVE_NOTIFICATIONS.SUCCESS.type:
+      case InAppNotificationActions.REMOVE_IN_APP_NOTIFICATIONS.SUCCESS.type:
         {
           const {notificationIds} = action.payload;
           let allItems = {...state.items};
