@@ -409,6 +409,8 @@ export type Translations = {
   'pop_up.please_confirm': null;
   'pop_up.resurrection_no_confirm_message': null;
   'pop_up.resurrection_yes_confirm_message': null;
+  'pop_up.delete_account_confirmation_title': null;
+  'pop_up.delete_account_confirmation_text': null;
   'periods.3_days': null;
   'periods.7_days': null;
   'periods.30_days': null;
