@@ -23,7 +23,7 @@ export function ChannelLoadingIndicator() {
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 16,
+    borderRadius: rem(16),
     backgroundColor: COLORS.white,
     height: rem(264),
     width: '100%',

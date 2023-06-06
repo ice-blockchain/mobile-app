@@ -11,9 +11,9 @@ interface Action {
   payload?: unknown;
 }
 
-export interface ActionData {
+export interface ActionData<T = unknown> {
   status: string;
-  payload?: unknown;
+  payload?: T;
   timestamp: number;
 }
 

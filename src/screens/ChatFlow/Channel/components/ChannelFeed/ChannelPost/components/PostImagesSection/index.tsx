@@ -11,11 +11,13 @@ type Props = {
 };
 
 const IMAGE_WIDTH = windowWidth - SCREEN_SIDE_OFFSET * 2;
+// 1.673170731707317 is an aspect ratio from the designs
 const IMAGE_HEIGHT = IMAGE_WIDTH / 1.673170731707317;
 
 const SEPARATOR_WIDTH = rem(4);
 const SMALL_IMAGE_WIDTH =
   (windowWidth - SCREEN_SIDE_OFFSET * 2 - SEPARATOR_WIDTH) / 2;
+// 1.1643835616438356 is an aspect ratio from the designs
 const SMALL_IMAGE_HEIGHT = SMALL_IMAGE_WIDTH / 1.1643835616438356;
 
 export function PostImagesSection({postData}: Props) {

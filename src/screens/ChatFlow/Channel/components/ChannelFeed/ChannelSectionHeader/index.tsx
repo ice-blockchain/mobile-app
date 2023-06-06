@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   container: {
-    borderRadius: 20,
+    borderRadius: rem(20),
     backgroundColor: COLORS.secondaryFaint,
     paddingVertical: rem(4),
     paddingHorizontal: rem(14),

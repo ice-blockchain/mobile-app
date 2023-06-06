@@ -19,7 +19,6 @@ export interface State {
   searchVisible: {[key: string]: boolean};
   searchValue: {[key: string]: string};
   hasMore: {[key: string]: boolean};
-  isLoading: {[key: string]: boolean};
   isInitialLoad: {[key: string]: boolean};
 }
 
@@ -36,7 +35,6 @@ const INITIAL_STATE: State = {
   searchVisible: {},
   searchValue: {},
   hasMore: {},
-  isLoading: {},
   isInitialLoad: {},
 
   messages: [],
@@ -56,13 +54,11 @@ export function chatReducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
       case ChatActions.LOAD_CHAT_DATA.START.type:
-        draft.isLoading[action.payload.dataType] = true;
         if (action.payload.initial) {
           draft.isInitialLoad[action.payload.dataType] = true;
         }
         break;
       case ChatActions.LOAD_CHAT_DATA.SUCCESS.type:
-        draft.isLoading[action.payload.dataType] = false;
         const isInitialLoad = draft.isInitialLoad[action.payload.dataType];
         switch (action.payload.dataType) {
           case 'chats': {
@@ -100,7 +96,6 @@ export function chatReducer(state = INITIAL_STATE, action: Actions): State {
         draft.hasMore[action.payload.dataType] = action.payload.hasMore;
         break;
       case ChatActions.LOAD_CHAT_DATA.FAILED.type:
-        draft.isLoading[action.payload.dataType] = false;
         draft.hasMore[action.payload.dataType] = false;
         draft.isInitialLoad[action.payload.dataType] = false;
         break;

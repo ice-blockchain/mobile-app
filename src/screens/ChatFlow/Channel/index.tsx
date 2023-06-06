@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
   headerContainer: {
     backgroundColor: COLORS.white,
     width: '100%',
-    top: 0,
     position: 'absolute',
   },
   feedContainer: {

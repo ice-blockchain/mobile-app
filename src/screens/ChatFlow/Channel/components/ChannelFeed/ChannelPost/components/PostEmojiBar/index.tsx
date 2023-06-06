@@ -62,7 +62,7 @@ export function PostEmojiBar({postData, updatePostData}: Props) {
         key={'+'}
         style={[styles.emojiContainer, styles.plusContainer]}
         onPress={onShowEmojiSelector}>
-        <PlusIcon />
+        <PlusIcon width={rem(24)} height={rem(25)} />
       </Pressable>
     </ScrollView>
   );

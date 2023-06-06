@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   iconContainer: {
     width: rem(40),
     height: rem(40),
-    borderRadius: 10,
+    borderRadius: rem(10),
     backgroundColor: COLORS.secondaryFaint,
     alignItems: 'center',
     justifyContent: 'center',

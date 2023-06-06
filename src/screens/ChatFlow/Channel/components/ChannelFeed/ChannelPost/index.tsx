@@ -17,6 +17,7 @@ import {PostText} from '@screens/ChatFlow/Channel/components/ChannelFeed/Channel
 import {ChannelPostData} from '@screens/ChatFlow/Channel/components/ChannelFeed/type';
 import * as React from 'react';
 import {LayoutChangeEvent, Pressable, StyleSheet, View} from 'react-native';
+import {rem} from 'rn-units';
 
 type Props = {
   postData: ChannelPostData;
@@ -68,7 +69,7 @@ export function ChannelPost({
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 16,
+    borderRadius: rem(16),
     backgroundColor: COLORS.white,
     width: '100%',
     overflow: 'hidden',

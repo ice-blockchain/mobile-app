@@ -20,7 +20,9 @@ type Props = {
 function getFilterTypeIcon(filterType: ExploreFilterType) {
   switch (filterType) {
     case 'all':
-      return <InfiniteIcon color={COLORS.white} />;
+      return (
+        <InfiniteIcon width={rem(24)} height={rem(24)} color={COLORS.white} />
+      );
     case 'channels':
       return (
         <ChannelIcon color={COLORS.white} width={rem(22)} height={rem(22)} />
@@ -43,7 +45,7 @@ function getFilterTypeIconStyle(filterType: ExploreFilterType) {
     case 'groups':
       return styles.groupsBackground;
     default:
-      return {};
+      return null;
   }
 }
 
@@ -76,7 +78,7 @@ export function ExploreFilterTile({onPress, filterType, selected}: Props) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: COLORS.secondaryFaint05opacity,
-    borderRadius: 16,
+    borderRadius: rem(16),
     paddingLeft: rem(4),
     paddingRight: rem(16),
     flexDirection: 'row',

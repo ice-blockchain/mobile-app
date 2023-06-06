@@ -41,7 +41,9 @@ export function PostReplySection({postData, getPostData}: Props) {
         <View
           style={[
             styles.replyIconContainer,
-            {top: containerHeight / 2 - REPLY_ICON_SIZE / 2},
+            {
+              top: containerHeight / 2 - REPLY_ICON_SIZE / 2,
+            },
           ]}>
           <ReplyIcon width={REPLY_ICON_SIZE} height={REPLY_ICON_SIZE} />
         </View>
@@ -58,7 +60,7 @@ const styles = StyleSheet.create({
   },
   container: {
     backgroundColor: COLORS.feedBackground,
-    borderRadius: 10,
+    borderRadius: rem(10),
     paddingVertical: rem(4),
     paddingHorizontal: rem(8),
   },
@@ -68,7 +70,6 @@ const styles = StyleSheet.create({
   },
   replyIconContainer: {
     position: 'absolute',
-    top: 0,
     left: -REPLY_ICON_SIZE / 2,
   },
 });

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {commonStyles} from '@constants/styles';
 import {ChannelPostData} from '@screens/ChatFlow/Channel/components/ChannelFeed/type';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -36,7 +37,7 @@ function getReplyPostTextHighlight(postData: ChannelPostData) {
 
 export function ReplyTextPreview({replyPostData}: Props) {
   return (
-    <View style={styles.textContainer}>
+    <View style={commonStyles.flexOne}>
       <Text style={styles.sourceName}>{`@${replyPostData.sourceName}`}</Text>
       <Text numberOfLines={1} style={styles.text}>
         {getReplyPostTextHighlight(replyPostData)}
@@ -46,9 +47,6 @@ export function ReplyTextPreview({replyPostData}: Props) {
 }
 
 const styles = StyleSheet.create({
-  textContainer: {
-    flex: 1,
-  },
   sourceName: {
     ...font(14, 17, 'bold', 'primaryLight'),
   },

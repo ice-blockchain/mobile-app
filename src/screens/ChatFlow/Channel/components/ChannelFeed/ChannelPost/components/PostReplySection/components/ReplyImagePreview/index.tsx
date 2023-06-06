@@ -40,7 +40,7 @@ export function ReplyImagePreview({replyPostData}: Props) {
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 6,
+    borderRadius: rem(6),
     width: rem(30),
     height: rem(30),
     marginRight: rem(8),
