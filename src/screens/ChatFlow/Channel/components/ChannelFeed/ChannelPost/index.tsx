@@ -16,13 +16,14 @@ import {PostReplySection} from '@screens/ChatFlow/Channel/components/ChannelFeed
 import {PostText} from '@screens/ChatFlow/Channel/components/ChannelFeed/ChannelPost/components/PostText';
 import {ChannelPostData} from '@screens/ChatFlow/Channel/components/ChannelFeed/type';
 import * as React from 'react';
-import {Pressable, StyleSheet} from 'react-native';
+import {LayoutChangeEvent, Pressable, StyleSheet, View} from 'react-native';
 
 type Props = {
   postData: ChannelPostData;
   getPostData: (postId: number) => ChannelPostData | null;
   updatePostData: (newPostData: ChannelPostData) => void;
   deletePostData: (postId: number) => void;
+  onEmojiBarLayout?: (event: LayoutChangeEvent) => void;
   darkMode?: boolean;
 };
 
@@ -31,6 +32,7 @@ export function ChannelPost({
   getPostData,
   updatePostData,
   deletePostData,
+  onEmojiBarLayout,
   darkMode,
 }: Props) {
   const navigation =
@@ -56,7 +58,9 @@ export function ChannelPost({
       <PostEmoji postData={postData} />
       <PostText postData={postData} />
       <PostFile postData={postData} />
-      <PostEmojiBar postData={postData} updatePostData={updatePostData} />
+      <View onLayout={onEmojiBarLayout}>
+        <PostEmojiBar postData={postData} updatePostData={updatePostData} />
+      </View>
       <PostCommentsSection postData={postData} />
     </Pressable>
   );

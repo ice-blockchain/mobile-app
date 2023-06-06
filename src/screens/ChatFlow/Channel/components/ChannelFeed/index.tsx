@@ -74,11 +74,7 @@ export function ChannelFeed({channelData}: Props) {
 
   const renderItem = ({item}: {item: ChannelPostData}) => {
     return (
-      <Animated.View
-        key={item.id}
-        // sharedTransitionTag={`post${item.id}`}
-        // sharedTransitionStyle={sharedTransitionStyle}
-      >
+      <Animated.View key={item.id}>
         <ChannelPost
           postData={item}
           getPostData={getPostData}
