@@ -11,7 +11,7 @@ import {CandyBoxMenuIcon} from '@svg/CandyBoxMenuIcon';
 import {ChevronIcon} from '@svg/ChevronIcon';
 import {mirrorTransform} from '@utils/styles';
 import * as React from 'react';
-import {Pressable, StyleSheet, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -26,12 +26,12 @@ export function ChannelHeader({channelData}: Props) {
   return (
     <View style={topOffset.current}>
       <View style={styles.container}>
-        <Pressable
+        <Touchable
           hitSlop={HIT_SLOP}
           style={styles.chevronIconContainer}
           onPress={navigation.goBack}>
           <ChevronIcon color={COLORS.primaryDark} style={styles.chevronIcon} />
-        </Pressable>
+        </Touchable>
         <ExploreRow headerMode exploreData={channelData} />
         <Touchable hitSlop={HIT_SLOP} style={styles.menuIconContainer}>
           <CandyBoxMenuIcon stroke={COLORS.primaryDark} />

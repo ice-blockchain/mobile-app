@@ -4,11 +4,11 @@ import {
   EmojiCategory,
   EmojisByCategory,
   EmojiSelectorSection,
-} from '@screens/EmojiSelector/type';
+} from '@screens/modals/EmojiSelector/type';
 import {
   getCategoryOffsets,
   toEmojiSelectorSections,
-} from '@screens/EmojiSelector/utils';
+} from '@screens/modals/EmojiSelector/utils';
 
 const emojis: EmojisByCategory[] = [
   {

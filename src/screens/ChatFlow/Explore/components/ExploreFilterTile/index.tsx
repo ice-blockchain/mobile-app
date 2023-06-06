@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {ExploreFilterType} from '@screens/ChatFlow/Explore/types';
 import {ChannelIcon} from '@svg/ChannelIcon';
@@ -8,7 +9,7 @@ import {TeamActiveIcon} from '@svg/TeamActiveIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import * as React from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -64,14 +65,14 @@ function getFilterTypeTitle(filterType: ExploreFilterType) {
 
 export function ExploreFilterTile({onPress, filterType, selected}: Props) {
   return (
-    <Pressable
+    <Touchable
       style={[styles.container, selected && styles.selectedContainer]}
       onPress={onPress}>
       <View style={[styles.iconContainer, getFilterTypeIconStyle(filterType)]}>
         {getFilterTypeIcon(filterType)}
       </View>
       <Text style={styles.title}>{getFilterTypeTitle(filterType)}</Text>
-    </Pressable>
+    </Touchable>
   );
 }
 

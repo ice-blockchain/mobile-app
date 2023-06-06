@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
 import {DEFAULT_EMOJIS} from '@screens/ChatFlow/Channel/components/ChannelFeed/ChannelPost/components/PostEmojiBar/constants';
@@ -10,7 +11,7 @@ import {PlusIcon} from '@svg/PlusIcon';
 import {font} from '@utils/styles';
 import * as React from 'react';
 import {useState} from 'react';
-import {Pressable, StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import Animated, {BounceIn} from 'react-native-reanimated';
 import {rem} from 'rn-units';
@@ -34,7 +35,7 @@ export function ContextEmojiBar({postData, updatePostData}: Props) {
       contentContainerStyle={styles.contentContainer}>
       {DEFAULT_EMOJIS.map((emoji: string, index: number) => (
         <Animated.View key={emoji} entering={BounceIn.delay(100 * (index + 1))}>
-          <Pressable
+          <Touchable
             onPress={() => {
               setPressedEmoji(emoji);
               onEmojiPressed(emoji);
@@ -50,10 +51,10 @@ export function ContextEmojiBar({postData, updatePostData}: Props) {
               ]}>
               {emoji}
             </Text>
-          </Pressable>
+          </Touchable>
         </Animated.View>
       ))}
-      <Pressable
+      <Touchable
         key={'+'}
         style={[styles.emojiContainer, styles.plusContainer]}
         onPress={onShowEmojiSelector}>
@@ -62,7 +63,7 @@ export function ContextEmojiBar({postData, updatePostData}: Props) {
           height={rem(25)}
           color={COLORS.primaryLight}
         />
-      </Pressable>
+      </Touchable>
     </ScrollView>
   );
 }

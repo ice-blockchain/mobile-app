@@ -1,11 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {BottomSheetBackdropProps} from '@gorhom/bottom-sheet';
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Pressable, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import Animated, {
   Extrapolate,
   interpolate,
@@ -28,9 +29,9 @@ export function EmojiSelectorBackdrop({
     [],
   );
   return (
-    <Pressable style={commonStyles.flexOne} onPress={navigation.goBack}>
+    <Touchable style={commonStyles.flexOne} onPress={navigation.goBack}>
       <Animated.View style={[styles.backdrop, containerAnimatedStyle]} />
-    </Pressable>
+    </Touchable>
   );
 }
 

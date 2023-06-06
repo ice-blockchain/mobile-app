@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {font} from '@utils/styles';
 import * as React from 'react';
-import {Pressable, StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -15,13 +16,13 @@ type Props = {
 
 export function ContextMenuAction({title, icon, action, isDangerous}: Props) {
   return (
-    <Pressable style={styles.container} onPress={action}>
+    <Touchable style={styles.container} onPress={action}>
       <Text
         style={[styles.title, isDangerous ? styles.dangerousActionText : null]}>
         {title}
       </Text>
       {icon}
-    </Pressable>
+    </Touchable>
   );
 }
 

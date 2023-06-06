@@ -58,7 +58,7 @@ export function ChatTabRow({
           <Avatar
             uri={icon}
             size={rem(48)}
-            borderRadius={15}
+            borderRadius={rem(15)}
             allowFullScreen={false}
           />
           <View style={[styles.sourceTypeContainer, commonStyles.shadow]}>

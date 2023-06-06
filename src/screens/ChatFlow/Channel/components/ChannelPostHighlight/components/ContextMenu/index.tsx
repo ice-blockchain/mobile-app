@@ -28,6 +28,23 @@ export function ContextMenu({postData}: Props) {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainStackParamList>>();
 
+  const onCopyText = () => {
+    Clipboard.setString(
+      postData.postText ??
+        postData.postCaption ??
+        postData.postEmoji ??
+        postData.postLink?.shortDescription ??
+        postData.postFile?.fileName ??
+        '',
+    );
+    navigation.goBack();
+  };
+
+  const onCopyLink = () => {
+    Clipboard.setString(`${ENV.DEEPLINK_SCHEME}://post?id=${postData.id}`);
+    navigation.goBack();
+  };
+
   return (
     <View>
       <RoundedTriangle
@@ -42,7 +59,7 @@ export function ContextMenu({postData}: Props) {
           icon={<ReplyToIcon color={COLORS.primaryDark} />}
           action={() => {}}
         />
-        <View style={styles.delimeter} />
+        <View style={styles.delimiter} />
         <ContextMenuAction
           title={'Edit'}
           icon={
@@ -55,7 +72,7 @@ export function ContextMenu({postData}: Props) {
           }
           action={() => {}}
         />
-        <View style={styles.delimeter} />
+        <View style={styles.delimiter} />
         <ContextMenuAction
           title={'Copy text'}
           icon={
@@ -65,42 +82,27 @@ export function ContextMenu({postData}: Props) {
               color={COLORS.primaryDark}
             />
           }
-          action={() => {
-            Clipboard.setString(
-              postData.postText ??
-                postData.postCaption ??
-                postData.postEmoji ??
-                postData.postLink?.shortDescription ??
-                postData.postFile?.fileName ??
-                '',
-            );
-            navigation.goBack();
-          }}
+          action={onCopyText}
         />
-        <View style={styles.delimeter} />
+        <View style={styles.delimiter} />
         <ContextMenuAction
           title={'Copy link'}
           icon={<CopyLinkIcon color={COLORS.primaryDark} />}
-          action={() => {
-            Clipboard.setString(
-              `${ENV.DEEPLINK_SCHEME}://post?id=${postData.id}`,
-            );
-            navigation.goBack();
-          }}
+          action={onCopyLink}
         />
-        <View style={styles.delimeter} />
+        <View style={styles.delimiter} />
         <ContextMenuAction
           title={'Report'}
           icon={<ReportIcon color={COLORS.primaryDark} />}
           action={() => {}}
         />
-        <View style={styles.delimeter} />
+        <View style={styles.delimiter} />
         <ContextMenuAction
           title={'Select'}
           icon={<SelectIcon color={COLORS.primaryDark} />}
           action={() => {}}
         />
-        <View style={styles.delimeter} />
+        <View style={styles.delimiter} />
         <ContextMenuAction
           isDangerous
           title={'Delete'}
@@ -118,7 +120,7 @@ const styles = StyleSheet.create({
     borderRadius: rem(20),
     overflow: 'hidden',
   },
-  delimeter: {
+  delimiter: {
     borderTopWidth: 1,
     borderTopColor: COLORS.secondaryFaint,
   },

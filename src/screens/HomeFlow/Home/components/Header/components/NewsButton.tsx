@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   badge: {
     position: 'absolute',
-    top: -6,
-    right: -5,
+    top: -rem(6),
+    right: -rem(5),
   },
 });

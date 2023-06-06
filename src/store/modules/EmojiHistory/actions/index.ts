@@ -3,7 +3,7 @@
 import {createAction} from '@store/utils/actions/createAction';
 
 const ADD_EMOJI_TO_HISTORY = createAction('ADD_EMOJI_TO_HISTORY', {
-  STATE: (emoji: string) => ({emoji}),
+  STATE: (payload: {emoji: string}) => payload,
 });
 
 export const EmojiHistoryActions = Object.freeze({

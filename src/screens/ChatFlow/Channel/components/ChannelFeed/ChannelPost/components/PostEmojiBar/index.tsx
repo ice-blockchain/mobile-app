@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {DEFAULT_EMOJIS} from '@screens/ChatFlow/Channel/components/ChannelFeed/ChannelPost/components/PostEmojiBar/constants';
 import {useEmojiBarHandlers} from '@screens/ChatFlow/Channel/components/ChannelFeed/ChannelPost/components/PostEmojiBar/hooks/useEmojiBarHandlers';
@@ -12,7 +13,7 @@ import {PlusIcon} from '@svg/PlusIcon';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import * as React from 'react';
-import {Pressable, StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {rem} from 'rn-units';
 
@@ -37,7 +38,7 @@ export function PostEmojiBar({postData, updatePostData}: Props) {
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={styles.container}>
       {getDisplayEmojis(emojis).map((emoji: string) => (
-        <Pressable
+        <Touchable
           key={emoji}
           onPress={() => onEmojiPressed(emoji)}
           style={[
@@ -56,14 +57,14 @@ export function PostEmojiBar({postData, updatePostData}: Props) {
               })}
             </Text>
           ) : null}
-        </Pressable>
+        </Touchable>
       ))}
-      <Pressable
+      <Touchable
         key={'+'}
         style={[styles.emojiContainer, styles.plusContainer]}
         onPress={onShowEmojiSelector}>
         <PlusIcon width={rem(24)} height={rem(25)} />
-      </Pressable>
+      </Touchable>
     </ScrollView>
   );
 }

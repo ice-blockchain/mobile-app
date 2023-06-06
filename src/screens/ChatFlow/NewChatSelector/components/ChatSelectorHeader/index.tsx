@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {SearchInput} from '@components/Inputs/SearchInput';
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {HIT_SLOP, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useNavigation} from '@react-navigation/native';
@@ -8,7 +9,7 @@ import {CloseModalIcon} from '@svg/CloseModalIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import * as React from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -20,12 +21,12 @@ export function ChatSelectorHeader({onChangeText}: Props) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>{t('chat.messages.new_chat')}</Text>
-      <Pressable
+      <Touchable
         hitSlop={HIT_SLOP}
         onPress={navigation.goBack}
         style={styles.closeButton}>
         <CloseModalIcon />
-      </Pressable>
+      </Touchable>
       <SearchInput
         onChangeText={onChangeText}
         placeholder={t('chat.messages.search_placeholder')}

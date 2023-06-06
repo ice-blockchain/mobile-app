@@ -1,20 +1,21 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {SEARCH_INPUT_HEIGHT, SearchInput} from '@components/Inputs/SearchInput';
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles, HIT_SLOP} from '@constants/styles';
 import {useNavigation} from '@react-navigation/native';
 import {
   CATEGORIES_BAR_HEIGHT,
   EmojiCategoriesBar,
-} from '@screens/EmojiSelector/components/EmojiCategoriesBar';
-import {EmojiCategory} from '@screens/EmojiSelector/type';
+} from '@screens/modals/EmojiSelector/components/EmojiCategoriesBar';
+import {EmojiCategory} from '@screens/modals/EmojiSelector/type';
 import {CloseModalIcon} from '@svg/CloseModalIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import * as React from 'react';
 import {useState} from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import Animated, {
   interpolate,
   interpolateColor,
@@ -119,12 +120,12 @@ export function EmojiSelectorHeader({
         <Animated.View style={animatedStyle}>
           <View style={styles.topContainer}>
             <Text style={styles.title}>{t('emojis_selector.title')}</Text>
-            <Pressable
+            <Touchable
               hitSlop={HIT_SLOP}
               onPress={navigation.goBack}
               style={styles.closeButton}>
               <CloseModalIcon />
-            </Pressable>
+            </Touchable>
           </View>
           <EmojiCategoriesBar
             activeCategory={activeCategory}

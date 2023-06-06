@@ -33,7 +33,6 @@ import {ChannelPostHighlight} from '@screens/ChatFlow/Channel/components/Channel
 import {Explore} from '@screens/ChatFlow/Explore';
 import {Messages} from '@screens/ChatFlow/Messages';
 import {NewChatSelector} from '@screens/ChatFlow/NewChatSelector';
-import {EmojiSelector} from '@screens/EmojiSelector';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
 import {Home} from '@screens/HomeFlow/Home';
 import {
@@ -57,6 +56,7 @@ import {
 } from '@screens/Modals/ContextualMenu/types';
 import {CountrySelect} from '@screens/Modals/CountrySelect';
 import {DateSelect} from '@screens/Modals/DateSelector';
+import {EmojiSelector} from '@screens/modals/EmojiSelector';
 import {JoinTelegramPopUp} from '@screens/Modals/JoinTelegramPopUp';
 import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
 import {ProfilePrivacyEditStep1} from '@screens/Modals/ProfilePrivacyEdit/step1';

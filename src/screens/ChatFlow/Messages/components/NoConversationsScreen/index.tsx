@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {HIT_SLOP} from '@constants/styles';
 import {MainStackParamList} from '@navigation/Main';
@@ -10,7 +11,7 @@ import {NoConversationsFoundIcon} from '@svg/NoConversationsFoundIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import * as React from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -30,7 +31,7 @@ export function NoConversationsScreen({searchValue}: Props) {
           : t('chat.messages.no_conversations')}
       </Text>
       {noFound ? null : (
-        <Pressable
+        <Touchable
           hitSlop={HIT_SLOP}
           onPress={() => {
             navigation.navigate('NewChatSelector');
@@ -38,7 +39,7 @@ export function NoConversationsScreen({searchValue}: Props) {
           <Text style={styles.actionText}>
             {t('chat.messages.new_message')}
           </Text>
-        </Pressable>
+        </Touchable>
       )}
     </View>
   );

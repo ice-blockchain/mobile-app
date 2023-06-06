@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {EmojiCategory} from '@screens/EmojiSelector/type';
+import {EmojiCategory} from '@screens/modals/EmojiSelector/type';
 import {ActivityIcon} from '@svg/ActivityIcon';
 import {AnimalIcon} from '@svg/AnimalIcon';
 import {DrinkIcon} from '@svg/DrinkIcon';
@@ -12,7 +13,7 @@ import {SmileyIcon} from '@svg/SmileyIcon';
 import {SymbolIcon} from '@svg/SymbolIcon';
 import {TravelIcon} from '@svg/TravelIcon';
 import React from 'react';
-import {Pressable, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
@@ -54,11 +55,11 @@ export function EmojiCategoriesBarCell({
   onSetActiveCategory,
 }: Props) {
   return (
-    <Pressable onPress={() => onSetActiveCategory(category)}>
+    <Touchable onPress={() => onSetActiveCategory(category)}>
       <Animated.View style={[styles.cell, isActive ? styles.activeCell : null]}>
         {getCategoryIcon(category, isActive)}
       </Animated.View>
-    </Pressable>
+    </Touchable>
   );
 }
 

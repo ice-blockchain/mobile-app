@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -16,7 +17,7 @@ import {PostReplySection} from '@screens/ChatFlow/Channel/components/ChannelFeed
 import {PostText} from '@screens/ChatFlow/Channel/components/ChannelFeed/ChannelPost/components/PostText';
 import {ChannelPostData} from '@screens/ChatFlow/Channel/components/ChannelFeed/type';
 import * as React from 'react';
-import {LayoutChangeEvent, Pressable, StyleSheet, View} from 'react-native';
+import {LayoutChangeEvent, StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -47,7 +48,7 @@ export function ChannelPost({
     });
   };
   return (
-    <Pressable
+    <Touchable
       key={postData.id}
       style={[styles.container, darkMode ? styles.darkModeBackground : null]}
       onLongPress={onLongPress}>
@@ -63,7 +64,7 @@ export function ChannelPost({
         <PostEmojiBar postData={postData} updatePostData={updatePostData} />
       </View>
       <PostCommentsSection postData={postData} />
-    </Pressable>
+    </Touchable>
   );
 }
 

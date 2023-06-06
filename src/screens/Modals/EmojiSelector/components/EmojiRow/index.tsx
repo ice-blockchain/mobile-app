@@ -1,11 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Touchable} from '@components/Touchable';
 import {HIT_SLOP, windowWidth} from '@constants/styles';
-import {EMOJI_PER_ROW} from '@screens/EmojiSelector/constants';
-import {EmojiData} from '@screens/EmojiSelector/type';
+import {EMOJI_PER_ROW} from '@screens/modals/EmojiSelector/constants';
+import {EmojiData} from '@screens/modals/EmojiSelector/type';
 import {font} from '@utils/styles';
 import * as React from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -22,13 +23,13 @@ export function EmojiRow({emojis, onSelected}: Props) {
   return (
     <View key={emojis[0].emoji} style={styles.row}>
       {emojis.map(data => (
-        <Pressable
+        <Touchable
           key={data.emoji}
           style={styles.cell}
           hitSlop={HIT_SLOP}
           onPress={() => onSelected(data.emoji)}>
           <Text style={styles.emoji}>{data.emoji}</Text>
-        </Pressable>
+        </Touchable>
       ))}
     </View>
   );

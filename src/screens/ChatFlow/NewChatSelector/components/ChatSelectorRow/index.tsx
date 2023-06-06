@@ -28,7 +28,7 @@ export function ChatSelectorRow({chatUser}: Props) {
         <Avatar
           uri={chatUser.icon}
           size={rem(46)}
-          borderRadius={15}
+          borderRadius={rem(15)}
           allowFullScreen={false}
         />
         <View style={[styles.onlineIndicator, isOnline && styles.online]} />

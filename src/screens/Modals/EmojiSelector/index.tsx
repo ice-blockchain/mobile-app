@@ -5,27 +5,30 @@ import BottomSheet, {BottomSheetSectionList} from '@gorhom/bottom-sheet';
 import {BottomSheetSectionListMethods} from '@gorhom/bottom-sheet/lib/typescript/components/bottomSheetScrollable/types';
 import {MainStackParamList} from '@navigation/Main';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
-import {EmojiRow, ROW_HEIGHT} from '@screens/EmojiSelector/components/EmojiRow';
-import {EmojiSelectorBackdrop} from '@screens/EmojiSelector/components/EmojiSelectorBackdrop';
-import {EmojiSelectorBackground} from '@screens/EmojiSelector/components/EmojiSelectorBackground';
-import {EmojiSelectorHeader} from '@screens/EmojiSelector/components/EmojiSelectorHeader';
-import {EmojiSelectorSectionHeader} from '@screens/EmojiSelector/components/EmojiSelectorSectionHeader';
+import {useScrollEventsHandlersCustom} from '@screens/HomeFlow/BalanceHistory/components/DynamicHeight/hooks/useScrollEventsHandlersCustom';
+import {
+  EmojiRow,
+  ROW_HEIGHT,
+} from '@screens/modals/EmojiSelector/components/EmojiRow';
+import {EmojiSelectorBackdrop} from '@screens/modals/EmojiSelector/components/EmojiSelectorBackdrop';
+import {EmojiSelectorBackground} from '@screens/modals/EmojiSelector/components/EmojiSelectorBackground';
+import {EmojiSelectorHeader} from '@screens/modals/EmojiSelector/components/EmojiSelectorHeader';
+import {EmojiSelectorSectionHeader} from '@screens/modals/EmojiSelector/components/EmojiSelectorSectionHeader';
 import {
   categories,
   categoryOffsets,
   sections,
-} from '@screens/EmojiSelector/data';
+} from '@screens/modals/EmojiSelector/data';
 import {
   EmojiCategory,
   EmojiData,
   EmojiSelectorSection,
-} from '@screens/EmojiSelector/type';
+} from '@screens/modals/EmojiSelector/type';
 import {
   findEmojis,
   getItemLayout,
   splitArrayIntoChunks,
-} from '@screens/EmojiSelector/utils';
-import {useScrollEventsHandlersCustom} from '@screens/HomeFlow/BalanceHistory/components/DynamicHeight/hooks/useScrollEventsHandlersCustom';
+} from '@screens/modals/EmojiSelector/utils';
 import {EmojiHistoryActions} from '@store/modules/EmojiHistory/actions';
 import {emojiHistorySelector} from '@store/modules/EmojiHistory/selectors';
 import * as React from 'react';
@@ -56,7 +59,7 @@ export function EmojiSelector() {
   const onSelected = useCallback(
     (emoji: string) => {
       paramsOnSelected(emoji);
-      dispatch(EmojiHistoryActions.ADD_EMOJI_TO_HISTORY.STATE.create(emoji));
+      dispatch(EmojiHistoryActions.ADD_EMOJI_TO_HISTORY.STATE.create({emoji}));
       navigation.goBack();
     },
     [dispatch, navigation, paramsOnSelected],

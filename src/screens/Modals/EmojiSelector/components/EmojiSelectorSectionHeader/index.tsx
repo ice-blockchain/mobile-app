@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {ROW_HEIGHT} from '@screens/EmojiSelector/components/EmojiRow';
-import {EmojiCategory} from '@screens/EmojiSelector/type';
+import {ROW_HEIGHT} from '@screens/modals/EmojiSelector/components/EmojiRow';
+import {EmojiCategory} from '@screens/modals/EmojiSelector/type';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import * as React from 'react';

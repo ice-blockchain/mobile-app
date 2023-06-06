@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {stopPropagation} from '@components/KeyboardDismiss';
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles, SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
 import {useTopOffsetStyle} from '@navigation/hooks/useTopOffsetStyle';
@@ -17,7 +18,6 @@ import {
   InteractionManager,
   LayoutChangeEvent,
   LayoutRectangle,
-  Pressable,
   StyleSheet,
   View,
 } from 'react-native';
@@ -50,7 +50,7 @@ export function ChannelPostHighlight() {
   }, []);
 
   return (
-    <Pressable
+    <Touchable
       style={[styles.container, topOffset.current]}
       onPress={navigation.goBack}>
       <ScrollView
@@ -99,7 +99,7 @@ export function ChannelPostHighlight() {
           <ContextMenu postData={postData} />
         </Animated.View>
       </ScrollView>
-    </Pressable>
+    </Touchable>
   );
 }
 
