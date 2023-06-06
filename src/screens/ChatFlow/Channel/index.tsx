@@ -22,11 +22,11 @@ export function Channel() {
 
   return (
     <View style={[styles.container, topOffset.current, tabBarOffset.current]}>
-      <View style={[commonStyles.shadow, styles.headerContainer]}>
-        <ChannelHeader channelData={channelData} />
-      </View>
       <View style={styles.feedContainer}>
         <ChannelFeed channelData={channelData} />
+      </View>
+      <View style={[commonStyles.shadow, styles.headerContainer]}>
+        <ChannelHeader channelData={channelData} />
       </View>
     </View>
   );

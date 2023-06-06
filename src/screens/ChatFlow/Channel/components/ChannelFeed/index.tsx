@@ -12,6 +12,7 @@ import {
   updatePostById,
 } from '@screens/ChatFlow/Channel/components/ChannelFeed/utils';
 import {useLoadChannelData} from '@screens/ChatFlow/Channel/hooks/useLoadChannelData';
+import {initEmojiData} from '@screens/EmojiSelector/data';
 import {ExploreData} from '@store/modules/Chats/types';
 import * as React from 'react';
 import {useCallback, useRef} from 'react';
@@ -21,6 +22,8 @@ import Animated from 'react-native-reanimated';
 type Props = {
   channelData: ExploreData;
 };
+
+initEmojiData();
 
 function ChannelFeedItemSeparator() {
   return <View style={styles.separator} />;
@@ -72,29 +75,33 @@ export function ChannelFeed({channelData}: Props) {
     [setChannelPostsDataByDate],
   );
 
-  const renderItem = ({item}: {item: ChannelPostData}) => {
-    return (
-      <Animated.View key={item.id}>
-        <ChannelPost
-          postData={item}
-          getPostData={getPostData}
-          updatePostData={updatePostData}
-          deletePostData={deletePostData}
-        />
-      </Animated.View>
-    );
-  };
+  const renderItem = useCallback(
+    ({item}: {item: ChannelPostData}) => {
+      return (
+        <Animated.View key={item.id}>
+          <ChannelPost
+            postData={item}
+            getPostData={getPostData}
+            updatePostData={updatePostData}
+            deletePostData={deletePostData}
+          />
+        </Animated.View>
+      );
+    },
+    [deletePostData, getPostData, updatePostData],
+  );
 
-  const renderSectionHeader = ({
-    section: {title},
-  }: {
-    section: {title: number};
-  }) => {
-    return <ChannelSectionHeader timestamp={title} />;
-  };
+  const renderSectionHeader = useCallback(
+    ({section: {title}}: {section: {title: number}}) => {
+      return <ChannelSectionHeader timestamp={title} />;
+    },
+    [],
+  );
 
   return (
     <SectionList
+      inverted
+      stickySectionHeadersEnabled
       showsVerticalScrollIndicator={false}
       sections={channelPostsDataByDate}
       renderItem={renderItem}

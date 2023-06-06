@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles, HIT_SLOP} from '@constants/styles';
 import {useTopOffsetStyle} from '@navigation/hooks/useTopOffsetStyle';
@@ -8,27 +9,15 @@ import {MaterialTopTabBar} from '@react-navigation/material-top-tabs';
 import {MaterialTopTabBarProps} from '@react-navigation/material-top-tabs/lib/typescript/src/types';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {ChatTab} from '@store/modules/ActiveTab/actions';
 import {activeChatTabSelector} from '@store/modules/ActiveTab/selectors';
-import {ChatActions} from '@store/modules/Chats/actions';
-import {ChatDataType} from '@store/modules/Chats/types';
 import {SearchIcon} from '@svg/SearchIcon';
 import {WriteMessageIcon} from '@svg/WriteMessageIcon';
 import * as React from 'react';
-import {StyleSheet, TouchableOpacity, View} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
+import {StyleSheet, View} from 'react-native';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 export const CHAT_TAB_BAR_PADDING = rem(16);
-
-function getDataType(chatTab: ChatTab): ChatDataType {
-  switch (chatTab) {
-    case 'explore':
-      return 'explore';
-    default:
-      return 'chats';
-  }
-}
 
 export function ChatTabBar(props: MaterialTopTabBarProps) {
   const navigation =
@@ -37,14 +26,18 @@ export function ChatTabBar(props: MaterialTopTabBarProps) {
 
   const activeChatTab = useSelector(activeChatTabSelector);
 
-  const dispatch = useDispatch();
   const onSearch = () => {
-    dispatch(
-      ChatActions.SET_SEARCH_VISIBLE.STATE.create({
-        visible: true,
-        dataType: getDataType(activeChatTab),
-      }),
-    );
+    navigation.navigate({
+      name: 'MainTabs',
+      params: {
+        screen: 'ChatTab',
+        params: {
+          screen: activeChatTab === 'messages' ? 'MessagesTab' : 'ExploreTab',
+          params: {searchVisible: true},
+        },
+      },
+      merge: true,
+    });
   };
   const onWriteMessage = () => {
     navigation.navigate('NewChatSelector');
@@ -57,15 +50,15 @@ export function ChatTabBar(props: MaterialTopTabBarProps) {
           <MaterialTopTabBar {...props} />
         </View>
         <View style={styles.actionsContainer}>
-          <TouchableOpacity hitSlop={HIT_SLOP} onPress={onSearch}>
+          <Touchable hitSlop={HIT_SLOP} onPress={onSearch}>
             <SearchIcon color={COLORS.primaryDark} strokeWidth={2} />
-          </TouchableOpacity>
-          <TouchableOpacity
+          </Touchable>
+          <Touchable
             hitSlop={HIT_SLOP}
             onPress={onWriteMessage}
             style={styles.writeMessageContainer}>
             <WriteMessageIcon color={COLORS.primaryDark} />
-          </TouchableOpacity>
+          </Touchable>
         </View>
       </View>
     </View>
@@ -75,7 +68,6 @@ export function ChatTabBar(props: MaterialTopTabBarProps) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: COLORS.white,
-    overflow: 'visible',
   },
   body: {
     marginBottom: -rem(4),

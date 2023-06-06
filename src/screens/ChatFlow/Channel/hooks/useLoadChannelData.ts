@@ -6,7 +6,7 @@ import {ChannelPostDataByDate} from '@screens/ChatFlow/Channel/types';
 import {stripTimeFromTimestamp} from '@utils/date';
 import {useCallback, useEffect, useRef, useState} from 'react';
 
-const FETCH_LIMIT = 20;
+const FETCH_LIMIT = 30;
 
 function groupChannelPostsDataByDate(
   channelPosts: ChannelPostData[],

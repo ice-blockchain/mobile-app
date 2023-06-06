@@ -25,7 +25,6 @@ import {
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import {MaterialTopTabBarProps} from '@react-navigation/material-top-tabs/lib/typescript/src/types';
 import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Channel} from '@screens/ChatFlow/Channel';
@@ -100,21 +99,15 @@ export type MainTabsParamList = {
   ProfileTab: NavigatorScreenParams<ProfileTabStackParamList> | undefined;
 };
 
+export type ChatTabRouteProps = {searchVisible: boolean} | undefined;
+
 export type ChatTabsParamList = {
-  MessagesTab: NavigatorScreenParams<MessagesTabStackParamList> | undefined;
-  ExploreTab: NavigatorScreenParams<ExploreTabStackParamList> | undefined;
-};
-
-export type MessagesTabStackParamList = {
-  Messages: undefined;
-};
-
-export type ExploreTabStackParamList = {
-  Explore: undefined;
+  MessagesTab: ChatTabRouteProps;
+  ExploreTab: ChatTabRouteProps;
 };
 
 export type MainStackParamList = {
-  MainTabs: undefined;
+  MainTabs: NavigatorScreenParams<MainTabsParamList> | undefined;
   PopUp: PopUpProps;
   News: undefined;
   JoinTelegramPopUp: undefined;
@@ -234,9 +227,6 @@ const TeamTabStack = createNativeStackNavigator<TeamTabStackParamList>();
 const ProfileTabStack = createNativeStackNavigator<ProfileTabStackParamList>();
 
 const ChatTopTabs = createMaterialTopTabNavigator<ChatTabsParamList>();
-const MessagesTabStack =
-  createNativeStackNavigator<MessagesTabStackParamList>();
-const ExploreTabStack = createNativeStackNavigator<ExploreTabStackParamList>();
 
 /**
  * Needs to be on Badges screen to enable swipe to go back over PagerView
@@ -300,22 +290,6 @@ const TeamTabStackNavigator = () => {
   );
 };
 
-const MessagesTabStackNavigator = () => (
-  <MessagesTabStack.Navigator screenOptions={screenOptions}>
-    <MessagesTabStack.Screen name="Messages" component={Messages} />
-  </MessagesTabStack.Navigator>
-);
-
-const ExploreTabStackNavigator = () => (
-  <ExploreTabStack.Navigator screenOptions={screenOptions}>
-    <ExploreTabStack.Screen name="Explore" component={Explore} />
-  </ExploreTabStack.Navigator>
-);
-
-const ChatTabBarComponent = (props: MaterialTopTabBarProps) => (
-  <ChatTabBar {...props} />
-);
-
 const ChatTabTabNavigator = () => {
   const dispatch = useDispatch();
   const getListeners = (tab: ChatTab) => {
@@ -345,10 +319,10 @@ const ChatTabTabNavigator = () => {
           },
         },
       }}
-      tabBar={ChatTabBarComponent}>
+      tabBar={ChatTabBar}>
       <ChatTopTabs.Screen
         name="MessagesTab"
-        component={MessagesTabStackNavigator}
+        component={Messages}
         options={{
           tabBarLabel: MessageTabChatTabBarLabel,
         }}
@@ -356,7 +330,7 @@ const ChatTabTabNavigator = () => {
       />
       <ChatTopTabs.Screen
         name="ExploreTab"
-        component={ExploreTabStackNavigator}
+        component={Explore}
         options={{
           tabBarLabel: ExploreTabChatTabBarLabel,
         }}

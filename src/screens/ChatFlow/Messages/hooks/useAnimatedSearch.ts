@@ -1,22 +1,24 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {ChatTabsParamList} from '@navigation/Main';
+import {RouteProp, useRoute} from '@react-navigation/native';
 import {SEARCH_HIDDEN_Y} from '@screens/ChatFlow/Messages/constants';
-import {ChatActions} from '@store/modules/Chats/actions';
-import {getSearchVisibleSelector} from '@store/modules/Chats/selectors';
-import {ChatDataType} from '@store/modules/Chats/types';
-import {useCallback, useEffect} from 'react';
+import {useEffect} from 'react';
 import {
-  runOnJS,
   useAnimatedReaction,
   useAnimatedScrollHandler,
   useAnimatedStyle,
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
-import {useDispatch, useSelector} from 'react-redux';
 
-export function useAnimatedSearch(dataType: ChatDataType) {
-  const searchVisible = useSelector(getSearchVisibleSelector(dataType));
+export function useAnimatedSearch() {
+  const route = useRoute<
+    | RouteProp<ChatTabsParamList, 'ExploreTab'>
+    | RouteProp<ChatTabsParamList, 'MessagesTab'>
+  >();
+  const {searchVisible} = route.params ?? {};
+  const searchVisibleSharedValue = useSharedValue(0);
   const translateY = useSharedValue(SEARCH_HIDDEN_Y);
   const sharedScrollPosition = useSharedValue(0);
   const animatedStyle = useAnimatedStyle(() => ({
@@ -28,20 +30,11 @@ export function useAnimatedSearch(dataType: ChatDataType) {
   }));
 
   useEffect(() => {
-    if (searchVisible) {
+    if (route.params?.searchVisible) {
       translateY.value = withTiming(0);
+      searchVisibleSharedValue.value = 1;
     }
-  }, [searchVisible, translateY]);
-
-  const dispatch = useDispatch();
-  const setSearchBarHidden = useCallback(() => {
-    dispatch(
-      ChatActions.SET_SEARCH_VISIBLE.STATE.create({
-        visible: false,
-        dataType,
-      }),
-    );
-  }, [dataType, dispatch]);
+  }, [route.params, searchVisibleSharedValue, translateY]);
 
   useAnimatedReaction(
     () => {
@@ -49,16 +42,17 @@ export function useAnimatedSearch(dataType: ChatDataType) {
     },
     (result, previous) => {
       if (
-        searchVisible &&
+        searchVisibleSharedValue.value &&
         result !== previous &&
         result > 0 &&
         result > (previous ?? 0)
       ) {
         translateY.value = withTiming(SEARCH_HIDDEN_Y);
-        runOnJS(setSearchBarHidden)();
+        searchVisibleSharedValue.value = 0;
+        // runOnJS(setSearchBarHidden)();
       }
     },
-    [searchVisible, setSearchBarHidden],
+    [searchVisible],
   );
 
   const scrollHandler = useAnimatedScrollHandler(event => {

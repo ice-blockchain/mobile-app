@@ -159,6 +159,7 @@ export function EmojiSelector() {
       />
       <BottomSheetSectionList
         ref={sectionListRef}
+        keyboardShouldPersistTaps={'handled'}
         contentContainerStyle={styles.contentContainer}
         showsVerticalScrollIndicator={false}
         sections={searchValue ? [searchResults] : sections}

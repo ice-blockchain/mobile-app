@@ -28,7 +28,8 @@ export function ChannelSectionHeader({timestamp}: Props) {
 const styles = StyleSheet.create({
   outerContainer: {
     paddingVertical: SCREEN_SIDE_OFFSET,
-    flexDirection: 'row',
+    justifyContent: 'center',
+    width: '100%',
   },
   container: {
     borderRadius: rem(20),
@@ -37,6 +38,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: rem(14),
     alignItems: 'center',
     justifyContent: 'center',
+    alignSelf: 'center',
     flexShrink: 2,
   },
   text: {

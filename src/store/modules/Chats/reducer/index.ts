@@ -27,7 +27,6 @@ type Actions = ReturnType<
   | typeof ChatActions.LOAD_CHAT_DATA.SUCCESS.create
   | typeof ChatActions.LOAD_CHAT_DATA.FAILED.create
   | typeof ChatActions.SET_EXPLORE_DATA_TYPE.STATE.create
-  | typeof ChatActions.SET_SEARCH_VISIBLE.STATE.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
 >;
 
@@ -98,9 +97,6 @@ export function chatReducer(state = INITIAL_STATE, action: Actions): State {
       case ChatActions.LOAD_CHAT_DATA.FAILED.type:
         draft.hasMore[action.payload.dataType] = false;
         draft.isInitialLoad[action.payload.dataType] = false;
-        break;
-      case ChatActions.SET_SEARCH_VISIBLE.STATE.type:
-        draft.searchVisible[action.payload.dataType] = action.payload.visible;
         break;
       case ChatActions.SET_EXPLORE_DATA_TYPE.STATE.type:
         draft.exploreDatatype = action.payload.exploreDataType;

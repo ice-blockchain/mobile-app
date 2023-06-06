@@ -36,8 +36,7 @@ export function Messages() {
     searchValue,
   } = useLoadChatData(dataType);
 
-  const {scrollHandler, animatedStyle, searchVisible} =
-    useAnimatedSearch(dataType);
+  const {scrollHandler, animatedStyle, searchVisible} = useAnimatedSearch();
 
   const renderItem = ({item}: {item: MessageData}) => {
     return <ChatRow key={item.id} messageData={item} />;

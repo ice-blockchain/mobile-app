@@ -51,6 +51,8 @@ const styles = StyleSheet.create({
   },
   chevronIconContainer: {
     paddingRight: rem(34),
+    height: '100%',
+    justifyContent: 'center',
   },
   chevronIcon: {
     ...mirrorTransform(true),

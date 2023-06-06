@@ -41,7 +41,6 @@ export function getCategoryOffsets(
       offset,
     });
   });
-
   return result;
 }
 

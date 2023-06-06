@@ -18837,6 +18837,6 @@ export const categoryOffsets = getCategoryOffsets(sections);
   Can be called from the App.tsx to init all emoji data.
   Otherwise, it will happen on the first EmojiSelector launch and can delay its rendering.
  **/
-export function initEmojiData() {
+export async function initEmojiData() {
   return sections;
 }

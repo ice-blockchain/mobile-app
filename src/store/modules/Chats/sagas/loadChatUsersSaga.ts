@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {ChatActions} from '@store/modules/Chats/actions';
-import {getHasMoreChatDataSelector} from '@store/modules/Chats/selectors';
 import {normalizeSearchValue} from '@utils/string';
-import {put, SagaReturnType, select} from 'redux-saga/effects';
+import {put} from 'redux-saga/effects';
 
 type Actions = ReturnType<typeof ChatActions.LOAD_CHAT_DATA.START.create>;
 
@@ -34,20 +33,7 @@ const mockUserNames = [
 ];
 
 export function* loadChatUsersSaga(action: Actions) {
-  const {initial, dataType, searchValue} = action.payload;
-  const hasMoreChatUsers: SagaReturnType<
-    ReturnType<typeof getHasMoreChatDataSelector>
-  > = yield select(getHasMoreChatDataSelector(dataType));
-  if (!initial && !hasMoreChatUsers) {
-    yield put(
-      ChatActions.LOAD_CHAT_DATA.SUCCESS.create({
-        hasMore: false,
-        dataType,
-      }),
-    );
-    return null;
-  }
-
+  const {dataType, searchValue} = action.payload;
   const userData = mockUserNames.map((value, index) =>
     getMockedChatUser(value, index),
   );

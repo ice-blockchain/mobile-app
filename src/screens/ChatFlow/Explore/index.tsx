@@ -84,8 +84,7 @@ export function Explore() {
     );
   };
 
-  const {scrollHandler, animatedStyle, searchVisible} =
-    useAnimatedSearch(dataType);
+  const {scrollHandler, animatedStyle, searchVisible} = useAnimatedSearch();
 
   return (
     <View style={commonStyles.flexOne}>
