@@ -15,8 +15,8 @@ import {JoinCommunitiesBanner} from '@screens/ChatFlow/components/JoinCommunitie
 import {useLoadChatData} from '@screens/ChatFlow/hooks/useLoadChatData';
 import {ChatSelectorHeader} from '@screens/ChatFlow/NewChatSelector/components/ChatSelectorHeader';
 import {ChatSelectorRow} from '@screens/ChatFlow/NewChatSelector/components/ChatSelectorRow';
-import {chatUsersDataSelector} from '@store/modules/Chat/selectors';
-import {ChatDataType, ChatUserData} from '@store/modules/Chat/types';
+import {chatUsersDataSelector} from '@store/modules/Chats/selectors';
+import {ChatDataType, ChatUserData} from '@store/modules/Chats/types';
 import * as React from 'react';
 import {ActivityIndicator, StyleSheet, View} from 'react-native';
 import Animated, {

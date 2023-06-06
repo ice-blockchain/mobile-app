@@ -6,7 +6,7 @@ import {ChannelPostDataByDate} from '@screens/ChatFlow/Channel/types';
 import {stripTimeFromTimestamp} from '@utils/date';
 import {useCallback, useEffect, useRef, useState} from 'react';
 
-const FETCH_SIZE = 20;
+const FETCH_LIMIT = 20;
 
 function groupChannelPostsDataByDate(
   channelPosts: ChannelPostData[],
@@ -65,12 +65,12 @@ export function useLoadChannelData(channelId: number) {
       const newPosts = await fetchChannelPosts({
         channelId,
         offset: offsetRef.current,
-        fetchSize: FETCH_SIZE,
+        limit: FETCH_LIMIT,
       });
       setChannelPostsDataByDate(current =>
         groupChannelPostsDataByDate(newPosts, current),
       );
-      if (newPosts.length < FETCH_SIZE) {
+      if (newPosts.length < FETCH_LIMIT) {
         hasMoreRef.current = false;
       }
       offsetRef.current += newPosts.length;

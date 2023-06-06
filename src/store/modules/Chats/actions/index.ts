@@ -6,7 +6,7 @@ import {
   ExploreData,
   ExploreDataType,
   MessageData,
-} from '@store/modules/Chat/types';
+} from '@store/modules/Chats/types';
 import {createAction} from '@store/utils/actions/createAction';
 
 const SET_SEARCH_VISIBLE = createAction('SET_SEARCH_VISIBLE', {

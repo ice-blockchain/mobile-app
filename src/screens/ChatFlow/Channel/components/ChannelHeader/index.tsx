@@ -6,7 +6,7 @@ import {HIT_SLOP, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useTopOffsetStyle} from '@navigation/hooks/useTopOffsetStyle';
 import {useNavigation} from '@react-navigation/native';
 import {ExploreRow} from '@screens/ChatFlow/Explore/components/ExploreRow';
-import {ExploreData} from '@store/modules/Chat/types';
+import {ExploreData} from '@store/modules/Chats/types';
 import {CandyBoxMenuIcon} from '@svg/CandyBoxMenuIcon';
 import {ChevronIcon} from '@svg/ChevronIcon';
 import {mirrorTransform} from '@utils/styles';

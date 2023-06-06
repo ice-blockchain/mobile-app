@@ -3,7 +3,7 @@
 import {Avatar} from '@components/Avatar/Avatar';
 import {COLORS} from '@constants/colors';
 import {commonStyles, HIT_SLOP} from '@constants/styles';
-import {ChatSourceType} from '@store/modules/Chat/types';
+import {ChatSourceType} from '@store/modules/Chats/types';
 import {ChannelIcon} from '@svg/ChannelIcon';
 import {PrivateConversationIcon} from '@svg/PrivateConversationIcon';
 import {TeamActiveIcon} from '@svg/TeamActiveIcon';

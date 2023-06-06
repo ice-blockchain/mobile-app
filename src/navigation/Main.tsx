@@ -81,7 +81,7 @@ import {Staking} from '@screens/Staking';
 import {Team} from '@screens/Team';
 import {Walkthrough} from '@screens/Walkthrough';
 import {ActiveTabActions, ChatTab, Tab} from '@store/modules/ActiveTab/actions';
-import {ExploreData} from '@store/modules/Chat/types';
+import {ExploreData} from '@store/modules/Chats/types';
 import {useSubscribeToPushNotifications} from '@store/modules/PushNotifications/hooks/useSubscribeToPushNotifications';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {WalkthroughStep} from '@store/modules/Walkthrough/types';

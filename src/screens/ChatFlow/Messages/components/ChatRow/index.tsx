@@ -3,7 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {ChatTabRow} from '@screens/ChatFlow/components/ChatTabRow';
 import {dayjs} from '@services/dayjs';
-import {MessageData, MessageStatusType} from '@store/modules/Chat/types';
+import {MessageData, MessageStatusType} from '@store/modules/Chats/types';
 import {SeenIcon} from '@svg/SeenIcon';
 import {SentIcon} from '@svg/SentIcon';
 import {font} from '@utils/styles';

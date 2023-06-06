@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {ChatActions} from '@store/modules/Chat/actions';
-import {getLoadingChatDataSelector} from '@store/modules/Chat/selectors';
-import {ChatDataType} from '@store/modules/Chat/types';
+import {ChatActions} from '@store/modules/Chats/actions';
+import {getLoadingChatDataSelector} from '@store/modules/Chats/selectors';
+import {ChatDataType} from '@store/modules/Chats/types';
 import debounce from 'lodash/debounce';
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';

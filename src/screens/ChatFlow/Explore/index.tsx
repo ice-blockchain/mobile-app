@@ -12,16 +12,16 @@ import {ExploreFilterType} from '@screens/ChatFlow/Explore/types';
 import {useLoadChatData} from '@screens/ChatFlow/hooks/useLoadChatData';
 import {SEARCH_HIDDEN_Y} from '@screens/ChatFlow/Messages/constants';
 import {useAnimatedSearch} from '@screens/ChatFlow/Messages/hooks/useAnimatedSearch';
-import {ChatActions} from '@store/modules/Chat/actions';
+import {ChatActions} from '@store/modules/Chats/actions';
 import {
   exploreDataSelector,
   exploreDataTypeSelector,
-} from '@store/modules/Chat/selectors';
+} from '@store/modules/Chats/selectors';
 import {
   ChatDataType,
   ExploreData,
   ExploreDataType,
-} from '@store/modules/Chat/types';
+} from '@store/modules/Chats/types';
 import * as React from 'react';
 import {useCallback} from 'react';
 import {ActivityIndicator, StyleSheet, View} from 'react-native';

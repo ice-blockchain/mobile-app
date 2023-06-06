@@ -5,7 +5,7 @@ import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {ChatTabRow} from '@screens/ChatFlow/components/ChatTabRow';
-import {ExploreData} from '@store/modules/Chat/types';
+import {ExploreData} from '@store/modules/Chats/types';
 import {ChevronIcon} from '@svg/ChevronIcon';
 import {MembersIcon} from '@svg/MembersIcon';
 import {t} from '@translations/i18n';

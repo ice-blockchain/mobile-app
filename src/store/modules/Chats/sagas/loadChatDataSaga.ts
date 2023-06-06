@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {ChatActions} from '@store/modules/Chat/actions';
-import {loadChatUsersSaga} from '@store/modules/Chat/sagas/loadChatUsersSaga';
-import {loadExploreDataSaga} from '@store/modules/Chat/sagas/loadExploreDataSaga';
-import {loadMessagesSaga} from '@store/modules/Chat/sagas/loadMessagesSaga';
+import {ChatActions} from '@store/modules/Chats/actions';
+import {loadChatUsersSaga} from '@store/modules/Chats/sagas/loadChatUsersSaga';
+import {loadExploreDataSaga} from '@store/modules/Chats/sagas/loadExploreDataSaga';
+import {loadMessagesSaga} from '@store/modules/Chats/sagas/loadMessagesSaga';
 import {call} from 'redux-saga/effects';
 
 type Actions = ReturnType<typeof ChatActions.LOAD_CHAT_DATA.START.create>;

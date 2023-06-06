@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {ChatActions} from '@store/modules/Chat/actions';
-import {ChatDataType} from '@store/modules/Chat/types';
+import {ChatActions} from '@store/modules/Chats/actions';
+import {ChatDataType} from '@store/modules/Chats/types';
 import {processStatusForActionSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {RootState} from '@store/rootReducer';
 

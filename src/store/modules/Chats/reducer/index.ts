@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {AccountActions} from '@store/modules/Account/actions';
-import {ChatActions} from '@store/modules/Chat/actions';
+import {ChatActions} from '@store/modules/Chats/actions';
 import {
   ChatUserData,
   ExploreData,
   ExploreDataType,
   MessageData,
-} from '@store/modules/Chat/types';
+} from '@store/modules/Chats/types';
 import produce from 'immer';
 
 export interface State {

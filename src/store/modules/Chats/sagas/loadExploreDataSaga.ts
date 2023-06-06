@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {ChatActions} from '@store/modules/Chat/actions';
+import {ChatActions} from '@store/modules/Chats/actions';
 import {
   exploreDataTypeSelector,
   getHasMoreChatDataSelector,
-} from '@store/modules/Chat/selectors';
-import {ExploreData} from '@store/modules/Chat/types';
+} from '@store/modules/Chats/selectors';
+import {ExploreData} from '@store/modules/Chats/types';
 import {normalizeSearchValue} from '@utils/string';
 import {put, SagaReturnType, select} from 'redux-saga/effects';
 

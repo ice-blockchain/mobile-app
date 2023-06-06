@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {SEARCH_HIDDEN_Y} from '@screens/ChatFlow/Messages/constants';
-import {ChatActions} from '@store/modules/Chat/actions';
-import {getSearchVisibleSelector} from '@store/modules/Chat/selectors';
-import {ChatDataType} from '@store/modules/Chat/types';
+import {ChatActions} from '@store/modules/Chats/actions';
+import {getSearchVisibleSelector} from '@store/modules/Chats/selectors';
+import {ChatDataType} from '@store/modules/Chats/types';
 import {useCallback, useEffect} from 'react';
 import {
   runOnJS,

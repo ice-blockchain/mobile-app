@@ -3,7 +3,7 @@
 import {Avatar} from '@components/Avatar/Avatar';
 import {COLORS} from '@constants/colors';
 import {dayjs} from '@services/dayjs';
-import {ChatUserData} from '@store/modules/Chat/types';
+import {ChatUserData} from '@store/modules/Chats/types';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import * as React from 'react';

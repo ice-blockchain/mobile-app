@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {ChatActions} from '@store/modules/Chat/actions';
-import {loadChatDataSaga} from '@store/modules/Chat/sagas/loadChatDataSaga';
+import {ChatActions} from '@store/modules/Chats/actions';
+import {loadChatDataSaga} from '@store/modules/Chats/sagas/loadChatDataSaga';
 import {all, takeLatest} from 'redux-saga/effects';
 
 export function* rootChatSaga() {

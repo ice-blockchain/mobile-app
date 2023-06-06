@@ -12,7 +12,7 @@ import {
   updatePostById,
 } from '@screens/ChatFlow/Channel/components/ChannelFeed/utils';
 import {useLoadChannelData} from '@screens/ChatFlow/Channel/hooks/useLoadChannelData';
-import {ExploreData} from '@store/modules/Chat/types';
+import {ExploreData} from '@store/modules/Chats/types';
 import * as React from 'react';
 import {useCallback, useRef} from 'react';
 import {ActivityIndicator, SectionList, StyleSheet, View} from 'react-native';

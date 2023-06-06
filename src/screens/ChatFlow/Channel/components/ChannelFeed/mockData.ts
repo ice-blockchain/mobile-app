@@ -16,7 +16,7 @@ function getMockedUserIcon() {
 export async function fetchChannelPosts({}: {
   channelId: number;
   offset: number;
-  fetchSize: number;
+  limit: number;
 }): Promise<ChannelPostData[]> {
   return [
     {
