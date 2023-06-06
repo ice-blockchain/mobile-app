@@ -113,7 +113,7 @@ export const AdoptionCard = ({isCollapsed, onPress}: AdoptionCardProps) => {
   }, [adoption]);
 
   const scrollToIndex = useCallback((index: number) => {
-    //@ts-ignore Bad types of Animated.FlatList, getNode() does not work
+    //@ts-expect-error Bad types of Animated.FlatList, getNode() does not work
     refFlatList.current?.scrollToIndex({
       animated: true,
       index,

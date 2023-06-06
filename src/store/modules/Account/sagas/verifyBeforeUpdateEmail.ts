@@ -10,7 +10,6 @@ import {validateEmail} from '@utils/email';
 import {getErrorMessage} from '@utils/errors';
 import {checkProp} from '@utils/guards';
 import {call, put, select, take} from 'redux-saga/effects';
-import Url from 'url-parse';
 
 const actionCreator = AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.START.create;
 
@@ -48,8 +47,10 @@ export function* verifyBeforeUpdateEmailSaga({
         case AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.CONFIRM_TEMP_EMAIL
           .type: {
           try {
-            const parsedUrl = new Url(action.payload.link, true);
-            if (!parsedUrl.query.link?.includes(`email=${email}`)) {
+            const parsedUrl = new URL(action.payload.link);
+            if (
+              !parsedUrl.searchParams.get('link')?.includes(`email=${email}`)
+            ) {
               throw new Error(t('errors.general_error_message'));
             } else {
               yield call(updateEmail, user, email);

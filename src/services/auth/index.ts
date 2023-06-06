@@ -136,11 +136,9 @@ export const sendPasswordResetEmail = (emailLink: string) => {
   return auth().sendPasswordResetEmail(emailLink);
 };
 
-export const isUpdateEmailLink = (
-  query: Record<string, string | undefined>,
-) => {
-  if (query && checkProp(query, 'link')) {
-    const link = query.link as String;
+export const isUpdateEmailLink = (url: URL) => {
+  const link = url.searchParams.get('link');
+  if (link) {
     return link.includes(LINKS.VERIFY_EMAIL);
   }
   return false;

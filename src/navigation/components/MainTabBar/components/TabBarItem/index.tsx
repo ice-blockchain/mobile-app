@@ -47,8 +47,7 @@ export const TabBarItem = ({
 
     if (!isFocused && !event.defaultPrevented) {
       // The `merge: true` option makes sure that the params inside the tab screen are preserved
-      // @ts-ignore that is basically taken from the sources
-      navigation.navigate({name: route.name, merge: true});
+      navigation.navigate({name: route.name, params: undefined, merge: true});
     }
   };
 
