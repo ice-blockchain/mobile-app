@@ -42,7 +42,7 @@ function getStepsByActiveTabAndScreenName({
         return TEAM_WALKTHROUGH_STEPS;
       }
       break;
-    case 'news':
+    case 'chat':
       if (currentScreenName === NEWS_WALKTHROUGH_SCREEN_NAME) {
         return NEWS_WALKTHROUGH_STEPS;
       }

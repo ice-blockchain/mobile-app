@@ -6,9 +6,11 @@ import {activeTab} from '@store/modules/ActiveTab/reducer';
 import {analyticsReducer} from '@store/modules/Analytics/reducer';
 import {appCommonReducer} from '@store/modules/AppCommon/reducer';
 import {appUpdateReducer} from '@store/modules/AppUpdate/reducer';
+import {chatsReducer} from '@store/modules/Chats/reducer';
 import {collectionsReducer} from '@store/modules/Collections/reducer';
 import {teamReducer} from '@store/modules/Contacts/reducer';
 import {devicesReducer} from '@store/modules/Devices/reducer';
+import {emojiHistoryReducer} from '@store/modules/EmojiHistory/reducer';
 import {linkingReducer} from '@store/modules/Linking/reducer';
 import {newsReducer} from '@store/modules/News/reducer';
 import {notificationsReducer} from '@store/modules/Notifications/reducer';
@@ -29,6 +31,7 @@ export const rootReducer = combineReducers({
   activeTab: activeTab,
   analytics: analyticsReducer,
   appCommon: appCommonReducer,
+  emojiHistory: emojiHistoryReducer,
   permissions: permissionsReducer,
   account: accountReducer,
   stats: statsReducer,
@@ -43,6 +46,7 @@ export const rootReducer = combineReducers({
   notifications: notificationsReducer,
   users: usersReducer,
   statusNotice,
+  chats: chatsReducer,
   tokenomics: tokenomicsReducer,
   rateApp: rateAppReducer,
   walkthrough: walkthroughReducer,

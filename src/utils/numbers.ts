@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
+import {t} from '@translations/i18n';
 import compactFormat from 'cldr-compact-number';
 import lodashDropRightWhile from 'lodash/dropRightWhile';
 import {isIOS} from 'rn-units';
@@ -39,6 +40,26 @@ export function formatNumber(
   }
 
   return formatters[key].format(input);
+}
+
+const UNITS = [
+  t('filesize.b'),
+  t('filesize.kb'),
+  t('filesize.mb'),
+  t('filesize.gb'),
+  t('filesize.tb'),
+];
+export function convertFileSize(sizeInBytes: number) {
+  let unitIndex = 0;
+
+  while (sizeInBytes >= 1024 && unitIndex < UNITS.length - 1) {
+    sizeInBytes /= 1024;
+    unitIndex++;
+  }
+
+  const sizeFormatted = formatNumber(sizeInBytes, {maximumFractionDigits: 2});
+
+  return `${sizeFormatted} ${UNITS[unitIndex]}`;
 }
 
 export function parseNumber(input: string) {

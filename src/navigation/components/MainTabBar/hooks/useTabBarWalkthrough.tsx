@@ -33,8 +33,8 @@ function tabNameToIconStyles(tabName: string): ViewStyle | null {
       return iconStyles.homeIconStyle;
     case 'TeamTab':
       return iconStyles.teamIconStyle;
-    case 'NewsTab':
-      return iconStyles.newsIconStyle;
+    case 'ChatTab':
+      return iconStyles.chatIconStyle;
     case 'ProfileTab':
       return iconStyles.profileIconStyle;
   }

@@ -4,9 +4,18 @@ import {BadgeType} from '@api/achievements/types';
 import {NotificationDeliveryChannel} from '@api/devices/types';
 import {Country} from '@constants/countries';
 import {commonStyles} from '@constants/styles';
+import {
+  CHAT_TAB_BAR_PADDING,
+  ChatTabBar,
+} from '@navigation/components/ChatTabBar';
+import {ChatTabBarIndicator} from '@navigation/components/ChatTabBarIndicator';
+import {
+  ChatListTabChatTabBarLabel,
+  ExploreTabChatTabBarLabel,
+} from '@navigation/components/ChatTabBarLabel';
 import {MainTabBar} from '@navigation/components/MainTabBar';
+import {ChatIcon} from '@navigation/components/MainTabBar/components/Icons/ChatIcon';
 import {HomeIcon} from '@navigation/components/MainTabBar/components/Icons/HomeIcon';
-import {NewsIcon} from '@navigation/components/MainTabBar/components/Icons/NewsIcon';
 import {ProfileIcon} from '@navigation/components/MainTabBar/components/Icons/ProfileIcon';
 import {TeamIcon} from '@navigation/components/MainTabBar/components/Icons/TeamIcon';
 import {StatusNotice} from '@navigation/components/StatusNotice';
@@ -15,8 +24,15 @@ import {
   BottomTabBarProps,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {Channel} from '@screens/ChatFlow/Channel';
+import {ChannelPostData} from '@screens/ChatFlow/Channel/components/ChannelFeed/type';
+import {ChannelPostHighlight} from '@screens/ChatFlow/Channel/components/ChannelPostHighlight';
+import {ChatList} from '@screens/ChatFlow/ChatList';
+import {Explore} from '@screens/ChatFlow/Explore';
+import {NewChatSelector} from '@screens/ChatFlow/NewChatSelector';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
 import {Home} from '@screens/HomeFlow/Home';
 import {
@@ -40,6 +56,7 @@ import {
 } from '@screens/Modals/ContextualMenu/types';
 import {CountrySelect} from '@screens/Modals/CountrySelect';
 import {DateSelect} from '@screens/Modals/DateSelector';
+import {EmojiSelector} from '@screens/Modals/EmojiSelector';
 import {JoinTelegramPopUp} from '@screens/Modals/JoinTelegramPopUp';
 import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
 import {ProfilePrivacyEditStep1} from '@screens/Modals/ProfilePrivacyEdit/step1';
@@ -62,7 +79,8 @@ import {Settings} from '@screens/SettingsFlow/Settings';
 import {Staking} from '@screens/Staking';
 import {Team} from '@screens/Team';
 import {Walkthrough} from '@screens/Walkthrough';
-import {ActiveTabActions, Tab} from '@store/modules/ActiveTab/actions';
+import {ActiveTabActions, ChatTab, Tab} from '@store/modules/ActiveTab/actions';
+import {ExploreData} from '@store/modules/Chats/types';
 import {useSubscribeToPushNotifications} from '@store/modules/PushNotifications/hooks/useSubscribeToPushNotifications';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {WalkthroughStep} from '@store/modules/Walkthrough/types';
@@ -77,13 +95,21 @@ import {rem} from 'rn-units/index';
 export type MainTabsParamList = {
   HomeTab: NavigatorScreenParams<HomeTabStackParamList> | undefined;
   TeamTab: NavigatorScreenParams<TeamTabStackParamList> | undefined;
-  NewsTab: NavigatorScreenParams<NewsTabStackParamList> | undefined;
+  ChatTab: NavigatorScreenParams<ChatTabsParamList> | undefined;
   ProfileTab: NavigatorScreenParams<ProfileTabStackParamList> | undefined;
 };
 
+export type ChatTabRouteProps = {searchVisible: boolean} | undefined;
+
+export type ChatTabsParamList = {
+  ChatListTab: ChatTabRouteProps;
+  ExploreTab: ChatTabRouteProps;
+};
+
 export type MainStackParamList = {
-  MainTabs: undefined;
+  MainTabs: NavigatorScreenParams<MainTabsParamList> | undefined;
   PopUp: PopUpProps;
+  News: undefined;
   JoinTelegramPopUp: undefined;
   Tooltip: {
     position: 'above' | 'below';
@@ -128,6 +154,19 @@ export type MainStackParamList = {
   UserProfile: {userId: string} | undefined;
   Roles: {userId?: string} | undefined;
   Badges: {category?: BadgeType; userId?: string};
+  NewChatSelector: undefined;
+  EmojiSelector: {
+    onSelected: (emoji: string) => void;
+  };
+  Channel: {
+    channelData: ExploreData;
+  };
+  ChannelPostHighlight: {
+    postData: ChannelPostData;
+    getPostData: (postId: number) => ChannelPostData | null;
+    updatePostData: (newPostData: ChannelPostData) => void;
+    deletePostData: (postId: number) => void;
+  };
   Walkthrough:
     | {step: WalkthroughStep; total: number; index: number}
     | undefined;
@@ -158,10 +197,6 @@ export type TeamTabStackParamList = {
   Team: {snapPoint?: number} | undefined;
 };
 
-export type NewsTabStackParamList = {
-  News: undefined;
-};
-
 export type ProfileTabStackParamList = {
   MyProfile: undefined;
   Roles: {userId?: string} | undefined;
@@ -182,7 +217,7 @@ export type MainNavigationParams = MainTabsParamList &
   MainStackParamList &
   ProfileTabStackParamList &
   TeamTabStackParamList &
-  NewsTabStackParamList &
+  ChatTabsParamList &
   HomeTabStackParamList;
 
 const Tabs = createBottomTabNavigator<MainTabsParamList>();
@@ -190,6 +225,8 @@ const MainStack = createNativeStackNavigator<MainStackParamList>();
 const HomeTabStack = createNativeStackNavigator<HomeTabStackParamList>();
 const TeamTabStack = createNativeStackNavigator<TeamTabStackParamList>();
 const ProfileTabStack = createNativeStackNavigator<ProfileTabStackParamList>();
+
+const ChatTopTabs = createMaterialTopTabNavigator<ChatTabsParamList>();
 
 /**
  * Needs to be on Badges screen to enable swipe to go back over PagerView
@@ -253,6 +290,56 @@ const TeamTabStackNavigator = () => {
   );
 };
 
+const ChatTabTabNavigator = () => {
+  const dispatch = useDispatch();
+  const getListeners = (tab: ChatTab) => {
+    return () => ({
+      tabPress: () =>
+        dispatch(ActiveTabActions.SET_ACTIVE_CHAT_TAB.STATE.create(tab)),
+    });
+  };
+  return (
+    <ChatTopTabs.Navigator
+      screenOptions={{
+        ...tabOptions,
+        tabBarBounces: true,
+        tabBarScrollEnabled: true,
+        tabBarItemStyle: {
+          width: 'auto',
+          padding: CHAT_TAB_BAR_PADDING,
+        },
+        tabBarIndicator: ChatTabBarIndicator,
+        tabBarStyle: {
+          elevation: 0,
+          shadowOpacity: 0,
+          shadowRadius: 0,
+          shadowOffset: {
+            height: 0,
+            width: 0,
+          },
+        },
+      }}
+      tabBar={ChatTabBar}>
+      <ChatTopTabs.Screen
+        name="ChatListTab"
+        component={ChatList}
+        options={{
+          tabBarLabel: ChatListTabChatTabBarLabel,
+        }}
+        listeners={getListeners('chatlist')}
+      />
+      <ChatTopTabs.Screen
+        name="ExploreTab"
+        component={Explore}
+        options={{
+          tabBarLabel: ExploreTabChatTabBarLabel,
+        }}
+        listeners={getListeners('explore')}
+      />
+    </ChatTopTabs.Navigator>
+  );
+};
+
 const MainTabBarComponent = (props: BottomTabBarProps) => (
   <MainTabBar {...props} />
 );
@@ -291,13 +378,13 @@ const MainTabs = () => {
           listeners={getListeners('team')}
         />
         <Tabs.Screen
-          name="NewsTab"
-          component={News}
+          name="ChatTab"
+          component={ChatTabTabNavigator}
           options={{
-            tabBarIcon: NewsIcon,
-            tabBarIconStyle: iconStyles.newsIconStyle,
+            tabBarIcon: ChatIcon,
+            tabBarIconStyle: iconStyles.chatIconStyle,
           }}
-          listeners={getListeners('news')}
+          listeners={getListeners('chat')}
         />
         <Tabs.Screen
           name="ProfileTab"
@@ -326,6 +413,7 @@ export function MainNavigator() {
     <MainStack.Navigator screenOptions={screenOptions}>
       <MainStack.Screen name="MainTabs" component={MainTabs} />
       <MainStack.Screen name="PopUp" options={modalOptions} component={PopUp} />
+      <MainStack.Screen name="News" component={News} />
       <MainStack.Screen
         name="Tooltip"
         options={modalOptions}
@@ -374,10 +462,26 @@ export function MainNavigator() {
         component={Badges}
         options={badgesOptions}
       />
+      <MainStack.Screen name="Channel" component={Channel} />
+      <MainStack.Screen
+        name="ChannelPostHighlight"
+        component={ChannelPostHighlight}
+        options={modalOptions}
+      />
       <MainStack.Screen
         name="Walkthrough"
         component={Walkthrough}
         options={modalOptions}
+      />
+      <MainStack.Screen
+        name="NewChatSelector"
+        component={NewChatSelector}
+        options={modalOptions}
+      />
+      <MainStack.Screen
+        name="EmojiSelector"
+        component={EmojiSelector}
+        options={{...modalOptions, animation: 'none'}}
       />
       <MainStack.Screen
         name="ProfilePrivacyEditStep1"
@@ -406,7 +510,7 @@ export function MainNavigator() {
 export const iconStyles = StyleSheet.create({
   homeIconStyle: {marginLeft: rem(8)},
   teamIconStyle: {marginLeft: rem(26)},
-  newsIconStyle: {marginRight: rem(26)},
+  chatIconStyle: {marginRight: rem(26)},
   profileIconStyle: {
     marginRight: rem(8),
   },

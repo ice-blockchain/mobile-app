@@ -46,10 +46,18 @@ export const tagRegex = (tag: string, isSingular = true) => {
     return `[[:${tag}]]`;
   } else {
     return new RegExp(
-      `\\[\\[:${tag}\\]\\]([\\s\\S]+?)\\[\\[\\/:${tag}\\]\\](?!.*\\[\\[\\[:${tag}\\])`,
+      `\\[\\[:${tag}.*?\\]\\]([\\s\\S]+?)\\[\\[\\/:${tag}\\]\\](?!.*\\[\\[\\[:${tag}\\])`,
     );
   }
 };
+
+export const LINK_WITH_ATTRIBUTES_REGEX = new RegExp(
+  '(\\[\\[:link.*?\\]\\][\\s\\S]+?\\[\\[\\/:link\\]\\])(?!.*\\[\\[\\[:${tag}\\])',
+);
+
+export const LINK_WITH_HREF_GROUP_REGEX = new RegExp(
+  "\\[\\[:link href='(.*?)'\\]\\]([\\s\\S]+?)\\[\\[\\/:link\\]\\](?!.*\\[\\[\\[:${tag}\\])",
+);
 
 export const replaceString = reactStringReplace;
 

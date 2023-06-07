@@ -7,6 +7,7 @@ import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useTopOffsetStyle} from '@navigation/hooks/useTopOffsetStyle';
 import {useUserGreetingWalkthrough} from '@screens/HomeFlow/Home/components/Header/components/hooks/useUserGreetingWalkthrough';
 import {MenuButton} from '@screens/HomeFlow/Home/components/Header/components/MenuButton';
+import {NewsButton} from '@screens/HomeFlow/Home/components/Header/components/NewsButton';
 import {UserGreeting} from '@screens/HomeFlow/Home/components/Header/components/UserGreeting';
 import {useTransitionAnimation} from '@screens/HomeFlow/Home/components/Header/hooks/useTransitionAnimation';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
@@ -68,7 +69,7 @@ export const HomeHeader = memo(({translateY, transitionOffset}: Props) => {
             textStyle={styles.currencyText}
           />
         </Animated.View>
-
+        <NewsButton />
         <MenuButton />
       </View>
     </View>

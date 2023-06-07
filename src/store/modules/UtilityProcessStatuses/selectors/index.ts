@@ -12,14 +12,14 @@ interface Action {
 const processStatusesRootSelector = (state: RootState) =>
   state.utilityProcessStatuses;
 
-export const processStatusForActionSelector = (
+export const processStatusForActionSelector = <T = unknown>(
   state: RootState,
   action: Action,
-): ActionData | undefined =>
+): ActionData<T> | undefined =>
   lodashGet(
     processStatusesRootSelector(state),
     action.id ? `${action.majorType}.${action.id}` : `${action.majorType}`,
-  ) as ActionData;
+  ) as ActionData<T>;
 
 export const isLoadingSelector = (action: Action, state: RootState) => {
   const requestData = processStatusForActionSelector(state, action);

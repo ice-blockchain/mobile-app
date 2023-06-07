@@ -26,8 +26,7 @@ export function takeLatestEveryUnique<
     const tasksSet = new Map();
 
     while (true) {
-      // @ts-ignore
-      const action = yield take(patternOrChannel);
+      const action: any = yield take(patternOrChannel);
       const {id} = action;
 
       if (tasksSet.has(id)) {
@@ -57,8 +56,7 @@ export function takeLeadingEveryUnique<
     const tasksSet = new Map();
 
     while (true) {
-      // @ts-ignore
-      const action = yield take(patternOrChannel);
+      const action: any = yield take(patternOrChannel);
       const {id} = action;
       if (!tasksSet.has(id)) {
         yield fork(function* () {

@@ -2,11 +2,10 @@
 
 import {User} from '@api/user/types';
 import {LadderBar} from '@screens/ProfileFlow/Profile/components/UserInfo/LadderBar';
-import {usernameWithPrefixSelector} from '@store/modules/Account/selectors';
 import {font} from '@utils/styles';
+import {buildUsernameWithPrefix} from '@utils/username';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -16,11 +15,10 @@ type Props = {
 export const USER_INFO_HEIGHT = rem(173);
 
 export const UserInfo = ({user}: Props) => {
-  const username = useSelector(usernameWithPrefixSelector);
   return (
     <View style={styles.container}>
       <Text style={styles.usernameText} numberOfLines={1}>
-        {user && username}
+        {buildUsernameWithPrefix(user?.username ?? '')}
       </Text>
       <View style={styles.ladderContainer}>
         {!!user && <LadderBar user={user} />}

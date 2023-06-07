@@ -15,7 +15,6 @@ import {waitForSelector} from '@store/utils/sagas/effects';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {Linking} from 'react-native';
 import {call, put} from 'redux-saga/effects';
-import Url from 'url-parse';
 
 const actionCreator = LinkingActions.HANDLE_URL.STATE.create;
 
@@ -27,9 +26,10 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
     return;
   }
 
-  const {path, query, isDeeplink, isUniversalLink} = parseUrl(url);
+  const {path, parsedUrl, isDeeplink, isUniversalLink} = parseUrl(url);
+  const searchParams = parsedUrl.searchParams;
 
-  if (isUpdateEmailLink(query)) {
+  if (isUpdateEmailLink(parsedUrl)) {
     yield put(
       AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.CONFIRM_TEMP_EMAIL.create(url),
     );
@@ -41,17 +41,18 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
 
   switch (path.toLowerCase()) {
     case 'browser':
-      if (query.url) {
-        const browserUrl = decodeURIComponent(query.url);
-        const parsedUrl = new Url(browserUrl);
-        if (!parsedUrl.protocol) {
+      const paramsUrl = searchParams.get('url');
+      if (paramsUrl) {
+        const browserUrl = decodeURIComponent(paramsUrl);
+        if (!new URL(browserUrl).protocol) {
           throw new Error(`Invalid url ${browserUrl}`);
         }
         openLinkWithInAppBrowser({url: browserUrl});
       }
       break;
-    case 'home':
-      switch (query.section) {
+    case 'home': {
+      const section = searchParams.get('url');
+      switch (section) {
         case 'adoption':
         default:
           navigate({
@@ -60,6 +61,7 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
           });
       }
       break;
+    }
     case 'pre-staking':
       navigate({name: 'Staking', params: undefined});
       break;
@@ -76,25 +78,23 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
       navigate({name: 'TeamTab', params: {screen: 'Team'}});
       break;
     case 'news':
-      navigate({name: 'NewsTab', params: undefined});
+      navigate({name: 'News', params: undefined});
       break;
     case 'profile':
-      // TODO: temp profile disabling
-      if (false) {
-        const userId = query.userId ?? '';
-        switch (query.section) {
-          case 'roles':
-            navigate({name: 'Roles', params: {userId}});
-            break;
-          case 'badges':
-            navigate({name: 'Badges', params: {userId}});
-            break;
-          default:
-            navigate({
-              name: 'UserProfile',
-              params: {userId},
-            });
-        }
+      const userId = searchParams.get('userId') ?? '';
+      const section = searchParams.get('section');
+      switch (section) {
+        case 'roles':
+          navigate({name: 'Roles', params: {userId}});
+          break;
+        case 'badges':
+          navigate({name: 'Badges', params: {userId}});
+          break;
+        default:
+          navigate({
+            name: 'UserProfile',
+            params: {userId},
+          });
       }
       break;
     case 'claim-daily-bonus':
@@ -115,10 +115,12 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
   }
 }
 
-const parseUrl = (url: string) => {
-  const parsed = new Url(url, true);
-  const isDeeplink = parsed.protocol.includes(ENV.DEEPLINK_SCHEME ?? '');
-  const isUniversalLink = parsed.host === ENV.DEEPLINK_DOMAIN;
-  const path = isDeeplink ? parsed.host : parsed.pathname.replace('/', '');
-  return {isDeeplink, isUniversalLink, path, ...parsed};
+export const parseUrl = (url: string) => {
+  const parsedUrl = new URL(url);
+  const isDeeplink = parsedUrl.protocol.includes(ENV.DEEPLINK_SCHEME ?? '');
+  const isUniversalLink = parsedUrl.host === ENV.DEEPLINK_DOMAIN;
+  const path = isDeeplink
+    ? parsedUrl.host
+    : parsedUrl.pathname.replace('/', '');
+  return {isDeeplink, isUniversalLink, path, parsedUrl};
 };

@@ -5,11 +5,9 @@ import {EditableAvatar} from '@components/Avatar/EditableAvatar';
 import {LinesBackground} from '@components/LinesBackground';
 import {COLORS} from '@constants/colors';
 import {CroppedImage} from '@hooks/useActionSheetUpdateAvatar';
-import {
-  usernameWithPrefixSelector,
-  userSelector,
-} from '@store/modules/Account/selectors';
+import {userSelector} from '@store/modules/Account/selectors';
 import {font} from '@utils/styles';
+import {buildUsernameWithPrefix} from '@utils/username';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
@@ -25,7 +23,6 @@ export const UserAvatarHeader = ({
   updateAvatarLoading = false,
 }: Props) => {
   const user = useSelector(userSelector);
-  const username = useSelector(usernameWithPrefixSelector);
 
   return (
     <View style={styles.container}>
@@ -41,7 +38,7 @@ export const UserAvatarHeader = ({
         <Avatar uri={user?.profilePictureUrl} style={styles.avatarImage} />
       )}
       <Text style={styles.usernameText} numberOfLines={1}>
-        {username}
+        {buildUsernameWithPrefix(user?.username ?? '')}
       </Text>
     </View>
   );

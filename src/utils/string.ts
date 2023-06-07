@@ -19,3 +19,7 @@ export const stringToColor = (input: string = '') => {
 };
 
 export const extractDigits = (str: string) => str.replace(/\D/g, '');
+
+export function normalizeSearchValue(searchValue: string) {
+  return searchValue.trim().toLowerCase();
+}

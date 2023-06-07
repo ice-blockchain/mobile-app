@@ -25,7 +25,12 @@ export const commonStyles = StyleSheet.create({
       }
     : {elevation: 4},
   flexOne: {flex: 1},
+  screenPadding: {
+    paddingHorizontal: SCREEN_SIDE_OFFSET,
+  },
+  row: {flexDirection: 'row'},
   darkText: {color: COLORS.primaryDark},
+  fullHeight: {height: '100%'},
 });
 
 export const SMALL_BUTTON_HIT_SLOP = {top: 4, left: 4, bottom: 4, right: 4};
@@ -34,6 +39,12 @@ export const MIDDLE_BUTTON_HIT_SLOP = {
   left: 32,
   bottom: 12,
   right: 32,
+};
+export const HIT_SLOP = {
+  top: 12,
+  left: 12,
+  bottom: 12,
+  right: 12,
 };
 
 export const windowWidth = Dimensions.get('window').width;
