@@ -2,16 +2,16 @@
 
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
+import {ChatRow} from '@screens/ChatFlow/ChatList/components/ChatRow';
+import {NoConversationsScreen} from '@screens/ChatFlow/ChatList/components/NoConversationsScreen';
+import {SEARCH_HIDDEN_Y} from '@screens/ChatFlow/ChatList/constants';
+import {useAnimatedSearch} from '@screens/ChatFlow/ChatList/hooks/useAnimatedSearch';
 import {ItemSeparator} from '@screens/ChatFlow/components/ItemSeparator';
 import {JoinCommunitiesBanner} from '@screens/ChatFlow/components/JoinCommunitiesBanner';
 import {SearchBar} from '@screens/ChatFlow/components/SearchBar';
 import {useLoadChatData} from '@screens/ChatFlow/hooks/useLoadChatData';
-import {ChatRow} from '@screens/ChatFlow/Messages/components/ChatRow';
-import {NoConversationsScreen} from '@screens/ChatFlow/Messages/components/NoConversationsScreen';
-import {SEARCH_HIDDEN_Y} from '@screens/ChatFlow/Messages/constants';
-import {useAnimatedSearch} from '@screens/ChatFlow/Messages/hooks/useAnimatedSearch';
-import {messagesDataSelector} from '@store/modules/Chats/selectors';
-import {ChatDataType, MessageData} from '@store/modules/Chats/types';
+import {chatListDataSelector} from '@store/modules/Chats/selectors';
+import {ChatData, ChatDataType} from '@store/modules/Chats/types';
 import React from 'react';
 import {ActivityIndicator, StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
@@ -24,9 +24,9 @@ function ListHeaderComponent() {
 
 const dataType: ChatDataType = 'chats';
 
-export function Messages() {
+export function ChatList() {
   const tabBarOffset = useBottomTabBarOffsetStyle();
-  const messages = useSelector(messagesDataSelector);
+  const chatListData = useSelector(chatListDataSelector);
   const {
     onChangeText,
     loading,
@@ -38,7 +38,7 @@ export function Messages() {
 
   const {scrollHandler, animatedStyle, searchVisible} = useAnimatedSearch();
 
-  const renderItem = ({item}: {item: MessageData}) => {
+  const renderItem = ({item}: {item: ChatData}) => {
     return <ChatRow key={item.id} messageData={item} />;
   };
 
@@ -59,9 +59,9 @@ export function Messages() {
           contentContainerStyle={[
             styles.listContent,
             tabBarOffset.current,
-            !messages.length && !loading ? commonStyles.fullHeight : null,
+            !chatListData.length && !loading ? commonStyles.fullHeight : null,
           ]}
-          data={messages}
+          data={chatListData}
           renderItem={renderItem}
           onEndReached={loadMore}
           onRefresh={refreshData}
@@ -75,7 +75,7 @@ export function Messages() {
               <NoConversationsScreen searchValue={searchValue} />
             ) : null
           }
-          ListHeaderComponent={messages.length ? ListHeaderComponent : null}
+          ListHeaderComponent={chatListData.length ? ListHeaderComponent : null}
           initialNumToRender={20}
         />
       </Animated.View>

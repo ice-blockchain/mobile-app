@@ -2,7 +2,7 @@
 
 import {ChatTabsParamList} from '@navigation/Main';
 import {RouteProp, useRoute} from '@react-navigation/native';
-import {SEARCH_HIDDEN_Y} from '@screens/ChatFlow/Messages/constants';
+import {SEARCH_HIDDEN_Y} from '@screens/ChatFlow/ChatList/constants';
 import {useEffect} from 'react';
 import {
   useAnimatedReaction,
@@ -15,7 +15,7 @@ import {
 export function useAnimatedSearch() {
   const route = useRoute<
     | RouteProp<ChatTabsParamList, 'ExploreTab'>
-    | RouteProp<ChatTabsParamList, 'MessagesTab'>
+    | RouteProp<ChatTabsParamList, 'ChatListTab'>
   >();
   const {searchVisible} = route.params ?? {};
   const searchVisibleSharedValue = useSharedValue(0);
@@ -49,7 +49,6 @@ export function useAnimatedSearch() {
       ) {
         translateY.value = withTiming(SEARCH_HIDDEN_Y);
         searchVisibleSharedValue.value = 0;
-        // runOnJS(setSearchBarHidden)();
       }
     },
     [searchVisible],

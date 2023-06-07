@@ -8,8 +8,8 @@ import {useNavigation} from '@react-navigation/native';
 import {
   CATEGORIES_BAR_HEIGHT,
   EmojiCategoriesBar,
-} from '@screens/modals/EmojiSelector/components/EmojiCategoriesBar';
-import {EmojiCategory} from '@screens/modals/EmojiSelector/type';
+} from '@screens/Modals/EmojiSelector/components/EmojiCategoriesBar';
+import {EmojiCategory} from '@screens/Modals/EmojiSelector/type';
 import {CloseModalIcon} from '@svg/CloseModalIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';

@@ -8,7 +8,7 @@ import {persistReducer} from 'redux-persist';
 const EMOJI_HISTORY_LIMIT = 8;
 
 export interface State {
-  emojiHistory: string[];
+  latestEmojis: string[];
 }
 
 type Actions = ReturnType<
@@ -16,18 +16,18 @@ type Actions = ReturnType<
 >;
 
 const INITIAL_STATE: State = {
-  emojiHistory: ['👍', '🔥', '😍', '👎'],
+  latestEmojis: ['👍', '🔥', '😍', '👎'],
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
       case EmojiHistoryActions.ADD_EMOJI_TO_HISTORY.STATE.type:
-        draft.emojiHistory = [
-          ...new Set([action.payload.emoji, ...draft.emojiHistory]),
+        draft.latestEmojis = [
+          ...new Set([action.payload.emoji, ...draft.latestEmojis]),
         ];
-        if (draft.emojiHistory.length > EMOJI_HISTORY_LIMIT) {
-          draft.emojiHistory = draft.emojiHistory.slice(0, EMOJI_HISTORY_LIMIT);
+        if (draft.latestEmojis.length > EMOJI_HISTORY_LIMIT) {
+          draft.latestEmojis = draft.latestEmojis.slice(0, EMOJI_HISTORY_LIMIT);
         }
         break;
     }
@@ -38,7 +38,7 @@ export const emojiHistoryReducer = persistReducer(
   {
     key: 'emojiHistory',
     storage: AsyncStorage,
-    whitelist: ['emojiHistory'],
+    whitelist: ['latestEmojis'],
   },
   reducer,
 );

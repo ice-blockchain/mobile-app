@@ -3,7 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {ChatTabRow} from '@screens/ChatFlow/components/ChatTabRow';
 import {dayjs} from '@services/dayjs';
-import {MessageData, MessageStatusType} from '@store/modules/Chats/types';
+import {ChatData, MessageStatusType} from '@store/modules/Chats/types';
 import {SeenIcon} from '@svg/SeenIcon';
 import {SentIcon} from '@svg/SentIcon';
 import {font} from '@utils/styles';
@@ -12,7 +12,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
-  messageData: MessageData;
+  messageData: ChatData;
 };
 
 function getLastMessageTimeText(minutesAgo: number) {

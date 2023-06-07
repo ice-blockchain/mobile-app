@@ -2,8 +2,8 @@
 
 import {Touchable} from '@components/Touchable';
 import {HIT_SLOP, windowWidth} from '@constants/styles';
-import {EMOJI_PER_ROW} from '@screens/modals/EmojiSelector/constants';
-import {EmojiData} from '@screens/modals/EmojiSelector/type';
+import {EMOJI_PER_ROW} from '@screens/Modals/EmojiSelector/constants';
+import {EmojiData} from '@screens/Modals/EmojiSelector/type';
 import {font} from '@utils/styles';
 import * as React from 'react';
 import {StyleSheet, Text, View} from 'react-native';

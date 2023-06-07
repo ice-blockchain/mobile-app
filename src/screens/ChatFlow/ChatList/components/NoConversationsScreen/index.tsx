@@ -27,8 +27,8 @@ export function NoConversationsScreen({searchValue}: Props) {
       {noFound ? <NoConversationsFoundIcon /> : <NewConversationIcon />}
       <Text style={styles.note}>
         {noFound
-          ? t('chat.messages.no_conversations_found')
-          : t('chat.messages.no_conversations')}
+          ? t('chat.chatlist.no_conversations_found')
+          : t('chat.chatlist.no_conversations')}
       </Text>
       {noFound ? null : (
         <Touchable
@@ -37,7 +37,7 @@ export function NoConversationsScreen({searchValue}: Props) {
             navigation.navigate('NewChatSelector');
           }}>
           <Text style={styles.actionText}>
-            {t('chat.messages.new_message')}
+            {t('chat.chatlist.new_message')}
           </Text>
         </Touchable>
       )}

@@ -12,7 +12,7 @@ import {
   updatePostById,
 } from '@screens/ChatFlow/Channel/components/ChannelFeed/utils';
 import {useLoadChannelData} from '@screens/ChatFlow/Channel/hooks/useLoadChannelData';
-import {initEmojiData} from '@screens/modals/EmojiSelector/data';
+import {initEmojiData} from '@screens/Modals/EmojiSelector/data';
 import {ExploreData} from '@store/modules/Chats/types';
 import * as React from 'react';
 import {useCallback, useRef} from 'react';

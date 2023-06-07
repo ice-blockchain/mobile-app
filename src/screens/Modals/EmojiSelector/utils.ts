@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {ROW_HEIGHT} from '@screens/modals/EmojiSelector/components/EmojiRow';
-import {EMOJI_PER_ROW} from '@screens/modals/EmojiSelector/constants';
+import {ROW_HEIGHT} from '@screens/Modals/EmojiSelector/components/EmojiRow';
+import {EMOJI_PER_ROW} from '@screens/Modals/EmojiSelector/constants';
 import {
   EmojiCategoryOffset,
   EmojiData,
   EmojisByCategory,
   EmojiSelectorSection,
-} from '@screens/modals/EmojiSelector/type';
+} from '@screens/Modals/EmojiSelector/type';
 import {normalizeSearchValue} from '@utils/string';
 
 export function splitArrayIntoChunks(array: EmojiData[]): EmojiData[][] {

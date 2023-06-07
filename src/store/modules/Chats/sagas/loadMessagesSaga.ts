@@ -2,7 +2,7 @@
 
 import {ChatActions} from '@store/modules/Chats/actions';
 import {getHasMoreChatDataSelector} from '@store/modules/Chats/selectors';
-import {MessageData, MessageStatusType} from '@store/modules/Chats/types';
+import {ChatData, MessageStatusType} from '@store/modules/Chats/types';
 import {normalizeSearchValue} from '@utils/string';
 import {put, SagaReturnType, select} from 'redux-saga/effects';
 
@@ -20,7 +20,7 @@ function getMockedRandomData() {
   };
 }
 
-const mockData: MessageData[] = [
+const mockData: ChatData[] = [
   {
     id: 1,
     sourceName: 'Crypto Channel Bitcoin',

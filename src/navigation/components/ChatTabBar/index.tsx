@@ -32,7 +32,7 @@ export function ChatTabBar(props: MaterialTopTabBarProps) {
       params: {
         screen: 'ChatTab',
         params: {
-          screen: activeChatTab === 'messages' ? 'MessagesTab' : 'ExploreTab',
+          screen: activeChatTab === 'chatlist' ? 'ChatListTab' : 'ExploreTab',
           params: {searchVisible: true},
         },
       },

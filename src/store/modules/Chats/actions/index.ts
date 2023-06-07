@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {
+  ChatData,
   ChatDataType,
   ChatUserData,
   ExploreData,
   ExploreDataType,
-  MessageData,
 } from '@store/modules/Chats/types';
 import {createAction} from '@store/utils/actions/createAction';
 
@@ -22,7 +22,7 @@ const LOAD_CHAT_DATA = createAction('LOAD_CHAT_DATA', {
   SUCCESS: (payload: {
     exploreData?: ExploreData[];
     userData?: ChatUserData[];
-    chatData?: MessageData[];
+    chatData?: ChatData[];
     hasMore: boolean;
     dataType: ChatDataType;
   }) => payload,

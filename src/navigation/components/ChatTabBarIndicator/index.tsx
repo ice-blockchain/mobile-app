@@ -39,8 +39,8 @@ const getTranslateX = (
 
 function getChatTab(routeName: string): ChatTab {
   switch (routeName) {
-    case 'MessagesTab':
-      return 'messages';
+    case 'ChatListTab':
+      return 'chatlist';
     default:
       return 'explore';
   }

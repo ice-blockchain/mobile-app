@@ -10,8 +10,8 @@ import {
 } from '@navigation/components/ChatTabBar';
 import {ChatTabBarIndicator} from '@navigation/components/ChatTabBarIndicator';
 import {
+  ChatListTabChatTabBarLabel,
   ExploreTabChatTabBarLabel,
-  MessageTabChatTabBarLabel,
 } from '@navigation/components/ChatTabBarLabel';
 import {MainTabBar} from '@navigation/components/MainTabBar';
 import {ChatIcon} from '@navigation/components/MainTabBar/components/Icons/ChatIcon';
@@ -30,8 +30,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Channel} from '@screens/ChatFlow/Channel';
 import {ChannelPostData} from '@screens/ChatFlow/Channel/components/ChannelFeed/type';
 import {ChannelPostHighlight} from '@screens/ChatFlow/Channel/components/ChannelPostHighlight';
+import {ChatList} from '@screens/ChatFlow/ChatList';
 import {Explore} from '@screens/ChatFlow/Explore';
-import {Messages} from '@screens/ChatFlow/Messages';
 import {NewChatSelector} from '@screens/ChatFlow/NewChatSelector';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
 import {Home} from '@screens/HomeFlow/Home';
@@ -56,7 +56,7 @@ import {
 } from '@screens/Modals/ContextualMenu/types';
 import {CountrySelect} from '@screens/Modals/CountrySelect';
 import {DateSelect} from '@screens/Modals/DateSelector';
-import {EmojiSelector} from '@screens/modals/EmojiSelector';
+import {EmojiSelector} from '@screens/Modals/EmojiSelector';
 import {JoinTelegramPopUp} from '@screens/Modals/JoinTelegramPopUp';
 import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
 import {ProfilePrivacyEditStep1} from '@screens/Modals/ProfilePrivacyEdit/step1';
@@ -102,7 +102,7 @@ export type MainTabsParamList = {
 export type ChatTabRouteProps = {searchVisible: boolean} | undefined;
 
 export type ChatTabsParamList = {
-  MessagesTab: ChatTabRouteProps;
+  ChatListTab: ChatTabRouteProps;
   ExploreTab: ChatTabRouteProps;
 };
 
@@ -321,12 +321,12 @@ const ChatTabTabNavigator = () => {
       }}
       tabBar={ChatTabBar}>
       <ChatTopTabs.Screen
-        name="MessagesTab"
-        component={Messages}
+        name="ChatListTab"
+        component={ChatList}
         options={{
-          tabBarLabel: MessageTabChatTabBarLabel,
+          tabBarLabel: ChatListTabChatTabBarLabel,
         }}
-        listeners={getListeners('messages')}
+        listeners={getListeners('chatlist')}
       />
       <ChatTopTabs.Screen
         name="ExploreTab"

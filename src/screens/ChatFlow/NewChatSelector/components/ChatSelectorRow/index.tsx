@@ -17,7 +17,7 @@ type Props = {
 function getLastSeenText(minutesAgo: number) {
   const now = dayjs();
   const lastSeenTime = now.subtract(minutesAgo, 'minute');
-  return `${t('chat.messages.last_seen')} ${lastSeenTime.from(now)}`;
+  return `${t('chat.chatlist.last_seen')} ${lastSeenTime.from(now)}`;
 }
 
 export function ChatSelectorRow({chatUser}: Props) {
@@ -37,7 +37,7 @@ export function ChatSelectorRow({chatUser}: Props) {
         <Text style={styles.username}>{chatUser.username}</Text>
         <Text style={styles.lastSeen}>
           {isOnline
-            ? t('chat.messages.online')
+            ? t('chat.chatlist.online')
             : getLastSeenText(chatUser.lastSeenMinutesAgo)}
         </Text>
       </View>

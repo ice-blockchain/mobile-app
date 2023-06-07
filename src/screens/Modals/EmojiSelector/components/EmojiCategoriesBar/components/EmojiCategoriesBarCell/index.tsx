@@ -2,7 +2,7 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {EmojiCategory} from '@screens/modals/EmojiSelector/type';
+import {EmojiCategory} from '@screens/Modals/EmojiSelector/type';
 import {ActivityIcon} from '@svg/ActivityIcon';
 import {AnimalIcon} from '@svg/AnimalIcon';
 import {DrinkIcon} from '@svg/DrinkIcon';

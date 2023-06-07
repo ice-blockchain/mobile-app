@@ -16,7 +16,7 @@ type Actions =
 
 const INITIAL_STATE: State = {
   activeTab: 'home',
-  activeChatTab: 'messages',
+  activeChatTab: 'chatlist',
 };
 
 export function activeTab(state = INITIAL_STATE, action: Actions): State {

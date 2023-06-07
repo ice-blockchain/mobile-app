@@ -904,7 +904,7 @@
       },
       "subscribed_indicator": "you are subscribed"
     },
-    "messages": {
+    "chatlist": {
       "label": "Messages",
       "no_conversations": "You have no conversations yet",
       "no_conversations_found": "No results found for this query",

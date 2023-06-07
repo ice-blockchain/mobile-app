@@ -9,26 +9,26 @@ import {useScrollEventsHandlersCustom} from '@screens/HomeFlow/BalanceHistory/co
 import {
   EmojiRow,
   ROW_HEIGHT,
-} from '@screens/modals/EmojiSelector/components/EmojiRow';
-import {EmojiSelectorBackdrop} from '@screens/modals/EmojiSelector/components/EmojiSelectorBackdrop';
-import {EmojiSelectorBackground} from '@screens/modals/EmojiSelector/components/EmojiSelectorBackground';
-import {EmojiSelectorHeader} from '@screens/modals/EmojiSelector/components/EmojiSelectorHeader';
-import {EmojiSelectorSectionHeader} from '@screens/modals/EmojiSelector/components/EmojiSelectorSectionHeader';
+} from '@screens/Modals/EmojiSelector/components/EmojiRow';
+import {EmojiSelectorBackdrop} from '@screens/Modals/EmojiSelector/components/EmojiSelectorBackdrop';
+import {EmojiSelectorBackground} from '@screens/Modals/EmojiSelector/components/EmojiSelectorBackground';
+import {EmojiSelectorHeader} from '@screens/Modals/EmojiSelector/components/EmojiSelectorHeader';
+import {EmojiSelectorSectionHeader} from '@screens/Modals/EmojiSelector/components/EmojiSelectorSectionHeader';
 import {
   categories,
   categoryOffsets,
   sections,
-} from '@screens/modals/EmojiSelector/data';
+} from '@screens/Modals/EmojiSelector/data';
 import {
   EmojiCategory,
   EmojiData,
   EmojiSelectorSection,
-} from '@screens/modals/EmojiSelector/type';
+} from '@screens/Modals/EmojiSelector/type';
 import {
   findEmojis,
   getItemLayout,
   splitArrayIntoChunks,
-} from '@screens/modals/EmojiSelector/utils';
+} from '@screens/Modals/EmojiSelector/utils';
 import {EmojiHistoryActions} from '@store/modules/EmojiHistory/actions';
 import {emojiHistorySelector} from '@store/modules/EmojiHistory/selectors';
 import * as React from 'react';

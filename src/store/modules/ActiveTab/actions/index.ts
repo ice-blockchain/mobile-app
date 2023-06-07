@@ -3,7 +3,7 @@
 import {createAction} from '@store/utils/actions/createAction';
 
 export type Tab = 'home' | 'team' | 'chat' | 'profile';
-export type ChatTab = 'messages' | 'explore';
+export type ChatTab = 'chatlist' | 'explore';
 
 const SET_ACTIVE_TAB = createAction('SET_ACTIVE_TAB', {
   STATE: (tab: Tab) => ({tab}),

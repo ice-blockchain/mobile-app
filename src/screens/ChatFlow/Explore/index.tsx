@@ -4,14 +4,14 @@ import {ListItemSkeleton} from '@components/ListItems/ListItemSkeleton';
 import {SKELETONS_PER_SCREEN} from '@components/ListItems/UserListItem';
 import {commonStyles} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
+import {SEARCH_HIDDEN_Y} from '@screens/ChatFlow/ChatList/constants';
+import {useAnimatedSearch} from '@screens/ChatFlow/ChatList/hooks/useAnimatedSearch';
 import {ItemSeparator} from '@screens/ChatFlow/components/ItemSeparator';
 import {SearchBar} from '@screens/ChatFlow/components/SearchBar';
 import {ExploreFilter} from '@screens/ChatFlow/Explore/components/ExploreFilter';
 import {ExploreRow} from '@screens/ChatFlow/Explore/components/ExploreRow';
 import {ExploreFilterType} from '@screens/ChatFlow/Explore/types';
 import {useLoadChatData} from '@screens/ChatFlow/hooks/useLoadChatData';
-import {SEARCH_HIDDEN_Y} from '@screens/ChatFlow/Messages/constants';
-import {useAnimatedSearch} from '@screens/ChatFlow/Messages/hooks/useAnimatedSearch';
 import {ChatActions} from '@store/modules/Chats/actions';
 import {
   exploreDataSelector,

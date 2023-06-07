@@ -7,6 +7,8 @@ import {commonStyles} from '@constants/styles';
 import BottomSheet, {BottomSheetFlatList} from '@gorhom/bottom-sheet';
 import {useSafeAreaFrame} from '@hooks/useSafeAreaFrame';
 import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
+import {useTopOffsetStyle} from '@hooks/useTopOffsetStyle';
+import {BackButton} from '@navigation/components/Header/components/BackButton';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {useReleasedNewsWalkthrough} from '@screens/News/hooks/useReleasedNewsWalkthrough';
@@ -14,7 +16,7 @@ import {NEWS_LOAD_LIMIT} from '@store/modules/News/sagas/loadNewsSaga';
 import {NewsSelectors} from '@store/modules/News/selectors';
 import {NoMoreNewsIcon} from '@svg/NoMoreNewsIcon';
 import {t} from '@translations/i18n';
-import {font} from '@utils/styles';
+import {font, mirrorTransform} from '@utils/styles';
 import React, {useCallback, useMemo} from 'react';
 import {ListRenderItem, StyleSheet, Text, View} from 'react-native';
 import {
@@ -38,6 +40,7 @@ export const News = () => {
   useFocusStatusBar({style: 'light-content'});
 
   const safeAreaInsets = useSafeAreaInsets();
+  const topOffset = useTopOffsetStyle({extraOffset: rem(30)});
 
   const frame = useSafeAreaFrame();
 
@@ -180,6 +183,9 @@ export const News = () => {
           alwaysBounceVertical={false}
         />
       </BottomSheet>
+      <View style={[styles.backButtonContainer, topOffset.current]}>
+        <BackButton containerStyle={styles.backButton} color={COLORS.white} />
+      </View>
     </View>
   );
 };
@@ -237,5 +243,14 @@ const styles = StyleSheet.create({
   },
   noMoreText: {
     ...font(13, 15.6, 'medium', 'periwinkleGray'),
+  },
+  backButtonContainer: {
+    position: 'absolute',
+    left: rem(20),
+    top: 0,
+  },
+  backButton: {
+    justifyContent: 'center',
+    ...mirrorTransform(),
   },
 });

@@ -3,15 +3,15 @@
 import {AccountActions} from '@store/modules/Account/actions';
 import {ChatActions} from '@store/modules/Chats/actions';
 import {
+  ChatData,
   ChatUserData,
   ExploreData,
   ExploreDataType,
-  MessageData,
 } from '@store/modules/Chats/types';
 import produce from 'immer';
 
 export interface State {
-  messages: MessageData[];
+  chatData: ChatData[];
   chatUsers: ChatUserData[];
   exploreData: ExploreData[];
   exploreDatatype: ExploreDataType | null;
@@ -36,7 +36,7 @@ const INITIAL_STATE: State = {
   hasMore: {},
   isInitialLoad: {},
 
-  messages: [],
+  chatData: [],
   chatUsers: [],
   exploreData: [],
   exploreDatatype: null,
@@ -49,7 +49,7 @@ function combine<T>(a: T[], b: T[], override: boolean) {
   return [...a, ...b];
 }
 
-export function chatReducer(state = INITIAL_STATE, action: Actions): State {
+export function chatsReducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
       case ChatActions.LOAD_CHAT_DATA.START.type:
@@ -62,8 +62,8 @@ export function chatReducer(state = INITIAL_STATE, action: Actions): State {
         switch (action.payload.dataType) {
           case 'chats': {
             if (action.payload.chatData) {
-              draft.messages = combine(
-                draft.messages,
+              draft.chatData = combine(
+                draft.chatData,
                 action.payload.chatData,
                 isInitialLoad,
               );

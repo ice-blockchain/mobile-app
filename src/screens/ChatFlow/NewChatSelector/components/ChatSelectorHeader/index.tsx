@@ -20,7 +20,7 @@ export function ChatSelectorHeader({onChangeText}: Props) {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{t('chat.messages.new_chat')}</Text>
+      <Text style={styles.text}>{t('chat.chatlist.new_chat')}</Text>
       <Touchable
         hitSlop={HIT_SLOP}
         onPress={navigation.goBack}
@@ -29,7 +29,7 @@ export function ChatSelectorHeader({onChangeText}: Props) {
       </Touchable>
       <SearchInput
         onChangeText={onChangeText}
-        placeholder={t('chat.messages.search_placeholder')}
+        placeholder={t('chat.chatlist.search_placeholder')}
         containerStyle={styles.search}
       />
     </View>

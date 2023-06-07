@@ -4,7 +4,7 @@ import {SearchInput} from '@components/Inputs/SearchInput';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {CHAT_TAB_BAR_PADDING} from '@navigation/components/ChatTabBar';
-import {SEARCH_MARGIN_VERTICAL} from '@screens/ChatFlow/Messages/constants';
+import {SEARCH_MARGIN_VERTICAL} from '@screens/ChatFlow/ChatList/constants';
 import {t} from '@translations/i18n';
 import * as React from 'react';
 import {StyleSheet, View} from 'react-native';

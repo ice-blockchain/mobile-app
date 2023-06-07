@@ -3,4 +3,4 @@
 import {RootState} from '@store/rootReducer';
 
 export const emojiHistorySelector = (state: RootState) =>
-  state.emojiHistory.emojiHistory;
+  state.emojiHistory.latestEmojis;

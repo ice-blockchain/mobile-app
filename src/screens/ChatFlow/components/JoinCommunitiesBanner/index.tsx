@@ -27,10 +27,10 @@ export function JoinCommunitiesBanner({isDark}: Props) {
       )}
       <View style={styles.messageContainer}>
         <Text style={[styles.title, isDark && styles.darkModeTextColor]}>
-          {t('chat.messages.banner.title')}
+          {t('chat.chatlist.banner.title')}
         </Text>
         <Text style={[styles.subtitle, isDark && styles.darkModeTextColor]}>
-          {t('chat.messages.banner.subtitle')}
+          {t('chat.chatlist.banner.subtitle')}
         </Text>
       </View>
       {isDark ? (

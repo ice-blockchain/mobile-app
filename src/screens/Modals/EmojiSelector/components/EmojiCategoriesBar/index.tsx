@@ -3,8 +3,8 @@
 import {
   CELL_SIZE,
   EmojiCategoriesBarCell,
-} from '@screens/modals/EmojiSelector/components/EmojiCategoriesBar/components/EmojiCategoriesBarCell';
-import {EmojiCategory} from '@screens/modals/EmojiSelector/type';
+} from '@screens/Modals/EmojiSelector/components/EmojiCategoriesBar/components/EmojiCategoriesBarCell';
+import {EmojiCategory} from '@screens/Modals/EmojiSelector/type';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';

@@ -6,7 +6,7 @@ export type MessageStatusType = 'sent' | 'received' | 'seen';
 
 export type ChatDataType = 'chats' | 'users' | 'explore';
 
-export type MessageData = {
+export type ChatData = {
   id: number;
   icon: string;
   sourceName: string;

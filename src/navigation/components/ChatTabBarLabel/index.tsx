@@ -17,8 +17,8 @@ export function ChatTabBarLabel({focused, label}: Props) {
   );
 }
 
-export function MessageTabChatTabBarLabel({focused}: {focused: boolean}) {
-  return <ChatTabBarLabel label={t('chat.messages.label')} focused={focused} />;
+export function ChatListTabChatTabBarLabel({focused}: {focused: boolean}) {
+  return <ChatTabBarLabel label={t('chat.chatlist.label')} focused={focused} />;
 }
 
 export function ExploreTabChatTabBarLabel({focused}: {focused: boolean}) {
