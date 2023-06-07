@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
+import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {PermissionsActions} from '@store/modules/Permissions/actions';
+import {waitForSelector} from '@store/utils/sagas/effects';
 import {getErrorMessage} from '@utils/errors';
 import {Linking} from 'react-native';
 import {
@@ -12,7 +14,7 @@ import {
   requestNotifications,
   RESULTS,
 } from 'react-native-permissions';
-import {put, SagaReturnType} from 'redux-saga/effects';
+import {call, put, SagaReturnType} from 'redux-saga/effects';
 import {isIOS} from 'rn-units';
 
 const actionCreator = PermissionsActions.GET_PERMISSIONS.START.create;
@@ -44,9 +46,7 @@ export function* getPermissionsSaga(action: ReturnType<typeof actionCreator>) {
 
     if (permission === RESULTS.BLOCKED) {
       Linking.openSettings();
-    }
-
-    if (permission === RESULTS.GRANTED) {
+    } else if (permission === RESULTS.GRANTED) {
       yield put(
         PermissionsActions.GET_PERMISSIONS.SUCCESS.create(type, permission),
       );
@@ -58,7 +58,9 @@ export function* getPermissionsSaga(action: ReturnType<typeof actionCreator>) {
       } else {
         permission = yield request(PERMISSIONS_LIST[type]);
       }
-
+      // on iOS the app moves to the background state
+      // when the native permissions dialog appears
+      yield call(waitForSelector, isAppActiveSelector);
       yield put(
         PermissionsActions.GET_PERMISSIONS.SUCCESS.create(type, permission),
       );
