@@ -137,6 +137,22 @@ export const AdoptionCard = ({isCollapsed, onPress}: AdoptionCardProps) => {
   useEffect(() => {
     if (activeIndex >= 0) {
       scrollToIndex(activeIndex);
+
+      /**
+       * Scroll to activeIndex after 3 seconds
+       * to avoid scroll to index failed
+       * because of not refFlatList yet initialized
+       * on first render
+       */
+      if (!refFlatList.current) {
+        const timeoutId = setTimeout(() => {
+          scrollToIndex(activeIndex);
+        }, 3000);
+
+        return () => {
+          clearTimeout(timeoutId);
+        };
+      }
     }
   }, [activeIndex, scrollToIndex]);
 
