@@ -53,7 +53,13 @@ export function* verifyBeforeUpdateEmailSaga({
             ) {
               throw new Error(t('errors.general_error_message'));
             } else {
-              yield call(updateEmail, user, email);
+              yield call(
+                updateAccountSaga,
+                AccountActions.UPDATE_ACCOUNT.START.create({
+                  email,
+                  skipEmailValidation: true,
+                }),
+              );
               yield put(
                 AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.SUCCESS.create(),
               );
@@ -104,42 +110,4 @@ export function* verifyBeforeUpdateEmailSaga({
       throw error;
     }
   }
-}
-
-function* updateEmail(
-  userToUpdate: User,
-  email: string,
-): Generator<unknown, void, void> {
-  const finalizedSteps =
-    userToUpdate.clientData?.registrationProcessFinalizedSteps ?? [];
-
-  const steps = [...finalizedSteps];
-  if (!finalizedSteps.includes('email')) {
-    steps.push('email');
-  }
-
-  return yield call(
-    updateAccountSaga,
-    AccountActions.UPDATE_ACCOUNT.START.create(
-      {
-        email,
-        skipEmailValidation: true,
-        clientData: {
-          ...userToUpdate.clientData,
-          registrationProcessFinalizedSteps: steps,
-        },
-      },
-      function* (freshUser) {
-        if (
-          !freshUser.clientData?.registrationProcessFinalizedSteps?.includes(
-            'email',
-          ) ||
-          freshUser.email !== email
-        ) {
-          updateEmail(freshUser, email);
-        }
-        return {retry: false};
-      },
-    ),
-  );
 }

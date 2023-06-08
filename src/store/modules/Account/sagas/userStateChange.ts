@@ -131,9 +131,6 @@ function* createUser({
       email,
       phoneNumber: normalizedNumber,
       phoneNumberHash,
-      clientData: {
-        registrationProcessFinalizedSteps: email ? ['email'] : [],
-      },
       language: appLocale,
     },
   );

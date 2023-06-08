@@ -24,14 +24,14 @@ export const WhoInvitedYou = () => {
     isReferralUpdated,
     onChangeRefUsername,
     onSubmit,
-    onBack,
+    goBack,
   } = useWhoInvitedYou();
 
   return (
     <FinalizeRegistrationStep
       title={t('whoInvitedYou.title')}
       showBackButton={true}
-      onBackPress={onBack}
+      onBackPress={goBack}
       header={
         <BigHeader
           title={t('whoInvitedYou.title')}

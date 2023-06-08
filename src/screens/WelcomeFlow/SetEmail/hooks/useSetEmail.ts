@@ -1,12 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {User} from '@api/user/types';
 import {WelcomeStackParamList} from '@navigation/Welcome';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {DEFAULT_DIALOG_NO_BUTTON} from '@screens/Modals/PopUp/components/PopUpButton';
 import {AccountActions} from '@store/modules/Account/actions';
-import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {
   failedReasonSelector,
   isLoadingSelector,
@@ -19,7 +17,6 @@ import {useDispatch, useSelector} from 'react-redux';
 
 export const useSetEmail = () => {
   const dispatch = useDispatch();
-  const user = useSelector(unsafeUserSelector);
   const navigation =
     useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
 
@@ -36,29 +33,8 @@ export const useSetEmail = () => {
     setEmail(text);
   };
 
-  const removeRefStep = (userToUpdate: User) => {
-    let finalizedSteps =
-      userToUpdate.clientData?.registrationProcessFinalizedSteps ?? [];
-    if (finalizedSteps.includes('referral')) {
-      finalizedSteps = finalizedSteps.filter(step => step !== 'referral');
-      dispatch(
-        AccountActions.UPDATE_ACCOUNT.START.create(
-          {
-            clientData: {
-              registrationProcessFinalizedSteps: [...finalizedSteps],
-            },
-          },
-          function* (freshUser) {
-            removeRefStep(freshUser);
-            return {retry: false};
-          },
-        ),
-      );
-    }
-  };
-
   const onBack = () => {
-    removeRefStep(user);
+    navigation.navigate('WhoInvitedYou');
   };
 
   const sendVerificationEmail = useCallback(() => {

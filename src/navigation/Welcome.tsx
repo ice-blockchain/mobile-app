@@ -1,12 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {modalOptions, screenOptions} from '@navigation/options';
-import {getCurrentRoute, resetRoot} from '@navigation/utils';
-import {useNavigation} from '@react-navigation/native';
-import {
-  createNativeStackNavigator,
-  NativeStackNavigationProp,
-} from '@react-navigation/native-stack';
+import {resetRoot} from '@navigation/utils';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {ConfirmEmailLink} from '@screens/AuthFlow/ConfirmEmailLink';
 import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
 import {
@@ -18,10 +14,10 @@ import {IceBonus} from '@screens/WelcomeFlow/IceBonus';
 import {Onboarding} from '@screens/WelcomeFlow/Onboarding';
 import {SetEmail} from '@screens/WelcomeFlow/SetEmail';
 import {WhoInvitedYou} from '@screens/WelcomeFlow/WhoInvitedYou';
-import {userSelector} from '@store/modules/Account/selectors';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {isOnboardingViewedSelector} from '@store/modules/Users/selectors';
 // import {emailVerificationStepSelector} from '@store/modules/Validation/selectors'; //TODO: temp email step disabling
-import React, {useEffect, useMemo, useRef} from 'react';
+import React, {useMemo, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 export type WelcomeStackParamList = {
@@ -48,26 +44,22 @@ const STEPS: (keyof WelcomeStackParamList)[] = [
 
 export function WelcomeNavigator() {
   const initializedRef = useRef(false);
-  const user: ReturnType<typeof userSelector> = useSelector(userSelector);
-  const isOnboardingViewed = useSelector(isOnboardingViewedSelector(user?.id));
+  const user: ReturnType<typeof unsafeUserSelector> =
+    useSelector(unsafeUserSelector);
+  const isOnboardingViewed = useSelector(isOnboardingViewedSelector(user.id));
 
   // const emailVerificationStep = useSelector(emailVerificationStepSelector); //TODO: temp email step disabling
-  const navigation =
-    useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
 
   const welcomeRoute = useMemo(() => {
-    const finalizedSteps =
-      user?.clientData?.registrationProcessFinalizedSteps ?? [];
-
     if (!isOnboardingViewed) {
       return 'Onboarding';
-    } else if (!finalizedSteps.includes('username')) {
+    } else if (!user.username) {
       return 'ClaimUsername';
-    } else if (!finalizedSteps.includes('referral')) {
+    } else if (!user.referredBy) {
       return 'WhoInvitedYou';
     }
     //TODO: temp email step disabling
-    // else if (!finalizedSteps.includes('email')) {
+    // else if (!user.email) {
     //   return emailVerificationStep === 'email'
     //     ? 'SetEmail'
     //     : 'ConfirmEmailLink';
@@ -76,18 +68,6 @@ export function WelcomeNavigator() {
       return 'IceBonus';
     }
   }, [user, isOnboardingViewed]);
-
-  /**
-   * `user` dependency is added here to handle properly navigation transitions
-   * if we update something after going back to previous welcome screens
-   */
-  useEffect(() => {
-    getCurrentRoute().then(route => {
-      if (route?.name !== welcomeRoute) {
-        navigation.navigate(welcomeRoute);
-      }
-    });
-  }, [welcomeRoute, navigation, user]);
 
   /**
    * Setting initial navigation state to add an ability to go back

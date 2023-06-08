@@ -1,5 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {WelcomeStackParamList} from '@navigation/Welcome';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {
   OnboardingSlide,
   onboardingSlides,
@@ -20,6 +23,8 @@ export const useFinishOnboarding = () => {
   const [slides, setSlides] = useState<OnboardingSlide[]>([]);
 
   const dispatch = useDispatch();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
   const user = useSelector(unsafeUserSelector);
 
   const canAskNotificationPermission = useSelector(
@@ -35,8 +40,10 @@ export const useFinishOnboarding = () => {
   );
 
   const finishOnboarding = useCallback(() => {
+    //TODO:: get from util, cuz it's not always ClaimUsername
+    navigation.navigate('ClaimUsername');
     dispatch(UsersActions.UPDATE_VIEWED_ONBOARDINGS.STATE.create(user.id));
-  }, [user.id, dispatch]);
+  }, [navigation, dispatch, user.id]);
 
   const getProgressPercentage = (currentPage: number) => {
     let progress = 0;

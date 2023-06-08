@@ -94,8 +94,6 @@ export type Translations = {
   'whoInvitedYou.description': null;
   'whoInvitedYou.inputPlaceholder': null;
   'whoInvitedYou.dontHaveInvitationCode': null;
-  'whoInvitedYou.confirm_text_part1': null;
-  'whoInvitedYou.confirm_text_part2': null;
   'whoInvitedYou.dontHaveCodeTip': null;
   'errors.nicknameSize': null;
   'errors.removeInvalidCharacters': null;

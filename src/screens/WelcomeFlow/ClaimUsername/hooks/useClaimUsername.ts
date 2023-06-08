@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {User} from '@api/user/types';
+import {WelcomeStackParamList} from '@navigation/Welcome';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AccountActions} from '@store/modules/Account/actions';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {
@@ -15,6 +17,8 @@ import {wait} from 'rn-units';
 
 export const useClaimUsername = () => {
   const dispatch = useDispatch();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
   const user = useSelector(unsafeUserSelector);
 
   const validationError = useSelector(
@@ -27,21 +31,37 @@ export const useClaimUsername = () => {
     isLoadingSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
   );
 
-  const initialUsername = useRef(user.username);
+  const initialRender = useRef(true);
   const [username, setUsername] = useState(user.username);
-  const [waitLoading, setWaitLoading] = useState(false);
 
-  const isUsernameUpdated =
-    !!username && username.toLowerCase() === user.username?.toLowerCase();
+  const isUsernameUpdated = !!username && username === user.username;
+
+  const goForward = useCallback(() => {
+    //TODO::get dynamically from a list of steps
+    navigation.navigate('WhoInvitedYou');
+  }, [navigation]);
+
+  const goBack = useCallback(() => {
+    dispatch(AccountActions.SIGN_OUT.START.create());
+  }, [dispatch]);
+
+  const resetError = useCallback(() => {
+    if (validationError) {
+      dispatch(ValidationActions.USERNAME_VALIDATION.RESET.create());
+    }
+    if (updateError) {
+      dispatch(AccountActions.UPDATE_ACCOUNT.RESET.create());
+    }
+  }, [dispatch, updateError, validationError]);
 
   const onSubmit = () => {
     Keyboard.dismiss();
-    if (!isUsernameUpdated) {
+    if (isUsernameUpdated) {
+      goForward();
+    } else {
       dispatch(
         AccountActions.UPDATE_ACCOUNT.START.create({username: username}),
       );
-    } else {
-      finalizeStep(user);
     }
   };
 
@@ -53,75 +73,21 @@ export const useClaimUsername = () => {
     }
   };
 
-  const onBack = () => {
-    dispatch(AccountActions.SIGN_OUT.START.create());
-  };
-
-  const resetError = () => {
-    if (validationError) {
-      dispatch(ValidationActions.USERNAME_VALIDATION.RESET.create());
-    }
-    if (updateError) {
-      dispatch(AccountActions.UPDATE_ACCOUNT.RESET.create());
-    }
-  };
-
-  const finalizeStep = useCallback(
-    (currentUser: User) => {
-      const finalizedSteps =
-        currentUser.clientData?.registrationProcessFinalizedSteps ?? [];
-
-      const steps = [...finalizedSteps];
-      if (!finalizedSteps.includes('username')) {
-        steps.push('username');
-      }
-      dispatch(
-        AccountActions.UPDATE_ACCOUNT.START.create(
-          {
-            clientData: {
-              ...currentUser.clientData,
-              registrationProcessFinalizedSteps: steps,
-            },
-          },
-          function* (freshUser) {
-            if (
-              !freshUser.clientData?.registrationProcessFinalizedSteps?.includes(
-                'username',
-              )
-            ) {
-              finalizeStep(freshUser);
-            }
-            return {retry: false};
-          },
-        ),
-      );
-      dispatch(ValidationActions.USERNAME_VALIDATION.RESET.create());
-    },
-    [dispatch],
-  );
-
   useEffect(() => {
-    if (user.username !== initialUsername.current) {
-      initialUsername.current = user.username;
-      /**
-       * Small delay here so User can see the update result
-       * (green mark) inside text input, before we go forward
-       */
-      setWaitLoading(true);
-      wait(500).then(() => {
-        finalizeStep(user);
-        setWaitLoading(false);
-      });
+    if (initialRender.current) {
+      initialRender.current = false;
+      return;
     }
-  }, [finalizeStep, user]);
+    wait(500).then(goForward);
+  }, [goForward, user.username]);
 
   return {
     username,
     error: updateError || validationError,
-    isLoading: updateLoading || waitLoading,
+    isLoading: updateLoading,
     isUsernameUpdated,
     onChangeUsername,
     onSubmit,
-    onBack,
+    goBack,
   };
 };
