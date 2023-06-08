@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {ReadMoreButton} from '@screens/News/components/FeaturedNewsArticle/components/ReadMoreButton';
 import {useReadMoreWalkthrough} from '@screens/News/components/FeaturedNewsArticle/hooks/useReadMoreWalkthrough';
@@ -65,7 +66,7 @@ export const FeaturedNewsArticle = memo(
     const {imageUrl, title, createdAt, views, viewed} = featuredNewsArticle;
 
     return (
-      <View style={styles.container}>
+      <Touchable style={styles.container} onPress={openNewsArticle}>
         <Image
           style={StyleSheet.absoluteFill}
           source={{
@@ -130,7 +131,7 @@ export const FeaturedNewsArticle = memo(
             </View>
           </View>
         </Animated.View>
-      </View>
+      </Touchable>
     );
   },
 );
