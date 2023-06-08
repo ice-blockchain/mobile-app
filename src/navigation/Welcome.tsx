@@ -14,11 +14,11 @@ import {IceBonus} from '@screens/WelcomeFlow/IceBonus';
 import {Onboarding} from '@screens/WelcomeFlow/Onboarding';
 import {SetEmail} from '@screens/WelcomeFlow/SetEmail';
 import {WhoInvitedYou} from '@screens/WelcomeFlow/WhoInvitedYou';
+import {store} from '@store/configureStore';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {isOnboardingViewedSelector} from '@store/modules/Users/selectors';
 // import {emailVerificationStepSelector} from '@store/modules/Validation/selectors'; //TODO: temp email step disabling
-import React, {useMemo, useRef} from 'react';
-import {useSelector} from 'react-redux';
+import React, {useRef} from 'react';
 
 export type WelcomeStackParamList = {
   ClaimUsername: undefined;
@@ -34,49 +34,58 @@ export type WelcomeStackParamList = {
 
 const WelcomeStack = createNativeStackNavigator<WelcomeStackParamList>();
 
-const STEPS: (keyof WelcomeStackParamList)[] = [
-  'Onboarding',
-  'ClaimUsername',
-  'WhoInvitedYou',
-  // 'SetEmail', //TODO: temp email step disabling
-  'IceBonus',
+const STEPS: {
+  name: keyof WelcomeStackParamList;
+  finished: () => boolean;
+}[] = [
+  {
+    name: 'Onboarding',
+    finished: () => {
+      const user = unsafeUserSelector(store.getState());
+      return isOnboardingViewedSelector(user.id)(store.getState());
+    },
+  },
+  {
+    name: 'ClaimUsername',
+    finished: () => {
+      return !!unsafeUserSelector(store.getState()).username;
+    },
+  },
+  {
+    name: 'WhoInvitedYou',
+    finished: () => {
+      return !!unsafeUserSelector(store.getState()).referredBy;
+    },
+  },
+  //TODO: temp email step disabling
+  // {
+  //   name: 'SetEmail',
+  //   finished: () => {
+  //     return !!unsafeUserSelector(store.getState()).email;
+  //   },
+  // },
+  {
+    name: 'IceBonus',
+    finished: () => {
+      return !!unsafeUserSelector(
+        store.getState(),
+      ).clientData?.registrationProcessFinalizedSteps?.includes('iceBonus');
+    },
+  },
 ];
 
 export function WelcomeNavigator() {
   const initializedRef = useRef(false);
-  const user: ReturnType<typeof unsafeUserSelector> =
-    useSelector(unsafeUserSelector);
-  const isOnboardingViewed = useSelector(isOnboardingViewedSelector(user.id));
-
-  // const emailVerificationStep = useSelector(emailVerificationStepSelector); //TODO: temp email step disabling
-
-  const welcomeRoute = useMemo(() => {
-    if (!isOnboardingViewed) {
-      return 'Onboarding';
-    } else if (!user.username) {
-      return 'ClaimUsername';
-    } else if (!user.referredBy) {
-      return 'WhoInvitedYou';
-    }
-    //TODO: temp email step disabling
-    // else if (!user.email) {
-    //   return emailVerificationStep === 'email'
-    //     ? 'SetEmail'
-    //     : 'ConfirmEmailLink';
-    // }
-    else {
-      return 'IceBonus';
-    }
-  }, [user, isOnboardingViewed]);
 
   /**
    * Setting initial navigation state to add an ability to go back
    */
   if (!initializedRef.current) {
-    const stepIndex = STEPS.indexOf(welcomeRoute);
+    const stepNames = STEPS.map(s => s.name);
+    const currentStepIndex = STEPS.findIndex(step => !step.finished());
     resetRoot({
-      index: stepIndex,
-      routes: STEPS.slice(0, stepIndex + 1).map(name => ({name})),
+      index: currentStepIndex,
+      routes: stepNames.slice(0, currentStepIndex + 1).map(name => ({name})),
     });
     initializedRef.current = true;
   }
