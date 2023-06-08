@@ -3,16 +3,9 @@
 import {ActivityIndicatorTheme} from '@components/ActivityIndicator';
 import {RefreshIceIcon} from '@components/RefreshControl';
 import {hapticFeedback} from '@utils/device';
-import React, {
-  cloneElement,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import React, {cloneElement, useCallback, useMemo} from 'react';
 import {
   FlatListProps,
-  Platform,
   ScrollViewProps,
   StyleProp,
   View,
@@ -21,7 +14,6 @@ import {
 import {Gesture, GestureDetector} from 'react-native-gesture-handler';
 import Animated, {
   AnimateProps,
-  cancelAnimation,
   Extrapolate,
   interpolate,
   runOnJS,
@@ -29,7 +21,7 @@ import Animated, {
   useAnimatedScrollHandler,
   useAnimatedStyle,
   useSharedValue,
-  withTiming,
+  withSpring,
 } from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
@@ -53,14 +45,6 @@ interface Props {
  */
 const REFRESH_THRESHOLD = rem(50);
 
-/**
- * On Android scrollable view will be scrolled a little bit even pan gesture becomes active
- */
-const CONTENT_SCROLLED_THRESHOLD = Platform.select({
-  android: 10,
-  default: 0,
-});
-
 export const PullToRefreshContainer = ({
   style,
   theme,
@@ -69,42 +53,20 @@ export const PullToRefreshContainer = ({
   children,
   onScrollTranslateY,
 }: Props) => {
-  const [isRefreshScrolled, setRefreshScrolled] = useState(false);
-
-  const [isContentScrolled, setContentScrolled] = useState(false);
-
   const translateYPanGesture = useSharedValue(0);
-
   const translateYScrollable = useSharedValue(0);
-
-  const panEnabled = !refreshing && !isContentScrolled;
-
-  const scrollEnabled = refreshing || !isRefreshScrolled;
 
   const scrollHandler = useAnimatedScrollHandler(({contentOffset: {y}}) => {
     translateYScrollable.value = y;
-
     if (onScrollTranslateY) {
       onScrollTranslateY.value = y;
     }
-  });
+  }, []);
 
   const onRefresh = useCallback(() => {
     hapticFeedback();
-
     onRefreshProps();
   }, [onRefreshProps]);
-
-  const runStaticPositionAnimation = useCallback(() => {
-    cancelAnimation(translateYPanGesture);
-
-    translateYPanGesture.value = withTiming(
-      refreshing && !isContentScrolled ? -REFRESH_THRESHOLD : 0,
-      {
-        duration: 400,
-      },
-    );
-  }, [isContentScrolled, refreshing, translateYPanGesture]);
 
   const gesture = useMemo(() => {
     const panGesture = Gesture.Pan()
@@ -112,35 +74,19 @@ export const PullToRefreshContainer = ({
       .failOffsetX([-10, 10])
       .onUpdate(({translationY}) => {
         translateYPanGesture.value = interpolate(
-          translationY,
-          [0, REFRESH_THRESHOLD],
-          [0, -REFRESH_THRESHOLD],
-          {
-            extrapolateLeft: Extrapolate.CLAMP,
-          },
+          translationY - translateYScrollable.value,
+          [0, REFRESH_THRESHOLD * 10],
+          [0, -REFRESH_THRESHOLD * 3],
+          Extrapolate.CLAMP,
         );
       })
       .onEnd(() => {
-        runOnJS(runStaticPositionAnimation)();
-      })
-      .enabled(panEnabled);
+        translateYPanGesture.value = withSpring(0);
+      });
 
-    const nativeGesture = Gesture.Native().enabled(scrollEnabled);
-
-    if (isContentScrolled && Platform.OS === 'ios') {
-      return nativeGesture;
-    }
-
+    const nativeGesture = Gesture.Native();
     return Gesture.Simultaneous(panGesture, nativeGesture);
-  }, [
-    isContentScrolled,
-    panEnabled,
-    runStaticPositionAnimation,
-    scrollEnabled,
-    translateYPanGesture,
-  ]);
-
-  useEffect(runStaticPositionAnimation, [runStaticPositionAnimation]);
+  }, [translateYPanGesture, translateYScrollable]);
 
   useAnimatedReaction(
     () => translateYPanGesture.value * -1 > REFRESH_THRESHOLD * 1.5,
@@ -152,24 +98,6 @@ export const PullToRefreshContainer = ({
     [onRefresh],
   );
 
-  useAnimatedReaction(
-    () => translateYScrollable.value > CONTENT_SCROLLED_THRESHOLD,
-    (result, previous) => {
-      if (result !== previous) {
-        runOnJS(setContentScrolled)(result);
-      }
-    },
-  );
-
-  useAnimatedReaction(
-    () => translateYPanGesture.value !== 0,
-    (result, previous) => {
-      if (result !== previous) {
-        runOnJS(setRefreshScrolled)(result);
-      }
-    },
-  );
-
   const containerAnimatedStyle = useAnimatedStyle(() => {
     return {
       flex: 1,
@@ -179,7 +107,7 @@ export const PullToRefreshContainer = ({
         },
       ],
     };
-  });
+  }, []);
 
   const childrenScrollable = useMemo(
     () =>
@@ -189,9 +117,8 @@ export const PullToRefreshContainer = ({
         onScroll: scrollHandler,
         bounces: false,
         alwaysBounceVertical: false,
-        scrollEnabled,
       }),
-    [children, containerAnimatedStyle, scrollEnabled, scrollHandler],
+    [children, containerAnimatedStyle, scrollHandler],
   );
 
   return (
