@@ -15,7 +15,7 @@ import {Onboarding} from '@screens/WelcomeFlow/Onboarding';
 import {SetEmail} from '@screens/WelcomeFlow/SetEmail';
 import {WhoInvitedYou} from '@screens/WelcomeFlow/WhoInvitedYou';
 import {store} from '@store/configureStore';
-import {unsafeUserSelector} from '@store/modules/Account/selectors';
+import {userSelector} from '@store/modules/Account/selectors';
 import {isOnboardingViewedSelector} from '@store/modules/Users/selectors';
 // import {emailVerificationStepSelector} from '@store/modules/Validation/selectors'; //TODO: temp email step disabling
 import React, {useRef} from 'react';
@@ -44,35 +44,35 @@ export const WELCOME_STEPS: {
   {
     name: 'Onboarding',
     finished: () => {
-      const user = unsafeUserSelector(store.getState());
-      return isOnboardingViewedSelector(user.id)(store.getState());
+      const user = userSelector(store.getState());
+      return isOnboardingViewedSelector(user?.id)(store.getState());
     },
   },
   {
     name: 'ClaimUsername',
     finished: () => {
-      return !!unsafeUserSelector(store.getState()).username;
+      return !!userSelector(store.getState())?.username;
     },
   },
   {
     name: 'WhoInvitedYou',
     finished: () => {
-      return !!unsafeUserSelector(store.getState()).referredBy;
+      return !!userSelector(store.getState())?.referredBy;
     },
   },
   //TODO: temp email step disabling
   // {
   //   name: 'SetEmail',
   //   finished: () => {
-  //     return !!unsafeUserSelector(store.getState()).email;
+  //     return !!userSelector(store.getState())?.email;
   //   },
   // },
   {
     name: 'IceBonus',
     finished: () => {
-      return !!unsafeUserSelector(
+      return !!userSelector(
         store.getState(),
-      ).clientData?.registrationProcessFinalizedSteps?.includes('iceBonus');
+      )?.clientData?.registrationProcessFinalizedSteps?.includes('iceBonus');
     },
   },
 ];

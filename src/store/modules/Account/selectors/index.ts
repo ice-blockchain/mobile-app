@@ -1,17 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {User} from '@api/user/types';
-import {isOnboardingViewedSelector} from '@store/modules/Users/selectors';
+import {WELCOME_STEPS} from '@navigation/Welcome';
 import {RootState} from '@store/rootReducer';
 import {getLocale} from '@translations/i18n';
 import {SupportedLocale} from '@translations/localeConfig';
-import {difference} from 'lodash';
-
-const REQUIRED_REGISTRATION_FIELDS: (keyof User)[] = [
-  'username',
-  'referredBy',
-  // 'email', TODO: temp email step disabling
-];
 
 export const userIdSelector = (state: RootState) =>
   state.account.user?.id ?? '';
@@ -45,15 +37,8 @@ export const userInfoSelector = (state: RootState) => state.account.userInfo;
 
 export const isAdminSelector = (state: RootState) => state.account.isAdmin;
 
-export const isRegistrationCompleteSelector = (state: RootState) => {
-  const user = userSelector(state);
-  const isOnboardingViewed = isOnboardingViewedSelector(user?.id)(state);
-  const isIceBonusViewed =
-    !!user?.clientData?.registrationProcessFinalizedSteps?.includes('iceBonus');
-  const isRequiredAuthStepsPassed =
-    difference(REQUIRED_REGISTRATION_FIELDS, Object.keys(user ?? {})).length ===
-    0;
-  return isRequiredAuthStepsPassed && isOnboardingViewed && isIceBonusViewed;
+export const isRegistrationCompleteSelector = () => {
+  return WELCOME_STEPS.every(step => step.finished());
 };
 
 export const isPrivacyInfoShownSelector = (state: RootState) =>
