@@ -30,6 +30,8 @@ import {AppState} from 'react-native';
 import {SagaIterator} from 'redux-saga';
 import {all, call, cancel, spawn, take} from 'redux-saga/effects';
 
+import {rootBackgroundTasksSaga} from './modules/BackgroundTasks/sagas';
+
 export function* rootSaga(): SagaIterator {
   const sagas = [
     rootAuthSaga,
@@ -54,6 +56,7 @@ export function* rootSaga(): SagaIterator {
     rootAppUpdateSaga,
     rootNotificationsSaga,
     rootInAppNotificationsSaga,
+    rootBackgroundTasksSaga,
   ];
   const spawnedSagas = yield all([
     ...sagas.map(saga =>
