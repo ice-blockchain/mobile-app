@@ -14,7 +14,6 @@ const UPDATE_DEVICE_METADATA = createAction('UPDATE_DEVICE_METADATA', {
 });
 
 const INIT_DEVICE = createAction('INIT_DEVICE', {
-  START: true,
   SUCCESS: (deviceUniqueId: string) => ({
     deviceUniqueId,
   }),
