@@ -75,8 +75,8 @@ export const PullToRefreshContainer = ({
       .onUpdate(({translationY}) => {
         translateYPanGesture.value = interpolate(
           translationY - translateYScrollable.value,
-          [0, REFRESH_THRESHOLD * 10],
-          [0, -REFRESH_THRESHOLD * 4],
+          [0, REFRESH_THRESHOLD, REFRESH_THRESHOLD * 10],
+          [0, -REFRESH_THRESHOLD, -REFRESH_THRESHOLD * 4],
           Extrapolate.CLAMP,
         );
       })

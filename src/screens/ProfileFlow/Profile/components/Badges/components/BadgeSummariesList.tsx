@@ -52,14 +52,14 @@ export const BadgeSummariesList = ({
 
   const renderItem: ListRenderItem<BadgeSummary> = useCallback(
     ({item, index}) => {
-      if (!item || item === null) {
+      if (!item) {
         if (areBadgesHidden) {
           return (
             <BadgeCard
               style={index === 0 && styles.firstItem}
               index={index}
               hidden={true}
-              isProfilePrivacyEditMode={false}
+              isProfilePrivacyEditMode={isProfilePrivacyEditMode}
               isPlaceholder={true}
             />
           );
@@ -104,8 +104,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: rem(10),
     paddingBottom: rem(10),
     backgroundColor: COLORS.white02opacity,
-    borderTopLeftRadius: rem(20),
-    borderBottomLeftRadius: rem(20),
+    borderRadius: rem(20),
   },
   firstItem: {
     marginLeft: 0, // margin 0 for the first item in the badges list

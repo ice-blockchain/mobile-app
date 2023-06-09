@@ -38,7 +38,7 @@ export const ProfilePrivacyEditStep1 = () => {
           description={t('profile_privacy_edit.step1.description')}
         />
         <View style={styles.ladderContainer}>
-          {user && <LadderBar isProfilePrivacyEditMode={true} user={user} />}
+          {user && <LadderBar isProfilePrivacyEditMode user={user} />}
         </View>
         <NextButton onPress={goNext} />
       </ImageBackground>
@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
   },
   descriptionContainer: {
     marginTop: rem(84),
+    paddingHorizontal: rem(48),
   },
   cancelButton: {
     marginTop: rem(40),

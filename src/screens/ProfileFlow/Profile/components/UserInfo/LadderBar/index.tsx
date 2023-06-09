@@ -41,7 +41,8 @@ export const LadderBar = memo(
           privacyType="globalRank"
           hidden={
             isOwner
-              ? hiddenElements.includes('globalRank') && !isPrivacyInfoShown
+              ? hiddenElements.includes('globalRank') &&
+                (!isPrivacyInfoShown || isProfilePrivacyEditMode)
               : hiddenElements.includes('globalRank')
           }
         />
@@ -53,7 +54,8 @@ export const LadderBar = memo(
           privacyType="referralCount"
           hidden={
             isOwner
-              ? hiddenElements.includes('referralCount') && !isPrivacyInfoShown
+              ? hiddenElements.includes('referralCount') &&
+                (!isPrivacyInfoShown || isProfilePrivacyEditMode)
               : hiddenElements.includes('referralCount')
           }
         />
@@ -65,7 +67,8 @@ export const LadderBar = memo(
           privacyType="level"
           hidden={
             isOwner
-              ? hiddenElements.includes('level') && !isPrivacyInfoShown
+              ? hiddenElements.includes('level') &&
+                (!isPrivacyInfoShown || isProfilePrivacyEditMode)
               : hiddenElements.includes('level')
           }
         />

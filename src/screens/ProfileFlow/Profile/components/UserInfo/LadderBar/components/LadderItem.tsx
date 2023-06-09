@@ -10,6 +10,12 @@ import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import Animated, {
+  FadeIn,
+  FadeOut,
+  ZoomInEasyDown,
+  ZoomOutEasyDown,
+} from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -65,18 +71,23 @@ export const LadderItem = memo(
           </Text>
           <View style={styles.ladderItem}>
             {hidden ? (
-              <View style={styles.hiddenView}>
+              <Animated.View
+                entering={ZoomInEasyDown.springify().damping(50).stiffness(200)}
+                exiting={ZoomOutEasyDown.springify().damping(50).stiffness(200)}
+                style={styles.hiddenView}>
                 <ClosedEye />
-              </View>
+              </Animated.View>
             ) : (
-              <Text
+              <Animated.Text
+                entering={FadeIn.springify().damping(50).stiffness(200)}
+                exiting={FadeOut.springify().damping(50).stiffness(200)}
                 style={
                   isProfilePrivacyEditMode
                     ? styles.textPrivacyEdit
                     : styles.text
                 }>
                 {animatedValue}
-              </Text>
+              </Animated.Text>
             )}
           </View>
         </Touchable>
@@ -87,8 +98,7 @@ export const LadderItem = memo(
 
 const styles = StyleSheet.create({
   outerContainer: {
-    paddingHorizontal: rem(8),
-    paddingVertical: rem(2),
+    padding: rem(8),
     borderRadius: rem(16),
   },
   editModeOuterContainer: {

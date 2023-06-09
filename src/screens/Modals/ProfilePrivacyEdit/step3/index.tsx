@@ -40,6 +40,7 @@ export const ProfilePrivacyEditStep3 = () => {
             isProfilePrivacyEditMode
             loading={false}
             data={badgesSummary}
+            user={authUser}
           />
         </View>
         <NextButton
@@ -64,11 +65,11 @@ const styles = StyleSheet.create({
   },
   badgesContainer: {
     marginTop: rem(44),
-    height: rem(210),
     marginBottom: rem(40),
   },
   descriptionContainer: {
     marginTop: rem(50),
+    paddingHorizontal: rem(60),
   },
   cancelButton: {
     marginTop: rem(140),
