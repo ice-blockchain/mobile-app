@@ -2,7 +2,10 @@
 
 import {Api} from '@api/index';
 import {NewsArticle} from '@api/news/types';
-import {appLocaleSelector} from '@store/modules/Account/selectors';
+import {
+  appLocaleSelector,
+  userSelector,
+} from '@store/modules/Account/selectors';
 import {NewsActions} from '@store/modules/News/actions';
 import {NewsSelectors} from '@store/modules/News/selectors';
 import {getErrorMessage} from '@utils/errors';
@@ -14,6 +17,8 @@ export function* loadNewsSaga(
   action: ReturnType<typeof NewsActions.NEWS_LOAD.START.create>,
 ) {
   const {isRefresh} = action.payload;
+
+  const user: SagaReturnType<typeof userSelector> = yield select(userSelector);
 
   const locale: SagaReturnType<typeof appLocaleSelector> = yield select(
     appLocaleSelector,
@@ -30,6 +35,7 @@ export function* loadNewsSaga(
         language: locale,
         limit: NEWS_LOAD_LIMIT,
         offset: isRefresh ? 0 : pageNumber * NEWS_LOAD_LIMIT,
+        createdAfter: user?.createdAt,
       },
     );
 
@@ -44,6 +50,7 @@ export function* loadNewsSaga(
           language: locale,
           limit: 1,
           offset: 0,
+          createdAfter: user?.createdAt,
         },
       );
 
