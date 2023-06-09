@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {logError} from '@services/logging';
 import {
   BACKGROUND_TASKS,
   BackgroundTask,
@@ -16,7 +17,10 @@ export function* initBackgroundTasksSaga() {
         case BackgroundTask.ContactsSync: {
           console.log(taskId);
           // do stuff
+          break;
         }
+        default:
+          logError(new Error(`Unknown background task with id ${taskId}`));
       }
       BackgroundFetch.finish(taskId);
     },
