@@ -20,6 +20,7 @@
 #import <ReactNativeMoEngage/MoEngageInitializer.h>
 #import <MoEngageSDK/MoEngageSDK.h>
 #import "ReactNativeConfig.h"
+#import <TSBackgroundFetch/TSBackgroundFetch.h>
 
 #if RCT_NEW_ARCH_ENABLED
 #import <React/CoreModulesPlugins.h>
@@ -111,6 +112,9 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
   [self.window makeKeyAndVisible];
 
   [RNBootSplash initWithStoryboard:@"LaunchScreen" rootView:rootView];
+
+  // https://github.com/transistorsoft/react-native-background-fetch/blob/master/docs/INSTALL-AUTO-IOS.md
+  [[TSBackgroundFetch sharedInstance] didFinishLaunching];
 
   return YES;
 }

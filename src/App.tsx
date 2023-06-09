@@ -1,10 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {commonStyles} from '@constants/styles';
 import {AnimatedSplash} from '@navigation/components/AnimatedSplash';
 import {Router} from '@navigation/Router';
 import {persistor, store} from '@store/configureStore';
 import React from 'react';
-import {StatusBar, StyleSheet} from 'react-native';
+import {StatusBar} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {Provider} from 'react-redux';
@@ -16,7 +17,7 @@ export function App() {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <StatusBar translucent backgroundColor="transparent" />
-          <GestureHandlerRootView style={styles.container}>
+          <GestureHandlerRootView style={commonStyles.flexOne}>
             <Router />
           </GestureHandlerRootView>
         </PersistGate>
@@ -25,7 +26,3 @@ export function App() {
     </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {flex: 1},
-});

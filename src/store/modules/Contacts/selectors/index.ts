@@ -2,4 +2,7 @@
 
 import {RootState} from '@store/rootReducer';
 
-export const contactsSelector = (state: RootState) => state.team.contacts;
+export const contactsSelector = (state: RootState) => state.contacts.contacts;
+
+export const syncedContactsNumbersSelector = (state: RootState) =>
+  state.contacts.syncedContactsPhoneNumbers;

@@ -59,12 +59,7 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
         Api.user.getUserById,
         user.id,
       );
-      yield put(
-        AccountActions.UPDATE_ACCOUNT.SUCCESS.create(
-          freshUser,
-          action.payload.userInfo,
-        ),
-      );
+      yield put(AccountActions.GET_ACCOUNT.SUCCESS.create(freshUser));
       const {retry} = yield action.payload.raceConditionStrategy(freshUser);
       if (retry) {
         yield put(

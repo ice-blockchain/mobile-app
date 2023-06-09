@@ -7,7 +7,7 @@ import {analyticsReducer} from '@store/modules/Analytics/reducer';
 import {appCommonReducer} from '@store/modules/AppCommon/reducer';
 import {appUpdateReducer} from '@store/modules/AppUpdate/reducer';
 import {collectionsReducer} from '@store/modules/Collections/reducer';
-import {teamReducer} from '@store/modules/Contacts/reducer';
+import {contactsReducer} from '@store/modules/Contacts/reducer';
 import {devicesReducer} from '@store/modules/Devices/reducer';
 import {inAppNotificationsReducer} from '@store/modules/InAppNotifications/reducer';
 import {linkingReducer} from '@store/modules/Linking/reducer';
@@ -34,7 +34,7 @@ export const rootReducer = combineReducers({
   account: accountReducer,
   stats: statsReducer,
   news: newsReducer,
-  team: teamReducer,
+  contacts: contactsReducer,
   validation: validationReducer,
   collections: collectionsReducer,
   referrals: referralsReducer,

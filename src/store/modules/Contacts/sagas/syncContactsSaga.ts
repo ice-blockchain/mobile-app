@@ -6,139 +6,149 @@ import {
   isAuthorizedSelector,
   userSelector,
 } from '@store/modules/Account/selectors';
-import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
+import {isAppInitializedSelector} from '@store/modules/AppCommon/selectors';
+import {BackgroundTasksActions} from '@store/modules/BackgroundTasks/actions';
 import {ContactsActions} from '@store/modules/Contacts/actions';
-import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';
+import {syncedContactsNumbersSelector} from '@store/modules/Contacts/selectors';
+import {
+  isPermissionFetchedSelector,
+  isPermissionGrantedSelector,
+} from '@store/modules/Permissions/selectors';
 import {waitForSelector} from '@store/utils/sagas/effects';
 import {getErrorMessage} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
-import {runInChunks} from '@utils/promise';
-import {Contact, getAll} from 'react-native-contacts';
-import {call, fork, put, SagaReturnType, select} from 'redux-saga/effects';
+import {getChunks, runInChunks} from '@utils/promise';
+import {getAllWithoutPhotos} from 'react-native-contacts';
+import {
+  call,
+  put,
+  race,
+  SagaReturnType,
+  select,
+  take,
+} from 'redux-saga/effects';
 
-export function* syncContactsSaga() {
+export const CONTACTS_PHONE_NUMBERS_DIVIDER = ',';
+
+export function* syncContactsSaga(
+  action: ReturnType<
+    typeof BackgroundTasksActions.SYNC_CONTACTS_BACKGROUND_TASK.STATE.create
+  >,
+) {
   try {
-    yield call(waitForSelector, state => {
-      const hasPermissions = isPermissionGrantedSelector('contacts')(state);
-      const isAuthorized = isAuthorizedSelector(state);
-      const isAppActive = isAppActiveSelector(state);
-      return hasPermissions && isAuthorized && isAppActive;
-    });
+    yield call(waitForSelector, isAppInitializedSelector);
+    yield call(waitForSelector, isPermissionFetchedSelector('contacts'));
+
+    const isAuthorized: SagaReturnType<typeof isAuthorizedSelector> =
+      yield select(isAuthorizedSelector);
+    const hasPermissions: SagaReturnType<
+      ReturnType<typeof isPermissionGrantedSelector>
+    > = yield select(isPermissionGrantedSelector('contacts'));
+
+    if (!isAuthorized || !hasPermissions) {
+      return;
+    }
 
     const user: User = yield select(userSelector);
 
-    const contacts: SagaReturnType<typeof getAll> = yield call(getAll);
+    const notSyncedPhoneNumbers: SagaReturnType<
+      typeof getNotSyncedPhoneNumbers
+    > = yield call(getNotSyncedPhoneNumbers);
 
-    const agendaPhoneNumbers: string[] = [];
-    const filteredContacts: Contact[] = [];
+    if (!notSyncedPhoneNumbers.length) {
+      return;
+    }
 
+    const notSyncedPhoneNumberHashes: string[] = [];
+
+    // Run e164PhoneNumber and hashPhoneNumber in chunks to avoid ANR
     yield runInChunks(
-      contacts,
-      function (contact) {
-        if (
-          (
-            (contact.givenName ?? '') +
-            (contact.familyName ?? '') +
-            (contact.middleName ?? '')
-          ).trim() === ''
-        ) {
-          return;
-        }
-
-        let hasUserNumber = false;
-
-        const validNumbers = contact.phoneNumbers.filter(record => {
-          if (record.number?.trim()?.length) {
-            const e164FormattedForHash = e164PhoneNumber(
-              record.number,
-              user.country,
-            );
-            if (e164FormattedForHash === user.phoneNumber) {
-              hasUserNumber = true;
-            }
-            if (e164FormattedForHash) {
-              agendaPhoneNumbers.push(e164FormattedForHash);
-              return true;
-            }
-          }
-          return false;
-        });
-
-        if (hasUserNumber) {
-          return;
-        }
-
-        if (validNumbers.length > 0) {
-          filteredContacts.push({
-            ...contact,
-            phoneNumbers: validNumbers,
-          });
+      notSyncedPhoneNumbers,
+      async phoneNumber => {
+        const e164FormattedForHash = e164PhoneNumber(phoneNumber, user.country);
+        if (e164FormattedForHash) {
+          const hash = await hashPhoneNumber(e164FormattedForHash);
+          notSyncedPhoneNumberHashes.push(hash);
         }
       },
       200,
     );
 
-    const sortedFilteredContacts = filteredContacts.sort(contactsComparator);
+    const updateChunks = getChunks(notSyncedPhoneNumberHashes, 500);
 
-    yield fork(updateAgendaPhoneNumberHashes, agendaPhoneNumbers, user);
+    while (updateChunks.length) {
+      const updateChunk = updateChunks.pop() ?? [];
+      yield put(
+        AccountActions.UPDATE_ACCOUNT.START.create({
+          agendaPhoneNumberHashes: [...updateChunk].join(
+            CONTACTS_PHONE_NUMBERS_DIVIDER,
+          ),
+        }),
+      );
+
+      const {error} = yield race({
+        success: take(AccountActions.UPDATE_ACCOUNT.SUCCESS.type),
+        error: take([
+          AccountActions.UPDATE_ACCOUNT.FAILED.type,
+          AccountActions.UPDATE_ACCOUNT.RESET.type,
+        ]),
+      });
+
+      if (error) {
+        throw new Error('Error setting agendaPhoneNumberHashes');
+      }
+    }
 
     yield put(
-      ContactsActions.SYNC_CONTACTS.SUCCESS.create(sortedFilteredContacts),
+      ContactsActions.SYNC_CONTACTS.SUCCESS.create({
+        syncedContactsPhoneNumbers: notSyncedPhoneNumbers.join(
+          CONTACTS_PHONE_NUMBERS_DIVIDER,
+        ),
+      }),
     );
   } catch (error) {
     yield put(
       ContactsActions.SYNC_CONTACTS.FAILED.create(getErrorMessage(error)),
     );
     throw error;
+  } finally {
+    if (
+      action.type ===
+      BackgroundTasksActions.SYNC_CONTACTS_BACKGROUND_TASK.STATE.type
+    ) {
+      action.payload.finishTask();
+    }
   }
 }
 
-function* updateAgendaPhoneNumberHashes(
-  agendaPhoneNumbers: string[],
-  user: User,
-): Generator<unknown, void, string[]> {
-  const phoneNumberHashes = new Set(user.agendaPhoneNumberHashes?.split(','));
-
-  const agendaPhoneNumberHashes: string[] = yield runInChunks(
-    agendaPhoneNumbers,
-    hashPhoneNumber,
-    200,
+function* getNotSyncedPhoneNumbers() {
+  const contacts: SagaReturnType<typeof getAllWithoutPhotos> = yield call(
+    getAllWithoutPhotos,
   );
 
-  const numberOfHashes = phoneNumberHashes.size;
-  agendaPhoneNumberHashes.forEach(hash => phoneNumberHashes.add(hash));
+  const contactsPhoneNumbers = contacts.reduce<Set<string>>(
+    (phoneNumbers, contact) => {
+      contact.phoneNumbers.forEach(record => {
+        if (record.number) {
+          phoneNumbers.add(record.number);
+        }
+      });
+      return phoneNumbers;
+    },
+    new Set(),
+  );
 
-  if (numberOfHashes !== phoneNumberHashes.size) {
-    yield put(
-      AccountActions.UPDATE_ACCOUNT.START.create(
-        {
-          agendaPhoneNumberHashes: [...phoneNumberHashes].join(','),
-        },
-        function* (freshUser) {
-          if (
-            freshUser.agendaPhoneNumberHashes?.length !==
-            user.agendaPhoneNumberHashes?.length
-          ) {
-            yield call(
-              updateAgendaPhoneNumberHashes,
-              agendaPhoneNumberHashes,
-              freshUser,
-            );
-            return {retry: false};
-          }
-          return {retry: true};
-        },
-      ),
-    );
-  }
-}
+  const syncedPhoneNumbersRaw: ReturnType<
+    typeof syncedContactsNumbersSelector
+  > = yield select(syncedContactsNumbersSelector);
 
-function contactsComparator(c1: Contact, c2: Contact) {
-  const displayName1 = ((c1.givenName || c1.familyName || c1.middleName) ?? '')
-    .toLowerCase()
-    .trim();
-  const displayName2 = ((c2.givenName || c2.familyName || c2.middleName) ?? '')
-    .toLowerCase()
-    .trim();
-  return displayName1.localeCompare(displayName2);
+  const syncedPhoneNumbers = new Set(
+    syncedPhoneNumbersRaw?.length
+      ? syncedPhoneNumbersRaw.split(CONTACTS_PHONE_NUMBERS_DIVIDER)
+      : null,
+  );
+
+  return [...contactsPhoneNumbers].filter(
+    contactsPhoneNumber => !syncedPhoneNumbers.has(contactsPhoneNumber),
+  );
 }

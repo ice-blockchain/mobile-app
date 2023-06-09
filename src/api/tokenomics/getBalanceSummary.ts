@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {DEFAULT_BACK_OFF_OPTIONS, get, isApiError} from '@api/client';
+import {get, isApiError} from '@api/client';
+import {DEFAULT_BACK_OFF_OPTIONS} from '@api/client/backOff';
 import {BalanceSummary} from '@api/tokenomics/types';
 
 interface Params {
