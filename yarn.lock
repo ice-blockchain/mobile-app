@@ -8334,11 +8334,6 @@ react-native-pager-view@6.1.1:
   resolved "https://registry.yarnpkg.com/react-native-pager-view/-/react-native-pager-view-6.1.1.tgz#e396b0c78d74931a92d1c9bf28c450eb356b904d"
   integrity sha512-4WqR0YWBjaUtc3iPVk8w6wsTsMq+r0plNiXdqPXOiUdQIhxKfsP1iqb6hRzdeJKOo8UH7RCP6zI7dxdFEAXzrw==
 
-react-native-performance-flipper-reporter@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-performance-flipper-reporter/-/react-native-performance-flipper-reporter-4.0.0.tgz#a53267d760fbb02b34d857c26222f5bfb5662d46"
-  integrity sha512-VqG3uetTraW6eeho1SY8v8ZTWMELd/ix84V6+ZiFkdvWVWVTKp6JfFqHHXt0z4Gfp1sfaKnaFytNG+b3jDP+ZQ==
-
 react-native-permissions@^3.6.1:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-3.6.1.tgz#73adcc1cef8cd57a9ef167b4507405f4ff5749c4"
