@@ -7,8 +7,6 @@ apply plugin: 'com.google.gms.google-services'
 project.ext.defaultEnvFile = ".env.app"
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
-apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
-
 import com.android.build.OutputFile
 import org.apache.tools.ant.taskdefs.condition.Os
 

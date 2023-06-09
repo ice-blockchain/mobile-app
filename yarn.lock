@@ -1614,13 +1614,6 @@
   resolved "https://registry.yarnpkg.com/@react-native-firebase/messaging/-/messaging-16.4.6.tgz#dd1a1eccff39eac6cd201792c388fc11afd6b4bf"
   integrity sha512-5XHc++UxK+wEYifyovemr+K5aUpcDuqzGPAqc2tqrVxtsELmGi9pCOFbCuFhkg5DzNGToNT9Z79DTd+XLCVemA==
 
-"@react-native-firebase/perf@16.4.6":
-  version "16.4.6"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/perf/-/perf-16.4.6.tgz#4f6116451f9a299f4d0888375730b9dd01df1ac9"
-  integrity sha512-CC8TdZ2jA6Qomb8BhgBYTQYrE4EX4mT1DPImWzaPea+mbs8cT6wWOFT8h8PxzOC7510WqzX0oJpMIedogj9vNA==
-  dependencies:
-    "@expo/config-plugins" "^5.0.4"
-
 "@react-native-google-signin/google-signin@^8.2.1":
   version "8.2.1"
   resolved "https://registry.yarnpkg.com/@react-native-google-signin/google-signin/-/google-signin-8.2.1.tgz#a37362e630302da9ff820895ab8cf32acedd66dc"
@@ -2103,25 +2096,10 @@
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
   integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
 
-"@types/react-native-vector-icons@^6.4.13":
-  version "6.4.13"
-  resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.13.tgz#28b34d15094e040718beefb67cb3eff0c4994cb6"
-  integrity sha512-1PqFoKuXTSzMHwGMAr+REdYJBQAbe9xrww3ecZR0FsHcD1K+vGS/rxuAriL4rsI6+p69sZQjDzpEVAbDQcjSwA==
-  dependencies:
-    "@types/react" "*"
-    "@types/react-native" "^0.70"
-
 "@types/react-native@0.70.6":
   version "0.70.6"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.70.6.tgz#0d1bc3014111f64f13e0df643aec2ab03f021fdb"
   integrity sha512-ynQ2jj0km9d7dbnyKqVdQ6Nti7VQ8SLTA/KKkkS5+FnvGyvij2AOo1/xnkBR/jnSNXuzrvGVzw2n0VWfppmfKw==
-  dependencies:
-    "@types/react" "*"
-
-"@types/react-native@^0.70":
-  version "0.70.14"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.70.14.tgz#8619b8c94296f6456c5362d74a3d1b4fad3f54ab"
-  integrity sha512-Kwc+BYBrnDqvacNxKp1UtcZJnJJnTih2NYmi/ieAKlHdxEPN6sYMwmIwgHdoLHggvml6bf3DYRaH2jt+gzaLjw==
   dependencies:
     "@types/react" "*"
 
@@ -8360,11 +8338,6 @@ react-native-performance-flipper-reporter@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-native-performance-flipper-reporter/-/react-native-performance-flipper-reporter-4.0.0.tgz#a53267d760fbb02b34d857c26222f5bfb5662d46"
   integrity sha512-VqG3uetTraW6eeho1SY8v8ZTWMELd/ix84V6+ZiFkdvWVWVTKp6JfFqHHXt0z4Gfp1sfaKnaFytNG+b3jDP+ZQ==
-
-react-native-performance@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-performance/-/react-native-performance-4.0.0.tgz#43a5a44d042037288234c829e790b113b5253c43"
-  integrity sha512-GgRNl52ivoq8gNSzFlapIc8ywszGJtQsoUZxo4bvt+xGcUIYecp93oDt88x4te637qjeT+FabXTtau66EFbf7g==
 
 react-native-permissions@^3.6.1:
   version "3.6.1"
