@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {WelcomeStackParamList} from '@navigation/Welcome';
+import {WELCOME_STEPS, WelcomeStackParamList} from '@navigation/Welcome';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {
@@ -40,9 +40,11 @@ export const useFinishOnboarding = () => {
   );
 
   const finishOnboarding = useCallback(() => {
-    //TODO:: get from util, cuz it's not always ClaimUsername
-    navigation.navigate('ClaimUsername');
-    dispatch(UsersActions.UPDATE_VIEWED_ONBOARDINGS.STATE.create(user.id));
+    const nextStep = WELCOME_STEPS.find(step => !step.finished());
+    if (nextStep) {
+      navigation.navigate(nextStep.name);
+      dispatch(UsersActions.UPDATE_VIEWED_ONBOARDINGS.STATE.create(user.id));
+    }
   }, [navigation, dispatch, user.id]);
 
   const getProgressPercentage = (currentPage: number) => {

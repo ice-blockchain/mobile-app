@@ -34,8 +34,11 @@ export type WelcomeStackParamList = {
 
 const WelcomeStack = createNativeStackNavigator<WelcomeStackParamList>();
 
-const STEPS: {
-  name: keyof WelcomeStackParamList;
+export const WELCOME_STEPS: {
+  name: keyof Pick<
+    WelcomeStackParamList,
+    'Onboarding' | 'ClaimUsername' | 'WhoInvitedYou' | 'SetEmail' | 'IceBonus'
+  >;
   finished: () => boolean;
 }[] = [
   {
@@ -81,8 +84,8 @@ export function WelcomeNavigator() {
    * Setting initial navigation state to add an ability to go back
    */
   if (!initializedRef.current) {
-    const stepNames = STEPS.map(s => s.name);
-    const currentStepIndex = STEPS.findIndex(step => !step.finished());
+    const stepNames = WELCOME_STEPS.map(s => s.name);
+    const currentStepIndex = WELCOME_STEPS.findIndex(step => !step.finished());
     resetRoot({
       index: currentStepIndex,
       routes: stepNames.slice(0, currentStepIndex + 1).map(name => ({name})),
