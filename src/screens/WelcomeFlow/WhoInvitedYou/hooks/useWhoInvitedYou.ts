@@ -10,7 +10,7 @@ import {
   isSuccessSelector,
 } from '@store/modules/UtilityProcessStatuses/selectors';
 import {ValidationActions} from '@store/modules/Validation/actions';
-import {useCallback, useEffect, useState} from 'react';
+import {useCallback, useEffect, useRef, useState} from 'react';
 import {Keyboard} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {wait} from 'rn-units';
@@ -45,6 +45,7 @@ export const useWhoInvitedYou = () => {
     isLoadingSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
   );
 
+  const initialRender = useRef(true);
   const [refUsername, setRefUsername] = useState('');
 
   const goForward = useCallback(() => {
@@ -86,6 +87,10 @@ export const useWhoInvitedYou = () => {
   };
 
   useEffect(() => {
+    if (initialRender.current) {
+      initialRender.current = false;
+      return;
+    }
     if (isReferralUpdated) {
       wait(500).then(goForward);
     }
