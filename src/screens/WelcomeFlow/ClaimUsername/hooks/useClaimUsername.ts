@@ -15,10 +15,6 @@ import {Keyboard} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {wait} from 'rn-units';
 
-const currentStepIndex = WELCOME_STEPS.findIndex(
-  step => step.name === 'ClaimUsername',
-);
-
 export const useClaimUsername = () => {
   const dispatch = useDispatch();
   const navigation =
@@ -41,7 +37,10 @@ export const useClaimUsername = () => {
   const isUsernameUpdated = !!username && username === user.username;
 
   const goForward = useCallback(() => {
-    navigation.navigate(WELCOME_STEPS[currentStepIndex + 1].name);
+    const nextStep = WELCOME_STEPS.find(step => !step.finished());
+    if (nextStep) {
+      navigation.navigate(nextStep.name);
+    }
   }, [navigation]);
 
   const goBack = useCallback(() => {

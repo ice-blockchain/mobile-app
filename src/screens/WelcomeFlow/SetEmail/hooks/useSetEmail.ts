@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {WELCOME_STEPS, WelcomeStackParamList} from '@navigation/Welcome';
+import {WelcomeStackParamList} from '@navigation/Welcome';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {DEFAULT_DIALOG_NO_BUTTON} from '@screens/Modals/PopUp/components/PopUpButton';
@@ -14,10 +14,6 @@ import {t} from '@translations/i18n';
 import {useCallback, useState} from 'react';
 import {Keyboard} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-
-const currentStepIndex = WELCOME_STEPS.findIndex(
-  step => step.name === 'SetEmail',
-);
 
 export const useSetEmail = () => {
   const dispatch = useDispatch();
@@ -38,7 +34,7 @@ export const useSetEmail = () => {
   };
 
   const onBack = () => {
-    navigation.navigate(WELCOME_STEPS[currentStepIndex - 1].name);
+    navigation.goBack();
   };
 
   const sendVerificationEmail = useCallback(() => {

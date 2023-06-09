@@ -15,10 +15,6 @@ import {Keyboard} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {wait} from 'rn-units';
 
-const currentStepIndex = WELCOME_STEPS.findIndex(
-  step => step.name === 'WhoInvitedYou',
-);
-
 export const useWhoInvitedYou = () => {
   const dispatch = useDispatch();
   const navigation =
@@ -48,16 +44,7 @@ export const useWhoInvitedYou = () => {
   const initialRender = useRef(true);
   const [refUsername, setRefUsername] = useState('');
 
-  const goForward = useCallback(() => {
-    navigation.navigate(WELCOME_STEPS[currentStepIndex + 1].name);
-  }, [navigation]);
-
-  const goBack = () => {
-    resetError();
-    navigation.navigate(WELCOME_STEPS[currentStepIndex - 1].name);
-  };
-
-  const resetError = () => {
+  const resetError = useCallback(() => {
     if (validationError) {
       dispatch(ValidationActions.REF_USERNAME_VALIDATION.RESET.create());
     }
@@ -67,7 +54,19 @@ export const useWhoInvitedYou = () => {
     if (updateError) {
       dispatch(AccountActions.UPDATE_ACCOUNT.RESET.create());
     }
-  };
+  }, [dispatch, updateError, updateRefByUsernameError, validationError]);
+
+  const goForward = useCallback(() => {
+    const nextStep = WELCOME_STEPS.find(step => !step.finished());
+    if (nextStep) {
+      navigation.navigate(nextStep.name);
+    }
+  }, [navigation]);
+
+  const goBack = useCallback(() => {
+    resetError();
+    navigation.goBack();
+  }, [navigation, resetError]);
 
   const onChangeRefUsername = (text: string) => {
     setRefUsername(text);
