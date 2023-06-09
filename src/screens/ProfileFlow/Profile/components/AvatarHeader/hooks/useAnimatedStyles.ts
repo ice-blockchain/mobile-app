@@ -21,9 +21,19 @@ export const PEN_SIZE = rem(32);
 
 type Params = {
   animatedIndex: SharedValue<number>;
+  navigationContainerLeftWidth: number;
+  navigationContainerRightWidth: number;
+  wrapperWidth: number;
+  titleContainerWidth: number;
 };
 
-export const useAnimatedStyles = ({animatedIndex}: Params) => {
+export const useAnimatedStyles = ({
+  animatedIndex,
+  navigationContainerRightWidth,
+  navigationContainerLeftWidth,
+  wrapperWidth,
+  titleContainerWidth,
+}: Params) => {
   const imageAnimatedStyle = useAnimatedStyle(() => {
     const size = interpolate(
       animatedIndex.value,
@@ -53,7 +63,32 @@ export const useAnimatedStyles = ({animatedIndex}: Params) => {
       Extrapolate.CLAMP,
     );
 
-    return {height: size, width: size, borderWidth, borderRadius, marginTop};
+    const marginLeftMax =
+      navigationContainerRightWidth - navigationContainerLeftWidth;
+
+    const marginLeftCollapsed =
+      marginLeftMax + titleContainerWidth <= wrapperWidth
+        ? marginLeftMax
+        : wrapperWidth - titleContainerWidth;
+
+    /**
+     * Need this to place avatar and title in the center of the screen
+     */
+    const marginLeft = interpolate(
+      animatedIndex.value,
+      [0, MAX_SCROLL],
+      [marginLeftMax, marginLeftCollapsed],
+      Extrapolate.CLAMP,
+    );
+
+    return {
+      height: size,
+      width: size,
+      borderWidth,
+      borderRadius,
+      marginTop,
+      marginLeft,
+    };
   });
 
   const penAnimatedStyle = useAnimatedStyle(() => {
