@@ -4,31 +4,31 @@ import {isApiError, isNetworkError} from '@api/client';
 import {isAuthError} from '@services/auth';
 import {logError} from '@services/logging';
 import {AccountActions} from '@store/modules/Account/actions';
+import {rootAuthSaga} from '@store/modules/Account/sagas';
+import {rootAchievementsSaga} from '@store/modules/Achievements/sagas';
 import {rootAnalyticsSaga} from '@store/modules/Analytics/sagas';
+import {rootAppCommonSaga} from '@store/modules/AppCommon/sagas';
+import {rootAppUpdateSaga} from '@store/modules/AppUpdate/sagas';
+import {rootCollectionsSaga} from '@store/modules/Collections/sagas';
+import {rootTeamSaga} from '@store/modules/Contacts/sagas';
+import {rootDevicesSaga} from '@store/modules/Devices/sagas';
+import {rootInAppNotificationsSaga} from '@store/modules/InAppNotifications/sagas';
 import {rootLinkingSaga} from '@store/modules/Linking/sagas';
+import {rootNewsSaga} from '@store/modules/News/sagas';
 import {rootNotificationsSaga} from '@store/modules/Notifications/sagas';
+import {rootPermissionsSaga} from '@store/modules/Permissions/sagas';
 import {rootPushNotificationsSaga} from '@store/modules/PushNotifications/sagas';
+import {rootRateAppSaga} from '@store/modules/RateApp/sagas';
+import {rootReferralsSaga} from '@store/modules/Referrals/sagas';
 import {rootStatsSaga} from '@store/modules/Stats/sagas';
 import {rootStatusNoticeSaga} from '@store/modules/StatusNotice/sagas';
+import {rootTokenomicsSaga} from '@store/modules/Tokenomics/sagas';
+import {rootUsersSaga} from '@store/modules/Users/sagas';
+import {rootValidationSaga} from '@store/modules/Validation/sagas';
+import {rootWalkthroughSaga} from '@store/modules/Walkthrough/sagas';
 import {AppState} from 'react-native';
 import {SagaIterator} from 'redux-saga';
 import {all, call, cancel, spawn, take} from 'redux-saga/effects';
-
-import {rootAuthSaga} from './modules/Account/sagas';
-import {rootAchievementsSaga} from './modules/Achievements/sagas';
-import {rootAppCommonSaga} from './modules/AppCommon/sagas';
-import {rootAppUpdateSaga} from './modules/AppUpdate/sagas';
-import {rootCollectionsSaga} from './modules/Collections/sagas';
-import {rootTeamSaga} from './modules/Contacts/sagas';
-import {rootDevicesSaga} from './modules/Devices/sagas';
-import {rootNewsSaga} from './modules/News/sagas';
-import {rootPermissionsSaga} from './modules/Permissions/sagas';
-import {rootRateAppSaga} from './modules/RateApp/sagas';
-import {rootReferralsSaga} from './modules/Referrals/sagas';
-import {rootTokenomicsSaga} from './modules/Tokenomics/sagas';
-import {rootUsersSaga} from './modules/Users/sagas';
-import {rootValidationSaga} from './modules/Validation/sagas';
-import {rootWalkthroughSaga} from './modules/Walkthrough/sagas';
 
 export function* rootSaga(): SagaIterator {
   const sagas = [
@@ -44,7 +44,6 @@ export function* rootSaga(): SagaIterator {
     rootDevicesSaga,
     rootLinkingSaga,
     rootPushNotificationsSaga,
-    rootNotificationsSaga,
     rootAppCommonSaga,
     rootUsersSaga,
     rootTokenomicsSaga,
@@ -53,6 +52,8 @@ export function* rootSaga(): SagaIterator {
     rootWalkthroughSaga,
     rootAchievementsSaga,
     rootAppUpdateSaga,
+    rootNotificationsSaga,
+    rootInAppNotificationsSaga,
   ];
   const spawnedSagas = yield all([
     ...sagas.map(saga =>

@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {DISABLE_ALL_NOTIFICATION_DOMAIN} from '@api/devices/constants';
+import {DISABLE_ALL_NOTIFICATION_DOMAIN} from '@api/notifications/constants';
 import {
   NotificationDeliveryChannel,
   NotificationDomainToggle,
-} from '@api/devices/types';
+} from '@api/notifications/types';
 import {Attributes, trackEvent, trackScreenView} from '@services/analytics';
 import {dayjs} from '@services/dayjs';
 import {store} from '@store/configureStore';
@@ -15,7 +15,7 @@ import {
   TapToMineActionType,
 } from '@store/modules/Analytics/types';
 import {isPreferencesEnabled} from '@store/modules/Analytics/utils';
-import {enabledNotificationDomainsSelector} from '@store/modules/Devices/selectors';
+import {enabledNotificationDomainsSelector} from '@store/modules/Notifications/selectors';
 
 export const EVENT_NAMES = {
   INVITE: 'Invite',

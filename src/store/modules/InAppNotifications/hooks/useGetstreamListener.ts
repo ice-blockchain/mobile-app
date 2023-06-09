@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Activity} from '@api/notifications/types';
-import {announcementsFeed, notificationsFeed} from '@services/getstream';
+import {announcementsFeed, inAppNotificationsFeed} from '@services/getstream';
+import {Activity} from '@services/getStream/types';
 import {logError} from '@services/logging';
-import {NotificationActions} from '@store/modules/Notifications/actions';
+import {InAppNotificationActions} from '@store/modules/InAppNotifications/actions';
 import {DefaultGenerics, RealTimeMessage, SiteError} from 'getstream';
 import {useEffect} from 'react';
 import {useDispatch} from 'react-redux';
@@ -12,14 +12,16 @@ export const useGetstreamListener = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(
-      NotificationActions.NOTIFICATIONS_LOAD.START.create({isRefresh: true}),
+      InAppNotificationActions.IN_APP_NOTIFICATIONS_LOAD.START.create({
+        isRefresh: true,
+      }),
     );
 
     const callback = (data: RealTimeMessage<DefaultGenerics>) => {
       if (data?.new?.length > 0) {
         const newActivities = data.new as unknown as Activity[];
         dispatch(
-          NotificationActions.NOTIFICATIONS_ADD.STATE.create({
+          InAppNotificationActions.IN_APP_NOTIFICATIONS_ADD.STATE.create({
             notifications: newActivities,
           }),
         );
@@ -30,14 +32,14 @@ export const useGetstreamListener = () => {
       if (data?.new?.length > 0) {
         const newActivities = data.new as unknown as Activity[];
         dispatch(
-          NotificationActions.NOTIFICATIONS_ADD.STATE.create({
+          InAppNotificationActions.IN_APP_NOTIFICATIONS_ADD.STATE.create({
             notifications: newActivities,
           }),
         );
       }
     };
 
-    notificationsFeed.subscribe(callback).then(
+    inAppNotificationsFeed.subscribe(callback).then(
       () => {},
       (error: SiteError) => {
         logError(error);
@@ -52,7 +54,7 @@ export const useGetstreamListener = () => {
     );
 
     return () => {
-      notificationsFeed.unsubscribe();
+      inAppNotificationsFeed.unsubscribe();
       announcementsFeed.unsubscribe();
     };
   }, [dispatch]);

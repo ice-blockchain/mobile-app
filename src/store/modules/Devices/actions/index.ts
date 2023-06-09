@@ -1,11 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {
-  DeviceLocation,
-  DeviceSettings,
-  NotificationDeliveryChannel,
-  NotificationDomainToggle,
-} from '@api/devices/types';
+import {DeviceLocation} from '@api/devices/types';
 import {createAction} from '@store/utils/actions/createAction';
 
 const UPDATE_DEVICE_METADATA = createAction('UPDATE_DEVICE_METADATA', {
@@ -18,17 +13,12 @@ const UPDATE_DEVICE_METADATA = createAction('UPDATE_DEVICE_METADATA', {
   }),
 });
 
-const GET_OR_CREATE_DEVICE_SETTINGS = createAction(
-  'GET_OR_CREATE_DEVICE_SETTINGS',
-  {
-    START: () => {},
-    SUCCESS: (deviceUniqueId: string, settings: DeviceSettings | null) => ({
-      deviceUniqueId,
-      settings,
-    }),
-    FAILED: (errorMessage: string) => ({errorMessage}),
-  },
-);
+const INIT_DEVICE = createAction('INIT_DEVICE', {
+  SUCCESS: (deviceUniqueId: string) => ({
+    deviceUniqueId,
+  }),
+  FAILED: (errorMessage: string) => ({errorMessage}),
+});
 
 const UPDATE_DEVICE_LOCATION = createAction('UPDATE_DEVICE_LOCATION', {
   START: (deviceUniqueId?: string) => ({deviceUniqueId}),
@@ -36,24 +26,8 @@ const UPDATE_DEVICE_LOCATION = createAction('UPDATE_DEVICE_LOCATION', {
   FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
-const UPDATE_NOTIFICATION_CHANNEL = createAction(
-  'UPDATE_NOTIFICATION_CHANNEL',
-  {
-    START: (
-      notificationChannel: NotificationDomainToggle,
-      notificationDeliveryChannel: NotificationDeliveryChannel,
-    ) => ({notificationChannel, notificationDeliveryChannel}),
-    SUCCESS: (
-      notificationChannel: NotificationDomainToggle,
-      notificationDeliveryChannel: NotificationDeliveryChannel,
-    ) => ({notificationChannel, notificationDeliveryChannel}),
-    FAILED: (errorMessage: string) => ({errorMessage}),
-  },
-);
-
 export const DeviceActions = Object.freeze({
-  GET_OR_CREATE_DEVICE_SETTINGS,
+  INIT_DEVICE,
   UPDATE_DEVICE_LOCATION,
   UPDATE_DEVICE_METADATA,
-  UPDATE_NOTIFICATION_CHANNEL,
 });

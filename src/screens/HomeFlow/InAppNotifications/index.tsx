@@ -2,40 +2,44 @@
 
 import {COLORS} from '@constants/colors';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {NotificationsList} from '@screens/Notifications/components/NotificationsList';
-import {NotificationActions} from '@store/modules/Notifications/actions';
+import {NotificationsList} from '@screens/HomeFlow/InAppNotifications/components/NotificationsList';
+import {InAppNotificationActions} from '@store/modules/InAppNotifications/actions';
 import {
-  getNotificationsListDataSelector,
-  notificationsByIdsSelector,
-} from '@store/modules/Notifications/selectors';
+  getInAppNotificationsListDataSelector,
+  inAppNotificationsByIdsSelector,
+} from '@store/modules/InAppNotifications/selectors';
 import React, {useEffect} from 'react';
 import {StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {useDispatch, useSelector} from 'react-redux';
 
-export const Notifications = () => {
+export const InAppNotifications = () => {
   useFocusStatusBar({style: 'dark-content'});
   const dispatch = useDispatch();
 
-  const notifications = useSelector(getNotificationsListDataSelector);
-  const notificationIds = useSelector(notificationsByIdsSelector);
+  const notifications = useSelector(getInAppNotificationsListDataSelector);
+  const notificationIds = useSelector(inAppNotificationsByIdsSelector);
 
   useEffect(() => {
     dispatch(
-      NotificationActions.NOTIFICATIONS_LOAD.START.create({isRefresh: true}),
+      InAppNotificationActions.IN_APP_NOTIFICATIONS_LOAD.START.create({
+        isRefresh: true,
+      }),
     );
   }, [dispatch]);
 
-  const removeNotifications = () => {
+  const removeInAppNotifications = () => {
     const ids = Object.keys(notificationIds);
-    dispatch(NotificationActions.REMOVE_NOTIFICATIONS.START.create(ids));
+    dispatch(
+      InAppNotificationActions.REMOVE_IN_APP_NOTIFICATIONS.START.create(ids),
+    );
   };
 
   return (
     <SafeAreaView style={styles.container} edges={['bottom']}>
       <NotificationsList
         notifications={notifications}
-        clearAllNotifications={removeNotifications}
+        clearAllNotifications={removeInAppNotifications}
       />
     </SafeAreaView>
   );

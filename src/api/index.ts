@@ -22,8 +22,8 @@ export const Api = Object.freeze({
   devices,
   tokenomics,
   news,
-  notifications,
   statusNotice,
   tasks,
   time,
+  notifications,
 });

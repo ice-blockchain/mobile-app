@@ -1,68 +1,57 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Activity} from '@api/notifications/types';
+import {NotificationSettings} from '@api/notifications/types';
+import {AccountActions} from '@store/modules/Account/actions';
 import {NotificationActions} from '@store/modules/Notifications/actions';
 import produce from 'immer';
 
 export interface State {
-  items: {
-    [activityId: string]: Activity;
-  };
-  hasMore: boolean;
+  settings: NotificationSettings | null;
+  rollBackSettings: NotificationSettings | null;
 }
 
-const actionCreatorNotificationsLoad =
-  NotificationActions.NOTIFICATIONS_LOAD.SUCCESS.create;
-const actionCreatorFailedNotificationsLoad =
-  NotificationActions.NOTIFICATIONS_LOAD.FAILED.create;
-const actionCreatorClearNotifications =
-  NotificationActions.REMOVE_NOTIFICATIONS.SUCCESS.create;
-const actionCreatorFailedClearNotifications =
-  NotificationActions.REMOVE_NOTIFICATIONS.FAILED.create;
-
-type Actions =
-  | ReturnType<typeof actionCreatorNotificationsLoad>
-  | ReturnType<typeof actionCreatorFailedNotificationsLoad>
-  | ReturnType<typeof actionCreatorClearNotifications>
-  | ReturnType<typeof actionCreatorFailedClearNotifications>;
+type Actions = ReturnType<
+  | typeof NotificationActions.GET_NOTIFICATION_SETTINGS.SUCCESS.create
+  | typeof NotificationActions.UPDATE_NOTIFICATION_CHANNEL.SUCCESS.create
+  | typeof AccountActions.SIGN_OUT.SUCCESS.create
+>;
 
 const INITIAL_STATE: State = {
-  items: {},
-  hasMore: true,
+  settings: null,
+  rollBackSettings: null,
 };
 
-export function notificationsReducer(
-  state = INITIAL_STATE,
-  action: Actions,
-): State {
+function reducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
-      case NotificationActions.NOTIFICATIONS_LOAD.SUCCESS.type:
-        {
-          const {notifications, hasMore, isRefresh} = action.payload;
-
-          if (isRefresh) {
-            draft.items = notifications;
-          } else {
-            draft.items = {
-              ...notifications,
-            };
+      case NotificationActions.GET_NOTIFICATION_SETTINGS.SUCCESS.type:
+        draft.rollBackSettings = action.payload.settings;
+        draft.settings = action.payload.settings;
+        break;
+      case NotificationActions.UPDATE_NOTIFICATION_CHANNEL.SUCCESS.type:
+        const {
+          notificationChannel: {type, enabled},
+          notificationDeliveryChannel,
+        } = action.payload;
+        if (draft.settings) {
+          const key = (
+            {
+              email: 'emailNotificationSettings',
+              push: 'pushNotificationSettings',
+            } as const
+          )[notificationDeliveryChannel];
+          const notification = draft.settings[key].find(
+            notificationDomain => notificationDomain.type === type,
+          );
+          if (notification) {
+            notification.enabled = enabled;
           }
-
-          draft.hasMore = hasMore;
         }
         break;
-      case NotificationActions.REMOVE_NOTIFICATIONS.SUCCESS.type:
-        {
-          const {notificationIds} = action.payload;
-          let allItems = {...state.items};
-          notificationIds.forEach(id => {
-            delete allItems[id];
-          });
-
-          draft.items = {...allItems};
-        }
-        break;
+      case AccountActions.SIGN_OUT.SUCCESS.type:
+        return {...INITIAL_STATE};
     }
   });
 }
+
+export const notificationsReducer = reducer;

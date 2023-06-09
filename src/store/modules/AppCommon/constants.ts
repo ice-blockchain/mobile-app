@@ -5,5 +5,5 @@ import {DeviceActions} from '@store/modules/Devices/actions';
 
 export const INITIALIZE_ACTIONS = [
   AccountActions.USER_STATE_CHANGE,
-  DeviceActions.GET_OR_CREATE_DEVICE_SETTINGS,
+  DeviceActions.INIT_DEVICE,
 ];

@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {NotificationDomain} from '@api/devices/types';
+import {NotificationDomain} from '@api/notifications/types';
 import messaging from '@react-native-firebase/messaging';
 import {logError} from '@services/logging';
 import {
   appLocaleSelector,
   userIdSelector,
 } from '@store/modules/Account/selectors';
-import {useIsPushNotificationsChannelEnabled} from '@store/modules/Devices/hooks/useIsPushNotificationsChannelEnabled';
+import {useIsPushNotificationsChannelEnabled} from '@store/modules/Notifications/hooks/useIsPushNotificationsChannelEnabled';
 import {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 

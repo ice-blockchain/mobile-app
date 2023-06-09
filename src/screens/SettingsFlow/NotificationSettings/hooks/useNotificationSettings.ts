@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {DeviceActions} from '@store/modules/Devices/actions';
+import {NotificationActions} from '@store/modules/Notifications/actions';
 import {
   emailNotificationByTypeSelector,
   pushNotificationByTypeSelector,
-} from '@store/modules/Devices/selectors';
+} from '@store/modules/Notifications/selectors';
 import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
@@ -18,7 +18,7 @@ export const useNotificationSettings = (isPushNotificationChannel: boolean) => {
   );
 
   useEffect(() => {
-    dispatch(DeviceActions.GET_OR_CREATE_DEVICE_SETTINGS.START.create());
+    dispatch(NotificationActions.GET_NOTIFICATION_SETTINGS.START.create());
   }, [dispatch]);
 
   return {

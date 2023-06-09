@@ -586,7 +586,9 @@
     "resurrection_warning": "You can only resurrect one time!",
     "please_confirm": "Please confirm",
     "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour.",
+    "delete_account_confirmation_title": "Confirm Deletion",
+    "delete_account_confirmation_text": "Deleting your account will permanently erase all your data, including your ice balance. Do you want to proceed?"
   },
   "periods": {
     "3_days": "3 days",

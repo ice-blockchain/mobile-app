@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {BadgeType} from '@api/achievements/types';
-import {NotificationDeliveryChannel} from '@api/devices/types';
+import {NotificationDeliveryChannel} from '@api/notifications/types';
 import {Country} from '@constants/countries';
 import {commonStyles} from '@constants/styles';
 import {MainTabBar} from '@navigation/components/MainTabBar';
@@ -24,6 +24,7 @@ import {
   ActivePagerCard,
   HomeTabScrollPosition,
 } from '@screens/HomeFlow/Home/types';
+import {InAppNotifications} from '@screens/HomeFlow/InAppNotifications';
 import {Stats} from '@screens/HomeFlow/Stats';
 import {TopCountries} from '@screens/HomeFlow/TopCountries';
 import {TopMiners} from '@screens/HomeFlow/TopMiners';
@@ -47,7 +48,6 @@ import {ProfilePrivacyEditStep2} from '@screens/Modals/ProfilePrivacyEdit/step2'
 import {ProfilePrivacyEditStep3} from '@screens/Modals/ProfilePrivacyEdit/step3';
 import {Tooltip} from '@screens/Modals/Tooltip';
 import {News} from '@screens/News';
-import {Notifications} from '@screens/Notifications';
 import {Badges} from '@screens/ProfileFlow/Badges';
 import {Profile} from '@screens/ProfileFlow/Profile';
 import {Roles} from '@screens/ProfileFlow/Roles';
@@ -121,7 +121,7 @@ export type MainStackParamList = {
     buttons: ContextualMenuButton[];
     onClose?: () => void;
   };
-  Notifications: undefined;
+  InAppNotifications: undefined;
   CountrySelect: {
     onSelect: (country: Country) => void;
   };
@@ -359,7 +359,10 @@ export function MainNavigator() {
         component={ContextualMenu}
         options={modalOptions}
       />
-      <MainStack.Screen name="Notifications" component={Notifications} />
+      <MainStack.Screen
+        name="InAppNotifications"
+        component={InAppNotifications}
+      />
       <MainStack.Screen
         name="CountrySelect"
         component={CountrySelect}

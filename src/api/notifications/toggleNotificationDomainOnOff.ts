@@ -4,7 +4,7 @@ import {put} from '@api/client';
 import {
   NotificationDeliveryChannel,
   NotificationDomainToggle,
-} from '@api/devices/types';
+} from '@api/notifications/types';
 
 /**
  * Toggles the specific notification channel toggle type on/off.

@@ -5,6 +5,7 @@ import {LINKS} from '@constants/links';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {DEFAULT_DIALOG_NO_BUTTON} from '@screens/Modals/PopUp/components/PopUpButton';
 import {MenuItem} from '@screens/SettingsFlow/Settings/components/MenuItem.tsx';
 import {SectionTitle} from '@screens/SettingsFlow/Settings/components/SectionTitle';
 import {logError} from '@services/logging';
@@ -57,7 +58,24 @@ export const SupportMenuSection = () => {
         title={t('settings.delete_title')}
         description={t('settings.delete_description')}
         renderIcon={EraseIcon}
-        onPress={() => dispatch(AccountActions.DELETE_ACCOUNT.START.create())}
+        onPress={() => {
+          navigation.navigate({
+            name: 'PopUp',
+            params: {
+              title: t('pop_up.delete_account_confirmation_title'),
+              message: t('pop_up.delete_account_confirmation_text'),
+              buttons: [
+                DEFAULT_DIALOG_NO_BUTTON,
+                {
+                  text: t('button.continue'),
+                  preset: 'destructive',
+                  onPress: () =>
+                    dispatch(AccountActions.DELETE_ACCOUNT.START.create()),
+                },
+              ],
+            },
+          });
+        }}
         confirmation={{
           title: t('settings.delete_confirmation_title'),
           yesText: t('settings.delete_confirmation_yes'),

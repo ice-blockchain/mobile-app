@@ -4,7 +4,7 @@ import {get} from '@api/client';
 import {
   NotificationDeliveryChannel,
   NotificationDomainToggles,
-} from '@api/devices/types';
+} from '@api/notifications/types';
 
 /**
  * Returns the user's list of notification channel toggles for the provided notificationChannel.

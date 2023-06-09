@@ -15,7 +15,7 @@ const getstreamClient = connect(
   ENV.GETSTREAM_APP_ID,
 );
 
-export const notificationsFeed = getstreamClient.feed(
+export const inAppNotificationsFeed = getstreamClient.feed(
   'notifications',
   mockedUserId,
   ENV.GETSTREAM_NOTIFICATIONS_USER_TOKEN,
@@ -27,8 +27,8 @@ export const announcementsFeed = getstreamClient.feed(
   ENV.GETSTREAM_ANNOUNCEMENTS_USER_TOKEN,
 );
 
-export async function mockNotifications() {
-  const notifications = await notificationsFeed.addActivities(
+export async function mockInAppNotifications() {
+  const notifications = await inAppNotificationsFeed.addActivities(
     mockedNotifications,
   );
   return notifications;
@@ -41,8 +41,8 @@ export async function mockAnnouncements() {
   return announcements;
 }
 
-export async function loadNotifications() {
-  const notifications = await notificationsFeed.get();
+export async function loadInAppNotifications() {
+  const notifications = await inAppNotificationsFeed.get();
   return notifications;
 }
 
@@ -51,18 +51,18 @@ export async function loadAnnouncements() {
   return announcements;
 }
 
-export async function removeNotification(activityId: string) {
-  return await notificationsFeed.removeActivity(activityId);
+export async function removeInAppNotification(activityId: string) {
+  return await inAppNotificationsFeed.removeActivity(activityId);
 }
 
 export async function removeAnnouncement(activityId: string) {
   return await announcementsFeed.removeActivity(activityId);
 }
 
-export async function removeNotifications(activityIds: string[]) {
+export async function removeInAppNotifications(activityIds: string[]) {
   return await Promise.all(
     activityIds.map(id => {
-      return notificationsFeed.removeActivity(id);
+      return inAppNotificationsFeed.removeActivity(id);
     }),
   );
 }

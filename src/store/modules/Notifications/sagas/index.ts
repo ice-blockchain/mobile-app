@@ -1,39 +1,24 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AccountActions} from '@store/modules/Account/actions';
 import {NotificationActions} from '@store/modules/Notifications/actions';
-import {addMockedAllActivitiesSaga} from '@store/modules/Notifications/sagas/addMockedAllActivitiesSaga';
-import {addMockedAnnouncementsSaga} from '@store/modules/Notifications/sagas/addMockedAnnouncementsSaga';
-import {addMockedNotificationsSaga} from '@store/modules/Notifications/sagas/addMockedNotificationsSaga';
-import {addNotificationsSaga} from '@store/modules/Notifications/sagas/addNotificationsSaga';
-import {loadNotificationsSaga} from '@store/modules/Notifications/sagas/loadNotificationsSaga';
-import {removeNotificationsSaga} from '@store/modules/Notifications/sagas/removeNotificationsSaga';
-import {all, takeLeading} from 'redux-saga/effects';
+import {getNotificationSettingsSaga} from '@store/modules/Notifications/sagas/getNotificationSettings';
+import {updateNotificationChannel} from '@store/modules/Notifications/sagas/updateNotificationChannel';
+import {all, takeLatest} from 'redux-saga/effects';
 
 export function* rootNotificationsSaga() {
   yield all([
-    takeLeading(
-      NotificationActions.NOTIFICATIONS_LOAD.START.type,
-      loadNotificationsSaga,
+    takeLatest(
+      [
+        AccountActions.USER_STATE_CHANGE.SUCCESS.type,
+        NotificationActions.GET_NOTIFICATION_SETTINGS.START.type,
+      ],
+      getNotificationSettingsSaga,
     ),
-    takeLeading(
-      NotificationActions.REMOVE_NOTIFICATIONS.START.type,
-      removeNotificationsSaga,
-    ),
-    takeLeading(
-      NotificationActions.ADD_MOCKED_NOTIFICATIONS.STATE.type,
-      addMockedNotificationsSaga,
-    ),
-    takeLeading(
-      NotificationActions.ADD_MOCKED_ANNOUNCEMENTS.STATE.type,
-      addMockedAnnouncementsSaga,
-    ),
-    takeLeading(
-      NotificationActions.ADD_NOTIFICATIONS_AND_ANNOUNCEMENTS.STATE.type,
-      addMockedAllActivitiesSaga,
-    ),
-    takeLeading(
-      NotificationActions.NOTIFICATIONS_ADD.STATE.type,
-      addNotificationsSaga,
+
+    takeLatest(
+      NotificationActions.UPDATE_NOTIFICATION_CHANNEL.START.type,
+      updateNotificationChannel,
     ),
   ]);
 }

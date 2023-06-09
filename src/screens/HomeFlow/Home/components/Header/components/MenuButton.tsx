@@ -35,7 +35,7 @@ export const MenuButton = memo(() => {
       // {
       //   icon: <BellIcon color={COLORS.downriver} />,
       //   label: t('home.menu.notifications'),
-      //   onPress: () => navigation.navigate('Notifications'),
+      //   onPress: () => navigation.navigate('InAppNotifications'),
       //   id: 'notifications',
       // },
       {
@@ -72,7 +72,7 @@ export const MenuButton = memo(() => {
   const {onElementLayout, elementRef} = useMenuButtonWalkthrough({buttons});
 
   // TODO: Hide until notifications functionality is ready
-  // const badgeCount = useSelector(notificationsCountSelector);
+  // const badgeCount = useSelector(inAppNotificationsCountSelector);
   const badgeCount = 0;
 
   const buttonRef = useRef<TouchableOpacity>(null);

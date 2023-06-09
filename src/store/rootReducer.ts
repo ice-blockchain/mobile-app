@@ -9,6 +9,7 @@ import {appUpdateReducer} from '@store/modules/AppUpdate/reducer';
 import {collectionsReducer} from '@store/modules/Collections/reducer';
 import {teamReducer} from '@store/modules/Contacts/reducer';
 import {devicesReducer} from '@store/modules/Devices/reducer';
+import {inAppNotificationsReducer} from '@store/modules/InAppNotifications/reducer';
 import {linkingReducer} from '@store/modules/Linking/reducer';
 import {newsReducer} from '@store/modules/News/reducer';
 import {notificationsReducer} from '@store/modules/Notifications/reducer';
@@ -40,7 +41,7 @@ export const rootReducer = combineReducers({
   utilityProcessStatuses: processStatusesReducer,
   devices: devicesReducer,
   linking: linkingReducer,
-  notifications: notificationsReducer,
+  inAppNotifications: inAppNotificationsReducer,
   users: usersReducer,
   statusNotice,
   tokenomics: tokenomicsReducer,
@@ -49,6 +50,7 @@ export const rootReducer = combineReducers({
   achievements: achievementsReducer,
   appUpdate: appUpdateReducer,
   socials: socialsReducer,
+  notifications: notificationsReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
