@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Activity} from '@api/inAppNotifications/types';
 import {announcementsFeed, inAppNotificationsFeed} from '@services/getstream';
+import {Activity} from '@services/getStream/types';
 import {logError} from '@services/logging';
 import {InAppNotificationActions} from '@store/modules/InAppNotifications/actions';
 import {DefaultGenerics, RealTimeMessage, SiteError} from 'getstream';

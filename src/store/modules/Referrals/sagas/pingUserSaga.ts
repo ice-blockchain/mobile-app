@@ -12,7 +12,7 @@ const actionCreator = ReferralsActions.PING_REFERRAL(null).START.create;
 export function* pingUserSaga(action: ReturnType<typeof actionCreator>) {
   const {userId} = action.payload;
   try {
-    yield Api.inAppNotifications.pingUser({
+    yield Api.notifications.pingUser({
       userId,
     });
 

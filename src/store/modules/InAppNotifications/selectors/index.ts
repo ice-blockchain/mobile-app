@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Activity, ActivitySection} from '@api/inAppNotifications/types';
 import {createSelector} from '@reduxjs/toolkit';
+import {Activity, ActivitySection} from '@services/getStream/types';
 import {orderDataBySections} from '@store/modules/InAppNotifications/selectors/orderNotifications';
 import {RootState} from '@store/rootReducer';
 

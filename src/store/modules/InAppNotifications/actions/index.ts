@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Activity} from '@api/inAppNotifications/types';
+import {Activity} from '@services/getStream/types';
 import {createAction} from '@store/utils/actions/createAction';
 
 const IN_APP_NOTIFICATIONS_LOAD = createAction('IN_APP_NOTIFICATIONS_LOAD', {

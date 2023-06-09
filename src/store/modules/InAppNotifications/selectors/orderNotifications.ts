@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Activity, ActivitySection} from '@api/inAppNotifications/types';
 import {dayjs} from '@services/dayjs';
+import {Activity, ActivitySection} from '@services/getStream/types';
 import {t} from '@translations/i18n';
 
 export const orderDataBySections = (activities: Activity[]) => {

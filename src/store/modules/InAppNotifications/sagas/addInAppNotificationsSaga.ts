@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Activity} from '@api/inAppNotifications/types';
+import {Activity} from '@services/getStream/types';
 import {InAppNotificationActions} from '@store/modules/InAppNotifications/actions';
 import {getErrorMessage} from '@utils/errors';
 import {put} from 'redux-saga/effects';

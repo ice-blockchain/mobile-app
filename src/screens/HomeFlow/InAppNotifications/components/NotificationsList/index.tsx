@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Activity, ActivitySection} from '@api/inAppNotifications/types';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles, windowWidth} from '@constants/styles';
@@ -9,6 +8,7 @@ import {Header} from '@navigation/components/Header';
 import {ClearButton} from '@navigation/components/Header/components/ClearButton';
 import {DefaultNotification} from '@screens/HomeFlow/InAppNotifications/components/DefaultNotification';
 import {EmptyNotifications} from '@screens/HomeFlow/InAppNotifications/components/EmptyNotifications';
+import {Activity, ActivitySection} from '@services/getStream/types';
 import {InAppNotificationActions} from '@store/modules/InAppNotifications/actions';
 import {LinkingActions} from '@store/modules/Linking/actions';
 import {ClearIcon} from '@svg/ClearIcon';
