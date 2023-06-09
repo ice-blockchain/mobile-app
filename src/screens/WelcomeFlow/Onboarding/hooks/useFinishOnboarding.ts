@@ -40,10 +40,10 @@ export const useFinishOnboarding = () => {
   );
 
   const finishOnboarding = useCallback(() => {
+    dispatch(UsersActions.UPDATE_VIEWED_ONBOARDINGS.STATE.create(user.id));
     const nextStep = WELCOME_STEPS.find(step => !step.finished());
     if (nextStep) {
       navigation.navigate(nextStep.name);
-      dispatch(UsersActions.UPDATE_VIEWED_ONBOARDINGS.STATE.create(user.id));
     }
   }, [navigation, dispatch, user.id]);
 

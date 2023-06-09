@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {WelcomeStackParamList} from '@navigation/Welcome';
+import {WELCOME_STEPS, WelcomeStackParamList} from '@navigation/Welcome';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AccountActions} from '@store/modules/Account/actions';
@@ -14,6 +14,10 @@ import {useCallback, useEffect, useRef, useState} from 'react';
 import {Keyboard} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {wait} from 'rn-units';
+
+const currentStepIndex = WELCOME_STEPS.findIndex(
+  step => step.name === 'ClaimUsername',
+);
 
 export const useClaimUsername = () => {
   const dispatch = useDispatch();
@@ -37,8 +41,7 @@ export const useClaimUsername = () => {
   const isUsernameUpdated = !!username && username === user.username;
 
   const goForward = useCallback(() => {
-    //TODO::get dynamically from a list of steps
-    navigation.navigate('WhoInvitedYou');
+    navigation.navigate(WELCOME_STEPS[currentStepIndex + 1].name);
   }, [navigation]);
 
   const goBack = useCallback(() => {
