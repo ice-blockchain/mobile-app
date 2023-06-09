@@ -43,7 +43,7 @@ interface Props {
 /**
  * Space for activity indicator while refreshing
  */
-const REFRESH_THRESHOLD = rem(50);
+const REFRESH_THRESHOLD = rem(80);
 
 export const PullToRefreshContainer = ({
   style,
@@ -76,12 +76,19 @@ export const PullToRefreshContainer = ({
         translateYPanGesture.value = interpolate(
           translationY - translateYScrollable.value,
           [0, REFRESH_THRESHOLD * 10],
-          [0, -REFRESH_THRESHOLD * 3],
+          [0, -REFRESH_THRESHOLD * 4],
           Extrapolate.CLAMP,
         );
       })
       .onEnd(() => {
-        translateYPanGesture.value = withSpring(0);
+        translateYPanGesture.value = withSpring(0, {
+          damping: 50,
+          mass: 1,
+          stiffness: 200,
+          overshootClamping: false,
+          restDisplacementThreshold: 0.01,
+          restSpeedThreshold: 2,
+        });
       });
 
     const nativeGesture = Gesture.Native();
