@@ -4,7 +4,7 @@ import {InviteButton} from '@components/Buttons/InviteButton';
 import {FlipCard, FlipCardMethods} from '@components/FlipCard';
 import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
-import {SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {AdoptionCard} from '@screens/HomeFlow/Home/components/Overview/components/AdoptionCard';
 import {
@@ -13,6 +13,7 @@ import {
   CARDS_COLLAPSED_HEIGHT,
   CARDS_TOTAL_HEIGHT,
 } from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
+import {HeaderTopImage} from '@screens/HomeFlow/Home/components/Overview/components/HeaderTopImage';
 import {LevelCard} from '@screens/HomeFlow/Home/components/Overview/components/LevelCard';
 import {OnlineUsersHistory} from '@screens/HomeFlow/Home/components/Overview/components/OnlineUsersHistory';
 import {ReferralAcquisitionHistory} from '@screens/HomeFlow/Home/components/Overview/components/ReferralAcquisitionHistory';
@@ -27,17 +28,9 @@ import {useReferralsCardWalkthrough} from '@screens/HomeFlow/Home/components/Ove
 import {useScrollCollapse} from '@screens/HomeFlow/Home/components/Overview/hooks/useScrollCollapse';
 import {t} from '@translations/i18n';
 import React, {memo, useRef, useState} from 'react';
-import {
-  Image,
-  LayoutChangeEvent,
-  Platform,
-  StyleSheet,
-  View,
-} from 'react-native';
+import {LayoutChangeEvent, Platform, StyleSheet, View} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import {isAndroid, isIOS, rem} from 'rn-units';
-
-const HEADER_RECTANGLE = require('../../assets/images/topRectangle.png');
 
 type Props = {
   /**
@@ -92,12 +85,14 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
 
   return (
     <>
-      <Image style={styles.headerTopImage} source={HEADER_RECTANGLE} />
+      <HeaderTopImage />
 
-      <SectionHeader
-        style={styles.sectionHeader}
-        title={t('home.overview.title')}
-      />
+      <View style={styles.sectionHeaderContainer}>
+        <SectionHeader
+          style={styles.sectionHeader}
+          title={t('home.overview.title')}
+        />
+      </View>
 
       <Animated.View
         style={[styles.bodySpace, stickyAnimatedStyle, isIOS && shadowStyle]}
@@ -159,10 +154,9 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
 const contentInset = {left: -OVERSCROLL, top: 0, bottom: 0, right: -OVERSCROLL};
 
 export const styles = StyleSheet.create({
-  headerTopImage: {
-    width: windowWidth,
-    height: windowWidth * 0.08,
-    backgroundColor: COLORS.primaryLight,
+  sectionHeaderContainer: {
+    marginTop: -1,
+    backgroundColor: COLORS.white,
   },
   sectionHeader: {
     paddingTop: 0,

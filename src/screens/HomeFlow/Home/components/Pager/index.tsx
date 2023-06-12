@@ -11,8 +11,7 @@ import {Wallet} from '@screens/HomeFlow/Home/components/Pager/components/Wallet'
 import {usePagerCardsWalkthrough} from '@screens/HomeFlow/Home/components/Pager/hooks/usePagerCardsWalkthrough';
 import {ActivePagerCard} from '@screens/HomeFlow/Home/types';
 import React, {useEffect, useRef, useState} from 'react';
-import {PixelRatio} from 'react-native';
-import {StyleSheet, View} from 'react-native';
+import {PixelRatio, StyleSheet, View} from 'react-native';
 import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
 import {rem} from 'rn-units';
 
@@ -82,8 +81,9 @@ export const Pager = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: PAGE_HEIGHT,
+    height: PAGE_HEIGHT + 1,
     backgroundColor: COLORS.primaryLight,
+    paddingBottom: 1,
   },
   pager: {
     height: PAGE_HEIGHT,
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   },
   indicators: {
     position: 'absolute',
-    bottom: 0,
+    bottom: 1,
     alignSelf: 'center',
   },
 });

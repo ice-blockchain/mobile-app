@@ -23,7 +23,6 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from 'react-native-reanimated';
-import {rem} from 'rn-units';
 
 interface Props {
   style?: StyleProp<ViewStyle>;
@@ -43,7 +42,7 @@ interface Props {
 /**
  * Space for activity indicator while refreshing
  */
-const REFRESH_THRESHOLD = rem(80);
+const REFRESH_THRESHOLD = 100;
 
 export const PullToRefreshContainer = ({
   style,
@@ -128,12 +127,32 @@ export const PullToRefreshContainer = ({
     [children, containerAnimatedStyle, scrollHandler],
   );
 
+  const animatedContainerStyle = useAnimatedStyle(() => {
+    return {
+      opacity: interpolate(
+        -translateYPanGesture.value,
+        [0, 24, REFRESH_THRESHOLD],
+        [0, 1, 1],
+      ),
+      transform: [
+        {
+          translateY: interpolate(
+            -translateYPanGesture.value,
+            [0, REFRESH_THRESHOLD, REFRESH_THRESHOLD * 2],
+            [-16, 10, 70],
+          ),
+        },
+      ],
+    };
+  });
+
   return (
     <View style={style}>
       <RefreshIceIcon
         refreshing={refreshing}
         translateY={translateYPanGesture}
         theme={theme}
+        animatedContainerStyle={animatedContainerStyle}
       />
 
       <GestureDetector gesture={gesture}>{childrenScrollable}</GestureDetector>
