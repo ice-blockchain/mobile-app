@@ -62,6 +62,7 @@ export const TaskItem = ({
         active && styles.containerActive,
         active && highlightActiveTask && styles.activeHighlighted,
         active && commonStyles.shadow,
+        task.type === 'invite_friends' && styles.inviteActive,
       ]}
       disabled={!active}
       onPress={onPress}>
@@ -118,7 +119,6 @@ const styles = StyleSheet.create({
   },
   containerActive: {
     backgroundColor: COLORS.white,
-
     ...Platform.select({
       android: {
         /*
@@ -129,6 +129,9 @@ const styles = StyleSheet.create({
       },
       default: {},
     }),
+  },
+  inviteActive: {
+    marginBottom: rem(10),
   },
   iconContainer: {
     width: STEP_ICON_SIZE,
