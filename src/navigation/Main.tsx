@@ -74,6 +74,8 @@ import {SvgProps} from 'react-native-svg';
 import {useDispatch} from 'react-redux';
 import {rem} from 'rn-units/index';
 
+type ProfileTabActionType = 'updatePhoto';
+
 export type MainTabsParamList = {
   HomeTab: NavigatorScreenParams<HomeTabStackParamList> | undefined;
   TeamTab: NavigatorScreenParams<TeamTabStackParamList> | undefined;
@@ -125,7 +127,7 @@ export type MainStackParamList = {
   CountrySelect: {
     onSelect: (country: Country) => void;
   };
-  UserProfile: {userId: string} | undefined;
+  UserProfile: {userId: string; actionType?: ProfileTabActionType} | undefined;
   Roles: {userId?: string} | undefined;
   Badges: {category?: BadgeType; userId?: string};
   Walkthrough:
@@ -163,7 +165,7 @@ export type NewsTabStackParamList = {
 };
 
 export type ProfileTabStackParamList = {
-  MyProfile: undefined;
+  MyProfile: {actionType?: ProfileTabActionType; userId?: string};
   Roles: {userId?: string} | undefined;
   Badges: {category?: BadgeType; userId?: string};
   Settings: undefined;

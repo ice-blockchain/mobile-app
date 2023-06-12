@@ -7,18 +7,20 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {TASKS} from '@screens/HomeFlow/Home/components/Tasks/tasks';
 import {logError} from '@services/logging';
+import {userIdSelector} from '@store/modules/Account/selectors';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {useCallback} from 'react';
 import {Linking} from 'react-native';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 export function useTaskItem(type: TaskType) {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
 
+  const userId = useSelector(userIdSelector);
   const dispatch = useDispatch();
 
   const onPress = useCallback(() => {
@@ -27,7 +29,10 @@ export function useTaskItem(type: TaskType) {
         dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
         break;
       case 'upload_profile_picture':
-        navigation.navigate('ProfileTab');
+        navigation.navigate('ProfileTab', {
+          screen: 'MyProfile',
+          params: {actionType: 'updatePhoto', userId: userId},
+        });
         break;
       case 'follow_us_on_twitter':
         Linking.canOpenURL(LINKS.TWITTER_SCHEME)
@@ -50,7 +55,7 @@ export function useTaskItem(type: TaskType) {
         navigation.navigate('InviteShare');
         break;
     }
-  }, [dispatch, type, navigation]);
+  }, [type, dispatch, navigation, userId]);
 
   return {
     title: t(`home.tasks.${type}.title`),
