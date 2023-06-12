@@ -59,20 +59,18 @@ export function* shareSocialsSaga() {
     }
   } else {
     /**
-     * if user has no socials, we create default socials
+     * if user has no socials, we create default socials for him
+     * and schedule them to show starting from next day
      */
     socials = socialsOrder.map((type, index) => {
       return {
         type,
         shared: false,
-        dateToShow: dayjs().add(index, 'day').toISOString(),
+        dateToShow: dayjs()
+          .add(index + 1, 'day')
+          .toISOString(),
       };
     });
-
-    /**
-     * show first default social
-     */
-    typeToShow = socialsOrder[0];
   }
 
   yield put(
