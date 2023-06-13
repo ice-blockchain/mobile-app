@@ -24,7 +24,7 @@ type Params = {
   navigationContainerLeftWidth: number;
   navigationContainerRightWidth: number;
   wrapperWidth: number;
-  titleContainerWidth: number;
+  titleTextWidth: number;
 };
 
 export const useAnimatedStyles = ({
@@ -32,7 +32,7 @@ export const useAnimatedStyles = ({
   navigationContainerRightWidth,
   navigationContainerLeftWidth,
   wrapperWidth,
-  titleContainerWidth,
+  titleTextWidth,
 }: Params) => {
   const imageAnimatedStyle = useAnimatedStyle(() => {
     const size = interpolate(
@@ -63,31 +63,47 @@ export const useAnimatedStyles = ({
       Extrapolate.CLAMP,
     );
 
-    const marginLeftMax =
-      navigationContainerRightWidth - navigationContainerLeftWidth;
-
-    const marginLeftCollapsed =
-      marginLeftMax + titleContainerWidth <= wrapperWidth
-        ? marginLeftMax
-        : wrapperWidth - titleContainerWidth;
-
-    /**
-     * Need this to place avatar and title in the center of the screen
-     */
-    const marginLeft = interpolate(
-      animatedIndex.value,
-      [0, MAX_SCROLL],
-      [marginLeftMax, marginLeftCollapsed],
-      Extrapolate.CLAMP,
-    );
-
     return {
       height: size,
       width: size,
       borderWidth,
       borderRadius,
       marginTop,
-      marginLeft,
+    };
+  });
+
+  const titleAnimatedStyle = useAnimatedStyle(() => {
+    const titleWidthExpanded = AVATAR_SIZE;
+    const titleWidthCollapsed = AVATAR_SMALL_SIZE + 12 + titleTextWidth;
+
+    const getDesirablePositionX = (titleContainerWidth: number) =>
+      (navigationContainerLeftWidth +
+        wrapperWidth +
+        navigationContainerRightWidth -
+        titleContainerWidth) /
+        2 -
+      navigationContainerLeftWidth;
+
+    const getTranslateX = (titleContainerWidth: number) =>
+      getDesirablePositionX(titleContainerWidth) -
+      (wrapperWidth - titleContainerWidth);
+
+    const translateXCollapsed = getTranslateX(titleWidthCollapsed);
+
+    return {
+      transform: [
+        {
+          translateX: interpolate(
+            animatedIndex.value,
+            [0, MAX_SCROLL],
+            [
+              getTranslateX(titleWidthExpanded),
+              translateXCollapsed > 0 ? 0 : translateXCollapsed,
+            ],
+            Extrapolate.CLAMP,
+          ),
+        },
+      ],
     };
   });
 
@@ -163,6 +179,7 @@ export const useAnimatedStyles = ({
   });
 
   return {
+    titleAnimatedStyle,
     imageAnimatedStyle,
     penAnimatedStyle,
     textStyle,

@@ -12,7 +12,7 @@ export const useOnLayout = () => {
 
   const [wrapperWidth, setWrapperWidth] = useState(0);
 
-  const [titleContainerWidth, setTitleContainerWidth] = useState(0);
+  const [titleTextWidth, setTitleTextWidth] = useState(0);
 
   const onLayoutNavigationContainerLeft = useCallback(
     ({
@@ -47,13 +47,13 @@ export const useOnLayout = () => {
     [],
   );
 
-  const onLayoutTitleContainer = useCallback(
+  const onLayoutTitleText = useCallback(
     ({
       nativeEvent: {
         layout: {width},
       },
     }: LayoutChangeEvent) => {
-      setTitleContainerWidth(width);
+      setTitleTextWidth(width);
     },
     [],
   );
@@ -62,10 +62,10 @@ export const useOnLayout = () => {
     navigationContainerLeftWidth,
     navigationContainerRightWidth,
     wrapperWidth,
-    titleContainerWidth,
+    titleTextWidth,
     onLayoutNavigationContainerLeft,
     onLayoutNavigationContainerRight,
     onLayoutWrapper,
-    onLayoutTitleContainer,
+    onLayoutTitleText,
   };
 };

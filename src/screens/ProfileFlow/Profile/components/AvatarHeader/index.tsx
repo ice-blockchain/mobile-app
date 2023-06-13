@@ -23,7 +23,7 @@ import {useUserContactDetails} from '@screens/ProfileFlow/Profile/components/Ava
 import {font, mirrorTransform} from '@utils/styles';
 import {buildUsernameWithPrefix} from '@utils/username';
 import React, {memo, useState} from 'react';
-import {Image, StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
@@ -52,14 +52,15 @@ export const AvatarHeader = memo(
       navigationContainerLeftWidth,
       navigationContainerRightWidth,
       wrapperWidth,
-      titleContainerWidth,
+      titleTextWidth,
       onLayoutNavigationContainerLeft,
       onLayoutNavigationContainerRight,
       onLayoutWrapper,
-      onLayoutTitleContainer,
+      onLayoutTitleText,
     } = useOnLayout();
 
     const {
+      titleAnimatedStyle,
       imageAnimatedStyle,
       penAnimatedStyle,
       textStyle,
@@ -70,7 +71,7 @@ export const AvatarHeader = memo(
       navigationContainerLeftWidth,
       navigationContainerRightWidth,
       wrapperWidth,
-      titleContainerWidth,
+      titleTextWidth,
     });
 
     const {contactDetails} = useUserContactDetails({user});
@@ -85,6 +86,13 @@ export const AvatarHeader = memo(
     return (
       <View style={[topOffset.current, styles.outerContainer]}>
         <View style={styles.container}>
+          <Text
+            style={[styles.usernameText, styles.usernameTextMeasures]}
+            numberOfLines={1}
+            onLayout={onLayoutTitleText}>
+            {user ? buildUsernameWithPrefix(user.username) : ''}
+          </Text>
+
           <View
             style={[styles.navigationContainer, styles.navigationContainerLeft]}
             onLayout={onLayoutNavigationContainerLeft}>
@@ -94,9 +102,7 @@ export const AvatarHeader = memo(
             />
           </View>
           <View style={styles.wrapper} onLayout={onLayoutWrapper}>
-            <View
-              style={styles.titleContainer}
-              onLayout={onLayoutTitleContainer}>
+            <Animated.View style={[styles.titleContainer, titleAnimatedStyle]}>
               <View>
                 <Animated.View
                   style={[imageAnimatedStyle, styles.imageContainer]}>
@@ -146,7 +152,7 @@ export const AvatarHeader = memo(
                   {buildUsernameWithPrefix(user.username)}
                 </Animated.Text>
               )}
-            </View>
+            </Animated.View>
           </View>
           <View
             style={[
@@ -187,7 +193,7 @@ const styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'center',
     alignSelf: 'center',
   },
@@ -221,6 +227,12 @@ const styles = StyleSheet.create({
   usernameText: {
     flexShrink: 1,
     ...font(17, 20.4, 'semibold', 'primaryDark'),
+  },
+  usernameTextMeasures: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    opacity: 0,
   },
   backButton: {
     justifyContent: 'center',
