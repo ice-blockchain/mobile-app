@@ -5,6 +5,7 @@ import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {HomeTabStackParamList} from '@navigation/Main';
 import {RouteProp, useRoute} from '@react-navigation/native';
+import {DISTANCE_TO_OVERLAP} from '@screens/HomeFlow/Home/components/constants';
 import {Engagement} from '@screens/HomeFlow/Home/components/Pager/components/Engagement';
 import {MiningRate} from '@screens/HomeFlow/Home/components/Pager/components/MiningRate';
 import {Wallet} from '@screens/HomeFlow/Home/components/Pager/components/Wallet';
@@ -81,9 +82,9 @@ export const Pager = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: PAGE_HEIGHT + 1,
+    height: PAGE_HEIGHT + DISTANCE_TO_OVERLAP,
     backgroundColor: COLORS.primaryLight,
-    paddingBottom: 1,
+    paddingBottom: DISTANCE_TO_OVERLAP,
   },
   pager: {
     height: PAGE_HEIGHT,
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
   },
   indicators: {
     position: 'absolute',
-    bottom: 1,
+    bottom: DISTANCE_TO_OVERLAP,
     alignSelf: 'center',
   },
 });

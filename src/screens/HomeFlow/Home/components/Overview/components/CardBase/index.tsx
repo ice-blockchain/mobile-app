@@ -26,7 +26,7 @@ type Props = {
 };
 
 export const CARDS_TOTAL_HEIGHT = rem(140);
-export const CARDS_COLLAPSED_HEIGHT = rem(42);
+export const CARDS_COLLAPSED_HEIGHT = rem(48);
 export const CARD_WIDTH = rem(274);
 export const CARD_MARGIN_RIGHT_WIDTH = rem(16);
 export const CARD_BORDER_RADIUS = rem(20);

@@ -3,26 +3,22 @@
 import {HomeTabStackParamList} from '@navigation/Main';
 import {RouteProp, useRoute} from '@react-navigation/native';
 import {PAGE_HEIGHT} from '@screens/HomeFlow/Home/components/Pager';
-import {useEffect, useRef} from 'react';
-import Animated from 'react-native-reanimated';
+import {useEffect} from 'react';
+import Animated, {scrollTo, useAnimatedRef} from 'react-native-reanimated';
 
 export function useHandleScrollToParam() {
   const route = useRoute<RouteProp<HomeTabStackParamList, 'Home'>>();
 
-  const scrollViewRef = useRef<Animated.ScrollView>(null);
+  const animatedScrollViewRef = useAnimatedRef<Animated.ScrollView>();
   useEffect(() => {
-    if (route.params?.scrollTo && scrollViewRef.current) {
+    if (route.params?.scrollTo && animatedScrollViewRef.current) {
       switch (route.params.scrollTo) {
         case 'overview':
-          scrollViewRef.current.scrollTo({
-            y: PAGE_HEIGHT,
-            x: 0,
-            animated: true,
-          });
+          scrollTo(animatedScrollViewRef, 0, PAGE_HEIGHT, true);
           break;
       }
     }
-  }, [route.params?.scrollTo]);
+  }, [route.params, animatedScrollViewRef]);
 
-  return {scrollViewRef};
+  return {animatedScrollViewRef};
 }

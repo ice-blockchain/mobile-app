@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {windowWidth} from '@constants/styles';
+import {DISTANCE_TO_OVERLAP} from '@screens/HomeFlow/Home/components/constants';
 import React, {memo} from 'react';
 import {Image, StyleSheet} from 'react-native';
 
@@ -25,6 +26,6 @@ export const styles = StyleSheet.create({
     width: windowWidth,
     height: HEADER_TOP_IMAGE_HEIGHT,
     backgroundColor: COLORS.primaryLight,
-    marginTop: -1,
+    marginTop: -DISTANCE_TO_OVERLAP,
   },
 });

@@ -6,6 +6,7 @@ import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
+import {DISTANCE_TO_OVERLAP} from '@screens/HomeFlow/Home/components/constants';
 import {AdoptionCard} from '@screens/HomeFlow/Home/components/Overview/components/AdoptionCard';
 import {
   CARD_MARGIN_RIGHT_WIDTH,
@@ -155,7 +156,7 @@ const contentInset = {left: -OVERSCROLL, top: 0, bottom: 0, right: -OVERSCROLL};
 
 export const styles = StyleSheet.create({
   sectionHeaderContainer: {
-    marginTop: -1,
+    marginTop: -DISTANCE_TO_OVERLAP,
     backgroundColor: COLORS.white,
   },
   sectionHeader: {
@@ -168,7 +169,7 @@ export const styles = StyleSheet.create({
   },
   scrollView: {
     position: 'absolute',
-    top: SCROLL_TOP_MARGIN,
+    top: SCROLL_TOP_MARGIN - DISTANCE_TO_OVERLAP * 2,
     left: 0,
     right: 0,
     ...Platform.select({
@@ -180,7 +181,9 @@ export const styles = StyleSheet.create({
     paddingRight: OVERSCROLL,
     backgroundColor: COLORS.white,
     ...Platform.select({
-      android: {marginBottom: SCROLL_BOTTOM_PADDING},
+      android: {
+        marginBottom: SCROLL_BOTTOM_PADDING,
+      },
       ios: {paddingBottom: SCROLL_BOTTOM_PADDING},
     }),
   },

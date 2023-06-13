@@ -3,7 +3,7 @@
 import {ActivityIndicatorTheme} from '@components/ActivityIndicator';
 import {RefreshIceIcon} from '@components/RefreshControl';
 import {hapticFeedback} from '@utils/device';
-import React, {cloneElement, useCallback, useMemo} from 'react';
+import React, {cloneElement, RefObject, useCallback, useMemo} from 'react';
 import {
   FlatListProps,
   ScrollViewProps,
@@ -17,12 +17,14 @@ import Animated, {
   Extrapolate,
   interpolate,
   runOnJS,
+  scrollTo,
   useAnimatedReaction,
   useAnimatedScrollHandler,
   useAnimatedStyle,
   useSharedValue,
   withSpring,
 } from 'react-native-reanimated';
+import {rem} from 'rn-units';
 
 interface Props {
   style?: StyleProp<ViewStyle>;
@@ -37,12 +39,13 @@ interface Props {
   >;
   theme?: ActivityIndicatorTheme;
   onScrollTranslateY?: Animated.SharedValue<number>;
+  animatedScrollViewRef?: RefObject<Animated.ScrollView>;
 }
 
 /**
  * Space for activity indicator while refreshing
  */
-const REFRESH_THRESHOLD = 100;
+const REFRESH_THRESHOLD = rem(100);
 
 export const PullToRefreshContainer = ({
   style,
@@ -51,16 +54,27 @@ export const PullToRefreshContainer = ({
   onRefresh: onRefreshProps,
   children,
   onScrollTranslateY,
+  animatedScrollViewRef,
 }: Props) => {
   const translateYPanGesture = useSharedValue(0);
-  const translateYScrollable = useSharedValue(0);
 
-  const scrollHandler = useAnimatedScrollHandler(({contentOffset: {y}}) => {
-    translateYScrollable.value = y;
-    if (onScrollTranslateY) {
-      onScrollTranslateY.value = y;
-    }
-  }, []);
+  const sharedPanGestureStartY = useSharedValue(0);
+  const scrollHandler = useAnimatedScrollHandler(
+    {
+      onBeginDrag: event => {
+        sharedPanGestureStartY.value = event.contentOffset.y;
+      },
+      onScroll: ({contentOffset: {y}}) => {
+        if (y > 0 && translateYPanGesture.value < 0 && animatedScrollViewRef) {
+          scrollTo(animatedScrollViewRef, 0, 0, true);
+        }
+        if (onScrollTranslateY) {
+          onScrollTranslateY.value = y;
+        }
+      },
+    },
+    [],
+  );
 
   const onRefresh = useCallback(() => {
     hapticFeedback();
@@ -73,7 +87,7 @@ export const PullToRefreshContainer = ({
       .failOffsetX([-10, 10])
       .onUpdate(({translationY}) => {
         translateYPanGesture.value = interpolate(
-          translationY - translateYScrollable.value,
+          translationY - sharedPanGestureStartY.value,
           [0, REFRESH_THRESHOLD, REFRESH_THRESHOLD * 10],
           [0, -REFRESH_THRESHOLD, -REFRESH_THRESHOLD * 4],
           Extrapolate.CLAMP,
@@ -92,7 +106,7 @@ export const PullToRefreshContainer = ({
 
     const nativeGesture = Gesture.Native();
     return Gesture.Simultaneous(panGesture, nativeGesture);
-  }, [translateYPanGesture, translateYScrollable]);
+  }, [sharedPanGestureStartY.value, translateYPanGesture]);
 
   useAnimatedReaction(
     () => translateYPanGesture.value * -1 > REFRESH_THRESHOLD * 1.5,
