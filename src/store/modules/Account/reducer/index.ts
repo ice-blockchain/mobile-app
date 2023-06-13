@@ -41,13 +41,11 @@ function reducer(state = INITIAL_STATE, action: Actions): AccountState {
         draft.token = action.payload.token;
         break;
       case AccountActions.USER_STATE_CHANGE.SUCCESS.type:
-        draft.user = action.payload.user;
-        draft.isAdmin = action.payload.isAdmin;
-        break;
       case AccountActions.GET_ACCOUNT.SUCCESS.type:
       case AccountActions.UPDATE_ACCOUNT.SUCCESS.type:
-        if (action.payload.user) {
-          draft.user = {...draft.user, ...action.payload.user};
+        draft.user = action.payload.user;
+        if (action.type === AccountActions.USER_STATE_CHANGE.SUCCESS.type) {
+          draft.isAdmin = action.payload.isAdmin;
         }
         break;
       case AccountActions.SIGN_IN_SOCIAL.SUCCESS.type:

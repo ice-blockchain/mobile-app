@@ -1,12 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {modalOptions, screenOptions} from '@navigation/options';
-import {getCurrentRoute, resetRoot} from '@navigation/utils';
-import {useNavigation} from '@react-navigation/native';
-import {
-  createNativeStackNavigator,
-  NativeStackNavigationProp,
-} from '@react-navigation/native-stack';
+import {resetRoot} from '@navigation/utils';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {ConfirmEmailLink} from '@screens/AuthFlow/ConfirmEmailLink';
 import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
 import {
@@ -18,11 +14,11 @@ import {IceBonus} from '@screens/WelcomeFlow/IceBonus';
 import {Onboarding} from '@screens/WelcomeFlow/Onboarding';
 import {SetEmail} from '@screens/WelcomeFlow/SetEmail';
 import {WhoInvitedYou} from '@screens/WelcomeFlow/WhoInvitedYou';
+import {store} from '@store/configureStore';
 import {userSelector} from '@store/modules/Account/selectors';
 import {isOnboardingViewedSelector} from '@store/modules/Users/selectors';
 // import {emailVerificationStepSelector} from '@store/modules/Validation/selectors'; //TODO: temp email step disabling
-import React, {useEffect, useMemo, useRef} from 'react';
-import {useSelector} from 'react-redux';
+import React, {useRef} from 'react';
 
 export type WelcomeStackParamList = {
   ClaimUsername: undefined;
@@ -38,65 +34,61 @@ export type WelcomeStackParamList = {
 
 const WelcomeStack = createNativeStackNavigator<WelcomeStackParamList>();
 
-const STEPS: (keyof WelcomeStackParamList)[] = [
-  'Onboarding',
-  'ClaimUsername',
-  'WhoInvitedYou',
-  // 'SetEmail', //TODO: temp email step disabling
-  'IceBonus',
+export const WELCOME_STEPS: {
+  name: keyof Pick<
+    WelcomeStackParamList,
+    'Onboarding' | 'ClaimUsername' | 'WhoInvitedYou' | 'SetEmail' | 'IceBonus'
+  >;
+  finished: () => boolean;
+}[] = [
+  {
+    name: 'Onboarding',
+    finished: () => {
+      const user = userSelector(store.getState());
+      return isOnboardingViewedSelector(user?.id)(store.getState());
+    },
+  },
+  {
+    name: 'ClaimUsername',
+    finished: () => {
+      return !!userSelector(store.getState())?.username;
+    },
+  },
+  {
+    name: 'WhoInvitedYou',
+    finished: () => {
+      return !!userSelector(store.getState())?.referredBy;
+    },
+  },
+  //TODO: temp email step disabling
+  // {
+  //   name: 'SetEmail',
+  //   finished: () => {
+  //     return !!userSelector(store.getState())?.email;
+  //   },
+  // },
+  {
+    name: 'IceBonus',
+    finished: () => {
+      return !!userSelector(
+        store.getState(),
+      )?.clientData?.registrationProcessFinalizedSteps?.includes('iceBonus');
+    },
+  },
 ];
 
 export function WelcomeNavigator() {
   const initializedRef = useRef(false);
-  const user: ReturnType<typeof userSelector> = useSelector(userSelector);
-  const isOnboardingViewed = useSelector(isOnboardingViewedSelector(user?.id));
-
-  // const emailVerificationStep = useSelector(emailVerificationStepSelector); //TODO: temp email step disabling
-  const navigation =
-    useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
-
-  const welcomeRoute = useMemo(() => {
-    const finalizedSteps =
-      user?.clientData?.registrationProcessFinalizedSteps ?? [];
-
-    if (!isOnboardingViewed) {
-      return 'Onboarding';
-    } else if (!finalizedSteps.includes('username')) {
-      return 'ClaimUsername';
-    } else if (!finalizedSteps.includes('referral')) {
-      return 'WhoInvitedYou';
-    }
-    //TODO: temp email step disabling
-    // else if (!finalizedSteps.includes('email')) {
-    //   return emailVerificationStep === 'email'
-    //     ? 'SetEmail'
-    //     : 'ConfirmEmailLink';
-    // }
-    else {
-      return 'IceBonus';
-    }
-  }, [user, isOnboardingViewed]);
-
-  /**
-   * `user` dependency is added here to handle properly navigation transitions
-   * if we update something after going back to previous welcome screens
-   */
-  useEffect(() => {
-    getCurrentRoute().then(route => {
-      if (route?.name !== welcomeRoute) {
-        navigation.navigate(welcomeRoute);
-      }
-    });
-  }, [welcomeRoute, navigation, user]);
 
   /**
    * Setting initial navigation state to add an ability to go back
    */
   if (!initializedRef.current) {
-    const stepIndex = STEPS.indexOf(welcomeRoute);
+    const stepNames = WELCOME_STEPS.map(s => s.name);
+    const currentStepIndex = WELCOME_STEPS.findIndex(step => !step.finished());
     resetRoot({
-      index: stepIndex,
-      routes: STEPS.slice(0, stepIndex + 1).map(name => ({name})),
+      index: currentStepIndex,
+      routes: stepNames.slice(0, currentStepIndex + 1).map(name => ({name})),
     });
     initializedRef.current = true;
   }

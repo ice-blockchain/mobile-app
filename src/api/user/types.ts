@@ -70,12 +70,7 @@ export type WalkthroughStepProgress = {
   version: number;
 };
 
-export type RegistrationProcessFinalizedStep =
-  | 'onboarding'
-  | 'username'
-  | 'referral'
-  | 'email'
-  | 'iceBonus';
+export type RegistrationProcessFinalizedStep = 'onboarding' | 'iceBonus';
 
 export type ClientData = {
   registrationProcessFinalizedSteps?: RegistrationProcessFinalizedStep[];
