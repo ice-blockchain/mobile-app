@@ -27,7 +27,7 @@ export function* getCollectionSaga<
           offset,
           limit,
         });
-      const hasNext = response.length === limit;
+      const hasNext = !!response.length;
       yield put(action.SUCCESS.create(response, {query, offset, hasNext}));
     }
   } catch (error) {

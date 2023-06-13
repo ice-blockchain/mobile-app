@@ -42,7 +42,7 @@ export function* getBalanceHistorySaga({
           startDate,
           endDate,
           data,
-          hasNext: getBalanceHistoryLength(data) === PAGE_SIZE,
+          hasNext: !!getBalanceHistoryLength(data),
         }),
       );
     }

@@ -55,7 +55,7 @@ export function* loadNewsSaga(
       NewsActions.NEWS_LOAD.SUCCESS.create({
         isRefresh,
 
-        hasMore: news.length === NEWS_LOAD_LIMIT,
+        hasMore: !!news.length,
 
         featuredNewsArticle,
 
