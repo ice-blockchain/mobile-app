@@ -6,6 +6,7 @@ import {
   userIdSelector,
 } from '@store/modules/Account/selectors';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
+import {balanceHistorySelector} from '@store/modules/Tokenomics/selectors';
 import {getBalanceHistoryLength} from '@store/modules/Tokenomics/utils/getBalanceHistoryLength';
 import {getTimezoneOffset} from '@utils/device';
 import {getErrorMessage} from '@utils/errors';
@@ -14,12 +15,14 @@ import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 const PAGE_SIZE = 24;
 
 export function* getBalanceHistorySaga({
-  payload: {offset, startDate, endDate},
+  payload: {isInitial, startDate, endDate},
 }: ReturnType<typeof TokenomicsActions.GET_BALANCE_HISTORY.START.create>) {
   try {
     const isAuthorized: ReturnType<typeof isAuthorizedSelector> = yield select(
       isAuthorizedSelector,
     );
+    const {pageNumber}: ReturnType<typeof balanceHistorySelector> =
+      yield select(balanceHistorySelector);
 
     if (isAuthorized) {
       const userId: ReturnType<typeof userIdSelector> = yield select(
@@ -29,7 +32,7 @@ export function* getBalanceHistorySaga({
       const data: SagaReturnType<typeof Api.tokenomics.getBalanceHistory> =
         yield call(Api.tokenomics.getBalanceHistory, {
           userId,
-          offset,
+          offset: pageNumber * PAGE_SIZE,
           startDate,
           endDate,
           limit: PAGE_SIZE,
@@ -38,7 +41,7 @@ export function* getBalanceHistorySaga({
 
       yield put(
         TokenomicsActions.GET_BALANCE_HISTORY.SUCCESS.create({
-          offset,
+          isInitial,
           startDate,
           endDate,
           data,

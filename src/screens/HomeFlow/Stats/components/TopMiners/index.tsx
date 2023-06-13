@@ -50,7 +50,7 @@ export const TopMiners = memo(() => {
 
   useEffect(() => {
     const interactionPromise = InteractionManager.runAfterInteractions(() => {
-      fetch({offset: 0});
+      fetch({isInitial: true});
     });
     return () => interactionPromise.cancel();
   }, [fetch]);

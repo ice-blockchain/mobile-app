@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {actionsMap, CollectionAction} from '@store/modules/Collections';
+import {collectionSelector} from '@store/modules/Collections/selectors';
 import {getErrorMessage} from '@utils/errors';
-import {put, SagaReturnType} from 'redux-saga/effects';
+import {put, SagaReturnType, select} from 'redux-saga/effects';
 
 const DEFAULT_PAGE_SIZE = 20;
 
@@ -17,18 +18,27 @@ export function* getCollectionSaga<
   P extends ReturnType<A['START']['create']>,
 >(action: A, {payload}: P) {
   try {
-    const {request, defaultPageSize = DEFAULT_PAGE_SIZE} =
-      actionsMap.get(action) ?? {};
-    const {offset, limit = defaultPageSize, query} = payload;
+    const {
+      request,
+      defaultPageSize = DEFAULT_PAGE_SIZE,
+      stateKey,
+    } = actionsMap.get(action) ?? {};
+    if (!stateKey) {
+      return;
+    }
+    const {pageNumber}: SagaReturnType<ReturnType<typeof collectionSelector>> =
+      yield select(collectionSelector(stateKey));
+
+    const {limit = defaultPageSize, query, isInitial} = payload;
     if (request) {
       const response: UnionToIntersection<SagaReturnType<typeof request>> =
-        yield request({
+        (yield request({
           query,
-          offset,
+          offset: pageNumber * limit,
           limit,
-        });
+        })) ?? [];
       const hasNext = !!response.length;
-      yield put(action.SUCCESS.create(response, {query, offset, hasNext}));
+      yield put(action.SUCCESS.create(response, {query, isInitial, hasNext}));
     }
   } catch (error) {
     yield put(action.FAILED.create(getErrorMessage(error)));

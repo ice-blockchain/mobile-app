@@ -13,6 +13,8 @@ export interface State {
   };
   hasMore: boolean;
 
+  pageNumber: number;
+
   unreadCount: number;
 }
 
@@ -20,6 +22,7 @@ const actionCreatorMarkViewed =
   NewsActions.NEWS_ARTICLE_MARK_VIEWED(null).SUCCESS.create;
 
 type Actions =
+  | ReturnType<typeof NewsActions.NEWS_LOAD.START.create>
   | ReturnType<typeof NewsActions.NEWS_LOAD.SUCCESS.create>
   | ReturnType<typeof NewsActions.UNREAD_NEWS_COUNT_LOAD.SUCCESS.create>
   | ReturnType<typeof actionCreatorMarkViewed>;
@@ -30,6 +33,7 @@ const INITIAL_STATE: State = {
   sortedItemIds: [],
   items: {},
   hasMore: true,
+  pageNumber: 0,
 
   unreadCount: 0,
 };
@@ -37,6 +41,14 @@ const INITIAL_STATE: State = {
 export function newsReducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
+      case NewsActions.NEWS_LOAD.START.type:
+        {
+          const {isRefresh} = action.payload;
+          if (isRefresh) {
+            draft.pageNumber = 0;
+          }
+        }
+        break;
       case NewsActions.NEWS_LOAD.SUCCESS.type:
         {
           const {newsIds, news, hasMore, isRefresh, featuredNewsArticle} =
@@ -63,6 +75,7 @@ export function newsReducer(state = INITIAL_STATE, action: Actions): State {
             };
           }
 
+          draft.pageNumber += 1;
           draft.hasMore = hasMore;
         }
         break;

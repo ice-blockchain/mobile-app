@@ -14,12 +14,13 @@ type Params<T> = {
     data: T[];
     hasNext: boolean;
     query?: string;
+    pageNumber: number;
   };
   action: ActionFactories<
     string,
     {
       START: (params: {
-        offset: number;
+        isInitial?: boolean;
         limit?: number;
         query?: string;
       }) => unknown;
@@ -51,8 +52,10 @@ export const useFetchCollection = <T,>({
   }
 
   const fetch = useCallback(
-    ({offset, query}: {offset: number; query?: string}) => {
-      dispatch(action.START.create({query, offset, limit: options?.pageSize}));
+    ({isInitial, query}: {isInitial?: boolean; query?: string}) => {
+      dispatch(
+        action.START.create({query, isInitial, limit: options?.pageSize}),
+      );
     },
     [action.START, dispatch, options?.pageSize],
   );
@@ -60,13 +63,13 @@ export const useFetchCollection = <T,>({
   const loadNext = useCallback(() => {
     if (hasNext && !loading) {
       loadNextLoadingRef.current = true;
-      fetch({query: searchQuery, offset: data.length});
+      fetch({query: searchQuery});
     }
-  }, [fetch, loading, hasNext, searchQuery, data.length]);
+  }, [fetch, loading, hasNext, searchQuery]);
 
   const refresh = useCallback(() => {
     refreshingRef.current = true;
-    fetch({query: searchQuery, offset: 0});
+    fetch({query: searchQuery, isInitial: true});
   }, [fetch, searchQuery]);
 
   const refreshing = loading && refreshingRef.current;
