@@ -40,6 +40,10 @@ export const MiningButton = ({onPress, onPressCallback}: Props) => {
       if (onPressCallback) {
         onPressCallback();
       }
+
+      /**
+       * Is used in StackingTooltip to close the Modal on button tap
+       */
       if (onPress && gesture === 'onTap') {
         onPress();
         return null;
