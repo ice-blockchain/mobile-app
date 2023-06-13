@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Task} from '@api/tasks/types';
 import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
 import {CompletedItem} from '@screens/HomeFlow/Home/components/Tasks/components/CompletedItem';
@@ -29,7 +30,25 @@ export const Tasks = memo(({highlightActiveTask}: Props) => {
     areAllTasksCompleted,
   } = useTasks();
 
+  const [currentTasks, setCurrentTasks] = useState<Task[] | null>(null);
+
   const [isExpanded, setIsExpanded] = useState(!areAllTasksCompleted);
+
+  useEffect(() => {
+    if (tasks !== currentTasks) {
+      const currentHasUncomplitedTasks = currentTasks?.some(
+        task => !task.completed,
+      );
+
+      const allCompleted = tasks?.every(task => task.completed);
+
+      if (allCompleted && currentHasUncomplitedTasks) {
+        setIsExpanded(false);
+      }
+    }
+
+    setCurrentTasks(tasks);
+  }, [currentTasks, tasks]);
 
   useEffect(() => {
     if (!areAllTasksCompleted) {
