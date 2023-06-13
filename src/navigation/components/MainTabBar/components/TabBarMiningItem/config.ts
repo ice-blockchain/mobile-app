@@ -1,18 +1,14 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {LocalAudio} from '@audio';
 import {LottieViewProps} from '@components/LottieView';
 import {MINING_LONG_PRESS_ACTIVATION_SEC} from '@constants/timeouts';
 import {LottieAnimations} from '@lottie';
-import {loadLocalAudio} from '@services/audio';
 import {MiningState} from '@store/modules/Tokenomics/types';
 import {t} from '@translations/i18n';
 
 type GestureConfig = {
   showStackingModal?: boolean;
   startMining?: boolean;
-  audioFeedback?: ReturnType<typeof loadLocalAudio>;
-  hapticFeedback?: boolean;
 };
 
 export const MiningButtonConfig: {
@@ -46,8 +42,6 @@ export const MiningButtonConfig: {
     },
     onLongPress: {
       startMining: true,
-      audioFeedback: loadLocalAudio(LocalAudio.extendMining),
-      hapticFeedback: true,
     },
   },
   expire: {
@@ -58,8 +52,6 @@ export const MiningButtonConfig: {
     },
     onLongPress: {
       startMining: true,
-      audioFeedback: loadLocalAudio(LocalAudio.extendMining),
-      hapticFeedback: true,
     },
   },
   holidayActive: {
@@ -80,8 +72,6 @@ export const MiningButtonConfig: {
     },
     onLongPress: {
       startMining: true,
-      audioFeedback: loadLocalAudio(LocalAudio.extendMining),
-      hapticFeedback: true,
     },
   },
   holidayExpire: {
@@ -94,8 +84,6 @@ export const MiningButtonConfig: {
     },
     onLongPress: {
       startMining: true,
-      audioFeedback: loadLocalAudio(LocalAudio.extendMining),
-      hapticFeedback: true,
     },
   },
 };

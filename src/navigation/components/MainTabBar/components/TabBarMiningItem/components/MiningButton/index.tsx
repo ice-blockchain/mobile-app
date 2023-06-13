@@ -6,7 +6,6 @@ import {MiningButtonTooltip} from '@navigation/components/MainTabBar/components/
 import {useMiningState} from '@navigation/components/MainTabBar/components/TabBarMiningItem/components/MiningButton/hooks/useMiningState';
 import {useStackingModal} from '@navigation/components/MainTabBar/components/TabBarMiningItem/components/MiningButton/hooks/useStackingModal';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
-import {hapticFeedback} from '@utils/device';
 import React, {useEffect, useRef} from 'react';
 import {View} from 'react-native';
 
@@ -57,15 +56,6 @@ export const MiningButton = ({onPress, onPressCallback}: Props) => {
       if (gestureConfig.showStackingModal) {
         showStackingModal();
         AnalyticsEventLogger.trackTapToMine({tapToMineActionType: 'Info'});
-      }
-
-      if (gestureConfig.hapticFeedback) {
-        hapticFeedback();
-      }
-
-      if (gestureConfig.audioFeedback) {
-        const audioFeedback = await gestureConfig.audioFeedback;
-        audioFeedback.play();
       }
 
       if (gestureConfig.startMining) {
