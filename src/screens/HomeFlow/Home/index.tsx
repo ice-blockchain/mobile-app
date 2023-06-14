@@ -41,7 +41,6 @@ export const Home = memo(() => {
           contentContainerStyle={tabBarOffset.current}
           showsVerticalScrollIndicator={false}>
           <Pager />
-
           <View style={commonStyles.baseSubScreen}>
             <Overview translateY={translateY} topOffset={PAGE_HEIGHT} />
             <Team />

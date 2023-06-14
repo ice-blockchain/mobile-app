@@ -10,8 +10,8 @@ import {MiningHammerIcon} from '@svg/MiningHammerIcon';
 import {t} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
-import React, {memo, useCallback} from 'react';
-import {StyleSheet, Text, TextProps, View} from 'react-native';
+import React, {memo} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -22,38 +22,6 @@ type Props = {
 export const Engagement = memo(({darkMode}: Props) => {
   const miningSummary = useSelector(miningSummarySelector);
   const color = darkMode ? COLORS.primaryDark : COLORS.white;
-
-  const AnimatedMiningStreak = useCallback(
-    ({style}: TextProps) => (
-      <AnimatedNumberText
-        textDecorator={animatedValue =>
-          formatNumber(animatedValue, {
-            maximumFractionDigits: 0,
-            minimumFractionDigits: 0,
-          })
-        }
-        style={style}
-        value={miningSummary?.miningStreak ?? 0}
-      />
-    ),
-    [miningSummary?.miningStreak],
-  );
-
-  const AnimatedFreeMiningSessions = useCallback(
-    ({style}: TextProps) => (
-      <AnimatedNumberText
-        textDecorator={animatedValue =>
-          formatNumber(animatedValue, {
-            maximumFractionDigits: 0,
-            minimumFractionDigits: 0,
-          })
-        }
-        style={style}
-        value={miningSummary?.remainingFreeMiningSessions ?? 0}
-      />
-    ),
-    [miningSummary?.remainingFreeMiningSessions],
-  );
 
   if (!miningSummary) {
     return <PageSkeleton />;
@@ -74,7 +42,15 @@ export const Engagement = memo(({darkMode}: Props) => {
             {t('home.engagement.streak')}
           </Text>
           <Text style={[styles.value, darkMode && commonStyles.darkText]}>
-            <AnimatedMiningStreak />
+            <AnimatedNumberText
+              textDecorator={animatedValue =>
+                formatNumber(animatedValue, {
+                  maximumFractionDigits: 0,
+                  minimumFractionDigits: 0,
+                })
+              }
+              value={miningSummary?.miningStreak ?? 0}
+            />
           </Text>
         </View>
         <View style={[styles.titleValueContainer, styles.daysOff]}>
@@ -82,7 +58,15 @@ export const Engagement = memo(({darkMode}: Props) => {
             {t('home.engagement.days_off')}
           </Text>
           <Text style={[styles.value, darkMode && commonStyles.darkText]}>
-            <AnimatedFreeMiningSessions />
+            <AnimatedNumberText
+              textDecorator={animatedValue =>
+                formatNumber(animatedValue, {
+                  maximumFractionDigits: 0,
+                  minimumFractionDigits: 0,
+                })
+              }
+              value={miningSummary?.remainingFreeMiningSessions ?? 0}
+            />
           </Text>
         </View>
       </View>

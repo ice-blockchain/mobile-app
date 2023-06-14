@@ -16,7 +16,7 @@ import {GraphIcon} from '@svg/GraphIcon';
 import {t} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
-import React from 'react';
+import React, {useCallback} from 'react';
 import {StyleSheet, Text, TextProps, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
@@ -35,6 +35,13 @@ export const OnlineUsersHistory = () => {
   const isSplashHidden = useSelector(isSplashHiddenSelector);
   const totalActiveUsers = useSelector(totalActiveUsersSelector);
 
+  const Header = useCallback(
+    ({style}: TextProps) => (
+      <AnimatedNumberText value={totalActiveUsers} style={style} />
+    ),
+    [totalActiveUsers],
+  );
+
   const maxValue = data.length ? Math.max(...data.map(d => d.value)) : 0;
   const minValue = data.length ? Math.min(...data.map(d => d.value)) : 0;
 
@@ -49,16 +56,12 @@ export const OnlineUsersHistory = () => {
     return <CardBaseSkeleton />;
   }
 
-  const header = ({style}: TextProps) => (
-    <AnimatedNumberText value={totalActiveUsers} style={style} />
-  );
-
   return (
     <CardBase
       backgroundImageSource={Images.backgrounds.adoptionCardBg}
       headerTitle={t('home.adoption.title')}
       headerTitleIcon={<GraphIcon fill={COLORS.white} />}
-      HeaderValue={header}
+      HeaderValue={Header}
       headerValueIcon={<FriendIcon fill={COLORS.shamrock} />}>
       <View style={styles.body}>
         <View style={styles.yAxis}>
