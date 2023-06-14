@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {Images} from '@images';
 import {CardBase} from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
 import {ReferralsEmptyState} from '@screens/HomeFlow/Home/components/Overview/components/ReferralsEmptyState';
@@ -31,21 +30,6 @@ export const ReferralsCard = ({isCollapsed}: Props) => {
   const userT2ReferralCount = useSelector(userT2ReferralSelector);
   const isSplashHidden = useSelector(isSplashHiddenSelector);
 
-  const animatedUserReferralCount = useAnimatedNumber(
-    userReferralCount,
-    formatNumber,
-  );
-
-  const animatedUserT1ReferralCount = useAnimatedNumber(
-    userT1ReferralCount,
-    formatNumber,
-  );
-
-  const animatedUserT2ReferralCount = useAnimatedNumber(
-    userT2ReferralCount,
-    formatNumber,
-  );
-
   if (!isSplashHidden) {
     return null;
   }
@@ -55,7 +39,7 @@ export const ReferralsCard = ({isCollapsed}: Props) => {
       backgroundImageSource={Images.backgrounds.referralsCardBg}
       headerTitle={t('home.referrals.title')}
       headerTitleIcon={<TrophyIcon fill={COLORS.white} />}
-      headerValue={animatedUserReferralCount}
+      HeaderValue={formatNumber(userReferralCount)}
       headerValueIcon={<FriendsIcon fill={COLORS.white} />}
       isCollapsed={isCollapsed}>
       {userReferralCount === 0 ? (
@@ -68,7 +52,7 @@ export const ReferralsCard = ({isCollapsed}: Props) => {
                 {t('home.referrals.users_tier_1')}
               </Text>
               <Text style={styles.valueText}>
-                {animatedUserT1ReferralCount}
+                {formatNumber(userT1ReferralCount)}
               </Text>
             </View>
             <View style={styles.column}>
@@ -76,7 +60,7 @@ export const ReferralsCard = ({isCollapsed}: Props) => {
                 {t('home.referrals.users_tier_2')}
               </Text>
               <Text style={styles.valueText}>
-                {animatedUserT2ReferralCount}
+                {formatNumber(userT2ReferralCount)}
               </Text>
             </View>
           </View>

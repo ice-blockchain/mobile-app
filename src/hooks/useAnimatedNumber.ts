@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import debounce from 'lodash/debounce';
+import throttle from 'lodash/throttle';
 import {useCallback, useEffect, useMemo, useState} from 'react';
 import {
   Easing,
@@ -10,28 +10,22 @@ import {
   withTiming,
 } from 'react-native-reanimated';
 
-export function useAnimatedNumber(
-  value: number,
-  formatter: (value: number) => string = initialValue => `${initialValue}`,
-) {
+export function useAnimatedNumber(value: number) {
   const sharedValue = useSharedValue<number>(0);
 
-  const [animatedValue, setAnimatedValue] = useState('0');
+  const [animatedValue, setAnimatedValue] = useState(0);
 
   const setAnimatedValueDebounced = useMemo(() => {
-    return debounce(setAnimatedValue, 50, {
-      maxWait: 50,
-    });
+    return throttle(setAnimatedValue, 150);
   }, []);
 
   const updateValue = useCallback(
     (newValue: number) => {
-      const newFormattedValue = formatter(newValue);
-      if (newFormattedValue !== animatedValue) {
-        setAnimatedValueDebounced(newFormattedValue);
+      if (newValue !== animatedValue) {
+        setAnimatedValueDebounced(newValue);
       }
     },
-    [animatedValue, formatter, setAnimatedValueDebounced],
+    [animatedValue, setAnimatedValueDebounced],
   );
 
   useDerivedValue(() => {

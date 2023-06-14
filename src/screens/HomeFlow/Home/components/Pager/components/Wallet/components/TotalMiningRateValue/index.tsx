@@ -2,10 +2,10 @@
 
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {COLORS} from '@constants/colors';
-import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
+import {AnimatedNumberText} from '@hooks/AnimatedNumber';
 import {miningRatesSelector} from '@store/modules/Tokenomics/selectors';
 import {formatNumberString, parseNumber} from '@utils/numbers';
-import React, {useMemo} from 'react';
+import React, {useCallback, useMemo} from 'react';
 import {StyleProp, StyleSheet, TextStyle} from 'react-native';
 import {useSelector} from 'react-redux';
 
@@ -15,19 +15,6 @@ interface Props {
 
 export const TotalMiningRateValue = ({style}: Props) => {
   const miningRates = useSelector(miningRatesSelector);
-
-  const animatedMiningRatesTotalAmount = useAnimatedNumber(
-    parseNumber(miningRates?.total.amount ?? '0') *
-      {
-        positive: 1,
-        negative: -1,
-        none: 1,
-      }[miningRates?.type ?? 'none'],
-    initialValue =>
-      `${initialValue > 0 ? '+' : ''}${formatNumberString(
-        String(initialValue),
-      )}`,
-  );
 
   const rateValueTextStyle = useMemo(() => {
     switch (miningRates?.type) {
@@ -42,13 +29,35 @@ export const TotalMiningRateValue = ({style}: Props) => {
     }
   }, [miningRates?.type]);
 
+  const NumberComponent = useCallback(
+    ({animatedValue}) => {
+      const formattedValue = `${
+        animatedValue > 0 ? '+' : ''
+      }${formatNumberString(String(animatedValue))}`;
+      return (
+        <FormattedNumber
+          containerStyle={style}
+          bodyStyle={rateValueTextStyle}
+          decimalsStyle={rateValueTextStyle}
+          number={formattedValue}
+          trim
+        />
+      );
+    },
+    [rateValueTextStyle, style],
+  );
+
   return (
-    <FormattedNumber
-      containerStyle={style}
-      bodyStyle={rateValueTextStyle}
-      decimalsStyle={rateValueTextStyle}
-      number={animatedMiningRatesTotalAmount}
-      trim
+    <AnimatedNumberText
+      value={
+        parseNumber(miningRates?.total.amount ?? '0') *
+        {
+          positive: 1,
+          negative: -1,
+          none: 1,
+        }[miningRates?.type ?? 'none']
+      }
+      NumberComponent={NumberComponent}
     />
   );
 };

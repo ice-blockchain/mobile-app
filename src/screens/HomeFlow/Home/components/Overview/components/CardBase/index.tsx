@@ -8,6 +8,7 @@ import {
   LayoutChangeEvent,
   StyleSheet,
   Text,
+  TextProps,
   View,
 } from 'react-native';
 import Animated, {useAnimatedStyle, withTiming} from 'react-native-reanimated';
@@ -18,7 +19,7 @@ type Props = {
   backgroundImageSource: ImageSourcePropType;
   headerTitle?: string;
   headerTitleIcon?: ReactNode;
-  headerValue?: string;
+  HeaderValue?: string | React.FC<TextProps>;
   headerValueIcon?: ReactNode;
   isCollapsed?: boolean;
   children: ReactNode;
@@ -38,7 +39,7 @@ export const CardBase = forwardRef(
       backgroundImageSource,
       headerTitle,
       headerTitleIcon,
-      headerValue,
+      HeaderValue,
       headerValueIcon,
       isCollapsed = false,
       children,
@@ -66,7 +67,11 @@ export const CardBase = forwardRef(
             <Text style={styles.titleText}>{headerTitle}</Text>
           </View>
           {headerValueIcon}
-          <Text style={styles.valueText}>{headerValue}</Text>
+          {!HeaderValue || typeof HeaderValue === 'string' ? (
+            <Text style={styles.valueText}>{HeaderValue}</Text>
+          ) : (
+            <HeaderValue style={styles.valueText} />
+          )}
         </View>
         <Animated.View style={[styles.body, animatedChildrenContainerStyle]}>
           {children}

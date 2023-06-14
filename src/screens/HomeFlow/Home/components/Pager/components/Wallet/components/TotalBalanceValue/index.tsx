@@ -2,11 +2,11 @@
 
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {commonStyles} from '@constants/styles';
-import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
+import {AnimatedNumberText} from '@hooks/AnimatedNumber';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {formatNumberString, parseNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
-import React from 'react';
+import React, {useCallback} from 'react';
 import {StyleProp, StyleSheet, TextStyle} from 'react-native';
 import {useSelector} from 'react-redux';
 
@@ -18,18 +18,29 @@ interface Props {
 export const TotalBalanceValue = ({style, darkMode}: Props) => {
   const balanceSummary = useSelector(balanceSummarySelector);
 
-  const animatedBalanceSummary = useAnimatedNumber(
-    parseNumber(balanceSummary?.total ?? '0'),
-    initialValue => formatNumberString(String(initialValue)),
+  const NumberComponent = useCallback(
+    ({animatedValue}) => {
+      const formattedValue = formatNumberString(String(animatedValue));
+      return (
+        <FormattedNumber
+          containerStyle={style}
+          number={formattedValue}
+          bodyStyle={[styles.bodyStyle, darkMode && commonStyles.darkText]}
+          decimalsStyle={[
+            styles.decimalsStyle,
+            darkMode && commonStyles.darkText,
+          ]}
+          trim
+        />
+      );
+    },
+    [darkMode, style],
   );
 
   return (
-    <FormattedNumber
-      containerStyle={style}
-      number={animatedBalanceSummary}
-      bodyStyle={[styles.bodyStyle, darkMode && commonStyles.darkText]}
-      decimalsStyle={[styles.decimalsStyle, darkMode && commonStyles.darkText]}
-      trim
+    <AnimatedNumberText
+      value={parseNumber(balanceSummary?.total ?? '0')}
+      NumberComponent={NumberComponent}
     />
   );
 };

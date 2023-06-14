@@ -4,7 +4,7 @@ import {IceLabel} from '@components/Labels/IceLabel';
 import {Slider} from '@components/Slider';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
+import {AnimatedNumberText} from '@hooks/AnimatedNumber';
 import {MiningIcon} from '@svg/MiningIcon';
 import {TierOneIcon} from '@svg/TierOneIcon';
 import {TierTwoIcon} from '@svg/TierTwoIcon';
@@ -52,13 +52,6 @@ export const Calculator = memo(
     const tierTwoValueRef = useRef(TIER_TWO_DEFAULT);
     const activeMinersValueRef = useRef(ACTIVE_MINERS_DEFAULT);
 
-    const animatedResult = useAnimatedNumber(result ?? 0, value =>
-      formatNumber(value, {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      }),
-    );
-
     const setParameters = useMemo(
       () =>
         throttle(() => {
@@ -86,7 +79,15 @@ export const Calculator = memo(
             <Text style={styles.resultValueText}>
               {result !== null ? (
                 <>
-                  {animatedResult}{' '}
+                  <AnimatedNumberText
+                    value={result ?? 0}
+                    textDecorator={animatedValue =>
+                      `${formatNumber(animatedValue, {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2,
+                      })}`
+                    }
+                  />{' '}
                   <IceLabel iconSize={24} label={t('general.ice_per_hour')} />
                 </>
               ) : null}

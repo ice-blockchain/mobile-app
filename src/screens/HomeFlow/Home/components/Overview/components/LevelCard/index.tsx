@@ -2,7 +2,7 @@
 
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
-import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
+import {AnimatedNumberText} from '@hooks/AnimatedNumber';
 import {Images} from '@images';
 import {
   CardBase,
@@ -18,7 +18,13 @@ import {replaceString, t, tagRegex} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {forwardRef, Ref} from 'react';
-import {LayoutChangeEvent, StyleSheet, Text, View} from 'react-native';
+import {
+  LayoutChangeEvent,
+  StyleSheet,
+  Text,
+  TextProps,
+  View,
+} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -42,15 +48,6 @@ export const LevelCard = forwardRef(
       AchievementsSelectors.getRoleTypeByUserId({userId}),
     );
 
-    const animatedUserLevel = useAnimatedNumber(userLevel, formatNumber);
-
-    const animatedUserReferralCount = useAnimatedNumber(
-      userReferralCount,
-      formatNumber,
-    );
-
-    const animatedGlobalRank = useAnimatedNumber(globalRank ?? 0, formatNumber);
-
     if (!isSplashHidden) {
       return null;
     }
@@ -59,6 +56,16 @@ export const LevelCard = forwardRef(
       return <CardBaseSkeleton />;
     }
 
+    const header = ({style}: TextProps) => (
+      <AnimatedNumberText
+        style={style}
+        value={userLevel}
+        textDecorator={animatedUserLevel =>
+          `${t('global.level')} ${formatNumber(animatedUserLevel)}`
+        }
+      />
+    );
+
     return (
       <CardBase
         ref={forwardedRef}
@@ -66,18 +73,24 @@ export const LevelCard = forwardRef(
         backgroundImageSource={Images.backgrounds.levelCardBg}
         headerTitle={t(`roles.${roleType}.title`).toUpperCase()}
         headerTitleIcon={<PioneerIcon fill={COLORS.white} />}
-        headerValue={`${t('global.level')} ${animatedUserLevel}`}
+        HeaderValue={header}
         isCollapsed={isCollapsed}>
         <View style={styles.body}>
           <View style={styles.column}>
             <Text style={styles.labelText}>{t('home.pioneer.referrals')}</Text>
-            <Text style={styles.valueText}>{animatedUserReferralCount}</Text>
+            <AnimatedNumberText
+              value={userReferralCount}
+              style={styles.valueText}
+            />
           </View>
           <View style={styles.column}>
             {globalRank != null && (
               <>
                 <Text style={styles.labelText}>{t('home.pioneer.rank')}</Text>
-                <Text style={styles.valueText}>{animatedGlobalRank}</Text>
+                <AnimatedNumberText
+                  value={globalRank ?? 0}
+                  style={styles.valueText}
+                />
               </>
             )}
           </View>

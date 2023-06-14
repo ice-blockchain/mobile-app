@@ -37,6 +37,7 @@ export const Pager = memo(() => {
   const route = useRoute<RouteProp<HomeTabStackParamList, 'Home'>>();
   const [activeIndex, setActiveIndex] = useState(0);
   const pagerViewRef = useRef<PagerView>(null);
+
   useEffect(() => {
     if (pagerViewRef.current?.setPage) {
       pagerViewRef.current.setPage(
@@ -46,7 +47,6 @@ export const Pager = memo(() => {
   }, [route.params?.activePagerCard]);
 
   const onPageChange = (event: PagerViewOnPageSelectedEvent) => {
-    console.log('onPageChange');
     if (activeIndex !== event.nativeEvent.position) {
       setActiveIndex(event.nativeEvent.position);
     }
@@ -54,7 +54,6 @@ export const Pager = memo(() => {
 
   const {onElementLayout, elementRef} = usePagerCardsWalkthrough();
 
-  console.log('Pager rerender');
   return (
     <View
       style={[commonStyles.baseSubScreen, styles.container]}
