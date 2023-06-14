@@ -1587,10 +1587,10 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-9.3.6.tgz#730de4ebf83f7263fa61b0cbec6cde9b28660077"
   integrity sha512-SwbBnHZuXcCUpYdL6ebt4HPAZEugPASl+RPxIyNe91Y+boZptzAFLywYW6yU93DYAhiHHFQBL6x6LxwF/K/tOQ==
 
-"@react-native-firebase/analytics@^16.4.6":
-  version "16.7.0"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/analytics/-/analytics-16.7.0.tgz#367487b2961f360c0e6bd3c9bbf4697d4e73e66c"
-  integrity sha512-oLnmChS7w/iuGPiHDxVzxJy60pWD+HjhEGLRdENaEMrF2SA+AQtfJtqvZnGGKPecxZIhUID325xZLBuABIkeBQ==
+"@react-native-firebase/analytics@16.4.6":
+  version "16.4.6"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/analytics/-/analytics-16.4.6.tgz#833b871014de49091cc3f50f98dbc1920b346097"
+  integrity sha512-Gp6kD3RCIy3f9u0pQgGfp5jGwNwLLxo2blsXbTsj/yHOE4g+leH/wojPPENs1yc2g6OMhzGYbO19/beCP6bIng==
 
 "@react-native-firebase/app@^16.4.6":
   version "16.4.6"
@@ -1613,6 +1613,13 @@
   version "16.4.6"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/messaging/-/messaging-16.4.6.tgz#dd1a1eccff39eac6cd201792c388fc11afd6b4bf"
   integrity sha512-5XHc++UxK+wEYifyovemr+K5aUpcDuqzGPAqc2tqrVxtsELmGi9pCOFbCuFhkg5DzNGToNT9Z79DTd+XLCVemA==
+
+"@react-native-firebase/perf@16.4.6":
+  version "16.4.6"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/perf/-/perf-16.4.6.tgz#4f6116451f9a299f4d0888375730b9dd01df1ac9"
+  integrity sha512-CC8TdZ2jA6Qomb8BhgBYTQYrE4EX4mT1DPImWzaPea+mbs8cT6wWOFT8h8PxzOC7510WqzX0oJpMIedogj9vNA==
+  dependencies:
+    "@expo/config-plugins" "^5.0.4"
 
 "@react-native-google-signin/google-signin@^8.2.1":
   version "8.2.1"
@@ -8165,6 +8172,11 @@ react-freeze@^1.0.0:
   resolved "https://registry.yarnpkg.com/react-freeze/-/react-freeze-1.0.3.tgz#5e3ca90e682fed1d73a7cb50c2c7402b3e85618d"
   integrity sha512-ZnXwLQnGzrDpHBHiC56TXFXvmolPeMjTn1UOm610M4EXGzbEDR7oOIyS2ZiItgbs6eZc4oU/a0hpk8PrcKvv5g==
 
+react-icomoon@^2.5.7:
+  version "2.5.7"
+  resolved "https://registry.yarnpkg.com/react-icomoon/-/react-icomoon-2.5.7.tgz#628494b5cf2531af3f2beca30763be5f989f3139"
+  integrity sha512-o6jsNviL7d2/fk83JXycvMSX76KSQ5GuC+q8xi+3anL4KY8EZH4D1BfXdqL8SF+ppOigrq4epUhfnWX8U/gM7g==
+
 "react-is@^16.12.0 || ^17.0.0 || ^18.0.0", react-is@^18.0.0, react-is@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
@@ -8334,6 +8346,16 @@ react-native-pager-view@6.1.1:
   resolved "https://registry.yarnpkg.com/react-native-pager-view/-/react-native-pager-view-6.1.1.tgz#e396b0c78d74931a92d1c9bf28c450eb356b904d"
   integrity sha512-4WqR0YWBjaUtc3iPVk8w6wsTsMq+r0plNiXdqPXOiUdQIhxKfsP1iqb6hRzdeJKOo8UH7RCP6zI7dxdFEAXzrw==
 
+react-native-performance-flipper-reporter@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-performance-flipper-reporter/-/react-native-performance-flipper-reporter-4.0.0.tgz#a53267d760fbb02b34d857c26222f5bfb5662d46"
+  integrity sha512-VqG3uetTraW6eeho1SY8v8ZTWMELd/ix84V6+ZiFkdvWVWVTKp6JfFqHHXt0z4Gfp1sfaKnaFytNG+b3jDP+ZQ==
+
+react-native-performance@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-performance/-/react-native-performance-4.0.0.tgz#43a5a44d042037288234c829e790b113b5253c43"
+  integrity sha512-GgRNl52ivoq8gNSzFlapIc8ywszGJtQsoUZxo4bvt+xGcUIYecp93oDt88x4te637qjeT+FabXTtau66EFbf7g==
+
 react-native-permissions@^3.6.1:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-3.6.1.tgz#73adcc1cef8cd57a9ef167b4507405f4ff5749c4"
@@ -8427,6 +8449,14 @@ react-native-url-polyfill@^1.3.0:
   integrity sha512-w9JfSkvpqqlix9UjDvJjm1EjSt652zVQ6iwCIj1cVVkwXf4jQhQgTNXY6EVTwuAmUjg6BC6k9RHCBynoLFo3IQ==
   dependencies:
     whatwg-url-without-unicode "8.0.0-3"
+
+react-native-vector-icons@^9.2.0:
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-9.2.0.tgz#3c0c82e95defd274d56363cbe8fead8d53167ebd"
+  integrity sha512-wKYLaFuQST/chH3AJRjmOLoLy3JEs1JR6zMNgTaemFpNoXs0ztRnTxcxFD9xhX7cJe1/zoN5BpQYe7kL0m5yyA==
+  dependencies:
+    prop-types "^15.7.2"
+    yargs "^16.1.1"
 
 react-native-view-shot@^3.6.0:
   version "3.6.0"
@@ -10451,7 +10481,7 @@ yargs@^15.1.0, yargs@^15.3.1:
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
 
-yargs@^16.0.3:
+yargs@^16.0.3, yargs@^16.1.1:
   version "16.2.0"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
   integrity sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==

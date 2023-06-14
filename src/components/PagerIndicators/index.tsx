@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import React from 'react';
+import React, {memo} from 'react';
 import {StyleProp, StyleSheet, View, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
 
@@ -13,23 +13,25 @@ type Props = {
 
 const INDICATOR_SIZE = rem(6);
 
-export const PagerIndicators = ({activeIndex, total = 2, style}: Props) => {
-  return (
-    <View style={[styles.container, style]}>
-      {Array(total)
-        .fill(null)
-        .map((_, index) => (
-          <View
-            style={[
-              styles.indicator,
-              activeIndex === index && styles.activeIndicator,
-            ]}
-            key={`dot_${index}`}
-          />
-        ))}
-    </View>
-  );
-};
+export const PagerIndicators = memo(
+  ({activeIndex, total = 2, style}: Props) => {
+    return (
+      <View style={[styles.container, style]}>
+        {Array(total)
+          .fill(null)
+          .map((_, index) => (
+            <View
+              style={[
+                styles.indicator,
+                activeIndex === index && styles.activeIndicator,
+              ]}
+              key={`dot_${index}`}
+            />
+          ))}
+      </View>
+    );
+  },
+);
 
 const styles = StyleSheet.create({
   container: {

@@ -43,7 +43,7 @@ export function t<K extends keyof Translations, O extends Translations[K]>(
 
 export const tagRegex = (tag: string, isSingular = true) => {
   if (isSingular) {
-    return `[[:${tag}]]`;
+    return new RegExp(`\\[\\[:${tag}\\]\\]`);
   } else {
     return new RegExp(
       `\\[\\[:${tag}\\]\\]([\\s\\S]+?)\\[\\[\\/:${tag}\\]\\](?!.*\\[\\[\\[:${tag}\\])`,
