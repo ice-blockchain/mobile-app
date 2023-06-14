@@ -8,8 +8,6 @@ import {Image, StyleSheet} from 'react-native';
 
 const HEADER_RECTANGLE = require('@screens/HomeFlow/Home/assets/images/topRectangle.png');
 
-export const HEADER_TOP_IMAGE_HEIGHT = windowWidth * 0.08;
-
 export const HeaderTopImage = memo(() => {
   return (
     <Image
@@ -24,7 +22,6 @@ export const HeaderTopImage = memo(() => {
 export const styles = StyleSheet.create({
   headerTopImage: {
     width: windowWidth,
-    height: HEADER_TOP_IMAGE_HEIGHT,
     backgroundColor: COLORS.primaryLight,
     marginTop: -DISTANCE_TO_OVERLAP,
   },
