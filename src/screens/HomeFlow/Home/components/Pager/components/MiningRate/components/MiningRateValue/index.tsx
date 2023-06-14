@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
-import {AnimatedNumberText} from '@hooks/AnimatedNumber';
 import {formatNumberString} from '@utils/numbers';
 import React, {memo, useCallback} from 'react';
 import {StyleProp, TextStyle} from 'react-native';

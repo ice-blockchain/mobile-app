@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {Slider} from '@components/Slider';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import {AnimatedNumberText} from '@hooks/AnimatedNumber';
 import {MiningIcon} from '@svg/MiningIcon';
 import {TierOneIcon} from '@svg/TierOneIcon';
 import {TierTwoIcon} from '@svg/TierTwoIcon';

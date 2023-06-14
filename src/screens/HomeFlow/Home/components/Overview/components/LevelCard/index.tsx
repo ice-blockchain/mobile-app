@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
-import {AnimatedNumberText} from '@hooks/AnimatedNumber';
 import {Images} from '@images';
 import {
   CardBase,

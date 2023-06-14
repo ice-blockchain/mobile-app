@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {HiddenProfileElement} from '@api/user/types';
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {AnimatedNumberText} from '@hooks/AnimatedNumber';
 import {useUpdateHiddenProfileElements} from '@store/modules/Account/hooks/useUpdateHiddenProfileElements';
 import {ClosedEye} from '@svg/ClosedEye';
 import {font} from '@utils/styles';

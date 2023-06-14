@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {VerticalBar} from '@components/BarGraph/components/VerticalBar';
 import {useGetBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetBarGraphDataForStatsPeriod';
 import {COLORS} from '@constants/colors';
-import {AnimatedNumberText} from '@hooks/AnimatedNumber';
 import {Images} from '@images';
 import {
   CardBase,

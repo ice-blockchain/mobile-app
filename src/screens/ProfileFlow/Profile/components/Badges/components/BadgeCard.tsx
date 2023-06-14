@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {BadgeType} from '@api/achievements/types';
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import {AnimatedNumberText} from '@hooks/AnimatedNumber';
 import {Images} from '@images';
 import {ProfileTabStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';

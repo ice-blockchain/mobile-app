@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {COLORS} from '@constants/colors';
-import {AnimatedNumberText} from '@hooks/AnimatedNumber';
 import {userReferralCountSelector} from '@store/modules/Referrals/selectors';
 import {TeamInactiveIcon} from '@svg/TeamInactiveIcon';
 import {t} from '@translations/i18n';

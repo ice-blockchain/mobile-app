@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import {AnimatedNumberText} from '@hooks/AnimatedNumber';
 import {PAGE_HEIGHT} from '@screens/HomeFlow/Home/components/Pager';
 import {PageSkeleton} from '@screens/HomeFlow/Home/components/Pager/components/PageSkeleton';
 import {miningSummarySelector} from '@store/modules/Tokenomics/selectors';
