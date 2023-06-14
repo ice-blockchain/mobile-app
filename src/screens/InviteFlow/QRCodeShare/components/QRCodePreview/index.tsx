@@ -24,21 +24,29 @@ type Props = {
 
 export const QRCodePreview = forwardRef(
   ({user}: Props, forwardedRef: Ref<View>) => {
-    const [isAvatarShown, setIsAvatarShown] = useState(true);
+    const [showAvatar, setShowAvatar] = useState(true);
     return (
       <>
         <View style={styles.container}>
-          <QRCodeBody user={user} isAvatarShown={isAvatarShown} />
+          <QRCodeBody
+            user={user}
+            isAvatarBlurred={!showAvatar}
+            isAvatarShown={true}
+          />
           <PrivacyButton
-            isClosed={!isAvatarShown}
-            onPress={() => setIsAvatarShown(s => !s)}
+            isClosed={!showAvatar}
+            onPress={() => setShowAvatar(s => !s)}
             style={styles.privacyButton}
           />
         </View>
         {/* Hidden copy with custom styles for view-snapshot */}
         <View style={styles.viewShotContainer} ref={forwardedRef}>
           <LinesBackground />
-          <QRCodeBody user={user} isAvatarShown={isAvatarShown} />
+          <QRCodeBody
+            user={user}
+            isAvatarBlurred={false}
+            isAvatarShown={showAvatar}
+          />
         </View>
       </>
     );
@@ -48,13 +56,20 @@ export const QRCodePreview = forwardRef(
 const QRCodeBody = ({
   user,
   isAvatarShown,
+  isAvatarBlurred,
 }: {
   user: User;
+  isAvatarBlurred: boolean;
   isAvatarShown: boolean;
 }) => {
   return (
     <View style={styles.body}>
-      <QRCodeAvatar uri={user.profilePictureUrl} isShown={isAvatarShown} />
+      {isAvatarShown && (
+        <QRCodeAvatar
+          uri={user.profilePictureUrl}
+          isBlurred={isAvatarBlurred}
+        />
+      )}
       <Text style={styles.usernameText}>
         {buildUsernameWithPrefix(user.username)}
       </Text>
