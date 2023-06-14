@@ -24,7 +24,7 @@ export const Home = memo(() => {
 
   const translateY = useSharedValue(0);
 
-  const {scrollViewRef} = useHandleScrollToParam();
+  const {animatedScrollViewRef} = useHandleScrollToParam();
   const {elementRef, onElementLayout} = useAchievementsWalkthrough();
 
   return (
@@ -34,9 +34,10 @@ export const Home = memo(() => {
         style={styles.container}
         onScrollTranslateY={translateY}
         onRefresh={onRefresh}
+        animatedScrollViewRef={animatedScrollViewRef}
         refreshing={refreshing}>
         <Animated.ScrollView
-          ref={scrollViewRef}
+          ref={animatedScrollViewRef}
           contentContainerStyle={tabBarOffset.current}
           showsVerticalScrollIndicator={false}>
           <Pager />

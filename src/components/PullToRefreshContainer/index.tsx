@@ -3,16 +3,9 @@
 import {ActivityIndicatorTheme} from '@components/ActivityIndicator';
 import {RefreshIceIcon} from '@components/RefreshControl';
 import {hapticFeedback} from '@utils/device';
-import React, {
-  cloneElement,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import React, {cloneElement, RefObject, useCallback, useMemo} from 'react';
 import {
   FlatListProps,
-  Platform,
   ScrollViewProps,
   StyleProp,
   View,
@@ -21,15 +14,15 @@ import {
 import {Gesture, GestureDetector} from 'react-native-gesture-handler';
 import Animated, {
   AnimateProps,
-  cancelAnimation,
   Extrapolate,
   interpolate,
   runOnJS,
+  scrollTo,
   useAnimatedReaction,
   useAnimatedScrollHandler,
   useAnimatedStyle,
   useSharedValue,
-  withTiming,
+  withSpring,
 } from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
@@ -46,20 +39,13 @@ interface Props {
   >;
   theme?: ActivityIndicatorTheme;
   onScrollTranslateY?: Animated.SharedValue<number>;
+  animatedScrollViewRef?: RefObject<Animated.ScrollView>;
 }
 
 /**
  * Space for activity indicator while refreshing
  */
-const REFRESH_THRESHOLD = rem(50);
-
-/**
- * On Android scrollable view will be scrolled a little bit even pan gesture becomes active
- */
-const CONTENT_SCROLLED_THRESHOLD = Platform.select({
-  android: 10,
-  default: 0,
-});
+const REFRESH_THRESHOLD = rem(100);
 
 export const PullToRefreshContainer = ({
   style,
@@ -68,43 +54,32 @@ export const PullToRefreshContainer = ({
   onRefresh: onRefreshProps,
   children,
   onScrollTranslateY,
+  animatedScrollViewRef,
 }: Props) => {
-  const [isRefreshScrolled, setRefreshScrolled] = useState(false);
-
-  const [isContentScrolled, setContentScrolled] = useState(false);
-
   const translateYPanGesture = useSharedValue(0);
 
-  const translateYScrollable = useSharedValue(0);
-
-  const panEnabled = !refreshing && !isContentScrolled;
-
-  const scrollEnabled = refreshing || !isRefreshScrolled;
-
-  const scrollHandler = useAnimatedScrollHandler(({contentOffset: {y}}) => {
-    translateYScrollable.value = y;
-
-    if (onScrollTranslateY) {
-      onScrollTranslateY.value = y;
-    }
-  });
+  const sharedPanGestureStartY = useSharedValue(0);
+  const scrollHandler = useAnimatedScrollHandler(
+    {
+      onBeginDrag: event => {
+        sharedPanGestureStartY.value = event.contentOffset.y;
+      },
+      onScroll: ({contentOffset: {y}}) => {
+        if (y > 0 && translateYPanGesture.value < 0 && animatedScrollViewRef) {
+          scrollTo(animatedScrollViewRef, 0, 0, true);
+        }
+        if (onScrollTranslateY) {
+          onScrollTranslateY.value = y;
+        }
+      },
+    },
+    [],
+  );
 
   const onRefresh = useCallback(() => {
     hapticFeedback();
-
     onRefreshProps();
   }, [onRefreshProps]);
-
-  const runStaticPositionAnimation = useCallback(() => {
-    cancelAnimation(translateYPanGesture);
-
-    translateYPanGesture.value = withTiming(
-      refreshing && !isContentScrolled ? -REFRESH_THRESHOLD : 0,
-      {
-        duration: 400,
-      },
-    );
-  }, [isContentScrolled, refreshing, translateYPanGesture]);
 
   const gesture = useMemo(() => {
     const panGesture = Gesture.Pan()
@@ -112,35 +87,26 @@ export const PullToRefreshContainer = ({
       .failOffsetX([-10, 10])
       .onUpdate(({translationY}) => {
         translateYPanGesture.value = interpolate(
-          translationY,
-          [0, REFRESH_THRESHOLD],
-          [0, -REFRESH_THRESHOLD],
-          {
-            extrapolateLeft: Extrapolate.CLAMP,
-          },
+          translationY - sharedPanGestureStartY.value,
+          [0, REFRESH_THRESHOLD, REFRESH_THRESHOLD * 10],
+          [0, -REFRESH_THRESHOLD, -REFRESH_THRESHOLD * 4],
+          Extrapolate.CLAMP,
         );
       })
       .onEnd(() => {
-        runOnJS(runStaticPositionAnimation)();
-      })
-      .enabled(panEnabled);
+        translateYPanGesture.value = withSpring(0, {
+          damping: 50,
+          mass: 1,
+          stiffness: 200,
+          overshootClamping: false,
+          restDisplacementThreshold: 0.01,
+          restSpeedThreshold: 2,
+        });
+      });
 
-    const nativeGesture = Gesture.Native().enabled(scrollEnabled);
-
-    if (isContentScrolled && Platform.OS === 'ios') {
-      return nativeGesture;
-    }
-
+    const nativeGesture = Gesture.Native();
     return Gesture.Simultaneous(panGesture, nativeGesture);
-  }, [
-    isContentScrolled,
-    panEnabled,
-    runStaticPositionAnimation,
-    scrollEnabled,
-    translateYPanGesture,
-  ]);
-
-  useEffect(runStaticPositionAnimation, [runStaticPositionAnimation]);
+  }, [sharedPanGestureStartY.value, translateYPanGesture]);
 
   useAnimatedReaction(
     () => translateYPanGesture.value * -1 > REFRESH_THRESHOLD * 1.5,
@@ -152,24 +118,6 @@ export const PullToRefreshContainer = ({
     [onRefresh],
   );
 
-  useAnimatedReaction(
-    () => translateYScrollable.value > CONTENT_SCROLLED_THRESHOLD,
-    (result, previous) => {
-      if (result !== previous) {
-        runOnJS(setContentScrolled)(result);
-      }
-    },
-  );
-
-  useAnimatedReaction(
-    () => translateYPanGesture.value !== 0,
-    (result, previous) => {
-      if (result !== previous) {
-        runOnJS(setRefreshScrolled)(result);
-      }
-    },
-  );
-
   const containerAnimatedStyle = useAnimatedStyle(() => {
     return {
       flex: 1,
@@ -179,7 +127,7 @@ export const PullToRefreshContainer = ({
         },
       ],
     };
-  });
+  }, []);
 
   const childrenScrollable = useMemo(
     () =>
@@ -189,10 +137,28 @@ export const PullToRefreshContainer = ({
         onScroll: scrollHandler,
         bounces: false,
         alwaysBounceVertical: false,
-        scrollEnabled,
       }),
-    [children, containerAnimatedStyle, scrollEnabled, scrollHandler],
+    [children, containerAnimatedStyle, scrollHandler],
   );
+
+  const animatedContainerStyle = useAnimatedStyle(() => {
+    return {
+      opacity: interpolate(
+        -translateYPanGesture.value,
+        [0, 24, REFRESH_THRESHOLD],
+        [0, 1, 1],
+      ),
+      transform: [
+        {
+          translateY: interpolate(
+            -translateYPanGesture.value,
+            [0, REFRESH_THRESHOLD, REFRESH_THRESHOLD * 2],
+            [-16, 10, 70],
+          ),
+        },
+      ],
+    };
+  });
 
   return (
     <View style={style}>
@@ -200,6 +166,7 @@ export const PullToRefreshContainer = ({
         refreshing={refreshing}
         translateY={translateYPanGesture}
         theme={theme}
+        animatedContainerStyle={animatedContainerStyle}
       />
 
       <GestureDetector gesture={gesture}>{childrenScrollable}</GestureDetector>

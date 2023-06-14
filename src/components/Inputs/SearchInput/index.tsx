@@ -4,7 +4,7 @@ import {COLORS} from '@constants/colors';
 import {SearchIcon} from '@svg/SearchIcon';
 import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
-import React, {forwardRef, Ref, useState} from 'react';
+import React, {forwardRef, Ref} from 'react';
 import {
   NativeSyntheticEvent,
   StyleProp,
@@ -12,13 +12,19 @@ import {
   TextInput,
   TextInputFocusEventData,
   TextInputProps,
-  View,
   ViewStyle,
 } from 'react-native';
+import Animated, {
+  interpolateColor,
+  useAnimatedStyle,
+  useSharedValue,
+  withSpring,
+} from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
 interface SearchInputProps extends TextInputProps {
   loading?: boolean;
+  focused?: Animated.SharedValue<number>;
   containerStyle?: StyleProp<ViewStyle>;
 }
 
@@ -26,39 +32,49 @@ export const SEARCH_INPUT_HEIGHT = rem(46);
 
 export const SearchInput = forwardRef(
   (
-    {containerStyle, onFocus, onBlur, ...textInputProps}: SearchInputProps,
+    {
+      containerStyle,
+      onFocus,
+      onBlur,
+      focused: propsFocused,
+      ...textInputProps
+    }: SearchInputProps,
     forwardedRef: Ref<TextInput>,
   ) => {
-    const [focused, setFocused] = useState(false);
+    const focused = useSharedValue(0);
+    const animatedStyle = useAnimatedStyle(() => {
+      return {
+        borderColor: interpolateColor(
+          focused.value,
+          [0, 1],
+          [COLORS.wildSand, COLORS.primaryDark],
+        ),
+      };
+    }, []);
     return (
-      <View
-        style={[
-          styles.container,
-          focused ? styles.container_focused : null,
-          containerStyle,
-        ]}>
-        <View style={styles.searchButton}>
-          <SearchIcon
-            width={rem(24)}
-            height={rem(24)}
-            color={COLORS.secondary}
-          />
-        </View>
+      <Animated.View style={[styles.container, animatedStyle, containerStyle]}>
+        <SearchIcon width={rem(20)} height={rem(20)} color={COLORS.secondary} />
         <TextInput
           style={styles.input}
           placeholderTextColor={COLORS.secondary}
           onFocus={(e: NativeSyntheticEvent<TextInputFocusEventData>) => {
-            setFocused(true);
+            focused.value = withSpring(1);
+            if (propsFocused) {
+              propsFocused.value = withSpring(1);
+            }
             onFocus?.(e);
           }}
           onBlur={(e: NativeSyntheticEvent<TextInputFocusEventData>) => {
-            setFocused(false);
+            focused.value = withSpring(0);
+            if (propsFocused) {
+              propsFocused.value = withSpring(0);
+            }
             onBlur?.(e);
           }}
           ref={forwardedRef}
           {...textInputProps}
         />
-      </View>
+      </Animated.View>
     );
   },
 );
@@ -67,22 +83,16 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: COLORS.wildSand,
     borderRadius: rem(16),
+    paddingHorizontal: rem(16),
     borderWidth: 1,
-    borderColor: COLORS.wildSand,
-  },
-  container_focused: {
-    borderColor: COLORS.primaryDark,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   input: {
-    paddingLeft: rem(46),
-    height: SEARCH_INPUT_HEIGHT,
-    ...font(16, 21, 'medium', 'primaryDark', isRTL ? 'right' : 'left'),
-  },
-  searchButton: {
+    paddingLeft: rem(8),
     justifyContent: 'center',
-    position: 'absolute',
-    left: 16,
-    top: 0,
-    bottom: 0,
+    alignSelf: 'center',
+    height: SEARCH_INPUT_HEIGHT,
+    ...font(16, 18, 'medium', 'primaryDark', isRTL ? 'right' : 'left'),
   },
 });

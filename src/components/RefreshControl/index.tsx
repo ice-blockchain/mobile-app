@@ -18,6 +18,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import Animated, {
+  AnimatedStyleProp,
   cancelAnimation,
   Easing,
   interpolate,
@@ -34,15 +35,19 @@ type RefreshIceIconProps = {
   refreshing: boolean;
   style?: StyleProp<ViewStyle>;
   theme?: ActivityIndicatorTheme;
+  animatedContainerStyle?: AnimatedStyleProp<ViewStyle>;
 };
 
 type CustomRefreshControlProps = RefreshControlProps & RefreshIceIconProps;
+
+export const ICON_CONTAINER_SIZE = rem(32);
 
 export function RefreshIceIcon({
   translateY,
   refreshing,
   style,
   theme,
+  animatedContainerStyle: propsAnimatedContainerStyle,
 }: RefreshIceIconProps) {
   const [showText, setShowText] = useState(true);
   const rotation = useSharedValue(0);
@@ -98,7 +103,12 @@ export function RefreshIceIcon({
   }, [refreshing]);
 
   return (
-    <Animated.View style={[styles.container, style, animatedContainerStyle]}>
+    <Animated.View
+      style={[
+        styles.container,
+        style,
+        propsAnimatedContainerStyle ?? animatedContainerStyle,
+      ]}>
       <Animated.View style={[styles.iconContainer, animatedIconStyle]}>
         <ActivityIndicator theme={theme} style={styles.iconContainer} />
       </Animated.View>
@@ -165,8 +175,8 @@ const styles = StyleSheet.create({
   },
 
   iconContainer: {
-    width: rem(32),
-    height: rem(32),
+    width: ICON_CONTAINER_SIZE,
+    height: ICON_CONTAINER_SIZE,
   },
 
   text: {

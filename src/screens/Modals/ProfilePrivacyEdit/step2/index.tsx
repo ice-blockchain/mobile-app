@@ -10,7 +10,7 @@ import {CancelButton} from '@screens/Modals/ProfilePrivacyEdit/components/Cancel
 import {Description} from '@screens/Modals/ProfilePrivacyEdit/components/Description';
 import {NextButton} from '@screens/Modals/ProfilePrivacyEdit/components/NextButton';
 import {CurrentRoleCard} from '@screens/ProfileFlow/Profile/components/Role/components/CurrentRoleCard';
-import {userIdSelector} from '@store/modules/Account/selectors';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {t} from '@translations/i18n';
 import React from 'react';
@@ -22,10 +22,10 @@ export const ProfilePrivacyEditStep2 = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
 
-  const userId = useSelector(userIdSelector);
+  const user = useSelector(unsafeUserSelector);
 
   const roleType = useSelector(
-    AchievementsSelectors.getRoleTypeByUserId({userId}),
+    AchievementsSelectors.getRoleTypeByUserId({userId: user.id}),
   );
 
   const goNext = () => {
@@ -48,7 +48,8 @@ export const ProfilePrivacyEditStep2 = () => {
             imageSource={Images.roles[roleType]}
             imageSourceHidden={Images.roles[`${roleType}Inactive`]}
             title={t(`roles.${roleType}.title`)}
-            description={t(`roles.${roleType}.description`)}
+            description={t(`roles.${roleType}.subtitle`)}
+            user={user}
             isProfilePrivacyEditMode
           />
         </View>
@@ -72,6 +73,7 @@ const styles = StyleSheet.create({
   },
   descriptionContainer: {
     marginTop: rem(120),
+    paddingHorizontal: rem(78),
   },
   roleContainer: {
     flex: 1,
