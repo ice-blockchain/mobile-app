@@ -24,7 +24,6 @@
 		6B337F632A1B8EDC000C3259 /* NotificationService.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6B337F622A1B8EDC000C3259 /* NotificationService.release.xcconfig */; };
 		6B337F652A1B8EF8000C3259 /* NotificationService.custom.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6B337F642A1B8EF8000C3259 /* NotificationService.custom.xcconfig */; };
 		6B8AFF3E29752D540021973D /* audio in Resources */ = {isa = PBXBuildFile; fileRef = 6B8AFF3D29752D530021973D /* audio */; };
-		7C750A5B2A27D8A100E62875 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C750A5A2A27D7CF00E62875 /* icomoon.ttf */; };
 		7C8E699827FB23F9001ECB36 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E699727FB23F9001ECB36 /* File.swift */; };
 		7F431A4335AA4B72AA94DBA5 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377AD928FA0140078054EAEF /* Lato-Heavy.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -97,7 +96,6 @@
 		6B8AFF3D29752D530021973D /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = audio; sourceTree = "<group>"; };
 		6E2A529FD591465E8CE7A75D /* Lato-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Semibold.ttf"; path = "../src/assets/fonts/Lato-Semibold.ttf"; sourceTree = "<group>"; };
 		7C00A9EE28B75AAA00D688B7 /* ice.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ice.entitlements; path = ice/ice.entitlements; sourceTree = "<group>"; };
-		7C750A5A2A27D7CF00E62875 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = icomoon.ttf; path = ../src/assets/fonts/icomoon.ttf; sourceTree = "<group>"; };
 		7C8E699627FB23F9001ECB36 /* ice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ice-Bridging-Header.h"; sourceTree = "<group>"; };
 		7C8E699727FB23F9001ECB36 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ice/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -192,7 +190,6 @@
 				3F27BDC42852B21C00DBEB07 /* Lato-Bold.ttf */,
 				3F27BDC32852B21C00DBEB07 /* Lato-Hairline.ttf */,
 				3F27BDC02852B21C00DBEB07 /* Lato-Heavy.ttf */,
-				7C750A5A2A27D7CF00E62875 /* icomoon.ttf */,
 				3F27BDC12852B21C00DBEB07 /* Lato-Light.ttf */,
 				3F27BDBE2852B21C00DBEB07 /* Lato-Medium.ttf */,
 				3F27BDBF2852B21C00DBEB07 /* Lato-Regular.ttf */,
@@ -356,7 +353,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C750A5B2A27D8A100E62875 /* icomoon.ttf in Resources */,
 				3F411E02283CCCCA00EB78E0 /* GoogleService-Info.plist in Resources */,
 				6B337F5E2A1B8D06000C3259 /* ice.custom.xcconfig in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
@@ -569,7 +565,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ice/ice.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = YJJ6X8TG5Y;
 				ENABLE_BITCODE = NO;
@@ -676,8 +672,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ice/ice.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = YJJ6X8TG5Y;
 				ENABLE_BITCODE = NO;
@@ -916,7 +912,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = YJJ6X8TG5Y;
@@ -953,8 +949,8 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
