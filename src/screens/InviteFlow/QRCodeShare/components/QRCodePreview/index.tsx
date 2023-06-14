@@ -35,7 +35,7 @@ export const QRCodePreview = forwardRef(
           />
           <PrivacyButton
             isClosed={!showAvatar}
-            onPress={() => setShowAvatar(s => !s)}
+            onPress={() => setShowAvatar(show => !show)}
             style={styles.privacyButton}
           />
         </View>
