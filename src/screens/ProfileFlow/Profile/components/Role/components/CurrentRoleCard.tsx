@@ -38,7 +38,8 @@ export const CurrentRoleCard = ({
   const {onUpdate} = useUpdateHiddenProfileElements();
   const isPrivacyInfoShown = useSelector(isPrivacyInfoShownSelector);
 
-  const isRoleHidden = user?.hiddenProfileElements?.includes('role');
+  const isRoleHidden: boolean =
+    user?.hiddenProfileElements?.includes('role') ?? false;
   const hidden = isOwner ? isRoleHidden && !isPrivacyInfoShown : isRoleHidden;
   return (
     <View
