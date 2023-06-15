@@ -14,16 +14,14 @@ const actionCreator = PushNotificationsActions.NOTIFICATION_ARRIVE.STATE.create;
 export function* handleNotificationArriveSaga(
   action: ReturnType<typeof actionCreator>,
 ) {
-  const {message} = action.payload;
+  const {data} = action.payload;
 
   yield call(waitForSelector, isSplashHiddenSelector);
 
   const isActive: ReturnType<typeof isAppActiveSelector> = yield select(
     isAppActiveSelector,
   );
-  if (message?.data?.deeplink && !isActive) {
-    yield put(
-      LinkingActions.HANDLE_URL.STATE.create(message?.data?.deeplink, true),
-    );
+  if (data?.deeplink && !isActive) {
+    yield put(LinkingActions.HANDLE_URL.STATE.create(data?.deeplink, true));
   }
 }
