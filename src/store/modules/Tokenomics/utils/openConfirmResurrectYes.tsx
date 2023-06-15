@@ -41,7 +41,6 @@ export const openConfirmResurrectYes = (params: ResurrectRequiredData) => {
           onPress: () => resultResolve('yes'),
         },
       ],
-      dismissOnButtonPress: false,
       dismissOnAndroidHardwareBack: false,
       dismissOnOutsideTouch: false,
     },
