@@ -643,7 +643,7 @@ PODS:
     - React-Core
   - RNDeviceInfo (10.3.0):
     - React-Core
-  - RNFBAnalytics (16.7.0):
+  - RNFBAnalytics (16.4.6):
     - Firebase/AnalyticsWithoutAdIdSupport (= 10.2.0)
     - React-Core
     - RNFBApp
@@ -1177,7 +1177,7 @@ SPEC CHECKSUMS:
   RNCClipboard: 2834e1c4af68697089cdd455ee4a4cdd198fa7dd
   RNCMaskedView: bc0170f389056201c82a55e242e5d90070e18e5a
   RNDeviceInfo: 4701f0bf2a06b34654745053db0ce4cb0c53ada7
-  RNFBAnalytics: 909ca33d30e5e2f95c6ca838640e1cf2c31d611d
+  RNFBAnalytics: 4d5f5b7557144a3e759d27eb39473bbd60daf8be
   RNFBApp: a61f530d08a0f5996b1fbdcbd1b8bb077d5d61a1
   RNFBAuth: 4ca816efc990ef69e9ca9fed57348a876470b821
   RNFBMessaging: f7a90ac199e1bc771e9e09058ed0354efd047182

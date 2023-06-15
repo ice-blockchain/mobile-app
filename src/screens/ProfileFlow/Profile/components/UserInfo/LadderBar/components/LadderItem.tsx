@@ -1,12 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {HiddenProfileElement} from '@api/user/types';
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {useUpdateHiddenProfileElements} from '@store/modules/Account/hooks/useUpdateHiddenProfileElements';
 import {ClosedEye} from '@svg/ClosedEye';
-import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -39,8 +38,6 @@ export const LadderItem = memo(
     isProfilePrivacyEditMode = false,
     privacyType,
   }: Props) => {
-    const animatedValue = useAnimatedNumber(value, formatNumber);
-
     const {onUpdate} = useUpdateHiddenProfileElements();
 
     const handlePress = () => {
@@ -80,13 +77,15 @@ export const LadderItem = memo(
             ) : (
               <Animated.Text
                 entering={FadeIn.springify().damping(50).stiffness(200)}
-                exiting={FadeOut.springify().damping(50).stiffness(200)}
-                style={
-                  isProfilePrivacyEditMode
-                    ? styles.textPrivacyEdit
-                    : styles.text
-                }>
-                {animatedValue}
+                exiting={FadeOut.springify().damping(50).stiffness(200)}>
+                <AnimatedNumberText
+                  style={
+                    isProfilePrivacyEditMode
+                      ? styles.textPrivacyEdit
+                      : styles.text
+                  }
+                  value={value}
+                />
               </Animated.Text>
             )}
           </View>

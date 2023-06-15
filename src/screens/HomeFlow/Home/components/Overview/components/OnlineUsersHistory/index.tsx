@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {VerticalBar} from '@components/BarGraph/components/VerticalBar';
 import {useGetBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetBarGraphDataForStatsPeriod';
 import {COLORS} from '@constants/colors';
-import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {Images} from '@images';
 import {
   CardBase,
@@ -16,8 +16,8 @@ import {GraphIcon} from '@svg/GraphIcon';
 import {t} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
-import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import React, {useCallback} from 'react';
+import {StyleSheet, Text, TextProps, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -35,9 +35,11 @@ export const OnlineUsersHistory = () => {
   const isSplashHidden = useSelector(isSplashHiddenSelector);
   const totalActiveUsers = useSelector(totalActiveUsersSelector);
 
-  const animatedTotalActiveUsers = useAnimatedNumber(
-    totalActiveUsers,
-    formatNumber,
+  const Header = useCallback(
+    ({style}: TextProps) => (
+      <AnimatedNumberText value={totalActiveUsers} style={style} />
+    ),
+    [totalActiveUsers],
   );
 
   const maxValue = data.length ? Math.max(...data.map(d => d.value)) : 0;
@@ -59,7 +61,7 @@ export const OnlineUsersHistory = () => {
       backgroundImageSource={Images.backgrounds.adoptionCardBg}
       headerTitle={t('home.adoption.title')}
       headerTitleIcon={<GraphIcon fill={COLORS.white} />}
-      headerValue={animatedTotalActiveUsers}
+      HeaderValue={Header}
       headerValueIcon={<FriendIcon fill={COLORS.shamrock} />}>
       <View style={styles.body}>
         <View style={styles.yAxis}>

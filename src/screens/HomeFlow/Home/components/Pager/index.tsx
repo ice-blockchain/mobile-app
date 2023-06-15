@@ -11,8 +11,9 @@ import {MiningRate} from '@screens/HomeFlow/Home/components/Pager/components/Min
 import {Wallet} from '@screens/HomeFlow/Home/components/Pager/components/Wallet';
 import {usePagerCardsWalkthrough} from '@screens/HomeFlow/Home/components/Pager/hooks/usePagerCardsWalkthrough';
 import {ActivePagerCard} from '@screens/HomeFlow/Home/types';
-import React, {useEffect, useRef, useState} from 'react';
-import {PixelRatio, StyleSheet, View} from 'react-native';
+import React, {memo, useEffect, useRef, useState} from 'react';
+import {PixelRatio} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
 import {rem} from 'rn-units';
 
@@ -32,10 +33,11 @@ function getActiveIndex(activePagerCard: ActivePagerCard | undefined): number {
   return 0;
 }
 
-export const Pager = () => {
+export const Pager = memo(() => {
   const route = useRoute<RouteProp<HomeTabStackParamList, 'Home'>>();
   const [activeIndex, setActiveIndex] = useState(0);
   const pagerViewRef = useRef<PagerView>(null);
+
   useEffect(() => {
     if (pagerViewRef.current?.setPage) {
       pagerViewRef.current.setPage(
@@ -45,7 +47,9 @@ export const Pager = () => {
   }, [route.params?.activePagerCard]);
 
   const onPageChange = (event: PagerViewOnPageSelectedEvent) => {
-    setActiveIndex(event.nativeEvent.position);
+    if (activeIndex !== event.nativeEvent.position) {
+      setActiveIndex(event.nativeEvent.position);
+    }
   };
 
   const {onElementLayout, elementRef} = usePagerCardsWalkthrough();
@@ -77,7 +81,7 @@ export const Pager = () => {
       />
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   container: {

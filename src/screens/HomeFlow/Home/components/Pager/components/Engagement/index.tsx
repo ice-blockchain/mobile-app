@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {PAGE_HEIGHT} from '@screens/HomeFlow/Home/components/Pager';
 import {PageSkeleton} from '@screens/HomeFlow/Home/components/Pager/components/PageSkeleton';
 import {miningSummarySelector} from '@store/modules/Tokenomics/selectors';
@@ -23,24 +23,6 @@ export const Engagement = memo(({darkMode}: Props) => {
   const miningSummary = useSelector(miningSummarySelector);
   const color = darkMode ? COLORS.primaryDark : COLORS.white;
 
-  const animatedMiningSummaryMiningStreak = useAnimatedNumber(
-    miningSummary?.miningStreak ?? 0,
-    initialValue =>
-      formatNumber(initialValue, {
-        maximumFractionDigits: 0,
-        minimumFractionDigits: 0,
-      }),
-  );
-
-  const animatedMiningSummaryRemainingFreeMiningSessions = useAnimatedNumber(
-    miningSummary?.remainingFreeMiningSessions ?? 0,
-    initialValue =>
-      formatNumber(initialValue, {
-        maximumFractionDigits: 0,
-        minimumFractionDigits: 0,
-      }),
-  );
-
   if (!miningSummary) {
     return <PageSkeleton />;
   }
@@ -60,7 +42,15 @@ export const Engagement = memo(({darkMode}: Props) => {
             {t('home.engagement.streak')}
           </Text>
           <Text style={[styles.value, darkMode && commonStyles.darkText]}>
-            {animatedMiningSummaryMiningStreak}
+            <AnimatedNumberText
+              textDecorator={animatedValue =>
+                formatNumber(animatedValue, {
+                  maximumFractionDigits: 0,
+                  minimumFractionDigits: 0,
+                })
+              }
+              value={miningSummary?.miningStreak ?? 0}
+            />
           </Text>
         </View>
         <View style={[styles.titleValueContainer, styles.daysOff]}>
@@ -68,7 +58,15 @@ export const Engagement = memo(({darkMode}: Props) => {
             {t('home.engagement.days_off')}
           </Text>
           <Text style={[styles.value, darkMode && commonStyles.darkText]}>
-            {animatedMiningSummaryRemainingFreeMiningSessions}
+            <AnimatedNumberText
+              textDecorator={animatedValue =>
+                formatNumber(animatedValue, {
+                  maximumFractionDigits: 0,
+                  minimumFractionDigits: 0,
+                })
+              }
+              value={miningSummary?.remainingFreeMiningSessions ?? 0}
+            />
           </Text>
         </View>
       </View>

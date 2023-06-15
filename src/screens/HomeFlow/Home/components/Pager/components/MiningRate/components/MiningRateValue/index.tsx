@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
-import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {formatNumberString} from '@utils/numbers';
-import React, {memo} from 'react';
+import React, {memo, useCallback} from 'react';
 import {StyleProp, TextStyle} from 'react-native';
 
 interface Props {
@@ -16,22 +16,26 @@ interface Props {
 
 export const MiningRateValue = memo(
   ({style, bodyStyle, decimalsStyle, value, signRequired = false}: Props) => {
-    const animatedValue = useAnimatedNumber(
-      value,
-      initialValue =>
-        `${initialValue > 0 && signRequired ? '+' : ''}${formatNumberString(
-          String(initialValue),
-        )}`,
+    const NumberComponent = useCallback(
+      ({animatedValue}) => {
+        const formattedValue = `${
+          animatedValue > 0 && signRequired ? '+' : ''
+        }${formatNumberString(String(animatedValue))}`;
+        return (
+          <FormattedNumber
+            trim
+            containerStyle={style}
+            bodyStyle={bodyStyle}
+            decimalsStyle={decimalsStyle}
+            number={formattedValue}
+          />
+        );
+      },
+      [bodyStyle, decimalsStyle, signRequired, style],
     );
 
     return (
-      <FormattedNumber
-        trim
-        containerStyle={style}
-        bodyStyle={bodyStyle}
-        decimalsStyle={decimalsStyle}
-        number={animatedValue}
-      />
+      <AnimatedNumberText value={value} NumberComponent={NumberComponent} />
     );
   },
 );

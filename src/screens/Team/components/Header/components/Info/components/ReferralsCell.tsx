@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {COLORS} from '@constants/colors';
-import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {userReferralCountSelector} from '@store/modules/Referrals/selectors';
 import {TeamInactiveIcon} from '@svg/TeamInactiveIcon';
 import {t} from '@translations/i18n';
-import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -16,8 +15,6 @@ export const ReferralsCell = memo(
   ({color = COLORS.white}: {color?: string}) => {
     const refsCount = useSelector(userReferralCountSelector);
 
-    const animatedRefsCount = useAnimatedNumber(refsCount, formatNumber);
-
     return (
       <View style={styles.container}>
         <TeamInactiveIcon color={color} width={rem(38)} height={rem(38)} />
@@ -25,7 +22,10 @@ export const ReferralsCell = memo(
           <Text style={[styles.titleText, {color}]}>
             {t('team.header.referrals')}
           </Text>
-          <Text style={[styles.valueText, {color}]}>{animatedRefsCount}</Text>
+          <AnimatedNumberText
+            style={[styles.valueText, {color}]}
+            value={refsCount}
+          />
         </View>
       </View>
     );

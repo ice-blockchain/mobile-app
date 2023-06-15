@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
@@ -11,14 +12,13 @@ import {MiningHammerIcon} from '@svg/MiningHammerIcon';
 import {StarIcon} from '@svg/StarIcon';
 import {TeamIcon} from '@svg/TeamIcon';
 import {isRTL, t} from '@translations/i18n';
-import {parseNumber} from '@utils/numbers';
+import {formatNumber, parseNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo, useMemo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-import {IconValueText} from './components/IconValueText';
 import {MiningRateValue} from './components/MiningRateValue';
 
 type Props = {
@@ -46,6 +46,11 @@ export const MiningRate = memo(({darkMode}: Props) => {
   }
 
   const color = darkMode ? COLORS.primaryDark : COLORS.white;
+  const totalBonuses =
+    (miningRates?.total.bonuses?.t1 ?? 0) +
+    (miningRates?.total.bonuses?.t2 ?? 0);
+  const extraBonuses = miningRates?.total.bonuses?.extra ?? 0;
+  const prestackingBonuses = miningRates?.total.bonuses?.preStaking ?? 0;
 
   return (
     <View style={[commonStyles.baseSubScreen, styles.container]}>
@@ -112,29 +117,41 @@ export const MiningRate = memo(({darkMode}: Props) => {
       <View style={styles.iconsContainer}>
         <View style={styles.iconContainer}>
           <TeamIcon color={color} />
-
-          <IconValueText
+          <AnimatedNumberText
+            value={totalBonuses}
             style={styles.iconValueText}
-            value={
-              (miningRates?.total.bonuses?.t1 ?? 0) +
-              (miningRates?.total.bonuses?.t2 ?? 0)
+            textDecorator={value =>
+              `+${formatNumber(value, {
+                maximumFractionDigits: 0,
+                minimumFractionDigits: 0,
+              })}%`
             }
           />
         </View>
         <View style={styles.iconContainer}>
           <StarIcon color={color} />
-
-          <IconValueText
+          <AnimatedNumberText
+            value={extraBonuses}
             style={styles.iconValueText}
-            value={miningRates?.total.bonuses?.extra ?? 0}
+            textDecorator={value =>
+              formatNumber(value, {
+                maximumFractionDigits: 0,
+                minimumFractionDigits: 0,
+              })
+            }
           />
         </View>
         <View style={styles.iconContainer}>
           <CoinsStackIcon color={color} width={rem(14)} height={rem(14)} />
-
-          <IconValueText
+          <AnimatedNumberText
+            value={prestackingBonuses}
             style={styles.iconValueText}
-            value={miningRates?.total.bonuses?.preStaking ?? 0}
+            textDecorator={value =>
+              formatNumber(value, {
+                maximumFractionDigits: 0,
+                minimumFractionDigits: 0,
+              })
+            }
           />
         </View>
       </View>

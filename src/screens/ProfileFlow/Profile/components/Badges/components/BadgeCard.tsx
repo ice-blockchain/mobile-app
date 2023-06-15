@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {BadgeType} from '@api/achievements/types';
+import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
 import {Images} from '@images';
 import {ProfileTabStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -72,7 +72,6 @@ export const BadgeCard = memo(
     const InactiveImage = Images.badges[inactiveImage];
 
     const value = index + 1;
-    const animatedValue = useAnimatedNumber(value, formatNumber);
     const total = lastIndex + 1;
 
     const progressValue = (value * 100) / total;
@@ -113,12 +112,17 @@ export const BadgeCard = memo(
                 <Text style={styles.categoryText} numberOfLines={1}>
                   {categoryTranslation}
                 </Text>
-                <Text style={styles.progressText}>
-                  {t('profile.progress_text', {
-                    value: animatedValue,
-                    total,
-                  })}
-                </Text>
+                <AnimatedNumberText
+                  value={value}
+                  style={styles.progressText}
+                  textDecorator={animatedValue =>
+                    `${t('profile.progress_text', {
+                      value: formatNumber(animatedValue),
+                      total,
+                    })}`
+                  }
+                />
+                <Text style={styles.progressText} />
               </View>
             </>
           )}
