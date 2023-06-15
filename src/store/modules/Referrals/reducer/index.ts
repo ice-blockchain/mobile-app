@@ -26,7 +26,6 @@ const getReferralsActionCreator = ReferralsActions.GET_REFERRALS({})(null);
 const actionCreatorPingReferral = ReferralsActions.PING_REFERRAL(null);
 type Actions = ReturnType<
   | typeof CollectionActions.SEARCH_USERS.SUCCESS.create
-  | typeof getReferralsActionCreator.START.create
   | typeof getReferralsActionCreator.SUCCESS.create
   | typeof actionCreatorPingReferral.SUCCESS.create
   | typeof actionCreatorPingReferral.FAILED.create
@@ -59,19 +58,6 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         }
         break;
 
-      case getReferralsActionCreator.START.type:
-        {
-          const {referralType, isInitial} = action.payload;
-          const data = draft.data[referralType];
-          if (data) {
-            draft.data[referralType] = {
-              ...data,
-              pageNumber: isInitial ? 0 : data.pageNumber,
-            };
-          }
-        }
-        break;
-
       case getReferralsActionCreator.SUCCESS.type:
         {
           const {referralType, isInitial, result} = action.payload;
@@ -91,7 +77,9 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
             ...usersByIds,
           };
 
-          const pageNumber = (draft.data[referralType]?.pageNumber ?? 0) + 1;
+          const pageNumber = isInitial
+            ? 0
+            : (draft.data[referralType]?.pageNumber ?? 0) + 1;
           if (isInitial) {
             draft.data[referralType] = {
               ...result,

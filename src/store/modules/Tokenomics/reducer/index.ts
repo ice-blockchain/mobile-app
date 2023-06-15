@@ -37,7 +37,6 @@ type Actions = ReturnType<
   | typeof TokenomicsActions.GET_BALANCE_SUMMARY.SUCCESS.create
   | typeof TokenomicsActions.GET_PRE_STAKING_SUMMARY.SUCCESS.create
   | typeof TokenomicsActions.GET_RANKING_SUMMARY.SUCCESS.create
-  | typeof TokenomicsActions.GET_BALANCE_HISTORY.START.create
   | typeof TokenomicsActions.GET_BALANCE_HISTORY.SUCCESS.create
   | typeof TokenomicsActions.START_OR_UPDATE_PRE_STAKING.SUCCESS.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
@@ -82,20 +81,9 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.rankingSummary[action.payload.userId] =
           action.payload.rankingSummary;
         break;
-      case TokenomicsActions.GET_BALANCE_HISTORY.START.type:
-        {
-          const {isInitial} = action.payload;
-          if (isInitial) {
-            draft.balanceHistory = {
-              ...draft.balanceHistory,
-              pageNumber: 0,
-            };
-          }
-        }
-        break;
       case TokenomicsActions.GET_BALANCE_HISTORY.SUCCESS.type:
         const {isInitial, startDate, endDate, hasNext, data} = action.payload;
-        const pageNumber = draft.balanceHistory.pageNumber + 1;
+        const pageNumber = isInitial ? 0 : draft.balanceHistory.pageNumber + 1;
         if (isInitial) {
           draft.balanceHistory = {
             startDate,

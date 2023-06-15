@@ -29,7 +29,7 @@ export function* loadNewsSaga(
         type: 'regular',
         language: locale,
         limit: NEWS_LOAD_LIMIT,
-        offset: pageNumber * NEWS_LOAD_LIMIT,
+        offset: isRefresh ? 0 : pageNumber * NEWS_LOAD_LIMIT,
       },
     );
 

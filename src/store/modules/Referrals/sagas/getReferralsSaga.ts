@@ -26,7 +26,7 @@ export function* getReferralsSaga(action: ReturnType<typeof actionCreator>) {
       yield Api.referrals.getReferrals({
         userId,
         referralType,
-        offset: pageNumber * LIMIT,
+        offset: isInitial ? 0 : pageNumber * LIMIT,
         limit: LIMIT,
       });
 
