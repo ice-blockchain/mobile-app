@@ -13,6 +13,8 @@ export interface State {
   };
   hasMore: boolean;
 
+  pageNumber: number;
+
   unreadCount: number;
 }
 
@@ -30,6 +32,7 @@ const INITIAL_STATE: State = {
   sortedItemIds: [],
   items: {},
   hasMore: true,
+  pageNumber: 0,
 
   unreadCount: 0,
 };
@@ -63,6 +66,7 @@ export function newsReducer(state = INITIAL_STATE, action: Actions): State {
             };
           }
 
+          draft.pageNumber = isRefresh ? 0 : draft.pageNumber + 1;
           draft.hasMore = hasMore;
         }
         break;

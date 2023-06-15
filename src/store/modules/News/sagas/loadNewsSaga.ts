@@ -19,9 +19,8 @@ export function* loadNewsSaga(
     appLocaleSelector,
   );
 
-  const newsIds: SagaReturnType<typeof NewsSelectors.getNewsIds> = yield select(
-    NewsSelectors.getNewsIds,
-  );
+  const pageNumber: SagaReturnType<typeof NewsSelectors.pageNumber> =
+    yield select(NewsSelectors.pageNumber);
 
   try {
     const news: SagaReturnType<typeof Api.news.getNews> = yield call(
@@ -30,7 +29,7 @@ export function* loadNewsSaga(
         type: 'regular',
         language: locale,
         limit: NEWS_LOAD_LIMIT,
-        offset: isRefresh ? 0 : newsIds.length,
+        offset: isRefresh ? 0 : pageNumber * NEWS_LOAD_LIMIT,
       },
     );
 
@@ -55,7 +54,7 @@ export function* loadNewsSaga(
       NewsActions.NEWS_LOAD.SUCCESS.create({
         isRefresh,
 
-        hasMore: news.length === NEWS_LOAD_LIMIT,
+        hasMore: !!news.length,
 
         featuredNewsArticle,
 

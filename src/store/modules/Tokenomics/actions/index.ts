@@ -41,10 +41,10 @@ const GET_RANKING_SUMMARY = createAction('GET_RANKING_SUMMARY', {
 });
 
 const GET_BALANCE_HISTORY = createAction('GET_BALANCE_HISTORY', {
-  START: (payload: {offset: number; startDate: string; endDate: string}) =>
+  START: (payload: {isInitial?: boolean; startDate: string; endDate: string}) =>
     payload,
   SUCCESS: (payload: {
-    offset: number;
+    isInitial?: boolean;
     startDate: string;
     endDate: string;
     hasNext: boolean;

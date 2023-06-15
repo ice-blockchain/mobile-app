@@ -25,6 +25,7 @@ export interface State {
     hasNext: boolean;
     startDate: string | null;
     endDate: string | null;
+    pageNumber: number;
   };
   agreeWithEarlyAccess: boolean;
   forceStartMining: boolean;
@@ -53,6 +54,7 @@ const INITIAL_STATE: State = {
     hasNext: true,
     startDate: null,
     endDate: null,
+    pageNumber: 0,
   },
   agreeWithEarlyAccess: false,
   forceStartMining: false,
@@ -79,11 +81,17 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.rankingSummary[action.payload.userId] =
           action.payload.rankingSummary;
         break;
-
       case TokenomicsActions.GET_BALANCE_HISTORY.SUCCESS.type:
-        const {offset, startDate, endDate, hasNext, data} = action.payload;
-        if (offset === 0) {
-          draft.balanceHistory = {startDate, endDate, hasNext, data};
+        const {isInitial, startDate, endDate, hasNext, data} = action.payload;
+        const pageNumber = isInitial ? 0 : draft.balanceHistory.pageNumber + 1;
+        if (isInitial) {
+          draft.balanceHistory = {
+            startDate,
+            endDate,
+            hasNext,
+            data,
+            pageNumber,
+          };
         } else {
           const currentHistory = state.balanceHistory.data ?? [];
           const lastCurrentHistoryItem = currentHistory.slice(-1)[0];
@@ -111,6 +119,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
             endDate,
             hasNext,
             data: mergedHistory,
+            pageNumber,
           };
         }
         break;

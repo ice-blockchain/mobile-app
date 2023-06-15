@@ -20,6 +20,7 @@ const referralsSelectorWithMemo = createSelector(
       data: referralData?.referrals ?? [],
       hasNext:
         !referralData || referralData.total > referralData.referrals.length,
+      pageNumber: referralData?.pageNumber ?? 0,
       total: referralData?.total,
       active: referralData?.active,
     };

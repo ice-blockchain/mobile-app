@@ -29,14 +29,14 @@ export function useOnRefresh() {
 
     dispatch(
       CollectionActions.GET_TOP_MINERS.START.create({
-        offset: 0,
+        isInitial: true,
         limit: MINERS_COUNT,
       }),
     );
 
     dispatch(
       CollectionActions.GET_TOP_STATS_COUNTRIES.START.create({
-        offset: 0,
+        isInitial: true,
         limit: COUNTRIES_COUNT,
       }),
     );

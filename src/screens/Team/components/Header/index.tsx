@@ -23,7 +23,10 @@ export const Header = memo(({isSearchActive, setIsSearchActive}: Props) => {
       debounce((query: string) => {
         if (query) {
           dispatch(
-            CollectionActions.SEARCH_USERS.START.create({query, offset: 0}),
+            CollectionActions.SEARCH_USERS.START.create({
+              query,
+              isInitial: true,
+            }),
           );
         } else {
           dispatch(CollectionActions.SEARCH_USERS.CLEAR.create());

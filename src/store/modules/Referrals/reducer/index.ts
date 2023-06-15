@@ -16,6 +16,7 @@ export interface State {
       active: number;
       total: number;
       referrals: string[];
+      pageNumber: number;
     };
   };
   history: ReferralHistoryRecord[];
@@ -59,7 +60,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
 
       case getReferralsActionCreator.SUCCESS.type:
         {
-          const {referralType, offset, result} = action.payload;
+          const {referralType, isInitial, result} = action.payload;
 
           const userIds: string[] = [];
           const usersByIds: {
@@ -76,10 +77,14 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
             ...usersByIds,
           };
 
-          if (offset === 0) {
+          const pageNumber = isInitial
+            ? 0
+            : (draft.data[referralType]?.pageNumber ?? 0) + 1;
+          if (isInitial) {
             draft.data[referralType] = {
               ...result,
               referrals: userIds,
+              pageNumber,
             };
           } else {
             draft.data[referralType] = {
@@ -88,6 +93,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
                 ...(state.data[referralType]?.referrals ?? []),
                 ...userIds,
               ],
+              pageNumber,
             };
           }
         }

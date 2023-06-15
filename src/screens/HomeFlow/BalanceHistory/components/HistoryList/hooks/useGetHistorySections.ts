@@ -4,7 +4,6 @@ import {BalanceDiff, BalanceHistoryPoint} from '@api/tokenomics/types';
 import {Filter} from '@screens/HomeFlow/BalanceHistory/components/Filters';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {balanceHistorySelector} from '@store/modules/Tokenomics/selectors';
-import {getBalanceHistoryLength} from '@store/modules/Tokenomics/utils/getBalanceHistoryLength';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {useCallback, useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
@@ -32,7 +31,7 @@ export const useGetHistorySections = ({
     setSections([]);
     dispatch(
       TokenomicsActions.GET_BALANCE_HISTORY.START.create({
-        offset: 0,
+        isInitial: true,
         startDate: selectedFilter.start,
         endDate: selectedFilter.end,
       }),
@@ -67,7 +66,6 @@ export const useGetHistorySections = ({
     if (balanceHistory.hasNext && !loading) {
       dispatch(
         TokenomicsActions.GET_BALANCE_HISTORY.START.create({
-          offset: getBalanceHistoryLength(balanceHistory.data ?? []),
           startDate: selectedFilter.start,
           endDate: selectedFilter.end,
         }),

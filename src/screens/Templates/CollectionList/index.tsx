@@ -32,10 +32,17 @@ type Props<T> = {
     data: T[];
     hasNext: boolean;
     query?: string;
+    pageNumber: number;
   };
   action: ActionFactories<
     string,
-    {START: (params: {query?: string; offset: number}) => unknown}
+    {
+      START: (params: {
+        isInitial?: boolean;
+        limit?: number;
+        query?: string;
+      }) => unknown;
+    }
   >;
   renderItem: ListRenderItem<T>;
 };
@@ -65,11 +72,11 @@ export const CollectionList = <T,>({
   } = useFetchCollection<T>({selector, action});
 
   useEffect(() => {
-    fetch({offset: 0});
+    fetch({isInitial: true});
   }, [fetch]);
 
   const search = useMemo(
-    () => debounce((query: string) => fetch({query, offset: 0}), 600),
+    () => debounce((query: string) => fetch({query, isInitial: true}), 600),
     [fetch],
   );
 

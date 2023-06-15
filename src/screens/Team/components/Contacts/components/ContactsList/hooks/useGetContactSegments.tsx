@@ -7,8 +7,7 @@ import {contactsSelector} from '@store/modules/Contacts/selectors';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {referralsSelector} from '@store/modules/Referrals/selectors';
 import {t} from '@translations/i18n';
-import React, {useRef} from 'react';
-import {ReactNode, useEffect} from 'react';
+import React, {ReactNode, useEffect, useRef} from 'react';
 import {Contact} from 'react-native-contacts';
 import {useSelector} from 'react-redux';
 
@@ -50,7 +49,7 @@ export const useGetContactSegments = (focused: boolean) => {
   useEffect(() => {
     if (focused && !hasBeenFetchedRef.current) {
       hasBeenFetchedRef.current = true;
-      fetch({offset: 0});
+      fetch({isInitial: true});
     }
   }, [fetch, focused, hasBeenFetchedRef]);
 

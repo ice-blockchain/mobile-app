@@ -34,7 +34,7 @@ export const useFetchReferrals = ({
   useEffect(() => {
     if (focused && !hasBeenFetchedRef.current) {
       hasBeenFetchedRef.current = true;
-      fetch({offset: 0});
+      fetch({isInitial: true});
     }
   }, [fetch, focused, hasBeenFetchedRef]);
 

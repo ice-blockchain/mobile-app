@@ -40,7 +40,7 @@ export const Team = memo(() => {
   );
 
   useEffect(() => {
-    fetch({offset: 0});
+    fetch({isInitial: true});
   }, [fetch]);
 
   const onViewTeamPress = useCallback(

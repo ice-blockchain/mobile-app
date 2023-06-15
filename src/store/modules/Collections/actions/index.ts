@@ -4,22 +4,26 @@ import {createAction} from '@store/utils/actions/createAction';
 
 const createActionStructure = <T>() => ({
   START: ({
-    offset,
+    isInitial,
     limit,
     query = '',
   }: {
-    offset: number;
+    isInitial?: boolean;
     limit?: number;
     query?: string;
   }) => ({
     query,
     limit,
-    offset,
+    isInitial,
   }),
   SUCCESS: (
     result: T[],
-    {query, offset, hasNext}: {query: string; offset: number; hasNext: boolean},
-  ) => ({result, query, offset, hasNext}),
+    {
+      query,
+      isInitial,
+      hasNext,
+    }: {query: string; isInitial?: boolean; hasNext: boolean},
+  ) => ({result, query, isInitial, hasNext}),
   FAILED: (errorMessage: string) => ({
     errorMessage,
   }),

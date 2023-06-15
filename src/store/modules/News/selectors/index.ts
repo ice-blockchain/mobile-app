@@ -6,6 +6,7 @@ import {getNewsByIds} from './getNewsByIds';
 import {getNewsIds} from './getNewsIds';
 import {getUnreadCount} from './getUnreadCount';
 import {hasMoreToLoad} from './hasMoreToLoad';
+import {pageNumber} from './pageNumber';
 
 export const NewsSelectors = Object.freeze({
   getFeaturedNewsArticle,
@@ -13,5 +14,6 @@ export const NewsSelectors = Object.freeze({
   getNewsByIds,
   getNewsIds,
   getUnreadCount,
+  pageNumber,
   hasMoreToLoad,
 });
