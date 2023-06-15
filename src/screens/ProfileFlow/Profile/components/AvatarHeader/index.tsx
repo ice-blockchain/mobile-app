@@ -17,6 +17,8 @@ import {ContactsAvatarButton} from '@screens/ProfileFlow/Profile/components/Avat
 import {EditAvatarButton} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/EditAvatarButton';
 import {
   AVATAR_RADIUS,
+  AVATAR_SMALL_SIZE,
+  TEXT_MARGIN_LEFT,
   useAnimatedStyles,
 } from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useAnimatedStyles';
 import {useUserContactDetails} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useUserContactDetails';
@@ -87,7 +89,17 @@ export const AvatarHeader = memo(
       <View style={[topOffset.current, styles.outerContainer]}>
         <View style={styles.container}>
           <Text
-            style={[styles.usernameText, styles.usernameTextMeasures]}
+            style={[
+              styles.usernameText,
+              styles.usernameTextMeasures,
+              {
+                marginLeft:
+                  navigationContainerLeftWidth +
+                  AVATAR_SMALL_SIZE +
+                  TEXT_MARGIN_LEFT,
+                marginRight: navigationContainerRightWidth,
+              },
+            ]}
             numberOfLines={1}
             onLayout={onLayoutTitleText}>
             {user ? buildUsernameWithPrefix(user.username) : ''}

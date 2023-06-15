@@ -9,11 +9,13 @@ import {
   interpolate,
   SharedValue,
   useAnimatedStyle,
+  useDerivedValue,
 } from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
+export const TEXT_MARGIN_LEFT = rem(12);
 export const AVATAR_RADIUS = rem(41);
-const AVATAR_SMALL_SIZE = rem(36);
+export const AVATAR_SMALL_SIZE = rem(36);
 const AVATAR_SMALL_RADIUS = rem(16);
 const SCROLL_STEP_1 = 0.87;
 const MAX_SCROLL = 1;
@@ -34,11 +36,29 @@ export const useAnimatedStyles = ({
   wrapperWidth,
   titleTextWidth,
 }: Params) => {
-  const imageAnimatedStyle = useAnimatedStyle(() => {
-    const size = interpolate(
+  const imageSize = useDerivedValue(() =>
+    interpolate(
       animatedIndex.value,
       [0, MAX_SCROLL],
       [AVATAR_SIZE, AVATAR_SMALL_SIZE],
+      Extrapolate.CLAMP,
+    ),
+  );
+
+  const textMarginLeft = useDerivedValue(() =>
+    interpolate(
+      animatedIndex.value,
+      [0, MAX_SCROLL],
+      [0, TEXT_MARGIN_LEFT],
+      Extrapolate.CLAMP,
+    ),
+  );
+
+  const imageAnimatedStyle = useAnimatedStyle(() => {
+    const borderRadius = interpolate(
+      animatedIndex.value,
+      [0, MAX_SCROLL],
+      [AVATAR_RADIUS, AVATAR_SMALL_RADIUS],
       Extrapolate.CLAMP,
     );
 
@@ -46,13 +66,6 @@ export const useAnimatedStyles = ({
       animatedIndex.value,
       [0, MAX_SCROLL],
       [5, 0],
-      Extrapolate.CLAMP,
-    );
-
-    const borderRadius = interpolate(
-      animatedIndex.value,
-      [0, MAX_SCROLL],
-      [AVATAR_RADIUS, AVATAR_SMALL_RADIUS],
       Extrapolate.CLAMP,
     );
 
@@ -64,8 +77,8 @@ export const useAnimatedStyles = ({
     );
 
     return {
-      height: size,
-      width: size,
+      height: imageSize.value,
+      width: imageSize.value,
       borderWidth,
       borderRadius,
       marginTop,
@@ -73,35 +86,38 @@ export const useAnimatedStyles = ({
   });
 
   const titleAnimatedStyle = useAnimatedStyle(() => {
-    const titleWidthExpanded = AVATAR_SIZE;
-    const titleWidthCollapsed = AVATAR_SMALL_SIZE + 12 + titleTextWidth;
+    const titleTextWidthActual = interpolate(
+      animatedIndex.value,
+      [0, SCROLL_STEP_1],
+      [0, titleTextWidth],
+      Extrapolate.CLAMP,
+    );
 
-    const getDesirablePositionX = (titleContainerWidth: number) =>
-      (navigationContainerLeftWidth +
+    const titleContainerWidthActual =
+      imageSize.value + textMarginLeft.value + titleTextWidthActual;
+
+    /**
+     *
+     * @param containerWidth - width of the container that need to be in the center of wrapper
+     * @returns {number} desirable x position of the container in the wrapper
+     */
+    const getDesirablePositionX = (containerWidth: number): number => {
+      const wholeWidth =
+        navigationContainerLeftWidth +
         wrapperWidth +
-        navigationContainerRightWidth -
-        titleContainerWidth) /
-        2 -
-      navigationContainerLeftWidth;
+        navigationContainerRightWidth;
 
-    const getTranslateX = (titleContainerWidth: number) =>
-      getDesirablePositionX(titleContainerWidth) -
-      (wrapperWidth - titleContainerWidth);
+      return (wholeWidth - containerWidth) / 2 - navigationContainerLeftWidth;
+    };
 
-    const translateXCollapsed = getTranslateX(titleWidthCollapsed);
+    const translateXBasic =
+      getDesirablePositionX(titleContainerWidthActual) -
+      (wrapperWidth - titleContainerWidthActual);
 
     return {
       transform: [
         {
-          translateX: interpolate(
-            animatedIndex.value,
-            [0, MAX_SCROLL],
-            [
-              getTranslateX(titleWidthExpanded),
-              translateXCollapsed > 0 ? 0 : translateXCollapsed,
-            ],
-            Extrapolate.CLAMP,
-          ),
+          translateX: translateXBasic > 0 ? 0 : translateXBasic,
         },
       ],
     };
@@ -144,14 +160,11 @@ export const useAnimatedStyles = ({
       Extrapolate.CLAMP,
     );
 
-    const marginLeft = interpolate(
-      animatedIndex.value,
-      [0, MAX_SCROLL],
-      [0, 12],
-      Extrapolate.CLAMP,
-    );
-
-    return {opacity, fontSize, marginLeft};
+    return {
+      opacity,
+      fontSize,
+      marginLeft: textMarginLeft.value,
+    };
   });
 
   const lettersAvatarStyle: AnimatedStyleProp<ViewStyle> = useAnimatedStyle(
