@@ -11,21 +11,21 @@ const AVATAR_BORDER_RADIUS = rem(24);
 
 type Props = {
   uri: string;
-  isShown: boolean;
+  isBlurred: boolean;
 };
 
-export const QRCodeAvatar = ({uri, isShown}: Props) => {
+export const QRCodeAvatar = ({uri, isBlurred}: Props) => {
   return (
     <View style={styles.container}>
-      {isShown ? (
+      {isBlurred ? (
+        <View style={[styles.avatar, styles.stub]} />
+      ) : (
         <Avatar
-          uri={isShown ? uri : undefined}
+          uri={uri}
           size={AVATAR_SIZE}
           borderRadius={AVATAR_BORDER_RADIUS}
           style={styles.avatar}
         />
-      ) : (
-        <View style={[styles.avatar, styles.stub]} />
       )}
     </View>
   );

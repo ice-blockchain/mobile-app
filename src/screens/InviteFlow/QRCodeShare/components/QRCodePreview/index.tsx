@@ -2,6 +2,7 @@
 
 import {User} from '@api/user/types';
 import {IceLabel} from '@components/Labels/IceLabel';
+import {LinesBackground} from '@components/LinesBackground';
 import {COLORS} from '@constants/colors';
 import {windowWidth} from '@constants/styles';
 import {PrivacyButton} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/PrivacyButton';
@@ -12,7 +13,7 @@ import {
 } from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/QRCodeAvatar';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
-import {buildUsernameLink} from '@utils/username';
+import {buildUsernameLink, buildUsernameWithPrefix} from '@utils/username';
 import React, {forwardRef, Ref, useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -23,52 +24,85 @@ type Props = {
 
 export const QRCodePreview = forwardRef(
   ({user}: Props, forwardedRef: Ref<View>) => {
-    const [isAvatarShown, setIsAvatarShown] = useState(true);
+    const [showAvatar, setShowAvatar] = useState(true);
     return (
-      <View>
-        <View style={styles.container} ref={forwardedRef}>
-          <View style={styles.body}>
-            <QRCodeAvatar
-              uri={user.profilePictureUrl}
-              isShown={isAvatarShown}
-            />
-            <Text style={styles.usernameText}>@{user.username}</Text>
-            <QRCode
-              size={windowWidth * 0.5}
-              input={buildUsernameLink(user.username)}
-              containerStyle={styles.qrCode}
-            />
-            <Text style={styles.descriptionText}>
-              {t('qr_code.description')}
-            </Text>
-            <Text style={styles.iceLabel}>
-              <IceLabel
-                color={COLORS.black}
-                iconSize={rem(30)}
-                textStyle={styles.iceLabelText}
-              />
-            </Text>
-          </View>
+      <>
+        <View style={styles.container}>
+          <QRCodeBody
+            user={user}
+            isAvatarBlurred={!showAvatar}
+            isAvatarShown={true}
+          />
+          <PrivacyButton
+            isClosed={!showAvatar}
+            onPress={() => setShowAvatar(show => !show)}
+            style={styles.privacyButton}
+          />
         </View>
-        {/*
-         * PrivacyButton has to be outside of the "ref" component so
-         * it won't be included to the shared view shot
-         */}
-        <PrivacyButton
-          isClosed={!isAvatarShown}
-          onPress={() => setIsAvatarShown(s => !s)}
-          style={styles.privacyButton}
-        />
-      </View>
+        {/* Hidden copy with custom styles for view-snapshot */}
+        <View style={styles.viewShotContainer} ref={forwardedRef}>
+          <LinesBackground />
+          <QRCodeBody
+            user={user}
+            isAvatarBlurred={false}
+            isAvatarShown={showAvatar}
+          />
+        </View>
+      </>
     );
   },
 );
 
+const QRCodeBody = ({
+  user,
+  isAvatarShown,
+  isAvatarBlurred,
+}: {
+  user: User;
+  isAvatarBlurred: boolean;
+  isAvatarShown: boolean;
+}) => {
+  return (
+    <View style={styles.body}>
+      {isAvatarShown && (
+        <QRCodeAvatar
+          uri={user.profilePictureUrl}
+          isBlurred={isAvatarBlurred}
+        />
+      )}
+      <Text style={styles.usernameText}>
+        {buildUsernameWithPrefix(user.username)}
+      </Text>
+      <QRCode
+        size={windowWidth * 0.5}
+        input={buildUsernameLink(user.username)}
+        containerStyle={styles.qrCode}
+      />
+      <Text style={styles.descriptionText}>{t('qr_code.description')}</Text>
+      <Text style={styles.iceLabel}>
+        <IceLabel
+          color={COLORS.black}
+          iconSize={rem(30)}
+          textStyle={styles.iceLabelText}
+        />
+      </Text>
+    </View>
+  );
+};
+
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: rem(16),
+    paddingHorizontal: rem(16),
     marginTop: -rem(20),
-    backgroundColor: 'transparent', // has to be defined for android view-shot
+  },
+  viewShotContainer: {
+    position: 'absolute',
+    left: windowWidth,
+    top: 0,
+    width: windowWidth,
+    paddingHorizontal: rem(16),
+    paddingVertical: rem(100),
+    backgroundColor: COLORS.primaryLight,
   },
   body: {
     alignItems: 'center',
@@ -96,7 +130,7 @@ const styles = StyleSheet.create({
   },
   privacyButton: {
     position: 'absolute',
-    top: AVATAR_SIZE / 2 + rem(2),
+    top: AVATAR_SIZE / 2 + rem(22),
     right: windowWidth / 2 - AVATAR_SIZE / 2,
   },
 });
