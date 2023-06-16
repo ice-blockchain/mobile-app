@@ -17,5 +17,3 @@ export const stringToColor = (input: string = '') => {
   }
   return colour;
 };
-
-export const extractDigits = (str: string) => str.replace(/\D/g, '');

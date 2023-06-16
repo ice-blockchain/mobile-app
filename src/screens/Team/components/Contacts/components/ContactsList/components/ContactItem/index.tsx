@@ -6,21 +6,14 @@ import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {TeamContactInvite} from '@screens/Team/components/Contacts/components/ContactsList/assets/svg/TeamContactInvite';
 import {MultipleNumbers} from '@screens/Team/components/Contacts/components/ContactsList/components/MultipleNumbers';
-import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {getContactAcronym, getContactName} from '@utils/contacts';
-import {extractDigits, stringToColor} from '@utils/string';
+import {stringToColor} from '@utils/string';
 import {font} from '@utils/styles';
 import React, {memo, useState} from 'react';
 import {LayoutAnimation, StyleSheet, Text, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
-import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
-
-interface PhoneNumberReducerResult {
-  uniqueDigits: Set<string>;
-  numbers: string[];
-}
 
 const phoneNumberLineHeight = rem(20);
 
@@ -37,34 +30,17 @@ export const ContactItem = memo(
     contact: Contact;
     onInvite: (contact: Contact) => void;
   }) => {
-    const user = useSelector(unsafeUserSelector);
-    const isoCode = user?.clientData?.phoneNumberIso ?? null;
-
     const [activeIndex, setActiveIndex] = useState<number | undefined>(
       undefined,
     );
     const [height, setActiveHeight] = useState<number | undefined>(0);
 
-    const phoneNumbers = contact.phoneNumbers.reduce<PhoneNumberReducerResult>(
-      (result, n) => {
-        /**
-         * If we have an isoCode, we show only numbers with label 'display'
-         * that are formatted with custom isoCode.
-         */
-        if (
-          (isoCode && n.label === 'display') ||
-          (!isoCode && n.label !== 'display')
-        ) {
-          const cleanedNumber = extractDigits(n.number);
-          if (!result.uniqueDigits.has(cleanedNumber)) {
-            result.uniqueDigits.add(cleanedNumber);
-            result.numbers.push(n.number);
-          }
-        }
+    const phoneNumbers = [
+      ...contact.phoneNumbers.reduce<Set<string>>((result, n) => {
+        result.add(n.number);
         return result;
-      },
-      {uniqueDigits: new Set<string>(), numbers: [] as string[]},
-    ).numbers;
+      }, new Set<string>()),
+    ];
 
     const showAllNumbers = () => {
       LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);

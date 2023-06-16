@@ -3,6 +3,7 @@
 import {User} from '@api/user/types';
 import {
   isAuthorizedSelector,
+  userIsoCodeSelector,
   userSelector,
 } from '@store/modules/Account/selectors';
 import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
@@ -10,7 +11,7 @@ import {ContactsActions} from '@store/modules/Contacts/actions';
 import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';
 import {waitForSelector} from '@store/utils/sagas/effects';
 import {getErrorMessage} from '@utils/errors';
-import {e164PhoneNumber, internationalPhoneNumber} from '@utils/phoneNumber';
+import {internationalPhoneNumber} from '@utils/phoneNumber';
 import {runInChunks} from '@utils/promise';
 import {Contact, getAll, PhoneNumber} from 'react-native-contacts';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
@@ -26,7 +27,9 @@ export function* getContactsSaga() {
 
     const user: User = yield select(userSelector);
 
-    const isoCode = user?.clientData?.phoneNumberIso ?? null;
+    const isoCode: SagaReturnType<typeof userIsoCodeSelector> = yield select(
+      userIsoCodeSelector,
+    );
 
     const contacts: SagaReturnType<typeof getAll> = yield call(getAll);
 
@@ -47,21 +50,30 @@ export function* getContactsSaga() {
 
         let hasUserNumber = false;
 
-        const validNumbers = contact.phoneNumbers.filter(record => {
-          if (record.number?.trim()?.length) {
-            const e164FormattedPhoneNumber = e164PhoneNumber(
-              record.number,
-              user.country,
-            );
-            if (e164FormattedPhoneNumber) {
-              if (e164FormattedPhoneNumber === user.phoneNumber) {
-                hasUserNumber = true;
-              }
-              return true;
-            }
-          }
-          return false;
-        });
+        const userInternational = user.phoneNumber
+          ? internationalPhoneNumber(user.phoneNumber, isoCode)
+          : null;
+
+        const validNumbers = isoCode
+          ? contact.phoneNumbers.reduce(
+              (validRecords: PhoneNumber[], record) => {
+                if (record.number?.trim()?.length) {
+                  const formatted = internationalPhoneNumber(
+                    record.number,
+                    isoCode,
+                  );
+                  if (formatted) {
+                    if (userInternational && formatted === userInternational) {
+                      hasUserNumber = true;
+                    }
+                    validRecords.push({number: formatted, label: record.label});
+                  }
+                }
+                return validRecords;
+              },
+              [],
+            )
+          : contact.phoneNumbers;
 
         if (hasUserNumber) {
           return;
@@ -72,28 +84,10 @@ export function* getContactsSaga() {
            * If isoCode exists, we add the international number
            * with 'display' label to the contact
            */
-          const validNumbersWithDisplayLabel: PhoneNumber[] = isoCode
-            ? validNumbers.reduce(
-                (accumulator: PhoneNumber[], record: PhoneNumber) => {
-                  const international = internationalPhoneNumber(
-                    record.number,
-                    isoCode,
-                  );
-                  if (international) {
-                    accumulator.push({
-                      label: 'display',
-                      number: international,
-                    });
-                  }
 
-                  return accumulator;
-                },
-                [],
-              )
-            : [];
           filteredContacts.push({
             ...contact,
-            phoneNumbers: [...validNumbers, ...validNumbersWithDisplayLabel],
+            phoneNumbers: [...validNumbers],
           });
         }
       },
