@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {useAnimatedNumber} from '@hooks/useAnimatedNumber';
+import {
+  AnimationOptions,
+  useAnimatedNumber,
+} from '@components/AnimatedNumberText/hooks/useAnimatedNumber';
 import {formatNumber} from '@utils/numbers';
 import React, {FC, memo} from 'react';
 import {StyleProp, Text, TextStyle} from 'react-native';
@@ -10,6 +13,7 @@ interface Props {
   textDecorator?: (animatedValue: number) => string | number;
   NumberComponent?: FC<{animatedValue: number}>;
   style?: StyleProp<TextStyle>;
+  animationOptions?: AnimationOptions;
 }
 
 export const AnimatedNumberText = memo(
