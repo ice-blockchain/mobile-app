@@ -713,9 +713,9 @@ PODS:
   - RNScreens (3.13.1):
     - React-Core
     - React-RCTImage
-  - RNSentry (5.0.0):
+  - RNSentry (5.6.0):
     - React-Core
-    - Sentry/HybridSDK (= 8.0.0)
+    - Sentry/HybridSDK (= 8.7.3)
   - RNSha256 (1.4.8):
     - React-Core
   - RNShare (8.0.0):
@@ -727,9 +727,9 @@ PODS:
     - React-Core
   - RNSVG (13.6.0):
     - React-Core
-  - Sentry/HybridSDK (8.0.0):
-    - SentryPrivate (= 8.0.0)
-  - SentryPrivate (8.0.0)
+  - Sentry/HybridSDK (8.7.3):
+    - SentryPrivate (= 8.7.3)
+  - SentryPrivate (8.7.3)
   - SocketRocket (0.6.0)
   - TOCropViewController (2.6.1)
   - TwitterCore (3.2.0)
@@ -1191,13 +1191,13 @@ SPEC CHECKSUMS:
   RNReactNativeHapticFeedback: 1e3efeca9628ff9876ee7cdd9edec1b336913f8c
   RNReanimated: 716842722e1c5b0b7c56cf718e586b7f6a712879
   RNScreens: 40a2cb40a02a609938137a1e0acfbf8fc9eebf19
-  RNSentry: eff1f32fe84682feb09a36c5e5f513d6ef964b70
+  RNSentry: 9f0447b3ce13806f544903748de423259ead8552
   RNSha256: 80bea5b2e7005f813f6438cb41e573b3d531146c
   RNShare: 36aa3e6958373a0ad1c95a1c960adef589da3794
   RNSound: 6c156f925295bdc83e8e422e7d8b38d33bc71852
   RNSVG: 3a79c0c4992213e4f06c08e62730c5e7b9e4dc17
-  Sentry: 2158a4621096dcd0a3a4f7c80b84b04dde261035
-  SentryPrivate: 1e3acf96ee818a8d0d95b8e922d39ab6be338ea0
+  Sentry: c7a86f43510a7d5678d4de28d78c28ab351d295b
+  SentryPrivate: 2eaabf598a46d4b9b8822aef766df2a84caf2e6f
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   TOCropViewController: edfd4f25713d56905ad1e0b9f5be3fbe0f59c863
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c

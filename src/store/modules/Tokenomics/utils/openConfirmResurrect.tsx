@@ -53,7 +53,8 @@ export const openConfirmResurrect = (params: ResurrectRequiredData) => {
         },
       ],
       dismissOnButtonPress: false,
-      onDismiss: () => resultResolve('no'),
+      dismissOnAndroidHardwareBack: false,
+      dismissOnOutsideTouch: false,
     },
   });
 
