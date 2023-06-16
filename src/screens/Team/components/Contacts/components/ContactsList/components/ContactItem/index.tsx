@@ -6,6 +6,7 @@ import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {TeamContactInvite} from '@screens/Team/components/Contacts/components/ContactsList/assets/svg/TeamContactInvite';
 import {MultipleNumbers} from '@screens/Team/components/Contacts/components/ContactsList/components/MultipleNumbers';
+import {userSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {getContactAcronym, getContactName} from '@utils/contacts';
 import {extractDigits, stringToColor} from '@utils/string';
@@ -13,6 +14,7 @@ import {font} from '@utils/styles';
 import React, {memo, useState} from 'react';
 import {LayoutAnimation, StyleSheet, Text, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 interface PhoneNumberReducerResult {
@@ -35,6 +37,9 @@ export const ContactItem = memo(
     contact: Contact;
     onInvite: (contact: Contact) => void;
   }) => {
+    const user = useSelector(userSelector);
+    const isoCode = user?.clientData?.phoneNumberIso ?? null;
+
     const [activeIndex, setActiveIndex] = useState<number | undefined>(
       undefined,
     );
@@ -42,14 +47,19 @@ export const ContactItem = memo(
 
     const phoneNumbers = contact.phoneNumbers.reduce<PhoneNumberReducerResult>(
       (result, n) => {
-        if (n.label !== 'display') {
-          return result;
-        }
-
-        const cleanedNumber = extractDigits(n.number);
-        if (!result.uniqueDigits.has(cleanedNumber)) {
-          result.uniqueDigits.add(cleanedNumber);
-          result.numbers.push(n.number);
+        /**
+         * If we have an isoCode, we show only numbers with label 'display'
+         * that are formatted with custom isoCode.
+         */
+        if (
+          (isoCode && n.label === 'display') ||
+          (!isoCode && n.label !== 'display')
+        ) {
+          const cleanedNumber = extractDigits(n.number);
+          if (!result.uniqueDigits.has(cleanedNumber)) {
+            result.uniqueDigits.add(cleanedNumber);
+            result.numbers.push(n.number);
+          }
         }
         return result;
       },
