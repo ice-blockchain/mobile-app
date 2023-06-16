@@ -64,7 +64,7 @@ const viewabilityConfig = {
 export const AdoptionCard = ({isCollapsed, onPress}: AdoptionCardProps) => {
   const adoption = useSelector(adoptionSelector);
   const isSplashHidden = useSelector(isSplashHiddenSelector);
-  const refFlatList = useRef<Animated.FlatList<AdoptionMilestone>>(null);
+  const refFlatList = useRef<Animated.FlatList<AdoptionMilestone> | null>(null);
 
   const sharedItems = useSharedValue<ViewToken[]>([]);
 
@@ -137,22 +137,6 @@ export const AdoptionCard = ({isCollapsed, onPress}: AdoptionCardProps) => {
   useEffect(() => {
     if (activeIndex >= 0) {
       scrollToIndex(activeIndex);
-
-      /**
-       * Scroll to activeIndex after 3 seconds
-       * to avoid scroll to index failed
-       * because of not refFlatList yet initialized
-       * on first render
-       */
-      if (!refFlatList.current) {
-        const timeoutId = setTimeout(() => {
-          scrollToIndex(activeIndex);
-        }, 3000);
-
-        return () => {
-          clearTimeout(timeoutId);
-        };
-      }
     }
   }, [activeIndex, scrollToIndex]);
 
@@ -163,6 +147,15 @@ export const AdoptionCard = ({isCollapsed, onPress}: AdoptionCardProps) => {
       }),
     };
   }, [isCollapsed]);
+
+  const setRefFlatList = useCallback(
+    (ref: Animated.FlatList<AdoptionMilestone> | null) => {
+      refFlatList.current = ref;
+
+      scrollToIndex(activeIndex);
+    },
+    [activeIndex, scrollToIndex],
+  );
 
   const renderItem: ListRenderItem<AdoptionMilestone> = useCallback(
     ({item, index}) => {
@@ -199,7 +192,7 @@ export const AdoptionCard = ({isCollapsed, onPress}: AdoptionCardProps) => {
       />
       <View style={[styles.scrollAbsoluteContainer, styles.card]}>
         <Animated.FlatList
-          ref={refFlatList}
+          ref={setRefFlatList}
           style={[styles.scrollContainer, animatedStyleFlatList]}
           contentContainerStyle={styles.scrollContentContainerStyle}
           data={adoption.milestones}
