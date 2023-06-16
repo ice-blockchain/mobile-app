@@ -138,8 +138,10 @@ function* createUser({
       email,
       phoneNumber: normalizedNumber,
       phoneNumberHash,
+      clientData: {
+        phoneNumberIso,
+      },
       language: appLocale,
-      phoneNumberIso,
     },
   );
 

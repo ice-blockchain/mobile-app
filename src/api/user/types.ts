@@ -25,7 +25,6 @@ export type User = {
 
   phoneNumber?: string | null;
   phoneNumberHash?: string | null;
-  phoneNumberIso?: string | null;
 
   profilePicture?: {
     uri: string;
@@ -77,4 +76,5 @@ export type ClientData = {
   registrationProcessFinalizedSteps?: RegistrationProcessFinalizedStep[];
   walkthroughProgress?: {[key in WalkthroughStepKey]?: WalkthroughStepProgress};
   miningStateTooltipSeen?: string[];
+  phoneNumberIso?: string | null;
 };
