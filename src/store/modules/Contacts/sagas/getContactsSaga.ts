@@ -10,9 +10,9 @@ import {ContactsActions} from '@store/modules/Contacts/actions';
 import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';
 import {waitForSelector} from '@store/utils/sagas/effects';
 import {getErrorMessage} from '@utils/errors';
-import {e164PhoneNumber} from '@utils/phoneNumber';
+import {e164PhoneNumber, internationalPhoneNumber} from '@utils/phoneNumber';
 import {runInChunks} from '@utils/promise';
-import {Contact, getAll} from 'react-native-contacts';
+import {Contact, getAll, PhoneNumber} from 'react-native-contacts';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
 export function* getContactsSaga() {
@@ -25,6 +25,8 @@ export function* getContactsSaga() {
     });
 
     const user: User = yield select(userSelector);
+
+    const isoCode = user?.clientData?.phoneNumberIso ?? null;
 
     const contacts: SagaReturnType<typeof getAll> = yield call(getAll);
 
@@ -66,9 +68,32 @@ export function* getContactsSaga() {
         }
 
         if (validNumbers.length > 0) {
+          /**
+           * If isoCode exists, we add the international number
+           * with 'display' label to the contact
+           */
+          const validNumbersWithDisplayLabel: PhoneNumber[] = isoCode
+            ? validNumbers.reduce(
+                (accumulator: PhoneNumber[], record: PhoneNumber) => {
+                  const international = internationalPhoneNumber(
+                    record.number,
+                    isoCode,
+                  );
+                  if (international) {
+                    accumulator.push({
+                      label: 'display',
+                      number: international,
+                    });
+                  }
+
+                  return accumulator;
+                },
+                [],
+              )
+            : [];
           filteredContacts.push({
             ...contact,
-            phoneNumbers: validNumbers,
+            phoneNumbers: [...validNumbers, ...validNumbersWithDisplayLabel],
           });
         }
       },
