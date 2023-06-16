@@ -42,6 +42,10 @@ export const ContactItem = memo(
 
     const phoneNumbers = contact.phoneNumbers.reduce<PhoneNumberReducerResult>(
       (result, n) => {
+        if (n.label !== 'display') {
+          return result;
+        }
+
         const cleanedNumber = extractDigits(n.number);
         if (!result.uniqueDigits.has(cleanedNumber)) {
           result.uniqueDigits.add(cleanedNumber);
