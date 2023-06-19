@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {ENV} from '@constants/env';
+import {useIsFocused} from '@react-navigation/native';
 import {
   balanceSummarySelector,
   miningRatesSelector,
@@ -14,6 +15,8 @@ export const usePredictedBalanceUpdate = ({
 }: {
   updateInterval: number;
 }) => {
+  const isScreenFocused = useIsFocused();
+
   const balanceSummary = useSelector(balanceSummarySelector);
   const miningRate = useSelector(miningRatesSelector);
 
@@ -25,7 +28,7 @@ export const usePredictedBalanceUpdate = ({
       return;
     }
 
-    if (miningRate.type === 'none') {
+    if (miningRate.type === 'none' || !isScreenFocused) {
       setPredictedBalance(parseNumber(balanceSummary.total));
       return;
     }
@@ -44,7 +47,7 @@ export const usePredictedBalanceUpdate = ({
       );
     }, updateInterval);
     return () => clearInterval(interval);
-  }, [balanceSummary, miningRate, updateInterval]);
+  }, [balanceSummary, miningRate, updateInterval, isScreenFocused]);
 
   return {predictedBalance};
 };
