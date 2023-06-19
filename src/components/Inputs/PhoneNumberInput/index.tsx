@@ -14,7 +14,7 @@ import {font} from '@utils/styles';
 import React, {useState} from 'react';
 import {StyleSheet, Text} from 'react-native';
 import {useSelector} from 'react-redux';
-import {rem} from 'rn-units';
+import {isIOS, rem} from 'rn-units';
 
 export const PhoneNumberInput = ({
   value,
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     paddingLeft: 0,
   },
   prefixText: {
-    ...font(16, 18, 'medium', 'secondary'),
+    ...font(16, isIOS ? 19 : 18, 'medium', 'secondary'),
     marginRight: rem(4),
   },
   valueText: {
