@@ -42,7 +42,7 @@ export const TotalBalanceValue = ({style, darkMode}: Props) => {
 
   const animationOptions = useMemo(() => ({duration: UPDATE_INTERVAL_MS}), []);
 
-  if (!predictedBalance) {
+  if (predictedBalance === null) {
     return null;
   }
 
