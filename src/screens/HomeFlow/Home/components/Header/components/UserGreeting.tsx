@@ -45,7 +45,7 @@ export function UserGreeting({disabled, animatedStyle}: Props) {
           <GreetingText />
           {user && (
             <Text style={styles.usernameText}>
-              {buildUsernameWithPrefix(user.username)}
+              {buildUsernameWithPrefix(user.username ?? '')}
             </Text>
           )}
         </Touchable>
