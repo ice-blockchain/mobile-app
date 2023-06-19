@@ -17,15 +17,19 @@ import {ContactsAvatarButton} from '@screens/ProfileFlow/Profile/components/Avat
 import {EditAvatarButton} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/EditAvatarButton';
 import {
   AVATAR_RADIUS,
+  AVATAR_SMALL_SIZE,
+  TEXT_MARGIN_LEFT,
   useAnimatedStyles,
 } from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useAnimatedStyles';
 import {useUserContactDetails} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useUserContactDetails';
 import {font, mirrorTransform} from '@utils/styles';
 import {buildUsernameWithPrefix} from '@utils/username';
 import React, {memo, useState} from 'react';
-import {Image, StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import {rem} from 'rn-units';
+
+import {useOnLayout} from './hooks/useOnLayout';
 
 const NOT_FOUND = require('../../assets/images/notFoundPlaceholder.png');
 
@@ -47,12 +51,30 @@ export const AvatarHeader = memo(
     const [isTooltipVisible, setIsTooltipVisible] = useState(false);
 
     const {
+      navigationContainerLeftWidth,
+      navigationContainerRightWidth,
+      wrapperWidth,
+      titleTextWidth,
+      onLayoutNavigationContainerLeft,
+      onLayoutNavigationContainerRight,
+      onLayoutWrapper,
+      onLayoutTitleText,
+    } = useOnLayout();
+
+    const {
+      titleAnimatedStyle,
       imageAnimatedStyle,
       penAnimatedStyle,
       textStyle,
       lettersAvatarStyle,
       iconAvatarStyle,
-    } = useAnimatedStyles({animatedIndex});
+    } = useAnimatedStyles({
+      animatedIndex,
+      navigationContainerLeftWidth,
+      navigationContainerRightWidth,
+      wrapperWidth,
+      titleTextWidth,
+    });
 
     const {contactDetails} = useUserContactDetails({user});
 
@@ -66,72 +88,90 @@ export const AvatarHeader = memo(
     return (
       <View style={[topOffset.current, styles.outerContainer]}>
         <View style={styles.container}>
-          <View style={styles.wrapper}>
-            <View>
-              <Animated.View
-                style={[imageAnimatedStyle, styles.imageContainer]}>
-                {isLoading && !uri ? (
-                  <AvatarSkeleton />
-                ) : (
-                  <>
-                    {user ? (
-                      <Avatar
-                        uri={localImage?.path ?? uri}
-                        style={styles.image}
-                        size={AVATAR_SIZE}
-                        borderRadius={AVATAR_RADIUS}
-                        touchableStyle={commonStyles.flexOne}
-                        allowFullScreen={true}
-                      />
-                    ) : (
-                      <Image
-                        source={NOT_FOUND}
-                        resizeMode="stretch"
-                        style={styles.image}
-                      />
-                    )}
-                  </>
-                )}
-              </Animated.View>
-              {isOwner && (
-                <EditAvatarButton
-                  onPress={onEditPress}
-                  loading={updateAvatarLoading}
-                  containerStyle={penAnimatedStyle}
-                  iconStyle={iconAvatarStyle}
-                />
-              )}
-              {contactDetails && (
-                <ContactsAvatarButton
-                  onPress={() => setIsTooltipVisible(state => !state)}
-                  contacts={contactDetails}
-                  containerStyle={lettersAvatarStyle}
-                />
-              )}
-            </View>
-            {user && (
-              <Animated.Text
-                style={[styles.usernameText, textStyle]}
-                numberOfLines={1}>
-                {buildUsernameWithPrefix(user.username)}
-              </Animated.Text>
-            )}
-          </View>
-          <View
+          <Text
             style={[
-              styles.navigationContainer,
-              styles.navigationContainerLeft,
-            ]}>
+              styles.usernameText,
+              styles.usernameTextMeasures,
+              {
+                marginLeft:
+                  navigationContainerLeftWidth +
+                  AVATAR_SMALL_SIZE +
+                  TEXT_MARGIN_LEFT,
+                marginRight: navigationContainerRightWidth,
+              },
+            ]}
+            numberOfLines={1}
+            onLayout={onLayoutTitleText}>
+            {user ? buildUsernameWithPrefix(user.username) : ''}
+          </Text>
+
+          <View
+            style={[styles.navigationContainer, styles.navigationContainerLeft]}
+            onLayout={onLayoutNavigationContainerLeft}>
             <BackButton
               color={COLORS.primaryDark}
               containerStyle={styles.backButton}
             />
           </View>
+          <View style={styles.wrapper} onLayout={onLayoutWrapper}>
+            <Animated.View style={[styles.titleContainer, titleAnimatedStyle]}>
+              <View>
+                <Animated.View
+                  style={[imageAnimatedStyle, styles.imageContainer]}>
+                  {isLoading && !uri ? (
+                    <AvatarSkeleton />
+                  ) : (
+                    <>
+                      {user ? (
+                        <Avatar
+                          uri={localImage?.path ?? uri}
+                          style={styles.image}
+                          size={AVATAR_SIZE}
+                          borderRadius={AVATAR_RADIUS}
+                          touchableStyle={commonStyles.flexOne}
+                          allowFullScreen={true}
+                        />
+                      ) : (
+                        <Image
+                          source={NOT_FOUND}
+                          resizeMode={'stretch'}
+                          style={styles.image}
+                        />
+                      )}
+                    </>
+                  )}
+                </Animated.View>
+                {isOwner && (
+                  <EditAvatarButton
+                    onPress={onEditPress}
+                    loading={updateAvatarLoading}
+                    containerStyle={penAnimatedStyle}
+                    iconStyle={iconAvatarStyle}
+                  />
+                )}
+                {contactDetails && (
+                  <ContactsAvatarButton
+                    onPress={() => setIsTooltipVisible(state => !state)}
+                    contacts={contactDetails}
+                    containerStyle={lettersAvatarStyle}
+                  />
+                )}
+              </View>
+              {user && (
+                <Animated.Text
+                  style={[styles.usernameText, textStyle]}
+                  numberOfLines={1}>
+                  {buildUsernameWithPrefix(user.username)}
+                </Animated.Text>
+              )}
+            </Animated.View>
+          </View>
           <View
             style={[
               styles.navigationContainer,
               styles.navigationContainerRight,
-            ]}>
+            ]}
+            onLayout={onLayoutNavigationContainerRight}>
             {isOwner && user?.hiddenProfileElements?.length && (
               <ShowPrivacyButton containerStyle={styles.navigationButton} />
             )}
@@ -156,31 +196,34 @@ const styles = StyleSheet.create({
   },
   container: {
     height: HEADER_HEIGHT,
-    justifyContent: 'center',
     flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
     zIndex: 1000,
     width: windowWidth,
   },
   wrapper: {
     flexDirection: 'row',
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'center',
     alignSelf: 'center',
   },
+  titleContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   navigationContainer: {
-    position: 'absolute',
     flexDirection: 'row',
     alignItems: 'center',
-    right: rem(16),
-    top: 0,
-    bottom: 0,
   },
   navigationContainerLeft: {
-    left: rem(16),
+    paddingLeft: rem(16),
   },
   navigationContainerRight: {
-    right: rem(16),
+    paddingRight: rem(16),
+    paddingLeft: rem(12),
   },
   imageContainer: {
     borderColor: COLORS.foam,
@@ -194,7 +237,14 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   usernameText: {
+    flexShrink: 1,
     ...font(17, 20.4, 'semibold', 'primaryDark'),
+  },
+  usernameTextMeasures: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    opacity: 0,
   },
   backButton: {
     justifyContent: 'center',

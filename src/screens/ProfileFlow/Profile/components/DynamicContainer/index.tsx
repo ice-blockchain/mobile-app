@@ -74,6 +74,7 @@ export const DynamicContainer = ({children, animatedIndex}: Props) => {
       <BottomSheetScrollView
         style={commonStyles.flexOne}
         showsVerticalScrollIndicator={false}
+        bounces={false}
         contentContainerStyle={tabBarOffset.current}>
         <Animated.View
           style={[

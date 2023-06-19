@@ -9,11 +9,13 @@ import {
   interpolate,
   SharedValue,
   useAnimatedStyle,
+  useDerivedValue,
 } from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
+export const TEXT_MARGIN_LEFT = rem(12);
 export const AVATAR_RADIUS = rem(41);
-const AVATAR_SMALL_SIZE = rem(36);
+export const AVATAR_SMALL_SIZE = rem(36);
 const AVATAR_SMALL_RADIUS = rem(16);
 const SCROLL_STEP_1 = 0.87;
 const MAX_SCROLL = 1;
@@ -21,14 +23,42 @@ export const PEN_SIZE = rem(32);
 
 type Params = {
   animatedIndex: SharedValue<number>;
+  navigationContainerLeftWidth: number;
+  navigationContainerRightWidth: number;
+  wrapperWidth: number;
+  titleTextWidth: number;
 };
 
-export const useAnimatedStyles = ({animatedIndex}: Params) => {
-  const imageAnimatedStyle = useAnimatedStyle(() => {
-    const size = interpolate(
+export const useAnimatedStyles = ({
+  animatedIndex,
+  navigationContainerRightWidth,
+  navigationContainerLeftWidth,
+  wrapperWidth,
+  titleTextWidth,
+}: Params) => {
+  const imageSize = useDerivedValue(() =>
+    interpolate(
       animatedIndex.value,
       [0, MAX_SCROLL],
       [AVATAR_SIZE, AVATAR_SMALL_SIZE],
+      Extrapolate.CLAMP,
+    ),
+  );
+
+  const textMarginLeft = useDerivedValue(() =>
+    interpolate(
+      animatedIndex.value,
+      [0, MAX_SCROLL],
+      [0, TEXT_MARGIN_LEFT],
+      Extrapolate.CLAMP,
+    ),
+  );
+
+  const imageAnimatedStyle = useAnimatedStyle(() => {
+    const borderRadius = interpolate(
+      animatedIndex.value,
+      [0, MAX_SCROLL],
+      [AVATAR_RADIUS, AVATAR_SMALL_RADIUS],
       Extrapolate.CLAMP,
     );
 
@@ -39,13 +69,6 @@ export const useAnimatedStyles = ({animatedIndex}: Params) => {
       Extrapolate.CLAMP,
     );
 
-    const borderRadius = interpolate(
-      animatedIndex.value,
-      [0, MAX_SCROLL],
-      [AVATAR_RADIUS, AVATAR_SMALL_RADIUS],
-      Extrapolate.CLAMP,
-    );
-
     const marginTop = interpolate(
       animatedIndex.value,
       [0, MAX_SCROLL],
@@ -53,7 +76,51 @@ export const useAnimatedStyles = ({animatedIndex}: Params) => {
       Extrapolate.CLAMP,
     );
 
-    return {height: size, width: size, borderWidth, borderRadius, marginTop};
+    return {
+      height: imageSize.value,
+      width: imageSize.value,
+      borderWidth,
+      borderRadius,
+      marginTop,
+    };
+  });
+
+  const titleAnimatedStyle = useAnimatedStyle(() => {
+    const titleTextWidthActual = interpolate(
+      animatedIndex.value,
+      [0, SCROLL_STEP_1],
+      [0, titleTextWidth],
+      Extrapolate.CLAMP,
+    );
+
+    const titleContainerWidthActual =
+      imageSize.value + textMarginLeft.value + titleTextWidthActual;
+
+    /**
+     *
+     * @param containerWidth - width of the container that need to be in the center of wrapper
+     * @returns {number} desirable x position of the container in the wrapper
+     */
+    const getDesirablePositionX = (containerWidth: number): number => {
+      const wholeWidth =
+        navigationContainerLeftWidth +
+        wrapperWidth +
+        navigationContainerRightWidth;
+
+      return (wholeWidth - containerWidth) / 2 - navigationContainerLeftWidth;
+    };
+
+    const translateXBasic =
+      getDesirablePositionX(titleContainerWidthActual) -
+      (wrapperWidth - titleContainerWidthActual);
+
+    return {
+      transform: [
+        {
+          translateX: translateXBasic > 0 ? 0 : translateXBasic,
+        },
+      ],
+    };
   });
 
   const penAnimatedStyle = useAnimatedStyle(() => {
@@ -93,14 +160,11 @@ export const useAnimatedStyles = ({animatedIndex}: Params) => {
       Extrapolate.CLAMP,
     );
 
-    const marginLeft = interpolate(
-      animatedIndex.value,
-      [0, MAX_SCROLL],
-      [0, 12],
-      Extrapolate.CLAMP,
-    );
-
-    return {opacity, fontSize, marginLeft};
+    return {
+      opacity,
+      fontSize,
+      marginLeft: textMarginLeft.value,
+    };
   });
 
   const lettersAvatarStyle: AnimatedStyleProp<ViewStyle> = useAnimatedStyle(
@@ -128,6 +192,7 @@ export const useAnimatedStyles = ({animatedIndex}: Params) => {
   });
 
   return {
+    titleAnimatedStyle,
     imageAnimatedStyle,
     penAnimatedStyle,
     textStyle,

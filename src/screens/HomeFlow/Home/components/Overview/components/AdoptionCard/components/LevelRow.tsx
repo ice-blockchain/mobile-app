@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   },
   valueCurrencyText: {
     opacity: 0.8,
-    ...font(13, 16, 'regular'),
+    ...font(13, 16, 'regular', 'white', 'center'),
     marginLeft: -rem(2),
   },
   step: {

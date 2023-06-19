@@ -10,6 +10,7 @@ interface QueryParams {
   type: NewsArticleType;
   limit: number;
   offset: number;
+  createdAfter?: string;
 }
 
 interface Params extends QueryParams {
