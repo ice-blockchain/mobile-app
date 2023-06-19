@@ -19,7 +19,7 @@ function* updateUserAttributes() {
   if (user) {
     yield call(Attributes.trackUserFirstName, user.firstName ?? '');
     yield call(Attributes.trackUserLastName, user.lastName ?? '');
-    yield call(Attributes.trackUserAttribute, 'Username', user.username);
+    yield call(Attributes.trackUserAttribute, 'Username', user.username ?? '');
     yield call(Attributes.trackUserEmail, user.email ?? '');
     yield call(Attributes.trackUserContactNumber, user.phoneNumber ?? '');
     yield call(Attributes.trackUserAttribute, 'City', user.city ?? '');

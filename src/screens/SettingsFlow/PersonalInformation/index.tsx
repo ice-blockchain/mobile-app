@@ -69,7 +69,7 @@ export const PersonalInformation = memo(() => {
           <CommonInput
             label={t('personal_information.username')}
             onChangeText={onChangeUsername}
-            value={userDraft.username}
+            value={userDraft.username ?? ''}
             containerStyle={styles.inputContainer}
             style={styles.input}
             loading={validateUsernameLoading}

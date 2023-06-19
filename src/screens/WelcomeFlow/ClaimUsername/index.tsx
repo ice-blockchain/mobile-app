@@ -50,7 +50,7 @@ export const ClaimUsername = () => {
               height={rem(16)}
             />
           }
-          value={username}
+          value={username ?? ''}
           errorText={error}
           validated={isUsernameUpdated}
           style={styles.input}

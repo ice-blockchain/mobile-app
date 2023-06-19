@@ -50,6 +50,7 @@ import {Tooltip} from '@screens/Modals/Tooltip';
 import {News} from '@screens/News';
 import {Badges} from '@screens/ProfileFlow/Badges';
 import {Profile} from '@screens/ProfileFlow/Profile';
+import {ProfileActionType} from '@screens/ProfileFlow/Profile/types';
 import {Roles} from '@screens/ProfileFlow/Roles';
 import {ConfirmEmail} from '@screens/SettingsFlow/ConfirmEmail';
 import {ConfirmPhoneNumber} from '@screens/SettingsFlow/ConfirmPhoneNumber';
@@ -73,8 +74,6 @@ import Animated from 'react-native-reanimated';
 import {SvgProps} from 'react-native-svg';
 import {useDispatch} from 'react-redux';
 import {rem} from 'rn-units/index';
-
-type ProfileTabActionType = 'updatePhoto';
 
 export type MainTabsParamList = {
   HomeTab: NavigatorScreenParams<HomeTabStackParamList> | undefined;
@@ -127,7 +126,7 @@ export type MainStackParamList = {
   CountrySelect: {
     onSelect: (country: Country) => void;
   };
-  UserProfile: {userId: string; actionType?: ProfileTabActionType} | undefined;
+  UserProfile: {userId: string; actionType?: ProfileActionType} | undefined;
   Roles: {userId?: string} | undefined;
   Badges: {category?: BadgeType; userId?: string};
   Walkthrough:
@@ -165,7 +164,7 @@ export type NewsTabStackParamList = {
 };
 
 export type ProfileTabStackParamList = {
-  MyProfile: {actionType?: ProfileTabActionType; userId?: string};
+  MyProfile: {actionType?: ProfileActionType; userId?: string};
   Roles: {userId?: string} | undefined;
   Badges: {category?: BadgeType; userId?: string};
   Settings: undefined;

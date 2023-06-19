@@ -43,9 +43,9 @@ export function UserGreeting({disabled, animatedStyle}: Props) {
       <Animated.View style={[styles.greeting, animatedStyle]}>
         <Touchable disabled={disabled} onPress={openProfile}>
           <GreetingText />
-          {user && (
+          {user?.username && (
             <Text style={styles.usernameText}>
-              {buildUsernameWithPrefix(user.username ?? '')}
+              {buildUsernameWithPrefix(user.username)}
             </Text>
           )}
         </Touchable>

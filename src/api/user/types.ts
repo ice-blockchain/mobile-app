@@ -5,7 +5,7 @@ import {SupportedLocale} from '@translations/localeConfig';
 
 export type User = {
   id: string;
-  username: string;
+  username?: string;
   profilePictureUrl: string;
 
   /**
