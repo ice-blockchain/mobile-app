@@ -26,7 +26,7 @@ export function* loadNewsSaga(
 
   const pageNumber: SagaReturnType<typeof NewsSelectors.pageNumber> =
     yield select(NewsSelectors.pageNumber);
-
+  const nextPageNumber = isRefresh ? 0 : pageNumber + 1;
   try {
     const news: SagaReturnType<typeof Api.news.getNews> = yield call(
       Api.news.getNews,
@@ -34,7 +34,7 @@ export function* loadNewsSaga(
         type: 'regular',
         language: locale,
         limit: NEWS_LOAD_LIMIT,
-        offset: isRefresh ? 0 : pageNumber * NEWS_LOAD_LIMIT,
+        offset: nextPageNumber * NEWS_LOAD_LIMIT,
         createdAfter: user?.createdAt,
       },
     );
@@ -59,7 +59,7 @@ export function* loadNewsSaga(
 
     yield put(
       NewsActions.NEWS_LOAD.SUCCESS.create({
-        isRefresh,
+        pageNumber: nextPageNumber,
 
         hasMore: !!news.length,
 

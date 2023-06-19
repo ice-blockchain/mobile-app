@@ -22,18 +22,19 @@ export function* getReferralsSaga(action: ReturnType<typeof actionCreator>) {
     }: SagaReturnType<ReturnType<typeof referralsSelector>> = yield select(
       referralsSelector({referralType}),
     );
+    const nextPageNumber = isInitial ? 0 : pageNumber + 1;
     const result: SagaReturnType<typeof Api.referrals.getReferrals> =
       yield Api.referrals.getReferrals({
         userId,
         referralType,
-        offset: isInitial ? 0 : pageNumber * LIMIT,
+        offset: nextPageNumber * LIMIT,
         limit: LIMIT,
       });
 
     yield put(
       ReferralsActions.GET_REFERRALS({referralType})(
         referralType,
-      ).SUCCESS.create({result, isInitial}),
+      ).SUCCESS.create({result, pageNumber: nextPageNumber}),
     );
   } catch (error) {
     yield put(

@@ -58,8 +58,10 @@ const processCollectionStartAction = (
   const stateKey = getStateKeyForAction(action, 'START');
   if (stateKey && action.payload) {
     draft[stateKey].query = action.payload.query;
-    if (action.payload.isInitial) {
-      draft[stateKey].pageNumber = 0;
+    const {isInitial} = (
+      action as ReturnType<CollectionAction['START']['create']>
+    ).payload;
+    if (isInitial) {
       draft[stateKey].data = [];
       draft[stateKey].hasNext = true;
     }
@@ -73,10 +75,10 @@ const processCollectionSuccessAction = (
 ) => {
   const stateKey = getStateKeyForAction(action, 'SUCCESS');
   if (stateKey) {
-    const {isInitial, result, hasNext} = (
+    const {pageNumber, result, hasNext} = (
       action as ReturnType<CollectionAction['SUCCESS']['create']>
     ).payload;
-    if (isInitial) {
+    if (pageNumber === 0) {
       draft[stateKey].data = result;
     } else {
       draft[stateKey].data = [
@@ -84,7 +86,7 @@ const processCollectionSuccessAction = (
         ...result,
       ] as typeof result;
     }
-    draft[stateKey].pageNumber += 1;
+    draft[stateKey].pageNumber = pageNumber;
     draft[stateKey].hasNext = hasNext;
   }
 };

@@ -44,7 +44,7 @@ const GET_BALANCE_HISTORY = createAction('GET_BALANCE_HISTORY', {
   START: (payload: {isInitial?: boolean; startDate: string; endDate: string}) =>
     payload,
   SUCCESS: (payload: {
-    isInitial?: boolean;
+    pageNumber: number;
     startDate: string;
     endDate: string;
     hasNext: boolean;

@@ -8,19 +8,19 @@ const GET_REFERRALS = ({referralType = 'T1'}: {referralType?: ReferralType}) =>
   createAction(
     'GET_REFERRALS',
     {
-      START: ({isInitial}: {isInitial?: boolean} = {}) => ({
+      START: ({isInitial = true}: {isInitial?: boolean} = {}) => ({
         referralType,
         isInitial,
       }),
       SUCCESS: ({
         result,
-        isInitial,
+        pageNumber,
       }: {
         result: Referrals;
-        isInitial?: boolean;
+        pageNumber: number;
       }) => ({
         referralType,
-        isInitial,
+        pageNumber,
         result,
       }),
       FAILED: (errorMessage: string) => ({

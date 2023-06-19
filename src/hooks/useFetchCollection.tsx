@@ -54,7 +54,11 @@ export const useFetchCollection = <T,>({
   const fetch = useCallback(
     ({isInitial, query}: {isInitial?: boolean; query?: string}) => {
       dispatch(
-        action.START.create({query, isInitial, limit: options?.pageSize}),
+        action.START.create({
+          query,
+          isInitial: !!isInitial,
+          limit: options?.pageSize,
+        }),
       );
     },
     [action.START, dispatch, options?.pageSize],

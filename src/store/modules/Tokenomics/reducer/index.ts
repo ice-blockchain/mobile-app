@@ -82,9 +82,8 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
           action.payload.rankingSummary;
         break;
       case TokenomicsActions.GET_BALANCE_HISTORY.SUCCESS.type:
-        const {isInitial, startDate, endDate, hasNext, data} = action.payload;
-        const pageNumber = isInitial ? 0 : draft.balanceHistory.pageNumber + 1;
-        if (isInitial) {
+        const {pageNumber, startDate, endDate, hasNext, data} = action.payload;
+        if (pageNumber === 0) {
           draft.balanceHistory = {
             startDate,
             endDate,

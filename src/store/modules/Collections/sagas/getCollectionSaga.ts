@@ -30,15 +30,22 @@ export function* getCollectionSaga<
       yield select(collectionSelector(stateKey));
 
     const {limit = defaultPageSize, query, isInitial} = payload;
+    const nextPageNumber = isInitial ? 0 : pageNumber + 1;
     if (request) {
       const response: UnionToIntersection<SagaReturnType<typeof request>> =
         (yield request({
           query,
-          offset: pageNumber * limit,
+          offset: nextPageNumber * limit,
           limit,
         })) ?? [];
       const hasNext = !!response.length;
-      yield put(action.SUCCESS.create(response, {query, isInitial, hasNext}));
+      yield put(
+        action.SUCCESS.create(response, {
+          query,
+          pageNumber: nextPageNumber,
+          hasNext,
+        }),
+      );
     }
   } catch (error) {
     yield put(action.FAILED.create(getErrorMessage(error)));
