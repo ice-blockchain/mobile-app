@@ -38,7 +38,7 @@ type Props<T> = {
     string,
     {
       START: (params: {
-        isInitial?: boolean;
+        isInitial: boolean;
         limit?: number;
         query?: string;
       }) => unknown;

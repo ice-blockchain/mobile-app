@@ -8,7 +8,7 @@ const createActionStructure = <T>() => ({
     limit,
     query = '',
   }: {
-    isInitial?: boolean;
+    isInitial: boolean;
     limit?: number;
     query?: string;
   }) => ({

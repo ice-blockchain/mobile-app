@@ -16,7 +16,7 @@ export const NEWS_LOAD_LIMIT = 10;
 export function* loadNewsSaga(
   action: ReturnType<typeof NewsActions.NEWS_LOAD.START.create>,
 ) {
-  const {isRefresh} = action.payload;
+  const {isInitial} = action.payload;
 
   const user: SagaReturnType<typeof userSelector> = yield select(userSelector);
 
@@ -26,7 +26,7 @@ export function* loadNewsSaga(
 
   const pageNumber: SagaReturnType<typeof NewsSelectors.pageNumber> =
     yield select(NewsSelectors.pageNumber);
-  const nextPageNumber = isRefresh ? 0 : pageNumber + 1;
+  const nextPageNumber = isInitial ? 0 : pageNumber + 1;
   try {
     const news: SagaReturnType<typeof Api.news.getNews> = yield call(
       Api.news.getNews,
@@ -41,7 +41,7 @@ export function* loadNewsSaga(
 
     let featuredNewsArticle: NewsArticle | undefined;
 
-    if (isRefresh) {
+    if (isInitial) {
       // Load 1 featured news article only for refresh event
       const featuredNews: SagaReturnType<typeof Api.news.getNews> = yield call(
         Api.news.getNews,

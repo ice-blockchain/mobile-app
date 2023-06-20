@@ -66,6 +66,7 @@ export const useGetHistorySections = ({
     if (balanceHistory.hasNext && !loading) {
       dispatch(
         TokenomicsActions.GET_BALANCE_HISTORY.START.create({
+          isInitial: false,
           startDate: selectedFilter.start,
           endDate: selectedFilter.end,
         }),

@@ -6,6 +6,7 @@ import {AccountActions} from '@store/modules/Account/actions';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
+import {getIsInitialStartAction} from '@store/modules/Referrals/utils/utils';
 import {StatsActions} from '@store/modules/Stats/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {useSelector} from 'react-redux';
@@ -18,7 +19,7 @@ const REFRESH_ACTIONS = [
   AccountActions.GET_ACCOUNT,
   StatsActions.GET_ADOPTION,
   ReferralsActions.GET_REFERRALS_HISTORY,
-  ReferralsActions.GET_REFERRALS({referralType: 'T1'})('T1'),
+  getIsInitialStartAction('T1'),
   {
     ...StatsActions.GET_USER_GROWTH_STATS,
     START: {

@@ -8,7 +8,7 @@ const GET_REFERRALS = ({referralType = 'T1'}: {referralType?: ReferralType}) =>
   createAction(
     'GET_REFERRALS',
     {
-      START: ({isInitial = true}: {isInitial?: boolean} = {}) => ({
+      START: ({isInitial}: {isInitial: boolean}) => ({
         referralType,
         isInitial,
       }),

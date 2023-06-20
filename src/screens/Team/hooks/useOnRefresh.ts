@@ -3,7 +3,7 @@
 import {useRefresh} from '@hooks/useRefresh';
 import {AccountActions} from '@store/modules/Account/actions';
 import {activeTabSelector} from '@store/modules/ActiveTab/selectors';
-import {ReferralsActions} from '@store/modules/Referrals/actions';
+import {getIsInitialStartAction} from '@store/modules/Referrals/utils/utils';
 import {hapticFeedback} from '@utils/device';
 import {useEffect, useRef} from 'react';
 import {
@@ -15,9 +15,9 @@ import {useSelector} from 'react-redux';
 
 const REFRESH_ACTIONS = [
   AccountActions.GET_ACCOUNT,
-  ReferralsActions.GET_REFERRALS({referralType: 'CONTACTS'})('CONTACTS'),
-  ReferralsActions.GET_REFERRALS({referralType: 'T1'})('T1'),
-  ReferralsActions.GET_REFERRALS({referralType: 'T2'})('T2'),
+  getIsInitialStartAction('CONTACTS'),
+  getIsInitialStartAction('T1'),
+  getIsInitialStartAction('T2'),
 ];
 
 export const useOnRefresh = (animatedIndex: SharedValue<number>) => {
