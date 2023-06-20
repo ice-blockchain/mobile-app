@@ -10,8 +10,15 @@ import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {getErrorMessage} from '@utils/errors';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
+let i = 0;
+
 export function* getBalanceSummarySaga() {
   try {
+    i = i + 1;
+    if (i % 3 === 0) {
+      throw 1;
+    }
+
     const isAuthorized: ReturnType<typeof isAuthorizedSelector> = yield select(
       isAuthorizedSelector,
     );
