@@ -77,7 +77,7 @@
     "tierTwo_tab": "Tier 2",
     "empty": {
       "title": "You currently don't have any [[:title]] referrals!",
-      "contacts": "You currently don't have any contacts.",
+      "contacts": "You currently don't have any contacts in the phonebook.",
       "button_title": "Invite Friends"
     },
     "contacts": {
