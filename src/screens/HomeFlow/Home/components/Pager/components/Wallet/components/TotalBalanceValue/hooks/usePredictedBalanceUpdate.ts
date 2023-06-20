@@ -26,6 +26,10 @@ export const usePredictedBalanceUpdate = ({
     isFailedSelector.bind(null, TokenomicsActions.GET_BALANCE_SUMMARY),
   );
 
+  const getMiningSummaryFailed = useSelector(
+    isFailedSelector.bind(null, TokenomicsActions.GET_MINING_SUMMARY),
+  );
+
   const [predictedBalance, setPredictedBalance] = useState<number | null>(null);
 
   useEffect(() => {
@@ -34,15 +38,15 @@ export const usePredictedBalanceUpdate = ({
       return;
     }
 
-    if (miningRate.type === 'none' || !isScreenFocused) {
-      setPredictedBalance(parseNumber(balanceSummary.total));
+    /**
+     * If the balance or mining rate is failed to update, stop predictions
+     */
+    if (getBalanceSummaryFailed || getMiningSummaryFailed) {
       return;
     }
 
-    /**
-     * If the balance is failed to update, stop predictions
-     */
-    if (getBalanceSummaryFailed) {
+    if (miningRate.type === 'none' || !isScreenFocused) {
+      setPredictedBalance(parseNumber(balanceSummary.total));
       return;
     }
 
@@ -66,6 +70,7 @@ export const usePredictedBalanceUpdate = ({
     updateInterval,
     isScreenFocused,
     getBalanceSummaryFailed,
+    getMiningSummaryFailed,
   ]);
 
   return {predictedBalance};
