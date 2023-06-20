@@ -42,10 +42,10 @@ export function newsReducer(state = INITIAL_STATE, action: Actions): State {
     switch (action.type) {
       case NewsActions.NEWS_LOAD.SUCCESS.type:
         {
-          const {newsIds, news, hasMore, isRefresh, featuredNewsArticle} =
+          const {newsIds, news, hasMore, pageNumber, featuredNewsArticle} =
             action.payload;
 
-          if (isRefresh) {
+          if (pageNumber === 0) {
             draft.sortedItemIds = newsIds;
             draft.items = news;
 
@@ -66,7 +66,7 @@ export function newsReducer(state = INITIAL_STATE, action: Actions): State {
             };
           }
 
-          draft.pageNumber = isRefresh ? 0 : draft.pageNumber + 1;
+          draft.pageNumber = pageNumber;
           draft.hasMore = hasMore;
         }
         break;

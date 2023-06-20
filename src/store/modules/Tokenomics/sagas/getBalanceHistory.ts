@@ -23,6 +23,7 @@ export function* getBalanceHistorySaga({
     );
     const {pageNumber}: ReturnType<typeof balanceHistorySelector> =
       yield select(balanceHistorySelector);
+    const nextPageNumber = isInitial ? 0 : pageNumber + 1;
 
     if (isAuthorized) {
       const userId: ReturnType<typeof userIdSelector> = yield select(
@@ -32,7 +33,7 @@ export function* getBalanceHistorySaga({
       const data: SagaReturnType<typeof Api.tokenomics.getBalanceHistory> =
         yield call(Api.tokenomics.getBalanceHistory, {
           userId,
-          offset: isInitial ? 0 : pageNumber * PAGE_SIZE,
+          offset: nextPageNumber * PAGE_SIZE,
           startDate,
           endDate,
           limit: PAGE_SIZE,
@@ -41,7 +42,7 @@ export function* getBalanceHistorySaga({
 
       yield put(
         TokenomicsActions.GET_BALANCE_HISTORY.SUCCESS.create({
-          isInitial,
+          pageNumber: nextPageNumber,
           startDate,
           endDate,
           data,

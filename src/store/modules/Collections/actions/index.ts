@@ -8,7 +8,7 @@ const createActionStructure = <T>() => ({
     limit,
     query = '',
   }: {
-    isInitial?: boolean;
+    isInitial: boolean;
     limit?: number;
     query?: string;
   }) => ({
@@ -20,10 +20,10 @@ const createActionStructure = <T>() => ({
     result: T[],
     {
       query,
-      isInitial,
+      pageNumber,
       hasNext,
-    }: {query: string; isInitial?: boolean; hasNext: boolean},
-  ) => ({result, query, isInitial, hasNext}),
+    }: {query: string; pageNumber: number; hasNext: boolean},
+  ) => ({result, query, pageNumber, hasNext}),
   FAILED: (errorMessage: string) => ({
     errorMessage,
   }),

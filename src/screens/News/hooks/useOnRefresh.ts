@@ -25,7 +25,7 @@ export const useOnRefresh = (animatedIndex: SharedValue<number>) => {
   const onRefresh = useCallback(() => {
     dispatch(
       NewsActions.NEWS_LOAD.START.create({
-        isRefresh: true,
+        isInitial: true,
       }),
     );
 
@@ -36,7 +36,7 @@ export const useOnRefresh = (animatedIndex: SharedValue<number>) => {
     if (!refreshing && hasMore) {
       dispatch(
         NewsActions.NEWS_LOAD.START.create({
-          isRefresh: false,
+          isInitial: false,
         }),
       );
     }

@@ -60,7 +60,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
 
       case getReferralsActionCreator.SUCCESS.type:
         {
-          const {referralType, isInitial, result} = action.payload;
+          const {referralType, pageNumber, result} = action.payload;
 
           const userIds: string[] = [];
           const usersByIds: {
@@ -77,10 +77,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
             ...usersByIds,
           };
 
-          const pageNumber = isInitial
-            ? 0
-            : (draft.data[referralType]?.pageNumber ?? 0) + 1;
-          if (isInitial) {
+          if (pageNumber === 0) {
             draft.data[referralType] = {
               ...result,
               referrals: userIds,

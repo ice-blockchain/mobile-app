@@ -4,7 +4,7 @@ import {NewsArticle} from '@api/news/types';
 import {createAction} from '@store/utils/actions/createAction';
 
 const NEWS_LOAD = createAction('NEWS/NEWS_LOAD', {
-  START: (payload: {isRefresh: boolean}) => payload,
+  START: (payload: {isInitial: boolean}) => payload,
   SUCCESS: (payload: {
     featuredNewsArticle: NewsArticle | undefined;
     newsIds: string[];
@@ -12,7 +12,7 @@ const NEWS_LOAD = createAction('NEWS/NEWS_LOAD', {
       [newsArticleId: string]: NewsArticle;
     };
     hasMore: boolean;
-    isRefresh: boolean;
+    pageNumber: number;
   }) => payload,
   FAILED: (errorMessage: string) => ({
     errorMessage,
