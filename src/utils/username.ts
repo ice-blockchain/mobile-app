@@ -12,13 +12,12 @@ export const validateUsername = (username: string) => {
   return validationRegex.test(username);
 };
 
-export const buildUsernameLink = (username: string) =>
-  `${LINKS.MAIN}@${username}`;
+export const buildUsernameLink = (username = '') => `${LINKS.MAIN}@${username}`;
 
 export const getUsernameFromUsernameLink = (usernameLink: string) =>
   usernameLink.match(`${LINKS.MAIN}@(.+)`)?.[1];
 
-export const buildUsernameWithPrefix = (username: string) => {
+export const buildUsernameWithPrefix = (username = '') => {
   if (username.length) {
     return isRTL ? `${username}@` : `@${username}`;
   } else {

@@ -18,7 +18,7 @@ export const UserInfo = ({user}: Props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.usernameText} numberOfLines={1}>
-        {buildUsernameWithPrefix(user?.username ?? '')}
+        {buildUsernameWithPrefix(user?.username)}
       </Text>
       <View style={styles.ladderContainer}>
         {!!user && <LadderBar user={user} />}

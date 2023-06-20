@@ -38,7 +38,7 @@ export const UserAvatarHeader = ({
         <Avatar uri={user?.profilePictureUrl} style={styles.avatarImage} />
       )}
       <Text style={styles.usernameText} numberOfLines={1}>
-        {buildUsernameWithPrefix(user?.username ?? '')}
+        {buildUsernameWithPrefix(user?.username)}
       </Text>
     </View>
   );

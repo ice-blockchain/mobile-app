@@ -11,7 +11,7 @@ import {debounce} from 'lodash';
 import {useEffect, useMemo} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
-export const useValidateUsername = (user: User, username: string) => {
+export const useValidateUsername = (user: User, username = '') => {
   const dispatch = useDispatch();
 
   const validateUsernameError = useSelector(

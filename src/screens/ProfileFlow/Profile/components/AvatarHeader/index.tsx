@@ -21,6 +21,7 @@ import {
   TEXT_MARGIN_LEFT,
   useAnimatedStyles,
 } from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useAnimatedStyles';
+import {useUpdateAvatarRouteParams} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useUpdateAvatarRouteParam';
 import {useUserContactDetails} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useUserContactDetails';
 import {font, mirrorTransform} from '@utils/styles';
 import {buildUsernameWithPrefix} from '@utils/username';
@@ -84,6 +85,8 @@ export const AvatarHeader = memo(
       onChange: updateAvatar,
       uri,
     });
+
+    useUpdateAvatarRouteParams(onEditPress);
 
     return (
       <View style={[topOffset.current, styles.outerContainer]}>

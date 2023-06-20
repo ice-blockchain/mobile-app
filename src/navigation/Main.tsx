@@ -50,6 +50,7 @@ import {Tooltip} from '@screens/Modals/Tooltip';
 import {News} from '@screens/News';
 import {Badges} from '@screens/ProfileFlow/Badges';
 import {Profile} from '@screens/ProfileFlow/Profile';
+import {ProfileActionType} from '@screens/ProfileFlow/Profile/types';
 import {Roles} from '@screens/ProfileFlow/Roles';
 import {ConfirmEmail} from '@screens/SettingsFlow/ConfirmEmail';
 import {ConfirmPhoneNumber} from '@screens/SettingsFlow/ConfirmPhoneNumber';
@@ -125,7 +126,7 @@ export type MainStackParamList = {
   CountrySelect: {
     onSelect: (country: Country) => void;
   };
-  UserProfile: {userId: string} | undefined;
+  UserProfile: {userId: string; actionType?: ProfileActionType} | undefined;
   Roles: {userId?: string} | undefined;
   Badges: {category?: BadgeType; userId?: string};
   Walkthrough:
@@ -163,7 +164,7 @@ export type NewsTabStackParamList = {
 };
 
 export type ProfileTabStackParamList = {
-  MyProfile: undefined;
+  MyProfile: {actionType?: ProfileActionType; userId?: string};
   Roles: {userId?: string} | undefined;
   Badges: {category?: BadgeType; userId?: string};
   Settings: undefined;
