@@ -39,7 +39,7 @@ export const formatPhoneNumber = (
 };
 
 /**
- * countryCode helps to parse numbers in national format
+ * countryCode helps to parse numbers in E.164 format
  * e.g. 8 (909) 999-66-99 -> +79099996699
  */
 export const e164PhoneNumber = (phone: string, countryCode?: string | null) => {
@@ -50,4 +50,20 @@ export const e164PhoneNumber = (phone: string, countryCode?: string | null) => {
 
 export const hashPhoneNumber = (phone: string) => {
   return sha256(phone);
+};
+
+/**
+ * countryCode helps to parse numbers in INTERNATIONAL format
+ * e.g. 41 (44) 668-18-00 -> +41 44 668 18 00
+ */
+
+export const internationalPhoneNumber = (
+  phone: string,
+  countryCode?: string | null,
+) => {
+  return (
+    parsePhoneNumber(phone, countryCode as CountryCode)?.format(
+      'INTERNATIONAL',
+    ) ?? null
+  );
 };

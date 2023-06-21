@@ -27,6 +27,11 @@ export const appLocaleSelector = (state: RootState): SupportedLocale => {
   return user?.language ?? getLocale();
 };
 
+export const userIsoCodeSelector = (state: RootState) => {
+  const user = userSelector(state);
+  return user?.clientData?.phoneNumberIso ?? null;
+};
+
 export const isPhoneNumberVerifiedSelector = (state: RootState) =>
   state.account.user?.phoneNumber;
 

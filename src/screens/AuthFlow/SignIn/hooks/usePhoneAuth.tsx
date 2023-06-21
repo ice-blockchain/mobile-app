@@ -11,6 +11,7 @@ import {useDispatch, useSelector} from 'react-redux';
 export const usePhoneAuth = () => {
   const dispatch = useDispatch();
   const [phoneNumberBody, setPhoneNumberBody] = useState('');
+  const [countryIsoCode, setCountryIsoCode] = useState('');
   const fullPhoneRef = useRef('');
 
   const phoneAuthFailedReason = useSelector(
@@ -28,10 +29,20 @@ export const usePhoneAuth = () => {
   };
 
   const signInWithPhoneNumber = () =>
-    dispatch(AccountActions.SIGN_IN_PHONE.START.create(fullPhoneRef.current));
+    dispatch(
+      AccountActions.SIGN_IN_PHONE.START.create(
+        fullPhoneRef.current,
+        countryIsoCode,
+      ),
+    );
 
-  const onChangePhone = (phoneBody: string, iddCode: string) => {
+  const onChangePhone = (
+    phoneBody: string,
+    iddCode: string,
+    isoCode: string,
+  ) => {
     resetError();
+    setCountryIsoCode(isoCode);
     setPhoneNumberBody(phoneBody);
     fullPhoneRef.current = `${iddCode}${phoneBody}`;
   };

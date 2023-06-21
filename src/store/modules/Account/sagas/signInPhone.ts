@@ -15,7 +15,7 @@ export function* signInPhoneSaga(
   startAction: ReturnType<typeof AccountActions.SIGN_IN_PHONE.START.create>,
 ) {
   try {
-    const phoneNumber = startAction.payload.phoneNumber;
+    const {phoneNumber, isoCode} = startAction.payload;
 
     if (phoneNumber.trim() === '') {
       throw {code: ValidateError.InvalidPhone};
@@ -26,7 +26,12 @@ export function* signInPhoneSaga(
       phoneNumber,
     );
 
-    yield put(AccountActions.SIGN_IN_PHONE.SET_TEMP_PHONE.create(phoneNumber));
+    yield put(
+      AccountActions.SIGN_IN_PHONE.SET_TEMP_PHONE_AND_ISO.create(
+        phoneNumber,
+        isoCode,
+      ),
+    );
 
     let finished = false;
     while (!finished) {
