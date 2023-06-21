@@ -13,7 +13,6 @@ import {ArrowLink} from '@svg/ArrowLink';
 import {BottomBump} from '@svg/BottomBump';
 import {t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
-import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {useState} from 'react';
 import {PixelRatio, StyleSheet, Text, View} from 'react-native';
@@ -47,9 +46,7 @@ export const PagerHeader = () => {
         onPageSelected={onPageChange}
         style={styles.pager}>
         <View style={styles.slide}>
-          <WalletCell
-            value={balanceSummary && formatNumberString(balanceSummary.total)}
-          />
+          <WalletCell value={balanceSummary?.total} />
           <DataCellSeparator />
           <BlockchainCell value={'0'} />
           <Touchable

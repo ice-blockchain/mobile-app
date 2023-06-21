@@ -6,7 +6,7 @@ import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
-import {formatNumberString} from '@utils/numbers';
+import {formatNumber} from '@utils/numbers';
 import {useDispatch, useSelector} from 'react-redux';
 
 export const useIceBonus = () => {
@@ -19,7 +19,10 @@ export const useIceBonus = () => {
 
   const balanceSummary = useSelector(balanceSummarySelector);
 
-  const currentBalance = formatNumberString(balanceSummary?.total ?? '0');
+  const currentBalance = formatNumber(balanceSummary?.total ?? 0, {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  });
 
   const finishIceBonus = (currentUser: User) => {
     const finalizedSteps =

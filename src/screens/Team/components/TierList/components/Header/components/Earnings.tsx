@@ -6,7 +6,6 @@ import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {isRTL, t} from '@translations/i18n';
-import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {forwardRef, Ref} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -31,7 +30,7 @@ export const Earnings = forwardRef(
         <FormattedNumber
           bodyStyle={styles.value}
           decimalsStyle={styles.valueDecimals}
-          number={balance ? formatNumberString(balance) : '0'}
+          number={balance ?? 0}
         />
 
         {!isRTL && <Text style={styles.value}> </Text>}

@@ -6,7 +6,6 @@ import {COLORS} from '@constants/colors';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {WalletIcon} from '@svg/WalletIcon';
 import {t} from '@translations/i18n';
-import {parseNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo, useCallback} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -39,7 +38,7 @@ export const EarningsCell = memo(({color = COLORS.white}: {color?: string}) => {
         </Text>
         <View style={styles.bodyContainer}>
           <AnimatedNumberText
-            value={parseNumber(balanceSummary?.totalReferrals || '0')}
+            value={balanceSummary?.totalReferrals ?? 0}
             NumberComponent={NumberComponent}
           />
           <Text style={[styles.valueText, {color}]}> {t('general.ice')}</Text>

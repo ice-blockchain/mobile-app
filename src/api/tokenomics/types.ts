@@ -36,12 +36,12 @@ export type MiningSummary = {
 };
 
 export type BalanceSummary = {
-  preStaking: string;
-  standard: string;
-  t1: string;
-  t2: string;
-  total: string;
-  totalReferrals: string;
+  preStaking: number;
+  standard: number;
+  t1: number;
+  t2: number;
+  total: number;
+  totalReferrals: number;
 };
 
 export type ResurrectRequiredData = {

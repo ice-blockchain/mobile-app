@@ -12,7 +12,7 @@ import {StyleSheet} from 'react-native';
 import {isAndroid, rem} from 'rn-units';
 
 type Props = {
-  value: string | ReactNode;
+  value: string | number | ReactNode;
   currency?: ReactNode;
 };
 
@@ -28,7 +28,7 @@ export const WalletCell = ({value, currency}: Props) => {
       }
       label={t('balance_history.wallet')}
       value={
-        typeof value === 'string' ? (
+        typeof value === 'string' || typeof value === 'number' ? (
           <FormattedNumber
             number={value}
             bodyStyle={styles.valueText}
