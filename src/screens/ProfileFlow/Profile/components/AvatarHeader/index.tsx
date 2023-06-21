@@ -230,6 +230,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     borderColor: COLORS.foam,
+    backgroundColor: COLORS.white,
     overflow: 'hidden',
     backgroundColor: COLORS.white,
   },
