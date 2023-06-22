@@ -7,16 +7,21 @@ import {Translations} from '@translations/locales/en.json';
  * uncomment locales which you add then take look @services/dayjs/index.ts and @services/dayjs/calendarLocales.ts
  */
 
-export type SupportedLocale = 'en';
+export type SupportedLocale =
+  | 'en'
+  | 'de'
+  | 'ar'
+  | 'bn'
+  | 'hi'
+  | 'id'
+  | 'vi'
+  | 'zh';
 // | 'ro'
-// | 'de'
 // | 'el'
 // | 'af'
 // | 'am'
-// | 'ar'
 // | 'az'
 // | 'bg'
-// | 'bn'
 // | 'yo'
 // | 'cs'
 // | 'es'
@@ -25,14 +30,10 @@ export type SupportedLocale = 'en';
 // | 'fr'
 // | 'gu'
 // | 'he'
-// | 'hi'
 // | 'hu'
-// | 'id'
 // | 'it'
 // | 'uk'
 // | 'ur'
-// | 'vi'
-// | 'zh'
 // | 'zu'
 // | 'ja'
 // | 'jv'
@@ -109,14 +110,14 @@ export const localeConfig: LocalConfig = {
   //   flag: flags.et,
   //   isRTL: false,
   // },
-  // ar: {
-  //   get translations() {
-  //     return require('./locales/ar.json');
-  //   },
-  //   name: 'Arabic', // another flag
-  //   flag: flags.arabic,
-  //   isRTL: true,
-  // },
+  ar: {
+    get translations() {
+      return require('./locales/ar.json');
+    },
+    name: 'Arabic', // another flag
+    flag: flags.arabic,
+    isRTL: true,
+  },
   // az: {
   //   get translations() {
   //     return require('./locales/az.json');
@@ -133,14 +134,14 @@ export const localeConfig: LocalConfig = {
   //   flag: flags.bg,
   //   isRTL: false,
   // },
-  // bn: {
-  //   get translations() {
-  //     return require('./locales/bn.json');
-  //   },
-  //   name: 'Bengali',
-  //   flag: flags.in,
-  //   isRTL: false,
-  // },
+  bn: {
+    get translations() {
+      return require('./locales/bn.json');
+    },
+    name: 'Bengali',
+    flag: flags.in,
+    isRTL: false,
+  },
   // yo: {
   //   get translations() {
   //     return require('./locales/yo.json');
@@ -157,14 +158,14 @@ export const localeConfig: LocalConfig = {
   //   flag: flags.cz,
   //   isRTL: false,
   // },
-  // de: {
-  //   get translations() {
-  //     return require('./locales/de.json');
-  //   },
-  //   name: 'German',
-  //   flag: flags.de,
-  //   isRTL: false,
-  // },
+  de: {
+    get translations() {
+      return require('./locales/de.json');
+    },
+    name: 'German',
+    flag: flags.de,
+    isRTL: false,
+  },
   // es: {
   //   get translations() {
   //     return require('./locales/es.json');
@@ -213,14 +214,14 @@ export const localeConfig: LocalConfig = {
   //   flag: flags.il,
   //   isRTL: true,
   // },
-  // hi: {
-  //   get translations() {
-  //     return require('./locales/hi.json');
-  //   },
-  //   name: 'Hindi',
-  //   flag: flags.in,
-  //   isRTL: false,
-  // },
+  hi: {
+    get translations() {
+      return require('./locales/hi.json');
+    },
+    name: 'Hindi',
+    flag: flags.in,
+    isRTL: false,
+  },
   // hu: {
   //   get translations() {
   //     return require('./locales/hu.json');
@@ -229,14 +230,14 @@ export const localeConfig: LocalConfig = {
   //   flag: flags.hu,
   //   isRTL: false,
   // },
-  // id: {
-  //   get translations() {
-  //     return require('./locales/id.json');
-  //   },
-  //   name: 'Indonesian',
-  //   flag: flags.id,
-  //   isRTL: false,
-  // },
+  id: {
+    get translations() {
+      return require('./locales/id.json');
+    },
+    name: 'Indonesian',
+    flag: flags.id,
+    isRTL: false,
+  },
   // it: {
   //   get translations() {
   //     return require('./locales/it.json');
@@ -453,22 +454,22 @@ export const localeConfig: LocalConfig = {
   //   flag: flags.pk,
   //   isRTL: true,
   // },
-  // vi: {
-  //   get translations() {
-  //     return require('./locales/vi.json');
-  //   },
-  //   name: 'Vietnamese',
-  //   flag: flags.vn,
-  //   isRTL: false,
-  // },
-  // zh: {
-  //   get translations() {
-  //     return require('./locales/zh.json');
-  //   },
-  //   name: 'Simplified Chinese',
-  //   flag: flags.cn,
-  //   isRTL: false,
-  // },
+  vi: {
+    get translations() {
+      return require('./locales/vi.json');
+    },
+    name: 'Vietnamese',
+    flag: flags.vn,
+    isRTL: false,
+  },
+  zh: {
+    get translations() {
+      return require('./locales/zh.json');
+    },
+    name: 'Simplified Chinese',
+    flag: flags.cn,
+    isRTL: false,
+  },
   // zu: {
   //   get translations() {
   //     return require('./locales/zu.json');
