@@ -85,7 +85,7 @@ export const MiningRate = memo(({darkMode}: Props) => {
         />
         {!!miningRates.total.bonuses?.total && (
           <Text style={styles.rateIncreaseText}>
-            +{miningRates.total.bonuses.total}%
+            +{formatNumber(miningRates.total.bonuses.total)}%
           </Text>
         )}
       </View>
@@ -120,12 +120,7 @@ export const MiningRate = memo(({darkMode}: Props) => {
           <AnimatedNumberText
             value={totalBonuses}
             style={styles.iconValueText}
-            textDecorator={value =>
-              `+${formatNumber(value, {
-                maximumFractionDigits: 0,
-                minimumFractionDigits: 0,
-              })}%`
-            }
+            textDecorator={value => `+${formatNumber(value)}%`}
           />
         </View>
         <View style={styles.iconContainer}>
@@ -133,12 +128,7 @@ export const MiningRate = memo(({darkMode}: Props) => {
           <AnimatedNumberText
             value={extraBonuses}
             style={styles.iconValueText}
-            textDecorator={value =>
-              formatNumber(value, {
-                maximumFractionDigits: 0,
-                minimumFractionDigits: 0,
-              })
-            }
+            textDecorator={value => `+${formatNumber(value)}%`}
           />
         </View>
         <View style={styles.iconContainer}>
@@ -146,12 +136,7 @@ export const MiningRate = memo(({darkMode}: Props) => {
           <AnimatedNumberText
             value={prestackingBonuses}
             style={styles.iconValueText}
-            textDecorator={value =>
-              formatNumber(value, {
-                maximumFractionDigits: 0,
-                minimumFractionDigits: 0,
-              })
-            }
+            textDecorator={value => `+${formatNumber(value)}%`}
           />
         </View>
       </View>
