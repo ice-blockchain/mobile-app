@@ -17,6 +17,7 @@
 #import <RNBootSplash/RNBootSplash.h>
 
 #import <ReactNativeMoEngage/MoEngageInitializer.h>
+#import <ReactNativeMoEngage/MoEReactBridge.h>
 #import <MoEngageSDK/MoEngageSDK.h>
 #import "ReactNativeConfig.h"
 #import <TSBackgroundFetch/TSBackgroundFetch.h>
@@ -72,7 +73,7 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
    [[MoEngageInitializer sharedInstance] initializeDefaultSDKConfig:sdkConfig andLaunchOptions:launchOptions];
 
   [UNUserNotificationCenter currentNotificationCenter].delegate = self;
-  
+
   [[RCTI18nUtil sharedInstance] allowRTL:YES];
 
   RCTAppSetupPrepareApp(application);
@@ -124,6 +125,20 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
 
 - (NSString *)getMoeDeeplink {
     return self.moeDeeplink;
+}
+
+// UserNotifications Framework Callback for iOS10 and above
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+didReceiveNotificationResponse:(UNNotificationResponse *)response
+        withCompletionHandler:(void (^)())completionHandler{
+            NSDictionary *userInfo = response.notification.request.content.userInfo;
+            // Prepare the payload for your event
+            NSDictionary *eventPayload = @{@"kEventName": @"pushClicked", @"kPayloadDict": userInfo};
+            // Get the MoEReactBridge singleton and send the event
+            [[MoEReactBridge allocWithZone: nil] sendEventWithName:eventPayload];
+
+            //Custom Handling of notification if Any
+            completionHandler();
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center

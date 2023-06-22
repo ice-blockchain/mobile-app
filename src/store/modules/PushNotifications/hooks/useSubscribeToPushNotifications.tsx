@@ -54,7 +54,10 @@ export function useSubscribeToPushNotifications() {
 
     const unsubscribeFromOnMessage = messaging().onMessage(
       (message: FirebaseMessagingTypes.RemoteMessage) => {
-        if (message.notification && isAndroid) {
+        if (isAndroid) {
+          if (!message.notification) {
+            return;
+          }
           notifee.displayNotification({
             title: message.notification.title,
             body: message.notification.body,

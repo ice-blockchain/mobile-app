@@ -28,6 +28,9 @@ export function useInitNotifications() {
   }, []);
 
   useEffect(() => {
+    if (!userId) {
+      return;
+    }
     if (isIOS) {
       if (hasPushPermissions) {
         ReactMoE.registerForPush();
