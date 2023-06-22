@@ -32,9 +32,9 @@ export const setDayjsLocale = (locale: SupportedLocale) => {
     // case 'ro':
     //   require('dayjs/locale/ro');
     //   break;
-    // case 'de':
-    //   require('dayjs/locale/de');
-    //   break;
+    case 'de':
+      require('dayjs/locale/de');
+      break;
     // case 'el':
     //   require('dayjs/locale/el');
     //   break;
@@ -44,18 +44,18 @@ export const setDayjsLocale = (locale: SupportedLocale) => {
     // case 'am':
     //   require('dayjs/locale/am');
     //   break;
-    // case 'ar':
-    //   require('dayjs/locale/ar');
-    //   break;
+    case 'ar':
+      require('dayjs/locale/ar');
+      break;
     // case 'az':
     //   require('dayjs/locale/az');
     //   break;
     // case 'bg':
     //   require('dayjs/locale/bg');
     //   break;
-    // case 'bn':
-    //   require('dayjs/locale/bn');
-    //   break;
+    case 'bn':
+      require('dayjs/locale/bn');
+      break;
     // case 'yo':
     //   require('dayjs/locale/yo');
     //   break;
@@ -80,15 +80,15 @@ export const setDayjsLocale = (locale: SupportedLocale) => {
     // case 'he':
     //   require('dayjs/locale/he');
     //   break;
-    // case 'hi':
-    //   require('dayjs/locale/hi');
-    //   break;
+    case 'hi':
+      require('dayjs/locale/hi');
+      break;
     // case 'hu':
     //   require('dayjs/locale/hu');
     //   break;
-    // case 'id':
-    //   require('dayjs/locale/id');
-    //   break;
+    case 'id':
+      require('dayjs/locale/id');
+      break;
     // case 'it':
     //   require('dayjs/locale/it');
     //   break;
@@ -98,13 +98,13 @@ export const setDayjsLocale = (locale: SupportedLocale) => {
     // case 'ur':
     //   require('dayjs/locale/ur');
     //   break;
-    // case 'vi':
-    //   require('dayjs/locale/vi');
-    //   break;
-    // case 'zh':
-    // case 'zh-cn':
-    //   require('dayjs/locale/zh');
-    //   break;
+    case 'vi':
+      require('dayjs/locale/vi');
+      break;
+    case 'zh':
+      // case 'zh-cn':
+      require('dayjs/locale/zh');
+      break;
     // case 'ja':
     //   require('dayjs/locale/ja');
     //   break;
