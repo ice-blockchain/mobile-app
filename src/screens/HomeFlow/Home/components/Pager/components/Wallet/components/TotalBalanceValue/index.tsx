@@ -4,7 +4,7 @@ import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {commonStyles} from '@constants/styles';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
-import {formatNumberString} from '@utils/numbers';
+import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {useCallback} from 'react';
 import {StyleProp, StyleSheet, TextStyle} from 'react-native';
@@ -20,7 +20,10 @@ export const TotalBalanceValue = ({style, darkMode}: Props) => {
 
   const NumberComponent = useCallback(
     ({animatedValue}) => {
-      const formattedValue = formatNumberString(String(animatedValue));
+      const formattedValue = formatNumber(animatedValue, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
       return (
         <FormattedNumber
           containerStyle={style}
@@ -37,9 +40,13 @@ export const TotalBalanceValue = ({style, darkMode}: Props) => {
     [darkMode, style],
   );
 
+  if (!balanceSummary) {
+    return null;
+  }
+
   return (
     <AnimatedNumberText
-      value={balanceSummary?.total ?? 0}
+      value={balanceSummary.total}
       NumberComponent={NumberComponent}
     />
   );

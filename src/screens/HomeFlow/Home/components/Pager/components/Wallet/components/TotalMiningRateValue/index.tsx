@@ -4,7 +4,7 @@ import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {COLORS} from '@constants/colors';
 import {miningRatesSelector} from '@store/modules/Tokenomics/selectors';
-import {formatNumberString} from '@utils/numbers';
+import {formatNumber} from '@utils/numbers';
 import React, {useCallback, useMemo} from 'react';
 import {StyleProp, StyleSheet, TextStyle} from 'react-native';
 import {useSelector} from 'react-redux';
@@ -31,9 +31,10 @@ export const TotalMiningRateValue = ({style}: Props) => {
 
   const NumberComponent = useCallback(
     ({animatedValue}) => {
-      const formattedValue = `${
-        animatedValue > 0 ? '+' : ''
-      }${formatNumberString(String(animatedValue))}`;
+      const formattedValue = `${animatedValue > 0 ? '+' : ''}${formatNumber(
+        animatedValue,
+        {minimumFractionDigits: 2, maximumFractionDigits: 2},
+      )}`;
       return (
         <FormattedNumber
           containerStyle={style}

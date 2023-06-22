@@ -2,7 +2,7 @@
 
 import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
-import {formatNumberString} from '@utils/numbers';
+import {formatNumber} from '@utils/numbers';
 import React, {memo, useCallback} from 'react';
 import {StyleProp, TextStyle} from 'react-native';
 
@@ -20,7 +20,10 @@ export const MiningRateValue = memo(
       ({animatedValue}) => {
         const formattedValue = `${
           animatedValue > 0 && signRequired ? '+' : ''
-        }${formatNumberString(String(animatedValue))}`;
+        }${formatNumber(animatedValue, {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        })}`;
         return (
           <FormattedNumber
             trim
