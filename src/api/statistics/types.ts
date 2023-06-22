@@ -6,7 +6,7 @@ export type CountryStatistics = {
 };
 
 export type Miner = {
-  balance: string;
+  balance: number;
   profilePictureUrl?: string;
   userId?: string;
   username?: string;
@@ -25,7 +25,7 @@ export type TimeSeries = {
 };
 
 export type AdoptionMilestone = {
-  baseMiningRate: string;
+  baseMiningRate: number;
   milestone: number;
   achievedAt?: string;
   totalActiveUsers?: number;

@@ -10,7 +10,7 @@ import {CollectionList} from '@screens/Templates/CollectionList';
 import {CollectionActions} from '@store/modules/Collections';
 import {collectionSelector} from '@store/modules/Collections/selectors';
 import {t} from '@translations/i18n';
-import {formatNumberString} from '@utils/numbers';
+import {formatNumber} from '@utils/numbers';
 import {uniqueId} from 'lodash';
 import React, {memo, useCallback} from 'react';
 
@@ -30,7 +30,10 @@ export const TopMiners = memo(() => {
         <UserListItemCompact
           name={item.username}
           profilePictureUrl={item.profilePictureUrl}
-          iceAmount={formatNumberString(item.balance)}
+          iceAmount={formatNumber(item.balance, {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          })}
         />
       </Touchable>
     ),

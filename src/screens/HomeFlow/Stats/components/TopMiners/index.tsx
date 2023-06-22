@@ -13,7 +13,7 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {CollectionActions} from '@store/modules/Collections';
 import {collectionSelector} from '@store/modules/Collections/selectors';
 import {t} from '@translations/i18n';
-import {formatNumberString} from '@utils/numbers';
+import {formatNumber} from '@utils/numbers';
 import {uniqueId} from 'lodash';
 import React, {memo, useCallback, useEffect, useState} from 'react';
 import {InteractionManager, StyleSheet, View} from 'react-native';
@@ -76,7 +76,10 @@ export const TopMiners = memo(() => {
                 <UserListItemCompact
                   profilePictureUrl={user.profilePictureUrl}
                   name={user.username}
-                  iceAmount={formatNumberString(user.balance)}
+                  iceAmount={formatNumber(user.balance, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}
                 />
               </Touchable>
             ))}

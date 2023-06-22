@@ -9,7 +9,7 @@ import {CARD_WIDTH} from '@screens/HomeFlow/Home/components/Overview/components/
 import {CheckMarkThinIcon} from '@svg/CheckMarkThinIcon';
 import {LockIcon} from '@svg/LockIcon';
 import {t} from '@translations/i18n';
-import {formatNumber, formatNumberString} from '@utils/numbers';
+import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View, ViewToken} from 'react-native';
@@ -67,7 +67,7 @@ export const LevelRow = React.memo(
           <View style={[styles.flank, !active && styles.semitransparent]}>
             <View style={styles.leftTextContainer}>
               <Text style={styles.valueText}>
-                {formatNumberString(item.baseMiningRate, {
+                {formatNumber(item.baseMiningRate, {
                   minimumFractionDigits: 0,
                   maximumFractionDigits: 3,
                 })}
