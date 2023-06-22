@@ -5,7 +5,7 @@ import {Images} from '@images';
 import {navigate} from '@navigation/utils';
 import {Message} from '@screens/Modals/PopUp/components/Message';
 import {replaceString, t, tagRegex} from '@translations/i18n';
-import {formatNumberString} from '@utils/numbers';
+import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text} from 'react-native';
@@ -19,7 +19,10 @@ export const openConfirmResurrectYes = (params: ResurrectRequiredData) => {
     tagRegex('amount'),
     (match, index) => (
       <Text key={match + index} style={styles.boldText}>
-        {formatNumberString(params.amount)}
+        {formatNumber(params.amount, {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        })}
       </Text>
     ),
   );

@@ -45,7 +45,7 @@ export type BalanceSummary = {
 };
 
 export type ResurrectRequiredData = {
-  amount: string;
+  amount: number;
   duringTheLastXSeconds: number;
 };
 

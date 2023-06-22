@@ -140,13 +140,16 @@ export function* startMiningSessionSaga(
       yield processRaceCondition(action);
     } else if (isApiError(error, 409, 'RESURRECTION_DECISION_REQUIRED')) {
       const errorData = error?.response?.data?.data;
-      yield confirmResurrect({
-        amount: typeof errorData?.amount === 'string' ? errorData.amount : '',
-        duringTheLastXSeconds:
-          typeof errorData?.duringTheLastXSeconds === 'number'
-            ? errorData.duringTheLastXSeconds
-            : 0,
-      });
+      if (
+        errorData &&
+        typeof errorData.amount === 'number' &&
+        typeof errorData.duringTheLastXSeconds === 'number'
+      ) {
+        yield confirmResurrect({
+          amount: errorData.amount,
+          duringTheLastXSeconds: errorData.duringTheLastXSeconds,
+        });
+      }
     } else {
       showError(error);
     }

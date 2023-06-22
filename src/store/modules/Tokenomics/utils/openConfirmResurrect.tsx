@@ -8,7 +8,7 @@ import {dayjs} from '@services/dayjs';
 import {MedKitIcon} from '@svg/MedKitIcon';
 import {replaceString, t, tagRegex} from '@translations/i18n';
 import {getDurationString} from '@utils/date';
-import {formatNumberString} from '@utils/numbers';
+import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text} from 'react-native';
@@ -22,7 +22,10 @@ export const openConfirmResurrect = (params: ResurrectRequiredData) => {
     tagRegex('amount'),
     (match, index) => (
       <Text key={match + index} style={styles.boldText}>
-        {formatNumberString(params.amount)}
+        {formatNumber(params.amount, {
+          maximumFractionDigits: 2,
+          minimumFractionDigits: 2,
+        })}
       </Text>
     ),
   );
