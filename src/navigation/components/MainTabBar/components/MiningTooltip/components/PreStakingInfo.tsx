@@ -16,6 +16,7 @@ import {
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
 import {YearsOutlineIcon} from '@svg/YearsOutlineIcon';
 import {t} from '@translations/i18n';
+import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
@@ -55,7 +56,14 @@ export const PreStakingInfo = () => {
             />
           }
           label={t('staking.balance_label')}
-          value={balanceSummary?.preStaking}
+          value={
+            balanceSummary
+              ? formatNumber(balanceSummary.preStaking, {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })
+              : null
+          }
           currency={<IceLabel color={COLORS.primaryDark} />}
         />
       </View>

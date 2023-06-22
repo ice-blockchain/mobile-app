@@ -39,7 +39,3 @@ export function formatNumber(
 
   return formatters[key].format(input);
 }
-
-export function parseNumber(input: string) {
-  return parseFloat(input.replace(/,/g, ''));
-}
