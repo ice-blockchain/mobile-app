@@ -1,21 +1,17 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import notifee, {
-  AndroidImportance,
-  AndroidStyle,
-  EventType,
-} from '@notifee/react-native';
+import notifee, {AndroidImportance, EventType} from '@notifee/react-native';
 import type {FirebaseMessagingTypes} from '@react-native-firebase/messaging';
 import messaging from '@react-native-firebase/messaging';
 import {PushNotificationsActions} from '@store/modules/PushNotifications/actions';
 import {CHANNEL_ID} from '@store/modules/PushNotifications/constants';
 import {useEffect} from 'react';
 import {useDispatch} from 'react-redux';
-import {isAndroid} from 'rn-units';
 
 notifee.createChannel({
   id: CHANNEL_ID,
-  name: 'Default Channel',
+  name: 'Ice',
+  importance: AndroidImportance.HIGH,
 });
 
 export function useSubscribeToPushNotifications() {
@@ -54,41 +50,11 @@ export function useSubscribeToPushNotifications() {
 
     const unsubscribeFromOnMessage = messaging().onMessage(
       (message: FirebaseMessagingTypes.RemoteMessage) => {
-        if (isAndroid) {
-          if (!message.notification) {
-            return;
-          }
-          notifee.displayNotification({
-            title: message.notification.title,
-            body: message.notification.body,
-            data: message?.data,
-            android: {
-              channelId: CHANNEL_ID,
-              smallIcon: 'ic_stat_notification',
-              sound: 'default',
-              color: '#1B47C3',
-              ...(message.notification.android?.imageUrl
-                ? {
-                    largeIcon: message.notification.android?.imageUrl,
-                    style: {
-                      type: AndroidStyle.BIGPICTURE,
-                      picture: message.notification.android?.imageUrl,
-                    },
-                  }
-                : {}),
-              importance: AndroidImportance.HIGH,
-              pressAction: {
-                id: 'default',
-              },
-            },
-          });
-        } else {
-          dispatch(
-            PushNotificationsActions.NOTIFICATION_PRESS.STATE.create({
-              data: message?.data,
-            }),
-          );
-        }
+        dispatch(
+          PushNotificationsActions.NOTIFICATION_ARRIVE.STATE.create({
+            message,
+          }),
+        );
       },
     );
 
