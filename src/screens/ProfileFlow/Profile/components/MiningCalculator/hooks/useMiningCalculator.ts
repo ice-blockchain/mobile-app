@@ -2,7 +2,6 @@
 
 import {miningRatesSelector} from '@store/modules/Tokenomics/selectors';
 import {calculateMiningRate} from '@store/modules/Tokenomics/utils/calculateMiningRate';
-import {parseNumber} from '@utils/numbers';
 import {useCallback, useState} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -26,7 +25,7 @@ export const useMiningCalculator = () => {
       if (!miningRates) {
         return;
       }
-      const baseMiningRate = parseNumber(miningRates.base.amount);
+      const baseMiningRate = miningRates.base.amount;
 
       const {miningRate} = calculateMiningRate({
         baseMiningRate,

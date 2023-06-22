@@ -12,7 +12,7 @@ import {MiningHammerIcon} from '@svg/MiningHammerIcon';
 import {StarIcon} from '@svg/StarIcon';
 import {TeamIcon} from '@svg/TeamIcon';
 import {isRTL, t} from '@translations/i18n';
-import {formatNumber, parseNumber} from '@utils/numbers';
+import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo, useMemo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -47,10 +47,9 @@ export const MiningRate = memo(({darkMode}: Props) => {
 
   const color = darkMode ? COLORS.primaryDark : COLORS.white;
   const totalBonuses =
-    (miningRates?.total.bonuses?.t1 ?? 0) +
-    (miningRates?.total.bonuses?.t2 ?? 0);
-  const extraBonuses = miningRates?.total.bonuses?.extra ?? 0;
-  const prestackingBonuses = miningRates?.total.bonuses?.preStaking ?? 0;
+    (miningRates.total.bonuses?.t1 ?? 0) + (miningRates.total.bonuses?.t2 ?? 0);
+  const extraBonuses = miningRates.total.bonuses?.extra ?? 0;
+  const prestackingBonuses = miningRates.total.bonuses?.preStaking ?? 0;
 
   return (
     <View style={[commonStyles.baseSubScreen, styles.container]}>
@@ -68,12 +67,12 @@ export const MiningRate = memo(({darkMode}: Props) => {
           decimalsStyle={[styles.miningValueDecimalsText, rateValueTextStyle]}
           signRequired
           value={
-            parseNumber(miningRates?.total.amount ?? '0') *
+            miningRates.total.amount *
             {
               positive: 1,
               negative: -1,
               none: 1,
-            }[miningRates?.type ?? 'none']
+            }[miningRates.type]
           }
         />
 
@@ -101,7 +100,7 @@ export const MiningRate = memo(({darkMode}: Props) => {
           decimalsStyle={
             darkMode ? styles.baseDecimalsTextDarkMode : styles.baseDecimalsText
           }
-          value={parseNumber(miningRates?.base.amount ?? '0')}
+          value={miningRates.base.amount}
         />
 
         <IceLabel

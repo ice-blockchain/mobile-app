@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 export type MiningRateSummary = {
-  amount: string;
+  amount: number;
   bonuses?: {
     extra?: number;
     preStaking?: number;

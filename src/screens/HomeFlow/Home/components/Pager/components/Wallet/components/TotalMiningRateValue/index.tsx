@@ -4,7 +4,7 @@ import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {COLORS} from '@constants/colors';
 import {miningRatesSelector} from '@store/modules/Tokenomics/selectors';
-import {formatNumberString, parseNumber} from '@utils/numbers';
+import {formatNumberString} from '@utils/numbers';
 import React, {useCallback, useMemo} from 'react';
 import {StyleProp, StyleSheet, TextStyle} from 'react-native';
 import {useSelector} from 'react-redux';
@@ -47,15 +47,19 @@ export const TotalMiningRateValue = ({style}: Props) => {
     [rateValueTextStyle, style],
   );
 
+  if (!miningRates) {
+    return null;
+  }
+
   return (
     <AnimatedNumberText
       value={
-        parseNumber(miningRates?.total.amount ?? '0') *
+        miningRates.total.amount *
         {
           positive: 1,
           negative: -1,
           none: 1,
-        }[miningRates?.type ?? 'none']
+        }[miningRates.type]
       }
       NumberComponent={NumberComponent}
     />

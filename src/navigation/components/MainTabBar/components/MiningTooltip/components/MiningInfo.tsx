@@ -19,7 +19,7 @@ import {ClockIcon} from '@svg/ClockIcon';
 import {LogoIcon} from '@svg/LogoIcon';
 import {t} from '@translations/i18n';
 import {getDurationString} from '@utils/date';
-import {formatNumberString} from '@utils/numbers';
+import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {useEffect, useMemo} from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -77,7 +77,10 @@ export const MiningInfo = () => {
             <FormattedNumber
               number={`${
                 {positive: '+', negative: '-', none: ''}[miningRates.type] ?? ''
-              }${formatNumberString(miningRates.total.amount)}`}
+              }${formatNumber(miningRates.total.amount, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}`}
               bodyStyle={styles.valueText}
               decimalsStyle={styles.valueDecimalsText}
             />

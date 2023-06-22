@@ -2,7 +2,6 @@
 
 import {miningRatesSelector} from '@store/modules/Tokenomics/selectors';
 import {calculateStakingBonus} from '@store/modules/Tokenomics/utils/calculateStakingBonus';
-import {parseNumber} from '@utils/numbers';
 import {useCallback, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -24,9 +23,8 @@ export const usePreStakingCalculator = () => {
         return;
       }
 
-      const noPreStakingBonus = parseNumber(
-        miningRates.positiveTotalNoPreStakingBonus.amount,
-      );
+      const noPreStakingBonus =
+        miningRates.positiveTotalNoPreStakingBonus.amount;
 
       const {miningRate, bonus} = calculateStakingBonus({
         noPreStakingBonus,

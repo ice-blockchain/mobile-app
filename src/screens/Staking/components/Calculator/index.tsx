@@ -9,7 +9,7 @@ import {miningRatesSelector} from '@store/modules/Tokenomics/selectors';
 import {ChartIcon} from '@svg/ChartIcon';
 import {YearsIcon} from '@svg/YearsIcon';
 import {isRTL, t} from '@translations/i18n';
-import {formatNumber, formatNumberString} from '@utils/numbers';
+import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import {throttle} from 'lodash';
 import React, {memo, useEffect, useMemo, useRef} from 'react';
@@ -97,9 +97,10 @@ export const Calculator = memo(
         {miningRate && (
           <Text style={styles.currentRateText}>
             {t('staking.current_rate').toUpperCase()}:{' '}
-            {formatNumberString(
-              miningRate.positiveTotalNoPreStakingBonus.amount,
-            )}{' '}
+            {formatNumber(miningRate.positiveTotalNoPreStakingBonus.amount, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}{' '}
             <IceLabel iconSize={14} label={t('general.ice_per_hour')} />
           </Text>
         )}
