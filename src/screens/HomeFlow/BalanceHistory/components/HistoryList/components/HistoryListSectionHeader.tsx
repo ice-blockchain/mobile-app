@@ -7,7 +7,7 @@ import {COLORS} from '@constants/colors';
 import {dayjs} from '@services/dayjs';
 import {CalendarIcon} from '@svg/CalendarIcon';
 import {StarIcon} from '@svg/StarIcon';
-import {formatNumberString} from '@utils/numbers';
+import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -33,7 +33,10 @@ export const HistoryListSectionHeader = ({balanceDiff, time}: Props) => {
           {balanceDiff.negative ? '-' : '+'}
         </Text>
         <FormattedNumber
-          number={formatNumberString(balanceDiff.amount)}
+          number={formatNumber(balanceDiff.amount, {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          })}
           bodyStyle={styles.amountValueText}
           decimalsStyle={styles.amountDecimalsText}
           trim

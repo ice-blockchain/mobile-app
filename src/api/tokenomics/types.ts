@@ -60,7 +60,7 @@ export type RankingSummary = {
 };
 
 export type BalanceDiff = {
-  amount: string;
+  amount: number;
   bonus: number;
   negative?: boolean;
 };
