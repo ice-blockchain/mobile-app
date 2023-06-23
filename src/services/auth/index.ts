@@ -48,13 +48,6 @@ export const signInWithApple = async () => {
 
 export const signInWithTwitter = async () => {
   const result = await startTwitterSignIn();
-  if (!result.cancelled) {
-    const twitterCredential = auth.TwitterAuthProvider.credential(
-      result.data.token,
-      result.data.secret,
-    );
-    await auth().signInWithCredential(twitterCredential);
-  }
   return result;
 };
 

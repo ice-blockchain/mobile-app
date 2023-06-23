@@ -554,9 +554,6 @@ PODS:
     - RCTTypeSafety
     - React-Core
     - ReactCommon/turbomodule/core
-  - react-native-twitter-signin (1.2.0):
-    - React
-    - TwitterKit5
   - react-native-view-shot (3.6.0):
     - React-Core
   - React-perflogger (0.70.8)
@@ -732,9 +729,6 @@ PODS:
   - SentryPrivate (8.7.3)
   - SocketRocket (0.6.0)
   - TOCropViewController (2.6.1)
-  - TwitterCore (3.2.0)
-  - TwitterKit5 (5.2.0):
-    - TwitterCore (>= 3.1.0)
   - vision-camera-code-scanner (0.2.0):
     - GoogleMLKit/BarcodeScanning
     - React-Core
@@ -811,7 +805,6 @@ DEPENDENCIES:
   - react-native-pager-view (from `../node_modules/react-native-pager-view`)
   - react-native-restart (from `../node_modules/react-native-restart`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
-  - "react-native-twitter-signin (from `../node_modules/@react-native-twitter-signin/twitter-signin`)"
   - react-native-view-shot (from `../node_modules/react-native-view-shot`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -910,8 +903,6 @@ SPEC REPOS:
     - SentryPrivate
     - SocketRocket
     - TOCropViewController
-    - TwitterCore
-    - TwitterKit5
     - YogaKit
 
 EXTERNAL SOURCES:
@@ -983,8 +974,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-restart"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
-  react-native-twitter-signin:
-    :path: "../node_modules/@react-native-twitter-signin/twitter-signin"
   react-native-view-shot:
     :path: "../node_modules/react-native-view-shot"
   React-perflogger:
@@ -1155,7 +1144,6 @@ SPEC CHECKSUMS:
   react-native-pager-view: 3c66c4e2f3ab423643d07b2c7041f8ac48395f72
   react-native-restart: 7595693413fe3ca15893702f2c8306c62a708162
   react-native-safe-area-context: 99b24a0c5acd0d5dcac2b1a7f18c49ea317be99a
-  react-native-twitter-signin: 423e8d20eb26fddc14852d3f1435a8b39358f49d
   react-native-view-shot: 705f999ac2a24e4e6c909c0ca65c732ed33ca2ff
   React-perflogger: e9249a18e055cae96fdf685bf6145cbea62506c8
   React-RCTActionSheet: a6d2a544a4605a111ce80fa9319cc870ca3ea778
@@ -1200,8 +1188,6 @@ SPEC CHECKSUMS:
   SentryPrivate: 2eaabf598a46d4b9b8822aef766df2a84caf2e6f
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   TOCropViewController: edfd4f25713d56905ad1e0b9f5be3fbe0f59c863
-  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
-  TwitterKit5: 64095dfefcf39be2355711ef27112d55e340d90e
   vision-camera-code-scanner: dda884a7f3ec8243a2a6d6489b91860648371bca
   VisionCamera: e9a95af10e00aaebe99d648ff4519fd336e16ffe
   Yoga: d6133108734e69e8c0becc6ba587294b94829687
