@@ -6,7 +6,7 @@ import auth from '@react-native-firebase/auth';
 import {startAppleSignIn} from '@services/auth/signin/apple';
 import {startFacebookSignIn} from '@services/auth/signin/facebook';
 import {startGoogleSignIn} from '@services/auth/signin/google';
-import {startTwitterSignIn} from '@services/auth/signin/twitter';
+import {twitterSignIn} from '@services/auth/signin/twitter';
 import {SocialSignInProvider} from '@services/auth/signin/types';
 import {t} from '@translations/i18n';
 import {SupportedLocale} from '@translations/localeConfig';
@@ -47,8 +47,7 @@ export const signInWithApple = async () => {
 };
 
 export const signInWithTwitter = async () => {
-  const result = await startTwitterSignIn();
-  return result;
+  return twitterSignIn();
 };
 
 export const signInWithPhoneNumber = async (phoneNumber: string) => {
