@@ -46,7 +46,6 @@
     "@react-native-firebase/messaging": "^16.4.6",
     "@react-native-google-signin/google-signin": "^8.2.1",
     "@react-native-masked-view/masked-view": "^0.2.8",
-    "@react-native-twitter-signin/twitter-signin": "^1.2.0",
     "@react-navigation/bottom-tabs": "^6.4.1",
     "@react-navigation/native": "^6.0.14",
     "@react-navigation/native-stack": "^6.9.2",

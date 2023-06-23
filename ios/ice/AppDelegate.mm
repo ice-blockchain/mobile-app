@@ -12,7 +12,6 @@
 #import <Firebase.h>
 #import <RNGoogleSignin/RNGoogleSignin.h>
 #import <FBSDKCoreKit/FBSDKCoreKit-swift.h>
-#import <TwitterKit/TWTRKit.h>
 #import <React/RCTLinkingManager.h>
 
 #import <RNBootSplash/RNBootSplash.h>
@@ -145,10 +144,6 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
   }
 
   if ([RNGoogleSignin application:application openURL:url options:options]) {
-    return YES;
-  }
-
-  if ([[Twitter sharedInstance] application:application openURL:url options:options]) {
     return YES;
   }
 
