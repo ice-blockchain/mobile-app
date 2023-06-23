@@ -4,7 +4,10 @@ import {WELCOME_STEPS, WelcomeStackParamList} from '@navigation/Welcome';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AccountActions} from '@store/modules/Account/actions';
-import {unsafeUserSelector} from '@store/modules/Account/selectors';
+import {
+  unsafeUserSelector,
+  userInfoSelector,
+} from '@store/modules/Account/selectors';
 import {
   failedReasonSelector,
   isLoadingSelector,
@@ -21,6 +24,8 @@ export const useClaimUsername = () => {
     useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
   const user = useSelector(unsafeUserSelector);
 
+  const userInfo = useSelector(userInfoSelector);
+
   const validationError = useSelector(
     failedReasonSelector.bind(null, ValidationActions.USERNAME_VALIDATION),
   );
@@ -32,7 +37,9 @@ export const useClaimUsername = () => {
   );
 
   const initialRender = useRef(true);
-  const [username, setUsername] = useState(user.username);
+  const [username, setUsername] = useState(
+    user.username ?? userInfo?.userHandle ?? '',
+  );
 
   const isUsernameUpdated = !!username && username === user.username;
 
@@ -61,9 +68,7 @@ export const useClaimUsername = () => {
     if (isUsernameUpdated) {
       goForward();
     } else {
-      dispatch(
-        AccountActions.UPDATE_ACCOUNT.START.create({username: username}),
-      );
+      dispatch(AccountActions.UPDATE_ACCOUNT.START.create({username}));
     }
   };
 
