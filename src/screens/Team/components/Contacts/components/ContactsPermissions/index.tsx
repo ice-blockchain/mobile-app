@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {IceLabel} from '@components/Labels/IceLabel';
+import {TagWrapper} from '@components/TagWrapper';
 import {COLORS} from '@constants/colors';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {AllowContactsButton} from '@screens/Team/components/Contacts/components/ContactsPermissions/components/AllowContactsButton';
@@ -22,18 +23,20 @@ export const ContactsPermissions = () => {
     <View style={[styles.container, tabbarOffset.current]}>
       <Image source={icon} resizeMode="contain" style={styles.image} />
       <Text style={styles.title}>
-        {replaceString(
-          t('team.contacts.empty_title'),
-          tagRegex('ice'),
-          (match, index) => (
-            <IceLabel
-              key={match + index}
-              iconSize={28}
-              color={COLORS.primaryDark}
-              iconOffsetY={isAndroid ? 2 : 3}
-            />
-          ),
-        )}
+        <TagWrapper>
+          {replaceString(
+            t('team.contacts.empty_title'),
+            tagRegex('ice'),
+            (match, index) => (
+              <IceLabel
+                key={match + index}
+                iconSize={28}
+                color={COLORS.primaryDark}
+                iconOffsetY={isAndroid ? 2 : 3}
+              />
+            ),
+          )}
+        </TagWrapper>
       </Text>
       <View style={styles.descriptionContainer}>
         <Text style={styles.description}>
