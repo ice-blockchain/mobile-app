@@ -21,7 +21,8 @@ export const twitterSignIn = async () => {
   } catch (error) {
     if (
       checkProp(error, 'code') &&
-      error.code === 'auth/web-context-canceled'
+      (error.code === 'auth/web-context-canceled' ||
+        error.code === 'auth/popup-closed-by-user')
     ) {
       return {cancelled: true} as const;
     }
