@@ -1,3 +1,8 @@
+Exposes the OAuthProvider methods for authorization with variety of providers without the need of 3rd party libs.
+Might be removed when any of the similar PR's are merged:
+https://github.com/invertase/react-native-firebase/pull/7187
+https://github.com/invertase/react-native-firebase/pull/7019
+
 diff --git a/node_modules/@react-native-firebase/auth/android/src/main/java/.DS_Store b/node_modules/@react-native-firebase/auth/android/src/main/java/.DS_Store
 new file mode 100644
 index 0000000..762a87e
@@ -69,6 +74,56 @@ index c79417f..711b289 100644
    /**
     * createUserWithEmailAndPassword
     *
+diff --git a/node_modules/@react-native-firebase/auth/ios/RNFBAuth/RNFBAuthModule.m b/node_modules/@react-native-firebase/auth/ios/RNFBAuth/RNFBAuthModule.m
+index 8d98dc5..84869f6 100644
+--- a/node_modules/@react-native-firebase/auth/ios/RNFBAuth/RNFBAuthModule.m
++++ b/node_modules/@react-native-firebase/auth/ios/RNFBAuth/RNFBAuthModule.m
+@@ -57,6 +57,8 @@
+ static __strong NSMutableDictionary<NSString *, FIRMultiFactorResolver *> *cachedResolver;
+ static __strong NSMutableDictionary<NSString *, FIRMultiFactorSession *> *cachedSessions;
+ 
++static __strong FIROAuthProvider *authProvider;
++
+ @implementation RNFBAuthModule
+ #pragma mark -
+ #pragma mark Module Setup
+@@ -213,6 +215,36 @@ - (void)invalidate {
+       }];
+ }
+ 
++RCT_EXPORT_METHOD(signInWithProvider
++                  : (FIRApp *)firebaseApp
++                  : (NSString *)providerId
++                  : (RCTPromiseResolveBlock)resolve
++                  : (RCTPromiseRejectBlock)reject) {
++    authProvider = [FIROAuthProvider providerWithProviderID:providerId];
++
++    NSString* lang = [FIRAuth authWithApp:firebaseApp].languageCode;
++
++    [authProvider setCustomParameters:@{@"lang": lang}];
++
++    [authProvider getCredentialWithUIDelegate:nil
++                                   completion:^(FIRAuthCredential *_Nullable credential, NSError *_Nullable error) {
++        if (error) {
++            [self promiseRejectAuthException:reject error:error];
++            return;
++        }
++        if (credential) {
++            [[FIRAuth auth] signInWithCredential:credential
++                                      completion:^(FIRAuthDataResult *_Nullable authResult, NSError *_Nullable error) {
++                if (error) {
++                    [self promiseRejectAuthException:reject error:error];
++                    return;
++                }
++                [self promiseWithAuthResult:resolve rejecter:reject authResult:authResult];
++            }];
++        }
++    }];
++}
++
+ RCT_EXPORT_METHOD(signInWithEmailAndPassword
+                   : (FIRApp *)firebaseApp
+                   : (NSString *)email
 diff --git a/node_modules/@react-native-firebase/auth/lib/index.d.ts b/node_modules/@react-native-firebase/auth/lib/index.d.ts
 index ab41d09..870e32a 100644
 --- a/node_modules/@react-native-firebase/auth/lib/index.d.ts
@@ -100,15 +155,17 @@ index ab41d09..870e32a 100644
       * Signs in the user using their phone number.
       *
 diff --git a/node_modules/@react-native-firebase/auth/lib/index.js b/node_modules/@react-native-firebase/auth/lib/index.js
-index ea45f05..52d7db6 100644
+index ea45f05..ed96fa4 100644
 --- a/node_modules/@react-native-firebase/auth/lib/index.js
 +++ b/node_modules/@react-native-firebase/auth/lib/index.js
-@@ -231,6 +231,10 @@ class FirebaseAuthModule extends FirebaseModule {
+@@ -231,6 +231,12 @@ class FirebaseAuthModule extends FirebaseModule {
        .then(userCredential => this._setUserCredential(userCredential));
    }
  
 +  signInWithProvider(providerId) {
-+    return this.native.signInWithProvider(providerId)
++    return this.native
++      .signInWithProvider(providerId)
++      .then(userCredential => this._setUserCredential(userCredential));
 +  }
 +
    signInWithPhoneNumber(phoneNumber, forceResend) {
