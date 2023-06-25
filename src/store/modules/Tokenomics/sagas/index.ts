@@ -12,68 +12,66 @@ import {getRankingSummarySaga} from '@store/modules/Tokenomics/sagas/getRankingS
 import {handleExtraBonusSaga} from '@store/modules/Tokenomics/sagas/handleExtraBonus';
 import {startMiningSessionSaga} from '@store/modules/Tokenomics/sagas/startMiningSession';
 import {startOrUpdatePreStakingSaga} from '@store/modules/Tokenomics/sagas/startPreStaking';
-import {all, takeLatest, takeLeading} from 'redux-saga/effects';
+import {takeLatest, takeLeading} from 'redux-saga/effects';
 
-export function* rootTokenomicsSaga() {
-  yield all([
-    takeLatest(
-      [
-        AppCommonActions.APP_STATE_CHANGE.STATE.type,
-        AppCommonActions.INTERVAL_UPDATE.STATE.type,
-        AccountActions.USER_STATE_CHANGE.SUCCESS.type,
-        TokenomicsActions.GET_MINING_SUMMARY.START.type,
-        TokenomicsActions.START_OR_UPDATE_PRE_STAKING.SUCCESS.type,
-      ],
-      getMiningSummarySaga,
-    ),
-    /**
-     * Separate flow to get rid of messing with the main getMiningSummary flow
-     */
-    takeLatest(
-      TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type,
-      getMiningSummarySaga,
-    ),
-    takeLatest(
-      [
-        AppCommonActions.APP_STATE_CHANGE.STATE.type,
-        AppCommonActions.INTERVAL_UPDATE.STATE.type,
-        AccountActions.USER_STATE_CHANGE.SUCCESS.type,
-        TokenomicsActions.GET_BALANCE_SUMMARY.START.type,
-      ],
-      getBalanceSummarySaga,
-    ),
-    takeLatest(
-      [
-        AccountActions.USER_STATE_CHANGE.SUCCESS.type,
-        TokenomicsActions.GET_PRE_STAKING_SUMMARY.START.type,
-      ],
-      getPreStakingSummarySaga,
-    ),
-    takeLatest(
-      [
-        AppCommonActions.APP_STATE_CHANGE.STATE.type,
-        AppCommonActions.INTERVAL_UPDATE.STATE.type,
-        AccountActions.USER_STATE_CHANGE.SUCCESS.type,
-        TokenomicsActions.GET_RANKING_SUMMARY.START.type,
-      ],
-      getRankingSummarySaga,
-    ),
-    takeLatest(
-      TokenomicsActions.START_MINING_SESSION.START.type,
-      startMiningSessionSaga,
-    ),
-    takeLatest(
-      TokenomicsActions.START_OR_UPDATE_PRE_STAKING.START.type,
-      startOrUpdatePreStakingSaga,
-    ),
-    takeLatest(
-      TokenomicsActions.GET_BALANCE_HISTORY.START.type,
-      getBalanceHistorySaga,
-    ),
-    takeLatest(AppCommonActions.APP_STATE_CHANGE.STATE.type, forceMiningSaga),
-    takeLeading(
-      TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.type,
-      handleExtraBonusSaga,
-    ),
-  ]);
-}
+export const tokenomicsWatchers = [
+  takeLatest(
+    [
+      AppCommonActions.APP_STATE_CHANGE.STATE.type,
+      AppCommonActions.INTERVAL_UPDATE.STATE.type,
+      AccountActions.USER_STATE_CHANGE.SUCCESS.type,
+      TokenomicsActions.GET_MINING_SUMMARY.START.type,
+      TokenomicsActions.START_OR_UPDATE_PRE_STAKING.SUCCESS.type,
+    ],
+    getMiningSummarySaga,
+  ),
+  /**
+   * Separate flow to get rid of messing with the main getMiningSummary flow
+   */
+  takeLatest(
+    TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type,
+    getMiningSummarySaga,
+  ),
+  takeLatest(
+    [
+      AppCommonActions.APP_STATE_CHANGE.STATE.type,
+      AppCommonActions.INTERVAL_UPDATE.STATE.type,
+      AccountActions.USER_STATE_CHANGE.SUCCESS.type,
+      TokenomicsActions.GET_BALANCE_SUMMARY.START.type,
+    ],
+    getBalanceSummarySaga,
+  ),
+  takeLatest(
+    [
+      AccountActions.USER_STATE_CHANGE.SUCCESS.type,
+      TokenomicsActions.GET_PRE_STAKING_SUMMARY.START.type,
+    ],
+    getPreStakingSummarySaga,
+  ),
+  takeLatest(
+    [
+      AppCommonActions.APP_STATE_CHANGE.STATE.type,
+      AppCommonActions.INTERVAL_UPDATE.STATE.type,
+      AccountActions.USER_STATE_CHANGE.SUCCESS.type,
+      TokenomicsActions.GET_RANKING_SUMMARY.START.type,
+    ],
+    getRankingSummarySaga,
+  ),
+  takeLatest(
+    TokenomicsActions.START_MINING_SESSION.START.type,
+    startMiningSessionSaga,
+  ),
+  takeLatest(
+    TokenomicsActions.START_OR_UPDATE_PRE_STAKING.START.type,
+    startOrUpdatePreStakingSaga,
+  ),
+  takeLatest(
+    TokenomicsActions.GET_BALANCE_HISTORY.START.type,
+    getBalanceHistorySaga,
+  ),
+  takeLatest(AppCommonActions.APP_STATE_CHANGE.STATE.type, forceMiningSaga),
+  takeLeading(
+    TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.type,
+    handleExtraBonusSaga,
+  ),
+];
