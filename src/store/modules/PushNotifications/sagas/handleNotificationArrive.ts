@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {
-  isAppActiveSelector,
-  isSplashHiddenSelector,
-} from '@store/modules/AppCommon/selectors';
+import notifee, {AndroidImportance, AndroidStyle} from '@notifee/react-native';
+import {isSplashHiddenSelector} from '@store/modules/AppCommon/selectors';
 import {LinkingActions} from '@store/modules/Linking/actions';
 import {PushNotificationsActions} from '@store/modules/PushNotifications/actions';
+import {CHANNEL_ID} from '@store/modules/PushNotifications/constants';
 import {waitForSelector} from '@store/utils/sagas/effects';
-import {call, put, select} from 'redux-saga/effects';
+import {call, put} from 'redux-saga/effects';
+import {isAndroid} from 'rn-units';
 
 const actionCreator = PushNotificationsActions.NOTIFICATION_ARRIVE.STATE.create;
 
@@ -18,12 +18,38 @@ export function* handleNotificationArriveSaga(
 
   yield call(waitForSelector, isSplashHiddenSelector);
 
-  const isActive: ReturnType<typeof isAppActiveSelector> = yield select(
-    isAppActiveSelector,
-  );
-  if (message?.data?.deeplink && !isActive) {
-    yield put(
-      LinkingActions.HANDLE_URL.STATE.create(message?.data?.deeplink, true),
-    );
+  if (isAndroid) {
+    if (message?.notification) {
+      yield call(notifee.displayNotification, {
+        title: message.notification.title,
+        body: message.notification.body,
+        data: message?.data,
+        android: {
+          channelId: CHANNEL_ID,
+          smallIcon: 'ic_stat_notification',
+          sound: 'default',
+          color: '#1B47C3',
+          ...(message.notification.android?.imageUrl
+            ? {
+                largeIcon: message.notification.android?.imageUrl,
+                style: {
+                  type: AndroidStyle.BIGPICTURE,
+                  picture: message.notification.android?.imageUrl,
+                },
+              }
+            : {}),
+          importance: AndroidImportance.HIGH,
+          pressAction: {
+            id: 'default',
+          },
+        },
+      });
+    }
+  } else {
+    if (message?.data?.deeplink) {
+      yield put(
+        LinkingActions.HANDLE_URL.STATE.create(message?.data?.deeplink, true),
+      );
+    }
   }
 }

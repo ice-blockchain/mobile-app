@@ -17,7 +17,11 @@
 #import <RNBootSplash/RNBootSplash.h>
 
 #import <ReactNativeMoEngage/MoEngageInitializer.h>
+#import <ReactNativeMoEngage/MoEReactBridge.h>
 #import <MoEngageSDK/MoEngageSDK.h>
+#import <RNFBMessaging/RNFBMessagingSerializer.h>
+#import <RNFBApp/RNFBRCTEventEmitter.h>
+
 #import "ReactNativeConfig.h"
 #import <TSBackgroundFetch/TSBackgroundFetch.h>
 
@@ -72,7 +76,7 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
    [[MoEngageInitializer sharedInstance] initializeDefaultSDKConfig:sdkConfig andLaunchOptions:launchOptions];
 
   [UNUserNotificationCenter currentNotificationCenter].delegate = self;
-  
+
   [[RCTI18nUtil sharedInstance] allowRTL:YES];
 
   RCTAppSetupPrepareApp(application);
@@ -124,6 +128,29 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
 
 - (NSString *)getMoeDeeplink {
     return self.moeDeeplink;
+}
+
+// UserNotifications Framework Callback for iOS10 and above
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+didReceiveNotificationResponse:(UNNotificationResponse *)response
+        withCompletionHandler:(void (^)())completionHandler{
+            NSDictionary *userInfo = response.notification.request.content.userInfo;
+            // Check if the notification is from MoEngage
+            if (userInfo[@"moengage"] != nil) {
+                NSDictionary *eventPayload = @{@"kEventName": @"pushClicked", @"kPayloadDict": userInfo};
+                [[MoEReactBridge allocWithZone: nil] sendEventWithName:eventPayload];
+            } else {
+                 // It is a Firebase Message, send it to JS
+                if (userInfo[@"gcm.message_id"] != nil) {
+                    NSDictionary *notificationDict =
+                    [RNFBMessagingSerializer remoteMessageUserInfoToDict:userInfo];
+                    [[RNFBRCTEventEmitter shared] sendEventWithName:@"messaging_notification_opened"
+                                                               body:notificationDict];
+                }
+            }
+
+            //Custom Handling of notification if Any
+            completionHandler();
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center

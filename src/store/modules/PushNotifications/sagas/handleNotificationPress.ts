@@ -11,13 +11,11 @@ const actionCreator = PushNotificationsActions.NOTIFICATION_PRESS.STATE.create;
 export function* handleNotificationPressSaga(
   action: ReturnType<typeof actionCreator>,
 ) {
-  const {message} = action.payload;
+  const {data} = action.payload;
 
   yield call(waitForSelector, isSplashHiddenSelector);
 
-  if (message?.data?.deeplink) {
-    yield put(
-      LinkingActions.HANDLE_URL.STATE.create(message?.data?.deeplink, true),
-    );
+  if (data?.deeplink) {
+    yield put(LinkingActions.HANDLE_URL.STATE.create(data?.deeplink, true));
   }
 }
