@@ -196,13 +196,13 @@ platform :android do
         when "bundle"
             gradle(
                 project_dir: "android",
-                task: "clean bundle#{ANDROID_BUILD_TYPE.capitalize()}"
+                task: "clean app:bundle#{ANDROID_BUILD_TYPE.capitalize()}"
             )
         when "apk"
             # use bundles when the app is published
             gradle(
                 project_dir: "android",
-                task: "clean assemble#{ANDROID_BUILD_TYPE.capitalize()}"
+                task: "clean app:assemble#{ANDROID_BUILD_TYPE.capitalize()}"
             )
         end
     end
