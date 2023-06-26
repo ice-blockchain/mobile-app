@@ -4,66 +4,68 @@ import {isApiError, isNetworkError} from '@api/client';
 import {isAuthError} from '@services/auth';
 import {logError} from '@services/logging';
 import {AccountActions} from '@store/modules/Account/actions';
-import {rootAuthSaga} from '@store/modules/Account/sagas';
-import {rootAchievementsSaga} from '@store/modules/Achievements/sagas';
-import {rootAnalyticsSaga} from '@store/modules/Analytics/sagas';
-import {rootAppCommonSaga} from '@store/modules/AppCommon/sagas';
-import {rootAppUpdateSaga} from '@store/modules/AppUpdate/sagas';
-import {rootCollectionsSaga} from '@store/modules/Collections/sagas';
-import {rootTeamSaga} from '@store/modules/Contacts/sagas';
-import {rootDevicesSaga} from '@store/modules/Devices/sagas';
-import {rootInAppNotificationsSaga} from '@store/modules/InAppNotifications/sagas';
-import {rootLinkingSaga} from '@store/modules/Linking/sagas';
-import {rootNewsSaga} from '@store/modules/News/sagas';
-import {rootNotificationsSaga} from '@store/modules/Notifications/sagas';
-import {rootPermissionsSaga} from '@store/modules/Permissions/sagas';
-import {rootPushNotificationsSaga} from '@store/modules/PushNotifications/sagas';
-import {rootRateAppSaga} from '@store/modules/RateApp/sagas';
-import {rootReferralsSaga} from '@store/modules/Referrals/sagas';
-import {rootStatsSaga} from '@store/modules/Stats/sagas';
-import {rootStatusNoticeSaga} from '@store/modules/StatusNotice/sagas';
-import {rootTokenomicsSaga} from '@store/modules/Tokenomics/sagas';
-import {rootUsersSaga} from '@store/modules/Users/sagas';
-import {rootValidationSaga} from '@store/modules/Validation/sagas';
-import {rootWalkthroughSaga} from '@store/modules/Walkthrough/sagas';
+import {authWatchers} from '@store/modules/Account/sagas';
+import {achievementsWatchers} from '@store/modules/Achievements/sagas';
+import {analyticsWatchers} from '@store/modules/Analytics/sagas';
+import {appCommonWatchers} from '@store/modules/AppCommon/sagas';
+import {appUpdateWatchers} from '@store/modules/AppUpdate/sagas';
+import {backgroundTasksWatchers} from '@store/modules/BackgroundTasks/sagas';
+import {collectionsWatchers} from '@store/modules/Collections/sagas';
+import {teamWatchers} from '@store/modules/Contacts/sagas';
+import {devicesWatchers} from '@store/modules/Devices/sagas';
+import {inAppNotificationsWatchers} from '@store/modules/InAppNotifications/sagas';
+import {linkingWatchers} from '@store/modules/Linking/sagas';
+import {newsWatchers} from '@store/modules/News/sagas';
+import {notificationsWatchers} from '@store/modules/Notifications/sagas';
+import {permissionsWatchers} from '@store/modules/Permissions/sagas';
+import {pushNotificationsWatchers} from '@store/modules/PushNotifications/sagas';
+import {rateAppWatchers} from '@store/modules/RateApp/sagas';
+import {referralsWatchers} from '@store/modules/Referrals/sagas';
+import {statsWatchers} from '@store/modules/Stats/sagas';
+import {statusNoticeWatchers} from '@store/modules/StatusNotice/sagas';
+import {tokenomicsWatchers} from '@store/modules/Tokenomics/sagas';
+import {usersWatchers} from '@store/modules/Users/sagas';
+import {validationWatchers} from '@store/modules/Validation/sagas';
+import {walkthroughWatchers} from '@store/modules/Walkthrough/sagas';
 import {AppState} from 'react-native';
 import {SagaIterator} from 'redux-saga';
 import {all, call, cancel, spawn, take} from 'redux-saga/effects';
 
-import {rootBackgroundTasksSaga} from './modules/BackgroundTasks/sagas';
+const watchers = [
+  ...authWatchers,
+  ...newsWatchers,
+  ...statsWatchers,
+  ...analyticsWatchers,
+  ...permissionsWatchers,
+  ...referralsWatchers,
+  ...collectionsWatchers,
+  ...teamWatchers,
+  ...validationWatchers,
+  ...devicesWatchers,
+  ...linkingWatchers,
+  ...pushNotificationsWatchers,
+  ...appCommonWatchers,
+  ...usersWatchers,
+  ...tokenomicsWatchers,
+  ...statusNoticeWatchers,
+  ...rateAppWatchers,
+  ...walkthroughWatchers,
+  ...achievementsWatchers,
+  ...appUpdateWatchers,
+  ...notificationsWatchers,
+  ...inAppNotificationsWatchers,
+  ...backgroundTasksWatchers,
+];
 
 export function* rootSaga(): SagaIterator {
-  const sagas = [
-    rootAuthSaga,
-    rootNewsSaga,
-    rootStatsSaga,
-    rootAnalyticsSaga,
-    rootPermissionsSaga,
-    rootReferralsSaga,
-    rootCollectionsSaga,
-    rootTeamSaga,
-    rootValidationSaga,
-    rootDevicesSaga,
-    rootLinkingSaga,
-    rootPushNotificationsSaga,
-    rootAppCommonSaga,
-    rootUsersSaga,
-    rootTokenomicsSaga,
-    rootStatusNoticeSaga,
-    rootRateAppSaga,
-    rootWalkthroughSaga,
-    rootAchievementsSaga,
-    rootAppUpdateSaga,
-    rootNotificationsSaga,
-    rootInAppNotificationsSaga,
-    rootBackgroundTasksSaga,
-  ];
-  const spawnedSagas = yield all([
-    ...sagas.map(saga =>
-      spawn(function* () {
+  const spawnedWatchers = yield all([
+    ...watchers.map(watcher => {
+      return spawn(function* () {
         while (true) {
           try {
-            yield call(saga);
+            yield call(function* () {
+              yield watcher;
+            });
             break;
           } catch (error) {
             if (shouldLog(error)) {
@@ -71,8 +73,8 @@ export function* rootSaga(): SagaIterator {
             }
           }
         }
-      }),
-    ),
+      });
+    }),
   ]);
   /**
    * Restarting sagas on logout to prevent cases
@@ -80,7 +82,7 @@ export function* rootSaga(): SagaIterator {
    * to the store after logout happened
    */
   yield take(AccountActions.SIGN_OUT.SUCCESS.type);
-  yield cancel(spawnedSagas);
+  yield cancel(spawnedWatchers);
   yield call(rootSaga);
 }
 

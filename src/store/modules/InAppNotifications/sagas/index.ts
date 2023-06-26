@@ -7,34 +7,32 @@ import {addMockedAnnouncementsSaga} from '@store/modules/InAppNotifications/saga
 import {addMockedInAppNotificationsSaga} from '@store/modules/InAppNotifications/sagas/addMockedInAppNotificationsSaga';
 import {loadInAppNotificationsSaga} from '@store/modules/InAppNotifications/sagas/loadInAppNotificationsSaga';
 import {removeInAppNotificationsSaga} from '@store/modules/InAppNotifications/sagas/removeInAppNotificationsSaga';
-import {all, takeLeading} from 'redux-saga/effects';
+import {takeLeading} from 'redux-saga/effects';
 
-export function* rootInAppNotificationsSaga() {
-  yield all([
-    takeLeading(
-      InAppNotificationActions.IN_APP_NOTIFICATIONS_LOAD.START.type,
-      loadInAppNotificationsSaga,
-    ),
-    takeLeading(
-      InAppNotificationActions.REMOVE_IN_APP_NOTIFICATIONS.START.type,
-      removeInAppNotificationsSaga,
-    ),
-    takeLeading(
-      InAppNotificationActions.ADD_IN_APP_MOCKED_NOTIFICATIONS.STATE.type,
-      addMockedInAppNotificationsSaga,
-    ),
-    takeLeading(
-      InAppNotificationActions.ADD_MOCKED_ANNOUNCEMENTS.STATE.type,
-      addMockedAnnouncementsSaga,
-    ),
-    takeLeading(
-      InAppNotificationActions.ADD_IN_APP_NOTIFICATIONS_AND_ANNOUNCEMENTS.STATE
-        .type,
-      addMockedAllActivitiesSaga,
-    ),
-    takeLeading(
-      InAppNotificationActions.IN_APP_NOTIFICATIONS_ADD.STATE.type,
-      addInAppNotificationsSaga,
-    ),
-  ]);
-}
+export const inAppNotificationsWatchers = [
+  takeLeading(
+    InAppNotificationActions.IN_APP_NOTIFICATIONS_LOAD.START.type,
+    loadInAppNotificationsSaga,
+  ),
+  takeLeading(
+    InAppNotificationActions.REMOVE_IN_APP_NOTIFICATIONS.START.type,
+    removeInAppNotificationsSaga,
+  ),
+  takeLeading(
+    InAppNotificationActions.ADD_IN_APP_MOCKED_NOTIFICATIONS.STATE.type,
+    addMockedInAppNotificationsSaga,
+  ),
+  takeLeading(
+    InAppNotificationActions.ADD_MOCKED_ANNOUNCEMENTS.STATE.type,
+    addMockedAnnouncementsSaga,
+  ),
+  takeLeading(
+    InAppNotificationActions.ADD_IN_APP_NOTIFICATIONS_AND_ANNOUNCEMENTS.STATE
+      .type,
+    addMockedAllActivitiesSaga,
+  ),
+  takeLeading(
+    InAppNotificationActions.IN_APP_NOTIFICATIONS_ADD.STATE.type,
+    addInAppNotificationsSaga,
+  ),
+];
