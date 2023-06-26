@@ -123,7 +123,6 @@
     "logInSignUp": "Log in / Sign up",
     "phone": "Phone",
     "or": "or",
-    "reset_password": "Reset password",
     "welcome": "Welcome to ice",
     "email": "Email",
     "slogan": "The Global Currency Reset",
@@ -638,9 +637,7 @@
     "wrong_email": "Wrong email?",
     "check_email": "Check your email",
     "emailed_link_to": "We emailed a magic link to",
-    "emailed_steps_to": "We emailed the steps to",
     "link_instruction": "Click the link to log in or sign up.",
-    "reset_link_instruction": "Click the link to reset your password.",
     "modify_title": "Confirm New Email",
     "modify_description": "Please enter your new email address."
   },

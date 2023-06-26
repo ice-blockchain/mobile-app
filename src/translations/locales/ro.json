@@ -131,7 +131,6 @@
     "logInSignUp": "Log In / Înregistrare",
     "phone": "Telefon",
     "or": "sau",
-    "reset_password": "Reseteaza parola",
     "welcome": "Bun venit la gheață",
     "email": "E-mail",
     "slogan": "Resetarea monedei globale",
@@ -649,9 +648,7 @@
     "wrong_email": "Email gresit?",
     "check_email": "Verifica-ti email-ul",
     "emailed_link_to": "Am trimis prin e-mail un link magic către",
-    "emailed_steps_to": "Am trimis pașii prin e-mail către",
     "link_instruction": "Faceți clic pe link pentru a vă autentifica sau pentru a vă înscrie.",
-    "reset_link_instruction": "Faceți clic pe link pentru a vă reseta parola.",
     "modify_title": "Confirmați e-mailul nou",
     "modify_description": "Vă rugăm să introduceți noua adresă de e-mail"
   },

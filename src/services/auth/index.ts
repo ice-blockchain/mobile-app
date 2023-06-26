@@ -124,10 +124,6 @@ export const signInWithEmailAndPassword = async (
   }
 };
 
-export const sendPasswordResetEmail = (emailLink: string) => {
-  return auth().sendPasswordResetEmail(emailLink);
-};
-
 export const isUpdateEmailLink = (url: URL) => {
   const link = url.searchParams.get('link');
   if (link) {

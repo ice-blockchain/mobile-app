@@ -79,7 +79,6 @@ export type Translations = {
   'signIn.logInSignUp': null;
   'signIn.phone': null;
   'signIn.or': null;
-  'signIn.reset_password': null;
   'signIn.welcome': null;
   'signIn.email': null;
   'signIn.slogan': null;
@@ -444,9 +443,7 @@ export type Translations = {
   'confirm_email.wrong_email': null;
   'confirm_email.check_email': null;
   'confirm_email.emailed_link_to': null;
-  'confirm_email.emailed_steps_to': null;
   'confirm_email.link_instruction': null;
-  'confirm_email.reset_link_instruction': null;
   'confirm_email.modify_title': null;
   'confirm_email.modify_description': null;
   'invalid_link.title': null;

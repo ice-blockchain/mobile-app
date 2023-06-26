@@ -9,14 +9,11 @@ import {
   isPhoneNumberAuthEnabled,
 } from '@constants/featureFlags';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
-import {AuthStackParamList} from '@navigation/Auth';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {RouteProp, useRoute} from '@react-navigation/native';
 import {Header} from '@screens/AuthFlow/SignIn/components/Header';
 import {SocialButtons} from '@screens/AuthFlow/SignIn/components/SocialButtons';
 import {SOCIAL_BUTTON_SIZE} from '@screens/AuthFlow/SignIn/components/SocialButtons/components/SocialButton';
 import {Tab, Tabs} from '@screens/AuthFlow/SignIn/components/Tabs';
-import {ResetPasswordForm} from '@screens/AuthFlow/SignIn/forms/ResetPasswordForm';
 import {SignInEmailLinkForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailLinkForm';
 import {SignInEmailPasswordForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailPasswordForm';
 import {SignInPhoneForm} from '@screens/AuthFlow/SignIn/forms/SignInPhoneForm';
@@ -28,9 +25,6 @@ import {rem} from 'rn-units';
 export const SignIn = () => {
   useFocusStatusBar({style: 'light-content'});
 
-  const {params} = useRoute<RouteProp<AuthStackParamList, 'SignIn'>>();
-  const isResetPassword = params?.flow === 'resetPassword';
-
   const {scrollRef} = useScrollEndOnKeyboardShown();
 
   const {isSocialAuthLoading} = useSocialAuth();
@@ -38,10 +32,6 @@ export const SignIn = () => {
   const [activeTab, setActiveTab] = useState<Tab>('email');
 
   const Form = useMemo(() => {
-    if (isResetPassword) {
-      return ResetPasswordForm;
-    }
-
     if (activeTab === 'phone') {
       return SignInPhoneForm;
     }
@@ -51,7 +41,7 @@ export const SignIn = () => {
     } else {
       return SignInEmailPasswordForm;
     }
-  }, [activeTab, isResetPassword]);
+  }, [activeTab]);
 
   return (
     <KeyboardAvoider keyboardVerticalOffset={rem(15) - SOCIAL_BUTTON_SIZE}>
@@ -66,15 +56,13 @@ export const SignIn = () => {
           <Tabs
             onSelect={setActiveTab}
             selected={activeTab}
-            hiddenTab={
-              isResetPassword || !isPhoneNumberAuthEnabled ? 'phone' : null
-            }
+            hiddenTab={!isPhoneNumberAuthEnabled ? 'phone' : null}
             containerStyle={styles.tabs}
           />
           <View style={styles.form}>
             <Form />
           </View>
-          {!isResetPassword && <SocialButtons />}
+          <SocialButtons />
         </View>
         <PrivacyTerms containerStyle={styles.privacy} />
       </ScrollView>
