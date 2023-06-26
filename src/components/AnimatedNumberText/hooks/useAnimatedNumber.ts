@@ -10,7 +10,14 @@ import {
   withTiming,
 } from 'react-native-reanimated';
 
-export function useAnimatedNumber(value: number) {
+export type AnimationOptions = {
+  duration?: number;
+};
+
+export function useAnimatedNumber(
+  value: number,
+  {duration = 1500}: AnimationOptions = {},
+) {
   const sharedValue = useSharedValue<number>(0);
 
   const [animatedValue, setAnimatedValue] = useState(0);
@@ -34,10 +41,10 @@ export function useAnimatedNumber(value: number) {
 
   useEffect(() => {
     sharedValue.value = withTiming(value, {
-      duration: 1500,
+      duration,
       easing: Easing.in(Easing.quad),
     });
-  }, [sharedValue, value]);
+  }, [sharedValue, value, duration]);
 
   return animatedValue;
 }

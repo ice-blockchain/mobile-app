@@ -3,20 +3,25 @@
 import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {commonStyles} from '@constants/styles';
-import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
-import {formatNumberString, parseNumber} from '@utils/numbers';
+import {usePredictedBalanceUpdate} from '@screens/HomeFlow/Home/components/Pager/components/Wallet/components/TotalBalanceValue/hooks/usePredictedBalanceUpdate';
+import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {useCallback} from 'react';
 import {StyleProp, StyleSheet, TextStyle} from 'react-native';
-import {useSelector} from 'react-redux';
 
 interface Props {
   style?: StyleProp<TextStyle>;
   darkMode?: boolean;
 }
 
+const UPDATE_INTERVAL_MS = 1000;
+
+const animationOptions = {duration: UPDATE_INTERVAL_MS};
+
 export const TotalBalanceValue = ({style, darkMode}: Props) => {
-  const balanceSummary = useSelector(balanceSummarySelector);
+  const {predictedBalance} = usePredictedBalanceUpdate({
+    updateInterval: UPDATE_INTERVAL_MS,
+  });
 
   const NumberComponent = useCallback(
     ({animatedValue}) => {
@@ -37,10 +42,15 @@ export const TotalBalanceValue = ({style, darkMode}: Props) => {
     [darkMode, style],
   );
 
+  if (predictedBalance == null) {
+    return null;
+  }
+
   return (
     <AnimatedNumberText
-      value={parseNumber(balanceSummary?.total ?? '0')}
+      value={predictedBalance}
       NumberComponent={NumberComponent}
+      animationOptions={animationOptions}
     />
   );
 };
