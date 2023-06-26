@@ -6,7 +6,7 @@ import {commonStyles} from '@constants/styles';
 import {usePredictedBalanceUpdate} from '@screens/HomeFlow/Home/components/Pager/components/Wallet/components/TotalBalanceValue/hooks/usePredictedBalanceUpdate';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
-import React, {useCallback, useMemo} from 'react';
+import React, {useCallback} from 'react';
 import {StyleProp, StyleSheet, TextStyle} from 'react-native';
 
 interface Props {
@@ -15,6 +15,8 @@ interface Props {
 }
 
 const UPDATE_INTERVAL_MS = 1000;
+
+const animationOptions = {duration: UPDATE_INTERVAL_MS};
 
 export const TotalBalanceValue = ({style, darkMode}: Props) => {
   const {predictedBalance} = usePredictedBalanceUpdate({
@@ -40,9 +42,7 @@ export const TotalBalanceValue = ({style, darkMode}: Props) => {
     [darkMode, style],
   );
 
-  const animationOptions = useMemo(() => ({duration: UPDATE_INTERVAL_MS}), []);
-
-  if (predictedBalance === null) {
+  if (predictedBalance == null) {
     return null;
   }
 
