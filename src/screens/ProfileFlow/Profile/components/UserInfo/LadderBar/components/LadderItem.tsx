@@ -110,7 +110,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: rem(10),
     borderRadius: rem(14),
     height: rem(61),
-    // backgroundColor: 'red',
     justifyContent: 'flex-end',
   },
   editModeContainer: {
@@ -120,7 +119,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     height: rem(26),
-    marginTop: rem(4),
   },
   hiddenView: {
     marginTop: rem(4),
@@ -140,11 +138,11 @@ const styles = StyleSheet.create({
     ...font(20, 24, 'bold', 'primaryDark'),
   },
   ladderLabelText: {
-    marginHorizontal: rem(2),
+    marginHorizontal: rem(4),
     ...font(10, 12, 'regular', 'periwinkleGray', 'center'),
   },
   ladderLabelTextPrivacyEdit: {
-    marginHorizontal: rem(2),
+    marginHorizontal: rem(4),
     ...font(10, 12, 'regular', 'periwinkleGray', 'center'),
   },
 });
