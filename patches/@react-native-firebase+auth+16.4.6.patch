@@ -3,22 +3,6 @@ Might be removed when any of the similar PR's are merged:
 https://github.com/invertase/react-native-firebase/pull/7187
 https://github.com/invertase/react-native-firebase/pull/7019
 
-diff --git a/node_modules/@react-native-firebase/auth/android/src/main/java/.DS_Store b/node_modules/@react-native-firebase/auth/android/src/main/java/.DS_Store
-new file mode 100644
-index 0000000..762a87e
-Binary files /dev/null and b/node_modules/@react-native-firebase/auth/android/src/main/java/.DS_Store differ
-diff --git a/node_modules/@react-native-firebase/auth/android/src/main/java/io/.DS_Store b/node_modules/@react-native-firebase/auth/android/src/main/java/io/.DS_Store
-new file mode 100644
-index 0000000..89c160b
-Binary files /dev/null and b/node_modules/@react-native-firebase/auth/android/src/main/java/io/.DS_Store differ
-diff --git a/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/.DS_Store b/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/.DS_Store
-new file mode 100644
-index 0000000..8408309
-Binary files /dev/null and b/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/.DS_Store differ
-diff --git a/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/firebase/.DS_Store b/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/firebase/.DS_Store
-new file mode 100644
-index 0000000..2b34d22
-Binary files /dev/null and b/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/firebase/.DS_Store differ
 diff --git a/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/firebase/auth/ReactNativeFirebaseAuthModule.java b/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/firebase/auth/ReactNativeFirebaseAuthModule.java
 index c79417f..711b289 100644
 --- a/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/firebase/auth/ReactNativeFirebaseAuthModule.java
