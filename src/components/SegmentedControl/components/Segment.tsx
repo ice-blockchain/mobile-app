@@ -31,7 +31,8 @@ export const Segment = ({segment, active, style, onPress}: Props) => {
           style={[
             styles.text,
             active ? styles.activeText : styles.inactiveText,
-          ]}>
+          ]}
+          numberOfLines={2}>
           {segment.text ?? ''}
         </Text>
       )}
@@ -44,10 +45,12 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
+    paddingVertical: rem(8),
   },
   text: {
-    marginTop: rem(4),
+    marginVertical: rem(4),
     ...font(17, 20, 'semibold'),
+    textAlign: 'center',
   },
   activeText: {
     color: COLORS.white,
