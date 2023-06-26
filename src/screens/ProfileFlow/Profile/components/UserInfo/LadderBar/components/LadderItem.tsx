@@ -4,6 +4,7 @@ import {HiddenProfileElement} from '@api/user/types';
 import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {LADDER_ITEM_WIDTH} from '@screens/ProfileFlow/Profile/components/UserInfo/LadderBar';
 import {useUpdateHiddenProfileElements} from '@store/modules/Account/hooks/useUpdateHiddenProfileElements';
 import {ClosedEye} from '@svg/ClosedEye';
 import {font} from '@utils/styles';
@@ -99,6 +100,7 @@ const styles = StyleSheet.create({
   outerContainer: {
     padding: rem(8),
     borderRadius: rem(16),
+    width: LADDER_ITEM_WIDTH,
   },
   editModeOuterContainer: {
     backgroundColor: COLORS.white02opacity,
@@ -107,7 +109,9 @@ const styles = StyleSheet.create({
     paddingVertical: rem(8),
     paddingHorizontal: rem(10),
     borderRadius: rem(14),
-    minWidth: rem(80),
+    height: rem(61),
+    // backgroundColor: 'red',
+    justifyContent: 'flex-end',
   },
   editModeContainer: {
     backgroundColor: COLORS.white,
@@ -116,6 +120,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     height: rem(26),
+    marginTop: rem(4),
   },
   hiddenView: {
     marginTop: rem(4),
@@ -135,11 +140,11 @@ const styles = StyleSheet.create({
     ...font(20, 24, 'bold', 'primaryDark'),
   },
   ladderLabelText: {
-    marginHorizontal: rem(4),
+    marginHorizontal: rem(2),
     ...font(10, 12, 'regular', 'periwinkleGray', 'center'),
   },
   ladderLabelTextPrivacyEdit: {
-    marginHorizontal: rem(4),
+    marginHorizontal: rem(2),
     ...font(10, 12, 'regular', 'periwinkleGray', 'center'),
   },
 });

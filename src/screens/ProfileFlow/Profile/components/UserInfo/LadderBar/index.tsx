@@ -12,7 +12,12 @@ import {t} from '@translations/i18n';
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {useSelector} from 'react-redux';
-import {rem} from 'rn-units';
+import {rem, screenWidth} from 'rn-units';
+
+const LADDER_ITEMS_COUNT = 3;
+const LADDER_CONTAINER_SIDE_OFFSET = rem(32);
+const LADDER_WIDTH = screenWidth - LADDER_CONTAINER_SIDE_OFFSET * 2;
+export const LADDER_ITEM_WIDTH = LADDER_WIDTH / LADDER_ITEMS_COUNT;
 
 type Props = {
   isProfilePrivacyEditMode?: boolean;
@@ -80,7 +85,8 @@ export const LadderBar = memo(
 const styles = StyleSheet.create({
   ladder: {
     flexDirection: 'row',
-    paddingHorizontal: rem(32),
+    marginLeft: LADDER_CONTAINER_SIDE_OFFSET,
     justifyContent: 'space-between',
+    width: LADDER_WIDTH,
   },
 });
