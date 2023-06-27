@@ -17,8 +17,14 @@ interface Props {
 }
 
 export const AnimatedNumberText = memo(
-  ({value, textDecorator = formatNumber, NumberComponent, style}: Props) => {
-    const animatedValue = useAnimatedNumber(value);
+  ({
+    value,
+    textDecorator = formatNumber,
+    NumberComponent,
+    style,
+    animationOptions,
+  }: Props) => {
+    const animatedValue = useAnimatedNumber(value, animationOptions);
 
     if (NumberComponent) {
       return <NumberComponent animatedValue={animatedValue} />;
