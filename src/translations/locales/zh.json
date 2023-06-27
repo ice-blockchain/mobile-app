@@ -1,787 +1,841 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "欢迎来到 ice",
+      "description": "[[:ice]] 是一种可以通过手机赚取收益的数字货币。ice 由像您一样的日常用户拥有并运营。"
     },
     "page2": {
-      "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "title": "环境友善",
+      "description": "[[:ice]] 本质上比 BTC 更节能，因为它使用“权益证明”共识机制。通过权益证明 (POS)，加密货币持有者根据验证者权益的硬币数量来验证区块交易。"
     },
     "page3": {
-      "title": "People’s Coin",
-      "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "title": "人民的硬币",
+      "description_part1": "权力掌握在您的手中。",
+      "description_part2": "[[:ice]] 开发的一切内容都将完全开源，并由分散式自治组织 (DAO) 控制。"
     },
     "page4": {
-      "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "title": "保持联系",
+      "description": "使用我们免费的节能移动应用，点击 [[:iceLogo]] 即可完成每日签到。每日点击签到可确保 ice 由真人操作，而不是机器人。"
     },
     "page5": {
-      "title": "Refer & Earn",
-      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
+      "title": "推荐并赚取收益",
+      "description": "邀请好友，每有一位好友加入您的团队，即可获得最高 25% 的基准收益率奖励。"
     },
     "page6": {
-      "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
-      "description_part2": "Don’t worry, we will not spam you!",
-      "not_now": "Not now"
+      "title": "通知",
+      "description_part1": "[[:ice]] 签到会话仅持续 24 小时。是否希望在当前签到会话结束时收到通知?",
+      "description_part2": "别担心，我们不会向您发送垃圾邮件！",
+      "not_now": "以后再说"
     }
   },
   "button": {
-    "yes_btn": "Yes, please",
-    "next_btn": "Next",
-    "not_now": "Not now",
-    "view_all": "view all",
+    "yes_btn": "是，确定",
+    "next_btn": "下一步",
+    "not_now": "以后再说",
+    "view_all": "查看全部",
     "invite_friend": {
-      "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "title": "邀请好友",
+      "description": "邀请好友即可额外赚取 [[:ice]]。"
     },
-    "no": "No",
-    "search_country": "Search for country",
-    "save": "Save",
-    "yes": "Yes",
-    "change": "Change",
-    "no_cancel": "No, cancel",
-    "complete": "Complete",
-    "cancel": "Cancel",
-    "clear": "Clear",
-    "finish": "Finish",
-    "next_step": "Next Step",
-    "see_all": "see all",
-    "back": "Back",
-    "search": "Search",
-    "continue": "Continue",
-    "apply": "Apply",
-    "reset": "Reset",
-    "skip_all": "Skip all",
-    "done": "Done",
-    "confirm": "Confirm",
-    "do_this_later": "Do this later",
-    "resurrect_me": "Resurrect Me",
-    "claim_bonus": "Claim Bonus",
-    "close": "Close",
-    "try_again": "Try Again",
-    "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "see_all": "查看全部",
+    "no": "否",
+    "search_country": "搜索国家/地区",
+    "save": "保存",
+    "yes": "是",
+    "change": "更改",
+    "no_cancel": "否，取消",
+    "complete": "完成",
+    "cancel": "取消",
+    "clear": "清除",
+    "finish": "完成",
+    "next_step": "下一步",
+    "back": "返回",
+    "search": "搜索",
+    "continue": "继续",
+    "apply": "应用",
+    "reset": "重置",
+    "skip_all": "全部跳过",
+    "done": "完成",
+    "confirm": "确认",
+    "do_this_later": "稍后执行此操作",
+    "resurrect_me": "复活我",
+    "claim_bonus": "领取奖金",
+    "close": "关闭",
+    "try_again": "重试",
+    "view_changelog": "查看更新日志",
+    "disable": "禁用",
+    "agree": "我同意",
+    "learn_more": "了解更多",
+    "back_to_login": "返回登录",
+    "follow_us": "关注我们",
+    "subscribe": "订阅"
   },
   "team": {
-    "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
+    "contacts_tab": "联系人",
+    "tierOne_tab": "1 级",
+    "tierTwo_tab": "2 级",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "title": "您目前没有任何 [[:title]] 推荐人！",
+      "contacts": "您当前通讯录中没有任何联系人。",
+      "button_title": "邀请好友"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
-      "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_title": "[[:ice]] 和朋友在一起更好玩",
+      "empty_button_title": "允许访问联系人",
+      "empty_description": "同步您的联系人，查看谁已经注册了 [[:ice]]。将来，您可以向任何联系人发送 ice。"
     },
     "header": {
-      "search_placeholder": "Search for users",
-      "referrals": "Referrals",
-      "earnings": "Earnings"
+      "search_placeholder": "搜索用户",
+      "referrals": "推荐人",
+      "earnings": "收益"
     },
     "confirm_code": {
-      "title": "Confirm Code",
-      "description": "Please enter the confirmation code you have received on your phone.",
-      "placeholder": "Enter the code",
-      "button": "Confirm your code now"
+      "title": "确认验证码",
+      "description": "请输入您在手机上收到的验证码。",
+      "placeholder": "输入验证码",
+      "button": "立即确认您的验证码"
     },
     "confirm_phone": {
-      "title": "Confirm Phone",
-      "description": "Please confirm your country code and enter your phone number."
+      "title": "确认电话号码",
+      "description": "请确认您的国家/地区代码并输入您的电话号码。"
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "friends"
+        "friends": "好友"
       },
-      "all_contacts": "All contacts",
-      "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "all_contacts": "所有联系人",
+      "invite": "邀请",
+      "invitation_text": "{{name}}，您好！我想邀请您加入 ice。"
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier 1 Earnings"
+        "title_earnings": "1 级收益"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier 2 Earnings"
+        "title_earnings": "2 级收益"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
-    "welcome": "Welcome to ice",
-    "email": "Email",
-    "slogan": "Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "logInSignUp": "登录/注册",
+    "phone": "电话",
+    "or": "或",
+    "reset_password": "重置密码",
+    "welcome": "欢迎来到 ice",
+    "email": "电子邮箱",
+    "slogan": "全球货币重置",
+    "privacy": "继续操作即表示您同意我们的[[:link]]服务条款[[/:link]]和[[:link]]隐私政策[[/:link]]"
   },
   "claimUsername": {
-    "title": "Claim nickname",
-    "description": "Your friends will need to use this nickname to join your team",
-    "inputPlaceholder": "Enter your nickname",
-    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
-    "note_part2": "Example:",
+    "title": "申请昵称",
+    "description": "您的好友需要使用此昵称才能加入您的团队。",
+    "inputPlaceholder": "输入您的昵称",
+    "note_part1": "创建昵称时，请仅使用字母、数字和句点。",
+    "note_part2": "示例：",
     "note_example": "your.name01"
   },
   "whoInvitedYou": {
-    "title": "Who invited you?",
-    "description": "Enter the nickname of the person who invited you",
-    "inputPlaceholder": "Enter nickname",
-    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
-    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+    "title": "您的邀请人是谁？",
+    "description": "输入邀请人的昵称。",
+    "inputPlaceholder": "输入昵称",
+    "dontHaveInvitationCode": "完成此步骤后，您和您的朋友同时签到时，均可获得最高 25% 的基准收益率奖励。",
+    "dontHaveCodeTip": "如果您没有邀请码，我们将随机选择一个成员作为您的推荐人！"
   },
   "errors": {
-    "nicknameSize": "Nickname size: 4-20 characters.",
-    "removeInvalidCharacters": "Remove invalid characters.",
-    "validation_error": "Some validation error",
-    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
-    "wrong_phone_number": "Invalid phone number, please try again",
-    "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken",
-    "phone_number_already_in_use": "Phone number already in use",
-    "invalid_validation_code": "Invalid code number, please try again!",
-    "validation_expired": "Validation expired",
-    "validation_not_found": "Validation not found",
-    "invalid_email": "Invalid email",
-    "invalid_ref_username": "Nickname is invalid.",
-    "invalid_phone": "Invalid phone number",
-    "user_disabled": "User has been disabled",
-    "expired_action_code": "OTP in email link is expired",
-    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
-    "invalid_credential": "The credential is malformed or has expired",
-    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
-    "user_not_found_for_email": "There is no user corresponding to the given email",
-    "user_not_found": "User not found",
-    "auth_in_progress": "Sign-In already in progress",
-    "google_play_services_not_available": "Google Play services are not available on the device",
-    "unknown_error_with_code": "Unknown error {{code}}",
-    "no_such_provider": "You do not have this provider linked",
-    "min_username": "Minimum length is 4 characters.",
-    "max_username": "Maximum length is 30 characters.",
-    "code_expired": "The code has expired. Please ask for a new code.",
-    "too_many_requests": "Too many requests. Please try again later.",
-    "network_error_title": "No internet connection",
-    "network_error_message": "Your device does not have any active internet connection",
-    "unknown_error": "Some error occurred, please try again later",
-    "general_error_title": "Oups...",
-    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
-    "general_network_error": "A network error has occurred. Please check your connection.",
-    "credential_already_in_use": "This credential is already associated with a different user account.",
-    "email_already_in_use": "The email address is already in use by another account.",
-    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
-    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "nicknameSize": "昵称大小：4-20 个字符。",
+    "removeInvalidCharacters": "删除无效字符。",
+    "validation_error": "验证错误。",
+    "multiple_accounts": "电子邮箱/电话号码与另一个帐户关联。请登录该帐户以证明所有权，然后注销并重新登录此帐户。如果您不拥有或无法登录该帐户，请联系我们的支持人员。",
+    "wrong_phone_number": "电话号码无效，请重试。",
+    "invalid_username": "昵称无效。",
+    "email_already_taken": "电子邮箱已被占用。",
+    "phone_number_already_taken": "电话号码已被占用。",
+    "invalid_validation_code": "验证码无效，请重试！",
+    "validation_expired": "验证码已过期",
+    "validation_not_found": "找不到验证码",
+    "invalid_email": "电子邮箱无效。",
+    "invalid_password": "密码无效。",
+    "invalid_ref_username": "昵称无效。",
+    "invalid_phone": "电话号码无效。",
+    "user_disabled": "用户已被禁用。",
+    "expired_action_code": "电子邮箱链接中的一次性密码已过期。",
+    "account_exists_with_different_credential": "已存在具有凭据声称的电子邮箱地址的帐户。",
+    "invalid_credential": "凭据格式不正确或已过期。",
+    "operation_not_allowed": "未启用与凭据对应的帐户类型。",
+    "user_not_found_for_email": "没有与给定电子邮箱对应的用户。",
+    "user_not_found": "未找到用户。",
+    "auth_in_progress": "登录已在进行中。",
+    "google_play_services_not_available": "Google Play 服务在此设备上不可用。",
+    "unknown_error_with_code": "未知错误： {{code}}",
+    "no_such_provider": "您未关联此提供商。",
+    "min_username": "最小长度为 4 个字符。",
+    "max_username": "最大长度为 30 个字符。",
+    "code_expired": "验证码已过期，请索取新验证码。",
+    "too_many_requests": "请求太多，请稍后重试。",
+    "network_error_title": "无 Internet 连接",
+    "network_error_message": "您的设备没有任何有效的 Internet 连接。",
+    "unknown_error": "发生错误，请稍后再试。",
+    "general_error_title": "哎呀...",
+    "general_error_message": "出了点问题。我们的团队正在努力修复。",
+    "general_network_error": "发生网络错误，请检查您的连接。",
+    "credential_already_in_use": "这些凭据已与其他用户帐户关联。",
+    "email_already_in_use": "该电子邮箱地址已被其他帐户使用。",
+    "user_token_expired": "您的凭据已失效，请重新登录。",
+    "requires_recent_login": "此操作很敏感，需要最近的身份验证。请重新登录。",
+    "same_email": "您不能使用同一个电子邮箱。",
+    "weak_password": "弱密码。",
+    "wrong_password": "密码错误。",
+    "no_camera_permissions": "未授予相机权限。",
+    "no_library_permissions": "未授予照片库权限。"
   },
   "profile": {
     "my_roles": {
-      "title": "My Role"
+      "title": "我的角色"
     },
-    "mining_calculator": "earnings calculator",
-    "invite_friends": "Invite Friends",
-    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
-    "global_rank": "global rank",
-    "view_all_roles": "view all roles",
-    "data_is_hidden": "data is hidden",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "收益计算器",
+    "invite_friends": "邀请好友",
+    "invite_friends_engage": "宣传并邀请您的朋友。推荐越多，您赚的就越多！",
+    "global_rank": "全球排名",
+    "view_all_roles": "查看所有角色",
+    "data_is_hidden": "数据已隐藏",
+    "progress_text": "{{value}}/{{total}}",
     "not_found": {
-      "title": "User was not found",
-      "description": "oops, we couldn't find this user"
+      "title": "未找到用户",
+      "description": "糟糕，我们未找到此用户。"
     },
     "my_badges": {
-      "title": "My Badges"
+      "title": "我的徽章"
     },
     "badges": {
-      "title": "Badges"
+      "title": "徽章"
     },
     "roles": {
-      "title": "Roles"
+      "title": "角色"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "硬币",
+        "description": "硬币"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "社交",
+        "description": "好友"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "等级",
+        "description": "等级"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update",
-    "comingSoon": "Coming soon",
+    "level": "等级",
+    "referrals": "推荐人",
+    "coin": "硬币",
+    "social": "社交",
+    "phone_number": "电话号码",
+    "years": "年",
+    "of": "/",
+    "attention": "注意",
+    "email_address": "电子邮箱地址",
+    "password": "密码",
+    "data_hidden": "数据已隐藏",
+    "pull_to_refresh": "下拉刷新",
+    "comingSoon": "即将推出",
     "date": {
-      "today": "Today"
+      "today": "今天"
     }
   },
   "mining_calculator": {
-    "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "result_label": "您将赚取",
+    "active_inviter": "有效邀请人",
+    "tier_1_ref": "1 级推荐人",
+    "tier_2_ref": "2 级推荐人",
+    "active_miners": "有效推荐人"
   },
   "home": {
     "wallet": {
-      "title": "WALLET",
-      "rate": "EARNING RATE",
-      "balance": "CURRENT BALANCE"
+      "title": "钱包",
+      "rate": "收益率",
+      "balance": "当前余额"
     },
     "pioneer": {
-      "title": "PIONEER",
-      "rank": "GLOBAL RANK",
-      "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "rank": "全球排名",
+      "referrals": "推荐人",
+      "description": "推荐越多，赚的 [[:ice]] 就越多。"
     },
     "referrals": {
-      "title": "REFERRALS",
-      "description": "Referral stats for the previous 5 days",
-      "no_referrals_description": "You don't have any referrals yet",
-      "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "title": "推荐人",
+      "description": "前 5 天推荐人统计数据。",
+      "no_referrals_description": "您还没有任何推荐人。",
+      "users_tier_1": "用户等级 1",
+      "users_tier_2": "用户等级 2"
     },
     "adoption": {
-      "title": "ADOPTION",
-      "level": "level",
-      "users": "\nusers"
+      "title": "采用率",
+      "level": "等级",
+      "users": "用户"
     },
-    "steps": {
-      "title": "Your progress",
-      "description": "Complete the tasks below and level up!",
-      "step_one": {
-        "title": "Claim your nickname",
-        "description": "Set it and start earning from your invite"
+    "tasks": {
+      "achievements": "成就",
+      "title": "您的进度",
+      "description": "完成以下任务并升级！",
+      "completed": {
+        "title": "恭喜",
+        "description": "坚持每天签到，赢取额外奖励！"
       },
-      "step_two": {
-        "title": "Start mining",
-        "description": "Your first mining session"
+      "popup": {
+        "title": "加入我们的 Telegram 频道",
+        "description": "指定您在 Telegram 上使用的昵称。",
+        "placeholder": "昵称"
       },
-      "step_three": {
-        "title": "Profile picture",
-        "description": "Upload your profile image"
+      "claim_username": {
+        "title": "申请昵称",
+        "description": "设置并与您的朋友分享该昵称。"
       },
-      "step_four": {
-        "title": "Join Telegram",
-        "description": "Be part of our community and join now"
+      "start_mining": {
+        "title": "开始赚取收益",
+        "description": "您的第一次签到会话。"
       },
-      "step_five": {
-        "title": "Follow us on Twitter",
-        "description": "Let’s keep in touch, follow us on twitter"
+      "upload_profile_picture": {
+        "title": "个人资料图片",
+        "description": "上传您的个人资料图片。"
       },
-      "step_six": {
-        "title": "Invite 5 Friends",
-        "description": "Create your team and increase your earnings"
+      "join_telegram": {
+        "title": "加入 Telegram",
+        "description": "成为我们社区的一部分，现在就加入。"
+      },
+      "follow_us_on_twitter": {
+        "title": "在 Twitter 上关注我们",
+        "description": "让我们保持联系，在 Twitter 上关注我们。"
+      },
+      "invite_friends": {
+        "title": "邀请 5 位好友",
+        "description": "发展您的团队并增加您的收益。"
       }
     },
     "overview": {
-      "title": "Overview"
+      "title": "概述"
     },
     "menu": {
-      "notifications": "Notifications",
-      "staking": "Staking",
-      "stats": "Stats",
-      "help": "Help"
-    },
-    "tasks": {
-      "title": "ACHIEVEMENTS"
+      "notifications": "通知",
+      "staking": "质押",
+      "stats": "统计数据",
+      "help": "帮助"
     },
     "team": {
-      "title": "Team",
-      "view_team": "view team"
+      "title": "团队",
+      "view_team": "查看团队"
     },
     "mining_rate": {
-      "title": "EARNING RATE",
-      "base": "Base"
+      "title": "收益率",
+      "base": "基准"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
-      "streak": "STREAK",
-      "days_off": "DAYS OFF"
+      "title": "参与度",
+      "description_part1": "每日打卡指的是您已连续签到的天数。",
+      "description_part2": "每连续签到 6 天，您将获得一天的休息时间。",
+      "streak": "每日打卡",
+      "days_off": "休息日"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "设置",
+    "profile": "个人资料",
+    "legal": "法律",
+    "support": "支持",
+    "personal_information_title": "个人信息",
+    "personal_information_description": "管理您的个人资料详细信息。",
+    "notifications_title": "通知",
+    "notifications_description": "在此处管理您的通知。",
+    "push_notifications_title": "推送通知",
+    "push_notifications_description": "自定义推送通知设置。",
+    "email_notifications_title": "电子邮件通知",
+    "email_notifications_description": "自定义电子邮件通知设置。",
+    "terms_title": "服务条款",
+    "terms_description": "查看我们的服务条款。",
+    "privacy_title": "隐私政策",
+    "privacy_description": "了解我们的隐私政策。",
+    "feedback_title": "发送反馈",
+    "feedback_description": "与我们分享您的想法。",
+    "invite_title": "邀请好友",
+    "invite_description": "邀请好友，赚取额外的 ice。",
+    "delete_title": "删除帐户",
+    "delete_description": "删除您的帐户。",
+    "delete_confirmation_title": "确定要删除该帐户吗？",
+    "delete_confirmation_yes": "是，删除",
+    "logout_title": "注销",
+    "logout_description": "退出并稍等片刻。",
+    "logout_confirmation_title": "您确定要注销吗？",
+    "logout_confirmation_yes": "是，注销",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "确认新电话号码",
+      "description": "请确认您的国家/地区代码并输入新的电话号码。",
+      "button": "确认新电话号码"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
-      "type_push": "PUSH",
-      "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
+      "enable_prompt": "不允许发送通知。是否要启用？",
+      "channel_achievements": "成就",
+      "channel_news": "新闻资讯",
+      "channel_reminders": "提醒",
+      "channel_team": "团队",
+      "type_push": "推送",
+      "type_email": "电子邮箱",
+      "disable_notifications": "禁用通知？",
+      "disable_notifications_description": "禁用通知后，您将无法在可以开始签到时收到更新、新闻或团队信息。",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
+          "title": "每周统计",
+          "description": "接收有关您的活动的通知。"
         },
         "weekly_report": {
-          "title": "Weekly report",
-          "description": "Receive notifications about your activity"
+          "title": "每周报告",
+          "description": "接收有关您的活动的通知。"
         },
         "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
+          "title": "成就",
+          "description": "接收有关您的进度的通知。"
         },
         "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
+          "title": "推广",
+          "description": "接收有关如何发展团队并赚取更多收益的通知。"
         },
         "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
+          "title": "新闻资讯",
+          "description": "接收我们团队的通知。"
         },
         "micro_community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
+          "title": "微社区",
+          "description": "接收有关您团队的通知。"
         },
         "daily_bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
+          "title": "每日奖励",
+          "description": "接收通知以领取您的每日奖励。"
         },
         "mining": {
-          "title": "Session status",
-          "description": "Receive notifications about your check-in activity"
+          "title": "会话状态",
+          "description": "接收有关签到活动的通知。"
         },
         "system": {
-          "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "title": "系统",
+          "description": "接收有关 ice 应用的重要通知。"
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "语言设置",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "更改语言",
+      "prompt": "应用此设置将重新启动应用。"
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "个人资料图片",
+    "inapp_privacy_title": "隐私",
+    "inapp_privacy_description": "在此处管理您的信息。",
+    "developer": "开发人员",
+    "user_id": "用户 ID",
+    "user_token": "用户令牌",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "删除照片",
+      "edit": "编辑个人头像",
+      "photo_gallery": "图片库",
+      "camera": "相机"
     },
-    "confirm_email_confirmation_title": "Confirm email?",
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "确认电子邮箱？",
+    "update_email_confirmation_title": "更新电子邮箱？",
+    "update_email_confirmation_subtitle": "更改您的电子邮箱地址将需要重新登录。确定要继续吗？",
+    "unlink_logins_title": "取消登录链接",
+    "unlink_logins_description": "您可以从此处取消登录链接。"
   },
   "invite_share": {
-    "title": "Invite a friend",
+    "title": "邀请好友",
     "telegram": "Telegram",
     "twitter": "Twitter",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
-    "email": "Email",
-    "fb": "Newsfeed",
-    "sms": "SMS",
-    "copy_link": "Copy link",
-    "more": "More",
-    "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "email": "电子邮箱",
+    "fb": "新闻速递",
+    "sms": "短信",
+    "copy_link": "复制链接",
+    "more": "更多",
+    "copied": "已复制",
+    "share_message": "嗨，☃️ 雪人！加入我的 ice 团队，使用我的推荐码注册即可获得 10 个 ice 硬币：",
+    "share_subject": "加入我的 ice 团队",
+    "description": "宣传并邀请您的朋友。每邀请一位新好友，即可赚取 [[:ice]]。",
+    "share": "分享"
   },
   "users": {
     "ping": "PING",
-    "active": "Active",
-    "inactive": "Inactive",
+    "active": "活跃",
+    "inactive": "不活跃",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T1": "1 级",
+      "T2": "2 级"
     }
   },
   "personal_information": {
-    "first_name": "First name",
-    "last_name": "Last name",
-    "country": "Country",
-    "city": "City",
-    "title": "Personal Information",
-    "phone": "Phone",
-    "email": "Email",
-    "username": "Nickname"
+    "first_name": "名字",
+    "last_name": "姓氏",
+    "country": "国家/地区",
+    "city": "城市",
+    "title": "个人信息",
+    "phone": "电话",
+    "email": "电子邮箱",
+    "username": "昵称"
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
-      "length": "Nickname size: 4-20 characters.",
-      "invalid_characters": "Remove invalid characters.",
-      "not_found": "Nickname not found.",
-      "some_error": "Some error occurred.",
-      "refer_yourself": "You can't refer yourself"
+      "already_taken": "昵称已被占用。",
+      "length": "昵称大小：4-20 个字符。",
+      "invalid_characters": "删除无效字符。",
+      "not_found": "未找到昵称。",
+      "some_error": "发生错误。",
+      "refer_yourself": "推荐人不能是自己。"
     }
   },
   "staking": {
-    "time_left": "Time Left",
-    "mining_rate": "Earning Rate",
-    "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking Bonus",
-    "period_label": "Staked Period",
-    "title": "Pre-Staking",
-    "current_rate": "Current Rate",
-    "allocation": "Allocation",
-    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
-    "staking_terms": "Staking Terms",
-    "stake_now": "Pre-Stake Now!",
-    "balance_label": "Staked balance",
-    "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "time_left": "剩余时间",
+    "mining_rate": "收益率",
+    "appeal": "提高您的收益率",
+    "benefits_description": "预质押您的 ice 奖励长达 5 年，可提高收益率最多 250%。",
+    "bonus_label": "预质押奖金",
+    "period_label": "质押期间",
+    "title": "预质押",
+    "current_rate": "当前收益率",
+    "allocation": "分配",
+    "description": "质押是一个涉及提交您的加密资产以支持区块链网络并确认交易的过程。",
+    "terms_agree": "我同意[[:ice]][[:link]]质押条款[[/:link]]。在选定的时间段内，您的 ice 持有量将被锁定。",
+    "stake_now": "立即预质押！",
+    "balance_label": "质押余额",
+    "confirm_title": "确认预质押",
+    "confirm_subtitle": "您确定要预质押您的硬币吗？确认后，此操作将无法撤消。"
   },
   "stats": {
-    "header_title": "Stats",
-    "active": "Active users",
-    "total": "Total users",
-    "user_growth": "User growth",
-    "top_miners": "Top users",
-    "top_countries": "Top countries",
-    "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "header_title": "统计数据",
+    "active": "活跃用户",
+    "total": "用户总数",
+    "user_growth": "用户增长",
+    "top_miners": "热门用户",
+    "top_countries": "热门国家/地区",
+    "online_miners": "在线用户",
+    "detailed_information": "详细信息"
   },
   "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
+    "title": "请更新",
+    "description": "您正在使用此应用的旧版本，需要更新才能继续使用。",
+    "button_title": "立即更新"
   },
   "general": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
+    "good_morning": "早上好",
+    "good_afternoon": "下午好",
+    "good_evening": "晚上好",
     "ice": "ice",
-    "ice_per_hour": "ice/h",
-    "seconds_short": "s",
-    "minutes_short": "m",
-    "hours_short": "h",
-    "days_short": "d"
+    "ice_per_hour": "ice/小时",
+    "seconds_short": "秒",
+    "minutes_short": "分钟",
+    "hours_short": "小时",
+    "days_short": "天"
   },
   "news": {
-    "news_feed": "News Feed",
-    "read_more": "Read more",
-    "views": "{{viewsCount}} views"
+    "news_feed": "新闻速递",
+    "read_more": "阅读更多内容",
+    "no_more_news": "这是新闻速递的最后一篇文章。",
+    "views": "{{viewsCount}} 次浏览"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
-    "nothing_is_found": "Nothing was found for your query",
-    "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "empty": "搜索联系人、ice 好友和微社区成员。",
+    "nothing_is_found": "无法找到所查找的内容。",
+    "search_by_country": "搜索国家/地区",
+    "search_for_users": "搜索用户",
+    "loading": "正在搜索…"
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tap here to start your first check-in session",
-    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
-    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
-    "mining_holiday_active": "You are using a Day Off!"
+    "mining_inactive_tooltip": "轻触此处开始您的第一次签到会话。",
+    "mining_reset_tooltip": "按 1 秒钟以延长您的签到会话。",
+    "mining_holiday_reset_tooltip": "您正在使用休息日！按 1 秒钟以延长您的签到会话。",
+    "mining_holiday_active": "您正在使用休息日！"
   },
   "invite_friend": {
-    "invite_button": "Invite Friend",
-    "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "invite_button": "邀请好友",
+    "button_title": "邀请好友",
+    "description": "您的好友尚未加入 [[:ice]]。给他发个邀请吧！"
   },
   "balance_history": {
-    "title": "Balance History",
-    "wallet": "Wallet",
-    "blockchain": "Blockchain",
-    "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
-    "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "title": "余额历史记录",
+    "wallet": "钱包",
+    "blockchain": "区块链",
+    "wallet_update_interval": "每小时更新一次",
+    "blockchain_update_interval": "每 24 小时更新一次",
+    "list_end_label": "这是余额历史记录的最后一条。",
+    "no_data": "指定期间内没有要显示的数据。"
   },
   "pop_up": {
-    "update_now": "Update Now",
-    "please_update": "Please Update",
-    "update_now_text": "You are using an old app version and need to update it in order to use it further",
-    "you_are_up_to_date": "You are up to date!",
-    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
-    "resurrection": "Resurrection",
-    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
-    "resurrection_warning": "You can only resurrect one time!",
-    "please_confirm": "Please confirm",
-    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "update_now": "立即更新",
+    "please_update": "请更新",
+    "update_now_text": "您正在使用此应用的旧版本，需要更新才能继续使用。",
+    "you_are_up_to_date": "您已更新至最新版本！",
+    "up_to_date_text": "您现在使用的是最新版本。查看以下所有更改。",
+    "resurrection": "复活",
+    "resurrection_message": "您有一次机会复活并获得您在过去 [[:period]]丢失的 [[:amount]] 枚硬币。",
+    "resurrection_warning": "您只能复活一次！",
+    "please_confirm": "请确认",
+    "resurrection_no_confirm_message": "您将永远失去您的 [[:amount]] 枚硬币。确定要继续吗？",
+    "resurrection_yes_confirm_message": "您只能复活一次！确定要继续吗？[[:amount]] 枚硬币将在一小时内返回您的余额。",
+    "delete_account_confirmation_title": "确认删除",
+    "delete_account_confirmation_text": "删除您的帐户将永久删除您的所有数据，包括您的 ice 余额。要继续吗？"
   },
   "periods": {
-    "3_days": "3 days",
-    "7_days": "7 days",
-    "30_days": "30 days",
-    "1_day": "1 Day",
-    "1_week": "1 Week",
-    "1_month": "1 Month",
-    "90_days": "90 days",
-    "14_days": "14 days"
+    "3_days": "3 天",
+    "7_days": "7 天",
+    "30_days": "30 天",
+    "1_day": "1 天",
+    "1_week": "1 周",
+    "1_month": "1 个月",
+    "90_days": "90 天",
+    "14_days": "14 天"
   },
   "notifications": {
-    "joined": " has joined your team",
-    "multiply": " and {{count}} others have joined your team",
-    "ping": " has pinged you, wake up!",
-    "delete": "Delete",
-    "add_notifications": "Add mocked notifications",
-    "no_notifications": "No notifications to display",
-    "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
-    "clear_title": "Clear all notifications?",
-    "title": "Notifications"
+    "joined": " 已加入您的团队。",
+    "multiply": " 还有 {{count}} 名其他用户已加入您的团队。",
+    "ping": " 给您发送了消息，快来看看吧！",
+    "delete": "删除",
+    "add_notifications": "添加模拟通知",
+    "no_notifications": "没有要显示的通知。",
+    "add_announcements": "添加模拟公告",
+    "add_both": "同时添加模拟通知和公告",
+    "clear_title": "清除所有通知？",
+    "title": "通知"
   },
   "notification_feed_screen": {
-    "yesterday": "Yesterday",
-    "last_week": "Last Week",
-    "this_month": "This month",
-    "last_month": "Last Month",
-    "this_week": "This week"
+    "yesterday": "昨天",
+    "last_week": "上周",
+    "this_month": "本月",
+    "last_month": "上个月",
+    "this_week": "本周"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to hide from public eyes"
+      "title": "1. 您的个人资料统计",
+      "description": "点击您要隐藏在公众视线以外的区块。"
     },
     "step2": {
-      "description": "Tap on this block to hide it from public eyes",
-      "title": "2. Your Current Role"
+      "description": "点击此区块可将其隐藏在公众视线以外。",
+      "title": "2. 您当前的角色"
     },
     "step3": {
-      "title": "3. Your Earned Badges",
-      "description": "Tap here to hide your badges from public eyes"
+      "title": "3. 您已获得的徽章",
+      "description": "点击此处可将您的徽章隐藏在公众视线以外。"
     }
   },
   "confirm_email": {
-    "title": "Confirm your email",
-    "description": "Please enter your email address and we will send code ",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
-    "wrong_email": "Wrong email?",
-    "check_email": "Check your email",
-    "emailed_link_to": "We emailed a magic link to",
-    "link_instruction": "Click the link to log in or sign up.",
-    "modify_title": "Confirm New Email",
-    "modify_description": "Please enter your new email address"
+    "title": "确认您的电子邮箱",
+    "description": "请输入您的电子邮箱地址，我们将发送验证码。",
+    "note": "如果在 5 分钟内没有收到电子邮件，请检查您的垃圾邮件文件夹。",
+    "wrong_email": "电子邮箱错误？",
+    "check_email": "检查您的电子邮箱",
+    "emailed_link_to": "我们通过电子邮件发送了一个神奇的链接",
+    "emailed_steps_to": "我们通过电子邮件将步骤发送至",
+    "link_instruction": "点击链接登录或注册。",
+    "reset_link_instruction": "点击链接重置密码。",
+    "modify_title": "确认新的电子邮箱",
+    "modify_description": "请输入新的电子邮件地址。"
   },
   "invalid_link": {
-    "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "title": "链接无效",
+    "description": "很遗憾，此链接无效，请再次输入您的电子邮箱，我们将向您发送新链接。"
   },
   "confirm_code": {
-    "title": "Confirm code",
-    "description": "Please enter the code sent to",
-    "send_code_again": "Send code again",
-    "resend_time_label": "New code available in ",
-    "enter_code": "Enter the code",
-    "wrong_number": "Wrong number?"
+    "title": "确认验证码",
+    "description": "请输入发送至的验证码",
+    "send_code_again": "再次发送验证码",
+    "resend_time_label": "新的验证码位于 ",
+    "enter_code": "输入验证码",
+    "wrong_number": "号码错误？"
   },
   "ice_bonus": {
-    "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
-    "balance_label": "Your current balance"
+    "title": "欢迎奖励",
+    "description": "恭喜，您收到了第一批 [[:value]] 枚 [[:ice]] 硬币，证明我们对[[:bold]]您的[[/:bold]][[:bold]]信任[[/:bold]]。",
+    "balance_label": "当前余额"
   },
   "country_select": {
-    "title": "Select country"
+    "title": "选择国家/地区"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "雪人",
+      "subtitle": "建立冰雪帝国",
+      "description": "每 24 小时签到一次，以表明您对 ice 网络的承诺，并证明您是人类，而不是机器人。"
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "大使",
+      "subtitle": "冰雪帝国的统治者",
+      "description": "至少 100 人加入您的团队时，您将成为大使。每位大使都可以抢先体验新功能。"
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirm Phone",
-    "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
-    }
+    "modify_title": "确认电话号码",
+    "modify_description": "请确认您的国家/地区代码并输入您的电话号码。",
+    "button": "确认国家/地区和电话号码",
+    "same_phone_error": "您不能使用同一个电话号码。"
   },
   "date_select": {
-    "title": "Choose date"
+    "title": "选择日期"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+      "readmore": {
+        "title": "阅读更多内容",
+        "description": "在这里，您可以看到我们团队的最新消息。点击此按钮阅读全文。"
       },
-      "step_2": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
-      },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
-      },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
-      },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
-      },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
-      },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
-      },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "releasednews": {
+        "title": "已发布的新闻",
+        "description": "点击每个新闻标题并阅读其完整版本。随时了解我们所有的新闻和民意调查。"
       }
     },
     "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      "allow_contacts": {
+        "title": "允许访问联系人",
+        "description": "同步您的联系人，查看谁已经注册了 [[:ice]]。将来，您可以向任何联系人发送 [[:ice]]。"
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "confirm_phone": {
+        "title": "确认电话号码",
+        "description": "确认您的身份，让您的联系人知道您也是 ice 网络的成员。您的电话号码不会与其他第三方共享。"
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "contacts_list": {
+        "title": "联系人列表",
+        "description": "这是包含您所有联系人的列表，已加入 [[:ice]] 网络的联系人将显示在列表的顶部。"
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "referrals": {
+        "title": "推荐人",
+        "description": "在这里，您将看到您总共有多少推荐人。邀请的人越多，您赚的就越多！"
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earnings": {
+        "title": "收益",
+        "description": "您当前的余额每小时更新一次，并显示在此处。包括您的直接收益和质押收益以及 1 级和 2 级收益。"
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "segmented_control_tier_one": {
+        "title": "1 级",
+        "description": "在这里，您可以看到 1 级推荐人列表。对于每位与您同时签到的好友，您将在当前基准采用收益率的基础上额外获得 25% 奖励。[[:link]]阅读更多内容[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "segmented_control_tier_two": {
+        "title": "2 级",
+        "description": "在这里，您可以看到 2 级推荐人列表。对于每位与您同时签到的好友，您将在当前基准采用收益率的基础上额外获得 5% 奖励。[[:link]]阅读更多内容[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "active_users": {
+        "title": "活跃用户",
+        "description": "这是您的推荐人签到活动的当前状态。当他们有一个活跃的签到会话时，就被认为是活跃用户。"
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "tier_one_earnings": {
+        "title": "1 级收益",
+        "description": "在这里，您可以看到 1 级推荐人列表。对于每位与您同时签到的成员，您和好友均将在当前基准采用收益率的基础上额外获得 25% 奖励。"
+      },
+      "ping": {
+        "title": "Ping 按钮",
+        "description": "通知您的推荐人开始签到会话。您可以每 24 小时向每个推荐人发送一次通知。"
+      }
+    },
+    "home": {
+      "home": {
+        "title": "首页",
+        "description": "欢迎来到 [[:ice]]。在主屏幕上，您可以找到有关您的余额、当前收益率、全球排名以及团队的所有统计数据。"
+      },
+      "invite": {
+        "title": "邀请",
+        "description": "对于您邀请的每个人，您都将获得高达 25% 的基准收益率。邀请的人越多，您赚的就越多！"
+      },
+      "team": {
+        "title": "团队",
+        "description": "[[:ice]] 和朋友在一起更好玩。在此页面上，您可以查看 1 级和 2 级团队成员的状态。您也可以从这里给他们发送消息。"
+      },
+      "news": {
+        "title": "新闻资讯",
+        "description": "随时了解我们所有的新闻和民意调查。我们是一个分散式自治组织，因此您将能够在此处投票以获得未来的功能。"
+      },
+      "profile": {
+        "title": "个人资料",
+        "description": "自定义您的个人资料详细信息，并查看您获得的所有成就和徽章。使用此处的计算器，以便您可以估算收益。"
+      },
+      "earningicestart": {
+        "title": "赚取 ice",
+        "description": "您可以点击此按钮每 24 小时启动一次 [[:ice]] 签到会话。别忘了每天签到，开始赚取收益！"
+      },
+      "earningiceseemore": {
+        "title": "赚取 ice",
+        "description": "再次点击，查看有关当前签到会话的更多详细信息。"
+      },
+      "stats": {
+        "title": "统计数据",
+        "description": "在统计页面上，您可以看到每天签到的总用户和活跃用户以及热门国家/地区和用户。"
+      },
+      "help": {
+        "title": "帮助",
+        "description": "有什么问题吗？查看我们的常见问题列表。如果您找不到所需内容，请随时通过 hi@ice.io 联系我们。"
+      },
+      "preStaking": {
+        "title": "预质押",
+        "description": "通过预质押您的收益奖励，最大限度地提高您的回报。选择您的分配和质押期，即可获得收益之外的奖励。"
+      },
+      "wallet": {
+        "title": "钱包卡片",
+        "description": "您可以在此处查看您的 [[:ice]] 当前余额以及收益率。来自您团队的在线推荐人越多，收益率就越高。"
+      },
+      "earning": {
+        "title": "收益率卡片",
+        "description": "及时了解您的收益率和奖金！在这里，您可以查看应用中各种活动的当前收益率、基准收益率和奖励收益率。"
+      },
+      "engagement": {
+        "title": "参与度卡片",
+        "description": "跟踪您的连续签到天数和休息日情况！查看此部分，了解有关您连续签到天数的更多详细信息，并查看有多少个可用休息日。"
+      },
+      "profilecard": {
+        "title": "个人资料卡片",
+        "description": "您可以通过关注此卡片跟踪个人资料状态。它会显示您的当前全球排名，以及您的角色，级别和总推荐数。"
+      },
+      "referralscard": {
+        "title": "推荐人卡片",
+        "description": "点击此卡片，查看前 5 天 1 级和 2 级推荐人的推荐统计数据的变化情况。"
+      },
+      "adoptioncard": {
+        "title": "采用率卡片",
+        "description": "根据上周活跃雪人总数的平均值，您可以查看当前 [[:ice]] 收益率。达到下一个门槛时，收益率将减半。"
+      },
+      "nickname": {
+        "title": "昵称",
+        "description": "昵称让您与众不同。您的好友需要使用此昵称才能加入您的团队。您也可以使用此快捷方式打开您的个人资料。"
+      },
+      "balancehistory": {
+        "title": "余额历史记录",
+        "description": "您可以在本地钱包和区块链上找到您的 [[:ice]] 当前余额。本地钱包余额每小时更新一次，而区块链余额每 24 小时更新一次。"
+      },
+      "achievements": {
+        "title": "成就",
+        "description": "完成以下任务并升级！立即开始您的第一次签到会话！"
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Unlink Logins",
-    "sessionName": "Login via {{providerName}}",
+    "title": "取消登录链接",
+    "sessionName": "通过 {{providerName}} 登录",
     "buttons": {
-      "currentSession": "Current session",
-      "endSession": "End Session",
-      "loginUnlinked": "Login Unlinked",
-      "sessionEnded": "Session Ended",
-      "unlink": "Unlink"
+      "currentSession": "当前会话",
+      "endSession": "结束会话",
+      "loginUnlinked": "登录链接已取消",
+      "sessionEnded": "会话已结束",
+      "unlink": "取消链接"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Unlink Login?",
-        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
+        "title": "取消登录链接？",
+        "message": "确定要取消通过 {{providerName}} 登录此设备的链接吗?"
       },
       "endSession": {
-        "title": "End Session?",
-        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
+        "title": "是否结束会话?",
+        "message": "确定要从此设备结束 {{providerName}} 登录会话吗？"
       }
     }
   },
@@ -792,12 +846,51 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Today’s Bonus",
-    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
-    "link": "Find out more",
-    "extra_message": "You have received your daily extra bonus on your earning rate",
-    "expired_title": "Bonus Expired",
-    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
-    "result_title": "Congratulations"
+    "claim_title": "今日奖金",
+    "claim_message": "是时候领取今天的奖励了，请点击下方的[[:bold]]“领取奖励”[[/:bold]]按钮。",
+    "link": "了解更多",
+    "extra_message": "您已经收到按您的收益率计算的每日额外奖励。",
+    "expired_title": "奖金已过期",
+    "expired_message": "很遗憾，今天的奖金已过期。敬请期待下一次的通知！",
+    "result_title": "恭喜"
+  },
+  "early_access": {
+    "title": "抢先体验",
+    "message_part1": "在我们[[:bold]]正式发布[[/:bold]] 前，抢先体验 [[:bold]]ice 应用。[[/:bold]]",
+    "message_part2": "所有余额将在发布日期重置为 0。然而，您的团队将保持完整。",
+    "message_part3": "感谢您的支持！",
+    "checkbox_description": "已确认！不再显示此弹出窗口。"
+  },
+  "mining_notice": {
+    "title": "注意事项",
+    "message": "感谢您对赚取 [[:bold]]ice 感兴趣！[[/:bold]] 我们目前正在对技术进行微调，目前无法办理签到。这是您专注于建立团队和发展微社区的机会。",
+    "message_footer": "敬请关注我们的 [[:twitter]]Twitter[[/:twitter]] 和 [[:telegram]]Telegram[[/:telegram]] 频道。"
+  },
+  "qr_code": {
+    "description": "扫描二维码加入我的团队。"
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "关注我们的 TikTok",
+      "description": "我们只是想与您建立联系，让您了解我们在 TikTok 上令人兴奋的新社区。我们正在分享有关数字货币 ice 有趣且丰富的内容，我们希望您能加入我们！"
+    },
+    "youtube": {
+      "title": "关注我们的 YouTube",
+      "description": "从有关如何赚取 ice 的教程，到有关新功能的更新，甚至是有趣的社区内容，我们的 YouTube 频道是了解最新信息的理想场所。"
+    },
+    "linkedin": {
+      "title": "关注我们的 LinkedIn",
+      "description": "加入 LinkedIn 上的 ice 社区是了解最新进展并与志同道合的人建立联系的好方法，他们对数字货币的未来充满热情。"
+    },
+    "facebook": {
+      "title": "关注我们的 Facebook",
+      "description_part1": "强烈建议您关注我们的 Facebook 页面。",
+      "description_part2": "不仅可以帮助您及时了解 ice 项目的最新动态，而且还是与我们的社区建立联系并参与对话的好方法。"
+    },
+    "instagram": {
+      "title": "关注我们的 Instagram",
+      "description_part1": "在 Instagram 上关注我们是了解最新动态并与其他也对 ice 充满热情的用户建立联系的好方法",
+      "description_part2": "此外，您将会第一时间了解我们即将推出的任何新功能或优惠活动。"
+    }
   }
 }
