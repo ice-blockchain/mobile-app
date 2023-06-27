@@ -8,6 +8,7 @@ import {
   createNativeStackNavigator,
   NativeStackNavigationProp,
 } from '@react-navigation/native-stack';
+import {ConfirmEmailCode} from '@screens/AuthFlow/ConfirmEmailCode';
 import {ConfirmEmailLink} from '@screens/AuthFlow/ConfirmEmailLink';
 import {ConfirmPhone} from '@screens/AuthFlow/ConfirmPhone';
 import {InvalidLink} from '@screens/AuthFlow/InvalidLink';
@@ -24,6 +25,7 @@ import {useSelector} from 'react-redux';
 export type AuthStackParamList = {
   SignIn: undefined;
   ConfirmEmailLink: undefined;
+  ConfirmEmailCode: undefined;
   ConfirmPhone: undefined;
   CountrySelect: {
     onSelect: (country: Country) => void;
@@ -44,7 +46,7 @@ export function AuthNavigator() {
     if (emailVerificationStep === 'link') {
       return 'ConfirmEmailLink';
     } else if (emailVerificationStep === 'code') {
-      return 'ConfirmEmailLink'; //TODO::change to code screen
+      return 'ConfirmEmailCode';
     } else if (phoneVerificationStep === 'code') {
       return 'ConfirmPhone';
     }
@@ -65,6 +67,7 @@ export function AuthNavigator() {
       initialRouteName={authRoute}>
       <AuthStack.Screen name="SignIn" component={SignIn} />
       <AuthStack.Screen name="ConfirmEmailLink" component={ConfirmEmailLink} />
+      <AuthStack.Screen name="ConfirmEmailCode" component={ConfirmEmailCode} />
       <AuthStack.Screen name="ConfirmPhone" component={ConfirmPhone} />
       <AuthStack.Screen
         name="CountrySelect"

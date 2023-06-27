@@ -1,13 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {sendCustomSignInLinkToEmail, signInWithEmailLink} from '@services/auth';
+import {signInWithEmailLink} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
-import {appLocaleSelector} from '@store/modules/Account/selectors';
-import {deviceUniqueIdSelector} from '@store/modules/Devices/selectors';
 import {t} from '@translations/i18n';
 import {getErrorMessage} from '@utils/errors';
 import {checkProp} from '@utils/guards';
-import {call, put, SagaReturnType, select, take} from 'redux-saga/effects';
+import {call, put, take} from 'redux-saga/effects';
 
 enum ValidateError {
   InvalidEmail,
@@ -25,21 +23,21 @@ export function* signInEmailCustomSaga(
       throw {code: ValidateError.InvalidEmail};
     }
 
-    const deviceUniqueId: SagaReturnType<typeof deviceUniqueIdSelector> =
-      yield select(deviceUniqueIdSelector);
+    // const deviceUniqueId: SagaReturnType<typeof deviceUniqueIdSelector> =
+    //   yield select(deviceUniqueIdSelector);
 
-    const language: SagaReturnType<typeof appLocaleSelector> = yield select(
-      appLocaleSelector,
-    );
+    // const language: SagaReturnType<typeof appLocaleSelector> = yield select(
+    //   appLocaleSelector,
+    // );
 
-    const {loginSession}: SagaReturnType<typeof sendCustomSignInLinkToEmail> =
-      yield call(sendCustomSignInLinkToEmail, {
-        email,
-        deviceUniqueId,
-        language,
-      });
+    // const {loginSession}: SagaReturnType<typeof sendCustomSignInLinkToEmail> =
+    //   yield call(sendCustomSignInLinkToEmail, {
+    //     email,
+    //     deviceUniqueId,
+    //     language,
+    //   });
 
-    console.log('loginSession', loginSession);
+    // console.log('loginSession', loginSession);
     //TODO::parse JWT and get the code
 
     yield put(

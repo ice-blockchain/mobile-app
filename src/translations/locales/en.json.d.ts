@@ -441,6 +441,7 @@ export type Translations = {
   'confirm_email.check_email': null;
   'confirm_email.emailed_link_to': null;
   'confirm_email.link_instruction': null;
+  'confirm_email.code_link_instruction': null;
   'confirm_email.modify_title': null;
   'confirm_email.modify_description': null;
   'invalid_link.title': null;
