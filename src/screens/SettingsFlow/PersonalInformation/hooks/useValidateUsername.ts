@@ -28,7 +28,7 @@ export const useValidateUsername = (user: User, username = '') => {
     () =>
       debounce((text: string) => {
         if (text) {
-          if (user.username === text) {
+          if (user.username?.toLowerCase() === text.toLowerCase()) {
             dispatch(ValidationActions.USERNAME_VALIDATION.CLEAR.create());
           } else {
             dispatch(ValidationActions.USERNAME_VALIDATION.START.create(text));

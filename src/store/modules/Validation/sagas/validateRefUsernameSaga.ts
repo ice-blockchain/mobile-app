@@ -33,7 +33,10 @@ export function* validateRefUsernameSaga(
         t('errors.invalid_username'),
       ),
     );
-  } else if (user && user.username === refUsername) {
+  } else if (
+    user &&
+    user.username?.toLowerCase() === refUsername.toLowerCase()
+  ) {
     yield put(
       ValidationActions.REF_USERNAME_VALIDATION.FAILED.create(
         t('username.error.refer_yourself'),
