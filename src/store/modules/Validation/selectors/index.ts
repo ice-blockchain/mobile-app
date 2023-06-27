@@ -20,6 +20,9 @@ export const phoneVerificationStepSelector = (state: RootState) =>
 export const emailVerificationStepSelector = (state: RootState) =>
   state.validation.temporaryEmailVerificationStep;
 
+export const emailVerificationCodeSelector = (state: RootState) =>
+  state.validation.temporaryEmailCode;
+
 export const smsSentTimestampSelector = (state: RootState) =>
   state.validation.smsSentTimestamp;
 

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Api} from '@api/index';
 import {ENV} from '@constants/env';
 import {LINKS} from '@constants/links';
 import auth from '@react-native-firebase/auth';
@@ -67,6 +68,14 @@ export const sendSignInLinkToEmail = async (email: string) => {
     },
     url: LINKS.FIREBASE_NOTICE,
   });
+};
+
+export const sendCustomSignInLinkToEmail = async (params: {
+  deviceUniqueId: string;
+  email: string;
+  language: string;
+}) => {
+  return Api.user.sendSignInLinkToEmail(params);
 };
 
 export const verifyBeforeUpdateEmail = async (email: string) => {
