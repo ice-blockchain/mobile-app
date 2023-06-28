@@ -11,7 +11,7 @@ async function onFulfilled(config: AxiosRequestConfig) {
     if (accessToken) {
       config.headers = {
         ...config.headers,
-        Authorization: `Bearer ${accessToken}`,
+        Authorization: `Bearer ${accessToken.accessToken}`,
       };
     }
   }

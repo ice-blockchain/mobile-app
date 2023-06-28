@@ -27,7 +27,12 @@ export function* userStateChangeSaga() {
         userInfoSelector,
       );
 
-      yield put(AccountActions.SET_TOKEN.STATE.create(authenticatedUser.token));
+      yield put(
+        AccountActions.SET_TOKEN.STATE.create({
+          accessToken: authenticatedUser.token,
+          issuer: 'firebase',
+        }),
+      );
 
       let user: ReturnType<typeof userSelector> = yield select(userSelector);
 

@@ -5,9 +5,21 @@ import {SignInUserInfo} from '@services/auth/signin/types';
 import {AccountActions} from '@store/modules/Account/actions';
 import produce from 'immer';
 
+export type Token =
+  | {
+      accessToken: string;
+      issuer: 'firebase';
+    }
+  | {
+      accessToken: string;
+      refreshToken: string;
+      issuer: 'custom';
+    }
+  | null;
+
 export interface AccountState {
   isAdmin: boolean | null;
-  token: string | null;
+  token: Token;
   user: User | null;
   // data that is taken from the auth providers (google / apple etc)
   // and used to populate / suggest User profile later on

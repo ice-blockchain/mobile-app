@@ -5,12 +5,13 @@ import {
   SignInUserInfo,
   SocialSignInProvider,
 } from '@services/auth/signin/types';
+import {Token} from '@store/modules/Account/reducer';
 import {createAction} from '@store/utils/actions/createAction';
 import {Action} from 'redux';
 import {CallEffect, PutEffect} from 'redux-saga/effects';
 
 const SET_TOKEN = createAction('SET_TOKEN', {
-  STATE: (token: string | null) => ({token}),
+  STATE: (token: Token) => ({token}),
 });
 
 const USER_STATE_CHANGE = createAction('USER_STATE_CHANGE', {

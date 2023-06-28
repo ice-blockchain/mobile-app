@@ -29,7 +29,12 @@ function onRejected(instance: AxiosInstance) {
             if (token) {
               originalRequest.pliantRequestRetry = true;
               originalRequest.headers!.Authorization = `Bearer ${token}`;
-              store.dispatch(AccountActions.SET_TOKEN.STATE.create(token));
+              store.dispatch(
+                AccountActions.SET_TOKEN.STATE.create({
+                  accessToken: token,
+                  issuer: 'firebase',
+                }),
+              );
               return instance(originalRequest);
             }
           } else {
