@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {EmailInput} from '@components/Inputs/EmailInput';
+import {Divider} from '@screens/AuthFlow/SignIn/components/Divider';
 import {SubmitButton} from '@screens/AuthFlow/SignIn/components/SubmitButton';
 import {useCustomEmailAuth} from '@screens/AuthFlow/SignIn/hooks/useCustomEmailAuth';
 import {t} from '@translations/i18n';
@@ -28,6 +29,7 @@ export const SignInEmailCustomForm = () => {
         onPress={signInWithEmail}
         loading={isEmailAuthLoading}
       />
+      <Divider label={t('signIn.or')} />
     </>
   );
 };

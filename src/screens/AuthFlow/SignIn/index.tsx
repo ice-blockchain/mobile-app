@@ -4,11 +4,7 @@ import {FullScreenLoading} from '@components/FullScreenLoading';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {PrivacyTerms} from '@components/PrivacyTerms';
 import {COLORS} from '@constants/colors';
-import {
-  isEmailLinkAuthEnabled,
-  isPhoneNumberAuthEnabled,
-  isSocialAuthEnabled,
-} from '@constants/featureFlags';
+import {isEmailLinkAuthEnabled} from '@constants/featureFlags';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Header} from '@screens/AuthFlow/SignIn/components/Header';
@@ -57,13 +53,12 @@ export const SignIn = () => {
           <Tabs
             onSelect={setActiveTab}
             selected={activeTab}
-            hiddenTab={!isPhoneNumberAuthEnabled ? 'phone' : null}
             containerStyle={styles.tabs}
           />
           <View style={styles.form}>
             <Form />
           </View>
-          {isSocialAuthEnabled && <SocialButtons />}
+          <SocialButtons />
         </View>
         <PrivacyTerms containerStyle={styles.privacy} />
       </ScrollView>
