@@ -30,7 +30,7 @@ const UNREAD_NEWS_COUNT_LOAD = createAction('NEWS/UNREAD_NEWS_COUNT_LOAD', {
 const NEWS_ARTICLE_MARK_VIEWED = createAction(
   'NEWS/NEWS_ARTICLE_MARK_VIEWED',
   {
-    START: (payload: {newsId: string}) => payload,
+    START: (payload: {newsId: string; language?: string | null}) => payload,
     SUCCESS: (payload: {newsId: string}) => payload,
     FAILED: (errorMessage: string) => ({
       errorMessage,

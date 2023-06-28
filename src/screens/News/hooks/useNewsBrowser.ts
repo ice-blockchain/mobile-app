@@ -22,11 +22,12 @@ export function useNewsBrowser(newsArticle: NewsArticle | undefined) {
         dispatch(
           NewsActions.NEWS_ARTICLE_MARK_VIEWED(newsArticle.id).START.create({
             newsId: newsArticle.id,
+            language: newsArticle.language,
           }),
         );
       }
     });
-    AnalyticsEventLogger.trackOpenArticle({articleName: newsArticle.title});
+    AnalyticsEventLogger.trackOpenArticle({articleName: newsArticle.id});
   }, [newsArticle, dispatch]);
 
   return {

@@ -5,11 +5,13 @@ import {navigate} from '@navigation/utils';
 import {isSignInWithEmailLink, isUpdateEmailLink} from '@services/auth';
 import {logError} from '@services/logging';
 import {AccountActions} from '@store/modules/Account/actions';
+import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {
   isAppActiveSelector,
   isSplashHiddenSelector,
 } from '@store/modules/AppCommon/selectors';
 import {LinkingActions} from '@store/modules/Linking/actions';
+import {NewsActions} from '@store/modules/News/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {waitForSelector} from '@store/utils/sagas/effects';
 import {openLinkWithInAppBrowser} from '@utils/device';
@@ -40,16 +42,31 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
   yield call(waitForSelector, isAppActiveSelector);
 
   switch (path.toLowerCase()) {
-    case 'browser':
+    case 'browser': {
       const paramsUrl = searchParams.get('url');
+      const contentLanguage = searchParams.get('contentLanguage');
+      const contentId = searchParams.get('contentId');
+      const contentType = searchParams.get('contentType');
       if (paramsUrl) {
         const browserUrl = decodeURIComponent(paramsUrl);
         if (!new URL(browserUrl).protocol) {
           throw new Error(`Invalid url ${browserUrl}`);
         }
-        openLinkWithInAppBrowser({url: browserUrl});
+        yield call(openLinkWithInAppBrowser, {url: browserUrl});
+        if (contentId && contentType === 'news') {
+          yield put(
+            NewsActions.NEWS_ARTICLE_MARK_VIEWED(contentId).START.create({
+              newsId: contentId,
+              language: contentLanguage,
+            }),
+          );
+          yield call(AnalyticsEventLogger.trackOpenArticle, {
+            articleName: contentId,
+          });
+        }
       }
       break;
+    }
     case 'home': {
       const section = searchParams.get('url');
       switch (section) {
