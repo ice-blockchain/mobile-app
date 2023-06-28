@@ -11,7 +11,7 @@ const actionCreator = NewsActions.NEWS_ARTICLE_MARK_VIEWED(null).START.create;
 export function* markViewedNewsArticleSaga(
   action: ReturnType<typeof actionCreator>,
 ) {
-  const {newsId} = action.payload;
+  const {newsId, language} = action.payload;
 
   const locale: SagaReturnType<typeof appLocaleSelector> = yield select(
     appLocaleSelector,
@@ -19,7 +19,7 @@ export function* markViewedNewsArticleSaga(
 
   try {
     yield call(Api.news.markViewed, {
-      language: locale,
+      language: language ?? locale,
       newsId,
     });
 
