@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import {StyleSheet, Text} from 'react-native';
 
 type TagWrapperProps = {
