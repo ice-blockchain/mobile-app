@@ -79,7 +79,6 @@ export const DynamicHeight = ({
       enableOverDrag={true}
       animatedIndex={animatedIndex}
       overDragResistanceFactor={10}
-      containerHeight={frame.height}
       backgroundStyle={commonStyles.baseSubScreen}
       /**
        * This is required to let child PagerView handle horizontal swipes
