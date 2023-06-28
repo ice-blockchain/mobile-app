@@ -59,6 +59,7 @@
     "getstream": "^8.1.0",
     "i18n-js": "^4.1.1",
     "immer": "^9.0.16",
+    "jwt-decode": "^3.1.2",
     "libphonenumber-js": "^1.10.14",
     "lodash": "^4.17.21",
     "lottie-react-native": "^5.1.4",

@@ -15,7 +15,7 @@ export interface State {
   temporaryVerificationId: string | null;
 
   temporaryEmail: string | null;
-  temporaryEmailCode: number | null;
+  temporaryEmailCode: string | null;
   temporaryEmailVerificationStep: 'email' | 'link' | 'code';
   emailSentTimestamp: number | null;
 }

@@ -7,7 +7,7 @@ import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
-  code: number;
+  code: string;
   containerStyle?: StyleProp<ViewStyle>;
 };
 

@@ -1,11 +1,14 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {signInWithEmailLink} from '@services/auth';
+import {sendCustomSignInLinkToEmail, signInWithEmailLink} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
+import {appLocaleSelector} from '@store/modules/Account/selectors';
+import {deviceUniqueIdSelector} from '@store/modules/Devices/selectors';
 import {t} from '@translations/i18n';
 import {getErrorMessage} from '@utils/errors';
 import {checkProp} from '@utils/guards';
-import {call, put, take} from 'redux-saga/effects';
+import jwt_decode from 'jwt-decode';
+import {call, put, SagaReturnType, select, take} from 'redux-saga/effects';
 
 enum ValidateError {
   InvalidEmail,
@@ -23,27 +26,34 @@ export function* signInEmailCustomSaga(
       throw {code: ValidateError.InvalidEmail};
     }
 
-    // const deviceUniqueId: SagaReturnType<typeof deviceUniqueIdSelector> =
-    //   yield select(deviceUniqueIdSelector);
+    const deviceUniqueId: SagaReturnType<typeof deviceUniqueIdSelector> =
+      yield select(deviceUniqueIdSelector);
 
-    // const language: SagaReturnType<typeof appLocaleSelector> = yield select(
-    //   appLocaleSelector,
-    // );
+    const language: SagaReturnType<typeof appLocaleSelector> = yield select(
+      appLocaleSelector,
+    );
 
-    // const {loginSession}: SagaReturnType<typeof sendCustomSignInLinkToEmail> =
-    //   yield call(sendCustomSignInLinkToEmail, {
-    //     email,
-    //     deviceUniqueId,
-    //     language,
-    //   });
+    const {loginSession}: SagaReturnType<typeof sendCustomSignInLinkToEmail> =
+      yield call(sendCustomSignInLinkToEmail, {
+        email,
+        deviceUniqueId,
+        language,
+      });
 
-    // console.log('loginSession', loginSession);
-    //TODO::parse JWT and get the code
+    const loginSessionPayload = jwt_decode(loginSession);
+
+    if (!checkProp(loginSessionPayload, 'confirmationCode')) {
+      throw new Error('confirmationCode is not found in loginSession');
+    }
+
+    if (typeof loginSessionPayload.confirmationCode !== 'string') {
+      throw new Error('confirmationCode is not a string');
+    }
 
     yield put(
       AccountActions.SIGN_IN_EMAIL_CUSTOM.SET_TEMP_EMAIL.create({
         email,
-        code: 123,
+        code: loginSessionPayload.confirmationCode,
       }),
     );
 

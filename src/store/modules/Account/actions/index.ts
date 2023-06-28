@@ -36,7 +36,7 @@ const SIGN_IN_EMAIL_LINK = createAction('SIGN_IN_EMAIL_LINK', {
 
 const SIGN_IN_EMAIL_CUSTOM = createAction('SIGN_IN_EMAIL_CUSTOM', {
   START: (email: string) => ({email}),
-  SET_TEMP_EMAIL: (params: {email: string; code: number}) => params,
+  SET_TEMP_EMAIL: (params: {email: string; code: string}) => params,
   CONFIRM_TEMP_EMAIL: (link: string) => ({link}),
   SUCCESS: true,
   FAILED: (errorMessage: string) => ({errorMessage}),
