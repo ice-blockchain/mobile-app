@@ -83,6 +83,13 @@ export function* signInEmailCustomSaga(
         yield call(getSignInWithEmailLinkStatus, {loginSession});
 
       if (tokens) {
+        yield put(
+          AccountActions.SET_TOKEN.STATE.create({
+            accessToken: tokens.accessToken,
+            refreshToken: tokens.refreshToken,
+            issuer: 'custom',
+          }),
+        );
         yield put(AccountActions.SIGN_IN_EMAIL_CUSTOM.SUCCESS.create());
         return;
       }

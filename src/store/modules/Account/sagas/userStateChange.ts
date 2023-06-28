@@ -7,6 +7,7 @@ import {getAuthenticatedUser} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
   appLocaleSelector,
+  authTokenSelector,
   userInfoSelector,
   userSelector,
 } from '@store/modules/Account/selectors';
@@ -23,10 +24,6 @@ export function* userStateChangeSaga() {
       yield call(getAuthenticatedUser);
 
     if (authenticatedUser) {
-      const userInfo: ReturnType<typeof userInfoSelector> = yield select(
-        userInfoSelector,
-      );
-
       yield put(
         AccountActions.SET_TOKEN.STATE.create({
           accessToken: authenticatedUser.token,
@@ -44,15 +41,9 @@ export function* userStateChangeSaga() {
       }
 
       if (user === null) {
-        let phoneNumberIso: ReturnType<typeof temporaryPhoneNumberIsoSelector> =
-          yield select(temporaryPhoneNumberIsoSelector);
-
         user = yield call(createUser, {
           email: authenticatedUser.email,
           phoneNumber: authenticatedUser.phoneNumber,
-          firstName: userInfo?.firstName ?? null,
-          lastName: userInfo?.lastName ?? null,
-          phoneNumberIso: phoneNumberIso ?? null,
         });
         yield put(AnalyticsActions.TRACK_SIGN_UP.SUCCESS.create());
 
@@ -70,8 +61,13 @@ export function* userStateChangeSaga() {
         ),
       );
     } else {
-      yield put(AccountActions.SET_TOKEN.STATE.create(null));
-      yield put(AccountActions.USER_STATE_CHANGE.SUCCESS.create(null, null));
+      const token: SagaReturnType<typeof authTokenSelector> = yield select(
+        authTokenSelector,
+      );
+      if (!token || token.issuer === 'firebase') {
+        yield put(AccountActions.SET_TOKEN.STATE.create(null));
+        yield put(AccountActions.USER_STATE_CHANGE.SUCCESS.create(null, null));
+      }
     }
   } catch (error) {
     let localizedError = getErrorMessage(error);
@@ -109,19 +105,20 @@ function* getUser(userId: string) {
 function* createUser({
   email,
   phoneNumber,
-  firstName,
-  lastName,
-  phoneNumberIso,
 }: {
   email: string | null;
   phoneNumber: string | null;
-  firstName: string | null;
-  lastName: string | null;
-  phoneNumberIso: string | null;
 }) {
   const appLocale: SagaReturnType<typeof appLocaleSelector> = yield select(
     appLocaleSelector,
   );
+
+  const userInfo: ReturnType<typeof userInfoSelector> = yield select(
+    userInfoSelector,
+  );
+
+  const phoneNumberIso: ReturnType<typeof temporaryPhoneNumberIsoSelector> =
+    yield select(temporaryPhoneNumberIsoSelector);
 
   let normalizedNumber: string | null = null;
   let phoneNumberHash: string | null = null;
@@ -138,8 +135,8 @@ function* createUser({
   let user: SagaReturnType<typeof Api.user.createUser> = yield call(
     Api.user.createUser,
     {
-      firstName,
-      lastName,
+      firstName: userInfo?.firstName ?? null,
+      lastName: userInfo?.lastName ?? null,
       email,
       phoneNumber: normalizedNumber,
       phoneNumberHash,

@@ -3,6 +3,7 @@
 import {AccountActions} from '@store/modules/Account/actions';
 import {deleteAccountSaga} from '@store/modules/Account/sagas/deleteAccount';
 import {getAccountSaga} from '@store/modules/Account/sagas/getAccount';
+import {persistTokenSaga} from '@store/modules/Account/sagas/persistToken';
 import {signInEmailCustomSaga} from '@store/modules/Account/sagas/signInEmailCustom';
 import {signInEmailLinkSaga} from '@store/modules/Account/sagas/signInEmailLink';
 import {signInPhoneSaga} from '@store/modules/Account/sagas/signInPhone';
@@ -50,6 +51,7 @@ export const authWatchers = [
     AccountActions.VERIFY_PHONE_NUMBER.START.type,
     verifyPhoneNumberSaga,
   ),
+  takeLatest(AccountActions.SET_TOKEN.STATE.type, persistTokenSaga),
   fork(syncLanguageCodeSaga),
   fork(syncRtlSaga),
   fork(subscribeUserChangedSaga),

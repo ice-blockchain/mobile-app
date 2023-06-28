@@ -25,7 +25,7 @@ export function* signOutSaga(
       );
     }
 
-    yield call(signOut);
+    yield call(signOut); //TODO::handle custom auth
     yield call(stopTrackingCurrentUser);
     yield put(AccountActions.SIGN_OUT.SUCCESS.create());
   } catch (error) {
