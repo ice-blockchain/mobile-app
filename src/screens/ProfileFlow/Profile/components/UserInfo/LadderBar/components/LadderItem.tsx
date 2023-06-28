@@ -4,6 +4,7 @@ import {HiddenProfileElement} from '@api/user/types';
 import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {LADDER_ITEM_WIDTH} from '@screens/ProfileFlow/Profile/components/UserInfo/LadderBar';
 import {useUpdateHiddenProfileElements} from '@store/modules/Account/hooks/useUpdateHiddenProfileElements';
 import {ClosedEye} from '@svg/ClosedEye';
 import {font} from '@utils/styles';
@@ -99,6 +100,7 @@ const styles = StyleSheet.create({
   outerContainer: {
     padding: rem(8),
     borderRadius: rem(16),
+    width: LADDER_ITEM_WIDTH,
   },
   editModeOuterContainer: {
     backgroundColor: COLORS.white02opacity,
@@ -107,7 +109,8 @@ const styles = StyleSheet.create({
     paddingVertical: rem(8),
     paddingHorizontal: rem(10),
     borderRadius: rem(14),
-    minWidth: rem(80),
+    height: rem(61),
+    justifyContent: 'flex-end',
   },
   editModeContainer: {
     backgroundColor: COLORS.white,

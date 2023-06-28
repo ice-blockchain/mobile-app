@@ -20,7 +20,7 @@ import {
 } from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
-export const SEGMENTED_CONTROL_HEIGHT = rem(52);
+export const SEGMENTED_CONTROL_HEIGHT = rem(55);
 export const SEGMENTED_CONTROL_HORIZONTAL_OFFSET = rem(8);
 
 type Segment = {
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     borderRadius: rem(16),
     backgroundColor: COLORS.white,
     paddingHorizontal: SEGMENTED_CONTROL_HORIZONTAL_OFFSET,
-    height: SEGMENTED_CONTROL_HEIGHT,
+    minHeight: SEGMENTED_CONTROL_HEIGHT,
   },
   body: {
     flexDirection: 'row',

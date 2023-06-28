@@ -231,6 +231,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     borderColor: COLORS.foam,
     overflow: 'hidden',
+    backgroundColor: COLORS.white,
   },
   image: {
     width: undefined,

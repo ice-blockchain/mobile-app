@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {User} from '@api/user/types';
+import {windowWidth} from '@constants/styles';
 import {LadderItem} from '@screens/ProfileFlow/Profile/components/UserInfo/LadderBar/components/LadderItem';
 import {
   isPrivacyInfoShownSelector,
@@ -13,6 +14,11 @@ import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
+
+const LADDER_ITEMS_COUNT = 3;
+const LADDER_CONTAINER_SIDE_OFFSET = rem(32);
+const LADDER_WIDTH = windowWidth - LADDER_CONTAINER_SIDE_OFFSET * 2;
+export const LADDER_ITEM_WIDTH = LADDER_WIDTH / LADDER_ITEMS_COUNT;
 
 type Props = {
   isProfilePrivacyEditMode?: boolean;
@@ -80,7 +86,8 @@ export const LadderBar = memo(
 const styles = StyleSheet.create({
   ladder: {
     flexDirection: 'row',
-    paddingHorizontal: rem(32),
+    marginLeft: LADDER_CONTAINER_SIDE_OFFSET,
     justifyContent: 'space-between',
+    width: LADDER_WIDTH,
   },
 });

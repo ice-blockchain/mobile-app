@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {IceLabel} from '@components/Labels/IceLabel';
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {Chevron} from '@navigation/components/MainTabBar/components/MiningTooltip/assets/svg/Chevron';
 import {GraphUpIcon} from '@navigation/components/MainTabBar/components/MiningTooltip/assets/svg/GraphUpIcon';
@@ -8,6 +9,9 @@ import {
   DataCell,
   DataCellSeparator,
 } from '@navigation/components/MainTabBar/components/MiningTooltip/components/DataCell';
+import {MainStackParamList} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {
   balanceSummarySelector,
   miningRatesSelector,
@@ -27,6 +31,15 @@ export const PreStakingInfo = () => {
   const miningRates = useSelector(miningRatesSelector);
   const preStakingSummary = useSelector(preStakingSummarySelector);
   const balanceSummary = useSelector(balanceSummarySelector);
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
+
+  const handlePress = () => {
+    navigation.goBack();
+    setTimeout(() => {
+      navigation.navigate('Staking');
+    }, 300);
+  };
 
   return (
     <>
@@ -78,7 +91,10 @@ export const PreStakingInfo = () => {
           width={rem(18)}
           height={rem(18)}
         />
-        <Text style={styles.bonusLabelText}>{t('staking.bonus_label')}</Text>
+        <Touchable onPress={handlePress}>
+          <Text style={styles.bonusLabelText}>{t('staking.bonus_label')}</Text>
+        </Touchable>
+
         {miningRates && (
           <Text style={styles.bonusValueText}>
             +{miningRates.total.bonuses?.preStaking ?? 0}%

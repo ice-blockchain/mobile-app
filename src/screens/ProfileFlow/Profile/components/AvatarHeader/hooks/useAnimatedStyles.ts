@@ -2,6 +2,7 @@
 
 import {HEADER_HEIGHT} from '@navigation/components/Header';
 import {AVATAR_SIZE} from '@screens/ProfileFlow/Profile/components/AvatarHeader';
+import {isRTL} from '@translations/i18n';
 import {ViewStyle} from 'react-native';
 import {
   AnimatedStyleProp,
@@ -117,7 +118,8 @@ export const useAnimatedStyles = ({
     return {
       transform: [
         {
-          translateX: translateXBasic > 0 ? 0 : translateXBasic,
+          translateX:
+            (translateXBasic > 0 ? 0 : translateXBasic) * (isRTL ? -1 : 1),
         },
       ],
     };
