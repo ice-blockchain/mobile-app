@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {ENV} from '@constants/env';
 import {LINKS} from '@constants/links';
@@ -75,7 +76,22 @@ export const sendCustomSignInLinkToEmail = async (params: {
   email: string;
   language: string;
 }) => {
-  return Api.user.sendSignInLinkToEmail(params);
+  return Api.auth.sendSignInLinkToEmail(params);
+};
+
+export const getSignInWithEmailLinkStatus = async ({
+  loginSession,
+}: {
+  loginSession: string;
+}) => {
+  try {
+    return Api.auth.getSignInWithEmailLinkStatus({loginSession});
+  } catch (error) {
+    if (isApiError(error, 404, 'NOT_VERIFIED')) {
+      return null;
+    }
+    throw error;
+  }
 };
 
 export const verifyBeforeUpdateEmail = async (email: string) => {

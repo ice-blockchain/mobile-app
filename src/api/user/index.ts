@@ -5,7 +5,6 @@ import {deleteUser} from './deleteUser';
 import {getUserById} from './getUserById';
 import {getUserByUsername} from './getUserByUsername';
 import {searchUsers} from './searchUsers';
-import {sendSignInLinkToEmail} from './sendSignInLinkToEmail';
 import {updateAccount} from './updateAccount';
 
 export const user = Object.freeze({
@@ -15,5 +14,4 @@ export const user = Object.freeze({
   getUserByUsername,
   updateAccount,
   searchUsers,
-  sendSignInLinkToEmail,
 });

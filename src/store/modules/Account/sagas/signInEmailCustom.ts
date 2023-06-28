@@ -1,6 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {sendCustomSignInLinkToEmail, signInWithEmailLink} from '@services/auth';
+import {CUSTOM_EMAIL_SIGN_IN_GET_STATUS_INTERVAL_SEC} from '@constants/timeouts';
+import {
+  getSignInWithEmailLinkStatus,
+  sendCustomSignInLinkToEmail,
+} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {appLocaleSelector} from '@store/modules/Account/selectors';
 import {deviceUniqueIdSelector} from '@store/modules/Devices/selectors';
@@ -8,7 +12,15 @@ import {t} from '@translations/i18n';
 import {getErrorMessage} from '@utils/errors';
 import {checkProp} from '@utils/guards';
 import jwt_decode from 'jwt-decode';
-import {call, put, SagaReturnType, select, take} from 'redux-saga/effects';
+import {
+  call,
+  delay,
+  put,
+  race,
+  SagaReturnType,
+  select,
+  take,
+} from 'redux-saga/effects';
 
 enum ValidateError {
   InvalidEmail,
@@ -57,34 +69,22 @@ export function* signInEmailCustomSaga(
       }),
     );
 
-    let finished = false;
-    while (!finished) {
-      const action: ReturnType<
-        | typeof AccountActions.SIGN_IN_EMAIL_CUSTOM.CONFIRM_TEMP_EMAIL.create
-        | typeof AccountActions.SIGN_IN_EMAIL_CUSTOM.RESET.create
-      > = yield take([
-        AccountActions.SIGN_IN_EMAIL_CUSTOM.CONFIRM_TEMP_EMAIL.type,
-        AccountActions.SIGN_IN_EMAIL_CUSTOM.RESET.type,
-      ]);
+    while (true) {
+      const {reset} = yield race({
+        reset: take(AccountActions.SIGN_IN_EMAIL_CUSTOM.RESET.type),
+        delay: delay(CUSTOM_EMAIL_SIGN_IN_GET_STATUS_INTERVAL_SEC * 1000),
+      });
 
-      switch (action.type) {
-        case AccountActions.SIGN_IN_EMAIL_CUSTOM.CONFIRM_TEMP_EMAIL.type: {
-          try {
-            yield call(signInWithEmailLink, email, action.payload.link);
-            yield put(AccountActions.SIGN_IN_EMAIL_CUSTOM.SUCCESS.create());
-            finished = true;
-          } catch (error) {
-            yield put(
-              AccountActions.SIGN_IN_EMAIL_CUSTOM.FAILED.create(
-                getErrorMessage(error),
-              ),
-            );
-          }
-          break;
-        }
-        case AccountActions.SIGN_IN_EMAIL_CUSTOM.RESET.type:
-          finished = true;
-          break;
+      if (reset) {
+        return;
+      }
+
+      const tokens: SagaReturnType<typeof getSignInWithEmailLinkStatus> =
+        yield call(getSignInWithEmailLinkStatus, {loginSession});
+
+      if (tokens) {
+        yield put(AccountActions.SIGN_IN_EMAIL_CUSTOM.SUCCESS.create());
+        return;
       }
     }
   } catch (error) {
