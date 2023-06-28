@@ -8,7 +8,6 @@ import {UpdateIcon} from '@svg/UpdateIcon';
 import {t} from '@translations/i18n';
 import React from 'react';
 import {Linking} from 'react-native';
-import {isIOS} from 'rn-units';
 
 export const openUpdateRequired = () => {
   let resultResolve: () => void;
@@ -24,10 +23,7 @@ export const openUpdateRequired = () => {
         {
           icon: <UpdateIcon />,
           text: t('pop_up.please_update'),
-          onPress: () =>
-            Linking.openURL(isIOS ? LINKS.APP_STORE : LINKS.PLAY_STORE).catch(
-              logError,
-            ),
+          onPress: () => Linking.openURL(LINKS.APP_UPDATE).catch(logError),
         },
       ],
       dismissOnOutsideTouch: false,
