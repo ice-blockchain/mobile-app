@@ -2,12 +2,10 @@
 
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
-import {startTrackingCurrentUser} from '@services/analytics';
 import {getAuthenticatedUser} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
   appLocaleSelector,
-  authTokenSelector,
   userInfoSelector,
   userSelector,
 } from '@store/modules/Account/selectors';
@@ -35,9 +33,6 @@ export function* userStateChangeSaga() {
 
       if (user === null) {
         user = yield call(getUser, authenticatedUser.uid);
-        if (user) {
-          yield put(AnalyticsActions.TRACK_SIGN_IN.START.create({user}));
-        }
       }
 
       if (user === null) {
@@ -45,15 +40,11 @@ export function* userStateChangeSaga() {
           email: authenticatedUser.email,
           phoneNumber: authenticatedUser.phoneNumber,
         });
-        yield put(AnalyticsActions.TRACK_SIGN_UP.SUCCESS.create());
-
         // Request firebase user once again after create-user to get updated claims
         // This forceRefresh triggers userStateChange
         yield call(getAuthenticatedUser, true);
       }
-      if (user?.id) {
-        yield call(startTrackingCurrentUser, user.id);
-      }
+
       yield put(
         AccountActions.USER_STATE_CHANGE.SUCCESS.create(
           user,
@@ -61,13 +52,8 @@ export function* userStateChangeSaga() {
         ),
       );
     } else {
-      const token: SagaReturnType<typeof authTokenSelector> = yield select(
-        authTokenSelector,
-      );
-      if (!token || token.issuer === 'firebase') {
-        yield put(AccountActions.SET_TOKEN.STATE.create(null));
-        yield put(AccountActions.USER_STATE_CHANGE.SUCCESS.create(null, null));
-      }
+      yield put(AccountActions.SET_TOKEN.STATE.create(null));
+      yield put(AccountActions.USER_STATE_CHANGE.SUCCESS.create(null, null));
     }
   } catch (error) {
     let localizedError = getErrorMessage(error);
@@ -92,6 +78,7 @@ function* getUser(userId: string) {
       Api.user.getUserById,
       userId,
     );
+    yield put(AnalyticsActions.TRACK_SIGN_IN.START.create({user}));
     return user;
   } catch (error) {
     if (isApiError(error, 404, 'USER_NOT_FOUND')) {
@@ -132,7 +119,7 @@ function* createUser({
     phoneNumberHash = yield call(hashPhoneNumber, normalizedNumber);
   }
 
-  let user: SagaReturnType<typeof Api.user.createUser> = yield call(
+  const user: SagaReturnType<typeof Api.user.createUser> = yield call(
     Api.user.createUser,
     {
       firstName: userInfo?.firstName ?? null,
@@ -146,6 +133,8 @@ function* createUser({
       language: appLocale,
     },
   );
+
+  yield put(AnalyticsActions.TRACK_SIGN_UP.SUCCESS.create());
 
   return user;
 }

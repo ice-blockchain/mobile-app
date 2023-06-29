@@ -2,6 +2,7 @@
 
 import {AccountActions} from '@store/modules/Account/actions';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
+import {startTrackingCurrentUserSaga} from '@store/modules/Analytics/sagas/startTrackingCurrentUser';
 import {trackSignInSaga} from '@store/modules/Analytics/sagas/trackSignInSaga';
 import {trackSignUpSaga} from '@store/modules/Analytics/sagas/trackSignUpSaga';
 import {updateAttributesSaga} from '@store/modules/Analytics/sagas/updateAttributes';
@@ -42,4 +43,8 @@ export const analyticsWatchers = [
   ),
   takeLatest(AnalyticsActions.TRACK_SIGN_IN.START.type, trackSignInSaga),
   takeLatest(AnalyticsActions.TRACK_SIGN_UP.START.type, trackSignUpSaga),
+  takeLatest(
+    AccountActions.USER_STATE_CHANGE.SUCCESS.type,
+    startTrackingCurrentUserSaga,
+  ),
 ];

@@ -7,13 +7,14 @@ import {call, SagaReturnType, select} from 'redux-saga/effects';
 
 export function* persistTokenSaga({
   payload,
-}: ReturnType<typeof AccountActions.SET_TOKEN.STATE.create>) {
+}: // OR DISPATCH CUSTOM ACTION FOR THAT?
+ReturnType<typeof AccountActions.SET_TOKEN.STATE.create>) {
   const token: SagaReturnType<typeof authTokenSelector> = yield select(
     authTokenSelector,
   );
-  if (payload.token) {
+  if (payload.token && payload.token.issuer === 'custom') {
     yield call(setSecureValue, 'token', JSON.stringify(payload.token));
-  } else if (token) {
+  } else if (token?.issuer === 'custom') {
     yield call(removeSecureValue, 'token');
   }
 }
