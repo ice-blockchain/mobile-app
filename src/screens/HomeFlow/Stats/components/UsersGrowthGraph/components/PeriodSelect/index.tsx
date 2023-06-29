@@ -70,6 +70,6 @@ const styles = StyleSheet.create({
     transform: [{rotate: '180deg'}],
   },
   labelText: {
-    ...font(12, 15, 'medium', 'primaryDark'),
+    ...font(12, 16, 'medium', 'primaryDark'),
   },
 });

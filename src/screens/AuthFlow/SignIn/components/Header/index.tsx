@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   },
   sloganText: {
     marginTop: rem(14),
-    ...font(13, 16, 'regular'),
+    ...font(13, 17, 'regular'),
     textTransform: 'uppercase',
   },
 });

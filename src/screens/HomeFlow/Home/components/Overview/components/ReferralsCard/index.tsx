@@ -88,11 +88,11 @@ const styles = StyleSheet.create({
   },
   valueText: {
     marginTop: rem(4),
-    ...font(24, 29, 'bold'),
+    ...font(24, 30, 'bold'),
   },
   noteText: {
     marginTop: rem(6),
     marginBottom: rem(12),
-    ...font(11, 14, 'regular'),
+    ...font(11, 15, 'regular'),
   },
 });

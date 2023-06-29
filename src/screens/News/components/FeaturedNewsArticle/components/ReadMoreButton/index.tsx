@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   readMoreText: {
-    ...font(15, 18, 'semibold', 'primaryLight'),
+    ...font(15, 20, 'semibold', 'primaryLight'),
   },
 });

@@ -96,9 +96,9 @@ const styles = StyleSheet.create({
     marginTop: rem(20),
   },
   valueText: {
-    ...font(17, 20, 'bold', 'primaryDark'),
+    ...font(17, 22, 'bold', 'primaryDark'),
   },
   valueDecimalsText: {
-    ...font(10, 12, 'bold', 'primaryDark'),
+    ...font(10, 14, 'bold', 'primaryDark'),
   },
 });

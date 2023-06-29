@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   labelText: {
     marginTop: rem(8),
-    ...font(12, 15, 'medium', 'white', 'center'),
+    ...font(12, 16, 'medium', 'white', 'center'),
     textTransform: 'uppercase',
   },
   value: {
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   valueText: {
-    ...font(15, 18, 'bold'),
+    ...font(15, 20, 'bold'),
   },
   cellSeparator: {
     width: 1,

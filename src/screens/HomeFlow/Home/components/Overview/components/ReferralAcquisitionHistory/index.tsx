@@ -124,6 +124,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   yAxisText: {
-    ...font(8, 9.6, 'medium', 'white'),
+    ...font(8, 10, 'medium', 'white'),
   },
 });

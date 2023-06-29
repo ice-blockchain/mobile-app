@@ -31,6 +31,6 @@ const styles = StyleSheet.create({
     marginBottom: rem(18),
   },
   buttonText: {
-    ...font(15, 18, 'medium', 'secondary', 'center'),
+    ...font(15, 20, 'medium', 'secondary', 'center'),
   },
 });

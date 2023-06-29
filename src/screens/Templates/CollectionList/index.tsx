@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     paddingTop: rem(200),
   },
   emptyContainerText: {
-    ...font(14, 17, 'medium', 'secondary', 'center'),
+    ...font(14, 19, 'medium', 'secondary', 'center'),
     paddingTop: rem(16),
     paddingHorizontal: SCREEN_SIDE_OFFSET,
   },

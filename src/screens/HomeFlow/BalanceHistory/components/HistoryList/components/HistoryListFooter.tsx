@@ -32,6 +32,6 @@ const styles = StyleSheet.create({
     left: 0,
   },
   labelText: {
-    ...font(13, 16, 'medium', 'periwinkleGray'),
+    ...font(13, 17, 'medium', 'periwinkleGray'),
   },
 });

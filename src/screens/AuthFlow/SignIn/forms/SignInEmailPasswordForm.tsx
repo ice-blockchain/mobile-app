@@ -63,6 +63,6 @@ const styles = StyleSheet.create({
     marginTop: rem(10),
   },
   resetPasswordText: {
-    ...font(12, 14.4, 'regular', 'primaryDark'),
+    ...font(12, 15, 'regular', 'primaryDark'),
   },
 });

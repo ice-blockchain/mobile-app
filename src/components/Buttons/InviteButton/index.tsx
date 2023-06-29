@@ -86,11 +86,11 @@ const styles = StyleSheet.create({
     height: rem(20),
   },
   mainText: {
-    ...font(15, 18, 'black'),
+    ...font(15, 20, 'black'),
   },
   noteText: {
     marginTop: rem(1),
-    ...font(12, 14.4, 'medium'),
+    ...font(12, 15, 'medium'),
   },
   backgroundIcon: {
     position: 'absolute',

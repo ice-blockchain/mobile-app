@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    ...font(14, 16.8, 'semibold', 'primaryDark'),
+    ...font(14, 19, 'semibold', 'primaryDark'),
   },
 
   valuesContainer: {

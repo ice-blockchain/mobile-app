@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   titleText: {
     marginTop: rem(22),
     marginHorizontal: rem(32),
-    ...font(18, 22, 'black', 'primaryDark', 'center'),
+    ...font(18, 24, 'black', 'primaryDark', 'center'),
   },
   noteText: {
     marginTop: rem(14),
@@ -69,6 +69,6 @@ const styles = StyleSheet.create({
     borderRadius: rem(12),
   },
   buttonText: {
-    ...font(14, 18, 'black', 'white'),
+    ...font(14, 19, 'black', 'white'),
   },
 });

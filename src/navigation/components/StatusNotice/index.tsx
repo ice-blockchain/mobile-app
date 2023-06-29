@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     justifyContent: 'center',
-    ...font(15, 18, 'semibold', 'white'),
+    ...font(15, 20, 'semibold', 'white'),
     marginBottom: rem(8),
   },
   contentText: {

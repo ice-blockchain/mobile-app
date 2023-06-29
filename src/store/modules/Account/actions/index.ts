@@ -136,10 +136,6 @@ const SET_PRIVACY_INFO_SHOW = createAction('SET_PRIVACY_INFO_SHOW', {
   STATE: (isPrivacyInfoShown: boolean) => ({isPrivacyInfoShown}),
 });
 
-const SYNC_RTL = createAction('SYNC_RTL', {
-  SUCCESS: true,
-});
-
 export const AccountActions = Object.freeze({
   SET_TOKEN,
   SIGN_IN_EMAIL_LINK,
@@ -156,5 +152,4 @@ export const AccountActions = Object.freeze({
   VERIFY_PHONE_NUMBER,
   RESET_PASSWORD,
   SET_PRIVACY_INFO_SHOW,
-  SYNC_RTL,
 });

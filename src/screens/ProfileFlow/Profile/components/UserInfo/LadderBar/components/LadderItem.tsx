@@ -131,18 +131,18 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: rem(4),
-    ...font(20, 24, 'bold'),
+    ...font(20, 25, 'bold'),
   },
   textPrivacyEdit: {
     marginTop: rem(4),
-    ...font(20, 24, 'bold', 'primaryDark'),
+    ...font(20, 25, 'bold', 'primaryDark'),
   },
   ladderLabelText: {
     marginHorizontal: rem(4),
-    ...font(10, 12, 'regular', 'periwinkleGray', 'center'),
+    ...font(10, 14, 'regular', 'periwinkleGray', 'center'),
   },
   ladderLabelTextPrivacyEdit: {
     marginHorizontal: rem(4),
-    ...font(10, 12, 'regular', 'periwinkleGray', 'center'),
+    ...font(10, 14, 'regular', 'periwinkleGray', 'center'),
   },
 });

@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   usernameText: {
     alignSelf: 'center',
     marginTop: rem(10),
-    ...font(17, 20.4, 'semibold'),
+    ...font(17, 22, 'semibold'),
   },
   linesBackground: {
     overflow: 'hidden',

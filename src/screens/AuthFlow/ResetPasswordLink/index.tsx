@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     marginBottom: rem(20),
   },
   backBodyButtonText: {
-    ...font(15, 18, 'medium', 'primaryDark'),
+    ...font(15, 20, 'medium', 'primaryDark'),
     marginLeft: rem(12),
   },
 });

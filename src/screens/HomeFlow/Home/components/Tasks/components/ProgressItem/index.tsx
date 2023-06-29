@@ -57,11 +57,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   amountText: {
-    ...font(12, 14, 'bold', 'primaryDark'),
+    ...font(12, 15, 'bold', 'primaryDark'),
   },
   amountTextSmall: {
     marginHorizontal: rem(2),
-    ...font(12, 14, 'regular', 'primaryDark'),
+    ...font(12, 15, 'regular', 'primaryDark'),
   },
   header: {
     flexDirection: 'row',
@@ -69,11 +69,11 @@ const styles = StyleSheet.create({
     marginBottom: rem(10),
   },
   title: {
-    ...font(14, 17, 'black', 'primaryDark'),
+    ...font(14, 19, 'black', 'primaryDark'),
   },
   description: {
     marginTop: rem(4),
-    ...font(12, 14, 'medium', 'toreaBay'),
+    ...font(12, 16, 'medium', 'toreaBay'),
   },
   progress: {
     position: 'absolute',

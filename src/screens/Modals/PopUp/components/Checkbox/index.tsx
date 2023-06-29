@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     height: rem(24),
   },
   text: {
-    ...font(12, 14, 'medium', 'primaryDark'),
+    ...font(12, 15, 'medium', 'primaryDark'),
     marginLeft: rem(8),
     flex: 1,
   },

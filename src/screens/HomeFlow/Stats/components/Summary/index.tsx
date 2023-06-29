@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   labelText: {
-    ...font(12, 15, 'medium'),
+    ...font(12, 16, 'medium'),
     opacity: 0.7,
   },
   value: {
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   valueText: {
-    ...font(15, 18, 'black'),
+    ...font(15, 20, 'black'),
     alignItems: 'flex-end',
   },
   onlineIndicator: {

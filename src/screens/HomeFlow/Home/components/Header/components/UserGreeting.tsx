@@ -61,6 +61,6 @@ const styles = StyleSheet.create({
   },
   usernameText: {
     marginTop: rem(3),
-    ...font(15, 18, 'bold', 'downriver'),
+    ...font(15, 20, 'bold', 'downriver'),
   },
 });

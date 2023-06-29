@@ -136,10 +136,10 @@ const styles = StyleSheet.create({
   bonusLabelText: {
     marginLeft: rem(8),
     textTransform: 'uppercase',
-    ...font(14, 17, 'medium', 'primaryLight'),
+    ...font(14, 19, 'medium', 'primaryLight'),
   },
   bonusValueText: {
     marginLeft: rem(4),
-    ...font(17, 21, 'bold', 'primaryLight'),
+    ...font(17, 22, 'bold', 'primaryLight'),
   },
 });
