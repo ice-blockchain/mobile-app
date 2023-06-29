@@ -12,5 +12,7 @@ type Response = {
 };
 
 export function refreshTokens(params: Params) {
-  return post<{}, Response>('auth/refreshTokens', params);
+  return post<{}, Response>('auth/refreshTokens', {}, undefined, {
+    headers: {Authorization: `Bearer ${params.refreshToken}`},
+  });
 }

@@ -3,7 +3,7 @@
 import {backOffWrapper, DEFAULT_BACK_OFF_OPTIONS} from '@api/client/backOff';
 import {getHeaders} from '@api/client/getHeaders';
 import {ENV} from '@constants/env';
-import axios, {AxiosError, AxiosInstance} from 'axios';
+import axios, {AxiosError, AxiosInstance, AxiosRequestConfig} from 'axios';
 
 import {requestInterceptor} from './interceptors/request';
 import {responseInterceptor} from './interceptors/response';
@@ -34,9 +34,10 @@ export async function post<TRequest, TResponse>(
   path: string,
   payload: TRequest,
   backOffOptions = DEFAULT_BACK_OFF_OPTIONS,
+  config?: AxiosRequestConfig,
 ): Promise<TResponse> {
   const response = await backOffWrapper(
-    async () => writeClient.post<TResponse>(path, payload),
+    async () => writeClient.post<TResponse>(path, payload, config),
     backOffOptions,
   );
   return response.data;
@@ -46,9 +47,10 @@ export async function patch<TRequest, TResponse>(
   path: string,
   payload: TRequest,
   backOffOptions = DEFAULT_BACK_OFF_OPTIONS,
+  config?: AxiosRequestConfig,
 ): Promise<TResponse> {
   const response = await backOffWrapper(
-    async () => writeClient.patch<TResponse>(path, payload),
+    async () => writeClient.patch<TResponse>(path, payload, config),
     backOffOptions,
   );
   return response.data;
@@ -58,9 +60,10 @@ export async function put<TRequest, TResponse>(
   path: string,
   payload: TRequest,
   backOffOptions = DEFAULT_BACK_OFF_OPTIONS,
+  config?: AxiosRequestConfig,
 ): Promise<TResponse> {
   const response = await backOffWrapper(
-    async () => writeClient.put<TResponse>(path, payload),
+    async () => writeClient.put<TResponse>(path, payload, config),
     backOffOptions,
   );
   return response.data;
@@ -70,9 +73,11 @@ export async function get<TResponse>(
   path: string,
   queryParams?: {[key: string]: string | number | null | undefined} | null,
   backOffOptions = DEFAULT_BACK_OFF_OPTIONS,
+  config?: AxiosRequestConfig,
 ): Promise<TResponse> {
   const response = await backOffWrapper(
-    async () => readClient.get<TResponse>(path, {params: queryParams}),
+    async () =>
+      readClient.get<TResponse>(path, {params: queryParams, ...config}),
     backOffOptions,
   );
   return response.data;
@@ -82,9 +87,11 @@ export async function del<TResponse>(
   path: string,
   queryParams?: {[key: string]: string | number | null | undefined} | null,
   backOffOptions = DEFAULT_BACK_OFF_OPTIONS,
+  config?: AxiosRequestConfig,
 ): Promise<TResponse> {
   const response = await backOffWrapper(
-    async () => writeClient.delete<TResponse>(path, {params: queryParams}),
+    async () =>
+      writeClient.delete<TResponse>(path, {params: queryParams, ...config}),
     backOffOptions,
   );
   return response.data;
