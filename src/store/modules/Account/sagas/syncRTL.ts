@@ -1,27 +1,35 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AccountActions} from '@store/modules/Account/actions';
 import {appLocaleSelector} from '@store/modules/Account/selectors';
-import {waitForSelector} from '@store/utils/sagas/effects';
 import {isRTL} from '@translations/i18n';
 import {localeConfig} from '@translations/localeConfig';
 import {I18nManager} from 'react-native';
-import {call, SagaReturnType, select} from 'redux-saga/effects';
+import RNRestart from 'react-native-restart';
+import {put, SagaReturnType, select} from 'redux-saga/effects';
 
 /**
- * Check user.language property and react on locale change
+ * Check the locale change and restart the app when needed (if locale.RTL !== isRTL)
  */
-export function* syncRtlSaga() {
-  while (true) {
-    yield call(waitForSelector, state => {
-      const appLocale = appLocaleSelector(state);
+export function* syncRtlSaga(
+  action: ReturnType<
+    | typeof AccountActions.GET_ACCOUNT.SUCCESS.create
+    | typeof AccountActions.UPDATE_ACCOUNT.SUCCESS.create
+    | typeof AccountActions.USER_STATE_CHANGE.SUCCESS.create
+  >,
+) {
+  const locale: SagaReturnType<typeof appLocaleSelector> = yield select(
+    appLocaleSelector,
+  );
 
-      return localeConfig[appLocale].isRTL !== isRTL;
-    });
-
-    const locale: SagaReturnType<typeof appLocaleSelector> = yield select(
-      appLocaleSelector,
-    );
-
+  if (localeConfig[locale].isRTL !== isRTL) {
     I18nManager.forceRTL(localeConfig[locale].isRTL);
+    yield put(AccountActions.SYNC_RTL.SUCCESS.create());
+
+    if (action.type !== AccountActions.USER_STATE_CHANGE.SUCCESS.type) {
+      RNRestart.restart();
+    }
+  } else {
+    yield put(AccountActions.SYNC_RTL.SUCCESS.create());
   }
 }

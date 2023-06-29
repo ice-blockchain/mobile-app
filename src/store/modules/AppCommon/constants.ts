@@ -6,4 +6,5 @@ import {DeviceActions} from '@store/modules/Devices/actions';
 export const INITIALIZE_ACTIONS = [
   AccountActions.USER_STATE_CHANGE,
   DeviceActions.INIT_DEVICE,
+  AccountActions.SYNC_RTL,
 ];

@@ -53,6 +53,13 @@ export const authWatchers = [
   ),
   takeLatest(AccountActions.RESET_PASSWORD.START.type, resetPasswordSaga),
   fork(syncLanguageCodeSaga),
-  fork(syncRtlSaga),
+  takeLatest(
+    [
+      AccountActions.GET_ACCOUNT.SUCCESS.type,
+      AccountActions.UPDATE_ACCOUNT.SUCCESS.type,
+      AccountActions.USER_STATE_CHANGE.SUCCESS.type,
+    ],
+    syncRtlSaga,
+  ),
   fork(subscribeUserChangedSaga),
 ];
