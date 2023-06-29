@@ -90,7 +90,11 @@ export function* signInEmailCustomSaga(
             issuer: 'custom',
           }),
         );
+
+        yield take(AccountActions.PERSIST_TOKEN.SUCCESS.type);
+
         yield put(AccountActions.SIGN_IN_EMAIL_CUSTOM.SUCCESS.create());
+        yield put(AccountActions.USER_STATE_CHANGE.START.create());
         return;
       }
     }

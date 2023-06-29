@@ -8,6 +8,7 @@ import produce from 'immer';
 export type Token =
   | {
       accessToken: string;
+      refreshToken: null;
       issuer: 'firebase';
     }
   | {

@@ -32,6 +32,7 @@ function onRejected(instance: AxiosInstance) {
               store.dispatch(
                 AccountActions.SET_TOKEN.STATE.create({
                   accessToken: token,
+                  refreshToken: null,
                   issuer: 'firebase',
                 }),
               );

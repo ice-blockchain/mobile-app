@@ -14,6 +14,10 @@ const SET_TOKEN = createAction('SET_TOKEN', {
   STATE: (token: Token) => ({token}),
 });
 
+const PERSIST_TOKEN = createAction('PERSIST_TOKEN', {
+  SUCCESS: true,
+});
+
 const USER_STATE_CHANGE = createAction('USER_STATE_CHANGE', {
   START: true,
   SUCCESS: (user: User | null, isAdmin: boolean | null) => ({user, isAdmin}),
@@ -132,6 +136,7 @@ const SET_PRIVACY_INFO_SHOW = createAction('SET_PRIVACY_INFO_SHOW', {
 
 export const AccountActions = Object.freeze({
   SET_TOKEN,
+  PERSIST_TOKEN,
   SIGN_IN_EMAIL_LINK,
   SIGN_IN_EMAIL_CUSTOM,
   SIGN_IN_PHONE,
