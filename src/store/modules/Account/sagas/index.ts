@@ -54,14 +54,6 @@ export const authWatchers = [
     verifyPhoneNumberSaga,
   ),
   fork(syncLanguageCodeSaga),
-  takeLatest(
-    [
-      AccountActions.GET_ACCOUNT.SUCCESS.type,
-      AccountActions.UPDATE_ACCOUNT.SUCCESS.type,
-      AccountActions.USER_STATE_CHANGE.SUCCESS.type,
-    ],
-    syncRtlSaga,
-  ),
   fork(subscribeUserChangedSaga),
   takeLatest(
     [

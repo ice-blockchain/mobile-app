@@ -16,7 +16,7 @@ import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 const LADDER_ITEMS_COUNT = 3;
-const LADDER_CONTAINER_SIDE_OFFSET = rem(32);
+const LADDER_CONTAINER_SIDE_OFFSET = rem(20);
 const LADDER_WIDTH = windowWidth - LADDER_CONTAINER_SIDE_OFFSET * 2;
 export const LADDER_ITEM_WIDTH = LADDER_WIDTH / LADDER_ITEMS_COUNT;
 
