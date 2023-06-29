@@ -145,6 +145,10 @@ const SET_PRIVACY_INFO_SHOW = createAction('SET_PRIVACY_INFO_SHOW', {
   STATE: (isPrivacyInfoShown: boolean) => ({isPrivacyInfoShown}),
 });
 
+const SYNC_RTL = createAction('SYNC_RTL', {
+  SUCCESS: true,
+});
+
 const GET_AUTH_CONFIG = createAction('GET_AUTH_CONFIG', {
   SUCCESS: (config: AuthConfig | null) => ({config}),
   FAILED: (errorMessage: string) => ({errorMessage}),
@@ -167,5 +171,6 @@ export const AccountActions = Object.freeze({
   MODIFY_EMAIL_WITH_CODE,
   VERIFY_PHONE_NUMBER,
   SET_PRIVACY_INFO_SHOW,
+  SYNC_RTL,
   GET_AUTH_CONFIG,
 });

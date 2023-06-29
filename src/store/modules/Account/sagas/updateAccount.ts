@@ -7,7 +7,6 @@ import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {showError} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
-import RNRestart from 'react-native-restart';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
 const actionCreator = AccountActions.UPDATE_ACCOUNT.START.create;
@@ -41,15 +40,6 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
         action.payload.userInfo,
       ),
     );
-
-    if (action.payload.userInfo.language) {
-      /**
-       * Run it ONLY after AccountActions.UPDATE_ACCOUNT.SUCCESS action
-       * It will set locale to global state and to i18n.
-       * Only then we need to reload app
-       */
-      RNRestart.restart();
-    }
   } catch (error) {
     let localizedError = null;
     if (isApiError(error, 400, 'RACE_CONDITION') && user) {
