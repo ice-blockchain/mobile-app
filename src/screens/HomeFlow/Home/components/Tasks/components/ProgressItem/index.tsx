@@ -34,7 +34,7 @@ export const ProgressItem = ({total, completed}: Props) => {
           style={styles.progress}
         />
       </View>
-      <View>
+      <View style={styles.titleDescriptionWrapper}>
         <Text style={styles.title}>{t('home.tasks.title')}</Text>
         <Text style={styles.description}>{t('home.tasks.description')}</Text>
       </View>
@@ -77,5 +77,8 @@ const styles = StyleSheet.create({
   },
   progress: {
     position: 'absolute',
+  },
+  titleDescriptionWrapper: {
+    flex: 1,
   },
 });
