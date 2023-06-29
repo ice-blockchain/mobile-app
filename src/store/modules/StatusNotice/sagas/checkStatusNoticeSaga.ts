@@ -24,22 +24,23 @@ export function* checkStatusNoticeSaga() {
   const noticeData: SagaReturnType<typeof Api.statusNotice.getNotice> =
     yield call(Api.statusNotice.getNotice);
   const user: ReturnType<typeof userSelector> = yield select(userSelector);
+  const statusNoticeData: StatusNoticeData = {
+    link: noticeData?.link,
+    gradientColors: noticeData?.gradientColors,
+    newsData: noticeData?.newsData,
+    icon: noticeData?.icon,
+  };
 
   if (noticeData?.data) {
-    const localisedData =
+    statusNoticeData.data =
       noticeData.data[user?.language ?? ''] ?? noticeData.data.en;
-    if (localisedData) {
-      const statusNoticeData: StatusNoticeData = {
-        link: noticeData.link,
-        title: localisedData.title,
-        content: localisedData.content,
-      };
-      yield put(
-        StatusNoticeActions.SET_STATUS_NOTICE_DATA.STATE.create({
-          data: statusNoticeData,
-        }),
-      );
-    }
+  }
+  if (statusNoticeData?.data || statusNoticeData?.newsData) {
+    yield put(
+      StatusNoticeActions.SET_STATUS_NOTICE_DATA.STATE.create({
+        data: statusNoticeData,
+      }),
+    );
   } else {
     yield put(
       StatusNoticeActions.SET_STATUS_NOTICE_DATA.STATE.create({

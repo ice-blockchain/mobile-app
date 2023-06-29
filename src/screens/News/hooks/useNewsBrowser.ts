@@ -1,13 +1,19 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {NewsArticle} from '@api/news/types';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {NewsActions} from '@store/modules/News/actions';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {useCallback} from 'react';
 import {useDispatch} from 'react-redux';
 
-export function useNewsBrowser(newsArticle: NewsArticle | undefined) {
+type NewsArticleData = {
+  id: string;
+  url: string;
+  viewed: boolean;
+  language: string;
+};
+
+export function useNewsBrowser(newsArticle: NewsArticleData | undefined) {
   const dispatch = useDispatch();
 
   const openNewsArticle = useCallback(() => {
