@@ -2,25 +2,13 @@
 
 import {User} from '@api/user/types';
 import {SignInUserInfo} from '@services/auth/signin/types';
+import {AuthToken} from '@services/auth/types';
 import {AccountActions} from '@store/modules/Account/actions';
 import produce from 'immer';
 
-export type Token =
-  | {
-      accessToken: string;
-      refreshToken: null;
-      issuer: 'firebase';
-    }
-  | {
-      accessToken: string;
-      refreshToken: string;
-      issuer: 'custom';
-    }
-  | null;
-
 export interface AccountState {
   isAdmin: boolean | null;
-  token: Token;
+  token: AuthToken | null;
   user: User | null;
   // data that is taken from the auth providers (google / apple etc)
   // and used to populate / suggest User profile later on

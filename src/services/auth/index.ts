@@ -10,6 +10,7 @@ import {startFacebookSignIn} from '@services/auth/signin/facebook';
 import {startGoogleSignIn} from '@services/auth/signin/google';
 import {twitterSignIn} from '@services/auth/signin/twitter';
 import {SocialSignInProvider} from '@services/auth/signin/types';
+import {AuthToken} from '@services/auth/types';
 import {
   getSecureValue,
   removeSecureValue,
@@ -20,7 +21,7 @@ import {SupportedLocale} from '@translations/localeConfig';
 import {checkProp} from '@utils/guards';
 import jwt_decode from 'jwt-decode';
 
-const CUSTOM_TOKEN_PERSIST_KEY = 'custom_auth_token';
+const TOKEN_PERSIST_KEY = 'custom_auth_token';
 
 export const signInWithGoogle = async () => {
   const result = await startGoogleSignIn();
@@ -175,8 +176,27 @@ export const signOut = () => {
   return auth().signOut();
 };
 
-export const getAuthToken = async () => {
-  return auth().currentUser?.getIdToken() ?? null;
+export const refreshAuthToken = async (token: AuthToken) => {
+  switch (token.issuer) {
+    case 'firebase':
+      const newFirebaseToken = await auth().currentUser?.getIdToken();
+      if (!newFirebaseToken) {
+        return null;
+      }
+      return {
+        accessToken: newFirebaseToken,
+        issuer: 'firebase',
+      } as const;
+    case 'custom':
+      const newCustomToken = await Api.auth.refreshTokens({
+        refreshToken: token.refreshToken,
+      });
+      return {
+        ...newCustomToken,
+        issuer: 'custom',
+      } as const;
+  }
+  return null;
 };
 
 export const getAuthProvider = async () => {
@@ -196,7 +216,6 @@ export const getAuthenticatedUser = async (forceRefresh?: boolean) => {
       isAdmin: idTokenResult.claims.role === 'admin',
       token: {
         accessToken: idTokenResult.token,
-        refreshToken: null,
         issuer: 'firebase',
       },
     } as const;
@@ -212,38 +231,34 @@ export const getAuthenticatedUser = async (forceRefresh?: boolean) => {
       email: 'customUser.email',
       phoneNumber: 'customUser.phoneNumber',
       isAdmin: false,
-      source: 'custom',
-      token: {
-        accessToken: customToken.accessToken,
-        refreshToken: customToken.refreshToken,
-        issuer: 'custom',
-      },
+      token: customToken,
     } as const;
   }
 
   return null;
 };
 
-export const persistCustomToken = (token: {
-  accessToken: string;
-  refreshToken: string;
-}) => {
-  return setSecureValue(CUSTOM_TOKEN_PERSIST_KEY, JSON.stringify(token));
+export const persistToken = (token: AuthToken) => {
+  return setSecureValue(TOKEN_PERSIST_KEY, JSON.stringify(token));
 };
 
 export const readPersistedCustomToken = async () => {
-  const value = await getSecureValue(CUSTOM_TOKEN_PERSIST_KEY);
+  const value = await getSecureValue(TOKEN_PERSIST_KEY);
   if (value) {
     const token = JSON.parse(value);
-    if (checkProp(token, 'accessToken') && checkProp(token, 'refreshToken')) {
-      return token as {accessToken: string; refreshToken: string};
+    if (
+      checkProp(token, 'accessToken') &&
+      checkProp(token, 'refreshToken') &&
+      checkProp(token, 'issuer')
+    ) {
+      return token as AuthToken;
     }
   }
   return null;
 };
 
-export const clearPersistedCustomToken = () => {
-  return removeSecureValue(CUSTOM_TOKEN_PERSIST_KEY);
+export const clearPersistedToken = () => {
+  return removeSecureValue(TOKEN_PERSIST_KEY);
 };
 
 export const getAuthErrorMessage = (error: {code: string}) => {

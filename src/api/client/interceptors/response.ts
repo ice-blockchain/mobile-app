@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {getAuthToken} from '@services/auth';
+import {refreshAuthToken} from '@services/auth';
 import {store} from '@store/configureStore';
 import {AccountActions} from '@store/modules/Account/actions';
+import {authTokenSelector} from '@store/modules/Account/selectors';
 import {AxiosInstance, AxiosRequestConfig, AxiosResponse} from 'axios';
 
 function onRejected(instance: AxiosInstance) {
@@ -19,23 +20,18 @@ function onRejected(instance: AxiosInstance) {
       case 401:
         {
           const originalRequest = error.config ?? {};
+          const currentToken = authTokenSelector(store.getState());
 
-          if (!originalRequest.pliantRequestRetry) {
-            const token = await getAuthToken();
+          if (!originalRequest.pliantRequestRetry && currentToken) {
+            const newToken = await refreshAuthToken(currentToken);
 
             /**
              * token is null if user is already signed out
              */
-            if (token) {
+            if (newToken) {
               originalRequest.pliantRequestRetry = true;
-              originalRequest.headers!.Authorization = `Bearer ${token}`;
-              store.dispatch(
-                AccountActions.SET_TOKEN.STATE.create({
-                  accessToken: token,
-                  refreshToken: null,
-                  issuer: 'firebase',
-                }),
-              );
+              originalRequest.headers!.Authorization = `Bearer ${newToken.accessToken}`;
+              store.dispatch(AccountActions.SET_TOKEN.STATE.create(newToken));
               return instance(originalRequest);
             }
           } else {

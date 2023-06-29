@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {clearPersistedCustomToken, persistCustomToken} from '@services/auth';
+import {clearPersistedToken, persistToken} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {authTokenSelector} from '@store/modules/Account/selectors';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
@@ -12,9 +12,9 @@ export function* persistTokenSaga({
     authTokenSelector,
   );
   if (payload.token && payload.token.issuer === 'custom') {
-    yield call(persistCustomToken, payload.token);
+    yield call(persistToken, payload.token);
     yield put(AccountActions.PERSIST_TOKEN.SUCCESS.create());
   } else if (!payload.token && token?.issuer === 'custom') {
-    yield call(clearPersistedCustomToken);
+    yield call(clearPersistedToken);
   }
 }
