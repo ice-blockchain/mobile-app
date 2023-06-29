@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   },
   engagementText: {
     marginTop: rem(30),
-    ...font(12, 14, 'semibold'),
+    ...font(12, 15, 'semibold'),
     marginLeft: rem(4),
   },
   engagement: {
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
   description: {
     marginTop: rem(9),
     marginHorizontal: rem(20),
-    ...font(11, 13, 'regular', 'white', 'center'),
+    ...font(11, 14, 'regular', 'white', 'center'),
   },
   valuesContainer: {
     flexDirection: 'row',
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    ...font(12, 14, 'semibold'),
+    ...font(12, 15, 'semibold'),
   },
   value: {
     ...font(26, 31, 'semibold'),

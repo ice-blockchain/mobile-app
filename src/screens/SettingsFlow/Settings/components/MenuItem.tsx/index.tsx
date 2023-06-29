@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     marginBottom: rem(4),
   },
   descriptionText: {
-    ...font(12, 15, 'medium', 'secondary'),
+    ...font(12, 16, 'medium', 'secondary'),
   },
   chevron: {
     marginLeft: rem(10),

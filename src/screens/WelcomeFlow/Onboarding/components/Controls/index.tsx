@@ -81,6 +81,6 @@ const styles = StyleSheet.create({
   linkText: {
     marginHorizontal: rem(8),
     marginVertical: rem(10),
-    ...font(14, 17, 'medium', 'primaryDark'),
+    ...font(14, 19, 'medium', 'primaryDark'),
   },
 });

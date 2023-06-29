@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
   },
 
   newsFeed: {
-    ...font(15, 16, 'semibold', 'primaryDark'),
+    ...font(15, 20, 'semibold', 'primaryDark'),
   },
 
   footerLoader: {
@@ -236,6 +236,6 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
   noMoreText: {
-    ...font(13, 15.6, 'medium', 'periwinkleGray'),
+    ...font(13, 17, 'medium', 'periwinkleGray'),
   },
 });

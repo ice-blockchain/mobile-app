@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     paddingVertical: rem(12),
   },
   title: {
-    ...font(16, 19, 'black', 'primaryDark'),
+    ...font(16, 21, 'black', 'primaryDark'),
     paddingBottom: rem(4),
   },
 });

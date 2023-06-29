@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
   },
   text: {
     marginVertical: rem(4),
-    ...font(17, 20, 'semibold'),
+    ...font(17, 22, 'semibold'),
     textAlign: 'center',
   },
   activeText: {

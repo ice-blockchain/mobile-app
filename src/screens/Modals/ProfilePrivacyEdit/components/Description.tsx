@@ -35,10 +35,10 @@ const styles = StyleSheet.create({
     marginLeft: rem(12),
   },
   title: {
-    ...font(20, 24, 'medium'),
+    ...font(20, 25, 'medium'),
   },
   description: {
-    ...font(15, 18, 'medium'),
+    ...font(15, 20, 'medium'),
     marginTop: rem(10),
   },
 });

@@ -58,6 +58,6 @@ const styles = StyleSheet.create({
     paddingBottom: rem(4),
   },
   description: {
-    ...font(14, 18, 'medium', 'secondary'),
+    ...font(14, 19, 'medium', 'secondary'),
   },
 });

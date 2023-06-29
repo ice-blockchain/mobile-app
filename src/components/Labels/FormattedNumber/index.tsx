@@ -49,11 +49,11 @@ const styles = StyleSheet.create({
     flexDirection: isRTL ? 'row-reverse' : 'row',
   },
   dot: {
-    ...font(17, 20.4, 'bold'),
+    ...font(17, 22, 'bold'),
     alignSelf: 'flex-end',
   },
   integerText: {
-    ...font(17, 20.4, 'bold'),
+    ...font(17, 22, 'bold'),
   },
   fractionalText: {
     ...font(10, 12, 'bold'),

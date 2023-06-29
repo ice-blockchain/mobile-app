@@ -32,6 +32,6 @@ const styles = StyleSheet.create({
     borderRadius: rem(12),
   },
   buttonText: {
-    ...font(17, 20, 'bold'),
+    ...font(17, 22, 'bold'),
   },
 });

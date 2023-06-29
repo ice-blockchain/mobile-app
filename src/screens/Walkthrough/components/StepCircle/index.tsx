@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     marginRight: rem(12),
   },
   titleText: {
-    ...font(20, 24, 'bold'),
+    ...font(20, 25, 'bold'),
   },
   description: {
     marginTop: rem(16),
@@ -114,6 +114,6 @@ const styles = StyleSheet.create({
     ...font(14, 24, 'medium'),
   },
   skipAll: {
-    ...font(14, 17, 'medium'),
+    ...font(14, 19, 'medium'),
   },
 });

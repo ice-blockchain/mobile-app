@@ -19,6 +19,6 @@ export const GreetingText = () => {
 
 const styles = StyleSheet.create({
   greetingsText: {
-    ...font(15, 18, 'regular', 'downriver'),
+    ...font(15, 20, 'regular', 'downriver'),
   },
 });

@@ -117,6 +117,6 @@ const styles = StyleSheet.create({
   },
   yAxisText: {
     flex: 1,
-    ...font(8, 9.6, 'medium', 'white'),
+    ...font(8, 10, 'medium', 'white'),
   },
 });

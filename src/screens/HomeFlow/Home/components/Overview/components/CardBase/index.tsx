@@ -116,12 +116,12 @@ const styles = StyleSheet.create({
   titleText: {
     textTransform: 'uppercase',
     marginLeft: rem(4),
-    ...font(12, 15, 'black'),
+    ...font(12, 16, 'black'),
   },
   valueText: {
     textTransform: 'uppercase',
     marginLeft: rem(4),
-    ...font(12, 15, 'black'),
+    ...font(12, 16, 'black'),
   },
   body: {
     flexGrow: 1,

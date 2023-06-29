@@ -49,9 +49,9 @@ export const BlockchainCell = ({value, currency}: Props) => {
 
 const styles = StyleSheet.create({
   valueText: {
-    ...font(15, 18, 'bold'),
+    ...font(15, 20, 'bold'),
   },
   valueDecimalsText: {
-    ...font(9, 10, 'bold'),
+    ...font(9, 11, 'bold'),
   },
 });

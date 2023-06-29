@@ -16,7 +16,6 @@ export const INITIALIZE_ACTIONS = [
    * Is required to set deviceUniqueId that is used in other places
    */
   DeviceActions.INIT_DEVICE,
-  AccountActions.SYNC_RTL,
 
   /**
    * Is required to get a device country and city based on ip

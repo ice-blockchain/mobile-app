@@ -97,11 +97,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   titleText: {
-    ...font(14, 17, 'semibold', 'primaryDark'),
+    ...font(14, 19, 'semibold', 'primaryDark'),
     textTransform: 'uppercase',
   },
   resetButtonText: {
-    ...font(14, 17, 'semibold', 'primaryLight'),
+    ...font(14, 19, 'semibold', 'primaryLight'),
   },
   footer: {
     flexDirection: 'row',
@@ -117,9 +117,9 @@ const styles = StyleSheet.create({
     borderRadius: rem(12),
   },
   applyButtonText: {
-    ...font(14, 17, 'black'),
+    ...font(14, 19, 'black'),
   },
   cancelButtonText: {
-    ...font(14, 17, 'black', 'secondary'),
+    ...font(14, 19, 'black', 'secondary'),
   },
 });

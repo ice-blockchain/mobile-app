@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
     marginTop: rem(14),
   },
   input: {
-    ...font(16, 20, 'medium', 'primaryDark'),
+    ...font(16, 21, 'medium', 'primaryDark'),
     flex: 1,
     paddingHorizontal: 0,
     paddingVertical: 0,
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
   label: {
     position: 'absolute',
     left: 0,
-    ...font(16, 20, 'medium', 'secondary'),
+    ...font(16, 21, 'medium', 'secondary'),
   },
   label_error: {
     color: COLORS.attention,

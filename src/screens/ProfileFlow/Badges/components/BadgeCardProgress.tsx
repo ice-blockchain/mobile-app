@@ -51,11 +51,11 @@ const styles = StyleSheet.create({
   },
   percValueText: {
     marginRight: rem(6),
-    ...font(14, 17, 'bold', 'primaryDark'),
+    ...font(14, 19, 'bold', 'primaryDark'),
   },
   percLabelText: {
     flex: 1,
-    ...font(12, 15, 'medium', 'periwinkleGray', 'right'),
+    ...font(12, 16, 'medium', 'periwinkleGray', 'right'),
   },
   progressBody: {
     height: rem(8),

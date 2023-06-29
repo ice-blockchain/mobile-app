@@ -147,14 +147,14 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    ...font(12, 14, 'bold', 'downriver'),
+    ...font(12, 16, 'bold', 'downriver'),
   },
   titleActive: {
     color: COLORS.cornflowerBlue,
   },
   description: {
     marginTop: rem(4),
-    ...font(12, 14, 'medium', 'toreaBay'),
+    ...font(12, 16, 'medium', 'toreaBay'),
   },
   lockIcon: {
     position: 'absolute',

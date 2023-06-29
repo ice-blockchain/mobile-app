@@ -184,10 +184,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   resultValueText: {
-    ...font(28, 34, 'bold', 'white', 'auto'),
+    ...font(28, 25, 'bold', 'white', 'auto'),
   },
   resultBonusText: {
-    ...font(28, 34, 'bold', 'shamrock', 'auto'),
+    ...font(28, 25, 'bold', 'shamrock', 'auto'),
   },
   currentRateText: {
     marginVertical: rem(4),

@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     marginHorizontal: rem(6),
-    ...font(14, 17, 'bold', 'primaryDark'),
+    ...font(14, 19, 'bold', 'primaryDark'),
   },
   progressHeader: {
     flexDirection: 'row',
@@ -168,10 +168,10 @@ const styles = StyleSheet.create({
   },
   categoryText: {
     flex: 1,
-    ...font(12, 14, 'regular', 'primaryDark'),
+    ...font(12, 15, 'regular', 'primaryDark'),
   },
   progressText: {
-    ...font(12, 14, 'regular', 'periwinkleGray'),
+    ...font(12, 15, 'regular', 'periwinkleGray'),
   },
   progressBody: {
     height: rem(9),
@@ -189,6 +189,6 @@ const styles = StyleSheet.create({
   },
   hiddenText: {
     marginTop: rem(7),
-    ...font(14, 17, 'bold', 'secondary'),
+    ...font(14, 19, 'bold', 'secondary'),
   },
 });

@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(30),
   },
   warningText: {
-    ...font(15, 18, 'medium', 'primaryLight'),
+    ...font(15, 20, 'medium', 'primaryLight'),
     marginLeft: rem(8),
   },
 });

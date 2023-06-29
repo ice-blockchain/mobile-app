@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     opacity: 0.5,
   },
   buttonText: {
-    ...font(14, 18, 'black', 'white'),
+    ...font(14, 19, 'black', 'white'),
   },
   checkboxRow: {
     flexDirection: 'row',
