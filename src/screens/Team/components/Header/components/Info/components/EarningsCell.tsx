@@ -42,7 +42,8 @@ export const EarningsCell = memo(({color = COLORS.white}: {color?: string}) => {
             value={parseNumber(balanceSummary?.totalReferrals || '0')}
             NumberComponent={NumberComponent}
           />
-          <Text style={[styles.valueText, {color}]}> {t('general.ice')}</Text>
+          <Text> </Text>
+          <Text style={[styles.valueText, {color}]}>{t('general.ice')}</Text>
         </View>
       </View>
     </View>
