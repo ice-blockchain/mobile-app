@@ -34,6 +34,8 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       userInfo.phoneNumberHash = yield call(hashPhoneNumber, normalizedNumber);
     }
 
+    const languageToUpdate = user.language;
+
     const modifiedUser: SagaReturnType<typeof Api.user.updateAccount> =
       yield Api.user.updateAccount(user.id, userInfo);
     yield put(
@@ -42,6 +44,15 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
         action.payload.userInfo,
       ),
     );
+
+    if (languageToUpdate && modifiedUser.language) {
+      yield put(
+        AccountActions.SYNC_LANGUAGES.SUCCESS.create(
+          languageToUpdate,
+          modifiedUser.language,
+        ),
+      );
+    }
   } catch (error) {
     let localizedError = null;
     if (isApiError(error, 400, 'RACE_CONDITION') && user) {

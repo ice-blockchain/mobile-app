@@ -6,6 +6,7 @@ import {
   SocialSignInProvider,
 } from '@services/auth/signin/types';
 import {createAction} from '@store/utils/actions/createAction';
+import {SupportedLocale} from '@translations/localeConfig';
 import {Action} from 'redux';
 import {CallEffect, PutEffect} from 'redux-saga/effects';
 
@@ -136,6 +137,16 @@ const SET_PRIVACY_INFO_SHOW = createAction('SET_PRIVACY_INFO_SHOW', {
   STATE: (isPrivacyInfoShown: boolean) => ({isPrivacyInfoShown}),
 });
 
+const SYNC_LANGUAGES = createAction('SYNC_LANGUAGES', {
+  SUCCESS: (
+    oldLocale: SupportedLocale | undefined,
+    newLocale: SupportedLocale | undefined,
+  ) => ({
+    oldLocale,
+    newLocale,
+  }),
+});
+
 export const AccountActions = Object.freeze({
   SET_TOKEN,
   SIGN_IN_EMAIL_LINK,
@@ -152,4 +163,5 @@ export const AccountActions = Object.freeze({
   VERIFY_PHONE_NUMBER,
   RESET_PASSWORD,
   SET_PRIVACY_INFO_SHOW,
+  SYNC_LANGUAGES,
 });

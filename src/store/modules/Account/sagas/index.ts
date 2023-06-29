@@ -52,14 +52,7 @@ export const authWatchers = [
     verifyPhoneNumberSaga,
   ),
   takeLatest(AccountActions.RESET_PASSWORD.START.type, resetPasswordSaga),
+  takeLatest(AccountActions.SYNC_LANGUAGES.SUCCESS.type, syncRtlSaga),
   fork(syncLanguageCodeSaga),
-  takeLatest(
-    [
-      AccountActions.GET_ACCOUNT.SUCCESS.type,
-      AccountActions.UPDATE_ACCOUNT.SUCCESS.type,
-      AccountActions.USER_STATE_CHANGE.SUCCESS.type,
-    ],
-    syncRtlSaga,
-  ),
   fork(subscribeUserChangedSaga),
 ];
