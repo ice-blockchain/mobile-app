@@ -94,11 +94,9 @@ export function* startMiningSessionSaga(
       audio.play();
     }
 
-    if (action.payload?.tapToMineActionType) {
-      AnalyticsEventLogger.trackTapToMine({
-        tapToMineActionType: action.payload?.tapToMineActionType,
-      });
-    }
+    AnalyticsEventLogger.trackTapToMine({
+      tapToMineActionType: action.payload?.tapToMineActionType ?? 'Default',
+    });
 
     if (!agreeWithEarlyAccess) {
       /*
