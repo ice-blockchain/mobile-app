@@ -38,7 +38,7 @@ export function* loadLevelsAndRolesSaga(
         },
       }),
     );
-    const role = roles.find(r => r.enabled);
+    const role = roles?.find(r => r.enabled);
     yield call(Attributes.trackUserAttribute, 'Current Level', level);
     yield call(
       Attributes.trackUserAttribute,
