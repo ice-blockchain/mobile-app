@@ -42,8 +42,8 @@ export function* initBackgroundTasksSaga() {
           break;
         }
         default: {
-          BackgroundFetch.finish(taskId);
           logError(new Error(`Unknown background task with id ${taskId}`));
+          BackgroundFetch.finish(taskId);
         }
       }
     },

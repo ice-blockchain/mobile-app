@@ -29,6 +29,7 @@ export interface State {
   };
   agreeWithEarlyAccess: boolean;
   forceStartMining: boolean;
+  tapToMineActionType?: 'Extended' | 'Default';
 }
 
 type Actions = ReturnType<
@@ -127,6 +128,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         break;
       case TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.type:
         draft.forceStartMining = action.payload.forceStartMining;
+        draft.tapToMineActionType = action.payload.tapToMineActionType;
         break;
       case AccountActions.SIGN_OUT.SUCCESS.type:
         return INITIAL_STATE;

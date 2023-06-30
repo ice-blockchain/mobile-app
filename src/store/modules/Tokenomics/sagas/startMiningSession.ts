@@ -56,6 +56,7 @@ export function* startMiningSessionSaga(
       yield put(
         TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.create({
           forceStartMining: true,
+          tapToMineActionType: action.payload?.tapToMineActionType,
         }),
       );
       return;

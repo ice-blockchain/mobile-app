@@ -28,6 +28,10 @@ const BackgroundTasksHeadlessTask = async ({
       );
       break;
     }
+    case 'react-native-background-fetch': {
+      BackgroundFetch.finish(taskId);
+      break;
+    }
     default: {
       logError(new Error(`Unknown background task with id ${taskId}`));
       BackgroundFetch.finish(taskId);
