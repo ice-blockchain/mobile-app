@@ -657,7 +657,7 @@
   },
   "ice_bonus": {
     "title": "مكافأة الترحيب",
-    "description": "تهانينا، لقد تلقيت أول [[:value]] من عملات تطبيق [[:ice]] مما يثبت[[:bold]] ثقتنا[[/:bold]]فيك[[:bold]][[/:bold]].",
+    "description": "تهانينا، لقد تلقيت أول [[:value]] من عملات تطبيق [[:ice]] مما يثبت[[:bold]] ثقتنا[[/:bold]]فيك.",
     "balance_label": "رصيدك الحالي"
   },
   "country_select": {
