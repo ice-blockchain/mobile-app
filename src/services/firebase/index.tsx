@@ -2,7 +2,6 @@
 
 import firebaseApp from '@react-native-firebase/app';
 import messaging from '@react-native-firebase/messaging';
-import {logError} from '@services/logging';
 import {isIOS} from 'rn-units';
 
 export const isPlayServicesAvailable =
@@ -15,7 +14,6 @@ export const getFcmToken = () => {
     }
     return '';
   } catch (error) {
-    logError(error);
     return '';
   }
 };

@@ -37,9 +37,13 @@ export function* initBackgroundTasksSaga() {
           );
           break;
         }
-        default: {
-          logError(new Error(`Unknown background task with id ${taskId}`));
+        case 'react-native-background-fetch': {
           BackgroundFetch.finish(taskId);
+          break;
+        }
+        default: {
+          BackgroundFetch.finish(taskId);
+          logError(new Error(`Unknown background task with id ${taskId}`));
         }
       }
     },
