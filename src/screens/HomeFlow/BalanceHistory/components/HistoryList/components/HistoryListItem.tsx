@@ -9,6 +9,7 @@ import {dayjs} from '@services/dayjs';
 import {ClockIcon} from '@svg/ClockIcon';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
 import {FireIcon} from '@svg/FireIcon';
+import {isRTL} from '@translations/i18n';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React from 'react';
@@ -45,15 +46,22 @@ export const HistoryListItem = ({balanceDiff, time}: Props) => {
         )}
       </View>
       <View style={styles.body}>
-        <Text style={styles.adsDiffValueText}>
-          {balanceDiff.negative ? '-' : '+'}
-        </Text>
+        {!isRTL && (
+          <Text style={styles.adsDiffValueText}>
+            {balanceDiff.negative ? '-' : '+'}
+          </Text>
+        )}
         <FormattedNumber
           number={formatNumberString(balanceDiff.amount)}
           bodyStyle={styles.adsDiffValueText}
           decimalsStyle={styles.adsDiffDecimalsText}
           trim
         />
+        {isRTL && (
+          <Text style={styles.adsDiffValueText}>
+            {balanceDiff.negative ? '-' : '+'}
+          </Text>
+        )}
         <IceLabel
           color={COLORS.primaryDark}
           iconSize={rem(14)}
