@@ -19,7 +19,7 @@ import {
 } from '@store/modules/Tokenomics/selectors';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
 import {YearsOutlineIcon} from '@svg/YearsOutlineIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React from 'react';
@@ -70,7 +70,13 @@ export const PreStakingInfo = () => {
           }
           label={t('staking.balance_label')}
           value={
-            balanceSummary && formatNumberString(balanceSummary.preStaking)
+            <>
+              <Text style={styles.dataCellValue}>
+                {isRTL && <Text> </Text>}
+                {balanceSummary &&
+                  formatNumberString(balanceSummary.preStaking)}
+              </Text>
+            </>
           }
           currency={<IceLabel color={COLORS.primaryDark} />}
         />
@@ -141,5 +147,8 @@ const styles = StyleSheet.create({
   bonusValueText: {
     marginLeft: rem(4),
     ...font(17, 22, 'bold', 'primaryLight'),
+  },
+  dataCellValue: {
+    ...font(17, 22, 'bold', 'primaryDark'),
   },
 });
