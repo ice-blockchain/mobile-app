@@ -6,7 +6,7 @@ import {navigate} from '@navigation/utils';
 import {Message} from '@screens/Modals/PopUp/components/Message';
 import {dayjs} from '@services/dayjs';
 import {MedKitIcon} from '@svg/MedKitIcon';
-import {replaceString, t, tagRegex} from '@translations/i18n';
+import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
 import {getDurationString} from '@utils/date';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
@@ -22,6 +22,7 @@ export const openConfirmResurrect = (params: ResurrectRequiredData) => {
     tagRegex('amount'),
     (match, index) => (
       <Text key={match + index} style={styles.boldText}>
+        {isRTL && <Text> </Text>}
         {formatNumberString(params.amount)}
       </Text>
     ),
