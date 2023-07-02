@@ -46,7 +46,7 @@ export function* shareSocialsSaga() {
           if (!social.shared && social.type !== firstSocialToShow.type) {
             return {
               ...social,
-              dateToShow: dayjs().add(index, 'minute').toISOString(),
+              dateToShow: dayjs().add(index, 'day').toISOString(),
             };
           }
           return social;
@@ -67,7 +67,7 @@ export function* shareSocialsSaga() {
         type,
         shared: false,
         dateToShow: dayjs()
-          .add(index + 1, 'minute')
+          .add(index + 1, 'day')
           .toISOString(),
       };
     });
