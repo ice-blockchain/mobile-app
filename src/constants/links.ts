@@ -36,5 +36,5 @@ export const LINKS = {
   YOUTUBE_WEB: 'https://youtube.com/@ice.blockchain',
   TIKTOK_WEB: 'https://www.tiktok.com/@ice.blockchain',
   APP_UPDATE: 'https://ice.io/app-update',
-  AUTH_CONFIG: 'https://ice-production.b-cdn.net/assets/notice.json',
+  AUTH_CONFIG: 'https://ice-production.b-cdn.net/assets/auth-config.json',
 };
