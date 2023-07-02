@@ -4,7 +4,10 @@ import {FullScreenLoading} from '@components/FullScreenLoading';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {PrivacyTerms} from '@components/PrivacyTerms';
 import {COLORS} from '@constants/colors';
-import {isPhoneNumberAuthEnabled} from '@constants/featureFlags';
+import {
+  isPhoneNumberAuthEnabled,
+  isSocialAuthEnabled,
+} from '@constants/featureFlags';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Header} from '@screens/AuthFlow/SignIn/components/Header';
@@ -54,7 +57,7 @@ export const SignIn = () => {
           <View style={styles.form}>
             <Form />
           </View>
-          <SocialButtons />
+          {isSocialAuthEnabled && <SocialButtons />}
         </View>
         <PrivacyTerms containerStyle={styles.privacy} />
       </ScrollView>
