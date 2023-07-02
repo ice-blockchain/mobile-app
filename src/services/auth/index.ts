@@ -107,23 +107,6 @@ export const isSignInWithEmailLink = (emailLink: string) => {
   return auth().isSignInWithEmailLink(emailLink);
 };
 
-export const signInWithEmailAndPassword = async (
-  email: string,
-  password: string,
-) => {
-  try {
-    await auth().createUserWithEmailAndPassword(email, password);
-  } catch (error) {
-    if (
-      checkProp(error, 'code') &&
-      error.code === 'auth/email-already-in-use'
-    ) {
-      return auth().signInWithEmailAndPassword(email, password);
-    }
-    throw error;
-  }
-};
-
 export const isUpdateEmailLink = (url: URL) => {
   const link = url.searchParams.get('link');
   if (link) {
@@ -231,10 +214,6 @@ export const getAuthErrorMessage = (error: {code: string}) => {
     case 'auth/requires-recent-login':
       // Thrown for example if user tries to change email and much time passed after the last sign in
       return t('errors.requires_recent_login');
-    case 'auth/weak-password':
-      return t('errors.weak_password');
-    case 'auth/wrong-password':
-      return t('errors.wrong_password');
     default:
       return error.code;
   }

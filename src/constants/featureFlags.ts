@@ -1,11 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 /**
- * Is Email Link sign in flow used instead of Email + Password
- */
-export const isEmailLinkSignIn = true;
-
-/**
  * Is sign in with phone number enabled
  */
 export const isPhoneNumberAuthEnabled = true;

@@ -106,7 +106,6 @@ export type Translations = {
   'errors.validation_expired': null;
   'errors.validation_not_found': null;
   'errors.invalid_email': null;
-  'errors.invalid_password': null;
   'errors.invalid_ref_username': null;
   'errors.invalid_phone': null;
   'errors.user_disabled': null;
@@ -135,8 +134,6 @@ export type Translations = {
   'errors.user_token_expired': null;
   'errors.requires_recent_login': null;
   'errors.same_email': null;
-  'errors.weak_password': null;
-  'errors.wrong_password': null;
   'errors.no_camera_permissions': null;
   'errors.no_library_permissions': null;
   'profile.my_roles.title': null;

@@ -156,7 +156,6 @@
     "validation_expired": "Validation expired",
     "validation_not_found": "Validation not found",
     "invalid_email": "Invalid email.",
-    "invalid_password": "Invalid password.",
     "invalid_ref_username": "Nickname is invalid.",
     "invalid_phone": "Invalid phone number.",
     "user_disabled": "User has been disabled.",
@@ -185,8 +184,6 @@
     "user_token_expired": "Your credentials are no longer valid, please sign in again.",
     "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again.",
     "same_email": "You can’t use the same e-mail.",
-    "weak_password": "Weak password.",
-    "wrong_password": "Wrong password.",
     "no_camera_permissions": "Camera permissions are not granted.",
     "no_library_permissions": "Library permissions are not granted."
   },

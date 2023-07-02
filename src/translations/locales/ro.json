@@ -198,8 +198,6 @@
     "user_token_expired": "Acreditările dvs. nu mai sunt valide. ",
     "requires_recent_login": "Această operațiune este sensibilă și necesită autentificare recentă. ",
     "same_email": "Nu puteți folosi același e-mail",
-    "weak_password": "Parolă slabă",
-    "wrong_password": "Parola gresita",
     "no_camera_permissions": "Permisiunile camerei nu sunt acordate",
     "no_library_permissions": "Permisiunile bibliotecii nu sunt acordate"
   },

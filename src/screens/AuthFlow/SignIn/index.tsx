@@ -4,10 +4,7 @@ import {FullScreenLoading} from '@components/FullScreenLoading';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {PrivacyTerms} from '@components/PrivacyTerms';
 import {COLORS} from '@constants/colors';
-import {
-  isEmailLinkSignIn,
-  isPhoneNumberAuthEnabled,
-} from '@constants/featureFlags';
+import {isPhoneNumberAuthEnabled} from '@constants/featureFlags';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Header} from '@screens/AuthFlow/SignIn/components/Header';
@@ -15,7 +12,6 @@ import {SocialButtons} from '@screens/AuthFlow/SignIn/components/SocialButtons';
 import {SOCIAL_BUTTON_SIZE} from '@screens/AuthFlow/SignIn/components/SocialButtons/components/SocialButton';
 import {Tab, Tabs} from '@screens/AuthFlow/SignIn/components/Tabs';
 import {SignInEmailLinkForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailLinkForm';
-import {SignInEmailPasswordForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailPasswordForm';
 import {SignInPhoneForm} from '@screens/AuthFlow/SignIn/forms/SignInPhoneForm';
 import {useSocialAuth} from '@screens/AuthFlow/SignIn/hooks/useSocialAuth';
 import React, {useMemo, useState} from 'react';
@@ -36,11 +32,7 @@ export const SignIn = () => {
       return SignInPhoneForm;
     }
 
-    if (isEmailLinkSignIn) {
-      return SignInEmailLinkForm;
-    } else {
-      return SignInEmailPasswordForm;
-    }
+    return SignInEmailLinkForm;
   }, [activeTab]);
 
   return (
