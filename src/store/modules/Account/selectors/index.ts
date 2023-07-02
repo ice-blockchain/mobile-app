@@ -48,3 +48,6 @@ export const isRegistrationCompleteSelector = () => {
 
 export const isPrivacyInfoShownSelector = (state: RootState) =>
   state.account.isPrivacyInfoShown;
+
+export const authConfigSelector = (state: RootState) =>
+  state.account.authConfig;

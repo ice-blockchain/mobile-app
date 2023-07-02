@@ -229,7 +229,7 @@ export const getAuthenticatedUser = async (forceRefresh?: boolean) => {
     return {
       uid: 'customUser.uid',
       email: 'customUser.email',
-      phoneNumber: 'customUser.phoneNumber',
+      phoneNumber: null,
       isAdmin: false,
       token: customToken,
     } as const;

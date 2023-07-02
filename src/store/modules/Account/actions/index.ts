@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AuthConfig} from '@api/auth/types';
 import {User} from '@api/user/types';
 import {
   SignInUserInfo,
@@ -134,6 +135,11 @@ const SET_PRIVACY_INFO_SHOW = createAction('SET_PRIVACY_INFO_SHOW', {
   STATE: (isPrivacyInfoShown: boolean) => ({isPrivacyInfoShown}),
 });
 
+const GET_AUTH_CONFIG = createAction('GET_AUTH_CONFIG', {
+  SUCCESS: (config: AuthConfig | null) => ({config}),
+  FAILED: (errorMessage: string) => ({errorMessage}),
+});
+
 export const AccountActions = Object.freeze({
   SET_TOKEN,
   PERSIST_TOKEN,
@@ -150,4 +156,5 @@ export const AccountActions = Object.freeze({
   VERIFY_BEFORE_UPDATE_EMAIL,
   VERIFY_PHONE_NUMBER,
   SET_PRIVACY_INFO_SHOW,
+  GET_AUTH_CONFIG,
 });

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AuthConfig} from '@api/auth/types';
 import {User} from '@api/user/types';
 import {SignInUserInfo} from '@services/auth/signin/types';
 import {AuthToken} from '@services/auth/types';
@@ -14,6 +15,7 @@ export interface AccountState {
   // and used to populate / suggest User profile later on
   userInfo: SignInUserInfo | null;
   isPrivacyInfoShown: boolean;
+  authConfig: AuthConfig | null;
 }
 
 type Actions = ReturnType<
@@ -25,6 +27,7 @@ type Actions = ReturnType<
   | typeof AccountActions.UPDATE_ACCOUNT.SUCCESS.create
   | typeof AccountActions.GET_ACCOUNT.SUCCESS.create
   | typeof AccountActions.SET_PRIVACY_INFO_SHOW.STATE.create
+  | typeof AccountActions.GET_AUTH_CONFIG.SUCCESS.create
 >;
 
 const INITIAL_STATE: AccountState = {
@@ -33,6 +36,7 @@ const INITIAL_STATE: AccountState = {
   user: null,
   userInfo: null,
   isPrivacyInfoShown: true,
+  authConfig: null,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): AccountState {
@@ -55,9 +59,13 @@ function reducer(state = INITIAL_STATE, action: Actions): AccountState {
       case AccountActions.SET_PRIVACY_INFO_SHOW.STATE.type:
         draft.isPrivacyInfoShown = action.payload.isPrivacyInfoShown;
         break;
+      case AccountActions.GET_AUTH_CONFIG.SUCCESS.type:
+        draft.authConfig = action.payload.config;
+        break;
       case AccountActions.SIGN_OUT.SUCCESS.type: {
         return {
           ...INITIAL_STATE,
+          authConfig: state.authConfig,
         };
       }
     }

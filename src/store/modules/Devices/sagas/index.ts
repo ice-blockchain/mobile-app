@@ -6,14 +6,10 @@ import {DeviceActions} from '@store/modules/Devices/actions';
 import {initDeviceSaga} from '@store/modules/Devices/sagas/initDevice';
 import {updateDeviceLocationSaga} from '@store/modules/Devices/sagas/updateDeviceLocation';
 import {updateDeviceMetadataSaga} from '@store/modules/Devices/sagas/updateDeviceMetadata';
-import {takeLatest} from 'redux-saga/effects';
+import {fork, takeLatest} from 'redux-saga/effects';
 
 export const devicesWatchers = [
   takeLatest(AppCommonActions.APP_LOADED.STATE.type, initDeviceSaga),
-  takeLatest(
-    AppCommonActions.APP_INITIALIZED.SUCCESS.type,
-    updateDeviceLocationSaga,
-  ),
   takeLatest(
     [
       DeviceActions.UPDATE_DEVICE_METADATA.START.type,
@@ -24,4 +20,5 @@ export const devicesWatchers = [
     ],
     updateDeviceMetadataSaga,
   ),
+  fork(updateDeviceLocationSaga),
 ];

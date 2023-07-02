@@ -1,11 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 /**
- * Is sign in with phone number enabled
- */
-export const isEmailLinkAuthEnabled = false; // deviceMainLocale.languageCode !== 'zh';
-
-/**
  * Is linking phone number on the Team Screen enabled
  */
 export const isLinkPhoneNumberEnabled = false;

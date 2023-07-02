@@ -3,6 +3,7 @@
 import {AccountActions} from '@store/modules/Account/actions';
 import {deleteAccountSaga} from '@store/modules/Account/sagas/deleteAccount';
 import {getAccountSaga} from '@store/modules/Account/sagas/getAccount';
+import {getAuthConfigSaga} from '@store/modules/Account/sagas/getAuthConfig';
 import {persistTokenSaga} from '@store/modules/Account/sagas/persistToken';
 import {signInEmailCustomSaga} from '@store/modules/Account/sagas/signInEmailCustom';
 import {signInEmailLinkSaga} from '@store/modules/Account/sagas/signInEmailLink';
@@ -55,4 +56,11 @@ export const authWatchers = [
   fork(syncLanguageCodeSaga),
   fork(syncRtlSaga),
   fork(subscribeUserChangedSaga),
+  takeLatest(
+    [
+      AppCommonActions.APP_LOADED.STATE.type,
+      AppCommonActions.APP_STATE_CHANGE.STATE.type,
+    ],
+    getAuthConfigSaga,
+  ),
 ];

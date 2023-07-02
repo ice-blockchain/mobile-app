@@ -4,7 +4,6 @@ import {FullScreenLoading} from '@components/FullScreenLoading';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {PrivacyTerms} from '@components/PrivacyTerms';
 import {COLORS} from '@constants/colors';
-import {isEmailLinkAuthEnabled} from '@constants/featureFlags';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Header} from '@screens/AuthFlow/SignIn/components/Header';
@@ -14,6 +13,7 @@ import {Tab, Tabs} from '@screens/AuthFlow/SignIn/components/Tabs';
 import {SignInEmailCustomForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailCustomForm';
 import {SignInEmailLinkForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailLinkForm';
 import {SignInPhoneForm} from '@screens/AuthFlow/SignIn/forms/SignInPhoneForm';
+import {useIsCustomEmailFlow} from '@screens/AuthFlow/SignIn/hooks/useEmailFlow';
 import {useSocialAuth} from '@screens/AuthFlow/SignIn/hooks/useSocialAuth';
 import React, {useMemo, useState} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
@@ -28,17 +28,21 @@ export const SignIn = () => {
 
   const [activeTab, setActiveTab] = useState<Tab>('email');
 
+  const isCustomEmailFlow = useIsCustomEmailFlow();
+
+  console.log('isCustomEmailFlow', isCustomEmailFlow);
+
   const Form = useMemo(() => {
     if (activeTab === 'phone') {
       return SignInPhoneForm;
     }
 
-    if (isEmailLinkAuthEnabled) {
-      return SignInEmailLinkForm;
+    if (isCustomEmailFlow) {
+      return SignInEmailCustomForm;
     }
 
-    return SignInEmailCustomForm;
-  }, [activeTab]);
+    return SignInEmailLinkForm;
+  }, [activeTab, isCustomEmailFlow]);
 
   return (
     <KeyboardAvoider keyboardVerticalOffset={rem(15) - SOCIAL_BUTTON_SIZE}>
