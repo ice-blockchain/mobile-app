@@ -121,6 +121,14 @@ const MODIFY_EMAIL_WITH_LINK = createAction('MODIFY_EMAIL_WITH_LINK', {
   RESET: true,
 });
 
+const MODIFY_EMAIL_WITH_CODE = createAction('MODIFY_EMAIL_WITH_CODE', {
+  START: (email: string) => ({email}),
+  SET_TEMP_EMAIL: (params: {email: string; code: string}) => params,
+  SUCCESS: true,
+  FAILED: (errorMessage: string) => ({errorMessage}),
+  RESET: true,
+});
+
 const VERIFY_PHONE_NUMBER = createAction('VERIFY_PHONE_NUMBER', {
   START: (phoneNumber: string) => ({phoneNumber}),
   SUCCESS: (phoneNumber: string, verificationId: string) => ({
@@ -154,6 +162,7 @@ export const AccountActions = Object.freeze({
   GET_ACCOUNT,
   USER_STATE_CHANGE,
   MODIFY_EMAIL_WITH_LINK,
+  MODIFY_EMAIL_WITH_CODE,
   VERIFY_PHONE_NUMBER,
   SET_PRIVACY_INFO_SHOW,
   GET_AUTH_CONFIG,

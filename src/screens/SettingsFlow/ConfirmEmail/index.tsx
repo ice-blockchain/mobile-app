@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {ConfirmEmailCodeForm} from '@components/Forms/ConfirmEmailCodeForm';
 import {ConfirmEmailLinkForm} from '@components/Forms/ConfirmEmailLinkForm';
 import {UserAvatarHeader} from '@components/UserAvatarHeader';
 import {COLORS} from '@constants/colors';
@@ -13,7 +14,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {emailVerificationStepSelector} from '@store/modules/Validation/selectors';
 import {t} from '@translations/i18n';
-import React, {memo, useEffect} from 'react';
+import React, {memo, useEffect, useRef} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {useSelector} from 'react-redux';
 
@@ -26,6 +27,7 @@ export const ConfirmEmail = memo(() => {
     useNavigation<NativeStackNavigationProp<ProfileTabStackParamList>>();
 
   const emailVerificationStep = useSelector(emailVerificationStepSelector);
+  const flow = useRef(emailVerificationStep);
 
   useEffect(() => {
     if (emailVerificationStep === 'email') {
@@ -43,7 +45,11 @@ export const ConfirmEmail = memo(() => {
         showsVerticalScrollIndicator={false}>
         <UserAvatarHeader />
         <View style={[commonStyles.baseSubScreen, tabbarOffset.current]}>
-          <ConfirmEmailLinkForm />
+          {flow.current === 'link' ? (
+            <ConfirmEmailLinkForm />
+          ) : (
+            <ConfirmEmailCodeForm />
+          )}
         </View>
       </ScrollView>
     </>
