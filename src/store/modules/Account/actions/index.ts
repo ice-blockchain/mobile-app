@@ -34,6 +34,15 @@ const SIGN_IN_EMAIL_LINK = createAction('SIGN_IN_EMAIL_LINK', {
   RESET: true,
 });
 
+const SIGN_IN_EMAIL_CUSTOM = createAction('SIGN_IN_EMAIL_CUSTOM', {
+  START: (email: string) => ({email}),
+  SET_TEMP_EMAIL: (email: string) => ({email}),
+  CONFIRM_TEMP_EMAIL: (link: string) => ({link}),
+  SUCCESS: true,
+  FAILED: (errorMessage: string) => ({errorMessage}),
+  RESET: true,
+});
+
 const SIGN_IN_PHONE = createAction('SIGN_IN_PHONE', {
   START: (phoneNumber: string, isoCode: string) => ({phoneNumber, isoCode}),
   SET_TEMP_PHONE_AND_ISO: (phoneNumber: string, isoCode: string) => ({
@@ -124,6 +133,7 @@ const SET_PRIVACY_INFO_SHOW = createAction('SET_PRIVACY_INFO_SHOW', {
 export const AccountActions = Object.freeze({
   SET_TOKEN,
   SIGN_IN_EMAIL_LINK,
+  SIGN_IN_EMAIL_CUSTOM,
   SIGN_IN_PHONE,
   SIGN_IN_SOCIAL,
   SIGN_OUT,

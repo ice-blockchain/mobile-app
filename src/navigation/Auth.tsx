@@ -41,10 +41,11 @@ export function AuthNavigator() {
     useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
 
   const authRoute = useMemo(() => {
-    if (emailVerificationStep === 'code') {
+    if (emailVerificationStep === 'link') {
       return 'ConfirmEmailLink';
-    }
-    if (phoneVerificationStep === 'code') {
+    } else if (emailVerificationStep === 'code') {
+      return 'ConfirmEmailLink'; //TODO::change to code screen
+    } else if (phoneVerificationStep === 'code') {
       return 'ConfirmPhone';
     }
     return 'SignIn';

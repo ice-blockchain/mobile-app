@@ -12,6 +12,7 @@ export interface State {
   temporaryPhoneNumberIso: string | null;
   temporaryVerificationId: string | null;
   temporaryEmail: string | null;
+  temporaryEmailVerificationStep: 'email' | 'link' | 'code';
   temporaryPhoneVerificationStep: TemporaryPhoneVerificationStepType;
   smsSentTimestamp: number | null;
   emailSentTimestamp: number | null;
@@ -47,6 +48,7 @@ const INITIAL_STATE: State = {
   temporaryEmail: null,
   smsSentTimestamp: null,
   emailSentTimestamp: null,
+  temporaryEmailVerificationStep: 'email',
   temporaryPhoneVerificationStep: 'phone',
 };
 
@@ -69,6 +71,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case AccountActions.SIGN_IN_EMAIL_LINK.SET_TEMP_EMAIL.type:
       case AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.SET_TEMP_EMAIL.type:
         draft.temporaryEmail = action.payload.email;
+        draft.temporaryEmailVerificationStep = 'link';
         draft.emailSentTimestamp = dayjs().valueOf();
         break;
       case AccountActions.VERIFY_PHONE_NUMBER.SUCCESS.type:
@@ -94,6 +97,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.RESET.type:
       case AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.SUCCESS.type:
         draft.temporaryEmail = null;
+        draft.temporaryEmailVerificationStep = 'email';
         break;
       case ValidationActions.EMAIL_VALIDATION.FAILED.type:
         if (
@@ -102,6 +106,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
           )
         ) {
           draft.temporaryEmail = null;
+          draft.temporaryEmailVerificationStep = 'email';
         }
         break;
       case AccountActions.SIGN_OUT.SUCCESS.type: {

@@ -5,6 +5,7 @@ import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {PrivacyTerms} from '@components/PrivacyTerms';
 import {COLORS} from '@constants/colors';
 import {
+  isEmailLinkAuthEnabled,
   isPhoneNumberAuthEnabled,
   isSocialAuthEnabled,
 } from '@constants/featureFlags';
@@ -14,6 +15,7 @@ import {Header} from '@screens/AuthFlow/SignIn/components/Header';
 import {SocialButtons} from '@screens/AuthFlow/SignIn/components/SocialButtons';
 import {SOCIAL_BUTTON_SIZE} from '@screens/AuthFlow/SignIn/components/SocialButtons/components/SocialButton';
 import {Tab, Tabs} from '@screens/AuthFlow/SignIn/components/Tabs';
+import {SignInEmailCustomForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailCustomForm';
 import {SignInEmailLinkForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailLinkForm';
 import {SignInPhoneForm} from '@screens/AuthFlow/SignIn/forms/SignInPhoneForm';
 import {useSocialAuth} from '@screens/AuthFlow/SignIn/hooks/useSocialAuth';
@@ -35,7 +37,11 @@ export const SignIn = () => {
       return SignInPhoneForm;
     }
 
-    return SignInEmailLinkForm;
+    if (isEmailLinkAuthEnabled) {
+      return SignInEmailLinkForm;
+    }
+
+    return SignInEmailCustomForm;
   }, [activeTab]);
 
   return (
