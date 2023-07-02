@@ -177,7 +177,7 @@ export const signOut = async () => {
     /**
      * auth().signOut triggers onAuthStateChanged, so calling it in the end
      */
-    return auth().signOut();
+    return await auth().signOut();
   } catch (error) {
     if (checkProp(error, 'code') && error.code === 'auth/no-current-user') {
       return null;

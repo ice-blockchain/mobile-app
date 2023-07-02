@@ -30,8 +30,6 @@ export const SignIn = () => {
 
   const isCustomEmailFlow = useIsCustomEmailFlow();
 
-  console.log('isCustomEmailFlow', isCustomEmailFlow);
-
   const Form = useMemo(() => {
     if (activeTab === 'phone') {
       return SignInPhoneForm;

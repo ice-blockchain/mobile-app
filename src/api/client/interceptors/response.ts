@@ -52,7 +52,11 @@ function onRejected(instance: AxiosInstance) {
           let newToken;
           try {
             newToken = await tokenRefreshPromise;
-            tokenRefreshPromise = null;
+
+            if (tokenRefreshPromise) {
+              tokenRefreshPromise = null;
+              store.dispatch(AccountActions.SET_TOKEN.STATE.create(newToken));
+            }
           } catch (err) {
             /**
              * If the saved refresh token is not valid
@@ -68,7 +72,6 @@ function onRejected(instance: AxiosInstance) {
            */
           if (newToken) {
             originalRequest.headers!.Authorization = `Bearer ${newToken.accessToken}`;
-            store.dispatch(AccountActions.SET_TOKEN.STATE.create(newToken));
             return instance(originalRequest);
           }
         }
