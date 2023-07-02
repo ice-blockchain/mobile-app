@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {isApiError} from '@api/client';
+import {is4xxApiError} from '@api/client';
 import {refreshAuthToken} from '@services/auth';
 import {AuthToken} from '@services/auth/types';
 import {store} from '@store/configureStore';
@@ -21,65 +21,74 @@ function onRejected(instance: AxiosInstance) {
     isAxiosError: boolean;
   }) => {
     switch (error.response?.status) {
-      case 401:
-        {
-          const originalRequest = error.config ?? {};
+      case 401: {
+        const originalRequest = error.config ?? {};
 
-          if (!originalRequest.pliantRequestRetry) {
-            originalRequest.pliantRequestRetry = true;
-          } else {
-            /**
-             * That is the second try (after the tokens are refreshed) and still 401
-             */
-            store.dispatch(AccountActions.SIGN_OUT.START.create());
-            return;
-          }
-
+        if (!originalRequest.pliantRequestRetry) {
           /**
-           * In case if multiple requests are failed with 401
-           * The first one runs the token refresh
-           * The rest are waiting for a result
+           * This is the first 401 for this request, marking it
            */
-          if (!tokenRefreshPromise) {
-            const currentToken = authTokenSelector(store.getState());
-            if (!currentToken) {
-              store.dispatch(AccountActions.SIGN_OUT.START.create());
-              return;
-            }
-            tokenRefreshPromise = refreshAuthToken(currentToken);
-          }
-
-          let newToken;
-          try {
-            newToken = await tokenRefreshPromise;
-
-            if (tokenRefreshPromise) {
-              tokenRefreshPromise = null;
-              store.dispatch(AccountActions.SET_TOKEN.STATE.create(newToken));
-            }
-          } catch (err) {
-            /**
-             * If the saved refresh token is not valid
-             */
-            if (isApiError(err, 403, 'OPERATION_NOT_ALLOWED')) {
-              return store.dispatch(AccountActions.SIGN_OUT.START.create());
-            }
-            throw err;
-          }
-
+          originalRequest.pliantRequestRetry = true;
+        } else {
           /**
-           * Token is null if user is already signed out
+           * This is the second try (after the tokens are refreshed) and still 401
            */
-          if (newToken) {
-            originalRequest.headers!.Authorization = `Bearer ${newToken.accessToken}`;
-            return instance(originalRequest);
-          }
+          return signOutWithError(error);
         }
-        break;
+
+        const newToken = await refreshTokenConcurrently(error);
+
+        if (!newToken) {
+          return signOutWithError(error);
+        }
+
+        originalRequest.headers!.Authorization = `Bearer ${newToken.accessToken}`;
+        return instance(originalRequest);
+      }
     }
 
     return Promise.reject(error);
   };
 }
+
+const signOutWithError = <T>(error: T) => {
+  store.dispatch(AccountActions.SIGN_OUT.START.create());
+  return Promise.reject(error);
+};
+
+/**
+ * In case if multiple requests are failed with 401
+ * The first one runs the token refresh
+ * The rest are waiting for a result
+ */
+const refreshTokenConcurrently = async <T>(error: T) => {
+  const currentToken = authTokenSelector(store.getState());
+  if (!currentToken) {
+    return null;
+  }
+
+  if (!tokenRefreshPromise) {
+    tokenRefreshPromise = refreshAuthToken(currentToken);
+  }
+
+  try {
+    const newToken = await tokenRefreshPromise;
+
+    if (tokenRefreshPromise) {
+      tokenRefreshPromise = null;
+      store.dispatch(AccountActions.SET_TOKEN.STATE.create(newToken));
+    }
+
+    return newToken;
+  } catch (err) {
+    /**
+     * If the saved refresh token is not valid
+     */
+    if (is4xxApiError(err)) {
+      return null;
+    }
+    throw error;
+  }
+};
 
 export const responseInterceptor = {onRejected};
