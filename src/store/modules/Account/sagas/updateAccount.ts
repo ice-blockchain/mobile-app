@@ -3,7 +3,7 @@
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {AccountActions} from '@store/modules/Account/actions';
-import {userSelector} from '@store/modules/Account/selectors';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {showError} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
@@ -13,12 +13,10 @@ import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 const actionCreator = AccountActions.UPDATE_ACCOUNT.START.create;
 
 export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
-  const user: ReturnType<typeof userSelector> = yield select(userSelector);
+  const user: ReturnType<typeof unsafeUserSelector> = yield select(
+    unsafeUserSelector,
+  );
   try {
-    if (!user) {
-      throw new Error('User is not populated yet');
-    }
-
     const userInfo = {
       checksum: user.checksum,
       ...action.payload.userInfo,

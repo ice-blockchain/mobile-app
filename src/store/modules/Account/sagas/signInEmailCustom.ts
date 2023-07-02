@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {CUSTOM_EMAIL_SIGN_IN_GET_STATUS_INTERVAL_SEC} from '@constants/timeouts';
+import {EMAIL_CODE_GET_STATUS_INTERVAL_SEC} from '@constants/timeouts';
 import {
-  getSignInWithEmailLinkStatus,
+  getConfirmationStatus,
   sendCustomSignInLinkToEmail,
 } from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
@@ -72,21 +72,27 @@ export function* signInEmailCustomSaga(
     while (true) {
       const {reset} = yield race({
         reset: take(AccountActions.SIGN_IN_EMAIL_CUSTOM.RESET.type),
-        delay: delay(CUSTOM_EMAIL_SIGN_IN_GET_STATUS_INTERVAL_SEC * 1000),
+        delay: delay(EMAIL_CODE_GET_STATUS_INTERVAL_SEC * 1000),
       });
 
       if (reset) {
         return;
       }
 
-      const tokens: SagaReturnType<typeof getSignInWithEmailLinkStatus> =
-        yield call(getSignInWithEmailLinkStatus, {loginSession});
+      const status: SagaReturnType<typeof getConfirmationStatus> = yield call(
+        getConfirmationStatus,
+        {loginSession},
+      );
 
-      if (tokens) {
+      if (
+        status.confirmed &&
+        checkProp(status, 'accessToken') &&
+        checkProp(status, 'refreshToken')
+      ) {
         yield put(
           AccountActions.SET_TOKEN.STATE.create({
-            accessToken: tokens.accessToken,
-            refreshToken: tokens.refreshToken,
+            accessToken: status.accessToken,
+            refreshToken: status.refreshToken,
             issuer: 'custom',
           }),
         );

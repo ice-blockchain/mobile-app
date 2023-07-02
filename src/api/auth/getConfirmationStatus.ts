@@ -11,8 +11,9 @@ type Response =
       refreshToken: string;
       accessToken: string;
     }
+  | {emailConfirmed: true}
   | {};
 
-export function getSignInWithEmailLinkStatus(params: Params) {
-  return post<Params, Response>('auth/getSignInWithEmailLinkStatus', params);
+export function getConfirmationStatus(params: Params) {
+  return post<Params, Response>('auth/getConfirmationStatus', params);
 }

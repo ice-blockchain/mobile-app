@@ -7,6 +7,7 @@ import * as Sentry from '@sentry/react-native';
 import {store} from '@store/configureStore';
 import {userSelector} from '@store/modules/Account/selectors';
 import {getErrorMessage} from '@utils/errors';
+import {checkProp} from '@utils/guards';
 import * as React from 'react';
 import {LogBox} from 'react-native';
 
@@ -49,7 +50,13 @@ export function LoggingWrapper(app: React.ComponentType) {
 
 export function logError(error: unknown) {
   if (__DEV__) {
-    console.error('logError', getErrorMessage(error), error);
+    console.error(
+      'logError',
+      getErrorMessage(error),
+      error,
+      '\n\nstack:',
+      checkProp(error, 'stack') && error.stack,
+    );
   } else {
     const user = userSelector(store.getState());
     Sentry.withScope(function (scope) {

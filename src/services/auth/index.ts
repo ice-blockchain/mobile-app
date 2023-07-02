@@ -87,19 +87,28 @@ export const sendCustomSignInLinkToEmail = async (params: {
   return Api.auth.sendSignInLinkToEmail(params);
 };
 
-export const getSignInWithEmailLinkStatus = async ({
+export const getConfirmationStatus = async ({
   loginSession,
 }: {
   loginSession: string;
 }) => {
-  const response = await Api.auth.getSignInWithEmailLinkStatus({loginSession});
+  const response = await Api.auth.getConfirmationStatus({loginSession});
   if (
     checkProp(response, 'accessToken') &&
     checkProp(response, 'refreshToken')
   ) {
-    return response;
+    return {
+      confirmed: true,
+      accessToken: response.accessToken,
+      refreshToken: response.refreshToken,
+    };
   }
-  return null;
+
+  if (checkProp(response, 'emailConfirmed') && response.emailConfirmed) {
+    return {confirmed: true};
+  }
+
+  return {confirmed: false};
 };
 
 export const verifyBeforeUpdateEmail = async (email: string) => {

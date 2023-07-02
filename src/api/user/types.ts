@@ -51,6 +51,8 @@ export type User = {
 
   skipEmailValidation?: boolean | null;
   skipPhoneNumberValidation?: boolean | null;
+
+  loginSession?: string;
 };
 
 export type ReferralType = 'CONTACTS' | 'T1' | 'T2';

@@ -18,14 +18,14 @@ enum ValidateError {
   SameEmail,
 }
 
-export function* verifyBeforeUpdateEmailSaga({
+export function* modifyEmailWithLinkSaga({
   payload: {email},
 }: ReturnType<typeof actionCreator>) {
   const user: User = yield select(userSelector);
   try {
     if (!validateEmail(email)) {
       throw {code: ValidateError.InvalidEmail};
-    } else if (email === user?.email) {
+    } else if (email.toLowerCase() === user?.email?.toLowerCase()) {
       throw {code: ValidateError.SameEmail};
     }
 

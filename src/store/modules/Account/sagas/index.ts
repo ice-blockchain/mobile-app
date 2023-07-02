@@ -4,6 +4,8 @@ import {AccountActions} from '@store/modules/Account/actions';
 import {deleteAccountSaga} from '@store/modules/Account/sagas/deleteAccount';
 import {getAccountSaga} from '@store/modules/Account/sagas/getAccount';
 import {getAuthConfigSaga} from '@store/modules/Account/sagas/getAuthConfig';
+import {modifyEmailWithCodeSaga} from '@store/modules/Account/sagas/modifyEmailWithCode';
+import {modifyEmailWithLinkSaga} from '@store/modules/Account/sagas/modifyEmailWithLink';
 import {persistTokenSaga} from '@store/modules/Account/sagas/persistToken';
 import {signInEmailCustomSaga} from '@store/modules/Account/sagas/signInEmailCustom';
 import {signInEmailLinkSaga} from '@store/modules/Account/sagas/signInEmailLink';
@@ -16,7 +18,6 @@ import {syncRtlSaga} from '@store/modules/Account/sagas/syncRTL';
 import {updateAccountSaga} from '@store/modules/Account/sagas/updateAccount';
 import {updateRefByUsernameSaga} from '@store/modules/Account/sagas/updateRefByUsernameSaga';
 import {userStateChangeSaga} from '@store/modules/Account/sagas/userStateChange';
-import {verifyBeforeUpdateEmailSaga} from '@store/modules/Account/sagas/verifyBeforeUpdateEmail';
 import {verifyPhoneNumberSaga} from '@store/modules/Account/sagas/verifyPhoneNumber';
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {fork, takeLatest, takeLeading} from 'redux-saga/effects';
@@ -46,7 +47,11 @@ export const authWatchers = [
   ),
   takeLatest(
     AccountActions.MODIFY_EMAIL_WITH_LINK.START.type,
-    verifyBeforeUpdateEmailSaga,
+    modifyEmailWithLinkSaga,
+  ),
+  takeLatest(
+    AccountActions.MODIFY_EMAIL_WITH_CODE.START.type,
+    modifyEmailWithCodeSaga,
   ),
   takeLatest(
     AccountActions.VERIFY_PHONE_NUMBER.START.type,
