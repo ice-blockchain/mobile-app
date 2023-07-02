@@ -40,7 +40,7 @@ const SIGN_IN_EMAIL_LINK = createAction('SIGN_IN_EMAIL_LINK', {
   RESET: true,
 });
 
-const SIGN_IN_EMAIL_CUSTOM = createAction('SIGN_IN_EMAIL_CUSTOM', {
+const SIGN_IN_EMAIL_CODE = createAction('SIGN_IN_EMAIL_CODE', {
   START: (email: string) => ({email}),
   SET_TEMP_EMAIL: (params: {email: string; code: string}) => params,
   SUCCESS: true,
@@ -152,7 +152,7 @@ export const AccountActions = Object.freeze({
   SET_TOKEN,
   PERSIST_TOKEN,
   SIGN_IN_EMAIL_LINK,
-  SIGN_IN_EMAIL_CUSTOM,
+  SIGN_IN_EMAIL_CODE,
   SIGN_IN_PHONE,
   SIGN_IN_SOCIAL,
   SIGN_OUT,

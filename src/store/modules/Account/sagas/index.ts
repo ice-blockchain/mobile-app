@@ -7,7 +7,7 @@ import {getAuthConfigSaga} from '@store/modules/Account/sagas/getAuthConfig';
 import {modifyEmailWithCodeSaga} from '@store/modules/Account/sagas/modifyEmailWithCode';
 import {modifyEmailWithLinkSaga} from '@store/modules/Account/sagas/modifyEmailWithLink';
 import {persistTokenSaga} from '@store/modules/Account/sagas/persistToken';
-import {signInEmailCustomSaga} from '@store/modules/Account/sagas/signInEmailCustom';
+import {signInEmailCodeSaga} from '@store/modules/Account/sagas/signInEmailCode';
 import {signInEmailLinkSaga} from '@store/modules/Account/sagas/signInEmailLink';
 import {signInPhoneSaga} from '@store/modules/Account/sagas/signInPhone';
 import {signInSocialSaga} from '@store/modules/Account/sagas/signInSocial';
@@ -24,10 +24,7 @@ import {fork, takeLatest, takeLeading} from 'redux-saga/effects';
 
 export const authWatchers = [
   takeLatest(AccountActions.SIGN_IN_EMAIL_LINK.START.type, signInEmailLinkSaga),
-  takeLatest(
-    AccountActions.SIGN_IN_EMAIL_CUSTOM.START.type,
-    signInEmailCustomSaga,
-  ),
+  takeLatest(AccountActions.SIGN_IN_EMAIL_CODE.START.type, signInEmailCodeSaga),
   takeLatest(AccountActions.SIGN_IN_PHONE.START.type, signInPhoneSaga),
   takeLatest(AccountActions.SIGN_IN_SOCIAL.START.type, signInSocialSaga),
   takeLeading(AccountActions.SIGN_OUT.START.type, signOutSaga),

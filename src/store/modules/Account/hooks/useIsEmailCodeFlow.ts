@@ -5,20 +5,20 @@ import {deviceLocationSelector} from '@store/modules/Devices/selectors';
 import {checkProp} from '@utils/guards';
 import {useSelector} from 'react-redux';
 
-export const useIsCustomEmailFlow = () => {
+export const useIsEmailCodeFlow = () => {
   const authConfig = useSelector(authConfigSelector);
   const deviceLocation = useSelector(deviceLocationSelector);
 
   if (authConfig && deviceLocation) {
-    if (checkProp(authConfig, 'customEmailAuthWhiteList')) {
-      return authConfig.customEmailAuthWhiteList.some(
+    if (checkProp(authConfig, 'emailCodeAuthWhiteList')) {
+      return authConfig.emailCodeAuthWhiteList.some(
         country =>
           country.toLowerCase() === deviceLocation.country.toLowerCase(),
       );
     }
 
-    if (checkProp(authConfig, 'customEmailAuthBlackList')) {
-      return !authConfig.customEmailAuthBlackList.some(
+    if (checkProp(authConfig, 'emailCodeAuthBlackList')) {
+      return !authConfig.emailCodeAuthBlackList.some(
         country =>
           country.toLowerCase() === deviceLocation.country.toLowerCase(),
       );

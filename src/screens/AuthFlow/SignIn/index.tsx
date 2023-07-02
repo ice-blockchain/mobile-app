@@ -10,11 +10,11 @@ import {Header} from '@screens/AuthFlow/SignIn/components/Header';
 import {SocialButtons} from '@screens/AuthFlow/SignIn/components/SocialButtons';
 import {SOCIAL_BUTTON_SIZE} from '@screens/AuthFlow/SignIn/components/SocialButtons/components/SocialButton';
 import {Tab, Tabs} from '@screens/AuthFlow/SignIn/components/Tabs';
-import {SignInEmailCustomForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailCustomForm';
+import {SignInEmailCodeForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailCodeForm';
 import {SignInEmailLinkForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailLinkForm';
 import {SignInPhoneForm} from '@screens/AuthFlow/SignIn/forms/SignInPhoneForm';
 import {useSocialAuth} from '@screens/AuthFlow/SignIn/hooks/useSocialAuth';
-import {useIsCustomEmailFlow} from '@store/modules/Account/hooks/useIsCustomEmailFlow';
+import {useIsEmailCodeFlow} from '@store/modules/Account/hooks/useIsEmailCodeFlow';
 import React, {useMemo, useState} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -28,19 +28,19 @@ export const SignIn = () => {
 
   const [activeTab, setActiveTab] = useState<Tab>('email');
 
-  const isCustomEmailFlow = useIsCustomEmailFlow();
+  const isEmailCodeFlow = useIsEmailCodeFlow();
 
   const Form = useMemo(() => {
     if (activeTab === 'phone') {
       return SignInPhoneForm;
     }
 
-    if (isCustomEmailFlow) {
-      return SignInEmailCustomForm;
+    if (isEmailCodeFlow) {
+      return SignInEmailCodeForm;
     }
 
     return SignInEmailLinkForm;
-  }, [activeTab, isCustomEmailFlow]);
+  }, [activeTab, isEmailCodeFlow]);
 
   return (
     <KeyboardAvoider keyboardVerticalOffset={rem(15) - SOCIAL_BUTTON_SIZE}>

@@ -2,8 +2,8 @@
 
 export type AuthConfig =
   | {
-      customEmailAuthWhiteList: string[];
+      emailCodeAuthWhiteList: string[];
     }
   | {
-      customEmailAuthBlackList: string[];
+      emailCodeAuthBlackList: string[];
     };

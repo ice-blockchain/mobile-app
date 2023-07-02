@@ -26,9 +26,9 @@ enum ValidateError {
   InvalidEmail,
 }
 
-export function* signInEmailCustomSaga(
+export function* signInEmailCodeSaga(
   startAction: ReturnType<
-    typeof AccountActions.SIGN_IN_EMAIL_CUSTOM.START.create
+    typeof AccountActions.SIGN_IN_EMAIL_CODE.START.create
   >,
 ) {
   try {
@@ -63,7 +63,7 @@ export function* signInEmailCustomSaga(
     }
 
     yield put(
-      AccountActions.SIGN_IN_EMAIL_CUSTOM.SET_TEMP_EMAIL.create({
+      AccountActions.SIGN_IN_EMAIL_CODE.SET_TEMP_EMAIL.create({
         email,
         code: loginSessionPayload.confirmationCode,
       }),
@@ -71,7 +71,7 @@ export function* signInEmailCustomSaga(
 
     while (true) {
       const {reset} = yield race({
-        reset: take(AccountActions.SIGN_IN_EMAIL_CUSTOM.RESET.type),
+        reset: take(AccountActions.SIGN_IN_EMAIL_CODE.RESET.type),
         delay: delay(EMAIL_CODE_GET_STATUS_INTERVAL_SEC * 1000),
       });
 
@@ -99,7 +99,7 @@ export function* signInEmailCustomSaga(
 
         yield take(AccountActions.PERSIST_TOKEN.SUCCESS.type);
 
-        yield put(AccountActions.SIGN_IN_EMAIL_CUSTOM.SUCCESS.create());
+        yield put(AccountActions.SIGN_IN_EMAIL_CODE.SUCCESS.create());
         yield put(AccountActions.USER_STATE_CHANGE.START.create());
         return;
       }
@@ -107,15 +107,13 @@ export function* signInEmailCustomSaga(
   } catch (error) {
     if (checkProp(error, 'code') && error.code === ValidateError.InvalidEmail) {
       yield put(
-        AccountActions.SIGN_IN_EMAIL_CUSTOM.FAILED.create(
+        AccountActions.SIGN_IN_EMAIL_CODE.FAILED.create(
           t('errors.invalid_email'),
         ),
       );
     } else {
       yield put(
-        AccountActions.SIGN_IN_EMAIL_CUSTOM.FAILED.create(
-          getErrorMessage(error),
-        ),
+        AccountActions.SIGN_IN_EMAIL_CODE.FAILED.create(getErrorMessage(error)),
       );
       throw error;
     }
