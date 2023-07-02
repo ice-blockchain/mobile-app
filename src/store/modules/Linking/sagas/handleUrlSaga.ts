@@ -33,7 +33,7 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
 
   if (isUpdateEmailLink(parsedUrl)) {
     yield put(
-      AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.CONFIRM_TEMP_EMAIL.create(url),
+      AccountActions.MODIFY_EMAIL_WITH_LINK.CONFIRM_TEMP_EMAIL.create(url),
     );
     return;
   }

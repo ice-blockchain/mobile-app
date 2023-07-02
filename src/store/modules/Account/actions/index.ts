@@ -112,7 +112,7 @@ const GET_ACCOUNT = createAction('GET_ACCOUNT', {
   FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
-const VERIFY_BEFORE_UPDATE_EMAIL = createAction('VERIFY_BEFORE_UPDATE_EMAIL', {
+const MODIFY_EMAIL_WITH_LINK = createAction('MODIFY_EMAIL_WITH_LINK', {
   START: (email: string) => ({email}),
   SET_TEMP_EMAIL: (email: string) => ({email}),
   CONFIRM_TEMP_EMAIL: (link: string) => ({link}),
@@ -153,7 +153,7 @@ export const AccountActions = Object.freeze({
   UPDATE_ACCOUNT,
   GET_ACCOUNT,
   USER_STATE_CHANGE,
-  VERIFY_BEFORE_UPDATE_EMAIL,
+  MODIFY_EMAIL_WITH_LINK,
   VERIFY_PHONE_NUMBER,
   SET_PRIVACY_INFO_SHOW,
   GET_AUTH_CONFIG,

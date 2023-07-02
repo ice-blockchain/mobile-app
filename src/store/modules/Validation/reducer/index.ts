@@ -39,9 +39,9 @@ type Actions = ReturnType<
   | typeof ValidationActions.EMAIL_VALIDATION.FAILED.create
   | typeof ValidationActions.EMAIL_VALIDATION.RESET.create
   | typeof ValidationActions.SET_TEMPORARY_PHONE_VERIFICATION_STEP.STATE.create
-  | typeof AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.SET_TEMP_EMAIL.create
-  | typeof AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.RESET.create
-  | typeof AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.SUCCESS.create
+  | typeof AccountActions.MODIFY_EMAIL_WITH_LINK.SET_TEMP_EMAIL.create
+  | typeof AccountActions.MODIFY_EMAIL_WITH_LINK.RESET.create
+  | typeof AccountActions.MODIFY_EMAIL_WITH_LINK.SUCCESS.create
   | typeof AccountActions.VERIFY_PHONE_NUMBER.SUCCESS.create
   | typeof AccountActions.VERIFY_PHONE_NUMBER.RESET.create
 >;
@@ -76,7 +76,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.smsSentTimestamp = dayjs().valueOf();
         break;
       case AccountActions.SIGN_IN_EMAIL_LINK.SET_TEMP_EMAIL.type:
-      case AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.SET_TEMP_EMAIL.type:
+      case AccountActions.MODIFY_EMAIL_WITH_LINK.SET_TEMP_EMAIL.type:
         draft.temporaryEmail = action.payload.email;
         draft.temporaryEmailVerificationStep = 'link';
         draft.emailSentTimestamp = dayjs().valueOf();
@@ -109,8 +109,8 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case AccountActions.SIGN_IN_EMAIL_LINK.RESET.type:
       case AccountActions.SIGN_IN_EMAIL_CUSTOM.SUCCESS.type:
       case AccountActions.SIGN_IN_EMAIL_CUSTOM.RESET.type:
-      case AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.RESET.type:
-      case AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.SUCCESS.type:
+      case AccountActions.MODIFY_EMAIL_WITH_LINK.RESET.type:
+      case AccountActions.MODIFY_EMAIL_WITH_LINK.SUCCESS.type:
         draft.temporaryEmail = null;
         draft.temporaryEmailCode = null;
         draft.temporaryEmailVerificationStep = 'email';

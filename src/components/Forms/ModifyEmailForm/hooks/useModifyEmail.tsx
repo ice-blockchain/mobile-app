@@ -15,17 +15,17 @@ export const useModifyEmail = () => {
   const [email, setEmail] = useState('');
 
   const modifyEmailFailedReason = useSelector(
-    failedReasonSelector.bind(null, AccountActions.VERIFY_BEFORE_UPDATE_EMAIL),
+    failedReasonSelector.bind(null, AccountActions.MODIFY_EMAIL_WITH_LINK),
   );
 
   const isModifyEmailLoading = useSelector(
-    isLoadingSelector.bind(null, AccountActions.VERIFY_BEFORE_UPDATE_EMAIL),
+    isLoadingSelector.bind(null, AccountActions.MODIFY_EMAIL_WITH_LINK),
   );
 
   const modifyEmail = useCallback(() => {
     Keyboard.dismiss();
     dispatch(ValidationActions.EMAIL_VALIDATION.RESET.create());
-    dispatch(AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.START.create(email));
+    dispatch(AccountActions.MODIFY_EMAIL_WITH_LINK.START.create(email));
   }, [dispatch, email]);
 
   const onChangeEmail = (text: string) => {
@@ -35,7 +35,7 @@ export const useModifyEmail = () => {
 
   const resetError = () => {
     if (modifyEmailFailedReason) {
-      dispatch(AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.RESET.create());
+      dispatch(AccountActions.MODIFY_EMAIL_WITH_LINK.RESET.create());
     }
   };
 

@@ -11,7 +11,7 @@ import {getErrorMessage} from '@utils/errors';
 import {checkProp} from '@utils/guards';
 import {call, put, select, take} from 'redux-saga/effects';
 
-const actionCreator = AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.START.create;
+const actionCreator = AccountActions.MODIFY_EMAIL_WITH_LINK.START.create;
 
 enum ValidateError {
   InvalidEmail,
@@ -31,21 +31,20 @@ export function* verifyBeforeUpdateEmailSaga({
 
     yield call(verifyBeforeUpdateEmail, email);
     yield put(
-      AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.SET_TEMP_EMAIL.create(email),
+      AccountActions.MODIFY_EMAIL_WITH_LINK.SET_TEMP_EMAIL.create(email),
     );
 
     let finished = false;
     while (!finished) {
       const action: ReturnType<
-        | typeof AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.CONFIRM_TEMP_EMAIL.create
-        | typeof AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.RESET.create
+        | typeof AccountActions.MODIFY_EMAIL_WITH_LINK.CONFIRM_TEMP_EMAIL.create
+        | typeof AccountActions.MODIFY_EMAIL_WITH_LINK.RESET.create
       > = yield take([
-        AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.CONFIRM_TEMP_EMAIL.type,
+        AccountActions.MODIFY_EMAIL_WITH_LINK.CONFIRM_TEMP_EMAIL.type,
       ]);
 
       switch (action.type) {
-        case AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.CONFIRM_TEMP_EMAIL
-          .type: {
+        case AccountActions.MODIFY_EMAIL_WITH_LINK.CONFIRM_TEMP_EMAIL.type: {
           try {
             const parsedUrl = new URL(action.payload.link);
             if (
@@ -60,9 +59,7 @@ export function* verifyBeforeUpdateEmailSaga({
                   skipEmailValidation: true,
                 }),
               );
-              yield put(
-                AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.SUCCESS.create(),
-              );
+              yield put(AccountActions.MODIFY_EMAIL_WITH_LINK.SUCCESS.create());
               /**
                * User updated email:
                * this action requires force logout because firebase
@@ -74,14 +71,14 @@ export function* verifyBeforeUpdateEmailSaga({
             }
           } catch (error) {
             yield put(
-              AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.FAILED.create(
+              AccountActions.MODIFY_EMAIL_WITH_LINK.FAILED.create(
                 getErrorMessage(error),
               ),
             );
           }
           break;
         }
-        case AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.RESET.type:
+        case AccountActions.MODIFY_EMAIL_WITH_LINK.RESET.type:
           finished = true;
           break;
       }
@@ -101,7 +98,7 @@ export function* verifyBeforeUpdateEmailSaga({
     }
 
     yield put(
-      AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.FAILED.create(
+      AccountActions.MODIFY_EMAIL_WITH_LINK.FAILED.create(
         validateError ?? getErrorMessage(error),
       ),
     );

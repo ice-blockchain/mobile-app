@@ -17,11 +17,11 @@ export const useConfirmEmailLink = () => {
   const email = useSelector(temporaryEmailSelector, () => true);
 
   const validateError = useSelector(
-    failedReasonSelector.bind(null, AccountActions.VERIFY_BEFORE_UPDATE_EMAIL),
+    failedReasonSelector.bind(null, AccountActions.MODIFY_EMAIL_WITH_LINK),
   );
 
   const goBack = () => {
-    dispatch(AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.RESET.create());
+    dispatch(AccountActions.MODIFY_EMAIL_WITH_LINK.RESET.create());
   };
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export const useConfirmEmailLink = () => {
 
   useEffect(
     () => () => {
-      dispatch(AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.RESET.create());
+      dispatch(AccountActions.MODIFY_EMAIL_WITH_LINK.RESET.create());
     },
     [dispatch],
   );

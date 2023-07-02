@@ -45,7 +45,7 @@ export const authWatchers = [
     getAccountSaga,
   ),
   takeLatest(
-    AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.START.type,
+    AccountActions.MODIFY_EMAIL_WITH_LINK.START.type,
     verifyBeforeUpdateEmailSaga,
   ),
   takeLatest(
