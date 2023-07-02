@@ -6,10 +6,12 @@ type Params = {
   loginSession: string;
 };
 
-type Response = {
-  refreshToken: string;
-  accessToken: string;
-};
+type Response =
+  | {
+      refreshToken: string;
+      accessToken: string;
+    }
+  | {};
 
 export function getSignInWithEmailLinkStatus(params: Params) {
   return post<Params, Response>('auth/getSignInWithEmailLinkStatus', params);

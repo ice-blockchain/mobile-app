@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {ENV} from '@constants/env';
 import {LINKS} from '@constants/links';
@@ -93,14 +92,14 @@ export const getSignInWithEmailLinkStatus = async ({
 }: {
   loginSession: string;
 }) => {
-  try {
-    return Api.auth.getSignInWithEmailLinkStatus({loginSession});
-  } catch (error) {
-    if (isApiError(error, 404, 'NOT_VERIFIED')) {
-      return null;
-    }
-    throw error;
+  const response = await Api.auth.getSignInWithEmailLinkStatus({loginSession});
+  if (
+    checkProp(response, 'accessToken') &&
+    checkProp(response, 'refreshToken')
+  ) {
+    return response;
   }
+  return null;
 };
 
 export const verifyBeforeUpdateEmail = async (email: string) => {
@@ -172,8 +171,19 @@ export const onUserChanged = (listener: () => void) => {
   return auth().onUserChanged(listener);
 };
 
-export const signOut = () => {
-  return auth().signOut();
+export const signOut = async () => {
+  await clearPersistedToken();
+  try {
+    /**
+     * auth().signOut triggers onAuthStateChanged, so calling it in the end
+     */
+    return auth().signOut();
+  } catch (error) {
+    if (checkProp(error, 'code') && error.code === 'auth/no-current-user') {
+      return null;
+    }
+    throw error;
+  }
 };
 
 export const refreshAuthToken = async (token: AuthToken) => {
@@ -224,15 +234,23 @@ export const getAuthenticatedUser = async (forceRefresh?: boolean) => {
   const customToken = await readPersistedCustomToken();
   if (customToken) {
     const customUser = jwt_decode(customToken.accessToken);
-    console.log('customUser', customUser);
-    //TODO: pick data from customUser
-    return {
-      uid: 'customUser.uid',
-      email: 'customUser.email',
-      phoneNumber: null,
-      isAdmin: false,
-      token: customToken,
-    } as const;
+
+    if (
+      checkProp(customUser, 'sub') &&
+      typeof customUser.sub === 'string' &&
+      checkProp(customUser, 'email') &&
+      typeof customUser.email === 'string'
+    ) {
+      return {
+        uid: customUser.sub,
+        email: customUser.email,
+        phoneNumber: null,
+        isAdmin: false,
+        token: customToken,
+      } as const;
+    } else {
+      throw new Error('Invalid persisted accessToken');
+    }
   }
 
   return null;
