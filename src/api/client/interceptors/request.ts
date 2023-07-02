@@ -1,7 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {store} from '@store/configureStore';
-import {authTokenSelector} from '@store/modules/Account/selectors';
+import {
+  appLocaleSelector,
+  authTokenSelector,
+} from '@store/modules/Account/selectors';
 import {AxiosRequestConfig} from 'axios';
 
 async function onFulfilled(config: AxiosRequestConfig) {
@@ -22,6 +25,14 @@ async function onFulfilled(config: AxiosRequestConfig) {
       'Content-Type': 'multipart/form-data',
     };
     config.transformRequest = (data: FormData) => data;
+  }
+
+  if (!config.headers?.['X-Language']) {
+    const appLocale = appLocaleSelector(store.getState());
+    config.headers = {
+      ...config.headers,
+      'X-Language': appLocale,
+    };
   }
 
   return config;
