@@ -5,7 +5,7 @@ import {signOut} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {DeviceActions} from '@store/modules/Devices/actions';
 import {updateDeviceMetadataSaga} from '@store/modules/Devices/sagas/updateDeviceMetadata';
-import {showError} from '@utils/errors';
+import {getErrorMessage, showError} from '@utils/errors';
 import {call, put} from 'redux-saga/effects';
 
 export function* signOutSaga(
@@ -28,7 +28,7 @@ export function* signOutSaga(
     yield call(signOut);
     yield put(AccountActions.SIGN_OUT.SUCCESS.create());
   } catch (error) {
-    yield put(AccountActions.SIGN_OUT.FAILED.create());
+    yield put(AccountActions.SIGN_OUT.FAILED.create(getErrorMessage(error)));
     showError(error);
     throw error;
   }

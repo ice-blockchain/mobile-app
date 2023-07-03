@@ -28,7 +28,7 @@ const USER_STATE_CHANGE = createAction('USER_STATE_CHANGE', {
 const SIGN_OUT = createAction('SIGN_OUT', {
   START: (accountDeleted?: boolean) => ({accountDeleted}),
   SUCCESS: true,
-  FAILED: true,
+  FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
 const SIGN_IN_EMAIL_LINK = createAction('SIGN_IN_EMAIL_LINK', {
