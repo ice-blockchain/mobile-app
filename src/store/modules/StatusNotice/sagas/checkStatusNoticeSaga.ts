@@ -30,14 +30,16 @@ export function* checkStatusNoticeSaga() {
     icon: noticeData?.icon,
   };
   if (noticeData?.newsData) {
-    statusNoticeData.newsData = {
-      id: noticeData.newsData.id,
-      url: noticeData.newsData.url,
-      title:
-        noticeData.newsData.localisedData[user?.language ?? '']?.title ??
-        noticeData.newsData.localisedData.en?.title ??
-        '',
-    };
+    const localisedNewsData =
+      noticeData.newsData.localisedData[user?.language ?? ''] ??
+      noticeData.newsData.localisedData.en;
+    if (localisedNewsData) {
+      statusNoticeData.newsData = {
+        id: noticeData.newsData.id,
+        url: localisedNewsData.url,
+        title: localisedNewsData.title,
+      };
+    }
   }
   if (noticeData?.data) {
     statusNoticeData.data =

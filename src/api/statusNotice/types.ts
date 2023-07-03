@@ -6,10 +6,10 @@ export interface NoticeData {
   icon?: string;
   newsData?: {
     id: string;
-    url: string;
     localisedData: {
       [locale: string]: {
         title: string;
+        url: string;
       };
     };
   };
