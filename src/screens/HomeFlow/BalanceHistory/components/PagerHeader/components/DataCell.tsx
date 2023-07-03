@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {ReactNode} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -24,7 +25,12 @@ export const DataCell = ({icon, label, value, currency}: Props) => {
         ) : (
           value
         )}
-        {!!currency && <Text style={styles.valueText}> {currency}</Text>}
+        {!isRTL && !!currency && (
+          <Text style={styles.valueText}> {currency}</Text>
+        )}
+        {isRTL && !!currency && (
+          <Text style={styles.valueText}>{currency} </Text>
+        )}
       </View>
     </View>
   );
