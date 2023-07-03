@@ -2,7 +2,10 @@
 
 import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
-import {forceStartMiningSelector} from '@store/modules/Tokenomics/selectors';
+import {
+  forceStartMiningSelector,
+  tapToMineActionTypeSelector,
+} from '@store/modules/Tokenomics/selectors';
 import {put, select} from 'redux-saga/effects';
 
 export function* forceMiningSaga() {
@@ -12,8 +15,14 @@ export function* forceMiningSaga() {
 
   const forceStartMining: ReturnType<typeof forceStartMiningSelector> =
     yield select(forceStartMiningSelector);
+  const tapToMineActionType: ReturnType<typeof tapToMineActionTypeSelector> =
+    yield select(tapToMineActionTypeSelector);
 
   if (isAppActive && forceStartMining) {
-    yield put(TokenomicsActions.START_MINING_SESSION.START.create());
+    yield put(
+      TokenomicsActions.START_MINING_SESSION.START.create({
+        tapToMineActionType,
+      }),
+    );
   }
 }

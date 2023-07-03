@@ -69,3 +69,6 @@ export const agreeWithEarlyAccessSelector = (state: RootState) => {
 
 export const forceStartMiningSelector = (state: RootState) =>
   state.tokenomics.forceStartMining;
+
+export const tapToMineActionTypeSelector = (state: RootState) =>
+  state.tokenomics.tapToMineActionType;

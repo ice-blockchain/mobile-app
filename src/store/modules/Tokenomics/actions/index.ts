@@ -83,7 +83,10 @@ const CLAIM_DAILY_BONUS = createAction('CLAIM_DAILY_BONUS', {
 });
 
 const UPDATE_FORCE_START_MINING = createAction('UPDATE_FORCE_START_MINING', {
-  STATE: (payload: {forceStartMining: boolean}) => payload,
+  STATE: (payload: {
+    forceStartMining: boolean;
+    tapToMineActionType?: 'Extended' | 'Default';
+  }) => payload,
 });
 
 export const TokenomicsActions = Object.freeze({
