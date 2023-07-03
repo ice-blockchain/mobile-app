@@ -18,12 +18,6 @@ export const INITIALIZE_ACTIONS = [
   DeviceActions.INIT_DEVICE,
 
   /**
-   * Is required to get a device country and city based on ip
-   * It is used to determine what auth flow to show
-   */
-  DeviceActions.UPDATE_DEVICE_LOCATION,
-
-  /**
    * Based on this config and device country we show a specific auth flow
    */
   AccountActions.GET_AUTH_CONFIG,
