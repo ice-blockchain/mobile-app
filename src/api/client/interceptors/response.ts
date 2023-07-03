@@ -52,7 +52,9 @@ function onRejected(instance: AxiosInstance) {
 }
 
 const signOutWithError = <T>(error: T) => {
-  store.dispatch(AccountActions.SIGN_OUT.START.create());
+  store.dispatch(
+    AccountActions.SIGN_OUT.START.create({skipMetadataUpdate: true}),
+  );
   return Promise.reject(error);
 };
 

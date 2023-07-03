@@ -26,7 +26,9 @@ const USER_STATE_CHANGE = createAction('USER_STATE_CHANGE', {
 });
 
 const SIGN_OUT = createAction('SIGN_OUT', {
-  START: (accountDeleted?: boolean) => ({accountDeleted}),
+  START: ({
+    skipMetadataUpdate = false,
+  }: {skipMetadataUpdate?: boolean} = {}) => ({skipMetadataUpdate}),
   SUCCESS: true,
   FAILED: (errorMessage: string) => ({errorMessage}),
 });

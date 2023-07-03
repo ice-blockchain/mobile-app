@@ -12,9 +12,9 @@ export function* signOutSaga(
   signOutAction: ReturnType<typeof AccountActions.SIGN_OUT.START.create>,
 ) {
   try {
-    const accountDeleted = signOutAction.payload.accountDeleted;
+    const skipMetadataUpdate = signOutAction.payload.skipMetadataUpdate;
 
-    if (!accountDeleted) {
+    if (!skipMetadataUpdate) {
       yield call(
         updateDeviceMetadataSaga,
         DeviceActions.UPDATE_DEVICE_METADATA.START.create({
