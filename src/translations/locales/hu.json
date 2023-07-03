@@ -1,787 +1,841 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "Üdv az ice-nál",
+      "description": "[[:ice]] egy digitális valuta, amelyre a telefonoddal tehetsz szert. Az ice-t a hozzád hasonló mindennapi felhasználók birtokolják és működtetik."
     },
     "page2": {
-      "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "title": "Bolygóbarát",
+      "description": "[[:ice]] eleve energiatakarékosabb, mint a BTC, mivel a \"Proof of Stake\" konszenzus elvet használja. A proof-of-stake (POS) segítségével a kriptopénzek tulajdonosai a blokk tranzakciókat a validáló által lekötött coinok száma alapján érvényesítik."
     },
     "page3": {
-      "title": "People’s Coin",
-      "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "title": "Az emberek digitális valutája",
+      "description_part1": "Az erő a te kezeitekben van.",
+      "description_part2": "Minden, amit fejlesztünk, [[:ice]]nyílt forráskódú és a Decentralizált Autonóm Szervezet (DAO) által ellenőrzött."
     },
     "page4": {
-      "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "title": "Maradj kapcsolatban",
+      "description": "Érints [[:iceLogo]]a napi bejelentkezéshez ingyenes, kevés energiát igénylő mobilalkalmazásunkkal. A napi érintés biztosítja, hogy az ice-t valódi emberek, nem pedig robotok működtessék. "
     },
     "page5": {
-      "title": "Refer & Earn",
-      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
+      "title": "Ajánl és keress pénzt",
+      "description": "Hívd meg barátait, és minden egyes barátd után, aki csatlakozik a csapatodhoz, akár (mindketten) 25%-os bónuszt is kaphattok az alap keresetetekhez képest."
     },
     "page6": {
-      "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
-      "description_part2": "Don’t worry, we will not spam you!",
-      "not_now": "Not now"
+      "title": "Értesítések",
+      "description_part1": "[[:ice]] a bejelentkezési időszakok mindössze 24 órán át tartanak. Szeretnél értesítést kapni a jelenlegi időszakod lejártakor?",
+      "description_part2": "Ne aggódj, nem halmozunk el levélszeméttel!",
+      "not_now": "Ne most"
     }
   },
   "button": {
-    "yes_btn": "Yes, please",
-    "next_btn": "Next",
-    "not_now": "Not now",
-    "view_all": "view all",
+    "yes_btn": "Igen, szeretném",
+    "next_btn": "Következő",
+    "not_now": "Ne most",
+    "view_all": "összes megtekintése",
     "invite_friend": {
-      "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "title": "Barátok meghívása",
+      "description": "Szerezz extra [[:ice]]-t barátaid meghívásával."
     },
-    "no": "No",
-    "search_country": "Search for country",
-    "save": "Save",
-    "yes": "Yes",
-    "change": "Change",
-    "no_cancel": "No, cancel",
-    "complete": "Complete",
-    "cancel": "Cancel",
-    "clear": "Clear",
-    "finish": "Finish",
-    "next_step": "Next Step",
-    "see_all": "see all",
-    "back": "Back",
-    "search": "Search",
-    "continue": "Continue",
-    "apply": "Apply",
-    "reset": "Reset",
-    "skip_all": "Skip all",
-    "done": "Done",
-    "confirm": "Confirm",
-    "do_this_later": "Do this later",
-    "resurrect_me": "Resurrect Me",
-    "claim_bonus": "Claim Bonus",
-    "close": "Close",
-    "try_again": "Try Again",
-    "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "see_all": "lásd az összeset",
+    "no": "Nem",
+    "search_country": "Keresés országra",
+    "save": "Mentés",
+    "yes": "Igen",
+    "change": "Módosítás",
+    "no_cancel": "Ne, mégse",
+    "complete": "Befejezés",
+    "cancel": "Mégse",
+    "clear": "Törlés",
+    "finish": "Befejezés",
+    "next_step": "Következő lépés",
+    "back": "Vissza",
+    "search": "Keresés",
+    "continue": "Tovább",
+    "apply": "Alkalmazás",
+    "reset": "Visszaállítás",
+    "skip_all": "Összes átugrása",
+    "done": "Kész",
+    "confirm": "Megerősítés",
+    "do_this_later": "Csináld meg ezt később",
+    "resurrect_me": "Támassz fel engem",
+    "claim_bonus": "Bónusz igénylése",
+    "close": "Bezárás",
+    "try_again": "Újrapróbálkozás",
+    "view_changelog": "Changelog fájl megtekintése",
+    "disable": "Kikapcsolás",
+    "agree": "Egyetértek",
+    "learn_more": "Tudj meg többet",
+    "back_to_login": "Vissza a bejelentkezéshez",
+    "follow_us": "Kövess minket",
+    "subscribe": "Feliratkozás"
   },
   "team": {
-    "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
+    "contacts_tab": "Kapcsolatok",
+    "tierOne_tab": "1. szint",
+    "tierTwo_tab": "2. szint",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "title": "Jelenleg egy [[:title]] ajánlásod sincs!",
+      "contacts": "Jelenleg egy kapcsolatod sincs a telefonkönyvben.",
+      "button_title": "Barátok meghívása"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
-      "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_title": "[[:ice]] jobb barátokkal",
+      "empty_button_title": "Hozzáférés engedélyezése a kapcsolatokhoz",
+      "empty_description": "Szinkronizáld a kapcsolataidat és nézd meg, ki használja már a(z) [[:ice]]-t. A jövőben tudsz majd ice-t küldeni a kapcsolataidnak."
     },
     "header": {
-      "search_placeholder": "Search for users",
-      "referrals": "Referrals",
-      "earnings": "Earnings"
+      "search_placeholder": "Keresés felhasználókra",
+      "referrals": "Ajánlások",
+      "earnings": "Keresetek"
     },
     "confirm_code": {
-      "title": "Confirm Code",
-      "description": "Please enter the confirmation code you have received on your phone.",
-      "placeholder": "Enter the code",
-      "button": "Confirm your code now"
+      "title": "Kód megerősítése",
+      "description": "Kérjük, add meg a telefonodra érkezett megerősítési kódot.",
+      "placeholder": "Kód megadása",
+      "button": "Kódod megerősítése most"
     },
     "confirm_phone": {
-      "title": "Confirm Phone",
-      "description": "Please confirm your country code and enter your phone number."
+      "title": "Telefon megerősítése",
+      "description": "Kérjük, erősítsd meg az országhívódat és add meg a telefonszámodat."
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "friends"
+        "friends": "barátok"
       },
-      "all_contacts": "All contacts",
-      "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "all_contacts": "Összes kapcsolat",
+      "invite": "meghívás",
+      "invitation_text": "Szia {{name}}, szeretnélek meghívni az ice-hoz való csatlakozásra."
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier 1 Earnings"
+        "title_earnings": "1. szintű keresetek"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier 2 Earnings"
+        "title_earnings": "2. szintű keresetek"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
-    "welcome": "Welcome to ice",
-    "email": "Email",
-    "slogan": "Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "logInSignUp": "Bejelentkezés / Feliratkozás",
+    "phone": "Telefon",
+    "or": "vagy",
+    "reset_password": "Jelszó újraállítása",
+    "welcome": "Üdv az ice-nál",
+    "email": "E-mail",
+    "slogan": "A globális valuta-visszaállítás",
+    "privacy": "A továbblépéssel elfogadod [[:link]]szerződési feltételeinket[[/:link]] és [[:link]]adatvédelmi politikánkat[[/:link]]"
   },
   "claimUsername": {
-    "title": "Claim nickname",
-    "description": "Your friends will need to use this nickname to join your team",
-    "inputPlaceholder": "Enter your nickname",
-    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
-    "note_part2": "Example:",
-    "note_example": "your.name01"
+    "title": "Nicknév igénylése",
+    "description": "A barátaidnak a csapatodhoz való csatlakozáshoz szükségük lesz erre a nicknévre.",
+    "inputPlaceholder": "Nickneved megadása",
+    "note_part1": "Nicknév létrehozásakor csak betűket, számokat és pontokat használhatsz.",
+    "note_part2": "Példa:",
+    "note_example": "a.neved01"
   },
   "whoInvitedYou": {
-    "title": "Who invited you?",
-    "description": "Enter the nickname of the person who invited you",
-    "inputPlaceholder": "Enter nickname",
-    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
-    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+    "title": "Ki hívott meg?",
+    "description": "Add meg annak a személynek a nicknevét, aki meghívott.",
+    "inputPlaceholder": "Nicknév megadása",
+    "dontHaveInvitationCode": "Ezen lépés befejezésével te és a barátod 25%-os bónuszt szereztek az alap kereseti rátához képest az egyszerre történő bejelentkezés esetén.",
+    "dontHaveCodeTip": "Ha nem rendelkezel meghívókóddal, véletlenszerűen kiválasztunk egy tagot, mint akitől az ajánlást kaptad."
   },
   "errors": {
-    "nicknameSize": "Nickname size: 4-20 characters.",
-    "removeInvalidCharacters": "Remove invalid characters.",
-    "validation_error": "Some validation error",
-    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
-    "wrong_phone_number": "Invalid phone number, please try again",
-    "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken",
-    "phone_number_already_in_use": "Phone number already in use",
-    "invalid_validation_code": "Invalid code number, please try again!",
-    "validation_expired": "Validation expired",
-    "validation_not_found": "Validation not found",
-    "invalid_email": "Invalid email",
-    "invalid_ref_username": "Nickname is invalid.",
-    "invalid_phone": "Invalid phone number",
-    "user_disabled": "User has been disabled",
-    "expired_action_code": "OTP in email link is expired",
-    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
-    "invalid_credential": "The credential is malformed or has expired",
-    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
-    "user_not_found_for_email": "There is no user corresponding to the given email",
-    "user_not_found": "User not found",
-    "auth_in_progress": "Sign-In already in progress",
-    "google_play_services_not_available": "Google Play services are not available on the device",
-    "unknown_error_with_code": "Unknown error {{code}}",
-    "no_such_provider": "You do not have this provider linked",
-    "min_username": "Minimum length is 4 characters.",
-    "max_username": "Maximum length is 30 characters.",
-    "code_expired": "The code has expired. Please ask for a new code.",
-    "too_many_requests": "Too many requests. Please try again later.",
-    "network_error_title": "No internet connection",
-    "network_error_message": "Your device does not have any active internet connection",
-    "unknown_error": "Some error occurred, please try again later",
-    "general_error_title": "Oups...",
-    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
-    "general_network_error": "A network error has occurred. Please check your connection.",
-    "credential_already_in_use": "This credential is already associated with a different user account.",
-    "email_already_in_use": "The email address is already in use by another account.",
-    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
-    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "nicknameSize": "Nicknév hossza: 4-20 karakter.",
+    "removeInvalidCharacters": "Távolítsd el az érvénytelen karaktereket.",
+    "validation_error": "Valamilyen validációs hiba.",
+    "multiple_accounts": "Az e-mail/telefonszám egy másik fiókhoz van hozzákapcsolva. Kérjük, annak bizonyítására, hogy hozzád tartozik a fiók, jelentkezz be oda, majd ki és lépj vissza ebbe a fiókba. Ha a másik fiók nem hozzád tartozik, vagy nem tudsz bejelentkezni oda, kérjük, lépj kapcsolatba az ügyfélszolgálatunkkal.",
+    "wrong_phone_number": "Érvénytelen telefonszám, kérjük, próbáld újra.",
+    "invalid_username": "Érvénytelen nicknév.",
+    "email_already_taken": "E-mail-cím már használatban.",
+    "phone_number_already_taken": "A telefonszám már használatban.",
+    "invalid_validation_code": "Érvénytelen kód, kérjük, próbáld újra.",
+    "validation_expired": "A validálás lejárt",
+    "validation_not_found": "A validálás nem található",
+    "invalid_email": "Érvénytelen e-mail-cím.",
+    "invalid_password": "Érvénytelen jelszó.",
+    "invalid_ref_username": "Érvénytelen nicknév.",
+    "invalid_phone": "Érvénytelen telefonszám.",
+    "user_disabled": "A felhasználó letiltásra került.",
+    "expired_action_code": "Az e-mail linkjében alkalmazott egyszer használatos jelszó lejárt.",
+    "account_exists_with_different_credential": "Már létezik egy fiók a bejelentkezésben megadott e-mail-címmel.",
+    "invalid_credential": "A bejelentkezési adatok rendellenesek vagy lejártak.",
+    "operation_not_allowed": "A bejelentkezési adatoknak megfelelő fiók típusa nincs engedélyezve.",
+    "user_not_found_for_email": "Nincs felhasználó hozzárendelve a megadott e-mailhez.",
+    "user_not_found": "Felhasználó nem található.",
+    "auth_in_progress": "A bejelentkezés már folyamatban.",
+    "google_play_services_not_available": "A Google Play szolgáltatások ezen az eszközön nem elérhetőek.",
+    "unknown_error_with_code": "Ismeretlen hiba: {{code}}",
+    "no_such_provider": "Ezzel a szolgáltatóval nem vagy összekapcsolva.",
+    "min_username": "A minimum hossz 4 karakter.",
+    "max_username": "A maximum hossz 30 karakter.",
+    "code_expired": "A kód már lejárt, kérjük, kérj egy másikat.",
+    "too_many_requests": "Túl sok kérés, kérjük, próbáld újra később.",
+    "network_error_title": "Nincs internetkapcsolat",
+    "network_error_message": "Az eszközöd nem rendelkezik aktív internetkapcsolattal.",
+    "unknown_error": "Hiba történt, kérjük, próbáld újra később.",
+    "general_error_title": "Hoppá...",
+    "general_error_message": "Úgy tűnik, valami hiba történt. A csapatunk jelenleg épp a javításán dolgozik.",
+    "general_network_error": "Hálózati hiba történt, kérjük, ellenőrizd a kapcsolatodat.",
+    "credential_already_in_use": "Ezek a belépési adatok már egy másik felhasználói fiókhoz vannak hozzárendelve.",
+    "email_already_in_use": "Az e-mail-cím már egy másik fióknál használatban van.",
+    "user_token_expired": "A belépési adataid már nem érvényesek, kérjük, jelentkezz be újra.",
+    "requires_recent_login": "Ez egy érzékeny művelet és újabb hitelesítést igényel. Kérjük, jelentkezz be újra.",
+    "same_email": "Nem használhatod ugyanazt az e-mailt.",
+    "weak_password": "Gyenge jelszó.",
+    "wrong_password": "Rossz jelszó.",
+    "no_camera_permissions": "A kamerához való hozzáférés nincs engedélyezve.",
+    "no_library_permissions": "A könyvtárhoz való hozzáférés nincs engedélyezve."
   },
   "profile": {
     "my_roles": {
-      "title": "My Role"
+      "title": "Szerepem"
     },
-    "mining_calculator": "earnings calculator",
-    "invite_friends": "Invite Friends",
-    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
-    "global_rank": "global rank",
-    "view_all_roles": "view all roles",
-    "data_is_hidden": "data is hidden",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "keresetkalkulátor",
+    "invite_friends": "Barátok meghívása",
+    "invite_friends_engage": "Terjeszd a hírt és hívd meg a barátaidat. Minél több ajánlásod van, annál többet keresel!",
+    "global_rank": "globális helyezés",
+    "view_all_roles": "összes szerep megtekintése",
+    "data_is_hidden": "Az adat el van rejtve",
+    "progress_text": "{{value}} a következőé {{total}}",
     "not_found": {
-      "title": "User was not found",
-      "description": "oops, we couldn't find this user"
+      "title": "Felhasználó nem található",
+      "description": "Hoppá, ez a felhasználó nem található."
     },
     "my_badges": {
-      "title": "My Badges"
+      "title": "Jelvényeim"
     },
     "badges": {
-      "title": "Badges"
+      "title": "Jelvények"
     },
     "roles": {
-      "title": "Roles"
+      "title": "Szerepek"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "Coinok",
+        "description": "coinok"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "Közösségi",
+        "description": "barátok"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "Szint",
+        "description": "Szint"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update",
-    "comingSoon": "Coming soon",
+    "level": "szint",
+    "referrals": "ajánlások",
+    "coin": "Coinok",
+    "social": "Közösségi",
+    "phone_number": "Telefonszám",
+    "years": "Év",
+    "of": " a következőé ",
+    "attention": "Figyelem",
+    "email_address": "E-mail-cím",
+    "password": "Jelszó",
+    "data_hidden": "az adat el van rejtve",
+    "pull_to_refresh": "a frissítéshez húzd fel",
+    "comingSoon": "Hamarosan",
     "date": {
-      "today": "Today"
+      "today": "Ma"
     }
   },
   "mining_calculator": {
-    "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "result_label": "Ennyit fogsz keresni",
+    "active_inviter": "Aktív meghívó",
+    "tier_1_ref": "1. szintű ajánlások",
+    "tier_2_ref": "2. szintű ajánlások",
+    "active_miners": "Aktív ajánlások"
   },
   "home": {
     "wallet": {
-      "title": "WALLET",
-      "rate": "EARNING RATE",
-      "balance": "CURRENT BALANCE"
+      "title": "TÁRCA",
+      "rate": "KERESETI RÁTA",
+      "balance": "JELENLEGI EGYENLEG"
     },
     "pioneer": {
-      "title": "PIONEER",
-      "rank": "GLOBAL RANK",
-      "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "rank": "GLOBÁLIS HELYEZÉS",
+      "referrals": "Ajánlások",
+      "description": "Ajánlj több felhasználót és szerezz több [[:ice]]-t."
     },
     "referrals": {
-      "title": "REFERRALS",
-      "description": "Referral stats for the previous 5 days",
-      "no_referrals_description": "You don't have any referrals yet",
-      "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "title": "Ajánlások",
+      "description": "Az elmúlt 5 nap ajánlási statisztikái.",
+      "no_referrals_description": "Jelenleg egy ajánlásod sincs!",
+      "users_tier_1": "1. szintű felhasználók",
+      "users_tier_2": "2. szintű felhasználók"
     },
     "adoption": {
-      "title": "ADOPTION",
-      "level": "level",
-      "users": "\nusers"
+      "title": "ÁTVÉTEL",
+      "level": "szint",
+      "users": "felhasználók"
     },
-    "steps": {
-      "title": "Your progress",
-      "description": "Complete the tasks below and level up!",
-      "step_one": {
-        "title": "Claim your nickname",
-        "description": "Set it and start earning from your invite"
+    "tasks": {
+      "achievements": "EREDMÉNYEK",
+      "title": "Előrehaladásod",
+      "description": "Teljesítsd az alábbi feladatokat és lépj előre egy szintet!",
+      "completed": {
+        "title": "Gratulálunk",
+        "description": "Jelentkezz be naponta és szerezz extra jutalmakat!"
       },
-      "step_two": {
-        "title": "Start mining",
-        "description": "Your first mining session"
+      "popup": {
+        "title": "Csatlakozz a Telegram csatornánkhoz",
+        "description": "Határozd meg a Telegramon használt nicknevedet.",
+        "placeholder": "Nicknév"
       },
-      "step_three": {
-        "title": "Profile picture",
-        "description": "Upload your profile image"
+      "claim_username": {
+        "title": "Nicknév igénylése",
+        "description": "Állítsd be és oszd meg a barátaiddal."
       },
-      "step_four": {
-        "title": "Join Telegram",
-        "description": "Be part of our community and join now"
+      "start_mining": {
+        "title": "Kezdj pénzt keresni",
+        "description": "Első bejelentkezési időszakod."
       },
-      "step_five": {
-        "title": "Follow us on Twitter",
-        "description": "Let’s keep in touch, follow us on twitter"
+      "upload_profile_picture": {
+        "title": "Profilkép",
+        "description": "Profilkép feltöltése."
       },
-      "step_six": {
-        "title": "Invite 5 Friends",
-        "description": "Create your team and increase your earnings"
+      "join_telegram": {
+        "title": "Csatlakozz a Telegramhoz",
+        "description": "Légy a közösségünk része és csatlakozz most."
+      },
+      "follow_us_on_twitter": {
+        "title": "Kövess minket Twitteren",
+        "description": "Maradjunk kapcsolatban, kövess minket Twitteren."
+      },
+      "invite_friends": {
+        "title": "Barátok meghívása",
+        "description": "Növeld a csapatod méretét és a bevételeidet."
       }
     },
     "overview": {
-      "title": "Overview"
+      "title": "Áttekintés"
     },
     "menu": {
-      "notifications": "Notifications",
-      "staking": "Staking",
-      "stats": "Stats",
-      "help": "Help"
-    },
-    "tasks": {
-      "title": "ACHIEVEMENTS"
+      "notifications": "Értesítések",
+      "staking": "Tétek növelése",
+      "stats": "Statisztikák",
+      "help": "Segítség"
     },
     "team": {
-      "title": "Team",
-      "view_team": "view team"
+      "title": "Csapat",
+      "view_team": "csapat megtekintése"
     },
     "mining_rate": {
-      "title": "EARNING RATE",
-      "base": "Base"
+      "title": "KERESETI RÁTA",
+      "base": "Alap"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
-      "streak": "STREAK",
-      "days_off": "DAYS OFF"
+      "title": "ELKÖTELEZŐDÉS",
+      "description_part1": "A sorozat az egymás utáni bejelentkezési napok számára utal.",
+      "description_part2": "Minden 6 egymást követő nap után egy nap felmentést kapsz",
+      "streak": "SOROZAT",
+      "days_off": "SZABAD NAPOK"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "Beállítások",
+    "profile": "Profil",
+    "legal": "Jogi",
+    "support": "Támogatás",
+    "personal_information_title": "Személyes információk",
+    "personal_information_description": "Profiladataid kezelése.",
+    "notifications_title": "Értesítések",
+    "notifications_description": "Kezeld itt az értesítéseidet.",
+    "push_notifications_title": "Push értesítések",
+    "push_notifications_description": "Szabd testre a push értesítésekkel kapcsolatos beállításaidat.",
+    "email_notifications_title": "E-mailes értesítések",
+    "email_notifications_description": "Szabd testre az e-mailekkel kapcsolatos beállításaidat.",
+    "terms_title": "Szerződési feltételek",
+    "terms_description": "Szerződési feltételeink áttekintése.",
+    "privacy_title": "Adatvédelmi politika",
+    "privacy_description": "Tudj meg többet az adatvédelmi politikánkról.",
+    "feedback_title": "Visszajelzés küldése",
+    "feedback_description": "Oszd meg velünk a gondolataidat.",
+    "invite_title": "Barát meghívása",
+    "invite_description": "Szerezz extra ice-t barátaid meghívásával.",
+    "delete_title": "Fiók törlése",
+    "delete_description": "Töröld ki a fiókodat.",
+    "delete_confirmation_title": "Biztosan el szeretnéd távolítani a fiókodat?",
+    "delete_confirmation_yes": "Igen, kitörölném",
+    "logout_title": "Kijelentkezés",
+    "logout_description": "Jelentkezz ki és tarts egy kis pihenőt.",
+    "logout_confirmation_title": "Biztosan szeretnél kijelentkezni?",
+    "logout_confirmation_yes": "Igen, jelentkeztess ki",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "Új telefonszám megerősítése",
+      "description": "Kérjük, erősítsd meg az országhívódat és add meg az új telefonszámodat.",
+      "button": "Új telefonszám megerősítése"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
+      "enable_prompt": "Az értesítések nincsenek engedélyezve. Szeretnéd engedélyezni őket?",
+      "channel_achievements": "EREDMÉNYEK",
+      "channel_news": "Hírek",
+      "channel_reminders": "Értesítések",
+      "channel_team": "Csapat",
       "type_push": "PUSH",
-      "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
+      "type_email": "E-MAIL",
+      "disable_notifications": "Kikapcsolod az értesítéseket?",
+      "disable_notifications_description": "Az értesítések kikapcsolásával nem fogsz frissítéseket kapni a bejelentkezés elkezdéséről, híreket vagy a csapatoddal kapcsolatos információkat.",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
+          "title": "Heti statisztikák",
+          "description": "Kapj értesítéseket az aktivitásodról."
         },
         "weekly_report": {
-          "title": "Weekly report",
-          "description": "Receive notifications about your activity"
+          "title": "Heti jelentés",
+          "description": "Kapj értesítéseket az aktivitásodról."
         },
         "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
+          "title": "Eredmények",
+          "description": "Kapj értesítéseket a haladásodról."
         },
         "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
+          "title": "Promóciók",
+          "description": "Kapj értesítéseket a csapatod növelésével kapcsolatban, amivel többet is kereshetsz."
         },
         "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
+          "title": "Hírek",
+          "description": "Kapj értesítéseket a csapatunktól."
         },
         "micro_community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
+          "title": "Mikroközösség",
+          "description": "Kapj értesítéseket a csapatodról."
         },
         "daily_bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
+          "title": "Napi bónusz",
+          "description": "Kapj értesítéseket a napi bónuszod igényléséről."
         },
         "mining": {
-          "title": "Session status",
-          "description": "Receive notifications about your check-in activity"
+          "title": "Időszak állapota",
+          "description": "Kapj értesítéseket a bejelentkezési aktivitásodról."
         },
         "system": {
-          "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "title": "Rendszer",
+          "description": "Kapj fontos értesítéseket az ice appról."
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "Nyelvbeállítások",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "Nyelv módosítása",
+      "prompt": "A beállítás alkalmazásával az app újraindul."
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "Profilkép",
+    "inapp_privacy_title": "Adatvédelem",
+    "inapp_privacy_description": "Kezeld itt az információidat.",
+    "developer": "Fejlesztő",
+    "user_id": "Felhasználói azonosító",
+    "user_token": "Felhasználói token",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "Kép törlése",
+      "edit": "Profilkép szerkesztése",
+      "photo_gallery": "Fényképgaléria",
+      "camera": "Kamera"
     },
-    "confirm_email_confirmation_title": "Confirm email?",
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "Megerősíted az e-mailedet?",
+    "update_email_confirmation_title": "Frissíted az e-mailedet?",
+    "update_email_confirmation_subtitle": "Az e-mail-címed módosításával újra be kell majd jelentkezned. Biztosan szeretnél továbblépni?",
+    "unlink_logins_title": "A bejelentkezések leválasztása",
+    "unlink_logins_description": "Innen nem tudod leválasztani a bejelentkezéseidet."
   },
   "invite_share": {
-    "title": "Invite a friend",
+    "title": "Barát meghívása",
     "telegram": "Telegram",
     "twitter": "Twitter",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
-    "email": "Email",
-    "fb": "Newsfeed",
+    "email": "E-mail",
+    "fb": "Hírfolyam",
     "sms": "SMS",
-    "copy_link": "Copy link",
-    "more": "More",
-    "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "copy_link": "Link másolása",
+    "more": "Továbbiak",
+    "copied": "MÁSOLVA",
+    "share_message": "Üdv ☃️ Hóember! Csatlakozz a csapatomhoz és szerezz 10 ice coint, ha az ajánló kódom használatával iratkozol fel:",
+    "share_subject": "Csatlakozz csapatomhoz az ice-on",
+    "description": "Terjeszd a hírt és hívd meg a barátaidat. [[:ice]]-t keresel minden egyes új ajánlás után, amit hozzánk hozol.",
+    "share": "Megosztás"
   },
   "users": {
-    "ping": "PING",
-    "active": "Active",
-    "inactive": "Inactive",
+    "ping": "PINGELÉS",
+    "active": "Aktív",
+    "inactive": "Inaktív",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T1": "1. szint",
+      "T2": "2. szint"
     }
   },
   "personal_information": {
-    "first_name": "First name",
-    "last_name": "Last name",
-    "country": "Country",
-    "city": "City",
-    "title": "Personal Information",
-    "phone": "Phone",
-    "email": "Email",
-    "username": "Nickname"
+    "first_name": "Keresztnév",
+    "last_name": "Vezetéknév",
+    "country": "Ország",
+    "city": "Város",
+    "title": "Személyes információk",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "username": "Nicknév"
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
-      "length": "Nickname size: 4-20 characters.",
-      "invalid_characters": "Remove invalid characters.",
-      "not_found": "Nickname not found.",
-      "some_error": "Some error occurred.",
-      "refer_yourself": "You can't refer yourself"
+      "already_taken": "A nicknév már használatban van.",
+      "length": "Nicknév hossza: 4-20 karakter.",
+      "invalid_characters": "Távolítsd el az érvénytelen karaktereket.",
+      "not_found": "A nicknév nem található.",
+      "some_error": "Hiba lépett fel.",
+      "refer_yourself": "Önmagadat nem ajánlhatod."
     }
   },
   "staking": {
-    "time_left": "Time Left",
-    "mining_rate": "Earning Rate",
-    "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking Bonus",
-    "period_label": "Staked Period",
+    "time_left": "Hátralévő idő.",
+    "mining_rate": "Kereseti ráta",
+    "appeal": "Turbózd fel a kereseti rátádat",
+    "benefits_description": "Helyezd előzetes letétbe az ice jutalmaidat maximum 5 évre és növeld a kereseti rátádat maximum 250%-ra.",
+    "bonus_label": "Pre-Staking (előzetes letétbe helyezési) bónusz",
+    "period_label": "Letétbe helyezési időszak",
     "title": "Pre-Staking",
-    "current_rate": "Current Rate",
-    "allocation": "Allocation",
-    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
-    "staking_terms": "Staking Terms",
-    "stake_now": "Pre-Stake Now!",
-    "balance_label": "Staked balance",
-    "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "current_rate": "Jelenlegi ráta",
+    "allocation": "Kiosztás",
+    "description": "A letétbe helyezés (staking) egy olyan folyamat, amelynek során a kriptoeszközöket a blokklánc hálózat támogatására és a tranzakciók megerősítésére kötelezed el.",
+    "terms_agree": "Elfogadom a [[:ice]] [[:link]]letétbe helyezés feltételeit[[/:link]]. Ice jövedelmeid a kiválasztott időszakra le lesznek kötve.",
+    "stake_now": "Előzetes letétbe helyezés most!",
+    "balance_label": "Letétbe helyezett egyenleg",
+    "confirm_title": "Előzetes letétbe helyezés megerősítése",
+    "confirm_subtitle": "Biztosan előzetes letétbe szeretnéd helyezne a coinjaidat? Ez a megerősítés után nem vonható vissza."
   },
   "stats": {
-    "header_title": "Stats",
-    "active": "Active users",
-    "total": "Total users",
-    "user_growth": "User growth",
-    "top_miners": "Top users",
-    "top_countries": "Top countries",
-    "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "header_title": "Statisztikák",
+    "active": "Aktív felhasználók",
+    "total": "Összes felhasználó",
+    "user_growth": "Felhasználói növekedés",
+    "top_miners": "Top felhasználók",
+    "top_countries": "Top országok",
+    "online_miners": "Online felhasználók",
+    "detailed_information": "Részletes információ"
   },
   "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
+    "title": "Kérjük, frissítsd",
+    "description": "Az alkalmazás egy régi verzióját használod, a további használathoz frissítened kell.",
+    "button_title": "Frissítsd most"
   },
   "general": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
+    "good_morning": "Jó reggelt",
+    "good_afternoon": "Jó napot",
+    "good_evening": "Jó estét",
     "ice": "ice",
-    "ice_per_hour": "ice/h",
-    "seconds_short": "s",
-    "minutes_short": "m",
-    "hours_short": "h",
-    "days_short": "d"
+    "ice_per_hour": "ice/ó",
+    "seconds_short": "mp",
+    "minutes_short": "p",
+    "hours_short": "ó",
+    "days_short": "n"
   },
   "news": {
-    "news_feed": "News Feed",
-    "read_more": "Read more",
-    "views": "{{viewsCount}} views"
+    "news_feed": "Hírfolyam",
+    "read_more": "Tudj meg többet",
+    "no_more_news": "ez a hírfolyam utolsó bejegyzése.",
+    "views": "{{viewsCount}} megtekintések"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
-    "nothing_is_found": "Nothing was found for your query",
-    "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "empty": "Keress kapcsolataid, ice barátokaid és a mikroközösséged tagjai közt",
+    "nothing_is_found": "Keresésedre semmit sem találtunk.",
+    "search_by_country": "Keresés ország szerint",
+    "search_for_users": "Keresés felhasználókra",
+    "loading": "Keresés…"
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tap here to start your first check-in session",
-    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
-    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
-    "mining_holiday_active": "You are using a Day Off!"
+    "mining_inactive_tooltip": "Érints ide és indítsd el az első bejelentkezési időszakodat.",
+    "mining_reset_tooltip": "Bejelentkezési időszakod meghosszabbításához nyomd le 1 másodpercig.",
+    "mining_holiday_reset_tooltip": "Felhasználód az egyik szabadnapodat. Bejelentkezési időszakod meghosszabbításához nyomd le 1 másodpercig.",
+    "mining_holiday_active": "Felhasználód az egyik szabadnapodat."
   },
   "invite_friend": {
-    "invite_button": "Invite Friend",
-    "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "invite_button": "Barát meghívása",
+    "button_title": "Barát meghívása",
+    "description": "A barátod még nincs fent itt: [[:ice]]. Küldj neki egy meghívót!"
   },
   "balance_history": {
-    "title": "Balance History",
-    "wallet": "Wallet",
-    "blockchain": "Blockchain",
-    "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
-    "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "title": "Egyenlegelőzmények",
+    "wallet": "Tárca",
+    "blockchain": "Blokklánc",
+    "wallet_update_interval": "frissítve óránként",
+    "blockchain_update_interval": "frissítve 24 óránként",
+    "list_end_label": "ez az egyenlegelőzmények utolsó bejegyzése.",
+    "no_data": "A meghatározott időszakra nincs megjeleníthető adat."
   },
   "pop_up": {
-    "update_now": "Update Now",
-    "please_update": "Please Update",
-    "update_now_text": "You are using an old app version and need to update it in order to use it further",
-    "you_are_up_to_date": "You are up to date!",
-    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
-    "resurrection": "Resurrection",
-    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
-    "resurrection_warning": "You can only resurrect one time!",
-    "please_confirm": "Please confirm",
-    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "update_now": "Frissítsd most",
+    "please_update": "Kérjük, frissítsd",
+    "update_now_text": "Az alkalmazás egy régi verzióját használod, a további használathoz frissítened kell.",
+    "you_are_up_to_date": "Az aktuális verziót használod!",
+    "up_to_date_text": "Most már a legfrissebb verziót használod. Ellenőrizd le alább az összes változást.",
+    "resurrection": "Feltámasztás",
+    "resurrection_message": "Egy alkalommal lehetőséged van feltámasztani és megkapni [[:amount]] a múltban elveszített coinokat [[:period]].",
+    "resurrection_warning": "A feltámasztás csak egyszer lehetséges!",
+    "please_confirm": "Kérjük, erősítsd meg",
+    "resurrection_no_confirm_message": "Örökre el fogod [[:amount]] veszíteni a coinokat. Biztosan tovább szeretnél lépni?",
+    "resurrection_yes_confirm_message": "A feltámasztás csak egyszer lehetséges! Biztosan tovább szeretnél lépni? A [[:amount]] coinok a következő egy órában fognak visszakerülni az egyenlegedre.",
+    "delete_account_confirmation_title": "Törlés megerősítése",
+    "delete_account_confirmation_text": "A fiókod törlésével véglegesen törlésre kerül az összes adatod, beleértve az ice egyenleged is. Szeretnéd folytatni?"
   },
   "periods": {
-    "3_days": "3 days",
-    "7_days": "7 days",
-    "30_days": "30 days",
-    "1_day": "1 Day",
-    "1_week": "1 Week",
-    "1_month": "1 Month",
-    "90_days": "90 days",
-    "14_days": "14 days"
+    "3_days": "3 nap",
+    "7_days": "7 nap",
+    "30_days": "30 nap",
+    "1_day": "1 nap",
+    "1_week": "1 hét",
+    "1_month": "1 hónap",
+    "90_days": "90 nap",
+    "14_days": "14 nap"
   },
   "notifications": {
-    "joined": " has joined your team",
-    "multiply": " and {{count}} others have joined your team",
-    "ping": " has pinged you, wake up!",
-    "delete": "Delete",
-    "add_notifications": "Add mocked notifications",
-    "no_notifications": "No notifications to display",
-    "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
-    "clear_title": "Clear all notifications?",
-    "title": "Notifications"
+    "joined": " csatlakozott a csapatodhoz.",
+    "multiply": " és{{count}} mások csatlakoztak a csapatodhoz.",
+    "ping": " megpingelt téged, ébresztő!",
+    "delete": "Törlés",
+    "add_notifications": "Mocked értesítés hozzáadása",
+    "no_notifications": "Nincsenek megjeleníthető értesítések",
+    "add_announcements": "Mocked közlemények hozzáadása",
+    "add_both": "Mocked értesítések és közlemények együttes hozzáadása",
+    "clear_title": "Összes értesítés törlése?",
+    "title": "Értesítések"
   },
   "notification_feed_screen": {
-    "yesterday": "Yesterday",
-    "last_week": "Last Week",
-    "this_month": "This month",
-    "last_month": "Last Month",
-    "this_week": "This week"
+    "yesterday": "Tegnap",
+    "last_week": "Múlt héten",
+    "this_month": "Ez a hónap",
+    "last_month": "Múlt hónap",
+    "this_week": "Ez a hét"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to hide from public eyes"
+      "title": "1. Profilod statisztikái",
+      "description": "Érints a blokkokra, melyeket szeretnél elrejteni a kíváncsi szemek elől."
     },
     "step2": {
-      "description": "Tap on this block to hide it from public eyes",
-      "title": "2. Your Current Role"
+      "description": "Érints erre a blokkokra, ha szeretnéd elrejteni a kíváncsi szemek elől.",
+      "title": "2. Jelenlegi szereped"
     },
     "step3": {
-      "title": "3. Your Earned Badges",
-      "description": "Tap here to hide your badges from public eyes"
+      "title": "3. Megszerzett jelvényeid",
+      "description": "Érints ide, ha szeretnéd elrejteni jelvényeidet a kíváncsi szemek elől."
     }
   },
   "confirm_email": {
-    "title": "Confirm your email",
-    "description": "Please enter your email address and we will send code ",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
-    "wrong_email": "Wrong email?",
-    "check_email": "Check your email",
-    "emailed_link_to": "We emailed a magic link to",
-    "link_instruction": "Click the link to log in or sign up.",
-    "modify_title": "Confirm New Email",
-    "modify_description": "Please enter your new email address"
+    "title": "E-mail megerősítése",
+    "description": "Kérjük, add meg az e-mail-címedet és elküldjük a kódot.",
+    "note": "Amennyiben 5 percen belül nem kapod meg a kódot, kérjük, ellenőrizd a levélszemetek közt.",
+    "wrong_email": "Rossz az e-mail-címed?",
+    "check_email": "E-mailek megtekintése",
+    "emailed_link_to": "Elküldtük neked a varázslinket a következőhöz:",
+    "emailed_steps_to": "Elküldtük neked a lépéseket a következőhöz:",
+    "link_instruction": "A bejelentkezéshez vagy feliratkozáshoz kattints a linkre.",
+    "reset_link_instruction": "Jelszavad visszaállításához kattints a linkre.",
+    "modify_title": "Új e-mail megerősítése",
+    "modify_description": "Kérjük, add meg az új e-mail-címedet."
   },
   "invalid_link": {
-    "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "title": "Érvénytelen link",
+    "description": "Sajnos ez a link érvénytelen. Kérjük, add meg ismét az e-mail-címedet és küldünk neked egy új linket."
   },
   "confirm_code": {
-    "title": "Confirm code",
-    "description": "Please enter the code sent to",
-    "send_code_again": "Send code again",
-    "resend_time_label": "New code available in ",
-    "enter_code": "Enter the code",
-    "wrong_number": "Wrong number?"
+    "title": "Kód megerősítése",
+    "description": "Kérjük, add meg az ide küldött kódot:",
+    "send_code_again": "Kód küldése ismét",
+    "resend_time_label": "AZ új kód ekkor lesz elérhető: ",
+    "enter_code": "Kód megadása",
+    "wrong_number": "Rossz szám?"
   },
   "ice_bonus": {
-    "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
-    "balance_label": "Your current balance"
+    "title": "Üdvözlő jutalom",
+    "description": "Gratulálunk, szert tettél az elsőt [[:value]] [[:ice]] coinjaidra, ami bizonyítja a [[:bold]]beléd[[/:bold]] vetett [[:bold]]bizalmunkat[[/:bold]].",
+    "balance_label": "Jelenlegi egyenleged"
   },
   "country_select": {
-    "title": "Select country"
+    "title": "Ország kiválasztása"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "Hóember",
+      "subtitle": "Építs egy hóbirodalmat",
+      "description": "Keress a 24 óránkénti bejelentkezéssel, amivel megmutathatod az ice hálózata iránti elkötelezettségedet, és azt is, hogy ember vagy, nem pedig robot."
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "Nagykövet",
+      "subtitle": "A hóbirodalom uralkodója",
+      "description": "Akkor válsz nagykövetté, amikor legalább 100 ember csatlakozott a csapatodhoz. A nagykövetek előzetes hozzáférést kapnak az új funkciókhoz."
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirm Phone",
-    "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
-    }
+    "modify_title": "Telefon megerősítése",
+    "modify_description": "Kérjük, erősítsd meg az országhívódat és add meg a telefonszámodat.",
+    "button": "Ország és telefon megerősítése",
+    "same_phone_error": "Nem használhatod ugyanazt a számot."
   },
   "date_select": {
-    "title": "Choose date"
+    "title": "Dátum kiválasztása"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+      "readmore": {
+        "title": "Tudj meg többet",
+        "description": "Itt láthatod csapatunk legfrissebb híreit. A teljes cikk elolvasásához érints erre a gombra."
       },
-      "step_2": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
-      },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
-      },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
-      },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
-      },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
-      },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
-      },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "releasednews": {
+        "title": "Közzétett hírek",
+        "description": "Érints az egyes hírek címeire a teljes verzió elolvasásához. Maradj képben az összes hírünkkel és kérdőívünkkel kapcsolatban."
       }
     },
     "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      "allow_contacts": {
+        "title": "Kapcsolatok engedélyezése",
+        "description": "Szinkronizáld a kapcsolataidat és nézd meg, ki használja már a(z) [[:ice]]-t. A jövőben tudsz majd ice-t küldeni bármelyik kapcsolatodnak.[[:ice]]"
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "confirm_phone": {
+        "title": "Telefon megerősítése",
+        "description": "Erősítsd meg a személyazonosságodat és engedélyezd kapcsolataidnak, hogy tudják: te is az ice hálózat tagja vagy. Telefonszámod egyéb harmadik felekkel nem lesz megosztva."
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "contacts_list": {
+        "title": "Kapcsolatok listája",
+        "description": "Ez az összes kapcsolatod listája, azok, akik már csatlakoztak a(z) [[:ice]] hálózathoz, a lista legtetején találhatóak."
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "referrals": {
+        "title": "Ajánlások",
+        "description": "Itt azt fogod látni, összesen hány darab ajánlásod van. Minél több ember hívsz meg, annál több pénzt kereshetsz."
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earnings": {
+        "title": "Keresetek",
+        "description": "Jelenlegi egyenleged óránként kerül frissítésre és itt kerül megjelenítésre. Magába foglalja közvetlen és lekötött, valamint 1. és második szintű kereseteidet."
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "segmented_control_tier_one": {
+        "title": "1. szint",
+        "description": "Itt láthatod az 1. szintű ajánlásaid listáját. Az összes barátod után, akivel egyidőben csekkoltok be, extra 25%-t kapsz a jelenlegi alap kereseti rátádon felül. [[:link]]Tudj meg többet[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "segmented_control_tier_two": {
+        "title": "2. szint",
+        "description": "Itt láthatod a 2. szintű ajánlásaid listáját. Az összes barátod után, akivel egyidőben csekkoltok be, extra 5%-t kapsz a jelenlegi alap kereseti rátádon felül. [[:link]]Tudj meg többet[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "active_users": {
+        "title": "Aktív felhasználók",
+        "description": "Ez az ajánlottaid bejelentkezési aktivitásának jelenlegi állapota. Akkor számítanak aktívnak, amikor aktív bejelentkezési időszakuk van."
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "tier_one_earnings": {
+        "title": "1. szintű keresetek",
+        "description": "Itt láthatod az 1. szintű ajánlásaid listáját. Az összes tag után, akivel egyidőben csekkoltok be, extra 25%-t kapsz a jelenlegi alap kereseti rátádon felül."
+      },
+      "ping": {
+        "title": "Ping gomb",
+        "description": "Értesítsd ajánlásaidat a becsekkolási időszak elkezdéséről. 24 órában minden egyes ajánlásnak egy értesítést küldhetsz."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Kezdőlap",
+        "description": "Üdv a [[:ice]]-nál. A kezdőképernyőn az összes statisztikát megtalálhatod az egyenlegedről, a jelenlegi kereseti rátádról, a saját globális helyezésedet, a csapatodéval együtt."
+      },
+      "invite": {
+        "title": "Meghívás",
+        "description": "Minden egyes meghívott személy után mindkettőtök az alap kereseti rátátokon felül maximum 25%-ban részesültök. Minél több ember hívsz meg, annál több pénzt kereshetsz."
+      },
+      "team": {
+        "title": "Csapat",
+        "description": "[[:ice]] jobb barátokkal. Ezen az oldalon 1. és 2. szintű csapattagjaid állapotát tekintheted meg. Innen meg is pingelheted őket."
+      },
+      "news": {
+        "title": "Hírek",
+        "description": "Maradj képben az összes hírünkkel és kérdőívünkkel kapcsolatban. Mivel mi egy decentralizált autonóm szervezet vagyunk, itt fogsz tudni szavazni a jövőbeli funkciókról."
+      },
+      "profile": {
+        "title": "Profil",
+        "description": "Szabd személyre profilod adatait és tekintsd meg az összes eredményedet valamint megszerzett jelvényedet. Használd az itt található kalkulátort bevételeid megbecslésére."
+      },
+      "earningicestart": {
+        "title": "Keress ice-t",
+        "description": "A [[:ice]] bejelentkezési időszakot 24 óránként az erre a gombra való érintéssel indíthatod el. Ne felejts el minden nap visszatérni és elkezdeni pénzt keresni."
+      },
+      "earningiceseemore": {
+        "title": "Keress ice-t",
+        "description": "Érints ide ismét és tekints meg több adatot a jelenlegi bejelentkezési időszakodról."
+      },
+      "stats": {
+        "title": "Statisztikák",
+        "description": "A statisztikák oldalon megtekintheted az összes és az aktív, minden nap bejelentkezett felhasználót, a top országokkal és felhasználókkal együtt."
+      },
+      "help": {
+        "title": "Segítség",
+        "description": "Vannak kérdéseid? Tekintsd meg a gyakran ismételt kérdések listáját. Ha nem találod, amit keresel, ne hezitálj kapcsolatba lépni velünk a hi@ice.io e-mail-címen."
+      },
+      "preStaking": {
+        "title": "Pre-Staking",
+        "description": "Maximalizáld hozamodat a kereseti jutalmak előzetes letétbe helyezésével (pre-staking). Egy bónuszért a kereseteiden felül válaszd ki a kiosztásodat és a lelétbe helyezési időszakot "
+      },
+      "wallet": {
+        "title": "Tárca kártya",
+        "description": "Itt megtalálhatod a jelenlegi [[:ice]] egyenlegedet, a kereseti rátával együtt. Minél több ajánlásod online a csapatodból, annál magasabb a kereseti rátád."
+      },
+      "earning": {
+        "title": "Kereseti kártya",
+        "description": "Maradj képben a kereseti rátáddal és bónuszaiddal kapcsolatban. Itt leellenőrizheted a jelenlegi rátádat, az alap rátánkat és az app változatos tevékenységei után járó bónusz rátákat."
+      },
+      "engagement": {
+        "title": "Elköteleződési kártya",
+        "description": "Kövesd nyomon a bejelentkezési időszakaid folyamatát és szabadnapjaidat. Ebben a szakaszban további részleteket találsz az egymást követő bejelentkezésekről, és megtudhatod, hány szabadnapod van."
+      },
+      "profilecard": {
+        "title": "Profil kártya",
+        "description": "A profilod állapotát ezen kártya követésével követheted nyomon. Megjeleníti a jelenlegi globális helyezésedet a szerepeddel együtt, a szintedet és az összes ajánlásodat."
+      },
+      "referralscard": {
+        "title": "Ajánlói kártya",
+        "description": "Ezen kártya megérintésével tekintsd meg az elmúlt 5 nap ajánlói statisztikáit 1. és 2. szintű ajánlásaidra egyaránt."
+      },
+      "adoptioncard": {
+        "title": "Átvételi kártya",
+        "description": "Az elmúlt hét összes aktív hóemberének átlagát alapul véve itt láthatod a jelenlegi [[:ice]] kereseti rátát. A kereseti ráta megfeleződik, amikor eléred a következő szint küszöbét."
+      },
+      "nickname": {
+        "title": "Nicknév",
+        "description": "A nicknév tesz téged egyedivé. A barátaidnak a csapatodhoz való csatlakozáshoz szükségük lesz ennek a használatára. Ezt a parancsikont profilod megnyitásához is használhatod."
+      },
+      "balancehistory": {
+        "title": "Egyenlegelőzmények",
+        "description": "Itt találod meg a helyi pénztárcád és blokkláncod [[:ice]] egyenlegét. A helyi pénztárcád egyenlege óránként, míg a blokklánc egyenlege 24 óránként kerül frissítésre."
+      },
+      "achievements": {
+        "title": "EREDMÉNYEK",
+        "description": "Teljesítsd az alábbi feladatokat és lépj előre egy szintet! Fogj hozzá első bejelentkezési időszakodhoz most."
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Unlink Logins",
-    "sessionName": "Login via {{providerName}}",
+    "title": "A bejelentkezések leválasztása",
+    "sessionName": "Bejelentkezés az alábbi keresztül: {{providerName}}",
     "buttons": {
-      "currentSession": "Current session",
-      "endSession": "End Session",
-      "loginUnlinked": "Login Unlinked",
-      "sessionEnded": "Session Ended",
-      "unlink": "Unlink"
+      "currentSession": "Jelenlegi időszak",
+      "endSession": "Időszak befejezése",
+      "loginUnlinked": "Bejelentkezés leválasztva",
+      "sessionEnded": "Időszak befejezve",
+      "unlink": "Leválasztás"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Unlink Login?",
-        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
+        "title": "Leválasztod a bejelentkezéseket?",
+        "message": "Biztosan szeretnéd leválasztani ezen eszköz {{providerName}} bejelentkezését?"
       },
       "endSession": {
-        "title": "End Session?",
-        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
+        "title": "Időszak befejezése?",
+        "message": "Biztosan szeretnéd befejezni ezen eszköz {{providerName}} bejelentkezési időszakát?"
       }
     }
   },
@@ -792,12 +846,51 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Today’s Bonus",
-    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
-    "link": "Find out more",
-    "extra_message": "You have received your daily extra bonus on your earning rate",
-    "expired_title": "Bonus Expired",
-    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
-    "result_title": "Congratulations"
+    "claim_title": "Mai bónusz",
+    "claim_message": "Itt az idő  anapi bónuszodhoz, kérjük, érints alább a [[:bold]]“Bónusz igénylése”[[/:bold]] gombra.",
+    "link": "Tudj meg többet",
+    "extra_message": "Megkaptad a napi extra bónuszodat a kereseti rátád után.",
+    "expired_title": "Lejárt bónusz",
+    "expired_message": "Sajnos a mai bónusz lejárt. Maradj velünk a következő frissítésért.",
+    "result_title": "Gratulálunk"
+  },
+  "early_access": {
+    "title": "Korai hozzáférés",
+    "message_part1": "Nyerj betekintést az [[:bold]]ice[[/:bold]] appba a legújabb [[:bold]]hivatalos piacra dobás előtt.[[/:bold]]",
+    "message_part2": "A kibocsátás dátumán az összes egyenleg vissza fog állítódva 0-ra. A csapatod ugyanakkor érintetlen marad.",
+    "message_part3": "Köszönjük a támogatást!",
+    "checkbox_description": "Tudomásul vettem! Ne mutasd újra ezt a felugró elemet."
+  },
+  "mining_notice": {
+    "title": "Felhívás",
+    "message": "Köszönjük érdeklődésedet az [[:bold]]ice keresésével kapcsolatban![[/:bold]] Jelenleg technológiánk finomhangolását végezzük, így a bejelentkezés jelenleg nem elérhető. Itt az alkalom, hogy a csapatod építésére és a mikroközösséged növelésére koncentrálj.",
+    "message_footer": "[[:twitter]]Twitter[[/:twitter]] és [[:telegram]]Telegram[[/:telegram]] csatornáinkkal kapcsolatos frissítésekért maradj velünk."
+  },
+  "qr_code": {
+    "description": "QR kód beszkennelése a csapatomhoz történő csatlakozáshoz."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Csatlakozz hozzánk TikTokon",
+      "description": "Csak szerettünk volna kapcsolatba lépni veled és tájékoztatást adni a TikTok izgalmas új közösségéről. Szórakoztató és informatív tartalmakat osztunk meg digitális valutánkról, az ice-ról, és szeretnénk, ha csatlakoznál hozzánk!"
+    },
+    "youtube": {
+      "title": "Csatlakozz hozzánk YouTube-n",
+      "description": "A YouTube-csatornánk tökéletes hely arra, hogy naprakész maradj az ice keresésről szóló oktatóanyagoktól kezdve az új funkciókról szóló frissítéseken át egészen a szórakoztató közösségi tartalmakig."
+    },
+    "linkedin": {
+      "title": "Csatlakozz hozzánk LinkedInen",
+      "description": "Az ice LinkedIn közösségéhez való csatlakozás remek módja annak, hogy tájékozódjon a legújabb fejleményekről, és olyan hasonlóan gondolkodó személyekkel lépj kapcsolatba, akiket ugyanolyan szenvedélyesen érdekel a digitális valuták jövője, mint Önt."
+    },
+    "facebook": {
+      "title": "Csatlakozz hozzánk Facebookon",
+      "description_part1": "Nagyon ajánljuk Facebook-oldalunk követését.",
+      "description_part2": "Nem csak abban segít, hogy naprakész maradj mindenről, ami az ice világában történik, emellett annak is nagyszerű módja, hogy kapcsolatba lépj a közösségünkkel, és részese legyél a beszélgetésnek."
+    },
+    "instagram": {
+      "title": "Csatlakozz hozzánk Instagramon",
+      "description_part1": "Az Instagramon történő követés nagyszerű módja annak, hogy képben maradj és kapcsolatba lépj más felhasználókkal, akiket szintén szenvedélyesen érdekel az ice.",
+      "description_part2": "Emellett te fogsz elsőként értesülni az összes újonnan bevezetett funkcióról és promócióról."
+    }
   }
 }

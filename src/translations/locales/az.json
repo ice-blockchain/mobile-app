@@ -1,787 +1,841 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "ice-a xoş gəlmisiniz",
+      "description": "[[:ice]] telefonunuzla qazana biləcəyiniz rəqəmsal valyutadır. ice sizin kimi hər gün istifadə edən istifadəçilərə məxsusdur və onlar tərəfindən idarə edilir."
     },
     "page2": {
-      "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "title": "Planetə dostdur",
+      "description": "[[:ice]] BTC-dən daha artıq enerji səmərəliliyinə malikdir çünki \"Proof of Stake\" (Hissə sübutu) konsensus mexanizmindən istifadə edir. POS ilə kriptovalyuta sahibləri blok əməliyyatlarını dəyərləndiricinin ortaya qoyduğu sikkələrin sayına əsasən dəyərləndirirlər."
     },
     "page3": {
-      "title": "People’s Coin",
-      "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "title": "İnsanların Sikkəsi",
+      "description_part1": "Güc əlinizdədir",
+      "description_part2": " [[:ice]] -da yaratdığımızhər bir şey açıq mənbə olacaq və Mərkəzləşdirilməmiş Avtonom Təşkilat (DAO) tərəfindən nəzarət ediləcək. "
     },
     "page4": {
-      "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "title": "Qoşulu qalın",
+      "description": "Bizim pulsuz və enerjiyə qənaət edən mobil tətbiqimiz ilə gündəlik girişlər üçün [[:iceLogo]] üzərindən vurun. Sizin gündəlik girişləriniz ice-ın botlar tərəfindən deyil insanlar tərəfindən istifadəsini təmin edir.  "
     },
     "page5": {
-      "title": "Refer & Earn",
-      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
+      "title": "İstinad et və Qazan",
+      "description": "Dostarınızı dəvət edin və komandanıza qoşulan hər bir dost üçün əsas qazanc faizinin üzərində 25%-ə qədər (hər ikiniz) bonus qazanın. "
     },
     "page6": {
-      "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
-      "description_part2": "Don’t worry, we will not spam you!",
-      "not_now": "Not now"
+      "title": "Bildirişlər",
+      "description_part1": "[[:ice]] giriş sessiyası yalnız 24 saat davam edir. Cari sessiya bitdikdə bildiriş almaq istərdinizmi?",
+      "description_part2": "Narahat olmayın, biz sizi spam etməyəcəyik!",
+      "not_now": "İndi deyil"
     }
   },
   "button": {
-    "yes_btn": "Yes, please",
-    "next_btn": "Next",
-    "not_now": "Not now",
-    "view_all": "view all",
+    "yes_btn": "Bəli, zəhmət olmasa",
+    "next_btn": "Növbəti",
+    "not_now": "İndi deyil",
+    "view_all": "hamısına bax",
     "invite_friend": {
-      "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "title": "Dostlarını dəvət et ",
+      "description": "Dostlarını dəvət etməklə əlavə [[:ice]] qazan."
     },
-    "no": "No",
-    "search_country": "Search for country",
-    "save": "Save",
-    "yes": "Yes",
-    "change": "Change",
-    "no_cancel": "No, cancel",
-    "complete": "Complete",
-    "cancel": "Cancel",
-    "clear": "Clear",
-    "finish": "Finish",
-    "next_step": "Next Step",
-    "see_all": "see all",
-    "back": "Back",
-    "search": "Search",
-    "continue": "Continue",
-    "apply": "Apply",
-    "reset": "Reset",
-    "skip_all": "Skip all",
-    "done": "Done",
-    "confirm": "Confirm",
-    "do_this_later": "Do this later",
-    "resurrect_me": "Resurrect Me",
-    "claim_bonus": "Claim Bonus",
-    "close": "Close",
-    "try_again": "Try Again",
-    "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "see_all": "hamısına bax",
+    "no": "Xeyr",
+    "search_country": "Ölkə axtar",
+    "save": "Yadda saxla",
+    "yes": "Bəli",
+    "change": "Dəyiş ",
+    "no_cancel": "Xeyr, ləğv et",
+    "complete": "Tamamla",
+    "cancel": "Ləğv et",
+    "clear": "Təmizlə",
+    "finish": "Başa çatdır",
+    "next_step": "Növbəti Addım",
+    "back": "Geriyə",
+    "search": "Axtar",
+    "continue": "Davam et",
+    "apply": "Tətbiq et",
+    "reset": "Sıfırla",
+    "skip_all": "Hamısını burax",
+    "done": "Oldu",
+    "confirm": "Təsdiq et",
+    "do_this_later": "Sonra et ",
+    "resurrect_me": "Məni Dirilt",
+    "claim_bonus": "Bonus Tələb et",
+    "close": "Bağla",
+    "try_again": "Yenidən cəhd et",
+    "view_changelog": "Dəyişiklik jurnalına bax",
+    "disable": "Söndür",
+    "agree": "Razıyam",
+    "learn_more": "Daha ətraflı öyrən",
+    "back_to_login": "Girişə geri dön",
+    "follow_us": "Bizi izlə",
+    "subscribe": "Abunə ol"
   },
   "team": {
-    "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
+    "contacts_tab": "Kontaktlar",
+    "tierOne_tab": "1-ci Pillə",
+    "tierTwo_tab": "2-ci Pillə",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "title": "Hal-hazırda heç bir [[:title]] istinadınız yoxdur!",
+      "contacts": "Hal-hazırda telefon kitabçanızda heç bir kontakt yoxdur.",
+      "button_title": "Dostlarını dəvət et "
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
-      "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_title": "[[:ice]] dostlarla daha yaxşıdır",
+      "empty_button_title": "Kontaktlara girişə icazə ver",
+      "empty_description": "Kontaktlarını sinxronizə et və kimin artıq [[:ice]]-da olduğunu gör.  Gələcəkdə ice-ı istənilən kontaktlarına göndərə biləcəksən. "
     },
     "header": {
-      "search_placeholder": "Search for users",
-      "referrals": "Referrals",
-      "earnings": "Earnings"
+      "search_placeholder": "İstifadəçi axtar",
+      "referrals": "İstinadlar",
+      "earnings": "Qazanc"
     },
     "confirm_code": {
-      "title": "Confirm Code",
-      "description": "Please enter the confirmation code you have received on your phone.",
-      "placeholder": "Enter the code",
-      "button": "Confirm your code now"
+      "title": "Kodu Təsdiq et",
+      "description": "Telefonuna gələn təsdiq kodunu daxil et.",
+      "placeholder": "Kodu daxil et",
+      "button": "Kodu indi təsdiq et"
     },
     "confirm_phone": {
-      "title": "Confirm Phone",
-      "description": "Please confirm your country code and enter your phone number."
+      "title": "Telefonu təsdiq et ",
+      "description": "Ölkə kodunu təsdiq etmək və telefon nömrəni daxil etmək xahiş olunur."
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "friends"
+        "friends": "dostlar"
       },
-      "all_contacts": "All contacts",
-      "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "all_contacts": "Bütün kontaktlar",
+      "invite": "dəvət et ",
+      "invitation_text": "Salam {{name}}, səni ice-a qoşulmağa dəvət edirəm."
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier 1 Earnings"
+        "title_earnings": "1-ci Pillə qazancı"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier 2 Earnings"
+        "title_earnings": "2-ci Pillə qazancı"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
-    "welcome": "Welcome to ice",
-    "email": "Email",
-    "slogan": "Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "logInSignUp": "Giriş/ Qeydiyyat",
+    "phone": "Telefon",
+    "or": "və ya",
+    "reset_password": "Şifrəni yenidən təyin et ",
+    "welcome": "ice-a xoş gəlmisiniz",
+    "email": "Epoçt",
+    "slogan": "Qlobal Valyuta Sıfırlaması",
+    "privacy": "Davam etməklə, siz [[:link]] Xidmət Şərtləri[[/:link]] və  [[:link]]Məxfilik Siyasəti[[/:link]] ilə razılaşmış olursunuz"
   },
   "claimUsername": {
-    "title": "Claim nickname",
-    "description": "Your friends will need to use this nickname to join your team",
-    "inputPlaceholder": "Enter your nickname",
-    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
-    "note_part2": "Example:",
-    "note_example": "your.name01"
+    "title": "Ləqəb tələb et",
+    "description": "Dostların komandana qoşulmaq üçün bu ləqəbdən istifadə etməli olacaqlar.",
+    "inputPlaceholder": "Ləqəbini daxil et ",
+    "note_part1": "Ləqəb yaradarkən yalnız hərf, rəqəm və nöqtələrdən istifadə et.",
+    "note_part2": "Nümunə:",
+    "note_example": "sənin.adın01"
   },
   "whoInvitedYou": {
-    "title": "Who invited you?",
-    "description": "Enter the nickname of the person who invited you",
-    "inputPlaceholder": "Enter nickname",
-    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
-    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+    "title": "Səni kim dəvət edib?",
+    "description": "Səni dəvət edən şəxsin ləqəbini daxil et.",
+    "inputPlaceholder": "Ləqəbini daxil et ",
+    "dontHaveInvitationCode": "Bu mərhələni tamamlamaqla, sən və dostun eyni zamanda giriş edərkən hər ikiniz əsas qazanc faizinə əsasən 25% bonus əldə edəcəksiniz. ",
+    "dontHaveCodeTip": "Əgər dəvət kodun yoxdursa sənin istinadın kimi təsadüfi üzv seçəcəyik!"
   },
   "errors": {
-    "nicknameSize": "Nickname size: 4-20 characters.",
-    "removeInvalidCharacters": "Remove invalid characters.",
-    "validation_error": "Some validation error",
-    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
-    "wrong_phone_number": "Invalid phone number, please try again",
-    "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken",
-    "phone_number_already_in_use": "Phone number already in use",
-    "invalid_validation_code": "Invalid code number, please try again!",
-    "validation_expired": "Validation expired",
-    "validation_not_found": "Validation not found",
-    "invalid_email": "Invalid email",
-    "invalid_ref_username": "Nickname is invalid.",
-    "invalid_phone": "Invalid phone number",
-    "user_disabled": "User has been disabled",
-    "expired_action_code": "OTP in email link is expired",
-    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
-    "invalid_credential": "The credential is malformed or has expired",
-    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
-    "user_not_found_for_email": "There is no user corresponding to the given email",
-    "user_not_found": "User not found",
-    "auth_in_progress": "Sign-In already in progress",
-    "google_play_services_not_available": "Google Play services are not available on the device",
-    "unknown_error_with_code": "Unknown error {{code}}",
-    "no_such_provider": "You do not have this provider linked",
-    "min_username": "Minimum length is 4 characters.",
-    "max_username": "Maximum length is 30 characters.",
-    "code_expired": "The code has expired. Please ask for a new code.",
-    "too_many_requests": "Too many requests. Please try again later.",
-    "network_error_title": "No internet connection",
-    "network_error_message": "Your device does not have any active internet connection",
-    "unknown_error": "Some error occurred, please try again later",
-    "general_error_title": "Oups...",
-    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
-    "general_network_error": "A network error has occurred. Please check your connection.",
-    "credential_already_in_use": "This credential is already associated with a different user account.",
-    "email_already_in_use": "The email address is already in use by another account.",
-    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
-    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "nicknameSize": "Ləqəbin ölçüsü: 4-20 xarakter.",
+    "removeInvalidCharacters": "Yalnış xarakteri sil.",
+    "validation_error": "Bəzi doğrulama xətası",
+    "multiple_accounts": "Epoçt/telefon nömrəsi başqa hesabla əlaqəlidir. Xahiş olunur sahibliyi sübut etmək üçün həmin hesaba daxil ol, sonra çıx və yenidən bu hesaba daxil ol.  Əgər həmin digər hesab sənin deyilsə və ya ona daxil ola bilmirsənsə, dəstək xəttimizlə əlaqə saxla.",
+    "wrong_phone_number": "Yalnış telefon nömrəsi, yenidən cəhd edin.",
+    "invalid_username": "Ləqəb yalnışdır.",
+    "email_already_taken": "Epoçt artıq istifadə edilir.",
+    "phone_number_already_taken": "Telefon nömrəsi artıq istifadə edilir.",
+    "invalid_validation_code": "Yalnış kod nömrəsi, yenidən cəhd edin.",
+    "validation_expired": "Doğrulamanın vaxtı bitdi",
+    "validation_not_found": "Doğrulama tapılmadı",
+    "invalid_email": "Yalnış epoçt.",
+    "invalid_password": "Yalnış şifrə.",
+    "invalid_ref_username": "Ləqəb yalnışdır.",
+    "invalid_phone": "Yalnış telefon nömrəsi.",
+    "user_disabled": "İstifadəçi deaktiv edilib.",
+    "expired_action_code": "Elektron məktubda olan keçiddəki birdəfəlik şifrənin vaxtı bitib.",
+    "account_exists_with_different_credential": "Daxil edilmiş epoçt ünvanı ilə artıq hesab mövcuddur.",
+    "invalid_credential": "Giriş məlumatları yalnışdır və ya vaxtı bitib. ",
+    "operation_not_allowed": "Giriş məlumatlarına uyğun olan hesab növü aktivləşdirilməyib.",
+    "user_not_found_for_email": "Verilən epoçta uyğun istifadəçi yoxdur.",
+    "user_not_found": "İstifadəçi tapılmadı.",
+    "auth_in_progress": "Daxil olma artıq başlayıb.",
+    "google_play_services_not_available": "Google Play xidmətləri bu cihazda mövcud deyil. ",
+    "unknown_error_with_code": "Naməlum xəta: {{code}}",
+    "no_such_provider": "Bu təminatçı əlaqələndirilməyib.",
+    "min_username": "Minimum uzunluq 4 xarakterdir.",
+    "max_username": "Maksimum uzunluq 30 xarakterdir.",
+    "code_expired": "Kodun vaxtı bitib, xahiş olunur yeni kod istəyin.",
+    "too_many_requests": "Sorğular çoxdur, xahiş olunur sonra yenidən cəhd edəsiniz.",
+    "network_error_title": "İnternet bağlantısı yoxdur",
+    "network_error_message": "Cihazınızda aktiv internet bağlantısı yoxdur.",
+    "unknown_error": "Xəta baş verdi, xahiş olunur sonra yenidən cəhd edəsiniz.",
+    "general_error_title": "Oy...",
+    "general_error_message": "Görünür ki, xəta baş verdi Komandamız hal-hazırda onu aradan qaldırmaq üçün çalışır.",
+    "general_network_error": "Şəbəkə xətası baş verdi, xahiş olunur bağlantını yoxlayın.",
+    "credential_already_in_use": "Bu giriş məlumatları artıq başqa bir istifadəçi hesabı ilə əlaqələndirilib.",
+    "email_already_in_use": "Bu epoçt ünvanı artıq digər bir hesab tərəfindən istifadədədir.",
+    "user_token_expired": "Sizin giriş məlumatlarınız artıq etibarlı deyil, yenidən daxil olmağınız xahiş olunur.",
+    "requires_recent_login": "Bu həssas əməliyyatdır və ən son identifikasiya tələb edir. Xahiş olunur yenidən daxil olasınız.",
+    "same_email": "Eyni epoçt-dan istifadə edə bilməzsiniz.",
+    "weak_password": "Zəif şifrə.",
+    "wrong_password": "Yalnış şifrə.",
+    "no_camera_permissions": "Kamera icazəsi verilməyib.",
+    "no_library_permissions": "Kitabxana icazəsi verilməyib."
   },
   "profile": {
     "my_roles": {
-      "title": "My Role"
+      "title": "Mənim Rolum"
     },
-    "mining_calculator": "earnings calculator",
-    "invite_friends": "Invite Friends",
-    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
-    "global_rank": "global rank",
-    "view_all_roles": "view all roles",
-    "data_is_hidden": "data is hidden",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "qazanc kalkulyatoru",
+    "invite_friends": "Dostları dəvət et ",
+    "invite_friends_engage": "Xəbər yay və dostlarını dəvət et. Yönləndirmə nə qədər çox olarsa, qazanc da çox olacaq!",
+    "global_rank": "qlobal dərəcə",
+    "view_all_roles": "bütün rollara bax",
+    "data_is_hidden": "məlumat gizlədilib",
+    "progress_text": "{{value}} dan {{total}}",
     "not_found": {
-      "title": "User was not found",
-      "description": "oops, we couldn't find this user"
+      "title": "İstifadəçi tapılmadı.",
+      "description": "Oy, bu istifadəçini tapa bilmədik."
     },
     "my_badges": {
-      "title": "My Badges"
+      "title": "Mənim Nişanlarım"
     },
     "badges": {
-      "title": "Badges"
+      "title": "Nişanlar"
     },
     "roles": {
-      "title": "Roles"
+      "title": "Rollar"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "Sikkələr",
+        "description": "sikkələr"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "Sosial",
+        "description": "dostlar"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "Səviyyə",
+        "description": "Səviyyə"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update",
-    "comingSoon": "Coming soon",
+    "level": "səviyyə",
+    "referrals": "İstinadlar",
+    "coin": "Sikkələr",
+    "social": "Sosial",
+    "phone_number": "Telefon nömrəsi",
+    "years": "İllər",
+    "of": " dan ",
+    "attention": "Diqqət",
+    "email_address": "Epoçt ünvanı",
+    "password": "Şifrə",
+    "data_hidden": "məlumat gizlədilib",
+    "pull_to_refresh": "yeniləmək üçün çək",
+    "comingSoon": "Tezliklə",
     "date": {
-      "today": "Today"
+      "today": "Bugün"
     }
   },
   "mining_calculator": {
-    "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "result_label": "Qazanacaqsan",
+    "active_inviter": "Aktiv dəvət edən",
+    "tier_1_ref": "1-ci Pillə istinadları",
+    "tier_2_ref": "2-ci Pillə istinadları",
+    "active_miners": "Aktiv istinadlar"
   },
   "home": {
     "wallet": {
-      "title": "WALLET",
-      "rate": "EARNING RATE",
-      "balance": "CURRENT BALANCE"
+      "title": "PUL QABI",
+      "rate": "QAZANC FAİZİ",
+      "balance": "CARİ BALANS "
     },
     "pioneer": {
-      "title": "PIONEER",
-      "rank": "GLOBAL RANK",
-      "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "rank": "QLOBAL DƏRƏCƏ",
+      "referrals": "İSTİNADLAR",
+      "description": "Daha çox istifadəçi yönəlt və daha çox qazan[[:ice]]."
     },
     "referrals": {
-      "title": "REFERRALS",
-      "description": "Referral stats for the previous 5 days",
-      "no_referrals_description": "You don't have any referrals yet",
-      "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "title": "İSTİNADLAR",
+      "description": "Əvvəlki 5 gün üçün yönləndirmə statistikası",
+      "no_referrals_description": "Hal-hazırda heç bir istinadınız yoxdur!",
+      "users_tier_1": "1-ci pillə istifadəçiləri",
+      "users_tier_2": "2-ci pillə istifadəçiləri"
     },
     "adoption": {
-      "title": "ADOPTION",
-      "level": "level",
-      "users": "\nusers"
+      "title": "QƏBUL",
+      "level": "səviyyə",
+      "users": "istifadəçilər"
     },
-    "steps": {
-      "title": "Your progress",
-      "description": "Complete the tasks below and level up!",
-      "step_one": {
-        "title": "Claim your nickname",
-        "description": "Set it and start earning from your invite"
+    "tasks": {
+      "achievements": "NAİLİYYƏTLƏR",
+      "title": "Sənin irəliləyişin",
+      "description": "Aşağıdakı tapşırıqları tamamla və səviyyəni yüksəlt!",
+      "completed": {
+        "title": "Təbriklər",
+        "description": "Əlavə mükafatlar üçün gündəlik giriş etməyə davam et!"
       },
-      "step_two": {
-        "title": "Start mining",
-        "description": "Your first mining session"
+      "popup": {
+        "title": "Telegram kanalımıza qoşul",
+        "description": "Telegramda istifadə etdiyin ləqəbi dəqiqləşdir.",
+        "placeholder": "Ləqəb"
       },
-      "step_three": {
-        "title": "Profile picture",
-        "description": "Upload your profile image"
+      "claim_username": {
+        "title": "Ləqəbini tələb et",
+        "description": "Təyin et və dostlarınla paylaş."
       },
-      "step_four": {
-        "title": "Join Telegram",
-        "description": "Be part of our community and join now"
+      "start_mining": {
+        "title": "Qazanmağa başla",
+        "description": "İlk giriş sessiyan"
       },
-      "step_five": {
-        "title": "Follow us on Twitter",
-        "description": "Let’s keep in touch, follow us on twitter"
+      "upload_profile_picture": {
+        "title": "Profil şəkli",
+        "description": "Profil şəklini yüklə."
       },
-      "step_six": {
-        "title": "Invite 5 Friends",
-        "description": "Create your team and increase your earnings"
+      "join_telegram": {
+        "title": "Telegrama qoşul",
+        "description": "İcmamızın üzvü ol və indi qoşul."
+      },
+      "follow_us_on_twitter": {
+        "title": "Bizi Tvitterdə izlə",
+        "description": "Gəl əlaqədə qalaq, bizi Tvitterdə izlə."
+      },
+      "invite_friends": {
+        "title": "5 dostunu dəvət et ",
+        "description": "Komandanı böyüt və qazancını artır."
       }
     },
     "overview": {
-      "title": "Overview"
+      "title": "İcmal"
     },
     "menu": {
-      "notifications": "Notifications",
+      "notifications": "Bildirişlər",
       "staking": "Staking",
-      "stats": "Stats",
-      "help": "Help"
-    },
-    "tasks": {
-      "title": "ACHIEVEMENTS"
+      "stats": "Statistika",
+      "help": "Kömək"
     },
     "team": {
-      "title": "Team",
-      "view_team": "view team"
+      "title": "Komanda",
+      "view_team": "komandaya bax"
     },
     "mining_rate": {
-      "title": "EARNING RATE",
-      "base": "Base"
+      "title": "QAZANC FAİZİ",
+      "base": "Baza"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
-      "streak": "STREAK",
-      "days_off": "DAYS OFF"
+      "title": "ÖHDƏÇİLİK",
+      "description_part1": "Zolaq neçə gün ardıcıl giriş etməyinizə istinad edir.",
+      "description_part2": "Hər ardıcıl 6 günə bir gün istirahət əldə edirsiniz. ",
+      "streak": "ZOLAQ",
+      "days_off": "İSTİRAHƏT GÜNLƏRİ"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "Parametrlər",
+    "profile": "Profil",
+    "legal": "Hüquqi",
+    "support": "Dəstək",
+    "personal_information_title": "Şəxsi məlumat",
+    "personal_information_description": "Profil detallarını idarə et.",
+    "notifications_title": "Bildirişlər",
+    "notifications_description": "Bildirişlərini burada idarə et.",
+    "push_notifications_title": "Push Bildirişlər",
+    "push_notifications_description": "Push bildirişləri parametrlərini fərdiləşdir.",
+    "email_notifications_title": "Epoçt Bildirişləri",
+    "email_notifications_description": "Elektron bildirişlər parametrlərini fərdiləşdir.",
+    "terms_title": "Xidmət Şərtləri",
+    "terms_description": "Xidmət şərtlərimizə bax.",
+    "privacy_title": "Məxfilik Siyasəti",
+    "privacy_description": "Məxfilik siyasətimiz haqqında öyrən.",
+    "feedback_title": "Rəy göndər",
+    "feedback_description": "Düşüncələrini bizimlə paylaş.",
+    "invite_title": "Dost dəvət et",
+    "invite_description": "Dostlarını dəvət etməklə əlavə qazan",
+    "delete_title": "Hesabı Sil",
+    "delete_description": "Hesabını Sil.",
+    "delete_confirmation_title": "Hesabını silmək istədiyindən əminsən?",
+    "delete_confirmation_yes": "Bəli, sil",
+    "logout_title": "Çıx",
+    "logout_description": "Çıx və fasilə götür.",
+    "logout_confirmation_title": "Çıxmaq istədiyindən əminsən?",
+    "logout_confirmation_yes": "Bəli, çıx",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "Yeni Telefonu təsdiq et ",
+      "description": "Ölkə kodunu təsdiq etmək və yeni telefon nömrəni daxil etmək xahiş olunur.",
+      "button": "Yeni telefon nömrəsini təsdiq et "
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
+      "enable_prompt": "Bildirişlərə icazə verilmir. Onları aktivləşdirmək istəyirsən?",
+      "channel_achievements": "Nailiyyətlər",
+      "channel_news": "Xəbərlər",
+      "channel_reminders": "Xatırlatmalar",
+      "channel_team": "Komanda",
       "type_push": "PUSH",
-      "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
+      "type_email": "EPOÇT",
+      "disable_notifications": "Bildirişlər söndürülsün?",
+      "disable_notifications_description": "Bildirişləri söndürməklə nə zaman giriş edə biləcəyin haqqında yeniliklər, xəbərlər və ya komanda haqqında məlumat əldə edə bilməyəcəksən.",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
+          "title": "Həftəlik statistika",
+          "description": "Fəaliyyətin haqqında bildirişlər al."
         },
         "weekly_report": {
-          "title": "Weekly report",
-          "description": "Receive notifications about your activity"
+          "title": "Həftəlik hesabat",
+          "description": "Fəaliyyətin haqqında bildirişlər al."
         },
         "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
+          "title": "Nailiyyətlər",
+          "description": "Fəaliyyətin haqqında bildirişlər al."
         },
         "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
+          "title": "Yüksəlmələr",
+          "description": "Komandanı necə böyütmək və daha çox qazanc əldə etmək üzrə bildirişlər al."
         },
         "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
+          "title": "Xəbərlər",
+          "description": "Komandamızdan bildirişlər al."
         },
         "micro_community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
+          "title": "Mikro-icma ",
+          "description": "Komandan haqqında bildirişlər al."
         },
         "daily_bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
+          "title": "Gündəlik bonus",
+          "description": "Gündəlik bonusunu tələb etmək üçün bildiirşlər al."
         },
         "mining": {
-          "title": "Session status",
-          "description": "Receive notifications about your check-in activity"
+          "title": "Sessiya statusu",
+          "description": "Giriş fəaliyyətin haqqında bildirişlər al."
         },
         "system": {
-          "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "title": "Sistem",
+          "description": "ice tətbiqi haqqında vacib bildirişləri al."
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "Dil parametrləri",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "Dili dəyiş",
+      "prompt": "Bu parametri tətbiq etmək tətbiqi yenidən işə salacaq."
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
+    "profile_image": "Profil şəkli",
+    "inapp_privacy_title": "Məxfilik ",
+    "inapp_privacy_description": "Məlumatlarını burada idarə et.",
     "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "user_id": "İstifadəçi adı",
+    "user_token": "İstifadəçi Tokeni",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "Fotonu Sil",
+      "edit": "Profil fotosunu redaktə et",
+      "photo_gallery": "Foto Qalereya",
+      "camera": "Kamera"
     },
-    "confirm_email_confirmation_title": "Confirm email?",
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "Epoçt təsdiq edilsin?",
+    "update_email_confirmation_title": "Epoçt yenilənsin?",
+    "update_email_confirmation_subtitle": "Epoçt ünvanını dəyişmək səndən yenidən daxil olma tələb edəcək. Davam etmək istədiyinə əminsən?",
+    "unlink_logins_title": "Girişlərin əlaqəsini kəs",
+    "unlink_logins_description": "Girişlərin əlaqəsini buradan kəsə bilərsən."
   },
   "invite_share": {
-    "title": "Invite a friend",
+    "title": "Dost dəvət et",
     "telegram": "Telegram",
-    "twitter": "Twitter",
-    "whatsapp": "WhatsApp",
+    "twitter": "Tvitter",
+    "whatsapp": "Votsap",
     "instagram": "Instagram",
-    "email": "Email",
-    "fb": "Newsfeed",
+    "email": "Epoçt",
+    "fb": "Xəbər lenti",
     "sms": "SMS",
-    "copy_link": "Copy link",
-    "more": "More",
-    "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "copy_link": "Keçidi kopyala",
+    "more": "Daha çox",
+    "copied": "KOPYALANDI",
+    "share_message": "Salam ☃️ Qaradamı! ice-da komandama qoşul və mənim istinad kodumdan istifadə edərək qeydiyyatdan keçməklə 10 ice sikkə əldə et:  ",
+    "share_subject": "ice-da komandama qoşul",
+    "description": "Xəbər yay və dostlarını dəvət et. Yönləndirdiyin hər yeni adam üçün [[:ice]] qazanacaqsan.",
+    "share": "Paylaş"
   },
   "users": {
-    "ping": "PING",
-    "active": "Active",
-    "inactive": "Inactive",
+    "ping": "PİNG",
+    "active": "Aktiv",
+    "inactive": "Qeyri-aktiv",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T1": "1-ci Pillə",
+      "T2": "2-ci Pillə"
     }
   },
   "personal_information": {
-    "first_name": "First name",
-    "last_name": "Last name",
-    "country": "Country",
-    "city": "City",
-    "title": "Personal Information",
-    "phone": "Phone",
-    "email": "Email",
-    "username": "Nickname"
+    "first_name": "Ad",
+    "last_name": "Soyad",
+    "country": "Ölkə",
+    "city": "Şəhər",
+    "title": "Şəxsi məlumat",
+    "phone": "Telefon",
+    "email": "Epoçt",
+    "username": "Ləqəb"
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
-      "length": "Nickname size: 4-20 characters.",
-      "invalid_characters": "Remove invalid characters.",
-      "not_found": "Nickname not found.",
-      "some_error": "Some error occurred.",
-      "refer_yourself": "You can't refer yourself"
+      "already_taken": "Ləqəb artıq istifadə edilir.",
+      "length": "Ləqəbin ölçüsü: 4-20 xarakter.",
+      "invalid_characters": "Yalnış xarakterləri sil.",
+      "not_found": "Ləqəb tapılmadı.",
+      "some_error": "Xəta baş verdi.",
+      "refer_yourself": "Özünü yönləndirə bilməzsən."
     }
   },
   "staking": {
-    "time_left": "Time Left",
-    "mining_rate": "Earning Rate",
-    "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking Bonus",
-    "period_label": "Staked Period",
-    "title": "Pre-Staking",
-    "current_rate": "Current Rate",
-    "allocation": "Allocation",
-    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
-    "staking_terms": "Staking Terms",
-    "stake_now": "Pre-Stake Now!",
-    "balance_label": "Staked balance",
-    "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "time_left": "Qalan vaxt",
+    "mining_rate": "Qazanc Faizi",
+    "appeal": "Qazanc faizini artır",
+    "benefits_description": "ice mükafatlarını 5 ilə qədər pulqabında kilidlə və qazanc faizini 250%-ə qədər artır.",
+    "bonus_label": "Əvvəldən pulqabında kilidləmə bonusu",
+    "period_label": "Kilidləmə Müddəti",
+    "title": "Əvvəldən Kilidləmə",
+    "current_rate": "Cari Faiz",
+    "allocation": "Vəsait",
+    "description": "Kilidləmə kripto aktivlərin blokçeyn şəbəkəsini dəstəkləmək və əməliyyatları təsdiq etmək üçün isifadəsi prosesidir.",
+    "terms_agree": " [[:ice]] [[:link]]Kilidləmə Şərtləri[[/:link]] ilə razıyam. ice mülkiyyətlərin seçilmiş müddətə kilidlənəcək.",
+    "stake_now": "İndi Əvvəldən Kilidlə!",
+    "balance_label": "Kilidlənmiş balans",
+    "confirm_title": "Əvvəldən Kilidləməni təsdiq et",
+    "confirm_subtitle": "Sikkələrini əvvəldən kilidləmək istədiyinə əminsən? Təsdiq etdikdən sonra geriyə dönüş yoxdur."
   },
   "stats": {
-    "header_title": "Stats",
-    "active": "Active users",
-    "total": "Total users",
-    "user_growth": "User growth",
-    "top_miners": "Top users",
-    "top_countries": "Top countries",
-    "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "header_title": "Statistika",
+    "active": "Aktiv istifadəçilər",
+    "total": "Ümumi istifadəçilər ",
+    "user_growth": "İstifadəçi artımı",
+    "top_miners": "Top istifadəçilər",
+    "top_countries": "Top ölkələr",
+    "online_miners": "Onlayn istifadəçilər",
+    "detailed_information": "Detallı məlumat"
   },
   "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
+    "title": "Xahiş olunur yeniləyin ",
+    "description": "Tətbiqin köhnə versiyasından istifadə edirsiniz və istifadəyə davam etmək üçün tətbiqi yeniləmək lazımdır.",
+    "button_title": "İndi yenilə"
   },
   "general": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
+    "good_morning": "Sabahınız Xeyir",
+    "good_afternoon": "Günortanız Xeyir",
+    "good_evening": "Axşamınız Xeyir",
     "ice": "ice",
-    "ice_per_hour": "ice/h",
-    "seconds_short": "s",
-    "minutes_short": "m",
-    "hours_short": "h",
-    "days_short": "d"
+    "ice_per_hour": "ice/saat",
+    "seconds_short": "san",
+    "minutes_short": "dəq",
+    "hours_short": "saat",
+    "days_short": "gün"
   },
   "news": {
-    "news_feed": "News Feed",
-    "read_more": "Read more",
-    "views": "{{viewsCount}} views"
+    "news_feed": "Xəbər lenti",
+    "read_more": "Daha ətraflı oxu",
+    "no_more_news": "bu xəbər lentinin son məlumatıdır.",
+    "views": "{{viewsCount}} baxışlar"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
-    "nothing_is_found": "Nothing was found for your query",
-    "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "empty": "Kontaktları, ice dostlarını və mikro icmanın üzvlərini axtar.",
+    "nothing_is_found": "Sorğunuz üzrə heçnə tapılmadı.",
+    "search_by_country": "Ölkə üzrə axtar",
+    "search_for_users": "İstifadəçi axtar",
+    "loading": "Axtarır..."
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tap here to start your first check-in session",
-    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
-    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
-    "mining_holiday_active": "You are using a Day Off!"
+    "mining_inactive_tooltip": "İlk giriş sessiyanı başlamaq üçün bura bas.",
+    "mining_reset_tooltip": "Giriş sessiyanı uzatmaq üçün 1 saniyə basıb saxla.",
+    "mining_holiday_reset_tooltip": "İstirahət gününü istifadə edirsən! Giriş sessiyanı uzatmaq üçün 1 saniyə basıb saxla.",
+    "mining_holiday_active": "İstirahət gününü istifadə edirsən!"
   },
   "invite_friend": {
-    "invite_button": "Invite Friend",
-    "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "invite_button": "Dost dəvət et",
+    "button_title": "Dost dəvət et",
+    "description": "Dostun hələ onlayn deyil [[:ice]]. Ona dəvət göndər!"
   },
   "balance_history": {
-    "title": "Balance History",
-    "wallet": "Wallet",
-    "blockchain": "Blockchain",
-    "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
-    "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "title": "Balans Tarixi",
+    "wallet": "PUL QABI",
+    "blockchain": "Blokçeyn",
+    "wallet_update_interval": "hər saat yenilənir",
+    "blockchain_update_interval": "hər 24 saatdan bir yenilənir",
+    "list_end_label": "bu balans tarixinin son əməliyyatıdır.",
+    "no_data": "Seçilmiş müddət üzrə göstərməyə məlumat yoxdur."
   },
   "pop_up": {
-    "update_now": "Update Now",
-    "please_update": "Please Update",
-    "update_now_text": "You are using an old app version and need to update it in order to use it further",
-    "you_are_up_to_date": "You are up to date!",
-    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
-    "resurrection": "Resurrection",
-    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
-    "resurrection_warning": "You can only resurrect one time!",
-    "please_confirm": "Please confirm",
-    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "update_now": "İndi yenilə",
+    "please_update": "Xahiş olunur yeniləyin ",
+    "update_now_text": "Tətbiqin köhnə versiyasından istifadə edirsiniz və istifadəyə davam etmək üçün tətbiqi yeniləmək lazımdır.",
+    "you_are_up_to_date": "Tətbiq yenilənib!",
+    "up_to_date_text": "İndi ən son versiyadan istifadə edirsiniz. Aşağıdakı bütün dəyişiklikləri yoxla.",
+    "resurrection": "Dirilmə",
+    "resurrection_message": "Dirilməyə və [[:amount]] keçmişdə itirdiyin sikkəri [[:period]]qazanmağa bir dəfəlik şansın var.",
+    "resurrection_warning": "Ancaq bir dəfə dirilə bilərsən!",
+    "please_confirm": "Xahiş olunur təsdiq edin",
+    "resurrection_no_confirm_message": "[[:amount]] sikkələrini həmişəlik itirəcəksən. Davam etmək istədiyindən əminsən?",
+    "resurrection_yes_confirm_message": "Ancaq bir dəfə dirilə bilərsən! Davam etmək istədiyindən əminsən? Növbəti saat ərzində [[:amount]] sikkələri balansına qayıdacaq.",
+    "delete_account_confirmation_title": "Silməni təsdiq et",
+    "delete_account_confirmation_text": "Hesabı silməklə ice balansın daxil olmaqla bütün məlumatların həmişəlik silinmiş olacaq. Davam etmək istəyirsən?"
   },
   "periods": {
-    "3_days": "3 days",
-    "7_days": "7 days",
-    "30_days": "30 days",
-    "1_day": "1 Day",
-    "1_week": "1 Week",
-    "1_month": "1 Month",
-    "90_days": "90 days",
-    "14_days": "14 days"
+    "3_days": "3 gün",
+    "7_days": "7 gün",
+    "30_days": "30 gün",
+    "1_day": "1 gün",
+    "1_week": "1 həftə",
+    "1_month": "1 ay",
+    "90_days": "90 gün",
+    "14_days": "14 gün"
   },
   "notifications": {
-    "joined": " has joined your team",
-    "multiply": " and {{count}} others have joined your team",
-    "ping": " has pinged you, wake up!",
-    "delete": "Delete",
-    "add_notifications": "Add mocked notifications",
-    "no_notifications": "No notifications to display",
-    "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
-    "clear_title": "Clear all notifications?",
-    "title": "Notifications"
+    "joined": " komandana qoşuldu.",
+    "multiply": " və {{count}} digərləri komandana qoşuldu.",
+    "ping": " səni dümsüklədi, oyan!",
+    "delete": "Sil",
+    "add_notifications": "İstehzalı bildirişlər əlavə et",
+    "no_notifications": "Göstərməyə bildiriş yoxdur.",
+    "add_announcements": "İstehzalı elanlar əlavə et",
+    "add_both": "İstehzalı bildirişləri və elanları birlikdə əlavə et",
+    "clear_title": "Bütün bildirişlər silinsin?",
+    "title": "Bildirişlər"
   },
   "notification_feed_screen": {
-    "yesterday": "Yesterday",
-    "last_week": "Last Week",
-    "this_month": "This month",
-    "last_month": "Last Month",
-    "this_week": "This week"
+    "yesterday": "Dünən",
+    "last_week": "Keçən Həftə",
+    "this_month": "Bu Ay",
+    "last_month": "Keçən Ay",
+    "this_week": "Bu Həftə"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to hide from public eyes"
+      "title": "1. Sənin Profil Statistikan",
+      "description": "İctimai gözlərdən gizlətmək istədiyin blokların üzərinə bas."
     },
     "step2": {
-      "description": "Tap on this block to hide it from public eyes",
-      "title": "2. Your Current Role"
+      "description": "İctimai gözlərdən gizlətmək üçün bu blokun üzərinə bas.",
+      "title": "2. Sənin Cari Rolun "
     },
     "step3": {
-      "title": "3. Your Earned Badges",
-      "description": "Tap here to hide your badges from public eyes"
+      "title": "3. Qazandığın Nişanların ",
+      "description": "Nişanlarını ictimai gözlərdən gizlətmək üçün bura bas."
     }
   },
   "confirm_email": {
-    "title": "Confirm your email",
-    "description": "Please enter your email address and we will send code ",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
-    "wrong_email": "Wrong email?",
-    "check_email": "Check your email",
-    "emailed_link_to": "We emailed a magic link to",
-    "link_instruction": "Click the link to log in or sign up.",
-    "modify_title": "Confirm New Email",
-    "modify_description": "Please enter your new email address"
+    "title": "Epoçtunu təsdiq et",
+    "description": "Epoçt ünvanını daxil et və sənə kod göndərək.",
+    "note": "Əgər 5 dəqiqə ərzində elektron məktub almasan spam qovluğunu yoxla.",
+    "wrong_email": "Yalnış epoçt?",
+    "check_email": "Epoçtunu yoxla",
+    "emailed_link_to": "Sehrli keçidi göndərdik",
+    "emailed_steps_to": "Addımları göndərdik",
+    "link_instruction": "Daxil olmaq və ya qeydiyyatdan keçmək üçün keçidin üzərinə bas.",
+    "reset_link_instruction": "Şifrəni yeniləmək üçün keçidin üzərindən bas.",
+    "modify_title": "Yeni epoçtu təsdiq et",
+    "modify_description": "Xahiş olunur yeni epoçt ünvanını daxil edəsən."
   },
   "invalid_link": {
-    "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "title": "Yalnış keçid",
+    "description": "Təəssüf ki, bu keçid yalnışdır, epoçtunu yenidən daxil et və sənə yeni keçid göndərək."
   },
   "confirm_code": {
-    "title": "Confirm code",
-    "description": "Please enter the code sent to",
-    "send_code_again": "Send code again",
-    "resend_time_label": "New code available in ",
-    "enter_code": "Enter the code",
-    "wrong_number": "Wrong number?"
+    "title": "Kodu Təsdiq et",
+    "description": "Göndərilmiş kodu daxil et ",
+    "send_code_again": "Kodu yenidən göndər",
+    "resend_time_label": "Yeni kodu görmək olar ",
+    "enter_code": "Kodu daxil et",
+    "wrong_number": "Yalnış nömrə?"
   },
   "ice_bonus": {
-    "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
-    "balance_label": "Your current balance"
+    "title": "Salamlama mükafatı",
+    "description": "Təbriklər,  [[:bold]] Sənə olan[[/:bold]] [[:bold]]Etimadımızı[[/:bold]] sübut edən ilk  [[:value]] [[:ice]] sikkələrini qazandın.",
+    "balance_label": "CARİ BALANS "
   },
   "country_select": {
-    "title": "Select country"
+    "title": "Ölkə seç"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "Qaradamı",
+      "subtitle": "Qar imperiyası qur",
+      "description": "ice şəbəkəsinə olan öhdəçiliyini sübut etmək və robot deyil insan olduğunu təsdiqləmək üçün hər 24 saatdan bir daxil olaraq qazan."
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "Səfir",
+      "subtitle": "Qar imperiyasının hökmdarı",
+      "description": "Komandana ən az 100 nəfər qoşulduqda səfir olursan. Hər səfir yeni funksiyalara erkən giriş əldə edir."
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirm Phone",
-    "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
-    }
+    "modify_title": "Telefonu təsdiq et ",
+    "modify_description": "Ölkə kodunu təsdiq etmək və telefon nömrəni daxil etmək xahiş olunur.",
+    "button": "Ölkəni və telefonu təsdiq et",
+    "same_phone_error": "Eyni nömrədən istifadə edə bilməzsən."
   },
   "date_select": {
-    "title": "Choose date"
+    "title": "Tarix seç"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+      "readmore": {
+        "title": "Daha ətraflı oxu",
+        "description": "Komandamızdan ən son xəbərlərə buradan baxa bilərsən. Tam məqaləni oxumaq üçün bu düyməyə bas."
       },
-      "step_2": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
-      },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
-      },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
-      },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
-      },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
-      },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
-      },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "releasednews": {
+        "title": "Buraxılmış xəbərlər ",
+        "description": "Hər bir xəbər başlığının üzərinə bas və tam versiyanı oxu.  Xəbərlər və sorğular üzrə məlumatlı qal."
       }
     },
     "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      "allow_contacts": {
+        "title": "Bütün kontaktlar",
+        "description": "Kontaktlarını sinxronizə et və kimin artıq [[:ice]]-da olduğunu gör.  Gələcəkdə [[:ice]] istənilən kontaktına göndərə biləcəksən. "
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "confirm_phone": {
+        "title": "Telefonu təsdiq et ",
+        "description": "Kimliyini təsdiq et və kontaktlarına ice şəbəkəsinin üzvü olduğunu görmələrinə imkan ver. Telefon nömrən digər üçüncü tərəflə paylaşılmayacaq."
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "contacts_list": {
+        "title": "Kontaktların siyahısı",
+        "description": "Bu bütün kontaktların siyahısıdır, [[:ice]] şəbəkəsinə qoşulanlar siyahının üstündə görünürlər."
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "referrals": {
+        "title": "İstinadlar",
+        "description": "Cəmi nə qədər istinadlarının olmasını buradan görə bilərsən. Nə qədər çox insan dəvət etsən, o qədər çox qazanacaqsan."
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earnings": {
+        "title": "Qazanclar",
+        "description": "Cari balansın hər saat yenilənir və burada göstərilir. Bura 1-ci və 2-ci Pillə qazancları ilə birlikdə birbaşa və kilidlənmiş qazanclar daxildir."
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "segmented_control_tier_one": {
+        "title": "1-ci Pillə",
+        "description": "burada 1-ci Pillə istinadlarının siyahısını görə bilərsən. Səninlə eyni vaxtda daxil olan hər bir dostun üçün cari baza qazanc faizinin üzərinə ekstra 25 % əldə edəcəksən. [[:link]]Daha ətraflı oxu[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "segmented_control_tier_two": {
+        "title": "2-ci Pillə",
+        "description": "burada 2-ci Pillə istinadlarının siyahısını görə bilərsən. Səninlə eyni vaxtda daxil olan hər bir dostun üçün cari baza qazanc faizinin üzərinə ekstra 5 % əldə edəcəksən. [[:link]]Daha ətraflı oxu[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "active_users": {
+        "title": "Aktiv istifadəçilər",
+        "description": "Bu sənin istinadlarının giriş fəaliyyətinin cari statusudur. Onlar aktiv giriş sessiyasında aktiv hesab olunurlar."
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "tier_one_earnings": {
+        "title": "1-ci Pillə qazancı",
+        "description": "burada 1-ci Pillə istinadlarının siyahısını görə bilərsən. Səninlə eyni vaxtda daxil olan hər bir dostun üçün cari baza qazanc faizinin üzərinə ekstra 25 % əldə edəcəksən."
+      },
+      "ping": {
+        "title": "Ping Düyməsi",
+        "description": "İstinadlarına giriş sessiyalarına başlamaq üçün bildiriş göndər. Hər bir istinada hər 24 saatdan bir bildiriş göndərə bilərsən."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Ev",
+        "description": "Xoş Gəlmisiniz [[:ice]] Ev ekranında balansın, cari qazanc faizin, komandanla birlikdə qlobal pillən haqqında statistikanı tapa bilərsən."
+      },
+      "invite": {
+        "title": "dəvət et ",
+        "description": "Dəvət etdiyin hər bir şəxs üçün hər ikiniz baza qazanc dərəcəsi üzərinə 25 %-ə qədər qazanırsınız. Nə qədər çox insan dəvət etsən, o qədər çox qazanacaqsan."
+      },
+      "team": {
+        "title": "Komanda",
+        "description": "[[:ice]] dostlarla daha yaxşıdır Bu səhifədə həm 1-ci həm də 2-ci Pillədən olan komanda üzvlərinin statusunu görə bilərsən. Buradan onları ping də edə bilərsən."
+      },
+      "news": {
+        "title": "Xəbərlər",
+        "description": "Xəbərlər və sorğular üzrə məlumatlı qal. Biz Mərkəzləşdirilməmiş Avtonom Təşkilat olduğumuzdan gələcək funksiyalar üçün buradan səs verə biləcəksiniz."
+      },
+      "profile": {
+        "title": "Profil",
+        "description": "Profil məlumatlarını fərdiləşdir və qazandığın bütün nişanları və nailiyyətləri gör. Qazancını hesablaya bilmək üçün buradakı kalkulyatordan istifadə et."
+      },
+      "earningicestart": {
+        "title": "ice qazancı",
+        "description": "bu düyməni basmaqla hər 24 saatdan bir [[:ice]] giriş sessiyasını başlada bilərsən. Hər gün geri qayıtmağı və qazanmağa başlamağı unutma!"
+      },
+      "earningiceseemore": {
+        "title": "ice qazancı",
+        "description": "Yenidən bas və cari giriş sessiyan haqqında daha ətraflı gör."
+      },
+      "stats": {
+        "title": "Statistika",
+        "description": "Statistika səhifəsində Top ölkələr və İstifadəçilər ilə yanaşı hər gün daxil olan Ümumi və Aktiv istifadəçiləri də görə bilərsiniz."
+      },
+      "help": {
+        "title": "Kömək ",
+        "description": "Sualınız var? Tez-tez verilən suallar siyahısına bax. Axtardığın cavabı tapmasan, hi@ice.io vasitəsilə bizimlə ilə əlaqə qurmaqdan çəkinmə."
+      },
+      "preStaking": {
+        "title": "Əvvəldən Kilidləmə",
+        "description": "Qazanc mükafatlarını əvvəldən kilidləməklə qazancını maksimallaşdır. Qazancın üzərinə bonus əldə etmək üçün ayrılmış miqdarı və kilidləmə müddətini seç."
+      },
+      "wallet": {
+        "title": "Pulkisəsi kartı",
+        "description": "Burada qazanc faizi ilə birlikdə cari [[:ice]] balansını görə bilərsiniz. Komandandan olan istinadlar nə qədər çox onlayn olarsa, qazanc dərəcən o qədər yüksək olar."
+      },
+      "earning": {
+        "title": "Qazanc Kartı",
+        "description": "Qazanc faizi və bonuslar haqqında məlumatlı qal! Burada cari məzənnə, baza dərəcəsi və tətbiqdə müxtəlif fəaliyyətlər üçün bonus dərəcəsinə baxa bilərsiniz."
+      },
+      "engagement": {
+        "title": "Öhdəçilik Kartı",
+        "description": "Giriş sessiyaları ardıcıllığını və istirahət günlərini izlə! Ardıcıl giriş sessiyaları haqqında daha ətraflı məlumat üçün və istirahət günlərinin sayını görmək üçün bu bölməni nəzərdən keçir. "
+      },
+      "profilecard": {
+        "title": "Profil Kartı",
+        "description": "Bu kartı izləməklə profil statusunu izləyə bilərsən. Bu, sənin rolun, səviyyən və ümumi istinadlarınla birlikdə cari qlobal reytinqini göstərir."
+      },
+      "referralscard": {
+        "title": "İstinad Kartın",
+        "description": "Bu kartın üzərindən vurmaqla 1-ci və 2-ci Pillə istinadlarının əvvəlki 5 gün üzrə statistikasının təkamülünə bax."
+      },
+      "adoptioncard": {
+        "title": "Qəbuletmə Kartı",
+        "description": "Aktiv Qaradamlarının keçən həftə ümumi yekununa əsasən cari [[:ice]] qazanc faizini görə bilərsən. Növbəti həddi keçdikdə qazanc dərəcəsi yarıya endirilir."
+      },
+      "nickname": {
+        "title": "Ləqəb",
+        "description": "Ləqəb səni unikal edir. Dostların komandana qoşulmaq üçün bu ləqəbdən istifadə etməli olacaqlar. Bu qısa yoldan profilini açmaq üçün də istifadə edə bilərsən."
+      },
+      "balancehistory": {
+        "title": "Balans Tarixi",
+        "description": "Burada yerli qulqabında və blokçeyndə olan cari [[:ice]] balansını görə bilərsən. Yerli pulqabı balansı hər saatdan bir, blokçeyn balansı isə 24 saatdan bir yenilənir."
+      },
+      "achievements": {
+        "title": "Nailiyyətlər",
+        "description": "Aşağıdakı tapşırıqları tamamla və səviyyəni yüksəlt! İlk giriş sessiyanı indi başlat!"
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Unlink Logins",
-    "sessionName": "Login via {{providerName}}",
+    "title": "Girişlərin əlaqəsini kəs",
+    "sessionName": "vasitəsilə daxil ol {{providerName}}",
     "buttons": {
-      "currentSession": "Current session",
-      "endSession": "End Session",
-      "loginUnlinked": "Login Unlinked",
-      "sessionEnded": "Session Ended",
-      "unlink": "Unlink"
+      "currentSession": "Cari sessiya",
+      "endSession": "Sessiyanı bitir",
+      "loginUnlinked": "Giriş əlaqəsi kəsildi",
+      "sessionEnded": "Sessiya sonlandı",
+      "unlink": "Əlaqəni kəs"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Unlink Login?",
-        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
+        "title": "Giriş əlaqəsi kəsilsin?",
+        "message": "Bu cihazdan {{providerName}} vasitəsilə girişi kəsmək istədiyindən əminsən?"
       },
       "endSession": {
-        "title": "End Session?",
-        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
+        "title": "Sessiya bitirilsin?",
+        "message": "Bu cihazdan {{providerName}} giriş sessiyasını kəsmək istədiyindən əminsən?"
       }
     }
   },
@@ -792,12 +846,51 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Today’s Bonus",
-    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
-    "link": "Find out more",
-    "extra_message": "You have received your daily extra bonus on your earning rate",
-    "expired_title": "Bonus Expired",
-    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
-    "result_title": "Congratulations"
+    "claim_title": "Bugünün Bonusu",
+    "claim_message": "Günün bonusu vaxtıdır, aşağıda  [[:bold]]\"Bonus Tələb et\" [[/:bold]] düyməsinin üzərindən bas.",
+    "link": "Daha ətraflı",
+    "extra_message": "Qazanc faizi üzərində gündəlik ekstra bonusu əldə etdin.",
+    "expired_title": "Bonusun Vaxtı bitdi",
+    "expired_message": "Təəssüf ki, bugünki bonusun vaxtı bitdi. Növbəti bildirişlər üçün bizi izləyin!",
+    "result_title": "Təbriklər"
+  },
+  "early_access": {
+    "title": "Erkən Giriş",
+    "message_part1": "Bizim [[:bold]]qarşıdan gələn rəsmi buraxılışımızdan əvvəl  [[:bold]]ice[[/:bold]] tətbiqinə baxış əldə et.[[/:bold]]",
+    "message_part2": "Buraxılış günü bütün balanslar sıfırlanacaq. Komandan isə olduğu kimi qalacaq.",
+    "message_part3": "Dəstəyiniz üçün çox sağolun!",
+    "checkbox_description": "Mən başa düşdüm! Bu bildirişi bir daha göstərmə."
+  },
+  "mining_notice": {
+    "title": "Qeyd",
+    "message": "[[:bold]]ice qazanmaq üçün olan marağınız üçün təşəkkürlər![[/:bold]] Hal-hazırda texnologiyamızı sazlayırıq və giriş hazırda mümkün deyil. Bu sənin komanda qurmaq üçün və mikro -icmanı böyütmək üçün fokuslanmaq şansındır.",
+    "message_footer": "[[:twitter]]Tvitter[[/:twitter]] və [[:telegram]]Telegram[[/:telegram]] kanallarımızda yeniliklər üçün bizi izləyin."
+  },
+  "qr_code": {
+    "description": "Komandama qoşulmaq üçün QR kodu skan et."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "TikTok-da bizə qoşulun.",
+      "description": "Biz sadəcə əlaqə saxlamaq və TikTok-dakı həyəcanverici yeni icmamız haqqında məlumat vermək istədik.  Rəqəmsal valyutamız, ice haqqında əyləncəli və məlumatlandırıcı məzmun paylaşırıq və sənin də bura qoşulmağını istərdik!"
+    },
+    "youtube": {
+      "title": "YouTube-da bizə qoşulun",
+      "description": "ice qazanmaq üçün təlimatlardan tutmuş yeni funksiyalar üzrə yeniləmələrə qədər, hətta əyləncəli icma məzmunu ilə bizim YouTube kanalımız yeniliklərdən xəbərdar olmaq üçün əla məkandır."
+    },
+    "linkedin": {
+      "title": "LinkedIn-də bizə qoşulun",
+      "description": "LinkedIn-də ice icmasına qoşulmaq ən son yeniliklərdən xəbərdar olmaq və sənin qədər rəqəmsal valyutaların gələcəyi ilə maraqlanan eyni düşüncəli fərdlər ilə əlaqə qurmaq üçün əla vasitədir."
+    },
+    "facebook": {
+      "title": "Facebook-da bizə qoşulun",
+      "description_part1": "Facebook səhifəmizi izləməyi tövsiyyə edirik.",
+      "description_part2": "Bu ice layihəsi ilə bağlı ən son baş verənlərdən xəbərdar olmağa kömək etməklə yanaşı icmamıza qoşulmaq və söhbətlərdə iştirak etmək üçün əla vasitədir."
+    },
+    "instagram": {
+      "title": "Instagram-da bizə qoşulun",
+      "description_part1": "Bizi Instagram-da izləmək məlumatlı qalmaq və ice ilə maraqlanan digər istifadəçilər ilə əlaqə qurmaq üçün əla yoldur. ",
+      "description_part2": "Əlavə olaraq, buraxacağımız yeni funksiyalar və ya promoşnlar haqqında ilk məlumatlı siz olacaqsınız."
+    }
   }
 }
