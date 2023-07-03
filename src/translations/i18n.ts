@@ -29,7 +29,11 @@ const initialLocale =
 
 i18n.locale = initialLocale;
 i18n.enableFallback = true;
-i18n.translations = {[initialLocale]: localeConfig[initialLocale].translations};
+i18n.translations = {
+  // always load en for fallbacks
+  en: localeConfig.en.translations,
+  [initialLocale]: localeConfig[initialLocale].translations,
+};
 
 export default i18n;
 
