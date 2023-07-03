@@ -37,7 +37,7 @@ export const ConfirmEmailCodeForm = () => {
         </View>
       </View>
       <Text style={styles.instructionText}>
-        {t('confirm_email.link_instruction')}
+        {t('confirm_email.code_link_instruction')}
       </Text>
       {code && <EmailCode code={code} containerStyle={styles.emailCode} />}
       <View style={styles.bottomContainer}>
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
   instructionText: {
     ...font(16, 26, 'medium', 'secondary', 'center'),
-    width: rem(180),
+    width: rem(250),
     alignSelf: 'center',
   },
   bottomContainer: {
