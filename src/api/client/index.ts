@@ -117,7 +117,7 @@ export const is4xxApiError = (error: unknown) => {
   return (
     axios.isAxiosError(error) &&
     error.response?.status &&
-    error.response.status > 400 &&
+    error.response.status >= 400 &&
     error.response.status < 500
   );
 };

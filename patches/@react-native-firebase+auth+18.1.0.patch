@@ -1,10 +1,5 @@
-Exposes the OAuthProvider methods for authorization with variety of providers without the need of 3rd party libs.
-Might be removed when any of the similar PR's are merged:
-https://github.com/invertase/react-native-firebase/pull/7187
-https://github.com/invertase/react-native-firebase/pull/7019
-
 diff --git a/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/firebase/auth/ReactNativeFirebaseAuthModule.java b/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/firebase/auth/ReactNativeFirebaseAuthModule.java
-index c79417f..711b289 100644
+index b6406f1..510eb99 100644
 --- a/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/firebase/auth/ReactNativeFirebaseAuthModule.java
 +++ b/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/firebase/auth/ReactNativeFirebaseAuthModule.java
 @@ -30,6 +30,7 @@ import com.facebook.react.bridge.ReadableMap;
@@ -15,7 +10,7 @@ index c79417f..711b289 100644
  import com.google.firebase.FirebaseApp;
  import com.google.firebase.FirebaseException;
  import com.google.firebase.FirebaseNetworkException;
-@@ -320,6 +321,42 @@ class ReactNativeFirebaseAuthModule extends ReactNativeFirebaseModule {
+@@ -344,6 +345,42 @@ class ReactNativeFirebaseAuthModule extends ReactNativeFirebaseModule {
              });
    }
  
@@ -59,7 +54,7 @@ index c79417f..711b289 100644
     * createUserWithEmailAndPassword
     *
 diff --git a/node_modules/@react-native-firebase/auth/ios/RNFBAuth/RNFBAuthModule.m b/node_modules/@react-native-firebase/auth/ios/RNFBAuth/RNFBAuthModule.m
-index 8d98dc5..84869f6 100644
+index 8f410ec..c0dd401 100644
 --- a/node_modules/@react-native-firebase/auth/ios/RNFBAuth/RNFBAuthModule.m
 +++ b/node_modules/@react-native-firebase/auth/ios/RNFBAuth/RNFBAuthModule.m
 @@ -57,6 +57,8 @@
@@ -109,10 +104,10 @@ index 8d98dc5..84869f6 100644
                    : (FIRApp *)firebaseApp
                    : (NSString *)email
 diff --git a/node_modules/@react-native-firebase/auth/lib/index.d.ts b/node_modules/@react-native-firebase/auth/lib/index.d.ts
-index ab41d09..870e32a 100644
+index 600aed4..5708595 100644
 --- a/node_modules/@react-native-firebase/auth/lib/index.d.ts
 +++ b/node_modules/@react-native-firebase/auth/lib/index.d.ts
-@@ -1540,6 +1540,25 @@ export namespace FirebaseAuthTypes {
+@@ -1582,6 +1582,25 @@ export namespace FirebaseAuthTypes {
       */
      signInAnonymously(): Promise<UserCredential>;
  
@@ -139,10 +134,10 @@ index ab41d09..870e32a 100644
       * Signs in the user using their phone number.
       *
 diff --git a/node_modules/@react-native-firebase/auth/lib/index.js b/node_modules/@react-native-firebase/auth/lib/index.js
-index ea45f05..ed96fa4 100644
+index fe6af99..3e890d9 100644
 --- a/node_modules/@react-native-firebase/auth/lib/index.js
 +++ b/node_modules/@react-native-firebase/auth/lib/index.js
-@@ -231,6 +231,12 @@ class FirebaseAuthModule extends FirebaseModule {
+@@ -233,6 +233,12 @@ class FirebaseAuthModule extends FirebaseModule {
        .then(userCredential => this._setUserCredential(userCredential));
    }
  
