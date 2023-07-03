@@ -21,8 +21,8 @@ type Props = {
   isOwner?: boolean;
 };
 
-const NUMBER_OF_SKELETONS = 5;
-const NUMBER_OF_PLACEHOLDERS = 4;
+const NUMBER_OF_SKELETONS = 3;
+const NUMBER_OF_PLACEHOLDERS = 3;
 
 export const BadgeSummariesList = ({
   loading,
