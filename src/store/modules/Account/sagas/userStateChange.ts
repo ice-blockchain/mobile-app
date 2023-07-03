@@ -12,7 +12,7 @@ import {
 } from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {temporaryPhoneNumberIsoSelector} from '@store/modules/Validation/selectors';
-import {getLocale, t} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import {getErrorMessage, showError} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
@@ -70,16 +70,6 @@ export function* userStateChangeSaga() {
           authenticatedUser.isAdmin,
         ),
       );
-
-      const currentPhoneLocale = getLocale();
-      if (user && user.language !== currentPhoneLocale) {
-        yield put(
-          AccountActions.SYNC_LANGUAGES.SUCCESS.create(
-            currentPhoneLocale,
-            user.language,
-          ),
-        );
-      }
     } else {
       yield put(AccountActions.SET_TOKEN.STATE.create(null));
       yield put(AccountActions.USER_STATE_CHANGE.SUCCESS.create(null, null));

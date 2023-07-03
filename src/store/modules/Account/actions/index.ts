@@ -8,7 +8,6 @@ import {
 } from '@services/auth/signin/types';
 import {AuthToken} from '@services/auth/types';
 import {createAction} from '@store/utils/actions/createAction';
-import {SupportedLocale} from '@translations/localeConfig';
 import {Action} from 'redux';
 import {CallEffect, PutEffect} from 'redux-saga/effects';
 
@@ -168,5 +167,4 @@ export const AccountActions = Object.freeze({
   MODIFY_EMAIL_WITH_CODE,
   VERIFY_PHONE_NUMBER,
   SET_PRIVACY_INFO_SHOW,
-  SYNC_LANGUAGES,
 });

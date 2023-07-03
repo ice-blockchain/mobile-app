@@ -7,6 +7,7 @@ import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {showError} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
+import RNRestart from 'react-native-restart';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
 const actionCreator = AccountActions.UPDATE_ACCOUNT.START.create;
@@ -32,8 +33,6 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       userInfo.phoneNumberHash = yield call(hashPhoneNumber, normalizedNumber);
     }
 
-    const languageToUpdate = user.language;
-
     const modifiedUser: SagaReturnType<typeof Api.user.updateAccount> =
       yield Api.user.updateAccount(user.id, userInfo);
     yield put(
@@ -43,13 +42,8 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       ),
     );
 
-    if (languageToUpdate && modifiedUser.language) {
-      yield put(
-        AccountActions.SYNC_LANGUAGES.SUCCESS.create(
-          languageToUpdate,
-          modifiedUser.language,
-        ),
-      );
+    if (action.payload.userInfo.language) {
+      RNRestart.restart();
     }
   } catch (error) {
     let localizedError = null;
