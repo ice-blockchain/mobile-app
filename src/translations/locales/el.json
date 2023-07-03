@@ -1,766 +1,841 @@
 {
   "welcome": {
     "page1": {
-      "title": "Willkommen im Eis",
-      "description": "[[:ice]] ist eine digitale Währung, die Sie auf Ihrem Telefon abbauen können. "
+      "title": "Καλώς ήρθατε στο ice",
+      "description": "[[:ice]] είναι ένα ψηφιακό νόμισμα που μπορείτε να κερδίσετε χρήματα με το τηλέφωνό σας. Το ice ανήκει και λειτουργεί από καθημερινούς χρήστες όπως εσείς."
     },
     "page2": {
-      "title": "Planetenfreundlich",
-      "description": "[[:ice]] ist von Natur aus energieeffizienter als BTC, da es einen „Proof of Stake“-Konsensmechanismus verwendet. "
+      "title": "Φιλικό προς τον πλανήτη",
+      "description": "[[:ice]] είναι εγγενώς πιο ενεργειακά αποδοτικό από το BTC, καθώς χρησιμοποιεί έναν μηχανισμό συναίνεσης \"Απόδειξης Συμμετοχής\". Με την απόδειξη συμμετοχής (POS), οι κάτοχοι κρυπτονομισμάτων επικυρώνουν τις συναλλαγές τους ανά μπλοκ με βάση τον αριθμό των νομισμάτων που ένας επικυρωτής διασφάλιζει."
     },
     "page3": {
-      "title": "Volksmünze",
-      "description_part1": "Die Macht liegt in Ihren Händen.",
-      "description_part2": "Alles, was wir bei [[:ice]] entwickeln, wird Open Source sein"
+      "title": "Λαικό νόμισμα",
+      "description_part1": "Η δύναμη είναι στα χέρια σας.",
+      "description_part2": "Όλα όσα αναπτύσσουμε στο [[:ice]] θα είναι ανοιχτού κώδικα και θα ελέγχονται από τον Αποκεντρωμένο Αυτόνομο Οργανισμό (DAO)."
     },
     "page4": {
-      "title": "In Verbindung bleiben",
-      "description": "Tippen Sie auf [[:iceLogo]] und beginnen Sie noch heute mit dem Mining mit unserer kostenlosen, energiesparenden mobilen App. "
+      "title": "Μείνετε σε επαφή",
+      "description": "Πατήστε [[:iceLogo]] για τον καθημερινό σας έλεγχο με τη δωρεάν, ενεργειακά ελαφριά εφαρμογή μας για κινητά. Με το καθημερινό πάτημα, εξασφάλιζεται ότι το ice καταλήγει στα χέρια πραγματικών ανθρώπων, και όχι ρομπότ."
     },
     "page5": {
-      "title": "Verweisen",
-      "description": "Lade deine Freunde ein und verdiene (ihr beide) bis zu {{value}}%-Bonus auf Ihre Basis-Mining-Rate für jeden Freund, der sich Ihrem Team anschließt."
+      "title": "Παραπέμψτε & κερδίστε",
+      "description": "Προσκαλέστε τους φίλους σας και κερδίστε (και οι δύο) έως και 25% μπόνους επί του βασικού ποσοστού κέρδους σας για κάθε φίλο που θα ενταχθεί στην ομάδα σας."
     },
     "page6": {
-      "title": "Benachrichtigungen",
-      "description_part1": "[[:ice]] Mining-Sessions dauern nur für {{value}} Std. ",
-      "description_part2": "Keine Sorge, wir spammen Sie nicht zu!",
-      "not_now": "Nicht jetzt"
+      "title": "Ειδοποιήσεις",
+      "description_part1": "[[:ice]] οι συνεδρίες ελέγχου διαρκούν μόνο 24 ώρες. Θα θέλατε να λάβετε ειδοποίηση όταν λήξει η τρέχουσα συνεδρία σας;",
+      "description_part2": "Μην ανησυχείτε, δεν θα σας στείλουμε ανεπιθύμητα μηνύματα!",
+      "not_now": "Όχι, τώρα"
     }
   },
   "button": {
-    "yes_btn": "Ja bitte",
-    "next_btn": "Nächste",
-    "not_now_btn": "nicht jetzt",
-    "view_all": "Alle ansehen",
+    "yes_btn": "Ναι, παρακαλώ",
+    "next_btn": "Επόμενο",
+    "not_now": "Όχι, τώρα",
+    "view_all": "προβολή όλων",
     "invite_friend": {
-      "title": "Freunde einladen",
-      "description_part1": "Verdienen Sie zusätzlich ",
-      "description_part2": " indem Sie Ihre Freunde einladen."
+      "title": "Προσκαλέστε φίλους",
+      "description": "Κερδίστε επιπλέον [[:ice]] προσκαλώντας τους φίλους σας."
     },
-    "no": "Nein",
-    "search_country": "Land suchen",
-    "save": "Speichern",
-    "yes": "Ja",
-    "change": "Ändern",
-    "no_cancel": "Nein, stornieren",
-    "complete": "Vollständig",
-    "cancel": "Absagen",
-    "clear": "Klar",
-    "finish": "Fertig",
-    "next_step": "Nächster Schritt",
-    "see_all": "alles sehen",
-    "back": "Der Rücken",
-    "search": "Suche",
-    "continue": "Weitermachen",
-    "apply": "Anwenden",
-    "reset": "Zurücksetzen",
-    "skip_all": "Alles überspringen",
-    "done": "Getan",
-    "confirm": "Bestätigen",
-    "disable": "Deaktivieren"
+    "see_all": "εμφάνιση όλων",
+    "no": "Όχι",
+    "search_country": "Αναζήτηση ανά χώρα",
+    "save": "Αποθήκευση",
+    "yes": "Ναι",
+    "change": "Αλλαγή",
+    "no_cancel": "Όχι, ακυρώστε",
+    "complete": "Ολοκληρώθηκε",
+    "cancel": "Άκυρο",
+    "clear": "Διαγραφή",
+    "finish": "Τέλος",
+    "next_step": "Επόμενο βήμα",
+    "back": "Πίσω",
+    "search": "Αναζήτηση",
+    "continue": "Συνέχεια",
+    "apply": "Εφαρμογή",
+    "reset": "Επαναφορά",
+    "skip_all": "Παράλειψη όλων",
+    "done": "Έγινε",
+    "confirm": "Επιβεβαίωση",
+    "do_this_later": "Κάντε το αργότερα",
+    "resurrect_me": "Επαναφορά",
+    "claim_bonus": "Διεκδίκηση του μπόνους",
+    "close": "Κλείσιμο",
+    "try_again": "Προσπαθήστε ξανά",
+    "view_changelog": "Προβολή αρχείου αλλαγών",
+    "disable": "Απενεργοποίηση",
+    "agree": "Συμφωνώ",
+    "learn_more": "Μάθετε περισσότερα",
+    "back_to_login": "Πίσω στην είσοδο",
+    "follow_us": "Ακολουθήστε μας",
+    "subscribe": "Εγγραφή"
   },
   "team": {
-    "contacts_tab": "Kontakte",
-    "tierOne_tab": "Stufe 1",
-    "tierTwo_tab": "Rang 2",
+    "contacts_tab": "Επαφές",
+    "tierOne_tab": "Κατηγορία 1",
+    "tierTwo_tab": "Κατηγορία 2",
     "empty": {
-      "title_part1": "Sie haben derzeit keine\n",
-      "title_part2": " Empfehlungen!",
-      "button_title": "Freunde einladen"
+      "title": "Προς το παρόν δεν έχετε [[:title]] παραπομπές!",
+      "contacts": "Προς το παρόν δεν έχετε επαφές στον τηλεφωνικό κατάλογο.",
+      "button_title": "Προσκαλέστε φίλους"
     },
     "contacts": {
-      "empty_title": "[[:ice]] ist besser mit Freunden",
-      "empty_button_title": "Zugriff auf Kontakte zulassen",
-      "empty_description": "Synchronisieren Sie Ihre Kontakte und sehen Sie, wer bereits auf [[:ice]] ist. "
+      "empty_title": "[[:ice]] είναι καλύτερα με φίλους",
+      "empty_button_title": "Επιτρέψτε την πρόσβαση στις επαφές",
+      "empty_description": "Συγχρονίστε τις επαφές σας και δείτε ποιος είναι συνδεδεμένος [[:ice]]. Στο μέλλον, θα μπορείτε να στέλνετε το ice σε οποιονδήποτε από τις επαφές σας."
     },
     "header": {
-      "search_placeholder": "Suchen Sie nach Benutzern",
-      "referrals": "Empfehlungen",
-      "earnings": "Verdienste"
+      "search_placeholder": "Αναζήτηση χρηστών",
+      "referrals": "Παραπομπές",
+      "earnings": "Κέρδη"
     },
     "confirm_code": {
-      "title": "Code bestätigen",
-      "description": "Bitte geben Sie den Bestätigungscode ein, den Sie auf Ihrem Telefon erhalten haben.",
-      "placeholder": "Code eingeben",
-      "button": "Bestätigen Sie jetzt Ihren Code"
+      "title": "Επιβεβαίωση κωδικού",
+      "description": "Πληκτρολογήστε τον κωδικό επιβεβαίωσης που λάβατε στο τηλέφωνό σας.",
+      "placeholder": "Πληκτρολογήστε τον κωδικό",
+      "button": "Επιβεβαιώστε τον κωδικό σας τώρα"
     },
     "confirm_phone": {
-      "title": "Telefon bestätigen",
-      "description": "Bitte bestätigen Sie Ihre Landesvorwahl und geben Sie Ihre Telefonnummer ein."
+      "title": "Επιβεβαιώστε το τηλέφωνο",
+      "description": "Επιβεβαιώστε τον κωδικό της χώρας σας και πληκτρολογήστε τον αριθμό τηλεφώνου σας."
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "Freunde"
+        "friends": "φίλοι"
       },
-      "all_contacts": "Alle Kontakte",
-      "invite": "einladen",
-      "invitation_text": "Hi {{name}}, ich möchte Sie einladen, bei ice mitzumachen."
+      "all_contacts": "Όλες οι επαφές",
+      "invite": "πρόσκληση",
+      "invitation_text": "Γεια {{name}}, θα ήθελα να σε προσκαλέσω να συμμετάσχεις στο ice."
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier-1-Einnahmen"
+        "title_earnings": "Κέρδη Κατηγορίας 1"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier-2-Einnahmen"
+        "title_earnings": "Κέρδη Κατηγορίας 2"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Einloggen Anmelden",
-    "phone": "Telefon",
-    "or": "oder",
-    "welcome": "Willkommen im Eis",
+    "logInSignUp": "Είσοδος / Εγγραφή",
+    "phone": "Τηλέφωνο",
+    "or": "ή",
+    "reset_password": "Επαναφορά κωδικού πρόσβασης",
+    "welcome": "Καλώς ήρθατε στο ice",
     "email": "Email",
-    "slogan": "Globale Währungsrücksetzung",
-    "privacy": {
-      "description": "Indem Sie fortfahren, stimmen Sie unseren zu ",
-      "terms": "Nutzungsbedingungen",
-      "and": " und ",
-      "policy": "Datenschutz-Bestimmungen"
-    }
+    "slogan": "Η Παγκόσμια Νομισματική Αναδιάρθρωση",
+    "privacy": "Συνεχίζοντας, συμφωνείτε με τους [[:link]]Όρους Παροχής Υπηρεσιών[[/:link]] και την [[:link]]Πολιτική Απορρήτου[[/:link]]"
   },
   "claimUsername": {
-    "title": "Spitznamen beanspruchen",
-    "description": "Ihre Freunde müssen diesen Spitznamen verwenden, um Ihrem Team beizutreten",
-    "inputPlaceholder": "Trage deinen Spitznamen ein",
-    "note_part1": "Verwenden Sie beim Erstellen eines Spitznamens nur Buchstaben, Zahlen und Punkte.",
-    "note_part2": "Beispiel:",
-    "note_example": "dein.name01"
+    "title": "Επιλέξτε ψευδώνυμο",
+    "description": "Οι φίλοι σας θα πρέπει να χρησιμοποιήσουν αυτό το ψευδώνυμο για να ενταχθούν στην ομάδα σας.",
+    "inputPlaceholder": "Πληκτρολογήστε το ψευδώνυμό σας",
+    "note_part1": "Όταν δημιουργείτε ένα ψευδώνυμο, χρησιμοποιήστε μόνο γράμματα, αριθμούς και τελείες.",
+    "note_part2": "Παράδειγμα:",
+    "note_example": "your.name01"
   },
   "whoInvitedYou": {
-    "title": "Wer hat dich eingeladen?",
-    "description": "Geben Sie den Spitznamen der Person ein, die Sie eingeladen hat",
-    "inputPlaceholder": "Spitznamen eingeben",
-    "dontHaveInvitationCode": "Wenn Sie diesen Schritt ausführen, erhalten Sie und Ihr Freund beide a {{value}}%-Bonus auf die Mining-Rate, wenn Sie beide gleichzeitig minen.",
-    "confirm_text": "Sind Sie sicher, dass Sie ein zufälliges Mitglied als Ihre Empfehlung festlegen möchten?\n\n",
-    "dontHaveCodeTip": "Wenn Sie keinen Einladungscode haben, werden wir es tun\n"
+    "title": "Ποιος σας προσκάλεσε;",
+    "description": "Πληκτρολογήστε το ψευδώνυμο του ατόμου που σας προσκάλεσε.",
+    "inputPlaceholder": "Πληκτρολογήστε το ψευδώνυμο",
+    "dontHaveInvitationCode": "Ολοκληρώνοντας αυτό το βήμα, εσείς και ο φίλος σας θα λάβετε μπόνους 25% επί του βασικού ποσοστού κέρδους όταν κάνετε και οι δύο έλεγχο την ίδια στιγμή.",
+    "dontHaveCodeTip": "Αν δεν έχετε κωδικό πρόσκλησης, θα επιλέξουμε ένα τυχαίο μέλος ως την δική σας παραπομπή!"
   },
   "errors": {
-    "nicknameSize": "Spitznamengröße: 4-20 Zeichen.",
-    "removeInvalidCharacters": "Ungültige Zeichen entfernen.",
-    "validation_error": "Irgendein Validierungsfehler",
-    "multiple_accounts": "E-Mail/Telefonnummer ist mit einem anderen Konto verknüpft. ",
-    "wrong_phone_number": "Falsche Telefonnummer",
-    "wrong_phone_number_format": "Falsches Telefonnummernformat",
-    "invalid_username": "Spitzname ist ungültig.",
-    "already_taken": "{{field}} schon genommen",
-    "invalid_validation_code": "Ungültige Codenummer, bitte versuchen Sie es erneut!",
-    "validation_expired": "Validierung abgelaufen",
-    "validation_not_found": "Validierung nicht gefunden",
-    "invalid_email": "Ungültige E-Mail",
-    "invalid_ref_username": "Spitzname ist ungültig.",
-    "invalid_phone": "Ungültige Telefonnummer",
-    "user_disabled": "Benutzer wurde deaktiviert",
-    "expired_action_code": "OTP im E-Mail-Link ist abgelaufen",
-    "account_exists_with_different_credential": "Es besteht bereits ein Konto mit der E-Mail-Adresse, die durch die Anmeldeinformationen bestätigt wird",
-    "invalid_credential": "Die Anmeldeinformationen sind fehlerhaft oder abgelaufen",
-    "operation_not_allowed": "Der Kontotyp, der den Anmeldeinformationen entspricht, ist nicht aktiviert",
-    "user_not_found_for_email": "Der angegebenen E-Mail-Adresse entspricht kein Benutzer",
-    "user_not_found": "Benutzer nicht gefunden",
-    "auth_in_progress": "Anmeldung läuft bereits",
-    "google_play_services_not_available": "Google Play-Dienste sind auf dem Gerät nicht verfügbar",
-    "unknown_error_with_code": "Unbekannter Fehler {{code}}",
-    "no_such_provider": "Sie haben diesen Anbieter nicht verlinkt",
-    "min_username": "Die Mindestlänge beträgt 4 Zeichen.",
-    "max_username": "Die maximale Länge beträgt 30 Zeichen.",
-    "code_expired": "Der Code ist abgelaufen. ",
-    "too_many_requests": "Zu viele Anfragen. "
+    "nicknameSize": "Μέγεθος ψευδώνυμου: 4-20 χαρακτήρες.",
+    "removeInvalidCharacters": "Αφαιρέστε τους μη έγκυρους χαρακτήρες.",
+    "validation_error": "Κάποιο σφάλμα επικύρωσης.",
+    "multiple_accounts": "Το email/αριθμός τηλεφώνου συνδέεται με άλλον λογαριασμό. Συνδεθείτε σε αυτόν τον λογαριασμό για να αποδείξετε ότι είστε ο κάτοχος, στη συνέχεια αποσυνδεθείτε και συνδεθείτε ξανά σε αυτόν εδώ. Εάν δεν είστε ο κάτοχος του άλλου λογαριασμού ή δεν μπορείτε να συνδεθείτε σε αυτόν, παρακαλούμε επικοινωνήστε με την υποστήριξή μας.",
+    "wrong_phone_number": "Μη έγκυρος αριθμός τηλεφώνου, προσπαθήστε ξανά.",
+    "invalid_username": "Το ψευδώνυμο δεν είναι έγκυρο.",
+    "email_already_taken": "Το email υπάρχει ήδη.",
+    "phone_number_already_taken": "Ο αριθμός τηλεφώνου υπάρχει ήδη.",
+    "invalid_validation_code": "Μη έγκυρος κωδικός αριθμός, προσπαθήστε ξανά!",
+    "validation_expired": "Η επικύρωση έληξε",
+    "validation_not_found": "Η επικύρωση δεν βρέθηκε",
+    "invalid_email": "Μη έγκυρο email.",
+    "invalid_password": "Μη έγκυρος κωδικός πρόσβασης.",
+    "invalid_ref_username": "Το ψευδώνυμο δεν είναι έγκυρο.",
+    "invalid_phone": "Μη έγκυρος αριθμός τηλεφώνου.",
+    "user_disabled": "Ο χρήστης έχει απενεργοποιηθεί.",
+    "expired_action_code": "Το OTP στον σύνδεσμο του email έχει λήξει.",
+    "account_exists_with_different_credential": "Υπάρχει ήδη ένας λογαριασμός με τη διεύθυνση email που επιβεβαιώνεται με τα διαπιστευτήρια.",
+    "invalid_credential": "Τα διαπιστευτήρια είναι εσφαλμένα ή έχουν λήξει.",
+    "operation_not_allowed": "Ο τύπος λογαριασμού που αντιστοιχεί στα διαπιστευτήρια δεν είναι ενεργοποιημένος.",
+    "user_not_found_for_email": "Δεν υπάρχει χρήστης που να αντιστοιχεί στο συγκεκριμένο email.",
+    "user_not_found": "Ο χρήστης δεν βρέθηκε.",
+    "auth_in_progress": "Η εγγραφή είναι ήδη σε εξέλιξη.",
+    "google_play_services_not_available": "Οι υπηρεσίες Google Play δεν είναι διαθέσιμες σε αυτή τη συσκευή.",
+    "unknown_error_with_code": "Άγνωστο σφάλμα: {{code}}",
+    "no_such_provider": "Δεν έχετε συνδέσει αυτόν τον πάροχο.",
+    "min_username": "Το ελάχιστο μήκος είναι 4 χαρακτήρες.",
+    "max_username": "Το μέγιστο μήκος είναι 30 χαρακτήρες.",
+    "code_expired": "Ο κωδικός έχει λήξει, ζητήστε έναν νέο κωδικό.",
+    "too_many_requests": "Πάρα πολλά αιτήματα, προσπαθήστε ξανά αργότερα.",
+    "network_error_title": "Δεν υπάρχει σύνδεση στο διαδίκτυο",
+    "network_error_message": "Η συσκευή σας δεν έχει ενεργή σύνδεση στο διαδίκτυο.",
+    "unknown_error": "Προέκυψε ένα σφάλμα, προσπαθήστε ξανά αργότερα.",
+    "general_error_title": "Ωχ...",
+    "general_error_message": "Φαίνεται ότι κάτι πήγε στραβά. Η ομάδα μας προσπαθεί να το διορθώσει αμέσως.",
+    "general_network_error": "Προέκυψε σφάλμα δικτύου, ελέγξτε τη σύνδεσή σας.",
+    "credential_already_in_use": "Αυτά τα διαπιστευτήρια είναι ήδη συνδεδεμένα με έναν διαφορετικό λογαριασμό χρήστη.",
+    "email_already_in_use": "Η διεύθυνση email χρησιμοποιείται ήδη από άλλον λογαριασμό.",
+    "user_token_expired": "Τα διαπιστευτήριά σας δεν είναι πλέον έγκυρα, παρακαλούμε συνδεθείτε ξανά.",
+    "requires_recent_login": "Αυτή η λειτουργία είναι ευαίσθητη και απαιτεί πρόσφατο έλεγχο ταυτοποίησης. Συνδεθείτε ξανά.",
+    "same_email": "Δεν μπορείτε να χρησιμοποιήσετε το ίδιο e-mail.",
+    "weak_password": "Αδύναμος κωδικός πρόσβασης.",
+    "wrong_password": "Λάθος κωδικός πρόσβασης.",
+    "no_camera_permissions": "Δεν έχει χορηγηθεί άδεια χρήσης στην κάμερα.",
+    "no_library_permissions": "Δεν έχει χορηγηθεί άδεια χρήσης στην βιβλιοθήκη."
   },
   "profile": {
     "my_roles": {
-      "title": "Meine Rolle"
+      "title": "Ο ρόλος μου"
     },
-    "mining_calculator": "Mining-Rechner",
-    "invite_friends": "Freunde einladen",
-    "invite_friends_engage": "Sagen Sie es weiter und laden Sie Ihre Freunde ein. ",
-    "global_rank": "Globaler Rang",
-    "view_all_roles": "alle Rollen anzeigen",
-    "data_is_hidden": "Daten werden ausgeblendet",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "υπολογισμός κερδών",
+    "invite_friends": "Προσκαλέστε φίλους",
+    "invite_friends_engage": "Διαδώστε το και προσκαλέστε τους φίλους σας. Όσες περισσότερες παραπομπές, τόσο περισσότερα θα κερδίζετε!",
+    "global_rank": "παγκόσμια κατάταξη",
+    "view_all_roles": "προβολή όλων των ρόλων",
+    "data_is_hidden": "τα δεδομένα είναι κρυφά",
+    "progress_text": "{{value}} από {{total}}",
     "not_found": {
-      "title": "Benutzer wurde nicht gefunden",
-      "description": "Hoppla, wir konnten diesen Benutzer nicht finden"
+      "title": "Ο χρήστης δεν βρέθηκε.",
+      "description": "Ωχ, δεν μπορέσαμε να βρούμε αυτόν τον χρήστη."
     },
     "my_badges": {
-      "title": "Meine Abzeichen"
+      "title": "Τα σήματά μου"
     },
     "badges": {
-      "title": "Abzeichen"
+      "title": "Σήματα"
     },
     "roles": {
-      "title": "Rollen"
+      "title": "Ρόλοι"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "Νομίσματα",
+        "description": "νομίσματα"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "Κοινωνικά δίκτυα",
+        "description": "φίλοι"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "Επίπεδο",
+        "description": "Επίπεδο"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update"
+    "level": "επίπεδο",
+    "referrals": "Παραπομπές",
+    "coin": "Νομίσματα",
+    "social": "Κοινωνικά δίκτυα",
+    "phone_number": "Αριθμός τηλεφώνου",
+    "years": "Έτη",
+    "of": "από ",
+    "attention": "Προσοχή",
+    "email_address": "Διεύθυνση email",
+    "password": "Κωδικός πρόσβασης",
+    "data_hidden": "τα δεδομένα είναι κρυφά",
+    "pull_to_refresh": "σύρετε για ενημέρωση",
+    "comingSoon": "Προσεχώς",
+    "date": {
+      "today": "Σήμερα"
+    }
   },
   "mining_calculator": {
-    "result_label": "Du wirst verdienen",
-    "active_inviter": "Aktiver Einladender",
-    "tier_1_ref": "Tier-1-Empfehlungen",
-    "tier_2_ref": "Tier-2-Empfehlungen",
-    "active_miners": "Aktive Miner"
+    "result_label": "Θα κερδίσετε",
+    "active_inviter": "Ενεργός προσκεκλημένος",
+    "tier_1_ref": "Παραπομπές Κατηγορίας 1",
+    "tier_2_ref": "Παραπομπές Κατηγορίας 2",
+    "active_miners": "Ενεργές παραπομπές"
   },
   "home": {
     "wallet": {
-      "title": "GELDBÖRSE",
-      "rate": "Bergbaurate",
-      "balance": "AKTUELLER BILANZ"
+      "title": "ΠΟΡΤΟΦΟΛΙ",
+      "rate": "ΠΟΣΟΣΤΟ ΚΕΡΔΩΝ",
+      "balance": "ΤΡΕΧΟΝ ΥΠΟΛΟΙΠΟ"
     },
     "pioneer": {
-      "title": "PIONIER",
-      "rank": "GLOBALER RANG",
-      "referrals": "EMPFEHLUNGEN",
-      "description_part1": "Je mehr Benutzer Sie empfehlen, desto mehr ",
-      "description_part2": " Du verdienst"
+      "rank": "ΠΑΓΚΟΣΜΙΑ ΚΑΤΑΤΑΞΗ",
+      "referrals": "ΠΑΡΑΠΟΜΠΕΣ",
+      "description": "Παραπέμψτε περισσότερους χρήστες και κερδίστε περισσότερα [[:ice]]."
     },
     "referrals": {
-      "title": "EMPFEHLUNGEN",
-      "description": "Empfehlungsstatistik für die letzten 5 Tage",
-      "no_referrals_description": "Sie haben noch keine Empfehlungen",
-      "users_tier_1": "Benutzerstufe 1",
-      "users_tier_2": "Benutzerstufe 2"
+      "title": "ΠΑΡΑΠΟΜΠΕΣ",
+      "description": "Στατιστικά παραπομπών για τις προηγούμενες 5 ημέρες.",
+      "no_referrals_description": "Δεν έχετε ακόμα παραπομπές.",
+      "users_tier_1": "Χρήστες κατηγορίας 1",
+      "users_tier_2": "Χρήστες κατηγορίας 2"
     },
     "adoption": {
-      "title": "ANNAHME",
-      "level": "eben",
-      "users": "\nBenutzer"
+      "title": "ΑΝΑΘΕΣΗ",
+      "level": "επίπεδο",
+      "users": "χρήστες"
     },
-    "steps": {
-      "title": "Fang hier an",
-      "description": "Erledige die Aufgaben unten und verdiene 250 ",
-      "step_one": {
-        "title": "Fordern Sie Ihren Spitznamen an",
-        "description": "Legen Sie es fest und beginnen Sie, mit Ihrer Einladung zu verdienen."
+    "tasks": {
+      "achievements": "ΕΠΙΤΕΥΓΜΑΤΑ",
+      "title": "Η πρόοδός σας",
+      "description": "Ολοκληρώστε τις παρακάτω εργασίες και ανεβείτε επίπεδο!",
+      "completed": {
+        "title": "Συγχαρητήρια",
+        "description": "Συνεχίστε να ελέγχετε καθημερινά για να κερδίσετε επιπλέον ανταμοιβές!"
       },
-      "step_two": {
-        "title": "Starten Sie den Bergbau",
-        "description": "Ihre erste Mining-Session."
+      "popup": {
+        "title": "Εγγραφείτε στο κανάλι μας στο Telegram",
+        "description": "Προσδιορίστε το ψευδώνυμό σας που χρησιμοποιείται στο Telegram.",
+        "placeholder": "Ψευδώνυμο"
       },
-      "step_three": {
-        "title": "Profilbild",
-        "description": "Laden Sie Ihr Profilbild hoch."
+      "claim_username": {
+        "title": "Επιλέξτε το ψευδώνυμό σας",
+        "description": "Προσδιορίστε το και μοιραστείτε το με τους φίλους σας."
       },
-      "step_four": {
-        "title": "Telegramm beitreten",
-        "description": "Werden Sie Teil unserer Community und treten Sie jetzt bei."
+      "start_mining": {
+        "title": "Ξεκινήστε να κερδίζετε",
+        "description": "Η πρώτη σας συνεδρία ελέγχου."
       },
-      "step_five": {
-        "title": "Folge uns auf Twitter",
-        "description": "Bleiben Sie in Kontakt, folgen Sie uns auf Twitter."
+      "upload_profile_picture": {
+        "title": "Εικόνα προφίλ",
+        "description": "Ανεβάστε την εικόνα του προφίλ σας."
       },
-      "step_six": {
-        "title": "Lade 5 Freunde ein",
-        "description": "Erstellen Sie Ihr Team und steigern Sie Ihre Einnahmen."
+      "join_telegram": {
+        "title": "Εγγραφείτε στο Telegram",
+        "description": "Γίνετε μέρος της κοινότητάς μας και εγγραφείτε τώρα."
       },
-      "step_seven": {
-        "title": "Soziales Teilen",
-        "description": "Teilen Sie es mit Ihren Freunden in den sozialen Medien."
+      "follow_us_on_twitter": {
+        "title": "Ακολουθήστε μας στο Twitter",
+        "description": "Ας κρατήσουμε επαφή, ακολουθήστε μας στο Twitter."
+      },
+      "invite_friends": {
+        "title": "Προσκαλέστε 5 φίλους",
+        "description": "Μεγαλώστε την ομάδα σας και αυξήστε τα κέρδη σας."
       }
     },
     "overview": {
-      "title": "Überblick"
+      "title": "Επισκόπηση"
     },
     "menu": {
-      "notifications": "Benachrichtigungen",
-      "stats": "Statistiken",
-      "help": "Hilfe"
-    },
-    "tasks": {
-      "title": "AUFGABEN"
+      "notifications": "Ειδοποιήσεις",
+      "staking": "Κλείδωμα κεφαλαίων",
+      "stats": "Στατιστικά",
+      "help": "Βοήθεια"
     },
     "team": {
-      "title": "Mannschaft",
-      "view_team": "Mannschaft ansehen"
+      "title": "Ομάδα",
+      "view_team": "προβολή ομάδας"
     },
     "mining_rate": {
-      "title": "Bergbaurate",
-      "base": "Base"
+      "title": "ΠΟΣΟΣΤΟ ΚΕΡΔΩΝ",
+      "base": "Βάση"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak bezieht sich darauf, wie viele aufeinanderfolgende Tage Sie abgebaut haben.\n",
-      "streak": "STRÄHNE",
-      "days_off": "FREIE TAGE"
+      "title": "ΣΥΜΜΕΤΟΧΗ",
+      "description_part1": "Το διάστημα αναφέρεται στο πόσες συνεχόμενες ημέρες έχετε κάνει ελέγχους.",
+      "description_part2": "Για κάθε 6 συνεχόμενες ημέρες λαμβάνετε μία ημέρα ρεπό.",
+      "streak": "ΔΙΑΣΤΗΜΑ",
+      "days_off": "ΡΕΠΟ"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "Ρυθμίσεις",
+    "profile": "Προφίλ",
+    "legal": "Νομικά",
+    "support": "Υποστήριξη",
+    "personal_information_title": "Προσωπικές πληροφορίες",
+    "personal_information_description": "Διαχειριστείτε τα στοιχεία του προφίλ σας.",
+    "notifications_title": "Ειδοποιήσεις",
+    "notifications_description": "Διαχειριστείτε τις ειδοποιήσεις σας εδώ.",
+    "push_notifications_title": "Ειδοποιήσεις αυτόματης προώθησης",
+    "push_notifications_description": "Προσαρμόστε τις ρυθμίσεις των ειδοποιήσεων αυτόματης προώθησης.",
+    "email_notifications_title": "Ειδοποιήσεις μέσω email",
+    "email_notifications_description": "Προσαρμόστε τις ρυθμίσεις ειδοποιήσεων μέσω email.",
+    "terms_title": "Όροι Χρήσης",
+    "terms_description": "Ελέγξτε τους όρους χρήσης μας.",
+    "privacy_title": "Πολιτική Απορρήτου",
+    "privacy_description": "Μάθετε για την πολιτική απορρήτου μας.",
+    "feedback_title": "Στείλτε σχόλια",
+    "feedback_description": "Μοιραστείτε τις απόψεις σας μαζί μας.",
+    "invite_title": "Προσκαλέστε έναν φίλο",
+    "invite_description": "Κερδίστε επιπλέον με το ice προσκαλώντας τους φίλους σας.",
+    "delete_title": "Διαγραφή λογαριασμού",
+    "delete_description": "Διαγράψτε τον λογαριασμό σας.",
+    "delete_confirmation_title": "Είστε σίγουροι ότι θέλετε να καταργήσετε τον λογαριασμό;",
+    "delete_confirmation_yes": "Ναι, διαγραφή",
+    "logout_title": "Αποσύνδεση",
+    "logout_description": "Αποσυνδεθείτε και κάντε ένα διάλειμμα.",
+    "logout_confirmation_title": "Είστε σίγουροι ότι θέλετε να αποσυνδεθείτε;",
+    "logout_confirmation_yes": "Ναι, αποσύνδεση",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "Επιβεβαίωση νέου τηλεφώνου",
+      "description": "Επιβεβαιώστε τον κωδικό της χώρας σας και πληκτρολογήστε τον νέο αριθμό τηλεφώνου σας.",
+      "button": "Επιβεβαίωση νέου αριθμού τηλεφώνου"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
-      "type_push": "PUSH",
+      "enable_prompt": "Οι ειδοποιήσεις δεν επιτρέπονται. Θέλετε να τις ενεργοποιήσετε;",
+      "channel_achievements": "Επιτεύγματα",
+      "channel_news": "Νέα",
+      "channel_reminders": "Υπενθυμίσεις",
+      "channel_team": "Ομάδα",
+      "type_push": "ΑΥΤΟΜΑΤΗ ΠΡΟΩΘΗΣΗ",
       "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start mine, news or team information",
+      "disable_notifications": "Απενεργοποίηση των ειδοποιήσεων;",
+      "disable_notifications_description": "Με την απενεργοποίηση των ειδοποιήσεων δεν θα είστε σε θέση να λαμβάνετε ενημερώσεις όταν αρχίσετε να κάνετε ελέγχους, νέα ή πληροφορίες για την ομάδα.",
       "domain": {
-        "weekly": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
-        },
-        "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
-        },
-        "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
-        },
-        "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
-        },
-        "community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
-        },
-        "bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
-        },
-        "mining": {
-          "title": "Mining status",
-          "description": "Receive notifications about your mining activity"
-        },
-        "system": {
-          "title": "System",
-          "description": "Receive important notifications about the ice app"
-        },
-        "disableAll": {
+        "disable_all": {
           "title": "",
           "description": ""
+        },
+        "weekly_stats": {
+          "title": "Εβδομαδιαία στατιστικά",
+          "description": "Λάβετε ειδοποιήσεις σχετικά με τη δραστηριότητά σας."
+        },
+        "weekly_report": {
+          "title": "Εβδομαδιαία αναφορά",
+          "description": "Λάβετε ειδοποιήσεις σχετικά με τη δραστηριότητά σας."
+        },
+        "achievements": {
+          "title": "Επιτεύγματα",
+          "description": "Λάβετε ειδοποιήσεις σχετικά με την πρόοδό σας."
+        },
+        "promotions": {
+          "title": "Προωθήσεις",
+          "description": "Λάβετε ειδοποιήσεις για το πώς να αναπτύξετε την ομάδα σας και να κερδίζετε περισσότερα."
+        },
+        "news": {
+          "title": "Νέα",
+          "description": "Λάβετε ειδοποιήσεις από την ομάδα μας."
+        },
+        "micro_community": {
+          "title": "Μικρο-κοινότητα",
+          "description": "Λάβετε ειδοποιήσεις σχετικά με την ομάδα σας."
+        },
+        "daily_bonus": {
+          "title": "Καθημερινό μπόνους",
+          "description": "Λάβετε ειδοποιήσεις για να διεκδικήσετε το καθημερινό μπόνους σας."
+        },
+        "mining": {
+          "title": "Κατάσταση συνεδρίας",
+          "description": "Λάβετε ειδοποιήσεις σχετικά με τη δραστηριότητά των ελέγχων σας."
+        },
+        "system": {
+          "title": "Σύστημα",
+          "description": "Λάβετε σημαντικές ειδοποιήσεις σχετικά με την εφαρμογή ice."
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "Ρυθμίσεις γλώσσας",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "Αλλάξτε γλώσσα",
+      "prompt": "Εφαρμόζοντας αυτή τη ρύθμιση θα επανεκκινήσει η εφαρμογή."
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "Εικόνα προφίλ",
+    "inapp_privacy_title": "Απόρρητο",
+    "inapp_privacy_description": "Διαχειριστείτε τις πληροφορίες σας εδώ.",
+    "developer": "Προγραμματιστής",
+    "user_id": "Αναγνωριστικό χρήστη",
+    "user_token": "Διακριτικό χρήστη",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "Διαγραφή φωτογραφίας",
+      "edit": "Επεξεργασία φωτογραφίας προφίλ",
+      "photo_gallery": "Γκαλερί φωτογραφιών",
+      "camera": "Κάμερα"
     },
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "Επιβεβαίωση του email;",
+    "update_email_confirmation_title": "Ενημέρωση του email;",
+    "update_email_confirmation_subtitle": "Αν αλλάξετε τη διεύθυνση email σας, θα χρειαστεί να συνδεθείτε εκ νέου. Είστε σίγουροι ότι θέλετε να συνεχίσετε;",
+    "unlink_logins_title": "Αποσύνδεση συνδέσεων",
+    "unlink_logins_description": "Μπορείτε να αποσυνδέσετε τις συνδέσεις σας από εδώ."
   },
   "invite_share": {
-    "title": "Einen Freund einladen",
-    "telegram": "Telegramm",
+    "title": "Προσκαλέστε έναν φίλο",
+    "telegram": "Telegram",
     "twitter": "Twitter",
-    "whatsapp": "Whatsapp",
+    "whatsapp": "WhatsApp",
     "instagram": "Instagram",
     "email": "Email",
+    "fb": "Newsfeed",
     "sms": "SMS",
-    "fb": "Neuigkeiten",
-    "copy_link": "Link kopieren",
-    "more": "Mehr",
-    "copied": "KOPIERT",
-    "share_message": "Hallo! Treten Sie meinem Team im Ice Network bei und erhalten Sie 10 Eismünzen, wenn Sie mit meinem Empfehlungscode ein Konto erstellen. Laden Sie die App herunter:",
-    "description_part1": "Sagen Sie es weiter und laden Sie Ihre Freunde ein.  ",
-    "description_part2": " für jede neue Empfehlung, die Sie mitbringen."
+    "copy_link": "Αντιγραφή συνδέσμου",
+    "more": "Περισσότερα",
+    "copied": "ΑΝΤΙΓΡΑΦΗΚΕ",
+    "share_message": "Γεια, ☃️ Χιονάνθρωπε! Γίνετε μέλος της ομάδας μου στο ice και λάβετε 10 νομίσματα ice όταν εγγραφείτε χρησιμοποιώντας τον κωδικό παραπομπής μου:",
+    "share_subject": "Γίνετε μέλος της ομάδας μου στο ice",
+    "description": "Διαδώστε το και προσκαλέστε τους φίλους σας. Κερδίζετε [[:ice]] για κάθε νέα παραπομπή που φέρνετε.",
+    "share": "Κοινοποίηση"
   },
   "users": {
-    "ping": "KLINGELN",
-    "active": "Aktiv",
-    "inactive": "Inaktiv",
+    "ping": "PING",
+    "active": "Ενεργό",
+    "inactive": "Ανενεργό",
     "referralType": {
-      "T0": "Einladender",
-      "T1": "Stufe 1",
-      "T2": "Rang 2"
+      "T1": "Κατηγορία 1",
+      "T2": "Κατηγορία 2"
     }
   },
   "personal_information": {
-    "first_name": "Vorname",
-    "last_name": "Familienname, Nachname",
-    "country": "Land",
-    "city": "Stadt",
-    "title": "Persönliche Informationen",
-    "phone": "Telefon",
+    "first_name": "Όνομα",
+    "last_name": "Επώνυμο",
+    "country": "Χώρα",
+    "city": "Πόλη",
+    "title": "Προσωπικές πληροφορίες",
+    "phone": "Τηλέφωνο",
     "email": "Email",
-    "username": "Spitzname"
+    "username": "Ψευδώνυμο"
   },
   "username": {
     "error": {
-      "already_taken": "Spitzname ist bereits vergeben.",
-      "length": "Spitznamengröße: 4-20 Zeichen.",
-      "invalid_characters": "Ungültige Zeichen entfernen.",
-      "not_found": "Spitzname nicht gefunden.",
-      "some_error": "Ein Fehler ist aufgetreten.",
-      "refer_yourself": "Du kannst dich nicht selbst verweisen"
+      "already_taken": "Το ψευδώνυμο υπάρχει ήδη.",
+      "length": "Μέγεθος ψευδώνυμου: 4-20 χαρακτήρες.",
+      "invalid_characters": "Αφαιρέστε τους μη έγκυρους χαρακτήρες.",
+      "not_found": "Το ψευδώνυμο δεν βρέθηκε.",
+      "some_error": "Προέκυψε ένα σφάλμα.",
+      "refer_yourself": "Δεν μπορείτε να παραπέμψετε τον εαυτό σας."
     }
   },
-  "error": {
-    "user_exist": "Benutzername ist bereits vergeben",
-    "general_error": "Es ist ein Fehler aufgetreten, bitte versuchen Sie es später erneut",
-    "ref_not_found": "Eingeführte Empfehlung ist ungültig oder existiert nicht mehr",
-    "api_error": "Anfrage mit Status fehlgeschlagen {{status}} und Code {{code}}"
-  },
   "staking": {
-    "time_left": "Übrige Zeit",
-    "mining_rate": "Mining-Rate",
-    "appeal": "Steigern Sie Ihre Mining-Rate",
-    "benefits_description": "Setzen Sie Ihre Mining-Belohnungen im Voraus für bis zu {{periodYears}} Jahre und erhöhen Sie Ihre Mining-Rate um bis zu {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking-Bonus",
-    "period_label": "Staked-Zeitraum",
-    "title": "Pre-Staking",
-    "current_rate": "Tageskurs",
-    "allocation": "Zuweisung",
-    "description": "Staking ist ein Prozess, bei dem Ihre Krypto-Assets verpflichtet werden, ein Blockchain-Netzwerk zu unterstützen und Transaktionen zu bestätigen",
-    "terms_agree": "Ich stimme dem [[:ice]] [[:link]] zu. ",
-    "staking_terms": "Staking-Bedingungen",
-    "stake_now": "Jetzt vorab einsetzen!",
-    "balance_label": "Abgestecktes Guthaben",
-    "confirm_title": "Bestätigen Sie den Voreinsatz",
-    "confirm_subtitle": "Sind Sie sicher, dass Sie Ihre Coins vorab setzen möchten? "
+    "time_left": "Χρόνος που απομένει",
+    "mining_rate": "Ποσοστό Κερδών",
+    "appeal": "Ενισχύστε το ποσοστό κερδών σας",
+    "benefits_description": "Κλειδώστε τις ανταμοιβές σας στο ice για έως και 5 χρόνια και αυξήστε το ποσοστό κέρδους σας έως και 250%.",
+    "bonus_label": "Μπόνους κλειδώματος κεφαλαίων",
+    "period_label": "Περίοδος κλειδώματος κεφαλαίων",
+    "title": "Προσωρινό κλείδωμα κεφαλαίων",
+    "current_rate": "Τρέχον ποσοστό",
+    "allocation": "Κατανομή",
+    "description": "Το κλείδωμα κεφαλαίων είναι μια διαδικασία που περιλαμβάνει τη δέσμευση των κρυπτογραφικών περιουσιακών στοιχείων σας για την υποστήριξη ενός δικτύου blockchain και την επιβεβαίωση των συναλλαγών.",
+    "terms_agree": "Συμφωνώ με τους [[:ice]] [[:link]]Όρους για Κλείδωμα Κεφαλαίων[[/:link]]. Οι συναλλαγές σας στο ice θα κλειδωθούν για την επιλεγμένη περίοδο.",
+    "stake_now": "Κλείδωμα κεφαλαίων τώρα!",
+    "balance_label": "Υπόλοιπο στο κλείδωμα κεφαλαίων",
+    "confirm_title": "Επιβεβαιώστε το κλείδωμα κεφαλαίων",
+    "confirm_subtitle": "Είστε σίγουροι ότι θέλετε να κλειδώσετε τα νομίσματά σας; Αυτό δεν μπορεί να αναιρεθεί μετά την επιβεβαίωση."
   },
   "stats": {
-    "header_title": "Statistiken",
-    "active": "Aktive Benutzer",
-    "total": "Benutzer insgesamt",
-    "user_growth": "Benutzerwachstum",
-    "top_miners": "Top Bergleute",
-    "top_countries": "Top-Länder",
-    "online_miners": "Online-Miner",
-    "detailed_information": "Genaue Information"
+    "header_title": "Στατιστικά",
+    "active": "Ενεργοί χρήστες",
+    "total": "Σύνολο χρηστών",
+    "user_growth": "Ανάπτυξη χρηστών",
+    "top_miners": "Κορυφαίοι χρήστες",
+    "top_countries": "Κορυφαίες χώρες",
+    "online_miners": "Online χρήστες",
+    "detailed_information": "Λεπτομερείς πληροφορίες"
   },
   "update_required": {
-    "title": "Bitte aktualisieren",
-    "description": "Sie verwenden eine alte App-Version und müssen diese aktualisieren, um sie weiter nutzen zu können.",
-    "button_title": "Jetzt aktualisieren"
+    "title": "Παρακαλώ ενημερώστε",
+    "description": "Χρησιμοποιείτε μια παλιά έκδοση της εφαρμογής και πρέπει να την ενημερώσετε για να τη χρησιμοποιήσετε περαιτέρω.",
+    "button_title": "Ενημέρωση τώρα"
   },
   "general": {
-    "good_morning": "Guten Morgen",
-    "good_afternoon": "Guten Nachmittag",
-    "good_evening": "Guten Abend",
-    "ice": "Eis",
-    "ice_per_hour": "Eis/Std",
-    "seconds_short": "s"
+    "good_morning": "Καλημέρα",
+    "good_afternoon": "Καλησπέρα",
+    "good_evening": "Καλό απόγευμα",
+    "ice": "ice",
+    "ice_per_hour": "ice/ω",
+    "seconds_short": "δευτ",
+    "minutes_short": "λεπ",
+    "hours_short": "ω",
+    "days_short": "ημ"
   },
   "news": {
-    "news_feed": "Neuigkeiten",
-    "read_more": "Weiterlesen",
-    "today": "Heute",
-    "views": "Ansichten"
+    "news_feed": "Ροή ειδήσεων",
+    "read_more": "Διαβάστε περισσότερα",
+    "no_more_news": "αυτή είναι η τελευταία καταχώρηση στην ροή ειδήσεων.",
+    "views": "{{viewsCount}} προβολές"
   },
   "search": {
-    "nothing_is_found": "Nichts gefunden für \"{{query}}\"",
-    "search_by_country": "Suche nach Land",
-    "search_for_users": "Suchen Sie nach Benutzern"
+    "empty": "Αναζητήστε επαφές, φίλους στο ice και μέλη της μικρο-κοινότητάς σας.",
+    "nothing_is_found": "Δεν βρέθηκε τίποτα για το ερώτημά σας.",
+    "search_by_country": "Αναζήτηση ανά χώρα",
+    "search_for_users": "Αναζήτηση χρηστών",
+    "loading": "Αναζήτηση…"
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tippen Sie hier, um Ihre erste Mining-Sitzung zu starten",
-    "mining_reset_tooltip": "Drücken Sie für {{seconds}} Sekunden, um Ihre Mining-Sitzung zurückzusetzen",
-    "mining_holiday_reset_tooltip": "Sie verwenden einen arbeitsfreien Tag!  {{seconds}} Sekunden, um Ihre Mining-Sitzung zurückzusetzen",
-    "mining_holiday_active": "Sie verwenden einen arbeitsfreien Tag!"
+    "mining_inactive_tooltip": "Πατήστε εδώ για να ξεκινήσετε την πρώτη σας συνεδρία ελέγχου.",
+    "mining_reset_tooltip": "Πατήστε για 1 δευτερόλεπτο για να παρατείνετε τη συνεδρία ελέγχου.",
+    "mining_holiday_reset_tooltip": "Χρησιμοποιείτε το ρεπό σας! Πατήστε για 1 δευτερόλεπτο για να παρατείνετε τη συνεδρία ελέγχου.",
+    "mining_holiday_active": "Χρησιμοποιείτε το ρεπό σας!"
   },
   "invite_friend": {
-    "invite_button": "Freund einladen",
-    "button_title": "Freund einladen",
-    "description_part1": "Dein Freund hat es nicht ",
-    "description_part2": ".\n"
+    "invite_button": "Προσκαλέστε φίλο",
+    "button_title": "Προσκαλέστε φίλο",
+    "description": "Ο φίλος σας δεν είναι ακόμα ενεργός [[:ice]]. Στείλτε του μια πρόσκληση!"
   },
   "balance_history": {
-    "title": "Bilanzverlauf",
-    "wallet": "Geldbörse",
-    "blockchain": "Blockchain",
-    "wallet_update_interval": "stündlich aktualisiert",
-    "blockchain_update_interval": "alle 24 Stunden aktualisiert",
-    "list_end_label": "dies ist der letzte Eintrag der Bilanzhistorie",
-    "no_data": "Es gibt keine anzuzeigenden Daten\n"
+    "title": "Ιστορικό υπολοίπου",
+    "wallet": "Πορτοφόλι",
+    "blockchain": "Αλυσίδα συστοιχιών (Blockchain)",
+    "wallet_update_interval": "ενημερώνεται κάθε ώρα",
+    "blockchain_update_interval": "ενημερώνεται κάθε 24 ώρες",
+    "list_end_label": "αυτή είναι η τελευταία καταχώρηση του ιστορικού υπολοίπου.",
+    "no_data": "Δεν υπάρχουν δεδομένα προς εμφάνιση για την καθορισμένη περίοδο."
   },
   "pop_up": {
-    "update_now": "Jetzt aktualisieren",
-    "please_update": "Bitte aktualisieren",
-    "update_now_text": "Sie verwenden eine alte App-Version und müssen diese aktualisieren, um sie weiter verwenden zu können",
-    "try_again": "Versuchen Sie es nochmal",
-    "ups": "Ups...",
-    "try_again_text": "Scheint etwas schief gelaufen zu sein. \n{{errorIdentifier}}",
-    "view_changelog": "Änderungsprotokoll anzeigen",
-    "you_are_up_to_date": "Sie sind auf dem Laufenden!",
-    "up_to_date_text": "Sie verwenden jetzt die neueste Version. "
+    "update_now": "Ενημέρωση τώρα",
+    "please_update": "Παρακαλώ ενημερώστε",
+    "update_now_text": "Χρησιμοποιείτε μια παλιά έκδοση της εφαρμογής και πρέπει να την ενημερώσετε για να τη χρησιμοποιήσετε περαιτέρω.",
+    "you_are_up_to_date": "Είστε ενημερωμένοι!",
+    "up_to_date_text": "Τώρα χρησιμοποιείτε την τελευταία έκδοση. Δείτε όλες τις αλλαγές παρακάτω.",
+    "resurrection": "Επαναφορά",
+    "resurrection_message": "Έχετε μια μοναδική ευκαιρία να επαναφέρετε και να λάβετε τα [[:amount]] νομίσματα που χάσατε στο παρελθόν. [[:period]].",
+    "resurrection_warning": "Μπορείτε να επαναφέρετε μόνο μία φορά!",
+    "please_confirm": "Παρακαλώ επιβεβαιώστε",
+    "resurrection_no_confirm_message": "Θα χάσετε τα [[:amount]] νομίσματά σας για πάντα. Είστε σίγουροι ότι θέλετε να συνεχίσετε;",
+    "resurrection_yes_confirm_message": "Μπορείτε να επαναφέρετε μόνο μία φορά! Είστε σίγουροι ότι θέλετε να συνεχίσετε; Τα [[:amount]] νομίσματα θα επιστρέψουν στο υπόλοιπό σας εντός της επόμενης ώρας.",
+    "delete_account_confirmation_title": "Επιβεβαίωση διαγραφής",
+    "delete_account_confirmation_text": "Η διαγραφή του λογαριασμού σας θα διαγράψει μόνιμα όλα τα δεδομένα σας, συμπεριλαμβανομένου του υπολοίπου σας στο ice. Θέλετε να συνεχίσετε;"
   },
   "periods": {
-    "3_days": "3 Tage",
-    "7_days": "7 Tage",
-    "30_days": "30 Tage",
-    "1_day": "1 Tag",
-    "1_week": "1 Woche",
-    "1_month": "1 Monat",
-    "90_days": "90 Tage",
-    "14_days": "14 Tage"
+    "3_days": "3 ημέρες",
+    "7_days": "7 ημέρες",
+    "30_days": "30 ημέρες",
+    "1_day": "1 Ημέρα",
+    "1_week": "1 Εβδομάδα",
+    "1_month": "1 Μήνας",
+    "90_days": "90 ημέρες",
+    "14_days": "14 ημέρες"
   },
   "notifications": {
-    "joined": " ist Ihrem Team beigetreten",
-    "multiply": " und {{count}} Andere sind Ihrem Team beigetreten",
-    "ping": " hat dich angepingt, wach auf!",
-    "delete": "Löschen",
-    "add_notifications": "Fügt verspottete Benachrichtigungen hinzu",
-    "no_notifications": "Keine Benachrichtigungen zum Anzeigen",
-    "add_announcements": "Fügen Sie verspottete Ankündigungen hinzu",
-    "add_both": "Fügt verspottete Benachrichtigungen hinzu\n",
-    "clear_title": "Alle Benachrichtigungen löschen?",
-    "title": "Benachrichtigungen"
+    "joined": " έγινε μέλος της ομάδας σας.",
+    "multiply": " και {{count}} άλλοι έχουν γίνει μέλη της ομάδας σας.",
+    "ping": " σας έκανε ping, ξυπνήστε!",
+    "delete": "Διαγραφή",
+    "add_notifications": "Προσθήκη εικονικών ειδοποιήσεων",
+    "no_notifications": "Δεν υπάρχουν ειδοποιήσεις προς εμφάνιση.",
+    "add_announcements": "Προσθήκη εικονικών ανακοινώσεων",
+    "add_both": "Προσθέστε εικονικές ειδοποιήσεις και ανακοινώσεις μαζί",
+    "clear_title": "Διαγραφή όλων των ειδοποιήσεων;",
+    "title": "Ειδοποιήσεις"
   },
   "notification_feed_screen": {
-    "today": "Heute",
-    "yesterday": "Gestern",
-    "last_week": "Letzte Woche",
-    "this_month": "Diesen Monat",
-    "last_month": "Im vergangenen Monat",
-    "this_week": "In dieser Woche"
+    "yesterday": "Χθες",
+    "last_week": "Την προηγούμενη εβδομάδα",
+    "this_month": "Αυτόν τον μήνα",
+    "last_month": "Τον τελευταίο μήνα",
+    "this_week": "Αυτή την εβδομάδα"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Ihre Profilstatistik",
-      "description": "Tippen Sie auf die gewünschten Blöcke\n"
+      "title": "1.Τα στατιστικά του προφίλ σας",
+      "description": "Πατήστε στα τετράγωνα που θέλετε να αποκρύψετε δημοσίως"
     },
     "step2": {
-      "description": "Tippen Sie auf diesen Block, um ihn auszublenden\n",
-      "title": "2. Ihre aktuelle Rolle"
+      "description": "Πατήστε σε αυτό το τετράγωνο για να το αποκρύψετε δημοσίως.",
+      "title": "2. Ο τρέχων ρόλος σας"
     },
     "step3": {
-      "title": "3. Ihre verdienten Abzeichen",
-      "description": "Tippen Sie auf diesen Block, um ihn auszublenden\n"
+      "title": "3. Τα σήματα που κερδίσατε",
+      "description": "Πατήστε εδώ για να αποκρύψετε τα σήματά σας δημοσίως."
     }
   },
   "confirm_email": {
-    "title": "Bestätige deine E-Mail",
-    "description": "Bitte geben Sie Ihre E-Mail-Adresse ein und wir senden den Code ",
-    "note": "Wenn Sie die E-Mail nicht erhalten haben {{value}} Minuten, überprüfen Sie bitte Ihren Spam-Ordner.",
-    "wrong_email": "Falsche E-mail?",
-    "check_email": "Check deine E-Mails",
-    "emailed_link_to": "Wir haben einen magischen Link per E-Mail an gesendet",
-    "link_instruction": "Klicken Sie auf den Link, um sich anzumelden oder sich anzumelden.",
-    "modify_title": "Neue E-Mail bestätigen",
-    "modify_description": "Bitte geben Sie Ihre neue E-Mail-Adresse ein"
+    "title": "Επιβεβαιώστε το email σας",
+    "description": "Εισαγάγετε τη διεύθυνση email σας και θα σας στείλουμε τον κωδικό.",
+    "note": "Αν δεν λάβατε το email εντός 5 λεπτών, ελέγξτε τον φάκελο ανεπιθύμητης αλληλογραφίας σας.",
+    "wrong_email": "Λάθος email;",
+    "check_email": "Ελέγξτε το email σας",
+    "emailed_link_to": "Στείλαμε με email έναν σύνδεσμο στο",
+    "emailed_steps_to": "Στείλαμε με email τα βήματα στο",
+    "link_instruction": "Κάντε κλικ στο σύνδεσμο για να συνδεθείτε ή να εγγραφείτε.",
+    "reset_link_instruction": "Κάντε κλικ στο σύνδεσμο για να επαναφέρετε τον κωδικό πρόσβασής σας.",
+    "modify_title": "Επιβεβαίωση νέου email",
+    "modify_description": "Εισαγάγετε τη νέα σας διεύθυνση email."
   },
   "invalid_link": {
-    "title": "Ungültiger Link",
-    "description": "Leider ist dieser Link ungültig, bitte geben Sie Ihre E-Mail-Adresse erneut ein und wir senden Ihnen einen neuen Link.",
-    "back_button_title": "Zurück zur Anmeldung"
+    "title": "Μη έγκυρος σύνδεσμος",
+    "description": "Δυστυχώς, αυτός ο σύνδεσμος δεν είναι έγκυρος, εισαγάγετε ξανά το email σας και θα σας στείλουμε έναν νέο σύνδεσμο."
   },
   "confirm_code": {
-    "title": "Code bestätigen",
-    "description": "Bitte geben Sie den Code ein, der an gesendet wurde",
-    "send_code_again": "Code nochmal senden",
-    "resend_time_label": "Neuer Code verfügbar in ",
-    "enter_code": "Code eingeben",
-    "wrong_number": "Falsche Nummer?"
+    "title": "Επιβεβαίωση κωδικού",
+    "description": "Εισαγάγετε τον κωδικό που εστάλη στο",
+    "send_code_again": "Στείλτε ξανά τον κωδικό",
+    "resend_time_label": "Νέος κωδικός διαθέσιμος σε ",
+    "enter_code": "Πληκτρολογήστε τον κωδικό",
+    "wrong_number": "Λάθος αριθμός;"
   },
   "ice_bonus": {
-    "title": "Willkommene Belohnung",
-    "description": "Herzlichen Glückwunsch, Sie haben Ihre ersten [[:value]] [[:ice]] Coins erhalten, was unser [[:bold]]Vertrauen[[/:bold]] in [[:bold]]Sie[[/:bold] beweist ",
-    "balance_label": "Ihr aktuelles Guthaben"
+    "title": "Ανταμοιβή καλωσορίσματος",
+    "description": "Συγχαρητήρια, λάβατε τα πρώτα σας [[:value]] [[:ice]] νομίσματα, που αποδεικνύουν την [[:bold]]Εμπιστοσύνη[[/:bold]] μας σε [[:bold]]Εσάς[[/:bold]].",
+    "balance_label": "Το τρέχον υπόλοιπό σας"
   },
   "country_select": {
-    "title": "Land auswählen"
+    "title": "Επιλέξτε χώρα"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "Χιονάνθρωπος",
+      "subtitle": "Χτίστε μια αυτοκρατορία στο χιόνι",
+      "description": "Κερδίστε χρήματα κάνοντας έλεγχο κάθε 24 ώρες για να δείξετε τη δέσμευσή σας στο δίκτυο του ice και να αποδείξετε ότι είστε άνθρωπος και όχι ρομπότ."
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "Πρεσβευτής",
+      "subtitle": "Κυρίαρχος της αυτοκρατορίας του χιονιού",
+      "description": "Γίνεστε πρεσβευτής όταν τουλάχιστον 100 άτομα ενταχθούν στην ομάδα σας. Κάθε πρεσβευτής θα έχει πρώιμη πρόσβαση στις νέες λειτουργίες."
     }
   },
   "confirm_phone": {
-    "modify_title": "Neues Telefon bestätigen",
-    "modify_description": "Bitte bestätigen Sie Ihre Landesvorwahl und geben Sie Ihre neue Telefonnummer ein"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Vollendet",
-      "description": "Herzlichen Glückwunsch, Sie haben es sich verdient {{count}}"
-    }
+    "modify_title": "Επιβεβαίωση τηλεφώνου",
+    "modify_description": "Επιβεβαιώστε τον κωδικό της χώρας σας και πληκτρολογήστε τον αριθμό τηλεφώνου σας.",
+    "button": "Επιβεβαιώστε τη χώρα και το τηλέφωνο",
+    "same_phone_error": "Δεν μπορείτε να χρησιμοποιήσετε τον ίδιο αριθμό."
   },
   "date_select": {
-    "title": "Datum wählen"
+    "title": "Επιλέξτε ημερομηνία"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Weiterlesen",
-        "description": "Hier sehen Sie die neuesten Nachrichten von unserem Team. "
+      "readmore": {
+        "title": "Διαβάστε περισσότερα",
+        "description": "Εδώ μπορείτε να δείτε τα τελευταία νέα από την ομάδα μας. Πατήστε αυτό το κουμπί για να διαβάσετε ολόκληρο το άρθρο."
       },
-      "step_2": {
-        "description": "Tippen Sie auf jeden einzelnen Nachrichtentitel und lesen Sie die Vollversion davon. ",
-        "title": "Veröffentlichte Nachrichten"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Kontakte zulassen",
-        "description": "Synchronisieren Sie Ihre Kontakte und sehen Sie, wer bereits auf [[:ice]] ist. "
-      },
-      "step_2": {
-        "title": "Empfehlungen",
-        "description": "Hier sehen Sie, wie viele Empfehlungen Sie insgesamt haben. "
-      },
-      "step_3": {
-        "title": "Verdienste",
-        "description": "Ihr aktuelles Guthaben wird stündlich aktualisiert und hier angezeigt. "
-      },
-      "step_4": {
-        "title": "Kontakte",
-        "description": "Dies ist die Liste mit all Ihren Kontakten, diejenigen, die die App bereits haben, werden oben in der Liste angezeigt."
-      },
-      "step_5": {
-        "title": "Stufe 1",
-        "description": "Hier sehen Sie die Liste Ihrer Tier 1-Empfehlungen. "
-      },
-      "step_6": {
-        "title": "Rang 2",
-        "description": "Hier sehen Sie die Liste Ihrer Tier-2-Empfehlungen. "
-      },
-      "step_7": {
-        "title": "Aktive Benutzer",
-        "description": "Dies ist der aktuelle Status Ihrer Empfehlungs-Mining-Aktivität. "
-      },
-      "step_8": {
-        "title": "Tier-1-Einnahmen",
-        "description": "Hier sehen Sie die Liste Ihrer Tier 1-Empfehlungen. "
-      },
-      "step_9": {
-        "title": "Ping-Taste",
-        "description": "Benachrichtigen Sie Ihre Empfehlungen, um ihre Mining-Sitzungen zu starten. "
+      "releasednews": {
+        "title": "Δημοσιευμένες ειδήσεις",
+        "description": "Πατήστε σε κάθε μεμονωμένο τίτλο ειδήσεων και διαβάστε την πλήρη έκδοσή τους. Μείνετε ενημερωμένοι για όλα τα νέα και τις δημοσκοπήσεις μας."
       }
     },
     "team": {
-      "step_1": {
-        "title": "Kontakte zulassen",
-        "description": "Synchronisieren Sie Ihre Kontakte und sehen Sie, wer bereits auf [[:ice]] ist. "
+      "allow_contacts": {
+        "title": "Επιτρέψτε τις επαφές",
+        "description": "Συγχρονίστε τις επαφές σας και δείτε ποιος είναι συνδεδεμένος [[:ice]]. Στο μέλλον, θα μπορείτε να στείλετε το [[:ice]] σε οποιαδήποτε από τις επαφές σας."
       },
-      "step_2": {
-        "title": "Empfehlungen",
-        "description": "Hier sehen Sie, wie viele Empfehlungen Sie insgesamt haben. "
+      "confirm_phone": {
+        "title": "Επιβεβαίωση τηλεφώνου",
+        "description": "Επιβεβαιώστε την ταυτότητά σας και επιτρέψτε στις επαφές σας να γνωρίζουν ότι είστε επίσης μέλος του δικτύου ice. Ο αριθμός τηλεφώνου σας δεν θα κοινοποιηθεί σε άλλους τρίτους."
       },
-      "step_3": {
-        "title": "Verdienste",
-        "description": "Ihr aktuelles Guthaben wird stündlich aktualisiert und hier angezeigt. "
+      "contacts_list": {
+        "title": "Λίστα επαφών",
+        "description": "Αυτή είναι η λίστα με όλες τις επαφές σας, αυτοί που έχουν ήδη ενταχθεί στο δίκτυο [[:ice]] εμφανίζονται στην κορυφή της λίστας."
       },
-      "step_4": {
-        "title": "Kontakte",
-        "description": "Dies ist die Liste mit all Ihren Kontakten, diejenigen, die die App bereits haben, werden oben in der Liste angezeigt."
+      "referrals": {
+        "title": "Παραπομπές",
+        "description": "Εδώ θα δείτε πόσες παραπομπές έχετε συνολικά. Όσους περισσότερους ανθρώπους προσκαλέσετε, τόσο περισσότερα θα κερδίσετε."
       },
-      "step_5": {
-        "title": "Stufe 1",
-        "description": "Hier sehen Sie die Liste Ihrer Tier 1-Empfehlungen. ",
-        "url": "https://ice.io/"
+      "earnings": {
+        "title": "Κέρδη",
+        "description": "Το τρέχον υπόλοιπό σας ενημερώνεται κάθε ώρα και εμφανίζεται εδώ. Περιλαμβάνει τα άμεσα κέρδη σας και τα κέρδη σας που έχουν \"κλειδωθεί\" μαζί με τα κέρδη Κατηγορίας 1 και Κατηγορίας 2."
       },
-      "step_6": {
-        "title": "Rang 2",
-        "description": "Hier sehen Sie die Liste Ihrer Tier-2-Empfehlungen. ",
-        "url": "https://ice.io/"
+      "segmented_control_tier_one": {
+        "title": "Κατηγορία 1",
+        "description": "Εδώ μπορείτε να δείτε τη λίστα των παραπομπών σας Κατηγορίας 1. Για κάθε φίλο που κάνει έλεγχο την ίδια στιγμή με εσάς, θα κερδίζετε επιπλέον 25% επί του βασικού τρέχοντος ποσοστού κέρδους. [[:link]]Διαβάστε περισσότερα[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_7": {
-        "title": "Aktive Benutzer",
-        "description": "Dies ist der aktuelle Status Ihrer Empfehlungs-Mining-Aktivität. "
+      "segmented_control_tier_two": {
+        "title": "Κατηγορία 2",
+        "description": "Εδώ μπορείτε να δείτε τη λίστα των παραπομπών σας Κατηγορίας 2. Για κάθε φίλο που κάνει έλεγχο την ίδια στιγμή με εσάς, θα κερδίζετε επιπλέον 5% επί του βασικού τρέχοντος ποσοστού κέρδους. [[:link]]Διαβάστε περισσότερα[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_8": {
-        "title": "Tier-1-Einnahmen",
-        "description": "Hier sehen Sie die Liste Ihrer Tier 1-Empfehlungen. "
+      "active_users": {
+        "title": "Ενεργοί χρήστες",
+        "description": "Αυτή είναι η τρέχουσα κατάσταση της δραστηριότητας ελέγχων των παραπομπών σας. Θεωρούνται ενεργοί όταν έχουν μια ενεργή συνεδρία ελέγχου."
       },
-      "step_9": {
-        "title": "Ping-Taste",
-        "description": "Benachrichtigen Sie Ihre Empfehlungen, um ihre Mining-Sitzungen zu starten. "
+      "tier_one_earnings": {
+        "title": "Κέρδη Κατηγορίας 1",
+        "description": "Εδώ μπορείτε να δείτε τη λίστα των παραπομπών σας Κατηγορίας 1. Για κάθε μέλος που κάνει έλεγχο την ίδια στιγμή με εσάς, θα κερδίζετε και οι δύο επιπλέον 25% επί του βασικού τρέχοντος ποσοστού κέρδους."
+      },
+      "ping": {
+        "title": "Κουμπί Ping",
+        "description": "Ειδοποιήστε τις παραπομπές σας να ξεκινήσουν τις συνεδρίες ελέγχου. Μπορείτε να στείλετε μία ειδοποίηση σε κάθε παραπομπή κάθε 24 ώρες."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Αρχική",
+        "description": "Καλώς ήρθατε στο [[:ice]]. Στην αρχική οθόνη μπορείτε να βρείτε όλα τα στατιστικά στοιχεία σχετικά με το υπόλοιπό σας, το τρέχον ποσοστό κέρδους, την παγκόσμια κατάταξή σας και την ομάδα σας."
+      },
+      "invite": {
+        "title": "Πρόσκληση",
+        "description": "Για κάθε άτομο που προσκαλείτε, θα κερδίζετε και οι δύο έως και 25% επί του βασικού σας ποσοστού κέρδους. Όσους περισσότερους ανθρώπους προσκαλέσετε, τόσο περισσότερα θα κερδίσετε."
+      },
+      "team": {
+        "title": "Ομάδα",
+        "description": "[[:ice]] είναι καλύτερα με φίλους Σε αυτή τη σελίδα μπορείτε να δείτε την κατάσταση των μελών της ομάδας σας τόσο από το επίπεδο Κατηγορίας 1 όσο και από το επίπεδο Κατηγορίας 2. Μπορείτε επίσης να τους κάνετε ping από εδώ."
+      },
+      "news": {
+        "title": "Νέα",
+        "description": "Μείνετε ενημερωμένοι για όλα τα νέα και τις δημοσκοπήσεις μας. Καθώς είμαστε ένας Αποκεντρωμένος Αυτόνομος Οργανισμός, θα μπορείτε να ψηφίζετε εδώ για τις μελλοντικές λειτουργίες."
+      },
+      "profile": {
+        "title": "Προφίλ",
+        "description": "Προσαρμόστε τα στοιχεία του προφίλ σας και δείτε όλα τα επιτεύγματα και τα σήματα που έχετε κερδίσει. Χρησιμοποιήστε την αριθμομηχανή από εδώ, ώστε να υπολογίσετε τα κέρδη σας."
+      },
+      "earningicestart": {
+        "title": "Κέρδη στο ice",
+        "description": "Μπορείτε να ξεκινάτε τη [[:ice]] συνεδρία ελέγχου κάθε 24 ώρες πατώντας αυτό το κουμπί. Μην ξεχνάτε να επιστρέφετε κάθε μέρα και ξεκινήστε να κερδίζετε χρήματα!"
+      },
+      "earningiceseemore": {
+        "title": "Κέρδη στο ice",
+        "description": "Πατήστε ξανά και δείτε περισσότερες λεπτομέρειες σχετικά με την τρέχουσα συνεδρία ελέγχου."
+      },
+      "stats": {
+        "title": "Στατιστικά",
+        "description": "Στη σελίδα στατιστικών μπορείτε να δείτε το Σύνολο και τους Ενεργούς χρήστες που έκαναν ελέγχους κάθε μέρα, καθώς και τις κορυφαίες χώρες και χρήστες."
+      },
+      "help": {
+        "title": "Βοήθεια",
+        "description": "Έχετε ερωτήσεις; Ελέγξτε τη λίστα με τις συχνές ερωτήσεις μας. Αν δεν μπορείτε να βρείτε αυτό που ψάχνετε, μη διστάσετε να επικοινωνήσετε μαζί μας στο hi@ice.io."
+      },
+      "preStaking": {
+        "title": "Κλείδωμα κεφαλαίων",
+        "description": "Μεγιστοποιήστε τις αποδόσεις σας με το να κλειδώσετε τις ανταμοιβές που κερδίζετε. Επιλέξτε την κατανομή και την περίοδο κλειδώματος κεφαλαίων για να λάβετε ένα μπόνους επιπλέον των κερδών σας."
+      },
+      "wallet": {
+        "title": "Κάρτα πορτοφολιού",
+        "description": "Μπορείτε να βρείτε εδώ το τρέχον [[:ice]] υπόλοιπό σας, μαζί με το ποσοστό κέρδους. Όσο περισσότερες παραπομπές από την ομάδα σας είναι ενεργοί, τόσο υψηλότερο είναι το ποσοστό κέρδους."
+      },
+      "earning": {
+        "title": "Κάρτα κερδών",
+        "description": "Μείνετε ενήμεροι για το ποσοστό κέρδους και τα μπόνους σας! Εδώ μπορείτε να δείτε το τρέχον ποσοστό σας, το βασικό μας ποσοστό και τα ποσοστά μπόνους για διάφορες δραστηριότητες στην εφαρμογή."
+      },
+      "engagement": {
+        "title": "Κάρτα συμμετοχής",
+        "description": "Παρακολουθήστε τις συνεδρίες ελέγχων και τα ρεπό σας! Ελέγξτε αυτή την ενότητα για περισσότερες λεπτομέρειες σχετικά με τις διαδοχικές συνεδρίες ελέγχων και δείτε πόσες διαθέσιμες ημέρες ρεπό έχετε."
+      },
+      "profilecard": {
+        "title": "Κάρτα προφίλ",
+        "description": "Μπορείτε να παρακολουθείτε την κατάσταση του προφίλ σας από αυτή την κάρτα. Εμφανίζει την τρέχουσα παγκόσμια κατάταξή σας, μαζί με τον ρόλο σας, το επίπεδο και το σύνολο των παραπομπών σας."
+      },
+      "referralscard": {
+        "title": "Κάρτα παραπομπών",
+        "description": "Δείτε την εξέλιξη των στατιστικών των παραπομπών σας για τις προηγούμενες 5 ημέρες, τόσο για τις παραπομπές Κατηγορίας 1 όσο και για τις παραπομπές Κατηγορίας 2, πατώντας αυτή την κάρτα."
+      },
+      "adoptioncard": {
+        "title": "Κάρτα αναδοχής",
+        "description": "Με βάση το μέσο όρο του συνόλου των ενεργών Χιονάνθρωπων της τελευταίας εβδομάδας, μπορείτε να δείτε το τρέχον [[:ice]] ποσοστό κέρδους. Το ποσοστό κέρδους μειώνεται στο μισό όταν επιτευχθεί το επόμενο όριο."
+      },
+      "nickname": {
+        "title": "Ψευδώνυμο",
+        "description": "Το ψευδώνυμο είναι αυτό που σας κάνει μοναδικούς. Οι φίλοι σας θα πρέπει να χρησιμοποιήσουν αυτό το ψευδώνυμο για να ενταχθούν στην ομάδα σας. Μπορείτε επίσης να χρησιμοποιήσετε αυτή τη συντόμευση για να ανοίξετε το προφίλ σας."
+      },
+      "balancehistory": {
+        "title": "Ιστορικό υπολοίπου",
+        "description": "Μπορείτε να βρείτε εδώ το τρέχον [[:ice]] υπόλοιπό σας στο τοπικό πορτοφόλι και στην αλυσίδα συστοιχιών (blockchain). Το υπόλοιπο του τοπικού πορτοφολιού ενημερώνεται κάθε ώρα, ενώ το υπόλοιπο της αλυσίδας συστοιχιών (blockchain) ενημερώνεται κάθε 24 ώρες."
+      },
+      "achievements": {
+        "title": "Επιτεύγματα",
+        "description": "Ολοκληρώστε τις παρακάτω εργασίες και ανεβείτε επίπεδο! Ξεκινήστε την πρώτη σας συνεδρία ελέγχου τώρα!"
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Verknüpfung von Anmeldungen aufheben",
-    "sessionName": "Einloggen über {{providerName}}",
+    "title": "Αποσύνδεση συνδέσεων",
+    "sessionName": "Σύνδεση μέσω {{providerName}}",
     "buttons": {
-      "currentSession": "Aktuelle Sitzung",
-      "endSession": "Sitzung beenden",
-      "loginUnlinked": "Anmeldung nicht verknüpft",
-      "sessionEnded": "Sitzung beendet",
-      "unlink": "Verknüpfung aufheben"
+      "currentSession": "Τρέχουσα συνεδρία",
+      "endSession": "Τέλος συνεδρίας",
+      "loginUnlinked": "Είσοδος χωρίς σύνδεση",
+      "sessionEnded": "Η συνεδρία τελείωσε",
+      "unlink": "Αποσύνδεση"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Anmeldung aufheben?",
-        "message": "Sind Sie sicher, dass Sie die Verknüpfung über die Anmeldung aufheben möchten {{providerName}} von diesem Gerät?"
+        "title": "Αποσύνδεση σύνδεσης;",
+        "message": "Είστε σίγουροι ότι θέλετε να αποσυνδέσετε τη σύνδεση μέσω {{providerName}}από αυτή τη συσκευή;"
       },
       "endSession": {
-        "title": "Sitzung beenden?",
-        "message": "Sind Sie sicher, dass Sie die beenden möchten {{providerName}} Anmeldesitzung von diesem Gerät?"
+        "title": "Τέλος συνεδρίας;",
+        "message": "Είστε σίγουροι ότι θέλετε να τερματίσετε τη συνεδρία σύνδεσης {{providerName}}από αυτή τη συσκευή;"
       }
     }
   },
@@ -769,5 +844,53 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "extra_bonus": {
+    "claim_title": "Σημερινό μπόνους",
+    "claim_message": "Ήρθε η ώρα για το σημερινό σας μπόνους, πατήστε το κουμπί [[:bold]]“Διεκδίκηση του Μπόνους”[[/:bold]] παρακάτω.",
+    "link": "Μάθετε περισσότερα",
+    "extra_message": "Έχετε λάβει το καθημερινό σας επιπλέον μπόνους στο ποσοστό κέρδους σας.",
+    "expired_title": "Το μπόνους έληξε",
+    "expired_message": "Δυστυχώς, το σημερινό μπόνους έληξε. Μείνετε συντονισμένοι για την επόμενη ειδοποίηση!",
+    "result_title": "Συγχαρητήρια"
+  },
+  "early_access": {
+    "title": "Πρώιμη πρόσβαση",
+    "message_part1": "Πάρτε μια μικρή γεύση από την εφαρμογή [[:bold]]ice[[/:bold]] πριν από την[[:bold]]επερχόμενη επίσημη κυκλοφορία μας.[[/:bold]]",
+    "message_part2": "Όλα τα υπόλοιπα θα επανέλθουν στο 0 κατά την ημερομηνία κυκλοφορίας. Η ομάδα σας, ωστόσο, θα παραμείνει ανέπαφη.",
+    "message_part3": "Σας ευχαριστούμε για την υποστήριξή σας!",
+    "checkbox_description": "Το γνωρίζω! Μην εμφανίσετε ξανά αυτό το αναδυόμενο παράθυρο."
+  },
+  "mining_notice": {
+    "title": "Ειδοποίηση",
+    "message": "Ευχαριστούμε για το ενδιαφέρον σας για το πως να κερδίσετε χρήματα στο [[:bold]]ice![[/:bold]] Προς το παρόν τελειοποιούμε την τεχνολογία μας και οι έλεγχοι δεν είναι διαθέσιμοι προς το παρόν. Αυτή είναι η ευκαιρία σας να επικεντρωθείτε στη δημιουργία της ομάδας σας και στην ανάπτυξη της μικρο-κοινότητάς σας.",
+    "message_footer": "Μείνετε συντονισμένοι για ενημερώσεις στα κανάλια μας στο [[:twitter]]Twitter[[/:twitter]] και στο [[:telegram]]Telegram[[/:telegram]]."
+  },
+  "qr_code": {
+    "description": "Σαρώστε τον κωδικό QR για να γίνετε μέλος της ομάδας μου."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Ελάτε μαζί μας στο TikTok",
+      "description": "Θέλαμε απλώς να επικοινωνήσουμε μαζί σας και να σας ενημερώσουμε για τη συναρπαστική νέα μας κοινότητα στο TikTok. Μοιραζόμαστε διασκεδαστικό και ενημερωτικό περιεχόμενο σχετικά με το ψηφιακό μας νόμισμα, το ice, και θα θέλαμε πολύ να μας ακολουθήσετε!"
+    },
+    "youtube": {
+      "title": "Ελάτε μαζί μας στο YouTube",
+      "description": "Από σεμινάρια για το πώς να κερδίσετε χρήματα στο ice, μέχρι ενημερώσεις σχετικά με νέες λειτουργίες, ακόμα και διασκεδαστικό περιεχόμενο της κοινότητας, το κανάλι μας στο YouTube είναι το ιδανικό μέρος για να μείνετε ενημερωμένοι."
+    },
+    "linkedin": {
+      "title": "Ελάτε μαζί μας στο LinkedIn",
+      "description": "Η συμμετοχή στην κοινότητα του ice στο LinkedIn είναι ένας πολύ καλός τρόπος για να ενημερωθείτε για τις τελευταίες εξελίξεις και να επικοινωνήσετε με άτομα με παρόμοιες ιδέες που είναι εξίσου παθιασμένοι με το μέλλον των ψηφιακών νομισμάτων όπως εσείς."
+    },
+    "facebook": {
+      "title": "Ελάτε μαζί μας στο Facebook",
+      "description_part1": "Σας συνιστούμε να ακολουθήσετε τη σελίδα μας στο Facebook.",
+      "description_part2": "Όχι μόνο θα σας βοηθήσει να μείνετε ενήμεροι για όλα όσα συμβαίνουν με το πρότζεκτ του ice, αλλά είναι επίσης ένας πολύ καλός τρόπος να συνδεθείτε με την κοινότητά μας και να αποτελέσετε κομμάτι του διαλόγου."
+    },
+    "instagram": {
+      "title": "Ελάτε μαζί μας στο Instagram",
+      "description_part1": "Το να μας ακολουθήσετε στο Instagram είναι ένας πολύ καλός τρόπος για να είστε ενήμεροι και να επικοινωνήσετε με άλλους χρήστες που είναι επίσης παθιασμένοι με το ice",
+      "description_part2": "Επιπλέον, θα είστε οι πρώτοι που θα μαθαίνετε για οποιεσδήποτε νέες λειτουργίες ή προωθητικές ενέργειες που δρομολογούμε."
+    }
   }
 }

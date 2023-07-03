@@ -1,803 +1,896 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "iceಗೆ ಸುಸ್ವಾಗತ",
+      "description": "[[:ice]] ನಿಮ್ಮ ಫೋನಿನ ಮೂಲಕ ಸಂಪಾದಿಸುವ  ಡಿಜಿಟಲ್ ಕರೆನ್ಸಿಯಾಗಿದೆ.  ice  ತಮ್ಮಂತಹ ದಿನನಿತ್ಯ ದ ಬಳಕೆದಾರರ ಮತ್ತು ಒಡೆತನ ದಲ್ಲಿ ನಿರ್ವಹಿಸಲ್ಪಡುತ್ತದೆ"
     },
     "page2": {
-      "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "title": "ಗ್ರಹ ಸ್ನೇಹಿಯಾಗಿದೆ",
+      "description": "[[:ice]] ಇದು \"ಪ್ರೂಪ್ ಆಫ ಸ್ಟೇಕ್\" ಒಮ್ಮತದ ಕಾರ್ಯದಕ್ಷತೆಯನ್ನು ಬಳಸುವುದರಿಂದ ಅಂರ್ತಗತವಾಗಿ BTCಗಿಂತಲೂ ಹೆಚ್ಚು ಕ್ಷಮತೆಯನ್ನು ಹೊಂದಿರುತ್ತದೆ ಪ್ರೂಪ್ ಆಫ ಸ್ಟೇಕ್(POS)ನೊಂದಿಗೆ, ಕ್ರಿಪ್ಟೋ ಕರೆನ್ಸಿ ಯ ಮಾಲೀಕ ರು ಮೌಲ್ಯಾಧಾರಿತ ನಾಣ್ಯಗಳ ಸಂಖ್ಯೆಯ  ಮೇಲೆ ಬ್ಲಾಕ್ ವಹಿವಾಟುಗಳ ನಡೆಸುವ ಮೂಲಕ ಮಾನ್ಯತೆ ಹೊಂದಿದೆ"
     },
     "page3": {
-      "title": "People’s Coin",
-      "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "title": "ಜನʼರ ನಾಣ್ಯ",
+      "description_part1": "ನಿಮ್ಮ ಕೈಯಲ್ಲಿಯೇ ಶಕ್ತಿ ಇದೆ",
+      "description_part2": "ನಾವು ಅಭಿವೃದ್ದಿಪಡಿಸುವ [[:ice]] ಎಲ್ಲವೂ ಮುಕ್ತ ಮಾರುಕಟ್ಟೆಯಲ್ಲಿದೆ ಮತ್ತು ಇದನ್ನು  ವಿಕೇಂದ್ರಿತ ಸ್ವಾಯತ್ತ ಸಂಸ್ಥೆಯಿಂದ (DAO) ನಿರ್ವಹಿಸಲ್ಪಡುತ್ತದೆ"
     },
     "page4": {
-      "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "title": "ಸಂಪರ್ಕದಲ್ಲಿರಿ",
+      "description": " ನಮ್ಮ ಉಚಿತವಾದ ಶಕ್ತಿ-ಲೈಟ್ ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ನೊಂದಿಗೆ ನಿಮ್ಮ ದೈನಂದಿನ ಚೆಕ್-ಇನ್ಗಾಗಿ ಟ್ಯಾಪ್ [[:iceLogo]]ಮಾಡಿ.  ನಿಮ್ಮ ದೈನಂದಿನ ಟ್ಯಾಪ್  ನೈಜ ಮಾನವರ ಕೈಯಲ್ಲಿ ನಿರ್ವಹಿಸುವುದನ್ನು ಖಚಿತಪಡಿಸುತ್ತದೆ.ರೋಬೋಟ್ ಅಲ್ಲ,"
     },
     "page5": {
-      "title": "Refer & Earn",
-      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
+      "title": "ರೆಫರ್ ಮಾಡಿ ಮತ್ತು ಗಳಿಸಿ",
+      "description": "ನಿಮ್ಮ ಸ್ನೇಹಿತರನ್ನು ಆಹ್ವಾನಿಸಿ ಮತ್ತು ನಿಮ್ಮ ತಂಡಕ್ಕೆ ಸೇರುವ ಪ್ರತಿಯೊಬ್ಬ ಸ್ನೇಹಿತನ ಮೂಲಕ ನಿಮ್ಮ ಮೂಲ ಗಳಿಕೆಯ ದರದಲ್ಲಿ 25% ಬೋನಸ್ (ಇಬ್ಬರೂ ಸಹ) ಗಳಿಸಿರಿ."
     },
     "page6": {
-      "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
-      "description_part2": "Don’t worry, we will not spam you!",
-      "not_now": "Not now"
+      "title": "ಸೂಚನೆಗಳು",
+      "description_part1": "[[:ice]] ಚೆಕ್-ಇನ್ ಅವಧಿಯು ಕೇವಲ 24  ಗಂಟೆಗಳವರೆಗೆ ಮಾತ್ರ ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಅವಧಿಯು ಮುಗಿಯುತ್ತಿರುವ ಸೂಚನೆಯನ್ನು ಪಡೆಯಲು  ನೀವು  ಬಯಸುತ್ತೀರಾ?",
+      "description_part2": "ಹೆದರಬೇಡಿ! ನಾವು ನಿಮ್ಮನ್ನು ಸ್ಪ್ಯಾಮ್ ಮಾಡುವುದಿಲ್ಲ",
+      "not_now": "ಈಗ ಬೇಡ"
     }
   },
   "button": {
-    "yes_btn": "Yes, please",
-    "next_btn": "Next",
-    "not_now": "Not now",
-    "view_all": "view all",
+    "yes_btn": "ಹೌದು, ದಯವಿಟ್ಟು",
+    "next_btn": "ಮುಂದೆ",
+    "not_now": "ಈಗ ಬೇಡ",
+    "view_all": "ಎಲ್ಲವನ್ನೂ ವೀಕ್ಷಿಸಿ",
     "invite_friend": {
-      "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "title": "ಸ್ನೇಹಿತರನ್ನು ಆಹ್ವಾನಿಸಿ",
+      "description": "ನಿಮ್ಮ ಸ್ನೇಹಿತರನ್ನು ಆಹ್ವಾನಿಸುವ ಮೂಲಕ [[:ice]]  ಹೆಚ್ಚು ಗಳಿಸಿರಿ"
     },
-    "no": "No",
-    "search_country": "Search for country",
-    "save": "Save",
-    "yes": "Yes",
-    "change": "Change",
-    "no_cancel": "No, cancel",
-    "complete": "Complete",
-    "cancel": "Cancel",
-    "clear": "Clear",
-    "finish": "Finish",
-    "next_step": "Next Step",
-    "see_all": "see all",
-    "back": "Back",
-    "search": "Search",
-    "continue": "Continue",
-    "apply": "Apply",
-    "reset": "Reset",
-    "skip_all": "Skip all",
-    "done": "Done",
-    "confirm": "Confirm",
-    "do_this_later": "Do this later",
-    "resurrect_me": "Resurrect Me",
-    "claim_bonus": "Claim Bonus",
-    "close": "Close",
-    "try_again": "Try Again",
-    "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "see_all": "ಎಲ್ಲವನ್ನೂ ನೋಡಿ",
+    "no": "ಇಲ್ಲ",
+    "search_country": "ದೇಶವನ್ನು ಹುಡುಕಿ",
+    "save": "ಉಳಿಸಿ",
+    "yes": "ಹೌದು",
+    "change": "ಬದಲಾಯಿಸಿ",
+    "no_cancel": "ಇಲ್ಲ, ರದ್ದುಪಡಿಸಿ",
+    "complete": "ಪೂರ್ಣಗೊಂಡಿದೆ",
+    "cancel": "ರದ್ದುಮಾಡಿ",
+    "clear": "ಅಳಿಸು",
+    "finish": "ಮುಕ್ತಾಯ",
+    "next_step": "ಮುಂದೆ",
+    "back": "ಹಿಂದೆ",
+    "search": "ಹುಡುಕಿ",
+    "continue": "ಮುಂದುವರೆಸಿ",
+    "apply": "ಅನ್ವಯಿಸಿ",
+    "reset": "ಮರುಹೊಂದಿಸಿ",
+    "skip_all": "ಎಲ್ಲವನ್ನು ಸ್ಕಿಪ್ ಮಾಡಿ",
+    "done": "ಮುಗಿದಿದೆ",
+    "confirm": "ಖಚಿತಪಡಿಸಿ",
+    "do_this_later": "ನಂತರ ಇದನ್ನು ಮಾಡಿ",
+    "resurrect_me": "ನನ್ನನ್ನು ಪುನರುತ್ಥಾನಗೊಳಿಸಿ ",
+    "claim_bonus": "ಬೋನಸ್ ಕ್ಲೈಮ್ ಮಾಡಿ",
+    "close": "ಮುಚ್ಚಿರಿ",
+    "try_again": "ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
+    "view_changelog": "ಚೇಂಜ್ ಲಾಗ್ ವೀಕ್ಷಿಸಿ",
+    "disable": "ನಿಷ್ಕ್ರಿಯ",
+    "agree": "ನಾನು ಒಪ್ಪುತ್ತೇನೆ",
+    "learn_more": "ಹೆಚ್ಚು ಕಲಿಯಿರಿ",
+    "back_to_login": "ಲಾಗಿನ್ ಗೆ ಹಿಂತಿರುಗಿ",
+    "follow_us": "ನಮ್ಮನ್ನು ಫಾಲೋ ಮಾಡಿ",
+    "subscribe": "ಚಂದದಾರರಾಗಿ"
   },
   "team": {
-    "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
+    "contacts_tab": "ಸಂರ್ಪಕಗಳು",
+    "tierOne_tab": "ಶ್ರೇಣಿ 1",
+    "tierTwo_tab": "ಶ್ರೇಣಿ 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "title": "ಪ್ರಸುತವಾಗಿ ನಿಮ್ಮಲ್ಲಿ ಯಾವುದೇ [[:title]] ರೆಫರಲ್ಸ್ ಗಳಿಲ್ಲ!",
+      "contacts": "ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಫೋನ್ ಬುಕ್ಕಿನಲ್ಲಿ ಯಾವುದೇ ಸಂಪರ್ಕಗಳನ್ನು ಹೊಂದಿಲ್ಲ.",
+      "button_title": "ಸ್ನೇಹಿತರನ್ನು ಆಹ್ವಾನಿಸಿ"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
-      "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_title": "[[:ice]] ಸ್ನೇಹಿತರೊಂದಿಗೆ ಉತ್ತಮವಾಗಿರಿ",
+      "empty_button_title": "ಸಂಪರ್ಕಗಳನ್ನು ಬಳಸಲು ಅನುಮತಿ ನೀಡಿ",
+      "empty_description": "ನಿಮ್ಮ ಸಂಪರ್ಕಗಳನ್ನು ಸಿಂಕ್ ಮಾಡಿ ಮತ್ತು ಈಗಾಗಲೇ ಅಲ್ಲಿ ಯಾರು ಇದ್ದಾರೆ ಎಂಬುದನ್ನು ನೋಡಿ [[:ice]]. ಭವಿಷ್ಯದಲ್ಲಿ, ನೀವು ನಿಮ್ಮ ಯಾವುದೇ ಸಂರ್ಪಕಗಳಿಗೆ ice ಕಳಿಸುವಷ್ಟು ಶಕ್ತರಾಗುವಿರಿ"
     },
     "header": {
-      "search_placeholder": "Search for users",
-      "referrals": "Referrals",
-      "earnings": "Earnings"
+      "search_placeholder": "ಬಳಕೆದಾರರನ್ನು ಹುಡುಕಿ",
+      "referrals": "ರೆಫರಲ್ಸ್",
+      "earnings": "ಗಳಿಕೆಗಳು"
     },
     "confirm_code": {
-      "title": "Confirm Code",
-      "description": "Please enter the confirmation code you have received on your phone.",
-      "placeholder": "Enter the code",
-      "button": "Confirm your code now"
+      "title": "ಕೋಡ್ ಖಚಿತಪಡಿಸಿ",
+      "description": "ದಯವಿಟ್ಟು ನಿಮ್ಮ ಫೋನಿನಲ್ಲಿ ಸ್ವೀಕರಿಸಿರುವ  ಖಚಿತವಾದ ಕೋಡನ್ನು ನಮೂದಿಸಿರಿ",
+      "placeholder": "ಕೋಡನ್ನು ನಮೂದಿಸಿರಿ",
+      "button": "ಈಗಲೇ ನಿಮ್ಮ ಕೋಡನ್ನು ಖಚಿತಪಡಿಸಿ"
     },
     "confirm_phone": {
-      "title": "Confirm Phone",
-      "description": "Please confirm your country code and enter your phone number."
+      "title": "ಪೋನ್ ಖಚಿತಪಡಿಸಿ",
+      "description": "ದಯವಿಟ್ಟು ನಿಮ್ಮ ದೇಶದ ಕೋಡ್ ಅನ್ನು ದೃಢೀಕರಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ."
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "friends"
+        "friends": "ಗೆಳೆಯರು"
       },
-      "all_contacts": "All contacts",
-      "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "all_contacts": "ಎಲ್ಲ ಸಂಪರ್ಕಗಳು",
+      "invite": "ಆಹ್ವಾನಿಸಿ",
+      "invitation_text": "ಹಾಯ್ {{name}}, ನಾನು ನಿಮ್ಮನ್ನು ice ಗೆ ಸೇರಲು ಆಹ್ವಾನಿಸುತ್ತಿದ್ದೇನೆ."
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier 1 Earnings"
+        "title_earnings": "ಶ್ರೇಣೀ1 ಗಳಿಕೆಗಳು"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier 2 Earnings"
+        "title_earnings": "ಶ್ರೇಣಿ 2 ಗಳಿಕೆಗಳು"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
-    "welcome": "Welcome to ice",
-    "email": "Email",
-    "slogan": "Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "logInSignUp": "ಲಾಗಿನ್ ಆಗಿ / ಸೈನ್ ಅಪ್",
+    "phone": "ಪೋನ್",
+    "or": "ಅಥವಾ",
+    "reset_password": "ಪಾಸವರ್ಡ್ ಮರುಹೊಂದಿಸಿ",
+    "welcome": "iceಗೆ ಸುಸ್ವಾಗತ",
+    "email": "ಇಮೈಲ್",
+    "slogan": "ಜಾಗತಿಕ ಕರೆನ್ಸಿಯನ್ನು ಮರುಹೊಂದಿಸಿ",
+    "privacy": "ಮುಂದುವರೆಯುವ ಮೂಲಕ, ನೀವು ನಮ್ಮ [[:link]]ಸೇವಾ ನಿಯಮಗಳನ್ನು[[/:link]] ಮತ್ತು [[:link]]ಗೌಪ್ಯತೆ ನೀತಿಗಳನ್ನು[[/:link]] ಒಪ್ಪಿಕೊಂಡಿರುವಿರಿ"
   },
   "claimUsername": {
-    "title": "Claim nickname",
-    "description": "Your friends will need to use this nickname to join your team",
-    "inputPlaceholder": "Enter your nickname",
-    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
-    "note_part2": "Example:",
-    "note_example": "your.name01"
+    "title": "ಅಡ್ಡಹೆಸರನ್ನು ಕ್ಲೈಮ್ ಮಾಡಿ",
+    "description": "ನಿಮ್ಮ ತಂಡವನ್ನು ಸೇರಲು ನಿಮ್ಮ ಗೆಳೆಯರು ಈ ಅಡ್ಡಹೆಸರನ್ನು ಬಳಸಬೇಕಾಗುತ್ತದೆ.",
+    "inputPlaceholder": "ಅಡ್ಡಹೆಸರನ್ನು ನಮೂದಿಸಿರಿ",
+    "note_part1": "ಅಡ್ಡಹೆಸರನ್ನು ಸೃಷ್ಟಿಸುವಾಗ, ಕೇವಲ ಪದಗಳು, ಸಂಖ್ಯೆಗಳು, ಮತ್ತು ಅವಧಿಗಳನ್ನು ಬಳಸಿರಿ.",
+    "note_part2": "ಉದಾಹರಣೆ:",
+    "note_example": "ನಿಮ್ಮ.ಹೆಸರು 01"
   },
   "whoInvitedYou": {
-    "title": "Who invited you?",
-    "description": "Enter the nickname of the person who invited you",
-    "inputPlaceholder": "Enter nickname",
-    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
-    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+    "title": "ನಿಮ್ಮನ್ನು ಯಾರು ಆಹ್ವಾನಿಸಿದರು?",
+    "description": "ನಿಮ್ಮನ್ನು ಆಹ್ವಾನಿಸಿದ ವ್ಯಕ್ತಿಯ ಅಡ್ಡಹೆಸರನ್ನು ನಮೂದಿಸಿ.",
+    "inputPlaceholder": "ಅಡ್ಡಹೆಸರನ್ನು ನಮೂದಿಸಿ",
+    "dontHaveInvitationCode": "ಈ ಹಂತವನ್ನು ಪೂರ್ಣಗೊಳಿಸುವ ಮೂಲಕ,ನೀವು ಮತ್ತು ನಿಮ್ಮ ಸ್ನೇಹಿತ ಒಂದೇ ಸಮಯದಲ್ಲಿ ಚೆಕ್-ಇನ್ ಮಾಡಿದರೆ ಮೂಲ ಗಳಿಕೆಯ ದರದಲ್ಲಿ 25% ಬೋನಸ್ ಗಳನ್ನು ಇಬ್ಬರೂ ಸ್ವೀಕರಿಸುವಿರಿ.",
+    "dontHaveCodeTip": "ನಿಮಗೆ ಆಹ್ವಾನದ ಕೋಡ್ ಇಲ್ಲದಿದ್ದರೆ, ನಾವು ನಮ್ಮಲ್ಲಿರುವ ಸದಸ್ಯರಲ್ಲಿ ಒಬ್ಬರನ್ನು ನಿಮ್ಮ ರೆಫರಲ್ ಆಗಿ ಆರಿಸಿಕೊಳ್ಳುತ್ತೇವೆ."
   },
   "errors": {
-    "nicknameSize": "Nickname size: 4-20 characters.",
-    "removeInvalidCharacters": "Remove invalid characters.",
-    "validation_error": "Some validation error",
-    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
-    "wrong_phone_number": "Invalid phone number, please try again",
-    "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken",
-    "phone_number_already_in_use": "Phone number already in use",
-    "invalid_validation_code": "Invalid code number, please try again!",
-    "validation_expired": "Validation expired",
-    "validation_not_found": "Validation not found",
-    "invalid_email": "Invalid email",
-    "invalid_ref_username": "Nickname is invalid.",
-    "invalid_phone": "Invalid phone number",
-    "user_disabled": "User has been disabled",
-    "expired_action_code": "OTP in email link is expired",
-    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
-    "invalid_credential": "The credential is malformed or has expired",
-    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
-    "user_not_found_for_email": "There is no user corresponding to the given email",
-    "user_not_found": "User not found",
-    "auth_in_progress": "Sign-In already in progress",
-    "google_play_services_not_available": "Google Play services are not available on the device",
-    "unknown_error_with_code": "Unknown error {{code}}",
-    "no_such_provider": "You do not have this provider linked",
-    "min_username": "Minimum length is 4 characters.",
-    "max_username": "Maximum length is 30 characters.",
-    "code_expired": "The code has expired. Please ask for a new code.",
-    "too_many_requests": "Too many requests. Please try again later.",
-    "network_error_title": "No internet connection",
-    "network_error_message": "Your device does not have any active internet connection",
-    "unknown_error": "Some error occurred, please try again later",
-    "general_error_title": "Oups...",
-    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
-    "general_network_error": "A network error has occurred. Please check your connection.",
-    "credential_already_in_use": "This credential is already associated with a different user account.",
-    "email_already_in_use": "The email address is already in use by another account.",
-    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
-    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "nicknameSize": "ಅಡ್ಡಹೆಸರಿನ ಗಾತ್ರ: 4-20 ಅಕ್ಷರಗಳು.",
+    "removeInvalidCharacters": "ಅಮಾನ್ಯ ಪದಗಳನ್ನು ತೆಗೆದುಹಾಕಿ.",
+    "validation_error": "ಕೆಲವು ಮೌಲ್ಯೀಕರಣ ದೋಷ.",
+    "multiple_accounts": "ಇಮೇಲ್/ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ಮತ್ತೊಂದು ಖಾತೆಯೊಂದಿಗೆ ಸಂಯೋಜಿಸಲಾಗಿದೆ. ಖಾತೆಯ ಮಾಲೀಕತ್ವವನ್ನು ಧೃಡಪಡಿಸಲು ದಯವಿಟ್ಟು ಲಾಗ್ ಇನ್ ಮಾಡಿ, ನಂತರ ಲಾಗ್ ಔಟ್ ಮಾಡಿ ಮತ್ತು ಇದಕ್ಕೆ ಲಾಗ್ ಇನ್ ಮಾಡಿರಿ. ನೀವು ಇತರ ಖಾತೆಯನ್ನು ಹೊಂದಿಲ್ಲದಿದ್ದರೆ ಅಥವಾ ಅದಕ್ಕೆ ಲಾಗ್ ಇನ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗದಿದ್ದರೆ, ದಯವಿಟ್ಟು ನಮ್ಮ ಸಹಾಯವನ್ನು ಸಂಪರ್ಕಿಸಿ.",
+    "wrong_phone_number": "ಅಮಾನ್ಯವಾದ ಫೋನ್ ಸಂಖ್ಯೆ, ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+    "invalid_username": "ಅಡ್ಡಹೆಸರು ಅಮಾನ್ಯವಾಗಿದೆ.",
+    "email_already_taken": " ಈಗಾಗಲೇ ಇಮೈಲ್ ತೆಗೆದುಕೊಳ್ಳಲಾಗಿದೆ.",
+    "phone_number_already_taken": " ಈಗಾಗಲೇ ಫೋನ್ ನಂಬರ್ ತೆಗೆದುಕೊಳ್ಳಲಾಗಿದೆ.",
+    "invalid_validation_code": "ಅಮಾನ್ಯವಾದ ಫೋನ್ ಸಂಖ್ಯೆ, ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+    "validation_expired": "ಮೌಲ್ಯೀಕರಿಸುವ ಅವಧಿ ಮುಗಿದಿದೆ",
+    "validation_not_found": "ಮೌಲ್ಯೀಕರಿಸುವಿಕೆ ಸಿಗುತ್ತಿಲ್ಲ",
+    "invalid_email": "ಅಮಾನ್ಯವಾದ ಇಮೈಲ್",
+    "invalid_password": "ಅಮಾನ್ಯವಾದ ಪಾಸವರ್ಡ್",
+    "invalid_ref_username": "ಅಡ್ಡಹೆಸರು ಅಮಾನ್ಯವಾಗಿದೆ.",
+    "invalid_phone": "ಅಮಾನ್ಯವಾದ ಪೋನ್ ನಂಬರ್",
+    "user_disabled": "ಬಳಕೆದಾರನನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ",
+    "expired_action_code": "OTP  ಇಮೈಲ್ ಲಿಂಕ್ ಅವಧಿಯು ಮುಗಿದಿದೆ",
+    "account_exists_with_different_credential": "ಈಗಾಗಲೇ ಧೃಡೀಕರಿಸಿದ ಇಮೇಲ್ ವಿಳಾಸದೊಂದಿಗೆ  ಈ ಖಾತೆಯು ಅಸ್ತಿತ್ವವನ್ನು ಪ್ರತಿನಿಧಿಸಲಾಗಿದೆ.",
+    "invalid_credential": "ಧೃಡೀಕರಿಸುವ ಮಾಹಿತಿ ಅಸಮರ್ಪಕವಾಗಿದೆ ಅಥವಾ ಅವಧಿಯು ಮುಗಿದಿದೆ",
+    "operation_not_allowed": "ಈ ಪ್ರಕಾರದ ಖಾತೆಗೆ ಅನುಗುಣವಾಗಿ ಧೃಡೀಕರಿಸುವುದನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿಲ್ಲ",
+    "user_not_found_for_email": "ಈ  ಬಳಕೆದಾರನ ಖಾತೆಗೆ ಅನುಗುಣವಾದ ಯಾವುದೇ ಇಮೈಲ್ ಇಲ್ಲ",
+    "user_not_found": "ಬಳಕೆದಾರ ಸಿಗುತ್ತಿಲ್ಲ",
+    "auth_in_progress": "ಈಗಾಗಲೇ ಸೈನ್- ಇನ್ ಮುಂದಿನ ಹಂತದಲ್ಲಿದೆ",
+    "google_play_services_not_available": "ಈ ಸಾಧನದಲ್ಲಿ ಗೂಗಲ್-ಪ್ಲೇ ಸೇವೆಗಳು ಲಭ್ಯವಿಲ್ಲ",
+    "unknown_error_with_code": "ಗೊತ್ತಿಲ್ಲದ ದೋಷ: {{code}}",
+    "no_such_provider": "ನೀವು ಈ ಪೂರೈಕೆದಾರರನ್ನು ಲಿಂಕ್ ಮಾಡಿರುವುದಿಲ್ಲ",
+    "min_username": "ಕನಿಷ್ಠ ಉದ್ದವು 4 ಪದಗಳಾಗಿರುತ್ತದೆ",
+    "max_username": "ಗರಿಷ್ಠ  ಉದ್ದವು 30 ಪದಗಳಾಗಿರುತ್ತದೆ.",
+    "code_expired": "ಕೋಡ್ ಅವಧಿ ಮುಗಿದಿದೆ, ದಯವಿಟ್ಟು ಇನ್ನೊಂದು  ಹೊಸ ಕೋಡ್ ಕೇಳಿ ಪಡೆಯಿರಿ",
+    "too_many_requests": "ಹಲವಾರು ವಿನಂತಿಗಳು, ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+    "network_error_title": "ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವಿಲ್ಲ",
+    "network_error_message": "ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಸಕ್ರಿಯವಾದ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವಿಲ್ಲ",
+    "unknown_error": "ಒಂದು ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ",
+    "general_error_title": "ಊಪ್ಸ್...",
+    "general_error_message": "ಏನೋ ತಪ್ಪಾಗಿದೆ ಎಂದು ಕಾಣುತ್ತಿದೆ. ಈಗ ನಮ್ಮ ತಂಡ ವು ಅದನ್ನು ಸರಿಪಡಿಸುವ ಕೆಲಸ ಮಾಡುತ್ತಿದೆ.",
+    "general_network_error": "ನೆಟ್ವರ್ಕ್ ದೋಷ ಸಂಭವಿಸಿದೆ, ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ.",
+    "credential_already_in_use": "ಈ ಧೃಡೀಕರಣಗಳು ಈಗಾಗಲೇ ಬೇರೆ ಬಳಕೆದಾರ ಖಾತೆಯೊಂದಿಗೆ ಸಂಯೋಜಿಸಲಾಗಿದೆ.",
+    "email_already_in_use": "ಇಮೈಲ್ ವಿಳಾಸವು ಈಗಾಗಲೇ ಮತ್ತೊಂದು ಖಾತೆಯ ಜೊತೆ ಬಳಸಲಾಗಿದೆ.",
+    "user_token_expired": "ಇನ್ನು ಮುಂದೆನಿಮ್ಮ ಧೃಡೀಕರಣಗಳು  ಮಾನ್ಯವಾಗಿಲ್ಲ, ದಯವಿಟ್ಟು ಮತ್ತೊಮ್ಮೆ ಸೈನ್ ಇನ್ ಮಾಡಿ.",
+    "requires_recent_login": "ಈ ಕಾರ್ಯಾಚರಣೆಯು ಸೂಕ್ಷ್ಮವಾಗಿದೆ ಮತ್ತು ಇತ್ತೀಚಿನ ದೃಢೀಕರಣದ ಅಗತ್ಯವಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೊಮ್ಮೆ ಸೈನ್ ಇನ್ ಮಾಡಿರಿ",
+    "same_email": "ನೀವು ಈ ಇಮೈಲ್ ಬಳಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
+    "weak_password": "ದುರ್ಬಲ ಪಾಸವರ್ಡ್",
+    "wrong_password": "ತಪ್ಪಾದ ಪಾಸವರ್ಡ್",
+    "no_camera_permissions": "ಕ್ಯಾಮೆರಾ ಅನುಮತಿಗಳನ್ನು ಸಮ್ಮತಿಸಿಲ್ಲ",
+    "no_library_permissions": "ಲೈಬ್ರರಿ ಅನುಮತಿಗಳನ್ನು ಸಮ್ಮತಿಸಿಲ್ಲ"
   },
   "profile": {
     "my_roles": {
-      "title": "My Role"
+      "title": "ನನ್ನ ಪಾತ್ರ"
     },
-    "mining_calculator": "earnings calculator",
-    "invite_friends": "Invite Friends",
-    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
-    "global_rank": "global rank",
-    "view_all_roles": "view all roles",
-    "data_is_hidden": "data is hidden",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "ಗಳಿಕೆಯ ಕ್ಯಾಲ್ಕುಲೇಟರ್",
+    "invite_friends": "ಸ್ನೇಹಿತರನ್ನು ಆಹ್ವಾನಿಸಿ",
+    "invite_friends_engage": "ವಿಷಯವನ್ನು ಹಂಚಿರಿ ಮತ್ತು ನಿಮ್ಮ ಸ್ನೇಹಿತರನ್ನು ಆಹ್ವಾನಿಸಿರಿ ಹೆಚ್ಚು ರೆಫರಲ್ಲುಗಳನ್ನು ಮಾಡಿದಷ್ಟು ಹೆಚ್ಚು ಗಳಿಸುವಿರಿ",
+    "global_rank": "ಜಾಗತಿಕ ಶ್ರೇಯಾಂಕ",
+    "view_all_roles": "ಎಲ್ಲಾ ಪಾತ್ರವನ್ನು ನೋಡಿರಿ",
+    "data_is_hidden": "ದತ್ತಾಂಶವನ್ನು ಮುಚ್ಚಿಡಲಾಗಿದೆ",
+    "progress_text": "{{value}} ಇಂದ {{total}}",
     "not_found": {
-      "title": "User was not found",
-      "description": "oops, we couldn't find this user"
+      "title": "ಬಳಕೆದಾರ ಸಿಗುತ್ತಿಲ್ಲ",
+      "description": "ಊಪ್ಸ್, ನಾವು ಈ ಬಳಕೆದಾರನನ್ನು ಹುಡುಕಲಾಗುತ್ತಿಲ್ಲ"
     },
     "my_badges": {
-      "title": "My Badges"
+      "title": "ನನ್ನ ಪದಕಗಳು"
     },
     "badges": {
-      "title": "Badges"
+      "title": "ಪದಕಗಳು"
     },
     "roles": {
-      "title": "Roles"
+      "title": "ಪಾತ್ರಗಳು"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "ನಾಣ್ಯಗಳು",
+        "description": "ನಾಣ್ಯಗಳು"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "ಸಮಾಜ",
+        "description": "ಗೆಳೆಯರು "
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "ಹಂತ",
+        "description": "ಹಂತ"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update",
-    "comingSoon": "Coming soon",
+    "level": "ಹಂತ",
+    "referrals": "ರೆಫರಲ್ಸ್",
+    "coin": "ನಾಣ್ಯಗಳು",
+    "social": "ಸಮಾಜ",
+    "phone_number": "ಪೋನ್ ನಂಬರ್",
+    "years": "ವರ್ಷಗಳು",
+    "of": " ಇಂದ ",
+    "attention": "ಗಮನ",
+    "email_address": "ಇಮೈಲ್ ವಿಳಾಸ",
+    "password": "ಪಾಸವರ್ಡ್",
+    "data_hidden": "ದತ್ತಾಂಶವನ್ನು ಮುಚ್ಚಿಡಲಾಗಿದೆ",
+    "pull_to_refresh": "ನವೀಕರಿಸಲು ಎಳೆಯಿರಿ",
+    "comingSoon": "ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ",
     "date": {
-      "today": "Today"
+      "today": "ಇಂದು"
     }
   },
   "mining_calculator": {
-    "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "result_label": "ನೀವು ಗಳಿಸುವಿರಿ",
+    "active_inviter": "ಸಕ್ರಿಯವಾದ ಅಹ್ವಾನಕಾರ",
+    "tier_1_ref": "ಶ್ರೇಣಿ 1 ರೆಫರಲ್ಸ್",
+    "tier_2_ref": "ಶ್ರೇಣಿ 2 ರೆಫರಲ್ಸ್",
+    "active_miners": "ಸಕ್ರಿಯವಾದ ರೆಫರಲ್ಸ್"
   },
   "home": {
     "wallet": {
-      "title": "WALLET",
-      "rate": "EARNING RATE",
-      "balance": "CURRENT BALANCE"
+      "title": "ವಾಲೆಟ್",
+      "rate": "ಗಳಿಕೆಯ ದರ",
+      "balance": "ಪ್ರಸ್ತುತ ಬಾಕಿ ಮೊತ್ತ"
     },
     "pioneer": {
-      "title": "PIONEER",
-      "rank": "GLOBAL RANK",
-      "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "rank": "ಜಾಗತಿಕ ಶ್ರೇಯಾಂಕ",
+      "referrals": "ರೆಫರಲ್ಸ್",
+      "description": "ಹೆಚ್ಚು ಬಳಕೆದಾರರನ್ನು ರೆಫರ್ ಮಾಡಿ ಮತ್ತು ಹೆಚ್ಚು ಗಳಿಸಿರಿ [[:ice]]."
     },
     "referrals": {
-      "title": "REFERRALS",
-      "description": "Referral stats for the previous 5 days",
-      "no_referrals_description": "You don't have any referrals yet",
-      "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "title": "ರೆಫರಲ್ಸ್",
+      "description": "ಹಿಂದಿನ  5 ದಿನಗಳ ರೆಫರಲ್ಸ್ ಗಳ ಅಂಕಿಅಂಶ",
+      "no_referrals_description": "ಪ್ರಸುತವಾಗಿ ನಿಮ್ಮಲ್ಲಿ ಯಾವುದೇ  ರೆಫರಲ್ಸ್ ಗಳಿಲ್ಲ!",
+      "users_tier_1": "ಬಳಕೆದಾರರ ಶ್ರೇಣಿ 1",
+      "users_tier_2": "ಬಳಕೆದಾರರ ಶ್ರೇಣಿ  2"
     },
     "adoption": {
-      "title": "ADOPTION",
-      "level": "level",
-      "users": "\nusers"
+      "title": "ಆಳವಡಿಸಿಕೊಳ್ಳುವುದು",
+      "level": "ಹಂತ",
+      "users": "ಬಳಕೆದಾರರು"
     },
-    "steps": {
-      "title": "Your progress",
-      "description": "Complete the tasks below and level up!",
-      "step_one": {
-        "title": "Claim your nickname",
-        "description": "Set it and start earning from your invite"
+    "tasks": {
+      "achievements": "ಸಾಧನೆಗಳು",
+      "title": "ನಿಮ್ಮ ಅಭಿವೃದ್ದಿ",
+      "description": "ಕೆಳಗಿನ ಕೆಲಸಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ ಮತ್ತು ಮುಂದಿನ ಹಂತಕ್ಕೆ ಹೋಗಿ",
+      "completed": {
+        "title": "ಧನ್ಯವಾದಗಳು",
+        "description": "ಹೆಚ್ಚು ಬಹುಮಾನಗಳನ್ನು ಗಳಿಸಲು ದಿನವೂ ಚೆಕ್-ಇನ್ ಮಾಡಿ"
       },
-      "step_two": {
-        "title": "Start mining",
-        "description": "Your first mining session"
+      "popup": {
+        "title": "ನಮ್ಮ ಟೆಲಿಗ್ರಾಮ್ ಚಾನಲ್ ಸೇರಿರಿ",
+        "description": "ಟೆಲಿಗ್ರಾಮಿನಲ್ಲಿ ಬಳಸಿರುವ ನಿಮ್ಮ ಅಡ್ಡಹೆಸರನ್ನು ನಮೂದಿಸಿರಿ",
+        "placeholder": "ಅಡ್ಡಹೆಸರು"
       },
-      "step_three": {
-        "title": "Profile picture",
-        "description": "Upload your profile image"
+      "claim_username": {
+        "title": "ಅಡ್ಡಹೆಸರನ್ನು ಕ್ಲೈಮ್ ಮಾಡಿ",
+        "description": "ಹೊಂದಿಸಿಡಿ ಮತ್ತು ನಿಮ್ಮ ಸ್ನೇಹಿತರೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿರಿ"
       },
-      "step_four": {
-        "title": "Join Telegram",
-        "description": "Be part of our community and join now"
+      "start_mining": {
+        "title": "ಗಳಿಸಲು ಪ್ರಾರಂಭಿಸಿ",
+        "description": "ನಿಮ್ಮ ಮೊದಲ ಚೆಕ್- ಇನ್ ಅವಧಿ"
       },
-      "step_five": {
-        "title": "Follow us on Twitter",
-        "description": "Let’s keep in touch, follow us on twitter"
+      "upload_profile_picture": {
+        "title": "ಪ್ರೋಫೈಲ್ ಚಿತ್ರ",
+        "description": " ನಿಮ್ಮ ಪ್ರೋಫೈಲ್ ಚಿತ್ವನ್ನು ಅಪ್ಲೋಡ್ ಮಾಡಿ"
       },
-      "step_six": {
-        "title": "Invite 5 Friends",
-        "description": "Create your team and increase your earnings"
+      "join_telegram": {
+        "title": "ಟೆಲಿಗ್ರಾಮ್ ಸೇರಿರಿ",
+        "description": "ಈಗಲೇ ಸೇರಿಕೊಳ್ಳಿ ಮತ್ತು ನಮ್ಮ ಸಮುದಾಯದ ಒಂದು ಭಾಗವಾಗಿರಿ"
+      },
+      "follow_us_on_twitter": {
+        "title": "ನಮ್ಮನ್ನು ಟ್ವಿಟ್ಟರ್ ನಲ್ಲಿ  ಫಾಲೋ ಮಾಡಿ",
+        "description": "ನಮ್ಮ ಸಂಪರ್ಕದಲ್ಲಿರಿ,  ನಮ್ಮನ್ನು ಟ್ವಿಟ್ಟರ್ ನಲ್ಲಿ ಫಾಲೋ ಮಾಡಿ"
+      },
+      "invite_friends": {
+        "title": "5 ಸ್ನೇಹಿತರನ್ನು ಆಮಂತ್ರಿಸಿ",
+        "description": "ನಿಮ್ಮ ತಂಡವನ್ನು ಬೆಳೆಸಿರಿ ಮತ್ತು ನಿಮ್ಮ ಗಳಿಕೆಯನ್ನು ಹೆಚ್ಚಿಸಿ."
       }
     },
     "overview": {
-      "title": "Overview"
+      "title": "ಅವಲೋಕನ"
     },
     "menu": {
-      "notifications": "Notifications",
-      "staking": "Staking",
-      "stats": "Stats",
-      "help": "Help"
-    },
-    "tasks": {
-      "title": "ACHIEVEMENTS"
+      "notifications": "ಸೂಚನೆಗಳು",
+      "staking": "ಹಾಕುವುದು",
+      "stats": "ಅಂಕಿಅಂಶ",
+      "help": "ಸಹಾಯ"
     },
     "team": {
-      "title": "Team",
-      "view_team": "view team"
+      "title": "ತಂಡ",
+      "view_team": "ತಂಡವನ್ನು ನೋಡಿ"
     },
     "mining_rate": {
-      "title": "EARNING RATE",
-      "base": "Base"
+      "title": "ಗಳಿಕೆಯ ದರ",
+      "base": "ಮೂಲ"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
-      "streak": "STREAK",
-      "days_off": "DAYS OFF"
+      "title": "ನಿಶ್ಚಯ",
+      "description_part1": "ಸ್ಟ್ರೀಕ್ ಎಂಬುದು ನೀವು ಸತತವಾಗಿ ಎಷ್ಟು ದಿನ ಚೆಕ್ -ಇನ್ ಮಾಡಲಾಗಿರುವುದನ್ನು ಸೂಚಿಸುತ್ತದೆ",
+      "description_part2": "ಪ್ರತಿ 6 ಸತತ ದಿನಗಳಲ್ಲಿ ನೀವು ಒಂದು ದಿನ ರಜೆಯನ್ನು ಸ್ವೀಕರಿಸುತ್ತೀರಿ.",
+      "streak": "ಸ್ಟ್ರೀಕ್",
+      "days_off": "ರಜಾ ದಿನಗಳು"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "ಸೆಟ್ಟಿಂಗ್ಸ್",
+    "profile": "ಪ್ರೋಫೈಲ್",
+    "legal": "ಕಾನೂನು",
+    "support": "ಬೆಂಬಲ",
+    "personal_information_title": "ವೈಯುಕ್ತಿಕ ಮಾಹಿತಿ",
+    "personal_information_description": "ನಿಮ್ಮ ಪ್ರೋಫೈಲ್ ವಿವರಗಳನ್ನು ನಿರ್ವಹಿಸಿರಿ",
+    "notifications_title": "ಸೂಚನೆಗಳು",
+    "notifications_description": "ನಿಮ್ಮ ಸೂಚನೆಗಳನ್ನು ಇಲ್ಲಿ ನಿರ್ವಹಿಸಿರಿ",
+    "push_notifications_title": "ಪುಶ್ ಸೂಚನೆಗಳು",
+    "push_notifications_description": "ನಿಮ್ಮ ಪುಶ್ ಅಧಿಸೂಚನೆ ಸೆಟ್ಟಿಂಗ್ಸಗಳನ್ನು ವೈಯುಕ್ತಿಕರಿಸಿ.",
+    "email_notifications_title": "ಸೂಚನೆಗಳು",
+    "email_notifications_description": "ನಿಮ್ಮ ಇಮೈಲ್ ಅಧಿಸೂಚನೆ ಸೆಟ್ಟಿಂಗ್ಸಗಳನ್ನು ವೈಯುಕ್ತಿಕರಿಸಿ.",
+    "terms_title": "ಸೇವಾ ನಿಯಮಗಳು",
+    "terms_description": "ನಮ್ಮ ಸೇವಾ ನಿಯಮಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.",
+    "privacy_title": "ಗೌಪ್ಯತಾ ನೀತಿ",
+    "privacy_description": "ಗೌಪ್ಯತಾ ನೀತಿಯ ಬಗ್ಗೆ ತಿಳಿಯಿರಿ",
+    "feedback_title": "ವರದಿಯನ್ನು ಸಲ್ಲಿಸಿ",
+    "feedback_description": "ನಿಮ್ಮ ಯೋಜನೆಗಳನ್ನು ನಮ್ಮೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ",
+    "invite_title": "ಸ್ನೇಹಿತರನ್ನು ಆಹ್ವಾನಿಸಿ",
+    "invite_description": "ನಿಮ್ಮ ಸ್ನೇಹಿತರನ್ನು ಆಹ್ವಾನಿಸುವ ಮೂಲಕ   ಹೆಚ್ಚು ಗಳಿಸಿರಿ",
+    "delete_title": "ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕಿ",
+    "delete_description": "ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಅಳಿಸಿಹಾಜಿ",
+    "delete_confirmation_title": "ನಿಮ್ಮ ಖಾತೆಯನ್ನು ತೆಗೆದುಹಾಕಲು ಖಚಿತಪಡಿಸುವುದನ್ನು ನೀವು ಬಯಸುವೀರಾ?",
+    "delete_confirmation_yes": "ಹೌದು, ಅಳಿಸಿ ಹಾಕಿ",
+    "logout_title": "ಲಾಗ್ ಔಟ್",
+    "logout_description": "ಸೈನ್ ಆಫ್ ಮಾಡಿ ಮತ್ತು ವಿರಾಮವನ್ನು ತೆಗೆದುಕೊಳ್ಳಿ",
+    "logout_confirmation_title": "ಸೈನ್ ಆಫ್ ಮಾಡಲು ಖಚಿತಪಪಡಿಸುವಿರಾ?",
+    "logout_confirmation_yes": "ಹೌದು, ಲಾಗ್ ಔಟ್",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "ಹೊಸ ಪೋನ್ ಖಚಿತಪಡಿಸಿರಿ",
+      "description": "ದಯವಿಟ್ಟು ನಿಮ್ಮ ದೇಶದ ಕೋಡ್ ಅನ್ನು ದೃಢೀಕರಿಸಿ ಮತ್ತು ನಿಮ್ಮ  ಹೊಸ ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ.",
+      "button": "ಪೋನ್ ಖಚಿತಪಡಿಸಿ"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
-      "type_push": "PUSH",
-      "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
+      "enable_prompt": "ಸೂಚನೆಗಳನ್ನು ಅನುಮತಿಸಲಾಗಿಲ್ಲ ನೀವು ಅವುಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ಇಚ್ಚೀಸುವಿರಾ?",
+      "channel_achievements": "ಸಾಧನೆಗಳು",
+      "channel_news": "ಸುದ್ದಿ",
+      "channel_reminders": "ಜ್ಞಾಪನೆಗಳು",
+      "channel_team": "ತಂಡ",
+      "type_push": "ನೂಕು",
+      "type_email": "ಇಮೈಲ್",
+      "disable_notifications": "ಸೂಚನೆಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸುವಿರಾ?",
+      "disable_notifications_description": "ಸೂಚನೆಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸುವುದರಿಂದ ನೀವು ಚೆಕ್-ಇನ್ ಪ್ರಾರಂಭಿಸಿರುವುದರ, ನವೀಕರಣಗಳನ್ನು ಸ್ವೀಕರಣೆ ಹಾಗೂ   ಸುದ್ದಿ ಅಥವಾ ತಂಡದ ಮಾಹಿತಿಯನ್ನು ನಿಮಗೆ ಪಡೆಯಲು ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ.",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
+          "title": "ವಾರದ ಅಂಕಿಅಂಶ",
+          "description": "ನಿಮ್ಮ ಚಟುವಟಿಕೆಯ  ಬಗ್ಗೆ ಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸಿ"
         },
         "weekly_report": {
-          "title": "Weekly report",
-          "description": "Receive notifications about your activity"
+          "title": "ವಾರದ ವರದಿ",
+          "description": "ನಿಮ್ಮ ಚಟುವಟಿಕೆಯ  ಬಗ್ಗೆ ಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸಿ"
         },
         "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
+          "title": "ಸಾಧನೆಗಳು",
+          "description": "ನಿಮ್ಮ ಮುಂದುವರೆದ ಹಂತದ ಬಗ್ಗೆ ಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸಿ"
         },
         "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
+          "title": "ಪ್ರಚಾರಗಳು",
+          "description": "ನಿಮ್ಮ ತಂಡವನ್ನು ಹೇಗೆ ಬೆಳೆಸುವುದು ಮತ್ತು  ಹೇಗೆ ಹೆಚ್ಚುಗಳಿಸುವುದು ಎಂಬುದರ ಕುರಿತ ಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸಿ."
         },
         "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
+          "title": "ಸುದ್ದಿ",
+          "description": "ನಿಮ್ಮ ತಂಡದ ಕುರಿತ ಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸಿ"
         },
         "micro_community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
+          "title": "ಸಣ್ಣ-ಸಮುದಾಯ",
+          "description": "ನಿಮ್ಮ ತಂಡದ  ಬಗ್ಗೆ ಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸಿ"
         },
         "daily_bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
+          "title": "ದಿನದ ಬೋನಸ್",
+          "description": "ದಿನದ ಬೋನಸ್ ಕ್ಲೈಮ್ ಮಾಡಲು ಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸಿ"
         },
         "mining": {
-          "title": "Session status",
-          "description": "Receive notifications about your check-in activity"
+          "title": "ಅವಧಿಯ ಸ್ಥಿತಿ",
+          "description": "ನಿಮ್ಮ  ಚೆಕ್- ಇನ್ ಚಟುವಟಿಕೆಯ  ಬಗ್ಗೆ ಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸಿ"
         },
         "system": {
-          "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "title": "ಸಿಸ್ಟಂ",
+          "description": " ice ಆ್ಯಪ್ ಕುರಿತ ಮುಖ್ಯವಾದ ಸೂಚನೆಗಳನ್ನು ಸ್ವೀಕರಿಸಿ"
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "ಭಾಷೆ ಸೆಟ್ಟಿಂಗ್ಸ್",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "ಭಾಷೆ ಬದಲಾಯಿಸಿ",
+      "prompt": "ಈ ಸೆಟ್ಟಿಂಗ್ಸ್ ಅನ್ವಯಿಸುವುದರಿಂದ ಆ್ಯಪ್ ಮರುಪ್ರಾರಂಭಗೊಳ್ಳುತ್ತದೆ"
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "ಪ್ರೋಫೈಲ್ ಚಿತ್ರ",
+    "inapp_privacy_title": "ಗೌಪ್ಯತಾ ನೀತಿ",
+    "inapp_privacy_description": "ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ಇಲ್ಲಿ ನಿರ್ವಹಿಸಿ",
+    "developer": "ಡೆವಲಪರ್",
+    "user_id": "ಬಳಕೆದಾರರ ID",
+    "user_token": "ಬಳಕೆದಾರರ ಟೋಕನ್",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "ಪೋಟೋವನ್ನು ತೆಗೆದುಹಾಕಿ",
+      "edit": "ಪ್ರೋಫೈಲ್ ಚಿತ್ರವನ್ನು ಎಡಿಟ್ ಮಾಡಿ",
+      "photo_gallery": "ಪೋಟೊ ಗ್ಯಾಲರಿ",
+      "camera": "ಕ್ಯಾಮೆರಾ"
     },
-    "confirm_email_confirmation_title": "Confirm email?",
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "ಇಮೈಲ್ ಖಚಿತಪಡಿಸುವಿರಾ?",
+    "update_email_confirmation_title": "ಇಮೈಲ್ ನವೀಕರಿಸುವಿರಾl?",
+    "update_email_confirmation_subtitle": "ಇಮೈಲ್ ಬದಲಾಯಿಸುವುದರಿಂದ ಮತ್ತೆ ಮರು ಲಾಗಿನ್ ಮಾಡಬೇಕಾಗುತ್ತದೆ ನೀವು ಮುಂದುವರೆಸಲು ಇಚ್ಚೀಸುವಿರಾ?",
+    "unlink_logins_title": "ಲಾಗಿನ್ ಅನ್ ಲಿಂಕ್ ಮಾಡಿ",
+    "unlink_logins_description": "ನೀವು ಇಲ್ಲಿಂದ ಲಾಗಿನ್ ಅನ್ ಲಿಂಕ್ ಮಾಡಬಹುದು"
   },
   "invite_share": {
-    "title": "Invite a friend",
-    "telegram": "Telegram",
-    "twitter": "Twitter",
-    "whatsapp": "WhatsApp",
-    "instagram": "Instagram",
-    "email": "Email",
-    "fb": "Newsfeed",
-    "sms": "SMS",
-    "copy_link": "Copy link",
-    "more": "More",
-    "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "title": "ಸ್ನೇಹಿತನನ್ನು ಆಹ್ವಾನಿಸಿ",
+    "telegram": "ಟೆಲಿಗ್ರಾಮ್",
+    "twitter": "ಟ್ವಿಟ್ಟರ್",
+    "whatsapp": "ವಾಟ್ಸಾಪ್",
+    "instagram": "ಇನ್ಸ್ಟಾಗ್ರಾಮ್",
+    "email": "ಇಮೈಲ್",
+    "fb": "ಸುದ್ದಿವರದಿ",
+    "sms": "ಎಸ್ ಎಂ ಎಸ್",
+    "copy_link": "ಲಿಂಕ್ ನಕಲು ಮಾಡಿ",
+    "more": "ಹೆಚ್ಚು",
+    "copied": "ನಕಲು ಮಾಡಲಾಗಿದೆ",
+    "share_message": "ಹಾಯ್☃️ ಹಿಮ ಮಾನವ!  ನನ್ನ ರೆಫರಲ್ ಕೋಡ್ ಬಳಸುವ ಮೂಲಕ iceನಲ್ಲಿ ನನ್ನ ತಂಡವನ್ನು ಸೇರಿರಿ ಮತ್ತು ಸೈನ್- ಅಫ್ ಮಾಡುವುದರಿಂದ 10 ice ನಾಣ್ಯಗಳನ್ನು ಪಡೆಯಿರಿ",
+    "share_subject": " iceನಲ್ಲಿ ನನ್ನ ತಂಡವನ್ನು ಸೇರಿರಿ",
+    "description": "ವಿಷಯವನ್ನು ಹಂಚಿರಿ ಮತ್ತು ನಿಮ್ಮ ಸ್ನೇಹಿತರನ್ನು ಆಹ್ವಾನಿಸಿರಿ ನೀವು ತರುವ ಪ್ರತಿ ರೆಫರಲ್ ನಿಂದ  [[:ice]] ನೀವು ಗಳಿಸುವಿರಿ",
+    "share": "ಹಂಚಿಕೊಳ್ಳಿ"
   },
   "users": {
-    "ping": "PING",
-    "active": "Active",
-    "inactive": "Inactive",
+    "ping": "ಪಿಂಗ್",
+    "active": "ಸಕ್ರಿಯ",
+    "inactive": "ನಿಷ್ಕ್ರಿಯ",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T1": "ಶ್ರೇಣಿ 1",
+      "T2": "ಶ್ರೇಣಿ 2"
     }
   },
   "personal_information": {
-    "first_name": "First name",
-    "last_name": "Last name",
-    "country": "Country",
-    "city": "City",
-    "title": "Personal Information",
-    "phone": "Phone",
-    "email": "Email",
-    "username": "Nickname"
+    "first_name": "ಮೊದಲ ಹೆಸರು",
+    "last_name": "ಕೊನೆಯ ಹೆಸರು",
+    "country": "ದೇಶ",
+    "city": "ನಗರ",
+    "title": "ವೈಯುಕ್ತಿಕ ಮಾಹಿತಿ",
+    "phone": "ಪೋನ್",
+    "email": "ಇಮೈಲ್",
+    "username": "ಅಡ್ಡಹೆಸರು"
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
-      "length": "Nickname size: 4-20 characters.",
-      "invalid_characters": "Remove invalid characters.",
-      "not_found": "Nickname not found.",
-      "some_error": "Some error occurred.",
-      "refer_yourself": "You can't refer yourself"
+      "already_taken": "ಅಡ್ಡಹೆಸರನ್ನು ಈಗಲೇ ತೆಗೆದುಕೊಳ್ಳಲಾಗಿದೆ",
+      "length": "ಅಡ್ಡಹೆಸರಿನ ಗಾತ್ರ: 4-20 ಅಕ್ಷರಗಳು.",
+      "invalid_characters": "ಅಮಾನ್ಯ ಪದಗಳನ್ನು ತೆಗೆದುಹಾಕಿ.",
+      "not_found": "ಅಡ್ಡಹೆಸರು ದೊರಕುತ್ತಿಲ್ಲ.",
+      "some_error": "ದೋಷ ಸಂಭವಿಸಿದೆ",
+      "refer_yourself": "ನಿಮ್ಮನ್ನು ನೀವೇ ರೆಫರ್ ಮಾಡಿಕೊಳ್ಳಲು ಸಾಧ್ಯವಿಲ್ಲ"
     }
   },
   "staking": {
-    "time_left": "Time Left",
-    "mining_rate": "Earning Rate",
-    "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking Bonus",
-    "period_label": "Staked Period",
-    "title": "Pre-Staking",
-    "current_rate": "Current Rate",
-    "allocation": "Allocation",
-    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
-    "staking_terms": "Staking Terms",
-    "stake_now": "Pre-Stake Now!",
-    "balance_label": "Staked balance",
-    "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "time_left": "ಉಳಿದ ಸಮಯ",
+    "mining_rate": "ಗಳಿಕೆಯ ದರ",
+    "appeal": "ನಿಮ್ಮ ಗಳಿಕೆಯ ದರವನ್ನು ಉತ್ತೇಜಿಸಿ",
+    "benefits_description": "ನಿಮ್ಮ  ice ಬಹುಮಾನಗಳನ್ನು  5 ವರ್ಷಗಳವರೆಗೆ ಪಣವಿಡಿ ಮತ್ತು ನಿಮ್ಮ ಗಳಿಕೆಯ ದರದಲ್ಲಿ 250%ನ್ನು ಹೆಚ್ಚಿಸಿಕೊಳ್ಳಿ",
+    "bonus_label": "ಪಣವಿರಿಸಿರುವುದರ ಬೋನಸ್",
+    "period_label": "ಪಣದ ಅವಧಿ",
+    "title": "ಫ್ರೀ-ಸ್ಟಾಕಿಂಗ್",
+    "current_rate": "ಪ್ರಸ್ತುತ ದರ",
+    "allocation": "ಹಂಚಿಕೆ",
+    "description": "ಸ್ಟಾಕಿಂಗ್ ಎಂಬುವ ಹಂತವು ಬ್ಲಾಕ್ ಚೈನ್ ನೆಟ್ ವರ್ಕ್ ಅನ್ನು ಬೆಂಬಲಿಸುವ ಮತ್ತು ವಹಿವಾಟುಗಳನ್ನು ಖಚಿತಪಡಿಸಲು ನಿಮ್ಮ ಕ್ರಿಪ್ಟೋ ಸ್ವತ್ತುಗಳನ್ನು ಒಪ್ಪಿಸುವ ಪ್ರಕ್ರಿಯೆಯಾಗಿದೆ.",
+    "terms_agree": "ಸ್ಟಾಕಿಂಗ್ [[:ice]] [[:link]]ನಿಯಮಗಳಿಗೆ[[/:link]] ನನ್ನ ಒಪ್ಪಿಗೆಯಿದೆ ಆಯ್ಕೆಮಾಡಿದ ಅವಧಿಗೆ ನಿಮ್ಮ  ice ಹೋಲ್ಡಿಂಗ್ ಗಳನ್ನು ಲಾಕ್ ಮಾಡಲಾಗುತ್ತದೆ.",
+    "stake_now": "ಈಗಲೇ ಪಣ ಇಡಿ!",
+    "balance_label": "ಪಣವಿಟ್ಟ ಬಾಕಿ",
+    "confirm_title": "ಪಣ ಖಚಿತಪಡಿಸುವಿರಾ",
+    "confirm_subtitle": "ನಿಮ್ಮ ನಾಣ್ಯಗಳನ್ನು ಮುಂಗಡ ಪಣ ಇಡಲು ಖಚಿತಪಡಿಸುವಿರಾ? ನೀವು ಒಂದು ಬಾರಿ ಖಚಿತಪಡಿಸಿದ ಮೇಲೆ ಮತ್ತೆ ಸರಿಪಡಿಸಲಾಗುವುದಿಲ್ಲ"
   },
   "stats": {
-    "header_title": "Stats",
-    "active": "Active users",
-    "total": "Total users",
-    "user_growth": "User growth",
-    "top_miners": "Top users",
-    "top_countries": "Top countries",
-    "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "header_title": "ಅಂಕಿಅಂಶ",
+    "active": "ಸಕ್ರಿಯ ಬಳಕೆದಾರರು",
+    "total": "ಒಟ್ಟು ಬಳಕೆದಾರರು",
+    "user_growth": "ಬಳಕೆದಾರರ ಬೆಳವಣಿಗೆ",
+    "top_miners": "ಟಾಪ್ ಬಳಕೆದಾರರು",
+    "top_countries": "ಟಾಪ್ ದೇಶಗಳು",
+    "online_miners": "ಆನ್ ಲೈನ್ ಬಳಕೆದಾರರು",
+    "detailed_information": "ವಿವರವಾದ ಮಾಹಿತಿ"
   },
   "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
+    "title": "ದಯವಿಟ್ಟು ನವೀಕರಿಸಿ",
+    "description": "ನೀವು ಹಳೆಯ ಆ್ಯಪ್  ಆವೃತ್ತಿಯನ್ನು ಬಳಸುತ್ತಿರುವಿರಿ ಮತ್ತು ಅದನ್ನು ಮತ್ತೆ ಬಳಸಲು ನವೀಕರಿಸಬೇಕಾಗಿದೆ.",
+    "button_title": "ಕೂಡಲೇ ನವೀಕರಿಸಿ"
   },
   "general": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
+    "good_morning": "ಶುಭ ಮುಂಜಾನೆ",
+    "good_afternoon": "ಶುಭ ಅಪರಾಹ್ನ",
+    "good_evening": "ಶುಭ ಸಂಜೆ",
     "ice": "ice",
-    "ice_per_hour": "ice/h",
-    "seconds_short": "s",
-    "minutes_short": "m",
-    "hours_short": "h",
-    "days_short": "d"
+    "ice_per_hour": "ice/ಎಚ್",
+    "seconds_short": " ಎಸ್",
+    "minutes_short": " ಎಮ್",
+    "hours_short": "ಹೆಚ್",
+    "days_short": "ಡಿ"
   },
   "news": {
-    "news_feed": "News Feed",
-    "read_more": "Read more",
-    "views": "{{viewsCount}} views"
+    "news_feed": "ಸುದ್ದಿ ವರದಿಗಳು",
+    "read_more": "ಹೆಚ್ಚು ಓದಿ",
+    "no_more_news": "ಇದು ಸುದ್ದಿ ವರದಿಯ ಕೊನೆಯ ನಮೂನೆಯಾಗಿದೆ",
+    "views": "{{viewsCount}} ವೀಕ್ಷಣೆ"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
-    "nothing_is_found": "Nothing was found for your query",
-    "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "empty": "ಸಂಪರ್ಕಗಳಿಗಾಗಿ ಹುಡುಕಿ, ice ಸ್ನೇಹಿತರು ಮತ್ತು ನಿಮ್ಮ ಸೂಕ್ಷ್ಮ-ಸಮುದಾಯದ ಸದಸ್ಯರು.",
+    "nothing_is_found": "ನಿಮ್ಮ ಶೋಧನೆಯಲ್ಲಿ ಏನು ದೊರಕಿರುವುದಿಲ್ಲ",
+    "search_by_country": "ದೇಶವನ್ನು ಹುಡುಕಿ",
+    "search_for_users": "ಬಳಕೆದಾರರನ್ನು ಹುಡುಕಿ",
+    "loading": "ಹುಡುಕಲಾಗುತ್ತಿದೆ…"
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tap here to start your first check-in session",
-    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
-    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
-    "mining_holiday_active": "You are using a Day Off!"
+    "mining_inactive_tooltip": "ನಿಮ್ಮ ಮೊದಲ ಚೆಕ್- ಇನ್ ಅವಧಿ ಪ್ರಾರಂಭಿಸಲು ಇಲ್ಲಿ ಟ್ಯಾಪ್ ಮಾಡಿ",
+    "mining_reset_tooltip": " ಚೆಕ್- ಇನ್ ಅವಧಿಯನ್ನು ವಿಸ್ತರಿಸಲು 1 ಸೆಕೆಂಡುಗಳವರೆಗೆ ಒತ್ತಿ ಹಿಡಿಯಿರಿ.",
+    "mining_holiday_reset_tooltip": "ನೀವು ದಿನದ ರಜೆಯನ್ನು ಬಳಸುತ್ತಿರುವಿರಿ!  ಚೆಕ್- ಇನ್ ಅವಧಿಯನ್ನು ವಿಸ್ತರಿಸಲು 1 ಸೆಕೆಂಡುಗಳವರೆಗೆ ಒತ್ತಿ ಹಿಡಿಯಿರಿ.",
+    "mining_holiday_active": "ನೀವು ದಿನದ ರಜೆಯನ್ನು ಬಳಸುತ್ತಿರುವಿರಿ!"
   },
   "invite_friend": {
-    "invite_button": "Invite Friend",
-    "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "invite_button": "ಸ್ನೇಹಿತನನ್ನು ಆಹ್ವಾನಿಸಿ",
+    "button_title": "ಸ್ನೇಹಿತನನ್ನು ಆಹ್ವಾನಿಸಿ",
+    "description": "ಇನ್ನು ನಿಮ್ಮ ಗೆಳೆಯ ಸೇರಿಲ್ಲ [[:ice]]. ಅವನಿಗೆ ಆಹ್ವಾನವನ್ನು ಕಳಿಸಿ"
   },
   "balance_history": {
-    "title": "Balance History",
-    "wallet": "Wallet",
-    "blockchain": "Blockchain",
-    "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
-    "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "title": "ಬಾಕಿ ಇತಿಹಾಸ",
+    "wallet": "ವಾಲೆಟ್",
+    "blockchain": "ಬ್ಲಾಕ್ ಚೈನ್",
+    "wallet_update_interval": "ಪ್ರತಿ ಘಂಟೆಗೂ ನವೀಕರಿಸಲಾಗುತ್ತದೆ",
+    "blockchain_update_interval": "ಪ್ರತಿ   24 ಘಂಟೆಗೂ ನವೀಕರಿಸಲಾಗುತ್ತದೆ",
+    "list_end_label": "ಇದು ಬಾಕಿ ಇತಿಹಾಸದ ಕೊನೆಯ ನಮೂನೆಯಾಗಿರುತ್ತದೆ",
+    "no_data": "ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ  ಅವಧಿಗೆ ಪ್ರದರ್ಶಿಸಲು ಯಾವುದೇ ದತ್ತಾಂಶವಿಲ್ಲ"
   },
   "pop_up": {
-    "update_now": "Update Now",
-    "please_update": "Please Update",
-    "update_now_text": "You are using an old app version and need to update it in order to use it further",
-    "you_are_up_to_date": "You are up to date!",
-    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
-    "resurrection": "Resurrection",
-    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
-    "resurrection_warning": "You can only resurrect one time!",
-    "please_confirm": "Please confirm",
-    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "update_now": "ಕೂಡಲೇ ನವೀಕರಿಸಿ",
+    "please_update": "ದಯವಿಟ್ಟು ನವೀಕರಿಸಿರಿ",
+    "update_now_text": "ನೀವು ಹಳೆಯ ಆ್ಯಪ್  ಆವೃತ್ತಿಯನ್ನು ಬಳಸುತ್ತಿರುವಿರಿ ಮತ್ತು ಅದನ್ನು ಮತ್ತೆ ಬಳಸಲು ನವೀಕರಿಸಬೇಕಾಗಿದೆ.",
+    "you_are_up_to_date": "ನೀವು ನವೀಕೃತವಾಗಿರುವಿರಿ!",
+    "up_to_date_text": "ನೀವು ಈಗ  ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಯನ್ನು ಬಳಸಿತ್ತಿರುವಿರಿ ಕೆಳಗಿನ ಎಲ್ಲಾ ಬದಲಾವಣೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ",
+    "resurrection": "ಪುನರುತ್ಥಾನ",
+    "resurrection_message": "ನೀವು ಹಿಂದೆ ಕಳೆದುಕೊಂಡಿರುವ ನಾಣ್ಯಗಳನ್ನು ಪುನರುತ್ಥಾನಗೊಳಿಸಲು [[:amount]] ಮತ್ತು ಸ್ವೀಕರಿಸಲು ನಿಮಗೆ ಒಂದು ಬಾರಿ ಅವಕಾಶವಿದೆ [[:period]].",
+    "resurrection_warning": "ನೀವು ಒಂದು ಬಾರಿ ಮಾತ್ರ  ಪುನರುತ್ಥಾನಗೊಳಿಸಬಹುದು",
+    "please_confirm": "ದಯವಿಟ್ಟು ಖಚಿತಪಡಿಸಿ",
+    "resurrection_no_confirm_message": "ನೀವು ಶಾಶ್ವತವಾಗಿ [[:amount]] ನಾಣ್ಯಗಳನ್ನು ಕಳೆದುಕೊಳ್ಳುವಿರಿ. ಮುಂದುವರೆಯಲು  ನೀವು ಇಚ್ಚೀಸುವಿರಾ?",
+    "resurrection_yes_confirm_message": "ನೀವು ಒಂದು ಬಾರಿ ಮಾತ್ರ  ಪುನರುತ್ಥಾನಗೊಳಿಸಬಹುದು ಮುಂದುವರೆಯಲು  ನೀವು ಇಚ್ಚೀಸುವಿರಾ? ಮುಂದಿನ ಘಂಟೆಯೊಳಗೆ [[:amount]] ನಾಣ್ಯವು ನಿಮ್ಮ ಬಾಕಿ ಮೊತ್ತಕ್ಕೆ ಹಿಂತಿರುಗುತ್ತದೆ.",
+    "delete_account_confirmation_title": "ಅಳಿಸುವುದನ್ನು ಖಚಿತಪಡಿಸಿ",
+    "delete_account_confirmation_text": "ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಅಳಿಸುವುದರಿಂದ ನಿಮ್ಮ ice  ಬಾಕಿಯು ಸೇರಿದಂತೆ ನಿಮ್ಮ ಎಲ್ಲಾ ದತ್ತಾಂಶವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಿಹಾಕುತ್ತದೆ. ನೀವು ಮುಂದುವರೆಯಲು ಬಯಸುವಿರಾ?"
   },
   "periods": {
-    "3_days": "3 days",
-    "7_days": "7 days",
-    "30_days": "30 days",
-    "1_day": "1 Day",
-    "1_week": "1 Week",
-    "1_month": "1 Month",
-    "90_days": "90 days",
-    "14_days": "14 days"
+    "3_days": "3 ದಿನಗಳು",
+    "7_days": "7 ದಿನಗಳು",
+    "30_days": "30 ದಿನಗಳು",
+    "1_day": "1 ದಿನ",
+    "1_week": "1 ವಾರ",
+    "1_month": "1 ತಿಂಗಳು",
+    "90_days": "90 ದಿನಗಳು",
+    "14_days": "14 ದಿನಗಳು"
   },
   "notifications": {
-    "joined": " has joined your team",
-    "multiply": " and {{count}} others have joined your team",
-    "ping": " has pinged you, wake up!",
-    "delete": "Delete",
-    "add_notifications": "Add mocked notifications",
-    "no_notifications": "No notifications to display",
-    "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
-    "clear_title": "Clear all notifications?",
-    "title": "Notifications"
+    "joined": " ರವರು ನಿಮ್ಮ ತಂಡವನ್ನು ಸೇರಿದ್ದಾರೆ",
+    "multiply": " ಮತ್ತು {{count}} ಇತರರು ನಿಮ್ಮ ತಂಡವನ್ನು ಸೇರಿದ್ದಾರೆ",
+    "ping": " ರವರು ಪಿಂಗ್ ಮಾಡಿದ್ದಾರೆ, ಕೂಡಲೇ ಏಳಿ! ",
+    "delete": "ತೆಗೆದುಹಾಕಿ",
+    "add_notifications": "ಅಣುಕು  ಮಾಡಿದ ಸೂಚನೆಗಳನ್ನು ಸೇರಿಸಿ",
+    "no_notifications": "ಪ್ರದರ್ಶಿಸಲು ಯಾವುದೇ ಸೂಚನೆಗಳಿಲ್ಲ",
+    "add_announcements": "ಅಣುಕು ಘೋಷಣೆಗಳನ್ನು ಸೇರಿಸಿ",
+    "add_both": "ಅಣುಕು ಮಾಡಿದ ಸೂಚನೆಗಳನ್ನು ಮತ್ತು ಘೋಷಣೆಗಳನ್ನು  ಒಟ್ಟಿಗೆ ಸೇರಿಸಿ",
+    "clear_title": "ಎಲ್ಲಾ ಸೂಚನೆಗಳನ್ನು ತೆರವುಗೊಳಿಸಿ?",
+    "title": "ಸೂಚನೆಗಳು"
   },
   "notification_feed_screen": {
-    "yesterday": "Yesterday",
-    "last_week": "Last Week",
-    "this_month": "This month",
-    "last_month": "Last Month",
-    "this_week": "This week"
+    "yesterday": "ನೆನ್ನೆ",
+    "last_week": "ಕಳೆದ ವಾರ",
+    "this_month": "ಈ ತಿಂಗಳು",
+    "last_month": "ಕಳೆದ ತಿಂಗಳು",
+    "this_week": "ಈ ವಾರ"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to hide from public eyes"
+      "title": "1. ನಿಮ್ಮ ಪ್ರೋಫೈಲ್ ಅಂಕಿಅಂಶಗಳು",
+      "description": "ನೀವು ಸಾರ್ವಜನಿಕ ಕಣ್ಣುಗಳಿಂದ  ಮುಚ್ಚಿಡಲು ಬಯಸುವ ಬ್ಲಾಕ್ ಗಳ ಮೇಲೆ ಟ್ಯಾಪ್ ಮಾಡಿ"
     },
     "step2": {
-      "description": "Tap on this block to hide it from public eyes",
-      "title": "2. Your Current Role"
+      "description": "ನೀವು ಸಾರ್ವಜನಿಕ ಕಣ್ಣುಗಳಿಂದ ಮುಚ್ಚಿಡಲು ಬಯಸುವ  ಈ ಬ್ಲಾಕ್ ಮೇಲೆ ಟ್ಯಾಪ್ ಮಾಡಿ.",
+      "title": "2. ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಪಾತ್ರ"
     },
     "step3": {
-      "title": "3. Your Earned Badges",
-      "description": "Tap here to hide your badges from public eyes"
+      "title": "3. ನೀವು ಗಳಿಸಿರುವ ಪದಕಗಳು",
+      "description": "ಸಾರ್ವಜನಿಕ ಕಣ್ಣುಗಳಿಂದ ನಿಮ್ಮ ಪದಕಗಳನ್ನು ಮರೆಮಾಡಲು ಇಲ್ಲಿ ಟ್ಯಾಪ್ ಮಾಡಿ"
     }
   },
   "confirm_email": {
-    "title": "Confirm your email",
-    "description": "Please enter your email address and we will send code ",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
-    "wrong_email": "Wrong email?",
-    "check_email": "Check your email",
-    "emailed_link_to": "We emailed a magic link to",
-    "link_instruction": "Click the link to log in or sign up.",
-    "modify_title": "Confirm New Email",
-    "modify_description": "Please enter your new email address"
+    "title": "ನಿಮ್ಮ ಇಮೈಲ್ ಖಚಿತಪಡಿಸುವಿರಾ?",
+    "description": "ದಯವಿಟ್ಟು ನಿಮ್ಮ ಇಮೈಲ್ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ ಮತ್ತು ನಾವು ಕೋಡ್ ಕಳಿಸಿಕೊಡುತ್ತೇವೆ.",
+    "note": " ಒಂದು ವೇಳೆ 5 ನಿಮಿಷಗಳ ಒಳಗೆ ನೀವು ಇಮೈಲ್ ಸ್ವೀಕರಿಸಲಿಲ್ಲದಿದ್ದರೆ, ನಿಮ್ಮ  ಸ್ಯ್ಪಾಮ್ ಪೋಲ್ಡರ್ ಪರಿಶೀಲಿಸಿ ",
+    "wrong_email": "ತಪ್ಪಾದ  ಇಮೈಲ್?",
+    "check_email": "ನಿಮ್ಮ ಇಮೈಲ್ ಪರಿಶೀಲಿಸಿ",
+    "emailed_link_to": "ನಾವು ನಿಮಗೆ ಒಂದು ಮ್ಯಾಜಿಕ ಲಿಂಕನ್ನು  ಇಮೈಲ್ ಮಾಡಿದ್ದೇವೆ",
+    "emailed_steps_to": "ನಾವು ಹಂತಗಳನ್ನು ಇಮೈಲ್ ಮಾಡಿದ್ದೇವೆ",
+    "link_instruction": "ಲಾಗಿನ್ ಅಥವಾ ಸೈನ್ ಅಪ್ ಮಾಡಲು ಲಿಂಕನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ",
+    "reset_link_instruction": "ನಿಮ್ಮ ಪಾಸವರ್ಡ್ ಮರುಹೊಂದಿಸಲು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ",
+    "modify_title": "ಇಮೈಲ್ ಖಚಿತಪಡಿಸುವಿರಾ?",
+    "modify_description": "ದಯವಿಟ್ಟು ನಿಮ್ಮ ಹೊಸ ಇಮೈಲ್  ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ"
   },
   "invalid_link": {
-    "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "title": "ಅಮಾನ್ಯವಾದ ಲಿಂಕ್",
+    "description": "ದುರದೃಷ್ಟವಶಾತ್, ಈ ಲಿಂಕ್ ಅಮಾನ್ಯವಾಗಿದೆ, ದಯವಿಟ್ಟು ನಿಮ್ಮ ಇಮೈಲ್ ಅನ್ನು ಮತ್ತೊಮ್ಮೆ ನಮೂದಿಸಿ ಮತ್ತು ನಾವು ನಿಮಗೆ ಹೊಸ ಲಿಂಕ್ ಅನ್ನು ಕಳುಹಿಸುತ್ತೇವೆ."
   },
   "confirm_code": {
-    "title": "Confirm code",
-    "description": "Please enter the code sent to",
-    "send_code_again": "Send code again",
-    "resend_time_label": "New code available in ",
-    "enter_code": "Enter the code",
-    "wrong_number": "Wrong number?"
+    "title": "ಕೋಡ್ ಖಚಿತಪಡಿಸಿ",
+    "description": "ಕಳಿಸಲಾಗಿರುವ ಕೋಡನ್ನು ದಯವಿಟ್ಟು ನಮೂದಿಸಿ",
+    "send_code_again": "ಮತ್ತೆ ಕೋಡನ್ನು ಕಳಿಸಿ",
+    "resend_time_label": "ಹೊಸ ಸಂದೇಶವು   ಲಭ್ಯವಾಗುತ್ತದೆ ",
+    "enter_code": "ಕೋಡನ್ನು ನಮೂದಿಸಿ",
+    "wrong_number": "ತಪ್ಪಾದ ನಂಬರ್?"
   },
   "ice_bonus": {
-    "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
-    "balance_label": "Your current balance"
+    "title": "ಸ್ವಾಗತದ ಬಹುಮಾನ",
+    "description": "ಧನ್ಯವಾದಗಳು, ನೀವು ನಿಮ್ಮ  [[:value]] [[:ice]] ನಾಣ್ಯಗಳನ್ನು ಸ್ವೀಕರಿಸಿರುವುದು ನೀವು ನಮ್ಮ ಮೇಲಿಟ್ಟಿರುವ [[:bold]]ನಂಬಿಕೆಯನ್ನು[[/:bold]]  [[:bold]]ಸಾಬೀತುಪಡಿಸುತ್ತದೆ[[/:bold]].",
+    "balance_label": "ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಬಾಕಿ "
   },
   "country_select": {
-    "title": "Select country"
+    "title": "ದೇಶವನ್ನು ಆರಿಸಿ"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "ಹಿಮ ಮಾನವ",
+      "subtitle": "ಮಂಜಿನ ಸಾಮ್ರಾಜ್ಯವನ್ನು ನಿರ್ಮಿಸಿರಿ",
+      "description": "ಪ್ರತಿ 24 ಗಂಟೆಗಳಿಗೊಮ್ಮೆ ಚೆಕ್ ಇನ್ ಮಾಡುವ ಮೂಲಕ ice ನೆಟ್ ವರ್ಕ್ ಗೆ ನಿಮ್ಮ ಬದ್ಧತೆಯನ್ನು ತೋರಿಸುತ್ತಾ  ನೀವು ರೋಬೋಟ್ ಅಲ್ಲ, ಮನುಷ್ಯ ಎಂದು ಧೃಡೀಕರಿಸಿ ಮತ್ತು ಗಳಿಸಿರಿ"
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "ರಾಯಭಾರಿ",
+      "subtitle": "ಮಂಜಿನ ಸಾಮ್ರಾಜ್ಯದ ಆಡಳಿತಗಾರ",
+      "description": " ನಿಮ್ಮ ತಂಡವನ್ನು ಕನಿಷ್ಠ 100 ಜನರು ಸೇರಿಕೊಂಡಾಗ ನೀವು ರಾಯಭಾರಿಯಾಗುವಿರಿ ಪ್ರತಿ ರಾಯಭಾರಿಯು ಹೊಸ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಬಳಸುವ ಆರಂಭಿಕ ಪ್ರವೇಶವನ್ನು ಪಡೆಯುತ್ತಾನೆ."
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirm Phone",
-    "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
-    }
+    "modify_title": "ಪೋನ್  ಖಚಿತಪಡಿಸಿ",
+    "modify_description": "ದಯವಿಟ್ಟು ನಿಮ್ಮ ದೇಶದ ಕೋಡ್ ಅನ್ನು ದೃಢೀಕರಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ.",
+    "button": "ನಿಮ್ಮ ಪೋನ್ ಮತ್ತು ದೇಶವನ್ನು ಖಚಿತಪಡಿಸಿ",
+    "same_phone_error": "ನೀವು ಅದೇ ನಂಬರನ್ನು ಬಳಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
   },
   "date_select": {
-    "title": "Choose date"
+    "title": "ದಿನಾಂಕವನ್ನು ಆರಿಸಿ"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+      "readmore": {
+        "title": "ಹೆಚ್ಚು ಓದಿರಿ",
+        "description": "ನಮ್ಮ ತಂಡದ ಇತ್ತೀಚಿನ ಸುದ್ದಿಗಳನ್ನು ನೀವು ಇಲ್ಲಿ ನೋಡಬಹುದು. ಪೂರ್ತಿ ಬರಹವನ್ನು ಓದಲು ಈ ಬಟನ್ ಮೇಲೆ ಟ್ಯಾಪ ಮಾಡಿರಿ"
       },
-      "step_2": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
-      },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
-      },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
-      },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
-      },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
-      },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
-      },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "releasednews": {
+        "title": "ಬಿಡುಗಡೆಯಾದ ಸುದ್ದಿ",
+        "description": "ಪ್ರತಿಯೊಂದು ಸುದ್ದಿ ಶೀರ್ಷಿಕೆಯ ಮೇಲೆ ಟ್ಯಾಪ್ ಮಾಡಿ ಮತ್ತು ಅದರ ಪೂರ್ಣ ಆವೃತ್ತಿಯನ್ನು ಓದಿ. ನಮ್ಮ ಎಲ್ಲಾ ಸುದ್ದಿ ಮತ್ತು ಸಮೀಕ್ಷೆಗಳ ಕುರಿತು ನವೀಕೃತವಾಗಿರಿ."
       }
     },
     "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      "allow_contacts": {
+        "title": "ಸಂಪರ್ಕಗಳನ್ನು ಅನುಮತಿಸಿ",
+        "description": "ನಿಮ್ಮ ಸಂಪರ್ಕಗಳನ್ನು ಸಿಂಕ್ ಮಾಡಿ ಮತ್ತು ಅಲ್ಲಿ ಯಾರು ಇದ್ದಾರೆ ಎಂಬುದನ್ನು ನೋಡಿ [[:ice]]. ಭವಿಷ್ಯದಲ್ಲಿ ನೀವು ನಿಮ್ಮ ಯಾವುದೇ ಸಂಪರ್ಕಗಳಿಗೆ ಕಳುಹಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ.[[:ice]]"
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "confirm_phone": {
+        "title": "ಪೋನ್ ಖಚಿತಪಡಿಸಿ",
+        "description": "ನಿಮ್ಮ ಗುರುತನ್ನು ದೃಢೀಕರಿಸಿ ಮತ್ತು ನೀವು ice ನೆಟ್ ವರ್ಕಿನ ಸದಸ್ಯರಾಗಿರುವಿರಿ ಎಂದು ನಿಮ್ಮ ಸಂಪರ್ಕಗಳಿಗೆ ತಿಳಿಯಲು ಅನುಮತಿಸಿ. ನಿಮ್ಮ ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ಇತರ ಮೂರನೇ ವ್ಯಕ್ತಿಗಳೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಲಾಗುವುದಿಲ್ಲ."
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "contacts_list": {
+        "title": "ಸಂಪರ್ಕಗಳ ಪಟ್ಟಿ",
+        "description": "ಇದು ನಿಮ್ಮ ಎಲ್ಲಾ ಸಂಪರ್ಕಗಳ ಪಟ್ಟಿಯಾಗಿದೆ, ಈಗಾಗಲೇ  ನೆಟ್ ವರ್ಕ್ ಸೇರಿಕೊಂಡಿರುವವರನ್ನು[[:ice]] ಟಾಪ್ ಪಟ್ಟಿಯಲ್ಲಿ ಪ್ರದರ್ಶಿಸಲಾಗುತ್ತಿದೆ"
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "referrals": {
+        "title": "ರೆಫರಲ್ಸ್",
+        "description": "ನೀವು ಒಟ್ಟು ಎಷ್ಟು ರೆಫರಲ್ ಗಳನ್ನು ಹೊಂದಿದ್ದೀರಿ ಎಂಬುದನ್ನು ಇಲ್ಲಿ ನೀವು ನೋಡಬಹುದು ನೀವು ಹೆಚ್ಚು ಜನರನ್ನು ಆಹ್ವಾನಿಸಿದಷ್ಟು, ನೀವು ಹೆಚ್ಚು ಗಳಿಸುವಿರಿ."
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earnings": {
+        "title": "ಗಳಿಕೆಗಳು",
+        "description": "ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಬಾಕಿಯನ್ನು ಪ್ರತಿಗಂಟೆಗೊಮ್ಮೆ ನವೀಕರಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ಇಲ್ಲಿ ಪ್ರದರ್ಶಿಸಲಾಗುತ್ತದೆ. ಇದು ಶ್ರೇಣಿ 1 ಮತ್ತು ಶ್ರೇಣಿ 2 ಗಳಿಕೆಗಳೊಂದಿಗೆ ನಿಮ್ಮ ನೇರ ಮತ್ತು ಪಣಕ್ಕಿಟ್ಟ ಗಳಿಕೆಯನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ."
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "segmented_control_tier_one": {
+        "title": "ಶ್ರೇಣಿ 1",
+        "description": "ಇಲ್ಲಿ ನೀವು ನಿಮ್ಮ ಶ್ರೇಣಿ 1 ರೆಫರಲ್ ಗಳ ಪಟ್ಟಿಯನ್ನು ನೋಡಬಹುದು ನಿಮ್ಮ ಜೊತೆ  ಅದೇ ಸಮಯದಲ್ಲಿ ಚೆಕ್-ಇನ್ ಮಾಡುವ ಪ್ರತಿಯೊಬ್ಬ ಸ್ನೇಹಿತನಿಗೆ, ನಿಮ್ಮ ಮೂಲ ಪ್ರಸ್ತುತ ದತ್ತು ಗಳಿಕೆಯ ದರದಲ್ಲಿ ನೀವು ಸಹ  ಹೆಚ್ಚುವರಿ 25%ನ್ನು ಪಡೆಯುತ್ತೀರಿ. [[:link]]ಹೆಚ್ಚು ಓದಿರಿ[[/:link]]",
+        "url": "https://ice.io/ತಂಡ"
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "segmented_control_tier_two": {
+        "title": "ಶ್ರೇಣಿ 2",
+        "description": "ಇಲ್ಲಿ ನೀವು ನಿಮ್ಮ ಶ್ರೇಣಿ 1 ರೆಫರಲ್ ಗಳ ಪಟ್ಟಿಯನ್ನು ನೋಡಬಹುದು ನಿಮ್ಮೊಂದಿಗೆ ಅದೇ ಸಮಯದಲ್ಲಿ ಚೆಕ್-ಇನ್ ಮಾಡುವ ಪ್ರತಿಯೊಬ್ಬ ಸ್ನೇಹಿತನಿಗೆ, ನಿಮ್ಮ ಮೂಲ ಪ್ರಸ್ತುತ ದತ್ತು ಗಳಿಕೆಯ ದರದಲ್ಲಿ ನೀವು ಹೆಚ್ಚುವರಿ 5% ಪಡೆಯುತ್ತೀರಿ. [[:link]]ಹೆಚ್ಚು ಓದಿರಿ[[/:link]]",
+        "url": "https://ice.io/ತಂಡ"
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "active_users": {
+        "title": "ಸಕ್ರಿಯ ಬಳಕೆದಾರರು ",
+        "description": "ಇದು ನಿಮ್ಮ ರೆಫರಲ್ ಗಳ ಚೆಕ್-ಇನ್ ಚಟುವಟಿಕೆಯ ಪ್ರಸ್ತುತ ಸ್ಥಿತಿಯಾಗಿದೆ. ಅವರು ಸಕ್ರಿಯ ಚೆಕ್-ಇನ್ ಅವಧಿಯನ್ನು ಹೊಂದಿರುವಾಗ ಅವರು ಸಕ್ರಿಯವೆಂದು ಪರಿಗಣಿಸುತ್ತಾರೆ."
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "tier_one_earnings": {
+        "title": "ಶ್ರೇಣಿ 1 ಗಳಿಕೆಗಳು",
+        "description": "ಇಲ್ಲಿ ನೀವು ನಿಮ್ಮ ಶ್ರೇಣಿ 1 ರೆಫರಲ್ಲುಗಳ ಪಟ್ಟಿಯನ್ನು ನೋಡಬಹುದು. ನಿಮ್ಮೊಂದಿಗೆ ಒಂದೇ ಸಮಯದಲ್ಲಿ ಚೆಕ್-ಇನ್ ಮಾಡುವ ಪ್ರತಿಯೊಬ್ಬ ಸದಸ್ಯರಿಗೆ, ನಿಮ್ಮ ಮೂಲ ಪ್ರಸ್ತುತ ದತ್ತು ಗಳಿಕೆಯ ದರದಲ್ಲಿ ನೀವಿಬ್ಬರೂ ಹೆಚ್ಚುವರಿ 25% ಪಡೆಯುತ್ತೀರಿ."
+      },
+      "ping": {
+        "title": "ಪಿಂಗ್ ಬಟನ್",
+        "description": "ಅವರ ಚೆಕ್-ಇನ್ ಅವಧಿಗಳನ್ನು ಪ್ರಾರಂಭಿಸಲು ನಿಮ್ಮ ರೆಫರಲ್ ಗಳಿಗೆ ಸೂಚಿಸಿ. ನೀವು ಪ್ರತಿ ರೆಫರಲ್ ಗೆ ಪ್ರತಿ 24ಗಂಟೆಗೆ ಒಂದು ಸೂಚನೆಯನ್ನು ಕಳುಹಿಸಬಹುದು."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "ಮನೆ",
+        "description": "ಗೆ ಸುಸ್ವಾಗತ[[:ice]]. ನಿಮ್ಮ ಬಾಕಿ, ಪ್ರಸ್ತುತ ಗಳಿಕೆಯ ದರ, ನಿಮ್ಮ ತಂಡದ ಜೊತೆಗೆ ನಿಮ್ಮ ಜಾಗತಿಕ ಶ್ರೇಣಿಯ ಕುರಿತು ಎಲ್ಲಾ ಅಂಕಿಅಂಶಗಳನ್ನು ನೀವು ಹೋಮ್ ಸ್ಕ್ರೀನಿನಲ್ಲಿ ಕಾಣಬಹುದು."
+      },
+      "invite": {
+        "title": "ಆಹ್ವಾನ",
+        "description": "ನೀವು ಆಹ್ವಾನಿಸುವ ಪ್ರತಿಯೊಬ್ಬ ವ್ಯಕ್ತಿಗೆ, ನಿಮ್ಮ ಮೂಲ ಗಳಿಕೆಯ ದರದ ಆಧಾರದ ಮೇಲೆ ಇಬ್ಬರೂ 25% ವರೆಗೆ ಗಳಿಸುವಿರಿ. ನೀವು ಹೆಚ್ಚು ಜನರನ್ನು ಆಹ್ವಾನಿಸಿದಷ್ಟು, ನೀವು ಹೆಚ್ಚು ಗಳಿಸುವಿರಿ."
+      },
+      "team": {
+        "title": "ತಂಡ",
+        "description": "[[:ice]] ಸ್ನೇಹಿತರೊಂದಿಗೆ ಉತ್ತಮ ಈ ಪುಟದಲ್ಲಿ ನೀವು ಶ್ರೇಣಿ 1 ಮತ್ತು ಶ್ರೇಣಿ 2 ಹಂತಗಳಲ್ಲರುವ ನಿಮ್ಮ ತಂಡದ ಸದಸ್ಯರ ಸ್ಥಿತಿಯನ್ನು ನೋಡಬಹುದು.  ಇಲ್ಲಿಂದಲೇ ನೀವು ಅವುಗಳನ್ನುಪಿಂಗ್ ಮಾಡಬಹುದು."
+      },
+      "news": {
+        "title": "ಸುದ್ದಿ",
+        "description": "ನಮ್ಮ ಎಲ್ಲಾ ಸುದ್ದಿ ಮತ್ತು ಸಮೀಕ್ಷೆಗಳ ಕುರಿತು ನವೀಕೃತವಾಗಿರಿ. ನಾವು ವಿಕೇಂದ್ರೀಕೃತ ಸ್ವಾಯತ್ತ ಸಂಸ್ಥೆಯಾಗಿರುವುದರಿಂದ, ಭವಿಷ್ಯದ ವೈಶಿಷ್ಟ್ಯಗಳಿಗಾಗಿ ನೀವು ಇಲ್ಲಿ ಮತ ಚಲಾಯಿಸಲು ಸಾಧ್ಯವಿದೆ."
+      },
+      "profile": {
+        "title": "ಪ್ರೋಫೈಲ್",
+        "description": "ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ವಿವರಗಳನ್ನು ವೈಯುಕ್ತೀಕರಿಸಿ ಮತ್ತು ನೀವು ಗಳಿಸಿದ ನಿಮ್ಮ ಎಲ್ಲಾ ಸಾಧನೆಗಳು ಮತ್ತು ಪದಕಗಳನ್ನು ನೋಡಿ ಇಲ್ಲಿರುವ ಕ್ಯಾಲ್ಕುಲೇಟರ್ ಬಳಸಿ, ನಿಮ್ಮ ಗಳಿಕೆಯನ್ನು ನೀವು ಅಂದಾಜು ಮಾಡಬಹುದು."
+      },
+      "earningicestart": {
+        "title": "ಗಳಿಸುತ್ತಿರುವ ice",
+        "description": "ಈ ಬಟನ್ ಅನ್ನು ಟ್ಯಾಪ್ ಮಾಡುವ ಮೂಲಕ ನೀವು ಪ್ರತಿ 24 ಗಂಟೆಗಳಿಗೊಮ್ಮೆ ಚೆಕ್-ಇನ್ [[:ice]] ಅವಧಿಯನ್ನು ಅನ್ನು ಪ್ರಾರಂಭಿಸಬಹುದು. ಪ್ರತಿದಿನ ಭೇಟಿ ನೀಡುವುದನ್ನು ಮರೆಯಬೇಡಿ ಮತ್ತು ಗಳಿಸಲು ಪ್ರಾರಂಭಿಸಿ!"
+      },
+      "earningiceseemore": {
+        "title": "ಗಳಿಸುತ್ತಿರುವ ice",
+        "description": "ಮತ್ತೊಮ್ಮೆ ಟ್ಯಾಪ್ ಮಾಡಿ ಮತ್ತು ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಚೆಕ್-ಇನ್ ಅವಧಿಯ ಕುರಿತು ಹೆಚ್ಚಿನ ವಿವರಗಳನ್ನು ನೋಡಿ."
+      },
+      "stats": {
+        "title": "ಅಂಕಿ ಅಂಶ",
+        "description": "ಅಂಕಿಅಂಶಗಳ ಪುಟದಲ್ಲಿ ನೀವು ಟಾಪ್ ದೇಶಗಳು ಮತ್ತು ಬಳಕೆದಾರರೊಂದಿಗೆ ಪ್ರತಿ ದಿನ ಚೆಕ್-ಇನ್ ಮಾಡಿದ ಒಟ್ಟು ಮತ್ತು ಸಕ್ರಿಯ ಬಳಕೆದಾರರನ್ನು ನೋಡಬಹುದು."
+      },
+      "help": {
+        "title": "ಸಹಾಯ",
+        "description": "ನಿಮಗೆ ಏನಾದರೂ ಪ್ರಶ್ನೆಗಳಿವೆಯೇ? ನಮ್ಮ ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳ ಪಟ್ಟಿಯನ್ನು ಪರಿಶೀಲಿಸಿ. ನಿಮಗೆ  ಬೇಕಾಗಿರುವುದು ಇಲ್ಲಿ ಸಿಗದಿದ್ದರೆ, ನಮ್ಮನ್ನು  hi@ice.io ಸಂಪರ್ಕಿಸಲು ಹಿಂಜರಿಯಬೇಡಿ "
+      },
+      "preStaking": {
+        "title": "ಫ್ರೀ-ಸ್ಟಾಕಿಂಗ್",
+        "description": "ನಿಮ್ಮ ಗಳಿಕೆಯ ಬಹುಮಾನಗಳನ್ನು ಮುಂಚಿತವಾಗಿ ಫ್ರೀ-ಸ್ಟಾಕಿಂಗ್ ಇಡುವ ಮೂಲಕ ನಿಮ್ಮ ಆದಾಯವನ್ನು ಹೆಚ್ಚಿಸಿ. ನಿಮ್ಮ ಗಳಿಕೆಯ ಮೇಲೆ ಬೋನಸ್ ಪಡೆಯಲು ನಿಮ್ಮ ಹಂಚಿಕೆ ಮತ್ತು ಸ್ಟಾಕಿಂಗ್ ಅವಧಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ."
+      },
+      "wallet": {
+        "title": "ವಾಲೆಟ್ ಕಾರ್ಡ್",
+        "description": "ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಬಾಕಿ [[:ice]], ಗಳಿಕೆಯ ದರವನ್ನು ನೀವು ಇಲ್ಲಿ ಕಾಣಬಹುದು. ನಿಮ್ಮ ತಂಡದ ರೆಫರಲ್ ಗಳು ಹೆಚ್ಚು ಆನ್‌ಲೈನಿನಲ್ಲಿ ಇದ್ದಷ್ಟು, ಹೆಚ್ಚಿನ ಗಳಿಕೆಯ ದರವನ್ನು ಗಳಿಸಬಹುದು"
+      },
+      "earning": {
+        "title": "ಗಳಿಕೆಯ ಕಾರ್ಡ್",
+        "description": "ನಿಮ್ಮ ಗಳಿಕೆಯ ದರ ಮತ್ತು ಬೋನಸ್ ಗಳ ಕುರಿತು ನವೀಕೃತವಾಗಿರಿ! ಅಪ್ಲಿಕೇಶನಲ್ಲಿ ನಡೆಸುವ ವಿವಿಧ ಚಟುವಟಿಕೆಗಳಿಗಳ ನಿಮ್ಮ ಪ್ರಸ್ತುತ ದರ, ನಮ್ಮ ಮೂಲ ದರ ಮತ್ತು ಬೋನಸ್ ದರಗಳನ್ನು ಇಲ್ಲಿ ನೀವು ಪರಿಶೀಲಿಸಬಹುದು."
+      },
+      "engagement": {
+        "title": "ನಿಶ್ಚಯದ ಕಾರ್ಡ್",
+        "description": "ನಿಮ್ಮ ಚೆಕ್-ಇನ್ ಅವಧಿಗಳ ಸ್ಟ್ರೀಕ್ ಮತ್ತು ದಿನಗಳ ರಜೆಯನ್ನು ಗಮನವಿಡಿ! ನಿಮ್ಮ ಸತತ ಚೆಕ್-ಇನ್ ಅವಧಿಗಳ ಕುರಿತು ಹೆಚ್ಚಿನ ವಿವರಗಳಿಗಾಗಿ ಮತ್ತು ನಿಮಗೆ ಎಷ್ಟು ದಿನಗಳು ಲಭ್ಯವಿವೆ ಎಂಬುದನ್ನು ನೋಡಲು ಈ ವಿಭಾಗವನ್ನು ಪರಿಶೀಲಿಸಿ."
+      },
+      "profilecard": {
+        "title": "ಪ್ರೊಫೈಲ್ ಕಾರ್ಡ್",
+        "description": "ಈ ಕಾರ್ಡ್ ಅನ್ನು ಅನುಸರಿಸುವ ಮೂಲಕ ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಸ್ಥಿತಿಯ ಮೇಲೆ ಗಮನ ಹರಿಸಬಹುದು. ಇದು ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಜಾಗತಿಕ ಶ್ರೇಣಿಯಲ್ಲಿನ ನಿಮ್ಮ ಪಾತ್ರ, ಹಂತ ಮತ್ತು ಒಟ್ಟು ಉಲ್ಲೇಖಗಳೊಂದಿಗೆ ಪ್ರದರ್ಶಿಸುತ್ತದೆ."
+      },
+      "referralscard": {
+        "title": "ರೆಫರಲ್ ಕಾರ್ಡ್",
+        "description": "ಈ ಕಾರ್ಡ್ ಅನ್ನು ಟ್ಯಾಪ್ ಮಾಡುವ ಮೂಲಕ ಶ್ರೇಣಿ 1 ಮತ್ತು ಶ್ರೇಣಿ 2 ಎರಡೂ ರೆಫರಲ್ ಗಳ ಹಿಂದಿನ 5 ದಿನಗಳ ನಿಮ್ಮ ರೆಫರಲ್ ಅಂಕಿಅಂಶಗಳ ವಿಕಸನವನ್ನು ನೋಡಬಹುದು"
+      },
+      "adoptioncard": {
+        "title": "ದತ್ತು ಕಾರ್ಡ್",
+        "description": "ಕಳೆದ ವಾರದ ಒಟ್ಟು ಸಕ್ರಿಯ ಹಿಮ ಮಾನವರ ಸರಾಸರಿಯನ್ನು ಆಧರಿಸಿ, ನೀವು ಪ್ರಸ್ತುತ ಗಳಿಕೆಯ [[:ice]] ದರವನ್ನು ನೋಡಬಹುದು. ಮುಂದಿನ ಹಂತದ ಗಡಿಯನ್ನು ತಲುಪಿದಾಗ ಗಳಿಕೆಯ ದರವು ಅರ್ಧದಷ್ಟು ಕಡಿಮೆಯಾಗುತ್ತದೆ."
+      },
+      "nickname": {
+        "title": "ಅಡ್ಡಹೆಸರು",
+        "description": "ಅಡ್ಡಹೆಸರು ನಿಮ್ಮನ್ನು  ವಿಶಿಷ್ಟವಾಗಿರಿಸುತ್ತದೆ ನಿಮ್ಮ ತಂಡವನ್ನು ಸೇರಲು ನಿಮ್ಮ ಗೆಳೆಯರು ಈ ಅಡ್ಡಹೆಸರನ್ನು ಬಳಸಬಹುದಾಗಿರುತ್ತದೆ. ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ತೆರೆಯಲು ನೀವು ಈ ಶಾರ್ಟಕಟ್‌  ಸಹ ಬಳಸಬಹುದು."
+      },
+      "balancehistory": {
+        "title": "ಬಾಕಿ ಇತಿಹಾಸ",
+        "description": " ಸ್ಥಳೀಯ ವ್ಯಾಲೆಟ್ ಮತ್ತು ಬ್ಲಾಕ್ ಚೈನಿನಲ್ಲಿರುವ  ನಿಮ್ಮ ಪ್ರಸ್ತುತ [[:ice]] ಬಾಕಿಯನ್ನು ನೀವು ಇಲ್ಲಿ ಕಾಣಬಹುದು. ಪ್ರತಿ ಗಂಟೆಗೆ ಸ್ಥಳೀಯ ವಾಲೆಟ್ ಬಾಕಿಯನ್ನು ನವೀಕರಿಸಲಾಗುತ್ತದೆ, ಆದರೆ ಬ್ಲಾಕ್ ಚೈನ್ ಬಾಕಿಯನ್ನು ಪ್ರತಿ 24 ಗಂಟೆಗಳಿಗೊಮ್ಮೆ ನವೀಕರಿಸಲಾಗುತ್ತದೆ."
+      },
+      "achievements": {
+        "title": "ಸಾಧನೆಗಳು",
+        "description": "ಕೆಳಗಿನ ಕೆಲಸಗಳನ್ನು ಪೂರ್ಣಗೊಳಿಸಿ ಮತ್ತು ಮುಂದಿನ ಹಂತಕ್ಕೆ ಹೋಗಿ ಈಗ ನಿಮ್ಮ ಮೊದಲ ಚೆಕ್- ಇನ್ ಅವಧಿ ಪ್ರಾರಂಭಿಸಿ!"
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Unlink Logins",
-    "sessionName": "Login via {{providerName}}",
+    "title": "ಅನ್ ಲಿಂಕ್ ಲಾಗಿನ್ ಗಳು",
+    "sessionName": "ಮೂಲಕ ಲಾಗಿನ್ ಆಗಿ {{providerName}}",
     "buttons": {
-      "currentSession": "Current session",
-      "endSession": "End Session",
-      "loginUnlinked": "Login Unlinked",
-      "sessionEnded": "Session Ended",
-      "unlink": "Unlink"
+      "currentSession": "ಪ್ರಸ್ತುತ ಅವಧಿ",
+      "endSession": "ಅವಧಿಯನ್ನು ಮುಗಿಸಿ",
+      "loginUnlinked": "ಲಾಗಿನ್ ಅನ್ ಲಿಂಕ್ ಮಾಡಲಾಗಿದೆ",
+      "sessionEnded": "ಅವಧಿ ಮುಗಿದಿದೆ",
+      "unlink": "ಅನ್ ಲಿಂಕ್"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Unlink Login?",
-        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
+        "title": "ಅನ್ ಲಿಂಕ್ ಲಾಗಿನ್ ಗಳು",
+        "message": "ಈ ಸಾಧನದ ಮೂಲಕ{{providerName}} ಮೂಲಕ ಲಾಗಿನ್ ಅನ್ನು ಅನ್ ಲಿಂಕ್ ಮಾಡಲು ನೀವು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ?"
       },
       "endSession": {
-        "title": "End Session?",
-        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
+        "title": "ಅವಧಿಯನ್ನು ಮುಗಿಸಬಹುದೇ?",
+        "message": "ನೀವು ಈ ಸಾಧನದ ಮೂಲಕ{{providerName}} ಮೂಲಕ ಲಾಗಿನ್  ಅವಧಿಯನ್ನು ಮುಗಿಸಲು  ಖಚಿತಪಡಿಸುವಿರಾ?"
       }
     }
   },
   "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
+    "pre_staking": "https://ice.io/ಫ್ರೀ-ಸ್ಟಾಕಿಂಗ್/",
+    "privacy": "https://ice.io/ಗೌಪ್ಯತೆ/",
+    "terms": "https://ice.io/ನಿಯಮಗಳು/",
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Today’s Bonus",
-    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
-    "link": "Find out more",
-    "extra_message": "You have received your daily extra bonus on your earning rate",
-    "expired_title": "Bonus Expired",
-    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
-    "result_title": "Congratulations"
+    "claim_title": "ಇಂದಿನ ಬೋನಸ್",
+    "claim_message": "ಈ ದಿನ ನಿಮ್ಮ ಬೋನಸ್ ಸಮಯ, ದಯವಿಟ್ಟು [[:bold]]“ಕ್ಲೈಮ್ ಬೋನಸ್”[[/:bold]] ಬಟನಿನ ಕೆಳಗೆ ಟ್ಯಾಪ್ ಮಾಡಿ.",
+    "link": "ಇನ್ನೂ ಹೆಚ್ಚು ಹುಡುಕಿರಿ",
+    "extra_message": "ನಿಮ್ಮ ಗಳಿಕೆಯ ದರದಲ್ಲಿ ನಿಮ್ಮ ದೈನಂದಿನ ಹೆಚ್ಚುವರಿ ಬೋನಸ್ ಅನ್ನು ನೀವು ಸ್ವೀಕರಿಸಿದ್ದೀರಿ.",
+    "expired_title": "ಬೋನಸ್ ಅವಧಿ ಮುಗಿದಿದೆ",
+    "expired_message": "ದುರದೃಷ್ಟಕರ, ಇಂದಿನ ಬೋನಸ್ ಅವಧಿ ಮುಗಿದಿದೆ. ಮುಂದಿನ ಸೂಚನೆಗಳಿಗಾಗಿ ಕಾಯುತ್ತಾ ಇರಿ!",
+    "result_title": "ಧನ್ಯವಾದಗಳು"
+  },
+  "early_access": {
+    "title": "ಮುಂಗಡ-ಪ್ರವೇಶ",
+    "message_part1": "ನಮ್ಮ ಮುಂಬರುವ [[:bold]] ಅಧಿಕೃತ ಬಿಡುಗಡೆಯ ಮೊದಲ ice  [[:bold]][[/:bold]]ಆ್ಯಪ್  ಇಣುಕುನೋಟ.[[/:bold]]",
+    "message_part2": " ಎಲ್ಲಾ ಬಾಕಿಯನ್ನು ಬಿಡುಗಡೆಯ ದಿನಾಂಕದಂದು  0 ಗೆ ಮರುಹೊಂದಿಸಲಾಗುತ್ತದೆ. ನಿಮ್ಮ ತಂಡ, ಏನೇ ಅದರೂ ಉಳಿಯುತ್ತದೆ.",
+    "message_part3": "ನಿಮ್ಮ ಸಹಕಾರಕ್ಕೆ ಧನ್ಯವಾದಗಳು!",
+    "checkbox_description": "ನಾನು ಒಪ್ಪಿಕೊಂಡಿರುವೆ! ಈ ಪಾಪ್- ಅಪ್ ಮತ್ತೇ ತೋರಿಸಬೇಡಿ"
+  },
+  "mining_notice": {
+    "title": "ಸೂಚನೆ",
+    "message": " ice [[:bold]]ಗಳಿಸುವ ನಿಮ್ಮ ಆಸಕ್ತಿಗೆ ಧನ್ಯವಾದಗಳು![[/:bold]] ಪ್ರಸ್ತುತವಾಗಿ ನಾವು  ನಮ್ಮ ತಂತ್ರಜ್ಞಾನವನ್ನು ಉತ್ತಮಗೊಳಿಸುತ್ತಿದ್ದೇವೆ ಮತ್ತು ಚೆಕ್-ಇನ್  ಆಗಲು  ಸದ್ಯಕ್ಕೆ ಲಭ್ಯವಿಲ್ಲ. ನಿಮ್ಮ ತಂಡವನ್ನು ನಿರ್ಮಿಸಲು ಮತ್ತು ನಿಮ್ಮ ಸೂಕ್ಷ್ಮ- ಸಮುದಾಯವನ್ನು ಬೆಳೆಸಲು ಇದು ನಿಮ್ಮ ಅವಕಾಶವಾಗಿದೆ.",
+    "message_footer": "ನವೀಕರಣಗಳಿಗಾಗಿ [[:twitter]]ಟ್ವಿಟ್ಟರ್[[/:twitter]] ಮತ್ತು [[:telegram]] ಟೆಲಿಗ್ರಾಂ[[/:telegram]] ಚಾನಲ್ಲನ್ನು ಟ್ಯೂನ್ ಮಾಡಿ"
+  },
+  "qr_code": {
+    "description": "ನನ್ನ ತಂಡವನ್ನು ಸೇರಲು QR ಕೋಡ್ ಅನ್ನು ಸ್ಕ್ಯಾನ್ ಮಾಡಿ."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "TikTok ನಲ್ಲಿ ನಮ್ಮೊಂದಿಗೆ ಸೇರಿ",
+      "description": "ನಾವು  ನಿಮ್ಮನ್ನು ತಲುಪಲು ಮತ್ತು   ನಮ್ಮTikTok ನ ಅತ್ಯಾಕರ್ಷಕ ಹೊಸ ಸಮುದಾಯವನ್ನು  ನಿಮಗೆ ತಿಳಿಸಲು ನಾವು ಬಯಸಿದ್ದೇವೆ. ನಾವು  ನಿಮಗೆ  ice  ಡಿಜಿಟಲ್ ಕರೆನ್ಸಿ ವಿನೋದ ಮತ್ತು ಮಾಹಿತಿಭರಿತ ವಿಷಯವನ್ನು ನೀಡಲು ಬಯಸುತ್ತೇವೆ,ಮತ್ತು ನೀವು ನಮ್ಮೊಂದಿಗೆ ಸೇರಲು ನಾವು ಇಷ್ಟಪಡುತ್ತೇವೆ!"
+    },
+    "youtube": {
+      "title": "YouTube ನಲ್ಲಿ ನಮ್ಮೊಂದಿಗೆ ಸೇರಿ",
+      "description": "ice ಅನ್ನು ಹೇಗೆ ಗಳಿಸುವುದು ಎಂಬುದರ ಕುರಿತು ಟ್ಯುಟೋರಿಯಲ್ಗಳಿಂದ ಹಿಡಿದು, ಹೊಸ ವೈಶಿಷ್ಟ್ಯಗಳ ಕುರಿತು ನವೀಕರಣಗಳು ಮತ್ತು  ಸಮುದಾಯದ ಮೋಜಿನ ವಿಷಯದವರೆಗೆ ಹಿಡಿದು ಎಲ್ಲವನ್ನು ತಿಳಿಯಲು ನವೀಕೃತವಾದ ನಮ್ಮ YouTube ಚಾನಲ್  ಪರಿಪೂರ್ಣ ಸ್ಥಳವಾಗಿದೆ."
+    },
+    "linkedin": {
+      "title": "LinkedIn ನಲ್ಲಿ ನಮ್ಮೊಂದಿಗೆ ಸೇರಿ",
+      "description": "ice ಸಮುದಾಯವನ್ನು ಹೇಗೆ ಸೇರುವುದು  ಹಾಗೂ ಇತ್ತೀಚಿನ ಬೆಳವಣಿಗೆಗಳ ಬಗ್ಗೆ ಮಾಹಿತಿ ಪಡೆಯಲು ಮತ್ತು ನಿಮ್ಮಂತೆಯೇ ಡಿಜಿಟಲ್ ಕರೆನ್ಸಿಗಳ ಭವಿಷ್ಯದ ಬಗ್ಗೆ ಉತ್ಸುಕರಾಗಿರುವ ಸಮಾನ ಮನಸ್ಕ ವ್ಯಕ್ತಿಗಳೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸಲು LinkedIn ಉತ್ತಮ  ಮಾರ್ಗವಾಗಿದೆ."
+    },
+    "facebook": {
+      "title": "Facebook ನಲ್ಲಿ ನಮ್ಮೊಂದಿಗೆ ಸೇರಿ",
+      "description_part1": "ನಮ್ಮ ಫೇಸ್ ಬುಕ್ ಪುಟವನ್ನು ಅನುಸರಿಸಲು ನಾವು ಹೆಚ್ಚು ಶಿಫಾರಸು ಮಾಡುತ್ತೇವೆ.",
+      "description_part2": "ice ಪ್ರಾಜೆಕ್ಟಿನೊಂದಿಗೆ ನಡೆಯುತ್ತಿರುವ ಎಲ್ಲದರ ಬಗ್ಗೆ ನವೀಕೃತವಾಗಿರಲು ಇದು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುವುದಲ್ಲದೆ, ನಮ್ಮ ಸಮುದಾಯದೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸಲು ಮತ್ತು ಸಂಭಾಷಣೆಯ ಭಾಗವಾಗಲು ಇದು ಉತ್ತಮ ಮಾರ್ಗವಾಗಿದೆ."
+    },
+    "instagram": {
+      "title": "Instagram ನಲ್ಲಿ ನಮ್ಮೊಂದಿಗೆ ಸೇರಿ",
+      "description_part1": "Instagramನಲ್ಲಿ ನಮ್ಮನ್ನು ಅನುಸರಿಸುತ್ತಾ ನಮ್ಮ ಸುತ್ತಿನಲ್ಲಿಯೇ ಉಳಿಯಲು ಮತ್ತು ice ಬಗ್ಗೆ ಉತ್ಸಾಹ ಹೊಂದಿರುವ ಇತರ ಬಳಕೆದಾರರೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸಲು  ಒಂದು ಉತ್ತಮ ಮಾರ್ಗವಾಗಿದೆ",
+      "description_part2": "ಜೊತೆಗೆ, ನಾವು ಪ್ರಾರಂಭಿಸುತ್ತಿರುವ ಯಾವುದೇ ಹೊಸ ವೈಶಿಷ್ಟ್ಯಗಳು ಅಥವಾ ಪ್ರಚಾರಗಳ ಕುರಿತು ನೀವು ಮೊದಲು ತಿಳಿದುಕೊಳ್ಳುವಿರಿ."
+    }
   }
 }
