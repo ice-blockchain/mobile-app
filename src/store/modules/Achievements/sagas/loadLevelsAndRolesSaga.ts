@@ -34,7 +34,7 @@ export function* loadLevelsAndRolesSaga(
       AchievementsActions.LEVELS_AND_ROLES_LOAD.SUCCESS.create({
         userId,
         achievements: {
-          levelsAndRoles: {level, roles},
+          levelsAndRoles: {level, roles: roles || []},
         },
       }),
     );
