@@ -635,7 +635,6 @@
     "check_email": "Check your email",
     "emailed_link_to": "We emailed a magic link to",
     "link_instruction": "Click the link to log in or sign up.",
-    "code_link_instruction": "Click the link and enter the code to log in or sign up.",
     "modify_title": "Confirm New Email",
     "modify_description": "Please enter your new email address."
   },
