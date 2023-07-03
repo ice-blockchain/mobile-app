@@ -27,10 +27,18 @@ export function* checkStatusNoticeSaga() {
   const statusNoticeData: StatusNoticeData = {
     link: noticeData?.link,
     gradientColors: noticeData?.gradientColors,
-    newsData: noticeData?.newsData,
     icon: noticeData?.icon,
   };
-
+  if (noticeData?.newsData) {
+    statusNoticeData.newsData = {
+      id: noticeData.newsData.id,
+      url: noticeData.newsData.url,
+      title:
+        noticeData.newsData.localisedData[user?.language ?? '']?.title ??
+        noticeData.newsData.localisedData.en?.title ??
+        '',
+    };
+  }
   if (noticeData?.data) {
     statusNoticeData.data =
       noticeData.data[user?.language ?? ''] ?? noticeData.data.en;

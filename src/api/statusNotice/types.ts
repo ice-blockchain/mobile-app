@@ -7,7 +7,11 @@ export interface NoticeData {
   newsData?: {
     id: string;
     url: string;
-    title: string;
+    localisedData: {
+      [locale: string]: {
+        title: string;
+      };
+    };
   };
   data?: {
     [locale: string]: {
