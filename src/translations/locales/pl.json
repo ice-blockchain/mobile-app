@@ -1,526 +1,537 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "Witamy w ice",
+      "description": "[[:ice]] to cyfrowa waluta, którą można gromadzić za pomocą telefonu. ice należy do użytkowników takich jak Ty i jest przez nich używana."
     },
     "page2": {
-      "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "title": "Przyjazny dla planety",
+      "description": "[[:ice]] jest z natury bardziej energooszczędny niż BTC, ponieważ wykorzystuje mechanizm konsensusu „Proof of Stake”. W przypadku proof-of-stake (POS) właściciele kryptowalut walidują transakcje blokowe na podstawie liczby coinów stakowanych przez walidatora."
     },
     "page3": {
-      "title": "People’s Coin",
-      "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "title": "Moneta ludzi",
+      "description_part1": "Moc jest w twoich rękach.",
+      "description_part2": "Wszystko, co rozwijamy w [[:ice]], będzie open source oraz będzie kontrolowane przez zdecentralizowaną autonomiczną organizację (DAO)."
     },
     "page4": {
-      "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "title": "Bądź na bieżąco",
+      "description": "Dotknij [[:iceLogo]], aby codziennie meldować się w naszej bezpłatnej, energooszczędnej aplikacji mobilnej. Codzienne kliknięcie gwarantuje, że ice trafi w ręce prawdziwych ludzi, a nie botów."
     },
     "page5": {
-      "title": "Refer & Earn",
-      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
+      "title": "Polecaj i zarabiaj",
+      "description": "Zaproś swoich znajomych i razem zarabiajcie do 25% premii do podstawowej stawki zarobków za każdego znajomego, który dołączy do Twojego zespołu."
     },
     "page6": {
-      "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
-      "description_part2": "Don’t worry, we will not spam you!",
-      "not_now": "Not now"
+      "title": "Powiadomienia",
+      "description_part1": "[[:ice]] sesje meldunkowe trwają tylko 24 godziny. Czy chcesz otrzymywać powiadomienia o zakończeniu bieżącej sesji?",
+      "description_part2": "Nie martw się, nie będziemy wysyłać spamu!",
+      "not_now": "Nie teraz"
     }
   },
   "button": {
-    "yes_btn": "Yes, please",
-    "next_btn": "Next",
-    "not_now": "Not now",
-    "view_all": "view all",
+    "yes_btn": "Tak, proszę",
+    "next_btn": "Dalej",
+    "not_now": "Nie teraz",
+    "view_all": "zobacz wszystko",
     "invite_friend": {
-      "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "title": "Zaproś znajomych",
+      "description": "Zarabiaj dodatkowe [[:ice]], zapraszając znajomych."
     },
-    "no": "No",
-    "search_country": "Search for country",
-    "save": "Save",
-    "yes": "Yes",
-    "change": "Change",
-    "no_cancel": "No, cancel",
-    "complete": "Complete",
-    "cancel": "Cancel",
-    "clear": "Clear",
-    "finish": "Finish",
-    "next_step": "Next Step",
-    "see_all": "see all",
-    "back": "Back",
-    "search": "Search",
-    "continue": "Continue",
-    "apply": "Apply",
-    "reset": "Reset",
-    "skip_all": "Skip all",
-    "done": "Done",
-    "confirm": "Confirm",
-    "do_this_later": "Do this later",
-    "resurrect_me": "Resurrect Me",
-    "claim_bonus": "Claim Bonus",
-    "close": "Close",
-    "try_again": "Try Again",
-    "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "see_all": "zobacz wszystko",
+    "no": "Nie",
+    "search_country": "Wyszukiwanie kraju",
+    "save": "Zapisz",
+    "yes": "Tak",
+    "change": "Zmień",
+    "no_cancel": "Nie, anuluj",
+    "complete": "Ukończ",
+    "cancel": "Anuluj",
+    "clear": "Wyczyść",
+    "finish": "Zakończ",
+    "next_step": "Następny krok",
+    "back": "Powrót",
+    "search": "Wyszukiwanie",
+    "continue": "Kontynuuj",
+    "apply": "Zastosuj",
+    "reset": "Resetuj",
+    "skip_all": "Pomiń wszystko",
+    "done": "Gotowe",
+    "confirm": "Potwierdź",
+    "do_this_later": "Zrób to później",
+    "resurrect_me": "Wskrześ mnie",
+    "claim_bonus": "Premia za roszczenie",
+    "close": "Zamknij",
+    "try_again": "Spróbuj ponownie",
+    "view_changelog": "Wyświetl dziennik zmian",
+    "disable": "Wyłącz",
+    "agree": "Zgadzam się",
+    "learn_more": "Dowiedz się więcej",
+    "back_to_login": "Powrót do logowania",
+    "follow_us": "Śledź nas",
+    "subscribe": "Subskrybuj"
   },
   "team": {
-    "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
+    "contacts_tab": "Kontakty",
+    "tierOne_tab": "Poziom 1",
+    "tierTwo_tab": "Poziom 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "title": "Obecnie nie masz żadnych poleceń [[:title]]!",
+      "contacts": "Obecnie w książce telefonicznej nie ma żadnych kontaktów.",
+      "button_title": "Zaproś znajomych"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
-      "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_title": "[[:ice]] działa lepiej ze znajomymi",
+      "empty_button_title": "Zezwalaj na dostęp do kontaktów",
+      "empty_description": "Zsynchronizuj swoje kontakty i zobacz, kto jest już w [[:ice]]. W przyszłości będzie można wysyłać ice do dowolnych kontaktów."
     },
     "header": {
-      "search_placeholder": "Search for users",
-      "referrals": "Referrals",
-      "earnings": "Earnings"
+      "search_placeholder": "Wyszukiwanie użytkowników",
+      "referrals": "Polecenia",
+      "earnings": "Zarobki"
     },
     "confirm_code": {
-      "title": "Confirm Code",
-      "description": "Please enter the confirmation code you have received on your phone.",
-      "placeholder": "Enter the code",
-      "button": "Confirm your code now"
+      "title": "Potwierdź kod",
+      "description": "Wprowadź kod potwierdzający otrzymany na telefonie.",
+      "placeholder": "Wprowadź kod",
+      "button": "Potwierdź swój kod teraz"
     },
     "confirm_phone": {
-      "title": "Confirm Phone",
-      "description": "Please confirm your country code and enter your phone number."
+      "title": "Potwierdź telefon",
+      "description": "Potwierdź kod kraju i wprowadź numer telefonu."
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "friends"
+        "friends": "znajomi"
       },
-      "all_contacts": "All contacts",
-      "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "all_contacts": "Wszystkie kontakty",
+      "invite": "zaproszenie",
+      "invitation_text": "Cześć {{name}}, chcę Cię zaprosić do ice."
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier 1 Earnings"
+        "title_earnings": "Zarobki na poziomie 1"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier 2 Earnings"
+        "title_earnings": "Zarobki na poziomie 2"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
-    "welcome": "Welcome to ice",
-    "email": "Email",
-    "slogan": "Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "logInSignUp": "Zaloguj się / Zarejestruj się",
+    "phone": "Telefon",
+    "or": "lub",
+    "reset_password": "Resetowanie hasła",
+    "welcome": "Witamy w ice",
+    "email": "E-mail",
+    "slogan": "Globalny reset walutowy",
+    "privacy": "Kontynuując, wyrażasz zgodę na nasze [[:link]]Warunki korzystania z usługi[[/:link]] i [[:link]]Politykę prywatności[[/:link]]"
   },
   "claimUsername": {
-    "title": "Claim nickname",
-    "description": "Your friends will need to use this nickname to join your team",
-    "inputPlaceholder": "Enter your nickname",
-    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
-    "note_part2": "Example:",
-    "note_example": "your.name01"
+    "title": "Podaj pseudonim",
+    "description": "Twoi znajomi będą musieli użyć tego pseudonimu, aby dołączyć do Twojego zespołu.",
+    "inputPlaceholder": "Wprowadź swój pseudonim",
+    "note_part1": "Podczas tworzenia pseudonimu należy używać wyłącznie liter, cyfr i kropek.",
+    "note_part2": "Przykład:",
+    "note_example": "twoje.imie01"
   },
   "whoInvitedYou": {
-    "title": "Who invited you?",
-    "description": "Enter the nickname of the person who invited you",
-    "inputPlaceholder": "Enter nickname",
-    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
-    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+    "title": "Kto cię zaprosił?",
+    "description": "Wprowadź pseudonim osoby, która Cię zaprosiła.",
+    "inputPlaceholder": "Wprowadź pseudonim",
+    "dontHaveInvitationCode": "Wykonując ten krok, Ty i Twój znajomy otrzymacie 25% premii do podstawowej stawki zarobków, gdy oboje zameldujecie się w tym samym czasie.",
+    "dontHaveCodeTip": "Jeśli nie masz kodu zaproszenia, wybierzemy losowego członka jako osobę poleconą!"
   },
   "errors": {
-    "nicknameSize": "Nickname size: 4-20 characters.",
-    "removeInvalidCharacters": "Remove invalid characters.",
-    "validation_error": "Some validation error",
-    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
-    "wrong_phone_number": "Invalid phone number, please try again",
-    "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken",
-    "phone_number_already_in_use": "Phone number already in use",
-    "invalid_validation_code": "Invalid code number, please try again!",
-    "validation_expired": "Validation expired",
-    "validation_not_found": "Validation not found",
-    "invalid_email": "Invalid email",
-    "invalid_ref_username": "Nickname is invalid.",
-    "invalid_phone": "Invalid phone number",
-    "user_disabled": "User has been disabled",
-    "expired_action_code": "OTP in email link is expired",
-    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
-    "invalid_credential": "The credential is malformed or has expired",
-    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
-    "user_not_found_for_email": "There is no user corresponding to the given email",
-    "user_not_found": "User not found",
-    "auth_in_progress": "Sign-In already in progress",
-    "google_play_services_not_available": "Google Play services are not available on the device",
-    "unknown_error_with_code": "Unknown error {{code}}",
-    "no_such_provider": "You do not have this provider linked",
-    "min_username": "Minimum length is 4 characters.",
-    "max_username": "Maximum length is 30 characters.",
-    "code_expired": "The code has expired. Please ask for a new code.",
-    "too_many_requests": "Too many requests. Please try again later.",
-    "network_error_title": "No internet connection",
-    "network_error_message": "Your device does not have any active internet connection",
-    "unknown_error": "Some error occurred, please try again later",
-    "general_error_title": "Oups...",
-    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
-    "general_network_error": "A network error has occurred. Please check your connection.",
-    "credential_already_in_use": "This credential is already associated with a different user account.",
-    "email_already_in_use": "The email address is already in use by another account.",
-    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
-    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "nicknameSize": "Długość pseudonimu: od 4 do 20 znaków.",
+    "removeInvalidCharacters": "Usuń nieprawidłowe znaki.",
+    "validation_error": "Wystąpił błąd sprawdzania poprawności.",
+    "multiple_accounts": "Adres e-mail/numer telefonu jest powiązany z innym kontem. Zaloguj się na tamto konto, aby potwierdzić własność, a następnie wyloguj się i zaloguj ponownie na to konto. Jeśli nie jesteś posiadaczem drugiego konta lub nie możesz się na nie zalogować, skontaktuj się z naszym działem pomocy technicznej.",
+    "wrong_phone_number": "Nieprawidłowy numer telefonu, spróbuj ponownie.",
+    "invalid_username": "Pseudonim jest nieprawidłowy.",
+    "email_already_taken": "E-mail jest już zajęty.",
+    "phone_number_already_taken": "Numer telefonu jest już zajęty.",
+    "invalid_validation_code": "Nieprawidłowy numer kodu, spróbuj ponownie!",
+    "validation_expired": "Zatwierdzenie wygasło",
+    "validation_not_found": "Nie znaleziono potwierdzenia",
+    "invalid_email": "Nieprawidłowy adres e-mail.",
+    "invalid_password": "Nieprawidłowe hasło.",
+    "invalid_ref_username": "Pseudonim jest nieprawidłowy.",
+    "invalid_phone": "Nieprawidłowy numer telefonu.",
+    "user_disabled": "Użytkownik został dezaktywowany.",
+    "expired_action_code": "Jednorazowe hasło w linku e-mail wygasło.",
+    "account_exists_with_different_credential": "Istnieje już konto z adresem e-mail przypisanym do danych uwierzytelniających.",
+    "invalid_credential": "Dane uwierzytelniające są nieprawidłowe lub wygasły.",
+    "operation_not_allowed": "Typ konta odpowiadający danym uwierzytelniającym nie jest włączony.",
+    "user_not_found_for_email": "Nie ma użytkownika odpowiadającego podanemu adresowi e-mail.",
+    "user_not_found": "Nie znaleziono użytkownika.",
+    "auth_in_progress": "Logowanie już trwa.",
+    "google_play_services_not_available": "Usługi Google Play nie są dostępne na tym urządzeniu.",
+    "unknown_error_with_code": "Nieznany błąd: {{code}}",
+    "no_such_provider": "Ten dostawca nie jest powiązany.",
+    "min_username": "Minimalna długość to 4 znaki.",
+    "max_username": "Maksymalna długość to 30 znaków.",
+    "code_expired": "Kod wygasł. Należy poprosić o nowy kod.",
+    "too_many_requests": "Zbyt wiele żądań. Spróbuj ponownie później.",
+    "network_error_title": "Brak połączenia z Internetem",
+    "network_error_message": "Urządzenie nie ma aktywnego połączenia internetowego.",
+    "unknown_error": "Wystąpił błąd, spróbuj ponownie później.",
+    "general_error_title": "Ups...",
+    "general_error_message": "Wygląda na to, że coś poszło nie tak. Nasz zespół obecnie pracuje nad naprawieniem tego błędu.",
+    "general_network_error": "Wystąpił błąd sieci, sprawdź stan połączenia.",
+    "credential_already_in_use": "Te dane uwierzytelniające są już powiązane z innym kontem użytkownika.",
+    "email_already_in_use": "Adres e-mail jest już używany przez inne konto.",
+    "user_token_expired": "Twoje dane uwierzytelniające nie są już aktualne. Prosimy zalogować się ponownie.",
+    "requires_recent_login": "Ta operacja jest poufna i wymaga niedawnego uwierzytelnienia. Zaloguj się ponownie.",
+    "same_email": "Nie można użyć tego samego adresu e-mail.",
+    "weak_password": "Słabe hasło.",
+    "wrong_password": "Błędne hasło.",
+    "no_camera_permissions": "Uprawnienia do korzystania z kamery nie zostały przyznane.",
+    "no_library_permissions": "Uprawnienia biblioteczne nie zostały przyznane."
   },
   "profile": {
     "my_roles": {
-      "title": "My Role"
+      "title": "Moja rola"
     },
-    "mining_calculator": "earnings calculator",
-    "invite_friends": "Invite Friends",
-    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
-    "global_rank": "global rank",
-    "view_all_roles": "view all roles",
-    "data_is_hidden": "data is hidden",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "kalkulator zarobków",
+    "invite_friends": "Zaproś znajomych",
+    "invite_friends_engage": "Przekazuj dalej i zapraszaj znajomych. Im więcej poleconych, tym więcej zarobisz!",
+    "global_rank": "globalna ranga",
+    "view_all_roles": "wyświetl wszystkie role",
+    "data_is_hidden": "dane są ukryte",
+    "progress_text": "{{value}}z{{total}}",
     "not_found": {
-      "title": "User was not found",
-      "description": "oops, we couldn't find this user"
+      "title": "Nie znaleziono użytkownika",
+      "description": "Niestety nie mogliśmy znaleźć tego użytkownika."
     },
     "my_badges": {
-      "title": "My Badges"
+      "title": "Moje odznaki"
     },
     "badges": {
-      "title": "Badges"
+      "title": "Odznaki"
     },
     "roles": {
-      "title": "Roles"
+      "title": "Role"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "Monety",
+        "description": "monety"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "Społeczny",
+        "description": "znajomi"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "Poziom",
+        "description": "Poziom"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update",
-    "comingSoon": "Coming soon",
+    "level": "poziom",
+    "referrals": "polecenia",
+    "coin": "Monety",
+    "social": "Społeczny",
+    "phone_number": "Numer telefonu",
+    "years": "Lata",
+    "of": "z",
+    "attention": "Uwaga",
+    "email_address": "Adres e-mail",
+    "password": "Hasło",
+    "data_hidden": "dane są ukryte",
+    "pull_to_refresh": "przeciągnij, aby zaktualizować",
+    "comingSoon": "Już wkrótce",
     "date": {
-      "today": "Today"
+      "today": "Dzisiaj"
     }
   },
   "mining_calculator": {
-    "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "result_label": "Zarobisz",
+    "active_inviter": "Aktywny zapraszający",
+    "tier_1_ref": "Polecenia poziomu 1",
+    "tier_2_ref": "Polecenia poziomu 2",
+    "active_miners": "Aktywne polecenia"
   },
   "home": {
     "wallet": {
-      "title": "WALLET",
-      "rate": "EARNING RATE",
-      "balance": "CURRENT BALANCE"
+      "title": "PORTFEL",
+      "rate": "STAWKA WYNAGRODZENIA",
+      "balance": "BIEŻĄCE SALDO"
     },
     "pioneer": {
-      "title": "PIONEER",
-      "rank": "GLOBAL RANK",
-      "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "rank": "RANKING GLOBALNY",
+      "referrals": "POLECENIA",
+      "description": "Poleć więcej użytkowników i zarabiaj więcej [[:ice]]."
     },
     "referrals": {
-      "title": "REFERRALS",
-      "description": "Referral stats for the previous 5 days",
-      "no_referrals_description": "You don't have any referrals yet",
-      "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "title": "POLECENIA",
+      "description": "Statystyki poleceń z ostatnich 5 dni.",
+      "no_referrals_description": "Nie masz jeszcze żadnych poleceń.",
+      "users_tier_1": "Użytkownicy poziomu 1",
+      "users_tier_2": "Użytkownicy poziomu 2"
     },
     "adoption": {
-      "title": "ADOPTION",
-      "level": "level",
-      "users": "\nusers"
+      "title": "WDRAŻANIE",
+      "level": "poziom",
+      "users": "użytkownicy"
     },
-    "steps": {
-      "title": "Your progress",
-      "description": "Complete the tasks below and level up!",
-      "step_one": {
-        "title": "Claim your nickname",
-        "description": "Set it and start earning from your invite"
+    "tasks": {
+      "achievements": "OSIĄGNIĘCIA",
+      "title": "Twoje postępy",
+      "description": "Wykonaj poniższe zadania i osiągnij wyższy poziom!",
+      "completed": {
+        "title": "Gratulacje",
+        "description": "Zaglądaj tu codziennie, by zdobyć dodatkowe nagrody!"
       },
-      "step_two": {
-        "title": "Start mining",
-        "description": "Your first mining session"
+      "popup": {
+        "title": "Dołącz do naszego kanału na Telegramie",
+        "description": "Podaj swój pseudonim używany w aplikacji Telegram.",
+        "placeholder": "Pseudonim"
       },
-      "step_three": {
-        "title": "Profile picture",
-        "description": "Upload your profile image"
+      "claim_username": {
+        "title": "Podaj swój pseudonim",
+        "description": "Ustaw go i udostępnij znajomym."
       },
-      "step_four": {
-        "title": "Join Telegram",
-        "description": "Be part of our community and join now"
+      "start_mining": {
+        "title": "Zacznij zarabiać",
+        "description": "Pierwsza sesja meldunkowa."
       },
-      "step_five": {
-        "title": "Follow us on Twitter",
-        "description": "Let’s keep in touch, follow us on twitter"
+      "upload_profile_picture": {
+        "title": "Zdjęcie profilowe",
+        "description": "Prześlij swoje zdjęcie profilowe."
       },
-      "step_six": {
-        "title": "Invite 5 Friends",
-        "description": "Create your team and increase your earnings"
+      "join_telegram": {
+        "title": "Dołącz do Telegramu",
+        "description": "Bądź częścią naszej społeczności i dołącz już teraz."
+      },
+      "follow_us_on_twitter": {
+        "title": "Śledź nas na Twitterze",
+        "description": "Pozostańmy w kontakcie – śledź nas na Twitterze."
+      },
+      "invite_friends": {
+        "title": "Zaproś 5 znajomych",
+        "description": "Rozwijaj swój zespół i zwiększaj zarobki."
       }
     },
     "overview": {
-      "title": "Overview"
+      "title": "Przegląd"
     },
     "menu": {
-      "notifications": "Notifications",
+      "notifications": "Powiadomienia",
       "staking": "Staking",
-      "stats": "Stats",
-      "help": "Help"
-    },
-    "tasks": {
-      "title": "ACHIEVEMENTS"
+      "stats": "Statystyki",
+      "help": "Pomoc"
     },
     "team": {
-      "title": "Team",
-      "view_team": "view team"
+      "title": "Zespół",
+      "view_team": "zobacz zespół"
     },
     "mining_rate": {
-      "title": "EARNING RATE",
-      "base": "Base"
+      "title": "STAWKA WYNAGRODZENIA",
+      "base": "Podstawa"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
-      "streak": "STREAK",
-      "days_off": "DAYS OFF"
+      "title": "ZAANGAŻOWANIE",
+      "description_part1": "Seria odnosi się do liczby kolejnych dni, w których dokonano meldunku.",
+      "description_part2": "Za każde 6 kolejnych dni przysługuje jeden dzień wolny.",
+      "streak": "SERIA",
+      "days_off": "DNI WOLNE"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "Ustawienia",
+    "profile": "Profil",
+    "legal": "Przepisy",
+    "support": "Wsparcie",
+    "personal_information_title": "Dane osobowe",
+    "personal_information_description": "Zarządzaj szczegółami swojego profilu.",
+    "notifications_title": "Powiadomienia",
+    "notifications_description": "Zarządzaj powiadomieniami tutaj.",
+    "push_notifications_title": "Powiadomienia push",
+    "push_notifications_description": "Dostosuj ustawienia powiadomień push.",
+    "email_notifications_title": "Powiadomienia e-mail",
+    "email_notifications_description": "Dostosuj ustawienia powiadomień e-mail.",
+    "terms_title": "Warunki świadczenia usług",
+    "terms_description": "Zapoznaj się z naszymi warunkami świadczenia usług.",
+    "privacy_title": "Polityka prywatności",
+    "privacy_description": "Zapoznaj się z naszą polityką prywatności.",
+    "feedback_title": "Wyślij opinię",
+    "feedback_description": "Podziel się z nami swoimi spostrzeżeniami.",
+    "invite_title": "Zaproś znajomego",
+    "invite_description": "Zdobądź dodatkowe ice, zapraszając znajomych.",
+    "delete_title": "Usuń konto",
+    "delete_description": "Wymaż swoje konto.",
+    "delete_confirmation_title": "Czy na pewno chcesz usunąć konto?",
+    "delete_confirmation_yes": "Tak, usuń",
+    "logout_title": "Wyloguj się",
+    "logout_description": "Wyloguj się i zrób sobie przerwę.",
+    "logout_confirmation_title": "Czy na pewno chcesz się wylogować?",
+    "logout_confirmation_yes": "Tak, wyloguj się",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "Potwierdź nowy telefon",
+      "description": "Potwierdź kod kraju i wprowadź nowy numer telefonu.",
+      "button": "Potwierdź nowy numer telefonu"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
+      "enable_prompt": "Powiadomienia nie są włączone. Czy chcesz je włączyć?",
+      "channel_achievements": "Osiągnięcia",
+      "channel_news": "Aktualności",
+      "channel_reminders": "Przypomnienia",
+      "channel_team": "Zespół",
       "type_push": "PUSH",
       "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
+      "disable_notifications": "Wyłączyć powiadomienia?",
+      "disable_notifications_description": "Wyłączenie powiadomień spowoduje, że nie będziesz otrzymywać aktualizacji, kiedy możesz rozpocząć meldunek, nie będziesz otrzymywać wiadomości ani informacji o drużynie.",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
+          "title": "Statystyki tygodniowe",
+          "description": "Otrzymuj powiadomienia o swojej aktywności."
         },
         "weekly_report": {
-          "title": "Weekly report",
-          "description": "Receive notifications about your activity"
+          "title": "Raport tygodniowy",
+          "description": "Otrzymuj powiadomienia o swojej aktywności."
         },
         "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
+          "title": "Osiągnięcia",
+          "description": "Otrzymuj powiadomienia o swoich postępach."
         },
         "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
+          "title": "Rozwój",
+          "description": "Otrzymuj powiadomienia o tym, jak rozwijać swój zespół i zarabiać więcej."
         },
         "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
+          "title": "Aktualności",
+          "description": "Otrzymuj powiadomienia od naszego zespołu."
         },
         "micro_community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
+          "title": "Mikrospołeczność",
+          "description": "Otrzymuj powiadomienia o swoim zespole."
         },
         "daily_bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
+          "title": "Premia dzienna",
+          "description": "Otrzymuj powiadomienia, aby odebrać swój dzienny bonus."
         },
         "mining": {
-          "title": "Session status",
-          "description": "Receive notifications about your check-in activity"
+          "title": "Status sesji",
+          "description": "Otrzymuj powiadomienia o aktywności związanej z meldowaniem."
         },
         "system": {
           "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "description": "Otrzymuj ważne powiadomienia dotyczące aplikacji ice."
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "Ustawienia języka",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "Zmień język",
+      "prompt": "Zastosowanie tego ustawienia spowoduje ponowne uruchomienie aplikacji."
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "Zdjęcie profilowe",
+    "inapp_privacy_title": "Prywatność",
+    "inapp_privacy_description": "Zarządzaj swoimi informacjami tutaj.",
+    "developer": "Deweloper",
+    "user_id": "Identyfikator użytkownika",
+    "user_token": "Token użytkownika",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "Usuń zdjęcie",
+      "edit": "Edytuj zdjęcie profilowe",
+      "photo_gallery": "Galeria zdjęć",
+      "camera": "Kamera"
     },
-    "confirm_email_confirmation_title": "Confirm email?",
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "Potwierdzić e-mail?",
+    "update_email_confirmation_title": "Zaktualizować e-mail?",
+    "update_email_confirmation_subtitle": "Zmiana adresu e-mail będzie wymagała ponownego zalogowania. Czy na pewno chcesz kontynuować?",
+    "unlink_logins_title": "Odłącz loginy",
+    "unlink_logins_description": "Tutaj możesz odłączyć swoje loginy."
   },
   "invite_share": {
-    "title": "Invite a friend",
+    "title": "Zaproś znajomego",
     "telegram": "Telegram",
     "twitter": "Twitter",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
-    "email": "Email",
-    "fb": "Newsfeed",
+    "email": "E-mail",
+    "fb": "Kanał informacyjny",
     "sms": "SMS",
-    "copy_link": "Copy link",
-    "more": "More",
-    "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "copy_link": "Kopiuj link",
+    "more": "Więcej",
+    "copied": "SKOPIOWANO",
+    "share_message": "Hej ☃️ Bałwanek! Dołącz do mojego zespołu w ice i otrzymaj 10 monet ice przy rejestracji używając mojego kodu polecającego:",
+    "share_subject": "Dołącz do mojego zespołu w ice",
+    "description": "Przekazuj dalej i zapraszaj znajomych. Zarabiasz [[:ice]] za każdą nową osobę poleconą.",
+    "share": "Udostępnij"
   },
   "users": {
     "ping": "PING",
-    "active": "Active",
-    "inactive": "Inactive",
+    "active": "Aktywny",
+    "inactive": "Nieaktywny",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T1": "Poziom 1",
+      "T2": "Poziom 2"
     }
   },
   "personal_information": {
-    "first_name": "First name",
-    "last_name": "Last name",
-    "country": "Country",
-    "city": "City",
-    "title": "Personal Information",
-    "phone": "Phone",
-    "email": "Email",
-    "username": "Nickname"
+    "first_name": "Imię",
+    "last_name": "Nazwisko",
+    "country": "Kraj",
+    "city": "Miasto",
+    "title": "Dane osobowe",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "username": "Pseudonim"
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
-      "length": "Nickname size: 4-20 characters.",
-      "invalid_characters": "Remove invalid characters.",
-      "not_found": "Nickname not found.",
-      "some_error": "Some error occurred.",
-      "refer_yourself": "You can't refer yourself"
+      "already_taken": "Pseudonim jest już zajęty.",
+      "length": "Długość pseudonimu: od 4 do 20 znaków.",
+      "invalid_characters": "Usuń nieprawidłowe znaki.",
+      "not_found": "Nie znaleziono pseudonimu.",
+      "some_error": "Wystąpił błąd.",
+      "refer_yourself": "Nie możesz polecić siebie."
     }
   },
   "staking": {
-    "time_left": "Time Left",
-    "mining_rate": "Earning Rate",
-    "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking Bonus",
-    "period_label": "Staked Period",
-    "title": "Pre-Staking",
-    "current_rate": "Current Rate",
-    "allocation": "Allocation",
-    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
-    "staking_terms": "Staking Terms",
-    "stake_now": "Pre-Stake Now!",
-    "balance_label": "Staked balance",
-    "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "time_left": "Pozostały czas",
+    "mining_rate": "Stawka zarobków",
+    "appeal": "Zwiększ swoją stawkę zarobków",
+    "benefits_description": "Pre-stake'uj swoje nagrody ice przez okres do 5 lat i zwiększ swoje zarobki nawet o 250%.",
+    "bonus_label": "Premia za pre-staking",
+    "period_label": "Okres stakingu",
+    "title": "Pre-staking",
+    "current_rate": "Aktualna stawka",
+    "allocation": "Przydział",
+    "description": "Staking to proces, który polega na zaangażowaniu posiadanych aktywów krypto w celu wsparcia sieci blockchain i potwierdzenia transakcji.",
+    "terms_agree": "Zgadzam się na [[:link]]Warunki Stakingu[[/:link]] [[:ice]]. Twoje zasoby ice zostaną zablokowane na wybrany okres.",
+    "stake_now": "Pre-stake'uj teraz!",
+    "balance_label": "Stake'owane saldo",
+    "confirm_title": "Potwierdź pre-stake",
+    "confirm_subtitle": "Czy na pewno chcesz pre-stake'ować swoje monety? Po potwierdzeniu nie można tego cofnąć."
   },
   "stats": {
-    "header_title": "Stats",
-    "active": "Active users",
-    "total": "Total users",
-    "user_growth": "User growth",
-    "top_miners": "Top users",
-    "top_countries": "Top countries",
-    "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "header_title": "Statystyki",
+    "active": "Aktywni użytkownicy",
+    "total": "Całkowita liczba użytkowników",
+    "user_growth": "Wzrost liczby użytkowników",
+    "top_miners": "Najlepsi użytkownicy",
+    "top_countries": "Czołowe kraje",
+    "online_miners": "Użytkownicy online",
+    "detailed_information": "Szczegółowe informacje"
   },
   "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
+    "title": "Prosimy o aktualizację",
+    "description": "Używasz starej wersji aplikacji i musisz ją zaktualizować, aby móc z niej dalej korzystać.",
+    "button_title": "Zaktualizuj teraz"
   },
   "general": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
+    "good_morning": "Dzień dobry",
+    "good_afternoon": "Dzień dobry",
+    "good_evening": "Dobry wieczór",
     "ice": "ice",
     "ice_per_hour": "ice/h",
     "seconds_short": "s",
@@ -529,259 +540,302 @@
     "days_short": "d"
   },
   "news": {
-    "news_feed": "News Feed",
-    "read_more": "Read more",
-    "views": "{{viewsCount}} views"
+    "news_feed": "Kanał informacyjny",
+    "read_more": "Czytaj więcej",
+    "no_more_news": "to ostatni wpis w kanale wiadomości.",
+    "views": "{{viewsCount}} wyświetleń"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
-    "nothing_is_found": "Nothing was found for your query",
-    "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "empty": "Wyszukuj kontakty, znajomych z ice i członków swojej mikrospołeczności.",
+    "nothing_is_found": "Nic nie znaleziono dla tego zapytania.",
+    "search_by_country": "Wyszukiwanie według kraju",
+    "search_for_users": "Wyszukiwanie użytkowników",
+    "loading": "Wyszukiwanie..."
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tap here to start your first check-in session",
-    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
-    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
-    "mining_holiday_active": "You are using a Day Off!"
+    "mining_inactive_tooltip": "Dotknij tutaj, aby rozpocząć pierwszą sesję meldunku.",
+    "mining_reset_tooltip": "Naciśnij i przytrzymaj przez 1 sekundę, aby przedłużyć sesję meldunku.",
+    "mining_holiday_reset_tooltip": "Korzystasz z dnia wolnego! Naciśnij i przytrzymaj przez 1 sekundę, aby przedłużyć sesję meldunku.",
+    "mining_holiday_active": "Korzystasz z dnia wolnego!"
   },
   "invite_friend": {
-    "invite_button": "Invite Friend",
-    "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "invite_button": "Zaproś znajomego",
+    "button_title": "Zaproś znajomego",
+    "description": "Twój znajomy nie jest jeszcze w [[:ice]]. Wyślij mu zaproszenie!"
   },
   "balance_history": {
-    "title": "Balance History",
-    "wallet": "Wallet",
+    "title": "Historia salda",
+    "wallet": "Portfel",
     "blockchain": "Blockchain",
-    "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
-    "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "wallet_update_interval": "aktualizowane co godzinę",
+    "blockchain_update_interval": "aktualizowane co 24 godziny",
+    "list_end_label": "jest to ostatni wpis w historii salda.",
+    "no_data": "Brak danych do wyświetlenia dla określonego okresu."
   },
   "pop_up": {
-    "update_now": "Update Now",
-    "please_update": "Please Update",
-    "update_now_text": "You are using an old app version and need to update it in order to use it further",
-    "you_are_up_to_date": "You are up to date!",
-    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
-    "resurrection": "Resurrection",
-    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
-    "resurrection_warning": "You can only resurrect one time!",
-    "please_confirm": "Please confirm",
-    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "update_now": "Zaktualizuj teraz",
+    "please_update": "Prosimy o aktualizację",
+    "update_now_text": "Używasz starej wersji aplikacji i musisz ją zaktualizować, aby móc z niej dalej korzystać.",
+    "you_are_up_to_date": "Jesteś na bieżąco!",
+    "up_to_date_text": "Korzystasz teraz z najnowszej wersji. Sprawdź wszystkie zmiany poniżej.",
+    "resurrection": "Wskrzeszenie",
+    "resurrection_message": "Masz jednorazową szansę na wskrzeszenie i otrzymanie [[:amount]] monet, które straciłeś/aś w następującym ubiegłym okresie: [[:period]].",
+    "resurrection_warning": "Wskrzeszenie jest możliwe tylko raz!",
+    "please_confirm": "Prosimy o potwierdzenie",
+    "resurrection_no_confirm_message": "Stracisz następującą liczbę monet na zawsze: [[:amount]]. Czy na pewno chcesz kontynuować?",
+    "resurrection_yes_confirm_message": "Wskrzeszenie jest możliwe tylko raz! Czy na pewno chcesz kontynuować? Monety, które powrócą na saldo w ciągu następnej godziny: [[:amount]].",
+    "delete_account_confirmation_title": "Potwierdź usunięcie",
+    "delete_account_confirmation_text": "Usunięcie konta spowoduje trwałe usunięcie wszystkich danych, w tym salda ice. Czy chcesz kontynuować?"
   },
   "periods": {
-    "3_days": "3 days",
-    "7_days": "7 days",
-    "30_days": "30 days",
-    "1_day": "1 Day",
-    "1_week": "1 Week",
-    "1_month": "1 Month",
-    "90_days": "90 days",
-    "14_days": "14 days"
+    "3_days": "3 dni",
+    "7_days": "7 dni",
+    "30_days": "30 dni",
+    "1_day": "1 dzień",
+    "1_week": "1 tydzień",
+    "1_month": "1 miesiąc",
+    "90_days": "90 dni",
+    "14_days": "14 dni"
   },
   "notifications": {
-    "joined": " has joined your team",
-    "multiply": " and {{count}} others have joined your team",
-    "ping": " has pinged you, wake up!",
-    "delete": "Delete",
-    "add_notifications": "Add mocked notifications",
-    "no_notifications": "No notifications to display",
-    "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
-    "clear_title": "Clear all notifications?",
-    "title": "Notifications"
+    "joined": " jest teraz w Twoim zespole.",
+    "multiply": " i {{count}} innych dołączyło do twojego zespołu.",
+    "ping": " pinguje Cię – obudź się!",
+    "delete": "Usuń",
+    "add_notifications": "Dodaj próbne powiadomienia",
+    "no_notifications": "Brak powiadomień do wyświetlenia.",
+    "add_announcements": "Dodaj próbne ogłoszenia",
+    "add_both": "Dodawanie próbnych powiadomień i ogłoszeń razem",
+    "clear_title": "Wyczyścić wszystkie powiadomienia?",
+    "title": "Powiadomienia"
   },
   "notification_feed_screen": {
-    "yesterday": "Yesterday",
-    "last_week": "Last Week",
-    "this_month": "This month",
-    "last_month": "Last Month",
-    "this_week": "This week"
+    "yesterday": "Wczoraj",
+    "last_week": "Ostatni tydzień",
+    "this_month": "W tym miesiącu",
+    "last_month": "Ostatni miesiąc",
+    "this_week": "W tym tygodniu"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to hide from public eyes"
+      "title": "1. Statystyki profilu",
+      "description": "Stuknij bloki, które chcesz ukryć przed dostępem publicznym."
     },
     "step2": {
-      "description": "Tap on this block to hide it from public eyes",
-      "title": "2. Your Current Role"
+      "description": "Stuknij ten blok, aby ukryć go przed dostępem publicznym.",
+      "title": "2. Twoja obecna rola"
     },
     "step3": {
-      "title": "3. Your Earned Badges",
-      "description": "Tap here to hide your badges from public eyes"
+      "title": "3. Zdobyte odznaki",
+      "description": "Stuknij tutaj, aby ukryć swoje odznaki przed dostępem publicznym."
     }
   },
   "confirm_email": {
-    "title": "Confirm your email",
-    "description": "Please enter your email address and we will send code ",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
-    "wrong_email": "Wrong email?",
-    "check_email": "Check your email",
-    "emailed_link_to": "We emailed a magic link to",
-    "link_instruction": "Click the link to log in or sign up.",
-    "modify_title": "Confirm New Email",
-    "modify_description": "Please enter your new email address"
+    "title": "Potwierdź swój adres e-mail",
+    "description": "Podaj swój adres e-mail, a my wyślemy kod.",
+    "note": "Jeśli nie otrzymałeś wiadomości e-mail w ciągu 5 minut, sprawdź folder spamu.",
+    "wrong_email": "Nieprawidłowy e-mail?",
+    "check_email": "Sprawdź pocztę e-mail",
+    "emailed_link_to": "Wysłaliśmy magiczny link do",
+    "emailed_steps_to": "Wysłaliśmy e-mailem instrukcje do",
+    "link_instruction": "Kliknij łącze, aby się zalogować lub zarejestrować.",
+    "reset_link_instruction": "Kliknij łącze, aby zresetować hasło.",
+    "modify_title": "Potwierdź nowy adres e-mail",
+    "modify_description": "Wprowadź swój nowy adres e-mail."
   },
   "invalid_link": {
-    "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "title": "Nieprawidłowy link",
+    "description": "Niestety ten link jest nieprawidłowy, wprowadź ponownie swój adres e-mail, a my wyślemy Ci nowy link."
   },
   "confirm_code": {
-    "title": "Confirm code",
-    "description": "Please enter the code sent to",
-    "send_code_again": "Send code again",
-    "resend_time_label": "New code available in ",
-    "enter_code": "Enter the code",
-    "wrong_number": "Wrong number?"
+    "title": "Potwierdź kod",
+    "description": "Wprowadź kod wysłany do",
+    "send_code_again": "Wyślij kod ponownie",
+    "resend_time_label": "Nowy kod dostępny za ",
+    "enter_code": "Wprowadź kod",
+    "wrong_number": "Zły numer?"
   },
   "ice_bonus": {
-    "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
-    "balance_label": "Your current balance"
+    "title": "Nagroda powitalna",
+    "description": "Gratulacje, zdobywasz swoje pierwsze [[:value]] monet(y) [[:ice]], co świadczy o naszym [[:bold]]zaufaniu[[/:bold]] do [[:bold]]Ciebie[[/:bold]].",
+    "balance_label": "Bieżące saldo"
   },
   "country_select": {
-    "title": "Select country"
+    "title": "Wybierz kraj"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "Bałwanek",
+      "subtitle": "Zbuduj śnieżne imperium",
+      "description": "Zarabiaj, meldując się co 24 godziny, aby pokazać swoje zaangażowanie na rzecz sieci ice i udowodnić, że jesteś człowiekiem, a nie robotem."
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "Ambasador",
+      "subtitle": "Władca śnieżnego imperium",
+      "description": "Ambasadorem zostaje się, gdy do zespołu dołączy co najmniej 100 osób. Każdy ambasador otrzyma wczesny dostęp do nowych funkcji."
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirm Phone",
-    "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
-    }
+    "modify_title": "Potwierdź telefon",
+    "modify_description": "Potwierdź kod kraju i wprowadź numer telefonu.",
+    "button": "Potwierdź kraj i telefon",
+    "same_phone_error": "Nie można użyć tego samego numeru."
   },
   "date_select": {
-    "title": "Choose date"
+    "title": "Wybierz datę"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+      "readmore": {
+        "title": "Czytaj więcej",
+        "description": "Tutaj możesz zobaczyć najnowsze wiadomości od naszego zespołu. Naciśnij ten przycisk, aby przeczytać cały artykuł."
       },
-      "step_2": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
-      },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
-      },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
-      },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
-      },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
-      },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
-      },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "releasednews": {
+        "title": "Opublikowane wiadomości",
+        "description": "Stuknij w poszczególne tytuły wiadomości i przeczytaj ich pełną wersję. Bądź na bieżąco z naszymi wiadomościami i ankietami."
       }
     },
     "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      "allow_contacts": {
+        "title": "Zezwalaj na dostęp do kontaktów",
+        "description": "Zsynchronizuj swoje kontakty i zobacz, kto już jest w [[:ice]]. W przyszłości będzie można wysyłać [[:ice]] do dowolnego ze swoich kontaktów."
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "confirm_phone": {
+        "title": "Potwierdź telefon",
+        "description": "Potwierdź swoją tożsamość i pozwól swoim kontaktom wiedzieć, że też jesteś członkiem sieci ice. Numer telefonu użytkownika nie będzie udostępniany osobom trzecim."
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "contacts_list": {
+        "title": "Lista kontaktów",
+        "description": "Jest to lista ze wszystkimi kontaktami, z których te, które już dołączyły do sieci [[:ice]], są wyświetlane na górze listy."
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "referrals": {
+        "title": "Polecenia",
+        "description": "Tutaj zobaczysz, ilu masz łącznie poleconych. Im więcej osób zaprosisz, tym więcej zarobisz."
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earnings": {
+        "title": "Zarobki",
+        "description": "Twoje bieżące saldo jest aktualizowane co godzinę i wyświetlane tutaj. Obejmuje ono zarobki bezpośrednie i stakowane wraz z zarobkami poziomu 1 i 2."
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "segmented_control_tier_one": {
+        "title": "Poziom 1",
+        "description": "Tutaj możesz zobaczyć listę poleconych na poziomie 1. Za każdego znajomego, który zamelduje się w tym samym czasie co Ty, otrzymasz dodatkowe 25% do podstawowej stawki zarobków wdrażania projektu. [[:link]]Czytaj więcej[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "segmented_control_tier_two": {
+        "title": "Poziom 2",
+        "description": "Tutaj możesz zobaczyć listę poleconych na poziomie 2. Za każdego znajomego, który zamelduje się w tym samym czasie co Ty, otrzymasz dodatkowe 5% do podstawowej stawki zarobków wdrażania projektu. [[:link]]Czytaj więcej[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "active_users": {
+        "title": "Aktywni użytkownicy",
+        "description": "Jest to aktualny stan aktywności związanej z meldunkiem poleconych. Liczą się jako aktywni, gdy mają aktywną sesję meldunku."
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "tier_one_earnings": {
+        "title": "Zarobki na poziomie 1",
+        "description": "Tutaj możesz zobaczyć listę poleconych na poziomie 1. Za każdego członka, który zamelduje się w tym samym czasie co Ty, oboje otrzymacie dodatkowe 25% do podstawowej stawki zarobków za wdrażanie projektu."
+      },
+      "ping": {
+        "title": "Przycisk pingowania",
+        "description": "Powiadom poleconych o rozpoczęciu sesji meldunku. Możesz wysłać jedno powiadomienie do każdego poleconego co 24 godziny."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Strona główna",
+        "description": "Witamy w [[:ice]]. Na ekranie głównym można znaleźć wszystkie statystyki dotyczące salda, bieżącego wskaźnika zarobków, globalnej pozycji oraz zespołu."
+      },
+      "invite": {
+        "title": "Zaproszenie",
+        "description": "Za każdą osobę, którą zaprosisz, oboje zarobicie do 25% podstawowej stawki zarobków. Im więcej osób zaprosisz, tym więcej zarobisz."
+      },
+      "team": {
+        "title": "Zespół",
+        "description": "[[:ice]] jest lepszy ze znajomymi. Na tej stronie można sprawdzić status członków zespołu z poziomów 1 i 2. Możesz również wysłać do nich powiadomienie z tego miejsca."
+      },
+      "news": {
+        "title": "Aktualności",
+        "description": "Bądź na bieżąco z naszymi wiadomościami i ankietami. Ponieważ jesteśmy zdecentralizowaną, autonomiczną organizacją, możliwe będzie tutaj głosowanie nad przyszłymi funkcjami."
+      },
+      "profile": {
+        "title": "Profil",
+        "description": "Dostosuj szczegóły swojego profilu i zobacz wszystkie swoje osiągnięcia i odznaki, które zostały zdobyte. Skorzystaj z kalkulatora tutaj, aby oszacować swoje zarobki."
+      },
+      "earningicestart": {
+        "title": "Zarabianie ice",
+        "description": "Możesz rozpocząć sesję meldunku [[:ice]] co 24 godziny, dotykając tego przycisku. Nie zapomnij wrócić każdego dnia i zacząć zarabiać!"
+      },
+      "earningiceseemore": {
+        "title": "Zarabianie ice",
+        "description": "Dotknij ponownie, aby wyświetlić więcej szczegółów na temat bieżącej sesji meldunku."
+      },
+      "stats": {
+        "title": "Statystyki",
+        "description": "Na stronie statystyk można zobaczyć łączną liczbę aktywnych użytkowników, którzy zameldowali się każdego dnia, a także czołowe kraje i najlepszych użytkowników."
+      },
+      "help": {
+        "title": "Pomoc",
+        "description": "Czy masz jakieś pytania? Sprawdź naszą listę często zadawanych pytań. Jeśli nie możesz znaleźć tego, czego szukasz, nie wahaj się skontaktować z nami pod adresem hi@ice.io."
+      },
+      "preStaking": {
+        "title": "Pre-staking",
+        "description": "Zmaksymalizuj swoje zyski poprzez pre-staking zdobytych nagród. Wybierz swój przydział i okres stakingu, aby otrzymać premię dodatkowo do swoich zarobków."
+      },
+      "wallet": {
+        "title": "Karta portfelowa",
+        "description": "Tutaj można znaleźć aktualne saldo [[:ice]] wraz ze stawką zarobków. Im więcej poleconych z Twojego zespołu jest online, tym wyższa stawka zarobków."
+      },
+      "earning": {
+        "title": "Karta zarabiania",
+        "description": "Bądź na bieżąco ze swoimi zarobkami i bonusami! Tutaj możesz sprawdzić swoją aktualną stawkę, naszą stawkę podstawową i stawki bonusowe za różne aktywności w aplikacji."
+      },
+      "engagement": {
+        "title": "Karta zaangażowania",
+        "description": "Śledź swoje sesje meldunkowe i dni wolne! Zajrzyj do tej sekcji, aby uzyskać więcej informacji na temat kolejnych sesji meldunku i sprawdzić liczbę dostępnych dni wolnych."
+      },
+      "profilecard": {
+        "title": "Karta profilu",
+        "description": "Możesz śledzić status swojego profilu, monitorując tę kartę. Wyświetla ona aktualną globalną rangę wraz z rolą, poziomem i łączną liczbą poleconych."
+      },
+      "referralscard": {
+        "title": "Karta poleceń",
+        "description": "Zobacz ewolucję statystyk poleceń z ostatnich 5 dni dla poleceń poziomu 1 i 2, wybierając tę kartę."
+      },
+      "adoptioncard": {
+        "title": "Karta wrażania",
+        "description": "W oparciu o średnią z ostatniego tygodnia wszystkich aktywnych bałwanków, można zobaczyć aktualną stawkę zarobków [[:ice]]. Stawka zarobków jest zmniejszana o połowę po osiągnięciu kolejnego progu."
+      },
+      "nickname": {
+        "title": "Pseudonim",
+        "description": "Pseudonim nadaje Ci wyjątkowości. Twoi znajomi będą musieli go użyć, aby dołączyć do Twojego zespołu. Możesz również użyć tego skrótu, aby otworzyć swój profil."
+      },
+      "balancehistory": {
+        "title": "Historia salda",
+        "description": "Tutaj można znaleźć aktualne saldo [[:ice]] w lokalnym portfelu i blockchainie. Saldo lokalnego portfela jest aktualizowane co godzinę, podczas gdy saldo blockchain jest aktualizowane co 24 godziny."
+      },
+      "achievements": {
+        "title": "Osiągnięcia",
+        "description": "Wykonaj poniższe zadania i awansuj! Rozpocznij swoją pierwszą sesję meldunku już teraz!"
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Unlink Logins",
-    "sessionName": "Login via {{providerName}}",
+    "title": "Zerwij logowania",
+    "sessionName": "Zaloguj się przez{{providerName}}",
     "buttons": {
-      "currentSession": "Current session",
-      "endSession": "End Session",
-      "loginUnlinked": "Login Unlinked",
-      "sessionEnded": "Session Ended",
-      "unlink": "Unlink"
+      "currentSession": "Bieżąca sesja",
+      "endSession": "Zakończ sesję",
+      "loginUnlinked": "Logowanie zerwane",
+      "sessionEnded": "Sesja zakończona",
+      "unlink": "Zerwij"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Unlink Login?",
-        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
+        "title": "Zerwać logowanie?",
+        "message": "Czy na pewno chcesz zerwać logowanie przez {{providerName}} od tego urządzenia?"
       },
       "endSession": {
-        "title": "End Session?",
-        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
+        "title": "Koniec sesji?",
+        "message": "Czy na pewno chcesz zakończyć sesję logowania {{providerName}} z tego urządzenia?"
       }
     }
   },
@@ -792,12 +846,51 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Today’s Bonus",
-    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
-    "link": "Find out more",
-    "extra_message": "You have received your daily extra bonus on your earning rate",
-    "expired_title": "Bonus Expired",
-    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
-    "result_title": "Congratulations"
+    "claim_title": "Dzisiejszy bonus",
+    "claim_message": "Nadszedł czas na dzisiejszy bonus. Dotknij przycisku [[:bold]]„Odbierz bonus”[[/:bold]]poniżej.",
+    "link": "Dowiedz się więcej",
+    "extra_message": "Otrzymano dodatkową dzienną premię od stawki zarobków.",
+    "expired_title": "Bonus wygasł",
+    "expired_message": "Niestety, dzisiejszy bonus wygasł. Bądź na bieżąco z kolejnymi powiadomieniami!",
+    "result_title": "Gratulacje"
+  },
+  "early_access": {
+    "title": "Wczesny dostęp",
+    "message_part1": "Uzyskaj wgląd do aplikacji [[:bold]]ice[[/:bold]] przed naszą [[:bold]]zbliżającą się oficjalną premierą.[[/:bold]]",
+    "message_part2": "Wszystkie salda zostaną zresetowane do 0 w dniu premiery. Twój zespół pozostanie jednak nienaruszony.",
+    "message_part3": "Dziękujemy za wsparcie!",
+    "checkbox_description": "Przyjmuję do wiadomości! Nie pokazuj więcej tego okienka."
+  },
+  "mining_notice": {
+    "title": "Ogłoszenie",
+    "message": "Dziękujemy za zainteresowanie zarabianiem [[:bold]]ice![[/:bold]] Obecnie dopracowujemy naszą technologię i meldunek nie jest obecnie dostępny. To szansa na skupienie się na budowaniu zespołu i rozwijaniu mikrospołeczności.",
+    "message_footer": "Bądź na bieżąco z aktualizacjami na naszych kanałach na [[:twitter]]Twitterze[[/:twitter]] i [[:telegram]]Telegramie[[/:telegram]]."
+  },
+  "qr_code": {
+    "description": "Zeskanuj kod QR, aby dołączyć do mojego zespołu."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Dołącz do nas na TikToku",
+      "description": "Chcemy tylko poinformować o naszej nowej, ekscytującej społeczności na platformie TikTok. Dzielimy się zabawnymi i edukacyjnymi treściami na temat naszej cyfrowej waluty ice i chcielibyśmy Cię do niej zaprosić! "
+    },
+    "youtube": {
+      "title": "Dołącz do nas na YouTube",
+      "description": "Od samouczków na temat zarabiania ice po aktualizacje dotyczące nowych funkcji, a nawet zabawne treści społecznościowe – nasz kanał YouTube to idealne miejsce, aby być na bieżąco."
+    },
+    "linkedin": {
+      "title": "Dołącz do nas na LinkedIn",
+      "description": "Dołączenie do społeczności ice na LinkedIn to świetny sposób, aby być na bieżąco z najnowszymi wydarzeniami oraz aby nawiązać kontakt z podobnie myślącymi osobami, które tak samo jak Ty pasjonują się przyszłością walut cyfrowych."
+    },
+    "facebook": {
+      "title": "Dołącz do nas na Facebooku",
+      "description_part1": "Gorąco polecamy obserwowanie naszej strony na Facebooku.",
+      "description_part2": "Nie tylko pomoże Ci ona być na bieżąco ze wszystkim, co dzieje się w ramach projektu ice, ale jest to również świetny sposób na nawiązanie kontaktu z naszą społecznością i bycie częścią dyskusji."
+    },
+    "instagram": {
+      "title": "Dołącz do nas na Instagramie",
+      "description_part1": "Obserwowanie nas na Instagramie to świetny sposób, aby być na bieżąco i łączyć się z innymi użytkownikami, którzy również pasjonują się ice",
+      "description_part2": "Ponadto jako pierwszy dowiesz się o wszelkich nowych funkcjach lub promocjach, które oferujemy."
+    }
   }
 }

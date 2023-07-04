@@ -1,787 +1,841 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "ยินดีต้อนรับสู่ ice",
+      "description": "[[:ice]] เป็นสกุลเงินดิจิทัลที่คุณสามารถสร้างรายได้ด้วยโทรศัพท์ของคุณ ice เป็นเจ้าของและดำเนินการโดยผู้ใช้ทั่วไปทุกวันเช่นคุณ"
     },
     "page2": {
-      "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "title": "เป็นมิตรกับโลก",
+      "description": "[[:ice]] โดยเนื้อแท้แล้วประหยัดพลังงานมากกว่า BTC เนื่องจากใช้กลไกฉันทามติ “การพิสูจน์ว่ามีส่วนได้ส่วนเสีย” เมื่อใช้การพิสูจน์ว่ามีส่วนได้ส่วนเสีย (POS) เจ้าของสกุลเงินดิจิทัลจะตรวจสอบธุรกรรมบล็อกตามจำนวนเหรียญที่ผู้ตรวจสอบความถูกต้องค้ำประกัน"
     },
     "page3": {
-      "title": "People’s Coin",
-      "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "title": "เหรียญของผู้คน",
+      "description_part1": "พลังอยู่ในมือของคุณ",
+      "description_part2": "ทุกสิ่งที่เราพัฒนาที่ [[:ice]] จะเป็นแบบโอเพ่นซอร์สและควบคุมโดยองค์กรปกครองตนเองแบบกระจายอำนาจ (DAO)"
     },
     "page4": {
-      "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "title": "ติดต่อกันและกัน",
+      "description": "แตะ [[:iceLogo]] เพื่อทำการเช็กอินรายวันของคุณด้วยแอปมือถือที่ใช้พลังงานต่ำและฟรีของเรา เมื่อแตะในทุกวัน คุณจะมั่นใจได้ว่า ice จะอยู่ในความควบคุมของมนุษย์จริง ๆ ไม่ใช่หุ่นยนต์"
     },
     "page5": {
-      "title": "Refer & Earn",
-      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
+      "title": "อ้างอิง & รับเงิน",
+      "description": "เชิญเพื่อนของคุณและรับโบนัสมากถึง 25% (สำหรับคุณทั้งคู่) จากอัตรารายได้พื้นฐานของคุณสำหรับเพื่อนแต่ละคนที่เข้าร่วมทีมของคุณ"
     },
     "page6": {
-      "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
-      "description_part2": "Don’t worry, we will not spam you!",
-      "not_now": "Not now"
+      "title": "การแจ้งเตือน",
+      "description_part1": "[[:ice]] เซสชันการเช็กอินมีเวลา 24 ชั่วโมงเท่านั้น คุณต้องการรับการแจ้งเตือนเมื่อเซสชันปัจจุบันของคุณสิ้นสุดลงหรือไม่?",
+      "description_part2": "ไม่ต้องกังวล เราจะไม่ส่งสแปมให้คุณ!",
+      "not_now": "ไม่ใช่ตอนนี้"
     }
   },
   "button": {
-    "yes_btn": "Yes, please",
-    "next_btn": "Next",
-    "not_now": "Not now",
-    "view_all": "view all",
+    "yes_btn": "ใช่ ได้โปรด",
+    "next_btn": "ถัดไป",
+    "not_now": "ไม่ใช่ตอนนี้",
+    "view_all": "ดูทั้งหมด",
     "invite_friend": {
-      "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "title": "เชิญเพื่อน",
+      "description": "รับ [[:ice]] เพิ่มเติมโดยการเชิญเพื่อนของคุณ"
     },
-    "no": "No",
-    "search_country": "Search for country",
-    "save": "Save",
-    "yes": "Yes",
-    "change": "Change",
-    "no_cancel": "No, cancel",
-    "complete": "Complete",
-    "cancel": "Cancel",
-    "clear": "Clear",
-    "finish": "Finish",
-    "next_step": "Next Step",
-    "see_all": "see all",
-    "back": "Back",
-    "search": "Search",
-    "continue": "Continue",
-    "apply": "Apply",
-    "reset": "Reset",
-    "skip_all": "Skip all",
-    "done": "Done",
-    "confirm": "Confirm",
-    "do_this_later": "Do this later",
-    "resurrect_me": "Resurrect Me",
-    "claim_bonus": "Claim Bonus",
-    "close": "Close",
-    "try_again": "Try Again",
-    "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "see_all": "ดูทั้งหมด",
+    "no": "ไม่",
+    "search_country": "ค้นหาประเทศ",
+    "save": "บันทึก",
+    "yes": "ใช่",
+    "change": "เปลี่ยน",
+    "no_cancel": "ไม่ ยกเลิก",
+    "complete": "เสร็จสิ้น",
+    "cancel": "ยกเลิก",
+    "clear": "ล้าง",
+    "finish": "เสร็จสิ้น",
+    "next_step": "ขั้นตอนถัดไป",
+    "back": "ย้อนกลับ",
+    "search": "ค้นหา",
+    "continue": "ดำเนินการต่อ",
+    "apply": "ปรับใช้",
+    "reset": "รีเซ็ต",
+    "skip_all": "ข้ามทั้งหมด",
+    "done": "เสร็จสิ้น",
+    "confirm": "ยืนยัน",
+    "do_this_later": "ทำในภายหลัง",
+    "resurrect_me": "คืนสถานะให้ฉัน",
+    "claim_bonus": "ขอรับโบนัส",
+    "close": "ปิด",
+    "try_again": "ลองอีกครั้ง",
+    "view_changelog": "ดูบันทึกการเปลี่ยนแปลง",
+    "disable": "ปิดการทำงาน",
+    "agree": "ข้าพเจ้ายอมรับ",
+    "learn_more": "เรียนรู้เพิ่มเติม",
+    "back_to_login": "กลับไปล็อกอิน",
+    "follow_us": "ติดตามเรา",
+    "subscribe": "สมัครสมาชิก"
   },
   "team": {
-    "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
+    "contacts_tab": "ผู้ติดต่อ",
+    "tierOne_tab": "ระดับ 1",
+    "tierTwo_tab": "ระดับ 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "title": "ในขณะนี้ คุณไม่มีการอ้างอิง [[:title]] ใด ๆ!",
+      "contacts": "ในขณะนี้ คุณไม่มีผู้ติดต่อใด ๆ ในสมุดโทรศัพท์",
+      "button_title": "เชิญเพื่อน"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
-      "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_title": "[[:ice]] ดีขึ้นอีกเมื่อมีเพื่อน",
+      "empty_button_title": "อนุญาตการเข้าถึงรายชื่อผู้ติดต่อ",
+      "empty_description": "ซิงค์ผู้ติดต่อของคุณและดูว่าใครใช้งาน [[:ice]] แล้ว ในอนาคต คุณจะสามารถส่ง ice ไปยังผู้ติดต่อใด ๆ ก็ตามของคุณ"
     },
     "header": {
-      "search_placeholder": "Search for users",
-      "referrals": "Referrals",
-      "earnings": "Earnings"
+      "search_placeholder": "ค้นหาผู้ใช้",
+      "referrals": "การอ้างอิง",
+      "earnings": "รายได้"
     },
     "confirm_code": {
-      "title": "Confirm Code",
-      "description": "Please enter the confirmation code you have received on your phone.",
-      "placeholder": "Enter the code",
-      "button": "Confirm your code now"
+      "title": "ยืนยันรหัส",
+      "description": "โปรดกรอกรหัสยืนยันที่คุณได้รับบนโทรศัพท์ของคุณ",
+      "placeholder": "กรอกรหัส",
+      "button": "ยืนยันรหัสของคุณตอนนี้"
     },
     "confirm_phone": {
-      "title": "Confirm Phone",
-      "description": "Please confirm your country code and enter your phone number."
+      "title": "ยืนยันโทรศัพท์",
+      "description": "โปรดยืนยันรหัสประเทศแล้วกรอกหมายเลขโทรศัพท์ของคุณ"
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "friends"
+        "friends": "เพื่อน"
       },
-      "all_contacts": "All contacts",
-      "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "all_contacts": "ผู้ติดต่อทั้งหมด",
+      "invite": "เชิญ",
+      "invitation_text": "สวัสดี {{name}} ฉันต้องการเชิญคุณเข้าร่วม ice"
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier 1 Earnings"
+        "title_earnings": "รายได้ระดับ 1"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier 2 Earnings"
+        "title_earnings": "รายได้ระดับ 2"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
-    "welcome": "Welcome to ice",
-    "email": "Email",
-    "slogan": "Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "logInSignUp": "ล็อกอิน / สมัครสมาชิก",
+    "phone": "โทรศัพท์",
+    "or": "หรือ",
+    "reset_password": "รีเซ็ตรหัสผ่าน",
+    "welcome": "ยินดีต้อนรับสู่ ice",
+    "email": "อีเมล",
+    "slogan": "การรีเซ็ตสกุลเงินทั่วโลก",
+    "privacy": "ในการดำเนินการต่อ คุณยอมรับต่อ[[:link]]ข้อตกลงการใช้บริการ[[/:link]]และ[[:link]]นโยบายความเป็นส่วนตัว[[/:link]]ของเรา"
   },
   "claimUsername": {
-    "title": "Claim nickname",
-    "description": "Your friends will need to use this nickname to join your team",
-    "inputPlaceholder": "Enter your nickname",
-    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
-    "note_part2": "Example:",
+    "title": "ขอรับชื่อเล่น",
+    "description": "เพื่อนของคุณจะต้องใช้ชื่อเล่นนี้เพื่อเข้าร่วมทีมของคุณ",
+    "inputPlaceholder": "กรอกชื่อเล่นของคุณ",
+    "note_part1": "เมื่อสร้างชื่อเล่น จะใช้ได้เฉพาะตัวอักษร ตัวเลขและเครื่องหมายจุด",
+    "note_part2": "ตัวอย่าง:",
     "note_example": "your.name01"
   },
   "whoInvitedYou": {
-    "title": "Who invited you?",
-    "description": "Enter the nickname of the person who invited you",
-    "inputPlaceholder": "Enter nickname",
-    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
-    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+    "title": "ใครเชิญคุณ?",
+    "description": "กรอกชื่อเล่นของบุคคลที่เชิญคุณ",
+    "inputPlaceholder": "กรอกชื่อเล่น",
+    "dontHaveInvitationCode": "โดยการทำขั้นตอนนี้ให้เสร็จสิ้น คุณและเพื่อนของคุณจะได้รับโบนัส 25% จากอัตรารายได้พื้นฐานเมื่อคุณทั้งสองเช็กอินพร้อมกัน",
+    "dontHaveCodeTip": "หากคุณไม่มีรหัสเชิญ เราจะเลือกสมาชิกโดยการสุ่มให้เป็นผู้อ้างอิงของคุณ!"
   },
   "errors": {
-    "nicknameSize": "Nickname size: 4-20 characters.",
-    "removeInvalidCharacters": "Remove invalid characters.",
-    "validation_error": "Some validation error",
-    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
-    "wrong_phone_number": "Invalid phone number, please try again",
-    "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken",
-    "phone_number_already_in_use": "Phone number already in use",
-    "invalid_validation_code": "Invalid code number, please try again!",
-    "validation_expired": "Validation expired",
-    "validation_not_found": "Validation not found",
-    "invalid_email": "Invalid email",
-    "invalid_ref_username": "Nickname is invalid.",
-    "invalid_phone": "Invalid phone number",
-    "user_disabled": "User has been disabled",
-    "expired_action_code": "OTP in email link is expired",
-    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
-    "invalid_credential": "The credential is malformed or has expired",
-    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
-    "user_not_found_for_email": "There is no user corresponding to the given email",
-    "user_not_found": "User not found",
-    "auth_in_progress": "Sign-In already in progress",
-    "google_play_services_not_available": "Google Play services are not available on the device",
-    "unknown_error_with_code": "Unknown error {{code}}",
-    "no_such_provider": "You do not have this provider linked",
-    "min_username": "Minimum length is 4 characters.",
-    "max_username": "Maximum length is 30 characters.",
-    "code_expired": "The code has expired. Please ask for a new code.",
-    "too_many_requests": "Too many requests. Please try again later.",
-    "network_error_title": "No internet connection",
-    "network_error_message": "Your device does not have any active internet connection",
-    "unknown_error": "Some error occurred, please try again later",
-    "general_error_title": "Oups...",
-    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
-    "general_network_error": "A network error has occurred. Please check your connection.",
-    "credential_already_in_use": "This credential is already associated with a different user account.",
-    "email_already_in_use": "The email address is already in use by another account.",
-    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
-    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "nicknameSize": "ขนาดชื่อเล่น: 4-20 ตัวอักษร",
+    "removeInvalidCharacters": "ลบตัวอักษรที่ใช้การไม่ได้",
+    "validation_error": "ข้อผิดพลาดในการตรวจสอบความสมบูรณ์บางประการ",
+    "multiple_accounts": "อีเมล/หมายเลขโทรศัพท์มีความเชื่อมโยงกับบัญชีอื่น โปรดล็อกอินบัญชีนั้นเพื่อพิสูจน์ความเป็นเจ้าของ จากนั้นออกจากระบบแล้วเข้าสู่ระบบบัญชีนี้อีกครั้ง หากคุณไม่ได้เป็นเจ้าของบัญชีดังกล่าวหรือไม่สามารถล็อกอินเข้าไปได้ โปรดติดต่อฝ่ายสนับสนุนของเรา",
+    "wrong_phone_number": "หมายเลขโทรศัพท์ใช้การไม่ได้ โปรดลองอีกครั้ง",
+    "invalid_username": "ชื่อเล่นใช้การไม่ได้",
+    "email_already_taken": "อีเมลถูกใช้งานแล้ว",
+    "phone_number_already_taken": "หมายเลขโทรศัพท์ถูกใช้งานแล้ว",
+    "invalid_validation_code": "หมายเลขรหัสใช้การไม่ได้ โปรดลองอีกครั้ง",
+    "validation_expired": "การตรวจสอบหมดอายุแล้ว",
+    "validation_not_found": "ไม่พบการตรวจสอบ",
+    "invalid_email": "อีเมลใช้การไม่ได้",
+    "invalid_password": "รหัสผ่านใช้การไม่ได้",
+    "invalid_ref_username": "ชื่อเล่นใช้การไม่ได้",
+    "invalid_phone": "หมายเลขโทรศัพท์ใช้การไม่ได้",
+    "user_disabled": "ผู้ใช้ถูกปิดใช้งาน",
+    "expired_action_code": "OTP ในลิงก์อีเมลหมดอายุแล้ว",
+    "account_exists_with_different_credential": "มีบัญชีซึ่งมีที่อยู่อีเมลที่ได้รับการยืนยันโดยข้อมูลรับรองอยู่แล้ว",
+    "invalid_credential": "ข้อมูลรับรองผิดรูปแบบหรือหมดอายุ",
+    "operation_not_allowed": "ประเภทของบัญชีที่เกี่ยวข้องกับข้อมูลรับรองไม่ได้รับการเปิดใช้งาน",
+    "user_not_found_for_email": "ไม่มีผู้ใช้ที่สอดคล้องกับอีเมลที่มอบให้",
+    "user_not_found": "ไม่พบผู้ใช้",
+    "auth_in_progress": "การเข้าสู่ระบบอยู่ระหว่างดำเนินการ",
+    "google_play_services_not_available": "ไม่พบบริการ Google Play บนอุปกรณ์นี้",
+    "unknown_error_with_code": "ข้อผิดพลาดที่ไม่ทราบ:  {{code}}",
+    "no_such_provider": "คุณยังไม่ได้เชื่อมต่อกับผู้ให้บริการนี้",
+    "min_username": "ความยาวขั้นต่ำคือ 4 ตัวอักษร",
+    "max_username": "ความยาวสูงสุดคือ 30 ตัวอักษร",
+    "code_expired": "รหัสหมดอายุแล้ว โปรดขอรหัสใหม่",
+    "too_many_requests": "มีการร้องขอมากเกินไป โปรดลองอีกครั้งในภายหลัง",
+    "network_error_title": "ไม่มีการเชื่อมต่ออินเทอร์เน็ต",
+    "network_error_message": "อุปกรณ์ของคุณไม่มีการเชื่อมต่ออินเทอร์เน็ตที่ใช้งานได้",
+    "unknown_error": "เกิดข้อผิดพลาด โปรดลองอีกครั้งในภายหลัง",
+    "general_error_title": "ขออภัย...",
+    "general_error_message": "ดูเหมือนว่ามีบางสิ่งผิดพลาด ทีมงานของเรากำลังทำการแก้ไขในขณะนี้",
+    "general_network_error": "เกิดข้อผิดพลาดเครือข่าย โปรดตรวจสอบการเชื่อมต่อของคุณ",
+    "credential_already_in_use": "ข้อมูลรับรองเหล่านี้เชื่อมโยงกับบัญชีผู้ใช้อื่นแล้ว",
+    "email_already_in_use": "ที่อยู่อีเมลนี้ถูกใช้โดยบัญชีอื่นแล้ว",
+    "user_token_expired": "ข้อมูลรับรองของคุณใช้ไม่ได้อีกต่อไป โปรดเข้าสู่ระบบอีกครั้ง",
+    "requires_recent_login": "การดำเนินการนี้ละเอียดอ่อนและต้องการการพิสูจน์ตัวตนเมื่อเร็ว ๆ นี้ โปรดเข้าสู่ระบบอีกครั้ง",
+    "same_email": "คุณไม่สามารถใช้อีเมลเดียวกัน",
+    "weak_password": "รหัสผ่านไม่แข็งแกร่ง",
+    "wrong_password": "รหัสผ่านไม่ถูกต้อง",
+    "no_camera_permissions": "ไม่ได้มอบการอนุญาตสำหรับกล้อง",
+    "no_library_permissions": "ไม่ได้มอบการอนุญาตสำหรับไลบรารี"
   },
   "profile": {
     "my_roles": {
-      "title": "My Role"
+      "title": "บทบาทของฉัน"
     },
-    "mining_calculator": "earnings calculator",
-    "invite_friends": "Invite Friends",
-    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
-    "global_rank": "global rank",
-    "view_all_roles": "view all roles",
-    "data_is_hidden": "data is hidden",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "เครื่องมือคำนวณรายได้",
+    "invite_friends": "เชิญเพื่อน",
+    "invite_friends_engage": "เผยแพร่และเชิญเพื่อนของคุณ ยิ่งเผยแพร่มากขึ้น คุณก็ยิ่งได้รับมากขึ้น!",
+    "global_rank": "อันดับระดับโลก",
+    "view_all_roles": "ดูบทบาททั้งหมด",
+    "data_is_hidden": "ข้อมูลถูกซ่อน",
+    "progress_text": "{{value}} จาก {{total}}",
     "not_found": {
-      "title": "User was not found",
-      "description": "oops, we couldn't find this user"
+      "title": "ไม่พบผู้ใช้",
+      "description": "ขออภัย เราหาผู้ใช้นี้ไม่พบ"
     },
     "my_badges": {
-      "title": "My Badges"
+      "title": "เหรียญตราของฉัน"
     },
     "badges": {
-      "title": "Badges"
+      "title": "เหรียญตรา"
     },
     "roles": {
-      "title": "Roles"
+      "title": "บทบาท"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "เหรียญ",
+        "description": "เหรียญ"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "โซเชียล",
+        "description": "เพื่อน"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "ระดับ",
+        "description": "ระดับ"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update",
-    "comingSoon": "Coming soon",
+    "level": "ระดับ",
+    "referrals": "การอ้างอิง",
+    "coin": "เหรียญ",
+    "social": "โซเชียล",
+    "phone_number": "หมายเลขโทรศัพท์",
+    "years": "ปี",
+    "of": "จาก",
+    "attention": "โปรดทราบ",
+    "email_address": "ที่อยู่อีเมล",
+    "password": "รหัสผ่าน",
+    "data_hidden": "ข้อมูลถูกซ่อน",
+    "pull_to_refresh": "ดึงเพื่ออัปเดต",
+    "comingSoon": "จะมาในเร็ว ๆ นี้",
     "date": {
-      "today": "Today"
+      "today": "วันนี้"
     }
   },
   "mining_calculator": {
-    "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "result_label": "คุณจะได้รับ",
+    "active_inviter": "ผู้เชิญที่ใช้งานอยู่",
+    "tier_1_ref": "การอ้างอิงระดับ 1",
+    "tier_2_ref": "การอ้างอิงระดับ 2",
+    "active_miners": "การอ้างอิงที่ใช้งานอยู่"
   },
   "home": {
     "wallet": {
-      "title": "WALLET",
-      "rate": "EARNING RATE",
-      "balance": "CURRENT BALANCE"
+      "title": "กระเป๋าเงิน",
+      "rate": "อัตรารายได้",
+      "balance": "ยอดคงเหลือในปัจจุบัน"
     },
     "pioneer": {
-      "title": "PIONEER",
-      "rank": "GLOBAL RANK",
-      "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "rank": "อันดับระดับโลก",
+      "referrals": "การอ้างอิง",
+      "description": "อ้างอิงผู้ใช้มากขึ้นและได้รับ [[:ice]] มากขึ้น"
     },
     "referrals": {
-      "title": "REFERRALS",
-      "description": "Referral stats for the previous 5 days",
-      "no_referrals_description": "You don't have any referrals yet",
-      "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "title": "การอ้างอิง",
+      "description": "สถิติการอ้างอิงสำหรับ 5 วันก่อนหน้า",
+      "no_referrals_description": "คุณยังไม่มีการอ้างอิงใด ๆ",
+      "users_tier_1": "ผู้ใช้ระดับ 1",
+      "users_tier_2": "ผู้ใช้ระดับ 2"
     },
     "adoption": {
-      "title": "ADOPTION",
-      "level": "level",
-      "users": "\nusers"
+      "title": "การยอมรับใช้งาน",
+      "level": "ระดับ",
+      "users": "ผู้ใช้"
     },
-    "steps": {
-      "title": "Your progress",
-      "description": "Complete the tasks below and level up!",
-      "step_one": {
-        "title": "Claim your nickname",
-        "description": "Set it and start earning from your invite"
+    "tasks": {
+      "achievements": "ความสำเร็จ",
+      "title": "ความคืบหน้าของคุณ",
+      "description": "ทำงานด้านล่างให้เสร็จสิ้นและเพิ่มระดับ!",
+      "completed": {
+        "title": "ขอแสดงความยินดี",
+        "description": "เช็กอินอยู่เสมอทุกวันและรับรางวัลเพิ่มเติม!"
       },
-      "step_two": {
-        "title": "Start mining",
-        "description": "Your first mining session"
+      "popup": {
+        "title": "เข้าร่วมช่องทาง Telegram ของเรา",
+        "description": "ระบุชื่อเล่นของคุณที่ใช้บน Telegram",
+        "placeholder": "ชื่อเล่น"
       },
-      "step_three": {
-        "title": "Profile picture",
-        "description": "Upload your profile image"
+      "claim_username": {
+        "title": "ขอรับชื่อเล่นของคุณ",
+        "description": "ตั้งค่าและแบ่งปันกับเพื่อนของคุณ"
       },
-      "step_four": {
-        "title": "Join Telegram",
-        "description": "Be part of our community and join now"
+      "start_mining": {
+        "title": "เริ่มรับรายได้",
+        "description": "เซสชันการเช็กอินแรกของคุณ"
       },
-      "step_five": {
-        "title": "Follow us on Twitter",
-        "description": "Let’s keep in touch, follow us on twitter"
+      "upload_profile_picture": {
+        "title": "รูปโปรไฟล์",
+        "description": "อัปโหลดรูปโปรไฟล์ของคุณ"
       },
-      "step_six": {
-        "title": "Invite 5 Friends",
-        "description": "Create your team and increase your earnings"
+      "join_telegram": {
+        "title": "เข้าร่วม Telegram",
+        "description": "เป็นส่วนหนึ่งของชุมชนของเราและเข้าร่วมตอนนี้"
+      },
+      "follow_us_on_twitter": {
+        "title": "ติดตามเราบน Twitter",
+        "description": "มาติดต่อกัน ติดตามเราบน Twitter"
+      },
+      "invite_friends": {
+        "title": "เชิญเพื่อน 5 คน",
+        "description": "ทำให้ทีมของคุณเติบโตและเพิ่มรายได้ของคุณ"
       }
     },
     "overview": {
-      "title": "Overview"
+      "title": "ภาพรวม"
     },
     "menu": {
-      "notifications": "Notifications",
-      "staking": "Staking",
-      "stats": "Stats",
-      "help": "Help"
-    },
-    "tasks": {
-      "title": "ACHIEVEMENTS"
+      "notifications": "การแจ้งเตือน",
+      "staking": "การค้ำประกัน",
+      "stats": "สถิติ",
+      "help": "ความช่วยเหลือ"
     },
     "team": {
-      "title": "Team",
-      "view_team": "view team"
+      "title": "ทีมงาน",
+      "view_team": "ดูทีมงาน"
     },
     "mining_rate": {
-      "title": "EARNING RATE",
-      "base": "Base"
+      "title": "อัตรารายได้",
+      "base": "พื้นฐาน"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
-      "streak": "STREAK",
-      "days_off": "DAYS OFF"
+      "title": "การมีส่วนร่วม",
+      "description_part1": "ความต่อเนื่อง หมายถึงจำนวนวันต่อเนื่องที่คุณเช็กอิน",
+      "description_part2": "สำหรับแต่ละ 6 วันที่ต่อเนื่อง คุณจะได้รับวันพักหนึ่งวัน",
+      "streak": "ความต่อเนื่อง",
+      "days_off": "วันหยุด"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "การตั้งค่า",
+    "profile": "โปรไฟล์",
+    "legal": "กฎหมาย",
+    "support": "การสนับสนุน",
+    "personal_information_title": "ข้อมูลส่วนตัว",
+    "personal_information_description": "จัดการรายละเอียดโปรไฟล์ของคุณ",
+    "notifications_title": "การแจ้งเตือน",
+    "notifications_description": "จัดการการแจ้งเตือนของคุณที่นี่",
+    "push_notifications_title": "การแจ้งเตือนแบบพุช",
+    "push_notifications_description": "ปรับแต่งการตั้งค่าการแจ้งเตือนแบบพุชของคุณ",
+    "email_notifications_title": "การแจ้งเตือนอีเมล",
+    "email_notifications_description": "ปรับแต่งการตั้งค่าการแจ้งเตือนอีเมลของคุณ",
+    "terms_title": "ข้อตกลงการใช้บริการ",
+    "terms_description": "ตรวจสอบข้อตกลงการใช้บริการของคุณ",
+    "privacy_title": "นโยบายความเป็นส่วนตัว",
+    "privacy_description": "เรียนรู้เกี่ยวกับนโยบายความเป็นส่วนตัวของเรา",
+    "feedback_title": "ส่งข้อเสนอแนะ",
+    "feedback_description": "แบ่งปันความคิดเห็นของคุณกับเรา",
+    "invite_title": "เชิญเพื่อน",
+    "invite_description": "รับ ice เพิ่มเติมโดยการเชิญเพื่อนของคุณ",
+    "delete_title": "ลบบัญชี",
+    "delete_description": "ลบบัญชีของคุณ",
+    "delete_confirmation_title": "คุณแน่ใจหรือไม่ว่าต้องการลบบัญชีนี้?",
+    "delete_confirmation_yes": "ใช่ ลบ",
+    "logout_title": "ออกจากระบบ",
+    "logout_description": "ออกจากระบบแล้วหยุดพัก",
+    "logout_confirmation_title": "คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ?",
+    "logout_confirmation_yes": "ใช่ ออกจากระบบ",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "ยืนยันโทรศัพท์ใหม่",
+      "description": "โปรดยืนยันรหัสประเทศแล้วกรอกหมายเลขโทรศัพท์ใหม่ของคุณ",
+      "button": "ยืนยันหมายเลขโทรศัพท์ใหม่"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
-      "type_push": "PUSH",
-      "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
+      "enable_prompt": "การแจ้งเตือนไม่ได้รับอนุญาต คุณต้องการเปิดใช้งานหรือไม่?",
+      "channel_achievements": "ความสำเร็จ",
+      "channel_news": "ข่าว",
+      "channel_reminders": "การแจ้งเตือน",
+      "channel_team": "ทีมงาน",
+      "type_push": "พุช",
+      "type_email": "อีเมล",
+      "disable_notifications": "ปิดใช้งานการแจ้งเตือน?",
+      "disable_notifications_description": "เมื่อปิดใช้งานการแจ้งเตือน คุณจะไม่สามารถรับอัปเดตว่าคุณสามารถเริ่มต้นการเช็กอินได้เมื่อใด ข่าว หรือข้อมูลทีม",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
+          "title": "สถิติรายสัปดาห์",
+          "description": "รับการแจ้งเตือนเกี่ยวกับกิจกรรมของคุณ"
         },
         "weekly_report": {
-          "title": "Weekly report",
-          "description": "Receive notifications about your activity"
+          "title": "รายงานรายสัปดาห์",
+          "description": "รับการแจ้งเตือนเกี่ยวกับกิจกรรมของคุณ"
         },
         "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
+          "title": "ความสำเร็จ",
+          "description": "รับการแจ้งเตือนเกี่ยวกับความคืบหน้าของคุณ"
         },
         "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
+          "title": "โปรโมชั่น",
+          "description": "รับการแจ้งเตือนเกี่ยวกับการทำให้ทีมของคุณเติบโตและรับรายได้เพิ่มเติม"
         },
         "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
+          "title": "ข่าว",
+          "description": "รับการแจ้งเตือนจากทีมของเรา"
         },
         "micro_community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
+          "title": "ชุมชนขนาดเล็ก",
+          "description": "รับการแจ้งเตือนเกี่ยวกับทีมของคุณ"
         },
         "daily_bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
+          "title": "โบนัสประจำวัน",
+          "description": "รับการแจ้งเตือนเพื่อรับโบนัสประจำวันของคุณ"
         },
         "mining": {
-          "title": "Session status",
-          "description": "Receive notifications about your check-in activity"
+          "title": "สถานะเซสชัน",
+          "description": "รับการแจ้งเตือนเกี่ยวกับกิจกรรมการเช็กอินของคุณ"
         },
         "system": {
-          "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "title": "ระบบ",
+          "description": "รับการแจ้งเตือนสำคัญเกี่ยวกับแอป ice"
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "การตั้งค่าภาษา",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "เปลี่ยนภาษา",
+      "prompt": "การปรับใช้การตั้งค่านี้จะรีสตาร์ทแอป"
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "รูปภาพโปรไฟล์",
+    "inapp_privacy_title": "ความเป็นส่วนตัว",
+    "inapp_privacy_description": "จัดการข้อมูลของคุณที่นี่",
+    "developer": "ผู้พัฒนา",
+    "user_id": "ID ผู้ใช้",
+    "user_token": "โทเคนผู้ใช้",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "ลบรูปภาพ",
+      "edit": "แก้ไขรูปโปรไฟล์",
+      "photo_gallery": "แกลเลอรีรูปภาพ",
+      "camera": "กล้อง"
     },
-    "confirm_email_confirmation_title": "Confirm email?",
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "ยืนยันอีเมล?",
+    "update_email_confirmation_title": "อัปเดตอีเมล?",
+    "update_email_confirmation_subtitle": "หากเปลี่ยนที่อยู่อีเมล คุณจะต้องล็อกอินอีกครั้ง คุณแน่ใจหรือไม่ว่าต้องการดำเนินการต่อ?",
+    "unlink_logins_title": "ยกเลิกการเชื่อมต่อล็อกอิน",
+    "unlink_logins_description": "คุณสามารถยกเลิกการเชื่อมต่อล็อกอินของคุณได้จากที่นี่"
   },
   "invite_share": {
-    "title": "Invite a friend",
+    "title": "เชิญเพื่อน",
     "telegram": "Telegram",
     "twitter": "Twitter",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
-    "email": "Email",
-    "fb": "Newsfeed",
+    "email": "อีเมล",
+    "fb": "ฟีดข่าว",
     "sms": "SMS",
-    "copy_link": "Copy link",
-    "more": "More",
-    "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "copy_link": "คัดลอกลิงก์",
+    "more": "เพิ่มเติม",
+    "copied": "คัดลอกแล้ว",
+    "share_message": "สวัสดี ☃️ มนุษย์หิมะ! เข้าร่วมทีมของฉันบน ice และรับเหรียญ ice 10 เหรียญ เมื่อคุณสมัครสมาชิกโดยใช้รหัสอ้างอิงของฉัน:",
+    "share_subject": "เข้าร่วมทีมของฉันบน ice",
+    "description": "เผยแพร่และเชิญเพื่อนของคุณ คุณได้รับ [[:ice]] สำหรับการอ้างอิงใหม่แต่ละครั้งที่คุณนำเข้ามา",
+    "share": "แบ่งปัน"
   },
   "users": {
-    "ping": "PING",
-    "active": "Active",
-    "inactive": "Inactive",
+    "ping": "ส่งการพิง",
+    "active": "ใช้งานอยู่",
+    "inactive": "ไม่ใช้งาน",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T1": "ระดับ 1",
+      "T2": "ระดับ 2"
     }
   },
   "personal_information": {
-    "first_name": "First name",
-    "last_name": "Last name",
-    "country": "Country",
-    "city": "City",
-    "title": "Personal Information",
-    "phone": "Phone",
-    "email": "Email",
-    "username": "Nickname"
+    "first_name": "ชื่อจริง",
+    "last_name": "นามสกุล",
+    "country": "ประเทศ",
+    "city": "เมือง",
+    "title": "ข้อมูลส่วนตัว",
+    "phone": "โทรศัพท์",
+    "email": "อีเมล",
+    "username": "ชื่อเล่น"
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
-      "length": "Nickname size: 4-20 characters.",
-      "invalid_characters": "Remove invalid characters.",
-      "not_found": "Nickname not found.",
-      "some_error": "Some error occurred.",
-      "refer_yourself": "You can't refer yourself"
+      "already_taken": "ชื่อเล่นถูกใช้แล้ว",
+      "length": "ขนาดชื่อเล่น: 4-20 ตัวอักษร",
+      "invalid_characters": "ลบตัวอักษรที่ใช้การไม่ได้",
+      "not_found": "ไม่พบชื่อเล่น",
+      "some_error": "เกิดข้อผิดพลาดขึ้น",
+      "refer_yourself": "คุณไม่สามารถอ้างอิงตนเอง"
     }
   },
   "staking": {
-    "time_left": "Time Left",
-    "mining_rate": "Earning Rate",
-    "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking Bonus",
-    "period_label": "Staked Period",
-    "title": "Pre-Staking",
-    "current_rate": "Current Rate",
-    "allocation": "Allocation",
-    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
-    "staking_terms": "Staking Terms",
-    "stake_now": "Pre-Stake Now!",
-    "balance_label": "Staked balance",
-    "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "time_left": "เวลาที่เหลืออยู่",
+    "mining_rate": "อัตรารายได้",
+    "appeal": "เพิ่มอัตรารายได้ของคุณ",
+    "benefits_description": "ค้ำประกันรางวัล ice ของคุณล่วงหน้านานถึง 5 ปี และเพิ่มอัตรารายได้ของคุณสูงถึง 250%",
+    "bonus_label": "โบนัสการค้ำประกันล่วงหน้า",
+    "period_label": "ช่วงเวลาการค้ำประกัน",
+    "title": "การค้ำประกันล่วงหน้า",
+    "current_rate": "อัตราปัจจุบัน",
+    "allocation": "การจัดสรร",
+    "description": "การค้ำประกันเป็นกระบวนการที่แสดงความยึดมั่นว่าคุณจะใช้สินทรัพย์ดิจิทัลของคุณในการสนับสนุนเครือข่ายบล็อกเชนและยืนยันธุรกรรม",
+    "terms_agree": "ข้าพเจ้ายอมรับ[[:link]]ข้อตกลงการค้ำประกัน[[/:link]] [[:ice]] การถือครอง ice ของคุณจะถูกล็อกไว้ตามระยะเวลาที่ค้ำประกัน",
+    "stake_now": "ค้ำประกันล่วงหน้าตอนนี้!",
+    "balance_label": "ยอดคงเหลือที่ค้ำประกัน",
+    "confirm_title": "ยืนยันการค้ำประกันล่วงหน้า",
+    "confirm_subtitle": "คุณแน่ใจหรือไม่ว่าต้องการค้ำประกันล่วงหน้าสำหรับเหรียญของคุณ? การดำเนินการนี้จะไม่สามารถย้อนกลับได้ เมื่อคุณยืนยัน"
   },
   "stats": {
-    "header_title": "Stats",
-    "active": "Active users",
-    "total": "Total users",
-    "user_growth": "User growth",
-    "top_miners": "Top users",
-    "top_countries": "Top countries",
-    "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "header_title": "สถิติ",
+    "active": "ผู้ใช้ที่ใช้งานอยู่",
+    "total": "ผู้ใช้ทั้งหมด",
+    "user_growth": "การเติบโตของผู้ใช้",
+    "top_miners": "ผู้ใช้อันดับต้น",
+    "top_countries": "ประเทศอันดับต้น",
+    "online_miners": "ผู้ใช้ทางออนไลน์",
+    "detailed_information": "ข้อมูลอย่างละเอียด"
   },
   "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
+    "title": "โปรดอัปเดต",
+    "description": "คุณกำลังใช้แอปเวอร์ชันเก่าและจำเป็นต้องอัปเดตเพื่อใช้งานต่อไป",
+    "button_title": "อัปเดตตอนนี้"
   },
   "general": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
+    "good_morning": "สวัสดีตอนเช้า",
+    "good_afternoon": "สวัสดีตอนบ่าย",
+    "good_evening": "สวัสดีตอนเย็น",
     "ice": "ice",
-    "ice_per_hour": "ice/h",
-    "seconds_short": "s",
-    "minutes_short": "m",
-    "hours_short": "h",
-    "days_short": "d"
+    "ice_per_hour": "ice/ชม.",
+    "seconds_short": "วิ",
+    "minutes_short": "น",
+    "hours_short": "ชม.",
+    "days_short": "วัน"
   },
   "news": {
-    "news_feed": "News Feed",
-    "read_more": "Read more",
-    "views": "{{viewsCount}} views"
+    "news_feed": "ฟีดข่าว",
+    "read_more": "อ่านเพิ่มเติม",
+    "no_more_news": "นี่คือรายการสุดท้ายของฟีดข่าว",
+    "views": "{{viewsCount}} ยอดชม"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
-    "nothing_is_found": "Nothing was found for your query",
-    "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "empty": "ค้นหาผู้ติดต่อ เพื่อน ice และสมาชิกในชุมชนขนาดเล็กของคุณ",
+    "nothing_is_found": "ไม่พบสิ่งใดสำหรับการสืบค้นของคุณ",
+    "search_by_country": "ค้นหาตามประเทศ",
+    "search_for_users": "ค้นหาผู้ใช้",
+    "loading": "กำลังค้นหา…"
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tap here to start your first check-in session",
-    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
-    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
-    "mining_holiday_active": "You are using a Day Off!"
+    "mining_inactive_tooltip": "แตะที่นี่เพื่อเพื่อเริ่มต้นเซสชันการเช็กอินแรกของคุณ",
+    "mining_reset_tooltip": "กด 1 วินาทีเพื่อยืดเซสชันการเช็กอินของคุณ",
+    "mining_holiday_reset_tooltip": "คุณกำลังใช้วันหยุด! กด 1 วินาทีเพื่อยืดเซสชันการเช็กอินของคุณ",
+    "mining_holiday_active": "คุณกำลังใช้วันหยุด!"
   },
   "invite_friend": {
-    "invite_button": "Invite Friend",
-    "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "invite_button": "เชิญเพื่อน",
+    "button_title": "เชิญเพื่อน",
+    "description": "เพื่อนของคุณยังไม่ได้ใช้ [[:ice]] ส่งคำเชิญให้เขา!"
   },
   "balance_history": {
-    "title": "Balance History",
-    "wallet": "Wallet",
-    "blockchain": "Blockchain",
-    "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
-    "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "title": "ประวัติยอดคงเหลือ",
+    "wallet": "กระเป๋าเงิน",
+    "blockchain": "บล็อกเชน",
+    "wallet_update_interval": "อัปเดตทุกชั่วโมง",
+    "blockchain_update_interval": "อัปเดตทุก 24 ชั่วโมง",
+    "list_end_label": "นี่คือรายการสุดท้ายของประวัติยอดคงเหลือ",
+    "no_data": "ไม่มีข้อมูลให้แสดงสำหรับช่วงเวลาที่ระบุ"
   },
   "pop_up": {
-    "update_now": "Update Now",
-    "please_update": "Please Update",
-    "update_now_text": "You are using an old app version and need to update it in order to use it further",
-    "you_are_up_to_date": "You are up to date!",
-    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
-    "resurrection": "Resurrection",
-    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
-    "resurrection_warning": "You can only resurrect one time!",
-    "please_confirm": "Please confirm",
-    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "update_now": "อัปเดตตอนนี้",
+    "please_update": "โปรดอัปเดต",
+    "update_now_text": "คุณกำลังใช้แอปเวอร์ชันเก่าและจำเป็นต้องอัปเดตเพื่อใช้งานต่อไป",
+    "you_are_up_to_date": "คุณเป็นปัจจุบันแล้ว!",
+    "up_to_date_text": "คุณกำลังใช้เวอร์ชันล่าสุดในตอนนี้ ตรวจสอบการเปลี่ยนแปลงทั้งหมดด้านล่าง",
+    "resurrection": "การคืนสถานะ",
+    "resurrection_message": "คุณมีโอกาสหนึ่งครั้งในการคืนสถานะและรับเหรียญ [[:amount]] เหรียญที่คุณทำหายใน [[:period]] ก่อนหน้า",
+    "resurrection_warning": "คุณสามารถคืนสถานะได้ครั้งเดียว!",
+    "please_confirm": "โปรดยืนยัน",
+    "resurrection_no_confirm_message": "คุณจะสูญเสียเหรียญ [[:amount]] เหรียญของคุณตลอดกาล คุณแน่ใจหรือไม่ว่าคุณต้องการดําเนินการต่อ?",
+    "resurrection_yes_confirm_message": "คุณสามารถคืนสถานะได้ครั้งเดียว! คุณแน่ใจหรือไม่ว่าคุณต้องการดําเนินการต่อ? เหรียญ [[:amount]] เหรียญจะคืนไปยังยอดคงเหลือของคุณภายในชั่วโมงถัดไป",
+    "delete_account_confirmation_title": "ยืนยันการลบ",
+    "delete_account_confirmation_text": "การลบบัญชีจะลบข้อมูลของคุณทั้งหมดซึ่งรวมถึงยอดคงเหลือ ice ของคุณ คุณต้องการดำเนินการต่อหรือไม่?"
   },
   "periods": {
-    "3_days": "3 days",
-    "7_days": "7 days",
-    "30_days": "30 days",
-    "1_day": "1 Day",
-    "1_week": "1 Week",
-    "1_month": "1 Month",
-    "90_days": "90 days",
-    "14_days": "14 days"
+    "3_days": "3 วัน",
+    "7_days": "7 วัน",
+    "30_days": "30 วัน",
+    "1_day": "1 วัน",
+    "1_week": "1 สัปดาห์",
+    "1_month": "1 เดือน",
+    "90_days": "90 วัน",
+    "14_days": "14 วัน"
   },
   "notifications": {
-    "joined": " has joined your team",
-    "multiply": " and {{count}} others have joined your team",
-    "ping": " has pinged you, wake up!",
-    "delete": "Delete",
-    "add_notifications": "Add mocked notifications",
-    "no_notifications": "No notifications to display",
-    "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
-    "clear_title": "Clear all notifications?",
-    "title": "Notifications"
+    "joined": " ได้เข้าร่วมทีมของคุณ",
+    "multiply": " และคนอื่น ๆ {{count}} คนได้เข้าร่วมทีมของคุณ",
+    "ping": " ได้ส่งการพิงถึงคุณ ตื่นเร็ว!",
+    "delete": "ลบ",
+    "add_notifications": "เพิ่มการแจ้งเตือนจำลอง",
+    "no_notifications": "ไม่มีการแจ้งเตือนให้แสดง",
+    "add_announcements": "เพิ่มประกาศจำลอง",
+    "add_both": "เพิ่มการแจ้งเตือนและประกาศจำลองด้วยกัน",
+    "clear_title": "ล้างการแจ้งเตือนทั้งหมด?",
+    "title": "การแจ้งเตือน"
   },
   "notification_feed_screen": {
-    "yesterday": "Yesterday",
-    "last_week": "Last Week",
-    "this_month": "This month",
-    "last_month": "Last Month",
-    "this_week": "This week"
+    "yesterday": "เมื่อวานนี้",
+    "last_week": "สัปดาห์ที่แล้ว",
+    "this_month": "เดือนนี้",
+    "last_month": "เดือนก่อนหน้า",
+    "this_week": "สัปดาห์นี้"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to hide from public eyes"
+      "title": "1. สถิติโปรไฟล์ของคุณ",
+      "description": "แตะบนบล็อกที่คุณต้องการซ่อนเพื่อไม่ให้เห็นได้โดยสาธารณะ"
     },
     "step2": {
-      "description": "Tap on this block to hide it from public eyes",
-      "title": "2. Your Current Role"
+      "description": "แตะบนบล็อกเพื่อซ่อนเพื่อไม่ให้เห็นได้โดยสาธารณะ",
+      "title": "2. บทบาทปัจจุบันของคุณ"
     },
     "step3": {
-      "title": "3. Your Earned Badges",
-      "description": "Tap here to hide your badges from public eyes"
+      "title": "3. เหรียญตราที่คุณได้รับ",
+      "description": "แตะที่นี่เพื่อซ่อนเหรียญตราของคุณเพื่อไม่ให้เห็นได้โดยสาธารณะ"
     }
   },
   "confirm_email": {
-    "title": "Confirm your email",
-    "description": "Please enter your email address and we will send code ",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
-    "wrong_email": "Wrong email?",
-    "check_email": "Check your email",
-    "emailed_link_to": "We emailed a magic link to",
-    "link_instruction": "Click the link to log in or sign up.",
-    "modify_title": "Confirm New Email",
-    "modify_description": "Please enter your new email address"
+    "title": "ยืนยันอีเมลของคุณ",
+    "description": "โปรดกรอกที่อยู่อีเมลของคุณและเราจะส่งรหัสให้",
+    "note": "หากคุณไม่ได้รับอีเมลภายใน 5 นาที โปรดตรวจสอบโฟลเดอร์สแปมของคุณ",
+    "wrong_email": "อีเมลไม่ถูกต้อง?",
+    "check_email": "ตรวจดูอีเมลของคุณ",
+    "emailed_link_to": "เราได้อีเมลลิงก์วิเศษไปยัง",
+    "emailed_steps_to": "เราได้อีเมลขั้นตอนไปยัง",
+    "link_instruction": "คลิกลิงก์เพื่อล็อกอินหรือสมัครสมาชิก",
+    "reset_link_instruction": "คลิกลิงก์เพื่อรีเซ็ตรหัสผ่านของคุณ",
+    "modify_title": "ยืนยันอีเมลใหม่",
+    "modify_description": "โปรดกรอกที่อยู่อีเมลใหม่ของคุณ"
   },
   "invalid_link": {
-    "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "title": "ลิงก์ใช้การไม่ได้",
+    "description": "โชคไม่ดีที่ลิงก์ใช้การไม่ได้ โปรดกรอกอีเมลของคุณอีกครั้งและเราจะส่งลิงก์ใหม่ให้คุณ"
   },
   "confirm_code": {
-    "title": "Confirm code",
-    "description": "Please enter the code sent to",
-    "send_code_again": "Send code again",
-    "resend_time_label": "New code available in ",
-    "enter_code": "Enter the code",
-    "wrong_number": "Wrong number?"
+    "title": "ยืนยันรหัส",
+    "description": "โปรดกรอกรหัสที่ส่งไปยัง",
+    "send_code_again": "ส่งรหัสอีกครั้ง",
+    "resend_time_label": "รหัสใหม่ใช้งานได้ใน ",
+    "enter_code": "กรอกรหัส",
+    "wrong_number": "หมายเลขไม่ถูกต้อง?"
   },
   "ice_bonus": {
-    "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
-    "balance_label": "Your current balance"
+    "title": "รางวัลยินดีต้อนรับ",
+    "description": "ขอแสดงความยินดี คุณได้รับเหรียญ [[:ice]] [[:value]] เหรียญแรกซึ่งพิสูจน์ถึง[[:bold]]ความไว้วางใจ[[/:bold]]ของเราต่อ[[:bold]]คุณ[[/:bold]]",
+    "balance_label": "ยอดคงเหลือปัจจุบันของคุณ"
   },
   "country_select": {
-    "title": "Select country"
+    "title": "เลือกประเทศ"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "มนุษย์หิมะ",
+      "subtitle": "สร้างจักรวรรดิหิมะ",
+      "description": "รับรายได้โดยทำการเช็กอินทุก ๆ 24 ชั่วโมงเพื่อแสดงความมุ่งมั่นของคุณต่อเครือข่าย ice และพิสูจน์ว่าคุณเป็นมนุษย์ ไม่ใช่หุ่นยนต์"
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "ทูต",
+      "subtitle": "ผู้ปกครองจักรวรรดิหิมะ",
+      "description": "คุณจะกลายเป็นทูตเมื่อมีผู้คนอย่างน้อย 100 คนเข้าร่วมทีมของคุณ ทูตทุกคนจะได้รับการเข้าถึงฟีเจอร์ใหม่ล่วงหน้า"
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirm Phone",
-    "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
-    }
+    "modify_title": "ยืนยันโทรศัพท์",
+    "modify_description": "โปรดยืนยันรหัสประเทศแล้วกรอกหมายเลขโทรศัพท์ของคุณ",
+    "button": "ยืนยันประเทศและโทรศัพท์",
+    "same_phone_error": "คุณไม่สามารถใช้หมายเลขเดียวกัน"
   },
   "date_select": {
-    "title": "Choose date"
+    "title": "เลือกวันที่"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+      "readmore": {
+        "title": "อ่านเพิ่มเติม",
+        "description": "ในที่นี้ คุณสามารถดูข่าวสารล่าสุดของเราจากทีมของเรา แตะบนปุ่มนี้เพื่ออ่านบทความฉบับเต็ม"
       },
-      "step_2": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
-      },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
-      },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
-      },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
-      },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
-      },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
-      },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "releasednews": {
+        "title": "ข่าวที่เผยแพร่",
+        "description": "แตะบนหัวข้อข่าวแต่ละหัวข้อและอ่านเวอร์ชันเต็ม ทันข่าวสารด้วยข่าวและโพลล์ของเราทั้งหมด"
       }
     },
     "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      "allow_contacts": {
+        "title": "อนุญาตผู้ติดต่อ",
+        "description": "ซิงค์ผู้ติดต่อของคุณและดูว่าใครใช้งาน [[:ice]] แล้ว ในอนาคต คุณจะสามารถส่ง [[:ice]] ไปยังผู้ติดต่อใด ๆ ก็ตามของคุณ"
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "confirm_phone": {
+        "title": "ยืนยันโทรศัพท์",
+        "description": "ยืนยันตัวตนของคุณและอนุญาตให้ผู้ติดต่อของคุณทราบว่าคุณก็เป็นสมาชิกของเครือข่าย ice จะไม่มีการแบ่งปันหมายเลขโทรศัพท์ของคุณกับบุคคลที่สามอื่น ๆ"
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "contacts_list": {
+        "title": "รายชื่อผู้ติดต่อ",
+        "description": "นี่คือรายชื่อของผู้ติดต่อของคุณทั้งหมด ผู้ที่ได้เข้าร่วมเครือข่าย [[:ice]] จะแสดงที่ด้านบนของรายชื่อ"
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "referrals": {
+        "title": "การอ้างอิง",
+        "description": "ในที่นี้ คุณจะเห็นว่าคุณมีการอ้างอิงรวมเท่าใด ยิ่งคุณเชิญผู้คนมากขึ้น คุณก็จะได้รับรายได้มากขึ้น"
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earnings": {
+        "title": "รายได้",
+        "description": "ยอดคงเหลือปัจจุบันของคุณอัปเดตทุกชั่วโมงและแสดงที่นี่ ข้อมูลนี้รวมถึงรายได้โดยตรง & ค้ำประกันของคุณ พร้อมกับรายได้ระดับ 1 และระดับ 2"
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "segmented_control_tier_one": {
+        "title": "ระดับ 1",
+        "description": "ในที่นี้ คุณจะเห็นรายการของการอ้างอิงระดับ 1 สำหรับเพื่อนแต่ละคนที่เช็กอินในเวลาเดียวกับคุณ คุณจะได้รับ 25% เพิ่มเติมจากอัตรารายได้พื้นฐานสำหรับการยอมรับการใช้งานในปัจจุบันของคุณ [[:link]]อ่านเพิ่มเติม[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "segmented_control_tier_two": {
+        "title": "ระดับ 2",
+        "description": "ในที่นี้ คุณจะเห็นรายการของการอ้างอิงระดับ 2 สำหรับเพื่อนแต่ละคนที่เช็กอินในเวลาเดียวกับคุณ คุณจะได้รับ 5% เพิ่มเติมจากอัตรารายได้พื้นฐานสำหรับการยอมรับการใช้งานในปัจจุบันของคุณ [[:link]]อ่านเพิ่มเติม[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "active_users": {
+        "title": "ผู้ใช้ที่ใช้งานอยู่",
+        "description": "นี่คือสถานะปัจจุบันของกิจกรรมการเช็กอินการอ้างอิงของคุณ จะถือว่าใช้งานอยู่เมื่อพวกเขามีเซสชันการเช็กอินที่ใช้งานอยู่"
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "tier_one_earnings": {
+        "title": "รายได้ระดับ 1",
+        "description": "ในที่นี้ คุณจะเห็นรายการของการอ้างอิงระดับ 1 สำหรับสมาชิกแต่ละคนที่เช็กอินในเวลาเดียวกับคุณ คุณทั้งสองจะได้รับ 25% เพิ่มเติมจากอัตรารายได้พื้นฐานสำหรับการยอมรับการใช้งานในปัจจุบันของคุณ"
+      },
+      "ping": {
+        "title": "ปุ่มส่งการพิง",
+        "description": "แจ้งเตือนผู้ได้รับการอ้างอิงของคุณให้เริ่มต้นการเช็กอินของพวกเขา ในทุก ๆ 24 ชั่วโมง คุณจะสามารถส่งการแจ้งเตือนหนึ่งครั้งให้ผู้ได้รับการอ้างอิงแต่ละคน"
+      }
+    },
+    "home": {
+      "home": {
+        "title": "หน้าหลัก",
+        "description": "ยินดีต้อนรับสู่ [[:ice]] บนหน้าจอหลัก คุณสามารถเห็นถึงสถิติทั้งหมดเกี่ยวกับยอดคงเหลือของคุณ อัตรารายได้ปัจจุบัน อันดับระดับโลกของคุณพร้อมกับทีมของคุณ"
+      },
+      "invite": {
+        "title": "เชิญ",
+        "description": "สำหรับทุกคนที่คุณเชิญ คุณทั้งสองจะได้รับสูงถึง 25% ของอัตรารายได้พื้นฐานของคุณ ยิ่งคุณเชิญผู้คนมากขึ้น คุณก็จะได้รับรายได้มากขึ้น"
+      },
+      "team": {
+        "title": "ทีมงาน",
+        "description": "[[:ice]] ดีขึ้นอีกเมื่อมีเพื่อน บนหน้านี้ คุณสามารถเห็นถึงสถานะของสมาชิกทีมของคุณจากทั้งระดับ 1 และระดับ 2 คุณยังสามารถส่งการพิงได้จากที่นี่"
+      },
+      "news": {
+        "title": "ข่าว",
+        "description": "ทันข่าวสารด้วยข่าวและโพลล์ของเราทั้งหมด ในฐานะที่เราเป็นองค์กรปกครองตนเองแบบกระจายอำนาจ คุณจะสามารถลงคะแนนเสียงได้ที่นี่สำหรับฟีเจอร์ในอนาคต"
+      },
+      "profile": {
+        "title": "โปรไฟล์",
+        "description": "ปรับแต่งรายละเอียดโปรไฟล์ของคุณและดูความสำเร็จและเหรียญตราของคุณทั้งหมดที่คุณได้รับ ใช้เครื่องคิดเลขจากที่นี่ เพื่อให้คุณสามารถประมาณรายได้ของคุณได้"
+      },
+      "earningicestart": {
+        "title": "การได้รับ ice",
+        "description": "คุณสามารถเริ่มต้นเซสชันการเช็กอิน [[:ice]] ได้ทุก ๆ 24 ชั่วโมงโดยการแตะปุ่มนี้ อย่าลืมที่จะกลับมาในแต่ละวันและเริ่มต้นรับรายได้!"
+      },
+      "earningiceseemore": {
+        "title": "การได้รับ ice",
+        "description": "แตะอีกครั้งและดูรายละเอียดเพิ่มเติมเกี่ยวกับเซสชันการเช็กอินปัจจุบันของคุณ"
+      },
+      "stats": {
+        "title": "สถิติ",
+        "description": "บนหน้าสถิติ คุณจะเห็นถึงผู้ใช้รวมและผู้ใช้ที่ใช้งานอยู่ที่เช็กอินในแต่ละวันพร้อมกับประเทศและผู้ใช้อันดับต้น"
+      },
+      "help": {
+        "title": "ความช่วยเหลือ",
+        "description": "คุณมีคำถามใด ๆ หรือไม่? โปรดดู รายการคำถามที่พบบ่อยของเรา หากคุณไม่พบสิ่งที่คุณกำลังมองหา อย่าลังเลที่จะติดต่อเราที่ hi@ice.io"
+      },
+      "preStaking": {
+        "title": "การค้ำประกันล่วงหน้า",
+        "description": "เพิ่มผลตอบแทนของคุณให้มากที่สุดโดยการค้ำประกันล่วงหน้าสำหรับรางวัลรายได้ของคุณ เลือกการจัดสรรและระยะเวลาการค้ำประกันของคุณเพื่อรับโบนัสเพิ่มเติมจากรายได้ของคุณ"
+      },
+      "wallet": {
+        "title": "บัตรกระเป๋าเงิน",
+        "description": "คุณสามารถเห็นถึงยอดคงเหลือ [[:ice]] ปัจจุบันของคุณและอัตรารายได้ได้ที่นี่ ยิ่งผู้ได้รับการอ้างอิงของคุณปรากฏตัวทางออนไลน์มากขึ้น อัตรารายได้ก็จะยิ่งสูงขึ้น"
+      },
+      "earning": {
+        "title": "บัตรรายได้",
+        "description": "ทราบข้อมูลล่าสุดเกี่ยวกับอัตรารายได้และโบนัสของคุณ! ในที่นี้ คุณสามารถตรวจสอบอัตราปัจจุบันของคุณ อัตราฐานของเรา และอัตราโบนัสสำหรับกิจกรรมต่าง ๆ ในแอป"
+      },
+      "engagement": {
+        "title": "บัตรการมีส่วนร่วม",
+        "description": "ติดตามความต่อเนื่องของเซสชันการเช็กอินของคุณและวันหยุด! ตรวจสอบส่วนนี้สำหรับรายละเอียดเพิ่มเติมเกี่ยวกับเซสชันการเช็กอินต่อเนื่องของคุณและดูว่าคุณมีวันหยุดที่ใช้งานได้มากน้อยเพียงใด"
+      },
+      "profilecard": {
+        "title": "บัตรโปรไฟล์",
+        "description": "คุณสามารถติดตามสถานะโปรไฟล์ของคุณได้โดยการติดตามบัตรนี้ ซึ่งจะแสดงอันดับระดับโลกในปัจจุบันของคุณ พร้อมกับบทบาท ระดับ และการอ้างอิงรวมของคุณ"
+      },
+      "referralscard": {
+        "title": "บัตรการอ้างอิง",
+        "description": "ดูวิวัฒนาการของสถิติการอ้างอิงของคุณจาก 5 วันก่อนหน้าสำหรับทั้งการอ้างอิงระดับ 1 และระดับ 2 โดยการแตะบัตรนี้"
+      },
+      "adoptioncard": {
+        "title": "บัตรการยอมรับใช้งาน",
+        "description": "คุณสามารถดูอัตรารายได้ [[:ice]] ปัจจุบันได้ ตามค่าเฉลี่ยของมนุษย์หิมะที่ใช้งานรวมของสัปดาห์ที่แล้ว อัตรารายได้จะลดลงเหลือครึ่งหนึ่งเมื่อถึงขีดแบ่งถัดไป"
+      },
+      "nickname": {
+        "title": "ชื่อเล่น",
+        "description": "ชื่อเล่นคือสิ่งที่ทำให้คุณไม่ซ้ำใคร เพื่อนของคุณจะต้องใช้ชื่อเล่นเพื่อเข้าร่วมทีมของคุณ คุณยังสามารถใช้ทางลัดนี้เพื่อเปิดโปรไฟล์ของคุณได้"
+      },
+      "balancehistory": {
+        "title": "ประวัติยอดคงเหลือ",
+        "description": "คุณสามารถเห็นถึงยอดคงเหลือ [[:ice]] ปัจจุบันของคุณบนกระเป๋าเงินในเครื่องและบนบล็อกเชนได้ ยอดคงเหลือกระเป๋าเงินในเครื่องจะอัปเดตทุกชั่วโมง ในขณะที่ยอดคงเหลือบนบล็อกเชนจะอัปเดตทุก ๆ 24 ชั่วโมง"
+      },
+      "achievements": {
+        "title": "ความสำเร็จ",
+        "description": "ทำงานด้านล่างให้เสร็จสิ้นและเพิ่มระดับ! เริ่มต้นเซสชันการเช็กอินของคุณตอนนี้!"
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Unlink Logins",
-    "sessionName": "Login via {{providerName}}",
+    "title": "ยกเลิกการเชื่อมต่อล็อกอิน",
+    "sessionName": "ล็อกอินผ่าน  {{providerName}}",
     "buttons": {
-      "currentSession": "Current session",
-      "endSession": "End Session",
-      "loginUnlinked": "Login Unlinked",
-      "sessionEnded": "Session Ended",
-      "unlink": "Unlink"
+      "currentSession": "เซสชันปัจจุบัน",
+      "endSession": "สิ้นสุดเซสชัน",
+      "loginUnlinked": "ล็อกอินถูกยกเลิกการเชื่อมต่อ",
+      "sessionEnded": "เซสชันสิ้นสุดลง",
+      "unlink": "ยกเลิกการเชื่อมต่อ"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Unlink Login?",
-        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
+        "title": "ยกเลิกการเชื่อมต่อการล็อกอิน?",
+        "message": "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการเชื่อมต่อการล็อกอินผ่าน {{providerName}} จากอุปกรณ์นี้?"
       },
       "endSession": {
-        "title": "End Session?",
-        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
+        "title": "สิ้นสุดเซสชัน?",
+        "message": "คุณแน่ใจหรือไม่ว่าต้องการสิ้นสุดเซสชันการล็อกอิน {{providerName}} จากอุปกรณ์นี้?"
       }
     }
   },
@@ -792,12 +846,51 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Today’s Bonus",
-    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
-    "link": "Find out more",
-    "extra_message": "You have received your daily extra bonus on your earning rate",
-    "expired_title": "Bonus Expired",
-    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
-    "result_title": "Congratulations"
+    "claim_title": "โบนัสของวันนี้",
+    "claim_message": "ถึงเวลาสำหรับโบนัสวันนี้ของคุณแล้ว โปรดแตะบนปุ่ม [[:bold]]“ขอรับโบนัส”[[/:bold]] ด้านล่าง",
+    "link": "ค้นหาเพิ่มเติม",
+    "extra_message": "คุณได้รับโบนัสเพิ่มเติมรายวันของคุณตามอัตรารายได้ของคุณ",
+    "expired_title": "โบนัสหมดอายุแล้ว",
+    "expired_message": "โชคไม่ดีที่โบนัสของวันนี้หมดอายุแล้ว โปรดติดตามเพื่อรับการแจ้งเตือนถัดไป!",
+    "result_title": "ขอแสดงความยินดี"
+  },
+  "early_access": {
+    "title": "การเข้าถึงล่วงหน้า",
+    "message_part1": "รับชมตัวอย่างของแอป [[:bold]]ice[[/:bold]] ก่อน[[:bold]]การเปิดตัวทางการครั้งถัดไปของเรา[[/:bold]]",
+    "message_part2": "ยอดคงเหลือทั้งหมดจะถูกรีเซ็ตเป็น 0 ในวันเปิดตัว อย่างไรก็ตาม ทีมของคุณจะยังคงอยู่",
+    "message_part3": "ขอบคุณสำหรับการสนับสนุนของคุณ!",
+    "checkbox_description": "ข้าพเจ้ารับทราบ! ไม่ต้องแสดงป๊อปอัพนี้อีก"
+  },
+  "mining_notice": {
+    "title": "ประกาศ",
+    "message": "ขอบคุณสำหรับความสนใจของคุณในการได้รับ [[:bold]]ice![[/:bold]] ในขณะนี้ เรากำลังปรับแต่งเทคโนโลยีของเราและการเช็กอินยังไม่สามารถใช้งานได้ในขณะนี้ นี่คือโอกาสของคุณในการมุ่งเน้นในการสร้างทีมของคุณและทำให้ชุมชนขนาดเล็กของคุณเติบโต",
+    "message_footer": "ติดตามอัปเดตบนช่องทาง [[:twitter]]Twitter[[/:twitter]] และ [[:telegram]]Telegram[[/:telegram]] ของเรา"
+  },
+  "qr_code": {
+    "description": "สแกนรหัส QR และเข้าร่วมทีมของฉัน"
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "เข้าร่วมกับเราบน TikTok",
+      "description": "เราต้องการติดต่อและแจ้งให้คุณทราบถึงชุมชนใหม่ที่น่าตื่นเต้นของเราบน TikTok เรากำลังแบ่งปันเนื้อหาที่สนุกและให้ข้อมูลเกี่ยวกับสกุลเงินดิจิทัล ice และเราอยากให้คุณเข้าร่วมกับเรา!"
+    },
+    "youtube": {
+      "title": "เข้าร่วมกับเราบน YouTube",
+      "description": "ช่อง YouTube ของเราเป็นสถานที่ที่สมบูรณ์แบบในการติดตามข้อมูลให้เป็นปัจจุบัน ไม่ว่าจะเป็นการสอนวิธีการรับ ice ไปจนถึงอัปเดตเกี่ยวกับฟีเจอร์ใหม่ ๆ และเนื้อหาชุมชนที่สนุก ๆ"
+    },
+    "linkedin": {
+      "title": "เข้าร่วมกับเราบน LinkedIn",
+      "description": "การเข้าร่วมชุมชน ice บน LinkedIn เป็นวิธีที่ดีในการรับข้อมูลเกี่ยวกับพัฒนาการล่าสุดและเชื่อมต่อกับบุคคลที่มีความคิดเหมือนกันซึ่งกระตือรือร้นเกี่ยวกับอนาคตของสกุลเงินดิจิทัลเช่นเดียวกับคุณ"
+    },
+    "facebook": {
+      "title": "เข้าร่วมกับเราบน Facebook",
+      "description_part1": "เราแนะนำอย่างยิ่งให้คุณติดตามหน้า Facebook ของเรา",
+      "description_part2": "นี่ไม่เพียงแต่จะช่วยให้คุณทันข่าวสารเกี่ยวกับทุกสิ่งที่เกิดขึ้นกับโครงการ ice แต่ยังเป็นวิธีที่ดีในการเชื่อมต่อกับชุมชนของเราและเป็นส่วนหนึ่งของการสนทนา"
+    },
+    "instagram": {
+      "title": "เข้าร่วมกับเราบน Instagram",
+      "description_part1": "การติดตามเราบน Instagram เป็นวิธีที่ดีในการติดตามข่าวสารและเชื่อมต่อกับผู้ใช้อื่น ๆ ที่กระตือรือร้นเกี่ยวกับ ice",
+      "description_part2": "นอกจากนี้ คุณจะเป็นคนแรกที่ทราบถึงฟีเจอร์หรือโปรโมชั่นใหม่ ๆ ที่เรากำลังเปิดตัว"
+    }
   }
 }
