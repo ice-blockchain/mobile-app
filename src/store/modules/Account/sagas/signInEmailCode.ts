@@ -90,14 +90,11 @@ export function* signInEmailCodeSaga(
         checkProp(status, 'accessToken') &&
         checkProp(status, 'refreshToken')
       ) {
-        const token = {
+        yield call(persistToken, {
           accessToken: status.accessToken,
           refreshToken: status.refreshToken,
           issuer: 'custom',
-        } as const;
-
-        yield put(AccountActions.SET_TOKEN.STATE.create(token));
-        yield call(persistToken, token);
+        } as const);
 
         yield put(AccountActions.SIGN_IN_EMAIL_CODE.SUCCESS.create());
         yield put(AccountActions.USER_STATE_CHANGE.START.create());
