@@ -2,7 +2,6 @@
 
 import {BackButton} from '@components/Buttons/BackButton';
 import {EmailCode} from '@components/Forms/components/EmailCode';
-import {FullScreenLoading} from '@components/FullScreenLoading';
 import {LottieView} from '@components/LottieView';
 import {PrivacyTerms} from '@components/PrivacyTerms';
 import {Touchable} from '@components/Touchable';
@@ -20,7 +19,7 @@ import {rem} from 'rn-units';
 
 export const ConfirmEmailCode = () => {
   useFocusStatusBar({style: 'light-content'});
-  const {email, code, validateLoading, goBack} = useConfirmEmailCode();
+  const {email, code, goBack} = useConfirmEmailCode();
 
   return (
     <View style={commonStyles.flexOne}>
@@ -56,7 +55,6 @@ export const ConfirmEmailCode = () => {
         </View>
         <PrivacyTerms />
       </View>
-      {validateLoading && <FullScreenLoading />}
     </View>
   );
 };
