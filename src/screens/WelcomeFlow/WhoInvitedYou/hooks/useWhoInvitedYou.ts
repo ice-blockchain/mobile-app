@@ -1,16 +1,17 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {WELCOME_STEPS, WelcomeStackParamList} from '@navigation/Welcome';
-import {useNavigation} from '@react-navigation/native';
+import {useIsFocused, useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AccountActions} from '@store/modules/Account/actions';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {
   failedReasonSelector,
   isLoadingSelector,
   isSuccessSelector,
 } from '@store/modules/UtilityProcessStatuses/selectors';
 import {ValidationActions} from '@store/modules/Validation/actions';
-import {useCallback, useEffect, useRef, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import {Keyboard} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {wait} from 'rn-units';
@@ -30,9 +31,13 @@ export const useWhoInvitedYou = () => {
     failedReasonSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
   );
 
-  const isReferralUpdated = useSelector(
+  const user = useSelector(unsafeUserSelector);
+
+  const isReferralVerified = useSelector(
     isSuccessSelector.bind(null, AccountActions.UPDATE_REF_BY_USERNAME),
   );
+
+  const isReferralUpdated = isReferralVerified && !!user?.referredBy;
 
   const updateRefByUsernameLoading = useSelector(
     isLoadingSelector.bind(null, AccountActions.UPDATE_REF_BY_USERNAME),
@@ -41,7 +46,6 @@ export const useWhoInvitedYou = () => {
     isLoadingSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
   );
 
-  const initialRender = useRef(true);
   const [refUsername, setRefUsername] = useState('');
 
   const resetError = useCallback(() => {
@@ -71,7 +75,7 @@ export const useWhoInvitedYou = () => {
   const onChangeRefUsername = (text: string) => {
     setRefUsername(text);
     resetError();
-    if (isReferralUpdated) {
+    if (isReferralVerified) {
       dispatch(AccountActions.UPDATE_REF_BY_USERNAME.RESET.create());
     }
     if (text !== '') {
@@ -85,21 +89,18 @@ export const useWhoInvitedYou = () => {
     dispatch(AccountActions.UPDATE_REF_BY_USERNAME.START.create(refUsername));
   };
 
+  const isFocused = useIsFocused();
   useEffect(() => {
-    if (initialRender.current) {
-      initialRender.current = false;
-      return;
-    }
-    if (isReferralUpdated) {
+    if (isFocused && isReferralUpdated) {
       wait(500).then(goForward);
     }
-  }, [goForward, isReferralUpdated]);
+  }, [isFocused, goForward, isReferralUpdated]);
 
   return {
     refUsername,
     error: updateError || validationError || updateRefByUsernameError,
     isLoading: updateLoading || updateRefByUsernameLoading,
-    isReferralUpdated: isReferralUpdated,
+    isReferralUpdated,
     onChangeRefUsername,
     onSubmit,
     goBack,
