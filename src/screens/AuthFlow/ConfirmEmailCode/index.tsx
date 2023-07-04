@@ -6,7 +6,7 @@ import {FullScreenLoading} from '@components/FullScreenLoading';
 import {LottieView} from '@components/LottieView';
 import {PrivacyTerms} from '@components/PrivacyTerms';
 import {Touchable} from '@components/Touchable';
-import {MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
+import {commonStyles, MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
 import {LottieAnimations} from '@lottie';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {useConfirmEmailCode} from '@screens/AuthFlow/ConfirmEmailCode/hooks/useConfirmEmailCode';
@@ -23,7 +23,7 @@ export const ConfirmEmailCode = () => {
   const {email, code, validateLoading, goBack} = useConfirmEmailCode();
 
   return (
-    <View style={styles.container}>
+    <View style={commonStyles.flexOne}>
       <Header />
       <BackButton onPress={goBack} />
       <Text style={styles.descriptionText}>
@@ -62,9 +62,6 @@ export const ConfirmEmailCode = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   descriptionText: {
     marginTop: rem(24),
     marginHorizontal: rem(12),
