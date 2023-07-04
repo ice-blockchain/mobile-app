@@ -12,6 +12,9 @@ export const isAuthorizedSelector = (state: RootState) => !!state.account.user;
 
 export const authTokenSelector = (state: RootState) => state.account.token;
 
+export const userMetadataSelector = (state: RootState) =>
+  state.account.metadata;
+
 export const userSelector = (state: RootState) => state.account.user;
 
 export const unsafeUserSelector = (state: RootState) => {
@@ -48,3 +51,6 @@ export const isRegistrationCompleteSelector = () => {
 
 export const isPrivacyInfoShownSelector = (state: RootState) =>
   state.account.isPrivacyInfoShown;
+
+export const authConfigSelector = (state: RootState) =>
+  state.account.authConfig;

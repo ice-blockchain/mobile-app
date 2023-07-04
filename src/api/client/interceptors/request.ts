@@ -1,17 +1,21 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {store} from '@store/configureStore';
-import {authTokenSelector} from '@store/modules/Account/selectors';
+import {
+  appLocaleSelector,
+  authTokenSelector,
+  userMetadataSelector,
+} from '@store/modules/Account/selectors';
 import {AxiosRequestConfig} from 'axios';
 
 async function onFulfilled(config: AxiosRequestConfig) {
   if (!config.headers?.Authorization) {
-    const accessToken = authTokenSelector(store.getState());
+    const token = authTokenSelector(store.getState());
 
-    if (accessToken) {
+    if (token) {
       config.headers = {
         ...config.headers,
-        Authorization: `Bearer ${accessToken}`,
+        Authorization: `Bearer ${token.accessToken}`,
       };
     }
   }
@@ -22,6 +26,25 @@ async function onFulfilled(config: AxiosRequestConfig) {
       'Content-Type': 'multipart/form-data',
     };
     config.transformRequest = (data: FormData) => data;
+  }
+
+  if (!config.headers?.['X-Language']) {
+    const appLocale = appLocaleSelector(store.getState());
+    config.headers = {
+      ...config.headers,
+      'X-Language': appLocale,
+    };
+  }
+
+  if (!config.headers?.['X-Account-Metadata']) {
+    const metadata = userMetadataSelector(store.getState());
+
+    if (metadata) {
+      config.headers = {
+        ...config.headers,
+        'X-Account-Metadata': metadata,
+      };
+    }
   }
 
   return config;

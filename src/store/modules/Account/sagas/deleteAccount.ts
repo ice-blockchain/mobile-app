@@ -13,7 +13,7 @@ export function* deleteAccountSaga() {
     );
     yield call(Api.user.deleteUser, userId);
     yield put(AccountActions.DELETE_ACCOUNT.SUCCESS.create());
-    yield put(AccountActions.SIGN_OUT.START.create(true));
+    yield put(AccountActions.SIGN_OUT.START.create({skipMetadataUpdate: true}));
   } catch (error) {
     yield put(AccountActions.DELETE_ACCOUNT.FAILED.create());
     showError(error);

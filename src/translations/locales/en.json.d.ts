@@ -79,7 +79,6 @@ export type Translations = {
   'signIn.logInSignUp': null;
   'signIn.phone': null;
   'signIn.or': null;
-  'signIn.reset_password': null;
   'signIn.welcome': null;
   'signIn.email': null;
   'signIn.slogan': null;
@@ -107,7 +106,6 @@ export type Translations = {
   'errors.validation_expired': null;
   'errors.validation_not_found': null;
   'errors.invalid_email': null;
-  'errors.invalid_password': null;
   'errors.invalid_ref_username': null;
   'errors.invalid_phone': null;
   'errors.user_disabled': null;
@@ -136,8 +134,6 @@ export type Translations = {
   'errors.user_token_expired': null;
   'errors.requires_recent_login': null;
   'errors.same_email': null;
-  'errors.weak_password': null;
-  'errors.wrong_password': null;
   'errors.no_camera_permissions': null;
   'errors.no_library_permissions': null;
   'profile.my_roles.title': null;
@@ -444,9 +440,7 @@ export type Translations = {
   'confirm_email.wrong_email': null;
   'confirm_email.check_email': null;
   'confirm_email.emailed_link_to': null;
-  'confirm_email.emailed_steps_to': null;
   'confirm_email.link_instruction': null;
-  'confirm_email.reset_link_instruction': null;
   'confirm_email.modify_title': null;
   'confirm_email.modify_description': null;
   'invalid_link.title': null;

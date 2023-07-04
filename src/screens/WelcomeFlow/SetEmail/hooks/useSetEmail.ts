@@ -40,7 +40,7 @@ export const useSetEmail = () => {
   const sendVerificationEmail = useCallback(() => {
     Keyboard.dismiss();
     dispatch(ValidationActions.EMAIL_VALIDATION.RESET.create());
-    dispatch(AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.START.create(email));
+    dispatch(AccountActions.MODIFY_EMAIL_WITH_LINK.START.create(email));
   }, [dispatch, email]);
 
   const onSubmitPress = useCallback(() => {

@@ -33,6 +33,7 @@ export function* signInEmailLinkSaga(
         | typeof AccountActions.SIGN_IN_EMAIL_LINK.RESET.create
       > = yield take([
         AccountActions.SIGN_IN_EMAIL_LINK.CONFIRM_TEMP_EMAIL.type,
+        AccountActions.SIGN_IN_EMAIL_LINK.RESET.type,
       ]);
 
       switch (action.type) {

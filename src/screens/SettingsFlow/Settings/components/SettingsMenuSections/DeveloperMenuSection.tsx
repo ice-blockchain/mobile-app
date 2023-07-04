@@ -4,7 +4,7 @@ import {MenuItem} from '@screens/SettingsFlow/Settings/components/MenuItem.tsx';
 import {SectionTitle} from '@screens/SettingsFlow/Settings/components/SectionTitle';
 import {
   authTokenSelector,
-  userSelector,
+  unsafeUserSelector,
 } from '@store/modules/Account/selectors';
 import {PersonIcon} from '@svg/PersonIcon';
 import {t} from '@translations/i18n';
@@ -13,23 +13,25 @@ import {Share} from 'react-native';
 import {useSelector} from 'react-redux';
 
 export const DeveloperMenuSection = () => {
-  const user = useSelector(userSelector);
+  const user = useSelector(unsafeUserSelector);
   const token = useSelector(authTokenSelector);
   return (
     <>
       <SectionTitle text={t('settings.developer').toUpperCase()} />
       <MenuItem
         title={t('settings.user_id')}
-        description={user?.id}
+        description={user.id}
         renderIcon={PersonIcon}
-        onPress={() => Share.share({message: user?.id ?? ''})}
+        onPress={() => Share.share({message: user.id})}
       />
-      <MenuItem
-        title={t('settings.user_token')}
-        description={token}
-        renderIcon={PersonIcon}
-        onPress={() => Share.share({message: token ?? ''})}
-      />
+      {token && (
+        <MenuItem
+          title={t('settings.user_token')}
+          description={token.accessToken}
+          renderIcon={PersonIcon}
+          onPress={() => Share.share({message: token.accessToken})}
+        />
+      )}
     </>
   );
 };

@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {achievements} from '@api/achievements';
+import {auth} from '@api/auth';
 import {devices} from '@api/devices';
 import {news} from '@api/news';
 import {notifications} from '@api/notifications';
@@ -26,4 +27,5 @@ export const Api = Object.freeze({
   tasks,
   time,
   notifications,
+  auth,
 });

@@ -1,16 +1,22 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AuthConfig} from '@api/auth/types';
 import {User} from '@api/user/types';
 import {
   SignInUserInfo,
   SocialSignInProvider,
 } from '@services/auth/signin/types';
+import {AuthToken} from '@services/auth/types';
 import {createAction} from '@store/utils/actions/createAction';
 import {Action} from 'redux';
 import {CallEffect, PutEffect} from 'redux-saga/effects';
 
 const SET_TOKEN = createAction('SET_TOKEN', {
-  STATE: (token: string | null) => ({token}),
+  STATE: (token: AuthToken | null) => ({token}),
+});
+
+const SET_USER_METADATA = createAction('SET_USER_METADATA', {
+  STATE: (metadata: string | null) => ({metadata}),
 });
 
 const USER_STATE_CHANGE = createAction('USER_STATE_CHANGE', {
@@ -20,9 +26,11 @@ const USER_STATE_CHANGE = createAction('USER_STATE_CHANGE', {
 });
 
 const SIGN_OUT = createAction('SIGN_OUT', {
-  START: (accountDeleted?: boolean) => ({accountDeleted}),
+  START: ({
+    skipMetadataUpdate = false,
+  }: {skipMetadataUpdate?: boolean} = {}) => ({skipMetadataUpdate}),
   SUCCESS: true,
-  FAILED: true,
+  FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
 const SIGN_IN_EMAIL_LINK = createAction('SIGN_IN_EMAIL_LINK', {
@@ -34,13 +42,12 @@ const SIGN_IN_EMAIL_LINK = createAction('SIGN_IN_EMAIL_LINK', {
   RESET: true,
 });
 
-const SIGN_IN_EMAIL_PASSWORD = createAction('SIGN_IN_EMAIL_PASSWORD', {
-  START: (params: {email: string; password: string}) => params,
+const SIGN_IN_EMAIL_CODE = createAction('SIGN_IN_EMAIL_CODE', {
+  START: (email: string) => ({email}),
+  SET_TEMP_EMAIL: (params: {email: string; code: string}) => params,
   SUCCESS: true,
-  FAILED: (errorMessage: string, data: {field: 'email' | 'password'}) => ({
-    errorMessage,
-    ...data,
-  }),
+  FAILED: (errorMessage: string) => ({errorMessage}),
+  RESET: true,
 });
 
 const SIGN_IN_PHONE = createAction('SIGN_IN_PHONE', {
@@ -107,10 +114,18 @@ const GET_ACCOUNT = createAction('GET_ACCOUNT', {
   FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
-const VERIFY_BEFORE_UPDATE_EMAIL = createAction('VERIFY_BEFORE_UPDATE_EMAIL', {
+const MODIFY_EMAIL_WITH_LINK = createAction('MODIFY_EMAIL_WITH_LINK', {
   START: (email: string) => ({email}),
   SET_TEMP_EMAIL: (email: string) => ({email}),
   CONFIRM_TEMP_EMAIL: (link: string) => ({link}),
+  SUCCESS: true,
+  FAILED: (errorMessage: string) => ({errorMessage}),
+  RESET: true,
+});
+
+const MODIFY_EMAIL_WITH_CODE = createAction('MODIFY_EMAIL_WITH_CODE', {
+  START: (email: string) => ({email}),
+  SET_TEMP_EMAIL: (params: {email: string; code: string}) => params,
   SUCCESS: true,
   FAILED: (errorMessage: string) => ({errorMessage}),
   RESET: true,
@@ -126,20 +141,20 @@ const VERIFY_PHONE_NUMBER = createAction('VERIFY_PHONE_NUMBER', {
   RESET: true,
 });
 
-const RESET_PASSWORD = createAction('RESET_PASSWORD', {
-  START: (params: {email: string}) => params,
-  SUCCESS: (params: {email: string}) => params,
-  FAILED: (errorMessage: string) => ({errorMessage}),
-});
-
 const SET_PRIVACY_INFO_SHOW = createAction('SET_PRIVACY_INFO_SHOW', {
   STATE: (isPrivacyInfoShown: boolean) => ({isPrivacyInfoShown}),
 });
 
+const GET_AUTH_CONFIG = createAction('GET_AUTH_CONFIG', {
+  SUCCESS: (config: AuthConfig | null) => ({config}),
+  FAILED: (errorMessage: string) => ({errorMessage}),
+});
+
 export const AccountActions = Object.freeze({
   SET_TOKEN,
+  SET_USER_METADATA,
   SIGN_IN_EMAIL_LINK,
-  SIGN_IN_EMAIL_PASSWORD,
+  SIGN_IN_EMAIL_CODE,
   SIGN_IN_PHONE,
   SIGN_IN_SOCIAL,
   SIGN_OUT,
@@ -148,8 +163,9 @@ export const AccountActions = Object.freeze({
   UPDATE_ACCOUNT,
   GET_ACCOUNT,
   USER_STATE_CHANGE,
-  VERIFY_BEFORE_UPDATE_EMAIL,
+  MODIFY_EMAIL_WITH_LINK,
+  MODIFY_EMAIL_WITH_CODE,
   VERIFY_PHONE_NUMBER,
-  RESET_PASSWORD,
   SET_PRIVACY_INFO_SHOW,
+  GET_AUTH_CONFIG,
 });

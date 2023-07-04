@@ -10,10 +10,13 @@ export type TemporaryPhoneVerificationStepType = 'phone' | 'code';
 export interface State {
   temporaryPhoneNumber: string | null;
   temporaryPhoneNumberIso: string | null;
-  temporaryVerificationId: string | null;
-  temporaryEmail: string | null;
   temporaryPhoneVerificationStep: TemporaryPhoneVerificationStepType;
   smsSentTimestamp: number | null;
+  temporaryVerificationId: string | null;
+
+  temporaryEmail: string | null;
+  temporaryEmailCode: string | null;
+  temporaryEmailVerificationStep: 'email' | 'link' | 'code';
   emailSentTimestamp: number | null;
 }
 
@@ -26,6 +29,9 @@ type Actions = ReturnType<
   | typeof AccountActions.SIGN_IN_EMAIL_LINK.SET_TEMP_EMAIL.create
   | typeof AccountActions.SIGN_IN_EMAIL_LINK.SUCCESS.create
   | typeof AccountActions.SIGN_IN_EMAIL_LINK.RESET.create
+  | typeof AccountActions.SIGN_IN_EMAIL_CODE.SET_TEMP_EMAIL.create
+  | typeof AccountActions.SIGN_IN_EMAIL_CODE.SUCCESS.create
+  | typeof AccountActions.SIGN_IN_EMAIL_CODE.RESET.create
   | typeof ValidationActions.PHONE_VALIDATION.SUCCESS.create
   | typeof ValidationActions.PHONE_VALIDATION.FAILED.create
   | typeof ValidationActions.PHONE_VALIDATION.RESET.create
@@ -33,9 +39,12 @@ type Actions = ReturnType<
   | typeof ValidationActions.EMAIL_VALIDATION.FAILED.create
   | typeof ValidationActions.EMAIL_VALIDATION.RESET.create
   | typeof ValidationActions.SET_TEMPORARY_PHONE_VERIFICATION_STEP.STATE.create
-  | typeof AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.SET_TEMP_EMAIL.create
-  | typeof AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.RESET.create
-  | typeof AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.SUCCESS.create
+  | typeof AccountActions.MODIFY_EMAIL_WITH_LINK.SET_TEMP_EMAIL.create
+  | typeof AccountActions.MODIFY_EMAIL_WITH_LINK.RESET.create
+  | typeof AccountActions.MODIFY_EMAIL_WITH_LINK.SUCCESS.create
+  | typeof AccountActions.MODIFY_EMAIL_WITH_CODE.SET_TEMP_EMAIL.create
+  | typeof AccountActions.MODIFY_EMAIL_WITH_CODE.RESET.create
+  | typeof AccountActions.MODIFY_EMAIL_WITH_CODE.SUCCESS.create
   | typeof AccountActions.VERIFY_PHONE_NUMBER.SUCCESS.create
   | typeof AccountActions.VERIFY_PHONE_NUMBER.RESET.create
 >;
@@ -43,11 +52,14 @@ type Actions = ReturnType<
 const INITIAL_STATE: State = {
   temporaryPhoneNumber: null,
   temporaryPhoneNumberIso: null,
-  temporaryVerificationId: null,
-  temporaryEmail: null,
-  smsSentTimestamp: null,
-  emailSentTimestamp: null,
   temporaryPhoneVerificationStep: 'phone',
+  temporaryVerificationId: null,
+  smsSentTimestamp: null,
+
+  temporaryEmail: null,
+  temporaryEmailCode: null,
+  emailSentTimestamp: null,
+  temporaryEmailVerificationStep: 'email',
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -67,8 +79,16 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.smsSentTimestamp = dayjs().valueOf();
         break;
       case AccountActions.SIGN_IN_EMAIL_LINK.SET_TEMP_EMAIL.type:
-      case AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.SET_TEMP_EMAIL.type:
+      case AccountActions.MODIFY_EMAIL_WITH_LINK.SET_TEMP_EMAIL.type:
         draft.temporaryEmail = action.payload.email;
+        draft.temporaryEmailVerificationStep = 'link';
+        draft.emailSentTimestamp = dayjs().valueOf();
+        break;
+      case AccountActions.SIGN_IN_EMAIL_CODE.SET_TEMP_EMAIL.type:
+      case AccountActions.MODIFY_EMAIL_WITH_CODE.SET_TEMP_EMAIL.type:
+        draft.temporaryEmail = action.payload.email;
+        draft.temporaryEmailCode = action.payload.code;
+        draft.temporaryEmailVerificationStep = 'code';
         draft.emailSentTimestamp = dayjs().valueOf();
         break;
       case AccountActions.VERIFY_PHONE_NUMBER.SUCCESS.type:
@@ -91,9 +111,15 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case ValidationActions.EMAIL_VALIDATION.RESET.type:
       case AccountActions.SIGN_IN_EMAIL_LINK.SUCCESS.type:
       case AccountActions.SIGN_IN_EMAIL_LINK.RESET.type:
-      case AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.RESET.type:
-      case AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.SUCCESS.type:
+      case AccountActions.SIGN_IN_EMAIL_CODE.SUCCESS.type:
+      case AccountActions.SIGN_IN_EMAIL_CODE.RESET.type:
+      case AccountActions.MODIFY_EMAIL_WITH_LINK.RESET.type:
+      case AccountActions.MODIFY_EMAIL_WITH_LINK.SUCCESS.type:
+      case AccountActions.MODIFY_EMAIL_WITH_CODE.RESET.type:
+      case AccountActions.MODIFY_EMAIL_WITH_CODE.SUCCESS.type:
         draft.temporaryEmail = null;
+        draft.temporaryEmailCode = null;
+        draft.temporaryEmailVerificationStep = 'email';
         break;
       case ValidationActions.EMAIL_VALIDATION.FAILED.type:
         if (
@@ -102,6 +128,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
           )
         ) {
           draft.temporaryEmail = null;
+          draft.temporaryEmailVerificationStep = 'email';
         }
         break;
       case AccountActions.SIGN_OUT.SUCCESS.type: {

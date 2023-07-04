@@ -29,7 +29,7 @@ export const ModifyEmail = memo(() => {
   const emailVerificationStep = useSelector(emailVerificationStepSelector);
 
   useEffect(() => {
-    if (emailVerificationStep === 'code') {
+    if (emailVerificationStep === 'link' || emailVerificationStep === 'code') {
       navigation.navigate('ConfirmEmail');
     }
   }, [navigation, emailVerificationStep]);

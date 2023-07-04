@@ -8,10 +8,10 @@ import {
   createNativeStackNavigator,
   NativeStackNavigationProp,
 } from '@react-navigation/native-stack';
+import {ConfirmEmailCode} from '@screens/AuthFlow/ConfirmEmailCode';
 import {ConfirmEmailLink} from '@screens/AuthFlow/ConfirmEmailLink';
 import {ConfirmPhone} from '@screens/AuthFlow/ConfirmPhone';
 import {InvalidLink} from '@screens/AuthFlow/InvalidLink';
-import {ResetPasswordLink} from '@screens/AuthFlow/ResetPasswordLink';
 import {SignIn} from '@screens/AuthFlow/SignIn';
 import {CountrySelect} from '@screens/Modals/CountrySelect';
 import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
@@ -23,9 +23,9 @@ import React, {useEffect, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
 export type AuthStackParamList = {
-  SignIn?: {flow?: 'main' | 'resetPassword'};
+  SignIn: undefined;
   ConfirmEmailLink: undefined;
-  ResetPasswordLink: {email: string};
+  ConfirmEmailCode: undefined;
   ConfirmPhone: undefined;
   CountrySelect: {
     onSelect: (country: Country) => void;
@@ -43,10 +43,11 @@ export function AuthNavigator() {
     useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
 
   const authRoute = useMemo(() => {
-    if (emailVerificationStep === 'code') {
+    if (emailVerificationStep === 'link') {
       return 'ConfirmEmailLink';
-    }
-    if (phoneVerificationStep === 'code') {
+    } else if (emailVerificationStep === 'code') {
+      return 'ConfirmEmailCode';
+    } else if (phoneVerificationStep === 'code') {
       return 'ConfirmPhone';
     }
     return 'SignIn';
@@ -66,10 +67,7 @@ export function AuthNavigator() {
       initialRouteName={authRoute}>
       <AuthStack.Screen name="SignIn" component={SignIn} />
       <AuthStack.Screen name="ConfirmEmailLink" component={ConfirmEmailLink} />
-      <AuthStack.Screen
-        name="ResetPasswordLink"
-        component={ResetPasswordLink}
-      />
+      <AuthStack.Screen name="ConfirmEmailCode" component={ConfirmEmailCode} />
       <AuthStack.Screen name="ConfirmPhone" component={ConfirmPhone} />
       <AuthStack.Screen
         name="CountrySelect"

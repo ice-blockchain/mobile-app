@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {getMetadata} from '@api/auth/getMetadata';
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
-import {startTrackingCurrentUser} from '@services/analytics';
-import {getAuthenticatedUser} from '@services/auth';
+import {getAuthenticatedUser, refreshAuthToken} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
   appLocaleSelector,
@@ -17,47 +17,45 @@ import {getErrorMessage, showError} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
+/**
+ * Listener for changes in the users auth state (logging in and out)
+ *  and when credentials are linked.
+ * This method is also called when the subscription is first established -
+ *  to set the initial user state.
+ */
 export function* userStateChangeSaga() {
   try {
     const authenticatedUser: SagaReturnType<typeof getAuthenticatedUser> =
       yield call(getAuthenticatedUser);
 
     if (authenticatedUser) {
-      const userInfo: ReturnType<typeof userInfoSelector> = yield select(
-        userInfoSelector,
-      );
-
       yield put(AccountActions.SET_TOKEN.STATE.create(authenticatedUser.token));
 
       let user: ReturnType<typeof userSelector> = yield select(userSelector);
 
-      if (user === null) {
-        user = yield call(getUser, authenticatedUser.uid);
-        if (user) {
-          yield put(AnalyticsActions.TRACK_SIGN_IN.START.create({user}));
-        }
+      const userMetadata: SagaReturnType<typeof getMetadata> = yield call(
+        updateUserMetadata,
+      );
+
+      if (userMetadata && user === null) {
+        user = yield call(getUser, userMetadata.userId);
       }
 
       if (user === null) {
-        let phoneNumberIso: ReturnType<typeof temporaryPhoneNumberIsoSelector> =
-          yield select(temporaryPhoneNumberIsoSelector);
-
         user = yield call(createUser, {
           email: authenticatedUser.email,
           phoneNumber: authenticatedUser.phoneNumber,
-          firstName: userInfo?.firstName ?? null,
-          lastName: userInfo?.lastName ?? null,
-          phoneNumberIso: phoneNumberIso ?? null,
         });
-        yield put(AnalyticsActions.TRACK_SIGN_UP.SUCCESS.create());
+        yield call(refreshAuthToken, authenticatedUser.token);
+        /**
+         * In case of firebase, userStateChange is triggered by the lib,
+         *  because of the forceRefresh flag.
+         * In other cases we trigger it manually.
+         */
+        yield put(AccountActions.USER_STATE_CHANGE.START.create());
+        return;
+      }
 
-        // Request firebase user once again after create-user to get updated claims
-        // This forceRefresh triggers userStateChange
-        yield call(getAuthenticatedUser, true);
-      }
-      if (user?.id) {
-        yield call(startTrackingCurrentUser, user.id);
-      }
       yield put(
         AccountActions.USER_STATE_CHANGE.SUCCESS.create(
           user,
@@ -85,12 +83,30 @@ export function* userStateChangeSaga() {
   }
 }
 
+function* updateUserMetadata() {
+  try {
+    const userMetadata: SagaReturnType<typeof Api.auth.getMetadata> =
+      yield call(Api.auth.getMetadata);
+    yield put(
+      AccountActions.SET_USER_METADATA.STATE.create(userMetadata.metadata),
+    );
+    return userMetadata;
+  } catch (error) {
+    if (isApiError(error, 404, 'METADATA_NOT_FOUND')) {
+      return null;
+    } else {
+      throw error;
+    }
+  }
+}
+
 function* getUser(userId: string) {
   try {
     const user: SagaReturnType<typeof Api.user.getUserById> = yield call(
       Api.user.getUserById,
       userId,
     );
+    yield put(AnalyticsActions.TRACK_SIGN_IN.START.create({user}));
     return user;
   } catch (error) {
     if (isApiError(error, 404, 'USER_NOT_FOUND')) {
@@ -104,19 +120,20 @@ function* getUser(userId: string) {
 function* createUser({
   email,
   phoneNumber,
-  firstName,
-  lastName,
-  phoneNumberIso,
 }: {
   email: string | null;
   phoneNumber: string | null;
-  firstName: string | null;
-  lastName: string | null;
-  phoneNumberIso: string | null;
 }) {
   const appLocale: SagaReturnType<typeof appLocaleSelector> = yield select(
     appLocaleSelector,
   );
+
+  const userInfo: ReturnType<typeof userInfoSelector> = yield select(
+    userInfoSelector,
+  );
+
+  const phoneNumberIso: ReturnType<typeof temporaryPhoneNumberIsoSelector> =
+    yield select(temporaryPhoneNumberIsoSelector);
 
   let normalizedNumber: string | null = null;
   let phoneNumberHash: string | null = null;
@@ -130,11 +147,11 @@ function* createUser({
     phoneNumberHash = yield call(hashPhoneNumber, normalizedNumber);
   }
 
-  let user: SagaReturnType<typeof Api.user.createUser> = yield call(
+  const user: SagaReturnType<typeof Api.user.createUser> = yield call(
     Api.user.createUser,
     {
-      firstName,
-      lastName,
+      firstName: userInfo?.firstName ?? null,
+      lastName: userInfo?.lastName ?? null,
       email,
       phoneNumber: normalizedNumber,
       phoneNumberHash,
@@ -144,6 +161,8 @@ function* createUser({
       language: appLocale,
     },
   );
+
+  yield put(AnalyticsActions.TRACK_SIGN_UP.SUCCESS.create());
 
   return user;
 }

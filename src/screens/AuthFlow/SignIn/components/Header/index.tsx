@@ -1,13 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {BackButton} from '@components/Buttons/BackButton';
 import {COLORS} from '@constants/colors';
 import {windowWidth} from '@constants/styles';
 import {useTopOffsetStyle} from '@hooks/useTopOffsetStyle';
 import {Images} from '@images';
-import {AuthStackParamList} from '@navigation/Auth';
-import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
-import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {LogoIcon} from '@svg/LogoIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -17,11 +13,6 @@ import {rem} from 'rn-units';
 
 export const Header = () => {
   const topOffset = useTopOffsetStyle();
-
-  const {params} = useRoute<RouteProp<AuthStackParamList, 'SignIn'>>();
-
-  const navigation =
-    useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
 
   return (
     <View style={topOffset.current}>
@@ -40,11 +31,6 @@ export const Header = () => {
         <Text style={styles.welcomeText}>{t('signIn.welcome')}</Text>
         <Text style={styles.sloganText}>{t('signIn.slogan')}</Text>
       </View>
-      {params?.flow === 'resetPassword' && (
-        <BackButton
-          onPress={() => navigation.navigate('SignIn', {flow: 'main'})}
-        />
-      )}
     </View>
   );
 };

@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {AccountActions} from '@store/modules/Account/actions';
+import {useIsEmailCodeFlow} from '@store/modules/Account/hooks/useIsEmailCodeFlow';
 import {
   failedReasonSelector,
   isLoadingSelector,
 } from '@store/modules/UtilityProcessStatuses/selectors';
-import {ValidationActions} from '@store/modules/Validation/actions';
 import {useCallback, useEffect, useState} from 'react';
 import {Keyboard} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
@@ -13,20 +13,23 @@ import {useDispatch, useSelector} from 'react-redux';
 export const useModifyEmail = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
+  const isEmailCodeFlow = useIsEmailCodeFlow();
+  const action = isEmailCodeFlow
+    ? AccountActions.MODIFY_EMAIL_WITH_CODE
+    : AccountActions.MODIFY_EMAIL_WITH_LINK;
 
   const modifyEmailFailedReason = useSelector(
-    failedReasonSelector.bind(null, AccountActions.VERIFY_BEFORE_UPDATE_EMAIL),
+    failedReasonSelector.bind(null, action),
   );
 
   const isModifyEmailLoading = useSelector(
-    isLoadingSelector.bind(null, AccountActions.VERIFY_BEFORE_UPDATE_EMAIL),
+    isLoadingSelector.bind(null, action),
   );
 
   const modifyEmail = useCallback(() => {
     Keyboard.dismiss();
-    dispatch(ValidationActions.EMAIL_VALIDATION.RESET.create());
-    dispatch(AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.START.create(email));
-  }, [dispatch, email]);
+    dispatch(action.START.create(email));
+  }, [action, dispatch, email]);
 
   const onChangeEmail = (text: string) => {
     resetError();
@@ -35,16 +38,16 @@ export const useModifyEmail = () => {
 
   const resetError = () => {
     if (modifyEmailFailedReason) {
-      dispatch(AccountActions.VERIFY_BEFORE_UPDATE_EMAIL.RESET.create());
+      dispatch(action.RESET.create());
     }
   };
 
   // clean up on component unmount
   useEffect(
     () => () => {
-      dispatch(AccountActions.UPDATE_ACCOUNT.RESET.create());
+      dispatch(action.RESET.create());
     },
-    [dispatch],
+    [action, dispatch],
   );
 
   return {
