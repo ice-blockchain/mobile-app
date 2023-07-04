@@ -180,22 +180,13 @@ export const onUserChanged = (listener: () => void) => {
   return auth().onUserChanged(listener);
 };
 
-/**
- *
- * @returns TODO:: check if sign out triggers authStateChange
- */
 export const signOut = async () => {
   await clearPersistedToken();
-  try {
+  if (auth().currentUser) {
     /**
      * auth().signOut triggers onAuthStateChanged, so calling it in the end
      */
-    return await auth().signOut();
-  } catch (error) {
-    if (checkProp(error, 'code') && error.code === 'auth/no-current-user') {
-      return null;
-    }
-    throw error;
+    await auth().signOut();
   }
 };
 
