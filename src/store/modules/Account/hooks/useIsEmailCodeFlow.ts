@@ -10,22 +10,21 @@ export const useIsEmailCodeFlow = () => {
   const authConfig = useSelector(authConfigSelector);
   const deviceSettingsCountry = RNLocalize.getCountry();
   const deviceLocation = useSelector(deviceLocationSelector);
-  const deviceCountry =
-    deviceSettingsCountry === ''
-      ? deviceLocation?.country
-      : deviceSettingsCountry;
 
-  if (authConfig && deviceCountry) {
+  const isEqualsToDeviceCountry = (country: string) => {
+    return [
+      deviceSettingsCountry.toLowerCase(),
+      deviceLocation?.country?.toLowerCase(),
+    ].includes(country.toLowerCase());
+  };
+
+  if (authConfig) {
     if (checkProp(authConfig, 'emailCodeAuthWhiteList')) {
-      return authConfig.emailCodeAuthWhiteList.some(
-        country => country.toLowerCase() === deviceCountry.toLowerCase(),
-      );
+      return authConfig.emailCodeAuthWhiteList.some(isEqualsToDeviceCountry);
     }
 
     if (checkProp(authConfig, 'emailCodeAuthBlackList')) {
-      return !authConfig.emailCodeAuthBlackList.some(
-        country => country.toLowerCase() === deviceCountry.toLowerCase(),
-      );
+      return !authConfig.emailCodeAuthBlackList.some(isEqualsToDeviceCountry);
     }
   }
 
