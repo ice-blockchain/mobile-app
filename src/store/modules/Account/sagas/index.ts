@@ -6,7 +6,6 @@ import {getAccountSaga} from '@store/modules/Account/sagas/getAccount';
 import {getAuthConfigSaga} from '@store/modules/Account/sagas/getAuthConfig';
 import {modifyEmailWithCodeSaga} from '@store/modules/Account/sagas/modifyEmailWithCode';
 import {modifyEmailWithLinkSaga} from '@store/modules/Account/sagas/modifyEmailWithLink';
-import {persistTokenSaga} from '@store/modules/Account/sagas/persistToken';
 import {signInEmailCodeSaga} from '@store/modules/Account/sagas/signInEmailCode';
 import {signInEmailLinkSaga} from '@store/modules/Account/sagas/signInEmailLink';
 import {signInPhoneSaga} from '@store/modules/Account/sagas/signInPhone';
@@ -54,7 +53,6 @@ export const authWatchers = [
     AccountActions.VERIFY_PHONE_NUMBER.START.type,
     verifyPhoneNumberSaga,
   ),
-  takeLatest(AccountActions.SET_TOKEN.STATE.type, persistTokenSaga),
   fork(syncLanguageCodeSaga),
   fork(syncRtlSaga),
   fork(subscribeUserChangedSaga),

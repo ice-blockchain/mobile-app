@@ -3,6 +3,7 @@
 import {EMAIL_CODE_GET_STATUS_INTERVAL_SEC} from '@constants/timeouts';
 import {
   getConfirmationStatus,
+  persistToken,
   sendCustomSignInLinkToEmail,
 } from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
@@ -89,15 +90,14 @@ export function* signInEmailCodeSaga(
         checkProp(status, 'accessToken') &&
         checkProp(status, 'refreshToken')
       ) {
-        yield put(
-          AccountActions.SET_TOKEN.STATE.create({
-            accessToken: status.accessToken,
-            refreshToken: status.refreshToken,
-            issuer: 'custom',
-          }),
-        );
+        const token = {
+          accessToken: status.accessToken,
+          refreshToken: status.refreshToken,
+          issuer: 'custom',
+        } as const;
 
-        yield take(AccountActions.PERSIST_TOKEN.SUCCESS.type);
+        yield put(AccountActions.SET_TOKEN.STATE.create(token));
+        yield call(persistToken, token);
 
         yield put(AccountActions.SIGN_IN_EMAIL_CODE.SUCCESS.create());
         yield put(AccountActions.USER_STATE_CHANGE.START.create());

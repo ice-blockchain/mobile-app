@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {getMetadata} from '@api/auth/getMetadata';
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
-import {getAuthenticatedUser} from '@services/auth';
+import {getAuthenticatedUser, refreshAuthToken} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
   appLocaleSelector,
@@ -16,6 +17,11 @@ import {getErrorMessage, showError} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
+/**
+ * Listener for changes in the users auth state (logging in and out).
+ * This method is also gets called when the subscription is first established
+ *  to set the initial user state.
+ */
 export function* userStateChangeSaga() {
   try {
     const authenticatedUser: SagaReturnType<typeof getAuthenticatedUser> =
@@ -26,8 +32,12 @@ export function* userStateChangeSaga() {
 
       let user: ReturnType<typeof userSelector> = yield select(userSelector);
 
-      if (user === null) {
-        user = yield call(getUser, authenticatedUser.uid);
+      const userMetadata: SagaReturnType<typeof getMetadata> = yield call(
+        updateUserMetadata,
+      );
+
+      if (userMetadata && user === null) {
+        user = yield call(getUser, userMetadata.userId);
       }
 
       if (user === null) {
@@ -35,9 +45,12 @@ export function* userStateChangeSaga() {
           email: authenticatedUser.email,
           phoneNumber: authenticatedUser.phoneNumber,
         });
-        // Request firebase user once again after create-user to get updated claims
-        // This forceRefresh triggers userStateChange
-        yield call(getAuthenticatedUser, true);
+        yield call(refreshAuthToken, authenticatedUser.token);
+        /**
+         * In case of firebase, userStateChange is triggered automatically (because of the forceRefresh flag)
+         * In other cases we trigger it manually
+         */
+        yield put(AccountActions.USER_STATE_CHANGE.START.create());
       }
 
       yield put(
@@ -64,6 +77,23 @@ export function* userStateChangeSaga() {
     showError(error);
 
     throw error;
+  }
+}
+
+function* updateUserMetadata() {
+  try {
+    const userMetadata: SagaReturnType<typeof Api.auth.getMetadata> =
+      yield call(Api.auth.getMetadata);
+    yield put(
+      AccountActions.SET_USER_METADATA.STATE.create(userMetadata.metadata),
+    );
+    return userMetadata;
+  } catch (error) {
+    if (isApiError(error, 404, 'METADATA_NOT_FOUND')) {
+      return null;
+    } else {
+      throw error;
+    }
   }
 }
 

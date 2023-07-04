@@ -180,6 +180,10 @@ export const onUserChanged = (listener: () => void) => {
   return auth().onUserChanged(listener);
 };
 
+/**
+ *
+ * @returns TODO:: check if sign out triggers authStateChange
+ */
 export const signOut = async () => {
   await clearPersistedToken();
   try {
@@ -195,25 +199,27 @@ export const signOut = async () => {
   }
 };
 
-export const refreshAuthToken = async (token: AuthToken) => {
-  switch (token.issuer) {
+export const refreshAuthToken = async (currentToken: AuthToken) => {
+  switch (currentToken.issuer) {
     case 'firebase':
-      const newFirebaseToken = await auth().currentUser?.getIdToken();
+      const newFirebaseToken = await auth().currentUser?.getIdTokenResult(true);
       if (!newFirebaseToken) {
         return null;
       }
       return {
-        accessToken: newFirebaseToken,
+        accessToken: newFirebaseToken.token,
         issuer: 'firebase',
       } as const;
     case 'custom':
       const newCustomToken = await Api.auth.refreshTokens({
-        refreshToken: token.refreshToken,
+        refreshToken: currentToken.refreshToken,
       });
-      return {
+      const token = {
         ...newCustomToken,
         issuer: 'custom',
       } as const;
+      await persistToken(token);
+      return token;
   }
   return null;
 };

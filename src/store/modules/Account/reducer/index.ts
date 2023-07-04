@@ -10,6 +10,7 @@ import produce from 'immer';
 export interface AccountState {
   isAdmin: boolean | null;
   token: AuthToken | null;
+  metadata: string | null;
   user: User | null;
   // data that is taken from the auth providers (google / apple etc)
   // and used to populate / suggest User profile later on
@@ -20,6 +21,7 @@ export interface AccountState {
 
 type Actions = ReturnType<
   | typeof AccountActions.SET_TOKEN.STATE.create
+  | typeof AccountActions.SET_USER_METADATA.STATE.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
   | typeof AccountActions.SIGN_IN_SOCIAL.SUCCESS.create
   | typeof AccountActions.USER_STATE_CHANGE.SUCCESS.create
@@ -33,6 +35,7 @@ type Actions = ReturnType<
 const INITIAL_STATE: AccountState = {
   isAdmin: null,
   token: null,
+  metadata: null,
   user: null,
   userInfo: null,
   isPrivacyInfoShown: true,
@@ -44,6 +47,9 @@ function reducer(state = INITIAL_STATE, action: Actions): AccountState {
     switch (action.type) {
       case AccountActions.SET_TOKEN.STATE.type:
         draft.token = action.payload.token;
+        break;
+      case AccountActions.SET_USER_METADATA.STATE.type:
+        draft.metadata = action.payload.metadata;
         break;
       case AccountActions.USER_STATE_CHANGE.SUCCESS.type:
       case AccountActions.GET_ACCOUNT.SUCCESS.type:

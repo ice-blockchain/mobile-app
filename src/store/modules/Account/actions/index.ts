@@ -15,8 +15,8 @@ const SET_TOKEN = createAction('SET_TOKEN', {
   STATE: (token: AuthToken | null) => ({token}),
 });
 
-const PERSIST_TOKEN = createAction('PERSIST_TOKEN', {
-  SUCCESS: true,
+const SET_USER_METADATA = createAction('SET_USER_METADATA', {
+  STATE: (metadata: string | null) => ({metadata}),
 });
 
 const USER_STATE_CHANGE = createAction('USER_STATE_CHANGE', {
@@ -152,7 +152,7 @@ const GET_AUTH_CONFIG = createAction('GET_AUTH_CONFIG', {
 
 export const AccountActions = Object.freeze({
   SET_TOKEN,
-  PERSIST_TOKEN,
+  SET_USER_METADATA,
   SIGN_IN_EMAIL_LINK,
   SIGN_IN_EMAIL_CODE,
   SIGN_IN_PHONE,
