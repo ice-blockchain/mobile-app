@@ -4,6 +4,7 @@ import {store} from '@store/configureStore';
 import {
   appLocaleSelector,
   authTokenSelector,
+  userMetadataSelector,
 } from '@store/modules/Account/selectors';
 import {AxiosRequestConfig} from 'axios';
 
@@ -33,6 +34,17 @@ async function onFulfilled(config: AxiosRequestConfig) {
       ...config.headers,
       'X-Language': appLocale,
     };
+  }
+
+  if (!config.headers?.['X-Account-Metadata']) {
+    const metadata = userMetadataSelector(store.getState());
+
+    if (metadata) {
+      config.headers = {
+        ...config.headers,
+        'X-Account-Metadata': metadata,
+      };
+    }
   }
 
   return config;
