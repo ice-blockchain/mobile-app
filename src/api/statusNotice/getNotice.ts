@@ -2,12 +2,12 @@
 
 import {get} from '@api/client';
 import {NoticeData} from '@api/statusNotice/types';
-import {LINKS} from '@constants/links';
+import {ENV} from '@constants/env';
 
 /**
  * Returns an user tasks
  */
 
 export function getNotice(): Promise<NoticeData> {
-  return get<NoticeData>(LINKS.STATUS_NOTICE);
+  return get<NoticeData>(ENV.STATUS_NOTICE_JSON ?? '');
 }

@@ -82,8 +82,9 @@ export function newsReducer(state = INITIAL_STATE, action: Actions): State {
       case NewsActions.NEWS_ARTICLE_MARK_VIEWED(null).SUCCESS.type:
         {
           const {newsId} = action.payload;
-
-          draft.items[newsId].viewed = true;
+          if (draft.items[newsId]) {
+            draft.items[newsId].viewed = true;
+          }
         }
         break;
     }
