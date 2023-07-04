@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   titleText: {
+    flex: 1,
     ...font(15, 18, 'semibold', 'white'),
   },
   contentText: {
