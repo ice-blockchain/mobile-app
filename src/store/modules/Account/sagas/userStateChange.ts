@@ -18,8 +18,9 @@ import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
 /**
- * Listener for changes in the users auth state (logging in and out).
- * This method is also gets called when the subscription is first established
+ * Listener for changes in the users auth state (logging in and out)
+ *  and when credentials are linked.
+ * This method is also called when the subscription is first established -
  *  to set the initial user state.
  */
 export function* userStateChangeSaga() {
@@ -47,10 +48,12 @@ export function* userStateChangeSaga() {
         });
         yield call(refreshAuthToken, authenticatedUser.token);
         /**
-         * In case of firebase, userStateChange is triggered automatically (because of the forceRefresh flag)
-         * In other cases we trigger it manually
+         * In case of firebase, userStateChange is triggered by the lib,
+         *  because of the forceRefresh flag.
+         * In other cases we trigger it manually.
          */
         yield put(AccountActions.USER_STATE_CHANGE.START.create());
+        return;
       }
 
       yield put(
