@@ -14,6 +14,7 @@ import {ValidationActions} from '@store/modules/Validation/actions';
 import {useCallback, useEffect, useState} from 'react';
 import {Keyboard} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
+import {wait} from 'rn-units';
 
 export const useWhoInvitedYou = () => {
   const dispatch = useDispatch();
@@ -30,11 +31,13 @@ export const useWhoInvitedYou = () => {
     failedReasonSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
   );
 
-  const isReferralUpdated = useSelector(
+  const user = useSelector(unsafeUserSelector);
+
+  const isReferralVerified = useSelector(
     isSuccessSelector.bind(null, AccountActions.UPDATE_REF_BY_USERNAME),
   );
 
-  const user = useSelector(unsafeUserSelector);
+  const isReferralUpdated = isReferralVerified && !!user?.referredBy;
 
   const updateRefByUsernameLoading = useSelector(
     isLoadingSelector.bind(null, AccountActions.UPDATE_REF_BY_USERNAME),
@@ -72,7 +75,7 @@ export const useWhoInvitedYou = () => {
   const onChangeRefUsername = (text: string) => {
     setRefUsername(text);
     resetError();
-    if (isReferralUpdated) {
+    if (isReferralVerified) {
       dispatch(AccountActions.UPDATE_REF_BY_USERNAME.RESET.create());
     }
     if (text !== '') {
@@ -88,16 +91,16 @@ export const useWhoInvitedYou = () => {
 
   const isFocused = useIsFocused();
   useEffect(() => {
-    if (isFocused && isReferralUpdated && user?.referredBy) {
-      goForward();
+    if (isFocused && isReferralUpdated) {
+      wait(500).then(goForward);
     }
-  }, [isFocused, goForward, isReferralUpdated, user?.referredBy]);
+  }, [isFocused, goForward, isReferralUpdated]);
 
   return {
     refUsername,
     error: updateError || validationError || updateRefByUsernameError,
     isLoading: updateLoading || updateRefByUsernameLoading,
-    isReferralUpdated: isReferralUpdated,
+    isReferralUpdated,
     onChangeRefUsername,
     onSubmit,
     goBack,
