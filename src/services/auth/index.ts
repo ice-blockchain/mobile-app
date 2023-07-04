@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {ENV} from '@constants/env';
 import {LINKS} from '@constants/links';
@@ -92,23 +93,33 @@ export const getConfirmationStatus = async ({
 }: {
   loginSession: string;
 }) => {
-  const response = await Api.auth.getConfirmationStatus({loginSession});
-  if (
-    checkProp(response, 'accessToken') &&
-    checkProp(response, 'refreshToken')
-  ) {
-    return {
-      confirmed: true,
-      accessToken: response.accessToken,
-      refreshToken: response.refreshToken,
-    };
-  }
+  try {
+    const response = await Api.auth.getConfirmationStatus({loginSession});
+    if (
+      checkProp(response, 'accessToken') &&
+      checkProp(response, 'refreshToken')
+    ) {
+      return {
+        confirmed: true,
+        accessToken: response.accessToken,
+        refreshToken: response.refreshToken,
+      };
+    }
 
-  if (checkProp(response, 'emailConfirmed') && response.emailConfirmed) {
-    return {confirmed: true};
-  }
+    if (checkProp(response, 'emailConfirmed') && response.emailConfirmed) {
+      return {confirmed: true};
+    }
 
-  return {confirmed: false};
+    return {confirmed: false};
+  } catch (error) {
+    if (
+      isApiError(error, 404, 'NO_PENDING_LOGIN_SESSION') ||
+      isApiError(error, 403)
+    ) {
+      throw error;
+    }
+    return {confirmed: false};
+  }
 };
 
 export const verifyBeforeUpdateEmail = async (email: string) => {
