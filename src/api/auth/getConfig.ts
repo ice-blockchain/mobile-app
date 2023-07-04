@@ -2,8 +2,8 @@
 
 import {AuthConfig} from '@api/auth/types';
 import {get} from '@api/client';
-import {LINKS} from '@constants/links';
+import {ENV} from '@constants/env';
 
 export function getConfig(): Promise<AuthConfig> {
-  return get<AuthConfig>(LINKS.AUTH_CONFIG);
+  return get<AuthConfig>(ENV.AUTH_CONFIG_URL ?? '');
 }
