@@ -9,18 +9,24 @@ import {Touchable} from '@components/Touchable';
 import {commonStyles, MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
 import {LottieAnimations} from '@lottie';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import Clipboard from '@react-native-clipboard/clipboard';
 import {useConfirmEmailCode} from '@screens/AuthFlow/ConfirmEmailCode/hooks/useConfirmEmailCode';
 import {Header} from '@screens/AuthFlow/ConfirmEmailLink/components/Header';
+import {logsSelector} from '@store/modules/Account/selectors';
 import {PenWithFrameIcon} from '@svg/PenWithFrameIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 export const ConfirmEmailCode = () => {
   useFocusStatusBar({style: 'light-content'});
   const {email, code, validateLoading, goBack} = useConfirmEmailCode();
+
+  const logs = useSelector(logsSelector);
 
   return (
     <View style={commonStyles.flexOne}>
@@ -29,6 +35,13 @@ export const ConfirmEmailCode = () => {
       <Text style={styles.descriptionText}>
         {t('confirm_email.emailed_link_to')}
       </Text>
+      <ScrollView>
+        {logs.map((event, index) => (
+          <Text onPress={() => Clipboard.setString(event)} key={index}>
+            {event}
+          </Text>
+        ))}
+      </ScrollView>
       <View style={styles.email}>
         <Text style={styles.emailText} numberOfLines={1}>
           {email}

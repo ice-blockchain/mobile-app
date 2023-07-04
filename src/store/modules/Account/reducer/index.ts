@@ -4,6 +4,7 @@ import {AuthConfig} from '@api/auth/types';
 import {User} from '@api/user/types';
 import {SignInUserInfo} from '@services/auth/signin/types';
 import {AuthToken} from '@services/auth/types';
+import {dayjs} from '@services/dayjs';
 import {AccountActions} from '@store/modules/Account/actions';
 import produce from 'immer';
 
@@ -17,6 +18,7 @@ export interface AccountState {
   userInfo: SignInUserInfo | null;
   isPrivacyInfoShown: boolean;
   authConfig: AuthConfig | null;
+  logs: string[];
 }
 
 type Actions = ReturnType<
@@ -30,6 +32,7 @@ type Actions = ReturnType<
   | typeof AccountActions.GET_ACCOUNT.SUCCESS.create
   | typeof AccountActions.SET_PRIVACY_INFO_SHOW.STATE.create
   | typeof AccountActions.GET_AUTH_CONFIG.SUCCESS.create
+  | typeof AccountActions.ADD_LOG.STATE.create
 >;
 
 const INITIAL_STATE: AccountState = {
@@ -40,11 +43,18 @@ const INITIAL_STATE: AccountState = {
   userInfo: null,
   isPrivacyInfoShown: true,
   authConfig: null,
+  logs: [],
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): AccountState {
   return produce(state, draft => {
     switch (action.type) {
+      case AccountActions.ADD_LOG.STATE.type:
+        draft.logs = [
+          ...state.logs,
+          dayjs().format('HH:mm:ss') + ' ' + action.payload.event,
+        ];
+        break;
       case AccountActions.SET_TOKEN.STATE.type:
         draft.token = action.payload.token;
         break;

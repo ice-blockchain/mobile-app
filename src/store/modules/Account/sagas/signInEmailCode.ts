@@ -6,6 +6,7 @@ import {
   persistToken,
   sendCustomSignInLinkToEmail,
 } from '@services/auth';
+import {logError} from '@services/logging';
 import {AccountActions} from '@store/modules/Account/actions';
 import {appLocaleSelector} from '@store/modules/Account/selectors';
 import {deviceUniqueIdSelector} from '@store/modules/Devices/selectors';
@@ -35,6 +36,12 @@ export function* signInEmailCodeSaga(
   try {
     const email = startAction.payload.email;
 
+    yield put(
+      AccountActions.ADD_LOG.STATE.create(
+        'signInEmailCode start for email: ' + email,
+      ),
+    );
+
     if (!email) {
       throw {code: ValidateError.InvalidEmail};
     }
@@ -42,9 +49,15 @@ export function* signInEmailCodeSaga(
     const deviceUniqueId: SagaReturnType<typeof deviceUniqueIdSelector> =
       yield select(deviceUniqueIdSelector);
 
+    yield put(
+      AccountActions.ADD_LOG.STATE.create('deviceUniqueId: ' + deviceUniqueId),
+    );
+
     const language: SagaReturnType<typeof appLocaleSelector> = yield select(
       appLocaleSelector,
     );
+
+    yield put(AccountActions.ADD_LOG.STATE.create('language: ' + language));
 
     const {loginSession}: SagaReturnType<typeof sendCustomSignInLinkToEmail> =
       yield call(sendCustomSignInLinkToEmail, {
@@ -53,7 +66,19 @@ export function* signInEmailCodeSaga(
         language,
       });
 
+    yield put(
+      AccountActions.ADD_LOG.STATE.create(
+        'getting login session success: ' + loginSession,
+      ),
+    );
+
     const loginSessionPayload = jwt_decode(loginSession);
+
+    yield put(
+      AccountActions.ADD_LOG.STATE.create(
+        'loginSessionPayload: ' + JSON.stringify(loginSessionPayload),
+      ),
+    );
 
     if (!checkProp(loginSessionPayload, 'confirmationCode')) {
       throw new Error('confirmationCode is not found in loginSession');
@@ -85,6 +110,12 @@ export function* signInEmailCodeSaga(
         {loginSession},
       );
 
+      yield put(
+        AccountActions.ADD_LOG.STATE.create(
+          'confirmation status: ' + JSON.stringify(status.response),
+        ),
+      );
+
       if (
         status.confirmed &&
         checkProp(status, 'accessToken') &&
@@ -102,6 +133,16 @@ export function* signInEmailCodeSaga(
       }
     }
   } catch (error) {
+    logError(error);
+    yield put(
+      AccountActions.ADD_LOG.STATE.create(
+        'confirmation status error: ' +
+          //@ts-ignore
+          JSON.stringify(error.code) +
+          '\n' +
+          JSON.stringify(error),
+      ),
+    );
     if (checkProp(error, 'code') && error.code === ValidateError.InvalidEmail) {
       yield put(
         AccountActions.SIGN_IN_EMAIL_CODE.FAILED.create(

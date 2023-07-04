@@ -54,3 +54,5 @@ export const isPrivacyInfoShownSelector = (state: RootState) =>
 
 export const authConfigSelector = (state: RootState) =>
   state.account.authConfig;
+
+export const logsSelector = (state: RootState) => state.account.logs;

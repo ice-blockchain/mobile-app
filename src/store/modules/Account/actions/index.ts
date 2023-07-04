@@ -19,6 +19,10 @@ const SET_USER_METADATA = createAction('SET_USER_METADATA', {
   STATE: (metadata: string | null) => ({metadata}),
 });
 
+const ADD_LOG = createAction('ADD_LOG', {
+  STATE: (event: string) => ({event}),
+});
+
 const USER_STATE_CHANGE = createAction('USER_STATE_CHANGE', {
   START: true,
   SUCCESS: (user: User | null, isAdmin: boolean | null) => ({user, isAdmin}),
@@ -151,6 +155,7 @@ const GET_AUTH_CONFIG = createAction('GET_AUTH_CONFIG', {
 });
 
 export const AccountActions = Object.freeze({
+  ADD_LOG,
   SET_TOKEN,
   SET_USER_METADATA,
   SIGN_IN_EMAIL_LINK,

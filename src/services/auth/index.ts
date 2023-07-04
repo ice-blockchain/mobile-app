@@ -108,7 +108,7 @@ export const getConfirmationStatus = async ({
     return {confirmed: true};
   }
 
-  return {confirmed: false};
+  return {confirmed: false, response};
 };
 
 export const verifyBeforeUpdateEmail = async (email: string) => {
