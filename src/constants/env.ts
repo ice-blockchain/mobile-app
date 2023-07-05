@@ -7,8 +7,8 @@ import {isAndroid} from 'rn-units';
 export const ENV = {
   APP_ID: config.APP_ID,
   APPSTORE_APP_ID: config.APPSTORE_APP_ID,
-  BASE_READ_API_URL: 'https://r2.api.ice.io/v1r',
-  BASE_WRITE_API_URL: 'https://w2.api.ice.io/v1w',
+  BASE_READ_API_URL: config.BASE_READ_API_URL,
+  BASE_WRITE_API_URL: config.BASE_WRITE_API_URL,
   BLOCK_EXPLORER_URL: config.BLOCK_EXPLORER_URL,
   SENTRY_KEY: config.SENTRY_KEY,
   REQUIRE_REFERRAL_REGISTRATION_STEP:
