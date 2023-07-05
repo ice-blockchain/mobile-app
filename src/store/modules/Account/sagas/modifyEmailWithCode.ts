@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {isApiError} from '@api/client';
 import {EMAIL_CODE_GET_STATUS_INTERVAL_SEC} from '@constants/timeouts';
 import {getConfirmationStatus} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
@@ -91,26 +92,33 @@ export function* modifyEmailWithCodeSaga({
       }
     }
   } catch (error) {
-    let validateError;
+    let localizedError;
 
     if (checkProp(error, 'code')) {
       switch (error.code) {
         case ValidateError.InvalidEmail:
-          validateError = t('errors.invalid_email');
+          localizedError = t('errors.invalid_email');
           break;
         case ValidateError.SameEmail:
-          validateError = t('errors.same_email');
+          localizedError = t('errors.same_email');
           break;
       }
     }
 
+    if (
+      isApiError(error, 409, 'CONFLICT_WITH_ANOTHER_USER') &&
+      error?.response?.data?.data?.field === 'email'
+    ) {
+      localizedError = t('errors.email_already_taken');
+    }
+
     yield put(
       AccountActions.MODIFY_EMAIL_WITH_CODE.FAILED.create(
-        validateError ?? getErrorMessage(error),
+        localizedError ?? getErrorMessage(error),
       ),
     );
 
-    if (!validateError) {
+    if (!localizedError) {
       throw error;
     }
   }
