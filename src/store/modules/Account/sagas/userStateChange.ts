@@ -3,12 +3,12 @@
 import {getMetadata} from '@api/auth/getMetadata';
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
+import {User} from '@api/user/types';
 import {getAuthenticatedUser, refreshAuthToken} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
   appLocaleSelector,
   userInfoSelector,
-  userSelector,
 } from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {temporaryPhoneNumberIsoSelector} from '@store/modules/Validation/selectors';
@@ -16,6 +16,13 @@ import {t} from '@translations/i18n';
 import {getErrorMessage, showError} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
+
+/**
+ * We keep the created user so we can use it after the token refresh
+ * (that restarts the userStateChangeSaga) to finish the process without
+ * requesting the user once again
+ */
+let createdUser: User | null = null;
 
 /**
  * Listener for changes in the users auth state (logging in and out)
@@ -31,7 +38,8 @@ export function* userStateChangeSaga() {
     if (authenticatedUser) {
       yield put(AccountActions.SET_TOKEN.STATE.create(authenticatedUser.token));
 
-      let user: ReturnType<typeof userSelector> = yield select(userSelector);
+      let user = createdUser;
+      createdUser = null;
 
       const userMetadata: SagaReturnType<typeof getMetadata> = yield call(
         updateUserMetadata,
@@ -42,7 +50,7 @@ export function* userStateChangeSaga() {
       }
 
       if (user === null) {
-        user = yield call(createUser, {
+        createdUser = yield call(createUser, {
           email: authenticatedUser.email,
           phoneNumber: authenticatedUser.phoneNumber,
         });
