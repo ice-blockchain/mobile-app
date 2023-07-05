@@ -10,6 +10,7 @@ import {AccountActions} from '@store/modules/Account/actions';
 import {appLocaleSelector} from '@store/modules/Account/selectors';
 import {deviceUniqueIdSelector} from '@store/modules/Devices/selectors';
 import {t} from '@translations/i18n';
+import {validateEmail} from '@utils/email';
 import {getErrorMessage} from '@utils/errors';
 import {checkProp} from '@utils/guards';
 import jwt_decode from 'jwt-decode';
@@ -34,8 +35,7 @@ export function* signInEmailCodeSaga(
 ) {
   try {
     const email = startAction.payload.email;
-
-    if (!email) {
+    if (!validateEmail(email)) {
       throw {code: ValidateError.InvalidEmail};
     }
 

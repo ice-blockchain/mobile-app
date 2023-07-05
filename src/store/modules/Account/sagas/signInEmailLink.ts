@@ -3,6 +3,7 @@
 import {sendSignInLinkToEmail, signInWithEmailLink} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {t} from '@translations/i18n';
+import {validateEmail} from '@utils/email';
 import {getErrorMessage} from '@utils/errors';
 import {checkProp} from '@utils/guards';
 import {call, put, take} from 'redux-saga/effects';
@@ -19,7 +20,7 @@ export function* signInEmailLinkSaga(
   try {
     const email = startAction.payload.email;
 
-    if (!email) {
+    if (!validateEmail(email)) {
       throw {code: ValidateError.InvalidEmail};
     }
 
