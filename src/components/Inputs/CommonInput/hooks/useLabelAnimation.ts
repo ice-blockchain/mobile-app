@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {useEffect} from 'react';
+import {useCallback, useEffect} from 'react';
+import {LayoutChangeEvent} from 'react-native';
 import {
   interpolate,
   useAnimatedStyle,
@@ -11,6 +12,32 @@ import {
 export const useLabelAnimation = (isFocused: boolean, text?: string) => {
   const focusAnimation = useSharedValue(text ? 1 : 0);
 
+  const bodyHeight = useSharedValue(0);
+
+  const labelHeight = useSharedValue(0);
+
+  const onLayoutBody = useCallback(
+    ({
+      nativeEvent: {
+        layout: {height},
+      },
+    }: LayoutChangeEvent) => {
+      bodyHeight.value = height;
+    },
+    [bodyHeight],
+  );
+
+  const onLayoutLabel = useCallback(
+    ({
+      nativeEvent: {
+        layout: {height},
+      },
+    }: LayoutChangeEvent) => {
+      labelHeight.value = height;
+    },
+    [labelHeight],
+  );
+
   useEffect(() => {
     focusAnimation.value = withTiming(isFocused || text ? 1 : 0);
   }, [focusAnimation, isFocused, text]);
@@ -19,10 +46,18 @@ export const useLabelAnimation = (isFocused: boolean, text?: string) => {
     fontSize: interpolate(focusAnimation.value, [0, 1], [16, 12]),
     transform: [
       {
-        translateY: interpolate(focusAnimation.value, [0, 1], [0, -14]),
+        translateY: interpolate(
+          focusAnimation.value,
+          [0, 1],
+          [(bodyHeight.value - labelHeight.value) / 2, -6],
+        ),
       },
     ],
   }));
 
-  return {animatedStyle};
+  return {
+    animatedStyle,
+    onLayoutBody,
+    onLayoutLabel,
+  };
 };

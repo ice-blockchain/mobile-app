@@ -2,7 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 // eslint-disable-next-line no-restricted-imports
-import {FontFamily, FONTS, FontWight} from '@constants/fonts';
+import {FONT_WEIGHTS, FontFamily, FONTS} from '@constants/fonts';
 import {isRTL} from '@translations/i18n';
 import {TextStyle} from 'react-native';
 import {rem} from 'rn-units';
@@ -10,7 +10,7 @@ import {rem} from 'rn-units';
 export const font = (
   fontSize: number,
   lineHeight?: number | null,
-  fontWeight: FontWight = 'regular',
+  fontWeight: keyof typeof FONT_WEIGHTS = 'regular',
   color: keyof typeof COLORS = 'white',
   textAlign: TextStyle['textAlign'] = 'left',
   fontFamily: FontFamily = 'primary',
@@ -18,7 +18,7 @@ export const font = (
   return {
     fontSize: rem(fontSize),
     lineHeight: lineHeight != null ? rem(lineHeight) : undefined,
-    fontFamily: FONTS[fontFamily][fontWeight],
+    fontFamily: FONTS[fontFamily][FONT_WEIGHTS[fontWeight]],
     color: COLORS[color],
     textAlign,
   };

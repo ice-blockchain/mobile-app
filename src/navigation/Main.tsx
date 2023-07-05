@@ -17,6 +17,9 @@ import {
 } from '@react-navigation/bottom-tabs';
 import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {ChannelAdministrators} from '@screens/ChatFlow/ChannelAdministrators';
+import {ChannelTypeSelect} from '@screens/ChatFlow/ChannelTypeSelect';
+import {EditChannel} from '@screens/ChatFlow/EditChannel';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
 import {Home} from '@screens/HomeFlow/Home';
 import {
@@ -135,6 +138,18 @@ export type MainStackParamList = {
   ProfilePrivacyEditStep1: undefined;
   ProfilePrivacyEditStep2: undefined;
   ProfilePrivacyEditStep3: undefined;
+  'Chat/EditChannel': {
+    /**
+     * null for new channel (create channel flow)
+     */
+    channelId: string | null;
+  };
+  'Chat/ChannelType': {
+    channelId: string | null;
+  };
+  'Chat/ChannelAdministrators': {
+    channelId: string | null;
+  };
 };
 
 export type HomeTabStackParamList = {
@@ -402,6 +417,17 @@ export function MainNavigator() {
         name="JoinTelegramPopUp"
         options={modalOptions}
         component={JoinTelegramPopUp}
+      />
+      <MainStack.Screen name={'Chat/EditChannel'} component={EditChannel} />
+      <MainStack.Screen
+        name={'Chat/ChannelType'}
+        component={ChannelTypeSelect}
+        options={modalOptions}
+      />
+      <MainStack.Screen
+        name={'Chat/ChannelAdministrators'}
+        component={ChannelAdministrators}
+        options={modalOptions}
       />
     </MainStack.Navigator>
   );

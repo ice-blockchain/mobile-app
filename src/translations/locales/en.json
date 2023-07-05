@@ -887,5 +887,59 @@
       "description_part1": "Following us on Instagram is a great way to stay in the loop and connect with other users who are also passionate about ice",
       "description_part2": "Plus, you'll be the first to know about any new features or promotions that we're launching."
     }
+  },
+  "chat": {
+    "channel": {
+      "type": {
+        "public": "Public",
+        "private": "Private"
+      }
+    },
+    "edit_channel": {
+      "title_create": "Creating a channel",
+      "title_edit": "Channel editing",
+      "add_channel_photo": "Add channel photo",
+      "labels": {
+        "administrators": "Administrators",
+        "channel_type": "Channel type",
+        "description": "Description",
+        "invitation_link": "Invitation link",
+        "title": "Title"
+      },
+      "buttons": {
+        "add_photo": "Add photo",
+        "change_photo": "Change photo",
+        "create_channel": "Create channel",
+        "save_changes": "Save changes"
+      },
+      "dialogs": {
+        "delete_channel": {
+          "title": "Delete channel?",
+          "message": "All publications and subscribers will be lost. Do you really want to delete the channel?",
+          "buttons": {
+            "delete": "Delete"
+          }
+        }
+      }
+    },
+    "channel_type": {
+      "title": "Choose type of channel",
+      "info": "Public channels can be found through search and any user can subscribe to them"
+    },
+    "channel_administrators": {
+      "title": "Channel Management",
+      "buttons": {
+        "add_administrator": "Add administrator"
+      },
+      "dialogs": {
+        "delete_administrator": {
+          "title": "Delete administrator?",
+          "message": "Delete this channel administrator?",
+          "buttons": {
+            "delete": "Delete"
+          }
+        }
+      }
+    }
   }
 }
