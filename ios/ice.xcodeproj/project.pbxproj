@@ -646,7 +646,7 @@
 					/usr/lib/swift,
 					"$(inherited)",
 				);
-				MARKETING_VERSION = 0.0.0;
+				MARKETING_VERSION = 9.9.9;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -747,7 +747,7 @@
 					/usr/lib/swift,
 					"$(inherited)",
 				);
-				MARKETING_VERSION = 0.0.0;
+				MARKETING_VERSION = 9.9.9;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
