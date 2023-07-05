@@ -70,11 +70,12 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
 
   const {shadowStyle} = useScrollShadow({translateY: cardTranslateY});
 
-  const {collapseAnimatedStyle, isCollapsed} = useScrollCollapse({
-    translateY: cardTranslateY,
-    fromHeight: CARDS_TOTAL_HEIGHT + SCROLL_BOTTOM_PADDING,
-    toHeight: CARDS_COLLAPSED_HEIGHT + SCROLL_BOTTOM_PADDING,
-  });
+  const {collapseAnimatedStyle, sharedIsCollapsed, isCollapsed} =
+    useScrollCollapse({
+      translateY: cardTranslateY,
+      fromHeight: CARDS_TOTAL_HEIGHT + SCROLL_BOTTOM_PADDING,
+      toHeight: CARDS_COLLAPSED_HEIGHT + SCROLL_BOTTOM_PADDING,
+    });
 
   const handleAdoptionPress = () => {
     adoptionFlipCardRef.current?.changeSide();
@@ -111,7 +112,7 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
           ]}
           contentContainerStyle={styles.scrolledContent}>
           <LevelCard
-            isCollapsed={isCollapsed}
+            sharedIsCollapsed={sharedIsCollapsed}
             onLayout={onProfileCardLayout}
             ref={profileCardRef}
           />
@@ -120,8 +121,12 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
             <FlipCard
               disabled={isCollapsed}
               stylesContainer={styles.flipCardContainer}
-              front={<ReferralsCard isCollapsed={isCollapsed} />}
-              back={<ReferralAcquisitionHistory isCollapsed={isCollapsed} />}
+              front={<ReferralsCard sharedIsCollapsed={sharedIsCollapsed} />}
+              back={
+                <ReferralAcquisitionHistory
+                  sharedIsCollapsed={sharedIsCollapsed}
+                />
+              }
             />
           </View>
 
@@ -131,11 +136,13 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
               stylesContainer={styles.flipCardContainer}
               front={
                 <AdoptionCard
-                  isCollapsed={isCollapsed}
-                  onPress={handleAdoptionPress}
+                  sharedIsCollapsed={sharedIsCollapsed}
+                  onPress={isCollapsed ? undefined : handleAdoptionPress}
                 />
               }
-              back={<OnlineUsersHistory />}
+              back={
+                <OnlineUsersHistory sharedIsCollapsed={sharedIsCollapsed} />
+              }
               ref={adoptionFlipCardRef}
             />
           </View>

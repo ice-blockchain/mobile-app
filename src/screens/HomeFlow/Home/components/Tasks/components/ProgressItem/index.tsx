@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
+import {useIsEnglishLocale} from '@hooks/useIsEnglishLocale';
 import {ITEM_LEFT_POSITION} from '@screens/HomeFlow/Home/components/Tasks/components/TaskItem';
 import {ProgressCircleSvg} from '@svg/ProgressCircle';
 import {t} from '@translations/i18n';
@@ -20,11 +21,14 @@ const PROGRESS_WIDTH = rem(4);
 
 export const ProgressItem = ({total, completed}: Props) => {
   const progressInPercent = (completed / total) * 100;
+  const isEnglishLocale = useIsEnglishLocale();
   return (
     <View style={styles.header}>
       <View style={[styles.amountWrapper, commonStyles.shadow]}>
         <Text style={styles.amountText}>{completed}</Text>
-        <Text style={styles.amountTextSmall}>{t('global.of')}</Text>
+        <Text style={styles.amountTextSmall}>
+          {isEnglishLocale ? t('global.of') : '/'}
+        </Text>
         <Text style={styles.amountText}>{total}</Text>
         <ProgressCircleSvg
           progress={progressInPercent}

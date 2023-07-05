@@ -10,19 +10,23 @@ import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
-export const PreStakingCall = () => {
+type Props = {
+  oneColumn?: boolean;
+};
+
+export const PreStakingCall = ({oneColumn}: Props) => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainStackParamList>>();
   return (
-    <>
+    <View style={oneColumn ? styles.columnContainer : styles.container}>
       <Text style={styles.titleText}>{t('staking.appeal')}</Text>
-      <Text style={styles.noteText}>
+      <Text style={[styles.noteText, oneColumn ? styles.columnNoteText : null]}>
         {t('staking.benefits_description', {
           periodYears: STAKING_YEARS_MAX,
           ratePercentages: STAKING_RATE_PERCENTAGES_MAX,
@@ -44,11 +48,17 @@ export const PreStakingCall = () => {
           />
         }
       />
-    </>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+  },
+  columnContainer: {
+    alignItems: 'flex-start',
+  },
   titleText: {
     marginTop: rem(22),
     marginHorizontal: rem(32),
@@ -58,6 +68,9 @@ const styles = StyleSheet.create({
     marginTop: rem(14),
     marginHorizontal: rem(32),
     ...font(12, 17, 'medium', 'secondary', 'center'),
+  },
+  columnNoteText: {
+    textAlign: isRTL ? 'right' : 'left',
   },
   button: {
     marginTop: rem(20),

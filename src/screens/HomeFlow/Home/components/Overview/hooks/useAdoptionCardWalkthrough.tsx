@@ -15,6 +15,7 @@ import {TapIcon} from '@svg/TapIcon';
 import {mirrorTransform} from '@utils/styles';
 import React, {useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
+import {useSharedValue} from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
 function AdoptionCardWalkthroughElement() {
@@ -22,12 +23,18 @@ function AdoptionCardWalkthroughElement() {
   const handleAdoptionPress = () => {
     adoptionCardRef.current?.changeSide();
   };
+  const sharedIsCollapsed = useSharedValue(0);
   return (
     <FlipCard
       disabled={false}
       stylesContainer={styles.mainContainer}
-      front={<AdoptionCard isCollapsed={false} onPress={handleAdoptionPress} />}
-      back={<OnlineUsersHistory />}
+      front={
+        <AdoptionCard
+          sharedIsCollapsed={sharedIsCollapsed}
+          onPress={handleAdoptionPress}
+        />
+      }
+      back={<OnlineUsersHistory sharedIsCollapsed={sharedIsCollapsed} />}
       ref={adoptionCardRef}
     />
   );

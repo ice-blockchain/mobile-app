@@ -70,23 +70,26 @@ export const Engagement = memo(({darkMode}: Props) => {
           </Text>
         </View>
       </View>
-      <Text
-        style={[styles.description, darkMode && commonStyles.darkText]}
-        numberOfLines={2}
-        adjustsFontSizeToFit>
-        {`${t('home.engagement.description_part1')}\n${t(
-          'home.engagement.description_part2',
-        )}`}
-      </Text>
+      <View style={styles.descriptionContainer}>
+        <Text
+          style={[styles.description, darkMode && commonStyles.darkText]}
+          numberOfLines={3}>
+          {`${t('home.engagement.description_part1')} ${t(
+            'home.engagement.description_part2',
+          )}`}
+        </Text>
+      </View>
     </View>
   );
 });
 
+const MARGIN = rem(30);
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: COLORS.transparent,
-    height: PAGE_HEIGHT + rem(30),
-    marginBottom: -rem(30),
+    height: PAGE_HEIGHT + MARGIN,
+    marginBottom: -MARGIN,
     alignItems: 'center',
   },
   titleContainer: {
@@ -94,7 +97,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   engagementText: {
-    marginTop: rem(30),
+    marginTop: MARGIN,
     ...font(12, 15, 'semibold'),
     marginLeft: rem(4),
   },
@@ -108,9 +111,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  description: {
-    marginTop: rem(9),
+  descriptionContainer: {
+    flex: 1,
+    justifyContent: 'center',
     marginHorizontal: rem(20),
+    marginBottom: MARGIN + rem(6),
+  },
+  description: {
     ...font(11, 14, 'regular', 'white', 'center'),
   },
   valuesContainer: {

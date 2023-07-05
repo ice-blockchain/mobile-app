@@ -3,7 +3,7 @@
 import {IceLabel} from '@components/Labels/IceLabel';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -41,7 +41,7 @@ export const InviteButton = ({style}: Props = {}) => {
       <View style={styles.iconWrapper}>
         <InviteIcon style={styles.icon} />
       </View>
-      <View>
+      <View style={commonStyles.flexOne}>
         <Text style={styles.mainText}>{t('button.invite_friend.title')}</Text>
         <Text style={styles.noteText}>
           {replaceString(

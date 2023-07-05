@@ -17,14 +17,15 @@ import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import Animated from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 interface Props {
-  isCollapsed: boolean;
+  sharedIsCollapsed: Animated.SharedValue<number>;
 }
 
-export const ReferralsCard = ({isCollapsed}: Props) => {
+export const ReferralsCard = ({sharedIsCollapsed}: Props) => {
   const userReferralCount = useSelector(userReferralCountSelector);
   const userT1ReferralCount = useSelector(userT1ReferralSelector);
   const userT2ReferralCount = useSelector(userT2ReferralSelector);
@@ -41,7 +42,7 @@ export const ReferralsCard = ({isCollapsed}: Props) => {
       headerTitleIcon={<TrophyIcon fill={COLORS.white} />}
       HeaderValue={formatNumber(userReferralCount)}
       headerValueIcon={<FriendsIcon fill={COLORS.white} />}
-      isCollapsed={isCollapsed}>
+      sharedIsCollapsed={sharedIsCollapsed}>
       {userReferralCount === 0 ? (
         <ReferralsEmptyState />
       ) : (

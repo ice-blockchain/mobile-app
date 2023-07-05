@@ -167,4 +167,5 @@ export const AccountActions = Object.freeze({
   MODIFY_EMAIL_WITH_CODE,
   VERIFY_PHONE_NUMBER,
   SET_PRIVACY_INFO_SHOW,
+  GET_AUTH_CONFIG,
 });

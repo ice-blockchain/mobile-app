@@ -7,6 +7,7 @@ import {
   interpolate,
   runOnJS,
   SharedValue,
+  useAnimatedReaction,
   useAnimatedStyle,
   useDerivedValue,
   withTiming,
@@ -44,13 +45,20 @@ export const useScrollCollapse = ({
     );
   });
 
-  useDerivedValue(() => {
-    const newIsCollapsedValue = containerHeight.value <= toHeight;
+  useAnimatedReaction(
+    () => containerHeight.value <= toHeight,
+    (current, previous) => {
+      if (current !== previous && previous != null) {
+        runOnJS(setCollapsed)(current);
+      }
+    },
+    [isCollapsed, toHeight],
+  );
 
-    if (isCollapsed !== newIsCollapsedValue) {
-      runOnJS(setCollapsed)(newIsCollapsedValue);
-    }
-  }, [isCollapsed, toHeight]);
+  const sharedIsCollapsed = useDerivedValue(
+    () => interpolate(containerHeight.value, [fromHeight, toHeight], [0, 1]),
+    [],
+  );
 
   // START // Animation fix /////////////////////////////////////////////////
   /**
@@ -77,6 +85,7 @@ export const useScrollCollapse = ({
 
   return {
     isCollapsed,
+    sharedIsCollapsed,
     collapseAnimatedStyle,
   };
 };

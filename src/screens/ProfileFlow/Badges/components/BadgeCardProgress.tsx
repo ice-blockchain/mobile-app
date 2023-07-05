@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {useIsEnglishLocale} from '@hooks/useIsEnglishLocale';
 import {PeopleIcon} from '@svg/PeopleIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -13,6 +14,7 @@ type Props = {
 };
 
 export const BadgeProgress = ({value: progressValue}: Props) => {
+  const isEnglishLocale = useIsEnglishLocale();
   return (
     <View style={styles.container}>
       <View style={styles.labelContainer}>
@@ -22,12 +24,14 @@ export const BadgeProgress = ({value: progressValue}: Props) => {
           adjustsFontSizeToFit>
           {progressValue}%
         </Text>
-        <Text
-          style={styles.percLabelText}
-          numberOfLines={2}
-          adjustsFontSizeToFit>
-          {t('global.of')}
-        </Text>
+        {isEnglishLocale ? (
+          <Text
+            style={styles.percLabelText}
+            numberOfLines={2}
+            adjustsFontSizeToFit>
+            {t('global.of')}
+          </Text>
+        ) : null}
         <PeopleIcon />
       </View>
       <View style={styles.progressBody}>

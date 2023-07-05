@@ -20,9 +20,9 @@ export const Summary = memo(() => {
   const totalUsers = useSelector(totalUsersSelector);
   return (
     <View style={styles.container}>
-      <View style={[styles.cell, styles.cell_left]}>
+      <View style={styles.cell}>
         <LogoIcon color={COLORS.white} width={rem(32)} height={rem(32)} />
-        <View style={styles.cellDataLeft}>
+        <View style={styles.cellData}>
           <Text style={styles.labelText}>{t('stats.online_miners')}</Text>
           <View style={styles.value}>
             <Text style={styles.valueText}>
@@ -40,9 +40,13 @@ export const Summary = memo(() => {
           color={COLORS.white}
           style={styles.teamIcon}
         />
-        <View style={styles.cellDataRight}>
-          <Text style={styles.labelText}>{t('stats.total')}</Text>
-          <Text style={styles.valueText}>{formatNumber(totalUsers)}</Text>
+        <View style={styles.cellData}>
+          <Text style={[styles.labelText, styles.textAlignRight]}>
+            {t('stats.total')}
+          </Text>
+          <Text style={[styles.valueText, styles.textAlignRight]}>
+            {formatNumber(totalUsers)}
+          </Text>
         </View>
       </View>
     </View>
@@ -52,33 +56,26 @@ export const Summary = memo(() => {
 const styles = StyleSheet.create({
   container: {
     paddingTop: rem(4),
-    height: rem(56),
+    paddingBottom: rem(16),
     flexDirection: 'row',
-    alignItems: 'flex-start',
+    alignItems: 'flex-end',
+    width: '100%',
   },
   cell: {
     flexDirection: 'row',
-    alignItems: 'flex-start',
-    flexGrow: 1,
-    flexShrink: 0,
-  },
-  cell_left: {
-    paddingLeft: rem(24),
+    alignItems: 'flex-end',
+    width: '50%',
+    paddingHorizontal: rem(24),
   },
   cell_right: {
-    paddingRight: rem(32),
     justifyContent: 'flex-end',
   },
-  cellDataLeft: {
+  cellData: {
     marginLeft: rem(12),
-  },
-  cellDataRight: {
-    marginLeft: rem(8),
-    alignItems: isRTL ? 'flex-start' : 'flex-end',
+    flexShrink: 1,
   },
   separator: {
     width: 1,
-    marginTop: rem(4),
     height: rem(21.5),
     backgroundColor: COLORS.white,
   },
@@ -99,7 +96,13 @@ const styles = StyleSheet.create({
     marginTop: -rem(7),
     marginLeft: rem(2),
   },
+  iconContainer: {
+    flex: 1,
+  },
   teamIcon: {
-    marginTop: -rem(5),
+    marginBottom: -rem(5),
+  },
+  textAlignRight: {
+    textAlign: isRTL ? 'left' : 'right',
   },
 });

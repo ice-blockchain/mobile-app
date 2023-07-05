@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {useIsEnglishLocale} from '@hooks/useIsEnglishLocale';
 import {Images} from '@images';
 import {
   CardBase,
@@ -21,6 +22,7 @@ import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {useEffect} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import Animated from 'react-native-reanimated';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -28,13 +30,14 @@ const NUMBER_OF_STEPS_Y = 5;
 const Y_AXIS_HEIGHT = '100%';
 
 interface Props {
-  isCollapsed: boolean;
+  sharedIsCollapsed: Animated.SharedValue<number>;
 }
 
-export const ReferralAcquisitionHistory = ({isCollapsed}: Props) => {
+export const ReferralAcquisitionHistory = ({sharedIsCollapsed}: Props) => {
   const dispatch = useDispatch();
 
   const userReferralCount = useSelector(userReferralCountSelector);
+  const isEnglishLocale = useIsEnglishLocale();
 
   useEffect(() => {
     dispatch(ReferralsActions.GET_REFERRALS_HISTORY.START.create());
@@ -68,8 +71,8 @@ export const ReferralAcquisitionHistory = ({isCollapsed}: Props) => {
       backgroundImageSource={Images.backgrounds.referralsCardBg}
       headerTitle={t('home.referrals.title')}
       headerTitleIcon={<TrophyIcon fill={COLORS.white} />}
-      headerValueIcon={<Tiers />}
-      isCollapsed={isCollapsed}>
+      headerValueIcon={isEnglishLocale ? <Tiers /> : null}
+      sharedIsCollapsed={sharedIsCollapsed}>
       {userReferralCount === 0 ? (
         <ReferralsEmptyState />
       ) : (
