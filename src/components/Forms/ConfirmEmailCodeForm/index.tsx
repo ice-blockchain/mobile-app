@@ -2,7 +2,7 @@
 
 import {ConfirmCodeBack} from '@components/Forms/components/ConfirmCode/components/ConfirmCodeBack';
 import {EmailCode} from '@components/Forms/components/EmailCode';
-import {useConfirmEmailLink} from '@components/Forms/ConfirmEmailLinkForm/hooks/useConfirmEmailLink';
+import {useConfirmEmailCode} from '@components/Forms/ConfirmEmailCodeForm/hooks/useConfirmEmailCode';
 import {LottieView} from '@components/LottieView';
 import {Touchable} from '@components/Touchable';
 import {MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
@@ -15,7 +15,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
 export const ConfirmEmailCodeForm = () => {
-  const {email, code, goBack} = useConfirmEmailLink();
+  const {email, code, goBack} = useConfirmEmailCode();
 
   return (
     <View style={styles.container}>
