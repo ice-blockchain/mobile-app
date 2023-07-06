@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
     ...font(14, 19, 'medium', 'primaryLight', 'center'),
   },
   bonusValueText: {
-    ...font(17, 22, 'bold', 'primaryLight'),
+    ...font(17, 22, 'bold', 'primaryLight', 'center'),
   },
   dataCellValue: {
     ...font(17, 22, 'bold', 'primaryDark'),

@@ -9,7 +9,7 @@ import {font} from '@utils/styles';
 import React, {forwardRef, Ref} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
-import {rem} from 'rn-units';
+import {isIOS, rem} from 'rn-units';
 
 type Props = {referralType: ReferralType};
 
@@ -19,17 +19,16 @@ export const ActiveUsers = forwardRef(
       referralsSelector({referralType}),
     );
     const isEnglishLocale = useIsEnglishLocale();
-    return (
+    return isEnglishLocale ? (
       <Text style={styles.title} ref={forwardedRef}>
-        {isEnglishLocale ? (
-          <Text style={styles.label}>{`${t('users.active')}:`}</Text>
-        ) : (
-          <View>
-            <ActiveUsersIcon width={rem(16)} style={styles.icon} />
-          </View>
-        )}
+        <Text style={styles.label}>{`${t('users.active')}:`}</Text>
         {` ${active}/${total}`}
       </Text>
+    ) : (
+      <View style={styles.container} ref={forwardedRef}>
+        <ActiveUsersIcon width={rem(16)} style={styles.icon} />
+        <Text style={styles.titleNonEnglish}>{`  ${active}/${total}`}</Text>
+      </View>
     );
   },
 );
@@ -41,7 +40,14 @@ const styles = StyleSheet.create({
   title: {
     ...font(14, null, 'regular', 'primaryDark'),
   },
+  titleNonEnglish: {
+    ...font(14, 20, 'regular', 'primaryDark'),
+  },
+  container: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+  },
   icon: {
-    bottom: -rem(2),
+    bottom: isIOS ? rem(4) : rem(3),
   },
 });
