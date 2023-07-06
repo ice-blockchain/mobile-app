@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     top: rem(20),
     left: 0,
     right: 0,
-    ...font(17, 21, 'semibold', 'primaryDark', 'center'),
+    ...font(17, 22, 'semibold', 'primaryDark', 'center'),
   },
   calendar: {
     marginTop: rem(40),

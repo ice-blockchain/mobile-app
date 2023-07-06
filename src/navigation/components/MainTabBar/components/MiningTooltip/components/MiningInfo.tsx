@@ -3,6 +3,7 @@
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useCountdown} from '@hooks/useCountdown';
 import {
   DataCell,
@@ -26,7 +27,11 @@ import {StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const MiningInfo = () => {
+type Props = {
+  oneColumn?: boolean;
+};
+
+export const MiningInfo = ({oneColumn}: Props) => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
 
@@ -50,7 +55,7 @@ export const MiningInfo = () => {
   }, [dispatch, isCountdownOver, navigation]);
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, oneColumn ? styles.column : null]}>
       <DataCell
         icon={
           <ClockIcon
@@ -61,8 +66,13 @@ export const MiningInfo = () => {
         }
         label={t('staking.time_left')}
         value={getDurationString(durationLeft)}
+        row={oneColumn}
       />
-      <DataCellSeparator />
+      {oneColumn ? (
+        <View style={styles.columnSeparator} />
+      ) : (
+        <DataCellSeparator />
+      )}
       <DataCell
         icon={
           <LogoIcon
@@ -84,6 +94,7 @@ export const MiningInfo = () => {
           )
         }
         currency={<IceLabel color={COLORS.primaryDark} />}
+        row={oneColumn}
       />
     </View>
   );
@@ -93,12 +104,20 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: rem(20),
+    marginTop: SCREEN_SIDE_OFFSET,
+  },
+  column: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    paddingLeft: SCREEN_SIDE_OFFSET,
+  },
+  columnSeparator: {
+    height: rem(16),
   },
   valueText: {
-    ...font(17, 20, 'bold', 'primaryDark'),
+    ...font(17, 22, 'bold', 'primaryDark'),
   },
   valueDecimalsText: {
-    ...font(10, 12, 'bold', 'primaryDark'),
+    ...font(10, 14, 'bold', 'primaryDark'),
   },
 });

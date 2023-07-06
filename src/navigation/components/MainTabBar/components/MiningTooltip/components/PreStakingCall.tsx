@@ -6,23 +6,30 @@ import {
   STAKING_RATE_PERCENTAGES_MAX,
   STAKING_YEARS_MAX,
 } from '@constants/staking';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
-export const PreStakingCall = () => {
+type Props = {
+  oneColumn?: boolean;
+};
+
+export const PreStakingCall = ({oneColumn}: Props) => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainStackParamList>>();
   return (
-    <>
-      <Text style={styles.titleText}>{t('staking.appeal')}</Text>
-      <Text style={styles.noteText}>
+    <View style={oneColumn ? styles.columnContainer : styles.container}>
+      <Text style={[styles.titleText, oneColumn ? styles.columnText : null]}>
+        {t('staking.appeal')}
+      </Text>
+      <Text style={[styles.noteText, oneColumn ? styles.columnText : null]}>
         {t('staking.benefits_description', {
           periodYears: STAKING_YEARS_MAX,
           ratePercentages: STAKING_RATE_PERCENTAGES_MAX,
@@ -44,20 +51,30 @@ export const PreStakingCall = () => {
           />
         }
       />
-    </>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+  },
+  columnContainer: {
+    alignItems: 'flex-start',
+  },
   titleText: {
     marginTop: rem(22),
     marginHorizontal: rem(32),
-    ...font(18, 22, 'black', 'primaryDark', 'center'),
+    ...font(18, 24, 'black', 'primaryDark', 'center'),
   },
   noteText: {
     marginTop: rem(14),
     marginHorizontal: rem(32),
     ...font(12, 17, 'medium', 'secondary', 'center'),
+  },
+  columnText: {
+    textAlign: isRTL ? 'right' : 'left',
+    marginHorizontal: SCREEN_SIDE_OFFSET,
   },
   button: {
     marginTop: rem(20),
@@ -69,6 +86,6 @@ const styles = StyleSheet.create({
     borderRadius: rem(12),
   },
   buttonText: {
-    ...font(14, 18, 'black', 'white'),
+    ...font(14, 19, 'black', 'white'),
   },
 });

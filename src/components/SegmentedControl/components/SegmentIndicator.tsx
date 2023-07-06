@@ -27,6 +27,6 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     overflow: 'hidden',
-    marginVertical: rem(8),
+    marginVertical: rem(6),
   },
 });

@@ -34,11 +34,11 @@ export function* loadLevelsAndRolesSaga(
       AchievementsActions.LEVELS_AND_ROLES_LOAD.SUCCESS.create({
         userId,
         achievements: {
-          levelsAndRoles: {level, roles},
+          levelsAndRoles: {level, roles: roles || []},
         },
       }),
     );
-    const role = roles.find(r => r.enabled);
+    const role = roles?.find(r => r.enabled);
     yield call(Attributes.trackUserAttribute, 'Current Level', level);
     yield call(
       Attributes.trackUserAttribute,

@@ -19,6 +19,6 @@ const styles = StyleSheet.create({
     marginTop: rem(26),
     marginBottom: rem(11),
     marginHorizontal: SCREEN_SIDE_OFFSET,
-    ...font(14, 17, 'semibold', 'primaryDark'),
+    ...font(14, 19, 'semibold', 'primaryDark'),
   },
 });

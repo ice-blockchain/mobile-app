@@ -80,7 +80,9 @@ export const JoinTelegramPopUp = () => {
               style={styles.image}
               source={Images.popUp.telegram}
             />
-            <Title text={t('home.tasks.popup.title')} />
+            <View style={styles.titleContainer}>
+              <Title text={t('home.tasks.popup.title')} />
+            </View>
             <Message text={t('home.tasks.popup.description')} />
 
             <CommonInput
@@ -131,6 +133,9 @@ const styles = StyleSheet.create({
     paddingBottom: rem(25),
     paddingTop: rem(30),
     alignItems: 'center',
+  },
+  titleContainer: {
+    paddingHorizontal: SCREEN_SIDE_OFFSET,
   },
   image: {
     width: rem(54),

@@ -79,7 +79,7 @@ export const Calculator = memo(
                   ? `${formatNumber(calculatedResults.miningRate, {
                       minimumFractionDigits: 2,
                       maximumFractionDigits: 2,
-                    })} `
+                    })}  `
                   : ''}
               </Text>
               <IceLabel
@@ -174,6 +174,7 @@ const styles = StyleSheet.create({
   },
   resultLabelText: {
     marginTop: rem(30),
+    marginBottom: rem(12),
     ...font(13, 24, 'regular', 'periwinkleGray', 'center'),
   },
   resultValue: {
@@ -184,10 +185,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   resultValueText: {
-    ...font(28, 34, 'bold', 'white', 'auto'),
+    ...font(28, 40, 'bold', 'white', 'auto'),
   },
   resultBonusText: {
-    ...font(28, 34, 'bold', 'shamrock', 'auto'),
+    ...font(28, 40, 'bold', 'shamrock', 'auto'),
   },
   currentRateText: {
     marginVertical: rem(4),

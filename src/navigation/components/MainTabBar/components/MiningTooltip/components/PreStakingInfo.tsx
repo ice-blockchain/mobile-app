@@ -3,6 +3,7 @@
 import {IceLabel} from '@components/Labels/IceLabel';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Chevron} from '@navigation/components/MainTabBar/components/MiningTooltip/assets/svg/Chevron';
 import {GraphUpIcon} from '@navigation/components/MainTabBar/components/MiningTooltip/assets/svg/GraphUpIcon';
 import {
@@ -19,7 +20,7 @@ import {
 } from '@store/modules/Tokenomics/selectors';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
 import {YearsOutlineIcon} from '@svg/YearsOutlineIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React from 'react';
@@ -27,7 +28,11 @@ import {Image, StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const PreStakingInfo = () => {
+type Props = {
+  oneColumn?: boolean;
+};
+
+export const PreStakingInfo = ({oneColumn}: Props) => {
   const miningRates = useSelector(miningRatesSelector);
   const preStakingSummary = useSelector(preStakingSummarySelector);
   const balanceSummary = useSelector(balanceSummarySelector);
@@ -43,7 +48,8 @@ export const PreStakingInfo = () => {
 
   return (
     <>
-      <View style={styles.container}>
+      <View
+        style={[styles.container, oneColumn ? styles.columnContainer : null]}>
         <DataCell
           icon={
             <YearsOutlineIcon
@@ -58,8 +64,13 @@ export const PreStakingInfo = () => {
               ? `${preStakingSummary.years} ${t('global.years').toLowerCase()}`
               : null
           }
+          row={oneColumn}
         />
-        <DataCellSeparator />
+        {oneColumn ? (
+          <View style={styles.columnSeparator} />
+        ) : (
+          <DataCellSeparator />
+        )}
         <DataCell
           icon={
             <CoinsStackIcon
@@ -70,76 +81,100 @@ export const PreStakingInfo = () => {
           }
           label={t('staking.balance_label')}
           value={
-            balanceSummary && formatNumberString(balanceSummary.preStaking)
+            <>
+              <Text style={styles.dataCellValue}>
+                {isRTL && <Text> </Text>}
+                {balanceSummary &&
+                  formatNumberString(balanceSummary.preStaking)}
+              </Text>
+            </>
           }
           currency={<IceLabel color={COLORS.primaryDark} />}
+          row={oneColumn}
         />
       </View>
       <Image
         style={styles.stakeManImage}
         source={require('../assets/images/stakeMan.png')}
       />
-      <View style={styles.bonus}>
-        <Chevron
-          style={styles.bonusChevron}
-          fill={COLORS.aliceBlue}
-          width={rem(32)}
-          height={rem(23)}
-        />
-        <GraphUpIcon
-          color={COLORS.primaryLight}
-          width={rem(18)}
-          height={rem(18)}
-        />
-        <Touchable onPress={handlePress}>
-          <Text style={styles.bonusLabelText}>{t('staking.bonus_label')}</Text>
-        </Touchable>
-
-        {miningRates && (
-          <Text style={styles.bonusValueText}>
-            +{miningRates.total.bonuses?.preStaking ?? 0}%
+      <Touchable onPress={handlePress}>
+        <View style={[styles.bonus, oneColumn ? styles.bonusOneColumn : null]}>
+          <Chevron
+            style={styles.bonusChevron}
+            fill={COLORS.aliceBlue}
+            width={rem(32)}
+            height={rem(23)}
+          />
+          <Text style={styles.bonusLabelText}>
+            <GraphUpIcon
+              color={COLORS.primaryLight}
+              width={rem(18)}
+              height={rem(18)}
+            />
+            {`  ${t('staking.bonus_label')}`}
+            {oneColumn && miningRates ? '\n' : ' '}
+            {miningRates && (
+              <Text style={styles.bonusValueText}>
+                +{miningRates.total.bonuses?.preStaking ?? 0}%
+              </Text>
+            )}
           </Text>
-        )}
-      </View>
+        </View>
+      </Touchable>
     </>
   );
 };
+
+export const STACK_MAN_HEIGHT = rem(134);
+export const STACK_MAN_OVERFLOW = rem(64);
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: rem(18),
+    marginTop: SCREEN_SIDE_OFFSET,
+  },
+  columnContainer: {
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    paddingHorizontal: SCREEN_SIDE_OFFSET,
+  },
+  columnSeparator: {
+    height: rem(16),
   },
   stakeManImage: {
     width: rem(114),
-    height: rem(134),
+    height: STACK_MAN_HEIGHT,
     position: 'absolute',
-    top: -rem(64),
+    top: -STACK_MAN_OVERFLOW,
     alignSelf: 'center',
   },
   bonus: {
-    marginTop: rem(20),
+    marginVertical: SCREEN_SIDE_OFFSET,
     backgroundColor: COLORS.aliceBlue,
-    minHeight: rem(40),
     marginHorizontal: rem(24),
-    marginBottom: rem(20),
     borderRadius: rem(20),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: rem(10),
+  },
+  bonusOneColumn: {
+    marginHorizontal: SCREEN_SIDE_OFFSET,
   },
   bonusChevron: {
     position: 'absolute',
     bottom: -rem(18),
+    padding: rem(10),
   },
   bonusLabelText: {
-    marginLeft: rem(8),
     textTransform: 'uppercase',
-    ...font(14, 17, 'medium', 'primaryLight'),
+    ...font(14, 19, 'medium', 'primaryLight', 'center'),
   },
   bonusValueText: {
-    marginLeft: rem(4),
-    ...font(17, 21, 'bold', 'primaryLight'),
+    ...font(17, 22, 'bold', 'primaryLight', 'center'),
+  },
+  dataCellValue: {
+    ...font(17, 22, 'bold', 'primaryDark'),
   },
 });

@@ -157,18 +157,18 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   miningRateText: {
-    ...font(12, 14, 'semibold'),
+    ...font(12, 15, 'semibold'),
     marginLeft: rem(4),
   },
   miningValueContainer: {
     marginRight: rem(4),
   },
   miningValueText: {
-    ...font(17, 20.4, 'bold'),
+    ...font(17, 22, 'bold'),
   },
   miningValueDecimalsText: {
     alignSelf: 'flex-start',
-    ...font(8, 10, 'bold'),
+    ...font(8, 11, 'bold'),
     marginRight: isRTL ? 0 : rem(4),
   },
   miningValuePositive: {
@@ -187,24 +187,24 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   baseTitleText: {
-    ...font(12, 15, 'medium'),
+    ...font(12, 16, 'medium'),
   },
   baseValueContainer: {
     marginHorizontal: rem(4),
   },
   baseValueText: {
-    ...font(12, 14.4, 'medium'),
+    ...font(12, 16, 'medium'),
   },
   baseValueTextDarkMode: {
-    ...font(12, 14.4, 'medium', 'primaryDark'),
+    ...font(12, 16, 'medium', 'primaryDark'),
   },
   baseDecimalsText: {
-    ...font(7, 9, 'bold'),
+    ...font(7, 10, 'bold'),
     alignSelf: 'flex-start',
     marginRight: rem(4),
   },
   baseDecimalsTextDarkMode: {
-    ...font(7, 9, 'bold', 'primaryDark'),
+    ...font(7, 10, 'bold', 'primaryDark'),
     alignSelf: 'flex-start',
     marginRight: rem(4),
   },
@@ -219,11 +219,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   rateValueText: {
-    ...font(15, 19, 'medium'),
+    ...font(15, 20, 'medium'),
   },
   rateIncreaseText: {
     marginLeft: rem(8),
-    ...font(17, 20.4, 'bold'),
+    ...font(17, 22, 'bold'),
     color: COLORS.shamrock,
   },
   iconsContainer: {

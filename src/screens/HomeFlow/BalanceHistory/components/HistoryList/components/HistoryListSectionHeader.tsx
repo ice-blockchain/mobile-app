@@ -4,9 +4,11 @@ import {BalanceDiff} from '@api/tokenomics/types';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
+import {commonStyles} from '@constants/styles';
 import {dayjs} from '@services/dayjs';
 import {CalendarIcon} from '@svg/CalendarIcon';
 import {StarIcon} from '@svg/StarIcon';
+import {isRTL} from '@translations/i18n';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React from 'react';
@@ -21,23 +23,42 @@ type Props = {
 export const HistoryListSectionHeader = ({balanceDiff, time}: Props) => {
   return (
     <View style={styles.container}>
-      <CalendarIcon width={rem(14)} height={rem(14)} color={COLORS.secondary} />
-      <Text style={styles.dateText}>{dayjs(time).format('MMM DD, YYYY')}</Text>
-      <StarIcon color={COLORS.secondary} width={rem(12)} height={rem(12)} />
-      <Text style={styles.diffPercText}>
-        {balanceDiff.bonus > 0 && '+'}
-        {balanceDiff.bonus}%
-      </Text>
-      <View style={styles.amountContainer}>
-        <Text style={styles.diffNumText}>
-          {balanceDiff.negative ? '-' : '+'}
+      <>
+        <CalendarIcon
+          width={rem(14)}
+          height={rem(14)}
+          color={COLORS.secondary}
+        />
+        <Text style={styles.dateText}>
+          {dayjs(time).format('MMM DD, YYYY')}
         </Text>
+      </>
+      <View style={styles.spacer} />
+      <>
+        <StarIcon color={COLORS.secondary} width={rem(12)} height={rem(12)} />
+        <Text style={styles.diffPercText}>
+          {balanceDiff.bonus > 0 && '+'}
+          {balanceDiff.bonus}%
+        </Text>
+      </>
+      <View style={commonStyles.flexOne} />
+      <View style={styles.amountContainer}>
+        {!isRTL && (
+          <Text style={styles.diffNumText}>
+            {balanceDiff.negative ? '-' : '+'}
+          </Text>
+        )}
         <FormattedNumber
           number={formatNumberString(balanceDiff.amount)}
           bodyStyle={styles.amountValueText}
           decimalsStyle={styles.amountDecimalsText}
           trim
         />
+        {isRTL && (
+          <Text style={styles.diffNumText}>
+            {balanceDiff.negative ? '-' : '+'}
+          </Text>
+        )}
         <IceLabel
           color={COLORS.secondary}
           textStyle={styles.amountValueText}
@@ -57,11 +78,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: rem(16),
     alignItems: 'center',
     backgroundColor: COLORS.white,
+    justifyContent: 'space-between',
   },
   dateText: {
     ...font(12, 18, 'medium', 'secondary'),
     marginLeft: rem(4),
-    flex: 1,
   },
   diffPercText: {
     ...font(13, 18, 'bold', 'secondary'),
@@ -69,7 +90,6 @@ const styles = StyleSheet.create({
   },
   diffNumText: {
     ...font(13, 18, 'bold', 'secondary'),
-    marginLeft: rem(20),
   },
   amountContainer: {
     flexDirection: 'row',
@@ -82,4 +102,5 @@ const styles = StyleSheet.create({
     ...font(8, 12, 'bold', 'secondary'),
     marginRight: rem(4),
   },
+  spacer: {flex: isRTL ? 5 : 3},
 });

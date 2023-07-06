@@ -39,6 +39,6 @@ const styles = StyleSheet.create({
   },
   usernameText: {
     alignSelf: 'center',
-    ...font(17, 20, 'semibold'),
+    ...font(17, 22, 'semibold'),
   },
 });

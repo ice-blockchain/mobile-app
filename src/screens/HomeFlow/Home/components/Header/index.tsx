@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   balanceText: {
-    ...font(17, 21, 'black', 'primaryDark'),
+    ...font(17, 22, 'black', 'primaryDark'),
   },
   balanceDecimalsText: {
     ...font(10, 12, 'black', 'primaryDark'),
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   },
   usernameText: {
     marginTop: rem(3),
-    ...font(15, 18, 'bold', 'downriver'),
+    ...font(15, 20, 'bold', 'downriver'),
   },
   icons: {
     flexDirection: 'row',

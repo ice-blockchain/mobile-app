@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {font} from '@utils/styles';
-import React, {forwardRef, ReactNode, Ref} from 'react';
+import React, {forwardRef, ReactNode, Ref, useState} from 'react';
 import {
   Image,
   ImageSourcePropType,
@@ -11,7 +11,7 @@ import {
   TextProps,
   View,
 } from 'react-native';
-import Animated, {useAnimatedStyle, withTiming} from 'react-native-reanimated';
+import Animated, {interpolate, useAnimatedStyle} from 'react-native-reanimated';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {rem} from 'rn-units';
 
@@ -21,11 +21,12 @@ type Props = {
   headerTitleIcon?: ReactNode;
   HeaderValue?: string | React.FC<TextProps>;
   headerValueIcon?: ReactNode;
-  isCollapsed?: boolean;
+  sharedIsCollapsed: Animated.SharedValue<number>;
   children: ReactNode;
   onLayout?: (event: LayoutChangeEvent) => void;
 };
 
+const HEADER_MARGIN_TOP = rem(12);
 export const CARDS_TOTAL_HEIGHT = rem(140);
 export const CARDS_COLLAPSED_HEIGHT = rem(48);
 export const CARD_WIDTH = rem(274);
@@ -41,18 +42,35 @@ export const CardBase = forwardRef(
       headerTitleIcon,
       HeaderValue,
       headerValueIcon,
-      isCollapsed = false,
+      sharedIsCollapsed,
       children,
     }: Props,
     forwardedRef: Ref<View>,
   ) => {
+    const [headerHeight, setHeaderHeight] = useState(0);
+    const animatedHeaderStyle = useAnimatedStyle(
+      () => ({
+        transform: [
+          {
+            translateY: interpolate(
+              sharedIsCollapsed.value,
+              [0, 1],
+              [
+                0,
+                (CARDS_COLLAPSED_HEIGHT - headerHeight) / 2 - HEADER_MARGIN_TOP,
+              ],
+              'clamp',
+            ),
+          },
+        ],
+      }),
+      [headerHeight],
+    );
     const animatedChildrenContainerStyle = useAnimatedStyle(() => {
       return {
-        opacity: withTiming(isCollapsed ? 0 : 1, {
-          duration: 200,
-        }),
+        opacity: interpolate(sharedIsCollapsed.value, [0, 0.7], [1, 0]),
       };
-    }, [isCollapsed]);
+    }, []);
 
     return (
       <View ref={forwardedRef} style={styles.container} onLayout={onLayout}>
@@ -61,7 +79,11 @@ export const CardBase = forwardRef(
           resizeMode={'cover'}
           style={styles.backgroundImage}
         />
-        <View style={styles.header}>
+        <Animated.View
+          style={[styles.header, headerHeight ? animatedHeaderStyle : null]}
+          onLayout={({nativeEvent}) => {
+            setHeaderHeight(nativeEvent.layout.height);
+          }}>
           <View style={styles.title}>
             {headerTitleIcon}
             <Text style={styles.titleText}>{headerTitle}</Text>
@@ -72,7 +94,7 @@ export const CardBase = forwardRef(
           ) : (
             <HeaderValue style={styles.valueText} />
           )}
-        </View>
+        </Animated.View>
         <Animated.View style={[styles.body, animatedChildrenContainerStyle]}>
           {children}
         </Animated.View>
@@ -106,7 +128,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    height: CARDS_COLLAPSED_HEIGHT,
+    marginTop: HEADER_MARGIN_TOP,
   },
   title: {
     flexDirection: 'row',
@@ -116,12 +138,12 @@ const styles = StyleSheet.create({
   titleText: {
     textTransform: 'uppercase',
     marginLeft: rem(4),
-    ...font(12, 15, 'black'),
+    ...font(12, 16, 'black'),
   },
   valueText: {
     textTransform: 'uppercase',
     marginLeft: rem(4),
-    ...font(12, 15, 'black'),
+    ...font(12, 16, 'black'),
   },
   body: {
     flexGrow: 1,

@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(38),
   },
   buttonText: {
-    ...font(14, 16.8, 'black', 'primaryDark'),
+    ...font(14, 19, 'black', 'primaryDark'),
     marginHorizontal: rem(4),
   },
 });

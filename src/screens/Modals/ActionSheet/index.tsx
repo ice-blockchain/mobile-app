@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     paddingBottom: rem(38),
   },
   titleText: {
-    ...font(14, 16.8, 'semibold', 'primaryDark'),
+    ...font(14, 19, 'semibold', 'primaryDark'),
   },
   buttons: {
     marginTop: rem(20),
@@ -106,6 +106,6 @@ const styles = StyleSheet.create({
   },
   buttonLabelText: {
     marginLeft: rem(12),
-    ...font(16, 19.2, 'bold', 'primaryDark'),
+    ...font(16, 21, 'bold', 'primaryDark'),
   },
 });

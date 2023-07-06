@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   labelText: {
-    ...font(17, 21, 'bold'),
+    ...font(17, 22, 'bold'),
     marginRight: rem(12),
   },
   progressContainer: {
