@@ -16,9 +16,8 @@ export function* getAuthConfigSaga() {
       return;
     }
 
-    const authConfig: SagaReturnType<typeof Api.auth.getConfig> = yield call(
-      Api.auth.getConfig,
-    );
+    const {data: authConfig}: SagaReturnType<typeof Api.auth.getConfig> =
+      yield call(Api.auth.getConfig);
     yield put(AccountActions.GET_AUTH_CONFIG.SUCCESS.create(authConfig));
   } catch (error) {
     yield put(

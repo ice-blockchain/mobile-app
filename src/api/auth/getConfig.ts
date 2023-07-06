@@ -4,6 +4,6 @@ import {AuthConfig} from '@api/auth/types';
 import {get} from '@api/client';
 import {ENV} from '@constants/env';
 
-export function getConfig(): Promise<AuthConfig> {
+export function getConfig() {
   return get<AuthConfig>(ENV.AUTH_CONFIG_URL ?? '');
 }

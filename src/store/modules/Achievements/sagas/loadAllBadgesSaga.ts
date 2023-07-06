@@ -36,9 +36,9 @@ export function* loadAllBadges(action: ReturnType<typeof actionCreator>) {
       AchievementsActions.ALL_BADGES_LOAD.SUCCESS.create({
         userId,
         achievements: {
-          coinBadges: getBadgesByTypeResultSocial || [],
-          levelBadges: getBadgesByTypeResultLevel || [],
-          socialBadges: getBadgesByTypeResultCoin || [],
+          coinBadges: getBadgesByTypeResultSocial.data || [],
+          levelBadges: getBadgesByTypeResultLevel.data || [],
+          socialBadges: getBadgesByTypeResultCoin.data || [],
         },
       }),
     );

@@ -30,9 +30,12 @@ export function* getRankingSummarySaga(
 
     const userId: ReturnType<typeof userIdSelector> =
       action?.payload?.userId ?? (yield select(userIdSelector));
-    const rankingSummary: SagaReturnType<
-      typeof Api.tokenomics.getRankingSummary
-    > = yield call(Api.tokenomics.getRankingSummary, {userId});
+    const {
+      data: rankingSummary,
+    }: SagaReturnType<typeof Api.tokenomics.getRankingSummary> = yield call(
+      Api.tokenomics.getRankingSummary,
+      {userId},
+    );
 
     yield put(
       TokenomicsActions.GET_RANKING_SUMMARY.SUCCESS.create({

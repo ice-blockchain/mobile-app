@@ -8,6 +8,6 @@ import {Task} from './types';
  * Returns an user tasks
  */
 
-export function getTasks(userId: string): Promise<Task[]> {
+export function getTasks(userId: string) {
   return get<Task[]>(`/tasks/x/users/${userId}`);
 }

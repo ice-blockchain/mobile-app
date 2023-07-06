@@ -12,13 +12,14 @@ export function* getAccountSaga() {
     const userId: ReturnType<typeof userIdSelector> = yield select(
       userIdSelector,
     );
+
     const existingUser: ReturnType<typeof userSelector> = yield select(
       userSelector,
     );
-    const user: SagaReturnType<typeof Api.user.getUserById> = yield call(
-      Api.user.getUserById,
-      userId,
-    );
+
+    const {data: user}: SagaReturnType<typeof Api.user.getUserById> =
+      yield call(Api.user.getUserById, userId);
+
     yield put(AccountActions.GET_ACCOUNT.SUCCESS.create(user));
 
     const currentUserLanguage = existingUser?.language;

@@ -14,8 +14,8 @@ export const getInitialCollectionState = <T>(): {
   data: T[];
   hasNext: boolean;
   query: string;
-  pageNumber: number;
-} => ({data: [], query: '', hasNext: true, pageNumber: 0});
+  nextOffset: number;
+} => ({data: [], query: '', hasNext: true, nextOffset: 0});
 
 export type State = typeof CollectionsState;
 
@@ -75,10 +75,10 @@ const processCollectionSuccessAction = (
 ) => {
   const stateKey = getStateKeyForAction(action, 'SUCCESS');
   if (stateKey) {
-    const {pageNumber, result, hasNext} = (
+    const {nextOffset, result, hasNext, isInitial} = (
       action as ReturnType<CollectionAction['SUCCESS']['create']>
     ).payload;
-    if (pageNumber === 0) {
+    if (isInitial) {
       draft[stateKey].data = result;
     } else {
       draft[stateKey].data = [
@@ -86,7 +86,7 @@ const processCollectionSuccessAction = (
         ...result,
       ] as typeof result;
     }
-    draft[stateKey].pageNumber = pageNumber;
+    draft[stateKey].nextOffset = nextOffset;
     draft[stateKey].hasNext = hasNext;
   }
 };
@@ -102,7 +102,7 @@ const processCollectionClearAction = <
     draft[stateKey] = CollectionsState[stateKey];
     draft[stateKey].query = '';
     draft[stateKey].hasNext = false;
-    draft[stateKey].pageNumber = 0;
+    draft[stateKey].nextOffset = 0;
   }
 };
 

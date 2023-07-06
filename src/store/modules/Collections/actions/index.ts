@@ -18,12 +18,16 @@ const createActionStructure = <T>() => ({
   }),
   SUCCESS: (
     result: T[],
-    {
-      query,
-      pageNumber,
-      hasNext,
-    }: {query: string; pageNumber: number; hasNext: boolean},
-  ) => ({result, query, pageNumber, hasNext}),
+    options: {
+      isInitial: boolean;
+      query: string;
+      nextOffset: number;
+      hasNext: boolean;
+    },
+  ) => ({
+    result,
+    ...options,
+  }),
   FAILED: (errorMessage: string) => ({
     errorMessage,
   }),

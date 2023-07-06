@@ -22,8 +22,7 @@ export function* loadLevelsAndRolesSaga(
 
   try {
     const {
-      level,
-      roles,
+      data: {level, roles},
     }: SagaReturnType<typeof Api.achievements.getLevelsAndRoles> = yield call(
       Api.achievements.getLevelsAndRoles,
       {

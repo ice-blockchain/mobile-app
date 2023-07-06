@@ -13,7 +13,7 @@ export function* loadTasksSaga() {
     userIdSelector,
   );
   try {
-    const tasks: SagaReturnType<typeof Api.tasks.getTasks> = yield call(
+    const {data: tasks}: SagaReturnType<typeof Api.tasks.getTasks> = yield call(
       Api.tasks.getTasks,
       userId,
     );

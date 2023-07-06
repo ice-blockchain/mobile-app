@@ -21,7 +21,7 @@ export function* checkStatusNoticeSaga() {
     return null;
   }
 
-  const noticeData: SagaReturnType<typeof Api.statusNotice.getNotice> =
+  const {data: noticeData}: SagaReturnType<typeof Api.statusNotice.getNotice> =
     yield call(Api.statusNotice.getNotice);
   const user: ReturnType<typeof userSelector> = yield select(userSelector);
   const statusNoticeData: StatusNoticeData = {

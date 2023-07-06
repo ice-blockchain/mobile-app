@@ -12,12 +12,13 @@ export function* getReferralsHistorySaga() {
     userIdSelector,
   );
   try {
-    const response: SagaReturnType<
-      typeof Api.referrals.getReferralsHistoryByUserId
-    > = yield Api.referrals.getReferralsHistoryByUserId({
-      userId,
-      tz: getTimezoneOffset(),
-    });
+    const {
+      data: response,
+    }: SagaReturnType<typeof Api.referrals.getReferralsHistoryByUserId> =
+      yield Api.referrals.getReferralsHistoryByUserId({
+        userId,
+        tz: getTimezoneOffset(),
+      });
     yield put(ReferralsActions.GET_REFERRALS_HISTORY.SUCCESS.create(response));
   } catch (error) {
     yield put(

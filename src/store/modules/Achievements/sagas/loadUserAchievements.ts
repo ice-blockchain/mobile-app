@@ -18,11 +18,14 @@ export function* loadUserAchievements(
   try {
     yield put(AchievementsActions.LEVELS_AND_ROLES_LOAD.START.create({userId}));
 
-    const getBadgesResult: SagaReturnType<
-      typeof Api.achievements.getBadgeSummaries
-    > = yield call(Api.achievements.getBadgeSummaries, {
-      userId,
-    });
+    const {
+      data: getBadgesResult,
+    }: SagaReturnType<typeof Api.achievements.getBadgeSummaries> = yield call(
+      Api.achievements.getBadgeSummaries,
+      {
+        userId,
+      },
+    );
 
     (getBadgesResult ?? []).forEach((badgeSummary: BadgeSummary) =>
       Attributes.trackBadgeAttribute({badgeSummary}),

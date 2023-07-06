@@ -13,14 +13,17 @@ const GET_REFERRALS = ({referralType = 'T1'}: {referralType?: ReferralType}) =>
         isInitial,
       }),
       SUCCESS: ({
+        isInitial,
         result,
-        pageNumber,
+        nextOffset,
       }: {
+        isInitial: boolean;
         result: Referrals;
-        pageNumber: number;
+        nextOffset: number;
       }) => ({
         referralType,
-        pageNumber,
+        isInitial,
+        nextOffset,
         result,
       }),
       FAILED: (errorMessage: string) => ({
