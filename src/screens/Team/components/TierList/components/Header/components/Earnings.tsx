@@ -6,7 +6,7 @@ import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
 import {useIsEnglishLocale} from '@hooks/useIsEnglishLocale';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {forwardRef, Ref} from 'react';
@@ -27,14 +27,15 @@ export const Earnings = forwardRef(
     return (
       <View style={styles.container} ref={forwardedRef}>
         {isEnglishLocale ? (
-          <Text style={styles.label}>{`${title}: `}</Text>
+          <Text style={styles.label}>{`${title}:`}</Text>
         ) : null}
-
+        {isRTL && <Text style={styles.value}> </Text>}
         <FormattedNumber
           bodyStyle={styles.value}
           decimalsStyle={styles.valueDecimals}
           number={balance ? formatNumberString(balance) : '0'}
         />
+        {!isRTL && <Text style={styles.value}> </Text>}
 
         <IceLabel
           textStyle={styles.value}

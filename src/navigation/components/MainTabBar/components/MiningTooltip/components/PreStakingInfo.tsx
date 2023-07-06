@@ -4,6 +4,7 @@ import {IceLabel} from '@components/Labels/IceLabel';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {Chevron} from '@navigation/components/MainTabBar/components/MiningTooltip/assets/svg/Chevron';
 import {GraphUpIcon} from '@navigation/components/MainTabBar/components/MiningTooltip/assets/svg/GraphUpIcon';
 import {
   DataCell,
@@ -97,7 +98,13 @@ export const PreStakingInfo = ({oneColumn}: Props) => {
         source={require('../assets/images/stakeMan.png')}
       />
       <Touchable onPress={handlePress}>
-        <View style={styles.bonus}>
+        <View style={[styles.bonus, oneColumn ? styles.bonusOneColumn : null]}>
+          <Chevron
+            style={styles.bonusChevron}
+            fill={COLORS.aliceBlue}
+            width={rem(32)}
+            height={rem(23)}
+          />
           <Text style={styles.bonusLabelText}>
             <GraphUpIcon
               color={COLORS.primaryLight}
@@ -130,7 +137,7 @@ const styles = StyleSheet.create({
   columnContainer: {
     flexDirection: 'column',
     alignItems: 'flex-start',
-    paddingLeft: SCREEN_SIDE_OFFSET,
+    paddingHorizontal: SCREEN_SIDE_OFFSET,
   },
   columnSeparator: {
     height: rem(16),
@@ -150,6 +157,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: rem(10),
+  },
+  bonusOneColumn: {
+    marginHorizontal: SCREEN_SIDE_OFFSET,
+  },
+  bonusChevron: {
+    position: 'absolute',
+    bottom: -rem(18),
     padding: rem(10),
   },
   bonusLabelText: {

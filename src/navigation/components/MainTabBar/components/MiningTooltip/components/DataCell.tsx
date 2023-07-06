@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {ReactNode} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -19,7 +20,9 @@ export const DataCell = ({icon, label, value, currency, row}: Props) => {
     <View style={[styles.container, row ? styles.rowContainer : null]}>
       <View style={styles.iconWrapper}>{icon}</View>
       <View style={row ? styles.dataRowContainer : styles.dataContainer}>
-        <Text style={styles.labelText}>{label}</Text>
+        <Text style={[styles.labelText, row ? styles.textRow : null]}>
+          {label}
+        </Text>
         <View style={styles.value}>
           {typeof value === 'string' || typeof value === 'number' ? (
             <Text style={styles.valueText}>{value}</Text>
@@ -62,6 +65,9 @@ const styles = StyleSheet.create({
   labelText: {
     ...font(12, 16, 'medium', 'secondary', 'center'),
     textTransform: 'uppercase',
+  },
+  textRow: {
+    textAlign: isRTL ? 'right' : 'left',
   },
   value: {
     marginTop: rem(4),

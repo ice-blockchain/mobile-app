@@ -7,7 +7,7 @@ import {ActiveUsersIcon} from '@svg/ActiveUsersIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {forwardRef, Ref} from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -24,7 +24,9 @@ export const ActiveUsers = forwardRef(
         {isEnglishLocale ? (
           <Text style={styles.label}>{`${t('users.active')}:`}</Text>
         ) : (
-          <ActiveUsersIcon width={rem(16)} />
+          <View>
+            <ActiveUsersIcon width={rem(16)} style={styles.icon} />
+          </View>
         )}
         {` ${active}/${total}`}
       </Text>
@@ -38,5 +40,8 @@ const styles = StyleSheet.create({
   },
   title: {
     ...font(14, null, 'regular', 'primaryDark'),
+  },
+  icon: {
+    bottom: -rem(2),
   },
 });

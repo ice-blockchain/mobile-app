@@ -6,6 +6,7 @@ import {
   STAKING_RATE_PERCENTAGES_MAX,
   STAKING_YEARS_MAX,
 } from '@constants/staking';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -25,8 +26,10 @@ export const PreStakingCall = ({oneColumn}: Props) => {
     useNavigation<NativeStackNavigationProp<MainStackParamList>>();
   return (
     <View style={oneColumn ? styles.columnContainer : styles.container}>
-      <Text style={styles.titleText}>{t('staking.appeal')}</Text>
-      <Text style={[styles.noteText, oneColumn ? styles.columnNoteText : null]}>
+      <Text style={[styles.titleText, oneColumn ? styles.columnText : null]}>
+        {t('staking.appeal')}
+      </Text>
+      <Text style={[styles.noteText, oneColumn ? styles.columnText : null]}>
         {t('staking.benefits_description', {
           periodYears: STAKING_YEARS_MAX,
           ratePercentages: STAKING_RATE_PERCENTAGES_MAX,
@@ -69,8 +72,9 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(32),
     ...font(12, 17, 'medium', 'secondary', 'center'),
   },
-  columnNoteText: {
+  columnText: {
     textAlign: isRTL ? 'right' : 'left',
+    marginHorizontal: SCREEN_SIDE_OFFSET,
   },
   button: {
     marginTop: rem(20),
