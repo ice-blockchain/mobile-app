@@ -220,7 +220,7 @@
         "description": "moedas"
       },
       "social": {
-        "title": "Rede social",
+        "title": "Social",
         "description": "amigos"
       },
       "level": {
@@ -233,7 +233,7 @@
     "level": "nível",
     "referrals": "indicados",
     "coin": "Moedas",
-    "social": "Rede social",
+    "social": "Social",
     "phone_number": "Número de telefone",
     "years": "Anos",
     "of": "de",

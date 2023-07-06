@@ -35,7 +35,6 @@ export type SupportedLocale =
   | 'nn'
   | 'pt'
   | 'ro'
-  | 'ta'
   | 'te'
   | 'uk';
 
@@ -263,14 +262,6 @@ export const localeConfig: LocalConfig = {
     },
     name: 'Romanian',
     flag: flags.ro,
-    isRTL: false,
-  },
-  ta: {
-    get translations() {
-      return require('./locales/ta.json');
-    },
-    name: 'Tamil',
-    flag: flags.in,
     isRTL: false,
   },
   te: {
