@@ -423,7 +423,7 @@
         },
         "system": {
           "title": "System",
-          "description": "Motta viktige varsler om ICE-appen."
+          "description": "Motta viktige varsler om ice-appen."
         }
       }
     },
@@ -500,7 +500,7 @@
     "time_left": "Tid igjen",
     "mining_rate": "Inntjeningsrate",
     "appeal": "Øk inntjeningsraten din",
-    "benefits_description": "Forhånds-stake ICE-belønningene dine i opptil 5 år og øk inntjeningsraten med opptil 250 %.",
+    "benefits_description": "Forhånds-stake ice-belønningene dine i opptil 5 år og øk inntjeningsraten med opptil 250 %.",
     "bonus_label": "Bonus før staking",
     "period_label": "Stake-periode",
     "title": "Forhånds-staking",
@@ -546,7 +546,7 @@
     "views": "{{viewsCount}} visninger"
   },
   "search": {
-    "empty": "Søk etter kontakter, ICE-venner og medlemmer av mikrosamfunnet ditt.",
+    "empty": "Søk etter kontakter, ice-venner og medlemmer av mikrosamfunnet ditt.",
     "nothing_is_found": "Ingenting ble funnet for søket ditt.",
     "search_by_country": "Søk etter land",
     "search_for_users": "Søk etter brukere",
@@ -667,7 +667,7 @@
     "snowman": {
       "title": "Snømann",
       "subtitle": "Bygg et snøimperium",
-      "description": "Tjen penger ved å sjekke inn hver 24. time for å vise din forpliktelse til ICE-nettverket og bevise at du er et menneske, ikke en robot."
+      "description": "Tjen penger ved å sjekke inn hver 24. time for å vise din forpliktelse til ice-nettverket og bevise at du er et menneske, ikke en robot."
     },
     "ambassador": {
       "title": "Ambassadør",
@@ -702,7 +702,7 @@
       },
       "confirm_phone": {
         "title": "Bekreft telefon",
-        "description": "Bekreft identiteten din og la kontaktene få vite at du også er medlem av ICE-nettverket. Telefonnummeret ditt vil ikke bli delt med andre tredjeparter."
+        "description": "Bekreft identiteten din og la kontaktene få vite at du også er medlem av ice-nettverket. Telefonnummeret ditt vil ikke bli delt med andre tredjeparter."
       },
       "contacts_list": {
         "title": "Liste over kontakter",
@@ -885,7 +885,7 @@
     "facebook": {
       "title": "Bli med oss på Facebook",
       "description_part1": "Vi anbefaler på det sterkeste at du følger med på Facebook-siden vår.",
-      "description_part2": "Det vil ikke bare hjelpe deg med å holde deg oppdatert på alt som skjer med ICE-prosjektet, men det er også en fin måte å få kontakt med nettverket vårt på og være en del av samtalen."
+      "description_part2": "Det vil ikke bare hjelpe deg med å holde deg oppdatert på alt som skjer med ice-prosjektet, men det er også en fin måte å få kontakt med nettverket vårt på og være en del av samtalen."
     },
     "instagram": {
       "title": "Bli med oss på Instagram",
