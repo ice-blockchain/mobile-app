@@ -28,7 +28,6 @@ type Actions = ReturnType<
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
   | typeof AccountActions.SIGN_IN_SOCIAL.SUCCESS.create
   | typeof AccountActions.USER_STATE_CHANGE.SUCCESS.create
-  | typeof AccountActions.USER_STATE_CHANGE.FAILED.create
   | typeof AccountActions.UPDATE_ACCOUNT.SUCCESS.create
   | typeof AccountActions.GET_ACCOUNT.SUCCESS.create
   | typeof AccountActions.SET_PRIVACY_INFO_SHOW.STATE.create

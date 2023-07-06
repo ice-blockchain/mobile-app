@@ -191,7 +191,7 @@ export const onUserChanged = (listener: () => void) => {
   return auth().onUserChanged(listener);
 };
 
-export const signOut = async () => {
+export const clearPersistedAuthTokens = async () => {
   await clearPersistedToken();
   if (auth().currentUser) {
     /**
