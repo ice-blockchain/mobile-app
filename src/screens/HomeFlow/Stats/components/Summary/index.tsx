@@ -96,9 +96,6 @@ const styles = StyleSheet.create({
     marginTop: -rem(7),
     marginLeft: rem(2),
   },
-  iconContainer: {
-    flex: 1,
-  },
   teamIcon: {
     marginBottom: -rem(5),
   },
