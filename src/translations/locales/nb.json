@@ -1,787 +1,841 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "Velkommen til Ice",
+      "description": "[[:ice]] er en digital valuta som du kan tjene med telefonen. Ice eies og drives av hverdagsbrukere som deg selv."
     },
     "page2": {
-      "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "title": "Planetvennlig",
+      "description": "[[:ice]] er skapt mer energieffektiv enn BTC ettersom den bruker en «Proof of Stake»-konsensusmekanisme. Med proof-of-stake (POS) validerer eiere av kryptovaluta blokktransaksjoner basert på antall mynter som en validator staker."
     },
     "page3": {
       "title": "People’s Coin",
-      "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "description_part1": "Makten er i dine hender.",
+      "description_part2": "Alt vi utvikler hos [[:ice]] vil bruke åpen kildekode og være kontrollert av den desentraliserte autonome organisasjonen (DAO)."
     },
     "page4": {
-      "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "title": "Hold deg tilkoblet",
+      "description": "Trykk på [[:iceLogo]] for å sjekke inn  daglig med vår gratis og energilette mobilapp. Ditt daglige trykk sikrer at ice havner i hendene på ekte mennesker, ikke roboter."
     },
     "page5": {
-      "title": "Refer & Earn",
-      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
+      "title": "Inviter og tjen",
+      "description": "Inviter vennene dine og tjen (begge) opptil 25 % bonus på basisinntektsraten din for hver venn som blir med i teamet ditt."
     },
     "page6": {
-      "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
-      "description_part2": "Don’t worry, we will not spam you!",
-      "not_now": "Not now"
+      "title": "Varslinger",
+      "description_part1": "[[:ice]] innsjekkingsøkter varer bare i 24 timer. Vil du motta et varsel når den nåværende økten avsluttes?",
+      "description_part2": "Ikke bekymre deg, vi vil ikke spamme deg!",
+      "not_now": "Ikke nå"
     }
   },
   "button": {
-    "yes_btn": "Yes, please",
-    "next_btn": "Next",
-    "not_now": "Not now",
-    "view_all": "view all",
+    "yes_btn": "Ja takk",
+    "next_btn": "Neste",
+    "not_now": "Ikke nå",
+    "view_all": "se alle",
     "invite_friend": {
-      "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "title": "Inviter venner",
+      "description": "Tjen ekstra [[:ice]] ved å invitere vennene dine."
     },
-    "no": "No",
-    "search_country": "Search for country",
-    "save": "Save",
-    "yes": "Yes",
-    "change": "Change",
-    "no_cancel": "No, cancel",
-    "complete": "Complete",
-    "cancel": "Cancel",
-    "clear": "Clear",
-    "finish": "Finish",
-    "next_step": "Next Step",
-    "see_all": "see all",
-    "back": "Back",
-    "search": "Search",
-    "continue": "Continue",
-    "apply": "Apply",
-    "reset": "Reset",
-    "skip_all": "Skip all",
-    "done": "Done",
-    "confirm": "Confirm",
-    "do_this_later": "Do this later",
-    "resurrect_me": "Resurrect Me",
-    "claim_bonus": "Claim Bonus",
-    "close": "Close",
-    "try_again": "Try Again",
-    "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "see_all": "se alle",
+    "no": "Nei",
+    "search_country": "Søk etter land",
+    "save": "Lagre",
+    "yes": "Ja",
+    "change": "Endre",
+    "no_cancel": "Nei, kanseller",
+    "complete": "Fullført",
+    "cancel": "Avbryt",
+    "clear": "Fjern",
+    "finish": "Fullfør",
+    "next_step": "Neste trinn",
+    "back": "Tilbake",
+    "search": "Søk",
+    "continue": "Fortsett",
+    "apply": "Bruk",
+    "reset": "Tilbakestill",
+    "skip_all": "Hopp over alle",
+    "done": "Ferdig",
+    "confirm": "Bekreft",
+    "do_this_later": "Gjør dette senere",
+    "resurrect_me": "Gjenreis meg",
+    "claim_bonus": "Krev bonus",
+    "close": "Lukk",
+    "try_again": "Prøv igjen",
+    "view_changelog": "Vis endringslogg",
+    "disable": "Deaktiver",
+    "agree": "Jeg godtar",
+    "learn_more": "Lær mer",
+    "back_to_login": "Tilbake til innlogging",
+    "follow_us": "Følg oss",
+    "subscribe": "Abonner"
   },
   "team": {
-    "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
+    "contacts_tab": "Kontakter",
+    "tierOne_tab": "Nivå 1",
+    "tierTwo_tab": "Nivå 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "title": "Du har for øyeblikket ingen [[:title]]-henvisninger!",
+      "contacts": "Du har for øyeblikket ingen kontakter i telefonboken.",
+      "button_title": "Inviter venner"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
-      "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_title": "[[:ice]] er bedre med venner",
+      "empty_button_title": "Tillat kontakttilgang",
+      "empty_description": "Synkroniser kontaktene dine og se hvem som allerede er på [[:ice]]. I fremtiden vil du kunne sende ice til alle kontaktene dine."
     },
     "header": {
-      "search_placeholder": "Search for users",
-      "referrals": "Referrals",
-      "earnings": "Earnings"
+      "search_placeholder": "Søk etter brukere",
+      "referrals": "Henvisninger",
+      "earnings": "Inntekter"
     },
     "confirm_code": {
-      "title": "Confirm Code",
-      "description": "Please enter the confirmation code you have received on your phone.",
-      "placeholder": "Enter the code",
-      "button": "Confirm your code now"
+      "title": "Bekreft kode",
+      "description": "Skriv inn bekreftelseskoden du har mottatt på telefonen din.",
+      "placeholder": "Skriv inn koden",
+      "button": "Bekreft koden din nå"
     },
     "confirm_phone": {
-      "title": "Confirm Phone",
-      "description": "Please confirm your country code and enter your phone number."
+      "title": "Bekreft telefon",
+      "description": "Bekreft landskoden din og skriv inn telefonnummeret ditt."
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "friends"
+        "friends": "venner"
       },
-      "all_contacts": "All contacts",
-      "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "all_contacts": "Alle kontakter",
+      "invite": "invitere",
+      "invitation_text": "Hei {{name}}, jeg vil gjerne invitere deg til å bli med i Ice."
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier 1 Earnings"
+        "title_earnings": "Nivå 1-inntekter"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier 2 Earnings"
+        "title_earnings": "Nivå 2-inntekter"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
-    "welcome": "Welcome to ice",
-    "email": "Email",
-    "slogan": "Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "logInSignUp": "Logg inn / Registrer deg",
+    "phone": "Telefon",
+    "or": "eller",
+    "reset_password": "Tilbakestill passord",
+    "welcome": "Velkommen til Ice",
+    "email": "Epost",
+    "slogan": "Tilbakestilling av global valuta",
+    "privacy": "Ved å fortsette, godtar du våre [[:link]]tjenestevilkår[[/:link]] og [[:link]]personvernregler[[/:link]]"
   },
   "claimUsername": {
-    "title": "Claim nickname",
-    "description": "Your friends will need to use this nickname to join your team",
-    "inputPlaceholder": "Enter your nickname",
-    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
-    "note_part2": "Example:",
-    "note_example": "your.name01"
+    "title": "Kallenavn for krav",
+    "description": "Vennene dine må bruke dette kallenavnet for å bli med i teamet ditt.",
+    "inputPlaceholder": "Skriv inn kallenavnet ditt",
+    "note_part1": "Når du oppretter et kallenavn, bruker du bare bokstaver, tall og punktum.",
+    "note_part2": "Eksempel:",
+    "note_example": "ditt.navn01"
   },
   "whoInvitedYou": {
-    "title": "Who invited you?",
-    "description": "Enter the nickname of the person who invited you",
-    "inputPlaceholder": "Enter nickname",
-    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
-    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+    "title": "Hvem inviterte deg?",
+    "description": "Skriv inn kallenavnet til personen som inviterte deg.",
+    "inputPlaceholder": "Skriv inn kallenavn",
+    "dontHaveInvitationCode": "Ved å fullføre dette trinnet vil du og vennen din motta en bonus på 25 % på basisinntektsraten når dere begge sjekker inn samtidig.",
+    "dontHaveCodeTip": "Hvis du ikke har en invitasjonskode, velger vi et tilfeldig medlem som henvisning!"
   },
   "errors": {
-    "nicknameSize": "Nickname size: 4-20 characters.",
-    "removeInvalidCharacters": "Remove invalid characters.",
-    "validation_error": "Some validation error",
-    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
-    "wrong_phone_number": "Invalid phone number, please try again",
-    "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken",
-    "phone_number_already_in_use": "Phone number already in use",
-    "invalid_validation_code": "Invalid code number, please try again!",
-    "validation_expired": "Validation expired",
-    "validation_not_found": "Validation not found",
-    "invalid_email": "Invalid email",
-    "invalid_ref_username": "Nickname is invalid.",
-    "invalid_phone": "Invalid phone number",
-    "user_disabled": "User has been disabled",
-    "expired_action_code": "OTP in email link is expired",
-    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
-    "invalid_credential": "The credential is malformed or has expired",
-    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
-    "user_not_found_for_email": "There is no user corresponding to the given email",
-    "user_not_found": "User not found",
-    "auth_in_progress": "Sign-In already in progress",
-    "google_play_services_not_available": "Google Play services are not available on the device",
-    "unknown_error_with_code": "Unknown error {{code}}",
-    "no_such_provider": "You do not have this provider linked",
-    "min_username": "Minimum length is 4 characters.",
-    "max_username": "Maximum length is 30 characters.",
-    "code_expired": "The code has expired. Please ask for a new code.",
-    "too_many_requests": "Too many requests. Please try again later.",
-    "network_error_title": "No internet connection",
-    "network_error_message": "Your device does not have any active internet connection",
-    "unknown_error": "Some error occurred, please try again later",
-    "general_error_title": "Oups...",
-    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
-    "general_network_error": "A network error has occurred. Please check your connection.",
-    "credential_already_in_use": "This credential is already associated with a different user account.",
-    "email_already_in_use": "The email address is already in use by another account.",
-    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
-    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "nicknameSize": "Kallenavnstørrelse: 4–20 tegn.",
+    "removeInvalidCharacters": "Fjern ugyldige tegn.",
+    "validation_error": "Noen valideringsfeil.",
+    "multiple_accounts": "E-post/telefonnummer er knyttet til en annen konto. Logg inn på den kontoen for å bevise eierskap, og logg deretter ut og logg inn på denne kontoen igjen. Hvis du ikke eier den andre kontoen eller ikke kan logge deg på den, kan du kontakte brukerstøtten vår.",
+    "wrong_phone_number": "Ugyldig telefonnummer, prøv igjen.",
+    "invalid_username": "Kallenavnet er ugyldig.",
+    "email_already_taken": "Epostadressen er allerede tatt.",
+    "phone_number_already_taken": "Telefonnummeret er allerede tatt.",
+    "invalid_validation_code": "Ugyldig kodenummer, prøv igjen!",
+    "validation_expired": "Validering utløpt",
+    "validation_not_found": "Validering ikke funnet",
+    "invalid_email": "Ugyldig epost.",
+    "invalid_password": "Ugyldig passord.",
+    "invalid_ref_username": "Kallenavnet er ugyldig.",
+    "invalid_phone": "Ugyldig telefonnummer.",
+    "user_disabled": "Brukeren er deaktivert.",
+    "expired_action_code": "OTP i e-postkoblingen er utløpt.",
+    "account_exists_with_different_credential": "Det finnes allerede en konto med e-postadressen som bekreftes av påloggingsinformasjonen.",
+    "invalid_credential": "Påloggingsinformasjonen er misformet eller har utløpt.",
+    "operation_not_allowed": "Kontotypen som tilsvarer påloggingsinformasjonen, er ikke aktivert.",
+    "user_not_found_for_email": "Det er ingen bruker som svarer til den angitte e-postadressen.",
+    "user_not_found": "Finner ikke brukeren.",
+    "auth_in_progress": "Pålogging pågår allerede.",
+    "google_play_services_not_available": "Google Play-tjenester er ikke tilgjengelige på denne enheten.",
+    "unknown_error_with_code": "Ukjent feil: {{code}}",
+    "no_such_provider": "Du har ikke denne leverandøren koblet til.",
+    "min_username": "Minste lengde er 4 tegn.",
+    "max_username": "Maksimal lengde er 30 tegn.",
+    "code_expired": "Koden er utløpt, be om en ny kode.",
+    "too_many_requests": "For mange forespørsler, prøv igjen senere.",
+    "network_error_title": "Ingen Internett-tilkobling",
+    "network_error_message": "Enheten har ingen aktiv Internett-tilkobling.",
+    "unknown_error": "Det oppstod en feil, prøv igjen senere.",
+    "general_error_title": "Oi da …",
+    "general_error_message": "Ser ut til at noe gikk galt. Teamet vårt jobber med å fikse det akkurat nå.",
+    "general_network_error": "Det har oppstått en nettverksfeil. Kontroller tilkoblingen.",
+    "credential_already_in_use": "Disse påloggingsopplysningene er allerede knyttet til en annen brukerkonto.",
+    "email_already_in_use": "E-postadressen brukes allerede av en annen konto.",
+    "user_token_expired": "Påloggingsinformasjonen din er ikke lenger gyldig, logg på igjen.",
+    "requires_recent_login": "Denne operasjonen er sensitiv og krever nylig autentisering. Logg på igjen.",
+    "same_email": "Du kan ikke bruke samme e-post.",
+    "weak_password": "Svakt passord.",
+    "wrong_password": "Feil passord.",
+    "no_camera_permissions": "Kameratillatelser er ikke gitt.",
+    "no_library_permissions": "Bibliotekstillatelser gis ikke."
   },
   "profile": {
     "my_roles": {
-      "title": "My Role"
+      "title": "Min rolle"
     },
-    "mining_calculator": "earnings calculator",
-    "invite_friends": "Invite Friends",
-    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
-    "global_rank": "global rank",
-    "view_all_roles": "view all roles",
-    "data_is_hidden": "data is hidden",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "inntjeningskalkulator",
+    "invite_friends": "Inviter venner",
+    "invite_friends_engage": "Spre ordet og inviter vennene dine. Jo flere henvisninger, jo mer vil du tjene!",
+    "global_rank": "global rangering",
+    "view_all_roles": "se alle roller",
+    "data_is_hidden": "data er skjult",
+    "progress_text": "{{value}} av {{total}}",
     "not_found": {
-      "title": "User was not found",
-      "description": "oops, we couldn't find this user"
+      "title": "Brukeren ble ikke funnet",
+      "description": "Beklager, vi kunne ikke finne denne brukeren."
     },
     "my_badges": {
-      "title": "My Badges"
+      "title": "Mine merker"
     },
     "badges": {
-      "title": "Badges"
+      "title": "Merker"
     },
     "roles": {
-      "title": "Roles"
+      "title": "Roller"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "Mynter",
+        "description": "mynter"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "Sosialt",
+        "description": "venner"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "Nivå",
+        "description": "Nivå"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update",
-    "comingSoon": "Coming soon",
+    "level": "nivå",
+    "referrals": "henvisninger",
+    "coin": "Mynter",
+    "social": "Sosial",
+    "phone_number": "Telefonnummer",
+    "years": "År",
+    "of": "av",
+    "attention": "Oppmerksomhet",
+    "email_address": "Epostadresse",
+    "password": "Passord",
+    "data_hidden": "data er skjult",
+    "pull_to_refresh": "trekk for å oppdatere",
+    "comingSoon": "Kommer snart",
     "date": {
-      "today": "Today"
+      "today": "I dag"
     }
   },
   "mining_calculator": {
-    "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "result_label": "Du vil tjene",
+    "active_inviter": "Aktiv invitasjon",
+    "tier_1_ref": "Nivå 1-henvisninger",
+    "tier_2_ref": "Nivå 2-henvisninger",
+    "active_miners": "Aktive henvisninger"
   },
   "home": {
     "wallet": {
-      "title": "WALLET",
-      "rate": "EARNING RATE",
-      "balance": "CURRENT BALANCE"
+      "title": "LOMMEBOK",
+      "rate": "INNTEKTSRATE",
+      "balance": "GJELDENDE SALDO"
     },
     "pioneer": {
-      "title": "PIONEER",
-      "rank": "GLOBAL RANK",
-      "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "rank": "GLOBAL RANGERING",
+      "referrals": "HENVISNINGER",
+      "description": "Henvis flere brukere og tjen flere [[:ice]]."
     },
     "referrals": {
-      "title": "REFERRALS",
-      "description": "Referral stats for the previous 5 days",
-      "no_referrals_description": "You don't have any referrals yet",
-      "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "title": "HENVISNINGER",
+      "description": "Henvisningsstatistikk for de siste 5 dagene.",
+      "no_referrals_description": "Du har ingen henvisninger ennå.",
+      "users_tier_1": "Brukernivå 1",
+      "users_tier_2": "Brukernivå 2"
     },
     "adoption": {
-      "title": "ADOPTION",
-      "level": "level",
-      "users": "\nusers"
+      "title": "ADOPSJON",
+      "level": "nivå",
+      "users": "brukere"
     },
-    "steps": {
-      "title": "Your progress",
-      "description": "Complete the tasks below and level up!",
-      "step_one": {
-        "title": "Claim your nickname",
-        "description": "Set it and start earning from your invite"
+    "tasks": {
+      "achievements": "PRESTASJONER",
+      "title": "Din fremgang",
+      "description": "Fullfør oppgavene nedenfor og gå opp i nivå!",
+      "completed": {
+        "title": "Gratulerer",
+        "description": "Fortsett å sjekke inn daglig for å tjene ekstra belønninger!"
       },
-      "step_two": {
-        "title": "Start mining",
-        "description": "Your first mining session"
+      "popup": {
+        "title": "Delta i vår Telegram-kanal",
+        "description": "Angi kallenavnet ditt som brukes på Telegram.",
+        "placeholder": "Kallenavn"
       },
-      "step_three": {
-        "title": "Profile picture",
-        "description": "Upload your profile image"
+      "claim_username": {
+        "title": "Gjør krav på kallenavnet ditt",
+        "description": "Sett den og del den med vennene dine."
       },
-      "step_four": {
-        "title": "Join Telegram",
-        "description": "Be part of our community and join now"
+      "start_mining": {
+        "title": "Begynn å tjene",
+        "description": "Din første innsjekkingsøkt."
       },
-      "step_five": {
-        "title": "Follow us on Twitter",
-        "description": "Let’s keep in touch, follow us on twitter"
+      "upload_profile_picture": {
+        "title": "Profilbilde",
+        "description": "Last opp profilbildet ditt."
       },
-      "step_six": {
-        "title": "Invite 5 Friends",
-        "description": "Create your team and increase your earnings"
+      "join_telegram": {
+        "title": "Bli med i Telegram",
+        "description": "Bli en del av nettverket vårt og bli med nå."
+      },
+      "follow_us_on_twitter": {
+        "title": "Følg oss på Twitter",
+        "description": "La oss holde kontakten, følg oss på Twitter."
+      },
+      "invite_friends": {
+        "title": "Inviter 5 venner",
+        "description": "Utvid teamet ditt og øk inntektene dine."
       }
     },
     "overview": {
-      "title": "Overview"
+      "title": "Oversikt"
     },
     "menu": {
-      "notifications": "Notifications",
+      "notifications": "Varslinger",
       "staking": "Staking",
-      "stats": "Stats",
-      "help": "Help"
-    },
-    "tasks": {
-      "title": "ACHIEVEMENTS"
+      "stats": "Statistikk",
+      "help": "Hjelp"
     },
     "team": {
       "title": "Team",
-      "view_team": "view team"
+      "view_team": "se team"
     },
     "mining_rate": {
-      "title": "EARNING RATE",
+      "title": "INNTEKTSRATE",
       "base": "Base"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
+      "title": "ENGASJEMENT",
+      "description_part1": "Streak betyr hvor mange sammenhengende dager du har sjekket inn.",
+      "description_part2": "For hver 6. påfølgende dag får du en fridag.",
       "streak": "STREAK",
-      "days_off": "DAYS OFF"
+      "days_off": "FRIDAGER"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "Innstillinger",
+    "profile": "Profil",
+    "legal": "Juridisk",
+    "support": "Støtte",
+    "personal_information_title": "Personopplysninger",
+    "personal_information_description": "Administrer profildetaljene dine.",
+    "notifications_title": "Varslinger",
+    "notifications_description": "Administrer varslingene dine her.",
+    "push_notifications_title": "Push-varslinger",
+    "push_notifications_description": "Tilpass innstillingene for push-varslinger.",
+    "email_notifications_title": "E-postvarsler",
+    "email_notifications_description": "Tilpass innstillingene for e-postvarsling.",
+    "terms_title": "Tjenestevilkår",
+    "terms_description": "Se gjennom våre tjenestevilkår.",
+    "privacy_title": "Retningslinjer for personvern",
+    "privacy_description": "Lær om våre retningslinjer for personvern.",
+    "feedback_title": "Send tilbakemelding",
+    "feedback_description": "Del tankene dine med oss.",
+    "invite_title": "Inviter en venn",
+    "invite_description": "Tjen ekstra ice ved å invitere vennene dine.",
+    "delete_title": "Slett konto",
+    "delete_description": "Slett kontoen din.",
+    "delete_confirmation_title": "Er du sikker på at du vil fjerne kontoen?",
+    "delete_confirmation_yes": "Ja, slett",
+    "logout_title": "Logg ut",
+    "logout_description": "Logg av og ta en pause.",
+    "logout_confirmation_title": "Er du sikker på at du vil logge av?",
+    "logout_confirmation_yes": "Ja, logg ut",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "Bekreft ny telefon",
+      "description": "Bekreft landskoden din og skriv inn det nye telefonnummeret ditt.",
+      "button": "Bekreft nytt telefonnummer"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
+      "enable_prompt": "Varslinger er ikke tillatt. Vil du aktivere dem?",
+      "channel_achievements": "Prestasjoner",
+      "channel_news": "Nyheter",
+      "channel_reminders": "Påminnelser",
       "channel_team": "Team",
       "type_push": "PUSH",
-      "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
+      "type_email": "E-POST",
+      "disable_notifications": "Deaktiver varslinger?",
+      "disable_notifications_description": "Ved å deaktivere varsler vil du ikke kunne motta nyheter, teaminformasjon eller oppdateringer om når du kan begynne å sjekke inn.",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
+          "title": "Ukentlig statistikk",
+          "description": "Motta varsler om aktiviteten din."
         },
         "weekly_report": {
-          "title": "Weekly report",
-          "description": "Receive notifications about your activity"
+          "title": "Ukentlig rapport",
+          "description": "Motta varsler om aktiviteten din."
         },
         "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
+          "title": "Prestasjoner",
+          "description": "Motta varslinger om fremdriften din."
         },
         "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
+          "title": "Kampanjer",
+          "description": "Motta varsler om hvordan du kan utvide teamet ditt og tjene mer."
         },
         "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
+          "title": "Nyheter",
+          "description": "Motta varsler fra teamet vårt."
         },
         "micro_community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
+          "title": "Mikrosamfunn",
+          "description": "Motta varsler om teamet ditt."
         },
         "daily_bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
+          "title": "Daglig bonus",
+          "description": "Motta varsler for å hente din daglige bonus."
         },
         "mining": {
-          "title": "Session status",
-          "description": "Receive notifications about your check-in activity"
+          "title": "Øktstatus",
+          "description": "Motta varsler om innsjekkingsaktiviteten din."
         },
         "system": {
           "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "description": "Motta viktige varsler om ICE-appen."
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "Språkinnstillinger",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "Endre språk",
+      "prompt": "Hvis du bruker denne innstillingen, starter du appen på nytt."
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "Profilbilde",
+    "inapp_privacy_title": "Personvern",
+    "inapp_privacy_description": "Administrer informasjonen din her.",
+    "developer": "Utvikler",
+    "user_id": "Bruker-ID",
+    "user_token": "Brukertoken",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "Slett bilde",
+      "edit": "Rediger profilbilde",
+      "photo_gallery": "Fotogalleri",
+      "camera": "Kamera"
     },
-    "confirm_email_confirmation_title": "Confirm email?",
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "Bekrefte e-post?",
+    "update_email_confirmation_title": "Oppdatere e-post?",
+    "update_email_confirmation_subtitle": "Hvis du endrer e-postadressen din, må du logge inn på nytt. Er du sikker på at du vil fortsette?",
+    "unlink_logins_title": "Koble fra pålogginger",
+    "unlink_logins_description": "Du kan frakoble pålogginger herfra."
   },
   "invite_share": {
-    "title": "Invite a friend",
+    "title": "Inviter en venn",
     "telegram": "Telegram",
     "twitter": "Twitter",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
-    "email": "Email",
-    "fb": "Newsfeed",
+    "email": "E-post",
+    "fb": "Nyhetsfeed",
     "sms": "SMS",
-    "copy_link": "Copy link",
-    "more": "More",
-    "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "copy_link": "Kopier lenke",
+    "more": "Mer",
+    "copied": "KOPIERT",
+    "share_message": "Hei ☃️ snømann! Bli med teamet mitt på Ice og motta 10 ice-coins når du registrerer deg ved hjelp av henvisningskoden min:",
+    "share_subject": "Bli med teamet mitt på ice",
+    "description": "Spre ordet og inviter vennene dine. Du tjener [[:ice]] for hver nye henvisning du tar med.",
+    "share": "Del"
   },
   "users": {
     "ping": "PING",
-    "active": "Active",
-    "inactive": "Inactive",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T1": "Nivå 1",
+      "T2": "Nivå 2"
     }
   },
   "personal_information": {
-    "first_name": "First name",
-    "last_name": "Last name",
-    "country": "Country",
-    "city": "City",
-    "title": "Personal Information",
-    "phone": "Phone",
-    "email": "Email",
-    "username": "Nickname"
+    "first_name": "Fornavn",
+    "last_name": "Etternavn",
+    "country": "Land",
+    "city": "By",
+    "title": "Personopplysninger",
+    "phone": "Telefon",
+    "email": "E-post",
+    "username": "Kallenavn"
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
-      "length": "Nickname size: 4-20 characters.",
-      "invalid_characters": "Remove invalid characters.",
-      "not_found": "Nickname not found.",
-      "some_error": "Some error occurred.",
-      "refer_yourself": "You can't refer yourself"
+      "already_taken": "Kallenavn er allerede tatt.",
+      "length": "Kallenavnstørrelse: 4–20 tegn.",
+      "invalid_characters": "Fjern ugyldige tegn.",
+      "not_found": "Finner ikke kallenavn.",
+      "some_error": "Det oppstod en feil.",
+      "refer_yourself": "Du kan ikke henvise deg selv."
     }
   },
   "staking": {
-    "time_left": "Time Left",
-    "mining_rate": "Earning Rate",
-    "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking Bonus",
-    "period_label": "Staked Period",
-    "title": "Pre-Staking",
-    "current_rate": "Current Rate",
-    "allocation": "Allocation",
-    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
-    "staking_terms": "Staking Terms",
-    "stake_now": "Pre-Stake Now!",
-    "balance_label": "Staked balance",
-    "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "time_left": "Tid igjen",
+    "mining_rate": "Inntjeningsrate",
+    "appeal": "Øk inntjeningsraten din",
+    "benefits_description": "Forhånds-stake ICE-belønningene dine i opptil 5 år og øk inntjeningsraten med opptil 250 %.",
+    "bonus_label": "Bonus før staking",
+    "period_label": "Stake-periode",
+    "title": "Forhånds-staking",
+    "current_rate": "Nåværende rate",
+    "allocation": "Tildeling",
+    "description": "Staking er en prosess som innebærer å forplikte krypto-aktivaene dine til å støtte et blockchain-nettverk og bekrefte transaksjoner.",
+    "terms_agree": "Jeg godtar[[:ice]] [[:link]]Staking-vilkårene[[/:link]]. Ice-beholdningen din vil bli låst for den valgte perioden.",
+    "stake_now": "Forhånds-stake nå!",
+    "balance_label": "Staket saldo",
+    "confirm_title": "Bekreft forhånds-staking",
+    "confirm_subtitle": "Er du sikker på at du vil forhånds-stake myntene dine? Dette kan ikke angres etter at du har bekreftet."
   },
   "stats": {
-    "header_title": "Stats",
-    "active": "Active users",
-    "total": "Total users",
-    "user_growth": "User growth",
-    "top_miners": "Top users",
-    "top_countries": "Top countries",
-    "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "header_title": "Statistikk",
+    "active": "Aktive brukere",
+    "total": "Totalt antall brukere",
+    "user_growth": "Brukervekst",
+    "top_miners": "Toppbrukere",
+    "top_countries": "Toppland",
+    "online_miners": "Nettbrukere",
+    "detailed_information": "Detaljert informasjon"
   },
   "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
+    "title": "Vennligst oppdater",
+    "description": "Du bruker en gammel appversjon og må oppdatere den for å kunne bruke den videre.",
+    "button_title": "Oppdater nå"
   },
   "general": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
+    "good_morning": "God morgen",
+    "good_afternoon": "God ettermiddag",
+    "good_evening": "God kveld",
     "ice": "ice",
-    "ice_per_hour": "ice/h",
+    "ice_per_hour": "ice/t",
     "seconds_short": "s",
     "minutes_short": "m",
-    "hours_short": "h",
+    "hours_short": "t",
     "days_short": "d"
   },
   "news": {
-    "news_feed": "News Feed",
-    "read_more": "Read more",
-    "views": "{{viewsCount}} views"
+    "news_feed": "Nyhetsfeed",
+    "read_more": "Les mer",
+    "no_more_news": "dette er den siste oppføringen i nyhetsfeeden.",
+    "views": "{{viewsCount}} visninger"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
-    "nothing_is_found": "Nothing was found for your query",
-    "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "empty": "Søk etter kontakter, ICE-venner og medlemmer av mikrosamfunnet ditt.",
+    "nothing_is_found": "Ingenting ble funnet for søket ditt.",
+    "search_by_country": "Søk etter land",
+    "search_for_users": "Søk etter brukere",
+    "loading": "Søker …"
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tap here to start your first check-in session",
-    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
-    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
-    "mining_holiday_active": "You are using a Day Off!"
+    "mining_inactive_tooltip": "Trykk her for å starte din første innsjekkingsøkt.",
+    "mining_reset_tooltip": "Trykk i 1 sekund for å forlenge innsjekkingsøkten.",
+    "mining_holiday_reset_tooltip": "Du bruker en fridag! Trykk i 1 sekund for å forlenge innsjekkingsøkten.",
+    "mining_holiday_active": "Du bruker en fridag!"
   },
   "invite_friend": {
-    "invite_button": "Invite Friend",
-    "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "invite_button": "Inviter venn",
+    "button_title": "Inviter venn",
+    "description": "Vennen din er ennå ikke på [[:ice]]. Send ham en invitasjon!"
   },
   "balance_history": {
-    "title": "Balance History",
-    "wallet": "Wallet",
-    "blockchain": "Blockchain",
-    "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
-    "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "title": "Balansehistorikk",
+    "wallet": "Lommebok",
+    "blockchain": "Blokkjede",
+    "wallet_update_interval": "oppdateres hver time",
+    "blockchain_update_interval": "oppdateres hver 24. time",
+    "list_end_label": "dette er den siste oppføringen i saldohistorikken.",
+    "no_data": "Det er ingen data å vise for den angitte perioden."
   },
   "pop_up": {
-    "update_now": "Update Now",
-    "please_update": "Please Update",
-    "update_now_text": "You are using an old app version and need to update it in order to use it further",
-    "you_are_up_to_date": "You are up to date!",
-    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
-    "resurrection": "Resurrection",
-    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
-    "resurrection_warning": "You can only resurrect one time!",
-    "please_confirm": "Please confirm",
-    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "update_now": "Oppdater nå",
+    "please_update": "Vennligst oppdater",
+    "update_now_text": "Du bruker en gammel appversjon og må oppdatere den for å kunne bruke den videre.",
+    "you_are_up_to_date": "Du er oppdatert!",
+    "up_to_date_text": "Du bruker nå den nyeste versjonen. Sjekk alle endringene nedenfor.",
+    "resurrection": "Oppstandelse",
+    "resurrection_message": "Du har en engangssjanse til å gjenopplive og motta [[:amount]] mynter du har tapt i det siste [[:period]].",
+    "resurrection_warning": "Du kan bare gjenopplive én gang!",
+    "please_confirm": "Du må bekrefte",
+    "resurrection_no_confirm_message": "Du vil miste dine [[:amount]]-mynter for alltid. Er du sikker på at du vil fortsette?",
+    "resurrection_yes_confirm_message": "Du kan bare gjenopplive én gang! Er du sikker på at du vil fortsette? [[:amount]]-myntene vil gå tilbake til saldoen din i løpet av den neste timen.",
+    "delete_account_confirmation_title": "Bekreft sletting",
+    "delete_account_confirmation_text": "Hvis du sletter kontoen din, slettes alle dataene dine permanent, inkludert ice-saldoen. Vil du fortsette?"
   },
   "periods": {
-    "3_days": "3 days",
-    "7_days": "7 days",
-    "30_days": "30 days",
-    "1_day": "1 Day",
-    "1_week": "1 Week",
-    "1_month": "1 Month",
-    "90_days": "90 days",
-    "14_days": "14 days"
+    "3_days": "3 dager",
+    "7_days": "7 dager",
+    "30_days": "30 dager",
+    "1_day": "1 dag",
+    "1_week": "1 uke",
+    "1_month": "1 måned",
+    "90_days": "90 dager",
+    "14_days": "14 dager"
   },
   "notifications": {
-    "joined": " has joined your team",
-    "multiply": " and {{count}} others have joined your team",
-    "ping": " has pinged you, wake up!",
-    "delete": "Delete",
-    "add_notifications": "Add mocked notifications",
-    "no_notifications": "No notifications to display",
-    "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
-    "clear_title": "Clear all notifications?",
-    "title": "Notifications"
+    "joined": " har blitt med i teamet ditt.",
+    "multiply": " og {{count}} andre har blitt med i teamet ditt.",
+    "ping": " har pinget deg, våkn opp!",
+    "delete": "Slett",
+    "add_notifications": "Legg til hånede varslinger",
+    "no_notifications": "Ingen varslinger å vise.",
+    "add_announcements": "Legg til latterliggjorte kunngjøringer",
+    "add_both": "Legg til hånede varsler og kunngjøringer sammen",
+    "clear_title": "Fjerne alle varslinger?",
+    "title": "Varslinger"
   },
   "notification_feed_screen": {
-    "yesterday": "Yesterday",
-    "last_week": "Last Week",
-    "this_month": "This month",
-    "last_month": "Last Month",
-    "this_week": "This week"
+    "yesterday": "I går",
+    "last_week": "Forrige uke",
+    "this_month": "Denne måneden",
+    "last_month": "Siste måned",
+    "this_week": "Denne uken"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to hide from public eyes"
+      "title": "1. Profilstatistikken din",
+      "description": "Trykk på blokkene du vil skjule for offentligheten."
     },
     "step2": {
-      "description": "Tap on this block to hide it from public eyes",
-      "title": "2. Your Current Role"
+      "description": "Trykk på denne blokken for å skjule den for offentligheten.",
+      "title": "2. Din nåværende rolle"
     },
     "step3": {
-      "title": "3. Your Earned Badges",
-      "description": "Tap here to hide your badges from public eyes"
+      "title": "3. Dine opptjente merker",
+      "description": "Trykk her for å skjule merkene dine for offentligheten."
     }
   },
   "confirm_email": {
-    "title": "Confirm your email",
-    "description": "Please enter your email address and we will send code ",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
-    "wrong_email": "Wrong email?",
-    "check_email": "Check your email",
-    "emailed_link_to": "We emailed a magic link to",
-    "link_instruction": "Click the link to log in or sign up.",
-    "modify_title": "Confirm New Email",
-    "modify_description": "Please enter your new email address"
+    "title": "Bekreft e-posten din",
+    "description": "Skriv inn e-postadressen din, så sender vi koden.",
+    "note": "Hvis du ikke mottar e-posten innen 5 minutter, må du sjekke søppelpostmappen.",
+    "wrong_email": "Feil e-postadresse?",
+    "check_email": "Sjekk e-posten din",
+    "emailed_link_to": "Vi sendte en e-post med en magisk kobling til",
+    "emailed_steps_to": "Vi sendte en e-post med trinnene til",
+    "link_instruction": "Klikk på koblingen for å logge inn eller registrere deg.",
+    "reset_link_instruction": "Klikk på koblingen for å tilbakestille passordet.",
+    "modify_title": "Bekreft ny e-post",
+    "modify_description": "Skriv inn din nye e-postadresse."
   },
   "invalid_link": {
-    "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "title": "Ugyldig lenke",
+    "description": "Denne koblingen er dessverre ugyldig. Skriv inn e-postadressen din på nytt, så sender vi deg en ny kobling."
   },
   "confirm_code": {
-    "title": "Confirm code",
-    "description": "Please enter the code sent to",
-    "send_code_again": "Send code again",
-    "resend_time_label": "New code available in ",
-    "enter_code": "Enter the code",
-    "wrong_number": "Wrong number?"
+    "title": "Bekreft kode",
+    "description": "Vennligst skriv inn koden som er sendt til",
+    "send_code_again": "Send koden på nytt",
+    "resend_time_label": "Ny kode tilgjengelig i ",
+    "enter_code": "Skriv inn koden",
+    "wrong_number": "Feil nummer?"
   },
   "ice_bonus": {
-    "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
-    "balance_label": "Your current balance"
+    "title": "Velkomstbelønning",
+    "description": "Gratulerer, du har mottatt dine første [[:value]] [[:ice]]-mynter som beviser vår [[:bold]]tillit[[/:bold]]til[[:bold]]deg[[/:bold]].",
+    "balance_label": "Din nåværende saldo"
   },
   "country_select": {
-    "title": "Select country"
+    "title": "Velg land"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "Snømann",
+      "subtitle": "Bygg et snøimperium",
+      "description": "Tjen penger ved å sjekke inn hver 24. time for å vise din forpliktelse til ICE-nettverket og bevise at du er et menneske, ikke en robot."
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "Ambassadør",
+      "subtitle": "Hersker over snøimperiet",
+      "description": "Du blir en ambassadør når minst 100 personer har blitt med i teamet ditt. Alle ambassadører får tidlig tilgang til nye funksjoner."
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirm Phone",
-    "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
-    }
+    "modify_title": "Bekreft telefon",
+    "modify_description": "Bekreft landskoden din og skriv inn telefonnummeret ditt.",
+    "button": "Bekreft land og telefon",
+    "same_phone_error": "Du kan ikke bruke samme nummer."
   },
   "date_select": {
-    "title": "Choose date"
+    "title": "Velg dato"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+      "readmore": {
+        "title": "Les mer",
+        "description": "Her kan du se de siste nyhetene fra teamet vårt. Trykk på denne knappen for å lese hele artikkelen."
       },
-      "step_2": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
-      },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
-      },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
-      },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
-      },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
-      },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
-      },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "releasednews": {
+        "title": "Utgitte nyheter",
+        "description": "Trykk på hver enkelt nyhetstittel og les den fullstendige versjonen av den. Hold deg oppdatert på alle våre nyheter og meningsmålinger."
       }
     },
     "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      "allow_contacts": {
+        "title": "Tillat kontakter",
+        "description": "Synkroniser kontaktene dine og se hvem som allerede er på [[:ice]]. I fremtiden vil du kunne sende [[:ice]] til noen av kontaktene dine."
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "confirm_phone": {
+        "title": "Bekreft telefon",
+        "description": "Bekreft identiteten din og la kontaktene få vite at du også er medlem av ICE-nettverket. Telefonnummeret ditt vil ikke bli delt med andre tredjeparter."
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "contacts_list": {
+        "title": "Liste over kontakter",
+        "description": "Dette er listen med alle kontaktene dine – de som allerede har blitt med i [[:ice]]-nettverket, vises øverst på listen."
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "referrals": {
+        "title": "Henvisninger",
+        "description": "Her vil du se hvor mange henvisninger du har totalt. Jo flere personer du inviterer, jo mer vil du tjene."
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earnings": {
+        "title": "Inntekter",
+        "description": "Gjeldende saldo oppdateres hver time og vises her. Den inkluderer dine direkte og stakede inntekter sammen med inntektene for nivå 1 og nivå 2."
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "segmented_control_tier_one": {
+        "title": "Nivå 1",
+        "description": "Her kan du se listen over dine Tier 1-henvisninger. For hver venn som sjekker inn samtidig med deg, vil du få 25 % ekstra på din nåværende, grunnleggende adopsjonsinntekt. [[:link]]Les mer[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "segmented_control_tier_two": {
+        "title": "Nivå 2",
+        "description": "Her kan du se listen over dine Tier 2-henvisninger. For hver venn som sjekker inn samtidig med deg, vil du få 5 % ekstra på din nåværende basisinntektsrate. [[:link]]Les mer[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "active_users": {
+        "title": "Aktive brukere",
+        "description": "Dette er gjeldende status for innsjekkingsaktiviteten for henvisninger. De teller som aktive når de har en aktiv innsjekkingsøkt."
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "tier_one_earnings": {
+        "title": "Nivå 1-inntekter",
+        "description": "Her kan du se listen over dine Tier 1-henvisninger. For hvert medlem som sjekker inn samtidig med deg, vil dere begge få 25 % ekstra på den grunnleggende, gjeldende adopsjonsinntektsraten."
+      },
+      "ping": {
+        "title": "Ping-knapp",
+        "description": "Varsle dine henvisninger for å starte sine innsjekkingsøkter. Du kan sende ett varsel til hver henvisning hver 24. time."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Hjem",
+        "description": "Velkommen til [[:ice]]. På startskjermen kan du finne all statistikk om saldoen din, gjeldende inntjeningsrate, din globale rangering sammen med teamet ditt."
+      },
+      "invite": {
+        "title": "Inviter",
+        "description": "For hver person du inviterer, vil dere begge tjene opptil 25 % av basisinntektsraten din. Jo flere personer du inviterer, jo mer vil du tjene."
+      },
+      "team": {
+        "title": "Team",
+        "description": "[[:ice]] er bedre med venner. På denne siden kan du se statusen til teammedlemmene dine på både nivå 1 og nivå 2. Du kan også pinge dem herfra."
+      },
+      "news": {
+        "title": "Nyheter",
+        "description": "Hold deg oppdatert på alle våre nyheter og meningsmålinger. Siden vi er en desentralisert selvstyrt organisasjon, vil du kunne stemme her for de fremtidige funksjonene."
+      },
+      "profile": {
+        "title": "Profil",
+        "description": "Tilpass profildetaljene dine og se alle prestasjonene og merkene du har oppnådd. Bruk kalkulatoren herfra, slik at du kan beregne inntektene dine."
+      },
+      "earningicestart": {
+        "title": "Tjen penger på Ice",
+        "description": "Du kan starte[[:ice]]innsjekkingsøkten hver 24. time ved å trykke på denne knappen. Ikke glem å komme tilbake hver dag og begynne å tjene penger!"
+      },
+      "earningiceseemore": {
+        "title": "Tjen penger på Ice",
+        "description": "Trykk igjen og se mer informasjon om din nåværende innsjekkingsøkt."
+      },
+      "stats": {
+        "title": "Statistikk",
+        "description": "På statistikksiden kan du se totalt antall, og aktive, brukere som sjekket inn hver dag i tillegg til toppland og brukere."
+      },
+      "help": {
+        "title": "Hjelp",
+        "description": "Har du spørsmål? Sjekk ut vår liste over ofte stilte spørsmål. Ikke nøl med å ta kontakt med oss på hi@ice.io hvis du ikke finner det du leter etter."
+      },
+      "preStaking": {
+        "title": "Forhånds-staking",
+        "description": "Maksimer avkastningen ved å forhånds-stake inntjeningsbelønningene dine. Velg tildelings- og staking-periode for å motta en bonus på toppen av inntektene dine."
+      },
+      "wallet": {
+        "title": "Lommebokkort",
+        "description": "Her finner du din nåværende saldo for [[:ice]], sammen med inntjeningsraten. Jo flere henvisninger fra teamet ditt som er på nett, jo høyere er inntjeningsraten."
+      },
+      "earning": {
+        "title": "Inntjeningskort",
+        "description": "Hold deg oppdatert på inntjeningsraten og bonusene dine! Her kan du sjekke din nåværende rate, vår grunnrate og bonusrater for ulike aktiviteter i appen."
+      },
+      "engagement": {
+        "title": "Forlovelseskort",
+        "description": "Hold styr på innsjekkingsøktene dine og fridager! Sjekk denne delen for mer informasjon om dine påfølgende innsjekkingsøkter og for å se hvor mange ledige fridager du har."
+      },
+      "profilecard": {
+        "title": "Profilkort",
+        "description": "Du kan holde oversikt over profilstatusen din ved å følge dette kortet. Den viser din nåværende globale rangering, sammen med din rolle, nivå og totale antall henvisninger."
+      },
+      "referralscard": {
+        "title": "Henvisningskort",
+        "description": "Se utviklingen av henvisningsstatistikken for de siste fem dagene for både nivå 1- og nivå 2-henvisninger ved å trykke på dette kortet."
+      },
+      "adoptioncard": {
+        "title": "Adopsjonskort",
+        "description": "Basert på gjennomsnittet av den siste ukens totale aktive snømenn, kan du se gjeldende inntjeningsrate for [[:ice]]. Inntektsraten halveres når neste terskel nås."
+      },
+      "nickname": {
+        "title": "Kallenavn",
+        "description": "Kallenavnet er det som gjør deg unik. Vennene dine må bruke den for å bli med i teamet ditt. Du kan også bruke denne snarveien til å åpne profilen din."
+      },
+      "balancehistory": {
+        "title": "Balansehistorikk",
+        "description": "Her finner du din nåværende [[:ice]] saldo på lokal lommebok og blockchain. Den lokale lommeboksaldoen oppdateres hver time, mens blokkjedebalansen oppdateres hver 24. time."
+      },
+      "achievements": {
+        "title": "Prestasjoner",
+        "description": "Fullfør oppgavene nedenfor og gå opp i nivå! Start din første innsjekkingsøkt nå!"
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Unlink Logins",
-    "sessionName": "Login via {{providerName}}",
+    "title": "Koble fra pålogginger",
+    "sessionName": "Logg inn via {{providerName}}",
     "buttons": {
-      "currentSession": "Current session",
-      "endSession": "End Session",
-      "loginUnlinked": "Login Unlinked",
-      "sessionEnded": "Session Ended",
-      "unlink": "Unlink"
+      "currentSession": "Gjeldende økt",
+      "endSession": "Avslutt økt",
+      "loginUnlinked": "Pålogging frakoblet",
+      "sessionEnded": "Økt avsluttet",
+      "unlink": "Koble fra"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Unlink Login?",
-        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
+        "title": "Koble fra pålogging?",
+        "message": "Er du sikker på at du vil fjerne påloggingen via {{providerName}} fra denne enheten?"
       },
       "endSession": {
-        "title": "End Session?",
-        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
+        "title": "Avslutte økt?",
+        "message": "Er du sikker på at du vil avslutte{{providerName}}-påloggingsøkten fra denne enheten?"
       }
     }
   },
@@ -792,12 +846,51 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Today’s Bonus",
-    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
-    "link": "Find out more",
-    "extra_message": "You have received your daily extra bonus on your earning rate",
-    "expired_title": "Bonus Expired",
-    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
-    "result_title": "Congratulations"
+    "claim_title": "Dagens bonus",
+    "claim_message": "Det er tid for dagens bonus, vennligst trykk på [[:bold]]«Claim Bonus»[[/:bold]] -knappen nedenfor.",
+    "link": "Finn ut mer",
+    "extra_message": "Du har mottatt din daglige ekstra bonus på inntjeningsraten din.",
+    "expired_title": "Bonusen er utløpt",
+    "expired_message": "Dessverre har dagens bonus utløpt. Følg med for neste varsling!",
+    "result_title": "Gratulerer"
+  },
+  "early_access": {
+    "title": "Tidlig tilgang",
+    "message_part1": "Få en sniktitt på [[:bold]]Ice[[/:bold]]-appen før vår [[:bold]]kommende offisielle utgivelse.[[/:bold]]",
+    "message_part2": "Alle saldoer vil bli tilbakestilt til 0 på utgivelsesdatoen. Teamet ditt vil imidlertid forbli intakt.",
+    "message_part3": "Takk for din støtte!",
+    "checkbox_description": "Jeg har bekreftet! Ikke vis dette popup-vinduet igjen."
+  },
+  "mining_notice": {
+    "title": "Merknad",
+    "message": "Takk for at du er interessert i å tjene [[:bold]]ice![[/:bold]] Vi finjusterer for øyeblikket teknologien vår, og innsjekking er ikke tilgjengelig for øyeblikket. Dette er din sjanse til å fokusere på å bygge teamet ditt og øke mikrosamfunnet ditt.",
+    "message_footer": "Følg med for oppdateringer på kanalene[[:twitter]]Twitter[[/:twitter]] og [[:telegram]]Telegram[[/:telegram]]."
+  },
+  "qr_code": {
+    "description": "Skann QR-koden for å bli med i teamet mitt."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Bli med oss på TikTok",
+      "description": "Vi ville bare ta kontakt og fortelle deg om vårt spennende nye fellesskap på TikTok. Vi deler morsomt og informativt innhold om ice, vår digitale valuta, og vi vil gjerne at du blir med oss!"
+    },
+    "youtube": {
+      "title": "Bli med oss på YouTube",
+      "description": "YouTube-kanalen vår er det perfekte stedet å holde seg oppdatert, fra veiledninger om hvordan du tjener penger på ice, til oppdateringer om nye funksjoner og til og med morsomt innhold fra fellesskapet."
+    },
+    "linkedin": {
+      "title": "Bli med oss på LinkedIn",
+      "description": "Å bli med i ice-fellesskapet på LinkedIn er en fin måte å holde seg informert om den siste utviklingen og å få kontakt med likesinnede personer som er like lidenskapelige om fremtiden for digitale valutaer som du er."
+    },
+    "facebook": {
+      "title": "Bli med oss på Facebook",
+      "description_part1": "Vi anbefaler på det sterkeste at du følger med på Facebook-siden vår.",
+      "description_part2": "Det vil ikke bare hjelpe deg med å holde deg oppdatert på alt som skjer med ICE-prosjektet, men det er også en fin måte å få kontakt med nettverket vårt på og være en del av samtalen."
+    },
+    "instagram": {
+      "title": "Bli med oss på Instagram",
+      "description_part1": "Å følge oss på Instagram er en fin måte å holde seg oppdatert på og få kontakt med andre brukere som også er lidenskapelig opptatt av ice",
+      "description_part2": "I tillegg vil du være den første som får vite om nye funksjoner eller kampanjer som vi lanserer."
+    }
   }
 }
