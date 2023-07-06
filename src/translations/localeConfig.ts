@@ -38,7 +38,7 @@ export type SupportedLocale =
   | 'te'
   | 'uk';
 
-type LocalConfig = {
+export type LocalConfig = {
   [key in SupportedLocale]: {
     readonly translations: Translations;
     name: string;
