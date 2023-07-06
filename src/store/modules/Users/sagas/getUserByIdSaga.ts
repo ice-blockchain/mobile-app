@@ -10,7 +10,7 @@ const actionCreator = UsersActions.GET_USER_BY_ID.START.create;
 export function* getUserByIdSaga(action: ReturnType<typeof actionCreator>) {
   try {
     const {userId} = action.payload;
-    const response: SagaReturnType<typeof Api.user.getUserById> =
+    const {data: response}: SagaReturnType<typeof Api.user.getUserById> =
       yield Api.user.getUserById(userId);
     yield put(UsersActions.GET_USER_BY_ID.SUCCESS.create(response));
   } catch (error) {

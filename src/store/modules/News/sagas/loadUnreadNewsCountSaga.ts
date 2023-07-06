@@ -17,11 +17,15 @@ export function* loadUnreadNewsCountSaga() {
   );
 
   try {
-    const {count}: SagaReturnType<typeof Api.news.getUnreadNewsCount> =
-      yield call(Api.news.getUnreadNewsCount, {
+    const {
+      data: {count},
+    }: SagaReturnType<typeof Api.news.getUnreadNewsCount> = yield call(
+      Api.news.getUnreadNewsCount,
+      {
         language: locale,
         createdAfter: user?.createdAt,
-      });
+      },
+    );
 
     yield put(
       NewsActions.UNREAD_NEWS_COUNT_LOAD.SUCCESS.create({

@@ -3,7 +3,12 @@
 import {backOffWrapper, DEFAULT_BACK_OFF_OPTIONS} from '@api/client/backOff';
 import {getHeaders} from '@api/client/getHeaders';
 import {ENV} from '@constants/env';
-import axios, {AxiosError, AxiosInstance, AxiosRequestConfig} from 'axios';
+import axios, {
+  AxiosError,
+  AxiosInstance,
+  AxiosRequestConfig,
+  AxiosResponse,
+} from 'axios';
 
 import {requestInterceptor} from './interceptors/request';
 import {responseInterceptor} from './interceptors/response';
@@ -74,13 +79,13 @@ export async function get<TResponse>(
   queryParams?: {[key: string]: string | number | null | undefined} | null,
   backOffOptions = DEFAULT_BACK_OFF_OPTIONS,
   config?: AxiosRequestConfig,
-): Promise<TResponse> {
+): Promise<AxiosResponse<TResponse>> {
   const response = await backOffWrapper(
     async () =>
       readClient.get<TResponse>(path, {params: queryParams, ...config}),
     backOffOptions,
   );
-  return response.data;
+  return response;
 }
 
 export async function del<TResponse>(

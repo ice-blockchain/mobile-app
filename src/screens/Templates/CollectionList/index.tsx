@@ -32,7 +32,7 @@ type Props<T> = {
     data: T[];
     hasNext: boolean;
     query?: string;
-    pageNumber: number;
+    nextOffset: number;
   };
   action: ActionFactories<
     string,

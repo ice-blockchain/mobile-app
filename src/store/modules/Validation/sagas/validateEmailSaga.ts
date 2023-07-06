@@ -36,10 +36,8 @@ export function* validateEmailSaga(action: ReturnType<typeof actionCreator>) {
     } else if (isApiError(error, 400, 'VALIDATION_EXPIRED')) {
       localizedError = t('errors.validation_expired');
     } else if (isApiError(error, 404, 'VALIDATION_NOT_FOUND')) {
-      const freshUser: SagaReturnType<typeof Api.user.getUserById> = yield call(
-        Api.user.getUserById,
-        userId,
-      );
+      const {data: freshUser}: SagaReturnType<typeof Api.user.getUserById> =
+        yield call(Api.user.getUserById, userId);
       yield put(AccountActions.UPDATE_ACCOUNT.SUCCESS.create(freshUser));
       localizedError = t('errors.validation_not_found');
     } else if (isApiError(error, 409, 'CONFLICT_WITH_ANOTHER_USER')) {

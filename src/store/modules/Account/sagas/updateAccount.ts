@@ -48,10 +48,8 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
   } catch (error) {
     let localizedError = null;
     if (isApiError(error, 400, 'RACE_CONDITION') && user) {
-      const freshUser: SagaReturnType<typeof Api.user.getUserById> = yield call(
-        Api.user.getUserById,
-        user.id,
-      );
+      const {data: freshUser}: SagaReturnType<typeof Api.user.getUserById> =
+        yield call(Api.user.getUserById, user.id);
       yield put(AccountActions.GET_ACCOUNT.SUCCESS.create(freshUser));
       const {retry} = yield action.payload.raceConditionStrategy(freshUser);
       if (retry) {

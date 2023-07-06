@@ -5,6 +5,7 @@ import {CountryStatistics, Miner} from '@api/statistics/types';
 import {User} from '@api/user/types';
 import {createCollectionAction} from '@store/modules/Collections/actions';
 import {getInitialCollectionState} from '@store/modules/Collections/reducer';
+import {AxiosResponse} from 'axios';
 
 export const CollectionActions = {
   GET_TOP_STATS_COUNTRIES: createCollectionAction<
@@ -73,4 +74,6 @@ export type CollectionApiRequest = (params: {
   query: string;
   limit: number;
   offset: number;
-}) => Promise<typeof CollectionsState[keyof typeof CollectionsState]['data']>;
+}) => Promise<
+  AxiosResponse<typeof CollectionsState[keyof typeof CollectionsState]['data']>
+>;

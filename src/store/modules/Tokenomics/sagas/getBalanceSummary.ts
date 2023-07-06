@@ -26,9 +26,12 @@ export function* getBalanceSummarySaga() {
     const userId: ReturnType<typeof userIdSelector> = yield select(
       userIdSelector,
     );
-    const balanceSummary: SagaReturnType<
-      typeof Api.tokenomics.getBalanceSummary
-    > = yield call(Api.tokenomics.getBalanceSummary, {userId});
+    const {
+      data: balanceSummary,
+    }: SagaReturnType<typeof Api.tokenomics.getBalanceSummary> = yield call(
+      Api.tokenomics.getBalanceSummary,
+      {userId},
+    );
 
     yield put(
       TokenomicsActions.GET_BALANCE_SUMMARY.SUCCESS.create(balanceSummary),

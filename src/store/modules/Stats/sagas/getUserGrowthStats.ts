@@ -11,11 +11,15 @@ export function* getUserGrowthStats(
 ) {
   const {statsPeriod} = action.payload;
   try {
-    const userGrowth: SagaReturnType<typeof Api.statistics.getUserGrowth> =
-      yield call(Api.statistics.getUserGrowth, {
+    const {
+      data: userGrowth,
+    }: SagaReturnType<typeof Api.statistics.getUserGrowth> = yield call(
+      Api.statistics.getUserGrowth,
+      {
         days: statsPeriod,
         tz: getTimezoneOffset(),
-      });
+      },
+    );
     yield put(
       StatsActions.GET_USER_GROWTH_STATS.SUCCESS.create(
         statsPeriod,

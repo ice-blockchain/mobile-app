@@ -20,7 +20,7 @@ export function* getAdoptionSaga() {
       return null;
     }
 
-    const adoption: SagaReturnType<typeof Api.statistics.getAdoption> =
+    const {data: adoption}: SagaReturnType<typeof Api.statistics.getAdoption> =
       yield call(Api.statistics.getAdoption);
 
     yield put(StatsActions.GET_ADOPTION.SUCCESS.create(adoption));

@@ -110,10 +110,8 @@ function* updateUserMetadata() {
 
 function* getUser(userId: string) {
   try {
-    const user: SagaReturnType<typeof Api.user.getUserById> = yield call(
-      Api.user.getUserById,
-      userId,
-    );
+    const {data: user}: SagaReturnType<typeof Api.user.getUserById> =
+      yield call(Api.user.getUserById, userId);
     yield put(AnalyticsActions.TRACK_SIGN_IN.START.create({user}));
     return user;
   } catch (error) {

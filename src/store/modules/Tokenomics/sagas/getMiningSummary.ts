@@ -28,9 +28,12 @@ export function* getMiningSummarySaga(
     const userId: ReturnType<typeof userIdSelector> = yield select(
       userIdSelector,
     );
-    const miningSummary: SagaReturnType<
-      typeof Api.tokenomics.getMiningSummary
-    > = yield call(Api.tokenomics.getMiningSummary, {userId});
+    const {
+      data: miningSummary,
+    }: SagaReturnType<typeof Api.tokenomics.getMiningSummary> = yield call(
+      Api.tokenomics.getMiningSummary,
+      {userId},
+    );
 
     yield put(
       TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.create({

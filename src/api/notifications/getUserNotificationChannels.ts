@@ -13,7 +13,7 @@ import {
 export async function getUserNotificationChannels(
   notificationDeliveryChannel: NotificationDeliveryChannel,
 ) {
-  const response = await get<NotificationDomainToggles>(
+  const {data: response} = await get<NotificationDomainToggles>(
     `/notification-channels/${notificationDeliveryChannel}/toggles`,
   );
   const notificationChannels: NotificationDomainToggles = [];

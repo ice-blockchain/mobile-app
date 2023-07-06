@@ -28,7 +28,7 @@ export function* loadNewsSaga(
     yield select(NewsSelectors.pageNumber);
   const nextPageNumber = isInitial ? 0 : pageNumber + 1;
   try {
-    const news: SagaReturnType<typeof Api.news.getNews> = yield call(
+    const {data: news}: SagaReturnType<typeof Api.news.getNews> = yield call(
       Api.news.getNews,
       {
         type: 'regular',
@@ -43,16 +43,14 @@ export function* loadNewsSaga(
 
     if (isInitial) {
       // Load 1 featured news article only for refresh event
-      const featuredNews: SagaReturnType<typeof Api.news.getNews> = yield call(
-        Api.news.getNews,
-        {
+      const {data: featuredNews}: SagaReturnType<typeof Api.news.getNews> =
+        yield call(Api.news.getNews, {
           type: 'featured',
           language: locale,
           limit: 1,
           offset: 0,
           createdAfter: user?.createdAt,
-        },
-      );
+        });
 
       featuredNewsArticle = featuredNews[0];
     }

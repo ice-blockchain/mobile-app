@@ -14,7 +14,7 @@ export function* updateRefByUsernameSaga(
 ) {
   const {refUsername} = action.payload;
   try {
-    const refUser: SagaReturnType<typeof Api.user.getUserByUsername> =
+    const {data: refUser}: SagaReturnType<typeof Api.user.getUserByUsername> =
       yield call(Api.user.getUserByUsername, {username: refUsername});
     yield put(AccountActions.UPDATE_REF_BY_USERNAME.SUCCESS.create(refUser));
     yield put(

@@ -30,7 +30,7 @@ export function* getBalanceHistorySaga({
         userIdSelector,
       );
 
-      const data: SagaReturnType<typeof Api.tokenomics.getBalanceHistory> =
+      const {data}: SagaReturnType<typeof Api.tokenomics.getBalanceHistory> =
         yield call(Api.tokenomics.getBalanceHistory, {
           userId,
           offset: nextPageNumber * PAGE_SIZE,

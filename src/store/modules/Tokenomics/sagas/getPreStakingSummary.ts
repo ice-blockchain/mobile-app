@@ -20,9 +20,10 @@ export function* getPreStakingSummarySaga() {
       const userId: ReturnType<typeof userIdSelector> = yield select(
         userIdSelector,
       );
-      const preStakingSummary: SagaReturnType<
-        typeof Api.tokenomics.getPreStakingSummary
-      > = yield call(Api.tokenomics.getPreStakingSummary, {userId});
+      const {
+        data: preStakingSummary,
+      }: SagaReturnType<typeof Api.tokenomics.getPreStakingSummary> =
+        yield call(Api.tokenomics.getPreStakingSummary, {userId});
 
       yield put(
         TokenomicsActions.GET_PRE_STAKING_SUMMARY.SUCCESS.create(

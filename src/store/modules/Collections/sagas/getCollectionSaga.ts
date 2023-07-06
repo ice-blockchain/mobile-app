@@ -26,24 +26,42 @@ export function* getCollectionSaga<
     if (!stateKey) {
       return;
     }
-    const {pageNumber}: SagaReturnType<ReturnType<typeof collectionSelector>> =
+    const {nextOffset}: SagaReturnType<ReturnType<typeof collectionSelector>> =
       yield select(collectionSelector(stateKey));
 
     const {limit = defaultPageSize, query, isInitial} = payload;
-    const nextPageNumber = isInitial ? 0 : pageNumber + 1;
+
     if (request) {
-      const response: UnionToIntersection<SagaReturnType<typeof request>> =
-        (yield request({
-          query,
-          offset: nextPageNumber * limit,
-          limit,
-        })) ?? [];
-      const hasNext = !!response.length;
+      const offset = isInitial ? 0 : nextOffset;
+
+      const {
+        data,
+        headers,
+      }: {
+        data: UnionToIntersection<SagaReturnType<typeof request>['data']>;
+        headers: UnionToIntersection<SagaReturnType<typeof request>['headers']>;
+      } = yield request({
+        query,
+        offset,
+        limit,
+      });
+
+      const responseData = data ?? [];
+
       yield put(
-        action.SUCCESS.create(response, {
+        action.SUCCESS.create(responseData, {
+          isInitial,
           query,
-          pageNumber: nextPageNumber,
-          hasNext,
+
+          nextOffset:
+            headers?.['x-next-offset'] !== undefined
+              ? Number(headers['x-next-offset'])
+              : offset + limit,
+
+          hasNext:
+            headers?.['x-next-offset'] !== undefined
+              ? headers['x-next-offset'] !== '0'
+              : !!responseData.length,
         }),
       );
     }
