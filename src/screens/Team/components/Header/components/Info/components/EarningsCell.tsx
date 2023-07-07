@@ -5,7 +5,7 @@ import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {COLORS} from '@constants/colors';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {WalletIcon} from '@svg/WalletIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {parseNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo, useCallback} from 'react';
@@ -32,18 +32,22 @@ export const EarningsCell = memo(({color = COLORS.white}: {color?: string}) => {
 
   return (
     <View style={styles.container}>
-      <WalletIcon width={rem(25)} height={rem(25)} color={color} />
-      <View style={styles.body2}>
-        <Text style={[styles.titleText, {color}]}>
-          {t('team.header.earnings')}
-        </Text>
-        <View style={styles.bodyContainer}>
-          <AnimatedNumberText
-            value={parseNumber(balanceSummary?.totalReferrals || '0')}
-            NumberComponent={NumberComponent}
-          />
-          <Text> </Text>
-          <Text style={[styles.valueText, {color}]}>{t('general.ice')}</Text>
+      <View style={styles.subContainer}>
+        <View style={styles.icon}>
+          <WalletIcon width={rem(25)} height={rem(25)} color={color} />
+        </View>
+        <View style={styles.body2}>
+          <Text style={[styles.titleText, {color}]}>
+            {t('team.header.earnings')}
+          </Text>
+          <View style={styles.bodyContainer}>
+            <AnimatedNumberText
+              value={parseNumber(balanceSummary?.totalReferrals || '0')}
+              NumberComponent={NumberComponent}
+            />
+            <Text> </Text>
+            <Text style={[styles.valueText, {color}]}>{t('general.ice')}</Text>
+          </View>
         </View>
       </View>
     </View>
@@ -55,11 +59,22 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-end',
-    paddingRight: rem(5),
+    paddingLeft: rem(12),
+    width: '100%',
+  },
+  subContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    flex: 1,
+  },
+  icon: {
+    alignItems: 'flex-end',
   },
   body2: {
-    marginLeft: rem(14),
-    justifyContent: 'center',
+    paddingLeft: rem(12),
+    alignItems: 'flex-end',
+    maxWidth: '80%',
   },
   bodyContainer: {
     flexDirection: 'row',
@@ -68,6 +83,7 @@ const styles = StyleSheet.create({
   titleText: {
     ...font(12, 18, 'medium'),
     opacity: 0.7,
+    textAlign: isRTL ? 'left' : 'right',
   },
   valueText: {
     paddingTop: rem(2),

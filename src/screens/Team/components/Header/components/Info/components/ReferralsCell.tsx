@@ -37,10 +37,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
+    paddingRight: rem(12),
   },
   body: {
     marginLeft: rem(10),
-    justifyContent: 'center',
+    flex: 1,
   },
   titleText: {
     ...font(12, 18, 'medium'),
