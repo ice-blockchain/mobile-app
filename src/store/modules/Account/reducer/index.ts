@@ -2,10 +2,12 @@
 
 import {AuthConfig} from '@api/auth/types';
 import {User} from '@api/user/types';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {SignInUserInfo} from '@services/auth/signin/types';
 import {AuthToken} from '@services/auth/types';
 import {AccountActions} from '@store/modules/Account/actions';
 import produce from 'immer';
+import {persistReducer} from 'redux-persist';
 
 export interface AccountState {
   isAdmin: boolean | null;
@@ -80,4 +82,11 @@ function reducer(state = INITIAL_STATE, action: Actions): AccountState {
   });
 }
 
-export const accountReducer = reducer;
+export const accountReducer = persistReducer(
+  {
+    key: 'account',
+    storage: AsyncStorage,
+    whitelist: ['installReferrer'],
+  },
+  reducer,
+);
