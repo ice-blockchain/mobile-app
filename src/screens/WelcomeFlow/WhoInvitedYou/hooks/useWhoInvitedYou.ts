@@ -4,7 +4,10 @@ import {WELCOME_STEPS, WelcomeStackParamList} from '@navigation/Welcome';
 import {useIsFocused, useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AccountActions} from '@store/modules/Account/actions';
-import {unsafeUserSelector} from '@store/modules/Account/selectors';
+import {
+  installReferrerSelector,
+  unsafeUserSelector,
+} from '@store/modules/Account/selectors';
 import {
   failedReasonSelector,
   isLoadingSelector,
@@ -33,6 +36,8 @@ export const useWhoInvitedYou = () => {
 
   const user = useSelector(unsafeUserSelector);
 
+  const installReferrer = useSelector(installReferrerSelector);
+
   const isReferralVerified = useSelector(
     isSuccessSelector.bind(null, AccountActions.UPDATE_REF_BY_USERNAME),
   );
@@ -46,7 +51,7 @@ export const useWhoInvitedYou = () => {
     isLoadingSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
   );
 
-  const [refUsername, setRefUsername] = useState('');
+  const [refUsername, setRefUsername] = useState(installReferrer ?? '');
 
   const resetError = useCallback(() => {
     if (validationError) {

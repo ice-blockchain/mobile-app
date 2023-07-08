@@ -89,6 +89,7 @@
     "react-native-moengage": "8.4.0",
     "react-native-pager-view": "6.1.1",
     "react-native-permissions": "^3.6.1",
+    "react-native-play-install-referrer": "^1.1.8",
     "react-native-rate": "^1.2.12",
     "react-native-reanimated": "2.15.0",
     "react-native-restart": "^0.0.27",

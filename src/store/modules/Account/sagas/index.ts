@@ -4,6 +4,7 @@ import {AccountActions} from '@store/modules/Account/actions';
 import {deleteAccountSaga} from '@store/modules/Account/sagas/deleteAccount';
 import {getAccountSaga} from '@store/modules/Account/sagas/getAccount';
 import {getAuthConfigSaga} from '@store/modules/Account/sagas/getAuthConfig';
+import {getInstallReferrerSaga} from '@store/modules/Account/sagas/getInstallReferrer';
 import {modifyEmailWithCodeSaga} from '@store/modules/Account/sagas/modifyEmailWithCode';
 import {modifyEmailWithLinkSaga} from '@store/modules/Account/sagas/modifyEmailWithLink';
 import {signInEmailCodeSaga} from '@store/modules/Account/sagas/signInEmailCode';
@@ -70,4 +71,5 @@ export const authWatchers = [
     ],
     getAuthConfigSaga,
   ),
+  takeLatest(AppCommonActions.APP_LOADED.STATE.type, getInstallReferrerSaga),
 ];

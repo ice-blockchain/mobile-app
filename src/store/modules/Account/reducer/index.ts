@@ -15,6 +15,7 @@ export interface AccountState {
   // data that is taken from the auth providers (google / apple etc)
   // and used to populate / suggest User profile later on
   userInfo: SignInUserInfo | null;
+  installReferrer: string | null;
   isPrivacyInfoShown: boolean;
   authConfig: AuthConfig | null;
 }
@@ -38,6 +39,7 @@ const INITIAL_STATE: AccountState = {
   metadata: null,
   user: null,
   userInfo: null,
+  installReferrer: null,
   isPrivacyInfoShown: true,
   authConfig: null,
 };
