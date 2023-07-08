@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {getInstallUrl} from '@services/installInfo';
+import {getInstallReferrer} from '@services/installInfo';
 import {AccountActions} from '@store/modules/Account/actions';
 import {installReferrerSelector} from '@store/modules/Account/selectors';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
@@ -19,22 +19,27 @@ export function* getInstallReferrerSaga() {
       return;
     }
 
-    const installUrl: SagaReturnType<typeof getInstallUrl> = yield call(
-      getInstallUrl,
-    );
+    const referrerParams: SagaReturnType<typeof getInstallReferrer> =
+      yield call(getInstallReferrer);
 
-    if (installUrl) {
-      const referrer = new URL(installUrl).searchParams.get('referrer') ?? '';
-      yield put(
-        AccountActions.SET_INSTALL_REFERRER.STATE.create({
-          installReferrer: decodeURIComponent(referrer),
-        }),
-      );
-    } else {
-      yield put(
-        AccountActions.SET_INSTALL_REFERRER.STATE.create({installReferrer: ''}),
-      );
+    if (referrerParams) {
+      const referrer = new URLSearchParams(
+        decodeURIComponent(referrerParams),
+      ).get('ice_referrer');
+
+      if (referrer) {
+        yield put(
+          AccountActions.SET_INSTALL_REFERRER.STATE.create({
+            installReferrer: referrer,
+          }),
+        );
+        return;
+      }
     }
+
+    yield put(
+      AccountActions.SET_INSTALL_REFERRER.STATE.create({installReferrer: ''}),
+    );
   } catch (error) {
     yield put(
       AccountActions.SET_INSTALL_REFERRER.STATE.create({installReferrer: ''}),
