@@ -98,7 +98,7 @@ export const LadderItem = memo(
 
 const styles = StyleSheet.create({
   outerContainer: {
-    padding: rem(4),
+    paddingVertical: rem(4),
     borderRadius: rem(16),
     width: LADDER_ITEM_WIDTH,
   },

@@ -4,7 +4,7 @@ import {User} from '@api/user/types';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {LinesBackground} from '@components/LinesBackground';
 import {COLORS} from '@constants/colors';
-import {windowWidth} from '@constants/styles';
+import {SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
 import {PrivacyButton} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/PrivacyButton';
 import {QRCode} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/QRCode';
 import {
@@ -109,6 +109,7 @@ const styles = StyleSheet.create({
     marginTop: AVATAR_SIZE / 2,
     backgroundColor: COLORS.white,
     borderRadius: rem(16),
+    paddingHorizontal: SCREEN_SIDE_OFFSET,
   },
   usernameText: {
     marginTop: rem(12) + AVATAR_SIZE / 2,
@@ -119,7 +120,7 @@ const styles = StyleSheet.create({
   },
   descriptionText: {
     marginTop: rem(24),
-    ...font(14, 19, 'semibold', 'black'),
+    ...font(14, 19, 'semibold', 'black', 'center'),
   },
   iceLabel: {
     marginTop: rem(20),
