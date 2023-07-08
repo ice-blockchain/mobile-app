@@ -16,21 +16,6 @@ export const useLocaleSearch = (availableLocales: SupportedLocale[]) => {
     setLocales(sortedKeys);
   }, [availableLocales]);
 
-  const sortLocales = (localesToSort: SupportedLocale[]) => {
-    const sorted: LocalConfig = localesToSort
-      .filter(locale => localeConfig[locale])
-      .sort((a, b) => localeConfig[a].name.localeCompare(localeConfig[b].name))
-      .reduce((result, locale) => {
-        result[locale] = localeConfig[locale];
-        return result;
-      }, {} as LocalConfig);
-
-    const sortedKeys: SupportedLocale[] = Object.keys(
-      sorted,
-    ) as SupportedLocale[];
-    return sortedKeys;
-  };
-
   const searchLocales = useMemo(
     () =>
       debounce((term: string) => {
@@ -50,4 +35,19 @@ export const useLocaleSearch = (availableLocales: SupportedLocale[]) => {
     locales,
     searchLocales,
   };
+};
+
+const sortLocales = (localesToSort: SupportedLocale[]) => {
+  const sorted: LocalConfig = localesToSort
+    .filter(locale => localeConfig[locale])
+    .sort((a, b) => localeConfig[a].name.localeCompare(localeConfig[b].name))
+    .reduce((result, locale) => {
+      result[locale] = localeConfig[locale];
+      return result;
+    }, {} as LocalConfig);
+
+  const sortedKeys: SupportedLocale[] = Object.keys(
+    sorted,
+  ) as SupportedLocale[];
+  return sortedKeys;
 };
