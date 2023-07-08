@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {getInstallReferrer} from '@services/installInfo';
+import {logError} from '@services/logging';
 import {AccountActions} from '@store/modules/Account/actions';
-import {installReferrerSelector} from '@store/modules/Account/selectors';
-import {call, put, SagaReturnType, select} from 'redux-saga/effects';
+import {AppCommonActions} from '@store/modules/AppCommon/actions';
+import {Alert} from 'react-native';
+import {call, delay, put, SagaReturnType, take} from 'redux-saga/effects';
 
 /**
  * The install referrer information will be available for 90 days and won't change unless the application is reinstalled.
@@ -12,16 +14,13 @@ import {call, put, SagaReturnType, select} from 'redux-saga/effects';
  */
 export function* getInstallReferrerSaga() {
   try {
-    const installReferrer: SagaReturnType<typeof installReferrerSelector> =
-      yield select(installReferrerSelector);
-
-    if (installReferrer !== null) {
-      return;
-    }
-
     const referrerParams: SagaReturnType<typeof getInstallReferrer> =
       yield call(getInstallReferrer);
 
+    yield take(AppCommonActions.UPDATE_SPLASH_VISIBLE_STATE.HIDE.type);
+    yield delay(1000);
+
+    Alert.alert('install ref', referrerParams ?? '');
     if (referrerParams) {
       const referrer = new URLSearchParams(
         decodeURIComponent(referrerParams),
@@ -41,8 +40,8 @@ export function* getInstallReferrerSaga() {
       AccountActions.SET_INSTALL_REFERRER.STATE.create({installReferrer: ''}),
     );
   } catch (error) {
-    yield put(
-      AccountActions.SET_INSTALL_REFERRER.STATE.create({installReferrer: ''}),
-    );
+    // @ts-ignore
+    Alert.alert('install ref', error.message ?? '');
+    logError(error);
   }
 }
