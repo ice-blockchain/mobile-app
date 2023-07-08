@@ -30,11 +30,14 @@ export function* getInstallReferrerSaga() {
           installReferrer: decodeURIComponent(referrer),
         }),
       );
-      return;
+    } else {
+      yield put(
+        AccountActions.SET_INSTALL_REFERRER.STATE.create({installReferrer: ''}),
+      );
     }
-
-    AccountActions.SET_INSTALL_REFERRER.STATE.create({installReferrer: ''});
   } catch (error) {
-    AccountActions.SET_INSTALL_REFERRER.STATE.create({installReferrer: ''});
+    yield put(
+      AccountActions.SET_INSTALL_REFERRER.STATE.create({installReferrer: ''}),
+    );
   }
 }

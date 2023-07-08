@@ -71,5 +71,8 @@ export const authWatchers = [
     ],
     getAuthConfigSaga,
   ),
-  takeLatest(AppCommonActions.APP_LOADED.STATE.type, getInstallReferrerSaga),
+  takeLatest(
+    AppCommonActions.APP_INITIALIZED.SUCCESS.type,
+    getInstallReferrerSaga,
+  ),
 ];

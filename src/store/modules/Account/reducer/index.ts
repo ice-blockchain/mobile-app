@@ -33,6 +33,7 @@ type Actions = ReturnType<
   | typeof AccountActions.GET_ACCOUNT.SUCCESS.create
   | typeof AccountActions.SET_PRIVACY_INFO_SHOW.STATE.create
   | typeof AccountActions.GET_AUTH_CONFIG.SUCCESS.create
+  | typeof AccountActions.SET_INSTALL_REFERRER.STATE.create
 >;
 
 const INITIAL_STATE: AccountState = {
@@ -71,6 +72,9 @@ function reducer(state = INITIAL_STATE, action: Actions): AccountState {
         break;
       case AccountActions.GET_AUTH_CONFIG.SUCCESS.type:
         draft.authConfig = action.payload.config;
+        break;
+      case AccountActions.SET_INSTALL_REFERRER.STATE.type:
+        draft.installReferrer = action.payload.installReferrer;
         break;
       case AccountActions.SIGN_OUT.SUCCESS.type: {
         return {
