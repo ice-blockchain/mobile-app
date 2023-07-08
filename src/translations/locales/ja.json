@@ -1,787 +1,841 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "iceへようこそ",
+      "description": "[[:ice]] はお手持ちのスマートフォンで手軽に獲得できるデジタル通貨です。あなたのように毎日スマートフォンを使うユーザーによって保有され、運営されています。"
     },
     "page2": {
-      "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "title": "地球にやさしい",
+      "description": "[[:ice]] には「プルーフ・オブ・ステーク」というコンセンサスメカニズムが採用されています。その結果、本質的にBTCよりもエネルギー効率が高くなります。プルーフ・オブ・ステーク(POS)では、バリデータがステーキングしたコインの量に基づいて、仮想通貨保有者がブロックトランザクションを検証します。"
     },
     "page3": {
-      "title": "People’s Coin",
-      "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "title": "みんなのコイン",
+      "description_part1": "ユーザーであるあなたにも、iceの未来を変える力が与えられます。",
+      "description_part2": "私たちが[[:ice]]で開発しているものは全てオープンソースであり、分散型自律組織(DAO)によって管理されます。"
     },
     "page4": {
-      "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "title": "いつもそばに",
+      "description": "[[:iceLogo]]をタップして、エネルギー消費量の少ない無料アプリから毎日チェックイン。毎日タップすることで、ロボットではなく、本物の人間の手にiceが渡ります。"
     },
     "page5": {
-      "title": "Refer & Earn",
-      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
+      "title": "紹介して、獲得しよう",
+      "description": "友達を招待しましょう。招待された友達がチームに参加するごとに、あなたと紹介されたメンバーの両方に、基本収益率に25％のボーナスが付与されます。"
     },
     "page6": {
-      "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
-      "description_part2": "Don’t worry, we will not spam you!",
-      "not_now": "Not now"
+      "title": "通知",
+      "description_part1": "[[:ice]] チェックインセッションは24時間のみ持続します。現在のセッションが終了したときに通知を受け取りますか？",
+      "description_part2": "スパムメールは送信されませんので、ご安心ください。",
+      "not_now": "いいえ"
     }
   },
   "button": {
-    "yes_btn": "Yes, please",
-    "next_btn": "Next",
-    "not_now": "Not now",
-    "view_all": "view all",
+    "yes_btn": "はい",
+    "next_btn": "次",
+    "not_now": "あとで",
+    "view_all": "全てを表示",
     "invite_friend": {
-      "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "title": "友達を招待",
+      "description": "友達を招待して、追加で [[:ice]]を獲得しましょう。"
     },
-    "no": "No",
-    "search_country": "Search for country",
-    "save": "Save",
-    "yes": "Yes",
-    "change": "Change",
-    "no_cancel": "No, cancel",
-    "complete": "Complete",
-    "cancel": "Cancel",
-    "clear": "Clear",
-    "finish": "Finish",
-    "next_step": "Next Step",
-    "see_all": "see all",
-    "back": "Back",
-    "search": "Search",
-    "continue": "Continue",
-    "apply": "Apply",
-    "reset": "Reset",
-    "skip_all": "Skip all",
-    "done": "Done",
-    "confirm": "Confirm",
-    "do_this_later": "Do this later",
-    "resurrect_me": "Resurrect Me",
-    "claim_bonus": "Claim Bonus",
-    "close": "Close",
-    "try_again": "Try Again",
-    "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "see_all": "全て見る",
+    "no": "いいえ",
+    "search_country": "国を検索",
+    "save": "保存",
+    "yes": "はい",
+    "change": "変更",
+    "no_cancel": "いいえ、キャンセルします",
+    "complete": "完了",
+    "cancel": "キャンセル",
+    "clear": "消去",
+    "finish": "終了",
+    "next_step": "次のステップ",
+    "back": "戻る",
+    "search": "検索",
+    "continue": "続ける",
+    "apply": "適用",
+    "reset": "リセット",
+    "skip_all": "全てスキップ",
+    "done": "完了",
+    "confirm": "確認",
+    "do_this_later": "あとでする",
+    "resurrect_me": "復活させる",
+    "claim_bonus": "ボーナスをもらう",
+    "close": "閉じる",
+    "try_again": "再試行",
+    "view_changelog": "変更履歴を見る",
+    "disable": "無効にする",
+    "agree": "同意",
+    "learn_more": "さらに詳しく",
+    "back_to_login": "ログインに戻る",
+    "follow_us": "アカウントをフォロー",
+    "subscribe": "チャンネル登録"
   },
   "team": {
-    "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
+    "contacts_tab": "連絡先",
+    "tierOne_tab": "Tier1",
+    "tierTwo_tab": "Tier2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "title": "現在、[[:title]]紹介者はいません。",
+      "contacts": "現在、電話帳に連絡先がありません。",
+      "button_title": "友達を招待"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
-      "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_title": "[[:ice]] 友達と一緒ならもっと楽しめます",
+      "empty_button_title": "連絡先へのアクセスを許可",
+      "empty_description": "連絡先を同期して、誰がすでに[[:ice]]を使っているか見てみましょう。近い将来、連絡先にiceを送ることができるようになります。"
     },
     "header": {
-      "search_placeholder": "Search for users",
-      "referrals": "Referrals",
-      "earnings": "Earnings"
+      "search_placeholder": "ユーザー検索",
+      "referrals": "紹介者",
+      "earnings": "収益"
     },
     "confirm_code": {
-      "title": "Confirm Code",
-      "description": "Please enter the confirmation code you have received on your phone.",
-      "placeholder": "Enter the code",
-      "button": "Confirm your code now"
+      "title": "コード認証",
+      "description": "スマートフォンに送られた認証コードを入力してください。",
+      "placeholder": "コードを入力",
+      "button": "今すぐコードを認証"
     },
     "confirm_phone": {
-      "title": "Confirm Phone",
-      "description": "Please confirm your country code and enter your phone number."
+      "title": "電話番号認証",
+      "description": "国番号を確認し、電話番号を入力してください。"
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "friends"
+        "friends": "友達"
       },
-      "all_contacts": "All contacts",
-      "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "all_contacts": "全ての連絡先",
+      "invite": "招待",
+      "invitation_text": "{{name}}さん、こんにちは。一緒にiceをしてみませんか？"
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier 1 Earnings"
+        "title_earnings": "Tier1収益"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier 2 Earnings"
+        "title_earnings": "Tier2収益"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
-    "welcome": "Welcome to ice",
-    "email": "Email",
-    "slogan": "Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "logInSignUp": "ログイン/新規登録",
+    "phone": "電話番号",
+    "or": "もしくは",
+    "reset_password": "パスワードをリセット",
+    "welcome": "iceへようこそ",
+    "email": "メール",
+    "slogan": "グローバル通貨リセット",
+    "privacy": "続行すると、弊社の[[:link]]サービス利用規約[[/:link]]と[[:link]]プライバシー ポリシー[[/:link]]に同意したとみなされます。"
   },
   "claimUsername": {
-    "title": "Claim nickname",
-    "description": "Your friends will need to use this nickname to join your team",
-    "inputPlaceholder": "Enter your nickname",
-    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
-    "note_part2": "Example:",
+    "title": "ニックネームの登録",
+    "description": "友達があなたのチームに参加するには、このニックネームを使用する必要があります。",
+    "inputPlaceholder": "ニックネームを入力",
+    "note_part1": "ニックネームを作成に使用できるのは、文字、数字、ピリオドのみです。",
+    "note_part2": "例：",
     "note_example": "your.name01"
   },
   "whoInvitedYou": {
-    "title": "Who invited you?",
-    "description": "Enter the nickname of the person who invited you",
-    "inputPlaceholder": "Enter nickname",
-    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
-    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+    "title": "誰に招待されましたか？",
+    "description": "あなたを招待した人のニックネームを入力してください。",
+    "inputPlaceholder": "ニックネームを入力",
+    "dontHaveInvitationCode": "このステップを完了すれば、あなたとお友達が同時にチェックインした際に、基本収益率に25％のボーナスが付与されます。",
+    "dontHaveCodeTip": "招待コードをお持ちでない場合、ランダムに選ばれたメンバーが紹介者となります。"
   },
   "errors": {
-    "nicknameSize": "Nickname size: 4-20 characters.",
-    "removeInvalidCharacters": "Remove invalid characters.",
-    "validation_error": "Some validation error",
-    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
-    "wrong_phone_number": "Invalid phone number, please try again",
-    "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken",
-    "phone_number_already_in_use": "Phone number already in use",
-    "invalid_validation_code": "Invalid code number, please try again!",
-    "validation_expired": "Validation expired",
-    "validation_not_found": "Validation not found",
-    "invalid_email": "Invalid email",
-    "invalid_ref_username": "Nickname is invalid.",
-    "invalid_phone": "Invalid phone number",
-    "user_disabled": "User has been disabled",
-    "expired_action_code": "OTP in email link is expired",
-    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
-    "invalid_credential": "The credential is malformed or has expired",
-    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
-    "user_not_found_for_email": "There is no user corresponding to the given email",
-    "user_not_found": "User not found",
-    "auth_in_progress": "Sign-In already in progress",
-    "google_play_services_not_available": "Google Play services are not available on the device",
-    "unknown_error_with_code": "Unknown error {{code}}",
-    "no_such_provider": "You do not have this provider linked",
-    "min_username": "Minimum length is 4 characters.",
-    "max_username": "Maximum length is 30 characters.",
-    "code_expired": "The code has expired. Please ask for a new code.",
-    "too_many_requests": "Too many requests. Please try again later.",
-    "network_error_title": "No internet connection",
-    "network_error_message": "Your device does not have any active internet connection",
-    "unknown_error": "Some error occurred, please try again later",
-    "general_error_title": "Oups...",
-    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
-    "general_network_error": "A network error has occurred. Please check your connection.",
-    "credential_already_in_use": "This credential is already associated with a different user account.",
-    "email_already_in_use": "The email address is already in use by another account.",
-    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
-    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "nicknameSize": "ニックネーム文字数：4～20文字",
+    "removeInvalidCharacters": "無効な文字列を削除してください。",
+    "validation_error": "認証エラーが発生しました。",
+    "multiple_accounts": "メールアドレスもしくは電話番号が別のアカウントに関連付けられています。該当する別のアカウントにログインして、あなたが所有するアカウントであることを証明してください。その後、ログアウトしてこのアカウントに再度ログインしてください。別のアカウントをお持ちでない場合、またはログインできない場合は、サポートまでお問い合わせください。",
+    "wrong_phone_number": "登録されていない電話番号です。もう一度やり直してください。",
+    "invalid_username": "登録されていないニックネームです。",
+    "email_already_taken": "このメールアドレスはすでに登録されています。",
+    "phone_number_already_taken": "この電話番号はすでに登録されています。",
+    "invalid_validation_code": "登録されていないコード番号です。もう一度やり直してください。",
+    "validation_expired": "認証期限切れ",
+    "validation_not_found": "認証が確認できません",
+    "invalid_email": "登録されていないメールアドレスです。",
+    "invalid_password": "登録されていないパスワードです。",
+    "invalid_ref_username": "登録されていないニックネームです。",
+    "invalid_phone": "登録されていない電話番号です。",
+    "user_disabled": "ユーザーが無効化されました。",
+    "expired_action_code": "メールに記載されたOTPの有効期限が切れています。",
+    "account_exists_with_different_credential": "既にこの情報によって認証されたメールアドレスを持つアカウントが存在します。",
+    "invalid_credential": "認証情報の形式が間違っているか、有効期限が切れています。",
+    "operation_not_allowed": "認証情報に対応するアカウントのタイプが有効になっていません。",
+    "user_not_found_for_email": "指定されたメールアドレスに対応するユーザーは存在しません。",
+    "user_not_found": "ユーザーが見つかりません。",
+    "auth_in_progress": "サインインはすでに行われています。",
+    "google_play_services_not_available": "このデバイスではGoogle Playのサービスは利用できません。",
+    "unknown_error_with_code": "不明なエラー： {{code}}",
+    "no_such_provider": "このプロバイダーはリンクされていません。",
+    "min_username": "4文字以上で入力してください。",
+    "max_username": "30文字以下で入力してください。",
+    "code_expired": "コードの有効期限が切れています。新しいコードをリクエストしてください。",
+    "too_many_requests": "リクエストが集中しています。後でもう一度お試しください。",
+    "network_error_title": "インターネット接続がありません",
+    "network_error_message": "お使いのデバイスはインターネットに接続されていません。",
+    "unknown_error": "エラーが発生しました。後でもう一度お試しください。",
+    "general_error_title": "おっと...",
+    "general_error_message": "問題が発生したようです。現在、弊社のチームが問題の解決に向けて作業を行なっています。",
+    "general_network_error": "ネットワークエラーが発生しました。インターネットに接続されていることを確認してください。",
+    "credential_already_in_use": "これらの認証情報はすでに別のユーザーアカウントに関連付けられています。",
+    "email_already_in_use": "このメールアドレスはすでに別のアカウントで使用されています。",
+    "user_token_expired": "認証情報が無効になりました。再度サインインしてください。",
+    "requires_recent_login": "この手続きには個人情報が含まれるため、最近の認証が必要です。再度サインインしてください。",
+    "same_email": "同じメールアドレスを使用することはできません。",
+    "weak_password": "パスワードが脆弱です。",
+    "wrong_password": "パスワードが違います。",
+    "no_camera_permissions": "カメラの使用が許可されていません。",
+    "no_library_permissions": "ライブラリへのアクセスが許可されていません。"
   },
   "profile": {
     "my_roles": {
-      "title": "My Role"
+      "title": "現在の役職"
     },
-    "mining_calculator": "earnings calculator",
-    "invite_friends": "Invite Friends",
-    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
-    "global_rank": "global rank",
-    "view_all_roles": "view all roles",
-    "data_is_hidden": "data is hidden",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "収益換算",
+    "invite_friends": "友達を招待",
+    "invite_friends_engage": "情報を広めて、友達を招待しましょう。紹介者が多ければ多いほど、たくさん収益がもらえます。",
+    "global_rank": "グローバルランク",
+    "view_all_roles": "全ての役職を見る",
+    "data_is_hidden": "データは公開されていません",
+    "progress_text": "{{value}} の {{total}}",
     "not_found": {
-      "title": "User was not found",
-      "description": "oops, we couldn't find this user"
+      "title": "ユーザーが見つかりません",
+      "description": "このユーザーは見つかりませんでした。"
     },
     "my_badges": {
-      "title": "My Badges"
+      "title": "所有バッジ"
     },
     "badges": {
-      "title": "Badges"
+      "title": "バッジ"
     },
     "roles": {
-      "title": "Roles"
+      "title": "役職"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "コイン",
+        "description": "コイン"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "ソーシャル",
+        "description": "友達"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "レベル",
+        "description": "レベル"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update",
-    "comingSoon": "Coming soon",
+    "level": "レベル",
+    "referrals": "紹介者",
+    "coin": "コイン",
+    "social": "ソーシャル",
+    "phone_number": "電話番号",
+    "years": "年",
+    "of": "の",
+    "attention": "注意",
+    "email_address": "メールアドレス",
+    "password": "パスワード",
+    "data_hidden": "データは公開されていません",
+    "pull_to_refresh": "引っ張って更新",
+    "comingSoon": "近日更新",
     "date": {
-      "today": "Today"
+      "today": "今日"
     }
   },
   "mining_calculator": {
-    "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "result_label": "以下の収益が手に入ります：",
+    "active_inviter": "アクティブな紹介者",
+    "tier_1_ref": "Tier1紹介者",
+    "tier_2_ref": "Tier2紹介",
+    "active_miners": "アクティブな紹介者"
   },
   "home": {
     "wallet": {
-      "title": "WALLET",
-      "rate": "EARNING RATE",
-      "balance": "CURRENT BALANCE"
+      "title": "ウォレット",
+      "rate": "収益率",
+      "balance": "現在の残高"
     },
     "pioneer": {
-      "title": "PIONEER",
-      "rank": "GLOBAL RANK",
-      "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "rank": "グローバルランク",
+      "referrals": "紹介者",
+      "description": "ユーザーを紹介すればするほど、たくさんの[[:ice]]がもらえます。"
     },
     "referrals": {
-      "title": "REFERRALS",
-      "description": "Referral stats for the previous 5 days",
-      "no_referrals_description": "You don't have any referrals yet",
-      "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "title": "紹介者",
+      "description": "過去5日間の紹介者統計です。",
+      "no_referrals_description": "現在、紹介者はいません。",
+      "users_tier_1": "Tier1ユーザー",
+      "users_tier_2": "Tier2ユーザー"
     },
     "adoption": {
-      "title": "ADOPTION",
-      "level": "level",
-      "users": "\nusers"
+      "title": "採用",
+      "level": "レベル",
+      "users": "ユーザー"
     },
-    "steps": {
-      "title": "Your progress",
-      "description": "Complete the tasks below and level up!",
-      "step_one": {
-        "title": "Claim your nickname",
-        "description": "Set it and start earning from your invite"
+    "tasks": {
+      "achievements": "実績",
+      "title": "進捗状況",
+      "description": "以下のタスクをこなしてレベルアップを目指そう！",
+      "completed": {
+        "title": "おめでとうございます",
+        "description": "毎日チェックインして、さらなる報酬を獲得しよう！"
       },
-      "step_two": {
-        "title": "Start mining",
-        "description": "Your first mining session"
+      "popup": {
+        "title": "Telegramチャンネルに参加しましょう",
+        "description": "Telegramで使用するニックネームを入力してください。",
+        "placeholder": "ニックネーム"
       },
-      "step_three": {
-        "title": "Profile picture",
-        "description": "Upload your profile image"
+      "claim_username": {
+        "title": "ニックネームの登録",
+        "description": "ニックネームを設定し、友達と共有しましょう。"
       },
-      "step_four": {
-        "title": "Join Telegram",
-        "description": "Be part of our community and join now"
+      "start_mining": {
+        "title": "収益を増やそう",
+        "description": "最初のチェックインセッションです。"
       },
-      "step_five": {
-        "title": "Follow us on Twitter",
-        "description": "Let’s keep in touch, follow us on twitter"
+      "upload_profile_picture": {
+        "title": "プロフィール写真",
+        "description": "プロフィール写真をアップロードしてください。"
       },
-      "step_six": {
-        "title": "Invite 5 Friends",
-        "description": "Create your team and increase your earnings"
+      "join_telegram": {
+        "title": "Telegramに参加する",
+        "description": "私たちのコミュニティに参加しませんか。"
+      },
+      "follow_us_on_twitter": {
+        "title": "Twitterでフォローする",
+        "description": "私たちのTwitterアカウントをフォローしてください。"
+      },
+      "invite_friends": {
+        "title": "友達を5人招待",
+        "description": "チームを成長させて、収益を増やしましょう。"
       }
     },
     "overview": {
-      "title": "Overview"
+      "title": "概要"
     },
     "menu": {
-      "notifications": "Notifications",
-      "staking": "Staking",
-      "stats": "Stats",
-      "help": "Help"
-    },
-    "tasks": {
-      "title": "ACHIEVEMENTS"
+      "notifications": "通知",
+      "staking": "ステーキング",
+      "stats": "成績",
+      "help": "ヘルプ"
     },
     "team": {
-      "title": "Team",
-      "view_team": "view team"
+      "title": "チーム",
+      "view_team": "チームを表示"
     },
     "mining_rate": {
-      "title": "EARNING RATE",
-      "base": "Base"
+      "title": "収益率",
+      "base": "ベース"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
-      "streak": "STREAK",
-      "days_off": "DAYS OFF"
+      "title": "エンゲージメント",
+      "description_part1": "ストリークとは連続してチェックインした日数を指します。",
+      "description_part2": "6日間連続でチェックインするごとに、1日の休日が与えられます。",
+      "streak": "ストリーク",
+      "days_off": "休日"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "設定",
+    "profile": "プロフィール",
+    "legal": "法的情報",
+    "support": "サポート",
+    "personal_information_title": "個人情報",
+    "personal_information_description": "プロフィール詳細を管理できます。",
+    "notifications_title": "通知",
+    "notifications_description": "ここで通知を管理できます。",
+    "push_notifications_title": "プッシュ通知",
+    "push_notifications_description": "プッシュ通知設定をカスタマイズします。",
+    "email_notifications_title": "メール通知",
+    "email_notifications_description": "メール通知設定をカスタマイズします。",
+    "terms_title": "利用規約",
+    "terms_description": "弊社の利用規約をご確認いただけます。",
+    "privacy_title": "プライバシーポリシー",
+    "privacy_description": "弊社のプライバシーポリシーをご確認いただけます。",
+    "feedback_title": "フィードバックを送信",
+    "feedback_description": "ご意見をお寄せください。",
+    "invite_title": "友達を招待",
+    "invite_description": "友達を招待して、追加でiceを獲得しましょう。",
+    "delete_title": "アカウントの消去",
+    "delete_description": "アカウントを消去します。",
+    "delete_confirmation_title": "本当にアカウントを消去しますか？",
+    "delete_confirmation_yes": "消去",
+    "logout_title": "ログアウト",
+    "logout_description": "サインオフして、一休みしましょう。",
+    "logout_confirmation_title": "本当にサインオフしますか？",
+    "logout_confirmation_yes": "ログアウト",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "新しい電話番号認証",
+      "description": "国番号を確認し、新しい電話番号を入力してください。",
+      "button": "新しい電話番号認証"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
-      "type_push": "PUSH",
-      "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
+      "enable_prompt": "通知が許可されていません。通知を許可しますか？",
+      "channel_achievements": "実績",
+      "channel_news": "ニュース",
+      "channel_reminders": "リマインダー",
+      "channel_team": "チーム",
+      "type_push": "プッシュ",
+      "type_email": "メール",
+      "disable_notifications": "通知を無効にしますか？",
+      "disable_notifications_description": "通知を無効にすると、チェックインを開始できるタイミングやニュース、チーム情報などの最新情報を受け取ることができなくなります。",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
+          "title": "週間成績",
+          "description": "アクティビティに関する通知を受け取ります。"
         },
         "weekly_report": {
-          "title": "Weekly report",
-          "description": "Receive notifications about your activity"
+          "title": "週間レポート",
+          "description": "アクティビティに関する通知を受け取ります。"
         },
         "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
+          "title": "実績",
+          "description": "進捗状況に関する通知を受け取ります。"
         },
         "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
+          "title": "プロモーション",
+          "description": "どのようにチームを成長させて、よりたくさんの収益を上げるかについての通知を受け取ります。"
         },
         "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
+          "title": "ニュース",
+          "description": "弊社チームからの通知を受け取ります。"
         },
         "micro_community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
+          "title": "マイクロコミュニティ",
+          "description": "自身のチームに関する通知を受け取ります。"
         },
         "daily_bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
+          "title": "デイリーボーナス",
+          "description": "デイリーボーナスに関する通知を受け取ります。"
         },
         "mining": {
-          "title": "Session status",
-          "description": "Receive notifications about your check-in activity"
+          "title": "セッションステータス",
+          "description": "チェックインアクティビティに関する通知を受け取ります。"
         },
         "system": {
-          "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "title": "システム",
+          "description": "iceアプリに関する重要な通知を受け取ります。"
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "言語設定",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "言語を変更",
+      "prompt": "この設定を適用すると、アプリが再起動します。"
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "プロフィール写真",
+    "inapp_privacy_title": "プライバシー",
+    "inapp_privacy_description": "ここで情報の管理を行うことができます。",
+    "developer": "デベロッパ",
+    "user_id": "ユーザーID",
+    "user_token": "ユーザートークン",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "写真を消去",
+      "edit": "プロフィール写真を編集",
+      "photo_gallery": "フォトギャラリー",
+      "camera": "カメラ"
     },
-    "confirm_email_confirmation_title": "Confirm email?",
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "メールアドレスに誤りはありませんか？",
+    "update_email_confirmation_title": "メールアドレスを更新しますか？",
+    "update_email_confirmation_subtitle": "メールアドレスを変更する場合は、再ログインが必要です。続行しますか？",
+    "unlink_logins_title": "ログイン連携解除",
+    "unlink_logins_description": "ここからログインの連携を解除することができます。"
   },
   "invite_share": {
-    "title": "Invite a friend",
+    "title": "友達を招待",
     "telegram": "Telegram",
     "twitter": "Twitter",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
-    "email": "Email",
-    "fb": "Newsfeed",
+    "email": "メール",
+    "fb": "ニュースフィード",
     "sms": "SMS",
-    "copy_link": "Copy link",
-    "more": "More",
-    "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "copy_link": "リンクをコピー",
+    "more": "詳細",
+    "copied": "コピーされました",
+    "share_message": "こんにちは☃️ スノーマンさん！iceで私のチームのメンバーになってくれませんか？登録時に次の紹介者コードを使うと、もれなくアイスコイン10枚をゲット：",
+    "share_subject": "iceでチームメンバーになる",
+    "description": "情報を広めて、友達を招待しましょう。新しく紹介した友達が参加するごとに、[[:ice]]がもらえます。",
+    "share": "シェア"
   },
   "users": {
-    "ping": "PING",
-    "active": "Active",
-    "inactive": "Inactive",
+    "ping": "連絡",
+    "active": "アクティブ",
+    "inactive": "非アクティブ",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T1": "Tier1",
+      "T2": "Tier2"
     }
   },
   "personal_information": {
-    "first_name": "First name",
-    "last_name": "Last name",
-    "country": "Country",
-    "city": "City",
-    "title": "Personal Information",
-    "phone": "Phone",
-    "email": "Email",
-    "username": "Nickname"
+    "first_name": "姓",
+    "last_name": "名",
+    "country": "国",
+    "city": "市",
+    "title": "個人情報",
+    "phone": "電話番号",
+    "email": "メールアドレス",
+    "username": "ニックネーム"
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
-      "length": "Nickname size: 4-20 characters.",
-      "invalid_characters": "Remove invalid characters.",
-      "not_found": "Nickname not found.",
-      "some_error": "Some error occurred.",
-      "refer_yourself": "You can't refer yourself"
+      "already_taken": "このニックネームはすでに使用されています。",
+      "length": "ニックネーム文字数：4～20文字",
+      "invalid_characters": "無効な文字列を削除してください。",
+      "not_found": "ニックネームが見つかりません。",
+      "some_error": "エラーが発生しました。",
+      "refer_yourself": "自分自身を紹介することはできません。"
     }
   },
   "staking": {
-    "time_left": "Time Left",
-    "mining_rate": "Earning Rate",
-    "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking Bonus",
-    "period_label": "Staked Period",
-    "title": "Pre-Staking",
-    "current_rate": "Current Rate",
-    "allocation": "Allocation",
-    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
-    "staking_terms": "Staking Terms",
-    "stake_now": "Pre-Stake Now!",
-    "balance_label": "Staked balance",
-    "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "time_left": "残り時間",
+    "mining_rate": "収益率",
+    "appeal": "収益率を向上させよう",
+    "benefits_description": "最長5年間、ice報酬を事前にステーキングすることができます。この場合、収益率は最大250%アップします。",
+    "bonus_label": "事前ステーキングボーナス",
+    "period_label": "保有期間",
+    "title": "事前ステーキング",
+    "current_rate": "現在のレート",
+    "allocation": "配当",
+    "description": "ステーキングとは、ブロックチェーンネットワークをサポートし、トランザクションを承認するために、暗号資産を投入するプロセスのことを指します。",
+    "terms_agree": " [[:ice]] [[:link]]ステーキング規約[[/:link]]に同意します。選択した期間中、保有するiceはロックされます。",
+    "stake_now": "今すぐ事前ステーキングをしよう！",
+    "balance_label": "ステーキングした通貨量",
+    "confirm_title": "事前ステーキングの確定",
+    "confirm_subtitle": "本当にコインの事前ステーキングを行いますか？一度確定すると取り消すことはできません。"
   },
   "stats": {
-    "header_title": "Stats",
-    "active": "Active users",
-    "total": "Total users",
-    "user_growth": "User growth",
-    "top_miners": "Top users",
-    "top_countries": "Top countries",
-    "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "header_title": "成績",
+    "active": "アクティブユーザー",
+    "total": "総ユーザー",
+    "user_growth": "ユーザー数の伸び",
+    "top_miners": "トップユーザー",
+    "top_countries": "上位国",
+    "online_miners": "オンラインユーザー",
+    "detailed_information": "詳細情報"
   },
   "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
+    "title": "アップデートしてください",
+    "description": "現在お使いのバージョンは最新ではありません。このまま使用するにはアップデートが必要です。",
+    "button_title": "今すぐアップデート"
   },
   "general": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
+    "good_morning": "おはようございます",
+    "good_afternoon": "こんにちは",
+    "good_evening": "こんばんは",
     "ice": "ice",
-    "ice_per_hour": "ice/h",
-    "seconds_short": "s",
-    "minutes_short": "m",
-    "hours_short": "h",
-    "days_short": "d"
+    "ice_per_hour": "ice/時",
+    "seconds_short": "秒",
+    "minutes_short": "分",
+    "hours_short": "時",
+    "days_short": "日"
   },
   "news": {
-    "news_feed": "News Feed",
-    "read_more": "Read more",
-    "views": "{{viewsCount}} views"
+    "news_feed": "ニュースフィード",
+    "read_more": "続きを読む",
+    "no_more_news": "これがニュースフィードの最後のエントリです。",
+    "views": "{{viewsCount}} 閲覧数"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
-    "nothing_is_found": "Nothing was found for your query",
-    "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "empty": "連絡先、iceフレンド、マイクロコミュニティのメンバーを検索しましょう。",
+    "nothing_is_found": "検索条件に該当するものは見つかりませんでした。",
+    "search_by_country": "国別検索",
+    "search_for_users": "ユーザー検索",
+    "loading": "検索中..."
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tap here to start your first check-in session",
-    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
-    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
-    "mining_holiday_active": "You are using a Day Off!"
+    "mining_inactive_tooltip": "最初のチェックインセッションを開始するにはここをタップしてください。",
+    "mining_reset_tooltip": "1秒間押すと、チェックインセッションが延長されます。",
+    "mining_holiday_reset_tooltip": "現在「休日」を利用しています。チェックインセッションを延長するには1秒間押してください。",
+    "mining_holiday_active": "現在「休日」を利用しています。"
   },
   "invite_friend": {
-    "invite_button": "Invite Friend",
-    "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "invite_button": "友達を招待",
+    "button_title": "友達を招待",
+    "description": "あなたの友達はまだ [[:ice]]に登録していません。招待状を送りましょう！"
   },
   "balance_history": {
-    "title": "Balance History",
-    "wallet": "Wallet",
-    "blockchain": "Blockchain",
-    "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
-    "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "title": "残高履歴",
+    "wallet": "ウォレット",
+    "blockchain": "ブロックチェーン",
+    "wallet_update_interval": "1時間ごとに更新",
+    "blockchain_update_interval": "24時間ごとに更新",
+    "list_end_label": "これが残高履歴の最後のエントリです。",
+    "no_data": "指定された期間に表示するデータがありません。"
   },
   "pop_up": {
-    "update_now": "Update Now",
-    "please_update": "Please Update",
-    "update_now_text": "You are using an old app version and need to update it in order to use it further",
-    "you_are_up_to_date": "You are up to date!",
-    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
-    "resurrection": "Resurrection",
-    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
-    "resurrection_warning": "You can only resurrect one time!",
-    "please_confirm": "Please confirm",
-    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "update_now": "今すぐアップデート",
+    "please_update": "アップデートしてください",
+    "update_now_text": "現在お使いのバージョンは最新ではありません。このまま使用するにはアップデートが必要です。",
+    "you_are_up_to_date": "最新の状態です。",
+    "up_to_date_text": "現在お使いのバージョンは最新です。以下のすべての変更点を確認してください。",
+    "resurrection": "復活",
+    "resurrection_message": "一度だけ、過去[[:period]]に失った[[:amount]]枚分のコインを取り戻すチャンスが与えられます。",
+    "resurrection_warning": "このチャンスを逃すと、復活させられる機会は二度とありません！",
+    "please_confirm": "ご確認ください",
+    "resurrection_no_confirm_message": "[[:amount]]枚のコインが永久に失われます。本当に続行しますか？",
+    "resurrection_yes_confirm_message": "このチャンスを逃すと、復活させられる機会は二度とありません！本当に続行しますか？[[:amount]]枚のコインは1時間以内に残高に戻ります。",
+    "delete_account_confirmation_title": "削除の確認",
+    "delete_account_confirmation_text": "アカウントを削除すると、iceの残高を含む全てのデータが永久に消去されます。続行しますか？"
   },
   "periods": {
-    "3_days": "3 days",
-    "7_days": "7 days",
-    "30_days": "30 days",
-    "1_day": "1 Day",
-    "1_week": "1 Week",
-    "1_month": "1 Month",
-    "90_days": "90 days",
-    "14_days": "14 days"
+    "3_days": "3日",
+    "7_days": "7日",
+    "30_days": "30日",
+    "1_day": "1日",
+    "1_week": "1週",
+    "1_month": "1ヶ月",
+    "90_days": "90日",
+    "14_days": "14日"
   },
   "notifications": {
-    "joined": " has joined your team",
-    "multiply": " and {{count}} others have joined your team",
-    "ping": " has pinged you, wake up!",
-    "delete": "Delete",
-    "add_notifications": "Add mocked notifications",
-    "no_notifications": "No notifications to display",
-    "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
-    "clear_title": "Clear all notifications?",
-    "title": "Notifications"
+    "joined": " がチームのメンバーになりました。",
+    "multiply": " チームメンバーが{{count}}人増えました。",
+    "ping": " から連絡が来ています、起きてください！",
+    "delete": "削除",
+    "add_notifications": "模擬通知を追加",
+    "no_notifications": "表示する通知がありません。",
+    "add_announcements": "模擬アナウンスメントを追加",
+    "add_both": "模擬通知とアナウンスメントを一緒に追加",
+    "clear_title": "全ての通知を消去しますか？",
+    "title": "通知"
   },
   "notification_feed_screen": {
-    "yesterday": "Yesterday",
-    "last_week": "Last Week",
-    "this_month": "This month",
-    "last_month": "Last Month",
-    "this_week": "This week"
+    "yesterday": "昨日",
+    "last_week": "先週",
+    "this_month": "今月",
+    "last_month": "先月",
+    "this_week": "今週"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to hide from public eyes"
+      "title": "1. プロフィール詳細",
+      "description": "非表示にするブロックをタップしてください。"
     },
     "step2": {
-      "description": "Tap on this block to hide it from public eyes",
-      "title": "2. Your Current Role"
+      "description": "このブロックを非表示にするにはタップしてください。",
+      "title": "2. 現在の役職"
     },
     "step3": {
-      "title": "3. Your Earned Badges",
-      "description": "Tap here to hide your badges from public eyes"
+      "title": "3. 獲得バッジ",
+      "description": "バッジを非表示にするにはここをタップしてください。"
     }
   },
   "confirm_email": {
-    "title": "Confirm your email",
-    "description": "Please enter your email address and we will send code ",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
-    "wrong_email": "Wrong email?",
-    "check_email": "Check your email",
-    "emailed_link_to": "We emailed a magic link to",
-    "link_instruction": "Click the link to log in or sign up.",
-    "modify_title": "Confirm New Email",
-    "modify_description": "Please enter your new email address"
+    "title": "メールアドレス認証",
+    "description": "コードを送信するメールアドレスを入力してください。",
+    "note": "5分以内にメールが届かない場合は、迷惑メールフォルダもご確認ください。",
+    "wrong_email": "メールアドレスが違いますか？",
+    "check_email": "メールを確認",
+    "emailed_link_to": "次のメールアドレスに魔法のリンクを送信しました：",
+    "emailed_steps_to": "次のメールアドレスに今後の手順を送信しました：",
+    "link_instruction": "ログインまたはサインアップするには、リンクをクリックしてください。",
+    "reset_link_instruction": "パスワードをリセットするには、リンクをクリックしてください。",
+    "modify_title": "新しいメールアドレス認証",
+    "modify_description": "新しいメールアドレスを入力してください。"
   },
   "invalid_link": {
-    "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "title": "無効なリンク",
+    "description": "リンクの有効期限が切れました。メールアドレスをもう一度入力してください。新しいリンクをお送りします。"
   },
   "confirm_code": {
-    "title": "Confirm code",
-    "description": "Please enter the code sent to",
-    "send_code_again": "Send code again",
-    "resend_time_label": "New code available in ",
-    "enter_code": "Enter the code",
-    "wrong_number": "Wrong number?"
+    "title": "コード認証",
+    "description": "送信されたコードを入力してください。",
+    "send_code_again": "コードを再送信",
+    "resend_time_label": "新しいコードをリクエストできるようになるまで残り： ",
+    "enter_code": "コードを入力",
+    "wrong_number": "番号が違いますか？"
   },
   "ice_bonus": {
-    "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
-    "balance_label": "Your current balance"
+    "title": "ウェルカム報酬",
+    "description": "おめでとうございます。最初の[[:value]][[:ice]]枚のコインを受け取りました。これは私たちが[[:bold]]あなた[[/:bold]]を[[:bold]]信頼[[/:bold]]している証です。",
+    "balance_label": "現在の残高"
   },
   "country_select": {
-    "title": "Select country"
+    "title": "国を選択"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "スノーマン",
+      "subtitle": "雪の帝国を築こう",
+      "description": "24時間ごとにチェックインすることは、iceネットワークへのコミットメントを表します。また、あなたがロボットではなく、人間であることの証明にもなります。"
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "アンバサダー",
+      "subtitle": "雪の帝国の統治者",
+      "description": "自身のチームメンバーが100人に達すると、アンバサダーへと昇格します。アンバサダーになると、新機能にいち早くアクセスすることができます。"
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirm Phone",
-    "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
-    }
+    "modify_title": "電話番号認証",
+    "modify_description": "国番号を確認し、電話番号を入力してください。",
+    "button": "国と電話番号を確認",
+    "same_phone_error": "同じ番号を使うことはできません。"
   },
   "date_select": {
-    "title": "Choose date"
+    "title": "日付を選択"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+      "readmore": {
+        "title": "続きを読む",
+        "description": "チームからの最新ニュースをご覧いただけます。記事全文を読むには、このボタンをタップしてください。"
       },
-      "step_2": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
-      },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
-      },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
-      },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
-      },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
-      },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
-      },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "releasednews": {
+        "title": "リリースされたニュース",
+        "description": "各ニュースのタイトルをタップすると、全文を読むことができます。ニュースや投票などの最新情報をお見逃しなく。"
       }
     },
     "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      "allow_contacts": {
+        "title": "連絡先へのアクセスを許可",
+        "description": "連絡先を同期して、誰がすでに[[:ice]]をやっているか見てみましょう。近い将来、連絡先に[[:ice]]を送ることができるようになります。"
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "confirm_phone": {
+        "title": "電話番号認証",
+        "description": "本人確認を行うと、あなたがiceネットワークのメンバーであることを連絡先に知らせることができます。この電話番号が他の第三者と共有されることはありません。"
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "contacts_list": {
+        "title": "連絡先リスト",
+        "description": "このリストには全ての連絡先が表示されています。すでに[[:ice]]ネットワークに参加している連絡先はリストの一番上に表示されます。"
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "referrals": {
+        "title": "紹介者",
+        "description": "ここでは自身の紹介者数を確認することができます。より多くの人を招待すればするほど、よりたくさんの収益を得ることができます。"
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earnings": {
+        "title": "収益",
+        "description": "現在の残高は1時間ごとに更新され、ここに表示されます。これには、Tier1とTier2の収益のほか、自身が直接獲得した収益とステーキング収益が含まれます。"
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "segmented_control_tier_one": {
+        "title": "Tier1",
+        "description": "ここではTier1紹介者のリストを確認することができます。同時にチェックインした友達1人につき、現在採用されている基本収益率に25％が上乗せされます。[[:link]]続きを読む[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "segmented_control_tier_two": {
+        "title": "第2段",
+        "description": "ここではTier2紹介者のリストを確認することができます。同時にチェックインした友達1人につき、現在採用されている基本収益率に5％が上乗せされます。[[:link]]続きを読む[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "active_users": {
+        "title": "アクティブユーザー",
+        "description": "あなたが紹介したメンバーのチェックインアクティビティの状況です。アクティブなチェックインセッションがあった場合、アクティブユーザーとしてカウントされます。"
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "tier_one_earnings": {
+        "title": "Tier1収益",
+        "description": "ここではTier1紹介者のリストを確認することができます。同時にチェックインしたメンバー1人につき、あなたと該当するメンバーの両方に現在採用されている基本収益率に25％が上乗せされます。"
+      },
+      "ping": {
+        "title": "連絡ボタン",
+        "description": "紹介したメンバーがチェックインセッションを開始するよう、通知してあげましょう。24時間ごとに各紹介者に1回ずつ通知を送ることができます。"
+      }
+    },
+    "home": {
+      "home": {
+        "title": "ホーム",
+        "description": "[[:ice]]にようこそ。ホーム画面では、自身の残高、現在の収益率、世界ランク、自身のチームに関する詳細を確認することができます。"
+      },
+      "invite": {
+        "title": "招待",
+        "description": "一人招待するごとに、あなたと招待されたメンバーの両方に、基本収益率に25％のボーナスが付与されます。より多くの人を招待すればするほど、よりたくさんの収入を得ることができます。"
+      },
+      "team": {
+        "title": "チーム",
+        "description": "[[:ice]] 友達と一緒ならもっと楽しめます。このページでは、Tier1とTier2の両レベルのチームメンバーのステータスを確認することができます。ここからも連絡を取ることができます。"
+      },
+      "news": {
+        "title": "ニュース",
+        "description": "ニュースや投票などの最新情報をお見逃しなく。私たちは分散型の自律組織であるため、ユーザーの皆様には将来の追加機能に関する投票に参加していただけます。"
+      },
+      "profile": {
+        "title": "プロフィール",
+        "description": "プロフィールの詳細をカスタマイズして、これまでに獲得した全ての実績とバッジを確認しましょう。ここで換算ツールを使えば、収益を見積もることができます。"
+      },
+      "earningicestart": {
+        "title": "iceを獲得する",
+        "description": "このボタンをタップすると、24時間ごとに[[:ice]]チェックインセッションを開始することができます。毎日忘れずにアクセスし、収入を増やしましょう！"
+      },
+      "earningiceseemore": {
+        "title": "iceを獲得する",
+        "description": "もう一度タップすると、現在のチェックインセッションの詳細が表示されます。"
+      },
+      "stats": {
+        "title": "成績",
+        "description": "成績ページでは、毎日チェックインした総ユーザー数とアクティブユーザー数に加え、上位国やユーザー数を見ることができます。"
+      },
+      "help": {
+        "title": "ヘルプ",
+        "description": "ご不明な点がおありですか？よくある質問のリストをご覧ください。お探しのものが見つからない場合は、hi@ice.ioまでお気軽にお問い合わせください。"
+      },
+      "preStaking": {
+        "title": "事前ステーキング",
+        "description": "収益報酬を事前にステーキングして、リターンを最大化しましょう。配当とステーキング期間を選択して、収益に加えてボーナスを受け取りましょう。"
+      },
+      "wallet": {
+        "title": "ウォレットカード",
+        "description": "現在の[[:ice]]残高ならびに収益率はこちらでご確認いただけます。自身のチームが紹介したメンバーがオンラインであればあるほど、収益率も高まります。"
+      },
+      "earning": {
+        "title": "収益カード",
+        "description": "最新の収益率とボーナスをお見逃しなく！このアプリでは、現在のレート、基本レートを始め、様々なアクティビティーのボーナスレートをご確認いただけます。"
+      },
+      "engagement": {
+        "title": "エンゲージメントカード",
+        "description": "チェックインセッションストリークと休日の記録を残しておきましょう！連続チェックインセッションの詳細や取得可能な休日の日数については、このセクションをご確認ください。"
+      },
+      "profilecard": {
+        "title": "プロフィールカード",
+        "description": "このカードを使えば、プロフィールのステータスを記録に残すことができます。自身の現在のグローバルランクに加え、役割、レベル、総紹介者数が表示されます。"
+      },
+      "referralscard": {
+        "title": "紹介者カード",
+        "description": "このカードをタップすると、Tier1とTier2の両段階の紹介者に関する、過去5日間の紹介者統計の推移を確認することができます。"
+      },
+      "adoptioncard": {
+        "title": "採用カード",
+        "description": "過去1週間のアクティブなスノーマンの平均をもとに、現在の[[:ice]]収益率を確認することができます。次の閾値に達した場合、収益率は半減します。"
+      },
+      "nickname": {
+        "title": "ニックネーム",
+        "description": "ニックネームは他の人々があなたを識別するためにあります。友達があなたのチームに参加するには、このニックネームを使用する必要があります。このショートカットを使って、自分のプロフィールを開くこともできます。"
+      },
+      "balancehistory": {
+        "title": "残高履歴",
+        "description": "ローカルウォレットとブロックチェーン上の現在の[[:ice]]残高を確認できます。ローカルウォレットの残高は1時間ごとに更新され、ブロックチェーンの残高は24時間ごとに更新されます。"
+      },
+      "achievements": {
+        "title": "実績",
+        "description": "以下のタスクをこなしてレベルアップを目指そう！最初のチェックインセッションを開始しましょう！"
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Unlink Logins",
-    "sessionName": "Login via {{providerName}}",
+    "title": "ログイン連携解除",
+    "sessionName": "次を経由して接続 {{providerName}}",
     "buttons": {
-      "currentSession": "Current session",
-      "endSession": "End Session",
-      "loginUnlinked": "Login Unlinked",
-      "sessionEnded": "Session Ended",
-      "unlink": "Unlink"
+      "currentSession": "現在のセッション",
+      "endSession": "セッションを終了する",
+      "loginUnlinked": "ログインの連携が解除されました",
+      "sessionEnded": "セッションが終了しました",
+      "unlink": "連携解除"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Unlink Login?",
-        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
+        "title": "ログインの連携を解除しますか？",
+        "message": "このデバイスでの{{providerName}}からのログインの連携を解除してもよろしいですか？"
       },
       "endSession": {
-        "title": "End Session?",
-        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
+        "title": "セッションを終了しますか？",
+        "message": "このデバイスでの{{providerName}}からのログインを終了してもよろしいですか？"
       }
     }
   },
@@ -792,12 +846,51 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Today’s Bonus",
-    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
-    "link": "Find out more",
-    "extra_message": "You have received your daily extra bonus on your earning rate",
-    "expired_title": "Bonus Expired",
-    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
-    "result_title": "Congratulations"
+    "claim_title": "今日のボーナス",
+    "claim_message": "今日のボーナスの時間です。下の[[:bold]]「ボーナスをもらう」[[/:bold]]ボタンをタップしてください。",
+    "link": "詳細はこちら",
+    "extra_message": "収益率に応じた特別デイリーボーナスを受け取りました。",
+    "expired_title": "ボーナスの期限が切れました",
+    "expired_message": "残念ながら、今日のボーナスは期限切れとなりました。次回の通知をお見逃しなく！",
+    "result_title": "おめでとうございます"
+  },
+  "early_access": {
+    "title": "早期アクセス",
+    "message_part1": "[[:bold]]正式リリースに先駆けて、 [[:bold]]ice[[/:bold]]アプリを体験してみませんか。[[/:bold]]",
+    "message_part2": "リリース日には全ての残高が0にリセットされます。しかしながら、自身のチームはそのまま維持されます。",
+    "message_part3": "皆様の日頃からの応援に心から感謝します。",
+    "checkbox_description": "了解このポップアップ広告を今後表示しない。"
+  },
+  "mining_notice": {
+    "title": "通知",
+    "message": "[[:bold]]iceにご関心をお寄せいただき、ありがとうございます！[[/:bold]] 現在、テクノロジー面での微調整中を行っている関係上、チェックインはご利用になれません。自身のチームを作り、マイクロコミュニティを成長させることに集中するチャンスです。",
+    "message_footer": "最新情報は[[:twitter]]Twitter[[/:twitter]]と[[:telegram]]Telegram[[/:telegram]]でお知らせします。"
+  },
+  "qr_code": {
+    "description": "チームのメンバーになるには、QRコードをスキャンしてください。"
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "TikTokアカウントをフォロー",
+      "description": "私たちの新しいTikTokコミュニティのことはもうご存知ですか？デジタル通貨「ice」について、楽しくてためになるコンテンツを共有しています。あなたも参加してみませんか？"
+    },
+    "youtube": {
+      "title": "Youtubeチャンネル登録",
+      "description": "iceの獲得方法に関するチュートリアルから、新機能に関する最新情報、さらには楽しいコミュニティコンテンツまで、YouTubeチャンネルは最新の情報をゲットするのにぴったりです。"
+    },
+    "linkedin": {
+      "title": "LinkedInコミュニティに参加",
+      "description": "LinkedInのiceコミュニティに参加すれば、最新の動向を知ることができるほか、あなたと同じようにデジタル通貨の未来に熱い思いを抱く人たちとつながることができます。"
+    },
+    "facebook": {
+      "title": "Facebookページをフォロー",
+      "description_part1": "ぜひ私たちFacebookページをフォローしてください。",
+      "description_part2": "iceのプロジェクトに関する全てのニュースを知ることができるだけでなく、私たちのコミュニティとつながり、会話に参加することができます。"
+    },
+    "instagram": {
+      "title": "Instagramアカウントをフォロー",
+      "description_part1": "Instagramをフォローすれば、あなたと同じくiceに熱い思いを抱いているユーザーとつながることができます。",
+      "description_part2": "さらに、新機能やキャンペーン情報もいち早くご案内します。"
+    }
   }
 }
