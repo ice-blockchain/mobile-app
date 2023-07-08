@@ -54,3 +54,6 @@ export const isPrivacyInfoShownSelector = (state: RootState) =>
 
 export const authConfigSelector = (state: RootState) =>
   state.account.authConfig;
+
+export const installReferrerSelector = (state: RootState) =>
+  state.account.installReferrer;

@@ -2,10 +2,12 @@
 
 import {AuthConfig} from '@api/auth/types';
 import {User} from '@api/user/types';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {SignInUserInfo} from '@services/auth/signin/types';
 import {AuthToken} from '@services/auth/types';
 import {AccountActions} from '@store/modules/Account/actions';
 import produce from 'immer';
+import {persistReducer} from 'redux-persist';
 
 export interface AccountState {
   isAdmin: boolean | null;
@@ -15,6 +17,7 @@ export interface AccountState {
   // data that is taken from the auth providers (google / apple etc)
   // and used to populate / suggest User profile later on
   userInfo: SignInUserInfo | null;
+  installReferrer: string | null;
   isPrivacyInfoShown: boolean;
   authConfig: AuthConfig | null;
 }
@@ -30,6 +33,7 @@ type Actions = ReturnType<
   | typeof AccountActions.GET_ACCOUNT.SUCCESS.create
   | typeof AccountActions.SET_PRIVACY_INFO_SHOW.STATE.create
   | typeof AccountActions.GET_AUTH_CONFIG.SUCCESS.create
+  | typeof AccountActions.SET_INSTALL_REFERRER.STATE.create
 >;
 
 const INITIAL_STATE: AccountState = {
@@ -38,6 +42,7 @@ const INITIAL_STATE: AccountState = {
   metadata: null,
   user: null,
   userInfo: null,
+  installReferrer: null,
   isPrivacyInfoShown: true,
   authConfig: null,
 };
@@ -68,6 +73,9 @@ function reducer(state = INITIAL_STATE, action: Actions): AccountState {
       case AccountActions.GET_AUTH_CONFIG.SUCCESS.type:
         draft.authConfig = action.payload.config;
         break;
+      case AccountActions.SET_INSTALL_REFERRER.STATE.type:
+        draft.installReferrer = action.payload.installReferrer;
+        break;
       case AccountActions.SIGN_OUT.SUCCESS.type: {
         return {
           ...INITIAL_STATE,
@@ -78,4 +86,11 @@ function reducer(state = INITIAL_STATE, action: Actions): AccountState {
   });
 }
 
-export const accountReducer = reducer;
+export const accountReducer = persistReducer(
+  {
+    key: 'account',
+    storage: AsyncStorage,
+    whitelist: ['installReferrer'],
+  },
+  reducer,
+);

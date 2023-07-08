@@ -150,6 +150,10 @@ const GET_AUTH_CONFIG = createAction('GET_AUTH_CONFIG', {
   FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
+const SET_INSTALL_REFERRER = createAction('SET_INSTALL_REFERRER', {
+  STATE: (payload: {installReferrer: string}) => payload,
+});
+
 export const AccountActions = Object.freeze({
   SET_TOKEN,
   SET_USER_METADATA,
@@ -168,4 +172,5 @@ export const AccountActions = Object.freeze({
   VERIFY_PHONE_NUMBER,
   SET_PRIVACY_INFO_SHOW,
   GET_AUTH_CONFIG,
+  SET_INSTALL_REFERRER,
 });
