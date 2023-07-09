@@ -93,6 +93,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     height: SEARCH_INPUT_HEIGHT,
-    ...font(16, 21, 'medium', 'primaryDark', isRTL ? 'right' : 'left'),
+    ...font(16, 18, 'medium', 'primaryDark', isRTL ? 'right' : 'left'),
   },
 });

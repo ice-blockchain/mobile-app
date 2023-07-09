@@ -54,10 +54,10 @@ const styles = StyleSheet.create({
   },
   info: {maxWidth: '90%'},
   title: {
-    ...font(16, 21, 'black', 'primaryDark'),
+    ...font(16, 19, 'black', 'primaryDark'),
     paddingBottom: rem(4),
   },
   description: {
-    ...font(14, 19, 'medium', 'secondary'),
+    ...font(14, 17, 'medium', 'secondary'),
   },
 });

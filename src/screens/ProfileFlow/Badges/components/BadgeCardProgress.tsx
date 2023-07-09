@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {useIsEnglishLocale} from '@hooks/useIsEnglishLocale';
 import {PeopleIcon} from '@svg/PeopleIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -14,7 +13,6 @@ type Props = {
 };
 
 export const BadgeProgress = ({value: progressValue}: Props) => {
-  const isEnglishLocale = useIsEnglishLocale();
   return (
     <View style={styles.container}>
       <View style={styles.labelContainer}>
@@ -24,14 +22,12 @@ export const BadgeProgress = ({value: progressValue}: Props) => {
           adjustsFontSizeToFit>
           {progressValue}%
         </Text>
-        {isEnglishLocale ? (
-          <Text
-            style={styles.percLabelText}
-            numberOfLines={2}
-            adjustsFontSizeToFit>
-            {t('global.of')}
-          </Text>
-        ) : null}
+        <Text
+          style={styles.percLabelText}
+          numberOfLines={2}
+          adjustsFontSizeToFit>
+          {t('global.of')}
+        </Text>
         <PeopleIcon />
       </View>
       <View style={styles.progressBody}>
@@ -55,11 +51,11 @@ const styles = StyleSheet.create({
   },
   percValueText: {
     marginRight: rem(6),
-    ...font(14, 19, 'bold', 'primaryDark'),
+    ...font(14, 17, 'bold', 'primaryDark'),
   },
   percLabelText: {
     flex: 1,
-    ...font(12, 16, 'medium', 'periwinkleGray', 'right'),
+    ...font(12, 15, 'medium', 'periwinkleGray', 'right'),
   },
   progressBody: {
     height: rem(8),

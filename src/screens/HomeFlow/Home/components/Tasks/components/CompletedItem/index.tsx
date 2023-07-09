@@ -97,11 +97,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    ...font(14, 19, 'black', 'primaryDark'),
+    ...font(14, 16.8, 'black', 'primaryDark'),
   },
   description: {
     marginTop: rem(4),
-    ...font(12, 16, 'medium', 'toreaBay'),
+    ...font(12, 14.4, 'medium', 'toreaBay'),
   },
   chevron: {
     marginLeft: rem(8),

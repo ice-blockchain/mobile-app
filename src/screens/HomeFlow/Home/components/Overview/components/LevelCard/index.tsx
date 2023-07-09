@@ -25,17 +25,16 @@ import {
   TextProps,
   View,
 } from 'react-native';
-import Animated from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 interface Props {
-  sharedIsCollapsed: Animated.SharedValue<number>;
+  isCollapsed: boolean;
   onLayout?: (event: LayoutChangeEvent) => void;
 }
 
 export const LevelCard = forwardRef(
-  ({sharedIsCollapsed, onLayout}: Props, forwardedRef: Ref<View>) => {
+  ({isCollapsed, onLayout}: Props, forwardedRef: Ref<View>) => {
     const userReferralCount = useSelector(userReferralCountSelector);
     const userId = useSelector(userIdSelector);
     const globalRank = useSelector(globalRankSelector(userId));
@@ -78,7 +77,7 @@ export const LevelCard = forwardRef(
         headerTitle={t(`roles.${roleType}.title`).toUpperCase()}
         headerTitleIcon={<PioneerIcon fill={COLORS.white} />}
         HeaderValue={Header}
-        sharedIsCollapsed={sharedIsCollapsed}>
+        isCollapsed={isCollapsed}>
         <View style={styles.body}>
           <View style={styles.column}>
             <Text style={styles.labelText}>{t('home.pioneer.referrals')}</Text>
@@ -99,17 +98,15 @@ export const LevelCard = forwardRef(
             )}
           </View>
         </View>
-        <View style={styles.bottomContainer}>
-          <Text style={styles.noteText}>
-            {replaceString(
-              t('home.pioneer.description'),
-              tagRegex('ice'),
-              (match, index) => (
-                <IceLabel key={match + index} iconSize={12} />
-              ),
-            )}
-          </Text>
-        </View>
+        <Text style={styles.noteText}>
+          {replaceString(
+            t('home.pioneer.description'),
+            tagRegex('ice'),
+            (match, index) => (
+              <IceLabel key={match + index} iconSize={12} />
+            ),
+          )}
+        </Text>
       </CardBase>
     );
   },
@@ -122,25 +119,20 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   column: {
+    paddingTop: rem(6),
     flex: 1,
-    justifyContent: 'flex-end',
-    borderWidth: 1, // needed to keep the text borders
-    borderColor: COLORS.transparent,
   },
   labelText: {
     opacity: 0.5,
-    ...font(10, 13, 'regular'),
+    ...font(10, 12, 'regular'),
   },
   valueText: {
     marginTop: rem(4),
-    ...font(24, 30, 'bold'),
-  },
-  bottomContainer: {
-    flexGrow: 1,
-    justifyContent: 'flex-end',
-    paddingBottom: rem(12),
+    ...font(24, 29, 'bold'),
   },
   noteText: {
-    ...font(11, 14, 'regular'),
+    marginTop: rem(6),
+    marginBottom: rem(12),
+    ...font(11, 13, 'regular'),
   },
 });

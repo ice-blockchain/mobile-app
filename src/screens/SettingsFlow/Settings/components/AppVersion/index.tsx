@@ -16,6 +16,6 @@ const styles = StyleSheet.create({
   titleText: {
     marginTop: rem(14),
     marginHorizontal: SCREEN_SIDE_OFFSET,
-    ...font(14, 19, 'semibold', 'secondary'),
+    ...font(14, 17, 'semibold', 'secondary'),
   },
 });

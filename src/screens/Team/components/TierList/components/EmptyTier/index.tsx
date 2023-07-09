@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     ...font(14, 24, 'bold', 'primaryDark'),
   },
   buttonText: {
-    ...font(14, 19, 'black', 'white'),
+    ...font(14, 17, 'black', 'white'),
   },
   button: {
     marginTop: rem(16),

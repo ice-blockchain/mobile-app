@@ -23,9 +23,9 @@ export const Description = ({email}: Props) => {
 
 const styles = StyleSheet.create({
   descriptionText: {
-    ...font(14, 19, 'medium', 'wildSand'),
+    ...font(14, 17, 'medium', 'wildSand'),
   },
   emailText: {
-    ...font(14, 19, 'bold', 'wildSand'),
+    ...font(14, 17, 'bold', 'wildSand'),
   },
 });

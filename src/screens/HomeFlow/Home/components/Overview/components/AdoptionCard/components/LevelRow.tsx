@@ -151,11 +151,11 @@ const styles = StyleSheet.create({
   },
   valueText: {
     minWidth: rem(44),
-    ...font(15, 20, 'medium', 'white', 'center'),
+    ...font(15, 18, 'medium', 'white', 'center'),
   },
   valueCurrencyText: {
     opacity: 0.8,
-    ...font(13, 17, 'regular', 'white', 'center'),
+    ...font(13, 16, 'regular', 'white', 'center'),
     marginLeft: -rem(2),
   },
   step: {
@@ -167,11 +167,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   stepValueText: {
-    ...font(15, 20, 'black', 'deepKoamaru'),
+    ...font(15, 18, 'black', 'deepKoamaru'),
   },
   stepLabelText: {
     opacity: 0.8,
-    ...font(13, 17, 'regular', 'deepKoamaru'),
+    ...font(13, 16, 'regular', 'deepKoamaru'),
   },
   iconContainer: {
     position: 'absolute',

@@ -4,7 +4,6 @@ import {ReferralType} from '@api/user/types';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
-import {useIsEnglishLocale} from '@hooks/useIsEnglishLocale';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {isRTL, t} from '@translations/i18n';
 import {formatNumberString} from '@utils/numbers';
@@ -17,7 +16,6 @@ type Props = {referralType: ReferralType};
 
 export const Earnings = forwardRef(
   ({referralType}: Props, forwardedRef: Ref<Text>) => {
-    const isEnglishLocale = useIsEnglishLocale();
     const balanceSummary = useSelector(balanceSummarySelector);
     const balance = balanceSummary?.[referralType === 'T1' ? 't1' : 't2'];
     const title =
@@ -26,15 +24,16 @@ export const Earnings = forwardRef(
         : t('team.tier_two.header_list.title_earnings');
     return (
       <View style={styles.container} ref={forwardedRef}>
-        {isEnglishLocale ? (
-          <Text style={styles.label}>{`${title}:`}</Text>
-        ) : null}
+        <Text style={styles.label}>{`${title}:`}</Text>
+
         {isRTL && <Text style={styles.value}> </Text>}
+
         <FormattedNumber
           bodyStyle={styles.value}
           decimalsStyle={styles.valueDecimals}
           number={balance ? formatNumberString(balance) : '0'}
         />
+
         {!isRTL && <Text style={styles.value}> </Text>}
 
         <IceLabel

@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   title: {
     paddingBottom: rem(6),
     marginBottom: rem(10),
-    ...font(14, 19, 'semibold', 'primaryDark'),
+    ...font(14, 17, 'semibold', 'primaryDark'),
   },
   header: {
     flexDirection: 'row',
@@ -60,6 +60,6 @@ const styles = StyleSheet.create({
     paddingTop: rem(10),
   },
   iceText: {
-    ...font(14, 19, 'heavy', 'primaryDark'),
+    ...font(14, 17, 'heavy', 'primaryDark'),
   },
 });

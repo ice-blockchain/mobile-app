@@ -15,15 +15,12 @@ import {TapIcon} from '@svg/TapIcon';
 import {mirrorTransform} from '@utils/styles';
 import React, {useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {useSharedValue} from 'react-native-reanimated';
 import {rem} from 'rn-units/index';
 
 export const useReferralsCardWalkthrough = () => {
   const referralsCardRef = useRef<View>(null);
 
   const {setWalkthroughElementData} = useSetWalkthroughElementData();
-
-  const sharedIsCollapsed = useSharedValue(0);
 
   const onReferralsCardLayout = () => {
     setWalkthroughElementData({
@@ -38,14 +35,8 @@ export const useReferralsCardWalkthrough = () => {
                 <FlipCard
                   disabled={false}
                   stylesContainer={styles.mainContainer}
-                  front={
-                    <ReferralsCard sharedIsCollapsed={sharedIsCollapsed} />
-                  }
-                  back={
-                    <ReferralAcquisitionHistory
-                      sharedIsCollapsed={sharedIsCollapsed}
-                    />
-                  }
+                  front={<ReferralsCard isCollapsed={false} />}
+                  back={<ReferralAcquisitionHistory isCollapsed={false} />}
                 />
                 <View style={styles.tapIconContainer} pointerEvents={'none'}>
                   <TapIcon pointerEvents={'none'} color={COLORS.white} />

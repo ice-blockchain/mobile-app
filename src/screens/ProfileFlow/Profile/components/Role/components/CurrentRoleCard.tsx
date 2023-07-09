@@ -126,11 +126,11 @@ const styles = StyleSheet.create({
     marginTop: rem(4),
   },
   titleText: {
-    ...font(20, 24, 'semibold'),
+    ...font(20, 21, 'semibold'),
   },
   descriptionText: {
     marginTop: rem(3),
-    ...font(12, 16, 'regular'),
+    ...font(12, 14.4, 'regular'),
   },
   arrowNext: {
     marginRight: rem(24),
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
   hiddenText: {
     marginLeft: rem(8),
     marginRight: rem(24),
-    ...font(14, 19, 'bold'),
+    ...font(14, 16.8, 'bold'),
   },
   innerContainer: {
     paddingTop: rem(28),

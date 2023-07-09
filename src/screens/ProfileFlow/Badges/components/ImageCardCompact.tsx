@@ -84,10 +84,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   titleText: {
-    ...font(16, 21, 'bold', 'primaryDark'),
+    ...font(16, 19, 'bold', 'primaryDark'),
   },
   descriptionText: {
-    ...font(12, 16, 'medium', 'secondary'),
+    ...font(12, 14.4, 'medium', 'secondary'),
     marginTop: rem(4),
   },
 });

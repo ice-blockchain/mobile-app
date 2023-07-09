@@ -49,6 +49,6 @@ const styles = StyleSheet.create({
   },
   labelText: {
     marginLeft: rem(12),
-    ...font(16, 21, 'regular'),
+    ...font(16, 20, 'regular'),
   },
 });

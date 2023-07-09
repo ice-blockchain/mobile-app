@@ -242,7 +242,7 @@ const styles = StyleSheet.create({
   },
   usernameText: {
     flexShrink: 1,
-    ...font(17, 22, 'semibold', 'primaryDark'),
+    ...font(17, 20.4, 'semibold', 'primaryDark'),
   },
   usernameTextMeasures: {
     position: 'absolute',

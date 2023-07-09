@@ -2,7 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {ArrowCircleDashed} from '@svg/ArrowCircleDashed';
-import {isRTL, t} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -30,9 +30,8 @@ const styles = StyleSheet.create({
   icon: {
     position: 'absolute',
     left: 0,
-    transform: [{scaleX: isRTL ? -1 : 1}],
   },
   labelText: {
-    ...font(13, 17, 'medium', 'periwinkleGray'),
+    ...font(13, 16, 'medium', 'periwinkleGray'),
   },
 });

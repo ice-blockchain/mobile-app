@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
   },
   resultValueText: {
     marginTop: rem(4),
-    ...font(28, 35, 'bold', 'white', 'center'),
+    ...font(28, 34, 'bold', 'white', 'center'),
   },
   sliderInfo: {
     marginTop: isAndroid ? rem(17) : rem(36),

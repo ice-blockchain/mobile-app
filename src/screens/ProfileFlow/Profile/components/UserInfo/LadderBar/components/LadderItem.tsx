@@ -98,7 +98,7 @@ export const LadderItem = memo(
 
 const styles = StyleSheet.create({
   outerContainer: {
-    padding: rem(4),
+    padding: rem(8),
     borderRadius: rem(16),
     width: LADDER_ITEM_WIDTH,
   },
@@ -107,6 +107,7 @@ const styles = StyleSheet.create({
   },
   container: {
     paddingVertical: rem(8),
+    paddingHorizontal: rem(10),
     borderRadius: rem(14),
     height: rem(61),
     justifyContent: 'flex-end',
@@ -130,18 +131,18 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: rem(4),
-    ...font(20, 25, 'bold'),
+    ...font(20, 24, 'bold'),
   },
   textPrivacyEdit: {
     marginTop: rem(4),
-    ...font(20, 25, 'bold', 'primaryDark'),
+    ...font(20, 24, 'bold', 'primaryDark'),
   },
   ladderLabelText: {
     marginHorizontal: rem(4),
-    ...font(10, 14, 'regular', 'periwinkleGray', 'center'),
+    ...font(10, 12, 'regular', 'periwinkleGray', 'center'),
   },
   ladderLabelTextPrivacyEdit: {
     marginHorizontal: rem(4),
-    ...font(10, 14, 'regular', 'periwinkleGray', 'center'),
+    ...font(10, 12, 'regular', 'periwinkleGray', 'center'),
   },
 });

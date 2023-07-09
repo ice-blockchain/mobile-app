@@ -70,26 +70,23 @@ export const Engagement = memo(({darkMode}: Props) => {
           </Text>
         </View>
       </View>
-      <View style={styles.descriptionContainer}>
-        <Text
-          style={[styles.description, darkMode && commonStyles.darkText]}
-          numberOfLines={3}>
-          {`${t('home.engagement.description_part1')} ${t(
-            'home.engagement.description_part2',
-          )}`}
-        </Text>
-      </View>
+      <Text
+        style={[styles.description, darkMode && commonStyles.darkText]}
+        numberOfLines={2}
+        adjustsFontSizeToFit>
+        {`${t('home.engagement.description_part1')}\n${t(
+          'home.engagement.description_part2',
+        )}`}
+      </Text>
     </View>
   );
 });
 
-const MARGIN = rem(30);
-
 const styles = StyleSheet.create({
   container: {
     backgroundColor: COLORS.transparent,
-    height: PAGE_HEIGHT + MARGIN,
-    marginBottom: -MARGIN,
+    height: PAGE_HEIGHT + rem(30),
+    marginBottom: -rem(30),
     alignItems: 'center',
   },
   titleContainer: {
@@ -97,8 +94,8 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   engagementText: {
-    marginTop: MARGIN,
-    ...font(12, 15, 'semibold'),
+    marginTop: rem(30),
+    ...font(12, 14, 'semibold'),
     marginLeft: rem(4),
   },
   engagement: {
@@ -111,14 +108,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  descriptionContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    marginHorizontal: rem(20),
-    marginBottom: MARGIN + rem(6),
-  },
   description: {
-    ...font(11, 14, 'regular', 'white', 'center'),
+    marginTop: rem(9),
+    marginHorizontal: rem(20),
+    ...font(11, 13, 'regular', 'white', 'center'),
   },
   valuesContainer: {
     flexDirection: 'row',
@@ -131,7 +124,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    ...font(12, 15, 'semibold'),
+    ...font(12, 14, 'semibold'),
   },
   value: {
     ...font(26, 31, 'semibold'),

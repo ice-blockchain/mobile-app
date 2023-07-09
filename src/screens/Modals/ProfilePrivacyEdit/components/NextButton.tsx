@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: rem(32),
   },
   text: {
-    ...font(17, 22, 'bold'),
+    ...font(17, 20.4, 'bold'),
   },
   arrow: {
     marginLeft: rem(12),

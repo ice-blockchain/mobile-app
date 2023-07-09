@@ -75,10 +75,10 @@ const styles = StyleSheet.create({
     marginLeft: rem(27),
   },
   popUpName: {
-    ...font(16, 21, 'bold', 'white'),
+    ...font(16, 19, 'bold', 'white'),
   },
   popUpPhone: {
-    ...font(14, 19, 'medium', 'white'),
+    ...font(14, 17, 'medium', 'white'),
     marginTop: rem(4),
   },
   chevron: {
@@ -88,6 +88,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   avatarText: {
-    ...font(17, 22, 'regular', 'white'),
+    ...font(17, 20, 'regular', 'white'),
   },
 });

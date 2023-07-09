@@ -2,10 +2,9 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {useIsEnglishLocale} from '@hooks/useIsEnglishLocale';
 import {font} from '@utils/styles';
 import React, {ReactNode} from 'react';
-import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
+import {StyleProp, StyleSheet, Text, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -20,7 +19,6 @@ type Props = {
 };
 
 export const Segment = ({segment, active, style, onPress}: Props) => {
-  const isEnglishLocale = useIsEnglishLocale();
   return (
     <Touchable
       key={segment.key}
@@ -29,17 +27,14 @@ export const Segment = ({segment, active, style, onPress}: Props) => {
       {typeof segment.renderText === 'function' ? (
         segment.renderText(active)
       ) : (
-        <View style={styles.textContainer}>
-          <Text
-            style={[
-              styles.text,
-              !isEnglishLocale ? styles.smallFont : null,
-              active ? styles.activeText : styles.inactiveText,
-            ]}
-            numberOfLines={2}>
-            {segment.text ?? ''}
-          </Text>
-        </View>
+        <Text
+          style={[
+            styles.text,
+            active ? styles.activeText : styles.inactiveText,
+          ]}
+          numberOfLines={2}>
+          {segment.text ?? ''}
+        </Text>
       )}
     </Touchable>
   );
@@ -50,25 +45,17 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-  },
-  textContainer: {
-    flex: 1,
-    paddingHorizontal: rem(4),
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingVertical: rem(8),
   },
   text: {
-    ...font(17, 22, 'semibold'),
-  },
-  smallFont: {
-    ...font(13, 18, 'semibold'),
+    marginVertical: rem(4),
+    ...font(17, 20, 'semibold'),
+    textAlign: 'center',
   },
   activeText: {
     color: COLORS.white,
-    textAlign: 'center',
   },
   inactiveText: {
     color: COLORS.secondary,
-    textAlign: 'center',
   },
 });

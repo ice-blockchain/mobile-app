@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   },
   taglineText: {
     marginTop: rem(8),
-    ...font(16, 21, 'medium', 'primaryDark', 'center'),
+    ...font(16, 20, 'medium', 'primaryDark', 'center'),
   },
   descriptionText: {
     marginTop: rem(14),

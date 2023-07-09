@@ -2,7 +2,6 @@
 
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import {useIsEnglishLocale} from '@hooks/useIsEnglishLocale';
 import {ITEM_LEFT_POSITION} from '@screens/HomeFlow/Home/components/Tasks/components/TaskItem';
 import {ProgressCircleSvg} from '@svg/ProgressCircle';
 import {t} from '@translations/i18n';
@@ -21,14 +20,11 @@ const PROGRESS_WIDTH = rem(4);
 
 export const ProgressItem = ({total, completed}: Props) => {
   const progressInPercent = (completed / total) * 100;
-  const isEnglishLocale = useIsEnglishLocale();
   return (
     <View style={styles.header}>
       <View style={[styles.amountWrapper, commonStyles.shadow]}>
         <Text style={styles.amountText}>{completed}</Text>
-        <Text style={styles.amountTextSmall}>
-          {isEnglishLocale ? t('global.of') : '/'}
-        </Text>
+        <Text style={styles.amountTextSmall}>{t('global.of')}</Text>
         <Text style={styles.amountText}>{total}</Text>
         <ProgressCircleSvg
           progress={progressInPercent}
@@ -38,7 +34,7 @@ export const ProgressItem = ({total, completed}: Props) => {
           style={styles.progress}
         />
       </View>
-      <View style={commonStyles.flexOne}>
+      <View>
         <Text style={styles.title}>{t('home.tasks.title')}</Text>
         <Text style={styles.description}>{t('home.tasks.description')}</Text>
       </View>
@@ -61,11 +57,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   amountText: {
-    ...font(12, 15, 'bold', 'primaryDark'),
+    ...font(12, 14, 'bold', 'primaryDark'),
   },
   amountTextSmall: {
     marginHorizontal: rem(2),
-    ...font(12, 15, 'regular', 'primaryDark'),
+    ...font(12, 14, 'regular', 'primaryDark'),
   },
   header: {
     flexDirection: 'row',
@@ -73,11 +69,11 @@ const styles = StyleSheet.create({
     marginBottom: rem(10),
   },
   title: {
-    ...font(14, 19, 'black', 'primaryDark'),
+    ...font(14, 17, 'black', 'primaryDark'),
   },
   description: {
     marginTop: rem(4),
-    ...font(12, 16, 'medium', 'toreaBay'),
+    ...font(12, 14, 'medium', 'toreaBay'),
   },
   progress: {
     position: 'absolute',

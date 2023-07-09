@@ -48,6 +48,6 @@ const styles = StyleSheet.create({
   },
   valueText: {
     paddingTop: rem(2),
-    ...font(15, 20, 'bold'),
+    ...font(15, 18, 'bold'),
   },
 });

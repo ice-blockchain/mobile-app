@@ -9,7 +9,6 @@ import {dayjs} from '@services/dayjs';
 import {ClockIcon} from '@svg/ClockIcon';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
 import {FireIcon} from '@svg/FireIcon';
-import {isRTL} from '@translations/i18n';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React from 'react';
@@ -46,22 +45,15 @@ export const HistoryListItem = ({balanceDiff, time}: Props) => {
         )}
       </View>
       <View style={styles.body}>
-        {!isRTL && (
-          <Text style={styles.adsDiffValueText}>
-            {balanceDiff.negative ? '-' : '+'}
-          </Text>
-        )}
+        <Text style={styles.adsDiffValueText}>
+          {balanceDiff.negative ? '-' : '+'}
+        </Text>
         <FormattedNumber
           number={formatNumberString(balanceDiff.amount)}
           bodyStyle={styles.adsDiffValueText}
           decimalsStyle={styles.adsDiffDecimalsText}
           trim
         />
-        {isRTL && (
-          <Text style={styles.adsDiffValueText}>
-            {balanceDiff.negative ? '-' : '+'}
-          </Text>
-        )}
         <IceLabel
           color={COLORS.primaryDark}
           iconSize={rem(14)}
@@ -119,14 +111,14 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.attention,
   },
   adsDiffValueText: {
-    ...font(17, 22, 'black', 'primaryDark'),
+    ...font(17, 21, 'black', 'primaryDark'),
   },
   adsDiffDecimalsText: {
     ...font(10, 12, 'bold', 'primaryDark'),
     marginRight: rem(4),
   },
   iceLabelText: {
-    ...font(17, 22, 'semibold', 'primaryDark'),
+    ...font(17, 21, 'semibold', 'primaryDark'),
   },
   relDiffText: {
     ...font(14, 20, 'medium', 'primaryLight'),

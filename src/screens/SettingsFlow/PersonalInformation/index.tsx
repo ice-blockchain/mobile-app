@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
   input: {
     // fix for RTL languages
     flex: isRTL ? 0 : 1,
-    ...font(16, 21, 'medium', 'primaryDark'),
+    ...font(16, 20, 'medium', 'primaryDark'),
   },
   button: {
     marginTop: rem(27),

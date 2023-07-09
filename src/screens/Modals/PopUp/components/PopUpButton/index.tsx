@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.attentionDark,
   },
   labelText: {
-    ...font(14, 19, 'black', 'white', 'center'),
+    ...font(14, 18, 'black', 'white', 'center'),
   },
   labelTextOutlined: {
     color: COLORS.secondary,

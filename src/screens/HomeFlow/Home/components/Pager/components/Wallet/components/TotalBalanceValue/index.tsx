@@ -57,7 +57,7 @@ export const TotalBalanceValue = ({style, darkMode}: Props) => {
 
 const styles = StyleSheet.create({
   bodyStyle: {
-    ...font(32, 40, 'black'),
+    ...font(32, 38.4, 'black'),
   },
 
   decimalsStyle: {

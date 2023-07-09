@@ -5,7 +5,6 @@ import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import {useIsEnglishLocale} from '@hooks/useIsEnglishLocale';
 import {Images} from '@images';
 import {ProfileTabStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -76,7 +75,6 @@ export const BadgeCard = memo(
     const total = lastIndex + 1;
 
     const progressValue = (value * 100) / total;
-    const isEnglishLocale = useIsEnglishLocale();
 
     return (
       <Touchable onPress={onBadgePress}>
@@ -118,14 +116,13 @@ export const BadgeCard = memo(
                   value={value}
                   style={styles.progressText}
                   textDecorator={animatedValue =>
-                    isEnglishLocale
-                      ? `${t('profile.progress_text', {
-                          value: formatNumber(animatedValue),
-                          total,
-                        })}`
-                      : `${formatNumber(animatedValue)} / ${total}`
+                    `${t('profile.progress_text', {
+                      value: formatNumber(animatedValue),
+                      total,
+                    })}`
                   }
                 />
+                <Text style={styles.progressText} />
               </View>
             </>
           )}
@@ -156,7 +153,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     marginHorizontal: rem(6),
-    ...font(14, 19, 'bold', 'primaryDark'),
+    ...font(14, 17, 'bold', 'primaryDark'),
   },
   progressHeader: {
     flexDirection: 'row',
@@ -167,14 +164,14 @@ const styles = StyleSheet.create({
     height: rem(92),
     width: rem(135),
     marginTop: -rem(25),
-    marginBottom: rem(10),
+    marginBottom: rem(15),
   },
   categoryText: {
     flex: 1,
-    ...font(12, 15, 'regular', 'primaryDark'),
+    ...font(12, 14, 'regular', 'primaryDark'),
   },
   progressText: {
-    ...font(12, 15, 'regular', 'periwinkleGray'),
+    ...font(12, 14, 'regular', 'periwinkleGray'),
   },
   progressBody: {
     height: rem(9),
@@ -182,7 +179,8 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.secondaryFaint,
     marginHorizontal: rem(10),
     alignSelf: 'stretch',
-    marginVertical: rem(10),
+    marginTop: rem(13),
+    marginBottom: rem(9),
   },
   progressValue: {
     height: rem(9),
@@ -191,6 +189,6 @@ const styles = StyleSheet.create({
   },
   hiddenText: {
     marginTop: rem(7),
-    ...font(14, 19, 'bold', 'secondary'),
+    ...font(14, 17, 'bold', 'secondary'),
   },
 });

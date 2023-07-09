@@ -3,7 +3,6 @@
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
-import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useCountdown} from '@hooks/useCountdown';
 import {
   DataCell,
@@ -27,11 +26,7 @@ import {StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-type Props = {
-  oneColumn?: boolean;
-};
-
-export const MiningInfo = ({oneColumn}: Props) => {
+export const MiningInfo = () => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
 
@@ -55,7 +50,7 @@ export const MiningInfo = ({oneColumn}: Props) => {
   }, [dispatch, isCountdownOver, navigation]);
 
   return (
-    <View style={[styles.container, oneColumn ? styles.column : null]}>
+    <View style={styles.container}>
       <DataCell
         icon={
           <ClockIcon
@@ -66,13 +61,8 @@ export const MiningInfo = ({oneColumn}: Props) => {
         }
         label={t('staking.time_left')}
         value={getDurationString(durationLeft)}
-        row={oneColumn}
       />
-      {oneColumn ? (
-        <View style={styles.columnSeparator} />
-      ) : (
-        <DataCellSeparator />
-      )}
+      <DataCellSeparator />
       <DataCell
         icon={
           <LogoIcon
@@ -94,7 +84,6 @@ export const MiningInfo = ({oneColumn}: Props) => {
           )
         }
         currency={<IceLabel color={COLORS.primaryDark} />}
-        row={oneColumn}
       />
     </View>
   );
@@ -104,20 +93,12 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: SCREEN_SIDE_OFFSET,
-  },
-  column: {
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    paddingLeft: SCREEN_SIDE_OFFSET,
-  },
-  columnSeparator: {
-    height: rem(16),
+    marginTop: rem(20),
   },
   valueText: {
-    ...font(17, 22, 'bold', 'primaryDark'),
+    ...font(17, 20, 'bold', 'primaryDark'),
   },
   valueDecimalsText: {
-    ...font(10, 14, 'bold', 'primaryDark'),
+    ...font(10, 12, 'bold', 'primaryDark'),
   },
 });

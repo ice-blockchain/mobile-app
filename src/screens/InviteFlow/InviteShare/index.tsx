@@ -7,7 +7,7 @@ import {commonStyles, windowWidth} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {InviteShareCard} from '@screens/InviteFlow/InviteShare/components/InviteShareCard';
-import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
+import {replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(28),
   },
   icon: {
-    marginLeft: isRTL ? 0 : ICON_LEFT_OFFSET,
+    marginLeft: ICON_LEFT_OFFSET,
     width: ICON_WIDTH,
     height: ICON_WIDTH * 0.858,
     marginTop: rem(17),

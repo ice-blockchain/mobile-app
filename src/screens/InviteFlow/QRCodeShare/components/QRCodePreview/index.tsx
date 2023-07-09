@@ -112,21 +112,21 @@ const styles = StyleSheet.create({
   },
   usernameText: {
     marginTop: rem(12) + AVATAR_SIZE / 2,
-    ...font(17, 22, 'semibold', 'black'),
+    ...font(17, 20.4, 'semibold', 'black'),
   },
   qrCode: {
     marginTop: rem(26),
   },
   descriptionText: {
     marginTop: rem(24),
-    ...font(14, 19, 'semibold', 'black'),
+    ...font(14, 16.8, 'semibold', 'black'),
   },
   iceLabel: {
     marginTop: rem(20),
     marginBottom: rem(12),
   },
   iceLabelText: {
-    ...font(28, 34, 'bold', 'black'),
+    ...font(28, 33, 'bold', 'black'),
   },
   privacyButton: {
     position: 'absolute',

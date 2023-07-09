@@ -67,18 +67,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   labelText: {
-    ...font(12, 16, 'semibold', 'white', 'center'),
+    ...font(12, 15, 'semibold', 'white', 'center'),
   },
   valueText: {
-    ...font(32, 40, 'black'),
+    ...font(32, 39, 'black'),
   },
   valueDecimalsText: {
-    ...font(18, 24, 'regular'),
+    ...font(18, 22, 'regular'),
   },
   iceLabel: {
     marginLeft: rem(4),
   },
   iceLabelText: {
-    ...font(24, 30, 'bold'),
+    ...font(24, 29, 'bold'),
   },
 });

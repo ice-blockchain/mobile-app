@@ -58,14 +58,10 @@ export const Copied = forwardRef<CopiedMethods>(
                 {
                   translateY: slideUpValue.interpolate({
                     inputRange: [0, 1],
-                    outputRange: [0, -COPIED_CONTAINER_HEIGHT],
+                    outputRange: [0, -rem(45)],
                   }),
                 },
               ],
-              opacity: slideUpValue.interpolate({
-                inputRange: [0, 1],
-                outputRange: [0, 1],
-              }),
             },
           ]}>
           <Text style={styles.text}>{t('invite_share.copied')}</Text>
@@ -75,8 +71,6 @@ export const Copied = forwardRef<CopiedMethods>(
   },
 );
 
-const COPIED_CONTAINER_HEIGHT = rem(20) * 2 + rem(12);
-
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
@@ -84,14 +78,14 @@ const styles = StyleSheet.create({
     top: 0,
   },
   copiedContainer: {
+    height: rem(35),
+    width: rem(92),
     borderRadius: 11,
     backgroundColor: COLORS.white,
-    paddingHorizontal: rem(20),
-    paddingVertical: rem(10),
     justifyContent: 'center',
     alignItems: 'center',
   },
   text: {
-    ...font(14, 20, 'black', 'gulfBlue', 'center'),
+    ...font(14, null, 'black', 'gulfBlue', 'center'),
   },
 });

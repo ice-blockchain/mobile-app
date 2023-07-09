@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   },
   balanceLabelText: {
     marginTop: rem(32),
-    ...font(12, 16, 'semibold', 'white'),
+    ...font(12, 14.4, 'semibold', 'white'),
   },
   balanceContainer: {
     paddingHorizontal: INFO_ICON_SIZE - rem(2),
@@ -143,10 +143,10 @@ const styles = StyleSheet.create({
     ...font(15, 20, 'semibold', 'primaryDark'),
   },
   balanceCurrencyText: {
-    ...font(24, 29, 'semibold'),
+    ...font(24, 28.8, 'semibold'),
   },
   balanceCurrencyTextDarkMode: {
-    ...font(24, 29, 'semibold', 'primaryDark'),
+    ...font(24, 28.8, 'semibold', 'primaryDark'),
   },
   miningRate: {
     marginTop: rem(10),
@@ -158,14 +158,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   rateLabelText: {
-    ...font(12, 16, 'semibold'),
+    ...font(12, 14.4, 'semibold'),
   },
   rateValueContainer: {
     marginLeft: rem(8),
     marginRight: rem(4),
   },
   rateValueText: {
-    ...font(17, 22, 'bold'),
+    ...font(17, 20.4, 'bold'),
   },
   infoButton: {
     position: 'absolute',

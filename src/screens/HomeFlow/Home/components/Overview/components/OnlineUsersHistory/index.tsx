@@ -18,7 +18,6 @@ import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {useCallback} from 'react';
 import {StyleSheet, Text, TextProps, View} from 'react-native';
-import Animated from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -28,11 +27,7 @@ const Y_AXIS_HEIGHT = '100%';
 const BAR_HEIGHT = '90%';
 const NUMBER_OF_STEPS_Y = 5;
 
-type Props = {
-  sharedIsCollapsed: Animated.SharedValue<number>;
-};
-
-export const OnlineUsersHistory = ({sharedIsCollapsed}: Props) => {
+export const OnlineUsersHistory = () => {
   const {activeUsersData: data} = useGetBarGraphDataForStatsPeriod(
     USER_GROWTH_STATS_PERIOD,
   );
@@ -65,7 +60,6 @@ export const OnlineUsersHistory = ({sharedIsCollapsed}: Props) => {
     <CardBase
       backgroundImageSource={Images.backgrounds.adoptionCardBg}
       headerTitle={t('home.adoption.title')}
-      sharedIsCollapsed={sharedIsCollapsed}
       headerTitleIcon={<GraphIcon fill={COLORS.white} />}
       HeaderValue={Header}
       headerValueIcon={<FriendIcon fill={COLORS.shamrock} />}>
@@ -123,6 +117,6 @@ const styles = StyleSheet.create({
   },
   yAxisText: {
     flex: 1,
-    ...font(8, 10, 'medium', 'white'),
+    ...font(8, 9.6, 'medium', 'white'),
   },
 });

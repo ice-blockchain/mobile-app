@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   title: {
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(2),
-    ...font(24, 30, 'black', 'primaryDark', 'center'),
+    ...font(24, 29, 'black', 'primaryDark', 'center'),
   },
   description: {
     marginHorizontal: rem(30),

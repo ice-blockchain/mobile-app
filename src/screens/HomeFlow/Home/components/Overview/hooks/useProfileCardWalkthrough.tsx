@@ -10,13 +10,11 @@ import {LevelCard} from '@screens/HomeFlow/Home/components/Overview/components/L
 import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/useSetWalkthroughElementData';
 import React, {useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {useSharedValue} from 'react-native-reanimated';
 
 export const useProfileCardWalkthrough = () => {
   const profileCardRef = useRef<View>(null);
 
   const {setWalkthroughElementData} = useSetWalkthroughElementData();
-  const sharedIsCollapsed = useSharedValue(0);
 
   const onProfileCardLayout = () => {
     setWalkthroughElementData({
@@ -29,7 +27,7 @@ export const useProfileCardWalkthrough = () => {
             <View style={styles.outerContainer}>
               <View style={styles.container}>
                 <View style={styles.mainContainer}>
-                  <LevelCard sharedIsCollapsed={sharedIsCollapsed} />
+                  <LevelCard isCollapsed={false} />
                 </View>
               </View>
             </View>

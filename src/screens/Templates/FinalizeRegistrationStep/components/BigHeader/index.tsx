@@ -67,12 +67,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   titleText: {
-    ...font(32, 40, 'black'),
+    ...font(32, 39, 'black'),
     width: rem(202),
   },
   descriptionText: {
     marginTop: rem(16),
-    ...font(14, 19, 'medium', 'wildSand'),
+    ...font(14, 17, 'medium', 'wildSand'),
     width: rem(210),
   },
   progressBar: {

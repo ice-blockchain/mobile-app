@@ -42,9 +42,9 @@ const styles = StyleSheet.create({
     height: SECTION_HEADER_HEIGHT,
   },
   titleText: {
-    ...font(15, 20, 'black', 'primaryDark'),
+    ...font(15, 18, 'black', 'primaryDark'),
   },
   actionText: {
-    ...font(12.5, 15, 'medium', 'primaryDark'),
+    ...font(12.5, 14.4, 'medium', 'primaryDark'),
   },
 });

@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   title: {
-    ...font(17, 22, 'semibold', 'primaryDark'),
+    ...font(17, 21, 'semibold', 'primaryDark'),
     marginBottom: rem(50),
     marginTop: rem(120),
   },

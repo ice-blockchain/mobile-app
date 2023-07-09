@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: -5,
     top: -5,
-    ...font(10, 13, 'regular', 'secondary', 'right'),
+    ...font(10, 12, 'regular', 'secondary', 'right'),
   },
 });

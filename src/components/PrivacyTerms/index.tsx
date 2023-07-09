@@ -48,10 +48,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    ...font(12, 16, 'regular', 'primaryDark', 'center'),
+    ...font(12, 14.4, 'regular', 'primaryDark', 'center'),
     marginHorizontal: rem(40),
   },
   link: {
-    ...font(12, 16, 'regular', 'primaryLight'),
+    ...font(12, 14.4, 'regular', 'primaryLight'),
   },
 });

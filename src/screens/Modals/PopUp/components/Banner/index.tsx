@@ -16,6 +16,6 @@ export const Banner = ({text}: Props) => {
 const styles = StyleSheet.create({
   bannerText: {
     marginTop: rem(10),
-    ...font(32, 40, 'black', 'primaryLight'),
+    ...font(32, 38.4, 'black', 'primaryLight'),
   },
 });

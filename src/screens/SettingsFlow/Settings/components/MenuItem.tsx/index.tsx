@@ -121,11 +121,11 @@ const styles = StyleSheet.create({
     height: rem(24),
   },
   titleText: {
-    ...font(16, 21, 'black', 'primaryDark'),
+    ...font(16, 19.2, 'black', 'primaryDark'),
     marginBottom: rem(4),
   },
   descriptionText: {
-    ...font(12, 16, 'medium', 'secondary'),
+    ...font(12, 14.4, 'medium', 'secondary'),
   },
   chevron: {
     marginLeft: rem(10),

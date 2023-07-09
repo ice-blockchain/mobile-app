@@ -35,9 +35,9 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Animated, {
-  interpolate,
   useAnimatedStyle,
   useSharedValue,
+  withTiming,
 } from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
@@ -51,8 +51,8 @@ const GRADIENT_COLORS = [
 ];
 
 type AdoptionCardProps = {
-  sharedIsCollapsed: Animated.SharedValue<number>;
-  onPress?: () => void;
+  isCollapsed: boolean;
+  onPress: () => void;
 };
 
 const VERTICAL_ITEM_PADDING = CARDS_TOTAL_HEIGHT / 2 - LEVEL_ROW_HEIGHT / 2;
@@ -61,10 +61,7 @@ const viewabilityConfig = {
   viewAreaCoveragePercentThreshold: 10,
 };
 
-export const AdoptionCard = ({
-  sharedIsCollapsed,
-  onPress,
-}: AdoptionCardProps) => {
+export const AdoptionCard = ({isCollapsed, onPress}: AdoptionCardProps) => {
   const adoption = useSelector(adoptionSelector);
   const isSplashHidden = useSelector(isSplashHiddenSelector);
   const refFlatList = useRef<Animated.FlatList<AdoptionMilestone> | null>(null);
@@ -145,9 +142,11 @@ export const AdoptionCard = ({
 
   const animatedStyleFlatList = useAnimatedStyle(() => {
     return {
-      opacity: interpolate(sharedIsCollapsed.value, [0, 0.7], [1, 0]),
+      opacity: withTiming(isCollapsed ? 0 : 1, {
+        duration: 200,
+      }),
     };
-  }, []);
+  }, [isCollapsed]);
 
   const setRefFlatList = useCallback(
     (ref: Animated.FlatList<AdoptionMilestone> | null) => {
@@ -169,11 +168,11 @@ export const AdoptionCard = ({
           isBottomSeparatorVisible={
             index !== (adoption?.milestones ?? []).length - 1
           }
-          onPress={onPress}
+          onPress={isCollapsed ? undefined : onPress}
         />
       );
     },
-    [activeIndex, sharedItems, adoption?.milestones, onPress],
+    [activeIndex, sharedItems, adoption?.milestones, isCollapsed, onPress],
   );
 
   if (!isSplashHidden) {
@@ -292,11 +291,11 @@ const styles = StyleSheet.create({
   titleText: {
     textTransform: 'uppercase',
     marginLeft: rem(4),
-    ...font(12, 16, 'black'),
+    ...font(12, 15, 'black'),
   },
   valueText: {
     textTransform: 'uppercase',
     marginLeft: rem(4),
-    ...font(12, 16, 'black'),
+    ...font(12, 15, 'black'),
   },
 });

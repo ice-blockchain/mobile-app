@@ -33,6 +33,6 @@ const styles = StyleSheet.create({
   },
   description: {
     marginTop: rem(6),
-    ...font(12, 16, 'medium', 'periwinkleGray'),
+    ...font(12, 14.4, 'medium', 'periwinkleGray'),
   },
 });

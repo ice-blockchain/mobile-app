@@ -43,6 +43,11 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
     );
 
     if (action.payload.userInfo.language) {
+      /**
+       * Run it ONLY after AccountActions.UPDATE_ACCOUNT.SUCCESS action
+       * It will set locale to global state and to i18n.
+       * Only then we need to reload app
+       */
       RNRestart.restart();
     }
   } catch (error) {

@@ -49,6 +49,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   avatarText: {
-    ...font(13, 18, 'regular'),
+    ...font(13, 16, 'regular'),
   },
 });

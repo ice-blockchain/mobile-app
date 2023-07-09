@@ -27,12 +27,11 @@ export const AllowContactsButton = () => {
 
 const styles = StyleSheet.create({
   button: {
-    paddingVertical: rem(14),
-    paddingHorizontal: rem(20),
-    height: 'auto',
+    width: rem(253),
+    height: rem(52),
     borderRadius: rem(12),
   },
   buttonText: {
-    ...font(17, 22, 'bold', 'white', 'center'),
+    ...font(17, 20, 'bold'),
   },
 });

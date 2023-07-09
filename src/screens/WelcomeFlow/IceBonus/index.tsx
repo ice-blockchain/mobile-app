@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     marginBottom: rem(36),
   },
   markedDescription: {
-    ...font(14, 19, 'bold', 'wildSand'),
+    ...font(14, 17, 'bold', 'wildSand'),
   },
   title: {
     width: rem(250),

@@ -32,6 +32,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: rem(26),
   },
   text: {
-    ...font(17, 22, 'bold'),
+    ...font(17, 20.4, 'bold'),
   },
 });

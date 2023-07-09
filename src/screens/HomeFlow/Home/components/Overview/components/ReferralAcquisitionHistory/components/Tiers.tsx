@@ -35,9 +35,9 @@ const styles = StyleSheet.create({
     marginLeft: rem(17),
   },
   tier1Text: {
-    ...font(12, 16, 'medium', 'shamrock'),
+    ...font(12, 14.4, 'medium', 'shamrock'),
   },
   tier2Text: {
-    ...font(12, 16, 'medium', 'white'),
+    ...font(12, 14.4, 'medium', 'white'),
   },
 });

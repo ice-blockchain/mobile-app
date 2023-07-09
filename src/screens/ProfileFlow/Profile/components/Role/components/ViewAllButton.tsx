@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   viewAllText: {
-    ...font(12, 16, 'regular', 'primaryDark', 'center'),
+    ...font(12, 14.4, 'regular', 'primaryDark', 'center'),
   },
   infoIcon: {
     marginLeft: rem(4),

@@ -49,6 +49,6 @@ const styles = StyleSheet.create({
   },
   actionText: {
     marginTop: rem(20),
-    ...font(28, 35, 'black'),
+    ...font(28, 34, 'black'),
   },
 });

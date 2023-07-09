@@ -9,7 +9,7 @@ export interface Role {
 
 export interface LevelsAndRoles {
   level: number;
-  roles?: Role[];
+  roles: Role[];
 }
 
 export type BadgeType = 'social' | 'coin' | 'level';

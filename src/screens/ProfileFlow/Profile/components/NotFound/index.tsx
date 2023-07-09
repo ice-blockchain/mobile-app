@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     height: rem(219),
   },
   notFoundTitle: {
-    ...font(24, 30, 'black', 'primaryDark', 'center'),
+    ...font(24, 29, 'black', 'primaryDark', 'center'),
     marginHorizontal: rem(20),
     marginTop: rem(20),
     marginBottom: rem(16),

@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row-reverse',
   },
   label: {
-    ...font(8, 11, 'medium', 'white', 'center'),
+    ...font(8, 9.6, 'medium', 'white', 'center'),
   },
   whiteBar: {
     backgroundColor: COLORS.white,
