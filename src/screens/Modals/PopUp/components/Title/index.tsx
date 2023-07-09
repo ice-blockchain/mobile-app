@@ -16,7 +16,6 @@ export const Title = ({text}: Props) => {
 const styles = StyleSheet.create({
   titleText: {
     marginTop: rem(12),
-    marginHorizontal: rem(12),
     ...font(24, 29, 'black', 'primaryDark', 'center'),
   },
 });

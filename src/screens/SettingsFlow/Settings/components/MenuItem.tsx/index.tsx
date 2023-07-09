@@ -2,7 +2,6 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {useIsEnglishLocale} from '@hooks/useIsEnglishLocale';
 import {ChevronIcon} from '@svg/ChevronIcon';
 import {font, mirrorTransform} from '@utils/styles';
 import React, {ReactNode, useEffect, useState} from 'react';
@@ -46,8 +45,6 @@ export const MenuItem = ({
     animatedHeight.value = withTiming(expanded ? CONFIRM_HEIGHT : 0);
   }, [animatedHeight, expanded]);
 
-  const isEnglishLocale = useIsEnglishLocale();
-
   return (
     <>
       <Touchable onPress={confirmation ? () => setExpanded(e => !e) : onPress}>
@@ -78,12 +75,7 @@ export const MenuItem = ({
         </View>
       </Touchable>
       {!!confirmation && (
-        <Animated.View
-          style={[
-            styles.buttons,
-            animatedStyle,
-            isEnglishLocale ? null : styles.buttonsNonEn,
-          ]}>
+        <Animated.View style={[styles.buttons, animatedStyle]}>
           <Touchable
             onPress={() => {
               setExpanded(false);
@@ -103,14 +95,11 @@ export const MenuItem = ({
   );
 };
 
-const MARGIN_LEFT = rem(21);
-const ICON_SIZE = rem(44);
-
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: MARGIN_LEFT,
+    marginLeft: rem(21),
     marginRight: rem(25),
     marginVertical: rem(10),
     height: rem(44), // fixed height to remove content jumping when the text length changes on expand / collapse
@@ -120,8 +109,8 @@ const styles = StyleSheet.create({
     marginLeft: rem(12),
   },
   iconWrapper: {
-    width: ICON_SIZE,
-    height: ICON_SIZE,
+    width: rem(44),
+    height: rem(44),
     borderRadius: rem(12),
     backgroundColor: COLORS.secondaryFaint,
     alignItems: 'center',
@@ -153,15 +142,10 @@ const styles = StyleSheet.create({
     height: CONFIRM_HEIGHT,
     overflow: 'hidden',
   },
-  buttonsNonEn: {
-    justifyContent: 'flex-start',
-    marginLeft: MARGIN_LEFT + ICON_SIZE + rem(12) - rem(6),
-  },
   button: {
-    minWidth: rem(96),
+    width: rem(96),
     height: rem(34),
     marginHorizontal: rem(6),
-    paddingHorizontal: rem(12),
     alignItems: 'center',
     justifyContent: 'center',
   },
