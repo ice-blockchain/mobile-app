@@ -65,55 +65,6 @@ export const setDayjsLocale = (locale: SupportedLocale) => {
     case 'bn':
       require('dayjs/locale/bn');
       break;
-    case 'ar':
-      require('dayjs/locale/ar');
-      break;
-    case 'bg':
-      require('dayjs/locale/bg');
-      break;
-    case 'cs':
-      require('dayjs/locale/cs');
-      break;
-    case 'el':
-      require('dayjs/locale/el');
-      break;
-    case 'es':
-      require('dayjs/locale/es');
-      break;
-    case 'fr':
-      require('dayjs/locale/fr');
-      break;
-    case 'hu':
-      require('dayjs/locale/hu');
-      break;
-    case 'ja':
-      require('dayjs/locale/ja');
-      break;
-    case 'ko':
-      require('dayjs/locale/ko');
-      break;
-    case 'ms':
-      require('dayjs/locale/ms');
-      break;
-    case 'nb':
-      require('dayjs/locale/nb');
-      break;
-    case 'nn':
-      require('dayjs/locale/nn');
-      break;
-    case 'pt':
-      require('dayjs/locale/pt');
-      break;
-    case 'ro':
-      require('dayjs/locale/ro');
-      break;
-    case 'te':
-      require('dayjs/locale/te');
-      break;
-    case 'uk':
-      require('dayjs/locale/uk');
-      break;
-
     default:
       logError(`Setup '${locale}' locale properly for 'dayjs'`);
   }

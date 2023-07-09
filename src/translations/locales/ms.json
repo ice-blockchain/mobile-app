@@ -1,841 +1,787 @@
 {
   "welcome": {
     "page1": {
-      "title": "Selamat datang ke ice",
-      "description": "[[:ice]] ialah mata wang digital yang anda boleh peroleh dengan telefon anda. ice dimiliki dan dikendalikan oleh pengguna setiap hari seperti diri anda."
+      "title": "Welcome to ice",
+      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
     },
     "page2": {
-      "title": "Planet Mesra",
-      "description": "[[:ice]] secara alami adalah lebih cekap tenaga berbanding BTC kerana ia menggunakan mekanisme sepersetujuan “Bukti Taruhan”. Dengan bukti taruhan (POS), pemilik mata wang kripto mengesahkan transaksi blok berdasarkan bilangan syiling seorang pengesah menaruh."
+      "title": "Planet Friendly",
+      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
     },
     "page3": {
-      "title": "Syiling Rakyat",
-      "description_part1": "Kuasa di tangan anda.",
-      "description_part2": "Segala-gala yang kami bangunkan di [[:ice]] akan menjadi sumber terbuka & dikawal oleh Organisasi Autonomi Dinyahpusat (DAO)."
+      "title": "People’s Coin",
+      "description_part1": "The power is in your hands.",
+      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
     },
     "page4": {
-      "title": "Kekal Bersambung",
-      "description": "Ketik [[:iceLogo]] untuk semak masuk harian anda dengan aplikasi mudah alih ringan tenaga kami yang percuma. Ketikan harian anda memastikan bahawa ice berada di tangan orang sebenar, bukan robot."
+      "title": "Stay Connected",
+      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
     },
     "page5": {
-      "title": "Rujuk & Peroleh",
-      "description": "Jemput rakan anda dan peroleh (kedua-dua anda) sehingga 25% bonus ke atas kadar perolehan asas anda untuk setiap rakan yang menyertai pasukan anda."
+      "title": "Refer & Earn",
+      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
     },
     "page6": {
-      "title": "Pemberitahuan",
-      "description_part1": "[[:ice]] semak masuk hanya berlangsung selama 24 jam. Adakah anda ingin menerima pemberitahuan apabila sesi semasa anda tamat?",
-      "description_part2": "Jangan bimbang, kami tidak akan spam anda!",
-      "not_now": "Bukan sekarang"
+      "title": "Notifications",
+      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
+      "description_part2": "Don’t worry, we will not spam you!",
+      "not_now": "Not now"
     }
   },
   "button": {
-    "yes_btn": "Ya, saya mahu",
-    "next_btn": "Seterusnya",
-    "not_now": "Bukan sekarang",
-    "view_all": "lihat semua",
+    "yes_btn": "Yes, please",
+    "next_btn": "Next",
+    "not_now": "Not now",
+    "view_all": "view all",
     "invite_friend": {
-      "title": "Jemput Rakan",
-      "description": "Peroleh [[:ice]] tambahan dengan menjemput rakan-rakan anda."
+      "title": "Invite Friends",
+      "description_part1": "Earn extra ",
+      "description_part2": " by inviting your friends."
     },
-    "see_all": "lihat semua",
-    "no": "Tidak",
-    "search_country": "Cari negara",
-    "save": "Simpan",
-    "yes": "Ya",
-    "change": "Tukar",
-    "no_cancel": "Tidak, batalkan",
-    "complete": "Lengkap",
-    "cancel": "Batalkan",
-    "clear": "Padam",
-    "finish": "Selesai",
-    "next_step": "Langkah Seterusnya",
-    "back": "Kembali",
-    "search": "Cari",
-    "continue": "Teruskan",
-    "apply": "Gunakan",
-    "reset": "Tetapkan Semula",
-    "skip_all": "Langkau semua",
-    "done": "Selesai",
-    "confirm": "Sahkan",
-    "do_this_later": "Lakukan ini kemudian",
-    "resurrect_me": "Hidupkan saya semula",
-    "claim_bonus": "Tuntut Bonus",
-    "close": "Tutup",
-    "try_again": "Cuba Lagi",
-    "view_changelog": "Lihat Log Tukar",
-    "disable": "Nyahdayakan",
-    "agree": "Saya Bersetuju",
-    "learn_more": "Ketahui Lebih Lanjut",
-    "back_to_login": "Kembali ke Log Masuk",
-    "follow_us": "Ikuti Kami",
-    "subscribe": "Langgan"
+    "no": "No",
+    "search_country": "Search for country",
+    "save": "Save",
+    "yes": "Yes",
+    "change": "Change",
+    "no_cancel": "No, cancel",
+    "complete": "Complete",
+    "cancel": "Cancel",
+    "clear": "Clear",
+    "finish": "Finish",
+    "next_step": "Next Step",
+    "see_all": "see all",
+    "back": "Back",
+    "search": "Search",
+    "continue": "Continue",
+    "apply": "Apply",
+    "reset": "Reset",
+    "skip_all": "Skip all",
+    "done": "Done",
+    "confirm": "Confirm",
+    "do_this_later": "Do this later",
+    "resurrect_me": "Resurrect Me",
+    "claim_bonus": "Claim Bonus",
+    "close": "Close",
+    "try_again": "Try Again",
+    "view_changelog": "View Changelog",
+    "disable": "Disable"
   },
   "team": {
-    "contacts_tab": "Kenalan",
-    "tierOne_tab": "Tahap 1",
-    "tierTwo_tab": "Tahap 2",
+    "contacts_tab": "Contacts",
+    "tierOne_tab": "Tier 1",
+    "tierTwo_tab": "Tier 2",
     "empty": {
-      "title": "Anda tidak mempunyai sebarang rujukan [[:title]] buat masa ini!",
-      "contacts": "Anda tidak mempunyai sebarang kenalan dalam buku telefon.",
-      "button_title": "Jemput Rakan"
+      "title_part1": "You currently don't have any\n",
+      "title_part2": " referrals!",
+      "button_title": "Invite Friends"
     },
     "contacts": {
-      "empty_title": "[[:ice]] lebih bagus bersama rakan",
-      "empty_button_title": "Benarkan semua akses kenalan",
-      "empty_description": "Segerakkan kenalan anda dan lihat siapa yang telah sedia ada dalam [[:ice]]. Pada masa akan datang, anda boleh menghantar ice kepada mana-mana kenalan anda."
+      "empty_title": "[[:ice]] is better with friends",
+      "empty_button_title": "Allow contacts access",
+      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
     },
     "header": {
-      "search_placeholder": "Cari pengguna",
-      "referrals": "Rujukan",
-      "earnings": "Pendapatan"
+      "search_placeholder": "Search for users",
+      "referrals": "Referrals",
+      "earnings": "Earnings"
     },
     "confirm_code": {
-      "title": "Sahkan Kod",
-      "description": "Sila masukkan kod pengesahan yang anda terima di telefon anda",
-      "placeholder": "Masukkan kod",
-      "button": "Sahkan kod anda sekarang"
+      "title": "Confirm Code",
+      "description": "Please enter the confirmation code you have received on your phone.",
+      "placeholder": "Enter the code",
+      "button": "Confirm your code now"
     },
     "confirm_phone": {
-      "title": "Sahkan Telefon",
-      "description": "Sila sahkan kod negara anda dan masukkan nombor telefon anda."
+      "title": "Confirm Phone",
+      "description": "Please confirm your country code and enter your phone number."
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "rakan-rakan"
+        "friends": "friends"
       },
-      "all_contacts": "Semua kenalan",
-      "invite": "jemput",
-      "invitation_text": "Hai {{name}}, saya ingin menjemput anda untuk menyertai ice."
+      "all_contacts": "All contacts",
+      "invite": "invite",
+      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Pendapatan Tahap 1"
+        "title_earnings": "Tier 1 Earnings"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Pendapatan Tahap 2"
+        "title_earnings": "Tier 2 Earnings"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log masuk / Daftar diri",
-    "phone": "Telefon",
-    "or": "atau",
-    "reset_password": "Tetapkan semula kata laluan",
-    "welcome": "Selamat datang ke ice",
-    "email": "E-mel",
-    "slogan": "Tetapan Semula Mata Wang Global",
-    "privacy": "Dengan meneruskan, anda bersetuju dengan [[:link]]Syarat Perkhidmatan[[/:link]] dan [[:link]]Dasar Privasi[[/:link]] kami"
+    "logInSignUp": "Log in / Sign up",
+    "phone": "Phone",
+    "or": "or",
+    "welcome": "Welcome to ice",
+    "email": "Email",
+    "slogan": "Global Currency Reset",
+    "privacy": {
+      "description": "By continuing, you agree to our ",
+      "terms": "Terms of Service",
+      "and": " and ",
+      "policy": "Privacy Policy"
+    }
   },
   "claimUsername": {
-    "title": "Tuntut nama samaran",
-    "description": "Rakan anda perlu menggunakan sama samaran ini untuk menyertai pasukan anda.",
-    "inputPlaceholder": "Masukkan nama samaran anda",
-    "note_part1": "Apabila mencipta nama samaran, gunakan huruf, nombor dan noktah sahaja.",
-    "note_part2": "Contoh:",
+    "title": "Claim nickname",
+    "description": "Your friends will need to use this nickname to join your team",
+    "inputPlaceholder": "Enter your nickname",
+    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
+    "note_part2": "Example:",
     "note_example": "your.name01"
   },
   "whoInvitedYou": {
-    "title": "Siapakah yang menjemput anda?",
-    "description": "Masukkan nama samaran orang yang menjemput anda.",
-    "inputPlaceholder": "Masukkan nama samaran",
-    "dontHaveInvitationCode": "Dengan melengkapkan langkah ini, anda dan rakan anda akan menerima bonus 25% ke atas kadar perolehan asas apabila anda berdua menyemak masuk serentak.",
-    "dontHaveCodeTip": "Sekiranya anda tidak mempunyai kod jemputan kami akan memilih ahli rawak sebagai rujukan anda!"
+    "title": "Who invited you?",
+    "description": "Enter the nickname of the person who invited you",
+    "inputPlaceholder": "Enter nickname",
+    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
+    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
+    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
   },
   "errors": {
-    "nicknameSize": "Saiz nama samaran: 4-20 aksara",
-    "removeInvalidCharacters": "Alih keluar aksara tidak sah.",
-    "validation_error": "Beberapa ralat pengesahan.",
-    "multiple_accounts": "E-mel/nombor telefon yang dikaitkan dengan akaun lain. Sila log masuk ke akaun tersebut untuk membuktikan pemilikan, kemudian log masuk kembali ke yang ini. Sekiranya tidak memiliki akaun yang lain tersebut atau anda tidak dapat mengelog masuk akaun tersebut, sila hubungi sokongan kami.",
-    "wrong_phone_number": "Nombor telefon tidak sah, sila cuba lagi.",
-    "invalid_username": "Nama samaran tidak sah.",
-    "email_already_taken": "E-mel telah diambil.",
-    "phone_number_already_taken": "Nombor telefon telah diambil.",
-    "invalid_validation_code": "Nombor kod tidak sah, sila cuba lagi!",
-    "validation_expired": "Pengesahan telah tamat tempoh",
-    "validation_not_found": "Pengesahan tidak dijumpai",
-    "invalid_email": "E-mel tidak sah.",
-    "invalid_password": "Kata laluan tidak sah.",
-    "invalid_ref_username": "Nama samaran tidak sah.",
-    "invalid_phone": "Nombor telefon tidak sah.",
-    "user_disabled": "Pengguna telah dinyahdayakan.",
-    "expired_action_code": "OTP dalam e-mel telah tamat tempoh.",
-    "account_exists_with_different_credential": "Akaun dengan alamat e-mel ditegaskan oleh kelayakan telah sedia ada.",
-    "invalid_credential": "Kelayakan cacat atau telah tamat tempoh.",
-    "operation_not_allowed": "Jenis akaun yang berkenaan dengan kelayakan tidak didayakan.",
-    "user_not_found_for_email": "Tiada pengguna berkenaan dengan e-mel yang diberikan.",
-    "user_not_found": "Pengguna tidak dijumpai.",
-    "auth_in_progress": "Daftar masuk telah dijalankan.",
-    "google_play_services_not_available": "Perkhidmatan Google Play tidak tersedia pada peranti ini.",
-    "unknown_error_with_code": "Ralat tidak diketahui: {{code}}",
-    "no_such_provider": "Anda tidak memautkan penyedia ini.",
-    "min_username": "Panjang minimum ialah 4 aksara.",
-    "max_username": "Panjang maksimum ialah 30 aksara.",
-    "code_expired": "Kod telah tamat tempoh, sila minta kod baharu.",
-    "too_many_requests": "Terlalu banyak permintaan, sila cuba lagi kemudian.",
-    "network_error_title": "Tiada sambungan internet",
-    "network_error_message": "Peranti anda tidak mempunyai sebarang sambungan internet aktif.",
-    "unknown_error": "Ralat berlaku, sila cuba lagi kemudian.",
-    "general_error_title": "Alamak...",
-    "general_error_message": "Nampaknya ada sesuatu yang tidak kena. Pasukan kami sedang berusaha untuk membetulkannya sekarang.",
-    "general_network_error": "Ralat rangkaian telah berlaku, sila semak sambungan anda.",
-    "credential_already_in_use": "Kelayakan ini telah dikaitkan dengan akaun pengguna berbeza.",
-    "email_already_in_use": "Alamat e-mel ini telah berada dalam penggunaan oleh akaun lain.",
-    "user_token_expired": "Kelayakan anda tidak lagi sah, sila daftar masuk sekali lagi.",
-    "requires_recent_login": "Operasi ini sensitif dan memerlukan pengesahan terkini. Sila daftar masuk sekali lagi.",
-    "same_email": "Anda tidak boleh menggunakan e-mel yang sama.",
-    "weak_password": "Kata laluan lemah.",
-    "wrong_password": "Kata laluan salah.",
-    "no_camera_permissions": "Kebenaran kamera tidak diberikan.",
-    "no_library_permissions": "Kebenaran pustaka tidak diberikan."
+    "nicknameSize": "Nickname size: 4-20 characters.",
+    "removeInvalidCharacters": "Remove invalid characters.",
+    "validation_error": "Some validation error",
+    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
+    "wrong_phone_number": "Invalid phone number, please try again",
+    "invalid_username": "Nickname is invalid.",
+    "already_taken": "{{field}} already taken",
+    "phone_number_already_in_use": "Phone number already in use",
+    "invalid_validation_code": "Invalid code number, please try again!",
+    "validation_expired": "Validation expired",
+    "validation_not_found": "Validation not found",
+    "invalid_email": "Invalid email",
+    "invalid_ref_username": "Nickname is invalid.",
+    "invalid_phone": "Invalid phone number",
+    "user_disabled": "User has been disabled",
+    "expired_action_code": "OTP in email link is expired",
+    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
+    "invalid_credential": "The credential is malformed or has expired",
+    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
+    "user_not_found_for_email": "There is no user corresponding to the given email",
+    "user_not_found": "User not found",
+    "auth_in_progress": "Sign-In already in progress",
+    "google_play_services_not_available": "Google Play services are not available on the device",
+    "unknown_error_with_code": "Unknown error {{code}}",
+    "no_such_provider": "You do not have this provider linked",
+    "min_username": "Minimum length is 4 characters.",
+    "max_username": "Maximum length is 30 characters.",
+    "code_expired": "The code has expired. Please ask for a new code.",
+    "too_many_requests": "Too many requests. Please try again later.",
+    "network_error_title": "No internet connection",
+    "network_error_message": "Your device does not have any active internet connection",
+    "unknown_error": "Some error occurred, please try again later",
+    "general_error_title": "Oups...",
+    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
+    "general_network_error": "A network error has occurred. Please check your connection.",
+    "credential_already_in_use": "This credential is already associated with a different user account.",
+    "email_already_in_use": "The email address is already in use by another account.",
+    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
+    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
+    "same_email": "You can’t use the same e-mail"
   },
   "profile": {
     "my_roles": {
-      "title": "Peranan Saya"
+      "title": "My Role"
     },
-    "mining_calculator": "pengira pendapatan",
-    "invite_friends": "Jemput Rakan",
-    "invite_friends_engage": "Sebarkan khabar berita dan jemput rakan-rakan anda. Lebih ramai rujukan, lebih banyak yang anda akan peroleh!",
-    "global_rank": "kedudukan global",
-    "view_all_roles": "lihat semua peranan",
-    "data_is_hidden": "data disembunyikan",
-    "progress_text": "{{value}} daripada {{total}}",
+    "mining_calculator": "earnings calculator",
+    "invite_friends": "Invite Friends",
+    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
+    "global_rank": "global rank",
+    "view_all_roles": "view all roles",
+    "data_is_hidden": "data is hidden",
+    "progress_text": "{{value}} of {{total}}",
     "not_found": {
-      "title": "Pengguna tidak dijumpai.",
-      "description": "Alamak, kami tidak dapat mencari pengguna ini."
+      "title": "User was not found",
+      "description": "oops, we couldn't find this user"
     },
     "my_badges": {
-      "title": "Lencana Saya"
+      "title": "My Badges"
     },
     "badges": {
-      "title": "Lencana"
+      "title": "Badges"
     },
     "roles": {
-      "title": "Peranan"
+      "title": "Roles"
     },
     "badge_types": {
       "coin": {
-        "title": "Syiling",
-        "description": "syiling"
+        "title": "Coins",
+        "description": "coins"
       },
       "social": {
-        "title": "Sosial",
-        "description": "rakan-rakan"
+        "title": "Social",
+        "description": "friends"
       },
       "level": {
-        "title": "Tahap",
-        "description": "Tahap"
+        "title": "Level",
+        "description": "Level"
       }
     }
   },
   "global": {
-    "level": "tahap",
-    "referrals": "rujukan",
-    "coin": "Syiling",
-    "social": "Sosial",
-    "phone_number": "Nombor telefon",
-    "years": "Tahun",
-    "of": " daripada ",
-    "attention": "Perhatian",
-    "email_address": "Alamat e-mel",
-    "password": "Kata laluan",
-    "data_hidden": "data disembunyikan",
-    "pull_to_refresh": "tarik untuk mengemas kini",
-    "comingSoon": "Akan datang",
+    "level": "level",
+    "referrals": "referrals",
+    "coins": "Coins",
+    "social": "Social",
+    "phone_number": "Phone number",
+    "years": "Years",
+    "of": "of",
+    "attention": "Attention",
+    "email_address": "Email address",
+    "data_hidden": "data is hidden",
+    "pull_to_refresh": "pull to update",
+    "comingSoon": "Coming soon",
     "date": {
-      "today": "Hari ini"
+      "today": "Today"
     }
   },
   "mining_calculator": {
-    "result_label": "Anda akan memperoleh",
-    "active_inviter": "Penjemput aktif",
-    "tier_1_ref": "Rujukan Tahap 1",
-    "tier_2_ref": "Rujukan Tahap 2",
-    "active_miners": "Rujukan aktif"
+    "result_label": "You will earn",
+    "active_inviter": "Active inviter",
+    "tier_1_ref": "Tier 1 referrals",
+    "tier_2_ref": "Tier 2 referrals",
+    "active_miners": "Active referrals"
   },
   "home": {
     "wallet": {
-      "title": "DOMPET",
-      "rate": "KADAR PEROLEHAN",
-      "balance": "BAKI SEMASA"
+      "title": "WALLET",
+      "rate": "EARNING RATE",
+      "balance": "CURRENT BALANCE"
     },
     "pioneer": {
-      "rank": "KEDUDUKAN GLOBAL",
-      "referrals": "RUJUKAN",
-      "description": "Rujuk lebih ramai pengguna dan peroleh lebih banyak [[:ice]]."
+      "title": "PIONEER",
+      "rank": "GLOBAL RANK",
+      "referrals": "REFERRALS",
+      "description_part1": "The more users you refer, the more ",
+      "description_part2": " you earn"
     },
     "referrals": {
-      "title": "RUJUKAN",
-      "description": "Statistik rujukan untuk 5 hari terdahulu.",
-      "no_referrals_description": "Anda masih belum mempunyai sebarang rujukan.",
-      "users_tier_1": "Pengguna tahap 1",
-      "users_tier_2": "Pengguna tahap 2"
+      "title": "REFERRALS",
+      "description": "Referral stats for the previous 5 days",
+      "no_referrals_description": "You don't have any referrals yet",
+      "users_tier_1": "Users tier 1",
+      "users_tier_2": "Users tier 2"
     },
     "adoption": {
-      "title": "PENYESUAIAN",
-      "level": "tahap",
-      "users": "pengguna"
+      "title": "ADOPTION",
+      "level": "level",
+      "users": "\nusers"
     },
-    "tasks": {
-      "achievements": "PENCAPAIAN",
-      "title": "Kemajuan anda",
-      "description": "Lengkapkan tugasan di bawah dan naik tahap!",
-      "completed": {
-        "title": "Tahniah",
-        "description": "Teruskan menyemak masuk setiap hari untuk memperoleh ganjaran tambahan!"
+    "steps": {
+      "title": "Your progress",
+      "description": "Complete the tasks below and level up!",
+      "step_one": {
+        "title": "Claim your nickname",
+        "description": "Set it and start earning from your invite"
       },
-      "popup": {
-        "title": "Sertai saluran Telegram kami",
-        "description": "Nyatakan nama samaran anda yang digunakan di Telegram.",
-        "placeholder": "Nama Samaran"
+      "step_two": {
+        "title": "Start mining",
+        "description": "Your first mining session"
       },
-      "claim_username": {
-        "title": "Tuntut nama samaran anda",
-        "description": "Tetapkannya dan kongsi dengan rakan-rakan anda."
+      "step_three": {
+        "title": "Profile picture",
+        "description": "Upload your profile image"
       },
-      "start_mining": {
-        "title": "Mulakan memperoleh",
-        "description": "Sesi semak masuk pertama anda."
+      "step_four": {
+        "title": "Join Telegram",
+        "description": "Be part of our community and join now"
       },
-      "upload_profile_picture": {
-        "title": "Gambar profil",
-        "description": "Muat naik imej profil anda."
+      "step_five": {
+        "title": "Follow us on Twitter",
+        "description": "Let’s keep in touch, follow us on twitter"
       },
-      "join_telegram": {
-        "title": "Sertai Telegram",
-        "description": "Jadilah sebahagian daripada komuniti kami dan sertai sekarang."
-      },
-      "follow_us_on_twitter": {
-        "title": "Ikuti kami di Twitter",
-        "description": "Mari kita saling berhubungan, ikuti kami di Twitter."
-      },
-      "invite_friends": {
-        "title": "Jemput 5 Rakan",
-        "description": "Kembangkan pasukan anda dan tingkatkan perolehan anda."
+      "step_six": {
+        "title": "Invite 5 Friends",
+        "description": "Create your team and increase your earnings"
       }
     },
     "overview": {
-      "title": "Gambaran Keseluruhan"
+      "title": "Overview"
     },
     "menu": {
-      "notifications": "Pemberitahuan",
-      "staking": "Taruhan",
-      "stats": "Statistik",
-      "help": "Bantuan"
+      "notifications": "Notifications",
+      "staking": "Staking",
+      "stats": "Stats",
+      "help": "Help"
+    },
+    "tasks": {
+      "title": "ACHIEVEMENTS"
     },
     "team": {
-      "title": "Pasukan",
-      "view_team": "lihat pasukan"
+      "title": "Team",
+      "view_team": "view team"
     },
     "mining_rate": {
-      "title": "KADAR PEROLEHAN",
-      "base": "Asas"
+      "title": "EARNING RATE",
+      "base": "Base"
     },
     "engagement": {
-      "title": "PENGLIBATAN",
-      "description_part1": "Berturut-turut merujuk kepada berapa hari berturut-turut anda telah menyemak masuk.",
-      "description_part2": "Untuk setiap 6 hari berturut-turut anda akan menerima satu hari cuti.",
-      "streak": "BERTURUT-TURUT",
-      "days_off": "HARI CUTI"
+      "title": "ENGAGEMENT",
+      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
+      "streak": "STREAK",
+      "days_off": "DAYS OFF"
     }
   },
   "settings": {
-    "title": "Tetapan",
-    "profile": "Profil",
-    "legal": "Undang-undang",
-    "support": "Sokongan",
-    "personal_information_title": "Maklumat Peribadi",
-    "personal_information_description": "Uruskan butiran profil anda.",
-    "notifications_title": "Pemberitahuan",
-    "notifications_description": "Uruskan pemberitahuan anda di sini.",
-    "push_notifications_title": "Pemberitahuan tolak",
-    "push_notifications_description": "Suaikan tetapan pemberitahuan tolak anda.",
-    "email_notifications_title": "Pemberitahuan E-mel",
-    "email_notifications_description": "Suaikan tetapan pemberitahuan e-mel anda.",
-    "terms_title": "Syarat Perkhidmatan",
-    "terms_description": "Kaji semula syarat perkhidmatan kami.",
-    "privacy_title": "Dasar Privasi",
-    "privacy_description": "Ketahui lebih lanjut tentang dasar privasi.",
-    "feedback_title": "Hantar Maklum Balas",
-    "feedback_description": "Kongsi buah fikiran anda dengan kami.",
-    "invite_title": "Jemput Rakan",
-    "invite_description": "Peroleh ice tambahan dengan menjemput rakan-rakan anda.",
-    "delete_title": "Padam Akaun",
-    "delete_description": "Padam akaun anda.",
-    "delete_confirmation_title": "Adakah anda pasti anda mahu mengalih keluar akaun?",
-    "delete_confirmation_yes": "Ya, padamkan",
-    "logout_title": "Log Keluar",
-    "logout_description": "Daftar keluar dan berehat seketika.",
-    "logout_confirmation_title": "Adakah anda pasti anda ingin mendaftar keluar?",
-    "logout_confirmation_yes": "Ya, log keluar",
+    "title": "Settings",
+    "profile": "Profile",
+    "legal": "Legal",
+    "support": "Support",
+    "personal_information_title": "Personal Information",
+    "personal_information_description": "Manage your profile details",
+    "notifications_title": "Notifications",
+    "notifications_description": "Manage your notifications here",
+    "push_notifications_title": "Push Notifications",
+    "push_notifications_description": "Customize your push notification settings",
+    "email_notifications_title": "Email Notifications",
+    "email_notifications_description": "Customize your email notification settings",
+    "terms_title": "Terms of Service",
+    "terms_description": "Review our terms of service",
+    "privacy_title": "Privacy Policy",
+    "privacy_description": "Learn about our privacy policy",
+    "feedback_title": "Send Feedback",
+    "feedback_description": "Share your thoughts with us",
+    "invite_title": "Invite a Friend",
+    "invite_description": "Earn extra ice by inviting your friends",
+    "delete_title": "Delete Account",
+    "delete_description": "Erase your account",
+    "delete_confirmation_title": "Are you sure you want to remove the account?",
+    "delete_confirmation_yes": "Yes, erase",
+    "logout_title": "Log Out",
+    "logout_description": "Sign off and take a break",
+    "logout_confirmation_title": "Are you sure you want to sign off?",
+    "logout_confirmation_yes": "Yes, log out",
     "confirm_phone": {
-      "title": "Sahkan Telefon Baharu",
-      "description": "Sila sahkan kod negara anda dan masukkan nombor telefon baharu anda.",
-      "button": "Sahkan nombor telefon baharu"
+      "title": "Confirm New Phone",
+      "description": "Please confirm your country code and enter your new phone number.",
+      "button": "Confirm new phone number"
     },
     "notifications": {
-      "enable_prompt": "Pemberitahuan tidak dibenarkan. Adakah anda mahu menyahdayakannya?",
-      "channel_achievements": "Pencapaian",
-      "channel_news": "Berita",
-      "channel_reminders": "Peringatan",
-      "channel_team": "Pasukan",
-      "type_push": "TOLAK",
-      "type_email": "E-MEL",
-      "disable_notifications": "Nyahdayakan Pemberitahuan?",
-      "disable_notifications_description": "Dengan menyahdayakan pemberitahuan anda tidak dapat menerima pengemaskinian bila anda boleh memulakan semakan masuk, berita atau maklumat pasukan.",
+      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
+      "channel_achievements": "Achievements",
+      "channel_news": "News",
+      "channel_reminders": "Reminders",
+      "channel_team": "Team",
+      "type_push": "PUSH",
+      "type_email": "EMAIL",
+      "disable_notifications": "Disable Notifications?",
+      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Statistik mingguan",
-          "description": "Terima pemberitahuan mengenai aktiviti anda."
+          "title": "Weekly stats",
+          "description": "Receive notifications about your activity"
         },
         "weekly_report": {
-          "title": "Laporan mingguan",
-          "description": "Terima pemberitahuan mengenai aktiviti anda."
+          "title": "Weekly report",
+          "description": "Receive notifications about your activity"
         },
         "achievements": {
-          "title": "Pencapaian",
-          "description": "Terima pemberitahuan mengenai kemajuan anda."
+          "title": "Achievements",
+          "description": "Receive notifications about your progress"
         },
         "promotions": {
-          "title": "Promosi",
-          "description": "Terima pemberitahuan mengenai bagaimana hendak mengembangkan pasukan anda dan memperoleh lebih banyak."
+          "title": "Promotions",
+          "description": "Receive notifications on how to grow your team and earn more"
         },
         "news": {
-          "title": "Berita",
-          "description": "Terima kasih daripada pasukan kami."
+          "title": "News",
+          "description": "Receive notifications from our team"
         },
         "micro_community": {
-          "title": "Komuniti mikro",
-          "description": "Terima pemberitahuan mengenai pasukan anda."
+          "title": "Micro-community",
+          "description": "Receive notifications about your team"
         },
         "daily_bonus": {
-          "title": "Bonus harian",
-          "description": "Terima pemberitahuan untuk menuntut bonus harian anda."
+          "title": "Daily bonus",
+          "description": "Receive notifications to claim your daily bonus"
         },
         "mining": {
-          "title": "Status sesi",
-          "description": "Terima pemberitahuan mengenai semak masuk anda."
+          "title": "Session status",
+          "description": "Receive notifications about your check-in activity"
         },
         "system": {
-          "title": "Sistem",
-          "description": "Terima pemberitahuan penting mengenai aplikasi ice."
+          "title": "System",
+          "description": "Receive important notifications about the ice app"
         }
       }
     },
-    "language_settings": "Tetapan bahasa",
+    "language_settings": "Language settings",
     "change_lang_confirm": {
-      "title": "Tukar bahasa",
-      "prompt": "Mengenakan tetapan ini akan memulakan semula aplikasi."
+      "title": "Change language",
+      "prompt": "Applying this setting will restart the app"
     },
-    "profile_image": "Imej Profil",
-    "inapp_privacy_title": "Privasi",
-    "inapp_privacy_description": "Uruskan maklumat anda di sini.",
-    "developer": "Pembangun",
-    "user_id": "ID Pengguna",
-    "user_token": "Token Pengguna",
+    "profile_image": "Profile Image",
+    "inapp_privacy_title": "Privacy",
+    "inapp_privacy_description": "Manage your information here",
+    "developer": "Developer",
+    "user_id": "User ID",
+    "user_token": "User Token",
     "profile_photo": {
-      "delete": "Padam Foto",
-      "edit": "Edit foto profil",
-      "photo_gallery": "Galeri Foto",
-      "camera": "Kamera"
+      "delete": "Delete Photo",
+      "edit": "Edit profile photo",
+      "photo_gallery": "Photo Gallery",
+      "camera": "Camera"
     },
-    "confirm_email_confirmation_title": "Sahkan e-mel?",
-    "update_email_confirmation_title": "Kemas kini e-mel?",
-    "update_email_confirmation_subtitle": "Menukar alamat e-mel anda akan memerlukan anda untuk mengelog masuk semula. Adakah anda pasti ingin meneruskan?",
-    "unlink_logins_title": "Nyahpaut Log Masuk",
-    "unlink_logins_description": "Anda boleh menyahpaut log masuk anda dari sini."
+    "confirm_email_confirmation_title": "Confirm email?",
+    "update_email_confirmation_title": "Update email?",
+    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
+    "unlink_logins_title": "Unlink Logins",
+    "unlink_logins_description": "You can unlink your logins from here"
   },
   "invite_share": {
-    "title": "Jemput rakan",
+    "title": "Invite a friend",
     "telegram": "Telegram",
     "twitter": "Twitter",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
-    "email": "E-mel",
-    "fb": "Suapan Berita",
+    "email": "Email",
+    "fb": "Newsfeed",
     "sms": "SMS",
-    "copy_link": "Salin pautan",
-    "more": "Lagi",
-    "copied": "DISALIN",
-    "share_message": "Hai Orang Salji ☃️ ! Sertai pasukan saya dalam ice dan terima 10 syiling ice apabila anda mendaftar menggunakan kod rujukan saya:",
-    "share_subject": "Sertai pasukan saya di ice",
-    "description": "Sebarkan khabar berita dan jemput rakan-rakan anda. Anda memperoleh [[:ice]] untuk setiap rujkan baharu yang anda bawa.",
-    "share": "Kongsi"
+    "copy_link": "Copy link",
+    "more": "More",
+    "copied": "COPIED",
+    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
+    "description_part1": "Spread the word and invite your friends. You earn ",
+    "description_part2": " for each new referral you bring."
   },
   "users": {
     "ping": "PING",
-    "active": "Aktif",
-    "inactive": "Tidak aktif",
+    "active": "Active",
+    "inactive": "Inactive",
     "referralType": {
-      "T1": "Tahap 1",
-      "T2": "Tahap 2"
+      "T1": "Tier 1",
+      "T2": "Tier 2"
     }
   },
   "personal_information": {
-    "first_name": "Nama pertama",
-    "last_name": "Nama akhir",
-    "country": "Negara",
-    "city": "Bandar",
-    "title": "Maklumat Peribadi",
-    "phone": "Telefon",
-    "email": "E-mel",
-    "username": "Nama Samaran"
+    "first_name": "First name",
+    "last_name": "Last name",
+    "country": "Country",
+    "city": "City",
+    "title": "Personal Information",
+    "phone": "Phone",
+    "email": "Email",
+    "username": "Nickname"
   },
   "username": {
     "error": {
-      "already_taken": "Nama samaran telah diambil",
-      "length": "Saiz nama samaran: 4-20 aksara",
-      "invalid_characters": "Alih keluar aksara tidak sah.",
-      "not_found": "Nama samaran tidak dijumpai.",
-      "some_error": "Ralat berlaku.",
-      "refer_yourself": "Anda tidak merujuk diri anda sendiri."
+      "already_taken": "Nickname is already taken.",
+      "length": "Nickname size: 4-20 characters.",
+      "invalid_characters": "Remove invalid characters.",
+      "not_found": "Nickname not found.",
+      "some_error": "Some error occurred.",
+      "refer_yourself": "You can't refer yourself"
     }
   },
   "staking": {
-    "time_left": "Masa Yang Tinggal",
-    "mining_rate": "Kadar Perolehan",
-    "appeal": "Rangsangkan kadar perolehan anda",
-    "benefits_description": "Prataruh ganjaran ice anda sehingga 5 tahun dan tingkatkan kadar perolehan anda sehingga 250%.",
-    "bonus_label": "Bonus Prataruh",
-    "period_label": "Tempoh Ditaruh",
-    "title": "Prataruhan",
-    "current_rate": "Kadar Semasa",
-    "allocation": "Peruntukan",
-    "description": "Menaruh adalah proses yang melibatkan peletakan aset kripto anda untuk menyokong rangkaian blockchain dan mengesahkan transaksi.",
-    "terms_agree": "Saya bersetuju dengan [[:ice]] [[:link]]Syarat Taruhan[[/:link]]. Pegangan ice anda akan dikunci untuk tempoh yang dipilih.",
-    "stake_now": "Prataruh Sekarang!",
-    "balance_label": "Baki ditaruh",
-    "confirm_title": "Sahkan Prataruh",
-    "confirm_subtitle": "Adakah anda pasti anda ingin membuat prataruh syiling anda? Ini tidak boleh dibuat asal sebaik sahaja anda mengesahkannya."
+    "time_left": "Time Left",
+    "mining_rate": "Earning Rate",
+    "appeal": "Boost your earning rate",
+    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
+    "bonus_label": "Pre-Staking Bonus",
+    "period_label": "Staked Period",
+    "title": "Pre-Staking",
+    "current_rate": "Current Rate",
+    "allocation": "Allocation",
+    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
+    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
+    "staking_terms": "Staking Terms",
+    "stake_now": "Pre-Stake Now!",
+    "balance_label": "Staked balance",
+    "confirm_title": "Confirm Pre-Stake",
+    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
   },
   "stats": {
-    "header_title": "Statistik",
-    "active": "Pengguna aktif",
-    "total": "Jumlah pengguna",
-    "user_growth": "Pertumbuhan pengguna",
-    "top_miners": "Pengguna teratas",
-    "top_countries": "Negara teratas",
-    "online_miners": "Pengguna dalam talian",
-    "detailed_information": "Maklumat terperinci"
+    "header_title": "Stats",
+    "active": "Active users",
+    "total": "Total users",
+    "user_growth": "User growth",
+    "top_miners": "Top users",
+    "top_countries": "Top countries",
+    "online_miners": "Online users",
+    "detailed_information": "Detailed information"
   },
   "update_required": {
-    "title": "Sila Kemas Kini",
-    "description": "Anda menggunakan versi aplikasi yang lama dan perlu mengemas kininya untuk menggunakan selanjutnya.",
-    "button_title": "Kemas Kini Sekarang"
+    "title": "Please Update",
+    "description": "You are using an old app version and need to update it in order to use it further.",
+    "button_title": "Update Now"
   },
   "general": {
-    "good_morning": "Selamat pagi",
-    "good_afternoon": "Selamat tengah hari",
-    "good_evening": "Selamat petang",
+    "good_morning": "Good morning",
+    "good_afternoon": "Good afternoon",
+    "good_evening": "Good evening",
     "ice": "ice",
-    "ice_per_hour": "ice/j",
+    "ice_per_hour": "ice/h",
     "seconds_short": "s",
     "minutes_short": "m",
-    "hours_short": "j",
-    "days_short": "h"
+    "hours_short": "h",
+    "days_short": "d"
   },
   "news": {
-    "news_feed": "Suapan Berita",
-    "read_more": "Baca lebih lanjut",
-    "no_more_news": "ini ialah masukan terakhir suapan berita.",
-    "views": "{{viewsCount}} paparan"
+    "news_feed": "News Feed",
+    "read_more": "Read more",
+    "views": "{{viewsCount}} views"
   },
   "search": {
-    "empty": "Cari kenalan, rakan ice dan ahli komuniti mikro anda.",
-    "nothing_is_found": "Tiada apa-apa yang dijumpai untuk pertanyaan anda.",
-    "search_by_country": "Cari mengikut negara",
-    "search_for_users": "Cari pengguna",
-    "loading": "Mencari…"
+    "empty": "Search for contacts, ice friends and members of your micro-community",
+    "nothing_is_found": "Nothing was found for your query",
+    "search_by_country": "Search by country",
+    "search_for_users": "Search for users"
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Ketik di sini untuk memulakan sesi semak masuk pertama anda.",
-    "mining_reset_tooltip": "Tekan selama 1 saat untuk melanjutkan sesi semak masuk anda.",
-    "mining_holiday_reset_tooltip": "Anda menggunakan Hari Cuti! Tekan selama 1 saat untuk melanjutkan sesi semak masuk anda.",
-    "mining_holiday_active": "Anda menggunakan Hari Cuti!"
+    "mining_inactive_tooltip": "Tap here to start your first check-in session",
+    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
+    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
+    "mining_holiday_active": "You are using a Day Off!"
   },
   "invite_friend": {
-    "invite_button": "Jemput Rakan",
-    "button_title": "Jemput rakan",
-    "description": "Rakan anda masih belum berada di [[:ice]]. Hantar jemputan kepada dia!"
+    "invite_button": "Invite Friend",
+    "button_title": "Invite Friend",
+    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
   },
   "balance_history": {
-    "title": "Sejarah Baki",
-    "wallet": "DOMPET",
+    "title": "Balance History",
+    "wallet": "Wallet",
     "blockchain": "Blockchain",
-    "wallet_update_interval": "dikemas kini setiap jam",
-    "blockchain_update_interval": "dikemas kini setiap 24 jam",
-    "list_end_label": "ini ialah masukan terakhir sejarah baki.",
-    "no_data": "Tiada data untuk dipaparkan untuk tempoh yang dinyatakan."
+    "wallet_update_interval": "updated every hour",
+    "blockchain_update_interval": "updated every 24 hours",
+    "list_end_label": "this is the last entry of the balance history",
+    "no_data": "There is no data to display \nfor the specified period"
   },
   "pop_up": {
-    "update_now": "Kemas Kini Sekarang",
-    "please_update": "Sila Kemas Kini",
-    "update_now_text": "Anda menggunakan versi aplikasi yang lama dan perlu mengemas kininya untuk menggunakan selanjutnya.",
-    "you_are_up_to_date": "Anda terkini!",
-    "up_to_date_text": "Anda sekarang menggunakan versi terkini. Semak semua perubahan di bawah.",
-    "resurrection": "Hidup Semula",
-    "resurrection_message": "Anda mempunyai satu peluang untuk dihidupkan semula dan menerima [[:amount]] syiling yang anda telah hilang dalam masa [[:period]] yang lalu.",
-    "resurrection_warning": "Anda hanya boleh dihidupkan semula sekali sahaja!",
-    "please_confirm": "Sila sahkan",
-    "resurrection_no_confirm_message": "Anda akan kehilangan syiling [[:amount]] anda buat selama-lamanya. Adakah anda pasti ingin meneruskan?",
-    "resurrection_yes_confirm_message": "Anda hanya boleh dihidupkan semula sekali sahaja! Adakah anda pasti ingin meneruskan? Syiling [[:amount]] akan dikembalikan ke baki anda dalam jam seterusnya.",
-    "delete_account_confirmation_title": "Sahkan Pemadaman",
-    "delete_account_confirmation_text": "Memadamkan akaun anda akan memadamkan semua data anda secara kekal, termasuk baki ice anda. Adakah anda ingin meneruskan?"
+    "update_now": "Update Now",
+    "please_update": "Please Update",
+    "update_now_text": "You are using an old app version and need to update it in order to use it further",
+    "you_are_up_to_date": "You are up to date!",
+    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
+    "resurrection": "Resurrection",
+    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
+    "resurrection_warning": "You can only resurrect one time!",
+    "please_confirm": "Please confirm",
+    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
+    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
   },
   "periods": {
-    "3_days": "3 hari",
-    "7_days": "7 hari",
-    "30_days": "30 hari",
-    "1_day": "1 Hari",
-    "1_week": "1 Minggu",
-    "1_month": "1 Bulan",
-    "90_days": "90 hari",
-    "14_days": "14 hari"
+    "3_days": "3 days",
+    "7_days": "7 days",
+    "30_days": "30 days",
+    "1_day": "1 Day",
+    "1_week": "1 Week",
+    "1_month": "1 Month",
+    "90_days": "90 days",
+    "14_days": "14 days"
   },
   "notifications": {
-    "joined": " telah menyertai pasukan anda.",
-    "multiply": " dan {{count}} orang lain telah menyertai pasukan anda.",
-    "ping": " telah mencuit anda, bangun!",
-    "delete": "Padam",
-    "add_notifications": "Tambah pemberitahuan olok-olok",
-    "no_notifications": "Tiada pemberitahuan untuk dipaparkan.",
-    "add_announcements": "Tambah pemberitahuan olok-olok",
-    "add_both": "Tambah pemberitahuan olok-olok dan pengumuman bersama-sama",
-    "clear_title": "Padam semua pemberitahuan?",
-    "title": "Pemberitahuan"
+    "joined": " has joined your team",
+    "multiply": " and {{count}} others have joined your team",
+    "ping": " has pinged you, wake up!",
+    "delete": "Delete",
+    "add_notifications": "Add mocked notifications",
+    "no_notifications": "No notifications to display",
+    "add_announcements": "Add mocked announcements",
+    "add_both": "Add mocked notifications \nand announcements together",
+    "clear_title": "Clear all notifications?",
+    "title": "Notifications"
   },
   "notification_feed_screen": {
-    "yesterday": "Semalam",
-    "last_week": "Minggu Lepas",
-    "this_month": "Bulan ini",
-    "last_month": "Bulan Lepas",
-    "this_week": "Minggu ini"
+    "yesterday": "Yesterday",
+    "last_week": "Last Week",
+    "this_month": "This month",
+    "last_month": "Last Month",
+    "this_week": "This week"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Statistik Profil Anda",
-      "description": "Ketik pada blok yang anda ingin sembunyikan daripada penglihatan awam."
+      "title": "1. Your Profile Statistics",
+      "description": "Tap on the blocks you want to hide from public eyes"
     },
     "step2": {
-      "description": "Ketik pada blok ini untuk menyembunyikannya daripada penglihatan awam.",
-      "title": "2. Peranan Semasa Anda"
+      "description": "Tap on this block to hide it from public eyes",
+      "title": "2. Your Current Role"
     },
     "step3": {
-      "title": "3. Lencana Yang Anda Peroleh",
-      "description": "Ketik di sini untuk menyembunyikan lencana anda daripada penglihatan awam."
+      "title": "3. Your Earned Badges",
+      "description": "Tap here to hide your badges from public eyes"
     }
   },
   "confirm_email": {
-    "title": "Sahkan e-mel anda",
-    "description": "Sila masukkan alamat e-mel anda dan kami akan menghantar kod kepada anda.",
-    "note": "Sekiranya anda tidak menerima e-mel dalam masa 5 minit, sila semak folder spam anda.",
-    "wrong_email": "E-mel salah?",
-    "check_email": "Semak e-mel anda",
-    "emailed_link_to": "Kami telah menghantar pautan ajaib kepada anda",
-    "emailed_steps_to": "Kami telah menghantar langkah kepada",
-    "link_instruction": "Klik pada pautan untuk mengelog masuk atau mendaftar.",
-    "reset_link_instruction": "Klik pautan untuk menetapkan semula kata laluan anda.",
-    "modify_title": "Sahkan E-mel Baharu",
-    "modify_description": "Sila masukkan alamat e-mel baharu anda."
+    "title": "Confirm your email",
+    "description": "Please enter your email address and we will send code ",
+    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
+    "wrong_email": "Wrong email?",
+    "check_email": "Check your email",
+    "emailed_link_to": "We emailed a magic link to",
+    "link_instruction": "Click the link to log in or sign up.",
+    "modify_title": "Confirm New Email",
+    "modify_description": "Please enter your new email address"
   },
   "invalid_link": {
-    "title": "Pautan tidak sah",
-    "description": "Malangnya, pautan ini tidak sah, sila masukkan e-mel anda sekali lagi dan kami akan hantar pautan baharu kepada anda."
+    "title": "Invalid link",
+    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
+    "back_button_title": "Back to Login"
   },
   "confirm_code": {
-    "title": "Sahkan kod",
-    "description": "Sila masukkan kod yang dihantar ke",
-    "send_code_again": "Hantar kod sekali lagi",
-    "resend_time_label": "Kod baharu tersedia dalam ",
-    "enter_code": "Masukkan kod",
-    "wrong_number": "Nombor salah?"
+    "title": "Confirm code",
+    "description": "Please enter the code sent to",
+    "send_code_again": "Send code again",
+    "resend_time_label": "New code available in ",
+    "enter_code": "Enter the code",
+    "wrong_number": "Wrong number?"
   },
   "ice_bonus": {
-    "title": "Ganjaran alu-aluan",
-    "description": "Tahniah, anda telah menerima [[:value]] [[:ice]] syiling pertama anda yang membiktikan [[:bold]]Kepercayaan[[/:bold]] kami dalam [[:bold]]Anda[[/:bold]].",
-    "balance_label": "Baki semasa anda"
+    "title": "Welcome reward",
+    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
+    "balance_label": "Your current balance"
   },
   "country_select": {
-    "title": "Pilih negara"
+    "title": "Select country"
   },
-  "roles": {
+  "role": {
     "snowman": {
-      "title": "Orang Salji",
-      "subtitle": "Bina empayar salji",
-      "description": "Peroleh dengan menyemak masuk setiap 24 jam untuk menunjukkan komitmen anda kepada rangkaian ice dan buktikan anda manusia, bukan robot."
+      "title": "Snowman",
+      "subtitle": "Build a snow empire",
+      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
     },
     "ambassador": {
-      "title": "Duta",
-      "subtitle": "Pemerintah empayar salji",
-      "description": "Anda menjadi duta apabila sekurang-kurangnya 100 orang menyertai pasukan anda. Setiap duta akan mendapat akses awal ke ciri-ciri baharu."
+      "title": "Ambassador",
+      "subtitle": "Ruler of the snow empire",
+      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
     }
   },
   "confirm_phone": {
-    "modify_title": "Sahkan Telefon",
-    "modify_description": "Sila sahkan kod negara anda dan masukkan nombor telefon anda.",
-    "button": "Sahkan negara dan telefon",
-    "same_phone_error": "Anda tidak boleh menggunakan nombor yang sama."
+    "modify_title": "Confirm Phone",
+    "modify_description": "Please confirm your country code and enter your phone number",
+    "button": "Confirm country and phone",
+    "same_phone_error": "You can’t use the same number"
+  },
+  "tasks": {
+    "completed": {
+      "title": "Congratulations",
+      "description": "Keep mining ice daily to earn extra rewards!"
+    }
   },
   "date_select": {
-    "title": "Pilih tarikh"
+    "title": "Choose date"
   },
   "walkthrough": {
     "news": {
-      "readmore": {
-        "title": "Baca lebih lanjut",
-        "description": "Di sini akan boleh melihat berita terkini kami daripada pasukan kami. Ketik pada butang ini untuk membaca artikel sepenuhnya."
+      "step_1": {
+        "title": "Read more",
+        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
       },
-      "releasednews": {
-        "title": "Berita yang diterbitkan",
-        "description": "Ketik pada setiap tajuk berita individu dan baca versi penuhnya. Kekal terkini dengan semua berita dan undian kami."
+      "step_2": {
+        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
+        "title": "Released news"
+      }
+    },
+    "teams": {
+      "step_1": {
+        "title": "Allow contacts",
+        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      },
+      "step_2": {
+        "title": "Referrals",
+        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      },
+      "step_3": {
+        "title": "Earnings",
+        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      },
+      "step_4": {
+        "title": "Contacts",
+        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      },
+      "step_5": {
+        "title": "Tier 1",
+        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
+      },
+      "step_6": {
+        "title": "Tier 2",
+        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
+      },
+      "step_7": {
+        "title": "Active Users",
+        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      },
+      "step_8": {
+        "title": "Tier 1 Earnings",
+        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      },
+      "step_9": {
+        "title": "Ping Button",
+        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
       }
     },
     "team": {
-      "allow_contacts": {
-        "title": "Benarkan kenalan",
-        "description": "Segerakkan kenalan anda dan lihat siapa yang telah sedia ada dalam [[:ice]]. Pada masa akan datang anda boleh menghantar [[:ice]] kepada mana-mana kenalan anda."
+      "step_1": {
+        "title": "Allow contacts",
+        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
       },
-      "confirm_phone": {
-        "title": "Sahkan telefon",
-        "description": "Sahkan identiti anda dan benarkan kenalan anda untuk mengetahui bahawa anda juga ahli rangkaian ice. Nombor telefon anda tidak akan dikongsikan dengan pihak ketiga lain."
+      "step_2": {
+        "title": "Referrals",
+        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
       },
-      "contacts_list": {
-        "title": "Senarai kenalan",
-        "description": "Ini ialah senarai semua kenalan anda, mereka yang telah pun menyertai rangkaian [[:ice]] yang dipaparkan di bahagian teratas senarai."
+      "step_3": {
+        "title": "Earnings",
+        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
       },
-      "referrals": {
-        "title": "Rujukan",
-        "description": "Di sini akan melihat berapa ramai jumlah rujukan yang anda ada. Lebih ramai orang yang anda jemput, lebih banyak yang anda peroleh."
+      "step_4": {
+        "title": "Contacts",
+        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
       },
-      "earnings": {
-        "title": "Pendapatan",
-        "description": "Baki semasa anda dikemas kini setiap jam dan dipaparkan di sini. Ini termasuklah pendapatan langsung & ditaruhkan bersama-sama dengan pendapatan Tahap 1 dan Tahap 2."
+      "step_5": {
+        "title": "Tier 1",
+        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
+        "url": "https://ice.io/#invite"
       },
-      "segmented_control_tier_one": {
-        "title": "Tahap 1",
-        "description": "Di sini anda boleh melihat senarai rujukan Tahap 1 anda. Untuk setiap rakan yang menyemak masuk serentak dengan anda, anda akan mendapat 25% tambahan ke atas kadar pendapatan kesesuaian semasa asas anda. [[:link]]Baca lebih lanjut[[/:link]]",
-        "url": "https://ice.io/team"
+      "step_6": {
+        "title": "Tier 2",
+        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
+        "url": "https://ice.io/#invite"
       },
-      "segmented_control_tier_two": {
-        "title": "Tahap 2",
-        "description": "Di sini anda boleh melihat senarai rujukan Tahap 2 anda. Untuk setiap rakan yang menyemak masuk serentak dengan anda, anda akan mendapat 5% tambahan ke atas kadar pendapatan kesesuaian semasa asas anda. [[:link]]Baca lebih lanjut[[/:link]]",
-        "url": "https://ice.io/team"
+      "step_7": {
+        "title": "Active Users",
+        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
       },
-      "active_users": {
-        "title": "Pengguna Aktif",
-        "description": "Inilah status semasa aktiviti semak masuk rujukan anda. Mereka dikira sebagai aktif apabila mereka mempunyai sesi semak masuk aktif."
+      "step_8": {
+        "title": "Tier 1 Earnings",
+        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
       },
-      "tier_one_earnings": {
-        "title": "Pendapatan Tahap 1",
-        "description": "Di sini anda boleh melihat senarai rujukan Tahap 1 anda. Untuk setiap ahli yang menyemak masuk serentak dengan anda, anda berdua akan mendapat 25% tambahan ke atas kadar pendapatan kesesuaian semasa asas anda."
-      },
-      "ping": {
-        "title": "Butang Ping",
-        "description": "Maklumkan kepada rujukan anda untuk memulakan sesi semak masuk mereka. Anda boleh menghantar satu pemberitahuan kepada setiap rujukan setiap 24 jam."
-      }
-    },
-    "home": {
-      "home": {
-        "title": "Utama",
-        "description": "Selamat datang ke [[:ice]]. Di skrin utama anda boleh mendapatkan semua statitik tentang baki anda, kadar pendapatan semasa, kedudukan global anda bersama-sama dengan pasukan anda."
-      },
-      "invite": {
-        "title": "jemput",
-        "description": "Untuk setiap orang yang anda jemput, anda berdua akan menerima sehingga 25% ke atas kadar pendapatan asas anda. Lebih ramai orang yang anda jemput, lebih banyak yang anda peroleh."
-      },
-      "team": {
-        "title": "Pasukan",
-        "description": "[[:ice]] lebih bagus bersama rakan. Di halaman ini anda boleh melihat status ahli pasukan anda daripada kedua-dua Tahap 1 dan Tahap 2. Anda juga boleh ping mereka dari sini."
-      },
-      "news": {
-        "title": "Berita",
-        "description": "Kekal terkini dengan semua berita dan undian kami. Oleh kerana kami Organisasi Autonomi Dinyahdayakan, anda boleh mengundi di sini untuk ciri-ciri akan datang."
-      },
-      "profile": {
-        "title": "Profil",
-        "description": "Suaikan butiran profil anda dan lihat semua pencapaian dan lencana yang anda telah peroleh. Gunakan pengira dari sini, supaya anda boleh menganggarkan pendapatan anda."
-      },
-      "earningicestart": {
-        "title": "Memperoleh ice",
-        "description": "Anda boleh memulakan sesi semak masuk [[:ice]] setiap 24 jam dengan menekan butang ini. Jangan lupa untuk kembali setiap hari dan mula memperoleh!"
-      },
-      "earningiceseemore": {
-        "title": "Memeperoleh ice",
-        "description": "Ketik sekali lagi dan lihat lebih banyak butiran tentang sesi semak masuk semasa anda."
-      },
-      "stats": {
-        "title": "Statistik",
-        "description": "Di halaman statistik anda boleh melihat Jumlah Pengguna dan Pengguna Aktif yang menyemak masuk setiap hari bersama-sama negara dan pengguna Teratas."
-      },
-      "help": {
-        "title": "Bantuan",
-        "description": "Adakah anda mempunyai sebarang pertanyaan? Cuba lihat senarai soalan lazim kami. Sekiranya anda tidak dapat mencari apa yang anda cari, jangan ragu-ragu untuk menghubungi kami di hi@ice.io."
-      },
-      "preStaking": {
-        "title": "Prataruhan",
-        "description": "Maksimumkan pulangan anda dengan prataruh ganjaran pendapatan anda. Pilih peruntukan anda dan tempoh taruhan untuk menerima bonus ke atas pendapatan anda."
-      },
-      "wallet": {
-        "title": "Kad Dompet",
-        "description": "Anda boleh mendapatkan di sini baki [[:ice]] semasa anda, bersama-sama dengan kadar pendapatan. Lebih ramai rujukan daripada pasukan anda berada dalam talian, lebih tinggi kadar pendapatan anda."
-      },
-      "earning": {
-        "title": "Kad Pendapatan",
-        "description": "Kekal terkini dengan kadar pendapatan dan bonus anda! Di sini anda boleh menyemak kadar semasa anda, kadar asas kami, dan kadar bonus untuk pelbagai aktiviti dalam aplikasi."
-      },
-      "engagement": {
-        "title": "Kad Penglibatan",
-        "description": "Teruskan menjejak sesi semak masuk dan hari cuti anda! Semak seksyen ini untuk lebih banyak butiran mengenai sesi semak masuk berturut-turut anda dan untuk melihat berapa banyak hari cuti tersedia yang anda ada."
-      },
-      "profilecard": {
-        "title": "Kad Profil",
-        "description": "Anda boleh menjejak status profil anda dengan mengikuti kad ini. Ia memaparkan kedudukan global semasa anda, bersama-sama dengan peranan anda, tahap dan jumlah rujukan anda."
-      },
-      "referralscard": {
-        "title": "Kad Rujukan",
-        "description": "Lihat evolusi statistik rujukan anda untuk 5 hari yang lepas untuk kedua-sua rujukan Tahap 1 dan Tahap 2 dengan mengetik kad ini."
-      },
-      "adoptioncard": {
-        "title": "Kad Guna Pakai",
-        "description": "Berdasarkan purata jumlah Orang Salji yang aktif minggu lepas, anda boleh melihat kadar pendapatan [[:ice]] semasa. Kadar pendapatan dipotong separuh apabila ambang seterusnya dicapai."
-      },
-      "nickname": {
-        "title": "Nama Samaran",
-        "description": "Nama samaran adalah yang membuatkan anda unik. Rakan-rakan anda akan memerlukannya untuk menggunakannya untuk menyertai pasukan anda. Anda juga boleh menggunakan pintasan ini untuk membuka profil anda."
-      },
-      "balancehistory": {
-        "title": "Sejarah Baki",
-        "description": "Anda boleh mendapatkan di sini baki [[:ice]] semasa anda dalam dompet tempatan dan blockchain. Baki dompet tempatan dikemas kini setiap jam, sementara baki blockchain dikemas kini setiap 24 jam."
-      },
-      "achievements": {
-        "title": "Pencapaian",
-        "description": "Lengkapkan tugasan di bawah dan naik tahap! Mulakan sesi semak masuk pertama anda sekarang!"
+      "step_9": {
+        "title": "Ping Button",
+        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Nyahpaut Log Masuk",
-    "sessionName": "Log masuk melalui {{providerName}}",
+    "title": "Unlink Logins",
+    "sessionName": "Login via {{providerName}}",
     "buttons": {
-      "currentSession": "Sesi semasa",
-      "endSession": "Tamatkan Sesi",
-      "loginUnlinked": "Log Masuk Dinyahpaut",
-      "sessionEnded": "Sesi Ditamatkan",
-      "unlink": "Nyahpaut"
+      "currentSession": "Current session",
+      "endSession": "End Session",
+      "loginUnlinked": "Login Unlinked",
+      "sessionEnded": "Session Ended",
+      "unlink": "Unlink"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Nyahpaut Log Masuk?",
-        "message": "Adakah anda pasti anda mahu menyahpaut log masuk melalui {{providerName}} dari peranti ini?"
+        "title": "Unlink Login?",
+        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
       },
       "endSession": {
-        "title": "Tamatkan Sesi?",
-        "message": "Adakah anda pasti anda mahu menamatkan sesi log masuk {{providerName}} dari peranti ini?"
+        "title": "End Session?",
+        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
       }
     }
   },
@@ -846,51 +792,12 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Bonus Hari Ini",
-    "claim_message": "Tiba masa untuk bonus anda hari ini, sila ketik pada butang [[:bold]]“Tuntut Bonus”[[/:bold]] di bawah.",
-    "link": "Ketahui lebih lanjut",
-    "extra_message": "Anda telah menerima bonus tambahan harian anda ke atas kadar pendapatan anda.",
-    "expired_title": "Bonus Telah Tamat Tempoh",
-    "expired_message": "Malangnya, bonus hari ini telah tamat tempoh. Teruskan bersama untuk pemberitahuan seterusnya!",
-    "result_title": "Tahniah"
-  },
-  "early_access": {
-    "title": "Akses Awal",
-    "message_part1": "Dapatkan sekilas pandang aplikasi [[:bold]]ice[[/:bold]] sebelum pelancaran [[:bold]]rasmi kami yang akan datang.[[/:bold]]",
-    "message_part2": "Semua baki akan ditetapkan semula ke 0 pada tarikh pelancaran. Pasukan anda, walau bagaimanapun, akan dikekalkan.",
-    "message_part3": "Terima kasih atas sokongan anda!",
-    "checkbox_description": "Saya mengakuinya! Jangan tunjukkan tetingkap timbul ini lagi."
-  },
-  "mining_notice": {
-    "title": "Makluman",
-    "message": "Terima kasih atas minat anda dalam memperoleh [[:bold]]ice![[/:bold]] Kami sedang memperkemaskan teknologi kami pada masa ini dan semak masuk tidak tersedia buat masa ini. Inilah peluang anda untuk memfokuskan pada membina pasukan anda dan mengembangkan komuniti mikro anda.",
-    "message_footer": "Teruskan bersama untuk pengemaskinian di saluran [[:twitter]]Twitter[[/:twitter]] dan [[:telegram]]Telegram[[/:telegram]] kami."
-  },
-  "qr_code": {
-    "description": "Imbas kod QR untuk menyertai pasukan saya."
-  },
-  "social_media": {
-    "tiktok": {
-      "title": "Sertai kami di TikTok",
-      "description": "Kami sekadar mahu menjangkau anda dan memaklumkan kepada anda tentang komuniti baharu kami di TikTok. Kami berkongsi kandungan ceria dan bermaklumat tentang mata wang digital kami, ice, dan kami ingin anda untuk menyertai kami!"
-    },
-    "youtube": {
-      "title": "Sertai kami di YouTube",
-      "description": "Dari tutorial tentang bagaimana hendak memperoleh ice, hingga ke kemas kini tentang ciri-ciri baharu, dan juga kandungan komuniti cerita, saluran YouTube kami ialah tempat terbaik untuk kekal terkini."
-    },
-    "linkedin": {
-      "title": "Sertai kami di LinkedIn",
-      "description": "Menyertai komuniti ice di LinkedIn adalah satu cara bagus untuk kekal bermaklumat tentang perkembangan terkini dan berhubung dengan individu yang berfikiran sama yang juga mempunyai minat yang sama tentang masa depan mata wang digital dengan anda."
-    },
-    "facebook": {
-      "title": "Sertai kami di Facebook",
-      "description_part1": "Kami amat mengesyorkan anda mengikuti halaman Facebook kami.",
-      "description_part2": "Bukan sahaja ia akan membantu anda untuk kekal terkini dengan semua yang berlaku dengan projek ice, tetapi juga ia cara bagus untuk berhubung dengan komuniti kami dan menjadi sebahagian perbualan."
-    },
-    "instagram": {
-      "title": "Sertai kami di Instagram",
-      "description_part1": "Menyertai kami di Instagram ialah cara bagus untuk kekal dalam gegelung dan berhubung dengan pengguna lain yang juga berkongsi minat yang sama tentang ice",
-      "description_part2": "Dan juga, anda akan menjadi orang pertama yang mengetahui tentang apa-apa ciri baharu atau promosi yang kami lancarkan."
-    }
+    "claim_title": "Today’s Bonus",
+    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
+    "link": "Find out more",
+    "extra_message": "You have received your daily extra bonus on your earning rate",
+    "expired_title": "Bonus Expired",
+    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
+    "result_title": "Congratulations"
   }
 }

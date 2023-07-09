@@ -1,841 +1,787 @@
 {
   "welcome": {
     "page1": {
-      "title": "ice에 오신 것을 환영합니다",
-      "description": "[[:ice]] 는 휴대폰으로 수익을 올릴 수 있는 디지털 통화입니다. ice는 여러분과 같은 일상적인 사용자가 소유하고 운영하고 있습니다."
+      "title": "Welcome to ice",
+      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
     },
     "page2": {
-      "title": "환경 친화적",
-      "description": "[[:ice]] 는 \"지분 증명\"이라는 합의 메커니즘을 사용하기 때문에 본질적으로 BTC보다 에너지 효율적입니다. 지분증명(Proof of Stake, POS)이란 검증인이 스테이킹한 코인의 수를 통해 암호화폐 소유자의 블록 거래를 검증하는 것입니다."
+      "title": "Planet Friendly",
+      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
     },
     "page3": {
-      "title": "모두의 코인",
-      "description_part1": "힘은 여러분의 손에 있습니다.",
-      "description_part2": "[[:ice]]에서 개발하는 모든 것은 오픈 소스 기반이며 분산형 자율 조직(Decentralized Autonomous Organization, DAO)이 통제합니다."
+      "title": "People’s Coin",
+      "description_part1": "The power is in your hands.",
+      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
     },
     "page4": {
-      "title": "참여하세요",
-      "description": "[[:iceLogo]] 로고를 탭하여 저에너지 소모 무료 모바일 앱에 등록하세요. 매일 탭해야만 ice를 봇이 아닌 실제 사람이 운영할 수 있습니다."
+      "title": "Stay Connected",
+      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
     },
     "page5": {
-      "title": "추천 & 수익",
-      "description": "친구를 초대하면 친구가 팀에 합류할 때마다 친구와 여러분 (두 분) 모두가 기본 수익의 최대 25%의 보너스를 받을 수 있습니다."
+      "title": "Refer & Earn",
+      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
     },
     "page6": {
-      "title": "알림",
-      "description_part1": "[[:ice]] 등록 세션은 24시간 동안만 지속됩니다. 현재 세션이 종료될 때 알림을 보내드릴까요?",
-      "description_part2": "걱정하지 마세요. 스팸 메일은 보내지 않습니다!   ",
-      "not_now": "나중에"
+      "title": "Notifications",
+      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
+      "description_part2": "Don’t worry, we will not spam you!",
+      "not_now": "Not now"
     }
   },
   "button": {
-    "yes_btn": "예, 보내세요",
-    "next_btn": "다음",
-    "not_now": "나중에",
-    "view_all": "모두 보기",
+    "yes_btn": "Yes, please",
+    "next_btn": "Next",
+    "not_now": "Not now",
+    "view_all": "view all",
     "invite_friend": {
-      "title": "친구 초대",
-      "description": "친구를 초대하여 [[:ice]]를 추가로 받으세요."
+      "title": "Invite Friends",
+      "description_part1": "Earn extra ",
+      "description_part2": " by inviting your friends."
     },
-    "see_all": "모두 보기",
-    "no": "아니요",
-    "search_country": "국가 검색",
-    "save": "저장",
-    "yes": "예",
-    "change": "변경",
-    "no_cancel": "아니요, 취소",
-    "complete": "완료",
-    "cancel": "취소",
-    "clear": "지우기",
-    "finish": "종료",
-    "next_step": "다음 단계",
-    "back": "뒤로",
-    "search": "검색",
-    "continue": "계속",
-    "apply": "적용",
-    "reset": "초기화",
-    "skip_all": "모두 건너뛰기",
-    "done": "완료",
-    "confirm": "확인",
-    "do_this_later": "나중에 하기",
-    "resurrect_me": "되살리기",
-    "claim_bonus": "보너스 클레임",
-    "close": "닫기",
-    "try_again": "다시 시도",
-    "view_changelog": "변경 로그 보기",
-    "disable": "비활성화",
-    "agree": "동의합니다",
-    "learn_more": "더 알아보기",
-    "back_to_login": "로그인으로 돌아가기",
-    "follow_us": "팔로우",
-    "subscribe": "구독"
+    "no": "No",
+    "search_country": "Search for country",
+    "save": "Save",
+    "yes": "Yes",
+    "change": "Change",
+    "no_cancel": "No, cancel",
+    "complete": "Complete",
+    "cancel": "Cancel",
+    "clear": "Clear",
+    "finish": "Finish",
+    "next_step": "Next Step",
+    "see_all": "see all",
+    "back": "Back",
+    "search": "Search",
+    "continue": "Continue",
+    "apply": "Apply",
+    "reset": "Reset",
+    "skip_all": "Skip all",
+    "done": "Done",
+    "confirm": "Confirm",
+    "do_this_later": "Do this later",
+    "resurrect_me": "Resurrect Me",
+    "claim_bonus": "Claim Bonus",
+    "close": "Close",
+    "try_again": "Try Again",
+    "view_changelog": "View Changelog",
+    "disable": "Disable"
   },
   "team": {
-    "contacts_tab": "연락처",
-    "tierOne_tab": "티어 1",
-    "tierTwo_tab": "티어 2",
+    "contacts_tab": "Contacts",
+    "tierOne_tab": "Tier 1",
+    "tierTwo_tab": "Tier 2",
     "empty": {
-      "title": "아직 [[:title]] 추천인이 없습니다!",
-      "contacts": "아직 전화번호부에 아무 연락처도 없습니다.",
-      "button_title": "친구 초대"
+      "title_part1": "You currently don't have any\n",
+      "title_part2": " referrals!",
+      "button_title": "Invite Friends"
     },
     "contacts": {
-      "empty_title": "[[:ice]] 는 친구와 함께할 때 더욱 좋습니다",
-      "empty_button_title": "연락처 액세스를 허용하세요",
-      "empty_description": "연락처를 동기화하여 누가 이미 [[:ice]]에 가입했는지 알아보세요. 앞으로는 원하는 연락처에 ice를 보낼 수 있게 됩니다."
+      "empty_title": "[[:ice]] is better with friends",
+      "empty_button_title": "Allow contacts access",
+      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
     },
     "header": {
-      "search_placeholder": "사용자 검색",
-      "referrals": "추천인",
-      "earnings": "수익"
+      "search_placeholder": "Search for users",
+      "referrals": "Referrals",
+      "earnings": "Earnings"
     },
     "confirm_code": {
-      "title": "코드 확인",
-      "description": "휴대폰으로 수신한 확인 코드를 입력하세요",
-      "placeholder": "코드를 입력하세요",
-      "button": "지금 코드를 확인하세요"
+      "title": "Confirm Code",
+      "description": "Please enter the confirmation code you have received on your phone.",
+      "placeholder": "Enter the code",
+      "button": "Confirm your code now"
     },
     "confirm_phone": {
-      "title": "전화 확인",
-      "description": "국가 코드를 확인하고 전화번호를 입력하세요."
+      "title": "Confirm Phone",
+      "description": "Please confirm your country code and enter your phone number."
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "친구"
+        "friends": "friends"
       },
-      "all_contacts": "모든 연락처",
-      "invite": "초대",
-      "invitation_text": "{{name}} 님, ice에 가입하도록 초대합니다."
+      "all_contacts": "All contacts",
+      "invite": "invite",
+      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "티어 1 수익"
+        "title_earnings": "Tier 1 Earnings"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "티어 2 수익"
+        "title_earnings": "Tier 2 Earnings"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "로그인 / 등록",
-    "phone": "전화",
-    "or": "또는",
-    "reset_password": "비밀번호 재설정",
-    "welcome": "ice에 오신 것을 환영합니다",
-    "email": "이메일",
-    "slogan": "국제 통화 초기화",
-    "privacy": "계속하시면 ice의 [[:link]]이용 약관[[/:link]]과 [[:link]]개인 정보 보호 방침[[/:link]]에 동의하는 것입니다"
+    "logInSignUp": "Log in / Sign up",
+    "phone": "Phone",
+    "or": "or",
+    "welcome": "Welcome to ice",
+    "email": "Email",
+    "slogan": "Global Currency Reset",
+    "privacy": {
+      "description": "By continuing, you agree to our ",
+      "terms": "Terms of Service",
+      "and": " and ",
+      "policy": "Privacy Policy"
+    }
   },
   "claimUsername": {
-    "title": "닉네임 설정",
-    "description": "친구가 팀에 합류하면 이 닉네임을 사용할 것입니다",
-    "inputPlaceholder": "내 닉네임을 입력하세요",
-    "note_part1": "닉네임은 오직 글자와 숫자 그리고 마침표만 사용하여 만들어야 합니다.",
-    "note_part2": "예시:",
-    "note_example": "내.이름01"
+    "title": "Claim nickname",
+    "description": "Your friends will need to use this nickname to join your team",
+    "inputPlaceholder": "Enter your nickname",
+    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
+    "note_part2": "Example:",
+    "note_example": "your.name01"
   },
   "whoInvitedYou": {
-    "title": "누가 초대했나요?",
-    "description": "초대한 사람의 닉네임을 입력하세요",
-    "inputPlaceholder": "닉네임을 입력하세요",
-    "dontHaveInvitationCode": "이 단계를 완료하면 친구와 회원님이 같은 시간에 체크인할 때마다 두 분 모두가 기본 수익의 25%를 보너스로 받을 수 있습니다.",
-    "dontHaveCodeTip": "초대 코드가 없다면 회원 중 추천인을 무작위로 선택하겠습니다!"
+    "title": "Who invited you?",
+    "description": "Enter the nickname of the person who invited you",
+    "inputPlaceholder": "Enter nickname",
+    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
+    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
+    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
   },
   "errors": {
-    "nicknameSize": "닉네임 길이: 4-20자.",
-    "removeInvalidCharacters": "잘못된 문자는 삭제하세요.",
-    "validation_error": "일부 확인 오류.",
-    "multiple_accounts": "이메일/전화번호가 다른 계정에 등록되어 있습니다. 해당 계정에 로그인하여 소유권을 증명한 후 로그아웃하고 다시 이 계정에 로그인하세요. 해당 계정을 소유하고 있지 않거나 로그인할 수 없다면 고객 지원에 문의하세요.",
-    "wrong_phone_number": "잘못된 전화번호입니다. 다시 시도하세요.",
-    "invalid_username": "잘못된 닉네임입니다.",
-    "email_already_taken": "이미 존재하는 이메일입니다.",
-    "phone_number_already_taken": "이미 존재하는 전화번호입니다.",
-    "invalid_validation_code": "잘못된 전화번호입니다. 다시 시도하세요.",
-    "validation_expired": "검증 만료",
-    "validation_not_found": "검증을 찾을 수 없습니다",
-    "invalid_email": "잘못된 이메일.",
-    "invalid_password": "잘못된 비밀번호.",
-    "invalid_ref_username": "잘못된 닉네임입니다.",
-    "invalid_phone": "잘못된 전화번호",
-    "user_disabled": "사용자가 비활성화되었습니다.",
-    "expired_action_code": "이메일 링크의 OTP가 만료되었습니다.",
-    "account_exists_with_different_credential": "이 이메일 주소, 사용자 이름, 비밀번호와 연결된 계정이 이미 존재합니다.",
-    "invalid_credential": "사용자 이름, 비밀번호가 잘못되었거나 만료되었습니다.",
-    "operation_not_allowed": "해당 사용자 이름, 비밀번호와 관련된 계정 유형이 활성화되지 않았습니다.",
-    "user_not_found_for_email": "주어진 이메일에 해당하는 사용자가 없습니다.",
-    "user_not_found": "사용자를 찾을 수 없습니다.",
-    "auth_in_progress": "이미 등록이 진행 중입니다.",
-    "google_play_services_not_available": "이 기기에서는 구글 플레이 서비스를 이용할 수 없습니다.",
-    "unknown_error_with_code": "알 수 없는 오류: {{code}}",
-    "no_such_provider": "이 공급자가 연결되어 있지 않습니다.",
-    "min_username": "최소 길이는 4자여야 합니다.",
-    "max_username": "최대 길이는 30자여야 합니다.",
-    "code_expired": "코드가 만료되었습니다. 새 코드를 신청하세요.",
-    "too_many_requests": "요청이 너무 많습니다. 나중에 다시 시도하세요.",
-    "network_error_title": "인터넷에 연결되지 않음",
-    "network_error_message": "기기에 작동하는 인터넷이 연결되어 있지 않습니다.",
-    "unknown_error": "오류가 발생했습니다. 나중에 다시 시도하세요.",
-    "general_error_title": "죄송합니다...",
-    "general_error_message": "오류가 발생한 것 같습니다. 현재 담당 팀이 문제 해결을 시도하는 중입니다.",
-    "general_network_error": "네트워크 오류가 발생했습니다. 연결을 확인하세요.",
-    "credential_already_in_use": "이 사용자 이름, 비밀번호가 이미 다른 사용자 계정과 연결되어 있습니다.",
-    "email_already_in_use": "이 이메일 주소는 다른 계정에서 사용 중입니다.",
-    "user_token_expired": "사용자 이름, 비밀번호가 더 이상 유효하지 않습니다. 다시 등록하세요.",
-    "requires_recent_login": "이 작업은 매우 민감하므로 최근 승인이 필요합니다. 다시 등록하세요.",
-    "same_email": "같은 이메일을 사용할 수 없습니다.",
-    "weak_password": "비밀번호 보안 취약",
-    "wrong_password": "잘못된 비밀번호",
-    "no_camera_permissions": "카메라 권한이 허용되지 않았습니다.",
-    "no_library_permissions": "라이브러리 권한이 허용되지 않았습니다."
+    "nicknameSize": "Nickname size: 4-20 characters.",
+    "removeInvalidCharacters": "Remove invalid characters.",
+    "validation_error": "Some validation error",
+    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
+    "wrong_phone_number": "Invalid phone number, please try again",
+    "invalid_username": "Nickname is invalid.",
+    "already_taken": "{{field}} already taken",
+    "phone_number_already_in_use": "Phone number already in use",
+    "invalid_validation_code": "Invalid code number, please try again!",
+    "validation_expired": "Validation expired",
+    "validation_not_found": "Validation not found",
+    "invalid_email": "Invalid email",
+    "invalid_ref_username": "Nickname is invalid.",
+    "invalid_phone": "Invalid phone number",
+    "user_disabled": "User has been disabled",
+    "expired_action_code": "OTP in email link is expired",
+    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
+    "invalid_credential": "The credential is malformed or has expired",
+    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
+    "user_not_found_for_email": "There is no user corresponding to the given email",
+    "user_not_found": "User not found",
+    "auth_in_progress": "Sign-In already in progress",
+    "google_play_services_not_available": "Google Play services are not available on the device",
+    "unknown_error_with_code": "Unknown error {{code}}",
+    "no_such_provider": "You do not have this provider linked",
+    "min_username": "Minimum length is 4 characters.",
+    "max_username": "Maximum length is 30 characters.",
+    "code_expired": "The code has expired. Please ask for a new code.",
+    "too_many_requests": "Too many requests. Please try again later.",
+    "network_error_title": "No internet connection",
+    "network_error_message": "Your device does not have any active internet connection",
+    "unknown_error": "Some error occurred, please try again later",
+    "general_error_title": "Oups...",
+    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
+    "general_network_error": "A network error has occurred. Please check your connection.",
+    "credential_already_in_use": "This credential is already associated with a different user account.",
+    "email_already_in_use": "The email address is already in use by another account.",
+    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
+    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
+    "same_email": "You can’t use the same e-mail"
   },
   "profile": {
     "my_roles": {
-      "title": "내 역할"
+      "title": "My Role"
     },
-    "mining_calculator": "수익 계산기",
-    "invite_friends": "친구 초대",
-    "invite_friends_engage": "널리 홍보하고 친구를 초대하세요. 더 많이 추천할수록 수익이 더욱 커집니다!",
-    "global_rank": "글로벌 순위",
-    "view_all_roles": "모든 역할 보기",
-    "data_is_hidden": "데이터가 숨겨져 있습니다",
-    "progress_text": "{{value}} , 다음 중: {{total}}",
+    "mining_calculator": "earnings calculator",
+    "invite_friends": "Invite Friends",
+    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
+    "global_rank": "global rank",
+    "view_all_roles": "view all roles",
+    "data_is_hidden": "data is hidden",
+    "progress_text": "{{value}} of {{total}}",
     "not_found": {
-      "title": "사용자를 찾을 수 없습니다.",
-      "description": "죄송합니다. 이 사용자를 찾을 수 없습니다."
+      "title": "User was not found",
+      "description": "oops, we couldn't find this user"
     },
     "my_badges": {
-      "title": "내 배지"
+      "title": "My Badges"
     },
     "badges": {
-      "title": "배지"
+      "title": "Badges"
     },
     "roles": {
-      "title": "역할"
+      "title": "Roles"
     },
     "badge_types": {
       "coin": {
-        "title": "코인",
-        "description": "코인"
+        "title": "Coins",
+        "description": "coins"
       },
       "social": {
-        "title": "소셜",
-        "description": "친구"
+        "title": "Social",
+        "description": "friends"
       },
       "level": {
-        "title": "레벨",
-        "description": "레벨"
+        "title": "Level",
+        "description": "Level"
       }
     }
   },
   "global": {
-    "level": "레벨",
-    "referrals": "추천인",
-    "coin": "코인",
-    "social": "소셜",
-    "phone_number": "전화번호",
-    "years": "년",
-    "of": " , 다음 중: ",
-    "attention": "주목",
-    "email_address": "이메일 주소",
-    "password": "비밀번호",
-    "data_hidden": "데이터가 숨겨져 있습니다",
-    "pull_to_refresh": "당겨서 업데이트",
-    "comingSoon": "곧 출시됩니다",
+    "level": "level",
+    "referrals": "referrals",
+    "coins": "Coins",
+    "social": "Social",
+    "phone_number": "Phone number",
+    "years": "Years",
+    "of": "of",
+    "attention": "Attention",
+    "email_address": "Email address",
+    "data_hidden": "data is hidden",
+    "pull_to_refresh": "pull to update",
+    "comingSoon": "Coming soon",
     "date": {
-      "today": "오늘"
+      "today": "Today"
     }
   },
   "mining_calculator": {
-    "result_label": "예정 수익:",
-    "active_inviter": "활동 중인 초대자",
-    "tier_1_ref": "티어 1 추천인",
-    "tier_2_ref": "티어 1 추천인",
-    "active_miners": "유효한 추천인"
+    "result_label": "You will earn",
+    "active_inviter": "Active inviter",
+    "tier_1_ref": "Tier 1 referrals",
+    "tier_2_ref": "Tier 2 referrals",
+    "active_miners": "Active referrals"
   },
   "home": {
     "wallet": {
-      "title": "지갑",
-      "rate": "수익률",
-      "balance": "현재 잔액"
+      "title": "WALLET",
+      "rate": "EARNING RATE",
+      "balance": "CURRENT BALANCE"
     },
     "pioneer": {
-      "rank": "글로벌 순위",
-      "referrals": "추천인",
-      "description": "더 많이 추천하고 더 많은 [[:ice]]를 적립하세요."
+      "title": "PIONEER",
+      "rank": "GLOBAL RANK",
+      "referrals": "REFERRALS",
+      "description_part1": "The more users you refer, the more ",
+      "description_part2": " you earn"
     },
     "referrals": {
-      "title": "추천인",
-      "description": "지난 5일간 추천 통계.",
-      "no_referrals_description": "아직 추천이 없습니다!",
-      "users_tier_1": "사용자 티어 1",
-      "users_tier_2": "사용자 티어 2"
+      "title": "REFERRALS",
+      "description": "Referral stats for the previous 5 days",
+      "no_referrals_description": "You don't have any referrals yet",
+      "users_tier_1": "Users tier 1",
+      "users_tier_2": "Users tier 2"
     },
     "adoption": {
-      "title": "채택",
-      "level": "레벨",
-      "users": "사용자"
+      "title": "ADOPTION",
+      "level": "level",
+      "users": "\nusers"
     },
-    "tasks": {
-      "achievements": "성취 내역",
-      "title": "진행 상황",
-      "description": "아래 과제를 완료하고 레벨업하세요!",
-      "completed": {
-        "title": "축하합니다",
-        "description": "매일 체크인하고 추가 보상을 받으세요!"
+    "steps": {
+      "title": "Your progress",
+      "description": "Complete the tasks below and level up!",
+      "step_one": {
+        "title": "Claim your nickname",
+        "description": "Set it and start earning from your invite"
       },
-      "popup": {
-        "title": "Telegram 채널에 가입하세요",
-        "description": "Telegram에 사용할 닉네임을 지정하세요.",
-        "placeholder": "닉네임"
+      "step_two": {
+        "title": "Start mining",
+        "description": "Your first mining session"
       },
-      "claim_username": {
-        "title": "닉네임 설정",
-        "description": "설정하여 친구와 공유하세요."
+      "step_three": {
+        "title": "Profile picture",
+        "description": "Upload your profile image"
       },
-      "start_mining": {
-        "title": "수익 창출 시작",
-        "description": "최초 체크인 세션"
+      "step_four": {
+        "title": "Join Telegram",
+        "description": "Be part of our community and join now"
       },
-      "upload_profile_picture": {
-        "title": "프로필 사진",
-        "description": "프로필 이미지를 업데이트하세요"
+      "step_five": {
+        "title": "Follow us on Twitter",
+        "description": "Let’s keep in touch, follow us on twitter"
       },
-      "join_telegram": {
-        "title": "Telegram 가입",
-        "description": "커뮤니티의 일원이 되고 지금 가입하세요."
-      },
-      "follow_us_on_twitter": {
-        "title": "Twitter를 팔로우하세요",
-        "description": "Twitter를 팔로우하여 최신 소식을 받으세요."
-      },
-      "invite_friends": {
-        "title": "친구 초대",
-        "description": "팀을 키우고 수익을 높이세요."
+      "step_six": {
+        "title": "Invite 5 Friends",
+        "description": "Create your team and increase your earnings"
       }
     },
     "overview": {
-      "title": "개요"
+      "title": "Overview"
     },
     "menu": {
-      "notifications": "알림",
-      "staking": "스테이킹",
-      "stats": "통계",
-      "help": "도움말"
+      "notifications": "Notifications",
+      "staking": "Staking",
+      "stats": "Stats",
+      "help": "Help"
+    },
+    "tasks": {
+      "title": "ACHIEVEMENTS"
     },
     "team": {
-      "title": "팀",
-      "view_team": "팀 보기"
+      "title": "Team",
+      "view_team": "view team"
     },
     "mining_rate": {
-      "title": "수익률",
-      "base": "기본"
+      "title": "EARNING RATE",
+      "base": "Base"
     },
     "engagement": {
-      "title": "참여",
-      "description_part1": "스트릭(Streak)이란 연속으로 체크인한 날 수를 의미합니다.",
-      "description_part2": "6일 연속 체크인하면 하루를 휴일로 받습니다.",
-      "streak": "스트릭",
-      "days_off": "휴일"
+      "title": "ENGAGEMENT",
+      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
+      "streak": "STREAK",
+      "days_off": "DAYS OFF"
     }
   },
   "settings": {
-    "title": "설정",
-    "profile": "프로필",
-    "legal": "법률",
-    "support": "고객 지원",
-    "personal_information_title": "개인 정보",
-    "personal_information_description": "프로필 상세 정보를 관리하세요",
-    "notifications_title": "알림",
-    "notifications_description": "여기서 알림을 관리하세요.",
-    "push_notifications_title": "푸시 알림",
-    "push_notifications_description": "푸시 알림 설정을 원하는 대로 조정하세요.",
-    "email_notifications_title": "이메일 알림",
-    "email_notifications_description": "이메일 알림 설정을 원하는 대로 조정하세요.",
-    "terms_title": "이용 약관",
-    "terms_description": "이용 약관을 검토하세요.",
-    "privacy_title": "개인 정보 보호 방침",
-    "privacy_description": "개인 정보 보호 방침을 확인하세요.",
-    "feedback_title": "피드백 전송",
-    "feedback_description": "회원님의 생각을 공유해 주세요.",
-    "invite_title": "친구 초대",
-    "invite_description": "친구를 초대하여 ice를 추가로 받으세요.",
-    "delete_title": "계정 삭제",
-    "delete_description": "계정을 삭제합니다.",
-    "delete_confirmation_title": "정말 계정을 삭제하시겠습니까?",
-    "delete_confirmation_yes": "예, 삭제",
-    "logout_title": "로그아웃",
-    "logout_description": "로그아웃 후 휴식.",
-    "logout_confirmation_title": "정말 로그아웃하시겠습니까?",
-    "logout_confirmation_yes": "예, 로그아웃",
+    "title": "Settings",
+    "profile": "Profile",
+    "legal": "Legal",
+    "support": "Support",
+    "personal_information_title": "Personal Information",
+    "personal_information_description": "Manage your profile details",
+    "notifications_title": "Notifications",
+    "notifications_description": "Manage your notifications here",
+    "push_notifications_title": "Push Notifications",
+    "push_notifications_description": "Customize your push notification settings",
+    "email_notifications_title": "Email Notifications",
+    "email_notifications_description": "Customize your email notification settings",
+    "terms_title": "Terms of Service",
+    "terms_description": "Review our terms of service",
+    "privacy_title": "Privacy Policy",
+    "privacy_description": "Learn about our privacy policy",
+    "feedback_title": "Send Feedback",
+    "feedback_description": "Share your thoughts with us",
+    "invite_title": "Invite a Friend",
+    "invite_description": "Earn extra ice by inviting your friends",
+    "delete_title": "Delete Account",
+    "delete_description": "Erase your account",
+    "delete_confirmation_title": "Are you sure you want to remove the account?",
+    "delete_confirmation_yes": "Yes, erase",
+    "logout_title": "Log Out",
+    "logout_description": "Sign off and take a break",
+    "logout_confirmation_title": "Are you sure you want to sign off?",
+    "logout_confirmation_yes": "Yes, log out",
     "confirm_phone": {
-      "title": "새 전화 확인",
-      "description": "국가 코드를 확인하고 새 전화번호를 입력하세요.",
-      "button": "새 전화번호 확인"
+      "title": "Confirm New Phone",
+      "description": "Please confirm your country code and enter your new phone number.",
+      "button": "Confirm new phone number"
     },
     "notifications": {
-      "enable_prompt": "알림이 허용되지 않습니다. 이를 활성화하기 원하십니까?",
-      "channel_achievements": "성취 내역",
-      "channel_news": "뉴스",
-      "channel_reminders": "미리 알림",
-      "channel_team": "팀",
-      "type_push": "푸시",
-      "type_email": "이메일",
-      "disable_notifications": "알림 기능을 비활성화하기 원하십니까?",
-      "disable_notifications_description": "알림을 비활성화하면 체크인을 시작할 때 업데이트를 받을 수 없고 뉴스나 팀 정보도 받을 수 없습니다.",
+      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
+      "channel_achievements": "Achievements",
+      "channel_news": "News",
+      "channel_reminders": "Reminders",
+      "channel_team": "Team",
+      "type_push": "PUSH",
+      "type_email": "EMAIL",
+      "disable_notifications": "Disable Notifications?",
+      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "주간 통계",
-          "description": "자신의 활동에 대하여 알림을 받으세요."
+          "title": "Weekly stats",
+          "description": "Receive notifications about your activity"
         },
         "weekly_report": {
-          "title": "주간 보고서",
-          "description": "자신의 활동에 대하여 알림을 받으세요."
+          "title": "Weekly report",
+          "description": "Receive notifications about your activity"
         },
         "achievements": {
-          "title": "성취 내역",
-          "description": "자신의 진행 상황에 대하여 알림을 받으세요."
+          "title": "Achievements",
+          "description": "Receive notifications about your progress"
         },
         "promotions": {
-          "title": "프로모션",
-          "description": "팀 성장과 추가 수익 방법에 관하여 알림을 받으세요."
+          "title": "Promotions",
+          "description": "Receive notifications on how to grow your team and earn more"
         },
         "news": {
-          "title": "뉴스",
-          "description": "팀에서 알림을 받으세요."
+          "title": "News",
+          "description": "Receive notifications from our team"
         },
         "micro_community": {
-          "title": "소규모 커뮤니티",
-          "description": "자신의 팀에 대하여 알림을 받으세요."
+          "title": "Micro-community",
+          "description": "Receive notifications about your team"
         },
         "daily_bonus": {
-          "title": "일일 보너스",
-          "description": "알림을 받고 일일 보너스를 클래임하세요."
+          "title": "Daily bonus",
+          "description": "Receive notifications to claim your daily bonus"
         },
         "mining": {
-          "title": "세션 상황",
-          "description": "체크인 활동에 관하여 알림을 받으세요."
+          "title": "Session status",
+          "description": "Receive notifications about your check-in activity"
         },
         "system": {
-          "title": "시스템",
-          "description": "ice 앱과 관련하여 중요한 알림을 받으세요."
+          "title": "System",
+          "description": "Receive important notifications about the ice app"
         }
       }
     },
-    "language_settings": "언어 설정",
+    "language_settings": "Language settings",
     "change_lang_confirm": {
-      "title": "언어 변경",
-      "prompt": "이 설정을 적용하려면 앱을 다시 시작해야 합니다."
+      "title": "Change language",
+      "prompt": "Applying this setting will restart the app"
     },
-    "profile_image": "프로필 이미지",
-    "inapp_privacy_title": "개인 정보 보호 방침",
-    "inapp_privacy_description": "정보를 여기서 관리하세요.",
-    "developer": "개발자",
-    "user_id": "사용자 ID",
-    "user_token": "사용자 토큰",
+    "profile_image": "Profile Image",
+    "inapp_privacy_title": "Privacy",
+    "inapp_privacy_description": "Manage your information here",
+    "developer": "Developer",
+    "user_id": "User ID",
+    "user_token": "User Token",
     "profile_photo": {
-      "delete": "사진 삭제",
-      "edit": "프로필 사진 편집",
-      "photo_gallery": "사진첩",
-      "camera": "카메라"
+      "delete": "Delete Photo",
+      "edit": "Edit profile photo",
+      "photo_gallery": "Photo Gallery",
+      "camera": "Camera"
     },
-    "confirm_email_confirmation_title": "이메일 확인?",
-    "update_email_confirmation_title": "이메일 업데이트?",
-    "update_email_confirmation_subtitle": "이메일 주소를 변경하면 다시 로그인해야 합니다. 정말 진행하기 원하십니까?",
-    "unlink_logins_title": "로그인 링크 해제",
-    "unlink_logins_description": "여기서 로그인 연결을 해제할 수 있습니다."
+    "confirm_email_confirmation_title": "Confirm email?",
+    "update_email_confirmation_title": "Update email?",
+    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
+    "unlink_logins_title": "Unlink Logins",
+    "unlink_logins_description": "You can unlink your logins from here"
   },
   "invite_share": {
-    "title": "친구 초대",
+    "title": "Invite a friend",
     "telegram": "Telegram",
     "twitter": "Twitter",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
-    "email": "이메일",
-    "fb": "뉴스피드",
+    "email": "Email",
+    "fb": "Newsfeed",
     "sms": "SMS",
-    "copy_link": "링크 복사",
-    "more": "더 보기",
-    "copied": "복사 완료",
-    "share_message": "안녕 ☃️ 스노우맨! ice의 우리 팀에 가입해요. 내가 보내는 추천 코드를 이용하여 등록하면 10 ice 코인을 받을 수 있어요:",
-    "share_subject": "ice의 우리 팀에 가입",
-    "description": "널리 홍보하고 친구를 초대하세요. 새로운 추천 대상이 가입할 때마다 [[:ice]]를 받게 됩니다.",
-    "share": "공유"
+    "copy_link": "Copy link",
+    "more": "More",
+    "copied": "COPIED",
+    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
+    "description_part1": "Spread the word and invite your friends. You earn ",
+    "description_part2": " for each new referral you bring."
   },
   "users": {
-    "ping": "핑",
-    "active": "활성",
-    "inactive": "비활성",
+    "ping": "PING",
+    "active": "Active",
+    "inactive": "Inactive",
     "referralType": {
-      "T1": "티어 1",
-      "T2": "티어 2"
+      "T1": "Tier 1",
+      "T2": "Tier 2"
     }
   },
   "personal_information": {
-    "first_name": "이름",
-    "last_name": "성",
-    "country": "국가",
-    "city": "도시",
-    "title": "개인 정보",
-    "phone": "전화",
-    "email": "이메일",
-    "username": "닉네임"
+    "first_name": "First name",
+    "last_name": "Last name",
+    "country": "Country",
+    "city": "City",
+    "title": "Personal Information",
+    "phone": "Phone",
+    "email": "Email",
+    "username": "Nickname"
   },
   "username": {
     "error": {
-      "already_taken": "이미 사용 중인 닉네임입니다.",
-      "length": "닉네임 길이: 4-20자.",
-      "invalid_characters": "잘못된 문자는 삭제하세요.",
-      "not_found": "닉네임을 찾을 수 없습니다.",
-      "some_error": "오류가 발생했습니다.",
-      "refer_yourself": "자기 자신은 추천할 수 없습니다."
+      "already_taken": "Nickname is already taken.",
+      "length": "Nickname size: 4-20 characters.",
+      "invalid_characters": "Remove invalid characters.",
+      "not_found": "Nickname not found.",
+      "some_error": "Some error occurred.",
+      "refer_yourself": "You can't refer yourself"
     }
   },
   "staking": {
-    "time_left": "남은 시간",
-    "mining_rate": "수익률",
-    "appeal": "수익률을 올리세요",
-    "benefits_description": "최대 5년까지 ice 보상을 사전 스테이킹(Pre-Staking)하고 수익률을 250%까지 올리세요.",
-    "bonus_label": "사전 스테이킹 보너스",
-    "period_label": "스테이킹 기간",
-    "title": "사전 스테이킹",
-    "current_rate": "현재 수익률",
-    "allocation": "할당",
-    "description": "스테이킹은 블록체인 네트워크를 지원하고 거래를 확인하기 위해 암호화 자산을 맡기는 절차입니다.",
-    "terms_agree": "본인은 [[:ice]] [[:link]]스테이킹 이용약관[[/:link]]에 동의합니다. 회원님의 보유 ice는 선택한 기간 동안 잠금 처리될 것입니다.",
-    "stake_now": "지금 사전 스테이킹하세요!",
-    "balance_label": "스테이킹 잔액",
-    "confirm_title": "사전 스테이킹 확인",
-    "confirm_subtitle": "정말 코인을 사전 스테이킹하시겠습니까? 한 번 확인하면 되돌릴 수 없습니다."
+    "time_left": "Time Left",
+    "mining_rate": "Earning Rate",
+    "appeal": "Boost your earning rate",
+    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
+    "bonus_label": "Pre-Staking Bonus",
+    "period_label": "Staked Period",
+    "title": "Pre-Staking",
+    "current_rate": "Current Rate",
+    "allocation": "Allocation",
+    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
+    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
+    "staking_terms": "Staking Terms",
+    "stake_now": "Pre-Stake Now!",
+    "balance_label": "Staked balance",
+    "confirm_title": "Confirm Pre-Stake",
+    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
   },
   "stats": {
-    "header_title": "통계",
-    "active": "활동 중인 사용자",
-    "total": "총 사용자",
-    "user_growth": "사용자 성장",
-    "top_miners": "최고 사용자",
-    "top_countries": "최고 국가",
-    "online_miners": "온라인 사용자",
-    "detailed_information": "상세 정보"
+    "header_title": "Stats",
+    "active": "Active users",
+    "total": "Total users",
+    "user_growth": "User growth",
+    "top_miners": "Top users",
+    "top_countries": "Top countries",
+    "online_miners": "Online users",
+    "detailed_information": "Detailed information"
   },
   "update_required": {
-    "title": "업데이트하세요",
-    "description": "지난 버전의 앱을 사용하고 있습니다. 계속 이용하시려면 업데이트하세요.",
-    "button_title": "지금 업데이트"
+    "title": "Please Update",
+    "description": "You are using an old app version and need to update it in order to use it further.",
+    "button_title": "Update Now"
   },
   "general": {
-    "good_morning": "안녕하세요",
-    "good_afternoon": "안녕하세요",
-    "good_evening": "안녕하세요",
+    "good_morning": "Good morning",
+    "good_afternoon": "Good afternoon",
+    "good_evening": "Good evening",
     "ice": "ice",
-    "ice_per_hour": "ice/시간",
-    "seconds_short": "초",
-    "minutes_short": "분",
-    "hours_short": "시",
-    "days_short": "일"
+    "ice_per_hour": "ice/h",
+    "seconds_short": "s",
+    "minutes_short": "m",
+    "hours_short": "h",
+    "days_short": "d"
   },
   "news": {
-    "news_feed": "뉴스 피드",
-    "read_more": "더 보기",
-    "no_more_news": "이는 마지막 뉴스 피드입니다.",
-    "views": "{{viewsCount}} 조회"
+    "news_feed": "News Feed",
+    "read_more": "Read more",
+    "views": "{{viewsCount}} views"
   },
   "search": {
-    "empty": "연락처, ice 친구 및 소규모 커뮤니티 회원을 검색하세요.",
-    "nothing_is_found": "검색어에 대한 검색 결과가 없습니다.",
-    "search_by_country": "국가 검색",
-    "search_for_users": "사용자 검색",
-    "loading": "검색 중…"
+    "empty": "Search for contacts, ice friends and members of your micro-community",
+    "nothing_is_found": "Nothing was found for your query",
+    "search_by_country": "Search by country",
+    "search_for_users": "Search for users"
   },
   "tabbar": {
-    "mining_inactive_tooltip": "여기를 클릭하여 최초 체크인 세션을 시작하세요.",
-    "mining_reset_tooltip": "1초 동안 눌러 체크인 세션을 연장하세요.",
-    "mining_holiday_reset_tooltip": "휴일을 사용 중입니다! 1초 동안 눌러 체크인 세션을 연장하세요.",
-    "mining_holiday_active": "휴일을 사용 중입니다!"
+    "mining_inactive_tooltip": "Tap here to start your first check-in session",
+    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
+    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
+    "mining_holiday_active": "You are using a Day Off!"
   },
   "invite_friend": {
-    "invite_button": "친구 초대",
-    "button_title": "친구 초대",
-    "description": "친구가 아직 [[:ice]]에 가입하지 않았습니다. 친구에게 초대장을 보내세요."
+    "invite_button": "Invite Friend",
+    "button_title": "Invite Friend",
+    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
   },
   "balance_history": {
-    "title": "잔액 내역",
-    "wallet": "지갑",
-    "blockchain": "블록체인",
-    "wallet_update_interval": "한 시간마다 업데이트됨",
-    "blockchain_update_interval": "24시간마다 업데이트됨",
-    "list_end_label": "이는 최근 잔액 내역입니다.",
-    "no_data": "지정된 기간 동안 표시할 데이터가 없습니다."
+    "title": "Balance History",
+    "wallet": "Wallet",
+    "blockchain": "Blockchain",
+    "wallet_update_interval": "updated every hour",
+    "blockchain_update_interval": "updated every 24 hours",
+    "list_end_label": "this is the last entry of the balance history",
+    "no_data": "There is no data to display \nfor the specified period"
   },
   "pop_up": {
-    "update_now": "지금 업데이트",
-    "please_update": "업데이트하세요",
-    "update_now_text": "지난 버전의 앱을 사용하고 있습니다. 계속 이용하시려면 업데이트하세요.",
-    "you_are_up_to_date": "업데이트할 내용이 없습니다!",
-    "up_to_date_text": "현재 최신 버전을 사용하고 있습니다. 아래 모든 변경 사항을 확인하세요.",
-    "resurrection": "되살리기",
-    "resurrection_message": "지난 [[:period]] 기간 동안 잃은 [[:amount]] 코인은 단 한 번만 되살릴 수 있습니다.",
-    "resurrection_warning": "단 한 번만 되살릴 수 있습니다!",
-    "please_confirm": "확인하세요",
-    "resurrection_no_confirm_message": "[[:amount]] 코인을 영원히 잃게 됩니다. 정말 계속하시겠습니까?",
-    "resurrection_yes_confirm_message": "단 한 번만 되살릴 수 있습니다! 정말 계속하시겠습니까? 한 시간 안에 [[:amount]] 코인이 잔액에 반영될 것입니다.",
-    "delete_account_confirmation_title": "삭제 확인",
-    "delete_account_confirmation_text": "계정을 삭제하면 ice 잔액을 물론 모든 데이터가 영원히 지워집니다. 계속하시겠습니까?"
+    "update_now": "Update Now",
+    "please_update": "Please Update",
+    "update_now_text": "You are using an old app version and need to update it in order to use it further",
+    "you_are_up_to_date": "You are up to date!",
+    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
+    "resurrection": "Resurrection",
+    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
+    "resurrection_warning": "You can only resurrect one time!",
+    "please_confirm": "Please confirm",
+    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
+    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
   },
   "periods": {
-    "3_days": "3일",
-    "7_days": "7일",
-    "30_days": "30일",
-    "1_day": "1일",
-    "1_week": "1주일",
-    "1_month": "1개월",
-    "90_days": "90일",
-    "14_days": "14일"
+    "3_days": "3 days",
+    "7_days": "7 days",
+    "30_days": "30 days",
+    "1_day": "1 Day",
+    "1_week": "1 Week",
+    "1_month": "1 Month",
+    "90_days": "90 days",
+    "14_days": "14 days"
   },
   "notifications": {
-    "joined": " (이)가 회원님의 팀에 합류했습니다.",
-    "multiply": " 및 {{count}}명이 회원님의 팀에 합류했습니다.",
-    "ping": " 측에서 회원님을 핑했습니다. 확인하세요!",
-    "delete": "삭제",
-    "add_notifications": "모의 알림 추가",
-    "no_notifications": "표시할 알림이 없습니다.",
-    "add_announcements": "모의 공지 추가",
-    "add_both": "모든 모의 알림과 모의 공지를 추가하세요",
-    "clear_title": "모든 알림을 지우기 원하십니까?",
-    "title": "알림"
+    "joined": " has joined your team",
+    "multiply": " and {{count}} others have joined your team",
+    "ping": " has pinged you, wake up!",
+    "delete": "Delete",
+    "add_notifications": "Add mocked notifications",
+    "no_notifications": "No notifications to display",
+    "add_announcements": "Add mocked announcements",
+    "add_both": "Add mocked notifications \nand announcements together",
+    "clear_title": "Clear all notifications?",
+    "title": "Notifications"
   },
   "notification_feed_screen": {
-    "yesterday": "어제",
-    "last_week": "지난주",
-    "this_month": "이번 달",
-    "last_month": "지난달",
-    "this_week": "이번 주"
+    "yesterday": "Yesterday",
+    "last_week": "Last Week",
+    "this_month": "This month",
+    "last_month": "Last Month",
+    "this_week": "This week"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. 프로필 통계",
-      "description": "대중의 눈에 띄지 않게 숨기고 싶은 블록을 탭하세요."
+      "title": "1. Your Profile Statistics",
+      "description": "Tap on the blocks you want to hide from public eyes"
     },
     "step2": {
-      "description": "대중의 눈에 띄지 않게 숨기고 싶은 블록을 탭하세요.",
-      "title": "2. 현재 역할"
+      "description": "Tap on this block to hide it from public eyes",
+      "title": "2. Your Current Role"
     },
     "step3": {
-      "title": "3. 획득한 배지",
-      "description": "여기를 클릭하여 대중의 눈에 띄지 않게 배지를 숨기세요."
+      "title": "3. Your Earned Badges",
+      "description": "Tap here to hide your badges from public eyes"
     }
   },
   "confirm_email": {
-    "title": "이메일 확인",
-    "description": "이메일 주소를 입력하시면 코드를 보내드립니다.",
-    "note": "5분 이내에 이메일을 받지 못했다면 스팸 폴더를 확인하세요.",
-    "wrong_email": "잘못된 이메일인가요?",
-    "check_email": "이메일을 확인하세요",
-    "emailed_link_to": "다음으로 마법의 링크를 이메일했습니다:",
-    "emailed_steps_to": "다음으로 절차를 이메일했습니다:",
-    "link_instruction": "여기를 클릭하여 로그인하거나 등록하세요.",
-    "reset_link_instruction": "링크를 클릭하여 비밀번호를 재설정하세요.",
-    "modify_title": "새 이메일 확인",
-    "modify_description": "새 이메일 주소를 입력하세요"
+    "title": "Confirm your email",
+    "description": "Please enter your email address and we will send code ",
+    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
+    "wrong_email": "Wrong email?",
+    "check_email": "Check your email",
+    "emailed_link_to": "We emailed a magic link to",
+    "link_instruction": "Click the link to log in or sign up.",
+    "modify_title": "Confirm New Email",
+    "modify_description": "Please enter your new email address"
   },
   "invalid_link": {
-    "title": "잘못된 링크",
-    "description": "죄송합니다. 링크가 잘못되었습니다. 이메일 주소를 다시 입력하시면 새로운 링크를 보내드립니다."
+    "title": "Invalid link",
+    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
+    "back_button_title": "Back to Login"
   },
   "confirm_code": {
-    "title": "코드 확인",
-    "description": "전송한 코드를 입력하세요",
-    "send_code_again": "코드 재전송",
-    "resend_time_label": "다음 시간 동안 새 코드 입력 가능: ",
-    "enter_code": "코드를 입력하세요",
-    "wrong_number": "잘못된 번호인가요?"
+    "title": "Confirm code",
+    "description": "Please enter the code sent to",
+    "send_code_again": "Send code again",
+    "resend_time_label": "New code available in ",
+    "enter_code": "Enter the code",
+    "wrong_number": "Wrong number?"
   },
   "ice_bonus": {
-    "title": "환영 보상",
-    "description": "축하합니다. [[:bold]]회원님[[/:bold]]에 대한 [[:bold]]신뢰[[/:bold]]의 표시로 [[:value]] [[:ice]] 코인이 주어졌습니다.",
-    "balance_label": "현재 잔액"
+    "title": "Welcome reward",
+    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
+    "balance_label": "Your current balance"
   },
   "country_select": {
-    "title": "국가 선택"
+    "title": "Select country"
   },
-  "roles": {
+  "role": {
     "snowman": {
-      "title": "스노우맨",
-      "subtitle": "눈의 제국을 건설하세요",
-      "description": "24시간마다 체크인하여 ice 네트워크에 대한 헌신을 보이고 로봇이 아닌 인간임을 증명하여 수익을 올리세요."
+      "title": "Snowman",
+      "subtitle": "Build a snow empire",
+      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
     },
     "ambassador": {
-      "title": "대사",
-      "subtitle": "눈의 제국 통치자",
-      "description": "최소 100명이 회원님의 팀에 합류하면 대사직을 맡게 됩니다. 모든 대사는 새 기능에 이 발표될 때마다 이를 먼저 이용할 수 있습니다."
+      "title": "Ambassador",
+      "subtitle": "Ruler of the snow empire",
+      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
     }
   },
   "confirm_phone": {
-    "modify_title": "전화 확인",
-    "modify_description": "국가 코드를 확인하고 전화번호를 입력하세요.",
-    "button": "국가와 전화 확인",
-    "same_phone_error": "같은 번호를 사용할 수 없습니다."
+    "modify_title": "Confirm Phone",
+    "modify_description": "Please confirm your country code and enter your phone number",
+    "button": "Confirm country and phone",
+    "same_phone_error": "You can’t use the same number"
+  },
+  "tasks": {
+    "completed": {
+      "title": "Congratulations",
+      "description": "Keep mining ice daily to earn extra rewards!"
+    }
   },
   "date_select": {
-    "title": "날짜 선택"
+    "title": "Choose date"
   },
   "walkthrough": {
     "news": {
-      "readmore": {
-        "title": "더 보기",
-        "description": "여기에서 우리 팀의 최신 뉴스를 볼 수 있습니다. 이 버튼을 클릭하여 전체 글을 읽어 보세요."
+      "step_1": {
+        "title": "Read more",
+        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
       },
-      "releasednews": {
-        "title": "발표된 뉴스",
-        "description": "각 뉴스 제목을 탭하여 전체 글을 읽어 보세요. 모든 뉴스와 여론 조사에 대한 최신 정보를 얻으세요."
+      "step_2": {
+        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
+        "title": "Released news"
+      }
+    },
+    "teams": {
+      "step_1": {
+        "title": "Allow contacts",
+        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      },
+      "step_2": {
+        "title": "Referrals",
+        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      },
+      "step_3": {
+        "title": "Earnings",
+        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      },
+      "step_4": {
+        "title": "Contacts",
+        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      },
+      "step_5": {
+        "title": "Tier 1",
+        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
+      },
+      "step_6": {
+        "title": "Tier 2",
+        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
+      },
+      "step_7": {
+        "title": "Active Users",
+        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      },
+      "step_8": {
+        "title": "Tier 1 Earnings",
+        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      },
+      "step_9": {
+        "title": "Ping Button",
+        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
       }
     },
     "team": {
-      "allow_contacts": {
-        "title": "모든 연락처",
-        "description": "연락처를 동기화하여 누가 이미 [[:ice]]에 가입했는지 알아보세요. 앞으로는 원하는 연락처에 [[:ice]]를 보낼 수 있게 됩니다."
+      "step_1": {
+        "title": "Allow contacts",
+        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
       },
-      "confirm_phone": {
-        "title": "전화 확인",
-        "description": "신원을 확인하고 연락처의사람들에게 회원님이 ice 네트워크의 회원임을 알리세요. 회원님의 전화번호는 다른 회사와 공유하지 않습니다."
+      "step_2": {
+        "title": "Referrals",
+        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
       },
-      "contacts_list": {
-        "title": "연락처 목록",
-        "description": "이것은 모든 연락처의 목록입니다. 이미 [[:ice]] 네트워크에 가입한 사람이 목록 맨 위에 표시됩니다."
+      "step_3": {
+        "title": "Earnings",
+        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
       },
-      "referrals": {
-        "title": "추천",
-        "description": "여기서 총 몇 명의 추천인이 있는지 볼 수 있습니다. 더 많이 초대할수록 수익이 더욱 커집니다."
+      "step_4": {
+        "title": "Contacts",
+        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
       },
-      "earnings": {
-        "title": "수익",
-        "description": "회원님의 현재 잔액은 한 시간마다 업데이트되어 여기에 표시됩니다. 여기에는 직접적으로 스테이킹된 수익과 티어 1, 티어 2의 수익이 포함됩니다."
+      "step_5": {
+        "title": "Tier 1",
+        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
+        "url": "https://ice.io/#invite"
       },
-      "segmented_control_tier_one": {
-        "title": "티어 1",
-        "description": "여기서 회원님의 티어 1 추천 목록을 보실 수 있습니다. 친구와 회원님과 같은 시간에 체크인할 때마다 해당 친구와 회원님은 현재 채택된 수익률에 따라 기본 수익의 최대 25%의 보너스를 받을 것입니다. [[:link]]더 보기[[/:link]]",
-        "url": "https://ice.io/team"
+      "step_6": {
+        "title": "Tier 2",
+        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
+        "url": "https://ice.io/#invite"
       },
-      "segmented_control_tier_two": {
-        "title": "티어 2",
-        "description": "여기서 회원님의 티어 2 추천 목록을 보실 수 있습니다. 친구와 회원님과 같은 시간에 체크인할 때마다 해당 친구와 회원님은 현재 채택된 수익률에 따라 기본 수익의 최대 5%의 보너스를 받을 것입니다. [[:link]]더 보기[[/:link]]",
-        "url": "https://ice.io/team"
+      "step_7": {
+        "title": "Active Users",
+        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
       },
-      "active_users": {
-        "title": "활동 중인 사용자",
-        "description": "이는 추천인의 현재 체크인 활동 현황입니다. 해당 추천인이 체크인하여 세션에서 활동하면 활동 중으로 표시됩니다."
+      "step_8": {
+        "title": "Tier 1 Earnings",
+        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
       },
-      "tier_one_earnings": {
-        "title": "티어 1 수익",
-        "description": "여기서 회원님의 티어 1 추천 목록을 보실 수 있습니다. 팀원이 회원님과 같은 시간에 체크인할 때마다 해당 팀원과 회원님 모두가 현재 채택된 수익률에 따라 기본 수익의 최대 25%의 보너스를 받을 것입니다."
-      },
-      "ping": {
-        "title": "핑 버튼",
-        "description": "추천인에게 체크인하여 세션을 진행하도록 알림을 보내세요. 24시간마다 각 추천인에게 한 번의 알림을 보낼 수 있습니다."
-      }
-    },
-    "home": {
-      "home": {
-        "title": "홈",
-        "description": "[[:ice]]에 오신 것을 환영합니다. 홈 화면에서 잔액과 현재 수익률 및 팀과 회원님의 글로벌 순위에 대한 모든 통계를 확인할 수 있습니다."
-      },
-      "invite": {
-        "title": "초대",
-        "description": "초대하는 사람마다 두 분 모두가 기본 수익의 25%를 보너스로 받을 수 있습니다. 더 많이 초대할 수록 수익이 더욱 커집니다."
-      },
-      "team": {
-        "title": "팀",
-        "description": "[[:ice]] 는 친구와 함께할 때 더욱 좋습니다 이 페이지에서는 티어 1과 티어 2 레벨의 팀원 현황을 볼 수 있습니다. 또한 여기서 그들에게 핑을 보낼 수 있습니다."
-      },
-      "news": {
-        "title": "뉴스",
-        "description": "모든 뉴스와 여론 조사에 대한 최신 정보를 얻으세요. 분산형 자율 조직이므로 여기에서 향후 기능에 대해 투표할 수 있습니다."
-      },
-      "profile": {
-        "title": "프로필",
-        "description": "원하는 대로 프로필 세부 정보를 지정하고 모든 성취와 획득한 배지를 확인하세요. 여기서 계산기를 사용하여 수익을 추정할 수 있습니다."
-      },
-      "earningicestart": {
-        "title": "ice 적립",
-        "description": "이 버튼을 탭하여 24시간마다 [[:ice]]에 체크인하고 세션을 시작할 수 있습니다. 매일 여기로 돌아와서 수익을 올리는 것을 잊지 마세요!"
-      },
-      "earningiceseemore": {
-        "title": "ice 적립",
-        "description": "다시 탭하면 현재 체크인하신 세션에 대한 자세한 내용을 볼 수 있습니다."
-      },
-      "stats": {
-        "title": "통계",
-        "description": "통계 페이지에서 상위 국가 및 사용자와 함께 매일 체크인한 활동 중 사용자 전체를 볼 수 있습니다."
-      },
-      "help": {
-        "title": "도움말",
-        "description": "질문이 있으신가요? 자주 묻는 질문 목록을 확인하세요. hi@ice.io.원하는 것을 찾을 수 없다면 주저하지 말고 hi@ice.io로 문의하세요."
-      },
-      "preStaking": {
-        "title": "사전 스테이킹",
-        "description": "수익 보상을 사전 스테이킹하여 수익을 극대화하세요. 할당과 스테이킹 기간을 선택하여 수익 외에도 보너스를 받으세요."
-      },
-      "wallet": {
-        "title": "지갑 카드",
-        "description": "여기에서 적립률과 함께 현재 [[:ice]] 잔액을 확인할 수 있습니다. 회원님의 팀원에서 추천이 많아질 수록 수익률이 높아집니다."
-      },
-      "earning": {
-        "title": "수익 카드",
-        "description": "수익률과 보너스를 최신 상태로 유지하세요! 여기에서 현재 요율과 기본 요율 및 앱을 이용한 다양한 활동에 대한 보너스 비율을 확인할 수 있습니다."
-      },
-      "engagement": {
-        "title": "참여 카드",
-        "description": "연속으로 체크인한 세션과 휴일을 추적하세요! 이 세션을 통해 연속으로 체크인한 세션에 대한 자세한 내용과 사용 가능한 휴가 일수를 확인하세요."
-      },
-      "profilecard": {
-        "title": "프로필 카드",
-        "description": "이 카드를 팔로우하면 프로필 현황을 추적할 수 있습니다. 회원님의 역할, 레벨, 총 추천인 및 현재 글로벌 순위가 표시됩니다."
-      },
-      "referralscard": {
-        "title": "추천인 카드",
-        "description": "이 카드를 탭하여 지난 5일 동안 티어 1과 티어 2 추천인 통계의 변화를 확인하세요."
-      },
-      "adoptioncard": {
-        "title": "채택 카드",
-        "description": "지난주에 활동한 총 스노우맨의 평균 인원수를 기준으로 현재의 [[:ice]] 수익률을 확인할 수 있습니다. 다음 임계값에 도달하면 수익률이 절반으로 줄어듭니다."
-      },
-      "nickname": {
-        "title": "닉네임",
-        "description": "닉네임은 회원님이 고유한 개성입니다. 친구가 팀에 합류하면 이 닉네임을 사용할 것입니다 또한 이를 바로 가기로 사용하여 프로필을 열 수도 있습니다."
-      },
-      "balancehistory": {
-        "title": "잔액 내역",
-        "description": "여기서 로컬 지갑과 블록체인에 있는 현재의 [[:ice]] 잔액을 확인할 수 있습니다. 블록체인 잔액은 24시간마다 업데이트되지만 로컬 지갑의 잔액은 매시간 업데이트됩니다."
-      },
-      "achievements": {
-        "title": "성취 내역",
-        "description": "아래 과제를 완료하고 레벨업하세요! 여기를 클릭하여 최초 체크인 세션을 시작하세요."
+      "step_9": {
+        "title": "Ping Button",
+        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "로그인 링크 해제",
-    "sessionName": "다음을 이용한 로그인: {{providerName}}",
+    "title": "Unlink Logins",
+    "sessionName": "Login via {{providerName}}",
     "buttons": {
-      "currentSession": "현재 세션",
-      "endSession": "세션 종료",
-      "loginUnlinked": "로그인 링크 해제",
-      "sessionEnded": "세션 종료됨",
-      "unlink": "링크 해제"
+      "currentSession": "Current session",
+      "endSession": "End Session",
+      "loginUnlinked": "Login Unlinked",
+      "sessionEnded": "Session Ended",
+      "unlink": "Unlink"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "로그인 링크 해제",
-        "message": "이 기기에서 {{providerName}} 서비스를 통해 로그인 링크 해제를 원하시나요?"
+        "title": "Unlink Login?",
+        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
       },
       "endSession": {
-        "title": "세션 종료",
-        "message": "이 기기에서 {{providerName}} 로그인 세션을 종료하기 원하나요?"
+        "title": "End Session?",
+        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
       }
     }
   },
@@ -846,51 +792,12 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "오늘의 보너스",
-    "claim_message": "오늘의 보너스가 지급될 시간입니다. 아래의 [[:bold]]“보너스 클레임(Claim Bonus)”[[/:bold]] 버튼을 텝하세요.",
-    "link": "더 알아보기",
-    "extra_message": "회원님은 수익률에 따라 일일 보너스를 추가로 받았습니다.",
-    "expired_title": "보너스 만료됨",
-    "expired_message": "죄송하지만 오늘의 보너스는 만료되었습니다. 다음 알림을 기대해 주세요!",
-    "result_title": "축하합니다"
-  },
-  "early_access": {
-    "title": "조기 액세스",
-    "message_part1": "[[:bold]]곧 있을 공식 출시 전에 [[:bold]]ice[[/:bold]] 앱을 살짝 엿보세요.[[/:bold]]",
-    "message_part2": "출시일에는 모든 잔액이 0으로 재설정 됩니다. 하지만 회원님의 팀은 그대로 유지됩니다.",
-    "message_part3": "성원해 주셔서 감사합니다!",
-    "checkbox_description": "인정합니다! 이 알림창을 다시 보지 않기."
-  },
-  "mining_notice": {
-    "title": "알림",
-    "message": "[[:bold]]ice에 관심을 가져 주셔서 감사합니다![[/:bold]] 현재 ice의 기술을 미세하게 조정하고 있어 체크인하실 수 없습니다. 이는 회원님이 팀 결성에 집중하고 소규모 커뮤니티를 발전시킬 기회입니다.",
-    "message_footer": "[[:twitter]]Twitter[[/:twitter]]와 [[:telegram]]Telegram[[/:telegram]] 채널에서 업데이트를 확인하세요."
-  },
-  "qr_code": {
-    "description": "QR 코드를 스캔하여 내 팀에 합류하세요."
-  },
-  "social_media": {
-    "tiktok": {
-      "title": "TikTok에서 가입하세요",
-      "description": "TikTok의 흥미로운 새 커뮤니티에 대해 알려 드리고 싶습니다. 여기에서는 디지털 통화인 ice와 관련한 재미있고 유익한 콘텐츠를 공유하고 있습니다. 여러분의 참여를 환영합니다! "
-    },
-    "youtube": {
-      "title": "YouTube에서 가입하세요",
-      "description": "ice 수익을 올리는 방법 관련 튜토리얼부터 새 기능 업데이트 및, 재미있는 커뮤니티 콘텐츠에 이르기까지 YouTube 채널은 최신 정보를 얻을 수 있는 완벽한 장소입니다."
-    },
-    "linkedin": {
-      "title": "LinkedIn에서 가입하세요",
-      "description": "LinkedIn에서 ice 커뮤니티에 가입하면 최신 개발 정보를 접하면서 디지털 통화의 미래에 대해 열정과 비슷한 생각을 하는 다른 사람과도 소통할 수 있습니다."
-    },
-    "facebook": {
-      "title": "Facebook에서 가입하세요",
-      "description_part1": "Facebook 페이지 팔로우를 강력하게 권합니다.",
-      "description_part2": "ice 프로젝트에서 일어나는 모든 일에 대한 최신 정보를 얻을 수 있을 뿐만 아니라 커뮤니티에 참여하여 대화할 수 있는 좋은 방법입니다."
-    },
-    "instagram": {
-      "title": "Instagram에서 가입하세요",
-      "description_part1": "Instagram에서 팔로우하면 모든 소식을 전달받고 ice에 열정을 가진 다른 사용자들과 연대할 수 있습니다.",
-      "description_part2": "또한 출시되는 새로운 기능이나 프로모션 소식을 가장 먼저 파악하게 될 것입니다."
-    }
+    "claim_title": "Today’s Bonus",
+    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
+    "link": "Find out more",
+    "extra_message": "You have received your daily extra bonus on your earning rate",
+    "expired_title": "Bonus Expired",
+    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
+    "result_title": "Congratulations"
   }
 }

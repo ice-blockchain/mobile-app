@@ -46,7 +46,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingVertical: rem(10),
-    paddingLeft: rem(6),
   },
   langContainer: {
     flexDirection: 'row',

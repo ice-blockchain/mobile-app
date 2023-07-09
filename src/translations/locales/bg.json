@@ -1,841 +1,787 @@
 {
   "welcome": {
     "page1": {
-      "title": "Добре дошли в ice",
-      "description": "[[:ice]] е цифрова валута, която можете да печелите с телефона си. ice се притежава и управлява от ежедневни потребители като вас."
+      "title": "Welcome to ice",
+      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
     },
     "page2": {
-      "title": "Щадяща планетата",
-      "description": "[[:ice]] по своята същност е по-енергийно ефективна от BTC, тъй като използва консенсусен механизъм „Доказателство за дял“. С „доказателство за дял“ (POS) собствениците на криптовалута валидират блокови транзакции въз основа на броя монети, притежавани от валидатора."
+      "title": "Planet Friendly",
+      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
     },
     "page3": {
-      "title": "Валутата на хората",
-      "description_part1": "Силата е във Вашите ръце.",
-      "description_part2": "Всичко, което разработваме в [[:ice]], ще бъде с отворен код и ще се контролира от Децентрализираната автономна организация (DAO)."
+      "title": "People’s Coin",
+      "description_part1": "The power is in your hands.",
+      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
     },
     "page4": {
-      "title": "Останете свързани",
-      "description": "Натискайте [[:iceLogo]] за ежедневното си вписване в нашето безплатно мобилно приложение с ниска консумация на енергия. Вашето ежедневно натискане гарантира, че ice остава в ръцете на истински хора, а не на ботове."
+      "title": "Stay Connected",
+      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
     },
     "page5": {
-      "title": "Насочвайте и печелете",
-      "description": "Поканете приятелите си и спечелете (и двамата) до 25% бонус върху основния си процент на печалба за всеки приятел, който се присъедини към Вашия екип."
+      "title": "Refer & Earn",
+      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
     },
     "page6": {
-      "title": "Известия",
-      "description_part1": "[[:ice]] сесиите на вписване продължават само 24 часа. Искате ли да получавате известие, когато текущата Ви сесия приключи?",
-      "description_part2": "Не се притеснявайте, ние няма да Ви изпращаме спам!",
-      "not_now": "Не сега"
+      "title": "Notifications",
+      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
+      "description_part2": "Don’t worry, we will not spam you!",
+      "not_now": "Not now"
     }
   },
   "button": {
-    "yes_btn": "Да",
-    "next_btn": "Напред",
-    "not_now": "Не сега",
-    "view_all": "виж всички",
+    "yes_btn": "Yes, please",
+    "next_btn": "Next",
+    "not_now": "Not now",
+    "view_all": "view all",
     "invite_friend": {
-      "title": "Покани приятели",
-      "description": "Печели допълнителни [[:ice]], като поканиш приятелите си."
+      "title": "Invite Friends",
+      "description_part1": "Earn extra ",
+      "description_part2": " by inviting your friends."
     },
-    "see_all": "виж всички",
-    "no": "Не",
-    "search_country": "Търси за държава",
-    "save": "Запази",
-    "yes": "Да",
-    "change": "Промени",
-    "no_cancel": "Не, отмени",
-    "complete": "Завърши",
-    "cancel": "Отмени",
-    "clear": "Изчисти",
-    "finish": "Приключи",
-    "next_step": "Следваща стъпка",
-    "back": "Назад",
-    "search": "Търси",
-    "continue": "Продължи",
-    "apply": "Приложи",
-    "reset": "Нулирай",
-    "skip_all": "Пропусни всички",
-    "done": "Готово",
-    "confirm": "Потвърди",
-    "do_this_later": "Направи по-късно",
-    "resurrect_me": "Възстанови ме",
-    "claim_bonus": "Поискай бонус",
-    "close": "Затвори",
-    "try_again": "Опитай отново",
-    "view_changelog": "Прегледай регистъра на промените",
-    "disable": "Изключи",
-    "agree": "Приемам",
-    "learn_more": "Разбери повече",
-    "back_to_login": "Назад към вписване",
-    "follow_us": "Следвайте ни",
-    "subscribe": "Абониране"
+    "no": "No",
+    "search_country": "Search for country",
+    "save": "Save",
+    "yes": "Yes",
+    "change": "Change",
+    "no_cancel": "No, cancel",
+    "complete": "Complete",
+    "cancel": "Cancel",
+    "clear": "Clear",
+    "finish": "Finish",
+    "next_step": "Next Step",
+    "see_all": "see all",
+    "back": "Back",
+    "search": "Search",
+    "continue": "Continue",
+    "apply": "Apply",
+    "reset": "Reset",
+    "skip_all": "Skip all",
+    "done": "Done",
+    "confirm": "Confirm",
+    "do_this_later": "Do this later",
+    "resurrect_me": "Resurrect Me",
+    "claim_bonus": "Claim Bonus",
+    "close": "Close",
+    "try_again": "Try Again",
+    "view_changelog": "View Changelog",
+    "disable": "Disable"
   },
   "team": {
-    "contacts_tab": "Контакти",
-    "tierOne_tab": "Клас 1",
-    "tierTwo_tab": "Клас 2",
+    "contacts_tab": "Contacts",
+    "tierOne_tab": "Tier 1",
+    "tierTwo_tab": "Tier 2",
     "empty": {
-      "title": "В момента нямате насочени потребители в [[:title]]!",
-      "contacts": "В момента нямате контакти в телефонния указател.",
-      "button_title": "Покани приятели"
+      "title_part1": "You currently don't have any\n",
+      "title_part2": " referrals!",
+      "button_title": "Invite Friends"
     },
     "contacts": {
-      "empty_title": "[[:ice]] е по-добро с приятели",
-      "empty_button_title": "Разреши достъп до контактите",
-      "empty_description": "Синхронизирайте контактите си и вижте кой вече е в [[:ice]]. В бъдеще ще можете да изпращате ice до всеки Ваш контакт."
+      "empty_title": "[[:ice]] is better with friends",
+      "empty_button_title": "Allow contacts access",
+      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
     },
     "header": {
-      "search_placeholder": "Търси потребители",
-      "referrals": "Насочени потребители",
-      "earnings": "Печалби"
+      "search_placeholder": "Search for users",
+      "referrals": "Referrals",
+      "earnings": "Earnings"
     },
     "confirm_code": {
-      "title": "Код за потвърждение",
-      "description": "Въведете кода за потвърждение, който сте получили на телефона си.",
-      "placeholder": "Въведи кода",
-      "button": "Потвърдете кода си сега"
+      "title": "Confirm Code",
+      "description": "Please enter the confirmation code you have received on your phone.",
+      "placeholder": "Enter the code",
+      "button": "Confirm your code now"
     },
     "confirm_phone": {
-      "title": "Потвърди телефон",
-      "description": "Потвърдете кода на държавата си и въведете телефонния си номер."
+      "title": "Confirm Phone",
+      "description": "Please confirm your country code and enter your phone number."
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "приятели"
+        "friends": "friends"
       },
-      "all_contacts": "Всички контакти",
-      "invite": "покани",
-      "invitation_text": "Здравей, {{name}}, искам да те поканя да се присъединиш към ice."
+      "all_contacts": "All contacts",
+      "invite": "invite",
+      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Печалби в Клас 1"
+        "title_earnings": "Tier 1 Earnings"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Печалби в Клас 2"
+        "title_earnings": "Tier 2 Earnings"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Вход/Регистрация",
-    "phone": "Телефон",
-    "or": "или",
-    "reset_password": "Нулиране на парола",
-    "welcome": "Добре дошли в ice",
-    "email": "Имейл",
-    "slogan": "Глобалната валутна промяна",
-    "privacy": "С продължаването Вие приемате нашите [[:link]]Условия за ползване[[/:link]] и [[:link]]Политика на поверителност[[/:link]]"
+    "logInSignUp": "Log in / Sign up",
+    "phone": "Phone",
+    "or": "or",
+    "welcome": "Welcome to ice",
+    "email": "Email",
+    "slogan": "Global Currency Reset",
+    "privacy": {
+      "description": "By continuing, you agree to our ",
+      "terms": "Terms of Service",
+      "and": " and ",
+      "policy": "Privacy Policy"
+    }
   },
   "claimUsername": {
-    "title": "Вземи псевдоним",
-    "description": "Вашите приятели ще трябва да използват този псевдоним, за да се присъединят към екипа Ви.",
-    "inputPlaceholder": "Въведете псевдонима си",
-    "note_part1": "Когато създавате псевдоним, използвайте само букви, цифри и точки.",
-    "note_part2": "Пример:",
+    "title": "Claim nickname",
+    "description": "Your friends will need to use this nickname to join your team",
+    "inputPlaceholder": "Enter your nickname",
+    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
+    "note_part2": "Example:",
     "note_example": "your.name01"
   },
   "whoInvitedYou": {
-    "title": "Кой Ви е поканил?",
-    "description": "Въведете псевдонима на човека, който Ви е поканил.",
-    "inputPlaceholder": "Въведете псевдоним",
-    "dontHaveInvitationCode": "Със завършването на тази стъпка Вие и Вашият приятел ще получите 25% бонус върху основния процент на печалба, когато и двамата се вписвате едновременно.",
-    "dontHaveCodeTip": "Ако нямате код за покана, ние ще изберем произволен член като Ваше насочващо лице!"
+    "title": "Who invited you?",
+    "description": "Enter the nickname of the person who invited you",
+    "inputPlaceholder": "Enter nickname",
+    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
+    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
+    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
   },
   "errors": {
-    "nicknameSize": "Дължина на псевдонима: 4 – 20 символа.",
-    "removeInvalidCharacters": "Премахнете невалидните символи.",
-    "validation_error": "Грешка при потвърждаването.",
-    "multiple_accounts": "Имейлът/телефонният номер е свързан с друг профил. Влезте в този профил, за да докажете собственост, след това излезте и влезте отново в този. Ако не притежавате този друг профил или не можете да влезете в него, свържете се с нашия отдел „Поддръжка“.",
-    "wrong_phone_number": "Невалиден телефонен номер. Опитайте отново.",
-    "invalid_username": "Псевдонимът е невалиден.",
-    "email_already_taken": "Имейлът вече е зает.",
-    "phone_number_already_taken": "Телефонът вече е зает.",
-    "invalid_validation_code": "Невалиден номер на код. Опитайте отново!",
-    "validation_expired": "Валидирането е изтекло",
-    "validation_not_found": "Валидирането не е открито",
-    "invalid_email": "Невалиден имейл.",
-    "invalid_password": "Невалидна парола.",
-    "invalid_ref_username": "Псевдонимът е невалиден.",
-    "invalid_phone": "Невалиден телефонен номер.",
-    "user_disabled": "Потребителят е деактивиран.",
-    "expired_action_code": "OTP във връзката от имейла е изтекъл.",
-    "account_exists_with_different_credential": "Вече съществува профил с имейл адреса, заявен от идентификационните данни.",
-    "invalid_credential": "Идентификационните данни са неправилно формирани или са изтекли.",
-    "operation_not_allowed": "Типът профил, съответстващ на идентификационните данни, не е активиран.",
-    "user_not_found_for_email": "Няма потребител, отговарящ на дадения имейл.",
-    "user_not_found": "Потребителят не е открит.",
-    "auth_in_progress": "Вече протича вписване.",
-    "google_play_services_not_available": "Услугите на Google Play не са налични на това устройство.",
-    "unknown_error_with_code": "Неизвестна грешка: {{code}}",
-    "no_such_provider": "Този доставчик не е свързан с Вас.",
-    "min_username": "Минималната дължина е 4 символа.",
-    "max_username": "Максималната дължина е 30 символа.",
-    "code_expired": "Кодът е изтекъл. Поискайте нов код.",
-    "too_many_requests": "Твърде много заявки. Опитайте отново по-късно.",
-    "network_error_title": "Няма интернет връзка",
-    "network_error_message": "Вашето устройство няма активна интернет връзка.",
-    "unknown_error": "Възникна грешка. Пробвайте отново по-късно.",
-    "general_error_title": "Опа...",
-    "general_error_message": "Изглежда нещо се е объркало. В момента екипът ни работи по отстраняване на проблема.",
-    "general_network_error": "Възникна мрежова грешка. Проверете връзката си.",
-    "credential_already_in_use": "Тези идентификационни данни вече са свързани с друг потребителски профил.",
-    "email_already_in_use": "Имейл адресът вече се използва от друг профил.",
-    "user_token_expired": "Вашите идентификационни данни вече не са валидни. Влезте отново.",
-    "requires_recent_login": "Тази операция е чувствителна и изисква скорошно удостоверяване. Влезте отново.",
-    "same_email": "Не може да използвате същия имейл.",
-    "weak_password": "Слаба парола.",
-    "wrong_password": "Грешна парола.",
-    "no_camera_permissions": "Не са предоставени разрешения за камерата.",
-    "no_library_permissions": "Не са предоставени разрешения за библиотеката."
+    "nicknameSize": "Nickname size: 4-20 characters.",
+    "removeInvalidCharacters": "Remove invalid characters.",
+    "validation_error": "Some validation error",
+    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
+    "wrong_phone_number": "Invalid phone number, please try again",
+    "invalid_username": "Nickname is invalid.",
+    "already_taken": "{{field}} already taken",
+    "phone_number_already_in_use": "Phone number already in use",
+    "invalid_validation_code": "Invalid code number, please try again!",
+    "validation_expired": "Validation expired",
+    "validation_not_found": "Validation not found",
+    "invalid_email": "Invalid email",
+    "invalid_ref_username": "Nickname is invalid.",
+    "invalid_phone": "Invalid phone number",
+    "user_disabled": "User has been disabled",
+    "expired_action_code": "OTP in email link is expired",
+    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
+    "invalid_credential": "The credential is malformed or has expired",
+    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
+    "user_not_found_for_email": "There is no user corresponding to the given email",
+    "user_not_found": "User not found",
+    "auth_in_progress": "Sign-In already in progress",
+    "google_play_services_not_available": "Google Play services are not available on the device",
+    "unknown_error_with_code": "Unknown error {{code}}",
+    "no_such_provider": "You do not have this provider linked",
+    "min_username": "Minimum length is 4 characters.",
+    "max_username": "Maximum length is 30 characters.",
+    "code_expired": "The code has expired. Please ask for a new code.",
+    "too_many_requests": "Too many requests. Please try again later.",
+    "network_error_title": "No internet connection",
+    "network_error_message": "Your device does not have any active internet connection",
+    "unknown_error": "Some error occurred, please try again later",
+    "general_error_title": "Oups...",
+    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
+    "general_network_error": "A network error has occurred. Please check your connection.",
+    "credential_already_in_use": "This credential is already associated with a different user account.",
+    "email_already_in_use": "The email address is already in use by another account.",
+    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
+    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
+    "same_email": "You can’t use the same e-mail"
   },
   "profile": {
     "my_roles": {
-      "title": "Моята роля"
+      "title": "My Role"
     },
-    "mining_calculator": "калкулатор на печалбите",
-    "invite_friends": "Покани приятели",
-    "invite_friends_engage": "Разпространете информацията и поканете приятелите си. Колкото повече насочени потребители, толкова повече печелите!",
-    "global_rank": "глобална позиция",
-    "view_all_roles": "виж всички роли",
-    "data_is_hidden": "данните са скрити",
-    "progress_text": "{{value}} от {{total}}",
+    "mining_calculator": "earnings calculator",
+    "invite_friends": "Invite Friends",
+    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
+    "global_rank": "global rank",
+    "view_all_roles": "view all roles",
+    "data_is_hidden": "data is hidden",
+    "progress_text": "{{value}} of {{total}}",
     "not_found": {
-      "title": "Потребителят не е открит",
-      "description": "Не успяхме да открием този потребител."
+      "title": "User was not found",
+      "description": "oops, we couldn't find this user"
     },
     "my_badges": {
-      "title": "Моите значки"
+      "title": "My Badges"
     },
     "badges": {
-      "title": "Значки"
+      "title": "Badges"
     },
     "roles": {
-      "title": "Роли"
+      "title": "Roles"
     },
     "badge_types": {
       "coin": {
-        "title": "Монети",
-        "description": "монети"
+        "title": "Coins",
+        "description": "coins"
       },
       "social": {
-        "title": "Социални",
-        "description": "приятели"
+        "title": "Social",
+        "description": "friends"
       },
       "level": {
-        "title": "Ниво",
-        "description": "Ниво"
+        "title": "Level",
+        "description": "Level"
       }
     }
   },
   "global": {
-    "level": "ниво",
-    "referrals": "насочени потребители",
-    "coin": "Монети",
-    "social": "Социални",
-    "phone_number": "Телефонен номер",
-    "years": "Години",
-    "of": "от",
-    "attention": "Внимание",
-    "email_address": "Имейл адрес",
-    "password": "Парола",
-    "data_hidden": "данните са скрити",
-    "pull_to_refresh": "дръпнете за обновяване",
-    "comingSoon": "Очаквайте скоро",
+    "level": "level",
+    "referrals": "referrals",
+    "coins": "Coins",
+    "social": "Social",
+    "phone_number": "Phone number",
+    "years": "Years",
+    "of": "of",
+    "attention": "Attention",
+    "email_address": "Email address",
+    "data_hidden": "data is hidden",
+    "pull_to_refresh": "pull to update",
+    "comingSoon": "Coming soon",
     "date": {
-      "today": "Днес"
+      "today": "Today"
     }
   },
   "mining_calculator": {
-    "result_label": "Вие ще спечелите",
-    "active_inviter": "Активен поканващ",
-    "tier_1_ref": "Насочени потребители за Клас 1",
-    "tier_2_ref": "Насочени потребители за Клас 2",
-    "active_miners": "Активни насочени потребители"
+    "result_label": "You will earn",
+    "active_inviter": "Active inviter",
+    "tier_1_ref": "Tier 1 referrals",
+    "tier_2_ref": "Tier 2 referrals",
+    "active_miners": "Active referrals"
   },
   "home": {
     "wallet": {
-      "title": "ПОРТФЕЙЛ",
-      "rate": "ПРОЦЕНТ НА ПЕЧАЛБА",
-      "balance": "ТЕКУЩО САЛДО"
+      "title": "WALLET",
+      "rate": "EARNING RATE",
+      "balance": "CURRENT BALANCE"
     },
     "pioneer": {
-      "rank": "ГЛОБАЛНА ПОЗИЦИЯ",
-      "referrals": "НАСОЧЕНИ ПОТРЕБИТЕЛИ",
-      "description": "Насочвайте повече потребители и печелете повече [[:ice]]."
+      "title": "PIONEER",
+      "rank": "GLOBAL RANK",
+      "referrals": "REFERRALS",
+      "description_part1": "The more users you refer, the more ",
+      "description_part2": " you earn"
     },
     "referrals": {
-      "title": "НАСОЧЕНИ ПОТРЕБИТЕЛИ",
-      "description": "Статистика за насочванията за последните 5 дни.",
-      "no_referrals_description": "Все още нямате насочени потребители.",
-      "users_tier_1": "Потребители на клас 1",
-      "users_tier_2": "Потребители на клас 2"
+      "title": "REFERRALS",
+      "description": "Referral stats for the previous 5 days",
+      "no_referrals_description": "You don't have any referrals yet",
+      "users_tier_1": "Users tier 1",
+      "users_tier_2": "Users tier 2"
     },
     "adoption": {
-      "title": "ПРИЕМАНЕ",
-      "level": "ниво",
-      "users": "потребители"
+      "title": "ADOPTION",
+      "level": "level",
+      "users": "\nusers"
     },
-    "tasks": {
-      "achievements": "ПОСТИЖЕНИЯ",
-      "title": "Вашият напредък",
-      "description": "Изпълнете задачите по-долу и преминете на по-високо ниво!",
-      "completed": {
-        "title": "Поздравления",
-        "description": "Не пропускайте да се вписвате ежедневно, за да печелите допълнителни награди!"
+    "steps": {
+      "title": "Your progress",
+      "description": "Complete the tasks below and level up!",
+      "step_one": {
+        "title": "Claim your nickname",
+        "description": "Set it and start earning from your invite"
       },
-      "popup": {
-        "title": "Влезте в канала ни в Telegram",
-        "description": "Посочете своя псевдоним, който се използва в Telegram.",
-        "placeholder": "Псевдоним"
+      "step_two": {
+        "title": "Start mining",
+        "description": "Your first mining session"
       },
-      "claim_username": {
-        "title": "Вземете псевдонима си",
-        "description": "Задайте го и го споделете с приятелите си."
+      "step_three": {
+        "title": "Profile picture",
+        "description": "Upload your profile image"
       },
-      "start_mining": {
-        "title": "Започнете да печелите",
-        "description": "Вашата първа сесия на вписване."
+      "step_four": {
+        "title": "Join Telegram",
+        "description": "Be part of our community and join now"
       },
-      "upload_profile_picture": {
-        "title": "Профилна снимка",
-        "description": "Качете профилната си снимка."
+      "step_five": {
+        "title": "Follow us on Twitter",
+        "description": "Let’s keep in touch, follow us on twitter"
       },
-      "join_telegram": {
-        "title": "Присъединете са към Telegram",
-        "description": "Бъдете част от нашата общност и се присъединете сега."
-      },
-      "follow_us_on_twitter": {
-        "title": "Следвайте ни в Twitter",
-        "description": "Поддържайте връзка и ни следвайте в Twitter."
-      },
-      "invite_friends": {
-        "title": "Покани 5 приятели",
-        "description": "Развийте екипа си и увеличете приходите си."
+      "step_six": {
+        "title": "Invite 5 Friends",
+        "description": "Create your team and increase your earnings"
       }
     },
     "overview": {
-      "title": "Преглед"
+      "title": "Overview"
     },
     "menu": {
-      "notifications": "Известия",
-      "staking": "Печелене от дялове",
-      "stats": "Статистика",
-      "help": "Помощ"
+      "notifications": "Notifications",
+      "staking": "Staking",
+      "stats": "Stats",
+      "help": "Help"
+    },
+    "tasks": {
+      "title": "ACHIEVEMENTS"
     },
     "team": {
-      "title": "Екип",
-      "view_team": "виж екипа"
+      "title": "Team",
+      "view_team": "view team"
     },
     "mining_rate": {
-      "title": "ПРОЦЕНТ НА ПЕЧАЛБА",
-      "base": "База"
+      "title": "EARNING RATE",
+      "base": "Base"
     },
     "engagement": {
-      "title": "АНГАЖИРАНОСТ",
-      "description_part1": "„Серия“ означава колко последователни дни сте се вписвали.",
-      "description_part2": "За всеки 6 последователни дни получавате по един ден почивка.",
-      "streak": "СЕРИЯ",
-      "days_off": "ДНИ ПОЧИВКА"
+      "title": "ENGAGEMENT",
+      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
+      "streak": "STREAK",
+      "days_off": "DAYS OFF"
     }
   },
   "settings": {
-    "title": "Настройки",
-    "profile": "Профил",
-    "legal": "Правна информация",
-    "support": "Поддръжка",
-    "personal_information_title": "Лична информация",
-    "personal_information_description": "Управлявайте профилните си данни.",
-    "notifications_title": "Известия",
-    "notifications_description": "Управлявайте известията си тук.",
-    "push_notifications_title": "Насочени известия",
-    "push_notifications_description": "Персонализирайте настройките си за насочени известия.",
-    "email_notifications_title": "Имейл известия",
-    "email_notifications_description": "Персонализирайте настройките си за насочени известия.",
-    "terms_title": "Условия за ползване",
-    "terms_description": "Разгледайте нашите условия за ползване.",
-    "privacy_title": "Политика за поверителност",
-    "privacy_description": "Научете за нашата политика за поверителност.",
-    "feedback_title": "Изпрати мнение",
-    "feedback_description": "Споделете какво мислите с нас.",
-    "invite_title": "Покани приятел",
-    "invite_description": "Печели допълнителни ice, като поканиш приятелите си.",
-    "delete_title": "Изтрий профил",
-    "delete_description": "Премахнете профила си.",
-    "delete_confirmation_title": "Наистина ли искате да изтриете профила си?",
-    "delete_confirmation_yes": "Да, изтрий",
-    "logout_title": "Изход",
-    "logout_description": "Излезте от профила си и си вземете почивка.",
-    "logout_confirmation_title": "Наистина ли искате да излезете от профила си?",
-    "logout_confirmation_yes": "Да, излез",
+    "title": "Settings",
+    "profile": "Profile",
+    "legal": "Legal",
+    "support": "Support",
+    "personal_information_title": "Personal Information",
+    "personal_information_description": "Manage your profile details",
+    "notifications_title": "Notifications",
+    "notifications_description": "Manage your notifications here",
+    "push_notifications_title": "Push Notifications",
+    "push_notifications_description": "Customize your push notification settings",
+    "email_notifications_title": "Email Notifications",
+    "email_notifications_description": "Customize your email notification settings",
+    "terms_title": "Terms of Service",
+    "terms_description": "Review our terms of service",
+    "privacy_title": "Privacy Policy",
+    "privacy_description": "Learn about our privacy policy",
+    "feedback_title": "Send Feedback",
+    "feedback_description": "Share your thoughts with us",
+    "invite_title": "Invite a Friend",
+    "invite_description": "Earn extra ice by inviting your friends",
+    "delete_title": "Delete Account",
+    "delete_description": "Erase your account",
+    "delete_confirmation_title": "Are you sure you want to remove the account?",
+    "delete_confirmation_yes": "Yes, erase",
+    "logout_title": "Log Out",
+    "logout_description": "Sign off and take a break",
+    "logout_confirmation_title": "Are you sure you want to sign off?",
+    "logout_confirmation_yes": "Yes, log out",
     "confirm_phone": {
-      "title": "Потвърди новия телефон",
-      "description": "Потвърдете кода на държавата си и въведете новия си телефонен номер.",
-      "button": "Потвърди новия телефонен номер"
+      "title": "Confirm New Phone",
+      "description": "Please confirm your country code and enter your new phone number.",
+      "button": "Confirm new phone number"
     },
     "notifications": {
-      "enable_prompt": "Известията не са разрешени. Искате ли да ги включите?",
-      "channel_achievements": "Постижения",
-      "channel_news": "Новини",
-      "channel_reminders": "Напомняния",
-      "channel_team": "Екип",
-      "type_push": "НАСОЧВАНЕ НА ИЗВЕСТИЯ",
-      "type_email": "ИМЕЙЛ",
-      "disable_notifications": "Изключване на известия?",
-      "disable_notifications_description": "С изключването на известията няма да можете да получавате съобщения кога може да започнете да се вписвате, новини или информация за екипа.",
+      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
+      "channel_achievements": "Achievements",
+      "channel_news": "News",
+      "channel_reminders": "Reminders",
+      "channel_team": "Team",
+      "type_push": "PUSH",
+      "type_email": "EMAIL",
+      "disable_notifications": "Disable Notifications?",
+      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Седмична статистика",
-          "description": "Получавайте известия за активността си."
+          "title": "Weekly stats",
+          "description": "Receive notifications about your activity"
         },
         "weekly_report": {
-          "title": "Седмичен отчет",
-          "description": "Получавайте известия за активността си."
+          "title": "Weekly report",
+          "description": "Receive notifications about your activity"
         },
         "achievements": {
-          "title": "Постижения",
-          "description": "Получавайте известия за напредъка си."
+          "title": "Achievements",
+          "description": "Receive notifications about your progress"
         },
         "promotions": {
-          "title": "Промоции",
-          "description": "Получавайте известия как да развивате своя екип и да печелите повече."
+          "title": "Promotions",
+          "description": "Receive notifications on how to grow your team and earn more"
         },
         "news": {
-          "title": "Новини",
-          "description": "Получавайте известия от екипа си."
+          "title": "News",
+          "description": "Receive notifications from our team"
         },
         "micro_community": {
-          "title": "Микрообщност",
-          "description": "Получавайте известия за екипа си."
+          "title": "Micro-community",
+          "description": "Receive notifications about your team"
         },
         "daily_bonus": {
-          "title": "Ежедневен бонус",
-          "description": "Получавайте известия за поискване на ежедневния си бонус."
+          "title": "Daily bonus",
+          "description": "Receive notifications to claim your daily bonus"
         },
         "mining": {
-          "title": "Състояние на сесията",
-          "description": "Получавайте известия за активността си на вписване."
+          "title": "Session status",
+          "description": "Receive notifications about your check-in activity"
         },
         "system": {
-          "title": "Система",
-          "description": "Получавайте важни известия за приложението ice."
+          "title": "System",
+          "description": "Receive important notifications about the ice app"
         }
       }
     },
-    "language_settings": "Езикови настройки",
+    "language_settings": "Language settings",
     "change_lang_confirm": {
-      "title": "Промяна на езика",
-      "prompt": "Прилагането на тази настройка ще рестартира приложението."
+      "title": "Change language",
+      "prompt": "Applying this setting will restart the app"
     },
-    "profile_image": "Профилна снимка",
-    "inapp_privacy_title": "Поверителност",
-    "inapp_privacy_description": "Управлявайте информацията си тук.",
-    "developer": "Разработчик",
-    "user_id": "Потребителски ИД",
-    "user_token": "Потребителски токен",
+    "profile_image": "Profile Image",
+    "inapp_privacy_title": "Privacy",
+    "inapp_privacy_description": "Manage your information here",
+    "developer": "Developer",
+    "user_id": "User ID",
+    "user_token": "User Token",
     "profile_photo": {
-      "delete": "Изтрий снимка",
-      "edit": "Редактирай профилна снимка",
-      "photo_gallery": "Фотогалерия",
-      "camera": "Камера"
+      "delete": "Delete Photo",
+      "edit": "Edit profile photo",
+      "photo_gallery": "Photo Gallery",
+      "camera": "Camera"
     },
-    "confirm_email_confirmation_title": "Потвърди имейл?",
-    "update_email_confirmation_title": "Обнови имейл?",
-    "update_email_confirmation_subtitle": "Промяната на имейл адреса ще изисква повторно влизане. Искате ли да продължите?",
-    "unlink_logins_title": "Премахни връзката за вписвания",
-    "unlink_logins_description": "Можете да премахнете връзката за вписванията си тук."
+    "confirm_email_confirmation_title": "Confirm email?",
+    "update_email_confirmation_title": "Update email?",
+    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
+    "unlink_logins_title": "Unlink Logins",
+    "unlink_logins_description": "You can unlink your logins from here"
   },
   "invite_share": {
-    "title": "Покани приятел",
+    "title": "Invite a friend",
     "telegram": "Telegram",
     "twitter": "Twitter",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
-    "email": "Имейл",
-    "fb": "Информационен канал",
+    "email": "Email",
+    "fb": "Newsfeed",
     "sms": "SMS",
-    "copy_link": "Копирай връзка",
-    "more": "Повече",
-    "copied": "КОПИРАНО",
-    "share_message": "Здравей, ☃️ снежен човек! Присъедини се към моя екип в ice и получи 10 ice монети, когато се регистрирате с моя код за насочване:",
-    "share_subject": "Присъедини се към моя екип в ice",
-    "description": "Разпространете информацията и поканете приятелите си. Печелите [[:ice]] за всяко осъществено насочване.",
-    "share": "Сподели"
+    "copy_link": "Copy link",
+    "more": "More",
+    "copied": "COPIED",
+    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
+    "description_part1": "Spread the word and invite your friends. You earn ",
+    "description_part2": " for each new referral you bring."
   },
   "users": {
-    "ping": "СИГНАЛИЗИРАЙ",
-    "active": "Активни",
-    "inactive": "Неактимни",
+    "ping": "PING",
+    "active": "Active",
+    "inactive": "Inactive",
     "referralType": {
-      "T1": "Клас 1",
-      "T2": "Клас 2"
+      "T1": "Tier 1",
+      "T2": "Tier 2"
     }
   },
   "personal_information": {
-    "first_name": "Собствено име",
-    "last_name": "Фамилия",
-    "country": "Държава",
-    "city": "Град",
-    "title": "Лична информация",
-    "phone": "Телефон",
-    "email": "Имейл",
-    "username": "Псевдоним"
+    "first_name": "First name",
+    "last_name": "Last name",
+    "country": "Country",
+    "city": "City",
+    "title": "Personal Information",
+    "phone": "Phone",
+    "email": "Email",
+    "username": "Nickname"
   },
   "username": {
     "error": {
-      "already_taken": "Псевдонимът вече е зает.",
-      "length": "Дължина на псевдонима: 4 – 20 символа.",
-      "invalid_characters": "Премахнете невалидните символи.",
-      "not_found": "Псевдонимът не е открит.",
-      "some_error": "Възникна грешка.",
-      "refer_yourself": "Не може да насочите себе си."
+      "already_taken": "Nickname is already taken.",
+      "length": "Nickname size: 4-20 characters.",
+      "invalid_characters": "Remove invalid characters.",
+      "not_found": "Nickname not found.",
+      "some_error": "Some error occurred.",
+      "refer_yourself": "You can't refer yourself"
     }
   },
   "staking": {
-    "time_left": "Оставащо време",
-    "mining_rate": "Процент на печалба",
-    "appeal": "Увеличете процента си на печалба",
-    "benefits_description": "Залагайте предварително наградите си в ice за до 5 години и увеличете процента си на печалба с до 250%.",
-    "bonus_label": "Бонус за предварително залагане",
-    "period_label": "Период на залагане",
-    "title": "Предварително залагане",
-    "current_rate": "Текущ процент",
-    "allocation": "Разпределяне",
-    "description": "Залагането е процес, който включва ангажиране на Вашите криптоактиви за поддръжка на блокчейн мрежа и потвърждаване на трансакции.",
-    "terms_agree": "Приемам [[:ice]] [[:link]]Условията за залагане[[/:link]]. Вашите активи в ice ще бъдат заключени за избрания период.",
-    "stake_now": "Залагайте предварително сега!",
-    "balance_label": "Заложено салдо",
-    "confirm_title": "Потвърди предварителното залагане",
-    "confirm_subtitle": "Наистина ли искате да заложите предварително монетите си? Това не може да бъде отменено, след като потвърдите."
+    "time_left": "Time Left",
+    "mining_rate": "Earning Rate",
+    "appeal": "Boost your earning rate",
+    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
+    "bonus_label": "Pre-Staking Bonus",
+    "period_label": "Staked Period",
+    "title": "Pre-Staking",
+    "current_rate": "Current Rate",
+    "allocation": "Allocation",
+    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
+    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
+    "staking_terms": "Staking Terms",
+    "stake_now": "Pre-Stake Now!",
+    "balance_label": "Staked balance",
+    "confirm_title": "Confirm Pre-Stake",
+    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
   },
   "stats": {
-    "header_title": "Статистика",
-    "active": "Активни потребители",
-    "total": "Общо потребители",
-    "user_growth": "Нарастване на потребителите",
-    "top_miners": "Топ потребители",
-    "top_countries": "Топ държави",
-    "online_miners": "Онлайн потребители",
-    "detailed_information": "Подробна информация"
+    "header_title": "Stats",
+    "active": "Active users",
+    "total": "Total users",
+    "user_growth": "User growth",
+    "top_miners": "Top users",
+    "top_countries": "Top countries",
+    "online_miners": "Online users",
+    "detailed_information": "Detailed information"
   },
   "update_required": {
-    "title": "Обновете",
-    "description": "Използвате стара версия на приложението и трябва да я обновите, за да го използвате и занапред.",
-    "button_title": "Обнови сега"
+    "title": "Please Update",
+    "description": "You are using an old app version and need to update it in order to use it further.",
+    "button_title": "Update Now"
   },
   "general": {
-    "good_morning": "Добро утро",
-    "good_afternoon": "Добър ден",
-    "good_evening": "Добър вечер",
+    "good_morning": "Good morning",
+    "good_afternoon": "Good afternoon",
+    "good_evening": "Good evening",
     "ice": "ice",
-    "ice_per_hour": "ice/ч",
-    "seconds_short": "с",
-    "minutes_short": "м",
-    "hours_short": "ч",
-    "days_short": "д"
+    "ice_per_hour": "ice/h",
+    "seconds_short": "s",
+    "minutes_short": "m",
+    "hours_short": "h",
+    "days_short": "d"
   },
   "news": {
-    "news_feed": "Новинарски канал",
-    "read_more": "Прочети повече",
-    "no_more_news": "това е последният запис в новинарския канал.",
-    "views": "{{viewsCount}} разглеждания"
+    "news_feed": "News Feed",
+    "read_more": "Read more",
+    "views": "{{viewsCount}} views"
   },
   "search": {
-    "empty": "Търсете контакти, приятели в ice и членове на Вашата микрообщност.",
-    "nothing_is_found": "Нищо не беше открито за Вашето запитване.",
-    "search_by_country": "Търси по държава",
-    "search_for_users": "Търси потребители",
-    "loading": "Търсене…"
+    "empty": "Search for contacts, ice friends and members of your micro-community",
+    "nothing_is_found": "Nothing was found for your query",
+    "search_by_country": "Search by country",
+    "search_for_users": "Search for users"
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Натиснете тук за започване на Вашата първа сесия на вписване.",
-    "mining_reset_tooltip": "Натиснете за 1 секунда, за да удължите сесията си на вписване.",
-    "mining_holiday_reset_tooltip": "Вие използвате почивен ден! Натиснете за 1 секунда, за да удължите сесията си на вписване.",
-    "mining_holiday_active": "Вие използвате почивен ден!"
+    "mining_inactive_tooltip": "Tap here to start your first check-in session",
+    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
+    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
+    "mining_holiday_active": "You are using a Day Off!"
   },
   "invite_friend": {
-    "invite_button": "Покани приятел",
-    "button_title": "Покани приятел",
-    "description": "Вашият приятел все още не е в [[:ice]]. Изпратете му покана!"
+    "invite_button": "Invite Friend",
+    "button_title": "Invite Friend",
+    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
   },
   "balance_history": {
-    "title": "История на баланса",
-    "wallet": "Портфейл",
-    "blockchain": "Блокчейн",
-    "wallet_update_interval": "обновявано всеки час",
-    "blockchain_update_interval": "обновявано на 24 часа",
-    "list_end_label": "това е последният запис от историята на баланса.",
-    "no_data": "Няма данни за показване за посочения период."
+    "title": "Balance History",
+    "wallet": "Wallet",
+    "blockchain": "Blockchain",
+    "wallet_update_interval": "updated every hour",
+    "blockchain_update_interval": "updated every 24 hours",
+    "list_end_label": "this is the last entry of the balance history",
+    "no_data": "There is no data to display \nfor the specified period"
   },
   "pop_up": {
-    "update_now": "Обнови сега",
-    "please_update": "Обновете",
-    "update_now_text": "Използвате стара версия на приложението и трябва да я обновите, за да го използвате и занапред.",
-    "you_are_up_to_date": "Всичко е обновено!",
-    "up_to_date_text": "Сега използвате последната версия. Вижте всички промени по-долу.",
-    "resurrection": "Възстановяване",
-    "resurrection_message": "Имате еднократен шанс за възстановяване и получаване на [[:amount]] монети, които сте изгубили в рамките на [[:period]].",
-    "resurrection_warning": "Може да използвате възстановяване само веднъж!",
-    "please_confirm": "Потвърдете",
-    "resurrection_no_confirm_message": "Ще изгубите Вашите [[:amount]] монети завинаги. Искате ли да продължите?",
-    "resurrection_yes_confirm_message": "Може да използвате възстановяване само веднъж! Искате ли да продължите? [[:amount]] монетите ще се върнат по салдото Ви в рамките на следващия час.",
-    "delete_account_confirmation_title": "Потвърди изтриване",
-    "delete_account_confirmation_text": "Изтриването на профила Ви ще премахне завинаги всичките Ви данни, включително Вашето салдо в ice. Искате ли да продължите?"
+    "update_now": "Update Now",
+    "please_update": "Please Update",
+    "update_now_text": "You are using an old app version and need to update it in order to use it further",
+    "you_are_up_to_date": "You are up to date!",
+    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
+    "resurrection": "Resurrection",
+    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
+    "resurrection_warning": "You can only resurrect one time!",
+    "please_confirm": "Please confirm",
+    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
+    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
   },
   "periods": {
-    "3_days": "3 дни",
-    "7_days": "7 дни",
-    "30_days": "30 дни",
-    "1_day": "1 ден",
-    "1_week": "1 седмица",
-    "1_month": "1 месец",
-    "90_days": "90 дни",
-    "14_days": "14 дни"
+    "3_days": "3 days",
+    "7_days": "7 days",
+    "30_days": "30 days",
+    "1_day": "1 Day",
+    "1_week": "1 Week",
+    "1_month": "1 Month",
+    "90_days": "90 days",
+    "14_days": "14 days"
   },
   "notifications": {
-    "joined": " се присъедини към екипа.",
-    "multiply": " и {{count}} други се присъединиха към екипа Ви.",
-    "ping": " Ви сигнализира, събудете се!",
-    "delete": "Изтрий",
-    "add_notifications": "Добави симулирани известия",
-    "no_notifications": "Няма известия за показване.",
-    "add_announcements": "Добави симулирани обявления",
-    "add_both": "Добави симулирани известия и обявления заедно",
-    "clear_title": "Изчисти всички известия?",
-    "title": "Известия"
+    "joined": " has joined your team",
+    "multiply": " and {{count}} others have joined your team",
+    "ping": " has pinged you, wake up!",
+    "delete": "Delete",
+    "add_notifications": "Add mocked notifications",
+    "no_notifications": "No notifications to display",
+    "add_announcements": "Add mocked announcements",
+    "add_both": "Add mocked notifications \nand announcements together",
+    "clear_title": "Clear all notifications?",
+    "title": "Notifications"
   },
   "notification_feed_screen": {
-    "yesterday": "Вчера",
-    "last_week": "Миналата седмица",
-    "this_month": "Този месец",
-    "last_month": "Миналия месец",
-    "this_week": "Тази седмица"
+    "yesterday": "Yesterday",
+    "last_week": "Last Week",
+    "this_month": "This month",
+    "last_month": "Last Month",
+    "this_week": "This week"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Статистиката за Вашия профил",
-      "description": "Натиснете блоковете, които искате да скриете от публична видимост."
+      "title": "1. Your Profile Statistics",
+      "description": "Tap on the blocks you want to hide from public eyes"
     },
     "step2": {
-      "description": "Натиснете този блок, за да го скриете от публична видимост.",
-      "title": "2. Вашата текуща роля"
+      "description": "Tap on this block to hide it from public eyes",
+      "title": "2. Your Current Role"
     },
     "step3": {
-      "title": "3. Вашите спечелени значки",
-      "description": "Натиснете тук, за да скриете значките си от публична видимост."
+      "title": "3. Your Earned Badges",
+      "description": "Tap here to hide your badges from public eyes"
     }
   },
   "confirm_email": {
-    "title": "Потвърдете имейла си",
-    "description": "Въведете имейл адреса си и ще изпратим кода.",
-    "note": "Ако не сте получили имейла до 5 минути, проверете папката си „Спам“.",
-    "wrong_email": "Грешен имейл?",
-    "check_email": "Проверете имейла си",
-    "emailed_link_to": "Изпратихме имейл с магическа връзка на",
-    "emailed_steps_to": "Изпратихме стъпките на",
-    "link_instruction": "Кликнете върху връзката, за да влезете или да се регистрирате.",
-    "reset_link_instruction": "Кликнете върху връзката, за да нулирате паролата си.",
-    "modify_title": "Потвърди новия имейл",
-    "modify_description": "Въведете новия си имейл адрес."
+    "title": "Confirm your email",
+    "description": "Please enter your email address and we will send code ",
+    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
+    "wrong_email": "Wrong email?",
+    "check_email": "Check your email",
+    "emailed_link_to": "We emailed a magic link to",
+    "link_instruction": "Click the link to log in or sign up.",
+    "modify_title": "Confirm New Email",
+    "modify_description": "Please enter your new email address"
   },
   "invalid_link": {
-    "title": "Невалидна връзка",
-    "description": "За съжаление тази връзка е невалидна. Въведете имейла си отново и ще Ви изпратим нова връзка."
+    "title": "Invalid link",
+    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
+    "back_button_title": "Back to Login"
   },
   "confirm_code": {
-    "title": "Код за потвърждение",
-    "description": "Въведете кода, изпратен на",
-    "send_code_again": "Изпрати кода отново",
-    "resend_time_label": "Новият код ще е наличен след ",
-    "enter_code": "Въведи кода",
-    "wrong_number": "Грешен номер?"
+    "title": "Confirm code",
+    "description": "Please enter the code sent to",
+    "send_code_again": "Send code again",
+    "resend_time_label": "New code available in ",
+    "enter_code": "Enter the code",
+    "wrong_number": "Wrong number?"
   },
   "ice_bonus": {
-    "title": "Награда за нов потребител",
-    "description": "Поздравления, Вие получихте първите си [[:value]] [[:ice]] монети, което доказва нашето [[:bold]]доверие[[/:bold]] във [[:bold]]Вас[[/:bold]].",
-    "balance_label": "Вашето текущо салдо"
+    "title": "Welcome reward",
+    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
+    "balance_label": "Your current balance"
   },
   "country_select": {
-    "title": "Избери държава"
+    "title": "Select country"
   },
-  "roles": {
+  "role": {
     "snowman": {
-      "title": "Снежен човек",
-      "subtitle": "Изградете снежна империя",
-      "description": "Печелете, като се вписвате на всеки 24 часа, за да покажете ангажираността си към мрежата на ice и да докажете, че сте човек, а не робот."
+      "title": "Snowman",
+      "subtitle": "Build a snow empire",
+      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
     },
     "ambassador": {
-      "title": "Посланик",
-      "subtitle": "Владетел на снежната империя",
-      "description": "Вие ставате посланик, когато поне 100 души се присъединят към Вашия екип. Всеки посланик ще получава ранен достъп до нови функции."
+      "title": "Ambassador",
+      "subtitle": "Ruler of the snow empire",
+      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
     }
   },
   "confirm_phone": {
-    "modify_title": "Потвърди телефон",
-    "modify_description": "Потвърдете кода на държавата си и въведете телефонния си номер.",
-    "button": "Потвърди държава и телефон",
-    "same_phone_error": "Не може да използвате същия номер."
+    "modify_title": "Confirm Phone",
+    "modify_description": "Please confirm your country code and enter your phone number",
+    "button": "Confirm country and phone",
+    "same_phone_error": "You can’t use the same number"
+  },
+  "tasks": {
+    "completed": {
+      "title": "Congratulations",
+      "description": "Keep mining ice daily to earn extra rewards!"
+    }
   },
   "date_select": {
-    "title": "Избери дата"
+    "title": "Choose date"
   },
   "walkthrough": {
     "news": {
-      "readmore": {
-        "title": "Прочети повече",
-        "description": "Тук можете да видите последните новини от нашия екип. Натиснете този бутон, за да прочетете цялата статия."
+      "step_1": {
+        "title": "Read more",
+        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
       },
-      "releasednews": {
-        "title": "Излъчени новини",
-        "description": "Натиснете всяко отделно заглавие на новина и прочетете пълната ѝ версия. Бъдете в крак с всички наши новини и анкети."
+      "step_2": {
+        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
+        "title": "Released news"
+      }
+    },
+    "teams": {
+      "step_1": {
+        "title": "Allow contacts",
+        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      },
+      "step_2": {
+        "title": "Referrals",
+        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      },
+      "step_3": {
+        "title": "Earnings",
+        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      },
+      "step_4": {
+        "title": "Contacts",
+        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      },
+      "step_5": {
+        "title": "Tier 1",
+        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
+      },
+      "step_6": {
+        "title": "Tier 2",
+        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
+      },
+      "step_7": {
+        "title": "Active Users",
+        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      },
+      "step_8": {
+        "title": "Tier 1 Earnings",
+        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      },
+      "step_9": {
+        "title": "Ping Button",
+        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
       }
     },
     "team": {
-      "allow_contacts": {
-        "title": "Разреши контакти",
-        "description": "Синхронизирайте контактите си и вижте кой вече е в [[:ice]]. В бъдеще ще можете да изпращате [[:ice]] до всеки Ваш контакт."
+      "step_1": {
+        "title": "Allow contacts",
+        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
       },
-      "confirm_phone": {
-        "title": "Потвърди телефон",
-        "description": "Потвърдете самоличността си и позволете на контактите си да знаят, че и вие сте член на мрежата ice. Вашият телефонен номер няма да бъде споделян с други трети страни."
+      "step_2": {
+        "title": "Referrals",
+        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
       },
-      "contacts_list": {
-        "title": "Списък контакти",
-        "description": "Това е списъкът с всички Ваши контакти, като тези, които вече са се присъединили към мрежата [[:ice]], се показват в горната част на списъка."
+      "step_3": {
+        "title": "Earnings",
+        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
       },
-      "referrals": {
-        "title": "Насочени потребители",
-        "description": "Тук ще видите колко насочени потребители имате общо. Колкото повече хора поканите, толкова повече ще печелите."
+      "step_4": {
+        "title": "Contacts",
+        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
       },
-      "earnings": {
-        "title": "Печалби",
-        "description": "Текущото Ви салдо се обновява на всеки час и се показва тук. То включва Вашите преки и заложени печалби заедно с приходите от Клас 1 и Клас 2."
+      "step_5": {
+        "title": "Tier 1",
+        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
+        "url": "https://ice.io/#invite"
       },
-      "segmented_control_tier_one": {
-        "title": "Клас 1",
-        "description": "Тук можете да видите списъка с Вашите насочени потребители от Клас 1. За всеки приятел, който се вписва едновременно с Вас, ще получавате допълнителни 25% върху основния текущ процент на печалба при приемане. [[:link]]Прочети повече[[/:link]]",
-        "url": "https://ice.io/team"
+      "step_6": {
+        "title": "Tier 2",
+        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
+        "url": "https://ice.io/#invite"
       },
-      "segmented_control_tier_two": {
-        "title": "Клас 2",
-        "description": "Тук можете да видите списъка с Вашите насочени потребители от Клас 2. За всеки приятел, който се вписва едновременно с Вас, ще получавате допълнителни 5% върху основния текущ процент на печалба при приемане. [[:link]]Прочети повече[[/:link]]",
-        "url": "https://ice.io/team"
+      "step_7": {
+        "title": "Active Users",
+        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
       },
-      "active_users": {
-        "title": "Активни потребители",
-        "description": "Това е текущото състояние на дейността на вписване на насочените от Вас потребители. Те се считат за активни, когато имат активна сесия за вписване."
+      "step_8": {
+        "title": "Tier 1 Earnings",
+        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
       },
-      "tier_one_earnings": {
-        "title": "Печалби в Клас 1",
-        "description": "Тук можете да видите списъка с Вашите насочени потребители от Клас 1. За всеки член, който се вписва едновременно с Вас, и двамата ще получавате допълнителни 25% върху основния текущ процент на печалба при приемане."
-      },
-      "ping": {
-        "title": "Бутон „Сигнализирай“",
-        "description": "Уведомявайте насочените от Вас потребители да започват сесиите си на вписване. Можете да изпращате по едно известие до всеки насочен потребител на всеки 24 часа."
-      }
-    },
-    "home": {
-      "home": {
-        "title": "Начало",
-        "description": "Добре дошли в [[:ice]]. На началния екран можете да намерите всички статистически данни за Вашето салдо, текущия процент на печалба, глобалната Ви позиция заедно с Вашия екип."
-      },
-      "invite": {
-        "title": "Покани",
-        "description": "За всеки човек, когото поканите, и двамата ще спечелите до 25% от основния си процент на печалба. Колкото повече хора поканите, толкова повече ще печелите."
-      },
-      "team": {
-        "title": "Екип",
-        "description": "[[:ice]] е по-добро с приятели. На тази страница можете да виждате състоянието на членовете на Вашия екип от нивата Клас 1 и Клас 2. От тук можете и да им сигнализирате."
-      },
-      "news": {
-        "title": "Новини",
-        "description": "Бъдете в крак с всички наши новини и анкети. Тъй като ние сме децентрализирана автономна организация, тук ще можете да гласувате за бъдещи функции."
-      },
-      "profile": {
-        "title": "Профил",
-        "description": "Персонализирайте детайлите на Вашия профил и виждайте всичките си постижения и значките, които сте спечелили. Използвайте калкулатора от тук, за да можете да изчислявате приходите си."
-      },
-      "earningicestart": {
-        "title": "Печелене на ice",
-        "description": "Можете да започвате сесията си за вписване в [[:ice]] на всеки 24 часа, като натискате този бутон. Не забравяйте да се връщате всеки ден и да започнете да печелите!"
-      },
-      "earningiceseemore": {
-        "title": "Печелене на ice",
-        "description": "Натиснете отново и вижте повече подробности за текущата Ви сесия на вписване."
-      },
-      "stats": {
-        "title": "Статистика",
-        "description": "На страницата със статистически данни можете да виждате общите и активни потребители, които са се вписвали всеки ден, заедно с водещите държави и потребители."
-      },
-      "help": {
-        "title": "Помощ",
-        "description": "Имате ли въпроси? Вижте нашия списък с често задавани въпроси. Ако не можете да намерите това, което търсите, не се колебайте да се свържете с нас на hi@ice.io."
-      },
-      "preStaking": {
-        "title": "Предварително залагане",
-        "description": "Увеличете възвращаемостта си на максимум, като залагате предварително спечелените награди. Изберете своя период на разпределение и залагане, за да получите бонус към печалбите си."
-      },
-      "wallet": {
-        "title": "Портфейлна карта",
-        "description": "Тук можете да намерите текущото си салдо в [[:ice]] заедно с процента на печалба. Колкото повече насочени потребители от Вашия екип са онлайн, толкова по-висок е процентът на печалба."
-      },
-      "earning": {
-        "title": "Карта на печалбите",
-        "description": "Бъдете в крак с Вашия процент на печалба и бонуси! Тук можете да проверявате текущия си процент, нашия основен процент и процентите за бонуси за различни дейности в приложението."
-      },
-      "engagement": {
-        "title": "Карта на ангажираността",
-        "description": "Проследявайте серията се от сесии на вписване и почивните си дни! Вижте този раздел за повече подробности относно Вашите последователни сесии на вписване и за да видите колко свободни почивни дни имате."
-      },
-      "profilecard": {
-        "title": "Профилна карта",
-        "description": "Можете да следите състоянието на Вашия профил, като следвате тази карта. Тя показва текущата Ви глобална позиция заедно с Вашата роля, ниво и общ брой насочени потребители."
-      },
-      "referralscard": {
-        "title": "Карта на насочени потребители",
-        "description": "Гледайте еволюцията на статистическите данни за вашите насочени потребители за предходните 5 дни от Клас 1 и Клас 2, като натиснете тази карта."
-      },
-      "adoptioncard": {
-        "title": "Карта на приемане",
-        "description": "Въз основа на средната стойност на общия брой активни снежни човеци от последната седмица, можете да виждате текущия процент на печалба в [[:ice]]. Процентът на печалба се намалява наполовина при достигане на следващия праг."
-      },
-      "nickname": {
-        "title": "Псевдоним",
-        "description": "Псевдонимът е това, което Ви прави уникален. Вашите приятели ще трябва да го използват, за да се присъединят към екипа Ви. Можете да използвате и този пряк път, за да отваряте профила си."
-      },
-      "balancehistory": {
-        "title": "История на баланса",
-        "description": "Тук можете да откриете текущото си салдо в [[:ice]] в местния портфейл и блокчейн. Салдото на местния портфейл се обновява на всеки час, докато салдото на блокчейн се обновява на всеки 24 часа."
-      },
-      "achievements": {
-        "title": "Постижения",
-        "description": "Изпълнете задачите по-долу и преминете на по-високо ниво! Започнете първата си сесия на вписване сега!"
+      "step_9": {
+        "title": "Ping Button",
+        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Премахни връзката за вписвания",
-    "sessionName": "Вход с {{providerName}}",
+    "title": "Unlink Logins",
+    "sessionName": "Login via {{providerName}}",
     "buttons": {
-      "currentSession": "Текуща сесия",
-      "endSession": "Приключи сесията",
-      "loginUnlinked": "Връзката към вписването е премахната",
-      "sessionEnded": "Сесията е приключена",
-      "unlink": "Премахни връзката"
+      "currentSession": "Current session",
+      "endSession": "End Session",
+      "loginUnlinked": "Login Unlinked",
+      "sessionEnded": "Session Ended",
+      "unlink": "Unlink"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Премахване на връзката за вписване?",
-        "message": "Искате ли да премахнете връзката за вписване с {{providerName}} от това устройство?"
+        "title": "Unlink Login?",
+        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
       },
       "endSession": {
-        "title": "Приключване на сесията?",
-        "message": "Искате ли да приключите сесията на вписване в {{providerName}} от това устройство?"
+        "title": "End Session?",
+        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
       }
     }
   },
@@ -846,51 +792,12 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Днешният бонус",
-    "claim_message": "Време е за днешния Ви бонус. Натиснете бутона [[:bold]]Поискай бонус[[/:bold]] по-долу.",
-    "link": "Научете повече",
-    "extra_message": "Получихте Вашия дневен допълнителен бонус върху Вашия процент на печалба.",
-    "expired_title": "Бонусът е изтекъл",
-    "expired_message": "За съжаление днешният бонус е изтекъл. Очаквайте следващото известие!",
-    "result_title": "Поздравления"
-  },
-  "early_access": {
-    "title": "Ранен достъп",
-    "message_part1": "Надзърнете в приложението [[:bold]]ice[[/:bold]] преди [[:bold]]предстоящото официално пускане.[[/:bold]]",
-    "message_part2": "Всички салда ще бъдат нулирани на датата на пускане. Вашият екип обаче ще остане незасегнат.",
-    "message_part3": "Благодарим Ви за подкрепата!",
-    "checkbox_description": "Разбрах! Не показвай този изскачащ прозорец отново."
-  },
-  "mining_notice": {
-    "title": "Съобщение",
-    "message": "Благодарим Ви за интереса към печеленето на [[:bold]]ice![[/:bold]] Понастоящем усъвършенстваме нашата технология и в момента вписването не е налично. Това е Вашият шанс да се съсредоточите върху изграждането на екипа си и развиването на Вашата микрообщност.",
-    "message_footer": "Останете на линия за новини в нашите канали в [[:twitter]]Twitter[[/:twitter]] и [[:telegram]]Telegram[[/:telegram]]."
-  },
-  "qr_code": {
-    "description": "Сканирай QR кода, за да се присъединиш към екипа ми."
-  },
-  "social_media": {
-    "tiktok": {
-      "title": "Присъединете се към нас в TikTok",
-      "description": "Просто искахме да се свържем с Вас и да Ви уведомим за нашата вълнуваща нова общност в TikTok. Споделяме забавно и информативно съдържание за нашата цифрова валута ice и ще се радваме да се присъедините към нас!"
-    },
-    "youtube": {
-      "title": "Присъединете се към нас в YouTube",
-      "description": "От уроци за това как да печелите ice до уведомления за нови функции и дори забавно съдържание от общността, нашият канал в YouTube е идеалното място да сте в крак с новостите."
-    },
-    "linkedin": {
-      "title": "Присъединете се към нас в LinkedIn",
-      "description": "Присъединяването към общността на ice в LinkedIn е чудесен начин да бъдете информирани за най-новите разработки и да се свързвате с хора със сходно мислене, които притежават същата страст към бъдещето на цифровите валути, колкото и Вие."
-    },
-    "facebook": {
-      "title": "Присъединете се към нас във Facebook",
-      "description_part1": "Горещо препоръчваме да следвате страницата ни във Facebook.",
-      "description_part2": "Тя не само ще Ви помогне да сте в крак с всичко, което се случва с проекта ice, но също така е чудесен начин да се свържете с нашата общност и да бъдете част от разговора."
-    },
-    "instagram": {
-      "title": "Присъединете се към нас в Instagram",
-      "description_part1": "Следването ни в Instagram е чудесен начин да останете в течение и да се свързвате с други потребители, които също са запалени по ice.",
-      "description_part2": "Освен това ще бъдете първите, които ще научават за всички нови функции или промоции, които стартираме."
-    }
+    "claim_title": "Today’s Bonus",
+    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
+    "link": "Find out more",
+    "extra_message": "You have received your daily extra bonus on your earning rate",
+    "expired_title": "Bonus Expired",
+    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
+    "result_title": "Congratulations"
   }
 }
