@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {commonStyles} from '@constants/styles';
 import {EarningsCell} from '@screens/Team/components/Header/components/Info/components/EarningsCell';
 import {ReferralsCell} from '@screens/Team/components/Header/components/Info/components/ReferralsCell';
 import {useEarningsWalkthrough} from '@screens/Team/components/Header/components/Info/hooks/useEarningsWalkthrough';
@@ -24,14 +25,14 @@ export const Info = () => {
   return (
     <View style={styles.container}>
       <View
-        style={styles.cell}
+        style={commonStyles.flexOne}
         ref={referralElementRef}
         onLayout={onReferralElementLayout}>
         <ReferralsCell />
       </View>
       <View style={styles.divider} />
       <View
-        style={styles.cell}
+        style={commonStyles.flexOne}
         ref={earningsElementRef}
         onLayout={onEarningsElementLayout}>
         <EarningsCell />
@@ -45,9 +46,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     height: INFO_HEIGHT,
-  },
-  cell: {
-    width: '50%',
   },
   divider: {
     width: 1,

@@ -9,43 +9,39 @@ import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {isRTL, t} from '@translations/i18n';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
-import React, {forwardRef, Ref} from 'react';
+import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
 
 type Props = {referralType: ReferralType};
 
-export const Earnings = forwardRef(
-  ({referralType}: Props, forwardedRef: Ref<Text>) => {
-    const isEnglishLocale = useIsEnglishLocale();
-    const balanceSummary = useSelector(balanceSummarySelector);
-    const balance = balanceSummary?.[referralType === 'T1' ? 't1' : 't2'];
-    const title =
-      referralType === 'T1'
-        ? t('team.tier_one.header_list.title_earnings')
-        : t('team.tier_two.header_list.title_earnings');
-    return (
-      <View style={styles.container} ref={forwardedRef}>
-        {isEnglishLocale ? (
-          <Text style={styles.label}>{`${title}:`}</Text>
-        ) : null}
-        {isRTL && <Text style={styles.value}> </Text>}
-        <FormattedNumber
-          bodyStyle={styles.value}
-          decimalsStyle={styles.valueDecimals}
-          number={balance ? formatNumberString(balance) : '0'}
-        />
-        {!isRTL && <Text style={styles.value}> </Text>}
+export const Earnings = ({referralType}: Props) => {
+  const isEnglishLocale = useIsEnglishLocale();
+  const balanceSummary = useSelector(balanceSummarySelector);
+  const balance = balanceSummary?.[referralType === 'T1' ? 't1' : 't2'];
+  const title =
+    referralType === 'T1'
+      ? t('team.tier_one.header_list.title_earnings')
+      : t('team.tier_two.header_list.title_earnings');
+  return (
+    <View style={styles.container}>
+      {isEnglishLocale ? <Text style={styles.label}>{`${title}:`}</Text> : null}
+      {isRTL && <Text style={styles.value}> </Text>}
+      <FormattedNumber
+        bodyStyle={styles.value}
+        decimalsStyle={styles.valueDecimals}
+        number={balance ? formatNumberString(balance) : '0'}
+      />
+      {!isRTL && <Text style={styles.value}> </Text>}
 
-        <IceLabel
-          textStyle={styles.value}
-          iconSize={16}
-          color={COLORS.primaryDark}
-        />
-      </View>
-    );
-  },
-);
+      <IceLabel
+        textStyle={styles.value}
+        iconSize={16}
+        color={COLORS.primaryDark}
+      />
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {

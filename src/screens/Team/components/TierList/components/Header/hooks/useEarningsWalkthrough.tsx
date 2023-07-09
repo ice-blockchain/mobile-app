@@ -4,8 +4,7 @@ import {ReferralType} from '@api/user/types';
 import {Earnings} from '@screens/Team/components/TierList/components/Header/components/Earnings';
 import {WalkthroughElementContainer} from '@screens/Walkthrough/components/WalkthroughElementContainer';
 import {useSetWalkthroughElementData} from '@store/modules/Walkthrough/hooks/useSetWalkthroughElementData';
-import {useEffect, useRef} from 'react';
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
@@ -22,8 +21,12 @@ export const useEarningsWalkthrough = ({
 
   const {setWalkthroughElementData} = useSetWalkthroughElementData();
 
+  const [rendered, setRendered] = useState(false);
+  const [notSet, setNotSet] = useState(true);
+  const onElementLayout = () => setRendered(true);
+
   useEffect(() => {
-    if (focused && referralType === 'T1') {
+    if (focused && referralType === 'T1' && rendered && notSet) {
       setWalkthroughElementData({
         stepKey: 'tierOneEarnings',
         elementData: {
@@ -43,11 +46,13 @@ export const useEarningsWalkthrough = ({
           },
         },
       });
+      setNotSet(false);
     }
-  }, [focused, referralType, setWalkthroughElementData]);
+  }, [focused, notSet, referralType, rendered, setWalkthroughElementData]);
 
   return {
     elementRef,
+    onElementLayout,
   };
 };
 

@@ -16,11 +16,17 @@ type Props = {
 };
 
 export const ListHeader = ({referralType, focused}: Props) => {
-  const {elementRef: activeUsersElementRef} = useActiveUsersWalkthrough({
+  const {
+    elementRef: activeUsersElementRef,
+    onElementLayout: onActiveUsersElementLayout,
+  } = useActiveUsersWalkthrough({
     referralType,
     focused,
   });
-  const {elementRef: earningsElementRef} = useEarningsWalkthrough({
+  const {
+    elementRef: earningsElementRef,
+    onElementLayout: onEarningsElementLayout,
+  } = useEarningsWalkthrough({
     referralType,
     focused,
   });
@@ -28,8 +34,12 @@ export const ListHeader = ({referralType, focused}: Props) => {
   return (
     <View {...stopPropagation}>
       <View style={styles.header}>
-        <ActiveUsers referralType={referralType} ref={activeUsersElementRef} />
-        <Earnings referralType={referralType} ref={earningsElementRef} />
+        <View ref={activeUsersElementRef} onLayout={onActiveUsersElementLayout}>
+          <ActiveUsers referralType={referralType} />
+        </View>
+        <View ref={earningsElementRef} onLayout={onEarningsElementLayout}>
+          <Earnings referralType={referralType} />
+        </View>
       </View>
     </View>
   );
