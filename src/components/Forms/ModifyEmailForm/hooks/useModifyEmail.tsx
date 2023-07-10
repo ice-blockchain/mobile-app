@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {AccountActions} from '@store/modules/Account/actions';
-import {useIsEmailCodeFlow} from '@store/modules/Account/hooks/useIsEmailCodeFlow';
+import {authTokenSelector} from '@store/modules/Account/selectors';
 import {
   failedReasonSelector,
   isLoadingSelector,
@@ -13,10 +13,11 @@ import {useDispatch, useSelector} from 'react-redux';
 export const useModifyEmail = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
-  const isEmailCodeFlow = useIsEmailCodeFlow();
-  const action = isEmailCodeFlow
-    ? AccountActions.MODIFY_EMAIL_WITH_CODE
-    : AccountActions.MODIFY_EMAIL_WITH_LINK;
+  const authToken = useSelector(authTokenSelector);
+  const action =
+    authToken?.issuer === 'custom'
+      ? AccountActions.MODIFY_EMAIL_WITH_CODE
+      : AccountActions.MODIFY_EMAIL_WITH_LINK;
 
   const modifyEmailFailedReason = useSelector(
     failedReasonSelector.bind(null, action),

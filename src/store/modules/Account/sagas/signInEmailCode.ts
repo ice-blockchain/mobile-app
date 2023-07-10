@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {isApiError} from '@api/client';
 import {EMAIL_CODE_GET_STATUS_INTERVAL_SEC} from '@constants/timeouts';
 import {
   getConfirmationStatus,
@@ -102,7 +103,10 @@ export function* signInEmailCodeSaga(
       }
     }
   } catch (error) {
-    if (checkProp(error, 'code') && error.code === ValidateError.InvalidEmail) {
+    if (
+      (checkProp(error, 'code') && error.code === ValidateError.InvalidEmail) ||
+      isApiError(error, 400, 'INVALID_EMAIL')
+    ) {
       yield put(
         AccountActions.SIGN_IN_EMAIL_CODE.FAILED.create(
           t('errors.invalid_email'),
