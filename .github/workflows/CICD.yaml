@@ -369,8 +369,8 @@ jobs:
         run: |
           if [[ ${{ github.event_name == 'pull_request' && github.event.pull_request.draft == false}} == true ]]
             then
-              echo "ANDROID_ARCHIVE_TYPE=apk" >> $GITHUB_ENV
-              echo "DEPLOY_TARGET=firebase" >> $GITHUB_ENV
+              echo "ANDROID_ARCHIVE_TYPE=bundle" >> $GITHUB_ENV
+              echo "DEPLOY_TARGET=playstore" >> $GITHUB_ENV
               echo "APP_VERSION=9.9.9" >> $GITHUB_ENV
               echo "RELEASE_NOTES=release_notes:${{ github.head_ref }}" >> $GITHUB_ENV
             else
