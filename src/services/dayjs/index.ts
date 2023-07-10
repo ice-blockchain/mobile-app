@@ -65,9 +65,6 @@ export const setDayjsLocale = (locale: SupportedLocale) => {
     case 'bn':
       require('dayjs/locale/bn');
       break;
-    case 'ar':
-      require('dayjs/locale/ar');
-      break;
     case 'bg':
       require('dayjs/locale/bg');
       break;

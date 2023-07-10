@@ -12,7 +12,6 @@ export type SupportedLocale =
   | 'de'
   | 'az'
   | 'gu'
-  | 'ar'
   | 'id'
   | 'it'
   | 'mr'
@@ -55,14 +54,6 @@ export const localeConfig: LocalConfig = {
     name: 'English',
     flag: flags.us,
     isRTL: false,
-  },
-  ar: {
-    get translations() {
-      return require('./locales/ar.json');
-    },
-    name: 'Arabic', // another flag
-    flag: flags.arabic,
-    isRTL: true,
   },
   az: {
     get translations() {
