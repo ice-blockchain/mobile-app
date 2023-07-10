@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {stopTrackingCurrentUser} from '@services/analytics';
-import {signOut} from '@services/auth';
+import {clearPersistedAuthTokens} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {DeviceActions} from '@store/modules/Devices/actions';
 import {updateDeviceMetadataSaga} from '@store/modules/Devices/sagas/updateDeviceMetadata';
@@ -25,7 +25,7 @@ export function* signOutSaga(
     }
 
     yield call(stopTrackingCurrentUser);
-    yield call(signOut);
+    yield call(clearPersistedAuthTokens);
     yield put(AccountActions.SIGN_OUT.SUCCESS.create());
   } catch (error) {
     yield put(AccountActions.SIGN_OUT.FAILED.create(getErrorMessage(error)));

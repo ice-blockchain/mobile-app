@@ -4,7 +4,11 @@ import {getMetadata} from '@api/auth/getMetadata';
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {User} from '@api/user/types';
-import {getAuthenticatedUser, refreshAuthToken} from '@services/auth';
+import {
+  clearPersistedAuthTokens,
+  getAuthenticatedUser,
+  refreshAuthToken,
+} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
   appLocaleSelector,
@@ -87,7 +91,21 @@ export function* userStateChangeSaga() {
     yield put(AccountActions.USER_STATE_CHANGE.FAILED.create(localizedError));
     showError(error);
 
+    yield call(rollBackOnError, error);
+
     throw error;
+  }
+}
+
+function* rollBackOnError(error: unknown) {
+  /**
+   * In case of CONFLICT_WITH_ANOTHER_USER sign up error
+   * we need to remove the firebase / custom tokens
+   * So it won't stuck in a dead loop:
+   *  AppLoaded -> LoadTokens -> SignUp -> 409 -> ErrorScreen
+   */
+  if (isApiError(error, 409, 'CONFLICT_WITH_ANOTHER_USER')) {
+    yield call(clearPersistedAuthTokens);
   }
 }
 
