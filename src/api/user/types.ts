@@ -41,7 +41,7 @@ export type User = {
   pinged?: boolean | null;
 
   referralType?: ReferralType;
-  referredBy?: string;
+  referredBy?: string | null;
 
   checksum: string;
 
