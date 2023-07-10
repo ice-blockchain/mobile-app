@@ -29,6 +29,6 @@ const styles = StyleSheet.create({
   },
   buttonTitle: {
     marginTop: rem(8),
-    ...font(11, 18, 'regular', 'secondary'),
+    ...font(11, 18, 'regular', 'secondary', 'center'),
   },
 });
