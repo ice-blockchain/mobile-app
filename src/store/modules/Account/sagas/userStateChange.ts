@@ -12,6 +12,7 @@ import {
 import {AccountActions} from '@store/modules/Account/actions';
 import {
   appLocaleSelector,
+  installReferrerSelector,
   userInfoSelector,
 } from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
@@ -171,11 +172,15 @@ function* createUser({
     phoneNumberHash = yield call(hashPhoneNumber, normalizedNumber);
   }
 
+  const installReferrerId: SagaReturnType<typeof getInstallReferrerId> =
+    yield call(getInstallReferrerId);
+
   const user: SagaReturnType<typeof Api.user.createUser> = yield call(
     Api.user.createUser,
     {
       firstName: userInfo?.firstName ?? null,
       lastName: userInfo?.lastName ?? null,
+      referredBy: installReferrerId,
       email,
       phoneNumber: normalizedNumber,
       phoneNumberHash,
@@ -189,4 +194,23 @@ function* createUser({
   yield put(AnalyticsActions.TRACK_SIGN_UP.SUCCESS.create());
 
   return user;
+}
+
+function* getInstallReferrerId() {
+  const installReferrer: SagaReturnType<typeof installReferrerSelector> =
+    yield select(installReferrerSelector);
+  if (installReferrer) {
+    try {
+      const {
+        data: referrerUser,
+      }: SagaReturnType<typeof Api.user.getUserByUsername> = yield call(
+        Api.user.getUserByUsername,
+        {username: installReferrer},
+      );
+      return referrerUser.id;
+    } catch (error) {
+      return null;
+    }
+  }
+  return null;
 }
