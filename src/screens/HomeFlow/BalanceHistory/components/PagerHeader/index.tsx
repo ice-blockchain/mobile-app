@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     right: rem(12),
   },
   updateText: {
-    ...font(12, 17, 'medium'),
+    ...font(12, 17, 'medium', 'white', 'center'),
   },
   indicators: {
     position: 'absolute',

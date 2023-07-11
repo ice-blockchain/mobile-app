@@ -89,13 +89,14 @@ const styles = StyleSheet.create({
   },
   cancelButtonWrapper: {
     position: 'absolute',
-    bottom: SEARCH_INPUT_HEIGHT / 2 - rem(11),
     right: -rem(7),
+    bottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
     width: CANCEL_WIDTH,
+    height: SEARCH_HEIGHT - SEARCH_INPUT_TOP_OFFSET,
   },
   cancelText: {
-    ...font(rem(16), null, 'bold', 'white'),
+    ...font(rem(16), null, 'bold', 'white', 'center'),
   },
 });
