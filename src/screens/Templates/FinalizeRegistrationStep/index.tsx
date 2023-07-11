@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(16),
   },
   buttonContainer: {
-    marginTop: smallHeightDevice ? rem(8) : rem(50),
+    marginTop: smallHeightDevice ? rem(8) : rem(20),
     marginBottom: rem(26),
     marginHorizontal: rem(48),
   },

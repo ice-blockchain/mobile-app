@@ -82,7 +82,6 @@ export const Info = ({
 const styles = StyleSheet.create({
   container: {
     marginTop: smallHeightDevice ? rem(8) : rem(16),
-    height: rem(54),
   },
   content: {
     flexDirection: 'row',
