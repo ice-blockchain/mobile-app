@@ -48,6 +48,7 @@ export function Walkthrough() {
             stepKey: step.key,
           }),
         );
+        setElementHeight(0);
       }
     });
   }, ANIMATION_DELAY);
@@ -57,6 +58,7 @@ export function Walkthrough() {
       dispatch(
         WalkthroughActions.SKIP_WALKTHROUGH.STATE.create({stepsKeys: []}),
       );
+      setElementHeight(0);
     });
   };
 
