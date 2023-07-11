@@ -46,6 +46,7 @@ import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
 import {ProfilePrivacyEditStep1} from '@screens/Modals/ProfilePrivacyEdit/step1';
 import {ProfilePrivacyEditStep2} from '@screens/Modals/ProfilePrivacyEdit/step2';
 import {ProfilePrivacyEditStep3} from '@screens/Modals/ProfilePrivacyEdit/step3';
+import {ReferralCountInfo} from '@screens/Modals/ReferralCountInfo';
 import {Tooltip} from '@screens/Modals/Tooltip';
 import {News} from '@screens/News';
 import {Badges} from '@screens/ProfileFlow/Badges';
@@ -121,6 +122,18 @@ export type MainStackParamList = {
     coords: Coordinates;
     buttons: ContextualMenuButton[];
     onClose?: () => void;
+  };
+  ReferralCountInfo: {
+    hostViewParams: {
+      x: number;
+      y: number;
+      width: number;
+      height: number;
+      pageX: number;
+      pageY: number;
+    };
+    tier1Count: number;
+    tier2Count: number;
   };
   InAppNotifications: undefined;
   CountrySelect: {
@@ -358,6 +371,11 @@ export function MainNavigator() {
       <MainStack.Screen
         name="ContextualMenu"
         component={ContextualMenu}
+        options={modalOptions}
+      />
+      <MainStack.Screen
+        name="ReferralCountInfo"
+        component={ReferralCountInfo}
         options={modalOptions}
       />
       <MainStack.Screen
