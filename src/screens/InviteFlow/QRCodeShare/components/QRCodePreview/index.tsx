@@ -84,6 +84,7 @@ const QRCodeBody = ({
           color={COLORS.black}
           iconSize={rem(30)}
           textStyle={styles.iceLabelText}
+          iconOffsetY={6}
         />
       </Text>
     </View>

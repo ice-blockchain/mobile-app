@@ -10,7 +10,7 @@ import {replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {useMemo} from 'react';
 import {StyleSheet, Text} from 'react-native';
-import {isAndroid, rem} from 'rn-units';
+import {rem} from 'rn-units';
 
 export const IceBonus = () => {
   const {currentBalance, loading, onSubmit} = useIceBonus();
@@ -22,11 +22,7 @@ export const IceBonus = () => {
       t('ice_bonus.description'),
       tagRegex('ice'),
       (match, index) => (
-        <IceLabel
-          key={match + index}
-          iconSize={18}
-          iconOffsetY={isAndroid ? 6 : 3}
-        />
+        <IceLabel key={match + index} iconSize={18} iconOffsetY={4} />
       ),
     );
 

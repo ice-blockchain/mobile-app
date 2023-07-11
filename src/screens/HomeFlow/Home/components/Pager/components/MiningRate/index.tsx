@@ -79,7 +79,7 @@ export const MiningRate = memo(({darkMode}: Props) => {
 
         <IceLabel
           textStyle={styles.rateValueText}
-          iconOffsetY={-1}
+          iconOffsetY={0}
           iconSize={16}
           label={t('general.ice_per_hour')}
         />
@@ -109,7 +109,7 @@ export const MiningRate = memo(({darkMode}: Props) => {
             darkMode ? styles.baseValueTextDarkMode : styles.baseValueText
           }
           color={color}
-          iconOffsetY={-1}
+          iconOffsetY={0}
           iconSize={12}
           label={t('general.ice_per_hour')}
         />
