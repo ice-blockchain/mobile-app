@@ -21,11 +21,16 @@ export const useActiveUsersWalkthrough = ({
 
   const {setWalkthroughElementData} = useSetWalkthroughElementData();
   const [rendered, setRendered] = useState(false);
-  const [notSet, setNotSet] = useState(true);
+  const isWalkthroughElementDataSetRef = useRef(false);
   const onElementLayout = () => setRendered(true);
 
   useEffect(() => {
-    if (focused && referralType === 'T1' && rendered && notSet) {
+    if (
+      focused &&
+      referralType === 'T1' &&
+      rendered &&
+      !isWalkthroughElementDataSetRef.current
+    ) {
       setWalkthroughElementData({
         stepKey: 'activeUsers',
         elementData: {
@@ -48,9 +53,15 @@ export const useActiveUsersWalkthrough = ({
           },
         },
       });
-      setNotSet(false);
+      isWalkthroughElementDataSetRef.current = true;
     }
-  }, [focused, notSet, referralType, rendered, setWalkthroughElementData]);
+  }, [
+    focused,
+    isWalkthroughElementDataSetRef,
+    referralType,
+    rendered,
+    setWalkthroughElementData,
+  ]);
 
   return {
     elementRef,
