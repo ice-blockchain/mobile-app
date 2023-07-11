@@ -74,23 +74,25 @@ export const Filters = ({
     navigation.navigate('DateSelect', {
       onSelect: period => {
         if (period.start && period.end) {
+          /**
+           * Reversing, because from the calendar dates are coming
+           * in a normal time order (start is earlier than end)
+           * but for the history we need the backwards order.
+           */
+          const startDay = dayjs(period.end);
+          const endDay = dayjs(period.start);
           setSelectedFilter({
             type: 'custom',
             /**
-             * Reversing, because from the calendar dates are coming
-             * in a normal time order (start is earlier than end)
-             * but for the history we need the backwards order.
-             *
-             * Also including the hours of the most recent day (start day)
+             * Including the hours of the most recent day (start day)
              * since from the calendar dates are coming without time
              * so after formatting they are pointing to the start of a day (00:00:00)
+             * In case of the start day is today, setting it to the "now"
              */
-            start: dayjs(period.end)
-              .utc()
-              .add(1, 'd')
-              .subtract(1, 's')
-              .format(),
-            end: dayjs(period.start).utc().format(),
+            start: startDay.isToday()
+              ? dayjs().utc().format()
+              : startDay.utc().add(1, 'd').subtract(1, 's').format(),
+            end: endDay.utc().format(),
           });
         } else if (selectedFilter.type === 'custom') {
           setFilter(FAST_FILTERS.DAY);
