@@ -31,6 +31,7 @@ export const useSegmentedControlWalkthrough = () => {
           Contacts: null,
           TierOne: 'segmentedControlTierOne',
           TierTwo: 'segmentedControlTierTwo',
+          Logs: 'segmentedControlLogs',
         } as const
       )[segmentData.key];
 

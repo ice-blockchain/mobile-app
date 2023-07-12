@@ -5,6 +5,7 @@ import {
   SegmentedControl,
 } from '@components/SegmentedControl';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import Clipboard from '@react-native-clipboard/clipboard';
 import {Contacts} from '@screens/Team/components/Contacts';
 import {useSegmentedControlWalkthrough} from '@screens/Team/components/SegmentedContent/hooks/useSegmentedControlWalkthrough';
 import {
@@ -13,10 +14,13 @@ import {
 } from '@screens/Team/components/SegmentedContent/hooks/useSegmentedMethods';
 import {TierList} from '@screens/Team/components/TierList';
 import {Listener} from '@screens/Team/types';
+import {logsSelector} from '@store/modules/AppCommon/selectors';
 import {t} from '@translations/i18n';
 import React, {memo} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
 import PagerView from 'react-native-pager-view';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 import {SEGMENTS} from './segments';
@@ -43,6 +47,8 @@ export const SegmentedContent = memo(
       elementRef: segmentedControlRef,
       onElementLayout: onSegmentedControlLayout,
     } = useSegmentedControlWalkthrough();
+
+    const logs = useSelector(logsSelector);
 
     return (
       <View style={styles.container}>
@@ -72,6 +78,20 @@ export const SegmentedContent = memo(
               focused={activeIndex === SegmentIndex.Tier2List}
               addCollapsedSnapPointListener={addCollapsedSnapPointListener}
             />
+          </View>
+          <View style={styles.flex}>
+            <Text
+              onPress={() => Clipboard.setString(logs.join('\n'))}
+              style={styles.button}>
+              Copy all
+            </Text>
+            <ScrollView
+              style={styles.flex}
+              contentContainerStyle={{flexGrow: 1}}>
+              {logs.map((event, index) => (
+                <Text key={index}>{event}</Text>
+              ))}
+            </ScrollView>
           </View>
         </PagerView>
         <View
@@ -104,4 +124,5 @@ const styles = StyleSheet.create({
     right: SCREEN_SIDE_OFFSET,
     left: SCREEN_SIDE_OFFSET,
   },
+  button: {color: 'blue', textAlign: 'center', marginVertical: 15},
 });

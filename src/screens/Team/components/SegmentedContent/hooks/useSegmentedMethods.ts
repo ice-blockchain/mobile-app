@@ -8,6 +8,7 @@ export enum SegmentIndex {
   ContactList,
   Tier1List,
   Tier2List,
+  LogsList,
 }
 
 export const useSegmentedMethods = () => {

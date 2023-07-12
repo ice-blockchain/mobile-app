@@ -26,6 +26,7 @@ export type TeamWalkthroughStepKey =
   | 'earnings'
   | 'segmentedControlTierOne'
   | 'segmentedControlTierTwo'
+  | 'segmentedControlLogs'
   | 'activeUsers'
   | 'tierOneEarnings'
   | 'ping';

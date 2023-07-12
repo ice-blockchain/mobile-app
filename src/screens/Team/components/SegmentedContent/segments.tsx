@@ -12,7 +12,7 @@ import {rem} from 'rn-units';
 
 export type SegmentData = {
   renderText: (active: boolean) => React.ReactNode;
-  key: 'Contacts' | 'TierOne' | 'TierTwo';
+  key: 'Contacts' | 'TierOne' | 'TierTwo' | 'Logs';
 };
 
 export const SEGMENTS: Readonly<SegmentData[]> = [
@@ -73,6 +73,26 @@ export const SEGMENTS: Readonly<SegmentData[]> = [
       );
     },
     key: 'TierTwo',
+  },
+  {
+    renderText: function (active: boolean) {
+      return (
+        <TeamSectionSegmentHeader
+          headerText={'LOGS'}
+          active={active}
+          icon={
+            <View style={styles.tierTwoIcon}>
+              <TierTwoIcon
+                width={rem(24)}
+                height={rem(24)}
+                color={active ? COLORS.white : COLORS.secondary}
+              />
+            </View>
+          }
+        />
+      );
+    },
+    key: 'Logs',
   },
 ];
 
