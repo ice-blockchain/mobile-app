@@ -1,11 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {User} from '@api/user/types';
+import {logError} from '@services/logging';
 import {
   isAuthorizedSelector,
   userIsoCodeSelector,
   userSelector,
 } from '@store/modules/Account/selectors';
+import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {ContactsActions} from '@store/modules/Contacts/actions';
 import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';
@@ -100,6 +102,16 @@ export function* getContactsSaga() {
       ContactsActions.GET_CONTACTS.SUCCESS.create(sortedFilteredContacts),
     );
   } catch (error) {
+    logError(error);
+    yield put(
+      AppCommonActions.ADD_LOG.STATE.create(
+        'sync contacts error: ' +
+          //@ts-ignore
+          JSON.stringify(error.code) +
+          '\n' +
+          JSON.stringify(error),
+      ),
+    );
     yield put(
       ContactsActions.GET_CONTACTS.FAILED.create(getErrorMessage(error)),
     );

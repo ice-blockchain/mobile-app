@@ -33,10 +33,15 @@ const UPDATE_SPLASH_VISIBLE_STATE = createAction(
   },
 );
 
+const ADD_LOG = createAction('ADD_LOG', {
+  STATE: (event: string) => ({event}),
+});
+
 export const AppCommonActions = Object.freeze({
   APP_LOADED,
   APP_INITIALIZED,
   APP_STATE_CHANGE,
   INTERVAL_UPDATE,
   UPDATE_SPLASH_VISIBLE_STATE,
+  ADD_LOG,
 });

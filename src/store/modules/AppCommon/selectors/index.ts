@@ -28,3 +28,5 @@ export const initSuccessSelector = (state: RootState) => {
 };
 export const isSplashHiddenSelector = (state: RootState) =>
   state.appCommon.isSplashHidden;
+
+export const logsSelector = (state: RootState) => state.appCommon.logs;
