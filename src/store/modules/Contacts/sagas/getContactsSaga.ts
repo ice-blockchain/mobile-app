@@ -27,13 +27,31 @@ export function* getContactsSaga() {
       return hasPermissions && isAuthorized && isAppActive;
     });
 
+    yield put(
+      AppCommonActions.ADD_LOG.STATE.create(
+        'Permissions received, sync started',
+      ),
+    );
+
     const user: User = yield select(userSelector);
+
+    yield put(
+      AppCommonActions.ADD_LOG.STATE.create('User' + JSON.stringify(user)),
+    );
 
     const isoCode: SagaReturnType<typeof userIsoCodeSelector> = yield select(
       userIsoCodeSelector,
     );
 
+    yield put(AppCommonActions.ADD_LOG.STATE.create('ISO code' + isoCode));
+
     const contacts: SagaReturnType<typeof getAll> = yield call(getAll);
+
+    yield put(
+      AppCommonActions.ADD_LOG.STATE.create(
+        'Contacts length ' + contacts.length,
+      ),
+    );
 
     const filteredContacts: Contact[] = [];
 
@@ -96,11 +114,25 @@ export function* getContactsSaga() {
       200,
     );
 
+    yield put(AppCommonActions.ADD_LOG.STATE.create('runInChunks completed'));
+    yield put(
+      AppCommonActions.ADD_LOG.STATE.create(
+        'Filtered contacts length ' + filteredContacts.length,
+      ),
+    );
+
     const sortedFilteredContacts = filteredContacts.sort(contactsComparator);
+    yield put(
+      AppCommonActions.ADD_LOG.STATE.create(
+        'Sorted filtered contacts length ' + sortedFilteredContacts.length,
+      ),
+    );
 
     yield put(
       ContactsActions.GET_CONTACTS.SUCCESS.create(sortedFilteredContacts),
     );
+
+    yield put(AppCommonActions.ADD_LOG.STATE.create('GET_CONTACTS SUCCESS'));
   } catch (error) {
     logError(error);
     yield put(
@@ -115,6 +147,7 @@ export function* getContactsSaga() {
     yield put(
       ContactsActions.GET_CONTACTS.FAILED.create(getErrorMessage(error)),
     );
+
     throw error;
   }
 }
