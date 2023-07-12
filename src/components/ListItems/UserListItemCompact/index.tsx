@@ -7,7 +7,7 @@ import {ClosedEye} from '@svg/ClosedEye';
 import {font} from '@utils/styles';
 import React, {memo, ReactNode} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {isAndroid, rem} from 'rn-units';
+import {rem} from 'rn-units';
 
 export const UserListItemCompact = memo(
   ({
@@ -52,7 +52,7 @@ export const UserListItemCompact = memo(
           <Text style={styles.iceText}>
             {iceAmount}{' '}
             <IceLabel
-              iconOffsetY={isAndroid ? 2 : -1}
+              iconOffsetY={1.3}
               iconSize={12}
               color={COLORS.secondary}
             />
@@ -86,6 +86,7 @@ const styles = StyleSheet.create({
   nameText: {
     flex: 1,
     ...font(15, 20, 'semibold', 'primaryDark'),
+    textAlignVertical: 'center',
   },
   hiddenNameContainer: {
     flex: 1,
@@ -99,6 +100,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.secondaryFaint,
   },
   iceText: {
-    ...font(12, 20, 'semibold', 'secondary'),
+    textAlignVertical: 'center',
+    ...font(12, 16, 'semibold', 'secondary'),
   },
 });
