@@ -4,6 +4,7 @@ import {BadgeType} from '@api/achievements/types';
 import {NotificationDeliveryChannel} from '@api/notifications/types';
 import {Country} from '@constants/countries';
 import {commonStyles} from '@constants/styles';
+import {ViewMeasurementsResult} from '@ice/react-native';
 import {MainTabBar} from '@navigation/components/MainTabBar';
 import {HomeIcon} from '@navigation/components/MainTabBar/components/Icons/HomeIcon';
 import {NewsIcon} from '@navigation/components/MainTabBar/components/Icons/NewsIcon';
@@ -67,10 +68,7 @@ import {Walkthrough} from '@screens/Walkthrough';
 import {ActiveTabActions, Tab} from '@store/modules/ActiveTab/actions';
 import {useSubscribeToPushNotifications} from '@store/modules/PushNotifications/hooks/useSubscribeToPushNotifications';
 import {StatsPeriod} from '@store/modules/Stats/types';
-import {
-  ElementMeasurements,
-  WalkthroughStep,
-} from '@store/modules/Walkthrough/types';
+import {WalkthroughStep} from '@store/modules/Walkthrough/types';
 import React, {ComponentType, RefObject} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
@@ -127,7 +125,7 @@ export type MainStackParamList = {
     onClose?: () => void;
   };
   ReferralCountInfo: {
-    hostViewParams: ElementMeasurements;
+    hostViewParams: ViewMeasurementsResult;
     userId: string;
   };
   InAppNotifications: undefined;

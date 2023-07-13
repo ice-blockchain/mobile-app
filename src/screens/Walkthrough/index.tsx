@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {ViewMeasurementsResult} from '@ice/react-native';
 import {MainStackParamList} from '@navigation/Main';
 import {RouteProp, useFocusEffect, useRoute} from '@react-navigation/native';
 import {StepCircle} from '@screens/Walkthrough/components/StepCircle';
 import {ANIMATION_DELAY} from '@screens/Walkthrough/constants';
 import {useAnimatedStyles} from '@screens/Walkthrough/hooks/useAnimatedStyles';
 import {WalkthroughActions} from '@store/modules/Walkthrough/actions';
-import {ElementMeasurements} from '@store/modules/Walkthrough/types';
 import {debounce} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 import {BackHandler, StyleSheet, View} from 'react-native';
@@ -19,7 +19,7 @@ export function Walkthrough() {
   const {step, total, index} = route.params ?? {};
 
   const [elementMeasurements, setElementMeasurements] =
-    useState<ElementMeasurements | null>(null);
+    useState<ViewMeasurementsResult | null>(null);
 
   const dispatch = useDispatch();
 
