@@ -108,7 +108,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
+    alignItems: 'center',
     minWidth: rem(230),
+    minHeight: rem(50),
     borderRadius: rem(12),
     backgroundColor: COLORS.downriver,
   },
@@ -132,6 +134,7 @@ const styles = StyleSheet.create({
   },
   divider: {
     marginVertical: rem(5),
+    alignSelf: 'stretch',
     width: rem(1),
     backgroundColor: COLORS.periwinkleGray,
   },
