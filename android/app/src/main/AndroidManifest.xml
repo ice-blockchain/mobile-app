@@ -11,7 +11,13 @@
     <!-- disable advertising id permission obtaining -->
     <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
 
-    <queries> <intent> <action android:name="android.support.customtabs.action.CustomTabsService" /> </intent> </queries>
+    <!-- https://react-native-share.github.io/react-native-share/docs/install -->
+    <queries>
+      <package android:name="com.whatsapp" />
+      <package android:name="org.telegram.messenger" />
+      <package android:name="com.twitter.android" />
+      <package android:name="com.facebook.katana" />
+    </queries>
 
     <application
       android:name=".MainApplication"

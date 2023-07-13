@@ -39,8 +39,9 @@ const isShareProviderNotInstalled = (error: unknown) => {
     return true;
   } else if (
     isIOS &&
-    checkProp(error, 'code') &&
-    error.code === 'ECOM.RNSHARE1'
+    checkProp(error, 'error') &&
+    checkProp(error.error, 'code') &&
+    error.error.code === 'ECOM.RNSHARE1'
   ) {
     return true;
   }
