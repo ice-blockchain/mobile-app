@@ -67,7 +67,10 @@ import {Walkthrough} from '@screens/Walkthrough';
 import {ActiveTabActions, Tab} from '@store/modules/ActiveTab/actions';
 import {useSubscribeToPushNotifications} from '@store/modules/PushNotifications/hooks/useSubscribeToPushNotifications';
 import {StatsPeriod} from '@store/modules/Stats/types';
-import {WalkthroughStep} from '@store/modules/Walkthrough/types';
+import {
+  ElementMeasurements,
+  WalkthroughStep,
+} from '@store/modules/Walkthrough/types';
 import React, {ComponentType, RefObject} from 'react';
 import {Image, StyleSheet, View} from 'react-native';
 import {Contact} from 'react-native-contacts';
@@ -124,14 +127,7 @@ export type MainStackParamList = {
     onClose?: () => void;
   };
   ReferralCountInfo: {
-    hostViewParams: {
-      x: number;
-      y: number;
-      width: number;
-      height: number;
-      pageX: number;
-      pageY: number;
-    };
+    hostViewParams: ElementMeasurements;
     userId: string;
   };
   InAppNotifications: undefined;
