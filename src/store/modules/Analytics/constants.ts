@@ -37,6 +37,7 @@ export const EVENT_NAMES = {
   CHANGE_PROFILE_PICTURE: 'Change Profile Picture',
   SHARE_PROFILE_USERNAME: 'Share Telegram Username',
   PING: 'Ping',
+  RATE: 'Rate',
 } as const;
 
 const NOT_TRACKABLE_SCREENS = new Set([
