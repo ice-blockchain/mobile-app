@@ -100,12 +100,13 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
     case 'profile':
       const userId = searchParams.get('userId') ?? '';
       const section = searchParams.get('section');
+      const category = searchParams.get('category') ?? undefined;
       switch (section) {
         case 'roles':
           navigate({name: 'Roles', params: {userId}});
           break;
         case 'badges':
-          navigate({name: 'Badges', params: {userId}});
+          navigate({name: 'Badges', params: {userId, category}});
           break;
         default:
           navigate({

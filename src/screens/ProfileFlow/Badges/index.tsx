@@ -35,6 +35,13 @@ const CATEGORIES: ReadonlyArray<{text: string; key: BadgeType}> = [
   {text: capitalizeFirstLetter(t('global.level')), key: 'level'},
 ];
 
+function getInitialIndex(category?: string) {
+  const initialCategory = category ?? 'social';
+  const initialIndex = CATEGORIES.findIndex(c => c.key === initialCategory);
+
+  return initialIndex >= 0 ? initialIndex : 0;
+}
+
 export const Badges = () => {
   useFocusStatusBar({style: 'dark-content'});
   const dispatch = useDispatch();
@@ -42,7 +49,7 @@ export const Badges = () => {
   const route = useRoute<RouteProp<ProfileTabStackParamList, 'Badges'>>();
 
   const authUser = useSelector(unsafeUserSelector);
-  const isOwner = !route.params || route.params.userId === authUser.id;
+  const isOwner = !route.params?.userId || route.params.userId === authUser.id;
   const userId = isOwner ? authUser.id : route.params?.userId || '';
 
   const coinBadges = useSelector(
@@ -55,8 +62,7 @@ export const Badges = () => {
     AchievementsSelectors.getBadgesForType({userId, type: 'social'}),
   );
 
-  const initialCategory = route.params?.category ?? 'social';
-  const initialIndex = CATEGORIES.findIndex(c => c.key === initialCategory);
+  const initialIndex = getInitialIndex(route.params?.category);
 
   const {scrollHandler, shadowStyle} = useScrollShadow();
   const switcherRef = useRef<SegmentedControlMethods>(null);
