@@ -18,7 +18,7 @@ import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
-import {isAndroid, rem} from 'rn-units';
+import {rem} from 'rn-units';
 
 import {TotalBalanceValue} from './components/TotalBalanceValue';
 import {TotalMiningRateValue} from './components/TotalMiningRateValue';
@@ -79,7 +79,7 @@ export const Wallet = memo(({darkMode}: Props) => {
                 ? styles.balanceCurrencyTextDarkMode
                 : styles.balanceCurrencyText
             }
-            iconOffsetY={isAndroid ? -2 : 0}
+            iconOffsetY={1}
             iconSize={rem(20)}
           />
         </View>

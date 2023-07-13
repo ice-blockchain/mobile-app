@@ -35,7 +35,7 @@ export const CurrentBalance = ({value}: Props) => {
             iconSize={20}
             style={styles.iceLabel}
             textStyle={styles.iceLabelText}
-            iconOffsetY={0}
+            iconOffsetY={1}
           />
         </View>
       </View>

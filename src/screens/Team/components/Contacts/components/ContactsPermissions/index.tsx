@@ -32,7 +32,7 @@ export const ContactsPermissions = () => {
                 key={match + index}
                 iconSize={28}
                 color={COLORS.primaryDark}
-                iconOffsetY={isAndroid ? 2 : 3}
+                iconOffsetY={isAndroid ? 5 : 3}
               />
             ),
           )}

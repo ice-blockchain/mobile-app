@@ -22,7 +22,7 @@ import {
 } from 'react-native';
 import {useSharedValue} from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
-import {isAndroid, rem} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   onParametersChange: (data: {years: number; allocation: number}) => void;
@@ -84,7 +84,7 @@ export const Calculator = memo(
               </Text>
               <IceLabel
                 iconSize={rem(24)}
-                iconOffsetY={isAndroid ? 3 : 1}
+                iconOffsetY={1}
                 textStyle={styles.resultValueText}
                 label={t('general.ice_per_hour')}
               />
@@ -178,21 +178,23 @@ const styles = StyleSheet.create({
     ...font(13, 24, 'regular', 'periwinkleGray', 'center'),
   },
   resultValue: {
-    minHeight: rem(36),
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'center',
   },
   resultValueText: {
-    ...font(28, 40, 'bold', 'white', 'auto'),
+    ...font(28, 36, 'bold', 'white', 'auto'),
+    textAlignVertical: 'center',
   },
   resultBonusText: {
-    ...font(28, 40, 'bold', 'shamrock', 'auto'),
+    ...font(28, 36, 'bold', 'shamrock', 'auto'),
+    textAlignVertical: 'center',
   },
   currentRateText: {
     marginVertical: rem(4),
     ...font(13, 18, 'bold', 'periwinkleGray', 'center'),
+    textAlignVertical: 'center',
   },
   sliderInfo: {
     marginTop: rem(30),

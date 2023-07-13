@@ -25,7 +25,7 @@ export const IceBonus = () => {
         <IceLabel
           key={match + index}
           iconSize={18}
-          iconOffsetY={isAndroid ? 6 : 3}
+          iconOffsetY={isAndroid ? 4 : 3}
         />
       ),
     );
