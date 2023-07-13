@@ -70,6 +70,7 @@ export const BadgeCard = memo(
     const inactiveImage = isPlaceholder
       ? (`placeholder${index}` as keyof typeof Images.badges)
       : (`${category}0_achieved_false` as const);
+
     const ActiveImage = Images.badges[image];
     const InactiveImage = Images.badges[inactiveImage];
 
