@@ -7,10 +7,10 @@ import {isIOS} from 'rn-units';
 export const isPlayServicesAvailable =
   firebaseApp.utils().playServicesAvailability.isAvailable;
 
-export const getFcmToken = () => {
+export const getFcmToken = async () => {
   try {
     if (isIOS || isPlayServicesAvailable) {
-      return messaging().getToken();
+      return await messaging().getToken();
     }
     return '';
   } catch (error) {
