@@ -132,8 +132,7 @@ export type MainStackParamList = {
       pageX: number;
       pageY: number;
     };
-    tier1Count: number;
-    tier2Count: number;
+    userId: string;
   };
   InAppNotifications: undefined;
   CountrySelect: {

@@ -52,11 +52,10 @@ export const LadderBar = memo(
             pageX,
             pageY,
           },
-          tier1Count: user.t1ReferralCount ?? 0,
-          tier2Count: user.t2ReferralCount ?? 0,
+          userId: user.id,
         });
       },
-      [navigation, user.t1ReferralCount, user.t2ReferralCount],
+      [navigation, user.id],
     );
 
     return (

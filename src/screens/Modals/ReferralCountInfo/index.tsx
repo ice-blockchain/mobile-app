@@ -5,12 +5,15 @@ import {commonStyles} from '@constants/styles';
 import {HomeTabStackParamList, MainStackParamList} from '@navigation/Main';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {userIdSelector, userSelector} from '@store/modules/Account/selectors';
+import {userByIdSelector} from '@store/modules/Users/selectors';
 import {RoundedTriangle} from '@svg/RoundedTriangle';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {useCallback, useMemo, useState} from 'react';
 import {LayoutChangeEvent, Text} from 'react-native';
 import {StyleSheet, TouchableWithoutFeedback, View} from 'react-native';
+import {useSelector} from 'react-redux';
 import {rem, screenWidth} from 'rn-units';
 
 const ROUNDED_TRIANGLE_SIZE = rem(12);
@@ -20,8 +23,14 @@ export const ReferralCountInfo = () => {
     useNavigation<NativeStackNavigationProp<HomeTabStackParamList>>();
 
   const {
-    params: {hostViewParams, tier1Count, tier2Count},
+    params: {hostViewParams, userId},
   } = useRoute<RouteProp<MainStackParamList, 'ReferralCountInfo'>>();
+
+  const authUserId = useSelector(userIdSelector);
+
+  const user = useSelector(
+    userId === authUserId ? userSelector : userByIdSelector(userId),
+  );
 
   const [containerWidth, setContainerWidth] = useState(0);
 
@@ -65,13 +74,20 @@ export const ReferralCountInfo = () => {
   return (
     <TouchableWithoutFeedback onPress={onClose}>
       <View style={commonStyles.flexOne}>
+        <RoundedTriangle
+          style={[styles.arrow, arrowStyle]}
+          width={ROUNDED_TRIANGLE_SIZE}
+          height={ROUNDED_TRIANGLE_SIZE}
+          fill={COLORS.downriver}
+        />
+
         <View
           style={[styles.container, containerStyle]}
           onLayout={onLayoutContainer}>
           <View style={styles.cell}>
             <Text style={styles.label}>{t('users.referralType.T1')}</Text>
 
-            <Text style={styles.value}>{tier1Count}</Text>
+            <Text style={styles.value}>{user?.t1ReferralCount ?? 0}</Text>
           </View>
 
           <View style={styles.divider} />
@@ -79,16 +95,9 @@ export const ReferralCountInfo = () => {
           <View style={styles.cell}>
             <Text style={styles.label}>{t('users.referralType.T2')}</Text>
 
-            <Text style={styles.value}>{tier2Count}</Text>
+            <Text style={styles.value}>{user?.t2ReferralCount ?? 0}</Text>
           </View>
         </View>
-
-        <RoundedTriangle
-          style={[styles.arrow, arrowStyle]}
-          width={ROUNDED_TRIANGLE_SIZE}
-          height={ROUNDED_TRIANGLE_SIZE}
-          fill={COLORS.downriver}
-        />
       </View>
     </TouchableWithoutFeedback>
   );
@@ -96,7 +105,6 @@ export const ReferralCountInfo = () => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: rem(10),
     position: 'absolute',
     flexDirection: 'row',
     justifyContent: 'space-evenly',
@@ -107,7 +115,6 @@ const styles = StyleSheet.create({
   arrow: {
     position: 'absolute',
   },
-
   cell: {
     paddingVertical: rem(6),
     paddingHorizontal: rem(12),
