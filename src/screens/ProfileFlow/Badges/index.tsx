@@ -29,11 +29,18 @@ import {rem} from 'rn-units';
 
 const NUMBER_OF_SKELETONS = 6;
 
-const CATEGORIES: ReadonlyArray<{text: string; key: BadgeType}> = [
+export const CATEGORIES: ReadonlyArray<{text: string; key: BadgeType}> = [
   {text: capitalizeFirstLetter(t('global.social')), key: 'social'},
   {text: capitalizeFirstLetter(t('global.coin')), key: 'coin'},
   {text: capitalizeFirstLetter(t('global.level')), key: 'level'},
 ];
+
+function getInitialIndex(category?: BadgeType) {
+  const initialCategory = category ?? 'social';
+  const initialIndex = CATEGORIES.findIndex(c => c.key === initialCategory);
+
+  return initialIndex >= 0 ? initialIndex : 0;
+}
 
 export const Badges = () => {
   useFocusStatusBar({style: 'dark-content'});
@@ -42,7 +49,7 @@ export const Badges = () => {
   const route = useRoute<RouteProp<ProfileTabStackParamList, 'Badges'>>();
 
   const authUser = useSelector(unsafeUserSelector);
-  const isOwner = !route.params || route.params.userId === authUser.id;
+  const isOwner = !route.params?.userId || route.params.userId === authUser.id;
   const userId = isOwner ? authUser.id : route.params?.userId || '';
 
   const coinBadges = useSelector(
@@ -55,8 +62,7 @@ export const Badges = () => {
     AchievementsSelectors.getBadgesForType({userId, type: 'social'}),
   );
 
-  const initialCategory = route.params?.category ?? 'social';
-  const initialIndex = CATEGORIES.findIndex(c => c.key === initialCategory);
+  const initialIndex = getInitialIndex(route.params?.category);
 
   const {scrollHandler, shadowStyle} = useScrollShadow();
   const switcherRef = useRef<SegmentedControlMethods>(null);
