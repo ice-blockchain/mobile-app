@@ -35,7 +35,7 @@ const CATEGORIES: ReadonlyArray<{text: string; key: BadgeType}> = [
   {text: capitalizeFirstLetter(t('global.level')), key: 'level'},
 ];
 
-function getInitialIndex(category?: string) {
+function getInitialIndex(category?: BadgeType) {
   const initialCategory = category ?? 'social';
   const initialIndex = CATEGORIES.findIndex(c => c.key === initialCategory);
 

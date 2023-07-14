@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {BadgeType} from '@api/achievements/types';
 import {NotificationDeliveryChannel} from '@api/notifications/types';
 import {Country} from '@constants/countries';
 import {commonStyles} from '@constants/styles';
@@ -127,7 +128,7 @@ export type MainStackParamList = {
   };
   UserProfile: {userId: string; actionType?: ProfileActionType} | undefined;
   Roles: {userId?: string} | undefined;
-  Badges: {category?: string; userId?: string};
+  Badges: {category?: BadgeType; userId?: string};
   Walkthrough:
     | {step: WalkthroughStep; total: number; index: number}
     | undefined;
@@ -165,7 +166,7 @@ export type NewsTabStackParamList = {
 export type ProfileTabStackParamList = {
   MyProfile: {actionType?: ProfileActionType; userId?: string};
   Roles: {userId?: string} | undefined;
-  Badges: {category?: string; userId?: string};
+  Badges: {category?: BadgeType; userId?: string};
   Settings: undefined;
   PersonalInformation: undefined;
   ModifyPhoneNumber: undefined;

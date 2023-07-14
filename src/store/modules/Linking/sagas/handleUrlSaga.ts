@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {BadgeType} from '@api/achievements/types';
 import {ENV} from '@constants/env';
 import {navigate} from '@navigation/utils';
 import {isSignInWithEmailLink, isUpdateEmailLink} from '@services/auth';
@@ -100,7 +101,7 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
     case 'profile':
       const userId = searchParams.get('userId') ?? '';
       const section = searchParams.get('section');
-      const category = searchParams.get('category') ?? undefined;
+      const category = (searchParams.get('category') as BadgeType) ?? undefined;
       switch (section) {
         case 'roles':
           navigate({name: 'Roles', params: {userId}});
