@@ -25,6 +25,9 @@ dayjs.extend(utc);
 export const setDayjsLocale = (locale: SupportedLocale) => {
   // https://day.js.org/docs/en/installation/typescript#locale-and-plugin-import
   switch (locale) {
+    case 'ar':
+      require('dayjs/locale/ar');
+      break;
     case 'en':
       require('dayjs/locale/en');
       break;

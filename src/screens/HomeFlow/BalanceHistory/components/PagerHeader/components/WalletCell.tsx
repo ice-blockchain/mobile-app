@@ -5,11 +5,11 @@ import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
 import {DataCell} from '@screens/HomeFlow/BalanceHistory/components/PagerHeader/components/DataCell';
 import {WalletIcon} from '@svg/WalletIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {ReactNode} from 'react';
 import {StyleSheet} from 'react-native';
-import {isAndroid, rem} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   value: string | ReactNode;
@@ -40,7 +40,7 @@ export const WalletCell = ({value, currency}: Props) => {
       }
       currency={
         currency ?? (
-          <IceLabel iconOffsetY={isAndroid ? 2 : 1} color={COLORS.white} />
+          <IceLabel reversed={isRTL} iconOffsetY={3.5} color={COLORS.white} />
         )
       }
     />
@@ -49,7 +49,7 @@ export const WalletCell = ({value, currency}: Props) => {
 
 const styles = StyleSheet.create({
   valueText: {
-    ...font(15, 20, 'bold'),
+    ...font(15, 17, 'bold'),
   },
   valueDecimalsText: {
     ...font(9, 11, 'bold'),

@@ -8,6 +8,7 @@ import {Translations} from '@translations/locales/en.json';
  */
 
 export type SupportedLocale =
+  | 'ar'
   | 'en'
   | 'de'
   | 'az'
@@ -58,6 +59,14 @@ export type LocalConfig = {
 };
 
 export const localeConfig: LocalConfig = {
+  ar: {
+    get translations() {
+      return require('./locales/ar.json');
+    },
+    name: 'Arabic',
+    flag: flags.arabic,
+    isRTL: true,
+  },
   en: {
     get translations() {
       return require('./locales/en.json');

@@ -11,7 +11,7 @@ import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
-import {isRTL, t} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     ...font(12, 17, 'medium', 'secondary', 'center'),
   },
   columnText: {
-    textAlign: isRTL ? 'right' : 'left',
+    textAlign: 'left',
     marginHorizontal: SCREEN_SIDE_OFFSET,
   },
   button: {

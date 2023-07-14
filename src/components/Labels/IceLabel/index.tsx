@@ -15,6 +15,7 @@ export type IceLabelProps = {
   lineHeight?: number;
   iconOffsetY?: number;
   label?: string | null;
+  reversed?: boolean;
 };
 
 export const IceLabel = memo(
@@ -25,15 +26,27 @@ export const IceLabel = memo(
     iconSize = 18,
     iconOffsetY = 2,
     label = t('general.ice'),
-  }: IceLabelProps) => (
-    <>
-      <LogoIcon
-        color={color}
-        width={rem(iconSize)}
-        height={rem(iconSize)}
-        style={[{transform: [{translateY: iconOffsetY}]}, style]}
-      />
-      {!!label && <Text style={textStyle}> {label}</Text>}
-    </>
-  ),
+    reversed,
+  }: IceLabelProps) =>
+    reversed ? (
+      <>
+        {!!label && <Text style={textStyle}>{label} </Text>}
+        <LogoIcon
+          color={color}
+          width={rem(iconSize)}
+          height={rem(iconSize)}
+          style={[{transform: [{translateY: iconOffsetY}]}, style]}
+        />
+      </>
+    ) : (
+      <>
+        <LogoIcon
+          color={color}
+          width={rem(iconSize)}
+          height={rem(iconSize)}
+          style={[{transform: [{translateY: iconOffsetY}]}, style]}
+        />
+        {!!label && <Text style={textStyle}> {label}</Text>}
+      </>
+    ),
 );

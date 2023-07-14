@@ -29,11 +29,9 @@ export const FormattedNumber = ({
   const hasDecimals = !!numberDecimals;
   return (
     <View style={[styles.container, containerStyle]}>
-      <Text
-        style={[
-          styles.integerText,
-          bodyStyle,
-        ]}>{`${space}${numberInteger}`}</Text>
+      <Text style={[styles.integerText, bodyStyle]}>{`${
+        isRTL ? space : ''
+      }\u200E${numberInteger}${isRTL ? '' : space}`}</Text>
       {hasDecimals && <Text style={[styles.dot, bodyStyle]}>.</Text>}
       {hasDecimals && (
         <Text style={[styles.fractionalText, decimalsStyle]}>

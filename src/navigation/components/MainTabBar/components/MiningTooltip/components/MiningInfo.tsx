@@ -18,7 +18,7 @@ import {
 } from '@store/modules/Tokenomics/selectors';
 import {ClockIcon} from '@svg/ClockIcon';
 import {LogoIcon} from '@svg/LogoIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {getDurationString} from '@utils/date';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
@@ -93,7 +93,7 @@ export const MiningInfo = ({oneColumn}: Props) => {
             />
           )
         }
-        currency={<IceLabel color={COLORS.primaryDark} />}
+        currency={<IceLabel reversed={isRTL} color={COLORS.primaryDark} />}
         row={oneColumn}
       />
     </View>

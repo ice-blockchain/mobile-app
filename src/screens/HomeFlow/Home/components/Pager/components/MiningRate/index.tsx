@@ -161,7 +161,8 @@ const styles = StyleSheet.create({
     marginLeft: rem(4),
   },
   miningValueContainer: {
-    marginRight: rem(4),
+    marginRight: isRTL ? 0 : rem(4),
+    marginLeft: isRTL ? rem(4) : 0,
   },
   miningValueText: {
     ...font(17, 22, 'bold'),
@@ -201,7 +202,8 @@ const styles = StyleSheet.create({
   baseDecimalsText: {
     ...font(7, 10, 'bold'),
     alignSelf: 'flex-start',
-    marginRight: rem(4),
+    marginRight: isRTL ? 0 : rem(4),
+    marginLeft: isRTL ? rem(4) : 0,
   },
   baseDecimalsTextDarkMode: {
     ...font(7, 10, 'bold', 'primaryDark'),

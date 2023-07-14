@@ -59,9 +59,11 @@ const styles = StyleSheet.create({
   value: {
     marginTop: rem(4),
     flexDirection: 'row',
+    alignItems: 'flex-end',
   },
   valueText: {
-    ...font(15, 20, 'bold'),
+    ...font(15, 17, 'bold'),
+    textAlignVertical: 'center',
   },
   cellSeparator: {
     width: 1,

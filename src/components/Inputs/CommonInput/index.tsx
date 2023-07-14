@@ -167,17 +167,16 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 1,
-    marginLeft: isRTL ? 0 : rem(10),
-    marginRight: isRTL ? rem(10) : 0,
+    marginStart: rem(10),
     justifyContent: 'center',
   },
   inputWrapper: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: isRTL ? -rem(4) : rem(14),
+    marginTop: rem(14),
   },
   input: {
-    ...font(16, 21, 'medium', 'primaryDark'),
+    ...font(16, 21, 'medium', 'primaryDark', isRTL ? 'right' : 'left'),
     flex: 1,
     paddingHorizontal: 0,
     paddingVertical: 0,
