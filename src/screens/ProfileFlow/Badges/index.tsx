@@ -29,7 +29,7 @@ import {rem} from 'rn-units';
 
 const NUMBER_OF_SKELETONS = 6;
 
-const CATEGORIES: ReadonlyArray<{text: string; key: BadgeType}> = [
+export const CATEGORIES: ReadonlyArray<{text: string; key: BadgeType}> = [
   {text: capitalizeFirstLetter(t('global.social')), key: 'social'},
   {text: capitalizeFirstLetter(t('global.coin')), key: 'coin'},
   {text: capitalizeFirstLetter(t('global.level')), key: 'level'},
