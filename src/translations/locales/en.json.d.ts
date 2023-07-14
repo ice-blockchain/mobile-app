@@ -208,6 +208,7 @@ export type Translations = {
   'home.tasks.follow_us_on_twitter.description': null;
   'home.tasks.invite_friends.title': null;
   'home.tasks.invite_friends.description': null;
+  'home.socials.title': null;
   'home.overview.title': null;
   'home.menu.notifications': null;
   'home.menu.staking': null;
