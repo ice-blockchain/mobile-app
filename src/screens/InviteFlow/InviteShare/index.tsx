@@ -3,20 +3,17 @@
 import {IceLabel} from '@components/Labels/IceLabel';
 import {LinesBackground} from '@components/LinesBackground';
 import {COLORS} from '@constants/colors';
-import {commonStyles, windowWidth} from '@constants/styles';
+import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {InviteShareCard} from '@screens/InviteFlow/InviteShare/components/InviteShareCard';
-import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
+import {replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {isAndroid, rem, screenHeight} from 'rn-units';
 
 const icon = require('./assets/images/share.png');
-
-const ICON_LEFT_OFFSET = rem(21);
-const ICON_WIDTH = windowWidth - ICON_LEFT_OFFSET;
 
 export const InviteShare = memo(() => {
   useFocusStatusBar({style: 'dark-content'});
@@ -36,7 +33,7 @@ export const InviteShare = memo(() => {
             ),
           )}
         </Text>
-        <Image source={icon} style={styles.icon} />
+        <Image source={icon} style={styles.icon} resizeMode={'contain'} />
         <InviteShareCard />
       </View>
     </View>
@@ -49,15 +46,15 @@ const styles = StyleSheet.create({
     borderTopRightRadius: rem(30),
   },
   description: {
-    ...font(15, null, 'regular', 'white', 'center'),
     marginTop: rem(45),
     marginHorizontal: rem(28),
+    ...font(15, null, 'regular', 'white', 'center'),
   },
   icon: {
-    marginLeft: isRTL ? 0 : ICON_LEFT_OFFSET,
-    width: ICON_WIDTH,
-    height: ICON_WIDTH * 0.858,
-    marginTop: rem(17),
+    marginVertical: rem(16),
+    marginStart: rem(21),
+    flex: 1,
+    width: undefined,
   },
   shareSubstrate: {
     position: 'absolute',

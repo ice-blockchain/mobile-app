@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {commonStyles} from '@constants/styles';
 import {useBottomOffsetStyle} from '@navigation/hooks/useBottomOffsetStyle';
 import {ShareButton as ShareButtonComponent} from '@screens/InviteFlow/InviteShare/components/InviteShareCard/components/ShareButton';
 import React, {ReactNode} from 'react';
@@ -25,12 +24,7 @@ export const ShareCard = <P,>({buttons, onButtonPress, children}: Props<P>) => {
   const bottomOffset = useBottomOffsetStyle();
 
   return (
-    <View
-      style={[
-        styles.shareCard,
-        commonStyles.baseSubScreen,
-        bottomOffset.current,
-      ]}>
+    <View style={[styles.container, bottomOffset.current]}>
       {children}
       <View style={styles.buttonsContainer}>
         {buttons.map(button => (
@@ -48,24 +42,22 @@ export const ShareCard = <P,>({buttons, onButtonPress, children}: Props<P>) => {
 };
 
 const styles = StyleSheet.create({
-  shareCard: {
-    position: 'absolute',
-    left: 0,
-    bottom: 0,
-    right: 0,
-  },
-  buttonsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    marginHorizontal: rem(12),
-    marginTop: rem(12),
-    marginBottom: rem(20),
+  container: {
+    borderTopLeftRadius: rem(30),
+    borderTopRightRadius: rem(30),
     backgroundColor: COLORS.white,
   },
+  buttonsContainer: {
+    marginTop: rem(12),
+    marginHorizontal: rem(12),
+    marginBottom: rem(20),
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
   button: {
-    width: '25%',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
     marginTop: rem(24),
+    width: '25%',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
   },
 });
