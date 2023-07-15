@@ -14,7 +14,6 @@ import {signInSocialSaga} from '@store/modules/Account/sagas/signInSocial';
 import {signOutSaga} from '@store/modules/Account/sagas/signOut';
 import {subscribeUserChangedSaga} from '@store/modules/Account/sagas/subscribeUserChanged';
 import {syncLanguageCodeSaga} from '@store/modules/Account/sagas/syncLanguageCode';
-import {syncRtlSaga} from '@store/modules/Account/sagas/syncRTL';
 import {updateAccountSaga} from '@store/modules/Account/sagas/updateAccount';
 import {updateRefByUsernameSaga} from '@store/modules/Account/sagas/updateRefByUsernameSaga';
 import {userStateChangeSaga} from '@store/modules/Account/sagas/userStateChange';
@@ -55,14 +54,6 @@ export const authWatchers = [
     verifyPhoneNumberSaga,
   ),
   fork(syncLanguageCodeSaga),
-  takeLatest(
-    [
-      AccountActions.UPDATE_ACCOUNT.SUCCESS.type,
-      AccountActions.GET_ACCOUNT.SUCCESS.type,
-      AccountActions.USER_STATE_CHANGE.SUCCESS.type,
-    ],
-    syncRtlSaga,
-  ),
   fork(subscribeUserChangedSaga),
   takeLatest(
     [
