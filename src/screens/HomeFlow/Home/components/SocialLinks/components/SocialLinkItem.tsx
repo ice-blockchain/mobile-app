@@ -2,7 +2,6 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {openLinkWithInAppBrowser} from '@utils/device';
 import React, {memo, useCallback} from 'react';
 import {Image, Linking} from 'react-native';
 import {ImageSourcePropType, StyleSheet} from 'react-native';
@@ -35,9 +34,7 @@ const openSchemeOrUrl = async ({
      */
   }
 
-  openLinkWithInAppBrowser({
-    url: linkUrl,
-  });
+  return Linking.openURL(linkUrl);
 };
 
 export const SocialLinkItem = memo(({icon, linkScheme, linkUrl}: Props) => {
