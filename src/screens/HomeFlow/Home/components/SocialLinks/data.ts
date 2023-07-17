@@ -49,6 +49,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     type: 'TIKTOK',
     icon: imgTiktok,
+    linkScheme: LINKS.TIKTOK_APP,
     linkUrl: LINKS.TIKTOK_WEB,
   },
   {
@@ -72,6 +73,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     type: 'GITHUB',
     icon: imgGithub,
+    linkScheme: LINKS.GITHUB_APP,
     linkUrl: LINKS.GITHUB_WEB,
   },
 ];
