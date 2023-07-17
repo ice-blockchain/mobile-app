@@ -1,8 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {signInWithProvider} from '@services/auth';
+import {AuthError} from '@services/auth/signin/types';
 import {AccountActions} from '@store/modules/Account/actions';
 import {getErrorMessage} from '@utils/errors';
+import {checkProp} from '@utils/guards';
 import {call, put, SagaReturnType} from 'redux-saga/effects';
 
 export function* signInSocialSaga(
@@ -24,6 +26,13 @@ export function* signInSocialSaga(
     yield put(
       AccountActions.SIGN_IN_SOCIAL.FAILED.create(getErrorMessage(error)),
     );
-    throw error;
+    if (
+      !(
+        checkProp(error, 'code') &&
+        error.code === AuthError.PlayServicesNotAvailable
+      )
+    ) {
+      throw error;
+    }
   }
 }

@@ -16,3 +16,7 @@ export type SocialSignInMethod<T> = () => Promise<
 >;
 
 export type SocialSignInProvider = 'apple' | 'google' | 'facebook' | 'twitter';
+
+export enum AuthError {
+  PlayServicesNotAvailable = 'PlayServicesNotAvailable',
+}
