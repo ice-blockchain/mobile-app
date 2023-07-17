@@ -59,6 +59,9 @@ export const setDayjsLocale = (locale: SupportedLocale) => {
     case 'zh':
       require('dayjs/locale/zh');
       break;
+    case 'zh-hant':
+      require('dayjs/locale/zh-hk');
+      break;
     case 'hi':
       require('dayjs/locale/hi');
       break;
@@ -110,7 +113,9 @@ export const setDayjsLocale = (locale: SupportedLocale) => {
     case 'uk':
       require('dayjs/locale/uk');
       break;
-
+    case 'pa':
+      require('dayjs/locale/pa');
+      break;
     default:
       logError(`Setup '${locale}' locale properly for 'dayjs'`);
   }

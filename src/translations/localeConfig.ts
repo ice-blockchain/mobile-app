@@ -19,6 +19,7 @@ export type SupportedLocale =
   | 'th'
   | 'vi'
   | 'zh'
+  | 'zh-hant'
   | 'hi'
   | 'bn'
   | 'bg'
@@ -35,7 +36,8 @@ export type SupportedLocale =
   | 'pt'
   | 'ro'
   | 'te'
-  | 'uk';
+  | 'uk'
+  | 'pa';
 
 export type LocalConfig = {
   [key in SupportedLocale]: {
@@ -149,6 +151,14 @@ export const localeConfig: LocalConfig = {
     },
     name: 'Simplified Chinese',
     flag: flags.cn,
+    isRTL: false,
+  },
+  'zh-hant': {
+    get translations() {
+      return require('./locales/zh-hant.json');
+    },
+    name: 'Traditional Chinese',
+    flag: flags.hk,
     isRTL: false,
   },
   bg: {
@@ -269,6 +279,14 @@ export const localeConfig: LocalConfig = {
     },
     name: 'Ukrainian',
     flag: flags.ua,
+    isRTL: false,
+  },
+  pa: {
+    get translations() {
+      return require('./locales/pa.json');
+    },
+    name: 'Punjabi',
+    flag: flags.pk,
     isRTL: false,
   },
 } as const;

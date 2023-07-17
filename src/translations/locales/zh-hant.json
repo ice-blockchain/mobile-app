@@ -1,0 +1,896 @@
+{
+  "welcome": {
+    "page1": {
+      "title": "歡迎來到 ice",
+      "description": "[[:ice]] 是一款能用手機賺取的虛擬貨幣。ice 被像您一樣的日常使用者擁有與管理。"
+    },
+    "page2": {
+      "title": "環境友善",
+      "description": "[[:ice]] 的能源效率比 BTC 更佳，因為它使用「權益證明」共識機制。 權益證明（POS）是一種加密貨幣的驗證方式，會根據驗證者抵押的貨幣數量來驗證區塊交易。"
+    },
+    "page3": {
+      "title": "民眾貨幣",
+      "description_part1": "權力掌握在您手中。",
+      "description_part2": "我們在 [[:ice]] 開發的所有東西皆為開源，並由去中心化自治組織（DAO）控制。"
+    },
+    "page4": {
+      "title": "保持聯繫",
+      "description": "點擊 [[:iceLogo]] 進行每日簽到，使用我們免費、低耗能的手機應用程式。每日點擊可確保 ice 流入真人手中，而不是機器人。"
+    },
+    "page5": {
+      "title": "推薦與獎勵",
+      "description": "邀請您的好友加入，每有一名好友加入您的團隊，您們（雙方）的基礎收益率都會提升 25%。"
+    },
+    "page6": {
+      "title": "通知",
+      "description_part1": "[[:ice]] 簽到時段只持續 24 小時。 想在當前時段結束時收到通知嗎？",
+      "description_part2": "別擔心，您不會被通知轟炸！",
+      "not_now": "現在不要"
+    }
+  },
+  "button": {
+    "yes_btn": "好的",
+    "next_btn": "下一步",
+    "not_now": "現在不要",
+    "view_all": "檢視所有",
+    "invite_friend": {
+      "title": "邀請好友",
+      "description": "邀請好友，賺取額外 [[:ice]]。"
+    },
+    "see_all": "查看所有",
+    "no": "不要",
+    "search_country": "搜尋國家",
+    "save": "儲存",
+    "yes": "是",
+    "change": "更改",
+    "no_cancel": "否，取消",
+    "complete": "完成",
+    "cancel": "取消",
+    "clear": "清除",
+    "finish": "結束",
+    "next_step": "下一步",
+    "back": "返回",
+    "search": "搜尋",
+    "continue": "繼續",
+    "apply": "套用",
+    "reset": "重置",
+    "skip_all": "跳過所有",
+    "done": "完成",
+    "confirm": "確認",
+    "do_this_later": "稍後再做",
+    "resurrect_me": "復活我",
+    "claim_bonus": "領取獎勵",
+    "close": "關閉",
+    "try_again": "再試一次",
+    "view_changelog": "檢視更新日誌",
+    "disable": "停用",
+    "agree": "同意",
+    "learn_more": "了解更多",
+    "back_to_login": "返回登入",
+    "follow_us": "追蹤我們",
+    "subscribe": "訂閱"
+  },
+  "team": {
+    "contacts_tab": "聯絡人",
+    "tierOne_tab": " 1 階",
+    "tierTwo_tab": " 2 階",
+    "empty": {
+      "title": "您目前沒有任何 [[:title]] 推薦！",
+      "contacts": "您的電話簿中目前沒有任何聯絡人。",
+      "button_title": "邀請好友"
+    },
+    "contacts": {
+      "empty_title": "[[:ice]] 與好友一起更有趣",
+      "empty_button_title": "允許存取聯絡人",
+      "empty_description": "同步聯絡人，看看有誰已在使用 [[:ice]]。 之後您將能傳送 ice 給任何一個聯絡人。"
+    },
+    "header": {
+      "search_placeholder": "尋找使用者",
+      "referrals": "推薦",
+      "earnings": "收益"
+    },
+    "confirm_code": {
+      "title": "確認碼",
+      "description": "請輸入您的手機收到的確認碼。",
+      "placeholder": "輸入代碼",
+      "button": "立即確認代碼"
+    },
+    "confirm_phone": {
+      "title": "確認電話",
+      "description": "請確認您的國家代碼並輸入您的電話號碼。"
+    },
+    "contacts_list": {
+      "ice_header": {
+        "friends": "好友"
+      },
+      "all_contacts": "所有聯絡人",
+      "invite": "邀請",
+      "invitation_text": "嗨 {{name}}，我想邀請你加入 ice。"
+    },
+    "tier_one": {
+      "header_list": {
+        "title_earnings": " 1 階收益"
+      }
+    },
+    "tier_two": {
+      "header_list": {
+        "title_earnings": " 2 階收益"
+      }
+    }
+  },
+  "signIn": {
+    "logInSignUp": "登入／註冊",
+    "phone": "電話",
+    "or": "或",
+    "reset_password": "重置密碼",
+    "welcome": "歡迎來到 ice",
+    "email": "電子郵件",
+    "slogan": "全球貨幣重置",
+    "privacy": "選擇繼續即表示您同意我們的[[:link]]服務條款[[/:link]]和[[:link]]隱私政策[[/:link]]"
+  },
+  "claimUsername": {
+    "title": "決定暱稱",
+    "description": "您的好友將需要用此暱稱加入您的團隊。",
+    "inputPlaceholder": "輸入您的暱稱",
+    "note_part1": "創建暱稱時，只能使用字母、數字和句號。",
+    "note_part2": "範例：",
+    "note_example": "your.name01"
+  },
+  "whoInvitedYou": {
+    "title": "您的邀請人是？",
+    "description": "輸入您的邀請人暱稱。",
+    "inputPlaceholder": "輸入暱稱",
+    "dontHaveInvitationCode": "完成此步驟後，當您和好友同時完成簽到時，您們的基礎收益率將提升 25%。",
+    "dontHaveCodeTip": "如果您沒有邀請碼，我們將隨機選擇一位會員當成您的推薦人！"
+  },
+  "errors": {
+    "nicknameSize": "暱稱長度：4-20 個字元。",
+    "removeInvalidCharacters": "移除無效字元。",
+    "validation_error": "出現驗證錯誤。",
+    "multiple_accounts": "電子郵件／電話號碼已被其他帳號使用。 請登入該帳號以證明所有權，然後在登出後重新登入此帳號。 若您並不擁有該帳號，或無法登入該帳號，請與我們的客服聯繫。",
+    "wrong_phone_number": "無效的電話號碼，請再試一次。",
+    "invalid_username": "無效的暱稱。",
+    "email_already_taken": "電子郵件已被使用。",
+    "phone_number_already_taken": "電話號碼已被使用。",
+    "invalid_validation_code": "無效的代碼，請再試一次！",
+    "validation_expired": "驗證已過期",
+    "validation_not_found": "查無驗證資訊",
+    "invalid_email": "無效的電子郵件。",
+    "invalid_password": "無效的密碼。",
+    "invalid_ref_username": "無效的暱稱。",
+    "invalid_phone": "無效的電話號碼。",
+    "user_disabled": "使用者已被停用。",
+    "expired_action_code": "電子郵件連結中的一次性密碼已過期。",
+    "account_exists_with_different_credential": "該電子郵件地址已被其他帳號使用。",
+    "invalid_credential": "憑證格式錯誤或已過期。",
+    "operation_not_allowed": "憑證對應的帳號類型尚未啟用。",
+    "user_not_found_for_email": "您提供的電子郵件查無使用者。",
+    "user_not_found": "找不到使用者。",
+    "auth_in_progress": "登入已在進行中。",
+    "google_play_services_not_available": "無法在此裝置上使用 Google Play 服務。",
+    "unknown_error_with_code": "未知錯誤： {{code}}",
+    "no_such_provider": "您尚未連結此供應商。",
+    "min_username": "最短長度為 4 字元。",
+    "max_username": "最大長度為 30 字元。",
+    "code_expired": "代碼已過期，請申請新的代碼。",
+    "too_many_requests": "請求次數過多，請稍後再試。",
+    "network_error_title": "沒有網路連線",
+    "network_error_message": "您的裝置目前沒有可用的網路連線。",
+    "unknown_error": "發生錯誤，請稍後再試一次。",
+    "general_error_title": "糟糕…",
+    "general_error_message": "看來出現問題了。 我們的團隊正在設法修復。",
+    "general_network_error": "網路發生錯誤，請檢查您的連線。",
+    "credential_already_in_use": "這些憑證已被另一個使用者帳號使用。",
+    "email_already_in_use": "此電子郵件地址已被另一個帳號使用。",
+    "user_token_expired": "您的憑證已失效，請再次登入。",
+    "requires_recent_login": "將採取敏感動作，需提供最近的身分驗證。 請再次登入。",
+    "same_email": "不得使用相同的電子郵件。",
+    "weak_password": "低強度密碼。",
+    "wrong_password": "密碼錯誤。",
+    "no_camera_permissions": "未授予相機權限",
+    "no_library_permissions": "未授予資料庫權限"
+  },
+  "profile": {
+    "my_roles": {
+      "title": "我的角色"
+    },
+    "mining_calculator": "收益計算機",
+    "invite_friends": "邀請好友",
+    "invite_friends_engage": "分享出去並邀請好友。 推薦越多，賺越多！",
+    "global_rank": "全球排名",
+    "view_all_roles": "檢視所有角色",
+    "data_is_hidden": "已隱藏數據",
+    "progress_text": "{{value}} 的 {{total}}",
+    "not_found": {
+      "title": "找不到使用者",
+      "description": "糟糕，我們找不到此使用者。"
+    },
+    "my_badges": {
+      "title": "我的徽章"
+    },
+    "badges": {
+      "title": "徽章"
+    },
+    "roles": {
+      "title": "角色"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "幣",
+        "description": "幣"
+      },
+      "social": {
+        "title": "社交",
+        "description": "好友"
+      },
+      "level": {
+        "title": "等級",
+        "description": "等級"
+      }
+    }
+  },
+  "global": {
+    "level": "等級",
+    "referrals": "推薦",
+    "coin": "幣",
+    "social": "社交",
+    "phone_number": "電話號碼",
+    "years": "年",
+    "of": "的",
+    "attention": "注意",
+    "email_address": "電子郵件",
+    "password": "密碼",
+    "data_hidden": "已隱藏數據",
+    "pull_to_refresh": "拉動以更新",
+    "comingSoon": "即將到來",
+    "date": {
+      "today": "今日"
+    }
+  },
+  "mining_calculator": {
+    "result_label": "您將賺取",
+    "active_inviter": "活躍邀請人",
+    "tier_1_ref": "1 階推薦人",
+    "tier_2_ref": "2 階推薦人",
+    "active_miners": "活躍推薦人"
+  },
+  "home": {
+    "wallet": {
+      "title": "錢包",
+      "rate": "收益率",
+      "balance": "當前餘額"
+    },
+    "pioneer": {
+      "rank": "全球排名",
+      "referrals": "推薦",
+      "description": "推薦更多使用者，賺取更多 [[:ice]]。"
+    },
+    "referrals": {
+      "title": "推薦",
+      "description": "過去 5 天的推薦數據。",
+      "no_referrals_description": "您尚未推薦任何人加入。",
+      "users_tier_1": "1 階使用者",
+      "users_tier_2": "2 階使用者"
+    },
+    "adoption": {
+      "title": "採用",
+      "level": "等級",
+      "users": "使用者"
+    },
+    "tasks": {
+      "achievements": "成就",
+      "title": "您的進度",
+      "description": "完成下方的任務並升級！",
+      "completed": {
+        "title": "恭喜",
+        "description": "持續每日簽到並賺取額外獎勵！"
+      },
+      "popup": {
+        "title": "加入我們的 Telegram 頻道",
+        "description": "請提供您在 Telegram 上使用的暱稱。",
+        "placeholder": "暱稱"
+      },
+      "claim_username": {
+        "title": "決定您的暱稱",
+        "description": "完成設置並與您的好友分享。"
+      },
+      "start_mining": {
+        "title": "開始賺錢",
+        "description": "您的第一個簽到時段。"
+      },
+      "upload_profile_picture": {
+        "title": "個人檔案相片",
+        "description": "上傳您的個人檔案圖片。"
+      },
+      "join_telegram": {
+        "title": "加入 Telegram",
+        "description": "成為我們社群的一部份，立即加入。"
+      },
+      "follow_us_on_twitter": {
+        "title": "在 Twitter 上追蹤我們",
+        "description": "讓我們保持聯絡，在 Twitter 上追蹤我們。"
+      },
+      "invite_friends": {
+        "title": "邀請 5 個好友",
+        "description": "壯大您的團隊來增加收益。"
+      }
+    },
+    "overview": {
+      "title": "總覽"
+    },
+    "menu": {
+      "notifications": "通知",
+      "staking": "質押",
+      "stats": "數據",
+      "help": "說明"
+    },
+    "team": {
+      "title": "團隊",
+      "view_team": "檢視團隊"
+    },
+    "mining_rate": {
+      "title": "收益率",
+      "base": "基礎"
+    },
+    "engagement": {
+      "title": "投入度",
+      "description_part1": "連續日數指的是您連續進行簽到的天數。",
+      "description_part2": "每連續簽到 6 天，將可休息一天。",
+      "streak": "連續日數",
+      "days_off": "休息日數"
+    }
+  },
+  "settings": {
+    "title": "設定",
+    "profile": "個人檔案",
+    "legal": "法律事項",
+    "support": "客服",
+    "personal_information_title": "個人資訊",
+    "personal_information_description": "管理您的個人檔案詳細資訊。",
+    "notifications_title": "通知",
+    "notifications_description": "在此管理您的通知。",
+    "push_notifications_title": "通知",
+    "push_notifications_description": "自訂您的推播通知設定。",
+    "email_notifications_title": "電子郵件通知",
+    "email_notifications_description": "自訂您的電子郵件通知設定。",
+    "terms_title": "服務條款",
+    "terms_description": "檢視我們的服務條款。",
+    "privacy_title": "隱私政策",
+    "privacy_description": "瞭解我們的隱私政策。",
+    "feedback_title": "意見回饋",
+    "feedback_description": "與我們分享您的想法。",
+    "invite_title": "邀請一個好友",
+    "invite_description": "邀請好友，賺取額外 ice。",
+    "delete_title": "刪除帳號",
+    "delete_description": "清除您的帳號。",
+    "delete_confirmation_title": "確定要移除帳號嗎？",
+    "delete_confirmation_yes": "是的，我要刪除",
+    "logout_title": "登出",
+    "logout_description": "登出並休息。",
+    "logout_confirmation_title": "確定要登出嗎？",
+    "logout_confirmation_yes": "是的，我要登出",
+    "confirm_phone": {
+      "title": "確認新電話",
+      "description": "請確認您的國家代碼並輸入您的電話號碼。",
+      "button": "確認新電話號碼"
+    },
+    "notifications": {
+      "enable_prompt": "不允許傳送通知。 要啟用通知功能嗎？",
+      "channel_achievements": "成就",
+      "channel_news": "新消息",
+      "channel_reminders": "提醒",
+      "channel_team": "團隊",
+      "type_push": "推播",
+      "type_email": "電子郵件",
+      "disable_notifications": "是否要停用通知？",
+      "disable_notifications_description": "若停用通知，將無法收到開始簽到的時間、新消息、或團隊資訊的更新。",
+      "domain": {
+        "disable_all": {
+          "title": "",
+          "description": ""
+        },
+        "weekly_stats": {
+          "title": "每週數據",
+          "description": "接收簽到活動的通知。"
+        },
+        "weekly_report": {
+          "title": "每週報告",
+          "description": "接收簽到活動的通知。"
+        },
+        "achievements": {
+          "title": "成就",
+          "description": "接收進度通知。"
+        },
+        "promotions": {
+          "title": "促銷",
+          "description": "接收關於如何壯大團隊並賺取更多的通知。"
+        },
+        "news": {
+          "title": "新消息",
+          "description": "接收關於我們團隊的通知。"
+        },
+        "micro_community": {
+          "title": "微型社群",
+          "description": "接收關於您的團隊的通知。"
+        },
+        "daily_bonus": {
+          "title": "每日獎勵",
+          "description": "接收通知，以領取你的每日獎勵。"
+        },
+        "mining": {
+          "title": "時段狀態",
+          "description": "接收關於您的簽到活動的通知。"
+        },
+        "system": {
+          "title": "系統",
+          "description": "接收關於 ice 應用程式的重要通知。"
+        }
+      }
+    },
+    "language_settings": "語言設定",
+    "change_lang_confirm": {
+      "title": "更換語言",
+      "prompt": "套用此設定將重新啟動應用程式。"
+    },
+    "profile_image": "個人檔案圖片",
+    "inapp_privacy_title": "隱私",
+    "inapp_privacy_description": "在此管理您的資訊。",
+    "developer": "開發者",
+    "user_id": "使用者 ID",
+    "user_token": "使用者代幣",
+    "profile_photo": {
+      "delete": "刪除照片",
+      "edit": "編輯個人檔案照片",
+      "photo_gallery": "相簿",
+      "camera": "相機"
+    },
+    "confirm_email_confirmation_title": "確認電子郵件？",
+    "update_email_confirmation_title": "更新電子郵件？",
+    "update_email_confirmation_subtitle": "更改您的電子郵件地址將需要您重新登入。 確定要繼續進行嗎？",
+    "unlink_logins_title": "取消連結登入帳號",
+    "unlink_logins_description": "您可以從這裡取消連接登入帳號。"
+  },
+  "invite_share": {
+    "title": "邀請一個好友",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "電子郵件",
+    "fb": "新聞饋送",
+    "sms": "簡訊",
+    "copy_link": "複製連結",
+    "more": "更多",
+    "copied": "已複製",
+    "share_message": "嗨☃️ 雪人！ 加入我的 ice 團隊，使用我的推薦碼註冊，即可獲得 10 ice 幣：",
+    "share_subject": "加入我的 ice 團隊",
+    "description": "分享出去並邀請好友。 每推薦一個新人加入都能賺取 [[:ice]]。",
+    "share": "分享"
+  },
+  "users": {
+    "ping": "PING",
+    "active": "活躍",
+    "inactive": "閒置",
+    "referralType": {
+      "T1": " 1 階",
+      "T2": "  2 階"
+    }
+  },
+  "personal_information": {
+    "first_name": "名字",
+    "last_name": "姓氏",
+    "country": "國家",
+    "city": "城市",
+    "title": "個人資訊",
+    "phone": "電話",
+    "email": "電子郵件",
+    "username": "暱稱"
+  },
+  "username": {
+    "error": {
+      "already_taken": "暱稱已被使用。",
+      "length": "暱稱長度：4 至 20 個字元。",
+      "invalid_characters": "移除無效字元。",
+      "not_found": "找不到暱稱。",
+      "some_error": "發生錯誤。",
+      "refer_yourself": "您無法推薦自己。"
+    }
+  },
+  "staking": {
+    "time_left": "剩餘時間",
+    "mining_rate": "收益率",
+    "appeal": "提升您的收益率",
+    "benefits_description": "預先質押您的 ice 獎勵，期限最長 5 年，收益率最高可提升 250%。",
+    "bonus_label": "預先質押獎勵",
+    "period_label": "質押期間",
+    "title": "預先質押",
+    "current_rate": "目前利率",
+    "allocation": "分配",
+    "description": "質押是一段會將您的加密資產用於支持區塊鏈網路和確認交易的過程。",
+    "terms_agree": "我同意[[:ice]][[:link]]質押條款[[/:link]]。 選定期間內，您持有的 ice 將被鎖定。",
+    "stake_now": "立刻預先質押！",
+    "balance_label": "質押餘額",
+    "confirm_title": "確認預先質押",
+    "confirm_subtitle": "確定要預先質押您的貨幣嗎？ 一旦確認便無法撤銷。"
+  },
+  "stats": {
+    "header_title": "數據",
+    "active": "活躍使用者",
+    "total": "使用者總數",
+    "user_growth": "使用者增長",
+    "top_miners": "使用者排名",
+    "top_countries": "國家排名",
+    "online_miners": "線上使用者",
+    "detailed_information": "詳細資訊"
+  },
+  "update_required": {
+    "title": "請進行更新",
+    "description": "您正在使用舊版的應用程式，請進行更新以繼續使用。",
+    "button_title": "立即更新"
+  },
+  "general": {
+    "good_morning": "早安",
+    "good_afternoon": "下午好",
+    "good_evening": "晚安",
+    "ice": "ice",
+    "ice_per_hour": "ice/小時",
+    "seconds_short": "秒",
+    "minutes_short": "分",
+    "hours_short": "時",
+    "days_short": "天"
+  },
+  "news": {
+    "news_feed": "新聞饋送",
+    "read_more": "閱讀更多",
+    "no_more_news": "這是新聞饋送的最後一條項目。",
+    "views": "{{viewsCount}} 點閱數"
+  },
+  "search": {
+    "empty": "搜尋聯絡人、ice 好友和您的微型社群成員。",
+    "nothing_is_found": "未找到符合查詢的結果。",
+    "search_by_country": "以國家搜尋",
+    "search_for_users": "以使用者搜尋",
+    "loading": "搜尋中…"
+  },
+  "tabbar": {
+    "mining_inactive_tooltip": "點擊這裡以開始您的第一個簽到時段。",
+    "mining_reset_tooltip": "按住 1 秒鐘，延長您的簽到時段。",
+    "mining_holiday_reset_tooltip": "您使用了休息日！ 按住 1 秒鐘，延長您的簽到時段。",
+    "mining_holiday_active": "您使用了休息日！"
+  },
+  "invite_friend": {
+    "invite_button": "邀請一個好友",
+    "button_title": "邀請一個好友",
+    "description": "您的好友還沒加入 [[:ice]]。 對他發送邀請！"
+  },
+  "balance_history": {
+    "title": "餘額歷史",
+    "wallet": "錢包",
+    "blockchain": "區域鏈",
+    "wallet_update_interval": "每小時更新",
+    "blockchain_update_interval": "每 24 小時更新",
+    "list_end_label": "這是餘額歷史的最後一條項目。",
+    "no_data": "指定期間內沒有可以顯示的資料。"
+  },
+  "pop_up": {
+    "update_now": "立即更新",
+    "please_update": "請進行更新",
+    "update_now_text": "您正在使用舊版的應用程式，請進行更新以繼續使用。",
+    "you_are_up_to_date": "已更新到最新版本！",
+    "up_to_date_text": "您現在使用的是最新版本！ 查看下方所有更動。",
+    "resurrection": "復活",
+    "resurrection_message": "您有一次復活的機會，並收到過去 [[:period]] 失去的 [[:amount]] 幣。",
+    "resurrection_warning": "您只能復活一次！",
+    "please_confirm": "請確認",
+    "resurrection_no_confirm_message": "您將永遠失去您的 [[:amount]] 幣。 確定要繼續嗎？",
+    "resurrection_yes_confirm_message": "您只能復活一次！ 確定要繼續嗎？ [[:amount]] 幣將於接下來一小時內歸還至您的餘額。",
+    "delete_account_confirmation_title": "確認刪除",
+    "delete_account_confirmation_text": "刪除帳號將永久消除您的數據，包含您的 ice 餘額。 要繼續進行嗎？"
+  },
+  "periods": {
+    "3_days": "3 天",
+    "7_days": "7 天",
+    "30_days": "30 天",
+    "1_day": "1 天",
+    "1_week": "1 週",
+    "1_month": "1 個月",
+    "90_days": "90 天",
+    "14_days": "14 天"
+  },
+  "notifications": {
+    "joined": " 加入了您的團隊。",
+    "multiply": " 和其他 {{count}} 人加入了您的團隊。",
+    "ping": " PING了你，快醒來！",
+    "delete": "刪除",
+    "add_notifications": "新增模擬通知",
+    "no_notifications": "沒有可顯示的通知。",
+    "add_announcements": "新增模擬公告",
+    "add_both": "Add mocked notifications and announcements together",
+    "clear_title": "清除所有通知？",
+    "title": "通知"
+  },
+  "notification_feed_screen": {
+    "yesterday": "昨天",
+    "last_week": "上週",
+    "this_month": "本月份",
+    "last_month": "上個月",
+    "this_week": "本週"
+  },
+  "profile_privacy_edit": {
+    "step1": {
+      "title": "1. 您的個人檔案數據",
+      "description": "點擊您不想讓公眾看到的區塊。"
+    },
+    "step2": {
+      "description": "點擊以隱藏此區塊，不讓公眾看見。",
+      "title": "2. 您目前的角色"
+    },
+    "step3": {
+      "title": "3. 您獲得的徽章",
+      "description": "點擊這裡，不讓公眾看見您的徽章。"
+    }
+  },
+  "confirm_email": {
+    "title": "確認電子郵件",
+    "description": "請輸入您的電子郵件地址，我們將發送代碼。",
+    "note": "如果沒有在 5 分鐘內收到電子郵件，請查看您的垃圾信件匣。",
+    "wrong_email": "不是這個電子郵件？",
+    "check_email": "查看您的電子郵件",
+    "emailed_link_to": "我們把魔法連結以電子郵件傳送到",
+    "emailed_steps_to": "我們把步驟以電子郵件傳送到",
+    "link_instruction": "點擊連結以登入或註冊。",
+    "reset_link_instruction": "點擊連結來重置您的密碼。",
+    "modify_title": "確認新電子郵件",
+    "modify_description": "請輸入新的電子郵件地址。"
+  },
+  "invalid_link": {
+    "title": "無效連結",
+    "description": "很抱歉，此連結已失效，請再次輸入您的電子郵件，我們將發送新的連結給您。"
+  },
+  "confirm_code": {
+    "title": "確認碼",
+    "description": "請輸入發送到以下地址的代碼：",
+    "send_code_again": "再次發送代碼",
+    "resend_time_label": "新代碼倒數計時： ",
+    "enter_code": "輸入代碼",
+    "wrong_number": "不是這個號碼？"
+  },
+  "ice_bonus": {
+    "title": "歡迎獎勵",
+    "description": "恭喜，您已第一次收到 [[:value]][[:ice]] 幣，這證明了我們對[[:bold]]您[[/:bold]]的[[:bold]]信任[[/:bold]]。",
+    "balance_label": "您當前的餘額"
+  },
+  "country_select": {
+    "title": "選擇國家"
+  },
+  "roles": {
+    "snowman": {
+      "title": "雪人",
+      "subtitle": "打造冰雪帝國",
+      "description": "每 24 小時簽到一次，展示您對 ice 網路的忠誠，並證明您是人類，不是機器人。"
+    },
+    "ambassador": {
+      "title": "大使",
+      "subtitle": "冰雪帝國統治者",
+      "description": "當您的團隊至少有 100 人加入時，您將成為大使。 每個大使都能搶先使用新功能。"
+    }
+  },
+  "confirm_phone": {
+    "modify_title": "確認電話",
+    "modify_description": "請確認國家代碼並輸入電話號碼。",
+    "button": "確認國家與電話",
+    "same_phone_error": "您無法使用相同的號碼。"
+  },
+  "date_select": {
+    "title": "選擇日期"
+  },
+  "walkthrough": {
+    "news": {
+      "readmore": {
+        "title": "閱讀更多",
+        "description": "您可以在此看到來自我們團隊的最新消息。 點擊此按鈕來閱讀完整文章。"
+      },
+      "releasednews": {
+        "title": "發布的消息",
+        "description": "點擊個別消息的標題來閱讀完整版。 掌握最新消息與意見調查。"
+      }
+    },
+    "team": {
+      "allow_contacts": {
+        "title": "允許聯絡人",
+        "description": "同步聯絡人，看看有誰已在使用 [[:ice]]。 之後您將能傳送 [[:ice]] 給任何一個聯絡人。"
+      },
+      "confirm_phone": {
+        "title": "確認電話",
+        "description": "確認您的身分，並允許您的聯絡人得知您也是 ice 網路的一員。 您的電話號碼不會與第三方分享。"
+      },
+      "contacts_list": {
+        "title": "聯絡人清單",
+        "description": "這是您所有聯絡人的清單，已加入 [[:ice]] 網路的聯絡人顯示於清單最上方。"
+      },
+      "referrals": {
+        "title": "推薦人",
+        "description": "您可以從這裡看到您有多少推薦人。 邀請的人越多，就賺越多。"
+      },
+      "earnings": {
+        "title": "收益",
+        "description": "您當前的餘額每小時更新一次，並在此處顯示。 這包含您的直接收益和質押收益，以及 1 階和 2 階的收益。"
+      },
+      "segmented_control_tier_one": {
+        "title": "1 階",
+        "description": "您可以從這裡看到您的 1 階推薦人清單。 每有一個好友跟您同時簽到，您當前的基礎採用收益率就增加 25%。 [[:link]]閱讀更多[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "segmented_control_tier_two": {
+        "title": "2 階",
+        "description": "您可以從這裡看到您的 2 階推薦人清單。 每有一個好友跟您同時簽到，您當前的基礎採用收益率就增加 25%。 [[:link]]閱讀更多[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "active_users": {
+        "title": "活躍使用者",
+        "description": "這裡能看到您推薦的朋友目前在簽到活動的狀態。 當他們有可用的簽到時段時，即為活躍狀態。"
+      },
+      "tier_one_earnings": {
+        "title": "1 階收益",
+        "description": "您可以從這裡看到您的 1 階推薦人清單。 每有一個成員跟您同時簽到，您們雙方當前的基礎採用收益率就增加 25%。"
+      },
+      "ping": {
+        "title": "PING按鈕",
+        "description": "通知您推薦的朋友開始他們的簽到時段。 您每 24 小時都能向每個推薦的朋友發送一條通知。"
+      }
+    },
+    "home": {
+      "home": {
+        "title": "首頁",
+        "description": "歡迎來到 [[:ice]]。 您能在首頁找到關於您的餘額、當前收益率、您的全球排名，以及您的團隊的所有數據。"
+      },
+      "invite": {
+        "title": "邀請",
+        "description": "每邀請一個人，你們雙方的基礎收益率最多能提升 25%。 邀請的人越多，就賺越多。"
+      },
+      "team": {
+        "title": "團隊",
+        "description": "[[:ice]] 與好友一起更有趣 您可以在這個頁面查看 1 階和 2 階團隊成員的狀態。 也可以從這裡 PING 他們。"
+      },
+      "news": {
+        "title": "新消息",
+        "description": "掌握最新消息與意見調查。 由於我們是去中心化自治組織，您將能在此為未來的功能進行投票。"
+      },
+      "profile": {
+        "title": "個人檔案",
+        "description": "自訂您的個人檔案詳細資訊，查看已獲得的所有成就和徽章。 從這裡使用計算機，以估計您的收益。"
+      },
+      "earningicestart": {
+        "title": "賺取 ice",
+        "description": "點擊此按鈕，每 24 小時開始一次 [[:ice]] 簽到時段。 別忘了每天回來並開始賺錢！"
+      },
+      "earningiceseemore": {
+        "title": "賺取 ice",
+        "description": "再次點擊以查看關於您當前簽到時段的詳細資訊。"
+      },
+      "stats": {
+        "title": "數據",
+        "description": "您能在數據頁面上看到總使用者數，以及每天簽到的活躍使用者，包含名列前矛的國家與使用者。"
+      },
+      "help": {
+        "title": "說明",
+        "description": "您有問題嗎？ 查看我們的常見問題清單。 如果您找不到您要的答案，請不吝前往 hi@ice.io 與我們聯絡。"
+      },
+      "preStaking": {
+        "title": "預先質押",
+        "description": "預先質押您的收益獎勵，以得到最多回報。 選擇您的分配比例和質押期限，讓您的收益獲得額外加成。"
+      },
+      "wallet": {
+        "title": "錢包區塊",
+        "description": "您可以在此找到您當前的 [[:ice]] 餘額，以及您的收益率。 您的團隊中有越多推薦人上線，收益率就越高。"
+      },
+      "earning": {
+        "title": "收益區塊",
+        "description": "掌握您最新的收益率與獎勵！ 您可以在此查看您的當前利率、我們的基礎利率，以及應用程式中各種活動的獎勵利率。"
+      },
+      "engagement": {
+        "title": "投入度區塊",
+        "description": "追蹤您的簽到連續天數與休息日數！ 查看此區，得知您連續簽到時段的詳細資訊，以及您有多少可用的休息日。"
+      },
+      "profilecard": {
+        "title": "個人檔案區塊",
+        "description": "關注此區塊，以追蹤您的個人檔案狀態。 這區會顯示您目前的全球排名，以及您的角色、等級和總推薦人數。"
+      },
+      "referralscard": {
+        "title": "推薦人區塊",
+        "description": "點擊此區來查看過去 5 天的推薦數據，包含 1 階和 2 階推薦人的發展狀況。"
+      },
+      "adoptioncard": {
+        "title": "採用區塊",
+        "description": "根據過去一週活躍雪人的總數，您可以查看當前的 [[:ice]] 收益率。 達到下一個閾值時，收益率將減半。"
+      },
+      "nickname": {
+        "title": "暱稱",
+        "description": "暱稱讓你成為獨一無二的存在。 您的好友將需要用此暱稱加入您的團隊。 您也可以使用此捷徑來開啟您的個人檔案。"
+      },
+      "balancehistory": {
+        "title": "餘額歷史",
+        "description": "您能在此找到您在本地錢包和區塊鏈上當前的 [[:ice]] 餘額。 本地錢包餘額每小時更新，區塊鏈餘額每 24 小時更新。"
+      },
+      "achievements": {
+        "title": "成就",
+        "description": "完成下方的任務並升級！ 立即開始您的第一個簽到時段！"
+      }
+    }
+  },
+  "ActiveSessionsScreen": {
+    "title": "取消連結登入帳號",
+    "sessionName": "登入途徑： {{providerName}}",
+    "buttons": {
+      "currentSession": "當前時段",
+      "endSession": "終止時段",
+      "loginUnlinked": "登入帳號已取消連結",
+      "sessionEnded": "已終止時段",
+      "unlink": "取消連結"
+    },
+    "dialogs": {
+      "unlinkLogin": {
+        "title": "要取消連結登入帳號嗎？",
+        "message": "確定要從此裝置取消連結用 {{providerName}} 登入的帳號？"
+      },
+      "endSession": {
+        "title": "要終止時段嗎？",
+        "message": "確定要從此裝置終止 {{providerName}} 的登入時段？"
+      }
+    }
+  },
+  "links": {
+    "pre_staking": "https://ice.io/pre-staking/",
+    "privacy": "https://ice.io/privacy/",
+    "terms": "https://ice.io/terms/",
+    "main": "https://ice.io/"
+  },
+  "extra_bonus": {
+    "claim_title": "今日獎勵",
+    "claim_message": "領取今日獎勵的時間到了，請點擊下方的[[:bold]]「領取獎勵」[[/:bold]]。",
+    "link": "查看更多",
+    "extra_message": "您已獲得收益率的每日額外獎勵。",
+    "expired_title": "獎勵已過期",
+    "expired_message": "很抱歉，今日獎勵已過期。 請密切關注下一次通知！",
+    "result_title": "恭喜"
+  },
+  "early_access": {
+    "title": "搶先體驗",
+    "message_part1": "在[[:bold]]即將到來的正式發布前，搶先一睹 [[:bold]]ice[[/:bold]] 應用程式。[[/:bold]]",
+    "message_part2": "所有餘額將會在發布日當天歸 0。 然而，您的團隊將完整保留下來。",
+    "message_part3": "感謝您的支持！",
+    "checkbox_description": "我知道了！ 別再顯示此彈出視窗。"
+  },
+  "mining_notice": {
+    "title": "通知",
+    "message": "感謝您對賺取 [[:bold]]ice 感興趣！[[/:bold]] 目前我們正在進行技術上的微調，暫時無法使用簽到功能。 這是您專注於建立團隊與發展微型社區的好機會。",
+    "message_footer": "密切關注我們的 [[:twitter]]Twitter[[/:twitter]] 和 [[:telegram]]Telegram[[/:telegram]]，以得知後續更新。"
+  },
+  "qr_code": {
+    "description": "掃描 QR 碼以加入我的團隊。"
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "加入我們的 TikTok",
+      "description": "我們想通知並讓您知道我們在 TikTok 上有個令人興奮的新社群。 我們將分享關於我們數位貨幣 ice 的有趣且豐富的資訊內容，希望您能加入我們！"
+    },
+    "youtube": {
+      "title": "加入我們的 YouTube",
+      "description": "從賺取 ice 的教學，一直到新功能的更新，甚至還有有趣的社群內容，我們的 YouTube 頻道能讓您隨時得知最新資訊。"
+    },
+    "linkedin": {
+      "title": "加入我們的 LinkedIn",
+      "description": "加入 LinkedIn 上的 ice 社群是獲得最新發展的消息，並與志同道合的人們建立聯繫的絕佳途徑，這些人跟你一樣對數位貨幣的未來充滿熱情。"
+    },
+    "facebook": {
+      "title": "加入我們的 Facebook",
+      "description_part1": "我們強烈建議您追蹤我們的 Facebook 專頁。",
+      "description_part2": "這不僅能幫助您掌握 ice 專案的最新動態，也是與我們的社群聯繫並參與對話的好方法。"
+    },
+    "instagram": {
+      "title": "加入我們的 Instagram",
+      "description_part1": "在 Instagram 關注我們來得知最新消息，並與其他同樣對 ice 充滿熱情的使用者保持聯繫。",
+      "description_part2": "此外，您還能在第一時間知道我們將推出的新功能與促銷。"
+    }
+  }
+}
