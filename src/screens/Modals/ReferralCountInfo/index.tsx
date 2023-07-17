@@ -80,21 +80,16 @@ export const ReferralCountInfo = () => {
           height={ROUNDED_TRIANGLE_SIZE}
           fill={COLORS.downriver}
         />
-
         <View
           style={[styles.container, containerStyle]}
           onLayout={onLayoutContainer}>
           <View style={styles.cell}>
             <Text style={styles.label}>{t('users.referralType.T1')}</Text>
-
             <Text style={styles.value}>{user?.t1ReferralCount ?? 0}</Text>
           </View>
-
           <View style={styles.divider} />
-
           <View style={styles.cell}>
             <Text style={styles.label}>{t('users.referralType.T2')}</Text>
-
             <Text style={styles.value}>{user?.t2ReferralCount ?? 0}</Text>
           </View>
         </View>
