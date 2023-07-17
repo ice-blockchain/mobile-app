@@ -201,10 +201,22 @@ export const clearPersistedAuthTokens = async () => {
   }
 };
 
-export const refreshAuthToken = async (currentToken: AuthToken) => {
+export const refreshAuthToken = async (
+  currentToken: AuthToken,
+  {
+    /**
+     * Force refresh firebase token regardless of token expiration.
+     *  Might be used when updated user claims are needed to be fetched.
+     *  if forceUpdate->true, getIdTokenResult triggers onUserChanged upon completion
+     */
+    forceUpdate = false,
+  }: {forceUpdate?: boolean} = {},
+) => {
   switch (currentToken.issuer) {
     case 'firebase':
-      const newFirebaseToken = await auth().currentUser?.getIdTokenResult(true);
+      const newFirebaseToken = await auth().currentUser?.getIdTokenResult(
+        forceUpdate,
+      );
       if (!newFirebaseToken) {
         return null;
       }

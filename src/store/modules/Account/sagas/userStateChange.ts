@@ -59,7 +59,9 @@ export function* userStateChangeSaga() {
           email: authenticatedUser.email,
           phoneNumber: authenticatedUser.phoneNumber,
         });
-        yield call(refreshAuthToken, authenticatedUser.token);
+        yield call(refreshAuthToken, authenticatedUser.token, {
+          forceUpdate: true,
+        });
         /**
          * In case of firebase, userStateChange is triggered by the lib,
          *  because of the forceRefresh flag.
