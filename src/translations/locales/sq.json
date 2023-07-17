@@ -1,787 +1,841 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "Mirë se vjen në ice",
+      "description": "[[:ice]] është një valutë dixhitare që mund ta fitosh me anë të telefonit tënd. ice zotërohet dhe operohet nga përdorues të përditshëm si puna jote."
     },
     "page2": {
-      "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "title": "Miqësore për planetin",
+      "description": "[[:ice]] është vetvetiu më efikas në energji se BTC pasi përdor një mekanizëm konsensusi “Proof of Stake” (vërtetim rrezikshmërie). Me proof-of-stake (POS), zotëruesit e kriptovalutës vleftësojnë transaksione në blloqe bazuar në numrin e monedhave "
     },
     "page3": {
-      "title": "People’s Coin",
-      "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "title": "Monedha e njerëzve",
+      "description_part1": "Fuqinë e ke në duar.",
+      "description_part2": "Gjithçka që zhvillojmë në [[:ice]] do të jetë burim i hapur dhe nën kontrollin e Decentralized Autonomous Organization (DAO)."
     },
     "page4": {
-      "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "title": "Qëndro lidhur",
+      "description": "Cek [[:iceLogo]] për paraqitjen e përditshme në aplikacionin tonë celular falas, me përdorim të ulët energjie. Cekja përditë siguron që ice të jetë në duart e njerëzve të vërtetë dhe jo botëve artificialë."
     },
     "page5": {
-      "title": "Refer & Earn",
-      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
+      "title": "Refero e fito",
+      "description": "Fto miqtë dhe fitoni (ti dhe ata) deri në 25% bonus në normën bazë të fitimit për secilin nga miqtë që i bashkohet ekipit tënd."
     },
     "page6": {
-      "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
-      "description_part2": "Don’t worry, we will not spam you!",
-      "not_now": "Not now"
+      "title": "Njoftime",
+      "description_part1": "[[:ice]] seancat e paraqitjes zgjasin vetëm 24 orë. Dëshiron të marrësh njoftim kur të përfundojë seanca aktuale?",
+      "description_part2": "Mos u merakos, nuk të çojmë spam!",
+      "not_now": "Jo tani"
     }
   },
   "button": {
-    "yes_btn": "Yes, please",
-    "next_btn": "Next",
-    "not_now": "Not now",
-    "view_all": "view all",
+    "yes_btn": "Po, ju lutem",
+    "next_btn": "Më tej",
+    "not_now": "Jo tani",
+    "view_all": "shiko të gjitha",
     "invite_friend": {
-      "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "title": "Fto miq",
+      "description": "Fito ekstra [[:ice]] duke ftuar miqtë e tu."
     },
-    "no": "No",
-    "search_country": "Search for country",
-    "save": "Save",
-    "yes": "Yes",
-    "change": "Change",
-    "no_cancel": "No, cancel",
-    "complete": "Complete",
-    "cancel": "Cancel",
-    "clear": "Clear",
-    "finish": "Finish",
-    "next_step": "Next Step",
-    "see_all": "see all",
-    "back": "Back",
-    "search": "Search",
-    "continue": "Continue",
-    "apply": "Apply",
-    "reset": "Reset",
-    "skip_all": "Skip all",
-    "done": "Done",
-    "confirm": "Confirm",
-    "do_this_later": "Do this later",
-    "resurrect_me": "Resurrect Me",
-    "claim_bonus": "Claim Bonus",
-    "close": "Close",
-    "try_again": "Try Again",
-    "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "see_all": "shiko të gjitha",
+    "no": "Jo",
+    "search_country": "Kërko për vendin tënd",
+    "save": "Ruaj",
+    "yes": "Po",
+    "change": "Ndrysho",
+    "no_cancel": "Jo, anulo",
+    "complete": "Kryeh",
+    "cancel": "Anulo",
+    "clear": "Pastro",
+    "finish": "Përfundo",
+    "next_step": "Hapi i radhës",
+    "back": "Kthehu pas",
+    "search": "Kërko",
+    "continue": "Vazhdo",
+    "apply": "Apliko",
+    "reset": "Ricilëso",
+    "skip_all": "Kapërce të gjitha",
+    "done": "U krye",
+    "confirm": "Konfirmo",
+    "do_this_later": "Bëje më vonë",
+    "resurrect_me": "Më riaktivizo",
+    "claim_bonus": "Kërko bonusin",
+    "close": "Mbyll",
+    "try_again": "Provo sërish",
+    "view_changelog": "Shiko listën e ndryshimeve",
+    "disable": "Çmundëso",
+    "agree": "Pajtohem",
+    "learn_more": "Mëso më shumë",
+    "back_to_login": "Kthehu te identifikimi",
+    "follow_us": "Na ndiq",
+    "subscribe": "Abonohu"
   },
   "team": {
-    "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
+    "contacts_tab": "Kontaktet",
+    "tierOne_tab": "Niveli 1",
+    "tierTwo_tab": "Niveli 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "title": "Aktualisht nuk ke asnjë [[:title]] referim!",
+      "contacts": "Aktualisht nuk ke asnjë kontakt në librin telefonik.",
+      "button_title": "Fto miq"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
-      "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_title": "[[:ice]] është më mirë me miq",
+      "empty_button_title": "Lejo qasje te kontaktet",
+      "empty_description": "Sinkronizo kontaktet dhe shiko se kush tjetër është i anëtarësuar [[:ice]]. Në të ardhmen, do të kesh mundësi t'i dërgosh ice kujtdo nga kontaktet e tua."
     },
     "header": {
-      "search_placeholder": "Search for users",
-      "referrals": "Referrals",
-      "earnings": "Earnings"
+      "search_placeholder": "Kërko për përdorues",
+      "referrals": "Referime",
+      "earnings": "Fitime"
     },
     "confirm_code": {
-      "title": "Confirm Code",
-      "description": "Please enter the confirmation code you have received on your phone.",
-      "placeholder": "Enter the code",
-      "button": "Confirm your code now"
+      "title": "Konfirmo kodin",
+      "description": "Të lutemi fut kodin konfirmues që ke marrë në telefon",
+      "placeholder": "Fut kodin",
+      "button": "Konfirmo kodin tani"
     },
     "confirm_phone": {
-      "title": "Confirm Phone",
-      "description": "Please confirm your country code and enter your phone number."
+      "title": "Konfirmo telefonin",
+      "description": "Të lutemi konfirmo prefiksin e shtetit tënd dhe fut numrin e telefonit."
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "friends"
+        "friends": "miq"
       },
-      "all_contacts": "All contacts",
-      "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "all_contacts": "Të gjitha kontaktet",
+      "invite": "fto",
+      "invitation_text": "Ç'kemi {{name}}, desha të të ftoj të bashkohesh në ice."
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier 1 Earnings"
+        "title_earnings": "Fitimet e Nivelit 1"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier 2 Earnings"
+        "title_earnings": "Fitimet e Nivelit 2"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
-    "welcome": "Welcome to ice",
-    "email": "Email",
-    "slogan": "Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "logInSignUp": "Identifikohu / Regjistrohu",
+    "phone": "Telefon",
+    "or": "ose",
+    "reset_password": "Ricilëso fjalëkalimin",
+    "welcome": "Mirë se vjen në ice",
+    "email": "Posta elektronike",
+    "slogan": "Ricilësimi i Valutës Globale",
+    "privacy": "Duke vazhduar, pajtohesh me [[:link]]Kushtet e shërbimit[[/:link]] dhe [[:link]]Politikën e privatësisë[[/:link]]"
   },
   "claimUsername": {
-    "title": "Claim nickname",
-    "description": "Your friends will need to use this nickname to join your team",
-    "inputPlaceholder": "Enter your nickname",
-    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
-    "note_part2": "Example:",
+    "title": "Përvetëso pseudonimin",
+    "description": "Miqtë e tu duhet të përdorin këtë pseudonim për t'iu bashkuar ekipit tënd.",
+    "inputPlaceholder": "Fut pseudonimin",
+    "note_part1": "Kur të krijosh një pseudonim, përdor vetëm shkronja, numra, dhe pika.",
+    "note_part2": "Shembull:",
     "note_example": "your.name01"
   },
   "whoInvitedYou": {
-    "title": "Who invited you?",
-    "description": "Enter the nickname of the person who invited you",
-    "inputPlaceholder": "Enter nickname",
-    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
-    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+    "title": "Kush të ftoi?",
+    "description": "Fut pseudonimin e personit që të ka ftuar.",
+    "inputPlaceholder": "Fut pseudonimin",
+    "dontHaveInvitationCode": "Duke kryer këtë hap, ti bashkë me miqtë e tu do të merrni 25% bonus mbi normën bazë të fitimit kur të paraqiteni në të njëjtën kohë.",
+    "dontHaveCodeTip": "Nëse nuk ke kod ftese, do të zgjedhim një anëtar çfarëdo si referues për ty!"
   },
   "errors": {
-    "nicknameSize": "Nickname size: 4-20 characters.",
-    "removeInvalidCharacters": "Remove invalid characters.",
-    "validation_error": "Some validation error",
-    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
-    "wrong_phone_number": "Invalid phone number, please try again",
-    "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken",
-    "phone_number_already_in_use": "Phone number already in use",
-    "invalid_validation_code": "Invalid code number, please try again!",
-    "validation_expired": "Validation expired",
-    "validation_not_found": "Validation not found",
-    "invalid_email": "Invalid email",
-    "invalid_ref_username": "Nickname is invalid.",
-    "invalid_phone": "Invalid phone number",
-    "user_disabled": "User has been disabled",
-    "expired_action_code": "OTP in email link is expired",
-    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
-    "invalid_credential": "The credential is malformed or has expired",
-    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
-    "user_not_found_for_email": "There is no user corresponding to the given email",
-    "user_not_found": "User not found",
-    "auth_in_progress": "Sign-In already in progress",
-    "google_play_services_not_available": "Google Play services are not available on the device",
-    "unknown_error_with_code": "Unknown error {{code}}",
-    "no_such_provider": "You do not have this provider linked",
-    "min_username": "Minimum length is 4 characters.",
-    "max_username": "Maximum length is 30 characters.",
-    "code_expired": "The code has expired. Please ask for a new code.",
-    "too_many_requests": "Too many requests. Please try again later.",
-    "network_error_title": "No internet connection",
-    "network_error_message": "Your device does not have any active internet connection",
-    "unknown_error": "Some error occurred, please try again later",
-    "general_error_title": "Oups...",
-    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
-    "general_network_error": "A network error has occurred. Please check your connection.",
-    "credential_already_in_use": "This credential is already associated with a different user account.",
-    "email_already_in_use": "The email address is already in use by another account.",
-    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
-    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "nicknameSize": "Gjatësia e pseudonimit: 4-20 karaktere.",
+    "removeInvalidCharacters": "Hiq karakteret e pavlefshme.",
+    "validation_error": "Një farë gabimi në vleftësim.",
+    "multiple_accounts": "Posta elektronike / numri i telefonit është i lidhur me një llogari tjetër. Të lutemi identifikohu tek ajo llogari për të vërtetuar zotërimin, pastaj çidentifikohu dhe identifikohu sërish te kjo këtu. Nëse nuk e ke në zotërim atë llogarinë tjetër ose nuk je në gjendje të identifikohesh në të, të lutemi kontakto shërbimin e ndihmës.",
+    "wrong_phone_number": "Numër i pavlefshëm telefoni, të lutemi provo sërish.",
+    "invalid_username": "Pseudonimi është i pavlefshëm.",
+    "email_already_taken": "Kjo postë elektronike është përdorur tashmë.",
+    "phone_number_already_taken": "Ky numër telefoni është përdorur tashmë.",
+    "invalid_validation_code": "Numër i pavlefshëm telefoni, të lutemi provo sërish.",
+    "validation_expired": "Vleftësimi ka skaduar",
+    "validation_not_found": "Vleftësimi nuk u gjet",
+    "invalid_email": "Postë elektronike e pavlefshme.",
+    "invalid_password": "Fjalëkalim i pavlefshëm.",
+    "invalid_ref_username": "Pseudonimi është i pavlefshëm.",
+    "invalid_phone": "Numër telefoni i pavlefshëm.",
+    "user_disabled": "Përdoruesi është çaktivizuar.",
+    "expired_action_code": "OTP-ja në lidhmën me postë elektronike ka skaduar.",
+    "account_exists_with_different_credential": "Ekziston tashmë një llogari me adresën e postës elektronike të caktuar me këtë kredencial.",
+    "invalid_credential": "Kredencialet janë të keqformuara ose kanë skaduar.",
+    "operation_not_allowed": "Lloji i llogarisë që përkon me këto me kredenciale nuk është aktivizuar",
+    "user_not_found_for_email": "Nuk ka përdorues që përkon me postën elektronike të dhënë.",
+    "user_not_found": "Përdoruesi nuk u gjet.",
+    "auth_in_progress": "Identifikimi po bëhet tashmë.",
+    "google_play_services_not_available": "Shërbimet Google Play nuk disponohen në këtë pajisje.",
+    "unknown_error_with_code": "Gabim i panjohur: {{code}}",
+    "no_such_provider": "Këtë ofrues nuk e keni të lidhur.",
+    "min_username": "Gjatësia minimale është 4 karaktere.",
+    "max_username": "Gjatësia maksimale është 30 karaktere.",
+    "code_expired": "Kodi ka skaduar, të lutemi kërko një kod të ri.",
+    "too_many_requests": "Ka kërkesa të tepërta, të lutemi provo sërish më vonë.",
+    "network_error_title": "Nuk ka lidhje me internetin",
+    "network_error_message": "Pajisja jote nuk ka asnjë lidhje aktive me internetin.",
+    "unknown_error": "Ka ndodhur një gabim, të lutemi provo sërish më vonë.",
+    "general_error_title": "Apapa...",
+    "general_error_message": "Me sa duket ka një problem. Ekipi ynë i është vënë punës për ta ndrequr.",
+    "general_network_error": "Ka ndodhur një gabim rrjeti, të lutemi kontrollo lidhjen.",
+    "credential_already_in_use": "Këto kredenciale janë të lidhura tashmë me llogarinë e një përdoruesi tjetër.",
+    "email_already_in_use": "Adresa e postës elektronike është tashmë në përdorim nga një llogari tjetër.",
+    "user_token_expired": "Kredencialet e tua nuk janë më të vlefshme, të lutemi identifikohu sërish.",
+    "requires_recent_login": "Ky operim është i ndjeshëm dhe kërkon autentifikim të rishtë. Të lutemi identifikohu sërish.",
+    "same_email": "Nuk mund të përdorësh të njëjtën postë elektronike.",
+    "weak_password": "Fjalëkalim i dobët.",
+    "wrong_password": "Fjalëkalim i gabuar.",
+    "no_camera_permissions": "Nuk janë dhënë lejet për kamerën.",
+    "no_library_permissions": "Nuk janë dhënë lejet për bibliotekën."
   },
   "profile": {
     "my_roles": {
-      "title": "My Role"
+      "title": "Roli im"
     },
-    "mining_calculator": "earnings calculator",
-    "invite_friends": "Invite Friends",
-    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
-    "global_rank": "global rank",
-    "view_all_roles": "view all roles",
-    "data_is_hidden": "data is hidden",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "llogaritës fitimesh",
+    "invite_friends": "Fto miq",
+    "invite_friends_engage": "Përhap fjalën dhe fto miqtë. Sa më shumë referime, aq më shumë do të fitosh1",
+    "global_rank": "rangu global",
+    "view_all_roles": "shiko të gjitha rolet",
+    "data_is_hidden": "të dhënat janë fshehur",
+    "progress_text": "{{value}} e {{total}}",
     "not_found": {
-      "title": "User was not found",
-      "description": "oops, we couldn't find this user"
+      "title": "Përdoruesi nuk u gjet.",
+      "description": "Oh mos, nuk e gjetëm dot këtë përdorues."
     },
     "my_badges": {
-      "title": "My Badges"
+      "title": "Distinktivët e mi"
     },
     "badges": {
-      "title": "Badges"
+      "title": "Distinktivët"
     },
     "roles": {
-      "title": "Roles"
+      "title": "Rolet"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "Monedhat",
+        "description": "monedha"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "Sociale",
+        "description": "miq"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "Niveli",
+        "description": "Niveli"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update",
-    "comingSoon": "Coming soon",
+    "level": "nivel",
+    "referrals": "referime",
+    "coin": "Monedhat",
+    "social": "Sociale",
+    "phone_number": "Numri i telefonit",
+    "years": "Vjet",
+    "of": " e ",
+    "attention": "Vër re",
+    "email_address": "Adresa e postës elektronike",
+    "password": "Fjalëkalimi",
+    "data_hidden": "të dhënat janë fshehur",
+    "pull_to_refresh": "tërhiq për të përditësuar",
+    "comingSoon": "Së afërmi",
     "date": {
-      "today": "Today"
+      "today": "Sot"
     }
   },
   "mining_calculator": {
-    "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "result_label": "Do të fitosh",
+    "active_inviter": "Ftues aktiv",
+    "tier_1_ref": "Referimet e Nivelit 1",
+    "tier_2_ref": "Referimet e Nivelit 2",
+    "active_miners": "Referime aktive"
   },
   "home": {
     "wallet": {
-      "title": "WALLET",
-      "rate": "EARNING RATE",
-      "balance": "CURRENT BALANCE"
+      "title": "KULETA",
+      "rate": "NORMA E FITIMIT",
+      "balance": "GJENDJA AKTUALE"
     },
     "pioneer": {
-      "title": "PIONEER",
-      "rank": "GLOBAL RANK",
-      "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "rank": "RANGU GLOBAL",
+      "referrals": "REFERIME",
+      "description": "Refero më shumë përdorues dhe fito më shumë [[:ice]]."
     },
     "referrals": {
-      "title": "REFERRALS",
-      "description": "Referral stats for the previous 5 days",
-      "no_referrals_description": "You don't have any referrals yet",
-      "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "title": "REFERIME",
+      "description": "Statistikat e referimeve për 5 ditët e mëparshme.",
+      "no_referrals_description": "Aktualisht nuk ke asnjë  referim!",
+      "users_tier_1": "Përdoruesit për nivelin 1",
+      "users_tier_2": "Përdoruesit për nivelin 2"
     },
     "adoption": {
-      "title": "ADOPTION",
-      "level": "level",
-      "users": "\nusers"
+      "title": "ADOPTIM",
+      "level": "nivel",
+      "users": "përdoruesit"
     },
-    "steps": {
-      "title": "Your progress",
-      "description": "Complete the tasks below and level up!",
-      "step_one": {
-        "title": "Claim your nickname",
-        "description": "Set it and start earning from your invite"
+    "tasks": {
+      "achievements": "ARRITJET",
+      "title": "Ecuria jote",
+      "description": "Kryej detyrën e mëposhtme dhe rrit nivelin!",
+      "completed": {
+        "title": "Përgëzime",
+        "description": "Vazhdo të paraqitesh përditë për të fituar çmime shtesë!"
       },
-      "step_two": {
-        "title": "Start mining",
-        "description": "Your first mining session"
+      "popup": {
+        "title": "Na u bashko te kanali ynë në Telegram",
+        "description": "Specifiko presudonimin që përdoret në Telegram.",
+        "placeholder": "Pseudonimi"
       },
-      "step_three": {
-        "title": "Profile picture",
-        "description": "Upload your profile image"
+      "claim_username": {
+        "title": "Përvetëso pseudonimin",
+        "description": "Cilësoje dhe ndaje me miqtë."
       },
-      "step_four": {
-        "title": "Join Telegram",
-        "description": "Be part of our community and join now"
+      "start_mining": {
+        "title": "Fillo të fitosh",
+        "description": "Seanca jote e parë e paraqitjes në sistem."
       },
-      "step_five": {
-        "title": "Follow us on Twitter",
-        "description": "Let’s keep in touch, follow us on twitter"
+      "upload_profile_picture": {
+        "title": "Fotoja e profilit",
+        "description": "Ngarko imazhin për profilin tënd."
       },
-      "step_six": {
-        "title": "Invite 5 Friends",
-        "description": "Create your team and increase your earnings"
+      "join_telegram": {
+        "title": "Regjistrohu në Telegram",
+        "description": "Bëhu pjesë e komunitetit tonë dhe bashkohu tani."
+      },
+      "follow_us_on_twitter": {
+        "title": "Na ndiq në Twitter",
+        "description": "Le të mbetemi në kontakt, na ndiq në Twitter."
+      },
+      "invite_friends": {
+        "title": "Fto miq",
+        "description": "Zgjeroje ekipin dhe rriti fitimet."
       }
     },
     "overview": {
-      "title": "Overview"
+      "title": "Pasqyrë e përgjithshme"
     },
     "menu": {
-      "notifications": "Notifications",
+      "notifications": "Njoftime",
       "staking": "Staking",
-      "stats": "Stats",
-      "help": "Help"
-    },
-    "tasks": {
-      "title": "ACHIEVEMENTS"
+      "stats": "Statistikat",
+      "help": "Ndihmë"
     },
     "team": {
-      "title": "Team",
-      "view_team": "view team"
+      "title": "Ekipi",
+      "view_team": "shiko ekipin"
     },
     "mining_rate": {
-      "title": "EARNING RATE",
-      "base": "Base"
+      "title": "NORMA E FITIMIT",
+      "base": "Baza"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
-      "streak": "STREAK",
-      "days_off": "DAYS OFF"
+      "title": "ANGAZHIMI",
+      "description_part1": "Rrjedha i referohet ditëve të njëpasnjëshme në të cilat je paraqitur.",
+      "description_part2": "Për çdo 6 ditë të njëpasnjëshme ti merr një ditë pushimi.",
+      "streak": "RRJEDHA",
+      "days_off": "DITË PUSHIMI"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "Cilësimet",
+    "profile": "ProfilI",
+    "legal": "Ligjore",
+    "support": "Ndihma",
+    "personal_information_title": "Informacion personal",
+    "personal_information_description": "Menaxho detajet e profilit.",
+    "notifications_title": "Njoftime",
+    "notifications_description": "Menaxho njoftimet këtu.",
+    "push_notifications_title": "Njoftime shtytëse",
+    "push_notifications_description": "Personalizo cilësimet për njoftime shtytëse.",
+    "email_notifications_title": "Njoftime me postë elektronike",
+    "email_notifications_description": "Personalizo cilësimet për njoftime shtytëse.",
+    "terms_title": "Kushtet e shërbimit",
+    "terms_description": "Shqyrto kushtet e shërbimeve tona.",
+    "privacy_title": "Rregullorja e privatësisë",
+    "privacy_description": "Mëso mbi rregulloren tonë të privatësisë.",
+    "feedback_title": "Dërgo përshtypje",
+    "feedback_description": "Ndaji mendimet me ne.",
+    "invite_title": "Fto një mik",
+    "invite_description": "Fito ekstra duke ftuar miqtë e tu.",
+    "delete_title": "Fshije llogarinë.",
+    "delete_description": "Hiqe llogarinë.",
+    "delete_confirmation_title": "Je i sigurt se dëshiron ta heqësh llogarinë?",
+    "delete_confirmation_yes": "Po, hiqe",
+    "logout_title": "Çidentifikohu",
+    "logout_description": "Çidentifikohu dhe bëj pak pushim",
+    "logout_confirmation_title": "Je i sigurt se dëshiron të çidentifikohesh?",
+    "logout_confirmation_yes": "Po, çidentifikohu",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "Konfirmo telefonin e ri",
+      "description": "Të lutemi konfirmo prefiksin e shtetit tënd dhe fut numrin e telefonit.",
+      "button": "Konfirmo telefonin e ri"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
-      "type_push": "PUSH",
-      "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
+      "enable_prompt": "Nuk lejohen njoftime. Dëshiron t'i aktivizosh?",
+      "channel_achievements": "Arritjet",
+      "channel_news": "Lajme",
+      "channel_reminders": "Kujtesore",
+      "channel_team": "Ekipi",
+      "type_push": "SHTYTJE",
+      "type_email": "POSTA ELEKTRONIKE",
+      "disable_notifications": "Çaktivizo njoftimet?",
+      "disable_notifications_description": "Duke i çaktivizuar njoftimet, nuk do të mund të marrësh përditësime se kur mund të nisësh të paraqitesh, lajme ose informacione nga ekipi.",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
+          "title": "Statistikat javore",
+          "description": "Merr njoftime rreth aktivitetit tënd."
         },
         "weekly_report": {
-          "title": "Weekly report",
-          "description": "Receive notifications about your activity"
+          "title": "Raporti javor",
+          "description": "Merr njoftime rreth aktivitetit tënd."
         },
         "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
+          "title": "Arritjet",
+          "description": "Merr njoftime rreth ecurisë tënde."
         },
         "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
+          "title": "Promovime",
+          "description": "Merr njoftime se si të zgjerosh ekipin dhe të fitosh më shumë."
         },
         "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
+          "title": "Lajmet",
+          "description": "Merr njoftime nga ekipi ynë."
         },
         "micro_community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
+          "title": "Mikro-komuniteti",
+          "description": "Merr njoftime rreth ekipit tënd."
         },
         "daily_bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
+          "title": "Bonusi ditor",
+          "description": "Merr njoftime për të përvetësuar bonusin ditor."
         },
         "mining": {
-          "title": "Session status",
-          "description": "Receive notifications about your check-in activity"
+          "title": "Gjendja e seancës",
+          "description": "Merr njoftime rreth aktivitetit tënd me paraqitje."
         },
         "system": {
-          "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "title": "Sistemi",
+          "description": "Merr njoftime të rëndësishme rreth aplikacionit ice."
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "Cilësimet e gjuhës",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "Ndrysho gjuhën",
+      "prompt": "Zbatimi i këtij cilësimi do ta rinisë aplikacionin."
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "Imazhi i profilit",
+    "inapp_privacy_title": "Privatësia",
+    "inapp_privacy_description": "Menaxhoje informacionin tënd këtu.",
+    "developer": "Zhvillues",
+    "user_id": "ID-ja e përdoruesit",
+    "user_token": "Tokeni i përdoruesit",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "Fshij foton",
+      "edit": "Modifiko foton e profilit",
+      "photo_gallery": "Galeria e fotove",
+      "camera": "Kamera"
     },
-    "confirm_email_confirmation_title": "Confirm email?",
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "Konfirmo postën elektronike?",
+    "update_email_confirmation_title": "Përditëso postën elektronike?",
+    "update_email_confirmation_subtitle": "Ndryshimi i adresës së postës elektronike do të të kërkojë të ri-identifikohesh. Je i sigurt se dëshiron të vazhdosh?",
+    "unlink_logins_title": "Çlidh identifikimet",
+    "unlink_logins_description": "Mund t'i çlidhësh identifikimet nga këtu."
   },
   "invite_share": {
-    "title": "Invite a friend",
+    "title": "Fto një mik",
     "telegram": "Telegram",
     "twitter": "Twitter",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
-    "email": "Email",
-    "fb": "Newsfeed",
+    "email": "Posta elektronike",
+    "fb": "Lista e të rejave",
     "sms": "SMS",
-    "copy_link": "Copy link",
-    "more": "More",
-    "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "copy_link": "Kopjo lidhmën",
+    "more": "Më tepër",
+    "copied": "U KOPJUA",
+    "share_message": "Ç'kemi, ☃️Burrë Dëbore! Bashkoju ekipit tim në ice dhe merr 10 monedha ice kur të regjistrohesh duke përdorur kodin tim të referimit:",
+    "share_subject": "Bashkoju ekipit tim në ice",
+    "description": "Përhap fjalën dhe fto miqtë. Ti fiton [[:ice]] për çdo referim të ri që sjell.",
+    "share": "Ndaj"
   },
   "users": {
     "ping": "PING",
-    "active": "Active",
-    "inactive": "Inactive",
+    "active": "Aktiv",
+    "inactive": "Joaktiv",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T1": "Niveli 1",
+      "T2": "Niveli 2"
     }
   },
   "personal_information": {
-    "first_name": "First name",
-    "last_name": "Last name",
-    "country": "Country",
-    "city": "City",
-    "title": "Personal Information",
-    "phone": "Phone",
-    "email": "Email",
-    "username": "Nickname"
+    "first_name": "Emri",
+    "last_name": "Mbiemri",
+    "country": "Shteti",
+    "city": "Qyteti",
+    "title": "Informacioni personal",
+    "phone": "Telefoni",
+    "email": "Posta elektronike",
+    "username": "Pseudonimi"
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
-      "length": "Nickname size: 4-20 characters.",
-      "invalid_characters": "Remove invalid characters.",
-      "not_found": "Nickname not found.",
-      "some_error": "Some error occurred.",
-      "refer_yourself": "You can't refer yourself"
+      "already_taken": "Ky pseudonim është përdorur.",
+      "length": "Gjatësia e pseudonimit: 4-20 karaktere.",
+      "invalid_characters": "Hiq karakteret e pavlefshme.",
+      "not_found": "Ky pseudonim nuk u gjet.",
+      "some_error": "Ndodhi një gabim.",
+      "refer_yourself": "Nuk mund të referosh vetveten."
     }
   },
   "staking": {
-    "time_left": "Time Left",
-    "mining_rate": "Earning Rate",
-    "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking Bonus",
-    "period_label": "Staked Period",
+    "time_left": "Koha e mbetur",
+    "mining_rate": "Norma e fitimit",
+    "appeal": "Rrit normën e fitimit",
+    "benefits_description": "Pre-stake shpërblimet ice për deri në 5 vjet dhe rrite normën e fitimeve deri në 250%.",
+    "bonus_label": "Bonus për Pre-Staking",
+    "period_label": "Periudha e staking",
     "title": "Pre-Staking",
-    "current_rate": "Current Rate",
-    "allocation": "Allocation",
-    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
-    "staking_terms": "Staking Terms",
-    "stake_now": "Pre-Stake Now!",
-    "balance_label": "Staked balance",
-    "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "current_rate": "Norma aktuale",
+    "allocation": "Përpjesëtimi",
+    "description": "Staking është një proces që përfshin lënien në zotim të kripto-aseteve të tua për të mbështetur një rrjet me zinxhir blloqesh dhe konfirmuar transaksionet.",
+    "terms_agree": "Pajtohem me [[:ice]] [[:link]]Kushtet e Staking[[/:link]]. Zotërimet e tua ice do të mbyllen për një periudhë të caktuar.",
+    "stake_now": "Pre-Stake tani!",
+    "balance_label": "Shuma e vënë në staking",
+    "confirm_title": "Konfirmo Pre-Stake",
+    "confirm_subtitle": "Je i sigurt që dëshiron t'i vësh në pre-stake monedhat? Kjo nuk mund të zhbëhet pasi të konfirmosh."
   },
   "stats": {
-    "header_title": "Stats",
-    "active": "Active users",
-    "total": "Total users",
-    "user_growth": "User growth",
-    "top_miners": "Top users",
-    "top_countries": "Top countries",
-    "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "header_title": "Statistikat",
+    "active": "Përdorues aktivë",
+    "total": "Përdorues gjithsej",
+    "user_growth": "Zgjerimi i përdoruesve",
+    "top_miners": "Përdoruesit kryesorë",
+    "top_countries": "Vendet kryesore",
+    "online_miners": "Përdoruesit në internet",
+    "detailed_information": "Informacion i detajuar"
   },
   "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
+    "title": "Të lutemi përditëso",
+    "description": "Ti po përdor një version të vjetër të aplikacionit dhe duhet ta përditësosh për ta përdorur më tej.",
+    "button_title": "Përditëso tani"
   },
   "general": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
+    "good_morning": "Mirëmëngjesi",
+    "good_afternoon": "Mirëdita",
+    "good_evening": "Mirëmbrëma",
     "ice": "ice",
-    "ice_per_hour": "ice/h",
+    "ice_per_hour": "ice/o",
     "seconds_short": "s",
     "minutes_short": "m",
-    "hours_short": "h",
+    "hours_short": "o",
     "days_short": "d"
   },
   "news": {
-    "news_feed": "News Feed",
-    "read_more": "Read more",
-    "views": "{{viewsCount}} views"
+    "news_feed": "Lista e lajmeve",
+    "read_more": "Lexo më shumë",
+    "no_more_news": "kjo është e fundit në listën e lajmeve.",
+    "views": "{{viewsCount}} shikime"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
-    "nothing_is_found": "Nothing was found for your query",
-    "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "empty": "Kërko për kontakte, miq dhe anëtarë të ice nga mikro-komuniteti yt.",
+    "nothing_is_found": "Nuk u gjet asgjë në lidhje me kërkesën tënde.",
+    "search_by_country": "Kërko sipas shtetit",
+    "search_for_users": "Kërko për përdorues",
+    "loading": "Në kërkim…"
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tap here to start your first check-in session",
-    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
-    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
-    "mining_holiday_active": "You are using a Day Off!"
+    "mining_inactive_tooltip": "Seanca jote e parë e paraqitjes në sistem.",
+    "mining_reset_tooltip": "Shtyp për 1 sekondë për ta zgjatur seancën e paraqitjes.",
+    "mining_holiday_reset_tooltip": "Ti po përdor një ditë pushimi! Shtyp për 1 sekondë për ta zgjatur seancën e paraqitjes.",
+    "mining_holiday_active": "Ti po përdor një ditë pushimi!"
   },
   "invite_friend": {
-    "invite_button": "Invite Friend",
-    "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "invite_button": "Fto mikun",
+    "button_title": "Fto mikun",
+    "description": "Miku yt nuk është ende pjesë [[:ice]]. Dërgoji një ftesë!"
   },
   "balance_history": {
-    "title": "Balance History",
-    "wallet": "Wallet",
-    "blockchain": "Blockchain",
-    "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
-    "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "title": "Historiku i shumës në gjendje",
+    "wallet": "Kuleta",
+    "blockchain": "Zinxhiri me blloqe",
+    "wallet_update_interval": "përditësuar çdo orë",
+    "blockchain_update_interval": "përditësuar çdo 24 orë",
+    "list_end_label": "kjo është hyrja e fundit e historikut të shumës në gjendje.",
+    "no_data": "Nuk ka të dhëna të disponuara "
   },
   "pop_up": {
-    "update_now": "Update Now",
-    "please_update": "Please Update",
-    "update_now_text": "You are using an old app version and need to update it in order to use it further",
-    "you_are_up_to_date": "You are up to date!",
-    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
-    "resurrection": "Resurrection",
-    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
-    "resurrection_warning": "You can only resurrect one time!",
-    "please_confirm": "Please confirm",
-    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "update_now": "Përditëso tani",
+    "please_update": "Të lutemi përditëso",
+    "update_now_text": "Ti po përdor një version të vjetër të aplikacionit dhe duhet ta përditësosh për ta përdorur më tej.",
+    "you_are_up_to_date": "Je plotësisht i përditësuar!",
+    "up_to_date_text": "Tani ti po përdor versionin më të fundit. Kontrollo të gjitha ndryshimet më poshtë.",
+    "resurrection": "Ringjallje",
+    "resurrection_message": "Ke shansin e vetëm për të ringjallur dhe marrë [[:amount]] monedha që i ke humbur në të kaluarën [[:period]].",
+    "resurrection_warning": "Ringjalljen mund ta bësh vetëm një herë!",
+    "please_confirm": "Të lutemi konfirmo.",
+    "resurrection_no_confirm_message": "Do t'i humbasësh [[:amount]] monedhat përgjithmonë. Je i sigurt se dëshiron të vazhdosh?",
+    "resurrection_yes_confirm_message": "Ringjalljen mund ta bësh vetëm një herë! Je i sigurt se dëshiron të vazhdosh? Monedhat [[:amount]] do t'i rikthehen shumës në gjendje brenda orës.",
+    "delete_account_confirmation_title": "Konfirmo fshirjen",
+    "delete_account_confirmation_text": "Fshirja e llogarisë do t'i heqë përgjithmonë të gjitha të dhënat, përfshirë shumë në gjendje në ice. Dëshiron të vazhdosh?"
   },
   "periods": {
-    "3_days": "3 days",
-    "7_days": "7 days",
-    "30_days": "30 days",
-    "1_day": "1 Day",
-    "1_week": "1 Week",
-    "1_month": "1 Month",
-    "90_days": "90 days",
-    "14_days": "14 days"
+    "3_days": "3 ditë",
+    "7_days": "7 ditë",
+    "30_days": "30 ditë",
+    "1_day": "1 ditë",
+    "1_week": "1 javë",
+    "1_month": "1 muaj",
+    "90_days": "90 ditë",
+    "14_days": "14 ditë"
   },
   "notifications": {
-    "joined": " has joined your team",
-    "multiply": " and {{count}} others have joined your team",
-    "ping": " has pinged you, wake up!",
-    "delete": "Delete",
-    "add_notifications": "Add mocked notifications",
-    "no_notifications": "No notifications to display",
-    "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
-    "clear_title": "Clear all notifications?",
-    "title": "Notifications"
+    "joined": " i është bashkuar ekipit tënd.",
+    "multiply": " dhe {{count}} të tjerë i janë bashkuar ekipit tënd.",
+    "ping": " të ka dërguar ping, zgjohu!",
+    "delete": "Fshij",
+    "add_notifications": "Shto njoftime provë",
+    "no_notifications": "Nuk ka njoftime për të shfaqur.",
+    "add_announcements": "Shto lajmërime provë",
+    "add_both": "Shto njoftime dhe lajmërime provë së bashku",
+    "clear_title": "Pastro të gjitha njoftimet?",
+    "title": "Njoftime"
   },
   "notification_feed_screen": {
-    "yesterday": "Yesterday",
-    "last_week": "Last Week",
-    "this_month": "This month",
-    "last_month": "Last Month",
-    "this_week": "This week"
+    "yesterday": "Dje",
+    "last_week": "Javën e kaluar",
+    "this_month": "Këtë muaj",
+    "last_month": "Muajin e kaluar",
+    "this_week": "Këtë javë"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to hide from public eyes"
+      "title": "1. Statistikat e profilit tënd",
+      "description": "Cek te blloqet që kërkon t'i fshehësh nga sytë e publikut"
     },
     "step2": {
-      "description": "Tap on this block to hide it from public eyes",
-      "title": "2. Your Current Role"
+      "description": "Cek te ky bllok që ta fshehësh nga sytë e publikut",
+      "title": "2. Roli yt aktual"
     },
     "step3": {
-      "title": "3. Your Earned Badges",
-      "description": "Tap here to hide your badges from public eyes"
+      "title": "3. Distinktivët që ke fituar",
+      "description": "Cek këtu për të fshehur distinktivët nga sytë e publikut."
     }
   },
   "confirm_email": {
-    "title": "Confirm your email",
-    "description": "Please enter your email address and we will send code ",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
-    "wrong_email": "Wrong email?",
-    "check_email": "Check your email",
-    "emailed_link_to": "We emailed a magic link to",
-    "link_instruction": "Click the link to log in or sign up.",
-    "modify_title": "Confirm New Email",
-    "modify_description": "Please enter your new email address"
+    "title": "Konfirmo postën elektronike",
+    "description": "Të lutemi fut adresën e postës elektronike dhe do të të dërgojmë kodin.",
+    "note": "Nëse nuk të vjen posta elektronike për 5 minuta, të lutemi kontrollo te dosja e padëshiruar (spam).",
+    "wrong_email": "Adresë e gabuar elektronike?",
+    "check_email": "Kontrollo postën elektronike",
+    "emailed_link_to": "I kemi dërguar me postë elektronike një lidhmë magjike",
+    "emailed_steps_to": "Ia kemi dërguar me postë elektronike hapat",
+    "link_instruction": "Kliko te lidhma për t'u identifikuar ose regjistruar.",
+    "reset_link_instruction": "Kliko te lidhma për të ricilësuar fjalëkalimin.",
+    "modify_title": "Konfirmo postën elektronike të re",
+    "modify_description": "Të lutemi fut adresën e re të postës elektronike."
   },
   "invalid_link": {
-    "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "title": "Lidhmë e pavlefshme",
+    "description": "Fatkeqësisht, kjo lidhmë është e pavlefshme. Të lutemi fut postën elektronike sërish dhe do të të dërgojmë një lidhmë të re."
   },
   "confirm_code": {
-    "title": "Confirm code",
-    "description": "Please enter the code sent to",
-    "send_code_again": "Send code again",
-    "resend_time_label": "New code available in ",
-    "enter_code": "Enter the code",
-    "wrong_number": "Wrong number?"
+    "title": "Konfirmo kodin",
+    "description": "Të lutemi fut kodin që iu dërgua",
+    "send_code_again": "Dërgo kodin sërish",
+    "resend_time_label": "Kodi i ri disponohet në ",
+    "enter_code": "Fut kodin",
+    "wrong_number": "Numër i gabuar?"
   },
   "ice_bonus": {
-    "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
-    "balance_label": "Your current balance"
+    "title": "Shpërblim mirëseardhës",
+    "description": "Përgëzime, ke marrë monedhat [[:value]] [[:ice]] e para, gjë që dëshmon për [[:bold]]besimin[[/:bold]] që kemi te [[:bold]] ti[[/:bold]].",
+    "balance_label": "Shuma aktuale që ke në gjendje"
   },
   "country_select": {
-    "title": "Select country"
+    "title": "Zgjidh shtetin"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "Burrë dëbore",
+      "subtitle": "Ndërto një perandori dëbore",
+      "description": "Fito duke u paraqitur çdo 24 orë për të treguar përkushtimin ndaj rrjetit ice dhe vërtetuar se je njeri dhe jo robot."
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "Ambasador",
+      "subtitle": "Sundimtar i perandorisë së dëborës",
+      "description": "U bëre ambasador kur të paktën 100 vetë iu bashkuan ekipit tënd. Çdo ambasador do të ketë qasje herët në veçoritë e reja."
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirm Phone",
-    "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
-    }
+    "modify_title": "Konfirmo telefonin",
+    "modify_description": "Të lutemi konfirmo prefiksin e shtetit tënd dhe fut numrin e telefonit.",
+    "button": "Konfirmo shtetin dhe telefonin",
+    "same_phone_error": "Nuk mund të përdorësh të njëjtin numër."
   },
   "date_select": {
-    "title": "Choose date"
+    "title": "Zgjidh datën"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+      "readmore": {
+        "title": "Lexo më shumë",
+        "description": "Këtu mund të shohësh të rejat më të fundit nga ekipi ynë. Cek këtë buton për të lexuar artikullin e plotë."
       },
-      "step_2": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
-      },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
-      },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
-      },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
-      },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
-      },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
-      },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "releasednews": {
+        "title": "Të rejat e nxjerra",
+        "description": "Cek te titulli i secilit lajm individual dhe lexo versionin e plotë të tij. Qëndro i përditësuar me të gjitha të rejat dhe anketat tona."
       }
     },
     "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      "allow_contacts": {
+        "title": "Lejo kontaktet",
+        "description": "Sinkronizo kontaktet dhe shiko se kush tjetër është pjesë [[:ice]]. Në të ardhmen, do të kesh mundësi t'i dërgosh [[:ice]] kujtdo nga kontaktet e tua."
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "confirm_phone": {
+        "title": "Konfirmo telefonin",
+        "description": "Konfirmo identitetin dhe lejo kontaktet e tua të marrin vesh se edhe ti je anëtar i rrjetit ice. Numri i telefonit nuk do të të bashkëndahet me palë të tjera të treta."
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "contacts_list": {
+        "title": "Lista e kontakteve",
+        "description": "Kjo është lista me të gjitha kontaktet e tua, ata që i janë bashkuar tashmë [[:ice]] rrjetit shfaqen në krye të listës."
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "referrals": {
+        "title": "Referime",
+        "description": "Këtu do të shohësh sa referime ke gjithsej. Sa më shumë njerëz të ftosh, aq më shumë do të fitosh."
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earnings": {
+        "title": "Fitime",
+        "description": "Shuma aktuale në gjendje përditësohet çdo orë dhe shfaqet këtu. Përfshin fitimet e drejtpërdrejta dhe ato të vëna në staking së bashku me fitimet e Nivelit 1 dhe Nivelit 2."
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "segmented_control_tier_one": {
+        "title": "Niveli 1",
+        "description": "Këtu mund të shohësh listën e referimeve të tua për Nivelin 1. Për secilin mik që paraqitet në të njëjtën kohë me ty, do të marrësh 25% shtesë mbi normën adoptive aktuale bazë të fitimit. [[:link]]Lexo më shumë[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "segmented_control_tier_two": {
+        "title": "Niveli 2",
+        "description": "Këtu mund të shohësh listën e referimeve të tua për Nivelin 1. Për secilin mik që paraqitet në të njëjtën kohë me ty, do të marrësh 5% shtesë mbi normën adoptive aktuale bazë të fitimit. [[:link]]Lexo më shumë[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "active_users": {
+        "title": "Përdorues aktivë",
+        "description": "Ky është statusi aktual i aktivitetit të paraqitjes të atyre që ke referuar. Ata llogariten si aktivë kur kanë një seancë aktive ku janë paraqitur."
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "tier_one_earnings": {
+        "title": "Fitimet e Nivelit 1",
+        "description": "Këtu mund të shohësh listën e referimeve të tua për Nivelin 1. Për secilin anëtar që paraqitet në të njëjtën kohë me ty, do të merrni që të dy 25% shtesë mbi normën adoptive aktuale bazë të fitimit."
+      },
+      "ping": {
+        "title": "Butoni Ping",
+        "description": "Njoftoji ata që ke referuar që të nisin seancën për paraqitje. Mund t'i dërgosh një njoftim secilit referim çdo 24 orë."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Faqja kryesore",
+        "description": "Mirë se erdhe [[:ice]]. Në ekranin bazë do të gjesh të gjitha statistikat rreth teje, normën aktuale të fitimit, rangun tënd global bashkë me të ekipit."
+      },
+      "invite": {
+        "title": "fto",
+        "description": "Për çdo person që fton, do të fitoni që të dy deri në 25% mbi normën bazë të fitimit. Sa më shumë njerëz të ftosh aq më shumë do të fitosh."
+      },
+      "team": {
+        "title": "Ekipi",
+        "description": "[[:ice]] është më mirë me miq Në këtë faqe mund të shikosh statusin e anëtarëve të ekipit si nga nivelet e Nivelit 1 dhe Nivelit 2. Mund t'u dërgosh ping edhe nga këtu."
+      },
+      "news": {
+        "title": "Lajme",
+        "description": "Qëndro i përditësuar me të gjitha të rejat dhe anketat tona. Ngaqë jemi një Organizatë Autonome e Decentralizuar, do të kesh mundësinë të votosh këtu për veçoritë në të ardhmen."
+      },
+      "profile": {
+        "title": "Profili",
+        "description": "Personalizoji detajet e profilit dhe shikoji të gjithat arritjet dhe distinktivët që ke fituar. Përdor llogaritësin nga këtu, që të mund të përllogaritësh fitimet."
+      },
+      "earningicestart": {
+        "title": "Nxjerrja e fitimit ice",
+        "description": "Mund ta nisësh seancën [[:ice]] e paraqitjes çdo 24 orë duke cekur këtë buton. Mos harro të kthehesh përditë dhe të fillosh të nxjerrësh fitime!"
+      },
+      "earningiceseemore": {
+        "title": "Nxjerrja e fitimit ice",
+        "description": "Cek sërish për të parë më shumë detaje rreth seancës aktuale të paraqitjes."
+      },
+      "stats": {
+        "title": "Statistikat",
+        "description": "Në faqen e statistikave mund të shohësh përdoruesit në total dhe aktivë që janë paraqitur çdo ditë bashkë me vendet kryesore dhe përdoruesit kryesorë."
+      },
+      "help": {
+        "title": "Ndihmë",
+        "description": "A keni pyetje? Kontrolloni listën tonë për pyetje të shpeshta. Nëse nuk e gjen dot atë që po kërkon, mos ngurro të na drejtohesh te hi@ice.io."
+      },
+      "preStaking": {
+        "title": "Pre-Staking",
+        "description": "Maksimizoji fitimet duke i vënë në pre-staking çmimet e fituara. Zgjidh periudhën e përpjesëtimit dhe periudhën e staking për të marrë një bonus mbi fitimet."
+      },
+      "wallet": {
+        "title": "Karta e kuletës",
+        "description": "Këtu mund të gjesh shumën që ke aktualisht [[:ice]] në gjendje, bashkë me normën e fitimit. Sa më shumë nga të referuarit nga ekipi ynë të jenë online, aq më e lartë norma e fitimit."
+      },
+      "earning": {
+        "title": "Kartë fitimi",
+        "description": "Qëndro i përditësuar mbi normën tënde të fitimit dhe bonuset. Këtu mund të shohësh normën aktuale, normën bazë dhe normat bonus për aktivitete të ndryshme në aplikacion."
+      },
+      "engagement": {
+        "title": "ANGAZHIMI",
+        "description": "Mbaje nën vëzhgim rrjedhën e seancave të paraqitjes dhe ditët pushim! Kontrollo këtë pjesë për më shumë detaje rreth seancave të njëpasnjëshme të paraqitjes dhe për të parë se sa ditë pushimi të kanë mbetur në disponim."
+      },
+      "profilecard": {
+        "title": "Kartë profili",
+        "description": "Mund të rrish në dijeni të statusit të profilit duke ndjekur këtë kartë. Ajo shfaq rangun tënd aktual global, së bashku me rolin tënd, nivelin dhe referimet gjithsej."
+      },
+      "referralscard": {
+        "title": "Kartë referimi",
+        "description": "Shiko evolucionin e statistikave të referimeve për 5 ditët e mëparshme si për Nivelin 1duike cekur kartën e vet."
+      },
+      "adoptioncard": {
+        "title": "Kartë adoptimi",
+        "description": "Bazuar në mesataren e totalit të javës së kaluar për Burrin e Dëborës aktiv, mund të shohësh normën aktuale [[:ice]] të fitimit. Norma e fitimit përgjysmohet kur arrihet pragu i radhës."
+      },
+      "nickname": {
+        "title": "Pseudonimi",
+        "description": "Pseudonimi është ai që të bën unik. Miqtë e tu duhet të përdorin këtë pseudonim për t'iu bashkuar ekipit tënd. Mund të përdorësh gjithashtu këtë shkurtore për të hapur profilin tënd."
+      },
+      "balancehistory": {
+        "title": "Historiku i shumës në gjendje",
+        "description": "Këtu mund të gjesh shumën që ke aktualisht [[:ice]] në gjendje në kuletën vendore dhe në zinxhirin bllok. Shuma në gjendje në kuletën vendore përditësohet çdo orë, ndërsa shuma në gjendje në zinxhirin bllok përditësohet çdo 24 orë."
+      },
+      "achievements": {
+        "title": "Arritjet",
+        "description": "Kryej detyrën e mëposhtme dhe rrit nivelin! Seanca jote e parë e paraqitjes në sistem."
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Unlink Logins",
-    "sessionName": "Login via {{providerName}}",
+    "title": "Hiqu lidhmën identifikimeve",
+    "sessionName": "Identifikohu përmes {{providerName}}",
     "buttons": {
-      "currentSession": "Current session",
-      "endSession": "End Session",
-      "loginUnlinked": "Login Unlinked",
-      "sessionEnded": "Session Ended",
-      "unlink": "Unlink"
+      "currentSession": "Seanca aktuale",
+      "endSession": "Përfundo seancën",
+      "loginUnlinked": "Identifikimit iu hoq lidhma",
+      "sessionEnded": "Seanca përfundoi",
+      "unlink": "Hidh lidhmën"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Unlink Login?",
-        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
+        "title": "Hiqu lidhmën identifikimeve?",
+        "message": "Je i sigurt se dëshiron ia heqësh lidhmën identifikimit me anë të {{providerName}} kësaj pajisjeje?"
       },
       "endSession": {
-        "title": "End Session?",
-        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
+        "title": "Përfundo seancën",
+        "message": "Je i sigurt se dëshiron ta përfundosh {{providerName}} seancën e identifikimit nga kjo pajisjeje?"
       }
     }
   },
@@ -792,12 +846,51 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Today’s Bonus",
-    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
-    "link": "Find out more",
-    "extra_message": "You have received your daily extra bonus on your earning rate",
-    "expired_title": "Bonus Expired",
-    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
-    "result_title": "Congratulations"
+    "claim_title": "Bonusi i sotëm",
+    "claim_message": "Është koha për bonusin sotëm, të lutemi cek te butoni [[:bold]]“Claim Bonus”[[/:bold]] më poshtë.",
+    "link": "Mëso më tepër",
+    "extra_message": "Ke marrë bonusin shtesë ditor me normën tënde të fitimeve.",
+    "expired_title": "Bonusi ka skaduar",
+    "expired_message": "Fatkeqësisht, bonusi i sotëm ka skaduar. Rri në korrent për njoftimin e radhës!",
+    "result_title": "Përgëzime"
+  },
+  "early_access": {
+    "title": "Qasje herët",
+    "message_part1": "Hidh një sy te aplikacioni [[:bold]]ice[[/:bold]] para [[:bold]]hedhjes sonë zyrtare në treg.[[/:bold]]",
+    "message_part2": "Të gjitha shumat në gjendje do të ricilësohen si 0 në datën e lëshimit. Megjithatë, ekipi yt do të rrijë siç është.",
+    "message_part3": "Faleminderit për mbështetjen!",
+    "checkbox_description": "E kam pranuar! Mos e shfaq më këtë pop-up."
+  },
+  "mining_notice": {
+    "title": "Njoftim",
+    "message": "Faleminderit për interesin në [[:bold]]ice![[/:bold]] Po rafinojmë teknologjinë dhe paraqitja në sistem nuk është në dispozicion për momentin. Tani e ke shansin të fokusohesh në ndërtimin e ekipit dhe zgjerimin e mikro-komunitetit.",
+    "message_footer": "Rri në korrent për përditësime në llogaritë tona në kanalet [[:twitter]]Twitter[[/:twitter]] dhe [[:telegram]]Telegram[[/:telegram]] ."
+  },
+  "qr_code": {
+    "description": "Skano kodin QR për t'iu bashkuar ekipit tim."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Bashkohu me ne në TikTok",
+      "description": "Deshëm të viheshim në kontakt dhe t'ju vinim në dijeni për komunitetin tonë të ri në TikTok. Po ndajmë materiale argëtuese dhe informative rreth valutës sonë dixhitale, ice, dhe do të kishim shumë dëshirë të bashkoheshe me ne."
+    },
+    "youtube": {
+      "title": "Bashkohu me ne në YouTube",
+      "description": "Që nga videot tutoriale për veçori të reja, dhe materiale për kanalin tonë në YouTube është vendi i përsosur për të qëndruar në korrent të ngjarjeve."
+    },
+    "linkedin": {
+      "title": "Bashkohu me ne në LinkedIn",
+      "description": "T'i bashkohesh komunitetit ice në LinkedIn është mënyrë fantastike për të qëndruar i informuar mbi zhvillimet më të fundit dhe për t'u ldihur me individë të një mendjeje që janë po aq të pasionuar pas së ardhmes së valutës dixhitale sa je dhe ti. "
+    },
+    "facebook": {
+      "title": "Bashkohu me ne në Facebook",
+      "description_part1": "Ta rekomandojmë së tepërmi ta ndjekësh faqen tonë në Facebook.",
+      "description_part2": "Jo vetëm që do të të ndihmojë të rrish në korrent të gjithçkaje që po ndodh me projektin ice, por është gjithashtu një mënyrë e mirë për t'u lidhur me komunitetin dhe për të qenë pjesë e bisedës."
+    },
+    "instagram": {
+      "title": " Instagram",
+      "description_part1": "Ndjekja në Instagram është mënyrë e mirë për të qëndruar në dijeni dhe për t'u lidhur me përdorues të tjerë që janë gjithashtu të pasionuar pas ice",
+      "description_part2": "Përveç kësaj, do të jesh i pari në dijeni të veçorive të reja ose promovimeve që po hedhim në treg."
+    }
   }
 }

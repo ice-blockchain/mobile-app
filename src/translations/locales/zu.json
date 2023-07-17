@@ -1,803 +1,896 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "Siyakwamukela eqhweni",
+      "description": "[[:ice]] wuhlobo lwemali lwedijithali ongaluzuza ngocingo lwakho. Iqhwa liphethwe futhi lisetshenziswa abasebenzisi bansuku zonke njengawe."
     },
     "page2": {
-      "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "title": "iplanethi enobungane",
+      "description": "[[:ice]] iyonga amandla ngokwemvelo kune-BTC njengoba isebenzisa \"Ubufakazi Besiteki\" indlela yokuvumelana. Ngobufakazi besiteki (i-POS), abanikazi be-cryptocurrency baqinisekisa ukuthengiswa kwebhulokhi ngokusekelwe enanini lezinhlamvu zemali zesiteki sokuqinisekisa."
     },
     "page3": {
-      "title": "People’s Coin",
-      "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "title": "Imali Yabantu",
+      "description_part1": "Amandla asezandleni zakho.",
+      "description_part2": "Yonke into esithuthukisa kuyo[[:ice]] izoba umthombo ovulekile futhi ilawulwe yi-Decentralized Autonomous Organization (DAO)."
     },
     "page4": {
-      "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "title": "Hlala Uxhumekile",
+      "description": "Thepha[[:iceLogo]] ukuze ungene kwakho kwansuku zonke ngohlelo lwethu lokusebenza leselula lamahhala, elilula. Ukuthepha kwakho kwansuku zonke kuqinisekisa ukuthi iqhwa liphelela ezandleni zabantu bangempela, hhayi ama-bot."
     },
     "page5": {
-      "title": "Refer & Earn",
-      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
+      "title": "Bheka futhi Uzuze",
+      "description": "Mema abangani bakho futhi uzuze (nobabili) ibhonasi efika ku-25% ngesilinganiso sakho esiyisisekelo somholo womngane ngamunye ojoyina iqembu lakho."
     },
     "page6": {
-      "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
-      "description_part2": "Don’t worry, we will not spam you!",
-      "not_now": "Not now"
+      "title": "Izaziso",
+      "description_part1": "[[:ice]] izikhathi zokungena zithatha amahora angama-24 kuphela. Ungathanda ukuthola isaziso uma isikhathi sakho samanje siphela?",
+      "description_part2": "Ungakhathazeki, ngeke sikugaxe!",
+      "not_now": "Hhayi manje"
     }
   },
   "button": {
-    "yes_btn": "Yes, please",
-    "next_btn": "Next",
-    "not_now": "Not now",
-    "view_all": "view all",
+    "yes_btn": "Yebo, ngiyacela",
+    "next_btn": "Olandelayo",
+    "not_now": "Hhayi manje",
+    "view_all": "Buka konke",
     "invite_friend": {
-      "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "title": "Mema Abangane",
+      "description": "Zuza okwengeziwe[[:ice]] ngokumema abangani bakho."
     },
-    "no": "No",
-    "search_country": "Search for country",
-    "save": "Save",
-    "yes": "Yes",
-    "change": "Change",
-    "no_cancel": "No, cancel",
-    "complete": "Complete",
-    "cancel": "Cancel",
-    "clear": "Clear",
-    "finish": "Finish",
-    "next_step": "Next Step",
-    "see_all": "see all",
-    "back": "Back",
-    "search": "Search",
-    "continue": "Continue",
-    "apply": "Apply",
-    "reset": "Reset",
-    "skip_all": "Skip all",
-    "done": "Done",
-    "confirm": "Confirm",
-    "do_this_later": "Do this later",
-    "resurrect_me": "Resurrect Me",
-    "claim_bonus": "Claim Bonus",
-    "close": "Close",
-    "try_again": "Try Again",
-    "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "see_all": "bona konke",
+    "no": "Cha",
+    "search_country": "Sesha izwe",
+    "save": "Yonga",
+    "yes": "Yebo",
+    "change": "Shintsha",
+    "no_cancel": "Cha, khansela",
+    "complete": "Qeda",
+    "cancel": "Khansela",
+    "clear": "Susa",
+    "finish": "Qeda",
+    "next_step": "Okulandelayo",
+    "back": "Emuva",
+    "search": "Sesha",
+    "continue": "Qhubeka",
+    "apply": "Faka isicelo",
+    "reset": "Setha kabusha",
+    "skip_all": "Yeqa konke",
+    "done": "Kwenziwe",
+    "confirm": "Qinisekisa",
+    "do_this_later": "Yenza lokhu kamuva",
+    "resurrect_me": "Ngivuse Mina",
+    "claim_bonus": "Funa Ibhonasi",
+    "close": "Vala",
+    "try_again": "Zama futhi",
+    "view_changelog": "Buka i-Changelog",
+    "disable": "Khubaza",
+    "agree": "Ngiyavuma",
+    "learn_more": "Funda kabanzi",
+    "back_to_login": "Buyela Ekungeneni",
+    "follow_us": "Silandele",
+    "subscribe": "Bhalisa"
   },
   "team": {
-    "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
+    "contacts_tab": "Oxhumana nabo",
+    "tierOne_tab": "Isigaba 1",
+    "tierTwo_tab": "Isigaba 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "title": "Okwamanje awunakho[[:title]] ukudluliselwa!",
+      "contacts": "Okwamanje awunabo oxhumana nabo ebhukwini lefoni.",
+      "button_title": "Mema Abangane"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
-      "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_title": "[[:ice]] ungcono nabangani",
+      "empty_button_title": "Vumela oxhumana nabo ukufinyelela",
+      "empty_description": "Vumelanisa abathintwayo bakho futhi ubone ukuthi ubani osevele evuliwe[[:ice]]. Ngokuzayo, uzokwazi ukuthumela iqhwa kunoma yibaphi oxhumana nabo."
     },
     "header": {
-      "search_placeholder": "Search for users",
-      "referrals": "Referrals",
-      "earnings": "Earnings"
+      "search_placeholder": "Sesha abasebenzisi",
+      "referrals": "Ukudluliselwa",
+      "earnings": "Amaholo"
     },
     "confirm_code": {
-      "title": "Confirm Code",
-      "description": "Please enter the confirmation code you have received on your phone.",
-      "placeholder": "Enter the code",
-      "button": "Confirm your code now"
+      "title": "Qinisekisa Ikhodi",
+      "description": "Sicela ufake ikhodi yokuqinisekisa oyithole ocingweni lwakho.",
+      "placeholder": "Faka ikhodi",
+      "button": "Qinisekisa ikhodi yakho manje"
     },
     "confirm_phone": {
-      "title": "Confirm Phone",
-      "description": "Please confirm your country code and enter your phone number."
+      "title": "Qinisekisa Ifoni",
+      "description": "Sicela uqinisekise ikhodi yakho yezwe bese ufaka inombolo yakho yocingo."
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "friends"
+        "friends": "abangani"
       },
-      "all_contacts": "All contacts",
-      "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "all_contacts": "Bonke abathintwayo",
+      "invite": "mema",
+      "invitation_text": "Sawubona{{name}}, ngithanda ukukumema ukuthi ujoyine i-ice."
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier 1 Earnings"
+        "title_earnings": "Izinzuzo zesigaba 1"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier 2 Earnings"
+        "title_earnings": "Izinzuzo zesigaba 2"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
-    "welcome": "Welcome to ice",
-    "email": "Email",
-    "slogan": "Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "logInSignUp": "Ngena / Bhalisa",
+    "phone": "Ucingo",
+    "or": "noma",
+    "reset_password": "Setha kabusha iphasiwedi",
+    "welcome": "Siyakwamukela eqhweni",
+    "email": "I-Imeyili",
+    "slogan": "Ukusethwa Kabusha Kwemali Yomhlaba",
+    "privacy": "Ngokuqhubeka, uyavumelana[[:link]] neMigomo yethu Yesevisi[[/:link]] kanye[[:link]] Nenqubomgomo Yobumfihlo[[/:link]]"
   },
   "claimUsername": {
-    "title": "Claim nickname",
-    "description": "Your friends will need to use this nickname to join your team",
-    "inputPlaceholder": "Enter your nickname",
-    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
-    "note_part2": "Example:",
-    "note_example": "your.name01"
+    "title": "Funa isidlaliso",
+    "description": "Abangani bakho bazodinga ukusebenzisa lesi siteketiso ukuze bajoyine iqembu lakho.",
+    "inputPlaceholder": "Faka isiteketiso sakho",
+    "note_part1": "Lapho udala isiteketiso, sebenzisa kuphela izinhlamvu, izinombolo, nezikhathi.",
+    "note_part2": "Isibonelo:",
+    "note_example": "igama.lakho01"
   },
   "whoInvitedYou": {
-    "title": "Who invited you?",
-    "description": "Enter the nickname of the person who invited you",
-    "inputPlaceholder": "Enter nickname",
-    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
-    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+    "title": "Ubani okumemile?",
+    "description": "Faka isiteketiso somuntu okumemile.",
+    "inputPlaceholder": "Faka isiteketiso sakho",
+    "dontHaveInvitationCode": "Ngokuqedela lesi sinyathelo, wena nomngane wakho nizothola ibhonasi engu-25% ngenani eliyisisekelo lomholo lapho nobabili ningena ngesikhathi esisodwa.",
+    "dontHaveCodeTip": "Uma ungenayo ikhodi yesimemo sizokhetha ilungu elingahleliwe njengokudlulisela kwakho!"
   },
   "errors": {
-    "nicknameSize": "Nickname size: 4-20 characters.",
-    "removeInvalidCharacters": "Remove invalid characters.",
-    "validation_error": "Some validation error",
-    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
-    "wrong_phone_number": "Invalid phone number, please try again",
-    "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken",
-    "phone_number_already_in_use": "Phone number already in use",
-    "invalid_validation_code": "Invalid code number, please try again!",
-    "validation_expired": "Validation expired",
-    "validation_not_found": "Validation not found",
-    "invalid_email": "Invalid email",
-    "invalid_ref_username": "Nickname is invalid.",
-    "invalid_phone": "Invalid phone number",
-    "user_disabled": "User has been disabled",
-    "expired_action_code": "OTP in email link is expired",
-    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
-    "invalid_credential": "The credential is malformed or has expired",
-    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
-    "user_not_found_for_email": "There is no user corresponding to the given email",
-    "user_not_found": "User not found",
-    "auth_in_progress": "Sign-In already in progress",
-    "google_play_services_not_available": "Google Play services are not available on the device",
-    "unknown_error_with_code": "Unknown error {{code}}",
-    "no_such_provider": "You do not have this provider linked",
-    "min_username": "Minimum length is 4 characters.",
-    "max_username": "Maximum length is 30 characters.",
-    "code_expired": "The code has expired. Please ask for a new code.",
-    "too_many_requests": "Too many requests. Please try again later.",
-    "network_error_title": "No internet connection",
-    "network_error_message": "Your device does not have any active internet connection",
-    "unknown_error": "Some error occurred, please try again later",
-    "general_error_title": "Oups...",
-    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
-    "general_network_error": "A network error has occurred. Please check your connection.",
-    "credential_already_in_use": "This credential is already associated with a different user account.",
-    "email_already_in_use": "The email address is already in use by another account.",
-    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
-    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "nicknameSize": "Usayizi wesiteketiso: izinhlamvu ezi-4-20.",
+    "removeInvalidCharacters": "Susa izinhlamvu ezingavumelekile.",
+    "validation_error": "Iphutha elithile lokuqinisekisa.",
+    "multiple_accounts": "I-imeyili/inombolo yocingo ihlotshaniswa nenye i-akhawunti. Sicela ungene kuleyo akhawunti ukuze uqinisekise ubunikazi, bese uphuma futhi ungene kulena. Uma ungeyena umnikazi waleyo akhawunti enye noma ungakwazi ukungena kuyo, sicela uthinte abosekelo bethu.",
+    "wrong_phone_number": "Inombolo yocingo engavumelekile, sicela uzame futhi.",
+    "invalid_username": "Isiteketiso asivumelekile.",
+    "email_already_taken": "I-imeyili isivele ithathiwe.",
+    "phone_number_already_taken": "Inombolo yocingo isivele ithathiwe.",
+    "invalid_validation_code": "Inombolo yocingo engavumelekile, sicela uzame futhi.",
+    "validation_expired": "Ukuqinisekisa kuphelelwe yisikhathi",
+    "validation_not_found": "Ukuqinisekisa akutholakali",
+    "invalid_email": "I-imeyili engavumelekile.",
+    "invalid_password": "Iphasiwedi engavumelekile.",
+    "invalid_ref_username": "Isiteketiso asivumelekile.",
+    "invalid_phone": "Inombolo yocingo engavumelekile.",
+    "user_disabled": "Umsebenzisi ukhutshaziwe.",
+    "expired_action_code": "I-OTP ekusixhumanisi se-imeyili iphelelwe yisikhathi.",
+    "account_exists_with_different_credential": "Isivele ikhona i-akhawunti enekheli le-imeyili eligonyelwa ubufakazo.",
+    "invalid_credential": "Ukuqinisekisa akulungile noma kuphelelwe yisikhathi.",
+    "operation_not_allowed": "Uhlobo lwe-akhawunti oluhambisana nemininingwane alunikiwe amandla.",
+    "user_not_found_for_email": "Akekho umsebenzisi ohambisana ne-imeyili enikeziwe.",
+    "user_not_found": "Umsebenzisi akatholakali.",
+    "auth_in_progress": "Ukungena ngemvume kuyaqhubeka.",
+    "google_play_services_not_available": "Amasevisi e-Google Play awatholakali kule divayisi.",
+    "unknown_error_with_code": "Iphutha elingaziwa: {{code}}",
+    "no_such_provider": "Awunaye lo mhlinzeki oxhunyiwe.",
+    "min_username": "Ubude obuncane yizinhlamvu ezi-4.",
+    "max_username": "Ubude obukhulu yizinhlamvu ezingu-30.",
+    "code_expired": "Ikhodi iphelelwe yisikhathi, sicela ucele ikhodi entsha.",
+    "too_many_requests": "Izicelo eziningi kakhulu, sicela uzame futhi ngokuhamba kwesikhathi.",
+    "network_error_title": "Alukho uxhumano lwe-inthanethi",
+    "network_error_message": "Idivayisi yakho ayinalo uxhumano lwe-inthanethi olusebenzayo.",
+    "unknown_error": "Kwenzeke iphutha, sicela uzame futhi ngokuhamba kwesikhathi.",
+    "general_error_title": "Eshu...",
+    "general_error_message": "Kubukeka sengathi kukhona okungahambanga kahle. Ithimba lethu lisebenzela ukuyilungisa njengamanje.",
+    "general_network_error": "Kwenzeke iphutha lenethiwekhi, sicela uhlole ukuxhumana kwakho.",
+    "credential_already_in_use": "Lezi mininingwane sezivele zihlotshaniswa ne-akhawunti yomsebenzisi ehlukile.",
+    "email_already_in_use": "Ikheli le-imeyili selivele lisetshenziswa enye i-akhawunti.",
+    "user_token_expired": "Imininingwane yakho ayisavumelekile, sicela ungene ngemvume futhi.",
+    "requires_recent_login": "Lo msebenzi uyazwela futhi udinga ukuqinisekiswa kwakamuva. Sicela ungene ngemvume futhi.",
+    "same_email": "Awukwazi ukusebenzisa i-imeyili efanayo.",
+    "weak_password": "Iphasiwedi ebuthakathaka.",
+    "wrong_password": "Iphasiwedi engalungile.",
+    "no_camera_permissions": "Izimvume zekhamera azinikiwe.",
+    "no_library_permissions": "Izimvume zelabhulali azinikiwe."
   },
   "profile": {
     "my_roles": {
-      "title": "My Role"
+      "title": "Iqhaza Lami"
     },
-    "mining_calculator": "earnings calculator",
-    "invite_friends": "Invite Friends",
-    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
-    "global_rank": "global rank",
-    "view_all_roles": "view all roles",
-    "data_is_hidden": "data is hidden",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "imali yokubala",
+    "invite_friends": "Mema Abangane",
+    "invite_friends_engage": "Sabalalisa izwi futhi umeme abangani bakho. Uma udluliswa okwengeziwe, uzozuza kakhulu!",
+    "global_rank": "izinga lomhlaba",
+    "view_all_roles": "buka zonke izindima",
+    "data_is_hidden": "idatha ifihliwe",
+    "progress_text": "{{value}} kwe {{total}}",
     "not_found": {
-      "title": "User was not found",
-      "description": "oops, we couldn't find this user"
+      "title": "Umsebenzisi akatholakali.",
+      "description": "Eshu, asikwazanga ukuthola lo msebenzisi."
     },
     "my_badges": {
-      "title": "My Badges"
+      "title": "Amabheji Ami"
     },
     "badges": {
-      "title": "Badges"
+      "title": "Amabheji"
     },
     "roles": {
-      "title": "Roles"
+      "title": "Izindima"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "Izinhlamvu zemali",
+        "description": "Izinhlamvu zemali"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "Okomphakathi",
+        "description": "abangani"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "Izinga",
+        "description": "Izinga"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update",
-    "comingSoon": "Coming soon",
+    "level": "Izinga",
+    "referrals": "Ukudluliselwa",
+    "coin": "Izinhlamvu zemali",
+    "social": "Okomphakathi",
+    "phone_number": "Inombolo yocingo",
+    "years": "Iminyaka",
+    "of": " kwe ",
+    "attention": "Ukunaka",
+    "email_address": "Ikheli le-imeyili",
+    "password": "Iphasiwedi",
+    "data_hidden": "idatha ifihliwe",
+    "pull_to_refresh": "donsa ukuze ubuyekeze",
+    "comingSoon": "Kuyeza maduze",
     "date": {
-      "today": "Today"
+      "today": "Namuhla"
     }
   },
   "mining_calculator": {
-    "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "result_label": "Uzohola",
+    "active_inviter": "Ummemi osebenzayo",
+    "tier_1_ref": "Ukudluliselwa kwesigaba 1",
+    "tier_2_ref": "Ukudluliselwa kwesigaba 2",
+    "active_miners": "Ukudluliselwa okusebenzayo"
   },
   "home": {
     "wallet": {
-      "title": "WALLET",
-      "rate": "EARNING RATE",
-      "balance": "CURRENT BALANCE"
+      "title": "I-WALETHI",
+      "rate": "IZINGA LOKUTHOLA",
+      "balance": "OKULINGANA NJENGAMANJE"
     },
     "pioneer": {
-      "title": "PIONEER",
-      "rank": "GLOBAL RANK",
-      "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "rank": "izinga lomhlaba",
+      "referrals": "Ukudluliselwa",
+      "description": "Bheka abasebenzisi abaningi futhi uzuze okwengeziwe[[:ice]]."
     },
     "referrals": {
-      "title": "REFERRALS",
-      "description": "Referral stats for the previous 5 days",
-      "no_referrals_description": "You don't have any referrals yet",
-      "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "title": "Ukudluliselwa",
+      "description": "Izibalo zokudluliswa kwezinsuku ezingu-5 ezedlule.",
+      "no_referrals_description": "Okwamanje awunakho ukudluliselwa!",
+      "users_tier_1": "Isigaba 1 sabasebenzisi",
+      "users_tier_2": "Isigaba 2 sabasebenzisi"
     },
     "adoption": {
-      "title": "ADOPTION",
-      "level": "level",
-      "users": "\nusers"
+      "title": "UKUZENZA",
+      "level": "Izinga",
+      "users": "abasebenzisi"
     },
-    "steps": {
-      "title": "Your progress",
-      "description": "Complete the tasks below and level up!",
-      "step_one": {
-        "title": "Claim your nickname",
-        "description": "Set it and start earning from your invite"
+    "tasks": {
+      "achievements": "IZIMPUMELELO",
+      "title": "Intuthuko yakho",
+      "description": "Qedela imisebenzi engezansi bese ukhuphuka ileveli!",
+      "completed": {
+        "title": "Siyakuhalalisela",
+        "description": "Qhubeka uhlola nsuku zonke ukuze uthole imiklomelo eyengeziwe!"
       },
-      "step_two": {
-        "title": "Start mining",
-        "description": "Your first mining session"
+      "popup": {
+        "title": "Joyina isiteshi sethu seTelegram",
+        "description": "Cacisa igama lakho lesiteketiso elisetshenziswa kuTelegram.",
+        "placeholder": "Isiteketiso"
       },
-      "step_three": {
-        "title": "Profile picture",
-        "description": "Upload your profile image"
+      "claim_username": {
+        "title": "Funa isidlaliso",
+        "description": "Isethe futhi wabelane ngayo nabangani bakho."
       },
-      "step_four": {
-        "title": "Join Telegram",
-        "description": "Be part of our community and join now"
+      "start_mining": {
+        "title": "Qala ukuhola",
+        "description": "Iseshini yakho yokuqala yokungena."
       },
-      "step_five": {
-        "title": "Follow us on Twitter",
-        "description": "Let’s keep in touch, follow us on twitter"
+      "upload_profile_picture": {
+        "title": "Isithombe sephrofayili",
+        "description": "Layisha isithombe sakho sephrofayela."
       },
-      "step_six": {
-        "title": "Invite 5 Friends",
-        "description": "Create your team and increase your earnings"
+      "join_telegram": {
+        "title": "Joyina iTelegram",
+        "description": "Yiba yingxenye yomphakathi wethu futhi ujoyine manje."
+      },
+      "follow_us_on_twitter": {
+        "title": "Silandele ku-Twitter",
+        "description": "Masiqhubeke sithintana, silandele kuTwitter."
+      },
+      "invite_friends": {
+        "title": "Mema Abangane",
+        "description": "Khulisa iqembu lakho futhi ukhuphule umholo wakho."
       }
     },
     "overview": {
-      "title": "Overview"
+      "title": "Uhlolojikelele"
     },
     "menu": {
-      "notifications": "Notifications",
-      "staking": "Staking",
-      "stats": "Stats",
-      "help": "Help"
-    },
-    "tasks": {
-      "title": "ACHIEVEMENTS"
+      "notifications": "Izaziso",
+      "staking": "staking",
+      "stats": "Izibalo",
+      "help": "Usizo"
     },
     "team": {
-      "title": "Team",
-      "view_team": "view team"
+      "title": "Ithimba",
+      "view_team": "buka ithimba"
     },
     "mining_rate": {
-      "title": "EARNING RATE",
-      "base": "Base"
+      "title": "IZINGA LOKUTHOLA",
+      "base": "Isisekelo"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
-      "streak": "STREAK",
-      "days_off": "DAYS OFF"
+      "title": "UKUBAMBISANA",
+      "description_part1": "I-Streak isho ukuthi zingaki izinsuku ezilandelanayo ongenile.",
+      "description_part2": "Ezinsukwini eziyisi-6 ezilandelanayo uthola usuku olulodwa lokuphumula.",
+      "streak": "STREAK ",
+      "days_off": "IZINSUKU ZOKUPHUMA"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "Izilungiselelo",
+    "profile": "Iphrofayela",
+    "legal": "Okusemthethweni",
+    "support": "Ukusekela",
+    "personal_information_title": "Ulwazi lomuntu siqu",
+    "personal_information_description": "Phatha imininingwane yephrofayela yakho.",
+    "notifications_title": "Izaziso",
+    "notifications_description": "Phatha izaziso zakho lapha.",
+    "push_notifications_title": "Izaziso",
+    "push_notifications_description": "Yenza ngokwezifiso izilungiselelo zakho zesaziso sohlelo lokusebenza.",
+    "email_notifications_title": "Izaziso",
+    "email_notifications_description": "Enza ngendlela oyifisayo izilungiselelo zesaziso sakho se-imeyili.",
+    "terms_title": "Imigomo Yesevisi",
+    "terms_description": "Buyekeza imigomo yethu yesevisi.",
+    "privacy_title": "Inqubomgomo yobumfihlo",
+    "privacy_description": "Funda mayelana nenqubomgomo yethu yobumfihlo.",
+    "feedback_title": "Thumela Impendulo",
+    "feedback_description": "Yabelana nathi ngemicabango yakho.",
+    "invite_title": "Mema Abangane",
+    "invite_description": "Zuza okwengeziwe ngokumema abangani bakho.",
+    "delete_title": "Susa i-akhawunti",
+    "delete_description": "Sula i-akhawunti yakho.",
+    "delete_confirmation_title": "Uqinisekile ukuthi ufuna ukususa i-akhawunti?",
+    "delete_confirmation_yes": "Yebo, sula",
+    "logout_title": "Phuma",
+    "logout_description": "Phuma bese uthathe ikhefu.",
+    "logout_confirmation_title": "Uqinisekile ukuthi ufuna ukuphuma?",
+    "logout_confirmation_yes": "Yebo, phuma",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "Qinisekisa Ifoni",
+      "description": "Sicela uqinisekise ikhodi yakho yezwe bese ufaka inombolo yakho yocingo.",
+      "button": "Qinisekisa Ifoni"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
-      "type_push": "PUSH",
-      "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
+      "enable_prompt": "Izaziso azivunyelwe. Ingabe ufuna ukuwanika amandla?",
+      "channel_achievements": "IZIMPUMELELO",
+      "channel_news": "Izindaba",
+      "channel_reminders": "Izikhumbuzi",
+      "channel_team": "Ithimba",
+      "type_push": "PHUSHA",
+      "type_email": "i-IMEYILI",
+      "disable_notifications": "Khubaza Izaziso?",
+      "disable_notifications_description": "Ngokukhubaza izaziso ngeke ukwazi ukuthola izibuyekezo uma usungaqala ukungena, izindaba noma ulwazi lweqembu.",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
+          "title": "Izibalo zamasonto onke",
+          "description": "Thola izaziso mayelana nomsebenzi wakho."
         },
         "weekly_report": {
-          "title": "Weekly report",
-          "description": "Receive notifications about your activity"
+          "title": "Umbiko wamasonto onke",
+          "description": "Thola izaziso mayelana nomsebenzi wakho."
         },
         "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
+          "title": "IZIMPUMELELO",
+          "description": "Thola izaziso mayelana nomsebenzi wakho."
         },
         "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
+          "title": "Amaphromoshini",
+          "description": "Thola izaziso zokuthi ungalikhulisa kanjani iqembu lakho futhi uzuze okwengeziwe."
         },
         "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
+          "title": "Izindaba",
+          "description": "Thola izaziso ezivela ethimbeni lethu."
         },
         "micro_community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
+          "title": "Umphakathi omncane",
+          "description": "Thola izaziso mayelana nomsebenzi wakho."
         },
         "daily_bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
+          "title": "Ibhonasi yansuku zonke",
+          "description": "Thola izaziso zokufuna ibhonasi yakho yansuku zonke."
         },
         "mining": {
-          "title": "Session status",
-          "description": "Receive notifications about your check-in activity"
+          "title": "Isimo seseshini",
+          "description": "Thola izaziso mayelana nomsebenzi wakho."
         },
         "system": {
-          "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "title": "Uhlelo",
+          "description": "Thola izaziso ezibalulekile mayelana nohlelo lokusebenza lweqhwa."
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "Izilungiselelo zolimi",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "Shintsha ulimi",
+      "prompt": "Ukusebenzisa lesi silungiselelo kuzoqala kabusha uhlelo lokusebenza."
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "Isithombe Sephrofayela",
+    "inapp_privacy_title": "Inqubomgomo yobumfihlo",
+    "inapp_privacy_description": "Phatha imininingwane yakho lapha.",
+    "developer": "Unjiniyela",
+    "user_id": "I-ID Yomsebenzisi",
+    "user_token": "Ithokheni yomsebenzisi",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "Susa Isithombe",
+      "edit": "Hlela isithombe sephrofayela",
+      "photo_gallery": "Igalari Yezithombe",
+      "camera": "Ikhamera"
     },
-    "confirm_email_confirmation_title": "Confirm email?",
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "Qinisela i-Imeyili?",
+    "update_email_confirmation_title": "Buyekeza i-imeyili?",
+    "update_email_confirmation_subtitle": "Ukushintsha ikheli lakho le-imeyili kuzodinga ukuthi uphinde ungene ngemvume. Uqinisekile ukuthi ufuna ukuqhubeka?",
+    "unlink_logins_title": "Susa ukuxhumanisa Ukungena",
+    "unlink_logins_description": "Ungasusa ukuxhumanisa ukungena kwakho lapha."
   },
   "invite_share": {
-    "title": "Invite a friend",
-    "telegram": "Telegram",
-    "twitter": "Twitter",
-    "whatsapp": "WhatsApp",
-    "instagram": "Instagram",
-    "email": "Email",
-    "fb": "Newsfeed",
-    "sms": "SMS",
-    "copy_link": "Copy link",
-    "more": "More",
-    "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "title": "Mema Abangane",
+    "telegram": "I-Telegram",
+    "twitter": "I-Twitter",
+    "whatsapp": "uWhatsApp",
+    "instagram": "I-Instagram",
+    "email": "I-Imeyili",
+    "fb": "Okuphakelayo kwezindaba",
+    "sms": "i-SMS",
+    "copy_link": "Kopisha isixhumanisi",
+    "more": "Okuningi",
+    "copied": "IKOPISHIWE",
+    "share_message": "Sawubona ☃️ Indoda yeqhwa! Joyina iqembu lami eqhweni futhi uthole izinhlamvu zemali zeqhwa eziyi-10 lapho ubhalisa usebenzisa ikhodi yami yokudlulisela:",
+    "share_subject": "Joyina iqembu lami eqhweni",
+    "description": "Sabalalisa izwi futhi umeme abangani bakho. Uzuza[[:ice]] ngokudluliselwa ngakunye okusha ofika nakho.",
+    "share": "Yabelana"
   },
   "users": {
-    "ping": "PING",
-    "active": "Active",
-    "inactive": "Inactive",
+    "ping": "I-PING",
+    "active": "Iyasebenza",
+    "inactive": "Ayisebenzi",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T1": "Isigaba 1",
+      "T2": "Isigaba 2"
     }
   },
   "personal_information": {
-    "first_name": "First name",
-    "last_name": "Last name",
-    "country": "Country",
-    "city": "City",
-    "title": "Personal Information",
-    "phone": "Phone",
-    "email": "Email",
-    "username": "Nickname"
+    "first_name": "Igama",
+    "last_name": "Isibongo",
+    "country": "Izwe",
+    "city": "Idolobha",
+    "title": "Ulwazi lomuntu siqu",
+    "phone": "Ucingo",
+    "email": "I-Imeyili",
+    "username": "Isiteketiso"
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
-      "length": "Nickname size: 4-20 characters.",
-      "invalid_characters": "Remove invalid characters.",
-      "not_found": "Nickname not found.",
-      "some_error": "Some error occurred.",
-      "refer_yourself": "You can't refer yourself"
+      "already_taken": "Isiteketiso sesivele sithathiwe.",
+      "length": "Usayizi wesiteketiso: izinhlamvu ezi-4-20.",
+      "invalid_characters": "Susa izinhlamvu ezingavumelekile.",
+      "not_found": "Isiteketiso asitholakali.",
+      "some_error": "Kwenzeke iphutha.",
+      "refer_yourself": "Awukwazi ukuzibhekisa wena."
     }
   },
   "staking": {
-    "time_left": "Time Left",
-    "mining_rate": "Earning Rate",
-    "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking Bonus",
-    "period_label": "Staked Period",
-    "title": "Pre-Staking",
-    "current_rate": "Current Rate",
-    "allocation": "Allocation",
-    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
-    "staking_terms": "Staking Terms",
-    "stake_now": "Pre-Stake Now!",
-    "balance_label": "Staked balance",
-    "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "time_left": "Isikhathi esisele",
+    "mining_rate": "IZINGA LOKUTHOLA",
+    "appeal": "Khulisa izinga lakho lokuhola",
+    "benefits_description": "Beka kusengaphambili imiklomelo yakho yeqhwa kuze kube yiminyaka engu-5 futhi ukhuphule izinga lakho lemali oyitholayo kufika ku-250%.",
+    "bonus_label": "Pre-Staking Ibhonasi",
+    "period_label": "Isikhathi Esibekiwe",
+    "title": "I-Pre-Staking",
+    "current_rate": "Isilinganiso samanje",
+    "allocation": "Ukwabiwa",
+    "description": "I-Staking yinqubo ehlanganisa ukwenza izimpahla zakho ze-crypto zisekele inethiwekhi ye-blockchain futhi uqinisekise ukuthengiselana.",
+    "terms_agree": "Ngiyavumelana neMigomo[[:ice]] [[:link]] Ye-Staking[[/:link]]. Iqhwa lakho lizokhiywa isikhathi esikhethiwe.",
+    "stake_now": "Hlela kusengaphambili manje!",
+    "balance_label": "Ibhalansi enesiteki",
+    "confirm_title": "Qinisekisa I-Pre-Stake",
+    "confirm_subtitle": "Ingabe uqinisekile ukuthi ufuna ukubeka kuqala izinhlamvu zemali zakho? Lokhu akukwazi ukuhlehliswa uma usuqinisekisile."
   },
   "stats": {
-    "header_title": "Stats",
-    "active": "Active users",
-    "total": "Total users",
-    "user_growth": "User growth",
-    "top_miners": "Top users",
-    "top_countries": "Top countries",
-    "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "header_title": "Izibalo",
+    "active": "Abasebenzisi abasebenzayo",
+    "total": "Inani labasebenzisi",
+    "user_growth": "Ukukhula komsebenzisi",
+    "top_miners": "Abasebenzisi abaphezulu",
+    "top_countries": "Amazwe aphezulu",
+    "online_miners": "Abasebenzisi be-inthanethi",
+    "detailed_information": "Imininingwane enemininingwane"
   },
   "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
+    "title": "Sicela Ubuyekeze",
+    "description": "Usebenzisa inguqulo yohlelo lokusebenza endala futhi udinga ukuyibuyekeza ukuze uyisebenzisele ukuqhubeka.",
+    "button_title": "Buyekeza Manje"
   },
   "general": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
-    "ice": "ice",
-    "ice_per_hour": "ice/h",
-    "seconds_short": "s",
-    "minutes_short": "m",
-    "hours_short": "h",
-    "days_short": "d"
+    "good_morning": "Sawubona",
+    "good_afternoon": "Sawubona",
+    "good_evening": "Sawubona",
+    "ice": "iqhwa",
+    "ice_per_hour": "iqhwa/h",
+    "seconds_short": "s ",
+    "minutes_short": "m ",
+    "hours_short": "h ",
+    "days_short": "d "
   },
   "news": {
-    "news_feed": "News Feed",
-    "read_more": "Read more",
-    "views": "{{viewsCount}} views"
+    "news_feed": "Okuphakelayo Kwezindaba",
+    "read_more": "Funda kabanzi",
+    "no_more_news": "lokhu ukufakwa kokugcina kokuphakelayo kwezindaba.",
+    "views": "{{viewsCount}} imibono"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
-    "nothing_is_found": "Nothing was found for your query",
-    "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "empty": "Sesha abathintwayo, abangani beqhwa namalungu omphakathi wakho omncane.",
+    "nothing_is_found": "Akukho okutholakele embuzweni wakho.",
+    "search_by_country": "Sesha izwe",
+    "search_for_users": "Sesha abasebenzisi",
+    "loading": "Iyasesha..."
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tap here to start your first check-in session",
-    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
-    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
-    "mining_holiday_active": "You are using a Day Off!"
+    "mining_inactive_tooltip": "Iseshini yakho yokuqala yokungena.",
+    "mining_reset_tooltip": "Cindezela isekhondi elingu-1 ukuze unwebe isikhathi sakho sokungena.",
+    "mining_holiday_reset_tooltip": "Usebenzisa i-Day Off! Cindezela isekhondi elingu-1 ukuze unwebe isikhathi sakho sokungena.",
+    "mining_holiday_active": "Usebenzisa i-Day Off!"
   },
   "invite_friend": {
-    "invite_button": "Invite Friend",
-    "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "invite_button": "Mema Abangane",
+    "button_title": "Mema Abangane",
+    "description": "Umngani wakho akakasebenzi[[:ice]] . Mthumelele isimemo!"
   },
   "balance_history": {
-    "title": "Balance History",
-    "wallet": "Wallet",
-    "blockchain": "Blockchain",
-    "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
-    "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "title": "Ibhalansi umlando",
+    "wallet": "I-WALETHI",
+    "blockchain": "I-Blockchain",
+    "wallet_update_interval": "olusha njalo ngehora",
+    "blockchain_update_interval": "ibuyekezwa njalo ngamahora angama-24",
+    "list_end_label": "lokhu ukufakwa kokugcina komlando webhalansi.",
+    "no_data": "Ayikho idatha engaboniswa ngesikhathi esishiwo."
   },
   "pop_up": {
-    "update_now": "Update Now",
-    "please_update": "Please Update",
-    "update_now_text": "You are using an old app version and need to update it in order to use it further",
-    "you_are_up_to_date": "You are up to date!",
-    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
-    "resurrection": "Resurrection",
-    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
-    "resurrection_warning": "You can only resurrect one time!",
-    "please_confirm": "Please confirm",
-    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "update_now": "Buyekeza Manje",
+    "please_update": "Sicela Ubuyekeze",
+    "update_now_text": "Usebenzisa inguqulo yohlelo lokusebenza endala futhi udinga ukuyibuyekeza ukuze uyisebenzisele ukuqhubeka.",
+    "you_are_up_to_date": "Unolwazi lwakamuva!",
+    "up_to_date_text": "Manje usebenzisa inguqulo yakamuva. Hlola zonke izinguquko ngezansi.",
+    "resurrection": "Uvuko",
+    "resurrection_message": "Unethuba elilodwa lokuvuka futhi wamukele[[:amount]] izinhlamvu zemali ozilahlekele esikhathini esidlule[[:period]] .",
+    "resurrection_warning": "Ungavusa kanye kuphela!",
+    "please_confirm": "Ngicela uqinisekise",
+    "resurrection_no_confirm_message": "Uzolahlekelwa[[:amount]] izinhlamvu zemali zakho unomphela. Uqinisekile ukuthi ufuna ukuqhubeka?",
+    "resurrection_yes_confirm_message": "Ungavusa kanye kuphela! Uqinisekile ukuthi ufuna ukuqhubeka? Izinhlamvu[[:amount]] zemali zizobuyela kubhalansi yakho phakathi nehora elilandelayo.",
+    "delete_account_confirmation_title": "Qinisekisa Ukususwa",
+    "delete_account_confirmation_text": "Ukususa i-akhawunti yakho kuzosula unaphakade yonke idatha yakho, okuhlanganisa nebhalansi yakho yeqhwa. Uyafuna ukuqhubeka?"
   },
   "periods": {
-    "3_days": "3 days",
-    "7_days": "7 days",
-    "30_days": "30 days",
-    "1_day": "1 Day",
-    "1_week": "1 Week",
-    "1_month": "1 Month",
-    "90_days": "90 days",
-    "14_days": "14 days"
+    "3_days": "3 izinsuku",
+    "7_days": "7 izinsuku",
+    "30_days": "30 izinsuku",
+    "1_day": "Usuku olu-1",
+    "1_week": "Iviki elingu-1",
+    "1_month": "Inyanga engu-1",
+    "90_days": "izinsuku ezingu-90",
+    "14_days": "izinsuku ezingu-14"
   },
   "notifications": {
-    "joined": " has joined your team",
-    "multiply": " and {{count}} others have joined your team",
-    "ping": " has pinged you, wake up!",
-    "delete": "Delete",
-    "add_notifications": "Add mocked notifications",
-    "no_notifications": "No notifications to display",
-    "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
-    "clear_title": "Clear all notifications?",
-    "title": "Notifications"
+    "joined": " ujoyine iqembu lakho.",
+    "multiply": " nabanye{{count}} bajoyine ithimba lakho.",
+    "ping": " ikulindile, vuka!",
+    "delete": "Susa",
+    "add_notifications": "Engeza izaziso ezihlekwayo",
+    "no_notifications": "Azikho izaziso ezizoboniswa.",
+    "add_announcements": "Engeza izimemezelo ezihlekisayo",
+    "add_both": "Engeza izaziso ezenziwe inhlekisa nezimemezelo ndawonye",
+    "clear_title": "Sula zonke izaziso?",
+    "title": "Izaziso"
   },
   "notification_feed_screen": {
-    "yesterday": "Yesterday",
-    "last_week": "Last Week",
-    "this_month": "This month",
-    "last_month": "Last Month",
-    "this_week": "This week"
+    "yesterday": "Izolo",
+    "last_week": "Evikini eledlule",
+    "this_month": "Kulenyanga",
+    "last_month": "Ngenyanga edlule",
+    "this_week": "Kuleli viki"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to hide from public eyes"
+      "title": "1. Izibalo Zephrofayela Yakho",
+      "description": "Thepha emabhuloki ofuna ukuwafihla emehlweni omphakathi."
     },
     "step2": {
-      "description": "Tap on this block to hide it from public eyes",
-      "title": "2. Your Current Role"
+      "description": "Thepha le block ukuze uyifihle emehlweni omphakathi.",
+      "title": "2. Indima Yakho Yamanje"
     },
     "step3": {
-      "title": "3. Your Earned Badges",
-      "description": "Tap here to hide your badges from public eyes"
+      "title": "3. Amabheji Akho Owatholile",
+      "description": "Thepha lapha ukuze ufihle amabheji akho emehlweni omphakathi."
     }
   },
   "confirm_email": {
-    "title": "Confirm your email",
-    "description": "Please enter your email address and we will send code ",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
-    "wrong_email": "Wrong email?",
-    "check_email": "Check your email",
-    "emailed_link_to": "We emailed a magic link to",
-    "link_instruction": "Click the link to log in or sign up.",
-    "modify_title": "Confirm New Email",
-    "modify_description": "Please enter your new email address"
+    "title": "Qinisela i-Imeyili?",
+    "description": "Sicela ufake ikheli lakho le-imeyili futhi sizokuthumela ikhodi.",
+    "note": "Uma ungazange uyithole i-imeyili phakathi nemizuzu engu-5, sicela uhlole ifolda yakho yogaxekile.",
+    "wrong_email": "I-imeyili engalungile?",
+    "check_email": "Hlola i-imeyili yakho",
+    "emailed_link_to": "Sithumele isixhumanisi somlingo ku-imeyili",
+    "emailed_steps_to": "Sithumele izinyathelo nge-imeyili",
+    "link_instruction": "Chofoza isixhumanisi ukuze ungene ngemvume noma ubhalise.",
+    "reset_link_instruction": "Chofoza isixhumanisi ukuze usethe kabusha iphasiwedi yakho.",
+    "modify_title": "Qinisela i-Imeyili?",
+    "modify_description": "Sicela ufake ikheli lakho le-imeyili elisha."
   },
   "invalid_link": {
-    "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "title": "Isixhumanisi esingavumelekile",
+    "description": "Ngeshwa, lesi sixhumanisi asivumelekile, sicela ufake i-imeyili yakho futhi sizokuthumelela isixhumanisi esisha."
   },
   "confirm_code": {
-    "title": "Confirm code",
-    "description": "Please enter the code sent to",
-    "send_code_again": "Send code again",
-    "resend_time_label": "New code available in ",
-    "enter_code": "Enter the code",
-    "wrong_number": "Wrong number?"
+    "title": "Qinisekisa Ikhodi",
+    "description": "Sicela ufake ikhodi ethunyelwe kuyo",
+    "send_code_again": "Thumela ikhodi futhi",
+    "resend_time_label": "Ikhodi entsha iyatholakala ku ",
+    "enter_code": "Faka ikhodi",
+    "wrong_number": "Inamba ekungeyona?"
   },
   "ice_bonus": {
-    "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
-    "balance_label": "Your current balance"
+    "title": "Wamukelekile umvuzo",
+    "description": "Siyakuhalalisela, uthole izinhlamvu zemali zakho zokuqala[[:value]] [[:ice]] ezifakazela[[:bold]] Ukuthembela[[/:bold]] kwethu[[:bold]] Kuwe[[/:bold]].",
+    "balance_label": "OKULINGANA NJENGAMANJE"
   },
   "country_select": {
-    "title": "Select country"
+    "title": "Khetha izwe"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "I-snowman",
+      "subtitle": "Yakha umbuso weqhwa",
+      "description": "Zuza ngokuhlola njalo emahoreni angama-24 ukuze ubonise ukuzibophezela kwakho kunethiwekhi yeqhwa futhi ufakazele ukuthi ungumuntu, hhayi irobhothi."
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "Inxusa",
+      "subtitle": "Umbusi wombuso weqhwa",
+      "description": "Uba yinxusa lapho okungenani abantu abayi-100 bejoyina iqembu lakho. Wonke amanxusa azothola ukufinyelela kwangaphambi kwesikhathi kuzici ezintsha."
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirm Phone",
-    "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
-    }
+    "modify_title": "Qinisekisa Ifoni",
+    "modify_description": "Sicela uqinisekise ikhodi yakho yezwe bese ufaka inombolo yakho yocingo.",
+    "button": "Qinisekisa izwe nefoni",
+    "same_phone_error": "Awukwazi ukusebenzisa inombolo efanayo."
   },
   "date_select": {
-    "title": "Choose date"
+    "title": "Khetha idethi"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+      "readmore": {
+        "title": "Funda kabanzi",
+        "description": "Lapha ungabona izindaba zethu zakamuva ezivela ethimbeni lethu. Thepha le nkinobho ukuze ufunde isihloko esigcwele."
       },
-      "step_2": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
-      },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
-      },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
-      },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
-      },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
-      },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
-      },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "releasednews": {
+        "title": "Izindaba ezikhishiwe",
+        "description": "Thepha esihlokweni ngasinye sezindaba futhi ufunde inguqulo yaso egcwele. Hlala unolwazi lwakamuva ngazo zonke izindaba zethu nezinhlolovo."
       }
     },
     "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      "allow_contacts": {
+        "title": "Bonke abathintwayo",
+        "description": "Vumelanisa abathintwayo bakho futhi ubone ukuthi ubani osevele evuliwe[[:ice]]. Ngokuzayo, uzokwazi ukuthumela iqhwa kunoma yibaphi oxhumana nabo.[[:ice]]"
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "confirm_phone": {
+        "title": "Qinisekisa Ifoni",
+        "description": "Qinisekisa ubuwena futhi uvumele oxhumana nabo bazi ukuthi nawe uyilungu lenethiwekhi yeqhwa. Inombolo yakho yocingo ngeke kwabelwane ngayo nabanye abantu besithathu."
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "contacts_list": {
+        "title": "Uhlu loxhumana nabo",
+        "description": "Lolu uhlu olunabo bonke othintana nabo, labo asebevele bajoyine[[:ice]] inethiwekhi ababoniswa phezu kohlu."
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "referrals": {
+        "title": "Ukudluliselwa",
+        "description": "Lapha uzobona ukuthi bangaki ama-referrals onawo sebebonke. Uma ubamema abantu abaningi, uzozuza kakhulu."
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earnings": {
+        "title": "Amaholo",
+        "description": "Ibhalansi yakho yamanje ibuyekezwa njalo ngehora futhi iboniswe lapha. Kuhlanganisa izinzuzo zakho eziqondile nezigxilile kanye nemali etholwayo yesigaba 1 kanye nesigaba 2."
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "segmented_control_tier_one": {
+        "title": "Isigaba 1",
+        "description": "Lapha ungabona uhlu lokudluliselwa kwakho yesigaba 1. Kumngane ngamunye ongena ngesikhathi esifanayo nawe, uzothola u-25% owengeziwe kusilinganiso sakho samanje sokutholwa kokutholwa. [[:link]]Funda kabanzi[[/:link]]",
+        "url": "https://ice.io/team "
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "segmented_control_tier_two": {
+        "title": "Isigaba 2",
+        "description": "Lapha ungabona uhlu lokudluliselwa kwakho yesigaba 2 . Kumngane ngamunye ongena ngesikhathi esifanayo nawe, uzothola u- 25 % owengeziwe kusilinganiso sakho samanje sokutholwa kokutholwa. [[:link]]Funda kabanzi[[/:link]]",
+        "url": "https://ice.io/team "
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "active_users": {
+        "title": "Abasebenzisi abasebenzayo",
+        "description": "Lesi isimo samanje somsebenzi wakho wokungena kwe-referral. Zibala njengezisebenzayo uma zineseshini yokungena esebenzayo."
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "tier_one_earnings": {
+        "title": "Izinzuzo zesigaba 1",
+        "description": "Lapha ungabona uhlu lokudluliselwa kwakho kwesigaba 1. Kumngane ngamunye ongena ngesikhathi esifanayo nawe, uzothola u-25% owengeziwe kusilinganiso sakho samanje sokutholwa kokutholwa."
+      },
+      "ping": {
+        "title": "Inkinobho ye-Ping",
+        "description": "Yazisa abadluliseli bakho ukuze baqale izikhathi zabo zokungena. Ungathumela isaziso esisodwa kokudluliselwa ngakunye njalo ngo-24h."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Ikhaya",
+        "description": "Siyakwamukela ku[[:ice]]. Esikrinini sasekhaya ungathola zonke izibalo ezimayelana nebhalansi yakho, izinga lamanje lomholo, izinga lakho lomhlaba kanye nethimba lakho."
+      },
+      "invite": {
+        "title": "mema",
+        "description": "Kuwo wonke umuntu omumemayo, nobabili nizozuza kufika ku-25% ngesilinganiso senu sokuhola esiyisisekelo. Uma ubamema abantu abaningi, uzozuza kakhulu."
+      },
+      "team": {
+        "title": "Ithimba",
+        "description": "[[:ice]] ungcono nabangani Kuleli khasi ungabona isimo samalungu eqembu lakho kuwo womabili amazinga eSigaba 1 kanye nesigaba 2. Ungakwazi futhi ukuwafaka kusuka lapha."
+      },
+      "news": {
+        "title": "Izindaba",
+        "description": "Hlala unolwazi lwakamuva ngazo zonke izindaba zethu nezinhlolovo. Njengoba siyinhlangano Ezimele, uzokwazi ukuvota lapha ukuze uthole izici ezizayo."
+      },
+      "profile": {
+        "title": "Iphrofayela",
+        "description": "Enza ngendlela oyifisayo imininingwane yephrofayela yakho futhi ubone zonke izimpumelelo zakho namabheji owazuzile. Sebenzisa isibali esisuka lapha, ukuze ukwazi ukulinganisa imali oyizuzayo."
+      },
+      "earningicestart": {
+        "title": "Ukuthola iqhwa",
+        "description": "Ungaqala isikhathi[[:ice]] sokungena njalo emahoreni angama-24 ngokuthepha le nkinobho. Ungakhohlwa ukubuya nsuku zonke futhi uqale ukuzuza!"
+      },
+      "earningiceseemore": {
+        "title": "Ukuthola iqhwa",
+        "description": "Thepha futhi ubone imininingwane eyengeziwe mayelana neseshini yakho yamanje yokungena."
+      },
+      "stats": {
+        "title": "Izibalo",
+        "description": "Ekhasini lezibalo ungabona abasebenzisi Bengqikithi Nabasebenzisi abangena usuku ngalunye kanye Namazwe Aphezulu nabasebenzisi."
+      },
+      "help": {
+        "title": "Usizo",
+        "description": "Ingabe unemibuzo? Bheka uhlu lwethu lwemibuzo evame ukubuzwa. Uma ungakutholi okufunayo, ungangabazi ukuxhumana nathi ku-hi@ice.io."
+      },
+      "preStaking": {
+        "title": "I-Pre-Staking",
+        "description": "Khulisa izimbuyiselo zakho ngokufaka kusengaphambili imiklomelo oyizuzayo. Khetha isabelo sakho nesikhathi sokubamba ukuze uthole ibhonasi ngaphezu kwenzuzo yakho."
+      },
+      "wallet": {
+        "title": "Ikhadi le-Wallet",
+        "description": "Ungathola lapha[[:ice]] ibhalansi yakho yamanje, kanye nezinga lomholo. Uma ukudluliselwa okuvela eqenjini lakho ku-inthanethi, izinga lomholo liphezulu."
+      },
+      "earning": {
+        "title": "Ikhadi Lokuthola Imali",
+        "description": "Hlala unolwazi lwakamuva ngezinga lakho lokuhola namabhonasi! Lapha ungabheka isilinganiso sakho samanje, isilinganiso sethu esiyisisekelo, namazinga ebhonasi emisebenzi ehlukahlukene kuhlelo lokusebenza."
+      },
+      "engagement": {
+        "title": "UKUBAMBISANA",
+        "description": "Landelela ukulandelana kwezikhathi zakho zokungena nezinsuku zokuphumula! Hlola lesi sigaba ukuze uthole imininingwane eyengeziwe mayelana nezikhathi zakho zokungena ezilandelanayo futhi ubone ukuthi zingaki izinsuku onazo zokuphumula."
+      },
+      "profilecard": {
+        "title": "Ikhadi Lephrofayela",
+        "description": "Ungakwazi ukulandelela isimo sephrofayela yakho ngokulandela leli khadi. Ibonisa izinga lakho lamanje lomhlaba wonke, kanye nendima yakho, ileveli kanye nenani lokudluliselwa."
+      },
+      "referralscard": {
+        "title": "Ikhadi Lokudluliswa",
+        "description": "Bona ukuvela kwezibalo zakho zokudlulisela ezinsukwini ezingu-5 zangaphambilini kokubili kokudluliselwa kweSigaba 1 kanye neSigaba 2 ngokuthepha leli khadi."
+      },
+      "adoptioncard": {
+        "title": "Ikhadi Lokutholwa",
+        "description": "Ngokusekelwe esilinganisweni sesamba seviki eledlule sabakwa-Snowmen abasebenzayo, ungabona izinga[[:ice]] lamanje lomholo. Izinga lokuhola lincishiswa ngohhafu lapho lifinyelelwa emngceleni olandelayo."
+      },
+      "nickname": {
+        "title": "Isiteketiso",
+        "description": "Isiteketiso yisona esikwenza uhluke. Abangani bakho bazodinga ukusebenzisa lesi siteketiso ukuze bajoyine iqembu lakho. Ungasebenzisa lesi sinqamuleli ukuze uvule iphrofayela yakho."
+      },
+      "balancehistory": {
+        "title": "Ibhalansi umlando",
+        "description": "Ungathola lapha ibhalansi yakho yamanje[[:ice]] ku-wallet yendawo kanye ne-blockchain. Ibhalansi yendawo yesikhwama ibuyekezwa njalo ngehora, kuyilapho ibhalansi ye-blockchain ibuyekezwa njalo emahoreni angama-24."
+      },
+      "achievements": {
+        "title": "Izimpumelelo",
+        "description": "Qedela imisebenzi engezansi bese ukhuphuka ileveli! Iseshini yakho yokuqala yokungena."
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Unlink Logins",
-    "sessionName": "Login via {{providerName}}",
+    "title": "Susa ukuxhumanisa Ukungena",
+    "sessionName": "Ngena ngemvume nge {{providerName}}",
     "buttons": {
-      "currentSession": "Current session",
-      "endSession": "End Session",
-      "loginUnlinked": "Login Unlinked",
-      "sessionEnded": "Session Ended",
-      "unlink": "Unlink"
+      "currentSession": "Iseshini yamanje",
+      "endSession": "Qeda Iseshini",
+      "loginUnlinked": "Ukungena ngemvume Kunqanyuliwe",
+      "sessionEnded": "Iseshini Iphelile",
+      "unlink": "Susa ukuxhumanisa"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Unlink Login?",
-        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
+        "title": "Susa ukuxhumanisa Ukungena",
+        "message": "Uqinisekile ukuthi ufuna ukususa ukuxhumanisa ukungena ngemvume{{providerName}} kusuka kule divayisi?"
       },
       "endSession": {
-        "title": "End Session?",
-        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
+        "title": "Qeda Iseshini",
+        "message": "Uqinisekile ukuthi ufuna ukumisa isikhathi{{providerName}} sokungena ngemvume kule divayisi?"
       }
     }
   },
   "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
+    "pre_staking": "https://ice.io/pre-staking/ ",
+    "privacy": "https://ice.io/privacy/ ",
+    "terms": "https://ice.io/terms/ ",
+    "main": "https://ice.io/ "
   },
   "extra_bonus": {
-    "claim_title": "Today’s Bonus",
-    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
-    "link": "Find out more",
-    "extra_message": "You have received your daily extra bonus on your earning rate",
-    "expired_title": "Bonus Expired",
-    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
-    "result_title": "Congratulations"
+    "claim_title": "Ibhonasi Yanamuhla",
+    "claim_message": "Isikhathi sebhonasi yakho yanamuhla, sicela uchofoze inkinobho ethi[[:bold]] \"Mangalela Ibhonasi\"[[/:bold]] ngezansi.",
+    "link": "Thola okwengeziwe",
+    "extra_message": "Uthole ibhonasi yakho yansuku zonke eyengeziwe ngezinga lakho lomholo.",
+    "expired_title": "Ibhonasi Iphelelwe Isikhathi",
+    "expired_message": "Ngeshwa, ibhonasi yanamuhla iphelelwe yisikhathi. Hlala ubukele ukuze uthole isaziso esilandelayo!",
+    "result_title": "Siyakuhalalisela"
+  },
+  "early_access": {
+    "title": "Ukufinyelela Ngaphambili",
+    "message_part1": "Thola amazwibela ohlelo lokusebenza [[:bold]]lweqhwa[[/:bold]] ngaphambi kokukhishwa kwethu [[:bold]]okusemthethweni okuzayo.[[/:bold]]",
+    "message_part2": "Wonke amabhalansi azosethwa kabusha abe ngu- 0 ngedethi yokukhishwa. Ithimba lakho, nokho, lizohlala linjalo.",
+    "message_part3": "Siyabonga ngokusekela kwakho!",
+    "checkbox_description": "Ngivumile! Ungaphinde ubonise lesi sigelekeqe."
+  },
+  "mining_notice": {
+    "title": "Isaziso",
+    "message": "Siyabonga ngentshisekelo yakho yokuzuza[[:bold]] iqhwa![[/:bold]] Okwamanje silungisa ubuchwepheshe bethu futhi ukungena akutholakali okwamanje. Leli yithuba lakho lokugxila ekwakheni iqembu lakho nasekukhuliseni umphakathi wakho omncane.",
+    "message_footer": "Hlala ubukele ukuze uthole izibuyekezo eziteshini zethu [[:twitter]]ze-Twitter[[/:twitter]] ne-[[:telegram]]Telegram[[/:telegram]]."
+  },
+  "qr_code": {
+    "description": "Skena ikhodi ye-QR ukuze ujoyine ithimba lami."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Hlanganyela nathi ku-TikTok",
+      "description": "Besifuna nje ukufinyelela futhi sikwazise ngomphakathi wethu omusha othokozisayo ku-TikTok. Sabelana ngokuqukethwe okujabulisayo nokufundisayo mayelana nemali yethu yedijithali, iqhwa, futhi singathanda ukuthi usijoyine!"
+    },
+    "youtube": {
+      "title": "Sijoyine ku-YouTube",
+      "description": "Kusukela ezifundweni zokuthi ungathola kanjani iqhwa, izibuyekezo mayelana nezici ezintsha, ngisho nokuqukethwe komphakathi okujabulisayo, isiteshi sethu se-YouTube siyindawo ekahle yokuhlala unolwazi lwakamuva."
+    },
+    "linkedin": {
+      "title": "Hlanganyela nathi ku-LinkedIn",
+      "description": "Ukujoyina umphakathi weqhwa ku-LinkedIn kuyindlela enhle yokuhlala unolwazi mayelana nentuthuko yakamuva kanye nokuxhumana nabantu abanomqondo ofanayo nabanentshisekelo ngekusasa lezinhlobo zemali zedijithali njengawe."
+    },
+    "facebook": {
+      "title": "Hlanganyela nathi kuFacebook",
+      "description_part1": "Sincoma kakhulu ukunikeza ikhasi lethu le-Facebook ukulandela.",
+      "description_part2": "Ngeke nje kukusize ukuthi uhlale unolwazi lwakamuva ngakho konke okwenzekayo ngephrojekthi yeqhwa, kodwa futhi kuyindlela enhle yokuxhumana nomphakathi wethu futhi ube yingxenye yengxoxo."
+    },
+    "instagram": {
+      "title": "Hlanganyela nathi ku-Instagram",
+      "description_part1": "Ukusilandela ku-Instagram kuyindlela enhle yokuhlala unolwazi futhi uxhumane nabanye abasebenzisi nabo abathanda iqhwa",
+      "description_part2": "Futhi, uzoba ngowokuqala ukwazi mayelana nanoma yiziphi izici ezintsha noma amaphromoshini esiwaqalisayo."
+    }
   }
 }
