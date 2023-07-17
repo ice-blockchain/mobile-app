@@ -13,7 +13,7 @@ import {
 } from '@store/modules/Tokenomics/selectors';
 import {ArrowDown} from '@svg/ArrowDown';
 import {ArrowUp} from '@svg/ArrowUp';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -74,12 +74,11 @@ export const Wallet = memo(({darkMode}: Props) => {
 
           <IceLabel
             color={darkMode ? COLORS.primaryDark : COLORS.white}
-            textStyle={
-              darkMode
-                ? styles.balanceCurrencyTextDarkMode
-                : styles.balanceCurrencyText
-            }
-            iconOffsetY={1}
+            textStyle={[
+              styles.balanceCurrencyText,
+              darkMode ? styles.balanceCurrencyTextDarkMode : null,
+            ]}
+            iconOffsetY={3}
             iconSize={rem(20)}
           />
         </View>
@@ -144,9 +143,10 @@ const styles = StyleSheet.create({
   },
   balanceCurrencyText: {
     ...font(24, 29, 'semibold'),
+    marginLeft: isRTL ? rem(8) : 0,
   },
   balanceCurrencyTextDarkMode: {
-    ...font(24, 29, 'semibold', 'primaryDark'),
+    color: COLORS.primaryDark,
   },
   miningRate: {
     marginTop: rem(10),

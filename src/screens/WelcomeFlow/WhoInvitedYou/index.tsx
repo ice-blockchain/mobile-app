@@ -55,7 +55,6 @@ export const WhoInvitedYou = () => {
           errorText={error}
           validated={isReferralUpdated}
           postfix={<QRCodeButton onUsernameDetect={onChangeRefUsername} />}
-          style={styles.input}
         />
       }
       info={
@@ -88,10 +87,6 @@ const styles = StyleSheet.create({
   },
   infoTextContainer: {
     marginRight: SCREEN_SIDE_OFFSET,
-  },
-  input: {
-    // fix for RTL languages
-    textAlign: 'left',
   },
   tooltipStyle: {
     width: rem(260),

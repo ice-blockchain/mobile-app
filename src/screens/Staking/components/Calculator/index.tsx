@@ -95,13 +95,15 @@ export const Calculator = memo(
           )}
         </View>
         {miningRate && (
-          <Text style={styles.currentRateText}>
-            {t('staking.current_rate').toUpperCase()}:{' '}
-            {formatNumberString(
-              miningRate.positiveTotalNoPreStakingBonus.amount,
-            )}{' '}
-            <IceLabel iconSize={14} label={t('general.ice_per_hour')} />
-          </Text>
+          <View style={styles.currentRateContainer}>
+            <Text style={styles.currentRateText}>
+              {t('staking.current_rate').toUpperCase()}:{' '}
+              {formatNumberString(
+                miningRate.positiveTotalNoPreStakingBonus.amount,
+              )}{' '}
+              <IceLabel iconSize={14} label={t('general.ice_per_hour')} />
+            </Text>
+          </View>
         )}
         <View style={styles.sliderInfo}>
           <YearsIcon
@@ -191,9 +193,14 @@ const styles = StyleSheet.create({
     ...font(28, 36, 'bold', 'shamrock', 'auto'),
     textAlignVertical: 'center',
   },
+  currentRateContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   currentRateText: {
     marginVertical: rem(4),
-    ...font(13, 18, 'bold', 'periwinkleGray', 'center'),
+    ...font(13, 18, 'bold', 'periwinkleGray'),
     textAlignVertical: 'center',
   },
   sliderInfo: {

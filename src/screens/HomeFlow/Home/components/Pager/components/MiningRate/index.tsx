@@ -84,9 +84,9 @@ export const MiningRate = memo(({darkMode}: Props) => {
           label={t('general.ice_per_hour')}
         />
         {!!miningRates.total.bonuses?.total && (
-          <Text style={styles.rateIncreaseText}>
-            +{formatNumber(miningRates.total.bonuses.total)}%
-          </Text>
+          <Text style={styles.rateIncreaseText}>{`\u200E+${formatNumber(
+            miningRates.total.bonuses.total,
+          )}%`}</Text>
         )}
       </View>
       <View style={styles.baseContainer}>
@@ -120,7 +120,7 @@ export const MiningRate = memo(({darkMode}: Props) => {
           <AnimatedNumberText
             value={totalBonuses}
             style={styles.iconValueText}
-            textDecorator={value => `+${formatNumber(value)}%`}
+            textDecorator={value => `\u200E+${formatNumber(value)}%`}
           />
         </View>
         <View style={styles.iconContainer}>
@@ -128,7 +128,7 @@ export const MiningRate = memo(({darkMode}: Props) => {
           <AnimatedNumberText
             value={extraBonuses}
             style={styles.iconValueText}
-            textDecorator={value => `+${formatNumber(value)}%`}
+            textDecorator={value => `\u200E+${formatNumber(value)}%`}
           />
         </View>
         <View style={styles.iconContainer}>
@@ -136,7 +136,7 @@ export const MiningRate = memo(({darkMode}: Props) => {
           <AnimatedNumberText
             value={prestackingBonuses}
             style={styles.iconValueText}
-            textDecorator={value => `+${formatNumber(value)}%`}
+            textDecorator={value => `\u200E+${formatNumber(value)}%`}
           />
         </View>
       </View>

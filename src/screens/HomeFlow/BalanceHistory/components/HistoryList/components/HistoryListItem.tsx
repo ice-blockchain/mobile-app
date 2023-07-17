@@ -59,7 +59,7 @@ export const HistoryListItem = ({balanceDiff, time}: Props) => {
         />
         {isRTL && (
           <Text style={styles.adsDiffValueText}>
-            {balanceDiff.negative ? '-' : '+'}
+            {balanceDiff.negative ? ' -' : ' +'}
           </Text>
         )}
         <IceLabel
@@ -70,8 +70,7 @@ export const HistoryListItem = ({balanceDiff, time}: Props) => {
         />
       </View>
       <Text style={styles.relDiffText}>
-        {balanceDiff.bonus > 0 && '+'}
-        {balanceDiff.bonus}%
+        {`\u200E${balanceDiff.bonus > 0 ? '+' : ''}${balanceDiff.bonus}%`}
       </Text>
       <ClockIcon width={rem(14)} height={rem(14)} color={COLORS.primaryDark} />
       <Text style={styles.timeText}>{dayjs(time).format('LT')}</Text>
@@ -123,10 +122,11 @@ const styles = StyleSheet.create({
   },
   adsDiffDecimalsText: {
     ...font(10, 12, 'bold', 'primaryDark'),
-    marginRight: rem(4),
+    marginRight: isRTL ? 0 : rem(4),
   },
   iceLabelText: {
     ...font(17, 22, 'semibold', 'primaryDark'),
+    marginLeft: isRTL ? rem(4) : 0,
   },
   relDiffText: {
     ...font(14, 20, 'medium', 'primaryLight'),
