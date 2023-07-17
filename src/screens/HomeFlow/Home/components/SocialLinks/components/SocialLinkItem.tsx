@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.dodgerBlue,
   },
   icon: {
-    width: rem(16),
-    height: rem(16),
+    width: rem(20),
+    height: rem(20),
   },
 });
