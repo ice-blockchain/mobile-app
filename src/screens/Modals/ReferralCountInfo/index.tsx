@@ -34,7 +34,7 @@ export const ReferralCountInfo = () => {
 
   const [containerWidth, setContainerWidth] = useState(0);
 
-  const onLayoutContainer = useCallback(
+  const onContainerLayout = useCallback(
     ({
       nativeEvent: {
         layout: {width},
@@ -82,7 +82,7 @@ export const ReferralCountInfo = () => {
         />
         <View
           style={[styles.container, containerStyle]}
-          onLayout={onLayoutContainer}>
+          onLayout={onContainerLayout}>
           <View style={styles.cell}>
             <Text style={styles.label}>{t('users.referralType.T1')}</Text>
             <Text style={styles.value}>{user?.t1ReferralCount ?? 0}</Text>
