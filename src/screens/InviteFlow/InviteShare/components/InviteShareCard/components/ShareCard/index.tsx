@@ -41,10 +41,12 @@ export const ShareCard = <P,>({buttons, onButtonPress, children}: Props<P>) => {
   );
 };
 
+const CONTAINER_TOP_RADIUS = rem(30);
+
 const styles = StyleSheet.create({
   container: {
-    borderTopLeftRadius: rem(30),
-    borderTopRightRadius: rem(30),
+    borderTopLeftRadius: CONTAINER_TOP_RADIUS,
+    borderTopRightRadius: CONTAINER_TOP_RADIUS,
     backgroundColor: COLORS.white,
   },
   buttonsContainer: {
