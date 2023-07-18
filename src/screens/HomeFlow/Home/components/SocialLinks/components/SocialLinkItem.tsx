@@ -2,7 +2,7 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import React, {memo, useCallback} from 'react';
+import React, {useCallback} from 'react';
 import {Image, Linking} from 'react-native';
 import {ImageSourcePropType, StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
@@ -22,7 +22,7 @@ const openSchemeOrUrl = async ({
 }) => {
   try {
     if (linkScheme) {
-      const supported = await Linking.openURL(linkScheme);
+      const supported = await Linking.canOpenURL(linkScheme);
 
       if (supported) {
         return Linking.openURL(linkScheme);
@@ -37,7 +37,10 @@ const openSchemeOrUrl = async ({
   return Linking.openURL(linkUrl);
 };
 
-export const SocialLinkItem = memo(({icon, linkScheme, linkUrl}: Props) => {
+const CONTAINER_SIZE = rem(36);
+const ICON_SIZE = rem(20);
+
+export const SocialLinkItem = ({icon, linkScheme, linkUrl}: Props) => {
   const onPress = useCallback(() => {
     openSchemeOrUrl({
       linkScheme,
@@ -50,19 +53,19 @@ export const SocialLinkItem = memo(({icon, linkScheme, linkUrl}: Props) => {
       <Image style={styles.icon} source={icon} resizeMode={'contain'} />
     </Touchable>
   );
-});
+};
 
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: rem(36),
-    height: rem(36),
+    width: CONTAINER_SIZE,
+    height: CONTAINER_SIZE,
     borderRadius: rem(12),
     backgroundColor: COLORS.dodgerBlue,
   },
   icon: {
-    width: rem(20),
-    height: rem(20),
+    width: ICON_SIZE,
+    height: ICON_SIZE,
   },
 });
