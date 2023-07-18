@@ -114,7 +114,7 @@ export const setDayjsLocale = (locale: SupportedLocale) => {
       require('dayjs/locale/uk');
       break;
     case 'pa':
-      require('dayjs/locale/pa');
+      require('dayjs/locale/pa-in');
       break;
     default:
       logError(`Setup '${locale}' locale properly for 'dayjs'`);
