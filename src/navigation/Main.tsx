@@ -4,6 +4,7 @@ import {BadgeType} from '@api/achievements/types';
 import {NotificationDeliveryChannel} from '@api/notifications/types';
 import {Country} from '@constants/countries';
 import {commonStyles} from '@constants/styles';
+import {ViewMeasurementsResult} from '@ice/react-native';
 import {MainTabBar} from '@navigation/components/MainTabBar';
 import {HomeIcon} from '@navigation/components/MainTabBar/components/Icons/HomeIcon';
 import {NewsIcon} from '@navigation/components/MainTabBar/components/Icons/NewsIcon';
@@ -46,6 +47,7 @@ import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
 import {ProfilePrivacyEditStep1} from '@screens/Modals/ProfilePrivacyEdit/step1';
 import {ProfilePrivacyEditStep2} from '@screens/Modals/ProfilePrivacyEdit/step2';
 import {ProfilePrivacyEditStep3} from '@screens/Modals/ProfilePrivacyEdit/step3';
+import {ReferralCountInfo} from '@screens/Modals/ReferralCountInfo';
 import {Tooltip} from '@screens/Modals/Tooltip';
 import {News} from '@screens/News';
 import {Badges} from '@screens/ProfileFlow/Badges';
@@ -121,6 +123,10 @@ export type MainStackParamList = {
     coords: Coordinates;
     buttons: ContextualMenuButton[];
     onClose?: () => void;
+  };
+  ReferralCountInfo: {
+    hostViewParams: ViewMeasurementsResult;
+    userId: string;
   };
   InAppNotifications: undefined;
   CountrySelect: {
@@ -358,6 +364,11 @@ export function MainNavigator() {
       <MainStack.Screen
         name="ContextualMenu"
         component={ContextualMenu}
+        options={modalOptions}
+      />
+      <MainStack.Screen
+        name="ReferralCountInfo"
+        component={ReferralCountInfo}
         options={modalOptions}
       />
       <MainStack.Screen

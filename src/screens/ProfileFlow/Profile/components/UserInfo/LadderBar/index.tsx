@@ -2,6 +2,9 @@
 
 import {User} from '@api/user/types';
 import {SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
+import {MainNavigationParams} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {LadderItem} from '@screens/ProfileFlow/Profile/components/UserInfo/LadderBar/components/LadderItem';
 import {
   isPrivacyInfoShownSelector,
@@ -10,8 +13,8 @@ import {
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {globalRankSelector} from '@store/modules/Tokenomics/selectors';
 import {t} from '@translations/i18n';
-import React, {memo} from 'react';
-import {StyleSheet, View} from 'react-native';
+import React, {memo, useCallback} from 'react';
+import {MeasureOnSuccessCallback, StyleSheet, View} from 'react-native';
 import {useSelector} from 'react-redux';
 
 const LADDER_ITEMS_COUNT = 3;
@@ -25,6 +28,9 @@ type Props = {
 
 export const LadderBar = memo(
   ({user, isProfilePrivacyEditMode = false}: Props) => {
+    const navigation =
+      useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
+
     const authUser = useSelector(userSelector);
     const globalRank = useSelector(globalRankSelector(user.id));
     const isPrivacyInfoShown = useSelector(isPrivacyInfoShownSelector);
@@ -34,6 +40,23 @@ export const LadderBar = memo(
       AchievementsSelectors.getAchievementsByUserId({userId: user.id}),
     );
     const isOwner = user?.id === authUser?.id;
+
+    const onShowReferralInfo: MeasureOnSuccessCallback = useCallback(
+      (x, y, width, height, pageX, pageY) => {
+        navigation.navigate('ReferralCountInfo', {
+          hostViewParams: {
+            x,
+            y,
+            width,
+            height,
+            pageX,
+            pageY,
+          },
+          userId: user.id,
+        });
+      },
+      [navigation, user.id],
+    );
 
     return (
       <View style={styles.ladder}>
@@ -62,6 +85,7 @@ export const LadderBar = memo(
                 (!isPrivacyInfoShown || isProfilePrivacyEditMode)
               : hiddenElements.includes('referralCount')
           }
+          onShowInfo={onShowReferralInfo}
         />
         <LadderItem
           title={t('global.level').toUpperCase()}
