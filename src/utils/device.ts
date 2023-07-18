@@ -22,12 +22,22 @@ export function hapticFeedback(type: HapticFeedbackTypes = 'soft') {
 }
 
 export const openSMS = async (phoneNumber: string, message: string) => {
+  const separator = isIOS ? '&' : '?';
+  const url = `sms:${phoneNumber}${separator}body=${message}`;
+  return await openLink(url);
+};
+
+export const openLink = async (url: string) => {
   try {
-    const separator = isIOS ? '&' : '?';
-    const url = `sms:${phoneNumber}${separator}body=${message}`;
-    await Linking.openURL(url);
+    const supported = await Linking.canOpenURL(url);
+    if (supported) {
+      await Linking.openURL(url);
+      return true;
+    }
+    return false;
   } catch (error) {
     logError(error);
+    return false;
   }
 };
 

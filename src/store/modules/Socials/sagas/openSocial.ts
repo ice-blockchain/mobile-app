@@ -8,7 +8,7 @@ import {socialsByUserIdSelector} from '@store/modules/Socials/selectors';
 import {SocialType} from '@store/modules/Socials/types';
 import {openSocial} from '@store/modules/Socials/utils/openSocial';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
-import {Linking} from 'react-native';
+import {openLink} from '@utils/device';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
 export function* openSocialSaga(typeToShow: SocialType) {
@@ -45,25 +45,17 @@ export function* openSocialSaga(typeToShow: SocialType) {
       }),
     );
 
-    let linkApp = socialData[typeToShow].linkApp;
-
     yield put(
       TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.create({
         forceStartMining: true,
       }),
     );
-    if (typeToShow === 'tiktok') {
-      /*
-       * TikTok doesn't support canOpenURL
-       */
-      Linking.openURL(linkApp);
-    } else {
-      Linking.canOpenURL(linkApp).then(supported => {
-        if (supported) {
-          Linking.openURL(linkApp);
-        }
-        Linking.openURL(socialData[typeToShow].linkWeb);
-      });
+    const opened: SagaReturnType<typeof openLink> = yield call(
+      openLink,
+      socialData[typeToShow].linkApp,
+    );
+    if (!opened) {
+      yield call(openLink, socialData[typeToShow].linkWeb);
     }
     return {status: 'opened'};
   } else {

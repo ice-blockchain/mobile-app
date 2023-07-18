@@ -15,12 +15,12 @@ import {shareSingle, Social} from '@services/share';
 import {usernameSelector} from '@store/modules/Account/selectors';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {t} from '@translations/i18n';
+import {openSMS} from '@utils/device';
 import {buildUsernameLink} from '@utils/username';
 import React, {createRef} from 'react';
-import {Linking, Share as ShareMore, Vibration} from 'react-native';
+import {Share as ShareMore, Vibration} from 'react-native';
 import {openComposer} from 'react-native-email-link';
 import {useSelector} from 'react-redux';
-import {isIOS} from 'rn-units';
 
 const buttons: ShareButton<{url: string; message: string}>[] = [
   {
@@ -66,9 +66,8 @@ const buttons: ShareButton<{url: string; message: string}>[] = [
     type: 'Sms',
     title: t('invite_share.sms'),
     icon: Images.share.sms,
-    onPress: ({url, message}) => {
-      const divider = isIOS ? '&' : '?';
-      return Linking.openURL(`sms:${divider}body=${message} ${url}`);
+    onPress: async ({url, message}) => {
+      await openSMS('', `${message} ${url}`);
     },
   },
   {
@@ -85,10 +84,11 @@ const buttons: ShareButton<{url: string; message: string}>[] = [
     type: 'More',
     title: t('invite_share.more'),
     icon: Images.share.more,
-    onPress: ({url}) =>
-      ShareMore.share({
+    onPress: async ({url}) => {
+      await ShareMore.share({
         message: `${t('invite_share.share_message')} ${url}`,
-      }),
+      });
+    },
   },
 ];
 

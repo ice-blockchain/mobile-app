@@ -3,11 +3,10 @@
 import {LINKS} from '@constants/links';
 import {Images} from '@images';
 import {navigate} from '@navigation/utils';
-import {logError} from '@services/logging';
 import {UpdateIcon} from '@svg/UpdateIcon';
 import {t} from '@translations/i18n';
+import {openLink} from '@utils/device';
 import React from 'react';
-import {Linking} from 'react-native';
 
 export const openUpdateRequired = () => {
   let resultResolve: () => void;
@@ -23,7 +22,7 @@ export const openUpdateRequired = () => {
         {
           icon: <UpdateIcon />,
           text: t('pop_up.please_update'),
-          onPress: () => Linking.openURL(LINKS.APP_UPDATE).catch(logError),
+          onPress: () => openLink(LINKS.APP_UPDATE),
         },
       ],
       dismissOnOutsideTouch: false,

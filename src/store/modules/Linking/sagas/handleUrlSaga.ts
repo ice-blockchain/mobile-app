@@ -15,8 +15,7 @@ import {LinkingActions} from '@store/modules/Linking/actions';
 import {NewsActions} from '@store/modules/News/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {waitForSelector} from '@store/utils/sagas/effects';
-import {openLinkWithInAppBrowser} from '@utils/device';
-import {Linking} from 'react-native';
+import {openLink, openLinkWithInAppBrowser} from '@utils/device';
 import {call, put} from 'redux-saga/effects';
 
 const actionCreator = LinkingActions.HANDLE_URL.STATE.create;
@@ -132,7 +131,7 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
     default:
       if (!handledInApp) {
         if (!isDeeplink && !isUniversalLink) {
-          Linking.openURL(url).catch(logError);
+          openLink(url);
         } else {
           logError(`Unable to handle deeplink: ${url}`);
         }

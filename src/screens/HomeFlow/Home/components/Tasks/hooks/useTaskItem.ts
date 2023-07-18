@@ -6,14 +6,12 @@ import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {TASKS} from '@screens/HomeFlow/Home/components/Tasks/tasks';
-import {logError} from '@services/logging';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {t} from '@translations/i18n';
-import {openLinkWithInAppBrowser} from '@utils/device';
+import {openLink, openLinkWithInAppBrowser} from '@utils/device';
 import {useCallback} from 'react';
-import {Linking} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 export function useTaskItem(type: TaskType) {
@@ -35,18 +33,12 @@ export function useTaskItem(type: TaskType) {
         });
         break;
       case 'follow_us_on_twitter':
-        Linking.canOpenURL(LINKS.TWITTER_SCHEME)
-          .then(supported => {
-            dispatch(AchievementsActions.TASK_MARK_COMPLETED.TWITTER.create());
-            if (supported) {
-              return Linking.openURL(LINKS.TWITTER_APP_URL);
-            } else {
-              openLinkWithInAppBrowser({
-                url: LINKS.TWITTER_PROFILE_URL,
-              });
-            }
-          })
-          .catch(logError);
+        openLink(LINKS.TWITTER_APP_URL).then(opened => {
+          dispatch(AchievementsActions.TASK_MARK_COMPLETED.TWITTER.create());
+          if (!opened) {
+            openLinkWithInAppBrowser({url: LINKS.TWITTER_PROFILE_URL});
+          }
+        });
         break;
       case 'join_telegram':
         navigation.navigate('JoinTelegramPopUp');

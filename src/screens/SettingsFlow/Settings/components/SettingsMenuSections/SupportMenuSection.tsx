@@ -8,7 +8,6 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {DEFAULT_DIALOG_NO_BUTTON} from '@screens/Modals/PopUp/components/PopUpButton';
 import {MenuItem} from '@screens/SettingsFlow/Settings/components/MenuItem.tsx';
 import {SectionTitle} from '@screens/SettingsFlow/Settings/components/SectionTitle';
-import {logError} from '@services/logging';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
   AnalyticsEventLogger,
@@ -19,8 +18,8 @@ import {FeedbackIcon} from '@svg/FeedbackIcon';
 import {InviteIcon} from '@svg/InviteIcon';
 import {LogOutIcon} from '@svg/LogOutIcon';
 import {t} from '@translations/i18n';
+import {openLink} from '@utils/device';
 import React from 'react';
-import {Linking} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -36,7 +35,7 @@ export const SupportMenuSection = () => {
         description={t('settings.feedback_description')}
         renderIcon={FeedbackIcon}
         onPress={() => {
-          Linking.openURL(`mailto:${LINKS.FEEDBACK_EMAIL}`).catch(logError);
+          openLink(`mailto:${LINKS.FEEDBACK_EMAIL}`);
           AnalyticsEventLogger.trackEvent({
             eventName: EVENT_NAMES.SEND_FEEDBACK,
           });
