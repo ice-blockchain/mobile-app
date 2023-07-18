@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "Dobrodošli v Ice",
-      "description": "[[:ice]] je digitalna valuta, ki jo lahko zaslužite s svojim telefonom. Ice je v lasti in upravljanju vsakdanjih uporabnikov, kot ste vi."
+      "title": "Dobrodošli v ice",
+      "description": "[[:ice]] je digitalna valuta, ki jo lahko zaslužite s svojim telefonom. ice je v lasti in upravljanju vsakdanjih uporabnikov, kot ste vi."
     },
     "page2": {
       "title": "Planetu prijazen",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Ostanite povezani",
-      "description": "Tapnite [[:iceLogo]]za dnevno prijavo z našo brezplačno mobilno aplikacijo, ki je energijsko varčna. Vaše vsakodnevno dotikanje zagotavlja, da se Ice znajde v rokah resničnih ljudi in ne botov."
+      "description": "Tapnite [[:iceLogo]]za dnevno prijavo z našo brezplačno mobilno aplikacijo, ki je energijsko varčna. Vaše vsakodnevno dotikanje zagotavlja, da se ice znajde v rokah resničnih ljudi in ne botov."
     },
     "page5": {
       "title": "Priporočite in zaslužite",
@@ -82,7 +82,7 @@
     "contacts": {
       "empty_title": "[[:ice]] bolje je s prijatelji",
       "empty_button_title": "Dovoli dostop do stikov",
-      "empty_description": "Sinhroniziraj svoje stike in si oglej, kdo je že na [[:ice]]. V prihodnosti boste lahko pošiljali Ice vsem svojim stikom."
+      "empty_description": "Sinhroniziraj svoje stike in si oglej, kdo je že na [[:ice]]. V prihodnosti boste lahko pošiljali ice vsem svojim stikom."
     },
     "header": {
       "search_placeholder": "Iskanje uporabnikov",
@@ -105,7 +105,7 @@
       },
       "all_contacts": "Vsi stiki",
       "invite": "povabi",
-      "invitation_text": "Živijo{{name}}, rad/a bi te povabil/a na Ice."
+      "invitation_text": "Živijo{{name}}, rad/a bi te povabil/a na ice."
     },
     "tier_one": {
       "header_list": {
@@ -123,7 +123,7 @@
     "phone": "Telefon",
     "or": "ali",
     "reset_password": "Ponastavi geslo",
-    "welcome": "Dobrodošli v Ice",
+    "welcome": "Dobrodošli v ice",
     "email": "E-naslov",
     "slogan": "Globalna ponastavitev valute",
     "privacy": "Z nadaljevanjem se strinjate z našimi [[:link]]Pogoji storitve [[/:link]]in [[:link]]Pravilnikom o zasebnosti[[/:link]]"
@@ -360,7 +360,7 @@
     "feedback_title": "Pošlji povratno informacijo",
     "feedback_description": "Delite svoje misli z nami.",
     "invite_title": "Povabi prijatelja",
-    "invite_description": "Zaslužite dodatno v Ice s povabilom svojih prijateljev.",
+    "invite_description": "Zaslužite dodatno v ice s povabilom svojih prijateljev.",
     "delete_title": "Izbriši račun",
     "delete_description": "Izbrišite svoj račun",
     "delete_confirmation_title": "Ali ste prepričani, da želite odstraniti račun?",
@@ -423,7 +423,7 @@
         },
         "system": {
           "title": "Sistem",
-          "description": "Prejemajte pomembna obvestila o aplikaciji Ice."
+          "description": "Prejemajte pomembna obvestila o aplikaciji ice."
         }
       }
     },
@@ -462,8 +462,8 @@
     "copy_link": "Kopiraj povezavo",
     "more": "Več",
     "copied": "KOPIRANO",
-    "share_message": "Živijo ☃️ Snežak! Pridružite se moji ekipi v aplikaciji Ice in prejmite 10 kovancev Ice, ko se prijavite z mojo priporočilno kodo:",
-    "share_subject": "Pridružite se moji ekipi v aplikaciji Ice",
+    "share_message": "Živijo ☃️ Snežak! Pridružite se moji ekipi v aplikaciji ice in prejmite 10 kovancev ice, ko se prijavite z mojo priporočilno kodo:",
+    "share_subject": "Pridružite se moji ekipi v aplikaciji ice",
     "description": "Razširite novico in povabite svoje prijatelje. Zaslužiš za [[:ice]]vsako novo priporočilo, ki ga prineseš.",
     "share": "Deli"
   },
@@ -507,7 +507,7 @@
     "current_rate": "Trenutna stopnja",
     "allocation": "Dodelitev",
     "description": "Zastavljanje je postopek, ki vključuje dodelitev vaših kripto sredstev za podporo omrežju blockchain in potrjevanje transakcij.",
-    "terms_agree": "Strinjam se s [[:ice]][[:link]]Pogoji zastavljanja[[/:link]]. Vaše zaloge Ice bodo za izbrano obdobje zaklenjene.",
+    "terms_agree": "Strinjam se s [[:ice]][[:link]]Pogoji zastavljanja[[/:link]]. Vaše zaloge ice bodo za izbrano obdobje zaklenjene.",
     "stake_now": "Vnaprej zastavite zdaj!",
     "balance_label": "Zastavljeno stanje",
     "confirm_title": "Potrdite vnaprejšnje zastavljanje",
@@ -532,8 +532,8 @@
     "good_morning": "Dobro jutro",
     "good_afternoon": "Dober dan",
     "good_evening": "Dober večer",
-    "ice": "Ice",
-    "ice_per_hour": "Ice/uro",
+    "ice": "ice",
+    "ice_per_hour": "ice/uro",
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "ura",
@@ -546,7 +546,7 @@
     "views": "{{viewsCount}} ogledi"
   },
   "search": {
-    "empty": "Poiščite stike, Ice prijatelje in člane svoje mikro skupnosti.",
+    "empty": "Poiščite stike, ice prijatelje in člane svoje mikro skupnosti.",
     "nothing_is_found": "Za vašo poizvedbo ni bilo najdenega ničesar.",
     "search_by_country": "Iskanje po državah",
     "search_for_users": "Iskanje uporabnikov",
@@ -585,7 +585,7 @@
     "resurrection_no_confirm_message": "Za vedno boste izgubili svoje [[:amount]]kovance. Ste prepričani, da želite nadaljevati?",
     "resurrection_yes_confirm_message": "Obudite jih lahko le enkrat! Ste prepričani, da želite nadaljevati? [[:amount]]Kovanci se bodo vrnili na vaše stanje v naslednji uri.",
     "delete_account_confirmation_title": "Potrdite izbris",
-    "delete_account_confirmation_text": "Če izbrišete svoj račun, boste trajno izbrisali vse svoje podatke, vključno z vašim stanjem kovancev Ice. Želite nadaljevati?"
+    "delete_account_confirmation_text": "Če izbrišete svoj račun, boste trajno izbrisali vse svoje podatke, vključno z vašim stanjem kovancev ice. Želite nadaljevati?"
   },
   "periods": {
     "3_days": "3 dni",
@@ -667,7 +667,7 @@
     "snowman": {
       "title": "Snežak",
       "subtitle": "Zgradite snežni imperij",
-      "description": "Zaslužite s prijavo vsakih 24 ur, da pokažete svojo predanost omrežju Ice in dokažete, da ste človek in ne robot."
+      "description": "Zaslužite s prijavo vsakih 24 ur, da pokažete svojo predanost omrežju ice in dokažete, da ste človek in ne robot."
     },
     "ambassador": {
       "title": "Ambasador",
@@ -698,11 +698,11 @@
     "team": {
       "allow_contacts": {
         "title": "Dovolite stike",
-        "description": "Sinhroniziraj svoje stike in si oglej, kdo je že na [[:ice]]. V prihodnosti boste lahko pošiljali Ice vsem svojim stikom.[[:ice]]"
+        "description": "Sinhroniziraj svoje stike in si oglej, kdo je že na [[:ice]]. V prihodnosti boste lahko pošiljali ice vsem svojim stikom.[[:ice]]"
       },
       "confirm_phone": {
         "title": "Potrdite telefon",
-        "description": "Potrdite svojo identiteto in omogočite svojim stikom, da vedo, da ste tudi vi član omrežja Ice. Vaša telefonska številka ne bo posredovana tretjim osebam."
+        "description": "Potrdite svojo identiteto in omogočite svojim stikom, da vedo, da ste tudi vi član omrežja ice. Vaša telefonska številka ne bo posredovana tretjim osebam."
       },
       "contacts_list": {
         "title": "Seznam stikov",
@@ -761,11 +761,11 @@
         "description": "Prilagodite podrobnosti svojega profila in si oglejte vse dosežke in značke, ki ste jih pridobili. Tukaj uporabite kalkulator, da lahko ocenite svoj zaslužek."
       },
       "earningicestart": {
-        "title": "Zaslužek Ice",
+        "title": "Zaslužek ice",
         "description": "[[:ice]]Sejo prijave lahko začnete vsakih 24 ur, tako da tapnete ta gumb. Ne pozabite se vrniti vsak dan in začnite služiti!"
       },
       "earningiceseemore": {
-        "title": "Zaslužek Ice",
+        "title": "Zaslužek ice",
         "description": "Tapnite znova in si oglejte več podrobnosti o vaši trenutni seji prijave."
       },
       "stats": {
@@ -856,14 +856,14 @@
   },
   "early_access": {
     "title": "Zgodnji dostop",
-    "message_part1": "[[:bold]]Pred našo prihajajočo uradno izdajo si oglejte aplikacijo [[:bold]]Ice[[/:bold]].[[/:bold]]",
+    "message_part1": "[[:bold]]Pred našo prihajajočo uradno izdajo si oglejte aplikacijo [[:bold]]ice[[/:bold]].[[/:bold]]",
     "message_part2": "Vsa stanja bodo ponastavljena na 0 na datum objave. Vaša ekipa pa bo ostala nedotaknjena.",
     "message_part3": "Hvala za vašo podporo!",
     "checkbox_description": "Sem pripoznal! Tega pojavnega okna ne kaži več."
   },
   "mining_notice": {
     "title": "Obvestilo",
-    "message": "Hvala za vaše zanimanje za zaslužek v [[:bold]]Ice![[/:bold]] Trenutno izpopolnjujemo svojo tehnologijo in prijava trenutno ni na voljo. To je vaša priložnost, da se osredotočite na ustvarjanje svoje ekipe in rast svoje mikro skupnosti.",
+    "message": "Hvala za vaše zanimanje za zaslužek v [[:bold]]ice![[/:bold]] Trenutno izpopolnjujemo svojo tehnologijo in prijava trenutno ni na voljo. To je vaša priložnost, da se osredotočite na ustvarjanje svoje ekipe in rast svoje mikro skupnosti.",
     "message_footer": "Spremljajte novosti na naših kanalih [[:twitter]]Twitter [[/:twitter]]in [[:telegram]]Telegram[[/:telegram]]."
   },
   "qr_code": {
@@ -872,24 +872,24 @@
   "social_media": {
     "tiktok": {
       "title": "Pridružite se nam na TikToku",
-      "description": "Samo želeli smo vas obvestiti o naši razburljivi novi skupnosti na TikToku. Delimo zabavno in informativno vsebino o naši digitalni valuti, Ice, in veseli bomo, če se nam pridružite!"
+      "description": "Samo želeli smo vas obvestiti o naši razburljivi novi skupnosti na TikToku. Delimo zabavno in informativno vsebino o naši digitalni valuti, ice, in veseli bomo, če se nam pridružite!"
     },
     "youtube": {
       "title": "Pridružite se nam na YouTubu",
-      "description": "Od nasvetov, kako zaslužiti Ice, do posodobitev novih funkcij in celo zabavne vsebine skupnosti, je naš kanal YouTube popoln kraj, da ostanete na tekočem."
+      "description": "Od nasvetov, kako zaslužiti ice, do posodobitev novih funkcij in celo zabavne vsebine skupnosti, je naš kanal YouTube popoln kraj, da ostanete na tekočem."
     },
     "linkedin": {
       "title": "Pridružite se nam na LinkedInu",
-      "description": "Pridružitev skupnosti Ice na LinkedInu je odličen način, da ostanete obveščeni o najnovejših dogodkih in se povežete s podobno mislečimi posamezniki, ki so prav tako navdušeni nad prihodnostjo digitalnih valut kot vi."
+      "description": "Pridružitev skupnosti ice na LinkedInu je odličen način, da ostanete obveščeni o najnovejših dogodkih in se povežete s podobno mislečimi posamezniki, ki so prav tako navdušeni nad prihodnostjo digitalnih valut kot vi."
     },
     "facebook": {
       "title": "Pridružite se nam na Facebooku",
       "description_part1": "Toplo priporočamo, da spremljate našo Facebook stran.",
-      "description_part2": "Ne samo, da vam bo pomagal ostati na tekočem z vsem, kar se dogaja s projektom Ice, je tudi odličen način, da se povežete z našo skupnostjo in postanete del pogovora."
+      "description_part2": "Ne samo, da vam bo pomagal ostati na tekočem z vsem, kar se dogaja s projektom ice, je tudi odličen način, da se povežete z našo skupnostjo in postanete del pogovora."
     },
     "instagram": {
       "title": "Pridružite se nam na Instagramu",
-      "description_part1": "Sledenje na Instagramu je odličen način, da ostanete na tekočem in se povežete z drugimi uporabniki, ki so prav tako navdušeni nad aplikacijo Ice",
+      "description_part1": "Sledenje na Instagramu je odličen način, da ostanete na tekočem in se povežete z drugimi uporabniki, ki so prav tako navdušeni nad aplikacijo ice",
       "description_part2": "Poleg tega boste prvi izvedeli za vse nove funkcije ali promocije, ki jih uvajamo."
     }
   }

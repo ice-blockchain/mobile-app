@@ -507,7 +507,7 @@
     "current_rate": "Jelenlegi ráta",
     "allocation": "Kiosztás",
     "description": "A letétbe helyezés (staking) egy olyan folyamat, amelynek során a kriptoeszközöket a blokklánc hálózat támogatására és a tranzakciók megerősítésére kötelezed el.",
-    "terms_agree": "Elfogadom a [[:ice]] [[:link]]letétbe helyezés feltételeit[[/:link]]. Ice jövedelmeid a kiválasztott időszakra le lesznek kötve.",
+    "terms_agree": "Elfogadom a [[:ice]] [[:link]]letétbe helyezés feltételeit[[/:link]]. ice jövedelmeid a kiválasztott időszakra le lesznek kötve.",
     "stake_now": "Előzetes letétbe helyezés most!",
     "balance_label": "Letétbe helyezett egyenleg",
     "confirm_title": "Előzetes letétbe helyezés megerősítése",

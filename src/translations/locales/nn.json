@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "Velkommen til Ice",
-      "description": "[[:ice]] er en digital valuta som du kan tjene med telefonen. Ice eies og drives av hverdagsbrukere som deg selv."
+      "title": "Velkommen til ice",
+      "description": "[[:ice]] er en digital valuta som du kan tjene med telefonen. ice eies og drives av hverdagsbrukere som deg selv."
     },
     "page2": {
       "title": "Planetvennlig",
@@ -105,7 +105,7 @@
       },
       "all_contacts": "Alle kontakter",
       "invite": "invitere",
-      "invitation_text": "Hei {{name}}, jeg vil gjerne invitere deg til å bli med i Ice."
+      "invitation_text": "Hei {{name}}, jeg vil gjerne invitere deg til å bli med i ice."
     },
     "tier_one": {
       "header_list": {
@@ -123,7 +123,7 @@
     "phone": "Telefon",
     "or": "eller",
     "reset_password": "Tilbakestill passord",
-    "welcome": "Velkommen til Ice",
+    "welcome": "Velkommen til ice",
     "email": "Epost",
     "slogan": "Tilbakestilling av global valuta",
     "privacy": "Ved å fortsette, godtar du våre [[:link]]tjenestevilkår[[/:link]] og [[:link]]personvernregler[[/:link]]"
@@ -462,7 +462,7 @@
     "copy_link": "Kopier lenke",
     "more": "Mer",
     "copied": "KOPIERT",
-    "share_message": "Hei ☃️ snømann! Bli med teamet mitt på Ice og motta 10 ice-coins når du registrerer deg ved hjelp av henvisningskoden min:",
+    "share_message": "Hei ☃️ snømann! Bli med teamet mitt på ice og motta 10 ice-coins når du registrerer deg ved hjelp av henvisningskoden min:",
     "share_subject": "Bli med teamet mitt på ice",
     "description": "Spre ordet og inviter vennene dine. Du tjener [[:ice]] for hver nye henvisning du tar med.",
     "share": "Del"
@@ -507,7 +507,7 @@
     "current_rate": "Nåværende rate",
     "allocation": "Tildeling",
     "description": "Staking er en prosess som innebærer å forplikte krypto-aktivaene dine til å støtte et blockchain-nettverk og bekrefte transaksjoner.",
-    "terms_agree": "Jeg godtar[[:ice]] [[:link]]Staking-vilkårene[[/:link]]. Ice-beholdningen din vil bli låst for den valgte perioden.",
+    "terms_agree": "Jeg godtar[[:ice]] [[:link]]Staking-vilkårene[[/:link]]. ice-beholdningen din vil bli låst for den valgte perioden.",
     "stake_now": "Forhånds-stake nå!",
     "balance_label": "Staket saldo",
     "confirm_title": "Bekreft forhånds-staking",
@@ -761,11 +761,11 @@
         "description": "Tilpass profildetaljene dine og se alle prestasjonene og merkene du har oppnådd. Bruk kalkulatoren herfra, slik at du kan beregne inntektene dine."
       },
       "earningicestart": {
-        "title": "Tjen penger på Ice",
+        "title": "Tjen penger på ice",
         "description": "Du kan starte[[:ice]]innsjekkingsøkten hver 24. time ved å trykke på denne knappen. Ikke glem å komme tilbake hver dag og begynne å tjene penger!"
       },
       "earningiceseemore": {
-        "title": "Tjen penger på Ice",
+        "title": "Tjen penger på ice",
         "description": "Trykk igjen og se mer informasjon om din nåværende innsjekkingsøkt."
       },
       "stats": {
@@ -856,7 +856,7 @@
   },
   "early_access": {
     "title": "Tidlig tilgang",
-    "message_part1": "Få en sniktitt på [[:bold]]Ice[[/:bold]]-appen før vår [[:bold]]kommende offisielle utgivelse.[[/:bold]]",
+    "message_part1": "Få en sniktitt på [[:bold]]ice[[/:bold]]-appen før vår [[:bold]]kommende offisielle utgivelse.[[/:bold]]",
     "message_part2": "Alle saldoer vil bli tilbakestilt til 0 på utgivelsesdatoen. Teamet ditt vil imidlertid forbli intakt.",
     "message_part3": "Takk for din støtte!",
     "checkbox_description": "Jeg har bekreftet! Ikke vis dette popup-vinduet igjen."
