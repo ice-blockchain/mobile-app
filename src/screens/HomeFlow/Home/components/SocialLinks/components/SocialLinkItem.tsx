@@ -2,8 +2,9 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {openLink} from '@utils/device';
 import React, {useCallback} from 'react';
-import {Image, Linking} from 'react-native';
+import {Image} from 'react-native';
 import {ImageSourcePropType, StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
@@ -20,21 +21,11 @@ const openSchemeOrUrl = async ({
   linkScheme?: string;
   linkUrl: string;
 }) => {
-  try {
-    if (linkScheme) {
-      const supported = await Linking.canOpenURL(linkScheme);
+  const supportedLinkScheme = linkScheme ? await openLink(linkScheme) : false;
 
-      if (supported) {
-        return Linking.openURL(linkScheme);
-      }
-    }
-  } catch (error) {
-    /**
-     * Ignore. We will try to open linkUrl
-     */
+  if (!supportedLinkScheme) {
+    await openLink(linkUrl);
   }
-
-  return Linking.openURL(linkUrl);
 };
 
 const CONTAINER_SIZE = rem(36);
