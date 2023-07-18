@@ -23,7 +23,7 @@ export const InviteShare = memo(() => {
       <Header color={COLORS.primaryDark} title={t('invite_share.title')} />
       <View style={commonStyles.flexOne}>
         <View style={styles.shareSubstrate} />
-        <LinesBackground style={styles.bg} />
+        <LinesBackground style={styles.background} />
         <Text style={styles.description}>
           {replaceString(
             t('invite_share.description'),
@@ -40,10 +40,12 @@ export const InviteShare = memo(() => {
   );
 });
 
+const CONTAINER_TOP_RADIUS = rem(30);
+
 const styles = StyleSheet.create({
-  bg: {
-    borderTopLeftRadius: rem(30),
-    borderTopRightRadius: rem(30),
+  background: {
+    borderTopLeftRadius: CONTAINER_TOP_RADIUS,
+    borderTopRightRadius: CONTAINER_TOP_RADIUS,
   },
   description: {
     marginTop: rem(45),
@@ -54,6 +56,9 @@ const styles = StyleSheet.create({
     marginVertical: rem(16),
     marginStart: rem(21),
     flex: 1,
+    /**
+     * need to allow the image to be stretched to the full width of the screen
+     */
     width: undefined,
   },
   shareSubstrate: {
