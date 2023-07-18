@@ -4,6 +4,7 @@ import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {useNavigation} from '@react-navigation/native';
 import {BackButtonIcon} from '@svg/BackButtonIcon';
+import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleProp, StyleSheet, Text, ViewStyle} from 'react-native';
@@ -44,11 +45,12 @@ const buttonHitSlop = {top: 15, left: 0, bottom: 0, right: 15};
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: isRTL ? 'row-reverse' : 'row',
     alignItems: 'center',
   },
   labelText: {
-    marginLeft: rem(12),
+    marginLeft: isRTL ? 0 : rem(12),
+    marginRight: isRTL ? rem(12) : 0,
     ...font(16, 21, 'regular'),
   },
 });

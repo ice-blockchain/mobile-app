@@ -166,6 +166,7 @@ const styles = StyleSheet.create({
   },
   rateValueText: {
     ...font(17, 22, 'bold'),
+    marginLeft: isRTL ? rem(6) : 0,
   },
   infoButton: {
     position: 'absolute',

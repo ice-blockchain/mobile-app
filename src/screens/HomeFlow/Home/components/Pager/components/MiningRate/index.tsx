@@ -78,7 +78,7 @@ export const MiningRate = memo(({darkMode}: Props) => {
         />
 
         <IceLabel
-          textStyle={styles.rateValueText}
+          textStyle={[styles.rateValueText, styles.marginLeft]}
           iconOffsetY={0}
           iconSize={16}
           label={t('general.ice_per_hour')}
@@ -105,9 +105,10 @@ export const MiningRate = memo(({darkMode}: Props) => {
         />
 
         <IceLabel
-          textStyle={
-            darkMode ? styles.baseValueTextDarkMode : styles.baseValueText
-          }
+          textStyle={[
+            darkMode ? styles.baseValueTextDarkMode : styles.baseValueText,
+            styles.marginLeft,
+          ]}
           color={color}
           iconOffsetY={0}
           iconSize={12}
@@ -192,6 +193,9 @@ const styles = StyleSheet.create({
   },
   baseValueContainer: {
     marginHorizontal: rem(4),
+  },
+  marginLeft: {
+    marginLeft: isRTL ? rem(6) : 0,
   },
   baseValueText: {
     ...font(12, 16, 'medium'),

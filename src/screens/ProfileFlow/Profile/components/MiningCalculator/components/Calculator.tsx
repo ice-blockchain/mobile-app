@@ -88,7 +88,11 @@ export const Calculator = memo(
                       })}`
                     }
                   />{' '}
-                  <IceLabel iconSize={24} label={t('general.ice_per_hour')} />
+                  <IceLabel
+                    iconSize={24}
+                    iconOffsetY={isAndroid ? 2 : -4}
+                    label={t('general.ice_per_hour')}
+                  />
                 </>
               ) : null}
             </Text>

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {IceLabel, IceLabelProps} from '@components/Labels/IceLabel';
-import {replaceString, t, tagRegex} from '@translations/i18n';
+import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {ReactNode} from 'react';
 import {ImageSourcePropType, StyleSheet, Text} from 'react-native';
@@ -55,7 +55,7 @@ const welcomeDescription = () => {
   let text = replaceString(
     t('welcome.page1.description'),
     tagRegex('ice'),
-    (match, index) => <TextIceLabel key={match + index} />,
+    (match, index) => <TextIceLabel reversed={isRTL} key={match + index} />,
   );
   return <DescriptionWrapper>{text}</DescriptionWrapper>;
 };
@@ -64,7 +64,7 @@ const planetDescription = () => {
   let text = replaceString(
     t('welcome.page2.description'),
     tagRegex('ice'),
-    (match, index) => <TextIceLabel key={match + index} />,
+    (match, index) => <TextIceLabel reversed={isRTL} key={match + index} />,
   );
   return <DescriptionWrapper>{text}</DescriptionWrapper>;
 };

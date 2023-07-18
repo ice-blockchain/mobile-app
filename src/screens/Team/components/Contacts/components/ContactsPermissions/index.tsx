@@ -6,7 +6,7 @@ import {COLORS} from '@constants/colors';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {AllowContactsButton} from '@screens/Team/components/Contacts/components/ContactsPermissions/components/AllowContactsButton';
 import {useAllowContactsWalkthrough} from '@screens/Team/components/Contacts/components/ContactsPermissions/hooks/useAllowContactsWalkthrough';
-import {replaceString, t, tagRegex} from '@translations/i18n';
+import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
@@ -32,7 +32,8 @@ export const ContactsPermissions = () => {
                 key={match + index}
                 iconSize={28}
                 color={COLORS.primaryDark}
-                iconOffsetY={isAndroid ? 5 : 3}
+                iconOffsetY={isAndroid ? 5 : 2}
+                reversed={isRTL}
               />
             ),
           )}

@@ -4,7 +4,7 @@ import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
 import {smallHeightDevice} from '@constants/styles';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
@@ -76,7 +76,8 @@ const styles = StyleSheet.create({
     ...font(18, 24, 'regular'),
   },
   iceLabel: {
-    marginLeft: rem(4),
+    marginLeft: isRTL ? 0 : rem(6),
+    marginRight: !isRTL ? 0 : rem(6),
   },
   iceLabelText: {
     ...font(24, 30, 'bold'),
