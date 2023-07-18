@@ -16,7 +16,13 @@ export const useImageSizedUri = (uri: string, initialSize: number) => {
       const fullScreeUri = getImageUriForSize(uri, {
         width: FULL_SCREEN_IMAGE_SIZE,
       });
-      Image.prefetch(fullScreeUri).then(() => setImageUri(fullScreeUri));
+      Image.prefetch(fullScreeUri)
+        .then(success => {
+          if (success) {
+            setImageUri(fullScreeUri);
+          }
+        })
+        .catch();
     }
   }, [isRemote, uri]);
 
