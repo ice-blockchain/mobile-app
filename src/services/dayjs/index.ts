@@ -116,6 +116,39 @@ export const setDayjsLocale = (locale: SupportedLocale) => {
     case 'pa':
       require('dayjs/locale/pa-in');
       break;
+    case 'af':
+      require('dayjs/locale/af');
+      break;
+    case 'am':
+      require('dayjs/locale/am');
+      break;
+    case 'kn':
+      require('dayjs/locale/kn');
+      break;
+    case 'ru':
+      require('dayjs/locale/ru');
+      break;
+    case 'sk':
+      require('dayjs/locale/sk');
+      break;
+    case 'sl':
+      require('dayjs/locale/sl');
+      break;
+    case 'sq':
+      require('dayjs/locale/sq');
+      break;
+    case 'sv':
+      require('dayjs/locale/sv');
+      break;
+    case 'tr':
+      require('dayjs/locale/tr');
+      break;
+    case 'yo':
+      require('dayjs/locale/yo');
+      break;
+    case 'zu':
+      require('dayjs/locale/en');
+      break;
     default:
       logError(`Setup '${locale}' locale properly for 'dayjs'`);
   }
