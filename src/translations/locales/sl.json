@@ -11,11 +11,11 @@
     "page3": {
       "title": "Ljudski kovanec",
       "description_part1": "Moč je v vaših rokah.",
-      "description_part2": "Vse, kar razvijamo[[:ice]], bo odprtokodno in pod nadzorom decentralizirane avtonomne organizacije (DAO)."
+      "description_part2": "Vse, kar razvijamo [[:ice]], bo odprtokodno in pod nadzorom decentralizirane avtonomne organizacije (DAO)."
     },
     "page4": {
       "title": "Ostanite povezani",
-      "description": "Tapnite [[:iceLogo]]za dnevno prijavo z našo brezplačno mobilno aplikacijo, ki je energijsko varčna. Vaše vsakodnevno dotikanje zagotavlja, da se ice znajde v rokah resničnih ljudi in ne botov."
+      "description": "Tapnite [[:iceLogo]] za dnevno prijavo z našo brezplačno mobilno aplikacijo, ki je energijsko varčna. Vaše vsakodnevno dotikanje zagotavlja, da se ice znajde v rokah resničnih ljudi in ne botov."
     },
     "page5": {
       "title": "Priporočite in zaslužite",
@@ -35,7 +35,7 @@
     "view_all": "Poglej vse",
     "invite_friend": {
       "title": "Povabi prijatelje",
-      "description": "Zaslužite dodatno [[:ice]]tako, da povabite svoje prijatelje."
+      "description": "Zaslužite dodatno [[:ice]] tako, da povabite svoje prijatelje."
     },
     "see_all": "Poglej vse",
     "no": "Ne",
@@ -75,7 +75,7 @@
     "tierOne_tab": "Stopnja 1",
     "tierTwo_tab": "Stopnja 2",
     "empty": {
-      "title": "Trenutno nimaš nobenih [[:title]]priporočil!",
+      "title": "Trenutno nimaš nobenih [[:title]] priporočil!",
       "contacts": "Trenutno nimaš nobenih stikov v imeniku.",
       "button_title": "Povabi prijatelje"
     },
@@ -126,7 +126,7 @@
     "welcome": "Dobrodošli v ice",
     "email": "E-naslov",
     "slogan": "Globalna ponastavitev valute",
-    "privacy": "Z nadaljevanjem se strinjate z našimi [[:link]]Pogoji storitve [[/:link]]in [[:link]]Pravilnikom o zasebnosti[[/:link]]"
+    "privacy": "Z nadaljevanjem se strinjate z našimi [[:link]]Pogoji storitve[[/:link]] in [[:link]]Pravilnikom o zasebnosti[[/:link]]"
   },
   "claimUsername": {
     "title": "Zahtevajte vzdevek",
@@ -263,7 +263,7 @@
     "pioneer": {
       "rank": "GLOBALNA UVRSTITEV",
       "referrals": "PRIPOROČILA",
-      "description": "Priporočite več uporabnikov in zaslužite več[[:ice]]."
+      "description": "Priporočite več uporabnikov in zaslužite več [[:ice]]."
     },
     "referrals": {
       "title": "PRIPOROČILA",
@@ -464,7 +464,7 @@
     "copied": "KOPIRANO",
     "share_message": "Živijo ☃️ Snežak! Pridružite se moji ekipi v aplikaciji ice in prejmite 10 kovancev ice, ko se prijavite z mojo priporočilno kodo:",
     "share_subject": "Pridružite se moji ekipi v aplikaciji ice",
-    "description": "Razširite novico in povabite svoje prijatelje. Zaslužiš za [[:ice]]vsako novo priporočilo, ki ga prineseš.",
+    "description": "Razširite novico in povabite svoje prijatelje. Zaslužiš za [[:ice]] vsako novo priporočilo, ki ga prineseš.",
     "share": "Deli"
   },
   "users": {
@@ -507,7 +507,7 @@
     "current_rate": "Trenutna stopnja",
     "allocation": "Dodelitev",
     "description": "Zastavljanje je postopek, ki vključuje dodelitev vaših kripto sredstev za podporo omrežju blockchain in potrjevanje transakcij.",
-    "terms_agree": "Strinjam se s [[:ice]][[:link]]Pogoji zastavljanja[[/:link]]. Vaše zaloge ice bodo za izbrano obdobje zaklenjene.",
+    "terms_agree": "Strinjam se s [[:ice]] [[:link]]Pogoji zastavljanja[[/:link]]. Vaše zaloge ice bodo za izbrano obdobje zaklenjene.",
     "stake_now": "Vnaprej zastavite zdaj!",
     "balance_label": "Zastavljeno stanje",
     "confirm_title": "Potrdite vnaprejšnje zastavljanje",
@@ -561,7 +561,7 @@
   "invite_friend": {
     "invite_button": "Povabi prijatelja",
     "button_title": "Povabi prijatelja",
-    "description": "Vaš prijatelj še ni vključen[[:ice]]. Pošljite mu vabilo!"
+    "description": "Vaš prijatelj še ni vključen [[:ice]]. Pošljite mu vabilo!"
   },
   "balance_history": {
     "title": "Zgodovina stanja",
@@ -579,11 +579,11 @@
     "you_are_up_to_date": "Ste na tekočem!",
     "up_to_date_text": "Zdaj uporabljate najnovejšo različico. Spodaj preverite vse spremembe.",
     "resurrection": "Obuditev",
-    "resurrection_message": "Imate enkratno priložnost, da obudite in prejmete [[:amount]]kovance, ki ste jih izgubili v preteklosti[[:period]].",
+    "resurrection_message": "Imate enkratno priložnost, da obudite in prejmete [[:amount]] kovance, ki ste jih izgubili v preteklosti [[:period]].",
     "resurrection_warning": "Obudite jih lahko le enkrat!",
     "please_confirm": "Prosimo, potrdite",
-    "resurrection_no_confirm_message": "Za vedno boste izgubili svoje [[:amount]]kovance. Ste prepričani, da želite nadaljevati?",
-    "resurrection_yes_confirm_message": "Obudite jih lahko le enkrat! Ste prepričani, da želite nadaljevati? [[:amount]]Kovanci se bodo vrnili na vaše stanje v naslednji uri.",
+    "resurrection_no_confirm_message": "Za vedno boste izgubili svoje [[:amount]] kovance. Ste prepričani, da želite nadaljevati?",
+    "resurrection_yes_confirm_message": "Obudite jih lahko le enkrat! Ste prepričani, da želite nadaljevati? [[:amount]] Kovanci se bodo vrnili na vaše stanje v naslednji uri.",
     "delete_account_confirmation_title": "Potrdite izbris",
     "delete_account_confirmation_text": "Če izbrišete svoj račun, boste trajno izbrisali vse svoje podatke, vključno z vašim stanjem kovancev ice. Želite nadaljevati?"
   },
@@ -657,7 +657,7 @@
   },
   "ice_bonus": {
     "title": "Nagrada dobrodošlice",
-    "description": "Čestitamo, prejeli ste svoje prve [[:value]][[:ice]]kovance, kar dokazuje naše [[:bold]]zaupanje [[/:bold]]v [[:bold]]vas[[/:bold]].",
+    "description": "Čestitamo, prejeli ste svoje prve [[:value]] [[:ice]] kovance, kar dokazuje naše [[:bold]]zaupanje[[/:bold]] v [[:bold]]vas[[/:bold]].",
     "balance_label": "Vaše trenutno stanje"
   },
   "country_select": {
@@ -698,7 +698,7 @@
     "team": {
       "allow_contacts": {
         "title": "Dovolite stike",
-        "description": "Sinhroniziraj svoje stike in si oglej, kdo je že na [[:ice]]. V prihodnosti boste lahko pošiljali ice vsem svojim stikom.[[:ice]]"
+        "description": "Sinhroniziraj svoje stike in si oglej, kdo je že na [[:ice]]. V prihodnosti boste lahko pošiljali ice vsem svojim stikom. [[:ice]]"
       },
       "confirm_phone": {
         "title": "Potrdite telefon",
@@ -706,7 +706,7 @@
       },
       "contacts_list": {
         "title": "Seznam stikov",
-        "description": "To je seznam z vsemi vašimi stiki, tisti, ki so se že pridružili [[:ice]]omrežju, so prikazani na vrhu seznama."
+        "description": "To je seznam z vsemi vašimi stiki, tisti, ki so se že pridružili [[:ice]] omrežju, so prikazani na vrhu seznama."
       },
       "referrals": {
         "title": "Priporočila",
@@ -762,7 +762,7 @@
       },
       "earningicestart": {
         "title": "Zaslužek ice",
-        "description": "[[:ice]]Sejo prijave lahko začnete vsakih 24 ur, tako da tapnete ta gumb. Ne pozabite se vrniti vsak dan in začnite služiti!"
+        "description": "[[:ice]] Sejo prijave lahko začnete vsakih 24 ur, tako da tapnete ta gumb. Ne pozabite se vrniti vsak dan in začnite služiti!"
       },
       "earningiceseemore": {
         "title": "Zaslužek ice",
@@ -782,7 +782,7 @@
       },
       "wallet": {
         "title": "Kartica denarnice",
-        "description": "Tukaj lahko najdete svoje trenutno [[:ice]]stanje skupaj s stopnjo zaslužka. Več priporočil iz vaše ekipe je na spletu, višja je stopnja zaslužka."
+        "description": "Tukaj lahko najdete svoje trenutno [[:ice]] stanje skupaj s stopnjo zaslužka. Več priporočil iz vaše ekipe je na spletu, višja je stopnja zaslužka."
       },
       "earning": {
         "title": "Kartica zaslužka",
@@ -856,7 +856,7 @@
   },
   "early_access": {
     "title": "Zgodnji dostop",
-    "message_part1": "[[:bold]]Pred našo prihajajočo uradno izdajo si oglejte aplikacijo [[:bold]]ice[[/:bold]].[[/:bold]]",
+    "message_part1": "Pred našo prihajajočo uradno izdajo si oglejte aplikacijo [[:bold]]ice[[/:bold]].",
     "message_part2": "Vsa stanja bodo ponastavljena na 0 na datum objave. Vaša ekipa pa bo ostala nedotaknjena.",
     "message_part3": "Hvala za vašo podporo!",
     "checkbox_description": "Sem pripoznal! Tega pojavnega okna ne kaži več."
@@ -864,7 +864,7 @@
   "mining_notice": {
     "title": "Obvestilo",
     "message": "Hvala za vaše zanimanje za zaslužek v [[:bold]]ice![[/:bold]] Trenutno izpopolnjujemo svojo tehnologijo in prijava trenutno ni na voljo. To je vaša priložnost, da se osredotočite na ustvarjanje svoje ekipe in rast svoje mikro skupnosti.",
-    "message_footer": "Spremljajte novosti na naših kanalih [[:twitter]]Twitter [[/:twitter]]in [[:telegram]]Telegram[[/:telegram]]."
+    "message_footer": "Spremljajte novosti na naših kanalih [[:twitter]]Twitter[[/:twitter]] in [[:telegram]]Telegram[[/:telegram]]."
   },
   "qr_code": {
     "description": "Skeniraj QR kodo in se pridruži moji ekipi."
