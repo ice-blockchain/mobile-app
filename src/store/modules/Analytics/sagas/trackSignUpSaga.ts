@@ -2,6 +2,7 @@
 
 import {Attributes, trackEvent} from '@services/analytics';
 import {getAuthProvider} from '@services/auth';
+import {authTokenSelector} from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {EVENT_NAMES} from '@store/modules/Analytics/constants';
 import {referredBySelector} from '@store/modules/Analytics/selectors';
@@ -11,7 +12,11 @@ type Actions = ReturnType<typeof AnalyticsActions.TRACK_SIGN_UP.START.create>;
 
 export function* trackSignUpSaga(action: Actions) {
   const {user} = action.payload;
-  const signInType: string | null = yield call(getAuthProvider);
+  const authProvider: string | null = yield call(getAuthProvider);
+  const token: ReturnType<typeof authTokenSelector> = yield select(
+    authTokenSelector,
+  );
+  const signInType = token?.issuer === 'custom' ? 'customAuth' : authProvider;
   const referredBy: ReturnType<typeof referredBySelector> = yield select(
     referredBySelector,
   );

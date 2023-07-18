@@ -11,7 +11,7 @@ type Actions = ReturnType<
 
 export function* updateReferredBySaga(action: Actions) {
   const {user} = action.payload;
-  const referredBy = user?.username ?? '';
+  const referredBy = user?.username ?? user?.id ?? '';
   yield call(Attributes.trackUserAttribute, 'Referred By', referredBy);
   yield put(
     AnalyticsActions.UPDATE_REFERRED_BY.SUCCESS.create({
