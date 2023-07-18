@@ -3,7 +3,7 @@
 import {SectionHeader} from '@components/SectionHeader';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {t} from '@translations/i18n';
-import React, {memo, useCallback} from 'react';
+import React, {useCallback} from 'react';
 import {ListRenderItem, StyleSheet, View} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
 import {rem} from 'rn-units';
@@ -11,7 +11,7 @@ import {rem} from 'rn-units';
 import {SocialLinkItem} from './components/SocialLinkItem';
 import {SOCIAL_LINKS, SocialLink} from './data';
 
-export const SocialLinks = memo(() => {
+export const SocialLinks = () => {
   const renderItem: ListRenderItem<SocialLink> = useCallback(
     ({item: {icon, linkScheme, linkUrl}}) => {
       return (
@@ -42,7 +42,7 @@ export const SocialLinks = memo(() => {
       />
     </>
   );
-});
+};
 
 const styles = StyleSheet.create({
   sectionHeader: {
