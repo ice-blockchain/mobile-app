@@ -196,7 +196,7 @@
     },
     "mining_calculator": "llogaritës fitimesh",
     "invite_friends": "Fto miq",
-    "invite_friends_engage": "Përhap fjalën dhe fto miqtë. Sa më shumë referime, aq më shumë do të fitosh1",
+    "invite_friends_engage": "Përhap fjalën dhe fto miqtë. Sa më shumë referime, aq më shumë do të fitosh",
     "global_rank": "rangu global",
     "view_all_roles": "shiko të gjitha rolet",
     "data_is_hidden": "të dhënat janë fshehur",
@@ -268,7 +268,7 @@
     "referrals": {
       "title": "REFERIME",
       "description": "Statistikat e referimeve për 5 ditët e mëparshme.",
-      "no_referrals_description": "Aktualisht nuk ke asnjë  referim!",
+      "no_referrals_description": "Aktualisht nuk ke asnjë referim!",
       "users_tier_1": "Përdoruesit për nivelin 1",
       "users_tier_2": "Përdoruesit për nivelin 2"
     },
