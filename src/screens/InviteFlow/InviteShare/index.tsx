@@ -3,20 +3,17 @@
 import {IceLabel} from '@components/Labels/IceLabel';
 import {LinesBackground} from '@components/LinesBackground';
 import {COLORS} from '@constants/colors';
-import {commonStyles, windowWidth} from '@constants/styles';
+import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {InviteShareCard} from '@screens/InviteFlow/InviteShare/components/InviteShareCard';
-import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
+import {replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {isAndroid, rem, screenHeight} from 'rn-units';
 
 const icon = require('./assets/images/share.png');
-
-const ICON_LEFT_OFFSET = rem(21);
-const ICON_WIDTH = windowWidth - ICON_LEFT_OFFSET;
 
 export const InviteShare = memo(() => {
   useFocusStatusBar({style: 'dark-content'});
@@ -26,7 +23,7 @@ export const InviteShare = memo(() => {
       <Header color={COLORS.primaryDark} title={t('invite_share.title')} />
       <View style={commonStyles.flexOne}>
         <View style={styles.shareSubstrate} />
-        <LinesBackground style={styles.bg} />
+        <LinesBackground style={styles.background} />
         <Text style={styles.description}>
           {replaceString(
             t('invite_share.description'),
@@ -36,28 +33,33 @@ export const InviteShare = memo(() => {
             ),
           )}
         </Text>
-        <Image source={icon} style={styles.icon} />
+        <Image source={icon} style={styles.icon} resizeMode={'contain'} />
         <InviteShareCard />
       </View>
     </View>
   );
 });
 
+const CONTAINER_TOP_RADIUS = rem(30);
+
 const styles = StyleSheet.create({
-  bg: {
-    borderTopLeftRadius: rem(30),
-    borderTopRightRadius: rem(30),
+  background: {
+    borderTopLeftRadius: CONTAINER_TOP_RADIUS,
+    borderTopRightRadius: CONTAINER_TOP_RADIUS,
   },
   description: {
-    ...font(15, null, 'regular', 'white', 'center'),
     marginTop: rem(45),
     marginHorizontal: rem(28),
+    ...font(15, null, 'regular', 'white', 'center'),
   },
   icon: {
-    marginLeft: isRTL ? 0 : ICON_LEFT_OFFSET,
-    width: ICON_WIDTH,
-    height: ICON_WIDTH * 0.858,
-    marginTop: rem(17),
+    marginVertical: rem(16),
+    marginStart: rem(21),
+    flex: 1,
+    /**
+     * need to allow the image to be stretched to the full width of the screen
+     */
+    width: undefined,
   },
   shareSubstrate: {
     position: 'absolute',
