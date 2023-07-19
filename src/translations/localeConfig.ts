@@ -46,8 +46,7 @@ export type SupportedLocale =
   | 'sl'
   | 'sq'
   | 'sv'
-  | 'tr'
-  | 'zu';
+  | 'tr';
 
 export type LocalConfig = {
   [key in SupportedLocale]: {
@@ -379,12 +378,12 @@ export const localeConfig: LocalConfig = {
   //   flag: flags.ng,
   //   isRTL: false,
   // },
-  zu: {
-    get translations() {
-      return require('./locales/zu.json');
-    },
-    name: 'Zulu',
-    flag: flags.za,
-    isRTL: false,
-  },
+  // zu: {
+  //   get translations() {
+  //     return require('./locales/zu.json');
+  //   },
+  //   name: 'Zulu',
+  //   flag: flags.za,
+  //   isRTL: false,
+  // },
 } as const;

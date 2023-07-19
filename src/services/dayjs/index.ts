@@ -143,9 +143,6 @@ export const setDayjsLocale = (locale: SupportedLocale) => {
     case 'tr':
       require('dayjs/locale/tr');
       break;
-    case 'zu':
-      require('dayjs/locale/en');
-      break;
     default:
       logError(`Setup '${locale}' locale properly for 'dayjs'`);
   }
