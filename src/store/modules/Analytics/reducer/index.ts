@@ -8,6 +8,7 @@ import {persistReducer} from 'redux-persist';
 
 export interface State {
   referredBy?: string;
+  referredById?: string;
   authTracked?: boolean;
 }
 
@@ -25,6 +26,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
     switch (action.type) {
       case AnalyticsActions.UPDATE_REFERRED_BY.SUCCESS.type:
         draft.referredBy = action.payload.referredBy;
+        draft.referredById = action.payload.referredById;
         break;
       case AnalyticsActions.TRACK_SIGN_IN.SUCCESS.type:
       case AnalyticsActions.TRACK_SIGN_UP.SUCCESS.type:

@@ -38,7 +38,10 @@ export const analyticsWatchers = [
     updateResurrectResponseTypeSaga,
   ),
   takeLatest(
-    AccountActions.UPDATE_REF_BY_USERNAME.SUCCESS.type,
+    [
+      AccountActions.UPDATE_REF_BY_USERNAME.SUCCESS.type,
+      AnalyticsActions.UPDATE_REFERRED_BY.START.type,
+    ],
     updateReferredBySaga,
   ),
   takeLatest(AnalyticsActions.TRACK_SIGN_IN.START.type, trackSignInSaga),

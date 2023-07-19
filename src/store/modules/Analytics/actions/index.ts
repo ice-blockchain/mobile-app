@@ -24,8 +24,8 @@ const TRACK_SIGN_UP = createAction('TRACK_SIGN_UP', {
 });
 
 const UPDATE_REFERRED_BY = createAction('UPDATE_REFERRED_BY', {
-  START: (payload: {referredBy?: string}) => payload,
-  SUCCESS: (payload: {referredBy: string}) => payload,
+  START: (user: User) => ({user}),
+  SUCCESS: (payload: {referredBy: string; referredById: string}) => payload,
 });
 
 export const AnalyticsActions = Object.freeze({

@@ -1,8 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Api} from '@api/index';
 import {RankingSummary} from '@api/tokenomics/types';
 import {Attributes} from '@services/analytics';
 import {userIdSelector, userSelector} from '@store/modules/Account/selectors';
+import {AnalyticsActions} from '@store/modules/Analytics/actions';
+import {referredByIdSelector} from '@store/modules/Analytics/selectors';
 import {isPermissionGrantedSelector} from '@store/modules/Permissions/selectors';
 import {
   miningSummarySelector,
@@ -12,10 +15,13 @@ import {
 import {getTimezoneOffset} from '@utils/device';
 import {Platform} from 'react-native';
 import DeviceInfo from 'react-native-device-info';
-import {call, SagaReturnType, select} from 'redux-saga/effects';
+import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
 function* updateUserAttributes() {
   const user: ReturnType<typeof userSelector> = yield select(userSelector);
+  const referredById: ReturnType<typeof referredByIdSelector> = yield select(
+    referredByIdSelector,
+  );
   if (user) {
     yield call(Attributes.trackUserFirstName, user.firstName ?? '');
     yield call(Attributes.trackUserLastName, user.lastName ?? '');
@@ -45,6 +51,19 @@ function* updateUserAttributes() {
       user.profilePictureUrl ?? '',
     );
     yield call(Attributes.trackUserAttribute, 'Language', user.language);
+    if (referredById !== user.referredBy && user.referredBy) {
+      try {
+        const {
+          data: referredByUser,
+        }: SagaReturnType<typeof Api.user.getUserById> = yield call(
+          Api.user.getUserById,
+          user.referredBy,
+        );
+        yield put(
+          AnalyticsActions.UPDATE_REFERRED_BY.START.create(referredByUser),
+        );
+      } catch {}
+    }
   }
 }
 
