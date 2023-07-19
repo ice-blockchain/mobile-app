@@ -18,7 +18,7 @@ import {isAndroid, rem} from 'rn-units';
 
 export const Intro = memo(() => {
   return (
-    <Text style={styles.noteText} numberOfLines={2} adjustsFontSizeToFit>
+    <Text style={styles.noteText} numberOfLines={3} adjustsFontSizeToFit>
       {t('staking.benefits_description', {
         periodYears: STAKING_YEARS_MAX,
         ratePercentages: STAKING_RATE_PERCENTAGES_MAX,
