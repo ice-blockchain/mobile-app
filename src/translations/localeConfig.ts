@@ -304,7 +304,7 @@ export const localeConfig: LocalConfig = {
       return require('./locales/af.json');
     },
     name: 'Afrikaans',
-    flag: flags.af,
+    flag: flags.za,
     isRTL: false,
   },
   am: {
