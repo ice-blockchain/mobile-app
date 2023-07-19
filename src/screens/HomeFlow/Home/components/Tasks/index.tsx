@@ -36,9 +36,8 @@ export const Tasks = memo(({highlightActiveTask}: Props) => {
 
   useEffect(() => {
     if (tasks !== currentTasks) {
-      const currentHasUncomplitedTasks = currentTasks?.some(
-        task => !task.completed,
-      );
+      const currentHasUncomplitedTasks =
+        currentTasks?.some(task => !task.completed) ?? true;
 
       const allCompleted = tasks?.every(task => task.completed);
 
@@ -98,18 +97,6 @@ export const Tasks = memo(({highlightActiveTask}: Props) => {
       <View style={styles.container}>
         {tasks ? (
           <>
-            <View style={styles.upcomingTasksLine} />
-            <View
-              style={[
-                styles.finishedTasksLine,
-                {
-                  height:
-                    ITEM_HEIGHT *
-                    (countCompletedItemsBeforeCurrentActive + 0.5),
-                },
-              ]}
-            />
-
             {areAllTasksCompleted ? (
               <CompletedItem
                 onPress={handleCompletedPress}
@@ -128,6 +115,18 @@ export const Tasks = memo(({highlightActiveTask}: Props) => {
                 !!itemsContainerHeight && itemsContainerStyle,
               ]}
               onLayout={onItemsContainerLayout}>
+              <View style={styles.upcomingTasksLine} />
+              <View
+                style={[
+                  styles.finishedTasksLine,
+                  {
+                    height:
+                      ITEM_HEIGHT *
+                      (countCompletedItemsBeforeCurrentActive + 0.5),
+                  },
+                ]}
+              />
+
               {tasks.map((task, index) => {
                 const allBeforeCompleted = completedByIndex[index] === index;
                 return (
