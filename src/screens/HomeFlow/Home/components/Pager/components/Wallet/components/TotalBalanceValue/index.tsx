@@ -3,10 +3,11 @@
 import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {commonStyles} from '@constants/styles';
+import {useIsFocused} from '@react-navigation/native';
 import {usePredictedBalanceUpdate} from '@screens/HomeFlow/Home/components/Pager/components/Wallet/components/TotalBalanceValue/hooks/usePredictedBalanceUpdate';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
-import React, {useCallback} from 'react';
+import React, {useCallback, useMemo} from 'react';
 import {StyleProp, StyleSheet, TextStyle} from 'react-native';
 
 interface Props {
@@ -16,12 +17,17 @@ interface Props {
 
 const UPDATE_INTERVAL_MS = 1000;
 
-const animationOptions = {duration: UPDATE_INTERVAL_MS};
-
 export const TotalBalanceValue = ({style, darkMode}: Props) => {
   const {predictedBalance} = usePredictedBalanceUpdate({
     updateInterval: UPDATE_INTERVAL_MS,
   });
+
+  const isScreenFocused = useIsFocused();
+
+  const animationOptions = useMemo(
+    () => ({duration: isScreenFocused ? UPDATE_INTERVAL_MS : 0}),
+    [isScreenFocused],
+  );
 
   const NumberComponent = useCallback(
     ({animatedValue}) => {
