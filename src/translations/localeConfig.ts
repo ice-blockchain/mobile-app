@@ -47,7 +47,6 @@ export type SupportedLocale =
   | 'sq'
   | 'sv'
   | 'tr'
-  | 'yo'
   | 'zu';
 
 export type LocalConfig = {
@@ -372,14 +371,14 @@ export const localeConfig: LocalConfig = {
     flag: flags.tr,
     isRTL: false,
   },
-  yo: {
-    get translations() {
-      return require('./locales/yo.json');
-    },
-    name: 'Yoruba',
-    flag: flags.ng,
-    isRTL: false,
-  },
+  // yo: {
+  //   get translations() {
+  //     return require('./locales/yo.json');
+  //   },
+  //   name: 'Yoruba',
+  //   flag: flags.ng,
+  //   isRTL: false,
+  // },
   zu: {
     get translations() {
       return require('./locales/zu.json');
