@@ -89,7 +89,9 @@ export const Calculator = memo(
                 label={t('general.ice_per_hour')}
               />
               <Text style={styles.resultBonusText}>
-                {calculatedResults ? ` (+${calculatedResults.bonus}%)` : ''}
+                {calculatedResults
+                  ? ` \u200E(+${calculatedResults.bonus}%)`
+                  : ''}
               </Text>
             </>
           )}

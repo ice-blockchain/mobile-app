@@ -46,22 +46,23 @@ export const HistoryListItem = ({balanceDiff, time}: Props) => {
         )}
       </View>
       <View style={styles.body}>
-        {!isRTL && (
+        {!isRTL ? (
           <Text style={styles.adsDiffValueText}>
             {balanceDiff.negative ? '-' : '+'}
           </Text>
-        )}
+        ) : null}
         <FormattedNumber
           number={formatNumberString(balanceDiff.amount)}
           bodyStyle={styles.adsDiffValueText}
           decimalsStyle={styles.adsDiffDecimalsText}
           trim
         />
-        {isRTL && (
+        {isRTL ? (
           <Text style={styles.adsDiffValueText}>
-            {balanceDiff.negative ? ' -' : ' +'}
+            {balanceDiff.negative ? '-' : '+'}
           </Text>
-        )}
+        ) : null}
+        {isRTL ? <Text style={styles.adsDiffValueText}> </Text> : null}
         <IceLabel
           color={COLORS.primaryDark}
           iconSize={rem(14)}

@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
+import {isRTL} from '@translations/i18n';
 import {hapticFeedback} from '@utils/device';
 import {font} from '@utils/styles';
 import React, {useEffect} from 'react';
@@ -115,6 +116,7 @@ export const CodeInput = ({
 const styles = StyleSheet.create({
   codeFieldRoot: {
     flex: 1,
+    flexDirection: isRTL ? 'row-reverse' : 'row',
   },
   cell: {
     borderWidth: 1.5,

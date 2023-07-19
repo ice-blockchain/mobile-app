@@ -7,7 +7,7 @@ import {AuthStackParamList} from '@navigation/Auth';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {deviceLocationSelector} from '@store/modules/Devices/selectors';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {getCountryByCode} from '@utils/country';
 import {formatPhoneNumber} from '@utils/phoneNumber';
 import {font} from '@utils/styles';
@@ -46,6 +46,7 @@ export const PhoneNumberInput = ({
   };
   return (
     <CommonInput
+      reversed={isRTL}
       value={formatPhoneNumber(
         `${country.iddCode}${value}`,
         country.isoCode,
@@ -83,10 +84,11 @@ const styles = StyleSheet.create({
   },
   prefixText: {
     ...font(16, isIOS ? 21 : 20, 'medium', 'secondary'),
-    marginRight: rem(4),
+    marginRight: isRTL ? 0 : rem(4),
+    marginLeft: isRTL ? rem(4) : 0,
   },
   valueText: {
     alignItems: 'center',
-    ...font(16, 21, 'medium', 'codeFieldText'),
+    ...font(16, 21, 'medium', 'codeFieldText', 'left'),
   },
 });
