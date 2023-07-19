@@ -1,0 +1,896 @@
+{
+  "welcome": {
+    "page1": {
+      "title": "Välkommen till ice",
+      "description": "[[:ice]] är en digital valuta som du kan tjäna med din telefon. ice ägs och drivs av vanliga användare som du."
+    },
+    "page2": {
+      "title": "Planetvänlig",
+      "description": "[[:ice]] är till sin natur mer energieffektiv än BTC eftersom den använder en konsensusmekanism som kallas ”Proof of Stake” (”PoS”) eller ”bevis på arbete”. Bevis på arbete används för att validera kryptovalutaägarnas blocktransaktioner utifrån antalet mynt som en validerare satsar."
+    },
+    "page3": {
+      "title": "Folkets mynt",
+      "description_part1": "Kraften ligger i dina händer.",
+      "description_part2": "Allt vi utvecklar på [[:ice]] kommer att ha öppen källkod och kontrolleras av den decentraliserade autonoma organisationen (DAO)."
+    },
+    "page4": {
+      "title": "Håll kontakten",
+      "description": "Tryck på [[:iceLogo]] för din dagliga incheckning med vår kostnadsfria, energisnåla mobilapp. Din dagliga incheckning garanterar att ice hamnar i händerna på riktiga människor, inte bottar."
+    },
+    "page5": {
+      "title": "Värva och tjäna",
+      "description": "Bjud in dina vänner så kan både du och dina vänner tjäna upp till 25 % bonus på basintäktshastigheten för varje vän som går med i ditt team."
+    },
+    "page6": {
+      "title": "Aviseringar",
+      "description_part1": "[[:ice]] incheckningssessioner varar endast i 24 timmar. Vill du få en avisering när din nuvarande session avslutas?",
+      "description_part2": "Oroa dig inte, vi kommer inte att spamma dig!",
+      "not_now": "Inte nu"
+    }
+  },
+  "button": {
+    "yes_btn": "Ja, tack",
+    "next_btn": "Nästa",
+    "not_now": "Inte nu",
+    "view_all": "visa alla",
+    "invite_friend": {
+      "title": "Bjud in vänner",
+      "description": "Tjäna extra [[:ice]] genom att bjuda in dina vänner."
+    },
+    "see_all": "se alla",
+    "no": "Nej",
+    "search_country": "Sök efter land",
+    "save": "Spara",
+    "yes": "Ja",
+    "change": "Ändra",
+    "no_cancel": "Nej, avbryt",
+    "complete": "Slutför",
+    "cancel": "Avbryt",
+    "clear": "Rensa",
+    "finish": "Avsluta",
+    "next_step": "Nästa steg",
+    "back": "Tillbaka",
+    "search": "Sök",
+    "continue": "Fortsätt",
+    "apply": "Tillämpa",
+    "reset": "Återställ",
+    "skip_all": "Hoppa över alla",
+    "done": "Klar",
+    "confirm": "Bekräfta",
+    "do_this_later": "Gör detta senare",
+    "resurrect_me": "Jag vill återuppstå",
+    "claim_bonus": "Hämta bonus",
+    "close": "Stäng",
+    "try_again": "Försök igen",
+    "view_changelog": "Visa ändringslogg",
+    "disable": "Inaktivera",
+    "agree": "Jag godkänner",
+    "learn_more": "Läs mer",
+    "back_to_login": "Tillbaka till inloggning",
+    "follow_us": "Följ oss",
+    "subscribe": "Prenumerera"
+  },
+  "team": {
+    "contacts_tab": "Kontakter",
+    "tierOne_tab": "Nivå 1",
+    "tierTwo_tab": "Nivå 2",
+    "empty": {
+      "title": "Du har för närvarande inga [[:title]]-värvningar!",
+      "contacts": "Du har för närvarande inga kontakter i telefonboken.",
+      "button_title": "Bjud in vänner"
+    },
+    "contacts": {
+      "empty_title": "[[:ice]] är bättre med vänner",
+      "empty_button_title": "Tillåt åtkomst till kontakter",
+      "empty_description": "Synkronisera dina kontakter och se vem som redan finns på [[:ice]]. I framtiden kommer du att kunna skicka ice till alla dina kontakter."
+    },
+    "header": {
+      "search_placeholder": "Sök efter användare",
+      "referrals": "Värvningar",
+      "earnings": "Intäkter"
+    },
+    "confirm_code": {
+      "title": "Bekräfta kod",
+      "description": "Ange bekräftelsekoden som du har fått på din telefon.",
+      "placeholder": "Ange koden",
+      "button": "Bekräfta din kod nu"
+    },
+    "confirm_phone": {
+      "title": "Bekräfta telefon",
+      "description": "Bekräfta din landskod och ange ditt telefonnummer."
+    },
+    "contacts_list": {
+      "ice_header": {
+        "friends": "vänner"
+      },
+      "all_contacts": "Alla kontakter",
+      "invite": "bjud in",
+      "invitation_text": "Hej {{name}}, jag vill bjuda in dig till ice."
+    },
+    "tier_one": {
+      "header_list": {
+        "title_earnings": "Nivå 1-intäkter"
+      }
+    },
+    "tier_two": {
+      "header_list": {
+        "title_earnings": "Nivå 2-intäkter"
+      }
+    }
+  },
+  "signIn": {
+    "logInSignUp": "Logga in/registrera dig",
+    "phone": "Telefon",
+    "or": "eller",
+    "reset_password": "Återställ lösenord",
+    "welcome": "Välkommen till ice",
+    "email": "E-post",
+    "slogan": "Den globala valutaomställningen",
+    "privacy": "Genom att fortsätta godkänner du våra [[:link]]användarvillkor[[/:link]] och vår [[:link]]integritetspolicy[[/:link]]"
+  },
+  "claimUsername": {
+    "title": "Gör anspråk på smeknamn",
+    "description": "Dina vänner måste använda detta smeknamn för att gå med i ditt team.",
+    "inputPlaceholder": "Ange ditt smeknamn",
+    "note_part1": "Använd bara bokstäver, siffror och punkter när du skapar ett smeknamn.",
+    "note_part2": "Exempel:",
+    "note_example": "ditt.namn01"
+  },
+  "whoInvitedYou": {
+    "title": "Vem bjöd in dig?",
+    "description": "Ange smeknamnet på personen som bjöd in dig.",
+    "inputPlaceholder": "Ange smeknamn",
+    "dontHaveInvitationCode": "Genom att slutföra detta steg kommer du och din vän att få en bonus på 25 % på basintäktshastigheten när ni båda checkar in samtidigt.",
+    "dontHaveCodeTip": "Om du inte har en inbjudningskod kommer vi att välja en slumpmässig medlem som din värvning!"
+  },
+  "errors": {
+    "nicknameSize": "Smeknamnets längd: 4–20 tecken.",
+    "removeInvalidCharacters": "Ta bort ogiltiga tecken.",
+    "validation_error": "Något valideringsfel.",
+    "multiple_accounts": "E-postadress/telefonnummer är kopplat till ett annat konto. Logga in på det kontot för att bevisa ägande, logga sedan ut och logga in på det här kontot igen. Om du inte äger det här kontot eller om du inte kan logga in på det ber vi dig att kontakta vår support.",
+    "wrong_phone_number": "Ogiltigt telefonnummer, försök igen.",
+    "invalid_username": "Smeknamnet är ogiltigt.",
+    "email_already_taken": "E-postadressen används redan.",
+    "phone_number_already_taken": "Telefonnumret används redan.",
+    "invalid_validation_code": "Ogiltigt kodnummer, försök igen!",
+    "validation_expired": "Valideringen har löpt ut",
+    "validation_not_found": "Valideringen hittades inte",
+    "invalid_email": "Ogiltig e-postadress.",
+    "invalid_password": "Ogiltigt lösenord.",
+    "invalid_ref_username": "Smeknamnet är ogiltigt.",
+    "invalid_phone": "Ogiltigt telefonnummer.",
+    "user_disabled": "Användaren har inaktiverats.",
+    "expired_action_code": "Engångslösenordet i e-postlänken har löpt ut.",
+    "account_exists_with_different_credential": "Det finns redan ett konto med den e-postadress som du har angett.",
+    "invalid_credential": "Inloggningsuppgifterna är felaktiga eller har löpt ut.",
+    "operation_not_allowed": "Den typ av konto som motsvarar inloggningsuppgifterna är inte aktiverad.",
+    "user_not_found_for_email": "Det finns ingen användare som motsvarar den angivna e-postadressen.",
+    "user_not_found": "Användaren hittades inte.",
+    "auth_in_progress": "Inloggning pågår redan.",
+    "google_play_services_not_available": "Google Play-tjänster är inte tillgängliga på den här enheten.",
+    "unknown_error_with_code": "Okänt fel: {{code}}",
+    "no_such_provider": "Du har inte länkat till den här leverantören.",
+    "min_username": "Minsta längd är 4 tecken.",
+    "max_username": "Maximal längd är 30 tecken.",
+    "code_expired": "Koden har löpt ut, be om en ny kod.",
+    "too_many_requests": "För många förfrågningar, försök igen senare.",
+    "network_error_title": "Ingen internetanslutning",
+    "network_error_message": "Din enhet har ingen aktiv internetanslutning.",
+    "unknown_error": "Ett fel uppstod, försök igen senare.",
+    "general_error_title": "Hoppsan...",
+    "general_error_message": "Det verkar som om något gick fel. Vårt team arbetar på att åtgärda felet just nu.",
+    "general_network_error": "Ett nätverksfel har uppstått, kontrollera din anslutning.",
+    "credential_already_in_use": "Dessa inloggningsuppgifter är redan kopplade till ett annat användarkonto.",
+    "email_already_in_use": "E-postadressen används redan av ett annat konto.",
+    "user_token_expired": "Dina inloggningsuppgifter är inte längre giltiga, logga in igen.",
+    "requires_recent_login": "Denna åtgärd är känslig och kräver ny autentisering. Logga in igen.",
+    "same_email": "Du kan inte använda samma e-postadress.",
+    "weak_password": "Svagt lösenord.",
+    "wrong_password": "Fel lösenord.",
+    "no_camera_permissions": "Kamerabehörighet beviljas inte.",
+    "no_library_permissions": "Biblioteksbehörigheter beviljas inte."
+  },
+  "profile": {
+    "my_roles": {
+      "title": "Min roll"
+    },
+    "mining_calculator": "intäktskalkylator",
+    "invite_friends": "Bjud in vänner",
+    "invite_friends_engage": "Sprid budskapet och bjud in dina vänner. Ju fler värvningar, desto mer tjänar du!",
+    "global_rank": "global rankning",
+    "view_all_roles": "visa alla roller",
+    "data_is_hidden": "data döljs",
+    "progress_text": "{{value}} av {{total}}",
+    "not_found": {
+      "title": "Användaren hittades inte",
+      "description": "Hoppsan, vi kunde inte hitta den här användaren."
+    },
+    "my_badges": {
+      "title": "Mina märken"
+    },
+    "badges": {
+      "title": "Märken"
+    },
+    "roles": {
+      "title": "Roller"
+    },
+    "badge_types": {
+      "coin": {
+        "title": "Mynt",
+        "description": "mynt"
+      },
+      "social": {
+        "title": "Socialt",
+        "description": "vänner"
+      },
+      "level": {
+        "title": "Nivå",
+        "description": "Nivå"
+      }
+    }
+  },
+  "global": {
+    "level": "nivå",
+    "referrals": "värvningar",
+    "coin": "Mynt",
+    "social": "Socialt",
+    "phone_number": "Telefonnummer",
+    "years": "År",
+    "of": "av",
+    "attention": "Observera",
+    "email_address": "E-postadress",
+    "password": "Lösenord",
+    "data_hidden": "data döljs",
+    "pull_to_refresh": "dra för att uppdatera",
+    "comingSoon": "Kommer snart",
+    "date": {
+      "today": "Idag"
+    }
+  },
+  "mining_calculator": {
+    "result_label": "Du kommer att tjäna",
+    "active_inviter": "Aktiv inbjudare",
+    "tier_1_ref": "Nivå 1-värvningar",
+    "tier_2_ref": "Nivå 2-värvningar",
+    "active_miners": "Aktiva värvningar"
+  },
+  "home": {
+    "wallet": {
+      "title": "PLÅNBOK",
+      "rate": "INTÄKTSHASTIGHET",
+      "balance": "AKTUELLT SALDO"
+    },
+    "pioneer": {
+      "rank": "GLOBAL RANKNING",
+      "referrals": "VÄRVNINGAR",
+      "description": "Värva fler användare och tjäna mer [[:ice]]."
+    },
+    "referrals": {
+      "title": "VÄRVNINGAR",
+      "description": "Värvningsstatistik för de senaste 5 dagarna.",
+      "no_referrals_description": "Du har inga värvningar ännu.",
+      "users_tier_1": "Användare på nivå 1",
+      "users_tier_2": "Användare på nivå 2"
+    },
+    "adoption": {
+      "title": "ANTAGANDE",
+      "level": "nivå",
+      "users": "användare"
+    },
+    "tasks": {
+      "achievements": "PRESTATIONER",
+      "title": "Dina framsteg",
+      "description": "Slutför uppgifterna nedan och gå upp i nivå!",
+      "completed": {
+        "title": "Grattis",
+        "description": "Fortsätt att checka in dagligen för att tjäna extra belöningar!"
+      },
+      "popup": {
+        "title": "Gå med i vår Telegram-kanal",
+        "description": "Ange ditt smeknamn som används på Telegram.",
+        "placeholder": "Smeknamn"
+      },
+      "claim_username": {
+        "title": "Gör anspråk på ditt smeknamn",
+        "description": "Ställ in ditt smeknamn och dela det med dina vänner."
+      },
+      "start_mining": {
+        "title": "Börja tjäna",
+        "description": "Din första incheckningssession."
+      },
+      "upload_profile_picture": {
+        "title": "Profilbild",
+        "description": "Ladda upp din profilbild."
+      },
+      "join_telegram": {
+        "title": "Gå med i Telegram",
+        "description": "Bli en del av vår community och gå med nu."
+      },
+      "follow_us_on_twitter": {
+        "title": "Följ oss på Twitter",
+        "description": "Låt oss hålla kontakten, följ oss på Twitter."
+      },
+      "invite_friends": {
+        "title": "Bjud in 5 vänner",
+        "description": "Utöka ditt team och öka dina intäkter."
+      }
+    },
+    "overview": {
+      "title": "Översikt"
+    },
+    "menu": {
+      "notifications": "Aviseringar",
+      "staking": "Staking",
+      "stats": "Statistik",
+      "help": "Hjälp"
+    },
+    "team": {
+      "title": "Team",
+      "view_team": "visa team"
+    },
+    "mining_rate": {
+      "title": "INTÄKTSHASTIGHET",
+      "base": "Bas"
+    },
+    "engagement": {
+      "title": "ENGAGEMANG",
+      "description_part1": "Incheckningar i följd avser hur många dagar du har checkat in i följd.",
+      "description_part2": "För varje 6 dagar du i följd du checkar in får du en ledig dag.",
+      "streak": "INCHECKNINGAR I FÖLJD",
+      "days_off": "LEDIGA DAGAR"
+    }
+  },
+  "settings": {
+    "title": "Inställningar",
+    "profile": "Profil",
+    "legal": "Juridik",
+    "support": "Support",
+    "personal_information_title": "Personuppgifter",
+    "personal_information_description": "Hantera dina profiluppgifter.",
+    "notifications_title": "Aviseringar",
+    "notifications_description": "Hantera dina aviseringar här.",
+    "push_notifications_title": "Push-aviseringar",
+    "push_notifications_description": "Anpassa dina inställningar för push-aviseringar.",
+    "email_notifications_title": "E-postaviseringar",
+    "email_notifications_description": "Anpassa dina inställningar för e-postaviseringar.",
+    "terms_title": "Användarvillkor",
+    "terms_description": "Läs igenom våra användarvillkor.",
+    "privacy_title": "Integritetspolicy",
+    "privacy_description": "Läs om vår integritetspolicy.",
+    "feedback_title": "Skicka feedback",
+    "feedback_description": "Dela dina tankar med oss.",
+    "invite_title": "Bjud in en vän",
+    "invite_description": "Tjäna extra ice genom att bjuda in dina vänner.",
+    "delete_title": "Ta bort konto",
+    "delete_description": "Radera ditt konto.",
+    "delete_confirmation_title": "Är du säker på att du vill ta bort kontot?",
+    "delete_confirmation_yes": "Ja, radera",
+    "logout_title": "Logga ut",
+    "logout_description": "Logga ut och ta en paus.",
+    "logout_confirmation_title": "Är du säker på att du vill logga ut?",
+    "logout_confirmation_yes": "Ja, logga ut",
+    "confirm_phone": {
+      "title": "Bekräfta ny telefon",
+      "description": "Bekräfta din landskod och ange ditt nya telefonnummer.",
+      "button": "Bekräfta nytt telefonnummer"
+    },
+    "notifications": {
+      "enable_prompt": "Aviseringar är inte tillåtna. Vill du aktivera dem?",
+      "channel_achievements": "Prestationer",
+      "channel_news": "Nyheter",
+      "channel_reminders": "Påminnelser",
+      "channel_team": "Team",
+      "type_push": "PUSH",
+      "type_email": "E-POST",
+      "disable_notifications": "Inaktivera aviseringar?",
+      "disable_notifications_description": "Om du inaktiverar aviseringar kommer du inte att kunna få uppdateringar, nyheter eller teaminformation när du kan börja checka in.",
+      "domain": {
+        "disable_all": {
+          "title": "",
+          "description": ""
+        },
+        "weekly_stats": {
+          "title": "Veckostatistik",
+          "description": "Få aviseringar om din aktivitet."
+        },
+        "weekly_report": {
+          "title": "Veckorapport",
+          "description": "Få aviseringar om din aktivitet."
+        },
+        "achievements": {
+          "title": "Prestationer",
+          "description": "Få aviseringar om dina framsteg."
+        },
+        "promotions": {
+          "title": "Kampanjer",
+          "description": "Få aviseringar om hur du kan utöka ditt team och tjäna mer."
+        },
+        "news": {
+          "title": "Nyheter",
+          "description": "Få aviseringar från vårt team."
+        },
+        "micro_community": {
+          "title": "Mikrocommunity",
+          "description": "Få aviseringar om ditt team."
+        },
+        "daily_bonus": {
+          "title": "Daglig bonus",
+          "description": "Få aviseringar för att hämta din dagliga bonus."
+        },
+        "mining": {
+          "title": "Sessionsstatus",
+          "description": "Få aviseringar om din incheckningsaktivitet."
+        },
+        "system": {
+          "title": "System",
+          "description": "Få viktiga aviseringar om ice-appen."
+        }
+      }
+    },
+    "language_settings": "Språkinställningar",
+    "change_lang_confirm": {
+      "title": "Ändra språk",
+      "prompt": "Om du tillämpar den här inställningen startas appen om."
+    },
+    "profile_image": "Profilbild",
+    "inapp_privacy_title": "Integritet",
+    "inapp_privacy_description": "Hantera din information här.",
+    "developer": "Utvecklare",
+    "user_id": "Användar-ID",
+    "user_token": "Användartoken",
+    "profile_photo": {
+      "delete": "Ta bort foto",
+      "edit": "Redigera profilfoto",
+      "photo_gallery": "Fotogalleri",
+      "camera": "Kamera"
+    },
+    "confirm_email_confirmation_title": "Bekräfta e-postadress?",
+    "update_email_confirmation_title": "Uppdatera e-postadress?",
+    "update_email_confirmation_subtitle": "Om du ändrar din e-postadress måste du logga in igen. Är du säker på att du vill fortsätta?",
+    "unlink_logins_title": "Ta bort länkade inloggningar",
+    "unlink_logins_description": "Här kan du ta bort dina länkade inloggningar."
+  },
+  "invite_share": {
+    "title": "Bjud in en vän",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "E-post",
+    "fb": "Nyhetsflöde",
+    "sms": "SMS",
+    "copy_link": "Kopiera länk",
+    "more": "Mer",
+    "copied": "KOPIERAD",
+    "share_message": "Hej ☃️ snögubbe! Gå med i mitt team på ice och få 10 ice-mynt när du registrerar dig med min värvningskod:",
+    "share_subject": "Gå med i mitt team på ice",
+    "description": "Sprid budskapet och bjud in dina vänner. Du tjänar [[:ice]] för varje ny värvning du gör.",
+    "share": "Dela"
+  },
+  "users": {
+    "ping": "PING",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "referralType": {
+      "T1": "Nivå 1",
+      "T2": "Nivå 2"
+    }
+  },
+  "personal_information": {
+    "first_name": "Förnamn",
+    "last_name": "Efternamn",
+    "country": "Land",
+    "city": "Ort",
+    "title": "Personuppgifter",
+    "phone": "Telefon",
+    "email": "E-post",
+    "username": "Smeknamn"
+  },
+  "username": {
+    "error": {
+      "already_taken": "Smeknamnet används redan.",
+      "length": "Smeknamnets längd: 4–20 tecken.",
+      "invalid_characters": "Ta bort ogiltiga tecken.",
+      "not_found": "Smeknamnet hittades inte.",
+      "some_error": "Ett fel uppstod.",
+      "refer_yourself": "Du kan inte värva dig själv."
+    }
+  },
+  "staking": {
+    "time_left": "Tid kvar",
+    "mining_rate": "Intäktshastighet",
+    "appeal": "Öka din intäktshastighet",
+    "benefits_description": "Pre-staka dina ice-belöningar i upp till 5 år och öka din intäktshastighet med upp till 250 %.",
+    "bonus_label": "Pre-staking-bonus",
+    "period_label": "Stakad period",
+    "title": "Pre-staking",
+    "current_rate": "Aktuell hastighet",
+    "allocation": "Allokering",
+    "description": "Staking är en process där du använder dina kryptotillgångar för att stödja ett blockkedjenätverk och bekräfta transaktioner.",
+    "terms_agree": "Jag godkänner [[:link]]staking-villkoren[[/:link]] för [[:ice]]. Dina ice-innehav kommer att låsas under den valda perioden.",
+    "stake_now": "Pre-staka nu!",
+    "balance_label": "Stakat saldo",
+    "confirm_title": "Bekräfta pre-stake",
+    "confirm_subtitle": "Är du säker på att du vill pre-staka dina mynt? Detta kan inte ångras när du väl har bekräftat."
+  },
+  "stats": {
+    "header_title": "Statistik",
+    "active": "Aktiva användare",
+    "total": "Totalt antal användare",
+    "user_growth": "Användartillväxt",
+    "top_miners": "Toppanvändare",
+    "top_countries": "Toppländer",
+    "online_miners": "Onlineanvändare",
+    "detailed_information": "Detaljerad information"
+  },
+  "update_required": {
+    "title": "Vänligen uppdatera",
+    "description": "Du använder en gammal version av appen och behöver uppdatera den för att kunna fortsätta använda den.",
+    "button_title": "Uppdatera nu"
+  },
+  "general": {
+    "good_morning": "God morgon",
+    "good_afternoon": "God eftermiddag",
+    "good_evening": "God kväll",
+    "ice": "ice",
+    "ice_per_hour": "ice/tim",
+    "seconds_short": "sek",
+    "minutes_short": "min",
+    "hours_short": "tim",
+    "days_short": "dag"
+  },
+  "news": {
+    "news_feed": "Nyhetsflöde",
+    "read_more": "Läs mer",
+    "no_more_news": "detta är det sista posten i nyhetsflödet.",
+    "views": "{{viewsCount}} visningar"
+  },
+  "search": {
+    "empty": "Sök efter kontakter, ice-vänner och medlemmar i din mikrocommunity.",
+    "nothing_is_found": "Inget hittades för din fråga.",
+    "search_by_country": "Sök efter land",
+    "search_for_users": "Sök efter användare",
+    "loading": "Söker…"
+  },
+  "tabbar": {
+    "mining_inactive_tooltip": "Tryck här för att starta din första incheckningssession.",
+    "mining_reset_tooltip": "Tryck i 1 sekund för att förlänga din incheckningssession.",
+    "mining_holiday_reset_tooltip": "Du använder en ledig dag! Tryck i 1 sekund för att förlänga din incheckningssession.",
+    "mining_holiday_active": "Du använder en ledig dag!"
+  },
+  "invite_friend": {
+    "invite_button": "Bjud in vän",
+    "button_title": "Bjud in vän",
+    "description": "Din vän är ännu inte på [[:ice]]. Skicka en inbjudan till din vän!"
+  },
+  "balance_history": {
+    "title": "Saldohistorik",
+    "wallet": "Plånbok",
+    "blockchain": "Blockkedja",
+    "wallet_update_interval": "uppdateras varje timme",
+    "blockchain_update_interval": "uppdateras var 24:e timme",
+    "list_end_label": "detta är den sista posten i saldohistoriken.",
+    "no_data": "Det finns inga data att visa för den angivna perioden."
+  },
+  "pop_up": {
+    "update_now": "Uppdatera nu",
+    "please_update": "Vänligen uppdatera",
+    "update_now_text": "Du använder en gammal version av appen och behöver uppdatera den för att kunna fortsätta använda den.",
+    "you_are_up_to_date": "Du är uppdaterad!",
+    "up_to_date_text": "Du använder nu den senaste versionen. Kontrollera alla ändringar nedan.",
+    "resurrection": "Uppståndelse",
+    "resurrection_message": "Du har en engångschans att återuppstå och få [[:amount]] mynt som du har förlorat under senaste [[:period]].",
+    "resurrection_warning": "Du kan bara återuppstå en gång!",
+    "please_confirm": "Bekräfta",
+    "resurrection_no_confirm_message": "Du kommer att förlora dina [[:amount]] mynt för alltid. Är du säker på att du vill fortsätta?",
+    "resurrection_yes_confirm_message": "Du kan bara återuppstå en gång! Är du säker på att du vill fortsätta? De [[:amount]] mynten kommer att återföras till ditt saldo inom den närmaste timmen.",
+    "delete_account_confirmation_title": "Bekräfta borttagning",
+    "delete_account_confirmation_text": "Om du tar bort ditt konto raderas alla dina data permanent, inklusive ditt ice-saldo. Vill du fortsätta?"
+  },
+  "periods": {
+    "3_days": "3 dagarna",
+    "7_days": "7 dagarna",
+    "30_days": "30 dagarna",
+    "1_day": "1 dagen",
+    "1_week": "1 veckan",
+    "1_month": "1 månaden",
+    "90_days": "90 dagarna",
+    "14_days": "14 dagarna"
+  },
+  "notifications": {
+    "joined": " har gått med i ditt team.",
+    "multiply": " och {{count}} andra har gått med i ditt team.",
+    "ping": " har pingat dig, vakna!",
+    "delete": "Ta bort",
+    "add_notifications": "Lägg till testaviseringar",
+    "no_notifications": "Inga aviseringar att visa.",
+    "add_announcements": "Lägg till testmeddelanden",
+    "add_both": "Lägg till testaviseringar och -meddelanden tillsammans",
+    "clear_title": "Rensa alla aviseringar?",
+    "title": "Aviseringar"
+  },
+  "notification_feed_screen": {
+    "yesterday": "Igår",
+    "last_week": "Förra veckan",
+    "this_month": "Den här månaden",
+    "last_month": "Förra månaden",
+    "this_week": "Den här veckan"
+  },
+  "profile_privacy_edit": {
+    "step1": {
+      "title": "1. Din profilstatistik",
+      "description": "Tryck på de block som du vill dölja för allmänheten."
+    },
+    "step2": {
+      "description": "Tryck på det här blocket för att dölja det för allmänheten.",
+      "title": "2. Din nuvarande roll"
+    },
+    "step3": {
+      "title": "3. Dina intjänade märken",
+      "description": "Tryck här för att dölja dina märken för allmänheten."
+    }
+  },
+  "confirm_email": {
+    "title": "Bekräfta din e-postadress",
+    "description": "Ange din e-postadress så skickar vi koden.",
+    "note": "Om du inte har fått e-postmeddelandet inom 5 minuter kan du kontrollera din skräppostmapp.",
+    "wrong_email": "Felaktig e-postadress?",
+    "check_email": "Kontrollera din e-post",
+    "emailed_link_to": "Vi skickade en magisk länk till",
+    "emailed_steps_to": "Vi skickade stegen till",
+    "link_instruction": "Klicka på länken för att logga in eller registrera dig.",
+    "reset_link_instruction": "Klicka på länken för att återställa ditt lösenord.",
+    "modify_title": "Bekräfta ny e-postadress",
+    "modify_description": "Ange din nya e-postadress."
+  },
+  "invalid_link": {
+    "title": "Ogiltig länk",
+    "description": "Tyvärr är den här länken ogiltig. Ange din e-postadress igen så skickar vi en ny länk till dig."
+  },
+  "confirm_code": {
+    "title": "Bekräfta kod",
+    "description": "Ange koden som skickades till",
+    "send_code_again": "Skicka koden igen",
+    "resend_time_label": "Ny kod tillgänglig om ",
+    "enter_code": "Ange koden",
+    "wrong_number": "Fel nummer?"
+  },
+  "ice_bonus": {
+    "title": "Välkomstbelöning",
+    "description": "Grattis, du har fått dina första [[:value]] [[:ice]]-mynt som bevisar vårt [[:bold]]förtroende[[/:bold]] för [[:bold]]dig[[/:bold]].",
+    "balance_label": "Ditt nuvarande saldo"
+  },
+  "country_select": {
+    "title": "Välj land"
+  },
+  "roles": {
+    "snowman": {
+      "title": "Snögubbe",
+      "subtitle": "Bygg ett snörike",
+      "description": "Tjäna ice genom att checka in var 24:e timme för att visa ditt engagemang för ice-nätverket och bevisa att du är en människa, inte en robot."
+    },
+    "ambassador": {
+      "title": "Ambassadör",
+      "subtitle": "Snörikets härskare",
+      "description": "Du blir en ambassadör när minst 100 personer har gått med i ditt team. Varje ambassadör kommer att få tidig tillgång till nya funktioner."
+    }
+  },
+  "confirm_phone": {
+    "modify_title": "Bekräfta telefon",
+    "modify_description": "Bekräfta din landskod och ange ditt telefonnummer.",
+    "button": "Bekräfta land och telefon",
+    "same_phone_error": "Du kan inte använda samma nummer."
+  },
+  "date_select": {
+    "title": "Välj datum"
+  },
+  "walkthrough": {
+    "news": {
+      "readmore": {
+        "title": "Läs mer",
+        "description": "Här kan du se våra senaste nyheter från vårt team. Tryck på den här knappen för att läsa hela artikeln."
+      },
+      "releasednews": {
+        "title": "Utgivna nyheter",
+        "description": "Tryck på varje enskild nyhetsrubrik för att läsa den fullständiga versionen. Håll dig uppdaterad om alla våra nyheter och omröstningar."
+      }
+    },
+    "team": {
+      "allow_contacts": {
+        "title": "Tillåt kontakter",
+        "description": "Synkronisera dina kontakter och se vem som redan finns på [[:ice]]. I framtiden kommer du att kunna skicka [[:ice]] till alla dina kontakter."
+      },
+      "confirm_phone": {
+        "title": "Bekräfta telefon",
+        "description": "Bekräfta din identitet och låt dina kontakter veta att du också är medlem i ice-nätverket. Ditt telefonnummer kommer inte att delas med andra tredje parter."
+      },
+      "contacts_list": {
+        "title": "Lista över kontakter",
+        "description": "Det här är listan med alla dina kontakter. De som redan har gått med i [[:ice]]-nätverket visas högst upp i listan."
+      },
+      "referrals": {
+        "title": "Värvningar",
+        "description": "Här ser du hur många värvningar du har totalt. Ju fler personer du bjuder in, desto mer tjänar du."
+      },
+      "earnings": {
+        "title": "Intäkter",
+        "description": "Ditt nuvarande saldo uppdateras varje timme och visas här. Det inkluderar dina direkta och stakade intäkter tillsammans med nivå 1- och nivå 2-intäkterna."
+      },
+      "segmented_control_tier_one": {
+        "title": "Nivå 1",
+        "description": "Här kan du se listan över dina nivå 1-värvningar. För varje vän som checkar in samtidigt med dig får du ytterligare 25 % på din aktuella basintäktshastighet för antagande. [[:link]]Läs mer[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "segmented_control_tier_two": {
+        "title": "Nivå 2",
+        "description": "Här kan du se listan över dina nivå 2-värvningar. För varje vän som checkar in samtidigt med dig får du ytterligare 5 % på din aktuella basintäktshastighet för antagande. [[:link]]Läs mer[[/:link]]",
+        "url": "https://ice.io/team"
+      },
+      "active_users": {
+        "title": "Aktiva användare",
+        "description": "Detta är den aktuella statusen för din incheckningsaktivitet för värvningar. De räknas som aktiva när de har en aktiv incheckningssession."
+      },
+      "tier_one_earnings": {
+        "title": "Nivå 1-intäkter",
+        "description": "Här kan du se listan över dina nivå 1-värvningar. För varje medlem som checkar in samtidigt med dig kommer ni båda att få ytterligare 25 % på din aktuella basintäktshastighet för antagande."
+      },
+      "ping": {
+        "title": "Ping-knapp",
+        "description": "Meddela dina värvningar om att de ska starta sina incheckningssessioner. Du kan skicka en avisering till varje värvning var 24:e timme."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Start",
+        "description": "Välkommen till [[:ice]]. På startskärmen kan du hitta all statistik om ditt saldo, den aktuella intäktshastigheten, din globala rankning tillsammans med ditt team."
+      },
+      "invite": {
+        "title": "Bjud in",
+        "description": "För varje person som du bjuder in kommer ni båda att tjäna upp till 25 % på din basintäktshastighet. Ju fler personer du bjuder in, desto mer tjänar du."
+      },
+      "team": {
+        "title": "Team",
+        "description": "[[:ice]] är bättre med vänner. På den här sidan kan du se status för dina teammedlemmar från både nivå 1 och nivå 2. Du kan också pinga dem härifrån."
+      },
+      "news": {
+        "title": "Nyheter",
+        "description": "Håll dig uppdaterad om alla våra nyheter och omröstningar. Eftersom vi är en decentraliserad autonom organisation kommer du att kunna rösta här för de framtida funktionerna."
+      },
+      "profile": {
+        "title": "Profil",
+        "description": "Anpassa dina profiluppgifter och se alla dina prestationer och märken som du har tjänat. Härifrån kan du använda kalkylatorn för att uppskatta dina intäkter."
+      },
+      "earningicestart": {
+        "title": "Tjäna ice",
+        "description": "Du kan starta incheckningssessionen på [[:ice]] var 24: e timme genom att trycka på den här knappen. Glöm inte att komma tillbaka varje dag och börja tjäna ice!"
+      },
+      "earningiceseemore": {
+        "title": "Tjäna ice",
+        "description": "Tryck igen och se mer information om din nuvarande incheckningssession."
+      },
+      "stats": {
+        "title": "Statistik",
+        "description": "På statistiksidan kan du se totalt antal och aktiva användare som checkat in varje dag tillsammans med toppländer och -användare."
+      },
+      "help": {
+        "title": "Hjälp",
+        "description": "Har du några frågor? Kolla in vår lista över vanliga frågor. Om du inte hittar det du söker, tveka inte att kontakta oss på hi@ice.io."
+      },
+      "preStaking": {
+        "title": "Pre-staking",
+        "description": "Maximera din avkastning genom att pre-staka dina intäktsbelöningar. Välj din allokerings- och staking-period för att få en bonus utöver dina intäkter."
+      },
+      "wallet": {
+        "title": "Plånbokskort",
+        "description": "Här hittar du ditt nuvarande [[:ice]]-saldo, tillsammans med intäktshastigheten. Ju fler värvningar från ditt team som är online, desto högre är din intäktshastighet."
+      },
+      "earning": {
+        "title": "Intäktskort",
+        "description": "Håll dig uppdaterad om din intäktshastighet och dina bonusar! Här kan du kolla in din aktuella hastighet, vår bashastighet och bonushastighet för olika aktiviteter i appen."
+      },
+      "engagement": {
+        "title": "Engagemangskort",
+        "description": "Håll koll på dina incheckningssessioner i följd och lediga dagar! Kolla in det här avsnittet för mer information om dina på varandra följande incheckningssessioner och se hur många lediga dagar du har."
+      },
+      "profilecard": {
+        "title": "Profilkort",
+        "description": "Du kan hålla reda på din profilstatus genom att följa detta kort. Det visar din nuvarande globala rankning, tillsammans med din roll, nivå och totalt antal värvningar."
+      },
+      "referralscard": {
+        "title": "Värvningskort",
+        "description": "Tryck på detta kort för att se hur din värvningsstatistik har utvecklats under de senaste 5 dagarna för både nivå 1- och nivå 2-värvningar."
+      },
+      "adoptioncard": {
+        "title": "Antagandekort",
+        "description": "Baserat på genomsnittet av den senaste veckans totala antal aktiva snögubbar kan du se den aktuella intäktshastigheten för [[:ice]]. Intäktshastigheten halveras när nästa tröskel nås."
+      },
+      "nickname": {
+        "title": "Smeknamn",
+        "description": "Smeknamnet är det som gör dig unik. Dina vänner måste använda det för att gå med i ditt team. Du kan också använda denna genväg för att öppna din profil."
+      },
+      "balancehistory": {
+        "title": "Saldohistorik",
+        "description": "Här hittar du ditt nuvarande [[:ice]]-saldo på lokal plånbok och blockkedja. Det lokala plånbokssaldot uppdateras varje timme, medan blockkedjesaldot uppdateras var 24: e timme."
+      },
+      "achievements": {
+        "title": "Prestationer",
+        "description": "Slutför uppgifterna nedan och gå upp i nivå! Starta din första incheckningssession nu!"
+      }
+    }
+  },
+  "ActiveSessionsScreen": {
+    "title": "Ta bort länkade inloggningar",
+    "sessionName": "Logga in via {{providerName}}",
+    "buttons": {
+      "currentSession": "Aktuell session",
+      "endSession": "Avsluta sessionen",
+      "loginUnlinked": "Länkad inloggning har tagits bort",
+      "sessionEnded": "Sessionen avslutades",
+      "unlink": "Ta bort länkning"
+    },
+    "dialogs": {
+      "unlinkLogin": {
+        "title": "Ta bort länkad inloggning?",
+        "message": "Är du säker på att du vill ta bort den länkade inloggningen via {{providerName}} från den här enheten?"
+      },
+      "endSession": {
+        "title": "Avsluta sessionen?",
+        "message": "Är du säker på att du vill avsluta {{providerName}} inloggningssessionen från den här enheten?"
+      }
+    }
+  },
+  "links": {
+    "pre_staking": "https://ice.io/pre-staking/",
+    "privacy": "https://ice.io/privacy/",
+    "terms": "https://ice.io/terms/",
+    "main": "https://ice.io/"
+  },
+  "extra_bonus": {
+    "claim_title": "Dagens bonus",
+    "claim_message": "Det är dags för din dagens bonus, tryck på knappen [[:bold]]”Hämta bonus”[[/:bold]] nedan.",
+    "link": "Läs mer",
+    "extra_message": "Du har fått din dagliga extra bonus på din intäktshastighet.",
+    "expired_title": "Bonusen har löpt ut",
+    "expired_message": "Tyvärr har dagens bonus löpt ut. Håll utkik efter nästa avisering!",
+    "result_title": "Grattis"
+  },
+  "early_access": {
+    "title": "Tidig tillgång",
+    "message_part1": "Få en förhandstitt på [[:bold]]ice[[/:bold]]-appen innan vår [[:bold]] kommande officiella utgivning.[[/:bold]]",
+    "message_part2": "Alla saldon kommer att återställas till 0 på utgivningsdatumet. Däremot kommer ditt team att förbli intakt.",
+    "message_part3": "Tack för ditt stöd!",
+    "checkbox_description": "Jag bekräftar! Visa inte detta popup-fönster igen."
+  },
+  "mining_notice": {
+    "title": "Meddelande",
+    "message": "Tack för att du är intresserad av att tjäna [[:bold]]ice![[/:bold]] Vi finjusterar för närvarande vår teknik och därför går det inte att checka in för tillfället. Det här är din chans att fokusera på att bygga ditt team och utöka din mikrocommunity.",
+    "message_footer": "Håll utkik efter uppdateringar på våra kanaler på [[:twitter]]Twitter[[/:twitter]] och [[:telegram]]Telegram[[/:telegram]]."
+  },
+  "qr_code": {
+    "description": "Skanna QR-koden för att gå med i mitt team."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Följ oss på TikTok",
+      "description": "Vi ville bara kontakta dig och berätta om vår spännande nya community på TikTok. Här delar vi roligt och informativt innehåll om vår digitala valuta ice och vi vill gärna att du ska följa oss!"
+    },
+    "youtube": {
+      "title": "Följ oss på YouTube",
+      "description": "Vår YouTube-kanal är det perfekta stället att hålla sig uppdaterad. Här hittar du allt från guider om hur man tjänar ice, till uppdateringar om nya funktioner och även roligt communityinnehåll."
+    },
+    "linkedin": {
+      "title": "Följ oss på LinkedIn",
+      "description": "Att gå med i ice-communityn på LinkedIn är ett bra sätt att hålla sig informerad om den senaste utvecklingen och få kontakt med likasinnade personer som tror lika starkt på framtiden för digitala valutor som du gör."
+    },
+    "facebook": {
+      "title": "Följ oss på Facebook",
+      "description_part1": "Vi rekommenderar starkt att du följer vår Facebook-sida.",
+      "description_part2": "Det hjälper dig inte bara att hålla dig uppdaterad om allt som händer med ice-projektet, utan det är också ett bra sätt att få kontakt med vår community och vara en del av konversationen."
+    },
+    "instagram": {
+      "title": "Följ oss på Instagram",
+      "description_part1": "Att följa oss på Instagram är ett bra sätt att hålla sig uppdaterad och få kontakt med andra användare som också brinner för ice.",
+      "description_part2": "Dessutom kommer du att vara den första som får reda på alla nya funktioner eller kampanjer som vi lanserar."
+    }
+  }
+}

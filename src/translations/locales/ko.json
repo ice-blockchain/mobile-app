@@ -134,7 +134,7 @@
     "inputPlaceholder": "내 닉네임을 입력하세요",
     "note_part1": "닉네임은 오직 글자와 숫자 그리고 마침표만 사용하여 만들어야 합니다.",
     "note_part2": "예시:",
-    "note_example": "내.이름01"
+    "note_example": "your.name01"
   },
   "whoInvitedYou": {
     "title": "누가 초대했나요?",

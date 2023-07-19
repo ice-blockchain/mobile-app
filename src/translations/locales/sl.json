@@ -1,787 +1,841 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "Dobrodošli v ice",
+      "description": "[[:ice]] je digitalna valuta, ki jo lahko zaslužite s svojim telefonom. ice je v lasti in upravljanju vsakdanjih uporabnikov, kot ste vi."
     },
     "page2": {
-      "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "title": "Planetu prijazen",
+      "description": "[[:ice]] je sam po sebi energijsko učinkovitejši od BTC, saj uporablja mehanizem soglasja »Dokaz o vložku«. Z dokazilom o vložku (DOV) lastniki kriptovalut potrdijo blokovne transakcije glede na število kovancev, ki jih vloži validator."
     },
     "page3": {
-      "title": "People’s Coin",
-      "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "title": "Ljudski kovanec",
+      "description_part1": "Moč je v vaših rokah.",
+      "description_part2": "Vse, kar razvijamo [[:ice]], bo odprtokodno in pod nadzorom decentralizirane avtonomne organizacije (DAO)."
     },
     "page4": {
-      "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "title": "Ostanite povezani",
+      "description": "Tapnite [[:iceLogo]] za dnevno prijavo z našo brezplačno mobilno aplikacijo, ki je energijsko varčna. Vaše vsakodnevno dotikanje zagotavlja, da se ice znajde v rokah resničnih ljudi in ne botov."
     },
     "page5": {
-      "title": "Refer & Earn",
-      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
+      "title": "Priporočite in zaslužite",
+      "description": "Povabite svoje prijatelje in zaslužite (oba) do 25 % bonusa na vašo osnovno stopnjo zaslužka za vsakega prijatelja, ki se pridruži vaši ekipi."
     },
     "page6": {
-      "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
-      "description_part2": "Don’t worry, we will not spam you!",
-      "not_now": "Not now"
+      "title": "Obvestila",
+      "description_part1": "[[:ice]] prijave trajajo samo 24 ur. Ali želite prejeti obvestilo, ko se vaša trenutna seja zaključi?",
+      "description_part2": "Ne skrbite, ne bomo vam pošiljali vsiljene pošte!",
+      "not_now": "Ne zdaj"
     }
   },
   "button": {
-    "yes_btn": "Yes, please",
-    "next_btn": "Next",
-    "not_now": "Not now",
-    "view_all": "view all",
+    "yes_btn": "Da, prosim",
+    "next_btn": "Naprej",
+    "not_now": "Ne zdaj",
+    "view_all": "Poglej vse",
     "invite_friend": {
-      "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "title": "Povabi prijatelje",
+      "description": "Zaslužite dodatno [[:ice]] tako, da povabite svoje prijatelje."
     },
-    "no": "No",
-    "search_country": "Search for country",
-    "save": "Save",
-    "yes": "Yes",
-    "change": "Change",
-    "no_cancel": "No, cancel",
-    "complete": "Complete",
-    "cancel": "Cancel",
-    "clear": "Clear",
-    "finish": "Finish",
-    "next_step": "Next Step",
-    "see_all": "see all",
-    "back": "Back",
-    "search": "Search",
-    "continue": "Continue",
-    "apply": "Apply",
-    "reset": "Reset",
-    "skip_all": "Skip all",
-    "done": "Done",
-    "confirm": "Confirm",
-    "do_this_later": "Do this later",
-    "resurrect_me": "Resurrect Me",
-    "claim_bonus": "Claim Bonus",
-    "close": "Close",
-    "try_again": "Try Again",
-    "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "see_all": "Poglej vse",
+    "no": "Ne",
+    "search_country": "Iskanje države",
+    "save": "Shrani",
+    "yes": "Da",
+    "change": "Spremeni",
+    "no_cancel": "Ne, prekliči",
+    "complete": "Dokončaj",
+    "cancel": "Prekliči",
+    "clear": "Počisti",
+    "finish": "Dokončaj",
+    "next_step": "Naslednji korak",
+    "back": "Nazaj",
+    "search": "Išči",
+    "continue": "Nadaljuj",
+    "apply": "Prijavi se",
+    "reset": "Ponastavi",
+    "skip_all": "Preskoči vse",
+    "done": "Končano",
+    "confirm": "Potrdi",
+    "do_this_later": "Naredi to pozneje",
+    "resurrect_me": "Obudi me",
+    "claim_bonus": "Zahtevaj bonus",
+    "close": "Zapri",
+    "try_again": "Poskusi znova",
+    "view_changelog": "Oglejte si dnevnik sprememb",
+    "disable": "Onemogoči",
+    "agree": "Strinjam se",
+    "learn_more": "Preberi več",
+    "back_to_login": "Nazaj na prijavo",
+    "follow_us": "Sledi nam",
+    "subscribe": "Naroči se"
   },
   "team": {
-    "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
+    "contacts_tab": "Kontakti",
+    "tierOne_tab": "Stopnja 1",
+    "tierTwo_tab": "Stopnja 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "title": "Trenutno nimaš nobenih [[:title]] priporočil!",
+      "contacts": "Trenutno nimaš nobenih stikov v imeniku.",
+      "button_title": "Povabi prijatelje"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
-      "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_title": "[[:ice]] bolje je s prijatelji",
+      "empty_button_title": "Dovoli dostop do stikov",
+      "empty_description": "Sinhroniziraj svoje stike in si oglej, kdo je že na [[:ice]]. V prihodnosti boste lahko pošiljali ice vsem svojim stikom."
     },
     "header": {
-      "search_placeholder": "Search for users",
-      "referrals": "Referrals",
-      "earnings": "Earnings"
+      "search_placeholder": "Iskanje uporabnikov",
+      "referrals": "Priporočila",
+      "earnings": "Zaslužki"
     },
     "confirm_code": {
-      "title": "Confirm Code",
-      "description": "Please enter the confirmation code you have received on your phone.",
-      "placeholder": "Enter the code",
-      "button": "Confirm your code now"
+      "title": "Potrdi kodo",
+      "description": "Vnesite potrditveno kodo, ki ste jo prejeli na telefon.",
+      "placeholder": "Vnesi kodo",
+      "button": "Potrdite svojo kodo zdaj"
     },
     "confirm_phone": {
-      "title": "Confirm Phone",
-      "description": "Please confirm your country code and enter your phone number."
+      "title": "Potrdi telefon",
+      "description": "Potrdite kodo države in vnesite svojo telefonsko številko."
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "friends"
+        "friends": "prijatelji"
       },
-      "all_contacts": "All contacts",
-      "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "all_contacts": "Vsi stiki",
+      "invite": "povabi",
+      "invitation_text": "Živijo{{name}}, rad/a bi te povabil/a na ice."
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier 1 Earnings"
+        "title_earnings": "Stopnja 1 Zaslužki"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier 2 Earnings"
+        "title_earnings": "Stopnja 2 Zaslužki"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
-    "welcome": "Welcome to ice",
-    "email": "Email",
-    "slogan": "Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "logInSignUp": "Prijavi se / Registriraj se",
+    "phone": "Telefon",
+    "or": "ali",
+    "reset_password": "Ponastavi geslo",
+    "welcome": "Dobrodošli v ice",
+    "email": "E-naslov",
+    "slogan": "Globalna ponastavitev valute",
+    "privacy": "Z nadaljevanjem se strinjate z našimi [[:link]]Pogoji storitve[[/:link]] in [[:link]]Pravilnikom o zasebnosti[[/:link]]"
   },
   "claimUsername": {
-    "title": "Claim nickname",
-    "description": "Your friends will need to use this nickname to join your team",
-    "inputPlaceholder": "Enter your nickname",
-    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
-    "note_part2": "Example:",
+    "title": "Zahtevajte vzdevek",
+    "description": "Vaši prijatelji bodo morali uporabiti ta vzdevek, da se bodo pridružili vaši ekipi.",
+    "inputPlaceholder": "Vnesite svoj vzdevek",
+    "note_part1": "Pri ustvarjanju vzdevka uporabljajte samo črke, številke in pike.",
+    "note_part2": "Primer:",
     "note_example": "your.name01"
   },
   "whoInvitedYou": {
-    "title": "Who invited you?",
-    "description": "Enter the nickname of the person who invited you",
-    "inputPlaceholder": "Enter nickname",
-    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
-    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+    "title": "Kdo vas je povabil?",
+    "description": "Vnesite vzdevek osebe, ki vas je povabila.",
+    "inputPlaceholder": "Vnesite vzdevek",
+    "dontHaveInvitationCode": "Ko dokončate ta korak, bosta vi in vaš prijatelj prejela 25 % bonusa na osnovno stopnjo zaslužka, ko se oba prijavljata hkrati.",
+    "dontHaveCodeTip": "Če nimate kode za povabilo, bomo za vašo priporočilo izbrali naključnega člana!"
   },
   "errors": {
-    "nicknameSize": "Nickname size: 4-20 characters.",
-    "removeInvalidCharacters": "Remove invalid characters.",
-    "validation_error": "Some validation error",
-    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
-    "wrong_phone_number": "Invalid phone number, please try again",
-    "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken",
-    "phone_number_already_in_use": "Phone number already in use",
-    "invalid_validation_code": "Invalid code number, please try again!",
-    "validation_expired": "Validation expired",
-    "validation_not_found": "Validation not found",
-    "invalid_email": "Invalid email",
-    "invalid_ref_username": "Nickname is invalid.",
-    "invalid_phone": "Invalid phone number",
-    "user_disabled": "User has been disabled",
-    "expired_action_code": "OTP in email link is expired",
-    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
-    "invalid_credential": "The credential is malformed or has expired",
-    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
-    "user_not_found_for_email": "There is no user corresponding to the given email",
-    "user_not_found": "User not found",
-    "auth_in_progress": "Sign-In already in progress",
-    "google_play_services_not_available": "Google Play services are not available on the device",
-    "unknown_error_with_code": "Unknown error {{code}}",
-    "no_such_provider": "You do not have this provider linked",
-    "min_username": "Minimum length is 4 characters.",
-    "max_username": "Maximum length is 30 characters.",
-    "code_expired": "The code has expired. Please ask for a new code.",
-    "too_many_requests": "Too many requests. Please try again later.",
-    "network_error_title": "No internet connection",
-    "network_error_message": "Your device does not have any active internet connection",
-    "unknown_error": "Some error occurred, please try again later",
-    "general_error_title": "Oups...",
-    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
-    "general_network_error": "A network error has occurred. Please check your connection.",
-    "credential_already_in_use": "This credential is already associated with a different user account.",
-    "email_already_in_use": "The email address is already in use by another account.",
-    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
-    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "nicknameSize": "Velikost vzdevka: 4-20 znakov.",
+    "removeInvalidCharacters": "Odstranite neveljavne znake.",
+    "validation_error": "Nekaj napak pri preverjanju.",
+    "multiple_accounts": "E-pošta/telefonska številka je povezana z drugim računom. Prijavite se v tisti račun, da dokažete lastništvo, nato se odjavite in znova prijavite v tega. Če niste lastnik tega drugega računa ali se vanj ne morete prijaviti, se obrnite na našo podporo.",
+    "wrong_phone_number": "Neveljavna telefonska številka, poskusite znova.",
+    "invalid_username": "Vzdevek ni veljaven.",
+    "email_already_taken": "E-naslov je že zaseden.",
+    "phone_number_already_taken": "Telefonska številka je že zasedena.",
+    "invalid_validation_code": "Neveljavna številka kode, poskusite znova!",
+    "validation_expired": "Preverjanje veljavnosti je poteklo",
+    "validation_not_found": "Preverjanje veljavnosti ni najdeno",
+    "invalid_email": "Neveljaven e-naslov.",
+    "invalid_password": "Neveljavno geslo.",
+    "invalid_ref_username": "Vzdevek ni veljaven.",
+    "invalid_phone": "Neveljavna telefonska številka.",
+    "user_disabled": "Uporabnik je bil onemogočen.",
+    "expired_action_code": "OTP v e-poštni povezavi je potekel.",
+    "account_exists_with_different_credential": "Račun z e-poštnim naslovom, ki ga zahteva poverilnica, že obstaja.",
+    "invalid_credential": "Poverilnice so napačno oblikovane ali so potekle.",
+    "operation_not_allowed": "Vrsta računa, ki ustreza poverilnicam, ni omogočena.",
+    "user_not_found_for_email": "Noben uporabnik ne ustreza danemu e-poštnemu naslovu.",
+    "user_not_found": "Uporabnik ni najden.",
+    "auth_in_progress": "Prijava je že v teku.",
+    "google_play_services_not_available": "Storitve Google Play niso na voljo v tej napravi.",
+    "unknown_error_with_code": "Neznana napaka: {{code}}",
+    "no_such_provider": "Tega ponudnika nimate povezanega.",
+    "min_username": "Najmanjša dolžina je 4 znake.",
+    "max_username": "Največja dolžina je 30 znakov.",
+    "code_expired": "Koda je potekla, prosimo vprašajte za novo kodo.",
+    "too_many_requests": "Preveč zahtev, poskusite znova pozneje.",
+    "network_error_title": "Ni internetne povezave",
+    "network_error_message": "Vaša naprava nima aktivne internetne povezave.",
+    "unknown_error": "Prišlo je do napake. Prosim, poskusite kasneje.",
+    "general_error_title": "Ups ...",
+    "general_error_message": "Videti je, da je šlo nekaj narobe. Naša ekipa trenutno dela na tem, da bi to popravila.",
+    "general_network_error": "Prišlo je do omrežne napake, preverite povezavo.",
+    "credential_already_in_use": "Te poverilnice so že povezane z drugim uporabniškim računom.",
+    "email_already_in_use": "E-poštni naslov že uporablja drug račun.",
+    "user_token_expired": "Vaše poverilnice niso več veljavne, ponovno se prijavite.",
+    "requires_recent_login": "Ta operacija je občutljiva in zahteva čimprejšnje preverjanje pristnosti. Prosimo, prijavite se znova.",
+    "same_email": "Ne morete uporabljati istega e-poštnega naslova.",
+    "weak_password": "Šibko geslo.",
+    "wrong_password": "Napačno geslo.",
+    "no_camera_permissions": "Dovoljenja za kamero niso odobrena.",
+    "no_library_permissions": "Dovoljenja za knjižnico niso odobrena."
   },
   "profile": {
     "my_roles": {
-      "title": "My Role"
+      "title": "Moja vloga"
     },
-    "mining_calculator": "earnings calculator",
-    "invite_friends": "Invite Friends",
-    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
-    "global_rank": "global rank",
-    "view_all_roles": "view all roles",
-    "data_is_hidden": "data is hidden",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "kalkulator zaslužka",
+    "invite_friends": "Povabi prijatelje",
+    "invite_friends_engage": "Razširite novico in povabite prijatelje. Več kot je priporočil, več boste zaslužili!",
+    "global_rank": "globalna uvrstitev",
+    "view_all_roles": "ogled vseh vlog",
+    "data_is_hidden": "podatki so skriti",
+    "progress_text": "{{value}} od {{total}}",
     "not_found": {
-      "title": "User was not found",
-      "description": "oops, we couldn't find this user"
+      "title": "Uporabnik ni najden.",
+      "description": "Ups, tega uporabnika nismo mogli najti."
     },
     "my_badges": {
-      "title": "My Badges"
+      "title": "Moje značke"
     },
     "badges": {
-      "title": "Badges"
+      "title": "Značke"
     },
     "roles": {
-      "title": "Roles"
+      "title": "Vloge"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "Kovanci",
+        "description": "kovanci"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "Družbeno",
+        "description": "prijatelji"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "Stopnja",
+        "description": "Stopnja"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update",
-    "comingSoon": "Coming soon",
+    "level": "stopnja",
+    "referrals": "priporočila",
+    "coin": "Kovanci",
+    "social": "Družbeno",
+    "phone_number": "Telefonska številka",
+    "years": "Leta",
+    "of": " od ",
+    "attention": "Pozor",
+    "email_address": "E-poštni naslov",
+    "password": "Geslo",
+    "data_hidden": "podatki so skriti",
+    "pull_to_refresh": "povlecite za posodobitev",
+    "comingSoon": "Prihaja kmalu",
     "date": {
-      "today": "Today"
+      "today": "Danes"
     }
   },
   "mining_calculator": {
-    "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "result_label": "Zaslužili boste",
+    "active_inviter": "Aktiven vabitelj",
+    "tier_1_ref": "Priporočila stopnje 1 ",
+    "tier_2_ref": "Priporočila stopnje 2",
+    "active_miners": "Aktivna priporočila"
   },
   "home": {
     "wallet": {
-      "title": "WALLET",
-      "rate": "EARNING RATE",
-      "balance": "CURRENT BALANCE"
+      "title": "DENARNICA",
+      "rate": "STOPNJA ZASLUŽKA",
+      "balance": "TRENUTNO STANJE"
     },
     "pioneer": {
-      "title": "PIONEER",
-      "rank": "GLOBAL RANK",
-      "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "rank": "GLOBALNA UVRSTITEV",
+      "referrals": "PRIPOROČILA",
+      "description": "Priporočite več uporabnikov in zaslužite več [[:ice]]."
     },
     "referrals": {
-      "title": "REFERRALS",
-      "description": "Referral stats for the previous 5 days",
-      "no_referrals_description": "You don't have any referrals yet",
-      "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "title": "PRIPOROČILA",
+      "description": "Statistika priporočil za zadnjih 5 dni.",
+      "no_referrals_description": "Trenutno nimaš nobenih priporočil!",
+      "users_tier_1": "Uporabniška stopnja 1",
+      "users_tier_2": "Uporabniška stopnja 2"
     },
     "adoption": {
-      "title": "ADOPTION",
-      "level": "level",
-      "users": "\nusers"
+      "title": "PREVZEM",
+      "level": "stopnja",
+      "users": "uporabniki"
     },
-    "steps": {
-      "title": "Your progress",
-      "description": "Complete the tasks below and level up!",
-      "step_one": {
-        "title": "Claim your nickname",
-        "description": "Set it and start earning from your invite"
+    "tasks": {
+      "achievements": "DOSEŽKI",
+      "title": "Vaš napredek",
+      "description": "Izpolnite spodnje naloge in stopite na višji nivo!",
+      "completed": {
+        "title": "Čestitke",
+        "description": "Vsak dan se prijavljajte in si prislužite dodatne nagrade!"
       },
-      "step_two": {
-        "title": "Start mining",
-        "description": "Your first mining session"
+      "popup": {
+        "title": "Pridružite se našemu kanalu Telegram",
+        "description": "Določite svoj vzdevek, ki se uporablja v Telegramu.",
+        "placeholder": "Vzdevek"
       },
-      "step_three": {
-        "title": "Profile picture",
-        "description": "Upload your profile image"
+      "claim_username": {
+        "title": "Zahtevajte vzdevek",
+        "description": "Nastavite in delite s prijatelji."
       },
-      "step_four": {
-        "title": "Join Telegram",
-        "description": "Be part of our community and join now"
+      "start_mining": {
+        "title": "Začnite služiti",
+        "description": "Vaša prva prijava."
       },
-      "step_five": {
-        "title": "Follow us on Twitter",
-        "description": "Let’s keep in touch, follow us on twitter"
+      "upload_profile_picture": {
+        "title": "Profilna slika",
+        "description": "Naložite svojo profilno sliko."
       },
-      "step_six": {
-        "title": "Invite 5 Friends",
-        "description": "Create your team and increase your earnings"
+      "join_telegram": {
+        "title": "Pridružite se Telegramu",
+        "description": "Bodite del naše skupnosti in se pridružite zdaj."
+      },
+      "follow_us_on_twitter": {
+        "title": "Sledite nam na Twitterju",
+        "description": "Ostanimo v stiku, sledite nam na Twitterju."
+      },
+      "invite_friends": {
+        "title": "Povabi 5 prijateljev",
+        "description": "Povečajte svojo ekipo in povečajte svoj zaslužek."
       }
     },
     "overview": {
-      "title": "Overview"
+      "title": "Pregled"
     },
     "menu": {
-      "notifications": "Notifications",
-      "staking": "Staking",
-      "stats": "Stats",
-      "help": "Help"
-    },
-    "tasks": {
-      "title": "ACHIEVEMENTS"
+      "notifications": "Obvestila",
+      "staking": "Zastavljanje",
+      "stats": "Statistika",
+      "help": "Pomoč"
     },
     "team": {
-      "title": "Team",
-      "view_team": "view team"
+      "title": "Ekipa",
+      "view_team": "poglej ekipo"
     },
     "mining_rate": {
-      "title": "EARNING RATE",
-      "base": "Base"
+      "title": "STOPNJA ZASLUŽKA",
+      "base": "Osnova"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
-      "streak": "STREAK",
-      "days_off": "DAYS OFF"
+      "title": "VKLJUČENOST",
+      "description_part1": "Niz se nanaša na to, koliko zaporednih dni ste se prijavili.",
+      "description_part2": "Za vsakih 6 zaporednih dni prejmete en prost dan.",
+      "streak": "NIZ",
+      "days_off": "PROSTIH DNI"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "Nastavitve",
+    "profile": "Profil",
+    "legal": "Pravno",
+    "support": "Podpora",
+    "personal_information_title": "Osebne informacije",
+    "personal_information_description": "Upravljajte podrobnosti svojega profila.",
+    "notifications_title": "Obvestila",
+    "notifications_description": "Upravljajte svoja obvestila tukaj.",
+    "push_notifications_title": "Potisna obvestila",
+    "push_notifications_description": "Prilagodite nastavitve potisnih obvestil.",
+    "email_notifications_title": "E-poštna obvestila",
+    "email_notifications_description": "Prilagodite nastavitve e-poštnih obvestil.",
+    "terms_title": "Pogoji storitve",
+    "terms_description": "Preglejte naše pogoje storitve.",
+    "privacy_title": "Pravilnik o zasebnosti",
+    "privacy_description": "Preberite več o naši politiki zasebnosti.",
+    "feedback_title": "Pošlji povratno informacijo",
+    "feedback_description": "Delite svoje misli z nami.",
+    "invite_title": "Povabi prijatelja",
+    "invite_description": "Zaslužite dodatno v ice s povabilom svojih prijateljev.",
+    "delete_title": "Izbriši račun",
+    "delete_description": "Izbrišite svoj račun",
+    "delete_confirmation_title": "Ali ste prepričani, da želite odstraniti račun?",
+    "delete_confirmation_yes": "Da, izbriši",
+    "logout_title": "Odjava",
+    "logout_description": "Odjavite se in si vzemite odmor.",
+    "logout_confirmation_title": "Ste prepričani, da se želite odjaviti?",
+    "logout_confirmation_yes": "Da, odjavi se",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "Potrdite nov telefon",
+      "description": "Potrdite kodo države in vnesite svojo telefonsko številko.",
+      "button": "Potrdite novo telefonsko številko"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
-      "type_push": "PUSH",
-      "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
+      "enable_prompt": "Obvestila niso dovoljena. Ali jih želite omogočiti?",
+      "channel_achievements": "Dosežki",
+      "channel_news": "Novice",
+      "channel_reminders": "Opomniki",
+      "channel_team": "Ekipa",
+      "type_push": "POTISNA",
+      "type_email": "E-POŠTA",
+      "disable_notifications": "Želite onemogočiti obvestila?",
+      "disable_notifications_description": "Če onemogočite obvestila, ne boste mogli prejemati posodobitev, ko se lahko začnete prijavljati, novic ali informacij o ekipi.",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
+          "title": "Tedenska statistika",
+          "description": "Prejemajte obvestila o svoji dejavnosti."
         },
         "weekly_report": {
-          "title": "Weekly report",
-          "description": "Receive notifications about your activity"
+          "title": "Tedensko poročilo",
+          "description": "Prejemajte obvestila o svoji dejavnosti."
         },
         "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
+          "title": "Dosežki",
+          "description": "Prejemajte obvestila o svojem napredku."
         },
         "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
+          "title": "Promocije",
+          "description": "Prejemajte obvestila o tem, kako povečati svojo ekipo in zaslužiti več."
         },
         "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
+          "title": "Novice",
+          "description": "Prejemajte obvestila naše ekipe."
         },
         "micro_community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
+          "title": "Mikro skupnost",
+          "description": "Prejemajte obvestila o svoji ekipi."
         },
         "daily_bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
+          "title": "Dnevni bonus",
+          "description": "Prejemajte obvestila za prevzem dnevnega bonusa."
         },
         "mining": {
-          "title": "Session status",
-          "description": "Receive notifications about your check-in activity"
+          "title": "Stanje seje",
+          "description": "Prejemajte obvestila o svoji dejavnosti prijavljanja."
         },
         "system": {
-          "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "title": "Sistem",
+          "description": "Prejemajte pomembna obvestila o aplikaciji ice."
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "Jezikovne nastavitve",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "Spremeni jezik",
+      "prompt": "Če uporabite to nastavitev, boste znova zagnali aplikacijo."
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "Slika profila",
+    "inapp_privacy_title": "Zasebnost",
+    "inapp_privacy_description": "Upravljajte svoje podatke tukaj.",
+    "developer": "Razvijalec",
+    "user_id": "ID uporabnika",
+    "user_token": "Žeton uporabnika",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "Izbriši fotografijo",
+      "edit": "Uredi profilno sliko",
+      "photo_gallery": "Galerija fotografij",
+      "camera": "Fotoaparat"
     },
-    "confirm_email_confirmation_title": "Confirm email?",
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "Potrdi e-pošto?",
+    "update_email_confirmation_title": "Posodobi e-pošto?",
+    "update_email_confirmation_subtitle": "Če spremenite svoj e-poštni naslov, se boste morali znova prijaviti. Ste prepričani, da želite nadaljevati?",
+    "unlink_logins_title": "Prekini povezavo prijav",
+    "unlink_logins_description": "Tukaj lahko prekinete povezavo svojih prijav."
   },
   "invite_share": {
-    "title": "Invite a friend",
+    "title": "Povabi prijatelja",
     "telegram": "Telegram",
     "twitter": "Twitter",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
-    "email": "Email",
-    "fb": "Newsfeed",
+    "email": "E-pošta",
+    "fb": "Vir novic",
     "sms": "SMS",
-    "copy_link": "Copy link",
-    "more": "More",
-    "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "copy_link": "Kopiraj povezavo",
+    "more": "Več",
+    "copied": "KOPIRANO",
+    "share_message": "Živijo ☃️ Snežak! Pridružite se moji ekipi v aplikaciji ice in prejmite 10 kovancev ice, ko se prijavite z mojo priporočilno kodo:",
+    "share_subject": "Pridružite se moji ekipi v aplikaciji ice",
+    "description": "Razširite novico in povabite svoje prijatelje. Zaslužiš za [[:ice]] vsako novo priporočilo, ki ga prineseš.",
+    "share": "Deli"
   },
   "users": {
     "ping": "PING",
-    "active": "Active",
-    "inactive": "Inactive",
+    "active": "Aktiven",
+    "inactive": "Neaktiven",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T1": "Stopnja 1",
+      "T2": "Stopnja 2"
     }
   },
   "personal_information": {
-    "first_name": "First name",
-    "last_name": "Last name",
-    "country": "Country",
-    "city": "City",
-    "title": "Personal Information",
-    "phone": "Phone",
-    "email": "Email",
-    "username": "Nickname"
+    "first_name": "Ime",
+    "last_name": "Priimek",
+    "country": "Dražava",
+    "city": "Mesto",
+    "title": "Osebne informacije",
+    "phone": "Telefon",
+    "email": "E-pošta",
+    "username": "Vzdevek"
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
-      "length": "Nickname size: 4-20 characters.",
-      "invalid_characters": "Remove invalid characters.",
-      "not_found": "Nickname not found.",
-      "some_error": "Some error occurred.",
-      "refer_yourself": "You can't refer yourself"
+      "already_taken": "Vzdevek je že zaseden.",
+      "length": "Velikost vzdevka: 4-20 znakov.",
+      "invalid_characters": "Odstranite neveljavne znake.",
+      "not_found": "Vzdevek ni najden.",
+      "some_error": "Prišlo je do napake.",
+      "refer_yourself": "Ne morete se priporočiti sami."
     }
   },
   "staking": {
-    "time_left": "Time Left",
-    "mining_rate": "Earning Rate",
-    "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking Bonus",
-    "period_label": "Staked Period",
-    "title": "Pre-Staking",
-    "current_rate": "Current Rate",
-    "allocation": "Allocation",
-    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
-    "staking_terms": "Staking Terms",
-    "stake_now": "Pre-Stake Now!",
-    "balance_label": "Staked balance",
-    "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "time_left": "Preostali čas",
+    "mining_rate": "Stopnja zaslužka",
+    "appeal": "Povečajte svojo stopnjo zaslužka",
+    "benefits_description": "Vnaprej zastavite svoje ledene nagrade za do 5 let in povečajte svojo stopnjo zaslužka do 250 %.",
+    "bonus_label": "Bonus za vnaprejšnje zastavljanje",
+    "period_label": "Obdobje vložka",
+    "title": "Vnaprejšnje zastavljanje",
+    "current_rate": "Trenutna stopnja",
+    "allocation": "Dodelitev",
+    "description": "Zastavljanje je postopek, ki vključuje dodelitev vaših kripto sredstev za podporo omrežju blockchain in potrjevanje transakcij.",
+    "terms_agree": "Strinjam se s [[:ice]] [[:link]]Pogoji zastavljanja[[/:link]]. Vaše zaloge ice bodo za izbrano obdobje zaklenjene.",
+    "stake_now": "Vnaprej zastavite zdaj!",
+    "balance_label": "Zastavljeno stanje",
+    "confirm_title": "Potrdite vnaprejšnje zastavljanje",
+    "confirm_subtitle": "Ali ste prepričani, da želite vnaprej zastaviti svoje kovance? Ko potrdite, tega ni mogoče razveljaviti."
   },
   "stats": {
-    "header_title": "Stats",
-    "active": "Active users",
-    "total": "Total users",
-    "user_growth": "User growth",
-    "top_miners": "Top users",
-    "top_countries": "Top countries",
-    "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "header_title": "Statistika",
+    "active": "Aktivnih uporabnikov",
+    "total": "Vseh uporabnikov",
+    "user_growth": "Rast uporabnikov",
+    "top_miners": "Najboljši uporabniki",
+    "top_countries": "Najboljše države",
+    "online_miners": "Spletni uporabniki",
+    "detailed_information": "Podrobne informacije"
   },
   "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
+    "title": "Prosimo, posodobite",
+    "description": "Uporabljate staro različico aplikacije in jo morate posodobiti, če jo želite uporabljati naprej.",
+    "button_title": "Posodobi zdaj"
   },
   "general": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
+    "good_morning": "Dobro jutro",
+    "good_afternoon": "Dober dan",
+    "good_evening": "Dober večer",
     "ice": "ice",
-    "ice_per_hour": "ice/h",
+    "ice_per_hour": "ice/uro",
     "seconds_short": "s",
     "minutes_short": "m",
-    "hours_short": "h",
-    "days_short": "d"
+    "hours_short": "ura",
+    "days_short": "dan"
   },
   "news": {
-    "news_feed": "News Feed",
-    "read_more": "Read more",
-    "views": "{{viewsCount}} views"
+    "news_feed": "Vir novic",
+    "read_more": "Preberite več",
+    "no_more_news": "to je zadnji vnos v viru novic.",
+    "views": "{{viewsCount}} ogledi"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
-    "nothing_is_found": "Nothing was found for your query",
-    "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "empty": "Poiščite stike, ice prijatelje in člane svoje mikro skupnosti.",
+    "nothing_is_found": "Za vašo poizvedbo ni bilo najdenega ničesar.",
+    "search_by_country": "Iskanje po državah",
+    "search_for_users": "Iskanje uporabnikov",
+    "loading": "Iskanje ..."
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tap here to start your first check-in session",
-    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
-    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
-    "mining_holiday_active": "You are using a Day Off!"
+    "mining_inactive_tooltip": "Tapnite tukaj, da začnete svojo prvo prijavo.",
+    "mining_reset_tooltip": "Pritisnite za 1 sekundo za podaljšanje seje prijave.",
+    "mining_holiday_reset_tooltip": "Izkoriščate prosti dan! Pritisnite za 1 sekundo za podaljšanje seje prijave.",
+    "mining_holiday_active": "Izkoriščate prosti dan!"
   },
   "invite_friend": {
-    "invite_button": "Invite Friend",
-    "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "invite_button": "Povabi prijatelja",
+    "button_title": "Povabi prijatelja",
+    "description": "Vaš prijatelj še ni vključen [[:ice]]. Pošljite mu vabilo!"
   },
   "balance_history": {
-    "title": "Balance History",
-    "wallet": "Wallet",
+    "title": "Zgodovina stanja",
+    "wallet": "Denarnica",
     "blockchain": "Blockchain",
-    "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
-    "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "wallet_update_interval": "posodobljeno vsako uro",
+    "blockchain_update_interval": "posodobljeno vsakih 24 ur",
+    "list_end_label": "to je zadnji vnos v zgodovino stanja.",
+    "no_data": "Za navedeno obdobje ni podatkov za prikaz."
   },
   "pop_up": {
-    "update_now": "Update Now",
-    "please_update": "Please Update",
-    "update_now_text": "You are using an old app version and need to update it in order to use it further",
-    "you_are_up_to_date": "You are up to date!",
-    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
-    "resurrection": "Resurrection",
-    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
-    "resurrection_warning": "You can only resurrect one time!",
-    "please_confirm": "Please confirm",
-    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "update_now": "Posodobi zdaj",
+    "please_update": "Prosimo posodobite",
+    "update_now_text": "Uporabljate staro različico aplikacije in jo morate posodobiti, če jo želite uporabljati naprej.",
+    "you_are_up_to_date": "Ste na tekočem!",
+    "up_to_date_text": "Zdaj uporabljate najnovejšo različico. Spodaj preverite vse spremembe.",
+    "resurrection": "Obuditev",
+    "resurrection_message": "Imate enkratno priložnost, da obudite in prejmete [[:amount]] kovance, ki ste jih izgubili v preteklosti [[:period]].",
+    "resurrection_warning": "Obudite jih lahko le enkrat!",
+    "please_confirm": "Prosimo, potrdite",
+    "resurrection_no_confirm_message": "Za vedno boste izgubili svoje [[:amount]] kovance. Ste prepričani, da želite nadaljevati?",
+    "resurrection_yes_confirm_message": "Obudite jih lahko le enkrat! Ste prepričani, da želite nadaljevati? [[:amount]] Kovanci se bodo vrnili na vaše stanje v naslednji uri.",
+    "delete_account_confirmation_title": "Potrdite izbris",
+    "delete_account_confirmation_text": "Če izbrišete svoj račun, boste trajno izbrisali vse svoje podatke, vključno z vašim stanjem kovancev ice. Želite nadaljevati?"
   },
   "periods": {
-    "3_days": "3 days",
-    "7_days": "7 days",
-    "30_days": "30 days",
-    "1_day": "1 Day",
-    "1_week": "1 Week",
-    "1_month": "1 Month",
-    "90_days": "90 days",
-    "14_days": "14 days"
+    "3_days": "3 dni",
+    "7_days": "7 dni",
+    "30_days": "30 dni",
+    "1_day": "1 dan",
+    "1_week": "1 teden",
+    "1_month": "1 mesec",
+    "90_days": "90 dni",
+    "14_days": "14 dni"
   },
   "notifications": {
-    "joined": " has joined your team",
-    "multiply": " and {{count}} others have joined your team",
-    "ping": " has pinged you, wake up!",
-    "delete": "Delete",
-    "add_notifications": "Add mocked notifications",
-    "no_notifications": "No notifications to display",
-    "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
-    "clear_title": "Clear all notifications?",
-    "title": "Notifications"
+    "joined": " se je pridružil vaši ekipi.",
+    "multiply": " in {{count}}drugi so se pridružili vaši ekipi.",
+    "ping": " te je pingal, zbudi se!",
+    "delete": "Izbriši",
+    "add_notifications": "Dodaj poskusna obvestila",
+    "no_notifications": "Ni obvestil za prikaz.",
+    "add_announcements": "Dodaj poskusne napovedi",
+    "add_both": "Dodaj poskusna sporočila in napovedi skupaj",
+    "clear_title": "Počisti vsa obvestila?",
+    "title": "Obvestila"
   },
   "notification_feed_screen": {
-    "yesterday": "Yesterday",
-    "last_week": "Last Week",
-    "this_month": "This month",
-    "last_month": "Last Month",
-    "this_week": "This week"
+    "yesterday": "Včeraj",
+    "last_week": "Prejšnji teden",
+    "this_month": "Ta mesec",
+    "last_month": "Prejšnji mesec",
+    "this_week": "Ta teden"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to hide from public eyes"
+      "title": "1. Statistika vašega profila",
+      "description": "Tapnite na bloke, ki jih želite skriti pred očmi javnosti."
     },
     "step2": {
-      "description": "Tap on this block to hide it from public eyes",
-      "title": "2. Your Current Role"
+      "description": "Tapnite ta blok, da ga skrijete pred očmi javnosti.",
+      "title": "2. Vaša trenutna vloga"
     },
     "step3": {
-      "title": "3. Your Earned Badges",
-      "description": "Tap here to hide your badges from public eyes"
+      "title": "3. Vaše prislužene značke",
+      "description": "Tapnite tukaj, da svoje značke skrijete pred očmi javnosti."
     }
   },
   "confirm_email": {
-    "title": "Confirm your email",
-    "description": "Please enter your email address and we will send code ",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
-    "wrong_email": "Wrong email?",
-    "check_email": "Check your email",
-    "emailed_link_to": "We emailed a magic link to",
-    "link_instruction": "Click the link to log in or sign up.",
-    "modify_title": "Confirm New Email",
-    "modify_description": "Please enter your new email address"
+    "title": "Potrdite svojo e-pošto",
+    "description": "Vnesite svoj e-poštni naslov in poslali vam bomo kodo.",
+    "note": "Če e-pošte niste prejeli v 5 minutah, preverite mapo z vsiljeno pošto.",
+    "wrong_email": "Napačna e-pošta?",
+    "check_email": "Preverite svojo e-pošto",
+    "emailed_link_to": " Po e-pošti smo poslali čarobno povezavo ",
+    "emailed_steps_to": "Po e-pošti smo poslali korake",
+    "link_instruction": "Kliknite povezavo za prijavo ali registracijo.",
+    "reset_link_instruction": "Kliknite povezavo za ponastavitev gesla.",
+    "modify_title": "Potrdite novo e-pošto",
+    "modify_description": "Prosimo, vnesite svoj novi e-poštni naslov."
   },
   "invalid_link": {
-    "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "title": "Neveljavna povezava",
+    "description": "Žal je ta povezava neveljavna, ponovno vnesite svoj e-poštni naslov in poslali vam bomo novo povezavo."
   },
   "confirm_code": {
-    "title": "Confirm code",
-    "description": "Please enter the code sent to",
-    "send_code_again": "Send code again",
-    "resend_time_label": "New code available in ",
-    "enter_code": "Enter the code",
-    "wrong_number": "Wrong number?"
+    "title": "Potrdite kodo",
+    "description": "Vnesite kodo, poslano na",
+    "send_code_again": "Ponovno pošljite kodo",
+    "resend_time_label": "Nova koda na voljo čez ",
+    "enter_code": "Vnesite kodo",
+    "wrong_number": "Napačna številka?"
   },
   "ice_bonus": {
-    "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
-    "balance_label": "Your current balance"
+    "title": "Nagrada dobrodošlice",
+    "description": "Čestitamo, prejeli ste svoje prve [[:value]] [[:ice]] kovance, kar dokazuje naše [[:bold]]zaupanje[[/:bold]] v [[:bold]]vas[[/:bold]].",
+    "balance_label": "Vaše trenutno stanje"
   },
   "country_select": {
-    "title": "Select country"
+    "title": "Izberite državo"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "Snežak",
+      "subtitle": "Zgradite snežni imperij",
+      "description": "Zaslužite s prijavo vsakih 24 ur, da pokažete svojo predanost omrežju ice in dokažete, da ste človek in ne robot."
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "Ambasador",
+      "subtitle": "Vladar snežnega imperija",
+      "description": "Ambasador postanete, ko se vaši ekipi pridruži vsaj 100 ljudi. Vsak ambasador bo dobil zgodnji dostop do novih funkcij."
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirm Phone",
-    "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
-    }
+    "modify_title": "Potrdite telefon",
+    "modify_description": "Potrdite kodo države in vnesite svojo telefonsko številko.",
+    "button": "Potrdite državo in telefon",
+    "same_phone_error": "Ne morete uporabiti iste številke."
   },
   "date_select": {
-    "title": "Choose date"
+    "title": "Izberite datum"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+      "readmore": {
+        "title": "Preberite več",
+        "description": "Tukaj si lahko ogledate najnovejše novice naše ekipe. Tapnite na ta gumb, če želite prebrati celoten članek."
       },
-      "step_2": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
-      },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
-      },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
-      },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
-      },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
-      },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
-      },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "releasednews": {
+        "title": "Objavljene novice",
+        "description": "Dotaknite se posameznega naslova novice in jo preberite v celoti. Bodite na tekočem z vsemi našimi novicami in anketami."
       }
     },
     "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      "allow_contacts": {
+        "title": "Dovolite stike",
+        "description": "Sinhroniziraj svoje stike in si oglej, kdo je že na [[:ice]]. V prihodnosti boste lahko pošiljali ice vsem svojim stikom. [[:ice]]"
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "confirm_phone": {
+        "title": "Potrdite telefon",
+        "description": "Potrdite svojo identiteto in omogočite svojim stikom, da vedo, da ste tudi vi član omrežja ice. Vaša telefonska številka ne bo posredovana tretjim osebam."
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "contacts_list": {
+        "title": "Seznam stikov",
+        "description": "To je seznam z vsemi vašimi stiki, tisti, ki so se že pridružili [[:ice]] omrežju, so prikazani na vrhu seznama."
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "referrals": {
+        "title": "Priporočila",
+        "description": "Tukaj boste videli, koliko priporočil imate v celoti. Več ljudi kot povabite, več boste zaslužili."
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earnings": {
+        "title": "Zaslužki",
+        "description": "Vaše trenutno stanje se posodobi vsako uro in je prikazano tukaj. Vključuje vaše neposredne in zastavljene zaslužke skupaj z zaslužki Stopnje 1 in Stopnje 2."
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "segmented_control_tier_one": {
+        "title": "Stopnja 1",
+        "description": "Tukaj si lahko ogledate seznam svojih priporočil Stopnje 1. Za vsakega prijatelja, ki se prijavi hkrati z vami, boste prejeli dodatnih 25 % na svojo osnovno trenutno stopnjo zaslužka pri prevzemu. [[:link]]Preberite več[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "segmented_control_tier_two": {
+        "title": "Stopnja 2",
+        "description": "Tukaj si lahko ogledate seznam svojih priporočil Stopnje 2. Za vsakega prijatelja, ki se prijavi hkrati z vami, boste prejeli dodatnih 5 % na svojo osnovno trenutno stopnjo zaslužka pri prevzemu. [[:link]]Preberite več[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "active_users": {
+        "title": "Aktivnih uporabnikov",
+        "description": "To je trenutni status dejavnosti prijav vaših priporočil. Kot aktivni se štejejo, ko imajo aktivno sejo prijave."
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "tier_one_earnings": {
+        "title": "Stopnja 1 Zaslužki",
+        "description": "Tukaj si lahko ogledate seznam svojih priporočil Stopnje 1. Za vsakega člana, ki se prijavi hkrati z vami, boste prejeli dodatnih 25 % na svojo osnovno trenutno stopnjo zaslužka pri prevzemu."
+      },
+      "ping": {
+        "title": "Gumb Ping",
+        "description": "Obvestite svoje priporočene, da začnejo svoje prijavne seje. Vsakemu priporočenemu lahko pošljete eno obvestilo vsakih 24 ur."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Domov",
+        "description": "Dobrodošli v [[:ice]]. Na začetnem zaslonu lahko najdete vse statistične podatke o svojem stanju, trenutni stopnji zaslužka, vaši globalni uvrstitvi in vaši ekipi."
+      },
+      "invite": {
+        "title": "Povabi",
+        "description": "Za vsako osebo, ki jo povabite, bosta oba zaslužila do 25 % vaše osnovne stopnje zaslužka. Več ljudi kot povabite, več boste zaslužili."
+      },
+      "team": {
+        "title": "Ekipa",
+        "description": "[[:ice]] bolje je s prijatelji. Na tej strani si lahko ogledate status članov svoje ekipe na nivoju Tier 1 in Tier 2. Od tu jih lahko tudi pingate."
+      },
+      "news": {
+        "title": "Novice",
+        "description": "Bodite na tekočem z vsemi našimi novicami in anketami. Ker smo decentralizirana avtonomna organizacija, boste tukaj lahko glasovali za prihodnje funkcije."
+      },
+      "profile": {
+        "title": "Profil",
+        "description": "Prilagodite podrobnosti svojega profila in si oglejte vse dosežke in značke, ki ste jih pridobili. Tukaj uporabite kalkulator, da lahko ocenite svoj zaslužek."
+      },
+      "earningicestart": {
+        "title": "Zaslužek ice",
+        "description": "[[:ice]] Sejo prijave lahko začnete vsakih 24 ur, tako da tapnete ta gumb. Ne pozabite se vrniti vsak dan in začnite služiti!"
+      },
+      "earningiceseemore": {
+        "title": "Zaslužek ice",
+        "description": "Tapnite znova in si oglejte več podrobnosti o vaši trenutni seji prijave."
+      },
+      "stats": {
+        "title": "Statistika",
+        "description": "Na strani s statistiko si lahko ogledate skupno število in aktivne uporabnike, ki so se prijavili vsak dan, skupaj z najboljšimi državami in uporabniki."
+      },
+      "help": {
+        "title": "Pomoč",
+        "description": "Imate kakšno vprašanje? Oglejte si naš seznam pogostih vprašanj. Če ne najdete tistega, kar iščete, ne oklevajte in nas kontaktirajte na hi@ice.io."
+      },
+      "preStaking": {
+        "title": "Vnaprejšnje zastavljanje",
+        "description": "Povečajte svoje donose tako, da vnaprej zastavite zaslužene nagrade. Izberite svojo dodelitev in obdobje vložkov, da poleg svojega zaslužka prejmete še bonus."
+      },
+      "wallet": {
+        "title": "Kartica denarnice",
+        "description": "Tukaj lahko najdete svoje trenutno [[:ice]] stanje skupaj s stopnjo zaslužka. Več priporočil iz vaše ekipe je na spletu, višja je stopnja zaslužka."
+      },
+      "earning": {
+        "title": "Kartica zaslužka",
+        "description": "Bodite na tekočem s svojo stopnjo zaslužka in bonusi! Tukaj lahko preverite svojo trenutno stopnjo, našo osnovno stopnjo in stopnje bonusov za različne dejavnosti v aplikaciji."
+      },
+      "engagement": {
+        "title": "Kartica vključenosti",
+        "description": "Spremljajte svoj niz prijav in proste dni! Preverite ta razdelek za več podrobnosti o vaših zaporednih prijavah in koliko prostih dni imate na voljo."
+      },
+      "profilecard": {
+        "title": "Kartica profila",
+        "description": "S sledenjem tej kartici, lahko spremljate status svojega profila. Prikazuje vašo trenutno globalno uvrstitev, skupaj z vašo vlogo, stopnjo in skupnim številom priporočil."
+      },
+      "referralscard": {
+        "title": "Kartica priporočil",
+        "description": "Z dotikom te kartice si oglejte razvoj statistike svojih priporočil za preteklih 5 dni za priporočila Tier 1 in Tier 2."
+      },
+      "adoptioncard": {
+        "title": "Kartica prevzemov",
+        "description": "Na podlagi povprečja skupnega števila aktivnih Snežakov v zadnjem tednu si lahko ogledate trenutno [[:ice]] stopnjo zaslužka. Stopnja zaslužka se prepolovi, ko je dosežen naslednji prag."
+      },
+      "nickname": {
+        "title": "Vzdevek",
+        "description": "Vzdevek je tisto, kar vas dela edinstvene. Vaši prijatelji bodo morali uporabiti ta vzdevek, da se bodo lahko pridružili vaši ekipi. S to bližnjico lahko odprete tudi svoj profil."
+      },
+      "balancehistory": {
+        "title": "Zgodovina stanja",
+        "description": "Tukaj lahko najdete svoje trenutno [[:ice]] stanje v lokalni denarnici in blockchainu. Stanje lokalne denarnice se posodobi vsako uro, stanje blockchaina pa vsakih 24 ur."
+      },
+      "achievements": {
+        "title": "Dosežki",
+        "description": "Izpolnite spodnje naloge in se dvignite na višji nivo! Tapnite tukaj, da začnete svojo prvo prijavo."
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Unlink Logins",
-    "sessionName": "Login via {{providerName}}",
+    "title": "Prekini povezavo prijav",
+    "sessionName": "Prijava z {{providerName}}",
     "buttons": {
-      "currentSession": "Current session",
-      "endSession": "End Session",
-      "loginUnlinked": "Login Unlinked",
-      "sessionEnded": "Session Ended",
-      "unlink": "Unlink"
+      "currentSession": "Trenutna seja",
+      "endSession": "Konec seje",
+      "loginUnlinked": "Prijava je nepovezana",
+      "sessionEnded": "Seja se je končala",
+      "unlink": "Prekini povezavo"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Unlink Login?",
-        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
+        "title": "Prekini povezavo prijav?",
+        "message": "Ali ste prepričani, da želite prekiniti povezavo prijave {{providerName}}s to napravo?"
       },
       "endSession": {
-        "title": "End Session?",
-        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
+        "title": "Zaključi sejo?",
+        "message": "Ali ste prepričani, da želite končati {{providerName}}sejo prijave s te naprave?"
       }
     }
   },
@@ -792,12 +846,51 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Today’s Bonus",
-    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
-    "link": "Find out more",
-    "extra_message": "You have received your daily extra bonus on your earning rate",
-    "expired_title": "Bonus Expired",
-    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
-    "result_title": "Congratulations"
+    "claim_title": "Današnji bonus",
+    "claim_message": "Čas je za vaš današnji bonus. Tapnite na spodnji gumb [[:bold]]»Prevzemi bonus«[[/:bold]].",
+    "link": "Izvedite več",
+    "extra_message": "Prejeli ste dodatni dnevni bonus na vašo stopnjo zaslužka.",
+    "expired_title": "Bonus je potekel",
+    "expired_message": "Na žalost je današnji bonus potekel. Spremljajte nas do naslednjega obvestila!",
+    "result_title": "Čestitke"
+  },
+  "early_access": {
+    "title": "Zgodnji dostop",
+    "message_part1": "Pred našo prihajajočo uradno izdajo si oglejte aplikacijo [[:bold]]ice[[/:bold]].",
+    "message_part2": "Vsa stanja bodo ponastavljena na 0 na datum objave. Vaša ekipa pa bo ostala nedotaknjena.",
+    "message_part3": "Hvala za vašo podporo!",
+    "checkbox_description": "Sem pripoznal! Tega pojavnega okna ne kaži več."
+  },
+  "mining_notice": {
+    "title": "Obvestilo",
+    "message": "Hvala za vaše zanimanje za zaslužek v [[:bold]]ice![[/:bold]] Trenutno izpopolnjujemo svojo tehnologijo in prijava trenutno ni na voljo. To je vaša priložnost, da se osredotočite na ustvarjanje svoje ekipe in rast svoje mikro skupnosti.",
+    "message_footer": "Spremljajte novosti na naših kanalih [[:twitter]]Twitter[[/:twitter]] in [[:telegram]]Telegram[[/:telegram]]."
+  },
+  "qr_code": {
+    "description": "Skeniraj QR kodo in se pridruži moji ekipi."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Pridružite se nam na TikToku",
+      "description": "Samo želeli smo vas obvestiti o naši razburljivi novi skupnosti na TikToku. Delimo zabavno in informativno vsebino o naši digitalni valuti, ice, in veseli bomo, če se nam pridružite!"
+    },
+    "youtube": {
+      "title": "Pridružite se nam na YouTubu",
+      "description": "Od nasvetov, kako zaslužiti ice, do posodobitev novih funkcij in celo zabavne vsebine skupnosti, je naš kanal YouTube popoln kraj, da ostanete na tekočem."
+    },
+    "linkedin": {
+      "title": "Pridružite se nam na LinkedInu",
+      "description": "Pridružitev skupnosti ice na LinkedInu je odličen način, da ostanete obveščeni o najnovejših dogodkih in se povežete s podobno mislečimi posamezniki, ki so prav tako navdušeni nad prihodnostjo digitalnih valut kot vi."
+    },
+    "facebook": {
+      "title": "Pridružite se nam na Facebooku",
+      "description_part1": "Toplo priporočamo, da spremljate našo Facebook stran.",
+      "description_part2": "Ne samo, da vam bo pomagal ostati na tekočem z vsem, kar se dogaja s projektom ice, je tudi odličen način, da se povežete z našo skupnostjo in postanete del pogovora."
+    },
+    "instagram": {
+      "title": "Pridružite se nam na Instagramu",
+      "description_part1": "Sledenje na Instagramu je odličen način, da ostanete na tekočem in se povežete z drugimi uporabniki, ki so prav tako navdušeni nad aplikacijo ice",
+      "description_part2": "Poleg tega boste prvi izvedeli za vse nove funkcije ali promocije, ki jih uvajamo."
+    }
   }
 }

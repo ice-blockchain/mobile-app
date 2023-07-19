@@ -1,526 +1,537 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "Welkom by ice",
+      "description": "[[:ice]] is 'n digitale geldeenheid wat jy met jou foon kan verdien. ice word besit en bedryf deur alledaagse gebruikers soos jy."
     },
     "page2": {
-      "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "title": "Planeet Vriendelik",
+      "description": "[[:ice]] is inherent meer energiedoeltreffend as BTC, aangesien dit 'n \"Proof of Stake\"-konsensusmeganisme gebruik. Met proof-of-stake (POS), valideer kripto-geldeenheid-eienaars bloktransaksies gebaseer op die aantal munte wat 'n valideerder insit."
     },
     "page3": {
-      "title": "People’s Coin",
-      "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "title": "Mense se Muntstuk",
+      "description_part1": "Die krag is in jou hande.",
+      "description_part2": "Alles wat ons by [[:ice]] ontwikkel sal oopbron wees en beheer word deur die Gedesentraliseerde outonome organisasie (DAO)."
     },
     "page4": {
-      "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "title": "Bly gekonnekteer",
+      "description": "Tik [[:iceLogo]] vir jou daaglikse inklok met ons gratis, energie-lig mobiele toepassing. Jou daaglikse kraan verseker dat ys in die hande van regte mense beland, nie bots nie."
     },
     "page5": {
-      "title": "Refer & Earn",
-      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
+      "title": "Verwys & Verdien",
+      "description": "Nooi jou vriende en verdien (beide van julle) tot 25% bonus op jou basis verdienstekoers vir elke vriend wat by jou span aansluit."
     },
     "page6": {
-      "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
-      "description_part2": "Don’t worry, we will not spam you!",
-      "not_now": "Not now"
+      "title": "Kennisgewings",
+      "description_part1": "[[:ice]] inkloksessies duur net vir 24 uur. Wil jy 'n kennisgewing ontvang wanneer jou huidige sessie eindig?",
+      "description_part2": "Moenie bekommerd wees nie, ons sal jou nie strooipos nie!",
+      "not_now": "Nie nou nie"
     }
   },
   "button": {
-    "yes_btn": "Yes, please",
-    "next_btn": "Next",
-    "not_now": "Not now",
-    "view_all": "view all",
+    "yes_btn": "Ja asseblief",
+    "next_btn": "Volgende",
+    "not_now": "Nie nou nie",
+    "view_all": "bekyk alles",
     "invite_friend": {
-      "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "title": "Nooi Vriende",
+      "description": "Verdien ekstra [[:ice]] deur jou vriende te nooi."
     },
-    "no": "No",
-    "search_country": "Search for country",
-    "save": "Save",
-    "yes": "Yes",
-    "change": "Change",
-    "no_cancel": "No, cancel",
-    "complete": "Complete",
-    "cancel": "Cancel",
-    "clear": "Clear",
-    "finish": "Finish",
-    "next_step": "Next Step",
-    "see_all": "see all",
-    "back": "Back",
-    "search": "Search",
-    "continue": "Continue",
-    "apply": "Apply",
-    "reset": "Reset",
-    "skip_all": "Skip all",
-    "done": "Done",
-    "confirm": "Confirm",
-    "do_this_later": "Do this later",
-    "resurrect_me": "Resurrect Me",
-    "claim_bonus": "Claim Bonus",
-    "close": "Close",
-    "try_again": "Try Again",
-    "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "see_all": "sien alles",
+    "no": "Nee",
+    "search_country": "Soek vir land",
+    "save": "Stoor",
+    "yes": "Ja",
+    "change": "Verander",
+    "no_cancel": "Nee, kanselleer",
+    "complete": "Voltooi",
+    "cancel": "Kanselleer",
+    "clear": "Vee uit",
+    "finish": "Voltooi",
+    "next_step": "Volgende Stap",
+    "back": "Terug",
+    "search": "Soek",
+    "continue": "Gaan voort",
+    "apply": "Doen aansoek",
+    "reset": "Stel terug",
+    "skip_all": "Slaan alles oor",
+    "done": "Klaar",
+    "confirm": "Bevestig",
+    "do_this_later": "Doen dit later",
+    "resurrect_me": "Wek My Op",
+    "claim_bonus": "Eis Bonus",
+    "close": "Maak toe",
+    "try_again": "Probeer weer",
+    "view_changelog": "Bekyk veranderingslog",
+    "disable": "Deaktiveer",
+    "agree": "Ek stem saam",
+    "learn_more": "Leer meer",
+    "back_to_login": "Terug na Aanmelding",
+    "follow_us": "Volg ons",
+    "subscribe": "Teken in"
   },
   "team": {
-    "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
+    "contacts_tab": "Kontakte",
+    "tierOne_tab": "Vlak 1",
+    "tierTwo_tab": "Vlak 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "title": "Jy het tans geen [[:title]] verwysings nie!",
+      "contacts": "Jy het tans geen kontakte in die telefoonboek nie.",
+      "button_title": "Nooi vriende"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
-      "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_title": "[[:ice]] is beter met vriende",
+      "empty_button_title": "Laat kontakte toegang toe",
+      "empty_description": "Sinkroniseer jou kontakte en kyk wie reeds aan is [[:ice]]. In die toekoms sal jy ice na enige van jou kontakte kan stuur."
     },
     "header": {
-      "search_placeholder": "Search for users",
-      "referrals": "Referrals",
-      "earnings": "Earnings"
+      "search_placeholder": "Soek vir gebruikers",
+      "referrals": "Verwysings",
+      "earnings": "Verdienste"
     },
     "confirm_code": {
-      "title": "Confirm Code",
-      "description": "Please enter the confirmation code you have received on your phone.",
-      "placeholder": "Enter the code",
-      "button": "Confirm your code now"
+      "title": "Bevestig Kode",
+      "description": "Voer asseblief die bevestigingskode in wat jy op jou foon ontvang het.",
+      "placeholder": "Voer die kode in",
+      "button": "Bevestig jou kode nou"
     },
     "confirm_phone": {
-      "title": "Confirm Phone",
-      "description": "Please confirm your country code and enter your phone number."
+      "title": "Bevestig Foon",
+      "description": "Bevestig asseblief jou landkode en voer jou foonnommer in."
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "friends"
+        "friends": "vriende"
       },
-      "all_contacts": "All contacts",
-      "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "all_contacts": "Alle kontakte",
+      "invite": "nooi",
+      "invitation_text": "Hallo {{name}}, ek wil jou uitnooi om by ice aan te sluit."
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier 1 Earnings"
+        "title_earnings": "Vlak 1-verdienste"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier 2 Earnings"
+        "title_earnings": "Vlak 2-verdienste"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
-    "welcome": "Welcome to ice",
-    "email": "Email",
-    "slogan": "Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "logInSignUp": "Teken in / teken aan",
+    "phone": "Foon",
+    "or": "of",
+    "reset_password": "Herstel wagwoord",
+    "welcome": "Welkom by ice",
+    "email": "E-pos",
+    "slogan": "Die Globale geldeenheid Herstel",
+    "privacy": "Deur voort te gaan, stem jy in tot ons [[:link]] Diensbepalings [[/:link]] en [[:link]] Privaatheidsbeleid[[/:link]]"
   },
   "claimUsername": {
-    "title": "Claim nickname",
-    "description": "Your friends will need to use this nickname to join your team",
-    "inputPlaceholder": "Enter your nickname",
-    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
-    "note_part2": "Example:",
+    "title": "Eis bynaam",
+    "description": "Jou vriende sal hierdie bynaam moet gebruik om by jou span aan te sluit.",
+    "inputPlaceholder": "Voer jou bynaam in",
+    "note_part1": "Wanneer jy 'n bynaam skep, gebruik slegs letters, syfers en punte.",
+    "note_part2": "Voorbeeld:",
     "note_example": "your.name01"
   },
   "whoInvitedYou": {
-    "title": "Who invited you?",
-    "description": "Enter the nickname of the person who invited you",
-    "inputPlaceholder": "Enter nickname",
-    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
-    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+    "title": "Wie het jou genooi?",
+    "description": "Voer die bynaam in van die persoon wat jou genooi het.",
+    "inputPlaceholder": "Voer jou bynaam in",
+    "dontHaveInvitationCode": "Deur hierdie stap te voltooi, sal jy en jou vriend 'n bonus van 25% op die basisverdienstekoers ontvang wanneer julle albei terselfdertyd inklok.",
+    "dontHaveCodeTip": "As jy nie 'n uitnodigingskode het nie, sal ons 'n ewekansige lid as jou verwysing kies!"
   },
   "errors": {
-    "nicknameSize": "Nickname size: 4-20 characters.",
-    "removeInvalidCharacters": "Remove invalid characters.",
-    "validation_error": "Some validation error",
-    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
-    "wrong_phone_number": "Invalid phone number, please try again",
-    "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken",
-    "phone_number_already_in_use": "Phone number already in use",
-    "invalid_validation_code": "Invalid code number, please try again!",
-    "validation_expired": "Validation expired",
-    "validation_not_found": "Validation not found",
-    "invalid_email": "Invalid email",
-    "invalid_ref_username": "Nickname is invalid.",
-    "invalid_phone": "Invalid phone number",
-    "user_disabled": "User has been disabled",
-    "expired_action_code": "OTP in email link is expired",
-    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
-    "invalid_credential": "The credential is malformed or has expired",
-    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
-    "user_not_found_for_email": "There is no user corresponding to the given email",
-    "user_not_found": "User not found",
-    "auth_in_progress": "Sign-In already in progress",
-    "google_play_services_not_available": "Google Play services are not available on the device",
-    "unknown_error_with_code": "Unknown error {{code}}",
-    "no_such_provider": "You do not have this provider linked",
-    "min_username": "Minimum length is 4 characters.",
-    "max_username": "Maximum length is 30 characters.",
-    "code_expired": "The code has expired. Please ask for a new code.",
-    "too_many_requests": "Too many requests. Please try again later.",
-    "network_error_title": "No internet connection",
-    "network_error_message": "Your device does not have any active internet connection",
-    "unknown_error": "Some error occurred, please try again later",
-    "general_error_title": "Oups...",
-    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
-    "general_network_error": "A network error has occurred. Please check your connection.",
-    "credential_already_in_use": "This credential is already associated with a different user account.",
-    "email_already_in_use": "The email address is already in use by another account.",
-    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
-    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "nicknameSize": "Bynaamgrootte: 4-20 karakters.",
+    "removeInvalidCharacters": "Verwyder ongeldige karakters.",
+    "validation_error": "Sommige valideringsfout.",
+    "multiple_accounts": "E-pos/foonnommer word met 'n ander rekening geassosieer. Meld asseblief by daardie rekening aan om eienaarskap te bewys, teken dan af en meld weer by hierdie een aan. As jy nie daardie ander rekening besit nie of nie daarin kan aanmeld nie, kontak asseblief ons ondersteuning.",
+    "wrong_phone_number": "Ongeldige foonnommer, probeer asseblief weer.",
+    "invalid_username": "Bynaam is ongeldig.",
+    "email_already_taken": "E-pos reeds geneem.",
+    "phone_number_already_taken": "Telefoonnommer reeds geneem.",
+    "invalid_validation_code": "Ongeldige kodenommer, probeer asseblief weer!",
+    "validation_expired": "Bekragtiging het verval",
+    "validation_not_found": "Bekragtiging nie gevind nie",
+    "invalid_email": "Ongeldige e-pos.",
+    "invalid_password": "Ongeldige wagwoord.",
+    "invalid_ref_username": "Bynaam is ongeldig.",
+    "invalid_phone": "Ongeldige foonnommer.",
+    "user_disabled": "Gebruiker is gedeaktiveer.",
+    "expired_action_code": "OTP in e-posskakel het verval.",
+    "account_exists_with_different_credential": "Daar bestaan reeds 'n rekening met die e-posadres wat deur die geloofsbriewe bevestig word.",
+    "invalid_credential": "Die eiebewyse is misvormd of het verval.",
+    "operation_not_allowed": "Die tipe rekening wat ooreenstem met die eiebewyse is nie geaktiveer nie.",
+    "user_not_found_for_email": "Daar is geen gebruiker wat ooreenstem met die gegewe e-pos nie.",
+    "user_not_found": "Gebruiker nie gevind nie.",
+    "auth_in_progress": "Aanmelding is reeds aan die gang.",
+    "google_play_services_not_available": "Google Play-dienste is nie op hierdie toestel beskikbaar nie.",
+    "unknown_error_with_code": "Onbekende fout: {{code}}",
+    "no_such_provider": "Jy het nie hierdie verskaffer gekoppel nie.",
+    "min_username": "Minimum lengte is 4 karakters.",
+    "max_username": "Maksimum lengte is 30 karakters.",
+    "code_expired": "Die kode het verval, vra asseblief vir 'n nuwe kode.",
+    "too_many_requests": "Te veel versoeke, probeer asseblief later weer.",
+    "network_error_title": "Geen internet konneksie nie",
+    "network_error_message": "Jou toestel het geen aktiewe internetverbinding nie.",
+    "unknown_error": "'n Fout het voorgekom, probeer asseblief later weer.",
+    "general_error_title": "Oeps...",
+    "general_error_message": "Lyk of iets verkeerd geloop het. Ons span werk tans daaraan om dit reg te stel. ",
+    "general_network_error": "'n Netwerkfout het voorgekom, gaan asseblief jou verbinding na.",
+    "credential_already_in_use": "Hierdie eiebewyse word reeds met 'n ander gebruikerrekening geassosieer.",
+    "email_already_in_use": "Die e-posadres word reeds deur 'n ander rekening gebruik.",
+    "user_token_expired": "Jou eiebewyse is nie meer geldig nie, meld asseblief weer aan.",
+    "requires_recent_login": "Hierdie bewerking is sensitief en vereis onlangse stawing. Meld asseblief weer aan.",
+    "same_email": "Jy kan nie dieselfde e-pos gebruik nie.",
+    "weak_password": "Swak wagwoord.",
+    "wrong_password": "Verkeerde wagwoord.",
+    "no_camera_permissions": "Kameratoestemmings word nie verleen nie.",
+    "no_library_permissions": "Biblioteektoestemmings word nie verleen nie."
   },
   "profile": {
     "my_roles": {
-      "title": "My Role"
+      "title": "My Rol"
     },
-    "mining_calculator": "earnings calculator",
-    "invite_friends": "Invite Friends",
-    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
-    "global_rank": "global rank",
-    "view_all_roles": "view all roles",
-    "data_is_hidden": "data is hidden",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "verdienste sakrekenaar",
+    "invite_friends": "Nooi vriende",
+    "invite_friends_engage": "Versprei die woord en nooi jou vriende. Hoe meer verwysings, hoe meer sal jy verdien!",
+    "global_rank": "globale rangorde",
+    "view_all_roles": "sien alle rolle",
+    "data_is_hidden": "data is versteek",
+    "progress_text": "{{value}} van {{total}}",
     "not_found": {
-      "title": "User was not found",
-      "description": "oops, we couldn't find this user"
+      "title": "Gebruiker nie gevind nie.",
+      "description": "Oeps, ons kon nie hierdie gebruiker kry nie."
     },
     "my_badges": {
-      "title": "My Badges"
+      "title": "My Kentekens"
     },
     "badges": {
-      "title": "Badges"
+      "title": "Kentekens"
     },
     "roles": {
-      "title": "Roles"
+      "title": "Rolle"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "Munte",
+        "description": "munte"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "Sosiaal",
+        "description": "vriende"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "Vlak",
+        "description": "Vlak"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update",
-    "comingSoon": "Coming soon",
+    "level": "vlak",
+    "referrals": "Verwysings",
+    "coin": "Munte",
+    "social": "Sosiaal",
+    "phone_number": "Telefoonnommer",
+    "years": "Jare",
+    "of": " van ",
+    "attention": "Aandag",
+    "email_address": "E-pos adres",
+    "password": "Wagwoord",
+    "data_hidden": "data is versteek",
+    "pull_to_refresh": "trek om op te dateer",
+    "comingSoon": "Kom binnekort",
     "date": {
-      "today": "Today"
+      "today": "Vandag"
     }
   },
   "mining_calculator": {
-    "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "result_label": "Jy sal verdien",
+    "active_inviter": "Aktiewe nooier",
+    "tier_1_ref": "Vlak 1 verwysings",
+    "tier_2_ref": "Vlak 2 verwysings",
+    "active_miners": "Aktiewe verwysings"
   },
   "home": {
     "wallet": {
-      "title": "WALLET",
-      "rate": "EARNING RATE",
-      "balance": "CURRENT BALANCE"
+      "title": "BEURSIE",
+      "rate": "VERDIENKOERS",
+      "balance": "HUIDIGE BALAANS"
     },
     "pioneer": {
-      "title": "PIONEER",
-      "rank": "GLOBAL RANK",
-      "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "rank": "GLOBALE RANGORDE",
+      "referrals": "VERWYSINGS",
+      "description": "Verwys meer gebruikers en verdien meer [[:ice]]."
     },
     "referrals": {
-      "title": "REFERRALS",
-      "description": "Referral stats for the previous 5 days",
-      "no_referrals_description": "You don't have any referrals yet",
-      "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "title": "VERWYSINGS",
+      "description": "Verwysingstatistieke vir die vorige 5 dae.",
+      "no_referrals_description": "Jy het tans geen verwysings nie!",
+      "users_tier_1": "Gebruikersvlak 1",
+      "users_tier_2": "Gebruikersvlak 2"
     },
     "adoption": {
-      "title": "ADOPTION",
-      "level": "level",
-      "users": "\nusers"
+      "title": "AANNEEMING",
+      "level": "vlak",
+      "users": "gebruikers"
     },
-    "steps": {
-      "title": "Your progress",
-      "description": "Complete the tasks below and level up!",
-      "step_one": {
-        "title": "Claim your nickname",
-        "description": "Set it and start earning from your invite"
+    "tasks": {
+      "achievements": "PRESTASIES",
+      "title": "Jou vordering",
+      "description": "Voltooi die take hieronder en verhoog die vlak!",
+      "completed": {
+        "title": "Baie geluk",
+        "description": "Hou aan om daagliks in te klok om ekstra belonings te verdien!"
       },
-      "step_two": {
-        "title": "Start mining",
-        "description": "Your first mining session"
+      "popup": {
+        "title": "Sluit aan by ons Telegram-kanaal",
+        "description": "Spesifiseer jou bynaam wat op Telegram gebruik word.",
+        "placeholder": "Bynaam"
       },
-      "step_three": {
-        "title": "Profile picture",
-        "description": "Upload your profile image"
+      "claim_username": {
+        "title": "Eis jou bynaam",
+        "description": "Stel dit en deel dit met jou vriende."
       },
-      "step_four": {
-        "title": "Join Telegram",
-        "description": "Be part of our community and join now"
+      "start_mining": {
+        "title": "Begin verdien",
+        "description": "Jou eerste inkloksessie."
       },
-      "step_five": {
-        "title": "Follow us on Twitter",
-        "description": "Let’s keep in touch, follow us on twitter"
+      "upload_profile_picture": {
+        "title": "Profiel foto",
+        "description": "Laai jou profielprent op."
       },
-      "step_six": {
-        "title": "Invite 5 Friends",
-        "description": "Create your team and increase your earnings"
+      "join_telegram": {
+        "title": "Sluit aan by Telegram",
+        "description": "Wees deel van ons gemeenskap en sluit nou aan."
+      },
+      "follow_us_on_twitter": {
+        "title": "Volg ons op Twitter",
+        "description": "Kom ons hou kontak, volg ons op Twitter."
+      },
+      "invite_friends": {
+        "title": "Nooi 5 Vriende",
+        "description": "Groei jou span en verhoog jou verdienste."
       }
     },
     "overview": {
-      "title": "Overview"
+      "title": "Oorsig"
     },
     "menu": {
-      "notifications": "Notifications",
+      "notifications": "Kennisgewings",
       "staking": "Staking",
-      "stats": "Stats",
+      "stats": "Statistieke",
       "help": "Help"
     },
-    "tasks": {
-      "title": "ACHIEVEMENTS"
-    },
     "team": {
-      "title": "Team",
-      "view_team": "view team"
+      "title": "Span",
+      "view_team": "sien span"
     },
     "mining_rate": {
-      "title": "EARNING RATE",
-      "base": "Base"
+      "title": "VERDIENKOERS",
+      "base": "Basis"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
-      "streak": "STREAK",
-      "days_off": "DAYS OFF"
+      "title": "BETROKKENHEID",
+      "description_part1": "Streek verwys na hoeveel opeenvolgende dae jy ingeklok het.",
+      "description_part2": "Vir elke 6 opeenvolgende dae ontvang jy een dag af.",
+      "streak": "STREEP",
+      "days_off": "DAE AF"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "Instellings",
+    "profile": "Profiel",
+    "legal": "Wettig",
+    "support": "Ondersteuning",
+    "personal_information_title": "Persoonlike Inligting",
+    "personal_information_description": "Bestuur jou profielbesonderhede.",
+    "notifications_title": "Kennisgewings",
+    "notifications_description": "Bestuur jou kennisgewings hier.",
+    "push_notifications_title": "Kennisgewings",
+    "push_notifications_description": "Pas jou stootkennisgewinginstellings aan.",
+    "email_notifications_title": "E-poskennisgewings",
+    "email_notifications_description": "Pas jou e-pos kennisgewing instellings aan.",
+    "terms_title": "Diensbepalings",
+    "terms_description": "Hersien ons diensbepalings.",
+    "privacy_title": "Privaatheidsbeleid",
+    "privacy_description": "Kom meer te wete oor ons privaatheidsbeleid.",
+    "feedback_title": "Stuur terugvoering",
+    "feedback_description": "Deel jou gedagtes met ons.",
+    "invite_title": "Nooi vriende",
+    "invite_description": "Verdien ekstra ice deur jou vriende te nooi.",
+    "delete_title": "Skrap Rekening",
+    "delete_description": "Verwyder jou rekening.",
+    "delete_confirmation_title": "Is jy seker jy wil die rekening verwyder?",
+    "delete_confirmation_yes": "Ja, verwyder",
+    "logout_title": "Teken uit",
+    "logout_description": "Teken uit en neem 'n blaaskans.",
+    "logout_confirmation_title": "Is jy seker jy wil uit teken?",
+    "logout_confirmation_yes": "Ja, meld uit",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "Bevestig Nuwe Foon",
+      "description": "Bevestig asseblief jou landkode en voer jou nuwe foonnommer in.",
+      "button": "Bevestig nuwe foonnommer"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
-      "type_push": "PUSH",
-      "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
+      "enable_prompt": "Kennisgewings word nie toegelaat nie. Wil jy hulle aktiveer?",
+      "channel_achievements": "Prestasies",
+      "channel_news": "Nuus",
+      "channel_reminders": "Herinneringe",
+      "channel_team": "Span",
+      "type_push": "STOOT",
+      "type_email": "E-pos",
+      "disable_notifications": "Deaktiveer Kennisgewings?",
+      "disable_notifications_description": "Deur kennisgewings te deaktiveer sal jy nie opdaterings kan ontvang wanneer jy kan begin inklok, nuus of spaninligting nie.",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
+          "title": "Weeklikse statistieke",
+          "description": "Ontvang kennisgewings oor jou aktiwiteit."
         },
         "weekly_report": {
-          "title": "Weekly report",
-          "description": "Receive notifications about your activity"
+          "title": "Weeklikse verslag",
+          "description": "Ontvang kennisgewings oor jou aktiwiteit."
         },
         "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
+          "title": "Prestasies",
+          "description": "Ontvang kennisgewings oor jou vordering."
         },
         "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
+          "title": "Promosies",
+          "description": "Ontvang kennisgewings oor hoe om jou span te laat groei en meer te verdien."
         },
         "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
+          "title": "Nuus",
+          "description": "Ontvang kennisgewings van ons span."
         },
         "micro_community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
+          "title": "Mikro-gemeenskap",
+          "description": "Ontvang kennisgewings oor jou span."
         },
         "daily_bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
+          "title": "Daaglikse bonus",
+          "description": "Ontvang kennisgewings om jou daaglikse bonus op te eis."
         },
         "mining": {
-          "title": "Session status",
-          "description": "Receive notifications about your check-in activity"
+          "title": "Sessiestatus",
+          "description": "Ontvang kennisgewings oor jou inklokaktiwiteit."
         },
         "system": {
-          "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "title": "Stelsel",
+          "description": "Ontvang belangrike kennisgewings oor die ice toepassing."
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "Taalinstellings",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "Verander Taal",
+      "prompt": "Die aanpassing van hierdie instelling sal die toepassing herbegin."
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "Profielprent",
+    "inapp_privacy_title": "Privaatheid",
+    "inapp_privacy_description": "Bestuur jou inligting hier.",
+    "developer": "Ontwikkelaar",
+    "user_id": "Gebruikers-ID",
+    "user_token": "Gebruiker Teken",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "Skrap Foto",
+      "edit": "Wysig profielfoto",
+      "photo_gallery": "Foto Gallery",
+      "camera": "Kamera"
     },
-    "confirm_email_confirmation_title": "Confirm email?",
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "Bevestig e-pos?",
+    "update_email_confirmation_title": "Dateer e-pos op?",
+    "update_email_confirmation_subtitle": "Die verandering van jou e-posadres sal vereis dat jy weer aanmeld. Is jy seker jy wil voortgaan?",
+    "unlink_logins_title": "Ontkoppel aanmeldings",
+    "unlink_logins_description": "Jy kan jou aanmeldings van hier af ontkoppel."
   },
   "invite_share": {
-    "title": "Invite a friend",
+    "title": "Nooi 'n vriend",
     "telegram": "Telegram",
     "twitter": "Twitter",
     "whatsapp": "WhatsApp",
     "instagram": "Instagram",
-    "email": "Email",
-    "fb": "Newsfeed",
+    "email": "E-pos",
+    "fb": "Nuusvoer",
     "sms": "SMS",
-    "copy_link": "Copy link",
-    "more": "More",
-    "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "copy_link": "Kopieer skakel",
+    "more": "Meer",
+    "copied": "GEKOPIEER",
+    "share_message": "Hallo ☃️ Sneeuman! Sluit aan by my span op ice en ontvang 10 ice munte wanneer jy inteken met my verwysingskode:",
+    "share_subject": "Sluit aan by my span op ice",
+    "description": "Versprei die woord en nooi jou vriende. Jy verdien [[:ice]] vir elke nuwe verwysing wat jy bring.",
+    "share": "Deel"
   },
   "users": {
     "ping": "PING",
-    "active": "Active",
-    "inactive": "Inactive",
+    "active": "Aktief",
+    "inactive": "Onaktief",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T1": "Vlak 1",
+      "T2": "Vlak 2"
     }
   },
   "personal_information": {
-    "first_name": "First name",
-    "last_name": "Last name",
-    "country": "Country",
-    "city": "City",
-    "title": "Personal Information",
-    "phone": "Phone",
-    "email": "Email",
-    "username": "Nickname"
+    "first_name": "Voornaam",
+    "last_name": "Van",
+    "country": "Land",
+    "city": "Stad",
+    "title": "Persoonlike Inligting",
+    "phone": "Foon",
+    "email": "E-pos",
+    "username": "Bynaam"
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
-      "length": "Nickname size: 4-20 characters.",
-      "invalid_characters": "Remove invalid characters.",
-      "not_found": "Nickname not found.",
-      "some_error": "Some error occurred.",
-      "refer_yourself": "You can't refer yourself"
+      "already_taken": "Bynaam reeds geneem.",
+      "length": "Bynaamgrootte: 4-20 karakters.",
+      "invalid_characters": "Verwyder ongeldige karakters.",
+      "not_found": "Bynaam nie gevind nie.",
+      "some_error": "'n Fout het voorgekom.",
+      "refer_yourself": "Jy kan nie jouself verwys nie."
     }
   },
   "staking": {
-    "time_left": "Time Left",
-    "mining_rate": "Earning Rate",
-    "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking Bonus",
-    "period_label": "Staked Period",
-    "title": "Pre-Staking",
-    "current_rate": "Current Rate",
-    "allocation": "Allocation",
-    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
-    "staking_terms": "Staking Terms",
-    "stake_now": "Pre-Stake Now!",
-    "balance_label": "Staked balance",
-    "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "time_left": "Tyd oor",
+    "mining_rate": "Verdienkoers",
+    "appeal": "Verhoog jou verdienstekoers",
+    "benefits_description": "Speel jou ice belonings vooraf vir tot 5 jaar in en verhoog jou verdienstekoers met tot 250%.",
+    "bonus_label": " Vooraf-Staking Bonus",
+    "period_label": "Afgepende tydperk",
+    "title": " Vooraf-Staking",
+    "current_rate": "Huidige koers",
+    "allocation": "Toekenning",
+    "description": "Insette is 'n proses wat behels dat jy jou kripto-bates verbind om 'n blokkettingnetwerk te ondersteun en transaksies te bevestig.",
+    "terms_agree": "Ek stem in tot die [[:ice]] [[:link]]Staking-[[/:link]]bepalings. Jou ice-besit sal vir die geselekteerde tydperk gesluit wees.",
+    "stake_now": "Speel nou vooraf!",
+    "balance_label": "Afgepende balans",
+    "confirm_title": "Bevestig vooraf-inset",
+    "confirm_subtitle": "Is jy seker jy wil jou munte vooraf inspan? Dit kan nie ontdoen word sodra jy bevestig het nie."
   },
   "stats": {
-    "header_title": "Stats",
-    "active": "Active users",
-    "total": "Total users",
-    "user_growth": "User growth",
-    "top_miners": "Top users",
-    "top_countries": "Top countries",
-    "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "header_title": "Statistieke",
+    "active": "Aktiewe gebruiker",
+    "total": "Totale gebruikers",
+    "user_growth": "Gebruikersgroei",
+    "top_miners": "Top gebruikers",
+    "top_countries": "Top lande",
+    "online_miners": "Aanlyn gebruikers",
+    "detailed_information": "Gedetailleerde inligting"
   },
   "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
+    "title": "Dateer asseblief op",
+    "description": "Jy gebruik 'n ou toepassingweergawe en moet dit opdateer om dit verder te gebruik.",
+    "button_title": "Opdateer Nou"
   },
   "general": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
+    "good_morning": "Goeie more",
+    "good_afternoon": "Goeie middag",
+    "good_evening": "Goeienaand",
     "ice": "ice",
     "ice_per_hour": "ice/h",
     "seconds_short": "s",
@@ -529,259 +540,302 @@
     "days_short": "d"
   },
   "news": {
-    "news_feed": "News Feed",
-    "read_more": "Read more",
-    "views": "{{viewsCount}} views"
+    "news_feed": "Nuusvoer",
+    "read_more": "Lees meer",
+    "no_more_news": "dit is die laaste inskrywing van die nuusvoer.",
+    "views": "{{viewsCount}} kyke"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
-    "nothing_is_found": "Nothing was found for your query",
-    "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "empty": "Soek na kontakte, ice vriende en lede van jou mikro-gemeenskap.",
+    "nothing_is_found": "Niks is vir jou navraag gevind nie.",
+    "search_by_country": "Soek volgens land",
+    "search_for_users": "Soek vir gebruikers",
+    "loading": "Soek tans …"
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tap here to start your first check-in session",
-    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
-    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
-    "mining_holiday_active": "You are using a Day Off!"
+    "mining_inactive_tooltip": "Tik hier om jou eerste inkloksessie te begin.",
+    "mining_reset_tooltip": "Druk vir 1 sekonde om jou inkloksessie te verleng.",
+    "mining_holiday_reset_tooltip": "Jy gebruik 'n Afdag! Druk vir 1 sekonde om jou inkloksessie te verleng.",
+    "mining_holiday_active": "Jy gebruik 'n Afdag!"
   },
   "invite_friend": {
-    "invite_button": "Invite Friend",
-    "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "invite_button": "Nooi 'n vriend",
+    "button_title": "Nooi 'n vriend",
+    "description": "Jou vriend is nog nie op nie [[:ice]]. Stuur vir hom 'n uitnodiging!"
   },
   "balance_history": {
-    "title": "Balance History",
-    "wallet": "Wallet",
-    "blockchain": "Blockchain",
-    "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
-    "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "title": "Balans Geskiedenis",
+    "wallet": "BEURSIE",
+    "blockchain": "Blokketting",
+    "wallet_update_interval": "elke uur opgedateer",
+    "blockchain_update_interval": "elke 24 uur opgedateer",
+    "list_end_label": "dit is die laaste inskrywing van die balansgeskiedenis.",
+    "no_data": "Daar is geen data om vir die gespesifiseerde tydperk te vertoon nie."
   },
   "pop_up": {
-    "update_now": "Update Now",
-    "please_update": "Please Update",
-    "update_now_text": "You are using an old app version and need to update it in order to use it further",
-    "you_are_up_to_date": "You are up to date!",
-    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
-    "resurrection": "Resurrection",
-    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
-    "resurrection_warning": "You can only resurrect one time!",
-    "please_confirm": "Please confirm",
-    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "update_now": "Opdateer Nou",
+    "please_update": "Dateer asseblief op",
+    "update_now_text": "Jy gebruik 'n ou toepassingweergawe en moet dit opdateer om dit verder te gebruik.",
+    "you_are_up_to_date": "Jy is op datum!",
+    "up_to_date_text": "Jy gebruik nou die nuutste weergawe. Gaan al die veranderinge hieronder na.",
+    "resurrection": "Opstanding",
+    "resurrection_message": "Jy het 'n eenmalige kans om op te staan en munte te ontvang [[:amount]] wat jy in die verlede verloor het[[:period]].",
+    "resurrection_warning": "Jy kan net een keer opstaan!",
+    "please_confirm": "Bevestig asseblief",
+    "resurrection_no_confirm_message": "Jy sal jou [[:amount]] munte vir ewig verloor. Is jy seker jy wil voortgaan?",
+    "resurrection_yes_confirm_message": "Jy kan net een keer opstaan! Is jy seker jy wil voortgaan? Die [[:amount]] munte sal binne die volgende uur na jou balans terugkeer.",
+    "delete_account_confirmation_title": "Bevestig Skrap",
+    "delete_account_confirmation_text": "As jy jou rekening skrap, sal al jou data permanent uitgevee word, insluitend jou ice balans. Wil jy voortgaan?"
   },
   "periods": {
-    "3_days": "3 days",
-    "7_days": "7 days",
-    "30_days": "30 days",
-    "1_day": "1 Day",
+    "3_days": "3 dae",
+    "7_days": "7 dae",
+    "30_days": "30 dae",
+    "1_day": "1 Dag",
     "1_week": "1 Week",
-    "1_month": "1 Month",
-    "90_days": "90 days",
-    "14_days": "14 days"
+    "1_month": "1 Maand",
+    "90_days": "90 dae",
+    "14_days": "14 dae"
   },
   "notifications": {
-    "joined": " has joined your team",
-    "multiply": " and {{count}} others have joined your team",
-    "ping": " has pinged you, wake up!",
-    "delete": "Delete",
-    "add_notifications": "Add mocked notifications",
-    "no_notifications": "No notifications to display",
-    "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
-    "clear_title": "Clear all notifications?",
-    "title": "Notifications"
+    "joined": " het by jou span aangesluit.",
+    "multiply": " en {{count}} ander het by jou span aangesluit.",
+    "ping": " het jou geping, word wakker!",
+    "delete": "Skrap",
+    "add_notifications": "Voeg bespotte kennisgewings by",
+    "no_notifications": "Geen kennisgewings om te wys nie.",
+    "add_announcements": "Voeg bespotte aankondigings by",
+    "add_both": "Voeg bespotte kennisgewings en aankondigings saam",
+    "clear_title": "Vee alle kennisgewings uit?",
+    "title": "Kennisgewings"
   },
   "notification_feed_screen": {
-    "yesterday": "Yesterday",
-    "last_week": "Last Week",
-    "this_month": "This month",
-    "last_month": "Last Month",
-    "this_week": "This week"
+    "yesterday": "Gister",
+    "last_week": "Verlede Week",
+    "this_month": "Die maand",
+    "last_month": "Verlede Maand",
+    "this_week": "Die week"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to hide from public eyes"
+      "title": "1. Jou profielstatistieke",
+      "description": "Tik op die blokke wat jy vir die publiek wil wegsteek."
     },
     "step2": {
-      "description": "Tap on this block to hide it from public eyes",
-      "title": "2. Your Current Role"
+      "description": "Tik op hierdie blok om dit vir publieke oë te versteek.",
+      "title": "2. Jou huidige rol"
     },
     "step3": {
-      "title": "3. Your Earned Badges",
-      "description": "Tap here to hide your badges from public eyes"
+      "title": "3. Jou verdiende kentekens",
+      "description": "Tik hier om jou kentekens vir publieke oë te versteek."
     }
   },
   "confirm_email": {
-    "title": "Confirm your email",
-    "description": "Please enter your email address and we will send code ",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
-    "wrong_email": "Wrong email?",
-    "check_email": "Check your email",
-    "emailed_link_to": "We emailed a magic link to",
-    "link_instruction": "Click the link to log in or sign up.",
-    "modify_title": "Confirm New Email",
-    "modify_description": "Please enter your new email address"
+    "title": "Bevestig jou e-pos?",
+    "description": "Voer asseblief jou e-posadres in en ons sal die kode stuur.",
+    "note": "As jy nie die e-pos binne 5 minute ontvang het nie, gaan asseblief jou strooiposlêer na.",
+    "wrong_email": "Verkeerde e-pos?",
+    "check_email": "Kyk na jou eposse",
+    "emailed_link_to": "Ons het 'n towerskakel gestuur na",
+    "emailed_steps_to": "Ons het die stappe per e-pos gestuur na",
+    "link_instruction": "Klik op die skakel om aan te meld of aan te meld.",
+    "reset_link_instruction": "Klik op die skakel om jou wagwoord terug te stel.",
+    "modify_title": "Bevestig nuwe e-pos?",
+    "modify_description": "Voer asseblief jou nuwe e-posadres in."
   },
   "invalid_link": {
-    "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "title": "Ongeldige skakel",
+    "description": "Ongelukkig is hierdie skakel ongeldig, tik asseblief weer jou e-posadres in en ons sal vir jou 'n nuwe skakel stuur."
   },
   "confirm_code": {
-    "title": "Confirm code",
-    "description": "Please enter the code sent to",
-    "send_code_again": "Send code again",
-    "resend_time_label": "New code available in ",
-    "enter_code": "Enter the code",
-    "wrong_number": "Wrong number?"
+    "title": "Bevestig Kode",
+    "description": "Voer asseblief die kode in wat na gestuur is",
+    "send_code_again": "Stuur kode weer",
+    "resend_time_label": "Nuwe kode beskikbaar in ",
+    "enter_code": "Voer die kode in",
+    "wrong_number": "Verkeerde nommer?"
   },
   "ice_bonus": {
-    "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
-    "balance_label": "Your current balance"
+    "title": "Welkom beloning",
+    "description": "Baie geluk, jy het jou eerste [[:value]] [[:ice]] munte ontvang wat bewys dat ons [[:bold]] Vertrou [[/:bold]] in [[:bold]]Jou[[/:bold]].",
+    "balance_label": "Jou huidige balaans"
   },
   "country_select": {
-    "title": "Select country"
+    "title": "Kies land"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "Sneeuman",
+      "subtitle": "Bou 'n sneeu-ryk",
+      "description": "Verdien deur elke 24 uur in te klok om jou verbintenis tot die ice netwerk te wys en te bewys dat jy 'n mens is, nie 'n robot nie."
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "Ambassadeur",
+      "subtitle": "Heerser van die sneeu ryk",
+      "description": "Jy word 'n ambassadeur wanneer ten minste 100 mense by jou span aangesluit het. Elke ambassadeur sal vroeë toegang tot nuwe kenmerke kry."
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirm Phone",
-    "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
-    }
+    "modify_title": "Bevestig Foon",
+    "modify_description": "Bevestig asseblief jou landkode en voer jou foonnommer in.",
+    "button": "Bevestig land en telefoon",
+    "same_phone_error": "Jy kan nie dieselfde nommer gebruik nie."
   },
   "date_select": {
-    "title": "Choose date"
+    "title": "Kies datum"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+      "readmore": {
+        "title": "Lees meer",
+        "description": "Hier kan jy ons jongste nuus van ons span sien. Tik op hierdie knoppie om die volledige artikel te lees."
       },
-      "step_2": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
-      },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
-      },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
-      },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
-      },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
-      },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
-      },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "releasednews": {
+        "title": "Nuus vrygestel",
+        "description": "Tik op elke individuele nuustitel en lees die volledige weergawe daarvan. Bly op hoogte van al ons nuus en meningspeilings."
       }
     },
     "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      "allow_contacts": {
+        "title": "Laat kontakte toe",
+        "description": "Sinkroniseer jou kontakte en kyk wie reeds aan is [[:ice]]. In die toekoms sal jy ice na enige van jou kontakte kan stuur.[[:ice]]"
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "confirm_phone": {
+        "title": "Bevestig Foon",
+        "description": "Bevestig jou identiteit en laat jou kontakte toe om te weet dat jy ook 'n lid van die ice netwerk is. Jou foonnommer sal nie met ander derde partye gedeel word nie."
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "contacts_list": {
+        "title": "Lys van kontakte",
+        "description": "Dit is die lys met al jou kontakte, diegene wat reeds by die [[:ice]] netwerk aangesluit het, word bo-aan die lys vertoon."
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "referrals": {
+        "title": "Verwysings",
+        "description": "Hier sal jy sien hoeveel verwysings jy in totaal het. Hoe meer mense jy nooi, hoe meer sal jy verdien."
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earnings": {
+        "title": "Verdienste",
+        "description": "Jou huidige balans word elke uur opgedateer en hier vertoon. Dit sluit jou direkte en afgepende verdienste saam met die Vlak 1- en Vlak 2-verdienste in."
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "segmented_control_tier_one": {
+        "title": "Vlak 1",
+        "description": "Hier kan jy die lys van jou Vlak 1-verwysings sien. Vir elke vriend wat op dieselfde tyd saam met jou inklok, sal jy ekstra 25% kry op jou basis huidige aanneming verdienstekoers. [[:link]]Lees meer[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "segmented_control_tier_two": {
+        "title": "Vlak 2",
+        "description": "Hier kan jy die lys van jou Vlak 1-verwysings sien. Vir elke vriend wat op dieselfde tyd saam met jou inklok, sal jy ekstra 5% kry op jou basis huidige aanneming verdienstekoers. [[:link]]Lees meer[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "active_users": {
+        "title": "Aktiewe gebruiker",
+        "description": "Dit is die huidige status van jou verwysings-inklokaktiwiteit. Hulle tel as aktief wanneer hulle 'n aktiewe inkloksessie het."
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "tier_one_earnings": {
+        "title": "Vlak 1-verdienste",
+        "description": "Hier kan jy die lys van jou Vlak 1-verwysings sien. Vir elke vriend wat op dieselfde tyd saam met jou inklok, sal jy ekstra 25% kry op jou basis huidige aanneming verdienstekoers."
+      },
+      "ping": {
+        "title": "Ping-knoppie",
+        "description": "Stel jou verwysings in kennis om hul inkloksessies te begin. Jy kan elke 24 uur een kennisgewing aan elke verwysing stuur."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "Tuis",
+        "description": "Welkom by [[:ice]]. Op die tuisskerm kan jy al die statistieke oor jou saldo, die huidige verdienstekoers, jou globale rangorde saam met jou span vind."
+      },
+      "invite": {
+        "title": "nooi",
+        "description": "Vir elke persoon wat jy nooi, sal julle albei tot 25% op jou basis verdienstekoers verdien. Hoe meer mense jy nooi, hoe meer sal jy verdien."
+      },
+      "team": {
+        "title": "Span",
+        "description": "[[:ice]] is beter met vriende Op hierdie bladsy kan jy die status van jou spanlede van beide Vlak 1- en Vlak 2-vlakke sien Jy kan hulle ook van hier af ping."
+      },
+      "news": {
+        "title": "Nuus",
+        "description": "Bly op hoogte van al ons nuus en meningspeilings. Aangesien ons 'n Gedesentraliseerde outonome organisasie is, sal u hier vir die toekomstige kenmerke kan stem."
+      },
+      "profile": {
+        "title": "Profiel",
+        "description": "Pas jou profielbesonderhede aan en sien al jou prestasies en kentekens wat jy verdien het. Gebruik die sakrekenaar van hier af, sodat jy jou verdienste kan skat."
+      },
+      "earningicestart": {
+        "title": "Verdien ice",
+        "description": "Jy kan die [[:ice]] inkloksessie elke 24 uur begin deur hierdie knoppie te tik. Moenie vergeet om elke dag terug te kom en te begin verdien nie!"
+      },
+      "earningiceseemore": {
+        "title": "Verdien ice",
+        "description": "Tik weer en sien meer besonderhede oor jou huidige inkloksessie."
+      },
+      "stats": {
+        "title": "Statistieke",
+        "description": "Op die statistiekbladsy kan jy Totale en Aktiewe gebruikers sien wat elke dag ingeboek het, saam met Toplande en -gebruikers."
+      },
+      "help": {
+        "title": "Help",
+        "description": "Het jy enige vrae? Kyk na ons lys van gereelde vrae. As jy nie kan kry waarna jy soek nie, moet asseblief nie huiwer om ons by hi@ice.io te kontak nie."
+      },
+      "preStaking": {
+        "title": " Vooraf-Staking",
+        "description": "Maksimeer jou opbrengs deur vooraf jou verdienbelonings in te span. Kies jou toekenning en stakingstydperk om 'n bonus bo jou verdienste te ontvang."
+      },
+      "wallet": {
+        "title": "Beursiekaart",
+        "description": "Jy kan jou huidige [[:ice]] balans hier vind, tesame met die verdienstekoers. Hoe meer verwysings van jou span aanlyn is, hoe hoër is die verdienstekoers."
+      },
+      "earning": {
+        "title": "Verdien Kaart",
+        "description": "Bly op hoogte van jou verdienstekoers en bonusse! Hier kan jy na jou huidige koers, ons basiskoers en bonuskoerse vir verskeie aktiwiteite in die toepassing kyk."
+      },
+      "engagement": {
+        "title": "Betrokkenheidkaart",
+        "description": "Bly op hoogte van jou inkloksessies se streep en dae af! Gaan hierdie afdeling na vir meer besonderhede oor jou opeenvolgende inkloksessies en om te sien hoeveel beskikbare dae af jy het."
+      },
+      "profilecard": {
+        "title": "Profielkaart",
+        "description": "Jy kan tred hou met jou profielstatus deur hierdie kaart te volg. Dit wys jou huidige globale rangorde, saam met jou rol, vlak en totale verwysings."
+      },
+      "referralscard": {
+        "title": "Verwysingskaart",
+        "description": "Sien die evolusie van jou verwysingstatistieke vir die vorige 5 dae vir beide Vlak 1- en Vlak 2-verwysings deur op hierdie kaart te tik."
+      },
+      "adoptioncard": {
+        "title": "Aannemingskaart",
+        "description": "Gebaseer op die gemiddelde van die afgelope week se totaal van aktiewe sneeumanne, kan jy die huidige [[:ice]] verdienstekoers sien. Die verdienstekoers word gehalveer wanneer die volgende drempel bereik word."
+      },
+      "nickname": {
+        "title": "Bynaam",
+        "description": "Die bynaam is wat jou uniek maak. Jou vriende sal dit moet gebruik om by jou span aan te sluit. Jy kan ook hierdie kortpad gebruik om jou profiel oop te maak."
+      },
+      "balancehistory": {
+        "title": "Balans Geskiedenis",
+        "description": "Jy kan hier jou huidige [[:ice]] balans op plaaslike beursie en blockchain vind. Die plaaslike beursiebalans word elke uur opgedateer, terwyl die blokkettingbalans elke 24 uur bygewerk word."
+      },
+      "achievements": {
+        "title": "Prestasies",
+        "description": "Voltooi die take hieronder en verhoog die vlak! Tik hier om jou eerste inkloksessie te begin."
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Unlink Logins",
-    "sessionName": "Login via {{providerName}}",
+    "title": "Ontkoppel aanmeldings",
+    "sessionName": "Teken in via {{providerName}}",
     "buttons": {
-      "currentSession": "Current session",
-      "endSession": "End Session",
-      "loginUnlinked": "Login Unlinked",
-      "sessionEnded": "Session Ended",
-      "unlink": "Unlink"
+      "currentSession": "Huidige sessie",
+      "endSession": "Eindig sessie",
+      "loginUnlinked": "Aanmelding ontkoppel",
+      "sessionEnded": "Sessie geëindig",
+      "unlink": "Ontkoppel"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Unlink Login?",
-        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
+        "title": "Ontkoppel aanmelding?",
+        "message": "Is jy seker jy wil die aanmelding via {{providerName}} van hierdie toestel ontkoppel?"
       },
       "endSession": {
-        "title": "End Session?",
-        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
+        "title": "Eindig sessie?",
+        "message": "Is jy seker jy wil die {{providerName}}aanmeldsessie vanaf hierdie toestel beëindig?"
       }
     }
   },
@@ -792,12 +846,51 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Today’s Bonus",
-    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
-    "link": "Find out more",
-    "extra_message": "You have received your daily extra bonus on your earning rate",
-    "expired_title": "Bonus Expired",
-    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
-    "result_title": "Congratulations"
+    "claim_title": "Vandag se bonus",
+    "claim_message": "Dit is tyd vir jou vandag se bonus, tik asseblief op die [[:bold]]\"Eis bonus\"[[/:bold]]-knoppie hieronder.",
+    "link": "Vind meer uit",
+    "extra_message": "Jy het jou daaglikse ekstra bonus op jou verdienstekoers ontvang.",
+    "expired_title": "Bonus het verval",
+    "expired_message": "Ongelukkig het vandag se bonus verval. Bly ingeskakel vir die volgende kennisgewing!",
+    "result_title": "Baie geluk"
+  },
+  "early_access": {
+    "title": "Vroeë toegang",
+    "message_part1": "Kry 'n voorsmakie van die [[:bold]]ice [[/:bold]]toepassing voor ons [[:bold]]komende amptelike vrystelling.[[/:bold]]",
+    "message_part2": "Alle saldo's sal op die vrystellingsdatum na 0 teruggestel word. Jou span sal egter ongeskonde bly.",
+    "message_part3": "Dankie vir jou ondersteuning!",
+    "checkbox_description": "Ek het erken! Moenie hierdie opspringer weer wys nie."
+  },
+  "mining_notice": {
+    "title": "Kennisgewing",
+    "message": "Dankie vir jou belangstelling om ice te verdien[[:bold]]![[/:bold]] Ons verfyn tans ons tegnologie en inklok is nie op die oomblik beskikbaar nie Dit is jou kans om te fokus op die bou van jou span en die groei van jou mikro-gemeenskap.",
+    "message_footer": "Bly ingeskakel vir opdaterings op ons [[:twitter]]Twitter[[/:twitter]]- [[:telegram]]en Telegram[[/:telegram]]-kanale."
+  },
+  "qr_code": {
+    "description": "Skandeer QR-kode om by my span aan te sluit."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "Sluit by ons aan op TikTok",
+      "description": "Ons wou net uitreik en jou laat weet van ons opwindende nuwe gemeenskap op TikTok. Ons deel prettige en leersame inhoud oor ons digitale geldeenheid, ys, en ons sal graag wil hê dat jy by ons aansluit!"
+    },
+    "youtube": {
+      "title": "Sluit by ons aan op YouTube",
+      "description": "Van tutoriale oor hoe om ice te verdien, tot opdaterings oor nuwe kenmerke, en selfs prettige gemeenskapsinhoud, ons YouTube-kanaal is die perfekte plek om op hoogte te bly."
+    },
+    "linkedin": {
+      "title": "Sluit by ons aan op LinkedIn",
+      "description": "Om by die ice gemeenskap op LinkedIn aan te sluit is 'n goeie manier om op hoogte te bly van die jongste ontwikkelings en om met eendersdenkende individue te skakel wat net so passievol is oor die toekoms van digitale geldeenhede soos jy."
+    },
+    "facebook": {
+      "title": "Sluit aan by ons op Facebook",
+      "description_part1": "Ons beveel sterk aan om ons Facebook-blad te volg.",
+      "description_part2": "Nie net sal dit jou help om op hoogte te bly van alles wat met die ice projek gebeur nie, maar dit is ook 'n goeie manier om met ons gemeenskap te skakel en deel te wees van die gesprek."
+    },
+    "instagram": {
+      "title": "Sluit by ons aan op Instagram",
+      "description_part1": "Om ons op Instagram te volg is 'n goeie manier om op hoogte te bly en kontak te maak met ander gebruikers wat ook passievol is oor ice",
+      "description_part2": "Boonop sal jy die eerste wees wat weet van enige nuwe kenmerke of promosies wat ons bekendstel."
+    }
   }
 }

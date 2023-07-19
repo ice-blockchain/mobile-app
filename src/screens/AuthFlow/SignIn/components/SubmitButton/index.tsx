@@ -9,7 +9,13 @@ import {StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
 export const SubmitButton = ({style, ...props}: PrimaryButtonProps) => {
-  return <PrimaryButton style={[styles.button, style]} {...props} />;
+  return (
+    <PrimaryButton
+      style={[styles.button, style]}
+      textStyle={styles.buttonTitle}
+      {...props}
+    />
+  );
 };
 
 const styles = StyleSheet.create({
@@ -18,5 +24,9 @@ const styles = StyleSheet.create({
     height: rem(52),
     alignSelf: 'center',
     paddingHorizontal: rem(54),
+    textAlign: 'center',
+  },
+  buttonTitle: {
+    textAlign: 'center',
   },
 });

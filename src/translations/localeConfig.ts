@@ -19,6 +19,7 @@ export type SupportedLocale =
   | 'th'
   | 'vi'
   | 'zh'
+  | 'zh-hant'
   | 'hi'
   | 'bn'
   | 'bg'
@@ -35,7 +36,17 @@ export type SupportedLocale =
   | 'pt'
   | 'ro'
   | 'te'
-  | 'uk';
+  | 'uk'
+  | 'pa'
+  | 'af'
+  | 'am'
+  | 'kn'
+  | 'ru'
+  | 'sk'
+  | 'sl'
+  | 'sq'
+  | 'sv'
+  | 'tr';
 
 export type LocalConfig = {
   [key in SupportedLocale]: {
@@ -149,6 +160,14 @@ export const localeConfig: LocalConfig = {
     },
     name: 'Simplified Chinese',
     flag: flags.cn,
+    isRTL: false,
+  },
+  'zh-hant': {
+    get translations() {
+      return require('./locales/zh-hant.json');
+    },
+    name: 'Traditional Chinese',
+    flag: flags.hk,
     isRTL: false,
   },
   bg: {
@@ -271,4 +290,100 @@ export const localeConfig: LocalConfig = {
     flag: flags.ua,
     isRTL: false,
   },
+  pa: {
+    get translations() {
+      return require('./locales/pa.json');
+    },
+    name: 'Punjabi',
+    flag: flags.pk,
+    isRTL: false,
+  },
+  af: {
+    get translations() {
+      return require('./locales/af.json');
+    },
+    name: 'Afrikaans',
+    flag: flags.za,
+    isRTL: false,
+  },
+  am: {
+    get translations() {
+      return require('./locales/am.json');
+    },
+    name: 'Amharic',
+    flag: flags.et,
+    isRTL: false,
+  },
+  kn: {
+    get translations() {
+      return require('./locales/kn.json');
+    },
+    name: 'Kannada',
+    flag: flags.in,
+    isRTL: false,
+  },
+  ru: {
+    get translations() {
+      return require('./locales/ru.json');
+    },
+    name: 'Russian',
+    flag: flags.ru,
+    isRTL: false,
+  },
+  sk: {
+    get translations() {
+      return require('./locales/sk.json');
+    },
+    name: 'Slovak',
+    flag: flags.sk,
+    isRTL: false,
+  },
+  sl: {
+    get translations() {
+      return require('./locales/sl.json');
+    },
+    name: 'Slovenian',
+    flag: flags.si,
+    isRTL: false,
+  },
+  sq: {
+    get translations() {
+      return require('./locales/sq.json');
+    },
+    name: 'Albanian',
+    flag: flags.al,
+    isRTL: false,
+  },
+  sv: {
+    get translations() {
+      return require('./locales/sv.json');
+    },
+    name: 'Swedish',
+    flag: flags.se,
+    isRTL: false,
+  },
+  tr: {
+    get translations() {
+      return require('./locales/tr.json');
+    },
+    name: 'Turkish',
+    flag: flags.tr,
+    isRTL: false,
+  },
+  // yo: {
+  //   get translations() {
+  //     return require('./locales/yo.json');
+  //   },
+  //   name: 'Yoruba',
+  //   flag: flags.ng,
+  //   isRTL: false,
+  // },
+  // zu: {
+  //   get translations() {
+  //     return require('./locales/zu.json');
+  //   },
+  //   name: 'Zulu',
+  //   flag: flags.za,
+  //   isRTL: false,
+  // },
 } as const;
