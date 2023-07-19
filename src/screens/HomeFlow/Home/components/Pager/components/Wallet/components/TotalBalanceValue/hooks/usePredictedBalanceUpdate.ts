@@ -60,7 +60,7 @@ export const usePredictedBalanceUpdate = ({
     const realBalance = parseNumber(balanceSummary.total);
     const ratePerHour =
       parseNumber(miningRate.total.amount) *
-      (miningRate.type === 'positive' ? 1 : -1);
+      (miningRate.type === 'positive' ? 100 : -1);
     const ratePerSecond = ratePerHour / ENV.MINING_RATE_INTERVAL_SEC;
 
     /**
