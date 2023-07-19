@@ -4,6 +4,7 @@ import {LINKS} from '@constants/links';
 import {AppUpdateActions} from '@store/modules/AppUpdate/actions';
 import {appVersionSelector} from '@store/modules/AppUpdate/selectors';
 import {openUpdateSuccessful} from '@store/modules/AppUpdate/utils/openUpdateSuccessful';
+import {checkProp} from '@utils/guards';
 import DeviceInfo from 'react-native-device-info';
 import RNLocalize from 'react-native-localize';
 import checkVersion from 'react-native-store-version';
@@ -32,18 +33,30 @@ export function* checkAppUpdatedSaga() {
   }
 
   if (isUpdated) {
-    const storeStatus: SagaReturnType<typeof checkVersion> = yield call(
-      checkVersion,
-      {
-        version: currentVersion,
-        iosStoreURL: LINKS.APP_STORE,
-        androidStoreURL: LINKS.PLAY_STORE,
-        country: RNLocalize.getCountry(),
-      },
-    );
+    try {
+      const storeStatus: SagaReturnType<typeof checkVersion> = yield call(
+        checkVersion,
+        {
+          version: currentVersion,
+          iosStoreURL: LINKS.APP_STORE,
+          androidStoreURL: LINKS.PLAY_STORE,
+          country: RNLocalize.getCountry(),
+        },
+      );
 
-    if (storeStatus.result === 'equal') {
-      yield call(openUpdateSuccessful);
+      if (storeStatus.result === 'equal') {
+        yield call(openUpdateSuccessful);
+      }
+    } catch (error) {
+      /**
+       * Ignoring network errors - for example it is thrown when GP is blocked
+       */
+      if (
+        !checkProp(error, 'message') ||
+        error.message !== 'Network request failed'
+      ) {
+        throw error;
+      }
     }
 
     yield put(

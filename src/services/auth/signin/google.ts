@@ -5,7 +5,7 @@ import {
   GoogleSignin,
   statusCodes,
 } from '@react-native-google-signin/google-signin';
-import {SocialSignInMethod} from '@services/auth/signin/types';
+import {AuthError, SocialSignInMethod} from '@services/auth/signin/types';
 import {t} from '@translations/i18n';
 import {checkProp} from '@utils/guards';
 import {removeInvalidUsernameCharacters} from '@utils/username';
@@ -45,7 +45,11 @@ export const startGoogleSignIn: SocialSignInMethod<{
         case statusCodes.IN_PROGRESS:
           throw new Error(t('errors.auth_in_progress'));
         case statusCodes.PLAY_SERVICES_NOT_AVAILABLE:
-          throw new Error(t('errors.google_play_services_not_available'));
+        case 16: // https://developers.google.com/android/reference/com/google/android/gms/common/ConnectionResult#API_UNAVAILABLE
+          throw {
+            code: AuthError.PlayServicesNotAvailable,
+            message: t('errors.google_play_services_not_available'),
+          };
         default:
           throw new Error(
             t('errors.unknown_error_with_code', {code: String(error.code)}),

@@ -16,6 +16,7 @@ import {
 } from '@store/modules/Permissions/selectors';
 import {waitForSelector} from '@store/utils/sagas/effects';
 import {getErrorMessage} from '@utils/errors';
+import {checkProp} from '@utils/guards';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import {getChunks, runInChunks} from '@utils/promise';
 import {getAllWithoutPhotos} from 'react-native-contacts';
@@ -29,6 +30,10 @@ import {
 } from 'redux-saga/effects';
 
 export const CONTACTS_PHONE_NUMBERS_DIVIDER = ',';
+
+enum SyncError {
+  UpdateAccount = 'UpdateAccount',
+}
 
 export function* syncContactsSaga(
   action: ReturnType<
@@ -95,7 +100,7 @@ export function* syncContactsSaga(
       });
 
       if (error) {
-        throw new Error('Error setting agendaPhoneNumberHashes');
+        throw {code: SyncError.UpdateAccount};
       }
     }
 
@@ -110,7 +115,12 @@ export function* syncContactsSaga(
     yield put(
       ContactsActions.SYNC_CONTACTS.FAILED.create(getErrorMessage(error)),
     );
-    throw error;
+    /**
+     * Ignore UpdateAccount errors because these are network issues that often happen in background
+     */
+    if (!(checkProp(error, 'code') && error.code === SyncError.UpdateAccount)) {
+      throw error;
+    }
   } finally {
     if (
       action.type ===

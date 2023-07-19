@@ -90,6 +90,10 @@ const refreshTokenConcurrently = async <T>(error: T) => {
       return null;
     }
     throw error;
+  } finally {
+    if (tokenRefreshPromise) {
+      tokenRefreshPromise = null;
+    }
   }
 };
 
