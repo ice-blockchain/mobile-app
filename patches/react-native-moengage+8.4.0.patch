@@ -1,3 +1,14 @@
+diff --git a/node_modules/react-native-moengage/android/build.gradle b/node_modules/react-native-moengage/android/build.gradle
+index b65ea58..eb9c003 100644
+--- a/node_modules/react-native-moengage/android/build.gradle
++++ b/node_modules/react-native-moengage/android/build.gradle
+@@ -1,5 +1,5 @@
+ buildscript {
+-  ext.kotlinVersion = '1.6.0'
++  ext.kotlinVersion = '1.6.20'
+   repositories {
+     google()
+     mavenCentral()
 diff --git a/node_modules/react-native-moengage/iOS/MoEReactBridge/MoEReactBridge.m b/node_modules/react-native-moengage/iOS/MoEReactBridge/MoEReactBridge.m
 index 0bf1e38..91e98f7 100644
 --- a/node_modules/react-native-moengage/iOS/MoEReactBridge/MoEReactBridge.m

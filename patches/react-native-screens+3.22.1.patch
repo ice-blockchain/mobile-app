@@ -1,18 +1,19 @@
-diff --git a/node_modules/react-native-screens/ios/RNSScreenStack.m b/node_modules/react-native-screens/ios/RNSScreenStack.m
-index 47c8f8d..c2896c6 100644
---- a/node_modules/react-native-screens/ios/RNSScreenStack.m
-+++ b/node_modules/react-native-screens/ios/RNSScreenStack.m
-@@ -10,6 +10,7 @@
- #import <React/RCTTouchHandler.h>
- #import <React/RCTUIManager.h>
- #import <React/RCTUIManagerUtils.h>
-+#import "ReactNativePageView.h"
+diff --git a/node_modules/react-native-screens/ios/RNSScreenStack.mm b/node_modules/react-native-screens/ios/RNSScreenStack.mm
+index e97011e..de630a3 100644
+--- a/node_modules/react-native-screens/ios/RNSScreenStack.mm
++++ b/node_modules/react-native-screens/ios/RNSScreenStack.mm
+@@ -24,6 +24,8 @@
+ #import "RNSScreenStackHeaderConfig.h"
+ #import "RNSScreenWindowTraits.h"
  
++#import "ReactNativePageView.h"
++
  @interface RNSScreenStackView () <
      UINavigationControllerDelegate,
-@@ -594,6 +595,10 @@ - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
-     return NO;
-   }
+     UIAdaptivePresentationControllerDelegate,
+@@ -619,6 +621,10 @@ - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+ {
+   RNSScreenView *topScreen = _reactSubviews.lastObject;
  
 +  if ([gestureRecognizer isKindOfClass:[_controller.interactivePopGestureRecognizer class]]) {
 +    return YES;
@@ -21,8 +22,8 @@ index 47c8f8d..c2896c6 100644
  #if TARGET_OS_TV
    [self cancelTouchesInParent];
    return YES;
-@@ -637,6 +642,19 @@ - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
- #endif
+@@ -662,6 +668,19 @@ - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+ #endif // TARGET_OS_TV
  }
  
 +- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
