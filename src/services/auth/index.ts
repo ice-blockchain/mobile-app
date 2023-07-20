@@ -7,7 +7,10 @@ import {LINKS} from '@constants/links';
 import auth from '@react-native-firebase/auth';
 import {startAppleSignIn} from '@services/auth/signin/apple';
 import {startFacebookSignIn} from '@services/auth/signin/facebook';
-import {startGoogleSignIn} from '@services/auth/signin/google';
+import {
+  cleanUpGoogleSignIn,
+  startGoogleSignIn,
+} from '@services/auth/signin/google';
 import {twitterSignIn} from '@services/auth/signin/twitter';
 import {SocialSignInProvider} from '@services/auth/signin/types';
 import {AuthToken} from '@services/auth/types';
@@ -185,6 +188,10 @@ const getSignInMethodForProvider = (provider: SocialSignInProvider) => {
 
 export const signInWithProvider = (provider: SocialSignInProvider) => {
   return getSignInMethodForProvider(provider)();
+};
+
+export const cleanUpSignInProviders = async () => {
+  await cleanUpGoogleSignIn();
 };
 
 export const onUserChanged = (listener: () => void) => {
