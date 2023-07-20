@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {ENV} from '@constants/env';
-import {useIsFocused} from '@react-navigation/native';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {
   balanceSummarySelector,
@@ -9,7 +8,7 @@ import {
 } from '@store/modules/Tokenomics/selectors';
 import {isFailedSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {parseNumber} from '@utils/numbers';
-import {useEffect, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 export const usePredictedBalanceUpdate = ({
@@ -17,7 +16,7 @@ export const usePredictedBalanceUpdate = ({
 }: {
   updateInterval: number;
 }) => {
-  const isScreenFocused = useIsFocused();
+  const prevRealBalance = useRef<number | null>(null);
 
   const balanceSummary = useSelector(balanceSummarySelector);
   const miningRate = useSelector(miningRatesSelector);
@@ -33,7 +32,15 @@ export const usePredictedBalanceUpdate = ({
   const [predictedBalance, setPredictedBalance] = useState<number | null>(null);
 
   useEffect(() => {
-    if (!balanceSummary || !miningRate) {
+    /**
+     * Instead of using the whole balanceSummary and miningRate objects,
+     * Using only specific props to skip unnecessary useEffect calls
+     */
+    if (
+      balanceSummary?.total == null ||
+      miningRate?.type == null ||
+      miningRate?.total.amount == null
+    ) {
       setPredictedBalance(null);
       return;
     }
@@ -45,30 +52,39 @@ export const usePredictedBalanceUpdate = ({
       return;
     }
 
-    if (miningRate.type === 'none' || !isScreenFocused) {
+    if (miningRate.type === 'none') {
       setPredictedBalance(parseNumber(balanceSummary.total));
       return;
     }
 
-    const balance = parseNumber(balanceSummary.total);
+    const realBalance = parseNumber(balanceSummary.total);
     const ratePerHour =
       parseNumber(miningRate.total.amount) *
       (miningRate.type === 'positive' ? 1 : -1);
     const ratePerSecond = ratePerHour / ENV.MINING_RATE_INTERVAL_SEC;
 
-    setPredictedBalance(balance);
+    /**
+     * If BE returns the same balance, keep the predicted one
+     */
+    setPredictedBalance(currentPredictedBalance => {
+      if (prevRealBalance.current !== realBalance) {
+        prevRealBalance.current = realBalance;
+        return realBalance;
+      }
+      return currentPredictedBalance;
+    });
 
     const interval = setInterval(() => {
       setPredictedBalance(currentPredictedBalance =>
-        Math.max((currentPredictedBalance ?? balance) + ratePerSecond, 0),
+        Math.max((currentPredictedBalance ?? realBalance) + ratePerSecond, 0),
       );
     }, updateInterval);
     return () => clearInterval(interval);
   }, [
-    balanceSummary,
-    miningRate,
+    balanceSummary?.total,
+    miningRate?.type,
+    miningRate?.total.amount,
     updateInterval,
-    isScreenFocused,
     getBalanceSummaryFailed,
     getMiningSummaryFailed,
   ]);
