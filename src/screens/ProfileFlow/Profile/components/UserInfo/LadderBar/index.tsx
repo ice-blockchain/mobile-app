@@ -62,7 +62,7 @@ export const LadderBar = memo(
       <View style={styles.ladder}>
         <LadderItem
           title={t('profile.global_rank').toUpperCase()}
-          value={globalRank ?? 1}
+          value={globalRank ?? 0}
           enabled={isProfilePrivacyEditMode}
           isProfilePrivacyEditMode={isProfilePrivacyEditMode}
           privacyType="globalRank"
