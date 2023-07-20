@@ -59,3 +59,11 @@ export const startGoogleSignIn: SocialSignInMethod<{
     throw error;
   }
 };
+
+/**
+ * Signs Out from the last used google account
+ * That gives a possibility to choose another one
+ */
+export const cleanUpGoogleSignIn = () => {
+  return GoogleSignin.signOut().catch();
+};
