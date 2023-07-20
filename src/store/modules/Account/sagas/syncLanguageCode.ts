@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {getAuthLanguageCode, setAuthLanguageCode} from '@services/auth';
-import {setCalendarLocale} from '@services/calendar';
-import {setDayjsLocale} from '@services/dayjs';
 import {appLocaleSelector} from '@store/modules/Account/selectors';
 import {waitForSelector} from '@store/utils/sagas/effects';
 import {getLocale, setLocale} from '@translations/i18n';
@@ -26,10 +24,6 @@ export function* syncLanguageCodeSaga() {
     );
 
     setLocale(locale);
-
-    setDayjsLocale(locale);
-
-    setCalendarLocale(locale);
 
     /**
      * Sync locale with auth service
