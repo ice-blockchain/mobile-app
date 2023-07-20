@@ -7,7 +7,7 @@ import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {InviteShareCard} from '@screens/InviteFlow/InviteShare/components/InviteShareCard';
-import {replaceString, t, tagRegex} from '@translations/i18n';
+import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
@@ -60,7 +60,8 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginVertical: rem(16),
-    marginStart: rem(21),
+    marginStart: isRTL ? 0 : rem(21),
+    marginEnd: !isRTL ? 0 : rem(21),
     flex: 1,
     /**
      * need to allow the image to be stretched to the full width of the screen

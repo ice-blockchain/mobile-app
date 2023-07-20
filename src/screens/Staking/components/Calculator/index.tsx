@@ -3,6 +3,7 @@
 import {IceLabel} from '@components/Labels/IceLabel';
 import {Slider} from '@components/Slider';
 import {COLORS} from '@constants/colors';
+import {FORCE_LTR_TEXT_CHAR} from '@constants/rtl';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useCalculatorSliderValues} from '@screens/Staking/components/Calculator/hooks/useCalculatorSliderValues';
 import {miningRatesSelector} from '@store/modules/Tokenomics/selectors';
@@ -76,10 +77,10 @@ export const Calculator = memo(
             <>
               <Text style={styles.resultValueText}>
                 {calculatedResults
-                  ? `${formatNumber(calculatedResults.miningRate, {
+                  ? ` \u200E${formatNumber(calculatedResults.miningRate, {
                       minimumFractionDigits: 2,
                       maximumFractionDigits: 2,
-                    })}  `
+                    })} `
                   : ''}
               </Text>
               <IceLabel
@@ -90,7 +91,7 @@ export const Calculator = memo(
               />
               <Text style={styles.resultBonusText}>
                 {calculatedResults
-                  ? ` \u200E(+${calculatedResults.bonus}%)`
+                  ? ` ${FORCE_LTR_TEXT_CHAR}(+${calculatedResults.bonus}%) `
                   : ''}
               </Text>
             </>
@@ -103,8 +104,13 @@ export const Calculator = memo(
               {formatNumberString(
                 miningRate.positiveTotalNoPreStakingBonus.amount,
               )}{' '}
-              <IceLabel iconSize={14} label={t('general.ice_per_hour')} />
             </Text>
+            <IceLabel
+              iconSize={14}
+              iconOffsetY={1}
+              label={t('general.ice_per_hour')}
+              textStyle={styles.currentRateText}
+            />
           </View>
         )}
         <View style={styles.sliderInfo}>
@@ -196,12 +202,12 @@ const styles = StyleSheet.create({
     textAlignVertical: 'center',
   },
   currentRateContainer: {
+    marginVertical: rem(4),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
   },
   currentRateText: {
-    marginVertical: rem(4),
     ...font(13, 18, 'bold', 'periwinkleGray'),
     textAlignVertical: 'center',
   },

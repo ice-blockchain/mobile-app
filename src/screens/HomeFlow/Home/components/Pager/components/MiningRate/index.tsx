@@ -3,6 +3,7 @@
 import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
+import {FORCE_LTR_TEXT_CHAR} from '@constants/rtl';
 import {commonStyles} from '@constants/styles';
 import {PAGE_HEIGHT} from '@screens/HomeFlow/Home/components/Pager';
 import {PageSkeleton} from '@screens/HomeFlow/Home/components/Pager/components/PageSkeleton';
@@ -78,13 +79,16 @@ export const MiningRate = memo(({darkMode}: Props) => {
         />
 
         <IceLabel
-          textStyle={[styles.rateValueText, styles.marginLeft]}
+          textStyle={styles.rateValueText}
           iconOffsetY={0}
           iconSize={16}
           label={t('general.ice_per_hour')}
         />
         {!!miningRates.total.bonuses?.total && (
-          <Text style={styles.rateIncreaseText}>{`\u200E+${formatNumber(
+          <Text
+            style={
+              styles.rateIncreaseText
+            }>{`${FORCE_LTR_TEXT_CHAR}+${formatNumber(
             miningRates.total.bonuses.total,
           )}%`}</Text>
         )}
@@ -105,10 +109,9 @@ export const MiningRate = memo(({darkMode}: Props) => {
         />
 
         <IceLabel
-          textStyle={[
-            darkMode ? styles.baseValueTextDarkMode : styles.baseValueText,
-            styles.marginLeft,
-          ]}
+          textStyle={
+            darkMode ? styles.baseValueTextDarkMode : styles.baseValueText
+          }
           color={color}
           iconOffsetY={0}
           iconSize={12}
@@ -121,7 +124,9 @@ export const MiningRate = memo(({darkMode}: Props) => {
           <AnimatedNumberText
             value={totalBonuses}
             style={styles.iconValueText}
-            textDecorator={value => `\u200E+${formatNumber(value)}%`}
+            textDecorator={value =>
+              `${FORCE_LTR_TEXT_CHAR}${formatNumber(value)}%`
+            }
           />
         </View>
         <View style={styles.iconContainer}>
@@ -129,7 +134,9 @@ export const MiningRate = memo(({darkMode}: Props) => {
           <AnimatedNumberText
             value={extraBonuses}
             style={styles.iconValueText}
-            textDecorator={value => `\u200E+${formatNumber(value)}%`}
+            textDecorator={value =>
+              `${FORCE_LTR_TEXT_CHAR}${formatNumber(value)}%`
+            }
           />
         </View>
         <View style={styles.iconContainer}>
@@ -137,7 +144,9 @@ export const MiningRate = memo(({darkMode}: Props) => {
           <AnimatedNumberText
             value={prestackingBonuses}
             style={styles.iconValueText}
-            textDecorator={value => `\u200E+${formatNumber(value)}%`}
+            textDecorator={value =>
+              `${FORCE_LTR_TEXT_CHAR}${formatNumber(value)}%`
+            }
           />
         </View>
       </View>
@@ -193,9 +202,6 @@ const styles = StyleSheet.create({
   },
   baseValueContainer: {
     marginHorizontal: rem(4),
-  },
-  marginLeft: {
-    marginLeft: isRTL ? rem(6) : 0,
   },
   baseValueText: {
     ...font(12, 16, 'medium'),

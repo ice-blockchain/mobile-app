@@ -2,9 +2,9 @@
 
 import {COLORS} from '@constants/colors';
 import {LogoIcon} from '@svg/LogoIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import React, {memo} from 'react';
-import {StyleProp, Text, TextStyle, ViewStyle} from 'react-native';
+import {StyleProp, StyleSheet, Text, TextStyle, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
 
 export type IceLabelProps = {
@@ -46,7 +46,13 @@ export const IceLabel = memo(
           height={rem(iconSize)}
           style={[{transform: [{translateY: iconOffsetY}]}, style]}
         />
-        {!!label && <Text style={textStyle}> {label}</Text>}
+        {!!label && <Text style={[styles.text, textStyle]}> {label}</Text>}
       </>
     ),
 );
+
+const styles = StyleSheet.create({
+  text: {
+    marginLeft: isRTL ? rem(6) : 0,
+  },
+});

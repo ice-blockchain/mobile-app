@@ -75,28 +75,26 @@ export const Calculator = memo(
         <View style={styles.resultValue}>
           {loading ? (
             <ActivityIndicator />
-          ) : (
-            <Text style={styles.resultValueText}>
-              {result !== null ? (
-                <>
-                  <AnimatedNumberText
-                    value={result ?? 0}
-                    textDecorator={animatedValue =>
-                      `${formatNumber(animatedValue, {
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2,
-                      })}`
-                    }
-                  />{' '}
-                  <IceLabel
-                    iconSize={24}
-                    iconOffsetY={isAndroid ? 2 : -4}
-                    label={t('general.ice_per_hour')}
-                  />
-                </>
-              ) : null}
-            </Text>
-          )}
+          ) : result !== null ? (
+            <>
+              <AnimatedNumberText
+                value={result ?? 0}
+                style={styles.resultValueText}
+                textDecorator={animatedValue =>
+                  ` ${formatNumber(animatedValue, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })} `
+                }
+              />
+              <IceLabel
+                iconSize={24}
+                iconOffsetY={isAndroid ? 2 : -4}
+                textStyle={styles.resultValueText}
+                label={t('general.ice_per_hour')}
+              />
+            </>
+          ) : null}
         </View>
         <View style={[styles.sliderInfo, styles.sliderInfo__first]}>
           <TierOneIcon />
@@ -192,10 +190,13 @@ const styles = StyleSheet.create({
   },
   resultValue: {
     minHeight: rem(36),
+    marginTop: rem(4),
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   resultValueText: {
-    marginTop: rem(4),
     ...font(28, 35, 'bold', 'white', 'center'),
   },
   sliderInfo: {

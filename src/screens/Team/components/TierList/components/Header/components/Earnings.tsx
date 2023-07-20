@@ -12,7 +12,6 @@ import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
-import {rem} from 'rn-units';
 
 type Props = {referralType: ReferralType};
 
@@ -37,7 +36,7 @@ export const Earnings = ({referralType}: Props) => {
       {!isRTL && <Text style={styles.value}> </Text>}
 
       <IceLabel
-        textStyle={[styles.value, styles.marginLeft]}
+        textStyle={styles.value}
         iconSize={16}
         color={COLORS.primaryDark}
       />
@@ -54,9 +53,6 @@ const styles = StyleSheet.create({
   },
   value: {
     ...font(14, null, 'regular', 'primaryDark'),
-  },
-  marginLeft: {
-    marginLeft: isRTL ? rem(6) : 0,
   },
   valueDecimals: {
     ...font(8, null, 'bold', 'primaryDark'),

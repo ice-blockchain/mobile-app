@@ -61,7 +61,7 @@ export const HistoryListSectionHeader = ({balanceDiff, time}: Props) => {
         )}
         <IceLabel
           color={COLORS.secondary}
-          textStyle={[styles.amountValueText, styles.marginLeft]}
+          textStyle={styles.amountValueText}
           iconSize={13}
           iconOffsetY={0}
         />
@@ -98,9 +98,6 @@ const styles = StyleSheet.create({
   },
   amountValueText: {
     ...font(13, 18, 'bold', 'secondary'),
-  },
-  marginLeft: {
-    marginLeft: isRTL ? rem(4) : 0,
   },
   amountDecimalsText: {
     ...font(8, 12, 'bold', 'secondary'),
