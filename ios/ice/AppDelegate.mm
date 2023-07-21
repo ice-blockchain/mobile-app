@@ -11,8 +11,6 @@
 #import <FBSDKCoreKit/FBSDKCoreKit-swift.h>
 #import <React/RCTLinkingManager.h>
 
-#import <RNBootSplash/RNBootSplash.h>
-
 #import <ReactNativeMoEngage/MoEngageInitializer.h>
 #import <ReactNativeMoEngage/MoEReactBridge.h>
 #import <MoEngageSDK/MoEngageSDK.h>
@@ -20,6 +18,7 @@
 #import <RNFBApp/RNFBRCTEventEmitter.h>
 
 #import "RNCConfig.h"
+#import "RNBootSplash.h"
 #import <TSBackgroundFetch/TSBackgroundFetch.h>
 
 @implementation AppDelegate

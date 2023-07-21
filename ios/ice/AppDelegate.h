@@ -6,7 +6,7 @@
 #import <UserNotifications/UNUserNotificationCenter.h>
 #import <FirebaseMessaging.h>
 
-@interface AppDelegate : EXAppDelegateWrapper
+@interface AppDelegate : EXAppDelegateWrapper <UIApplicationDelegate, RCTBridgeDelegate, UNUserNotificationCenterDelegate, FIRMessagingDelegate>
 
 // add this line to the @interface section of AppDelegate
 @property (nonatomic, strong) NSString *moeDeeplink;
