@@ -10483,10 +10483,10 @@ react-native-moengage@8.4.0:
   resolved "https://registry.yarnpkg.com/react-native-moengage/-/react-native-moengage-8.4.0.tgz#e52fd51e9a7f75647423ec187184ac6f0ffa5ca1"
   integrity sha512-7YiGciPuFYmaRz/IvlOX7+uzyey7EfGg3ZMOuDU2/9dGvqrZxIPJBRbm/qJo/V8jJqIYEhiVFpZlpprtOi891g==
 
-react-native-pager-view@6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/react-native-pager-view/-/react-native-pager-view-6.1.1.tgz#e396b0c78d74931a92d1c9bf28c450eb356b904d"
-  integrity sha512-4WqR0YWBjaUtc3iPVk8w6wsTsMq+r0plNiXdqPXOiUdQIhxKfsP1iqb6hRzdeJKOo8UH7RCP6zI7dxdFEAXzrw==
+react-native-pager-view@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-pager-view/-/react-native-pager-view-6.2.0.tgz#51380d93fbe47f6380dc71d613a787bf27a4ca37"
+  integrity sha512-pf9OnL/Tkr+5s4Gjmsn7xh91PtJLDa6qxYa/bmtUhd/+s4cQdWQ8DIFoOFghwZIHHHwVdWtoXkp6HtpjN+r20g==
 
 react-native-permissions@^3.6.1:
   version "3.6.1"
