@@ -19,7 +19,7 @@
 #import <RNFBMessaging/RNFBMessagingSerializer.h>
 #import <RNFBApp/RNFBRCTEventEmitter.h>
 
-#import "ReactNativeConfig.h"
+#import "RNCConfig.h"
 #import <TSBackgroundFetch/TSBackgroundFetch.h>
 
 @implementation AppDelegate
@@ -37,8 +37,8 @@
   [[FBSDKApplicationDelegate sharedInstance] application:application
                        didFinishLaunchingWithOptions:launchOptions];
 
-   NSString *moeAppId = [ReactNativeConfig envFor:@"MO_ENGAGE_APP_ID"];
-   NSString *moeDomain = [ReactNativeConfig envFor:@"MO_ENGAGE_APP_DOMAIN"];
+   NSString *moeAppId = [RNCConfig envFor:@"MO_ENGAGE_APP_ID"];
+   NSString *moeDomain = [RNCConfig envFor:@"MO_ENGAGE_APP_DOMAIN"];
    MoEngageSDKConfig* sdkConfig = [[MoEngageSDKConfig alloc] initWithAppID:moeAppId];
    if ([moeDomain isEqualToString:@"DATA_CENTER_01"]) {
      sdkConfig.moeDataCenter = MoEngageDataCenterData_center_01;
@@ -62,8 +62,6 @@
         self.moeDeeplink = notificationPayload[@"app_extra"][@"moe_deeplink"];
       }
   }
-
-  [RNBootSplash initWithStoryboard:@"LaunchScreen" rootView:rootView];
 
   // https://github.com/transistorsoft/react-native-background-fetch/blob/master/docs/INSTALL-AUTO-IOS.md
   [[TSBackgroundFetch sharedInstance] didFinishLaunching];
@@ -150,6 +148,19 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
+}
+
+// https://github.com/zoontek/react-native-bootsplash#ios-1
+- (UIView *)createRootViewWithBridge:(RCTBridge *)bridge
+                          moduleName:(NSString *)moduleName
+                           initProps:(NSDictionary *)initProps {
+  UIView *rootView = [super createRootViewWithBridge:bridge
+                                          moduleName:moduleName
+                                           initProps:initProps];
+
+  [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView]; // ⬅️ initialize the splash screen
+
+  return rootView;
 }
 
 @end
