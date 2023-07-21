@@ -99,6 +99,9 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "9.9.9"
+
+        // https://github.com/luggit/react-native-config#advanced-android-setup
+        resValue "string", "build_config_package", "io.ice.app"
     }
     signingConfigs {
         release {

@@ -8,7 +8,7 @@ buildscript {
         minSdkVersion = 23
         compileSdkVersion = 33
         targetSdkVersion = 33
-        kotlinVersion = '1.7.21'
+        kotlinVersion = '1.8.10'
         // We use NDK 23 which has both M1 support and is the side-by-side NDK version from AGP.
         ndkVersion = "23.1.7779620"
         androidXAnnotation = "1.5.0"
@@ -33,6 +33,10 @@ allprojects {
         maven {
             // react-native-background-fetch
             url("${project(':react-native-background-fetch').projectDir}/libs")
+        }
+        maven {
+            // expo-camera bundles a custom com.google.android:cameraview
+            url "$rootDir/../node_modules/expo-camera/android/maven"
         }
     }
 }
