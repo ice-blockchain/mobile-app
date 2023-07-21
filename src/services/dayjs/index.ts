@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {logError} from '@services/logging';
-import {getLocale} from '@translations/i18n';
 import {SupportedLocale} from '@translations/localeConfig';
 // eslint-disable-next-line no-restricted-imports
 import dayjs from 'dayjs';
@@ -149,7 +148,5 @@ export const setDayjsLocale = (locale: SupportedLocale) => {
 
   dayjs.locale(locale);
 };
-
-setDayjsLocale(getLocale());
 
 export {dayjs};

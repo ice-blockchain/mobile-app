@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {setCalendarLocale} from '@services/calendar';
+import {setDayjsLocale} from '@services/dayjs';
 import {localeConfig, SupportedLocale} from '@translations/localeConfig';
 import {Translations} from '@translations/locales/en.json';
 // eslint-disable-next-line no-restricted-imports
@@ -12,6 +14,17 @@ import reactStringReplace from 'react-string-replace';
 const DEFAULT_LOCALE: SupportedLocale = 'en';
 
 const i18n = new I18n();
+
+export const setLocale = (newLocale: SupportedLocale) => {
+  i18n.store({[newLocale]: localeConfig[newLocale].translations});
+  i18n.locale = newLocale;
+  setDayjsLocale(newLocale);
+  setCalendarLocale(newLocale);
+};
+
+export const getLocale = (): SupportedLocale => {
+  return i18n.locale as SupportedLocale;
+};
 
 export const availableLocales = Object.keys(
   localeConfig,
@@ -27,13 +40,13 @@ const initialLocale =
   locale?.languageTag ||
   (i18n.defaultLocale as Extract<SupportedLocale, typeof DEFAULT_LOCALE>);
 
-i18n.locale = initialLocale;
 i18n.enableFallback = true;
 i18n.translations = {
   // always load en for fallbacks
   en: localeConfig.en.translations,
-  [initialLocale]: localeConfig[initialLocale].translations,
 };
+
+setLocale(initialLocale);
 
 export default i18n;
 
@@ -56,14 +69,5 @@ export const tagRegex = (tag: string, isSingular = true) => {
 };
 
 export const replaceString = reactStringReplace;
-
-export const setLocale = (newLocale: SupportedLocale) => {
-  i18n.store({[newLocale]: localeConfig[newLocale].translations});
-  i18n.locale = newLocale;
-};
-
-export const getLocale = (): SupportedLocale => {
-  return i18n.locale as SupportedLocale;
-};
 
 export const isRTL: boolean = I18nManager.isRTL;
