@@ -180,7 +180,6 @@
     "autolinking": {
       "exclude": [
         "expo-keep-awake",
-        "expo-image-loader",
         "expo-application",
         "expo-constants",
         "expo-file-system",
