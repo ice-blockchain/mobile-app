@@ -13,6 +13,8 @@ import reactStringReplace from 'react-string-replace';
 
 const DEFAULT_LOCALE: SupportedLocale = 'en';
 
+const i18n = new I18n();
+
 export const setLocale = (newLocale: SupportedLocale) => {
   i18n.store({[newLocale]: localeConfig[newLocale].translations});
   i18n.locale = newLocale;
@@ -23,8 +25,6 @@ export const setLocale = (newLocale: SupportedLocale) => {
 export const getLocale = (): SupportedLocale => {
   return i18n.locale as SupportedLocale;
 };
-
-const i18n = new I18n();
 
 export const availableLocales = Object.keys(
   localeConfig,
