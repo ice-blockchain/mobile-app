@@ -1,15 +1,14 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {COLORS} from '@constants/colors';
-import {commonStyles} from '@constants/styles';
-import {Header} from '@navigation/components/Header';
-import {WelcomeStackParamList} from '@navigation/Welcome';
-import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
-import {useCameraPermissions} from '@screens/Modals/QRCodeScanner/hooks/useCameraPermissions';
-import {useDetectBarcode} from '@screens/Modals/QRCodeScanner/hooks/useDetectBarcode';
+import { COLORS } from '@constants/colors';
+import { commonStyles } from '@constants/styles';
+import { Header } from '@navigation/components/Header';
+import { WelcomeStackParamList } from '@navigation/Welcome';
+import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
+import { useCameraPermissions } from '@screens/Modals/QRCodeScanner/hooks/useCameraPermissions';
+import { useDetectBarcode } from '@screens/Modals/QRCodeScanner/hooks/useDetectBarcode';
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
-import {Camera, useCameraDevices} from 'react-native-vision-camera';
+import { StyleSheet, View } from 'react-native';
 
 export type QRCodeScannerParams = {
   onDetect: (content: string) => void;
@@ -29,19 +28,11 @@ export const QRCodeScanner = () => {
 
   const {permissionsGranted} = useCameraPermissions();
 
-  const device = useCameraDevices().back;
-
   return (
     <View style={commonStyles.flexOne}>
       <Header backgroundColor="transparent" color={COLORS.white} />
-      {device && permissionsGranted ? (
-        <Camera
-          style={StyleSheet.absoluteFill}
-          device={device}
-          isActive={true}
-          frameProcessor={frameProcessor}
-          frameProcessorFps={5}
-        />
+      {permissionsGranted ? (
+        null
       ) : (
         <View style={[StyleSheet.absoluteFill, styles.stub]} />
       )}
