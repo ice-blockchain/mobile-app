@@ -9,6 +9,7 @@ import {userIdSelector, userSelector} from '@store/modules/Account/selectors';
 import {userByIdSelector} from '@store/modules/Users/selectors';
 import {RoundedTriangle} from '@svg/RoundedTriangle';
 import {t} from '@translations/i18n';
+import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {useCallback, useMemo, useState} from 'react';
 import {LayoutChangeEvent, Text} from 'react-native';
@@ -85,12 +86,22 @@ export const ReferralCountInfo = () => {
           onLayout={onContainerLayout}>
           <View style={styles.cell}>
             <Text style={styles.label}>{t('users.referralType.T1')}</Text>
-            <Text style={styles.value}>{user?.t1ReferralCount ?? 0}</Text>
+            <Text style={styles.value}>
+              {formatNumber(user?.t1ReferralCount ?? 0, {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
+              })}
+            </Text>
           </View>
           <View style={styles.divider} />
           <View style={styles.cell}>
             <Text style={styles.label}>{t('users.referralType.T2')}</Text>
-            <Text style={styles.value}>{user?.t2ReferralCount ?? 0}</Text>
+            <Text style={styles.value}>
+              {formatNumber(user?.t2ReferralCount ?? 0, {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
+              })}
+            </Text>
           </View>
         </View>
       </View>
