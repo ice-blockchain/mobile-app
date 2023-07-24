@@ -75,6 +75,7 @@ export const ReferralsCard = ({sharedIsCollapsed}: Props) => {
 const styles = StyleSheet.create({
   body: {
     flexDirection: 'row',
+    alignItems: 'center',
     marginRight: rem(24),
     flexGrow: 1,
   },
