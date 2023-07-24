@@ -498,6 +498,7 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
 			);
 			name = "Upload Debug Symbols to Sentry";
 			outputPaths = (
