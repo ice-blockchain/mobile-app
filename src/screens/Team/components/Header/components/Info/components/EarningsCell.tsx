@@ -17,7 +17,7 @@ export const EarningsCell = memo(({color = COLORS.white}: {color?: string}) => {
   const balanceSummary = useSelector(balanceSummarySelector);
 
   const NumberComponent = useCallback(
-    ({animatedValue}) => {
+    ({animatedValue}: {animatedValue: number}) => {
       return (
         <FormattedNumber
           number={animatedValue}

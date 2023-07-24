@@ -17,7 +17,7 @@ interface Props {
 export const MiningRateValue = memo(
   ({style, bodyStyle, decimalsStyle, value, signRequired = false}: Props) => {
     const NumberComponent = useCallback(
-      ({animatedValue}) => {
+      ({animatedValue}: {animatedValue: number}) => {
         const formattedValue = `${
           animatedValue > 0 && signRequired ? '+' : ''
         }${formatNumberString(String(animatedValue))}`;

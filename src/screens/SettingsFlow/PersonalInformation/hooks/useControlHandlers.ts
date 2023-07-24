@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {User} from '@api/user/types';
+import {CroppedImage} from '@hooks/useActionSheetUpdateAvatar';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -70,7 +71,7 @@ export const useControlHandlers = (user: User) => {
   );
 
   const onChangeProfileImage = useCallback(
-    image =>
+    (image: CroppedImage | null) =>
       image
         ? setUserDraft(draft => ({
             ...draft,

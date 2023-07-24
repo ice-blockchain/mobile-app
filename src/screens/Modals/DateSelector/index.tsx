@@ -14,8 +14,7 @@ import {
 } from '@screens/Modals/DateSelector/components/Calendar';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
-import React, {useRef} from 'react';
-import {useCallback} from 'react';
+import React, {useCallback, useRef} from 'react';
 import {StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
 import Animated, {SlideInDown} from 'react-native-reanimated';
 import {rem} from 'rn-units';
@@ -32,9 +31,12 @@ export const DateSelect = () => {
     end: string | null;
   }>({start: null, end: null});
 
-  const onPeriodSelect = useCallback((start, end) => {
-    rangeRef.current = {start, end};
-  }, []);
+  const onPeriodSelect = useCallback(
+    (start: string | null, end: string | null) => {
+      rangeRef.current = {start, end};
+    },
+    [],
+  );
 
   const onResetPress = () => {
     calendarRef.current?.reset();

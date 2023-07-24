@@ -4,7 +4,7 @@ import {SearchInput} from '@components/Inputs/SearchInput';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {CountryListItem} from '@components/ListItems/CountryListItem';
 import {Touchable} from '@components/Touchable';
-import {countries} from '@constants/countries';
+import {countries, Country} from '@constants/countries';
 import {Header} from '@navigation/components/Header';
 import {useBottomOffsetStyle} from '@navigation/hooks/useBottomOffsetStyle';
 import {MainStackParamList} from '@navigation/Main';
@@ -40,7 +40,7 @@ export const CountrySelect = () => {
   );
 
   const renderItem = useCallback(
-    ({item}) => {
+    ({item}: {item: Country}) => {
       return (
         <Touchable
           onPress={() => {

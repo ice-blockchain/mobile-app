@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {CroppedImage} from '@hooks/useActionSheetUpdateAvatar';
 import {AccountActions} from '@store/modules/Account/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
@@ -11,7 +12,7 @@ export const useUpdateAvatar = () => {
   const dispatch = useDispatch();
 
   const updateAvatar = useCallback(
-    (avatar: {path: string; mime: string} | null) => {
+    (avatar: CroppedImage | null) => {
       const userInfo = avatar
         ? {
             profilePicture: {
