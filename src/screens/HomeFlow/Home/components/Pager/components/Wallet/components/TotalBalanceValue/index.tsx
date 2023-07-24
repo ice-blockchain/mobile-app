@@ -30,7 +30,7 @@ export const TotalBalanceValue = ({style, darkMode}: Props) => {
   );
 
   const NumberComponent = useCallback(
-    ({animatedValue}) => {
+    ({animatedValue}: {animatedValue: number}) => {
       const formattedValue = formatNumberString(String(animatedValue));
       return (
         <FormattedNumber

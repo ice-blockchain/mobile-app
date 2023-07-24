@@ -11,7 +11,7 @@ export const useUpdateAvatar = () => {
   const dispatch = useDispatch();
 
   const updateAvatar = useCallback(
-    avatar => {
+    (avatar: {path: string; mime: string} | null) => {
       const userInfo = avatar
         ? {
             profilePicture: {

@@ -30,7 +30,7 @@ export const TotalMiningRateValue = ({style}: Props) => {
   }, [miningRates?.type]);
 
   const NumberComponent = useCallback(
-    ({animatedValue}) => {
+    ({animatedValue}: {animatedValue: number}) => {
       const formattedValue = `${
         animatedValue > 0 ? '+' : ''
       }${formatNumberString(String(animatedValue))}`;

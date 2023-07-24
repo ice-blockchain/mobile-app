@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import Markdown from '@ronradtke/react-native-markdown-display';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import Markdown from 'react-native-markdown-display';
 import {rem} from 'rn-units';
 
 interface DescriptionProps {
@@ -13,13 +13,15 @@ interface DescriptionProps {
 export const Description = ({value = ''}: DescriptionProps) => {
   return (
     <View style={styles.descriptionContainer}>
-      <Markdown
-        style={{
-          body: styles.description,
-          paragraph: styles.markdown,
-        }}>
-        {value}
-      </Markdown>
+      {value && (
+        <Markdown
+          style={{
+            body: styles.description,
+            paragraph: styles.markdown,
+          }}>
+          {value}
+        </Markdown>
+      )}
     </View>
   );
 };
