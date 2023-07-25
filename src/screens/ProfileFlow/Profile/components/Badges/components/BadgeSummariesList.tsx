@@ -8,6 +8,7 @@ import {
   BadgeCardSkeleton,
 } from '@screens/ProfileFlow/Profile/components/Badges/components/BadgeCard';
 import {isPrivacyInfoShownSelector} from '@store/modules/Account/selectors';
+import {isRTL} from '@translations/i18n';
 import React, {useCallback, useMemo} from 'react';
 import {FlatList, ListRenderItem, StyleSheet} from 'react-native';
 import {useSelector} from 'react-redux';
@@ -91,6 +92,7 @@ export const BadgeSummariesList = ({
       contentContainerStyle={styles.listContent}
       showsHorizontalScrollIndicator={false}
       style={styles.list}
+      inverted={isRTL}
     />
   );
 };
@@ -105,6 +107,7 @@ const styles = StyleSheet.create({
     paddingBottom: rem(10),
     backgroundColor: COLORS.white02opacity,
     borderRadius: rem(20),
+    flexDirection: isRTL ? 'row-reverse' : 'row',
   },
   firstItem: {
     marginLeft: 0, // margin 0 for the first item in the badges list

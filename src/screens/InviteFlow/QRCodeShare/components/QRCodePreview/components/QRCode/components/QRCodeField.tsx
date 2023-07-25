@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {EYE_CELLS} from '@screens/InviteFlow/QRCodeShare/components/QRCodePreview/components/QRCode/constants';
+import {isRTL} from '@translations/i18n';
 import React from 'react';
+import {StyleSheet} from 'react-native';
 import {Circle, Svg} from 'react-native-svg';
 
 type Props = {
@@ -40,8 +42,17 @@ export const QRCodeField = ({size, matrix, color, dotSize = 2}: Props) => {
   });
 
   return (
-    <Svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+    <Svg
+      width={size}
+      height={size}
+      viewBox={`0 0 ${size} ${size}`}
+      style={styles.container}>
       {circles}
     </Svg>
   );
 };
+const styles = StyleSheet.create({
+  container: {
+    transform: [{scaleX: isRTL ? -1 : 1}],
+  },
+});

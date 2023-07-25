@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
     marginTop: rem(18),
     paddingHorizontal: SCREEN_SIDE_OFFSET + rem(4),
     alignItems: 'center', // for activity indicator
+    flexGrow: 1,
   },
   activityIndicator: {
     marginLeft: rem(10),

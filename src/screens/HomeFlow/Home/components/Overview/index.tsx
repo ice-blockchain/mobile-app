@@ -22,10 +22,7 @@ import {ReferralsCard} from '@screens/HomeFlow/Home/components/Overview/componen
 import {OVERSCROLL} from '@screens/HomeFlow/Home/components/Overview/constants';
 import {useAdoptionCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useAdoptionCardWalkthrough';
 import {useCardTranslateY} from '@screens/HomeFlow/Home/components/Overview/hooks/useCardTranslateY';
-import {
-  getActiveOffset,
-  useHandleActiveOverviewCardParam,
-} from '@screens/HomeFlow/Home/components/Overview/hooks/useHandleActiveOverviewCardParam';
+import {useHandleActiveOverviewCardParam} from '@screens/HomeFlow/Home/components/Overview/hooks/useHandleActiveOverviewCardParam';
 import {useInviteFriendsWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useInviteFriendsWalkthrough';
 import {useProfileCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useProfileCardWalkthrough';
 import {useReferralsCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useReferralsCardWalkthrough';
@@ -92,9 +89,7 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
 
   useEffect(() => {
     if (isRTL && scrollViewRef.current && layoutReady) {
-      scrollViewRef.current.scrollTo({
-        x: getActiveOffset('adoption'),
-        y: 0,
+      scrollViewRef.current.scrollToEnd({
         animated: false,
       });
     }
