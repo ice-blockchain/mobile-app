@@ -192,11 +192,11 @@ function* setFirstMiningDate(user: User, firstMiningDate: string | null) {
         {
           clientData: {
             ...(user.clientData ?? {}),
-            firstMiningDate: dayjs().toISOString(),
+            rate: {firstMiningDate: dayjs().toISOString()},
           },
         },
         function* (freshUser) {
-          if (freshUser.clientData?.firstMiningDate !== firstMiningDate) {
+          if (freshUser.clientData?.rate?.firstMiningDate !== firstMiningDate) {
             setFirstMiningDate(freshUser, firstMiningDate);
           }
           return {retry: false};

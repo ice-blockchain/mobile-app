@@ -37,7 +37,22 @@ export const userIsoCodeSelector = (state: RootState) => {
 
 export const firstMiningDateSelector = (state: RootState) => {
   const user = userSelector(state);
-  return user?.clientData?.firstMiningDate ?? null;
+  return user?.clientData?.rate?.firstMiningDate ?? null;
+};
+
+export const firstRateShowingDateSelector = (state: RootState) => {
+  const user = userSelector(state);
+  return user?.clientData?.rate?.firstRateShowingDate ?? null;
+};
+
+export const secondRateShowingDateSelector = (state: RootState) => {
+  const user = userSelector(state);
+  return user?.clientData?.rate?.secondRateShowingDate ?? null;
+};
+
+export const thirdRateShowingDateSelector = (state: RootState) => {
+  const user = userSelector(state);
+  return user?.clientData?.rate?.thirdRateShowingDate ?? null;
 };
 
 export const isPhoneNumberVerifiedSelector = (state: RootState) =>

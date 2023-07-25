@@ -139,6 +139,7 @@ function* markWalkthroughStep(user: User, step: WalkthroughStep) {
       {
         clientData: {
           ...(user.clientData ?? {}),
+          rate: user.clientData?.rate ?? null,
           walkthroughProgress: {
             ...(user.clientData?.walkthroughProgress ?? {}),
             [step.key]: {version: step.version},
@@ -177,6 +178,7 @@ function* markAllWalkthroughSteps(user: User, steps: WalkthroughStep[]) {
       {
         clientData: {
           ...(user.clientData ?? {}),
+          rate: user.clientData?.rate ?? null,
           walkthroughProgress: {
             ...(user.clientData?.walkthroughProgress ?? {}),
             ...walkthroughProgress,

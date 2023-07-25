@@ -30,6 +30,7 @@ export const useIceBonus = () => {
           {
             clientData: {
               ...currentUser.clientData,
+              rate: currentUser.clientData?.rate ?? null,
               registrationProcessFinalizedSteps: [
                 ...finalizedSteps,
                 'iceBonus',

@@ -1,41 +1,69 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {dayjs} from '@services/dayjs';
+import {
+  firstMiningDateSelector,
+  firstRateShowingDateSelector,
+  secondRateShowingDateSelector,
+  thirdRateShowingDateSelector,
+} from '@store/modules/Account/selectors';
+import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {RateAppActions} from '@store/modules/RateApp/actions';
 import {RateAppSelectors} from '@store/modules/RateApp/selectors';
-import {miningSummarySelector} from '@store/modules/Tokenomics/selectors';
-import {waitForSelector} from '@store/utils/sagas/effects';
-import {call, put, SagaReturnType, select} from 'redux-saga/effects';
+import {put, SagaReturnType, select} from 'redux-saga/effects';
 
-const START_MINING_COUNT = 3;
+const FIRST_APPEAR_DAYS = 10;
+const SECOND_APPEAR_DAYS = 35;
+const THIRD_APPEAR_DAYS = 35;
 
 export function* checkRateAppConditionSaga() {
+  const isAppActive: ReturnType<typeof isAppActiveSelector> = yield select(
+    isAppActiveSelector,
+  );
+
+  const firstMiningDate: ReturnType<typeof firstMiningDateSelector> =
+    yield select(firstMiningDateSelector);
+  const firstRateShowingDate: ReturnType<typeof firstRateShowingDateSelector> =
+    yield select(firstRateShowingDateSelector);
+  const secondRateShowingDate: ReturnType<
+    typeof secondRateShowingDateSelector
+  > = yield select(secondRateShowingDateSelector);
+  const thirdRateShowingDate: ReturnType<typeof thirdRateShowingDateSelector> =
+    yield select(thirdRateShowingDateSelector);
+
+  if (!isAppActive) {
+    return;
+  }
+
   let isRateAppShown: SagaReturnType<typeof RateAppSelectors.isRateAppShown> =
     yield select(RateAppSelectors.isRateAppShown);
 
-  while (!isRateAppShown) {
-    const initialMiningSummary: ReturnType<typeof miningSummarySelector> =
-      yield select(miningSummarySelector);
+  isRateAppShown = yield select(RateAppSelectors.isRateAppShown);
 
-    yield call(waitForSelector, state => {
-      return (
-        miningSummarySelector(state)?.miningStreak !==
-        initialMiningSummary?.miningStreak
-      );
-    });
+  /** Show if it hasn't been shown before after 10 days of first mining happened  */
+  const showFirstTime =
+    !isRateAppShown &&
+    firstMiningDate &&
+    !firstRateShowingDate &&
+    dayjs().diff(firstMiningDate, 'day') >= FIRST_APPEAR_DAYS;
 
-    const miningSummary: ReturnType<typeof miningSummarySelector> =
-      yield select(miningSummarySelector);
+  /** Show 35 days after first showing happened  */
+  const showSecondTime =
+    isRateAppShown &&
+    firstRateShowingDate &&
+    !secondRateShowingDate &&
+    dayjs().diff(firstMiningDate, 'day') >=
+      FIRST_APPEAR_DAYS + SECOND_APPEAR_DAYS;
 
-    const miningStreak = miningSummary?.miningStreak ?? 0;
+  /** Show 35 days after second showing happened  */
+  const showThirdTime =
+    isRateAppShown &&
+    secondRateShowingDate &&
+    !thirdRateShowingDate &&
+    dayjs().diff(firstMiningDate, 'day') >=
+      FIRST_APPEAR_DAYS + SECOND_APPEAR_DAYS + THIRD_APPEAR_DAYS;
 
-    isRateAppShown = yield select(RateAppSelectors.isRateAppShown);
-
-    if (
-      !isRateAppShown &&
-      miningStreak >= START_MINING_COUNT &&
-      miningStreak % START_MINING_COUNT === 0
-    ) {
-      yield put(RateAppActions.SHOW_RATE_APP.START.create());
-    }
+  if (showFirstTime || showSecondTime || showThirdTime) {
+    yield put(RateAppActions.SHOW_RATE_APP.START.create());
   }
 }
