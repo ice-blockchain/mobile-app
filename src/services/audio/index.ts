@@ -5,6 +5,9 @@ import Sound from 'react-native-sound';
 
 const loadedAudio: {[path: string]: Promise<Sound>} = {};
 
+// Do not interrupt sound from another app if any
+Sound.setCategory('Ambient', true);
+
 export const playLocalAudio = async (audioPath: string) => {
   const sound = await loadLocalAudio(audioPath);
   return new Promise(resolve => sound.play(resolve));
