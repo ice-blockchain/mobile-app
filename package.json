@@ -156,23 +156,6 @@
     "ts-jest": "^29.0.3",
     "typescript": "^4.9.3"
   },
-  "jest": {
-    "preset": "react-native",
-    "transformIgnorePatterns": [
-      "node_modules/(?!@react-native|react-native|react-native-sha256|react-native-device-info)"
-    ],
-    "setupFilesAfterEnv": [
-      "@testing-library/jest-native/extend-expect"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
-  },
   "engines": {
     "node": ">=16"
   },
