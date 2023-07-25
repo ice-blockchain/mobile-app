@@ -116,7 +116,7 @@ export function* signInEmailCodeSaga(
     }
 
     yield put(
-      AccountActions.MODIFY_EMAIL_WITH_CODE.FAILED.create(
+      AccountActions.SIGN_IN_EMAIL_CODE.FAILED.create(
         localizedError ?? getErrorMessage(error),
       ),
     );
