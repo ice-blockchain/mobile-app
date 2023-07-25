@@ -26,7 +26,7 @@ import {
 } from 'redux-saga/effects';
 
 enum ValidateError {
-  InvalidEmail,
+  InvalidEmail = 'InvalidEmail',
 }
 
 export function* signInEmailCodeSaga(
@@ -103,19 +103,25 @@ export function* signInEmailCodeSaga(
       }
     }
   } catch (error) {
+    let localizedError = null;
     if (
       (checkProp(error, 'code') && error.code === ValidateError.InvalidEmail) ||
       isApiError(error, 400, 'INVALID_EMAIL')
     ) {
-      yield put(
-        AccountActions.SIGN_IN_EMAIL_CODE.FAILED.create(
-          t('errors.invalid_email'),
-        ),
-      );
-    } else {
-      yield put(
-        AccountActions.SIGN_IN_EMAIL_CODE.FAILED.create(getErrorMessage(error)),
-      );
+      localizedError = t('errors.invalid_email');
+    }
+
+    if (isApiError(error, 403, 'TOO_MANY_REQUESTS')) {
+      localizedError = t('errors.too_many_requests');
+    }
+
+    yield put(
+      AccountActions.SIGN_IN_EMAIL_CODE.FAILED.create(
+        localizedError ?? getErrorMessage(error),
+      ),
+    );
+
+    if (!localizedError) {
       throw error;
     }
   }
