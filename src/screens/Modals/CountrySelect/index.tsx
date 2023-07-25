@@ -13,7 +13,7 @@ import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import debounce from 'lodash/debounce';
 import React, {useCallback, useMemo, useState} from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {ListRenderItem, StyleSheet, Text} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
 import {isIOS, rem} from 'rn-units';
 
@@ -39,8 +39,8 @@ export const CountrySelect = () => {
     [],
   );
 
-  const renderItem = useCallback(
-    ({item}: {item: Country}) => {
+  const renderItem: ListRenderItem<Country> = useCallback(
+    ({item}) => {
       return (
         <Touchable
           onPress={() => {
