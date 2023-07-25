@@ -1,3 +1,6 @@
+Similar PR, consider move remove this patch when it's merged:
+https://github.com/invertase/react-native-firebase/pull/7019
+
 diff --git a/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/firebase/auth/ReactNativeFirebaseAuthModule.java b/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/firebase/auth/ReactNativeFirebaseAuthModule.java
 index b6406f1..510eb99 100644
 --- a/node_modules/@react-native-firebase/auth/android/src/main/java/io/invertase/firebase/auth/ReactNativeFirebaseAuthModule.java

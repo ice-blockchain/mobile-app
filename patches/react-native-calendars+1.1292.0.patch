@@ -1,3 +1,5 @@
+https://github.com/wix/react-native-calendars/pull/2119
+
 diff --git a/node_modules/react-native-calendars/src/calendar/day/marking/index.d.ts b/node_modules/react-native-calendars/src/calendar/day/marking/index.d.ts
 index 97aa383..1e818b6 100644
 --- a/node_modules/react-native-calendars/src/calendar/day/marking/index.d.ts
