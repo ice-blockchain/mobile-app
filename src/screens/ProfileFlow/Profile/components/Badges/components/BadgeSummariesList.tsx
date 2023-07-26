@@ -12,7 +12,7 @@ import {isRTL} from '@translations/i18n';
 import React, {useCallback, useMemo} from 'react';
 import {FlatList, ListRenderItem, StyleSheet} from 'react-native';
 import {useSelector} from 'react-redux';
-import {rem} from 'rn-units';
+import {isAndroid, rem} from 'rn-units';
 
 type Props = {
   loading: boolean;
@@ -92,7 +92,7 @@ export const BadgeSummariesList = ({
       contentContainerStyle={styles.listContent}
       showsHorizontalScrollIndicator={false}
       style={styles.list}
-      inverted={isRTL}
+      inverted={isRTL && isAndroid}
     />
   );
 };
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     paddingBottom: rem(10),
     backgroundColor: COLORS.white02opacity,
     borderRadius: rem(20),
-    flexDirection: isRTL ? 'row-reverse' : 'row',
+    flexDirection: isRTL && isAndroid ? 'row-reverse' : 'row',
   },
   firstItem: {
     marginLeft: 0, // margin 0 for the first item in the badges list

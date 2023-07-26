@@ -22,14 +22,23 @@ import {ReferralsCard} from '@screens/HomeFlow/Home/components/Overview/componen
 import {OVERSCROLL} from '@screens/HomeFlow/Home/components/Overview/constants';
 import {useAdoptionCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useAdoptionCardWalkthrough';
 import {useCardTranslateY} from '@screens/HomeFlow/Home/components/Overview/hooks/useCardTranslateY';
-import {useHandleActiveOverviewCardParam} from '@screens/HomeFlow/Home/components/Overview/hooks/useHandleActiveOverviewCardParam';
+import {
+  getActiveOffset,
+  useHandleActiveOverviewCardParam,
+} from '@screens/HomeFlow/Home/components/Overview/hooks/useHandleActiveOverviewCardParam';
 import {useInviteFriendsWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useInviteFriendsWalkthrough';
 import {useProfileCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useProfileCardWalkthrough';
 import {useReferralsCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useReferralsCardWalkthrough';
 import {useScrollCollapse} from '@screens/HomeFlow/Home/components/Overview/hooks/useScrollCollapse';
 import {isRTL, t} from '@translations/i18n';
 import React, {memo, useEffect, useRef, useState} from 'react';
-import {LayoutChangeEvent, Platform, StyleSheet, View} from 'react-native';
+import {
+  InteractionManager,
+  LayoutChangeEvent,
+  Platform,
+  StyleSheet,
+  View,
+} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import {isAndroid, isIOS, rem} from 'rn-units';
 
@@ -84,13 +93,21 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
 
   const onLayoutContentContainer = (event: LayoutChangeEvent) => {
     setPositionYInnerContent(event.nativeEvent.layout.y);
+  };
+  const onScrollViewLayout = () => {
     setLayoutReady(true);
   };
 
   useEffect(() => {
-    if (isRTL && scrollViewRef.current && layoutReady) {
-      scrollViewRef.current.scrollToEnd({
-        animated: false,
+    if (isRTL && layoutReady) {
+      InteractionManager.runAfterInteractions(() => {
+        if (scrollViewRef.current) {
+          scrollViewRef.current.scrollTo({
+            x: getActiveOffset(isIOS ? 'profile' : 'adoption'),
+            y: 0,
+            animated: true,
+          });
+        }
       });
     }
   }, [layoutReady, scrollViewRef]);
@@ -115,6 +132,7 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
           ref={scrollViewRef}
           showsHorizontalScrollIndicator={false}
           contentInset={contentInset}
+          onLayout={onScrollViewLayout}
           style={[
             styles.scrollView,
             collapseAnimatedStyle,
