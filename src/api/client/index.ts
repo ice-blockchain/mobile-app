@@ -148,7 +148,11 @@ export const buildFormData = (entity: {[key: string]: unknown}) => {
   for (let key in entity) {
     const value = entity[key];
     if (Array.isArray(value)) {
-      value.forEach(v => formData.append(key, v));
+      if (value.length === 0 && key === 'hiddenProfileElements') {
+        formData.append('clearHiddenProfileElements', true);
+      } else {
+        value.forEach(v => formData.append(key, v));
+      }
     } else if (
       typeof value === 'object' &&
       value !== null &&

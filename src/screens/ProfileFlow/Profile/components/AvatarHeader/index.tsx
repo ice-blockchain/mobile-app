@@ -175,9 +175,9 @@ export const AvatarHeader = memo(
               styles.navigationContainerRight,
             ]}
             onLayout={onLayoutNavigationContainerRight}>
-            {isOwner && user?.hiddenProfileElements?.length && (
+            {isOwner && user?.hiddenProfileElements?.length ? (
               <ShowPrivacyButton containerStyle={styles.navigationButton} />
-            )}
+            ) : null}
             {isOwner && (
               <QRCodeShareButton containerStyle={styles.navigationButton} />
             )}
