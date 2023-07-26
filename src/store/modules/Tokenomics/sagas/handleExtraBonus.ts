@@ -17,7 +17,14 @@ import {openClaimBonus} from '@store/modules/Tokenomics/utils/openClaimBonus';
 import {waitForSelector} from '@store/utils/sagas/effects';
 import {showError} from '@utils/errors';
 import {SagaIterator} from 'redux-saga';
-import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
+import {
+  call,
+  delay,
+  put,
+  SagaReturnType,
+  select,
+  spawn,
+} from 'redux-saga/effects';
 
 export function* handleExtraBonusSaga(
   action: ReturnType<
@@ -36,6 +43,16 @@ export function* handleExtraBonusSaga(
     if (miningSummary?.availableExtraBonus) {
       yield call(waitForSelector, isRegistrationCompleteSelector);
       yield call(waitForSelector, isSplashHiddenSelector);
+
+      /**
+       * Add small delay to let the main navigator to be displayed first.
+       * This fixes the bug when on fresh install,
+       * if a user gets availableExtraBonus during the welcome screens,
+       * the dialog is not displayed after the registration complete
+       * Also this prevents closing the claim-bonus-dialog
+       * when navigation from pushes on app start up
+       */
+      yield delay(1000);
 
       const result: SagaReturnType<typeof openClaimBonus> = yield call(
         openClaimBonus,
