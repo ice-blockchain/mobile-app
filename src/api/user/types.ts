@@ -76,9 +76,8 @@ export type RegistrationProcessFinalizedStep = 'onboarding' | 'iceBonus';
 
 export type RateData = {
   firstMiningDate?: string | null;
-  firstRateShowingDate?: string | null;
-  secondRateShowingDate?: string | null;
-  thirdRateShowingDate?: string | null;
+  showingsCount?: number | null; //1, 2
+  lastShowingDate?: string | null;
 };
 
 export type ClientData = {

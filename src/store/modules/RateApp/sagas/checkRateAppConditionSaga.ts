@@ -5,81 +5,48 @@ import {dayjs} from '@services/dayjs';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
   firstMiningDateSelector,
-  firstRateShowingDateSelector,
-  secondRateShowingDateSelector,
-  thirdRateShowingDateSelector,
-  unsafeUserSelector,
+  isAuthorizedSelector,
+  lastShowingDateSelector,
+  showingsCountSelector,
+  userSelector,
 } from '@store/modules/Account/selectors';
 import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {RateAppActions} from '@store/modules/RateApp/actions';
-import {RateAppSelectors} from '@store/modules/RateApp/selectors';
-import {call, put, SagaReturnType, select} from 'redux-saga/effects';
+import {call, put, select} from 'redux-saga/effects';
 
-const FIRST_APPEAR_DAYS = 10;
-const SECOND_APPEAR_DAYS = 35;
-const THIRD_APPEAR_DAYS = 35;
+const APPEAR_DAYS_ORDER = [10, 35, 35];
 
 export function* checkRateAppConditionSaga() {
   const isAppActive: ReturnType<typeof isAppActiveSelector> = yield select(
     isAppActiveSelector,
   );
+  const isAuthorized: ReturnType<typeof isAuthorizedSelector> = yield select(
+    isAuthorizedSelector,
+  );
+
+  const user: User = yield select(userSelector);
 
   const firstMiningDate: ReturnType<typeof firstMiningDateSelector> =
     yield select(firstMiningDateSelector);
-  const firstRateShowingDate: ReturnType<typeof firstRateShowingDateSelector> =
-    yield select(firstRateShowingDateSelector);
-  const secondRateShowingDate: ReturnType<
-    typeof secondRateShowingDateSelector
-  > = yield select(secondRateShowingDateSelector);
-  const thirdRateShowingDate: ReturnType<typeof thirdRateShowingDateSelector> =
-    yield select(thirdRateShowingDateSelector);
+  const lastShowingDate: ReturnType<typeof lastShowingDateSelector> =
+    yield select(lastShowingDateSelector);
+  const showingsCount: ReturnType<typeof showingsCountSelector> = yield select(
+    showingsCountSelector,
+  );
 
-  if (!isAppActive) {
+  if (!isAppActive || !isAuthorized) {
     return;
   }
 
-  const user: User = yield select(unsafeUserSelector);
+  const shouldShowRateApp =
+    showingsCount !== APPEAR_DAYS_ORDER.length - 1 &&
+    dayjs().diff(lastShowingDate ?? firstMiningDate, 'day') >=
+      APPEAR_DAYS_ORDER[showingsCount];
 
-  let isRateAppShown: SagaReturnType<typeof RateAppSelectors.isRateAppShown> =
-    yield select(RateAppSelectors.isRateAppShown);
-
-  isRateAppShown = yield select(RateAppSelectors.isRateAppShown);
-
-  /** Show if it hasn't been shown before (after 10 days of first mining happened)  */
-  const showFirstTime =
-    !isRateAppShown &&
-    firstMiningDate &&
-    !firstRateShowingDate &&
-    dayjs().diff(firstMiningDate, 'day') >= FIRST_APPEAR_DAYS;
-
-  /** Show 35 days after first showing happened  */
-  const showSecondTime =
-    isRateAppShown &&
-    firstRateShowingDate &&
-    !secondRateShowingDate &&
-    dayjs().diff(firstMiningDate, 'day') >=
-      FIRST_APPEAR_DAYS + SECOND_APPEAR_DAYS;
-
-  /** Show 35 days after second showing happened  */
-  const showThirdTime =
-    isRateAppShown &&
-    secondRateShowingDate &&
-    !thirdRateShowingDate &&
-    dayjs().diff(firstMiningDate, 'day') >=
-      FIRST_APPEAR_DAYS + SECOND_APPEAR_DAYS + THIRD_APPEAR_DAYS;
-
-  if (user && (showFirstTime || showSecondTime || showThirdTime)) {
+  if (user && shouldShowRateApp) {
     let params: RateData = {};
     if (user.clientData?.rate) {
       params = {...user.clientData.rate};
-    }
-
-    if (showFirstTime) {
-      params.firstRateShowingDate = dayjs().toISOString();
-    } else if (showSecondTime) {
-      params.secondRateShowingDate = dayjs().toISOString();
-    } else if (showThirdTime) {
-      params.thirdRateShowingDate = dayjs().toISOString();
     }
 
     yield call(updateRateData, user, params);

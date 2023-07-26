@@ -40,19 +40,14 @@ export const firstMiningDateSelector = (state: RootState) => {
   return user?.clientData?.rate?.firstMiningDate ?? null;
 };
 
-export const firstRateShowingDateSelector = (state: RootState) => {
+export const lastShowingDateSelector = (state: RootState) => {
   const user = userSelector(state);
-  return user?.clientData?.rate?.firstRateShowingDate ?? null;
+  return user?.clientData?.rate?.lastShowingDate ?? null;
 };
 
-export const secondRateShowingDateSelector = (state: RootState) => {
+export const showingsCountSelector = (state: RootState) => {
   const user = userSelector(state);
-  return user?.clientData?.rate?.secondRateShowingDate ?? null;
-};
-
-export const thirdRateShowingDateSelector = (state: RootState) => {
-  const user = userSelector(state);
-  return user?.clientData?.rate?.thirdRateShowingDate ?? null;
+  return user?.clientData?.rate?.showingsCount ?? 0;
 };
 
 export const isPhoneNumberVerifiedSelector = (state: RootState) =>

@@ -14,7 +14,6 @@ import {linkingReducer} from '@store/modules/Linking/reducer';
 import {newsReducer} from '@store/modules/News/reducer';
 import {notificationsReducer} from '@store/modules/Notifications/reducer';
 import {permissionsReducer} from '@store/modules/Permissions/reducer';
-import {rateAppReducer} from '@store/modules/RateApp/reducer';
 import {referralsReducer} from '@store/modules/Referrals/reducer';
 import {socialsReducer} from '@store/modules/Socials/reducer';
 import {statsReducer} from '@store/modules/Stats/reducer';
@@ -45,7 +44,6 @@ export const rootReducer = combineReducers({
   users: usersReducer,
   statusNotice,
   tokenomics: tokenomicsReducer,
-  rateApp: rateAppReducer,
   walkthrough: walkthroughReducer,
   achievements: achievementsReducer,
   appUpdate: appUpdateReducer,
