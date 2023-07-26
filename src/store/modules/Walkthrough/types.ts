@@ -3,6 +3,7 @@
 import {ViewMeasurementsResult} from '@ice/react-native';
 import {HomeWalkthroughStepKey} from '@store/modules/Walkthrough/steps/home';
 import {NewsWalkthroughStepKey} from '@store/modules/Walkthrough/steps/news';
+import {ProfileWalkthroughStepKey} from '@store/modules/Walkthrough/steps/profile';
 import {TeamWalkthroughStepKey} from '@store/modules/Walkthrough/steps/team';
 import {ReactNode, RefObject} from 'react';
 import {View} from 'react-native';
@@ -22,6 +23,7 @@ export type WalkthroughElementData = {
 export type WalkthroughStepKey =
   | TeamWalkthroughStepKey
   | NewsWalkthroughStepKey
+  | ProfileWalkthroughStepKey
   | HomeWalkthroughStepKey;
 
 export type WalkthroughStepStaticData<T> = {

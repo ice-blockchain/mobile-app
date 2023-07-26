@@ -467,6 +467,8 @@ export type Translations = {
   'confirm_phone.button': null;
   'confirm_phone.same_phone_error': null;
   'date_select.title': null;
+  'walkthrough.profile.hidden_data.title': null;
+  'walkthrough.profile.hidden_data.description': null;
   'walkthrough.news.readmore.title': null;
   'walkthrough.news.readmore.description': null;
   'walkthrough.news.releasednews.title': null;

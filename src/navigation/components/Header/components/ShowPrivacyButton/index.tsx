@@ -11,6 +11,8 @@ import React, {useCallback} from 'react';
 import {StyleProp, View, ViewStyle} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
+import {useProfileWalkthrough} from './hooks/useProfileWalkthrough';
+
 type Props = {
   containerStyle?: StyleProp<ViewStyle>;
   color?: string;
@@ -20,6 +22,8 @@ export const ShowPrivacyButton = ({
   containerStyle,
   color = COLORS.primaryDark,
 }: Props) => {
+  const {elementRef, onElementLayout} = useProfileWalkthrough();
+
   const isPrivacyInfoShown = useSelector(isPrivacyInfoShownSelector);
   const dispatch = useDispatch();
   const showPrivacyHandler = useCallback(() => {
@@ -28,7 +32,7 @@ export const ShowPrivacyButton = ({
     );
   }, [dispatch, isPrivacyInfoShown]);
   return (
-    <View style={containerStyle}>
+    <View style={containerStyle} ref={elementRef} onLayout={onElementLayout}>
       <Touchable onPress={showPrivacyHandler} hitSlop={SMALL_BUTTON_HIT_SLOP}>
         {isPrivacyInfoShown ? (
           <ClosedPrivacyIcon color={color} />

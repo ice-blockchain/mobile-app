@@ -13,6 +13,7 @@ import {WalkthroughActions} from '@store/modules/Walkthrough/actions';
 import {walkthroughStepCandidatesSelector} from '@store/modules/Walkthrough/selectors';
 import {HOME_WALKTHROUGH_STEPS} from '@store/modules/Walkthrough/steps/home';
 import {NEWS_WALKTHROUGH_STEPS} from '@store/modules/Walkthrough/steps/news';
+import {PROFILE_WALKTHROUGH_STEPS} from '@store/modules/Walkthrough/steps/profile';
 import {TEAM_WALKTHROUGH_STEPS} from '@store/modules/Walkthrough/steps/team';
 import {
   WalkthroughStep,
@@ -38,6 +39,9 @@ export function getAllSteps({step}: {step: WalkthroughStep}) {
   }
   if (NEWS_WALKTHROUGH_STEPS.some(newsStep => newsStep.key === step.key)) {
     return NEWS_WALKTHROUGH_STEPS;
+  }
+  if (PROFILE_WALKTHROUGH_STEPS.some(newsStep => newsStep.key === step.key)) {
+    return PROFILE_WALKTHROUGH_STEPS;
   }
 }
 
