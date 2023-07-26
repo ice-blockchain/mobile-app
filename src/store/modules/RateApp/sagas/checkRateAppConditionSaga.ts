@@ -40,7 +40,7 @@ export function* checkRateAppConditionSaga() {
   }
 
   const shouldShowRateApp =
-    showingsCount !== APPEAR_DAYS_ORDER.length - 1 &&
+    showingsCount < APPEAR_DAYS_ORDER.length &&
     dayjs().diff(
       lastShowingDate ?? firstMiningDate,
       ENV.STAGING_ENV ? 'minute' : 'day',
