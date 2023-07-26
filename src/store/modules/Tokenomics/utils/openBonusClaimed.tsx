@@ -7,6 +7,7 @@ import {
   SMALL_BONUS_THRESHOLD,
 } from '@constants/bonuses';
 import {LINKS} from '@constants/links';
+import {FORCE_LTR_TEXT_CHAR} from '@constants/rtl';
 import {LottieAnimations} from '@lottie';
 import {navigate} from '@navigation/utils';
 import {Warning} from '@screens/Modals/PopUp/components/Warning';
@@ -31,7 +32,7 @@ export const openBonusClaimed = ({claimedBonus}: {claimedBonus: number}) => {
     name: 'PopUp',
     params: {
       animationProps: {source: animationSource},
-      banner: `+${claimedBonus}%`,
+      banner: `${FORCE_LTR_TEXT_CHAR}+${claimedBonus}%`,
       title: t('extra_bonus.result_title'),
       message: t('extra_bonus.extra_message'),
       warning: (

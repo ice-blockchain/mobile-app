@@ -94,9 +94,6 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
   const onLayoutContentContainer = (event: LayoutChangeEvent) => {
     setPositionYInnerContent(event.nativeEvent.layout.y);
   };
-  const onScrollViewLayout = () => {
-    setLayoutReady(true);
-  };
 
   useEffect(() => {
     if (isRTL && layoutReady) {
@@ -132,7 +129,6 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
           ref={scrollViewRef}
           showsHorizontalScrollIndicator={false}
           contentInset={contentInset}
-          onLayout={onScrollViewLayout}
           style={[
             styles.scrollView,
             collapseAnimatedStyle,
@@ -141,7 +137,10 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
           contentContainerStyle={styles.scrolledContent}>
           <LevelCard
             sharedIsCollapsed={sharedIsCollapsed}
-            onLayout={onProfileCardLayout}
+            onLayout={() => {
+              setLayoutReady(true);
+              onProfileCardLayout();
+            }}
             ref={profileCardRef}
           />
 

@@ -8,8 +8,8 @@ import {
 } from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
 import {OVERSCROLL} from '@screens/HomeFlow/Home/components/Overview/constants';
 import {ActiveOverviewCard} from '@screens/HomeFlow/Home/types';
-import {useEffect, useRef} from 'react';
-import Animated from 'react-native-reanimated';
+import {useEffect} from 'react';
+import Animated, {useAnimatedRef} from 'react-native-reanimated';
 
 export function getActiveOffset(
   activeOverviewCard: ActiveOverviewCard | undefined,
@@ -28,7 +28,7 @@ export function getActiveOffset(
 }
 
 export function useHandleActiveOverviewCardParam() {
-  const scrollViewRef = useRef<Animated.ScrollView>(null);
+  const scrollViewRef = useAnimatedRef<Animated.ScrollView>();
   const route = useRoute<RouteProp<HomeTabStackParamList, 'Home'>>();
   useEffect(() => {
     if (route.params?.activeOverviewCard && scrollViewRef.current) {
@@ -38,7 +38,7 @@ export function useHandleActiveOverviewCardParam() {
         animated: true,
       });
     }
-  }, [route.params?.activeOverviewCard]);
+  }, [route.params?.activeOverviewCard, scrollViewRef]);
 
   return {scrollViewRef};
 }

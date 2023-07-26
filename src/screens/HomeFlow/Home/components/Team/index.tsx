@@ -13,11 +13,11 @@ import {
 } from '@screens/HomeFlow/Home/components/Team/components/TeamMember';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {referralsSelector} from '@store/modules/Referrals/selectors';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import React, {memo, useCallback, useEffect, useMemo} from 'react';
 import {ListRenderItem, StyleSheet, View} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
-import {rem} from 'rn-units';
+import {isAndroid, rem} from 'rn-units';
 
 export const Team = memo(() => {
   const navigation =
@@ -49,7 +49,11 @@ export const Team = memo(() => {
   );
 
   const renderItem: ListRenderItem<string | null> = useCallback(({item}) => {
-    return item ? <TeamMember userId={item} /> : <TeamMemberSkeleton />;
+    return (
+      <View style={styles.separator}>
+        {item ? <TeamMember userId={item} /> : <TeamMemberSkeleton />}
+      </View>
+    );
   }, []);
 
   if (referrals.length < 2 && !hasNext) {
@@ -67,7 +71,6 @@ export const Team = memo(() => {
         horizontal
         data={referrals.length ? referrals : Array<null>(6).fill(null)}
         renderItem={renderItem}
-        ItemSeparatorComponent={renderSeparator}
         ListFooterComponent={
           loadNextLoading ? (
             <ActivityIndicator style={styles.activityIndicator} />
@@ -76,22 +79,23 @@ export const Team = memo(() => {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.memberContent}
         onEndReached={loadNext}
+        inverted={isRTL && isAndroid}
       />
     </>
   );
 });
 
-const renderSeparator = () => <View style={styles.separator} />;
-
 const styles = StyleSheet.create({
   separator: {
-    width: rem(19),
+    marginEnd: isRTL ? rem(19) : 0,
+    marginStart: !isRTL ? rem(19) : 0,
   },
   memberContent: {
     marginTop: rem(18),
     paddingHorizontal: SCREEN_SIDE_OFFSET + rem(4),
     alignItems: 'center', // for activity indicator
     flexGrow: 1,
+    flexDirection: isRTL && isAndroid ? 'row-reverse' : 'row',
   },
   activityIndicator: {
     marginLeft: rem(10),
