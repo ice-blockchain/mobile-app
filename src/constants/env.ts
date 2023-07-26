@@ -6,6 +6,7 @@ import {isAndroid} from 'rn-units';
 
 export const ENV = {
   APP_ID: config.APP_ID,
+  STAGING_ENV: config.STAGING_ENV === 'true',
   APPSTORE_APP_ID: config.APPSTORE_APP_ID,
   BASE_READ_API_URL: config.BASE_READ_API_URL,
   BASE_WRITE_API_URL: config.BASE_WRITE_API_URL,

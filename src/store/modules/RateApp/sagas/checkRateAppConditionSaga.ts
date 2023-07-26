@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {RateData, User} from '@api/user/types';
+import {ENV} from '@constants/env';
 import {dayjs} from '@services/dayjs';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
@@ -40,14 +41,15 @@ export function* checkRateAppConditionSaga() {
 
   const shouldShowRateApp =
     showingsCount !== APPEAR_DAYS_ORDER.length - 1 &&
-    dayjs().diff(lastShowingDate ?? firstMiningDate, 'day') >=
-      APPEAR_DAYS_ORDER[showingsCount];
+    dayjs().diff(
+      lastShowingDate ?? firstMiningDate,
+      ENV.STAGING_ENV ? 'minute' : 'day',
+    ) >= APPEAR_DAYS_ORDER[showingsCount];
 
   if (user && shouldShowRateApp) {
     let params: RateData = {};
-    if (user.clientData?.rate) {
-      params = {...user.clientData.rate};
-    }
+    params.lastShowingDate = dayjs().toISOString();
+    params.showingsCount = showingsCount + 1;
 
     yield call(updateRateData, user, params);
     yield put(RateAppActions.SHOW_RATE_APP.START.create());
