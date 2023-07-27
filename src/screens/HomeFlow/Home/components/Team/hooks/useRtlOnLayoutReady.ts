@@ -18,7 +18,8 @@ export function useRtlOnLayoutReady() {
     if (layoutReady) {
       InteractionManager.runAfterInteractions(() => {
         if (flatListRef.current) {
-          flatListRef.current.scrollToEnd({
+          flatListRef.current.scrollToOffset({
+            offset: 0,
             animated: true,
           });
         }

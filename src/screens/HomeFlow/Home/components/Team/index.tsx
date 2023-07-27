@@ -18,7 +18,7 @@ import {isRTL, t} from '@translations/i18n';
 import React, {memo, useCallback, useEffect, useMemo} from 'react';
 import {ListRenderItem, StyleSheet, View} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
-import {rem} from 'rn-units';
+import {isAndroid, rem} from 'rn-units';
 
 export const Team = memo(() => {
   const navigation =
@@ -49,15 +49,17 @@ export const Team = memo(() => {
     [navigation],
   );
 
-  const renderItem: ListRenderItem<string | null> = useCallback(({item}) => {
-    return (
-      <View style={styles.separator}>
-        {item ? <TeamMember userId={item} /> : <TeamMemberSkeleton />}
-      </View>
-    );
-  }, []);
-
   const {onLayout, flatListRef} = useRtlOnLayoutReady();
+  const renderItem: ListRenderItem<string | null> = useCallback(
+    ({item, index}) => {
+      return (
+        <View key={index} style={styles.separator} onLayout={onLayout}>
+          {item ? <TeamMember userId={item} /> : <TeamMemberSkeleton />}
+        </View>
+      );
+    },
+    [onLayout],
+  );
 
   if (referrals.length < 2 && !hasNext) {
     return null;
@@ -75,7 +77,6 @@ export const Team = memo(() => {
         ref={flatListRef}
         data={referrals.length ? referrals : Array<null>(6).fill(null)}
         renderItem={renderItem}
-        onLayout={onLayout}
         ListFooterComponent={
           loadNextLoading ? (
             <ActivityIndicator style={styles.activityIndicator} />
@@ -84,6 +85,7 @@ export const Team = memo(() => {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.memberContent}
         onEndReached={loadNext}
+        inverted={isRTL && isAndroid}
       />
     </>
   );
@@ -99,6 +101,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: SCREEN_SIDE_OFFSET + rem(4),
     alignItems: 'center', // for activity indicator
     flexGrow: 1,
+    flexDirection: isRTL && isAndroid ? 'row-reverse' : 'row',
   },
   activityIndicator: {
     marginLeft: rem(10),
