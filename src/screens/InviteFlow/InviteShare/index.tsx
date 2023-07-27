@@ -60,8 +60,8 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginVertical: rem(16),
-    marginStart: isRTL ? 0 : rem(21),
-    marginEnd: !isRTL ? 0 : rem(21),
+    marginLeft: isRTL ? 0 : rem(21),
+    marginRight: !isRTL ? 0 : rem(21),
     flex: 1,
     /**
      * need to allow the image to be stretched to the full width of the screen

@@ -53,12 +53,17 @@ export const Team = memo(() => {
   const renderItem: ListRenderItem<string | null> = useCallback(
     ({item, index}) => {
       return (
-        <View key={index} style={styles.separator} onLayout={onLayout}>
+        <View
+          key={index}
+          // ItemSeparatorComponent doesn't work with RTL in expected manner.
+          // So have to use a wrapper with a margin.
+          style={index < referrals.length - 1 ? styles.separator : null}
+          onLayout={onLayout}>
           {item ? <TeamMember userId={item} /> : <TeamMemberSkeleton />}
         </View>
       );
     },
-    [onLayout],
+    [onLayout, referrals.length],
   );
 
   if (referrals.length < 2 && !hasNext) {
@@ -93,8 +98,7 @@ export const Team = memo(() => {
 
 const styles = StyleSheet.create({
   separator: {
-    marginEnd: isRTL ? rem(19) : 0,
-    marginStart: !isRTL ? rem(19) : 0,
+    marginEnd: rem(19),
   },
   memberContent: {
     marginTop: rem(18),

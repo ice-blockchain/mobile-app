@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     ...font(16, 21, 'medium', 'secondary'),
   },
   reversedLabel: {
-    left: undefined,
+    left: undefined, // unset left from label style
     right: 0,
   },
   label_error: {
