@@ -59,12 +59,27 @@ export function* checkRateAppConditionSaga() {
 function* updateRateData(user: User, params?: RateData) {
   if (params) {
     yield put(
-      AccountActions.UPDATE_ACCOUNT.START.create({
-        clientData: {
-          ...(user.clientData ?? {}),
-          rate: {...params},
+      AccountActions.UPDATE_ACCOUNT.START.create(
+        {
+          clientData: {
+            ...(user.clientData ?? {}),
+            rate: {...params},
+          },
         },
-      }),
+        function* (freshUser) {
+          if (
+            freshUser.clientData?.rate?.firstMiningDate !==
+              params?.firstMiningDate ||
+            freshUser.clientData?.rate?.showingsCount !==
+              params?.showingsCount ||
+            freshUser.clientData?.rate?.lastShowingDate !==
+              params?.lastShowingDate
+          ) {
+            updateRateData(freshUser, params);
+          }
+          return {retry: false};
+        },
+      ),
     );
   }
 }
