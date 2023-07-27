@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {WelcomeStackParamList} from '@navigation/Welcome';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {useCameraPermissions} from '@screens/Modals/QRCodeScanner/hooks/useCameraPermissions';
+import {useCameraRatio} from '@screens/Modals/QRCodeScanner/hooks/useCameraRatio';
 import {useDetectBarcode} from '@screens/Modals/QRCodeScanner/hooks/useDetectBarcode';
 import {BarCodeScanner} from 'expo-barcode-scanner';
 import {Camera, CameraType} from 'expo-camera';
@@ -30,18 +30,19 @@ export const QRCodeScanner = () => {
     },
   });
 
+  const {cameraRatio, cameraRatioStyle} = useCameraRatio();
+
   return (
-    <View style={commonStyles.flexOne}>
+    <View style={styles.container}>
       <Header backgroundColor="transparent" color={COLORS.white} />
-      {permissionsGranted ? (
+      {permissionsGranted && (
         <Camera
-          style={StyleSheet.absoluteFill}
+          style={cameraRatioStyle}
+          ratio={cameraRatio}
           type={CameraType.back}
           barCodeScannerSettings={barCodeScannerSettings}
           onBarCodeScanned={onBarCodeScanned}
         />
-      ) : (
-        <View style={[StyleSheet.absoluteFill, styles.stub]} />
       )}
     </View>
   );
@@ -52,7 +53,9 @@ const barCodeScannerSettings = {
 };
 
 const styles = StyleSheet.create({
-  stub: {
+  container: {
+    flex: 1,
     backgroundColor: COLORS.black,
+    justifyContent: 'center',
   },
 });
