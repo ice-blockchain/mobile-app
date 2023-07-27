@@ -83,9 +83,13 @@ export function* startMiningSessionSaga(
 
     const firstMiningDate: ReturnType<typeof firstMiningDateSelector> =
       yield select(firstMiningDateSelector);
-    const user: User = yield select(userSelector);
+    const user: SagaReturnType<typeof userSelector> = yield select(
+      userSelector,
+    );
 
-    yield call(setFirstMiningDate, user, firstMiningDate);
+    if (user) {
+      yield call(setFirstMiningDate, user, firstMiningDate);
+    }
 
     /**
      * play sound and vibrate after mining started successfully

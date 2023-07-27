@@ -45,9 +45,10 @@ export function* checkRateAppConditionSaga() {
         timeouts[showingsCount];
 
     if (user && shouldShowRateApp) {
-      let params: RateData = {};
-      params.lastShowingDate = dayjs().toISOString();
-      params.showingsCount = showingsCount + 1;
+      const params: RateData = {
+        lastShowingDate: dayjs().toISOString(),
+        showingsCount: showingsCount + 1,
+      };
 
       yield call(updateRateData, user, params);
       yield put(RateAppActions.SHOW_RATE_APP.START.create());
