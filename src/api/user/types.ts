@@ -85,5 +85,5 @@ export type ClientData = {
   walkthroughProgress?: {[key in WalkthroughStepKey]?: WalkthroughStepProgress};
   miningStateTooltipSeen?: string[];
   phoneNumberIso?: string | null;
-  rate: RateData | null;
+  rate?: RateData | null;
 };

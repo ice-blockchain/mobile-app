@@ -37,13 +37,17 @@ export const userIsoCodeSelector = (state: RootState) => {
 
 export const firstMiningDateSelector = (state: RootState) => {
   const user = userSelector(state);
-  return user?.clientData?.rate?.firstMiningDate ?? null;
+  return user?.clientData?.rate?.firstMiningDate || null;
 };
+
+/** Last date when rate app alert has been shown */
 
 export const lastShowingDateSelector = (state: RootState) => {
   const user = userSelector(state);
-  return user?.clientData?.rate?.lastShowingDate ?? null;
+  return user?.clientData?.rate?.lastShowingDate || null;
 };
+
+/** Used to determine how many times we previously have shown the Rate view */
 
 export const showingsCountSelector = (state: RootState) => {
   const user = userSelector(state);

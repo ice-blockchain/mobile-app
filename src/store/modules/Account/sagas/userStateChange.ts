@@ -184,7 +184,6 @@ function* createUser({
       phoneNumberHash,
       clientData: {
         phoneNumberIso,
-        rate: null,
       },
       language: appLocale,
     },

@@ -13,9 +13,7 @@ import {
 } from '@store/modules/Account/selectors';
 import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {RateAppActions} from '@store/modules/RateApp/actions';
-import {call, put, select} from 'redux-saga/effects';
-
-const APPEAR_DAYS_ORDER = [10, 35, 35];
+import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
 export function* checkRateAppConditionSaga() {
   const isAppActive: ReturnType<typeof isAppActiveSelector> = yield select(
@@ -25,7 +23,7 @@ export function* checkRateAppConditionSaga() {
     isAuthorizedSelector,
   );
 
-  const user: User = yield select(userSelector);
+  const user: SagaReturnType<typeof userSelector> = yield select(userSelector);
 
   const firstMiningDate: ReturnType<typeof firstMiningDateSelector> =
     yield select(firstMiningDateSelector);
@@ -39,20 +37,21 @@ export function* checkRateAppConditionSaga() {
     return;
   }
 
-  const shouldShowRateApp =
-    showingsCount < APPEAR_DAYS_ORDER.length &&
-    dayjs().diff(
-      lastShowingDate ?? firstMiningDate,
-      ENV.STAGING_ENV ? 'minute' : 'day',
-    ) >= APPEAR_DAYS_ORDER[showingsCount];
+  const timeouts = ENV.RATE_THE_ADD_TIMEOUT_MINUTES;
+  if (timeouts) {
+    const shouldShowRateApp =
+      showingsCount < timeouts.length &&
+      dayjs().diff(lastShowingDate ?? firstMiningDate, 'minute') >=
+        timeouts[showingsCount];
 
-  if (user && shouldShowRateApp) {
-    let params: RateData = {};
-    params.lastShowingDate = dayjs().toISOString();
-    params.showingsCount = showingsCount + 1;
+    if (user && shouldShowRateApp) {
+      let params: RateData = {};
+      params.lastShowingDate = dayjs().toISOString();
+      params.showingsCount = showingsCount + 1;
 
-    yield call(updateRateData, user, params);
-    yield put(RateAppActions.SHOW_RATE_APP.START.create());
+      yield call(updateRateData, user, params);
+      yield put(RateAppActions.SHOW_RATE_APP.START.create());
+    }
   }
 }
 

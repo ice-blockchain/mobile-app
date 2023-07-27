@@ -27,7 +27,6 @@ export const useMiningState = () => {
         {
           clientData: {
             ...currentUser?.clientData,
-            rate: currentUser?.clientData?.rate ?? null,
             miningStateTooltipSeen: [
               ...(currentUser.clientData?.miningStateTooltipSeen ?? []),
               seenMiningState,
