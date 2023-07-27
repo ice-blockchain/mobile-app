@@ -11,8 +11,8 @@ import {dayjs} from '@services/dayjs';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
   firstMiningDateSelector,
+  unsafeUserSelector,
   userIdSelector,
-  userSelector,
 } from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
@@ -66,29 +66,23 @@ export function* startMiningSessionSaga(
     }
   }
 
-  const userId: ReturnType<typeof userIdSelector> = yield select(
-    userIdSelector,
+  const user: ReturnType<typeof unsafeUserSelector> = yield select(
+    unsafeUserSelector,
   );
 
   try {
     const miningSummary: SagaReturnType<
       typeof Api.tokenomics.startMiningSession
     > = yield call(Api.tokenomics.startMiningSession, {
-      userId,
+      userId: user.id,
       resurrect: action.payload?.resurrect,
     });
     yield put(
       TokenomicsActions.START_MINING_SESSION.SUCCESS.create(miningSummary),
     );
 
-    const firstMiningDate: ReturnType<typeof firstMiningDateSelector> =
-      yield select(firstMiningDateSelector);
-    const user: SagaReturnType<typeof userSelector> = yield select(
-      userSelector,
-    );
-
     if (user) {
-      yield call(setFirstMiningDate, user, firstMiningDate);
+      yield call(setFirstMiningDate, user);
     }
 
     /**
@@ -189,7 +183,9 @@ function* confirmResurrect(
   }
 }
 
-function* setFirstMiningDate(user: User, firstMiningDate: string | null) {
+function* setFirstMiningDate(user: User) {
+  const firstMiningDate: ReturnType<typeof firstMiningDateSelector> =
+    yield select(firstMiningDateSelector);
   if (!firstMiningDate) {
     yield put(
       AccountActions.UPDATE_ACCOUNT.START.create(
@@ -201,7 +197,7 @@ function* setFirstMiningDate(user: User, firstMiningDate: string | null) {
         },
         function* (freshUser) {
           if (freshUser.clientData?.rate?.firstMiningDate !== firstMiningDate) {
-            setFirstMiningDate(freshUser, firstMiningDate);
+            setFirstMiningDate(freshUser);
           }
           return {retry: false};
         },
