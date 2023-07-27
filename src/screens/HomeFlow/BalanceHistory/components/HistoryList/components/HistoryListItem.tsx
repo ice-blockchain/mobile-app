@@ -4,6 +4,7 @@ import {BalanceDiff} from '@api/tokenomics/types';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
+import {FORCE_LTR_TEXT_CHAR} from '@constants/rtl';
 import {commonStyles} from '@constants/styles';
 import {dayjs} from '@services/dayjs';
 import {ClockIcon} from '@svg/ClockIcon';
@@ -71,7 +72,9 @@ export const HistoryListItem = ({balanceDiff, time}: Props) => {
         />
       </View>
       <Text style={styles.relDiffText}>
-        {`\u200E${balanceDiff.bonus > 0 ? '+' : ''}${balanceDiff.bonus}%`}
+        {`${FORCE_LTR_TEXT_CHAR}${balanceDiff.bonus > 0 ? '+' : ''}${
+          balanceDiff.bonus
+        }%`}
       </Text>
       <ClockIcon width={rem(14)} height={rem(14)} color={COLORS.primaryDark} />
       <Text style={styles.timeText}>{dayjs(time).format('LT')}</Text>
