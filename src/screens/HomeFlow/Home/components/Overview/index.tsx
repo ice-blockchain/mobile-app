@@ -22,23 +22,15 @@ import {ReferralsCard} from '@screens/HomeFlow/Home/components/Overview/componen
 import {OVERSCROLL} from '@screens/HomeFlow/Home/components/Overview/constants';
 import {useAdoptionCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useAdoptionCardWalkthrough';
 import {useCardTranslateY} from '@screens/HomeFlow/Home/components/Overview/hooks/useCardTranslateY';
-import {
-  getActiveOffset,
-  useHandleActiveOverviewCardParam,
-} from '@screens/HomeFlow/Home/components/Overview/hooks/useHandleActiveOverviewCardParam';
+import {useHandleActiveOverviewCardParam} from '@screens/HomeFlow/Home/components/Overview/hooks/useHandleActiveOverviewCardParam';
 import {useInviteFriendsWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useInviteFriendsWalkthrough';
 import {useProfileCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useProfileCardWalkthrough';
 import {useReferralsCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useReferralsCardWalkthrough';
+import {useRtlLayoutReady} from '@screens/HomeFlow/Home/components/Overview/hooks/useRtlLayoutReady';
 import {useScrollCollapse} from '@screens/HomeFlow/Home/components/Overview/hooks/useScrollCollapse';
-import {isRTL, t} from '@translations/i18n';
-import React, {memo, useEffect, useRef, useState} from 'react';
-import {
-  InteractionManager,
-  LayoutChangeEvent,
-  Platform,
-  StyleSheet,
-  View,
-} from 'react-native';
+import {t} from '@translations/i18n';
+import React, {memo, useRef, useState} from 'react';
+import {LayoutChangeEvent, Platform, StyleSheet, View} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import {isAndroid, isIOS, rem} from 'rn-units';
 
@@ -60,8 +52,6 @@ const SCROLL_BOTTOM_MARGIN = rem(24);
 
 export const Overview = memo(({translateY, topOffset}: Props) => {
   const adoptionFlipCardRef = useRef<FlipCardMethods>(null);
-  const [layoutReady, setLayoutReady] = React.useState(false);
-
   const {scrollViewRef} = useHandleActiveOverviewCardParam();
 
   const {onProfileCardLayout, profileCardRef} = useProfileCardWalkthrough();
@@ -95,19 +85,7 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
     setPositionYInnerContent(event.nativeEvent.layout.y);
   };
 
-  useEffect(() => {
-    if (isRTL && layoutReady) {
-      InteractionManager.runAfterInteractions(() => {
-        if (scrollViewRef.current) {
-          scrollViewRef.current.scrollTo({
-            x: getActiveOffset(isIOS ? 'profile' : 'adoption'),
-            y: 0,
-            animated: true,
-          });
-        }
-      });
-    }
-  }, [layoutReady, scrollViewRef]);
+  const {onLayout} = useRtlLayoutReady({scrollViewRef});
 
   return (
     <>
@@ -138,7 +116,7 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
           <LevelCard
             sharedIsCollapsed={sharedIsCollapsed}
             onLayout={() => {
-              setLayoutReady(true);
+              onLayout();
               onProfileCardLayout();
             }}
             ref={profileCardRef}
