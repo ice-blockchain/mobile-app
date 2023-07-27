@@ -9,7 +9,7 @@ export const useScreenFade = <T extends string>(currentScreen: T) => {
   const fadeAnimation = useRef(new Animated.Value(1)).current;
 
   const showScreen = useCallback(
-    newVisibleFlow => {
+    (newVisibleFlow: T) => {
       Animated.timing(fadeAnimation, {
         toValue: 0,
         duration: 500,

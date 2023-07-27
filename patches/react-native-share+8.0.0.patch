@@ -1,3 +1,5 @@
+https://github.com/react-native-share/react-native-share/issues/1427
+
 diff --git a/node_modules/react-native-share/ios/GooglePlusShare.m b/node_modules/react-native-share/ios/GooglePlusShare.m
 index ec72ddd..ce01254 100644
 --- a/node_modules/react-native-share/ios/GooglePlusShare.m

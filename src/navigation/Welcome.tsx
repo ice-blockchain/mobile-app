@@ -83,9 +83,11 @@ export function WelcomeNavigator() {
   /**
    * Setting initial navigation state to add an ability to go back
    */
+  let initialRouteName;
   if (!initializedRef.current) {
     const stepNames = WELCOME_STEPS.map(s => s.name);
     const currentStepIndex = WELCOME_STEPS.findIndex(step => !step.finished());
+    initialRouteName = stepNames[currentStepIndex];
     resetRoot({
       index: currentStepIndex,
       routes: stepNames.slice(0, currentStepIndex + 1).map(name => ({name})),
@@ -94,7 +96,9 @@ export function WelcomeNavigator() {
   }
 
   return (
-    <WelcomeStack.Navigator screenOptions={screenOptions}>
+    <WelcomeStack.Navigator
+      screenOptions={screenOptions}
+      initialRouteName={initialRouteName}>
       <WelcomeStack.Screen name="ClaimUsername" component={ClaimUsername} />
       <WelcomeStack.Screen name="WhoInvitedYou" component={WhoInvitedYou} />
       <WelcomeStack.Screen name="SetEmail" component={SetEmail} />
