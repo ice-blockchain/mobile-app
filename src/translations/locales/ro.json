@@ -854,13 +854,7 @@
     "expired_message": "Din păcate, bonusul de astăzi a expirat. Rămâi pe fază pentru următoarea notificare!",
     "result_title": "Felicitări"
   },
-  "early_access": {
-    "title": "Acces timpuriu",
-    "message_part1": "Aruncă o privire în avanpremieră la aplicația [[:bold]]ice[[/:bold]] înainte de [[:bold]]lansarea oficială viitoare.[[/:bold]]",
-    "message_part2": "Toate soldurile vor fi resetate la 0 în data lansării. Însă echipa ta va rămâne intactă.",
-    "message_part3": "Îți mulțumim pentru sprijin!",
-    "checkbox_description": "Am luat cunoștință! Nu mai afișa acest pop-up."
-  },
+  
   "mining_notice": {
     "title": "Înștiințare",
     "message": "Îți mulțumim pentru interesul față de a câștiga [[:bold]]ice![[/:bold]] Acum ne punem la punct tehnologia și vizitarea nu este disponibilă momentan. Acum ai ocazia să te concentrezi asupra construirii echipei tale și a dezvoltării micro-comunității tale.",

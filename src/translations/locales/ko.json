@@ -854,13 +854,7 @@
     "expired_message": "죄송하지만 오늘의 보너스는 만료되었습니다. 다음 알림을 기대해 주세요!",
     "result_title": "축하합니다"
   },
-  "early_access": {
-    "title": "조기 액세스",
-    "message_part1": "[[:bold]]곧 있을 공식 출시 전에 [[:bold]]ice[[/:bold]] 앱을 살짝 엿보세요.[[/:bold]]",
-    "message_part2": "출시일에는 모든 잔액이 0으로 재설정 됩니다. 하지만 회원님의 팀은 그대로 유지됩니다.",
-    "message_part3": "성원해 주셔서 감사합니다!",
-    "checkbox_description": "인정합니다! 이 알림창을 다시 보지 않기."
-  },
+  
   "mining_notice": {
     "title": "알림",
     "message": "[[:bold]]ice에 관심을 가져 주셔서 감사합니다![[/:bold]] 현재 ice의 기술을 미세하게 조정하고 있어 체크인하실 수 없습니다. 이는 회원님이 팀 결성에 집중하고 소규모 커뮤니티를 발전시킬 기회입니다.",

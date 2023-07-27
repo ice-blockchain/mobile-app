@@ -557,11 +557,6 @@ export type Translations = {
   'extra_bonus.expired_title': null;
   'extra_bonus.expired_message': null;
   'extra_bonus.result_title': null;
-  'early_access.title': null;
-  'early_access.message_part1': null;
-  'early_access.message_part2': null;
-  'early_access.message_part3': null;
-  'early_access.checkbox_description': null;
   'mining_notice.title': null;
   'mining_notice.message': null;
   'mining_notice.message_footer': null;

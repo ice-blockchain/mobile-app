@@ -854,13 +854,7 @@
     "expired_message": "Sajnos a mai bónusz lejárt. Maradj velünk a következő frissítésért.",
     "result_title": "Gratulálunk"
   },
-  "early_access": {
-    "title": "Korai hozzáférés",
-    "message_part1": "Nyerj betekintést az [[:bold]]ice[[/:bold]] appba a legújabb [[:bold]]hivatalos piacra dobás előtt.[[/:bold]]",
-    "message_part2": "A kibocsátás dátumán az összes egyenleg vissza fog állítódva 0-ra. A csapatod ugyanakkor érintetlen marad.",
-    "message_part3": "Köszönjük a támogatást!",
-    "checkbox_description": "Tudomásul vettem! Ne mutasd újra ezt a felugró elemet."
-  },
+  
   "mining_notice": {
     "title": "Felhívás",
     "message": "Köszönjük érdeklődésedet az [[:bold]]ice keresésével kapcsolatban![[/:bold]] Jelenleg technológiánk finomhangolását végezzük, így a bejelentkezés jelenleg nem elérhető. Itt az alkalom, hogy a csapatod építésére és a mikroközösséged növelésére koncentrálj.",

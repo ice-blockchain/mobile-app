@@ -854,13 +854,7 @@
     "expired_message": "Ngeshwa, ibhonasi yanamuhla iphelelwe yisikhathi. Hlala ubukele ukuze uthole isaziso esilandelayo!",
     "result_title": "Siyakuhalalisela"
   },
-  "early_access": {
-    "title": "Ukufinyelela Ngaphambili",
-    "message_part1": "Thola amazwibela ohlelo lokusebenza [[:bold]]lweqhwa[[/:bold]] ngaphambi kokukhishwa kwethu [[:bold]]okusemthethweni okuzayo.[[/:bold]]",
-    "message_part2": "Wonke amabhalansi azosethwa kabusha abe ngu- 0 ngedethi yokukhishwa. Ithimba lakho, nokho, lizohlala linjalo.",
-    "message_part3": "Siyabonga ngokusekela kwakho!",
-    "checkbox_description": "Ngivumile! Ungaphinde ubonise lesi sigelekeqe."
-  },
+  
   "mining_notice": {
     "title": "Isaziso",
     "message": "Siyabonga ngentshisekelo yakho yokuzuza[[:bold]] iqhwa![[/:bold]] Okwamanje silungisa ubuchwepheshe bethu futhi ukungena akutholakali okwamanje. Leli yithuba lakho lokugxila ekwakheni iqembu lakho nasekukhuliseni umphakathi wakho omncane.",

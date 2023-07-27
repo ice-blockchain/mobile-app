@@ -854,13 +854,6 @@
     "expired_message": "Malheureusement, le bonus d’aujourd’ hui a expiré. Surveillez la prochaine notification !",
     "result_title": "Félicitations"
   },
-  "early_access": {
-    "title": "Accès anticipé",
-    "message_part1": "Obtenez un aperçu de l’application [[:bold]]ice[[/:bold]] avant notre [[:bold]]sortie officielle à venir.[[/:bold]]",
-    "message_part2": "Tous les soldes seront remis à 0 à la date de sortie. Votre équipe, elle, restera intacte.",
-    "message_part3": "Merci pour votre soutien !",
-    "checkbox_description": "C’est noté ! Ne plus afficher ce pop-up."
-  },
   "mining_notice": {
     "title": "Avis",
     "message": "Merci de votre intérêt à gagner de l’[[:bold]]ice ![[/:bold]] Nous peaufinons actuellement notre technologie et il n’est pas possible de s’enregistrer pour le moment. Profitez-en pour vous concentrer sur la construction de votre équipe et la croissance de votre micro-communauté.",

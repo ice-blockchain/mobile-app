@@ -854,13 +854,7 @@
     "expired_message": "很抱歉，今日獎勵已過期。 請密切關注下一次通知！",
     "result_title": "恭喜"
   },
-  "early_access": {
-    "title": "搶先體驗",
-    "message_part1": "在[[:bold]]即將到來的正式發布前，搶先一睹 [[:bold]]ice[[/:bold]] 應用程式。[[/:bold]]",
-    "message_part2": "所有餘額將會在發布日當天歸 0。 然而，您的團隊將完整保留下來。",
-    "message_part3": "感謝您的支持！",
-    "checkbox_description": "我知道了！ 別再顯示此彈出視窗。"
-  },
+  
   "mining_notice": {
     "title": "通知",
     "message": "感謝您對賺取 [[:bold]]ice 感興趣！[[/:bold]] 目前我們正在進行技術上的微調，暫時無法使用簽到功能。 這是您專注於建立團隊與發展微型社區的好機會。",

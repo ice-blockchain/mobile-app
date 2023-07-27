@@ -854,13 +854,7 @@
     "expired_message": "Malangnya, bonus hari ini telah tamat tempoh. Teruskan bersama untuk pemberitahuan seterusnya!",
     "result_title": "Tahniah"
   },
-  "early_access": {
-    "title": "Akses Awal",
-    "message_part1": "Dapatkan sekilas pandang aplikasi [[:bold]]ice[[/:bold]] sebelum pelancaran [[:bold]]rasmi kami yang akan datang.[[/:bold]]",
-    "message_part2": "Semua baki akan ditetapkan semula ke 0 pada tarikh pelancaran. Pasukan anda, walau bagaimanapun, akan dikekalkan.",
-    "message_part3": "Terima kasih atas sokongan anda!",
-    "checkbox_description": "Saya mengakuinya! Jangan tunjukkan tetingkap timbul ini lagi."
-  },
+  
   "mining_notice": {
     "title": "Makluman",
     "message": "Terima kasih atas minat anda dalam memperoleh [[:bold]]ice![[/:bold]] Kami sedang memperkemaskan teknologi kami pada masa ini dan semak masuk tidak tersedia buat masa ini. Inilah peluang anda untuk memfokuskan pada membina pasukan anda dan mengembangkan komuniti mikro anda.",

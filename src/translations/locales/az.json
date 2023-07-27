@@ -854,13 +854,6 @@
     "expired_message": "Təəssüf ki, bugünki bonusun vaxtı bitdi. Növbəti bildirişlər üçün bizi izləyin!",
     "result_title": "Təbriklər"
   },
-  "early_access": {
-    "title": "Erkən Giriş",
-    "message_part1": "Bizim [[:bold]]qarşıdan gələn rəsmi buraxılışımızdan əvvəl  [[:bold]]ice[[/:bold]] tətbiqinə baxış əldə et.[[/:bold]]",
-    "message_part2": "Buraxılış günü bütün balanslar sıfırlanacaq. Komandan isə olduğu kimi qalacaq.",
-    "message_part3": "Dəstəyiniz üçün çox sağolun!",
-    "checkbox_description": "Mən başa düşdüm! Bu bildirişi bir daha göstərmə."
-  },
   "mining_notice": {
     "title": "Qeyd",
     "message": "[[:bold]]ice qazanmaq üçün olan marağınız üçün təşəkkürlər![[/:bold]] Hal-hazırda texnologiyamızı sazlayırıq və giriş hazırda mümkün deyil. Bu sənin komanda qurmaq üçün və mikro -icmanı böyütmək üçün fokuslanmaq şansındır.",

@@ -854,13 +854,7 @@
     "expired_message": "Na žalost je današnji bonus potekel. Spremljajte nas do naslednjega obvestila!",
     "result_title": "Čestitke"
   },
-  "early_access": {
-    "title": "Zgodnji dostop",
-    "message_part1": "Pred našo prihajajočo uradno izdajo si oglejte aplikacijo [[:bold]]ice[[/:bold]].",
-    "message_part2": "Vsa stanja bodo ponastavljena na 0 na datum objave. Vaša ekipa pa bo ostala nedotaknjena.",
-    "message_part3": "Hvala za vašo podporo!",
-    "checkbox_description": "Sem pripoznal! Tega pojavnega okna ne kaži več."
-  },
+  
   "mining_notice": {
     "title": "Obvestilo",
     "message": "Hvala za vaše zanimanje za zaslužek v [[:bold]]ice![[/:bold]] Trenutno izpopolnjujemo svojo tehnologijo in prijava trenutno ni na voljo. To je vaša priložnost, da se osredotočite na ustvarjanje svoje ekipe in rast svoje mikro skupnosti.",

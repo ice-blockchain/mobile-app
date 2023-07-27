@@ -7,11 +7,9 @@ import {
   PreStakingSummary,
   RankingSummary,
 } from '@api/tokenomics/types';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AccountActions} from '@store/modules/Account/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import produce from 'immer';
-import {persistReducer} from 'redux-persist';
 
 export interface State {
   miningSummary: MiningSummary | null;
@@ -27,7 +25,6 @@ export interface State {
     endDate: string | null;
     pageNumber: number;
   };
-  agreeWithEarlyAccess: boolean;
   forceStartMining: boolean;
   tapToMineActionType?: 'Extended' | 'Default';
 }
@@ -41,7 +38,6 @@ type Actions = ReturnType<
   | typeof TokenomicsActions.GET_BALANCE_HISTORY.SUCCESS.create
   | typeof TokenomicsActions.START_OR_UPDATE_PRE_STAKING.SUCCESS.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
-  | typeof TokenomicsActions.UPDATE_AGREE_WITH_EARLY_ACCESS.STATE.create
   | typeof TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.create
 >;
 
@@ -57,7 +53,6 @@ const INITIAL_STATE: State = {
     endDate: null,
     pageNumber: 0,
   },
-  agreeWithEarlyAccess: false,
   forceStartMining: false,
 };
 
@@ -123,9 +118,6 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
           };
         }
         break;
-      case TokenomicsActions.UPDATE_AGREE_WITH_EARLY_ACCESS.STATE.type:
-        draft.agreeWithEarlyAccess = true;
-        break;
       case TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.type:
         draft.forceStartMining = action.payload.forceStartMining;
         draft.tapToMineActionType = action.payload.tapToMineActionType;
@@ -136,11 +128,4 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
   });
 }
 
-export const tokenomicsReducer = persistReducer(
-  {
-    key: 'tokenomics',
-    storage: AsyncStorage,
-    whitelist: ['agreeWithEarlyAccess'],
-  },
-  reducer,
-);
+export const tokenomicsReducer = reducer;

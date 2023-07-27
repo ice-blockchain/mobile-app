@@ -854,13 +854,7 @@
     "expired_message": "Žiaľ, dnešný bonus vypršal. Priprav sa na nasledujúce uporoznenie!",
     "result_title": "Gratulujeme"
   },
-  "early_access": {
-    "title": "Skorý prístup",
-    "message_part1": "Pozri si aplikáciu [[:bold]]ice[[/:bold]] ešte pred jej [[:bold]]nadchádzajúcim oficiálnym vydaním.[[/:bold]]",
-    "message_part2": "V deň vydania sa všetky zostatky vynulujú. Tvoj tím však zostane nedotknutý.",
-    "message_part3": "Ďakujeme ti za podporu!",
-    "checkbox_description": "Beriem na vedomie. Už nezobrazovať."
-  },
+  
   "mining_notice": {
     "title": "Oznámenie",
     "message": "Ďakujeme za tvoj záujem o získanie [[:bold]]ice![[/:bold]] V súčasnosti dolaďujeme našu technológiu a prihlásenie momentálne nie je k dispozícii. Toto je tvoja šanca zamerať sa na budovanie tímu a rozvoj mikrokomunity.",

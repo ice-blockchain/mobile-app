@@ -854,13 +854,7 @@
     "expired_message": "Rất tiếc, tiền thưởng hôm nay đã hết hạn. Hãy theo dõi thông báo tiếp theo!",
     "result_title": "Xin chúc mừng"
   },
-  "early_access": {
-    "title": "Truy cập sớm",
-    "message_part1": "Xem trước ứng dụng [[:bold]]ice[[/:bold]] trước khi chúng tôi [[:bold]]phát hành phiên bản chính thức sắp tới.[[/:bold]]",
-    "message_part2": "Tất cả số dư sẽ được đặt lại về 0 vào ngày phát hành. Tuy nhiên, nhóm của bạn sẽ được giữ nguyên.",
-    "message_part3": "Cảm ơn sự ủng hộ của bạn!",
-    "checkbox_description": "Tôi thừa nhận điều đó! Không hiển thị lại cửa sổ bật lên này."
-  },
+  
   "mining_notice": {
     "title": "Thông báo",
     "message": "Cảm ơn bạn đã quan tâm đến việc kiếm [[:bold]]ice![[/:bold]] Chúng tôi hiện đang tinh chỉnh công nghệ của mình và tính năng điểm danh hiện không khả dụng. Đây là cơ hội để bạn tập trung vào việc xây dựng nhóm và phát triển cộng đồng vi mô của mình.",

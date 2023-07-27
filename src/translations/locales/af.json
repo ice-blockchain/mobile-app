@@ -854,13 +854,6 @@
     "expired_message": "Ongelukkig het vandag se bonus verval. Bly ingeskakel vir die volgende kennisgewing!",
     "result_title": "Baie geluk"
   },
-  "early_access": {
-    "title": "Vroeë toegang",
-    "message_part1": "Kry 'n voorsmakie van die [[:bold]]ice [[/:bold]]toepassing voor ons [[:bold]]komende amptelike vrystelling.[[/:bold]]",
-    "message_part2": "Alle saldo's sal op die vrystellingsdatum na 0 teruggestel word. Jou span sal egter ongeskonde bly.",
-    "message_part3": "Dankie vir jou ondersteuning!",
-    "checkbox_description": "Ek het erken! Moenie hierdie opspringer weer wys nie."
-  },
   "mining_notice": {
     "title": "Kennisgewing",
     "message": "Dankie vir jou belangstelling om ice te verdien[[:bold]]![[/:bold]] Ons verfyn tans ons tegnologie en inklok is nie op die oomblik beskikbaar nie Dit is jou kans om te fokus op die bou van jou span en die groei van jou mikro-gemeenskap.",

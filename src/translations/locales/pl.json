@@ -854,13 +854,7 @@
     "expired_message": "Niestety, dzisiejszy bonus wygasł. Bądź na bieżąco z kolejnymi powiadomieniami!",
     "result_title": "Gratulacje"
   },
-  "early_access": {
-    "title": "Wczesny dostęp",
-    "message_part1": "Uzyskaj wgląd do aplikacji [[:bold]]ice[[/:bold]] przed naszą [[:bold]]zbliżającą się oficjalną premierą.[[/:bold]]",
-    "message_part2": "Wszystkie salda zostaną zresetowane do 0 w dniu premiery. Twój zespół pozostanie jednak nienaruszony.",
-    "message_part3": "Dziękujemy za wsparcie!",
-    "checkbox_description": "Przyjmuję do wiadomości! Nie pokazuj więcej tego okienka."
-  },
+  
   "mining_notice": {
     "title": "Ogłoszenie",
     "message": "Dziękujemy za zainteresowanie zarabianiem [[:bold]]ice![[/:bold]] Obecnie dopracowujemy naszą technologię i meldunek nie jest obecnie dostępny. To szansa na skupienie się na budowaniu zespołu i rozwijaniu mikrospołeczności.",

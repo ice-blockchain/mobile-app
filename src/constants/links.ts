@@ -21,7 +21,6 @@ export const LINKS = {
   TWITTER_APP_URL: 'twitter://user?screen_name=ice_blockchain',
   TWITTER_PROFILE_URL: 'https://twitter.com/ice_blockchain',
   TELEGRAM_PROFILE_URL: 'https://t.me/iceblockchain',
-  EARLY_ACCESS: 'https://ice.io/early-release-version',
   CHANGELOG: 'https://ice.io/changelog',
   ICE_FAQ: 'https://ice.io/faq',
   BETA_TESTING: 'https://ice.io/beta-testing',

@@ -63,10 +63,6 @@ export const balanceHistorySelector = (state: RootState) => {
   return state.tokenomics.balanceHistory;
 };
 
-export const agreeWithEarlyAccessSelector = (state: RootState) => {
-  return state.tokenomics.agreeWithEarlyAccess;
-};
-
 export const forceStartMiningSelector = (state: RootState) =>
   state.tokenomics.forceStartMining;
 

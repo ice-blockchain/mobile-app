@@ -854,13 +854,7 @@
     "expired_message": "Fatkeqësisht, bonusi i sotëm ka skaduar. Rri në korrent për njoftimin e radhës!",
     "result_title": "Përgëzime"
   },
-  "early_access": {
-    "title": "Qasje herët",
-    "message_part1": "Hidh një sy te aplikacioni [[:bold]]ice[[/:bold]] para [[:bold]]hedhjes sonë zyrtare në treg.[[/:bold]]",
-    "message_part2": "Të gjitha shumat në gjendje do të ricilësohen si 0 në datën e lëshimit. Megjithatë, ekipi yt do të rrijë siç është.",
-    "message_part3": "Faleminderit për mbështetjen!",
-    "checkbox_description": "E kam pranuar! Mos e shfaq më këtë pop-up."
-  },
+  
   "mining_notice": {
     "title": "Njoftim",
     "message": "Faleminderit për interesin në [[:bold]]ice![[/:bold]] Po rafinojmë teknologjinë dhe paraqitja në sistem nuk është në dispozicion për momentin. Tani e ke shansin të fokusohesh në ndërtimin e ekipit dhe zgjerimin e mikro-komunitetit.",

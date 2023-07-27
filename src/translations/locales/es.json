@@ -854,13 +854,6 @@
     "expired_message": "Lamentablemente, la bonificación del día ha caducado. ¡No te pierdas la próxima notificación!",
     "result_title": "Enhorabuena"
   },
-  "early_access": {
-    "title": "Acceso anticipado",
-    "message_part1": "Echa un vistazo a la aplicación [[:bold]]ice[[/:bold]] antes de nuestro [[:bold]]próximo lanzamiento oficial.[[/:bold]]",
-    "message_part2": "Todos los saldos se restablecerán a 0 en la fecha de lanzamiento. Tu equipo, sin embargo, permanecerá intacto.",
-    "message_part3": "¡Gracias por tu apoyo!",
-    "checkbox_description": "¡Confirmo la recepción! No volver a mostrar esta ventana emergente."
-  },
   "mining_notice": {
     "title": "Aviso",
     "message": "¡Gracias por tu interés en ganar [[:bold]]ice![[/:bold]] Actualmente estamos perfeccionando nuestra tecnología, por lo que el entrada no está disponible en estos momentos. Es tu oportunidad de centrarte en crear tu equipo y hacer crecer tu microcomunidad.",

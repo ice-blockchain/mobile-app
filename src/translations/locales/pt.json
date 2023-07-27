@@ -854,13 +854,7 @@
     "expired_message": "Infelizmente, o bônus de hoje expirou. Fique atento para a próxima notificação!",
     "result_title": "Parabéns"
   },
-  "early_access": {
-    "title": "Acesso antecipado",
-    "message_part1": "Dê uma espiada no aplicativo [[:bold]]ice[[/:bold]] antes do nosso [[:bold]]lançamento oficial.[[/:bold]]",
-    "message_part2": "Todos os saldos serão zerados na data de lançamento. Porém, a sua equipe permanecerá intacta.",
-    "message_part3": "Agradecemos o seu apoio!",
-    "checkbox_description": "Entendi! Não mostre este aviso novamente."
-  },
+  
   "mining_notice": {
     "title": "Aviso",
     "message": "Agradecemos o seu interesse em ganhar [[:bold]]ice![[/:bold]] No momento, estamos aprimorando nossa tecnologia, e o check-in não está disponível por ora. Esta é a sua chance de se concentrar em formar a sua equipe e em aumentar a sua microcomunidade.",

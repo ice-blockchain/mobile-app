@@ -854,13 +854,7 @@
     "expired_message": "Sayangnya, bonus hari ini telah kedaluwarsa. Nantikan notifikasi selanjutnya!",
     "result_title": "Selamat"
   },
-  "early_access": {
-    "title": "Akses Awal",
-    "message_part1": "Intip sekilas tentang aplikasi [[:bold]]ice[[/:bold]] sebelum perilisan [[:bold]]resmi mendatang.[[/:bold]]",
-    "message_part2": "Semua saldo akan direset ke 0 pada tanggal perilisan. Akan tetapi, tim Anda akan tetap utuh.",
-    "message_part3": "Terima kasih atas dukungannya!",
-    "checkbox_description": "Saya setuju! Jangan tampilkan pop-up ini lagi."
-  },
+  
   "mining_notice": {
     "title": "Perhatian",
     "message": "Terima kasih atas minat Anda untuk menghasilkan [[:bold]]ice![[/:bold]] Kami sedang menyempurnakan teknologi kami dan lapor masuk belum tersedia untuk saat ini. Ini merupakan peluang bagi Anda untuk fokus membangun tim dan mengembangkan komunitas mikro.",
