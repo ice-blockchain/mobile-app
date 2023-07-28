@@ -5,9 +5,7 @@ import {Api} from '@api/index';
 import {ResurrectRequiredData} from '@api/tokenomics/types';
 import {LocalAudio} from '@audio';
 import {ENV} from '@constants/env';
-import {navigationRef} from '@navigation/utils';
 import {loadLocalAudio} from '@services/audio';
-import {dayjs} from '@services/dayjs';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
@@ -15,18 +13,16 @@ import {shareSocialsSaga} from '@store/modules/Socials/sagas/shareSocials';
 import {SocialsShareResult} from '@store/modules/Socials/types';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {
-  agreeWithEarlyAccessSelector,
   forceStartMiningSelector,
   isMiningActiveSelector,
 } from '@store/modules/Tokenomics/selectors';
 import {openConfirmResurrect} from '@store/modules/Tokenomics/utils/openConfirmResurrect';
 import {openConfirmResurrectNo} from '@store/modules/Tokenomics/utils/openConfirmResurrectNo';
 import {openConfirmResurrectYes} from '@store/modules/Tokenomics/utils/openConfirmResurrectYes';
-import {openEarlyAccess} from '@store/modules/Tokenomics/utils/openEarlyAccess';
 import {openMiningNotice} from '@store/modules/Tokenomics/utils/openMiningNotice';
 import {hapticFeedback} from '@utils/device';
 import {getErrorMessage, showError} from '@utils/errors';
-import {call, delay, put, SagaReturnType, select} from 'redux-saga/effects';
+import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
 export function* startMiningSessionSaga(
   action: ReturnType<
@@ -67,9 +63,6 @@ export function* startMiningSessionSaga(
     userIdSelector,
   );
 
-  const agreeWithEarlyAccess: ReturnType<typeof agreeWithEarlyAccessSelector> =
-    yield select(agreeWithEarlyAccessSelector);
-
   try {
     const miningSummary: SagaReturnType<
       typeof Api.tokenomics.startMiningSession
@@ -98,34 +91,6 @@ export function* startMiningSessionSaga(
     AnalyticsEventLogger.trackTapToMine({
       tapToMineActionType: action.payload?.tapToMineActionType ?? 'Default',
     });
-
-    if (!agreeWithEarlyAccess) {
-      /*
-       * We use Asia/Dubai timezone for release
-       */
-      const currentTime: SagaReturnType<typeof Api.time.getCurrentTime> =
-        yield call(Api.time.getCurrentTime, 'Asia/Dubai');
-
-      const releaseDate = dayjs(ENV.RELEASE_DATE);
-      const currentDate = dayjs(currentTime.data?.dateTime);
-
-      /*
-       * Release not happened
-       */
-      if (releaseDate.isAfter(currentDate)) {
-        yield delay(500);
-        const agreeResult: SagaReturnType<typeof openEarlyAccess> = yield call(
-          openEarlyAccess,
-        );
-
-        if (agreeResult === 'yes') {
-          yield put(
-            TokenomicsActions.UPDATE_AGREE_WITH_EARLY_ACCESS.STATE.create(),
-          );
-        }
-        navigationRef.goBack();
-      }
-    }
   } catch (error) {
     yield put(
       TokenomicsActions.START_MINING_SESSION.FAILED.create(

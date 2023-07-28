@@ -228,8 +228,6 @@ platform :android do
                     skip_upload_images: true,
                     skip_upload_screenshots: true,
                     skip_upload_apk: true,
-                    # remove as soon as the app is not draft anymore
-                    release_status: 'draft',
                 )
             when "firebase"
                 # use bundles when the app is published

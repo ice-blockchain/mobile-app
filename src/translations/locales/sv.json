@@ -854,13 +854,7 @@
     "expired_message": "Tyvärr har dagens bonus löpt ut. Håll utkik efter nästa avisering!",
     "result_title": "Grattis"
   },
-  "early_access": {
-    "title": "Tidig tillgång",
-    "message_part1": "Få en förhandstitt på [[:bold]]ice[[/:bold]]-appen innan vår [[:bold]] kommande officiella utgivning.[[/:bold]]",
-    "message_part2": "Alla saldon kommer att återställas till 0 på utgivningsdatumet. Däremot kommer ditt team att förbli intakt.",
-    "message_part3": "Tack för ditt stöd!",
-    "checkbox_description": "Jag bekräftar! Visa inte detta popup-fönster igen."
-  },
+  
   "mining_notice": {
     "title": "Meddelande",
     "message": "Tack för att du är intresserad av att tjäna [[:bold]]ice![[/:bold]] Vi finjusterar för närvarande vår teknik och därför går det inte att checka in för tillfället. Det här är din chans att fokusera på att bygga ditt team och utöka din mikrocommunity.",

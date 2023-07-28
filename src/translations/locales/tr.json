@@ -854,13 +854,7 @@
     "expired_message": "Ne yazık ki, bugünün bonusunun süresi doldu. Bir sonraki bildirim için bizi izlemeye devam et!",
     "result_title": "Tebrikler"
   },
-  "early_access": {
-    "title": "Erken Erişim",
-    "message_part1": "Yaklaşan resmi sürümümüzden önce [[:bold]]ice[[/:bold]] uygulamasına [[:bold]]bir göz at.[[/:bold]]",
-    "message_part2": "Çıkış tarihinde tüm bakiyeler 0'a sıfırlanacaktır. Ancak ekibin bozulmadan kalacaktır.",
-    "message_part3": "Desteğin için teşekkürler!",
-    "checkbox_description": "Kabul ettim! Bu açılır pencereyi bir daha gösterme."
-  },
+  
   "mining_notice": {
     "title": "Bildirim",
     "message": "[[:bold]]ice kazanmaya gösterdiğin ilgi için teşekkürler!![[/:bold]] Şu anda teknolojimizde ince ayar yapıyoruz ve şu anda check-in yapılamıyor. Bu, ekibini oluşturmaya ve mikro-topluluğunu büyütmeye odaklanma şansın.",

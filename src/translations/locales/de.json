@@ -854,13 +854,6 @@
     "expired_message": "Leider ist der heutige Bonus bereits abgelaufen. Bleiben Sie verbunden für die nächste Meldung!",
     "result_title": "Herzlichen Glückwunsch"
   },
-  "early_access": {
-    "title": "Früher Zugang",
-    "message_part1": "Werfen Sie einen Blick auf die[[:bold]]ice[[/:bold]]-App, bevor wir sie [[:bold]]offiziell veröffentlichen.[[/:bold]]",
-    "message_part2": "Alle Guthaben werden am Tag der Veröffentlichung auf 0 zurückgesetzt. Ihr Team wird jedoch intakt bleiben.",
-    "message_part3": "Vielen Dank für Ihre Unterstützung!",
-    "checkbox_description": "Ich habe es anerkannt! Zeigen Sie dieses Pop-up-Fenster nicht mehr an."
-  },
   "mining_notice": {
     "title": "Hinweis",
     "message": "Vielen Dank für Ihr Interesse,[[:bold]]ice zu verdienen![[/:bold]] Wir sind gerade dabei, unsere Technologie zu verfeinern, und der Check-in ist deshalb derzeit nicht verfügbar. Dies ist Ihre Chance, sich auf den Aufbau Ihres Teams und das Wachstum Ihrer Mikro-Community zu konzentrieren.",

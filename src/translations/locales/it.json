@@ -854,13 +854,7 @@
     "expired_message": "Purtroppo il bonus di oggi è scaduto. Continua a seguirci per la prossima notifica!",
     "result_title": "Congratulazioni"
   },
-  "early_access": {
-    "title": "Accesso anticipato",
-    "message_part1": "Dai un'occhiata all'app [[:bold]]ice[[/:bold]] prima del nostro prossimo rilascio ufficiale di [[:bold]].[[/:bold]]",
-    "message_part2": "Tutti i saldi verranno azzerati alla data di rilascio. Tuttavia, il tuo team resterà intatto.",
-    "message_part3": "Grazie per il tuo supporto!",
-    "checkbox_description": "Ho capito! Non mostrare più questo pop-up."
-  },
+  
   "mining_notice": {
     "title": "Avviso",
     "message": "Grazie per il tuo interesse nel guadagnare [[:bold]] ice![[/:bold]] Stiamo perfezionando la nostra tecnologia e l'accesso non è al momento disponibile. Questa è la tua occasione per concentrarti sulla costruzione del tuo team e sulla crescita della tua micro-community.",

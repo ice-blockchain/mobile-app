@@ -854,13 +854,7 @@
     "expired_message": "Ó ṣeni láàánú pé owó èrè tí wọ́n fún wa lónìí ti gbẹ́mìí mì. Ẹ máa bá wa lọ láti gbọ́ ìsọfúnni tó kàn!",
     "result_title": "O káre láé"
   },
-  "early_access": {
-    "title": "Wiwọle ni kutukutu",
-    "message_part1": "Gba a ìfẹnukonu kan nípa ohun èlò [[:bold]]ice[[/:bold]] kí a tó [[:bold]]ṣe ìtẹ̀jáde wa.[[/:bold]]",
-    "message_part2": "Gbogbo ìyókù owó ni yóò padà sí 0 ní ọjọ́ ìmújáde. Ẹgbẹ́ rẹ, sibẹsibẹ, yóò dúró múlẹ̀.",
-    "message_part3": "Ẹ ṣeun fún ìtìlẹ́yìn yín!",
-    "checkbox_description": "Mo ti jẹ́wọ́ pé mo ti gba! Má ṣe fi àwòrán yìí hàn mí mọ́."
-  },
+  
   "mining_notice": {
     "title": "ìfitónilétí",
     "message": "O ṣeun fún ìfẹ́ tó o ní láti gba [[:bold]] ice![[/:bold]] A ti ń ṣe àtúnṣe sí ìmọ̀ ẹ̀rọ wa báyìí, a ò sì lè gbà wọlé báyìí. Èyí ni àǹfààní rẹ láti pọkàn pọ̀ sórí kíkó ẹ̀ka rẹ jọ àti gbígbé àwùjọ kéékèèké rẹ ró.",

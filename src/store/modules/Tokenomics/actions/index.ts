@@ -71,13 +71,6 @@ const START_OR_UPDATE_PRE_STAKING = createAction(
   },
 );
 
-const UPDATE_AGREE_WITH_EARLY_ACCESS = createAction(
-  'UPDATE_AGREE_WITH_EARLY_ACCESS',
-  {
-    STATE: true,
-  },
-);
-
 const CLAIM_DAILY_BONUS = createAction('CLAIM_DAILY_BONUS', {
   STATE: true,
 });
@@ -97,7 +90,6 @@ export const TokenomicsActions = Object.freeze({
   GET_BALANCE_HISTORY,
   START_MINING_SESSION,
   START_OR_UPDATE_PRE_STAKING,
-  UPDATE_AGREE_WITH_EARLY_ACCESS,
   CLAIM_DAILY_BONUS,
   UPDATE_FORCE_START_MINING,
 });

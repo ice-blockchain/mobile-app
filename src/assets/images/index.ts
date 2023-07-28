@@ -89,7 +89,6 @@ export const Images = {
     upToDate: require('./popup/already_updated.png'),
     resurrection: require('./popup/resurrection.png'),
     telegram: require('./popup/telegram.png'),
-    earlyAccess: require('./popup/earlyAccess.png'),
   },
   share: {
     telegram: require('./share/telegram.png'),

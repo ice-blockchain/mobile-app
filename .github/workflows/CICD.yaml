@@ -57,7 +57,7 @@ jobs:
           done
           for file in ./configuration/*.json
           do
-            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && console.log("::add-mask::"+val)))' "$(cat $file)"
+            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && val.split("\n").forEach((row) => row && console.log("::add-mask::"+row))))' "$(cat $file)"
           done
       - name: Cache yarn
         id: cache-yarn
@@ -123,7 +123,7 @@ jobs:
           done
           for file in ./configuration/*.json
           do
-            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && console.log("::add-mask::"+val)))' "$(cat $file)"
+            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && val.split("\n").forEach((row) => row && console.log("::add-mask::"+row))))' "$(cat $file)"
           done
       - name: Setup Node
         id: setup-node
@@ -186,7 +186,7 @@ jobs:
           done
           for file in ./configuration/*.json
           do
-            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && console.log("::add-mask::"+val)))' "$(cat $file)"
+            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && val.split("\n").forEach((row) => row && console.log("::add-mask::"+row))))' "$(cat $file)"
           done
       - name: Setup Node
         id: setup-node
@@ -261,7 +261,7 @@ jobs:
           done
           for file in ./configuration/*.json
           do
-            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && console.log("::add-mask::"+val)))' "$(cat $file)"
+            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && val.split("\n").forEach((row) => row && console.log("::add-mask::"+row))))' "$(cat $file)"
           done
       - name: Setup Ruby version
         id: setup-ruby
@@ -346,7 +346,7 @@ jobs:
           done
           for file in ./configuration/*.json
           do
-            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && console.log("::add-mask::"+val)))' "$(cat $file)"
+            node -pe 'Object.entries(JSON.parse(process.argv[1])).forEach(([_, val])=>(typeof val === "string" && val.split("\n").forEach((row) => row && console.log("::add-mask::"+row))))' "$(cat $file)"
           done
       - name: Setup Java
         id: setup-java

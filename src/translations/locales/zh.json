@@ -854,13 +854,7 @@
     "expired_message": "很遗憾，今天的奖金已过期。敬请期待下一次的通知！",
     "result_title": "恭喜"
   },
-  "early_access": {
-    "title": "抢先体验",
-    "message_part1": "在我们[[:bold]]正式发布[[/:bold]] 前，抢先体验 [[:bold]]ice 应用。[[/:bold]]",
-    "message_part2": "所有余额将在发布日期重置为 0。然而，您的团队将保持完整。",
-    "message_part3": "感谢您的支持！",
-    "checkbox_description": "已确认！不再显示此弹出窗口。"
-  },
+  
   "mining_notice": {
     "title": "注意事项",
     "message": "感谢您对赚取 [[:bold]]ice 感兴趣！[[/:bold]] 我们目前正在对技术进行微调，目前无法办理签到。这是您专注于建立团队和发展微社区的机会。",
