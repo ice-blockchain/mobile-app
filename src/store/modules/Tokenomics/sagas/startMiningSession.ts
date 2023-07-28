@@ -88,9 +88,7 @@ export function* startMiningSessionSaga(
       TokenomicsActions.START_MINING_SESSION.SUCCESS.create(miningSummary),
     );
 
-    if (user) {
-      yield call(setFirstMiningDate, user);
-    }
+    yield call(setFirstMiningDate, user);
 
     /**
      * play sound and vibrate after mining started successfully
