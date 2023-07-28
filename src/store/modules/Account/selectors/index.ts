@@ -35,6 +35,11 @@ export const userIsoCodeSelector = (state: RootState) => {
   return user?.clientData?.phoneNumberIso ?? null;
 };
 
+export const firstMiningDateSelector = (state: RootState) => {
+  const user = userSelector(state);
+  return user?.clientData?.firstMiningDate ?? null;
+};
+
 export const isPhoneNumberVerifiedSelector = (state: RootState) =>
   state.account.user?.phoneNumber;
 

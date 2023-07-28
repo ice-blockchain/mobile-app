@@ -79,4 +79,5 @@ export type ClientData = {
   walkthroughProgress?: {[key in WalkthroughStepKey]?: WalkthroughStepProgress};
   miningStateTooltipSeen?: string[];
   phoneNumberIso?: string | null;
+  firstMiningDate?: string | null;
 };

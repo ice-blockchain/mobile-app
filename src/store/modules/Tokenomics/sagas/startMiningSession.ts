@@ -3,10 +3,17 @@
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {ResurrectRequiredData} from '@api/tokenomics/types';
+import {User} from '@api/user/types';
 import {LocalAudio} from '@audio';
 import {ENV} from '@constants/env';
 import {loadLocalAudio} from '@services/audio';
-import {userIdSelector} from '@store/modules/Account/selectors';
+import {dayjs} from '@services/dayjs';
+import {AccountActions} from '@store/modules/Account/actions';
+import {
+  firstMiningDateSelector,
+  userIdSelector,
+  userSelector,
+} from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {shareSocialsSaga} from '@store/modules/Socials/sagas/shareSocials';
@@ -73,6 +80,12 @@ export function* startMiningSessionSaga(
     yield put(
       TokenomicsActions.START_MINING_SESSION.SUCCESS.create(miningSummary),
     );
+
+    const firstMiningDate: ReturnType<typeof firstMiningDateSelector> =
+      yield select(firstMiningDateSelector);
+    const user: User = yield select(userSelector);
+
+    yield call(setFirstMiningDate, user, firstMiningDate);
 
     /**
      * play sound and vibrate after mining started successfully
@@ -169,5 +182,26 @@ function* confirmResurrect(
     );
   } else {
     yield call(confirmResurrect, params);
+  }
+}
+
+function* setFirstMiningDate(user: User, firstMiningDate: string | null) {
+  if (!firstMiningDate) {
+    yield put(
+      AccountActions.UPDATE_ACCOUNT.START.create(
+        {
+          clientData: {
+            ...(user.clientData ?? {}),
+            firstMiningDate: dayjs().toISOString(),
+          },
+        },
+        function* (freshUser) {
+          if (freshUser.clientData?.firstMiningDate !== firstMiningDate) {
+            setFirstMiningDate(freshUser, firstMiningDate);
+          }
+          return {retry: false};
+        },
+      ),
+    );
   }
 }
