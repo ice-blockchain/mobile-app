@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     ...font(18, 24, 'regular'),
   },
   iceLabel: {
-    marginLeft: rem(4),
+    marginLeft: rem(6),
   },
   iceLabelText: {
     ...font(24, 30, 'bold'),

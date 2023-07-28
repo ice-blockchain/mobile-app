@@ -3,6 +3,7 @@
 import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
+import {FORCE_LTR_TEXT_CHAR} from '@constants/rtl';
 import {commonStyles} from '@constants/styles';
 import {PAGE_HEIGHT} from '@screens/HomeFlow/Home/components/Pager';
 import {PageSkeleton} from '@screens/HomeFlow/Home/components/Pager/components/PageSkeleton';
@@ -84,9 +85,12 @@ export const MiningRate = memo(({darkMode}: Props) => {
           label={t('general.ice_per_hour')}
         />
         {!!miningRates.total.bonuses?.total && (
-          <Text style={styles.rateIncreaseText}>
-            +{formatNumber(miningRates.total.bonuses.total)}%
-          </Text>
+          <Text
+            style={
+              styles.rateIncreaseText
+            }>{`${FORCE_LTR_TEXT_CHAR}+${formatNumber(
+            miningRates.total.bonuses.total,
+          )}%`}</Text>
         )}
       </View>
       <View style={styles.baseContainer}>
@@ -120,7 +124,9 @@ export const MiningRate = memo(({darkMode}: Props) => {
           <AnimatedNumberText
             value={totalBonuses}
             style={styles.iconValueText}
-            textDecorator={value => `+${formatNumber(value)}%`}
+            textDecorator={value =>
+              `${FORCE_LTR_TEXT_CHAR}${formatNumber(value)}%`
+            }
           />
         </View>
         <View style={styles.iconContainer}>
@@ -128,7 +134,9 @@ export const MiningRate = memo(({darkMode}: Props) => {
           <AnimatedNumberText
             value={extraBonuses}
             style={styles.iconValueText}
-            textDecorator={value => `+${formatNumber(value)}%`}
+            textDecorator={value =>
+              `${FORCE_LTR_TEXT_CHAR}${formatNumber(value)}%`
+            }
           />
         </View>
         <View style={styles.iconContainer}>
@@ -136,7 +144,9 @@ export const MiningRate = memo(({darkMode}: Props) => {
           <AnimatedNumberText
             value={prestackingBonuses}
             style={styles.iconValueText}
-            textDecorator={value => `+${formatNumber(value)}%`}
+            textDecorator={value =>
+              `${FORCE_LTR_TEXT_CHAR}${formatNumber(value)}%`
+            }
           />
         </View>
       </View>
@@ -161,7 +171,8 @@ const styles = StyleSheet.create({
     marginLeft: rem(4),
   },
   miningValueContainer: {
-    marginRight: rem(4),
+    marginRight: isRTL ? 0 : rem(4),
+    marginLeft: isRTL ? rem(4) : 0,
   },
   miningValueText: {
     ...font(17, 22, 'bold'),
@@ -201,7 +212,8 @@ const styles = StyleSheet.create({
   baseDecimalsText: {
     ...font(7, 10, 'bold'),
     alignSelf: 'flex-start',
-    marginRight: rem(4),
+    marginRight: isRTL ? 0 : rem(4),
+    marginLeft: isRTL ? rem(4) : 0,
   },
   baseDecimalsTextDarkMode: {
     ...font(7, 10, 'bold', 'primaryDark'),

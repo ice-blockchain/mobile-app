@@ -15,9 +15,6 @@ export function startTrackingCurrentUser(userID: string) {
 }
 
 export const Attributes = {
-  trackUserName: (username: string) => {
-    ReactMoE.setUserName(username);
-  },
   trackUserFirstName: (firstName: string) => {
     ReactMoE.setUserFirstName(firstName);
   },

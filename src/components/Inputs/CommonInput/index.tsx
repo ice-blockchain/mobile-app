@@ -35,6 +35,7 @@ export type CommonInputProps = TextInputProps & {
   icon?: ReactNode;
   prefix?: ReactNode;
   postfix?: ReactNode;
+  reversed?: boolean;
 };
 
 export const CommonInput = ({
@@ -52,6 +53,7 @@ export const CommonInput = ({
   onChangeText,
   containerStyle,
   editable = true,
+  reversed,
   style,
   ...textInputProps
 }: CommonInputProps) => {
@@ -69,11 +71,13 @@ export const CommonInput = ({
           styles.container,
           isFocused && styles.container_focused,
           !!errorText && styles.container_error,
+          reversed && styles.reversedRow,
           containerStyle,
         ]}>
         {icon}
         <View style={styles.body}>
-          <View style={styles.inputWrapper}>
+          <View
+            style={[styles.inputWrapper, reversed ? styles.reversedRow : null]}>
             {prefix}
             {onChange ? (
               <Text style={styles.input} {...textInputProps}>
@@ -112,6 +116,7 @@ export const CommonInput = ({
             style={[
               styles.label,
               errorText ? styles.label_error : null,
+              reversed ? styles.reversedLabel : null,
               animatedStyle,
             ]}>
             {errorText || label}
@@ -162,22 +167,24 @@ const styles = StyleSheet.create({
   container_error: {
     borderColor: COLORS.attention,
   },
+  reversedRow: {
+    flexDirection: 'row-reverse',
+  },
   container_focused: {
     borderColor: COLORS.congressBlue,
   },
   body: {
     flex: 1,
-    marginLeft: isRTL ? 0 : rem(10),
-    marginRight: isRTL ? rem(10) : 0,
+    marginStart: rem(10),
     justifyContent: 'center',
   },
   inputWrapper: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: isRTL ? -rem(4) : rem(14),
+    marginTop: rem(14),
   },
   input: {
-    ...font(16, 21, 'medium', 'primaryDark'),
+    ...font(16, 21, 'medium', 'primaryDark', isRTL ? 'right' : 'left'),
     flex: 1,
     paddingHorizontal: 0,
     paddingVertical: 0,
@@ -186,6 +193,10 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 0,
     ...font(16, 21, 'medium', 'secondary'),
+  },
+  reversedLabel: {
+    left: undefined, // unset left from label style
+    right: 0,
   },
   label_error: {
     color: COLORS.attention,

@@ -7,7 +7,7 @@ import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {InviteShareCard} from '@screens/InviteFlow/InviteShare/components/InviteShareCard';
-import {replaceString, t, tagRegex} from '@translations/i18n';
+import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
@@ -24,15 +24,17 @@ export const InviteShare = memo(() => {
       <View style={commonStyles.flexOne}>
         <View style={styles.shareSubstrate} />
         <LinesBackground style={styles.background} />
-        <Text style={styles.description}>
-          {replaceString(
-            t('invite_share.description'),
-            tagRegex('ice'),
-            (match, index) => (
-              <IceLabel key={match + index} iconOffsetY={isAndroid ? 3 : 2} />
-            ),
-          )}
-        </Text>
+        <View style={styles.descriptionContainer}>
+          <Text style={styles.description}>
+            {replaceString(
+              t('invite_share.description'),
+              tagRegex('ice'),
+              (match, index) => (
+                <IceLabel key={match + index} iconOffsetY={isAndroid ? 3 : 2} />
+              ),
+            )}
+          </Text>
+        </View>
         <Image source={icon} style={styles.icon} resizeMode={'contain'} />
         <InviteShareCard />
       </View>
@@ -47,14 +49,19 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: CONTAINER_TOP_RADIUS,
     borderTopRightRadius: CONTAINER_TOP_RADIUS,
   },
-  description: {
+  descriptionContainer: {
     marginTop: rem(45),
     marginHorizontal: rem(28),
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  description: {
     ...font(15, null, 'regular', 'white', 'center'),
   },
   icon: {
     marginVertical: rem(16),
-    marginStart: rem(21),
+    marginLeft: isRTL ? 0 : rem(21),
+    marginRight: !isRTL ? 0 : rem(21),
     flex: 1,
     /**
      * need to allow the image to be stretched to the full width of the screen

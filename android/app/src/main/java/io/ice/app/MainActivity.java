@@ -30,7 +30,7 @@ public class MainActivity extends ReactActivity {
   protected void onCreate(Bundle savedInstanceState) {
     RNBootSplash.init(this); 
     super.onCreate(null);
-    I18nUtil.getInstance().allowRTL(this, true);
+    I18nUtil.getInstance().allowRTL(this, false);
   }
 
   /**

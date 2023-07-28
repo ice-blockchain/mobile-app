@@ -26,8 +26,9 @@ export const Earnings = ({referralType}: Props) => {
   return (
     <View style={styles.container}>
       {isEnglishLocale ? <Text style={styles.label}>{`${title}:`}</Text> : null}
-      {isRTL && <Text style={styles.value}> </Text>}
+      {!isRTL && <Text style={styles.value}> </Text>}
       <FormattedNumber
+        trim={!isRTL}
         bodyStyle={styles.value}
         decimalsStyle={styles.valueDecimals}
         number={balance ? formatNumberString(balance) : '0'}

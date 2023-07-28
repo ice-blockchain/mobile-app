@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   },
   text: {
     marginHorizontal: rem(10),
-    ...font(17, 22, 'semibold'),
+    ...font(17, 22, 'semibold', 'white', 'center'),
   },
   loadingContainer: {
     position: 'absolute',

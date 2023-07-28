@@ -53,7 +53,6 @@ export const ClaimUsername = () => {
           value={username ?? ''}
           errorText={error}
           validated={isUsernameUpdated}
-          style={styles.input}
         />
       }
       info={
@@ -92,9 +91,5 @@ const styles = StyleSheet.create({
   },
   infoStyle: {
     marginRight: SCREEN_SIDE_OFFSET,
-  },
-  input: {
-    // fix for RTL languages
-    textAlign: 'left',
   },
 });

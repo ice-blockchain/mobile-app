@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
   },
   diffNumText: {
     ...font(13, 18, 'bold', 'secondary'),
+    marginRight: !isRTL ? 0 : rem(4),
   },
   amountContainer: {
     flexDirection: 'row',
@@ -100,7 +101,7 @@ const styles = StyleSheet.create({
   },
   amountDecimalsText: {
     ...font(8, 12, 'bold', 'secondary'),
-    marginRight: rem(4),
+    marginRight: isRTL ? 0 : rem(4),
   },
   spacer: {flex: isRTL ? 5 : 3},
 });

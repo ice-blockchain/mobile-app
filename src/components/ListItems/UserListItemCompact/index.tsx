@@ -4,6 +4,7 @@ import {Avatar} from '@components/Avatar/Avatar';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
 import {ClosedEye} from '@svg/ClosedEye';
+import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo, ReactNode} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -49,14 +50,18 @@ export const UserListItemCompact = memo(
           </View>
         )}
         {iceAmount ? (
-          <Text style={styles.iceText}>
-            {iceAmount}{' '}
-            <IceLabel
-              iconOffsetY={1.3}
-              iconSize={12}
-              color={COLORS.secondary}
-            />
-          </Text>
+          <View style={styles.iceContainer}>
+            <Text style={styles.iceText}>{iceAmount}</Text>
+            <Text> </Text>
+            <Text style={styles.iceText}>
+              <IceLabel
+                iconOffsetY={1.3}
+                iconSize={12}
+                color={COLORS.secondary}
+                reversed={isRTL}
+              />
+            </Text>
+          </View>
         ) : (
           AdditionalInfoComponent
         )}
@@ -98,6 +103,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: COLORS.secondaryFaint,
+  },
+  iceContainer: {
+    flexDirection: 'row',
   },
   iceText: {
     textAlignVertical: 'center',

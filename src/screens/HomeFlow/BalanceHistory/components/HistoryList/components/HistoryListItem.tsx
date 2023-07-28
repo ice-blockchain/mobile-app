@@ -4,6 +4,7 @@ import {BalanceDiff} from '@api/tokenomics/types';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
+import {FORCE_LTR_TEXT_CHAR} from '@constants/rtl';
 import {commonStyles} from '@constants/styles';
 import {dayjs} from '@services/dayjs';
 import {ClockIcon} from '@svg/ClockIcon';
@@ -46,22 +47,23 @@ export const HistoryListItem = ({balanceDiff, time}: Props) => {
         )}
       </View>
       <View style={styles.body}>
-        {!isRTL && (
+        {!isRTL ? (
           <Text style={styles.adsDiffValueText}>
             {balanceDiff.negative ? '-' : '+'}
           </Text>
-        )}
+        ) : null}
         <FormattedNumber
           number={formatNumberString(balanceDiff.amount)}
           bodyStyle={styles.adsDiffValueText}
           decimalsStyle={styles.adsDiffDecimalsText}
           trim
         />
-        {isRTL && (
+        {isRTL ? (
           <Text style={styles.adsDiffValueText}>
             {balanceDiff.negative ? '-' : '+'}
           </Text>
-        )}
+        ) : null}
+        {isRTL ? <Text style={styles.adsDiffValueText}> </Text> : null}
         <IceLabel
           color={COLORS.primaryDark}
           iconSize={rem(14)}
@@ -70,8 +72,9 @@ export const HistoryListItem = ({balanceDiff, time}: Props) => {
         />
       </View>
       <Text style={styles.relDiffText}>
-        {balanceDiff.bonus > 0 && '+'}
-        {balanceDiff.bonus}%
+        {`${FORCE_LTR_TEXT_CHAR}${balanceDiff.bonus > 0 ? '+' : ''}${
+          balanceDiff.bonus
+        }%`}
       </Text>
       <ClockIcon width={rem(14)} height={rem(14)} color={COLORS.primaryDark} />
       <Text style={styles.timeText}>{dayjs(time).format('LT')}</Text>
@@ -123,10 +126,11 @@ const styles = StyleSheet.create({
   },
   adsDiffDecimalsText: {
     ...font(10, 12, 'bold', 'primaryDark'),
-    marginRight: rem(4),
+    marginRight: isRTL ? 0 : rem(4),
   },
   iceLabelText: {
     ...font(17, 22, 'semibold', 'primaryDark'),
+    marginLeft: isRTL ? rem(4) : 0,
   },
   relDiffText: {
     ...font(14, 20, 'medium', 'primaryLight'),

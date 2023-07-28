@@ -26,6 +26,7 @@ import {useHandleActiveOverviewCardParam} from '@screens/HomeFlow/Home/component
 import {useInviteFriendsWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useInviteFriendsWalkthrough';
 import {useProfileCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useProfileCardWalkthrough';
 import {useReferralsCardWalkthrough} from '@screens/HomeFlow/Home/components/Overview/hooks/useReferralsCardWalkthrough';
+import {useRtlLayoutReady} from '@screens/HomeFlow/Home/components/Overview/hooks/useRtlLayoutReady';
 import {useScrollCollapse} from '@screens/HomeFlow/Home/components/Overview/hooks/useScrollCollapse';
 import {t} from '@translations/i18n';
 import React, {memo, useRef, useState} from 'react';
@@ -51,7 +52,6 @@ const SCROLL_BOTTOM_MARGIN = rem(24);
 
 export const Overview = memo(({translateY, topOffset}: Props) => {
   const adoptionFlipCardRef = useRef<FlipCardMethods>(null);
-
   const {scrollViewRef} = useHandleActiveOverviewCardParam();
 
   const {onProfileCardLayout, profileCardRef} = useProfileCardWalkthrough();
@@ -85,6 +85,8 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
     setPositionYInnerContent(event.nativeEvent.layout.y);
   };
 
+  const {onLayout} = useRtlLayoutReady({scrollViewRef});
+
   return (
     <>
       <HeaderTopImage />
@@ -113,7 +115,10 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
           contentContainerStyle={styles.scrolledContent}>
           <LevelCard
             sharedIsCollapsed={sharedIsCollapsed}
-            onLayout={onProfileCardLayout}
+            onLayout={() => {
+              onLayout();
+              onProfileCardLayout();
+            }}
             ref={profileCardRef}
           />
 

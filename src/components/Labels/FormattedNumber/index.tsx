@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {FORCE_LTR_TEXT_CHAR} from '@constants/rtl';
 import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
@@ -29,11 +30,9 @@ export const FormattedNumber = ({
   const hasDecimals = !!numberDecimals;
   return (
     <View style={[styles.container, containerStyle]}>
-      <Text
-        style={[
-          styles.integerText,
-          bodyStyle,
-        ]}>{`${space}${numberInteger}`}</Text>
+      <Text style={[styles.integerText, bodyStyle]}>{`${
+        isRTL ? space : ''
+      }${FORCE_LTR_TEXT_CHAR}${numberInteger}${isRTL ? '' : space}`}</Text>
       {hasDecimals && <Text style={[styles.dot, bodyStyle]}>.</Text>}
       {hasDecimals && (
         <Text style={[styles.fractionalText, decimalsStyle]}>

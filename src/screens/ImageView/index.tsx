@@ -11,6 +11,7 @@ import {useImageGesture} from '@screens/ImageView/hooks/useImageGesture';
 import {useImageMeasure} from '@screens/ImageView/hooks/useImageMeasure';
 import {useImageSizedUri} from '@screens/ImageView/hooks/useImageSizedUri';
 import {useImageZoomAnimation} from '@screens/ImageView/hooks/useImageZoomAnimation';
+import {t} from '@translations/i18n';
 import React, {useMemo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {GestureDetector} from 'react-native-gesture-handler';
@@ -84,7 +85,7 @@ export const ImageView = () => {
       </View>
       <Animated.View style={[animatedOpacityStyle, styles.header]}>
         <Header
-          backLabel={'Back'}
+          backLabel={t('button.back')}
           backgroundColor={'transparent'}
           color={COLORS.white}
         />

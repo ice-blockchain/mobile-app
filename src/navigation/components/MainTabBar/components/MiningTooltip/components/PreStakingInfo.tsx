@@ -89,7 +89,7 @@ export const PreStakingInfo = ({oneColumn}: Props) => {
               </Text>
             </>
           }
-          currency={<IceLabel color={COLORS.primaryDark} />}
+          currency={<IceLabel reversed={isRTL} color={COLORS.primaryDark} />}
           row={oneColumn}
         />
       </View>

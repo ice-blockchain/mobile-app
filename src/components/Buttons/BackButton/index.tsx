@@ -5,6 +5,7 @@ import {COLORS} from '@constants/colors';
 import {MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
 import {useTopOffsetStyle} from '@hooks/useTopOffsetStyle';
 import {BackButtonIcon} from '@svg/BackButtonIcon';
+import {mirrorTransform} from '@utils/styles';
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
@@ -30,5 +31,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: rem(20),
     left: rem(20),
+    ...mirrorTransform(),
   },
 });

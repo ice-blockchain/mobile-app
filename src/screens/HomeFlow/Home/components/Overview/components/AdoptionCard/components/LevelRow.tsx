@@ -8,7 +8,7 @@ import {commonStyles} from '@constants/styles';
 import {CARD_WIDTH} from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
 import {CheckMarkThinIcon} from '@svg/CheckMarkThinIcon';
 import {LockIcon} from '@svg/LockIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {formatNumber, formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React from 'react';
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
   valueCurrencyText: {
     opacity: 0.8,
     ...font(13, 17, 'regular', 'white', 'center'),
-    marginLeft: -rem(2),
+    marginLeft: isRTL ? rem(4) : -rem(2),
   },
   step: {
     width: STEP_WIDTH,

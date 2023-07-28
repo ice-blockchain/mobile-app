@@ -63,7 +63,7 @@ export const Header = memo(
         <View style={dynamicStyle.offset} />
         <Animated.View
           style={[dynamicStyle.container, styles.container, containerStyle]}>
-          <View style={[styles.body]}>
+          <View style={styles.body}>
             <Text
               style={[styles.titleText, dynamicStyle.titleText]}
               numberOfLines={2}>
