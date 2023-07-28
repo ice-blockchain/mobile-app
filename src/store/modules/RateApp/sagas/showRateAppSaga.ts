@@ -6,10 +6,14 @@ import {
   EVENT_NAMES,
 } from '@store/modules/Analytics/constants';
 import {RateAppActions} from '@store/modules/RateApp/actions';
-import {call, put, SagaReturnType} from 'redux-saga/effects';
+import {call, delay, put, SagaReturnType} from 'redux-saga/effects';
 
 export function* showRateAppSaga() {
   try {
+    /** There was a delay in previous library 3 sec before showing
+     * the rate view so I just kept behavior the same
+     */
+    yield delay(3000);
     const rateAppResult: SagaReturnType<typeof rateApp> = yield call(rateApp);
 
     if (rateAppResult) {

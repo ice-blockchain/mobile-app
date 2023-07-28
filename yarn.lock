@@ -10369,7 +10369,7 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-react-native-awesome-slider@^2.3.0:
+react-native-awesome-slider@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/react-native-awesome-slider/-/react-native-awesome-slider-2.3.0.tgz#a971c04e37b1ca579b05f522f3443ca256559fa2"
   integrity sha512-FJAGx+85Qiq3yt2bSFjNFxD1DRsjluwQH4cy9whnwA7siLNzIv2sh4EkQXu88SKXoz3EuC/A/wjJmiWFzW72Bg==
@@ -10558,7 +10558,7 @@ react-native-sha256@^1.4.8:
   resolved "https://registry.yarnpkg.com/react-native-sha256/-/react-native-sha256-1.4.8.tgz#0c22ccb6a6d59ca5301488d5551c2c9aa13a50dc"
   integrity sha512-vjkvYxdK2wQlKZ78hqp8s3jfS6J0ks4IGZIFwKaLhlhVTGF0iAlZvh6WHcjaQa2GEgC4IRQXnpPyjIVhp5H6WA==
 
-react-native-share@^8.0.0:
+react-native-share@8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/react-native-share/-/react-native-share-8.0.0.tgz#95520a16fca151822ce8a3b00240cf3a17eacb97"
   integrity sha512-IFUKcWQ1/VgtsQmuC3EKaIPMhKqssTblwCojtTB4dehWJ2ZUPsIstPXJGqcmWqg7/S3cLNfCLvxf/tVaZvptxw==
@@ -10572,6 +10572,11 @@ react-native-sound@^0.11.2:
   version "0.11.2"
   resolved "https://registry.yarnpkg.com/react-native-sound/-/react-native-sound-0.11.2.tgz#e542dc5b9e16ab4b3ac7e6eaddb1fc8d98da9038"
   integrity sha512-LmGc8lgOK3qecYMVQpyHvww/C+wgT6sWeMpVbOe4NCRGC2yKd4fo4U0KBUo9PO7AqKESO3I/2GZg1/C0+bwiiA==
+
+react-native-store-review@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/react-native-store-review/-/react-native-store-review-0.4.1.tgz#c9f1dbe95bb7968d6ac8e873ec28df9046d15681"
+  integrity sha512-24RCu4CAkA4AjfTxGzWGiop7TMulZpe2Mg4UlUeM96eOEmU0aGgo2S9MGS0gWFM5VCES7250s33DpzXp6GevqQ==
 
 react-native-store-version@^1.4.1:
   version "1.4.1"
