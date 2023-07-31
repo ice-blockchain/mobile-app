@@ -8,6 +8,7 @@ import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units/index';
 
 const OUTER_SIZE = rem(64);
+const INNER_SIZE = rem(44);
 
 export const useProfileWalkthrough = () => {
   const elementRef = useRef<View>(null);
@@ -70,9 +71,9 @@ const styles = StyleSheet.create({
   innerContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: rem(44),
-    height: rem(44),
-    borderRadius: rem(44) / 2,
+    width: INNER_SIZE,
+    height: INNER_SIZE,
+    borderRadius: INNER_SIZE / 2,
     backgroundColor: COLORS.white,
   },
 });
