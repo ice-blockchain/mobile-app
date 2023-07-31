@@ -4,11 +4,7 @@ import {getMetadata} from '@api/auth/getMetadata';
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {User} from '@api/user/types';
-import {
-  clearPersistedAuthTokens,
-  getAuthenticatedUser,
-  refreshAuthToken,
-} from '@services/auth';
+import {getAuthenticatedUser, refreshAuthToken} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
   appLocaleSelector,
@@ -108,7 +104,7 @@ function* rollBackOnError(error: unknown) {
    *  AppLoaded -> LoadTokens -> SignUp -> 409 -> ErrorScreen
    */
   if (isApiError(error, 409, 'CONFLICT_WITH_ANOTHER_USER')) {
-    yield call(clearPersistedAuthTokens);
+    yield put(AccountActions.SIGN_OUT.START.create());
   }
 }
 
