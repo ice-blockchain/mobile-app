@@ -17,7 +17,14 @@ import {openClaimBonus} from '@store/modules/Tokenomics/utils/openClaimBonus';
 import {waitForSelector} from '@store/utils/sagas/effects';
 import {showError} from '@utils/errors';
 import {SagaIterator} from 'redux-saga';
-import {call, delay, put, SagaReturnType, select} from 'redux-saga/effects';
+import {
+  call,
+  delay,
+  put,
+  SagaReturnType,
+  select,
+  spawn,
+} from 'redux-saga/effects';
 
 export function* handleExtraBonusSaga(
   action: ReturnType<
@@ -82,7 +89,7 @@ export function* handleExtraBonusSaga(
       return;
     }
 
-    yield call(showError, error);
+    yield spawn(showError, error);
     yield call(handleExtraBonusSaga, action);
     throw error;
   }

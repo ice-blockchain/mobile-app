@@ -4,7 +4,7 @@ import {Api} from '@api/index';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {getErrorMessage, showError} from '@utils/errors';
-import {call, put, SagaReturnType, select} from 'redux-saga/effects';
+import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
 export function* startOrUpdatePreStakingSaga({
   payload: {years, allocation},
@@ -33,7 +33,7 @@ export function* startOrUpdatePreStakingSaga({
         getErrorMessage(error),
       ),
     );
-    showError(error);
+    yield spawn(showError, error);
     throw error;
   }
 }

@@ -8,7 +8,7 @@ import {openSMS} from '@utils/device';
 import {getErrorMessage, showError} from '@utils/errors';
 import {buildUsernameLink} from '@utils/username';
 import {Contact, getContactById} from 'react-native-contacts';
-import {call, put, SagaReturnType, select} from 'redux-saga/effects';
+import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
 export function* inviteContactSaga(
   action: ReturnType<typeof ContactsActions.INVITE_CONTACT.START.create>,
@@ -39,7 +39,7 @@ export function* inviteContactSaga(
     yield put(
       ContactsActions.INVITE_CONTACT.FAILED.create(getErrorMessage(error)),
     );
-    showError(error);
+    yield spawn(showError, error);
     throw error;
   }
 }

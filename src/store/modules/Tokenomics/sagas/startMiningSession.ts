@@ -22,7 +22,7 @@ import {openConfirmResurrectYes} from '@store/modules/Tokenomics/utils/openConfi
 import {openMiningNotice} from '@store/modules/Tokenomics/utils/openMiningNotice';
 import {hapticFeedback} from '@utils/device';
 import {getErrorMessage, showError} from '@utils/errors';
-import {call, put, SagaReturnType, select} from 'redux-saga/effects';
+import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
 export function* startMiningSessionSaga(
   action: ReturnType<
@@ -112,7 +112,7 @@ export function* startMiningSessionSaga(
             : 0,
       });
     } else {
-      showError(error);
+      yield spawn(showError, error);
     }
     throw error;
   }
