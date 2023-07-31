@@ -1,16 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
-import {AccountActions} from '@store/modules/Account/actions';
-import {isPrivacyInfoShownSelector} from '@store/modules/Account/selectors';
-import {ClosedPrivacyIcon} from '@svg/ClosedPrivacyIcon';
-import {OpenedPrivacyIcon} from '@svg/OpenedPrivacyIcon';
-import React, {useCallback} from 'react';
+import React from 'react';
 import {StyleProp, View, ViewStyle} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
 
+import {ShowPrivacyActionButton} from './components/ShowPrivacyActionButton';
 import {useProfileWalkthrough} from './hooks/useProfileWalkthrough';
 
 type Props = {
@@ -24,22 +18,9 @@ export const ShowPrivacyButton = ({
 }: Props) => {
   const {elementRef, onElementLayout} = useProfileWalkthrough();
 
-  const isPrivacyInfoShown = useSelector(isPrivacyInfoShownSelector);
-  const dispatch = useDispatch();
-  const showPrivacyHandler = useCallback(() => {
-    dispatch(
-      AccountActions.SET_PRIVACY_INFO_SHOW.STATE.create(!isPrivacyInfoShown),
-    );
-  }, [dispatch, isPrivacyInfoShown]);
   return (
     <View style={containerStyle} ref={elementRef} onLayout={onElementLayout}>
-      <Touchable onPress={showPrivacyHandler} hitSlop={SMALL_BUTTON_HIT_SLOP}>
-        {isPrivacyInfoShown ? (
-          <ClosedPrivacyIcon color={color} />
-        ) : (
-          <OpenedPrivacyIcon color={color} />
-        )}
-      </Touchable>
+      <ShowPrivacyActionButton color={color} />
     </View>
   );
 };
