@@ -1,787 +1,841 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "ice میں خوش آمدید",
+      "description": "[[:ice]] ای ایسی ڈیجیٹل کرنسی ہے، جسے آ اپنے فون کے ذریعے کما سکتے ہیں۔ آپ جیسے روز مرہ والے صارفین اس کی ملکیت رکھتے ہیں اور اسے چلاتے ہیں۔"
     },
     "page2": {
-      "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "title": "ماحول دوست",
+      "description": "[[:ice]] BTC کے مقابلے میں فطری طور پر زیادہ توانائی بچت، کیونکہ یہ اس میں \"اسٹیک کا ثبوت\" اتفاق رائے کا استعمال کیا جاتا ہے۔ پروف آف اسٹیک (POS)، کرپٹو کرنسی کے مالکان بلاک لین دین کی تصدیق کرتے ہیں، جو  کسی توثیق کار کے ذریعے بازی پر لگائے گئے کوائن کی تعداد پر ہوتا ہے۔"
     },
     "page3": {
-      "title": "People’s Coin",
-      "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "title": "لوگوں کا کوائن",
+      "description_part1": "اختیار آپ کے ہاتھوں میں ہے۔",
+      "description_part2": "[[:ice]] میں ہمارے ذریعے تیار کردہ ہر چیز اوپن سورس ہوگی اور انہیں ڈیسینٹرلائزڈ آٹونومس آرگنائزیشن (DAO) کے ذریعے کنٹرول کیا جائے گا۔"
     },
     "page4": {
-      "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "title": "مربوط رہیں",
+      "description": "ہماری مفت اینرجی لائٹ موبائل ایپ کے ذریعے اپنے روزانہکے چیک اِن کے لیے [[:iceLogo]] پر ٹیپ کریں۔ آپ کا روزانہ کا ٹیپ اس بات کو یقینی بناتا ہے کہ ice حقیقی انسانوں کے ہاتھوں میں ہے، نہ کہ بوٹس کے پاس۔"
     },
     "page5": {
-      "title": "Refer & Earn",
-      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
+      "title": "ریفر کریں اور کمائیں",
+      "description": "اپنے دوستوں کو مدعو کریں اور آپ کی ٹیم میں شامل ہونے والے ہر دوست کے لیے کمائیں  اپنی بنیادی کمائی کی شرح پر 25 فیصد تک بونس (آپ دونوں)۔"
     },
     "page6": {
-      "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
-      "description_part2": "Don’t worry, we will not spam you!",
-      "not_now": "Not now"
+      "title": "اطلاعات",
+      "description_part1": "[[:ice]] چیک اں، سیشنز صرف گزشتہ 24 گھنٹوں کے لیے باقی رہتا ہے۔ کیا آپ اپنے موجود سیشن کے اختتام پذیر ہونے پر اطلاع موصول کرنا پسند کریں گے؟",
+      "description_part2": "گھبرائیں نہیں، ہم آپ کو سپیم نہیں کریں گے!",
+      "not_now": "ابھی نہیں"
     }
   },
   "button": {
-    "yes_btn": "Yes, please",
-    "next_btn": "Next",
-    "not_now": "Not now",
-    "view_all": "view all",
+    "yes_btn": "جی ہاں، کریں",
+    "next_btn": "اگلا",
+    "not_now": "ابھی نہیں",
+    "view_all": "سب کو ملاحظہ کریں",
     "invite_friend": {
-      "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "title": "دوستوں کو مدعو کریں",
+      "description": "اپنے دوستوں کو مدعو کر کے [[:ice]] زیادہ کمائیں۔"
     },
-    "no": "No",
-    "search_country": "Search for country",
-    "save": "Save",
-    "yes": "Yes",
-    "change": "Change",
-    "no_cancel": "No, cancel",
-    "complete": "Complete",
-    "cancel": "Cancel",
-    "clear": "Clear",
-    "finish": "Finish",
-    "next_step": "Next Step",
-    "see_all": "see all",
-    "back": "Back",
-    "search": "Search",
-    "continue": "Continue",
-    "apply": "Apply",
-    "reset": "Reset",
-    "skip_all": "Skip all",
-    "done": "Done",
-    "confirm": "Confirm",
-    "do_this_later": "Do this later",
-    "resurrect_me": "Resurrect Me",
-    "claim_bonus": "Claim Bonus",
-    "close": "Close",
-    "try_again": "Try Again",
-    "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "see_all": "سب کو دیکھیں",
+    "no": "نہیں",
+    "search_country": "ملک کے لیے تلاش کریں",
+    "save": "محفوظ کریں",
+    "yes": "ہاں",
+    "change": "تبدیل کریں",
+    "no_cancel": "نہیں منسوخ کریں",
+    "complete": "مکمل کریں",
+    "cancel": "منسوخ کریں",
+    "clear": "مٹائیں",
+    "finish": "ختم کریں",
+    "next_step": "اگلا مرحلہ",
+    "back": "پیچھے",
+    "search": "تلاش کریں",
+    "continue": "جاری رکھیں",
+    "apply": "لاگو کریں",
+    "reset": "دوبارہ سیٹ کریں",
+    "skip_all": "سب کو چھوڑیں",
+    "done": "ہو گیا",
+    "confirm": "تصدیق کریں",
+    "do_this_later": "یہ بعد میں کریں",
+    "resurrect_me": "مجھ میں حیات نو ڈالیں",
+    "claim_bonus": "بونس کے لیے دعویٰ کریں",
+    "close": "بند کریں",
+    "try_again": "دوبارہ کوشش کریں",
+    "view_changelog": "View Changelogچینج لاگ ملاحظہ کریں",
+    "disable": "غیر فعال کریں",
+    "agree": "میں متفق ہوں",
+    "learn_more": "مزید سیکھیں",
+    "back_to_login": "لاگ اِن کی طرف واپس",
+    "follow_us": "ہمیں فالو کریں",
+    "subscribe": "سبسکرائب کریں"
   },
   "team": {
-    "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
+    "contacts_tab": "روابط",
+    "tierOne_tab": "ٹیئر 1",
+    "tierTwo_tab": "ٹیئر 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "title": "فی الحال آپ کے پاس کوئی [[:title]] ریفرل نہیں ہیں!",
+      "contacts": "فی الحال فون بُک میں آپ کے پاس کوئی روابط نہیں ہیں۔",
+      "button_title": "دوستوں کو مدعو کریں"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
-      "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_title": "[[:ice]] دوستوں کے ساتھ بہتر ہے",
+      "empty_button_title": "روابط تک رسائی کی اجازت دیں",
+      "empty_description": "اپنے روابط کو سِنک کریں اور دیکھیں کہ کون [[:ice]]میں پہلے سے موجود ہیں۔ مستقبل میں، آپ iceکو اپنے کسی بھی رابطے کو بھیج سکیں گے۔"
     },
     "header": {
-      "search_placeholder": "Search for users",
-      "referrals": "Referrals",
-      "earnings": "Earnings"
+      "search_placeholder": "صارفین کو تلاش کریں",
+      "referrals": "ریفرلز",
+      "earnings": "کمائی"
     },
     "confirm_code": {
-      "title": "Confirm Code",
-      "description": "Please enter the confirmation code you have received on your phone.",
-      "placeholder": "Enter the code",
-      "button": "Confirm your code now"
+      "title": "کوڈ کی تصدیق کریں",
+      "description": "براہ کرم، آپ کو اپنے فون پر موصولہ تصدیقی کوڈ درج کریں۔",
+      "placeholder": "کوڈ درج کریں",
+      "button": "اپنے کوڈ کی ابھی تصدیق کریں"
     },
     "confirm_phone": {
-      "title": "Confirm Phone",
-      "description": "Please confirm your country code and enter your phone number."
+      "title": "فون کی تصدیق کریں",
+      "description": "براہ کرم اپنے ملکی کوڈ کی تصدیق کریں اور اپنا فون نمبر درج کریں۔"
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "friends"
+        "friends": "دوست"
       },
-      "all_contacts": "All contacts",
-      "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "all_contacts": "تمام روابط",
+      "invite": "مدعو کریں",
+      "invitation_text": "آداب {{name}}، میں آپ کو ice میں شامل ہونے کی دعوت دینا چاہتا ہوں۔"
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier 1 Earnings"
+        "title_earnings": "ٹیئر 1 کمائی"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier 2 Earnings"
+        "title_earnings": "ٹیئر 2 کمائی"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
-    "welcome": "Welcome to ice",
-    "email": "Email",
-    "slogan": "Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "logInSignUp": "لاگ اِن کریں /سائن اپ کریں",
+    "phone": "فون",
+    "or": "یا",
+    "reset_password": "پاس ورڈ دوبارہ سیٹ کریں",
+    "welcome": "ice میں خوش آمدید",
+    "email": "ای میل",
+    "slogan": "گلوبل کرنسی ری سیٹ",
+    "privacy": "جاری رکھتے ہوئے، آپ ہماری[[:link]]خدمات کی شرائط[[/:link]] اور [[:link]] رازداری پالیسی[[/:link]] سے اتفاق کرتے ہیں"
   },
   "claimUsername": {
-    "title": "Claim nickname",
-    "description": "Your friends will need to use this nickname to join your team",
-    "inputPlaceholder": "Enter your nickname",
-    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
-    "note_part2": "Example:",
+    "title": "عرفی نام کے لیے دعویٰ کریں",
+    "description": "آپ کی ٹیم میں شامل ہونے کے لیے آپ کے دوستوں کو یہ عرفی نام استعمال کرنا ہوگا۔",
+    "inputPlaceholder": "اپنا عرفی نام درج کریں",
+    "note_part1": "عرفی نام تخلیق کرتے وقت، صرف حروف، عدد، اور پیریڈز استعمال کریں۔",
+    "note_part2": "مثال:",
     "note_example": "your.name01"
   },
   "whoInvitedYou": {
-    "title": "Who invited you?",
-    "description": "Enter the nickname of the person who invited you",
-    "inputPlaceholder": "Enter nickname",
-    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
-    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+    "title": "آپ کو کس نے مدعو کیا؟",
+    "description": "اس شخص کا نام درجکریں جس نے آپ کو مدعو کیا۔",
+    "inputPlaceholder": "عرفی نام درج کریں",
+    "dontHaveInvitationCode": "یہ مرحلہ مکمل کر کے، آپ کو اور آپ کے دوست کو اس وقت بنیادی کمائی کی شرح پر 25 فیصد بونس موصول ہوگا، جب آپ دونوں ایک ہی وقت میں چیک اِن کریں گے۔",
+    "dontHaveCodeTip": "اگر آپ کے پاس کوئی دعوتی کوڈ نہیں ہے تو ہم کسی ممبر کوآپ کے ریفرل کے بطور، بلا ترتیب منتخب کریں گے!"
   },
   "errors": {
-    "nicknameSize": "Nickname size: 4-20 characters.",
-    "removeInvalidCharacters": "Remove invalid characters.",
-    "validation_error": "Some validation error",
-    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
-    "wrong_phone_number": "Invalid phone number, please try again",
-    "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken",
-    "phone_number_already_in_use": "Phone number already in use",
-    "invalid_validation_code": "Invalid code number, please try again!",
-    "validation_expired": "Validation expired",
-    "validation_not_found": "Validation not found",
-    "invalid_email": "Invalid email",
-    "invalid_ref_username": "Nickname is invalid.",
-    "invalid_phone": "Invalid phone number",
-    "user_disabled": "User has been disabled",
-    "expired_action_code": "OTP in email link is expired",
-    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
-    "invalid_credential": "The credential is malformed or has expired",
-    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
-    "user_not_found_for_email": "There is no user corresponding to the given email",
-    "user_not_found": "User not found",
-    "auth_in_progress": "Sign-In already in progress",
-    "google_play_services_not_available": "Google Play services are not available on the device",
-    "unknown_error_with_code": "Unknown error {{code}}",
-    "no_such_provider": "You do not have this provider linked",
-    "min_username": "Minimum length is 4 characters.",
-    "max_username": "Maximum length is 30 characters.",
-    "code_expired": "The code has expired. Please ask for a new code.",
-    "too_many_requests": "Too many requests. Please try again later.",
-    "network_error_title": "No internet connection",
-    "network_error_message": "Your device does not have any active internet connection",
-    "unknown_error": "Some error occurred, please try again later",
-    "general_error_title": "Oups...",
-    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
-    "general_network_error": "A network error has occurred. Please check your connection.",
-    "credential_already_in_use": "This credential is already associated with a different user account.",
-    "email_already_in_use": "The email address is already in use by another account.",
-    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
-    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "nicknameSize": "عرفی نام کا سائز: 4 تا 20 کیریکٹرز۔",
+    "removeInvalidCharacters": "غیر درست کیریکٹرز ہٹائیں۔",
+    "validation_error": "کچھ توثیقی خرابی۔",
+    "multiple_accounts": "ای میل/ فون نمبر کسی دوسرے اکاؤنٹ کے ساتھ منسلک ہے۔ براہ کرم ملکیت ثابت کرنے کے لیے اس اکاؤنٹ میں لاگ اِن کریں، اس کے بعد لاگ آؤٹ کریں اور اِس میں واپس لاگ اِن کریں۔ اگر وہ دوسرا اکاؤنٹ آپ کی ملکیت میں نہیں ہے یا آپ اس میں لاگ اِن کرنے سے قاصر ہیں تو براہ کرم ہمارے سپورٹ سے رابطہ کریں۔",
+    "wrong_phone_number": "غلط فون نمبر، براہ کرم دوبارہ کوشش کریں۔",
+    "invalid_username": "عرفی نام غلط ہے۔",
+    "email_already_taken": "ای میل پہلے ہی لیا جا چکا ہے۔",
+    "phone_number_already_taken": "فون نمبر پہلے ہی لیا جا چکا ہے۔",
+    "invalid_validation_code": "غلط کوڈ نمبر، براہ کرم دوبارہ کوشش کریں!",
+    "validation_expired": "تصدیق کی میعاد ختم ہوگئی",
+    "validation_not_found": "تصدیق نہیں ملی",
+    "invalid_email": "غلط ای میل۔",
+    "invalid_password": "غلط پاس ورڈ۔",
+    "invalid_ref_username": "عرفی نام غلط ہے۔",
+    "invalid_phone": "غلط فون نمبر۔",
+    "user_disabled": "صارف کو نا اہل بنایا گیا ہے۔",
+    "expired_action_code": "ای میل لِنک میں موجود OTP کی میعاد ختم ہو گئی ہے۔",
+    "account_exists_with_different_credential": "ٹوثیقات کے ذریعے حق جتائی گئی ای میل کے ساتھ ایک اکاؤنٹ پہلے ہی موجود ہے۔",
+    "invalid_credential": "توثیقات غلط طور پر تشکیل دی گئی ہے یا ان کی میعاد ختم ہو گئی ہے۔",
+    "operation_not_allowed": "ان توثیقات سے متعلق اکاؤنٹ کی قسم فعال نہیں کی گئی ہے۔",
+    "user_not_found_for_email": "دئے گئے ای میل سے متعلق کوئی صارف نہیں ہے۔",
+    "user_not_found": "صارف نہیں ملا۔",
+    "auth_in_progress": "سائن اِن پہلے سے پیش رفت میں ہے۔",
+    "google_play_services_not_available": "گوگل پلے خدمات اس ڈیوائس پر دستیاب نہیں ہیں۔",
+    "unknown_error_with_code": "نامعلوم خرابی: {{code}}",
+    "no_such_provider": "یہ نے اس فراہم کنندہ کو مربوط نہیں کیا ہے۔",
+    "min_username": "کم از کم لمبائی 4 کیریکٹرز ہیں۔",
+    "max_username": "زیادہ سے زیادہ لمبائی 30 کیریکٹرز ہے۔",
+    "code_expired": "اس کوڈ کی میعاد ختم ہوگئی ہے، براہ کرم ایک نیا کوڈ طلب کریں۔",
+    "too_many_requests": "بہت زیادہ درخواستیں، براہ کرم بعد میں دوبارہ کوشش کریں۔",
+    "network_error_title": "انٹرنیٹ کنکشن نہیں ہے۔",
+    "network_error_message": "آپ کا ڈیوائس میں کوئی فعال کنکشن نہیں ہے۔",
+    "unknown_error": "ایک خرابی واقع ہوئی، براہ کرم بعد میں دوبارہ کوشش کریں۔",
+    "general_error_title": "اوفوہ...",
+    "general_error_message": "ایسا لگتا ہے کہ کوئی غلط ہوا ہے۔ ہماری ٹیم اس وقت اسے درست کرنے می مصروف ہے۔",
+    "general_network_error": "نیٹ ورک کی کوئی خرابی واقع ہوئی ہے، براہ کرم اپنے کنکشن کی جانچ کریں۔",
+    "credential_already_in_use": "یہ توثیقات پہلے سے ایک مختلف صارف اکاؤنٹ کے ساتھ منسلک ہیں۔",
+    "email_already_in_use": "یہ ای میل ایک دوسرے اکاؤنٹ کے ذریعے پہلے سے زیر استعمال ہے۔",
+    "user_token_expired": "آپ کی توثیقات اب مزید درست نہیں ہیں، براہ کرم دوبارہ سائن اِن کریں۔",
+    "requires_recent_login": "یہ کارروائی حساس ہے اور اس کے لیے حالیہ توثیق درکار ہے۔ براہ کرم دوبارہ سائن اِن کریں۔",
+    "same_email": "آپ وہی ای میل استعمال نہیں کر سکتے۔",
+    "weak_password": "کمزور پاس ورڈ۔",
+    "wrong_password": "غلط پاس ورڈ۔",
+    "no_camera_permissions": "کیمرہ کی اجازتیں نہیں دی گئی ہے۔",
+    "no_library_permissions": "لائبریری کی اجازتیں نہیں دی گئی ہیں۔"
   },
   "profile": {
     "my_roles": {
-      "title": "My Role"
+      "title": "میرا کردار"
     },
-    "mining_calculator": "earnings calculator",
-    "invite_friends": "Invite Friends",
-    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
-    "global_rank": "global rank",
-    "view_all_roles": "view all roles",
-    "data_is_hidden": "data is hidden",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "کمائی کا کیلکولیٹر",
+    "invite_friends": "دوستوں کو مدعو کریں",
+    "invite_friends_engage": "تشہیر کریں اور دوستوں کو مدعو کریں۔ آپ کے جتنے زیادہ ریفرلس ہوں گے، آپ اتنا ہی زیادہ کمائیں گے!",
+    "global_rank": "عالمی درجہ",
+    "view_all_roles": "تمام کرداروں کو ملاحظہ کریں",
+    "data_is_hidden": "ڈیٹا پوشیدہ ہے",
+    "progress_text": "{{value}} کا {{total}}",
     "not_found": {
-      "title": "User was not found",
-      "description": "oops, we couldn't find this user"
+      "title": "صارف نہیں ملا تھا",
+      "description": "اوفوہ، ہم اس سارف کو تلاش نہیں کر سکے۔"
     },
     "my_badges": {
-      "title": "My Badges"
+      "title": "میرے بیجز"
     },
     "badges": {
-      "title": "Badges"
+      "title": "بیجز"
     },
     "roles": {
-      "title": "Roles"
+      "title": "کردار"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "کوائنز",
+        "description": "کوائنز"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "سوشل",
+        "description": "دوست"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "لیول",
+        "description": "لیول"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update",
-    "comingSoon": "Coming soon",
+    "level": "لیول",
+    "referrals": "ریفرلس",
+    "coin": "کوائنز",
+    "social": "سوشل",
+    "phone_number": "فون نمبر",
+    "years": "سال",
+    "of": " کا ",
+    "attention": "توجہ دیں",
+    "email_address": "ای میل پتہ",
+    "password": "پاس ورڈ",
+    "data_hidden": "ڈیٹا پوشیدہ ہے",
+    "pull_to_refresh": "اپڈیٹ کرنے کے لیے کھینچیں",
+    "comingSoon": "عنقریب آ رہا ہے",
     "date": {
-      "today": "Today"
+      "today": "آج"
     }
   },
   "mining_calculator": {
-    "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "result_label": "آپ کمائیں گے",
+    "active_inviter": "فعال داعی",
+    "tier_1_ref": "ٹیئر 1 ریفرلز",
+    "tier_2_ref": "ٹیئر 2 ریفرلز",
+    "active_miners": "فعال ریفرلز"
   },
   "home": {
     "wallet": {
-      "title": "WALLET",
-      "rate": "EARNING RATE",
-      "balance": "CURRENT BALANCE"
+      "title": "والیٹ",
+      "rate": "کمائی کی شرح",
+      "balance": "موجودہ بیلنس"
     },
     "pioneer": {
-      "title": "PIONEER",
-      "rank": "GLOBAL RANK",
-      "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "rank": "عالمی درجہ",
+      "referrals": "ریفرلز",
+      "description": "مزید صارفین کو ریفر کریں اور مزید [[:ice]]کمائیں۔"
     },
     "referrals": {
-      "title": "REFERRALS",
-      "description": "Referral stats for the previous 5 days",
-      "no_referrals_description": "You don't have any referrals yet",
-      "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "title": "ریفرلز",
+      "description": "ریفرل کے اعداد وشمار برائے گزشتہ 5 دن۔",
+      "no_referrals_description": "فی الحال آپ کے پاس کوئی ریفرلز نہیں ہیں!",
+      "users_tier_1": "صارفین ٹیئر 1",
+      "users_tier_2": "صارفین ٹیئر 2"
     },
     "adoption": {
-      "title": "ADOPTION",
-      "level": "level",
-      "users": "\nusers"
+      "title": "قبول کردہ",
+      "level": "لیول",
+      "users": "صارفین"
     },
-    "steps": {
-      "title": "Your progress",
-      "description": "Complete the tasks below and level up!",
-      "step_one": {
-        "title": "Claim your nickname",
-        "description": "Set it and start earning from your invite"
+    "tasks": {
+      "achievements": "کامیابیاں",
+      "title": "آپ کی پیش رفت",
+      "description": "نیچے والے ٹاسکس مکمل کریں اورلیول بڑھائیں!",
+      "completed": {
+        "title": "مبارک ہو",
+        "description": "اجافی انعامات کمانے کے لیے روزانہ چیک اِن جاری رکھیں!"
       },
-      "step_two": {
-        "title": "Start mining",
-        "description": "Your first mining session"
+      "popup": {
+        "title": "ہمارے ٹیلیگرام چینلر میں شامل ہوں!",
+        "description": "ٹیلیگرام میں استعمال کردہ اپنا عرفی نام بتائیں۔",
+        "placeholder": "عرفی نام"
       },
-      "step_three": {
-        "title": "Profile picture",
-        "description": "Upload your profile image"
+      "claim_username": {
+        "title": "اپنےعرفی نام کے لیے دعویٰ کریں",
+        "description": "اسے سیٹ کریں اور اس کا دوستوں کے ساتھ اشتراک کریں۔"
       },
-      "step_four": {
-        "title": "Join Telegram",
-        "description": "Be part of our community and join now"
+      "start_mining": {
+        "title": "کمانا شروع کریں",
+        "description": "آپ کا پہلا چیک اِن سیشن۔"
       },
-      "step_five": {
-        "title": "Follow us on Twitter",
-        "description": "Let’s keep in touch, follow us on twitter"
+      "upload_profile_picture": {
+        "title": "پروفائل تصویر",
+        "description": "اپنی پروفائل تصویر اپ لوڈ کریں۔"
       },
-      "step_six": {
-        "title": "Invite 5 Friends",
-        "description": "Create your team and increase your earnings"
+      "join_telegram": {
+        "title": "ٹیلیگرام میں شامل ہوں",
+        "description": "ہماری کمیونٹی کا حصہ بنیں اور ابھی شامل ہو جائیں۔"
+      },
+      "follow_us_on_twitter": {
+        "title": "ٹویٹر پر ہمیں فالو کریں",
+        "description": "آئیں رابطے میں رہیں، ٹویٹر پر ہمیں فالو کریں۔"
+      },
+      "invite_friends": {
+        "title": "5 دوستوں کو مدعو کریں",
+        "description": "اپنی ٹیم بڑھائیں اور اپنی کمائی میں اضافہ کریں۔"
       }
     },
     "overview": {
-      "title": "Overview"
+      "title": "سرسری جائزہ"
     },
     "menu": {
-      "notifications": "Notifications",
-      "staking": "Staking",
-      "stats": "Stats",
-      "help": "Help"
-    },
-    "tasks": {
-      "title": "ACHIEVEMENTS"
+      "notifications": "اطلاعات",
+      "staking": "اسٹیکنگ",
+      "stats": "اعداد و شمار",
+      "help": "مدد"
     },
     "team": {
-      "title": "Team",
-      "view_team": "view team"
+      "title": "ٹیم",
+      "view_team": "ٹیم ملاحظہ کریں"
     },
     "mining_rate": {
-      "title": "EARNING RATE",
-      "base": "Base"
+      "title": "کمائی کی شرح",
+      "base": "بنیادی"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
-      "streak": "STREAK",
-      "days_off": "DAYS OFF"
+      "title": "مشغولیت",
+      "description_part1": "اسٹریک سے مراد یہ ہے کہ آپ نے مسلسل کتنے دنوں تک چیک اِن کیا ہوا ہے",
+      "description_part2": "ہر 6 مسلسل دنوں کے لیے، آپ کو ایک دن چھٹی ملے گی۔ ",
+      "streak": "اسٹریک",
+      "days_off": "چھٹی کے دن"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "ترتیبات",
+    "profile": "پروفائل",
+    "legal": "قانونی",
+    "support": "سپورٹ",
+    "personal_information_title": "ذاتی معلومات",
+    "personal_information_description": "اپنے پروفائل کی تفصیلات کا نظم کریں",
+    "notifications_title": "اطلاعات",
+    "notifications_description": "اپنی اطلاعات کا نظم یہاں کریں۔",
+    "push_notifications_title": "پُش اطلاعات",
+    "push_notifications_description": "اپنی پُش اطلاعات کی ترتیبات کو حسب مرضی بنائیں۔",
+    "email_notifications_title": "ای میل اطلاعات",
+    "email_notifications_description": "اپنی ای میل اطلاعات کی ترتیبات کو حسب مرضی کریں۔",
+    "terms_title": "خدمات کی شرائط",
+    "terms_description": "ہماری خدمات کی شرائط ملاحظہ کریں۔",
+    "privacy_title": "رازداری پالیسی",
+    "privacy_description": "ہماری رازداری پالیسی کے بارے میں سیکھیں۔",
+    "feedback_title": "رائے بھیجیں",
+    "feedback_description": "اپنے خیالات کا ہمارے ساتھ اشتراک کریں۔",
+    "invite_title": "کسی دوست کو مدعو کریں",
+    "invite_description": "اپنے دوستوں کو مدعو کر کے زیادہ کمائیں۔",
+    "delete_title": "اکاؤنٹ حذف کریں",
+    "delete_description": "اپنا اکاؤنٹ مٹائیں۔",
+    "delete_confirmation_title": "کیا آپ واقعی اکاؤنٹ کو ہٹانا چاہتے ہیں؟",
+    "delete_confirmation_yes": "جی ہاں، مٹائیں",
+    "logout_title": "لاگ آؤٹ کریں",
+    "logout_description": "سائن آف کریں اور وقفہ لیں۔",
+    "logout_confirmation_title": "کیا آپ واقعی سائن آف کرنا چاہتے ہیں؟",
+    "logout_confirmation_yes": "جی ہاں، لاگ آؤٹ کریں",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "نئے فون کی تصدیق کریں",
+      "description": "براہ کرم اپنے ملکی کوڈ کی تصدیق کریں اور اپنا نیا فون نمبر درج کریں۔",
+      "button": "نئے فون نمبر کی تصدیق کریں"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
-      "type_push": "PUSH",
-      "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
+      "enable_prompt": "اطلاعات کی اجازت نہیں ہے۔ کیا آپ انہیں فعال کرنا چاہتے ہیں؟",
+      "channel_achievements": "کامیابیاں",
+      "channel_news": "خبریں",
+      "channel_reminders": "یاد دہانیاں",
+      "channel_team": "ٹیم",
+      "type_push": "پُش",
+      "type_email": "ای میل",
+      "disable_notifications": "اطلاعات غیر فعال کریں؟",
+      "disable_notifications_description": "اطلاعات غیر فعال کرنے پر آپ کو اس بات کی اپڈیٹس موصول نہیں ہوں گی کہ آپ کب خبریں یا ٹیم کی معلومات کو چیک کرنا شروع کر سکتے ہیں۔",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
+          "title": "ہفتہ واری اعداد و شمار",
+          "description": "اپنی سرگرمی سے متعلق اطلاعات موصول کریں۔"
         },
         "weekly_report": {
-          "title": "Weekly report",
-          "description": "Receive notifications about your activity"
+          "title": "ہفتہ واری رپورٹ",
+          "description": "اپنی سرگرمی سے متعلق اطلاعات موصول کریں۔"
         },
         "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
+          "title": "کامیابیاں",
+          "description": "اپنی پیش رفت سے متعلق اطلاعات موصول کریں۔"
         },
         "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
+          "title": "پروموشنز",
+          "description": "اس بات سے متعلق معلومات موصول کریں کہ اپنی ٹیم کو کیسے بڑھایا جائے اور مزید کمایا جائے۔"
         },
         "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
+          "title": "خبریں",
+          "description": "ہماری ٹیم سے اطلاعات موصول کریں۔"
         },
         "micro_community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
+          "title": "مائیکرو کمیونٹی",
+          "description": "اپنی ٹیم سے متعلق اطلاعات موصول کریں۔"
         },
         "daily_bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
+          "title": "روزانہ بونس",
+          "description": "اپنے روزانہ بونس پر دعوے کے لیے اطلاعات موصول کریں۔"
         },
         "mining": {
-          "title": "Session status",
-          "description": "Receive notifications about your check-in activity"
+          "title": "سیشن کی حیثیت",
+          "description": "اپنی چیک اَن سرگرمی سے متعلق اطلاعات موصول کریں۔"
         },
         "system": {
-          "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "title": "سسٹم",
+          "description": "ice ایپ سے متعلق اہم معلومات موصول کریں۔"
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "زبان کی ترتیبات",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "زبان تبدیل کریں",
+      "prompt": "اس ترتیب کو لاگو کرنے پر ایپ ری سٹارٹ ہوگی۔"
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "پروفائل کی تصویر",
+    "inapp_privacy_title": "رازداری",
+    "inapp_privacy_description": "اپنی معلومات کا یہاں نظم کریں۔",
+    "developer": "ڈویلپر",
+    "user_id": "صارف آئی ڈی",
+    "user_token": "صارف ٹوکن",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "تصویر حذف کریں",
+      "edit": "پروفائل کی تصویر حذف کریں",
+      "photo_gallery": "فوٹو گیلری",
+      "camera": "کیمرہ"
     },
-    "confirm_email_confirmation_title": "Confirm email?",
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "ای میل کی تصدیق کریں؟",
+    "update_email_confirmation_title": "ای میل اپڈیٹ کریں؟",
+    "update_email_confirmation_subtitle": "اپنا ای میل پتہ تبدیل کرنے سے آپ کو دوبارہ لاگ اِن کرنا پڑے گا۔ کیا آپ واقعی آگے بڑھنا چاہتے ہیں؟",
+    "unlink_logins_title": "لاگ اِنز کو غیر مربوط کریں",
+    "unlink_logins_description": "آپ اپنے لاگ اِنز کو یہاں سے غیر مربوط کر سکتے ہیں۔"
   },
   "invite_share": {
-    "title": "Invite a friend",
-    "telegram": "Telegram",
-    "twitter": "Twitter",
-    "whatsapp": "WhatsApp",
-    "instagram": "Instagram",
-    "email": "Email",
-    "fb": "Newsfeed",
-    "sms": "SMS",
-    "copy_link": "Copy link",
-    "more": "More",
-    "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "title": "کسی دوست کو مدعو کریں",
+    "telegram": "ٹیلیگرام",
+    "twitter": "ٹیوٹر",
+    "whatsapp": "واٹس اپ",
+    "instagram": "انسٹاگرام",
+    "email": "ای میل",
+    "fb": "نیوز فیڈ",
+    "sms": "ایس ایم ایس",
+    "copy_link": "لِنک نقل کریں",
+    "more": "مزید",
+    "copied": "نقل کیا گیا",
+    "share_message": "آداب ☃️ اِسنو مین! ice میں میری ٹیم میں شامل ہو جائیں اور میرے ریفرل کوڈ کو استعمال کر کے سائن اپ کرنے پر  10 ice کوائن موصول کریں:",
+    "share_subject": "ice میں میری ٹیم میں شامل ہو جائیں",
+    "description": "تشہیر کریں اور دوستوں کو مدعو کریں۔ آپ کے لائے ہوئے ہر نئے ریفرل کے لیے آپ [[:ice]] کمائیں گے۔",
+    "share": "اشتراک کریں"
   },
   "users": {
-    "ping": "PING",
-    "active": "Active",
-    "inactive": "Inactive",
+    "ping": "پِنگ کریں",
+    "active": "فعال",
+    "inactive": "غیر فعال",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T1": "ٹیئر 1",
+      "T2": "ٹیئر 2"
     }
   },
   "personal_information": {
-    "first_name": "First name",
-    "last_name": "Last name",
-    "country": "Country",
-    "city": "City",
-    "title": "Personal Information",
-    "phone": "Phone",
-    "email": "Email",
-    "username": "Nickname"
+    "first_name": "پہلا نام",
+    "last_name": "آخری نام",
+    "country": "ملک",
+    "city": "شہر",
+    "title": "ذاتی معلومات",
+    "phone": "فون",
+    "email": "ای میل",
+    "username": "عرفی نام"
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
-      "length": "Nickname size: 4-20 characters.",
-      "invalid_characters": "Remove invalid characters.",
-      "not_found": "Nickname not found.",
-      "some_error": "Some error occurred.",
-      "refer_yourself": "You can't refer yourself"
+      "already_taken": "عرفی نام پہلے ہی لیا جا چکا ہے۔",
+      "length": "عرفی نام کا سائز: 4 تا 20 کیریکٹرز۔",
+      "invalid_characters": "غیر درست کیریکٹرز ہٹائیں۔",
+      "not_found": "عرفی نام نہیں ملا۔",
+      "some_error": "کوئی خرابی واقع ہوئی۔",
+      "refer_yourself": "آپ اپنے آپ کو ریف نہیں کر سکتے۔"
     }
   },
   "staking": {
-    "time_left": "Time Left",
-    "mining_rate": "Earning Rate",
-    "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking Bonus",
-    "period_label": "Staked Period",
-    "title": "Pre-Staking",
-    "current_rate": "Current Rate",
-    "allocation": "Allocation",
-    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
-    "staking_terms": "Staking Terms",
-    "stake_now": "Pre-Stake Now!",
-    "balance_label": "Staked balance",
-    "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "time_left": "بچا ہوا وقت",
+    "mining_rate": "کمائی کی شرح",
+    "appeal": "اپنی کمائی کیش رح کو فروغ دیں",
+    "benefits_description": "اپنے ice انعامات کو 5 سال تک کے لیے پری اِسٹیک کریں اور اپنی کمائی کی شرح کو 250 فیصد تک بڑھائیں۔",
+    "bonus_label": "پری اِسٹیکنگ بونس",
+    "period_label": "اسٹیک کردہ میعاد",
+    "title": "پری اسٹیکنگ",
+    "current_rate": "موجودہ شرح",
+    "allocation": "تقسیم",
+    "description": "اسٹیکنگ ایک ایسا عمل ہے جس میں آپ کے کرپٹو اثاثوں کو کسی بلاک چین نیٹ ورک کے ساتھ وابستہ کرنا اور لین دین کی تشخیص کرنا شامل ہے۔",
+    "terms_agree": "میں [[:ice]] [[:link]]اسٹیکنگ شرائط[[/:link]] سے متفق ہوں۔ آپ کی ice ہولڈنگ منتخب شدہ مدت تک کے لیے بلاک کی جائے گی۔",
+    "stake_now": "ابھی پری اسٹیک کریں!",
+    "balance_label": "اسٹیک کردہ توازن",
+    "confirm_title": "پری اسٹیک کی تصدیق کریں",
+    "confirm_subtitle": "کیا آپ اپنے کوائن کو واقعی پری اسٹیک کرنا چاہتے ہیں؟ آپ کے ذریعے توثیق کیے جانے کے بعد سے کالعدم نہیں کیا جا سکتا۔"
   },
   "stats": {
-    "header_title": "Stats",
-    "active": "Active users",
-    "total": "Total users",
-    "user_growth": "User growth",
-    "top_miners": "Top users",
-    "top_countries": "Top countries",
-    "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "header_title": "اعداد و شمار",
+    "active": "فعال صارفین",
+    "total": "جملہ صارفین",
+    "user_growth": "صارف کی ترقی",
+    "top_miners": "سر فہرست صارفین",
+    "top_countries": "سر فہرست ممالک",
+    "online_miners": "آن لائن صارفین",
+    "detailed_information": "تفصیلی معلومات"
   },
   "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
+    "title": "براہ کرم اپڈیٹ کریں",
+    "description": "آپ پرانی ایپ استعمال کر رہے ہیں، اور اسے مزید استعمال کرنے کے لیے اسے اپڈیٹ کرنے کی ضرورت ہے۔",
+    "button_title": "ابھی اپڈیٹ"
   },
   "general": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
+    "good_morning": "صبح بخیر",
+    "good_afternoon": "دوپہر بخیر",
+    "good_evening": "شام بخیر",
     "ice": "ice",
-    "ice_per_hour": "ice/h",
-    "seconds_short": "s",
-    "minutes_short": "m",
-    "hours_short": "h",
-    "days_short": "d"
+    "ice_per_hour": "ice/گھنٹہ",
+    "seconds_short": "سکینڈ",
+    "minutes_short": "منٹ",
+    "hours_short": "گھنٹہ",
+    "days_short": "دن"
   },
   "news": {
-    "news_feed": "News Feed",
-    "read_more": "Read more",
-    "views": "{{viewsCount}} views"
+    "news_feed": "نیوز فیڈ",
+    "read_more": "مزید پڑھیں",
+    "no_more_news": "یہ نیوز فیڈ کا آخری اندراج ہے۔",
+    "views": "{{viewsCount}} ملاحظات"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
-    "nothing_is_found": "Nothing was found for your query",
-    "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "empty": "روابط، ice دوست اور اپنی مائیکرو کمیونٹی کے اراکین تلاش کریں۔",
+    "nothing_is_found": "آپ کی تفتیش سے متعلق کچھ نہیں ملا۔",
+    "search_by_country": "ملک کے لحاظ سے تلاش کریں",
+    "search_for_users": "صارفین کو تلاش کریں",
+    "loading": "تلاش کیا جا رہا ہے..."
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tap here to start your first check-in session",
-    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
-    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
-    "mining_holiday_active": "You are using a Day Off!"
+    "mining_inactive_tooltip": "اپنا پہلا چیک اِن سیشن شروع کرنے کے لیے یہاں تھتھپائیں۔",
+    "mining_reset_tooltip": "اپنے چیک اِن سیشن کو بڑھانے کے لیے، 1 سکینڈ تک دبائیں رکھیں۔",
+    "mining_holiday_reset_tooltip": "آپ چھٹی والا دن استعمال کر رہے ہیں! اپنے چیک اِن سیشن کو بڑھانے کے لیے، 1 سکینڈ تک دبائیں رکھیں۔",
+    "mining_holiday_active": "آپ چھٹی والا دن استعمال کر رہے ہیں!"
   },
   "invite_friend": {
-    "invite_button": "Invite Friend",
-    "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "invite_button": "دوست کو مدعو کریں",
+    "button_title": "دوست کو مدعو کریں",
+    "description": "آپ کا دوست ابھی تک [[:ice]] پر نہیں ہے۔ اسے ایک دعوت بھیجیں!"
   },
   "balance_history": {
-    "title": "Balance History",
-    "wallet": "Wallet",
-    "blockchain": "Blockchain",
-    "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
-    "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "title": "بیلنس کی تاریخ",
+    "wallet": "والیٹ",
+    "blockchain": "بلاک چین",
+    "wallet_update_interval": "ہر گھنٹہ اپڈیٹ شدہ",
+    "blockchain_update_interval": "ہر 24 گھنٹہ اپڈیٹ شدہ",
+    "list_end_label": "یہ بیلنس کی سرگزشت کا آخری اندراج ہے۔",
+    "no_data": "صراحت کردہ میعاد کے لیے دکھانے کے لیے کوئی ڈیٹا نہیں ہے۔"
   },
   "pop_up": {
-    "update_now": "Update Now",
-    "please_update": "Please Update",
-    "update_now_text": "You are using an old app version and need to update it in order to use it further",
-    "you_are_up_to_date": "You are up to date!",
-    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
-    "resurrection": "Resurrection",
-    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
-    "resurrection_warning": "You can only resurrect one time!",
-    "please_confirm": "Please confirm",
-    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "update_now": "ابھی اپڈیٹ",
+    "please_update": "براہ کرم اپڈیٹ کریں",
+    "update_now_text": "آپ پرانی ایپ استعمال کر رہے ہیں، اور اسے مزید استعمال کرنے کے لیے اسے اپڈیٹ کرنے کی ضرورت ہے۔",
+    "you_are_up_to_date": "آپ اپ ٹو ڈیٹ ہیں!",
+    "up_to_date_text": "اب آپ تازہ ترین ورژن استعمال کر رہے ہیں۔ تمام تبدیلوں کو نیچے چیک کریں۔",
+    "resurrection": "احیائے نو",
+    "resurrection_message": "آپ کے ماضی میں کھوئے ہوئے [[:amount]] کوائنز کو زندہ کرنے اور انہیں موصول کرنے کے لیے آپ کے پاس ایک موقع ہے [[:period]]۔",
+    "resurrection_warning": "آپ صرف ایک مرتبہ زندہ کرسکتے ہیں!",
+    "please_confirm": "براہ کرم تصدیق کریں",
+    "resurrection_no_confirm_message": "آپ اپنے [[:amount]] کوائز ہمیشہ کے لیے کھو دیں گے۔ کیا آپ واقعی جاری رکھنا چاہتے ہیں؟",
+    "resurrection_yes_confirm_message": "آپ صرف ایک مرتبہ زندہ کرسکتے ہیں! کیا آپ واقعی جاری رکھنا چاہتے ہیں؟ [[:amount]] کوائنز اگلے گھنٹے کے اندر آپ کے بیلنس میں واپس چلے جائیں۔",
+    "delete_account_confirmation_title": "حذف کرنے کی تصدیق کریں",
+    "delete_account_confirmation_text": "اپنا اکاؤنٹ حذف کرنے سے آپ کے تمام ڈیٹا بشمول ice بیلنس مستقل طور پر مٹ جائیں گے۔ کیا آپ آگے بڑھنا چاہتے ہیں؟"
   },
   "periods": {
-    "3_days": "3 days",
-    "7_days": "7 days",
-    "30_days": "30 days",
-    "1_day": "1 Day",
-    "1_week": "1 Week",
-    "1_month": "1 Month",
-    "90_days": "90 days",
-    "14_days": "14 days"
+    "3_days": "3 دن",
+    "7_days": "7 دن",
+    "30_days": "30 دن",
+    "1_day": "1 دن",
+    "1_week": "1 ہفتہ",
+    "1_month": "1 مہینہ",
+    "90_days": "90 دن",
+    "14_days": "14 دن"
   },
   "notifications": {
-    "joined": " has joined your team",
-    "multiply": " and {{count}} others have joined your team",
-    "ping": " has pinged you, wake up!",
-    "delete": "Delete",
-    "add_notifications": "Add mocked notifications",
-    "no_notifications": "No notifications to display",
-    "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
-    "clear_title": "Clear all notifications?",
-    "title": "Notifications"
+    "joined": " نے آپ کی ٹیم میں شمولیت اختیار کی۔",
+    "multiply": " اور دیگر {{count}} نے آپ کی ٹیم میں شمولیت اختیار کی ہے۔",
+    "ping": " نے آپ کو پِنگ کیا ہے، جاگ جائیں!",
+    "delete": "حذف کریں",
+    "add_notifications": "فرضی اطلاعات شامل کریں",
+    "no_notifications": "دکھانے کے لیے کوئی اطلاعات نہیں ہیں۔",
+    "add_announcements": "فرضی اعلانات شامل کریں",
+    "add_both": "فرضی اطلاعات اور اعلانات ایک ساتھ شامل کریں",
+    "clear_title": "تمام اطلاعات مٹائیں؟",
+    "title": "اطلاعات"
   },
   "notification_feed_screen": {
-    "yesterday": "Yesterday",
-    "last_week": "Last Week",
-    "this_month": "This month",
-    "last_month": "Last Month",
-    "this_week": "This week"
+    "yesterday": "گزشتہ روز",
+    "last_week": "گزشتہ ہفتہ",
+    "this_month": "اس ماہ",
+    "last_month": "گزشتہ ماہ",
+    "this_week": "اس ہفتہ"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to hide from public eyes"
+      "title": "آپ کے پروفائل کے اعدا و شمار",
+      "description": "ان بلاکس پر تھپتھپائیں، جنہیں آپ عوامی نظروں سے چھپانا چاہتے ہیں۔"
     },
     "step2": {
-      "description": "Tap on this block to hide it from public eyes",
-      "title": "2. Your Current Role"
+      "description": "اس بلاک کو عوامی نظروں سے چھپانے کے لیے اس پر تھپتھپائیں۔",
+      "title": "2. آپ کا موجود کردار"
     },
     "step3": {
-      "title": "3. Your Earned Badges",
-      "description": "Tap here to hide your badges from public eyes"
+      "title": "3. آپ کے کمائے ہوئے بیجز",
+      "description": "اپنے بیجز کو عوامی نظروں سے چھپانے کے لیے یہاں تھپتھپائیں۔"
     }
   },
   "confirm_email": {
-    "title": "Confirm your email",
-    "description": "Please enter your email address and we will send code ",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
-    "wrong_email": "Wrong email?",
-    "check_email": "Check your email",
-    "emailed_link_to": "We emailed a magic link to",
-    "link_instruction": "Click the link to log in or sign up.",
-    "modify_title": "Confirm New Email",
-    "modify_description": "Please enter your new email address"
+    "title": "اپنے ای میل کی تصدیق کریں",
+    "description": "براہ کرم اپنا ای میل پتہ درج کریں اور ہم آپ کو کوڈ بھیجیں گے۔",
+    "note": "اگر آپ کو 5 منٹ میں ای میل موصول نہ ہو تو براہ کرم اپنا اسپیم فولڈر چیک کریں۔",
+    "wrong_email": "غلط ای میل؟",
+    "check_email": "اپنا ای میل چیک کریں",
+    "emailed_link_to": "ہم نے اس پتے پر ایک میجک لِنک ای میل کی ہے",
+    "emailed_steps_to": "ہم نے آپ کو اس پتے پر مراحل ای میل کیے ہیں",
+    "link_instruction": "لاگ اِن یا سائن اپ کرنے کے لیے لِنک پر کلک کریں۔",
+    "reset_link_instruction": "اپنا پاس ورڈ دوبارہ سیٹ کرنے کے لیے لِنک پر کلک کریں۔",
+    "modify_title": "نئے ای میل کی تصدیق کریں",
+    "modify_description": "اپنا نیا ای میل پتہ درج کریں۔"
   },
   "invalid_link": {
-    "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "title": "غلط لِنک",
+    "description": "بد قسمتی سے، یہ لِنک غلط ہے، براہ کرم اپنا ای میل دوبارہ درج کریں اور ہم آپ کو ایک نئی لِنک بھیجیں گے۔"
   },
   "confirm_code": {
-    "title": "Confirm code",
-    "description": "Please enter the code sent to",
-    "send_code_again": "Send code again",
-    "resend_time_label": "New code available in ",
-    "enter_code": "Enter the code",
-    "wrong_number": "Wrong number?"
+    "title": "کوڈ کی تصدیق کریں",
+    "description": "براہ کرم اس پتے پر بھیجا گیا کوڈ درج کریں",
+    "send_code_again": "دوبارہ کوڈ بھیجیں",
+    "resend_time_label": "نیا کوڈ یہاں دستیاب ہے ",
+    "enter_code": "کوڈ درج کریں",
+    "wrong_number": "غلط نمبر؟"
   },
   "ice_bonus": {
-    "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
-    "balance_label": "Your current balance"
+    "title": "خیرمقدمی انعام",
+    "description": "مبارک ہو، آپ نے اپنا پہلے [[:value]] [[:ice]] کوائنز موصول کیے ہیں، جو [[:bold]]آپ[[/:bold]] پر ہمارے [[:bold]]اعتماد[[/:bold]] کو ثابت کرتا ہے۔",
+    "balance_label": "آپ کا موجودہ بیلنس"
   },
   "country_select": {
-    "title": "Select country"
+    "title": "ملک منتخب کریں"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "اِسنو مین",
+      "subtitle": "اِسنو ایمپائ بنائیں",
+      "description": "ice نیٹ ورک کے ساتھ اپنی وابستگی کا مظاہرہ کرنے کے لیے ہر 24 گھنٹے میں چیک اِن کرتے ہوئے کمائیں اور ثابت کریں کہ آپ انسان ہے، بوٹ نہیں ہیں۔"
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "سفیر",
+      "subtitle": "اِسنو ایمپائر کا حکمران",
+      "description": "کم از کم 100 لوگوں کے آپ کی ٹیم میں شامل ہونے پر آپ ایک سفیر بن جاتے ہیں۔  ہر سفیر کو نئی خصوصیات تک جلد رسائی حاصل ہوگی۔"
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirm Phone",
-    "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
-    }
+    "modify_title": "فون کی تصدیق کریں",
+    "modify_description": "براہ کرم اپنے ملکی کوڈ کی تصدیق کریں اور اپنا فون نمبر درج کریں۔",
+    "button": "اپنے ملک اور فون کی تصدیق کریں",
+    "same_phone_error": "آپ وہی نمبر استعمال نہیں کر سکتے۔"
   },
   "date_select": {
-    "title": "Choose date"
+    "title": "تاریخ منتخب کریں"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+      "readmore": {
+        "title": "مزید پڑھیں",
+        "description": "یہاں پر آپ ہماری ٹیم کی طرف سے تازہ ترین خبریں ملاحظہ کرسکتے ہیں۔ مکمل مضمون پڑھنے کے لیے اس بٹن پر تھپتھپائیں۔"
       },
-      "step_2": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
-      },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
-      },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
-      },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
-      },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
-      },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
-      },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "releasednews": {
+        "title": "جاری کردہ خبریں",
+        "description": "ہر ایک انفرادی خبر پر تھپتھپائیں اور اس کا مکمل ورژن پڑھیں۔ ہماری تمام خبروں اور پولز سے با خبر رہیں۔"
       }
     },
     "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      "allow_contacts": {
+        "title": "روابط کی اجازت دیں",
+        "description": "اپنے روابط کو سِنک کریں اور دیکھیں کہ کون [[:ice]]میں پہلے سے موجود ہیں۔ مستقبل میں، آپ [[:ice]] کو اپنے کسی بھی رابطے کو بھیج سکیں گے"
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "confirm_phone": {
+        "title": "فون کی تصدیق کریں",
+        "description": "اپنی شناخت کی تصدیق کریں اور اپنے روابط کو یہ بات جاننے کی اجازت دیں کہ آپ بھی ice نیٹ ورک کے ایک ممبر ہیں۔ آپ کے فون نمبر کا دیگر فریق ثالث کے ساتھ اشتراک نہیں کیا جائے گا۔"
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "contacts_list": {
+        "title": "روابط کی فہرست",
+        "description": "یہ آپ کے ان تمام روابط پر مشتمل فہرست ہے، جو پہلے سے [[:ice]] نیٹ ورک میں شامل ہیں، انہیں فہرست میں سب سے اوپر دکھایا گیا ہے۔ "
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "referrals": {
+        "title": "ریفرلز",
+        "description": "یہاں آپ یہ دیکھیں گے کہ آپ کے پاس جملہ کتنے ریفرلز ہیں۔ آپ جتنے زیادہ لوگوں کو مدعو کریں گے، آپ اتنا ہی زیادہ کمائیں گے۔"
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earnings": {
+        "title": "کمائی",
+        "description": "آپ کا موجودہ بیلنس ہر گھنٹہ اپ ڈیٹکیا جاتا ہے اور یہاں دکھایا جاتا ہے۔ اس میں آپ کی راست اور اسٹیکس کردہ کمائی مع ٹیئر 1 اور ٹیئر 2 کمائی شامل ہیں۔"
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "segmented_control_tier_one": {
+        "title": "ٹیئر 1",
+        "description": "آپ اپنے ٹیئر 1 ریفرلز کی فہرست دیکھ سکتے ہیں۔ ہر دوست کے آپ کے ساتھ یکساں وقت میں چیک اِن کرنے پر، آپ کو اپنی موجودہ موجودہ قبول کردہ کمائی کی شرح پر 25 فیصد زیادہ حاصل ہوگا۔ [[:link]]مزید پڑھیں[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "segmented_control_tier_two": {
+        "title": "ٹیئر 2",
+        "description": "آپ اپنے ٹیئر 2 ریفرلز کی فہرست دیکھ سکتے ہیں۔ ہر دوست کے آپ کے ساتھ یکساں وقت میں چیک اِن کرنے پر، آپ کو اپنی بنیادی موجودہ قبول کردہ کمائی کی شرح پر 5 فیصد زیادہ حاصل ہوگا۔ [[:link]]مزید پڑھیں[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "active_users": {
+        "title": "فعال صارفین",
+        "description": "یہ آپ کے ریفرلز کی چیک اِن سرگرمی کی موجودہ حیثیت ہے۔ ان کے ایک فعال چیک اِن سیشن کے ہونے پر انہیں فعال شمار کیا جاتا ہے۔"
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "tier_one_earnings": {
+        "title": "ٹیئر 1 کمائی",
+        "description": "آپ اپنے ٹیئر 1 ریفرلز کی فہرست دیکھ سکتے ہیں۔ ہر ممبر کے آپ کے ساتھ یکساں وقت میں چیک اِن کرنے پر، آپ دونوں کو اپنے  بنیادی موجودہ قبول کردہ کمائی کی شرح پر 25 فیصد زیادہ حاصل ہوگا۔"
+      },
+      "ping": {
+        "title": "پںگ بٹن",
+        "description": "اپنے ریفرلز کو اپنے چیک اِن سیشنز شروع کرنے کے لیے اطلاع دیں۔ آپ ہر 24 گھنٹے میں ہر ریفرل کو ایک اطلاع بھیج سکتے ہیں۔"
+      }
+    },
+    "home": {
+      "home": {
+        "title": "مرکزی صفحہ",
+        "description": "[[:ice]] میں خوش آمدید ہے۔ مرکزی صفحے پر آپ اپنے بیلنس سے متعلق تمام اعداد و شمار، کمائی کی موجودہ شرح، اپنی ٹیم کے ساتھ اپنے عالمی درجے کا پتہ لگا سکتے ہیں۔"
+      },
+      "invite": {
+        "title": "مدعو کریں",
+        "description": "آپ کے ذریعے مدعو کردہ ہر ایک  شخص کے لیے، آپ دونوں اپنی بنیادی کمائی کی شرح پر 25 فیصد تک کمائیں گے۔ آپ جتنے زیادہ لوگوں کو مدعو کریں گے، آپ اتنا ہی زیادہ کمائیں گے۔"
+      },
+      "team": {
+        "title": "ٹیم",
+        "description": "[[:ice]] دوستوں کے ساتھ بہتر ہے۔ اس صفحے پر، آپ ٹیئر 1 اور ٹیئر 2 دونوں لیولز سے اپنی ٹیم کے ممبران کی حیثیت دیکھ سکتے ہیں۔ آپ یہاں سے انہیں پِنگ بھی کر سکتے ہیں۔"
+      },
+      "news": {
+        "title": "خبریں",
+        "description": "ہماری تمام خبروں اور پولز سے با خبر رہیں۔ جیسا کہ ہم ایک آٹونومس ڈیسینٹرلائیزڈ آرگنائزیشن ہیں، آپ مستقبل کی خصوصیات کے لیے یہاں ووٹ دے سکیں گے۔"
+      },
+      "profile": {
+        "title": "پروفائل",
+        "description": "اپنے پروفائل کی تفصیلات کو حسب مرضی بنائیں اور اپنی تمام کامیابیاں اور کمائے ہوئے بیجز دیکھیں۔ یہاں سے کیلکولیٹر استعمال کریں، تا کہ آپ اپنی کمائی کا اندازہ لگا سکیں۔"
+      },
+      "earningicestart": {
+        "title": "ice کمانا",
+        "description": "آپ اس بٹن کو تھپتھپا کر ہر 24 گھنٹہ [[:ice]] چیک اِن سیشن شروع کر سکتے ہیں۔ ہرن دن واپس آنا اور کمانا شروع کرنا نہ بھولیں!"
+      },
+      "earningiceseemore": {
+        "title": "ice کمانا",
+        "description": "دوبارہ تھپتھپائیں اور اپنے موجودہ چیک اِن سیشن سے متعلق مزید تفصیلات دیکھیں۔"
+      },
+      "stats": {
+        "title": "اعداد و شمار",
+        "description": "اعداد و شمار صفحے پر آپ ہر دن چیک اِن کرنے والے جملہ اور فعال صارفین، مع سرفہرست ممالک اور صارفین دیکھ سکتے ہیں۔"
+      },
+      "help": {
+        "title": "مدد",
+        "description": "کیا آپ کے ذہن میں کوئی سوالات ہیں؟ ہماری مسلسل پوچھے گئے سوالات کی فہرست ملاحظہ کریں۔ اگر آپ کو اپنی مطلوبہ چیز نظر نہ آئے توبلا جھجک hi@ice.io پر ہم سے رابطہ کریں۔"
+      },
+      "preStaking": {
+        "title": "پری اسٹیکنگ",
+        "description": "اپنی کمائی کے انعامات کی پری اسٹیکنگ کے ذریعے اپنا منافع بڑھائیں۔ اپنی کمائی پر بونس موصول کرنے کے لیے اپنی تقسیم اور اسٹیکنگ میعاد منتخب کریں۔"
+      },
+      "wallet": {
+        "title": "والیٹ کارڈ",
+        "description": "آپ یہاں موجودہ [[:ice]] بیلنس، مع کمائی کی شرح کا پتہ لگا سکتے ہیں۔ آپ کی ٹیم سے جس قدر زیادہ ریفرلز آن لائن ہوں گے، آپ کی کمائی کی شرح بھی اسی قدر زیادہ ہوگی۔"
+      },
+      "earning": {
+        "title": "کمائی کا کارڈ",
+        "description": "اپنی کمائی اور بونسز سے باخبر رہیں! یہاں آپ ایپ میںمختلف سرگرمیوں کے لیے اپنی موجودہ شرح، ہماری بنیادی شرح اور بونس کی شرحیں چیک کر سکتے ہیں"
+      },
+      "engagement": {
+        "title": "اینگیجمنٹ کارڈ",
+        "description": "اپنے چیک اِن سیشنز اسٹریک اور چھٹی والے دنوں پر نظر رکھیں! اپنے مسلسل چیک اِن سیشنز کے بارے میں مزید تفصیلات کے لیے، اس سیکشن کو جانچیں اور دیکھیں کہ آپ کے پاس کتنے دستیاب چھٹیوں والے دن دستیب ہیں۔"
+      },
+      "profilecard": {
+        "title": "پروفائل کارڈ",
+        "description": "آپ اس کارڈ کو فالو کر کے اپنے پروفائل کی حیثیت پر نظر رکھ سکتے ہیں۔ یہ آپ کا موجودہ عالمی درجہ، مع آپ کا کردار، لیول اور جملہ ریفرلز دکھاتا ہے۔"
+      },
+      "referralscard": {
+        "title": "ریفرل کارڈ",
+        "description": "اس کارڈ کو تھپتھپا کر گزشتہ 5 دنوں کے لیے، ٹیئر 1 اور ٹیئر 2 ریفرلز دونوں کے لیے، اپنے ریفلر کے اعداد و شمار کا ارتقاء دیکھیں۔"
+      },
+      "adoptioncard": {
+        "title": "ایڈاپشن کارڈ",
+        "description": "گزشتہ ہفتے کے جملہ فعال اِسنو مین کے اوسط کی بنیاد پر، آپ موجودہ [[:ice]] کمائی کی شرح دیکھ سکتے ہیں۔ اگلے حد اثر کو پہنچنے کے بعد، کمائی کی شرح آدھی ہو جاتی ہے۔"
+      },
+      "nickname": {
+        "title": "عرفی نام",
+        "description": "یہ عرفی نام وہ چیز ہے جو آپ کو منفرد بناتا ہے۔ آپ کی ٹیم میں شامل ہونے کے لیے آپ کے دوستوں کو اسے استعمال کرنا ہوگا۔ آپ اپنا پروفائل کھولنے کے لیے بھی یہ شارٹ کٹ استعمال کر سکتے ہیں۔"
+      },
+      "balancehistory": {
+        "title": "بیلنس کی تاریخ",
+        "description": "آپ مقامی والیٹ اور بلاک چین پر، یہاں پر اپنے موجودہ [[:ice]] بیلنس کا پتہ لگا سکتے ہیں۔ مقامی والیٹ کا بیلنس ہر گھنٹہ اپڈیٹ ہوتا ہے، جبکہ بلاک چین بیلنس ہر 24 گھنٹے میں اپڈیٹ ہوتا ہے۔"
+      },
+      "achievements": {
+        "title": "کامیابیاں",
+        "description": "نیچے والے ٹاسکس مکمل کریں اورلیول بڑھائیں! اپنا پہلا چیک اِن سیشن ابھی شروع کریں۔"
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Unlink Logins",
-    "sessionName": "Login via {{providerName}}",
+    "title": "لاگ اِنز کو غیر مربوط کریں",
+    "sessionName": "لاگ ان بذریعہ {{providerName}}",
     "buttons": {
-      "currentSession": "Current session",
-      "endSession": "End Session",
-      "loginUnlinked": "Login Unlinked",
-      "sessionEnded": "Session Ended",
-      "unlink": "Unlink"
+      "currentSession": "موجودہ سیشن",
+      "endSession": "سیشن ختم کریں",
+      "loginUnlinked": "لاگ اِن غیر مربوط کیا گیا",
+      "sessionEnded": "سیشن ختم کیا گیا",
+      "unlink": "غیر مربوط کریں"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Unlink Login?",
-        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
+        "title": "لاگ اِن کو غیر مربوط کریں؟",
+        "message": "کیا آپ واقعی بذریعہ {{providerName}} لاگ اِن کو اس ڈیوائس سے غیر مربوط کرنا چاہتے ہیں؟"
       },
       "endSession": {
-        "title": "End Session?",
-        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
+        "title": "سیشن ختم کریں؟",
+        "message": "کیا آپ واقعی، {{providerName}} لاگ اِن سیشن کو اس ڈیوائس سے ختم کرنا چاہتے ہیں؟"
       }
     }
   },
@@ -792,12 +846,51 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Today’s Bonus",
-    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
-    "link": "Find out more",
-    "extra_message": "You have received your daily extra bonus on your earning rate",
-    "expired_title": "Bonus Expired",
-    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
-    "result_title": "Congratulations"
+    "claim_title": "آج کا بونس",
+    "claim_message": "یہ آپ کے آج کے بونس کا وقت ہے، براہ کرم نیچے [[:bold]]\"بونس کا دعویٰ کریں\"[[/:bold]] بٹن پر کلک کریں۔",
+    "link": "مزید جانیں",
+    "extra_message": "آپ کو آپ کی کمائی کی شرح پر روزانہ کا اضافی بونس موصول ہوا ہے۔",
+    "expired_title": "بونس کی میعاد ختم ہو گئی۔",
+    "expired_message": "بد قسمتی سے، آج کے بونس کی میعاد ختم ہوگئی ہے۔ اگلی اطلاع کے لیے انتظار کریں!",
+    "result_title": "مبارک ہو"
+  },
+  "early_access": {
+    "title": "جلد رسائی",
+    "message_part1": "ہمارے [[:bold]] ہونے والے با ضابطہ اجرا سے پہلے،[[:bold]]ice[[/:bold]] کی ایک ہلکی سے جھلک حاصل کریں۔[[/:bold]]",
+    "message_part2": "اجرا کی تاریخ کو تمام بیلنس کو 0 پر ری سیٹ کیا جائے گا۔ تاہم، آپ کی ٹیم برقرار رہے گی۔",
+    "message_part3": "آپ کے سپورٹ پر آپ کا شکریہ!",
+    "checkbox_description": "میں نے تسلیم کیا ہے! یہ پاپ اپ دوبارہ نہ دکھائیں۔"
+  },
+  "mining_notice": {
+    "title": "اطلاع",
+    "message": "[[:bold]]ice کمانے میں آپ کی دلچسپی پر آپ کا شکریہ![[/:bold]] ہم فی الحال، اپنی ٹیکنالوجی میں بہتری لا رہے ہیں، اور فی الوقت چیک اِن دستیاب نہیں ہے۔ یہ اپنی ٹیم بنانے اور اپنی مائیکرو کمیونٹی کو بڑھانے پر توجہ مرکوز کرنے کے لیے آپ کے لیے ایک موقع ہے۔",
+    "message_footer": "ہمارے [[:twitter]]ٹویٹر[[/:twitter]] اور [[:telegram]]ٹیلیگرام[[/:telegram]] پر تازہ ترین خبروں کے لیے انتظار کریں۔"
+  },
+  "qr_code": {
+    "description": "میری ٹیم میں شامل ہونے کے لیے QR کوڈ اسکین کریں۔"
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "TikTok پر ہمارے ساتھ شامل ہو جائیں",
+      "description": "ہم بس آپ تک پہنچنا اور آپ کو ہماری TikTok پر ہماری نئی دلچسپ کموینٹی کی اطلاع دینا چاہتے ہیں۔ ہم اپنی ڈیجیٹل کرنسی، ice کے بارے میں دلچسپ اور معلوماتی مواد کا اشتراک کر رہے ہیں، اور ہم چاہتے ہیں کہ آپ ہمارے ساتھ شامل ہو جائیں!"
+    },
+    "youtube": {
+      "title": "YouTube پر ہمارے ساتھ شامل ہوں",
+      "description": "ice کمانے کے طریقے سے متعلق ٹیوٹوریئل سے لے کر، ہماری نئی خصوصیات تک، اور اس کے علاوہ دلچسپ کمیونٹی مواد، ہمارا YouTube چینل با خبر رہنے کے لیے ایک زبردست جگہ ہے۔"
+    },
+    "linkedin": {
+      "title": "LinkedIn ر ہمارے ساتھ شامل ہو جائیں",
+      "description": "LinkedIn پر ice کمیونٹی کے ساتھ شامل ہونا تازہ ترین پیش رفت کے بارے میں با خبر رہنے، اور ہم خیال لوگوں کے ساتھ جڑنے کا ایک زبردست طریقہ ہے، جو آپ ہی کی طرح ڈیجیٹل کرنسی کے مستقبل کے بارے میں پُر جوش ہیں۔"
+    },
+    "facebook": {
+      "title": "Facebook پر ہمارے ساتھ شامل ہوں",
+      "description_part1": "ہم اپنے Facebook صفحے کو فالو کرنے کی شدید طور پر سفارش کرتے ہیں۔",
+      "description_part2": "اس سے آپ کو نہ صرف ice پروجیکٹ سے متعلق نئی پیش رفتوں سے واقف رہنے میں مدد ملے گی، بلکہ یہ ہماری کمیونٹی کے ساتھ جڑنے اور بات چیت کا حصّہ بننے کا ایک زبردست ذریعہ بھی ہے۔"
+    },
+    "instagram": {
+      "title": "Instagram پر ہمارے ساتھ شامل ہوں",
+      "description_part1": "Instagram پر ہمیں فالو کرنا باخبر رہنے اور دیگر ice کے بارے میں پُر جوش صارفین کے ساتھ  جڑے رہنے کا بھی ایک زبردست طریقہ ہے ",
+      "description_part2": "مع، آپ ہمارے ذریعے شروع کی جانے والی کسی بھی نئی خصوصیات یا پروموشنز کے بارے میں جاننے والے پہلے شخص ہوں گے۔"
+    }
   }
 }
