@@ -8,12 +8,17 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {userIdSelector, userSelector} from '@store/modules/Account/selectors';
 import {userByIdSelector} from '@store/modules/Users/selectors';
 import {RoundedTriangle} from '@svg/RoundedTriangle';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {useCallback, useMemo, useState} from 'react';
-import {LayoutChangeEvent, Text} from 'react-native';
-import {StyleSheet, TouchableWithoutFeedback, View} from 'react-native';
+import {
+  LayoutChangeEvent,
+  StyleSheet,
+  Text,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem, screenWidth} from 'rn-units';
 
@@ -58,12 +63,19 @@ export const ReferralCountInfo = () => {
   }, [containerWidth, hostViewParams.height, hostViewParams.pageY]);
 
   const arrowStyle = useMemo(() => {
+    const offset =
+      hostViewParams.pageX +
+      hostViewParams.width / 2 -
+      ROUNDED_TRIANGLE_SIZE / 2;
     return {
       top: hostViewParams.pageY + hostViewParams.height + rem(4),
-      left:
-        hostViewParams.pageX +
-        hostViewParams.width / 2 -
-        ROUNDED_TRIANGLE_SIZE / 2,
+      ...(isRTL
+        ? {
+            right: offset,
+          }
+        : {
+            left: offset,
+          }),
     };
   }, [
     hostViewParams.height,

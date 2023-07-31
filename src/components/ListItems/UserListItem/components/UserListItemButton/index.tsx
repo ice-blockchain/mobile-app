@@ -2,9 +2,11 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {ReactNode} from 'react';
 import {StyleSheet, Text} from 'react-native';
+import {rem} from 'rn-units';
 
 type Props = {
   icon: ReactNode;
@@ -35,15 +37,16 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     borderWidth: 1,
     borderColor: COLORS.primaryDark,
-    borderRadius: 9,
-    paddingHorizontal: 11,
-    paddingVertical: 2,
+    borderRadius: rem(9),
+    paddingHorizontal: rem(11),
+    paddingVertical: rem(2),
   },
   disabledButton: {
     borderColor: COLORS.cadetBlue,
   },
   buttonText: {
-    paddingLeft: 3,
+    paddingLeft: !isRTL ? rem(4) : 0,
+    paddingRight: isRTL ? rem(4) : 0,
     textTransform: 'uppercase',
     ...font(12, null, 'bold', 'primaryDark'),
   },
