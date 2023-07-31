@@ -23,10 +23,16 @@ import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {fork, takeLatest, takeLeading} from 'redux-saga/effects';
 
 export const authWatchers = [
-  takeLatest(AccountActions.SIGN_IN_EMAIL_LINK.START.type, signInEmailLinkSaga),
-  takeLatest(AccountActions.SIGN_IN_EMAIL_CODE.START.type, signInEmailCodeSaga),
-  takeLatest(AccountActions.SIGN_IN_PHONE.START.type, signInPhoneSaga),
-  takeLatest(AccountActions.SIGN_IN_SOCIAL.START.type, signInSocialSaga),
+  takeLeading(
+    AccountActions.SIGN_IN_EMAIL_LINK.START.type,
+    signInEmailLinkSaga,
+  ),
+  takeLeading(
+    AccountActions.SIGN_IN_EMAIL_CODE.START.type,
+    signInEmailCodeSaga,
+  ),
+  takeLeading(AccountActions.SIGN_IN_PHONE.START.type, signInPhoneSaga),
+  takeLeading(AccountActions.SIGN_IN_SOCIAL.START.type, signInSocialSaga),
   takeLeading(AccountActions.SIGN_OUT.START.type, signOutSaga),
   takeLatest(AccountActions.DELETE_ACCOUNT.START.type, deleteAccountSaga),
   takeLatest(AccountActions.USER_STATE_CHANGE.START.type, userStateChangeSaga),

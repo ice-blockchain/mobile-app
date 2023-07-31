@@ -32,6 +32,7 @@ type Actions = ReturnType<
   | typeof AccountActions.SIGN_IN_EMAIL_CODE.SET_TEMP_EMAIL.create
   | typeof AccountActions.SIGN_IN_EMAIL_CODE.SUCCESS.create
   | typeof AccountActions.SIGN_IN_EMAIL_CODE.RESET.create
+  | typeof AccountActions.SIGN_IN_EMAIL_CODE.FAILED.create
   | typeof ValidationActions.PHONE_VALIDATION.SUCCESS.create
   | typeof ValidationActions.PHONE_VALIDATION.FAILED.create
   | typeof ValidationActions.PHONE_VALIDATION.RESET.create
@@ -113,6 +114,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case AccountActions.SIGN_IN_EMAIL_LINK.RESET.type:
       case AccountActions.SIGN_IN_EMAIL_CODE.SUCCESS.type:
       case AccountActions.SIGN_IN_EMAIL_CODE.RESET.type:
+      case AccountActions.SIGN_IN_EMAIL_CODE.FAILED.type:
       case AccountActions.MODIFY_EMAIL_WITH_LINK.RESET.type:
       case AccountActions.MODIFY_EMAIL_WITH_LINK.SUCCESS.type:
       case AccountActions.MODIFY_EMAIL_WITH_CODE.RESET.type:
