@@ -12,13 +12,9 @@ import {isRTL, t} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {useCallback, useMemo, useState} from 'react';
-import {
-  LayoutChangeEvent,
-  StyleSheet,
-  Text,
-  TouchableWithoutFeedback,
-  View,
-} from 'react-native';
+import {LayoutChangeEvent, StyleSheet, Text, View} from 'react-native';
+import {Gesture, GestureDetector} from 'react-native-gesture-handler';
+import {runOnJS} from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
 import {rem, screenWidth} from 'rn-units';
 
@@ -84,8 +80,19 @@ export const ReferralCountInfo = () => {
     hostViewParams.width,
   ]);
 
+  const tap = Gesture.Tap().onStart(() => {
+    runOnJS(onClose)();
+  });
+  const pan = Gesture.Pan()
+    .minPointers(1)
+    .minDistance(0)
+    .averageTouches(true)
+    .onStart(() => {
+      runOnJS(onClose)();
+    });
+
   return (
-    <TouchableWithoutFeedback onPress={onClose}>
+    <GestureDetector gesture={Gesture.Exclusive(tap, pan)}>
       <View style={commonStyles.flexOne}>
         <RoundedTriangle
           style={[styles.arrow, arrowStyle]}
@@ -117,7 +124,7 @@ export const ReferralCountInfo = () => {
           </View>
         </View>
       </View>
-    </TouchableWithoutFeedback>
+    </GestureDetector>
   );
 };
 
