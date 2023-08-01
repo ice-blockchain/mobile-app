@@ -21,6 +21,7 @@ import {
 import {waitForSelector} from '@store/utils/sagas/effects';
 import {
   call,
+  CallEffect,
   delay,
   put,
   SagaReturnType,
@@ -145,12 +146,14 @@ function* markWalkthroughStep(user: User, step: WalkthroughStep) {
           },
         },
       },
-      function* (freshUser) {
+      function* (
+        freshUser,
+      ): Generator<CallEffect<void>, {retry: boolean}, void> {
         if (
           freshUser.clientData?.walkthroughProgress?.[step.key]?.version !==
           step.version
         ) {
-          markWalkthroughStep(freshUser, step);
+          yield call(markWalkthroughStep, freshUser, step);
         }
         return {retry: false};
       },
@@ -183,8 +186,10 @@ function* markAllWalkthroughSteps(user: User, steps: WalkthroughStep[]) {
           },
         },
       },
-      function* (freshUser) {
-        markAllWalkthroughSteps(freshUser, steps);
+      function* (
+        freshUser,
+      ): Generator<CallEffect<void>, {retry: boolean}, void> {
+        yield call(markAllWalkthroughSteps, freshUser, steps);
         return {retry: true};
       },
     ),

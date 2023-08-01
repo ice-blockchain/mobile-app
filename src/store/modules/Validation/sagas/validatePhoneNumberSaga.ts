@@ -15,7 +15,7 @@ import {
   temporaryVerificationIdSelector,
 } from '@store/modules/Validation/selectors';
 import {getErrorMessage} from '@utils/errors';
-import {call, put, select} from 'redux-saga/effects';
+import {call, CallEffect, put, select} from 'redux-saga/effects';
 
 const actionCreator = ValidationActions.PHONE_VALIDATION.START.create;
 
@@ -49,11 +49,8 @@ export function* validatePhoneNumberSaga(
   }
 }
 
-function* modifyPhoneNumber(
-  userToUpdate: User | null,
-  phoneNumber: string,
-): Generator<unknown, void, void> {
-  return yield call(
+function* modifyPhoneNumber(userToUpdate: User | null, phoneNumber: string) {
+  yield call(
     updateAccountSaga,
     AccountActions.UPDATE_ACCOUNT.START.create(
       {
@@ -61,9 +58,11 @@ function* modifyPhoneNumber(
         skipPhoneNumberValidation: true,
         checksum: userToUpdate?.checksum,
       },
-      function* (freshUser) {
+      function* (
+        freshUser,
+      ): Generator<CallEffect<void>, {retry: boolean}, void> {
         if (freshUser.phoneNumber !== phoneNumber) {
-          modifyPhoneNumber(freshUser, phoneNumber);
+          yield call(modifyPhoneNumber, freshUser, phoneNumber);
         }
         return {retry: false};
       },

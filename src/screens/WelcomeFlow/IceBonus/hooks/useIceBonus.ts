@@ -8,6 +8,7 @@ import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {formatNumberString} from '@utils/numbers';
 import {useDispatch, useSelector} from 'react-redux';
+import {call} from 'redux-saga/effects';
 
 export const useIceBonus = () => {
   const dispatch = useDispatch();
@@ -37,7 +38,7 @@ export const useIceBonus = () => {
             },
           },
           function* (freshUser) {
-            finishIceBonus(freshUser);
+            yield call(finishIceBonus, freshUser);
             return {retry: false};
           },
         ),

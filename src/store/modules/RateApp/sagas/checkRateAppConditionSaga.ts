@@ -13,7 +13,13 @@ import {
 } from '@store/modules/Account/selectors';
 import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {RateAppActions} from '@store/modules/RateApp/actions';
-import {call, put, SagaReturnType, select} from 'redux-saga/effects';
+import {
+  call,
+  CallEffect,
+  put,
+  SagaReturnType,
+  select,
+} from 'redux-saga/effects';
 
 export function* checkRateAppConditionSaga() {
   const isAppActive: ReturnType<typeof isAppActiveSelector> = yield select(
@@ -66,7 +72,9 @@ function* updateRateData(user: User, params?: RateData) {
             rate: {...params},
           },
         },
-        function* (freshUser) {
+        function* (
+          freshUser,
+        ): Generator<CallEffect<void>, {retry: boolean}, void> {
           if (
             freshUser.clientData?.rate?.firstMiningDate !==
               params?.firstMiningDate ||
@@ -75,7 +83,7 @@ function* updateRateData(user: User, params?: RateData) {
             freshUser.clientData?.rate?.lastShowingDate !==
               params?.lastShowingDate
           ) {
-            updateRateData(freshUser, params);
+            yield call(updateRateData, freshUser, params);
           }
           return {retry: false};
         },

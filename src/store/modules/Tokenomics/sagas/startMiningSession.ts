@@ -29,7 +29,14 @@ import {openConfirmResurrectYes} from '@store/modules/Tokenomics/utils/openConfi
 import {openMiningNotice} from '@store/modules/Tokenomics/utils/openMiningNotice';
 import {hapticFeedback} from '@utils/device';
 import {getErrorMessage, showError} from '@utils/errors';
-import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
+import {
+  call,
+  CallEffect,
+  put,
+  SagaReturnType,
+  select,
+  spawn,
+} from 'redux-saga/effects';
 
 export function* startMiningSessionSaga(
   action: ReturnType<
@@ -195,9 +202,11 @@ function* setFirstMiningDate(user: User) {
             rate: {firstMiningDate: dayjs().toISOString()},
           },
         },
-        function* (freshUser) {
+        function* (
+          freshUser,
+        ): Generator<CallEffect<void>, {retry: boolean}, void> {
           if (freshUser.clientData?.rate?.firstMiningDate !== firstMiningDate) {
-            setFirstMiningDate(freshUser);
+            yield call(setFirstMiningDate, freshUser);
           }
           return {retry: false};
         },

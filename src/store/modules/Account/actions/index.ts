@@ -8,8 +8,7 @@ import {
 } from '@services/auth/signin/types';
 import {AuthToken} from '@services/auth/types';
 import {createAction} from '@store/utils/actions/createAction';
-import {Action} from 'redux';
-import {CallEffect, PutEffect} from 'redux-saga/effects';
+import {CallEffect} from 'redux-saga/effects';
 
 const SET_TOKEN = createAction('SET_TOKEN', {
   STATE: (token: AuthToken | null) => ({token}),
@@ -92,11 +91,7 @@ const UPDATE_ACCOUNT = createAction('UPDATE_ACCOUNT', {
     userInfo: Partial<User>,
     raceConditionStrategy: (
       user: User,
-    ) => Generator<
-      PutEffect<Action<unknown>> | CallEffect<unknown>,
-      {retry: boolean},
-      void
-    > = function* () {
+    ) => Generator<CallEffect<void>, {retry: boolean}, void> = function* () {
       return {retry: true};
     },
   ) => ({
