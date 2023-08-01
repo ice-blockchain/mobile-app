@@ -8,7 +8,7 @@ import {t} from '@translations/i18n';
 import {showError} from '@utils/errors';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import RNRestart from 'react-native-restart';
-import {call, put, SagaReturnType, select} from 'redux-saga/effects';
+import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
 const actionCreator = AccountActions.UPDATE_ACCOUNT.START.create;
 
@@ -91,7 +91,7 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       yield put(AccountActions.UPDATE_ACCOUNT.FAILED.create(localizedError));
     } else {
       yield put(AccountActions.UPDATE_ACCOUNT.RESET.create());
-      showError(error);
+      yield spawn(showError, error);
     }
     throw error;
   }

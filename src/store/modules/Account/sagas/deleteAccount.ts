@@ -4,7 +4,7 @@ import {Api} from '@api/index';
 import {AccountActions} from '@store/modules/Account/actions';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {showError} from '@utils/errors';
-import {call, put, select} from 'redux-saga/effects';
+import {call, put, select, spawn} from 'redux-saga/effects';
 
 export function* deleteAccountSaga() {
   try {
@@ -16,7 +16,7 @@ export function* deleteAccountSaga() {
     yield put(AccountActions.SIGN_OUT.START.create({skipMetadataUpdate: true}));
   } catch (error) {
     yield put(AccountActions.DELETE_ACCOUNT.FAILED.create());
-    showError(error);
+    yield spawn(showError, error);
     throw error;
   }
 }
