@@ -2,9 +2,11 @@
 
 import {Achievements} from '@api/achievements/types';
 import {Task} from '@api/tasks/types';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AccountActions} from '@store/modules/Account/actions';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import produce from 'immer';
+import {persistReducer} from 'redux-persist';
 
 interface State {
   tasks: Task[] | null;
@@ -53,4 +55,10 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
   });
 }
 
-export const achievementsReducer = reducer;
+export const achievementsReducer = persistReducer(
+  {
+    key: 'achievements',
+    storage: AsyncStorage,
+  },
+  reducer,
+);

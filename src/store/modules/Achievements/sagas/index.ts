@@ -20,8 +20,10 @@ import {taskMarkCompletedSaga} from './taskMarkCompletedSaga';
 export const achievementsWatchers = [
   takeLatest(
     [
-      AchievementsActions.LEVELS_AND_ROLES_LOAD.START.type,
+      AppCommonActions.APP_STATE_CHANGE.STATE.type,
+      AppCommonActions.APP_INITIALIZED.SUCCESS.type,
       AppCommonActions.INTERVAL_UPDATE.STATE.type,
+      AchievementsActions.LEVELS_AND_ROLES_LOAD.START.type,
     ],
     loadLevelsAndRolesSaga,
   ),
