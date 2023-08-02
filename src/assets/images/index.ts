@@ -100,6 +100,7 @@ export const Images = {
     more: require('./share/more.png'),
     sms: require('./share/sms.png'),
     shareProviders: require('./share/share_providers.png'),
+    shareProviders2: require('./share/share_providers2.png'),
   },
   social: {
     tiktok: require('./social/tiktok.png'),
@@ -107,5 +108,34 @@ export const Images = {
     linkedin: require('./social/linkedin.png'),
     facebook: require('./social/facebook.png'),
     instagram: require('./social/instagram.png'),
+  },
+  creativeLibrary: {
+    getStarted: require('./creative_library/get_started.png'),
+    getStartedCarousel: {
+      '01': require('./creative_library/get_started_carousel/01.png'),
+      '02': require('./creative_library/get_started_carousel/02.png'),
+      '03': require('./creative_library/get_started_carousel/03.png'),
+      join: require('./creative_library/get_started_carousel/join.png'),
+      invite: require('./creative_library/get_started_carousel/invite.png'),
+      earn: require('./creative_library/get_started_carousel/earn.png'),
+    },
+    carousel: {
+      iceBackground: require('./creative_library/carousel/ice_background.png'),
+      ellipseBackground: require('./creative_library/carousel/ellipse_background.png'),
+      videosIcon: require('./creative_library/carousel/videos_icon.png'),
+      imagesIcon: require('./creative_library/carousel/images_icon.png'),
+      browserIcon: require('./creative_library/carousel/browser_icon.png'),
+    },
+    socialSection: {
+      blogs: require('./creative_library/social_section/blogs.png'),
+    },
+    promoSection: {
+      webPromo: require('./creative_library/promo_section/web_promo.png'),
+      mobilePromo: require('./creative_library/promo_section/mobile_promo.png'),
+    },
+    practicesSection: {
+      goodPractices: require('./creative_library/practices_section/good_practices.png'),
+      badPractices: require('./creative_library/practices_section/bad_practices.png'),
+    },
   },
 } as const;

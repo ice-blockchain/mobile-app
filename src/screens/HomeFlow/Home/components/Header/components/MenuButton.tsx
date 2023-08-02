@@ -48,7 +48,7 @@ export const MenuButton = memo(() => {
           />
         ),
         label: t('home.menu.staking'),
-        onPress: () => navigation.navigate('Staking'),
+        onPress: () => navigation.navigate('CreativeIceLibrary'),
       },
       {
         id: 'stats',
