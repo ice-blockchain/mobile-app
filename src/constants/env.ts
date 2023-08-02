@@ -6,6 +6,9 @@ import {isAndroid} from 'rn-units';
 
 export const ENV = {
   APP_ID: config.APP_ID,
+  RATE_THE_ADD_TIMEOUT_MINUTES: config.RATE_THE_ADD_TIMEOUT_MINUTES
+    ? config.RATE_THE_ADD_TIMEOUT_MINUTES.split(',').map(Number)
+    : null,
   APPSTORE_APP_ID: config.APPSTORE_APP_ID,
   BASE_READ_API_URL: config.BASE_READ_API_URL,
   BASE_WRITE_API_URL: config.BASE_WRITE_API_URL,

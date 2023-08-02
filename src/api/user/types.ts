@@ -74,9 +74,16 @@ export type WalkthroughStepProgress = {
 
 export type RegistrationProcessFinalizedStep = 'onboarding' | 'iceBonus';
 
+export type RateData = {
+  firstMiningDate?: string | null;
+  showingsCount?: number | null; //1, 2
+  lastShowingDate?: string | null;
+};
+
 export type ClientData = {
   registrationProcessFinalizedSteps?: RegistrationProcessFinalizedStep[];
   walkthroughProgress?: {[key in WalkthroughStepKey]?: WalkthroughStepProgress};
   miningStateTooltipSeen?: string[];
   phoneNumberIso?: string | null;
+  rate?: RateData | null;
 };

@@ -7,6 +7,7 @@ import {userSelector} from '@store/modules/Account/selectors';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {miningStateSelector} from '@store/modules/Tokenomics/selectors';
 import {useDispatch, useSelector} from 'react-redux';
+import {call} from 'redux-saga/effects';
 
 export const useMiningState = () => {
   const dispatch = useDispatch();
@@ -39,7 +40,7 @@ export const useMiningState = () => {
               seenMiningState,
             )
           ) {
-            setMiningStateTooltipSeen(freshUser, seenMiningState);
+            yield call(setMiningStateTooltipSeen, freshUser, seenMiningState);
           }
           return {retry: false};
         },

@@ -5,6 +5,7 @@ import {AccountActions} from '@store/modules/Account/actions';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {useDispatch, useSelector} from 'react-redux';
+import {call} from 'redux-saga/effects';
 
 export const useUpdateHiddenProfileElements = () => {
   const dispatch = useDispatch();
@@ -42,7 +43,7 @@ export const useUpdateHiddenProfileElements = () => {
             freshUserHiddenElements.includes(typeToUpdate);
 
           if (alreadyHidden && !alreadyHiddenInFreshUser) {
-            updateHiddenProfileElement(freshUser, typeToUpdate);
+            yield call(updateHiddenProfileElement, freshUser, typeToUpdate);
           }
 
           return {retry: false};

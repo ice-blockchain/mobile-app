@@ -3,10 +3,17 @@
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {ResurrectRequiredData} from '@api/tokenomics/types';
+import {User} from '@api/user/types';
 import {LocalAudio} from '@audio';
 import {ENV} from '@constants/env';
 import {loadLocalAudio} from '@services/audio';
-import {userIdSelector} from '@store/modules/Account/selectors';
+import {dayjs} from '@services/dayjs';
+import {AccountActions} from '@store/modules/Account/actions';
+import {
+  firstMiningDateSelector,
+  unsafeUserSelector,
+  userIdSelector,
+} from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {shareSocialsSaga} from '@store/modules/Socials/sagas/shareSocials';
@@ -22,7 +29,14 @@ import {openConfirmResurrectYes} from '@store/modules/Tokenomics/utils/openConfi
 import {openMiningNotice} from '@store/modules/Tokenomics/utils/openMiningNotice';
 import {hapticFeedback} from '@utils/device';
 import {getErrorMessage, showError} from '@utils/errors';
-import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
+import {
+  call,
+  CallEffect,
+  put,
+  SagaReturnType,
+  select,
+  spawn,
+} from 'redux-saga/effects';
 
 export function* startMiningSessionSaga(
   action: ReturnType<
@@ -59,20 +73,22 @@ export function* startMiningSessionSaga(
     }
   }
 
-  const userId: ReturnType<typeof userIdSelector> = yield select(
-    userIdSelector,
+  const user: ReturnType<typeof unsafeUserSelector> = yield select(
+    unsafeUserSelector,
   );
 
   try {
     const miningSummary: SagaReturnType<
       typeof Api.tokenomics.startMiningSession
     > = yield call(Api.tokenomics.startMiningSession, {
-      userId,
+      userId: user.id,
       resurrect: action.payload?.resurrect,
     });
     yield put(
       TokenomicsActions.START_MINING_SESSION.SUCCESS.create(miningSummary),
     );
+
+    yield call(setFirstMiningDate, user);
 
     /**
      * play sound and vibrate after mining started successfully
@@ -169,5 +185,30 @@ function* confirmResurrect(
     );
   } else {
     yield call(confirmResurrect, params);
+  }
+}
+
+function* setFirstMiningDate(user: User) {
+  const firstMiningDate: ReturnType<typeof firstMiningDateSelector> =
+    yield select(firstMiningDateSelector);
+  if (!firstMiningDate) {
+    yield put(
+      AccountActions.UPDATE_ACCOUNT.START.create(
+        {
+          clientData: {
+            ...(user.clientData ?? {}),
+            rate: {firstMiningDate: dayjs().toISOString()},
+          },
+        },
+        function* (
+          freshUser,
+        ): Generator<CallEffect<void>, {retry: boolean}, void> {
+          if (freshUser.clientData?.rate?.firstMiningDate !== firstMiningDate) {
+            yield call(setFirstMiningDate, freshUser);
+          }
+          return {retry: false};
+        },
+      ),
+    );
   }
 }

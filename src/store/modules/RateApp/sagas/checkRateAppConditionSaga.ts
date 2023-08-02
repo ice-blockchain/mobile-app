@@ -1,41 +1,93 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {RateData, User} from '@api/user/types';
+import {ENV} from '@constants/env';
+import {dayjs} from '@services/dayjs';
+import {AccountActions} from '@store/modules/Account/actions';
+import {
+  firstMiningDateSelector,
+  isAuthorizedSelector,
+  lastShowingDateSelector,
+  showingsCountSelector,
+  userSelector,
+} from '@store/modules/Account/selectors';
+import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {RateAppActions} from '@store/modules/RateApp/actions';
-import {RateAppSelectors} from '@store/modules/RateApp/selectors';
-import {miningSummarySelector} from '@store/modules/Tokenomics/selectors';
-import {waitForSelector} from '@store/utils/sagas/effects';
-import {call, put, SagaReturnType, select} from 'redux-saga/effects';
-
-const START_MINING_COUNT = 3;
+import {
+  call,
+  CallEffect,
+  put,
+  SagaReturnType,
+  select,
+} from 'redux-saga/effects';
 
 export function* checkRateAppConditionSaga() {
-  let isRateAppShown: SagaReturnType<typeof RateAppSelectors.isRateAppShown> =
-    yield select(RateAppSelectors.isRateAppShown);
+  const isAppActive: ReturnType<typeof isAppActiveSelector> = yield select(
+    isAppActiveSelector,
+  );
+  const isAuthorized: ReturnType<typeof isAuthorizedSelector> = yield select(
+    isAuthorizedSelector,
+  );
 
-  while (!isRateAppShown) {
-    const initialMiningSummary: ReturnType<typeof miningSummarySelector> =
-      yield select(miningSummarySelector);
+  const user: SagaReturnType<typeof userSelector> = yield select(userSelector);
 
-    yield call(waitForSelector, state => {
-      return (
-        miningSummarySelector(state)?.miningStreak !==
-        initialMiningSummary?.miningStreak
-      );
-    });
+  const firstMiningDate: ReturnType<typeof firstMiningDateSelector> =
+    yield select(firstMiningDateSelector);
+  const lastShowingDate: ReturnType<typeof lastShowingDateSelector> =
+    yield select(lastShowingDateSelector);
+  const showingsCount: ReturnType<typeof showingsCountSelector> = yield select(
+    showingsCountSelector,
+  );
 
-    const miningSummary: ReturnType<typeof miningSummarySelector> =
-      yield select(miningSummarySelector);
+  if (!isAppActive || !isAuthorized) {
+    return;
+  }
 
-    const miningStreak = miningSummary?.miningStreak ?? 0;
+  const timeouts = ENV.RATE_THE_ADD_TIMEOUT_MINUTES;
+  if (timeouts) {
+    const shouldShowRateApp =
+      showingsCount < timeouts.length &&
+      dayjs().diff(lastShowingDate ?? firstMiningDate, 'minute') >=
+        timeouts[showingsCount];
 
-    isRateAppShown = yield select(RateAppSelectors.isRateAppShown);
+    if (user && shouldShowRateApp) {
+      const params: RateData = {
+        lastShowingDate: dayjs().toISOString(),
+        showingsCount: showingsCount + 1,
+      };
 
-    if (
-      !isRateAppShown &&
-      miningStreak >= START_MINING_COUNT &&
-      miningStreak % START_MINING_COUNT === 0
-    ) {
+      yield call(updateRateData, user, params);
       yield put(RateAppActions.SHOW_RATE_APP.START.create());
     }
+  }
+}
+
+function* updateRateData(user: User, params?: RateData) {
+  if (params) {
+    yield put(
+      AccountActions.UPDATE_ACCOUNT.START.create(
+        {
+          clientData: {
+            ...(user.clientData ?? {}),
+            rate: {...params},
+          },
+        },
+        function* (
+          freshUser,
+        ): Generator<CallEffect<void>, {retry: boolean}, void> {
+          if (
+            freshUser.clientData?.rate?.firstMiningDate !==
+              params?.firstMiningDate ||
+            freshUser.clientData?.rate?.showingsCount !==
+              params?.showingsCount ||
+            freshUser.clientData?.rate?.lastShowingDate !==
+              params?.lastShowingDate
+          ) {
+            yield call(updateRateData, freshUser, params);
+          }
+          return {retry: false};
+        },
+      ),
+    );
   }
 }

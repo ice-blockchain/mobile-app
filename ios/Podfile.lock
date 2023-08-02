@@ -792,8 +792,6 @@ PODS:
     - React-Core
   - RNPermissions (3.6.1):
     - React-Core
-  - RNRate (1.2.12):
-    - React-Core
   - RNReactNativeHapticFeedback (1.14.0):
     - React-Core
   - RNReanimated (3.3.0):
@@ -839,6 +837,8 @@ PODS:
     - React-Core
     - RNSound/Core (= 0.11.2)
   - RNSound/Core (0.11.2):
+    - React-Core
+  - RNStoreReview (0.4.1):
     - React-Core
   - RNSVG (13.6.0):
     - React-Core
@@ -965,7 +965,6 @@ DEPENDENCIES:
   - RNLocalize (from `../node_modules/react-native-localize`)
   - "RNNotifee (from `../node_modules/@notifee/react-native`)"
   - RNPermissions (from `../node_modules/react-native-permissions`)
-  - RNRate (from `../node_modules/react-native-rate`)
   - RNReactNativeHapticFeedback (from `../node_modules/react-native-haptic-feedback`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
@@ -973,6 +972,7 @@ DEPENDENCIES:
   - RNSha256 (from `../node_modules/react-native-sha256`)
   - RNShare (from `../node_modules/react-native-share`)
   - RNSound (from `../node_modules/react-native-sound`)
+  - RNStoreReview (from `../node_modules/react-native-store-review`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -1186,8 +1186,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@notifee/react-native"
   RNPermissions:
     :path: "../node_modules/react-native-permissions"
-  RNRate:
-    :path: "../node_modules/react-native-rate"
   RNReactNativeHapticFeedback:
     :path: "../node_modules/react-native-haptic-feedback"
   RNReanimated:
@@ -1202,6 +1200,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-share"
   RNSound:
     :path: "../node_modules/react-native-sound"
+  RNStoreReview:
+    :path: "../node_modules/react-native-store-review"
   RNSVG:
     :path: "../node_modules/react-native-svg"
   Yoga:
@@ -1328,7 +1328,6 @@ SPEC CHECKSUMS:
   RNLocalize: 0df7970cfc60389f00eb62fd7c097dc75af3fb4f
   RNNotifee: 05692d7bb42b6c718a3906aeb8431c48ff2e8097
   RNPermissions: dcdb7b99796bbeda6975a6e79ad519c41b251b1c
-  RNRate: ef3bcff84f39bb1d1e41c5593d3eea4aab2bd73a
   RNReactNativeHapticFeedback: 1e3efeca9628ff9876ee7cdd9edec1b336913f8c
   RNReanimated: 9f7068e43b9358a46a688d94a5a3adb258139457
   RNScreens: 50ffe2fa2342eabb2d0afbe19f7c1af286bc7fb3
@@ -1336,6 +1335,7 @@ SPEC CHECKSUMS:
   RNSha256: 80bea5b2e7005f813f6438cb41e573b3d531146c
   RNShare: 36aa3e6958373a0ad1c95a1c960adef589da3794
   RNSound: 6c156f925295bdc83e8e422e7d8b38d33bc71852
+  RNStoreReview: 923b1c888c13469925bf0256dc2c046eab557ce5
   RNSVG: 3a79c0c4992213e4f06c08e62730c5e7b9e4dc17
   Sentry: c7a86f43510a7d5678d4de28d78c28ab351d295b
   SentryPrivate: 2eaabf598a46d4b9b8822aef766df2a84caf2e6f
