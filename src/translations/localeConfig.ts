@@ -8,6 +8,9 @@ import {Translations} from '@translations/locales/en.json';
  */
 
 export type SupportedLocale =
+  | 'fa'
+  | 'he'
+  | 'ur'
   | 'ar'
   | 'en'
   | 'de'
@@ -59,6 +62,30 @@ export type LocalConfig = {
 };
 
 export const localeConfig: LocalConfig = {
+  fa: {
+    get translations() {
+      return require('./locales/fa.json');
+    },
+    name: 'Persian',
+    flag: flags.ir,
+    isRTL: true,
+  },
+  he: {
+    get translations() {
+      return require('./locales/he.json');
+    },
+    name: 'Hebrew',
+    flag: flags.il,
+    isRTL: true,
+  },
+  ur: {
+    get translations() {
+      return require('./locales/ur.json');
+    },
+    name: 'Urdu',
+    flag: flags.pk,
+    isRTL: true,
+  },
   ar: {
     get translations() {
       return require('./locales/ar.json');

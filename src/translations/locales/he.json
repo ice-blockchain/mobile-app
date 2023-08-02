@@ -1,787 +1,841 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "ברוכים הבאים ל-ice",
+      "description": "[[:ice]] זהו מטבע דיגיטלי שניתן להרוויח באמצעות הטלפון. ice הוא בבעלות משתמשים רגילים בדיוק כמוכם, ואף מופעל על ידם."
     },
     "page2": {
-      "title": "Planet Friendly",
-      "description": "[[:ice]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "title": "ידידותי לפלנטה",
+      "description": "[[:ice]] הוא מטבעו חסכוני יותר באנרגיה מ-BTC מכיוון שהוא משתמש במנגנון הקונצנזוס \"מערכת הוכחת סיכון\". עם מערכת הוכחת סיכון (proof-of-stake, POS), בעלי מטבעות קריפטוגרפיים מאמתים עסקאות בלוק על סמך מספר המטבעות שהמאמת מסכן."
     },
     "page3": {
-      "title": "People’s Coin",
-      "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:ice]] will be open source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "title": "מטבע לכולם",
+      "description_part1": "הכוח בידיכם.",
+      "description_part2": "כל מה שאנו מפתחים ב-[[:ice]] הינו תחת קוד פתוח ונשלט על ידי הארגון האוטונומי המבוזר (Decentralized Autonomous Organization - DAO)."
     },
     "page4": {
-      "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "title": "הישארו מחוברים",
+      "description": "לחצו על [[:iceLogo]] לצ'ק-אין היומי שלכם עם האפליקציה הניידת החינמית שלנו, שצריכת האנרגיה שלה נמוכה. הלחיצה היומית שלכם מבטיחה ש-ice יגיע לידיים של בני אדם אמיתיים, ולא לידיהם של בוטים."
     },
     "page5": {
-      "title": "Refer & Earn",
-      "description": "Invite your friends and earn (both of you) up to {{value}}% bonus on your base earning rate for each friend that joins your team."
+      "title": "הזמינו אנשים והרוויחו",
+      "description": "הזמינו את החברים שלכם והרוויחו (גם אתם וגם החברים) בונוס של עד 25% על קצב ההכנסה הבסיסי שלכם עבור כל חבר שמצטרף לצוות שלכם."
     },
     "page6": {
-      "title": "Notifications",
-      "description_part1": "[[:ice]] check-in sessions only last for {{value}} hours. Would you like to receive a notification when your current session ends?",
-      "description_part2": "Don’t worry, we will not spam you!",
-      "not_now": "Not now"
+      "title": "התראות",
+      "description_part1": "[[:ice]] כל צ'ק-אין נמשך רק 24 שעות. האם ברצונכם לקבל הודעה כאשר הצ'ק-אין הנוכחי שלכם מסתיים?",
+      "description_part2": "אל דאגה, לא נספים אתכם!",
+      "not_now": "לא עכשיו"
     }
   },
   "button": {
-    "yes_btn": "Yes, please",
-    "next_btn": "Next",
-    "not_now": "Not now",
-    "view_all": "view all",
+    "yes_btn": "כן, בבקשה",
+    "next_btn": "הבא",
+    "not_now": "לא עכשיו",
+    "view_all": "צפייה בהכל",
     "invite_friend": {
-      "title": "Invite Friends",
-      "description_part1": "Earn extra ",
-      "description_part2": " by inviting your friends."
+      "title": "הזמנת חברים",
+      "description": "הרוויחו תוספת של [[:ice]] ע\"י הזמנת חברים."
     },
-    "no": "No",
-    "search_country": "Search for country",
-    "save": "Save",
-    "yes": "Yes",
-    "change": "Change",
-    "no_cancel": "No, cancel",
-    "complete": "Complete",
-    "cancel": "Cancel",
-    "clear": "Clear",
-    "finish": "Finish",
-    "next_step": "Next Step",
-    "see_all": "see all",
-    "back": "Back",
-    "search": "Search",
-    "continue": "Continue",
-    "apply": "Apply",
-    "reset": "Reset",
-    "skip_all": "Skip all",
-    "done": "Done",
-    "confirm": "Confirm",
-    "do_this_later": "Do this later",
-    "resurrect_me": "Resurrect Me",
-    "claim_bonus": "Claim Bonus",
-    "close": "Close",
-    "try_again": "Try Again",
-    "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "see_all": "לראות הכל",
+    "no": "לא",
+    "search_country": "חיפוש מדינה",
+    "save": "שמירה",
+    "yes": "כן",
+    "change": "שינוי",
+    "no_cancel": "ביטול",
+    "complete": "השלמה",
+    "cancel": "ביטול",
+    "clear": "ניקוי",
+    "finish": "סיום",
+    "next_step": "השלב הבא",
+    "back": "חזרה",
+    "search": "חיפוש",
+    "continue": "המשך",
+    "apply": "להחיל",
+    "reset": "איפוס",
+    "skip_all": "לדלג על הכל",
+    "done": "בוצע",
+    "confirm": "אישור",
+    "do_this_later": "אחר-כך",
+    "resurrect_me": "החיו אותי",
+    "claim_bonus": "תביעת בונוס",
+    "close": "סגירה",
+    "try_again": "נסו שנית",
+    "view_changelog": "צפייה ביומן השינויים",
+    "disable": "כיבוי",
+    "agree": "אני מסכים/ה",
+    "learn_more": "מידע נוסף",
+    "back_to_login": "חזרה להתחברות",
+    "follow_us": "עקבו אחרינו",
+    "subscribe": "הרשמה"
   },
   "team": {
-    "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
+    "contacts_tab": "אנשי קשר",
+    "tierOne_tab": "דרגה 1",
+    "tierTwo_tab": "דרגה 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
-      "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "title": "אין לכם כרגע שום מוזמנים ל-[[:title]]!",
+      "contacts": "אין לכם כרגע אנשי קשר בספר הטלפונים.",
+      "button_title": "הזמנת חברים"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is better with friends",
-      "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_title": "[[:ice]] יותר טוב עם חברים",
+      "empty_button_title": "אפשרו גישה לאנשי קשר",
+      "empty_description": "סנכרנו את אנשי הקשר שלכם כדי לראות מי כבר משתמש ב-[[:ice]]. בעתיד, תוכלו לשלוח ice לכל אחד מאנשי הקשר שלכם."
     },
     "header": {
-      "search_placeholder": "Search for users",
-      "referrals": "Referrals",
-      "earnings": "Earnings"
+      "search_placeholder": "חפשו משתמשים",
+      "referrals": "מוזמנים",
+      "earnings": "רווחים"
     },
     "confirm_code": {
-      "title": "Confirm Code",
-      "description": "Please enter the confirmation code you have received on your phone.",
-      "placeholder": "Enter the code",
-      "button": "Confirm your code now"
+      "title": "אישור קוד",
+      "description": "יש להזין את קוד האישור שנשלח לטלפון שלכם.",
+      "placeholder": "הזינו את הקוד",
+      "button": "אשרו את הקוד שלכם עכשיו"
     },
     "confirm_phone": {
-      "title": "Confirm Phone",
-      "description": "Please confirm your country code and enter your phone number."
+      "title": "אישור טלפון",
+      "description": "אנא אשרו את קידומת המדינה שלכם והזינו את מספר הטלפון שלכם."
     },
     "contacts_list": {
       "ice_header": {
-        "friends": "friends"
+        "friends": "חברים"
       },
-      "all_contacts": "All contacts",
-      "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "all_contacts": "כל אנשי הקשר",
+      "invite": "הזמנה",
+      "invitation_text": "שלום {{name}}, אני רוצה להזמין אותך להצטרף ל-ice."
     },
     "tier_one": {
       "header_list": {
-        "title_earnings": "Tier 1 Earnings"
+        "title_earnings": "הכנסה מדרגה 1"
       }
     },
     "tier_two": {
       "header_list": {
-        "title_earnings": "Tier 2 Earnings"
+        "title_earnings": "הכנסה מדרגה 2"
       }
     }
   },
   "signIn": {
-    "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
-    "welcome": "Welcome to ice",
-    "email": "Email",
-    "slogan": "Global Currency Reset",
-    "privacy": {
-      "description": "By continuing, you agree to our ",
-      "terms": "Terms of Service",
-      "and": " and ",
-      "policy": "Privacy Policy"
-    }
+    "logInSignUp": "התחברות / הרשמה",
+    "phone": "טלפון",
+    "or": "או",
+    "reset_password": "איפוס סיסמה",
+    "welcome": "ברוכים הבאים ל-ICE",
+    "email": "אימייל",
+    "slogan": "איפוס המטבעות העולמי",
+    "privacy": "המשך מהווה את הסכמתכם ל[[:link]]תנאי השירות[[/:link]] ול[[:link]]מדיניות הפרטיות[[/:link]]"
   },
   "claimUsername": {
-    "title": "Claim nickname",
-    "description": "Your friends will need to use this nickname to join your team",
-    "inputPlaceholder": "Enter your nickname",
-    "note_part1": "When creating a nickname, use only letters, numbers, and periods.",
-    "note_part2": "Example:",
+    "title": "תביעת כינוי",
+    "description": "החברים שלכם יצטרכו להשתמש בכינוי הזה כדי להצטרף לצוות שלכם.",
+    "inputPlaceholder": "הזינו את הכינוי שלכם",
+    "note_part1": "בעת יצירת כינוי, השתמשו רק באותיות באנגלית, מספרים ונקודות.",
+    "note_part2": "לדוגמה:",
     "note_example": "your.name01"
   },
   "whoInvitedYou": {
-    "title": "Who invited you?",
-    "description": "Enter the nickname of the person who invited you",
-    "inputPlaceholder": "Enter nickname",
-    "dontHaveInvitationCode": "By completing this step, you and your friend will receive a {{value}}% bonus on the base earning rate when you are both checking-in at the same time.",
-    "confirm_text": "Are you sure that you would like to set a random member as your referral?\n\nThis cannot be undone!",
-    "dontHaveCodeTip": "If you don't have an invitation code we will\nselect a random member as your referral!"
+    "title": "מי הזמין אתכם?",
+    "description": "הזינו את הכינוי של האדם שהזמין אתכם.",
+    "inputPlaceholder": "הזינו כינוי",
+    "dontHaveInvitationCode": "על ידי השלמת שלב זה, גם אתם וגם האדם שהזמנתם תקבלו בונוס של 25% לקצב ההכנסה הבסיסי כאשר שניכם עושים צ'ק-אין בו זמנית.",
+    "dontHaveCodeTip": "אם אין לכם קוד הזמנה, אנו נבחר חבר אקראי בתור מי שהזמין אתכם!"
   },
   "errors": {
-    "nicknameSize": "Nickname size: 4-20 characters.",
-    "removeInvalidCharacters": "Remove invalid characters.",
-    "validation_error": "Some validation error",
-    "multiple_accounts": "Email/phone number is associated with another account. Please log into that account to prove ownership, then logout and log back into this one. If you do not own that other account or are unable to log into it, please contact our support",
-    "wrong_phone_number": "Invalid phone number, please try again",
-    "invalid_username": "Nickname is invalid.",
-    "already_taken": "{{field}} already taken",
-    "phone_number_already_in_use": "Phone number already in use",
-    "invalid_validation_code": "Invalid code number, please try again!",
-    "validation_expired": "Validation expired",
-    "validation_not_found": "Validation not found",
-    "invalid_email": "Invalid email",
-    "invalid_ref_username": "Nickname is invalid.",
-    "invalid_phone": "Invalid phone number",
-    "user_disabled": "User has been disabled",
-    "expired_action_code": "OTP in email link is expired",
-    "account_exists_with_different_credential": "There already exists an account with the email address asserted by the credential",
-    "invalid_credential": "The credential is malformed or has expired",
-    "operation_not_allowed": "The type of account corresponding to the credential is not enabled",
-    "user_not_found_for_email": "There is no user corresponding to the given email",
-    "user_not_found": "User not found",
-    "auth_in_progress": "Sign-In already in progress",
-    "google_play_services_not_available": "Google Play services are not available on the device",
-    "unknown_error_with_code": "Unknown error {{code}}",
-    "no_such_provider": "You do not have this provider linked",
-    "min_username": "Minimum length is 4 characters.",
-    "max_username": "Maximum length is 30 characters.",
-    "code_expired": "The code has expired. Please ask for a new code.",
-    "too_many_requests": "Too many requests. Please try again later.",
-    "network_error_title": "No internet connection",
-    "network_error_message": "Your device does not have any active internet connection",
-    "unknown_error": "Some error occurred, please try again later",
-    "general_error_title": "Oups...",
-    "general_error_message": "Looks like something went wrong. Our team is working on fixing it right now",
-    "general_network_error": "A network error has occurred. Please check your connection.",
-    "credential_already_in_use": "This credential is already associated with a different user account.",
-    "email_already_in_use": "The email address is already in use by another account.",
-    "user_token_expired": "Your credentials is no longer valid. Please sign in again",
-    "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "nicknameSize": "אורך כינוי: 4-20 תווים.",
+    "removeInvalidCharacters": "יש להסיר תווים לא חוקיים.",
+    "validation_error": "אירעה שגיאת אימות כלשהי.",
+    "multiple_accounts": "חשבון האימייל/מספר הטלפון שייך לחשבון משתמש אחר. היכנסו לחשבון ההוא כדי להוכיח בעלות, ולאחר מכן צאו והתחברו שוב לחשבון זה. אם החשבון האחר אינו בבעלותכם או שאינכם יכולים להיכנס אליו, אנא צרו קשר עם התמיכה שלנו.",
+    "wrong_phone_number": "מספר הטלפון אינו חוקי, אנא נסו שוב.",
+    "invalid_username": "הכינוי אינו חוקי.",
+    "email_already_taken": "כתובת האימייל כבר תפוסה.",
+    "phone_number_already_taken": "מספר הטלפון כבר תפוס.",
+    "invalid_validation_code": "מספר הקוד אינו חוקי, אנא נסו שוב.",
+    "validation_expired": "פג תוקף האימות",
+    "validation_not_found": "לא נמצא אימות",
+    "invalid_email": "אימייל לא חוקי.",
+    "invalid_password": "סיסמה לא חוקית.",
+    "invalid_ref_username": "הכינוי אינו חוקי.",
+    "invalid_phone": "מספר הטלפון אינו חוקי.",
+    "user_disabled": "המשתמש הושבת.",
+    "expired_action_code": "פג תוקפה של הסיסמה החד-פעמית (OTP) שבקישור האימייל.",
+    "account_exists_with_different_credential": "כבר קיים חשבון המשויך לכתובת האימייל שהוזנה.",
+    "invalid_credential": "האישורים שגויים או שפג תוקפם.",
+    "operation_not_allowed": "סוג החשבון המתאים לפרטים אינו מופעל.",
+    "user_not_found_for_email": "אין משתמש המתאים לאימייל שניתן.",
+    "user_not_found": "המשתמש לא נמצא.",
+    "auth_in_progress": "ההתחברות כבר בעיצומה.",
+    "google_play_services_not_available": "שירותי Google Play אינם זמינים במכשיר זה.",
+    "unknown_error_with_code": "שגיאה לא ידועה: {{code}}",
+    "no_such_provider": "ספק זה אינו מקושר עבורכם.",
+    "min_username": "האורך המינימלי הוא 4 תווים.",
+    "max_username": "האורך המקסימלי הוא 30 תווים.",
+    "code_expired": "פג תוקף הקוד, יש לבקש קוד חדש.",
+    "too_many_requests": "יותר מדי בקשות. יש לנסות שנית מאוחר יותר.",
+    "network_error_title": "אין חיבור לאינטרנט",
+    "network_error_message": "למכשיר שלכם אין חיבור אינטרנט פעיל.",
+    "unknown_error": "אירעה שגיאה, יש לנסות שנית מאוחר יותר.",
+    "general_error_title": "אופס...",
+    "general_error_message": "נראה שמשהו השתבש. הצוות שלנו פועל לתקן את הבעיה כבר עכשיו.",
+    "general_network_error": "אירעה שגיאת רשת, אנא בדקו את החיבור שלכם.",
+    "credential_already_in_use": "אישורים אלה כבר משויכים לחשבון של משתמש אחר.",
+    "email_already_in_use": "כתובת האימייל כבר נמצאת בשימוש על ידי חשבון אחר.",
+    "user_token_expired": "האישורים שלכם אינם תקפים עוד, אנא התחברו שוב.",
+    "requires_recent_login": "פעולה זו רגישה ודורשת אימות עדכני. אנא התחברו שוב.",
+    "same_email": "לא ניתן להשתמש באותה כתובת אימייל.",
+    "weak_password": "סיסמה חלשה.",
+    "wrong_password": "סיסמה שגויה.",
+    "no_camera_permissions": "לא הוענקו הרשאות מצלמה.",
+    "no_library_permissions": "לא הוענקו הרשאות ספרייה."
   },
   "profile": {
     "my_roles": {
-      "title": "My Role"
+      "title": "התפקיד שלי"
     },
-    "mining_calculator": "earnings calculator",
-    "invite_friends": "Invite Friends",
-    "invite_friends_engage": "Spread the word and invite your friends. The more referrals, the more you’ll earn!",
-    "global_rank": "global rank",
-    "view_all_roles": "view all roles",
-    "data_is_hidden": "data is hidden",
-    "progress_text": "{{value}} of {{total}}",
+    "mining_calculator": "מחשבון רווח",
+    "invite_friends": "הזמנת חברים",
+    "invite_friends_engage": "הפיצו את הבשורה והזמינו את חבריכם. ככל שתשלחו יותר הזמנות, כך תרוויחו יותר!",
+    "global_rank": "דירוג גלובלי",
+    "view_all_roles": "לצפייה בכל התפקידים",
+    "data_is_hidden": "הנתונים מוסתרים",
+    "progress_text": "{{value}} מתוך {{total}}",
     "not_found": {
-      "title": "User was not found",
-      "description": "oops, we couldn't find this user"
+      "title": "המשתמש לא נמצא.",
+      "description": "אופס, לא הצלחנו למצוא את המשתמש הזה."
     },
     "my_badges": {
-      "title": "My Badges"
+      "title": "התגים שלי"
     },
     "badges": {
-      "title": "Badges"
+      "title": "תגים"
     },
     "roles": {
-      "title": "Roles"
+      "title": "תפקידים"
     },
     "badge_types": {
       "coin": {
-        "title": "Coins",
-        "description": "coins"
+        "title": "מטבעות",
+        "description": "מטבעות"
       },
       "social": {
-        "title": "Social",
-        "description": "friends"
+        "title": "חברתי",
+        "description": "חברים"
       },
       "level": {
-        "title": "Level",
-        "description": "Level"
+        "title": "רמה",
+        "description": "רמה"
       }
     }
   },
   "global": {
-    "level": "level",
-    "referrals": "referrals",
-    "coins": "Coins",
-    "social": "Social",
-    "phone_number": "Phone number",
-    "years": "Years",
-    "of": "of",
-    "attention": "Attention",
-    "email_address": "Email address",
-    "data_hidden": "data is hidden",
-    "pull_to_refresh": "pull to update",
-    "comingSoon": "Coming soon",
+    "level": "רמה",
+    "referrals": "הזמנות",
+    "coin": "מטבעות",
+    "social": "רשת חברתית",
+    "phone_number": "מספר טלפון",
+    "years": "שנים",
+    "of": "מתוך",
+    "attention": "לתשומת לבכם",
+    "email_address": "כתובת אימייל",
+    "password": "סיסמה",
+    "data_hidden": "הנתונים מוסתרים",
+    "pull_to_refresh": "משכו כדי לעדכן",
+    "comingSoon": "בקרוב",
     "date": {
-      "today": "Today"
+      "today": "היום"
     }
   },
   "mining_calculator": {
-    "result_label": "You will earn",
-    "active_inviter": "Active inviter",
-    "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "result_label": "תרוויחו",
+    "active_inviter": "מזמין פעיל",
+    "tier_1_ref": "מוזמנים מדרגה 1",
+    "tier_2_ref": "מוזמנים מדרגה 2",
+    "active_miners": "מוזמנים פעילים"
   },
   "home": {
     "wallet": {
-      "title": "WALLET",
-      "rate": "EARNING RATE",
-      "balance": "CURRENT BALANCE"
+      "title": "ארנק",
+      "rate": "קצב הכנסה",
+      "balance": "יתרה נוכחית"
     },
     "pioneer": {
-      "title": "PIONEER",
-      "rank": "GLOBAL RANK",
-      "referrals": "REFERRALS",
-      "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "rank": "דירוג גלובלי",
+      "referrals": "מוזמנים",
+      "description": "הזמינו עוד משתמשים והרוויחו עוד [[:ice]]."
     },
     "referrals": {
-      "title": "REFERRALS",
-      "description": "Referral stats for the previous 5 days",
-      "no_referrals_description": "You don't have any referrals yet",
-      "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "title": "מוזמנים",
+      "description": "סטטיסטיקת מוזמנים עבור 5 הימים הקודמים.",
+      "no_referrals_description": "עוד אין לכם שום מוזמנים.",
+      "users_tier_1": "משתמשים מדרגה 1",
+      "users_tier_2": "משתמשים מדרגה 2"
     },
     "adoption": {
-      "title": "ADOPTION",
-      "level": "level",
-      "users": "\nusers"
+      "title": "אימוץ",
+      "level": "רמה",
+      "users": "משתמשים"
     },
-    "steps": {
-      "title": "Your progress",
-      "description": "Complete the tasks below and level up!",
-      "step_one": {
-        "title": "Claim your nickname",
-        "description": "Set it and start earning from your invite"
+    "tasks": {
+      "achievements": "הישגים",
+      "title": "ההתקדמות שלכם",
+      "description": "השלימו את המשימות בהמשך ועלו רמה!",
+      "completed": {
+        "title": "מזל טוב",
+        "description": "המשיכו לעשות צ'ק-אין מדי יום כדי לזכות בפרסים נוספים!"
       },
-      "step_two": {
-        "title": "Start mining",
-        "description": "Your first mining session"
+      "popup": {
+        "title": "הצטרפו לערוץ הטלגרם שלנו",
+        "description": "ציינו את הכינוי שלכם בטלגרם.",
+        "placeholder": "כינוי"
       },
-      "step_three": {
-        "title": "Profile picture",
-        "description": "Upload your profile image"
+      "claim_username": {
+        "title": "תביעת כינוי",
+        "description": "הגדירו אותו ושתפו אותו עם חבריכם."
       },
-      "step_four": {
-        "title": "Join Telegram",
-        "description": "Be part of our community and join now"
+      "start_mining": {
+        "title": "התחילו להרוויח",
+        "description": "הצ'ק-אין הראשון שלכם."
       },
-      "step_five": {
-        "title": "Follow us on Twitter",
-        "description": "Let’s keep in touch, follow us on twitter"
+      "upload_profile_picture": {
+        "title": "תמונת פרופיל",
+        "description": "העלו את תמונת הפרופיל שלכם."
       },
-      "step_six": {
-        "title": "Invite 5 Friends",
-        "description": "Create your team and increase your earnings"
+      "join_telegram": {
+        "title": "הצטרפו לטלגרם",
+        "description": "הפכו לחלק מהקהילה שלנו והצטרפו עכשיו."
+      },
+      "follow_us_on_twitter": {
+        "title": "עקבו אחרינו בטוויטר",
+        "description": "בואו נשמור על קשר, עקבו אחרינו בטוויטר."
+      },
+      "invite_friends": {
+        "title": "הזמינו 5 חברים",
+        "description": "הגדילו את הצוות שלכם ובהתאם גם את הרווחים שלכם."
       }
     },
     "overview": {
-      "title": "Overview"
+      "title": "סקירה כללית"
     },
     "menu": {
-      "notifications": "Notifications",
-      "staking": "Staking",
-      "stats": "Stats",
-      "help": "Help"
-    },
-    "tasks": {
-      "title": "ACHIEVEMENTS"
+      "notifications": "התראות",
+      "staking": "סיכון",
+      "stats": "סטטיסטיקה",
+      "help": "עזרה"
     },
     "team": {
-      "title": "Team",
-      "view_team": "view team"
+      "title": "צוות",
+      "view_team": "צפייה בצוות"
     },
     "mining_rate": {
-      "title": "EARNING RATE",
-      "base": "Base"
+      "title": "קצב הכנסה",
+      "base": "בסיס"
     },
     "engagement": {
-      "title": "ENGAGEMENT",
-      "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
-      "streak": "STREAK",
-      "days_off": "DAYS OFF"
+      "title": "מעורבות",
+      "description_part1": "רצף מתייחס למספר הימים הרצופים בהם עשיתם צ'ק-אין.",
+      "description_part2": "על כל 6 ימים רצופים מקבלים יום חופש אחד.",
+      "streak": "רצף",
+      "days_off": "ימי חופש"
     }
   },
   "settings": {
-    "title": "Settings",
-    "profile": "Profile",
-    "legal": "Legal",
-    "support": "Support",
-    "personal_information_title": "Personal Information",
-    "personal_information_description": "Manage your profile details",
-    "notifications_title": "Notifications",
-    "notifications_description": "Manage your notifications here",
-    "push_notifications_title": "Push Notifications",
-    "push_notifications_description": "Customize your push notification settings",
-    "email_notifications_title": "Email Notifications",
-    "email_notifications_description": "Customize your email notification settings",
-    "terms_title": "Terms of Service",
-    "terms_description": "Review our terms of service",
-    "privacy_title": "Privacy Policy",
-    "privacy_description": "Learn about our privacy policy",
-    "feedback_title": "Send Feedback",
-    "feedback_description": "Share your thoughts with us",
-    "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
-    "delete_title": "Delete Account",
-    "delete_description": "Erase your account",
-    "delete_confirmation_title": "Are you sure you want to remove the account?",
-    "delete_confirmation_yes": "Yes, erase",
-    "logout_title": "Log Out",
-    "logout_description": "Sign off and take a break",
-    "logout_confirmation_title": "Are you sure you want to sign off?",
-    "logout_confirmation_yes": "Yes, log out",
+    "title": "הגדרות",
+    "profile": "פרופיל",
+    "legal": "משפטי",
+    "support": "תמיכה",
+    "personal_information_title": "מידע אישי",
+    "personal_information_description": "נהלו את פרטי הפרופיל שלכם.",
+    "notifications_title": "התראות",
+    "notifications_description": "נהלו את ההתראות שלכם כאן.",
+    "push_notifications_title": "התראות דחיפה",
+    "push_notifications_description": "התאימו אישית את ההגדרות של התראות הדחיפה שלכם.",
+    "email_notifications_title": "התראות אימייל",
+    "email_notifications_description": "התאימו אישית את ההגדרות של התראות האימייל שלכם.",
+    "terms_title": "תנאי השירות",
+    "terms_description": "עיינו בתנאי השירות שלנו",
+    "privacy_title": "מדיניות פרטיות",
+    "privacy_description": "למדו על מדיניות הפרטיות שלנו.",
+    "feedback_title": "שליחת משוב",
+    "feedback_description": "שתפו אותנו במחשבותיכם.",
+    "invite_title": "הזמינו חבר",
+    "invite_description": "הרוויחו תוספת ice ע\"י הזמנת חברים.",
+    "delete_title": "מחיקת חשבון",
+    "delete_description": "מחיקת חשבון.",
+    "delete_confirmation_title": "האם בוודאות ברצונך למחוק את החשבון?",
+    "delete_confirmation_yes": "כן, אני רוצה למחוק",
+    "logout_title": "התנתקות",
+    "logout_description": "התנתקו וקחו הפסקה.",
+    "logout_confirmation_title": "האם בוודאות ברצונך להתנתק?",
+    "logout_confirmation_yes": "כן, אני רוצה להתנתק",
     "confirm_phone": {
-      "title": "Confirm New Phone",
-      "description": "Please confirm your country code and enter your new phone number.",
-      "button": "Confirm new phone number"
+      "title": "אישור טלפון חדש",
+      "description": "אנא אשרו את קידומת המדינה שלכם והזינו את מספר הטלפון החדש שלכם.",
+      "button": "אישור מספר טלפון חדש"
     },
     "notifications": {
-      "enable_prompt": "Notifications are not allowed. Do you want to enable them",
-      "channel_achievements": "Achievements",
-      "channel_news": "News",
-      "channel_reminders": "Reminders",
-      "channel_team": "Team",
-      "type_push": "PUSH",
-      "type_email": "EMAIL",
-      "disable_notifications": "Disable Notifications?",
-      "disable_notifications_description": "By disabling notifications you will not be able to receive updates when you can start checking-in, news or team information",
+      "enable_prompt": "אין הרשאה להתראות האם ברצונכם לאפשר אותן?",
+      "channel_achievements": "הישגים",
+      "channel_news": "חדשות",
+      "channel_reminders": "תזכורות",
+      "channel_team": "צוות",
+      "type_push": "דחיפה",
+      "type_email": "אימייל",
+      "disable_notifications": "לבטל התראות?",
+      "disable_notifications_description": "ביטול התראות ימנע מכם לקבל חדשות, מידע על הצוות, או עדכונים לגבי מתי ניתן להתחיל לבצע צ'ק-אין.",
       "domain": {
         "disable_all": {
           "title": "",
           "description": ""
         },
         "weekly_stats": {
-          "title": "Weekly stats",
-          "description": "Receive notifications about your activity"
+          "title": "סטטיסטיקות שבועיות",
+          "description": "קבלו התראות על הפעילות שלכם."
         },
         "weekly_report": {
-          "title": "Weekly report",
-          "description": "Receive notifications about your activity"
+          "title": "דו\"ח שבועי",
+          "description": "קבלו התראות על הפעילות שלכם."
         },
         "achievements": {
-          "title": "Achievements",
-          "description": "Receive notifications about your progress"
+          "title": "הישגים",
+          "description": "קבלו התראות על ההתקדמות שלכם."
         },
         "promotions": {
-          "title": "Promotions",
-          "description": "Receive notifications on how to grow your team and earn more"
+          "title": "מבצעים",
+          "description": "קבלו התראות לגבי כיצד תוכלו להגדיל את הצוות שלכם ולהרוויח עוד יותר."
         },
         "news": {
-          "title": "News",
-          "description": "Receive notifications from our team"
+          "title": "חדשות",
+          "description": "קבלו התראות מהצוות שלנו."
         },
         "micro_community": {
-          "title": "Micro-community",
-          "description": "Receive notifications about your team"
+          "title": "מיקרו-קהילה",
+          "description": "קבלו התראות על הצוות שלכם."
         },
         "daily_bonus": {
-          "title": "Daily bonus",
-          "description": "Receive notifications to claim your daily bonus"
+          "title": "בונוס יומי",
+          "description": "קבלו התראות כדי לתבוע את הבונוס היומי שלכם."
         },
         "mining": {
-          "title": "Session status",
-          "description": "Receive notifications about your check-in activity"
+          "title": "סטטוס צ'ק-אין",
+          "description": "קבלו התראות על פעילות הצ'ק-אין שלכם."
         },
         "system": {
-          "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "title": "מערכת",
+          "description": "קבלו התראות חשובות על אפליקציית ice."
         }
       }
     },
-    "language_settings": "Language settings",
+    "language_settings": "הגדרות שפה",
     "change_lang_confirm": {
-      "title": "Change language",
-      "prompt": "Applying this setting will restart the app"
+      "title": "שינוי שפה",
+      "prompt": "החלת הגדרה זו תפעיל מחדש את האפליקציה."
     },
-    "profile_image": "Profile Image",
-    "inapp_privacy_title": "Privacy",
-    "inapp_privacy_description": "Manage your information here",
-    "developer": "Developer",
-    "user_id": "User ID",
-    "user_token": "User Token",
+    "profile_image": "תמונת פרופיל",
+    "inapp_privacy_title": "פרטיות",
+    "inapp_privacy_description": "נהלו את המידע שלכם כאן.",
+    "developer": "מפתח",
+    "user_id": "מזהה משתמש",
+    "user_token": "אסימון משתמש",
     "profile_photo": {
-      "delete": "Delete Photo",
-      "edit": "Edit profile photo",
-      "photo_gallery": "Photo Gallery",
-      "camera": "Camera"
+      "delete": "מחיקת תמונה",
+      "edit": "עריכת תמונת פרופיל",
+      "photo_gallery": "גלריית תמונות",
+      "camera": "מצלמה"
     },
-    "confirm_email_confirmation_title": "Confirm email?",
-    "update_email_confirmation_title": "Update email?",
-    "update_email_confirmation_subtitle": "Changing your email address will require you to re-login. Are you sure you want to proceed?",
-    "unlink_logins_title": "Unlink Logins",
-    "unlink_logins_description": "You can unlink your logins from here"
+    "confirm_email_confirmation_title": "לאשר אימייל?",
+    "update_email_confirmation_title": "לעדכן אימייל?",
+    "update_email_confirmation_subtitle": "שינוי כתובת האימייל יחייב אתכם להתחבר מחדש. האם אתם בכל זאת רוצים להמשיך?",
+    "unlink_logins_title": "ניתוק התחברויות",
+    "unlink_logins_description": "ניתן לנתק את ההתחברויות מכאן."
   },
   "invite_share": {
-    "title": "Invite a friend",
-    "telegram": "Telegram",
-    "twitter": "Twitter",
-    "whatsapp": "WhatsApp",
-    "instagram": "Instagram",
-    "email": "Email",
-    "fb": "Newsfeed",
+    "title": "הזמינו חבר",
+    "telegram": "טלגרם",
+    "twitter": "טוויטר",
+    "whatsapp": "וואצאפ",
+    "instagram": "אינסטגרם",
+    "email": "אימייל",
+    "fb": "פיד חדשות",
     "sms": "SMS",
-    "copy_link": "Copy link",
-    "more": "More",
-    "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
-    "description_part1": "Spread the word and invite your friends. You earn ",
-    "description_part2": " for each new referral you bring."
+    "copy_link": "העתקת לינק",
+    "more": "עוד",
+    "copied": "הועתק",
+    "share_message": "שלום איש-שלג☃️! הצטרפות לצוות שלי ב-ice תספק לך 10 מטבעות ice אם נרשמת באמצעות קוד ההזמנה שלי:",
+    "share_subject": "אשמח לצרף אותך לצוות שלי ב-ice",
+    "description": "הפיצו את הבשורה והזמינו את חבריכם. אפשר להרוויח [[:ice]] על כל מוזמן חדש שמביאים.",
+    "share": "שיתוף"
   },
   "users": {
-    "ping": "PING",
-    "active": "Active",
-    "inactive": "Inactive",
+    "ping": "צפצוף",
+    "active": "פעיל",
+    "inactive": "לא פעיל",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T1": "דרגה 1",
+      "T2": "דרגה 2"
     }
   },
   "personal_information": {
-    "first_name": "First name",
-    "last_name": "Last name",
-    "country": "Country",
-    "city": "City",
-    "title": "Personal Information",
-    "phone": "Phone",
-    "email": "Email",
-    "username": "Nickname"
+    "first_name": "שם פרטי",
+    "last_name": "שם משפחה",
+    "country": "מדינה",
+    "city": "עיר",
+    "title": "מידע אישי",
+    "phone": "טלפון",
+    "email": "אימייל",
+    "username": "כינוי"
   },
   "username": {
     "error": {
-      "already_taken": "Nickname is already taken.",
-      "length": "Nickname size: 4-20 characters.",
-      "invalid_characters": "Remove invalid characters.",
-      "not_found": "Nickname not found.",
-      "some_error": "Some error occurred.",
-      "refer_yourself": "You can't refer yourself"
+      "already_taken": "הכינוי כבר תפוס",
+      "length": "אורך כינוי: 4-20 תווים.",
+      "invalid_characters": "יש להסיר תווים לא חוקיים.",
+      "not_found": "הכינוי לא נמצא.",
+      "some_error": "אירעה שגיאה.",
+      "refer_yourself": "לא ניתן להזמין את עצמך."
     }
   },
   "staking": {
-    "time_left": "Time Left",
-    "mining_rate": "Earning Rate",
-    "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
-    "bonus_label": "Pre-Staking Bonus",
-    "period_label": "Staked Period",
-    "title": "Pre-Staking",
-    "current_rate": "Current Rate",
-    "allocation": "Allocation",
-    "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
-    "staking_terms": "Staking Terms",
-    "stake_now": "Pre-Stake Now!",
-    "balance_label": "Staked balance",
-    "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "time_left": "זמן נותר",
+    "mining_rate": "קצב הכנסה",
+    "appeal": "הגבירו את קצב ההכנסה שלכם",
+    "benefits_description": "סכנו מראש את הכנסות ice שלכם למשך עד 5 שנים והגדילו את קצב ההכנסה בעד 250%.",
+    "bonus_label": "בונוס סיכון מראש",
+    "period_label": "תקופת סיכון",
+    "title": "סיכון מראש",
+    "current_rate": "קצב נוכחי",
+    "allocation": "הקצאה",
+    "description": "סיכון הוא תהליך הכולל יצירת התחייבות בעזרת נכסי הקריפטו שלכם כדי לתמוך ברשת בלוקצ'יין ולאשר עסקאות.",
+    "terms_agree": "אני מסכים/ה ל[[:ice]][[:link]]תנאי הסיכון[[/:link]]. החזקות ice שלכם יהיו נעולות למשך הזמן שנבחר.",
+    "stake_now": "סכנו מראש עכשיו!",
+    "balance_label": "יתרה בסיכון",
+    "confirm_title": "אישור סיכון מראש",
+    "confirm_subtitle": "האם בוודאות ברצונכם לסכן מראש את המטבעות שלכם? לא ניתן לבטל פעולה זאת לאחר אישורה."
   },
   "stats": {
-    "header_title": "Stats",
-    "active": "Active users",
-    "total": "Total users",
-    "user_growth": "User growth",
-    "top_miners": "Top users",
-    "top_countries": "Top countries",
-    "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "header_title": "סטטיסטיקה",
+    "active": "משתמשים פעילים",
+    "total": "סך המשתמשים הכולל",
+    "user_growth": "גידול משתמשים",
+    "top_miners": "משתמשים מובילים",
+    "top_countries": "מדינות מובילות",
+    "online_miners": "משתמשים מקוונים",
+    "detailed_information": "מידע מפורט"
   },
   "update_required": {
-    "title": "Please Update",
-    "description": "You are using an old app version and need to update it in order to use it further.",
-    "button_title": "Update Now"
+    "title": "נא לעדכן",
+    "description": "אתם משתמשים בגרסה ישנה של האפליקציה, יש לעדכן אותה כדי להמשיך להשתמש בה.",
+    "button_title": "לעדכן עכשיו"
   },
   "general": {
-    "good_morning": "Good morning",
-    "good_afternoon": "Good afternoon",
-    "good_evening": "Good evening",
+    "good_morning": "בוקר טוב",
+    "good_afternoon": "צהריים טובים",
+    "good_evening": "ערב טוב",
     "ice": "ice",
-    "ice_per_hour": "ice/h",
-    "seconds_short": "s",
-    "minutes_short": "m",
-    "hours_short": "h",
-    "days_short": "d"
+    "ice_per_hour": "ice/שעה",
+    "seconds_short": "שנ'",
+    "minutes_short": "דק'",
+    "hours_short": "שע'",
+    "days_short": "י'"
   },
   "news": {
-    "news_feed": "News Feed",
-    "read_more": "Read more",
-    "views": "{{viewsCount}} views"
+    "news_feed": "פיד חדשות",
+    "read_more": "קריאה נוספת",
+    "no_more_news": "זו הרשומה האחרונה בפיד החדשות.",
+    "views": "{{viewsCount}} צפיות"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
-    "nothing_is_found": "Nothing was found for your query",
-    "search_by_country": "Search by country",
-    "search_for_users": "Search for users"
+    "empty": "חפשו אנשי קשר, חברים ב-ice ואנשים שהם חברים במיקרו-קהילה שלכם.",
+    "nothing_is_found": "לא מצאנו כלום עבור השאילתה שלכם.",
+    "search_by_country": "חיפוש לפי מדינה",
+    "search_for_users": "חפשו משתמשים",
+    "loading": "מחפש…"
   },
   "tabbar": {
-    "mining_inactive_tooltip": "Tap here to start your first check-in session",
-    "mining_reset_tooltip": "Press for 1 second to reset your check-in session",
-    "mining_holiday_reset_tooltip": "You are using a Day Off! Press for 1 second to reset your check-in session",
-    "mining_holiday_active": "You are using a Day Off!"
+    "mining_inactive_tooltip": "לחצו כאן כדי להתחיל את הצ'ק-אין הראשון שלכם.",
+    "mining_reset_tooltip": "לחצו למשך שנייה אחת כדי להאריך את הצ'ק-אין שלכם.",
+    "mining_holiday_reset_tooltip": "אתם משתמשים ביום חופש! לחצו למשך שנייה אחת כדי להאריך את הצ'ק-אין שלכם.",
+    "mining_holiday_active": "אתם משתמשים ביום חופש!"
   },
   "invite_friend": {
-    "invite_button": "Invite Friend",
-    "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:ice]]. Send him an invitation!"
+    "invite_button": "הזמינו חבר",
+    "button_title": "הזמינו חבר",
+    "description": "החבר שלכם עוד לא נמצא ב-[[:ice]]. שלחו לו הזמנה!"
   },
   "balance_history": {
-    "title": "Balance History",
-    "wallet": "Wallet",
-    "blockchain": "Blockchain",
-    "wallet_update_interval": "updated every hour",
-    "blockchain_update_interval": "updated every 24 hours",
-    "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "title": "היסטוריית יתרות",
+    "wallet": "ארנק",
+    "blockchain": "בלוקצ'יין",
+    "wallet_update_interval": "מתעדכן כל שעה",
+    "blockchain_update_interval": "מתעדכן כל 24 שעות",
+    "list_end_label": "זוהי הרשומה האחרונה בהיסטוריית היתרה.",
+    "no_data": "אין נתונים להצגה עבור התקופה שצוינה."
   },
   "pop_up": {
-    "update_now": "Update Now",
-    "please_update": "Please Update",
-    "update_now_text": "You are using an old app version and need to update it in order to use it further",
-    "you_are_up_to_date": "You are up to date!",
-    "up_to_date_text": "You are now using the latest version. Check all the changes below.",
-    "resurrection": "Resurrection",
-    "resurrection_message": "You have a one time chance to resurrect and receive [[:amount]] coins you have lost in the past [[:period]]",
-    "resurrection_warning": "You can only resurrect one time!",
-    "please_confirm": "Please confirm",
-    "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "update_now": "לעדכן עכשיו",
+    "please_update": "נא לעדכן",
+    "update_now_text": "אתם משתמשים בגרסה ישנה של האפליקציה, יש לעדכן אותה כדי להמשיך להשתמש בה.",
+    "you_are_up_to_date": "הכל עדכני!",
+    "up_to_date_text": "אתם משתמשים כעת בגרסה העדכנית ביותר. גלו את כל השינויים בהמשך.",
+    "resurrection": "החייאה",
+    "resurrection_message": "יש לכם הזדמנות חד פעמית לקום לתחייה ולקבל [[:amount]] מטבעות שאיבדתם ב-[[:period]] האחרונים.",
+    "resurrection_warning": "ניתן לקום לתחייה פעם אחת בלבד!",
+    "please_confirm": "יש לאשר",
+    "resurrection_no_confirm_message": "תאבדו את [[:amount]] המטבעות שלכם לנצח. האם אתם בטוחים שברצונכם להמשיך?",
+    "resurrection_yes_confirm_message": "ניתן לקום לתחייה פעם אחת בלבד! האם אתם בטוחים שברצונכם להמשיך? [[:amount]] המטבעות יחזרו ליתרה שלכם בשעה הקרובה.",
+    "delete_account_confirmation_title": "אישור מחיקה",
+    "delete_account_confirmation_text": "מחיקת חשבונכם תמחק לצמיתות את כל הנתונים שלכם, כולל יתרת ice שלכם. האם ברצונכם להמשיך?"
   },
   "periods": {
-    "3_days": "3 days",
-    "7_days": "7 days",
-    "30_days": "30 days",
-    "1_day": "1 Day",
-    "1_week": "1 Week",
-    "1_month": "1 Month",
-    "90_days": "90 days",
-    "14_days": "14 days"
+    "3_days": "3 ימים",
+    "7_days": "7 ימים",
+    "30_days": "30 יום",
+    "1_day": "יום אחד",
+    "1_week": "שבוע אחד",
+    "1_month": "חודש אחד",
+    "90_days": "90 יום",
+    "14_days": "14 יום"
   },
   "notifications": {
-    "joined": " has joined your team",
-    "multiply": " and {{count}} others have joined your team",
-    "ping": " has pinged you, wake up!",
-    "delete": "Delete",
-    "add_notifications": "Add mocked notifications",
-    "no_notifications": "No notifications to display",
-    "add_announcements": "Add mocked announcements",
-    "add_both": "Add mocked notifications \nand announcements together",
-    "clear_title": "Clear all notifications?",
-    "title": "Notifications"
+    "joined": " הצטרפ/ה לצוות שלך.",
+    "multiply": " ועוד {{count}} אחרים הצטרפו לצוות שלך.",
+    "ping": " צפצפ/ה לך, הגיע הזמן להתעורר!",
+    "delete": "מחיקה",
+    "add_notifications": "הוסיפו התראות מדומות",
+    "no_notifications": "אין התראות להציג.",
+    "add_announcements": "הוסיפו הכרזות מדומות",
+    "add_both": "הוסיפו הכרזות והתראות מדומות ביחד",
+    "clear_title": "לנקות את כל ההתראות?",
+    "title": "התראות"
   },
   "notification_feed_screen": {
-    "yesterday": "Yesterday",
-    "last_week": "Last Week",
-    "this_month": "This month",
-    "last_month": "Last Month",
-    "this_week": "This week"
+    "yesterday": "אתמול",
+    "last_week": "השבוע שעבר",
+    "this_month": "החודש",
+    "last_month": "החודש שעבר",
+    "this_week": "השבוע"
   },
   "profile_privacy_edit": {
     "step1": {
-      "title": "1. Your Profile Statistics",
-      "description": "Tap on the blocks you want to hide from public eyes"
+      "title": "1. סטטיסטיקות הפרופיל שלכם",
+      "description": "לחצו על בלוקים שאתם רוצים להסתיר מעין הציבור."
     },
     "step2": {
-      "description": "Tap on this block to hide it from public eyes",
-      "title": "2. Your Current Role"
+      "description": "לחצו על בלוק זה כדי להסתירו מעין הציבור.",
+      "title": "2. התפקיד הנוכחי שלכם"
     },
     "step3": {
-      "title": "3. Your Earned Badges",
-      "description": "Tap here to hide your badges from public eyes"
+      "title": "3. התגים שהרווחתם",
+      "description": "לחצו כאן כדי להסתיר את התגים שלכם מעין הציבור."
     }
   },
   "confirm_email": {
-    "title": "Confirm your email",
-    "description": "Please enter your email address and we will send code ",
-    "note": "If you didn’t receive the email within {{value}} minutes, please check your spam folder.",
-    "wrong_email": "Wrong email?",
-    "check_email": "Check your email",
-    "emailed_link_to": "We emailed a magic link to",
-    "link_instruction": "Click the link to log in or sign up.",
-    "modify_title": "Confirm New Email",
-    "modify_description": "Please enter your new email address"
+    "title": "אשרו את כתובת האימייל שלכם",
+    "description": "הכניסו את כתובת האימייל שלכם ואנחנו נשלח לכם את הקוד.",
+    "note": "אם לא קיבלתם את האימייל תוך 5 דקות, נסו לבדוק בתיקיית הספאם שלכם.",
+    "wrong_email": "אימייל שגוי?",
+    "check_email": "בדקו את האימייל שלכם",
+    "emailed_link_to": "שלחנו קישור קסם באימייל לכתובת",
+    "emailed_steps_to": "שלחנו את הצעדים באימייל לכתובת",
+    "link_instruction": "לחצו על הקישור כדי להתחבר או להירשם.",
+    "reset_link_instruction": "לחצו על הקישור כדי לאפס את הסיסמה שלכם.",
+    "modify_title": "אישור אימייל חדש",
+    "modify_description": "אנא הכניסו את כתובת האימייל החדשה שלכם."
   },
   "invalid_link": {
-    "title": "Invalid link",
-    "description": "Unfortunately, this link is invalid, please enter your email again and we will send you a new link.",
-    "back_button_title": "Back to Login"
+    "title": "קישור לא תקין",
+    "description": "למרבה הצער, קישור זה אינו חוקי, יש להזין שוב את כתובת האימייל ואז נשלח לכם קישור חדש."
   },
   "confirm_code": {
-    "title": "Confirm code",
-    "description": "Please enter the code sent to",
-    "send_code_again": "Send code again",
-    "resend_time_label": "New code available in ",
-    "enter_code": "Enter the code",
-    "wrong_number": "Wrong number?"
+    "title": "אישור קוד",
+    "description": "יש להזין את הקוד שנשלח אל",
+    "send_code_again": "שלחו את הקוד שוב",
+    "resend_time_label": "קוד חדש זמין בעוד ",
+    "enter_code": "הזינו את הקוד",
+    "wrong_number": "מספר שגוי?"
   },
   "ice_bonus": {
-    "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:ice]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]]",
-    "balance_label": "Your current balance"
+    "title": "פרס קבלת פנים",
+    "description": "מזל טוב, קיבלתם את [[:value]] מטבעות [[:ice]] הראשונים שלכם, המוכיחים את [[:bold]]האמון[[/:bold]] שלנו [[:bold]]בכם[[/:bold]].",
+    "balance_label": "היתרה הנוכחית שלכם"
   },
   "country_select": {
-    "title": "Select country"
+    "title": "בחירת מדינה"
   },
-  "role": {
+  "roles": {
     "snowman": {
-      "title": "Snowman",
-      "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "title": "איש-שלג",
+      "subtitle": "בנו אימפריית שלג",
+      "description": "ניתן להרוויח אם עושים צ'ק-אין כל 24 שעות כדי להראות את המחויבות שלכם לרשת ice ולהוכיח שאתם בן אדם ולא רובוט."
     },
     "ambassador": {
-      "title": "Ambassador",
-      "subtitle": "Ruler of the snow empire",
-      "description": "You become an ambassador when at least 100 people joined your team. Every ambassador will get early access to new features"
+      "title": "שגריר",
+      "subtitle": "שליט אימפריית השלג",
+      "description": "המשתמש שלכם זוכה בתואר \"שגריר\" כשלפחות 100 איש מצטרפים לצוות שלכם. כל שגריר יקבל גישה מוקדמת לתכונות חדשות."
     }
   },
   "confirm_phone": {
-    "modify_title": "Confirm Phone",
-    "modify_description": "Please confirm your country code and enter your phone number",
-    "button": "Confirm country and phone",
-    "same_phone_error": "You can’t use the same number"
-  },
-  "tasks": {
-    "completed": {
-      "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
-    }
+    "modify_title": "אישור טלפון",
+    "modify_description": "אנא אשרו את קידומת המדינה שלכם והזינו את מספר הטלפון שלכם.",
+    "button": "אישור המדינה והטלפון",
+    "same_phone_error": "לא ניתן להשתמש באותו המספר."
   },
   "date_select": {
-    "title": "Choose date"
+    "title": "בחירת תאריך"
   },
   "walkthrough": {
     "news": {
-      "step_1": {
-        "title": "Read more",
-        "description": "Here you can see our latest news from our team. Tap on this button to read the full article."
+      "readmore": {
+        "title": "קריאה נוספת",
+        "description": "כאן תוכלו לראות את החדשות האחרונות מהצוות שלנו. לחצו על כפתור זה כדי לקרוא את המאמר המלא."
       },
-      "step_2": {
-        "description": "Tap on each individual news title and read the the full version of it. Stay up to date on all our news and polls.",
-        "title": "Released news"
-      }
-    },
-    "teams": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
-      },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
-      },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
-      },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
-      },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate."
-      },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate."
-      },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
-      },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
-      },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "releasednews": {
+        "title": "חדשות שיצאו",
+        "description": "לחצו על כל כותרת חדשותית יחידה כדי לקרוא את הגרסה המלאה שלה. הישארו מעודכנים בכל החדשות והסקרים שלנו."
       }
     },
     "team": {
-      "step_1": {
-        "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:ice]]. In the future you will be able to send [[:ice]] to any of your contacts"
+      "allow_contacts": {
+        "title": "אפשרו אנשי קשר",
+        "description": "סנכרנו את אנשי הקשר שלכם כדי לראות מי כבר משתמש ב-[[:ice]]. בעתיד, תוכלו לשלוח [[:ice]] לכל אחד מאנשי הקשר שלכם."
       },
-      "step_2": {
-        "title": "Referrals",
-        "description": "Here you will see how many referrals you have in total. The more people you invite, the more you will earn."
+      "confirm_phone": {
+        "title": "אימות טלפון",
+        "description": "אמתו את זהותכם ואפשרו לאנשי הקשר שלכם לדעת שגם אתם חברים ברשת ice. לא נשתף את מספר הטלפון שלכם עם צדדים שלישיים אחרים."
       },
-      "step_3": {
-        "title": "Earnings",
-        "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the Tier 1 and Tier 2 earnings."
+      "contacts_list": {
+        "title": "רשימת אנשי קשר",
+        "description": "זו הרשימה עם כל אנשי הקשר שלכם, אלו שכבר הצטרפו לרשת [[:ice]] מוצגים בראש הרשימה."
       },
-      "step_4": {
-        "title": "Contacts",
-        "description": "This is the list with all your contacts, those that already have the app being displayed on top of the list."
+      "referrals": {
+        "title": "מוזמנים",
+        "description": "כאן תראו כמה אנשים הזמנתם בסך הכל. ככל שתזמינו יותר אנשים, כך תרוויחו יותר."
       },
-      "step_5": {
-        "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will get extra 25% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "earnings": {
+        "title": "רווחים",
+        "description": "היתרה הנוכחית שלכם מתעדכנת כל שעה ומוצגת כאן. היא כוללת את הרווחים הישירים שלכם ואלו שסוכנו, יחד עם הרווחים מדרגה 1 ודרגה 2."
       },
-      "step_6": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each member mining in the same time with you, you will get extra 5% on your base current adoption mining rate.",
-        "url": "https://ice.io/#invite"
+      "segmented_control_tier_one": {
+        "title": "דרגה 1",
+        "description": "כאן תוכלו לראות את רשימת המוזמנים שלכם בדרגה 1. עבור כל חבר שעושה צ'ק-אין איתכם באותו הזמן תקבלו 25% נוספים על קצב ההכנסה הנוכחי שלכם מאימוץ. [[:link]]קריאה נוספת[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_7": {
-        "title": "Active Users",
-        "description": "This is the current status of your referrals mining activity. They count as active when they are mining."
+      "segmented_control_tier_two": {
+        "title": "דרגה 2",
+        "description": "כאן תוכלו לראות את רשימת המוזמנים שלכם בדרגה 2. עבור כל חבר שעושה צ'ק-אין איתכם באותו הזמן תקבלו 5% נוספים על קצב ההכנסה הנוכחי שלכם מאימוץ. [[:link]]קריאה נוספת[[/:link]]",
+        "url": "https://ice.io/team"
       },
-      "step_8": {
-        "title": "Tier 1 Earnings",
-        "description": "Here you can see the list of your Tier 1 referrals. For each member mining in the same time with you, you will both get extra 25% on your base current adoption mining rate."
+      "active_users": {
+        "title": "משתמשים פעילים",
+        "description": "זהו הסטטוס הנוכחי של פעילות הצ'ק-אין של האנשים שהזמנתם ל-ice. הם נחשבים פעילים כאשר יש להם צ'ק-אין פעיל."
       },
-      "step_9": {
-        "title": "Ping Button",
-        "description": "Notify your referrals to start their mining sessions. You can send one notification to each referral every 24h."
+      "tier_one_earnings": {
+        "title": "רווחים בדרגה 1",
+        "description": "כאן תוכלו לראות את רשימת המוזמנים שלכם בדרגה 1. עבור כל חבר שעושה צ'ק-אין איתכם באותו הזמן תקבלו 25% נוספים על קצב ההכנסה הנוכחי שלכם מאימוץ."
+      },
+      "ping": {
+        "title": "כפתור צפצוף",
+        "description": "הודיעו לאנשים שהזמנתם כדי שיתחילו את הצ'ק-אין שלהם. ניתן לשלוח התראה אחת לכל מוזמן אחת ל-24 שעות."
+      }
+    },
+    "home": {
+      "home": {
+        "title": "בית",
+        "description": "ברוכים הבאים אל [[:ice]]. במסך הבית תוכלו למצוא את כל הנתונים הסטטיסטיים על היתרה שלכם, על קצב ההכנסה הנוכחי שלכם, על הדירוג העולמי שלכם ועל הצוות שלכם."
+      },
+      "invite": {
+        "title": "הזמנה",
+        "description": "עבור כל אדם שאתם מזמינים, גם אתם וגם המוזמן תרוויחו עד 25% מקצב ההכנסה הבסיסי שלכם. ככל שתזמינו יותר אנשים, כך תרוויחו יותר."
+      },
+      "team": {
+        "title": "צוות",
+        "description": "[[:ice]] יותר טוב עם חברים. בעמוד זה ניתן לראות את הסטטוס של חברי הצוות שלכם הן מדרגה 1 והן מדרגה 2. ניתן גם לשלוח להם צפצוף מפה."
+      },
+      "news": {
+        "title": "חדשות",
+        "description": "הישארו מעודכנים בכל החדשות והסקרים שלנו. מכיוון שאנו ארגון אוטונומי מבוזר (ארגון DAO), ניתן להצביע כאן עבור תכונות עתידיות."
+      },
+      "profile": {
+        "title": "פרופיל",
+        "description": "שנו את פרטי הפרופיל שלכם כרצונכם וראו את כל ההישגים והתגים שהרווחתם. כאן תוכלו להשתמש במחשבון כדי להעריך את הרווחים שלכם."
+      },
+      "earningicestart": {
+        "title": "הרווחת ice",
+        "description": "ניתן להתחיל את הצ'ק-אין של [[:ice]] כל 24 שעות על ידי לחיצה על כפתור זה. אל תשכחו לחזור כל יום ולהתחיל להרוויח!"
+      },
+      "earningiceseemore": {
+        "title": "הרווחת ice",
+        "description": "לחצו שוב כדי לראות פרטים נוספים על הצ'ק-אין הנוכחי שלכם."
+      },
+      "stats": {
+        "title": "סטטיסטיקה",
+        "description": "בדף הסטטיסטיקה תוכלו לראות את מס' משתמשים הכולל ואת מס' המשתמשים הפעילים שעשו צ'ק-אין בכל יום, וגם את המדינות המובילות והמשתמשים המובילים."
+      },
+      "help": {
+        "title": "עזרה",
+        "description": "יש לכם שאלות? היכנסו לרשימת השאלות הנפוצות שלנו. אם אינכם מוצאים את מה שאתם מחפשים, אל תהססו לפנות אלינו בכתובת hi@ice.io."
+      },
+      "preStaking": {
+        "title": "סיכון מראש",
+        "description": "מקסמו את התשואות שלכם על ידי סיכון מראש של התגמולים שלכם. בחרו את ההקצאה ואת תקופת הסיכון שלכם כדי לקבל בונוס על הרווחים שלכם."
+      },
+      "wallet": {
+        "title": "כרטיס ארנק",
+        "description": "תוכלו למצוא כאן את יתרת [[:ice]] הנוכחית שלכם, יחד עם קצב ההכנסה שלכם. ככל שיותר אנשים מוזמנים מהצוות שלכם יהיו מחוברים, כך קצב ההכנסה יהיה גבוה יותר."
+      },
+      "earning": {
+        "title": "כרטיס רווח",
+        "description": "הישארו מעודכנים לגבי קצב ההכנסה והבונוסים שלכם! כאן תוכלו לראות את הקצב הנוכחי שלכם, קצב הבסיס שלנו ובונוסים לקצב מפעולות שונות באפליקציה."
+      },
+      "engagement": {
+        "title": "כרטיס מעורבות",
+        "description": "עקבו אחר רצף הצ'ק-אינים שלכם ואחרי ימי החופש שלכם! עיינו בסעיף זה לקבלת פרטים נוספים על הצ'ק-אינים הרצופים שלכם וכדי לראות כמה ימי חופשה פנויים נשארו לכם."
+      },
+      "profilecard": {
+        "title": "כרטיס פרופיל",
+        "description": "תוכלו לעקוב אחר סטטוס הפרופיל שלכם על ידי מעקב אחר כרטיס זה. הוא מציג את הדירוג הגלובלי הנוכחי שלכם, ובנוסף את התפקיד, הרמה ואת סך המוזמנים שלכם."
+      },
+      "referralscard": {
+        "title": "כרטיס הזמנות",
+        "description": "לחיצה על כרטיס זה מאפשרת לראות את ההתפתחות של סטטיסטיקת ההזמנות שלכם עבור 5 הימים הקודמים הן להזמנות מדרגה 1 והן להזמנות מדרגה 2."
+      },
+      "adoptioncard": {
+        "title": "כרטיס אימוץ",
+        "description": "בהתבסס על הממוצע של סך כל אנשי השלג הפעילים בשבוע האחרון, תוכלו לראות את קצב ההכנסה הנוכחי של [[:ice]]. קצב ההכנסה מופחת בחצי כאשר מגיעים לנקודת הסף הבאה."
+      },
+      "nickname": {
+        "title": "כינוי",
+        "description": "הכינוי הוא מה שמייחד אתכם. החברים שלכם יצטרכו להשתמש בו כדי להצטרף לצוות שלכם. ניתן גם להשתמש בקיצור הדרך הזה כדי לפתוח את הפרופיל שלכם."
+      },
+      "balancehistory": {
+        "title": "היסטוריית יתרות",
+        "description": "תוכלו למצוא כאן את יתרת [[:ice]] הנוכחית שלכם בארנק המקומי ובבלוקצ'יין. יתרת הארנק המקומית מתעדכנת כל שעה, בעוד יתרת הבלוקצ'יין מתעדכנת כל 24 שעות."
+      },
+      "achievements": {
+        "title": "הישגים",
+        "description": "השלימו את המשימות שלהלן ועלו רמה! התחילו את הצ'ק-אין הראשון שלכם עכשיו!"
       }
     }
   },
   "ActiveSessionsScreen": {
-    "title": "Unlink Logins",
-    "sessionName": "Login via {{providerName}}",
+    "title": "ניתוק התחברויות",
+    "sessionName": "התחברות באמצעות {{providerName}}",
     "buttons": {
-      "currentSession": "Current session",
-      "endSession": "End Session",
-      "loginUnlinked": "Login Unlinked",
-      "sessionEnded": "Session Ended",
-      "unlink": "Unlink"
+      "currentSession": "ההפעלה הנוכחית",
+      "endSession": "סיום הפעלה",
+      "loginUnlinked": "ההתחברות נותקה",
+      "sessionEnded": "ההפעלה נגמרה",
+      "unlink": "ניתוק"
     },
     "dialogs": {
       "unlinkLogin": {
-        "title": "Unlink Login?",
-        "message": "Are you sure you want to unlink the login via {{providerName}} from this device?"
+        "title": "לנתק את ההתחברות?",
+        "message": "בטוחים שאתם רוצים לנתק את ההתחברות דרך {{providerName}} מהמכשיר הזה?"
       },
       "endSession": {
-        "title": "End Session?",
-        "message": "Are you sure you want to end the {{providerName}} login session from this device?"
+        "title": "לסיים את ההפעלה?",
+        "message": "בטוחים שאתם רוצים לסיים את ההתחברות דרך {{providerName}} מהמכשיר הזה?"
       }
     }
   },
@@ -792,12 +846,51 @@
     "main": "https://ice.io/"
   },
   "extra_bonus": {
-    "claim_title": "Today’s Bonus",
-    "claim_message": "It’s time for your today’s bonus, please tap on the [[:bold]]“Claim Bonus”[[/:bold]] button bellow",
-    "link": "Find out more",
-    "extra_message": "You have received your daily extra bonus on your earning rate",
-    "expired_title": "Bonus Expired",
-    "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
-    "result_title": "Congratulations"
+    "claim_title": "הבונוס להיום",
+    "claim_message": "הגיע הזמן לבונוס היומי שלכם, אנא הקישו על כפתור [[:bold]]\"תביעת בונוס\"[[/:bold]] בהמשך.",
+    "link": "גלו עוד",
+    "extra_message": "קיבלתם את הבונוס היומי הנוסף שלכם לקצב ההכנסה שלכם.",
+    "expired_title": "פג תוקף הבונוס",
+    "expired_message": "למרבה הצער, פג תוקף הבונוס להיום. פקחו עין לקראת ההתראה הבאה!",
+    "result_title": "מזל טוב"
+  },
+  "early_access": {
+    "title": "גישה מוקדמת",
+    "message_part1": "קבלו הצצה לאפליקציית [[:bold]]ice[[/:bold]] לפני [[:bold]]ההשקה הרשמית שלנו בקרוב.[[/:bold]]",
+    "message_part2": "כל היתרות יאופסו בתאריך ההשקה. הצוות שלכם, לעומת זאת, יישאר כפי שהוא.",
+    "message_part3": "תודה על תמיכתכם!",
+    "checkbox_description": "אנחנו מוקירים אותה! אל תציגו את החלון הקופץ הזה שוב."
+  },
+  "mining_notice": {
+    "title": "הודעה",
+    "message": "תודה על העניין שלכם בלהרוויח [[:bold]]ice![[/:bold]] כרגע אנחנו מלטשים את הטכנולוגיה שלנו, אז אפשרות הצ'ק-אין אינה זמינה כרגע. זו ההזדמנות שלכם להתמקד בבניית הצוות שלכם ובהגדלת המיקרו-קהילה שלכם.",
+    "message_footer": "חכו לעדכונים בערוצי ה[[:twitter]]טוויטר[[/:twitter]] וה[[:telegram]]טלגרם[[/:telegram]] שלנו."
+  },
+  "qr_code": {
+    "description": "סריקת קוד ה-QR תצרף אותך לצוות שלי."
+  },
+  "social_media": {
+    "tiktok": {
+      "title": "הצטרפו אלינו בטיקטוק",
+      "description": "רק רצינו ליצור איתכם קשר ולהודיע לכם על הקהילה החדשה והמרגשת שלנו בטיקטוק. אנו משתפים תוכן מהנה ואינפורמטיבי על המטבע הדיגיטלי שלנו, ice, ונשמח שתצטרפו אלינו!"
+    },
+    "youtube": {
+      "title": "הצטרפו אלינו ביוטיוב",
+      "description": "ערוץ היוטיוב שלנו מכיל תכנים רבים, החל ממדריכים על איך להרוויח ice, דרך עדכונים על תכונות ואפשרויות חדשות, ועד תוכן קהילתי מהנה, ולכן הוא המקום המושלם להתעדכן בו."
+    },
+    "linkedin": {
+      "title": "הצטרפו אלינו בלינקדאין",
+      "description": "הצטרפות לקהילת ice בלינקדאין היא דרך מצוינת להישאר מעודכנים ולהתחבר לאנשים עם צורת חשיבה דומה, שנלהבים מהעתיד של מטבעות דיגיטליים בדיוק כמוכם."
+    },
+    "facebook": {
+      "title": "הצטרפו אלינו בפייסבוק",
+      "description_part1": "אנו ממליצים בחום לעקוב אחר עמוד הפייסבוק שלנו.",
+      "description_part2": "לא רק שזה יעזור לכם להישאר מעודכנים בכל מה שקורה בפרויקט של ice, זו גם דרך מצוינת להתחבר לקהילה שלנו ולהשתתף בשיח."
+    },
+    "instagram": {
+      "title": "הצטרפו אלינו באינסטגרם",
+      "description_part1": "לעקוב אחרינו באינסטגרם זו דרך מצוינת להישאר בעניינים ולהתחבר למשתמשים אחרים שמתלהבים גם הם מ-ice",
+      "description_part2": "בנוסף, תהיו הראשונים לדעת על כל שיפור, אפשרות או מבצע חדשים שאנו משיקים."
+    }
   }
 }
