@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {ActivityIndicator} from '@components/ActivityIndicator';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
 import {PEN_SIZE} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useAnimatedStyles';
 import {AnimatedCameraIcon} from '@svg/AnimatedCameraIcon';
 import React from 'react';
-import {ActivityIndicator, StyleSheet, ViewStyle} from 'react-native';
+import {StyleSheet, ViewStyle} from 'react-native';
 import Animated, {AnimatedStyleProp} from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
