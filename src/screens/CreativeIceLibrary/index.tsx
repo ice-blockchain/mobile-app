@@ -8,16 +8,17 @@ import {CarouselSection} from '@screens/CreativeIceLibrary/components/CarouselSe
 import {GetStartedSection} from '@screens/CreativeIceLibrary/components/GetStartedSection';
 import {PracticesSection} from '@screens/CreativeIceLibrary/components/PracticesSection';
 import {PromoSection} from '@screens/CreativeIceLibrary/components/PromoSection';
+import {ShareButton} from '@screens/CreativeIceLibrary/components/ShareButton';
 import {SocialSection} from '@screens/CreativeIceLibrary/components/SocialSection';
-import {ShareIcon} from '@svg/ShareIcon';
 import {t} from '@translations/i18n';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import Animated from 'react-native-reanimated';
+import Animated, {useAnimatedRef} from 'react-native-reanimated';
 
 export function CreativeIceLibrary() {
   useFocusStatusBar({style: 'dark-content'});
   const {scrollHandler, shadowStyle} = useScrollShadow();
+  const scrollViewAnimatedRef = useAnimatedRef<Animated.ScrollView>();
   return (
     <View style={styles.container}>
       <Header
@@ -25,13 +26,14 @@ export function CreativeIceLibrary() {
         containerStyle={shadowStyle}
         title={t('creative_library.title')}
         backgroundColor={'transparent'}
-        renderRightButtons={() => <ShareIcon color={COLORS.primaryDark} />}
+        renderRightButtons={() => <ShareButton />}
       />
       <Animated.ScrollView
+        ref={scrollViewAnimatedRef}
         onScroll={scrollHandler}
         scrollEventThrottle={16}
         showsVerticalScrollIndicator={false}>
-        <GetStartedSection />
+        <GetStartedSection scrollViewAnimatedRef={scrollViewAnimatedRef} />
         <CarouselSection />
         <SocialSection />
         <PromoSection />

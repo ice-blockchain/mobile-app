@@ -1,9 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
+import {MainStackParamList} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
@@ -32,6 +36,9 @@ function handleShareItemLinkPress(index: number) {
 }
 
 export function SocialSection() {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
+  const onBringYourFriendsPress = () => navigation.navigate('InviteShare');
   const [height, setHeight] = React.useState(MIN_HEIGHT);
   const onLayout = ({nativeEvent}: LayoutChangeEvent) =>
     setHeight(nativeEvent.layout.height);
@@ -83,7 +90,9 @@ export function SocialSection() {
             {t('creative_library.social_section.spread.description')}
           </Text>
         </View>
-        <View style={[styles.itemContainer, styles.bringItemContainer]}>
+        <Touchable
+          style={[styles.itemContainer, styles.bringItemContainer]}
+          onPress={onBringYourFriendsPress}>
           <Text style={styles.titleText}>
             {t('creative_library.social_section.bring.title')}
           </Text>
@@ -93,7 +102,7 @@ export function SocialSection() {
           <View style={styles.shareProvidersImage}>
             <Image source={Images.share.shareProviders2} />
           </View>
-        </View>
+        </Touchable>
       </View>
     </ScrollView>
   );

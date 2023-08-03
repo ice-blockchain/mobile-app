@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {BackButtonIcon} from '@svg/BackButtonIcon';
@@ -9,9 +10,13 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
-export function GetStartedButton() {
+type Props = {
+  onGetStarted: () => void;
+};
+
+export function GetStartedButton({onGetStarted}: Props) {
   return (
-    <View style={styles.container}>
+    <Touchable style={styles.container} onPress={onGetStarted}>
       <Text style={styles.text}>
         {t('creative_library.get_started.get_started')}
       </Text>
@@ -22,7 +27,7 @@ export function GetStartedButton() {
           style={styles.icon}
         />
       </View>
-    </View>
+    </Touchable>
   );
 }
 

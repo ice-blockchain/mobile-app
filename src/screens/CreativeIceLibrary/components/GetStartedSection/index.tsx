@@ -7,21 +7,40 @@ import {GetStartedButton} from '@screens/CreativeIceLibrary/components/GetStarte
 import {GetStartedCarousel} from '@screens/CreativeIceLibrary/components/GetStartedSection/components/GetStartedCarousel';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
-import React from 'react';
+import React, {useState} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
+import {LayoutChangeEvent} from 'react-native/Libraries/Types/CoreEventTypes';
+import Animated from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
-export function GetStartedSection() {
+type Props = {
+  scrollViewAnimatedRef: React.RefObject<Animated.ScrollView>;
+};
+
+export function GetStartedSection({scrollViewAnimatedRef}: Props) {
+  const [getStartedOffset, setGetStartedOffset] = useState(0);
+  const onGetStartedLayout = ({nativeEvent}: LayoutChangeEvent) => {
+    setGetStartedOffset(nativeEvent.layout.y);
+  };
+  const onGetStarted = () => {
+    if (scrollViewAnimatedRef.current) {
+      scrollViewAnimatedRef.current.scrollTo({
+        x: 0,
+        y: getStartedOffset,
+        animated: true,
+      });
+    }
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.header}>
         {t('creative_library.get_started.header')}
       </Text>
-      <GetStartedButton />
+      <GetStartedButton onGetStarted={onGetStarted} />
       <View style={styles.imageContainer}>
         <Image source={Images.creativeLibrary.getStarted} />
       </View>
-      <Text style={styles.subtitle}>
+      <Text style={styles.subtitle} onLayout={onGetStartedLayout}>
         {t('creative_library.get_started.subtitle')}
       </Text>
       <Text style={styles.description}>

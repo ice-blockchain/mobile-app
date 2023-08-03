@@ -577,6 +577,7 @@ export type Translations = {
   'social_media.instagram.description_part2': null;
   'ping_referrals_pop_up.title': {count: number | string};
   'creative_library.title': null;
+  'creative_library.share': null;
   'creative_library.get_started.header': null;
   'creative_library.get_started.subtitle': null;
   'creative_library.get_started.description': null;

@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, ImageRequireSource, StyleSheet, Text, View} from 'react-native';
@@ -12,6 +14,7 @@ export type PromoItemData = {
   title: string;
   description: string;
   actionText: string;
+  actionLink: string;
 };
 
 type Props = {
@@ -19,12 +22,17 @@ type Props = {
 };
 
 export function PromoItem({data}: Props) {
+  const onPress = () => {
+    openLinkWithInAppBrowser({url: data.actionLink});
+  };
   return (
     <View style={styles.container}>
       <Image source={data.image} style={styles.image} />
       <Text style={styles.title}>{data.title}</Text>
       <Text style={styles.description}>{data.description}</Text>
-      <Text style={styles.action}>{data.actionText}</Text>
+      <Touchable style={styles.action} onPress={onPress}>
+        <Text style={styles.actionText}>{data.actionText}</Text>
+      </Touchable>
     </View>
   );
 }
@@ -47,6 +55,8 @@ const styles = StyleSheet.create({
   },
   action: {
     paddingTop: rem(12),
+  },
+  actionText: {
     textDecorationLine: 'underline',
     ...font(12, 16, 'regular', 'primaryLight'),
   },
