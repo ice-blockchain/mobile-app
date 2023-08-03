@@ -3,7 +3,6 @@
 import {COLORS} from '@constants/colors';
 import {dayjs} from '@services/dayjs';
 import {logError} from '@services/logging';
-import {shareSMS} from '@services/share';
 import {Linking} from 'react-native';
 import ReactNativeHapticFeedback, {
   HapticFeedbackTypes,
@@ -21,12 +20,6 @@ export function hapticFeedback(type: HapticFeedbackTypes = 'soft') {
   };
   ReactNativeHapticFeedback.trigger(type, options);
 }
-
-export const openSMS = async (phoneNumber: string, message: string) => {
-  const url = `sms:${phoneNumber}&body=${message}`;
-
-  return await shareSMS(phoneNumber, message, url);
-};
 
 export const openLink = async (url: string) => {
   try {

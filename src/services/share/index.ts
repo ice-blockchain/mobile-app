@@ -11,11 +11,9 @@ import Share, {
 } from 'react-native-share';
 import {isAndroid, isIOS} from 'rn-units';
 
-export const shareSMS = async (
-  phoneNumber: string,
-  message: string,
-  url: string,
-) => {
+export const shareSMS = async (phoneNumber: string, message: string) => {
+  const url = `sms:${phoneNumber}&body=${message}`;
+
   const shareOptions = {
     message: message,
     social: Share.Social.SMS,

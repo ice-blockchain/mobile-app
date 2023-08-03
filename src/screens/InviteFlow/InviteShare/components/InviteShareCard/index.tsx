@@ -11,11 +11,10 @@ import {
   ShareCard,
 } from '@screens/InviteFlow/InviteShare/components/InviteShareCard/components/ShareCard';
 import {logError} from '@services/logging';
-import {shareSingle, Social} from '@services/share';
+import {shareSingle, shareSMS, Social} from '@services/share';
 import {usernameSelector} from '@store/modules/Account/selectors';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {t} from '@translations/i18n';
-import {openSMS} from '@utils/device';
 import {buildUsernameLink} from '@utils/username';
 import React, {createRef} from 'react';
 import {Share as ShareMore, Vibration} from 'react-native';
@@ -67,7 +66,7 @@ const buttons: ShareButton<{url: string; message: string}>[] = [
     title: t('invite_share.sms'),
     icon: Images.share.sms,
     onPress: async ({url, message}) => {
-      await openSMS('', `${message} ${url}`);
+      await shareSMS('', `${message} ${url}`);
     },
   },
   {
