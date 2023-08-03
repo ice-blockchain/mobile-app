@@ -5,6 +5,7 @@ import {Dimensions, StyleSheet} from 'react-native';
 import {isIOS, rem, screenHeight} from 'rn-units';
 
 export const SCREEN_SIDE_OFFSET = rem(20);
+export const POPUP_SIDE_OFFSET = rem(16);
 
 export const commonStyles = StyleSheet.create({
   baseSubScreen: {

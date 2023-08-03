@@ -575,4 +575,5 @@ export type Translations = {
   'social_media.instagram.title': null;
   'social_media.instagram.description_part1': null;
   'social_media.instagram.description_part2': null;
+  'ping_friends_pop_up.title': {count: number | string};
 };
