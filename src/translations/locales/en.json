@@ -954,8 +954,9 @@
       },
       "mobile": {
         "title": "Library for Mobile Apps",
-        "description": "Integrate our easy-to-use library into your mobile app\nand invite your users to join your micro-community and start mining.\n\nWith translation support and flexible setup options, you can ensure that all of your users have access to the same great ice experience, no matter where they are in the world.",
-        "action": "Download the library"
+        "description": "Integrate our easy-to-use library into your mobile app and invite your users to join your micro-community and start mining.\n\nWith translation support and flexible setup options, you can ensure that all of your users have access to the same great ice experience, no matter where they are in the world.",
+        "action1": "Android library",
+        "action2": "React Native library"
       }
     },
     "practices_section": {
@@ -972,7 +973,7 @@
           },
           "03": {
             "title": "Be creative",
-            "description": "Don’t be afraid to experiment with different types of content,\nsuch as blog posts, videos, or social media updates. Have fun and be innovative in the way you promote ice network to your audience."
+            "description": "Don’t be afraid to experiment with different types of content, such as blog posts, videos, or social media updates. Have fun and be innovative in the way you promote ice network to your audience."
           }
         }
       },

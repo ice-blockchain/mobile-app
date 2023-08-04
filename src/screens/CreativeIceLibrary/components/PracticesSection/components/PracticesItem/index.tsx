@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, ImageRequireSource, StyleSheet, Text, View} from 'react-native';
@@ -73,7 +74,8 @@ const styles = StyleSheet.create({
     ...font(20, 24, 'semibold', 'primaryDark'),
   },
   ruleTitle: {
-    paddingLeft: rem(8),
+    paddingLeft: isRTL ? 0 : rem(8),
+    paddingRight: !isRTL ? 0 : rem(8),
     ...font(14, 18, 'bold', 'primaryDark'),
   },
   ruleDescription: {

@@ -8,7 +8,7 @@ import {Images} from '@images';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {replaceString, t, tagRegex} from '@translations/i18n';
+import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
 import React from 'react';
@@ -157,9 +157,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     paddingTop: rem(20),
+    transform: [{scaleX: isRTL ? -1 : 1}],
   },
   shareProvidersImage: {
     flex: 1,
     justifyContent: 'flex-end',
+    alignItems: isRTL ? 'flex-end' : 'flex-start',
+    transform: [{scaleX: isRTL ? -1 : 1}],
   },
 });

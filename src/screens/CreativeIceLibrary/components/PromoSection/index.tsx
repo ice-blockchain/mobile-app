@@ -15,17 +15,30 @@ const promoItems: PromoItemData[] = [
     image: Images.creativeLibrary.promoSection.webPromo,
     title: t('creative_library.promo_section.web.title'),
     description: t('creative_library.promo_section.web.description'),
-    actionText: t('creative_library.promo_section.web.action'),
-    actionLink:
-      'https://github.com/ice-blockchain/community-assets/tree/master/website-widget',
+    actions: [
+      {
+        actionText: t('creative_library.promo_section.web.action'),
+        actionLink:
+          'https://github.com/ice-blockchain/community-assets/tree/master/website-widget',
+      },
+    ],
   },
   {
     image: Images.creativeLibrary.promoSection.mobilePromo,
     title: t('creative_library.promo_section.mobile.title'),
     description: t('creative_library.promo_section.mobile.description'),
-    actionText: t('creative_library.promo_section.mobile.action'),
-    actionLink:
-      'https://github.com/ice-blockchain/community-assets/tree/master/website-widget',
+    actions: [
+      {
+        actionText: t('creative_library.promo_section.mobile.action1'),
+        actionLink:
+          'https://github.com/ice-blockchain/community-assets/tree/master/android-widget',
+      },
+      {
+        actionText: t('creative_library.promo_section.mobile.action2'),
+        actionLink:
+          'https://github.com/ice-blockchain/community-assets/tree/master/react-native-widget',
+      },
+    ],
   },
 ];
 

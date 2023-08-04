@@ -608,7 +608,8 @@ export type Translations = {
   'creative_library.promo_section.web.action': null;
   'creative_library.promo_section.mobile.title': null;
   'creative_library.promo_section.mobile.description': null;
-  'creative_library.promo_section.mobile.action': null;
+  'creative_library.promo_section.mobile.action1': null;
+  'creative_library.promo_section.mobile.action2': null;
   'creative_library.practices_section.good.title': null;
   'creative_library.practices_section.good.rules.01.title': null;
   'creative_library.practices_section.good.rules.01.description': null;

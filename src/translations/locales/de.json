@@ -894,5 +894,109 @@
   },
   "ping_referrals_pop_up": {
     "title": "Bitte warten Sie, während wir alle Ihre Freunde anpingen · {{count}}"
+  },
+  "creative_library": {
+    "title": "Kreative ice Bibliothek",
+    "share": "Stelle dein Traumteam auf dem ice Netzwerk zusammen!",
+    "get_started": {
+      "header": "Stelle dein Traumteam zusammen",
+      "subtitle": "Fange auf ice an und baue deine blühende Mikro-Community auf",
+      "description": "Schließe dich der schnell wachsenden Anzahl von ice Nutzern an, die ihre eigenen Mikro-Communities aufbauen und mehr Belohnungen verdienen. Unsere Werbemittel, Anleitungen und Tipps machen es leicht, die Botschaft zu verbreiten und eine erfolgreiche Community aufzubauen.",
+      "get_started": "Los geht's",
+      "carousel": {
+        "01": {
+          "title": "Beitreten",
+          "description": "Lade unsere App herunter, sichere dir deinen Benutzernamen und fang mit dem Mining an.\n\nDu wirst einer globalen Gemeinschaft von Nutzern beitreten, die leidenschaftlich an Dezentralisierung, Autonomie und der Macht des Volkes interessiert sind."
+        },
+        "02": {
+          "title": "Einladen",
+          "description": "Lade dein Publikum ein, ice beizutreten und gemeinsam zusätzliche Belohnungen freizuschalten.\n\nAußerdem hilfst du dabei, die Vorteile der Dezentralisierung und die Zukunft der Finanzen bekannt zu machen."
+        },
+        "03": {
+          "title": "Verdienen",
+          "description": "Steigere deine Belohnungen, indem du dein Netzwerk erweiterst und andere dazu ermutigst, der ice Community beizutreten.\n\nSchließe dich unserer Mission an, die Zukunft der Finanzen durch Dezentralisierung und Autonomie zu revolutionieren."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videos",
+        "description": "Nutze unsere Sammlung von Videos, um deinen Einladungscode zu bewerben – im Quer- oder Hochformat, mit oder ohne Untertitel, wir haben alles, was du brauchst.",
+        "action": "Videos anzeigen"
+      },
+      "02": {
+        "title": "Bilder",
+        "description": "Ein Bild sagt mehr als tausend Worte. Wähle aus unserer Sammlung von Bannern, Social Media Assets, Vorlagen und App-Mockups.",
+        "action": "Bilder anzeigen"
+      },
+      "03": {
+        "title": "Eingebetteter Browser",
+        "description": "Mit unserem eingebetteten Browser kannst du ice ganz einfach auf deiner Website bewerben und Besucher dazu einladen, deiner Mikro-Community beizutreten.",
+        "action": "Banner installieren"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Erzähle deine Geschichte",
+        "description": "Teile deine Erfahrungen mit dem ice Netzwerk und seinen vielen Vorteilen, indem du einen Artikel in deiner Sprache verfasst.\n\nTeile ihn auf deinem Blog, Medium, Reddit, Quora, Blogger und mehr.\n\nDu findest alles über ice und seine einzigartigen Funktionen auf unserer [[:link]]Wissensdatenbank[[/:link]], [[:link]]Startseite[[/:link]] und [[:link]]FAQ[[/:link]] Seite."
+      },
+      "spread": {
+        "title": "Verbünde dich",
+        "description": "Mach mit bei Gesprächen und stelle das ice Netzwerk in deinen Lieblingsforen vor.\nEröffne neue Themen und teile deine Gedanken über dezentrale Finanzen, die Zukunft der Währung und die Kraft des Aufbaus einer Mikro-Community mit ice.\n\nSei ein ☃\uFE0F Schneemann und entfache eine Diskussion über das Potenzial dieser globalen Währung."
+      },
+      "bring": {
+        "title": "Lade deine Freunde ein",
+        "description": "Verwende unsere benutzerfreundliche Einladungsfunktion und teile deinen persönlichen Einladungscode mit deinen Freunden auf deinen bevorzugten Social Media Plattformen."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Plug & Play für Website-Besitzer",
+        "description": "Binde ice direkt in deine Website ein mit unserem einfachen und flexiblen JS-Banner. Die Einrichtung geht schnell und einfach und kann an das Branding deiner Website angepasst werden. Es ist in 50 Sprachen übersetzt und kompatibel mit jeder Website-Plattform.\n\nKopiere den Code auf deine Website und fange heute an, ice Netzwerk bei deinen Besuchern zu bewerben.",
+        "action": "Banner installieren"
+      },
+      "mobile": {
+        "title": "Bibliothek für mobile Apps",
+        "description": "Integriere unsere benutzerfreundliche Bibliothek in deine mobile App und lade deine Nutzer ein, deiner Mikro-Community beizutreten und mit dem Mining zu beginnen.\n\nMit Unterstützung für Übersetzungen und flexiblen Setup-Optionen kannst du sicherstellen, dass alle deine Nutzer weltweit das gleiche großartige ice Erlebnis haben.",
+        "action1": "Android library",
+        "action2": "React Native library"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Gute Praktiken",
+        "rules": {
+          "01": {
+            "title": "Sei authentisch",
+            "description": "Schreibe aus deiner persönlichen Erfahrung und Perspektive. Teile deine ehrlichen Gedanken und Gefühle über das ice Netzwerk."
+          },
+          "02": {
+            "title": "Verwende eine freundliche Tonart",
+            "description": "Schreibe so, als würdest du mit einem Freund sprechen, und vermeide übermäßig technische Fachsprache oder Sprache, die für Leser schwer verständlich sein könnte."
+          },
+          "03": {
+            "title": "Sei kreativ",
+            "description": "Scheue dich nicht davor, mit verschiedenen Arten von Inhalten zu experimentieren, wie z. B. Blogbeiträgen, Videos oder Social Media Updates. Hab Spaß dabei und sei innovativ in der Art und Weise, wie du ice Netzwerk deinem Publikum näherbringst."
+          }
+        }
+      },
+      "bad": {
+        "title": "Schlechte Praktiken",
+        "rules": {
+          "01": {
+            "title": "Kein Spam",
+            "description": "Vermeide das Versenden unerwünschter Nachrichten oder das wiederholte Posten des gleichen Inhalts auf verschiedenen Plattformen. Das kann als aufdringlich und lästig empfunden werden."
+          },
+          "02": {
+            "title": "Täusche niemanden",
+            "description": "Das ice Projekt zahlt den Nutzern kein Bargeld aus, sondern belohnt mit ice Coins. Bitte veröffentliche keine Inhalte wie \"Wandle dein ice in Bargeld um\" oder \"Verdiene 100 $ mit ice\" usw."
+          },
+          "03": {
+            "title": "Keine betrügerischen Aktivitäten",
+            "description": "Wir legen Wert auf Transparenz und Ehrlichkeit in unserer Community. Jegliche betrügerischen Aktivitäten wie das Erstellen mehrerer Konten oder der Versuch, das ice Netzwerk zu manipulieren, werden nicht toleriert."
+          }
+        }
+      }
+    }
   }
 }

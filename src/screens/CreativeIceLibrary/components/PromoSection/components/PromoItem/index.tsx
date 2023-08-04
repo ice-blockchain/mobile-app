@@ -9,12 +9,16 @@ import React from 'react';
 import {Image, ImageRequireSource, StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
+export type PromoItemActionData = {
+  actionText: string;
+  actionLink: string;
+};
+
 export type PromoItemData = {
   image: ImageRequireSource;
   title: string;
   description: string;
-  actionText: string;
-  actionLink: string;
+  actions: PromoItemActionData[];
 };
 
 type Props = {
@@ -22,17 +26,23 @@ type Props = {
 };
 
 export function PromoItem({data}: Props) {
-  const onPress = () => {
-    openLinkWithInAppBrowser({url: data.actionLink});
-  };
   return (
     <View style={styles.container}>
       <Image source={data.image} style={styles.image} />
       <Text style={styles.title}>{data.title}</Text>
       <Text style={styles.description}>{data.description}</Text>
-      <Touchable style={styles.action} onPress={onPress}>
-        <Text style={styles.actionText}>{data.actionText}</Text>
-      </Touchable>
+      <View style={styles.actionsContainer}>
+        {data.actions.map((actionData: PromoItemActionData) => (
+          <Touchable
+            key={actionData.actionText}
+            style={styles.action}
+            onPress={() => {
+              openLinkWithInAppBrowser({url: actionData.actionLink});
+            }}>
+            <Text style={styles.actionText}>{actionData.actionText}</Text>
+          </Touchable>
+        ))}
+      </View>
     </View>
   );
 }
@@ -53,8 +63,12 @@ const styles = StyleSheet.create({
     paddingTop: rem(12),
     ...font(12, 16, 'regular', 'emperor'),
   },
-  action: {
+  actionsContainer: {
     paddingTop: rem(12),
+    flexDirection: 'row',
+  },
+  action: {
+    marginEnd: rem(20),
   },
   actionText: {
     textDecorationLine: 'underline',
