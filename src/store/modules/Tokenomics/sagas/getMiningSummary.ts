@@ -10,9 +10,7 @@ import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {getErrorMessage} from '@utils/errors';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
-export function* getMiningSummarySaga(
-  action?: ReturnType<typeof TokenomicsActions.CLAIM_DAILY_BONUS.STATE.create>,
-) {
+export function* getMiningSummarySaga() {
   try {
     const isAuthorized: ReturnType<typeof isAuthorizedSelector> = yield select(
       isAuthorizedSelector,
@@ -38,8 +36,6 @@ export function* getMiningSummarySaga(
     yield put(
       TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.create({
         miningSummary,
-        claimDailyBonus:
-          action?.type === TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type,
       }),
     );
   } catch (error) {

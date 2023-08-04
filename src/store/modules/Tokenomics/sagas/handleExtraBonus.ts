@@ -28,7 +28,8 @@ import {
 
 export function* handleExtraBonusSaga(
   action: ReturnType<
-    typeof TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.create
+    | typeof TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.create
+    | typeof TokenomicsActions.CLAIM_DAILY_BONUS.STATE.create
   >,
 ): SagaIterator {
   const miningSummary: ReturnType<typeof miningSummarySelector> = yield select(
@@ -40,7 +41,10 @@ export function* handleExtraBonusSaga(
   );
 
   try {
-    if (miningSummary?.availableExtraBonus) {
+    if (
+      miningSummary?.availableExtraBonus ||
+      action.type === TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type
+    ) {
       yield call(waitForSelector, isRegistrationCompleteSelector);
       yield call(waitForSelector, isSplashHiddenSelector);
 
@@ -73,12 +77,6 @@ export function* handleExtraBonusSaga(
       yield call(openBonusClaimed, {
         claimedBonus: extraBonus.availableExtraBonus,
       });
-    } else if (action.payload.claimDailyBonus) {
-      /**
-       * If we explicitly want to a claim daily bonus
-       * E.g. by pressing a daily-bonus push notification
-       */
-      yield call(handleBonusExpired);
     }
   } catch (error) {
     if (isApiError(error, 409, 'EXTRA_BONUS_ALREADY_CLAIMED')) {
