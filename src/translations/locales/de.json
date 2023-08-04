@@ -952,14 +952,14 @@
     "promo_section": {
       "web": {
         "title": "Plug & Play für Website-Besitzer",
-        "description": "Binde ice direkt in deine Website ein mit unserem einfachen und flexiblen JS-Banner. Die Einrichtung geht schnell und einfach und kann an das Branding deiner Website angepasst werden. Es ist in 50 Sprachen übersetzt und kompatibel mit jeder Website-Plattform.\n\nKopiere den Code auf deine Website und fange heute an, ice Netzwerk bei deinen Besuchern zu bewerben.",
+        "description": "Binden Sie das ice Netzwerk direkt in Ihre Website ein mit unserem einfachen und flexiblen JS-Banner. Es ist eine schnelle und einfache Einrichtung, die an Ihr Website-Branding angepasst werden kann. Es ist in 50 Sprachen übersetzt und mit jeder Website-Plattform kompatibel.\n\nKopieren Sie den Code und fügen Sie ihn in Ihre Website ein, und fangen Sie heute an, das ice Netzwerk bei Ihren Besuchern zu bewerben.",
         "action": "Banner installieren"
       },
       "mobile": {
         "title": "Bibliothek für mobile Apps",
-        "description": "Integriere unsere benutzerfreundliche Bibliothek in deine mobile App und lade deine Nutzer ein, deiner Mikro-Community beizutreten und mit dem Mining zu beginnen.\n\nMit Unterstützung für Übersetzungen und flexiblen Setup-Optionen kannst du sicherstellen, dass alle deine Nutzer weltweit das gleiche großartige ice Erlebnis haben.",
-        "action1": "Android library",
-        "action2": "React Native library"
+        "description": "Integrieren Sie unsere benutzerfreundliche Bibliothek in Ihre mobile App und laden Sie Ihre Nutzer ein, Ihrer Mikro-Community beizutreten und mit dem Mining zu beginnen.\n\nMit Unterstützung für Übersetzungen und flexiblen Setup-Optionen können Sie sicherstellen, dass alle Ihre Nutzer Zugriff auf das gleiche großartige ice-Erlebnis haben, egal wo sie sich auf der Welt befinden.",
+        "action1": "Android-Bibliothek",
+        "action2": "React Native-Bibliothek"
       }
     },
     "practices_section": {
