@@ -1,6 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {
+  POPUP_SIDE_OFFSET,
+  SCREEN_SIDE_OFFSET,
+  windowWidth,
+} from '@constants/styles';
 import {useFetchCollection} from '@hooks/useFetchCollection';
 import {useFriendsListRenderItems} from '@screens/Modals/PingFriendsPopUp/hooks/useFriendsListRenderItems';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
@@ -59,8 +63,7 @@ const styles = StyleSheet.create({
   memberContent: {
     marginTop: rem(18),
     paddingHorizontal: SCREEN_SIDE_OFFSET + rem(4),
-    flexGrow: 1,
-    flexDirection: 'column',
+    width: windowWidth - POPUP_SIDE_OFFSET * 2,
   },
   activityIndicator: {
     marginLeft: rem(10),
