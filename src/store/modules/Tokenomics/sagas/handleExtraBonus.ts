@@ -54,9 +54,14 @@ export function* handleExtraBonusSaga(
        * if a user gets availableExtraBonus during the welcome screens,
        * the dialog is not displayed after the registration complete
        * Also this prevents closing the claim-bonus-dialog
-       * when navigation from pushes on app start up
+       * when navigation from pushes on app start up.
+       *
+       * CLAIM_DAILY_BONUS action is manually triggered by the user,
+       * other actions are triggered automatically, so delay is invisible to the user
        */
-      yield delay(1000);
+      if (action.type !== TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type) {
+        yield delay(1000);
+      }
 
       const result: SagaReturnType<typeof openClaimBonus> = yield call(
         openClaimBonus,
