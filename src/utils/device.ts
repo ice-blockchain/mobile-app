@@ -11,7 +11,7 @@ import {
   InAppBrowser,
   InAppBrowserOptions,
 } from 'react-native-inappbrowser-reborn';
-import {isIOS, wait} from 'rn-units';
+import {wait} from 'rn-units';
 
 export function hapticFeedback(type: HapticFeedbackTypes = 'soft') {
   const options = {
@@ -20,12 +20,6 @@ export function hapticFeedback(type: HapticFeedbackTypes = 'soft') {
   };
   ReactNativeHapticFeedback.trigger(type, options);
 }
-
-export const openSMS = async (phoneNumber: string, message: string) => {
-  const separator = isIOS ? '&' : '?';
-  const url = `sms:${phoneNumber}${separator}body=${message}`;
-  return await openLink(url);
-};
 
 export const openLink = async (url: string) => {
   try {

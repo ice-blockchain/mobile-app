@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {shareSMS} from '@services/share';
 import {usernameSelector} from '@store/modules/Account/selectors';
 import {ContactsActions} from '@store/modules/Contacts/actions';
 import {t} from '@translations/i18n';
 import {getContactName} from '@utils/contacts';
-import {openSMS} from '@utils/device';
 import {getErrorMessage, showError} from '@utils/errors';
 import {buildUsernameLink} from '@utils/username';
 import {Contact, getContactById} from 'react-native-contacts';
@@ -32,7 +32,7 @@ export function* inviteContactSaga(
       name: getContactName(contact),
     })} ${url}`;
     const [{number}] = contact.phoneNumbers;
-    openSMS(number, text);
+    shareSMS(number, text);
 
     yield put(ContactsActions.INVITE_CONTACT.SUCCESS.create(id));
   } catch (error) {
