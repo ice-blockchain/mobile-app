@@ -2,21 +2,23 @@
 
 import {UserListItemButton} from '@components/ListItems/UserListItem/components/UserListItemButton';
 import {COLORS} from '@constants/colors';
-import {ReferralsActions} from '@store/modules/Referrals/actions';
+import {MainStackParamList} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {getReferralUserSelector} from '@store/modules/Referrals/selectors';
-import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {PingIcon} from '@svg/PingIcon';
 import {t} from '@translations/i18n';
 import isNil from 'lodash/isNil';
 import React from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 type Props = {
   userId: string;
 };
 
 export const UserListPingButton = ({userId}: Props) => {
-  const dispatch = useDispatch();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
 
   const {pinged} = useSelector(
     getReferralUserSelector({
@@ -24,18 +26,10 @@ export const UserListPingButton = ({userId}: Props) => {
     }),
   );
 
-  const isPingInProgress = useSelector(
-    isLoadingSelector.bind(null, ReferralsActions.PING_REFERRAL(userId)),
-  );
-
-  const isDisabled = pinged || isPingInProgress;
+  const isDisabled = pinged;
 
   const onPress = () => {
-    dispatch(
-      ReferralsActions.PING_REFERRAL(userId).START.create({
-        userId,
-      }),
-    );
+    navigation.navigate('PingFriendsPopUp');
   };
 
   if (isNil(pinged)) {
@@ -44,7 +38,7 @@ export const UserListPingButton = ({userId}: Props) => {
 
   return (
     <UserListItemButton
-      disabled={isDisabled}
+      disabled={!!isDisabled}
       icon={
         <PingIcon color={isDisabled ? COLORS.cadetBlue : COLORS.primaryDark} />
       }

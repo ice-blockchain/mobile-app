@@ -29,9 +29,11 @@ export const UserListItem = memo(
   ({
     userId,
     AdditionalInfoComponent,
+    showFlag = true,
   }: {
     userId: string;
     AdditionalInfoComponent?: ReactNode;
+    showFlag?: boolean;
   }) => {
     const navigation =
       useNavigation<NativeStackNavigationProp<MainStackParamList>>();
@@ -77,7 +79,7 @@ export const UserListItem = memo(
           </View>
         </Touchable>
         {AdditionalInfoComponent}
-        {user.country ? (
+        {showFlag && user.country ? (
           <Image
             style={styles.flag}
             source={

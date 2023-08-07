@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {stopPropagation} from '@components/KeyboardDismiss';
 import {COLORS} from '@constants/colors';
 import {POPUP_SIDE_OFFSET} from '@constants/styles';
 import {useNavigation} from '@react-navigation/native';
 import {CloseButton} from '@screens/Modals/PingFriendsPopUp/components/CloseButton';
+import {FriendsList} from '@screens/Modals/PingFriendsPopUp/components/FriendsList';
 import {Title} from '@screens/Modals/PingFriendsPopUp/components/Title';
 import {t} from '@translations/i18n';
 import React, {useEffect} from 'react';
@@ -38,9 +38,10 @@ export const PingFriendsPopUp = () => {
   return (
     <TouchableWithoutFeedback onPress={onPressOutside}>
       <View style={styles.background}>
-        <View style={styles.container} {...stopPropagation}>
+        <View style={styles.container}>
           <Title text={t('ping_friends_pop_up.title', {count: 1})} />
           <CloseButton style={styles.closeButton} />
+          <FriendsList />
         </View>
       </View>
     </TouchableWithoutFeedback>
