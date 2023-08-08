@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {getReferralUserSelector} from '@store/modules/Referrals/selectors';
+import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {CheckMarkThinIcon} from '@svg/CheckMarkThinIcon';
-import isNil from 'lodash/isNil';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {useSelector} from 'react-redux';
@@ -20,7 +21,11 @@ export const FriendsListItemDone = ({userId}: Props) => {
     }),
   );
 
-  if (isNil(pinged)) {
+  const isPingInProgress = useSelector(
+    isLoadingSelector.bind(null, ReferralsActions.PING_REFERRAL(userId)),
+  );
+
+  if (!pinged || !isPingInProgress) {
     return null;
   }
 

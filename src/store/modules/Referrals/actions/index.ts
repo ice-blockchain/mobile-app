@@ -53,8 +53,15 @@ const PING_REFERRAL = createAction(
   },
 );
 
+const UPDATE_PING_COUNTER = createAction('REFERRALS/UPDATE_PING_COUNTER', {
+  START: true,
+  SUCCESS: (payload: {count: number}) => payload,
+  RESET: true,
+});
+
 export const ReferralsActions = Object.freeze({
   GET_REFERRALS,
   GET_REFERRALS_HISTORY,
   PING_REFERRAL,
+  UPDATE_PING_COUNTER,
 });

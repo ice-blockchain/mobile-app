@@ -20,6 +20,7 @@ export interface State {
     };
   };
   history: ReferralHistoryRecord[];
+  pingCounter: number;
 }
 
 const getReferralsActionCreator = ReferralsActions.GET_REFERRALS({})(null);
@@ -31,12 +32,15 @@ type Actions = ReturnType<
   | typeof actionCreatorPingReferral.FAILED.create
   | typeof ReferralsActions.GET_REFERRALS_HISTORY.SUCCESS.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
+  | typeof ReferralsActions.UPDATE_PING_COUNTER.SUCCESS.create
+  | typeof ReferralsActions.UPDATE_PING_COUNTER.RESET.create
 >;
 
 const INITIAL_STATE: State = {
   users: {},
   data: {},
   history: [],
+  pingCounter: 0,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -98,6 +102,14 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
 
       case ReferralsActions.GET_REFERRALS_HISTORY.SUCCESS.type:
         draft.history = action.payload.history;
+        break;
+
+      case ReferralsActions.UPDATE_PING_COUNTER.SUCCESS.type:
+        draft.pingCounter = action.payload.count;
+        break;
+
+      case ReferralsActions.UPDATE_PING_COUNTER.RESET.type:
+        draft.pingCounter = 0;
         break;
 
       case ReferralsActions.PING_REFERRAL(null).SUCCESS.type:
