@@ -15,6 +15,10 @@ import {
   NEWS_WALKTHROUGH_STEPS,
 } from '@store/modules/Walkthrough/steps/news';
 import {
+  PROFILE_WALKTHROUGH_SCREEN_NAME,
+  PROFILE_WALKTHROUGH_STEPS,
+} from '@store/modules/Walkthrough/steps/profile';
+import {
   TEAM_WALKTHROUGH_SCREEN_NAME,
   TEAM_WALKTHROUGH_STEPS,
 } from '@store/modules/Walkthrough/steps/team';
@@ -45,6 +49,11 @@ function getStepsByActiveTabAndScreenName({
     case 'news':
       if (currentScreenName === NEWS_WALKTHROUGH_SCREEN_NAME) {
         return NEWS_WALKTHROUGH_STEPS;
+      }
+      break;
+    case 'profile':
+      if (currentScreenName === PROFILE_WALKTHROUGH_SCREEN_NAME) {
+        return PROFILE_WALKTHROUGH_STEPS;
       }
       break;
   }

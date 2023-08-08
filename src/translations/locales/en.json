@@ -683,6 +683,12 @@
     "title": "Choose date"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Hidden data",
+        "description": "Tap on the eye icon to view how other users see your profile."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Read more",

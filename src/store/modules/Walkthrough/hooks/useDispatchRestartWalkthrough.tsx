@@ -3,6 +3,7 @@
 import {WalkthroughActions} from '@store/modules/Walkthrough/actions';
 import {HOME_WALKTHROUGH_SCREEN_NAME} from '@store/modules/Walkthrough/steps/home';
 import {NEWS_WALKTHROUGH_SCREEN_NAME} from '@store/modules/Walkthrough/steps/news';
+import {PROFILE_WALKTHROUGH_SCREEN_NAME} from '@store/modules/Walkthrough/steps/profile';
 import {TEAM_WALKTHROUGH_SCREEN_NAME} from '@store/modules/Walkthrough/steps/team';
 import {useCallback} from 'react';
 import {useDispatch} from 'react-redux';
@@ -25,6 +26,7 @@ function navigatedToWalkthroughScreen({newRouteName}: {newRouteName: string}) {
   return (
     newRouteName === HOME_WALKTHROUGH_SCREEN_NAME ||
     newRouteName === TEAM_WALKTHROUGH_SCREEN_NAME ||
+    newRouteName === PROFILE_WALKTHROUGH_SCREEN_NAME ||
     newRouteName === NEWS_WALKTHROUGH_SCREEN_NAME
   );
 }
