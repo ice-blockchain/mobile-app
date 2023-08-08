@@ -6,6 +6,7 @@ import {useNavigation} from '@react-navigation/native';
 import {CloseButton} from '@screens/Modals/PingFriendsPopUp/components/CloseButton';
 import {FriendsList} from '@screens/Modals/PingFriendsPopUp/components/FriendsList';
 import {Title} from '@screens/Modals/PingFriendsPopUp/components/Title';
+import {pingCounterSelector} from '@store/modules/Referrals/selectors';
 import {t} from '@translations/i18n';
 import React, {useEffect} from 'react';
 import {
@@ -14,10 +15,13 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 export const PingFriendsPopUp = () => {
   const navigation = useNavigation();
+
+  const count = useSelector(pingCounterSelector);
 
   const onPressOutside = () => {
     navigation.goBack();
@@ -39,7 +43,7 @@ export const PingFriendsPopUp = () => {
     <TouchableWithoutFeedback onPress={onPressOutside}>
       <View style={styles.background}>
         <View style={styles.container}>
-          <Title text={t('ping_friends_pop_up.title', {count: 1})} />
+          <Title text={t('ping_friends_pop_up.title', {count})} />
           <CloseButton style={styles.closeButton} />
           <FriendsList />
         </View>
