@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {LottieView} from '@components/LottieView';
 import {COLORS} from '@constants/colors';
+import {LottieAnimations} from '@lottie';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {getReferralUserSelector} from '@store/modules/Referrals/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
@@ -30,9 +32,23 @@ export const FriendsListItemDone = ({userId}: Props) => {
   }
 
   return (
-    <View style={[styles.iconContainer, styles.completed]}>
-      <CheckMarkThinIcon width={rem(10)} height={rem(10)} />
-    </View>
+    <>
+      {pinged && (
+        <View style={[styles.iconContainer, styles.completed]}>
+          <CheckMarkThinIcon width={rem(10)} height={rem(10)} />
+        </View>
+      )}
+      {isPingInProgress && (
+        <View style={[styles.iconContainer, styles.animationContainer]}>
+          <LottieView
+            style={styles.animation}
+            source={LottieAnimations.loadingLogoBlue}
+            autoPlay={true}
+            loop={true}
+          />
+        </View>
+      )}
+    </>
   );
 };
 
@@ -43,6 +59,14 @@ const styles = StyleSheet.create({
     borderRadius: rem(10),
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  animation: {
+    width: rem(25),
+    height: rem(25),
+    alignSelf: 'center',
+  },
+  animationContainer: {
+    justifyContent: 'center',
   },
   completed: {
     backgroundColor: COLORS.shamrock,
