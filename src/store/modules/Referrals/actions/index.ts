@@ -41,12 +41,13 @@ const GET_REFERRALS_HISTORY = createAction('GET_REFERRALS_HISTORY', {
   }),
 });
 
-const PING_REFERRAL = createAction(
-  'REFERRALS/PING_REFERRAL',
+const PING_FRIENDS = createAction(
+  'REFERRALS/PING_FRIENDS',
   {
-    START: (payload: {userId: string}) => payload,
+    START: () => {},
     SUCCESS: (payload: {userId: string}) => payload,
     FAILED: (payload: {userId: string; errorMessage: string}) => payload,
+    RESET: true,
   },
   {
     isMultiInstanceProcess: true,
@@ -62,6 +63,6 @@ const UPDATE_PING_COUNTER = createAction('REFERRALS/UPDATE_PING_COUNTER', {
 export const ReferralsActions = Object.freeze({
   GET_REFERRALS,
   GET_REFERRALS_HISTORY,
-  PING_REFERRAL,
+  PING_FRIENDS,
   UPDATE_PING_COUNTER,
 });
