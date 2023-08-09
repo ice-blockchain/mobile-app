@@ -6,7 +6,7 @@ import {getReferralsSaga} from '@store/modules/Referrals/sagas/getReferralsSaga'
 import {pingFriendsSaga} from '@store/modules/Referrals/sagas/pingFriendsSaga';
 import {pingReferralSaga} from '@store/modules/Referrals/sagas/pingReferralSaga';
 import {takeLeadingEveryUnique} from '@store/utils/sagas/effects';
-import {takeLeading} from 'redux-saga/effects';
+import {takeLatest, takeLeading} from 'redux-saga/effects';
 
 export const referralsWatchers = [
   takeLeadingEveryUnique(
@@ -17,10 +17,7 @@ export const referralsWatchers = [
     ReferralsActions.GET_REFERRALS_HISTORY.START.type,
     getReferralsHistorySaga,
   ),
-  takeLeadingEveryUnique(
-    ReferralsActions.PING_FRIENDS.START.type,
-    pingFriendsSaga,
-  ),
+  takeLatest(ReferralsActions.PING_FRIENDS.START.type, pingFriendsSaga),
   takeLeadingEveryUnique(
     ReferralsActions.PING_REFERRAL(null).START.type,
     pingReferralSaga,

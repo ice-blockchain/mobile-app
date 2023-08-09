@@ -3,7 +3,6 @@
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
-import {useNavigation} from '@react-navigation/native';
 import {CloseIcon} from '@svg/CloseIcon';
 import React from 'react';
 import {StyleProp, ViewStyle} from 'react-native';
@@ -11,14 +10,16 @@ import {rem} from 'rn-units';
 
 type Props = {
   style?: StyleProp<ViewStyle>;
+  onPress?: () => void;
 };
 
-export const CloseButton = ({style}: Props) => {
-  const navigation = useNavigation();
+export const CloseButton = ({style, onPress}: Props) => {
   return (
     <Touchable
       hitSlop={MIDDLE_BUTTON_HIT_SLOP}
-      onPress={navigation.goBack}
+      onPress={() => {
+        onPress?.();
+      }}
       style={style}>
       <CloseIcon color={COLORS.black} width={rem(24)} height={rem(24)} />
     </Touchable>

@@ -6,26 +6,38 @@ import {useNavigation} from '@react-navigation/native';
 import {CloseButton} from '@screens/Modals/PingFriendsPopUp/components/CloseButton';
 import {FriendsList} from '@screens/Modals/PingFriendsPopUp/components/FriendsList';
 import {Title} from '@screens/Modals/PingFriendsPopUp/components/Title';
+import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {pingCounterSelector} from '@store/modules/Referrals/selectors';
 import {t} from '@translations/i18n';
-import React, {useEffect} from 'react';
+import React, {useCallback, useEffect} from 'react';
 import {
   BackHandler,
   StyleSheet,
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 export const PingFriendsPopUp = () => {
   const navigation = useNavigation();
 
+  const dispatch = useDispatch();
+
   const count = useSelector(pingCounterSelector);
 
-  const onPressOutside = () => {
+  const onClose = () => {
+    cancelPinging();
     navigation.goBack();
   };
+
+  const cancelPinging = useCallback(() => {
+    dispatch(ReferralsActions.PING_FRIENDS.RESET.create());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(ReferralsActions.PING_FRIENDS.START.create());
+  }, [dispatch]);
 
   useEffect(() => {
     const backHandler = BackHandler.addEventListener(
@@ -34,17 +46,20 @@ export const PingFriendsPopUp = () => {
        * When true is returned the event will not be bubbled up
        * & no other back action will execute
        */
-      () => true,
+      () => {
+        cancelPinging();
+        return true;
+      },
     );
     return () => backHandler.remove();
-  }, []);
+  }, [cancelPinging]);
 
   return (
-    <TouchableWithoutFeedback onPress={onPressOutside}>
+    <TouchableWithoutFeedback onPress={onClose}>
       <View style={styles.background}>
         <View style={styles.container}>
           <Title text={t('ping_friends_pop_up.title', {count})} />
-          <CloseButton style={styles.closeButton} />
+          <CloseButton style={styles.closeButton} onPress={onClose} />
           <FriendsList />
         </View>
       </View>
