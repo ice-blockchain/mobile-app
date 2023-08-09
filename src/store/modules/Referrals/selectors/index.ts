@@ -27,9 +27,33 @@ const referralsSelectorWithMemo = createSelector(
   },
 );
 
+const referralsToPingSelectorWithMemo = createSelector(
+  [
+    (state: RootState) => state.referrals,
+    (_state: RootState, {referralType}: ReferralSelectorOptions) =>
+      referralType,
+  ],
+  (referrals, referralType) => {
+    const referralData = referrals.data[referralType];
+    const data = referralData?.referrals ?? [];
+    const refUsersFiltered = data
+      .map(referralId => referrals.users[referralId])
+      .filter(referral => !referral.pinged);
+    return {
+      data: refUsersFiltered.map(referral => referral.id),
+      hasNext:
+        !referralData || referralData.total > referralData.referrals.length,
+    };
+  },
+);
+
 export const referralsSelector =
   (options: ReferralSelectorOptions) => (state: RootState) =>
     referralsSelectorWithMemo(state, options);
+
+export const referralsToPingSelector =
+  (options: ReferralSelectorOptions) => (state: RootState) =>
+    referralsToPingSelectorWithMemo(state, options);
 
 export const getReferralUserSelector =
   ({userId}: {userId: string}) =>
@@ -48,3 +72,6 @@ export const userT1ReferralSelector = (state: RootState) =>
 
 export const userT2ReferralSelector = (state: RootState) =>
   state.account.user?.t2ReferralCount || 0;
+
+export const pingCounterSelector = (state: RootState) =>
+  state.referrals.pingCounter;
