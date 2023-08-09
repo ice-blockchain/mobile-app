@@ -24,7 +24,7 @@ export interface State {
 }
 
 const getReferralsActionCreator = ReferralsActions.GET_REFERRALS({})(null);
-const actionCreatorPingReferral = ReferralsActions.PING_FRIENDS(null);
+const actionCreatorPingReferral = ReferralsActions.PING_REFERRAL(null);
 type Actions = ReturnType<
   | typeof CollectionActions.SEARCH_USERS.SUCCESS.create
   | typeof getReferralsActionCreator.SUCCESS.create
@@ -112,8 +112,8 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.pingCounter = 0;
         break;
 
-      case ReferralsActions.PING_FRIENDS(null).SUCCESS.type:
-      case ReferralsActions.PING_FRIENDS(null).FAILED.type:
+      case ReferralsActions.PING_REFERRAL(null).SUCCESS.type:
+      case ReferralsActions.PING_REFERRAL(null).FAILED.type:
         {
           const {userId} = action.payload;
 

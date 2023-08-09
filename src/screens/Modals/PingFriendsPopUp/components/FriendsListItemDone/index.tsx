@@ -24,7 +24,7 @@ export const FriendsListItemDone = ({userId}: Props) => {
   );
 
   const isPingInProgress = useSelector(
-    isLoadingSelector.bind(null, ReferralsActions.PING_FRIENDS(userId)),
+    isLoadingSelector.bind(null, ReferralsActions.PING_REFERRAL(userId)),
   );
 
   if (!pinged || !isPingInProgress) {
