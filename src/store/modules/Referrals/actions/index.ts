@@ -54,7 +54,7 @@ const PING_REFERRAL = createAction(
 );
 
 const PING_FRIENDS = createAction('REFERRALS/PING_FRIENDS', {
-  START: () => {},
+  START: true,
   RESET: true,
 });
 

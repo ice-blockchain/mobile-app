@@ -1,14 +1,15 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {UserListItem} from '@components/ListItems/UserListItem';
 import {
   POPUP_SIDE_OFFSET,
   SCREEN_SIDE_OFFSET,
   windowWidth,
 } from '@constants/styles';
-import {useFriendsListRenderItems} from '@screens/Modals/PingFriendsPopUp/hooks/useFriendsListRenderItems';
+import {FriendsListItemDone} from '@screens/Modals/PingFriendsPopUp/components/FriendsListItemDone';
 import {referralsToPingSelector} from '@store/modules/Referrals/selectors';
-import React, {memo, useEffect, useState} from 'react';
-import {StyleSheet} from 'react-native';
+import React, {memo, useCallback, useEffect, useState} from 'react';
+import {ListRenderItem, StyleSheet} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
@@ -18,8 +19,6 @@ export const FriendsList = memo(() => {
 
   const [localData, setLocalData] = useState(data);
 
-  const {renderItem} = useFriendsListRenderItems();
-
   useEffect(() => {
     /** 1 sec timeout so user can see
      * done state for already pinged item
@@ -28,6 +27,16 @@ export const FriendsList = memo(() => {
       setLocalData(data);
     }, 1000);
   }, [data]);
+
+  const renderItem: ListRenderItem<string> = useCallback(({item}) => {
+    return (
+      <UserListItem
+        userId={item}
+        showFlag={false}
+        AdditionalInfoComponent={<FriendsListItemDone userId={item} />}
+      />
+    );
+  }, []);
 
   return (
     <FlatList
