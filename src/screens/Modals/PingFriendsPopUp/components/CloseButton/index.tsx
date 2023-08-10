@@ -15,12 +15,7 @@ type Props = {
 
 export const CloseButton = ({style, onPress}: Props) => {
   return (
-    <Touchable
-      hitSlop={MIDDLE_BUTTON_HIT_SLOP}
-      onPress={() => {
-        onPress?.();
-      }}
-      style={style}>
+    <Touchable hitSlop={MIDDLE_BUTTON_HIT_SLOP} onPress={onPress} style={style}>
       <CloseIcon color={COLORS.secondary} width={rem(12)} height={rem(12)} />
     </Touchable>
   );
