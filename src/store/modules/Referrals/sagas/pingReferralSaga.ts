@@ -13,9 +13,7 @@ export function* pingReferralSaga(action: ReturnType<typeof actionCreator>) {
   const {userId} = action.payload;
 
   try {
-    /** One second delay after each ref ping so user can see loading indicator */
-    yield delay(1000);
-
+    yield delay(2000);
     yield Api.notifications.pingUser({
       userId,
     });
@@ -25,6 +23,7 @@ export function* pingReferralSaga(action: ReturnType<typeof actionCreator>) {
         userId,
       }),
     );
+
     const result: SagaReturnType<ReturnType<typeof getReferralUserSelector>> =
       yield select(getReferralUserSelector({userId}));
     yield call(AnalyticsEventLogger.trackPingUser, {

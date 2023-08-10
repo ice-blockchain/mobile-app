@@ -8,6 +8,8 @@ import {FriendsList} from '@screens/Modals/PingFriendsPopUp/components/FriendsLi
 import {Title} from '@screens/Modals/PingFriendsPopUp/components/Title';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {pingCounterSelector} from '@store/modules/Referrals/selectors';
+import {processStatusForActionSelector} from '@store/modules/UtilityProcessStatuses/selectors';
+import {RootState} from '@store/rootReducer';
 import {t} from '@translations/i18n';
 import React, {useCallback, useEffect} from 'react';
 import {
@@ -26,10 +28,11 @@ export const PingFriendsPopUp = () => {
 
   const count = useSelector(pingCounterSelector);
 
-  const onClose = () => {
-    cancelPinging();
-    navigation.goBack();
-  };
+  const isPingingCanceled = useSelector(
+    (state: RootState) =>
+      processStatusForActionSelector(state, ReferralsActions.PING_FRIENDS)
+        ?.status === 'RESET',
+  );
 
   const cancelPinging = useCallback(() => {
     dispatch(ReferralsActions.PING_FRIENDS.RESET.create());
@@ -38,6 +41,12 @@ export const PingFriendsPopUp = () => {
   useEffect(() => {
     dispatch(ReferralsActions.PING_FRIENDS.START.create());
   }, [dispatch]);
+
+  useEffect(() => {
+    if (isPingingCanceled) {
+      navigation.goBack();
+    }
+  }, [isPingingCanceled, navigation]);
 
   useEffect(() => {
     const backHandler = BackHandler.addEventListener(
@@ -55,11 +64,11 @@ export const PingFriendsPopUp = () => {
   }, [cancelPinging]);
 
   return (
-    <TouchableWithoutFeedback onPress={onClose}>
+    <TouchableWithoutFeedback onPress={cancelPinging}>
       <View style={styles.background}>
         <View style={styles.container}>
           <Title text={t('ping_friends_pop_up.title', {count})} />
-          <CloseButton style={styles.closeButton} onPress={onClose} />
+          <CloseButton style={styles.closeButton} onPress={cancelPinging} />
           <FriendsList />
         </View>
       </View>

@@ -35,12 +35,11 @@ const referralsToPingSelectorWithMemo = createSelector(
   ],
   (referrals, referralType) => {
     const referralData = referrals.data[referralType];
-    const data = referralData?.referrals ?? [];
-    const refUsersFiltered = data
-      .map(referralId => referrals.users[referralId])
-      .filter(referral => !referral.pinged);
+    const pingedRefIds = (referralData?.referrals ?? []).filter(
+      referralId => !referrals.users[referralId].pinged,
+    );
     return {
-      data: refUsersFiltered.map(referral => referral.id),
+      data: pingedRefIds,
       hasNext:
         !referralData || referralData.total > referralData.referrals.length,
     };
