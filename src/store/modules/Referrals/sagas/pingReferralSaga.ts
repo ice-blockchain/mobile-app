@@ -13,10 +13,12 @@ export function* pingReferralSaga(action: ReturnType<typeof actionCreator>) {
   const {userId} = action.payload;
 
   try {
-    yield delay(2000);
     yield Api.notifications.pingUser({
       userId,
     });
+
+    /** User should see the loading animation */
+    yield delay(1000);
 
     yield put(
       ReferralsActions.PING_REFERRAL(action.id).SUCCESS.create({

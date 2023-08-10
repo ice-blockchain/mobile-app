@@ -34,9 +34,13 @@ export function* pingFriendsSaga() {
     }
 
     if (data.length > 0) {
-      yield put(
-        ReferralsActions.PING_REFERRAL().START.create({userId: data[0]}),
-      );
+      const userId = data[0];
+      yield put(ReferralsActions.PING_REFERRAL(userId).START.create({userId}));
+
+      yield take([
+        ReferralsActions.PING_REFERRAL(userId).SUCCESS.type,
+        ReferralsActions.PING_REFERRAL(userId).FAILED.type,
+      ]);
     }
 
     if (data.length <= 4 && hasNext) {
