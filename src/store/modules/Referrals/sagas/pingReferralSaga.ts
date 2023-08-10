@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Api} from '@api/index';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {getReferralUserSelector} from '@store/modules/Referrals/selectors';
@@ -13,9 +12,9 @@ export function* pingReferralSaga(action: ReturnType<typeof actionCreator>) {
   const {userId} = action.payload;
 
   try {
-    yield Api.notifications.pingUser({
-      userId,
-    });
+    // yield Api.notifications.pingUser({
+    //   userId,
+    // });
 
     /** User should see the loading animation */
     yield delay(1000);

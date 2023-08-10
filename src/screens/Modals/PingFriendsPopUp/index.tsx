@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   },
   closeButton: {
     position: 'absolute',
-    top: rem(10),
-    right: rem(10),
+    top: rem(16),
+    right: rem(16),
   },
 });

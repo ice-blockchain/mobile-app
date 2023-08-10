@@ -41,6 +41,7 @@ export function* pingFriendsSaga() {
         ReferralsActions.PING_REFERRAL(userId).SUCCESS.type,
         ReferralsActions.PING_REFERRAL(userId).FAILED.type,
       ]);
+      yield put(ReferralsActions.UPDATE_PING_COUNTER.STATE.create());
     }
 
     if (data.length <= 4 && hasNext) {

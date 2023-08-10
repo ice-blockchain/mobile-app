@@ -59,9 +59,7 @@ const PING_FRIENDS = createAction('REFERRALS/PING_FRIENDS', {
 });
 
 const UPDATE_PING_COUNTER = createAction('REFERRALS/UPDATE_PING_COUNTER', {
-  START: true,
-  SUCCESS: (payload: {count: number}) => payload,
-  RESET: true,
+  STATE: true,
 });
 
 export const ReferralsActions = Object.freeze({

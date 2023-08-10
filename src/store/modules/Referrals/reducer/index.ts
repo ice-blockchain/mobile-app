@@ -32,8 +32,8 @@ type Actions = ReturnType<
   | typeof actionCreatorPingReferral.FAILED.create
   | typeof ReferralsActions.GET_REFERRALS_HISTORY.SUCCESS.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
-  | typeof ReferralsActions.UPDATE_PING_COUNTER.SUCCESS.create
-  | typeof ReferralsActions.UPDATE_PING_COUNTER.RESET.create
+  | typeof ReferralsActions.UPDATE_PING_COUNTER.STATE.create
+  | typeof ReferralsActions.PING_FRIENDS.RESET.create
 >;
 
 const INITIAL_STATE: State = {
@@ -104,12 +104,8 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.history = action.payload.history;
         break;
 
-      case ReferralsActions.UPDATE_PING_COUNTER.SUCCESS.type:
-        draft.pingCounter = action.payload.count;
-        break;
-
-      case ReferralsActions.UPDATE_PING_COUNTER.RESET.type:
-        draft.pingCounter = 0;
+      case ReferralsActions.UPDATE_PING_COUNTER.STATE.type:
+        draft.pingCounter = draft.pingCounter + 1;
         break;
 
       case ReferralsActions.PING_REFERRAL(null).SUCCESS.type:
@@ -119,6 +115,10 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
 
           draft.users[userId].pinged = true;
         }
+        break;
+
+      case ReferralsActions.PING_FRIENDS.RESET.type:
+        draft.pingCounter = 0;
         break;
 
       case AccountActions.SIGN_OUT.SUCCESS.type:

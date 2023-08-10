@@ -15,7 +15,6 @@ export const Title = ({text}: Props) => {
 
 const styles = StyleSheet.create({
   titleText: {
-    marginTop: rem(20),
     marginLeft: rem(16),
     marginRight: rem(44),
     ...font(24, 31, 'black', 'primaryDark', 'left'),

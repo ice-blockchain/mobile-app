@@ -21,7 +21,7 @@ export const CloseButton = ({style, onPress}: Props) => {
         onPress?.();
       }}
       style={style}>
-      <CloseIcon color={COLORS.black} width={rem(24)} height={rem(24)} />
+      <CloseIcon color={COLORS.secondary} width={rem(12)} height={rem(12)} />
     </Touchable>
   );
 };

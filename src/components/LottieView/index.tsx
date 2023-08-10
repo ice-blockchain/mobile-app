@@ -2,10 +2,12 @@
 
 /* eslint-disable no-restricted-imports */
 import {useHandleLottieBackground} from '@components/LottieView/hooks/useHandleLottieBackground';
-import AnimatedLottieView, {AnimatedLottieViewProps} from 'lottie-react-native';
+import AnimatedLottieView, {
+  LottieViewProps as ImportedLottieViewProps,
+} from 'lottie-react-native';
 import React, {useRef} from 'react';
 
-export type LottieViewProps = AnimatedLottieViewProps;
+export type LottieViewProps = ImportedLottieViewProps;
 
 export type LottieViewMethods = AnimatedLottieView;
 
