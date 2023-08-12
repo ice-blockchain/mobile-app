@@ -11,10 +11,10 @@ import {
   take,
 } from 'redux-saga/effects';
 
-export function* pingFriendsSaga() {
+export function* pingReferralsSaga() {
   while (true) {
     const {reset} = yield race({
-      reset: take(ReferralsActions.PING_FRIENDS.RESET.type),
+      reset: take(ReferralsActions.PING_REFERRALS.RESET.type),
       delay: delay(1000),
     });
 
@@ -29,7 +29,7 @@ export function* pingFriendsSaga() {
       yield select(referralsToPingSelector({referralType: 'T1'}));
 
     if (data.length === 0 && !hasNext) {
-      yield put(ReferralsActions.PING_FRIENDS.RESET.create());
+      yield put(ReferralsActions.PING_REFERRALS.RESET.create());
       return;
     }
 

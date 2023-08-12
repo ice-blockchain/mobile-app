@@ -3,9 +3,9 @@
 import {COLORS} from '@constants/colors';
 import {POPUP_SIDE_OFFSET} from '@constants/styles';
 import {useNavigation} from '@react-navigation/native';
-import {CloseButton} from '@screens/Modals/PingFriendsPopUp/components/CloseButton';
-import {FriendsList} from '@screens/Modals/PingFriendsPopUp/components/FriendsList';
-import {Title} from '@screens/Modals/PingFriendsPopUp/components/Title';
+import {CloseButton} from '@screens/Modals/PingReferralsPopUp/components/CloseButton';
+import {ReferralsList} from '@screens/Modals/PingReferralsPopUp/components/ReferralsList';
+import {Title} from '@screens/Modals/PingReferralsPopUp/components/Title';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {pingCounterSelector} from '@store/modules/Referrals/selectors';
 import {processStatusForActionSelector} from '@store/modules/UtilityProcessStatuses/selectors';
@@ -21,7 +21,7 @@ import {
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const PingFriendsPopUp = () => {
+export const PingReferralsPopUp = () => {
   const navigation = useNavigation();
 
   const dispatch = useDispatch();
@@ -30,16 +30,16 @@ export const PingFriendsPopUp = () => {
 
   const isPingingCanceled = useSelector(
     (state: RootState) =>
-      processStatusForActionSelector(state, ReferralsActions.PING_FRIENDS)
+      processStatusForActionSelector(state, ReferralsActions.PING_REFERRALS)
         ?.status === 'RESET',
   );
 
   const cancelPinging = useCallback(() => {
-    dispatch(ReferralsActions.PING_FRIENDS.RESET.create());
+    dispatch(ReferralsActions.PING_REFERRALS.RESET.create());
   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(ReferralsActions.PING_FRIENDS.START.create());
+    dispatch(ReferralsActions.PING_REFERRALS.START.create());
   }, [dispatch]);
 
   useEffect(() => {
@@ -67,9 +67,9 @@ export const PingFriendsPopUp = () => {
     <TouchableWithoutFeedback onPress={cancelPinging}>
       <View style={styles.background}>
         <View style={styles.container}>
-          <Title text={t('ping_friends_pop_up.title', {count})} />
+          <Title text={t('ping_referrals_pop_up.title', {count})} />
           <CloseButton style={styles.closeButton} onPress={cancelPinging} />
-          <FriendsList />
+          <ReferralsList />
         </View>
       </View>
     </TouchableWithoutFeedback>

@@ -890,7 +890,7 @@
       "description_part2": "Plus, you'll be the first to know about any new features or promotions that we're launching."
     }
   },
-  "ping_friends_pop_up": {
+  "ping_referrals_pop_up": {
     "title": "Please wait while we ping all your friends · {{count}}"
   }
 }

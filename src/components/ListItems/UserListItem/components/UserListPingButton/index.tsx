@@ -29,7 +29,7 @@ export const UserListPingButton = ({userId}: Props) => {
   const isDisabled = pinged;
 
   const onPress = () => {
-    navigation.navigate('PingFriendsPopUp');
+    navigation.navigate('PingReferralsPopUp');
   };
 
   if (isNil(pinged)) {

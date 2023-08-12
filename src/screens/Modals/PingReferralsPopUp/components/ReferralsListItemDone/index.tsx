@@ -16,7 +16,7 @@ type Props = {
   userId: string;
 };
 
-export const FriendsListItemDone = ({userId}: Props) => {
+export const ReferralsListItemDone = ({userId}: Props) => {
   const {pinged} = useSelector(
     getReferralUserSelector({
       userId,

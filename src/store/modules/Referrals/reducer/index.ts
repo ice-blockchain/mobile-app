@@ -33,7 +33,7 @@ type Actions = ReturnType<
   | typeof ReferralsActions.GET_REFERRALS_HISTORY.SUCCESS.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
   | typeof ReferralsActions.UPDATE_PING_COUNTER.STATE.create
-  | typeof ReferralsActions.PING_FRIENDS.RESET.create
+  | typeof ReferralsActions.PING_REFERRALS.RESET.create
 >;
 
 const INITIAL_STATE: State = {
@@ -117,7 +117,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         }
         break;
 
-      case ReferralsActions.PING_FRIENDS.RESET.type:
+      case ReferralsActions.PING_REFERRALS.RESET.type:
         draft.pingCounter = 0;
         break;
 

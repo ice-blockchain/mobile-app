@@ -6,7 +6,7 @@ import {
   SCREEN_SIDE_OFFSET,
   windowWidth,
 } from '@constants/styles';
-import {FriendsListItemDone} from '@screens/Modals/PingFriendsPopUp/components/FriendsListItemDone';
+import {ReferralsListItemDone} from '@screens/Modals/PingReferralsPopUp/components/ReferralsListItemDone';
 import {referralsToPingSelector} from '@store/modules/Referrals/selectors';
 import React, {memo, useCallback, useEffect, useState} from 'react';
 import {ListRenderItem, StyleSheet} from 'react-native';
@@ -14,7 +14,7 @@ import {FlatList} from 'react-native-gesture-handler';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const FriendsList = memo(() => {
+export const ReferralsList = memo(() => {
   const {data} = useSelector(referralsToPingSelector({referralType: 'T1'}));
 
   const [localData, setLocalData] = useState(data);
@@ -33,7 +33,7 @@ export const FriendsList = memo(() => {
       <UserListItem
         userId={item}
         showFlag={false}
-        AdditionalInfoComponent={<FriendsListItemDone userId={item} />}
+        AdditionalInfoComponent={<ReferralsListItemDone userId={item} />}
       />
     );
   }, []);
