@@ -52,6 +52,12 @@ React Native App for the mining of ice coins
   yarn run:ios
   ```
 
+## Localization rules
+
+We’re keeping translations in `src/translations/locales/**.json`.
+The translation types are generated with `yarn generate-translation-types` script (should be applied after any locale modification).
+The types are generated based on `en.json` - that is the main locale and the fallback for other locales.
+
 ## Download the App
 
 Download the App at https://ice.io
