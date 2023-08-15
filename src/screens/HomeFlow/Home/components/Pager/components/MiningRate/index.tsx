@@ -6,7 +6,7 @@ import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
 import {FORCE_LTR_TEXT_CHAR} from '@constants/rtl';
-import {commonStyles} from '@constants/styles';
+import {commonStyles, SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
 import {PAGE_HEIGHT} from '@screens/HomeFlow/Home/components/Pager';
 import {PageSkeleton} from '@screens/HomeFlow/Home/components/Pager/components/PageSkeleton';
 import {miningRatesSelector} from '@store/modules/Tokenomics/selectors';
@@ -105,7 +105,10 @@ export const MiningRate = memo(({darkMode}: Props) => {
           )}%`}</Text>
         )}
 
-        <Touchable style={styles.miningRateInfo} onPress={openBonusesInfo}>
+        <Touchable
+          style={styles.miningRateInfo}
+          onPress={openBonusesInfo}
+          hitSlop={SMALL_BUTTON_HIT_SLOP}>
           <InfoOutlineIcon
             width={INFO_ICON_SIZE}
             height={INFO_ICON_SIZE}
