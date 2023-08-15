@@ -19,7 +19,7 @@ import {openLinkWithInAppBrowser} from '@utils/device';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo, ReactNode, RefObject, useMemo, useState} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 import {SvgProps} from 'react-native-svg';
 import {isAndroid, rem} from 'rn-units';
 
@@ -83,18 +83,20 @@ export const Footer = memo(({parameters}: Props) => {
 
   if (maxValuesSet) {
     const renderInfoRow = ({
+      style,
       Icon,
       label,
       value,
       currency,
     }: {
+      style?: StyleProp<ViewStyle>;
       Icon: React.FC<SvgProps>;
       label: string;
       value: string | number;
       currency: string | ReactNode;
     }) => {
       return (
-        <View key={label} style={styles.infoRowContainer}>
+        <View key={label} style={[styles.infoRowContainer, style]}>
           <Icon width={rem(24)} height={rem(24)} color={COLORS.primaryLight} />
           <Text style={styles.infoRowText}>
             {`${label.toLocaleUpperCase()}: `}
@@ -109,6 +111,7 @@ export const Footer = memo(({parameters}: Props) => {
     return (
       <>
         {renderInfoRow({
+          style: styles.infoRowContainerTop,
           Icon: YearsOutlineIcon,
           label: t('staking.period_label'),
           value: preStakingSummary?.years ?? '0',
@@ -190,6 +193,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: rem(16),
     backgroundColor: COLORS.aliceBlue,
+  },
+  infoRowContainerTop: {
+    marginTop: rem(24),
   },
   infoRowText: {
     marginLeft: rem(6),
