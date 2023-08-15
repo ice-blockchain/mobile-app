@@ -3,6 +3,7 @@
 import {LinesBackground} from '@components/LinesBackground';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
@@ -18,6 +19,9 @@ import {rem} from 'rn-units';
 
 export const Staking = memo(() => {
   useFocusStatusBar({style: 'light-content'});
+
+  const safeAreaInsets = useSafeAreaInsets();
+
   const {scrollHandler, shadowStyle} = useScrollShadow();
   const {onParametersChange, parameters, calculatedResults} =
     usePreStakingCalculator();
@@ -35,7 +39,12 @@ export const Staking = memo(() => {
         onScroll={scrollHandler}
         scrollEventThrottle={16}
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.scrollContent}>
+        contentContainerStyle={[
+          styles.scrollContent,
+          {
+            paddingBottom: rem(16) + safeAreaInsets.bottom,
+          },
+        ]}>
         <Intro />
         <View style={[styles.card, commonStyles.baseSubScreen]}>
           <Calculator

@@ -6,17 +6,20 @@ import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
 import {STAKING_ALLOCATION_MAX, STAKING_YEARS_MAX} from '@constants/staking';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {DEFAULT_DIALOG_NO_BUTTON} from '@screens/Modals/PopUp/components/PopUpButton';
 import {usePreStaking} from '@screens/Staking/hooks/usePreStaking';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
-import {replaceString, t, tagRegex} from '@translations/i18n';
+import {YearsOutlineIcon} from '@svg/YearsOutlineIcon';
+import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
-import React, {memo, RefObject, useMemo, useState} from 'react';
+import React, {memo, ReactNode, RefObject, useMemo, useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {SvgProps} from 'react-native-svg';
 import {isAndroid, rem} from 'rn-units';
 
 type Props = {
@@ -77,6 +80,50 @@ export const Footer = memo(({parameters}: Props) => {
     ));
   }, []);
 
+  if (maxValuesSet) {
+    const renderInfoRow = ({
+      Icon,
+      label,
+      value,
+      currency,
+    }: {
+      Icon: React.FC<SvgProps>;
+      label: string;
+      value: string | number;
+      currency: string | ReactNode;
+    }) => {
+      return (
+        <View key={label} style={styles.infoRowContainer}>
+          <Icon width={rem(24)} height={rem(24)} color={COLORS.primaryLight} />
+          <Text style={styles.infoRowText}>
+            {`${label.toLocaleUpperCase()}: `}
+            <Text style={styles.infoRowValue}>
+              {value} {currency}
+            </Text>
+          </Text>
+        </View>
+      );
+    };
+
+    return (
+      <>
+        {renderInfoRow({
+          Icon: YearsOutlineIcon,
+          label: t('staking.period_label'),
+          value: preStakingSummary?.years ?? '',
+          currency: t('global.years').toLowerCase(),
+        })}
+
+        {renderInfoRow({
+          Icon: CoinsStackIcon,
+          label: t('staking.balance_label'),
+          value: preStakingSummary?.allocation ?? '',
+          currency: <IceLabel reversed={isRTL} color={COLORS.primaryLight} />,
+        })}
+      </>
+    );
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.checkboxRow}>
@@ -108,6 +155,7 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(38),
   },
   noteText: {
+    flexShrink: 1,
     marginLeft: rem(14),
     ...font(12, 19, 'medium', 'primaryDark'),
   },
@@ -129,5 +177,24 @@ const styles = StyleSheet.create({
   checkboxRow: {
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  infoRowContainer: {
+    marginTop: rem(16),
+    marginHorizontal: SCREEN_SIDE_OFFSET,
+    paddingVertical: rem(8),
+    paddingHorizontal: rem(10),
+    minHeight: rem(50),
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: rem(16),
+    backgroundColor: COLORS.aliceBlue,
+  },
+  infoRowText: {
+    marginLeft: rem(6),
+    ...font(14, 16.8, 'medium', 'primaryLight'),
+  },
+  infoRowValue: {
+    ...font(17, 20.4, 'bold', 'primaryLight'),
   },
 });
