@@ -16,6 +16,7 @@ import {CoinsStackIcon} from '@svg/CoinsStackIcon';
 import {YearsOutlineIcon} from '@svg/YearsOutlineIcon';
 import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
+import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo, ReactNode, RefObject, useMemo, useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -110,14 +111,14 @@ export const Footer = memo(({parameters}: Props) => {
         {renderInfoRow({
           Icon: YearsOutlineIcon,
           label: t('staking.period_label'),
-          value: preStakingSummary?.years ?? '',
+          value: preStakingSummary?.years ?? '0',
           currency: t('global.years').toLowerCase(),
         })}
 
         {renderInfoRow({
           Icon: CoinsStackIcon,
           label: t('staking.balance_label'),
-          value: preStakingSummary?.allocation ?? '',
+          value: formatNumberString(`${preStakingSummary?.allocation ?? '0'}`),
           currency: <IceLabel reversed={isRTL} color={COLORS.primaryLight} />,
         })}
       </>
