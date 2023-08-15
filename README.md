@@ -43,7 +43,7 @@ React Native App for the mining of ice coins
   ```
 
   > [!NOTE]
-  > The commands above take the app env files from the `mobile-app-secrets` folder that should be downloaded beforehand and placed on the same level as the mobile-app project
+  > The commands above take the app env files from the [mobile-app-secrets](https://github.com/ice-blockchain/mobile-app-secrets) folder that should be downloaded beforehand and placed on the same level as the mobile-app project
 
 - Run the App
   ```
