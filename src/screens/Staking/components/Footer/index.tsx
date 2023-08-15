@@ -12,6 +12,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {DEFAULT_DIALOG_NO_BUTTON} from '@screens/Modals/PopUp/components/PopUpButton';
 import {usePreStaking} from '@screens/Staking/hooks/usePreStaking';
+import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
 import {YearsOutlineIcon} from '@svg/YearsOutlineIcon';
 import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
@@ -21,6 +22,7 @@ import {font} from '@utils/styles';
 import React, {memo, ReactNode, RefObject, useMemo, useState} from 'react';
 import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 import {SvgProps} from 'react-native-svg';
+import {useSelector} from 'react-redux';
 import {isAndroid, rem} from 'rn-units';
 
 type Props = {
@@ -37,6 +39,8 @@ export const Footer = memo(({parameters}: Props) => {
     preStakingSummary?.years === STAKING_YEARS_MAX &&
     preStakingSummary.allocation === STAKING_ALLOCATION_MAX;
   const buttonDisabled = !termsAccepted || maxValuesSet;
+
+  const balanceSummary = useSelector(balanceSummarySelector);
 
   const onStakePress = () => {
     navigation.navigate('PopUp', {
@@ -121,7 +125,7 @@ export const Footer = memo(({parameters}: Props) => {
         {renderInfoRow({
           Icon: CoinsStackIcon,
           label: t('staking.balance_label'),
-          value: formatNumberString(`${preStakingSummary?.allocation ?? '0'}`),
+          value: formatNumberString(balanceSummary?.preStaking ?? '0'),
           currency: <IceLabel reversed={isRTL} color={COLORS.primaryLight} />,
         })}
       </>
