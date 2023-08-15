@@ -101,7 +101,7 @@ export const Footer = memo(({parameters}: Props) => {
     }) => {
       return (
         <View key={label} style={[styles.infoRowContainer, style]}>
-          <Icon width={rem(24)} height={rem(24)} color={COLORS.primaryLight} />
+          <Icon width={rem(18)} height={rem(18)} color={COLORS.primaryLight} />
           <Text style={styles.infoRowText}>
             {`${label.toLocaleUpperCase()}: `}
             <Text style={styles.infoRowValue}>
