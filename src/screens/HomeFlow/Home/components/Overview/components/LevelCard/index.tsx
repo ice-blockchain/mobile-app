@@ -2,8 +2,12 @@
 
 import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {IceLabel} from '@components/Labels/IceLabel';
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {Images} from '@images';
+import {MainNavigationParams} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {
   CardBase,
   CardBaseSkeleton,
@@ -36,6 +40,9 @@ interface Props {
 
 export const LevelCard = forwardRef(
   ({sharedIsCollapsed, onLayout}: Props, forwardedRef: Ref<View>) => {
+    const navigation =
+      useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
+
     const userReferralCount = useSelector(userReferralCountSelector);
     const userId = useSelector(userIdSelector);
     const globalRank = useSelector(globalRankSelector(userId));
@@ -44,6 +51,14 @@ export const LevelCard = forwardRef(
     const userLevel = useSelector(
       AchievementsSelectors.getLevelByUserId({userId}),
     );
+
+    const onPressReferrals = () => {
+      navigation.navigate('ProfileTab');
+    };
+
+    const onPressRank = () => {
+      navigation.navigate('Stats');
+    };
 
     const Header = useCallback(
       ({style}: TextProps) => (
@@ -80,14 +95,14 @@ export const LevelCard = forwardRef(
         HeaderValue={Header}
         sharedIsCollapsed={sharedIsCollapsed}>
         <View style={styles.body}>
-          <View style={styles.column}>
+          <Touchable style={styles.column} onPress={onPressReferrals}>
             <Text style={styles.labelText}>{t('home.pioneer.referrals')}</Text>
             <AnimatedNumberText
               value={userReferralCount}
               style={styles.valueText}
             />
-          </View>
-          <View style={styles.column}>
+          </Touchable>
+          <Touchable style={styles.column} onPress={onPressRank}>
             {globalRank != null && (
               <>
                 <Text style={styles.labelText}>{t('home.pioneer.rank')}</Text>
@@ -97,7 +112,7 @@ export const LevelCard = forwardRef(
                 />
               </>
             )}
-          </View>
+          </Touchable>
         </View>
         <View style={styles.bottomContainer}>
           <Text style={styles.noteText}>

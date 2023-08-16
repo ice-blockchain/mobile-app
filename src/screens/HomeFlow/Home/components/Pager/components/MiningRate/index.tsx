@@ -2,17 +2,21 @@
 
 import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {IceLabel} from '@components/Labels/IceLabel';
+import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {LINKS} from '@constants/links';
 import {FORCE_LTR_TEXT_CHAR} from '@constants/rtl';
-import {commonStyles} from '@constants/styles';
+import {commonStyles, MIDDLE_BUTTON_HIT_SLOP} from '@constants/styles';
 import {PAGE_HEIGHT} from '@screens/HomeFlow/Home/components/Pager';
 import {PageSkeleton} from '@screens/HomeFlow/Home/components/Pager/components/PageSkeleton';
 import {miningRatesSelector} from '@store/modules/Tokenomics/selectors';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
+import {InfoOutlineIcon} from '@svg/InfoOutlineIcon';
 import {MiningHammerIcon} from '@svg/MiningHammerIcon';
 import {StarIcon} from '@svg/StarIcon';
 import {TeamIcon} from '@svg/TeamIcon';
 import {isRTL, t} from '@translations/i18n';
+import {openLinkWithInAppBrowser} from '@utils/device';
 import {formatNumber, parseNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo, useMemo} from 'react';
@@ -21,6 +25,8 @@ import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 import {MiningRateValue} from './components/MiningRateValue';
+
+const INFO_ICON_SIZE = rem(16);
 
 type Props = {
   darkMode?: boolean;
@@ -41,6 +47,12 @@ export const MiningRate = memo(({darkMode}: Props) => {
         return styles.miningValueNeutral;
     }
   }, [miningRates?.type]);
+
+  const openBonusesInfo = () => {
+    openLinkWithInAppBrowser({
+      url: LINKS.BONUSES,
+    });
+  };
 
   if (!miningRates) {
     return <PageSkeleton />;
@@ -92,6 +104,17 @@ export const MiningRate = memo(({darkMode}: Props) => {
             miningRates.total.bonuses.total,
           )}%`}</Text>
         )}
+
+        <Touchable
+          style={styles.miningRateInfo}
+          onPress={openBonusesInfo}
+          hitSlop={MIDDLE_BUTTON_HIT_SLOP}>
+          <InfoOutlineIcon
+            width={INFO_ICON_SIZE}
+            height={INFO_ICON_SIZE}
+            color={COLORS.shamrock}
+          />
+        </Touchable>
       </View>
       <View style={styles.baseContainer}>
         <Text style={[styles.baseTitleText, darkMode && commonStyles.darkText]}>
@@ -229,6 +252,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  miningRateInfo: {
+    position: 'absolute',
+    top: -(INFO_ICON_SIZE / 2),
+    right: -INFO_ICON_SIZE,
   },
   rateValueText: {
     ...font(15, 20, 'medium'),
