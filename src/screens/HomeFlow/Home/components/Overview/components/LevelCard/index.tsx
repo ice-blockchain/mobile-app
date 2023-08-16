@@ -52,13 +52,13 @@ export const LevelCard = forwardRef(
       AchievementsSelectors.getLevelByUserId({userId}),
     );
 
-    const onPressReferrals = useCallback(() => {
+    const onPressReferrals = () => {
       navigation.navigate('ProfileTab');
-    }, [navigation]);
+    };
 
-    const onPressRank = useCallback(() => {
+    const onPressRank = () => {
       navigation.navigate('Stats');
-    }, [navigation]);
+    };
 
     const Header = useCallback(
       ({style}: TextProps) => (

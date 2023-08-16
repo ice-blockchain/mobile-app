@@ -19,11 +19,12 @@ import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
-import React, {memo, ReactNode, RefObject, useMemo, useState} from 'react';
-import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
-import {SvgProps} from 'react-native-svg';
+import React, {memo, RefObject, useMemo, useState} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {isAndroid, rem} from 'rn-units';
+
+import {InfoRow} from './components/InfoRow';
 
 type Props = {
   parameters: RefObject<{years: number; allocation: number} | null>;
@@ -86,48 +87,24 @@ export const Footer = memo(({parameters}: Props) => {
   }, []);
 
   if (maxValuesSet) {
-    const renderInfoRow = ({
-      style,
-      Icon,
-      label,
-      value,
-      currency,
-    }: {
-      style?: StyleProp<ViewStyle>;
-      Icon: React.FC<SvgProps>;
-      label: string;
-      value: string | number;
-      currency: string | ReactNode;
-    }) => {
-      return (
-        <View key={label} style={[styles.infoRowContainer, style]}>
-          <Icon width={rem(18)} height={rem(18)} color={COLORS.primaryLight} />
-          <Text style={styles.infoRowText}>
-            {`${label.toLocaleUpperCase()}: `}
-            <Text style={styles.infoRowValue}>
-              {value} {currency}
-            </Text>
-          </Text>
-        </View>
-      );
-    };
-
     return (
       <>
-        {renderInfoRow({
-          style: styles.infoRowContainerTop,
-          Icon: YearsOutlineIcon,
-          label: t('staking.period_label'),
-          value: preStakingSummary?.years ?? '0',
-          currency: t('global.years').toLowerCase(),
-        })}
-
-        {renderInfoRow({
-          Icon: CoinsStackIcon,
-          label: t('staking.balance_label'),
-          value: formatNumberString(balanceSummary?.preStaking ?? '0'),
-          currency: <IceLabel reversed={isRTL} color={COLORS.primaryLight} />,
-        })}
+        <InfoRow
+          key={'staking.period'}
+          style={[styles.infoRowContainer, styles.infoRowContainerTop]}
+          Icon={YearsOutlineIcon}
+          label={t('staking.period_label')}
+          value={preStakingSummary?.years ?? '0'}
+          unit={t('global.years').toLowerCase()}
+        />
+        <InfoRow
+          key={'staking.balance'}
+          style={styles.infoRowContainer}
+          Icon={CoinsStackIcon}
+          label={t('staking.balance_label')}
+          value={formatNumberString(balanceSummary?.preStaking ?? '0')}
+          unit={<IceLabel reversed={isRTL} color={COLORS.primaryLight} />}
+        />
       </>
     );
   }
@@ -189,23 +166,8 @@ const styles = StyleSheet.create({
   infoRowContainer: {
     marginTop: rem(16),
     marginHorizontal: SCREEN_SIDE_OFFSET,
-    paddingVertical: rem(8),
-    paddingHorizontal: rem(10),
-    minHeight: rem(50),
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: rem(16),
-    backgroundColor: COLORS.aliceBlue,
   },
   infoRowContainerTop: {
     marginTop: rem(24),
-  },
-  infoRowText: {
-    marginLeft: rem(6),
-    ...font(14, 16.8, 'medium', 'primaryLight'),
-  },
-  infoRowValue: {
-    ...font(17, 20.4, 'bold', 'primaryLight'),
   },
 });
