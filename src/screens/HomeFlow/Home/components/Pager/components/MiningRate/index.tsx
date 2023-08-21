@@ -17,7 +17,7 @@ import {StarIcon} from '@svg/StarIcon';
 import {TeamIcon} from '@svg/TeamIcon';
 import {isRTL, t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
-import {formatNumber, parseNumber} from '@utils/numbers';
+import {formatNumber, parseNumber, removeZeroDigits} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo, useMemo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -97,12 +97,16 @@ export const MiningRate = memo(({darkMode}: Props) => {
           label={t('general.ice_per_hour')}
         />
         {!!miningRates.total.bonuses?.total && (
-          <Text
-            style={
-              styles.rateIncreaseText
-            }>{`${FORCE_LTR_TEXT_CHAR}+${formatNumber(
-            miningRates.total.bonuses.total,
-          )}%`}</Text>
+          <Text style={styles.rateIncreaseText}>
+            {FORCE_LTR_TEXT_CHAR}+
+            {removeZeroDigits(
+              formatNumber(miningRates.total.bonuses.total, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              }),
+            )}
+            %
+          </Text>
         )}
 
         <Touchable
@@ -168,7 +172,12 @@ export const MiningRate = memo(({darkMode}: Props) => {
             value={prestackingBonuses}
             style={styles.iconValueText}
             textDecorator={value =>
-              `${FORCE_LTR_TEXT_CHAR}${formatNumber(value)}%`
+              `${FORCE_LTR_TEXT_CHAR}+${removeZeroDigits(
+                formatNumber(value, {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                }),
+              )}%`
             }
           />
         </View>

@@ -21,7 +21,11 @@ import {
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
 import {YearsOutlineIcon} from '@svg/YearsOutlineIcon';
 import {isRTL, t} from '@translations/i18n';
-import {formatNumberString} from '@utils/numbers';
+import {
+  formatNumber,
+  formatNumberString,
+  removeZeroDigits,
+} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
@@ -115,7 +119,14 @@ export const PreStakingInfo = ({oneColumn}: Props) => {
             {oneColumn && miningRates ? '\n' : ' '}
             {miningRates && (
               <Text style={styles.bonusValueText}>
-                +{miningRates.total.bonuses?.preStaking ?? 0}%
+                +
+                {removeZeroDigits(
+                  formatNumber(miningRates.total.bonuses?.preStaking ?? 0, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  }),
+                )}
+                %
               </Text>
             )}
           </Text>
