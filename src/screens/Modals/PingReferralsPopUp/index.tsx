@@ -67,7 +67,9 @@ export const PingReferralsPopUp = () => {
     <TouchableWithoutFeedback onPress={cancelPinging}>
       <View style={styles.background}>
         <View style={styles.container}>
-          <Title text={t('ping_referrals_pop_up.title', {count})} />
+          <View style={styles.titleContainer}>
+            <Title text={t('ping_referrals_pop_up.title', {count})} />
+          </View>
           <CloseButton style={styles.closeButton} onPress={cancelPinging} />
           <ReferralsList />
         </View>
@@ -88,6 +90,8 @@ const styles = StyleSheet.create({
     borderRadius: rem(20),
     paddingBottom: rem(20),
     paddingTop: rem(20),
+  },
+  titleContainer: {
     alignItems: 'center',
   },
   closeButton: {
