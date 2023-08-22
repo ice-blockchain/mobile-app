@@ -55,6 +55,11 @@ export const usePickImage = ({
             return showError(t('errors.no_library_permissions'));
         }
       }
+
+      if (isPermissionError(error)) {
+        return showError(t('errors.no_library_permissions'));
+      }
+
       logError(error);
     }
   };
@@ -66,5 +71,13 @@ const isPickerError = (error: unknown): error is {code: PickerErrorCode} => {
     checkProp(error, 'code') &&
     typeof error.code === 'string' &&
     error.code.startsWith('E_')
+  );
+};
+
+const isPermissionError = (error: unknown) => {
+  return (
+    checkProp(error, 'code') &&
+    typeof error.code === 'string' &&
+    error.code.includes('EACCES')
   );
 };
