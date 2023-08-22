@@ -10,7 +10,11 @@ import {miningRatesSelector} from '@store/modules/Tokenomics/selectors';
 import {ChartIcon} from '@svg/ChartIcon';
 import {YearsIcon} from '@svg/YearsIcon';
 import {isRTL, t} from '@translations/i18n';
-import {formatNumber, formatNumberString} from '@utils/numbers';
+import {
+  formatNumber,
+  formatNumberString,
+  removeZeroDigits,
+} from '@utils/numbers';
 import {font} from '@utils/styles';
 import {throttle} from 'lodash';
 import React, {memo, useEffect, useMemo, useRef} from 'react';
@@ -94,7 +98,12 @@ export const Calculator = memo(
               />
               <Text style={styles.resultBonusText}>
                 {calculatedResults
-                  ? ` ${FORCE_LTR_TEXT_CHAR}(+${calculatedResults.bonus}%) `
+                  ? ` ${FORCE_LTR_TEXT_CHAR}(+${removeZeroDigits(
+                      formatNumber(calculatedResults.bonus, {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2,
+                      }),
+                    )}%) `
                   : ''}
               </Text>
             </>

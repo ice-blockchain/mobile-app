@@ -20,7 +20,8 @@ export const calculateStakingBonus = ({
     (noPreStakingBonus * (100 - allocation)) / 100 +
     (noPreStakingBonus * allocation * (100 + preStakingBonusForYears)) / 10000;
 
-  const bonus = Math.round((miningRate * 100) / noPreStakingBonus - 100);
+  const bonusValue = (miningRate * 100) / noPreStakingBonus - 100;
+  const bonus = Math.round(bonusValue * 100) / 100; // keep 2 digits precision
 
   return {miningRate, bonus};
 };

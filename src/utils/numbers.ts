@@ -87,3 +87,13 @@ export function formatNumberString(
 
   return formattedWhole + (formattedDecimals ? `.${formattedDecimals}` : '');
 }
+
+/**
+ * Removes digits if they are 0.
+ * 178.55 -> 178.55
+ * 178.50 -> 178.50
+ * 178.00 -> 178
+ */
+export function removeZeroDigits(input: string) {
+  return input.replace(/\.0+$/, '');
+}
