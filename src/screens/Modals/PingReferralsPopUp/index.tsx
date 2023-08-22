@@ -11,7 +11,7 @@ import {pingCounterSelector} from '@store/modules/Referrals/selectors';
 import {processStatusForActionSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {RootState} from '@store/rootReducer';
 import {t} from '@translations/i18n';
-import React, {useCallback, useEffect} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {
   BackHandler,
   StyleSheet,
@@ -23,6 +23,8 @@ import {rem} from 'rn-units';
 
 export const PingReferralsPopUp = () => {
   const navigation = useNavigation();
+
+  const [isPingInitiated, setPingInitiated] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -40,13 +42,14 @@ export const PingReferralsPopUp = () => {
 
   useEffect(() => {
     dispatch(ReferralsActions.PING_REFERRALS.START.create());
+    setPingInitiated(true);
   }, [dispatch]);
 
   useEffect(() => {
-    if (isPingingCanceled) {
+    if (isPingingCanceled && isPingInitiated) {
       navigation.goBack();
     }
-  }, [isPingingCanceled, navigation]);
+  }, [isPingingCanceled, navigation, isPingInitiated]);
 
   useEffect(() => {
     const backHandler = BackHandler.addEventListener(
