@@ -25,13 +25,6 @@ export const tokenomicsWatchers = [
     ],
     getMiningSummarySaga,
   ),
-  /**
-   * Separate flow to get rid of messing with the main getMiningSummary flow
-   */
-  takeLatest(
-    TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type,
-    getMiningSummarySaga,
-  ),
   takeLatest(
     [
       AppCommonActions.APP_STATE_CHANGE.STATE.type,
@@ -72,6 +65,13 @@ export const tokenomicsWatchers = [
   takeLatest(AppCommonActions.APP_STATE_CHANGE.STATE.type, forceMiningSaga),
   takeLeading(
     TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.type,
+    handleExtraBonusSaga,
+  ),
+  /**
+   * Separate flow to get rid of messing with the mining summary success action
+   */
+  takeLatest(
+    TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type,
     handleExtraBonusSaga,
   ),
 ];

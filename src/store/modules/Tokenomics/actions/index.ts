@@ -11,10 +11,7 @@ import {createAction} from '@store/utils/actions/createAction';
 
 const GET_MINING_SUMMARY = createAction('GET_MINING_SUMMARY', {
   START: true,
-  SUCCESS: (payload: {
-    miningSummary: MiningSummary;
-    claimDailyBonus?: boolean;
-  }) => payload,
+  SUCCESS: (payload: {miningSummary: MiningSummary}) => payload,
   FAILED: (errorMessage: string) => ({errorMessage}),
   RESET: true,
 });
