@@ -30,10 +30,12 @@ export const UserListItem = memo(
     userId,
     AdditionalInfoComponent,
     showFlag = true,
+    disabled = false,
   }: {
     userId: string;
     AdditionalInfoComponent?: ReactNode;
     showFlag?: boolean;
+    disabled?: boolean;
   }) => {
     const navigation =
       useNavigation<NativeStackNavigationProp<MainStackParamList>>();
@@ -48,7 +50,8 @@ export const UserListItem = memo(
       <View style={styles.container} {...stopPropagation}>
         <Touchable
           style={styles.touchArea}
-          onPress={() => navigation.navigate('UserProfile', {userId})}>
+          onPress={() => navigation.navigate('UserProfile', {userId})}
+          disabled={disabled}>
           <View style={styles.imageContainer}>
             {user.profilePictureUrl && (
               <Avatar

@@ -24,6 +24,7 @@ export const ReferralsList = memo(() => {
         userId={item}
         showFlag={false}
         AdditionalInfoComponent={<ReferralsListItemDone userId={item} />}
+        disabled={true}
       />
     );
   }, []);
