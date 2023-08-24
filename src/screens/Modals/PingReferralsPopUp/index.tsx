@@ -2,7 +2,8 @@
 
 import {COLORS} from '@constants/colors';
 import {POPUP_SIDE_OFFSET} from '@constants/styles';
-import {useNavigation} from '@react-navigation/native';
+import {MainStackParamList} from '@navigation/Main';
+import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {CloseButton} from '@screens/Modals/PingReferralsPopUp/components/CloseButton';
 import {ReferralsList} from '@screens/Modals/PingReferralsPopUp/components/ReferralsList';
 import {Title} from '@screens/Modals/PingReferralsPopUp/components/Title';
@@ -23,6 +24,10 @@ import {rem} from 'rn-units';
 
 export const PingReferralsPopUp = () => {
   const navigation = useNavigation();
+
+  const {
+    params: {userId},
+  } = useRoute<RouteProp<MainStackParamList, 'PingReferralsPopUp'>>();
 
   const [isPingInitiated, setPingInitiated] = useState(false);
 
@@ -74,7 +79,7 @@ export const PingReferralsPopUp = () => {
             <Title text={t('ping_referrals_pop_up.title', {count})} />
           </View>
           <CloseButton style={styles.closeButton} onPress={cancelPinging} />
-          <ReferralsList />
+          <ReferralsList userId={userId} />
         </View>
       </View>
     </TouchableWithoutFeedback>

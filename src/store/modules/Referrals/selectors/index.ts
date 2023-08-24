@@ -9,6 +9,11 @@ interface ReferralSelectorOptions {
   referralType: ReferralType;
 }
 
+interface PingReferralsSelectorOptions {
+  referralType: ReferralType;
+  userId: string;
+}
+
 const referralsSelectorWithMemo = createSelector(
   [
     (state: RootState) => state.referrals,
@@ -39,6 +44,7 @@ const referralsToPingSelectorWithMemo = createSelector(
     const pingedRefIds = (referralData?.referrals ?? []).filter(
       referralId => !referrals.users[referralId].pinged,
     );
+
     return {
       data: pingedRefIds,
       hasNext:
@@ -50,14 +56,24 @@ const referralsToPingSelectorWithMemo = createSelector(
 const referralsToShowForPingSelectorWithMemo = createSelector(
   [
     (state: RootState) => state.referrals,
-    (_state: RootState, {referralType}: ReferralSelectorOptions) =>
-      referralType,
+    (_state: RootState, options: PingReferralsSelectorOptions) => options,
   ],
-  (referrals, referralType) => {
+  (referrals, options) => {
+    const {referralType, userId} = options;
     const referralData = referrals.data[referralType];
-    const refUsers = (referralData?.referrals ?? []).map(
+    let refUsers = (referralData?.referrals ?? []).map(
       referralId => referrals.users[referralId],
     );
+
+    /**
+     * Slice the array to start from the user that is being pinged
+     */
+    const index = refUsers.findIndex(user => user.id === userId);
+    refUsers = refUsers.slice(index, refUsers.length);
+
+    /**
+     * Filter the refs to show
+     */
     const filtered = filterPingedRefsToShow(refUsers);
     return {
       data: filtered.map(user => user.id),
@@ -76,7 +92,7 @@ export const referralsToPingSelector =
     referralsToPingSelectorWithMemo(state, options);
 
 export const referralsToShowForPingSelector =
-  (options: ReferralSelectorOptions) => (state: RootState) =>
+  (options: PingReferralsSelectorOptions) => (state: RootState) =>
     referralsToShowForPingSelectorWithMemo(state, options);
 
 export const getReferralUserSelector =
@@ -99,6 +115,9 @@ export const userT2ReferralSelector = (state: RootState) =>
 
 export const pingCounterSelector = (state: RootState) =>
   state.referrals.pingCounter;
+
+export const pingSessionUserIdSelector = (state: RootState) =>
+  state.referrals.pingSessionUserId;
 
 function filterPingedRefsToShow(refs: User[]) {
   const allPinged = refs.findIndex(user => !user.pinged) === -1;

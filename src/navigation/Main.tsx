@@ -89,7 +89,7 @@ export type MainStackParamList = {
   MainTabs: undefined;
   PopUp: PopUpProps;
   JoinTelegramPopUp: undefined;
-  PingReferralsPopUp: undefined;
+  PingReferralsPopUp: {userId: string};
   Tooltip: {
     position: 'above' | 'below';
     targetRef: RefObject<View>;

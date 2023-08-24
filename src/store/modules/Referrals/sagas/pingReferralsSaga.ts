@@ -1,7 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {ReferralsActions} from '@store/modules/Referrals/actions';
-import {referralsToPingSelector} from '@store/modules/Referrals/selectors';
+import {
+  pingSessionUserIdSelector,
+  referralsToPingSelector,
+} from '@store/modules/Referrals/selectors';
 import {Task} from 'redux-saga';
 import {
   cancel,
@@ -22,6 +25,10 @@ function* processingPingReferralsSaga() {
       }: SagaReturnType<ReturnType<typeof referralsToPingSelector>> =
         yield select(referralsToPingSelector({referralType: 'T1'}));
 
+      const pingSessionUserId: SagaReturnType<
+        typeof pingSessionUserIdSelector
+      > = yield select(pingSessionUserIdSelector);
+
       if (data.length === 0 && !hasNext) {
         yield put(ReferralsActions.PING_REFERRALS.RESET.create());
         return;
@@ -29,6 +36,14 @@ function* processingPingReferralsSaga() {
 
       if (data.length > 0) {
         const userId = data[0];
+        if (!pingSessionUserId) {
+          yield put(
+            ReferralsActions.UPDATE_PING_SESSION_FIRST_USER_ID.STATE.create({
+              userId,
+            }),
+          );
+        }
+
         yield put(
           ReferralsActions.PING_REFERRAL(userId).START.create({userId}),
         );

@@ -13,9 +13,13 @@ import {FlatList} from 'react-native-gesture-handler';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const ReferralsList = memo(() => {
+type Props = {
+  userId: string;
+};
+
+export const ReferralsList = memo(({userId}: Props) => {
   const {data} = useSelector(
-    referralsToShowForPingSelector({referralType: 'T1'}),
+    referralsToShowForPingSelector({referralType: 'T1', userId}),
   );
 
   const renderItem: ListRenderItem<string> = useCallback(({item}) => {

@@ -21,6 +21,7 @@ export interface State {
   };
   history: ReferralHistoryRecord[];
   pingCounter: number;
+  pingSessionUserId: string | null;
 }
 
 const getReferralsActionCreator = ReferralsActions.GET_REFERRALS({})(null);
@@ -34,6 +35,7 @@ type Actions = ReturnType<
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
   | typeof ReferralsActions.UPDATE_PING_COUNTER.STATE.create
   | typeof ReferralsActions.PING_REFERRALS.RESET.create
+  | typeof ReferralsActions.UPDATE_PING_SESSION_FIRST_USER_ID.STATE.create
 >;
 
 const INITIAL_STATE: State = {
@@ -41,6 +43,7 @@ const INITIAL_STATE: State = {
   data: {},
   history: [],
   pingCounter: 0,
+  pingSessionUserId: null,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -117,8 +120,13 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         }
         break;
 
+      case ReferralsActions.UPDATE_PING_SESSION_FIRST_USER_ID.STATE.type:
+        draft.pingSessionUserId = action.payload.userId;
+        break;
+
       case ReferralsActions.PING_REFERRALS.RESET.type:
         draft.pingCounter = 0;
+        draft.pingSessionUserId = null;
         break;
 
       case AccountActions.SIGN_OUT.SUCCESS.type:
