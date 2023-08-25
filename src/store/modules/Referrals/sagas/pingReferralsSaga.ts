@@ -1,10 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {ReferralsActions} from '@store/modules/Referrals/actions';
-import {
-  pingSessionUserIdSelector,
-  referralsToPingSelector,
-} from '@store/modules/Referrals/selectors';
+import {referralsToPingSelector} from '@store/modules/Referrals/selectors';
 import {Task} from 'redux-saga';
 import {
   cancel,
@@ -16,18 +13,21 @@ import {
   take,
 } from 'redux-saga/effects';
 
-function* processingPingReferralsSaga() {
+const actionCreator = ReferralsActions.PING_REFERRALS.START.create;
+
+function* processingPingReferralsSaga(startFromUserId: string) {
   try {
     while (true) {
       const {
         data,
         hasNext,
       }: SagaReturnType<ReturnType<typeof referralsToPingSelector>> =
-        yield select(referralsToPingSelector({referralType: 'T1'}));
-
-      const pingSessionUserId: SagaReturnType<
-        typeof pingSessionUserIdSelector
-      > = yield select(pingSessionUserIdSelector);
+        yield select(
+          referralsToPingSelector({
+            referralType: 'T1',
+            userId: startFromUserId,
+          }),
+        );
 
       if (data.length === 0 && !hasNext) {
         yield put(ReferralsActions.PING_REFERRALS.RESET.create());
@@ -35,22 +35,16 @@ function* processingPingReferralsSaga() {
       }
 
       if (data.length > 0) {
-        const userId = data[0];
-        if (!pingSessionUserId) {
-          yield put(
-            ReferralsActions.UPDATE_PING_SESSION_FIRST_USER_ID.STATE.create({
-              userId,
-            }),
-          );
-        }
-
+        const userIdToPing = data[0];
         yield put(
-          ReferralsActions.PING_REFERRAL(userId).START.create({userId}),
+          ReferralsActions.PING_REFERRAL(userIdToPing).START.create({
+            userId: userIdToPing,
+          }),
         );
 
         yield take([
-          ReferralsActions.PING_REFERRAL(userId).SUCCESS.type,
-          ReferralsActions.PING_REFERRAL(userId).FAILED.type,
+          ReferralsActions.PING_REFERRAL(userIdToPing).SUCCESS.type,
+          ReferralsActions.PING_REFERRAL(userIdToPing).FAILED.type,
         ]);
         yield put(ReferralsActions.UPDATE_PING_COUNTER.STATE.create());
       }
@@ -80,9 +74,11 @@ function* processingPingReferralsSaga() {
   }
 }
 
-export function* pingReferralsSaga() {
+export function* pingReferralsSaga(action: ReturnType<typeof actionCreator>) {
+  const {userId} = action.payload;
+
   // start the task in the background
-  const bgSyncTask: Task = yield fork(processingPingReferralsSaga);
+  const bgSyncTask: Task = yield fork(processingPingReferralsSaga, userId);
 
   // wait for the user stop action
   yield take(ReferralsActions.PING_REFERRALS.RESET.type);

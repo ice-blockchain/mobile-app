@@ -36,14 +36,21 @@ const referralsSelectorWithMemo = createSelector(
 const referralsToPingSelectorWithMemo = createSelector(
   [
     (state: RootState) => state.referrals,
-    (_state: RootState, {referralType}: ReferralSelectorOptions) =>
-      referralType,
+    (_state: RootState, options: PingReferralsSelectorOptions) => options,
   ],
-  (referrals, referralType) => {
+  (referrals, options) => {
+    const {referralType, userId} = options;
     const referralData = referrals.data[referralType];
-    const pingedRefIds = (referralData?.referrals ?? []).filter(
+
+    let pingedRefIds = (referralData?.referrals ?? []).filter(
       referralId => !referrals.users[referralId].pinged,
     );
+
+    /**
+     * Slice the array to start from the user that is being pinged
+     */
+    const index = pingedRefIds.findIndex(id => id === userId);
+    pingedRefIds = pingedRefIds.slice(index, pingedRefIds.length);
 
     return {
       data: pingedRefIds,
@@ -88,7 +95,7 @@ export const referralsSelector =
     referralsSelectorWithMemo(state, options);
 
 export const referralsToPingSelector =
-  (options: ReferralSelectorOptions) => (state: RootState) =>
+  (options: PingReferralsSelectorOptions) => (state: RootState) =>
     referralsToPingSelectorWithMemo(state, options);
 
 export const referralsToShowForPingSelector =

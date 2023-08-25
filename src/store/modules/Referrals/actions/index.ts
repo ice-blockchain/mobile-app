@@ -54,7 +54,7 @@ const PING_REFERRAL = createAction(
 );
 
 const PING_REFERRALS = createAction('REFERRALS/PING_REFERRALS', {
-  START: true,
+  START: (payload: {userId: string}) => payload,
   RESET: true,
 });
 

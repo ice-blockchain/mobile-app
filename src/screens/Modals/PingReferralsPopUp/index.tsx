@@ -46,9 +46,9 @@ export const PingReferralsPopUp = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(ReferralsActions.PING_REFERRALS.START.create());
+    dispatch(ReferralsActions.PING_REFERRALS.START.create({userId}));
     setPingInitiated(true);
-  }, [dispatch]);
+  }, [dispatch, userId]);
 
   useEffect(() => {
     if (isPingingCanceled && isPingInitiated) {
