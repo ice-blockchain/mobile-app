@@ -62,8 +62,8 @@ const UPDATE_PING_COUNTER = createAction('REFERRALS/UPDATE_PING_COUNTER', {
   STATE: true,
 });
 
-const UPDATE_PING_SESSION_FIRST_USER_ID = createAction(
-  'REFERRALS/UPDATE_PING_SESSION_FIRST_USER_ID',
+const UPDATE_NEXT_PING_USER_ID = createAction(
+  'REFERRALS/UPDATE_NEXT_PING_USER_ID',
   {
     STATE: (payload: {userId: string}) => payload,
   },
@@ -75,5 +75,5 @@ export const ReferralsActions = Object.freeze({
   PING_REFERRALS,
   PING_REFERRAL,
   UPDATE_PING_COUNTER,
-  UPDATE_PING_SESSION_FIRST_USER_ID,
+  UPDATE_NEXT_PING_USER_ID,
 });
