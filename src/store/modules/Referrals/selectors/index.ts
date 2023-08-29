@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {ReferralType, User} from '@api/user/types';
+import {ReferralType} from '@api/user/types';
 import {createSelector} from '@reduxjs/toolkit';
 import {RootState} from '@store/rootReducer';
 
@@ -66,24 +66,18 @@ const referralsToShowForPingSelectorWithMemo = createSelector(
     (_state: RootState, options: PingReferralsSelectorOptions) => options,
   ],
   (referrals, options) => {
-    const {referralType, userId} = options;
-    const referralData = referrals.data[referralType];
-    let refUsers = (referralData?.referrals ?? []).map(
-      referralId => referrals.users[referralId],
+    const referralData = referrals.data[options.referralType];
+    const firstNotPingedIndex = referrals.pingSessionUsers.findIndex(
+      userId => !referrals.users[userId].pinged,
     );
 
-    /**
-     * Slice the array to start from the user that is being pinged
-     */
-    const index = refUsers.findIndex(user => user.id === userId);
-    refUsers = refUsers.slice(index, refUsers.length);
+    const refs = referrals.pingSessionUsers.slice(
+      Math.max(0, firstNotPingedIndex - (MAX_PINGED_REFS - 1)),
+      Math.max(MAX_PINGED_REFS, firstNotPingedIndex + 1),
+    );
 
-    /**
-     * Filter the refs to show
-     */
-    const filtered = filterPingedRefsToShow(refUsers);
     return {
-      data: filtered.map(user => user.id),
+      data: refs,
       hasNext:
         !referralData || referralData.total > referralData.referrals.length,
     };
@@ -110,6 +104,9 @@ export const getReferralUserSelector =
 export const referralHistorySelector = (state: RootState) =>
   state.referrals.history;
 
+export const pingSessionUsersSelector = (state: RootState) =>
+  state.referrals.pingSessionUsers;
+
 export const userReferralCountSelector = (state: RootState) =>
   (state.account.user?.t1ReferralCount || 0) +
   (state.account.user?.t2ReferralCount || 0);
@@ -125,39 +122,3 @@ export const pingCounterSelector = (state: RootState) =>
 
 export const pingSessionUserIdSelector = (state: RootState) =>
   state.referrals.pingSessionUserId;
-
-function filterPingedRefsToShow(refs: User[]) {
-  const allPinged = refs.findIndex(user => !user.pinged) === -1;
-  const allNotPinged = refs.findIndex(user => user.pinged) === -1;
-  const lowAmount = refs.length <= MAX_PINGED_REFS;
-
-  let firstFalseIndex = -1;
-
-  for (let i = 0; i < refs.length; i++) {
-    if (!refs[i].pinged) {
-      firstFalseIndex = i;
-      break;
-    }
-  }
-
-  /**
-   * If all refs are pinged, show the last 4
-   */
-  if (allPinged && refs.length > MAX_PINGED_REFS) {
-    return refs.splice(refs.length - MAX_PINGED_REFS, refs.length);
-  } else if (allNotPinged || lowAmount || firstFalseIndex < MAX_PINGED_REFS) {
-    /**
-     * If all refs are not pinged
-     * OR
-     * If there are less than MAX_PINGED_REFS refs
-     * OR
-     * There are less than MAX_PINGED_REFS pinged
-     */
-    return refs;
-  } else {
-    /**
-     * If there are more than MAX_PINGED_REFS pinged
-     */
-    return refs.slice(firstFalseIndex - (MAX_PINGED_REFS - 1), refs.length);
-  }
-}

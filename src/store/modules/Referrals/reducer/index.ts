@@ -22,6 +22,12 @@ export interface State {
   history: ReferralHistoryRecord[];
   pingCounter: number;
   pingSessionUserId: string | null;
+  /**
+   * Set it before refs ping session.
+   * It will be user to display users in the ping session.
+   * Don't use it for any other purpose
+   */
+  pingSessionUsers: string[];
 }
 
 const getReferralsActionCreator = ReferralsActions.GET_REFERRALS({})(null);
@@ -34,6 +40,7 @@ type Actions = ReturnType<
   | typeof ReferralsActions.GET_REFERRALS_HISTORY.SUCCESS.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
   | typeof ReferralsActions.UPDATE_PING_COUNTER.STATE.create
+  | typeof ReferralsActions.PING_REFERRALS.START.create
   | typeof ReferralsActions.PING_REFERRALS.RESET.create
   | typeof ReferralsActions.UPDATE_NEXT_PING_USER_ID.STATE.create
 >;
@@ -44,6 +51,7 @@ const INITIAL_STATE: State = {
   history: [],
   pingCounter: 0,
   pingSessionUserId: null,
+  pingSessionUsers: [],
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -124,6 +132,26 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.pingSessionUserId = action.payload.userId;
         break;
 
+      case ReferralsActions.PING_REFERRALS.START.type:
+        {
+          const {userId} = action.payload;
+          const currentNotPingedT1Refs = (
+            draft.data.T1?.referrals || []
+          ).filter(id => !draft.users[id].pinged);
+
+          // /**
+          //  * Slice the array to start from the user that is being pinged
+          //  */
+          const index = currentNotPingedT1Refs.findIndex(id => id === userId);
+          const filtered = currentNotPingedT1Refs.slice(
+            index,
+            currentNotPingedT1Refs.length,
+          );
+
+          draft.pingSessionUsers = filtered;
+        }
+
+        break;
       case ReferralsActions.PING_REFERRALS.RESET.type:
         draft.pingCounter = 0;
         draft.pingSessionUserId = null;
