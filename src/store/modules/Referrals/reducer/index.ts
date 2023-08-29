@@ -108,6 +108,22 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
               nextOffset,
             };
           }
+
+          /**
+           * If its T1 users and there are new users to ping,
+           * add them to the ping session queue
+           */
+          if (
+            !isInitial &&
+            referralType === 'T1' &&
+            draft.pingSessionUsers.length > 0
+          ) {
+            const refsToAdd = result.referrals
+              .filter(ref => !ref.pinged)
+              .map(ref => ref.id);
+
+            draft.pingSessionUsers = [...draft.pingSessionUsers, ...refsToAdd];
+          }
         }
         break;
 
