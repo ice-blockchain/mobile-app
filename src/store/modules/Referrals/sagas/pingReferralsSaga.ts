@@ -73,7 +73,7 @@ function* processingPingReferralsSaga(startFromUserId: string) {
           yield put(ReferralsActions.UPDATE_PING_COUNTER.STATE.create());
         }
 
-        if (data.length <= 4 && hasNext) {
+        if (hasNext) {
           yield put(
             ReferralsActions.GET_REFERRALS({referralType: 'T1'})(
               null,

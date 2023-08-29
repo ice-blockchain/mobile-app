@@ -149,11 +149,11 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
           );
 
           draft.pingSessionUsers = filtered;
+          draft.pingCounter = 0;
         }
 
         break;
       case ReferralsActions.PING_REFERRALS.RESET.type:
-        draft.pingCounter = 0;
         draft.pingSessionUserId = null;
         break;
 
