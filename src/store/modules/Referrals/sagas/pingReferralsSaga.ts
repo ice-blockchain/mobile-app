@@ -9,6 +9,7 @@ import {Task} from 'redux-saga';
 import {
   cancel,
   cancelled,
+  delay,
   fork,
   put,
   SagaReturnType,
@@ -41,11 +42,6 @@ function* processingPingReferralsSaga(startFromUserId: string) {
               userId: nextUserIdToPing,
             }),
           );
-
-        if (data.length === 0 && !hasNext) {
-          yield put(ReferralsActions.PING_REFERRALS.RESET.create());
-          return;
-        }
 
         if (data.length > 0) {
           const userIdToPing = data[0];
@@ -89,12 +85,16 @@ function* processingPingReferralsSaga(startFromUserId: string) {
               .type,
           ]);
         }
-      } else {
+
         /**
          * Reset ping session if there are no users to ping
          */
-        yield put(ReferralsActions.PING_REFERRALS.RESET.create());
-        return;
+
+        if (data.length === 1 && !hasNext) {
+          yield delay(500);
+          yield put(ReferralsActions.PING_REFERRALS.RESET.create());
+          return;
+        }
       }
     }
   } finally {
