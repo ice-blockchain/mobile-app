@@ -110,7 +110,8 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
           }
 
           /**
-           * If its T1 users and there are new users to ping,
+           * If its pagination loading (isInitial: false) of
+           * T1 referralType type and there are new users to ping,
            * add them to the ping session queue
            */
           if (
