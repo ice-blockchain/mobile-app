@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-native-create-thumbnail/android/src/main/java/com/createthumbnail/CreateThumbnailModule.java b/node_modules/react-native-create-thumbnail/android/src/main/java/com/createthumbnail/CreateThumbnailModule.java
+index 9bd67d8..6188e43 100644
+--- a/node_modules/react-native-create-thumbnail/android/src/main/java/com/createthumbnail/CreateThumbnailModule.java
++++ b/node_modules/react-native-create-thumbnail/android/src/main/java/com/createthumbnail/CreateThumbnailModule.java
+@@ -168,7 +168,7 @@ public class CreateThumbnailModule extends ReactContextBaseJavaModule {
+         return dir;
+     }
+ 
+-    private static Bitmap getBitmapAtTime(Context context, String filePath, int time, Map headers) {
++    private static Bitmap getBitmapAtTime(Context context, String filePath, int time, Map headers) throws IOException, IllegalStateException {
+         MediaMetadataRetriever retriever = new MediaMetadataRetriever();
+         if (URLUtil.isFileUrl(filePath)) {
+             String decodedPath;

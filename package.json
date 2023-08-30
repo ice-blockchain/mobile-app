@@ -78,6 +78,7 @@
     "react-native-config": "^1.5.1",
     "react-native-confirmation-code-field": "^7.3.1",
     "react-native-contacts": "^7.0.5",
+    "react-native-create-thumbnail": "^1.6.4",
     "react-native-device-info": "^10.3.0",
     "react-native-email-link": "^1.14.3",
     "react-native-fbsdk-next": "^11.1.0",
@@ -165,7 +166,6 @@
         "expo-keep-awake",
         "expo-application",
         "expo-constants",
-        "expo-file-system",
         "expo-font"
       ]
     }
