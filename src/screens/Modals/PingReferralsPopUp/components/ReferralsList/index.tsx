@@ -3,10 +3,7 @@
 import {UserListItem} from '@components/ListItems/UserListItem';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {ReferralsListItemDone} from '@screens/Modals/PingReferralsPopUp/components/ReferralsListItemDone';
-import {
-  MAX_PINGED_REFS,
-  referralsToShowForPingSelector,
-} from '@store/modules/Referrals/selectors';
+import {referralsToShowForPingSelector} from '@store/modules/Referrals/selectors';
 import React, {memo, useCallback} from 'react';
 import {ListRenderItem, StyleSheet} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
@@ -35,7 +32,7 @@ export const ReferralsList = memo(({userId}: Props) => {
 
   return (
     <FlatList
-      data={data.slice(0, MAX_PINGED_REFS)}
+      data={data}
       renderItem={renderItem}
       contentContainerStyle={styles.container}
     />

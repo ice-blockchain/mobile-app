@@ -26,8 +26,6 @@ export const UserListPingButton = ({userId}: Props) => {
     }),
   );
 
-  const isDisabled = pinged;
-
   const onPress = () => {
     navigation.navigate('PingReferralsPopUp', {userId});
   };
@@ -38,10 +36,8 @@ export const UserListPingButton = ({userId}: Props) => {
 
   return (
     <UserListItemButton
-      disabled={!!isDisabled}
-      icon={
-        <PingIcon color={isDisabled ? COLORS.cadetBlue : COLORS.primaryDark} />
-      }
+      disabled={!!pinged}
+      icon={<PingIcon color={pinged ? COLORS.cadetBlue : COLORS.primaryDark} />}
       text={t('users.ping')}
       onPress={onPress}
     />

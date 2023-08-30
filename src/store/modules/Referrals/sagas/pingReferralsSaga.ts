@@ -95,12 +95,17 @@ function* processingPingReferralsSaga(startFromUserId: string) {
           yield put(ReferralsActions.PING_REFERRALS.RESET.create());
           return;
         }
+      } else {
+        yield put(ReferralsActions.PING_REFERRALS.RESET.create());
+        return;
       }
     }
   } finally {
     const isCancelled: boolean = yield cancelled();
     if (isCancelled) {
-      // Saga has been cancelled
+      /**
+       * Saga has been cancelled
+       */
     }
   }
 }
@@ -108,12 +113,18 @@ function* processingPingReferralsSaga(startFromUserId: string) {
 export function* pingReferralsSaga(action: ReturnType<typeof actionCreator>) {
   const {userId} = action.payload;
 
-  // start the task in the background
+  /**
+   * start the task in the background
+   */
   const bgSyncTask: Task = yield fork(processingPingReferralsSaga, userId);
 
-  // wait for the user stop action
+  /**
+   * wait for the user stop action
+   */
   yield take(ReferralsActions.PING_REFERRALS.RESET.type);
 
-  // user clicked stop. cancel the background task
+  /**
+   * wait for the user stop action
+   */
   yield cancel(bgSyncTask);
 }

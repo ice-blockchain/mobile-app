@@ -1,10 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {ReferralType} from '@api/user/types';
+import {MAX_PINGED_REFS} from '@constants/referrals';
 import {createSelector} from '@reduxjs/toolkit';
 import {RootState} from '@store/rootReducer';
-
-export const MAX_PINGED_REFS = 4;
 interface ReferralSelectorOptions {
   referralType: ReferralType;
 }
