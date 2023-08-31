@@ -53,6 +53,7 @@ export type User = {
   skipPhoneNumberValidation?: boolean | null;
 
   loginSession?: string;
+  kycStepPassed?: number;
 };
 
 export type ReferralType = 'CONTACTS' | 'T1' | 'T2';

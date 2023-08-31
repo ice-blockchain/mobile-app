@@ -8,12 +8,17 @@ import {rem} from 'rn-units';
 
 type Props = {
   style?: StyleProp<ViewStyle>;
+  fill?: string;
 };
 
-export const CheckMark = ({style}: Props = {}) => {
+export const CheckMark = ({style, fill}: Props = {}) => {
   return (
     <View style={[styles.container, style]}>
-      <CheckMarkThinIcon fill={COLORS.white} width={rem(14)} height={rem(14)} />
+      <CheckMarkThinIcon
+        fill={fill ?? COLORS.white}
+        width={rem(14)}
+        height={rem(14)}
+      />
     </View>
   );
 };

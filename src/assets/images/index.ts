@@ -67,6 +67,7 @@ export const Images = {
     placeholder0: require('./badges/placeholder0.png'),
     placeholder1: require('./badges/placeholder1.png'),
     placeholder2: require('./badges/placeholder2.png'),
+    faceAuth: require('./badges/face_auth.png'),
   },
   phone: {
     confirmPhoneNumber: require('./phone/confirmPhoneNumber.png'),

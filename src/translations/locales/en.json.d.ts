@@ -621,4 +621,16 @@ export type Translations = {
   'creative_library.practices_section.bad.rules.02.description': null;
   'creative_library.practices_section.bad.rules.03.title': null;
   'creative_library.practices_section.bad.rules.03.description': null;
+  'face_auth.header': null;
+  'face_auth.title': null;
+  'face_auth.description': null;
+  'face_auth.consent': null;
+  'face_auth.confirmation': null;
+  'face_auth.auth_status.loading.description': null;
+  'face_auth.auth_status.success.title': null;
+  'face_auth.auth_status.success.description': null;
+  'face_auth.auth_status.success.action': null;
+  'face_auth.auth_status.failure.title': null;
+  'face_auth.auth_status.failure.description': null;
+  'face_auth.auth_status.failure.action': null;
 };

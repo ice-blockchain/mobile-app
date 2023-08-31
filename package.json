@@ -165,7 +165,6 @@
         "expo-keep-awake",
         "expo-application",
         "expo-constants",
-        "expo-file-system",
         "expo-font"
       ]
     }

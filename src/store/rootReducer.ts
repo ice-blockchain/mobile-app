@@ -10,6 +10,7 @@ import {collectionsReducer} from '@store/modules/Collections/reducer';
 import {contactsReducer} from '@store/modules/Contacts/reducer';
 import {creativeLibraryReducer} from '@store/modules/CreativeLibrary/reducer';
 import {devicesReducer} from '@store/modules/Devices/reducer';
+import {faceAuthReducer} from '@store/modules/FaceAuth/reducer';
 import {inAppNotificationsReducer} from '@store/modules/InAppNotifications/reducer';
 import {linkingReducer} from '@store/modules/Linking/reducer';
 import {newsReducer} from '@store/modules/News/reducer';
@@ -33,6 +34,7 @@ export const rootReducer = combineReducers({
   creativeLibrary: creativeLibraryReducer,
   permissions: permissionsReducer,
   account: accountReducer,
+  faceAuth: faceAuthReducer,
   stats: statsReducer,
   news: newsReducer,
   contacts: contactsReducer,

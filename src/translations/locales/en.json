@@ -990,5 +990,27 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Face Auth",
+    "title": "KYC Step #1",
+    "description": "For a seamless experience, we're adding face authentication. This step acts as your [[:bold]]early Step #1 KYC[[/:bold]], preparing you for a streamlined verification for the future Mainnet. \n\nConfirm your identity today to ensure a smooth journey ahead!",
+    "consent": "I agree with the ice [[:link]]KYC Terms and Conditions[[/:link]].",
+    "confirmation": "I confirm that the identity I'm using for this authentication will be the same one used for the second step of verification using my national ID or passport.",
+    "auth_status": {
+      "loading": {
+        "description": "Please wait while we authenticate you..."
+      },
+      "success": {
+        "title": "✅ Authentication Successful",
+        "description": "Thank you for confirming your identity. Your check-in session will start now.",
+        "action": "Done"
+      },
+      "failure": {
+        "title": "❌ Authentication Failed",
+        "description": "We couldn't verify your identity. Please ensure good lighting and that your face is fully visible, then try again.",
+        "action": "Retry"
+      }
+    }
   }
 }

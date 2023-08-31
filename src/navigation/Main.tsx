@@ -18,6 +18,7 @@ import {
 } from '@react-navigation/bottom-tabs';
 import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {FaceAuth} from '@screens/FaceAuthFlow';
 import {CreativeIceLibrary} from '@screens/CreativeIceLibrary';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
 import {Home} from '@screens/HomeFlow/Home';
@@ -101,6 +102,7 @@ export type MainStackParamList = {
     targetCircleSize?: number;
     descriptionOffset?: number;
   };
+  FaceAuth: undefined;
   Staking: undefined;
   CreativeIceLibrary: undefined;
   ImageView: {
@@ -362,6 +364,7 @@ export function MainNavigator() {
         options={modalOptions}
         component={DateSelect}
       />
+      <MainStack.Screen name="FaceAuth" component={FaceAuth} />
       <MainStack.Screen name="Staking" component={Staking} />
       <MainStack.Screen
         name="CreativeIceLibrary"
