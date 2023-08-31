@@ -60,6 +60,7 @@
     "expo-barcode-scanner": "^12.5.3",
     "expo-camera": "^13.4.2",
     "exponential-backoff": "^3.1.0",
+    "ffmpeg-kit-react-native": "^6.0.0",
     "getstream": "^8.1.0",
     "i18n-js": "^4.1.1",
     "immer": "^9.0.16",
