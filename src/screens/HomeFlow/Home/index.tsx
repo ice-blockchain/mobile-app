@@ -4,9 +4,9 @@ import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {getErrorMessage} from '@utils/errors';
 import {Camera, CameraType, VideoQuality} from 'expo-camera';
-import {FFmpegKit, ReturnCode} from 'ffmpeg-kit-react-native';
 import React, {memo, useRef, useState} from 'react';
 import {Alert, Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {createThumbnail} from 'react-native-create-thumbnail';
 
 type Video = {uri: string; duration: number};
 type Frame = {uri: string};
@@ -52,33 +52,19 @@ export const Home = memo(() => {
         setIsGenerating(true);
         setFrameGenerationDuration(null);
         setFrames([]);
-        // const numberOfFrames = Math.floor(video.duration / 333) + 1;
-
-        // const session = await FFmpegKit.execute(
-        //   `-ss 00:00:01 -i ${video.uri} -frames:v 1 file:///data/user/0/io.ice.app.staging/cache/Camera/foobar4.jpg`,
-        // );
-        // const session = await FFmpegKit.execute(
-        //   `-i ${video.uri} -filter:v \
-        //   "select='eq(t\,1.5)'" \
-        //   -vsync drop file:///data/user/0/io.ice.app.staging/cache/Camera/foobar_100.png`,
-        // );
-
-        const session = await FFmpegKit.execute(
-          `-i ${video.uri} -filter:v fps=fps=3 file:///data/user/0/io.ice.app.staging/cache/Camera/foo3.mp4`,
+        const numberOfFrames = Math.floor(video.duration / 333) + 1;
+        const thumbnails = await Promise.all(
+          Array(numberOfFrames)
+            .fill(null)
+            .map((_, index) =>
+              createThumbnail({
+                url: video.uri,
+                timeStamp: index * 333,
+              }),
+            ),
         );
-
-        const returnCode = await session.getReturnCode();
-
-        if (ReturnCode.isSuccess(returnCode)) {
-          console.log('SUCCESS!!', returnCode);
-        } else if (ReturnCode.isCancel(returnCode)) {
-          console.log('CANCEL!!', returnCode);
-        } else {
-          console.log('ERROR!!', returnCode);
-        }
-
         setFrameGenerationDuration(Date.now() - start);
-        setFrames([]);
+        setFrames(thumbnails.map(t => ({uri: t?.path})));
       }
     } catch (error) {
       Alert.alert('oops', getErrorMessage(error));
@@ -98,8 +84,6 @@ export const Home = memo(() => {
       </View>
     );
   }
-
-  console.log(frames);
 
   return (
     <View style={styles.container}>
@@ -153,8 +137,8 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   camera: {
-    width: 300,
-    height: 225,
+    width: 225,
+    height: 300,
     alignSelf: 'center',
   },
   frameContainer: {
@@ -162,8 +146,9 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   frame: {
-    width: 200,
-    height: 100,
+    width: 150,
+    height: 200,
+    marginHorizontal: 10,
     backgroundColor: 'grey',
   },
 });

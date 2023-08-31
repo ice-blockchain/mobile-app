@@ -67,8 +67,6 @@ public class MainApplication extends Application implements ReactApplication {
       // If you opted-in for the New Architecture, we load the native entry point for this app.
       DefaultNewArchitectureEntryPoint.load();
     }
-    ReactNativeFlipper.initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
-
     MoEngage.Builder moEngage =
             new MoEngage.Builder(this, BuildConfig.MO_ENGAGE_APP_ID)
                 .configureNotificationMetaData(new NotificationConfig(R.drawable.ic_stat_notification, R.drawable.ic_stat_notification, R.color.splashscreen_bg, true, true, true))
