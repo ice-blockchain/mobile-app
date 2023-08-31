@@ -885,5 +885,8 @@
       "description_part1": "Bizi Instagram-da izləmək məlumatlı qalmaq və ice ilə maraqlanan digər istifadəçilər ilə əlaqə qurmaq üçün əla yoldur. ",
       "description_part2": "Əlavə olaraq, buraxacağımız yeni funksiyalar və ya promoşnlar haqqında ilk məlumatlı siz olacaqsınız."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Zəhmət olmasa, bütün dostlarınıza ping göndərənə qədər gözləyin · {{count}}"
   }
 }

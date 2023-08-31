@@ -799,5 +799,8 @@
     "expired_title": "Bonus Expired",
     "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
     "result_title": "Congratulations"
+  },
+  "ping_referrals_pop_up": {
+    "title": "مهرباني ڪريندا منتظر رهندا آو چڏو چڏو اسان سڀني ڏوستن کي پنگ ڪريون · {{count}}"
   }
 }

@@ -854,7 +854,6 @@
     "expired_message": "Rất tiếc, tiền thưởng hôm nay đã hết hạn. Hãy theo dõi thông báo tiếp theo!",
     "result_title": "Xin chúc mừng"
   },
-  
   "mining_notice": {
     "title": "Thông báo",
     "message": "Cảm ơn bạn đã quan tâm đến việc kiếm [[:bold]]ice![[/:bold]] Chúng tôi hiện đang tinh chỉnh công nghệ của mình và tính năng điểm danh hiện không khả dụng. Đây là cơ hội để bạn tập trung vào việc xây dựng nhóm và phát triển cộng đồng vi mô của mình.",
@@ -886,5 +885,8 @@
       "description_part1": "Theo dõi chúng tôi trên Instagram là một cách tuyệt vời để cập nhật thông tin và kết nối với những người dùng khác cũng đam mê ice",
       "description_part2": "Ngoài ra, bạn sẽ là người đầu tiên được biết mọi tính năng hoặc chương trình khuyến mãi mới mà chúng tôi sắp tung ra."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Vui lòng đợi trong khi chúng tôi ping tất cả bạn bè của bạn · {{count}}"
   }
 }

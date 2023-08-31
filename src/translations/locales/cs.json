@@ -885,5 +885,8 @@
       "description_part1": "Sledování našeho Instagramu je ideální způsob, jak si udržet přehled o dění a propojit se s dalšími lidmi, co mají pro ice stejný zápal.",
       "description_part2": "Navíc budete první, kdo se dozví o nových funkcích a promo akcích, které hodláme spustit."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Prosím počkejte, než pingneme všechny vaše přátele · {{count}}"
   }
 }

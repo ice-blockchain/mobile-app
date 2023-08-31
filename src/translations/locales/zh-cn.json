@@ -799,5 +799,8 @@
     "expired_title": "Bonus Expired",
     "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
     "result_title": "Congratulations"
+  },
+  "ping_referrals_pop_up": {
+    "title": "请等待，我们将向您的所有朋友发送 ping · {{count}}"
   }
 }

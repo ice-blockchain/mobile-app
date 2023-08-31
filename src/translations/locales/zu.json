@@ -854,7 +854,6 @@
     "expired_message": "Ngeshwa, ibhonasi yanamuhla iphelelwe yisikhathi. Hlala ubukele ukuze uthole isaziso esilandelayo!",
     "result_title": "Siyakuhalalisela"
   },
-  
   "mining_notice": {
     "title": "Isaziso",
     "message": "Siyabonga ngentshisekelo yakho yokuzuza[[:bold]] iqhwa![[/:bold]] Okwamanje silungisa ubuchwepheshe bethu futhi ukungena akutholakali okwamanje. Leli yithuba lakho lokugxila ekwakheni iqembu lakho nasekukhuliseni umphakathi wakho omncane.",
@@ -886,5 +885,8 @@
       "description_part1": "Ukusilandela ku-Instagram kuyindlela enhle yokuhlala unolwazi futhi uxhumane nabanye abasebenzisi nabo abathanda iqhwa",
       "description_part2": "Futhi, uzoba ngowokuqala ukwazi mayelana nanoma yiziphi izici ezintsha noma amaphromoshini esiwaqalisayo."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Sicela ulinde ngisho uma sizuma bonke abangane bakho · {{count}}"
   }
 }

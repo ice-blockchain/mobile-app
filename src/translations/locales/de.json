@@ -885,5 +885,8 @@
       "description_part1": "Wenn Sie uns auf Instagram folgen, bleiben Sie auf dem Laufenden und können sich mit anderen Nutzern austauschen, die sich ebenfalls für ice interessieren.",
       "description_part2": "Außerdem erfahren Sie als Erster von neuen Funktionen oder Werbeaktionen, die wir nächstens einführen werden."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Bitte warten Sie, während wir alle Ihre Freunde anpingen · {{count}}"
   }
 }

@@ -854,7 +854,6 @@
     "expired_message": "Infelizmente, o bônus de hoje expirou. Fique atento para a próxima notificação!",
     "result_title": "Parabéns"
   },
-  
   "mining_notice": {
     "title": "Aviso",
     "message": "Agradecemos o seu interesse em ganhar [[:bold]]ice![[/:bold]] No momento, estamos aprimorando nossa tecnologia, e o check-in não está disponível por ora. Esta é a sua chance de se concentrar em formar a sua equipe e em aumentar a sua microcomunidade.",
@@ -886,5 +885,8 @@
       "description_part1": "Seguir a gente no Instagram é uma ótima maneira de ficar por dentro e de se conectar com outros usuários que também são apaixonados pela ice.",
       "description_part2": "Além disso, você será o primeiro a saber sobre todos os recursos ou promoções novos que estivermos lançando."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Por favor, aguarde enquanto fazemos ping em todos os seus amigos · {{count}}"
   }
 }

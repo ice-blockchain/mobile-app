@@ -854,7 +854,6 @@
     "expired_message": "很遗憾，今天的奖金已过期。敬请期待下一次的通知！",
     "result_title": "恭喜"
   },
-  
   "mining_notice": {
     "title": "注意事项",
     "message": "感谢您对赚取 [[:bold]]ice 感兴趣！[[/:bold]] 我们目前正在对技术进行微调，目前无法办理签到。这是您专注于建立团队和发展微社区的机会。",
@@ -886,5 +885,8 @@
       "description_part1": "在 Instagram 上关注我们是了解最新动态并与其他也对 ice 充满热情的用户建立联系的好方法",
       "description_part2": "此外，您将会第一时间了解我们即将推出的任何新功能或优惠活动。"
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "请等待，我们将向您的所有朋友发送 ping · {{count}}"
   }
 }
