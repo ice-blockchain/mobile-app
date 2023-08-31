@@ -1,67 +1,13 @@
-diff --git a/node_modules/react-native-create-thumbnail/android/build.gradle b/node_modules/react-native-create-thumbnail/android/build.gradle
-index 89fcf3e..11105dc 100644
---- a/node_modules/react-native-create-thumbnail/android/build.gradle
-+++ b/node_modules/react-native-create-thumbnail/android/build.gradle
-@@ -74,6 +74,9 @@ dependencies {
-     //noinspection GradleDynamicVersion
-     implementation 'com.facebook.react:react-native:+'  // From node_modules
-     implementation 'commons-io:commons-io:2.8.0'
-+
-+    implementation 'com.github.wseemann:FFmpegMediaMetadataRetriever-core:1.0.19'
-+    implementation 'com.github.wseemann:FFmpegMediaMetadataRetriever-native:1.0.19'
- }
- 
- def configureReactNativePom(def pom) {
 diff --git a/node_modules/react-native-create-thumbnail/android/src/main/java/com/createthumbnail/CreateThumbnailModule.java b/node_modules/react-native-create-thumbnail/android/src/main/java/com/createthumbnail/CreateThumbnailModule.java
-index 9bd67d8..c7975a8 100644
+index 9bd67d8..6188e43 100644
 --- a/node_modules/react-native-create-thumbnail/android/src/main/java/com/createthumbnail/CreateThumbnailModule.java
 +++ b/node_modules/react-native-create-thumbnail/android/src/main/java/com/createthumbnail/CreateThumbnailModule.java
-@@ -3,7 +3,6 @@ package com.reactlibrary.createthumbnail;
- import android.content.Context;
- import android.graphics.Bitmap;
- import android.graphics.BitmapFactory;
--import android.media.MediaMetadataRetriever;
- import android.net.Uri;
- import android.os.Build.VERSION;
- import android.text.TextUtils;
-@@ -33,6 +32,8 @@ import java.util.HashMap;
- import java.util.Map;
- import java.util.UUID;
- 
-+import wseemann.media.FFmpegMediaMetadataRetriever;
-+
- public class CreateThumbnailModule extends ReactContextBaseJavaModule {
- 
-     private final ReactApplicationContext reactContext;
-@@ -123,9 +124,9 @@ public class CreateThumbnailModule extends ReactContextBaseJavaModule {
-                 map.putDouble("height", image.getHeight());
-                 return map;
-             } catch (Exception e) {
--                promise.reject("CreateThumbnail_ERROR", e);
-+                return null;
-+//                promise.reject("CreateThumbnail_ERROR", e);
-             }
--            return null;
-         }
- 
-         @Override
-@@ -168,8 +169,8 @@ public class CreateThumbnailModule extends ReactContextBaseJavaModule {
+@@ -168,7 +168,7 @@ public class CreateThumbnailModule extends ReactContextBaseJavaModule {
          return dir;
      }
  
 -    private static Bitmap getBitmapAtTime(Context context, String filePath, int time, Map headers) {
--        MediaMetadataRetriever retriever = new MediaMetadataRetriever();
 +    private static Bitmap getBitmapAtTime(Context context, String filePath, int time, Map headers) throws IOException, IllegalStateException {
-+        FFmpegMediaMetadataRetriever retriever = new FFmpegMediaMetadataRetriever();
+         MediaMetadataRetriever retriever = new MediaMetadataRetriever();
          if (URLUtil.isFileUrl(filePath)) {
              String decodedPath;
-             try {
-@@ -188,7 +189,7 @@ public class CreateThumbnailModule extends ReactContextBaseJavaModule {
-             retriever.setDataSource(filePath, headers);
-         }
- 
--        Bitmap image = retriever.getFrameAtTime(time * 1000, MediaMetadataRetriever.OPTION_CLOSEST_SYNC);
-+        Bitmap image = retriever.getFrameAtTime(time * 1000, FFmpegMediaMetadataRetriever.OPTION_CLOSEST_SYNC);
-         retriever.release();
-         if (image == null) {
-             throw new IllegalStateException("File doesn't exist or not supported");

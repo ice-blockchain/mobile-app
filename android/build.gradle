@@ -13,6 +13,8 @@ buildscript {
         ndkVersion = "23.1.7779620"
         androidXAnnotation = "1.5.0"
         androidXBrowser = "1.4.0"
+        // https://github.com/arthenica/ffmpeg-kit/tree/main/react-native
+        ffmpegKitPackage = "video"
     }
     repositories {
         google()
