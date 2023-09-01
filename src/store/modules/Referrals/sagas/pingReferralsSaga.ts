@@ -34,12 +34,7 @@ function* processingPingReferralsSaga(startFromUserId: string) {
         data,
         hasNext,
       }: SagaReturnType<ReturnType<typeof referralsToPingSelector>> =
-        yield select(
-          referralsToPingSelector({
-            referralType: 'T1',
-            userId: nextUserIdToPing,
-          }),
-        );
+        yield select(referralsToPingSelector('T1', nextUserIdToPing));
 
       if (data.length > 0) {
         const userIdToPing = data[0];
@@ -88,12 +83,13 @@ function* processingPingReferralsSaga(startFromUserId: string) {
        * Reset ping session if there are no users to ping
        */
 
-      if (data.length === 1 && !hasNext) {
-        yield delay(500);
+      if (data.length <= 1 && !hasNext) {
+        yield delay(300);
         yield put(ReferralsActions.PING_REFERRALS.RESET.create());
         return;
       }
     } else {
+      yield delay(300);
       yield put(ReferralsActions.PING_REFERRALS.RESET.create());
       return;
     }

@@ -8,11 +8,6 @@ interface ReferralSelectorOptions {
   referralType: ReferralType;
 }
 
-interface PingReferralsSelectorOptions {
-  referralType: ReferralType;
-  userId: string;
-}
-
 const referralsSelectorWithMemo = createSelector(
   [
     (state: RootState) => state.referrals,
@@ -31,14 +26,13 @@ const referralsSelectorWithMemo = createSelector(
     };
   },
 );
-
 const referralsToPingSelectorWithMemo = createSelector(
   [
     (state: RootState) => state.referrals,
-    (_state: RootState, options: PingReferralsSelectorOptions) => options,
+    (_state: RootState, referralType: ReferralType) => referralType,
+    (_state: RootState, _userId: string, userId: string) => userId,
   ],
-  (referrals, options) => {
-    const {referralType, userId} = options;
+  (referrals, referralType, userId) => {
     const referralData = referrals.data[referralType];
 
     let pingedRefIds = (referralData?.referrals ?? []).filter(
@@ -62,10 +56,10 @@ const referralsToPingSelectorWithMemo = createSelector(
 const referralsToShowForPingSelectorWithMemo = createSelector(
   [
     (state: RootState) => state.referrals,
-    (_state: RootState, options: PingReferralsSelectorOptions) => options,
+    (_state: RootState, referralType: ReferralType) => referralType,
   ],
-  (referrals, options) => {
-    const referralData = referrals.data[options.referralType];
+  (referrals, referralType) => {
+    const referralData = referrals.data[referralType];
     const firstNotPingedIndex = referrals.pingSessionUsers.findIndex(
       userId => !referrals.users[userId].pinged,
     );
@@ -88,12 +82,12 @@ export const referralsSelector =
     referralsSelectorWithMemo(state, options);
 
 export const referralsToPingSelector =
-  (options: PingReferralsSelectorOptions) => (state: RootState) =>
-    referralsToPingSelectorWithMemo(state, options);
+  (referralType: ReferralType, userId: string) => (state: RootState) =>
+    referralsToPingSelectorWithMemo(state, referralType, userId);
 
 export const referralsToShowForPingSelector =
-  (options: PingReferralsSelectorOptions) => (state: RootState) =>
-    referralsToShowForPingSelectorWithMemo(state, options);
+  (referralType: ReferralType) => (state: RootState) =>
+    referralsToShowForPingSelectorWithMemo(state, referralType);
 
 export const getReferralUserSelector =
   ({userId}: {userId: string}) =>

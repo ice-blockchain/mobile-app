@@ -79,7 +79,7 @@ export const PingReferralsPopUp = () => {
             <Title text={t('ping_referrals_pop_up.title', {count})} />
           </View>
           <CloseButton style={styles.closeButton} onPress={cancelPinging} />
-          <ReferralsList userId={userId} />
+          <ReferralsList />
         </View>
       </View>
     </TouchableWithoutFeedback>
