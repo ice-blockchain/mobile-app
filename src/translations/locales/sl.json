@@ -854,7 +854,6 @@
     "expired_message": "Na žalost je današnji bonus potekel. Spremljajte nas do naslednjega obvestila!",
     "result_title": "Čestitke"
   },
-  
   "mining_notice": {
     "title": "Obvestilo",
     "message": "Hvala za vaše zanimanje za zaslužek v [[:bold]]ice![[/:bold]] Trenutno izpopolnjujemo svojo tehnologijo in prijava trenutno ni na voljo. To je vaša priložnost, da se osredotočite na ustvarjanje svoje ekipe in rast svoje mikro skupnosti.",
@@ -886,5 +885,8 @@
       "description_part1": "Sledenje na Instagramu je odličen način, da ostanete na tekočem in se povežete z drugimi uporabniki, ki so prav tako navdušeni nad aplikacijo ice",
       "description_part2": "Poleg tega boste prvi izvedeli za vse nove funkcije ali promocije, ki jih uvajamo."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Prosim počakajte, medtem ko pošiljamo ping vsem vašim prijateljem · {{count}}"
   }
 }

@@ -5,26 +5,41 @@ import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {getReferralUserSelector} from '@store/modules/Referrals/selectors';
 import {getErrorMessage} from '@utils/errors';
-import {call, put, SagaReturnType, select} from 'redux-saga/effects';
+import {
+  all,
+  call,
+  delay,
+  put,
+  SagaReturnType,
+  select,
+} from 'redux-saga/effects';
 
-const actionCreator = ReferralsActions.PING_REFERRAL(null).START.create;
+const actionCreator = ReferralsActions.PING_REFERRAL().START.create;
 
-export function* pingUserSaga(action: ReturnType<typeof actionCreator>) {
+export function* pingReferralSaga(action: ReturnType<typeof actionCreator>) {
   const {userId} = action.payload;
+
   try {
-    yield Api.notifications.pingUser({
-      userId,
-    });
+    yield all([
+      call(Api.notifications.pingUser, {
+        userId,
+      }),
+      /**
+       * User should see the loading animation at least for 1 sec
+       */
+      delay(1000),
+    ]);
 
     yield put(
       ReferralsActions.PING_REFERRAL(action.id).SUCCESS.create({
         userId,
       }),
     );
-    const user: SagaReturnType<ReturnType<typeof getReferralUserSelector>> =
+
+    const result: SagaReturnType<ReturnType<typeof getReferralUserSelector>> =
       yield select(getReferralUserSelector({userId}));
     yield call(AnalyticsEventLogger.trackPingUser, {
-      username: user?.username ?? '',
+      username: result?.username ?? '',
     });
   } catch (error) {
     yield put(

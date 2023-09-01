@@ -854,7 +854,6 @@
     "expired_message": "Tyvärr har dagens bonus löpt ut. Håll utkik efter nästa avisering!",
     "result_title": "Grattis"
   },
-  
   "mining_notice": {
     "title": "Meddelande",
     "message": "Tack för att du är intresserad av att tjäna [[:bold]]ice![[/:bold]] Vi finjusterar för närvarande vår teknik och därför går det inte att checka in för tillfället. Det här är din chans att fokusera på att bygga ditt team och utöka din mikrocommunity.",
@@ -886,5 +885,8 @@
       "description_part1": "Att följa oss på Instagram är ett bra sätt att hålla sig uppdaterad och få kontakt med andra användare som också brinner för ice.",
       "description_part2": "Dessutom kommer du att vara den första som får reda på alla nya funktioner eller kampanjer som vi lanserar."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Vänligen vänta medan vi pingar alla dina vänner · {{count}}"
   }
 }

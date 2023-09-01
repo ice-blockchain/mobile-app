@@ -38,7 +38,6 @@
       "description": "Earn extra [[:ice]] by inviting your friends."
     },
     "see_all": "see all",
-
     "no": "No",
     "search_country": "Search for country",
     "save": "Save",
@@ -889,5 +888,8 @@
       "description_part1": "Following us on Instagram is a great way to stay in the loop and connect with other users who are also passionate about ice",
       "description_part2": "Plus, you'll be the first to know about any new features or promotions that we're launching."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Please wait while we ping all your friends · {{count}}"
   }
 }

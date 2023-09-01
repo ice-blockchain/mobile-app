@@ -854,7 +854,6 @@
     "expired_message": "Niestety, dzisiejszy bonus wygasł. Bądź na bieżąco z kolejnymi powiadomieniami!",
     "result_title": "Gratulacje"
   },
-  
   "mining_notice": {
     "title": "Ogłoszenie",
     "message": "Dziękujemy za zainteresowanie zarabianiem [[:bold]]ice![[/:bold]] Obecnie dopracowujemy naszą technologię i meldunek nie jest obecnie dostępny. To szansa na skupienie się na budowaniu zespołu i rozwijaniu mikrospołeczności.",
@@ -886,5 +885,8 @@
       "description_part1": "Obserwowanie nas na Instagramie to świetny sposób, aby być na bieżąco i łączyć się z innymi użytkownikami, którzy również pasjonują się ice",
       "description_part2": "Ponadto jako pierwszy dowiesz się o wszelkich nowych funkcjach lub promocjach, które oferujemy."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Proszę czekać, aż wyślemy ping do wszystkich Twoich znajomych · {{count}}"
   }
 }

@@ -854,7 +854,6 @@
     "expired_message": "Ne yazık ki, bugünün bonusunun süresi doldu. Bir sonraki bildirim için bizi izlemeye devam et!",
     "result_title": "Tebrikler"
   },
-  
   "mining_notice": {
     "title": "Bildirim",
     "message": "[[:bold]]ice kazanmaya gösterdiğin ilgi için teşekkürler!![[/:bold]] Şu anda teknolojimizde ince ayar yapıyoruz ve şu anda check-in yapılamıyor. Bu, ekibini oluşturmaya ve mikro-topluluğunu büyütmeye odaklanma şansın.",
@@ -886,5 +885,8 @@
       "description_part1": "Bizi Instagram'da takip etmek, döngüden haberdar olmanın ve aynı zamanda ice tutkunu olan diğer kullanıcılarla bağlantı kurmanın harika bir yoludur.",
       "description_part2": "Ayrıca, kullanıma sunduğumuz tüm yeni özelliklerden veya promosyonlardan ilk sen haberdar olacaksın."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Lütfen tüm arkadaşlarınıza ping atarken bekleyin · {{count}}"
   }
 }

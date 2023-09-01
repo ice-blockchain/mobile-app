@@ -885,5 +885,8 @@
       "description_part1": "Seguirnos en Instagram es una forma fantástica de estar al día y conectar con otros usuarios a los que también les apasiona ice.",
       "description_part2": "Además, serás el primero en enterarte de cualquier novedad o promoción que lancemos."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Por favor espera mientras hacemos ping a todos tus amigos · {{count}}"
   }
 }

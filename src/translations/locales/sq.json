@@ -854,7 +854,6 @@
     "expired_message": "Fatkeqësisht, bonusi i sotëm ka skaduar. Rri në korrent për njoftimin e radhës!",
     "result_title": "Përgëzime"
   },
-  
   "mining_notice": {
     "title": "Njoftim",
     "message": "Faleminderit për interesin në [[:bold]]ice![[/:bold]] Po rafinojmë teknologjinë dhe paraqitja në sistem nuk është në dispozicion për momentin. Tani e ke shansin të fokusohesh në ndërtimin e ekipit dhe zgjerimin e mikro-komunitetit.",
@@ -886,5 +885,8 @@
       "description_part1": "Ndjekja në Instagram është mënyrë e mirë për të qëndruar në dijeni dhe për t'u lidhur me përdorues të tjerë që janë gjithashtu të pasionuar pas ice",
       "description_part2": "Përveç kësaj, do të jesh i pari në dijeni të veçorive të reja ose promovimeve që po hedhim në treg."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Ju lutemi prisni, ndërsa i bëjmë ping të gjithë miqve tuaj · {{count}}"
   }
 }

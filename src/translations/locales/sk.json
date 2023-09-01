@@ -854,7 +854,6 @@
     "expired_message": "Žiaľ, dnešný bonus vypršal. Priprav sa na nasledujúce uporoznenie!",
     "result_title": "Gratulujeme"
   },
-  
   "mining_notice": {
     "title": "Oznámenie",
     "message": "Ďakujeme za tvoj záujem o získanie [[:bold]]ice![[/:bold]] V súčasnosti dolaďujeme našu technológiu a prihlásenie momentálne nie je k dispozícii. Toto je tvoja šanca zamerať sa na budovanie tímu a rozvoj mikrokomunity.",
@@ -886,5 +885,8 @@
       "description_part1": "Sledovať nás na Instagrame je skvelý spôsob, ako zostať v obraze a spojiť sa s ďalšími používateľmi, ktorí sa tiež zaujímajú o ice.",
       "description_part2": "Okrem toho sa medzi prvými dozvieš o všetkých nových funkciách alebo akciách, ktoré práve spúšťame."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Prosím počkajte, kým pingujeme všetkých vašich priateľov · {{count}}"
   }
 }

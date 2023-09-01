@@ -885,5 +885,8 @@
       "description_part1": "Nous suivre sur Instagram est un excellent moyen de vous tenir informé et de communiquer avec d’autres utilisateurs également passionnés par l’ice.",
       "description_part2": "De plus, vous serez le premier à connaître toutes les nouvelles fonctionnalités ou promotions que nous lançons."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Veuillez attendre pendant que nous faisons un ping à tous vos amis · {{count}}"
   }
 }

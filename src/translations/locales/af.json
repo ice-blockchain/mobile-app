@@ -885,5 +885,8 @@
       "description_part1": "Om ons op Instagram te volg is 'n goeie manier om op hoogte te bly en kontak te maak met ander gebruikers wat ook passievol is oor ice",
       "description_part2": "Boonop sal jy die eerste wees wat weet van enige nuwe kenmerke of promosies wat ons bekendstel."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Wag asseblief terwyl ons al jou vriende ping · {{count}}"
   }
 }

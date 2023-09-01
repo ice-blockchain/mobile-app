@@ -43,6 +43,7 @@ import {
 import {CountrySelect} from '@screens/Modals/CountrySelect';
 import {DateSelect} from '@screens/Modals/DateSelector';
 import {JoinTelegramPopUp} from '@screens/Modals/JoinTelegramPopUp';
+import {PingReferralsPopUp} from '@screens/Modals/PingReferralsPopUp';
 import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
 import {ProfilePrivacyEditStep1} from '@screens/Modals/ProfilePrivacyEdit/step1';
 import {ProfilePrivacyEditStep2} from '@screens/Modals/ProfilePrivacyEdit/step2';
@@ -88,6 +89,7 @@ export type MainStackParamList = {
   MainTabs: undefined;
   PopUp: PopUpProps;
   JoinTelegramPopUp: undefined;
+  PingReferralsPopUp: {userId: string};
   Tooltip: {
     position: 'above' | 'below';
     targetRef: RefObject<View>;
@@ -333,6 +335,11 @@ export function MainNavigator() {
     <MainStack.Navigator screenOptions={screenOptions}>
       <MainStack.Screen name="MainTabs" component={MainTabs} />
       <MainStack.Screen name="PopUp" options={modalOptions} component={PopUp} />
+      <MainStack.Screen
+        name="PingReferralsPopUp"
+        options={modalOptions}
+        component={PingReferralsPopUp}
+      />
       <MainStack.Screen
         name="Tooltip"
         options={modalOptions}

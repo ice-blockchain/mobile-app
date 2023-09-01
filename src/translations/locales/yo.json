@@ -854,7 +854,6 @@
     "expired_message": "Ó ṣeni láàánú pé owó èrè tí wọ́n fún wa lónìí ti gbẹ́mìí mì. Ẹ máa bá wa lọ láti gbọ́ ìsọfúnni tó kàn!",
     "result_title": "O káre láé"
   },
-  
   "mining_notice": {
     "title": "ìfitónilétí",
     "message": "O ṣeun fún ìfẹ́ tó o ní láti gba [[:bold]] ice![[/:bold]] A ti ń ṣe àtúnṣe sí ìmọ̀ ẹ̀rọ wa báyìí, a ò sì lè gbà wọlé báyìí. Èyí ni àǹfààní rẹ láti pọkàn pọ̀ sórí kíkó ẹ̀ka rẹ jọ àti gbígbé àwùjọ kéékèèké rẹ ró.",
@@ -886,5 +885,8 @@
       "description_part1": "Títẹ̀lé wa lórí Instagram jẹ́ ọ̀nà tó dára láti mọ̀ nípa ọ̀rọ̀ wa àti láti bá àwọn olùṣàmúlò mìíràn tí wọ́n tún nífẹ̀ẹ́ sí ice pàdé",
       "description_part2": "Síwájú sí i, ìwọ ni yóò kọ́kọ́ mọ̀ nípa àwọn àtúnṣe tuntun tàbí àwọn ìgbéga tá a máa ṣe."
     }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Jọwọ duro nibẹru pe a ma ping gbogbo awọn ọrẹ rẹ · {{count}}"
   }
 }
