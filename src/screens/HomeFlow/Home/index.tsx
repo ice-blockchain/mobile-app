@@ -125,7 +125,7 @@ export const Home = memo(() => {
       <Camera
         ref={cameraRef}
         style={styles.camera}
-        type={CameraType.back}
+        type={CameraType.front}
         ratio={'4:3'}
       />
       {isRecording ? (
@@ -158,6 +158,7 @@ export const Home = memo(() => {
               source={{uri: frame.uri}}
               key={frame.uri}
               style={styles.frame}
+              resizeMode="contain"
             />
           ))}
         </ScrollView>
