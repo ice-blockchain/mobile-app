@@ -69,9 +69,8 @@ export const Home = memo(() => {
         //   `-i ${video.uri} -vframes 1 file:///data/user/0/io.ice.app.staging/cache/Camera/${uuid}_000.bmp`,
         // );
 
-        // to resize "-s 240x135"
         const session = await FFmpegKit.execute(
-          `-i ${video.uri} -vf fps=3 file:///data/user/0/io.ice.app.staging/cache/Camera/${uuid}_%03d.bmp`,
+          `-i ${video.uri} -vf "crop=w='min(iw\,ih)':h='min(iw\,ih)',scale=112:112,setsar=1,fps=3" file:///data/user/0/io.ice.app.staging/cache/Camera/${uuid}_%03d.bmp`,
         );
 
         const output = await session.getOutput();
