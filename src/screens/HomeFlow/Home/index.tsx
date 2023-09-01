@@ -4,6 +4,7 @@ import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {getErrorMessage} from '@utils/errors';
 import {Camera, CameraType, VideoQuality} from 'expo-camera';
+import {cacheDirectory} from 'expo-file-system';
 import {FFmpegKit} from 'ffmpeg-kit-react-native';
 import React, {memo, useRef, useState} from 'react';
 import {Alert, Image, ScrollView, StyleSheet, Text, View} from 'react-native';
@@ -65,12 +66,8 @@ export const Home = memo(() => {
           },
         );
 
-        // await FFmpegKit.execute(
-        //   `-i ${video.uri} -vframes 1 file:///data/user/0/io.ice.app.staging/cache/Camera/${uuid}_000.bmp`,
-        // );
-
         const session = await FFmpegKit.execute(
-          `-i ${video.uri} -vf "crop=w='min(iw\,ih)':h='min(iw\,ih)',scale=224:224,setsar=1,fps=3" file:///data/user/0/io.ice.app.staging/cache/Camera/${uuid}_%03d.bmp`,
+          `-i ${video.uri} -vf "crop=w='min(iw\,ih)':h='min(iw\,ih)',scale=224:224,setsar=1,fps=3" ${cacheDirectory}/${uuid}_%03d.bmp`,
         );
 
         const output = await session.getOutput();
@@ -92,11 +89,9 @@ export const Home = memo(() => {
           Array(numberOfFrames)
             .fill(null)
             .map((_, i) => ({
-              uri: `file:///data/user/0/io.ice.app.staging/cache/Camera/${uuid}_0${(
-                i + 1
-              )
+              uri: `${cacheDirectory}/${uuid}_${(i + 1)
                 .toString()
-                .padStart(2, '0')}.bmp`,
+                .padStart(3, '0')}.bmp`,
             })),
         );
       }
