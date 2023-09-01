@@ -70,7 +70,7 @@ export const Home = memo(() => {
         // );
 
         const session = await FFmpegKit.execute(
-          `-i ${video.uri} -vf "crop=w='min(iw\,ih)':h='min(iw\,ih)',scale=112:112,setsar=1,fps=3" file:///data/user/0/io.ice.app.staging/cache/Camera/${uuid}_%03d.bmp`,
+          `-i ${video.uri} -vf "crop=w='min(iw\,ih)':h='min(iw\,ih)',scale=224:224,setsar=1,fps=3" file:///data/user/0/io.ice.app.staging/cache/Camera/${uuid}_%03d.bmp`,
         );
 
         const output = await session.getOutput();
