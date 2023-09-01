@@ -4,11 +4,11 @@ import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {getErrorMessage} from '@utils/errors';
 import {Camera, CameraType, VideoQuality} from 'expo-camera';
-import {FFmpegKit, ReturnCode} from 'ffmpeg-kit-react-native';
+import {FFmpegKit} from 'ffmpeg-kit-react-native';
 import React, {memo, useRef, useState} from 'react';
 import {Alert, Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 
-type Video = {uri: string; duration: number};
+type Video = {uri: string; duration: string};
 type Frame = {uri: string};
 
 export const Home = memo(() => {
@@ -26,13 +26,17 @@ export const Home = memo(() => {
   const onStartRecord = async () => {
     try {
       setIsRecording(true);
-      const start = Date.now();
       const result = await cameraRef.current?.recordAsync({
         mute: true,
         quality: VideoQuality['4:3'],
       });
+
       if (result?.uri) {
-        setVideo({uri: result.uri, duration: Date.now() - start});
+        const session = await FFmpegKit.execute(`-i ${result.uri}`);
+        const output = await session.getOutput();
+        const match = output.match(/Duration: ([^,]+)/);
+
+        setVideo({uri: result.uri, duration: match?.[1] ?? ''});
       }
     } catch (error) {
       Alert.alert('oops', getErrorMessage(error));
@@ -52,33 +56,50 @@ export const Home = memo(() => {
         setIsGenerating(true);
         setFrameGenerationDuration(null);
         setFrames([]);
-        // const numberOfFrames = Math.floor(video.duration / 333) + 1;
-
-        // const session = await FFmpegKit.execute(
-        //   `-ss 00:00:01 -i ${video.uri} -frames:v 1 file:///data/user/0/io.ice.app.staging/cache/Camera/foobar4.jpg`,
-        // );
-        // const session = await FFmpegKit.execute(
-        //   `-i ${video.uri} -filter:v \
-        //   "select='eq(t\,1.5)'" \
-        //   -vsync drop file:///data/user/0/io.ice.app.staging/cache/Camera/foobar_100.png`,
-        // );
-
-        const session = await FFmpegKit.execute(
-          `-i ${video.uri} -filter:v fps=fps=3 file:///data/user/0/io.ice.app.staging/cache/Camera/foo3.mp4`,
+        const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
+          /[xy]/g,
+          function (c) {
+            var r = (Math.random() * 16) | 0,
+              v = c == 'x' ? r : (r & 0x3) | 0x8;
+            return v.toString(16);
+          },
         );
 
-        const returnCode = await session.getReturnCode();
+        // await FFmpegKit.execute(
+        //   `-i ${video.uri} -vframes 1 file:///data/user/0/io.ice.app.staging/cache/Camera/${uuid}_000.bmp`,
+        // );
 
-        if (ReturnCode.isSuccess(returnCode)) {
-          console.log('SUCCESS!!', returnCode);
-        } else if (ReturnCode.isCancel(returnCode)) {
-          console.log('CANCEL!!', returnCode);
-        } else {
-          console.log('ERROR!!', returnCode);
+        // to resize "-s 240x135"
+        const session = await FFmpegKit.execute(
+          `-i ${video.uri} -vf fps=3 file:///data/user/0/io.ice.app.staging/cache/Camera/${uuid}_%03d.bmp`,
+        );
+
+        const output = await session.getOutput();
+
+        const numberOfFrames = parseInt(
+          output
+            .match(/frame=(.*?)(\d+)/g)
+            ?.pop()
+            ?.match(/\d+/)?.[0] ?? '',
+          10,
+        );
+
+        if (!numberOfFrames || isNaN(numberOfFrames)) {
+          throw new Error('Error parsing number of frames');
         }
 
         setFrameGenerationDuration(Date.now() - start);
-        setFrames([]);
+        setFrames(
+          Array(numberOfFrames)
+            .fill(null)
+            .map((_, i) => ({
+              uri: `file:///data/user/0/io.ice.app.staging/cache/Camera/${uuid}_0${(
+                i + 1
+              )
+                .toString()
+                .padStart(2, '0')}.bmp`,
+            })),
+        );
       }
     } catch (error) {
       Alert.alert('oops', getErrorMessage(error));
@@ -99,8 +120,6 @@ export const Home = memo(() => {
     );
   }
 
-  console.log(frames);
-
   return (
     <View style={styles.container}>
       <Camera
@@ -117,7 +136,7 @@ export const Home = memo(() => {
       {!!video && (
         <>
           <Text>Video Uri: {video.uri}</Text>
-          <Text>Video duration is: {video.duration}ms</Text>
+          <Text>Video duration is: {video.duration}</Text>
           <PrimaryButton
             text={'Generate Images'}
             onPress={onGenerateImages}
@@ -153,8 +172,8 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   camera: {
-    width: 300,
-    height: 225,
+    width: 225,
+    height: 300,
     alignSelf: 'center',
   },
   frameContainer: {
@@ -162,8 +181,9 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   frame: {
-    width: 200,
+    width: 75,
     height: 100,
+    marginHorizontal: 10,
     backgroundColor: 'grey',
   },
 });

@@ -31,7 +31,7 @@ export const MainTabBar = ({
   const {tabBarHideOnKeyboard = false} =
     descriptors[state.routes[state.index].key].options;
 
-  const hideTabBar = tabBarHideOnKeyboard && isKeyboardShown;
+  const hideTabBar = true || (tabBarHideOnKeyboard && isKeyboardShown);
 
   if (hideTabBar) {
     return null;
