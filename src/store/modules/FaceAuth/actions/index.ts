@@ -1,10 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {createAction} from '@store/utils/actions/createAction';
-import {CameraCapturedPicture} from 'expo-camera';
 
 const FACE_AUTH = createAction('FACE_AUTH', {
-  START: (payload: {facePhoto: CameraCapturedPicture}) => payload,
+  START: (payload: {facePhotoUri: string}) => payload,
   SUCCESS: true,
   FAILED: true,
 });

@@ -18,8 +18,8 @@ import {
 } from '@react-navigation/bottom-tabs';
 import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {FaceAuth} from '@screens/FaceAuthFlow';
 import {CreativeIceLibrary} from '@screens/CreativeIceLibrary';
+import {FaceAuth} from '@screens/FaceAuthFlow';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
 import {Home} from '@screens/HomeFlow/Home';
 import {

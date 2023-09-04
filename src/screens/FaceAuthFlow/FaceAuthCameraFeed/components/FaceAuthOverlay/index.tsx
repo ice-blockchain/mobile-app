@@ -2,16 +2,19 @@
 
 import {COLORS} from '@constants/colors';
 import {commonStyles, windowWidth} from '@constants/styles';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import React from 'react';
 import {View} from 'react-native';
 import Svg, {ClipPath, Defs, G, Path, Rect} from 'react-native-svg';
 import {rem} from 'rn-units';
 
-const PADDING_HORIZONTAL = rem(42);
-const FACE_CONTAINER_WIDTH = windowWidth - PADDING_HORIZONTAL * 2;
-const FACE_CONTAINER_ASPECT_RATIO = 292 / 390;
+export const PADDING_HORIZONTAL = rem(42);
+export const FACE_CONTAINER_PADDING_TOP = rem(120);
+export const FACE_CONTAINER_WIDTH = windowWidth - PADDING_HORIZONTAL * 2;
+export const FACE_CONTAINER_ASPECT_RATIO = 292 / 390;
 
 export function FaceAuthOverlay() {
+  const {top} = useSafeAreaInsets();
   return (
     <View style={commonStyles.flexOne}>
       <Svg height="100%" width="100%">
@@ -25,7 +28,8 @@ export function FaceAuthOverlay() {
             <Path
               d={`
         M${PADDING_HORIZONTAL},${
-                rem(120) +
+                top +
+                FACE_CONTAINER_PADDING_TOP +
                 (FACE_CONTAINER_WIDTH / 2) * FACE_CONTAINER_ASPECT_RATIO
               }
         a${(FACE_CONTAINER_WIDTH / 2) * FACE_CONTAINER_ASPECT_RATIO},${

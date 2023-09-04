@@ -4,8 +4,14 @@ import {CheckMark} from '@components/CheckMark';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles, windowWidth} from '@constants/styles';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useNavigation} from '@react-navigation/native';
-import {FaceAuthOverlay} from '@screens/FaceAuthFlow/FaceAuthCameraFeed/components/FaceAuthOverlay';
+import {
+  FACE_CONTAINER_ASPECT_RATIO,
+  FACE_CONTAINER_PADDING_TOP,
+  FACE_CONTAINER_WIDTH,
+  FaceAuthOverlay,
+} from '@screens/FaceAuthFlow/FaceAuthCameraFeed/components/FaceAuthOverlay';
 import {StatusOverlay} from '@screens/FaceAuthFlow/FaceAuthCameraFeed/components/StatusOverlay';
 import {useCameraPermissions} from '@screens/Modals/QRCodeScanner/hooks/useCameraPermissions';
 import {FaceAuthActions} from '@store/modules/FaceAuth/actions';
@@ -14,14 +20,16 @@ import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {LogoIcon} from '@svg/LogoIcon';
 import {RestartIcon} from '@svg/RestartIcon';
 import {t} from '@translations/i18n';
+import {cropAndResizeWithFFmpeg} from '@utils/image';
 import {Camera, CameraType} from 'expo-camera';
 import React, {useEffect, useRef, useState} from 'react';
-import {Image, StyleSheet, View} from 'react-native';
+import {Image, Platform, StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 export function FaceAuthCameraFeed() {
   const cameraRef = useRef<Camera>(null);
+  const {top} = useSafeAreaInsets();
   const [aspectRatio, setAspectRatio] = useState('16:9');
   const [isCameraReady, setIsCameraReady] = useState(false);
   const getSupportedRatios = async () => {
@@ -51,7 +59,38 @@ export function FaceAuthCameraFeed() {
         quality: 0.95,
       });
       setFaceAuthPictureUri(facePhoto.uri);
-      dispatch(FaceAuthActions.FACE_AUTH.START.create({facePhoto}));
+      const ovalCenterY =
+        (Platform.OS === 'ios' ? top : 0) +
+        FACE_CONTAINER_PADDING_TOP +
+        (FACE_CONTAINER_WIDTH * FACE_CONTAINER_ASPECT_RATIO) / 2;
+      const windowToPhotoAspectRatio = windowWidth / facePhoto.width;
+      const cropStartY = Math.max(
+        0,
+        ovalCenterY / windowToPhotoAspectRatio - facePhoto.width / 2,
+      );
+      const fileExtension = facePhoto.uri.slice(
+        facePhoto.uri.lastIndexOf('.') + 1,
+      );
+      const baseUri = facePhoto.uri.substring(
+        0,
+        facePhoto.uri.lastIndexOf('.'),
+      );
+      const outputUri = `${baseUri}_cropped.${fileExtension}`;
+
+      const croppedPicture = await cropAndResizeWithFFmpeg({
+        inputUri: facePhoto.uri,
+        outputUri,
+        imgWidth: facePhoto.width,
+        cropStartY,
+        outputSize: 244,
+      });
+      if (croppedPicture) {
+        dispatch(
+          FaceAuthActions.FACE_AUTH.START.create({
+            facePhotoUri: croppedPicture,
+          }),
+        );
+      }
     }
   };
 

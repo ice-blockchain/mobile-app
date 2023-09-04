@@ -17,6 +17,8 @@ PODS:
     - ZXingObjC/PDF417
   - EXCamera (13.4.2):
     - ExpoModulesCore
+  - EXFileSystem (15.4.2):
+    - ExpoModulesCore
   - EXImageLoader (4.3.0):
     - ExpoModulesCore
     - React-Core
@@ -58,6 +60,10 @@ PODS:
     - FBSDKCoreKit (= 15.0.0)
   - FBSDKShareKit (15.0.0):
     - FBSDKCoreKit (= 15.0.0)
+  - ffmpeg-kit-ios-video (6.0)
+  - ffmpeg-kit-react-native/video (6.0.0):
+    - ffmpeg-kit-ios-video (= 6.0)
+    - React-Core
   - Firebase (10.11.0):
     - Firebase/Core (= 10.11.0)
   - Firebase/AnalyticsWithoutAdIdSupport (10.11.0):
@@ -745,7 +751,7 @@ PODS:
     - React-Core
   - RNCClipboard (1.11.1):
     - React-Core
-  - RNCMaskedView (0.2.8):
+  - RNCMaskedView (0.2.9):
     - React-Core
   - RNDeviceInfo (10.3.0):
     - React-Core
@@ -862,6 +868,7 @@ DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - EXBarCodeScanner (from `../node_modules/expo-barcode-scanner/ios`)
   - EXCamera (from `../node_modules/expo-camera/ios`)
+  - EXFileSystem (from `../node_modules/expo-file-system/ios`)
   - EXImageLoader (from `../node_modules/expo-image-loader/ios`)
   - Expo (from `../node_modules/expo`)
   - ExpoAdapterFBSDKNext (from `../node_modules/react-native-fbsdk-next/ios`)
@@ -869,6 +876,7 @@ DEPENDENCIES:
   - ExpoModulesCore (from `../node_modules/expo-modules-core`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
+  - ffmpeg-kit-react-native/video (from `../node_modules/ffmpeg-kit-react-native/ffmpeg-kit-react-native.podspec`)
   - Firebase
   - Firebase/Messaging
   - FirebaseCore
@@ -986,6 +994,7 @@ SPEC REPOS:
     - FBSDKGamingServicesKit
     - FBSDKLoginKit
     - FBSDKShareKit
+    - ffmpeg-kit-ios-video
     - Firebase
     - FirebaseAnalytics
     - FirebaseAppCheckInterop
@@ -1037,6 +1046,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-barcode-scanner/ios"
   EXCamera:
     :path: "../node_modules/expo-camera/ios"
+  EXFileSystem:
+    :path: "../node_modules/expo-file-system/ios"
   EXImageLoader:
     :path: "../node_modules/expo-image-loader/ios"
   Expo:
@@ -1051,6 +1062,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/FBLazyVector"
   FBReactNativeSpec:
     :path: "../node_modules/react-native/React/FBReactNativeSpec"
+  ffmpeg-kit-react-native:
+    :podspec: "../node_modules/ffmpeg-kit-react-native/ffmpeg-kit-react-native.podspec"
   glog:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
   hermes-engine:
@@ -1215,6 +1228,7 @@ SPEC CHECKSUMS:
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   EXBarCodeScanner: 44783bf0be375ab18a838dcfef29dd648397000a
   EXCamera: 0fbfa338a3776af2722d626a3437abe33f708aad
+  EXFileSystem: d7f59869885cfeab3ac771e2a8d0f5ed98cd3fdb
   EXImageLoader: 34b214f9387e98f3c73989f15d8d5b399c9ab3f7
   Expo: d5956de70d4076190861f6730b93e75478b6faf8
   ExpoAdapterFBSDKNext: cb13ee1823c70383d17a82e7e2385053fa917d01
@@ -1228,6 +1242,8 @@ SPEC CHECKSUMS:
   FBSDKGamingServicesKit: e0766514d64d26a9f846e793c0a44bc4a236723b
   FBSDKLoginKit: 11995469cd7da16fd4d5245e8d2ec61060479270
   FBSDKShareKit: 9501792c3024580809f811a8a549868699d9bd32
+  ffmpeg-kit-ios-video: d3a8a535570063b717f88da68f9089e213aa21ba
+  ffmpeg-kit-react-native: a8aa8b5bed0a53ae573617e790984075bee2c716
   Firebase: 31d9575c124839fb5abc0db6d39511cc1dab1b85
   FirebaseAnalytics: 6c6bf99e8854475bf1fa342028841be8ecd236da
   FirebaseAppCheckInterop: 5e12dc623d443dedffcde9c6f3ed41510125d8ef
@@ -1314,7 +1330,7 @@ SPEC CHECKSUMS:
   RNBootSplash: 85f6b879c080e958afdb4c62ee04497b05fd7552
   RNCAsyncStorage: 8616bd5a58af409453ea4e1b246521bb76578d60
   RNCClipboard: 2834e1c4af68697089cdd455ee4a4cdd198fa7dd
-  RNCMaskedView: bc0170f389056201c82a55e242e5d90070e18e5a
+  RNCMaskedView: 949696f25ec596bfc697fc88e6f95cf0c79669b6
   RNDeviceInfo: 4701f0bf2a06b34654745053db0ce4cb0c53ada7
   RNFBAnalytics: f13089c0af878ab74fba09f5e873c63e3f9de9c8
   RNFBApp: fdbde65110240cd843e644270e974e9b455b0fc1
@@ -1345,6 +1361,6 @@ SPEC CHECKSUMS:
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
   ZXingObjC: fdbb269f25dd2032da343e06f10224d62f537bdb
 
-PODFILE CHECKSUM: 8067a8dad58e9d795400789b2440f9bfc6719bb0
+PODFILE CHECKSUM: 63d2fc0fc5753f2bd77dd80c3aa10b9a91ff85f5
 
 COCOAPODS: 1.12.1

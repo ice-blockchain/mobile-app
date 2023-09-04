@@ -23,7 +23,6 @@ export function faceAuthReducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
       case FaceAuthActions.FACE_AUTH.START.type:
-        console.log('FaceAuthActions.FACE_AUTH.START', action.type);
         draft.faceAuthStatus = 'LOADING';
         break;
       case FaceAuthActions.FACE_AUTH.SUCCESS.type:
