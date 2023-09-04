@@ -685,6 +685,12 @@
     "title": "Chọn ngày"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Dữ liệu ẩn",
+        "description": "Chạm vào biểu tượng mắt để xem cách người dùng khác nhìn thấy hồ sơ của bạn."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Đọc thêm",

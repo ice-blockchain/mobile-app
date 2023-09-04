@@ -685,6 +685,12 @@
     "title": "Datum wählen"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Versteckte Daten",
+        "description": "Tippen Sie auf das Augensymbol, um zu sehen, wie andere Benutzer Ihr Profil sehen."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Mehr lesen",

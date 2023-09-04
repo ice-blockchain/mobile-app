@@ -685,6 +685,12 @@
     "title": "날짜 선택"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "숨겨진 데이터",
+        "description": "눈 아이콘을 탭하여 다른 사용자가 프로필을 어떻게 보는지 확인하세요."
+      }
+    },
     "news": {
       "readmore": {
         "title": "더 보기",

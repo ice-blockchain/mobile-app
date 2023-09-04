@@ -685,6 +685,12 @@
     "title": "Pilih tarikh"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Data Tersembunyi",
+        "description": "Ketuk ikon mata untuk melihat bagaimana pengguna lain melihat profil anda."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Baca lebih lanjut",

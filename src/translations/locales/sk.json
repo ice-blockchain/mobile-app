@@ -685,6 +685,12 @@
     "title": "Vyber dátum"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Skryté údaje",
+        "description": "Kliknutím na ikonu oka zobrazíte, ako iní používatelia vidia váš profil."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Čítať viac",

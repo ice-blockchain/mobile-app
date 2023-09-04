@@ -685,6 +685,12 @@
     "title": "तारीख़ चुनें"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "छिपी डेटा",
+        "description": "आपकी प्रोफ़ाइल को देखने के लिए आँख आइकन पर टैप करें।"
+      }
+    },
     "news": {
       "readmore": {
         "title": "और पढ़ें",

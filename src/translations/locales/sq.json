@@ -685,6 +685,12 @@
     "title": "Zgjidh datën"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Të dhëna të fshehura",
+        "description": "Për të parë se si e shohin profilin tuaj përdoruesit e tjerë, klikoni në ikonën e syrit."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Lexo më shumë",

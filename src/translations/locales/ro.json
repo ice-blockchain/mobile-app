@@ -685,6 +685,12 @@
     "title": "Alege data"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Date ascunse",
+        "description": "Atingeți pictograma cu ochiul pentru a vedea cum văd alți utilizatori profilul dumneavoastră."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Citește mai mult",

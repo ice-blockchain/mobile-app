@@ -685,6 +685,12 @@
     "title": "Výběr data"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Skrytá data",
+        "description": "Klepnutím na ikonu oka zobrazíte, jak ostatní uživatelé vidí váš profil."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Přečtěte si více",

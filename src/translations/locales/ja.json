@@ -685,6 +685,12 @@
     "title": "日付を選択"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "非表示データ",
+        "description": "他のユーザーがあなたのプロフィールをどのように見るかを表示するには、目のアイコンをタップしてください。"
+      }
+    },
     "news": {
       "readmore": {
         "title": "続きを読む",

@@ -685,6 +685,12 @@
     "title": "Tarih seç"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Gizli veri",
+        "description": "Profilinizin diğer kullanıcılar tarafından nasıl görüldüğünü görmek için göz simgesine dokunun."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Devamını oku",
