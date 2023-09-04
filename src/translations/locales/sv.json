@@ -894,5 +894,109 @@
   },
   "ping_referrals_pop_up": {
     "title": "Vänligen vänta medan vi pingar alla dina vänner · {{count}}"
+  },
+  "creative_library": {
+    "title": "Kreativ ice Bibliotek",
+    "share": "Bygg ditt drömteam på ice-nätverket!",
+    "get_started": {
+      "header": "Bygg ditt drömteam",
+      "subtitle": "Kom igång på ice och bygg din blomstrande mikrogemenskap",
+      "description": "Gå med i det snabbt växande antalet ice-användare som bygger sina egna mikrogemenskaper och tjänar fler belöningar. Våra marknadsföringsverktyg, guider och tips gör det enkelt att sprida budskapet och bygga en framgångsrik gemenskap.",
+      "get_started": "Kom igång",
+      "carousel": {
+        "01": {
+          "title": "Gå med",
+          "description": "Ladda ner vår app, hämta ditt smeknamn och börja bryta.\n\nDu kommer att gå med i en global gemenskap av användare som brinner för decentralisering, autonomi och folkets makt."
+        },
+        "02": {
+          "title": "Bjud in",
+          "description": "Bjuda in din publik att gå med i ice och arbeta tillsammans för att låsa upp ytterligare belöningar.\n\nDessutom hjälper du till att sprida budskapet om fördelarna med decentralisering och framtidens finansvärld."
+        },
+        "03": {
+          "title": "Tjäna",
+          "description": "Öka dina belöningar genom att utöka ditt nätverk och uppmuntra andra att ansluta sig till ice-gemenskapen.\n\nDelta i vår mission att revolutionera framtiden för finans genom decentralisering och autonomi."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videor",
+        "description": "Använd vår samling av videor för att marknadsföra din inbjudningskod, landskap eller porträtt, med eller utan undertexter, vi har dig täckt.",
+        "action": "Visa videor"
+      },
+      "02": {
+        "title": "Bilder",
+        "description": "En bild säger mer än tusen ord. Du kan välja bland vårt urval av banners, sociala medie-material, mallar och app-mockups.",
+        "action": "Visa bilder"
+      },
+      "03": {
+        "title": "Inbäddad banner",
+        "description": "Med vår inbäddade banner kan du enkelt marknadsföra ice till dina webbplatsbesökare och bjuda in dem att ansluta sig till din mikrogemenskap.",
+        "action": "Installera bannern"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Dela din berättelse",
+        "description": "Dela din resa med ice-nätverket och dess många fördelar genom att skriva en artikel på ditt språk.\n\nDela dem på din blogg, Medium, Reddit, Quora, Blogger och mer.\n\nDu hittar allt om ice och dess unika funktioner på vår [[/:link]]Kunskapsbas[[/:link]], [[/:link]]Hemsida[[/:link]] och [[/:link]]Vanliga frågor[[/:link]]."
+      },
+      "spread": {
+        "title": "Sprid budskapet",
+        "description": "Delta i konversationen och introducera ice-nätverket till dina favoritforum.\nStarta nya trådar och dela dina tankar om decentraliserad ekonomi, framtidens valutor och kraften i att bygga en mikrogemenskap med ice.\n\nVar en ☃️ Snögubbe och starta en diskussion om potentialen i denna globala valuta."
+      },
+      "bring": {
+        "title": "Ta med dina vänner ombord",
+        "description": "Använd vår enkla inbjudningsfunktion och dela din personliga inbjudningskod med dina vänner på dina favorit sociala medie-plattformar."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Plug & Play för webbplatsägare",
+        "description": "Bädda in ice-nätverket direkt på din webbplats med vår enkla och flexibla JS-banner. Det är en snabb och enkel installation som kan anpassas för att matcha din webbplats varumärke. Den är översatt till 50 språk och är kompatibel med alla webbplattformar.\n\nKopiera och klistra in koden på din webbplats och börja marknadsföra ice-nätverket till dina besökare idag.",
+        "action": "Installera bannern"
+      },
+      "mobile": {
+        "title": "Bibliotek för mobilappar",
+        "description": "Integrera vår användarvänliga bibliotek i din mobilapp och bjud in dina användare att ansluta sig till din mikrogemenskap och börja bryta.\n\nMed översättningsstöd och flexibla inställningsalternativ kan du säkerställa att alla dina användare har tillgång till samma fantastiska ice-upplevelse, oavsett var de är i världen.",
+        "action1": "Android-bibliotek",
+        "action2": "React Native-bibliotek"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Bra praxis",
+        "rules": {
+          "01": {
+            "title": "Var autentisk",
+            "description": "Skriv från din personliga erfarenhet och perspektiv. Dela dina ärliga tankar och känslor om ice-nätverket."
+          },
+          "02": {
+            "title": "Använd en vänlig ton",
+            "description": "Skriv som om du pratar med en vän och undvik att använda alltför tekniskt jargong eller språk som kan vara svårt för läsarna att förstå."
+          },
+          "03": {
+            "title": "Var kreativ",
+            "description": "Var inte rädd för att experimentera med olika typer av innehåll, som blogginlägg, videor eller uppdateringar på sociala medier. Ha kul och var innovativ i hur du marknadsför ice-nätverket för din publik."
+          }
+        }
+      },
+      "bad": {
+        "title": "Dålig praxis",
+        "rules": {
+          "01": {
+            "title": "Undvik att skicka skräppost",
+            "description": "Undvik att skicka oönskade meddelanden eller att upprepa samma innehåll på olika plattformar. Detta kan uppfattas som påträngande och irriterande."
+          },
+          "02": {
+            "title": "Lura inte människor",
+            "description": "ice-projektet betalar inte användare med kontanter, vi belönar endast med ice-mynt. Vänligen undvik att posta innehåll som \"Konvertera dina ice till kontanter\" eller \"Hur du tjänar 100 dollar med ice\" och liknande."
+          },
+          "03": {
+            "title": "Delta inte i bedräglig verksamhet",
+            "description": "Vi värderar transparens och ärlighet i vår gemenskap. Bedrägliga aktiviteter som att skapa flera konton eller försöka manipulera ice-nätverket kommer inte att tolereras."
+          }
+        }
+      }
+    }
   }
 }

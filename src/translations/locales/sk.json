@@ -894,5 +894,109 @@
   },
   "ping_referrals_pop_up": {
     "title": "Prosím počkajte, kým pingujeme všetkých vašich priateľov · {{count}}"
+  },
+  "creative_library": {
+    "title": "Kreatívna knižnica ice",
+    "share": "Vytvorte svoj vysnívaný tím na sieti ice!",
+    "get_started": {
+      "header": "Vytvorte svoj vysnívaný tím",
+      "subtitle": "Začnite na ice a budujte svoje úspešné mikrokomunitu",
+      "description": "Pripojte sa k rýchlo sa zvyšujúcemu počtu používateľov ice, ktorí budujú vlastné mikrokomunity a získavajú viac odmien. Naše promočné nástroje, sprievodcovia a tipy uľahčujú šírenie správ a budovanie úspešnej komunity.",
+      "get_started": "Začať",
+      "carousel": {
+        "01": {
+          "title": "Pripojiť sa",
+          "description": "Stiahnite si našu aplikáciu, získajte si prezývku a začnite ťažiť.\n\nPripojíte sa k celosvetovej komunite používateľov ice, ktorí sú nadšení decentralizáciou, autonómiou a silou ľudí."
+        },
+        "02": {
+          "title": "Pozvať",
+          "description": "Pozvite svoje publikum, aby sa pripojilo k ice a spoločne pracovalo na odomknutí dodatočných odmien.\n\nOkrem toho pomôžete šíriť slovo o výhodách decentralizácie a budúcnosti financií."
+        },
+        "03": {
+          "title": "Zarábať",
+          "description": "Rastite vo svojich odmenách tým, že budujete svoju sieť a povzbudzujete iných, aby sa pridali k ice komunite.\n\nPripojte sa k nášmu úsiliu zmeniť budúcnosť financií prostredníctvom decentralizácie a autonómie."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videá",
+        "description": "Použite našu zbierku videí na propagovanie vášho pozvania, v režime na šírku alebo na výšku, so subtitulmi alebo bez, máme vás pokrytých.",
+        "action": "Zobraziť videá"
+      },
+      "02": {
+        "title": "Obrázky",
+        "description": "Obrázok hovorí viac než tisíc slov. Môžete si vybrať zo zbierky bannery, aktíva pre sociálne siete, šablóny a makety aplikácií.",
+        "action": "Zobraziť obrázky"
+      },
+      "03": {
+        "title": "Vložený banner",
+        "description": "S naším vloženým bannerom môžete ľahko propagovať ice pre návštevníkov vášho webu a pozvať ich, aby sa pridali k vašej mikrokomunite.",
+        "action": "Inštalovať banner"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Zdieľajte svoj príbeh",
+        "description": "Zdieľajte svoju cestu so sieťou ice a jej mnohými výhodami napísaním článku vo vašom jazyku.\n\nZdieľajte ich na vašom blogu, v službe Medium, na Reddite, Quore, Bloggeri a ďalších platformách.\n\nVšetko o ice a jeho jedinečných vlastnostiach nájdete na našej [[/:link]]Báze znalostí[[/:link]], [[/:link]]Domovskej stránke[[/:link]] a [[/:link]]FAQ[[/:link]]."
+      },
+      "spread": {
+        "title": "Šírenie slova",
+        "description": "Zapojte sa do konverzácie a predstavte sieť ice svojim obľúbeným fóram.\nZaložte nové témy a zdieľajte svoje myšlienky o decentralizovaných financiách, budúcnosti meny a sile budovania mikrokomunity s ice.\n\nBuďte ☃️ Snehuliakom a rozprúdite diskusiu o potenciáli tejto globálnej meny."
+      },
+      "bring": {
+        "title": "Pozvite svojich priateľov",
+        "description": "Použite našu jednoduchú funkciu pozvánky a zdieľajte svoj osobný kód pozvánky so svojimi priateľmi na svojich obľúbených sociálnych sieťach."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Plug & Play pre majiteľov webových stránok",
+        "description": "Vložte sieť ice priamo na svoju webovú stránku pomocou nášho jednoduchého a flexibilného banneru JS. Je to rýchla a jednoduchá inštalácia, ktorú môžete prispôsobiť podľa vizuálnej identity vašej webovej stránky. Je preložený do 50 jazykov a je kompatibilný s akoukoľvek webovou platformou.\n\nSkopírujte a vložte kód na svoju webovú stránku a začnite propagovať sieť ice svojim návštevníkom už dnes.",
+        "action": "Inštalovať banner"
+      },
+      "mobile": {
+        "title": "Knižnica pre mobilné aplikácie",
+        "description": "Integrujte našu jednoducho použiteľnú knižnicu do svojej mobilnej aplikácie a pozvite svojich používateľov, aby sa pridali k vašej mikrokomunite a začali ťažiť.\n\nS podporou prekladov a flexibilnými nastaveniami môžete zabezpečiť, aby všetci vaši používatelia mali prístup k rovnakému skvelému zážitku s ice, bez ohľadu na to, kde sa nachádzajú na svete.",
+        "action1": "Knižnica pre Android",
+        "action2": "Knižnica pre React Native"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Dobré praktiky",
+        "rules": {
+          "01": {
+            "title": "Buďte autentickí",
+            "description": "Píšte zo svojich osobných skúseností a pohľadu. Zdieľajte svoje úprimné myšlienky a pocity o sieti ice."
+          },
+          "02": {
+            "title": "Používajte priateľský tón",
+            "description": "Píšte, akoby ste hovorili s priateľom, a vyhnite sa používaniu príliš technického žargónu alebo jazyka, ktorý by mohol byť pre čitateľov ťažko zrozumiteľný."
+          },
+          "03": {
+            "title": "Buďte kreatívni",
+            "description": "Nebojte sa experimentovať s rôznymi typmi obsahu, ako sú blogové príspevky, videá alebo aktualizácie na sociálnych sieťach. Zábava a inovácia v spôsobe, akým propagujete sieť ice svojej cieľovej skupine."
+          }
+        }
+      },
+      "bad": {
+        "title": "Zlé praktiky",
+        "rules": {
+          "01": {
+            "title": "Neposielajte spam",
+            "description": "Vyhnite sa odosielaniu nevyžiadaných správ alebo opakovanej publikácii rovnakého obsahu na rôznych platformách. To môže byť vnímané ako rušivé a otravné."
+          },
+          "02": {
+            "title": "Nevádzajte ľudí klamstvom",
+            "description": "Projekt ice nepláca používateľom hotovosťou, len odmeňuje mincami ice. Vyhnite sa publikácii obsahu typu \"Preveďte svoje ice na hotovosť\" alebo \"Ako zarábať 100 dolárov s ice\" a podobné."
+          },
+          "03": {
+            "title": "Nepodieľajte sa na podvode",
+            "description": "Ceníme si transparentnosť a čestnosť v našej komunite. Akékoľvek podvodné činnosti, ako je vytváranie viacerých účtov alebo pokusy manipulovať so sieťou ice, nebudú tolerované."
+          }
+        }
+      }
+    }
   }
 }

@@ -894,5 +894,109 @@
   },
   "ping_referrals_pop_up": {
     "title": "Harap tunggu sementara kami ping semua teman Anda · {{count}}"
+  },
+  "creative_library": {
+    "title": "Perpustakaan Kreatif ice",
+    "share": "Bangun tim impian Anda di jaringan ice!",
+    "get_started": {
+      "header": "Bangun tim impian Anda",
+      "subtitle": "Mulai di ice dan bangun komunitas mikro yang berkembang",
+      "description": "Bergabunglah dengan jumlah pengguna ice yang semakin bertambah yang sedang membangun komunitas mikro mereka sendiri dan mendapatkan lebih banyak imbalan. Alat promosi, panduan, dan tips kami memudahkan penyebaran pesan dan pembangunan komunitas yang sukses.",
+      "get_started": "Mulai",
+      "carousel": {
+        "01": {
+          "title": "Bergabung",
+          "description": "Unduh aplikasi kami, klaim nama panggilan Anda, dan mulai menambang.\n\nAnda akan bergabung dengan komunitas global pengguna ice yang antusias tentang desentralisasi, otonomi, dan kekuatan dari masyarakat."
+        },
+        "02": {
+          "title": "Undang",
+          "description": "Undang audiens Anda untuk bergabung dengan ice dan bekerja sama untuk membuka imbalan tambahan.\n\nSelain itu, Anda akan membantu menyebarkan pesan tentang manfaat desentralisasi dan masa depan keuangan."
+        },
+        "03": {
+          "title": "Dapatkan",
+          "description": "Tingkatkan imbalan Anda dengan memperluas jaringan Anda dan mendorong orang lain untuk bergabung dengan komunitas ice.\n\nBergabunglah dengan misi kami untuk merevolusi masa depan keuangan melalui desentralisasi dan otonomi."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Video",
+        "description": "Gunakan koleksi video kami untuk mempromosikan kode undangan Anda, dalam mode lanskap atau potret, dengan atau tanpa teks terjemahan, kami mendukung Anda.",
+        "action": "Lihat video"
+      },
+      "02": {
+        "title": "Gambar",
+        "description": "Sebuah gambar bernilai seribu kata. Anda dapat memilih dari koleksi spanduk, aset media sosial, template, dan mockup aplikasi kami.",
+        "action": "Lihat gambar"
+      },
+      "03": {
+        "title": "Spanduk Tertanam",
+        "description": "Dengan spanduk tertanam kami, Anda dapat dengan mudah mempromosikan ice kepada pengunjung situs web Anda dan mengundang mereka untuk bergabung dengan komunitas mikro Anda.",
+        "action": "Pasang spanduk"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Bagikan Cerita Anda",
+        "description": "Bagikan perjalanan Anda dengan jaringan ice dan manfaat-manfaatnya yang banyak dengan menulis artikel dalam bahasa Anda.\n\nBagikan di blog Anda, Medium, Reddit, Quora, Blogger, dan banyak lagi.\n\nAnda dapat menemukan semua informasi tentang ice dan fitur-fitur uniknya di [[/:link]] Basis Pengetahuan [[/:link]], [[/:link]] Halaman Beranda [[/:link]], dan [[/:link]] Halaman FAQ [[/:link]]."
+      },
+      "spread": {
+        "title": "Sebarkan Pesan",
+        "description": "Bergabunglah dalam percakapan dan perkenalkan jaringan ice kepada forum-forum favorit Anda. Mulai thread baru dan bagikan pemikiran Anda tentang keuangan terdesentralisasi, masa depan mata uang, dan kekuatan membangun komunitas mikro dengan ice.\n\nJadilah manusia salju ☃️ dan mulailah diskusi tentang potensi mata uang global ini."
+      },
+      "bring": {
+        "title": "Ajak Teman Anda Bergabung",
+        "description": "Gunakan fitur undangan yang mudah digunakan kami dan bagikan kode undangan pribadi Anda dengan teman-teman Anda di platform media sosial favorit Anda."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Plug & Play untuk Pemilik Situs Web",
+        "description": "Integrasikan ice langsung ke situs web Anda dengan spanduk JS sederhana dan fleksibel kami. Ini adalah pengaturan cepat dan mudah yang dapat disesuaikan untuk mencocokkan branding situs web Anda. Ini diterjemahkan ke dalam 50 bahasa dan kompatibel dengan semua platform situs web.\n\nSalin dan tempel kode ke situs web Anda, dan mulailah mempromosikan ice kepada pengunjung Anda hari ini.",
+        "action": "Pasang spanduk"
+      },
+      "mobile": {
+        "title": "Perpustakaan untuk Aplikasi Seluler",
+        "description": "Integrasikan perpustakaan kami yang mudah digunakan ke dalam aplikasi seluler Anda dan undang pengguna Anda untuk bergabung dengan komunitas mikro Anda dan memulai penambangan.\n\nDengan dukungan terjemahan dan opsi pengaturan yang fleksibel, Anda dapat memastikan bahwa semua pengguna Anda memiliki akses ke pengalaman ice yang hebat yang sama, di mana pun mereka berada di dunia.",
+        "action1": "Perpustakaan Android",
+        "action2": "Perpustakaan React Native"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Praktik Baik",
+        "rules": {
+          "01": {
+            "title": "Jadilah Autentik",
+            "description": "Tulis dari pengalaman dan sudut pandang pribadi Anda. Bagikan pemikiran dan perasaan Anda yang jujur tentang jaringan ice."
+          },
+          "02": {
+            "title": "Gunakan Bahasa Ramah",
+            "description": "Tulis seolah-olah Anda sedang berbicara dengan seorang teman, dan hindari menggunakan istilah teknis yang berlebihan atau bahasa yang mungkin sulit dipahami oleh pembaca."
+          },
+          "03": {
+            "title": "Jadilah Kreatif",
+            "description": "Jangan takut untuk bereksperimen dengan berbagai jenis konten, seperti artikel blog, video, atau pembaruan media sosial. Bersenang-senanglah dan berinovasilah dalam cara Anda mempromosikan ice kepada audiens Anda."
+          }
+        }
+      },
+      "bad": {
+        "title": "Praktik Buruk",
+        "rules": {
+          "01": {
+            "title": "Hindari Spam",
+            "description": "Hindari mengirim pesan yang tidak diminta atau mengirim konten yang sama berkali-kali di berbagai platform. Ini bisa dianggap sebagai tindakan yang mengganggu dan menjengkelkan."
+          },
+          "02": {
+            "title": "Jangan Menyesatkan Orang",
+            "description": "Proyek ice tidak membayar pengguna dengan uang tunai, hanya memberikan imbalan dengan koin ice. Harap hindari mengirimkan konten seperti \"Ubah koin ice Anda menjadi uang tunai\". \"Bagaimana cara menghasilkan $100 dengan ice\", dan sejenisnya."
+          },
+          "03": {
+            "title": "Jangan Terlibat dalam Aktivitas Penipuan",
+            "description": "Kami menghargai transparansi dan kejujuran dalam komunitas kami. Setiap aktivitas penipuan seperti membuat beberapa akun atau mencoba memanipulasi jaringan ice tidak akan ditoleransi."
+          }
+        }
+      }
+    }
   }
 }

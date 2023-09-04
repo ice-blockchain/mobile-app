@@ -894,5 +894,109 @@
   },
   "ping_referrals_pop_up": {
     "title": "Kérjük, várjon, amíg az összes barátjának pinget küldünk · {{count}}"
+  },
+  "creative_library": {
+    "title": "Kreatív Ice Könyvtár",
+    "share": "Építsd fel álomcsapatodat az Ice Hálózaton!",
+    "get_started": {
+      "header": "Építsd fel álomcsapatodat",
+      "subtitle": "Kezdd el az Ice-n és hozd létre virágzó mikroközösségedet",
+      "description": "Csatlakozz a gyorsan növekvő Ice felhasználók számához, akik saját mikroközösségeket építenek és több jutalmat szereznek. Promóciós eszközeink, útmutatóink és tippeink könnyen segítenek elterjeszteni az üzenetet és sikeres közösséget építeni.",
+      "get_started": "Kezdd el",
+      "carousel": {
+        "01": {
+          "title": "Csatlakozás",
+          "description": "Töltsd le az alkalmazásunkat, igényeld a beceneved és kezdd el a bányászatot.\n\nCsatlakozz a globális felhasználói közösséghez, akik szenvedélyesen hisznek a decentralizációban, az autonómiában és az emberek erejében."
+        },
+        "02": {
+          "title": "Meghívás",
+          "description": "Hívd meg a közönségedet az Ice-re és dolgozzatok együtt további jutalmak feloldásához.\n\nRáadásul segítesz terjeszteni a decentralizáció előnyeiről és a pénz jövőjéről szóló üzenetet."
+        },
+        "03": {
+          "title": "Jutalom",
+          "description": "Növeld a jutalmaidat, bővítsd a hálózatodat és bátoríts másokat az Ice közösséghez való csatlakozásra.\n\nCsatlakozz hozzánk a pénzügyi jövő forradalmának megteremtésében a decentralizáció és az autonómia révén."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videók",
+        "description": "Használd videógyűjteményünket, hogy népszerűsítsd meghívó kódodat, táj- vagy portré módban, felirattal vagy anélkül, mi itt vagyunk neked.",
+        "action": "Videók megtekintése"
+      },
+      "02": {
+        "title": "Képek",
+        "description": "Egy kép többet mond ezer szónál. Választhatsz a bannerjeink, közösségi média eszközeink, sablonjaink és alkalmazások tesztpéldáink közül.",
+        "action": "Képek megtekintése"
+      },
+      "03": {
+        "title": "Beágyazott Banner",
+        "description": "Az integrált bannerünkkel könnyedén népszerűsítheted az Ice-t a webhelyed látogatói előtt, és meghívhatsz őket mikroközösségedbe.",
+        "action": "Telepítsd a bannert"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Oszd meg a történeted",
+        "description": "Oszd meg az Ice Hálózatban való utadat és annak sok előnyét a saját nyelveden írt cikkekkel.\n\nOszd meg őket a blogodon, a Mediumon, a Redditen, a Quorán, a Bloggeren és még több helyen.\n\nMindent megtalálsz az Ice-ról és egyedi jellemzőiről a [[:link]] Tudásbázisunkon [[/:link]], [[:link]] Kezdőlapunkon [[/:link]], és a [[:link]] Gyakran Ismételt Kérdéseink [[/:link]] oldalon."
+      },
+      "spread": {
+        "title": "Terjeszd az Üzenetet",
+        "description": "Csatlakozz a beszélgetéshez és mutasd be az Ice Hálózatot kedvenc fórumaidon.\n\nIndíts új témákat és oszd meg gondolataidat a decentralizált pénzügyekről, a valuta jövőjéről és az Ice mikroközösség építésének erejéről.\n\nLégy egy ☃️ Hóember és indíts egy beszélgetést ennek a globális valutának a lehetőségeiről."
+      },
+      "bring": {
+        "title": "Hozd Be a Barátaidat",
+        "description": "Használd könnyen használható meghívó funkcióinkat, és oszd meg személyes meghívó kódodat barátaiddal a kedvenc közösségi média platformjaidon."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Plug & Play a Weboldal Tulajdonosoknak",
+        "description": "Ágyazd be közvetlenül az Ice Hálózatot a weboldaladba egyszerű és rugalmas JS bannerünkkel. Gyors és könnyű beállítás, amely testreszabható a weboldalad arculatához. 50 nyelvre lefordítva és bármely webhely platformmal kompatibilis.\n\nMásold be a kódot a weboldaladba, és kezdd el népszerűsíteni az Ice Hálózatot a látogatóid számára még ma.",
+        "action": "Telepítsd a bannert"
+      },
+      "mobile": {
+        "title": "Könyvtár a Mobilalkalmazásokhoz",
+        "description": "Integráld könnyen használható könyvtárunkat a mobilalkalmazásodba, és hívd meg a felhasználóidat, hogy csatlakozzanak a mikroközösségedhez és elkezdjenek bányászni.\n\nFordítási támogatással és rugalmas beállítási lehetőségekkel biztosíthatod, hogy az összes felhasználód ugyanolyan kiváló Ice élményhez juthasson, bárhol is vannak a világon.",
+        "action1": "Android könyvtár",
+        "action2": "React Native könyvtár"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Jó Gyakorlatok",
+        "rules": {
+          "01": {
+            "title": "Legyél hiteles",
+            "description": "Írj a személyes tapasztalataid és nézőpontodból. Oszd meg őszinte gondolataidat az Ice Hálózatról."
+          },
+          "02": {
+            "title": "Használj barátságos hangnemet",
+            "description": "Írj úgy, mintha egy baráttal beszélgetnél, és kerüld a túlzottan technikai zsargon használatát vagy a nyelvet, amit az olvasók nehezen érthetnek meg."
+          },
+          "03": {
+            "title": "Légy kreatív",
+            "description": "Ne félj kísérletezni különböző tartalomtípusokkal, mint például blogbejegyzések, videók vagy közösségi média frissítések. Szórakozz és legyen innovatív az Ice Hálózat népszerűsítésében a közönségednek."
+          }
+        }
+      },
+      "bad": {
+        "title": "Rossz Gyakorlatok",
+        "rules": {
+          "01": {
+            "title": "Ne spammezz",
+            "description": "Kerüld az kéretlen üzenetek küldését vagy ugyanazt a tartalmat ismételten különböző platformokon közzétenni. Ez tolakodónak és idegesítőnek tekinthető."
+          },
+          "02": {
+            "title": "Ne vezess félre embereket",
+            "description": "Az Ice projekt nem fizet felhasználóknak készpénzzel, csak jutalmazzuk jégérmékkel. Kérlek, kerüld a \"Váltsd át jéged készpénzre\" vagy a \"Hogyan keress 100 dollárt jéggel\" stb. tartalmak közzétételét."
+          },
+          "03": {
+            "title": "Ne vegyél részt csalásos tevékenységekben",
+            "description": "Az átláthatóságot és az őszinteséget értékeljük a közösségünkben. Semmilyen csalásos tevékenység, mint például több fiók létrehozása vagy az Ice Hálózat manipulálásának kísérlete nem lesz tolerálva."
+          }
+        }
+      }
+    }
   }
 }

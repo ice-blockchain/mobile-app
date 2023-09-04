@@ -894,5 +894,109 @@
   },
   "ping_referrals_pop_up": {
     "title": "Wag asseblief terwyl ons al jou vriende ping · {{count}}"
+  },
+  "creative_library": {
+    "title": "Kreatiewe ice Biblioteek",
+    "share": "Bou jou droomspan op die ice-netwerk!",
+    "get_started": {
+      "header": "Bou jou droomspan",
+      "subtitle": "Begin op ice en bou jou florerende mikrogemeenskap",
+      "description": "Sluit aan by die vinnig groeiende aantal ice-gebruikers wat hul eie mikrogemeenskappe bou en meer belonings verdien. Ons promosiehulpmiddels, gidse en wenke maak dit maklik om die woord te versprei en 'n suksesvolle gemeenskap te bou.",
+      "get_started": "Begin",
+      "carousel": {
+        "01": {
+          "title": "Sluit aan",
+          "description": "Laai ons toep af, eis jou bynaam en begin myn.\n\nJy sal 'n globale gemeenskap van gebruikers wat passievol is oor desentralisasie, outonomie en die krag van die mense, bywoon."
+        },
+        "02": {
+          "title": "Nooi uit",
+          "description": "Nooi jou gehoor uit om aan ice deel te neem en saam te werk om addisionele belonings vry te stel.\n\nDaarbenewens sal jy help om die woord oor die voordele van desentralisasie en die toekoms van finansies te versprei."
+        },
+        "03": {
+          "title": "Verdien",
+          "description": "Groei jou belonings deur jou netwerk uit te brei en ander aan te moedig om by die ice-gemeenskap aan te sluit.\n\nSluit by ons aan in ons missie om die toekoms van finansies deur desentralisasie en outonomie te revolusioneer."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videos",
+        "description": "Gebruik ons versameling videos om jou uitnodigingskode te bevorder, landskap of portret, met of sonder onderskrifte, ons het jou gedek.",
+        "action": "Bekyk videos"
+      },
+      "02": {
+        "title": "Beelde",
+        "description": "'n Prent is 'n duisend woorde werd. Jy kan kies uit ons versameling baniers, sosiale media bates, templaat en app-na-apk.",
+        "action": "Bekyk beelde"
+      },
+      "03": {
+        "title": "Ingebedde Banier",
+        "description": "Met ons ingebedde banier kan jy ice maklik aan jou webwerfbesoekers bevorder en hulle uitnooi om by jou mikrogemeenskap aan te sluit.",
+        "action": "Installeer die banier"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Deel jou Storie",
+        "description": "Deel jou reis met die ice-netwerk en sy vele voordele deur 'n artikel in jou taal te skryf.\n\nDeel dit op jou Blog, Medium, Reddit, Quora, Blogger en meer.\n\nJy kan alles oor ice en sy unieke kenmerke op ons [[:link]]Kennisbasis[[/:link]], [[:link]]Tuisblad[[/:link]], en [[:link]]Veelgestelde Vrae[[/:link]]-bladsy vind."
+      },
+      "spread": {
+        "title": "Versprei die Woord",
+        "description": "Neem deel aan die gesprek en stel die ice-netwerk aan jou gunstelingforums voor.\nBegin nuwe drade en deel jou gedagtes oor gedesentraliseerde finansies, die toekoms van geldeenheid, en die krag van die bou van 'n mikrogemeenskap met ice.\n\nWees 'n ☃️ Sneeuman en begin 'n bespreking oor die potensiaal van hierdie globale geldeenheid."
+      },
+      "bring": {
+        "title": "Nooi Jou Vriende aan Boord",
+        "description": "Gebruik ons maklike uitnodigingskenmerk en deel jou persoonlike uitnodigingskode met jou vriende op jou gunsteling sosiale media platforms."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Prop & Speel vir Webwerf-eienaars",
+        "description": "Laat ice-netwerk direk op jou webwerf met ons eenvoudige en buigsame JS-banier. Dit is 'n vinnige en maklike opstelling wat aangepas kan word om by jou webwerf se handelsmerk pas. Dit is vertaal na 50 tale en is versoenbaar met enige webwerfplatform.\n\nKopieer en plak die kode in jou webwerf, en begin vandag met die bevordering van ice-netwerk aan jou besoekers.",
+        "action": "Installeer die banier"
+      },
+      "mobile": {
+        "title": "Biblioteek vir Mobiele Apps",
+        "description": "Integreer ons maklik-te-gebruik-biblioteek in jou mobiele app en nooi jou gebruikers uit om by jou mikrogemeenskap aan te sluit en te begin myn.\n\nMet vertaalondesteuning en buigbare opstellingsopsies, kan jy verseker dat al jou gebruikers toegang het tot dieselfde fantastiese ice-ervaring, maak nie saak waar hulle in die wêreld is nie.",
+        "action1": "Android-biblioteek",
+        "action2": "React Native-biblioteek"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Goeie Praktyke",
+        "rules": {
+          "01": {
+            "title": "Wees egentlik",
+            "description": "Skryf uit jou persoonlike ervaring en perspektief. Deel jou eerlike gedagtes en gevoelens oor ice-netwerk."
+          },
+          "02": {
+            "title": "Gebruik 'n vriendelike toon",
+            "description": "Skryf asof jy met 'n vriend praat, en vermy die gebruik van oormatig tegniese jargon of taal wat moontlik moeilik kan wees vir lesers om te verstaan."
+          },
+          "03": {
+            "title": "Wees kreatief",
+            "description": "Moenie bang wees om te eksperimenteer met verskillende soorte inhoud nie, soos blogpos, videos, of sosiale media-opdaterings. Het pret en wees innoverend in die manier waarop jy ice-netwerk aan jou gehoor bevorder."
+          }
+        }
+      },
+      "bad": {
+        "title": "Slegte Praktyke",
+        "rules": {
+          "01": {
+            "title": "Moenie spam nie",
+            "description": "Vermy om ongevraagde boodskappe te stuur of herhaaldelik dieselfde inhoud op verskillende platforms te plaas. Dit kan as indringend en hinderlik beskou word."
+          },
+          "02": {
+            "title": "Mislei mense nie",
+            "description": "Die ice-projek betaal nie gebruikers enige kontant nie, ons beloon slegs met ice-munte. Moet asseblief nie inhoud plaas soos \"Verander jou ice in kontant\" nie. \"Hoe om $100 met ice te verdien\" en so aan."
+          },
+          "03": {
+            "title": "Neem nie deel aan bedrieglike aktiwiteite nie",
+            "description": "Ons waardeer deursigtigheid en eerlikheid in ons gemeenskap. Enige bedrieglike aktiwiteite, soos die skep van meervoudige rekeninge of die probeer manipuleer van die ice-netwerk, sal nie geduld word nie."
+          }
+        }
+      }
+    }
   }
 }

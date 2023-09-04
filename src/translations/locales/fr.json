@@ -894,5 +894,109 @@
   },
   "ping_referrals_pop_up": {
     "title": "Veuillez attendre pendant que nous faisons un ping à tous vos amis · {{count}}"
+  },
+  "creative_library": {
+    "title": "Bibliothèque Créative ice",
+    "share": "Construisez votre équipe de rêve sur le réseau ice !",
+    "get_started": {
+      "header": "Construisez votre équipe de rêve",
+      "subtitle": "Commencez sur ice et créez votre micro-communauté prospère",
+      "description": "Rejoignez le nombre croissant d'utilisateurs d'ice qui créent leurs propres micro-communautés et gagnent plus de récompenses. Nos outils promotionnels, nos guides et nos conseils facilitent la diffusion du message et la création d'une communauté réussie.",
+      "get_started": "Commencer",
+      "carousel": {
+        "01": {
+          "title": "Rejoignez",
+          "description": "Téléchargez notre application, réclamez votre pseudo et commencez à miner.\n\nVous rejoindrez une communauté mondiale d'utilisateurs passionnés par la décentralisation, l'autonomie et le pouvoir des gens."
+        },
+        "02": {
+          "title": "Invite",
+          "description": "Invitez votre public à rejoindre ice et à travailler ensemble pour débloquer des récompenses supplémentaires.\n\nDe plus, vous contribuerez à diffuser le message sur les avantages de la décentralisation et l'avenir des finances."
+        },
+        "03": {
+          "title": "Gagnez",
+          "description": "Augmentez vos récompenses en développant votre réseau et en encourageant les autres à rejoindre la communauté ice.\n\nRejoignez-nous dans notre mission de révolutionner l'avenir des finances grâce à la décentralisation et l'autonomie."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Vidéos",
+        "description": "Utilisez notre collection de vidéos pour promouvoir votre code d'invitation, en mode paysage ou portrait, avec ou sans sous-titres, nous vous couvrons.",
+        "action": "Voir les vidéos"
+      },
+      "02": {
+        "title": "Images",
+        "description": "Une image vaut mille mots. Vous pouvez choisir parmi notre collection de bannières, d'éléments pour les réseaux sociaux, de modèles et de maquettes d'application.",
+        "action": "Voir les images"
+      },
+      "03": {
+        "title": "Bannière Intégrée",
+        "description": "Avec notre bannière intégrée, vous pouvez facilement promouvoir ice auprès des visiteurs de votre site web et les inviter à rejoindre votre micro-communauté.",
+        "action": "Installer la bannière"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Partagez Votre Histoire",
+        "description": "Partagez votre parcours avec le réseau ice et ses nombreux avantages en écrivant un article dans votre langue.\n\nPartagez-le sur votre blog, Medium, Reddit, Quora, Blogger et plus encore.\n\nVous pouvez trouver toutes les informations sur ice et ses fonctionnalités uniques sur notre [[/:link]] Base de Connaissances [[/:link]], [[/:link]] Page d'Accueil [[/:link]], et [[/:link]] Page FAQ [[/:link]]."
+      },
+      "spread": {
+        "title": "Diffusez le Message",
+        "description": "Rejoignez la conversation et présentez le réseau ice à vos forums préférés. Créez de nouveaux sujets et partagez vos réflexions sur la finance décentralisée, l'avenir de la monnaie et le pouvoir de construire une micro-communauté avec ice.\n\nSoyez un bonhomme de neige ☃️ et lancez une discussion sur le potentiel de cette monnaie mondiale."
+      },
+      "bring": {
+        "title": "Amenez Vos Amis à Bord",
+        "description": "Utilisez notre fonction d'invitation facile à utiliser et partagez votre code d'invitation personnel avec vos amis sur vos plateformes de médias sociaux préférées."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Plug & Play pour les Propriétaires de Site Web",
+        "description": "Intégrez directement ice sur votre site web avec notre bannière JS simple et flexible. C'est une configuration rapide et facile à personnaliser pour correspondre à l'image de votre site web. Elle est traduite en 50 langues et compatible avec toutes les plateformes de site web.\n\nCopiez et collez le code sur votre site web, et commencez à promouvoir ice auprès de vos visiteurs dès aujourd'hui.",
+        "action": "Installer la bannière"
+      },
+      "mobile": {
+        "title": "Bibliothèque pour Applications Mobiles",
+        "description": "Intégrez notre bibliothèque facile à utiliser dans votre application mobile et invitez vos utilisateurs à rejoindre votre micro-communauté et à commencer à miner.\n\nAvec le support de la traduction et des options de configuration flexibles, vous pouvez vous assurer que tous vos utilisateurs ont accès à la même expérience exceptionnelle de ice, où qu'ils se trouvent dans le monde.",
+        "action1": "Bibliothèque Android",
+        "action2": "Bibliothèque React Native"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Bonnes Pratiques",
+        "rules": {
+          "01": {
+            "title": "Soyez Authentique",
+            "description": "Écrivez à partir de votre expérience personnelle et de votre perspective. Partagez vos pensées et sentiments honnêtes à propos du réseau ice."
+          },
+          "02": {
+            "title": "Utilisez un Ton Amical",
+            "description": "Écrivez comme si vous parliez à un ami, et évitez d'utiliser un jargon technique excessivement compliqué ou un langage qui pourrait être difficile à comprendre pour les lecteurs."
+          },
+          "03": {
+            "title": "Soyez Créatif",
+            "description": "N'ayez pas peur d'expérimenter avec différents types de contenu, tels que des articles de blog, des vidéos ou des mises à jour sur les réseaux sociaux. Amusez-vous et soyez innovant dans la façon dont vous promouvez ice à votre public."
+          }
+        }
+      },
+      "bad": {
+        "title": "Mauvaises Pratiques",
+        "rules": {
+          "01": {
+            "title": "Évitez le Spam",
+            "description": "Évitez d'envoyer des messages non sollicités ou de publier plusieurs fois le même contenu sur différentes plateformes. Cela peut être perçu comme intrusif et ennuyeux."
+          },
+          "02": {
+            "title": "Ne Trompez Pas les Gens",
+            "description": "Le projet ice ne paie pas les utilisateurs en argent, il ne récompense qu'avec des jetons ice. Veuillez éviter de publier du contenu tel que \"Transformez vos jetons ice en argent\". \"Comment gagner 100 $ avec ice\", et ainsi de suite."
+          },
+          "03": {
+            "title": "N'engagez Pas dans des Activités Frauduleuses",
+            "description": "Nous valorisons la transparence et l'honnêteté dans notre communauté. Toute activité frauduleuse telle que la création de comptes multiples ou la tentative de manipulation du réseau ice ne sera pas tolérée."
+          }
+        }
+      }
+    }
   }
 }

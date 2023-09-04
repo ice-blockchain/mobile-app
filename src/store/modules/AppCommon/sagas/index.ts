@@ -5,6 +5,7 @@ import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {appInitializedHandlerSaga} from '@store/modules/AppCommon/sagas/appInitializedHandler';
 import {appLoadedHandlerSaga} from '@store/modules/AppCommon/sagas/appLoadedHandlerSaga';
 import {intervalUpdatesSaga} from '@store/modules/AppCommon/sagas/intervalUpdates';
+import {showCreativeLibrarySaga} from '@store/modules/AppCommon/sagas/showCreativeLibrary';
 import {fork, takeLatest} from 'redux-saga/effects';
 
 export const appCommonWatchers = [
@@ -16,5 +17,12 @@ export const appCommonWatchers = [
       AppCommonActions.APP_STATE_CHANGE.STATE.type,
     ],
     intervalUpdatesSaga,
+  ),
+  takeLatest(
+    [
+      AccountActions.USER_STATE_CHANGE.SUCCESS.type,
+      AppCommonActions.APP_STATE_CHANGE.STATE.type,
+    ],
+    showCreativeLibrarySaga,
   ),
 ];
