@@ -685,6 +685,12 @@
     "title": "તારીખ પસંદ કરો"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "છુપેલા માહિતી",
+        "description": "તમારૂં પ્રોફાઇલ વાંચવા માટે આંખ આઇકન પર ટેપ કરો."
+      }
+    },
     "news": {
       "readmore": {
         "title": "વધુ વાંચો",

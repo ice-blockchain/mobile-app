@@ -685,6 +685,12 @@
     "title": "ਮਿਤੀ ਚੁਣੋ"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "ਓਹਲੇ ਡਾਟਾ",
+        "description": "ਤੁਸੀਂ ਆਪਣੇ ਪ੍ਰੋਫਾਈਲ ਨੂੰ ਦੇਖਣ ਲਈ ਆੱਖ ਆਈਕਨ 'ਤੇ ਟੈਪ ਕਰੋ।"
+      }
+    },
     "news": {
       "readmore": {
         "title": "ਹੋਰ ਪੜ੍ਹੋ",

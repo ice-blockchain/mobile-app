@@ -685,6 +685,12 @@
     "title": "Velg dato"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Skjulte data",
+        "description": "Trykk på øye-ikonet for å se hvordan andre brukere ser profilen din."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Les mer",

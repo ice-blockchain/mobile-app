@@ -685,6 +685,12 @@
     "title": "ቀን ምረጥ"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "የተደበቀ ውሂብ",
+        "description": "ሌሎች ተጠቃሚዎች መገለጫዎን እንዴት እንደሚያዩ ለማየት የአይን አዶውን ይንኩ።"
+      }
+    },
     "news": {
       "readmore": {
         "title": "ተጨማሪ አንብብ",

@@ -685,6 +685,12 @@
     "title": "Izberite datum"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Skriti podatki",
+        "description": "Dotaknite se ikone očesa, da vidite, kako drugi uporabniki vidijo vaš profil."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Preberite več",

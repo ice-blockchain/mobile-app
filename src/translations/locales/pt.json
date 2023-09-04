@@ -685,6 +685,12 @@
     "title": "Escolha a data"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Dados ocultos",
+        "description": "Toque no ícone do olho para ver como outros usuários veem seu perfil."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Leia mais",

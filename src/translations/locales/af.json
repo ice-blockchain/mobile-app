@@ -685,6 +685,12 @@
     "title": "Kies datum"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Versteekte data",
+        "description": "Tik op die oog-ikoon om te sien hoe ander gebruikers jou profiel sien."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Lees meer",

@@ -685,6 +685,12 @@
     "title": "Välj datum"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Dolda data",
+        "description": "Tryck på ögonikonen för att se hur andra användare ser din profil."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Läs mer",

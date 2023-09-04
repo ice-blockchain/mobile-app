@@ -685,6 +685,12 @@
     "title": "選擇日期"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "隱藏數據",
+        "description": "點擊眼睛圖示查看其他使用者如何看待您的個人檔案。"
+      }
+    },
     "news": {
       "readmore": {
         "title": "閱讀更多",

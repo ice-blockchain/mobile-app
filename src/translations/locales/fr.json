@@ -685,6 +685,12 @@
     "title": "Choisir la date"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Données cachées",
+        "description": "Appuyez sur l'icône de l'œil pour voir comment les autres utilisateurs voient votre profil."
+      }
+    },
     "news": {
       "readmore": {
         "title": "En savoir plus",

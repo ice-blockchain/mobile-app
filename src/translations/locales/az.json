@@ -685,6 +685,12 @@
     "title": "Tarix seç"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Gizli məlumat",
+        "description": "Profilinizin digər istifadəçilər tərəfindən necə göründüyünü görmək üçün göz nişanına toxunun."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Daha ətraflı oxu",

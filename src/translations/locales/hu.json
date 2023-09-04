@@ -685,6 +685,12 @@
     "title": "Dátum kiválasztása"
   },
   "walkthrough": {
+    "profile": {
+      "hidden_data": {
+        "title": "Rejtett adatok",
+        "description": "Koppints az szem ikonra, hogy megnézd, hogyan látják más felhasználók a profilodat."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Tudj meg többet",
