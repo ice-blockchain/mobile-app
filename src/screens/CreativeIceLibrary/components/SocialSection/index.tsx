@@ -141,11 +141,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   titleText: {
-    ...font(16, 19, 'bold', 'black'),
+    ...font(16, 22, 'bold', 'black'),
   },
   descriptionText: {
     paddingTop: rem(12),
-    ...font(12, 16, 'regular', 'black'),
+    ...font(14, null, 'regular', 'black'),
   },
   link: {
     textDecorationLine: 'underline',

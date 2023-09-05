@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     borderRadius: rem(16),
   },
   itemContainer: {
-    padding: SCREEN_SIDE_OFFSET,
+    padding: rem(12),
     marginRight: GAP,
   },
   image: {
@@ -88,6 +88,6 @@ const styles = StyleSheet.create({
   },
   description: {
     paddingTop: rem(16),
-    ...font(12, 16, 'regular', 'white'),
+    ...font(14, null, 'regular', 'white'),
   },
 });

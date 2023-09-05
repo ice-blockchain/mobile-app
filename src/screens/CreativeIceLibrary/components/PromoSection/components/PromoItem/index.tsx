@@ -57,11 +57,11 @@ const styles = StyleSheet.create({
   },
   title: {
     paddingTop: rem(16),
-    ...font(16, 19, 'bold', 'primaryDark'),
+    ...font(16, 22, 'bold', 'primaryDark'),
   },
   description: {
     paddingTop: rem(12),
-    ...font(12, 16, 'regular', 'emperor'),
+    ...font(14, null, 'regular', 'emperor'),
   },
   actionsContainer: {
     paddingTop: rem(12),
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   },
   actionText: {
     textDecorationLine: 'underline',
-    ...font(12, 16, 'regular', 'primaryLight'),
+    ...font(14, null, 'regular', 'primaryLight'),
   },
   image: {
     alignSelf: 'center',

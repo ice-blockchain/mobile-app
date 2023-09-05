@@ -118,13 +118,13 @@ const styles = StyleSheet.create({
   },
   description: {
     paddingTop: rem(14),
-    ...font(12, 16, 'regular', 'white'),
+    ...font(14, null, 'regular', 'white'),
   },
   action: {
     paddingTop: rem(14),
   },
   actionText: {
-    ...font(12, 16, 'regular', 'shamrock'),
+    ...font(14, null, 'regular', 'shamrock'),
     textDecorationLine: 'underline',
   },
 });
