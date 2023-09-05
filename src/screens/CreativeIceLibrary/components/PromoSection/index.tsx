@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {LINKS} from '@constants/links';
 import {Images} from '@images';
 import {
   PromoItem,
@@ -18,8 +19,7 @@ const promoItems: PromoItemData[] = [
     actions: [
       {
         actionText: t('creative_library.promo_section.web.action'),
-        actionLink:
-          'https://github.com/ice-blockchain/community-assets/tree/master/website-widget',
+        actionLink: LINKS.WEB_WIDGET,
       },
     ],
   },
@@ -30,13 +30,11 @@ const promoItems: PromoItemData[] = [
     actions: [
       {
         actionText: t('creative_library.promo_section.mobile.action1'),
-        actionLink:
-          'https://github.com/ice-blockchain/community-assets/tree/master/android-widget',
+        actionLink: LINKS.ANDROID_WIDGET,
       },
       {
         actionText: t('creative_library.promo_section.mobile.action2'),
-        actionLink:
-          'https://github.com/ice-blockchain/community-assets/tree/master/react-native-widget',
+        actionLink: LINKS.REACT_NATIVE_WIDGET,
       },
     ],
   },

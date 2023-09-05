@@ -2,6 +2,7 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {LINKS} from '@constants/links';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
 import {t} from '@translations/i18n';
@@ -29,8 +30,7 @@ const data: DataType[] = [
     title: t('creative_library.carousel.01.title'),
     description: t('creative_library.carousel.01.description'),
     actionText: t('creative_library.carousel.01.action'),
-    actionLink:
-      'https://drive.google.com/drive/u/1/folders/1E_3zVZzs2vqUNgUd05qfi6cJ_axjlvQU',
+    actionLink: LINKS.ICE_VIDEOS,
     icon: <Image source={Images.creativeLibrary.carousel.videosIcon} />,
   },
   {
@@ -39,8 +39,7 @@ const data: DataType[] = [
     title: t('creative_library.carousel.02.title'),
     description: t('creative_library.carousel.02.description'),
     actionText: t('creative_library.carousel.02.action'),
-    actionLink:
-      'https://www.figma.com/community/file/1256148399031329897/ice-Community-Assets',
+    actionLink: LINKS.ICE_ASSETS,
     icon: <Image source={Images.creativeLibrary.carousel.imagesIcon} />,
   },
   {
@@ -49,8 +48,7 @@ const data: DataType[] = [
     title: t('creative_library.carousel.03.title'),
     description: t('creative_library.carousel.03.description'),
     actionText: t('creative_library.carousel.03.action'),
-    actionLink:
-      'https://github.com/ice-blockchain/community-assets/tree/master/website-widget',
+    actionLink: LINKS.WEB_WIDGET,
     icon: <Image source={Images.creativeLibrary.carousel.videosIcon} />,
   },
 ];

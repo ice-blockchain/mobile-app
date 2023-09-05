@@ -37,4 +37,14 @@ export const LINKS = {
   APP_UPDATE: 'https://ice.io/app-update',
   GITHUB_WEB: 'https://github.com/ice-blockchain',
   HOW_TO_BOOTS_EARNINGS: 'https://ice.io/how-to-boost-your-earnings',
+  WEB_WIDGET:
+    'https://github.com/ice-blockchain/community-assets/tree/master/website-widget',
+  ANDROID_WIDGET:
+    'https://github.com/ice-blockchain/community-assets/tree/master/android-widget',
+  REACT_NATIVE_WIDGET:
+    'https://github.com/ice-blockchain/community-assets/tree/master/react-native-widget',
+  ICE_ASSETS:
+    'https://www.figma.com/community/file/1256148399031329897/ice-Community-Assets',
+  ICE_VIDEOS:
+    'https://drive.google.com/drive/u/1/folders/1E_3zVZzs2vqUNgUd05qfi6cJ_axjlvQU',
 };
