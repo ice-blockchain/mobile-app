@@ -42,6 +42,10 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
   yield call(waitForSelector, isAppActiveSelector);
 
   switch (path.toLowerCase()) {
+    case 'creative-ice-library': {
+      navigate({name: 'CreativeIceLibrary', params: undefined});
+      break;
+    }
     case 'browser': {
       const paramsUrl = searchParams.get('url');
       const contentLanguage = searchParams.get('contentLanguage');

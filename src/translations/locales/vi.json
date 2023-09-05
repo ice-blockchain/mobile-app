@@ -894,5 +894,109 @@
   },
   "ping_referrals_pop_up": {
     "title": "Vui lòng đợi trong khi chúng tôi ping tất cả bạn bè của bạn · {{count}}"
+  },
+  "creative_library": {
+    "title": "Thư Viện Sáng Tạo ice",
+    "share": "Xây dựng đội nhóm mơ ước trên mạng lưới ice!",
+    "get_started": {
+      "header": "Xây Dựng Đội Nhóm Mơ Ước",
+      "subtitle": "Bắt đầu trên ice và xây dựng cộng đồng micro phát triển của bạn",
+      "description": "Tham gia vào số người dùng ice đang tăng nhanh chóng, xây dựng cộng đồng micro của riêng bạn và kiếm thêm phần thưởng. Công cụ quảng cáo, hướng dẫn và gợi ý của chúng tôi giúp bạn dễ dàng lan truyền thông điệp và xây dựng một cộng đồng thành công.",
+      "get_started": "Bắt Đầu",
+      "carousel": {
+        "01": {
+          "title": "Tham Gia",
+          "description": "Tải xuống ứng dụng của chúng tôi, yêu cầu tên đặt và bắt đầu khai thác.\n\nBạn sẽ tham gia vào một cộng đồng người dùng toàn cầu đam mê về phân quyền, tự chủ và sức mạnh của mọi người."
+        },
+        "02": {
+          "title": "Mời Gọi",
+          "description": "Mời khán giả của bạn tham gia ice và cùng nhau mở khóa phần thưởng bổ sung.\n\nNgoài ra, bạn sẽ giúp lan truyền thông điệp về lợi ích của phân quyền và tương lai tài chính."
+        },
+        "03": {
+          "title": "Kiếm Thêm",
+          "description": "Mở rộng mạng lưới của bạn và khuyến khích người khác tham gia cộng đồng ice để tăng thưởng của bạn.\n\nHãy tham gia cùng chúng tôi trong sứ mệnh thay đổi tương lai tài chính thông qua phân quyền và tự chủ."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Video",
+        "description": "Sử dụng bộ sưu tập video của chúng tôi để quảng cáo mã giới thiệu, chế độ ngang hoặc dọc, có hoặc không có phụ đề, chúng tôi đã chuẩn bị sẵn cho bạn.",
+        "action": "Xem Video"
+      },
+      "02": {
+        "title": "Hình Ảnh",
+        "description": "Hình ảnh đôi khi có giá trị hơn ngàn lời nói. Bạn có thể lựa chọn từ bộ sưu tập biểu ngữ, tài sản truyền thông xã hội, mẫu và mẫu ứng dụng của chúng tôi.",
+        "action": "Xem Hình Ảnh"
+      },
+      "03": {
+        "title": "Biểu Ngữ Nhúng",
+        "description": "Với biểu ngữ nhúng của chúng tôi, bạn có thể dễ dàng quảng cáo ice đến khách truy cập trang web của bạn và mời họ tham gia cộng đồng micro của bạn.",
+        "action": "Cài Đặt Biểu Ngữ"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Chia Sẻ Câu Chuyện Của Bạn",
+        "description": "Chia sẻ hành trình của bạn với mạng lưới ice và các lợi ích của nó bằng cách viết một bài viết bằng ngôn ngữ của bạn.\n\nChia sẻ trên Blog, Medium, Reddit, Quora, Blogger và nhiều nơi khác.\n\nBạn có thể tìm thấy mọi thông tin về ice và các tính năng độc đáo của nó trên trang [[:link]]Knowledge Base[[/:link]], [[:link]]Homepage[[/:link]], và trang [[:link]]FAQ[[/:link]] của chúng tôi."
+      },
+      "spread": {
+        "title": "Lan Truyền Tin Tức",
+        "description": "Tham gia cuộc trò chuyện và giới thiệu mạng lưới ice đến các diễn đàn yêu thích của bạn.\nBắt đầu các chủ đề mới và chia sẻ suy nghĩ của bạn về tài chính phân quyền, tương lai của tiền tệ và sức mạnh của việc xây dựng cộng đồng micro với ice.\n\nHãy trở thành ☃️ Snowman và khởi đầu một cuộc thảo luận về tiềm năng của đồng tiền toàn cầu này."
+      },
+      "bring": {
+        "title": "Mời Bạn Bè Tham Gia",
+        "description": "Sử dụng tính năng mời dễ dàng của chúng tôi và chia sẻ mã mời cá nhân của bạn với bạn bè trên các nền tảng truyền thông xã hội yêu thích của bạn."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Plug & Play cho Chủ Sở Hữu Website",
+        "description": "Nhúng mạng lưới ice trực tiếp vào trang web của bạn với biểu ngữ JS đơn giản và linh hoạt của chúng tôi. Đây là một cài đặt nhanh chóng và dễ dàng có thể được tùy chỉnh để phù hợp với thương hiệu của trang web của bạn. Nó đã được dịch sang 50 ngôn ngữ và tương thích với bất kỳ nền tảng trang web nào.\n\nSao chép và dán mã vào trang web của bạn, và bắt đầu quảng cáo mạng lưới ice đến khách truy cập của bạn ngay hôm nay.",
+        "action": "Cài Đặt Biểu Ngữ"
+      },
+      "mobile": {
+        "title": "Thư Viện cho Ứng Dụng Di Động",
+        "description": "Tích hợp thư viện dễ sử dụng của chúng tôi vào ứng dụng di động của bạn và mời người dùng tham gia cộng đồng micro của bạn và bắt đầu khai thác.\n\nVới hỗ trợ dịch và các tùy chọn thiết lập linh hoạt, bạn có thể đảm bảo rằng tất cả người dùng của bạn đều có trải nghiệm ice tuyệt vời như nhau, bất kể họ ở đâu trên thế giới.",
+        "action1": "Thư Viện Android",
+        "action2": "Thư Viện React Native"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Thói Quen Tốt",
+        "rules": {
+          "01": {
+            "title": "Trung Thực",
+            "description": "Viết từ trải nghiệm và góc nhìn cá nhân của bạn. Chia sẻ suy nghĩ và cảm xúc chân thành của bạn về mạng lưới ice."
+          },
+          "02": {
+            "title": "Sử Dụng Ngôn Ngữ Thân Thiện",
+            "description": "Viết như khi bạn đang trò chuyện với một người bạn và tránh sử dụng thuật ngữ kỹ thuật quá nhiều hoặc ngôn ngữ mà độc giả có thể khó hiểu."
+          },
+          "03": {
+            "title": "Sáng Tạo",
+            "description": "Đừng sợ thử nghiệm với các loại nội dung khác nhau, chẳng hạn như bài đăng trên blog, video hoặc cập nhật trên mạng xã hội. Hãy vui vẻ và sáng tạo trong cách bạn quảng cáo mạng lưới ice đến khán giả của mình."
+          }
+        }
+      },
+      "bad": {
+        "title": "Thói Quen Xấu",
+        "rules": {
+          "01": {
+            "title": "Tránh Gửi Thư Rác",
+            "description": "Tránh gửi tin nhắn không mời mà bạn không được hỏi hoặc đăng nhiều lần cùng nội dung trên các nền tảng khác nhau. Điều này có thể bị coi là phiền toái và gây khó chịu."
+          },
+          "02": {
+            "title": "Tránh Lừa Dối Người Khác",
+            "description": "Dự án ice không trả tiền cho người dùng bằng tiền mặt, chúng tôi chỉ thưởng bằng đồng ice. Xin vui lòng tránh đăng nội dung như \"Biến ice của bạn thành tiền mặt\" hoặc \"Làm thế nào để kiếm 100 đô la với ice\" và những thứ tương tự."
+          },
+          "03": {
+            "title": "Tránh Tham Gia Hoạt Động Lừa Đảo",
+            "description": "Chúng tôi đặt giá trị trong sự透明和诚实 trong cộng đồng của chúng tôi. Mọi hoạt động lừa đảo như tạo nhiều tài khoản hoặc cố gắng manipulát mạng lưới ice sẽ không được dung thứ."
+          }
+        }
+      }
+    }
   }
 }

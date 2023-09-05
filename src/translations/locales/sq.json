@@ -894,5 +894,109 @@
   },
   "ping_referrals_pop_up": {
     "title": "Ju lutemi prisni, ndërsa i bëjmë ping të gjithë miqve tuaj · {{count}}"
+  },
+  "creative_library": {
+    "title": "Biblioteka krijuese ice",
+    "share": "Ndërtoni ekipin tuaj të ëndrrave në rrjetin ice!",
+    "get_started": {
+      "header": "Ndërtoni ekipin tuaj të ëndrrave",
+      "subtitle": "Filloni në ice dhe ndërtoni komunitetin tuaj të vogël që zhvillohet",
+      "description": "Bashkohuni me numrin e rritur të shpejtë të përdoruesve të ice që po ndërtojnë komunitetet e tyre të vogla dhe fitojnë më shumë shpërblime. Mjetet tona promovuese, udhëzuesit dhe këshillat e bëjnë të lehtë shpërndarjen e fjalës dhe ndërtimin e një komuniteti të suksesshëm.",
+      "get_started": "Filloni",
+      "carousel": {
+        "01": {
+          "title": "Bashkohuni",
+          "description": "Shkarkoni aplikacionin tonë, kërkoni emrin tuaj të përdoruesit dhe filloni minierimin.\n\nJu do të bashkoheni me një komunitet global të përdoruesve të ice të pasionuar për decentralizimin, autonomia dhe fuqinë e njerëzve."
+        },
+        "02": {
+          "title": "Ftoni",
+          "description": "Ftoni audiencën tuaj të bashkohet me ice dhe të punojë së bashku për të zhbllokuar shpërblimet shtesë.\n\nPërveç kësaj, do të ndihmoni në shpërndarjen e fjalës për përfitimet e decentralizimit dhe të ardhmes së financave."
+        },
+        "03": {
+          "title": "Fitoni",
+          "description": "Rritni shpërblimet tuaja duke zgjeruar rrjetin tuaj dhe nxitur të tjerët të bashkohen me komunitetin e ice.\n\nBashkohuni me ne në misionin tonë për të revolucionarizuar të ardhmen e financave përmes decentralizimit dhe autonomisë."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videot",
+        "description": "Përdorni koleksionin tonë të video për të promovuar kodin tuaj të ftimit, peizazhin ose portretin, me ose pa titra, kemi kujdesur për ju.",
+        "action": "Shiko videot"
+      },
+      "02": {
+        "title": "Imazhet",
+        "description": "Një foto ka vlerën e mijëra fjalëve. Mund të zgjidhni nga koleksioni ynë i banereve, burimeve për media sociale, shabllonave dhe maketave të aplikacionit.",
+        "action": "Shiko imazhet"
+      },
+      "03": {
+        "title": "Baneri i futur",
+        "description": "Me banerin tonë të futur, mund të promovoni lehtësisht ice tek vizitorët e faqes tuaj të internetit dhe t’i ftoni ata të bashkohen me komunitetin tuaj të vogël.",
+        "action": "Instalo banerin"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Ndajeni historinë tuaj",
+        "description": "Ndajeni rrugëtimin tuaj me rrjetin ice dhe përfitimet e tij të shumta duke shkruar një artikull në gjuhën tuaj.\n\nNdajeni ato në blogun tuaj, në Medium, në Reddit, në Quora, në Blogger dhe në platforma të tjera.\n\nMund të gjeni gjithçka për ice dhe karakteristikat e tij unike në [[/:link]]Bazën e njohurive[[/:link]], [[/:link]]Faqen kryesore[[/:link]] dhe [[/:link]]Pyetje të shpeshta[[/:link]]."
+      },
+      "spread": {
+        "title": "Shpërndajeni fjalën",
+        "description": "Bashkohuni në bisedë dhe prezantoni rrjetin ice në forume tuaja të preferuara.\nNisni temat e reja dhe ndajeni mendimet tuaja për financën decentralizuar, të ardhmen e valutës dhe fuqinë e ndërtimit të një mikrokomuniteti me ice.\n\nBëhuni një ☃️ Djathë dhe nxitni një diskutim mbi potencialin e kësaj valute globale."
+      },
+      "bring": {
+        "title": "Ftoni miqtë tuaj të mbordhë",
+        "description": "Përdorni veçorinë tonë të ftimit të lehtë për të ndarë kodin tuaj personal të ftimit me miqtë tuaj në platformat tuaja të preferuara të mediave sociale."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Instalimi dhe luajtja për pronarët e faqeve të internetit",
+        "description": "Vendosni rrjetin ice drejtpërdrejt në faqen tuaj të internetit me banerin tonë të thjeshtë dhe fleksibël JS. Është një përgatitje e shpejtë dhe e lehtë që mund të përshtatet me markën tuaj të faqes tuaj të internetit. Është përkthyer në 50 gjuhë dhe është i kompatibël me çdo platformë faqje të internetit.\n\nKopjoni dhe ngjyrosni kodin në faqen tuaj të internetit dhe filloni të promovoni rrjetin ice tek vizitorët tuaj sot.",
+        "action": "Instalo banerin"
+      },
+      "mobile": {
+        "title": "Biblioteka për aplikacionet mobile",
+        "description": "Integroni bibliotekën tonë të lehtë për përdorim në aplikacionin tuaj mobil dhe ftoni përdoruesit tuaj të bashkohen me mikrokomunitetin tuaj dhe të fillojnë minierimin.\n\nMe mbështetje për përkthime dhe mundësitë fleksibile të vendosjes, mund të siguroheni që të gjithë përdoruesit tuaj kanë qasje në të njëjtën përvojë të shkëlqyeshme me ice, pa marrë parasysh ku ndodhen në botë.",
+        "action1": "Biblioteka për Android",
+        "action2": "Biblioteka për React Native"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Praktika të mira",
+        "rules": {
+          "01": {
+            "title": "Jeni autentikë",
+            "description": "Shkruani nga përvoja dhe perspektiva juaj personale. Ndajeni mendimet dhe ndjenjat tuaja të sinqerta lidhur me rrjetin ice."
+          },
+          "02": {
+            "title": "Përdorni një ton miqësor",
+            "description": "Shkruani sikur po flisni me një mik dhe shmangni përdorimin e gjuhës teknike ose shprehjeve që mund të jenë të vështira për lexuesit për t'u kuptuar."
+          },
+          "03": {
+            "title": "Jeni krijues",
+            "description": "Mos kini frikë të eksperimentoni me lloje të ndryshme të përmbajtjes, si postime blogu, video ose përditësime në media sociale. Argëtohuni dhe inovojeni në mënyrën se si promovoni rrjetin ice tek audiënca juaj."
+          }
+        }
+      },
+      "bad": {
+        "title": "Praktika të këqija",
+        "rules": {
+          "01": {
+            "title": "Mos dërgoni spam",
+            "description": "I shmangni dërgimin e mesazheve të papritura ose postimin e të njëjtës përmbajtje në platforma të ndryshme. Kjo mund të shihet si ndërhyrje dhe e mërzitshme."
+          },
+          "02": {
+            "title": "Mos mashtroni njerëzit",
+            "description": "Projekti ice nuk paguan përdoruesit me para, vetëm i shpërblen me monedha ice. Ju lutemi të shmangni postimin e përmbajtjes si \"Kthejeni monedhat tuaja ice në para\" ose \"Si të përfitoni 100 dollarë me ice\" dhe të ngjashme."
+          },
+          "03": {
+            "title": "Mos përfshihuni në veprimtari mashtruese",
+            "description": "Ne vlerësojmë transparencën dhe ndershmërinë në komunitetin tonë. Çdo veprimtari mashtruese si krijimi i shumë llogarive ose përpjekjet për të manipuluar rrjetin ice nuk do të tolerohen."
+          }
+        }
+      }
+    }
   }
 }

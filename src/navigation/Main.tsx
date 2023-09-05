@@ -18,6 +18,7 @@ import {
 } from '@react-navigation/bottom-tabs';
 import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {CreativeIceLibrary} from '@screens/CreativeIceLibrary';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
 import {Home} from '@screens/HomeFlow/Home';
 import {
@@ -101,6 +102,7 @@ export type MainStackParamList = {
     descriptionOffset?: number;
   };
   Staking: undefined;
+  CreativeIceLibrary: undefined;
   ImageView: {
     imageRef: RefObject<Image | Animated.Image>;
     uri: string;
@@ -361,6 +363,10 @@ export function MainNavigator() {
         component={DateSelect}
       />
       <MainStack.Screen name="Staking" component={Staking} />
+      <MainStack.Screen
+        name="CreativeIceLibrary"
+        component={CreativeIceLibrary}
+      />
       <MainStack.Screen
         name="InviteFriend"
         component={InviteFriend}

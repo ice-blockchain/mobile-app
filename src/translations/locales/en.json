@@ -891,5 +891,109 @@
   },
   "ping_referrals_pop_up": {
     "title": "Please wait while we ping all your friends · {{count}}"
+  },
+  "creative_library": {
+    "title": "Creative ice Library",
+    "share": "Build your dream team on ice network!",
+    "get_started": {
+      "header": "Build your dream team",
+      "subtitle": "Get started on ice and build your thriving micro-community",
+      "description": "Join the fast-growing number of ice users who are building their own micro-communities and earning more rewards. Our promotional tools, guides, and tips make it easy to spread the word and build a successful community.",
+      "get_started": "Get Started",
+      "carousel": {
+        "01": {
+          "title": "Join",
+          "description": "Download our app, claim your nickname, and start mining.\n\nYou’ll be joining a global community of users who are passionate about decentralization, autonomy, and the power of the people."
+        },
+        "02": {
+          "title": "Invite",
+          "description": "Invite your audience to join ice and work together to unlock additional rewards.\n\nPlus, you’ll be helping to spread the word about the benefits of decentralization and the future of finance."
+        },
+        "03": {
+          "title": "Earn",
+          "description": "Grow your rewards by expanding your network and encouraging others to join the ice community.\n\nJoin us in our mission to revolutionise the future of finance through decentralization and autonomy."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videos",
+        "description": "Use our collection of videos to promote your invitation code, landscape or portrait, with or without subtitles, we got you covered.",
+        "action": "View videos"
+      },
+      "02": {
+        "title": "Images",
+        "description": "A picture is worth a thousand words. You can choose from our collection of banners, social media assets, templates and app mockups.",
+        "action": "View images"
+      },
+      "03": {
+        "title": "Embedded Browser",
+        "description": "With our embedded browser, you can easily promote ice to your website visitors and invite them to join your mirco-community.",
+        "action": "Install the banner"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Share Your Story",
+        "description": "Share your journey with ice network and its many benefits by writing an article in your language.\n\nShare them on your Blog, Medium, Reddit, Quora, Blogger and more.\n\nYou can find everything about ice and its unique features on our [[:link]]Knowledge Base[[/:link]], [[:link]]Homepage[[/:link]], and [[:link]]FAQ[[/:link]] page."
+      },
+      "spread": {
+        "title": "Spread the Word",
+        "description": "Join the conversation and introduce the ice network to your favorite forums.\nStart new threads and share your thoughts about decentralized finance, the future of currency, and the power of building a micro-community with ice.\n\nBe a ☃\uFE0F Snowman and spark a discussion about the potential of this global currency."
+      },
+      "bring": {
+        "title": "Bring Your Friends Onboard",
+        "description": "Use our easy-to-use invite feature and share your personal invitation code with your friends on your favorite social media platforms."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Plug & Play for Website Owners",
+        "description": "Embed ice network directly onto your website with our simple and flexible JS banner. It’s a quick and easy setup that can be customized to match your website’s branding. It’s translated into 50 languages and is compatible with any website platform.\n\nCopy and paste the code into your website, and start promoting ice network to your visitors today.",
+        "action": "Install the banner"
+      },
+      "mobile": {
+        "title": "Library for Mobile Apps",
+        "description": "Integrate our easy-to-use library into your mobile app and invite your users to join your micro-community and start mining.\n\nWith translation support and flexible setup options, you can ensure that all of your users have access to the same great ice experience, no matter where they are in the world.",
+        "action1": "Android library",
+        "action2": "React Native library"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Good Practices",
+        "rules": {
+          "01": {
+            "title": "Be authentic",
+            "description": "Write from your personal experience and perspective. Share your honest thoughts and feelings about ice network."
+          },
+          "02": {
+            "title": "Use a friendly tone",
+            "description": "Write as if you are talking to a friend, and avoid using overly technical jargon or language that may be difficult for readers to understand."
+          },
+          "03": {
+            "title": "Be creative",
+            "description": "Don’t be afraid to experiment with different types of content, such as blog posts, videos, or social media updates. Have fun and be innovative in the way you promote ice network to your audience."
+          }
+        }
+      },
+      "bad": {
+        "title": "Bad Practices",
+        "rules": {
+          "01": {
+            "title": "Don’t spam",
+            "description": "Avoid sending unsolicited messages or repeatedly posting the same content on different platforms. This can be seen as intrusive and annoying."
+          },
+          "02": {
+            "title": "Don’t mislead people",
+            "description": "The ice project doesn’t pay users any cash, we only reward with ice coins. Please avoid posting content such as “Turn your ice into cash”. “How to earn $100 with ice” and so on."
+          },
+          "03": {
+            "title": "Don’t engage in fraudulent activities",
+            "description": "We value transparency and honesty in our community. Any fraudulent activities such as creating multiple accounts or trying to manipulate the ice network will not be tolerated."
+          }
+        }
+      }
+    }
   }
 }

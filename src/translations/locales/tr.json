@@ -894,5 +894,109 @@
   },
   "ping_referrals_pop_up": {
     "title": "Lütfen tüm arkadaşlarınıza ping atarken bekleyin · {{count}}"
+  },
+  "creative_library": {
+    "title": "Yaratıcı Ice Kütüphanesi",
+    "share": "Rüya takımınızı ice ağı üzerinde oluşturun!",
+    "get_started": {
+      "header": "Rüya Takımınızı Oluşturun",
+      "subtitle": "Ice'te başlayın ve başarılı bir mikro topluluk oluşturun",
+      "description": "Kendi mikro topluluklarını oluşturan ve daha fazla ödül kazanan ice kullanıcılarının hızla büyüyen sayısına katılın. Tanıtım araçlarımız, rehberlerimiz ve ipuçlarımız, sözü yaymak ve başarılı bir topluluk oluşturmak için kolay bir yol sunar.",
+      "get_started": "Başlayın",
+      "carousel": {
+        "01": {
+          "title": "Katılın",
+          "description": "Uygulamamızı indirin, takma adınızı alın ve madenciliğe başlayın.\n\nKüresel bir topluluğa katılacaksınız, insanların merkezileşmeye, özerkliğe ve insanların gücüne olan tutkusunu paylaşıyorlar."
+        },
+        "02": {
+          "title": "Davet Edin",
+          "description": "İzleyicinizi ice'a katılmaya ve ek ödüller kazanmaya davet edin.\n\nAyrıca, merkezileşmenin ve finansın geleceği hakkındaki faydalarını ve haberini yaymaya yardımcı olacaksınız."
+        },
+        "03": {
+          "title": "Kazanın",
+          "description": "Ağınızı genişleterek ve diğerlerini ice topluluğuna katılmaya teşvik ederek ödüllerinizi büyütün.\n\nFinansın geleceğini merkezileşme ve özerklik yoluyla devrimleştirmek misyonumuza katılın."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videolar",
+        "description": "Davet kodunuzu tanıtmak için videolar koleksiyonumuzu kullanın, manzara veya portre, altyazılı veya altyazısız, sizin için varız.",
+        "action": "Videoları Görüntüle"
+      },
+      "02": {
+        "title": "Resimler",
+        "description": "Bir resim bin kelimeye değer. Bannerlarımız, sosyal medya varlıklarımız, şablonlarımız ve uygulama örneklemelerimiz arasından seçim yapabilirsiniz.",
+        "action": "Resimleri Görüntüle"
+      },
+      "03": {
+        "title": "Gömülü Banner",
+        "description": "Gömülü bannerımızla web sitenizin ziyaretçilerine kolayca ice'ı tanıtabilir ve onları mikro topluluğunuza katılmaya davet edebilirsiniz.",
+        "action": "Bannerı Kur"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Hikayenizi Paylaşın",
+        "description": "Ice ağıyla olan yolculuğunuzu ve onun birçok faydasını kendi dilinizde bir makale yazarak paylaşın.\n\nBunları Blogunuzda, Medium, Reddit, Quora, Blogger ve daha fazlasında paylaşın.\n\nIce ve onun eşsiz özellikleri hakkında tüm bilgileri bulabilirsiniz [[:link]]Bilgi Bankası[[/:link]], [[:link]]Ana Sayfa[[/:link]], ve [[:link]]SSS[[/:link]] sayfalarımızda."
+      },
+      "spread": {
+        "title": "Haberi Yayın",
+        "description": "Sohbete katılın ve ice ağını favori forumlarınıza tanıtın.\nYeni konular başlatın ve finansın merkezileşmesi, para biriminin geleceği ve ice ile bir mikro topluluk oluşturmanın gücü hakkındaki düşüncelerinizi paylaşın.\n\nBir ☃️ Kar Adamı olun ve bu küresel para biriminin potansiyeli hakkında bir tartışma başlatın."
+      },
+      "bring": {
+        "title": "Arkadaşlarınızı Getirin",
+        "description": "Kolay kullanımlı davet özelliğimizi kullanın ve kişisel davet kodunuzu favori sosyal medya platformlarınızda arkadaşlarınızla paylaşın."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Web Sitesi Sahipleri için Tak & Çalıştır",
+        "description": "Ice ağını basit ve esnek JS bannerımızla doğrudan web sitenize gömün. Hızlı ve kolay bir kurulumdur ve web sitenizin markasına uygun hale getirilebilir. 50 dilde çevrilmiş ve herhangi bir web sitesi platformuyla uyumludur.\n\nKodu kopyalayın ve web sitenize yapıştırın, ve bugün ziyaretçilerinize ice ağını tanıtmaya başlayın.",
+        "action": "Bannerı Kur"
+      },
+      "mobile": {
+        "title": "Mobil Uygulamalar için Kütüphane",
+        "description": "Kolay kullanımlı kütüphanemizi mobil uygulamanıza entegre edin ve kullanıcılarınızı mikro topluluğunuza katılmaya ve madenciliğe başlamaya davet edin.\n\nÇeviri desteği ve esnek kurulum seçenekleri ile tüm kullanıcılarınızın dünya genelinde aynı harika ice deneyimine sahip olmalarını sağlayabilirsiniz.",
+        "action1": "Android kütüphanesi",
+        "action2": "React Native kütüphanesi"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "İyi Uygulamalar",
+        "rules": {
+          "01": {
+            "title": "Orijinal Olun",
+            "description": "Kişisel deneyiminiz ve bakış açınızdan yazın. Ice ağıyla ilgili dürüst düşüncelerinizi ve duygularınızı paylaşın."
+          },
+          "02": {
+            "title": "Dostça Bir Ton Kullanın",
+            "description": "Bir arkadaşınıza konuşuyormuş gibi yazın ve okuyucuların anlamakta zorluk çekebileceği aşırı teknik jargon veya dil kullanmaktan kaçının."
+          },
+          "03": {
+            "title": "Yaratıcı Olun",
+            "description": "Blog yazıları, videolar veya sosyal medya güncellemeleri gibi farklı içerik türleri denemekten çekinmeyin. Audience'nıza ice ağı'nı nasıl tanıttığınızda eğlenin ve yenilikçi olun."
+          }
+        }
+      },
+      "bad": {
+        "title": "Kötü Uygulamalar",
+        "rules": {
+          "01": {
+            "title": "Spam Yapmayın",
+            "description": "İstenmeyen mesajlar göndermekten veya farklı platformlarda aynı içeriği tekrar tekrar paylaşmaktan kaçının. Bu rahatsız edici ve rahatsız edici olarak görülebilir."
+          },
+          "02": {
+            "title": "İnsanları Yanıltmayın",
+            "description": "Ice projesi kullanıcılara herhangi bir nakit ödeme yapmaz, yalnızca ice coin'lerle ödüllendirir. Lütfen \"Ice'ınızı nakde dönüştürün\" veya \"Ice ile nasıl 100 dolar kazanılır\" gibi içerikleri paylaşmaktan kaçının."
+          },
+          "03": {
+            "title": "Dolandırıcı Faaliyetlere Katılmayın",
+            "description": "Topluluğumuzda şeffaflığı ve dürüstlüğü değerli buluyoruz. Birden fazla hesap oluşturma veya ice ağını manipüle etme gibi herhangi bir dolandırıcı faaliyet kabul edilmeyecektir."
+          }
+        }
+      }
+    }
   }
 }

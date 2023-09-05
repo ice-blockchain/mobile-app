@@ -894,5 +894,109 @@
   },
   "ping_referrals_pop_up": {
     "title": "Vă rugăm să așteptați în timp ce trimitem ping tuturor prietenilor dvs. · {{count}}"
+  },
+  "creative_library": {
+    "title": "Biblioteca creativă ice",
+    "share": "Construiește-ți echipa de vis pe rețeaua ice!",
+    "get_started": {
+      "header": "Construiește-ți echipa de vis",
+      "subtitle": "Începe pe ice și construiește-ți micro-comunitatea prosperă",
+      "description": "Alătură-te numărului în creștere rapidă de utilizatori ice care își construiesc propriile micro-comunități și câștigă mai multe recompense. Uneltele noastre promoționale, ghidurile și sfaturile fac ușor să răspândiți vestea și să construiți o comunitate de succes.",
+      "get_started": "Începeți",
+      "carousel": {
+        "01": {
+          "title": "Alătură-te",
+          "description": "Descarcă aplicația noastră, revendică-ți porecla și începe să minezi.\n\nTe vei alătura unei comunități globale de utilizatori pasionați de descentralizare, autonomie și puterea oamenilor."
+        },
+        "02": {
+          "title": "Invită",
+          "description": "Invită-ți audiența să se alăture ice și să lucreze împreună pentru a debloca recompense suplimentare.\n\nÎn plus, vei ajuta la răspândirea cuvântului despre beneficiile descentralizării și viitorul finanțelor."
+        },
+        "03": {
+          "title": "Câștigă",
+          "description": "Creste-ți recompensele prin extinderea rețelei tale și încurajarea altora să se alăture comunității ice.\n\nAlătură-te nouă în misiunea noastră de a revoluționa viitorul finanțelor prin descentralizare și autonomie."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videoclipuri",
+        "description": "Folosește colecția noastră de videoclipuri pentru a promova codul tău de invitație, în format peisaj sau portret, cu sau fără subtitrări, te acoperim.",
+        "action": "Vizualizează videoclipurile"
+      },
+      "02": {
+        "title": "Imagini",
+        "description": "O imagine face cât o mie de cuvinte. Puteți alege din colecția noastră de bannere, elemente de social media, șabloane și machete de aplicații.",
+        "action": "Vizualizează imaginile"
+      },
+      "03": {
+        "title": "Banner Încorporat",
+        "description": "Cu bannerul nostru încorporat, puteți promova ușor ice vizitatorilor site-ului dvs. și îi puteți invita să se alăture micro-comunității dvs.",
+        "action": "Instalează bannerul"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Împărtășește-ți povestea",
+        "description": "Împărtășiți călătoria dvs. cu rețeaua ice și numeroasele sale beneficii scriind un articol în limba dvs.\n\nDistribuiți-le pe Blogul dvs., Medium, Reddit, Quora, Blogger și altele.\n\nPuteți găsi totul despre ice și caracteristicile sale unice pe [[:link]]Baza noastră de cunoștințe[[/:link]], [[:link]]Pagina de pornire[[/:link]], și [[:link]]Pagina de întrebări frecvente[[/:link]]."
+      },
+      "spread": {
+        "title": "Răspândiți vestea",
+        "description": "Alăturați-vă conversației și prezentați rețeaua ice forumurilor voastre preferate.\nCreați discuții noi și împărtășiți-vă gândurile despre finanțele descentralizate, viitorul monedei și puterea de a construi o micro-comunitate cu ice.\n\nFii un om de zăpadă ☃\uFE0F și declanșează o discuție despre potențialul acestei monede globale."
+      },
+      "bring": {
+        "title": "Aduceți-vă prietenii la bord",
+        "description": "Utilizați funcția noastră de invitație ușor de utilizat și împărtășiți codul dvs. de invitație personal prietenilor dvs. pe platformele dvs. preferate de social media."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Plug & Play pentru proprietarii de site-uri web",
+        "description": "Înglobați rețeaua ice direct pe site-ul dvs. cu bannerul nostru JS simplu și flexibil. Este o configurare rapidă și ușoară care poate fi personalizată pentru a se potrivi brandului site-ului dvs. Este tradus în 50 de limbi și este compatibil cu orice platformă de site.\n\nCopiați și lipiți codul în site-ul dvs. și începeți să promovați rețeaua ice vizitatorilor dvs. astăzi.",
+        "action": "Instalează bannerul"
+      },
+      "mobile": {
+        "title": "Bibliotecă pentru aplicații mobile",
+        "description": "Integrați biblioteca noastră ușor de utilizat în aplicația dvs. mobilă și invitați utilizatorii dvs. să se alăture micro-comunității dvs. și să înceapă să mineze.\n\nCu suport pentru traduceri și opțiuni de configurare flexibile, puteți asigura că toți utilizatorii dvs. au acces la aceeași experiență excelentă ice, indiferent unde se află în lume.",
+        "action1": "Bibliotecă Android",
+        "action2": "Bibliotecă React Native"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Practici bune",
+        "rules": {
+          "01": {
+            "title": "Fii autentic",
+            "description": "Scrieți din propria dvs. experiență și perspectivă. Împărtășiți-vă gândurile și sentimentele sincere despre rețeaua ice."
+          },
+          "02": {
+            "title": "Folosește un ton prietenos",
+            "description": "Scrieți ca și cum ați vorbi cu un prieten și evitați utilizarea unui jargon tehnic excesiv sau a unui limbaj care ar putea fi dificil de înțeles pentru cititori."
+          },
+          "03": {
+            "title": "Fii creativ",
+            "description": "Nu vă fie teamă să experimentați cu diferite tipuri de conținut, cum ar fi articolele de blog, videoclipurile sau actualizările de social media. Distrează-te și fii inovator în modul în care promovați rețeaua ice publicului dvs."
+          }
+        }
+      },
+      "bad": {
+        "title": "Practici proaste",
+        "rules": {
+          "01": {
+            "title": "Evitați spamul",
+            "description": "Evitați trimiterea de mesaje nesolicitate sau publicarea repetată a aceluiași conținut pe platforme diferite. Acest lucru poate fi considerat intruziv și enervant."
+          },
+          "02": {
+            "title": "Nu induceți în eroare oamenii",
+            "description": "Proiectul ice nu plătește utilizatorii cu bani, recompensăm doar cu monede ice. Vă rugăm să evitați publicarea de conținut precum „Transformați-vă ice în bani”. „Cum să câștigați 100 de dolari cu ice” și așa mai departe."
+          },
+          "03": {
+            "title": "Nu participați la activități frauduloase",
+            "description": "Valorizăm transparența și onestitatea în comunitatea noastră. Orice activități frauduloase, cum ar fi crearea de mai multe conturi sau încercarea de a manipula rețeaua ice, nu vor fi tolerate."
+          }
+        }
+      }
+    }
   }
 }

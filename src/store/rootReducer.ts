@@ -8,6 +8,7 @@ import {appCommonReducer} from '@store/modules/AppCommon/reducer';
 import {appUpdateReducer} from '@store/modules/AppUpdate/reducer';
 import {collectionsReducer} from '@store/modules/Collections/reducer';
 import {contactsReducer} from '@store/modules/Contacts/reducer';
+import {creativeLibraryReducer} from '@store/modules/CreativeLibrary/reducer';
 import {devicesReducer} from '@store/modules/Devices/reducer';
 import {inAppNotificationsReducer} from '@store/modules/InAppNotifications/reducer';
 import {linkingReducer} from '@store/modules/Linking/reducer';
@@ -29,6 +30,7 @@ export const rootReducer = combineReducers({
   activeTab: activeTab,
   analytics: analyticsReducer,
   appCommon: appCommonReducer,
+  creativeLibrary: creativeLibraryReducer,
   permissions: permissionsReducer,
   account: accountReducer,
   stats: statsReducer,

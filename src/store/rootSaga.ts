@@ -12,6 +12,7 @@ import {appUpdateWatchers} from '@store/modules/AppUpdate/sagas';
 import {backgroundTasksWatchers} from '@store/modules/BackgroundTasks/sagas';
 import {collectionsWatchers} from '@store/modules/Collections/sagas';
 import {teamWatchers} from '@store/modules/Contacts/sagas';
+import {creativeLibraryWatchers} from '@store/modules/CreativeLibrary/sagas';
 import {devicesWatchers} from '@store/modules/Devices/sagas';
 import {inAppNotificationsWatchers} from '@store/modules/InAppNotifications/sagas';
 import {linkingWatchers} from '@store/modules/Linking/sagas';
@@ -45,6 +46,7 @@ const watchers = [
   ...linkingWatchers,
   ...pushNotificationsWatchers,
   ...appCommonWatchers,
+  ...creativeLibraryWatchers,
   ...usersWatchers,
   ...tokenomicsWatchers,
   ...statusNoticeWatchers,

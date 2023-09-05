@@ -894,5 +894,109 @@
   },
   "ping_referrals_pop_up": {
     "title": "Zəhmət olmasa, bütün dostlarınıza ping göndərənə qədər gözləyin · {{count}}"
+  },
+  "creative_library": {
+    "title": "Yaradıcı ice Kitabxanası",
+    "share": "Rüyalar komandasını ice şəbəkəsində qurun!",
+    "get_started": {
+      "header": "Rüyalar komandasını qurun",
+      "subtitle": "ice-də başlayın və öz mikro-icmaqalınızı qurun",
+      "description": "Öz mikro-icmaqlarını quran və daha çox mükafat qazanan ice istifadəçilərinin sürətli inkişaf edən sayına qoşulun. Təbliğat vasitələrimiz, təlimatlar və tövsiyələr sözün yayılmasını və uğurlu bir icmaqın qurulmasını sadələşdirir.",
+      "get_started": "Başlamaq",
+      "carousel": {
+        "01": {
+          "title": "Qoşulun",
+          "description": "Tətbiqimizi yükləyin, adınızı tələb edin və madencilikə başlayın.\n\nSiz dünyagəzəli istifadəçilər cəmiyyətinə qoşulacaqsınız ki, onlar dezentralizasiya, özgürlük və insanların qüvvətinə marağ göstərir."
+        },
+        "02": {
+          "title": "Dəvət edin",
+          "description": "Auditoriyanızı ice-ə qoşulmağa və əlavə mükafatlar açmağa dəvət edin.\n\nÜstəlik, dezentralizasiyanın və maliyyənin gələcəyinin faydalarını yaymağa kömək edəcəksiniz."
+        },
+        "03": {
+          "title": "Qazanın",
+          "description": "Şəbəkənizi genişlədərək və digərlərini ice icmaqına qoşulmağa təşviq edərək mükafatlarınızı böyüdin.\n\nBizim missiyamıza qoşulun və maliyyənin gələcəyini dezentralizasiya və özgürlüklə təhlil edin."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videolar",
+        "description": "Dəvət kodunuzu təbliğ etmək üçün videolarımızın kolleksiyasından istifadə edin, eniş və eniş, alt yazısız və ya alt yazılı olsun, bizimlə qapadınız.",
+        "action": "Videoları gör"
+      },
+      "02": {
+        "title": "Şəkillər",
+        "description": "Bir şəkil minlərlə sözə bərabərdir. Banerlərimiz, sosial media aktivlərimiz, şablonlar və tətbiq mayakları kolleksiyamızdan seçim edə bilərsiniz.",
+        "action": "Şəkilləri gör"
+      },
+      "03": {
+        "title": "Təqdim edilmiş Baner",
+        "description": "Təqdim edilmiş banerimizlə veb saytınızın tələbələrinə asanlıqla ice təbliğ edə və onları öz mikro-icmaqınıza qoşulmağa dəvət edə bilərsiniz.",
+        "action": "Baneri quraşdırın"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Hekayənizi Paylaşın",
+        "description": "Müxtəlif faydaları ilə ice şəbəkəsi ilə keçdiyiniz səyahətinizi öz dilinizdə yazı yazaraq paylaşın.\n\nOnları Blogunuzda, Mediumda, Redditdə, Quorada, Bloggerdə və daha çox yerləşdirin.\n\nice və unikal xüsusiyyətləri barədə bütün məlumatları [[:link]]Bilmə KB[[/:link]], [[:link]]Ana səhifə[[/:link]], və [[:link]]FAQ[[/:link]] səhifəsində tapa bilərsiniz."
+      },
+      "spread": {
+        "title": "Sözü Yayın",
+        "description": "Müzakirəyə qoşulun və ice şəbəkəsini sevimli forumlarınıza təqdim edin.\nYeni mövzular başlatın və maliyyənin dezentralizasiyası, valyutaların gələcəyi və ice ilə mikro-icmaq qurmağın gücü barədə düşüncələrinizi paylaşın.\n\nBir ☃️ Qaradam olun və bu global valyutanın potensialını müzakirə edin."
+      },
+      "bring": {
+        "title": "Dostlarınızı daxil edin",
+        "description": "Asan istifadə edilən dəvət imkanlarımızdan istifadə edin və dostlarınıza sevimli sosial media platformalarınızda öz şəxsi dəvət kodunuzu paylaşın."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Veb Sayt Sahibləri üçün Plug & Play",
+        "description": "Sadə və müstəqil JS banerimizlə ice şəbəkəsini doğrudan veb saytınıza yerləşdirin. Saytınızın markalaşmasına uyğun şəkildə tənzimlənə bilən tez və asan bir quraşdırma imkanıdır. 50 dilə tərcümə edilib və hər hansı bir veb sayt platforması ilə uyğundur.\n\nKodunuzu veb saytınıza kopyalayın və bugündən etibarən ziyarətçilərinizə ice şəbəkəsini təqdim edin.",
+        "action": "Baneri quraşdırın"
+      },
+      "mobile": {
+        "title": "Mobil Tətbiq Kitabxanası",
+        "description": "Asan istifadə edilən kitabxanamızı mobil tətbiyinə birləşdirin və istifadəçilərinizi öz mikro-icmaqlarınıza qoşulmağa və madencilikə başlamağa dəvət edin.\n\nTərcümə dəstəyi və fleksib quraşdırma seçenəkləri ilə, istifadəçilərinizin hamısı dünyanın hər yerində eyni böyük ice təcrübəsinə sahib olacağını təmin edə bilərsiniz.",
+        "action1": "Android kitabxanası",
+        "action2": "React Native kitabxanası"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Yaxşı Təcrübələr",
+        "rules": {
+          "01": {
+            "title": "Mənsub olun",
+            "description": "Şəxsi təcrübəniz və perspektivinizdən yazın. ice şəbəkəsi haqqındakı əməliyyatınızı və hisslərinizi ərlidirin."
+          },
+          "02": {
+            "title": "Dostca üslub istifadə edin",
+            "description": "Dostunuzla danışır kimi yazın və oxucuların başa düşməsinə çətin ola biləcək texniki ifadələri və dilini istifadə etməyin."
+          },
+          "03": {
+            "title": "Yaradıcılığınızı göstərin",
+            "description": "Blog yazıları, videolar və sosial media yeniləmələri kimi müxtəlif məzmun növləri ilə təcrübə etməkdən çəkinməyin. Öz auditoriyasına ice şəbəkəsini təqdim etmək üçün maraqlı və yenilikçi üsulla əylənin."
+          }
+        }
+      },
+      "bad": {
+        "title": "Pis Təcrübələr",
+        "rules": {
+          "01": {
+            "title": "Spam təqdim etməyin",
+            "description": "Istifadəçilərə istinad olunmayan mesajlar göndərməyin və fərqli platformalarda eyni məzmunu təkrarlayaraq təbliğat etməyin. Bu müdaxiləçi və rahatsız edici görünə bilər."
+          },
+          "02": {
+            "title": "Xalqı aldadın",
+            "description": "ice layihəsi istifadəçilərə heç bir nağd pul ödənmir, yalnızca ice coin ilə mükafatlandırılır. Zəhmət olmasa, \"ice-ni nağd pul kimi dəyişdirin\", \"ice ilə 100 dollar qazanmağın yolları\" kimi məzmun paylaşmağın qarşısını alın."
+          },
+          "03": {
+            "title": "Qeyri-qanuni fəaliyyət göstərməyin",
+            "description": "Biz cəmiyyətimizdə şəffaflığı və etik olmağı qiymətləndiririk. Birdəfəlik hesablar yaratmaq və ya ice şəbəkəsini manipulyasiya etməyə cəhd etmək kimi qeyri-qanuni fəaliyyətlərə icazə verilmir."
+          }
+        }
+      }
+    }
   }
 }

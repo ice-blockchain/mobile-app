@@ -894,5 +894,109 @@
   },
   "ping_referrals_pop_up": {
     "title": "Prosim počakajte, medtem ko pošiljamo ping vsem vašim prijateljem · {{count}}"
+  },
+  "creative_library": {
+    "title": "Ustvarjalna knjižnica ice",
+    "share": "Ustvarite svojo sanjsko ekipo na omrežju ice!",
+    "get_started": {
+      "header": "Ustvarite svojo sanjsko ekipo",
+      "subtitle": "Začnite na omrežju ice in ustvarite uspešno mikro-skupnost",
+      "description": "Pridružite se hitro naraščajočemu številu uporabnikov ice, ki gradijo lastne mikro-skupnosti in zaslužijo več nagrad. Naša promocijska orodja, vodniki in nasveti olajšajo širjenje informacij in gradnjo uspešne skupnosti.",
+      "get_started": "Začnite",
+      "carousel": {
+        "01": {
+          "title": "Pridružite se",
+          "description": "Prenesite našo aplikacijo, si pridobite vzdevek in začnite rudariti.\n\nPridružili se boste globalni skupnosti uporabnikov ice, ki so strastni glede decentralizacije, avtonomije in moči ljudi."
+        },
+        "02": {
+          "title": "Povabite",
+          "description": "Povabite svojo ciljno občinstvo, da se pridruži ice in skupaj delujejo za odklepanje dodatnih nagrad.\n\nPoleg tega boste pomagali širiti besedo o prednostih decentralizacije in prihodnosti financ."
+        },
+        "03": {
+          "title": "Zaslužite",
+          "description": "Povečajte svoje nagrade tako, da razširite svoje omrežje in spodbujate druge, da se pridružijo skupnosti ice.\n\nPridružite se nam v našem poslanstvu, da revolucioniramo prihodnost financ skozi decentralizacijo in avtonomijo."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videi",
+        "description": "Uporabite našo zbirko videoposnetkov za promocijo vaše povabilne kode, v ležečem ali pokončnem načinu, s podnapisi ali brez njih, imamo vas pokrite.",
+        "action": "Ogled videoposnetkov"
+      },
+      "02": {
+        "title": "Slike",
+        "description": "Slika pove več kot tisoč besed. Izberete lahko med našo zbirko pasic, sredstev za družbene medije, predlog in maket aplikacij.",
+        "action": "Ogled slik"
+      },
+      "03": {
+        "title": "Vdelan trak",
+        "description": "S pomočjo našega vdelanega traku lahko enostavno promovirate ice svojim obiskovalcem spletnega mesta in jih povabite, da se pridružijo vaši mikro-skupnosti.",
+        "action": "Namestitev traku"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Delite svojo zgodbo",
+        "description": "Delite svoje potovanje z omrežjem ice in njegovimi številnimi koristmi, tako da napišete članek v svojem jeziku.\n\nDelite jih na svojem blogu, Mediumu, Redditu, Quori, Bloggerju in drugih platformah.\n\nVse o ice in njegovih edinstvenih značilnostih lahko najdete na naši [[/:link]]Bazi znanja[[/:link]], [[/:link]]Domači strani[[/:link]] in [[/:link]]Pogosto zastavljenih vprašanjih[[/:link]]."
+      },
+      "spread": {
+        "title": "Širjenje besede",
+        "description": "Pridružite se pogovoru in predstavite omrežje ice svojim najljubšim forumom.\nZačnite nove niti in delite svoje misli o decentraliziranih financah, prihodnosti valute in moči gradnje mikro-skupnosti z ice.\n\nBodite ☃️ Snežak in sprožite razpravo o potencialu te globalne valute."
+      },
+      "bring": {
+        "title": "Povabite svoje prijatelje na krov",
+        "description": "Uporabite našo enostavno funkcijo za povabilo in delite svojo osebno povabilno kodo s prijatelji na vaših najljubših platformah družbenih medijev."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Priključitev in predvajanje za lastnike spletnih mest",
+        "description": "Vdelajte omrežje ice neposredno na svoje spletno mesto s pomočjo našega preprostega in prilagodljivega traku JS. Gre za hitro in enostavno namestitev, ki jo lahko prilagodite svoji spletni blagovni znamki. Preveden je v 50 jezikov in je združljiv s katero koli spletno platformo.\n\nKopirajte in prilepite kodo na svoje spletno mesto ter začnite promovirati omrežje ice svojim obiskovalcem že danes.",
+        "action": "Namestitev traku"
+      },
+      "mobile": {
+        "title": "Knjižnica za mobilne aplikacije",
+        "description": "Vključite našo enostavno za uporabo knjižnico v svojo mobilno aplikacijo in povabite svoje uporabnike, da se pridružijo vaši mikro-skupnosti in začnejo rudariti.\n\nS podporo za prevode in prilagodljivimi možnostmi nastavitve lahko zagotovite, da bodo vsi vaši uporabniki imeli dostop do enake izkušnje z ice, ne glede na to, kje so na svetu.",
+        "action1": "Knjižnica za Android",
+        "action2": "Knjižnica za React Native"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Dobre prakse",
+        "rules": {
+          "01": {
+            "title": "Bodite avtentični",
+            "description": "Pišite iz svojih osebnih izkušenj in perspektive. Delite svoje iskrene misli in občutke o omrežju ice."
+          },
+          "02": {
+            "title": "Uporabite prijateljski ton",
+            "description": "Pišite, kot da se pogovarjate s prijateljem, in se izogibajte uporabi preveč tehničnega žargona ali jezika, ki bi lahko bil težak za razumevanje bralcev."
+          },
+          "03": {
+            "title": "Bodite ustvarjalni",
+            "description": "Ne bojte se eksperimentirati z različnimi vrstami vsebin, kot so blogi, videoposnetki ali posodobitve na družbenih medijih. Zabavajte se in bodite inovativni pri načinu, kako promovirate omrežje ice svoji ciljni publiki."
+          }
+        }
+      },
+      "bad": {
+        "title": "Slabe prakse",
+        "rules": {
+          "01": {
+            "title": "Ne pošiljajte neželene pošte",
+            "description": "Izogibajte se pošiljanju neželenih sporočil ali ponavljajoči se objavi iste vsebine na različnih platformah. To lahko velja za vsiljivo in nadležno."
+          },
+          "02": {
+            "title": "Ne zavajajte ljudi",
+            "description": "Projekt ice ne plačuje uporabnikom v gotovini, le nagrajuje z ice kovanci. Izogibajte se objavi vsebine, kot so \"Pretvorite svoje ice v gotovino\" ali \"Kako zaslužiti 100 dolarjev z ice\" in podobno."
+          },
+          "03": {
+            "title": "Ne sodelujte v goljufijah",
+            "description": "Vrednotimo preglednost in poštenost v naši skupnosti. Kakršne koli goljufive dejavnosti, kot so ustvarjanje več računov ali poskusi manipulacije z omrežjem ice, ne bodo tolerirane."
+          }
+        }
+      }
+    }
   }
 }

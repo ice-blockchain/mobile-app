@@ -894,5 +894,110 @@
   },
   "ping_referrals_pop_up": {
     "title": "Por favor, aguarde enquanto fazemos ping em todos os seus amigos · {{count}}"
+  },
+
+  "creative_library": {
+    "title": "Biblioteca Criativa ice",
+    "share": "Construa sua equipe dos sonhos na rede ice!",
+    "get_started": {
+      "header": "Construa sua equipe dos sonhos",
+      "subtitle": "Comece na ice e construa sua próspera microcomunidade",
+      "description": "Junte-se ao crescente número de usuários da ice que estão construindo suas próprias microcomunidades e ganhando mais recompensas. Nossas ferramentas de promoção, guias e dicas tornam fácil espalhar a palavra e construir uma comunidade de sucesso.",
+      "get_started": "Começar",
+      "carousel": {
+        "01": {
+          "title": "Junte-se",
+          "description": "Baixe nosso aplicativo, reivindique seu apelido e comece a minerar.\n\nVocê estará se juntando a uma comunidade global de usuários que são apaixonados por descentralização, autonomia e o poder das pessoas."
+        },
+        "02": {
+          "title": "Convide",
+          "description": "Convide sua audiência para se juntar à ice e trabalhar juntos para desbloquear recompensas adicionais.\n\nAlém disso, você estará ajudando a espalhar a palavra sobre os benefícios da descentralização e o futuro das finanças."
+        },
+        "03": {
+          "title": "Ganhe",
+          "description": "Aumente suas recompensas expandindo sua rede e incentivando outros a se juntarem à comunidade ice.\n\nJunte-se a nós em nossa missão de revolucionar o futuro das finanças por meio da descentralização e autonomia."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Vídeos",
+        "description": "Use nossa coleção de vídeos para promover seu código de convite, em formato paisagem ou retrato, com ou sem legendas, temos você coberto.",
+        "action": "Ver vídeos"
+      },
+      "02": {
+        "title": "Imagens",
+        "description": "Uma imagem vale mais que mil palavras. Você pode escolher entre nossa coleção de banners, ativos de mídia social, modelos e maquetes de aplicativos.",
+        "action": "Ver imagens"
+      },
+      "03": {
+        "title": "Banner Incorporado",
+        "description": "Com nosso banner incorporado, você pode facilmente promover a ice para os visitantes do seu site e convidá-los a se juntar à sua microcomunidade.",
+        "action": "Instalar o banner"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Compartilhe Sua História",
+        "description": "Compartilhe sua jornada com a rede ice e seus muitos benefícios escrevendo um artigo no seu idioma.\n\nCompartilhe-os no seu blog, Medium, Reddit, Quora, Blogger e muito mais.\n\nVocê pode encontrar tudo sobre a ice e suas características exclusivas em nossa [[/:link]]Base de Conhecimento[[/:link]], [[/:link]]Página Inicial[[/:link]] e [[/:link]]FAQ[[/:link]]."
+      },
+      "spread": {
+        "title": "Espalhe a Palavra",
+        "description": "Junte-se à conversa e apresente a rede ice aos seus fóruns favoritos.\nInicie novos tópicos e compartilhe seus pensamentos sobre finanças descentralizadas, o futuro da moeda e o poder de construir uma microcomunidade com a ice.\n\nSeja um ☃️ Boneco de Neve e inicie uma discussão sobre o potencial dessa moeda global."
+      },
+      "bring": {
+        "title": "Traga Seus Amigos a Bordo",
+        "description": "Use nossa função de convite fácil de usar e compartilhe seu código de convite pessoal com seus amigos nas suas plataformas de mídia social favoritas."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Plug & Play para Proprietários de Sites",
+        "description": "Incorpore a rede ice diretamente no seu site com nosso banner JS simples e flexível. É uma configuração rápida e fácil que pode ser personalizada para combinar com a identidade visual do seu site. Está traduzido em 50 idiomas e é compatível com qualquer plataforma de site.\n\nCopie e cole o código no seu site e comece a promover a rede ice para seus visitantes hoje.",
+        "action": "Instalar o banner"
+      },
+      "mobile": {
+        "title": "Biblioteca para Aplicativos Móveis",
+        "description": "Integre nossa biblioteca fácil de usar ao seu aplicativo móvel e convide seus usuários a se juntarem à sua microcomunidade e começarem a minerar.\n\nCom suporte a tradução e opções flexíveis de configuração, você pode garantir que todos os seus usuários tenham acesso à mesma ótima experiência com a ice, não importa onde estejam no mundo.",
+        "action1": "Biblioteca Android",
+        "action2": "Biblioteca React Native"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Boas Práticas",
+        "rules": {
+          "01": {
+            "title": "Seja Autêntico",
+            "description": "Escreva a partir de sua experiência pessoal e perspectiva. Compartilhe seus pensamentos e sentimentos honestos sobre a rede ice."
+          },
+          "02": {
+            "title": "Use um Tom Amigável",
+            "description": "Escreva como se estivesse falando com um amigo e evite usar jargão técnico ou linguagem que possa ser difícil para os leitores entenderem."
+          },
+          "03": {
+            "title": "Seja Criativo",
+            "description": "Não tenha medo de experimentar diferentes tipos de conteúdo, como postagens de blog, vídeos ou atualizações nas redes sociais. Divirta-se e seja inovador na maneira como você promove a rede ice para sua audiência."
+          }
+        }
+      },
+      "bad": {
+        "title": "Práticas Ruins",
+        "rules": {
+          "01": {
+            "title": "Evite o Spam",
+            "description": "Evite enviar mensagens não solicitadas ou postar repetidamente o mesmo conteúdo em diferentes plataformas. Isso pode ser visto como intrusivo e irritante."
+          },
+          "02": {
+            "title": "Não Engane as Pessoas",
+            "description": "O projeto ice não paga os usuários em dinheiro, apenas recompensamos com moedas ice. Evite postar conteúdo como \"Transforme seu ice em dinheiro\" ou \"Como ganhar $100 com ice\" e similares."
+          },
+          "03": {
+            "title": "Não Pratique Atividades Fraudulentas",
+            "description": "Valorizamos a transparência e a honestidade em nossa comunidade. Qualquer atividade fraudulenta, como criar várias contas ou tentar manipular a rede ice, não será tolerada."
+          }
+        }
+      }
+    }
   }
 }

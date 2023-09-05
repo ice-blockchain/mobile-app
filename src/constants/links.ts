@@ -23,6 +23,7 @@ export const LINKS = {
   TELEGRAM_PROFILE_URL: 'https://t.me/iceblockchain',
   CHANGELOG: 'https://ice.io/changelog',
   ICE_FAQ: 'https://ice.io/faq',
+  ICE_HOMEPAGE: 'https://ice.io',
   BETA_TESTING: 'https://ice.io/beta-testing',
   FACEBOOK_APP: `fb://profile/${ENV.FACEBOOK_PAGE_ID}`,
   FACEBOOK_WEB: 'https://facebook.com/ice.blockchain',
@@ -35,4 +36,15 @@ export const LINKS = {
   TIKTOK_WEB: 'https://www.tiktok.com/@ice.blockchain',
   APP_UPDATE: 'https://ice.io/app-update',
   GITHUB_WEB: 'https://github.com/ice-blockchain',
+  HOW_TO_BOOTS_EARNINGS: 'https://ice.io/how-to-boost-your-earnings',
+  WEB_WIDGET:
+    'https://github.com/ice-blockchain/community-assets/tree/master/website-widget',
+  ANDROID_WIDGET:
+    'https://github.com/ice-blockchain/community-assets/tree/master/android-widget',
+  REACT_NATIVE_WIDGET:
+    'https://github.com/ice-blockchain/community-assets/tree/master/react-native-widget',
+  ICE_ASSETS:
+    'https://www.figma.com/community/file/1256148399031329897/ice-Community-Assets',
+  ICE_VIDEOS:
+    'https://drive.google.com/drive/u/1/folders/1E_3zVZzs2vqUNgUd05qfi6cJ_axjlvQU',
 };
