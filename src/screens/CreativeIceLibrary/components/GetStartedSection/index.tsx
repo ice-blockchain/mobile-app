@@ -7,7 +7,7 @@ import {GetStartedButton} from '@screens/CreativeIceLibrary/components/GetStarte
 import {GetStartedCarousel} from '@screens/CreativeIceLibrary/components/GetStartedSection/components/GetStartedCarousel';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
-import React, {useState} from 'react';
+import React, {useRef} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {LayoutChangeEvent} from 'react-native/Libraries/Types/CoreEventTypes';
 import Animated from 'react-native-reanimated';
@@ -18,15 +18,15 @@ type Props = {
 };
 
 export function GetStartedSection({scrollViewAnimatedRef}: Props) {
-  const [getStartedOffset, setGetStartedOffset] = useState(0);
+  const getStartedOffsetRef = useRef(0);
   const onGetStartedLayout = ({nativeEvent}: LayoutChangeEvent) => {
-    setGetStartedOffset(nativeEvent.layout.y);
+    getStartedOffsetRef.current = nativeEvent.layout.y;
   };
   const onGetStarted = () => {
     if (scrollViewAnimatedRef.current) {
       scrollViewAnimatedRef.current.scrollTo({
         x: 0,
-        y: getStartedOffset,
+        y: getStartedOffsetRef.current,
         animated: true,
       });
     }

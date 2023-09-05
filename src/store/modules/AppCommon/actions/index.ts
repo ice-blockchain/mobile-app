@@ -26,17 +26,6 @@ const INTERVAL_UPDATE = createAction('INTERVAL_UPDATE', {
   STATE: true,
 });
 
-const SET_FIRST_SIGN_IN_TIME = createAction('SET_FIRST_SIGN_IN_TIME', {
-  STATE: true,
-});
-
-const SET_SHOWED_CREATIVE_LIBRARY = createAction(
-  'SET_SHOWED_CREATIVE_LIBRARY',
-  {
-    STATE: true,
-  },
-);
-
 const UPDATE_SPLASH_VISIBLE_STATE = createAction(
   'UPDATE_SPLASH_VISIBLE_STATE',
   {
@@ -50,6 +39,4 @@ export const AppCommonActions = Object.freeze({
   APP_STATE_CHANGE,
   INTERVAL_UPDATE,
   UPDATE_SPLASH_VISIBLE_STATE,
-  SET_FIRST_SIGN_IN_TIME,
-  SET_SHOWED_CREATIVE_LIBRARY,
 });
