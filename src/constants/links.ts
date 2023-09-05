@@ -36,4 +36,5 @@ export const LINKS = {
   TIKTOK_WEB: 'https://www.tiktok.com/@ice.blockchain',
   APP_UPDATE: 'https://ice.io/app-update',
   GITHUB_WEB: 'https://github.com/ice-blockchain',
+  HOW_TO_BOOTS_EARNINGS: 'https://ice.io/how-to-boost-your-earnings',
 };

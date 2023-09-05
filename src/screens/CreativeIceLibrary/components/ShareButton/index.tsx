@@ -2,6 +2,7 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {LINKS} from '@constants/links';
 import {openShareDialog} from '@services/share';
 import {ShareIcon} from '@svg/ShareIcon';
 import {t} from '@translations/i18n';
@@ -11,7 +12,7 @@ export function ShareButton() {
   const onShare = () => {
     openShareDialog({
       message: t('creative_library.share'),
-      url: 'https://ice.io/how-to-boost-your-earnings',
+      url: LINKS.HOW_TO_BOOTS_EARNINGS,
     });
   };
   return (
