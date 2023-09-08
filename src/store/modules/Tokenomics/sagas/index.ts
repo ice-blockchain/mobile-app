@@ -3,7 +3,6 @@
 import {AccountActions} from '@store/modules/Account/actions';
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
-import {forceMiningSaga} from '@store/modules/Tokenomics/sagas/forceMining';
 import {getBalanceHistorySaga} from '@store/modules/Tokenomics/sagas/getBalanceHistory';
 import {getBalanceSummarySaga} from '@store/modules/Tokenomics/sagas/getBalanceSummary';
 import {getMiningSummarySaga} from '@store/modules/Tokenomics/sagas/getMiningSummary';
@@ -62,7 +61,6 @@ export const tokenomicsWatchers = [
     TokenomicsActions.GET_BALANCE_HISTORY.START.type,
     getBalanceHistorySaga,
   ),
-  takeLatest(AppCommonActions.APP_STATE_CHANGE.STATE.type, forceMiningSaga),
   takeLeading(
     TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.type,
     handleExtraBonusSaga,

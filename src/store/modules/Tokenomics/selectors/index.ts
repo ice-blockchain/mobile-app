@@ -63,8 +63,5 @@ export const balanceHistorySelector = (state: RootState) => {
   return state.tokenomics.balanceHistory;
 };
 
-export const forceStartMiningSelector = (state: RootState) =>
-  state.tokenomics.forceStartMining;
-
 export const tapToMineActionTypeSelector = (state: RootState) =>
   state.tokenomics.tapToMineActionType;

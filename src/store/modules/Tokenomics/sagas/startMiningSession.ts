@@ -16,13 +16,8 @@ import {
 } from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
-import {shareSocialsSaga} from '@store/modules/Socials/sagas/shareSocials';
-import {SocialsShareResult} from '@store/modules/Socials/types';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
-import {
-  forceStartMiningSelector,
-  isMiningActiveSelector,
-} from '@store/modules/Tokenomics/selectors';
+import {isMiningActiveSelector} from '@store/modules/Tokenomics/selectors';
 import {openConfirmResurrect} from '@store/modules/Tokenomics/utils/openConfirmResurrect';
 import {openConfirmResurrectNo} from '@store/modules/Tokenomics/utils/openConfirmResurrectNo';
 import {openConfirmResurrectYes} from '@store/modules/Tokenomics/utils/openConfirmResurrectYes';
@@ -46,31 +41,6 @@ export function* startMiningSessionSaga(
   if (ENV.SHOW_MINING_NOTICE) {
     yield call(openMiningNotice);
     return;
-  }
-  const forceStartMining: ReturnType<typeof forceStartMiningSelector> =
-    yield select(forceStartMiningSelector);
-
-  if (forceStartMining) {
-    yield put(
-      TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.create({
-        forceStartMining: false,
-      }),
-    );
-  } else {
-    /**
-     * Check if we can show mining popup before we start/resume mining
-     */
-    const result: SocialsShareResult = yield call(shareSocialsSaga);
-
-    if (result.status === 'opened') {
-      yield put(
-        TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.create({
-          forceStartMining: true,
-          tapToMineActionType: action.payload?.tapToMineActionType,
-        }),
-      );
-      return;
-    }
   }
 
   const user: ReturnType<typeof unsafeUserSelector> = yield select(

@@ -7,7 +7,6 @@ import {socialData} from '@store/modules/Socials/data';
 import {socialsByUserIdSelector} from '@store/modules/Socials/selectors';
 import {SocialType} from '@store/modules/Socials/types';
 import {openSocial} from '@store/modules/Socials/utils/openSocial';
-import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {openLink} from '@utils/device';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
@@ -42,12 +41,6 @@ export function* openSocialSaga(typeToShow: SocialType) {
       SocialsActions.SET_SOCIALS.STATE.create({
         userId: authenticatedUsedId,
         socials,
-      }),
-    );
-
-    yield put(
-      TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.create({
-        forceStartMining: true,
       }),
     );
     const opened: SagaReturnType<typeof openLink> = yield call(

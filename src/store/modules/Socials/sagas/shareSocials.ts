@@ -1,7 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {dayjs} from '@services/dayjs';
-import {userIdSelector} from '@store/modules/Account/selectors';
+import {
+  isAuthorizedSelector,
+  userIdSelector,
+} from '@store/modules/Account/selectors';
+import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {SocialsActions} from '@store/modules/Socials/actions';
 import {openSocialSaga} from '@store/modules/Socials/sagas/openSocial';
 import {socialsByUserIdSelector} from '@store/modules/Socials/selectors';
@@ -13,13 +17,25 @@ import {
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
 export function* shareSocialsSaga() {
-  const authenticatedUsedId: ReturnType<typeof userIdSelector> = yield select(
+  const isAuthorized: ReturnType<typeof isAuthorizedSelector> = yield select(
+    isAuthorizedSelector,
+  );
+
+  const isAppActive: ReturnType<typeof isAuthorizedSelector> = yield select(
+    isAppActiveSelector,
+  );
+
+  if (!isAppActive || !isAuthorized) {
+    return;
+  }
+
+  const userId: ReturnType<typeof userIdSelector> = yield select(
     userIdSelector,
   );
 
   const socialsState: SagaReturnType<
     ReturnType<typeof socialsByUserIdSelector>
-  > = yield select(socialsByUserIdSelector(authenticatedUsedId));
+  > = yield select(socialsByUserIdSelector(userId));
 
   let socials = [...socialsState];
   let typeToShow: SocialType | null = null;
@@ -73,12 +89,7 @@ export function* shareSocialsSaga() {
     });
   }
 
-  yield put(
-    SocialsActions.SET_SOCIALS.STATE.create({
-      userId: authenticatedUsedId,
-      socials,
-    }),
-  );
+  yield put(SocialsActions.SET_SOCIALS.STATE.create({userId, socials}));
 
   if (typeToShow) {
     const result: ReturnType<typeof openSocialSaga> = yield call(
