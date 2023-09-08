@@ -11,7 +11,11 @@ import {socialData} from '@store/modules/Socials/data';
 import {socialsByUserIdSelector} from '@store/modules/Socials/selectors';
 import {SocialsShare} from '@store/modules/Socials/types';
 import {openSocial} from '@store/modules/Socials/utils/openSocial';
-import {miningStateSelector} from '@store/modules/Tokenomics/selectors';
+import {
+  miningStateSelector,
+  miningSummarySelector,
+} from '@store/modules/Tokenomics/selectors';
+import {waitForSelector} from '@store/utils/sagas/effects';
 import {openLink} from '@utils/device';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
@@ -57,10 +61,16 @@ function* appReadyToShowSocials() {
   const isAuthorized: ReturnType<typeof isAuthorizedSelector> = yield select(
     isAuthorizedSelector,
   );
-
   const isAppActive: ReturnType<typeof isAuthorizedSelector> = yield select(
     isAppActiveSelector,
   );
+  const miningSummary: ReturnType<typeof miningSummarySelector> = yield select(
+    miningSummarySelector,
+  );
+
+  if (!miningSummary) {
+    yield call(waitForSelector, state => !!miningSummarySelector(state));
+  }
 
   const miningState: ReturnType<typeof miningStateSelector> = yield select(
     miningStateSelector,
