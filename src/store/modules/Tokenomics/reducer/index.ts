@@ -25,7 +25,6 @@ export interface State {
     endDate: string | null;
     pageNumber: number;
   };
-  tapToMineActionType?: 'Extended' | 'Default';
 }
 
 type Actions = ReturnType<
