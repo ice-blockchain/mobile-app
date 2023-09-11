@@ -1,11 +1,15 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {FaceAuthStatus} from '@store/modules/FaceAuth/types';
 import {createAction} from '@store/utils/actions/createAction';
 
 const FACE_AUTH = createAction('FACE_AUTH', {
-  START: (payload: {facePhotoUri: string}) => payload,
-  SUCCESS: true,
-  FAILED: true,
+  START: (payload: {
+    pictureUri: string;
+    cropStartY: number;
+    pictureWidth: number;
+  }) => payload,
+  COMPLETE_WITH_STATUS: (payload: {status: FaceAuthStatus}) => payload,
 });
 
 const RESET_FACE_AUTH_STATUS = createAction('RESET_FACE_AUTH_STATUS', {

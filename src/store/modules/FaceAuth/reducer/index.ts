@@ -7,12 +7,12 @@ import produce from 'immer';
 
 export interface State {
   faceAuthStatus?: FaceAuthStatus;
+  croppedPictureUri?: string;
 }
 
 type Actions = ReturnType<
   | typeof FaceAuthActions.FACE_AUTH.START.create
-  | typeof FaceAuthActions.FACE_AUTH.SUCCESS.create
-  | typeof FaceAuthActions.FACE_AUTH.FAILED.create
+  | typeof FaceAuthActions.FACE_AUTH.COMPLETE_WITH_STATUS.create
   | typeof FaceAuthActions.RESET_FACE_AUTH_STATUS.STATE.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
 >;
@@ -25,11 +25,8 @@ export function faceAuthReducer(state = INITIAL_STATE, action: Actions): State {
       case FaceAuthActions.FACE_AUTH.START.type:
         draft.faceAuthStatus = 'LOADING';
         break;
-      case FaceAuthActions.FACE_AUTH.SUCCESS.type:
-        draft.faceAuthStatus = 'SUCCESS';
-        break;
-      case FaceAuthActions.FACE_AUTH.FAILED.type:
-        draft.faceAuthStatus = 'FAILED';
+      case FaceAuthActions.FACE_AUTH.COMPLETE_WITH_STATUS.type:
+        draft.faceAuthStatus = action.payload.status;
         break;
       case FaceAuthActions.RESET_FACE_AUTH_STATUS.STATE.type:
         draft.faceAuthStatus = undefined;

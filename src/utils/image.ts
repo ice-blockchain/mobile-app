@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {logError} from '@services/logging';
 import {FFmpegKit} from 'ffmpeg-kit-react-native';
 
 export async function cropAndResizeWithFFmpeg({
@@ -23,6 +22,6 @@ export async function cropAndResizeWithFFmpeg({
   if (returnCode?.isValueSuccess()) {
     return outputUri;
   } else {
-    logError(new Error('Failed to crop image'));
+    throw new Error('Failed to crop image');
   }
 }

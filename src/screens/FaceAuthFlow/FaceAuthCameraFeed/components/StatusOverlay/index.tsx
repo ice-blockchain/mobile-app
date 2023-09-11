@@ -2,6 +2,7 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {replaceString, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -15,6 +16,7 @@ type Props = {
   actionColor?: string;
   actionIcon?: React.ReactNode;
   action?: () => void;
+  onLightBackground?: boolean;
 };
 
 export function StatusOverlay({
@@ -25,12 +27,38 @@ export function StatusOverlay({
   actionText,
   actionColor,
   action,
+  onLightBackground,
 }: Props) {
   return (
     <View style={styles.statusOverlay}>
       {titleIcon}
-      {title ? <Text style={styles.statusTitle}>{title}</Text> : null}
-      <Text style={styles.statusDescription}>{description}</Text>
+      {title ? (
+        <Text
+          style={[
+            styles.statusTitle,
+            onLightBackground ? styles.statusTitleOnLightBackground : null,
+          ]}>
+          {title}
+        </Text>
+      ) : null}
+      <Text
+        style={[
+          styles.statusDescription,
+          onLightBackground ? styles.statusDescriptionOnLightBackground : null,
+        ]}>
+        {replaceString(description, tagRegex('bold', false), (match, index) => (
+          <Text
+            key={match + index}
+            style={[
+              styles.bold,
+              onLightBackground
+                ? styles.statusDescriptionOnLightBackground
+                : null,
+            ]}>
+            {match}
+          </Text>
+        ))}
+      </Text>
       {actionText ? (
         <View style={styles.statusButtonContainer}>
           <Touchable
@@ -54,18 +82,26 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     height: '100%',
-    backgroundColor: COLORS.primaryDark09opacity,
     alignItems: 'center',
     justifyContent: 'center',
   },
   statusTitle: {
-    paddingHorizontal: rem(90),
+    paddingHorizontal: rem(54),
     ...font(24, null, 'black', 'white', 'center'),
+  },
+  statusTitleOnLightBackground: {
+    color: COLORS.primaryDark,
   },
   statusDescription: {
     paddingTop: rem(16),
     paddingHorizontal: rem(54),
     ...font(14, 20, 'medium', 'white', 'center'),
+  },
+  bold: {
+    ...font(14, 20, 'bold', 'white', 'center'),
+  },
+  statusDescriptionOnLightBackground: {
+    color: COLORS.secondary,
   },
   statusButtonContainer: {
     position: 'absolute',

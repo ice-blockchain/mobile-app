@@ -1010,6 +1010,21 @@
         "title": "❌ Authentication Failed",
         "description": "We couldn't verify your identity. Please ensure good lighting and that your face is fully visible, then try again.",
         "action": "Retry"
+      },
+      "try_later": {
+        "title": "❌ Authentication Failed",
+        "description": "We couldn't verify your identity. Please ensure good lighting and that your face is fully visible, then try again in 1 hour.",
+        "action": "Close"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 KYC Emotion Verification",
+        "description": "Great job! You've completed the first step by taking a selfie. Now, let's proceed by following the displayed emotions to continue your KYC process.",
+        "action": "Continue"
+      },
+      "banned": {
+        "title": "❌ Mining disabled",
+        "description": "We have identified that your identity is associated with another account. If you think this is an error, please send an email to [[:bold]]feedback@ice.io[[/:bold]] with your nickname and a high-quality selfie.",
+        "action": "Close"
       }
     }
   }

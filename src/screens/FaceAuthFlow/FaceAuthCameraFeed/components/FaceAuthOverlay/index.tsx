@@ -8,13 +8,26 @@ import {View} from 'react-native';
 import Svg, {ClipPath, Defs, G, Path, Rect} from 'react-native-svg';
 import {rem} from 'rn-units';
 
-export const PADDING_HORIZONTAL = rem(42);
+export const PADDING_HORIZONTAL = rem(52);
 export const FACE_CONTAINER_PADDING_TOP = rem(120);
 export const FACE_CONTAINER_WIDTH = windowWidth - PADDING_HORIZONTAL * 2;
-export const FACE_CONTAINER_ASPECT_RATIO = 292 / 390;
+export const FACE_CONTAINER_ASPECT_RATIO = 270 / 340;
 
 export function FaceAuthOverlay() {
   const {top} = useSafeAreaInsets();
+  const ovalPath = `
+        M${PADDING_HORIZONTAL},${
+    top +
+    FACE_CONTAINER_PADDING_TOP +
+    (FACE_CONTAINER_WIDTH / 2) * FACE_CONTAINER_ASPECT_RATIO
+  }
+        a${(FACE_CONTAINER_WIDTH / 2) * FACE_CONTAINER_ASPECT_RATIO},${
+    FACE_CONTAINER_WIDTH / 2
+  } 0 1,0 ${FACE_CONTAINER_WIDTH},0
+        a${(FACE_CONTAINER_WIDTH / 2) * FACE_CONTAINER_ASPECT_RATIO},${
+    FACE_CONTAINER_WIDTH / 2
+  } 0 1,0 -${FACE_CONTAINER_WIDTH},0
+    `;
   return (
     <View style={commonStyles.flexOne}>
       <Svg height="100%" width="100%">
@@ -25,21 +38,7 @@ export function FaceAuthOverlay() {
               height="100%"
               fill={COLORS.primaryLight05opacity}
             />
-            <Path
-              d={`
-        M${PADDING_HORIZONTAL},${
-                top +
-                FACE_CONTAINER_PADDING_TOP +
-                (FACE_CONTAINER_WIDTH / 2) * FACE_CONTAINER_ASPECT_RATIO
-              }
-        a${(FACE_CONTAINER_WIDTH / 2) * FACE_CONTAINER_ASPECT_RATIO},${
-                FACE_CONTAINER_WIDTH / 2
-              } 0 1,0 ${FACE_CONTAINER_WIDTH},0
-        a${(FACE_CONTAINER_WIDTH / 2) * FACE_CONTAINER_ASPECT_RATIO},${
-                FACE_CONTAINER_WIDTH / 2
-              } 0 1,0 -${FACE_CONTAINER_WIDTH},0
-    `}
-            />
+            <Path d={ovalPath} />
           </ClipPath>
         </Defs>
 
@@ -50,6 +49,14 @@ export function FaceAuthOverlay() {
             fill={COLORS.primaryLight05opacity}
           />
         </G>
+        <Path
+          d={ovalPath}
+          fill="none"
+          stroke="white"
+          opacity="0.5"
+          strokeWidth="1"
+          strokeDasharray="12,8" // This specifies a pattern with dashes of length 10 and gaps of length 10
+        />
       </Svg>
     </View>
   );

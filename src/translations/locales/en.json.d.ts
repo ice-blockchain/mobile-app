@@ -633,4 +633,13 @@ export type Translations = {
   'face_auth.auth_status.failure.title': null;
   'face_auth.auth_status.failure.description': null;
   'face_auth.auth_status.failure.action': null;
+  'face_auth.auth_status.try_later.title': null;
+  'face_auth.auth_status.try_later.description': null;
+  'face_auth.auth_status.try_later.action': null;
+  'face_auth.auth_status.continue.title': null;
+  'face_auth.auth_status.continue.description': null;
+  'face_auth.auth_status.continue.action': null;
+  'face_auth.auth_status.banned.title': null;
+  'face_auth.auth_status.banned.description': null;
+  'face_auth.auth_status.banned.action': null;
 };

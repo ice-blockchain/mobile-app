@@ -53,7 +53,25 @@ export type User = {
   skipPhoneNumberValidation?: boolean | null;
 
   loginSession?: string;
+
+  /*
+    0/undefined (show terms and conditions screen)
+    1 (show selfie screen)
+    2 (show emotion screens)
+   */
   kycStepPassed?: number;
+
+  /*
+    0/undefined
+    1 banned
+   */
+  kycStepBlocked?: number;
+
+  /*
+    A map of `kycStepPassed` keys and a timestamp as value.
+    So if now > `repeatableKycSteps[xxx]` you retry that step
+   */
+  repeatableKycSteps?: number[];
 };
 
 export type ReferralType = 'CONTACTS' | 'T1' | 'T2';
