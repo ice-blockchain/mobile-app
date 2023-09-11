@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {SOCIALS_POPUP_INTERVAL_SEC} from '@constants/timeouts';
 import {dayjs} from '@services/dayjs';
 import {
   isAuthorizedSelector,
@@ -64,13 +65,8 @@ function* appReadyToShowSocials() {
   const isAppActive: ReturnType<typeof isAuthorizedSelector> = yield select(
     isAppActiveSelector,
   );
-  const miningSummary: ReturnType<typeof miningSummarySelector> = yield select(
-    miningSummarySelector,
-  );
 
-  if (!miningSummary) {
-    yield call(waitForSelector, state => !!miningSummarySelector(state));
-  }
+  yield call(waitForSelector, state => !!miningSummarySelector(state));
 
   const miningState: ReturnType<typeof miningStateSelector> = yield select(
     miningStateSelector,
@@ -122,7 +118,12 @@ function* updateSocialsQueue(socialToShare: SocialsShare) {
        */
       return [
         ...socials,
-        {...social, dateToShow: dayjs().add(1, 'day').toISOString()},
+        {
+          ...social,
+          dateToShow: dayjs()
+            .add(SOCIALS_POPUP_INTERVAL_SEC, 'seconds')
+            .toISOString(),
+        },
       ];
     },
     [],

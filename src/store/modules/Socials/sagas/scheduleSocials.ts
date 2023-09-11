@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {SOCIALS_POPUP_INTERVAL_SEC} from '@constants/timeouts';
 import {dayjs} from '@services/dayjs';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {SocialsActions} from '@store/modules/Socials/actions';
@@ -17,11 +18,11 @@ export function* scheduleSocialsSaga() {
   > = yield select(socialsByUserIdSelector(userId));
 
   if (socialsQueue.length === 0) {
-    const socials = socialsOrder.map((type, index) => ({
+    const socials = socialsOrder.map(type => ({
       type,
       shared: false,
       dateToShow: dayjs()
-        .add(index + 1, 'day')
+        .add(SOCIALS_POPUP_INTERVAL_SEC, 'seconds')
         .toISOString(),
     }));
     yield put(SocialsActions.SET_SOCIALS.STATE.create({userId, socials}));
