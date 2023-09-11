@@ -860,11 +860,6 @@
     "expired_message": "Ongelukkig het vandag se bonus verval. Bly ingeskakel vir die volgende kennisgewing!",
     "result_title": "Baie geluk"
   },
-  "mining_notice": {
-    "title": "Kennisgewing",
-    "message": "Dankie vir jou belangstelling om ice te verdien[[:bold]]![[/:bold]] Ons verfyn tans ons tegnologie en inklok is nie op die oomblik beskikbaar nie Dit is jou kans om te fokus op die bou van jou span en die groei van jou mikro-gemeenskap.",
-    "message_footer": "Bly ingeskakel vir opdaterings op ons [[:twitter]]Twitter[[/:twitter]]- [[:telegram]]en Telegram[[/:telegram]]-kanale."
-  },
   "qr_code": {
     "description": "Skandeer QR-kode om by my span aan te sluit."
   },

@@ -860,11 +860,6 @@
     "expired_message": "죄송하지만 오늘의 보너스는 만료되었습니다. 다음 알림을 기대해 주세요!",
     "result_title": "축하합니다"
   },
-  "mining_notice": {
-    "title": "알림",
-    "message": "[[:bold]]ice에 관심을 가져 주셔서 감사합니다![[/:bold]] 현재 ice의 기술을 미세하게 조정하고 있어 체크인하실 수 없습니다. 이는 회원님이 팀 결성에 집중하고 소규모 커뮤니티를 발전시킬 기회입니다.",
-    "message_footer": "[[:twitter]]Twitter[[/:twitter]]와 [[:telegram]]Telegram[[/:telegram]] 채널에서 업데이트를 확인하세요."
-  },
   "qr_code": {
     "description": "QR 코드를 스캔하여 내 팀에 합류하세요."
   },

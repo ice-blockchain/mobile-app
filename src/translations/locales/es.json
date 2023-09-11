@@ -860,11 +860,6 @@
     "expired_message": "Lamentablemente, la bonificación del día ha caducado. ¡No te pierdas la próxima notificación!",
     "result_title": "Enhorabuena"
   },
-  "mining_notice": {
-    "title": "Aviso",
-    "message": "¡Gracias por tu interés en ganar [[:bold]]ice![[/:bold]] Actualmente estamos perfeccionando nuestra tecnología, por lo que el entrada no está disponible en estos momentos. Es tu oportunidad de centrarte en crear tu equipo y hacer crecer tu microcomunidad.",
-    "message_footer": "Entérate de las actualizaciones en nuestros canales de [[:twitter]]Twitter[[/:twitter]] y [[:telegram]]Telegram[[/:telegram]]."
-  },
   "qr_code": {
     "description": "Escanea el código QR para unirte a mi equipo."
   },

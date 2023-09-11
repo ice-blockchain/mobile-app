@@ -860,11 +860,6 @@
     "expired_message": "Din păcate, bonusul de astăzi a expirat. Rămâi pe fază pentru următoarea notificare!",
     "result_title": "Felicitări"
   },
-  "mining_notice": {
-    "title": "Înștiințare",
-    "message": "Îți mulțumim pentru interesul față de a câștiga [[:bold]]ice![[/:bold]] Acum ne punem la punct tehnologia și vizitarea nu este disponibilă momentan. Acum ai ocazia să te concentrezi asupra construirii echipei tale și a dezvoltării micro-comunității tale.",
-    "message_footer": "Rămâi pe fază pentru noutăți pe canalele noastre de [[:twitter]]Twitter[[/:twitter]] și [[:telegram]]Telegram[[/:telegram]]."
-  },
   "qr_code": {
     "description": "Scanează codul QR pentru a te alătura echipei mele."
   },

@@ -854,11 +854,6 @@
     "expired_message": "Ó ṣeni láàánú pé owó èrè tí wọ́n fún wa lónìí ti gbẹ́mìí mì. Ẹ máa bá wa lọ láti gbọ́ ìsọfúnni tó kàn!",
     "result_title": "O káre láé"
   },
-  "mining_notice": {
-    "title": "ìfitónilétí",
-    "message": "O ṣeun fún ìfẹ́ tó o ní láti gba [[:bold]] ice![[/:bold]] A ti ń ṣe àtúnṣe sí ìmọ̀ ẹ̀rọ wa báyìí, a ò sì lè gbà wọlé báyìí. Èyí ni àǹfààní rẹ láti pọkàn pọ̀ sórí kíkó ẹ̀ka rẹ jọ àti gbígbé àwùjọ kéékèèké rẹ ró.",
-    "message_footer": "Ẹ máa bá wa tẹ́tí sí àwọn ìsọfúnni tuntun lórí ìkànnì [[:twitter]]Twitter[[/:twitter]] àti [[:telegram]]Telegram[[/:telegram]] wa."
-  },
   "qr_code": {
     "description": "Ṣe àyẹ̀wò QR kóòdù kó o lè dara pọ̀ mọ́ ẹgbẹ́ mi."
   },

@@ -860,11 +860,6 @@
     "expired_message": "Leider ist der heutige Bonus bereits abgelaufen. Bleiben Sie verbunden für die nächste Meldung!",
     "result_title": "Herzlichen Glückwunsch"
   },
-  "mining_notice": {
-    "title": "Hinweis",
-    "message": "Vielen Dank für Ihr Interesse,[[:bold]]ice zu verdienen![[/:bold]] Wir sind gerade dabei, unsere Technologie zu verfeinern, und der Check-in ist deshalb derzeit nicht verfügbar. Dies ist Ihre Chance, sich auf den Aufbau Ihres Teams und das Wachstum Ihrer Mikro-Community zu konzentrieren.",
-    "message_footer": "Bleiben Sie für Updates auf unseren [[:twitter]]Twitter-[[/:twitter]] und [[:telegram]]Telegram[[/:telegram]]-Kanälen verbunden. "
-  },
   "qr_code": {
     "description": "QR-Code scannen, um meinem Team beizutreten."
   },

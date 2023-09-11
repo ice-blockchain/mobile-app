@@ -860,11 +860,6 @@
     "expired_message": "Dnešní bonus už vypršel, co naplat. Buďte na příjmu, až přijde další oznámení!",
     "result_title": "Gratulujeme"
   },
-  "mining_notice": {
-    "title": "Oznámení",
-    "message": "Děkujeme, že máte zájem vydělávat [[:bold]]ice![[/:bold]] Momentálně ladíme naši technologii a ohlašování teď není k dispozici. Znamená to ovšem, že máte příležitost zaměřit se na budování svého týmu a rozšiřování mikrokomunity.",
-    "message_footer": "Zůstaňte na příjmu a sledujte aktuality zveřejňované na našich kanálech na [[:twitter]]Twitteru[[/:twitter]] a [[:telegram]]Telegramu[[/:telegram]]."
-  },
   "qr_code": {
     "description": "Přidej se do mého týmu naskenováním QR kódu."
   },

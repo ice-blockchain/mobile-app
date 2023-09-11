@@ -860,11 +860,6 @@
     "expired_message": "Žiaľ, dnešný bonus vypršal. Priprav sa na nasledujúce uporoznenie!",
     "result_title": "Gratulujeme"
   },
-  "mining_notice": {
-    "title": "Oznámenie",
-    "message": "Ďakujeme za tvoj záujem o získanie [[:bold]]ice![[/:bold]] V súčasnosti dolaďujeme našu technológiu a prihlásenie momentálne nie je k dispozícii. Toto je tvoja šanca zamerať sa na budovanie tímu a rozvoj mikrokomunity.",
-    "message_footer": "Sleduj aktualizácie na našich kanáloch na [[:twitter]]Twitteri[[/:twitter]] a [[:telegram]]Telegrame[[/:telegram]]."
-  },
   "qr_code": {
     "description": "Naskenuj QR kód a pripoj sa k môjmu tímu."
   },

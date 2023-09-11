@@ -860,11 +860,6 @@
     "expired_message": "Sayangnya, bonus hari ini telah kedaluwarsa. Nantikan notifikasi selanjutnya!",
     "result_title": "Selamat"
   },
-  "mining_notice": {
-    "title": "Perhatian",
-    "message": "Terima kasih atas minat Anda untuk menghasilkan [[:bold]]ice![[/:bold]] Kami sedang menyempurnakan teknologi kami dan lapor masuk belum tersedia untuk saat ini. Ini merupakan peluang bagi Anda untuk fokus membangun tim dan mengembangkan komunitas mikro.",
-    "message_footer": "Nantikan pembaruan di saluran [[:twitter]]Twitter[[/:twitter]] dan [[:telegram]]Telegram[[/:telegram]] kami."
-  },
   "qr_code": {
     "description": "Pindai kode QR untuk bergabung dengan tim saya."
   },

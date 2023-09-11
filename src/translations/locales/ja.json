@@ -860,11 +860,6 @@
     "expired_message": "残念ながら、今日のボーナスは期限切れとなりました。次回の通知をお見逃しなく！",
     "result_title": "おめでとうございます"
   },
-  "mining_notice": {
-    "title": "通知",
-    "message": "[[:bold]]iceにご関心をお寄せいただき、ありがとうございます！[[/:bold]] 現在、テクノロジー面での微調整中を行っている関係上、チェックインはご利用になれません。自身のチームを作り、マイクロコミュニティを成長させることに集中するチャンスです。",
-    "message_footer": "最新情報は[[:twitter]]Twitter[[/:twitter]]と[[:telegram]]Telegram[[/:telegram]]でお知らせします。"
-  },
   "qr_code": {
     "description": "チームのメンバーになるには、QRコードをスキャンしてください。"
   },

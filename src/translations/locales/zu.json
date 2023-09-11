@@ -854,11 +854,6 @@
     "expired_message": "Ngeshwa, ibhonasi yanamuhla iphelelwe yisikhathi. Hlala ubukele ukuze uthole isaziso esilandelayo!",
     "result_title": "Siyakuhalalisela"
   },
-  "mining_notice": {
-    "title": "Isaziso",
-    "message": "Siyabonga ngentshisekelo yakho yokuzuza[[:bold]] iqhwa![[/:bold]] Okwamanje silungisa ubuchwepheshe bethu futhi ukungena akutholakali okwamanje. Leli yithuba lakho lokugxila ekwakheni iqembu lakho nasekukhuliseni umphakathi wakho omncane.",
-    "message_footer": "Hlala ubukele ukuze uthole izibuyekezo eziteshini zethu [[:twitter]]ze-Twitter[[/:twitter]] ne-[[:telegram]]Telegram[[/:telegram]]."
-  },
   "qr_code": {
     "description": "Skena ikhodi ye-QR ukuze ujoyine ithimba lami."
   },

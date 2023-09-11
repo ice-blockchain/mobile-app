@@ -24,7 +24,6 @@ export const LINKS = {
   CHANGELOG: 'https://ice.io/changelog',
   ICE_FAQ: 'https://ice.io/faq',
   ICE_HOMEPAGE: 'https://ice.io',
-  BETA_TESTING: 'https://ice.io/beta-testing',
   FACEBOOK_APP: `fb://profile/${ENV.FACEBOOK_PAGE_ID}`,
   FACEBOOK_WEB: 'https://facebook.com/ice.blockchain',
   INSTAGRAM_APP: 'instagram://user?username=ice.blockchain',

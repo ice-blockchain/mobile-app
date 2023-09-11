@@ -860,11 +860,6 @@
     "expired_message": "Niestety, dzisiejszy bonus wygasł. Bądź na bieżąco z kolejnymi powiadomieniami!",
     "result_title": "Gratulacje"
   },
-  "mining_notice": {
-    "title": "Ogłoszenie",
-    "message": "Dziękujemy za zainteresowanie zarabianiem [[:bold]]ice![[/:bold]] Obecnie dopracowujemy naszą technologię i meldunek nie jest obecnie dostępny. To szansa na skupienie się na budowaniu zespołu i rozwijaniu mikrospołeczności.",
-    "message_footer": "Bądź na bieżąco z aktualizacjami na naszych kanałach na [[:twitter]]Twitterze[[/:twitter]] i [[:telegram]]Telegramie[[/:telegram]]."
-  },
   "qr_code": {
     "description": "Zeskanuj kod QR, aby dołączyć do mojego zespołu."
   },
