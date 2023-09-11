@@ -72,13 +72,6 @@ const CLAIM_DAILY_BONUS = createAction('CLAIM_DAILY_BONUS', {
   STATE: true,
 });
 
-const UPDATE_FORCE_START_MINING = createAction('UPDATE_FORCE_START_MINING', {
-  STATE: (payload: {
-    forceStartMining: boolean;
-    tapToMineActionType?: 'Extended' | 'Default';
-  }) => payload,
-});
-
 export const TokenomicsActions = Object.freeze({
   GET_MINING_SUMMARY,
   GET_BALANCE_SUMMARY,
@@ -88,5 +81,4 @@ export const TokenomicsActions = Object.freeze({
   START_MINING_SESSION,
   START_OR_UPDATE_PRE_STAKING,
   CLAIM_DAILY_BONUS,
-  UPDATE_FORCE_START_MINING,
 });

@@ -860,11 +860,6 @@
     "expired_message": "Sajnos a mai bónusz lejárt. Maradj velünk a következő frissítésért.",
     "result_title": "Gratulálunk"
   },
-  "mining_notice": {
-    "title": "Felhívás",
-    "message": "Köszönjük érdeklődésedet az [[:bold]]ice keresésével kapcsolatban![[/:bold]] Jelenleg technológiánk finomhangolását végezzük, így a bejelentkezés jelenleg nem elérhető. Itt az alkalom, hogy a csapatod építésére és a mikroközösséged növelésére koncentrálj.",
-    "message_footer": "[[:twitter]]Twitter[[/:twitter]] és [[:telegram]]Telegram[[/:telegram]] csatornáinkkal kapcsolatos frissítésekért maradj velünk."
-  },
   "qr_code": {
     "description": "QR kód beszkennelése a csapatomhoz történő csatlakozáshoz."
   },

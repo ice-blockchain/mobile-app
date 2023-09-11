@@ -860,11 +860,6 @@
     "expired_message": "很抱歉，今日獎勵已過期。 請密切關注下一次通知！",
     "result_title": "恭喜"
   },
-  "mining_notice": {
-    "title": "通知",
-    "message": "感謝您對賺取 [[:bold]]ice 感興趣！[[/:bold]] 目前我們正在進行技術上的微調，暫時無法使用簽到功能。 這是您專注於建立團隊與發展微型社區的好機會。",
-    "message_footer": "密切關注我們的 [[:twitter]]Twitter[[/:twitter]] 和 [[:telegram]]Telegram[[/:telegram]]，以得知後續更新。"
-  },
   "qr_code": {
     "description": "掃描 QR 碼以加入我的團隊。"
   },

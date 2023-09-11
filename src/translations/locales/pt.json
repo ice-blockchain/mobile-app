@@ -860,11 +860,6 @@
     "expired_message": "Infelizmente, o bônus de hoje expirou. Fique atento para a próxima notificação!",
     "result_title": "Parabéns"
   },
-  "mining_notice": {
-    "title": "Aviso",
-    "message": "Agradecemos o seu interesse em ganhar [[:bold]]ice![[/:bold]] No momento, estamos aprimorando nossa tecnologia, e o check-in não está disponível por ora. Esta é a sua chance de se concentrar em formar a sua equipe e em aumentar a sua microcomunidade.",
-    "message_footer": "Fique atento às atualizações em nossos canais no [[:twitter]]Twitter[[/:twitter]] e no [[:telegram]]Telegram[[/:telegram]]."
-  },
   "qr_code": {
     "description": "Leia o QR code para entrar na minha equipe."
   },

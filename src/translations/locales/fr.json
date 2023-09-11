@@ -860,11 +860,6 @@
     "expired_message": "Malheureusement, le bonus d’aujourd’ hui a expiré. Surveillez la prochaine notification !",
     "result_title": "Félicitations"
   },
-  "mining_notice": {
-    "title": "Avis",
-    "message": "Merci de votre intérêt à gagner de l’[[:bold]]ice ![[/:bold]] Nous peaufinons actuellement notre technologie et il n’est pas possible de s’enregistrer pour le moment. Profitez-en pour vous concentrer sur la construction de votre équipe et la croissance de votre micro-communauté.",
-    "message_footer": "Restez à l’affût des mises à jour sur nos chaînes [[:twitter]]Twitter[[/:twitter]] et [[:telegram]]Telegram[[/:telegram]]."
-  },
   "qr_code": {
     "description": "Scannez le code QR pour rejoindre mon équipe."
   },

@@ -860,11 +860,6 @@
     "expired_message": "Tyvärr har dagens bonus löpt ut. Håll utkik efter nästa avisering!",
     "result_title": "Grattis"
   },
-  "mining_notice": {
-    "title": "Meddelande",
-    "message": "Tack för att du är intresserad av att tjäna [[:bold]]ice![[/:bold]] Vi finjusterar för närvarande vår teknik och därför går det inte att checka in för tillfället. Det här är din chans att fokusera på att bygga ditt team och utöka din mikrocommunity.",
-    "message_footer": "Håll utkik efter uppdateringar på våra kanaler på [[:twitter]]Twitter[[/:twitter]] och [[:telegram]]Telegram[[/:telegram]]."
-  },
   "qr_code": {
     "description": "Skanna QR-koden för att gå med i mitt team."
   },

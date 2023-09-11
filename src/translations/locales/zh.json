@@ -860,11 +860,6 @@
     "expired_message": "很遗憾，今天的奖金已过期。敬请期待下一次的通知！",
     "result_title": "恭喜"
   },
-  "mining_notice": {
-    "title": "注意事项",
-    "message": "感谢您对赚取 [[:bold]]ice 感兴趣！[[/:bold]] 我们目前正在对技术进行微调，目前无法办理签到。这是您专注于建立团队和发展微社区的机会。",
-    "message_footer": "敬请关注我们的 [[:twitter]]Twitter[[/:twitter]] 和 [[:telegram]]Telegram[[/:telegram]] 频道。"
-  },
   "qr_code": {
     "description": "扫描二维码加入我的团队。"
   },

@@ -860,11 +860,6 @@
     "expired_message": "Ne yazık ki, bugünün bonusunun süresi doldu. Bir sonraki bildirim için bizi izlemeye devam et!",
     "result_title": "Tebrikler"
   },
-  "mining_notice": {
-    "title": "Bildirim",
-    "message": "[[:bold]]ice kazanmaya gösterdiğin ilgi için teşekkürler!![[/:bold]] Şu anda teknolojimizde ince ayar yapıyoruz ve şu anda check-in yapılamıyor. Bu, ekibini oluşturmaya ve mikro-topluluğunu büyütmeye odaklanma şansın.",
-    "message_footer": "[[:twitter]]Twitter[[/:twitter]] ve [[:telegram]]Telegram[[/:telegram]] kanallarımızdaki güncellemeler için bizi izlemeye devam et."
-  },
   "qr_code": {
     "description": "Ekibime katılmak için QR kodunu tara."
   },

@@ -5,7 +5,6 @@ import {Api} from '@api/index';
 import {ResurrectRequiredData} from '@api/tokenomics/types';
 import {User} from '@api/user/types';
 import {LocalAudio} from '@audio';
-import {ENV} from '@constants/env';
 import {loadLocalAudio} from '@services/audio';
 import {dayjs} from '@services/dayjs';
 import {AccountActions} from '@store/modules/Account/actions';
@@ -16,17 +15,11 @@ import {
 } from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
-import {shareSocialsSaga} from '@store/modules/Socials/sagas/shareSocials';
-import {SocialsShareResult} from '@store/modules/Socials/types';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
-import {
-  forceStartMiningSelector,
-  isMiningActiveSelector,
-} from '@store/modules/Tokenomics/selectors';
+import {isMiningActiveSelector} from '@store/modules/Tokenomics/selectors';
 import {openConfirmResurrect} from '@store/modules/Tokenomics/utils/openConfirmResurrect';
 import {openConfirmResurrectNo} from '@store/modules/Tokenomics/utils/openConfirmResurrectNo';
 import {openConfirmResurrectYes} from '@store/modules/Tokenomics/utils/openConfirmResurrectYes';
-import {openMiningNotice} from '@store/modules/Tokenomics/utils/openMiningNotice';
 import {hapticFeedback} from '@utils/device';
 import {getErrorMessage, showError} from '@utils/errors';
 import {
@@ -43,36 +36,6 @@ export function* startMiningSessionSaga(
     typeof TokenomicsActions.START_MINING_SESSION.START.create
   >,
 ) {
-  if (ENV.SHOW_MINING_NOTICE) {
-    yield call(openMiningNotice);
-    return;
-  }
-  const forceStartMining: ReturnType<typeof forceStartMiningSelector> =
-    yield select(forceStartMiningSelector);
-
-  if (forceStartMining) {
-    yield put(
-      TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.create({
-        forceStartMining: false,
-      }),
-    );
-  } else {
-    /**
-     * Check if we can show mining popup before we start/resume mining
-     */
-    const result: SocialsShareResult = yield call(shareSocialsSaga);
-
-    if (result.status === 'opened') {
-      yield put(
-        TokenomicsActions.UPDATE_FORCE_START_MINING.STATE.create({
-          forceStartMining: true,
-          tapToMineActionType: action.payload?.tapToMineActionType,
-        }),
-      );
-      return;
-    }
-  }
-
   const user: ReturnType<typeof unsafeUserSelector> = yield select(
     unsafeUserSelector,
   );

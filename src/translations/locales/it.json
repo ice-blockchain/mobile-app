@@ -860,11 +860,6 @@
     "expired_message": "Purtroppo il bonus di oggi è scaduto. Continua a seguirci per la prossima notifica!",
     "result_title": "Congratulazioni"
   },
-  "mining_notice": {
-    "title": "Avviso",
-    "message": "Grazie per il tuo interesse nel guadagnare [[:bold]] ice![[/:bold]] Stiamo perfezionando la nostra tecnologia e l'accesso non è al momento disponibile. Questa è la tua occasione per concentrarti sulla costruzione del tuo team e sulla crescita della tua micro-community.",
-    "message_footer": "Continua a seguirci per gli aggiornamenti sui nostri canali [[:twitter]]Twitter[[/:twitter]] e [[:telegram]]Telegram[[/:telegram]]."
-  },
   "qr_code": {
     "description": "Scansiona il codice QR per entrare a far parte del mio team."
   },

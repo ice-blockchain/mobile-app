@@ -860,11 +860,6 @@
     "expired_message": "Na žalost je današnji bonus potekel. Spremljajte nas do naslednjega obvestila!",
     "result_title": "Čestitke"
   },
-  "mining_notice": {
-    "title": "Obvestilo",
-    "message": "Hvala za vaše zanimanje za zaslužek v [[:bold]]ice![[/:bold]] Trenutno izpopolnjujemo svojo tehnologijo in prijava trenutno ni na voljo. To je vaša priložnost, da se osredotočite na ustvarjanje svoje ekipe in rast svoje mikro skupnosti.",
-    "message_footer": "Spremljajte novosti na naših kanalih [[:twitter]]Twitter[[/:twitter]] in [[:telegram]]Telegram[[/:telegram]]."
-  },
   "qr_code": {
     "description": "Skeniraj QR kodo in se pridruži moji ekipi."
   },

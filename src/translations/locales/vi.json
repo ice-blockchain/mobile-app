@@ -860,11 +860,6 @@
     "expired_message": "Rất tiếc, tiền thưởng hôm nay đã hết hạn. Hãy theo dõi thông báo tiếp theo!",
     "result_title": "Xin chúc mừng"
   },
-  "mining_notice": {
-    "title": "Thông báo",
-    "message": "Cảm ơn bạn đã quan tâm đến việc kiếm [[:bold]]ice![[/:bold]] Chúng tôi hiện đang tinh chỉnh công nghệ của mình và tính năng điểm danh hiện không khả dụng. Đây là cơ hội để bạn tập trung vào việc xây dựng nhóm và phát triển cộng đồng vi mô của mình.",
-    "message_footer": "Hãy đón chờ thông tin cập nhật trên các kênh [[:twitter]]Twitter[[/:twitter]] và [[:telegram]]Telegram[[/:telegram]] của chúng tôi."
-  },
   "qr_code": {
     "description": "Quét mã QR để tham gia nhóm của tôi."
   },

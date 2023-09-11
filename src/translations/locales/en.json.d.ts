@@ -559,9 +559,6 @@ export type Translations = {
   'extra_bonus.expired_title': null;
   'extra_bonus.expired_message': null;
   'extra_bonus.result_title': null;
-  'mining_notice.title': null;
-  'mining_notice.message': null;
-  'mining_notice.message_footer': null;
   'qr_code.description': null;
   'social_media.tiktok.title': null;
   'social_media.tiktok.description': null;

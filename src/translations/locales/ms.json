@@ -860,11 +860,6 @@
     "expired_message": "Malangnya, bonus hari ini telah tamat tempoh. Teruskan bersama untuk pemberitahuan seterusnya!",
     "result_title": "Tahniah"
   },
-  "mining_notice": {
-    "title": "Makluman",
-    "message": "Terima kasih atas minat anda dalam memperoleh [[:bold]]ice![[/:bold]] Kami sedang memperkemaskan teknologi kami pada masa ini dan semak masuk tidak tersedia buat masa ini. Inilah peluang anda untuk memfokuskan pada membina pasukan anda dan mengembangkan komuniti mikro anda.",
-    "message_footer": "Teruskan bersama untuk pengemaskinian di saluran [[:twitter]]Twitter[[/:twitter]] dan [[:telegram]]Telegram[[/:telegram]] kami."
-  },
   "qr_code": {
     "description": "Imbas kod QR untuk menyertai pasukan saya."
   },

@@ -860,11 +860,6 @@
     "expired_message": "Fatkeqësisht, bonusi i sotëm ka skaduar. Rri në korrent për njoftimin e radhës!",
     "result_title": "Përgëzime"
   },
-  "mining_notice": {
-    "title": "Njoftim",
-    "message": "Faleminderit për interesin në [[:bold]]ice![[/:bold]] Po rafinojmë teknologjinë dhe paraqitja në sistem nuk është në dispozicion për momentin. Tani e ke shansin të fokusohesh në ndërtimin e ekipit dhe zgjerimin e mikro-komunitetit.",
-    "message_footer": "Rri në korrent për përditësime në llogaritë tona në kanalet [[:twitter]]Twitter[[/:twitter]] dhe [[:telegram]]Telegram[[/:telegram]] ."
-  },
   "qr_code": {
     "description": "Skano kodin QR për t'iu bashkuar ekipit tim."
   },
