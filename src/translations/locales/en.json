@@ -1026,6 +1026,20 @@
         "description": "We have identified that your identity is associated with another account. If you think this is an error, please send an email to [[:bold]]feedback@ice.io[[/:bold]] with your nickname and a high-quality selfie.",
         "action": "Close"
       }
+    },
+    "emotions_recognition": {
+      "start": "Start",
+      "please_show_this": "Please show this emotion",
+      "emotions": {
+        "anger": "anger",
+        "contempt": "contempt",
+        "disgust": "disgust",
+        "fear": "fear",
+        "happiness": "happiness",
+        "neutral": "neutral",
+        "sadness": "sadness",
+        "surprise": "surprise"
+      }
     }
   }
 }

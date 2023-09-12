@@ -139,4 +139,7 @@ export const Images = {
       badPractices: require('./creative_library/practices_section/bad_practices.png'),
     },
   },
+  emotions: {
+    anger: require('./emotions/anger.png'),
+  },
 } as const;

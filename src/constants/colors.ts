@@ -14,6 +14,7 @@ export const COLORS = {
   secondary: '#707489',
   socialLink: '#3366CC',
   secondaryLight: '#B6B4BA',
+  secondaryPale: '#A3A5AA',
   secondaryFaint: '#E3EBF8',
   attention: '#FD4E4E',
   attentionDark: '#F53333',

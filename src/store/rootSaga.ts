@@ -14,7 +14,7 @@ import {collectionsWatchers} from '@store/modules/Collections/sagas';
 import {teamWatchers} from '@store/modules/Contacts/sagas';
 import {creativeLibraryWatchers} from '@store/modules/CreativeLibrary/sagas';
 import {devicesWatchers} from '@store/modules/Devices/sagas';
-import {faceAuthWatchers} from '@store/modules/FaceAuth/sagas';
+import {faceRecognitionWatchers} from '@store/modules/FaceRecognition/sagas';
 import {inAppNotificationsWatchers} from '@store/modules/InAppNotifications/sagas';
 import {linkingWatchers} from '@store/modules/Linking/sagas';
 import {newsWatchers} from '@store/modules/News/sagas';
@@ -39,7 +39,7 @@ const watchers = [
   ...newsWatchers,
   ...statsWatchers,
   ...analyticsWatchers,
-  ...faceAuthWatchers,
+  ...faceRecognitionWatchers,
   ...permissionsWatchers,
   ...referralsWatchers,
   ...collectionsWatchers,

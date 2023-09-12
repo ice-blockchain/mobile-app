@@ -7,6 +7,10 @@ export const getFilenameFromPath = (path: string) => {
   return path.replace(/^.*[\\\/]/, '');
 };
 
+export const getFilenameFromPathWithoutExtension = (path: string) => {
+  return getFilenameFromPath(path).split('.')[0];
+};
+
 export const getImageUriForSize = (
   uri: string,
   {width, height}: {width?: number; height?: number},

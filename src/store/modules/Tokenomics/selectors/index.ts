@@ -62,3 +62,7 @@ export const globalRankSelector = (userId: string) => (state: RootState) => {
 export const balanceHistorySelector = (state: RootState) => {
   return state.tokenomics.balanceHistory;
 };
+
+export const tapToMineActionTypeSelector = (state: RootState) => {
+  return state.tokenomics.tapToMineActionType;
+};

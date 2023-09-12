@@ -642,4 +642,14 @@ export type Translations = {
   'face_auth.auth_status.banned.title': null;
   'face_auth.auth_status.banned.description': null;
   'face_auth.auth_status.banned.action': null;
+  'face_auth.emotions_recognition.start': null;
+  'face_auth.emotions_recognition.please_show_this': null;
+  'face_auth.emotions_recognition.emotions.anger': null;
+  'face_auth.emotions_recognition.emotions.contempt': null;
+  'face_auth.emotions_recognition.emotions.disgust': null;
+  'face_auth.emotions_recognition.emotions.fear': null;
+  'face_auth.emotions_recognition.emotions.happiness': null;
+  'face_auth.emotions_recognition.emotions.neutral': null;
+  'face_auth.emotions_recognition.emotions.sadness': null;
+  'face_auth.emotions_recognition.emotions.surprise': null;
 };

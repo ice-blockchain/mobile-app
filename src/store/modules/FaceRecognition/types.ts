@@ -1,0 +1,15 @@
+// SPDX-License-Identifier: ice License 1.0
+
+export type FaceAuthStatus =
+  | 'LOADING'
+  | 'SUCCESS'
+  | 'FAILED'
+  | 'BANNED'
+  | 'TRY_LATER';
+
+export type EmotionsAuthStatus =
+  | 'LOADING'
+  | 'SUCCESS'
+  | 'FAILED'
+  | 'BANNED'
+  | 'TRY_LATER';
