@@ -19,8 +19,8 @@ export function* completeInviteFriendsTaskSaga() {
     task &&
     !task.completed &&
     requiredInvitesCount &&
-    user?.t1ReferralCount &&
-    user?.t1ReferralCount >= requiredInvitesCount
+    user?.t1HumanReferralCount &&
+    user?.t1HumanReferralCount >= requiredInvitesCount
   ) {
     yield put(
       AchievementsActions.TASK_MARK_COMPLETED.START.create({

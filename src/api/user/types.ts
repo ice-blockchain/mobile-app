@@ -33,6 +33,7 @@ export type User = {
   } | null;
   resetProfilePicture?: boolean | null;
 
+  t1HumanReferralCount?: number | null;
   t1ReferralCount?: number | null;
   t2ReferralCount?: number | null;
   agendaPhoneNumberHashes?: string | null;
