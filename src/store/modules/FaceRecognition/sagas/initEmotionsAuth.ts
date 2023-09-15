@@ -39,6 +39,7 @@ export function* initEmotionsAuthSaga(action: Actions) {
     yield put(
       FaceRecognitionActions.EMOTIONS_AUTH.COMPLETE_WITH_STATUS.create({
         status: 'SUCCESS',
+        frames,
       }),
     );
   } catch (error: unknown) {

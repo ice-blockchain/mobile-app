@@ -2,7 +2,6 @@
 
 import {COLORS} from '@constants/colors';
 import {commonStyles, windowWidth} from '@constants/styles';
-import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import React from 'react';
 import {View} from 'react-native';
 import Svg, {ClipPath, Defs, G, Path, Rect} from 'react-native-svg';
@@ -14,10 +13,8 @@ export const FACE_CONTAINER_WIDTH = windowWidth - PADDING_HORIZONTAL * 2;
 export const FACE_CONTAINER_ASPECT_RATIO = 270 / 340;
 
 export function FaceAuthOverlay() {
-  const {top} = useSafeAreaInsets();
   const ovalPath = `
         M${PADDING_HORIZONTAL},${
-    top +
     FACE_CONTAINER_PADDING_TOP +
     (FACE_CONTAINER_WIDTH / 2) * FACE_CONTAINER_ASPECT_RATIO
   }

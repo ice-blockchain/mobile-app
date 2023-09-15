@@ -20,7 +20,11 @@ export function FaceAuthCameraFeed({updateKycStepPassed}: Props) {
 
   const [faceAuthPicture, setFaceAuthPicture] =
     useState<CameraCapturedPicture | null>(null);
-  const onPictureTaken = async (picture: CameraCapturedPicture) => {
+  const onPictureTaken = async ({
+    picture,
+  }: {
+    picture: CameraCapturedPicture;
+  }) => {
     setFaceAuthPicture(picture);
     setFaceAuthPhase('SEND_OR_RETAKE');
   };

@@ -42,6 +42,7 @@ export function* initFaceAuthSaga(action: Actions) {
     yield put(
       FaceRecognitionActions.FACE_AUTH.COMPLETE_WITH_STATUS.create({
         status: 'SUCCESS',
+        croppedPictureUri,
       }),
     );
   } catch (error: unknown) {

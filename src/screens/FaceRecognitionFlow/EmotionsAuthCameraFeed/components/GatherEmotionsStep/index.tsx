@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {commonStyles} from '@constants/styles';
-import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {CameraFeed} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
 import {EmotionCard} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/components/EmotionCard';
 import {StartButton} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/components/StartButton';
@@ -29,7 +28,6 @@ function getSecondsPassed(since: number) {
 }
 
 export function GatherEmotionsStep({onAllEmotionsGathered}: Props) {
-  const {top: safeAreaTopOffset} = useSafeAreaInsets();
   const cameraRef = useRef<Camera>(null);
   const [isCameraReady, setIsCameraReady] = useState(false);
   const emotions = useSelector(emotionsAuthEmotionsSelector);
@@ -62,14 +60,12 @@ export function GatherEmotionsStep({onAllEmotionsGathered}: Props) {
           });
           // You now have the video object which contains the URI to the video file
           const {width, height} = await getVideoDimensionsWithFFmpeg(video.uri);
-          console.log({video, width, height});
-          getPictureCropStartY({safeAreaTopOffset, pictureWidth: width});
           dispatch(
             FaceRecognitionActions.EMOTIONS_AUTH.START.create({
               videoUri: video.uri,
               cropStartY: getPictureCropStartY({
-                safeAreaTopOffset,
                 pictureWidth: width,
+                pictureHeight: height,
               }),
               videoWidth: width,
             }),
@@ -94,14 +90,7 @@ export function GatherEmotionsStep({onAllEmotionsGathered}: Props) {
       }, 1000);
       return () => clearInterval(handle);
     }
-  }, [
-    currentEmotionIndex,
-    dispatch,
-    emotions,
-    isCameraReady,
-    safeAreaTopOffset,
-    showStart,
-  ]);
+  }, [currentEmotionIndex, dispatch, emotions, isCameraReady, showStart]);
 
   useEffect(() => {
     if (emotions.length && currentEmotionIndex >= emotions.length) {

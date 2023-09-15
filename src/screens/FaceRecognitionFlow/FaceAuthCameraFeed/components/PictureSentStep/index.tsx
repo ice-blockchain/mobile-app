@@ -5,7 +5,10 @@ import {commonStyles} from '@constants/styles';
 import {useNavigation} from '@react-navigation/native';
 import {StatusOverlay} from '@screens/FaceRecognitionFlow/components/StatusOverlay';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
-import {faceAuthStatusSelector} from '@store/modules/FaceRecognition/selectors';
+import {
+  croppedPictureUriSelector,
+  faceAuthStatusSelector,
+} from '@store/modules/FaceRecognition/selectors';
 import {LogoIcon} from '@svg/LogoIcon';
 import {RestartIcon} from '@svg/RestartIcon';
 import {t} from '@translations/i18n';
@@ -40,9 +43,15 @@ export function PictureSentStep({
     navigation.goBack();
   };
 
+  const croppedPictureUri = useSelector(croppedPictureUriSelector);
+
   return (
     <View style={commonStyles.flexOne}>
-      <Image source={{uri: picture.uri}} style={styles.picture} />
+      <Image
+        resizeMode={'contain'}
+        source={{uri: croppedPictureUri ?? picture.uri}}
+        style={styles.picture}
+      />
       <View style={styles.pictureOverlay} />
       {faceAuthStatus === 'LOADING' ? (
         <StatusOverlay

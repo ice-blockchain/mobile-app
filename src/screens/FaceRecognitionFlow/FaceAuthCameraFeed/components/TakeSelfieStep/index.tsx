@@ -10,18 +10,21 @@ import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
-  onPictureTaken: (picture: CameraCapturedPicture) => void;
+  onPictureTaken: ({picture}: {picture: CameraCapturedPicture}) => void;
 };
 
 export function TakeSelfieStep({onPictureTaken}: Props) {
   const cameraRef = useRef<Camera>(null);
   const [isCameraReady, setIsCameraReady] = useState(false);
+
   const takePicture = async () => {
     if (cameraRef.current) {
       const facePhoto = await cameraRef.current.takePictureAsync({
         quality: 0.95,
       });
-      onPictureTaken(facePhoto);
+      onPictureTaken({
+        picture: facePhoto,
+      });
     }
   };
   return (

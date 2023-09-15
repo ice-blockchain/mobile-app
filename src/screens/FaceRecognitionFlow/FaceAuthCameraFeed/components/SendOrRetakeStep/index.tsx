@@ -4,7 +4,6 @@ import {CheckMark} from '@components/CheckMark';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {FaceAuthOverlay} from '@screens/FaceRecognitionFlow/components/FaceAuthOverlay';
 import {getPictureCropStartY} from '@screens/FaceRecognitionFlow/utils';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
@@ -28,7 +27,6 @@ export function SendOrRetakeStep({
   onPictureSent,
   picture,
 }: Props) {
-  const {top: safeAreaTopOffset} = useSafeAreaInsets();
   const dispatch = useDispatch();
   const sendPicture = async () => {
     dispatch(
@@ -36,8 +34,8 @@ export function SendOrRetakeStep({
         pictureUri: picture.uri,
         pictureWidth: picture.width,
         cropStartY: getPictureCropStartY({
-          safeAreaTopOffset,
           pictureWidth: picture.width,
+          pictureHeight: picture.height,
         }),
       }),
     );

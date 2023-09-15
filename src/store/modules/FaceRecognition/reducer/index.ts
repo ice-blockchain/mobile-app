@@ -14,6 +14,8 @@ export interface State {
   emotionsAuthStatus: EmotionsAuthStatus | null;
   sessionId: string | null;
   emotions: AuthEmotion[];
+  croppedPictureUri?: string;
+  frames?: string[];
 }
 
 type Actions = ReturnType<
@@ -46,6 +48,7 @@ export function faceRecognitionReducer(
         break;
       case FaceRecognitionActions.FACE_AUTH.COMPLETE_WITH_STATUS.type:
         draft.faceAuthStatus = action.payload.status;
+        draft.croppedPictureUri = action.payload.croppedPictureUri;
         break;
       case FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.SUCCESS.type:
         draft.emotions = action.payload.emotions;
@@ -61,6 +64,7 @@ export function faceRecognitionReducer(
         break;
       case FaceRecognitionActions.EMOTIONS_AUTH.COMPLETE_WITH_STATUS.type:
         draft.emotionsAuthStatus = action.payload.status;
+        draft.frames = action.payload.frames;
         if (
           draft.emotionsAuthStatus !== 'SUCCESS' &&
           draft.emotionsAuthStatus !== 'LOADING'

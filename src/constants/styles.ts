@@ -38,5 +38,6 @@ export const MIDDLE_BUTTON_HIT_SLOP = {
 };
 
 export const windowWidth = Dimensions.get('window').width;
+export const windowHeight = Dimensions.get('window').height;
 
 export const smallHeightDevice = screenHeight < 680;

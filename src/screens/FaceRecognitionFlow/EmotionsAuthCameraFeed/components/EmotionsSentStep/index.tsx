@@ -5,12 +5,15 @@ import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {useNavigation} from '@react-navigation/native';
 import {StatusOverlay} from '@screens/FaceRecognitionFlow/components/StatusOverlay';
-import {emotionsAuthStatusSelector} from '@store/modules/FaceRecognition/selectors';
+import {
+  emotionsAuthFramesSelector,
+  emotionsAuthStatusSelector,
+} from '@store/modules/FaceRecognition/selectors';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {LogoIcon} from '@svg/LogoIcon';
 import {t} from '@translations/i18n';
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -29,8 +32,17 @@ export function EmotionsSentStep() {
     navigation.goBack();
   };
 
+  const emotionsAuthFrames = useSelector(emotionsAuthFramesSelector);
+
   return (
     <View style={commonStyles.flexOne}>
+      {emotionsAuthFrames?.length ? (
+        <Image
+          resizeMode={'contain'}
+          source={{uri: emotionsAuthFrames[Math.floor(Math.random() * 15)]}}
+          style={styles.picture}
+        />
+      ) : null}
       {emotionsAuthStatus === 'LOADING' ? (
         <StatusOverlay
           onLightBackground
@@ -78,6 +90,12 @@ export function EmotionsSentStep() {
 }
 
 const styles = StyleSheet.create({
+  picture: {
+    width: '100%',
+    height: '100%',
+    transform: [{scaleX: -1}],
+    position: 'absolute',
+  },
   checkmarkStyle: {
     backgroundColor: COLORS.white,
   },
