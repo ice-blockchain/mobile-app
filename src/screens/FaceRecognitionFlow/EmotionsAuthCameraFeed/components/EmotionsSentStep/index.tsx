@@ -44,7 +44,7 @@ export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
     }
   }, [emotionsAuthStatus, onTryAgain]);
   useEffect(() => {
-    if (emotionsAuthStatus === 'NEED_MORE_EMOTIONS') {
+    if (emotionsAuthStatus === 'NEED_MORE_EMOTIONS' || !emotionsAuthStatus) {
       onGatherMoreEmotions();
     }
   }, [emotionsAuthStatus, onGatherMoreEmotions]);

@@ -22,7 +22,7 @@ const FETCH_EMOTIONS_FOR_AUTH = createAction('FETCH_EMOTIONS_FOR_AUTH', {
   SUCCESS: (payload: {
     emotions: AuthEmotion[];
     sessionId: string;
-    sessionExpiredAt?: number;
+    sessionExpiredAt: number;
   }) => payload,
   FAILURE: (payload: {status: EmotionsAuthStatus}) => payload,
 });
@@ -33,7 +33,7 @@ const EMOTIONS_AUTH = createAction('EMOTIONS_AUTH', {
     cropStartY: number;
     videoWidth: number;
   }) => payload,
-  NEED_MORE_EMOTIONS: true,
+  NEED_MORE_EMOTIONS: (payload: {emotions: AuthEmotion[]}) => payload,
   SUCCESS: true,
   FAILURE: (payload: {status: EmotionsAuthStatus}) => payload,
 });

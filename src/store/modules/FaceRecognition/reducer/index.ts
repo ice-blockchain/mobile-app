@@ -66,9 +66,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.SUCCESS.type:
         draft.emotions = action.payload.emotions;
         draft.sessionId = action.payload.sessionId;
-        if (action.payload.sessionExpiredAt) {
-          draft.sessionExpiredAt = action.payload.sessionExpiredAt;
-        }
+        draft.sessionExpiredAt = action.payload.sessionExpiredAt;
         break;
       case FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.FAILURE.type:
         draft.emotionsAuthStatus = action.payload.status;
@@ -84,6 +82,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         break;
       case FaceRecognitionActions.EMOTIONS_AUTH.NEED_MORE_EMOTIONS.type:
         draft.emotionsAuthStatus = 'NEED_MORE_EMOTIONS';
+        draft.emotions = action.payload.emotions;
         break;
       case FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.type:
         draft.emotionsAuthStatus = action.payload.status;

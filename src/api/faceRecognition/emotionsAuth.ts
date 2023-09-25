@@ -1,12 +1,15 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {buildFormData, post} from '@api/client';
+import {AuthEmotion} from '@api/faceRecognition/types';
 import {getFilenameFromPath} from '@utils/file';
 import {Platform} from 'react-native';
 
 type Response = {
   result: boolean;
   sessionEnded: boolean;
+  emotions: AuthEmotion[];
+  sessionId: string;
 };
 
 export function emotionsAuth({
@@ -28,7 +31,6 @@ export function emotionsAuth({
           : pictureUri.replace('file://', ''),
     })),
   });
-  // return Promise.resolve();
   return post<FormData, Response>(
     `/face-auth/liveness/${userId}/${sessionId}`,
     formData,

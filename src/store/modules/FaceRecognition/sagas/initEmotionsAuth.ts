@@ -4,7 +4,12 @@ import {FACE_RECOGNITION_PICTURE_SIZE} from '@api/faceRecognition/constants';
 import {Api} from '@api/index';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
-import {emotionsAuthSessionSelector} from '@store/modules/FaceRecognition/selectors';
+import {
+  emotionsAuthEmotionsSelector,
+  emotionsAuthSessionExpiredAtSelector,
+  emotionsAuthSessionSelector,
+} from '@store/modules/FaceRecognition/selectors';
+import {returnSecondIfNew} from '@utils/array';
 import {showError} from '@utils/errors';
 import {extractFramesWithFFmpeg} from '@utils/ffmpeg';
 import axios from 'axios';
@@ -19,9 +24,26 @@ export function* initEmotionsAuthSaga(action: Actions) {
     const {videoUri, cropStartY, videoWidth} = action.payload;
     const sessionId: ReturnType<typeof emotionsAuthSessionSelector> =
       yield select(emotionsAuthSessionSelector);
+    const emotions: ReturnType<typeof emotionsAuthEmotionsSelector> =
+      yield select(emotionsAuthEmotionsSelector);
     const userId: ReturnType<typeof userIdSelector> = yield select(
       userIdSelector,
     );
+    const sessionExpiredAt: ReturnType<
+      typeof emotionsAuthSessionExpiredAtSelector
+    > = yield select(emotionsAuthSessionExpiredAtSelector);
+    const isSessionExpired = sessionExpiredAt
+      ? Date.now() >= sessionExpiredAt
+      : false;
+    if (isSessionExpired) {
+      yield put(
+        FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create({
+          status: 'SESSION_EXPIRED',
+        }),
+      );
+      return;
+    }
+
     const frames: SagaReturnType<typeof extractFramesWithFFmpeg> = yield call(
       extractFramesWithFFmpeg,
       {
@@ -49,7 +71,9 @@ export function* initEmotionsAuthSaga(action: Actions) {
       }
     } else {
       yield put(
-        FaceRecognitionActions.EMOTIONS_AUTH.NEED_MORE_EMOTIONS.create(),
+        FaceRecognitionActions.EMOTIONS_AUTH.NEED_MORE_EMOTIONS.create({
+          emotions: returnSecondIfNew(emotions, response.emotions),
+        }),
       );
     }
   } catch (error: unknown) {

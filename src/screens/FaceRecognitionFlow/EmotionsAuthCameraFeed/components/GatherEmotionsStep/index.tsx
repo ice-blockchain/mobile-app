@@ -12,6 +12,7 @@ import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
   emotionsAuthEmotionsSelector,
   emotionsAuthNextEmotionIndexSelector,
+  emotionsAuthSessionSelector,
   emotionsAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
 import {isEmotionsAuthFailed} from '@store/modules/FaceRecognition/utils';
@@ -48,6 +49,7 @@ export function GatherEmotionsStep({
   const cameraRef = useRef<Camera>(null);
   const [isCameraReady, setIsCameraReady] = useState(false);
   const emotions = useSelector(emotionsAuthEmotionsSelector);
+  const session = useSelector(emotionsAuthSessionSelector);
   const emotionsAuthNextEmotionIndex = useSelector(
     emotionsAuthNextEmotionIndexSelector,
   );
@@ -58,8 +60,10 @@ export function GatherEmotionsStep({
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.START.create());
-  }, [dispatch]);
+    if (!session) {
+      dispatch(FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.START.create());
+    }
+  }, [dispatch, session]);
 
   useEffect(() => {
     if (
