@@ -1,14 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {commonStyles} from '@constants/styles';
 import {useNavigation} from '@react-navigation/native';
+import {cameraStyles} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
 import {StatusOverlay} from '@screens/FaceRecognitionFlow/components/StatusOverlay';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
-import {
-  croppedPictureUriSelector,
-  faceAuthStatusSelector,
-} from '@store/modules/FaceRecognition/selectors';
+import {faceAuthStatusSelector} from '@store/modules/FaceRecognition/selectors';
 import {LogoIcon} from '@svg/LogoIcon';
 import {RestartIcon} from '@svg/RestartIcon';
 import {t} from '@translations/i18n';
@@ -43,13 +40,11 @@ export function PictureSentStep({
     navigation.goBack();
   };
 
-  const croppedPictureUri = useSelector(croppedPictureUriSelector);
-
   return (
-    <View style={commonStyles.flexOne}>
+    <View style={cameraStyles.cameraContainer}>
       <Image
         resizeMode={'contain'}
-        source={{uri: croppedPictureUri ?? picture.uri}}
+        source={{uri: picture.uri}}
         style={styles.picture}
       />
       <View style={styles.pictureOverlay} />

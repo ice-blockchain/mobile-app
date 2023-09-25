@@ -2,7 +2,7 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {commonStyles, windowWidth} from '@constants/styles';
+import {windowWidth} from '@constants/styles';
 import {CameraFeed} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
 import {Camera, CameraCapturedPicture} from 'expo-camera';
 import React, {useRef, useState} from 'react';
@@ -28,7 +28,7 @@ export function TakeSelfieStep({onPictureTaken}: Props) {
     }
   };
   return (
-    <View style={commonStyles.flexOne}>
+    <View>
       <CameraFeed
         ref={cameraRef}
         onCameraReady={() => setIsCameraReady(true)}

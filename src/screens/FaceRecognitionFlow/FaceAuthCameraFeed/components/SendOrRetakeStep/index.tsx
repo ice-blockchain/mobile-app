@@ -3,7 +3,7 @@
 import {CheckMark} from '@components/CheckMark';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {commonStyles} from '@constants/styles';
+import {cameraStyles} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
 import {FaceAuthOverlay} from '@screens/FaceRecognitionFlow/components/FaceAuthOverlay';
 import {getPictureCropStartY} from '@screens/FaceRecognitionFlow/utils';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
@@ -42,8 +42,12 @@ export function SendOrRetakeStep({
     onPictureSent();
   };
   return (
-    <View style={commonStyles.flexOne}>
-      <Image source={{uri: picture.uri}} style={styles.picture} />
+    <View style={cameraStyles.cameraContainer}>
+      <Image
+        resizeMode={'contain'}
+        source={{uri: picture.uri}}
+        style={styles.picture}
+      />
       <FaceAuthOverlay />
       <View style={styles.buttonContainer}>
         <Touchable

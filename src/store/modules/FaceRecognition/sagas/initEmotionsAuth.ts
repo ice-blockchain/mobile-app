@@ -31,40 +31,71 @@ export function* initEmotionsAuthSaga(action: Actions) {
         width: videoWidth,
       },
     );
-    yield call(Api.faceRecognition.emotionsAuth, {
-      userId,
-      sessionId,
-      pictureUris: frames,
-    });
-    yield put(
-      FaceRecognitionActions.EMOTIONS_AUTH.COMPLETE_WITH_STATUS.create({
-        status: 'SUCCESS',
-        frames,
-      }),
-    );
-  } catch (error: unknown) {
-    if (axios.isAxiosError(error) && error.code === 'USER_DISABLED') {
+    const response: SagaReturnType<typeof Api.faceRecognition.emotionsAuth> =
+      yield call(Api.faceRecognition.emotionsAuth, {
+        userId,
+        sessionId,
+        pictureUris: frames,
+      });
+    if (response.sessionEnded) {
+      if (response.result) {
+        yield put(FaceRecognitionActions.EMOTIONS_AUTH.SUCCESS.create());
+      } else {
+        yield put(
+          FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create({
+            status: 'TRY_LATER',
+          }),
+        );
+      }
+    } else {
       yield put(
-        FaceRecognitionActions.EMOTIONS_AUTH.COMPLETE_WITH_STATUS.create({
+        FaceRecognitionActions.EMOTIONS_AUTH.NEED_MORE_EMOTIONS.create(),
+      );
+    }
+  } catch (error: unknown) {
+    if (
+      axios.isAxiosError(error) &&
+      (error.response?.data?.code === 'RATE_LIMIT_EXCEEDED' ||
+        error.response?.data?.code === 'RATE_LIMIT_NEGATIVE_EXCEEDED')
+    ) {
+      yield put(
+        FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create({
           status: 'BANNED',
         }),
       );
     } else if (
       axios.isAxiosError(error) &&
-      error.code === 'RATE_LIMIT_EXCEEDED'
+      (error.response?.data?.code === 'RATE_LIMIT_EXCEEDED' ||
+        error.response?.data?.code === 'RATE_LIMIT_NEGATIVE_EXCEEDED')
     ) {
       yield put(
-        FaceRecognitionActions.EMOTIONS_AUTH.COMPLETE_WITH_STATUS.create({
+        FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create({
           status: 'TRY_LATER',
+        }),
+      );
+    } else if (
+      axios.isAxiosError(error) &&
+      (error.code === 'SESSION_TIMED_OUT' ||
+        error.code === 'SESSION_NOT_FOUND' ||
+        error.response?.data?.code === 'SESSION_TIMED_OUT' ||
+        error.response?.data?.code === 'SESSION_NOT_FOUND')
+    ) {
+      yield put(
+        FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create({
+          status: 'SESSION_EXPIRED',
         }),
       );
     } else {
       yield put(
-        FaceRecognitionActions.EMOTIONS_AUTH.COMPLETE_WITH_STATUS.create({
+        FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create({
           status: 'FAILED',
         }),
       );
-      if (axios.isAxiosError(error) && error.status && error.status >= 500) {
+      if (
+        axios.isAxiosError(error) &&
+        error.response?.status != null &&
+        error.response?.status >= 500
+      ) {
         yield spawn(showError, error);
       }
     }

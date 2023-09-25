@@ -13,15 +13,17 @@ const FACE_AUTH = createAction('FACE_AUTH', {
     cropStartY: number;
     pictureWidth: number;
   }) => payload,
-  COMPLETE_WITH_STATUS: (payload: {
-    status: FaceAuthStatus;
-    croppedPictureUri?: string;
-  }) => payload,
+  SUCCESS: true,
+  FAILURE: (payload: {status: FaceAuthStatus}) => payload,
 });
 
 const FETCH_EMOTIONS_FOR_AUTH = createAction('FETCH_EMOTIONS_FOR_AUTH', {
   START: true,
-  SUCCESS: (payload: {emotions: AuthEmotion[]; sessionId: string}) => payload,
+  SUCCESS: (payload: {
+    emotions: AuthEmotion[];
+    sessionId: string;
+    sessionExpiredAt?: number;
+  }) => payload,
   FAILURE: (payload: {status: EmotionsAuthStatus}) => payload,
 });
 
@@ -31,10 +33,9 @@ const EMOTIONS_AUTH = createAction('EMOTIONS_AUTH', {
     cropStartY: number;
     videoWidth: number;
   }) => payload,
-  COMPLETE_WITH_STATUS: (payload: {
-    status: EmotionsAuthStatus;
-    frames?: string[];
-  }) => payload,
+  NEED_MORE_EMOTIONS: true,
+  SUCCESS: true,
+  FAILURE: (payload: {status: EmotionsAuthStatus}) => payload,
 });
 
 const RESET_FACE_AUTH_STATUS = createAction('RESET_FACE_AUTH_STATUS', {

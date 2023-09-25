@@ -12,4 +12,6 @@ export type EmotionsAuthStatus =
   | 'SUCCESS'
   | 'FAILED'
   | 'BANNED'
+  | 'NEED_MORE_EMOTIONS'
+  | 'SESSION_EXPIRED'
   | 'TRY_LATER';

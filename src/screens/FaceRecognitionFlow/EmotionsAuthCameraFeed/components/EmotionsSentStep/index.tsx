@@ -5,19 +5,22 @@ import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {useNavigation} from '@react-navigation/native';
 import {StatusOverlay} from '@screens/FaceRecognitionFlow/components/StatusOverlay';
-import {
-  emotionsAuthFramesSelector,
-  emotionsAuthStatusSelector,
-} from '@store/modules/FaceRecognition/selectors';
+import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
+import {emotionsAuthStatusSelector} from '@store/modules/FaceRecognition/selectors';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {LogoIcon} from '@svg/LogoIcon';
+import {RestartIcon} from '@svg/RestartIcon';
 import {t} from '@translations/i18n';
-import React from 'react';
-import {Image, StyleSheet, View} from 'react-native';
+import React, {useCallback, useEffect} from 'react';
+import {StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export function EmotionsSentStep() {
+type Props = {
+  onGatherMoreEmotions: () => void;
+};
+
+export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
   const emotionsAuthStatus = useSelector(emotionsAuthStatusSelector);
   const dispatch = useDispatch();
   const navigation = useNavigation();
@@ -31,24 +34,28 @@ export function EmotionsSentStep() {
   const onFaceAuthTryLater = () => {
     navigation.goBack();
   };
-
-  const emotionsAuthFrames = useSelector(emotionsAuthFramesSelector);
-
+  const onTryAgain = useCallback(() => {
+    dispatch(FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create());
+    onGatherMoreEmotions();
+  }, [dispatch, onGatherMoreEmotions]);
+  useEffect(() => {
+    if (emotionsAuthStatus === 'SESSION_EXPIRED') {
+      onTryAgain();
+    }
+  }, [emotionsAuthStatus, onTryAgain]);
+  useEffect(() => {
+    if (emotionsAuthStatus === 'NEED_MORE_EMOTIONS') {
+      onGatherMoreEmotions();
+    }
+  }, [emotionsAuthStatus, onGatherMoreEmotions]);
   return (
     <View style={commonStyles.flexOne}>
-      {emotionsAuthFrames?.length ? (
-        <Image
-          resizeMode={'contain'}
-          source={{uri: emotionsAuthFrames[Math.floor(Math.random() * 15)]}}
-          style={styles.picture}
-        />
-      ) : null}
       {emotionsAuthStatus === 'LOADING' ? (
         <StatusOverlay
           onLightBackground
           description={t('face_auth.auth_status.loading.description')}
           titleIcon={
-            <LogoIcon color={COLORS.white} width={rem(70)} height={rem(70)} />
+            <LogoIcon color={COLORS.primary} width={rem(70)} height={rem(70)} />
           }
         />
       ) : null}
@@ -85,17 +92,28 @@ export function EmotionsSentStep() {
           action={onFaceAuthBanned}
         />
       ) : null}
+      {emotionsAuthStatus === 'FAILED' ? (
+        <StatusOverlay
+          onLightBackground
+          description={t('face_auth.auth_status.failure.description')}
+          title={t('face_auth.auth_status.failure.title')}
+          actionText={t('face_auth.auth_status.failure.action')}
+          actionColor={COLORS.attention}
+          actionIcon={
+            <RestartIcon
+              color={COLORS.white}
+              width={rem(24)}
+              height={rem(24)}
+            />
+          }
+          action={onTryAgain}
+        />
+      ) : null}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  picture: {
-    width: '100%',
-    height: '100%',
-    transform: [{scaleX: -1}],
-    position: 'absolute',
-  },
   checkmarkStyle: {
     backgroundColor: COLORS.white,
   },

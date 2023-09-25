@@ -16,10 +16,6 @@ type Actions = ReturnType<typeof FaceRecognitionActions.FACE_AUTH.START.create>;
 export function* initFaceAuthSaga(action: Actions) {
   try {
     const {pictureUri, cropStartY, pictureWidth} = action.payload;
-    const outputUri = `${cacheDirectory}/cropped_${getFilenameFromPath(
-      pictureUri,
-    )}`;
-    console.log({outputUri});
 
     const croppedPictureUri: SagaReturnType<typeof cropAndResizeWithFFmpeg> =
       yield call(cropAndResizeWithFFmpeg, {
@@ -39,38 +35,41 @@ export function* initFaceAuthSaga(action: Actions) {
       userId,
       pictureUri: croppedPictureUri,
     });
-    yield put(
-      FaceRecognitionActions.FACE_AUTH.COMPLETE_WITH_STATUS.create({
-        status: 'SUCCESS',
-        croppedPictureUri,
-      }),
-    );
+    yield put(FaceRecognitionActions.FACE_AUTH.SUCCESS.create());
   } catch (error: unknown) {
-    if (axios.isAxiosError(error) && error.code === 'USER_DISABLED') {
+    if (
+      axios.isAxiosError(error) &&
+      (error.code === 'USER_DISABLED' ||
+        error.response?.data?.code === 'USER_DISABLED')
+    ) {
       yield put(
-        FaceRecognitionActions.FACE_AUTH.COMPLETE_WITH_STATUS.create({
+        FaceRecognitionActions.FACE_AUTH.FAILURE.create({
           status: 'BANNED',
         }),
       );
     } else if (
       axios.isAxiosError(error) &&
-      error.code === 'RATE_LIMIT_EXCEEDED'
+      (error.response?.data?.code === 'RATE_LIMIT_EXCEEDED' ||
+        error.response?.data?.code === 'RATE_LIMIT_NEGATIVE_EXCEEDED')
     ) {
       yield put(
-        FaceRecognitionActions.FACE_AUTH.COMPLETE_WITH_STATUS.create({
+        FaceRecognitionActions.FACE_AUTH.FAILURE.create({
           status: 'TRY_LATER',
         }),
       );
     } else {
       yield put(
-        FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.FAILURE.create({
+        FaceRecognitionActions.FACE_AUTH.FAILURE.create({
           status: 'FAILED',
         }),
       );
-      if (axios.isAxiosError(error) && error.status && error.status >= 500) {
+      if (
+        axios.isAxiosError(error) &&
+        error.response?.status != null &&
+        error.response?.status >= 500
+      ) {
         yield spawn(showError, error);
       }
     }
-    throw error;
   }
 }

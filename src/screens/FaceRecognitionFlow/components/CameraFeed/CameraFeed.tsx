@@ -1,42 +1,43 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {commonStyles} from '@constants/styles';
+import {commonStyles, windowWidth} from '@constants/styles';
 import {FaceAuthOverlay} from '@screens/FaceRecognitionFlow/components/FaceAuthOverlay';
 import {useCameraPermissions} from '@screens/Modals/QRCodeScanner/hooks/useCameraPermissions';
 import {Camera, CameraType} from 'expo-camera';
-import React, {Ref, useImperativeHandle, useRef, useState} from 'react';
+import React, {Ref, useImperativeHandle, useRef} from 'react';
+import {StyleSheet, View} from 'react-native';
 
 type Props = {
   onCameraReady: () => void;
 };
+
+export const ASPECT_RATIO_HEIGHT = 16;
+export const ASPECT_RATIO_WIDTH = 9;
 
 export const CameraFeed = React.forwardRef(
   ({onCameraReady}: Props, forwardedRef: Ref<Camera | null>) => {
     const {permissionsGranted} = useCameraPermissions();
     const cameraRef = useRef<Camera>(null);
     useImperativeHandle(forwardedRef, () => cameraRef.current);
-    const [aspectRatio, setAspectRatio] = useState('16:9');
-    const getSupportedRatios = async () => {
-      if (cameraRef.current) {
-        const ratios = await cameraRef.current.getSupportedRatiosAsync();
-        if (!ratios.includes('16:9')) {
-          setAspectRatio('4:3');
-        }
-      }
-    };
 
     return permissionsGranted ? (
-      <Camera
-        ref={cameraRef}
-        onLayout={() => {
-          getSupportedRatios();
-        }}
-        style={commonStyles.flexOne}
-        ratio={aspectRatio}
-        onCameraReady={onCameraReady}
-        type={CameraType.front}>
-        <FaceAuthOverlay />
-      </Camera>
+      <View style={cameraStyles.cameraContainer}>
+        <Camera
+          ref={cameraRef}
+          style={commonStyles.flexOne}
+          ratio={`${ASPECT_RATIO_HEIGHT}:${ASPECT_RATIO_WIDTH}`}
+          onCameraReady={onCameraReady}
+          type={CameraType.front}>
+          <FaceAuthOverlay />
+        </Camera>
+      </View>
     ) : null;
   },
 );
+
+export const cameraStyles = StyleSheet.create({
+  cameraContainer: {
+    width: windowWidth,
+    height: (windowWidth * ASPECT_RATIO_HEIGHT) / ASPECT_RATIO_WIDTH,
+  },
+});

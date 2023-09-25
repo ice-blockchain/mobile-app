@@ -1,23 +1,32 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {commonStyles} from '@constants/styles';
-import {CameraFeed} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
+import {
+  CameraFeed,
+  cameraStyles,
+} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
 import {EmotionCard} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/components/EmotionCard';
 import {StartButton} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/components/StartButton';
 import {getPictureCropStartY} from '@screens/FaceRecognitionFlow/utils';
 import {dayjs} from '@services/dayjs';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
-import {emotionsAuthEmotionsSelector} from '@store/modules/FaceRecognition/selectors';
+import {
+  emotionsAuthEmotionsSelector,
+  emotionsAuthNextEmotionIndexSelector,
+  emotionsAuthStatusSelector,
+} from '@store/modules/FaceRecognition/selectors';
+import {isEmotionsAuthFailed} from '@store/modules/FaceRecognition/utils';
 import {getVideoDimensionsWithFFmpeg} from '@utils/ffmpeg';
 import {Duration} from 'dayjs/plugin/duration';
 import {Camera, VideoQuality} from 'expo-camera';
 import React, {useEffect, useRef, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import {rem} from 'rn-units';
+import {rem, wait} from 'rn-units';
 
 type Props = {
   onAllEmotionsGathered: () => void;
+  onStartPressed: () => void;
+  started: boolean;
 };
 
 const VIDEO_DURATION_SEC = 5; // 5 seconds
@@ -27,32 +36,41 @@ function getSecondsPassed(since: number) {
   return Math.floor(msPassed / 1000);
 }
 
-export function GatherEmotionsStep({onAllEmotionsGathered}: Props) {
+// Needed for the Camera component.
+// If to start recording a new video right after previous one is stopped recording there camera feed behaves wierd on ios
+const WAIT_BEFORE_RECORDING = 1000;
+
+export function GatherEmotionsStep({
+  onAllEmotionsGathered,
+  onStartPressed,
+  started,
+}: Props) {
   const cameraRef = useRef<Camera>(null);
   const [isCameraReady, setIsCameraReady] = useState(false);
   const emotions = useSelector(emotionsAuthEmotionsSelector);
-  const [showStart, setShowStart] = useState(!emotions.length);
-  const [currentEmotionIndex, setCurrentEmotionIndex] = useState(0);
+  const emotionsAuthNextEmotionIndex = useSelector(
+    emotionsAuthNextEmotionIndexSelector,
+  );
   const [currentVideoCountdown, setCurrentVideoCountdown] = useState<Duration>(
     dayjs.duration(VIDEO_DURATION_SEC, 'seconds'),
   );
+  const emotionsAuthStatus = useSelector(emotionsAuthStatusSelector);
 
   const dispatch = useDispatch();
   useEffect(() => {
-    if (!emotions.length) {
-      dispatch(FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.START.create());
-    }
-  }, [dispatch, emotions.length]);
+    dispatch(FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.START.create());
+  }, [dispatch]);
 
   useEffect(() => {
     if (
-      !showStart &&
-      !!emotions[currentEmotionIndex] &&
+      started &&
+      !!emotions[emotionsAuthNextEmotionIndex] &&
       isCameraReady &&
       cameraRef.current
     ) {
       const recordVideo = async () => {
         if (cameraRef.current) {
+          await wait(WAIT_BEFORE_RECORDING);
           const video = await cameraRef.current.recordAsync({
             maxDuration: 5,
             quality: VideoQuality['480p'],
@@ -70,12 +88,11 @@ export function GatherEmotionsStep({onAllEmotionsGathered}: Props) {
               videoWidth: width,
             }),
           );
-          setCurrentEmotionIndex(i => i + 1);
         }
       };
       recordVideo();
 
-      const recordingStartTime = Date.now();
+      const recordingStartTime = Date.now() + WAIT_BEFORE_RECORDING;
       setCurrentVideoCountdown(dayjs.duration(VIDEO_DURATION_SEC, 'seconds'));
       const handle = setInterval(() => {
         setCurrentVideoCountdown(
@@ -90,16 +107,32 @@ export function GatherEmotionsStep({onAllEmotionsGathered}: Props) {
       }, 1000);
       return () => clearInterval(handle);
     }
-  }, [currentEmotionIndex, dispatch, emotions, isCameraReady, showStart]);
+  }, [
+    dispatch,
+    emotions,
+    emotionsAuthNextEmotionIndex,
+    isCameraReady,
+    started,
+  ]);
 
   useEffect(() => {
-    if (emotions.length && currentEmotionIndex >= emotions.length) {
+    if (
+      (emotions.length &&
+        emotionsAuthNextEmotionIndex >= emotions.length &&
+        emotionsAuthStatus !== 'NEED_MORE_EMOTIONS') ||
+      isEmotionsAuthFailed(emotionsAuthStatus)
+    ) {
       onAllEmotionsGathered();
     }
-  }, [emotions, onAllEmotionsGathered, currentEmotionIndex]);
+  }, [
+    emotions,
+    onAllEmotionsGathered,
+    emotionsAuthNextEmotionIndex,
+    emotionsAuthStatus,
+  ]);
 
   return (
-    <View style={commonStyles.flexOne}>
+    <View style={cameraStyles.cameraContainer}>
       <CameraFeed
         ref={cameraRef}
         onCameraReady={() => {
@@ -107,11 +140,11 @@ export function GatherEmotionsStep({onAllEmotionsGathered}: Props) {
         }}
       />
       <View style={styles.bottomContainer}>
-        {showStart || !emotions.length ? (
-          <StartButton onPress={() => setShowStart(false)} />
+        {!started || !emotions.length ? (
+          <StartButton onPress={onStartPressed} />
         ) : (
           <EmotionCard
-            emotion={emotions[currentEmotionIndex]}
+            emotion={emotions[emotionsAuthNextEmotionIndex]}
             countDownSecs={currentVideoCountdown}
           />
         )}

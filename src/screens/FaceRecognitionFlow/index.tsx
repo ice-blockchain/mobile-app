@@ -10,33 +10,54 @@ import {EmotionsAuthCameraFeed} from '@screens/FaceRecognitionFlow/EmotionsAuthC
 import {FaceAuthCameraFeed} from '@screens/FaceRecognitionFlow/FaceAuthCameraFeed';
 import {FaceAuthUserConsent} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
-import {faceAuthStatusSelector} from '@store/modules/FaceRecognition/selectors';
+import {
+  emotionsAuthStatusSelector,
+  faceAuthStatusSelector,
+} from '@store/modules/FaceRecognition/selectors';
 import {t} from '@translations/i18n';
 import React, {useEffect, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {useSelector} from 'react-redux';
 
+type FaceRecognitionPhase = 'USER_CONSENT' | 'FACE_AUTH' | 'EMOTIONS_AUTH';
+
 function renderContent({
-  kycStepPassed,
-  setKycStepPassed,
+  faceRecognitionPhase,
+  setFaceRecognitionPhase,
 }: {
-  kycStepPassed?: number;
-  setKycStepPassed: (step: number) => void;
+  faceRecognitionPhase: FaceRecognitionPhase;
+  setFaceRecognitionPhase: (phase: FaceRecognitionPhase) => void;
 }) {
-  switch (kycStepPassed) {
-    case 1: {
+  switch (faceRecognitionPhase) {
+    case 'USER_CONSENT': {
       return (
-        <FaceAuthCameraFeed updateKycStepPassed={() => setKycStepPassed(2)} />
+        <FaceAuthUserConsent
+          updateKycStepPassed={() => setFaceRecognitionPhase('FACE_AUTH')}
+        />
       );
     }
-    case 2: {
+    case 'FACE_AUTH': {
+      return (
+        <FaceAuthCameraFeed
+          updateKycStepPassed={() => setFaceRecognitionPhase('EMOTIONS_AUTH')}
+        />
+      );
+    }
+    case 'EMOTIONS_AUTH': {
       return <EmotionsAuthCameraFeed />;
     }
-    default: {
-      return (
-        <FaceAuthUserConsent updateKycStepPassed={() => setKycStepPassed(1)} />
-      );
-    }
+  }
+}
+
+function kycStepToFaceRecognitionPhase(kycStepPassed?: number) {
+  if (!kycStepPassed) {
+    return 'USER_CONSENT';
+  }
+  switch (kycStepPassed) {
+    case 0:
+      return 'USER_CONSENT';
+    default:
+      return 'EMOTIONS_AUTH';
   }
 }
 
@@ -45,23 +66,28 @@ export function FaceRecognition() {
   const navigation = useNavigation();
   const user = useSelector(unsafeUserSelector);
   const faceAuthStatus = useSelector(faceAuthStatusSelector);
+  const emotionsAuthStatus = useSelector(emotionsAuthStatusSelector);
   const isBanned =
-    faceAuthStatus === 'BANNED' || (user.kycStepBlocked && !user.kycStepPassed);
-  const [kycStepPassed, setKycStepPassed] = useState(user.kycStepPassed);
-
+    faceAuthStatus === 'BANNED' ||
+    emotionsAuthStatus === 'BANNED' ||
+    (user.kycStepBlocked && !user.kycStepPassed);
+  const [faceRecognitionPhase, setFaceRecognitionPhase] =
+    useState<FaceRecognitionPhase>(() =>
+      kycStepToFaceRecognitionPhase(user.kycStepPassed),
+    );
   useEffect(() => {
-    if (kycStepPassed === 2) {
+    if (user.kycStepPassed === 2) {
       if (
         (user?.repeatableKycSteps?.[0] ?? Number.MAX_SAFE_INTEGER) < Date.now()
       ) {
-        setKycStepPassed(0);
+        setFaceRecognitionPhase(kycStepToFaceRecognitionPhase(0));
       } else if (
         (user?.repeatableKycSteps?.[1] ?? Number.MAX_SAFE_INTEGER) < Date.now()
       ) {
-        setKycStepPassed(1);
+        setFaceRecognitionPhase(kycStepToFaceRecognitionPhase(1));
       }
     }
-  }, [kycStepPassed, user?.repeatableKycSteps]);
+  }, [user.kycStepPassed, user?.repeatableKycSteps]);
 
   return (
     <View style={styles.container}>
@@ -82,7 +108,7 @@ export function FaceRecognition() {
           />
         </View>
       ) : (
-        renderContent({kycStepPassed, setKycStepPassed})
+        renderContent({faceRecognitionPhase, setFaceRecognitionPhase})
       )}
     </View>
   );

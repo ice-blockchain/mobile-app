@@ -1,8 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {buildFormData} from '@api/client';
+import {buildFormData, post} from '@api/client';
 import {getFilenameFromPath} from '@utils/file';
 import {Platform} from 'react-native';
+
+type Response = {
+  result: boolean;
+  sessionEnded: boolean;
+};
 
 export function emotionsAuth({
   userId,
@@ -12,7 +17,7 @@ export function emotionsAuth({
   userId: string;
   sessionId?: string | null;
   pictureUris: string[];
-}): Promise<void> {
+}): Promise<Response> {
   const formData = buildFormData({
     image: pictureUris.map(pictureUri => ({
       name: getFilenameFromPath(pictureUri),
@@ -23,7 +28,9 @@ export function emotionsAuth({
           : pictureUri.replace('file://', ''),
     })),
   });
-  console.log({formData, userId, sessionId});
-  return Promise.resolve();
-  // return post<FormData, void>(`/liveness/${userId}/${sessionId}`, formData);
+  // return Promise.resolve();
+  return post<FormData, Response>(
+    `/face-auth/liveness/${userId}/${sessionId}`,
+    formData,
+  );
 }

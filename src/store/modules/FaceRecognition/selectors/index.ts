@@ -13,8 +13,7 @@ export const emotionsAuthSessionSelector = (state: RootState) =>
 
 export const emotionsAuthEmotionsSelector = (state: RootState) =>
   state.faceRecognition.emotions;
-
-export const emotionsAuthFramesSelector = (state: RootState) =>
-  state.faceRecognition.frames;
-export const croppedPictureUriSelector = (state: RootState) =>
-  state.faceRecognition.croppedPictureUri;
+export const emotionsAuthNextEmotionIndexSelector = (state: RootState) =>
+  state.faceRecognition.nextEmotionIndex;
+export const emotionsAuthSessionExpiredAtSelector = (state: RootState) =>
+  state.faceRecognition.sessionExpiredAt;
