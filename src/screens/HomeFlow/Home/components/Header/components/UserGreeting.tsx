@@ -10,7 +10,14 @@ import {userSelector} from '@store/modules/Account/selectors';
 import {font} from '@utils/styles';
 import {buildUsernameWithPrefix} from '@utils/username';
 import React from 'react';
-import {ImageStyle, StyleSheet, Text, TextStyle, ViewStyle} from 'react-native';
+import {
+  ImageStyle,
+  StyleSheet,
+  Text,
+  TextStyle,
+  View,
+  ViewStyle,
+} from 'react-native';
 import Animated, {AnimatedStyleProp} from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units/index';
@@ -28,7 +35,7 @@ export function UserGreeting({disabled, animatedStyle}: Props) {
     navigation.navigate('ProfileTab');
   };
   return (
-    <>
+    <View style={styles.container}>
       {user?.profilePictureUrl && (
         <Touchable onPress={openProfile}>
           <Avatar
@@ -50,11 +57,15 @@ export function UserGreeting({disabled, animatedStyle}: Props) {
           )}
         </Touchable>
       </Animated.View>
-    </>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   greeting: {
     marginLeft: rem(10),
     flex: 1,
