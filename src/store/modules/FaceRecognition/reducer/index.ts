@@ -19,6 +19,7 @@ export interface State {
   emotions: AuthEmotion[];
   nextEmotionIndex: number;
   sessionExpiredAt: number | null;
+  activeRequests: number;
 }
 
 type Actions = ReturnType<
@@ -43,6 +44,7 @@ const INITIAL_STATE: State = {
   emotions: [],
   nextEmotionIndex: 0,
   sessionExpiredAt: null,
+  activeRequests: 0,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -52,6 +54,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       draft.sessionId = null;
       draft.nextEmotionIndex = 0;
       draft.sessionExpiredAt = null;
+      draft.activeRequests = 0;
     };
     switch (action.type) {
       case FaceRecognitionActions.FACE_AUTH.START.type:
@@ -75,13 +78,18 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case FaceRecognitionActions.EMOTIONS_AUTH.START.type:
         draft.emotionsAuthStatus = 'LOADING';
         draft.nextEmotionIndex += 1;
+        draft.activeRequests += 1;
         break;
       case FaceRecognitionActions.EMOTIONS_AUTH.SUCCESS.type:
         draft.emotionsAuthStatus = 'SUCCESS';
         resetSession();
         break;
       case FaceRecognitionActions.EMOTIONS_AUTH.NEED_MORE_EMOTIONS.type:
-        draft.emotionsAuthStatus = 'NEED_MORE_EMOTIONS';
+        draft.activeRequests -= 1;
+        // Else if there are still not completed requests to process an emotion then keep the loading status
+        if (!draft.activeRequests) {
+          draft.emotionsAuthStatus = 'NEED_MORE_EMOTIONS';
+        }
         draft.emotions = action.payload.emotions;
         break;
       case FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.type:
