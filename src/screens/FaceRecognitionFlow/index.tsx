@@ -17,8 +17,8 @@ import {
 } from '@store/modules/FaceRecognition/selectors';
 import {isEmotionsAuthInRecoverableFailureStatus} from '@store/modules/FaceRecognition/utils';
 import {t} from '@translations/i18n';
-import React, {useEffect, useState} from 'react';
-import {StyleSheet, View} from 'react-native';
+import React, {useCallback, useEffect, useState} from 'react';
+import {BackHandler, StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 type FaceRecognitionPhase = 'USER_CONSENT' | 'FACE_AUTH' | 'EMOTIONS_AUTH';
@@ -92,6 +92,24 @@ export function FaceRecognition() {
   }, [user.kycStepPassed, user?.repeatableKycSteps]);
 
   const dispatch = useDispatch();
+  const onGoBack = useCallback(() => {
+    if (isEmotionsAuthInRecoverableFailureStatus(emotionsAuthStatus)) {
+      dispatch(
+        FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create(),
+      );
+    }
+  }, [dispatch, emotionsAuthStatus]);
+
+  useEffect(() => {
+    const backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      () => {
+        onGoBack();
+        return false;
+      },
+    );
+    return () => backHandler.remove();
+  }, [onGoBack]);
 
   return (
     <View style={styles.container}>
@@ -99,13 +117,7 @@ export function FaceRecognition() {
         color={COLORS.primaryDark}
         title={t('face_auth.header')}
         backgroundColor={'transparent'}
-        onGoBack={() => {
-          if (isEmotionsAuthInRecoverableFailureStatus(emotionsAuthStatus)) {
-            dispatch(
-              FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create(),
-            );
-          }
-        }}
+        onGoBack={onGoBack}
       />
       {isBanned ? (
         <View style={commonStyles.flexOne}>
