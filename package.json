@@ -163,7 +163,6 @@
   "expo": {
     "autolinking": {
       "exclude": [
-        "expo-keep-awake",
         "expo-application",
         "expo-constants",
         "expo-font"

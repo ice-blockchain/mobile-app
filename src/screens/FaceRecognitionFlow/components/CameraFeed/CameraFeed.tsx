@@ -4,7 +4,8 @@ import {commonStyles, windowWidth} from '@constants/styles';
 import {FaceAuthOverlay} from '@screens/FaceRecognitionFlow/components/FaceAuthOverlay';
 import {useCameraPermissions} from '@screens/Modals/QRCodeScanner/hooks/useCameraPermissions';
 import {Camera, CameraType} from 'expo-camera';
-import React, {Ref, useImperativeHandle, useRef} from 'react';
+import {activateKeepAwakeAsync, deactivateKeepAwake} from 'expo-keep-awake';
+import React, {Ref, useEffect, useImperativeHandle, useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
 
 type Props = {
@@ -19,6 +20,15 @@ export const CameraFeed = React.forwardRef(
     const {permissionsGranted} = useCameraPermissions();
     const cameraRef = useRef<Camera>(null);
     useImperativeHandle(forwardedRef, () => cameraRef.current);
+
+    useEffect(() => {
+      if (permissionsGranted) {
+        activateKeepAwakeAsync();
+        return () => {
+          deactivateKeepAwake();
+        };
+      }
+    }, [permissionsGranted]);
 
     return permissionsGranted ? (
       <View style={cameraStyles.cameraContainer}>

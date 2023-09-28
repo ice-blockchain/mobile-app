@@ -87,7 +87,6 @@ export function* initEmotionsAuthSaga(action: Actions) {
   } catch (error: unknown) {
     const emotionsAuthStatus: ReturnType<typeof emotionsAuthStatusSelector> =
       yield select(emotionsAuthStatusSelector);
-    console.log('initEmotionsAuthSaga', {emotionsAuthStatus});
     // If while we were waiting for this response the whole auth is already finalised
     if (isEmotionsAuthFinalised(emotionsAuthStatus)) {
       return;
