@@ -15,11 +15,13 @@ type Props = {
   color?: string;
   label?: string;
   allowOnTab?: boolean;
+  onGoBack?: () => void;
 };
 
 export const BackButton = ({
   containerStyle,
   color = COLORS.black,
+  onGoBack,
   label,
   allowOnTab = false,
 }: Props = {}) => {
@@ -32,7 +34,10 @@ export const BackButton = ({
 
   return (
     <Touchable
-      onPress={navigation.goBack}
+      onPress={() => {
+        onGoBack?.();
+        navigation.goBack();
+      }}
       hitSlop={buttonHitSlop}
       style={[styles.container, containerStyle]}>
       <BackButtonIcon color={color} width={rem(16)} height={rem(14)} />

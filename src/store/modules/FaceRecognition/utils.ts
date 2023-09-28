@@ -11,3 +11,9 @@ export function isEmotionsAuthFinalised(status: EmotionsAuthStatus | null) {
     status === 'SESSION_EXPIRED'
   );
 }
+
+export function isEmotionsAuthInRecoverableFailureStatus(
+  status: EmotionsAuthStatus | null,
+) {
+  return status === 'FAILED' || status === 'TRY_LATER';
+}

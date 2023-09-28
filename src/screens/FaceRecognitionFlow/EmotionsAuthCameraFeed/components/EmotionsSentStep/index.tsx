@@ -28,11 +28,12 @@ export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
     dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
     navigation.goBack();
   };
-  const onFaceAuthBanned = () => {
+  const onBanned = () => {
     navigation.goBack();
   };
-  const onFaceAuthTryLater = () => {
+  const onTryLater = () => {
     navigation.goBack();
+    dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
   };
   const onTryAgain = useCallback(() => {
     dispatch(FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create());
@@ -79,7 +80,7 @@ export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
           title={t('face_auth.auth_status.try_later.title')}
           actionText={t('face_auth.auth_status.try_later.action')}
           actionColor={COLORS.attention}
-          action={onFaceAuthTryLater}
+          action={onTryLater}
         />
       ) : null}
       {emotionsAuthStatus === 'BANNED' ? (
@@ -89,7 +90,7 @@ export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
           title={t('face_auth.auth_status.banned.title')}
           actionText={t('face_auth.auth_status.banned.action')}
           actionColor={COLORS.attention}
-          action={onFaceAuthBanned}
+          action={onBanned}
         />
       ) : null}
       {emotionsAuthStatus === 'FAILED' ? (

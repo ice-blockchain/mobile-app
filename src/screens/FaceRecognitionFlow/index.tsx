@@ -10,14 +10,16 @@ import {EmotionsAuthCameraFeed} from '@screens/FaceRecognitionFlow/EmotionsAuthC
 import {FaceAuthCameraFeed} from '@screens/FaceRecognitionFlow/FaceAuthCameraFeed';
 import {FaceAuthUserConsent} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
+import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
   emotionsAuthStatusSelector,
   faceAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
+import {isEmotionsAuthInRecoverableFailureStatus} from '@store/modules/FaceRecognition/utils';
 import {t} from '@translations/i18n';
 import React, {useEffect, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 type FaceRecognitionPhase = 'USER_CONSENT' | 'FACE_AUTH' | 'EMOTIONS_AUTH';
 
@@ -89,12 +91,21 @@ export function FaceRecognition() {
     }
   }, [user.kycStepPassed, user?.repeatableKycSteps]);
 
+  const dispatch = useDispatch();
+
   return (
     <View style={styles.container}>
       <Header
         color={COLORS.primaryDark}
         title={t('face_auth.header')}
         backgroundColor={'transparent'}
+        onGoBack={() => {
+          if (isEmotionsAuthInRecoverableFailureStatus(emotionsAuthStatus)) {
+            dispatch(
+              FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create(),
+            );
+          }
+        }}
       />
       {isBanned ? (
         <View style={commonStyles.flexOne}>

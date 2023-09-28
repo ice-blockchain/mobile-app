@@ -20,6 +20,7 @@ type Props = {
   containerStyle?: StyleProp<ViewStyle>;
   topMargin?: number;
   showBackButton?: boolean;
+  onGoBack?: () => void;
 };
 
 export const HEADER_HEIGHT = rem(56);
@@ -39,6 +40,7 @@ export const Header = memo(
     containerStyle,
     topMargin,
     showBackButton = true,
+    onGoBack,
   }: Props) => {
     const {top: topNotchHeight} = useSafeAreaInsets();
     const topInset = topMargin ?? topNotchHeight;
@@ -74,6 +76,7 @@ export const Header = memo(
                 containerStyle={styles.backButton}
                 color={color}
                 label={backLabel}
+                onGoBack={onGoBack}
               />
             )}
             {!!renderRightButtons && (
