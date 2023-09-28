@@ -8,7 +8,9 @@ import {
   emotionsAuthEmotionsSelector,
   emotionsAuthSessionExpiredAtSelector,
   emotionsAuthSessionSelector,
+  emotionsAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
+import {isEmotionsAuthFinalised} from '@store/modules/FaceRecognition/utils';
 import {returnSecondIfNew} from '@utils/array';
 import {showError} from '@utils/errors';
 import {extractFramesWithFFmpeg} from '@utils/ffmpeg';
@@ -59,6 +61,12 @@ export function* initEmotionsAuthSaga(action: Actions) {
         sessionId,
         pictureUris: frames,
       });
+    const emotionsAuthStatus: ReturnType<typeof emotionsAuthStatusSelector> =
+      yield select(emotionsAuthStatusSelector);
+    // If while we were waiting for this response the whole auth is already finalised
+    if (isEmotionsAuthFinalised(emotionsAuthStatus)) {
+      return;
+    }
     if (response.sessionEnded) {
       if (response.result) {
         yield put(FaceRecognitionActions.EMOTIONS_AUTH.SUCCESS.create());
@@ -77,10 +85,17 @@ export function* initEmotionsAuthSaga(action: Actions) {
       );
     }
   } catch (error: unknown) {
+    const emotionsAuthStatus: ReturnType<typeof emotionsAuthStatusSelector> =
+      yield select(emotionsAuthStatusSelector);
+    console.log('initEmotionsAuthSaga', {emotionsAuthStatus});
+    // If while we were waiting for this response the whole auth is already finalised
+    if (isEmotionsAuthFinalised(emotionsAuthStatus)) {
+      return;
+    }
     if (
       axios.isAxiosError(error) &&
-      (error.response?.data?.code === 'RATE_LIMIT_EXCEEDED' ||
-        error.response?.data?.code === 'RATE_LIMIT_NEGATIVE_EXCEEDED')
+      (error.response?.data?.code === 'USER_DISABLED' ||
+        error?.code === 'USER_DISABLED')
     ) {
       yield put(
         FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create({

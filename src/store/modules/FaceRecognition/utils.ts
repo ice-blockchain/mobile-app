@@ -2,11 +2,12 @@
 
 import {EmotionsAuthStatus} from '@store/modules/FaceRecognition/types';
 
-export function isEmotionsAuthFailed(status: EmotionsAuthStatus | null) {
+export function isEmotionsAuthFinalised(status: EmotionsAuthStatus | null) {
   return (
     status === 'FAILED' ||
     status === 'BANNED' ||
     status === 'TRY_LATER' ||
+    status === 'SUCCESS' ||
     status === 'SESSION_EXPIRED'
   );
 }

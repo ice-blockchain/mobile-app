@@ -15,7 +15,7 @@ import {
   emotionsAuthSessionSelector,
   emotionsAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
-import {isEmotionsAuthFailed} from '@store/modules/FaceRecognition/utils';
+import {isEmotionsAuthFinalised} from '@store/modules/FaceRecognition/utils';
 import {getVideoDimensionsWithFFmpeg} from '@utils/ffmpeg';
 import {Duration} from 'dayjs/plugin/duration';
 import {Camera, VideoQuality} from 'expo-camera';
@@ -59,11 +59,6 @@ export function GatherEmotionsStep({
   const emotionsAuthStatus = useSelector(emotionsAuthStatusSelector);
 
   const dispatch = useDispatch();
-  useEffect(() => {
-    if (!session) {
-      dispatch(FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.START.create());
-    }
-  }, [dispatch, session]);
 
   useEffect(() => {
     if (
@@ -72,6 +67,7 @@ export function GatherEmotionsStep({
       isCameraReady &&
       cameraRef.current
     ) {
+      let toAbort = false;
       const recordVideo = async () => {
         if (cameraRef.current) {
           await wait(WAIT_BEFORE_RECORDING);
@@ -82,6 +78,9 @@ export function GatherEmotionsStep({
           });
           // You now have the video object which contains the URI to the video file
           const {width, height} = await getVideoDimensionsWithFFmpeg(video.uri);
+          if (toAbort) {
+            return;
+          }
           dispatch(
             FaceRecognitionActions.EMOTIONS_AUTH.START.create({
               videoUri: video.uri,
@@ -109,7 +108,10 @@ export function GatherEmotionsStep({
           ),
         );
       }, 1000);
-      return () => clearInterval(handle);
+      return () => {
+        toAbort = true;
+        clearInterval(handle);
+      };
     }
   }, [
     dispatch,
@@ -124,7 +126,7 @@ export function GatherEmotionsStep({
       (emotions.length &&
         emotionsAuthNextEmotionIndex >= emotions.length &&
         emotionsAuthStatus !== 'NEED_MORE_EMOTIONS') ||
-      isEmotionsAuthFailed(emotionsAuthStatus)
+      isEmotionsAuthFinalised(emotionsAuthStatus)
     ) {
       onAllEmotionsGathered();
     }
@@ -134,6 +136,12 @@ export function GatherEmotionsStep({
     emotionsAuthNextEmotionIndex,
     emotionsAuthStatus,
   ]);
+
+  useEffect(() => {
+    if (!session && !isEmotionsAuthFinalised(emotionsAuthStatus)) {
+      dispatch(FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.START.create());
+    }
+  }, [dispatch, emotionsAuthStatus, session]);
 
   return (
     <View style={cameraStyles.cameraContainer}>
