@@ -7,35 +7,58 @@ import {ClockIcon} from '@svg/ClockIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import {Duration} from 'dayjs/plugin/duration';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
   emotion: AuthEmotion;
   countDownSecs: Duration;
+  previewTimeInMs: number;
 };
 
-function getEmotionImage(emotion: AuthEmotion) {
+function getEmotionImage({
+  emotion,
+  showPreview,
+}: {
+  emotion: AuthEmotion;
+  showPreview: boolean;
+}) {
   switch (emotion) {
     case 'anger':
-      return Images.emotions.anger;
+      return showPreview
+        ? Images.emotions.anger_preview
+        : Images.emotions.anger;
     case 'contempt':
-      return Images.emotions.contempt;
+      return showPreview
+        ? Images.emotions.contempt_preview
+        : Images.emotions.contempt;
     case 'disgust':
-      return Images.emotions.disgust;
+      return showPreview
+        ? Images.emotions.disgust_preview
+        : Images.emotions.disgust;
     case 'fear':
-      return Images.emotions.fear;
+      return showPreview ? Images.emotions.fear_preview : Images.emotions.fear;
     case 'happiness':
-      return Images.emotions.happiness;
+      return showPreview
+        ? Images.emotions.happiness_preview
+        : Images.emotions.happiness;
     case 'neutral':
-      return Images.emotions.neutral;
+      return showPreview
+        ? Images.emotions.neutral_preview
+        : Images.emotions.neutral;
     case 'sadness':
-      return Images.emotions.sadness;
+      return showPreview
+        ? Images.emotions.sadness_preview
+        : Images.emotions.sadness;
     case 'surprise':
-      return Images.emotions.surprise;
+      return showPreview
+        ? Images.emotions.surprise_preview
+        : Images.emotions.surprise;
     default:
-      return Images.emotions.neutral;
+      return showPreview
+        ? Images.emotions.neutral_preview
+        : Images.emotions.neutral;
   }
 }
 
@@ -62,14 +85,31 @@ function getEmotionTranslation(emotion: AuthEmotion) {
   }
 }
 
-export function EmotionCard({emotion, countDownSecs}: Props) {
+export function EmotionCard({emotion, countDownSecs, previewTimeInMs}: Props) {
+  const [showPreview, setShowPreview] = useState(true);
+  useEffect(() => {
+    setShowPreview(true);
+    setTimeout(() => setShowPreview(false), previewTimeInMs);
+  }, [emotion, previewTimeInMs]);
+
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.image}
-        resizeMode={'contain'}
-        source={getEmotionImage(emotion)}
-      />
+      <View style={[styles.imageContainer, styles.image]}>
+        <Image
+          fadeDuration={0}
+          style={styles.image}
+          resizeMode={'contain'}
+          source={getEmotionImage({emotion, showPreview: true})}
+        />
+        {showPreview ? null : (
+          <Image
+            fadeDuration={0}
+            style={[styles.image, StyleSheet.absoluteFill]}
+            resizeMode={'contain'}
+            source={getEmotionImage({emotion, showPreview: false})}
+          />
+        )}
+      </View>
       <View style={styles.dataContainer}>
         <View style={styles.countDownContainer}>
           <ClockIcon
@@ -103,11 +143,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
+  imageContainer: {
+    overflow: 'hidden',
+    borderRadius: rem(20),
+    marginHorizontal: rem(12),
+  },
   image: {
     width: IMAGE_SIZE,
     height: IMAGE_SIZE,
-    borderRadius: rem(20),
-    marginHorizontal: rem(12),
   },
   countDownContainer: {
     flexDirection: 'row',

@@ -148,5 +148,13 @@ export const Images = {
     neutral: require('./emotions/neutral.gif'),
     sadness: require('./emotions/sadness.gif'),
     surprise: require('./emotions/surprise.gif'),
+    anger_preview: require('./emotions/anger.jpg'),
+    contempt_preview: require('./emotions/contempt.jpg'),
+    disgust_preview: require('./emotions/disgust.jpg'),
+    fear_preview: require('./emotions/fear.jpg'),
+    happiness_preview: require('./emotions/happiness.jpg'),
+    neutral_preview: require('./emotions/neutral.jpg'),
+    sadness_preview: require('./emotions/sadness.jpg'),
+    surprise_preview: require('./emotions/surprise.jpg'),
   },
 } as const;

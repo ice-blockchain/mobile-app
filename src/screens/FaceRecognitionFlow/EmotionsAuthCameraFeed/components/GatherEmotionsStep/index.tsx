@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AuthEmotion} from '@api/faceRecognition/types';
 import {
   CameraFeed,
   cameraStyles,
@@ -12,6 +13,7 @@ import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
   emotionsAuthEmotionsSelector,
   emotionsAuthNextEmotionIndexSelector,
+  emotionsAuthSessionExpiredAtSelector,
   emotionsAuthSessionSelector,
   emotionsAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
@@ -39,7 +41,7 @@ function getSecondsPassed(since: number) {
 
 // Needed for the Camera component.
 // If to start recording a new video right after previous one is stopped recording there camera feed behaves wierd on ios
-const WAIT_BEFORE_RECORDING = 1000;
+const WAIT_BEFORE_RECORDING_MS = 1000;
 
 export function GatherEmotionsStep({
   onAllEmotionsGathered,
@@ -50,6 +52,7 @@ export function GatherEmotionsStep({
   const [isCameraReady, setIsCameraReady] = useState(false);
   const emotions = useSelector(emotionsAuthEmotionsSelector);
   const session = useSelector(emotionsAuthSessionSelector);
+  const sessionExpiredAt = useSelector(emotionsAuthSessionExpiredAtSelector);
   const emotionsAuthNextEmotionIndex = useSelector(
     emotionsAuthNextEmotionIndexSelector,
   );
@@ -59,10 +62,25 @@ export function GatherEmotionsStep({
   const emotionsAuthStatus = useSelector(emotionsAuthStatusSelector);
 
   const dispatch = useDispatch();
+  const isSessionExpired = !!sessionExpiredAt && Date.now() > sessionExpiredAt;
+
+  const [isVideoRecording, setIsVideoRecording] = useState(false);
+  const [isAllRecorded, setIsAllRecorded] = useState(false);
+  const [recordingEmotion, setRecordingEmotion] = useState<null | AuthEmotion>(
+    null,
+  );
+
+  useEffect(() => {
+    if (isAllRecorded && !isVideoRecording) {
+      onAllEmotionsGathered();
+    }
+  }, [isAllRecorded, isVideoRecording, onAllEmotionsGathered]);
 
   useEffect(() => {
     if (
       started &&
+      !isSessionExpired &&
+      !!session &&
       !!emotions[emotionsAuthNextEmotionIndex] &&
       isCameraReady &&
       cameraRef.current
@@ -70,12 +88,22 @@ export function GatherEmotionsStep({
       let toAbort = false;
       const recordVideo = async () => {
         if (cameraRef.current) {
-          await wait(WAIT_BEFORE_RECORDING);
-          const video = await cameraRef.current.recordAsync({
-            maxDuration: 5,
-            quality: VideoQuality['480p'],
-            mute: true,
-          });
+          setRecordingEmotion(emotions[emotionsAuthNextEmotionIndex]);
+          await wait(WAIT_BEFORE_RECORDING_MS);
+          if (toAbort) {
+            return;
+          }
+          setIsVideoRecording(true);
+          const video = await cameraRef.current
+            .recordAsync({
+              maxDuration: 5,
+              quality: VideoQuality['480p'],
+              mute: true,
+            })
+            .finally(() => setIsVideoRecording(false));
+          if (toAbort) {
+            return;
+          }
           // You now have the video object which contains the URI to the video file
           const {width, height} = await getVideoDimensionsWithFFmpeg(video.uri);
           if (toAbort) {
@@ -95,7 +123,7 @@ export function GatherEmotionsStep({
       };
       recordVideo();
 
-      const recordingStartTime = Date.now() + WAIT_BEFORE_RECORDING;
+      const recordingStartTime = Date.now() + WAIT_BEFORE_RECORDING_MS;
       setCurrentVideoCountdown(dayjs.duration(VIDEO_DURATION_SEC, 'seconds'));
       const handle = setInterval(() => {
         setCurrentVideoCountdown(
@@ -117,7 +145,9 @@ export function GatherEmotionsStep({
     dispatch,
     emotions,
     emotionsAuthNextEmotionIndex,
+    session,
     isCameraReady,
+    isSessionExpired,
     started,
   ]);
 
@@ -128,20 +158,18 @@ export function GatherEmotionsStep({
         emotionsAuthStatus !== 'NEED_MORE_EMOTIONS') ||
       isEmotionsAuthFinalised(emotionsAuthStatus)
     ) {
-      onAllEmotionsGathered();
+      setIsAllRecorded(true);
     }
-  }, [
-    emotions,
-    onAllEmotionsGathered,
-    emotionsAuthNextEmotionIndex,
-    emotionsAuthStatus,
-  ]);
+  }, [emotions, emotionsAuthNextEmotionIndex, emotionsAuthStatus]);
 
   useEffect(() => {
-    if (!session && !isEmotionsAuthFinalised(emotionsAuthStatus)) {
+    if (
+      (!session && !isEmotionsAuthFinalised(emotionsAuthStatus)) ||
+      isSessionExpired
+    ) {
       dispatch(FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.START.create());
     }
-  }, [dispatch, emotionsAuthStatus, session]);
+  }, [dispatch, emotionsAuthStatus, isSessionExpired, session]);
 
   return (
     <View style={cameraStyles.cameraContainer}>
@@ -152,12 +180,13 @@ export function GatherEmotionsStep({
         }}
       />
       <View style={styles.bottomContainer}>
-        {!started || !emotions.length ? (
+        {!started || !recordingEmotion ? (
           <StartButton onPress={onStartPressed} />
         ) : (
           <EmotionCard
-            emotion={emotions[emotionsAuthNextEmotionIndex]}
+            emotion={recordingEmotion}
             countDownSecs={currentVideoCountdown}
+            previewTimeInMs={WAIT_BEFORE_RECORDING_MS}
           />
         )}
       </View>
