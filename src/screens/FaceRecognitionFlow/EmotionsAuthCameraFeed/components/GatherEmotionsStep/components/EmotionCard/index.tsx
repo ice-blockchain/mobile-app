@@ -20,8 +20,22 @@ function getEmotionImage(emotion: AuthEmotion) {
   switch (emotion) {
     case 'anger':
       return Images.emotions.anger;
+    case 'contempt':
+      return Images.emotions.contempt;
+    case 'disgust':
+      return Images.emotions.disgust;
+    case 'fear':
+      return Images.emotions.fear;
+    case 'happiness':
+      return Images.emotions.happiness;
+    case 'neutral':
+      return Images.emotions.neutral;
+    case 'sadness':
+      return Images.emotions.sadness;
+    case 'surprise':
+      return Images.emotions.surprise;
     default:
-      return Images.emotions.anger;
+      return Images.emotions.neutral;
   }
 }
 
@@ -87,7 +101,7 @@ const styles = StyleSheet.create({
     paddingVertical: rem(20),
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
   image: {
     width: IMAGE_SIZE,
