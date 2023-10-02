@@ -275,22 +275,9 @@ jobs:
         env:
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
         run: |
-          if [[ ${{ github.event_name == 'pull_request' && github.event.pull_request.draft == false}} == true ]]
-            then
-              echo "IOS_SIGN_TYPE=adhoc" >> $GITHUB_ENV
-              echo "DEPLOY_TARGET=firebase" >> $GITHUB_ENV
-              echo "APP_VERSION=9.9.9" >> $GITHUB_ENV
-              echo "RELEASE_NOTES=release_notes:${{ github.head_ref }}" >> $GITHUB_ENV
-            else
-              echo "IOS_SIGN_TYPE=appstore" >> $GITHUB_ENV
-              echo "DEPLOY_TARGET=testflight" >> $GITHUB_ENV
-              if [[ ${{ github.ref_name == 'master' }} == true ]]
-                then
-                  echo "APP_VERSION=9.9.9" >> $GITHUB_ENV
-                else
-                  echo "APP_VERSION=$(echo ${GITHUB_REF_NAME#*v})" >> $GITHUB_ENV
-              fi
-          fi
+          echo "IOS_SIGN_TYPE=appstore" >> $GITHUB_ENV
+          echo "DEPLOY_TARGET=testflight" >> $GITHUB_ENV
+          echo "APP_VERSION=9.9.9" >> $GITHUB_ENV
           if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
             then
                echo "APP_ENV=production" >> $GITHUB_ENV
