@@ -1,0 +1,31 @@
+diff --git a/node_modules/expo-camera/android/src/main/java/expo/modules/camera/ExpoCameraView.kt b/node_modules/expo-camera/android/src/main/java/expo/modules/camera/ExpoCameraView.kt
+index b3591cd..d94ee58 100644
+--- a/node_modules/expo-camera/android/src/main/java/expo/modules/camera/ExpoCameraView.kt
++++ b/node_modules/expo-camera/android/src/main/java/expo/modules/camera/ExpoCameraView.kt
+@@ -314,13 +314,19 @@ class ExpoCameraView(
+     }
+   }
+
+-  override fun onHostPause() {
+-    if (!isPaused && cameraView.isCameraOpened) {
+-      faceDetector?.release()
+-      isPaused = true
+-      cameraView.stop()
+-    }
+-  }
++ override fun onHostPause() {
++     if (!isPaused && cameraView?.isCameraOpened == true) {
++         try {
++                 faceDetector?.release()
++                 cameraView?.stop()
++         } catch (e: Exception) {
++            Log.e("onHostPause", "Error occurred: ${e.message}")
++         } finally {
++             isPaused = true
++         }
++     }
++ }
++
+
+   override fun onHostDestroy() {
+     faceDetector?.release()
