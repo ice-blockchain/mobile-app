@@ -58,7 +58,7 @@
     "dayjs": "^1.11.6",
     "expo": "^49.0.0",
     "expo-barcode-scanner": "^12.5.3",
-    "expo-camera": "^13.4.2",
+    "expo-camera": "^13.7.0",
     "exponential-backoff": "^3.1.0",
     "ffmpeg-kit-react-native": "6.0.0",
     "getstream": "^8.1.0",
