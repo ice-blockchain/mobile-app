@@ -64,17 +64,9 @@ export function GatherEmotionsStep({
   const dispatch = useDispatch();
   const isSessionExpired = !!sessionExpiredAt && Date.now() > sessionExpiredAt;
 
-  const [isVideoRecording, setIsVideoRecording] = useState(false);
-  const [isAllRecorded, setIsAllRecorded] = useState(false);
   const [recordingEmotion, setRecordingEmotion] = useState<null | AuthEmotion>(
     null,
   );
-
-  useEffect(() => {
-    if (isAllRecorded && !isVideoRecording) {
-      onAllEmotionsGathered();
-    }
-  }, [isAllRecorded, isVideoRecording, onAllEmotionsGathered]);
 
   useEffect(() => {
     if (
@@ -93,14 +85,11 @@ export function GatherEmotionsStep({
           if (toAbort) {
             return;
           }
-          setIsVideoRecording(true);
-          const video = await cameraRef.current
-            .recordAsync({
-              maxDuration: 5,
-              quality: VideoQuality['480p'],
-              mute: true,
-            })
-            .finally(() => setIsVideoRecording(false));
+          const video = await cameraRef.current.recordAsync({
+            maxDuration: 5,
+            quality: VideoQuality['480p'],
+            mute: true,
+          });
           if (toAbort) {
             return;
           }
@@ -136,8 +125,12 @@ export function GatherEmotionsStep({
           ),
         );
       }, 1000);
+      const _cameraRef = cameraRef.current;
       return () => {
         toAbort = true;
+        if (_cameraRef) {
+          _cameraRef.stopRecording();
+        }
         clearInterval(handle);
       };
     }
@@ -158,9 +151,14 @@ export function GatherEmotionsStep({
         emotionsAuthStatus !== 'NEED_MORE_EMOTIONS') ||
       isEmotionsAuthFinalised(emotionsAuthStatus)
     ) {
-      setIsAllRecorded(true);
+      onAllEmotionsGathered();
     }
-  }, [emotions, emotionsAuthNextEmotionIndex, emotionsAuthStatus]);
+  }, [
+    emotions,
+    emotionsAuthNextEmotionIndex,
+    emotionsAuthStatus,
+    onAllEmotionsGathered,
+  ]);
 
   useEffect(() => {
     if (

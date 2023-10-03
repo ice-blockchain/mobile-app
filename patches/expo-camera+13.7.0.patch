@@ -1,8 +1,16 @@
 diff --git a/node_modules/expo-camera/android/src/main/java/expo/modules/camera/ExpoCameraView.kt b/node_modules/expo-camera/android/src/main/java/expo/modules/camera/ExpoCameraView.kt
-index b3591cd..d94ee58 100644
+index b3591cd..a7c874a 100644
 --- a/node_modules/expo-camera/android/src/main/java/expo/modules/camera/ExpoCameraView.kt
 +++ b/node_modules/expo-camera/android/src/main/java/expo/modules/camera/ExpoCameraView.kt
-@@ -314,13 +314,19 @@ class ExpoCameraView(
+@@ -7,6 +7,7 @@ import android.graphics.SurfaceTexture
+ import android.net.Uri
+ import android.os.Bundle
+ import android.view.View
++import android.util.Log
+ import com.google.android.cameraview.CameraView
+ import expo.modules.camera.CameraViewHelper.getCamcorderProfile
+ import expo.modules.camera.CameraViewHelper.getCorrectCameraRotation
+@@ -314,13 +315,19 @@ class ExpoCameraView(
      }
    }
 
@@ -16,8 +24,8 @@ index b3591cd..d94ee58 100644
 + override fun onHostPause() {
 +     if (!isPaused && cameraView?.isCameraOpened == true) {
 +         try {
-+                 faceDetector?.release()
-+                 cameraView?.stop()
++            faceDetector?.release()
++            cameraView?.stop()
 +         } catch (e: Exception) {
 +            Log.e("onHostPause", "Error occurred: ${e.message}")
 +         } finally {
