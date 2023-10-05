@@ -67,6 +67,9 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.faceAuthStatus = action.payload.status;
         break;
       case FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.SUCCESS.type:
+        if (draft.sessionId !== action.payload.sessionId) {
+          resetSession();
+        }
         draft.emotions = action.payload.emotions;
         draft.sessionId = action.payload.sessionId;
         draft.sessionExpiredAt = action.payload.sessionExpiredAt;

@@ -125,12 +125,8 @@ export function GatherEmotionsStep({
           ),
         );
       }, 1000);
-      const _cameraRef = cameraRef.current;
       return () => {
         toAbort = true;
-        if (_cameraRef) {
-          _cameraRef.stopRecording();
-        }
         clearInterval(handle);
       };
     }
@@ -148,7 +144,8 @@ export function GatherEmotionsStep({
     if (
       (emotions.length &&
         emotionsAuthNextEmotionIndex >= emotions.length &&
-        emotionsAuthStatus !== 'NEED_MORE_EMOTIONS') ||
+        emotionsAuthStatus !== 'NEED_MORE_EMOTIONS' &&
+        !isSessionExpired) ||
       isEmotionsAuthFinalised(emotionsAuthStatus)
     ) {
       onAllEmotionsGathered();
@@ -157,17 +154,28 @@ export function GatherEmotionsStep({
     emotions,
     emotionsAuthNextEmotionIndex,
     emotionsAuthStatus,
+    isSessionExpired,
     onAllEmotionsGathered,
   ]);
 
   useEffect(() => {
     if (
       (!session && !isEmotionsAuthFinalised(emotionsAuthStatus)) ||
-      isSessionExpired
+      isSessionExpired ||
+      (emotions.length &&
+        emotionsAuthNextEmotionIndex >= emotions.length &&
+        emotionsAuthStatus === 'NEED_MORE_EMOTIONS')
     ) {
       dispatch(FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.START.create());
     }
-  }, [dispatch, emotionsAuthStatus, isSessionExpired, session]);
+  }, [
+    dispatch,
+    emotions.length,
+    emotionsAuthNextEmotionIndex,
+    emotionsAuthStatus,
+    isSessionExpired,
+    session,
+  ]);
 
   return (
     <View style={cameraStyles.cameraContainer}>

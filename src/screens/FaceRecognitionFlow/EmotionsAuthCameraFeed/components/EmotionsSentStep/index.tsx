@@ -33,7 +33,6 @@ export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
   };
   const onTryLater = () => {
     navigation.goBack();
-    dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
   };
   const onTryAgain = useCallback(() => {
     dispatch(FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create());
