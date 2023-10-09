@@ -10,6 +10,7 @@ import {loadLocalAudio} from '@services/audio';
 import {dayjs} from '@services/dayjs';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
+  authConfigSelector,
   firstMiningDateSelector,
   unsafeUserSelector,
   userIdSelector,
@@ -44,7 +45,10 @@ export function* startMiningSessionSaga(
 ) {
   const emotionsAuthStatus: ReturnType<typeof emotionsAuthStatusSelector> =
     yield select(emotionsAuthStatusSelector);
-  if (emotionsAuthStatus !== 'SUCCESS') {
+  const authConfig: ReturnType<typeof authConfigSelector> = yield select(
+    authConfigSelector,
+  );
+  if (emotionsAuthStatus !== 'SUCCESS' && authConfig?.['face-auth']?.enabled) {
     navigate({
       name: 'FaceRecognition',
       params: undefined,
