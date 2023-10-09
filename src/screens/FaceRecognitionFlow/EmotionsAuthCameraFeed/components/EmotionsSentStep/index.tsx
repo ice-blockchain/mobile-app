@@ -3,6 +3,7 @@
 import {CheckMark} from '@components/CheckMark';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
+import {Header} from '@navigation/components/Header';
 import {useNavigation} from '@react-navigation/native';
 import {StatusOverlay} from '@screens/FaceRecognitionFlow/components/StatusOverlay';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
@@ -12,7 +13,7 @@ import {LogoIcon} from '@svg/LogoIcon';
 import {RestartIcon} from '@svg/RestartIcon';
 import {t} from '@translations/i18n';
 import React, {useCallback, useEffect} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {BackHandler, StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -48,8 +49,33 @@ export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
       onGatherMoreEmotions();
     }
   }, [emotionsAuthStatus, onGatherMoreEmotions]);
+
+  const onGoBack = useCallback(() => {
+    if (emotionsAuthStatus !== 'SUCCESS' && emotionsAuthStatus !== 'BANNED') {
+      dispatch(
+        FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create(),
+      );
+    }
+  }, [dispatch, emotionsAuthStatus]);
+
+  useEffect(() => {
+    const backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      () => {
+        onGoBack();
+        return false;
+      },
+    );
+    return () => backHandler.remove();
+  }, [onGoBack]);
   return (
     <View style={commonStyles.flexOne}>
+      <Header
+        color={COLORS.primaryDark}
+        title={t('face_auth.header')}
+        backgroundColor={'transparent'}
+        onGoBack={onGoBack}
+      />
       {emotionsAuthStatus === 'LOADING' ? (
         <StatusOverlay
           onLightBackground

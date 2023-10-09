@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {AuthEmotion} from '@api/faceRecognition/types';
+import {COLORS} from '@constants/colors';
+import {commonStyles} from '@constants/styles';
+import {Header} from '@navigation/components/Header';
 import {
   CameraFeed,
   cameraStyles,
@@ -18,11 +21,12 @@ import {
   emotionsAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
 import {isEmotionsAuthFinalised} from '@store/modules/FaceRecognition/utils';
+import {t} from '@translations/i18n';
 import {getVideoDimensionsWithFFmpeg} from '@utils/ffmpeg';
 import {Duration} from 'dayjs/plugin/duration';
 import {Camera, VideoQuality} from 'expo-camera';
-import React, {useEffect, useRef, useState} from 'react';
-import {StyleSheet, View} from 'react-native';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import {BackHandler, StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem, wait} from 'rn-units';
 
@@ -117,6 +121,10 @@ export function GatherEmotionsStep({
               quality: VideoQuality['480p'],
               mute: true,
             })
+            .catch(() => {
+              toAbort = true;
+              return {uri: ''};
+            })
             .finally(() => {
               setIsVideoRecording(false);
               clearInterval(handle);
@@ -193,24 +201,48 @@ export function GatherEmotionsStep({
     session,
   ]);
 
+  const onGoBack = useCallback(() => {
+    if (isVideoRecording && cameraRef.current) {
+      cameraRef.current.stopRecording();
+    }
+  }, [isVideoRecording]);
+  useEffect(() => {
+    const backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      () => {
+        onGoBack();
+        return false;
+      },
+    );
+    return () => backHandler.remove();
+  }, [onGoBack]);
+
   return (
-    <View style={cameraStyles.cameraContainer}>
-      <CameraFeed
-        ref={cameraRef}
-        onCameraReady={() => {
-          setIsCameraReady(true);
-        }}
+    <View style={commonStyles.flexOne}>
+      <Header
+        color={COLORS.primaryDark}
+        title={t('face_auth.header')}
+        backgroundColor={'transparent'}
+        onGoBack={onGoBack}
       />
-      <View style={styles.bottomContainer}>
-        {!started || !recordingEmotion ? (
-          <StartButton onPress={onStartPressed} />
-        ) : (
-          <EmotionCard
-            emotion={recordingEmotion}
-            countDownSecs={currentVideoCountdown}
-            previewTimeInMs={WAIT_BEFORE_RECORDING_MS}
-          />
-        )}
+      <View style={cameraStyles.cameraContainer}>
+        <CameraFeed
+          ref={cameraRef}
+          onCameraReady={() => {
+            setIsCameraReady(true);
+          }}
+        />
+        <View style={styles.bottomContainer}>
+          {!started || !recordingEmotion ? (
+            <StartButton onPress={onStartPressed} />
+          ) : (
+            <EmotionCard
+              emotion={recordingEmotion}
+              countDownSecs={currentVideoCountdown}
+              previewTimeInMs={WAIT_BEFORE_RECORDING_MS}
+            />
+          )}
+        </View>
       </View>
     </View>
   );
