@@ -3,5 +3,5 @@
 import {del} from '@api/client';
 
 export function deleteFaceAuthData(): Promise<void> {
-  return del<void>('/face-auth');
+  return del<void>('/face-auth/');
 }

@@ -64,9 +64,17 @@ export function GatherEmotionsStep({
   const dispatch = useDispatch();
   const isSessionExpired = !!sessionExpiredAt && Date.now() > sessionExpiredAt;
 
+  const [isVideoRecording, setIsVideoRecording] = useState(false);
+  const [isAllRecorded, setIsAllRecorded] = useState(false);
   const [recordingEmotion, setRecordingEmotion] = useState<null | AuthEmotion>(
     null,
   );
+
+  useEffect(() => {
+    if (isAllRecorded && !isVideoRecording) {
+      onAllEmotionsGathered();
+    }
+  }, [isAllRecorded, isVideoRecording, onAllEmotionsGathered]);
 
   useEffect(() => {
     if (
@@ -81,15 +89,38 @@ export function GatherEmotionsStep({
       const recordVideo = async () => {
         if (cameraRef.current) {
           setRecordingEmotion(emotions[emotionsAuthNextEmotionIndex]);
+          setCurrentVideoCountdown(
+            dayjs.duration(VIDEO_DURATION_SEC, 'seconds'),
+          );
+
           await wait(WAIT_BEFORE_RECORDING_MS);
           if (toAbort) {
             return;
           }
-          const video = await cameraRef.current.recordAsync({
-            maxDuration: 5,
-            quality: VideoQuality['480p'],
-            mute: true,
-          });
+
+          const recordingStartTime = Date.now();
+          const handle = setInterval(() => {
+            setCurrentVideoCountdown(
+              dayjs.duration(
+                Math.max(
+                  0,
+                  VIDEO_DURATION_SEC - getSecondsPassed(recordingStartTime),
+                ),
+                'seconds',
+              ),
+            );
+          }, 1000);
+          setIsVideoRecording(true);
+          const video = await cameraRef.current
+            .recordAsync({
+              maxDuration: 5,
+              quality: VideoQuality['480p'],
+              mute: true,
+            })
+            .finally(() => {
+              setIsVideoRecording(false);
+              clearInterval(handle);
+            });
           if (toAbort) {
             return;
           }
@@ -112,22 +143,8 @@ export function GatherEmotionsStep({
       };
       recordVideo();
 
-      const recordingStartTime = Date.now() + WAIT_BEFORE_RECORDING_MS;
-      setCurrentVideoCountdown(dayjs.duration(VIDEO_DURATION_SEC, 'seconds'));
-      const handle = setInterval(() => {
-        setCurrentVideoCountdown(
-          dayjs.duration(
-            Math.max(
-              0,
-              VIDEO_DURATION_SEC - getSecondsPassed(recordingStartTime),
-            ),
-            'seconds',
-          ),
-        );
-      }, 1000);
       return () => {
         toAbort = true;
-        clearInterval(handle);
       };
     }
   }, [
@@ -148,14 +165,13 @@ export function GatherEmotionsStep({
         !isSessionExpired) ||
       isEmotionsAuthFinalised(emotionsAuthStatus)
     ) {
-      onAllEmotionsGathered();
+      setIsAllRecorded(true);
     }
   }, [
     emotions,
     emotionsAuthNextEmotionIndex,
     emotionsAuthStatus,
     isSessionExpired,
-    onAllEmotionsGathered,
   ]);
 
   useEffect(() => {

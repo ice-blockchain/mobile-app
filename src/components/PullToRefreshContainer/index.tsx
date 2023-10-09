@@ -3,7 +3,7 @@
 import {ActivityIndicatorTheme} from '@components/ActivityIndicator';
 import {RefreshIceIcon} from '@components/RefreshControl';
 import {hapticFeedback} from '@utils/device';
-import React, {cloneElement, RefObject, useCallback, useMemo} from 'react';
+import React, {cloneElement, useCallback, useMemo} from 'react';
 import {
   FlatListProps,
   ScrollViewProps,
@@ -13,11 +13,13 @@ import {
 } from 'react-native';
 import {Gesture, GestureDetector} from 'react-native-gesture-handler';
 import Animated, {
-  AnimateProps,
+  AnimatedProps,
+  AnimatedRef,
   Extrapolate,
   interpolate,
   runOnJS,
   scrollTo,
+  SharedValue,
   useAnimatedReaction,
   useAnimatedScrollHandler,
   useAnimatedStyle,
@@ -35,11 +37,11 @@ interface Props {
    * In theory can be used with any views
    */
   children: React.ReactElement<
-    AnimateProps<ScrollViewProps | FlatListProps<unknown>>
+    AnimatedProps<ScrollViewProps | FlatListProps<unknown>>
   >;
   theme?: ActivityIndicatorTheme;
-  onScrollTranslateY?: Animated.SharedValue<number>;
-  animatedScrollViewRef?: RefObject<Animated.ScrollView>;
+  onScrollTranslateY?: SharedValue<number>;
+  animatedScrollViewRef?: AnimatedRef<Animated.ScrollView>;
 }
 
 /**

@@ -6174,10 +6174,10 @@ expo-barcode-scanner@^12.5.3:
   dependencies:
     expo-image-loader "~4.3.0"
 
-expo-camera@^13.7.0:
-  version "13.7.0"
-  resolved "https://registry.yarnpkg.com/expo-camera/-/expo-camera-13.7.0.tgz#f8dc91e24937051ed9769a0f966b62c403704755"
-  integrity sha512-OqnaCv9UZs9dRmA3Nd0bx8yS/V6PhyWzzC+eknCpxWnvvNUy701Jiq9sYkquXGR1jiYU1pMUzvZfY1K0Fq0hiQ==
+expo-camera@^13.6.0:
+  version "13.6.0"
+  resolved "https://registry.yarnpkg.com/expo-camera/-/expo-camera-13.6.0.tgz#a38537f474da4073ca4c19b5551e5178be5c899e"
+  integrity sha512-8lxK15D2tuEZom9bhDMMqNPW+5241Ak4wIup/ebh4JekgOtSQ/egbq7qDn2FCFi+5vPFKX4nRsvGOuzfuzvmZA==
   dependencies:
     invariant "^2.2.4"
 
@@ -10497,10 +10497,10 @@ react-native-play-install-referrer@^1.1.8:
   resolved "https://registry.yarnpkg.com/react-native-play-install-referrer/-/react-native-play-install-referrer-1.1.8.tgz#db9b7ab787be0af9a335c939cf0d165c91069fa9"
   integrity sha512-g+LLv4Tkt3gWJ68OnhaBy25zYpP43OlLydL6siRjGAcl1fMc/DvfnNFWL4Oe1zrpwW4cmB0QGrKYtcbKnSGK3Q==
 
-react-native-reanimated@^3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-3.3.0.tgz#80f9d58e28fddf62fe4c1bc792337b8ab57936ab"
-  integrity sha512-LzfpPZ1qXBGy5BcUHqw3pBC0qSd22qXS3t8hWSbozXNrBkzMhhOrcILE/nEg/PHpNNp1xvGOW8NwpAMF006roQ==
+react-native-reanimated@^3.5.4:
+  version "3.5.4"
+  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-3.5.4.tgz#a6c2b0c43b6dad246f5d276213974afedb8e3fc7"
+  integrity sha512-8we9LLDO1o4Oj9/DICeEJ2K1tjfqkJagqQUglxeUAkol/HcEJ6PGxIrpBcNryLqCDYEcu6FZWld/FzizBIw6bg==
   dependencies:
     "@babel/plugin-transform-object-assign" "^7.16.7"
     "@babel/preset-typescript" "^7.16.7"

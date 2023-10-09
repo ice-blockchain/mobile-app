@@ -15,7 +15,7 @@ PODS:
     - ExpoModulesCore
     - ZXingObjC/OneD
     - ZXingObjC/PDF417
-  - EXCamera (13.7.0):
+  - EXCamera (13.6.0):
     - ExpoModulesCore
   - EXFileSystem (15.4.2):
     - ExpoModulesCore
@@ -802,7 +802,7 @@ PODS:
     - React-Core
   - RNReactNativeHapticFeedback (1.14.0):
     - React-Core
-  - RNReanimated (3.3.0):
+  - RNReanimated (3.5.4):
     - DoubleConversion
     - FBLazyVector
     - glog
@@ -1232,7 +1232,7 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   EXBarCodeScanner: 44783bf0be375ab18a838dcfef29dd648397000a
-  EXCamera: 3302fc0e5188a47a2272a439acef7d9a5248a67c
+  EXCamera: 2dc2bd2828bca4e283018a0b5a84aec6639ff0b4
   EXFileSystem: d7f59869885cfeab3ac771e2a8d0f5ed98cd3fdb
   EXImageLoader: 34b214f9387e98f3c73989f15d8d5b399c9ab3f7
   Expo: d5956de70d4076190861f6730b93e75478b6faf8
@@ -1351,7 +1351,7 @@ SPEC CHECKSUMS:
   RNNotifee: 05692d7bb42b6c718a3906aeb8431c48ff2e8097
   RNPermissions: dcdb7b99796bbeda6975a6e79ad519c41b251b1c
   RNReactNativeHapticFeedback: 1e3efeca9628ff9876ee7cdd9edec1b336913f8c
-  RNReanimated: 9f7068e43b9358a46a688d94a5a3adb258139457
+  RNReanimated: ab2e96c6d5591c3dfbb38a464f54c8d17fb34a87
   RNScreens: 50ffe2fa2342eabb2d0afbe19f7c1af286bc7fb3
   RNSentry: 9f0447b3ce13806f544903748de423259ead8552
   RNSha256: 80bea5b2e7005f813f6438cb41e573b3d531146c
