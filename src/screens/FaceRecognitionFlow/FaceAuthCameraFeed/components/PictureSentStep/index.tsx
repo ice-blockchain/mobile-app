@@ -5,7 +5,10 @@ import {useNavigation} from '@react-navigation/native';
 import {cameraStyles} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
 import {StatusOverlay} from '@screens/FaceRecognitionFlow/components/StatusOverlay';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
-import {faceAuthStatusSelector} from '@store/modules/FaceRecognition/selectors';
+import {
+  cameraRatioSelector,
+  faceAuthStatusSelector,
+} from '@store/modules/FaceRecognition/selectors';
 import {LogoIcon} from '@svg/LogoIcon';
 import {RestartIcon} from '@svg/RestartIcon';
 import {t} from '@translations/i18n';
@@ -40,8 +43,15 @@ export function PictureSentStep({
     navigation.goBack();
   };
 
+  const cameraRatio = useSelector(cameraRatioSelector);
+
   return (
-    <View style={cameraStyles.cameraContainer}>
+    <View
+      style={
+        cameraRatio === '16:9'
+          ? cameraStyles.cameraContainer16to9
+          : cameraStyles.cameraContainer4to3
+      }>
       <Image
         resizeMode={'contain'}
         source={{uri: picture.uri}}
@@ -105,16 +115,11 @@ export function PictureSentStep({
 
 const styles = StyleSheet.create({
   picture: {
-    width: '100%',
-    height: '100%',
+    ...StyleSheet.absoluteFillObject,
     transform: [{scaleX: -1}],
-    position: 'absolute',
   },
   pictureOverlay: {
-    position: 'absolute',
-    flex: 1,
-    width: '100%',
-    height: '100%',
+    ...StyleSheet.absoluteFillObject,
     backgroundColor: COLORS.primaryLight05opacity,
   },
 });

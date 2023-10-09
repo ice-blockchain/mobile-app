@@ -13,14 +13,19 @@ import debounce from 'lodash/debounce';
 import React, {useCallback, useMemo, useState} from 'react';
 import {ListRenderItem, StyleSheet, Text} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
-import {isIOS, rem} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   onSelect: (country: Country) => void;
   dontShowPhoneCodes?: boolean;
+  keyboardVerticalOffset?: number;
 };
 
-export function CountrySelectFeed({onSelect, dontShowPhoneCodes}: Props) {
+export function CountrySelectFeed({
+  onSelect,
+  dontShowPhoneCodes,
+  keyboardVerticalOffset,
+}: Props) {
   const bottomOffsetStyle = useBottomOffsetStyle({extraOffset: rem(12)});
   const [searchCountries, setSearchCountries] = useState(countries);
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
@@ -66,9 +71,7 @@ export function CountrySelectFeed({onSelect, dontShowPhoneCodes}: Props) {
     [dontShowPhoneCodes, onSelect, selectedCountry?.isoCode],
   );
   return (
-    <KeyboardAvoider
-      keyboardVerticalOffset={isIOS ? 57 : 0} // presentation: modal top offset on iOS
-    >
+    <KeyboardAvoider keyboardVerticalOffset={keyboardVerticalOffset}>
       <SearchInput
         onChangeText={search}
         placeholder={t('button.search')}

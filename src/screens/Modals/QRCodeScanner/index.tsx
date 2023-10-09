@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {useCameraPermissions} from '@hooks/useCameraPermissions';
 import {Header} from '@navigation/components/Header';
 import {WelcomeStackParamList} from '@navigation/Welcome';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
-import {useCameraPermissions} from '@screens/Modals/QRCodeScanner/hooks/useCameraPermissions';
 import {useCameraRatio} from '@screens/Modals/QRCodeScanner/hooks/useCameraRatio';
 import {useDetectBarcode} from '@screens/Modals/QRCodeScanner/hooks/useDetectBarcode';
 import {BarCodeScanner} from 'expo-barcode-scanner';

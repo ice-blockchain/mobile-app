@@ -24,42 +24,9 @@ function getEmotionImage({
   emotion: AuthEmotion;
   showPreview: boolean;
 }) {
-  switch (emotion) {
-    case 'anger':
-      return showPreview
-        ? Images.emotions.anger_preview
-        : Images.emotions.anger;
-    case 'contempt':
-      return showPreview
-        ? Images.emotions.contempt_preview
-        : Images.emotions.contempt;
-    case 'disgust':
-      return showPreview
-        ? Images.emotions.disgust_preview
-        : Images.emotions.disgust;
-    case 'fear':
-      return showPreview ? Images.emotions.fear_preview : Images.emotions.fear;
-    case 'happiness':
-      return showPreview
-        ? Images.emotions.happiness_preview
-        : Images.emotions.happiness;
-    case 'neutral':
-      return showPreview
-        ? Images.emotions.neutral_preview
-        : Images.emotions.neutral;
-    case 'sadness':
-      return showPreview
-        ? Images.emotions.sadness_preview
-        : Images.emotions.sadness;
-    case 'surprise':
-      return showPreview
-        ? Images.emotions.surprise_preview
-        : Images.emotions.surprise;
-    default:
-      return showPreview
-        ? Images.emotions.neutral_preview
-        : Images.emotions.neutral;
-  }
+  return showPreview
+    ? Images.emotions[`${emotion}_preview`]
+    : Images.emotions[emotion];
 }
 
 function getEmotionTranslation(emotion: AuthEmotion) {

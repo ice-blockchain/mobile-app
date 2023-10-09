@@ -67,14 +67,17 @@ export function FaceRecognition() {
   const user = useSelector(unsafeUserSelector);
   const faceAuthStatus = useSelector(faceAuthStatusSelector);
   const emotionsAuthStatus = useSelector(emotionsAuthStatusSelector);
+
   const isBanned =
     faceAuthStatus === 'BANNED' ||
     emotionsAuthStatus === 'BANNED' ||
     (user.kycStepBlocked && !user.kycStepPassed);
+
   const [faceRecognitionPhase, setFaceRecognitionPhase] =
     useState<FaceRecognitionPhase>(() =>
       kycStepToFaceRecognitionPhase(user.kycStepPassed),
     );
+
   useEffect(() => {
     if (user.kycStepPassed === 2) {
       if (

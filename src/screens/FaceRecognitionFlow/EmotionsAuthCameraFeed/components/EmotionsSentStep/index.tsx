@@ -29,16 +29,20 @@ export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
     dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
     navigation.goBack();
   };
+
   const onBanned = () => {
     navigation.goBack();
   };
+
   const onTryLater = () => {
     navigation.goBack();
   };
+
   const onTryAgain = useCallback(() => {
     dispatch(FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create());
     onGatherMoreEmotions();
   }, [dispatch, onGatherMoreEmotions]);
+
   useEffect(() => {
     if (emotionsAuthStatus === 'SESSION_EXPIRED') {
       onTryAgain();

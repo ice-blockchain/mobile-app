@@ -15,3 +15,5 @@ export type EmotionsAuthStatus =
   | 'NEED_MORE_EMOTIONS'
   | 'SESSION_EXPIRED'
   | 'TRY_LATER';
+
+export type CameraRatio = '16:9' | '4:3';

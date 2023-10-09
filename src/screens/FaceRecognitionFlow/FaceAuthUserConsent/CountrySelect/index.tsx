@@ -1,11 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {User} from '@api/user/types';
-import {CountrySelectFeed} from '@components/CountrySelectFeed';
 import {COLORS} from '@constants/colors';
 import {Country} from '@constants/countries';
-import {commonStyles, windowWidth} from '@constants/styles';
+import {commonStyles} from '@constants/styles';
+import {BUTTON_WIDTH} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/constants';
 import {PopUpButton} from '@screens/Modals/PopUp/components/PopUpButton';
+import {CountrySelectFeed} from '@screens/Templates/CountrySelectFeed';
 import {AccountActions} from '@store/modules/Account/actions';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {FaceAuthIcon} from '@svg/FaceAuthIcon';
@@ -60,8 +61,6 @@ export function CountrySelect({onContinue}: Props) {
   );
 }
 
-const FOOTER_PADDING_HORIZONTAL = rem(28);
-
 const styles = StyleSheet.create({
   buttonsContainer: {
     paddingTop: rem(12),
@@ -71,10 +70,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   button: {
-    width: windowWidth / 2 - FOOTER_PADDING_HORIZONTAL - rem(16),
+    width: BUTTON_WIDTH,
   },
   disabledButton: {
-    width: windowWidth / 2 - FOOTER_PADDING_HORIZONTAL - rem(16),
+    width: BUTTON_WIDTH,
     backgroundColor: COLORS.primaryDark,
     opacity: 0.5,
   },

@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {CountrySelectFeed} from '@components/CountrySelectFeed';
 import {Country} from '@constants/countries';
 import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {MainStackParamList} from '@navigation/Main';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
+import {CountrySelectFeed} from '@screens/Templates/CountrySelectFeed';
 import {t} from '@translations/i18n';
 import React from 'react';
 import {View} from 'react-native';
@@ -29,6 +29,7 @@ export const CountrySelect = () => {
           navigation.goBack();
           onSelect(country);
         }}
+        keyboardVerticalOffset={isIOS ? 57 : 0} // presentation: modal top offset on iOS
       />
     </View>
   );

@@ -127,6 +127,14 @@ export const is4xxApiError = (error: unknown) => {
   );
 };
 
+export const is5xxApiError = (error: unknown) => {
+  return (
+    axios.isAxiosError(error) &&
+    error.response?.status &&
+    error.response.status >= 500
+  );
+};
+
 export const isNetworkError = (
   error: unknown,
 ): error is AxiosError<{

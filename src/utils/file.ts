@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {PixelRatio} from 'react-native';
+import {PixelRatio, Platform} from 'react-native';
 
 export const getFilenameFromPath = (path: string) => {
   // eslint-disable-next-line no-useless-escape
@@ -10,6 +10,12 @@ export const getFilenameFromPath = (path: string) => {
 export const getFilenameFromPathWithoutExtension = (path: string) => {
   return getFilenameFromPath(path).split('.')[0];
 };
+
+export function normalizePictureUri(pictureUri: string) {
+  return Platform.OS === 'android'
+    ? pictureUri
+    : pictureUri.replace('file://', '');
+}
 
 export const getImageUriForSize = (
   uri: string,

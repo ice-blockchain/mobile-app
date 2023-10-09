@@ -2,8 +2,7 @@
 
 import {buildFormData, post} from '@api/client';
 import {AuthEmotion} from '@api/faceRecognition/types';
-import {getFilenameFromPath} from '@utils/file';
-import {Platform} from 'react-native';
+import {getFilenameFromPath, normalizePictureUri} from '@utils/file';
 
 type Response = {
   result: boolean;
@@ -25,10 +24,7 @@ export function emotionsAuth({
     image: pictureUris.map(pictureUri => ({
       name: getFilenameFromPath(pictureUri),
       type: 'image/jpeg',
-      uri:
-        Platform.OS === 'android'
-          ? pictureUri
-          : pictureUri.replace('file://', ''),
+      uri: normalizePictureUri(pictureUri),
     })),
   });
   return post<FormData, Response>(

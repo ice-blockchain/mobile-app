@@ -7,13 +7,14 @@ import {cameraStyles} from '@screens/FaceRecognitionFlow/components/CameraFeed/C
 import {FaceAuthOverlay} from '@screens/FaceRecognitionFlow/components/FaceAuthOverlay';
 import {getPictureCropStartY} from '@screens/FaceRecognitionFlow/utils';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
+import {cameraRatioSelector} from '@store/modules/FaceRecognition/selectors';
 import {RestartIcon} from '@svg/RestartIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import {CameraCapturedPicture} from 'expo-camera';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -28,7 +29,7 @@ export function SendOrRetakeStep({
   picture,
 }: Props) {
   const dispatch = useDispatch();
-  const sendPicture = async () => {
+  const sendPicture = () => {
     dispatch(
       FaceRecognitionActions.FACE_AUTH.START.create({
         pictureUri: picture.uri,
@@ -41,8 +42,16 @@ export function SendOrRetakeStep({
     );
     onPictureSent();
   };
+
+  const cameraRatio = useSelector(cameraRatioSelector);
+
   return (
-    <View style={cameraStyles.cameraContainer}>
+    <View
+      style={
+        cameraRatio === '16:9'
+          ? cameraStyles.cameraContainer16to9
+          : cameraStyles.cameraContainer4to3
+      }>
       <Image
         resizeMode={'contain'}
         source={{uri: picture.uri}}
@@ -73,10 +82,8 @@ export function SendOrRetakeStep({
 
 const styles = StyleSheet.create({
   picture: {
-    width: '100%',
-    height: '100%',
+    ...StyleSheet.absoluteFillObject,
     transform: [{scaleX: -1}],
-    position: 'absolute',
   },
   buttonContainer: {
     position: 'absolute',

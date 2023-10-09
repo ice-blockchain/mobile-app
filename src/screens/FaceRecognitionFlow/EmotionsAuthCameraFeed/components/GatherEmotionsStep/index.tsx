@@ -2,6 +2,7 @@
 
 import {AuthEmotion} from '@api/faceRecognition/types';
 import {COLORS} from '@constants/colors';
+import {VIDEO_DURATION_SEC} from '@constants/faceRecognition';
 import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {
@@ -14,6 +15,7 @@ import {getPictureCropStartY} from '@screens/FaceRecognitionFlow/utils';
 import {dayjs} from '@services/dayjs';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
+  cameraRatioSelector,
   emotionsAuthEmotionsSelector,
   emotionsAuthNextEmotionIndexSelector,
   emotionsAuthSessionExpiredAtSelector,
@@ -35,8 +37,6 @@ type Props = {
   onStartPressed: () => void;
   started: boolean;
 };
-
-const VIDEO_DURATION_SEC = 5; // 5 seconds
 
 function getSecondsPassed(since: number) {
   const msPassed = Date.now() - since;
@@ -217,6 +217,8 @@ export function GatherEmotionsStep({
     return () => backHandler.remove();
   }, [onGoBack]);
 
+  const cameraRatio = useSelector(cameraRatioSelector);
+
   return (
     <View style={commonStyles.flexOne}>
       <Header
@@ -225,7 +227,12 @@ export function GatherEmotionsStep({
         backgroundColor={'transparent'}
         onGoBack={onGoBack}
       />
-      <View style={cameraStyles.cameraContainer}>
+      <View
+        style={
+          cameraRatio === '16:9'
+            ? cameraStyles.cameraContainer16to9
+            : cameraStyles.cameraContainer4to3
+        }>
         <CameraFeed
           ref={cameraRef}
           onCameraReady={() => {

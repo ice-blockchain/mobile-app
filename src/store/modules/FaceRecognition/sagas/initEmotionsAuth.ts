@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {FACE_RECOGNITION_PICTURE_SIZE} from '@api/faceRecognition/constants';
+import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
+import {FACE_RECOGNITION_PICTURE_SIZE} from '@constants/faceRecognition';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
@@ -11,10 +12,9 @@ import {
   emotionsAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
 import {isEmotionsAuthFinalised} from '@store/modules/FaceRecognition/utils';
-import {returnSecondIfNew} from '@utils/array';
+import {shallowCompare} from '@utils/array';
 import {showError} from '@utils/errors';
 import {extractFramesWithFFmpeg} from '@utils/ffmpeg';
-import axios from 'axios';
 import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
 type Actions = ReturnType<
@@ -80,7 +80,9 @@ export function* initEmotionsAuthSaga(action: Actions) {
     } else {
       yield put(
         FaceRecognitionActions.EMOTIONS_AUTH.NEED_MORE_EMOTIONS.create({
-          emotions: returnSecondIfNew(emotions, response.emotions),
+          emotions: shallowCompare(emotions, response.emotions)
+            ? emotions
+            : response.emotions,
         }),
       );
     }
@@ -91,20 +93,15 @@ export function* initEmotionsAuthSaga(action: Actions) {
     if (isEmotionsAuthFinalised(emotionsAuthStatus)) {
       return;
     }
-    if (
-      axios.isAxiosError(error) &&
-      (error.response?.data?.code === 'USER_DISABLED' ||
-        error?.code === 'USER_DISABLED')
-    ) {
+    if (isApiError(error, 403, 'USER_DISABLED')) {
       yield put(
         FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create({
           status: 'BANNED',
         }),
       );
     } else if (
-      axios.isAxiosError(error) &&
-      (error.response?.data?.code === 'RATE_LIMIT_EXCEEDED' ||
-        error.response?.data?.code === 'RATE_LIMIT_NEGATIVE_EXCEEDED')
+      isApiError(error, 429, 'RATE_LIMIT_EXCEEDED') ||
+      isApiError(error, 429, 'RATE_LIMIT_NEGATIVE_EXCEEDED')
     ) {
       yield put(
         FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create({
@@ -112,11 +109,8 @@ export function* initEmotionsAuthSaga(action: Actions) {
         }),
       );
     } else if (
-      axios.isAxiosError(error) &&
-      (error.code === 'SESSION_TIMED_OUT' ||
-        error.code === 'SESSION_NOT_FOUND' ||
-        error.response?.data?.code === 'SESSION_TIMED_OUT' ||
-        error.response?.data?.code === 'SESSION_NOT_FOUND')
+      isApiError(error, 403, 'SESSION_TIMED_OUT') ||
+      isApiError(error, 403, 'SESSION_NOT_FOUND')
     ) {
       yield put(
         FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create({
@@ -129,11 +123,7 @@ export function* initEmotionsAuthSaga(action: Actions) {
           status: 'FAILED',
         }),
       );
-      if (
-        axios.isAxiosError(error) &&
-        error.response?.status != null &&
-        error.response?.status >= 500
-      ) {
+      if (is5xxApiError(error)) {
         yield spawn(showError, error);
       }
     }

@@ -5,6 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AccountActions} from '@store/modules/Account/actions';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
+  CameraRatio,
   EmotionsAuthStatus,
   FaceAuthStatus,
 } from '@store/modules/FaceRecognition/types';
@@ -20,6 +21,8 @@ export interface State {
   nextEmotionIndex: number;
   sessionExpiredAt: number | null;
   activeRequests: number;
+
+  cameraRatio: CameraRatio;
 }
 
 type Actions = ReturnType<
@@ -34,6 +37,7 @@ type Actions = ReturnType<
   | typeof FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create
   | typeof FaceRecognitionActions.RESET_FACE_AUTH_STATUS.STATE.create
   | typeof FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create
+  | typeof FaceRecognitionActions.SET_CAMERA_RATIO.STATE.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
 >;
 
@@ -45,6 +49,7 @@ const INITIAL_STATE: State = {
   nextEmotionIndex: 0,
   sessionExpiredAt: null,
   activeRequests: 0,
+  cameraRatio: '16:9',
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -105,6 +110,9 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.type:
         draft.emotionsAuthStatus = null;
         resetSession();
+        break;
+      case FaceRecognitionActions.SET_CAMERA_RATIO.STATE.type:
+        draft.cameraRatio = action.payload.cameraRatio;
         break;
       case AccountActions.SIGN_OUT.SUCCESS.type:
         return {...INITIAL_STATE};

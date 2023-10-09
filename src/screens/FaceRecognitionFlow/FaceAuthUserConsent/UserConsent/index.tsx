@@ -3,10 +3,14 @@
 import {CheckBox} from '@components/CheckBox';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
-import {SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
 import {navigate} from '@navigation/utils';
 import {useNavigation} from '@react-navigation/native';
+import {
+  BUTTON_WIDTH,
+  FOOTER_PADDING_HORIZONTAL,
+} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/constants';
 import {Message} from '@screens/Modals/PopUp/components/Message';
 import {PopUpButton} from '@screens/Modals/PopUp/components/PopUpButton';
 import {FaceAuthIcon} from '@svg/FaceAuthIcon';
@@ -110,8 +114,6 @@ export function UserConsent({updateKycStepPassed}: Props) {
   );
 }
 
-const FOOTER_PADDING_HORIZONTAL = rem(28);
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -161,10 +163,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   button: {
-    width: windowWidth / 2 - FOOTER_PADDING_HORIZONTAL - rem(16),
+    width: BUTTON_WIDTH,
   },
   disabledButton: {
-    width: windowWidth / 2 - FOOTER_PADDING_HORIZONTAL - rem(16),
+    width: BUTTON_WIDTH,
     backgroundColor: COLORS.primaryDark,
     opacity: 0.5,
   },

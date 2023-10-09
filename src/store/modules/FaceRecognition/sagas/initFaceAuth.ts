@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {FACE_RECOGNITION_PICTURE_SIZE} from '@api/faceRecognition/constants';
+import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
+import {FACE_RECOGNITION_PICTURE_SIZE} from '@constants/faceRecognition';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {showError} from '@utils/errors';
 import {cropAndResizeWithFFmpeg} from '@utils/ffmpeg';
 import {getFilenameFromPath} from '@utils/file';
-import axios from 'axios';
 import {cacheDirectory} from 'expo-file-system';
 import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
@@ -37,20 +37,15 @@ export function* initFaceAuthSaga(action: Actions) {
     });
     yield put(FaceRecognitionActions.FACE_AUTH.SUCCESS.create());
   } catch (error: unknown) {
-    if (
-      axios.isAxiosError(error) &&
-      (error.code === 'USER_DISABLED' ||
-        error.response?.data?.code === 'USER_DISABLED')
-    ) {
+    if (isApiError(error, 403, 'USER_DISABLED')) {
       yield put(
         FaceRecognitionActions.FACE_AUTH.FAILURE.create({
           status: 'BANNED',
         }),
       );
     } else if (
-      axios.isAxiosError(error) &&
-      (error.response?.data?.code === 'RATE_LIMIT_EXCEEDED' ||
-        error.response?.data?.code === 'RATE_LIMIT_NEGATIVE_EXCEEDED')
+      isApiError(error, 429, 'RATE_LIMIT_EXCEEDED') ||
+      isApiError(error, 429, 'RATE_LIMIT_NEGATIVE_EXCEEDED')
     ) {
       yield put(
         FaceRecognitionActions.FACE_AUTH.FAILURE.create({
@@ -63,11 +58,7 @@ export function* initFaceAuthSaga(action: Actions) {
           status: 'FAILED',
         }),
       );
-      if (
-        axios.isAxiosError(error) &&
-        error.response?.status != null &&
-        error.response?.status >= 500
-      ) {
+      if (is5xxApiError(error)) {
         yield spawn(showError, error);
       }
     }

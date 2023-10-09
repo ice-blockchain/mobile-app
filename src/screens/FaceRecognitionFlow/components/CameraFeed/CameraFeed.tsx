@@ -1,19 +1,19 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {commonStyles, windowWidth} from '@constants/styles';
+import {useCameraPermissions} from '@hooks/useCameraPermissions';
 import {FaceAuthOverlay} from '@screens/FaceRecognitionFlow/components/FaceAuthOverlay';
-import {useCameraPermissions} from '@screens/Modals/QRCodeScanner/hooks/useCameraPermissions';
+import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
+import {cameraRatioSelector} from '@store/modules/FaceRecognition/selectors';
 import {Camera, CameraType} from 'expo-camera';
 import {activateKeepAwakeAsync, deactivateKeepAwake} from 'expo-keep-awake';
 import React, {Ref, useEffect, useImperativeHandle, useRef} from 'react';
 import {StyleSheet, View} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
 
 type Props = {
   onCameraReady: () => void;
 };
-
-export const ASPECT_RATIO_HEIGHT = 16;
-export const ASPECT_RATIO_WIDTH = 9;
 
 export const CameraFeed = React.forwardRef(
   ({onCameraReady}: Props, forwardedRef: Ref<Camera | null>) => {
@@ -30,12 +30,33 @@ export const CameraFeed = React.forwardRef(
       }
     }, [permissionsGranted]);
 
+    const cameraRatio = useSelector(cameraRatioSelector);
+    const dispatch = useDispatch();
+    const getSupportedRatios = async () => {
+      if (cameraRef.current) {
+        const ratios = await cameraRef.current.getSupportedRatiosAsync();
+        dispatch(
+          FaceRecognitionActions.SET_CAMERA_RATIO.STATE.create({
+            cameraRatio: ratios.includes('16:9') ? '16:9' : '4:3',
+          }),
+        );
+      }
+    };
+
     return permissionsGranted ? (
-      <View style={cameraStyles.cameraContainer}>
+      <View
+        style={
+          cameraRatio === '16:9'
+            ? cameraStyles.cameraContainer16to9
+            : cameraStyles.cameraContainer4to3
+        }>
         <Camera
           ref={cameraRef}
           style={commonStyles.flexOne}
-          ratio={`${ASPECT_RATIO_HEIGHT}:${ASPECT_RATIO_WIDTH}`}
+          onLayout={() => {
+            getSupportedRatios();
+          }}
+          ratio={cameraRatio}
           onCameraReady={onCameraReady}
           type={CameraType.front}>
           <FaceAuthOverlay />
@@ -46,8 +67,12 @@ export const CameraFeed = React.forwardRef(
 );
 
 export const cameraStyles = StyleSheet.create({
-  cameraContainer: {
+  cameraContainer16to9: {
     width: windowWidth,
-    height: (windowWidth * ASPECT_RATIO_HEIGHT) / ASPECT_RATIO_WIDTH,
+    height: (windowWidth * 16) / 9,
+  },
+  cameraContainer4to3: {
+    width: windowWidth,
+    height: (windowWidth * 4) / 3,
   },
 });
