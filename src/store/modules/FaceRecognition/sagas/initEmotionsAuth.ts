@@ -110,7 +110,7 @@ export function* initEmotionsAuthSaga(action: Actions) {
       );
     } else if (
       isApiError(error, 403, 'SESSION_TIMED_OUT') ||
-      isApiError(error, 403, 'SESSION_NOT_FOUND')
+      isApiError(error, 404, 'SESSION_NOT_FOUND')
     ) {
       yield put(
         FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create({
