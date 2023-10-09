@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Üzünün Doğrulaması",
+    "title": "KYC Addımı #1",
+    "description": "Problemsiz bir təcrübə üçün üzünün doğrulamasını əlavə edirik. Bu addım sizi gələcək Mainnet üçün sürətli doğrulama üçün hazırlayır və sizin üçün [[:bold]]təzələmə Addımı #1 KYC[[/:bold]] rolunu oynayır. \n\nBugün öz kimliyinizi təsdiq edin və səyahətinizi asan etmək üçün!",
+    "consent": "Mən Ice [[:link]]KYC Şərtlərini və Qaydalarını[[/:link]] qəbul edirəm.",
+    "confirmation": "Təsdiq edirəm ki, bu autentifikasiya üçün istifadə etdiyim şəxsiyyət bu hesabla əlaqəli eyni olacaq və bu seçimi sonradan dəyişdirmək mümkün deyil.",
+    "auth_status": {
+      "loading": {
+        "description": "Sizi doğrulayarkən gözləyin..."
+      },
+      "success": {
+        "title": "✅ Doğrulama Uğurlu Oldu",
+        "description": "Kimliyinizi təsdiq etdiyiniz üçün təşəkkür edirik. Giriş sessiyanız indi başlayacaq.",
+        "action": "Hazır"
+      },
+      "failure": {
+        "title": "❌ Doğrulama Uğursuz Oldu",
+        "description": "Kimliyinizi doğrulaya bilmədik. Zəif işıqlandırma və üzünüzün tam görünürlüyündən əmin olun, sonra yenidən cəhd edin.",
+        "action": "Təkrar cəhd edin"
+      },
+      "try_later": {
+        "title": "❌ Doğrulama Uğursuz Oldu",
+        "description": "Kimliyinizi doğrulaya bilmədik. Zəif işıqlandırma və üzünüzün tam görünürlüyündən əmin olun, sonra bir saat sonra yenidən cəhd edin.",
+        "action": "Bağlayın"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 KYC Hisslər Doğrulaması",
+        "description": "Əla iş! İlk addımı öz şəkilinizi çəkərək başa vurmuşsunuz. İndi, KYC prosesinizi davam etdirmək üçün göstərilən hissləri izləyərək davam edək.",
+        "action": "Davam edin"
+      },
+      "banned": {
+        "title": "❌ Qazmaq söndürüldü",
+        "description": "Sizin kimliyinizin başqa bir hesabla əlaqələndirildiyini müəyyən etdik. Bu səhv olduğunu düşünürsünüzsə, xahiş edirik [[:bold]]feedback@ice.io[[/:bold]] ünvanına adınızı və yüksək keyfiyyətli şəklinizi göndərin.",
+        "action": "Bağlayın"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Başlamaq",
+      "please_show_this": "Xahiş edirik bu hissi göstərin",
+      "emotions": {
+        "anger": "qəzəb",
+        "contempt": "əzab",
+        "disgust": "nafrat",
+        "fear": "qorxu",
+        "happiness": "şadlıq",
+        "neutral": "neutral",
+        "sadness": "gəlmə",
+        "surprise": "təəccüb"
+      }
+    }
   }
 }

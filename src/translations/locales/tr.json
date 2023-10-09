@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Yüz Onayı",
+    "title": "KYC Adımı #1",
+    "description": "Sorunsuz bir deneyim için yüz onayı ekliyoruz. Bu adım, gelecekteki Ana Ağ için sizi hazırlayan [[:bold]]erken Adım #1 KYC[[/:bold]] olarak görev yapar. \n\nBugün kimliğinizi onaylayın ve gelecekteki yolculuğunuzu sorunsuz hale getirin!",
+    "consent": "Ice [[:link]]KYC Şartları ve Koşulları[[/:link]] ile aynı fikirdeyim.",
+    "confirmation": "Bu kimlik doğrulaması için kullandığım kimliğin, bu hesapla ilişkilendirilen kimlikle aynı olacağını ve bu seçimin daha sonra değiştirilemeyeceğini onaylıyorum.",
+    "auth_status": {
+      "loading": {
+        "description": "Sizi kimlik doğrularken lütfen bekleyin..."
+      },
+      "success": {
+        "title": "✅ Kimlik Doğrulaması Başarılı",
+        "description": "Kimliğinizi onayladığınız için teşekkür ederiz. Giriş oturumunuz şimdi başlayacak.",
+        "action": "Tamam"
+      },
+      "failure": {
+        "title": "❌ Kimlik Doğrulaması Başarısız",
+        "description": "Kimliğinizi doğrulayamadık. Lütfen iyi bir aydınlatma ve yüzünüzün tamamen görünür olduğundan emin olun, sonra tekrar deneyin.",
+        "action": "Yeniden Dene"
+      },
+      "try_later": {
+        "title": "❌ Kimlik Doğrulaması Başarısız",
+        "description": "Kimliğinizi doğrulayamadık. Lütfen iyi bir aydınlatma ve yüzünüzün tamamen görünür olduğundan emin olun, sonra 1 saat içinde tekrar deneyin.",
+        "action": "Kapat"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 KYC Duygu Onayı",
+        "description": "Harika iş! İlk adımı bir selfie çekerek tamamladınız. Şimdi KYC sürecinizi devam ettirmek için gösterilen duyguları takip ederek devam edelim.",
+        "action": "Devam"
+      },
+      "banned": {
+        "title": "❌ Madencilik Devre Dışı Bırakıldı",
+        "description": "Kimliğinizin başka bir hesapla ilişkilendirildiğini tespit ettik. Bu bir hata olduğunu düşünüyorsanız, lütfen [[:bold]]feedback@ice.io[[/:bold]] adresine kullanıcı adınızı ve yüksek kaliteli bir selfie ekleyerek bir e-posta gönderin.",
+        "action": "Kapat"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Başla",
+      "please_show_this": "Lütfen bu duyguyu gösterin",
+      "emotions": {
+        "anger": "öfke",
+        "contempt": "hoşgörüsüzlük",
+        "disgust": "iğrenme",
+        "fear": "korku",
+        "happiness": "mutluluk",
+        "neutral": "tarafsız",
+        "sadness": "üzüntü",
+        "surprise": "şaşkınlık"
+      }
+    }
   }
 }

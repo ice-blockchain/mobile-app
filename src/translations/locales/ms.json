@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Pengesahan Wajah",
+    "title": "Langkah KYC #1",
+    "description": "Untuk pengalaman yang lancar, kami menambah pengesahan wajah. Langkah ini berperanan sebagai [[:bold]]Langkah #1 KYC awal[[/:bold]], menyediakan anda untuk pengesahan yang lebih pantas di dalam Mainnet masa depan. \n\nSahkan identiti anda hari ini untuk memastikan perjalanan yang lancar ke hadapan!",
+    "consent": "Saya bersetuju dengan [[:link]]Terma dan Syarat KYC Ice[[/:link]].",
+    "confirmation": "Saya mengesahkan bahawa identiti yang saya gunakan untuk pengesahan ini adalah sama dengan yang berkaitan dengan akaun ini, dan pilihan ini tidak boleh diubah kemudian.",
+    "auth_status": {
+      "loading": {
+        "description": "Sila tunggu sementara kami mengesahkan anda..."
+      },
+      "success": {
+        "title": "✅ Pengesahan Berjaya",
+        "description": "Terima kasih kerana mengesahkan identiti anda. Sesi daftar masuk anda akan bermula sekarang.",
+        "action": "Selesai"
+      },
+      "failure": {
+        "title": "❌ Pengesahan Gagal",
+        "description": "Kami tidak dapat mengesahkan identiti anda. Sila pastikan pencahayaan yang baik dan bahawa wajah anda dapat dilihat sepenuhnya, kemudian cuba lagi.",
+        "action": "Cuba Semula"
+      },
+      "try_later": {
+        "title": "❌ Pengesahan Gagal",
+        "description": "Kami tidak dapat mengesahkan identiti anda. Sila pastikan pencahayaan yang baik dan bahawa wajah anda dapat dilihat sepenuhnya, kemudian cuba lagi dalam 1 jam.",
+        "action": "Tutup"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 Pengesahan Emosi KYC",
+        "description": "Kerja yang baik! Anda telah menyelesaikan langkah pertama dengan mengambil selfie. Sekarang, mari terus dengan mengikuti emosi yang dipaparkan untuk meneruskan proses KYC anda.",
+        "action": "Teruskan"
+      },
+      "banned": {
+        "title": "❌ Penambangan Dinonaktifkan",
+        "description": "Kami telah mengenal pasti bahawa identiti anda berkaitan dengan akaun lain. Jika anda menganggap ini kesalahan, sila hantar emel kepada [[:bold]]feedback@ice.io[[/:bold]] dengan nama panggilan anda dan selfie berkualiti tinggi.",
+        "action": "Tutup"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Mula",
+      "please_show_this": "Sila tunjukkan emosi ini",
+      "emotions": {
+        "anger": "marah",
+        "contempt": "cemburu",
+        "disgust": "jijik",
+        "fear": "takut",
+        "happiness": "kegembiraan",
+        "neutral": "neutral",
+        "sadness": "kesedihan",
+        "surprise": "terkejut"
+      }
+    }
   }
 }

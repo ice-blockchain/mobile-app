@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Autoryzacja twarzą",
+    "title": "KYC Krok #1",
+    "description": "Dla płynnego doświadczenia dodajemy autoryzację twarzą. Ten krok pełni funkcję [[:bold]]wczesnego Krok #1 KYC[[/:bold]], przygotowując cię do bardziej efektywnej weryfikacji w przyszłym Mainnet. \n\nPotwierdź dzisiaj swoją tożsamość, aby zapewnić płynną podróż w przyszłość!",
+    "consent": "Zgadzam się z [[:link]]Warunkami KYC Ice[[/:link]].",
+    "confirmation": "Potwierdzam, że tożsamość, którą używam do tej autoryzacji, będzie tą samą, która jest powiązana z tym kontem, i tego wyboru nie można później zmienić.",
+    "auth_status": {
+      "loading": {
+        "description": "Proszę czekać, aż autoryzujemy cię..."
+      },
+      "success": {
+        "title": "✅ Autoryzacja udana",
+        "description": "Dziękujemy za potwierdzenie tożsamości. Sesja zameldowania rozpocznie się teraz.",
+        "action": "Zakończ"
+      },
+      "failure": {
+        "title": "❌ Autoryzacja nieudana",
+        "description": "Nie mogliśmy zweryfikować twojej tożsamości. Upewnij się, że jest dobre oświetlenie i twarz jest w pełni widoczna, a następnie spróbuj ponownie.",
+        "action": "Spróbuj ponownie"
+      },
+      "try_later": {
+        "title": "❌ Autoryzacja nieudana",
+        "description": "Nie mogliśmy zweryfikować twojej tożsamości. Upewnij się, że jest dobre oświetlenie i twarz jest w pełni widoczna, a następnie spróbuj ponownie za 1 godzinę.",
+        "action": "Zamknij"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 Weryfikacja emocji KYC",
+        "description": "Świetna robota! Ukończyłeś pierwszy krok, robiąc sobie zdjęcie. Teraz kontynuujmy, kierując się wyświetlanymi emocjami, aby kontynuować proces KYC.",
+        "action": "Kontynuuj"
+      },
+      "banned": {
+        "title": "❌ Wyłączono kopanie",
+        "description": "Zidentyfikowaliśmy, że twoja tożsamość jest powiązana z innym kontem. Jeśli uważasz, że to błąd, prześlij e-mail na adres [[:bold]]feedback@ice.io[[/:bold]] ze swoim pseudonimem i wysokiej jakości zdjęciem selfie.",
+        "action": "Zamknij"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Rozpocznij",
+      "please_show_this": "Proszę pokaż tę emocję",
+      "emotions": {
+        "anger": "gniew",
+        "contempt": "pogarda",
+        "disgust": "niesmak",
+        "fear": "strach",
+        "happiness": "szczęście",
+        "neutral": "neutralny",
+        "sadness": "smutek",
+        "surprise": "niespodzianka"
+      }
+    }
   }
 }

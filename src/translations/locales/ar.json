@@ -995,24 +995,53 @@
     }
   },
   "face_auth": {
-    "header": "Face Auth",
-    "title": "KYC Step #1",
-    "description": "For a seamless experience, we're adding face authentication. This step acts as your [[:bold]]early Step #1 KYC[[/:bold]], preparing you for a streamlined verification for the future Mainnet. \n\nConfirm your identity today to ensure a smooth journey ahead!",
-    "consent": "I agree with the ice [[:link]]KYC Terms and Conditions[[/:link]].",
-    "confirmation": "I confirm that the identity I'm using for this authentication will be the same one used for the second step of verification using my national ID or passport.",
+    "header": "المصادقة بواسطة الوجه",
+    "title": "الخطوة KYC #1",
+    "description": "من أجل تجربة سلسة، نقوم بإضافة المصادقة بواسطة الوجه. تعتبر هذه الخطوة خطوة [[:bold]]KYC الأولى المبكرة[[/:bold]] الخاصة بك، مما يُعِدّك للتحقق المبسط في Mainnet المستقبلي. \n\nقم بتأكيد هويتك اليوم لضمان رحلة سهلة في المستقبل!",
+    "consent": "أوافق على [[:link]]شروط وأحكام KYC لـ Ice[[/:link]].",
+    "confirmation": "أؤكد أن الهوية التي أستخدمها لهذه المصادقة ستكون هي نفسها المرتبطة بهذا الحساب، ولا يمكن تغيير هذا الاختيار لاحقًا.",
     "auth_status": {
       "loading": {
-        "description": "Please wait while we authenticate you..."
+        "description": "يرجى الانتظار بينما نقوم بالمصادقة عليك..."
       },
       "success": {
-        "title": "✅ Authentication Successful",
-        "description": "Thank you for confirming your identity. Your check-in session will start now.",
-        "action": "Done"
+        "title": "✅ مصادقة ناجحة",
+        "description": "شكرًا لتأكيد هويتك. ستبدأ جلسة السجل الخاصة بك الآن.",
+        "action": "تم"
       },
       "failure": {
-        "title": "❌ Authentication Failed",
-        "description": "We couldn't verify your identity. Please ensure good lighting and that your face is fully visible, then try again.",
-        "action": "Retry"
+        "title": "❌ فشل المصادقة",
+        "description": "لم نتمكن من التحقق من هويتك. يرجى التأكد من وجود إضاءة جيدة وأن وجهك مرئي بشكل كامل، ثم حاول مرة أخرى.",
+        "action": "حاول مرة أخرى"
+      },
+      "try_later": {
+        "title": "❌ فشل المصادقة",
+        "description": "لم نتمكن من التحقق من هويتك. يرجى التأكد من وجود إضاءة جيدة وأن وجهك مرئي بشكل كامل، ثم حاول مرة أخرى بعد ساعة واحدة.",
+        "action": "أغلق"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 التحقق من العواطف KYC",
+        "description": "عمل رائع! لقد أكملت الخطوة الأولى بأخذ صورة شخصية. الآن، دعنا نستمر عن طريق اتباع العواطف المعروضة لمتابعة عملية التحقق الخاصة بك.",
+        "action": "متابعة"
+      },
+      "banned": {
+        "title": "❌ تعطيل التعدين",
+        "description": "لقد تعرفنا أن هويتك مرتبطة بحساب آخر. إذا كنت تعتقد أن هذا خطأ، فيرجى إرسال بريد إلكتروني إلى [[:bold]]feedback@ice.io[[/:bold]] مع اسمك المستعار وصورة شخصية عالية الجودة.",
+        "action": "أغلق"
+      }
+    },
+    "emotions_recognition": {
+      "start": "بدء",
+      "please_show_this": "يرجى عرض هذا العاطفة",
+      "emotions": {
+        "anger": "غضب",
+        "contempt": "ازدراء",
+        "disgust": "اشمئزاز",
+        "fear": "خوف",
+        "happiness": "سعادة",
+        "neutral": "محايد",
+        "sadness": "حزن",
+        "surprise": "مفاجأة"
       }
     }
   }

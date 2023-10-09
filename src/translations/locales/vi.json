@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Xác thực khuôn mặt",
+    "title": "Bước KYC #1",
+    "description": "Để trải nghiệm mượt mà, chúng tôi đang thêm tính năng xác thực khuôn mặt. Bước này đóng vai trò là [[:bold]]Bước #1 KYC sớm[[/:bold]], chuẩn bị bạn cho việc xác minh mạng Mainnet trong tương lai. \n\nHãy xác nhận danh tính của bạn hôm nay để đảm bảo một hành trình mượt mà phía trước!",
+    "consent": "Tôi đồng ý với [[:link]]Điều khoản và Điều kiện KYC của Ice[[/:link]].",
+    "confirmation": "Tôi xác nhận rằng danh tính tôi sử dụng cho xác thực này sẽ giống với danh tính được liên kết với tài khoản này và lựa chọn này không thể thay đổi sau này.",
+    "auth_status": {
+      "loading": {
+        "description": "Vui lòng chờ trong khi chúng tôi xác thực bạn..."
+      },
+      "success": {
+        "title": "✅ Xác thực thành công",
+        "description": "Cảm ơn bạn đã xác nhận danh tính. Phiên kiểm tra của bạn sẽ bắt đầu ngay bây giờ.",
+        "action": "Hoàn tất"
+      },
+      "failure": {
+        "title": "❌ Xác thực thất bại",
+        "description": "Chúng tôi không thể xác minh danh tính của bạn. Vui lòng đảm bảo ánh sáng tốt và khuôn mặt của bạn được nhìn thấy đầy đủ, sau đó thử lại.",
+        "action": "Thử lại"
+      },
+      "try_later": {
+        "title": "❌ Xác thực thất bại",
+        "description": "Chúng tôi không thể xác minh danh tính của bạn. Vui lòng đảm bảo ánh sáng tốt và khuôn mặt của bạn được nhìn thấy đầy đủ, sau đó thử lại sau 1 giờ.",
+        "action": "Đóng"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 Xác minh cảm xúc KYC",
+        "description": "Làm tốt lắm! Bạn đã hoàn thành bước đầu tiên bằng cách tự chụp ảnh selfie. Bây giờ, hãy tiếp tục theo các cảm xúc được hiển thị để tiếp tục quá trình KYC của bạn.",
+        "action": "Tiếp tục"
+      },
+      "banned": {
+        "title": "❌ Tắt chức năng đào tiền",
+        "description": "Chúng tôi đã xác định rằng danh tính của bạn liên quan đến một tài khoản khác. Nếu bạn nghĩ đó là một lỗi, vui lòng gửi email đến [[:bold]]feedback@ice.io[[/:bold]] với biệt danh và một bức ảnh tự sướng chất lượng cao.",
+        "action": "Đóng"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Bắt đầu",
+      "please_show_this": "Vui lòng hiển thị cảm xúc này",
+      "emotions": {
+        "anger": "tức giận",
+        "contempt": "khinh bỉ",
+        "disgust": "ghê tởm",
+        "fear": "sợ hãi",
+        "happiness": "hạnh phúc",
+        "neutral": "trung lập",
+        "sadness": "buồn",
+        "surprise": "ngạc nhiên"
+      }
+    }
   }
 }

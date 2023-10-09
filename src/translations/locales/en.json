@@ -995,8 +995,8 @@
     "header": "Face Auth",
     "title": "KYC Step #1",
     "description": "For a seamless experience, we're adding face authentication. This step acts as your [[:bold]]early Step #1 KYC[[/:bold]], preparing you for a streamlined verification for the future Mainnet. \n\nConfirm your identity today to ensure a smooth journey ahead!",
-    "consent": "I agree with the ice [[:link]]KYC Terms and Conditions[[/:link]].",
-    "confirmation": "I confirm that the identity I'm using for this authentication will be the same one used for the second step of verification using my national ID or passport.",
+    "consent": "I agree with the Ice [[:link]]KYC Terms and Conditions[[/:link]].",
+    "confirmation": "I confirm that the identity I'm using for this authentication will be the same one associated with this account, and this choice cannot be changed later.",
     "auth_status": {
       "loading": {
         "description": "Please wait while we authenticate you..."

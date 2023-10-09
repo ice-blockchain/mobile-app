@@ -994,5 +994,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Autenticação Facial",
+    "title": "KYC Etapa #1",
+    "description": "Para uma experiência sem problemas, estamos adicionando a autenticação facial. Esta etapa atua como o seu [[:bold]]KYC Etapa #1 inicial[[/:bold]], preparando você para uma verificação simplificada no futuro Mainnet. \n\nConfirme sua identidade hoje para garantir uma jornada tranquila no futuro!",
+    "consent": "Eu concordo com os [[:link]]Termos e Condições KYC da Ice[[/:link]].",
+    "confirmation": "Eu confirmo que a identidade que estou usando para esta autenticação será a mesma associada a esta conta, e essa escolha não pode ser alterada posteriormente.",
+    "auth_status": {
+      "loading": {
+        "description": "Por favor, aguarde enquanto autenticamos você..."
+      },
+      "success": {
+        "title": "✅ Autenticação Bem-sucedida",
+        "description": "Obrigado por confirmar sua identidade. Sua sessão de check-in começará agora.",
+        "action": "Concluído"
+      },
+      "failure": {
+        "title": "❌ Autenticação Falhou",
+        "description": "Não conseguimos verificar sua identidade. Por favor, certifique-se de haver uma boa iluminação e que seu rosto esteja completamente visível, e tente novamente.",
+        "action": "Tentar Novamente"
+      },
+      "try_later": {
+        "title": "❌ Autenticação Falhou",
+        "description": "Não conseguimos verificar sua identidade. Por favor, certifique-se de haver uma boa iluminação e que seu rosto esteja completamente visível, e tente novamente em 1 hora.",
+        "action": "Fechar"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 Verificação de Emoções KYC",
+        "description": "Ótimo trabalho! Você concluiu a primeira etapa tirando uma selfie. Agora, vamos continuar seguindo as emoções exibidas para continuar o processo KYC.",
+        "action": "Continuar"
+      },
+      "banned": {
+        "title": "❌ Mineração Desativada",
+        "description": "Identificamos que sua identidade está associada a outra conta. Se você acredita que isso é um erro, envie um e-mail para [[:bold]]feedback@ice.io[[/:bold]] com seu apelido e uma selfie de alta qualidade.",
+        "action": "Fechar"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Iniciar",
+      "please_show_this": "Por favor, mostre esta emoção",
+      "emotions": {
+        "anger": "raiva",
+        "contempt": "desprezo",
+        "disgust": "nojo",
+        "fear": "medo",
+        "happiness": "felicidade",
+        "neutral": "neutro",
+        "sadness": "tristeza",
+        "surprise": "surpresa"
+      }
+    }
   }
 }

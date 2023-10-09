@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Rozpoznávanie tváre",
+    "title": "KYC Krok #1",
+    "description": "Pre bezproblémový zážitok pridávame rozpoznávanie tváre. Tento krok slúži ako váš [[:bold]]Prvý krok KYC[[/:bold]], pripravujúci vás na jednoduchšiu overovaciu procedúru v budúcej Mainnet sieti. \n\nPotvrďte dnes svoju totožnosť, aby ste zabezpečili hladkú cestu vpred!",
+    "consent": "Súhlasím s [[:link]]Podmienkami a ustanoveniami KYC Ice[[/:link]].",
+    "confirmation": "Potvrdzujem, že totožnosť, ktorú používam pre túto autentifikáciu, bude tá istá, ktorá je spojená s touto účtom, a tento výber nemožno neskôr zmeniť.",
+    "auth_status": {
+      "loading": {
+        "description": "Čakajte prosím, kým vás autentifikujeme..."
+      },
+      "success": {
+        "title": "✅ Úspešná autentifikácia",
+        "description": "Ďakujeme za potvrdenie vašej totožnosti. Vaša relácia prihlásenia sa teraz spustí.",
+        "action": "Dokončiť"
+      },
+      "failure": {
+        "title": "❌ Autentifikácia zlyhala",
+        "description": "Nepodarilo sa nám overiť vašu totožnosť. Prosím, uistite sa, že je dostatočné osvetlenie a vaša tvár je plne viditeľná, a skúste to znova.",
+        "action": "Skúsiť znova"
+      },
+      "try_later": {
+        "title": "❌ Autentifikácia zlyhala",
+        "description": "Nepodarilo sa nám overiť vašu totožnosť. Prosím, uistite sa, že je dostatočné osvetlenie a vaša tvár je plne viditeľná, a potom to skúste znova o 1 hodinu.",
+        "action": "Zavrieť"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 KYC Overenie emócií",
+        "description": "Skvelá práca! Dokončili ste prvý krok fotením selfíčka. Teraz pokračujme tým, že budeme nasledovať zobrazované emócie, aby sme pokračovali v procese KYC.",
+        "action": "Pokračovať"
+      },
+      "banned": {
+        "title": "❌ Ťažba zakázaná",
+        "description": "Zistili sme, že vaša totožnosť je spojená s iným účtom. Ak si myslíte, že ide o chybu, pošlite e-mail na adresu [[:bold]]feedback@ice.io[[/:bold]] so svojím prezývkou a selfie vo vysokom rozlíšení.",
+        "action": "Zavrieť"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Začať",
+      "please_show_this": "Prosím, ukážte túto emóciu",
+      "emotions": {
+        "anger": "hnev",
+        "contempt": "pohŕdanie",
+        "disgust": "odpor",
+        "fear": "strach",
+        "happiness": "šťastie",
+        "neutral": "neutrálne",
+        "sadness": "smútok",
+        "surprise": "prekvapenie"
+      }
+    }
   }
 }
