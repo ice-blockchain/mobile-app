@@ -81,12 +81,12 @@ export function FaceRecognition() {
 
   useEffect(() => {
     if (user.kycStepPassed === 2) {
-      const step1Timestamp = user?.repeatableKYCSteps?.['1'];
-      if (step1Timestamp && dayjs(step1Timestamp).valueOf() < Date.now()) {
+      const step2Timestamp = user?.repeatableKYCSteps?.['2'];
+      if (step2Timestamp && dayjs(step2Timestamp).valueOf() < Date.now()) {
         setFaceRecognitionPhase(kycStepToFaceRecognitionPhase(1));
       }
-      const step0Timestamp = user?.repeatableKYCSteps?.['0'];
-      if (step0Timestamp && dayjs(step0Timestamp).valueOf() < Date.now()) {
+      const step1Timestamp = user?.repeatableKYCSteps?.['1'];
+      if (step1Timestamp && dayjs(step1Timestamp).valueOf() < Date.now()) {
         setFaceRecognitionPhase(kycStepToFaceRecognitionPhase(0));
       }
     }
