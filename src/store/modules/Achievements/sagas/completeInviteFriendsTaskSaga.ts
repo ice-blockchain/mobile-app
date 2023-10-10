@@ -13,14 +13,15 @@ export function* completeInviteFriendsTaskSaga() {
   );
 
   const user: ReturnType<typeof userSelector> = yield select(userSelector);
+  const t1RefCount = user?.t1HumanReferralCount ?? user?.t1ReferralCount;
 
   const requiredInvitesCount = task?.data?.requiredQuantity;
   if (
     task &&
     !task.completed &&
     requiredInvitesCount &&
-    user?.t1HumanReferralCount &&
-    user?.t1HumanReferralCount >= requiredInvitesCount
+    t1RefCount &&
+    t1RefCount >= requiredInvitesCount
   ) {
     yield put(
       AchievementsActions.TASK_MARK_COMPLETED.START.create({
