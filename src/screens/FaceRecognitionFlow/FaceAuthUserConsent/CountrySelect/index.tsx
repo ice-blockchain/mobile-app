@@ -9,9 +9,13 @@ import {PopUpButton} from '@screens/Modals/PopUp/components/PopUpButton';
 import {CountrySelectFeed} from '@screens/Templates/CountrySelectFeed';
 import {AccountActions} from '@store/modules/Account/actions';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
+import {
+  isFailedSelector,
+  isSuccessSelector,
+} from '@store/modules/UtilityProcessStatuses/selectors';
 import {FaceAuthIcon} from '@svg/FaceAuthIcon';
 import {t} from '@translations/i18n';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
@@ -23,7 +27,26 @@ type Props = {
 export function CountrySelect({onContinue}: Props) {
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
   const user = useSelector(unsafeUserSelector);
+  const [isUpdateSent, setIsUpdateSent] = useState(false);
   const dispatch = useDispatch();
+
+  const isSuccessUpdate = useSelector(
+    isSuccessSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
+  );
+  const isFailureUpdate = useSelector(
+    isFailedSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
+  );
+
+  useEffect(() => {
+    if (isUpdateSent) {
+      if (isSuccessUpdate) {
+        onContinue();
+      }
+      if (isFailureUpdate) {
+        setIsUpdateSent(false);
+      }
+    }
+  }, [isFailureUpdate, isSuccessUpdate, isUpdateSent, onContinue]);
 
   return (
     <View style={commonStyles.flexOne}>
@@ -53,7 +76,7 @@ export function CountrySelect({onContinue}: Props) {
               };
               dispatch(AccountActions.UPDATE_ACCOUNT.START.create(userInfo));
             }
-            onContinue();
+            setIsUpdateSent(true);
           }}
         />
       </View>
