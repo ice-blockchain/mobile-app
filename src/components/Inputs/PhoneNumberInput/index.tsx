@@ -89,6 +89,6 @@ const styles = StyleSheet.create({
   },
   valueText: {
     alignItems: 'center',
-    ...font(16, 21, 'medium', 'codeFieldText', 'left'),
+    ...font(16, 21, 'medium', 'gunmetalGrey', 'left'),
   },
 });

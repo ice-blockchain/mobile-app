@@ -1,3 +1,5 @@
+Extra safety checks before calling stopRecording
+
 diff --git a/node_modules/expo-camera/android/src/main/java/expo/modules/camera/CameraViewModule.kt b/node_modules/expo-camera/android/src/main/java/expo/modules/camera/CameraViewModule.kt
 index 61240ed..5cf79d2 100644
 --- a/node_modules/expo-camera/android/src/main/java/expo/modules/camera/CameraViewModule.kt

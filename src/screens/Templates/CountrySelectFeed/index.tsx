@@ -99,9 +99,9 @@ const styles = StyleSheet.create({
     marginTop: rem(12),
   },
   countryNameText: {
-    ...font(17, 22, 'regular', 'codeFieldText'),
+    ...font(17, 22, 'regular', 'gunmetalGrey'),
   },
   iddCodeText: {
-    ...font(15, 22, 'regular', 'codeFieldText'),
+    ...font(15, 22, 'regular', 'gunmetalGrey'),
   },
 });

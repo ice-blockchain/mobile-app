@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.shamrock,
   },
   cellText: {
-    ...font(17, 26, 'semibold', 'codeFieldText'),
+    ...font(17, 26, 'semibold', 'gunmetalGrey'),
   },
   error: {
     minHeight: ERROR_SECTION_HEIGHT,

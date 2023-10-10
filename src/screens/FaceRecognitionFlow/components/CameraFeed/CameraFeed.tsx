@@ -46,9 +46,9 @@ export const CameraFeed = React.forwardRef(
     return permissionsGranted ? (
       <View
         style={
-          cameraRatio === '16:9'
-            ? cameraStyles.cameraContainer16to9
-            : cameraStyles.cameraContainer4to3
+          cameraRatio === '4:3'
+            ? cameraStyles.cameraContainer4to3
+            : cameraStyles.cameraContainer16to9
         }>
         <Camera
           ref={cameraRef}
@@ -56,7 +56,7 @@ export const CameraFeed = React.forwardRef(
           onLayout={() => {
             getSupportedRatios();
           }}
-          ratio={cameraRatio}
+          ratio={cameraRatio ?? '4:3'}
           onCameraReady={onCameraReady}
           type={CameraType.front}>
           <FaceAuthOverlay />

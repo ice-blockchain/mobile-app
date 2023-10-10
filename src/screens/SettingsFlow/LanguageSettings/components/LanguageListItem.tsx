@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   languageText: {
     flex: isRTL ? 0 : 1,
     marginLeft: rem(16),
-    ...font(17, 22, 'regular', 'codeFieldText'),
+    ...font(17, 22, 'regular', 'gunmetalGrey'),
   },
   checkMarkWrapper: {
     width: rem(60),

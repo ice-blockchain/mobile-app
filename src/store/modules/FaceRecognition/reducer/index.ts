@@ -22,7 +22,7 @@ export interface State {
   sessionExpiredAt: number | null;
   activeRequests: number;
 
-  cameraRatio: CameraRatio;
+  cameraRatio: CameraRatio | null;
 }
 
 type Actions = ReturnType<
@@ -49,7 +49,7 @@ const INITIAL_STATE: State = {
   nextEmotionIndex: 0,
   sessionExpiredAt: null,
   activeRequests: 0,
-  cameraRatio: '16:9',
+  cameraRatio: null,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -115,7 +115,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.cameraRatio = action.payload.cameraRatio;
         break;
       case AccountActions.SIGN_OUT.SUCCESS.type:
-        return {...INITIAL_STATE};
+        return {...INITIAL_STATE, cameraRatio: draft.cameraRatio};
     }
   });
 }
@@ -129,6 +129,7 @@ export const faceRecognitionReducer = persistReducer(
       'emotions',
       'nextEmotionIndex',
       'sessionExpiredAt',
+      'cameraRatio',
     ],
   },
   reducer,

@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     ...font(14, 18, 'medium', 'secondaryPale'),
   },
   emotionText: {
-    ...font(24, 34, 'bold', 'codeFieldText'),
+    ...font(24, 34, 'bold', 'gunmetalGrey'),
     textTransform: 'capitalize',
   },
   descriptionText: {

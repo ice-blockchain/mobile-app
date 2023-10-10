@@ -28,6 +28,6 @@ const styles = StyleSheet.create({
     ...font(16, 26, 'medium', 'secondary', 'center'),
   },
   phoneText: {
-    ...font(16, 26, 'bold', 'codeFieldText', 'center'),
+    ...font(16, 26, 'bold', 'gunmetalGrey', 'center'),
   },
 });

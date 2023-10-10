@@ -45,7 +45,7 @@ export const COLORS = {
   wildSand: '#F5F5F5',
   primaryButtonGradientStart: '#02337C',
   primaryButtonGradientEnd: '#0946A1',
-  codeFieldText: '#0E0E0E',
+  gunmetalGrey: '#0E0E0E',
   congressBlue: '#063C8C',
   catalinaBlue: '#033580',
   transparent: 'rgba(255, 255, 255, 0)',

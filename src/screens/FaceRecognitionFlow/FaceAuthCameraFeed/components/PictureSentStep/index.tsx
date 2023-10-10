@@ -48,9 +48,9 @@ export function PictureSentStep({
   return (
     <View
       style={
-        cameraRatio === '16:9'
-          ? cameraStyles.cameraContainer16to9
-          : cameraStyles.cameraContainer4to3
+        cameraRatio === '4:3'
+          ? cameraStyles.cameraContainer4to3
+          : cameraStyles.cameraContainer16to9
       }>
       <Image
         resizeMode={'contain'}
