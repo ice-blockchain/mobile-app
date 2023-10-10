@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Otentikasi Wajah",
+    "title": "Langkah KYC #1",
+    "description": "Untuk pengalaman yang lancar, kami menambahkan otentikasi wajah. Langkah ini berfungsi sebagai [[:bold]]Langkah #1 KYC awal[[/:bold]], mempersiapkan Anda untuk verifikasi yang lebih mudah di Mainnet masa depan. \n\nKonfirmasi identitas Anda hari ini untuk memastikan perjalanan yang mulus ke depan!",
+    "consent": "Saya setuju dengan [[:link]]Syarat dan Ketentuan KYC Ice[[/:link]].",
+    "confirmation": "Saya mengkonfirmasi bahwa identitas yang saya gunakan untuk otentikasi ini akan sama dengan yang terkait dengan akun ini, dan pilihan ini tidak dapat diubah nanti.",
+    "auth_status": {
+      "loading": {
+        "description": "Harap tunggu saat kami mengotentikasi Anda..."
+      },
+      "success": {
+        "title": "✅ Otentikasi Berhasil",
+        "description": "Terima kasih telah mengkonfirmasi identitas Anda. Sesi pemeriksaan Anda akan dimulai sekarang.",
+        "action": "Selesai"
+      },
+      "failure": {
+        "title": "❌ Otentikasi Gagal",
+        "description": "Kami tidak dapat memverifikasi identitas Anda. Pastikan pencahayaan cukup dan wajah Anda sepenuhnya terlihat, kemudian coba lagi.",
+        "action": "Coba Lagi"
+      },
+      "try_later": {
+        "title": "❌ Otentikasi Gagal",
+        "description": "Kami tidak dapat memverifikasi identitas Anda. Pastikan pencahayaan cukup dan wajah Anda sepenuhnya terlihat, kemudian coba lagi dalam 1 jam.",
+        "action": "Tutup"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 Verifikasi Emosi KYC",
+        "description": "Bagus! Anda telah menyelesaikan langkah pertama dengan mengambil selfie. Sekarang, mari lanjutkan dengan mengikuti emosi yang ditampilkan untuk melanjutkan proses KYC Anda.",
+        "action": "Lanjutkan"
+      },
+      "banned": {
+        "title": "❌ Penambangan Dinonaktifkan",
+        "description": "Kami telah mengidentifikasi bahwa identitas Anda terkait dengan akun lain. Jika Anda menganggap ini sebagai kesalahan, harap kirim email ke [[:bold]]feedback@ice.io[[/:bold]] dengan nama panggilan Anda dan selfie berkualitas tinggi.",
+        "action": "Tutup"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Mulai",
+      "please_show_this": "Tunjukkan emosi ini, tolong",
+      "emotions": {
+        "anger": "marah",
+        "contempt": "meremehkan",
+        "disgust": "jijik",
+        "fear": "ketakutan",
+        "happiness": "kebahagiaan",
+        "neutral": "netral",
+        "sadness": "kesedihan",
+        "surprise": "kejutan"
+      }
+    }
   }
 }

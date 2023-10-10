@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "人臉認證",
+    "title": "KYC 步驟 #1",
+    "description": "為了提供無縫的體驗，我們正在添加人臉認證。這一步將作為您的 [[:bold]]早期步驟 #1 KYC[[/:bold]]，為您未來 Mainnet 的簡化驗證做好準備。\n\n今天確認您的身份，以確保未來的旅程順暢！",
+    "consent": "我同意 Ice 的 [[:link]]KYC 條款和條件[[/:link]]。",
+    "confirmation": "我確認我用於此認證的身份將與此帳戶關聯的相同，此選擇不能在以後更改。",
+    "auth_status": {
+      "loading": {
+        "description": "請稍候，我們正在驗證您的身份..."
+      },
+      "success": {
+        "title": "✅ 認證成功",
+        "description": "感謝您確認您的身份。您的簽到會話現在將開始。",
+        "action": "完成"
+      },
+      "failure": {
+        "title": "❌ 認證失敗",
+        "description": "我們無法驗證您的身份。請確保充足的光線和您的臉部完全可見，然後重試。",
+        "action": "重試"
+      },
+      "try_later": {
+        "title": "❌ 認證失敗",
+        "description": "我們無法驗證您的身份。請確保充足的光線和您的臉部完全可見，然後在1小時後重試。",
+        "action": "關閉"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 KYC 情感驗證",
+        "description": "幹得好！您已通過自拍完成了第一步。現在，讓我們繼續按照顯示的情感來完成您的 KYC 過程。",
+        "action": "繼續"
+      },
+      "banned": {
+        "title": "❌ 禁止挖礦",
+        "description": "我們發現您的身份與另一個帳戶相關聯。如果您認為這是錯誤的，請發送電子郵件至 [[:bold]]feedback@ice.io[[/:bold]]，提供您的暱稱和高質量的自拍照片。",
+        "action": "關閉"
+      }
+    },
+    "emotions_recognition": {
+      "start": "開始",
+      "please_show_this": "請展示這種情感",
+      "emotions": {
+        "anger": "憤怒",
+        "contempt": "輕蔑",
+        "disgust": "厭惡",
+        "fear": "恐懼",
+        "happiness": "快樂",
+        "neutral": "中性",
+        "sadness": "悲傷",
+        "surprise": "驚訝"
+      }
+    }
   }
 }

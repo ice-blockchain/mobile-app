@@ -34,7 +34,7 @@ export const Avatar = memo(
   }: AvatarProps) => {
     const navigation =
       useNavigation<NativeStackNavigationProp<MainStackParamList>>();
-    const imageRef = useRef<Animated.Image>(null);
+    const imageRef = useRef(null);
 
     const dynamicStyle = useMemo(
       () => ({

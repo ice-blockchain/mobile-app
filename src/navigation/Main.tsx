@@ -19,6 +19,7 @@ import {
 import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {CreativeIceLibrary} from '@screens/CreativeIceLibrary';
+import {FaceRecognition} from '@screens/FaceRecognitionFlow';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
 import {Home} from '@screens/HomeFlow/Home';
 import {
@@ -101,6 +102,7 @@ export type MainStackParamList = {
     targetCircleSize?: number;
     descriptionOffset?: number;
   };
+  FaceRecognition: undefined;
   Staking: undefined;
   CreativeIceLibrary: undefined;
   ImageView: {
@@ -362,6 +364,7 @@ export function MainNavigator() {
         options={modalOptions}
         component={DateSelect}
       />
+      <MainStack.Screen name="FaceRecognition" component={FaceRecognition} />
       <MainStack.Screen name="Staking" component={Staking} />
       <MainStack.Screen
         name="CreativeIceLibrary"

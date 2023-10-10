@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Autentificare facială",
+    "title": "Pasul KYC #1",
+    "description": "Pentru o experiență fără probleme, adăugăm autentificarea facială. Acest pas servește drept [[:bold]]Pasul #1 KYC timpuriu[[/:bold]], pregătindu-vă pentru o verificare simplificată în viitorul Mainnet. \n\nConfirmați-vă identitatea astăzi pentru a asigura o călătorie fără obstacole înainte!",
+    "consent": "Sunt de acord cu [[:link]]Termenii și condițiile KYC Ice[[/:link]].",
+    "confirmation": "Confirm că identitatea pe care o folosesc pentru această autentificare va fi aceeași asociată cu acest cont și această alegere nu poate fi modificată ulterior.",
+    "auth_status": {
+      "loading": {
+        "description": "Vă rugăm să așteptați în timp ce vă autentificăm..."
+      },
+      "success": {
+        "title": "✅ Autentificare reușită",
+        "description": "Vă mulțumim că ați confirmat identitatea dumneavoastră. Ședința dvs. de check-in va începe acum.",
+        "action": "Gata"
+      },
+      "failure": {
+        "title": "❌ Autentificare eșuată",
+        "description": "Nu am putut verifica identitatea dumneavoastră. Asigurați-vă că aveți iluminare bună și că fața este complet vizibilă, apoi încercați din nou.",
+        "action": "Reîncercați"
+      },
+      "try_later": {
+        "title": "❌ Autentificare eșuată",
+        "description": "Nu am putut verifica identitatea dumneavoastră. Asigurați-vă că aveți iluminare bună și că fața este complet vizibilă, apoi încercați din nou în 1 oră.",
+        "action": "Închideți"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 Verificare emoțională KYC",
+        "description": "Lucru excelent! Ați completat primul pas prin a vă face un selfie. Acum, să continuăm urmând emoțiile afișate pentru a continua procesul KYC.",
+        "action": "Continuați"
+      },
+      "banned": {
+        "title": "❌ Minerit dezactivat",
+        "description": "Am identificat că identitatea dumneavoastră este asociată cu un alt cont. Dacă credeți că este o eroare, vă rugăm să trimiteți un e-mail la [[:bold]]feedback@ice.io[[/:bold]] cu porecla și un selfie de înaltă calitate.",
+        "action": "Închideți"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Start",
+      "please_show_this": "Vă rugăm să arătați această emoție",
+      "emotions": {
+        "anger": "mânie",
+        "contempt": "dispreț",
+        "disgust": "dezgust",
+        "fear": "teamă",
+        "happiness": "fericire",
+        "neutral": "neutral",
+        "sadness": "tristețe",
+        "surprise": "surpriză"
+      }
+    }
   }
 }

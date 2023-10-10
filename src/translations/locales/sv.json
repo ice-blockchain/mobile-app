@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Ansiktsautentisering",
+    "title": "KYC Steg #1",
+    "description": "För en sömlös upplevelse lägger vi till ansiktsautentisering. Detta steg fungerar som din [[:bold]]Tidiga Steg #1 KYC[[/:bold]], vilket förbereder dig för en smidigare verifiering i den framtida Mainnet. \n\nBekräfta din identitet idag för att säkerställa en problemfri resa framåt!",
+    "consent": "Jag godkänner Ice [[:link]]KYC Villkor och Bestämmelser[[/:link]].",
+    "confirmation": "Jag bekräftar att identiteten jag använder för denna autentisering kommer att vara densamma som är kopplad till detta konto, och detta val kan inte ändras senare.",
+    "auth_status": {
+      "loading": {
+        "description": "Vänligen vänta medan vi autentiserar dig..."
+      },
+      "success": {
+        "title": "✅ Autentisering Lyckades",
+        "description": "Tack för att du har bekräftat din identitet. Din incheckningssession kommer att börja nu.",
+        "action": "Klart"
+      },
+      "failure": {
+        "title": "❌ Autentisering Misslyckades",
+        "description": "Vi kunde inte verifiera din identitet. Se till att det finns bra belysning och att ditt ansikte är helt synligt, försök sedan igen.",
+        "action": "Försök Igen"
+      },
+      "try_later": {
+        "title": "❌ Autentisering Misslyckades",
+        "description": "Vi kunde inte verifiera din identitet. Se till att det finns bra belysning och att ditt ansikte är helt synligt, försök igen om 1 timme.",
+        "action": "Stäng"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 KYC Emotionsverifiering",
+        "description": "Bra jobbat! Du har slutfört det första steget genom att ta en selfie. Nu, låt oss fortsätta genom att följa de visade känslorna för att fortsätta din KYC-process.",
+        "action": "Fortsätt"
+      },
+      "banned": {
+        "title": "❌ Gruvbrytning Inaktiverad",
+        "description": "Vi har identifierat att din identitet är kopplad till ett annat konto. Om du tror att detta är ett misstag, vänligen skicka ett e-postmeddelande till [[:bold]]feedback@ice.io[[/:bold]] med ditt användarnamn och en högkvalitativ selfie.",
+        "action": "Stäng"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Starta",
+      "please_show_this": "Visa denna känsla, var snäll",
+      "emotions": {
+        "anger": "ilska",
+        "contempt": "förakt",
+        "disgust": "avsky",
+        "fear": "rädsla",
+        "happiness": "glädje",
+        "neutral": "neutral",
+        "sadness": "sorg",
+        "surprise": "förvåning"
+      }
+    }
   }
 }

@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Arcfelismerési Azonosítás",
+    "title": "KYC Lépés #1",
+    "description": "Egy zökkenőmentes élmény érdekében hozzáadunk egy arcfelismerési azonosítást. Ez a lépés az [[:bold]]első KYC lépés[[/:bold]] szerepét tölti be, hogy felkészítsen a jövőbeli Mainnet számára tervezett egyszerűsített ellenőrzésre. \n\nAzonosítsa magát ma, hogy biztosítsa egy sima út előtt álló utazását!",
+    "consent": "Egyetértek az Ice [[:link]]KYC Feltételeivel és Állapotokkal[[/:link]].",
+    "confirmation": "Megerősítem, hogy az azonosítást végző személyazonosság azonos lesz azzal, amelyik ehhez a fiókhoz van társítva, és ezt a választást később nem lehet megváltoztatni.",
+    "auth_status": {
+      "loading": {
+        "description": "Kérem, várjon, amíg azonosítjuk Önt..."
+      },
+      "success": {
+        "title": "✅ Sikeres Azonosítás",
+        "description": "Köszönjük, hogy megerősítette az azonosságát. Az ellenőrzési munkamenet most elkezdődik.",
+        "action": "Kész"
+      },
+      "failure": {
+        "title": "❌ Azonosítás Sikertelen",
+        "description": "Nem tudtuk ellenőrizni az azonosságát. Kérjük, győződjön meg arról, hogy megfelelő a megvilágítás, és az arcának teljesen láthatónak kell lennie, majd próbálja újra.",
+        "action": "Újra"
+      },
+      "try_later": {
+        "title": "❌ Azonosítás Sikertelen",
+        "description": "Nem tudtuk ellenőrizni az azonosságát. Kérjük, győződjön meg arról, hogy megfelelő a megvilágítás, és az arcának teljesen láthatónak kell lennie, majd próbálja újra 1 óra múlva.",
+        "action": "Bezárás"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 KYC Érzelem Felismerés",
+        "description": "Gratulálunk! Elvégezte az első lépést, hogy elkészítse a selfie-jét. Most folytassuk a KYC folyamatot az ábrázolt érzelmek követésével.",
+        "action": "Folytatás"
+      },
+      "banned": {
+        "title": "❌ Bányászat Letiltva",
+        "description": "Azonosítottuk, hogy az azonossága egy másik fiókhoz van társítva. Ha úgy gondolja, hogy ez egy hiba, kérjük, küldjön egy e-mailt a [[:bold]]feedback@ice.io[[/:bold]] címre a becenévével és egy magas minőségű selfie-val.",
+        "action": "Bezárás"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Indítás",
+      "please_show_this": "Kérjük, mutassa be ezt az érzelmet",
+      "emotions": {
+        "anger": "harag",
+        "contempt": "megvetés",
+        "disgust": "undor",
+        "fear": "félelem",
+        "happiness": "boldogság",
+        "neutral": "semleges",
+        "sadness": "szomorúság",
+        "surprise": "meglepetés"
+      }
+    }
   }
 }

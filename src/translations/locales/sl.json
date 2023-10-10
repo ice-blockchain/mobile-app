@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Prepoznavanje obraza",
+    "title": "KYC Korak #1",
+    "description": "Za nemoteno izkušnjo dodajamo prepoznavanje obraza. Ta korak deluje kot vaš [[:bold]]Prvi korak KYC[[/:bold]], ki vas pripravlja na poenostavljeno preverjanje v prihodnji glavni omrežji. \n\nDanes potrdite svojo identiteto, da zagotovite gladko pot naprej!",
+    "consent": "Strinjam se s [[:link]]Pogoji KYC Ice[[/:link]].",
+    "confirmation": "Potrjujem, da bo identiteta, ki jo uporabljam za to avtentikacijo, ista kot tista, ki je povezana s to računom, in tega izbora kasneje ne bo mogoče spremeniti.",
+    "auth_status": {
+      "loading": {
+        "description": "Prosim, počakajte, medtem ko vas avtentificiramo..."
+      },
+      "success": {
+        "title": "✅ Uspešna avtentikacija",
+        "description": "Hvala za potrditev vaše identitete. Vaša seja prijave se bo začela zdaj.",
+        "action": "Dokončano"
+      },
+      "failure": {
+        "title": "❌ Avtentikacija ni uspela",
+        "description": "Vaše identitete nismo mogli preveriti. Prosimo, poskrbite za dobro osvetlitev in da je vaš obraz popolnoma viden, nato poskusite znova.",
+        "action": "Poskusite znova"
+      },
+      "try_later": {
+        "title": "❌ Avtentikacija ni uspela",
+        "description": "Vaše identitete nismo mogli preveriti. Prosimo, poskrbite za dobro osvetlitev in da je vaš obraz popolnoma viden, nato pa poskusite znova čez 1 uro.",
+        "action": "Zapri"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 KYC Prepoznavanje čustev",
+        "description": "Odlično opravljeno! Prvi korak ste zaključili s selfijem. Sedaj nadaljujte tako, da sledite prikazanim čustvom, da nadaljujete postopek KYC.",
+        "action": "Nadaljuj"
+      },
+      "banned": {
+        "title": "❌ Onemogočena rudarjenja",
+        "description": "Ugotovili smo, da je vaša identiteta povezana z drugim računom. Če menite, da gre za napako, pošljite e-pošto na naslov [[:bold]]feedback@ice.io[[/:bold]] s svojim vzdevkom in selfijem visoke kakovosti.",
+        "action": "Zapri"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Začni",
+      "please_show_this": "Prosimo, pokažite to čustvo",
+      "emotions": {
+        "anger": "jeza",
+        "contempt": "prezir",
+        "disgust": "omraza",
+        "fear": "strah",
+        "happiness": "sreča",
+        "neutral": "nevtralno",
+        "sadness": "žalost",
+        "surprise": "presenečenje"
+      }
+    }
   }
 }

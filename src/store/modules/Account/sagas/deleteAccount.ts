@@ -11,6 +11,7 @@ export function* deleteAccountSaga() {
     let userId: ReturnType<typeof userIdSelector> = yield select(
       userIdSelector,
     );
+    yield call(Api.faceRecognition.deleteFaceAuthData);
     yield call(Api.user.deleteUser, userId);
     yield put(AccountActions.DELETE_ACCOUNT.SUCCESS.create());
     yield put(AccountActions.SIGN_OUT.START.create({skipMetadataUpdate: true}));

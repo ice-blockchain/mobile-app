@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "얼굴 인증",
+    "title": "KYC 단계 #1",
+    "description": "원활한 경험을 위해 얼굴 인증을 추가하고 있습니다. 이 단계는 [[:bold]]초기 KYC 단계 #1[[/:bold]]로서, 미래 Mainnet에서 간편한 확인을 위해 여러분을 준비합니다. \n\n오늘 자신의 신원을 확인하여 앞으로의 원활한 여정을 보장하세요!",
+    "consent": "저는 Ice [[:link]]KYC 약관 및 조건[[/:link]]에 동의합니다.",
+    "confirmation": "이 인증에 사용하는 신분증은 이 계정과 관련된 것과 동일하며 나중에 변경할 수 없음을 확인합니다.",
+    "auth_status": {
+      "loading": {
+        "description": "인증 중이니 기다려 주십시오..."
+      },
+      "success": {
+        "title": "✅ 인증 성공",
+        "description": "신원을 확인해 주셔서 감사합니다. 체크인 세션이 지금 시작됩니다.",
+        "action": "완료"
+      },
+      "failure": {
+        "title": "❌ 인증 실패",
+        "description": "우리는 여러분의 신원을 확인할 수 없었습니다. 적절한 조명이 확보되어 있고 얼굴이 완전히 보이는지 확인한 후 다시 시도하십시오.",
+        "action": "재시도"
+      },
+      "try_later": {
+        "title": "❌ 인증 실패",
+        "description": "우리는 여러분의 신원을 확인할 수 없었습니다. 적절한 조명이 확보되어 있고 얼굴이 완전히 보이는지 확인한 후 1 시간 뒤에 다시 시도하십시오.",
+        "action": "닫기"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 KYC 감정 인식",
+        "description": "좋은 일했어요! 셀피를 찍어 첫 번째 단계를 완료했습니다. 이제 표시된 감정을 따라 KYC 프로세스를 계속하세요.",
+        "action": "계속"
+      },
+      "banned": {
+        "title": "❌ 채굴 비활성화",
+        "description": "당신의 신원이 다른 계정과 연관되어 있음을 확인했습니다. 이것이 오류라고 생각한다면 [[:bold]]feedback@ice.io[[/:bold]]로 닉네임과 고품질 셀피를 포함한 이메일을 보내 주세요.",
+        "action": "닫기"
+      }
+    },
+    "emotions_recognition": {
+      "start": "시작",
+      "please_show_this": "이 감정을 보여 주세요",
+      "emotions": {
+        "anger": "분노",
+        "contempt": "경멸",
+        "disgust": "역겨움",
+        "fear": "두려움",
+        "happiness": "행복",
+        "neutral": "중립",
+        "sadness": "슬픔",
+        "surprise": "놀람"
+      }
+    }
   }
 }

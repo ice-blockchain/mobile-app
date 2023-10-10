@@ -1,0 +1,74 @@
+Extra safety checks before calling stopRecording
+
+diff --git a/node_modules/expo-camera/android/src/main/java/expo/modules/camera/CameraViewModule.kt b/node_modules/expo-camera/android/src/main/java/expo/modules/camera/CameraViewModule.kt
+index 61240ed..5cf79d2 100644
+--- a/node_modules/expo-camera/android/src/main/java/expo/modules/camera/CameraViewModule.kt
++++ b/node_modules/expo-camera/android/src/main/java/expo/modules/camera/CameraViewModule.kt
+@@ -14,6 +14,7 @@ import expo.modules.kotlin.functions.Queues
+ import expo.modules.kotlin.modules.Module
+ import expo.modules.kotlin.modules.ModuleDefinition
+ import java.io.File
++import android.util.Log
+
+ class CameraViewModule : Module() {
+   override fun definition() = ModuleDefinition {
+@@ -97,10 +98,18 @@ class CameraViewModule : Module() {
+     }.runOnQueue(Queues.MAIN)
+
+     AsyncFunction("stopRecording") { viewTag: Int ->
++      if (viewTag !is Int) {
++        return@AsyncFunction
++      }
+       val view = findView(viewTag)
+
+-      if (view.cameraView.isCameraOpened) {
+-        view.cameraView.stopRecording()
++      if (view != null && view.cameraView != null && view.cameraView.isCameraOpened) {
++          try {
++            view.cameraView.stopRecording()
++          } catch (e: Exception) {
++            // Handle or log the exception, depending on your needs
++            Log.e("StopRecording", "Error stopping recording: ${e.message}")
++          }
+       }
+     }.runOnQueue(Queues.MAIN)
+
+diff --git a/node_modules/expo-camera/android/src/main/java/expo/modules/camera/ExpoCameraView.kt b/node_modules/expo-camera/android/src/main/java/expo/modules/camera/ExpoCameraView.kt
+index b3591cd..a7c874a 100644
+--- a/node_modules/expo-camera/android/src/main/java/expo/modules/camera/ExpoCameraView.kt
++++ b/node_modules/expo-camera/android/src/main/java/expo/modules/camera/ExpoCameraView.kt
+@@ -7,6 +7,7 @@ import android.graphics.SurfaceTexture
+ import android.net.Uri
+ import android.os.Bundle
+ import android.view.View
++import android.util.Log
+ import com.google.android.cameraview.CameraView
+ import expo.modules.camera.CameraViewHelper.getCamcorderProfile
+ import expo.modules.camera.CameraViewHelper.getCorrectCameraRotation
+@@ -314,13 +315,19 @@ class ExpoCameraView(
+     }
+   }
+
+-  override fun onHostPause() {
+-    if (!isPaused && cameraView.isCameraOpened) {
+-      faceDetector?.release()
+-      isPaused = true
+-      cameraView.stop()
+-    }
+-  }
++ override fun onHostPause() {
++     if (!isPaused && cameraView?.isCameraOpened == true) {
++         try {
++            faceDetector?.release()
++            cameraView?.stop()
++         } catch (e: Exception) {
++            Log.e("onHostPause", "Error occurred: ${e.message}")
++         } finally {
++             isPaused = true
++         }
++     }
++ }
++
+
+   override fun onHostDestroy() {
+     faceDetector?.release()

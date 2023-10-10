@@ -21,7 +21,7 @@ import {GraphIcon} from '@svg/GraphIcon';
 import {t} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
-import React, {useCallback, useEffect, useMemo, useRef} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {
   Image,
   InteractionManager,
@@ -67,7 +67,7 @@ export const AdoptionCard = ({
 }: AdoptionCardProps) => {
   const adoption = useSelector(adoptionSelector);
   const isSplashHidden = useSelector(isSplashHiddenSelector);
-  const refFlatList = useRef<Animated.FlatList<AdoptionMilestone> | null>(null);
+  const refFlatList = useRef(null);
 
   const sharedItems = useSharedValue<ViewToken[]>([]);
 
@@ -137,26 +137,18 @@ export const AdoptionCard = ({
     [activeIndex, scrollToIndex],
   );
 
+  const [isRendered, setIsRendered] = useState(false);
   useEffect(() => {
-    if (activeIndex >= 0) {
+    if (activeIndex >= 0 && isRendered) {
       scrollToIndex(activeIndex);
     }
-  }, [activeIndex, scrollToIndex]);
+  }, [activeIndex, isRendered, scrollToIndex]);
 
   const animatedStyleFlatList = useAnimatedStyle(() => {
     return {
       opacity: interpolate(sharedIsCollapsed.value, [0, 0.7], [1, 0]),
     };
   }, []);
-
-  const setRefFlatList = useCallback(
-    (ref: Animated.FlatList<AdoptionMilestone> | null) => {
-      refFlatList.current = ref;
-
-      scrollToIndex(activeIndex);
-    },
-    [activeIndex, scrollToIndex],
-  );
 
   const renderItem: ListRenderItem<AdoptionMilestone> = useCallback(
     ({item, index}) => {
@@ -193,7 +185,7 @@ export const AdoptionCard = ({
       />
       <View style={[styles.scrollAbsoluteContainer, styles.card]}>
         <Animated.FlatList
-          ref={setRefFlatList}
+          ref={refFlatList}
           style={[styles.scrollContainer, animatedStyleFlatList]}
           contentContainerStyle={styles.scrollContentContainerStyle}
           data={adoption.milestones}
@@ -206,6 +198,7 @@ export const AdoptionCard = ({
             viewabilityConfigCallbackPairs.current
           }
           onScrollToIndexFailed={onScrollToIndexFailed}
+          onLayout={() => setIsRendered(true)}
         />
       </View>
       <LinearGradient

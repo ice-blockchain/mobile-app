@@ -25,11 +25,14 @@ export interface State {
     endDate: string | null;
     pageNumber: number;
   };
+  tapToMineActionType?: 'Extended' | 'Default';
 }
 
 type Actions = ReturnType<
   | typeof TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.create
+  | typeof TokenomicsActions.START_MINING_SESSION.START.create
   | typeof TokenomicsActions.START_MINING_SESSION.SUCCESS.create
+  | typeof TokenomicsActions.START_MINING_SESSION.FAILED.create
   | typeof TokenomicsActions.GET_BALANCE_SUMMARY.SUCCESS.create
   | typeof TokenomicsActions.GET_PRE_STAKING_SUMMARY.SUCCESS.create
   | typeof TokenomicsActions.GET_RANKING_SUMMARY.SUCCESS.create
@@ -55,9 +58,19 @@ const INITIAL_STATE: State = {
 function reducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
+      case TokenomicsActions.START_MINING_SESSION.START.type:
+        if (action.payload?.tapToMineActionType) {
+          draft.tapToMineActionType = action.payload.tapToMineActionType;
+        }
+        break;
+
       case TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.type:
       case TokenomicsActions.START_MINING_SESSION.SUCCESS.type:
         draft.miningSummary = action.payload.miningSummary;
+        draft.tapToMineActionType = undefined;
+        break;
+      case TokenomicsActions.START_MINING_SESSION.FAILED.type:
+        draft.tapToMineActionType = undefined;
         break;
 
       case TokenomicsActions.GET_BALANCE_SUMMARY.SUCCESS.type:

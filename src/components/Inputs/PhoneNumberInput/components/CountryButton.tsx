@@ -17,7 +17,7 @@ export const CountryButton = ({flag, onPress}: Props) => {
     <Touchable style={styles.container} onPress={onPress}>
       <Text style={styles.flag}>{flag}</Text>
       <ChevronSmallIcon
-        color={COLORS.codeFieldText}
+        color={COLORS.gunmetalGrey}
         width={rem(12)}
         height={rem(12)}
       />

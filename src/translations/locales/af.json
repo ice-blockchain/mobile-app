@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Gesigsautentifikasie",
+    "title": "KYC Stap #1",
+    "description": "Vir 'n naadloose ervaring voeg ons gesigsautentifikasie by. Hierdie stap tree op as jou [[:bold]]vroeë Stap #1 KYC[[/:bold]], wat jou voorberei vir 'n gestroomlynde verifikasie vir die toekomstige Mainnet. \n\nBevestig jou identiteit vandag om 'n gladdeloopende reis te verseker!",
+    "consent": "Ek stem in met die Ice [[:link]]KYC-terme en -voorwaardes[[/:link]].",
+    "confirmation": "Ek bevestig dat die identiteit wat ek vir hierdie stawing gebruik dieselfde een sal wees wat met hierdie rekening geassosieer word, en hierdie keuse kan nie later verander word nie.",
+    "auth_status": {
+      "loading": {
+        "description": "Wag asseblief terwyl ons jou autentifiseer..."
+      },
+      "success": {
+        "title": "✅ Autentifikasie suksesvol",
+        "description": "Dankie dat jy jou identiteit bevestig het. Jou incheck-sessie begin nou.",
+        "action": "Klaar"
+      },
+      "failure": {
+        "title": "❌ Autentifikasie misluk",
+        "description": "Ons kon nie jou identiteit verifieer nie. Maak seker dat daar goeie beligting is en dat jou gesig volledig sigbaar is, en probeer weer.",
+        "action": "Probeer weer"
+      },
+      "try_later": {
+        "title": "❌ Autentifikasie misluk",
+        "description": "Ons kon nie jou identiteit verifieer nie. Maak seker dat daar goeie beligting is en dat jou gesig volledig sigbaar is, en probeer weer binne 1 uur.",
+        "action": "Sluit af"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 KYC-emosieverifikasie",
+        "description": "Fantasties! Jy het die eerste stap voltooi deur 'n selfie te neem. Nou, gaan voort deur die getoonde emosies te volg om jou KYC-proses voort te sit.",
+        "action": "Gaan voort"
+      },
+      "banned": {
+        "title": "❌ Mynbou gedeaktiveer",
+        "description": "Ons het vasgestel dat jou identiteit verband hou met 'n ander rekening. As jy dink dit is 'n fout, stuur asseblief 'n e-pos na [[:bold]]feedback@ice.io[[/:bold]] met jou bynaam en 'n hoëgehalte-selfie.",
+        "action": "Sluit af"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Begin",
+      "please_show_this": "Wys asseblief hierdie emosie",
+      "emotions": {
+        "anger": "woede",
+        "contempt": "minagting",
+        "disgust": "afkeer",
+        "fear": "vrees",
+        "happiness": "geluk",
+        "neutral": "neutraal",
+        "sadness": "hartseer",
+        "surprise": "verrassing"
+      }
+    }
   }
 }

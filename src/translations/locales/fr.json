@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Authentification faciale",
+    "title": "Étape KYC n°1",
+    "description": "Pour une expérience fluide, nous ajoutons l'authentification faciale. Cette étape agit comme votre [[:bold]]KYC Étape précoce n°1[[/:bold]], vous préparant pour une vérification simplifiée sur le futur Mainnet. \n\nConfirmez votre identité aujourd'hui pour vous assurer un parcours sans encombre !",
+    "consent": "J'accepte les [[:link]]Conditions KYC de Ice[[/:link]].",
+    "confirmation": "Je confirme que l'identité que j'utilise pour cette authentification sera la même que celle associée à ce compte, et ce choix ne pourra pas être modifié ultérieurement.",
+    "auth_status": {
+      "loading": {
+        "description": "Veuillez patienter pendant que nous vous authentifions..."
+      },
+      "success": {
+        "title": "✅ Authentification réussie",
+        "description": "Merci d'avoir confirmé votre identité. Votre session de check-in va maintenant commencer.",
+        "action": "Terminé"
+      },
+      "failure": {
+        "title": "❌ Échec de l'authentification",
+        "description": "Nous n'avons pas pu vérifier votre identité. Assurez-vous qu'il y a une bonne luminosité et que votre visage est entièrement visible, puis réessayez.",
+        "action": "Réessayer"
+      },
+      "try_later": {
+        "title": "❌ Échec de l'authentification",
+        "description": "Nous n'avons pas pu vérifier votre identité. Assurez-vous qu'il y a une bonne luminosité et que votre visage est entièrement visible, puis réessayez dans 1 heure.",
+        "action": "Fermer"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 Vérification des émotions KYC",
+        "description": "Excellent travail ! Vous avez terminé la première étape en prenant un selfie. Maintenant, continuons en suivant les émotions affichées pour poursuivre votre processus KYC.",
+        "action": "Continuer"
+      },
+      "banned": {
+        "title": "❌ Mining désactivé",
+        "description": "Nous avons identifié que votre identité est associée à un autre compte. Si vous pensez qu'il s'agit d'une erreur, veuillez envoyer un e-mail à [[:bold]]feedback@ice.io[[/:bold]] avec votre pseudonyme et un selfie de haute qualité.",
+        "action": "Fermer"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Démarrer",
+      "please_show_this": "Veuillez montrer cette émotion",
+      "emotions": {
+        "anger": "colère",
+        "contempt": "mépris",
+        "disgust": "dégoût",
+        "fear": "peur",
+        "happiness": "joie",
+        "neutral": "neutre",
+        "sadness": "tristesse",
+        "surprise": "surprise"
+      }
+    }
   }
 }

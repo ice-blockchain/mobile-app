@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Ověření tváří",
+    "title": "KYC Krok #1",
+    "description": "Pro bezproblémový zážitek přidáváme ověření tváří. Tento krok slouží jako váš [[:bold]]raný Krok #1 KYC[[/:bold]], připravující vás na jednodušší ověření v budoucím Mainnetu. \n\nPotvrďte svou identitu ještě dnes, abyste zajistili hladký postup do budoucnosti!",
+    "consent": "Souhlasím s [[:link]]KYC Podmínkami a pravidly Ice[[/:link]].",
+    "confirmation": "Potvrzuji, že identita, kterou používám pro toto ověření, bude stejná jako identita spojená s tímto účtem a tuto volbu nelze později změnit.",
+    "auth_status": {
+      "loading": {
+        "description": "Počkejte, zatímco vás ověřujeme..."
+      },
+      "success": {
+        "title": "✅ Ověření proběhlo úspěšně",
+        "description": "Děkujeme za potvrzení vaší identity. Vaše relace check-in začne nyní.",
+        "action": "Hotovo"
+      },
+      "failure": {
+        "title": "❌ Ověření selhalo",
+        "description": "Nepodařilo se nám ověřit vaši identitu. Ujistěte se, že je dostatečné osvětlení a že je vaše tvář plně viditelná, a zkuste to znovu.",
+        "action": "Zkusit znovu"
+      },
+      "try_later": {
+        "title": "❌ Ověření selhalo",
+        "description": "Nepodařilo se nám ověřit vaši identitu. Ujistěte se, že je dostatečné osvětlení a že je vaše tvář plně viditelná, a zkuste to znovu za 1 hodinu.",
+        "action": "Zavřít"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 KYC Ověření emocí",
+        "description": "Skvělá práce! První krok jste dokončili tím, že jste pořídili selfie. Teď pokračujte tím, že budete následovat zobrazené emoce, abyste mohli pokračovat ve svém KYC procesu.",
+        "action": "Pokračovat"
+      },
+      "banned": {
+        "title": "❌ Těžba zakázána",
+        "description": "Zjistili jsme, že vaše identita je spojena s jiným účtem. Pokud si myslíte, že se jedná o chybu, pošlete e-mail na adresu [[:bold]]feedback@ice.io[[/:bold]] se svým přezdívkou a kvalitní selfie.",
+        "action": "Zavřít"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Začít",
+      "please_show_this": "Prosím, ukážete tuto emoci",
+      "emotions": {
+        "anger": "hněv",
+        "contempt": "pohrdání",
+        "disgust": "znechucení",
+        "fear": "strach",
+        "happiness": "štěstí",
+        "neutral": "neutrální",
+        "sadness": "smutek",
+        "surprise": "překvapení"
+      }
+    }
   }
 }

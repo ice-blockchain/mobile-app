@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Ansiktsgodkjenning",
+    "title": "KYC Trinn #1",
+    "description": "For en sømløs opplevelse legger vi til ansiktsgodkjenning. Dette trinnet fungerer som din [[:bold]]tidlige trinn #1 KYC[[/:bold]], og forbereder deg for en enklere verifisering på fremtidig Mainnet. \n\nBekreft din identitet i dag for å sikre en smidig reise fremover!",
+    "consent": "Jeg samtykker til Ice [[:link]]KYC Vilkår og betingelser[[/:link]].",
+    "confirmation": "Jeg bekrefter at identiteten jeg bruker for denne godkjenningen vil være den samme som er knyttet til denne kontoen, og dette valget kan ikke endres senere.",
+    "auth_status": {
+      "loading": {
+        "description": "Vennligst vent mens vi godkjenner deg..."
+      },
+      "success": {
+        "title": "✅ Godkjenning Vellykket",
+        "description": "Takk for at du bekreftet din identitet. Din innsjekkingsøkt vil starte nå.",
+        "action": "Ferdig"
+      },
+      "failure": {
+        "title": "❌ Godkjenning Mislyktes",
+        "description": "Vi kunne ikke verifisere din identitet. Vennligst forsikre deg om god belysning og at ansiktet ditt er fullstendig synlig, og prøv igjen.",
+        "action": "Prøv på nytt"
+      },
+      "try_later": {
+        "title": "❌ Godkjenning Mislyktes",
+        "description": "Vi kunne ikke verifisere din identitet. Vennligst forsikre deg om god belysning og at ansiktet ditt er fullstendig synlig, og prøv igjen om 1 time.",
+        "action": "Lukk"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 KYC Emosjonsgodkjenning",
+        "description": "Bra jobba! Du har fullført første trinn ved å ta en selfie. Nå, la oss fortsette ved å følge de viste følelsene for å fortsette KYC-prosessen din.",
+        "action": "Fortsett"
+      },
+      "banned": {
+        "title": "❌ Mining Deaktivert",
+        "description": "Vi har identifisert at identiteten din er knyttet til en annen konto. Hvis du tror dette er en feil, vennligst send en e-post til [[:bold]]feedback@ice.io[[/:bold]] med ditt kallenavn og en høykvalitets selfie.",
+        "action": "Lukk"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Start",
+      "please_show_this": "Vennligst vis denne følelsen",
+      "emotions": {
+        "anger": "sinne",
+        "contempt": "forakt",
+        "disgust": "avsky",
+        "fear": "redsel",
+        "happiness": "glede",
+        "neutral": "nøytral",
+        "sadness": "tristhet",
+        "surprise": "overraskelse"
+      }
+    }
   }
 }

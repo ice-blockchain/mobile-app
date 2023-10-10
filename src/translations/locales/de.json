@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Gesichtsauthentifizierung",
+    "title": "KYC Schritt #1",
+    "description": "Für ein reibungsloses Erlebnis fügen wir die Gesichtsauthentifizierung hinzu. Dieser Schritt dient als Ihr [[:bold]]früher Schritt #1 KYC[[/:bold]], der Sie auf eine vereinfachte Verifizierung in der zukünftigen Mainnet vorbereitet. \n\nBestätigen Sie noch heute Ihre Identität, um eine reibungslose Reise in die Zukunft zu gewährleisten!",
+    "consent": "Ich stimme den [[:link]]KYC-Bedingungen und -Bestimmungen von Ice[[/:link]] zu.",
+    "confirmation": "Ich bestätige, dass die Identität, die ich für diese Authentifizierung verwende, dieselbe ist, die mit diesem Konto verknüpft ist, und dass diese Auswahl später nicht mehr geändert werden kann.",
+    "auth_status": {
+      "loading": {
+        "description": "Bitte warten Sie, während wir Sie authentifizieren..."
+      },
+      "success": {
+        "title": "✅ Authentifizierung erfolgreich",
+        "description": "Vielen Dank für die Bestätigung Ihrer Identität. Ihre Check-in-Sitzung beginnt jetzt.",
+        "action": "Fertig"
+      },
+      "failure": {
+        "title": "❌ Authentifizierung fehlgeschlagen",
+        "description": "Wir konnten Ihre Identität nicht überprüfen. Stellen Sie sicher, dass ausreichend Licht vorhanden ist und Ihr Gesicht vollständig sichtbar ist, und versuchen Sie es erneut.",
+        "action": "Erneut versuchen"
+      },
+      "try_later": {
+        "title": "❌ Authentifizierung fehlgeschlagen",
+        "description": "Wir konnten Ihre Identität nicht überprüfen. Stellen Sie sicher, dass ausreichend Licht vorhanden ist und Ihr Gesicht vollständig sichtbar ist, und versuchen Sie es in 1 Stunde erneut.",
+        "action": "Schließen"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 KYC Emotionsverifizierung",
+        "description": "Gute Arbeit! Sie haben den ersten Schritt abgeschlossen, indem Sie ein Selfie gemacht haben. Jetzt können Sie fortfahren, indem Sie die angezeigten Emotionen verfolgen, um Ihren KYC-Prozess fortzusetzen.",
+        "action": "Weiter"
+      },
+      "banned": {
+        "title": "❌ Mining deaktiviert",
+        "description": "Wir haben festgestellt, dass Ihre Identität mit einem anderen Konto verknüpft ist. Wenn Sie glauben, dass dies ein Fehler ist, senden Sie bitte eine E-Mail an [[:bold]]feedback@ice.io[[/:bold]] mit Ihrem Spitznamen und einem hochwertigen Selfie.",
+        "action": "Schließen"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Start",
+      "please_show_this": "Bitte zeigen Sie diese Emotion",
+      "emotions": {
+        "anger": "Wut",
+        "contempt": "Verachtung",
+        "disgust": "Ekel",
+        "fear": "Angst",
+        "happiness": "Glück",
+        "neutral": "Neutral",
+        "sadness": "Traurigkeit",
+        "surprise": "Überraschung"
+      }
+    }
   }
 }

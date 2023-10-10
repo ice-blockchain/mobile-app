@@ -58,8 +58,9 @@
     "dayjs": "^1.11.6",
     "expo": "^49.0.0",
     "expo-barcode-scanner": "^12.5.3",
-    "expo-camera": "^13.4.2",
+    "expo-camera": "^13.6.0",
     "exponential-backoff": "^3.1.0",
+    "ffmpeg-kit-react-native": "6.0.0",
     "getstream": "^8.1.0",
     "i18n-js": "^4.1.1",
     "immer": "^9.0.16",
@@ -93,7 +94,7 @@
     "react-native-pager-view": "^6.2.0",
     "react-native-permissions": "^3.6.1",
     "react-native-play-install-referrer": "^1.1.8",
-    "react-native-reanimated": "^3.3.0",
+    "react-native-reanimated": "^3.5.4",
     "react-native-restart": "^0.0.27",
     "react-native-safe-area-context": "^4.4.1",
     "react-native-screens": "^3.22.1",
@@ -162,10 +163,8 @@
   "expo": {
     "autolinking": {
       "exclude": [
-        "expo-keep-awake",
         "expo-application",
         "expo-constants",
-        "expo-file-system",
         "expo-font"
       ]
     }

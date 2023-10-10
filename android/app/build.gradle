@@ -178,6 +178,10 @@ dependencies {
     }
 
     androidTestImplementation('com.wix:detox:+')
+
+     // For animated GIF support
+     implementation('com.facebook.fresco:fresco:2.5.0')
+     implementation 'com.facebook.fresco:animated-gif:2.5.0'
 }
 
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)

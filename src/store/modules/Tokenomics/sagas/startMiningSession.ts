@@ -5,18 +5,25 @@ import {Api} from '@api/index';
 import {ResurrectRequiredData} from '@api/tokenomics/types';
 import {User} from '@api/user/types';
 import {LocalAudio} from '@audio';
+import {navigate} from '@navigation/utils';
 import {loadLocalAudio} from '@services/audio';
 import {dayjs} from '@services/dayjs';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
+  authConfigSelector,
   firstMiningDateSelector,
   unsafeUserSelector,
   userIdSelector,
 } from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
+import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
+import {emotionsAuthStatusSelector} from '@store/modules/FaceRecognition/selectors';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
-import {isMiningActiveSelector} from '@store/modules/Tokenomics/selectors';
+import {
+  isMiningActiveSelector,
+  tapToMineActionTypeSelector,
+} from '@store/modules/Tokenomics/selectors';
 import {openConfirmResurrect} from '@store/modules/Tokenomics/utils/openConfirmResurrect';
 import {openConfirmResurrectNo} from '@store/modules/Tokenomics/utils/openConfirmResurrectNo';
 import {openConfirmResurrectYes} from '@store/modules/Tokenomics/utils/openConfirmResurrectYes';
@@ -36,9 +43,24 @@ export function* startMiningSessionSaga(
     typeof TokenomicsActions.START_MINING_SESSION.START.create
   >,
 ) {
+  const emotionsAuthStatus: ReturnType<typeof emotionsAuthStatusSelector> =
+    yield select(emotionsAuthStatusSelector);
+  const authConfig: ReturnType<typeof authConfigSelector> = yield select(
+    authConfigSelector,
+  );
+  if (emotionsAuthStatus !== 'SUCCESS' && authConfig?.['face-auth']?.enabled) {
+    navigate({
+      name: 'FaceRecognition',
+      params: undefined,
+    });
+    return;
+  }
   const user: ReturnType<typeof unsafeUserSelector> = yield select(
     unsafeUserSelector,
   );
+
+  const tapToMineActionType: ReturnType<typeof tapToMineActionTypeSelector> =
+    yield select(tapToMineActionTypeSelector);
 
   try {
     const miningSummary: SagaReturnType<
@@ -50,6 +72,8 @@ export function* startMiningSessionSaga(
     yield put(
       TokenomicsActions.START_MINING_SESSION.SUCCESS.create(miningSummary),
     );
+    // Reset face auth status here so on next tap to mine a user would have to face auth again
+    yield put(FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create());
 
     yield call(setFirstMiningDate, user);
 
@@ -68,7 +92,7 @@ export function* startMiningSessionSaga(
     }
 
     AnalyticsEventLogger.trackTapToMine({
-      tapToMineActionType: action.payload?.tapToMineActionType ?? 'Default',
+      tapToMineActionType: tapToMineActionType ?? 'Default',
     });
   } catch (error) {
     yield put(

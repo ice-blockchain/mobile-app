@@ -906,5 +906,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Pagkakakilanlan sa Mukha",
+    "title": "KYC Hakbang #1",
+    "description": "Para sa isang maginhawang karanasan, idinadagdag namin ang pagkakakilanlan sa mukha. Ang hakbang na ito ay naglilingkod bilang [[:bold]]Una at pangunahing Hakbang #1 sa KYC[[/:bold]], naghahanda sa iyo para sa isang mabilisang pag-verify para sa hinaharap na Mainnet. \n\nKumpirmahin ang iyong pagkakakilanlan ngayon upang tiyakin ang maayos na paglalakbay sa kinabukasan!",
+    "consent": "Sumasang-ayon ako sa [[:link]]Mga Tuntunin at Kondisyon sa KYC ng Ice[[/:link]].",
+    "confirmation": "Kumpirmahin ko na ang pagkakakilanlan na aking ginagamit para sa autentikasyong ito ay magiging pareho sa nakakabit sa account na ito, at hindi ito maaaring baguhin sa mga susunod na pagkakataon.",
+    "auth_status": {
+      "loading": {
+        "description": "Mangyaring maghintay habang kami ay naga-authenticate sa iyo..."
+      },
+      "success": {
+        "title": "✅ Matagumpay na Autentikasyon",
+        "description": "Salamat sa pagkumpirma ng iyong pagkakakilanlan. Ang iyong sesyon ng check-in ay magsisimula na ngayon.",
+        "action": "Tapos Na"
+      },
+      "failure": {
+        "title": "❌ Nagtagumpay ang Autentikasyon",
+        "description": "Hindi namin ma-verify ang iyong pagkakakilanlan. Mangyaring tiyakin na magandang liwanag at buo ang pagkakakitaan ng iyong mukha, pagkatapos ay subukan ulit.",
+        "action": "Subukan Muli"
+      },
+      "try_later": {
+        "title": "❌ Nagtagumpay ang Autentikasyon",
+        "description": "Hindi namin ma-verify ang iyong pagkakakilanlan. Mangyaring tiyakin na magandang liwanag at buo ang pagkakakitaan ng iyong mukha, at subukan ulit sa loob ng 1 oras.",
+        "action": "Isara"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 Pag-verify ng Emosyon sa KYC",
+        "description": "Magaling! Natapos mo na ang unang hakbang sa pamamagitan ng pagkuha ng iyong selfie. Ngayon, hayaan nating magpatuloy sa pamamagitan ng pagsunod sa mga emosyon na ipinapakita upang magpatuloy sa iyong proseso ng KYC.",
+        "action": "Magpatuloy"
+      },
+      "banned": {
+        "title": "❌ Bawal ang Pagmimina",
+        "description": "Natukoy namin na ang iyong pagkakakilanlan ay kaugnay ng isa pang account. Kung sa palagay mo ito ay isang kamalian, mangyaring mag-email sa [[:bold]]feedback@ice.io[[/:bold]] kasama ang iyong nickname at isang mataas-kalidad na selfie.",
+        "action": "Isara"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Simulan",
+      "please_show_this": "Mangyaring ipakita ang emosyong ito",
+      "emotions": {
+        "anger": "galit",
+        "contempt": "hinamak",
+        "disgust": "pagkayamot",
+        "fear": "takot",
+        "happiness": "kaligayahan",
+        "neutral": "neutral",
+        "sadness": "kalungkutan",
+        "surprise": "kagulatang"
+      }
+    }
   }
 }

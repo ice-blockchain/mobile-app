@@ -906,5 +906,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Pangenal Wajah",
+    "title": "Langkah KYC #1",
+    "description": "Kanggo pengalaman sing lancar, kita nambahake pangenal wajah. Langkah iki dadi [[:bold]]Langkah #1 KYC awal[[/:bold]], njalari sampeyan kanggo verifikasi sing mudhah ing Mainnet ing masa depan. \n\nKonfirmasi jati diri sampeyan saiki kanggo njamin perjalanan sing lancar menyang depan!",
+    "consent": "Aku setuju karo [[:link]]Syarat lan Ketentuan KYC Ice[[/:link]].",
+    "confirmation": "Aku konfirmasi yen jati diri sing aku gunakake kanggo pangenal iki bakal ana ing akun iki, lan pilihan iki ora bisa diganti nanti.",
+    "auth_status": {
+      "loading": {
+        "description": "Mangga nunggu sajeroning kita nyambungake sampeyan..."
+      },
+      "success": {
+        "title": "✅ Pangenal Sukses",
+        "description": "Matur nuwun kanggo konfirmasi jati diri sampeyan. Sesi cek-in sampeyan bakal dimulai saiki.",
+        "action": "Rampung"
+      },
+      "failure": {
+        "title": "❌ Pangenal Gagal",
+        "description": "Kita ora bisa ngecek jati diri sampeyan. Pastikan penerangan apik lan wajah sampeyan dadi pethak banget, trus coba maneh.",
+        "action": "Coba Maneh"
+      },
+      "try_later": {
+        "title": "❌ Pangenal Gagal",
+        "description": "Kita ora bisa ngecek jati diri sampeyan. Pastikan penerangan apik lan wajah sampeyan dadi pethak banget, trus coba maneh sajroning 1 jam.",
+        "action": "Tutup"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 Verifikasi Emosi KYC",
+        "description": "Kerja apik! Sampeyan wis rampung langkah pertama dening ngrusak swa potret. Ayo terusake dening ngikutin emosi sing ditampilake kanggo lanjutake proses KYC sampeyan.",
+        "action": "Terusake"
+      },
+      "banned": {
+        "title": "❌ Mining Ditilak",
+        "description": "Kita ngerti yen jati diri sampeyan kaitake karo akun liyane. Yen sampeyan mikir iki sing salah, monggo kirim email menyang [[:bold]]feedback@ice.io[[/:bold]] karo jeneng panggilan lan swa potret sing apik.",
+        "action": "Tutup"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Mulai",
+      "please_show_this": "Mangga njaluk emosi iki",
+      "emotions": {
+        "anger": "amarah",
+        "contempt": "sirah",
+        "disgust": "welek",
+        "fear": "kiwa",
+        "happiness": "seneng",
+        "neutral": "netral",
+        "sadness": "kesedihan",
+        "surprise": "kejutan"
+      }
+    }
   }
 }

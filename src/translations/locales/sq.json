@@ -993,5 +993,56 @@
         }
       }
     }
+  },
+  "face_auth": {
+    "header": "Identifikimi i fytyrës",
+    "title": "KYC Hapi #1",
+    "description": "Për një përvojë të pa ndërprerë, ne po shtojmë identifikimin e fytyrës. Ky hap vepron si [[:bold]]Hapi #1 i hershëm KYC[[/:bold]], që ju përgatit për një verifikim më të lehtë në Mainnetin e ardhshëm. \n\nKonfirmoni identitetin tuaj sot për të siguruar një rrugë të qetë përpara!",
+    "consent": "Unë pajtohem me [[:link]]Kushtet dhe Kushtetutat KYC të Ice[[/:link]].",
+    "confirmation": "Unë konfirmoj se identiteti që po përdor për këtë autentifikim do të jetë i njëjti me atë të lidhur me këtë llogari, dhe kjo zgjedhje nuk mund të ndryshohet më vonë.",
+    "auth_status": {
+      "loading": {
+        "description": "Ju lutem prisni ndërsa ju autentifikojmë..."
+      },
+      "success": {
+        "title": "✅ Autentikimi është i suksesshëm",
+        "description": "Faleminderit që konfirmuat identitetin tuaj. Sesioni juaj i check-in do të nis tani.",
+        "action": "Përfunduar"
+      },
+      "failure": {
+        "title": "❌ Autentikimi Dështoi",
+        "description": "Nuk mundëm të verifikojmë identitetin tuaj. Ju lutem sigurohuni që të ketë dritë të mjaftueshme dhe fytyra juaj të jetë plotësisht e dukshme, pastaj provoni përsëri.",
+        "action": "Provo përsëri"
+      },
+      "try_later": {
+        "title": "❌ Autentikimi Dështoi",
+        "description": "Nuk mundëm të verifikojmë identitetin tuaj. Ju lutem sigurohuni që të ketë dritë të mjaftueshme dhe fytyra juaj të jetë plotësisht e dukshme, pastaj provoni përsëri në 1 orë.",
+        "action": "Mbyll"
+      },
+      "continue": {
+        "title": "\uD83D\uDE01 Verifikimi i emocioneve KYC",
+        "description": "Puna e shkëlqyer! Ju keni përfunduar hapin e parë duke bërë një selfi. Tani le të vazhdojmë duke ndjekur emocionet e treguara për të vazhduar procesin KYC.",
+        "action": "Vazhdo"
+      },
+      "banned": {
+        "title": "❌ Minimizimi i çaktivizuar",
+        "description": "Kemi identifikuar që identiteti juaj është i lidhur me një llogari tjetër. Nëse mendoni se është një gabim, ju lutem dërgoni një email në adresën [[:bold]]feedback@ice.io[[/:bold]] me emrin tuaj të përdoruesit dhe një selfi cilësie të lartë.",
+        "action": "Mbyll"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Fillo",
+      "please_show_this": "Ju lutem tregoni këtë emocion",
+      "emotions": {
+        "anger": "zemërim",
+        "contempt": "përçmim",
+        "disgust": "neveri",
+        "fear": "trembje",
+        "happiness": "gëzim",
+        "neutral": "i qetë",
+        "sadness": "trishtim",
+        "surprise": "çuditje"
+      }
+    }
   }
 }
