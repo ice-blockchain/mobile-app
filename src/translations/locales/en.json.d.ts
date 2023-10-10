@@ -214,7 +214,7 @@ export type Translations = {
   'home.menu.staking': null;
   'home.menu.stats': null;
   'home.menu.help': null;
-  'home.menu.boost': null;
+  'home.menu.tips': null;
   'home.team.title': null;
   'home.team.view_team': null;
   'home.mining_rate.title': null;

@@ -41,9 +41,9 @@ export const MenuButton = memo(() => {
       //   id: 'notifications',
       // },
       {
-        id: 'boost',
+        id: 'tips',
         icon: <RocketIcon color={COLORS.downriver} />,
-        label: t('home.menu.boost'),
+        label: t('home.menu.tips'),
         onPress: () =>
           navigate({name: 'CreativeIceLibrary', params: undefined}),
       },
