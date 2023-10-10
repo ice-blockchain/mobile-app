@@ -69,9 +69,9 @@ export type User = {
 
   /*
     A map of `kycStepPassed` keys and a timestamp as value.
-    So if now > `repeatableKycSteps[xxx]` you retry that step
+    So if now > `repeatableKYCSteps[xxx]` you retry that step
    */
-  repeatableKycSteps?: Record<number, number>;
+  repeatableKYCSteps?: Record<string, string>;
 };
 
 export type ReferralType = 'CONTACTS' | 'T1' | 'T2';

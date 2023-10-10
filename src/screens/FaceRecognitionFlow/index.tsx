@@ -9,6 +9,7 @@ import {StatusOverlay} from '@screens/FaceRecognitionFlow/components/StatusOverl
 import {EmotionsAuthCameraFeed} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed';
 import {FaceAuthCameraFeed} from '@screens/FaceRecognitionFlow/FaceAuthCameraFeed';
 import {FaceAuthUserConsent} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent';
+import {dayjs} from '@services/dayjs';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {
   emotionsAuthStatusSelector,
@@ -80,17 +81,16 @@ export function FaceRecognition() {
 
   useEffect(() => {
     if (user.kycStepPassed === 2) {
-      if (
-        (user?.repeatableKycSteps?.[0] ?? Number.MAX_SAFE_INTEGER) < Date.now()
-      ) {
-        setFaceRecognitionPhase(kycStepToFaceRecognitionPhase(0));
-      } else if (
-        (user?.repeatableKycSteps?.[1] ?? Number.MAX_SAFE_INTEGER) < Date.now()
-      ) {
+      const step1Timestamp = user?.repeatableKYCSteps?.['1'];
+      if (step1Timestamp && dayjs(step1Timestamp).valueOf() < Date.now()) {
         setFaceRecognitionPhase(kycStepToFaceRecognitionPhase(1));
       }
+      const step0Timestamp = user?.repeatableKYCSteps?.['0'];
+      if (step0Timestamp && dayjs(step0Timestamp).valueOf() < Date.now()) {
+        setFaceRecognitionPhase(kycStepToFaceRecognitionPhase(0));
+      }
     }
-  }, [user.kycStepPassed, user?.repeatableKycSteps]);
+  }, [user.kycStepPassed, user?.repeatableKYCSteps]);
 
   return (
     <View style={styles.container}>
