@@ -6,7 +6,7 @@ export type ContextualMenuButton = {
   icon?: ReactNode;
   label: string;
   onPress: () => void;
-  id?: 'help' | 'staking' | 'notifications' | 'stats';
+  id?: 'help' | 'staking' | 'notifications' | 'stats' | 'boost';
 };
 
 export type Coordinates = {

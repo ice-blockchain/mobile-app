@@ -6,6 +6,7 @@ import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
 import {MIDDLE_BUTTON_HIT_SLOP, windowWidth} from '@constants/styles';
 import {HomeTabStackParamList, MainStackParamList} from '@navigation/Main';
+import {navigate} from '@navigation/utils';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {useMenuButtonWalkthrough} from '@screens/HomeFlow/Home/components/Header/components/hooks/useMenuButtonWalkthrough';
@@ -13,6 +14,7 @@ import {ContextualMenuButton} from '@screens/Modals/ContextualMenu/types';
 import {CandyBoxMenuIcon} from '@svg/CandyBoxMenuIcon';
 import {ChatBubblesIcon} from '@svg/ChatBubblesIcon';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
+import {RocketIcon} from '@svg/RocketIcon';
 import {StatsIcon} from '@svg/StatsIcon';
 import {isRTL, t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
@@ -38,6 +40,13 @@ export const MenuButton = memo(() => {
       //   onPress: () => navigation.navigate('InAppNotifications'),
       //   id: 'notifications',
       // },
+      {
+        id: 'boost',
+        icon: <RocketIcon color={COLORS.downriver} />,
+        label: t('home.menu.boost'),
+        onPress: () =>
+          navigate({name: 'CreativeIceLibrary', params: undefined}),
+      },
       {
         id: 'staking',
         icon: (
