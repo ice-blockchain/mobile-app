@@ -119,6 +119,5 @@ const styles = StyleSheet.create({
   },
   userGreetingContainer: {
     flex: 1,
-    flexDirection: 'row',
   },
 });
