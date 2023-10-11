@@ -36,11 +36,13 @@ export function TakeSelfieStep({onPictureTaken}: Props) {
         onCameraReady={() => setIsCameraReady(true)}
       />
       {isCameraReady ? (
-        <Touchable style={styles.cameraButton} onPress={takePicture} />
+        <>
+          <Touchable style={styles.cameraButton} onPress={takePicture} />
+          {!isDeviceAngleAllowed && (
+            <DeviceAngleWarning containerStyle={styles.warning} />
+          )}
+        </>
       ) : null}
-      {!isDeviceAngleAllowed && (
-        <DeviceAngleWarning containerStyle={styles.warning} />
-      )}
     </View>
   );
 }
