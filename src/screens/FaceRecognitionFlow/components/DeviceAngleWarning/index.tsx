@@ -19,10 +19,10 @@ import {rem} from 'rn-units';
 
 type Props = {
   containerStyle?: StyleProp<ViewStyle>;
-  countDownSecs?: Duration;
+  countDownSecs?: Duration | null;
 };
 
-export function DevicePositionWarning({countDownSecs, containerStyle}: Props) {
+export function DeviceAngleWarning({countDownSecs, containerStyle}: Props) {
   return (
     <View style={[styles.container, containerStyle]}>
       <Image source={Images.phone.phonePosition} style={styles.image} />
@@ -68,10 +68,10 @@ const styles = StyleSheet.create({
   countDownContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginBottom: rem(4),
   },
   countDownText: {
     marginStart: rem(6),
-    marginBottom: rem(4),
     ...font(14, 18, 'medium', 'secondaryPale'),
   },
   titleText: {

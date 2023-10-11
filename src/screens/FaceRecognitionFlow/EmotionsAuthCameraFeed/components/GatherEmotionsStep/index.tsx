@@ -9,8 +9,10 @@ import {
   CameraFeed,
   cameraStyles,
 } from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
+import {DeviceAngleWarning} from '@screens/FaceRecognitionFlow/components/DeviceAngleWarning';
 import {EmotionCard} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/components/EmotionCard';
 import {StartButton} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/components/StartButton';
+import {useIsDeviceAngleAllowed} from '@screens/FaceRecognitionFlow/hooks/useIsDeviceAngleAllowed';
 import {getPictureCropStartY} from '@screens/FaceRecognitionFlow/utils';
 import {dayjs} from '@services/dayjs';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
@@ -54,6 +56,7 @@ export function GatherEmotionsStep({
 }: Props) {
   const cameraRef = useRef<Camera>(null);
   const [isCameraReady, setIsCameraReady] = useState(false);
+  const isDeviceAngleAllowed = useIsDeviceAngleAllowed();
   const emotions = useSelector(emotionsAuthEmotionsSelector);
   const session = useSelector(emotionsAuthSessionSelector);
   const sessionExpiredAt = useSelector(emotionsAuthSessionExpiredAtSelector);
@@ -240,13 +243,21 @@ export function GatherEmotionsStep({
           }}
         />
         <View style={styles.bottomContainer}>
-          {!started || !recordingEmotion ? (
-            <StartButton onPress={onStartPressed} />
+          {isDeviceAngleAllowed ? (
+            started && recordingEmotion ? (
+              <EmotionCard
+                emotion={recordingEmotion}
+                countDownSecs={currentVideoCountdown}
+                previewTimeInMs={WAIT_BEFORE_RECORDING_MS}
+              />
+            ) : (
+              <StartButton onPress={onStartPressed} />
+            )
           ) : (
-            <EmotionCard
-              emotion={recordingEmotion}
-              countDownSecs={currentVideoCountdown}
-              previewTimeInMs={WAIT_BEFORE_RECORDING_MS}
+            <DeviceAngleWarning
+              countDownSecs={
+                started && recordingEmotion ? currentVideoCountdown : null
+              }
             />
           )}
         </View>
@@ -259,7 +270,8 @@ const styles = StyleSheet.create({
   bottomContainer: {
     position: 'absolute',
     bottom: rem(38),
-    width: '100%',
+    left: rem(16),
+    right: rem(16),
     alignItems: 'center',
     justifyContent: 'center',
   },

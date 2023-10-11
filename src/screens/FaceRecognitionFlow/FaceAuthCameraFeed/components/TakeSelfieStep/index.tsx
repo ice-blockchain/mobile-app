@@ -3,8 +3,8 @@
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {CameraFeed} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
-import {DevicePositionWarning} from '@screens/FaceRecognitionFlow/components/DevicePositionWarning';
-import {useIsDeviceRotationAllowed} from '@screens/FaceRecognitionFlow/hooks/useIsDeviceAllowedRotation';
+import {DeviceAngleWarning} from '@screens/FaceRecognitionFlow/components/DeviceAngleWarning';
+import {useIsDeviceAngleAllowed} from '@screens/FaceRecognitionFlow/hooks/useIsDeviceAngleAllowed';
 import {Camera, CameraCapturedPicture} from 'expo-camera';
 import React, {useRef, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -17,7 +17,7 @@ type Props = {
 export function TakeSelfieStep({onPictureTaken}: Props) {
   const cameraRef = useRef<Camera>(null);
   const [isCameraReady, setIsCameraReady] = useState(false);
-  const isDeviceRotationAllowed = useIsDeviceRotationAllowed();
+  const isDeviceAngleAllowed = useIsDeviceAngleAllowed();
 
   const takePicture = async () => {
     if (cameraRef.current) {
@@ -38,8 +38,8 @@ export function TakeSelfieStep({onPictureTaken}: Props) {
       {isCameraReady ? (
         <Touchable style={styles.cameraButton} onPress={takePicture} />
       ) : null}
-      {!isDeviceRotationAllowed && (
-        <DevicePositionWarning containerStyle={styles.warning} />
+      {!isDeviceAngleAllowed && (
+        <DeviceAngleWarning containerStyle={styles.warning} />
       )}
     </View>
   );

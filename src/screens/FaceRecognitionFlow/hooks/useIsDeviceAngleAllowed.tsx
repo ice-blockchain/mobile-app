@@ -5,7 +5,7 @@ import {DEVICE_SENSORS_UPDATE_INTERVAL_MS} from '@constants/timeouts';
 import {DeviceMotion} from 'expo-sensors';
 import {useEffect, useState} from 'react';
 
-export const useIsDeviceRotationAllowed = () => {
+export const useIsDeviceAngleAllowed = () => {
   const [isAllowed, setIsAllowed] = useState<boolean>(true);
 
   useEffect(() => {
