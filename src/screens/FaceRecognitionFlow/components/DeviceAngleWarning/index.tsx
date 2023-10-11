@@ -39,9 +39,11 @@ export function DeviceAngleWarning({countDownSecs, containerStyle}: Props) {
             </Text>
           </View>
         )}
-        <Text style={styles.titleText}>Warning</Text>
+        <Text style={styles.titleText}>
+          {t('face_auth.device_angle_warning.title')}
+        </Text>
         <Text style={styles.subtitleText}>
-          Please keep the phone straight while looking into camera
+          {t('face_auth.device_angle_warning.description')}
         </Text>
       </View>
     </View>
