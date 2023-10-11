@@ -2,8 +2,9 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {windowWidth} from '@constants/styles';
 import {CameraFeed} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
+import {DevicePositionWarning} from '@screens/FaceRecognitionFlow/components/DevicePositionWarning';
+import {useIsDeviceRotationAllowed} from '@screens/FaceRecognitionFlow/hooks/useIsDeviceAllowedRotation';
 import {Camera, CameraCapturedPicture} from 'expo-camera';
 import React, {useRef, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -16,6 +17,7 @@ type Props = {
 export function TakeSelfieStep({onPictureTaken}: Props) {
   const cameraRef = useRef<Camera>(null);
   const [isCameraReady, setIsCameraReady] = useState(false);
+  const isDeviceRotationAllowed = useIsDeviceRotationAllowed();
 
   const takePicture = async () => {
     if (cameraRef.current) {
@@ -36,6 +38,9 @@ export function TakeSelfieStep({onPictureTaken}: Props) {
       {isCameraReady ? (
         <Touchable style={styles.cameraButton} onPress={takePicture} />
       ) : null}
+      {!isDeviceRotationAllowed && (
+        <DevicePositionWarning containerStyle={styles.warning} />
+      )}
     </View>
   );
 }
@@ -50,6 +55,13 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     position: 'absolute',
     bottom: rem(40),
-    left: windowWidth / 2 - BUTTON_SIZE / 2,
+    alignSelf: 'center',
+  },
+  warning: {
+    position: 'absolute',
+    bottom: rem(40),
+    alignSelf: 'center',
+    right: rem(16),
+    left: rem(16),
   },
 });

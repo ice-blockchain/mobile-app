@@ -78,7 +78,7 @@ export const JoinTelegramPopUp = () => {
             <Image
               resizeMode={'contain'}
               style={styles.image}
-              source={Images.popUp.telegram}
+              source={Images.social.telegram}
             />
             <View style={styles.titleContainer}>
               <Title text={t('home.tasks.popup.title')} />
