@@ -6233,6 +6233,13 @@ expo-modules-core@1.5.7:
     compare-versions "^3.4.0"
     invariant "^2.2.4"
 
+expo-sensors@^12.5.0:
+  version "12.5.0"
+  resolved "https://registry.yarnpkg.com/expo-sensors/-/expo-sensors-12.5.0.tgz#30efbfda26184372a0972d79c6923ed2f4a2b137"
+  integrity sha512-5frGID37HFiKw9s0KCtuCnqD3gWYx7O8BU1oybJ9+qxiQ4emZoJzu0P7czV8D8cRTphv93ltkxqi2GXSTNSI8A==
+  dependencies:
+    invariant "^2.2.4"
+
 expo@^49.0.0:
   version "49.0.3"
   resolved "https://registry.yarnpkg.com/expo/-/expo-49.0.3.tgz#0fce00c9fa864d8253f45dac6922b316e93ddd25"
