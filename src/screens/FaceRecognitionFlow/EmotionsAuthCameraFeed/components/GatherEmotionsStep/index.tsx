@@ -98,7 +98,7 @@ export function GatherEmotionsStep({
           );
 
           await wait(WAIT_BEFORE_RECORDING_MS);
-          if (toAbort) {
+          if (toAbort || !cameraRef.current) {
             return;
           }
 

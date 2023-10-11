@@ -53,11 +53,11 @@ export const CameraFeed = React.forwardRef(
         <Camera
           ref={cameraRef}
           style={commonStyles.flexOne}
-          onLayout={() => {
-            getSupportedRatios();
-          }}
           ratio={cameraRatio ?? '4:3'}
-          onCameraReady={onCameraReady}
+          onCameraReady={() => {
+            getSupportedRatios();
+            onCameraReady();
+          }}
           type={CameraType.front}>
           <FaceAuthOverlay />
         </Camera>

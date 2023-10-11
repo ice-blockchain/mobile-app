@@ -47,6 +47,13 @@ const RESET_EMOTIONS_AUTH_STATUS = createAction('RESET_EMOTIONS_AUTH_STATUS', {
   STATE: true,
 });
 
+const RESET_EMOTIONS_SUCCESS_AUTH_STATUS = createAction(
+  'RESET_EMOTIONS_SUCCESS_AUTH_STATUS',
+  {
+    STATE: true,
+  },
+);
+
 const SET_CAMERA_RATIO = createAction('SET_CAMERA_RATIO', {
   STATE: (payload: {cameraRatio: CameraRatio}) => payload,
 });
@@ -57,5 +64,6 @@ export const FaceRecognitionActions = Object.freeze({
   FETCH_EMOTIONS_FOR_AUTH,
   RESET_FACE_AUTH_STATUS,
   RESET_EMOTIONS_AUTH_STATUS,
+  RESET_EMOTIONS_SUCCESS_AUTH_STATUS,
   SET_CAMERA_RATIO,
 });
