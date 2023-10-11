@@ -2,6 +2,7 @@
 
 import {DEVICE_Y_ALLOWED_ROTATION_RADIANS} from '@constants/faceRecognition';
 import {DEVICE_SENSORS_UPDATE_INTERVAL_MS} from '@constants/timeouts';
+import {hapticFeedback} from '@utils/device';
 import {DeviceMotion} from 'expo-sensors';
 import {useEffect, useState} from 'react';
 
@@ -20,6 +21,12 @@ export const useIsDeviceAngleAllowed = () => {
     });
     return () => subscription?.remove();
   }, []);
+
+  useEffect(() => {
+    if (!isAllowed) {
+      hapticFeedback();
+    }
+  }, [isAllowed]);
 
   return isAllowed;
 };
