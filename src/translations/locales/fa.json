@@ -1050,6 +1050,10 @@
         "sadness": "غم",
         "surprise": "تعجب"
       }
+    },
+    "device_angle_warning": {
+      "title": "اخطار",
+      "description": "لطفاً تلفن را مستقیم نگه دارید در حین نگاه به دوربین"
     }
   }
 }

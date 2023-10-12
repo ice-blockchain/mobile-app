@@ -1043,6 +1043,10 @@
         "sadness": "tristesse",
         "surprise": "surprise"
       }
+    },
+    "device_angle_warning": {
+      "title": "Avertissement",
+      "description": "Veuillez maintenir le téléphone droit en regardant dans l'appareil photo"
     }
   }
 }

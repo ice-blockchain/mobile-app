@@ -1043,6 +1043,10 @@
         "sadness": "tristezza",
         "surprise": "sorpresa"
       }
+    },
+    "device_angle_warning": {
+      "title": "Avviso",
+      "description": "Si prega di tenere il telefono dritto mentre si guarda nella fotocamera"
     }
   }
 }

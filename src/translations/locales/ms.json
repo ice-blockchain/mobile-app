@@ -1043,6 +1043,10 @@
         "sadness": "kesedihan",
         "surprise": "terkejut"
       }
+    },
+    "device_angle_warning": {
+      "title": "Arahan",
+      "description": "Sila pegang telefon tegak sambil melihat ke kamera"
     }
   }
 }

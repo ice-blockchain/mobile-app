@@ -1043,6 +1043,10 @@
         "sadness": "दुःख",
         "surprise": "आश्चर्य"
       }
+    },
+    "device_angle_warning": {
+      "title": "चेतावणी",
+      "description": "कॅमेऱ्यात पहात असताना कृपया फोन सरळ ठेवा"
     }
   }
 }

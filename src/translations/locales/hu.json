@@ -1043,6 +1043,10 @@
         "sadness": "szomorúság",
         "surprise": "meglepetés"
       }
+    },
+    "device_angle_warning": {
+      "title": "Figyelmeztetés",
+      "description": "Kérjük, tartsa a telefont egyenesen, amikor a kamerába néz"
     }
   }
 }

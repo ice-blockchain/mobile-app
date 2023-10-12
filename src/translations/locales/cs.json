@@ -1043,6 +1043,10 @@
         "sadness": "smutek",
         "surprise": "překvapení"
       }
+    },
+    "device_angle_warning": {
+      "title": "Varování",
+      "description": "Prosím, držte telefon rovně při pohledu do kamery"
     }
   }
 }

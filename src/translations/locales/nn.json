@@ -1043,6 +1043,10 @@
         "sadness": "tristhet",
         "surprise": "overraskelse"
       }
+    },
+    "device_angle_warning": {
+      "title": "Advarsel",
+      "description": "Vennligst hald telefonen rett medan du ser inn i kameraet"
     }
   }
 }

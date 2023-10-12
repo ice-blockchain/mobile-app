@@ -1043,6 +1043,10 @@
         "sadness": "悲伤",
         "surprise": "惊讶"
       }
+    },
+    "device_angle_warning": {
+      "title": "警告",
+      "description": "查看相机时，请保持手机垂直"
     }
   }
 }

@@ -1043,6 +1043,10 @@
         "sadness": "슬픔",
         "surprise": "놀람"
       }
+    },
+    "device_angle_warning": {
+      "title": "경고",
+      "description": "카메라를 보면서 전화를 곧게 유지해주세요"
     }
   }
 }

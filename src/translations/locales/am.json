@@ -1043,6 +1043,10 @@
         "sadness": "ሀዘን",
         "surprise": "መደነቅ"
       }
+    },
+    "device_angle_warning": {
+      "title": "ማስጠንቀቂያ",
+      "description": "እባኮትን ወደ ካሜራ እየተመለከቱ ስልኩን ቀጥ አድርገው ይያዙት።"
     }
   }
 }

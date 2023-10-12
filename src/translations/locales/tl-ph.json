@@ -956,6 +956,10 @@
         "sadness": "kalungkutan",
         "surprise": "kagulatang"
       }
+    },
+    "device_angle_warning": {
+      "title": "Babala",
+      "description": "Mangyaring panatilihing tuwid ang telepono habang tinitingnan ang kamera"
     }
   }
 }

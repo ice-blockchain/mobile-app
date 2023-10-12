@@ -1043,6 +1043,10 @@
         "sadness": "悲しみ",
         "surprise": "驚き"
       }
+    },
+    "device_angle_warning": {
+      "title": "警告",
+      "description": "カメラを見ながら電話をまっすぐに保ってください"
     }
   }
 }

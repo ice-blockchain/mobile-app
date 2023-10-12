@@ -1043,6 +1043,10 @@
         "sadness": "tristețe",
         "surprise": "surpriză"
       }
+    },
+    "device_angle_warning": {
+      "title": "Avertisment",
+      "description": "Vă rugăm să țineți telefonul drept în timp ce priviți în cameră"
     }
   }
 }
