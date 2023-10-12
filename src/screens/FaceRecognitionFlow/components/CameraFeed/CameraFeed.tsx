@@ -8,7 +8,7 @@ import {cameraRatioSelector} from '@store/modules/FaceRecognition/selectors';
 import {Camera, CameraType} from 'expo-camera';
 import {activateKeepAwakeAsync, deactivateKeepAwake} from 'expo-keep-awake';
 import React, {Ref, useEffect, useImperativeHandle, useRef} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {Platform, StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 type Props = {
@@ -33,7 +33,7 @@ export const CameraFeed = React.forwardRef(
     const cameraRatio = useSelector(cameraRatioSelector);
     const dispatch = useDispatch();
     const getSupportedRatios = async () => {
-      if (cameraRef.current) {
+      if (cameraRef.current && Platform.OS === 'android') {
         const ratios = await cameraRef.current.getSupportedRatiosAsync();
         dispatch(
           FaceRecognitionActions.SET_CAMERA_RATIO.STATE.create({
@@ -53,11 +53,11 @@ export const CameraFeed = React.forwardRef(
         <Camera
           ref={cameraRef}
           style={commonStyles.flexOne}
-          onLayout={() => {
-            getSupportedRatios();
-          }}
           ratio={cameraRatio ?? '4:3'}
-          onCameraReady={onCameraReady}
+          onCameraReady={() => {
+            getSupportedRatios();
+            onCameraReady();
+          }}
           type={CameraType.front}>
           <FaceAuthOverlay />
         </Camera>

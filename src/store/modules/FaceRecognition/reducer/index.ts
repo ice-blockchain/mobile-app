@@ -10,6 +10,7 @@ import {
   FaceAuthStatus,
 } from '@store/modules/FaceRecognition/types';
 import produce from 'immer';
+import {Platform} from 'react-native';
 import {persistReducer} from 'redux-persist';
 
 export interface State {
@@ -37,6 +38,7 @@ type Actions = ReturnType<
   | typeof FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create
   | typeof FaceRecognitionActions.RESET_FACE_AUTH_STATUS.STATE.create
   | typeof FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create
+  | typeof FaceRecognitionActions.RESET_EMOTIONS_SUCCESS_AUTH_STATUS.STATE.create
   | typeof FaceRecognitionActions.SET_CAMERA_RATIO.STATE.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
 >;
@@ -49,7 +51,7 @@ const INITIAL_STATE: State = {
   nextEmotionIndex: 0,
   sessionExpiredAt: null,
   activeRequests: 0,
-  cameraRatio: null,
+  cameraRatio: Platform.OS === 'ios' ? '16:9' : null,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -110,6 +112,12 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.type:
         draft.emotionsAuthStatus = null;
         resetSession();
+        break;
+      case FaceRecognitionActions.RESET_EMOTIONS_SUCCESS_AUTH_STATUS.STATE.type:
+        if (draft.emotionsAuthStatus === 'SUCCESS') {
+          draft.emotionsAuthStatus = null;
+          resetSession();
+        }
         break;
       case FaceRecognitionActions.SET_CAMERA_RATIO.STATE.type:
         draft.cameraRatio = action.payload.cameraRatio;

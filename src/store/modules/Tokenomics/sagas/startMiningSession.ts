@@ -5,7 +5,7 @@ import {Api} from '@api/index';
 import {ResurrectRequiredData} from '@api/tokenomics/types';
 import {User} from '@api/user/types';
 import {LocalAudio} from '@audio';
-import {navigate} from '@navigation/utils';
+import {navigate, removeScreenByName} from '@navigation/utils';
 import {loadLocalAudio} from '@services/audio';
 import {dayjs} from '@services/dayjs';
 import {AccountActions} from '@store/modules/Account/actions';
@@ -49,6 +49,7 @@ export function* startMiningSessionSaga(
     authConfigSelector,
   );
   if (emotionsAuthStatus !== 'SUCCESS' && authConfig?.['face-auth']?.enabled) {
+    yield removeScreenByName('Tooltip');
     navigate({
       name: 'FaceRecognition',
       params: undefined,
@@ -72,8 +73,10 @@ export function* startMiningSessionSaga(
     yield put(
       TokenomicsActions.START_MINING_SESSION.SUCCESS.create(miningSummary),
     );
-    // Reset face auth status here so on next tap to mine a user would have to face auth again
-    yield put(FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create());
+    // Reset success emotions auth status here so on next tap to mine a user would have to face auth again
+    yield put(
+      FaceRecognitionActions.RESET_EMOTIONS_SUCCESS_AUTH_STATUS.STATE.create(),
+    );
 
     yield call(setFirstMiningDate, user);
 
