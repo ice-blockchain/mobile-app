@@ -46,4 +46,5 @@ export const LINKS = {
     'https://www.figma.com/community/file/1256148399031329897/ice-Community-Assets',
   ICE_VIDEOS:
     'https://drive.google.com/drive/u/1/folders/1E_3zVZzs2vqUNgUd05qfi6cJ_axjlvQU',
+  WHITEPAPER: 'http://ice.io/whitepaper',
 };

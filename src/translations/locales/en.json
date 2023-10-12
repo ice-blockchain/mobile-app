@@ -348,7 +348,9 @@
       "days_off": "DAYS OFF"
     },
     "roadmap": {
-      "title": "ROADMAP"
+      "title": "ROADMAP",
+      "button_title": "Whitepaper",
+      "button_subtitle": "Learn more about our vision at Ice."
     }
   },
   "settings": {

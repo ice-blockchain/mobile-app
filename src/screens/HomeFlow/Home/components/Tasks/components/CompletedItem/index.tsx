@@ -42,7 +42,7 @@ export const CompletedItem = ({onPress, isExpanded}: Props) => {
           style={[styles.chevron, isExpanded && styles.rotatedChevron]}
           width={rem(12)}
           height={rem(12)}
-          color={COLORS.gunmetalGrey}
+          color={COLORS.primaryDark}
         />
       }
     />

@@ -91,11 +91,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   titleText: {
-    ...font(14, 19, 'black', 'primaryDark'),
+    ...font(14, 17, 'black', 'primaryDark'),
   },
   subtitleText: {
     marginTop: rem(4),
-    ...font(12, 16, 'medium', 'toreaBay'),
+    ...font(12, 14.4, 'medium', 'toreaBay'),
   },
   trailingIconContainer: {
     marginLeft: rem(8),

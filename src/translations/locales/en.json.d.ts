@@ -233,6 +233,8 @@ export type Translations = {
   'home.engagement.streak': null;
   'home.engagement.days_off': null;
   'home.roadmap.title': null;
+  'home.roadmap.button_title': null;
+  'home.roadmap.button_subtitle': null;
   'settings.title': null;
   'settings.profile': null;
   'settings.legal': null;
