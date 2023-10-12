@@ -75,10 +75,10 @@ export function GatherEmotionsStep({
   );
 
   useEffect(() => {
-    if (isAllRecorded && !isVideoRecording) {
+    if (isAllRecorded && !isVideoRecording && started) {
       onAllEmotionsGathered();
     }
-  }, [isAllRecorded, isVideoRecording, onAllEmotionsGathered]);
+  }, [isAllRecorded, isVideoRecording, onAllEmotionsGathered, started]);
 
   useEffect(() => {
     if (
