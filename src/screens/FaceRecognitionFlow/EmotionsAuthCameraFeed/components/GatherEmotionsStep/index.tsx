@@ -253,7 +253,7 @@ export function GatherEmotionsStep({
             <StartButton onPress={onStartPressed} />
           )}
         </View>
-        {!isDeviceAngleAllowed && (
+        {!isDeviceAngleAllowed && isCameraReady && (
           <DeviceAngleWarning
             containerStyle={styles.bottomContainer}
             countDownSecs={
