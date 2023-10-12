@@ -242,24 +242,28 @@ export function GatherEmotionsStep({
             setIsCameraReady(true);
           }}
         />
-        <View style={styles.bottomContainer}>
-          {started && recordingEmotion ? (
-            <EmotionCard
-              emotion={recordingEmotion}
-              countDownSecs={currentVideoCountdown}
-              previewTimeInMs={WAIT_BEFORE_RECORDING_MS}
-            />
-          ) : (
-            <StartButton onPress={onStartPressed} />
-          )}
-        </View>
-        {!isDeviceAngleAllowed && isCameraReady && (
-          <DeviceAngleWarning
-            containerStyle={styles.bottomContainer}
-            countDownSecs={
-              started && recordingEmotion ? currentVideoCountdown : null
-            }
-          />
+        {isCameraReady && (
+          <>
+            <View style={styles.bottomContainer}>
+              {started && recordingEmotion ? (
+                <EmotionCard
+                  emotion={recordingEmotion}
+                  countDownSecs={currentVideoCountdown}
+                  previewTimeInMs={WAIT_BEFORE_RECORDING_MS}
+                />
+              ) : (
+                <StartButton onPress={onStartPressed} />
+              )}
+            </View>
+            {!isDeviceAngleAllowed && (
+              <DeviceAngleWarning
+                containerStyle={styles.bottomContainer}
+                countDownSecs={
+                  started && recordingEmotion ? currentVideoCountdown : null
+                }
+              />
+            )}
+          </>
         )}
       </View>
     </View>
