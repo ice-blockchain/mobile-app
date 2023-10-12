@@ -2,19 +2,29 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {ReactNode} from 'react';
-import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
+import {
+  StyleProp,
+  StyleSheet,
+  Text,
+  TextStyle,
+  View,
+  ViewStyle,
+} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
   onPress: () => void;
-  isExpanded: boolean;
   LeadingIcon?: ReactNode;
   TrailingIcon?: ReactNode;
   containerStyle?: StyleProp<ViewStyle>;
-  iconContainerStyle?: StyleProp<ViewStyle>;
+  leadingIconContainerStyle?: StyleProp<ViewStyle>;
+  titleTextStyle?: StyleProp<TextStyle>;
+  subtitleTextStyle?: StyleProp<TextStyle>;
+  trailingIconContainerStyle?: StyleProp<ViewStyle>;
+  title?: string;
+  subtitle?: string;
 };
 
 const ICON_CONTAINER_SIZE = rem(36);
@@ -24,25 +34,35 @@ export const ActionListItem = ({
   LeadingIcon,
   TrailingIcon,
   containerStyle,
-  iconContainerStyle,
+  leadingIconContainerStyle,
+  titleTextStyle,
+  subtitleTextStyle,
+  trailingIconContainerStyle,
+  title,
+  subtitle,
 }: Props) => {
   return (
     <Touchable style={[styles.container, containerStyle]} onPress={onPress}>
       {LeadingIcon && (
-        <View style={[styles.leadingIconContainer, iconContainerStyle]}>
+        <View style={[styles.leadingIconContainer, leadingIconContainerStyle]}>
           {LeadingIcon}
         </View>
       )}
-
       <View style={styles.content}>
-        <Text style={styles.titleText}>{t('home.tasks.completed.title')}</Text>
-        <Text style={styles.descriptionText}>
-          {t('home.tasks.completed.description')}
-        </Text>
+        {title && (
+          <Text style={[styles.titleText, titleTextStyle]}>{title}</Text>
+        )}
+        {subtitle && (
+          <Text style={[styles.subtitleText, subtitleTextStyle]}>
+            {subtitle}
+          </Text>
+        )}
       </View>
-
       {TrailingIcon && (
-        <View style={styles.trailingIconContainer}>{TrailingIcon}</View>
+        <View
+          style={[styles.trailingIconContainer, trailingIconContainerStyle]}>
+          {TrailingIcon}
+        </View>
       )}
     </Touchable>
   );
@@ -73,7 +93,7 @@ const styles = StyleSheet.create({
   titleText: {
     ...font(14, 19, 'black', 'primaryDark'),
   },
-  descriptionText: {
+  subtitleText: {
     marginTop: rem(4),
     ...font(12, 16, 'medium', 'toreaBay'),
   },
