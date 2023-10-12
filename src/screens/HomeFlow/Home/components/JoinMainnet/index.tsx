@@ -7,6 +7,7 @@ import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
 import {t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
+import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
@@ -18,7 +19,12 @@ export const JoinMainnet = memo(() => {
     <Touchable onPress={onPress}>
       <View style={[styles.container, commonStyles.shadow]}>
         <Image source={Images.card.joinMainnet} style={styles.image} />
-        <Text>{t('home.join_mainnet.title')}</Text>
+        <View style={styles.body}>
+          <Text style={styles.titleText}>{t('home.join_mainnet.title')}</Text>
+          <Text style={styles.subtitleText}>
+            {t('home.join_mainnet.subtitle')}
+          </Text>
+        </View>
       </View>
     </Touchable>
   );
@@ -29,12 +35,24 @@ const styles = StyleSheet.create({
     marginHorizontal: SCREEN_SIDE_OFFSET,
     backgroundColor: COLORS.white,
     borderRadius: rem(16),
-    marginTop: rem(16),
+    marginTop: rem(24),
   },
   image: {
     width: '100%',
     // height:undefined is required to make it work
     height: undefined,
     aspectRatio: 335 / 140,
+  },
+  body: {
+    marginTop: rem(10),
+    marginHorizontal: rem(12),
+    marginBottom: rem(12),
+  },
+  titleText: {
+    ...font(13, 16, 'black', 'primaryDark'),
+  },
+  subtitleText: {
+    marginTop: rem(4),
+    ...font(12, 16, 'medium', 'secondary'),
   },
 });
