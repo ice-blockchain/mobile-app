@@ -36,6 +36,7 @@ export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
 
   const onTryLater = () => {
     navigation.goBack();
+    dispatch(FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create());
   };
 
   const onTryAgain = useCallback(() => {

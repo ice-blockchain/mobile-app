@@ -28,7 +28,7 @@ import {getVideoDimensionsWithFFmpeg} from '@utils/ffmpeg';
 import {Duration} from 'dayjs/plugin/duration';
 import {Camera, VideoQuality} from 'expo-camera';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
-import {BackHandler, StyleSheet, View} from 'react-native';
+import {BackHandler, Platform, StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem, wait} from 'rn-units';
 
@@ -45,7 +45,7 @@ function getSecondsPassed(since: number) {
 
 // Needed for the Camera component.
 // If to start recording a new video right after previous one is stopped recording there camera feed behaves wierd on ios
-const WAIT_BEFORE_RECORDING_MS = 1000;
+const WAIT_BEFORE_RECORDING_MS = 100;
 
 export function GatherEmotionsStep({
   onAllEmotionsGathered,
@@ -75,10 +75,10 @@ export function GatherEmotionsStep({
   );
 
   useEffect(() => {
-    if (isAllRecorded && !isVideoRecording) {
+    if (isAllRecorded && !isVideoRecording && started) {
       onAllEmotionsGathered();
     }
-  }, [isAllRecorded, isVideoRecording, onAllEmotionsGathered]);
+  }, [isAllRecorded, isVideoRecording, onAllEmotionsGathered, started]);
 
   useEffect(() => {
     if (
@@ -118,7 +118,7 @@ export function GatherEmotionsStep({
           const video = await cameraRef.current
             .recordAsync({
               maxDuration: 5,
-              quality: VideoQuality['480p'],
+              quality: VideoQuality[Platform.OS === 'ios' ? '720p' : '480p'],
               mute: true,
             })
             .catch(() => {
