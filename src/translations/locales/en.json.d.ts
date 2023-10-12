@@ -235,6 +235,8 @@ export type Translations = {
   'home.roadmap.title': null;
   'home.roadmap.button_title': null;
   'home.roadmap.button_subtitle': null;
+  'home.join_mainnet.title': null;
+  'home.join_mainnet.subtitle': null;
   'settings.title': null;
   'settings.profile': null;
   'settings.legal': null;

@@ -159,4 +159,7 @@ export const Images = {
     surprise: require('./emotions/surprise.gif'),
     surprise_preview: require('./emotions/surprise_preview.jpg'),
   },
+  card: {
+    joinMainnet: require('./card/joinMainnet.png'),
+  },
 } as const;
