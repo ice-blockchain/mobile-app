@@ -1043,6 +1043,10 @@
         "sadness": "üzüntü",
         "surprise": "şaşkınlık"
       }
+    },
+    "device_angle_warning": {
+      "title": "Uyarı",
+      "description": "Lütfen kameraya bakarken telefonu düz tutun"
     }
   }
 }

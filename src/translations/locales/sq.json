@@ -1043,6 +1043,10 @@
         "sadness": "trishtim",
         "surprise": "çuditje"
       }
+    },
+    "device_angle_warning": {
+      "title": "Paralajmërim",
+      "description": "Ju lutemi mbani telefonin drejt ndërsa shikoni në kamerë"
     }
   }
 }

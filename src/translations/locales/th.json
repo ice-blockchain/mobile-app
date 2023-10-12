@@ -1043,6 +1043,10 @@
         "sadness": "เศร้า",
         "surprise": "ประหลาดใจ"
       }
+    },
+    "device_angle_warning": {
+      "title": "คำเตือน",
+      "description": "โปรดเก็บโทรศัพท์ตรงขณะดูกล้อง"
     }
   }
 }

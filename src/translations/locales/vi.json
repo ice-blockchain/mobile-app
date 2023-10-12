@@ -1043,6 +1043,10 @@
         "sadness": "buồn",
         "surprise": "ngạc nhiên"
       }
+    },
+    "device_angle_warning": {
+      "title": "Cảnh báo",
+      "description": "Vui lòng giữ điện thoại thẳng khi nhìn vào máy ảnh"
     }
   }
 }

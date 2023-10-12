@@ -652,4 +652,6 @@ export type Translations = {
   'face_auth.emotions_recognition.emotions.neutral': null;
   'face_auth.emotions_recognition.emotions.sadness': null;
   'face_auth.emotions_recognition.emotions.surprise': null;
+  'face_auth.device_angle_warning.title': null;
+  'face_auth.device_angle_warning.description': null;
 };

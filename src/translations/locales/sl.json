@@ -1043,6 +1043,10 @@
         "sadness": "žalost",
         "surprise": "presenečenje"
       }
+    },
+    "device_angle_warning": {
+      "title": "Opozorilo",
+      "description": "Prosimo, ohranite telefon pokonci med gledanjem v kamero"
     }
   }
 }

@@ -1043,6 +1043,10 @@
         "sadness": "Traurigkeit",
         "surprise": "Überraschung"
       }
+    },
+    "device_angle_warning": {
+      "title": "Warnung",
+      "description": "Bitte halten Sie das Telefon gerade, während Sie in die Kamera schauen"
     }
   }
 }

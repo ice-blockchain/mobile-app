@@ -1043,6 +1043,10 @@
         "sadness": "gəlmə",
         "surprise": "təəccüb"
       }
+    },
+    "device_angle_warning": {
+      "title": "Xəbərdarlıq",
+      "description": "Kameraya baxarkən telefonu düz tutun, xahiş edirik"
     }
   }
 }

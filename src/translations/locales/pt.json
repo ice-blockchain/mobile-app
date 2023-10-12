@@ -1044,6 +1044,10 @@
         "sadness": "tristeza",
         "surprise": "surpresa"
       }
+    },
+    "device_angle_warning": {
+      "title": "Aviso",
+      "description": "Por favor, mantenha o telefone reto ao olhar para a câmera"
     }
   }
 }

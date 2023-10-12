@@ -956,6 +956,10 @@
         "sadness": "kesedihan",
         "surprise": "kejutan"
       }
+    },
+    "device_angle_warning": {
+      "title": "Peringatan",
+      "description": "Monggo tuku telepon kokoh nalika ngelihat kamera"
     }
   }
 }

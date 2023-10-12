@@ -1043,6 +1043,10 @@
         "sadness": "kesedihan",
         "surprise": "kejutan"
       }
+    },
+    "device_angle_warning": {
+      "title": "Peringatan",
+      "description": "Mohon tetapkan ponsel lurus saat melihat ke kamera"
     }
   }
 }

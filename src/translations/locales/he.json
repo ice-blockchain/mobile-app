@@ -1050,6 +1050,10 @@
         "sadness": "עצב",
         "surprise": "הפתעה"
       }
+    },
+    "device_angle_warning": {
+      "title": "אזהרה",
+      "description": "אנא החזיקו את הטלפון במעמד הצפייה במצלמה"
     }
   }
 }

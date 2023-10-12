@@ -1043,6 +1043,10 @@
         "sadness": "smutek",
         "surprise": "niespodzianka"
       }
+    },
+    "device_angle_warning": {
+      "title": "Ostrzeżenie",
+      "description": "Proszę trzymać telefon prosto podczas patrzenia w kamerę"
     }
   }
 }

@@ -1050,6 +1050,10 @@
         "sadness": "غم",
         "surprise": "تعجب"
       }
+    },
+    "device_angle_warning": {
+      "title": "وارننگ",
+      "description": "براہ کرم کیمرے میں دیکھتے وقت فون کو سیدھا رکھیں"
     }
   }
 }

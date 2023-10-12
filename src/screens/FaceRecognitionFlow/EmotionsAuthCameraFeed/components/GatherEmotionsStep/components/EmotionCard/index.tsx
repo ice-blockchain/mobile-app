@@ -101,7 +101,6 @@ const IMAGE_SIZE = rem(120);
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: rem(16),
     width: '100%',
     borderRadius: rem(16),
     backgroundColor: COLORS.white,

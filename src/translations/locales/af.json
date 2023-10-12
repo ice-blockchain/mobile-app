@@ -1043,6 +1043,10 @@
         "sadness": "hartseer",
         "surprise": "verrassing"
       }
+    },
+    "device_angle_warning": {
+      "title": "Waarskuwing",
+      "description": "Hou asseblief die telefoon regop terwyl jy na die kamera kyk"
     }
   }
 }

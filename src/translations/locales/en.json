@@ -1040,6 +1040,10 @@
         "sadness": "sadness",
         "surprise": "surprise"
       }
+    },
+    "device_angle_warning": {
+      "title": "Warning",
+      "description": "Please keep the phone straight while looking into camera"
     }
   }
 }

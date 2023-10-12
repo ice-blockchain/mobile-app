@@ -72,6 +72,7 @@ export const Images = {
   phone: {
     confirmPhoneNumber: require('./phone/confirmPhoneNumber.png'),
     modifyPhoneNumber: require('./phone/modifyPhoneNumber.png'),
+    phonePosition: require('./phone/phonePosition.png'),
   },
   backgrounds: {
     linesBg: require('./backgrounds/linesBg.png'),
@@ -89,7 +90,6 @@ export const Images = {
     error: require('./popup/oops.png'),
     upToDate: require('./popup/already_updated.png'),
     resurrection: require('./popup/resurrection.png'),
-    telegram: require('./popup/telegram.png'),
   },
   share: {
     telegram: require('./share/telegram.png'),
@@ -109,6 +109,7 @@ export const Images = {
     linkedin: require('./social/linkedin.png'),
     facebook: require('./social/facebook.png'),
     instagram: require('./social/instagram.png'),
+    telegram: require('./social/telegram.png'),
   },
   creativeLibrary: {
     getStarted: require('./creative_library/get_started.png'),
