@@ -15,7 +15,10 @@ export const useIsDeviceAngleAllowed = () => {
       if (isAvailable) {
         DeviceMotion.setUpdateInterval(DEVICE_SENSORS_UPDATE_INTERVAL_MS);
         subscription = DeviceMotion.addListener(({rotation}) => {
-          setIsAllowed(rotation.beta > DEVICE_Y_ALLOWED_ROTATION_RADIANS);
+          // Despite the typing, `rotation` is null on android during the camera permissions dialog
+          if (rotation) {
+            setIsAllowed(rotation.beta > DEVICE_Y_ALLOWED_ROTATION_RADIANS);
+          }
         });
       }
     });
@@ -24,7 +27,8 @@ export const useIsDeviceAngleAllowed = () => {
 
   useEffect(() => {
     if (!isAllowed) {
-      hapticFeedback();
+      const interval = setInterval(hapticFeedback, 1000);
+      return () => clearInterval(interval);
     }
   }, [isAllowed]);
 
