@@ -18,7 +18,7 @@ import {
 import {rem} from 'rn-units';
 
 type Props = {
-  onPress: () => void;
+  onPress?: () => void;
   LeadingIcon?: ReactNode;
   TrailingIcon?: ReactNode;
   backgroundImageSource?: ImageSourcePropType;
@@ -30,6 +30,7 @@ type Props = {
   backgroundImageStyle?: StyleProp<ImageStyle>;
   title?: string;
   subtitle?: string;
+  disabled?: boolean;
 };
 
 const ICON_CONTAINER_SIZE = rem(36);
@@ -47,9 +48,13 @@ export const ActionListItem = ({
   backgroundImageStyle,
   title,
   subtitle,
+  disabled,
 }: Props) => {
   return (
-    <Touchable onPress={onPress} style={[styles.container, containerStyle]}>
+    <Touchable
+      onPress={onPress}
+      style={[styles.container, containerStyle]}
+      disabled={disabled}>
       {backgroundImageSource && (
         <Image
           source={backgroundImageSource}

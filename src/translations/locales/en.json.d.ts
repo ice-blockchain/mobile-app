@@ -140,6 +140,7 @@ export type Translations = {
   'errors.same_email': null;
   'errors.no_camera_permissions': null;
   'errors.no_library_permissions': null;
+  'errors.blockchain_address_already_taken': null;
   'profile.my_roles.title': null;
   'profile.mining_calculator': null;
   'profile.invite_friends': null;

@@ -32,7 +32,6 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       userInfo.phoneNumber = normalizedNumber;
       userInfo.phoneNumberHash = yield call(hashPhoneNumber, normalizedNumber);
     }
-
     const modifiedUser: SagaReturnType<typeof Api.user.updateAccount> =
       yield Api.user.updateAccount(user.id, userInfo);
     yield put(
@@ -83,6 +82,9 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
         case 'phoneNumberHash':
         case 'phoneNumber':
           localizedError = t('errors.phone_number_already_taken');
+          break;
+        case 'miningBlockchainAccountAddress':
+          localizedError = t('errors.blockchain_address_already_taken');
           break;
       }
     }

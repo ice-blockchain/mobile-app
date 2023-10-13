@@ -188,7 +188,8 @@
     "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again.",
     "same_email": "You can’t use the same e-mail.",
     "no_camera_permissions": "Camera permissions are not granted.",
-    "no_library_permissions": "Library permissions are not granted."
+    "no_library_permissions": "Library permissions are not granted.",
+    "blockchain_address_already_taken": "Address already taken"
   },
   "profile": {
     "my_roles": {

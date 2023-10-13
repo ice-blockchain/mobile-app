@@ -4,13 +4,15 @@ import {CommonInput} from '@components/Inputs/CommonInput';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
+import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {Header} from '@navigation/components/Header';
-import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {ConfirmAddressButton} from '@screens/HomeFlow/EthereumAddress/components/ConfirmAddressButton';
 import {EthereumAddressWarning} from '@screens/HomeFlow/EthereumAddress/components/EthereumAddressWarning';
 import {FramedEthereumIcon} from '@screens/HomeFlow/EthereumAddress/components/FramedEthereumIcon';
+import {useGoBackIfAddressSet} from '@screens/HomeFlow/EthereumAddress/hooks/useGoBackIfAddressSet';
+import {useSetEthereumAddress} from '@screens/HomeFlow/EthereumAddress/hooks/useSetEthereumAddress';
 import {EthereumBookIcon} from '@svg/EthereumBookIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -20,17 +22,24 @@ import {rem} from 'rn-units';
 
 export const EthereumAddress = memo(() => {
   useFocusStatusBar({style: 'light-content'});
-
-  const tabbarOffset = useBottomTabBarOffsetStyle();
+  const {bottom: bottomInset} = useSafeAreaInsets();
   const {scrollRef} = useScrollEndOnKeyboardShown();
   const isKeyboardShown = useIsKeyboardShown();
+
+  const {address, loading, error, onAddressChange, onSubmit} =
+    useSetEthereumAddress();
+
+  useGoBackIfAddressSet();
 
   return (
     <KeyboardAvoider>
       <Header title={t('ethereum_address.title')} />
       <ScrollView
         ref={scrollRef}
-        contentContainerStyle={[styles.containerContent, tabbarOffset.current]}
+        contentContainerStyle={[
+          styles.containerContent,
+          {marginBottom: bottomInset},
+        ]}
         keyboardShouldPersistTaps={'handled'}
         showsVerticalScrollIndicator={false}>
         <FramedEthereumIcon style={styles.icon} />
@@ -43,11 +52,18 @@ export const EthereumAddress = memo(() => {
         <CommonInput
           icon={<EthereumBookIcon />}
           label={t('ethereum_address.title')}
-          value={''}
+          value={address}
+          onChangeText={onAddressChange}
           containerStyle={styles.input}
+          editable={!loading}
+          errorText={error}
         />
         {!isKeyboardShown && <EthereumAddressWarning style={styles.warning} />}
-        <ConfirmAddressButton style={styles.button} onPress={() => {}} />
+        <ConfirmAddressButton
+          style={styles.button}
+          onPress={onSubmit}
+          loading={loading}
+        />
       </ScrollView>
     </KeyboardAvoider>
   );
@@ -79,6 +95,7 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: rem(48),
+    marginBottom: rem(20),
     marginHorizontal: rem(18),
   },
 });
