@@ -48,7 +48,14 @@ export function* startMiningSessionSaga(
   const authConfig: ReturnType<typeof authConfigSelector> = yield select(
     authConfigSelector,
   );
-  if (emotionsAuthStatus !== 'SUCCESS' && authConfig?.['face-auth']?.enabled) {
+  const user: ReturnType<typeof unsafeUserSelector> = yield select(
+    unsafeUserSelector,
+  );
+  if (
+    emotionsAuthStatus !== 'SUCCESS' &&
+    authConfig?.['face-auth']?.enabled &&
+    !!user?.clientData?.rate?.firstMiningDate // allowing to mine 1st time without face recognition
+  ) {
     yield removeScreenByName('Tooltip');
     navigate({
       name: 'FaceRecognition',
@@ -56,9 +63,6 @@ export function* startMiningSessionSaga(
     });
     return;
   }
-  const user: ReturnType<typeof unsafeUserSelector> = yield select(
-    unsafeUserSelector,
-  );
 
   const tapToMineActionType: ReturnType<typeof tapToMineActionTypeSelector> =
     yield select(tapToMineActionTypeSelector);
