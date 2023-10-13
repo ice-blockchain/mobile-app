@@ -7,6 +7,7 @@ import {UpdateIcon} from '@svg/UpdateIcon';
 import {t} from '@translations/i18n';
 import {openLink} from '@utils/device';
 import React from 'react';
+import {isIOS} from 'rn-units';
 
 export const openUpdateRequired = () => {
   let resultResolve: () => void;
@@ -22,7 +23,7 @@ export const openUpdateRequired = () => {
         {
           icon: <UpdateIcon />,
           text: t('pop_up.please_update'),
-          onPress: () => openLink(LINKS.APP_UPDATE),
+          onPress: () => openLink(isIOS ? LINKS.APP_STORE : LINKS.APP_UPDATE),
         },
       ],
       dismissOnOutsideTouch: false,
