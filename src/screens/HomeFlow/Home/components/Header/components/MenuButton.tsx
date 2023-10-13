@@ -41,13 +41,6 @@ export const MenuButton = memo(() => {
       //   id: 'notifications',
       // },
       {
-        id: 'tips',
-        icon: <RocketIcon color={COLORS.downriver} />,
-        label: t('home.menu.tips'),
-        onPress: () =>
-          navigate({name: 'CreativeIceLibrary', params: undefined}),
-      },
-      {
         id: 'staking',
         icon: (
           <CoinsStackIcon
@@ -58,6 +51,13 @@ export const MenuButton = memo(() => {
         ),
         label: t('home.menu.staking'),
         onPress: () => navigation.navigate('Staking'),
+      },
+      {
+        id: 'tips',
+        icon: <RocketIcon color={COLORS.downriver} />,
+        label: t('home.menu.tips'),
+        onPress: () =>
+          navigate({name: 'CreativeIceLibrary', params: undefined}),
       },
       {
         id: 'stats',
