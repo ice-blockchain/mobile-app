@@ -107,9 +107,12 @@ export const PopUp = () => {
             />
           )}
           {!!animationProps && (
-            <View style={styles.animation}>
-              <LottieView autoPlay={true} loop={true} {...animationProps} />
-            </View>
+            <LottieView
+              style={styles.animation}
+              autoPlay={true}
+              loop={true}
+              {...animationProps}
+            />
           )}
           {!!banner &&
             (typeof banner === 'string' ? <Banner text={banner} /> : banner)}
