@@ -189,7 +189,8 @@
     "same_email": "You can’t use the same e-mail.",
     "no_camera_permissions": "Camera permissions are not granted.",
     "no_library_permissions": "Library permissions are not granted.",
-    "blockchain_address_already_taken": "Address already taken"
+    "blockchain_address_already_taken": "Address already taken",
+    "invalid_blockchain_address": "Invalid address"
   },
   "profile": {
     "my_roles": {

@@ -2,15 +2,21 @@
 
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
+import {verifyEthereumAddress} from '@services/ethereum';
 import {AccountActions} from '@store/modules/Account/actions';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {showError} from '@utils/errors';
+import {checkProp} from '@utils/guards';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import RNRestart from 'react-native-restart';
 import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
 const actionCreator = AccountActions.UPDATE_ACCOUNT.START.create;
+
+enum ValidateError {
+  InvalidEthereumAddress = 'InvalidEthereumAddress',
+}
 
 export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
   const user: ReturnType<typeof unsafeUserSelector> = yield select(
@@ -32,6 +38,14 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       userInfo.phoneNumber = normalizedNumber;
       userInfo.phoneNumberHash = yield call(hashPhoneNumber, normalizedNumber);
     }
+
+    if (
+      userInfo.miningBlockchainAccountAddress &&
+      !verifyEthereumAddress(userInfo.miningBlockchainAccountAddress)
+    ) {
+      throw {code: ValidateError.InvalidEthereumAddress};
+    }
+
     const modifiedUser: SagaReturnType<typeof Api.user.updateAccount> =
       yield Api.user.updateAccount(user.id, userInfo);
     yield put(
@@ -87,6 +101,11 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
           localizedError = t('errors.blockchain_address_already_taken');
           break;
       }
+    } else if (
+      checkProp(error, 'code') &&
+      error.code === ValidateError.InvalidEthereumAddress
+    ) {
+      localizedError = t('errors.invalid_blockchain_address');
     }
 
     if (localizedError) {
