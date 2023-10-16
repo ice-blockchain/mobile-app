@@ -269,9 +269,9 @@ PODS:
     - hermes-engine/Pre-built (= 0.72.3)
   - hermes-engine/Pre-built (0.72.3)
   - libevent (2.1.12)
-  - lottie-ios (4.2.0)
-  - lottie-react-native (6.1.2):
-    - lottie-ios (~> 4.2.0)
+  - lottie-ios (4.3.3)
+  - lottie-react-native (6.3.1):
+    - lottie-ios (~> 4.3.0)
     - React-Core
   - MoEngage-iOS-SDK (9.4.1)
   - MoEngageInApp (4.4.0):
@@ -1283,8 +1283,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: e8647203b65cee28c5f73d0f473d096653945e72
   hermes-engine: 10fbd3f62405c41ea07e71973ea61e1878d07322
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
-  lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
-  lottie-react-native: 3d6f1b0db1fd9e18b92af1fbfbf67037611bae67
+  lottie-ios: 25e7b2675dad5c3ddad369ac9baab03560c5bfdd
+  lottie-react-native: c9f1db4f4124dcce9f8159e65d8dc6e8bcb11fb4
   MoEngage-iOS-SDK: b7af14646f44852527ba7420e52ff8bb56b7077d
   MoEngageInApp: 94f24b0b1a83ec247dc998f31b08124b09fcab96
   MoEngagePluginBase: e865f388c39d0cf2c7847610876e63b0e5e31c22
