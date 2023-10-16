@@ -10,7 +10,7 @@ import {
 } from '@store/modules/UtilityProcessStatuses/selectors';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {StyleSheet, Text} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
@@ -20,6 +20,7 @@ export const useSetEthereumAddress = () => {
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
   const dispatch = useDispatch();
   const [address, setAddress] = useState('');
+  const submittedRef = useRef(false);
 
   const error = useSelector(
     failedReasonSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
@@ -27,6 +28,13 @@ export const useSetEthereumAddress = () => {
   const loading = useSelector(
     isLoadingSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
   );
+
+  const onAddressChange = (text: string) => {
+    if (error) {
+      dispatch(AccountActions.UPDATE_ACCOUNT.RESET);
+    }
+    setAddress(text);
+  };
 
   const onSubmit = () => {
     navigation.navigate('PopUp', {
@@ -49,6 +57,7 @@ export const useSetEthereumAddress = () => {
         {
           text: t('button.confirm'),
           onPress: () => {
+            submittedRef.current = true;
             dispatch(
               AccountActions.UPDATE_ACCOUNT.START.create({
                 miningBlockchainAccountAddress: address,
@@ -59,12 +68,13 @@ export const useSetEthereumAddress = () => {
       ],
     });
   };
+
   return {
     onSubmit,
     address,
     loading,
-    error,
-    onAddressChange: setAddress,
+    error: submittedRef.current ? error : null,
+    onAddressChange,
   };
 };
 
