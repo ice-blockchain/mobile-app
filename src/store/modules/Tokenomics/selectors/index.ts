@@ -42,6 +42,10 @@ export const miningSummarySelector = (state: RootState) => {
   return state.tokenomics.miningSummary;
 };
 
+export const miningStartedSelector = (state: RootState) => {
+  return state.tokenomics.miningSummary?.miningStarted;
+};
+
 export const preStakingSummarySelector = (state: RootState) => {
   return state.tokenomics.preStakingSummary;
 };

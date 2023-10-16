@@ -22,6 +22,7 @@ import {emotionsAuthStatusSelector} from '@store/modules/FaceRecognition/selecto
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {
   isMiningActiveSelector,
+  miningStartedSelector,
   tapToMineActionTypeSelector,
 } from '@store/modules/Tokenomics/selectors';
 import {openConfirmResurrect} from '@store/modules/Tokenomics/utils/openConfirmResurrect';
@@ -51,10 +52,13 @@ export function* startMiningSessionSaga(
   const user: ReturnType<typeof unsafeUserSelector> = yield select(
     unsafeUserSelector,
   );
+  const miningStarted: ReturnType<typeof miningStartedSelector> = yield select(
+    miningStartedSelector,
+  );
   if (
     emotionsAuthStatus !== 'SUCCESS' &&
     authConfig?.['face-auth']?.enabled &&
-    !!user?.clientData?.rate?.firstMiningDate // allowing to mine 1st time without face recognition
+    !!miningStarted // allowing to mine 1st time without face recognition
   ) {
     yield removeScreenByName('Tooltip');
     navigate({
