@@ -97,7 +97,7 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
         case 'phoneNumber':
           localizedError = t('errors.phone_number_already_taken');
           break;
-        case 'miningBlockchainAccountAddress':
+        case 'mining_blockchain_account_address':
           localizedError = t('errors.blockchain_address_already_taken');
           break;
       }
