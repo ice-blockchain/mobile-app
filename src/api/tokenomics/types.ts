@@ -33,6 +33,7 @@ export type MiningSummary = {
   miningStreak?: number;
   remainingFreeMiningSessions?: number;
   availableExtraBonus?: number;
+  miningStarted?: boolean;
 };
 
 export type BalanceSummary = {
