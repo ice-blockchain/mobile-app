@@ -47,4 +47,5 @@ export const LINKS = {
   ICE_VIDEOS:
     'https://drive.google.com/drive/u/1/folders/1E_3zVZzs2vqUNgUd05qfi6cJ_axjlvQU',
   WHITEPAPER: 'http://ice.io/whitepaper',
+  JOIN_DECENTRALIZED_FUTURE: 'https://www.youtube.com/watch?v=h1Kkn4EjSV4',
 };

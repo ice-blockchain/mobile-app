@@ -13,7 +13,8 @@ import {Image, StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
 export const JoinMainnet = memo(() => {
-  const onPress = () => openLinkWithInAppBrowser({url: LINKS.WHITEPAPER});
+  const onPress = () =>
+    openLinkWithInAppBrowser({url: LINKS.JOIN_DECENTRALIZED_FUTURE});
 
   return (
     <Touchable
