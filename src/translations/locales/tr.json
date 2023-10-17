@@ -75,9 +75,11 @@
     "tierOne_tab": "Kademe 1",
     "tierTwo_tab": "Kademe 2",
     "empty": {
-      "title": "Şu anda herhangi bir [[:title]] referansın yok!",
       "contacts": "Şu anda telefon rehberinde herhangi bir kişi yok.",
-      "button_title": "Arkadaşlarını Davet Et"
+      "button_title": "Arkadaşlarını Davet Et",
+      "t1": "Şu anda T1 yönlendirmeniz yok!",
+      "t2": "Şu anda T2 yönlendirmeniz yok!",
+      "team": "Şu anda takım üyeniz yok!"
     },
     "contacts": {
       "empty_title": "[[:ice]] arkadaşlarla daha iyi",
@@ -252,7 +254,9 @@
     "active_inviter": "Aktif davetçi",
     "tier_1_ref": "Kademe 1 referansları",
     "tier_2_ref": "Kademe 2 referansları",
-    "active_miners": "Aktif referanslar"
+    "active_miners": "Aktif referanslar",
+    "team_members": "Takım Üyeleri",
+    "active_team_members": "Aktif Takım Üyeleri"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "KÜRESEL SIRALAMA",
       "referrals": "REFERANSLAR",
-      "description": "Daha fazla kullanıcıya referans ol ve daha fazla kazan [[:ice]]."
+      "description": "Daha fazla kullanıcıya referans ol ve daha fazla kazan [[:ice]].",
+      "description_team": "Daha fazla kullanıcıyı davet edin ve daha fazla [[:ice]] kazanın."
     },
     "referrals": {
       "title": "REFERANSLAR",
       "description": "Önceki 5 gün için referans istatistikleri.",
       "no_referrals_description": "Şu anda herhangi bir referansın yok!",
       "users_tier_1": "Kademe 1 kullanıcıları",
-      "users_tier_2": "Kademe 2 kullanıcıları"
+      "users_tier_2": "Kademe 2 kullanıcıları",
+      "title_team": "Ekip",
+      "description_team": "Son 5 günün ekip istatistikleri",
+      "no_referrals_description_team": "Şu anda takım üyeniz yok.",
+      "users": "Kullanıcılar"
     },
     "adoption": {
       "title": "BENİMSEME",
@@ -474,8 +483,10 @@
     "inactive": "Aktif Değil",
     "referralType": {
       "T1": "Kademe 1",
-      "T2": "Kademe 2"
-    }
+      "T2": "Kademe 2",
+      "team": "Takım Üyeleri"
+    },
+    "team": "Takım"
   },
   "personal_information": {
     "first_name": "Ad",
@@ -1021,7 +1032,7 @@
         "action": "Kapat"
       },
       "continue": {
-        "title": "\uD83D\uDE01 KYC Duygu Onayı",
+        "title": "😁 KYC Duygu Onayı",
         "description": "Harika iş! İlk adımı bir selfie çekerek tamamladınız. Şimdi KYC sürecinizi devam ettirmek için gösterilen duyguları takip ederek devam edelim.",
         "action": "Devam"
       },

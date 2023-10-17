@@ -75,9 +75,11 @@
     "tierOne_tab": "Nivå 1",
     "tierTwo_tab": "Nivå 2",
     "empty": {
-      "title": "Du har for øyeblikket ingen [[:title]]-henvisninger!",
       "contacts": "Du har for øyeblikket ingen kontakter i telefonboken.",
-      "button_title": "Inviter venner"
+      "button_title": "Inviter venner",
+      "t1": "Du har for tida ingen T1-henvisningar!",
+      "t2": "Du har for tida ingen T2-henvisningar!",
+      "team": "Du har for tida ingen lagmedlemmar!"
     },
     "contacts": {
       "empty_title": "[[:ice]] er bedre med venner",
@@ -252,7 +254,9 @@
     "active_inviter": "Aktiv invitasjon",
     "tier_1_ref": "Nivå 1-henvisninger",
     "tier_2_ref": "Nivå 2-henvisninger",
-    "active_miners": "Aktive henvisninger"
+    "active_miners": "Aktive henvisninger",
+    "team_members": "Lagmedlemmar",
+    "active_team_members": "Aktive lagmedlemmar"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "GLOBAL RANGERING",
       "referrals": "HENVISNINGER",
-      "description": "Henvis flere brukere og tjen flere [[:ice]]."
+      "description": "Henvis flere brukere og tjen flere [[:ice]].",
+      "description_team": "Inviter meir brukarar og tjen meir [[:ice]]."
     },
     "referrals": {
       "title": "HENVISNINGER",
       "description": "Henvisningsstatistikk for de siste 5 dagene.",
       "no_referrals_description": "Du har ingen henvisninger ennå.",
       "users_tier_1": "Brukernivå 1",
-      "users_tier_2": "Brukernivå 2"
+      "users_tier_2": "Brukernivå 2",
+      "title_team": "TEAM",
+      "description_team": "Lagstatistikk for dei siste 5 dagane",
+      "no_referrals_description_team": "Du har for tida ingen lagmedlemmar.",
+      "users": "Brukarar"
     },
     "adoption": {
       "title": "ADOPSJON",
@@ -474,8 +483,10 @@
     "inactive": "Inaktiv",
     "referralType": {
       "T1": "Nivå 1",
-      "T2": "Nivå 2"
-    }
+      "T2": "Nivå 2",
+      "team": "Lagmedlemmar"
+    },
+    "team": "Team"
   },
   "personal_information": {
     "first_name": "Fornavn",
@@ -1021,7 +1032,7 @@
         "action": "Lukk"
       },
       "continue": {
-        "title": "\uD83D\uDE01 KYC Emosjonsgodkjenning",
+        "title": "😁 KYC Emosjonsgodkjenning",
         "description": "Bra jobba! Du har fullført første trinn ved å ta en selfie. Nå, la oss fortsette ved å følge de viste følelsene for å fortsette KYC-prosessen din.",
         "action": "Fortsett"
       },

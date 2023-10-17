@@ -75,9 +75,11 @@
     "tierOne_tab": "Tier 1",
     "tierTwo_tab": "Tier 2",
     "empty": {
-      "title": "You currently don't have any [[:title]] referrals!",
+      "t2": "You currently don't have any T2 referrals!",
+      "team": "You currently don't have any team members!",
       "contacts": "You currently don't have any contacts in the phonebook.",
-      "button_title": "Invite Friends"
+      "button_title": "Invite Friends",
+      "t1": "You currently don't have any T1 referrals!"
     },
     "contacts": {
       "empty_title": "[[:ice]] is better with friends",
@@ -248,7 +250,9 @@
     "active_inviter": "Active inviter",
     "tier_1_ref": "Tier 1 referrals",
     "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "active_miners": "Active referrals",
+    "team_members": "Team members",
+    "active_team_members": "Active team members"
   },
   "home": {
     "wallet": {
@@ -259,14 +263,19 @@
     "pioneer": {
       "rank": "GLOBAL RANK",
       "referrals": "REFERRALS",
-      "description": "Refer more users and earn more [[:ice]]."
+      "description": "Refer more users and earn more [[:ice]].",
+      "description_team": "Invite more users and earn more [[:ice]]."
     },
     "referrals": {
       "title": "REFERRALS",
+      "title_team": "TEAM",
       "description": "Referral stats for the previous 5 days.",
+      "description_team": "Team stats for the previous 5 days",
       "no_referrals_description": "You don't have any referrals yet.",
+      "no_referrals_description_team": "You don't have any team members yet.",
       "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "users_tier_2": "Users tier 2",
+      "users": "Users"
     },
     "adoption": {
       "title": "ADOPTION",
@@ -471,9 +480,11 @@
     "ping": "PING",
     "active": "Active",
     "inactive": "Inactive",
+    "team": "Team",
     "referralType": {
       "T1": "Tier 1",
-      "T2": "Tier 2"
+      "T2": "Tier 2",
+      "team": "Team members"
     }
   },
   "personal_information": {
@@ -1018,7 +1029,7 @@
         "action": "Close"
       },
       "continue": {
-        "title": "\uD83D\uDE01 KYC Emotion Verification",
+        "title": "😁 KYC Emotion Verification",
         "description": "Great job! You've completed the first step by taking a selfie. Now, let's proceed by following the displayed emotions to continue your KYC process.",
         "action": "Continue"
       },

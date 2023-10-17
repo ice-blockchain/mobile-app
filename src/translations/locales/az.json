@@ -75,9 +75,11 @@
     "tierOne_tab": "1-ci Pillə",
     "tierTwo_tab": "2-ci Pillə",
     "empty": {
-      "title": "Hal-hazırda heç bir [[:title]] istinadınız yoxdur!",
       "contacts": "Hal-hazırda telefon kitabçanızda heç bir kontakt yoxdur.",
-      "button_title": "Dostlarını dəvət et "
+      "button_title": "Dostlarını dəvət et ",
+      "t1": "Hazırda hər hansı bir T1 istiqrazınız yoxdur!",
+      "t2": "Hazırda hər hansı bir T2 istiqrazınız yoxdur!",
+      "team": "Hazırda hər hansı bir komanda üzvu yoxdur!"
     },
     "contacts": {
       "empty_title": "[[:ice]] dostlarla daha yaxşıdır",
@@ -252,7 +254,9 @@
     "active_inviter": "Aktiv dəvət edən",
     "tier_1_ref": "1-ci Pillə istinadları",
     "tier_2_ref": "2-ci Pillə istinadları",
-    "active_miners": "Aktiv istinadlar"
+    "active_miners": "Aktiv istinadlar",
+    "team_members": "Komanda üzvləri",
+    "active_team_members": "Aktiv komanda üzvləri"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "QLOBAL DƏRƏCƏ",
       "referrals": "İSTİNADLAR",
-      "description": "Daha çox istifadəçi yönəlt və daha çox qazan[[:ice]]."
+      "description": "Daha çox istifadəçi yönəlt və daha çox qazan[[:ice]].",
+      "description_team": "Daha çox istifadəçi dəvət edin və daha çox [[:ice]] qazanın."
     },
     "referrals": {
       "title": "İSTİNADLAR",
       "description": "Əvvəlki 5 gün üçün yönləndirmə statistikası",
       "no_referrals_description": "Hal-hazırda heç bir istinadınız yoxdur!",
       "users_tier_1": "1-ci pillə istifadəçiləri",
-      "users_tier_2": "2-ci pillə istifadəçiləri"
+      "users_tier_2": "2-ci pillə istifadəçiləri",
+      "title_team": "KOMANDA",
+      "description_team": "Öncəki 5 gün üçün komanda statistikaları",
+      "no_referrals_description_team": "Hazırda hər hansı bir komanda üzvu yoxdur.",
+      "users": "İstifadəçilər"
     },
     "adoption": {
       "title": "QƏBUL",
@@ -474,8 +483,10 @@
     "inactive": "Qeyri-aktiv",
     "referralType": {
       "T1": "1-ci Pillə",
-      "T2": "2-ci Pillə"
-    }
+      "T2": "2-ci Pillə",
+      "team": "Komanda üzvləri"
+    },
+    "team": "Komanda"
   },
   "personal_information": {
     "first_name": "Ad",
@@ -1021,7 +1032,7 @@
         "action": "Bağlayın"
       },
       "continue": {
-        "title": "\uD83D\uDE01 KYC Hisslər Doğrulaması",
+        "title": "😁 KYC Hisslər Doğrulaması",
         "description": "Əla iş! İlk addımı öz şəkilinizi çəkərək başa vurmuşsunuz. İndi, KYC prosesinizi davam etdirmək üçün göstərilən hissləri izləyərək davam edək.",
         "action": "Davam edin"
       },

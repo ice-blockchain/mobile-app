@@ -75,7 +75,7 @@ export type User = {
   repeatableKYCSteps?: Record<string, string>;
 };
 
-export type ReferralType = 'CONTACTS' | 'T1' | 'T2';
+export type ReferralType = 'CONTACTS' | 'T1' | 'T2' | 'TEAM';
 export type AgendaType = 'AGENDA';
 export type TeamUserType = ReferralType | AgendaType;
 

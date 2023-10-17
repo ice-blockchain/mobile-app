@@ -75,9 +75,11 @@
     "tierOne_tab": "Stopnja 1",
     "tierTwo_tab": "Stopnja 2",
     "empty": {
-      "title": "Trenutno nimaš nobenih [[:title]] priporočil!",
       "contacts": "Trenutno nimaš nobenih stikov v imeniku.",
-      "button_title": "Povabi prijatelje"
+      "button_title": "Povabi prijatelje",
+      "t1": "Trenutno nimate nobenih napotitev T1!",
+      "t2": "Trenutno nimate nobenih napotitev T2!",
+      "team": "Trenutno nimate nobenih članov ekipe!"
     },
     "contacts": {
       "empty_title": "[[:ice]] bolje je s prijatelji",
@@ -252,7 +254,9 @@
     "active_inviter": "Aktiven vabitelj",
     "tier_1_ref": "Priporočila stopnje 1 ",
     "tier_2_ref": "Priporočila stopnje 2",
-    "active_miners": "Aktivna priporočila"
+    "active_miners": "Aktivna priporočila",
+    "team_members": "Člani ekipe",
+    "active_team_members": "Aktivni člani ekipe"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "GLOBALNA UVRSTITEV",
       "referrals": "PRIPOROČILA",
-      "description": "Priporočite več uporabnikov in zaslužite več [[:ice]]."
+      "description": "Priporočite več uporabnikov in zaslužite več [[:ice]].",
+      "description_team": "Povabite več uporabnikov in zaslužite več [[:ice]]."
     },
     "referrals": {
       "title": "PRIPOROČILA",
       "description": "Statistika priporočil za zadnjih 5 dni.",
       "no_referrals_description": "Trenutno nimaš nobenih priporočil!",
       "users_tier_1": "Uporabniška stopnja 1",
-      "users_tier_2": "Uporabniška stopnja 2"
+      "users_tier_2": "Uporabniška stopnja 2",
+      "title_team": "Ekipa",
+      "description_team": "Statistika ekipe za zadnjih 5 dni",
+      "no_referrals_description_team": "Trenutno nimate nobenih članov ekipe.",
+      "users": "Uporabniki"
     },
     "adoption": {
       "title": "PREVZEM",
@@ -474,8 +483,10 @@
     "inactive": "Neaktiven",
     "referralType": {
       "T1": "Stopnja 1",
-      "T2": "Stopnja 2"
-    }
+      "T2": "Stopnja 2",
+      "team": "Člani ekipe"
+    },
+    "team": "Ekipa"
   },
   "personal_information": {
     "first_name": "Ime",
@@ -1021,7 +1032,7 @@
         "action": "Zapri"
       },
       "continue": {
-        "title": "\uD83D\uDE01 KYC Prepoznavanje čustev",
+        "title": "😁 KYC Prepoznavanje čustev",
         "description": "Odlično opravljeno! Prvi korak ste zaključili s selfijem. Sedaj nadaljujte tako, da sledite prikazanim čustvom, da nadaljujete postopek KYC.",
         "action": "Nadaljuj"
       },

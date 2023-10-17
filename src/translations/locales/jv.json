@@ -71,9 +71,11 @@
     "tierOne_tab": "Tier 1",
     "tierTwo_tab": "Tier 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
       "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "button_title": "Invite Friends",
+      "t1": "Saiki sampeyan ora duwe referensi T1!",
+      "t2": "Saiki sampeyan ora duwe referensi T2!",
+      "team": "Saiki sampeyan ora duwe anggota tim maneh!"
     },
     "contacts": {
       "empty_title": "[[:ice]] is better with friends",
@@ -247,7 +249,9 @@
     "active_inviter": "Active inviter",
     "tier_1_ref": "Tier 1 referrals",
     "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "active_miners": "Active referrals",
+    "team_members": "Anggota tim",
+    "active_team_members": "Anggota tim aktif"
   },
   "home": {
     "wallet": {
@@ -260,14 +264,19 @@
       "rank": "GLOBAL RANK",
       "referrals": "REFERRALS",
       "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "description_part2": " you earn",
+      "description_team": "Davetake wong luwih banjur lan ngrampungake luwih banjur [[:ice]]."
     },
     "referrals": {
       "title": "REFERRALS",
       "description": "Referral stats for the previous 5 days",
       "no_referrals_description": "You don't have any referrals yet",
       "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "users_tier_2": "Users tier 2",
+      "title_team": "TIM",
+      "description_team": "Statistik tim kanggo 5 dino wingi",
+      "no_referrals_description_team": "Saiki sampeyan ora duwe anggota tim maneh.",
+      "users": "Panganggo"
     },
     "adoption": {
       "title": "ADOPTION",
@@ -462,8 +471,10 @@
     "inactive": "Inactive",
     "referralType": {
       "T1": "Tier 1",
-      "T2": "Tier 2"
-    }
+      "T2": "Tier 2",
+      "team": "Anggota tim"
+    },
+    "team": "Tim"
   },
   "personal_information": {
     "first_name": "First name",
@@ -934,7 +945,7 @@
         "action": "Tutup"
       },
       "continue": {
-        "title": "\uD83D\uDE01 Verifikasi Emosi KYC",
+        "title": "😁 Verifikasi Emosi KYC",
         "description": "Kerja apik! Sampeyan wis rampung langkah pertama dening ngrusak swa potret. Ayo terusake dening ngikutin emosi sing ditampilake kanggo lanjutake proses KYC sampeyan.",
         "action": "Terusake"
       },

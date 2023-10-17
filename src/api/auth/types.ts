@@ -1,15 +1,19 @@
 // SPDX-License-Identifier: ice License 1.0
 
-export type FaceAuthConfig = {
-  enabled: boolean;
-};
-
-export type AuthConfig =
+type AuthCodeConfig =
   | {
       emailCodeAuthWhiteList: string[];
-      'face-auth': FaceAuthConfig;
     }
   | {
       emailCodeAuthBlackList: string[];
-      'face-auth': FaceAuthConfig;
     };
+
+type FaceAuthConfig = {
+  'face-auth': {enabled: boolean};
+};
+
+type TeamConfig = {
+  team: {enabled: boolean};
+};
+
+export type AuthConfig = AuthCodeConfig & FaceAuthConfig & TeamConfig;

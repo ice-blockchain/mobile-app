@@ -75,9 +75,11 @@
     "tierOne_tab": "Poziom 1",
     "tierTwo_tab": "Poziom 2",
     "empty": {
-      "title": "Obecnie nie masz żadnych poleceń [[:title]]!",
       "contacts": "Obecnie w książce telefonicznej nie ma żadnych kontaktów.",
-      "button_title": "Zaproś znajomych"
+      "button_title": "Zaproś znajomych",
+      "t1": "Obecnie nie masz żadnych poleceń T1!",
+      "t2": "Obecnie nie masz żadnych poleceń T2!",
+      "team": "Obecnie nie masz żadnych członków zespołu!"
     },
     "contacts": {
       "empty_title": "[[:ice]] działa lepiej ze znajomymi",
@@ -252,7 +254,9 @@
     "active_inviter": "Aktywny zapraszający",
     "tier_1_ref": "Polecenia poziomu 1",
     "tier_2_ref": "Polecenia poziomu 2",
-    "active_miners": "Aktywne polecenia"
+    "active_miners": "Aktywne polecenia",
+    "team_members": "Członkowie zespołu",
+    "active_team_members": "Aktywni członkowie zespołu"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "RANKING GLOBALNY",
       "referrals": "POLECENIA",
-      "description": "Poleć więcej użytkowników i zarabiaj więcej [[:ice]]."
+      "description": "Poleć więcej użytkowników i zarabiaj więcej [[:ice]].",
+      "description_team": "Zaproś więcej użytkowników i zarabiaj więcej [[:ice]]."
     },
     "referrals": {
       "title": "POLECENIA",
       "description": "Statystyki poleceń z ostatnich 5 dni.",
       "no_referrals_description": "Nie masz jeszcze żadnych poleceń.",
       "users_tier_1": "Użytkownicy poziomu 1",
-      "users_tier_2": "Użytkownicy poziomu 2"
+      "users_tier_2": "Użytkownicy poziomu 2",
+      "title_team": "ZESPÓŁ",
+      "description_team": "Statystyki zespołu za ostatnie 5 dni",
+      "no_referrals_description_team": "Obecnie nie masz żadnych członków zespołu.",
+      "users": "Użytkownicy"
     },
     "adoption": {
       "title": "WDRAŻANIE",
@@ -474,8 +483,10 @@
     "inactive": "Nieaktywny",
     "referralType": {
       "T1": "Poziom 1",
-      "T2": "Poziom 2"
-    }
+      "T2": "Poziom 2",
+      "team": "Członkowie zespołu"
+    },
+    "team": "Zespół"
   },
   "personal_information": {
     "first_name": "Imię",
@@ -1021,7 +1032,7 @@
         "action": "Zamknij"
       },
       "continue": {
-        "title": "\uD83D\uDE01 Weryfikacja emocji KYC",
+        "title": "😁 Weryfikacja emocji KYC",
         "description": "Świetna robota! Ukończyłeś pierwszy krok, robiąc sobie zdjęcie. Teraz kontynuujmy, kierując się wyświetlanymi emocjami, aby kontynuować proces KYC.",
         "action": "Kontynuuj"
       },

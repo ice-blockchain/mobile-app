@@ -75,9 +75,11 @@
     "tierOne_tab": "Niveli 1",
     "tierTwo_tab": "Niveli 2",
     "empty": {
-      "title": "Aktualisht nuk ke asnjë [[:title]] referim!",
       "contacts": "Aktualisht nuk ke asnjë kontakt në librin telefonik.",
-      "button_title": "Fto miq"
+      "button_title": "Fto miq",
+      "t1": "Në këtë moment nuk keni asnjë referencë T1!",
+      "t2": "Në këtë moment nuk keni asnjë referencë T2!",
+      "team": "Në këtë moment nuk keni asnjë anëtar ekipi!"
     },
     "contacts": {
       "empty_title": "[[:ice]] është më mirë me miq",
@@ -252,7 +254,9 @@
     "active_inviter": "Ftues aktiv",
     "tier_1_ref": "Referimet e Nivelit 1",
     "tier_2_ref": "Referimet e Nivelit 2",
-    "active_miners": "Referime aktive"
+    "active_miners": "Referime aktive",
+    "team_members": "Anëtarët e ekipit",
+    "active_team_members": "Anëtarët e aktivë të ekipit"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "RANGU GLOBAL",
       "referrals": "REFERIME",
-      "description": "Refero më shumë përdorues dhe fito më shumë [[:ice]]."
+      "description": "Refero më shumë përdorues dhe fito më shumë [[:ice]].",
+      "description_team": "Ftoni më shumë përdorues dhe fitoni më shumë [[:ice]]."
     },
     "referrals": {
       "title": "REFERIME",
       "description": "Statistikat e referimeve për 5 ditët e mëparshme.",
       "no_referrals_description": "Aktualisht nuk ke asnjë referim!",
       "users_tier_1": "Përdoruesit për nivelin 1",
-      "users_tier_2": "Përdoruesit për nivelin 2"
+      "users_tier_2": "Përdoruesit për nivelin 2",
+      "title_team": "EKIPI",
+      "description_team": "Statistikat e ekipit për 5 ditët e fundit",
+      "no_referrals_description_team": "Në këtë moment nuk keni asnjë anëtar ekipi.",
+      "users": "Përdoruesit"
     },
     "adoption": {
       "title": "ADOPTIM",
@@ -474,8 +483,10 @@
     "inactive": "Joaktiv",
     "referralType": {
       "T1": "Niveli 1",
-      "T2": "Niveli 2"
-    }
+      "T2": "Niveli 2",
+      "team": "Anëtarët e ekipit"
+    },
+    "team": "Ekipi"
   },
   "personal_information": {
     "first_name": "Emri",
@@ -1021,7 +1032,7 @@
         "action": "Mbyll"
       },
       "continue": {
-        "title": "\uD83D\uDE01 Verifikimi i emocioneve KYC",
+        "title": "😁 Verifikimi i emocioneve KYC",
         "description": "Puna e shkëlqyer! Ju keni përfunduar hapin e parë duke bërë një selfi. Tani le të vazhdojmë duke ndjekur emocionet e treguara për të vazhduar procesin KYC.",
         "action": "Vazhdo"
       },

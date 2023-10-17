@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   },
   barStyleUnited: {
     width: rem(10),
-    marginRight: rem(4),
+    marginHorizontal: rem(2),
   },
   barStyle: {
     width: rem(16),

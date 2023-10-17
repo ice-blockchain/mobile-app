@@ -71,9 +71,11 @@
     "tierOne_tab": "Tier 1",
     "tierTwo_tab": "Tier 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
       "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "button_title": "Invite Friends",
+      "t1": "Sa ngayon, wala kang mga T1 referral!",
+      "t2": "Sa ngayon, wala kang mga T2 referral!",
+      "team": "Sa ngayon, wala kang mga miyembro ng team!"
     },
     "contacts": {
       "empty_title": "[[:ice]] is better with friends",
@@ -247,7 +249,9 @@
     "active_inviter": "Active inviter",
     "tier_1_ref": "Tier 1 referrals",
     "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "active_miners": "Active referrals",
+    "team_members": "Mga Miyembro ng Team",
+    "active_team_members": "Mga Aktibong Miyembro ng Team"
   },
   "home": {
     "wallet": {
@@ -260,14 +264,19 @@
       "rank": "GLOBAL RANK",
       "referrals": "REFERRALS",
       "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn"
+      "description_part2": " you earn",
+      "description_team": "Mag-imbita ng mas maraming mga user at kumita ng mas maraming [[:ice]]."
     },
     "referrals": {
       "title": "REFERRALS",
       "description": "Referral stats for the previous 5 days",
       "no_referrals_description": "You don't have any referrals yet",
       "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "users_tier_2": "Users tier 2",
+      "title_team": "TEAM",
+      "description_team": "Estadistika ng team para sa mga nakaraang 5 araw",
+      "no_referrals_description_team": "Sa ngayon, wala kang mga miyembro ng team.",
+      "users": "Mga User"
     },
     "adoption": {
       "title": "ADOPTION",
@@ -462,8 +471,10 @@
     "inactive": "Inactive",
     "referralType": {
       "T1": "Tier 1",
-      "T2": "Tier 2"
-    }
+      "T2": "Tier 2",
+      "team": "Mga Miyembro ng Team"
+    },
+    "team": "Team"
   },
   "personal_information": {
     "first_name": "First name",
@@ -934,7 +945,7 @@
         "action": "Isara"
       },
       "continue": {
-        "title": "\uD83D\uDE01 Pag-verify ng Emosyon sa KYC",
+        "title": "😁 Pag-verify ng Emosyon sa KYC",
         "description": "Magaling! Natapos mo na ang unang hakbang sa pamamagitan ng pagkuha ng iyong selfie. Ngayon, hayaan nating magpatuloy sa pamamagitan ng pagsunod sa mga emosyon na ipinapakita upang magpatuloy sa iyong proseso ng KYC.",
         "action": "Magpatuloy"
       },

@@ -75,9 +75,11 @@
     "tierOne_tab": "דרגה 1",
     "tierTwo_tab": "דרגה 2",
     "empty": {
-      "title": "אין לכם כרגע שום מוזמנים ל-[[:title]]!",
       "contacts": "אין לכם כרגע אנשי קשר בספר הטלפונים.",
-      "button_title": "הזמנת חברים"
+      "button_title": "הזמנת חברים",
+      "t1": "אין לך כרגע הפניות T1!",
+      "t2": "אין לך כרגע הפניות T2!",
+      "team": "אין לך כרגע חברי צוות!"
     },
     "contacts": {
       "empty_title": "[[:ice]] יותר טוב עם חברים",
@@ -252,7 +254,9 @@
     "active_inviter": "מזמין פעיל",
     "tier_1_ref": "מוזמנים מדרגה 1",
     "tier_2_ref": "מוזמנים מדרגה 2",
-    "active_miners": "מוזמנים פעילים"
+    "active_miners": "מוזמנים פעילים",
+    "team_members": "חברי הצוות",
+    "active_team_members": "חברי צוות פעילים"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "דירוג גלובלי",
       "referrals": "מוזמנים",
-      "description": "הזמינו עוד משתמשים והרוויחו עוד [[:ice]]."
+      "description": "הזמינו עוד משתמשים והרוויחו עוד [[:ice]].",
+      "description_team": "הזמן יותר משתמשים והרווח [[:ice]] נוסף."
     },
     "referrals": {
       "title": "מוזמנים",
       "description": "סטטיסטיקת מוזמנים עבור 5 הימים הקודמים.",
       "no_referrals_description": "עוד אין לכם שום מוזמנים.",
       "users_tier_1": "משתמשים מדרגה 1",
-      "users_tier_2": "משתמשים מדרגה 2"
+      "users_tier_2": "משתמשים מדרגה 2",
+      "title_team": "צוות",
+      "description_team": "סטטיסטיקות צוות לימים האחרונים",
+      "no_referrals_description_team": "אין לך כרגע חברי צוות.",
+      "users": "משתמשים"
     },
     "adoption": {
       "title": "אימוץ",
@@ -474,8 +483,10 @@
     "inactive": "לא פעיל",
     "referralType": {
       "T1": "דרגה 1",
-      "T2": "דרגה 2"
-    }
+      "T2": "דרגה 2",
+      "team": "חברי הצוות"
+    },
+    "team": "צוות"
   },
   "personal_information": {
     "first_name": "שם פרטי",
@@ -1028,7 +1039,7 @@
         "action": "סגור"
       },
       "continue": {
-        "title": "\uD83D\uDE01 אימות רגשי KYC",
+        "title": "😁 אימות רגשי KYC",
         "description": "עבודה טובה! השלב הראשון הושלם בצילום תמונה עצמית. כעת, בואו נמשיך לפי הרגשות המוצגים להמשך התהליך של KYC.",
         "action": "המשך"
       },

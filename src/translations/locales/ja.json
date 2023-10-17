@@ -75,9 +75,11 @@
     "tierOne_tab": "Tier1",
     "tierTwo_tab": "Tier2",
     "empty": {
-      "title": "現在、[[:title]]紹介者はいません。",
       "contacts": "現在、電話帳に連絡先がありません。",
-      "button_title": "友達を招待"
+      "button_title": "友達を招待",
+      "t1": "現在、T1の紹介はありません！",
+      "t2": "現在、T2の紹介はありません！",
+      "team": "現在、チームメンバーはいません！"
     },
     "contacts": {
       "empty_title": "[[:ice]] 友達と一緒ならもっと楽しめます",
@@ -252,7 +254,9 @@
     "active_inviter": "アクティブな紹介者",
     "tier_1_ref": "Tier1紹介者",
     "tier_2_ref": "Tier2紹介",
-    "active_miners": "アクティブな紹介者"
+    "active_miners": "アクティブな紹介者",
+    "team_members": "チームメンバー",
+    "active_team_members": "アクティブなチームメンバー"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "グローバルランク",
       "referrals": "紹介者",
-      "description": "ユーザーを紹介すればするほど、たくさんの[[:ice]]がもらえます。"
+      "description": "ユーザーを紹介すればするほど、たくさんの[[:ice]]がもらえます。",
+      "description_team": "より多くのユーザーを招待し、[[:ice]] をもっと稼ぎましょう。"
     },
     "referrals": {
       "title": "紹介者",
       "description": "過去5日間の紹介者統計です。",
       "no_referrals_description": "現在、紹介者はいません。",
       "users_tier_1": "Tier1ユーザー",
-      "users_tier_2": "Tier2ユーザー"
+      "users_tier_2": "Tier2ユーザー",
+      "title_team": "チーム",
+      "description_team": "過去5日間のチームの統計データ",
+      "no_referrals_description_team": "現在、チームメンバーはいません。",
+      "users": "ユーザー"
     },
     "adoption": {
       "title": "採用",
@@ -474,8 +483,10 @@
     "inactive": "非アクティブ",
     "referralType": {
       "T1": "Tier1",
-      "T2": "Tier2"
-    }
+      "T2": "Tier2",
+      "team": "チームメンバー"
+    },
+    "team": "チーム"
   },
   "personal_information": {
     "first_name": "姓",
@@ -1021,7 +1032,7 @@
         "action": "閉じる"
       },
       "continue": {
-        "title": "\uD83D\uDE01 KYC 感情認識",
+        "title": "😁 KYC 感情認識",
         "description": "素晴らしい仕事です！セルフィーを撮影して最初のステップを完了しました。次に、表示された感情に従ってKYCプロセスを続行しましょう。",
         "action": "続行"
       },

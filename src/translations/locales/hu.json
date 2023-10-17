@@ -75,9 +75,11 @@
     "tierOne_tab": "1. szint",
     "tierTwo_tab": "2. szint",
     "empty": {
-      "title": "Jelenleg egy [[:title]] ajánlásod sincs!",
       "contacts": "Jelenleg egy kapcsolatod sincs a telefonkönyvben.",
-      "button_title": "Barátok meghívása"
+      "button_title": "Barátok meghívása",
+      "t1": "Jelenleg nincsenek T1 ajánlásaid!",
+      "t2": "Jelenleg nincsenek T2 ajánlásaid!",
+      "team": "Jelenleg nincsenek csapattagjaid!"
     },
     "contacts": {
       "empty_title": "[[:ice]] jobb barátokkal",
@@ -252,7 +254,9 @@
     "active_inviter": "Aktív meghívó",
     "tier_1_ref": "1. szintű ajánlások",
     "tier_2_ref": "2. szintű ajánlások",
-    "active_miners": "Aktív ajánlások"
+    "active_miners": "Aktív ajánlások",
+    "team_members": "Csapattagok",
+    "active_team_members": "Aktív csapattagok"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "GLOBÁLIS HELYEZÉS",
       "referrals": "Ajánlások",
-      "description": "Ajánlj több felhasználót és szerezz több [[:ice]]-t."
+      "description": "Ajánlj több felhasználót és szerezz több [[:ice]]-t.",
+      "description_team": "Hívj meg több felhasználót és keress több [[:ice]]."
     },
     "referrals": {
       "title": "Ajánlások",
       "description": "Az elmúlt 5 nap ajánlási statisztikái.",
       "no_referrals_description": "Jelenleg egy ajánlásod sincs!",
       "users_tier_1": "1. szintű felhasználók",
-      "users_tier_2": "2. szintű felhasználók"
+      "users_tier_2": "2. szintű felhasználók",
+      "title_team": "CSAPAT",
+      "description_team": "Csapatstatisztikák az elmúlt 5 napban",
+      "no_referrals_description_team": "Jelenleg nincsenek csapattagjaid.",
+      "users": "Felhasználók"
     },
     "adoption": {
       "title": "ÁTVÉTEL",
@@ -474,8 +483,10 @@
     "inactive": "Inaktív",
     "referralType": {
       "T1": "1. szint",
-      "T2": "2. szint"
-    }
+      "T2": "2. szint",
+      "team": "Csapattagok"
+    },
+    "team": "Csapat"
   },
   "personal_information": {
     "first_name": "Keresztnév",
@@ -1021,7 +1032,7 @@
         "action": "Bezárás"
       },
       "continue": {
-        "title": "\uD83D\uDE01 KYC Érzelem Felismerés",
+        "title": "😁 KYC Érzelem Felismerés",
         "description": "Gratulálunk! Elvégezte az első lépést, hogy elkészítse a selfie-jét. Most folytassuk a KYC folyamatot az ábrázolt érzelmek követésével.",
         "action": "Folytatás"
       },

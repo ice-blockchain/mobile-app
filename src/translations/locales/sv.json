@@ -75,9 +75,11 @@
     "tierOne_tab": "Nivå 1",
     "tierTwo_tab": "Nivå 2",
     "empty": {
-      "title": "Du har för närvarande inga [[:title]]-värvningar!",
       "contacts": "Du har för närvarande inga kontakter i telefonboken.",
-      "button_title": "Bjud in vänner"
+      "button_title": "Bjud in vänner",
+      "t1": "Du har för närvarande inga T1-hänvisningar!",
+      "t2": "Du har för närvarande inga T2-hänvisningar!",
+      "team": "Du har för närvarande inga lagmedlemmar!"
     },
     "contacts": {
       "empty_title": "[[:ice]] är bättre med vänner",
@@ -252,7 +254,9 @@
     "active_inviter": "Aktiv inbjudare",
     "tier_1_ref": "Nivå 1-värvningar",
     "tier_2_ref": "Nivå 2-värvningar",
-    "active_miners": "Aktiva värvningar"
+    "active_miners": "Aktiva värvningar",
+    "team_members": "Lagmedlemmar",
+    "active_team_members": "Aktiva lagmedlemmar"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "GLOBAL RANKNING",
       "referrals": "VÄRVNINGAR",
-      "description": "Värva fler användare och tjäna mer [[:ice]]."
+      "description": "Värva fler användare och tjäna mer [[:ice]].",
+      "description_team": "Bjuda in fler användare och tjäna mer [[:ice]]."
     },
     "referrals": {
       "title": "VÄRVNINGAR",
       "description": "Värvningsstatistik för de senaste 5 dagarna.",
       "no_referrals_description": "Du har inga värvningar ännu.",
       "users_tier_1": "Användare på nivå 1",
-      "users_tier_2": "Användare på nivå 2"
+      "users_tier_2": "Användare på nivå 2",
+      "title_team": "LAG",
+      "description_team": "Lagstatistik för de senaste 5 dagarna",
+      "no_referrals_description_team": "Du har för närvarande inga lagmedlemmar.",
+      "users": "Användare"
     },
     "adoption": {
       "title": "ANTAGANDE",
@@ -474,8 +483,10 @@
     "inactive": "Inaktiv",
     "referralType": {
       "T1": "Nivå 1",
-      "T2": "Nivå 2"
-    }
+      "T2": "Nivå 2",
+      "team": "Lagmedlemmar"
+    },
+    "team": "Lag"
   },
   "personal_information": {
     "first_name": "Förnamn",
@@ -1021,7 +1032,7 @@
         "action": "Stäng"
       },
       "continue": {
-        "title": "\uD83D\uDE01 KYC Emotionsverifiering",
+        "title": "😁 KYC Emotionsverifiering",
         "description": "Bra jobbat! Du har slutfört det första steget genom att ta en selfie. Nu, låt oss fortsätta genom att följa de visade känslorna för att fortsätta din KYC-process.",
         "action": "Fortsätt"
       },
