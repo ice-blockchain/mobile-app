@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "歡迎來到 ice",
-      "description": "[[:ice]] 是一款能用手機賺取的虛擬貨幣。ice 被像您一樣的日常使用者擁有與管理。"
+      "title": "歡迎來到 Ice",
+      "description": "[[:ice]] 是一款能用手機賺取的虛擬貨幣。Ice 被像您一樣的日常使用者擁有與管理。"
     },
     "page2": {
       "title": "環境友善",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "保持聯繫",
-      "description": "點擊 [[:iceLogo]] 進行每日簽到，使用我們免費、低耗能的手機應用程式。每日點擊可確保 ice 流入真人手中，而不是機器人。"
+      "description": "點擊 [[:iceLogo]] 進行每日簽到，使用我們免費、低耗能的手機應用程式。每日點擊可確保 Ice 流入真人手中，而不是機器人。"
     },
     "page5": {
       "title": "推薦與獎勵",
@@ -75,14 +75,16 @@
     "tierOne_tab": " 1 階",
     "tierTwo_tab": " 2 階",
     "empty": {
-      "title": "您目前沒有任何 [[:title]] 推薦！",
       "contacts": "您的電話簿中目前沒有任何聯絡人。",
-      "button_title": "邀請好友"
+      "button_title": "邀請好友",
+      "t1": "目前您沒有T1推薦！",
+      "t2": "目前您沒有T2推薦！",
+      "team": "目前您沒有團隊成員！"
     },
     "contacts": {
       "empty_title": "[[:ice]] 與好友一起更有趣",
       "empty_button_title": "允許存取聯絡人",
-      "empty_description": "同步聯絡人，看看有誰已在使用 [[:ice]]。 之後您將能傳送 ice 給任何一個聯絡人。"
+      "empty_description": "同步聯絡人，看看有誰已在使用 [[:ice]]。 之後您將能傳送 Ice 給任何一個聯絡人。"
     },
     "header": {
       "search_placeholder": "尋找使用者",
@@ -105,7 +107,7 @@
       },
       "all_contacts": "所有聯絡人",
       "invite": "邀請",
-      "invitation_text": "嗨 {{name}}，我想邀請你加入 ice。"
+      "invitation_text": "嗨 {{name}}，我想邀請你加入 Ice。"
     },
     "tier_one": {
       "header_list": {
@@ -123,9 +125,9 @@
     "phone": "電話",
     "or": "或",
     "reset_password": "重置密碼",
-    "welcome": "歡迎來到 ice",
+    "welcome": "歡迎來到 Ice",
     "email": "電子郵件",
-    "slogan": "全球貨幣重置",
+    "slogan": "去中心化的未來",
     "privacy": "選擇繼續即表示您同意我們的[[:link]]服務條款[[/:link]]和[[:link]]隱私政策[[/:link]]"
   },
   "claimUsername": {
@@ -252,7 +254,9 @@
     "active_inviter": "活躍邀請人",
     "tier_1_ref": "1 階推薦人",
     "tier_2_ref": "2 階推薦人",
-    "active_miners": "活躍推薦人"
+    "active_miners": "活躍推薦人",
+    "team_members": "團隊成員",
+    "active_team_members": "活躍團隊成員"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "全球排名",
       "referrals": "推薦",
-      "description": "推薦更多使用者，賺取更多 [[:ice]]。"
+      "description": "推薦更多使用者，賺取更多 [[:ice]]。",
+      "description_team": "邀請更多用戶，賺更多 [[:ice]]。"
     },
     "referrals": {
       "title": "推薦",
       "description": "過去 5 天的推薦數據。",
       "no_referrals_description": "您尚未推薦任何人加入。",
       "users_tier_1": "1 階使用者",
-      "users_tier_2": "2 階使用者"
+      "users_tier_2": "2 階使用者",
+      "title_team": "團隊",
+      "description_team": "最近5天的團隊統計",
+      "no_referrals_description_team": "目前您沒有團隊成員。",
+      "users": "用戶"
     },
     "adoption": {
       "title": "採用",
@@ -322,7 +331,8 @@
       "notifications": "通知",
       "staking": "質押",
       "stats": "數據",
-      "help": "說明"
+      "help": "說明",
+      "tips": "提示"
     },
     "team": {
       "title": "團隊",
@@ -360,7 +370,7 @@
     "feedback_title": "意見回饋",
     "feedback_description": "與我們分享您的想法。",
     "invite_title": "邀請一個好友",
-    "invite_description": "邀請好友，賺取額外 ice。",
+    "invite_description": "邀請好友，賺取額外 Ice。",
     "delete_title": "刪除帳號",
     "delete_description": "清除您的帳號。",
     "delete_confirmation_title": "確定要移除帳號嗎？",
@@ -423,7 +433,7 @@
         },
         "system": {
           "title": "系統",
-          "description": "接收關於 ice 應用程式的重要通知。"
+          "description": "接收關於 Ice 應用程式的重要通知。"
         }
       }
     },
@@ -462,8 +472,8 @@
     "copy_link": "複製連結",
     "more": "更多",
     "copied": "已複製",
-    "share_message": "嗨☃️ 雪人！ 加入我的 ice 團隊，使用我的推薦碼註冊，即可獲得 10 ice 幣：",
-    "share_subject": "加入我的 ice 團隊",
+    "share_message": "嗨☃️ 雪人！ 加入我的 Ice 團隊，使用我的推薦碼註冊，即可獲得 10 Ice 幣：",
+    "share_subject": "加入我的 Ice 團隊",
     "description": "分享出去並邀請好友。 每推薦一個新人加入都能賺取 [[:ice]]。",
     "share": "分享"
   },
@@ -473,8 +483,10 @@
     "inactive": "閒置",
     "referralType": {
       "T1": " 1 階",
-      "T2": "  2 階"
-    }
+      "T2": "  2 階",
+      "team": "團隊成員"
+    },
+    "team": "團隊"
   },
   "personal_information": {
     "first_name": "名字",
@@ -500,14 +512,14 @@
     "time_left": "剩餘時間",
     "mining_rate": "收益率",
     "appeal": "提升您的收益率",
-    "benefits_description": "預先質押您的 ice 獎勵，期限最長 5 年，收益率最高可提升 250%。",
+    "benefits_description": "預先質押您的 Ice 獎勵，期限最長 5 年，收益率最高可提升 250%。",
     "bonus_label": "預先質押獎勵",
     "period_label": "質押期間",
     "title": "預先質押",
     "current_rate": "目前利率",
     "allocation": "分配",
     "description": "質押是一段會將您的加密資產用於支持區塊鏈網路和確認交易的過程。",
-    "terms_agree": "我同意[[:ice]][[:link]]質押條款[[/:link]]。 選定期間內，您持有的 ice 將被鎖定。",
+    "terms_agree": "我同意[[:ice]][[:link]]質押條款[[/:link]]。 選定期間內，您持有的 Ice 將被鎖定。",
     "stake_now": "立刻預先質押！",
     "balance_label": "質押餘額",
     "confirm_title": "確認預先質押",
@@ -532,8 +544,8 @@
     "good_morning": "早安",
     "good_afternoon": "下午好",
     "good_evening": "晚安",
-    "ice": "ice",
-    "ice_per_hour": "ice/小時",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/小時",
     "seconds_short": "秒",
     "minutes_short": "分",
     "hours_short": "時",
@@ -546,7 +558,7 @@
     "views": "{{viewsCount}} 點閱數"
   },
   "search": {
-    "empty": "搜尋聯絡人、ice 好友和您的微型社群成員。",
+    "empty": "搜尋聯絡人、Ice 好友和您的微型社群成員。",
     "nothing_is_found": "未找到符合查詢的結果。",
     "search_by_country": "以國家搜尋",
     "search_for_users": "以使用者搜尋",
@@ -585,7 +597,7 @@
     "resurrection_no_confirm_message": "您將永遠失去您的 [[:amount]] 幣。 確定要繼續嗎？",
     "resurrection_yes_confirm_message": "您只能復活一次！ 確定要繼續嗎？ [[:amount]] 幣將於接下來一小時內歸還至您的餘額。",
     "delete_account_confirmation_title": "確認刪除",
-    "delete_account_confirmation_text": "刪除帳號將永久消除您的數據，包含您的 ice 餘額。 要繼續進行嗎？"
+    "delete_account_confirmation_text": "刪除帳號將永久消除您的數據，包含您的 Ice 餘額。 要繼續進行嗎？"
   },
   "periods": {
     "3_days": "3 天",
@@ -667,7 +679,7 @@
     "snowman": {
       "title": "雪人",
       "subtitle": "打造冰雪帝國",
-      "description": "每 24 小時簽到一次，展示您對 ice 網路的忠誠，並證明您是人類，不是機器人。"
+      "description": "每 24 小時簽到一次，展示您對 Ice 網路的忠誠，並證明您是人類，不是機器人。"
     },
     "ambassador": {
       "title": "大使",
@@ -685,6 +697,44 @@
     "title": "選擇日期"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "使用此功能邀請您的朋友加入Ice社群。擴展您的網絡，分享經驗，一起賺取獎勵。"
+        },
+        "team": {
+          "description": "[[:ice]] 與朋友一起更好。在這個頁面上，您可以查看您的團隊成員的狀態。您還可以從這裡向他們發送消息。"
+        },
+        "referralscard": {
+          "title": "團隊卡片",
+          "description": "點擊此卡片，查看您的團隊成員在過去5天內的統計數據進展。"
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "在這裡，您可以看到您的團隊總共有多少成員。您邀請的人越多，您的獎金就越高。"
+        },
+        "earnings": {
+          "description": "您當前的余額每小時都會更新，並在這裡顯示。它包括您的直接收入、抵押收入以及您的團隊收入。"
+        },
+        "segmented_control_tier_one": {
+          "title": "團隊",
+          "description": "在這裡，您可以查看您邀請加入Ice Network的人員名單。您可以從這裡輕鬆跟踪他們的狀態，並向不活躍的人發送通知。"
+        },
+        "active_users": {
+          "description": "這是您的團隊成員在其簽到會話中的當前活動狀態。當他們有活動的簽到會話時，他們被視為活躍。"
+        },
+        "ping": {
+          "description": "通知您的團隊成員開始他們的簽到會話。您可以每24小時向每個推薦人發送一條通知。"
+        }
+      }
+    },
+    "profile": {
+      "hidden_data": {
+        "title": "隱藏數據",
+        "description": "點擊眼睛圖示查看其他使用者如何看待您的個人檔案。"
+      }
+    },
     "news": {
       "readmore": {
         "title": "閱讀更多",
@@ -702,7 +752,7 @@
       },
       "confirm_phone": {
         "title": "確認電話",
-        "description": "確認您的身分，並允許您的聯絡人得知您也是 ice 網路的一員。 您的電話號碼不會與第三方分享。"
+        "description": "確認您的身分，並允許您的聯絡人得知您也是 Ice 網路的一員。 您的電話號碼不會與第三方分享。"
       },
       "contacts_list": {
         "title": "聯絡人清單",
@@ -761,11 +811,11 @@
         "description": "自訂您的個人檔案詳細資訊，查看已獲得的所有成就和徽章。 從這裡使用計算機，以估計您的收益。"
       },
       "earningicestart": {
-        "title": "賺取 ice",
+        "title": "賺取 Ice",
         "description": "點擊此按鈕，每 24 小時開始一次 [[:ice]] 簽到時段。 別忘了每天回來並開始賺錢！"
       },
       "earningiceseemore": {
-        "title": "賺取 ice",
+        "title": "賺取 Ice",
         "description": "再次點擊以查看關於您當前簽到時段的詳細資訊。"
       },
       "stats": {
@@ -854,37 +904,193 @@
     "expired_message": "很抱歉，今日獎勵已過期。 請密切關注下一次通知！",
     "result_title": "恭喜"
   },
-  
-  "mining_notice": {
-    "title": "通知",
-    "message": "感謝您對賺取 [[:bold]]ice 感興趣！[[/:bold]] 目前我們正在進行技術上的微調，暫時無法使用簽到功能。 這是您專注於建立團隊與發展微型社區的好機會。",
-    "message_footer": "密切關注我們的 [[:twitter]]Twitter[[/:twitter]] 和 [[:telegram]]Telegram[[/:telegram]]，以得知後續更新。"
-  },
   "qr_code": {
     "description": "掃描 QR 碼以加入我的團隊。"
   },
   "social_media": {
     "tiktok": {
       "title": "加入我們的 TikTok",
-      "description": "我們想通知並讓您知道我們在 TikTok 上有個令人興奮的新社群。 我們將分享關於我們數位貨幣 ice 的有趣且豐富的資訊內容，希望您能加入我們！"
+      "description": "我們想通知並讓您知道我們在 TikTok 上有個令人興奮的新社群。 我們將分享關於我們數位貨幣 Ice 的有趣且豐富的資訊內容，希望您能加入我們！"
     },
     "youtube": {
       "title": "加入我們的 YouTube",
-      "description": "從賺取 ice 的教學，一直到新功能的更新，甚至還有有趣的社群內容，我們的 YouTube 頻道能讓您隨時得知最新資訊。"
+      "description": "從賺取 Ice 的教學，一直到新功能的更新，甚至還有有趣的社群內容，我們的 YouTube 頻道能讓您隨時得知最新資訊。"
     },
     "linkedin": {
       "title": "加入我們的 LinkedIn",
-      "description": "加入 LinkedIn 上的 ice 社群是獲得最新發展的消息，並與志同道合的人們建立聯繫的絕佳途徑，這些人跟你一樣對數位貨幣的未來充滿熱情。"
+      "description": "加入 LinkedIn 上的 Ice 社群是獲得最新發展的消息，並與志同道合的人們建立聯繫的絕佳途徑，這些人跟你一樣對數位貨幣的未來充滿熱情。"
     },
     "facebook": {
       "title": "加入我們的 Facebook",
       "description_part1": "我們強烈建議您追蹤我們的 Facebook 專頁。",
-      "description_part2": "這不僅能幫助您掌握 ice 專案的最新動態，也是與我們的社群聯繫並參與對話的好方法。"
+      "description_part2": "這不僅能幫助您掌握 Ice 專案的最新動態，也是與我們的社群聯繫並參與對話的好方法。"
     },
     "instagram": {
       "title": "加入我們的 Instagram",
-      "description_part1": "在 Instagram 關注我們來得知最新消息，並與其他同樣對 ice 充滿熱情的使用者保持聯繫。",
+      "description_part1": "在 Instagram 關注我們來得知最新消息，並與其他同樣對 Ice 充滿熱情的使用者保持聯繫。",
       "description_part2": "此外，您還能在第一時間知道我們將推出的新功能與促銷。"
+    }
+  },
+  "ping_referrals_pop_up": {
+    "title": "請等待，我們將向您的所有朋友發送 ping · {{count}}"
+  },
+  "creative_library": {
+    "title": "創意冰圖書館",
+    "share": "在冰網絡上建立您的夢想團隊！",
+    "get_started": {
+      "header": "打造您的夢想團隊",
+      "subtitle": "在冰上開始，建立您的興盛微社區",
+      "description": "加入快速增長的冰用戶群，建立您自己的微社區並獲得更多獎勵。我們的促銷工具、指南和提示，能輕鬆傳播資訊，打造成功社區。",
+      "get_started": "開始",
+      "carousel": {
+        "01": {
+          "title": "加入",
+          "description": "下載我們的應用，聲明您的暱稱，開始挖礦。\n\n您將加入全球用戶社區，熱衷於權力下放、自治和人民的力量。"
+        },
+        "02": {
+          "title": "邀請",
+          "description": "邀請您的受眾加入冰，共同解鎖額外獎勵。\n\n此外，您將幫助傳播權力下放的好處以及金融未來。"
+        },
+        "03": {
+          "title": "賺取",
+          "description": "通過擴展您的網絡並鼓勵他人加入冰社區來增加獎勵。\n\n加入我們的使命，通過權力下放和自治來革新金融的未來。"
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "視頻",
+        "description": "使用我們的視頻集合來推廣您的邀請碼，橫向或縱向，帶有或沒有字幕，我們為您準備了多種選擇。",
+        "action": "查看視頻"
+      },
+      "02": {
+        "title": "圖片",
+        "description": "一張圖片勝過千言萬語。您可以從我們的橫幅、社交媒體素材、模板和應用模型中進行選擇。",
+        "action": "查看圖片"
+      },
+      "03": {
+        "title": "嵌入式橫幅",
+        "description": "使用我們的嵌入式橫幅，輕鬆將冰推廣給您的網站訪問者，並邀請他們加入您的微社區。",
+        "action": "安裝橫幅"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "分享您的故事",
+        "description": "通過用您的語言寫一篇關於冰網絡及其諸多優勢的文章，來分享您在冰網絡上的旅程。\n\n將它們分享在您的博客、Medium、Reddit、Quora、Blogger等平台上。\n\n您可以在我們的[[:link]]知識庫[[/:link]]、[[:link]]主頁[[/:link]]和[[:link]]常見問題解答[[/:link]]頁面上找到關於冰及其獨特特點的所有資訊。"
+      },
+      "spread": {
+        "title": "傳播資訊",
+        "description": "加入對話，向您喜歡的論壇介紹冰網絡。\n發起新的帖子，分享您對權力下放金融、貨幣未來以及與冰一起構建微社區力量的看法。\n\n成為一個❄️雪人，並引發關於這種全球貨幣潛力的討論。"
+      },
+      "bring": {
+        "title": "邀請朋友加入",
+        "description": "使用我們易於使用的邀請功能，在您喜愛的社交媒體平台上與朋友分享您的個人邀請碼。"
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "網站業主的即插即用方案",
+        "description": "使用我們簡單靈活的JS橫幅，直接將冰網絡嵌入到您的網站中。這是一個快速簡便的設置，可以自定義以匹配您網站的品牌形象。它已翻譯成50種語言，並且與任何網站平台兼容。\n\n複製並粘貼代碼到您的網站，從今天開始向您的訪問者推廣冰網絡。",
+        "action": "安裝橫幅"
+      },
+      "mobile": {
+        "title": "移動應用的庫",
+        "description": "將我們易於使用的庫集成到您的移動應用中，並邀請用戶加入您的微社區並開始挖礦。\n\n通過翻譯支持和靈活的設置選項，您可以確保所有用戶都能在世界任何地方享受相同的優秀冰體驗。",
+        "action1": "Android 庫",
+        "action2": "React Native 庫"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "良好實踐",
+        "rules": {
+          "01": {
+            "title": "保持真實",
+            "description": "從您的個人經驗和觀點寫作。分享您對冰網絡的誠實想法和感受。"
+          },
+          "02": {
+            "title": "使用友好的語氣",
+            "description": "寫作時就像與朋友交談一樣，避免使用過多技術性術語或讀者難以理解的語言。"
+          },
+          "03": {
+            "title": "充滿創意",
+            "description": "不要害怕嘗試不同類型的內容，如博客文章、視頻或社交媒體更新。在向您的受眾推廣冰網絡時，保持愉快並富有創新精神。"
+          }
+        }
+      },
+      "bad": {
+        "title": "不良實踐",
+        "rules": {
+          "01": {
+            "title": "不要發送垃圾郵件",
+            "description": "避免發送未經請求的消息或在不同平台上重複發布相同內容。這可能被視為侵入性和惱人。"
+          },
+          "02": {
+            "title": "不要誤導他人",
+            "description": "冰項目不會向用戶支付現金，我們只以冰幣獎勵。請避免發布類似“將您的冰變成現金”或“如何用冰賺取100美元”等內容。"
+          },
+          "03": {
+            "title": "不要參與詐騙活動",
+            "description": "我們在社區中重視透明和誠實。任何詐騙活動，如創建多個帳戶或試圖操縱冰網絡，都不會被容忍。"
+          }
+        }
+      }
+    }
+  },
+  "face_auth": {
+    "header": "人臉認證",
+    "title": "KYC 步驟 #1",
+    "description": "為了提供無縫的體驗，我們正在添加人臉認證。這一步將作為您的 [[:bold]]早期步驟 #1 KYC[[/:bold]]，為您未來 Mainnet 的簡化驗證做好準備。\n\n今天確認您的身份，以確保未來的旅程順暢！",
+    "consent": "我同意 Ice 的 [[:link]]KYC 條款和條件[[/:link]]。",
+    "confirmation": "我確認我用於此認證的身份將與此帳戶關聯的相同，此選擇不能在以後更改。",
+    "auth_status": {
+      "loading": {
+        "description": "請稍候，我們正在驗證您的身份..."
+      },
+      "success": {
+        "title": "✅ 認證成功",
+        "description": "感謝您確認您的身份。您的簽到會話現在將開始。",
+        "action": "完成"
+      },
+      "failure": {
+        "title": "❌ 認證失敗",
+        "description": "我們無法驗證您的身份。請確保充足的光線和您的臉部完全可見，然後重試。",
+        "action": "重試"
+      },
+      "try_later": {
+        "title": "❌ 認證失敗",
+        "description": "我們無法驗證您的身份。請確保充足的光線和您的臉部完全可見，然後在1小時後重試。",
+        "action": "關閉"
+      },
+      "continue": {
+        "title": "😁 KYC 情感驗證",
+        "description": "幹得好！您已通過自拍完成了第一步。現在，讓我們繼續按照顯示的情感來完成您的 KYC 過程。",
+        "action": "繼續"
+      },
+      "banned": {
+        "title": "❌ 禁止挖礦",
+        "description": "我們發現您的身份與另一個帳戶相關聯。如果您認為這是錯誤的，請發送電子郵件至 [[:bold]]feedback@ice.io[[/:bold]]，提供您的暱稱和高質量的自拍照片。",
+        "action": "關閉"
+      }
+    },
+    "emotions_recognition": {
+      "start": "開始",
+      "please_show_this": "請展示這種情感",
+      "emotions": {
+        "anger": "憤怒",
+        "contempt": "輕蔑",
+        "disgust": "厭惡",
+        "fear": "恐懼",
+        "happiness": "快樂",
+        "neutral": "中性",
+        "sadness": "悲傷",
+        "surprise": "驚訝"
+      }
+    },
+    "device_angle_warning": {
+      "title": "警告",
+      "description": "查看相機時，請保持手機垂直"
     }
   }
 }

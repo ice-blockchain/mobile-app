@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "ice-a xoş gəlmisiniz",
-      "description": "[[:ice]] telefonunuzla qazana biləcəyiniz rəqəmsal valyutadır. ice sizin kimi hər gün istifadə edən istifadəçilərə məxsusdur və onlar tərəfindən idarə edilir."
+      "title": "Ice-a xoş gəlmisiniz",
+      "description": "[[:ice]] telefonunuzla qazana biləcəyiniz rəqəmsal valyutadır. Ice sizin kimi hər gün istifadə edən istifadəçilərə məxsusdur və onlar tərəfindən idarə edilir."
     },
     "page2": {
       "title": "Planetə dostdur",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Qoşulu qalın",
-      "description": "Bizim pulsuz və enerjiyə qənaət edən mobil tətbiqimiz ilə gündəlik girişlər üçün [[:iceLogo]] üzərindən vurun. Sizin gündəlik girişləriniz ice-ın botlar tərəfindən deyil insanlar tərəfindən istifadəsini təmin edir.  "
+      "description": "Bizim pulsuz və enerjiyə qənaət edən mobil tətbiqimiz ilə gündəlik girişlər üçün [[:iceLogo]] üzərindən vurun. Sizin gündəlik girişləriniz Ice-ın botlar tərəfindən deyil insanlar tərəfindən istifadəsini təmin edir.  "
     },
     "page5": {
       "title": "İstinad et və Qazan",
@@ -75,14 +75,16 @@
     "tierOne_tab": "1-ci Pillə",
     "tierTwo_tab": "2-ci Pillə",
     "empty": {
-      "title": "Hal-hazırda heç bir [[:title]] istinadınız yoxdur!",
       "contacts": "Hal-hazırda telefon kitabçanızda heç bir kontakt yoxdur.",
-      "button_title": "Dostlarını dəvət et "
+      "button_title": "Dostlarını dəvət et ",
+      "t1": "Hazırda hər hansı bir T1 istiqrazınız yoxdur!",
+      "t2": "Hazırda hər hansı bir T2 istiqrazınız yoxdur!",
+      "team": "Hazırda hər hansı bir komanda üzvu yoxdur!"
     },
     "contacts": {
       "empty_title": "[[:ice]] dostlarla daha yaxşıdır",
       "empty_button_title": "Kontaktlara girişə icazə ver",
-      "empty_description": "Kontaktlarını sinxronizə et və kimin artıq [[:ice]]-da olduğunu gör.  Gələcəkdə ice-ı istənilən kontaktlarına göndərə biləcəksən. "
+      "empty_description": "Kontaktlarını sinxronizə et və kimin artıq [[:ice]]-da olduğunu gör.  Gələcəkdə Ice-ı istənilən kontaktlarına göndərə biləcəksən. "
     },
     "header": {
       "search_placeholder": "İstifadəçi axtar",
@@ -105,7 +107,7 @@
       },
       "all_contacts": "Bütün kontaktlar",
       "invite": "dəvət et ",
-      "invitation_text": "Salam {{name}}, səni ice-a qoşulmağa dəvət edirəm."
+      "invitation_text": "Salam {{name}}, səni Ice-a qoşulmağa dəvət edirəm."
     },
     "tier_one": {
       "header_list": {
@@ -123,9 +125,9 @@
     "phone": "Telefon",
     "or": "və ya",
     "reset_password": "Şifrəni yenidən təyin et ",
-    "welcome": "ice-a xoş gəlmisiniz",
+    "welcome": "Ice-a xoş gəlmisiniz",
     "email": "Epoçt",
-    "slogan": "Qlobal Valyuta Sıfırlaması",
+    "slogan": "Mərkəzi olmayan Gələcək",
     "privacy": "Davam etməklə, siz [[:link]] Xidmət Şərtləri[[/:link]] və  [[:link]]Məxfilik Siyasəti[[/:link]] ilə razılaşmış olursunuz"
   },
   "claimUsername": {
@@ -252,7 +254,9 @@
     "active_inviter": "Aktiv dəvət edən",
     "tier_1_ref": "1-ci Pillə istinadları",
     "tier_2_ref": "2-ci Pillə istinadları",
-    "active_miners": "Aktiv istinadlar"
+    "active_miners": "Aktiv istinadlar",
+    "team_members": "Komanda üzvləri",
+    "active_team_members": "Aktiv komanda üzvləri"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "QLOBAL DƏRƏCƏ",
       "referrals": "İSTİNADLAR",
-      "description": "Daha çox istifadəçi yönəlt və daha çox qazan[[:ice]]."
+      "description": "Daha çox istifadəçi yönəlt və daha çox qazan[[:ice]].",
+      "description_team": "Daha çox istifadəçi dəvət edin və daha çox [[:ice]] qazanın."
     },
     "referrals": {
       "title": "İSTİNADLAR",
       "description": "Əvvəlki 5 gün üçün yönləndirmə statistikası",
       "no_referrals_description": "Hal-hazırda heç bir istinadınız yoxdur!",
       "users_tier_1": "1-ci pillə istifadəçiləri",
-      "users_tier_2": "2-ci pillə istifadəçiləri"
+      "users_tier_2": "2-ci pillə istifadəçiləri",
+      "title_team": "KOMANDA",
+      "description_team": "Öncəki 5 gün üçün komanda statistikaları",
+      "no_referrals_description_team": "Hazırda hər hansı bir komanda üzvu yoxdur.",
+      "users": "İstifadəçilər"
     },
     "adoption": {
       "title": "QƏBUL",
@@ -322,7 +331,8 @@
       "notifications": "Bildirişlər",
       "staking": "Staking",
       "stats": "Statistika",
-      "help": "Kömək"
+      "help": "Kömək",
+      "tips": "Məsləhətlər"
     },
     "team": {
       "title": "Komanda",
@@ -423,7 +433,7 @@
         },
         "system": {
           "title": "Sistem",
-          "description": "ice tətbiqi haqqında vacib bildirişləri al."
+          "description": "Ice tətbiqi haqqında vacib bildirişləri al."
         }
       }
     },
@@ -462,8 +472,8 @@
     "copy_link": "Keçidi kopyala",
     "more": "Daha çox",
     "copied": "KOPYALANDI",
-    "share_message": "Salam ☃️ Qaradamı! ice-da komandama qoşul və mənim istinad kodumdan istifadə edərək qeydiyyatdan keçməklə 10 ice sikkə əldə et:  ",
-    "share_subject": "ice-da komandama qoşul",
+    "share_message": "Salam ☃️ Qaradamı! Ice-da komandama qoşul və mənim istinad kodumdan istifadə edərək qeydiyyatdan keçməklə 10 Ice sikkə əldə et:  ",
+    "share_subject": "Ice-da komandama qoşul",
     "description": "Xəbər yay və dostlarını dəvət et. Yönləndirdiyin hər yeni adam üçün [[:ice]] qazanacaqsan.",
     "share": "Paylaş"
   },
@@ -473,8 +483,10 @@
     "inactive": "Qeyri-aktiv",
     "referralType": {
       "T1": "1-ci Pillə",
-      "T2": "2-ci Pillə"
-    }
+      "T2": "2-ci Pillə",
+      "team": "Komanda üzvləri"
+    },
+    "team": "Komanda"
   },
   "personal_information": {
     "first_name": "Ad",
@@ -500,14 +512,14 @@
     "time_left": "Qalan vaxt",
     "mining_rate": "Qazanc Faizi",
     "appeal": "Qazanc faizini artır",
-    "benefits_description": "ice mükafatlarını 5 ilə qədər pulqabında kilidlə və qazanc faizini 250%-ə qədər artır.",
+    "benefits_description": "Ice mükafatlarını 5 ilə qədər pulqabında kilidlə və qazanc faizini 250%-ə qədər artır.",
     "bonus_label": "Əvvəldən pulqabında kilidləmə bonusu",
     "period_label": "Kilidləmə Müddəti",
     "title": "Əvvəldən Kilidləmə",
     "current_rate": "Cari Faiz",
     "allocation": "Vəsait",
     "description": "Kilidləmə kripto aktivlərin blokçeyn şəbəkəsini dəstəkləmək və əməliyyatları təsdiq etmək üçün isifadəsi prosesidir.",
-    "terms_agree": " [[:ice]] [[:link]]Kilidləmə Şərtləri[[/:link]] ilə razıyam. ice mülkiyyətlərin seçilmiş müddətə kilidlənəcək.",
+    "terms_agree": " [[:ice]] [[:link]]Kilidləmə Şərtləri[[/:link]] ilə razıyam. Ice mülkiyyətlərin seçilmiş müddətə kilidlənəcək.",
     "stake_now": "İndi Əvvəldən Kilidlə!",
     "balance_label": "Kilidlənmiş balans",
     "confirm_title": "Əvvəldən Kilidləməni təsdiq et",
@@ -532,8 +544,8 @@
     "good_morning": "Sabahınız Xeyir",
     "good_afternoon": "Günortanız Xeyir",
     "good_evening": "Axşamınız Xeyir",
-    "ice": "ice",
-    "ice_per_hour": "ice/saat",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/saat",
     "seconds_short": "san",
     "minutes_short": "dəq",
     "hours_short": "saat",
@@ -546,7 +558,7 @@
     "views": "{{viewsCount}} baxışlar"
   },
   "search": {
-    "empty": "Kontaktları, ice dostlarını və mikro icmanın üzvlərini axtar.",
+    "empty": "Kontaktları, Ice dostlarını və mikro icmanın üzvlərini axtar.",
     "nothing_is_found": "Sorğunuz üzrə heçnə tapılmadı.",
     "search_by_country": "Ölkə üzrə axtar",
     "search_for_users": "İstifadəçi axtar",
@@ -585,7 +597,7 @@
     "resurrection_no_confirm_message": "[[:amount]] sikkələrini həmişəlik itirəcəksən. Davam etmək istədiyindən əminsən?",
     "resurrection_yes_confirm_message": "Ancaq bir dəfə dirilə bilərsən! Davam etmək istədiyindən əminsən? Növbəti saat ərzində [[:amount]] sikkələri balansına qayıdacaq.",
     "delete_account_confirmation_title": "Silməni təsdiq et",
-    "delete_account_confirmation_text": "Hesabı silməklə ice balansın daxil olmaqla bütün məlumatların həmişəlik silinmiş olacaq. Davam etmək istəyirsən?"
+    "delete_account_confirmation_text": "Hesabı silməklə Ice balansın daxil olmaqla bütün məlumatların həmişəlik silinmiş olacaq. Davam etmək istəyirsən?"
   },
   "periods": {
     "3_days": "3 gün",
@@ -667,7 +679,7 @@
     "snowman": {
       "title": "Qaradamı",
       "subtitle": "Qar imperiyası qur",
-      "description": "ice şəbəkəsinə olan öhdəçiliyini sübut etmək və robot deyil insan olduğunu təsdiqləmək üçün hər 24 saatdan bir daxil olaraq qazan."
+      "description": "Ice şəbəkəsinə olan öhdəçiliyini sübut etmək və robot deyil insan olduğunu təsdiqləmək üçün hər 24 saatdan bir daxil olaraq qazan."
     },
     "ambassador": {
       "title": "Səfir",
@@ -685,6 +697,44 @@
     "title": "Tarix seç"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Dostlarınızı Ice icmaəsinə qoşulmağa dəvət etmək üçün bu xüsusiyyəti istifadə edin. Sizin şəbəkənizi genişləndirin, təcrübələrinizi bölüşün və birgə mükafat qazanın."
+        },
+        "team": {
+          "description": "[[:ice]] dostlarınızla birlikdə daha yaxşıdır. Bu səhifədə öz komandanızın vəzifələrini görmək mümkündür. Siz həmçinin onlara buradan xəbərdarlıq göndərə bilərsiniz."
+        },
+        "referralscard": {
+          "title": "Komanda kartı",
+          "description": "Bu kartı toxunaraq son 5 gün ərzində komanda üzvlərinin statistika inkişafını görə bilərsiniz."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Bu yerə komanda üzvlərinin cəmi sayını görmək mümkündür. Daha çox insanı dəvət etsəniz, mükafatınız o qədər yüksək olar."
+        },
+        "earnings": {
+          "description": "Sizin cari balansınız hər saat yenilənir və burada göstərilir. Bu, sizi mütəmadi vəsaitiniz, sizi gözləmə vəsaiti və komandanızın vəsaitini daxil edir."
+        },
+        "segmented_control_tier_one": {
+          "title": "Komanda",
+          "description": "Bu yerə İce Şəbəkəsinə dəvət etdiyiniz insanların siyahısını görmək mümkündür. Onların vəziyyətini buradan asanlıqla izləyə və fəal olmayanlara bildiriş göndərə bilərsiniz."
+        },
+        "active_users": {
+          "description": "Bu, komanda üzvlərinizin onların yoxlama sessiyasının fəal vəziyyətidir. Onlar fəal yoxlama sessiyası keçirdikdə fəal hesab edilir."
+        },
+        "ping": {
+          "description": "Komanda üzvlərinə onların yoxlama sessiyasını başlatmağı bildirin. Hər bir təklif üçün 24 saatda bir bildiriş göndərə bilərsiniz."
+        }
+      }
+    },
+    "profile": {
+      "hidden_data": {
+        "title": "Gizli məlumat",
+        "description": "Profilinizin digər istifadəçilər tərəfindən necə göründüyünü görmək üçün göz nişanına toxunun."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Daha ətraflı oxu",
@@ -702,7 +752,7 @@
       },
       "confirm_phone": {
         "title": "Telefonu təsdiq et ",
-        "description": "Kimliyini təsdiq et və kontaktlarına ice şəbəkəsinin üzvü olduğunu görmələrinə imkan ver. Telefon nömrən digər üçüncü tərəflə paylaşılmayacaq."
+        "description": "Kimliyini təsdiq et və kontaktlarına Ice şəbəkəsinin üzvü olduğunu görmələrinə imkan ver. Telefon nömrən digər üçüncü tərəflə paylaşılmayacaq."
       },
       "contacts_list": {
         "title": "Kontaktların siyahısı",
@@ -761,11 +811,11 @@
         "description": "Profil məlumatlarını fərdiləşdir və qazandığın bütün nişanları və nailiyyətləri gör. Qazancını hesablaya bilmək üçün buradakı kalkulyatordan istifadə et."
       },
       "earningicestart": {
-        "title": "ice qazancı",
+        "title": "Ice qazancı",
         "description": "bu düyməni basmaqla hər 24 saatdan bir [[:ice]] giriş sessiyasını başlada bilərsən. Hər gün geri qayıtmağı və qazanmağa başlamağı unutma!"
       },
       "earningiceseemore": {
-        "title": "ice qazancı",
+        "title": "Ice qazancı",
         "description": "Yenidən bas və cari giriş sessiyan haqqında daha ətraflı gör."
       },
       "stats": {
@@ -854,36 +904,193 @@
     "expired_message": "Təəssüf ki, bugünki bonusun vaxtı bitdi. Növbəti bildirişlər üçün bizi izləyin!",
     "result_title": "Təbriklər"
   },
-  "mining_notice": {
-    "title": "Qeyd",
-    "message": "[[:bold]]ice qazanmaq üçün olan marağınız üçün təşəkkürlər![[/:bold]] Hal-hazırda texnologiyamızı sazlayırıq və giriş hazırda mümkün deyil. Bu sənin komanda qurmaq üçün və mikro -icmanı böyütmək üçün fokuslanmaq şansındır.",
-    "message_footer": "[[:twitter]]Tvitter[[/:twitter]] və [[:telegram]]Telegram[[/:telegram]] kanallarımızda yeniliklər üçün bizi izləyin."
-  },
   "qr_code": {
     "description": "Komandama qoşulmaq üçün QR kodu skan et."
   },
   "social_media": {
     "tiktok": {
       "title": "TikTok-da bizə qoşulun.",
-      "description": "Biz sadəcə əlaqə saxlamaq və TikTok-dakı həyəcanverici yeni icmamız haqqında məlumat vermək istədik.  Rəqəmsal valyutamız, ice haqqında əyləncəli və məlumatlandırıcı məzmun paylaşırıq və sənin də bura qoşulmağını istərdik!"
+      "description": "Biz sadəcə əlaqə saxlamaq və TikTok-dakı həyəcanverici yeni icmamız haqqında məlumat vermək istədik.  Rəqəmsal valyutamız, Ice haqqında əyləncəli və məlumatlandırıcı məzmun paylaşırıq və sənin də bura qoşulmağını istərdik!"
     },
     "youtube": {
       "title": "YouTube-da bizə qoşulun",
-      "description": "ice qazanmaq üçün təlimatlardan tutmuş yeni funksiyalar üzrə yeniləmələrə qədər, hətta əyləncəli icma məzmunu ilə bizim YouTube kanalımız yeniliklərdən xəbərdar olmaq üçün əla məkandır."
+      "description": "Ice qazanmaq üçün təlimatlardan tutmuş yeni funksiyalar üzrə yeniləmələrə qədər, hətta əyləncəli icma məzmunu ilə bizim YouTube kanalımız yeniliklərdən xəbərdar olmaq üçün əla məkandır."
     },
     "linkedin": {
       "title": "LinkedIn-də bizə qoşulun",
-      "description": "LinkedIn-də ice icmasına qoşulmaq ən son yeniliklərdən xəbərdar olmaq və sənin qədər rəqəmsal valyutaların gələcəyi ilə maraqlanan eyni düşüncəli fərdlər ilə əlaqə qurmaq üçün əla vasitədir."
+      "description": "LinkedIn-də Ice icmasına qoşulmaq ən son yeniliklərdən xəbərdar olmaq və sənin qədər rəqəmsal valyutaların gələcəyi ilə maraqlanan eyni düşüncəli fərdlər ilə əlaqə qurmaq üçün əla vasitədir."
     },
     "facebook": {
       "title": "Facebook-da bizə qoşulun",
       "description_part1": "Facebook səhifəmizi izləməyi tövsiyyə edirik.",
-      "description_part2": "Bu ice layihəsi ilə bağlı ən son baş verənlərdən xəbərdar olmağa kömək etməklə yanaşı icmamıza qoşulmaq və söhbətlərdə iştirak etmək üçün əla vasitədir."
+      "description_part2": "Bu Ice layihəsi ilə bağlı ən son baş verənlərdən xəbərdar olmağa kömək etməklə yanaşı icmamıza qoşulmaq və söhbətlərdə iştirak etmək üçün əla vasitədir."
     },
     "instagram": {
       "title": "Instagram-da bizə qoşulun",
-      "description_part1": "Bizi Instagram-da izləmək məlumatlı qalmaq və ice ilə maraqlanan digər istifadəçilər ilə əlaqə qurmaq üçün əla yoldur. ",
+      "description_part1": "Bizi Instagram-da izləmək məlumatlı qalmaq və Ice ilə maraqlanan digər istifadəçilər ilə əlaqə qurmaq üçün əla yoldur. ",
       "description_part2": "Əlavə olaraq, buraxacağımız yeni funksiyalar və ya promoşnlar haqqında ilk məlumatlı siz olacaqsınız."
+    }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Zəhmət olmasa, bütün dostlarınıza ping göndərənə qədər gözləyin · {{count}}"
+  },
+  "creative_library": {
+    "title": "Yaradıcı Ice Kitabxanası",
+    "share": "Rüyalar komandasını Ice şəbəkəsində qurun!",
+    "get_started": {
+      "header": "Rüyalar komandasını qurun",
+      "subtitle": "Ice-də başlayın və öz mikro-icmaqalınızı qurun",
+      "description": "Öz mikro-icmaqlarını quran və daha çox mükafat qazanan Ice istifadəçilərinin sürətli inkişaf edən sayına qoşulun. Təbliğat vasitələrimiz, təlimatlar və tövsiyələr sözün yayılmasını və uğurlu bir icmaqın qurulmasını sadələşdirir.",
+      "get_started": "Başlamaq",
+      "carousel": {
+        "01": {
+          "title": "Qoşulun",
+          "description": "Tətbiqimizi yükləyin, adınızı tələb edin və madencilikə başlayın.\n\nSiz dünyagəzəli istifadəçilər cəmiyyətinə qoşulacaqsınız ki, onlar dezentralizasiya, özgürlük və insanların qüvvətinə marağ göstərir."
+        },
+        "02": {
+          "title": "Dəvət edin",
+          "description": "Auditoriyanızı Ice-ə qoşulmağa və əlavə mükafatlar açmağa dəvət edin.\n\nÜstəlik, dezentralizasiyanın və maliyyənin gələcəyinin faydalarını yaymağa kömək edəcəksiniz."
+        },
+        "03": {
+          "title": "Qazanın",
+          "description": "Şəbəkənizi genişlədərək və digərlərini Ice icmaqına qoşulmağa təşviq edərək mükafatlarınızı böyüdin.\n\nBizim missiyamıza qoşulun və maliyyənin gələcəyini dezentralizasiya və özgürlüklə təhlil edin."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videolar",
+        "description": "Dəvət kodunuzu təbliğ etmək üçün videolarımızın kolleksiyasından istifadə edin, eniş və eniş, alt yazısız və ya alt yazılı olsun, bizimlə qapadınız.",
+        "action": "Videoları gör"
+      },
+      "02": {
+        "title": "Şəkillər",
+        "description": "Bir şəkil minlərlə sözə bərabərdir. Banerlərimiz, sosial media aktivlərimiz, şablonlar və tətbiq mayakları kolleksiyamızdan seçim edə bilərsiniz.",
+        "action": "Şəkilləri gör"
+      },
+      "03": {
+        "title": "Təqdim edilmiş Baner",
+        "description": "Təqdim edilmiş banerimizlə veb saytınızın tələbələrinə asanlıqla Ice təbliğ edə və onları öz mikro-icmaqınıza qoşulmağa dəvət edə bilərsiniz.",
+        "action": "Baneri quraşdırın"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Hekayənizi Paylaşın",
+        "description": "Müxtəlif faydaları ilə Ice şəbəkəsi ilə keçdiyiniz səyahətinizi öz dilinizdə yazı yazaraq paylaşın.\n\nOnları Blogunuzda, Mediumda, Redditdə, Quorada, Bloggerdə və daha çox yerləşdirin.\n\nice və unikal xüsusiyyətləri barədə bütün məlumatları [[:link]]Bilmə KB[[/:link]], [[:link]]Ana səhifə[[/:link]], və [[:link]]FAQ[[/:link]] səhifəsində tapa bilərsiniz."
+      },
+      "spread": {
+        "title": "Sözü Yayın",
+        "description": "Müzakirəyə qoşulun və Ice şəbəkəsini sevimli forumlarınıza təqdim edin.\nYeni mövzular başlatın və maliyyənin dezentralizasiyası, valyutaların gələcəyi və Ice ilə mikro-icmaq qurmağın gücü barədə düşüncələrinizi paylaşın.\n\nBir ☃️ Qaradam olun və bu global valyutanın potensialını müzakirə edin."
+      },
+      "bring": {
+        "title": "Dostlarınızı daxil edin",
+        "description": "Asan istifadə edilən dəvət imkanlarımızdan istifadə edin və dostlarınıza sevimli sosial media platformalarınızda öz şəxsi dəvət kodunuzu paylaşın."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Veb Sayt Sahibləri üçün Plug & Play",
+        "description": "Sadə və müstəqil JS banerimizlə Ice şəbəkəsini doğrudan veb saytınıza yerləşdirin. Saytınızın markalaşmasına uyğun şəkildə tənzimlənə bilən tez və asan bir quraşdırma imkanıdır. 50 dilə tərcümə edilib və hər hansı bir veb sayt platforması ilə uyğundur.\n\nKodunuzu veb saytınıza kopyalayın və bugündən etibarən ziyarətçilərinizə Ice şəbəkəsini təqdim edin.",
+        "action": "Baneri quraşdırın"
+      },
+      "mobile": {
+        "title": "Mobil Tətbiq Kitabxanası",
+        "description": "Asan istifadə edilən kitabxanamızı mobil tətbiyinə birləşdirin və istifadəçilərinizi öz mikro-icmaqlarınıza qoşulmağa və madencilikə başlamağa dəvət edin.\n\nTərcümə dəstəyi və fleksib quraşdırma seçenəkləri ilə, istifadəçilərinizin hamısı dünyanın hər yerində eyni böyük Ice təcrübəsinə sahib olacağını təmin edə bilərsiniz.",
+        "action1": "Android kitabxanası",
+        "action2": "React Native kitabxanası"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Yaxşı Təcrübələr",
+        "rules": {
+          "01": {
+            "title": "Mənsub olun",
+            "description": "Şəxsi təcrübəniz və perspektivinizdən yazın. Ice şəbəkəsi haqqındakı əməliyyatınızı və hisslərinizi ərlidirin."
+          },
+          "02": {
+            "title": "Dostca üslub istifadə edin",
+            "description": "Dostunuzla danışır kimi yazın və oxucuların başa düşməsinə çətin ola biləcək texniki ifadələri və dilini istifadə etməyin."
+          },
+          "03": {
+            "title": "Yaradıcılığınızı göstərin",
+            "description": "Blog yazıları, videolar və sosial media yeniləmələri kimi müxtəlif məzmun növləri ilə təcrübə etməkdən çəkinməyin. Öz auditoriyasına Ice şəbəkəsini təqdim etmək üçün maraqlı və yenilikçi üsulla əylənin."
+          }
+        }
+      },
+      "bad": {
+        "title": "Pis Təcrübələr",
+        "rules": {
+          "01": {
+            "title": "Spam təqdim etməyin",
+            "description": "Istifadəçilərə istinad olunmayan mesajlar göndərməyin və fərqli platformalarda eyni məzmunu təkrarlayaraq təbliğat etməyin. Bu müdaxiləçi və rahatsız edici görünə bilər."
+          },
+          "02": {
+            "title": "Xalqı aldadın",
+            "description": "Ice layihəsi istifadəçilərə heç bir nağd pul ödənmir, yalnızca Ice coin ilə mükafatlandırılır. Zəhmət olmasa, \"Ice-ni nağd pul kimi dəyişdirin\", \"Ice ilə 100 dollar qazanmağın yolları\" kimi məzmun paylaşmağın qarşısını alın."
+          },
+          "03": {
+            "title": "Qeyri-qanuni fəaliyyət göstərməyin",
+            "description": "Biz cəmiyyətimizdə şəffaflığı və etik olmağı qiymətləndiririk. Birdəfəlik hesablar yaratmaq və ya Ice şəbəkəsini manipulyasiya etməyə cəhd etmək kimi qeyri-qanuni fəaliyyətlərə icazə verilmir."
+          }
+        }
+      }
+    }
+  },
+  "face_auth": {
+    "header": "Üzünün Doğrulaması",
+    "title": "KYC Addımı #1",
+    "description": "Problemsiz bir təcrübə üçün üzünün doğrulamasını əlavə edirik. Bu addım sizi gələcək Mainnet üçün sürətli doğrulama üçün hazırlayır və sizin üçün [[:bold]]təzələmə Addımı #1 KYC[[/:bold]] rolunu oynayır. \n\nBugün öz kimliyinizi təsdiq edin və səyahətinizi asan etmək üçün!",
+    "consent": "Mən Ice [[:link]]KYC Şərtlərini və Qaydalarını[[/:link]] qəbul edirəm.",
+    "confirmation": "Təsdiq edirəm ki, bu autentifikasiya üçün istifadə etdiyim şəxsiyyət bu hesabla əlaqəli eyni olacaq və bu seçimi sonradan dəyişdirmək mümkün deyil.",
+    "auth_status": {
+      "loading": {
+        "description": "Sizi doğrulayarkən gözləyin..."
+      },
+      "success": {
+        "title": "✅ Doğrulama Uğurlu Oldu",
+        "description": "Kimliyinizi təsdiq etdiyiniz üçün təşəkkür edirik. Giriş sessiyanız indi başlayacaq.",
+        "action": "Hazır"
+      },
+      "failure": {
+        "title": "❌ Doğrulama Uğursuz Oldu",
+        "description": "Kimliyinizi doğrulaya bilmədik. Zəif işıqlandırma və üzünüzün tam görünürlüyündən əmin olun, sonra yenidən cəhd edin.",
+        "action": "Təkrar cəhd edin"
+      },
+      "try_later": {
+        "title": "❌ Doğrulama Uğursuz Oldu",
+        "description": "Kimliyinizi doğrulaya bilmədik. Zəif işıqlandırma və üzünüzün tam görünürlüyündən əmin olun, sonra bir saat sonra yenidən cəhd edin.",
+        "action": "Bağlayın"
+      },
+      "continue": {
+        "title": "😁 KYC Hisslər Doğrulaması",
+        "description": "Əla iş! İlk addımı öz şəkilinizi çəkərək başa vurmuşsunuz. İndi, KYC prosesinizi davam etdirmək üçün göstərilən hissləri izləyərək davam edək.",
+        "action": "Davam edin"
+      },
+      "banned": {
+        "title": "❌ Qazmaq söndürüldü",
+        "description": "Sizin kimliyinizin başqa bir hesabla əlaqələndirildiyini müəyyən etdik. Bu səhv olduğunu düşünürsünüzsə, xahiş edirik [[:bold]]feedback@ice.io[[/:bold]] ünvanına adınızı və yüksək keyfiyyətli şəklinizi göndərin.",
+        "action": "Bağlayın"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Başlamaq",
+      "please_show_this": "Xahiş edirik bu hissi göstərin",
+      "emotions": {
+        "anger": "qəzəb",
+        "contempt": "əzab",
+        "disgust": "nafrat",
+        "fear": "qorxu",
+        "happiness": "şadlıq",
+        "neutral": "neutral",
+        "sadness": "gəlmə",
+        "surprise": "təəccüb"
+      }
+    },
+    "device_angle_warning": {
+      "title": "Xəbərdarlıq",
+      "description": "Kameraya baxarkən telefonu düz tutun, xahiş edirik"
     }
   }
 }

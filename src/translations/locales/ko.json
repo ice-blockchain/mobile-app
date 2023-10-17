@@ -75,9 +75,11 @@
     "tierOne_tab": "티어 1",
     "tierTwo_tab": "티어 2",
     "empty": {
-      "title": "아직 [[:title]] 추천인이 없습니다!",
       "contacts": "아직 전화번호부에 아무 연락처도 없습니다.",
-      "button_title": "친구 초대"
+      "button_title": "친구 초대",
+      "t1": "현재 T1 추천이 없습니다!",
+      "t2": "현재 T2 추천이 없습니다!",
+      "team": "현재 팀 멤버가 없습니다!"
     },
     "contacts": {
       "empty_title": "[[:ice]] 는 친구와 함께할 때 더욱 좋습니다",
@@ -125,7 +127,7 @@
     "reset_password": "비밀번호 재설정",
     "welcome": "ice에 오신 것을 환영합니다",
     "email": "이메일",
-    "slogan": "국제 통화 초기화",
+    "slogan": "분산화된 미래",
     "privacy": "계속하시면 ice의 [[:link]]이용 약관[[/:link]]과 [[:link]]개인 정보 보호 방침[[/:link]]에 동의하는 것입니다"
   },
   "claimUsername": {
@@ -252,7 +254,9 @@
     "active_inviter": "활동 중인 초대자",
     "tier_1_ref": "티어 1 추천인",
     "tier_2_ref": "티어 1 추천인",
-    "active_miners": "유효한 추천인"
+    "active_miners": "유효한 추천인",
+    "team_members": "팀 멤버",
+    "active_team_members": "활동 중인 팀 멤버"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "글로벌 순위",
       "referrals": "추천인",
-      "description": "더 많이 추천하고 더 많은 [[:ice]]를 적립하세요."
+      "description": "더 많이 추천하고 더 많은 [[:ice]]를 적립하세요.",
+      "description_team": "더 많은 사용자를 초대하고 더 많은 [[:ice]]를 벌어 보세요."
     },
     "referrals": {
       "title": "추천인",
       "description": "지난 5일간 추천 통계.",
       "no_referrals_description": "아직 추천이 없습니다!",
       "users_tier_1": "사용자 티어 1",
-      "users_tier_2": "사용자 티어 2"
+      "users_tier_2": "사용자 티어 2",
+      "title_team": "팀",
+      "description_team": "지난 5일 동안의 팀 통계",
+      "no_referrals_description_team": "현재 팀 멤버가 없습니다.",
+      "users": "사용자"
     },
     "adoption": {
       "title": "채택",
@@ -322,7 +331,8 @@
       "notifications": "알림",
       "staking": "스테이킹",
       "stats": "통계",
-      "help": "도움말"
+      "help": "도움말",
+      "tips": "팁"
     },
     "team": {
       "title": "팀",
@@ -423,7 +433,7 @@
         },
         "system": {
           "title": "시스템",
-          "description": "ice 앱과 관련하여 중요한 알림을 받으세요."
+          "description": "Ice 앱과 관련하여 중요한 알림을 받으세요."
         }
       }
     },
@@ -462,7 +472,7 @@
     "copy_link": "링크 복사",
     "more": "더 보기",
     "copied": "복사 완료",
-    "share_message": "안녕 ☃️ 스노우맨! ice의 우리 팀에 가입해요. 내가 보내는 추천 코드를 이용하여 등록하면 10 ice 코인을 받을 수 있어요:",
+    "share_message": "안녕 ☃️ 스노우맨! ice의 우리 팀에 가입해요. 내가 보내는 추천 코드를 이용하여 등록하면 10 Ice 코인을 받을 수 있어요:",
     "share_subject": "ice의 우리 팀에 가입",
     "description": "널리 홍보하고 친구를 초대하세요. 새로운 추천 대상이 가입할 때마다 [[:ice]]를 받게 됩니다.",
     "share": "공유"
@@ -473,8 +483,10 @@
     "inactive": "비활성",
     "referralType": {
       "T1": "티어 1",
-      "T2": "티어 2"
-    }
+      "T2": "티어 2",
+      "team": "팀 멤버"
+    },
+    "team": "팀"
   },
   "personal_information": {
     "first_name": "이름",
@@ -500,7 +512,7 @@
     "time_left": "남은 시간",
     "mining_rate": "수익률",
     "appeal": "수익률을 올리세요",
-    "benefits_description": "최대 5년까지 ice 보상을 사전 스테이킹(Pre-Staking)하고 수익률을 250%까지 올리세요.",
+    "benefits_description": "최대 5년까지 Ice 보상을 사전 스테이킹(Pre-Staking)하고 수익률을 250%까지 올리세요.",
     "bonus_label": "사전 스테이킹 보너스",
     "period_label": "스테이킹 기간",
     "title": "사전 스테이킹",
@@ -532,8 +544,8 @@
     "good_morning": "안녕하세요",
     "good_afternoon": "안녕하세요",
     "good_evening": "안녕하세요",
-    "ice": "ice",
-    "ice_per_hour": "ice/시간",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/시간",
     "seconds_short": "초",
     "minutes_short": "분",
     "hours_short": "시",
@@ -546,7 +558,7 @@
     "views": "{{viewsCount}} 조회"
   },
   "search": {
-    "empty": "연락처, ice 친구 및 소규모 커뮤니티 회원을 검색하세요.",
+    "empty": "연락처, Ice 친구 및 소규모 커뮤니티 회원을 검색하세요.",
     "nothing_is_found": "검색어에 대한 검색 결과가 없습니다.",
     "search_by_country": "국가 검색",
     "search_for_users": "사용자 검색",
@@ -585,7 +597,7 @@
     "resurrection_no_confirm_message": "[[:amount]] 코인을 영원히 잃게 됩니다. 정말 계속하시겠습니까?",
     "resurrection_yes_confirm_message": "단 한 번만 되살릴 수 있습니다! 정말 계속하시겠습니까? 한 시간 안에 [[:amount]] 코인이 잔액에 반영될 것입니다.",
     "delete_account_confirmation_title": "삭제 확인",
-    "delete_account_confirmation_text": "계정을 삭제하면 ice 잔액을 물론 모든 데이터가 영원히 지워집니다. 계속하시겠습니까?"
+    "delete_account_confirmation_text": "계정을 삭제하면 Ice 잔액을 물론 모든 데이터가 영원히 지워집니다. 계속하시겠습니까?"
   },
   "periods": {
     "3_days": "3일",
@@ -667,7 +679,7 @@
     "snowman": {
       "title": "스노우맨",
       "subtitle": "눈의 제국을 건설하세요",
-      "description": "24시간마다 체크인하여 ice 네트워크에 대한 헌신을 보이고 로봇이 아닌 인간임을 증명하여 수익을 올리세요."
+      "description": "24시간마다 체크인하여 Ice 네트워크에 대한 헌신을 보이고 로봇이 아닌 인간임을 증명하여 수익을 올리세요."
     },
     "ambassador": {
       "title": "대사",
@@ -685,6 +697,44 @@
     "title": "날짜 선택"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "이 기능을 사용하여 친구들을 Ice 커뮤니티에 초대하고 네트워크를 확장하며 함께 보상을 얻으세요."
+        },
+        "team": {
+          "description": "[[:ice]] 친구와 함께하면 더 좋습니다. 이 페이지에서 팀 멤버의 상태를 확인할 수 있습니다. 여기서 메시지도 보낼 수 있습니다."
+        },
+        "referralscard": {
+          "title": "팀 카드",
+          "description": "이 카드를 탭하여 팀 멤버의 지난 5일 동안의 통계를 확인하세요."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "여기에서 전체 팀 멤버 수를 확인할 수 있습니다. 더 많은 사람을 초대하면 보너스가 더 높아집니다."
+        },
+        "earnings": {
+          "description": "현재 잔액은 매 시간 업데이트되며 여기에 표시됩니다. 직접 수입과 스테이크된 수입과 팀에서 얻은 수입이 포함됩니다."
+        },
+        "segmented_control_tier_one": {
+          "title": "팀",
+          "description": "이곳에서 Ice 네트워크에 초대한 사람들의 목록을 볼 수 있습니다. 여기서 그들의 상태를 쉽게 추적하고 비활성 멤버에게 알림을 보낼 수 있습니다."
+        },
+        "active_users": {
+          "description": "이것은 팀 멤버의 체크인 활동 현황입니다. 활성 체크인 세션을 진행하면 활성으로 간주됩니다."
+        },
+        "ping": {
+          "description": "팀 멤버에게 체크인 세션을 시작하도록 알립니다. 매일 한 번의 알림을 각 추천에게 보낼 수 있습니다."
+        }
+      }
+    },
+    "profile": {
+      "hidden_data": {
+        "title": "숨겨진 데이터",
+        "description": "눈 아이콘을 탭하여 다른 사용자가 프로필을 어떻게 보는지 확인하세요."
+      }
+    },
     "news": {
       "readmore": {
         "title": "더 보기",
@@ -702,7 +752,7 @@
       },
       "confirm_phone": {
         "title": "전화 확인",
-        "description": "신원을 확인하고 연락처의사람들에게 회원님이 ice 네트워크의 회원임을 알리세요. 회원님의 전화번호는 다른 회사와 공유하지 않습니다."
+        "description": "신원을 확인하고 연락처의사람들에게 회원님이 Ice 네트워크의 회원임을 알리세요. 회원님의 전화번호는 다른 회사와 공유하지 않습니다."
       },
       "contacts_list": {
         "title": "연락처 목록",
@@ -761,11 +811,11 @@
         "description": "원하는 대로 프로필 세부 정보를 지정하고 모든 성취와 획득한 배지를 확인하세요. 여기서 계산기를 사용하여 수익을 추정할 수 있습니다."
       },
       "earningicestart": {
-        "title": "ice 적립",
+        "title": "Ice 적립",
         "description": "이 버튼을 탭하여 24시간마다 [[:ice]]에 체크인하고 세션을 시작할 수 있습니다. 매일 여기로 돌아와서 수익을 올리는 것을 잊지 마세요!"
       },
       "earningiceseemore": {
-        "title": "ice 적립",
+        "title": "Ice 적립",
         "description": "다시 탭하면 현재 체크인하신 세션에 대한 자세한 내용을 볼 수 있습니다."
       },
       "stats": {
@@ -854,12 +904,6 @@
     "expired_message": "죄송하지만 오늘의 보너스는 만료되었습니다. 다음 알림을 기대해 주세요!",
     "result_title": "축하합니다"
   },
-  
-  "mining_notice": {
-    "title": "알림",
-    "message": "[[:bold]]ice에 관심을 가져 주셔서 감사합니다![[/:bold]] 현재 ice의 기술을 미세하게 조정하고 있어 체크인하실 수 없습니다. 이는 회원님이 팀 결성에 집중하고 소규모 커뮤니티를 발전시킬 기회입니다.",
-    "message_footer": "[[:twitter]]Twitter[[/:twitter]]와 [[:telegram]]Telegram[[/:telegram]] 채널에서 업데이트를 확인하세요."
-  },
   "qr_code": {
     "description": "QR 코드를 스캔하여 내 팀에 합류하세요."
   },
@@ -870,21 +914,183 @@
     },
     "youtube": {
       "title": "YouTube에서 가입하세요",
-      "description": "ice 수익을 올리는 방법 관련 튜토리얼부터 새 기능 업데이트 및, 재미있는 커뮤니티 콘텐츠에 이르기까지 YouTube 채널은 최신 정보를 얻을 수 있는 완벽한 장소입니다."
+      "description": "Ice 수익을 올리는 방법 관련 튜토리얼부터 새 기능 업데이트 및, 재미있는 커뮤니티 콘텐츠에 이르기까지 YouTube 채널은 최신 정보를 얻을 수 있는 완벽한 장소입니다."
     },
     "linkedin": {
       "title": "LinkedIn에서 가입하세요",
-      "description": "LinkedIn에서 ice 커뮤니티에 가입하면 최신 개발 정보를 접하면서 디지털 통화의 미래에 대해 열정과 비슷한 생각을 하는 다른 사람과도 소통할 수 있습니다."
+      "description": "LinkedIn에서 Ice 커뮤니티에 가입하면 최신 개발 정보를 접하면서 디지털 통화의 미래에 대해 열정과 비슷한 생각을 하는 다른 사람과도 소통할 수 있습니다."
     },
     "facebook": {
       "title": "Facebook에서 가입하세요",
       "description_part1": "Facebook 페이지 팔로우를 강력하게 권합니다.",
-      "description_part2": "ice 프로젝트에서 일어나는 모든 일에 대한 최신 정보를 얻을 수 있을 뿐만 아니라 커뮤니티에 참여하여 대화할 수 있는 좋은 방법입니다."
+      "description_part2": "Ice 프로젝트에서 일어나는 모든 일에 대한 최신 정보를 얻을 수 있을 뿐만 아니라 커뮤니티에 참여하여 대화할 수 있는 좋은 방법입니다."
     },
     "instagram": {
       "title": "Instagram에서 가입하세요",
       "description_part1": "Instagram에서 팔로우하면 모든 소식을 전달받고 ice에 열정을 가진 다른 사용자들과 연대할 수 있습니다.",
       "description_part2": "또한 출시되는 새로운 기능이나 프로모션 소식을 가장 먼저 파악하게 될 것입니다."
+    }
+  },
+  "ping_referrals_pop_up": {
+    "title": "우리가 당신의 모든 친구에게 핑을 보내는 동안 기다려 주세요 · {{count}}"
+  },
+  "creative_library": {
+    "title": "창의적인 Ice 라이브러리",
+    "share": "아이스 네트워크에서 꿈꾸던 팀을 만들어보세요!",
+    "get_started": {
+      "header": "꿈꾸던 팀 만들기",
+      "subtitle": "아이스에서 시작하여 번성하는 마이크로 커뮤니티를 구축하세요",
+      "description": "자신만의 마이크로 커뮤니티를 구축하고 더 많은 보상을 얻고 있는 아이스 사용자들의 빠르게 성장하는 수를 참여하세요. 홍보 도구, 안내서 및 팁을 통해 메시지를 확산하고 성공적인 커뮤니티를 구축하는 것이 쉬워집니다.",
+      "get_started": "시작하기",
+      "carousel": {
+        "01": {
+          "title": "참여하기",
+          "description": "앱을 다운로드하고 닉네임을 요청하고 채굴을 시작하세요.\n\n아이스 사용자 중에서는 분산, 자치 및 인류의 힘에 열정을 가진 글로벌 커뮤니티에 참여하게 될 것입니다."
+        },
+        "02": {
+          "title": "초대하기",
+          "description": "관객을 아이스로 초대하고 추가적인 보상을 해제하기 위해 협력하세요.\n\n게다가 분산의 이점과 금융의 미래에 대한 메시지를 확산하는 데 도움을 줄 수 있을 것입니다."
+        },
+        "03": {
+          "title": "수익 창출하기",
+          "description": "네트워크를 확장하고 다른 사람들이 아이스 커뮤니티에 참여하도록 독려함으로써 보상을 증가시킬 수 있습니다.\n\n분산과 자치를 통해 금융의 미래를 혁신하는 미션에 참여하세요."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "동영상",
+        "description": "초대 코드를 홍보하기 위해 동영상 컬렉션을 사용하세요. 가로 모드 또는 세로 모드, 자막 있는지 없는지, 우리가 지원해 드립니다.",
+        "action": "동영상 보기"
+      },
+      "02": {
+        "title": "이미지",
+        "description": "사진 한 장은 천 말에 상응합니다. 배너, 소셜 미디어 자산, 템플릿 및 앱 모킹업 중에서 선택할 수 있습니다.",
+        "action": "이미지 보기"
+      },
+      "03": {
+        "title": "임베디드 배너",
+        "description": "임베디드 배너를 사용하여 웹사이트 방문자에게 아이스를 홍보하고 마이크로 커뮤니티에 참여하도록 초대하세요.",
+        "action": "배너 설치"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "당신의 이야기 공유",
+        "description": "아이스 네트워크와 그 많은 이점에 대한 여정을 당신의 언어로 기사로 써서 공유해보세요.\n\n블로그, Medium, Reddit, Quora, Blogger 등에서 공유하세요.\n\n아이스와 그 독특한 기능에 대한 모든 정보를 [[/:link]] 지식 베이스 [[/:link]], [[/:link]] 홈페이지 [[/:link]], [[/:link]] FAQ 페이지 [[/:link]]에서 찾아볼 수 있습니다."
+      },
+      "spread": {
+        "title": "메시지 확산",
+        "description": "대화에 참여하여 좋아하는 포럼에 아이스 네트워크를 소개하세요. 탈중앙화된 금융, 통화의 미래 및 아이스와 함께 마이크로 커뮤니티를 구축하는 힘에 대한 생각을 공유하세요.\n\n눈사람처럼 아이스의 글로벌 통화 가능성에 대한 토론을 시작하고 이야기를 유발시켜보세요."
+      },
+      "bring": {
+        "title": "친구들을 초대하세요",
+        "description": "사용하기 쉬운 초대 기능을 사용하여 친구들에게 소셜 미디어 플랫폼에서 개인 초대 코드를 공유하세요."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "웹사이트 소유자를 위한 플러그 & 플레이",
+        "description": "간단하고 유연한 JS 배너를 사용하여 아이스 네트워크를 웹사이트에 직접 통합할 수 있습니다. 웹사이트의 브랜딩에 맞게 사용자 정의할 수 있는 빠르고 간편한 설정이 가능합니다. 50개 언어로 번역되었으며 모든 웹사이트 플랫폼과 호환됩니다.\n\n코드를 복사하여 웹사이트에 붙여넣고 오늘 방문자에게 아이스 네트워크를 홍보하기 시작하세요.",
+        "action": "배너 설치"
+      },
+      "mobile": {
+        "title": "모바일 앱 라이브러리",
+        "description": "사용하기 쉬운 라이브러리를 모바일 앱에 통합하고 사용자에게 마이크로 커뮤니티에 참여하고 채굴을 시작하도록 초대하세요. 번역 지원과 유연한 설정 옵션으로 모든 사용자가 세계 어디에서나 동일한 멋진 아이스 경험을 할 수 있도록 보장할 수 있습니다.",
+        "action1": "Android 라이브러리",
+        "action2": "React Native 라이브러리"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "좋은 실천법",
+        "rules": {
+          "01": {
+            "title": "진정성을 유지하세요",
+            "description": "개인적인 경험과 시각에서 글을 쓰세요. 아이스 네트워크에 대한 솔직한 생각과 감정을 공유하세요."
+          },
+          "02": {
+            "title": "친근한 톤을 사용하세요",
+            "description": "친구와 대화하는 것처럼 글을 쓰고, 지나치게 기술적인 용어나 독자가 이해하기 어려운 언어를 사용하지 않도록 하세요."
+          },
+          "03": {
+            "title": "창의적이세요",
+            "description": "블로그 글, 동영상 또는 소셜 미디어 업데이트와 같은 다양한 유형의 콘텐츠를 실험해보는 것을 두려워하지 마세요. 재미있게 아이스 네트워크를 대중에게 홍보하는 방식에 대해 혁신적이고 창의적으로 접근하세요."
+          }
+        }
+      },
+      "bad": {
+        "title": "나쁜 실천법",
+        "rules": {
+          "01": {
+            "title": "스팸을 피하세요",
+            "description": "요청하지 않은 메시지를 보내거나 동일한 내용을 다른 플랫폼에 반복해서 게시하는 것을 피하세요. 이는 침입적이고 귀찮은 행동으로 간주될 수 있습니다."
+          },
+          "02": {
+            "title": "사람들을 오도하지 마세요",
+            "description": "아이스 프로젝트는 사용자에게 현금을 지불하지 않고 아이스 코인으로 보상을 제공합니다. \"아이스를 현금으로 바꾸세요\"와 같은 콘텐츠를 게시하지 마세요. \"아이스로 100달러 버는 방법\"과 같은 내용도 피하세요."
+          },
+          "03": {
+            "title": "부정행위에 가담하지 마세요",
+            "description": "우리는 커뮤니티에서 투명성과 정직성을 중요시합니다. 여러 개의 계정을 만들거나 아이스 네트워크를 조작하려는 부정행위는 용납되지 않을 것입니다."
+          }
+        }
+      }
+    }
+  },
+  "face_auth": {
+    "header": "얼굴 인증",
+    "title": "KYC 단계 #1",
+    "description": "원활한 경험을 위해 얼굴 인증을 추가하고 있습니다. 이 단계는 [[:bold]]초기 KYC 단계 #1[[/:bold]]로서, 미래 Mainnet에서 간편한 확인을 위해 여러분을 준비합니다. \n\n오늘 자신의 신원을 확인하여 앞으로의 원활한 여정을 보장하세요!",
+    "consent": "저는 Ice [[:link]]KYC 약관 및 조건[[/:link]]에 동의합니다.",
+    "confirmation": "이 인증에 사용하는 신분증은 이 계정과 관련된 것과 동일하며 나중에 변경할 수 없음을 확인합니다.",
+    "auth_status": {
+      "loading": {
+        "description": "인증 중이니 기다려 주십시오..."
+      },
+      "success": {
+        "title": "✅ 인증 성공",
+        "description": "신원을 확인해 주셔서 감사합니다. 체크인 세션이 지금 시작됩니다.",
+        "action": "완료"
+      },
+      "failure": {
+        "title": "❌ 인증 실패",
+        "description": "우리는 여러분의 신원을 확인할 수 없었습니다. 적절한 조명이 확보되어 있고 얼굴이 완전히 보이는지 확인한 후 다시 시도하십시오.",
+        "action": "재시도"
+      },
+      "try_later": {
+        "title": "❌ 인증 실패",
+        "description": "우리는 여러분의 신원을 확인할 수 없었습니다. 적절한 조명이 확보되어 있고 얼굴이 완전히 보이는지 확인한 후 1 시간 뒤에 다시 시도하십시오.",
+        "action": "닫기"
+      },
+      "continue": {
+        "title": "😁 KYC 감정 인식",
+        "description": "좋은 일했어요! 셀피를 찍어 첫 번째 단계를 완료했습니다. 이제 표시된 감정을 따라 KYC 프로세스를 계속하세요.",
+        "action": "계속"
+      },
+      "banned": {
+        "title": "❌ 채굴 비활성화",
+        "description": "당신의 신원이 다른 계정과 연관되어 있음을 확인했습니다. 이것이 오류라고 생각한다면 [[:bold]]feedback@ice.io[[/:bold]]로 닉네임과 고품질 셀피를 포함한 이메일을 보내 주세요.",
+        "action": "닫기"
+      }
+    },
+    "emotions_recognition": {
+      "start": "시작",
+      "please_show_this": "이 감정을 보여 주세요",
+      "emotions": {
+        "anger": "분노",
+        "contempt": "경멸",
+        "disgust": "역겨움",
+        "fear": "두려움",
+        "happiness": "행복",
+        "neutral": "중립",
+        "sadness": "슬픔",
+        "surprise": "놀람"
+      }
+    },
+    "device_angle_warning": {
+      "title": "경고",
+      "description": "카메라를 보면서 전화를 곧게 유지해주세요"
     }
   }
 }

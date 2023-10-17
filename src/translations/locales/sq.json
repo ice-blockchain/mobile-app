@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "Mirë se vjen në ice",
-      "description": "[[:ice]] është një valutë dixhitare që mund ta fitosh me anë të telefonit tënd. ice zotërohet dhe operohet nga përdorues të përditshëm si puna jote."
+      "title": "Mirë se vjen në Ice",
+      "description": "[[:ice]] është një valutë dixhitare që mund ta fitosh me anë të telefonit tënd. Ice zotërohet dhe operohet nga përdorues të përditshëm si puna jote."
     },
     "page2": {
       "title": "Miqësore për planetin",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Qëndro lidhur",
-      "description": "Cek [[:iceLogo]] për paraqitjen e përditshme në aplikacionin tonë celular falas, me përdorim të ulët energjie. Cekja përditë siguron që ice të jetë në duart e njerëzve të vërtetë dhe jo botëve artificialë."
+      "description": "Cek [[:iceLogo]] për paraqitjen e përditshme në aplikacionin tonë celular falas, me përdorim të ulët energjie. Cekja përditë siguron që Ice të jetë në duart e njerëzve të vërtetë dhe jo botëve artificialë."
     },
     "page5": {
       "title": "Refero e fito",
@@ -75,14 +75,16 @@
     "tierOne_tab": "Niveli 1",
     "tierTwo_tab": "Niveli 2",
     "empty": {
-      "title": "Aktualisht nuk ke asnjë [[:title]] referim!",
       "contacts": "Aktualisht nuk ke asnjë kontakt në librin telefonik.",
-      "button_title": "Fto miq"
+      "button_title": "Fto miq",
+      "t1": "Në këtë moment nuk keni asnjë referencë T1!",
+      "t2": "Në këtë moment nuk keni asnjë referencë T2!",
+      "team": "Në këtë moment nuk keni asnjë anëtar ekipi!"
     },
     "contacts": {
       "empty_title": "[[:ice]] është më mirë me miq",
       "empty_button_title": "Lejo qasje te kontaktet",
-      "empty_description": "Sinkronizo kontaktet dhe shiko se kush tjetër është i anëtarësuar [[:ice]]. Në të ardhmen, do të kesh mundësi t'i dërgosh ice kujtdo nga kontaktet e tua."
+      "empty_description": "Sinkronizo kontaktet dhe shiko se kush tjetër është i anëtarësuar [[:ice]]. Në të ardhmen, do të kesh mundësi t'i dërgosh Ice kujtdo nga kontaktet e tua."
     },
     "header": {
       "search_placeholder": "Kërko për përdorues",
@@ -105,7 +107,7 @@
       },
       "all_contacts": "Të gjitha kontaktet",
       "invite": "fto",
-      "invitation_text": "Ç'kemi {{name}}, desha të të ftoj të bashkohesh në ice."
+      "invitation_text": "Ç'kemi {{name}}, desha të të ftoj të bashkohesh në Ice."
     },
     "tier_one": {
       "header_list": {
@@ -123,9 +125,9 @@
     "phone": "Telefon",
     "or": "ose",
     "reset_password": "Ricilëso fjalëkalimin",
-    "welcome": "Mirë se vjen në ice",
+    "welcome": "Mirë se vjen në Ice",
     "email": "Posta elektronike",
-    "slogan": "Ricilësimi i Valutës Globale",
+    "slogan": "E ardhmja e zhdrejtëzuar",
     "privacy": "Duke vazhduar, pajtohesh me [[:link]]Kushtet e shërbimit[[/:link]] dhe [[:link]]Politikën e privatësisë[[/:link]]"
   },
   "claimUsername": {
@@ -252,7 +254,9 @@
     "active_inviter": "Ftues aktiv",
     "tier_1_ref": "Referimet e Nivelit 1",
     "tier_2_ref": "Referimet e Nivelit 2",
-    "active_miners": "Referime aktive"
+    "active_miners": "Referime aktive",
+    "team_members": "Anëtarët e ekipit",
+    "active_team_members": "Anëtarët e aktivë të ekipit"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "RANGU GLOBAL",
       "referrals": "REFERIME",
-      "description": "Refero më shumë përdorues dhe fito më shumë [[:ice]]."
+      "description": "Refero më shumë përdorues dhe fito më shumë [[:ice]].",
+      "description_team": "Ftoni më shumë përdorues dhe fitoni më shumë [[:ice]]."
     },
     "referrals": {
       "title": "REFERIME",
       "description": "Statistikat e referimeve për 5 ditët e mëparshme.",
       "no_referrals_description": "Aktualisht nuk ke asnjë referim!",
       "users_tier_1": "Përdoruesit për nivelin 1",
-      "users_tier_2": "Përdoruesit për nivelin 2"
+      "users_tier_2": "Përdoruesit për nivelin 2",
+      "title_team": "EKIPI",
+      "description_team": "Statistikat e ekipit për 5 ditët e fundit",
+      "no_referrals_description_team": "Në këtë moment nuk keni asnjë anëtar ekipi.",
+      "users": "Përdoruesit"
     },
     "adoption": {
       "title": "ADOPTIM",
@@ -322,7 +331,8 @@
       "notifications": "Njoftime",
       "staking": "Staking",
       "stats": "Statistikat",
-      "help": "Ndihmë"
+      "help": "Ndihmë",
+      "tips": "Këshilla"
     },
     "team": {
       "title": "Ekipi",
@@ -423,7 +433,7 @@
         },
         "system": {
           "title": "Sistemi",
-          "description": "Merr njoftime të rëndësishme rreth aplikacionit ice."
+          "description": "Merr njoftime të rëndësishme rreth aplikacionit Ice."
         }
       }
     },
@@ -462,8 +472,8 @@
     "copy_link": "Kopjo lidhmën",
     "more": "Më tepër",
     "copied": "U KOPJUA",
-    "share_message": "Ç'kemi, ☃️Burrë Dëbore! Bashkoju ekipit tim në ice dhe merr 10 monedha ice kur të regjistrohesh duke përdorur kodin tim të referimit:",
-    "share_subject": "Bashkoju ekipit tim në ice",
+    "share_message": "Ç'kemi, ☃️Burrë Dëbore! Bashkoju ekipit tim në Ice dhe merr 10 monedha Ice kur të regjistrohesh duke përdorur kodin tim të referimit:",
+    "share_subject": "Bashkoju ekipit tim në Ice",
     "description": "Përhap fjalën dhe fto miqtë. Ti fiton [[:ice]] për çdo referim të ri që sjell.",
     "share": "Ndaj"
   },
@@ -473,8 +483,10 @@
     "inactive": "Joaktiv",
     "referralType": {
       "T1": "Niveli 1",
-      "T2": "Niveli 2"
-    }
+      "T2": "Niveli 2",
+      "team": "Anëtarët e ekipit"
+    },
+    "team": "Ekipi"
   },
   "personal_information": {
     "first_name": "Emri",
@@ -500,14 +512,14 @@
     "time_left": "Koha e mbetur",
     "mining_rate": "Norma e fitimit",
     "appeal": "Rrit normën e fitimit",
-    "benefits_description": "Pre-stake shpërblimet ice për deri në 5 vjet dhe rrite normën e fitimeve deri në 250%.",
+    "benefits_description": "Pre-stake shpërblimet Ice për deri në 5 vjet dhe rrite normën e fitimeve deri në 250%.",
     "bonus_label": "Bonus për Pre-Staking",
     "period_label": "Periudha e staking",
     "title": "Pre-Staking",
     "current_rate": "Norma aktuale",
     "allocation": "Përpjesëtimi",
     "description": "Staking është një proces që përfshin lënien në zotim të kripto-aseteve të tua për të mbështetur një rrjet me zinxhir blloqesh dhe konfirmuar transaksionet.",
-    "terms_agree": "Pajtohem me [[:ice]] [[:link]]Kushtet e Staking[[/:link]]. Zotërimet e tua ice do të mbyllen për një periudhë të caktuar.",
+    "terms_agree": "Pajtohem me [[:ice]] [[:link]]Kushtet e Staking[[/:link]]. Zotërimet e tua Ice do të mbyllen për një periudhë të caktuar.",
     "stake_now": "Pre-Stake tani!",
     "balance_label": "Shuma e vënë në staking",
     "confirm_title": "Konfirmo Pre-Stake",
@@ -532,8 +544,8 @@
     "good_morning": "Mirëmëngjesi",
     "good_afternoon": "Mirëdita",
     "good_evening": "Mirëmbrëma",
-    "ice": "ice",
-    "ice_per_hour": "ice/o",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/o",
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "o",
@@ -546,7 +558,7 @@
     "views": "{{viewsCount}} shikime"
   },
   "search": {
-    "empty": "Kërko për kontakte, miq dhe anëtarë të ice nga mikro-komuniteti yt.",
+    "empty": "Kërko për kontakte, miq dhe anëtarë të Ice nga mikro-komuniteti yt.",
     "nothing_is_found": "Nuk u gjet asgjë në lidhje me kërkesën tënde.",
     "search_by_country": "Kërko sipas shtetit",
     "search_for_users": "Kërko për përdorues",
@@ -585,7 +597,7 @@
     "resurrection_no_confirm_message": "Do t'i humbasësh [[:amount]] monedhat përgjithmonë. Je i sigurt se dëshiron të vazhdosh?",
     "resurrection_yes_confirm_message": "Ringjalljen mund ta bësh vetëm një herë! Je i sigurt se dëshiron të vazhdosh? Monedhat [[:amount]] do t'i rikthehen shumës në gjendje brenda orës.",
     "delete_account_confirmation_title": "Konfirmo fshirjen",
-    "delete_account_confirmation_text": "Fshirja e llogarisë do t'i heqë përgjithmonë të gjitha të dhënat, përfshirë shumë në gjendje në ice. Dëshiron të vazhdosh?"
+    "delete_account_confirmation_text": "Fshirja e llogarisë do t'i heqë përgjithmonë të gjitha të dhënat, përfshirë shumë në gjendje në Ice. Dëshiron të vazhdosh?"
   },
   "periods": {
     "3_days": "3 ditë",
@@ -667,7 +679,7 @@
     "snowman": {
       "title": "Burrë dëbore",
       "subtitle": "Ndërto një perandori dëbore",
-      "description": "Fito duke u paraqitur çdo 24 orë për të treguar përkushtimin ndaj rrjetit ice dhe vërtetuar se je njeri dhe jo robot."
+      "description": "Fito duke u paraqitur çdo 24 orë për të treguar përkushtimin ndaj rrjetit Ice dhe vërtetuar se je njeri dhe jo robot."
     },
     "ambassador": {
       "title": "Ambasador",
@@ -685,6 +697,44 @@
     "title": "Zgjidh datën"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Përdorni këtë veçori për të ftuar miqtë tuaj të bashkohen në komunitetin Ice. Zgjeroni rrjetin tuaj, ndani eksperiencat dhe fitoni shpërblime së bashku."
+        },
+        "team": {
+          "description": "[[:ice]] është më e mirë me miqtë. Në këtë faqe, mund të shihni gjendjen e anëtarëve të ekipit tuaj. Mund të iu dërgoni edhe mesazhe prej këtu."
+        },
+        "referralscard": {
+          "title": "Karta e ekipit",
+          "description": "Shtypni këtë kartë për të parë zhvillimin e statistikave të anëtarëve të ekipit tuaj në 5 ditët e fundit."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Këtu do të shihni sa anëtarë ekipi keni në total. Sa më shumë njerëz të ftuarit, aq më e larta do të jetë bonusi juaj."
+        },
+        "earnings": {
+          "description": "Bilanci juaj aktual përditësohet çdo orë dhe shfaqet këtu. Përfshin të ardhurat tuaja të drejtpërdrejta, të ardhurat e vendosura dhe të ardhurat nga ekipi juaj."
+        },
+        "segmented_control_tier_one": {
+          "title": "Ekipi",
+          "description": "Këtu mund të shihni listën e personave që keni ftuar për të bashkohen në Rrjetin Ice. Lehtë mund të ndiqni gjendjen e tyre këtu dhe dërgoni njoftime për personat joaktivë."
+        },
+        "active_users": {
+          "description": "Ky është statusi aktual i aktivitetit të anëtarëve të ekipit tuaj gjatë sesionit të kontrollit. Ata konsiderohen të aktivë kur kanë një sesion të kontrollit aktiv."
+        },
+        "ping": {
+          "description": "Njoftoni anëtarët e ekipit tuaj të fillojnë sesionin e tyre të kontrollit. Mund të dërgoni një njoftim për secilën referencë çdo 24 orë."
+        }
+      }
+    },
+    "profile": {
+      "hidden_data": {
+        "title": "Të dhëna të fshehura",
+        "description": "Për të parë se si e shohin profilin tuaj përdoruesit e tjerë, klikoni në ikonën e syrit."
+      }
+    },
     "news": {
       "readmore": {
         "title": "Lexo më shumë",
@@ -702,7 +752,7 @@
       },
       "confirm_phone": {
         "title": "Konfirmo telefonin",
-        "description": "Konfirmo identitetin dhe lejo kontaktet e tua të marrin vesh se edhe ti je anëtar i rrjetit ice. Numri i telefonit nuk do të të bashkëndahet me palë të tjera të treta."
+        "description": "Konfirmo identitetin dhe lejo kontaktet e tua të marrin vesh se edhe ti je anëtar i rrjetit Ice. Numri i telefonit nuk do të të bashkëndahet me palë të tjera të treta."
       },
       "contacts_list": {
         "title": "Lista e kontakteve",
@@ -761,11 +811,11 @@
         "description": "Personalizoji detajet e profilit dhe shikoji të gjithat arritjet dhe distinktivët që ke fituar. Përdor llogaritësin nga këtu, që të mund të përllogaritësh fitimet."
       },
       "earningicestart": {
-        "title": "Nxjerrja e fitimit ice",
+        "title": "Nxjerrja e fitimit Ice",
         "description": "Mund ta nisësh seancën [[:ice]] e paraqitjes çdo 24 orë duke cekur këtë buton. Mos harro të kthehesh përditë dhe të fillosh të nxjerrësh fitime!"
       },
       "earningiceseemore": {
-        "title": "Nxjerrja e fitimit ice",
+        "title": "Nxjerrja e fitimit Ice",
         "description": "Cek sërish për të parë më shumë detaje rreth seancës aktuale të paraqitjes."
       },
       "stats": {
@@ -854,19 +904,13 @@
     "expired_message": "Fatkeqësisht, bonusi i sotëm ka skaduar. Rri në korrent për njoftimin e radhës!",
     "result_title": "Përgëzime"
   },
-  
-  "mining_notice": {
-    "title": "Njoftim",
-    "message": "Faleminderit për interesin në [[:bold]]ice![[/:bold]] Po rafinojmë teknologjinë dhe paraqitja në sistem nuk është në dispozicion për momentin. Tani e ke shansin të fokusohesh në ndërtimin e ekipit dhe zgjerimin e mikro-komunitetit.",
-    "message_footer": "Rri në korrent për përditësime në llogaritë tona në kanalet [[:twitter]]Twitter[[/:twitter]] dhe [[:telegram]]Telegram[[/:telegram]] ."
-  },
   "qr_code": {
     "description": "Skano kodin QR për t'iu bashkuar ekipit tim."
   },
   "social_media": {
     "tiktok": {
       "title": "Bashkohu me ne në TikTok",
-      "description": "Deshëm të viheshim në kontakt dhe t'ju vinim në dijeni për komunitetin tonë të ri në TikTok. Po ndajmë materiale argëtuese dhe informative rreth valutës sonë dixhitale, ice, dhe do të kishim shumë dëshirë të bashkoheshe me ne."
+      "description": "Deshëm të viheshim në kontakt dhe t'ju vinim në dijeni për komunitetin tonë të ri në TikTok. Po ndajmë materiale argëtuese dhe informative rreth valutës sonë dixhitale, Ice, dhe do të kishim shumë dëshirë të bashkoheshe me ne."
     },
     "youtube": {
       "title": "Bashkohu me ne në YouTube",
@@ -874,17 +918,179 @@
     },
     "linkedin": {
       "title": "Bashkohu me ne në LinkedIn",
-      "description": "T'i bashkohesh komunitetit ice në LinkedIn është mënyrë fantastike për të qëndruar i informuar mbi zhvillimet më të fundit dhe për t'u ldihur me individë të një mendjeje që janë po aq të pasionuar pas së ardhmes së valutës dixhitale sa je dhe ti. "
+      "description": "T'i bashkohesh komunitetit Ice në LinkedIn është mënyrë fantastike për të qëndruar i informuar mbi zhvillimet më të fundit dhe për t'u ldihur me individë të një mendjeje që janë po aq të pasionuar pas së ardhmes së valutës dixhitale sa je dhe ti. "
     },
     "facebook": {
       "title": "Bashkohu me ne në Facebook",
       "description_part1": "Ta rekomandojmë së tepërmi ta ndjekësh faqen tonë në Facebook.",
-      "description_part2": "Jo vetëm që do të të ndihmojë të rrish në korrent të gjithçkaje që po ndodh me projektin ice, por është gjithashtu një mënyrë e mirë për t'u lidhur me komunitetin dhe për të qenë pjesë e bisedës."
+      "description_part2": "Jo vetëm që do të të ndihmojë të rrish në korrent të gjithçkaje që po ndodh me projektin Ice, por është gjithashtu një mënyrë e mirë për t'u lidhur me komunitetin dhe për të qenë pjesë e bisedës."
     },
     "instagram": {
       "title": " Instagram",
-      "description_part1": "Ndjekja në Instagram është mënyrë e mirë për të qëndruar në dijeni dhe për t'u lidhur me përdorues të tjerë që janë gjithashtu të pasionuar pas ice",
+      "description_part1": "Ndjekja në Instagram është mënyrë e mirë për të qëndruar në dijeni dhe për t'u lidhur me përdorues të tjerë që janë gjithashtu të pasionuar pas Ice",
       "description_part2": "Përveç kësaj, do të jesh i pari në dijeni të veçorive të reja ose promovimeve që po hedhim në treg."
+    }
+  },
+  "ping_referrals_pop_up": {
+    "title": "Ju lutemi prisni, ndërsa i bëjmë ping të gjithë miqve tuaj · {{count}}"
+  },
+  "creative_library": {
+    "title": "Biblioteka krijuese Ice",
+    "share": "Ndërtoni ekipin tuaj të ëndrrave në rrjetin Ice!",
+    "get_started": {
+      "header": "Ndërtoni ekipin tuaj të ëndrrave",
+      "subtitle": "Filloni në Ice dhe ndërtoni komunitetin tuaj të vogël që zhvillohet",
+      "description": "Bashkohuni me numrin e rritur të shpejtë të përdoruesve të Ice që po ndërtojnë komunitetet e tyre të vogla dhe fitojnë më shumë shpërblime. Mjetet tona promovuese, udhëzuesit dhe këshillat e bëjnë të lehtë shpërndarjen e fjalës dhe ndërtimin e një komuniteti të suksesshëm.",
+      "get_started": "Filloni",
+      "carousel": {
+        "01": {
+          "title": "Bashkohuni",
+          "description": "Shkarkoni aplikacionin tonë, kërkoni emrin tuaj të përdoruesit dhe filloni minierimin.\n\nJu do të bashkoheni me një komunitet global të përdoruesve të Ice të pasionuar për decentralizimin, autonomia dhe fuqinë e njerëzve."
+        },
+        "02": {
+          "title": "Ftoni",
+          "description": "Ftoni audiencën tuaj të bashkohet me Ice dhe të punojë së bashku për të zhbllokuar shpërblimet shtesë.\n\nPërveç kësaj, do të ndihmoni në shpërndarjen e fjalës për përfitimet e decentralizimit dhe të ardhmes së financave."
+        },
+        "03": {
+          "title": "Fitoni",
+          "description": "Rritni shpërblimet tuaja duke zgjeruar rrjetin tuaj dhe nxitur të tjerët të bashkohen me komunitetin e Ice.\n\nBashkohuni me ne në misionin tonë për të revolucionarizuar të ardhmen e financave përmes decentralizimit dhe autonomisë."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Videot",
+        "description": "Përdorni koleksionin tonë të video për të promovuar kodin tuaj të ftimit, peizazhin ose portretin, me ose pa titra, kemi kujdesur për ju.",
+        "action": "Shiko videot"
+      },
+      "02": {
+        "title": "Imazhet",
+        "description": "Një foto ka vlerën e mijëra fjalëve. Mund të zgjidhni nga koleksioni ynë i banereve, burimeve për media sociale, shabllonave dhe maketave të aplikacionit.",
+        "action": "Shiko imazhet"
+      },
+      "03": {
+        "title": "Baneri i futur",
+        "description": "Me banerin tonë të futur, mund të promovoni lehtësisht Ice tek vizitorët e faqes tuaj të internetit dhe t’i ftoni ata të bashkohen me komunitetin tuaj të vogël.",
+        "action": "Instalo banerin"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Ndajeni historinë tuaj",
+        "description": "Ndajeni rrugëtimin tuaj me rrjetin Ice dhe përfitimet e tij të shumta duke shkruar një artikull në gjuhën tuaj.\n\nNdajeni ato në blogun tuaj, në Medium, në Reddit, në Quora, në Blogger dhe në platforma të tjera.\n\nMund të gjeni gjithçka për Ice dhe karakteristikat e tij unike në [[/:link]]Bazën e njohurive[[/:link]], [[/:link]]Faqen kryesore[[/:link]] dhe [[/:link]]Pyetje të shpeshta[[/:link]]."
+      },
+      "spread": {
+        "title": "Shpërndajeni fjalën",
+        "description": "Bashkohuni në bisedë dhe prezantoni rrjetin Ice në forume tuaja të preferuara.\nNisni temat e reja dhe ndajeni mendimet tuaja për financën decentralizuar, të ardhmen e valutës dhe fuqinë e ndërtimit të një mikrokomuniteti me Ice.\n\nBëhuni një ☃️ Djathë dhe nxitni një diskutim mbi potencialin e kësaj valute globale."
+      },
+      "bring": {
+        "title": "Ftoni miqtë tuaj të mbordhë",
+        "description": "Përdorni veçorinë tonë të ftimit të lehtë për të ndarë kodin tuaj personal të ftimit me miqtë tuaj në platformat tuaja të preferuara të mediave sociale."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "Instalimi dhe luajtja për pronarët e faqeve të internetit",
+        "description": "Vendosni rrjetin Ice drejtpërdrejt në faqen tuaj të internetit me banerin tonë të thjeshtë dhe fleksibël JS. Është një përgatitje e shpejtë dhe e lehtë që mund të përshtatet me markën tuaj të faqes tuaj të internetit. Është përkthyer në 50 gjuhë dhe është i kompatibël me çdo platformë faqje të internetit.\n\nKopjoni dhe ngjyrosni kodin në faqen tuaj të internetit dhe filloni të promovoni rrjetin Ice tek vizitorët tuaj sot.",
+        "action": "Instalo banerin"
+      },
+      "mobile": {
+        "title": "Biblioteka për aplikacionet mobile",
+        "description": "Integroni bibliotekën tonë të lehtë për përdorim në aplikacionin tuaj mobil dhe ftoni përdoruesit tuaj të bashkohen me mikrokomunitetin tuaj dhe të fillojnë minierimin.\n\nMe mbështetje për përkthime dhe mundësitë fleksibile të vendosjes, mund të siguroheni që të gjithë përdoruesit tuaj kanë qasje në të njëjtën përvojë të shkëlqyeshme me Ice, pa marrë parasysh ku ndodhen në botë.",
+        "action1": "Biblioteka për Android",
+        "action2": "Biblioteka për React Native"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Praktika të mira",
+        "rules": {
+          "01": {
+            "title": "Jeni autentikë",
+            "description": "Shkruani nga përvoja dhe perspektiva juaj personale. Ndajeni mendimet dhe ndjenjat tuaja të sinqerta lidhur me rrjetin Ice."
+          },
+          "02": {
+            "title": "Përdorni një ton miqësor",
+            "description": "Shkruani sikur po flisni me një mik dhe shmangni përdorimin e gjuhës teknike ose shprehjeve që mund të jenë të vështira për lexuesit për t'u kuptuar."
+          },
+          "03": {
+            "title": "Jeni krijues",
+            "description": "Mos kini frikë të eksperimentoni me lloje të ndryshme të përmbajtjes, si postime blogu, video ose përditësime në media sociale. Argëtohuni dhe inovojeni në mënyrën se si promovoni rrjetin Ice tek audiënca juaj."
+          }
+        }
+      },
+      "bad": {
+        "title": "Praktika të këqija",
+        "rules": {
+          "01": {
+            "title": "Mos dërgoni spam",
+            "description": "I shmangni dërgimin e mesazheve të papritura ose postimin e të njëjtës përmbajtje në platforma të ndryshme. Kjo mund të shihet si ndërhyrje dhe e mërzitshme."
+          },
+          "02": {
+            "title": "Mos mashtroni njerëzit",
+            "description": "Projekti Ice nuk paguan përdoruesit me para, vetëm i shpërblen me monedha Ice. Ju lutemi të shmangni postimin e përmbajtjes si \"Kthejeni monedhat tuaja Ice në para\" ose \"Si të përfitoni 100 dollarë me Ice\" dhe të ngjashme."
+          },
+          "03": {
+            "title": "Mos përfshihuni në veprimtari mashtruese",
+            "description": "Ne vlerësojmë transparencën dhe ndershmërinë në komunitetin tonë. Çdo veprimtari mashtruese si krijimi i shumë llogarive ose përpjekjet për të manipuluar rrjetin Ice nuk do të tolerohen."
+          }
+        }
+      }
+    }
+  },
+  "face_auth": {
+    "header": "Identifikimi i fytyrës",
+    "title": "KYC Hapi #1",
+    "description": "Për një përvojë të pa ndërprerë, ne po shtojmë identifikimin e fytyrës. Ky hap vepron si [[:bold]]Hapi #1 i hershëm KYC[[/:bold]], që ju përgatit për një verifikim më të lehtë në Mainnetin e ardhshëm. \n\nKonfirmoni identitetin tuaj sot për të siguruar një rrugë të qetë përpara!",
+    "consent": "Unë pajtohem me [[:link]]Kushtet dhe Kushtetutat KYC të Ice[[/:link]].",
+    "confirmation": "Unë konfirmoj se identiteti që po përdor për këtë autentifikim do të jetë i njëjti me atë të lidhur me këtë llogari, dhe kjo zgjedhje nuk mund të ndryshohet më vonë.",
+    "auth_status": {
+      "loading": {
+        "description": "Ju lutem prisni ndërsa ju autentifikojmë..."
+      },
+      "success": {
+        "title": "✅ Autentikimi është i suksesshëm",
+        "description": "Faleminderit që konfirmuat identitetin tuaj. Sesioni juaj i check-in do të nis tani.",
+        "action": "Përfunduar"
+      },
+      "failure": {
+        "title": "❌ Autentikimi Dështoi",
+        "description": "Nuk mundëm të verifikojmë identitetin tuaj. Ju lutem sigurohuni që të ketë dritë të mjaftueshme dhe fytyra juaj të jetë plotësisht e dukshme, pastaj provoni përsëri.",
+        "action": "Provo përsëri"
+      },
+      "try_later": {
+        "title": "❌ Autentikimi Dështoi",
+        "description": "Nuk mundëm të verifikojmë identitetin tuaj. Ju lutem sigurohuni që të ketë dritë të mjaftueshme dhe fytyra juaj të jetë plotësisht e dukshme, pastaj provoni përsëri në 1 orë.",
+        "action": "Mbyll"
+      },
+      "continue": {
+        "title": "😁 Verifikimi i emocioneve KYC",
+        "description": "Puna e shkëlqyer! Ju keni përfunduar hapin e parë duke bërë një selfi. Tani le të vazhdojmë duke ndjekur emocionet e treguara për të vazhduar procesin KYC.",
+        "action": "Vazhdo"
+      },
+      "banned": {
+        "title": "❌ Minimizimi i çaktivizuar",
+        "description": "Kemi identifikuar që identiteti juaj është i lidhur me një llogari tjetër. Nëse mendoni se është një gabim, ju lutem dërgoni një email në adresën [[:bold]]feedback@ice.io[[/:bold]] me emrin tuaj të përdoruesit dhe një selfi cilësie të lartë.",
+        "action": "Mbyll"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Fillo",
+      "please_show_this": "Ju lutem tregoni këtë emocion",
+      "emotions": {
+        "anger": "zemërim",
+        "contempt": "përçmim",
+        "disgust": "neveri",
+        "fear": "trembje",
+        "happiness": "gëzim",
+        "neutral": "i qetë",
+        "sadness": "trishtim",
+        "surprise": "çuditje"
+      }
+    },
+    "device_angle_warning": {
+      "title": "Paralajmërim",
+      "description": "Ju lutemi mbani telefonin drejt ndërsa shikoni në kamerë"
     }
   }
 }
