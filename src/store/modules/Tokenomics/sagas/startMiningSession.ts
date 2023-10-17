@@ -4,7 +4,6 @@ import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {ResurrectRequiredData} from '@api/tokenomics/types';
 import {LocalAudio} from '@audio';
-import {ENV} from '@constants/env';
 import {loadLocalAudio} from '@services/audio';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
@@ -19,7 +18,6 @@ import {
 import {openConfirmResurrect} from '@store/modules/Tokenomics/utils/openConfirmResurrect';
 import {openConfirmResurrectNo} from '@store/modules/Tokenomics/utils/openConfirmResurrectNo';
 import {openConfirmResurrectYes} from '@store/modules/Tokenomics/utils/openConfirmResurrectYes';
-import {openMiningNotice} from '@store/modules/Tokenomics/utils/openMiningNotice';
 import {hapticFeedback} from '@utils/device';
 import {getErrorMessage, showError} from '@utils/errors';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
@@ -29,10 +27,6 @@ export function* startMiningSessionSaga(
     typeof TokenomicsActions.START_MINING_SESSION.START.create
   >,
 ) {
-  if (ENV.SHOW_MINING_NOTICE) {
-    yield call(openMiningNotice);
-    return;
-  }
   const forceStartMining: ReturnType<typeof forceStartMiningSelector> =
     yield select(forceStartMiningSelector);
 
