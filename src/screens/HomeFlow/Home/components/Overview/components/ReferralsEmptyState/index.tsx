@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {isLiteTeam} from '@constants/featureFlags';
 import {SearchEmptyIcon} from '@svg/SearchEmptyIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -18,7 +19,9 @@ export const ReferralsEmptyState = () => {
       />
 
       <Text style={styles.description}>
-        {t('home.referrals.no_referrals_description')}
+        {isLiteTeam
+          ? t('home.referrals.no_referrals_description_team')
+          : t('home.referrals.no_referrals_description')}
       </Text>
     </View>
   );

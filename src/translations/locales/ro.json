@@ -75,9 +75,11 @@
     "tierOne_tab": "Nivelul 1",
     "tierTwo_tab": "Nivelul 2",
     "empty": {
-      "title": "Momentan nu ai recomandări pentru [[:title]]!",
       "contacts": "Momentan nu ai contacte în agenda telefonică.",
-      "button_title": "Invită prieteni"
+      "button_title": "Invită prieteni",
+      "t1": "În prezent, nu aveți nicio recomandare T1!",
+      "t2": "În prezent, nu aveți nicio recomandare T2!",
+      "team": "În prezent, nu aveți niciun membru în echipă!"
     },
     "contacts": {
       "empty_title": "[[:ice]] este mai bun cu prietenii",
@@ -252,7 +254,9 @@
     "active_inviter": "Invitator activ",
     "tier_1_ref": "Recomandări nivel 1",
     "tier_2_ref": "Recomandări nivel 2",
-    "active_miners": "Recomandări active"
+    "active_miners": "Recomandări active",
+    "team_members": "Membrii echipei",
+    "active_team_members": "Membrii activi ai echipei"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "POZIȚIA GLOBALĂ",
       "referrals": "RECOMANDĂRI",
-      "description": "Recomandă-ne mai multor utilizatori și câștigă mai mult [[:ice]]."
+      "description": "Recomandă-ne mai multor utilizatori și câștigă mai mult [[:ice]].",
+      "description_team": "Invitați mai mulți utilizatori și câștigați mai mult [[:ice]]."
     },
     "referrals": {
       "title": "RECOMANDĂRI",
       "description": "Statistici privind recomandările pentru ultimele 5 zile.",
       "no_referrals_description": "Momentan nu ai nicio recomandare.",
       "users_tier_1": "Utilizatori nivel 1",
-      "users_tier_2": "Utilizatori nivel 2"
+      "users_tier_2": "Utilizatori nivel 2",
+      "title_team": "ECHIPĂ",
+      "description_team": "Statistici ale echipei pentru ultimele 5 zile",
+      "no_referrals_description_team": "În prezent, nu aveți niciun membru în echipă.",
+      "users": "Utilizatori"
     },
     "adoption": {
       "title": "ADOPTARE",
@@ -474,8 +483,10 @@
     "inactive": "Inactiv",
     "referralType": {
       "T1": "Nivelul 1",
-      "T2": "Nivelul 2"
-    }
+      "T2": "Nivelul 2",
+      "team": "Membrii ai echipei"
+    },
+    "team": "Echipă"
   },
   "personal_information": {
     "first_name": "Prenume",
@@ -1021,7 +1032,7 @@
         "action": "Închideți"
       },
       "continue": {
-        "title": "\uD83D\uDE01 Verificare emoțională KYC",
+        "title": "😁 Verificare emoțională KYC",
         "description": "Lucru excelent! Ați completat primul pas prin a vă face un selfie. Acum, să continuăm urmând emoțiile afișate pentru a continua procesul KYC.",
         "action": "Continuați"
       },

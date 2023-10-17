@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {isLiteTeam} from '@constants/featureFlags';
 import {WELCOME_STEPS, WelcomeStackParamList} from '@navigation/Welcome';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -69,9 +70,12 @@ export const useFinishOnboarding = () => {
   useEffect(() => {
     let slidesToShow: OnboardingSlide[] = [...onboardingSlides];
     if (!canAskNotificationPermission) {
-      slidesToShow = slidesToShow.filter(slide => {
-        return slide.key !== 'notifications';
-      });
+      slidesToShow = slidesToShow.filter(
+        slide => slide.key !== 'notifications',
+      );
+    }
+    if (isLiteTeam) {
+      slidesToShow = slidesToShow.filter(slide => slide.key !== 'referAndEarn');
     }
     setSlides(slidesToShow);
   }, [canAskNotificationPermission]);

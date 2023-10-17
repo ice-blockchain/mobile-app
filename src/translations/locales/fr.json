@@ -75,9 +75,11 @@
     "tierOne_tab": "Niveau 1",
     "tierTwo_tab": "Niveau 2",
     "empty": {
-      "title": "Vous n’avez actuellement aucun parrainage [[:title]] !",
       "contacts": "Vous n’avez actuellement aucun contact dans l’annuaire.",
-      "button_title": "Inviter des amis"
+      "button_title": "Inviter des amis",
+      "t1": "Vous n'avez actuellement aucune recommandation T1 !",
+      "t2": "Vous n'avez actuellement aucune recommandation T2 !",
+      "team": "Vous n'avez actuellement aucun membre dans l'équipe !"
     },
     "contacts": {
       "empty_title": "[[:ice]] , c’est encore mieux avec des amis",
@@ -252,7 +254,9 @@
     "active_inviter": "Invitation active",
     "tier_1_ref": "Parrainages de niveau 1",
     "tier_2_ref": "Parrainages de niveau 2",
-    "active_miners": "Parrainages actifs"
+    "active_miners": "Parrainages actifs",
+    "team_members": "Membres de l'équipe",
+    "active_team_members": "Membres actifs de l'équipe"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "CLASSEMENT MONDIAL",
       "referrals": "PARRAINAGES",
-      "description": "Parrainez plus d’utilisateurs et gagnez plus d’[[:ice]]."
+      "description": "Parrainez plus d’utilisateurs et gagnez plus d’[[:ice]].",
+      "description_team": "Invitez plus d'utilisateurs et gagnez plus de [[:ice]]."
     },
     "referrals": {
       "title": "PARRAINAGES",
       "description": "Statistiques de parrainage pour les cinq jours précédents.",
       "no_referrals_description": "Vous n’avez pas encore de parrainages.",
       "users_tier_1": "Utilisateurs de niveau 1",
-      "users_tier_2": "Utilisateurs de niveau 2"
+      "users_tier_2": "Utilisateurs de niveau 2",
+      "title_team": "ÉQUIPE",
+      "description_team": "Statistiques de l'équipe des 5 derniers jours",
+      "no_referrals_description_team": "Vous n'avez actuellement aucun membre dans l'équipe.",
+      "users": "Utilisateurs"
     },
     "adoption": {
       "title": "ADOPTION",
@@ -474,8 +483,10 @@
     "inactive": "Inactif",
     "referralType": {
       "T1": "Niveau 1",
-      "T2": "Niveau 2"
-    }
+      "T2": "Niveau 2",
+      "team": "Membres de l'équipe"
+    },
+    "team": "Équipe"
   },
   "personal_information": {
     "first_name": "Prénom",
@@ -1021,7 +1032,7 @@
         "action": "Fermer"
       },
       "continue": {
-        "title": "\uD83D\uDE01 Vérification des émotions KYC",
+        "title": "😁 Vérification des émotions KYC",
         "description": "Excellent travail ! Vous avez terminé la première étape en prenant un selfie. Maintenant, continuons en suivant les émotions affichées pour poursuivre votre processus KYC.",
         "action": "Continuer"
       },

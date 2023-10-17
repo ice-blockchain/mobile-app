@@ -75,7 +75,6 @@
     "tierOne_tab": "1 级",
     "tierTwo_tab": "2 级",
     "empty": {
-      "title": "您目前没有任何 [[:title]] 推荐人！",
       "contacts": "您当前通讯录中没有任何联系人。",
       "button_title": "邀请好友"
     },
@@ -1021,7 +1020,7 @@
         "action": "关闭"
       },
       "continue": {
-        "title": "\uD83D\uDE01 KYC 情感验证",
+        "title": "😁 KYC 情感验证",
         "description": "干得好！您已通过自拍完成了第一步。现在，让我们继续按照显示的情感来完成您的 KYC 过程。",
         "action": "继续"
       },

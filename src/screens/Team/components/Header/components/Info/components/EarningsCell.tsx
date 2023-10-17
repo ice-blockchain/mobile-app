@@ -3,6 +3,8 @@
 import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {COLORS} from '@constants/colors';
+import {isLiteTeam} from '@constants/featureFlags';
+import {isTeamEnabledSelector} from '@store/modules/Account/selectors';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {WalletIcon} from '@svg/WalletIcon';
 import {isRTL, t} from '@translations/i18n';
@@ -15,6 +17,7 @@ import {rem} from 'rn-units';
 
 export const EarningsCell = memo(({color = COLORS.white}: {color?: string}) => {
   const balanceSummary = useSelector(balanceSummarySelector);
+  const isTeamEnabled = useSelector(isTeamEnabledSelector);
 
   const NumberComponent = useCallback(
     ({animatedValue}: {animatedValue: number}) => {
@@ -42,7 +45,11 @@ export const EarningsCell = memo(({color = COLORS.white}: {color?: string}) => {
           </Text>
           <View style={styles.bodyContainer}>
             <AnimatedNumberText
-              value={parseNumber(balanceSummary?.totalReferrals || '0')}
+              value={parseNumber(
+                (isLiteTeam && !isTeamEnabled
+                  ? balanceSummary?.t1
+                  : balanceSummary?.totalReferrals) || '0',
+              )}
               NumberComponent={NumberComponent}
             />
             <Text> </Text>

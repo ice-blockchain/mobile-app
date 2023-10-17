@@ -7,8 +7,8 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
 type Props = {
-  valuePercentageB1: number;
-  valuePercentageB2: number;
+  valuePercentageB1: number | null;
+  valuePercentageB2: number | null;
   label: string;
 };
 
@@ -20,17 +20,21 @@ export const UnitedVerticalBar = ({
   return (
     <View>
       <View style={styles.container}>
-        <VerticalBar
-          valuePercentage={valuePercentageB2}
-          showLabel={false}
-          isUnited={true}
-          barStyle={styles.whiteBar}
-        />
-        <VerticalBar
-          valuePercentage={valuePercentageB1}
-          showLabel={false}
-          isUnited={true}
-        />
+        {valuePercentageB2 !== null && (
+          <VerticalBar
+            valuePercentage={valuePercentageB2}
+            showLabel={false}
+            isUnited={true}
+            barStyle={styles.whiteBar}
+          />
+        )}
+        {valuePercentageB1 !== null && (
+          <VerticalBar
+            valuePercentage={valuePercentageB1}
+            showLabel={false}
+            isUnited={true}
+          />
+        )}
       </View>
       <Text style={styles.label}>{label}</Text>
     </View>
@@ -41,6 +45,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row-reverse',
+    justifyContent: 'center',
   },
   label: {
     ...font(8, 11, 'medium', 'white', 'center'),

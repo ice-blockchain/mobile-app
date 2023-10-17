@@ -2,7 +2,12 @@
 
 import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {COLORS} from '@constants/colors';
-import {userReferralCountSelector} from '@store/modules/Referrals/selectors';
+import {isLiteTeam} from '@constants/featureFlags';
+import {isTeamEnabledSelector} from '@store/modules/Account/selectors';
+import {
+  userReferralCountSelector,
+  userT1ReferralSelector,
+} from '@store/modules/Referrals/selectors';
 import {TeamInactiveIcon} from '@svg/TeamInactiveIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -13,7 +18,12 @@ import {rem} from 'rn-units';
 
 export const ReferralsCell = memo(
   ({color = COLORS.white}: {color?: string}) => {
-    const refsCount = useSelector(userReferralCountSelector);
+    const isTeamEnabled = useSelector(isTeamEnabledSelector);
+    const refsCount = useSelector(
+      isLiteTeam && !isTeamEnabled
+        ? userT1ReferralSelector
+        : userReferralCountSelector,
+    );
 
     return (
       <View style={styles.container}>

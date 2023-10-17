@@ -71,7 +71,6 @@
     "tierOne_tab": "Tier 1",
     "tierTwo_tab": "Tier 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
       "title_part2": " referrals!",
       "button_title": "Invite Friends"
     },

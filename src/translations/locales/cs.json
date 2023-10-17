@@ -75,9 +75,11 @@
     "tierOne_tab": "Úroveň 1",
     "tierTwo_tab": "Úroveň 2",
     "empty": {
-      "title": "Ve stupni [[:title]] aktuálně nemáte nikoho doporučeného!",
       "contacts": "V telefonním seznamu aktuálně nemáte žádné přátele.",
-      "button_title": "Pozvěte přátele"
+      "button_title": "Pozvěte přátele",
+      "t1": "V současné době nemáte žádné T1 doporučení!",
+      "t2": "V současné době nemáte žádné T2 doporučení!",
+      "team": "V současné době nemáte žádné členy týmu!"
     },
     "contacts": {
       "empty_title": "[[:ice]] je lepší s přáteli",
@@ -252,7 +254,9 @@
     "active_inviter": "Aktivní v doporučování",
     "tier_1_ref": "Doporučení lidé úrovně 1",
     "tier_2_ref": "Doporučení lidé úrovně 2",
-    "active_miners": "Aktivní doporučení lidé"
+    "active_miners": "Aktivní doporučení lidé",
+    "team_members": "Členové týmu",
+    "active_team_members": "Aktivní členové týmu"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "CELOSVĚTOVÁ PŘÍČKA",
       "referrals": "DOPORUČENÍ LIDÉ",
-      "description": "Doporučte víc lidí a vydělejte si víc [[:ice]]."
+      "description": "Doporučte víc lidí a vydělejte si víc [[:ice]].",
+      "description_team": "Pozvěte více uživatelů a vydělávejte více [[:ice]]."
     },
     "referrals": {
       "title": "DOPORUČENÍ LIDÉ",
       "description": "Statistiky doporučených lidí za předchozích 5 dní.",
       "no_referrals_description": "Aktuálně nemáte nikoho doporučeného.",
       "users_tier_1": "Uživatelé úrovně 1",
-      "users_tier_2": "Uživatelé úrovně 2"
+      "users_tier_2": "Uživatelé úrovně 2",
+      "title_team": "TÝM",
+      "description_team": "Statistiky týmu za posledních 5 dní",
+      "no_referrals_description_team": "V současné době nemáte žádné členy týmu.",
+      "users": "Uživatelé"
     },
     "adoption": {
       "title": "PŘIJETÍ",
@@ -474,8 +483,10 @@
     "inactive": "Neaktivní",
     "referralType": {
       "T1": "Úroveň 1",
-      "T2": "Úroveň 2"
-    }
+      "T2": "Úroveň 2",
+      "team": "Členové týmu"
+    },
+    "team": "Tým"
   },
   "personal_information": {
     "first_name": "Jméno",
@@ -1021,7 +1032,7 @@
         "action": "Zavřít"
       },
       "continue": {
-        "title": "\uD83D\uDE01 KYC Ověření emocí",
+        "title": "😁 KYC Ověření emocí",
         "description": "Skvělá práce! První krok jste dokončili tím, že jste pořídili selfie. Teď pokračujte tím, že budete následovat zobrazené emoce, abyste mohli pokračovat ve svém KYC procesu.",
         "action": "Pokračovat"
       },

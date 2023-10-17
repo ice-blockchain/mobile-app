@@ -2,6 +2,7 @@
 
 import {ReferralType} from '@api/user/types';
 import {stopPropagation} from '@components/KeyboardDismiss';
+import {isLiteTeam} from '@constants/featureFlags';
 import {ActiveUsers} from '@screens/Team/components/TierList/components/Header/components/ActiveUsers';
 import {Earnings} from '@screens/Team/components/TierList/components/Header/components/Earnings';
 import {useActiveUsersWalkthrough} from '@screens/Team/components/TierList/components/Header/hooks/useActiveUsersWalkthrough';
@@ -37,9 +38,11 @@ export const ListHeader = ({referralType, focused}: Props) => {
         <View ref={activeUsersElementRef} onLayout={onActiveUsersElementLayout}>
           <ActiveUsers referralType={referralType} />
         </View>
-        <View ref={earningsElementRef} onLayout={onEarningsElementLayout}>
-          <Earnings referralType={referralType} />
-        </View>
+        {!isLiteTeam && (
+          <View ref={earningsElementRef} onLayout={onEarningsElementLayout}>
+            <Earnings referralType={referralType} />
+          </View>
+        )}
       </View>
     </View>
   );

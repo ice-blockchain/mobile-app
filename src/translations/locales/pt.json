@@ -75,9 +75,11 @@
     "tierOne_tab": "Nível 1",
     "tierTwo_tab": "Nível 2",
     "empty": {
-      "title": "No momento, você não tem nenhuma indicação [[:title]]!",
       "contacts": "No momento, você não tem nenhum contato na agenda.",
-      "button_title": "Convidar amigos"
+      "button_title": "Convidar amigos",
+      "t1": "Atualmente, você não tem nenhuma indicação T1!",
+      "t2": "Atualmente, você não tem nenhuma indicação T2!",
+      "team": "Atualmente, você não tem nenhum membro na equipe!"
     },
     "contacts": {
       "empty_title": "[[:ice]] é melhor com amigos",
@@ -252,7 +254,9 @@
     "active_inviter": "Convocador ativo",
     "tier_1_ref": "Indicados de nível 1",
     "tier_2_ref": "Indicados de nível 2",
-    "active_miners": "Indicados ativos"
+    "active_miners": "Indicados ativos",
+    "team_members": "Membros da equipe",
+    "active_team_members": "Membros ativos da equipe"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "CLASSIFICAÇÃO GLOBAL",
       "referrals": "INDICADOS",
-      "description": "Indique mais usuários e ganhe mais [[:ice]]."
+      "description": "Indique mais usuários e ganhe mais [[:ice]].",
+      "description_team": "Convite mais usuários e ganhe mais [[:ice]]."
     },
     "referrals": {
       "title": "INDICADOS",
       "description": "Estatísticas de indicados referentes aos 5 dias anteriores.",
       "no_referrals_description": "Você ainda não tem nenhuma indicação.",
       "users_tier_1": "Usuários de nível 1",
-      "users_tier_2": "Usuários de nível 2"
+      "users_tier_2": "Usuários de nível 2",
+      "title_team": "EQUIPE",
+      "description_team": "Estatísticas da equipe nos últimos 5 dias",
+      "no_referrals_description_team": "Atualmente, você não tem nenhum membro na equipe.",
+      "users": "Usuários"
     },
     "adoption": {
       "title": "ADOÇÃO",
@@ -474,8 +483,10 @@
     "inactive": "Inativo",
     "referralType": {
       "T1": "Nível 1",
-      "T2": "Nível 2"
-    }
+      "T2": "Nível 2",
+      "team": "Membros da equipe"
+    },
+    "team": "Equipe"
   },
   "personal_information": {
     "first_name": "Nome",
@@ -891,7 +902,6 @@
   "ping_referrals_pop_up": {
     "title": "Por favor, aguarde enquanto fazemos ping em todos os seus amigos · {{count}}"
   },
-
   "creative_library": {
     "title": "Biblioteca Criativa Ice",
     "share": "Construa sua equipe dos sonhos na rede Ice!",
@@ -1022,7 +1032,7 @@
         "action": "Fechar"
       },
       "continue": {
-        "title": "\uD83D\uDE01 Verificação de Emoções KYC",
+        "title": "😁 Verificação de Emoções KYC",
         "description": "Ótimo trabalho! Você concluiu a primeira etapa tirando uma selfie. Agora, vamos continuar seguindo as emoções exibidas para continuar o processo KYC.",
         "action": "Continuar"
       },

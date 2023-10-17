@@ -75,9 +75,11 @@
     "tierOne_tab": "Bậc 1",
     "tierTwo_tab": "Bậc 2",
     "empty": {
-      "title": "Hiện bạn không có bất kỳ lượt giới thiệu [[:title]] nào!",
       "contacts": "Hiện bạn không có bất kỳ địa chỉ liên hệ nào trong danh bạ.",
-      "button_title": "Mời bạn bè"
+      "button_title": "Mời bạn bè",
+      "t1": "Hiện tại bạn không có giới thiệu T1 nào!",
+      "t2": "Hiện tại bạn không có giới thiệu T2 nào!",
+      "team": "Hiện tại bạn không có thành viên trong nhóm nào!"
     },
     "contacts": {
       "empty_title": "[[:ice]] sẽ tốt hơn khi có nhiều bạn bè",
@@ -252,7 +254,9 @@
     "active_inviter": "Người mời đang hoạt động",
     "tier_1_ref": "Lượt giới thiệu bậc 1",
     "tier_2_ref": "Lượt giới thiệu bậc 2",
-    "active_miners": "Lượt giới thiệu đang hoạt động"
+    "active_miners": "Lượt giới thiệu đang hoạt động",
+    "team_members": "Thành viên nhóm",
+    "active_team_members": "Thành viên nhóm hoạt động"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "XẾP HẠNG TOÀN CẦU",
       "referrals": "LƯỢT GIỚI THIỆU",
-      "description": "Giới thiệu thêm người dùng và kiếm được nhiều [[:ice]] hơn."
+      "description": "Giới thiệu thêm người dùng và kiếm được nhiều [[:ice]] hơn.",
+      "description_team": "Mời thêm người dùng và kiếm nhiều hơn [[:ice]]."
     },
     "referrals": {
       "title": "LƯỢT GIỚI THIỆU",
       "description": "Thống kê lượt giới thiệu cho 5 ngày trước.",
       "no_referrals_description": "Bạn chưa có bất kỳ lượt giới thiệu nào.",
       "users_tier_1": "Người dùng bậc 1",
-      "users_tier_2": "Người dùng bậc 2"
+      "users_tier_2": "Người dùng bậc 2",
+      "title_team": "NHÓM",
+      "description_team": "Thống kê nhóm trong 5 ngày gần đây",
+      "no_referrals_description_team": "Hiện tại bạn không có thành viên trong nhóm nào.",
+      "users": "Người dùng"
     },
     "adoption": {
       "title": "ÁP DỤNG",
@@ -474,8 +483,10 @@
     "inactive": "Không hoạt động",
     "referralType": {
       "T1": "Bậc 1",
-      "T2": "Bậc 2"
-    }
+      "T2": "Bậc 2",
+      "team": "Thành viên nhóm"
+    },
+    "team": "Nhóm"
   },
   "personal_information": {
     "first_name": "Tên",
@@ -1021,7 +1032,7 @@
         "action": "Đóng"
       },
       "continue": {
-        "title": "\uD83D\uDE01 Xác minh cảm xúc KYC",
+        "title": "😁 Xác minh cảm xúc KYC",
         "description": "Làm tốt lắm! Bạn đã hoàn thành bước đầu tiên bằng cách tự chụp ảnh selfie. Bây giờ, hãy tiếp tục theo các cảm xúc được hiển thị để tiếp tục quá trình KYC của bạn.",
         "action": "Tiếp tục"
       },

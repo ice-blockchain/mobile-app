@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {User} from '@api/user/types';
+import {isLiteTeam} from '@constants/featureFlags';
 import {SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -85,7 +86,7 @@ export const LadderBar = memo(
                 (!isPrivacyInfoShown || isProfilePrivacyEditMode)
               : hiddenElements.includes('referralCount')
           }
-          onShowInfo={onShowReferralInfo}
+          onShowInfo={isLiteTeam ? undefined : onShowReferralInfo}
         />
         <LadderItem
           title={t('global.level').toUpperCase()}

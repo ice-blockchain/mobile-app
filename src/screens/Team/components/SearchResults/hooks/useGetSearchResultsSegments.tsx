@@ -1,8 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {TeamUserType, User} from '@api/user/types';
+import {isLiteTeam} from '@constants/featureFlags';
 import {useFetchCollection} from '@hooks/useFetchCollection';
 import {AGENDA} from '@screens/Team/constants';
+import {isTeamEnabledSelector} from '@store/modules/Account/selectors';
 import {CollectionActions} from '@store/modules/Collections';
 import {collectionSelector} from '@store/modules/Collections/selectors';
 import {contactsSelector} from '@store/modules/Contacts/selectors';
@@ -25,6 +27,7 @@ export function useGetSearchResultsSegments() {
       action: CollectionActions.SEARCH_USERS,
     });
   const contacts = useSelector(contactsSelector);
+  const isTeamEnabled = useSelector(isTeamEnabledSelector);
 
   const [sections, setSections] = useState<SearchResultsSection[]>([]);
 
@@ -37,9 +40,17 @@ export function useGetSearchResultsSegments() {
       const usersByReferralType = new Map<TeamUserType, (User | Contact)[]>();
       data.forEach((user: User) => {
         if (user.referralType) {
-          const segment = usersByReferralType.get(user.referralType) ?? [];
+          if (user.referralType === 'T2' && isLiteTeam && !isTeamEnabled) {
+            return;
+          }
+          const segmentKey =
+            isLiteTeam &&
+            (user.referralType === 'T1' || user.referralType === 'T2')
+              ? 'TEAM'
+              : user.referralType;
+          const segment = usersByReferralType.get(segmentKey) ?? [];
           segment.push(user);
-          usersByReferralType.set(user.referralType, segment);
+          usersByReferralType.set(segmentKey, segment);
         }
       });
       const searchQueryNormalised = searchQuery.toLowerCase().trim();
@@ -67,7 +78,7 @@ export function useGetSearchResultsSegments() {
       });
       setSections(newSections);
     }
-  }, [data, searchQuery, loading, error, contacts]);
+  }, [data, searchQuery, loading, error, contacts, isTeamEnabled]);
 
   return {sections, loading, error, searchQuery, refresh, refreshing};
 }

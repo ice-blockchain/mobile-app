@@ -75,9 +75,11 @@
     "tierOne_tab": "Tier-1",
     "tierTwo_tab": "Tier-2",
     "empty": {
-      "title": "Sie haben derzeit keine [[:title]] Empfehlungen!",
       "contacts": "Sie haben derzeit keine Kontakte im Telefonbuch.",
-      "button_title": "Freunde einladen"
+      "button_title": "Freunde einladen",
+      "t1": "Du hast derzeit keine T1-Empfehlungen!",
+      "t2": "Du hast derzeit keine T2-Empfehlungen!",
+      "team": "Du hast derzeit keine Teammitglieder!"
     },
     "contacts": {
       "empty_title": "[[:ice]]ist besser mit Freunden",
@@ -252,7 +254,9 @@
     "active_inviter": "Aktiver Einlader",
     "tier_1_ref": "Tier-1-Empfehlungen",
     "tier_2_ref": "Tier-2-Empfehlungen",
-    "active_miners": "Aktive Empfehlungen"
+    "active_miners": "Aktive Empfehlungen",
+    "team_members": "Teammitglieder",
+    "active_team_members": "Aktive Teammitglieder"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "GLOBALER RANG",
       "referrals": "EMPFEHLUNGEN",
-      "description": "Empfehlen Sie mehr Nutzer und verdienen Sie mehr [[:ice]]."
+      "description": "Empfehlen Sie mehr Nutzer und verdienen Sie mehr [[:ice]].",
+      "description_team": "Lade mehr Benutzer ein und verdiene mehr [[:ice]]."
     },
     "referrals": {
       "title": "EMPFEHLUNGEN",
       "description": "Empfehlungsstatistiken für die letzten 5 Tage.",
       "no_referrals_description": "Sie haben noch keine Empfehlungen.",
       "users_tier_1": "Tier-1-Nutzer",
-      "users_tier_2": "Tier-2-Nutzer"
+      "users_tier_2": "Tier-2-Nutzer",
+      "title_team": "TEAM",
+      "description_team": "Teamstatistiken für die letzten 5 Tage",
+      "no_referrals_description_team": "Du hast derzeit keine Teammitglieder.",
+      "users": "Benutzer"
     },
     "adoption": {
       "title": "ADOPTION",
@@ -474,8 +483,10 @@
     "inactive": "Inaktiv",
     "referralType": {
       "T1": "Tier-1",
-      "T2": "Tier-2"
-    }
+      "T2": "Tier-2",
+      "team": "Teammitglieder"
+    },
+    "team": "Team"
   },
   "personal_information": {
     "first_name": "Vornamen",
@@ -1021,7 +1032,7 @@
         "action": "Schließen"
       },
       "continue": {
-        "title": "\uD83D\uDE01 KYC Emotionsverifizierung",
+        "title": "😁 KYC Emotionsverifizierung",
         "description": "Gute Arbeit! Sie haben den ersten Schritt abgeschlossen, indem Sie ein Selfie gemacht haben. Jetzt können Sie fortfahren, indem Sie die angezeigten Emotionen verfolgen, um Ihren KYC-Prozess fortzusetzen.",
         "action": "Weiter"
       },

@@ -75,9 +75,11 @@
     "tierOne_tab": "Livello 1",
     "tierTwo_tab": "Livello 2",
     "empty": {
-      "title": "Al momento non hai nessun [[:title]] presentato!",
       "contacts": "Al momento non ci sono contatti nella rubrica.",
-      "button_title": "Invita amici"
+      "button_title": "Invita amici",
+      "t1": "Attualmente non hai alcun riferimento T1!",
+      "t2": "Attualmente non hai alcun riferimento T2!",
+      "team": "Attualmente non hai alcun membro del team!"
     },
     "contacts": {
       "empty_title": "[[:ice]] è più bello con gli amici",
@@ -252,7 +254,9 @@
     "active_inviter": "Mittente attivo",
     "tier_1_ref": "Affiliazioni di 1° livello",
     "tier_2_ref": "Affiliazioni di 2° livello",
-    "active_miners": "Affiliazioni attive"
+    "active_miners": "Affiliazioni attive",
+    "team_members": "Membri del team",
+    "active_team_members": "Membri attivi del team"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "CLASSIFICA GLOBALE",
       "referrals": "AFFILIAZIONI",
-      "description": "Affilia altri utenti e guadagna di più[[:ice]]."
+      "description": "Affilia altri utenti e guadagna di più[[:ice]].",
+      "description_team": "Invita più utenti e guadagna di più [[:ice]]."
     },
     "referrals": {
       "title": "AFFILIAZIONI",
       "description": "Statistiche degli affiliati relative ai 5 giorni precedenti.",
       "no_referrals_description": "Non hai ancora nessun affiliato.",
       "users_tier_1": "Utenti di 1° livello",
-      "users_tier_2": "Utenti di 2° livello"
+      "users_tier_2": "Utenti di 2° livello",
+      "title_team": "TEAM",
+      "description_team": "Statistiche del team per gli ultimi 5 giorni",
+      "no_referrals_description_team": "Attualmente non hai alcun membro del team.",
+      "users": "Utenti"
     },
     "adoption": {
       "title": "ADOZIONE",
@@ -474,8 +483,10 @@
     "inactive": "Inattivo",
     "referralType": {
       "T1": "Livello 1",
-      "T2": "Livello 2"
-    }
+      "T2": "Livello 2",
+      "team": "Membri del team"
+    },
+    "team": "Team"
   },
   "personal_information": {
     "first_name": "Nome",
@@ -1021,7 +1032,7 @@
         "action": "Chiudi"
       },
       "continue": {
-        "title": "\uD83D\uDE01 Verifica Emozioni KYC",
+        "title": "😁 Verifica Emozioni KYC",
         "description": "Ottimo lavoro! Hai completato il primo passo scattando un selfie. Ora procediamo seguendo le emozioni visualizzate per continuare il processo KYC.",
         "action": "Continua"
       },

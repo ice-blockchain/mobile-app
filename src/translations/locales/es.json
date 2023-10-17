@@ -75,9 +75,11 @@
     "tierOne_tab": "Nivel 1",
     "tierTwo_tab": "Nivel 2",
     "empty": {
-      "title": "¡Actualmente no tienes ninguna recomendación de [[:title]]!",
       "contacts": "Actualmente no tienes ningún contacto en la guía telefónica.",
-      "button_title": "Invita a tus amigos"
+      "button_title": "Invita a tus amigos",
+      "t1": "¡Actualmente no tienes ninguna referencia de T1!",
+      "t2": "¡Actualmente no tienes ninguna referencia de T2!",
+      "team": "¡Actualmente no tienes ningún miembro en el equipo!"
     },
     "contacts": {
       "empty_title": "[[:ice]] es mejor con amigos",
@@ -252,7 +254,9 @@
     "active_inviter": "Invitador activo",
     "tier_1_ref": "Recomendaciones de nivel 1",
     "tier_2_ref": "Recomendaciones de nivel 2",
-    "active_miners": "Recomendaciones activas"
+    "active_miners": "Recomendaciones activas",
+    "team_members": "Miembros del equipo",
+    "active_team_members": "Miembros activos del equipo"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "CLASIFICACIÓN MUNDIAL",
       "referrals": "RECOMENDACIONES",
-      "description": "Invita a más usuarios y gana más [[:ice]]."
+      "description": "Invita a más usuarios y gana más [[:ice]].",
+      "description_team": "Invita a más usuarios y gana más [[:ice]]."
     },
     "referrals": {
       "title": "RECOMENDACIONES",
       "description": "Estadísticas de recomendaciones de los 5 días anteriores.",
       "no_referrals_description": "Aún no tienes ninguna recomendación.",
       "users_tier_1": "Usuarios de nivel 1",
-      "users_tier_2": "Usuarios de nivel 2"
+      "users_tier_2": "Usuarios de nivel 2",
+      "title_team": "EQUIPO",
+      "description_team": "Estadísticas del equipo de los últimos 5 días",
+      "no_referrals_description_team": "Aún no tienes ningún miembro en el equipo.",
+      "users": "Usuarios"
     },
     "adoption": {
       "title": "ADOPCIÓN",
@@ -474,8 +483,10 @@
     "inactive": "Inactivo",
     "referralType": {
       "T1": "Nivel 1",
-      "T2": "Nivel 2"
-    }
+      "T2": "Nivel 2",
+      "team": "Miembros del equipo"
+    },
+    "team": "Equipo"
   },
   "personal_information": {
     "first_name": "Nombre",
@@ -1021,7 +1032,7 @@
         "action": "Cerrar"
       },
       "continue": {
-        "title": "\uD83D\uDE01 Verificación de emociones KYC",
+        "title": "😁 Verificación de emociones KYC",
         "description": "¡Buen trabajo! Ha completado el primer paso tomando un selfie. Ahora, continúe siguiendo las emociones que se muestran para continuar con su proceso KYC.",
         "action": "Continuar"
       },

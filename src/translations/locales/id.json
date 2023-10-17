@@ -75,9 +75,11 @@
     "tierOne_tab": "Tingkat 1",
     "tierTwo_tab": "Tingkat 2",
     "empty": {
-      "title": "Saat ini Anda tidak memiliki rujukan [[:title]]!",
       "contacts": "Saat ini Anda tidak memiliki kontak di buku telepon.",
-      "button_title": "Undang Teman"
+      "button_title": "Undang Teman",
+      "t1": "Saat ini Anda tidak memiliki referensi T1 apa pun!",
+      "t2": "Saat ini Anda tidak memiliki referensi T2 apa pun!",
+      "team": "Saat ini Anda tidak memiliki anggota tim apa pun!"
     },
     "contacts": {
       "empty_title": "[[:ice]] lebih seru bersama teman",
@@ -252,7 +254,9 @@
     "active_inviter": "Pengundang aktif",
     "tier_1_ref": "Rujukan tingkat 1",
     "tier_2_ref": "Rujukan tingkat 2",
-    "active_miners": "Rujukan aktif"
+    "active_miners": "Rujukan aktif",
+    "team_members": "Anggota tim",
+    "active_team_members": "Anggota tim aktif"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "PERINGKAT GLOBAL",
       "referrals": "RUJUKAN",
-      "description": "Rujuk lebih banyak pengguna dan dapatkan lebih banyak [[:ice]]."
+      "description": "Rujuk lebih banyak pengguna dan dapatkan lebih banyak [[:ice]].",
+      "description_team": "Undang lebih banyak pengguna dan hasilkan lebih banyak [[:ice]]."
     },
     "referrals": {
       "title": "RUJUKAN",
       "description": "Statistik rujukan selama 5 hari sebelumnya.",
       "no_referrals_description": "Anda belum memiliki rujukan.",
       "users_tier_1": "Pengguna tingkat 1",
-      "users_tier_2": "Pengguna tingkat 2"
+      "users_tier_2": "Pengguna tingkat 2",
+      "title_team": "TIM",
+      "description_team": "Statistik tim selama 5 hari terakhir",
+      "no_referrals_description_team": "Saat ini Anda tidak memiliki anggota tim apa pun.",
+      "users": "Pengguna"
     },
     "adoption": {
       "title": "ADOPSI",
@@ -474,8 +483,10 @@
     "inactive": "Tidak aktif",
     "referralType": {
       "T1": "Tingkat 1",
-      "T2": "Tingkat 2"
-    }
+      "T2": "Tingkat 2",
+      "team": "Anggota tim"
+    },
+    "team": "Tim"
   },
   "personal_information": {
     "first_name": "Nama depan",
@@ -1021,7 +1032,7 @@
         "action": "Tutup"
       },
       "continue": {
-        "title": "\uD83D\uDE01 Verifikasi Emosi KYC",
+        "title": "😁 Verifikasi Emosi KYC",
         "description": "Bagus! Anda telah menyelesaikan langkah pertama dengan mengambil selfie. Sekarang, mari lanjutkan dengan mengikuti emosi yang ditampilkan untuk melanjutkan proses KYC Anda.",
         "action": "Lanjutkan"
       },

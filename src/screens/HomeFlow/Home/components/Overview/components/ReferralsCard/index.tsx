@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {isLiteTeam} from '@constants/featureFlags';
 import {Images} from '@images';
 import {CardBase} from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
 import {ReferralsEmptyState} from '@screens/HomeFlow/Home/components/Overview/components/ReferralsEmptyState';
+import {isTeamEnabledSelector} from '@store/modules/Account/selectors';
 import {isSplashHiddenSelector} from '@store/modules/AppCommon/selectors';
 import {
   userReferralCountSelector,
@@ -26,6 +28,7 @@ interface Props {
 }
 
 export const ReferralsCard = ({sharedIsCollapsed}: Props) => {
+  const isTeamEnabled = useSelector(isTeamEnabledSelector);
   const userReferralCount = useSelector(userReferralCountSelector);
   const userT1ReferralCount = useSelector(userT1ReferralSelector);
   const userT2ReferralCount = useSelector(userT2ReferralSelector);
@@ -38,9 +41,13 @@ export const ReferralsCard = ({sharedIsCollapsed}: Props) => {
   return (
     <CardBase
       backgroundImageSource={Images.backgrounds.referralsCardBg}
-      headerTitle={t('home.referrals.title')}
+      headerTitle={
+        isLiteTeam ? t('home.referrals.title_team') : t('home.referrals.title')
+      }
       headerTitleIcon={<TrophyIcon fill={COLORS.white} />}
-      HeaderValue={formatNumber(userReferralCount)}
+      HeaderValue={formatNumber(
+        isLiteTeam && !isTeamEnabled ? userT1ReferralCount : userReferralCount,
+      )}
       headerValueIcon={<FriendsIcon fill={COLORS.white} />}
       sharedIsCollapsed={sharedIsCollapsed}>
       {userReferralCount === 0 ? (
@@ -50,22 +57,34 @@ export const ReferralsCard = ({sharedIsCollapsed}: Props) => {
           <View style={styles.body}>
             <View style={styles.column}>
               <Text style={styles.labelText}>
-                {t('home.referrals.users_tier_1')}
+                {isLiteTeam
+                  ? t('home.referrals.users')
+                  : t('home.referrals.users_tier_1')}
               </Text>
               <Text style={styles.valueText}>
-                {formatNumber(userT1ReferralCount)}
+                {formatNumber(
+                  isLiteTeam && isTeamEnabled
+                    ? userReferralCount
+                    : userT1ReferralCount,
+                )}
               </Text>
             </View>
-            <View style={styles.column}>
-              <Text style={styles.labelText}>
-                {t('home.referrals.users_tier_2')}
-              </Text>
-              <Text style={styles.valueText}>
-                {formatNumber(userT2ReferralCount)}
-              </Text>
-            </View>
+            {!isLiteTeam && (
+              <View style={styles.column}>
+                <Text style={styles.labelText}>
+                  {t('home.referrals.users_tier_2')}
+                </Text>
+                <Text style={styles.valueText}>
+                  {formatNumber(userT2ReferralCount)}
+                </Text>
+              </View>
+            )}
           </View>
-          <Text style={styles.noteText}>{t('home.referrals.description')}</Text>
+          <Text style={styles.noteText}>
+            {isLiteTeam
+              ? t('home.referrals.description_team')
+              : t('home.referrals.description')}
+          </Text>
         </>
       )}
     </CardBase>

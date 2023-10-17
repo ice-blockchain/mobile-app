@@ -75,9 +75,11 @@
     "tierOne_tab": "Vlak 1",
     "tierTwo_tab": "Vlak 2",
     "empty": {
-      "title": "Jy het tans geen [[:title]] verwysings nie!",
       "contacts": "Jy het tans geen kontakte in die telefoonboek nie.",
-      "button_title": "Nooi vriende"
+      "button_title": "Nooi vriende",
+      "t1": "Jy het tans geen T1 verwysings nie!",
+      "t2": "Jy het tans geen T2 verwysings nie!",
+      "team": "Jy het tans geen spanlede nie!"
     },
     "contacts": {
       "empty_title": "[[:ice]] is beter met vriende",
@@ -252,7 +254,9 @@
     "active_inviter": "Aktiewe nooier",
     "tier_1_ref": "Vlak 1 verwysings",
     "tier_2_ref": "Vlak 2 verwysings",
-    "active_miners": "Aktiewe verwysings"
+    "active_miners": "Aktiewe verwysings",
+    "team_members": "Spanlede",
+    "active_team_members": "Aktiewe spanlede"
   },
   "home": {
     "wallet": {
@@ -263,14 +267,19 @@
     "pioneer": {
       "rank": "GLOBALE RANGORDE",
       "referrals": "VERWYSINGS",
-      "description": "Verwys meer gebruikers en verdien meer [[:ice]]."
+      "description": "Verwys meer gebruikers en verdien meer [[:ice]].",
+      "description_team": "Nooi meer gebruikers uit en verdien meer [[:ice]]."
     },
     "referrals": {
       "title": "VERWYSINGS",
       "description": "Verwysingstatistieke vir die vorige 5 dae.",
       "no_referrals_description": "Jy het tans geen verwysings nie!",
       "users_tier_1": "Gebruikersvlak 1",
-      "users_tier_2": "Gebruikersvlak 2"
+      "users_tier_2": "Gebruikersvlak 2",
+      "title_team": "SPAN",
+      "description_team": "Spanstatistieke vir die vorige 5 dae",
+      "no_referrals_description_team": "Jy het nog geen spanlede nie.",
+      "users": "Gebruikers"
     },
     "adoption": {
       "title": "AANNEEMING",
@@ -474,8 +483,10 @@
     "inactive": "Onaktief",
     "referralType": {
       "T1": "Vlak 1",
-      "T2": "Vlak 2"
-    }
+      "T2": "Vlak 2",
+      "team": "Spanlede"
+    },
+    "team": "Span"
   },
   "personal_information": {
     "first_name": "Voornaam",
@@ -1021,7 +1032,7 @@
         "action": "Sluit af"
       },
       "continue": {
-        "title": "\uD83D\uDE01 KYC-emosieverifikasie",
+        "title": "😁 KYC-emosieverifikasie",
         "description": "Fantasties! Jy het die eerste stap voltooi deur 'n selfie te neem. Nou, gaan voort deur die getoonde emosies te volg om jou KYC-proses voort te sit.",
         "action": "Gaan voort"
       },
