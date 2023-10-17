@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "歡迎來到 ice",
-      "description": "[[:ice]] 是一款能用手機賺取的虛擬貨幣。ice 被像您一樣的日常使用者擁有與管理。"
+      "title": "歡迎來到 Ice",
+      "description": "[[:ice]] 是一款能用手機賺取的虛擬貨幣。Ice 被像您一樣的日常使用者擁有與管理。"
     },
     "page2": {
       "title": "環境友善",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "保持聯繫",
-      "description": "點擊 [[:iceLogo]] 進行每日簽到，使用我們免費、低耗能的手機應用程式。每日點擊可確保 ice 流入真人手中，而不是機器人。"
+      "description": "點擊 [[:iceLogo]] 進行每日簽到，使用我們免費、低耗能的手機應用程式。每日點擊可確保 Ice 流入真人手中，而不是機器人。"
     },
     "page5": {
       "title": "推薦與獎勵",
@@ -82,7 +82,7 @@
     "contacts": {
       "empty_title": "[[:ice]] 與好友一起更有趣",
       "empty_button_title": "允許存取聯絡人",
-      "empty_description": "同步聯絡人，看看有誰已在使用 [[:ice]]。 之後您將能傳送 ice 給任何一個聯絡人。"
+      "empty_description": "同步聯絡人，看看有誰已在使用 [[:ice]]。 之後您將能傳送 Ice 給任何一個聯絡人。"
     },
     "header": {
       "search_placeholder": "尋找使用者",
@@ -105,7 +105,7 @@
       },
       "all_contacts": "所有聯絡人",
       "invite": "邀請",
-      "invitation_text": "嗨 {{name}}，我想邀請你加入 ice。"
+      "invitation_text": "嗨 {{name}}，我想邀請你加入 Ice。"
     },
     "tier_one": {
       "header_list": {
@@ -123,7 +123,7 @@
     "phone": "電話",
     "or": "或",
     "reset_password": "重置密碼",
-    "welcome": "歡迎來到 ice",
+    "welcome": "歡迎來到 Ice",
     "email": "電子郵件",
     "slogan": "去中心化的未來",
     "privacy": "選擇繼續即表示您同意我們的[[:link]]服務條款[[/:link]]和[[:link]]隱私政策[[/:link]]"
@@ -361,7 +361,7 @@
     "feedback_title": "意見回饋",
     "feedback_description": "與我們分享您的想法。",
     "invite_title": "邀請一個好友",
-    "invite_description": "邀請好友，賺取額外 ice。",
+    "invite_description": "邀請好友，賺取額外 Ice。",
     "delete_title": "刪除帳號",
     "delete_description": "清除您的帳號。",
     "delete_confirmation_title": "確定要移除帳號嗎？",
@@ -424,7 +424,7 @@
         },
         "system": {
           "title": "系統",
-          "description": "接收關於 ice 應用程式的重要通知。"
+          "description": "接收關於 Ice 應用程式的重要通知。"
         }
       }
     },
@@ -463,8 +463,8 @@
     "copy_link": "複製連結",
     "more": "更多",
     "copied": "已複製",
-    "share_message": "嗨☃️ 雪人！ 加入我的 ice 團隊，使用我的推薦碼註冊，即可獲得 10 ice 幣：",
-    "share_subject": "加入我的 ice 團隊",
+    "share_message": "嗨☃️ 雪人！ 加入我的 Ice 團隊，使用我的推薦碼註冊，即可獲得 10 Ice 幣：",
+    "share_subject": "加入我的 Ice 團隊",
     "description": "分享出去並邀請好友。 每推薦一個新人加入都能賺取 [[:ice]]。",
     "share": "分享"
   },
@@ -501,14 +501,14 @@
     "time_left": "剩餘時間",
     "mining_rate": "收益率",
     "appeal": "提升您的收益率",
-    "benefits_description": "預先質押您的 ice 獎勵，期限最長 5 年，收益率最高可提升 250%。",
+    "benefits_description": "預先質押您的 Ice 獎勵，期限最長 5 年，收益率最高可提升 250%。",
     "bonus_label": "預先質押獎勵",
     "period_label": "質押期間",
     "title": "預先質押",
     "current_rate": "目前利率",
     "allocation": "分配",
     "description": "質押是一段會將您的加密資產用於支持區塊鏈網路和確認交易的過程。",
-    "terms_agree": "我同意[[:ice]][[:link]]質押條款[[/:link]]。 選定期間內，您持有的 ice 將被鎖定。",
+    "terms_agree": "我同意[[:ice]][[:link]]質押條款[[/:link]]。 選定期間內，您持有的 Ice 將被鎖定。",
     "stake_now": "立刻預先質押！",
     "balance_label": "質押餘額",
     "confirm_title": "確認預先質押",
@@ -533,8 +533,8 @@
     "good_morning": "早安",
     "good_afternoon": "下午好",
     "good_evening": "晚安",
-    "ice": "ice",
-    "ice_per_hour": "ice/小時",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/小時",
     "seconds_short": "秒",
     "minutes_short": "分",
     "hours_short": "時",
@@ -547,7 +547,7 @@
     "views": "{{viewsCount}} 點閱數"
   },
   "search": {
-    "empty": "搜尋聯絡人、ice 好友和您的微型社群成員。",
+    "empty": "搜尋聯絡人、Ice 好友和您的微型社群成員。",
     "nothing_is_found": "未找到符合查詢的結果。",
     "search_by_country": "以國家搜尋",
     "search_for_users": "以使用者搜尋",
@@ -586,7 +586,7 @@
     "resurrection_no_confirm_message": "您將永遠失去您的 [[:amount]] 幣。 確定要繼續嗎？",
     "resurrection_yes_confirm_message": "您只能復活一次！ 確定要繼續嗎？ [[:amount]] 幣將於接下來一小時內歸還至您的餘額。",
     "delete_account_confirmation_title": "確認刪除",
-    "delete_account_confirmation_text": "刪除帳號將永久消除您的數據，包含您的 ice 餘額。 要繼續進行嗎？"
+    "delete_account_confirmation_text": "刪除帳號將永久消除您的數據，包含您的 Ice 餘額。 要繼續進行嗎？"
   },
   "periods": {
     "3_days": "3 天",
@@ -668,7 +668,7 @@
     "snowman": {
       "title": "雪人",
       "subtitle": "打造冰雪帝國",
-      "description": "每 24 小時簽到一次，展示您對 ice 網路的忠誠，並證明您是人類，不是機器人。"
+      "description": "每 24 小時簽到一次，展示您對 Ice 網路的忠誠，並證明您是人類，不是機器人。"
     },
     "ambassador": {
       "title": "大使",
@@ -709,7 +709,7 @@
       },
       "confirm_phone": {
         "title": "確認電話",
-        "description": "確認您的身分，並允許您的聯絡人得知您也是 ice 網路的一員。 您的電話號碼不會與第三方分享。"
+        "description": "確認您的身分，並允許您的聯絡人得知您也是 Ice 網路的一員。 您的電話號碼不會與第三方分享。"
       },
       "contacts_list": {
         "title": "聯絡人清單",
@@ -768,11 +768,11 @@
         "description": "自訂您的個人檔案詳細資訊，查看已獲得的所有成就和徽章。 從這裡使用計算機，以估計您的收益。"
       },
       "earningicestart": {
-        "title": "賺取 ice",
+        "title": "賺取 Ice",
         "description": "點擊此按鈕，每 24 小時開始一次 [[:ice]] 簽到時段。 別忘了每天回來並開始賺錢！"
       },
       "earningiceseemore": {
-        "title": "賺取 ice",
+        "title": "賺取 Ice",
         "description": "再次點擊以查看關於您當前簽到時段的詳細資訊。"
       },
       "stats": {
@@ -867,24 +867,24 @@
   "social_media": {
     "tiktok": {
       "title": "加入我們的 TikTok",
-      "description": "我們想通知並讓您知道我們在 TikTok 上有個令人興奮的新社群。 我們將分享關於我們數位貨幣 ice 的有趣且豐富的資訊內容，希望您能加入我們！"
+      "description": "我們想通知並讓您知道我們在 TikTok 上有個令人興奮的新社群。 我們將分享關於我們數位貨幣 Ice 的有趣且豐富的資訊內容，希望您能加入我們！"
     },
     "youtube": {
       "title": "加入我們的 YouTube",
-      "description": "從賺取 ice 的教學，一直到新功能的更新，甚至還有有趣的社群內容，我們的 YouTube 頻道能讓您隨時得知最新資訊。"
+      "description": "從賺取 Ice 的教學，一直到新功能的更新，甚至還有有趣的社群內容，我們的 YouTube 頻道能讓您隨時得知最新資訊。"
     },
     "linkedin": {
       "title": "加入我們的 LinkedIn",
-      "description": "加入 LinkedIn 上的 ice 社群是獲得最新發展的消息，並與志同道合的人們建立聯繫的絕佳途徑，這些人跟你一樣對數位貨幣的未來充滿熱情。"
+      "description": "加入 LinkedIn 上的 Ice 社群是獲得最新發展的消息，並與志同道合的人們建立聯繫的絕佳途徑，這些人跟你一樣對數位貨幣的未來充滿熱情。"
     },
     "facebook": {
       "title": "加入我們的 Facebook",
       "description_part1": "我們強烈建議您追蹤我們的 Facebook 專頁。",
-      "description_part2": "這不僅能幫助您掌握 ice 專案的最新動態，也是與我們的社群聯繫並參與對話的好方法。"
+      "description_part2": "這不僅能幫助您掌握 Ice 專案的最新動態，也是與我們的社群聯繫並參與對話的好方法。"
     },
     "instagram": {
       "title": "加入我們的 Instagram",
-      "description_part1": "在 Instagram 關注我們來得知最新消息，並與其他同樣對 ice 充滿熱情的使用者保持聯繫。",
+      "description_part1": "在 Instagram 關注我們來得知最新消息，並與其他同樣對 Ice 充滿熱情的使用者保持聯繫。",
       "description_part2": "此外，您還能在第一時間知道我們將推出的新功能與促銷。"
     }
   },

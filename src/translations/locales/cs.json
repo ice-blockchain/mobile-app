@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "Vítá vás ice",
-      "description": "[[:ice]] je digitální měna, kterou můžete vydělávat přes svůj telefon. ice vlastní a provozují běžní uživatelé, jako jste vy."
+      "title": "Vítá vás Ice",
+      "description": "[[:ice]] je digitální měna, kterou můžete vydělávat přes svůj telefon. Ice vlastní a provozují běžní uživatelé, jako jste vy."
     },
     "page2": {
       "title": "Šetrný k planetě",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Zůstaňte ve spojení",
-      "description": "Ohlaste se klepnutím na [[:iceLogo]] každý den v naší bezplatné a energeticky nenáročné mobilní aplikaci. Vaše každodenní klepnutí zajistí, že ice budou mít v rukou lidé, a ne boti."
+      "description": "Ohlaste se klepnutím na [[:iceLogo]] každý den v naší bezplatné a energeticky nenáročné mobilní aplikaci. Vaše každodenní klepnutí zajistí, že Ice budou mít v rukou lidé, a ne boti."
     },
     "page5": {
       "title": "Vydělávejte doporučováním",
@@ -82,7 +82,7 @@
     "contacts": {
       "empty_title": "[[:ice]] je lepší s přáteli",
       "empty_button_title": "Povolit přístup ke kontaktům",
-      "empty_description": "Synchronizujte kontakty a zjistěte, kdo už [[:ice]] má. V budoucnu budete moci poslat ice komukoliv z vašich kontaktů."
+      "empty_description": "Synchronizujte kontakty a zjistěte, kdo už [[:ice]] má. V budoucnu budete moci poslat Ice komukoliv z vašich kontaktů."
     },
     "header": {
       "search_placeholder": "Hledat uživatele",
@@ -105,7 +105,7 @@
       },
       "all_contacts": "Všechny kontakty",
       "invite": "pozvat",
-      "invitation_text": "Ahoj {{name}}, chci ti nabídnout, ať se přidáš k ice."
+      "invitation_text": "Ahoj {{name}}, chci ti nabídnout, ať se přidáš k Ice."
     },
     "tier_one": {
       "header_list": {
@@ -123,7 +123,7 @@
     "phone": "Telefon",
     "or": "nebo",
     "reset_password": "Obnovení hesla",
-    "welcome": "Vítá vás ice",
+    "welcome": "Vítá vás Ice",
     "email": "E-mail",
     "slogan": "Decentralizovaná budoucnost",
     "privacy": "Pokračováním vyjadřujete souhlas s našimi [[:link]]Podmínkami služby[[/:link]] a [[:link]]Zásadami ochrany osobních údajů[[/:link]]"
@@ -361,7 +361,7 @@
     "feedback_title": "Odeslat zpětnou vazbu",
     "feedback_description": "Řekněte nám, co si myslíte.",
     "invite_title": "Pozvat přátele",
-    "invite_description": "Pozvěte přátele a vydělejte další ice.",
+    "invite_description": "Pozvěte přátele a vydělejte další Ice.",
     "delete_title": "Smazat účet",
     "delete_description": "Odstranění účtu.",
     "delete_confirmation_title": "Opravdu chcete účet odstranit?",
@@ -424,7 +424,7 @@
         },
         "system": {
           "title": "Systém",
-          "description": "Dostávejte důležitá oznámení o aplikaci ice."
+          "description": "Dostávejte důležitá oznámení o aplikaci Ice."
         }
       }
     },
@@ -463,8 +463,8 @@
     "copy_link": "Kopírovat odkaz",
     "more": "Další",
     "copied": "ZKOPÍROVÁNO",
-    "share_message": "Ahoj ☃️ sněhuláku! Přidej se ke mně do týmu na ice. Když při registraci použiješ tenhle referenční kód, dostaneš 10 ice coinů:",
-    "share_subject": "Přidej se do mého ice týmu",
+    "share_message": "Ahoj ☃️ sněhuláku! Přidej se ke mně do týmu na Ice. Když při registraci použiješ tenhle referenční kód, dostaneš 10 Ice coinů:",
+    "share_subject": "Přidej se do mého Ice týmu",
     "description": "Šiř informace a zvi svoje kámoše. Za každého přivedeného člověka si vyděláš [[:ice]].",
     "share": "Sdílet"
   },
@@ -501,14 +501,14 @@
     "time_left": "Zbývající čas",
     "mining_rate": "Výdělková sazba",
     "appeal": "Nakopněte svou výdělkovou sazbu",
-    "benefits_description": "Zapněte pre-staking svých odměn na ice až na 5 let a zvyšte svou výdělkovou sazbu až o 250 %.",
+    "benefits_description": "Zapněte pre-staking svých odměn na Ice až na 5 let a zvyšte svou výdělkovou sazbu až o 250 %.",
     "bonus_label": "Bonus za pre-staking",
     "period_label": "Doba stakování",
     "title": "Pre-Staking",
     "current_rate": "Aktuální sazba",
     "allocation": "Alokace",
     "description": "Staking je proces, při kterém svá krypto aktiva svěřujete na určitou dobu do úschovy a podporujete tak blockchainovou síť a potvrzování transakcí.",
-    "terms_agree": "Souhlasím s [[:link]]Podmínkami stakingu[[/:link]] [[:ice]]. Vaše prostředky ice budou na zvolenou dobu uzamčeny.",
+    "terms_agree": "Souhlasím s [[:link]]Podmínkami stakingu[[/:link]] [[:ice]]. Vaše prostředky Ice budou na zvolenou dobu uzamčeny.",
     "stake_now": "Pre-stakujte právě teď!",
     "balance_label": "Stakovaný zůstatek",
     "confirm_title": "Potvrdit pre-staking",
@@ -533,8 +533,8 @@
     "good_morning": "Dobré ráno",
     "good_afternoon": "Dobré odpoledne",
     "good_evening": "Dobrý večer",
-    "ice": "ice",
-    "ice_per_hour": "ice/h",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/h",
     "seconds_short": "s",
     "minutes_short": "min",
     "hours_short": "h",
@@ -547,7 +547,7 @@
     "views": "{{viewsCount}} zobrazení"
   },
   "search": {
-    "empty": "Hledejte kontakty, přátele na ice a členy vaší mikrokomunity.",
+    "empty": "Hledejte kontakty, přátele na Ice a členy vaší mikrokomunity.",
     "nothing_is_found": "Pro váš dotaz nebylo nic nalezeno.",
     "search_by_country": "Hledat podle země",
     "search_for_users": "Hledat uživatele",
@@ -586,7 +586,7 @@
     "resurrection_no_confirm_message": "Navždy přijdete o [[:amount]] coinů. Opravdu chcete pokračovat?",
     "resurrection_yes_confirm_message": "Vzkřísit se můžete nechat pouze jednou! Opravdu chcete pokračovat? [[:amount]] coinů se během nadcházející hodiny připíše zpět k vašemu zůstatku.",
     "delete_account_confirmation_title": "Potvrďte smazání",
-    "delete_account_confirmation_text": "Odstraněním účtu dojde k trvalému smazání všech vašich dat včetně zůstatku ice. Chcete pokračovat?"
+    "delete_account_confirmation_text": "Odstraněním účtu dojde k trvalému smazání všech vašich dat včetně zůstatku Ice. Chcete pokračovat?"
   },
   "periods": {
     "3_days": "3 dny",
@@ -668,7 +668,7 @@
     "snowman": {
       "title": "Sněhulák",
       "subtitle": "Vybudujte sněžné impérium",
-      "description": "Vydělávejte tím, že se každých 24 hodin ohlásíte a ukážete tak svoji oddanost síti ice a to, že jste člověk, a ne robot. "
+      "description": "Vydělávejte tím, že se každých 24 hodin ohlásíte a ukážete tak svoji oddanost síti Ice a to, že jste člověk, a ne robot. "
     },
     "ambassador": {
       "title": "Ambasador",
@@ -709,7 +709,7 @@
       },
       "confirm_phone": {
         "title": "Potvrzení telefonu",
-        "description": "Potvrďte svou identitu a umožněte kontaktům zjistit, že jste členem sítě ice. Vaše telefonní číslo nebude sdíleno s jinými třetími stranami."
+        "description": "Potvrďte svou identitu a umožněte kontaktům zjistit, že jste členem sítě Ice. Vaše telefonní číslo nebude sdíleno s jinými třetími stranami."
       },
       "contacts_list": {
         "title": "Seznam kontaktů",
@@ -768,11 +768,11 @@
         "description": "Přizpůsobujte detaily profilu a prohlížejte všechny své úspěchy a odznaky. Tady můžete využít kalkulačku a udělat si odhad výdělků."
       },
       "earningicestart": {
-        "title": "Vydělávání ice",
+        "title": "Vydělávání Ice",
         "description": "Každých 24 hodin můžete klepnutím na toto tlačítko zahájit ohlašovací relaci [[:ice]]. Nezapomeňte se každý den vrátit a začít vydělávat!"
       },
       "earningiceseemore": {
-        "title": "Vydělávání ice",
+        "title": "Vydělávání Ice",
         "description": "Opětovným klepnutím zobrazíte více podrobností o své aktuální ohlašovací relaci."
       },
       "stats": {
@@ -867,11 +867,11 @@
   "social_media": {
     "tiktok": {
       "title": "Přidejte se k nám na TikToku",
-      "description": "Chtěli jsme vám jen dát vědět o naší senzační nové komunitě na TikToku. Sdílíme tu obsah o naší digitální měně ice, který vás pobaví i poučí, a budeme moc rádi, když se k nám přidáte!"
+      "description": "Chtěli jsme vám jen dát vědět o naší senzační nové komunitě na TikToku. Sdílíme tu obsah o naší digitální měně Ice, který vás pobaví i poučí, a budeme moc rádi, když se k nám přidáte!"
     },
     "youtube": {
       "title": "Přidejte se k nám na YouTube",
-      "description": "Náš YouTube kanál je ideální místo, když chcete zůstat v obraze, protože tu najdete návody na vydělávání ice coinů, aktuality o nových funkcích, a dokonce i vtipný obsah z naší komunity."
+      "description": "Náš YouTube kanál je ideální místo, když chcete zůstat v obraze, protože tu najdete návody na vydělávání Ice coinů, aktuality o nových funkcích, a dokonce i vtipný obsah z naší komunity."
     },
     "linkedin": {
       "title": "Přidejte se k nám na LinkedInu",
@@ -880,11 +880,11 @@
     "facebook": {
       "title": "Přidejte se k nám na Facebooku",
       "description_part1": "Naši facebookovou stránku rozhodně doporučujeme přidat do sledovaných.",
-      "description_part2": "Nejenže vám to pomůže zůstat v kontaktu se vším, co se s projektem ice děje, je to i výborný způsob, jak se propojit s naší komunitou a podílet se na diskuzi."
+      "description_part2": "Nejenže vám to pomůže zůstat v kontaktu se vším, co se s projektem Ice děje, je to i výborný způsob, jak se propojit s naší komunitou a podílet se na diskuzi."
     },
     "instagram": {
       "title": "Přidejte se k nám na Instagramu",
-      "description_part1": "Sledování našeho Instagramu je ideální způsob, jak si udržet přehled o dění a propojit se s dalšími lidmi, co mají pro ice stejný zápal.",
+      "description_part1": "Sledování našeho Instagramu je ideální způsob, jak si udržet přehled o dění a propojit se s dalšími lidmi, co mají pro Ice stejný zápal.",
       "description_part2": "Navíc budete první, kdo se dozví o nových funkcích a promo akcích, které hodláme spustit."
     }
   },
@@ -892,12 +892,12 @@
     "title": "Prosím počkejte, než pingneme všechny vaše přátele · {{count}}"
   },
   "creative_library": {
-    "title": "Kreativní knihovna ice",
-    "share": "Sestavte si svůj vysněný tým na síti ice!",
+    "title": "Kreativní knihovna Ice",
+    "share": "Sestavte si svůj vysněný tým na síti Ice!",
     "get_started": {
       "header": "Sestavte si svůj vysněný tým",
-      "subtitle": "Začněte na síti ice a vytvořte si svou prosperující mikrokomunitu",
-      "description": "Připojte se k rychle rostoucímu počtu uživatelů ice, kteří budují vlastní mikrokomunity a získávají více odměn. Naše promoční nástroje, průvodci a tipy vám usnadní šíření slova a vytvoření úspěšné komunity.",
+      "subtitle": "Začněte na síti Ice a vytvořte si svou prosperující mikrokomunitu",
+      "description": "Připojte se k rychle rostoucímu počtu uživatelů Ice, kteří budují vlastní mikrokomunity a získávají více odměn. Naše promoční nástroje, průvodci a tipy vám usnadní šíření slova a vytvoření úspěšné komunity.",
       "get_started": "Začít",
       "carousel": {
         "01": {
@@ -906,11 +906,11 @@
         },
         "02": {
           "title": "Pozvat",
-          "description": "Svoji cílovou skupinu pozvěte, aby se připojila k síti ice a společně odemkla další odměny.\n\nTím navíc pomůžete šířit slovo o výhodách decentralizace a budoucnosti financí."
+          "description": "Svoji cílovou skupinu pozvěte, aby se připojila k síti Ice a společně odemkla další odměny.\n\nTím navíc pomůžete šířit slovo o výhodách decentralizace a budoucnosti financí."
         },
         "03": {
           "title": "Získat odměny",
-          "description": "Růst odměn tím, že rozšíříte svou síť a podpoříte ostatní, aby se připojili ke komunitě ice.\n\nPřidejte se k nám v naší misi revoluční budoucnosti financí skrze decentralizaci a autonomii."
+          "description": "Růst odměn tím, že rozšíříte svou síť a podpoříte ostatní, aby se připojili ke komunitě Ice.\n\nPřidejte se k nám v naší misi revoluční budoucnosti financí skrze decentralizaci a autonomii."
         }
       }
     },
@@ -927,18 +927,18 @@
       },
       "03": {
         "title": "Vložený banner",
-        "description": "S naším vloženým bannerem můžete snadno propagovat ice na svých webových stránkách a pozvat je do své mikrokomunity.",
+        "description": "S naším vloženým bannerem můžete snadno propagovat Ice na svých webových stránkách a pozvat je do své mikrokomunity.",
         "action": "Nainstalovat banner"
       }
     },
     "social_section": {
       "share": {
         "title": "Sdílejte svůj příběh",
-        "description": "Sdílejte svou cestu sítí ice a jejími mnoha výhodami tím, že napíšete článek ve svém jazyce.\n\nSdílejte je na svém blogu, Medium, Redditu, Quoře, Bloggeru a dalších místech.\n\nVše o ice a jeho jedinečných funkcích najdete na naší [[/:link]] znalostní databázi [[/:link]], [[/:link]] domovské stránce [[/:link]] a [[/:link]] FAQ [[/:link]]."
+        "description": "Sdílejte svou cestu sítí Ice a jejími mnoha výhodami tím, že napíšete článek ve svém jazyce.\n\nSdílejte je na svém blogu, Medium, Redditu, Quoře, Bloggeru a dalších místech.\n\nVše o Ice a jeho jedinečných funkcích najdete na naší [[/:link]] znalostní databázi [[/:link]], [[/:link]] domovské stránce [[/:link]] a [[/:link]] FAQ [[/:link]]."
       },
       "spread": {
         "title": "Sdílejte slovo",
-        "description": "Připojte se k diskuzi a představte síť ice na svých oblíbených fórech. Zakládejte nová vlákna a sdílejte své myšlenky o decentralizovaném financování, budoucnosti měny a síle budování mikrokomunity s ice.\n\nBuďte ☃️ Sněhulákem a rozpoutávejte diskuse o potenciálu této globální měny."
+        "description": "Připojte se k diskuzi a představte síť Ice na svých oblíbených fórech. Zakládejte nová vlákna a sdílejte své myšlenky o decentralizovaném financování, budoucnosti měny a síle budování mikrokomunity s Ice.\n\nBuďte ☃️ Sněhulákem a rozpoutávejte diskuse o potenciálu této globální měny."
       },
       "bring": {
         "title": "Přiveďte své přátele na palubu",
@@ -948,12 +948,12 @@
     "promo_section": {
       "web": {
         "title": "Plug & Play pro majitele webů",
-        "description": "Přímo na svých webových stránkách vložte síť ice pomocí našeho jednoduchého a flexibilního JS banneru. Je to rychlá a snadná instalace, kterou lze přizpůsobit značce vašeho webu. Přeloženo do 50 jazyků a kompatibilní se všemi platformami webů.\n\nZkopírujte a vložte kód na své webové stránky a začněte dnes propagovat síť ice svým návštěvníkům.",
+        "description": "Přímo na svých webových stránkách vložte síť Ice pomocí našeho jednoduchého a flexibilního JS banneru. Je to rychlá a snadná instalace, kterou lze přizpůsobit značce vašeho webu. Přeloženo do 50 jazyků a kompatibilní se všemi platformami webů.\n\nZkopírujte a vložte kód na své webové stránky a začněte dnes propagovat síť Ice svým návštěvníkům.",
         "action": "Nainstalovat banner"
       },
       "mobile": {
         "title": "Knihovna pro mobilní aplikace",
-        "description": "Integrujte naši snadno použitelnou knihovnu do své mobilní aplikace a pozvěte své uživatele, aby se připojili k vaší mikrokomunitě a začali těžit.\n\nS podporou překladu a flexibilními možnostmi nastavení můžete zajistit, aby všichni vaši uživatelé měli přístup k stejné skvělé zkušenosti s ice, ať jsou kdekoli na světě.",
+        "description": "Integrujte naši snadno použitelnou knihovnu do své mobilní aplikace a pozvěte své uživatele, aby se připojili k vaší mikrokomunitě a začali těžit.\n\nS podporou překladu a flexibilními možnostmi nastavení můžete zajistit, aby všichni vaši uživatelé měli přístup k stejné skvělé zkušenosti s Ice, ať jsou kdekoli na světě.",
         "action1": "Knihovna pro Android",
         "action2": "Knihovna pro React Native"
       }
@@ -964,7 +964,7 @@
         "rules": {
           "01": {
             "title": "Buďte autentičtí",
-            "description": "Pište z osobní zkušenosti a perspektivy. Sdílejte své upřímné myšlenky a pocity ohledně sítě ice."
+            "description": "Pište z osobní zkušenosti a perspektivy. Sdílejte své upřímné myšlenky a pocity ohledně sítě Ice."
           },
           "02": {
             "title": "Použijte přátelský tón",
@@ -972,7 +972,7 @@
           },
           "03": {
             "title": "Buďte kreativní",
-            "description": "Nebojte se experimentovat s různými typy obsahu, jako jsou blogové příspěvky, videa nebo aktualizace na sociálních médiích. Bavte se a buďte inovativní při propagaci sítě ice svému publiku."
+            "description": "Nebojte se experimentovat s různými typy obsahu, jako jsou blogové příspěvky, videa nebo aktualizace na sociálních médiích. Bavte se a buďte inovativní při propagaci sítě Ice svému publiku."
           }
         }
       },
@@ -985,11 +985,11 @@
           },
           "02": {
             "title": "Nevedete lidi k omylu",
-            "description": "Projekt ice neplatí uživatelům hotovostí, pouze odměňuje ledovými mincemi. Prosím, vyhněte se zveřejňování obsahu jako je \"Proměňte svůj led na hotovost\". \"Jak vydělat 100 dolarů s ledem\" a podobně."
+            "description": "Projekt Ice neplatí uživatelům hotovostí, pouze odměňuje ledovými mincemi. Prosím, vyhněte se zveřejňování obsahu jako je \"Proměňte svůj led na hotovost\". \"Jak vydělat 100 dolarů s ledem\" a podobně."
           },
           "03": {
             "title": "Nepodílejte se na podvodných aktivitách",
-            "description": "V naší komunitě ceníme si transparentnosti a upřímnosti. Jakékoliv podvodné aktivity, jako je vytváření více účtů nebo pokusy o manipulaci se sítí ice, nebudou tolerovány."
+            "description": "V naší komunitě ceníme si transparentnosti a upřímnosti. Jakékoliv podvodné aktivity, jako je vytváření více účtů nebo pokusy o manipulaci se sítí Ice, nebudou tolerovány."
           }
         }
       }

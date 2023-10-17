@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "Selamat datang ke ice",
-      "description": "[[:ice]] ialah mata wang digital yang anda boleh peroleh dengan telefon anda. ice dimiliki dan dikendalikan oleh pengguna setiap hari seperti diri anda."
+      "title": "Selamat datang ke Ice",
+      "description": "[[:ice]] ialah mata wang digital yang anda boleh peroleh dengan telefon anda. Ice dimiliki dan dikendalikan oleh pengguna setiap hari seperti diri anda."
     },
     "page2": {
       "title": "Planet Mesra",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Kekal Bersambung",
-      "description": "Ketik [[:iceLogo]] untuk semak masuk harian anda dengan aplikasi mudah alih ringan tenaga kami yang percuma. Ketikan harian anda memastikan bahawa ice berada di tangan orang sebenar, bukan robot."
+      "description": "Ketik [[:iceLogo]] untuk semak masuk harian anda dengan aplikasi mudah alih ringan tenaga kami yang percuma. Ketikan harian anda memastikan bahawa Ice berada di tangan orang sebenar, bukan robot."
     },
     "page5": {
       "title": "Rujuk & Peroleh",
@@ -82,7 +82,7 @@
     "contacts": {
       "empty_title": "[[:ice]] lebih bagus bersama rakan",
       "empty_button_title": "Benarkan semua akses kenalan",
-      "empty_description": "Segerakkan kenalan anda dan lihat siapa yang telah sedia ada dalam [[:ice]]. Pada masa akan datang, anda boleh menghantar ice kepada mana-mana kenalan anda."
+      "empty_description": "Segerakkan kenalan anda dan lihat siapa yang telah sedia ada dalam [[:ice]]. Pada masa akan datang, anda boleh menghantar Ice kepada mana-mana kenalan anda."
     },
     "header": {
       "search_placeholder": "Cari pengguna",
@@ -105,7 +105,7 @@
       },
       "all_contacts": "Semua kenalan",
       "invite": "jemput",
-      "invitation_text": "Hai {{name}}, saya ingin menjemput anda untuk menyertai ice."
+      "invitation_text": "Hai {{name}}, saya ingin menjemput anda untuk menyertai Ice."
     },
     "tier_one": {
       "header_list": {
@@ -123,7 +123,7 @@
     "phone": "Telefon",
     "or": "atau",
     "reset_password": "Tetapkan semula kata laluan",
-    "welcome": "Selamat datang ke ice",
+    "welcome": "Selamat datang ke Ice",
     "email": "E-mel",
     "slogan": "Masa Depan Terdesentralisasi",
     "privacy": "Dengan meneruskan, anda bersetuju dengan [[:link]]Syarat Perkhidmatan[[/:link]] dan [[:link]]Dasar Privasi[[/:link]] kami"
@@ -361,7 +361,7 @@
     "feedback_title": "Hantar Maklum Balas",
     "feedback_description": "Kongsi buah fikiran anda dengan kami.",
     "invite_title": "Jemput Rakan",
-    "invite_description": "Peroleh ice tambahan dengan menjemput rakan-rakan anda.",
+    "invite_description": "Peroleh Ice tambahan dengan menjemput rakan-rakan anda.",
     "delete_title": "Padam Akaun",
     "delete_description": "Padam akaun anda.",
     "delete_confirmation_title": "Adakah anda pasti anda mahu mengalih keluar akaun?",
@@ -424,7 +424,7 @@
         },
         "system": {
           "title": "Sistem",
-          "description": "Terima pemberitahuan penting mengenai aplikasi ice."
+          "description": "Terima pemberitahuan penting mengenai aplikasi Ice."
         }
       }
     },
@@ -463,8 +463,8 @@
     "copy_link": "Salin pautan",
     "more": "Lagi",
     "copied": "DISALIN",
-    "share_message": "Hai Orang Salji ☃️ ! Sertai pasukan saya dalam ice dan terima 10 syiling ice apabila anda mendaftar menggunakan kod rujukan saya:",
-    "share_subject": "Sertai pasukan saya di ice",
+    "share_message": "Hai Orang Salji ☃️ ! Sertai pasukan saya dalam Ice dan terima 10 syiling Ice apabila anda mendaftar menggunakan kod rujukan saya:",
+    "share_subject": "Sertai pasukan saya di Ice",
     "description": "Sebarkan khabar berita dan jemput rakan-rakan anda. Anda memperoleh [[:ice]] untuk setiap rujkan baharu yang anda bawa.",
     "share": "Kongsi"
   },
@@ -501,14 +501,14 @@
     "time_left": "Masa Yang Tinggal",
     "mining_rate": "Kadar Perolehan",
     "appeal": "Rangsangkan kadar perolehan anda",
-    "benefits_description": "Prataruh ganjaran ice anda sehingga 5 tahun dan tingkatkan kadar perolehan anda sehingga 250%.",
+    "benefits_description": "Prataruh ganjaran Ice anda sehingga 5 tahun dan tingkatkan kadar perolehan anda sehingga 250%.",
     "bonus_label": "Bonus Prataruh",
     "period_label": "Tempoh Ditaruh",
     "title": "Prataruhan",
     "current_rate": "Kadar Semasa",
     "allocation": "Peruntukan",
     "description": "Menaruh adalah proses yang melibatkan peletakan aset kripto anda untuk menyokong rangkaian blockchain dan mengesahkan transaksi.",
-    "terms_agree": "Saya bersetuju dengan [[:ice]] [[:link]]Syarat Taruhan[[/:link]]. Pegangan ice anda akan dikunci untuk tempoh yang dipilih.",
+    "terms_agree": "Saya bersetuju dengan [[:ice]] [[:link]]Syarat Taruhan[[/:link]]. Pegangan Ice anda akan dikunci untuk tempoh yang dipilih.",
     "stake_now": "Prataruh Sekarang!",
     "balance_label": "Baki ditaruh",
     "confirm_title": "Sahkan Prataruh",
@@ -533,8 +533,8 @@
     "good_morning": "Selamat pagi",
     "good_afternoon": "Selamat tengah hari",
     "good_evening": "Selamat petang",
-    "ice": "ice",
-    "ice_per_hour": "ice/j",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/j",
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "j",
@@ -547,7 +547,7 @@
     "views": "{{viewsCount}} paparan"
   },
   "search": {
-    "empty": "Cari kenalan, rakan ice dan ahli komuniti mikro anda.",
+    "empty": "Cari kenalan, rakan Ice dan ahli komuniti mikro anda.",
     "nothing_is_found": "Tiada apa-apa yang dijumpai untuk pertanyaan anda.",
     "search_by_country": "Cari mengikut negara",
     "search_for_users": "Cari pengguna",
@@ -586,7 +586,7 @@
     "resurrection_no_confirm_message": "Anda akan kehilangan syiling [[:amount]] anda buat selama-lamanya. Adakah anda pasti ingin meneruskan?",
     "resurrection_yes_confirm_message": "Anda hanya boleh dihidupkan semula sekali sahaja! Adakah anda pasti ingin meneruskan? Syiling [[:amount]] akan dikembalikan ke baki anda dalam jam seterusnya.",
     "delete_account_confirmation_title": "Sahkan Pemadaman",
-    "delete_account_confirmation_text": "Memadamkan akaun anda akan memadamkan semua data anda secara kekal, termasuk baki ice anda. Adakah anda ingin meneruskan?"
+    "delete_account_confirmation_text": "Memadamkan akaun anda akan memadamkan semua data anda secara kekal, termasuk baki Ice anda. Adakah anda ingin meneruskan?"
   },
   "periods": {
     "3_days": "3 hari",
@@ -668,7 +668,7 @@
     "snowman": {
       "title": "Orang Salji",
       "subtitle": "Bina empayar salji",
-      "description": "Peroleh dengan menyemak masuk setiap 24 jam untuk menunjukkan komitmen anda kepada rangkaian ice dan buktikan anda manusia, bukan robot."
+      "description": "Peroleh dengan menyemak masuk setiap 24 jam untuk menunjukkan komitmen anda kepada rangkaian Ice dan buktikan anda manusia, bukan robot."
     },
     "ambassador": {
       "title": "Duta",
@@ -709,7 +709,7 @@
       },
       "confirm_phone": {
         "title": "Sahkan telefon",
-        "description": "Sahkan identiti anda dan benarkan kenalan anda untuk mengetahui bahawa anda juga ahli rangkaian ice. Nombor telefon anda tidak akan dikongsikan dengan pihak ketiga lain."
+        "description": "Sahkan identiti anda dan benarkan kenalan anda untuk mengetahui bahawa anda juga ahli rangkaian Ice. Nombor telefon anda tidak akan dikongsikan dengan pihak ketiga lain."
       },
       "contacts_list": {
         "title": "Senarai kenalan",
@@ -768,11 +768,11 @@
         "description": "Suaikan butiran profil anda dan lihat semua pencapaian dan lencana yang anda telah peroleh. Gunakan pengira dari sini, supaya anda boleh menganggarkan pendapatan anda."
       },
       "earningicestart": {
-        "title": "Memperoleh ice",
+        "title": "Memperoleh Ice",
         "description": "Anda boleh memulakan sesi semak masuk [[:ice]] setiap 24 jam dengan menekan butang ini. Jangan lupa untuk kembali setiap hari dan mula memperoleh!"
       },
       "earningiceseemore": {
-        "title": "Memeperoleh ice",
+        "title": "Memeperoleh Ice",
         "description": "Ketik sekali lagi dan lihat lebih banyak butiran tentang sesi semak masuk semasa anda."
       },
       "stats": {
@@ -867,24 +867,24 @@
   "social_media": {
     "tiktok": {
       "title": "Sertai kami di TikTok",
-      "description": "Kami sekadar mahu menjangkau anda dan memaklumkan kepada anda tentang komuniti baharu kami di TikTok. Kami berkongsi kandungan ceria dan bermaklumat tentang mata wang digital kami, ice, dan kami ingin anda untuk menyertai kami!"
+      "description": "Kami sekadar mahu menjangkau anda dan memaklumkan kepada anda tentang komuniti baharu kami di TikTok. Kami berkongsi kandungan ceria dan bermaklumat tentang mata wang digital kami, Ice, dan kami ingin anda untuk menyertai kami!"
     },
     "youtube": {
       "title": "Sertai kami di YouTube",
-      "description": "Dari tutorial tentang bagaimana hendak memperoleh ice, hingga ke kemas kini tentang ciri-ciri baharu, dan juga kandungan komuniti cerita, saluran YouTube kami ialah tempat terbaik untuk kekal terkini."
+      "description": "Dari tutorial tentang bagaimana hendak memperoleh Ice, hingga ke kemas kini tentang ciri-ciri baharu, dan juga kandungan komuniti cerita, saluran YouTube kami ialah tempat terbaik untuk kekal terkini."
     },
     "linkedin": {
       "title": "Sertai kami di LinkedIn",
-      "description": "Menyertai komuniti ice di LinkedIn adalah satu cara bagus untuk kekal bermaklumat tentang perkembangan terkini dan berhubung dengan individu yang berfikiran sama yang juga mempunyai minat yang sama tentang masa depan mata wang digital dengan anda."
+      "description": "Menyertai komuniti Ice di LinkedIn adalah satu cara bagus untuk kekal bermaklumat tentang perkembangan terkini dan berhubung dengan individu yang berfikiran sama yang juga mempunyai minat yang sama tentang masa depan mata wang digital dengan anda."
     },
     "facebook": {
       "title": "Sertai kami di Facebook",
       "description_part1": "Kami amat mengesyorkan anda mengikuti halaman Facebook kami.",
-      "description_part2": "Bukan sahaja ia akan membantu anda untuk kekal terkini dengan semua yang berlaku dengan projek ice, tetapi juga ia cara bagus untuk berhubung dengan komuniti kami dan menjadi sebahagian perbualan."
+      "description_part2": "Bukan sahaja ia akan membantu anda untuk kekal terkini dengan semua yang berlaku dengan projek Ice, tetapi juga ia cara bagus untuk berhubung dengan komuniti kami dan menjadi sebahagian perbualan."
     },
     "instagram": {
       "title": "Sertai kami di Instagram",
-      "description_part1": "Menyertai kami di Instagram ialah cara bagus untuk kekal dalam gegelung dan berhubung dengan pengguna lain yang juga berkongsi minat yang sama tentang ice",
+      "description_part1": "Menyertai kami di Instagram ialah cara bagus untuk kekal dalam gegelung dan berhubung dengan pengguna lain yang juga berkongsi minat yang sama tentang Ice",
       "description_part2": "Dan juga, anda akan menjadi orang pertama yang mengetahui tentang apa-apa ciri baharu atau promosi yang kami lancarkan."
     }
   },
@@ -892,25 +892,25 @@
     "title": "Sila tunggu sementara kami ping semua rakan anda · {{count}}"
   },
   "creative_library": {
-    "title": "Pustaka Kreatif ice",
-    "share": "Bina pasukan impian anda di rangkaian ice!",
+    "title": "Pustaka Kreatif Ice",
+    "share": "Bina pasukan impian anda di rangkaian Ice!",
     "get_started": {
       "header": "Bina pasukan impian anda",
-      "subtitle": "Mula di ice dan bina komuniti mikro yang berkembang pesat",
-      "description": "Sertai jumlah pengguna ice yang semakin bertambah pesat yang sedang membina komuniti mikro mereka sendiri dan mendapatkan lebih banyak ganjaran. Alat promosi, panduan, dan tip kami menjadikan mudah untuk menyebarkan mesej dan membina komuniti yang berjaya.",
+      "subtitle": "Mula di Ice dan bina komuniti mikro yang berkembang pesat",
+      "description": "Sertai jumlah pengguna Ice yang semakin bertambah pesat yang sedang membina komuniti mikro mereka sendiri dan mendapatkan lebih banyak ganjaran. Alat promosi, panduan, dan tip kami menjadikan mudah untuk menyebarkan mesej dan membina komuniti yang berjaya.",
       "get_started": "Mula",
       "carousel": {
         "01": {
           "title": "Sertai",
-          "description": "Muat turun aplikasi kami, tuntut nama samaran anda, dan mulakan perlombongan.\n\nAnda akan menyertai komuniti pengguna ice di seluruh dunia yang bersemangat tentang desentralisasi, autonomi, dan kuasa rakyat."
+          "description": "Muat turun aplikasi kami, tuntut nama samaran anda, dan mulakan perlombongan.\n\nAnda akan menyertai komuniti pengguna Ice di seluruh dunia yang bersemangat tentang desentralisasi, autonomi, dan kuasa rakyat."
         },
         "02": {
           "title": "Jemput",
-          "description": "Jemput penonton anda untuk menyertai ice dan bekerjasama untuk membuka ganjaran tambahan.\n\nSelain itu, anda akan membantu menyebarkan mesej tentang kelebihan desentralisasi dan masa depan kewangan."
+          "description": "Jemput penonton anda untuk menyertai Ice dan bekerjasama untuk membuka ganjaran tambahan.\n\nSelain itu, anda akan membantu menyebarkan mesej tentang kelebihan desentralisasi dan masa depan kewangan."
         },
         "03": {
           "title": "Peroleh",
-          "description": "Kembangkan ganjaran anda dengan memperluas rangkaian anda dan memberangsangkan orang lain untuk menyertai komuniti ice.\n\nBersama kami dalam misi kami untuk merevolusi masa depan kewangan melalui desentralisasi dan autonomi."
+          "description": "Kembangkan ganjaran anda dengan memperluas rangkaian anda dan memberangsangkan orang lain untuk menyertai komuniti Ice.\n\nBersama kami dalam misi kami untuk merevolusi masa depan kewangan melalui desentralisasi dan autonomi."
         }
       }
     },
@@ -927,18 +927,18 @@
       },
       "03": {
         "title": "Banner Ditanam",
-        "description": "Dengan banner ditanam kami, anda boleh dengan mudah mempromosikan ice kepada pelawat laman web anda dan menjemput mereka untuk menyertai komuniti mikro anda.",
+        "description": "Dengan banner ditanam kami, anda boleh dengan mudah mempromosikan Ice kepada pelawat laman web anda dan menjemput mereka untuk menyertai komuniti mikro anda.",
         "action": "Pasang banner"
       }
     },
     "social_section": {
       "share": {
         "title": "Kongsi Cerita Anda",
-        "description": "Kongsi perjalanan anda dengan rangkaian ice dan kelebihannya yang banyak dengan menulis artikel dalam bahasa anda.\n\nKongsi artikel di Blog, Medium, Reddit, Quora, Blogger dan banyak lagi.\n\nAnda boleh mencari segala-galanya tentang ice dan ciri-ciri uniknya di [[/:link]]Pusat Pengetahuan[[/:link]], [[/:link]]Laman Utama[[/:link]], dan [[/:link]]Halaman Soalan Lazim[[/:link]]."
+        "description": "Kongsi perjalanan anda dengan rangkaian Ice dan kelebihannya yang banyak dengan menulis artikel dalam bahasa anda.\n\nKongsi artikel di Blog, Medium, Reddit, Quora, Blogger dan banyak lagi.\n\nAnda boleh mencari segala-galanya tentang Ice dan ciri-ciri uniknya di [[/:link]]Pusat Pengetahuan[[/:link]], [[/:link]]Laman Utama[[/:link]], dan [[/:link]]Halaman Soalan Lazim[[/:link]]."
       },
       "spread": {
         "title": "Sebarkan Mesej",
-        "description": "Sertai perbualan dan perkenalkan rangkaian ice kepada forum kegemaran anda.\nMulakan topik baru dan kongsi pendapat anda tentang kewangan desentralisasi, masa depan mata wang, dan kuasa membina komuniti mikro dengan ice.\n\nMenjadi Snowman ☃️ dan timbulkan perbincangan tentang potensi mata wang global ini."
+        "description": "Sertai perbualan dan perkenalkan rangkaian Ice kepada forum kegemaran anda.\nMulakan topik baru dan kongsi pendapat anda tentang kewangan desentralisasi, masa depan mata wang, dan kuasa membina komuniti mikro dengan Ice.\n\nMenjadi Snowman ☃️ dan timbulkan perbincangan tentang potensi mata wang global ini."
       },
       "bring": {
         "title": "Jemput Rakan Anda",
@@ -948,12 +948,12 @@
     "promo_section": {
       "web": {
         "title": "Plug & Main untuk Pemilik Laman Web",
-        "description": "Benamkan rangkaian ice terus ke laman web anda dengan banner JS yang mudah dan fleksibel kami. Ia adalah pemasangan yang cepat dan mudah yang boleh disesuaikan dengan jenama laman web anda. Ia diterjemahkan ke dalam 50 bahasa dan serasi dengan mana-mana platform laman web.\n\nSalin dan tampal kod ke laman web anda, dan mulakan mempromosikan rangkaian ice kepada pengunjung anda hari ini.",
+        "description": "Benamkan rangkaian Ice terus ke laman web anda dengan banner JS yang mudah dan fleksibel kami. Ia adalah pemasangan yang cepat dan mudah yang boleh disesuaikan dengan jenama laman web anda. Ia diterjemahkan ke dalam 50 bahasa dan serasi dengan mana-mana platform laman web.\n\nSalin dan tampal kod ke laman web anda, dan mulakan mempromosikan rangkaian Ice kepada pengunjung anda hari ini.",
         "action": "Pasang banner"
       },
       "mobile": {
         "title": "Pustaka untuk Aplikasi Mudah Alih",
-        "description": "Integrasikan pustaka mudah digunakan kami ke dalam aplikasi mudah alih anda dan jemput pengguna anda untuk menyertai komuniti mikro anda dan memulakan perlombongan.\n\nDengan sokongan terjemahan dan pilihan penyediaan fleksibel, anda boleh memastikan semua pengguna anda mempunyai akses kepada pengalaman ice yang hebat yang sama, di mana jua mereka berada di dunia.",
+        "description": "Integrasikan pustaka mudah digunakan kami ke dalam aplikasi mudah alih anda dan jemput pengguna anda untuk menyertai komuniti mikro anda dan memulakan perlombongan.\n\nDengan sokongan terjemahan dan pilihan penyediaan fleksibel, anda boleh memastikan semua pengguna anda mempunyai akses kepada pengalaman Ice yang hebat yang sama, di mana jua mereka berada di dunia.",
         "action1": "Pustaka Android",
         "action2": "Pustaka React Native"
       }
@@ -964,7 +964,7 @@
         "rules": {
           "01": {
             "title": "Menjadi Autentik",
-            "description": "Tulis dari pengalaman dan perspektif peribadi anda. Kongsi pemikiran dan perasaan ikhlas anda tentang rangkaian ice."
+            "description": "Tulis dari pengalaman dan perspektif peribadi anda. Kongsi pemikiran dan perasaan ikhlas anda tentang rangkaian Ice."
           },
           "02": {
             "title": "Gunakan Tone Mesra",
@@ -972,7 +972,7 @@
           },
           "03": {
             "title": "Berkreativiti",
-            "description": "Jangan takut untuk bereksperimen dengan pelbagai jenis kandungan, seperti catatan blog, video, atau kemas kini media sosial. Bersenang-senanglah dan berinovasi dalam cara anda mempromosikan rangkaian ice kepada audiens anda."
+            "description": "Jangan takut untuk bereksperimen dengan pelbagai jenis kandungan, seperti catatan blog, video, atau kemas kini media sosial. Bersenang-senanglah dan berinovasi dalam cara anda mempromosikan rangkaian Ice kepada audiens anda."
           }
         }
       },
@@ -985,11 +985,11 @@
           },
           "02": {
             "title": "Jangan Menyesatkan Orang",
-            "description": "Projek ice tidak membayar pengguna dengan wang tunai, tetapi memberikan ganjaran dengan mata wang ice. Sila elakkan daripada menghasilkan kandungan seperti \"Tukarkan ice anda menjadi wang tunai\" atau \"Bagaimana untuk mendapatkan $100 dengan ice\" dan sebagainya."
+            "description": "Projek Ice tidak membayar pengguna dengan wang tunai, tetapi memberikan ganjaran dengan mata wang Ice. Sila elakkan daripada menghasilkan kandungan seperti \"Tukarkan Ice anda menjadi wang tunai\" atau \"Bagaimana untuk mendapatkan $100 dengan Ice\" dan sebagainya."
           },
           "03": {
             "title": "Jangan Terlibat dalam Aktiviti Penipuan",
-            "description": "Kami menghargai ketelusan dan kejujuran dalam komuniti kami. Sebarang aktiviti penipuan seperti mencipta akaun berbilang atau cuba memanipulasi rangkaian ice tidak akan ditoleransi."
+            "description": "Kami menghargai ketelusan dan kejujuran dalam komuniti kami. Sebarang aktiviti penipuan seperti mencipta akaun berbilang atau cuba memanipulasi rangkaian Ice tidak akan ditoleransi."
           }
         }
       }

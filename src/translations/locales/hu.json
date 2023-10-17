@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "Üdv az ice-nál",
-      "description": "[[:ice]] egy digitális valuta, amelyre a telefonoddal tehetsz szert. Az ice-t a hozzád hasonló mindennapi felhasználók birtokolják és működtetik."
+      "title": "Üdv az Ice-nál",
+      "description": "[[:ice]] egy digitális valuta, amelyre a telefonoddal tehetsz szert. Az Ice-t a hozzád hasonló mindennapi felhasználók birtokolják és működtetik."
     },
     "page2": {
       "title": "Bolygóbarát",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Maradj kapcsolatban",
-      "description": "Érints [[:iceLogo]]a napi bejelentkezéshez ingyenes, kevés energiát igénylő mobilalkalmazásunkkal. A napi érintés biztosítja, hogy az ice-t valódi emberek, nem pedig robotok működtessék. "
+      "description": "Érints [[:iceLogo]]a napi bejelentkezéshez ingyenes, kevés energiát igénylő mobilalkalmazásunkkal. A napi érintés biztosítja, hogy az Ice-t valódi emberek, nem pedig robotok működtessék. "
     },
     "page5": {
       "title": "Ajánl és keress pénzt",
@@ -82,7 +82,7 @@
     "contacts": {
       "empty_title": "[[:ice]] jobb barátokkal",
       "empty_button_title": "Hozzáférés engedélyezése a kapcsolatokhoz",
-      "empty_description": "Szinkronizáld a kapcsolataidat és nézd meg, ki használja már a(z) [[:ice]]-t. A jövőben tudsz majd ice-t küldeni a kapcsolataidnak."
+      "empty_description": "Szinkronizáld a kapcsolataidat és nézd meg, ki használja már a(z) [[:ice]]-t. A jövőben tudsz majd Ice-t küldeni a kapcsolataidnak."
     },
     "header": {
       "search_placeholder": "Keresés felhasználókra",
@@ -105,7 +105,7 @@
       },
       "all_contacts": "Összes kapcsolat",
       "invite": "meghívás",
-      "invitation_text": "Szia {{name}}, szeretnélek meghívni az ice-hoz való csatlakozásra."
+      "invitation_text": "Szia {{name}}, szeretnélek meghívni az Ice-hoz való csatlakozásra."
     },
     "tier_one": {
       "header_list": {
@@ -123,7 +123,7 @@
     "phone": "Telefon",
     "or": "vagy",
     "reset_password": "Jelszó újraállítása",
-    "welcome": "Üdv az ice-nál",
+    "welcome": "Üdv az Ice-nál",
     "email": "E-mail",
     "slogan": "A decentralizált jövő",
     "privacy": "A továbblépéssel elfogadod [[:link]]szerződési feltételeinket[[/:link]] és [[:link]]adatvédelmi politikánkat[[/:link]]"
@@ -361,7 +361,7 @@
     "feedback_title": "Visszajelzés küldése",
     "feedback_description": "Oszd meg velünk a gondolataidat.",
     "invite_title": "Barát meghívása",
-    "invite_description": "Szerezz extra ice-t barátaid meghívásával.",
+    "invite_description": "Szerezz extra Ice-t barátaid meghívásával.",
     "delete_title": "Fiók törlése",
     "delete_description": "Töröld ki a fiókodat.",
     "delete_confirmation_title": "Biztosan el szeretnéd távolítani a fiókodat?",
@@ -424,7 +424,7 @@
         },
         "system": {
           "title": "Rendszer",
-          "description": "Kapj fontos értesítéseket az ice appról."
+          "description": "Kapj fontos értesítéseket az Ice appról."
         }
       }
     },
@@ -463,8 +463,8 @@
     "copy_link": "Link másolása",
     "more": "Továbbiak",
     "copied": "MÁSOLVA",
-    "share_message": "Üdv ☃️ Hóember! Csatlakozz a csapatomhoz és szerezz 10 ice coint, ha az ajánló kódom használatával iratkozol fel:",
-    "share_subject": "Csatlakozz csapatomhoz az ice-on",
+    "share_message": "Üdv ☃️ Hóember! Csatlakozz a csapatomhoz és szerezz 10 Ice coint, ha az ajánló kódom használatával iratkozol fel:",
+    "share_subject": "Csatlakozz csapatomhoz az Ice-on",
     "description": "Terjeszd a hírt és hívd meg a barátaidat. [[:ice]]-t keresel minden egyes új ajánlás után, amit hozzánk hozol.",
     "share": "Megosztás"
   },
@@ -501,14 +501,14 @@
     "time_left": "Hátralévő idő.",
     "mining_rate": "Kereseti ráta",
     "appeal": "Turbózd fel a kereseti rátádat",
-    "benefits_description": "Helyezd előzetes letétbe az ice jutalmaidat maximum 5 évre és növeld a kereseti rátádat maximum 250%-ra.",
+    "benefits_description": "Helyezd előzetes letétbe az Ice jutalmaidat maximum 5 évre és növeld a kereseti rátádat maximum 250%-ra.",
     "bonus_label": "Pre-Staking (előzetes letétbe helyezési) bónusz",
     "period_label": "Letétbe helyezési időszak",
     "title": "Pre-Staking",
     "current_rate": "Jelenlegi ráta",
     "allocation": "Kiosztás",
     "description": "A letétbe helyezés (staking) egy olyan folyamat, amelynek során a kriptoeszközöket a blokklánc hálózat támogatására és a tranzakciók megerősítésére kötelezed el.",
-    "terms_agree": "Elfogadom a [[:ice]] [[:link]]letétbe helyezés feltételeit[[/:link]]. ice jövedelmeid a kiválasztott időszakra le lesznek kötve.",
+    "terms_agree": "Elfogadom a [[:ice]] [[:link]]letétbe helyezés feltételeit[[/:link]]. Ice jövedelmeid a kiválasztott időszakra le lesznek kötve.",
     "stake_now": "Előzetes letétbe helyezés most!",
     "balance_label": "Letétbe helyezett egyenleg",
     "confirm_title": "Előzetes letétbe helyezés megerősítése",
@@ -533,8 +533,8 @@
     "good_morning": "Jó reggelt",
     "good_afternoon": "Jó napot",
     "good_evening": "Jó estét",
-    "ice": "ice",
-    "ice_per_hour": "ice/ó",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/ó",
     "seconds_short": "mp",
     "minutes_short": "p",
     "hours_short": "ó",
@@ -547,7 +547,7 @@
     "views": "{{viewsCount}} megtekintések"
   },
   "search": {
-    "empty": "Keress kapcsolataid, ice barátokaid és a mikroközösséged tagjai közt",
+    "empty": "Keress kapcsolataid, Ice barátokaid és a mikroközösséged tagjai közt",
     "nothing_is_found": "Keresésedre semmit sem találtunk.",
     "search_by_country": "Keresés ország szerint",
     "search_for_users": "Keresés felhasználókra",
@@ -586,7 +586,7 @@
     "resurrection_no_confirm_message": "Örökre el fogod [[:amount]] veszíteni a coinokat. Biztosan tovább szeretnél lépni?",
     "resurrection_yes_confirm_message": "A feltámasztás csak egyszer lehetséges! Biztosan tovább szeretnél lépni? A [[:amount]] coinok a következő egy órában fognak visszakerülni az egyenlegedre.",
     "delete_account_confirmation_title": "Törlés megerősítése",
-    "delete_account_confirmation_text": "A fiókod törlésével véglegesen törlésre kerül az összes adatod, beleértve az ice egyenleged is. Szeretnéd folytatni?"
+    "delete_account_confirmation_text": "A fiókod törlésével véglegesen törlésre kerül az összes adatod, beleértve az Ice egyenleged is. Szeretnéd folytatni?"
   },
   "periods": {
     "3_days": "3 nap",
@@ -668,7 +668,7 @@
     "snowman": {
       "title": "Hóember",
       "subtitle": "Építs egy hóbirodalmat",
-      "description": "Keress a 24 óránkénti bejelentkezéssel, amivel megmutathatod az ice hálózata iránti elkötelezettségedet, és azt is, hogy ember vagy, nem pedig robot."
+      "description": "Keress a 24 óránkénti bejelentkezéssel, amivel megmutathatod az Ice hálózata iránti elkötelezettségedet, és azt is, hogy ember vagy, nem pedig robot."
     },
     "ambassador": {
       "title": "Nagykövet",
@@ -705,11 +705,11 @@
     "team": {
       "allow_contacts": {
         "title": "Kapcsolatok engedélyezése",
-        "description": "Szinkronizáld a kapcsolataidat és nézd meg, ki használja már a(z) [[:ice]]-t. A jövőben tudsz majd ice-t küldeni bármelyik kapcsolatodnak.[[:ice]]"
+        "description": "Szinkronizáld a kapcsolataidat és nézd meg, ki használja már a(z) [[:ice]]-t. A jövőben tudsz majd Ice-t küldeni bármelyik kapcsolatodnak.[[:ice]]"
       },
       "confirm_phone": {
         "title": "Telefon megerősítése",
-        "description": "Erősítsd meg a személyazonosságodat és engedélyezd kapcsolataidnak, hogy tudják: te is az ice hálózat tagja vagy. Telefonszámod egyéb harmadik felekkel nem lesz megosztva."
+        "description": "Erősítsd meg a személyazonosságodat és engedélyezd kapcsolataidnak, hogy tudják: te is az Ice hálózat tagja vagy. Telefonszámod egyéb harmadik felekkel nem lesz megosztva."
       },
       "contacts_list": {
         "title": "Kapcsolatok listája",
@@ -768,11 +768,11 @@
         "description": "Szabd személyre profilod adatait és tekintsd meg az összes eredményedet valamint megszerzett jelvényedet. Használd az itt található kalkulátort bevételeid megbecslésére."
       },
       "earningicestart": {
-        "title": "Keress ice-t",
+        "title": "Keress Ice-t",
         "description": "A [[:ice]] bejelentkezési időszakot 24 óránként az erre a gombra való érintéssel indíthatod el. Ne felejts el minden nap visszatérni és elkezdeni pénzt keresni."
       },
       "earningiceseemore": {
-        "title": "Keress ice-t",
+        "title": "Keress Ice-t",
         "description": "Érints ide ismét és tekints meg több adatot a jelenlegi bejelentkezési időszakodról."
       },
       "stats": {
@@ -867,24 +867,24 @@
   "social_media": {
     "tiktok": {
       "title": "Csatlakozz hozzánk TikTokon",
-      "description": "Csak szerettünk volna kapcsolatba lépni veled és tájékoztatást adni a TikTok izgalmas új közösségéről. Szórakoztató és informatív tartalmakat osztunk meg digitális valutánkról, az ice-ról, és szeretnénk, ha csatlakoznál hozzánk!"
+      "description": "Csak szerettünk volna kapcsolatba lépni veled és tájékoztatást adni a TikTok izgalmas új közösségéről. Szórakoztató és informatív tartalmakat osztunk meg digitális valutánkról, az Ice-ról, és szeretnénk, ha csatlakoznál hozzánk!"
     },
     "youtube": {
       "title": "Csatlakozz hozzánk YouTube-n",
-      "description": "A YouTube-csatornánk tökéletes hely arra, hogy naprakész maradj az ice keresésről szóló oktatóanyagoktól kezdve az új funkciókról szóló frissítéseken át egészen a szórakoztató közösségi tartalmakig."
+      "description": "A YouTube-csatornánk tökéletes hely arra, hogy naprakész maradj az Ice keresésről szóló oktatóanyagoktól kezdve az új funkciókról szóló frissítéseken át egészen a szórakoztató közösségi tartalmakig."
     },
     "linkedin": {
       "title": "Csatlakozz hozzánk LinkedInen",
-      "description": "Az ice LinkedIn közösségéhez való csatlakozás remek módja annak, hogy tájékozódjon a legújabb fejleményekről, és olyan hasonlóan gondolkodó személyekkel lépj kapcsolatba, akiket ugyanolyan szenvedélyesen érdekel a digitális valuták jövője, mint Önt."
+      "description": "Az Ice LinkedIn közösségéhez való csatlakozás remek módja annak, hogy tájékozódjon a legújabb fejleményekről, és olyan hasonlóan gondolkodó személyekkel lépj kapcsolatba, akiket ugyanolyan szenvedélyesen érdekel a digitális valuták jövője, mint Önt."
     },
     "facebook": {
       "title": "Csatlakozz hozzánk Facebookon",
       "description_part1": "Nagyon ajánljuk Facebook-oldalunk követését.",
-      "description_part2": "Nem csak abban segít, hogy naprakész maradj mindenről, ami az ice világában történik, emellett annak is nagyszerű módja, hogy kapcsolatba lépj a közösségünkkel, és részese legyél a beszélgetésnek."
+      "description_part2": "Nem csak abban segít, hogy naprakész maradj mindenről, ami az Ice világában történik, emellett annak is nagyszerű módja, hogy kapcsolatba lépj a közösségünkkel, és részese legyél a beszélgetésnek."
     },
     "instagram": {
       "title": "Csatlakozz hozzánk Instagramon",
-      "description_part1": "Az Instagramon történő követés nagyszerű módja annak, hogy képben maradj és kapcsolatba lépj más felhasználókkal, akiket szintén szenvedélyesen érdekel az ice.",
+      "description_part1": "Az Instagramon történő követés nagyszerű módja annak, hogy képben maradj és kapcsolatba lépj más felhasználókkal, akiket szintén szenvedélyesen érdekel az Ice.",
       "description_part2": "Emellett te fogsz elsőként értesülni az összes újonnan bevezetett funkcióról és promócióról."
     }
   },

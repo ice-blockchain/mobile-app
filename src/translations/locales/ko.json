@@ -424,7 +424,7 @@
         },
         "system": {
           "title": "시스템",
-          "description": "ice 앱과 관련하여 중요한 알림을 받으세요."
+          "description": "Ice 앱과 관련하여 중요한 알림을 받으세요."
         }
       }
     },
@@ -463,7 +463,7 @@
     "copy_link": "링크 복사",
     "more": "더 보기",
     "copied": "복사 완료",
-    "share_message": "안녕 ☃️ 스노우맨! ice의 우리 팀에 가입해요. 내가 보내는 추천 코드를 이용하여 등록하면 10 ice 코인을 받을 수 있어요:",
+    "share_message": "안녕 ☃️ 스노우맨! ice의 우리 팀에 가입해요. 내가 보내는 추천 코드를 이용하여 등록하면 10 Ice 코인을 받을 수 있어요:",
     "share_subject": "ice의 우리 팀에 가입",
     "description": "널리 홍보하고 친구를 초대하세요. 새로운 추천 대상이 가입할 때마다 [[:ice]]를 받게 됩니다.",
     "share": "공유"
@@ -501,7 +501,7 @@
     "time_left": "남은 시간",
     "mining_rate": "수익률",
     "appeal": "수익률을 올리세요",
-    "benefits_description": "최대 5년까지 ice 보상을 사전 스테이킹(Pre-Staking)하고 수익률을 250%까지 올리세요.",
+    "benefits_description": "최대 5년까지 Ice 보상을 사전 스테이킹(Pre-Staking)하고 수익률을 250%까지 올리세요.",
     "bonus_label": "사전 스테이킹 보너스",
     "period_label": "스테이킹 기간",
     "title": "사전 스테이킹",
@@ -533,8 +533,8 @@
     "good_morning": "안녕하세요",
     "good_afternoon": "안녕하세요",
     "good_evening": "안녕하세요",
-    "ice": "ice",
-    "ice_per_hour": "ice/시간",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/시간",
     "seconds_short": "초",
     "minutes_short": "분",
     "hours_short": "시",
@@ -547,7 +547,7 @@
     "views": "{{viewsCount}} 조회"
   },
   "search": {
-    "empty": "연락처, ice 친구 및 소규모 커뮤니티 회원을 검색하세요.",
+    "empty": "연락처, Ice 친구 및 소규모 커뮤니티 회원을 검색하세요.",
     "nothing_is_found": "검색어에 대한 검색 결과가 없습니다.",
     "search_by_country": "국가 검색",
     "search_for_users": "사용자 검색",
@@ -586,7 +586,7 @@
     "resurrection_no_confirm_message": "[[:amount]] 코인을 영원히 잃게 됩니다. 정말 계속하시겠습니까?",
     "resurrection_yes_confirm_message": "단 한 번만 되살릴 수 있습니다! 정말 계속하시겠습니까? 한 시간 안에 [[:amount]] 코인이 잔액에 반영될 것입니다.",
     "delete_account_confirmation_title": "삭제 확인",
-    "delete_account_confirmation_text": "계정을 삭제하면 ice 잔액을 물론 모든 데이터가 영원히 지워집니다. 계속하시겠습니까?"
+    "delete_account_confirmation_text": "계정을 삭제하면 Ice 잔액을 물론 모든 데이터가 영원히 지워집니다. 계속하시겠습니까?"
   },
   "periods": {
     "3_days": "3일",
@@ -668,7 +668,7 @@
     "snowman": {
       "title": "스노우맨",
       "subtitle": "눈의 제국을 건설하세요",
-      "description": "24시간마다 체크인하여 ice 네트워크에 대한 헌신을 보이고 로봇이 아닌 인간임을 증명하여 수익을 올리세요."
+      "description": "24시간마다 체크인하여 Ice 네트워크에 대한 헌신을 보이고 로봇이 아닌 인간임을 증명하여 수익을 올리세요."
     },
     "ambassador": {
       "title": "대사",
@@ -709,7 +709,7 @@
       },
       "confirm_phone": {
         "title": "전화 확인",
-        "description": "신원을 확인하고 연락처의사람들에게 회원님이 ice 네트워크의 회원임을 알리세요. 회원님의 전화번호는 다른 회사와 공유하지 않습니다."
+        "description": "신원을 확인하고 연락처의사람들에게 회원님이 Ice 네트워크의 회원임을 알리세요. 회원님의 전화번호는 다른 회사와 공유하지 않습니다."
       },
       "contacts_list": {
         "title": "연락처 목록",
@@ -768,11 +768,11 @@
         "description": "원하는 대로 프로필 세부 정보를 지정하고 모든 성취와 획득한 배지를 확인하세요. 여기서 계산기를 사용하여 수익을 추정할 수 있습니다."
       },
       "earningicestart": {
-        "title": "ice 적립",
+        "title": "Ice 적립",
         "description": "이 버튼을 탭하여 24시간마다 [[:ice]]에 체크인하고 세션을 시작할 수 있습니다. 매일 여기로 돌아와서 수익을 올리는 것을 잊지 마세요!"
       },
       "earningiceseemore": {
-        "title": "ice 적립",
+        "title": "Ice 적립",
         "description": "다시 탭하면 현재 체크인하신 세션에 대한 자세한 내용을 볼 수 있습니다."
       },
       "stats": {
@@ -871,16 +871,16 @@
     },
     "youtube": {
       "title": "YouTube에서 가입하세요",
-      "description": "ice 수익을 올리는 방법 관련 튜토리얼부터 새 기능 업데이트 및, 재미있는 커뮤니티 콘텐츠에 이르기까지 YouTube 채널은 최신 정보를 얻을 수 있는 완벽한 장소입니다."
+      "description": "Ice 수익을 올리는 방법 관련 튜토리얼부터 새 기능 업데이트 및, 재미있는 커뮤니티 콘텐츠에 이르기까지 YouTube 채널은 최신 정보를 얻을 수 있는 완벽한 장소입니다."
     },
     "linkedin": {
       "title": "LinkedIn에서 가입하세요",
-      "description": "LinkedIn에서 ice 커뮤니티에 가입하면 최신 개발 정보를 접하면서 디지털 통화의 미래에 대해 열정과 비슷한 생각을 하는 다른 사람과도 소통할 수 있습니다."
+      "description": "LinkedIn에서 Ice 커뮤니티에 가입하면 최신 개발 정보를 접하면서 디지털 통화의 미래에 대해 열정과 비슷한 생각을 하는 다른 사람과도 소통할 수 있습니다."
     },
     "facebook": {
       "title": "Facebook에서 가입하세요",
       "description_part1": "Facebook 페이지 팔로우를 강력하게 권합니다.",
-      "description_part2": "ice 프로젝트에서 일어나는 모든 일에 대한 최신 정보를 얻을 수 있을 뿐만 아니라 커뮤니티에 참여하여 대화할 수 있는 좋은 방법입니다."
+      "description_part2": "Ice 프로젝트에서 일어나는 모든 일에 대한 최신 정보를 얻을 수 있을 뿐만 아니라 커뮤니티에 참여하여 대화할 수 있는 좋은 방법입니다."
     },
     "instagram": {
       "title": "Instagram에서 가입하세요",
@@ -892,7 +892,7 @@
     "title": "우리가 당신의 모든 친구에게 핑을 보내는 동안 기다려 주세요 · {{count}}"
   },
   "creative_library": {
-    "title": "창의적인 ice 라이브러리",
+    "title": "창의적인 Ice 라이브러리",
     "share": "아이스 네트워크에서 꿈꾸던 팀을 만들어보세요!",
     "get_started": {
       "header": "꿈꾸던 팀 만들기",

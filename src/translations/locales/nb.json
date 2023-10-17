@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "Velkommen til ice",
-      "description": "[[:ice]] er en digital valuta som du kan tjene med telefonen. ice eies og drives av hverdagsbrukere som deg selv."
+      "title": "Velkommen til Ice",
+      "description": "[[:ice]] er en digital valuta som du kan tjene med telefonen. Ice eies og drives av hverdagsbrukere som deg selv."
     },
     "page2": {
       "title": "Planetvennlig",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Hold deg tilkoblet",
-      "description": "Trykk på [[:iceLogo]] for å sjekke inn  daglig med vår gratis og energilette mobilapp. Ditt daglige trykk sikrer at ice havner i hendene på ekte mennesker, ikke roboter."
+      "description": "Trykk på [[:iceLogo]] for å sjekke inn  daglig med vår gratis og energilette mobilapp. Ditt daglige trykk sikrer at Ice havner i hendene på ekte mennesker, ikke roboter."
     },
     "page5": {
       "title": "Inviter og tjen",
@@ -82,7 +82,7 @@
     "contacts": {
       "empty_title": "[[:ice]] er bedre med venner",
       "empty_button_title": "Tillat kontakttilgang",
-      "empty_description": "Synkroniser kontaktene dine og se hvem som allerede er på [[:ice]]. I fremtiden vil du kunne sende ice til alle kontaktene dine."
+      "empty_description": "Synkroniser kontaktene dine og se hvem som allerede er på [[:ice]]. I fremtiden vil du kunne sende Ice til alle kontaktene dine."
     },
     "header": {
       "search_placeholder": "Søk etter brukere",
@@ -105,7 +105,7 @@
       },
       "all_contacts": "Alle kontakter",
       "invite": "invitere",
-      "invitation_text": "Hei {{name}}, jeg vil gjerne invitere deg til å bli med i ice."
+      "invitation_text": "Hei {{name}}, jeg vil gjerne invitere deg til å bli med i Ice."
     },
     "tier_one": {
       "header_list": {
@@ -123,7 +123,7 @@
     "phone": "Telefon",
     "or": "eller",
     "reset_password": "Tilbakestill passord",
-    "welcome": "Velkommen til ice",
+    "welcome": "Velkommen til Ice",
     "email": "Epost",
     "slogan": "Den desentraliserte fremtiden",
     "privacy": "Ved å fortsette, godtar du våre [[:link]]tjenestevilkår[[/:link]] og [[:link]]personvernregler[[/:link]]"
@@ -361,7 +361,7 @@
     "feedback_title": "Send tilbakemelding",
     "feedback_description": "Del tankene dine med oss.",
     "invite_title": "Inviter en venn",
-    "invite_description": "Tjen ekstra ice ved å invitere vennene dine.",
+    "invite_description": "Tjen ekstra Ice ved å invitere vennene dine.",
     "delete_title": "Slett konto",
     "delete_description": "Slett kontoen din.",
     "delete_confirmation_title": "Er du sikker på at du vil fjerne kontoen?",
@@ -424,7 +424,7 @@
         },
         "system": {
           "title": "System",
-          "description": "Motta viktige varsler om ice-appen."
+          "description": "Motta viktige varsler om Ice-appen."
         }
       }
     },
@@ -463,8 +463,8 @@
     "copy_link": "Kopier lenke",
     "more": "Mer",
     "copied": "KOPIERT",
-    "share_message": "Hei ☃️ snømann! Bli med teamet mitt på ice og motta 10 ice-coins når du registrerer deg ved hjelp av henvisningskoden min:",
-    "share_subject": "Bli med teamet mitt på ice",
+    "share_message": "Hei ☃️ snømann! Bli med teamet mitt på Ice og motta 10 Ice-coins når du registrerer deg ved hjelp av henvisningskoden min:",
+    "share_subject": "Bli med teamet mitt på Ice",
     "description": "Spre ordet og inviter vennene dine. Du tjener [[:ice]] for hver nye henvisning du tar med.",
     "share": "Del"
   },
@@ -501,14 +501,14 @@
     "time_left": "Tid igjen",
     "mining_rate": "Inntjeningsrate",
     "appeal": "Øk inntjeningsraten din",
-    "benefits_description": "Forhånds-stake ice-belønningene dine i opptil 5 år og øk inntjeningsraten med opptil 250 %.",
+    "benefits_description": "Forhånds-stake Ice-belønningene dine i opptil 5 år og øk inntjeningsraten med opptil 250 %.",
     "bonus_label": "Bonus før staking",
     "period_label": "Stake-periode",
     "title": "Forhånds-staking",
     "current_rate": "Nåværende rate",
     "allocation": "Tildeling",
     "description": "Staking er en prosess som innebærer å forplikte krypto-aktivaene dine til å støtte et blockchain-nettverk og bekrefte transaksjoner.",
-    "terms_agree": "Jeg godtar[[:ice]] [[:link]]Staking-vilkårene[[/:link]]. ice-beholdningen din vil bli låst for den valgte perioden.",
+    "terms_agree": "Jeg godtar[[:ice]] [[:link]]Staking-vilkårene[[/:link]]. Ice-beholdningen din vil bli låst for den valgte perioden.",
     "stake_now": "Forhånds-stake nå!",
     "balance_label": "Staket saldo",
     "confirm_title": "Bekreft forhånds-staking",
@@ -533,8 +533,8 @@
     "good_morning": "God morgen",
     "good_afternoon": "God ettermiddag",
     "good_evening": "God kveld",
-    "ice": "ice",
-    "ice_per_hour": "ice/t",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/t",
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "t",
@@ -547,7 +547,7 @@
     "views": "{{viewsCount}} visninger"
   },
   "search": {
-    "empty": "Søk etter kontakter, ice-venner og medlemmer av mikrosamfunnet ditt.",
+    "empty": "Søk etter kontakter, Ice-venner og medlemmer av mikrosamfunnet ditt.",
     "nothing_is_found": "Ingenting ble funnet for søket ditt.",
     "search_by_country": "Søk etter land",
     "search_for_users": "Søk etter brukere",
@@ -586,7 +586,7 @@
     "resurrection_no_confirm_message": "Du vil miste dine [[:amount]]-mynter for alltid. Er du sikker på at du vil fortsette?",
     "resurrection_yes_confirm_message": "Du kan bare gjenopplive én gang! Er du sikker på at du vil fortsette? [[:amount]]-myntene vil gå tilbake til saldoen din i løpet av den neste timen.",
     "delete_account_confirmation_title": "Bekreft sletting",
-    "delete_account_confirmation_text": "Hvis du sletter kontoen din, slettes alle dataene dine permanent, inkludert ice-saldoen. Vil du fortsette?"
+    "delete_account_confirmation_text": "Hvis du sletter kontoen din, slettes alle dataene dine permanent, inkludert Ice-saldoen. Vil du fortsette?"
   },
   "periods": {
     "3_days": "3 dager",
@@ -668,7 +668,7 @@
     "snowman": {
       "title": "Snømann",
       "subtitle": "Bygg et snøimperium",
-      "description": "Tjen penger ved å sjekke inn hver 24. time for å vise din forpliktelse til ice-nettverket og bevise at du er et menneske, ikke en robot."
+      "description": "Tjen penger ved å sjekke inn hver 24. time for å vise din forpliktelse til Ice-nettverket og bevise at du er et menneske, ikke en robot."
     },
     "ambassador": {
       "title": "Ambassadør",
@@ -709,7 +709,7 @@
       },
       "confirm_phone": {
         "title": "Bekreft telefon",
-        "description": "Bekreft identiteten din og la kontaktene få vite at du også er medlem av ice-nettverket. Telefonnummeret ditt vil ikke bli delt med andre tredjeparter."
+        "description": "Bekreft identiteten din og la kontaktene få vite at du også er medlem av Ice-nettverket. Telefonnummeret ditt vil ikke bli delt med andre tredjeparter."
       },
       "contacts_list": {
         "title": "Liste over kontakter",
@@ -768,11 +768,11 @@
         "description": "Tilpass profildetaljene dine og se alle prestasjonene og merkene du har oppnådd. Bruk kalkulatoren herfra, slik at du kan beregne inntektene dine."
       },
       "earningicestart": {
-        "title": "Tjen penger på ice",
+        "title": "Tjen penger på Ice",
         "description": "Du kan starte[[:ice]]innsjekkingsøkten hver 24. time ved å trykke på denne knappen. Ikke glem å komme tilbake hver dag og begynne å tjene penger!"
       },
       "earningiceseemore": {
-        "title": "Tjen penger på ice",
+        "title": "Tjen penger på Ice",
         "description": "Trykk igjen og se mer informasjon om din nåværende innsjekkingsøkt."
       },
       "stats": {
@@ -867,24 +867,24 @@
   "social_media": {
     "tiktok": {
       "title": "Bli med oss på TikTok",
-      "description": "Vi ville bare ta kontakt og fortelle deg om vårt spennende nye fellesskap på TikTok. Vi deler morsomt og informativt innhold om ice, vår digitale valuta, og vi vil gjerne at du blir med oss!"
+      "description": "Vi ville bare ta kontakt og fortelle deg om vårt spennende nye fellesskap på TikTok. Vi deler morsomt og informativt innhold om Ice, vår digitale valuta, og vi vil gjerne at du blir med oss!"
     },
     "youtube": {
       "title": "Bli med oss på YouTube",
-      "description": "YouTube-kanalen vår er det perfekte stedet å holde seg oppdatert, fra veiledninger om hvordan du tjener penger på ice, til oppdateringer om nye funksjoner og til og med morsomt innhold fra fellesskapet."
+      "description": "YouTube-kanalen vår er det perfekte stedet å holde seg oppdatert, fra veiledninger om hvordan du tjener penger på Ice, til oppdateringer om nye funksjoner og til og med morsomt innhold fra fellesskapet."
     },
     "linkedin": {
       "title": "Bli med oss på LinkedIn",
-      "description": "Å bli med i ice-fellesskapet på LinkedIn er en fin måte å holde seg informert om den siste utviklingen og å få kontakt med likesinnede personer som er like lidenskapelige om fremtiden for digitale valutaer som du er."
+      "description": "Å bli med i Ice-fellesskapet på LinkedIn er en fin måte å holde seg informert om den siste utviklingen og å få kontakt med likesinnede personer som er like lidenskapelige om fremtiden for digitale valutaer som du er."
     },
     "facebook": {
       "title": "Bli med oss på Facebook",
       "description_part1": "Vi anbefaler på det sterkeste at du følger med på Facebook-siden vår.",
-      "description_part2": "Det vil ikke bare hjelpe deg med å holde deg oppdatert på alt som skjer med ice-prosjektet, men det er også en fin måte å få kontakt med nettverket vårt på og være en del av samtalen."
+      "description_part2": "Det vil ikke bare hjelpe deg med å holde deg oppdatert på alt som skjer med Ice-prosjektet, men det er også en fin måte å få kontakt med nettverket vårt på og være en del av samtalen."
     },
     "instagram": {
       "title": "Bli med oss på Instagram",
-      "description_part1": "Å følge oss på Instagram er en fin måte å holde seg oppdatert på og få kontakt med andre brukere som også er lidenskapelig opptatt av ice",
+      "description_part1": "Å følge oss på Instagram er en fin måte å holde seg oppdatert på og få kontakt med andre brukere som også er lidenskapelig opptatt av Ice",
       "description_part2": "I tillegg vil du være den første som får vite om nye funksjoner eller kampanjer som vi lanserer."
     }
   },
@@ -892,12 +892,12 @@
     "title": "Vennligst vent mens vi pinger alle dine venner · {{count}}"
   },
   "creative_library": {
-    "title": "Kreativ ice Bibliotek",
-    "share": "Bygg ditt drømmelag på ice-nettverket!",
+    "title": "Kreativ Ice Bibliotek",
+    "share": "Bygg ditt drømmelag på Ice-nettverket!",
     "get_started": {
       "header": "Bygg ditt drømmelag",
-      "subtitle": "Kom i gang på ice og bygg din blomstrende mikrofellesskap",
-      "description": "Bli med i det hurtigvoksende antallet ice-brukere som bygger sine egne mikrofellesskap og tjener flere belønninger. Våre promoveringsverktøy, veiledninger og tips gjør det enkelt å spre budskapet og bygge en vellykket fellesskap.",
+      "subtitle": "Kom i gang på Ice og bygg din blomstrende mikrofellesskap",
+      "description": "Bli med i det hurtigvoksende antallet Ice-brukere som bygger sine egne mikrofellesskap og tjener flere belønninger. Våre promoveringsverktøy, veiledninger og tips gjør det enkelt å spre budskapet og bygge en vellykket fellesskap.",
       "get_started": "Kom i gang",
       "carousel": {
         "01": {
@@ -906,11 +906,11 @@
         },
         "02": {
           "title": "Inviter",
-          "description": "Inviter publikummet ditt til å bli med på ice og jobbe sammen for å låse opp ekstra belønninger.\n\nI tillegg vil du bidra til å spre budskapet om fordelene med desentralisering og fremtiden for økonomi."
+          "description": "Inviter publikummet ditt til å bli med på Ice og jobbe sammen for å låse opp ekstra belønninger.\n\nI tillegg vil du bidra til å spre budskapet om fordelene med desentralisering og fremtiden for økonomi."
         },
         "03": {
           "title": "Tjen",
-          "description": "Øk belønningene dine ved å utvide nettverket ditt og oppmuntre andre til å bli med i ice-fellesskapet.\n\nBli med oss i oppdraget med å revolusjonere fremtiden for økonomi gjennom desentralisering og autonomi."
+          "description": "Øk belønningene dine ved å utvide nettverket ditt og oppmuntre andre til å bli med i Ice-fellesskapet.\n\nBli med oss i oppdraget med å revolusjonere fremtiden for økonomi gjennom desentralisering og autonomi."
         }
       }
     },
@@ -927,18 +927,18 @@
       },
       "03": {
         "title": "Innebygd Banner",
-        "description": "Med vår innebygde banner kan du enkelt promotere ice til nettstedets besøkende og invitere dem til å bli med i ditt mikrofellesskap.",
+        "description": "Med vår innebygde banner kan du enkelt promotere Ice til nettstedets besøkende og invitere dem til å bli med i ditt mikrofellesskap.",
         "action": "Installer banneret"
       }
     },
     "social_section": {
       "share": {
         "title": "Del Din Historie",
-        "description": "Del reisen din med ice-nettverket og dets mange fordeler ved å skrive en artikkel på ditt språk.\n\nDel dem på din blogg, Medium, Reddit, Quora, Blogger og mer.\n\nDu kan finne alt om ice og dets unike funksjoner på vår [[/:link]]Kunnskapsbase[[/:link]], [[/:link]]Hjemmeside[[/:link]] og [[/:link]]FAQ[[/:link]] side."
+        "description": "Del reisen din med Ice-nettverket og dets mange fordeler ved å skrive en artikkel på ditt språk.\n\nDel dem på din blogg, Medium, Reddit, Quora, Blogger og mer.\n\nDu kan finne alt om Ice og dets unike funksjoner på vår [[/:link]]Kunnskapsbase[[/:link]], [[/:link]]Hjemmeside[[/:link]] og [[/:link]]FAQ[[/:link]] side."
       },
       "spread": {
         "title": "Spred Budskapet",
-        "description": "Bli med i samtalen og introduser ice-nettverket til dine favorittforum.\nStart nye tråder og del tankene dine om desentralisert finans, fremtiden for valuta og kraften ved å bygge et mikrofellesskap med ice.\n\nVær en ☃️ Snømann og start en diskusjon om potensialet til denne globale valutaen."
+        "description": "Bli med i samtalen og introduser Ice-nettverket til dine favorittforum.\nStart nye tråder og del tankene dine om desentralisert finans, fremtiden for valuta og kraften ved å bygge et mikrofellesskap med Ice.\n\nVær en ☃️ Snømann og start en diskusjon om potensialet til denne globale valutaen."
       },
       "bring": {
         "title": "Inviter Vennene Dine",
@@ -948,12 +948,12 @@
     "promo_section": {
       "web": {
         "title": "Plug & Play for Nettsideeiere",
-        "description": "Bygg inn ice-nettverket direkte på nettsiden din med vår enkle og fleksible JS-banner. Det er en rask og enkel oppsett som kan tilpasses for å matche merkevaren til nettsiden din. Den er oversatt til 50 språk og er kompatibel med alle nettsideplattformer.\n\nKopier og lim inn koden på nettsiden din, og begynn å promotere ice-nettverket til besøkende i dag.",
+        "description": "Bygg inn Ice-nettverket direkte på nettsiden din med vår enkle og fleksible JS-banner. Det er en rask og enkel oppsett som kan tilpasses for å matche merkevaren til nettsiden din. Den er oversatt til 50 språk og er kompatibel med alle nettsideplattformer.\n\nKopier og lim inn koden på nettsiden din, og begynn å promotere Ice-nettverket til besøkende i dag.",
         "action": "Installer banneret"
       },
       "mobile": {
         "title": "Bibliotek for Mobilapper",
-        "description": "Integrer vår brukervennlige bibliotek i mobilappen din og inviter brukerne dine til å bli med i ditt mikrofellesskap og begynne å mine.\n\nMed støtte for oversettelse og fleksible oppsettsalternativer kan du sikre at alle brukerne dine har tilgang til den samme flotte ice-opplevelsen, uansett hvor de er i verden.",
+        "description": "Integrer vår brukervennlige bibliotek i mobilappen din og inviter brukerne dine til å bli med i ditt mikrofellesskap og begynne å mine.\n\nMed støtte for oversettelse og fleksible oppsettsalternativer kan du sikre at alle brukerne dine har tilgang til den samme flotte Ice-opplevelsen, uansett hvor de er i verden.",
         "action1": "Android-bibliotek",
         "action2": "React Native-bibliotek"
       }
@@ -964,7 +964,7 @@
         "rules": {
           "01": {
             "title": "Vær Autentisk",
-            "description": "Skriv fra din personlige erfaring og perspektiv. Del dine ærlige tanker og følelser om ice-nettverket."
+            "description": "Skriv fra din personlige erfaring og perspektiv. Del dine ærlige tanker og følelser om Ice-nettverket."
           },
           "02": {
             "title": "Bruk en Vennlig Tone",
@@ -972,7 +972,7 @@
           },
           "03": {
             "title": "Vær Kreativ",
-            "description": "Ikke vær redd for å eksperimentere med ulike typer innhold, som blogginnlegg, videoer eller oppdateringer på sosiale medier. Ha det gøy og vær nyskapende i måten du promoterer ice-nettverket til publikummet ditt."
+            "description": "Ikke vær redd for å eksperimentere med ulike typer innhold, som blogginnlegg, videoer eller oppdateringer på sosiale medier. Ha det gøy og vær nyskapende i måten du promoterer Ice-nettverket til publikummet ditt."
           }
         }
       },
@@ -985,11 +985,11 @@
           },
           "02": {
             "title": "Ikke Forsøk å Villede Folk",
-            "description": "ice-prosjektet betaler ikke brukere med kontanter, vi belønner bare med ice-mynter. Unngå å poste innhold som \"Konverter isen din til kontanter\" eller \"Hvordan tjene $100 med ice\" og lignende."
+            "description": "Ice-prosjektet betaler ikke brukere med kontanter, vi belønner bare med Ice-mynter. Unngå å poste innhold som \"Konverter isen din til kontanter\" eller \"Hvordan tjene $100 med Ice\" og lignende."
           },
           "03": {
             "title": "Unngå Deltakelse i Svindelaktiviteter",
-            "description": "Vi verdsetter åpenhet og ærlighet i vårt fellesskap. Enhver form for svindelaktivitet, som å opprette flere kontoer eller prøve å manipulere ice-nettverket, vil ikke bli tolerert."
+            "description": "Vi verdsetter åpenhet og ærlighet i vårt fellesskap. Enhver form for svindelaktivitet, som å opprette flere kontoer eller prøve å manipulere Ice-nettverket, vil ikke bli tolerert."
           }
         }
       }

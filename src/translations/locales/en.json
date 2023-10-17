@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "Welcome to Ice",
+      "description": "[[:ice]] is a digital currency that you can earn with your phone. Ice is owned and operated by every day users like yourself."
     },
     "page2": {
       "title": "Planet Friendly",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that Ice ends up in the hands of real humans, not bots."
     },
     "page5": {
       "title": "Refer & Earn",
@@ -82,7 +82,7 @@
     "contacts": {
       "empty_title": "[[:ice]] is better with friends",
       "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send Ice to any of your contacts."
     },
     "header": {
       "search_placeholder": "Search for users",
@@ -105,7 +105,7 @@
       },
       "all_contacts": "All contacts",
       "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "invitation_text": "Hi {{name}}, I would like to invite you to join Ice."
     },
     "tier_one": {
       "header_list": {
@@ -122,7 +122,7 @@
     "logInSignUp": "Log in / Sign up",
     "phone": "Phone",
     "or": "or",
-    "welcome": "Welcome to ice",
+    "welcome": "Welcome to Ice",
     "email": "Email",
     "slogan": "The Decentralized Future",
     "privacy": "By continuing, you agree to our [[:link]]Terms of Service[[/:link]] and [[:link]]Privacy Policy[[/:link]]"
@@ -360,7 +360,7 @@
     "feedback_title": "Send Feedback",
     "feedback_description": "Share your thoughts with us.",
     "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends.",
+    "invite_description": "Earn extra Ice by inviting your friends.",
     "delete_title": "Delete Account",
     "delete_description": "Erase your account.",
     "delete_confirmation_title": "Are you sure you want to remove the account?",
@@ -423,7 +423,7 @@
         },
         "system": {
           "title": "System",
-          "description": "Receive important notifications about the ice app."
+          "description": "Receive important notifications about the Ice app."
         }
       }
     },
@@ -462,8 +462,8 @@
     "copy_link": "Copy link",
     "more": "More",
     "copied": "COPIED",
-    "share_message": "Hi ☃️ Snowman! Join my team on ice and receive 10 ice coins when you sign-up using my referral code:",
-    "share_subject": "Join my team on ice",
+    "share_message": "Hi ☃️ Snowman! Join my team on Ice and receive 10 Ice coins when you sign-up using my referral code:",
+    "share_subject": "Join my team on Ice",
     "description": "Spread the word and invite your friends. You earn [[:ice]] for each new referral you bring.",
     "share": "Share"
   },
@@ -500,14 +500,14 @@
     "time_left": "Time Left",
     "mining_rate": "Earning Rate",
     "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to 5 years and increase your earning rate by up to 250%.",
+    "benefits_description": "Pre-stake your Ice rewards for up to 5 years and increase your earning rate by up to 250%.",
     "bonus_label": "Pre-Staking Bonus",
     "period_label": "Staked Period",
     "title": "Pre-Staking",
     "current_rate": "Current Rate",
     "allocation": "Allocation",
     "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions.",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]Staking Terms[[/:link]]. Your ice holdings will be locked for the selected period.",
+    "terms_agree": "I agree to the [[:ice]] [[:link]]Staking Terms[[/:link]]. Your Ice holdings will be locked for the selected period.",
     "stake_now": "Pre-Stake Now!",
     "balance_label": "Staked balance",
     "confirm_title": "Confirm Pre-Stake",
@@ -532,8 +532,8 @@
     "good_morning": "Good morning",
     "good_afternoon": "Good afternoon",
     "good_evening": "Good evening",
-    "ice": "ice",
-    "ice_per_hour": "ice/h",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/h",
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
@@ -546,7 +546,7 @@
     "views": "{{viewsCount}} views"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community.",
+    "empty": "Search for contacts, Ice friends and members of your micro-community.",
     "nothing_is_found": "Nothing was found for your query.",
     "search_by_country": "Search by country",
     "search_for_users": "Search for users",
@@ -585,7 +585,7 @@
     "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
     "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour.",
     "delete_account_confirmation_title": "Confirm Deletion",
-    "delete_account_confirmation_text": "Deleting your account will permanently erase all your data, including your ice balance. Do you want to proceed?"
+    "delete_account_confirmation_text": "Deleting your account will permanently erase all your data, including your Ice balance. Do you want to proceed?"
   },
   "periods": {
     "3_days": "3 days",
@@ -665,7 +665,7 @@
     "snowman": {
       "title": "Snowman",
       "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a robot."
+      "description": "Earn by checking in every 24 hours to show your commitment to the Ice network and prove that you're a human, not a robot."
     },
     "ambassador": {
       "title": "Ambassador",
@@ -706,7 +706,7 @@
       },
       "confirm_phone": {
         "title": "Confirm phone",
-        "description": "Confirm your identity and allow your contacts to know that you are also a member of the ice network. Your phone number will not be shared with other third parties."
+        "description": "Confirm your identity and allow your contacts to know that you are also a member of the Ice network. Your phone number will not be shared with other third parties."
       },
       "contacts_list": {
         "title": "List of contacts",
@@ -765,11 +765,11 @@
         "description": "Customize your profile details and see all your achievements and badges that you have earned. Use the calculator from here, so you can estimate your earnings."
       },
       "earningicestart": {
-        "title": "Earning ice",
+        "title": "Earning Ice",
         "description": "You can start the [[:ice]] check-in session every 24 hours by tapping this button. Don’t forget to come back each day and start earning!"
       },
       "earningiceseemore": {
-        "title": "Earning ice",
+        "title": "Earning Ice",
         "description": "Tap again and see more details about your current check-in session."
       },
       "stats": {
@@ -864,24 +864,24 @@
   "social_media": {
     "tiktok": {
       "title": "Join us on TikTok",
-      "description": "We just wanted to reach out and let you know about our exciting new community on TikTok. We're sharing fun and informative content about our digital currency, ice, and we would love for you to join us!"
+      "description": "We just wanted to reach out and let you know about our exciting new community on TikTok. We're sharing fun and informative content about our digital currency, Ice, and we would love for you to join us!"
     },
     "youtube": {
       "title": "Join us on YouTube",
-      "description": "From tutorials on how to earn ice, to updates about new features, and even fun community content, our YouTube channel is the perfect place to stay up-to-date."
+      "description": "From tutorials on how to earn Ice, to updates about new features, and even fun community content, our YouTube channel is the perfect place to stay up-to-date."
     },
     "linkedin": {
       "title": "Join us on LinkedIn",
-      "description": "Joining the ice community on LinkedIn is a great way to stay informed about the latest developments and to connect with like-minded individuals who are just as passionate about the future of digital currencies as you are."
+      "description": "Joining the Ice community on LinkedIn is a great way to stay informed about the latest developments and to connect with like-minded individuals who are just as passionate about the future of digital currencies as you are."
     },
     "facebook": {
       "title": "Join us on Facebook",
       "description_part1": "We highly recommend giving our Facebook page a follow.",
-      "description_part2": "Not only will it help you stay up to date on everything that’s happening with the ice project, but it’s also a great way to connect with our community and be a part of the conversation."
+      "description_part2": "Not only will it help you stay up to date on everything that’s happening with the Ice project, but it’s also a great way to connect with our community and be a part of the conversation."
     },
     "instagram": {
       "title": "Join us on Instagram",
-      "description_part1": "Following us on Instagram is a great way to stay in the loop and connect with other users who are also passionate about ice",
+      "description_part1": "Following us on Instagram is a great way to stay in the loop and connect with other users who are also passionate about Ice",
       "description_part2": "Plus, you'll be the first to know about any new features or promotions that we're launching."
     }
   },
@@ -889,12 +889,12 @@
     "title": "Please wait while we ping all your friends · {{count}}"
   },
   "creative_library": {
-    "title": "Creative ice Library",
-    "share": "Build your dream team on ice network!",
+    "title": "Creative Ice Library",
+    "share": "Build your dream team on Ice network!",
     "get_started": {
       "header": "Build your dream team",
-      "subtitle": "Get started on ice and build your thriving micro-community",
-      "description": "Join the fast-growing number of ice users who are building their own micro-communities and earning more rewards. Our promotional tools, guides, and tips make it easy to spread the word and build a successful community.",
+      "subtitle": "Get started on Ice and build your thriving micro-community",
+      "description": "Join the fast-growing number of Ice users who are building their own micro-communities and earning more rewards. Our promotional tools, guides, and tips make it easy to spread the word and build a successful community.",
       "get_started": "Get Started",
       "carousel": {
         "01": {
@@ -903,11 +903,11 @@
         },
         "02": {
           "title": "Invite",
-          "description": "Invite your audience to join ice and work together to unlock additional rewards.\n\nPlus, you’ll be helping to spread the word about the benefits of decentralization and the future of finance."
+          "description": "Invite your audience to join Ice and work together to unlock additional rewards.\n\nPlus, you’ll be helping to spread the word about the benefits of decentralization and the future of finance."
         },
         "03": {
           "title": "Earn",
-          "description": "Grow your rewards by expanding your network and encouraging others to join the ice community.\n\nJoin us in our mission to revolutionise the future of finance through decentralization and autonomy."
+          "description": "Grow your rewards by expanding your network and encouraging others to join the Ice community.\n\nJoin us in our mission to revolutionise the future of finance through decentralization and autonomy."
         }
       }
     },
@@ -924,18 +924,18 @@
       },
       "03": {
         "title": "Embedded Browser",
-        "description": "With our embedded browser, you can easily promote ice to your website visitors and invite them to join your mirco-community.",
+        "description": "With our embedded browser, you can easily promote Ice to your website visitors and invite them to join your mirco-community.",
         "action": "Install the banner"
       }
     },
     "social_section": {
       "share": {
         "title": "Share Your Story",
-        "description": "Share your journey with ice network and its many benefits by writing an article in your language.\n\nShare them on your Blog, Medium, Reddit, Quora, Blogger and more.\n\nYou can find everything about ice and its unique features on our [[:link]]Knowledge Base[[/:link]], [[:link]]Homepage[[/:link]], and [[:link]]FAQ[[/:link]] page."
+        "description": "Share your journey with Ice network and its many benefits by writing an article in your language.\n\nShare them on your Blog, Medium, Reddit, Quora, Blogger and more.\n\nYou can find everything about Ice and its unique features on our [[:link]]Knowledge Base[[/:link]], [[:link]]Homepage[[/:link]], and [[:link]]FAQ[[/:link]] page."
       },
       "spread": {
         "title": "Spread the Word",
-        "description": "Join the conversation and introduce the ice network to your favorite forums.\nStart new threads and share your thoughts about decentralized finance, the future of currency, and the power of building a micro-community with ice.\n\nBe a ☃\uFE0F Snowman and spark a discussion about the potential of this global currency."
+        "description": "Join the conversation and introduce the Ice network to your favorite forums.\nStart new threads and share your thoughts about decentralized finance, the future of currency, and the power of building a micro-community with Ice.\n\nBe a ☃\uFE0F Snowman and spark a discussion about the potential of this global currency."
       },
       "bring": {
         "title": "Bring Your Friends Onboard",
@@ -945,12 +945,12 @@
     "promo_section": {
       "web": {
         "title": "Plug & Play for Website Owners",
-        "description": "Embed ice network directly onto your website with our simple and flexible JS banner. It’s a quick and easy setup that can be customized to match your website’s branding. It’s translated into 50 languages and is compatible with any website platform.\n\nCopy and paste the code into your website, and start promoting ice network to your visitors today.",
+        "description": "Embed Ice network directly onto your website with our simple and flexible JS banner. It’s a quick and easy setup that can be customized to match your website’s branding. It’s translated into 50 languages and is compatible with any website platform.\n\nCopy and paste the code into your website, and start promoting Ice network to your visitors today.",
         "action": "Install the banner"
       },
       "mobile": {
         "title": "Library for Mobile Apps",
-        "description": "Integrate our easy-to-use library into your mobile app and invite your users to join your micro-community and start mining.\n\nWith translation support and flexible setup options, you can ensure that all of your users have access to the same great ice experience, no matter where they are in the world.",
+        "description": "Integrate our easy-to-use library into your mobile app and invite your users to join your micro-community and start mining.\n\nWith translation support and flexible setup options, you can ensure that all of your users have access to the same great Ice experience, no matter where they are in the world.",
         "action1": "Android library",
         "action2": "React Native library"
       }
@@ -961,7 +961,7 @@
         "rules": {
           "01": {
             "title": "Be authentic",
-            "description": "Write from your personal experience and perspective. Share your honest thoughts and feelings about ice network."
+            "description": "Write from your personal experience and perspective. Share your honest thoughts and feelings about Ice network."
           },
           "02": {
             "title": "Use a friendly tone",
@@ -969,7 +969,7 @@
           },
           "03": {
             "title": "Be creative",
-            "description": "Don’t be afraid to experiment with different types of content, such as blog posts, videos, or social media updates. Have fun and be innovative in the way you promote ice network to your audience."
+            "description": "Don’t be afraid to experiment with different types of content, such as blog posts, videos, or social media updates. Have fun and be innovative in the way you promote Ice network to your audience."
           }
         }
       },
@@ -982,11 +982,11 @@
           },
           "02": {
             "title": "Don’t mislead people",
-            "description": "The ice project doesn’t pay users any cash, we only reward with ice coins. Please avoid posting content such as “Turn your ice into cash”. “How to earn $100 with ice” and so on."
+            "description": "The Ice project doesn’t pay users any cash, we only reward with Ice coins. Please avoid posting content such as “Turn your Ice into cash”. “How to earn $100 with Ice” and so on."
           },
           "03": {
             "title": "Don’t engage in fraudulent activities",
-            "description": "We value transparency and honesty in our community. Any fraudulent activities such as creating multiple accounts or trying to manipulate the ice network will not be tolerated."
+            "description": "We value transparency and honesty in our community. Any fraudulent activities such as creating multiple accounts or trying to manipulate the Ice network will not be tolerated."
           }
         }
       }

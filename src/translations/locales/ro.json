@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "Bun venit la ice",
-      "description": "[[:ice]] este o monedă digitală pe care o poți câștiga cu telefonul tău. ice este deținută și administrată de utilizatori obișnuiți ca tine."
+      "title": "Bun venit la Ice",
+      "description": "[[:ice]] este o monedă digitală pe care o poți câștiga cu telefonul tău. Ice este deținută și administrată de utilizatori obișnuiți ca tine."
     },
     "page2": {
       "title": "Prietenoasă cu planeta",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Rămâi conectat",
-      "description": "Atinge [[:iceLogo]] pentru vizita zilnică în aplicația noastră mobilă gratuită și cu consum redus de energie. Atingerea zilnică asigură faptul că ice ajunge în mâinile unor oameni reali, nu roboți."
+      "description": "Atinge [[:iceLogo]] pentru vizita zilnică în aplicația noastră mobilă gratuită și cu consum redus de energie. Atingerea zilnică asigură faptul că Ice ajunge în mâinile unor oameni reali, nu roboți."
     },
     "page5": {
       "title": "Recomandă și câștigă",
@@ -82,7 +82,7 @@
     "contacts": {
       "empty_title": "[[:ice]] este mai bun cu prietenii",
       "empty_button_title": "Permite accesul la contacte",
-      "empty_description": "Sincronizează-ți contactele și vezi cine se află deja pe [[:ice]]. În viitor, vei putea să trimiți ice către oricare dintre contactele tale."
+      "empty_description": "Sincronizează-ți contactele și vezi cine se află deja pe [[:ice]]. În viitor, vei putea să trimiți Ice către oricare dintre contactele tale."
     },
     "header": {
       "search_placeholder": "Caută utilizatori",
@@ -105,7 +105,7 @@
       },
       "all_contacts": "Toate contactele",
       "invite": "invită",
-      "invitation_text": "Bună, {{name}}, aș vrea să te invit să te înscrii la ice."
+      "invitation_text": "Bună, {{name}}, aș vrea să te invit să te înscrii la Ice."
     },
     "tier_one": {
       "header_list": {
@@ -123,7 +123,7 @@
     "phone": "Telefon",
     "or": "sau",
     "reset_password": "Resetează parola",
-    "welcome": "Bun venit la ice",
+    "welcome": "Bun venit la Ice",
     "email": "E-mail",
     "slogan": "Viitorul descentralizat",
     "privacy": "Continuând, accepți [[:link]]Condițiile de utilizare[[/:link]] și [[:link]]Politica de confidențialitate[[/:link]]"
@@ -361,7 +361,7 @@
     "feedback_title": "Trimite feedback",
     "feedback_description": "Împărtășește-ne părerea ta.",
     "invite_title": "Invită un prieten",
-    "invite_description": "Câștigă ice în plus invitându-ți prietenii.",
+    "invite_description": "Câștigă Ice în plus invitându-ți prietenii.",
     "delete_title": "Șterge contul",
     "delete_description": "Șterge-ți contul.",
     "delete_confirmation_title": "Sigur vrei să elimini contul?",
@@ -424,7 +424,7 @@
         },
         "system": {
           "title": "Sistem",
-          "description": "Primește notificări importante despre aplicația ice."
+          "description": "Primește notificări importante despre aplicația Ice."
         }
       }
     },
@@ -463,8 +463,8 @@
     "copy_link": "Copiază linkul",
     "more": "Mai mult",
     "copied": "COPIAT",
-    "share_message": "Bună, ☃️ Om de zăpadă! Alătură-te echipei mele pe ice și vei primi 10 monede ice atunci când te vei înregistra folosind codul meu de recomandare:",
-    "share_subject": "Alătură-te echipei mele pe ice",
+    "share_message": "Bună, ☃️ Om de zăpadă! Alătură-te echipei mele pe Ice și vei primi 10 monede Ice atunci când te vei înregistra folosind codul meu de recomandare:",
+    "share_subject": "Alătură-te echipei mele pe Ice",
     "description": "Dă informația mai departe și invită-ți prietenii. Câștigi [[:ice]] pentru fiecare nouă recomandare pe care o faci.",
     "share": "Distribuie"
   },
@@ -508,7 +508,7 @@
     "current_rate": "Rata actuală",
     "allocation": "Alocare",
     "description": "Mizarea este un proces care presupune să îți dedici criptoactivele susținerii unei rețele blockchain și confirmării tranzacțiilor.",
-    "terms_agree": "Sunt de acord cu [[:ice]] [[:link]]Condițiile de mizare[[/:link]]. Pachetul tău de ice va fi blocat pentru perioada selectată.",
+    "terms_agree": "Sunt de acord cu [[:ice]] [[:link]]Condițiile de mizare[[/:link]]. Pachetul tău de Ice va fi blocat pentru perioada selectată.",
     "stake_now": "Mizează anticipat acum!",
     "balance_label": "Sold mizat",
     "confirm_title": "Confirmă mizarea anticipată",
@@ -533,8 +533,8 @@
     "good_morning": "Bună dimineața",
     "good_afternoon": "Bună ziua",
     "good_evening": "Bună seara",
-    "ice": "ice",
-    "ice_per_hour": "ice/h",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/h",
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
@@ -547,7 +547,7 @@
     "views": "{{viewsCount}} vizualizări"
   },
   "search": {
-    "empty": "Caută contacte, prieteni de pe ice și membri ai micro-comunității tale.",
+    "empty": "Caută contacte, prieteni de pe Ice și membri ai micro-comunității tale.",
     "nothing_is_found": "Nu s-a găsit nimic pentru interogarea ta.",
     "search_by_country": "Caută după țară",
     "search_for_users": "Caută utilizatori",
@@ -586,7 +586,7 @@
     "resurrection_no_confirm_message": "Îți vei pierde cele [[:amount]] monede pentru totdeauna. Sigur vrei să continui?",
     "resurrection_yes_confirm_message": "Te poți regenera o singură dată! Sigur vrei să continui? Cele [[:amount]] monede vor reveni în soldul tău în următoarea oră.",
     "delete_account_confirmation_title": "Confirmă ștergerea",
-    "delete_account_confirmation_text": "Prin ștergerea contului tău, toate datele tale, inclusiv soldul tău ice, vor fi șterse definitiv. Vrei să continui?"
+    "delete_account_confirmation_text": "Prin ștergerea contului tău, toate datele tale, inclusiv soldul tău Ice, vor fi șterse definitiv. Vrei să continui?"
   },
   "periods": {
     "3_days": "3 zile",
@@ -668,7 +668,7 @@
     "snowman": {
       "title": "Om de zăpadă",
       "subtitle": "Construiește un imperiu de zăpadă",
-      "description": "Câștigă vizitând o dată la 24 de ore pentru a-ți arăta angajamentul față de rețeaua ice și a dovedi că ești om, nu robot."
+      "description": "Câștigă vizitând o dată la 24 de ore pentru a-ți arăta angajamentul față de rețeaua Ice și a dovedi că ești om, nu robot."
     },
     "ambassador": {
       "title": "Ambasador",
@@ -709,7 +709,7 @@
       },
       "confirm_phone": {
         "title": "Confirmă telefonul",
-        "description": "Confirmă-ți identitatea și permite-le contactelor tale să știe că și tu ești membru al rețelei ice. Numărul tău de telefon nu va fi divulgat altor terți."
+        "description": "Confirmă-ți identitatea și permite-le contactelor tale să știe că și tu ești membru al rețelei Ice. Numărul tău de telefon nu va fi divulgat altor terți."
       },
       "contacts_list": {
         "title": "Lista de contacte",
@@ -768,11 +768,11 @@
         "description": "Personalizează-ți detaliile profilului și vezi toate realizările tale și insignele pe care le-ai obținut. Folosește calculatorul de aici, ca să-ți poți estima câștigurile."
       },
       "earningicestart": {
-        "title": "Cum câștigi ice",
+        "title": "Cum câștigi Ice",
         "description": "Poți începe sesiunea de vizitare a [[:ice]] o dată la 24 de ore atingând acest buton. Nu uita să revii în fiecare zi și să începi să câștigi!"
       },
       "earningiceseemore": {
-        "title": "Cum câștigi ice",
+        "title": "Cum câștigi Ice",
         "description": "Atinge din nou și vezi mai multe detalii despre sesiunea actuală de vizitare."
       },
       "stats": {
@@ -867,24 +867,24 @@
   "social_media": {
     "tiktok": {
       "title": "Vino alături de noi pe TikTok",
-      "description": "Am vrut să luăm legătura cu tine și să te anunțăm despre noua noastră comunitate interesantă de pe TikTok. Distribuim conținut distractiv și informativ despre moneda noastră digitală, ice, și ne-ar face plăcere să ni te alături!"
+      "description": "Am vrut să luăm legătura cu tine și să te anunțăm despre noua noastră comunitate interesantă de pe TikTok. Distribuim conținut distractiv și informativ despre moneda noastră digitală, Ice, și ne-ar face plăcere să ni te alături!"
     },
     "youtube": {
       "title": "Vino alături de noi pe YouTube",
-      "description": "De la tutoriale despre modalități de a câștiga ice la noutăți despre caracteristici noi și chiar conținut distractiv distribuit de comunitate, canalul nostru de YouTube este locul perfect pentru a rămâne la curent."
+      "description": "De la tutoriale despre modalități de a câștiga Ice la noutăți despre caracteristici noi și chiar conținut distractiv distribuit de comunitate, canalul nostru de YouTube este locul perfect pentru a rămâne la curent."
     },
     "linkedin": {
       "title": "Vino alături de noi pe LinkedIn",
-      "description": "Alăturarea la comunitatea ice de pe LinkedIn este o modalitate excelentă de a rămâne informat cu privire la cele mai recente evenimente și de a te conecta cu persoane pe aceeași lungime de undă care sunt la fel de pasionate ca tine de viitorul monedelor digitale."
+      "description": "Alăturarea la comunitatea Ice de pe LinkedIn este o modalitate excelentă de a rămâne informat cu privire la cele mai recente evenimente și de a te conecta cu persoane pe aceeași lungime de undă care sunt la fel de pasionate ca tine de viitorul monedelor digitale."
     },
     "facebook": {
       "title": "Vino alături de noi pe Facebook",
       "description_part1": "Îți recomandăm cu căldură să urmărești pagina noastră de Facebook.",
-      "description_part2": "Nu numai că te va ajuta să rămâi la curent cu tot ce se întâmplă cu proiectul ice, dar este și o modalitate excelentă de a te conecta cu comunitatea noastră și de a participa la conversație."
+      "description_part2": "Nu numai că te va ajuta să rămâi la curent cu tot ce se întâmplă cu proiectul Ice, dar este și o modalitate excelentă de a te conecta cu comunitatea noastră și de a participa la conversație."
     },
     "instagram": {
       "title": "Vino alături de noi pe Instagram",
-      "description_part1": "Urmărirea noastră pe Instagram este o modalitate excelentă de a rămâne informat și de a te conecta cu alți utilizatori care sunt, de asemenea, pasionați de ice",
+      "description_part1": "Urmărirea noastră pe Instagram este o modalitate excelentă de a rămâne informat și de a te conecta cu alți utilizatori care sunt, de asemenea, pasionați de Ice",
       "description_part2": "În plus, vei afla primul despre orice noi caracteristici sau promoții pe care le lansăm."
     }
   },
@@ -892,12 +892,12 @@
     "title": "Vă rugăm să așteptați în timp ce trimitem ping tuturor prietenilor dvs. · {{count}}"
   },
   "creative_library": {
-    "title": "Biblioteca creativă ice",
-    "share": "Construiește-ți echipa de vis pe rețeaua ice!",
+    "title": "Biblioteca creativă Ice",
+    "share": "Construiește-ți echipa de vis pe rețeaua Ice!",
     "get_started": {
       "header": "Construiește-ți echipa de vis",
-      "subtitle": "Începe pe ice și construiește-ți micro-comunitatea prosperă",
-      "description": "Alătură-te numărului în creștere rapidă de utilizatori ice care își construiesc propriile micro-comunități și câștigă mai multe recompense. Uneltele noastre promoționale, ghidurile și sfaturile fac ușor să răspândiți vestea și să construiți o comunitate de succes.",
+      "subtitle": "Începe pe Ice și construiește-ți micro-comunitatea prosperă",
+      "description": "Alătură-te numărului în creștere rapidă de utilizatori Ice care își construiesc propriile micro-comunități și câștigă mai multe recompense. Uneltele noastre promoționale, ghidurile și sfaturile fac ușor să răspândiți vestea și să construiți o comunitate de succes.",
       "get_started": "Începeți",
       "carousel": {
         "01": {
@@ -906,11 +906,11 @@
         },
         "02": {
           "title": "Invită",
-          "description": "Invită-ți audiența să se alăture ice și să lucreze împreună pentru a debloca recompense suplimentare.\n\nÎn plus, vei ajuta la răspândirea cuvântului despre beneficiile descentralizării și viitorul finanțelor."
+          "description": "Invită-ți audiența să se alăture Ice și să lucreze împreună pentru a debloca recompense suplimentare.\n\nÎn plus, vei ajuta la răspândirea cuvântului despre beneficiile descentralizării și viitorul finanțelor."
         },
         "03": {
           "title": "Câștigă",
-          "description": "Creste-ți recompensele prin extinderea rețelei tale și încurajarea altora să se alăture comunității ice.\n\nAlătură-te nouă în misiunea noastră de a revoluționa viitorul finanțelor prin descentralizare și autonomie."
+          "description": "Creste-ți recompensele prin extinderea rețelei tale și încurajarea altora să se alăture comunității Ice.\n\nAlătură-te nouă în misiunea noastră de a revoluționa viitorul finanțelor prin descentralizare și autonomie."
         }
       }
     },
@@ -927,18 +927,18 @@
       },
       "03": {
         "title": "Banner Încorporat",
-        "description": "Cu bannerul nostru încorporat, puteți promova ușor ice vizitatorilor site-ului dvs. și îi puteți invita să se alăture micro-comunității dvs.",
+        "description": "Cu bannerul nostru încorporat, puteți promova ușor Ice vizitatorilor site-ului dvs. și îi puteți invita să se alăture micro-comunității dvs.",
         "action": "Instalează bannerul"
       }
     },
     "social_section": {
       "share": {
         "title": "Împărtășește-ți povestea",
-        "description": "Împărtășiți călătoria dvs. cu rețeaua ice și numeroasele sale beneficii scriind un articol în limba dvs.\n\nDistribuiți-le pe Blogul dvs., Medium, Reddit, Quora, Blogger și altele.\n\nPuteți găsi totul despre ice și caracteristicile sale unice pe [[:link]]Baza noastră de cunoștințe[[/:link]], [[:link]]Pagina de pornire[[/:link]], și [[:link]]Pagina de întrebări frecvente[[/:link]]."
+        "description": "Împărtășiți călătoria dvs. cu rețeaua Ice și numeroasele sale beneficii scriind un articol în limba dvs.\n\nDistribuiți-le pe Blogul dvs., Medium, Reddit, Quora, Blogger și altele.\n\nPuteți găsi totul despre Ice și caracteristicile sale unice pe [[:link]]Baza noastră de cunoștințe[[/:link]], [[:link]]Pagina de pornire[[/:link]], și [[:link]]Pagina de întrebări frecvente[[/:link]]."
       },
       "spread": {
         "title": "Răspândiți vestea",
-        "description": "Alăturați-vă conversației și prezentați rețeaua ice forumurilor voastre preferate.\nCreați discuții noi și împărtășiți-vă gândurile despre finanțele descentralizate, viitorul monedei și puterea de a construi o micro-comunitate cu ice.\n\nFii un om de zăpadă ☃\uFE0F și declanșează o discuție despre potențialul acestei monede globale."
+        "description": "Alăturați-vă conversației și prezentați rețeaua Ice forumurilor voastre preferate.\nCreați discuții noi și împărtășiți-vă gândurile despre finanțele descentralizate, viitorul monedei și puterea de a construi o micro-comunitate cu Ice.\n\nFii un om de zăpadă ☃\uFE0F și declanșează o discuție despre potențialul acestei monede globale."
       },
       "bring": {
         "title": "Aduceți-vă prietenii la bord",
@@ -948,12 +948,12 @@
     "promo_section": {
       "web": {
         "title": "Plug & Play pentru proprietarii de site-uri web",
-        "description": "Înglobați rețeaua ice direct pe site-ul dvs. cu bannerul nostru JS simplu și flexibil. Este o configurare rapidă și ușoară care poate fi personalizată pentru a se potrivi brandului site-ului dvs. Este tradus în 50 de limbi și este compatibil cu orice platformă de site.\n\nCopiați și lipiți codul în site-ul dvs. și începeți să promovați rețeaua ice vizitatorilor dvs. astăzi.",
+        "description": "Înglobați rețeaua Ice direct pe site-ul dvs. cu bannerul nostru JS simplu și flexibil. Este o configurare rapidă și ușoară care poate fi personalizată pentru a se potrivi brandului site-ului dvs. Este tradus în 50 de limbi și este compatibil cu orice platformă de site.\n\nCopiați și lipiți codul în site-ul dvs. și începeți să promovați rețeaua Ice vizitatorilor dvs. astăzi.",
         "action": "Instalează bannerul"
       },
       "mobile": {
         "title": "Bibliotecă pentru aplicații mobile",
-        "description": "Integrați biblioteca noastră ușor de utilizat în aplicația dvs. mobilă și invitați utilizatorii dvs. să se alăture micro-comunității dvs. și să înceapă să mineze.\n\nCu suport pentru traduceri și opțiuni de configurare flexibile, puteți asigura că toți utilizatorii dvs. au acces la aceeași experiență excelentă ice, indiferent unde se află în lume.",
+        "description": "Integrați biblioteca noastră ușor de utilizat în aplicația dvs. mobilă și invitați utilizatorii dvs. să se alăture micro-comunității dvs. și să înceapă să mineze.\n\nCu suport pentru traduceri și opțiuni de configurare flexibile, puteți asigura că toți utilizatorii dvs. au acces la aceeași experiență excelentă Ice, indiferent unde se află în lume.",
         "action1": "Bibliotecă Android",
         "action2": "Bibliotecă React Native"
       }
@@ -964,7 +964,7 @@
         "rules": {
           "01": {
             "title": "Fii autentic",
-            "description": "Scrieți din propria dvs. experiență și perspectivă. Împărtășiți-vă gândurile și sentimentele sincere despre rețeaua ice."
+            "description": "Scrieți din propria dvs. experiență și perspectivă. Împărtășiți-vă gândurile și sentimentele sincere despre rețeaua Ice."
           },
           "02": {
             "title": "Folosește un ton prietenos",
@@ -972,7 +972,7 @@
           },
           "03": {
             "title": "Fii creativ",
-            "description": "Nu vă fie teamă să experimentați cu diferite tipuri de conținut, cum ar fi articolele de blog, videoclipurile sau actualizările de social media. Distrează-te și fii inovator în modul în care promovați rețeaua ice publicului dvs."
+            "description": "Nu vă fie teamă să experimentați cu diferite tipuri de conținut, cum ar fi articolele de blog, videoclipurile sau actualizările de social media. Distrează-te și fii inovator în modul în care promovați rețeaua Ice publicului dvs."
           }
         }
       },
@@ -985,11 +985,11 @@
           },
           "02": {
             "title": "Nu induceți în eroare oamenii",
-            "description": "Proiectul ice nu plătește utilizatorii cu bani, recompensăm doar cu monede ice. Vă rugăm să evitați publicarea de conținut precum „Transformați-vă ice în bani”. „Cum să câștigați 100 de dolari cu ice” și așa mai departe."
+            "description": "Proiectul Ice nu plătește utilizatorii cu bani, recompensăm doar cu monede Ice. Vă rugăm să evitați publicarea de conținut precum „Transformați-vă Ice în bani”. „Cum să câștigați 100 de dolari cu Ice” și așa mai departe."
           },
           "03": {
             "title": "Nu participați la activități frauduloase",
-            "description": "Valorizăm transparența și onestitatea în comunitatea noastră. Orice activități frauduloase, cum ar fi crearea de mai multe conturi sau încercarea de a manipula rețeaua ice, nu vor fi tolerate."
+            "description": "Valorizăm transparența și onestitatea în comunitatea noastră. Orice activități frauduloase, cum ar fi crearea de mai multe conturi sau încercarea de a manipula rețeaua Ice, nu vor fi tolerate."
           }
         }
       }
