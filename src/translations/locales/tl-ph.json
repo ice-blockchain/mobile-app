@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "Welcome to Ice",
+      "description": "[[:ice]] is a digital currency that you can earn with your phone. Ice is owned and operated by every day users like yourself."
     },
     "page2": {
       "title": "Planet Friendly",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that Ice ends up in the hands of real humans, not bots."
     },
     "page5": {
       "title": "Refer & Earn",
@@ -78,7 +78,7 @@
     "contacts": {
       "empty_title": "[[:ice]] is better with friends",
       "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send Ice to any of your contacts."
     },
     "header": {
       "search_placeholder": "Search for users",
@@ -101,7 +101,7 @@
       },
       "all_contacts": "All contacts",
       "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "invitation_text": "Hi {{name}}, I would like to invite you to join Ice."
     },
     "tier_one": {
       "header_list": {
@@ -118,7 +118,7 @@
     "logInSignUp": "Log in / Sign up",
     "phone": "Phone",
     "or": "or",
-    "welcome": "Welcome to ice",
+    "welcome": "Welcome to Ice",
     "email": "Email",
     "slogan": "Ang Decentralized na Kinabukasan",
     "privacy": {
@@ -350,7 +350,7 @@
     "feedback_title": "Send Feedback",
     "feedback_description": "Share your thoughts with us",
     "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
+    "invite_description": "Earn extra Ice by inviting your friends",
     "delete_title": "Delete Account",
     "delete_description": "Erase your account",
     "delete_confirmation_title": "Are you sure you want to remove the account?",
@@ -413,7 +413,7 @@
         },
         "system": {
           "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "description": "Receive important notifications about the Ice app"
         }
       }
     },
@@ -452,7 +452,7 @@
     "copy_link": "Copy link",
     "more": "More",
     "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
+    "share_message": "Hi! Join my team on Ice Network and receive 10 Ice coins when you create an account using my referral code. Download the app:",
     "description_part1": "Spread the word and invite your friends. You earn ",
     "description_part2": " for each new referral you bring."
   },
@@ -489,14 +489,14 @@
     "time_left": "Time Left",
     "mining_rate": "Earning Rate",
     "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
+    "benefits_description": "Pre-stake your Ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
     "bonus_label": "Pre-Staking Bonus",
     "period_label": "Staked Period",
     "title": "Pre-Staking",
     "current_rate": "Current Rate",
     "allocation": "Allocation",
     "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
+    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your Ice holdings will be locked for the selected period",
     "staking_terms": "Staking Terms",
     "stake_now": "Pre-Stake Now!",
     "balance_label": "Staked balance",
@@ -522,8 +522,8 @@
     "good_morning": "Good morning",
     "good_afternoon": "Good afternoon",
     "good_evening": "Good evening",
-    "ice": "ice",
-    "ice_per_hour": "ice/h",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/h",
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
@@ -535,7 +535,7 @@
     "views": "{{viewsCount}} views"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
+    "empty": "Search for contacts, Ice friends and members of your micro-community",
     "nothing_is_found": "Nothing was found for your query",
     "search_by_country": "Search by country",
     "search_for_users": "Search for users"
@@ -652,7 +652,7 @@
     "snowman": {
       "title": "Snowman",
       "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "description": "Earn by checking in every 24 hours to show your commitment to the Ice network and prove that you're a human, not a bot"
     },
     "ambassador": {
       "title": "Ambassador",
@@ -669,7 +669,7 @@
   "tasks": {
     "completed": {
       "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
+      "description": "Keep mining Ice daily to earn extra rewards!"
     }
   },
   "date_select": {
@@ -806,11 +806,11 @@
   },
   "creative_library": {
     "title": "Malikhain na Aklatan ng Ice",
-    "share": "Buohin ang iyong pangarap na koponan sa ice network!",
+    "share": "Buohin ang iyong pangarap na koponan sa Ice network!",
     "get_started": {
       "header": "Buohin ang Iyong Pangarap na Koponan",
-      "subtitle": "Magsimula sa ice at buohin ang iyong matagumpay na maliit na komunidad",
-      "description": "Sumali sa mabilis na paglaki ng bilang ng mga gumagamit ng ice na nagbuo ng kanilang sariling mga maliit na komunidad at kumikita ng higit pang mga gantimpala. Ang aming mga kagamitan sa pag-promote, mga gabay, at mga tip ay nagbibigay ng madali paraan upang ipamahagi ang balita at buohin ang isang matagumpay na komunidad.",
+      "subtitle": "Magsimula sa Ice at buohin ang iyong matagumpay na maliit na komunidad",
+      "description": "Sumali sa mabilis na paglaki ng bilang ng mga gumagamit ng Ice na nagbuo ng kanilang sariling mga maliit na komunidad at kumikita ng higit pang mga gantimpala. Ang aming mga kagamitan sa pag-promote, mga gabay, at mga tip ay nagbibigay ng madali paraan upang ipamahagi ang balita at buohin ang isang matagumpay na komunidad.",
       "get_started": "Magsimula",
       "carousel": {
         "01": {
@@ -819,11 +819,11 @@
         },
         "02": {
           "title": "Mag-imbita",
-          "description": "Imbitahin ang iyong audience na sumali sa ice at magtrabaho nang magkasama upang mapanatili ang karagdagang mga gantimpala.\n\nDagdag pa, makakatulong ka sa pagpapalaganap ng balita tungkol sa mga benepisyo ng decentralization at sa kinabukasan ng finance."
+          "description": "Imbitahin ang iyong audience na sumali sa Ice at magtrabaho nang magkasama upang mapanatili ang karagdagang mga gantimpala.\n\nDagdag pa, makakatulong ka sa pagpapalaganap ng balita tungkol sa mga benepisyo ng decentralization at sa kinabukasan ng finance."
         },
         "03": {
           "title": "Kumita",
-          "description": "Palawakin ang iyong mga gantimpala sa pamamagitan ng pagpapalaganap ng iyong network at pagsusulong sa iba na sumali sa ice community.\n\nSumama sa aming misyon na rebolusyunaryuhin ang kinabukasan ng finance sa pamamagitan ng decentralization at autonomy."
+          "description": "Palawakin ang iyong mga gantimpala sa pamamagitan ng pagpapalaganap ng iyong network at pagsusulong sa iba na sumali sa Ice community.\n\nSumama sa aming misyon na rebolusyunaryuhin ang kinabukasan ng finance sa pamamagitan ng decentralization at autonomy."
         }
       }
     },
@@ -840,18 +840,18 @@
       },
       "03": {
         "title": "Nakabatay na Banner",
-        "description": "Sa aming nakabatay na banner, maaari mong madali nitong i-promote ang ice sa iyong mga bisita sa website at imbitahin silang sumali sa iyong mirco-komunidad.",
+        "description": "Sa aming nakabatay na banner, maaari mong madali nitong i-promote ang Ice sa iyong mga bisita sa website at imbitahin silang sumali sa iyong mirco-komunidad.",
         "action": "I-install ang banner"
       }
     },
     "social_section": {
       "share": {
         "title": "Ibahagi ang Iyong Kuwento",
-        "description": "Ibahagi ang iyong paglalakbay sa ice network at ang maraming benepisyo nito sa pamamagitan ng pagsusulat ng isang artikulo sa iyong wika.\n\nIbahagi ito sa iyong Blog, Medium, Reddit, Quora, Blogger, at higit pa.\n\nMakakahanap ka ng lahat ng impormasyon tungkol sa ice at ang mga natatanging features nito sa aming [[:link]]Knowledge Base[[/:link]], [[:link]]Homepage[[/:link]], at [[:link]]FAQ[[/:link]] na pahina."
+        "description": "Ibahagi ang iyong paglalakbay sa Ice network at ang maraming benepisyo nito sa pamamagitan ng pagsusulat ng isang artikulo sa iyong wika.\n\nIbahagi ito sa iyong Blog, Medium, Reddit, Quora, Blogger, at higit pa.\n\nMakakahanap ka ng lahat ng impormasyon tungkol sa Ice at ang mga natatanging features nito sa aming [[:link]]Knowledge Base[[/:link]], [[:link]]Homepage[[/:link]], at [[:link]]FAQ[[/:link]] na pahina."
       },
       "spread": {
         "title": "Magpalaganap ng Balita",
-        "description": "Sumali sa usapan at ipakilala ang ice network sa iyong mga paboritong forums.\nMagsimula ng mga bagong threads at ibahagi ang iyong mga iniisip tungkol sa decentralization ng finance, ang kinabukasan ng pera, at ang kapangyarihan ng pagbuo ng isang maliit na komunidad sa pamamagitan ng ice.\n\nMaging isang ☃️ Snowman at magsimula ng diskusyon tungkol sa potensyal ng pandaigdigang currency na ito."
+        "description": "Sumali sa usapan at ipakilala ang Ice network sa iyong mga paboritong forums.\nMagsimula ng mga bagong threads at ibahagi ang iyong mga iniisip tungkol sa decentralization ng finance, ang kinabukasan ng pera, at ang kapangyarihan ng pagbuo ng isang maliit na komunidad sa pamamagitan ng Ice.\n\nMaging isang ☃️ Snowman at magsimula ng diskusyon tungkol sa potensyal ng pandaigdigang currency na ito."
       },
       "bring": {
         "title": "Magdala ng Iyong mga Kaibigan",
@@ -861,12 +861,12 @@
     "promo_section": {
       "web": {
         "title": "I-plug & Play para sa mga May-Ari ng Website",
-        "description": "I-embed ang ice network diretso sa iyong website gamit ang aming simpleng at flexible na JS banner. Ito ay isang mabilis at madaling setup na maaring i-customize upang tugma sa iyong branding ng website. Ito ay isinalin sa 50 mga wika at kompatible sa anumang uri ng website platform.\n\nKopyahin at i-paste ang code sa iyong website, at simulan ang pagpo-promote ng ice network sa iyong mga bisita ngayon.",
+        "description": "I-embed ang Ice network diretso sa iyong website gamit ang aming simpleng at flexible na JS banner. Ito ay isang mabilis at madaling setup na maaring i-customize upang tugma sa iyong branding ng website. Ito ay isinalin sa 50 mga wika at kompatible sa anumang uri ng website platform.\n\nKopyahin at i-paste ang code sa iyong website, at simulan ang pagpo-promote ng Ice network sa iyong mga bisita ngayon.",
         "action": "I-install ang banner"
       },
       "mobile": {
         "title": "Aklatan para sa Mga Mobile App",
-        "description": "Integrate ang aming madaling gamiting aklatan sa iyong mobile app at imbitahin ang iyong mga user na sumali sa iyong maliit na komunidad at simulan ang pagmimina.\n\nSa suporta para sa pagsasalin at mga flexible na opsyon sa setup, maaring tiyakin mo na ang lahat ng iyong mga user ay may access sa parehong kahusayang ice experience, kahit nasaan sila sa mundo.",
+        "description": "Integrate ang aming madaling gamiting aklatan sa iyong mobile app at imbitahin ang iyong mga user na sumali sa iyong maliit na komunidad at simulan ang pagmimina.\n\nSa suporta para sa pagsasalin at mga flexible na opsyon sa setup, maaring tiyakin mo na ang lahat ng iyong mga user ay may access sa parehong kahusayang Ice experience, kahit nasaan sila sa mundo.",
         "action1": "Android library",
         "action2": "React Native library"
       }
@@ -877,7 +877,7 @@
         "rules": {
           "01": {
             "title": "Maging Tapat",
-            "description": "Magsulat mula sa iyong personal na karanasan at perspektibo. Ibahagi ang iyong tapat na mga saloobin at damdamin tungkol sa ice network."
+            "description": "Magsulat mula sa iyong personal na karanasan at perspektibo. Ibahagi ang iyong tapat na mga saloobin at damdamin tungkol sa Ice network."
           },
           "02": {
             "title": "Gumamit ng Magiliw na Tonong Wika",
@@ -885,7 +885,7 @@
           },
           "03": {
             "title": "Maging Malikhain",
-            "description": "Huwag matakot na mag-eksperimento sa iba't ibang uri ng content, tulad ng mga blog post, video, o mga update sa social media. Mag-enjoy at maging malikhain sa paraan ng iyong pagpo-promote ng ice network sa iyong audience."
+            "description": "Huwag matakot na mag-eksperimento sa iba't ibang uri ng content, tulad ng mga blog post, video, o mga update sa social media. Mag-enjoy at maging malikhain sa paraan ng iyong pagpo-promote ng Ice network sa iyong audience."
           }
         }
       },
@@ -898,11 +898,11 @@
           },
           "02": {
             "title": "Huwag Iligaw ang mga Tao",
-            "description": "Ang proyekto ng ice ay hindi nagbabayad ng cash sa mga gumagamit, kami ay nagbibigay lamang ng mga gantimpala sa pamamagitan ng ice coins. Mangyaring iwasang mag-post ng content tulad ng \"I-convert ang iyong ice sa cash\" o \"Paano kumita ng $100 gamit ang ice\" at iba pa."
+            "description": "Ang proyekto ng Ice ay hindi nagbabayad ng cash sa mga gumagamit, kami ay nagbibigay lamang ng mga gantimpala sa pamamagitan ng Ice coins. Mangyaring iwasang mag-post ng content tulad ng \"I-convert ang iyong Ice sa cash\" o \"Paano kumita ng $100 gamit ang Ice\" at iba pa."
           },
           "03": {
             "title": "Huwag Makilahok sa mga Panloloko",
-            "description": "Nagbibigay halaga kami sa transparency at katapatan sa aming komunidad. Anumang mga aktibidad na pandaraya tulad ng paggawa ng maraming account o pagsusumikap na manipulahin ang ice network ay hindi papayagan."
+            "description": "Nagbibigay halaga kami sa transparency at katapatan sa aming komunidad. Anumang mga aktibidad na pandaraya tulad ng paggawa ng maraming account o pagsusumikap na manipulahin ang Ice network ay hindi papayagan."
           }
         }
       }

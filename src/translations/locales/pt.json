@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "Boas-vindas à ice",
-      "description": "[[:ice]] é uma moeda digital que você pode ganhar com o seu telefone. A ice é controlada e operada por usuários como você."
+      "title": "Boas-vindas à Ice",
+      "description": "[[:ice]] é uma moeda digital que você pode ganhar com o seu telefone. A Ice é controlada e operada por usuários como você."
     },
     "page2": {
       "title": "Boa para o planeta",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Mantenha-se conectado",
-      "description": "Toque em [[:iceLogo]] para fazer o seu check-in diário no nosso aplicativo móvel gratuito que gasta pouca energia. Todo dia que você toca garante que a ice acabe nas mãos de pessoas reais, não de robôs."
+      "description": "Toque em [[:iceLogo]] para fazer o seu check-in diário no nosso aplicativo móvel gratuito que gasta pouca energia. Todo dia que você toca garante que a Ice acabe nas mãos de pessoas reais, não de robôs."
     },
     "page5": {
       "title": "Recomende e ganhe",
@@ -82,7 +82,7 @@
     "contacts": {
       "empty_title": "[[:ice]] é melhor com amigos",
       "empty_button_title": "Permitir acesso aos contatos",
-      "empty_description": "Sincronize seus contatos e veja quem já está na [[:ice]]. No futuro, você poderá enviar ice para qualquer um dos seus contatos."
+      "empty_description": "Sincronize seus contatos e veja quem já está na [[:ice]]. No futuro, você poderá enviar Ice para qualquer um dos seus contatos."
     },
     "header": {
       "search_placeholder": "Pesquisar usuários",
@@ -105,7 +105,7 @@
       },
       "all_contacts": "Todos os contatos",
       "invite": "convidar",
-      "invitation_text": "Olá, {{name}}, quero te convidar para participar da ice."
+      "invitation_text": "Olá, {{name}}, quero te convidar para participar da Ice."
     },
     "tier_one": {
       "header_list": {
@@ -123,7 +123,7 @@
     "phone": "Telefone",
     "or": "ou",
     "reset_password": "Redefinir a senha",
-    "welcome": "Boas-vindas à ice",
+    "welcome": "Boas-vindas à Ice",
     "email": "E-mail",
     "slogan": "O Futuro Descentralizado",
     "privacy": "Ao continuar, você concorda com nossos [[:link]]Termos de Serviço[[/:link]] e [[:link]]Política de Privacidade[[/:link]]"
@@ -361,7 +361,7 @@
     "feedback_title": "Enviar opinião",
     "feedback_description": "Compartilhe com a gente o que você está pensando.",
     "invite_title": "Convidar um amigo",
-    "invite_description": "Convide seus amigos e ganhe ainda mais ice.",
+    "invite_description": "Convide seus amigos e ganhe ainda mais Ice.",
     "delete_title": "Excluir conta",
     "delete_description": "Apague sua conta.",
     "delete_confirmation_title": "Tem certeza de que deseja remover a conta?",
@@ -424,7 +424,7 @@
         },
         "system": {
           "title": "Sistema",
-          "description": "Receba notificações importantes sobre o aplicativo da ice."
+          "description": "Receba notificações importantes sobre o aplicativo da Ice."
         }
       }
     },
@@ -463,8 +463,8 @@
     "copy_link": "Copiar link",
     "more": "Mais",
     "copied": "COPIADO",
-    "share_message": "Olá, ☃️ boneco de neve! Entre na minha equipe na ice e receba 10 moedas ice quando se inscrever usando meu código de indicação:",
-    "share_subject": "Entre na minha equipe na ice",
+    "share_message": "Olá, ☃️ boneco de neve! Entre na minha equipe na Ice e receba 10 moedas Ice quando se inscrever usando meu código de indicação:",
+    "share_subject": "Entre na minha equipe na Ice",
     "description": "Divulgue sobre nós e convide seus amigos. Você ganha [[:ice]] por cada nova indicação que trouxer.",
     "share": "Compartilhar"
   },
@@ -501,14 +501,14 @@
     "time_left": "Tempo restante",
     "mining_rate": "Taxa de rendimentos",
     "appeal": "Aumente sua taxa de rendimentos",
-    "benefits_description": "Aloque suas recompensas ice em pré-staking por até 5 anos e aumente sua taxa de rendimentos em até 250%.",
+    "benefits_description": "Aloque suas recompensas Ice em pré-staking por até 5 anos e aumente sua taxa de rendimentos em até 250%.",
     "bonus_label": "Bônus por pré-staking",
     "period_label": "Período de staking",
     "title": "Pré-staking",
     "current_rate": "Taxa atual",
     "allocation": "Alocação",
     "description": "O staking é um processo que envolve alocar seus criptoativos para apoiar uma rede blockchain e confirmar transações.",
-    "terms_agree": "Concordo com os [[:link]]Termos de Staking[[/:link]] da [[:ice]]. Seus títulos de ice ficarão bloqueados pelo período selecionado.",
+    "terms_agree": "Concordo com os [[:link]]Termos de Staking[[/:link]] da [[:ice]]. Seus títulos de Ice ficarão bloqueados pelo período selecionado.",
     "stake_now": "Participe já do pré-staking!",
     "balance_label": "Saldo em staking",
     "confirm_title": "Confirmar pré-staking",
@@ -533,8 +533,8 @@
     "good_morning": "Bom dia",
     "good_afternoon": "Boa tarde",
     "good_evening": "Boa noite",
-    "ice": "ice",
-    "ice_per_hour": "ice/h",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/h",
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
@@ -547,7 +547,7 @@
     "views": "{{viewsCount}} visualizações"
   },
   "search": {
-    "empty": "Procure contatos, amigos na ice e membros de sua microcomunidade.",
+    "empty": "Procure contatos, amigos na Ice e membros de sua microcomunidade.",
     "nothing_is_found": "Nada foi encontrado para a sua consulta.",
     "search_by_country": "Pesquisar por país",
     "search_for_users": "Pesquisar usuários",
@@ -586,7 +586,7 @@
     "resurrection_no_confirm_message": "Você perderá suas [[:amount]] moedas para sempre. Tem certeza de que deseja continuar?",
     "resurrection_yes_confirm_message": "Você só pode ressuscitar uma vez! Tem certeza de que deseja continuar? As [[:amount]] moedas voltarão ao seu saldo na próxima hora.",
     "delete_account_confirmation_title": "Confirmar exclusão",
-    "delete_account_confirmation_text": "A exclusão da sua conta apagará permanentemente todos os seus dados, incluindo seu saldo em ice. Deseja continuar?"
+    "delete_account_confirmation_text": "A exclusão da sua conta apagará permanentemente todos os seus dados, incluindo seu saldo em Ice. Deseja continuar?"
   },
   "periods": {
     "3_days": "3 dias",
@@ -668,7 +668,7 @@
     "snowman": {
       "title": "Boneco de neve",
       "subtitle": "Construa um império de neve",
-      "description": "Ganhe fazendo check-in a cada 24 horas para mostrar seu compromisso com a rede ice e provar que você é um ser humano, não um robô."
+      "description": "Ganhe fazendo check-in a cada 24 horas para mostrar seu compromisso com a rede Ice e provar que você é um ser humano, não um robô."
     },
     "ambassador": {
       "title": "Embaixador",
@@ -709,7 +709,7 @@
       },
       "confirm_phone": {
         "title": "Confirmar telefone",
-        "description": "Confirme sua identidade e permita que seus contatos saibam que você também é membro da rede ice. Seu número de telefone não será compartilhado com terceiros."
+        "description": "Confirme sua identidade e permita que seus contatos saibam que você também é membro da rede Ice. Seu número de telefone não será compartilhado com terceiros."
       },
       "contacts_list": {
         "title": "Lista de contatos",
@@ -768,11 +768,11 @@
         "description": "Personalize os detalhes do seu perfil e veja todas as suas conquistas e emblemas que você ganhou. Use a calculadora daqui para estimar seus rendimentos."
       },
       "earningicestart": {
-        "title": "Como ganhar ice",
+        "title": "Como ganhar Ice",
         "description": "Você pode iniciar a sessão de check-in na [[:ice]] a cada 24 horas tocando neste botão. Não se esqueça de voltar todos os dias e começar a ganhar!"
       },
       "earningiceseemore": {
-        "title": "Como ganhar ice",
+        "title": "Como ganhar Ice",
         "description": "Toque outra vez e veja mais detalhes sobre a sua sessão de check-in atual."
       },
       "stats": {
@@ -867,24 +867,24 @@
   "social_media": {
     "tiktok": {
       "title": "Junte-se a nós no TikTok",
-      "description": "Só queríamos entrar em contato para informar sobre a nossa nova e empolgante comunidade no TikTok. Estamos compartilhando conteúdos divertidos e informativos sobre a nossa moeda digital, a ice, e gostaríamos muito que você se juntasse a nós!"
+      "description": "Só queríamos entrar em contato para informar sobre a nossa nova e empolgante comunidade no TikTok. Estamos compartilhando conteúdos divertidos e informativos sobre a nossa moeda digital, a Ice, e gostaríamos muito que você se juntasse a nós!"
     },
     "youtube": {
       "title": "Junte-se a nós no YouTube",
-      "description": "Desde tutoriais sobre como ganhar ice até atualizações sobre novos recursos e até mesmo conteúdos divertidos da comunidade, nosso canal do YouTube é o lugar perfeito para se manter a par."
+      "description": "Desde tutoriais sobre como ganhar Ice até atualizações sobre novos recursos e até mesmo conteúdos divertidos da comunidade, nosso canal do YouTube é o lugar perfeito para se manter a par."
     },
     "linkedin": {
       "title": "Junte-se a nós no LinkedIn",
-      "description": "Fazer parte da comunidade ice no LinkedIn é uma ótima maneira de se manter informado sobre os últimos avanços e se conectar com pessoas que pensam da mesma forma e que são tão apaixonadas pelo futuro das moedas digitais quanto você."
+      "description": "Fazer parte da comunidade Ice no LinkedIn é uma ótima maneira de se manter informado sobre os últimos avanços e se conectar com pessoas que pensam da mesma forma e que são tão apaixonadas pelo futuro das moedas digitais quanto você."
     },
     "facebook": {
       "title": "Junte-se a nós no Facebook",
       "description_part1": "Recomendamos enfaticamente seguir a nossa página no Facebook.",
-      "description_part2": "Não só ajudará você a se manter a par de tudo o que está acontecendo com o projeto ice, mas também é uma ótima maneira de se conectar com a nossa comunidade e fazer parte da conversa."
+      "description_part2": "Não só ajudará você a se manter a par de tudo o que está acontecendo com o projeto Ice, mas também é uma ótima maneira de se conectar com a nossa comunidade e fazer parte da conversa."
     },
     "instagram": {
       "title": "Junte-se a nós no Instagram",
-      "description_part1": "Seguir a gente no Instagram é uma ótima maneira de ficar por dentro e de se conectar com outros usuários que também são apaixonados pela ice.",
+      "description_part1": "Seguir a gente no Instagram é uma ótima maneira de ficar por dentro e de se conectar com outros usuários que também são apaixonados pela Ice.",
       "description_part2": "Além disso, você será o primeiro a saber sobre todos os recursos ou promoções novos que estivermos lançando."
     }
   },
@@ -893,12 +893,12 @@
   },
 
   "creative_library": {
-    "title": "Biblioteca Criativa ice",
-    "share": "Construa sua equipe dos sonhos na rede ice!",
+    "title": "Biblioteca Criativa Ice",
+    "share": "Construa sua equipe dos sonhos na rede Ice!",
     "get_started": {
       "header": "Construa sua equipe dos sonhos",
-      "subtitle": "Comece na ice e construa sua próspera microcomunidade",
-      "description": "Junte-se ao crescente número de usuários da ice que estão construindo suas próprias microcomunidades e ganhando mais recompensas. Nossas ferramentas de promoção, guias e dicas tornam fácil espalhar a palavra e construir uma comunidade de sucesso.",
+      "subtitle": "Comece na Ice e construa sua próspera microcomunidade",
+      "description": "Junte-se ao crescente número de usuários da Ice que estão construindo suas próprias microcomunidades e ganhando mais recompensas. Nossas ferramentas de promoção, guias e dicas tornam fácil espalhar a palavra e construir uma comunidade de sucesso.",
       "get_started": "Começar",
       "carousel": {
         "01": {
@@ -907,11 +907,11 @@
         },
         "02": {
           "title": "Convide",
-          "description": "Convide sua audiência para se juntar à ice e trabalhar juntos para desbloquear recompensas adicionais.\n\nAlém disso, você estará ajudando a espalhar a palavra sobre os benefícios da descentralização e o futuro das finanças."
+          "description": "Convide sua audiência para se juntar à Ice e trabalhar juntos para desbloquear recompensas adicionais.\n\nAlém disso, você estará ajudando a espalhar a palavra sobre os benefícios da descentralização e o futuro das finanças."
         },
         "03": {
           "title": "Ganhe",
-          "description": "Aumente suas recompensas expandindo sua rede e incentivando outros a se juntarem à comunidade ice.\n\nJunte-se a nós em nossa missão de revolucionar o futuro das finanças por meio da descentralização e autonomia."
+          "description": "Aumente suas recompensas expandindo sua rede e incentivando outros a se juntarem à comunidade Ice.\n\nJunte-se a nós em nossa missão de revolucionar o futuro das finanças por meio da descentralização e autonomia."
         }
       }
     },
@@ -928,18 +928,18 @@
       },
       "03": {
         "title": "Banner Incorporado",
-        "description": "Com nosso banner incorporado, você pode facilmente promover a ice para os visitantes do seu site e convidá-los a se juntar à sua microcomunidade.",
+        "description": "Com nosso banner incorporado, você pode facilmente promover a Ice para os visitantes do seu site e convidá-los a se juntar à sua microcomunidade.",
         "action": "Instalar o banner"
       }
     },
     "social_section": {
       "share": {
         "title": "Compartilhe Sua História",
-        "description": "Compartilhe sua jornada com a rede ice e seus muitos benefícios escrevendo um artigo no seu idioma.\n\nCompartilhe-os no seu blog, Medium, Reddit, Quora, Blogger e muito mais.\n\nVocê pode encontrar tudo sobre a ice e suas características exclusivas em nossa [[/:link]]Base de Conhecimento[[/:link]], [[/:link]]Página Inicial[[/:link]] e [[/:link]]FAQ[[/:link]]."
+        "description": "Compartilhe sua jornada com a rede Ice e seus muitos benefícios escrevendo um artigo no seu idioma.\n\nCompartilhe-os no seu blog, Medium, Reddit, Quora, Blogger e muito mais.\n\nVocê pode encontrar tudo sobre a Ice e suas características exclusivas em nossa [[/:link]]Base de Conhecimento[[/:link]], [[/:link]]Página Inicial[[/:link]] e [[/:link]]FAQ[[/:link]]."
       },
       "spread": {
         "title": "Espalhe a Palavra",
-        "description": "Junte-se à conversa e apresente a rede ice aos seus fóruns favoritos.\nInicie novos tópicos e compartilhe seus pensamentos sobre finanças descentralizadas, o futuro da moeda e o poder de construir uma microcomunidade com a ice.\n\nSeja um ☃️ Boneco de Neve e inicie uma discussão sobre o potencial dessa moeda global."
+        "description": "Junte-se à conversa e apresente a rede Ice aos seus fóruns favoritos.\nInicie novos tópicos e compartilhe seus pensamentos sobre finanças descentralizadas, o futuro da moeda e o poder de construir uma microcomunidade com a Ice.\n\nSeja um ☃️ Boneco de Neve e inicie uma discussão sobre o potencial dessa moeda global."
       },
       "bring": {
         "title": "Traga Seus Amigos a Bordo",
@@ -949,12 +949,12 @@
     "promo_section": {
       "web": {
         "title": "Plug & Play para Proprietários de Sites",
-        "description": "Incorpore a rede ice diretamente no seu site com nosso banner JS simples e flexível. É uma configuração rápida e fácil que pode ser personalizada para combinar com a identidade visual do seu site. Está traduzido em 50 idiomas e é compatível com qualquer plataforma de site.\n\nCopie e cole o código no seu site e comece a promover a rede ice para seus visitantes hoje.",
+        "description": "Incorpore a rede Ice diretamente no seu site com nosso banner JS simples e flexível. É uma configuração rápida e fácil que pode ser personalizada para combinar com a identidade visual do seu site. Está traduzido em 50 idiomas e é compatível com qualquer plataforma de site.\n\nCopie e cole o código no seu site e comece a promover a rede Ice para seus visitantes hoje.",
         "action": "Instalar o banner"
       },
       "mobile": {
         "title": "Biblioteca para Aplicativos Móveis",
-        "description": "Integre nossa biblioteca fácil de usar ao seu aplicativo móvel e convide seus usuários a se juntarem à sua microcomunidade e começarem a minerar.\n\nCom suporte a tradução e opções flexíveis de configuração, você pode garantir que todos os seus usuários tenham acesso à mesma ótima experiência com a ice, não importa onde estejam no mundo.",
+        "description": "Integre nossa biblioteca fácil de usar ao seu aplicativo móvel e convide seus usuários a se juntarem à sua microcomunidade e começarem a minerar.\n\nCom suporte a tradução e opções flexíveis de configuração, você pode garantir que todos os seus usuários tenham acesso à mesma ótima experiência com a Ice, não importa onde estejam no mundo.",
         "action1": "Biblioteca Android",
         "action2": "Biblioteca React Native"
       }
@@ -965,7 +965,7 @@
         "rules": {
           "01": {
             "title": "Seja Autêntico",
-            "description": "Escreva a partir de sua experiência pessoal e perspectiva. Compartilhe seus pensamentos e sentimentos honestos sobre a rede ice."
+            "description": "Escreva a partir de sua experiência pessoal e perspectiva. Compartilhe seus pensamentos e sentimentos honestos sobre a rede Ice."
           },
           "02": {
             "title": "Use um Tom Amigável",
@@ -973,7 +973,7 @@
           },
           "03": {
             "title": "Seja Criativo",
-            "description": "Não tenha medo de experimentar diferentes tipos de conteúdo, como postagens de blog, vídeos ou atualizações nas redes sociais. Divirta-se e seja inovador na maneira como você promove a rede ice para sua audiência."
+            "description": "Não tenha medo de experimentar diferentes tipos de conteúdo, como postagens de blog, vídeos ou atualizações nas redes sociais. Divirta-se e seja inovador na maneira como você promove a rede Ice para sua audiência."
           }
         }
       },
@@ -986,11 +986,11 @@
           },
           "02": {
             "title": "Não Engane as Pessoas",
-            "description": "O projeto ice não paga os usuários em dinheiro, apenas recompensamos com moedas ice. Evite postar conteúdo como \"Transforme seu ice em dinheiro\" ou \"Como ganhar $100 com ice\" e similares."
+            "description": "O projeto Ice não paga os usuários em dinheiro, apenas recompensamos com moedas Ice. Evite postar conteúdo como \"Transforme seu Ice em dinheiro\" ou \"Como ganhar $100 com Ice\" e similares."
           },
           "03": {
             "title": "Não Pratique Atividades Fraudulentas",
-            "description": "Valorizamos a transparência e a honestidade em nossa comunidade. Qualquer atividade fraudulenta, como criar várias contas ou tentar manipular a rede ice, não será tolerada."
+            "description": "Valorizamos a transparência e a honestidade em nossa comunidade. Qualquer atividade fraudulenta, como criar várias contas ou tentar manipular a rede Ice, não será tolerada."
           }
         }
       }

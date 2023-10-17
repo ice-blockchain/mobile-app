@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "Chào mừng đến với ice",
-      "description": "[[:ice]] là một loại tiền kỹ thuật số mà bạn có thể kiếm được bằng điện thoại của mình. ice được sở hữu và vận hành bởi những người dùng hàng ngày như bạn."
+      "title": "Chào mừng đến với Ice",
+      "description": "[[:ice]] là một loại tiền kỹ thuật số mà bạn có thể kiếm được bằng điện thoại của mình. Ice được sở hữu và vận hành bởi những người dùng hàng ngày như bạn."
     },
     "page2": {
       "title": "Hành tinh thân thiện",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Luôn kết nối",
-      "description": "Nhấn vào [[:iceLogo]] để điểm danh hàng ngày với ứng dụng di động miễn phí, tiết kiệm năng lượng của chúng tôi. Việc bạn điểm danh hàng này sẽ đảm bảo ice luôn đến được với tay người dùng thực chứ không phải máy."
+      "description": "Nhấn vào [[:iceLogo]] để điểm danh hàng ngày với ứng dụng di động miễn phí, tiết kiệm năng lượng của chúng tôi. Việc bạn điểm danh hàng này sẽ đảm bảo Ice luôn đến được với tay người dùng thực chứ không phải máy."
     },
     "page5": {
       "title": "Giới thiệu & Kiếm tiền",
@@ -82,7 +82,7 @@
     "contacts": {
       "empty_title": "[[:ice]] sẽ tốt hơn khi có nhiều bạn bè",
       "empty_button_title": "Cho phép truy cập danh bạ",
-      "empty_description": "Đồng bộ danh bạ của bạn và xem ai đã tham gia [[:ice]]. Trong tương lai, bạn sẽ có thể gửi ice cho bất kỳ địa chỉ liên hệ nào của mình."
+      "empty_description": "Đồng bộ danh bạ của bạn và xem ai đã tham gia [[:ice]]. Trong tương lai, bạn sẽ có thể gửi Ice cho bất kỳ địa chỉ liên hệ nào của mình."
     },
     "header": {
       "search_placeholder": "Tìm kiếm người dùng",
@@ -105,7 +105,7 @@
       },
       "all_contacts": "Tất cả danh bạ",
       "invite": "mời",
-      "invitation_text": "Xin chào {{name}}, tôi muốn mời bạn tham gia ice."
+      "invitation_text": "Xin chào {{name}}, tôi muốn mời bạn tham gia Ice."
     },
     "tier_one": {
       "header_list": {
@@ -123,7 +123,7 @@
     "phone": "Số điện thoại",
     "or": "hoặc",
     "reset_password": "Đặt lại mật khẩu",
-    "welcome": "Chào mừng đến với ice",
+    "welcome": "Chào mừng đến với Ice",
     "email": "Email",
     "slogan": "Tương lai Phi tập trung",
     "privacy": "Bằng cách tiếp tục, bạn đồng ý với [[:link]]Điều khoản dịch vụ[[/:link]] và [[:link]]Chính sách quyền riêng tư[[/:link]] của chúng tôi"
@@ -361,7 +361,7 @@
     "feedback_title": "Gửi phản hồi",
     "feedback_description": "Chia sẻ suy nghĩ của bạn với chúng tôi.",
     "invite_title": "Mời bạn bè",
-    "invite_description": "Kiếm thêm ice bằng cách mời bạn bè.",
+    "invite_description": "Kiếm thêm Ice bằng cách mời bạn bè.",
     "delete_title": "Xóa tài khoản",
     "delete_description": "Xóa tài khoản của bạn.",
     "delete_confirmation_title": "Bạn có chắc chắn muốn xóa tài khoản không?",
@@ -424,7 +424,7 @@
         },
         "system": {
           "title": "Hệ thống",
-          "description": "Nhận thông báo quan trọng về ứng dụng ice."
+          "description": "Nhận thông báo quan trọng về ứng dụng Ice."
         }
       }
     },
@@ -463,8 +463,8 @@
     "copy_link": "Sao chép liên kết",
     "more": "Thêm",
     "copied": "ĐÃ SAO CHÉP",
-    "share_message": "Xin chào Người tuyết ☃️! Tham gia nhóm của tôi trên ice và nhận 10 đồng ice khi bạn đăng ký bằng mã giới thiệu của tôi:",
-    "share_subject": "Tham gia nhóm của tôi trên ice",
+    "share_message": "Xin chào Người tuyết ☃️! Tham gia nhóm của tôi trên Ice và nhận 10 đồng Ice khi bạn đăng ký bằng mã giới thiệu của tôi:",
+    "share_subject": "Tham gia nhóm của tôi trên Ice",
     "description": "Lan tỏa và mời bạn bè của bạn. Bạn kiếm được [[:ice]] cho mỗi lượt giới thiệu mà bạn mang lại.",
     "share": "Chia sẻ"
   },
@@ -501,14 +501,14 @@
     "time_left": "Thời gian còn lại",
     "mining_rate": "Lãi suất",
     "appeal": "Tăng lãi suất của bạn",
-    "benefits_description": "Giữ và khóa sớm các phần thưởng ice của bạn trong tối đa 5 năm và tăng lãi suất lên đến 250%.",
+    "benefits_description": "Giữ và khóa sớm các phần thưởng Ice của bạn trong tối đa 5 năm và tăng lãi suất lên đến 250%.",
     "bonus_label": "Thưởng giữ và khóa sớm",
     "period_label": "Thời gian giữ và khóa",
     "title": "Giữ và khóa sớm",
     "current_rate": "Lãi suất hiện tại",
     "allocation": "Phân bổ",
     "description": "Giữ và khóa là một quá trình liên quan đến việc cam kết tài sản tiền mã hóa của bạn để hỗ trợ mạng chuỗi khối và xác nhận giao dịch.",
-    "terms_agree": "Tôi đồng ý với [[:ice]] [[:link]]Điều khoản giữ và khóa[[/:link]]. Lượng ice mà bạn nắm giữ sẽ bị khóa trong khoảng thời gian đã chọn.",
+    "terms_agree": "Tôi đồng ý với [[:ice]] [[:link]]Điều khoản giữ và khóa[[/:link]]. Lượng Ice mà bạn nắm giữ sẽ bị khóa trong khoảng thời gian đã chọn.",
     "stake_now": "Giữ và khóa sớm ngay!",
     "balance_label": "Số dư giữ và khóa",
     "confirm_title": "Xác nhận giữ và khóa sớm",
@@ -533,8 +533,8 @@
     "good_morning": "Chào buổi sáng",
     "good_afternoon": "Chào buổi chiều",
     "good_evening": "Chào buổi tối",
-    "ice": "ice",
-    "ice_per_hour": "ice/giờ",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/giờ",
     "seconds_short": "giây",
     "minutes_short": "phút",
     "hours_short": "giờ",
@@ -547,7 +547,7 @@
     "views": "{{viewsCount}} lượt xem"
   },
   "search": {
-    "empty": "Tìm kiếm địa chỉ liên lạc, bạn bè ice và các thành viên trong cộng đồng vi mô của bạn.",
+    "empty": "Tìm kiếm địa chỉ liên lạc, bạn bè Ice và các thành viên trong cộng đồng vi mô của bạn.",
     "nothing_is_found": "Không tìm thấy gì cho truy vấn của bạn.",
     "search_by_country": "Tìm kiếm theo quốc gia",
     "search_for_users": "Tìm kiếm người dùng",
@@ -586,7 +586,7 @@
     "resurrection_no_confirm_message": "Bạn sẽ mất vĩnh viễn [[:amount]] đồng. Bạn có chắc chắn muốn tiếp tục không?",
     "resurrection_yes_confirm_message": "Bạn chỉ có thể hồi sinh một lần! Bạn có chắc chắn muốn tiếp tục không? [[:amount]] đồng sẽ được hoàn trả vào số dư của bạn trong vòng một giờ tới.",
     "delete_account_confirmation_title": "Xác nhận xóa",
-    "delete_account_confirmation_text": "Xóa tài khoản của bạn sẽ xóa vĩnh viễn tất cả dữ liệu của bạn, bao gồm cả số dư ice của bạn. Bạn có muốn tiến hành không?"
+    "delete_account_confirmation_text": "Xóa tài khoản của bạn sẽ xóa vĩnh viễn tất cả dữ liệu của bạn, bao gồm cả số dư Ice của bạn. Bạn có muốn tiến hành không?"
   },
   "periods": {
     "3_days": "3 ngày",
@@ -668,7 +668,7 @@
     "snowman": {
       "title": "Người tuyết",
       "subtitle": "Xây dựng một đế chế tuyết",
-      "description": "Kiếm tiền bằng cách điểm danh sau mỗi 24 giờ để thể hiện cam kết của bạn với mạng ice và chứng minh rằng bạn là người chứ không phải máy."
+      "description": "Kiếm tiền bằng cách điểm danh sau mỗi 24 giờ để thể hiện cam kết của bạn với mạng Ice và chứng minh rằng bạn là người chứ không phải máy."
     },
     "ambassador": {
       "title": "Đại sứ",
@@ -709,7 +709,7 @@
       },
       "confirm_phone": {
         "title": "Xác nhận số điện thoại",
-        "description": "Xác nhận danh tính của bạn và cho phép các địa chỉ liên hệ của bạn biết rằng bạn cũng là thành viên của mạng ice. Số điện thoại của bạn sẽ không được chia sẻ với các bên thứ ba khác."
+        "description": "Xác nhận danh tính của bạn và cho phép các địa chỉ liên hệ của bạn biết rằng bạn cũng là thành viên của mạng Ice. Số điện thoại của bạn sẽ không được chia sẻ với các bên thứ ba khác."
       },
       "contacts_list": {
         "title": "Danh sách địa chỉ liên hệ",
@@ -768,11 +768,11 @@
         "description": "Tùy chỉnh chi tiết hồ sơ và xem tất cả các thành tựu và huy hiệu mà bạn đã kiếm được. Sử dụng máy tính tại đây để bạn có thể ước tính thu nhập của mình."
       },
       "earningicestart": {
-        "title": "Kiếm ice",
+        "title": "Kiếm Ice",
         "description": "Bạn có thể bắt đầu phiên điểm danh [[:ice]] sau mỗi 24 giờ bằng cách nhấn vào nút này. Đừng quên quay lại mỗi ngày và bắt đầu kiếm tiền!"
       },
       "earningiceseemore": {
-        "title": "Kiếm ice",
+        "title": "Kiếm Ice",
         "description": "Nhấn lại và xem thêm chi tiết về phiên điểm danh hiện tại của bạn."
       },
       "stats": {
@@ -867,24 +867,24 @@
   "social_media": {
     "tiktok": {
       "title": "Tham gia với chúng tôi trên TikTok",
-      "description": "Chúng tôi chỉ muốn liên hệ và thông báo cho bạn biết về cộng đồng mới thú vị của chúng tôi trên TikTok. Chúng tôi đang chia sẻ những nội dung thú vị và nhiều thông tin về ice (đồng tiền kỹ thuật số của chúng tôi) và chúng tôi rất muốn bạn tham gia cùng!"
+      "description": "Chúng tôi chỉ muốn liên hệ và thông báo cho bạn biết về cộng đồng mới thú vị của chúng tôi trên TikTok. Chúng tôi đang chia sẻ những nội dung thú vị và nhiều thông tin về Ice (đồng tiền kỹ thuật số của chúng tôi) và chúng tôi rất muốn bạn tham gia cùng!"
     },
     "youtube": {
       "title": "Tham gia với chúng tôi trên YouTube",
-      "description": "Từ các hướng dẫn về cách kiếm ice, đến các bản cập nhật về các tính năng mới và thậm chí cả nội dung cộng đồng thú vị, kênh YouTube của chúng tôi là nơi lý tưởng để cập nhật tin tức mới nhất."
+      "description": "Từ các hướng dẫn về cách kiếm Ice, đến các bản cập nhật về các tính năng mới và thậm chí cả nội dung cộng đồng thú vị, kênh YouTube của chúng tôi là nơi lý tưởng để cập nhật tin tức mới nhất."
     },
     "linkedin": {
       "title": "Tham gia với chúng tôi trên LinkedIn",
-      "description": "Tham gia cộng đồng ice trên LinkedIn là một cách tuyệt vời để cập nhật thông tin về những phát triển mới nhất và kết nối với những cá nhân có cùng chí hướng, những người cũng có niềm đam mê về tương lai của tiền kỹ thuật số giống như bạn."
+      "description": "Tham gia cộng đồng Ice trên LinkedIn là một cách tuyệt vời để cập nhật thông tin về những phát triển mới nhất và kết nối với những cá nhân có cùng chí hướng, những người cũng có niềm đam mê về tương lai của tiền kỹ thuật số giống như bạn."
     },
     "facebook": {
       "title": "Tham gia với chúng tôi trên Facebook",
       "description_part1": "Chúng tôi khuyên bạn nên theo dõi trang Facebook của chúng tôi.",
-      "description_part2": "Điều này không chỉ giúp bạn cập nhật mọi thứ đang diễn ra với dự án ice mà còn là một cách tuyệt vời để kết nối với cộng đồng của chúng tôi và tham gia vào cuộc trò chuyện."
+      "description_part2": "Điều này không chỉ giúp bạn cập nhật mọi thứ đang diễn ra với dự án Ice mà còn là một cách tuyệt vời để kết nối với cộng đồng của chúng tôi và tham gia vào cuộc trò chuyện."
     },
     "instagram": {
       "title": "Tham gia với chúng tôi trên Instagram",
-      "description_part1": "Theo dõi chúng tôi trên Instagram là một cách tuyệt vời để cập nhật thông tin và kết nối với những người dùng khác cũng đam mê ice",
+      "description_part1": "Theo dõi chúng tôi trên Instagram là một cách tuyệt vời để cập nhật thông tin và kết nối với những người dùng khác cũng đam mê Ice",
       "description_part2": "Ngoài ra, bạn sẽ là người đầu tiên được biết mọi tính năng hoặc chương trình khuyến mãi mới mà chúng tôi sắp tung ra."
     }
   },
@@ -892,12 +892,12 @@
     "title": "Vui lòng đợi trong khi chúng tôi ping tất cả bạn bè của bạn · {{count}}"
   },
   "creative_library": {
-    "title": "Thư Viện Sáng Tạo ice",
-    "share": "Xây dựng đội nhóm mơ ước trên mạng lưới ice!",
+    "title": "Thư Viện Sáng Tạo Ice",
+    "share": "Xây dựng đội nhóm mơ ước trên mạng lưới Ice!",
     "get_started": {
       "header": "Xây Dựng Đội Nhóm Mơ Ước",
-      "subtitle": "Bắt đầu trên ice và xây dựng cộng đồng micro phát triển của bạn",
-      "description": "Tham gia vào số người dùng ice đang tăng nhanh chóng, xây dựng cộng đồng micro của riêng bạn và kiếm thêm phần thưởng. Công cụ quảng cáo, hướng dẫn và gợi ý của chúng tôi giúp bạn dễ dàng lan truyền thông điệp và xây dựng một cộng đồng thành công.",
+      "subtitle": "Bắt đầu trên Ice và xây dựng cộng đồng micro phát triển của bạn",
+      "description": "Tham gia vào số người dùng Ice đang tăng nhanh chóng, xây dựng cộng đồng micro của riêng bạn và kiếm thêm phần thưởng. Công cụ quảng cáo, hướng dẫn và gợi ý của chúng tôi giúp bạn dễ dàng lan truyền thông điệp và xây dựng một cộng đồng thành công.",
       "get_started": "Bắt Đầu",
       "carousel": {
         "01": {
@@ -906,11 +906,11 @@
         },
         "02": {
           "title": "Mời Gọi",
-          "description": "Mời khán giả của bạn tham gia ice và cùng nhau mở khóa phần thưởng bổ sung.\n\nNgoài ra, bạn sẽ giúp lan truyền thông điệp về lợi ích của phân quyền và tương lai tài chính."
+          "description": "Mời khán giả của bạn tham gia Ice và cùng nhau mở khóa phần thưởng bổ sung.\n\nNgoài ra, bạn sẽ giúp lan truyền thông điệp về lợi ích của phân quyền và tương lai tài chính."
         },
         "03": {
           "title": "Kiếm Thêm",
-          "description": "Mở rộng mạng lưới của bạn và khuyến khích người khác tham gia cộng đồng ice để tăng thưởng của bạn.\n\nHãy tham gia cùng chúng tôi trong sứ mệnh thay đổi tương lai tài chính thông qua phân quyền và tự chủ."
+          "description": "Mở rộng mạng lưới của bạn và khuyến khích người khác tham gia cộng đồng Ice để tăng thưởng của bạn.\n\nHãy tham gia cùng chúng tôi trong sứ mệnh thay đổi tương lai tài chính thông qua phân quyền và tự chủ."
         }
       }
     },
@@ -927,18 +927,18 @@
       },
       "03": {
         "title": "Biểu Ngữ Nhúng",
-        "description": "Với biểu ngữ nhúng của chúng tôi, bạn có thể dễ dàng quảng cáo ice đến khách truy cập trang web của bạn và mời họ tham gia cộng đồng micro của bạn.",
+        "description": "Với biểu ngữ nhúng của chúng tôi, bạn có thể dễ dàng quảng cáo Ice đến khách truy cập trang web của bạn và mời họ tham gia cộng đồng micro của bạn.",
         "action": "Cài Đặt Biểu Ngữ"
       }
     },
     "social_section": {
       "share": {
         "title": "Chia Sẻ Câu Chuyện Của Bạn",
-        "description": "Chia sẻ hành trình của bạn với mạng lưới ice và các lợi ích của nó bằng cách viết một bài viết bằng ngôn ngữ của bạn.\n\nChia sẻ trên Blog, Medium, Reddit, Quora, Blogger và nhiều nơi khác.\n\nBạn có thể tìm thấy mọi thông tin về ice và các tính năng độc đáo của nó trên trang [[:link]]Knowledge Base[[/:link]], [[:link]]Homepage[[/:link]], và trang [[:link]]FAQ[[/:link]] của chúng tôi."
+        "description": "Chia sẻ hành trình của bạn với mạng lưới Ice và các lợi ích của nó bằng cách viết một bài viết bằng ngôn ngữ của bạn.\n\nChia sẻ trên Blog, Medium, Reddit, Quora, Blogger và nhiều nơi khác.\n\nBạn có thể tìm thấy mọi thông tin về Ice và các tính năng độc đáo của nó trên trang [[:link]]Knowledge Base[[/:link]], [[:link]]Homepage[[/:link]], và trang [[:link]]FAQ[[/:link]] của chúng tôi."
       },
       "spread": {
         "title": "Lan Truyền Tin Tức",
-        "description": "Tham gia cuộc trò chuyện và giới thiệu mạng lưới ice đến các diễn đàn yêu thích của bạn.\nBắt đầu các chủ đề mới và chia sẻ suy nghĩ của bạn về tài chính phân quyền, tương lai của tiền tệ và sức mạnh của việc xây dựng cộng đồng micro với ice.\n\nHãy trở thành ☃️ Snowman và khởi đầu một cuộc thảo luận về tiềm năng của đồng tiền toàn cầu này."
+        "description": "Tham gia cuộc trò chuyện và giới thiệu mạng lưới Ice đến các diễn đàn yêu thích của bạn.\nBắt đầu các chủ đề mới và chia sẻ suy nghĩ của bạn về tài chính phân quyền, tương lai của tiền tệ và sức mạnh của việc xây dựng cộng đồng micro với Ice.\n\nHãy trở thành ☃️ Snowman và khởi đầu một cuộc thảo luận về tiềm năng của đồng tiền toàn cầu này."
       },
       "bring": {
         "title": "Mời Bạn Bè Tham Gia",
@@ -948,12 +948,12 @@
     "promo_section": {
       "web": {
         "title": "Plug & Play cho Chủ Sở Hữu Website",
-        "description": "Nhúng mạng lưới ice trực tiếp vào trang web của bạn với biểu ngữ JS đơn giản và linh hoạt của chúng tôi. Đây là một cài đặt nhanh chóng và dễ dàng có thể được tùy chỉnh để phù hợp với thương hiệu của trang web của bạn. Nó đã được dịch sang 50 ngôn ngữ và tương thích với bất kỳ nền tảng trang web nào.\n\nSao chép và dán mã vào trang web của bạn, và bắt đầu quảng cáo mạng lưới ice đến khách truy cập của bạn ngay hôm nay.",
+        "description": "Nhúng mạng lưới Ice trực tiếp vào trang web của bạn với biểu ngữ JS đơn giản và linh hoạt của chúng tôi. Đây là một cài đặt nhanh chóng và dễ dàng có thể được tùy chỉnh để phù hợp với thương hiệu của trang web của bạn. Nó đã được dịch sang 50 ngôn ngữ và tương thích với bất kỳ nền tảng trang web nào.\n\nSao chép và dán mã vào trang web của bạn, và bắt đầu quảng cáo mạng lưới Ice đến khách truy cập của bạn ngay hôm nay.",
         "action": "Cài Đặt Biểu Ngữ"
       },
       "mobile": {
         "title": "Thư Viện cho Ứng Dụng Di Động",
-        "description": "Tích hợp thư viện dễ sử dụng của chúng tôi vào ứng dụng di động của bạn và mời người dùng tham gia cộng đồng micro của bạn và bắt đầu khai thác.\n\nVới hỗ trợ dịch và các tùy chọn thiết lập linh hoạt, bạn có thể đảm bảo rằng tất cả người dùng của bạn đều có trải nghiệm ice tuyệt vời như nhau, bất kể họ ở đâu trên thế giới.",
+        "description": "Tích hợp thư viện dễ sử dụng của chúng tôi vào ứng dụng di động của bạn và mời người dùng tham gia cộng đồng micro của bạn và bắt đầu khai thác.\n\nVới hỗ trợ dịch và các tùy chọn thiết lập linh hoạt, bạn có thể đảm bảo rằng tất cả người dùng của bạn đều có trải nghiệm Ice tuyệt vời như nhau, bất kể họ ở đâu trên thế giới.",
         "action1": "Thư Viện Android",
         "action2": "Thư Viện React Native"
       }
@@ -964,7 +964,7 @@
         "rules": {
           "01": {
             "title": "Trung Thực",
-            "description": "Viết từ trải nghiệm và góc nhìn cá nhân của bạn. Chia sẻ suy nghĩ và cảm xúc chân thành của bạn về mạng lưới ice."
+            "description": "Viết từ trải nghiệm và góc nhìn cá nhân của bạn. Chia sẻ suy nghĩ và cảm xúc chân thành của bạn về mạng lưới Ice."
           },
           "02": {
             "title": "Sử Dụng Ngôn Ngữ Thân Thiện",
@@ -972,7 +972,7 @@
           },
           "03": {
             "title": "Sáng Tạo",
-            "description": "Đừng sợ thử nghiệm với các loại nội dung khác nhau, chẳng hạn như bài đăng trên blog, video hoặc cập nhật trên mạng xã hội. Hãy vui vẻ và sáng tạo trong cách bạn quảng cáo mạng lưới ice đến khán giả của mình."
+            "description": "Đừng sợ thử nghiệm với các loại nội dung khác nhau, chẳng hạn như bài đăng trên blog, video hoặc cập nhật trên mạng xã hội. Hãy vui vẻ và sáng tạo trong cách bạn quảng cáo mạng lưới Ice đến khán giả của mình."
           }
         }
       },
@@ -985,11 +985,11 @@
           },
           "02": {
             "title": "Tránh Lừa Dối Người Khác",
-            "description": "Dự án ice không trả tiền cho người dùng bằng tiền mặt, chúng tôi chỉ thưởng bằng đồng ice. Xin vui lòng tránh đăng nội dung như \"Biến ice của bạn thành tiền mặt\" hoặc \"Làm thế nào để kiếm 100 đô la với ice\" và những thứ tương tự."
+            "description": "Dự án Ice không trả tiền cho người dùng bằng tiền mặt, chúng tôi chỉ thưởng bằng đồng Ice. Xin vui lòng tránh đăng nội dung như \"Biến Ice của bạn thành tiền mặt\" hoặc \"Làm thế nào để kiếm 100 đô la với Ice\" và những thứ tương tự."
           },
           "03": {
             "title": "Tránh Tham Gia Hoạt Động Lừa Đảo",
-            "description": "Chúng tôi đặt giá trị trong sự透明和诚实 trong cộng đồng của chúng tôi. Mọi hoạt động lừa đảo như tạo nhiều tài khoản hoặc cố gắng manipulát mạng lưới ice sẽ không được dung thứ."
+            "description": "Chúng tôi đặt giá trị trong sự透明和诚实 trong cộng đồng của chúng tôi. Mọi hoạt động lừa đảo như tạo nhiều tài khoản hoặc cố gắng manipulát mạng lưới Ice sẽ không được dung thứ."
           }
         }
       }

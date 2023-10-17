@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "Káàbọ̀ sí ice",
-      "description": "[[:ice]] jẹ́ owó orí kọ̀ǹpútà tí o lè fi tẹlifóònù rẹ lówó. ice jẹ́ ti àwọn oníṣe ojoojúmọ́ bíi tìrẹ."
+      "title": "Káàbọ̀ sí Ice",
+      "description": "[[:ice]] jẹ́ owó orí kọ̀ǹpútà tí o lè fi tẹlifóònù rẹ lówó. Ice jẹ́ ti àwọn oníṣe ojoojúmọ́ bíi tìrẹ."
     },
     "page2": {
       "title": "Àwọn Ohun Tó Ń Mú Kí Ayé Dára",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Wà ní ìsopọ̀",
-      "description": "Fọwọ́ kàn  [[:iceLogo]] fún ìwíwọ̀n rẹ lójoojúmọ́ pẹ̀lú ìkànnì wa tó ń lo iná mànàmáná lọ́fẹ̀ẹ́. Bó o bá ń fọwọ́ kàn án lójoojúmọ́, wàá rí i dájú pé àwọn èèyàn gidi ni ice náà máa já sí, kì í ṣe àwọn bọ́ọ̀tì."
+      "description": "Fọwọ́ kàn  [[:iceLogo]] fún ìwíwọ̀n rẹ lójoojúmọ́ pẹ̀lú ìkànnì wa tó ń lo iná mànàmáná lọ́fẹ̀ẹ́. Bó o bá ń fọwọ́ kàn án lójoojúmọ́, wàá rí i dájú pé àwọn èèyàn gidi ni Ice náà máa já sí, kì í ṣe àwọn bọ́ọ̀tì."
     },
     "page5": {
       "title": "Sọ fún Àwọn Ẹlòmíì Kó O sì Jàǹfààní",
@@ -82,7 +82,7 @@
     "contacts": {
       "empty_title": "[[:ice]] ó sàn kéèyàn wà pẹ̀lú àwọn ọ̀rẹ́",
       "empty_button_title": "Fàyè gba àwọn olùbásọ̀rọ̀ láti wọlé",
-      "empty_description": "Máa so àwọn olùbásọ̀rọ̀ rẹ pọ̀ kí o lè rí àwọn tó ti wà lórí ìkànnì [[:ice]]. Ní ọjọ́ iwájú, wàá lè fi ice ránṣẹ́ sí ẹnikẹ́ni lára àwọn olùbásọ̀rọ̀ rẹ."
+      "empty_description": "Máa so àwọn olùbásọ̀rọ̀ rẹ pọ̀ kí o lè rí àwọn tó ti wà lórí ìkànnì [[:ice]]. Ní ọjọ́ iwájú, wàá lè fi Ice ránṣẹ́ sí ẹnikẹ́ni lára àwọn olùbásọ̀rọ̀ rẹ."
     },
     "header": {
       "search_placeholder": "Wá àwọn oníṣe",
@@ -105,7 +105,7 @@
       },
       "all_contacts": "Gbogbo àwọn olùbásọ̀rọ̀",
       "invite": "pèwá",
-      "invitation_text": "Ẹ̀yin ará {{name}}, mo fẹ́ kẹ́ ẹ wá dara pọ̀ mọ́ ice."
+      "invitation_text": "Ẹ̀yin ará {{name}}, mo fẹ́ kẹ́ ẹ wá dara pọ̀ mọ́ Ice."
     },
     "tier_one": {
       "header_list": {
@@ -123,7 +123,7 @@
     "phone": "Fóònù",
     "or": "tàbí",
     "reset_password": "Ṣàtúntò ọ̀rọ̀-aṣínà",
-    "welcome": "Káàbọ̀ sí ice",
+    "welcome": "Káàbọ̀ sí Ice",
     "email": "Í-meèlì",
     "slogan": "Àtúntò Owó Àgbáyé",
     "privacy": "Nípa títẹ̀síwájú, o gbà láti tẹ̀lé àwọn [[:link]]Àdéhùn Iṣẹ [[/:link]]àti [[:link]]Ìlànà Ìdáàbòbò Ìkànnì wa[[/:link]]"
@@ -360,7 +360,7 @@
     "feedback_title": "Fi Ìtúnyẹ̀wò ránṣẹ́",
     "feedback_description": "Ẹ sọ èrò yín fún wa.",
     "invite_title": "Pe Àwọn Ọ̀rẹ́ Rẹ",
-    "invite_description": "Gba àfikún ice nípa rírán àwọn ọ̀rẹ́ rẹ wá.",
+    "invite_description": "Gba àfikún Ice nípa rírán àwọn ọ̀rẹ́ rẹ wá.",
     "delete_title": "Pa Àkọlé Rẹ́",
     "delete_description": "Pa àkọọ́lẹ̀ rẹ nù.",
     "delete_confirmation_title": "Ṣé ó dá ẹ lójú pé o fẹ́ mú àkọọ́lẹ̀ náà kúrò?",
@@ -423,7 +423,7 @@
         },
         "system": {
           "title": "Ètò",
-          "description": "Gba àwọn ìfilọ̀ pàtàkì nípa ohun èlò ice."
+          "description": "Gba àwọn ìfilọ̀ pàtàkì nípa ohun èlò Ice."
         }
       }
     },
@@ -462,8 +462,8 @@
     "copy_link": "Daakọ ìjápọ̀",
     "more": "Ótúnkù",
     "copied": "À TI DÀKỌ",
-    "share_message": "Ẹ ǹ lẹ́ èèyàn yìnyín! Ẹ darapọ̀ mọ́ ẹgbẹ́ mi lórí ice kí ẹ sì gba owó ẹyọ ice mẹ́wàá nígbàtí ẹ bá forúkọsílẹ̀ nípa lílo kóódù ìtọ́kasí mi:",
-    "share_subject": "Ẹ wá dara pọ̀ mọ́ ẹgbẹ́ mi lórí ice",
+    "share_message": "Ẹ ǹ lẹ́ èèyàn yìnyín! Ẹ darapọ̀ mọ́ ẹgbẹ́ mi lórí Ice kí ẹ sì gba owó ẹyọ Ice mẹ́wàá nígbàtí ẹ bá forúkọsílẹ̀ nípa lílo kóódù ìtọ́kasí mi:",
+    "share_subject": "Ẹ wá dara pọ̀ mọ́ ẹgbẹ́ mi lórí Ice",
     "description": "Ẹ sọ fún àwọn èèyàn, ko sí pe àwọn ọ̀rẹ́ yín. Ìwọ yóò jàǹfààní [[:ice]]fún ìtọ́kasí tuntun tó o bá mú wá.",
     "share": "Pínlò"
   },
@@ -500,14 +500,14 @@
     "time_left": "Àkókò Tó Ṣẹ́kù",
     "mining_rate": "Iye Èrè",
     "appeal": "Mú kí owó tó ò ń wọlé máa pọ̀ sí i",
-    "benefits_description": "Ṣiṣáájú fifi owó rẹ sórí ice fún ọdún márùn-ún, kó o sì mú kí iye owó tó o ń rí lé ní ìdá 250%.",
+    "benefits_description": "Ṣiṣáájú fifi owó rẹ sórí Ice fún ọdún márùn-ún, kó o sì mú kí iye owó tó o ń rí lé ní ìdá 250%.",
     "bonus_label": "Èrè ti Ṣaaju Tẹ̀tẹ́",
     "period_label": "Àkókò Tí Wọ́n Fi ń Ta Pápá",
     "title": "Ṣaaju Pápá",
     "current_rate": "Iye Lọwọlọwọ",
     "allocation": "Ìpín",
     "description": "Tẹ̀tẹ́ jẹ́ ètò kan tó ní í ṣe pẹ̀lú fífi àwọn ohun ìní kripto rẹ láti ṣètìlẹyìn nẹtiwọọki blockchain ati jẹrisi awọn iṣowo.",
-    "terms_agree": "Mo fara mọ́ [[:ice]] [[:link]]Àwọn ìlànà Tẹ̀tẹ́ [[/:link]]. A ó ti àwọn ohun ìní ice rẹ pa fún àkókò tí a yàn.",
+    "terms_agree": "Mo fara mọ́ [[:ice]] [[:link]]Àwọn ìlànà Tẹ̀tẹ́ [[/:link]]. A ó ti àwọn ohun ìní Ice rẹ pa fún àkókò tí a yàn.",
     "stake_now": "Ṣáájú Tẹ̀tẹ́ Nísinsìnyí!",
     "balance_label": "Òdíwọ̀n tí wọ́n fi ń ta pápá",
     "confirm_title": "Ṣàrídájú owó tí wọ́n fi ń ta pápá Ṣáájú",
@@ -532,8 +532,8 @@
     "good_morning": "Ẹ káàárọ̀",
     "good_afternoon": "Ẹ káàsán",
     "good_evening": "Ẹ kú ìrọ̀lẹ́",
-    "ice": "ice",
-    "ice_per_hour": "ice/h",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/h",
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
@@ -546,7 +546,7 @@
     "views": "{{viewsCount}} àwọn wiwo"
   },
   "search": {
-    "empty": "Wá àwọn olùbásọ̀rọ̀ rẹ, àwọn ọ̀rẹ́ ice rẹ àti àwọn ọmọ àwùjọ kéékèèké.",
+    "empty": "Wá àwọn olùbásọ̀rọ̀ rẹ, àwọn ọ̀rẹ́ Ice rẹ àti àwọn ọmọ àwùjọ kéékèèké.",
     "nothing_is_found": "A kò rí ohunkóhun fún ìbéèrè rẹ.",
     "search_by_country": "Ṣàwárí nípa orílẹ̀-èdè",
     "search_for_users": "Wá àwọn olumulo",
@@ -585,7 +585,7 @@
     "resurrection_no_confirm_message": "Ìwọ yóò pàdánù owó ẹyọ [[:amount]] rẹ títí láé. Ṣé ó dá ẹ lójú pé o fẹ́ tẹ̀ síwájú?",
     "resurrection_yes_confirm_message": "Ìgbà kan ṣoṣo lo lè jíǹde! Ṣé ó dá ẹ lójú pé o fẹ́ tẹ̀ síwájú? Àwọn owó ẹyọ [[:amount]] náà yóò padà sí àkáǹtì rẹ láàárín wákàtí kan sí i.",
     "delete_account_confirmation_title": "Ṣàrídájú Piparẹ",
-    "delete_account_confirmation_text": "Pípa àkọsílẹ̀ rẹ ma mu ki gbogbo ìsọfúnni rẹ di èyí tí kò ní sí mọ́, títí kan ìsọfúnni tó o ní lórí ice rẹ. Ṣé o fẹ́ tẹ̀ síwájú?"
+    "delete_account_confirmation_text": "Pípa àkọsílẹ̀ rẹ ma mu ki gbogbo ìsọfúnni rẹ di èyí tí kò ní sí mọ́, títí kan ìsọfúnni tó o ní lórí Ice rẹ. Ṣé o fẹ́ tẹ̀ síwájú?"
   },
   "periods": {
     "3_days": "Ọjọ́ mẹ́ta",
@@ -667,7 +667,7 @@
     "snowman": {
       "title": "Ọkùnrin Ìrì",
       "subtitle": "Kọ́ ìjọba yìnyín",
-      "description": "Gba owó rẹ nípa wíwá sílé ní gbogbo wákàtí mẹ́rìnlélógún láti fi ìfọkànsìn rẹ si nẹtiwọọki ice  hàn àti láti fi hàn pé èèyàn ni ẹ́, kì í ṣe róbótì."
+      "description": "Gba owó rẹ nípa wíwá sílé ní gbogbo wákàtí mẹ́rìnlélógún láti fi ìfọkànsìn rẹ si nẹtiwọọki Ice  hàn àti láti fi hàn pé èèyàn ni ẹ́, kì í ṣe róbótì."
     },
     "ambassador": {
       "title": "Àgbà Aṣojú",
@@ -702,7 +702,7 @@
       },
       "confirm_phone": {
         "title": "Ṣàrídájú fóònù náà",
-        "description": "Fi ìdánilójú hàn pé o jẹ́ ẹni gidi, kó o sì jẹ́ kí àwọn èèyàn rẹ mọ̀ pé ìwọ náà wà lára àwọn tó wà nínú nẹtiwọọki ice náà. A ò ní pín nọ́ńbà tẹlifóònù rẹ fún ẹnikẹ́ni."
+        "description": "Fi ìdánilójú hàn pé o jẹ́ ẹni gidi, kó o sì jẹ́ kí àwọn èèyàn rẹ mọ̀ pé ìwọ náà wà lára àwọn tó wà nínú nẹtiwọọki Ice náà. A ò ní pín nọ́ńbà tẹlifóònù rẹ fún ẹnikẹ́ni."
       },
       "contacts_list": {
         "title": "Àtòjọ àwọn olùbásọ̀rọ̀",
@@ -761,11 +761,11 @@
         "description": "Ṣe àtúnṣe sí àwọn ìsọfúnni ìkànnì rẹ kí o lè rí gbogbo àṣeyọrí àti àmì ẹ̀yẹ tí o ti gbà. Lo ẹ̀rọ ìṣirò láti ibi yìí, kí o lè fojú bù owó tó o ń wọlé."
       },
       "earningicestart": {
-        "title": "Gbígbà owó ice",
+        "title": "Gbígbà owó Ice",
         "description": "O lè bẹ̀rẹ̀ ìtòlẹ́sẹẹsẹ ìforúkọsílẹ̀ [[:ice]] ní gbogbo wákàtí mẹ́rìnlélógún nípa títẹ bọ́tìnnì yìí. Má gbàgbé láti máa padà dé lójoojúmọ́ kó o sì bẹ̀rẹ̀ sí rí owó!"
       },
       "earningiceseemore": {
-        "title": "Gbígbà ice",
+        "title": "Gbígbà Ice",
         "description": "Tún tẹ̀ kí o lè rí ìsọfúnni síwájú sí i nípa àkókò ìwíwọlé rẹ tó ò ń ṣe báyìí."
       },
       "stats": {
@@ -860,24 +860,24 @@
   "social_media": {
     "tiktok": {
       "title": "Dara pọ̀ mọ́ wa ní TikTok",
-      "description": "A fẹ́ kàn sí yín láti sọ fún yín nípa àwùjọ tuntun moriwu wa lórí TikTok. A ń pín ìdárayá àti ìsọfúnni nípa owó àdàkọ dídíta wa, ice, a sì fẹ́ kí o dara pọ̀ mọ́ wa!"
+      "description": "A fẹ́ kàn sí yín láti sọ fún yín nípa àwùjọ tuntun moriwu wa lórí TikTok. A ń pín ìdárayá àti ìsọfúnni nípa owó àdàkọ dídíta wa, Ice, a sì fẹ́ kí o dara pọ̀ mọ́ wa!"
     },
     "youtube": {
       "title": "Dara pọ̀ mọ́ wa ní YouTube",
-      "description": "Láti àwọn ìtọ́ni nípa bí a ṣe ń rí ice gba, títí dé ìsọfúnni nípa àwọn àtúnṣe tuntun, àti àwọn ìsọfúnni alárinrin pàápàá, ìkànnì YouTube wa jẹ́ ibi tí ó dára jùlọ láti máa bá a sọ̀rọ̀."
+      "description": "Láti àwọn ìtọ́ni nípa bí a ṣe ń rí Ice gba, títí dé ìsọfúnni nípa àwọn àtúnṣe tuntun, àti àwọn ìsọfúnni alárinrin pàápàá, ìkànnì YouTube wa jẹ́ ibi tí ó dára jùlọ láti máa bá a sọ̀rọ̀."
     },
     "linkedin": {
       "title": "Dara pọ̀ mọ́ wa ní LinkedIn",
-      "description": "Ṣíṣe ọmọ ẹgbẹ sí àwùjọ ice lórí LinkedIn jẹ́ ọ̀nà tó dára láti mọ̀ nípa àwọn ìṣẹ̀lẹ̀ tuntun àti láti bá àwọn tí èrò wọn bára mu tí wọ́n nífẹ̀ẹ́ sí ọ̀rọ̀ nípa ọjọ́ iwájú owó díjítálìkì bíi tìrẹ."
+      "description": "Ṣíṣe ọmọ ẹgbẹ sí àwùjọ Ice lórí LinkedIn jẹ́ ọ̀nà tó dára láti mọ̀ nípa àwọn ìṣẹ̀lẹ̀ tuntun àti láti bá àwọn tí èrò wọn bára mu tí wọ́n nífẹ̀ẹ́ sí ọ̀rọ̀ nípa ọjọ́ iwájú owó díjítálìkì bíi tìrẹ."
     },
     "facebook": {
       "title": "Dara pọ̀ mọ́ wa ní Facebook",
       "description_part1": "A gba yín níyànjú gan-an láti tẹ̀lé ojúewé Facebook wa.",
-      "description_part2": "Kì í ṣe pé ó máa ràn ẹ́ lọ́wọ́ láti mọ gbogbo ohun tó ń ṣẹlẹ̀ nínú ètò ice nìkan, ó tún jẹ́ ọ̀nà tó dára láti bá àwùjọ wa sọ̀rọ̀, kó o sì di apá kan nínú ìjíròrò náà."
+      "description_part2": "Kì í ṣe pé ó máa ràn ẹ́ lọ́wọ́ láti mọ gbogbo ohun tó ń ṣẹlẹ̀ nínú ètò Ice nìkan, ó tún jẹ́ ọ̀nà tó dára láti bá àwùjọ wa sọ̀rọ̀, kó o sì di apá kan nínú ìjíròrò náà."
     },
     "instagram": {
       "title": "Dara pọ̀ mọ́ wa ní Instagram",
-      "description_part1": "Títẹ̀lé wa lórí Instagram jẹ́ ọ̀nà tó dára láti mọ̀ nípa ọ̀rọ̀ wa àti láti bá àwọn olùṣàmúlò mìíràn tí wọ́n tún nífẹ̀ẹ́ sí ice pàdé",
+      "description_part1": "Títẹ̀lé wa lórí Instagram jẹ́ ọ̀nà tó dára láti mọ̀ nípa ọ̀rọ̀ wa àti láti bá àwọn olùṣàmúlò mìíràn tí wọ́n tún nífẹ̀ẹ́ sí Ice pàdé",
       "description_part2": "Síwájú sí i, ìwọ ni yóò kọ́kọ́ mọ̀ nípa àwọn àtúnṣe tuntun tàbí àwọn ìgbéga tá a máa ṣe."
     }
   },

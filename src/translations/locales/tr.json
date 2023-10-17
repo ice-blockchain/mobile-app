@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "ice'e hoşgeldin",
-      "description": "[[:ice]] telefonunla kazanabileceğin bir dijital para birimidir. ice, senin gibi günlük kullanıcılara aittir ve onlar tarafından işletilmektedir."
+      "title": "Ice'e hoşgeldin",
+      "description": "[[:ice]] telefonunla kazanabileceğin bir dijital para birimidir. Ice, senin gibi günlük kullanıcılara aittir ve onlar tarafından işletilmektedir."
     },
     "page2": {
       "title": "Gezegen Dostu",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Bağlantıda kal",
-      "description": "Ücretsiz, enerji açısından hafif mobil uygulamamızla günlük check-in işlemin için [[:iceLogo]]'a tıkla. Günlük tıklamaların, ice botların değil gerçek insanların eline geçmesini sağlar."
+      "description": "Ücretsiz, enerji açısından hafif mobil uygulamamızla günlük check-in işlemin için [[:iceLogo]]'a tıkla. Günlük tıklamaların, Ice botların değil gerçek insanların eline geçmesini sağlar."
     },
     "page5": {
       "title": "Tavsiye Et & Kazan",
@@ -82,7 +82,7 @@
     "contacts": {
       "empty_title": "[[:ice]] arkadaşlarla daha iyi",
       "empty_button_title": "Kişilere erişime izin ver",
-      "empty_description": "Kişilerini senkronize et ve kimlerin halihazırda [[:ice]]'da olduğunu gör. Gelecekte, kişilerine ice gönderebileceksin."
+      "empty_description": "Kişilerini senkronize et ve kimlerin halihazırda [[:ice]]'da olduğunu gör. Gelecekte, kişilerine Ice gönderebileceksin."
     },
     "header": {
       "search_placeholder": "Kullanıcı ara",
@@ -105,7 +105,7 @@
       },
       "all_contacts": "Tüm kişiler",
       "invite": "davet et",
-      "invitation_text": "Merhaba {{name}}, Seni ice'e katılmaya davet etmek istiyorum."
+      "invitation_text": "Merhaba {{name}}, Seni Ice'e katılmaya davet etmek istiyorum."
     },
     "tier_one": {
       "header_list": {
@@ -123,7 +123,7 @@
     "phone": "Telefon",
     "or": "veya",
     "reset_password": "Parolayı sıfırla",
-    "welcome": "ice'e hoşgeldin",
+    "welcome": "Ice'e hoşgeldin",
     "email": "E-posta",
     "slogan": "Merkezi Olmayan Gelecek",
     "privacy": "Devam ederek [[:link]]Hizmet Şartlarımızı[[/:link]] ve [[:link]]Gizlilik Politikamızı[[/:link]] kabul etmiş olursun"
@@ -361,7 +361,7 @@
     "feedback_title": "Geri Bildirim Gönder",
     "feedback_description": "Düşüncelerini bizimle paylaş.",
     "invite_title": "Arkadaşını Davet Et",
-    "invite_description": "Arkadaşlarını davet ederek ekstra ice kazan.",
+    "invite_description": "Arkadaşlarını davet ederek ekstra Ice kazan.",
     "delete_title": "Hesabı Sil",
     "delete_description": "Hesabını sil.",
     "delete_confirmation_title": "Hesabı silmek istediğinden emin misin?",
@@ -424,7 +424,7 @@
         },
         "system": {
           "title": "Sistem",
-          "description": "ice uygulaması hakkında önemli bildirimler al."
+          "description": "Ice uygulaması hakkında önemli bildirimler al."
         }
       }
     },
@@ -463,8 +463,8 @@
     "copy_link": "Bağlantıyı kopyala",
     "more": "Daha fazlası",
     "copied": "KOPYALANDI",
-    "share_message": "Merhaba ☃️ Kar Adam! ice'teki ekibime katıl ve referans kodumu kullanarak kaydolduğunda 10 ice coin kazan:",
-    "share_subject": "ice'teki ekibime katıl",
+    "share_message": "Merhaba ☃️ Kar Adam! Ice'teki ekibime katıl ve referans kodumu kullanarak kaydolduğunda 10 Ice coin kazan:",
+    "share_subject": "Ice'teki ekibime katıl",
     "description": "Haberi yay ve arkadaşlarını davet et. Getirdiğin her yeni referans için [[:ice]] kazanırsın.",
     "share": "Paylaş"
   },
@@ -501,14 +501,14 @@
     "time_left": "Kalan Zaman",
     "mining_rate": "Kazanç Oranı",
     "appeal": "Kazanç oranını artır",
-    "benefits_description": "ice ödüllerini 5 yıla kadar ön hisselendirmelerini yap ve kazanma oranını %250'ye kadar artır.",
+    "benefits_description": "Ice ödüllerini 5 yıla kadar ön hisselendirmelerini yap ve kazanma oranını %250'ye kadar artır.",
     "bonus_label": "Hisselendirme Bonusu",
     "period_label": "Hisselendirme Dönemi",
     "title": "Ön Hisselendirme",
     "current_rate": "Mevcut Oran",
     "allocation": "Tahsislendirme",
     "description": "Hisselendirme, bir blok zincir ağını desteklemek ve işlemleri onaylamak için kripto varlıklarını taahhüt etmeyi içeren bir süreçtir.",
-    "terms_agree": "Ben [[:ice]] [[:link]]Hisselendirme Koşullarını[[/:link]] kabul ediyorum. ice stokların seçilen süre boyunca kilitlenecektir.",
+    "terms_agree": "Ben [[:ice]] [[:link]]Hisselendirme Koşullarını[[/:link]] kabul ediyorum. Ice stokların seçilen süre boyunca kilitlenecektir.",
     "stake_now": "Şimdi ön hisselendirme yap!",
     "balance_label": "Hisselendirme bakiyesi",
     "confirm_title": "Ön Hisselendirmeyi Onayla",
@@ -533,8 +533,8 @@
     "good_morning": "Günaydın",
     "good_afternoon": "Tünaydın",
     "good_evening": "İyi Akşamlar",
-    "ice": "ice",
-    "ice_per_hour": "ice/sa",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/sa",
     "seconds_short": "sn",
     "minutes_short": "dk",
     "hours_short": "sa",
@@ -547,7 +547,7 @@
     "views": "{{viewsCount}} Görüntülemeler"
   },
   "search": {
-    "empty": "Kişileri, ice arkadaşlarını ve mikro-topluluğunun üyelerini ara.",
+    "empty": "Kişileri, Ice arkadaşlarını ve mikro-topluluğunun üyelerini ara.",
     "nothing_is_found": "Sorgunuz için hiçbir şey bulunamadı.",
     "search_by_country": "Ülkeye göre ara",
     "search_for_users": "Kullanıcı ara",
@@ -586,7 +586,7 @@
     "resurrection_no_confirm_message": "[[:amount]] coinlarını sonsuza kadar kaybedeceksin. Devam etmek istediğine emin misin?",
     "resurrection_yes_confirm_message": "Sadece bir kez diriltebilirsin! Devam etmek istediğine emin misin? [[:amount]] coinlar, sonraki saat içinde bakiyene geri dönecektir.",
     "delete_account_confirmation_title": "Silme İşlemini Onayla",
-    "delete_account_confirmation_text": "Hesabını silmek, ice bakiyen dahil olmak üzere tüm verilerini kalıcı olarak siler. Devam etmek istiyor musun?"
+    "delete_account_confirmation_text": "Hesabını silmek, Ice bakiyen dahil olmak üzere tüm verilerini kalıcı olarak siler. Devam etmek istiyor musun?"
   },
   "periods": {
     "3_days": "3 gün",
@@ -668,7 +668,7 @@
     "snowman": {
       "title": "Kar Adam",
       "subtitle": "Bir kar imparatorluğu inşa et",
-      "description": "ice ağına bağlılığını, insan olduğunu ve robot olmadığını göstermek için, her 24 saatte bir giriş yap."
+      "description": "Ice ağına bağlılığını, insan olduğunu ve robot olmadığını göstermek için, her 24 saatte bir giriş yap."
     },
     "ambassador": {
       "title": "Elçi",
@@ -709,7 +709,7 @@
       },
       "confirm_phone": {
         "title": "Telefonu onayla",
-        "description": "Kimliğini onayla ve kişilerinin de ice ağının bir üyesi olduğunu bilmelarine izin ver. Telefon numaran diğer üçüncü kişilerle paylaşılmayacaktır."
+        "description": "Kimliğini onayla ve kişilerinin de Ice ağının bir üyesi olduğunu bilmelarine izin ver. Telefon numaran diğer üçüncü kişilerle paylaşılmayacaktır."
       },
       "contacts_list": {
         "title": "Kişi listesi",
@@ -768,11 +768,11 @@
         "description": "Profil ayrıntılarını özelleştir ve kazandığın tüm başarıları ve rozetleri gör. Hesap makinesini buradan kullan, böylece kazancını tahmin edebilirsin."
       },
       "earningicestart": {
-        "title": "ice kazanmak",
+        "title": "Ice kazanmak",
         "description": "Bu düğmeye dokunarak [[:ice]] check-in oturumunu 24 saatte bir başlatabilirsin. Her gün geri gelmeyi ve kazanmaya başlamayı unutma!"
       },
       "earningiceseemore": {
-        "title": "ice kazanmak",
+        "title": "Ice kazanmak",
         "description": "Tekrar dokun ve mevcut check-in oturumunla ilgili daha fazla ayrıntı gör."
       },
       "stats": {
@@ -867,24 +867,24 @@
   "social_media": {
     "tiktok": {
       "title": "TikTok'ta bize katıl",
-      "description": "Sana ulaşmak ve TikTok'taki heyecan verici yeni topluluğumuz hakkında bilgi vermek istedik. Dijital para birimimiz ice hakkında eğlenceli ve bilgilendirici içerikler paylaşıyoruz, aramıza katılmanı çok isteriz!"
+      "description": "Sana ulaşmak ve TikTok'taki heyecan verici yeni topluluğumuz hakkında bilgi vermek istedik. Dijital para birimimiz Ice hakkında eğlenceli ve bilgilendirici içerikler paylaşıyoruz, aramıza katılmanı çok isteriz!"
     },
     "youtube": {
       "title": "YouTube'da bize katıl",
-      "description": "Nasıl ice kazanılacağına ilişkin eğitimlerden, yeni özellikler hakkındaki güncellemelere ve hatta eğlenceli topluluk içeriğine kadar, YouTube kanalımız güncel kalmak için mükemmel bir yerdir."
+      "description": "Nasıl Ice kazanılacağına ilişkin eğitimlerden, yeni özellikler hakkındaki güncellemelere ve hatta eğlenceli topluluk içeriğine kadar, YouTube kanalımız güncel kalmak için mükemmel bir yerdir."
     },
     "linkedin": {
       "title": "LinkedIn'de bize katıl",
-      "description": "LinkedIn'deki ice topluluğuna katılmak, en son gelişmelerden haberdar olmanın ve dijital para birimlerinin geleceği konusunda senin kadar tutkulu olan benzer düşünen kişilerle bağlantı kurmanın harika bir yoludur."
+      "description": "LinkedIn'deki Ice topluluğuna katılmak, en son gelişmelerden haberdar olmanın ve dijital para birimlerinin geleceği konusunda senin kadar tutkulu olan benzer düşünen kişilerle bağlantı kurmanın harika bir yoludur."
     },
     "facebook": {
       "title": "Facebook'ta bize katıl",
       "description_part1": "Facebook sayfamızı takip etmeni önemle tavsiye ederiz.",
-      "description_part2": "Yalnızca ice projesinde olup biten her şeyden haberdar olmana yardımcı olmakla kalmaz, aynı zamanda topluluğumuzla bağlantı kurmanın ve sohbetin bir parçası olmanın harika bir yoludur."
+      "description_part2": "Yalnızca Ice projesinde olup biten her şeyden haberdar olmana yardımcı olmakla kalmaz, aynı zamanda topluluğumuzla bağlantı kurmanın ve sohbetin bir parçası olmanın harika bir yoludur."
     },
     "instagram": {
       "title": "Instagram'da bize katıl",
-      "description_part1": "Bizi Instagram'da takip etmek, döngüden haberdar olmanın ve aynı zamanda ice tutkunu olan diğer kullanıcılarla bağlantı kurmanın harika bir yoludur.",
+      "description_part1": "Bizi Instagram'da takip etmek, döngüden haberdar olmanın ve aynı zamanda Ice tutkunu olan diğer kullanıcılarla bağlantı kurmanın harika bir yoludur.",
       "description_part2": "Ayrıca, kullanıma sunduğumuz tüm yeni özelliklerden veya promosyonlardan ilk sen haberdar olacaksın."
     }
   },
@@ -893,11 +893,11 @@
   },
   "creative_library": {
     "title": "Yaratıcı Ice Kütüphanesi",
-    "share": "Rüya takımınızı ice ağı üzerinde oluşturun!",
+    "share": "Rüya takımınızı Ice ağı üzerinde oluşturun!",
     "get_started": {
       "header": "Rüya Takımınızı Oluşturun",
       "subtitle": "Ice'te başlayın ve başarılı bir mikro topluluk oluşturun",
-      "description": "Kendi mikro topluluklarını oluşturan ve daha fazla ödül kazanan ice kullanıcılarının hızla büyüyen sayısına katılın. Tanıtım araçlarımız, rehberlerimiz ve ipuçlarımız, sözü yaymak ve başarılı bir topluluk oluşturmak için kolay bir yol sunar.",
+      "description": "Kendi mikro topluluklarını oluşturan ve daha fazla ödül kazanan Ice kullanıcılarının hızla büyüyen sayısına katılın. Tanıtım araçlarımız, rehberlerimiz ve ipuçlarımız, sözü yaymak ve başarılı bir topluluk oluşturmak için kolay bir yol sunar.",
       "get_started": "Başlayın",
       "carousel": {
         "01": {
@@ -906,11 +906,11 @@
         },
         "02": {
           "title": "Davet Edin",
-          "description": "İzleyicinizi ice'a katılmaya ve ek ödüller kazanmaya davet edin.\n\nAyrıca, merkezileşmenin ve finansın geleceği hakkındaki faydalarını ve haberini yaymaya yardımcı olacaksınız."
+          "description": "İzleyicinizi Ice'a katılmaya ve ek ödüller kazanmaya davet edin.\n\nAyrıca, merkezileşmenin ve finansın geleceği hakkındaki faydalarını ve haberini yaymaya yardımcı olacaksınız."
         },
         "03": {
           "title": "Kazanın",
-          "description": "Ağınızı genişleterek ve diğerlerini ice topluluğuna katılmaya teşvik ederek ödüllerinizi büyütün.\n\nFinansın geleceğini merkezileşme ve özerklik yoluyla devrimleştirmek misyonumuza katılın."
+          "description": "Ağınızı genişleterek ve diğerlerini Ice topluluğuna katılmaya teşvik ederek ödüllerinizi büyütün.\n\nFinansın geleceğini merkezileşme ve özerklik yoluyla devrimleştirmek misyonumuza katılın."
         }
       }
     },
@@ -927,7 +927,7 @@
       },
       "03": {
         "title": "Gömülü Banner",
-        "description": "Gömülü bannerımızla web sitenizin ziyaretçilerine kolayca ice'ı tanıtabilir ve onları mikro topluluğunuza katılmaya davet edebilirsiniz.",
+        "description": "Gömülü bannerımızla web sitenizin ziyaretçilerine kolayca Ice'ı tanıtabilir ve onları mikro topluluğunuza katılmaya davet edebilirsiniz.",
         "action": "Bannerı Kur"
       }
     },
@@ -938,7 +938,7 @@
       },
       "spread": {
         "title": "Haberi Yayın",
-        "description": "Sohbete katılın ve ice ağını favori forumlarınıza tanıtın.\nYeni konular başlatın ve finansın merkezileşmesi, para biriminin geleceği ve ice ile bir mikro topluluk oluşturmanın gücü hakkındaki düşüncelerinizi paylaşın.\n\nBir ☃️ Kar Adamı olun ve bu küresel para biriminin potansiyeli hakkında bir tartışma başlatın."
+        "description": "Sohbete katılın ve Ice ağını favori forumlarınıza tanıtın.\nYeni konular başlatın ve finansın merkezileşmesi, para biriminin geleceği ve Ice ile bir mikro topluluk oluşturmanın gücü hakkındaki düşüncelerinizi paylaşın.\n\nBir ☃️ Kar Adamı olun ve bu küresel para biriminin potansiyeli hakkında bir tartışma başlatın."
       },
       "bring": {
         "title": "Arkadaşlarınızı Getirin",
@@ -948,12 +948,12 @@
     "promo_section": {
       "web": {
         "title": "Web Sitesi Sahipleri için Tak & Çalıştır",
-        "description": "Ice ağını basit ve esnek JS bannerımızla doğrudan web sitenize gömün. Hızlı ve kolay bir kurulumdur ve web sitenizin markasına uygun hale getirilebilir. 50 dilde çevrilmiş ve herhangi bir web sitesi platformuyla uyumludur.\n\nKodu kopyalayın ve web sitenize yapıştırın, ve bugün ziyaretçilerinize ice ağını tanıtmaya başlayın.",
+        "description": "Ice ağını basit ve esnek JS bannerımızla doğrudan web sitenize gömün. Hızlı ve kolay bir kurulumdur ve web sitenizin markasına uygun hale getirilebilir. 50 dilde çevrilmiş ve herhangi bir web sitesi platformuyla uyumludur.\n\nKodu kopyalayın ve web sitenize yapıştırın, ve bugün ziyaretçilerinize Ice ağını tanıtmaya başlayın.",
         "action": "Bannerı Kur"
       },
       "mobile": {
         "title": "Mobil Uygulamalar için Kütüphane",
-        "description": "Kolay kullanımlı kütüphanemizi mobil uygulamanıza entegre edin ve kullanıcılarınızı mikro topluluğunuza katılmaya ve madenciliğe başlamaya davet edin.\n\nÇeviri desteği ve esnek kurulum seçenekleri ile tüm kullanıcılarınızın dünya genelinde aynı harika ice deneyimine sahip olmalarını sağlayabilirsiniz.",
+        "description": "Kolay kullanımlı kütüphanemizi mobil uygulamanıza entegre edin ve kullanıcılarınızı mikro topluluğunuza katılmaya ve madenciliğe başlamaya davet edin.\n\nÇeviri desteği ve esnek kurulum seçenekleri ile tüm kullanıcılarınızın dünya genelinde aynı harika Ice deneyimine sahip olmalarını sağlayabilirsiniz.",
         "action1": "Android kütüphanesi",
         "action2": "React Native kütüphanesi"
       }
@@ -972,7 +972,7 @@
           },
           "03": {
             "title": "Yaratıcı Olun",
-            "description": "Blog yazıları, videolar veya sosyal medya güncellemeleri gibi farklı içerik türleri denemekten çekinmeyin. Audience'nıza ice ağı'nı nasıl tanıttığınızda eğlenin ve yenilikçi olun."
+            "description": "Blog yazıları, videolar veya sosyal medya güncellemeleri gibi farklı içerik türleri denemekten çekinmeyin. Audience'nıza Ice ağı'nı nasıl tanıttığınızda eğlenin ve yenilikçi olun."
           }
         }
       },
@@ -985,11 +985,11 @@
           },
           "02": {
             "title": "İnsanları Yanıltmayın",
-            "description": "Ice projesi kullanıcılara herhangi bir nakit ödeme yapmaz, yalnızca ice coin'lerle ödüllendirir. Lütfen \"Ice'ınızı nakde dönüştürün\" veya \"Ice ile nasıl 100 dolar kazanılır\" gibi içerikleri paylaşmaktan kaçının."
+            "description": "Ice projesi kullanıcılara herhangi bir nakit ödeme yapmaz, yalnızca Ice coin'lerle ödüllendirir. Lütfen \"Ice'ınızı nakde dönüştürün\" veya \"Ice ile nasıl 100 dolar kazanılır\" gibi içerikleri paylaşmaktan kaçının."
           },
           "03": {
             "title": "Dolandırıcı Faaliyetlere Katılmayın",
-            "description": "Topluluğumuzda şeffaflığı ve dürüstlüğü değerli buluyoruz. Birden fazla hesap oluşturma veya ice ağını manipüle etme gibi herhangi bir dolandırıcı faaliyet kabul edilmeyecektir."
+            "description": "Topluluğumuzda şeffaflığı ve dürüstlüğü değerli buluyoruz. Birden fazla hesap oluşturma veya Ice ağını manipüle etme gibi herhangi bir dolandırıcı faaliyet kabul edilmeyecektir."
           }
         }
       }
