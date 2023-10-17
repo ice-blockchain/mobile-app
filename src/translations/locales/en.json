@@ -694,6 +694,38 @@
     "title": "Choose date"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Use this feature to invite your friends to join the Ice community. Expand your network, share experiences, and earn rewards together."
+        },
+        "team": {
+          "description": "[[:ice]] is better with friends. On this page you can see the status of your team members. You can also ping them from here."
+        },
+        "referralscard": {
+          "title": "Team card",
+          "description": "See the evolution of your team members stats for the previous 5 days by tapping this card."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Here you will see how many team members you have in total. The more people you invite, the higher your bonus."
+        },
+        "earnings": {
+          "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the earnings from your team."
+        },
+        "segmented_control_tier_one": {
+          "title": "Team",
+          "description": "Here you can see the list of the people you have invited to join the Ice Network. You can easily track their status from here and send notifications to the inactive ones."
+        },
+        "active_users": {
+          "description": "This is the current status of your team members check-in activity. They count as active when they have an active check-in session."
+        },
+        "ping": {
+          "description": "Notify your team members to start their check-in sessions. You can send one notification to each referral every 24h."
+        }
+      }
+    },
     "profile": {
       "hidden_data": {
         "title": "Hidden data",

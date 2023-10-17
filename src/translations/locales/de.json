@@ -697,6 +697,38 @@
     "title": "Datum wählen"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Verwenden Sie diese Funktion, um Ihre Freunde zur Teilnahme an der Ice-Community einzuladen. Erweitern Sie Ihr Netzwerk, teilen Sie Erfahrungen und verdienen Sie gemeinsam Belohnungen."
+        },
+        "team": {
+          "description": "[[:ice]] macht mit Freunden mehr Spaß. Auf dieser Seite können Sie den Status Ihrer Teammitglieder sehen. Sie können sie auch von hier aus kontaktieren."
+        },
+        "referralscard": {
+          "title": "Teamkarte",
+          "description": "Sehen Sie die Entwicklung der Statistiken Ihrer Teammitglieder für die letzten 5 Tage, indem Sie auf diese Karte tippen."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Hier sehen Sie, wie viele Teammitglieder Sie insgesamt haben. Je mehr Personen Sie einladen, desto höher ist Ihr Bonus."
+        },
+        "earnings": {
+          "description": "Ihr aktueller Kontostand wird stündlich aktualisiert und hier angezeigt. Er umfasst Ihre direkten und gestakten Einnahmen sowie die Einnahmen von Ihrem Team."
+        },
+        "segmented_control_tier_one": {
+          "title": "Team",
+          "description": "Hier können Sie die Liste der Personen sehen, die Sie zur Teilnahme am Ice-Netzwerk eingeladen haben. Sie können ihren Status von hier aus leicht verfolgen und Benachrichtigungen an die inaktiven Mitglieder senden."
+        },
+        "active_users": {
+          "description": "Dies ist der aktuelle Status der Check-in-Aktivität Ihrer Teammitglieder. Sie gelten als aktiv, wenn sie eine aktive Check-in-Sitzung haben."
+        },
+        "ping": {
+          "description": "Benachrichtigen Sie Ihre Teammitglieder, um ihre Check-in-Sitzungen zu starten. Sie können jede Empfehlung einmal alle 24 Stunden benachrichtigen."
+        }
+      }
+    },
     "profile": {
       "hidden_data": {
         "title": "Versteckte Daten",

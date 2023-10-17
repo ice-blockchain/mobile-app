@@ -697,6 +697,38 @@
     "title": "Zgjidh datën"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Përdorni këtë veçori për të ftuar miqtë tuaj të bashkohen në komunitetin Ice. Zgjeroni rrjetin tuaj, ndani eksperiencat dhe fitoni shpërblime së bashku."
+        },
+        "team": {
+          "description": "[[:ice]] është më e mirë me miqtë. Në këtë faqe, mund të shihni gjendjen e anëtarëve të ekipit tuaj. Mund të iu dërgoni edhe mesazhe prej këtu."
+        },
+        "referralscard": {
+          "title": "Karta e ekipit",
+          "description": "Shtypni këtë kartë për të parë zhvillimin e statistikave të anëtarëve të ekipit tuaj në 5 ditët e fundit."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Këtu do të shihni sa anëtarë ekipi keni në total. Sa më shumë njerëz të ftuarit, aq më e larta do të jetë bonusi juaj."
+        },
+        "earnings": {
+          "description": "Bilanci juaj aktual përditësohet çdo orë dhe shfaqet këtu. Përfshin të ardhurat tuaja të drejtpërdrejta, të ardhurat e vendosura dhe të ardhurat nga ekipi juaj."
+        },
+        "segmented_control_tier_one": {
+          "title": "Ekipi",
+          "description": "Këtu mund të shihni listën e personave që keni ftuar për të bashkohen në Rrjetin Ice. Lehtë mund të ndiqni gjendjen e tyre këtu dhe dërgoni njoftime për personat joaktivë."
+        },
+        "active_users": {
+          "description": "Ky është statusi aktual i aktivitetit të anëtarëve të ekipit tuaj gjatë sesionit të kontrollit. Ata konsiderohen të aktivë kur kanë një sesion të kontrollit aktiv."
+        },
+        "ping": {
+          "description": "Njoftoni anëtarët e ekipit tuaj të fillojnë sesionin e tyre të kontrollit. Mund të dërgoni një njoftim për secilën referencë çdo 24 orë."
+        }
+      }
+    },
     "profile": {
       "hidden_data": {
         "title": "Të dhëna të fshehura",

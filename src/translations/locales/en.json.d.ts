@@ -479,6 +479,16 @@ export type Translations = {
   'confirm_phone.button': null;
   'confirm_phone.same_phone_error': null;
   'date_select.title': null;
+  'walkthrough.overrides.home.invite.description': null;
+  'walkthrough.overrides.home.team.description': null;
+  'walkthrough.overrides.home.referralscard.title': null;
+  'walkthrough.overrides.home.referralscard.description': null;
+  'walkthrough.overrides.team.referrals.description': null;
+  'walkthrough.overrides.team.earnings.description': null;
+  'walkthrough.overrides.team.segmented_control_tier_one.title': null;
+  'walkthrough.overrides.team.segmented_control_tier_one.description': null;
+  'walkthrough.overrides.team.active_users.description': null;
+  'walkthrough.overrides.team.ping.description': null;
   'walkthrough.profile.hidden_data.title': null;
   'walkthrough.profile.hidden_data.description': null;
   'walkthrough.news.readmore.title': null;

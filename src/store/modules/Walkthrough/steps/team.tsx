@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {isLiteTeam} from '@constants/featureFlags';
 import {LINKS} from '@constants/links';
 import {navigate} from '@navigation/utils';
 import {WalkthroughStepStaticData} from '@store/modules/Walkthrough/types';
@@ -70,7 +71,11 @@ export const TEAM_WALKTHROUGH_STEPS: WalkthroughStepStaticData<TeamWalkthroughSt
       version: 1,
       Icon: <TeamIcon width={rem(26)} height={rem(26)} />,
       title: t('walkthrough.team.referrals.title'),
-      description: t('walkthrough.team.referrals.description'),
+      description: t(
+        isLiteTeam
+          ? 'walkthrough.overrides.team.referrals.description'
+          : 'walkthrough.team.referrals.description',
+      ),
       link: 'https://ice.io/#invite',
     },
     {
@@ -78,14 +83,30 @@ export const TEAM_WALKTHROUGH_STEPS: WalkthroughStepStaticData<TeamWalkthroughSt
       version: 1,
       Icon: <WalletIcon width={rem(24)} height={rem(24)} />,
       title: t('walkthrough.team.earnings.title'),
-      description: t('walkthrough.team.earnings.description'),
+      description: t(
+        isLiteTeam
+          ? 'walkthrough.overrides.team.earnings.description'
+          : 'walkthrough.team.earnings.description',
+      ),
     },
     {
       key: 'segmentedControlTierOne',
       version: 1,
-      Icon: <TierOneIcon width={rem(32)} height={rem(32)} />,
-      title: t('walkthrough.team.segmented_control_tier_one.title'),
-      description: t('walkthrough.team.segmented_control_tier_one.description'),
+      Icon: isLiteTeam ? (
+        <TierTwoIcon width={rem(32)} height={rem(32)} />
+      ) : (
+        <TierOneIcon width={rem(32)} height={rem(32)} />
+      ),
+      title: t(
+        isLiteTeam
+          ? 'walkthrough.overrides.team.segmented_control_tier_one.title'
+          : 'walkthrough.team.segmented_control_tier_one.title',
+      ),
+      description: t(
+        isLiteTeam
+          ? 'walkthrough.overrides.team.segmented_control_tier_one.description'
+          : 'walkthrough.team.segmented_control_tier_one.description',
+      ),
       link: LINKS.TEAM,
     },
     {
@@ -101,7 +122,11 @@ export const TEAM_WALKTHROUGH_STEPS: WalkthroughStepStaticData<TeamWalkthroughSt
       version: 1,
       Icon: <SonarIcon />,
       title: t('walkthrough.team.active_users.title'),
-      description: t('walkthrough.team.active_users.description'),
+      description: t(
+        isLiteTeam
+          ? 'walkthrough.overrides.team.active_users.description'
+          : 'walkthrough.team.active_users.description',
+      ),
     },
     {
       key: 'tierOneEarnings',
@@ -115,6 +140,10 @@ export const TEAM_WALKTHROUGH_STEPS: WalkthroughStepStaticData<TeamWalkthroughSt
       version: 1,
       Icon: <PingIcon color={COLORS.white} height={rem(21)} width={rem(18)} />,
       title: t('walkthrough.team.ping.title'),
-      description: t('walkthrough.team.ping.description'),
+      description: t(
+        isLiteTeam
+          ? 'walkthrough.overrides.team.ping.description'
+          : 'walkthrough.team.ping.description',
+      ),
     },
   ];

@@ -697,6 +697,38 @@
     "title": "Velg dato"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Bruk denne funksjonen til å invitere vennene dine til å bli med i Ice-fellesskapet. Utvid nettverket ditt, del opplevelser og tjen belønninger sammen."
+        },
+        "team": {
+          "description": "[[:ice]] er bedre med venner. På denne siden kan du se statusen til teammedlemmene dine. Du kan også sende meldinger til dem herfra."
+        },
+        "referralscard": {
+          "title": "Lagkort",
+          "description": "Trykk på dette kortet for å se utviklingen av statistikken til teammedlemmene dine for de siste 5 dagene."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Her kan du se hvor mange teammedlemmer du har totalt. Jo flere personer du inviterer, jo høyere blir bonusen din."
+        },
+        "earnings": {
+          "description": "Din nåværende saldo oppdateres hver time og vises her. Den inkluderer dine direkte inntekter, stakede inntekter og inntekter fra teamet ditt."
+        },
+        "segmented_control_tier_one": {
+          "title": "Lag",
+          "description": "Her kan du se listen over personene du har invitert til å bli med i Ice-nettverket. Du kan enkelt følge med på statusen deres her og sende varsler til de inaktive."
+        },
+        "active_users": {
+          "description": "Dette er den nåværende statusen for aktiviteten til teammedlemmene dine ved innmeldingssjekken. De regnes som aktive når de har en aktiv innmeldingssesjon."
+        },
+        "ping": {
+          "description": "Varsle teammedlemmene dine om å starte innmeldingssesjonen. Du kan sende én varsling til hver henvisning hver 24. time."
+        }
+      }
+    },
     "profile": {
       "hidden_data": {
         "title": "Skjulte data",

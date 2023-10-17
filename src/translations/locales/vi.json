@@ -697,6 +697,38 @@
     "title": "Chọn ngày"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Sử dụng tính năng này để mời bạn bè tham gia cộng đồng Ice. Mở rộng mạng lưới của bạn, chia sẻ trải nghiệm và kiếm thưởng cùng nhau."
+        },
+        "team": {
+          "description": "[[:ice]] tốt hơn khi có bạn bè. Trên trang này, bạn có thể xem trạng thái của các thành viên trong đội của bạn. Bạn cũng có thể gửi tin nhắn cho họ từ đây."
+        },
+        "referralscard": {
+          "title": "Thẻ đội",
+          "description": "Chạm vào thẻ này để xem tiến trình thống kê của các thành viên trong đội của bạn trong vòng 5 ngày qua."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Ở đây, bạn sẽ thấy có bao nhiêu thành viên trong đội của bạn tổng cộng. Càng mời nhiều người, thưởng của bạn càng cao."
+        },
+        "earnings": {
+          "description": "Số dư hiện tại của bạn được cập nhật mỗi giờ và được hiển thị ở đây. Nó bao gồm thu nhập trực tiếp của bạn, thu nhập từ staking và thu nhập từ đội của bạn."
+        },
+        "segmented_control_tier_one": {
+          "title": "Đội",
+          "description": "Ở đây, bạn có thể xem danh sách những người bạn đã mời tham gia Ice Network. Bạn có thể dễ dàng theo dõi tình trạng của họ từ đây và gửi thông báo cho những người không hoạt động."
+        },
+        "active_users": {
+          "description": "Đây là trạng thái hiện tại của hoạt động kiểm tra của các thành viên trong đội của bạn. Họ được coi là hoạt động khi có phiên kiểm tra hoạt động."
+        },
+        "ping": {
+          "description": "Thông báo cho các thành viên trong đội của bạn bắt đầu phiên kiểm tra của họ. Bạn có thể gửi một thông báo cho mỗi người giới thiệu mỗi 24 giờ."
+        }
+      }
+    },
     "profile": {
       "hidden_data": {
         "title": "Dữ liệu ẩn",

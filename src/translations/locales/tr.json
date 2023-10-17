@@ -697,6 +697,38 @@
     "title": "Tarih seç"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Arkadaşlarınızı Ice topluluğuna katılmaya davet etmek için bu özelliği kullanın. Ağınızı genişletin, deneyimleri paylaşın ve birlikte ödüller kazanın."
+        },
+        "team": {
+          "description": "[[:ice]], arkadaşlarınızla daha iyidir. Bu sayfada takım üyelerinizin durumunu görebilirsiniz. Ayrıca buradan onlara mesaj gönderebilirsiniz."
+        },
+        "referralscard": {
+          "title": "Takım Kartı",
+          "description": "Bu kartı dokunarak takım üyelerinizin son 5 gün boyunca istatistiklerinin gelişimini görüntüleyebilirsiniz."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Burada toplam kaç takım üyeniz olduğunu göreceksiniz. Daha fazla kişi davet ederseniz, bonusunuz o kadar yüksek olur."
+        },
+        "earnings": {
+          "description": "Mevcut bakiyeniz her saat güncellenir ve burada gösterilir. Doğrudan kazançlarınız, staking gelirleri ve takımınızın kazançları da dahil olmak üzere bunları içerir."
+        },
+        "segmented_control_tier_one": {
+          "title": "Takım",
+          "description": "Burada Ice Network'e katılmaları için davet ettiğiniz kişilerin listesini görebilirsiniz. Onların durumunu buradan kolayca takip edebilir ve pasif olanlara bildirimler gönderebilirsiniz."
+        },
+        "active_users": {
+          "description": "Bu, takım üyelerinizin giriş aktivitesinin mevcut durumudur. Aktif bir giriş oturumu yaptıklarında aktif olarak kabul edilirler."
+        },
+        "ping": {
+          "description": "Takım üyelerinize giriş oturumlarını başlatmaları için bildirim gönderin. Her bir yönlendirme için 24 saatte bir bildirim gönderebilirsiniz."
+        }
+      }
+    },
     "profile": {
       "hidden_data": {
         "title": "Gizli veri",

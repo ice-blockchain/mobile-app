@@ -697,6 +697,38 @@
     "title": "Välj datum"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Använd den här funktionen för att bjuda in dina vänner att gå med i Ice-communityn. Utöka ditt nätverk, dela erfarenheter och tjäna belöningar tillsammans."
+        },
+        "team": {
+          "description": "[[:ice]] är bättre med vänner. På den här sidan kan du se statusen för dina teammedlemmar. Du kan också skicka meddelanden till dem härifrån."
+        },
+        "referralscard": {
+          "title": "Teamkort",
+          "description": "Tryck på det här kortet för att se utvecklingen av statistiken för dina teammedlemmar de senaste 5 dagarna."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Här ser du hur många teammedlemmar du har totalt sett. Ju fler personer du bjuder in, desto högre blir din bonus."
+        },
+        "earnings": {
+          "description": "Ditt nuvarande saldo uppdateras varje timme och visas här. Det inkluderar dina direkta intäkter, intäkter från staking och intäkter från ditt team."
+        },
+        "segmented_control_tier_one": {
+          "title": "Team",
+          "description": "Här kan du se listan över personer du har bjudit in att ansluta till Ice Network. Du kan enkelt följa deras status här och skicka meddelanden till de inaktiva."
+        },
+        "active_users": {
+          "description": "Detta är den nuvarande statusen för dina teammedlemmars incheckningsaktivitet. De räknas som aktiva när de har en aktiv incheckningssession."
+        },
+        "ping": {
+          "description": "Meddela dina teammedlemmar att starta sina incheckningssessioner. Du kan skicka en notis till varje hänvisning varje 24 timmar."
+        }
+      }
+    },
     "profile": {
       "hidden_data": {
         "title": "Dolda data",
