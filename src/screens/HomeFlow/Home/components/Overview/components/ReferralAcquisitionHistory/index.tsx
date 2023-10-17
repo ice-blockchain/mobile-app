@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {isLiteTeam} from '@constants/featureFlags';
 import {useIsEnglishLocale} from '@hooks/useIsEnglishLocale';
 import {Images} from '@images';
 import {
@@ -11,12 +12,10 @@ import {Tiers} from '@screens/HomeFlow/Home/components/Overview/components/Refer
 import {UnitedVerticalBar} from '@screens/HomeFlow/Home/components/Overview/components/ReferralAcquisitionHistory/components/UnitedVerticalBar';
 import {ReferralsEmptyState} from '@screens/HomeFlow/Home/components/Overview/components/ReferralsEmptyState';
 import {dayjs} from '@services/dayjs';
+import {isTeamEnabledSelector} from '@store/modules/Account/selectors';
 import {isSplashHiddenSelector} from '@store/modules/AppCommon/selectors';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
-import {
-  referralHistorySelector,
-  userReferralCountSelector,
-} from '@store/modules/Referrals/selectors';
+import {referralHistorySelector} from '@store/modules/Referrals/selectors';
 import {TrophyIcon} from '@svg/TrophyIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -36,7 +35,6 @@ interface Props {
 export const ReferralAcquisitionHistory = ({sharedIsCollapsed}: Props) => {
   const dispatch = useDispatch();
 
-  const userReferralCount = useSelector(userReferralCountSelector);
   const isEnglishLocale = useIsEnglishLocale();
 
   useEffect(() => {
@@ -44,19 +42,8 @@ export const ReferralAcquisitionHistory = ({sharedIsCollapsed}: Props) => {
   }, [dispatch]);
 
   const isSplashHidden = useSelector(isSplashHiddenSelector);
-
+  const isTeamEnabled = useSelector(isTeamEnabledSelector);
   const referralHistory = useSelector(referralHistorySelector);
-
-  const maxTierOneRefValue = Math.max(
-    ...(referralHistory ?? []).map(tier => tier.t1),
-  );
-  const maxTierTwoRefValue = Math.max(
-    ...(referralHistory ?? []).map(tier => tier.t2),
-  );
-  const maxValue = Math.max(maxTierOneRefValue, maxTierTwoRefValue);
-
-  const stepValue = Math.ceil(maxValue / NUMBER_OF_STEPS_Y);
-  const lastXValue = stepValue * NUMBER_OF_STEPS_Y;
 
   if (!isSplashHidden) {
     return null;
@@ -66,14 +53,28 @@ export const ReferralAcquisitionHistory = ({sharedIsCollapsed}: Props) => {
     return <CardBaseSkeleton />;
   }
 
+  const maxValue = isLiteTeam
+    ? isTeamEnabled
+      ? Math.max(...referralHistory.map(tier => tier.t1 + tier.t2))
+      : Math.max(...referralHistory.map(tier => tier.t1))
+    : Math.max(
+        ...referralHistory.map(tier => tier.t1),
+        ...referralHistory.map(tier => tier.t2),
+      );
+
+  const stepValue = Math.ceil(maxValue / NUMBER_OF_STEPS_Y);
+  const lastXValue = stepValue * NUMBER_OF_STEPS_Y;
+
   return (
     <CardBase
       backgroundImageSource={Images.backgrounds.referralsCardBg}
-      headerTitle={t('home.referrals.title')}
+      headerTitle={
+        isLiteTeam ? t('home.referrals.title_team') : t('home.referrals.title')
+      }
       headerTitleIcon={<TrophyIcon fill={COLORS.white} />}
-      headerValueIcon={isEnglishLocale ? <Tiers /> : null}
+      headerValueIcon={isEnglishLocale && !isLiteTeam ? <Tiers /> : null}
       sharedIsCollapsed={sharedIsCollapsed}>
-      {userReferralCount === 0 ? (
+      {referralHistory.length === 0 ? (
         <ReferralsEmptyState />
       ) : (
         <View style={styles.body}>
@@ -94,8 +95,13 @@ export const ReferralAcquisitionHistory = ({sharedIsCollapsed}: Props) => {
               return (
                 <View style={styles.column} key={date}>
                   <UnitedVerticalBar
-                    valuePercentageB1={(t1 * 100) / lastXValue}
-                    valuePercentageB2={(t2 * 100) / lastXValue}
+                    valuePercentageB1={
+                      ((isLiteTeam && isTeamEnabled ? t1 + t2 : t1) * 100) /
+                      lastXValue
+                    }
+                    valuePercentageB2={
+                      isLiteTeam ? null : (t2 * 100) / lastXValue
+                    }
                     label={dayjs(date).format('MM/DD')}
                   />
                 </View>

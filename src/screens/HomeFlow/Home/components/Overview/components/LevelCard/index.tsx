@@ -3,15 +3,22 @@
 import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
+import {isLiteTeam} from '@constants/featureFlags';
 import {Images} from '@images';
 import {
   CardBase,
   CardBaseSkeleton,
 } from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
-import {userIdSelector} from '@store/modules/Account/selectors';
+import {
+  isTeamEnabledSelector,
+  userIdSelector,
+} from '@store/modules/Account/selectors';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
 import {isSplashHiddenSelector} from '@store/modules/AppCommon/selectors';
-import {userReferralCountSelector} from '@store/modules/Referrals/selectors';
+import {
+  userReferralCountSelector,
+  userT1ReferralSelector,
+} from '@store/modules/Referrals/selectors';
 import {globalRankSelector} from '@store/modules/Tokenomics/selectors';
 import {PioneerIcon} from '@svg/PioneerIcon';
 import {replaceString, t, tagRegex} from '@translations/i18n';
@@ -36,7 +43,12 @@ interface Props {
 
 export const LevelCard = forwardRef(
   ({sharedIsCollapsed, onLayout}: Props, forwardedRef: Ref<View>) => {
-    const userReferralCount = useSelector(userReferralCountSelector);
+    const isTeamEnabled = useSelector(isTeamEnabledSelector);
+    const userReferralCount = useSelector(
+      isLiteTeam && !isTeamEnabled
+        ? userT1ReferralSelector
+        : userReferralCountSelector,
+    );
     const userId = useSelector(userIdSelector);
     const globalRank = useSelector(globalRankSelector(userId));
     const isSplashHidden = useSelector(isSplashHiddenSelector);
@@ -102,7 +114,9 @@ export const LevelCard = forwardRef(
         <View style={styles.bottomContainer}>
           <Text style={styles.noteText}>
             {replaceString(
-              t('home.pioneer.description'),
+              isLiteTeam
+                ? t('home.pioneer.description_team')
+                : t('home.pioneer.description'),
               tagRegex('ice'),
               (match, index) => (
                 <IceLabel key={match + index} iconSize={12} />

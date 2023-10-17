@@ -8,7 +8,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import teamEmptyImage from '@screens/Team/assets/images/teamEmpty.png';
 import {InviteIcon} from '@svg/InviteIcon';
-import {replaceString, t, tagRegex} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
@@ -29,17 +29,7 @@ export function EmptyTier({title}: Props) {
         style={styles.image}
         resizeMode="contain"
       />
-      <Text style={styles.title}>
-        {replaceString(
-          t('team.empty.title'),
-          tagRegex('title'),
-          (match, index) => (
-            <Text key={match + index} style={styles.boldTitle}>
-              {title}
-            </Text>
-          ),
-        )}
-      </Text>
+      <Text style={styles.title}>{title}</Text>
       <PrimaryButton
         text={t('team.empty.button_title')}
         onPress={() => navigation.navigate('InviteShare')}
@@ -67,9 +57,6 @@ const styles = StyleSheet.create({
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(16),
     ...font(14, 24, 'regular', 'primaryDark', 'center'),
-  },
-  boldTitle: {
-    ...font(14, 24, 'bold', 'primaryDark'),
   },
   buttonText: {
     ...font(14, 19, 'black', 'white'),
