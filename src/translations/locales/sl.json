@@ -697,6 +697,38 @@
     "title": "Izberite datum"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Uporabite to funkcijo, da povabite svoje prijatelje, da se pridružijo skupnosti Ice. Razširite svoje omrežje, delite izkušnje in skupaj zaslužite nagrade."
+        },
+        "team": {
+          "description": "[[:ice]] je boljši s prijatelji. Na tej strani lahko vidite status članov svoje ekipe. Od tu jih lahko tudi obvestite."
+        },
+        "referralscard": {
+          "title": "Kartica ekipe",
+          "description": "Kliknite na to kartico, da si ogledate razvoj statistike članov svoje ekipe v zadnjih 5 dneh."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Tukaj boste videli, koliko članov ekipe imate skupaj. Več ljudi, ki jih povabite, večji bo vaš bonus."
+        },
+        "earnings": {
+          "description": "Vaše trenutno stanje se posodablja vsako uro in je prikazano tukaj. Vključuje vaše neposredne zaslužke, zaslužke iz stavljenja in zaslužke iz vaše ekipe."
+        },
+        "segmented_control_tier_one": {
+          "title": "Ekipa",
+          "description": "Tukaj lahko vidite seznam ljudi, ki ste jih povabili, da se pridružijo omrežju Ice. Lahko enostavno spremljate njihov status od tu in pošiljate obvestila neaktivnim."
+        },
+        "active_users": {
+          "description": "To je trenutni status aktivnosti članov vaše ekipe med prijavo. Veljajo za aktivne, ko imajo aktivno prijavo."
+        },
+        "ping": {
+          "description": "Obvestite člane svoje ekipe, naj začnejo svojo prijavo. Vsaki napotitvi lahko pošljete eno obvestilo vsakih 24 ur."
+        }
+      }
+    },
     "profile": {
       "hidden_data": {
         "title": "Skriti podatki",

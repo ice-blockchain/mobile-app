@@ -697,6 +697,38 @@
     "title": "Wybierz datę"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Użyj tej funkcji, aby zaprosić swoich przyjaciół do dołączenia do społeczności Ice. Rozwijaj swoją sieć, dziel się doświadczeniami i zdobywaj nagrody razem."
+        },
+        "team": {
+          "description": "[[:ice]] jest lepsze z przyjaciółmi. Na tej stronie możesz sprawdzić status członków swojego zespołu. Możesz również wysyłać do nich wiadomości stąd."
+        },
+        "referralscard": {
+          "title": "Karta zespołu",
+          "description": "Naciśnij tę kartę, aby sprawdzić rozwój statystyk członków swojego zespołu z ostatnich 5 dni."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Tutaj możesz zobaczyć, ile masz ogółem członków zespołu. Im więcej osób zaprosisz, tym wyższa będzie Twoja premia."
+        },
+        "earnings": {
+          "description": "Twoje aktualne saldo jest aktualizowane co godzinę i wyświetlane tutaj. Zawiera ono Twoje bezpośrednie zarobki, zarobki ze stawki i zarobki z Twojego zespołu."
+        },
+        "segmented_control_tier_one": {
+          "title": "Zespół",
+          "description": "Tutaj możesz zobaczyć listę osób, które zaprosiłeś do dołączenia do Sieci Ice. Łatwo śledź ich status stąd i wysyłaj powiadomienia do tych nieaktywnych."
+        },
+        "active_users": {
+          "description": "To jest aktualny status aktywności członków Twojego zespołu podczas sesji meldunkowej. Są uważani za aktywnych, gdy mają aktywną sesję meldunkową."
+        },
+        "ping": {
+          "description": "Powiadom członków swojego zespołu, aby rozpoczęli sesję meldunkową. Możesz wysyłać jedno powiadomienie do każdej poleconej osoby co 24 godziny."
+        }
+      }
+    },
     "profile": {
       "hidden_data": {
         "title": "Ukryte dane",

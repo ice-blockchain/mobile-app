@@ -697,6 +697,38 @@
     "title": "Escolha a data"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Use esta funcionalidade para convidar seus amigos a se juntarem à comunidade Ice. Expanda sua rede, compartilhe experiências e ganhe recompensas juntos."
+        },
+        "team": {
+          "description": "[[:ice]] é melhor com amigos. Nesta página, você pode ver o status dos membros de sua equipe. Você também pode enviá-los mensagens daqui."
+        },
+        "referralscard": {
+          "title": "Cartão da equipe",
+          "description": "Toque neste cartão para ver o desenvolvimento das estatísticas dos membros de sua equipe nos últimos 5 dias."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Aqui você verá quantos membros de equipe tem no total. Quanto mais pessoas você convidar, maior será a sua bonificação."
+        },
+        "earnings": {
+          "description": "Seu saldo atual é atualizado a cada hora e é exibido aqui. Ele inclui seus ganhos diretos, ganhos em staking e ganhos de sua equipe."
+        },
+        "segmented_control_tier_one": {
+          "title": "Equipe",
+          "description": "Aqui você pode ver a lista das pessoas que você convidou para se juntarem à Rede Ice. Você pode acompanhar facilmente o status delas daqui e enviar notificações para os inativos."
+        },
+        "active_users": {
+          "description": "Este é o status atual da atividade de check-in dos membros de sua equipe. Eles são considerados ativos quando têm uma sessão de check-in ativa."
+        },
+        "ping": {
+          "description": "Notifique os membros de sua equipe para iniciar suas sessões de check-in. Você pode enviar uma notificação para cada indicação a cada 24 horas."
+        }
+      }
+    },
     "profile": {
       "hidden_data": {
         "title": "Dados ocultos",

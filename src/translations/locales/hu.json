@@ -697,6 +697,38 @@
     "title": "Dátum kiválasztása"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Használja ezt a funkciót arra, hogy meghívja barátait, hogy csatlakozzanak az Ice közösséghez. Bővítse hálózatát, ossza meg élményeit és szerezzen jutalmakat együtt."
+        },
+        "team": {
+          "description": "[[:ice]] jobb barátokkal. Ezen az oldalon láthatja csapatának tagjainak állapotát. Innen is küldhet üzeneteket nekik."
+        },
+        "referralscard": {
+          "title": "Csapat kártya",
+          "description": "Nézze meg csapatának tagjainak statisztikáinak fejlődését az előző 5 napban, ha erre a kártyára kattint."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Itt láthatja, hány összes csapattagja van. Minél több embert hív meg, annál magasabb lesz a jutalma."
+        },
+        "earnings": {
+          "description": "Az aktuális egyenlege minden órában frissül, és itt látható. Tartalmazza a közvetlen és letétbe helyezett jövedelmedet, valamint a csapatodból származó jövedelmedet is."
+        },
+        "segmented_control_tier_one": {
+          "title": "Csapat",
+          "description": "Itt láthatja azoknak az embereknek a listáját, akiket meghívott az Ice Hálózathoz. Innen könnyen nyomon követheti az állapotukat, és értesítéseket küldhet a nem aktív tagoknak."
+        },
+        "active_users": {
+          "description": "Ez az Ön csapatának tagjainak jelenlegi bejelentkezési aktivitásának állapota. Aktívnak számítanak, amikor aktív bejelentkezési munkamenetük van."
+        },
+        "ping": {
+          "description": "Értesítse csapatának tagjait, hogy kezdjék el bejelentkezési munkamenetüket. Minden hivatkozáshoz naponta egy értesítést küldhet."
+        }
+      }
+    },
     "profile": {
       "hidden_data": {
         "title": "Rejtett adatok",

@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {isLiteTeam} from '@constants/featureFlags';
 import {navigate} from '@navigation/utils';
 import {WalkthroughStepStaticData} from '@store/modules/Walkthrough/types';
 import {ChatBubblesIcon} from '@svg/ChatBubblesIcon';
@@ -64,7 +65,11 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
       version: 1,
       Icon: <InviteIcon fill={COLORS.white} width={rem(36)} height={rem(36)} />,
       title: t('walkthrough.home.invite.title'),
-      description: t('walkthrough.home.invite.description'),
+      description: t(
+        isLiteTeam
+          ? 'walkthrough.overrides.home.invite.description'
+          : 'walkthrough.home.invite.description',
+      ),
     },
     {
       key: 'team',
@@ -73,7 +78,11 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
         <TeamActiveIcon color={COLORS.white} width={rem(36)} height={rem(36)} />
       ),
       title: t('walkthrough.home.team.title'),
-      description: t('walkthrough.home.team.description'),
+      description: t(
+        isLiteTeam
+          ? 'walkthrough.overrides.home.team.description'
+          : 'walkthrough.home.team.description',
+      ),
     },
     {
       key: 'earningIceStart',
@@ -245,8 +254,16 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
       Icon: (
         <TrophyIcon color={COLORS.white} width={rem(24)} height={rem(24)} />
       ),
-      title: t('walkthrough.home.referralscard.title'),
-      description: t('walkthrough.home.referralscard.description'),
+      title: t(
+        isLiteTeam
+          ? 'walkthrough.overrides.home.referralscard.title'
+          : 'walkthrough.home.referralscard.title',
+      ),
+      description: t(
+        isLiteTeam
+          ? 'walkthrough.overrides.home.referralscard.description'
+          : 'walkthrough.home.referralscard.description',
+      ),
       before: function* () {
         yield navigate({
           name: 'Home',

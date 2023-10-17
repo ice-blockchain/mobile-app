@@ -697,6 +697,38 @@
     "title": "Tarix seç"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Dostlarınızı Ice icmaəsinə qoşulmağa dəvət etmək üçün bu xüsusiyyəti istifadə edin. Sizin şəbəkənizi genişləndirin, təcrübələrinizi bölüşün və birgə mükafat qazanın."
+        },
+        "team": {
+          "description": "[[:ice]] dostlarınızla birlikdə daha yaxşıdır. Bu səhifədə öz komandanızın vəzifələrini görmək mümkündür. Siz həmçinin onlara buradan xəbərdarlıq göndərə bilərsiniz."
+        },
+        "referralscard": {
+          "title": "Komanda kartı",
+          "description": "Bu kartı toxunaraq son 5 gün ərzində komanda üzvlərinin statistika inkişafını görə bilərsiniz."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Bu yerə komanda üzvlərinin cəmi sayını görmək mümkündür. Daha çox insanı dəvət etsəniz, mükafatınız o qədər yüksək olar."
+        },
+        "earnings": {
+          "description": "Sizin cari balansınız hər saat yenilənir və burada göstərilir. Bu, sizi mütəmadi vəsaitiniz, sizi gözləmə vəsaiti və komandanızın vəsaitini daxil edir."
+        },
+        "segmented_control_tier_one": {
+          "title": "Komanda",
+          "description": "Bu yerə İce Şəbəkəsinə dəvət etdiyiniz insanların siyahısını görmək mümkündür. Onların vəziyyətini buradan asanlıqla izləyə və fəal olmayanlara bildiriş göndərə bilərsiniz."
+        },
+        "active_users": {
+          "description": "Bu, komanda üzvlərinizin onların yoxlama sessiyasının fəal vəziyyətidir. Onlar fəal yoxlama sessiyası keçirdikdə fəal hesab edilir."
+        },
+        "ping": {
+          "description": "Komanda üzvlərinə onların yoxlama sessiyasını başlatmağı bildirin. Hər bir təklif üçün 24 saatda bir bildiriş göndərə bilərsiniz."
+        }
+      }
+    },
     "profile": {
       "hidden_data": {
         "title": "Gizli məlumat",

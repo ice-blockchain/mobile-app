@@ -697,6 +697,38 @@
     "title": "Kies datum"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Gebruik hierdie funksie om jou vriende uit te nooi om by die Ice-gemeenskap aan te sluit. Vergroot jou netwerk, deel ervarings en verdien saam belonings."
+        },
+        "team": {
+          "description": "[[:ice]] is beter met vriende. Op hierdie bladsy kan jy die status van jou spanlede sien. Jy kan hulle ook van hier af kontak maak."
+        },
+        "referralscard": {
+          "title": "Spankaart",
+          "description": "Sien die ontwikkeling van jou spanlede se statistieke vir die vorige 5 dae deur hierdie kaart te tik."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Hier sal jy sien hoeveel spanlede jy in totaal het. Hoe meer mense jy uitnooi, hoe hoër jou bonus sal wees."
+        },
+        "earnings": {
+          "description": "Jou huidige saldo word elke uur opgedateer en hier vertoon. Dit sluit jou direkte & gestaakte verdienste saam met die verdienste van jou span in."
+        },
+        "segmented_control_tier_one": {
+          "title": "Span",
+          "description": "Hier kan jy die lys van die mense wat jy uitgenooi het om by die Ice-netwerk aan te sluit, sien. Jy kan maklik hulle status van hier af volg en kennisgewings aan die onaktiewe lede stuur."
+        },
+        "active_users": {
+          "description": "Dit is die huidige status van jou spanlede se inloopaktiwiteit. Hulle tel as aktief wanneer hulle 'n aktiewe inloopsessie het."
+        },
+        "ping": {
+          "description": "Stuur kennisgewings aan jou spanlede om hul inloopsessies te begin. Jy kan een kennisgewing aan elke verwysing elke 24 uur stuur."
+        }
+      }
+    },
     "profile": {
       "hidden_data": {
         "title": "Versteekte data",

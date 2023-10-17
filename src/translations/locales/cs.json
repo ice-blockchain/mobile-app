@@ -697,6 +697,38 @@
     "title": "Výběr data"
   },
   "walkthrough": {
+    "overrides": {
+      "home": {
+        "invite": {
+          "description": "Použijte tuto funkci k pozvání svých přátel, aby se připojili k Ice komunitě. Rozšiřte svou síť, sdílejte zkušenosti a společně získávejte odměny."
+        },
+        "team": {
+          "description": "[[:ice]] je lepší s přáteli. Na této stránce můžete vidět stav členů vašeho týmu. Můžete je také oznámit odtud."
+        },
+        "referralscard": {
+          "title": "Karta týmu",
+          "description": "Klepnutím na tuto kartu uvidíte vývoj statistik vašich členů týmu za posledních 5 dnů."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Zde uvidíte, kolik členů týmu máte celkem. Čím více lidí pozvete, tím vyšší bude váš bonus."
+        },
+        "earnings": {
+          "description": "Váš aktuální zůstatek je aktualizován každou hodinu a zobrazuje se zde. Zahrnuje vaše přímé a vložené výdělky spolu s výdělky od vašeho týmu."
+        },
+        "segmented_control_tier_one": {
+          "title": "Tým",
+          "description": "Zde můžete vidět seznam lidí, které jste pozvali, aby se připojili k síti Ice. Z této stránky můžete snadno sledovat jejich stav a odesílat oznámení neaktivním členům."
+        },
+        "active_users": {
+          "description": "Toto je aktuální stav činnosti přihlášených členů vašeho týmu. Jsou považováni za aktivní, když mají aktivní relaci."
+        },
+        "ping": {
+          "description": "Oznamte svým členům týmu, aby spustili své relace. Každému doporučení můžete odeslat jedno oznámení každých 24 hodin."
+        }
+      }
+    },
     "profile": {
       "hidden_data": {
         "title": "Skrytá data",
