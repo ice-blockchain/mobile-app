@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {mockAnnouncements, mockInAppNotifications} from '@services/getstream';
+import {mockAnnouncements, mockInAppNotifications} from '@services/getStream';
 import {InAppNotificationActions} from '@store/modules/InAppNotifications/actions';
 import {getErrorMessage} from '@utils/errors';
 import {call, put, SagaReturnType} from 'redux-saga/effects';

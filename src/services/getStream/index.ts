@@ -4,8 +4,8 @@ import {ENV} from '@constants/env';
 import {
   mockedAnnouncements,
   mockedNotifications,
-} from '@services/getstream/mockData';
-import {connect} from 'getstream';
+} from '@services/getStream/mockData';
+import {connect} from 'getStream';
 
 const mockedUserId = 'MOCKED_USER_ID';
 

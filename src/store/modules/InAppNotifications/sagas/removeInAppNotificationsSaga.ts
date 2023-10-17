@@ -3,7 +3,7 @@
 import {
   removeAnnouncements,
   removeInAppNotifications,
-} from '@services/getstream';
+} from '@services/getStream';
 import {InAppNotificationActions} from '@store/modules/InAppNotifications/actions';
 import {getErrorMessage} from '@utils/errors';
 import {call, put, SagaReturnType} from 'redux-saga/effects';
