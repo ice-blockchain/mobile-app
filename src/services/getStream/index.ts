@@ -5,7 +5,7 @@ import {
   mockedAnnouncements,
   mockedNotifications,
 } from '@services/getStream/mockData';
-import {connect} from 'getStream';
+import {connect} from 'getstream';
 
 const mockedUserId = 'MOCKED_USER_ID';
 

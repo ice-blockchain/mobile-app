@@ -273,14 +273,14 @@ PODS:
   - lottie-react-native (6.3.1):
     - lottie-ios (~> 4.3.0)
     - React-Core
-  - MoEngage-iOS-SDK (9.4.1)
-  - MoEngageInApp (4.4.0):
-    - MoEngage-iOS-SDK (< 9.5.0, >= 9.4.0)
-  - MoEngagePluginBase (4.1.0):
-    - MoEngage-iOS-SDK (< 9.5.0, >= 9.4.0)
-    - MoEngageInApp (< 4.5.0, >= 4.4.0)
-  - MoEngageRichNotification (7.4.0):
-    - MoEngage-iOS-SDK (< 9.5.0, >= 9.4.0)
+  - MoEngage-iOS-SDK (9.11.3)
+  - MoEngageInApp (4.11.1):
+    - MoEngage-iOS-SDK (< 9.12.0, >= 9.11.1)
+  - MoEngagePluginBase (4.4.0):
+    - MoEngage-iOS-SDK (< 9.12.0, >= 9.11.0)
+    - MoEngageInApp (< 4.12.0, >= 4.11.0)
+  - MoEngageRichNotification (7.11.0):
+    - MoEngage-iOS-SDK (< 9.12.0, >= 9.11.0)
   - nanopb (2.30909.0):
     - nanopb/decode (= 2.30909.0)
     - nanopb/encode (= 2.30909.0)
@@ -741,9 +741,9 @@ PODS:
     - React-jsi (= 0.72.3)
     - React-logger (= 0.72.3)
     - React-perflogger (= 0.72.3)
-  - ReactNativeMoEngage (8.4.0):
-    - MoEngagePluginBase (< 4.2.0, >= 4.1.0)
-    - MoEngageRichNotification (< 7.5.0, >= 7.4.0)
+  - ReactNativeMoEngage (8.5.3):
+    - MoEngagePluginBase (< 4.5.0, >= 4.4.0)
+    - MoEngageRichNotification (< 7.12.0, >= 7.11.0)
     - React
   - RNAppleAuthentication (2.2.2):
     - React-Core
@@ -1286,10 +1286,10 @@ SPEC CHECKSUMS:
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   lottie-ios: 25e7b2675dad5c3ddad369ac9baab03560c5bfdd
   lottie-react-native: c9f1db4f4124dcce9f8159e65d8dc6e8bcb11fb4
-  MoEngage-iOS-SDK: b7af14646f44852527ba7420e52ff8bb56b7077d
-  MoEngageInApp: 94f24b0b1a83ec247dc998f31b08124b09fcab96
-  MoEngagePluginBase: e865f388c39d0cf2c7847610876e63b0e5e31c22
-  MoEngageRichNotification: 007cb006358994209e017c6ce52808809cf0b3fc
+  MoEngage-iOS-SDK: c6a4dbe11f90964ff33724327ed9bf42eb73338b
+  MoEngageInApp: aeb989934968bf449b71968a7aa71e9308724d4a
+  MoEngagePluginBase: b4d498cadff122b1e24b71efb9fa1b4cfcd5b043
+  MoEngageRichNotification: a20e4cb3645a93fcae0a7f603e89fba380e52f1f
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   Permission-Camera: bf6791b17c7f614b6826019fcfdcc286d3a107f6
@@ -1337,7 +1337,7 @@ SPEC CHECKSUMS:
   React-runtimescheduler: 837c1bebd2f84572db17698cd702ceaf585b0d9a
   React-utils: bcb57da67eec2711f8b353f6e3d33bd8e4b2efa3
   ReactCommon: 3ccb8fb14e6b3277e38c73b0ff5e4a1b8db017a9
-  ReactNativeMoEngage: b24ccac9d1d41dc3673558f7100ae2d61cc20068
+  ReactNativeMoEngage: 6998a9708ee609af81627fa6985ca076d179fc12
   RNAppleAuthentication: 0571c08da8c327ae2afc0261b48b4a515b0286a6
   RNBackgroundFetch: 9fcdeee8aa00e1e1b3895ff9bbaaf10275288a87
   RNBootSplash: 970faaa2ab1322758c6545c88d3b23f424b86a2f
