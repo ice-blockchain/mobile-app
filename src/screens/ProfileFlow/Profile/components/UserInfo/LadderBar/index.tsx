@@ -9,6 +9,7 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {LadderItem} from '@screens/ProfileFlow/Profile/components/UserInfo/LadderBar/components/LadderItem';
 import {
   isPrivacyInfoShownSelector,
+  isTeamEnabledSelector,
   userSelector,
 } from '@store/modules/Account/selectors';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
@@ -35,8 +36,12 @@ export const LadderBar = memo(
     const authUser = useSelector(userSelector);
     const globalRank = useSelector(globalRankSelector(user.id));
     const isPrivacyInfoShown = useSelector(isPrivacyInfoShownSelector);
+    const isTeamEnabled = useSelector(isTeamEnabledSelector);
     const hiddenElements = user.hiddenProfileElements || [];
-    const refNumber = (user.t1ReferralCount ?? 0) + (user.t2ReferralCount ?? 0);
+    const refNumber =
+      isLiteTeam && !isTeamEnabled
+        ? user.t1ReferralCount ?? 0
+        : (user.t1ReferralCount ?? 0) + (user.t2ReferralCount ?? 0);
     const achievements = useSelector(
       AchievementsSelectors.getAchievementsByUserId({userId: user.id}),
     );
