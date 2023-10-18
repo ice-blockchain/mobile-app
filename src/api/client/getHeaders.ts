@@ -8,3 +8,7 @@ export const getHeaders = () => {
     'Mobile-App-Version': `${Platform.OS} - ${DeviceInfo.getVersion()}`,
   };
 };
+
+export const NO_CACHE_HEADERS = {
+  'Cache-Control': 'no-cache',
+};
