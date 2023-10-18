@@ -9,11 +9,11 @@ type AuthCodeConfig =
     };
 
 type FaceAuthConfig = {
-  'face-auth': {enabled: boolean};
+  'face-auth'?: {enabled: boolean};
 };
 
 type TeamConfig = {
-  team: {enabled: boolean};
+  team?: {enabled: boolean};
 };
 
 export type AuthConfig = AuthCodeConfig & FaceAuthConfig & TeamConfig;

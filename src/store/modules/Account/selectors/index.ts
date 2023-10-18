@@ -78,4 +78,4 @@ export const installReferrerSelector = (state: RootState) =>
   state.account.installReferrer;
 
 export const isTeamEnabledSelector = (state: RootState) =>
-  !!state.account.authConfig?.team.enabled;
+  !!state.account.authConfig?.team?.enabled;

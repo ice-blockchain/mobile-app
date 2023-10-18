@@ -5,5 +5,9 @@ import {get} from '@api/client';
 import {ENV} from '@constants/env';
 
 export function getConfig() {
-  return get<AuthConfig>(ENV.AUTH_CONFIG_URL ?? '');
+  return get<AuthConfig>(ENV.AUTH_CONFIG_URL ?? '', undefined, undefined, {
+    headers: {
+      'Cache-Control': 'no-cache',
+    },
+  });
 }
