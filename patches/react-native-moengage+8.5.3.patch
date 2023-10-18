@@ -1,0 +1,42 @@
+diff --git a/node_modules/react-native-moengage/android/build.gradle b/node_modules/react-native-moengage/android/build.gradle
+index b65ea58..eb9c003 100644
+--- a/node_modules/react-native-moengage/android/build.gradle
++++ b/node_modules/react-native-moengage/android/build.gradle
+@@ -1,5 +1,5 @@
+ buildscript {
+-  ext.kotlinVersion = '1.6.0'
++  ext.kotlinVersion = '1.6.20'
+   repositories {
+     google()
+     mavenCentral()
+diff --git a/node_modules/react-native-moengage/iOS/MoEReactBridge/MoEReactBridge.m b/node_modules/react-native-moengage/iOS/MoEReactBridge/MoEReactBridge.m
+index 0bf1e38..91e98f7 100644
+--- a/node_modules/react-native-moengage/iOS/MoEReactBridge/MoEReactBridge.m
++++ b/node_modules/react-native-moengage/iOS/MoEReactBridge/MoEReactBridge.m
+@@ -131,6 +131,26 @@ -(void)emitEvent:(NSDictionary*)payloadDict{
+ RCT_EXPORT_METHOD(registerForPushNotification)
+ {
+     [[MoEngagePluginBridge sharedInstance] registerForPush];
++    dispatch_async(dispatch_get_main_queue(), ^{
++        id<UIApplicationDelegate> appDelegate = [[UIApplication sharedApplication] delegate];
++        if ([appDelegate respondsToSelector:@selector(moEngageRegisterForRemoteNotifications)]) {
++          [appDelegate performSelector:@selector(moEngageRegisterForRemoteNotifications)];
++        }
++      });
++}
++
++#pragma mark- Deep Linking
++RCT_EXPORT_METHOD(getMoeDeeplink:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
++{
++    dispatch_async(dispatch_get_main_queue(), ^{
++        id<UIApplicationDelegate> appDelegate = [[UIApplication sharedApplication] delegate];
++        if ([appDelegate respondsToSelector:@selector(getMoeDeeplink)]) {
++          NSString *deeplink = [appDelegate performSelector:@selector(getMoeDeeplink)];
++          resolve(deeplink);
++        } else {
++          reject(@"-1", @"getMoeDeeplink not implemented", nil);
++        }
++      });
+ }
+ 
+ #pragma mark Show InApp

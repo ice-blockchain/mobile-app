@@ -10958,10 +10958,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@2.8.8:
-  version "2.8.8"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
-  integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
+prettier@2.8.0:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.0.tgz#c7df58393c9ba77d6fba3921ae01faf994fb9dc9"
+  integrity sha512-9Lmg8hTFZKG0Asr/kW9Bp8tJjRVluO8EJQVfY2T7FMw9T5jy4I/Uvx0Rca/XWf50QQ1/SS48+6IJWnrb+2yemA==
 
 prettier@^3.0.3:
   version "3.0.3"
@@ -11425,10 +11425,10 @@ react-native-localize@^2.2.4:
   resolved "https://registry.yarnpkg.com/react-native-localize/-/react-native-localize-2.2.4.tgz#3bc46ade48499ab9df61bf17a9b66633a5ba9bb9"
   integrity sha512-gVmbyAEQQnBQ8vKlAQchFfIISeId3qT6Lc7LHmKF39nsYWX9KN4PHuG6Hk+7gduMI6IHKeZGKcLsOdh6wvN6cg==
 
-react-native-moengage@8.4.0:
-  version "8.4.0"
-  resolved "https://registry.yarnpkg.com/react-native-moengage/-/react-native-moengage-8.4.0.tgz#e52fd51e9a7f75647423ec187184ac6f0ffa5ca1"
-  integrity sha512-7YiGciPuFYmaRz/IvlOX7+uzyey7EfGg3ZMOuDU2/9dGvqrZxIPJBRbm/qJo/V8jJqIYEhiVFpZlpprtOi891g==
+react-native-moengage@^8.5.3:
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/react-native-moengage/-/react-native-moengage-8.5.3.tgz#8a695adc2ca770886d9acfc4547b019b004f4050"
+  integrity sha512-E8twWq5605rDTtpfIYdmVZtvy7ne8Yyoj7AsCEp1BGSfAnQT6TdNDmcZHHq+4X6ZDP557jKo/SfKhmR/UYNQMg==
 
 react-native-pager-view@^6.2.0:
   version "6.2.0"
