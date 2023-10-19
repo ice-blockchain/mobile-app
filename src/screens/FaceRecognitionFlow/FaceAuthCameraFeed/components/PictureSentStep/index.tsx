@@ -5,7 +5,7 @@ import {commonStyles} from '@constants/styles';
 import {useNavigation} from '@react-navigation/native';
 import {cameraStyles} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
 import {StatusOverlay} from '@screens/FaceRecognitionFlow/components/StatusOverlay';
-import {useAbsoluteContentMarginBottom} from '@screens/FaceRecognitionFlow/hooks/useAbsoluteContentMarginBottom';
+import {useMaxHeightStyle} from '@screens/FaceRecognitionFlow/hooks/useMaxHeightStyle';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
   cameraRatioSelector,
@@ -46,22 +46,23 @@ export function PictureSentStep({
   };
 
   const cameraRatio = useSelector(cameraRatioSelector);
-  const {marginBottomStyle, onMainContainerLayout} =
-    useAbsoluteContentMarginBottom();
+  const maxHeightStyle = useMaxHeightStyle();
   return (
-    <View style={commonStyles.flexOne} onLayout={onMainContainerLayout}>
-      <View
-        style={
-          cameraRatio === '4:3'
-            ? cameraStyles.cameraContainer4to3
-            : cameraStyles.cameraContainer16to9
-        }>
-        <Image
-          resizeMode={'contain'}
-          source={{uri: picture.uri}}
-          style={styles.picture}
-        />
-        <View style={styles.pictureOverlay} />
+    <View style={[commonStyles.flexOne, maxHeightStyle.maxHeight]}>
+      <View style={StyleSheet.absoluteFill}>
+        <View
+          style={
+            cameraRatio === '4:3'
+              ? cameraStyles.cameraContainer4to3
+              : cameraStyles.cameraContainer16to9
+          }>
+          <Image
+            resizeMode={'contain'}
+            source={{uri: picture.uri}}
+            style={styles.picture}
+          />
+          <View style={styles.pictureOverlay} />
+        </View>
       </View>
       {faceAuthStatus === 'LOADING' ? (
         <StatusOverlay
@@ -71,51 +72,49 @@ export function PictureSentStep({
           }
         />
       ) : null}
-      <View style={[StyleSheet.absoluteFill, marginBottomStyle.marginBottom]}>
-        {faceAuthStatus === 'SUCCESS' ? (
-          <StatusOverlay
-            description={t('face_auth.auth_status.continue.description')}
-            title={t('face_auth.auth_status.continue.title')}
-            actionText={t('face_auth.auth_status.continue.action')}
-            actionColor={COLORS.shamrock}
-            action={onFaceAuthSuccess}
-          />
-        ) : null}
-        {faceAuthStatus === 'FAILED' ? (
-          <StatusOverlay
-            description={t('face_auth.auth_status.failure.description')}
-            title={t('face_auth.auth_status.failure.title')}
-            actionText={t('face_auth.auth_status.failure.action')}
-            actionColor={COLORS.attention}
-            actionIcon={
-              <RestartIcon
-                color={COLORS.white}
-                width={rem(24)}
-                height={rem(24)}
-              />
-            }
-            action={onFaceAuthFailure}
-          />
-        ) : null}
-        {faceAuthStatus === 'TRY_LATER' ? (
-          <StatusOverlay
-            description={t('face_auth.auth_status.try_later.description')}
-            title={t('face_auth.auth_status.try_later.title')}
-            actionText={t('face_auth.auth_status.try_later.action')}
-            actionColor={COLORS.attention}
-            action={onFaceAuthTryLater}
-          />
-        ) : null}
-        {faceAuthStatus === 'BANNED' ? (
-          <StatusOverlay
-            description={t('face_auth.auth_status.banned.description')}
-            title={t('face_auth.auth_status.banned.title')}
-            actionText={t('face_auth.auth_status.banned.action')}
-            actionColor={COLORS.attention}
-            action={onFaceAuthBanned}
-          />
-        ) : null}
-      </View>
+      {faceAuthStatus === 'SUCCESS' ? (
+        <StatusOverlay
+          description={t('face_auth.auth_status.continue.description')}
+          title={t('face_auth.auth_status.continue.title')}
+          actionText={t('face_auth.auth_status.continue.action')}
+          actionColor={COLORS.shamrock}
+          action={onFaceAuthSuccess}
+        />
+      ) : null}
+      {faceAuthStatus === 'FAILED' ? (
+        <StatusOverlay
+          description={t('face_auth.auth_status.failure.description')}
+          title={t('face_auth.auth_status.failure.title')}
+          actionText={t('face_auth.auth_status.failure.action')}
+          actionColor={COLORS.attention}
+          actionIcon={
+            <RestartIcon
+              color={COLORS.white}
+              width={rem(24)}
+              height={rem(24)}
+            />
+          }
+          action={onFaceAuthFailure}
+        />
+      ) : null}
+      {faceAuthStatus === 'TRY_LATER' ? (
+        <StatusOverlay
+          description={t('face_auth.auth_status.try_later.description')}
+          title={t('face_auth.auth_status.try_later.title')}
+          actionText={t('face_auth.auth_status.try_later.action')}
+          actionColor={COLORS.attention}
+          action={onFaceAuthTryLater}
+        />
+      ) : null}
+      {faceAuthStatus === 'BANNED' ? (
+        <StatusOverlay
+          description={t('face_auth.auth_status.banned.description')}
+          title={t('face_auth.auth_status.banned.title')}
+          actionText={t('face_auth.auth_status.banned.action')}
+          actionColor={COLORS.attention}
+          action={onFaceAuthBanned}
+        />
+      ) : null}
     </View>
   );
 }

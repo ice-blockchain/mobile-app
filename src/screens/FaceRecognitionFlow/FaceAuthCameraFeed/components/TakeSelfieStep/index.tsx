@@ -5,9 +5,12 @@ import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {CameraFeed} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
 import {DeviceAngleWarning} from '@screens/FaceRecognitionFlow/components/DeviceAngleWarning';
-import {TAKE_SELFIE_BUTTON_SIZE} from '@screens/FaceRecognitionFlow/constants';
-import {useAbsoluteContentMarginBottom} from '@screens/FaceRecognitionFlow/hooks/useAbsoluteContentMarginBottom';
+import {
+  isSmallDevice,
+  TAKE_SELFIE_BUTTON_SIZE,
+} from '@screens/FaceRecognitionFlow/constants';
 import {useIsDeviceAngleAllowed} from '@screens/FaceRecognitionFlow/hooks/useIsDeviceAngleAllowed';
+import {useMaxHeightStyle} from '@screens/FaceRecognitionFlow/hooks/useMaxHeightStyle';
 import {Camera, CameraCapturedPicture} from 'expo-camera';
 import React, {useRef, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -32,25 +35,28 @@ export function TakeSelfieStep({onPictureTaken}: Props) {
       });
     }
   };
-  const {marginBottomStyle, onMainContainerLayout} =
-    useAbsoluteContentMarginBottom();
+  const maxHeightStyle = useMaxHeightStyle();
   return (
-    <View style={commonStyles.flexOne} onLayout={onMainContainerLayout}>
-      <CameraFeed
-        ref={cameraRef}
-        onCameraReady={() => setIsCameraReady(true)}
-      />
+    <View style={[commonStyles.flexOne, maxHeightStyle.maxHeight]}>
+      <View style={StyleSheet.absoluteFill}>
+        <CameraFeed
+          ref={cameraRef}
+          onCameraReady={() => setIsCameraReady(true)}
+        />
+      </View>
       {isCameraReady ? (
-        <View style={[StyleSheet.absoluteFill, marginBottomStyle.marginBottom]}>
+        <>
           <Touchable style={styles.cameraButton} onPress={takePicture} />
           {!isDeviceAngleAllowed && (
             <DeviceAngleWarning containerStyle={styles.warning} />
           )}
-        </View>
+        </>
       ) : null}
     </View>
   );
 }
+
+const BOTTOM = isSmallDevice ? rem(20) : rem(40);
 
 const styles = StyleSheet.create({
   cameraButton: {
@@ -59,12 +65,12 @@ const styles = StyleSheet.create({
     borderRadius: TAKE_SELFIE_BUTTON_SIZE / 2,
     backgroundColor: COLORS.white,
     position: 'absolute',
-    bottom: rem(40),
+    bottom: BOTTOM,
     alignSelf: 'center',
   },
   warning: {
     position: 'absolute',
-    bottom: rem(40),
+    bottom: BOTTOM,
     alignSelf: 'center',
     right: rem(16),
     left: rem(16),
