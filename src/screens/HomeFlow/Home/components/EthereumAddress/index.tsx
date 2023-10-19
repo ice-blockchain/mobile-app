@@ -12,8 +12,9 @@ import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {ChevronSmallIcon} from '@svg/ChevronSmallIcon';
 import {EthereumIcon} from '@svg/EthereumIcon';
 import {t} from '@translations/i18n';
+import {font} from '@utils/styles';
 import React, {memo} from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -35,8 +36,16 @@ export const EthereumAddress = memo(() => {
         LeadingIcon={<EthereumIcon color={COLORS.primaryLight} />}
         title={t('home.ethereum_address.title')}
         subtitle={
-          user.miningBlockchainAccountAddress ??
-          t('home.ethereum_address.subtitle')
+          user.miningBlockchainAccountAddress ? (
+            <Text
+              style={styles.subtitleText}
+              numberOfLines={1}
+              ellipsizeMode={'middle'}>
+              {user.miningBlockchainAccountAddress}
+            </Text>
+          ) : (
+            t('home.ethereum_address.subtitle')
+          )
         }
         TrailingIcon={
           user.miningBlockchainAccountAddress ? null : (
@@ -65,5 +74,10 @@ const styles = StyleSheet.create({
   },
   text: {
     color: COLORS.white,
+  },
+  subtitleText: {
+    width: '80%',
+    marginTop: rem(4),
+    ...font(12, 14.4, 'medium', 'white'),
   },
 });

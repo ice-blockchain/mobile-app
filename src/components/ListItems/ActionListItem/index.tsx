@@ -28,8 +28,8 @@ type Props = {
   subtitleTextStyle?: StyleProp<TextStyle>;
   trailingIconContainerStyle?: StyleProp<ViewStyle>;
   backgroundImageStyle?: StyleProp<ImageStyle>;
-  title?: string;
-  subtitle?: string;
+  title?: string | ReactNode;
+  subtitle?: string | ReactNode;
   disabled?: boolean;
 };
 
@@ -72,13 +72,17 @@ export const ActionListItem = ({
         </View>
       )}
       <View style={styles.content}>
-        {title && (
+        {typeof title === 'string' ? (
           <Text style={[styles.titleText, titleTextStyle]}>{title}</Text>
+        ) : (
+          title
         )}
-        {subtitle && (
+        {typeof subtitle === 'string' ? (
           <Text style={[styles.subtitleText, subtitleTextStyle]}>
             {subtitle}
           </Text>
+        ) : (
+          subtitle
         )}
       </View>
       {TrailingIcon && (
