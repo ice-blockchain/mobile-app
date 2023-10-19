@@ -7,6 +7,12 @@ import {LayoutChangeEvent} from 'react-native/Libraries/Types/CoreEventTypes';
 import {useSelector} from 'react-redux';
 import {screenWidth} from 'rn-units';
 
+/**
+ * For devices with height > width * cameraRatio.
+ * For such devices the camera feed might not take the whole app window height.
+ * And for such devices we calculate the bottom margin for the bottom absolutely positioned action components,
+ * so that those components still on top on the camera feed
+ */
 export function useAbsoluteContentMarginBottom() {
   const [marginBottom, setMarginBottom] = useState(0);
   const cameraRatio = useSelector(cameraRatioSelector);
