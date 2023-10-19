@@ -8,8 +8,6 @@ import {Header} from '@navigation/components/Header';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {Summary} from '@screens/HomeFlow/Stats/components/Summary';
-import {TopCountries} from '@screens/HomeFlow/Stats/components/TopCountries';
-import {TopMiners} from '@screens/HomeFlow/Stats/components/TopMiners';
 import {UsersGrowthGraph} from '@screens/HomeFlow/Stats/components/UsersGrowthGraph';
 import {t} from '@translations/i18n';
 import React, {memo} from 'react';
@@ -28,15 +26,12 @@ export const Stats = memo(() => {
   return (
     <View style={styles.container}>
       <LinesBackground />
-
       <Header
         color={COLORS.white}
         title={t('stats.header_title')}
         backgroundColor={'transparent'}
       />
-
       <Summary />
-
       <PullToRefreshContainer
         style={commonStyles.flexOne}
         theme={'dark-content'}
@@ -49,10 +44,6 @@ export const Stats = memo(() => {
           ]}
           showsVerticalScrollIndicator={false}>
           <UsersGrowthGraph />
-
-          <TopMiners />
-
-          <TopCountries />
         </Animated.ScrollView>
       </PullToRefreshContainer>
     </View>

@@ -25,12 +25,16 @@ const SKELETONS = Array(MINERS_COUNT)
   .fill(null)
   .map((_, index) => <ListItemSkeleton key={index} />);
 
+/**
+ * Not used
+ */
 export const TopMiners = memo(() => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
 
   const onSeeAllPress = useCallback(() => {
-    navigation.navigate('TopMiners');
+    // navigation.navigate('TopMiners');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [navigation]);
 
   const {data, fetch, hasNext} = useFetchCollection({
