@@ -40,8 +40,11 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       userInfo.phoneNumberHash = yield call(hashPhoneNumber, normalizedNumber);
     }
 
-    if (userInfo.miningBlockchainAccountAddress) {
-      if (!isValidEthereumAddress(userInfo.miningBlockchainAccountAddress)) {
+    if (checkProp(userInfo, 'miningBlockchainAccountAddress')) {
+      if (
+        !userInfo.miningBlockchainAccountAddress ||
+        !isValidEthereumAddress(userInfo.miningBlockchainAccountAddress)
+      ) {
         throw {code: ValidateError.InvalidEthereumAddress};
       }
 
