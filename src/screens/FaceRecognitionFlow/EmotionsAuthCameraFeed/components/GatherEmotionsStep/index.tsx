@@ -3,13 +3,14 @@
 import {AuthEmotion} from '@api/faceRecognition/types';
 import {COLORS} from '@constants/colors';
 import {VIDEO_DURATION_SEC} from '@constants/faceRecognition';
-import {commonStyles, smallHeightDevice} from '@constants/styles';
+import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {
   CameraFeed,
   cameraStyles,
 } from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
 import {DeviceAngleWarning} from '@screens/FaceRecognitionFlow/components/DeviceAngleWarning';
+import {isSmallDevice} from '@screens/FaceRecognitionFlow/constants';
 import {EmotionCard} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/components/EmotionCard';
 import {StartButton} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/components/StartButton';
 import {useAbsoluteContentMarginBottom} from '@screens/FaceRecognitionFlow/hooks/useAbsoluteContentMarginBottom';
@@ -278,7 +279,7 @@ export function GatherEmotionsStep({
 const styles = StyleSheet.create({
   bottomContainer: {
     position: 'absolute',
-    bottom: smallHeightDevice ? rem(16) : rem(38),
+    bottom: isSmallDevice ? rem(16) : rem(38),
     left: rem(16),
     right: rem(16),
     alignItems: 'center',
