@@ -5,9 +5,9 @@ import {
   totalActiveUsersSelector,
   totalUsersSelector,
 } from '@store/modules/Stats/selectors';
+import {CoinsStackSmallIcon} from '@svg/CoinsStackSmallIcon';
 import {LogoIcon} from '@svg/LogoIcon';
-import {TeamInactiveIcon} from '@svg/TeamInactiveIcon';
-import {isRTL, t} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
@@ -23,29 +23,22 @@ export const Summary = memo(() => {
       <View style={styles.cell}>
         <LogoIcon color={COLORS.white} width={rem(32)} height={rem(32)} />
         <View style={styles.cellData}>
-          <Text style={styles.labelText}>{t('stats.online_miners')}</Text>
+          <Text style={styles.labelText}>{t('stats.active')}</Text>
           <View style={styles.value}>
             <Text style={styles.valueText}>
               {formatNumber(totalActiveUsers)}
             </Text>
-            <Text style={styles.onlineIndicator}>●</Text>
+            <View style={styles.onlineIndicator} />
           </View>
         </View>
       </View>
       <View style={styles.separator} />
       <View style={[styles.cell, styles.cell_right]}>
-        <TeamInactiveIcon
-          width={rem(40)}
-          height={rem(40)}
-          color={COLORS.white}
-          style={styles.teamIcon}
-        />
+        <CoinsStackSmallIcon />
         <View style={styles.cellData}>
-          <Text style={[styles.labelText, styles.textAlignRight]}>
-            {t('stats.total')}
-          </Text>
-          <Text style={[styles.valueText, styles.textAlignRight]}>
-            {formatNumber(totalUsers)}
+          <Text style={styles.labelText}>{t('stats.total_coins')}</Text>
+          <Text style={styles.valueText}>
+            {formatNumber(totalUsers, {notation: 'compact'})}
           </Text>
         </View>
       </View>
@@ -53,25 +46,27 @@ export const Summary = memo(() => {
   );
 });
 
+const ONLINE_INDICATOR_SIZE = rem(6);
+
 const styles = StyleSheet.create({
   container: {
-    paddingTop: rem(4),
-    paddingBottom: rem(16),
+    marginTop: rem(4),
+    marginBottom: rem(16),
     flexDirection: 'row',
-    alignItems: 'flex-end',
-    width: '100%',
+    alignItems: 'center',
   },
   cell: {
     flexDirection: 'row',
-    alignItems: 'flex-end',
-    width: '50%',
+    alignItems: 'center',
+    flex: 1,
     paddingHorizontal: rem(24),
   },
   cell_right: {
     justifyContent: 'flex-end',
+    marginEnd: rem(34),
   },
   cellData: {
-    marginLeft: rem(12),
+    marginStart: rem(8),
     flexShrink: 1,
   },
   separator: {
@@ -80,26 +75,23 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   labelText: {
-    ...font(12, 16, 'medium'),
+    ...font(12, 14.4),
     opacity: 0.7,
   },
   value: {
+    marginTop: rem(1),
     flexDirection: 'row',
     alignItems: 'flex-start',
   },
   valueText: {
-    ...font(15, 20, 'black'),
+    ...font(15, 18, 'black'),
     alignItems: 'flex-end',
   },
   onlineIndicator: {
-    ...font(15, null, 'black', 'shamrock'),
-    marginTop: -rem(7),
     marginLeft: rem(2),
-  },
-  teamIcon: {
-    marginBottom: -rem(5),
-  },
-  textAlignRight: {
-    textAlign: isRTL ? 'left' : 'right',
+    backgroundColor: COLORS.shamrock,
+    width: ONLINE_INDICATOR_SIZE,
+    height: ONLINE_INDICATOR_SIZE,
+    borderRadius: ONLINE_INDICATOR_SIZE / 2,
   },
 });

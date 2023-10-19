@@ -554,7 +554,8 @@
     "top_miners": "Top users",
     "top_countries": "Top countries",
     "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "detailed_information": "Detailed information",
+    "total_coins": "Total coins"
   },
   "update_required": {
     "title": "Please Update",

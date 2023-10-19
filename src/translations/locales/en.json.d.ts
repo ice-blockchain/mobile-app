@@ -384,6 +384,7 @@ export type Translations = {
   'stats.top_countries': null;
   'stats.online_miners': null;
   'stats.detailed_information': null;
+  'stats.total_coins': null;
   'update_required.title': null;
   'update_required.description': null;
   'update_required.button_title': null;
