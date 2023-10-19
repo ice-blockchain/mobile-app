@@ -7,14 +7,16 @@ export const isValidEthereumAddress = (address: string): boolean => {
   return isAddress(address);
 };
 
+export const ethereumMainnetClient = createPublicClient({
+  chain: mainnet,
+  transport: http(),
+});
+
 export const isEoaEthereumAddress = async (
   address: string,
 ): Promise<boolean> => {
-  const client = createPublicClient({
-    chain: mainnet,
-    transport: http(),
+  const code = await ethereumMainnetClient.getBytecode({
+    address: address as Address,
   });
-
-  const code = await client.getBytecode({address: address as Address});
   return !code;
 };
