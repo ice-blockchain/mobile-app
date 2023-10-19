@@ -2,6 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {Images} from '@images';
+import {EMOTION_IMAGE_SIZE} from '@screens/FaceRecognitionFlow/constants';
 import {ClockIcon} from '@svg/ClockIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -59,8 +60,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   image: {
-    width: rem(120),
-    height: rem(120),
+    width: EMOTION_IMAGE_SIZE,
+    height: EMOTION_IMAGE_SIZE,
   },
   body: {
     flex: 1,
