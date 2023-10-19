@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {commonStyles, windowHeight, windowWidth} from '@constants/styles';
+import {commonStyles, windowWidth} from '@constants/styles';
 import {useCameraPermissions} from '@hooks/useCameraPermissions';
-import {HEADER_HEIGHT} from '@navigation/components/Header';
 import {FaceAuthOverlay} from '@screens/FaceRecognitionFlow/components/FaceAuthOverlay';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {cameraRatioSelector} from '@store/modules/FaceRecognition/selectors';
@@ -69,10 +68,10 @@ export const CameraFeed = React.forwardRef(
 export const cameraStyles = StyleSheet.create({
   cameraContainer16to9: {
     width: windowWidth,
-    height: Math.min(windowHeight - HEADER_HEIGHT, (windowWidth * 16) / 9),
+    height: (windowWidth * 16) / 9,
   },
   cameraContainer4to3: {
     width: windowWidth,
-    height: Math.min(windowHeight - HEADER_HEIGHT, (windowWidth * 4) / 3),
+    height: (windowWidth * 4) / 3,
   },
 });

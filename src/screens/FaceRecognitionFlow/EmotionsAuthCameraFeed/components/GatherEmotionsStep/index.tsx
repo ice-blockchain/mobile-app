@@ -3,7 +3,7 @@
 import {AuthEmotion} from '@api/faceRecognition/types';
 import {COLORS} from '@constants/colors';
 import {VIDEO_DURATION_SEC} from '@constants/faceRecognition';
-import {commonStyles} from '@constants/styles';
+import {commonStyles, smallHeightDevice} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {
   CameraFeed,
@@ -12,6 +12,7 @@ import {
 import {DeviceAngleWarning} from '@screens/FaceRecognitionFlow/components/DeviceAngleWarning';
 import {EmotionCard} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/components/EmotionCard';
 import {StartButton} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/components/StartButton';
+import {useAbsoluteContentMarginBottom} from '@screens/FaceRecognitionFlow/hooks/useAbsoluteContentMarginBottom';
 import {useIsDeviceAngleAllowed} from '@screens/FaceRecognitionFlow/hooks/useIsDeviceAngleAllowed';
 import {getPictureCropStartY} from '@screens/FaceRecognitionFlow/utils';
 import {dayjs} from '@services/dayjs';
@@ -221,7 +222,8 @@ export function GatherEmotionsStep({
   }, [onGoBack]);
 
   const cameraRatio = useSelector(cameraRatioSelector);
-
+  const {marginBottomStyle, onMainContainerLayout} =
+    useAbsoluteContentMarginBottom();
   return (
     <View style={commonStyles.flexOne}>
       <Header
@@ -230,20 +232,23 @@ export function GatherEmotionsStep({
         backgroundColor={'transparent'}
         onGoBack={onGoBack}
       />
-      <View
-        style={
-          cameraRatio === '4:3'
-            ? cameraStyles.cameraContainer4to3
-            : cameraStyles.cameraContainer16to9
-        }>
-        <CameraFeed
-          ref={cameraRef}
-          onCameraReady={() => {
-            setIsCameraReady(true);
-          }}
-        />
+      <View style={commonStyles.flexOne} onLayout={onMainContainerLayout}>
+        <View
+          style={
+            cameraRatio === '4:3'
+              ? cameraStyles.cameraContainer4to3
+              : cameraStyles.cameraContainer16to9
+          }>
+          <CameraFeed
+            ref={cameraRef}
+            onCameraReady={() => {
+              setIsCameraReady(true);
+            }}
+          />
+        </View>
         {isCameraReady && (
-          <>
+          <View
+            style={[StyleSheet.absoluteFill, marginBottomStyle.marginBottom]}>
             <View style={styles.bottomContainer}>
               {started && recordingEmotion ? (
                 <EmotionCard
@@ -263,7 +268,7 @@ export function GatherEmotionsStep({
                 }
               />
             )}
-          </>
+          </View>
         )}
       </View>
     </View>
@@ -273,7 +278,7 @@ export function GatherEmotionsStep({
 const styles = StyleSheet.create({
   bottomContainer: {
     position: 'absolute',
-    bottom: rem(38),
+    bottom: smallHeightDevice ? rem(16) : rem(38),
     left: rem(16),
     right: rem(16),
     alignItems: 'center',

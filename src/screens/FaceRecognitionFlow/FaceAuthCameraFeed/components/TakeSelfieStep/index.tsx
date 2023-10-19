@@ -2,8 +2,11 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {commonStyles} from '@constants/styles';
 import {CameraFeed} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
 import {DeviceAngleWarning} from '@screens/FaceRecognitionFlow/components/DeviceAngleWarning';
+import {TAKE_SELFIE_BUTTON_SIZE} from '@screens/FaceRecognitionFlow/constants';
+import {useAbsoluteContentMarginBottom} from '@screens/FaceRecognitionFlow/hooks/useAbsoluteContentMarginBottom';
 import {useIsDeviceAngleAllowed} from '@screens/FaceRecognitionFlow/hooks/useIsDeviceAngleAllowed';
 import {Camera, CameraCapturedPicture} from 'expo-camera';
 import React, {useRef, useState} from 'react';
@@ -29,31 +32,31 @@ export function TakeSelfieStep({onPictureTaken}: Props) {
       });
     }
   };
+  const {marginBottomStyle, onMainContainerLayout} =
+    useAbsoluteContentMarginBottom();
   return (
-    <View>
+    <View style={commonStyles.flexOne} onLayout={onMainContainerLayout}>
       <CameraFeed
         ref={cameraRef}
         onCameraReady={() => setIsCameraReady(true)}
       />
       {isCameraReady ? (
-        <>
+        <View style={[StyleSheet.absoluteFill, marginBottomStyle.marginBottom]}>
           <Touchable style={styles.cameraButton} onPress={takePicture} />
           {!isDeviceAngleAllowed && (
             <DeviceAngleWarning containerStyle={styles.warning} />
           )}
-        </>
+        </View>
       ) : null}
     </View>
   );
 }
 
-const BUTTON_SIZE = rem(100);
-
 const styles = StyleSheet.create({
   cameraButton: {
-    width: BUTTON_SIZE,
-    height: BUTTON_SIZE,
-    borderRadius: BUTTON_SIZE / 2,
+    width: TAKE_SELFIE_BUTTON_SIZE,
+    height: TAKE_SELFIE_BUTTON_SIZE,
+    borderRadius: TAKE_SELFIE_BUTTON_SIZE / 2,
     backgroundColor: COLORS.white,
     position: 'absolute',
     bottom: rem(40),
