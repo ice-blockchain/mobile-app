@@ -19,7 +19,7 @@ type Props = {
   onChange: (index: number) => void;
 };
 
-export const PeriodSelect = ({selectedIndex, options, onChange}: Props) => {
+export const DropDownMenu = ({selectedIndex, options, onChange}: Props) => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainStackParamList>>();
   const buttonRef = useRef<TouchableOpacity>(null);

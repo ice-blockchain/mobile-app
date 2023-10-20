@@ -62,7 +62,6 @@ const styles = StyleSheet.create({
     marginBottom: rem(8),
   },
   segmentPager: {
-    marginTop: rem(12),
     flex: 1,
   },
   segmentSlide: {

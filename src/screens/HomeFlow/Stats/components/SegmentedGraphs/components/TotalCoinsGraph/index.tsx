@@ -8,7 +8,7 @@ import {t} from '@translations/i18n';
 import React, {memo} from 'react';
 import {View} from 'react-native';
 
-export const DEFAULT_USER_GROWTH_STATS_PERIOD = 14;
+export const DEFAULT_USER_GROWTH_STATS_PERIOD = 30;
 
 export const TotalCoinsGraph = memo(() => {
   const {totalUsersData} = useGetBarGraphDataForStatsPeriod(
@@ -17,7 +17,7 @@ export const TotalCoinsGraph = memo(() => {
 
   return (
     <>
-      <SectionHeader title={t('stats.total_coins')} />
+      <SectionHeader title={t('stats.coin_economics')} />
       <View style={commonStyles.flexOne}>
         <BarGraph data={totalUsersData} />
       </View>
