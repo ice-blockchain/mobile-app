@@ -4,7 +4,6 @@ import {LinesBackground} from '@components/LinesBackground';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
-import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {SegmentedGraphs} from '@screens/HomeFlow/Stats/components/SegmentedGraphs';
 import {Summary} from '@screens/HomeFlow/Stats/components/Summary';
@@ -15,8 +14,6 @@ import {StyleSheet, View} from 'react-native';
 export const Stats = memo(() => {
   useFocusStatusBar({style: 'light-content'});
 
-  const tabbarOffset = useBottomTabBarOffsetStyle();
-
   return (
     <View style={styles.container}>
       <LinesBackground />
@@ -26,7 +23,7 @@ export const Stats = memo(() => {
         backgroundColor={'transparent'}
       />
       <Summary />
-      <View style={[commonStyles.baseSubScreen, tabbarOffset.current]}>
+      <View style={commonStyles.baseSubScreen}>
         <SegmentedGraphs />
       </View>
     </View>

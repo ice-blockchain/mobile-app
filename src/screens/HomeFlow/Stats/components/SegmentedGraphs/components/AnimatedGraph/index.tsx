@@ -9,6 +9,7 @@ import {
 } from '@components/BarGraph';
 import {BarGraphData} from '@components/BarGraph/types';
 import {SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
+import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useScreenTransitionEnd} from '@navigation/hooks/useScreenTransitionEnd';
 import React, {
   ComponentType,
@@ -27,6 +28,7 @@ type Props = {
 };
 
 export const AnimatedGraph = memo(({data, ListHeader}: Props) => {
+  const tabbarOffset = useBottomTabBarOffsetStyle();
   const {transitionEnd} = useScreenTransitionEnd();
   const {stepValue, lastXValue, numberOfSteps} = useMemo(
     () => getValueData(data),
@@ -50,7 +52,7 @@ export const AnimatedGraph = memo(({data, ListHeader}: Props) => {
 
   return (
     <Animated.FlatList
-      contentContainerStyle={styles.contentContainer}
+      contentContainerStyle={[styles.contentContainer, tabbarOffset.current]}
       ListHeaderComponentStyle={styles.header}
       data={data}
       initialNumToRender={14}
@@ -85,7 +87,6 @@ export const AnimatedGraph = memo(({data, ListHeader}: Props) => {
 const styles = StyleSheet.create({
   contentContainer: {
     paddingHorizontal: SCREEN_SIDE_OFFSET,
-    paddingBottom: SCREEN_SIDE_OFFSET,
     flexGrow: 1,
   },
   header: {

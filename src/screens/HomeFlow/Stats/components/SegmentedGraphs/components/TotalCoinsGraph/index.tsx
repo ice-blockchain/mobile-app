@@ -18,13 +18,13 @@ export const DEFAULT_FILTER = 'total';
 export const TotalCoinsGraph = memo(() => {
   const [period, setPeriod] = useState<StatsPeriod>(DEFAULT_PERIOD);
   const [filter, setFilter] = useState<TotalCoinsFilter>(DEFAULT_FILTER);
-  const {totalUsersData} = useGetBarGraphDataForStatsPeriod(period);
+  const {totalUsersData} = useGetBarGraphDataForStatsPeriod(period); //TODO::select data
 
   const ListHeader = useMemo(() => {
     return (
       <View style={styles.listHeader}>
         <SectionHeader
-          title={t('stats.user_growth')}
+          title={t('stats.total_coins')}
           action={
             <StatsPeriodSelector selectedPeriod={period} onChange={setPeriod} />
           }
