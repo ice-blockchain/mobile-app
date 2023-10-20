@@ -33,7 +33,7 @@ export const Summary = memo(() => {
         </View>
       </View>
       <View style={styles.separator} />
-      <View style={[styles.cell, styles.cell_right]}>
+      <View style={[styles.cell, styles.cellRight]}>
         <CoinsStackSmallIcon />
         <View style={styles.cellData}>
           <Text style={styles.labelText}>{t('stats.total_coins')}</Text>
@@ -58,12 +58,12 @@ const styles = StyleSheet.create({
   cell: {
     flexDirection: 'row',
     alignItems: 'center',
-    flex: 1,
+    width: '50%',
     paddingHorizontal: rem(24),
   },
-  cell_right: {
+  cellRight: {
     justifyContent: 'flex-end',
-    marginEnd: rem(34),
+    paddingEnd: rem(56),
   },
   cellData: {
     marginStart: rem(8),

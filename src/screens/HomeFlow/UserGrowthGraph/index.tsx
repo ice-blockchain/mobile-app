@@ -19,7 +19,7 @@ import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {useScreenTransitionEnd} from '@navigation/hooks/useScreenTransitionEnd';
 import {HomeTabStackParamList} from '@navigation/Main';
 import {RouteProp, useRoute} from '@react-navigation/native';
-import {PeriodSelect} from '@screens/HomeFlow/Stats/components/UsersGrowthGraph/components/PeriodSelect';
+import {PeriodSelect} from '@screens/HomeFlow/Stats/components/SegmentedGraphs/components/PeriodSelect';
 import {STATS_PERIODS} from '@store/modules/Stats/constants';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {t} from '@translations/i18n';
@@ -34,6 +34,9 @@ const PERIODS: {label: string; period: StatsPeriod}[] = STATS_PERIODS.map(
   (period: StatsPeriod) => ({label: t(`periods.${period}_days`), period}),
 );
 
+/**
+ * Not used
+ */
 export const UserGrowthGraph = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const tabbarOffset = useBottomTabBarOffsetStyle();

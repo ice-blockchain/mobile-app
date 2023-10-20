@@ -7,8 +7,8 @@ import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import {SegmentedGraphs} from '@screens/HomeFlow/Stats/components/SegmentedGraphs';
 import {Summary} from '@screens/HomeFlow/Stats/components/Summary';
-import {UsersGrowthGraph} from '@screens/HomeFlow/Stats/components/UsersGrowthGraph';
 import {t} from '@translations/i18n';
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
@@ -43,7 +43,7 @@ export const Stats = memo(() => {
             tabbarOffset.current,
           ]}
           showsVerticalScrollIndicator={false}>
-          <UsersGrowthGraph />
+          <SegmentedGraphs />
         </Animated.ScrollView>
       </PullToRefreshContainer>
     </View>
