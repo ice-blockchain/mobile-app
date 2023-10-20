@@ -17,7 +17,7 @@ import {rem} from 'rn-units';
 
 export const Summary = memo(() => {
   const totalActiveUsers = useSelector(totalActiveUsersSelector);
-  const totalUsers = useSelector(totalUsersSelector);
+  const totalUsers = useSelector(totalUsersSelector); //TODO::pick total coins instead
   return (
     <View style={styles.container}>
       <View style={styles.cell}>

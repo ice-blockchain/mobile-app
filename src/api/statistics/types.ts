@@ -36,3 +36,9 @@ export type Adoption = {
   milestones: AdoptionMilestone[];
   totalActiveUsers: number;
 };
+
+export type TotalCoinsFilter =
+  | 'total'
+  | 'on-app'
+  | 'pre-staked'
+  | 'on-blockchain';

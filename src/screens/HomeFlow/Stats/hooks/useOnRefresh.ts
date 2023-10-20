@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {DEFAULT_USER_GROWTH_STATS_PERIOD} from '@screens/HomeFlow/Stats/components/SegmentedGraphs/components/ActiveUsersGraph';
 import {StatsActions} from '@store/modules/Stats/actions';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {RootState} from '@store/rootReducer';
@@ -15,11 +14,7 @@ export function useOnRefresh() {
   );
 
   const onRefresh = useCallback(() => {
-    dispatch(
-      StatsActions.GET_USER_GROWTH_STATS.START.create(
-        DEFAULT_USER_GROWTH_STATS_PERIOD,
-      ),
-    );
+    dispatch(StatsActions.GET_USER_GROWTH_STATS.START.create(3));
   }, [dispatch]);
 
   useEffect(onRefresh, [onRefresh]);

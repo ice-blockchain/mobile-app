@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: ice License 1.0
+
 import {DropDownMenu} from '@components/Menu/DropDownMenu';
 import {STATS_PERIODS} from '@store/modules/Stats/constants';
 import {StatsPeriod} from '@store/modules/Stats/types';
