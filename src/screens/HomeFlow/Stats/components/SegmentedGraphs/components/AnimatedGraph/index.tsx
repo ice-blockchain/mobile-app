@@ -10,17 +10,23 @@ import {
 import {BarGraphData} from '@components/BarGraph/types';
 import {SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
 import {useScreenTransitionEnd} from '@navigation/hooks/useScreenTransitionEnd';
-import React, {memo, ReactNode, useEffect, useMemo} from 'react';
+import React, {
+  ComponentType,
+  memo,
+  ReactElement,
+  useEffect,
+  useMemo,
+} from 'react';
 import {StyleSheet} from 'react-native';
 import Animated, {useSharedValue, withTiming} from 'react-native-reanimated';
-import {rem, screenHeight} from 'rn-units';
+import {screenHeight} from 'rn-units';
 
 type Props = {
   data: BarGraphData[];
-  ListHeader?: ReactNode;
+  ListHeader?: ComponentType | ReactElement;
 };
 
-export const AnimatedGraph = memo(({data}: Props) => {
+export const AnimatedGraph = memo(({data, ListHeader}: Props) => {
   const {transitionEnd} = useScreenTransitionEnd();
   const {stepValue, lastXValue, numberOfSteps} = useMemo(
     () => getValueData(data),
@@ -44,7 +50,8 @@ export const AnimatedGraph = memo(({data}: Props) => {
 
   return (
     <Animated.FlatList
-      contentContainerStyle={[styles.contentContainer]}
+      contentContainerStyle={styles.contentContainer}
+      ListHeaderComponentStyle={styles.header}
       data={data}
       initialNumToRender={14}
       showsVerticalScrollIndicator={false}
@@ -70,16 +77,19 @@ export const AnimatedGraph = memo(({data}: Props) => {
           numberOfSteps={numberOfSteps}
         />
       }
-      //   ListHeaderComponent={ListHeader}
+      ListHeaderComponent={ListHeader}
     />
   );
 });
 
 const styles = StyleSheet.create({
   contentContainer: {
-    paddingTop: rem(20),
     paddingHorizontal: SCREEN_SIDE_OFFSET,
     paddingBottom: SCREEN_SIDE_OFFSET,
     flexGrow: 1,
+  },
+  header: {
+    marginLeft: -SCREEN_SIDE_OFFSET,
+    marginRight: -SCREEN_SIDE_OFFSET,
   },
 });
