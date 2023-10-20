@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {BarGraph} from '@components/BarGraph';
 import {useGetBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetBarGraphDataForStatsPeriod';
 import {SectionHeader} from '@components/SectionHeader';
 import {commonStyles} from '@constants/styles';
+import {AnimatedGraph} from '@screens/HomeFlow/Stats/components/SegmentedGraphs/components/AnimatedGraph';
 import {StatsPeriodSelector} from '@screens/HomeFlow/Stats/components/SegmentedGraphs/components/StatsPeriodSelector';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {t} from '@translations/i18n';
@@ -25,7 +25,7 @@ export const ActiveUsersGraph = memo(() => {
         }
       />
       <View style={commonStyles.flexOne}>
-        <BarGraph data={activeUsersData} />
+        <AnimatedGraph data={activeUsersData} />
       </View>
     </>
   );

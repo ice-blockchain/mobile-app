@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {LinesBackground} from '@components/LinesBackground';
-import {PullToRefreshContainer} from '@components/PullToRefreshContainer';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
@@ -12,16 +11,11 @@ import {Summary} from '@screens/HomeFlow/Stats/components/Summary';
 import {t} from '@translations/i18n';
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
-import Animated from 'react-native-reanimated';
-
-import {useOnRefresh} from './hooks/useOnRefresh';
 
 export const Stats = memo(() => {
   useFocusStatusBar({style: 'light-content'});
 
   const tabbarOffset = useBottomTabBarOffsetStyle();
-
-  const {refreshing, onRefresh} = useOnRefresh();
 
   return (
     <View style={styles.container}>
@@ -32,20 +26,9 @@ export const Stats = memo(() => {
         backgroundColor={'transparent'}
       />
       <Summary />
-      <PullToRefreshContainer
-        style={commonStyles.flexOne}
-        theme={'dark-content'}
-        refreshing={refreshing}
-        onRefresh={onRefresh}>
-        <Animated.ScrollView
-          contentContainerStyle={[
-            commonStyles.baseSubScreen,
-            tabbarOffset.current,
-          ]}
-          showsVerticalScrollIndicator={false}>
-          <SegmentedGraphs />
-        </Animated.ScrollView>
-      </PullToRefreshContainer>
+      <View style={[commonStyles.baseSubScreen, tabbarOffset.current]}>
+        <SegmentedGraphs />
+      </View>
     </View>
   );
 });
