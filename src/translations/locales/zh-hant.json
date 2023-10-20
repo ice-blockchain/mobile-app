@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "全球排名",
       "referrals": "推薦",
-      "description": "推薦更多使用者，賺取更多 [[:ice]]。",
-      "description_team": "邀請更多用戶，賺更多 [[:ice]]。"
+      "description": "推薦更多使用者，賺取更多 [[:ice]]。"
     },
     "referrals": {
       "title": "推薦",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "使用此功能邀請您的朋友加入Ice社群。擴展您的網絡，分享經驗，一起賺取獎勵。"
-        },
         "team": {
           "description": "[[:ice]] 與朋友一起更好。在這個頁面上，您可以查看您的團隊成員的狀態。您還可以從這裡向他們發送消息。"
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "在這裡，您可以看到您的團隊總共有多少成員。您邀請的人越多，您的獎金就越高。"
-        },
-        "earnings": {
-          "description": "您當前的余額每小時都會更新，並在這裡顯示。它包括您的直接收入、抵押收入以及您的團隊收入。"
-        },
         "segmented_control_tier_one": {
           "title": "團隊",
           "description": "在這裡，您可以查看您邀請加入Ice Network的人員名單。您可以從這裡輕鬆跟踪他們的狀態，並向不活躍的人發送通知。"

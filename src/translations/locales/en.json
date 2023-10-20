@@ -263,8 +263,7 @@
     "pioneer": {
       "rank": "GLOBAL RANK",
       "referrals": "REFERRALS",
-      "description": "Refer more users and earn more [[:ice]].",
-      "description_team": "Invite more users and earn more [[:ice]]."
+      "description": "Refer more users and earn more [[:ice]]."
     },
     "referrals": {
       "title": "REFERRALS",
@@ -696,9 +695,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Use this feature to invite your friends to join the Ice community. Expand your network, share experiences, and earn rewards together."
-        },
         "team": {
           "description": "[[:ice]] is better with friends. On this page you can see the status of your team members. You can also ping them from here."
         },
@@ -708,12 +704,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Here you will see how many team members you have in total. The more people you invite, the higher your bonus."
-        },
-        "earnings": {
-          "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings together with the earnings from your team."
-        },
         "segmented_control_tier_one": {
           "title": "Team",
           "description": "Here you can see the list of the people you have invited to join the Ice Network. You can easily track their status from here and send notifications to the inactive ones."
@@ -1088,6 +1078,48 @@
     "device_angle_warning": {
       "title": "Warning",
       "description": "Please keep the phone straight while looking into camera"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Please make sure you enter the correct nickname. By completing this step, you will become part of your friend’s team."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Track your progress and global status"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Grow your team and build a community"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Grow your team with new members"
+    },
+    "profile": {
+      "invite_friends_engage": "Spread the word and invite your friends to join the Ice Network community!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Use this feature to invite your friends to join the Ice community. Expand your network, share experiences, and build lasting connections together."
+        },
+        "wallet": {
+          "description": "You can find here your current ice balance, together with the earning rate."
+        },
+        "earning": {
+          "description": "Stay up to date on your earning rate and bonuses! Here you can check out your current rate, our base rate, and bonus rates."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "In this section, you will see the total number of team members you have invited, allowing you to track your community’s growth and evolution."
+        },
+        "earnings": {
+          "description": "Your current balance is updated every hour and displayed here. It includes your direct & staked earnings."
+        }
+      }
     }
   }
 }

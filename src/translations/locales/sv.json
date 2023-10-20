@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "GLOBAL RANKNING",
       "referrals": "VÄRVNINGAR",
-      "description": "Värva fler användare och tjäna mer [[:ice]].",
-      "description_team": "Bjuda in fler användare och tjäna mer [[:ice]]."
+      "description": "Värva fler användare och tjäna mer [[:ice]]."
     },
     "referrals": {
       "title": "VÄRVNINGAR",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Använd den här funktionen för att bjuda in dina vänner att gå med i Ice-communityn. Utöka ditt nätverk, dela erfarenheter och tjäna belöningar tillsammans."
-        },
         "team": {
           "description": "[[:ice]] är bättre med vänner. På den här sidan kan du se statusen för dina teammedlemmar. Du kan också skicka meddelanden till dem härifrån."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Här ser du hur många teammedlemmar du har totalt sett. Ju fler personer du bjuder in, desto högre blir din bonus."
-        },
-        "earnings": {
-          "description": "Ditt nuvarande saldo uppdateras varje timme och visas här. Det inkluderar dina direkta intäkter, intäkter från staking och intäkter från ditt team."
-        },
         "segmented_control_tier_one": {
           "title": "Team",
           "description": "Här kan du se listan över personer du har bjudit in att ansluta till Ice Network. Du kan enkelt följa deras status här och skicka meddelanden till de inaktiva."

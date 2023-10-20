@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "GLOBAL RANGERING",
       "referrals": "HENVISNINGER",
-      "description": "Henvis flere brukere og tjen flere [[:ice]].",
-      "description_team": "Inviter flere brukere og tjen mer [[:ice]]."
+      "description": "Henvis flere brukere og tjen flere [[:ice]]."
     },
     "referrals": {
       "title": "HENVISNINGER",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Bruk denne funksjonen for å invitere vennene dine til å bli med i Ice-samfunnet. Utvid nettverket ditt, del erfaringer og tjen belønninger sammen."
-        },
         "team": {
           "description": "[[:ice]] er bedre med venner. På denne siden kan du se statusen til teammedlemmene dine. Du kan også sende meldinger til dem herfra."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Her kan du se hvor mange teammedlemmer du har totalt. Jo flere personer du inviterer, jo høyere blir bonusen din."
-        },
-        "earnings": {
-          "description": "Din nåværende saldo oppdateres hver time og vises her. Den inkluderer dine direkte inntekter, stakede inntekter og inntekter fra teamet ditt."
-        },
         "segmented_control_tier_one": {
           "title": "Team",
           "description": "Her kan du se listen over personene du har invitert til å bli med i Ice-nettverket. Du kan enkelt følge med på statusen deres her og sende varsler til de inaktive."

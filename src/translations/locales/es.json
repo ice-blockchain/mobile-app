@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "CLASIFICACIÓN MUNDIAL",
       "referrals": "RECOMENDACIONES",
-      "description": "Invita a más usuarios y gana más [[:ice]].",
-      "description_team": "Invita a más usuarios y gana más [[:ice]]."
+      "description": "Invita a más usuarios y gana más [[:ice]]."
     },
     "referrals": {
       "title": "RECOMENDACIONES",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Utilice esta función para invitar a sus amigos a unirse a la comunidad de Ice. Amplíe su red, comparta experiencias y gane recompensas juntos."
-        },
         "team": {
           "description": "[[:ice]] es mejor con amigos. En esta página, puede ver el estado de los miembros de su equipo. También puede enviarles notificaciones desde aquí."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Aquí verá cuántos miembros tiene en su equipo en total. Cuantas más personas invite, mayor será su bonificación."
-        },
-        "earnings": {
-          "description": "Su saldo actual se actualiza cada hora y se muestra aquí. Incluye sus ganancias directas y acumuladas, junto con las ganancias de su equipo."
-        },
         "segmented_control_tier_one": {
           "title": "Equipo",
           "description": "Aquí puede ver la lista de personas que ha invitado a unirse a la Red Ice. Puede realizar un seguimiento de su estado fácilmente desde aquí y enviar notificaciones a los miembros inactivos."

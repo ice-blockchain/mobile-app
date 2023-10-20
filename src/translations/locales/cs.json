@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "CELOSVĚTOVÁ PŘÍČKA",
       "referrals": "DOPORUČENÍ LIDÉ",
-      "description": "Doporučte víc lidí a vydělejte si víc [[:ice]].",
-      "description_team": "Pozvěte více uživatelů a vydělávejte více [[:ice]]."
+      "description": "Doporučte víc lidí a vydělejte si víc [[:ice]]."
     },
     "referrals": {
       "title": "DOPORUČENÍ LIDÉ",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Použijte tuto funkci k pozvání svých přátel, aby se připojili k Ice komunitě. Rozšiřte svou síť, sdílejte zkušenosti a společně získávejte odměny."
-        },
         "team": {
           "description": "[[:ice]] je lepší s přáteli. Na této stránce můžete vidět stav členů vašeho týmu. Můžete je také oznámit odtud."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Zde uvidíte, kolik členů týmu máte celkem. Čím více lidí pozvete, tím vyšší bude váš bonus."
-        },
-        "earnings": {
-          "description": "Váš aktuální zůstatek je aktualizován každou hodinu a zobrazuje se zde. Zahrnuje vaše přímé a vložené výdělky spolu s výdělky od vašeho týmu."
-        },
         "segmented_control_tier_one": {
           "title": "Tým",
           "description": "Zde můžete vidět seznam lidí, které jste pozvali, aby se připojili k síti Ice. Z této stránky můžete snadno sledovat jejich stav a odesílat oznámení neaktivním členům."

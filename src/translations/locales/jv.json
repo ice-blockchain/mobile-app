@@ -264,8 +264,7 @@
       "rank": "GLOBAL RANK",
       "referrals": "REFERRALS",
       "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn",
-      "description_team": "Davetake wong luwih banjur lan ngrampungake luwih banjur [[:ice]]."
+      "description_part2": " you earn"
     },
     "referrals": {
       "title": "REFERRALS",
@@ -689,9 +688,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Gunakake fitur iki kanggo ngundang sahabat-sahabatmu supaya gabung karo komunitas Ice. Perluas jaringanmu, sajeroning pengalaman, lan kasil rewards bareng-bareng."
-        },
         "team": {
           "description": "[[:ice]] luwih apik karo sahabat-sahabat. Ing kaca iki, sampeyan bisa nampa status anggota tim sampeyan. Sampeyan uga bisa ngirimi kanthi pesan saka ing kene."
         },
@@ -701,12 +697,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Ing kene sampeyan bakal nemokake pira anggota tim sing sampeyan duweni ing total. Makarya wong luwih ora, makarya bonus sampeyan luwih dhuwur."
-        },
-        "earnings": {
-          "description": "Saldo sampeyan saiki dianyari saben jam lan dipun tampilake ing kene. Ana panghasilan langsung lan panghasilan sing didepak, sabanjure panghasilan saka tim sampeyan."
-        },
         "segmented_control_tier_one": {
           "title": "Tim",
           "description": "Ing kene sampeyan bisa nampa daftar wong sing sampeyan undang kanggo gabung karo Jaringan Ice. Sampeyan bisa gampang nguntungake statusipun saka ing kene lan ngirimi notifikasi kanggo anggota sing ora aktif."

@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "GLOBÁLNE POSTAVENIE",
       "referrals": "ODPORÚČANIA",
-      "description": "Odporuč viac používateľov a získaj viac [[:ice]].",
-      "description_team": "Pozvite viac používateľov a zarábajte viac [[:ice]]."
+      "description": "Odporuč viac používateľov a získaj viac [[:ice]]."
     },
     "referrals": {
       "title": "ODPORÚČANIA",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Použite túto funkciu na pozvanie vašich priateľov, aby sa pripojili k komunite Ice. Rozširujte svoju sieť, zdieľajte skúsenosti a zarábajte spoločne."
-        },
         "team": {
           "description": "[[:ice]] je lepšie s priateľmi. Na tejto stránke môžete vidieť stav členov vášho tímu. Môžete im aj odtiaľto posielať správy."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Tu uvidíte, koľko máte celkom členov tímu. Čím viac ľudí pozvete, tým vyšší bude váš bonus."
-        },
-        "earnings": {
-          "description": "Vaša aktuálna zostatok sa aktualizuje každú hodinu a zobrazuje sa tu. Zahŕňa to vaše priame zárobky, zárobky zo stávkovania a zárobky z vášho tímu."
-        },
         "segmented_control_tier_one": {
           "title": "Tím",
           "description": "Tu môžete vidieť zoznam ľudí, ktorých ste pozvali, aby sa pripojili k sieti Ice. Ľahko môžete sledovať ich stav odtiaľto a posielať oznámenia neaktívnym."

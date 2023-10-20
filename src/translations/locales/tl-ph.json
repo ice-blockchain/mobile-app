@@ -264,8 +264,7 @@
       "rank": "GLOBAL RANK",
       "referrals": "REFERRALS",
       "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn",
-      "description_team": "Mag-imbita ng mas maraming mga user at kumita ng mas maraming [[:ice]]."
+      "description_part2": " you earn"
     },
     "referrals": {
       "title": "REFERRALS",
@@ -689,9 +688,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Gamitin ang feature na ito upang imbitahan ang iyong mga kaibigan na sumali sa komunidad ng Ice. Palawakin ang iyong network, magbahagi ng mga karanasan, at kumita ng mga premyo nang magkasama."
-        },
         "team": {
           "description": "Mas maganda ang [[:ice]] kasama ang mga kaibigan. Sa pahinang ito, maaari mong tingnan ang status ng mga miyembro ng iyong team. Maari mo rin silang i-message mula dito."
         },
@@ -701,12 +697,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Dito makikita mo kung ilan ang miyembro ng iyong team sa kabuuan. Kapag mas marami kang inimbitahan, mas mataas ang iyong bonus."
-        },
-        "earnings": {
-          "description": "Ang iyong kasalukuyang balanse ay na-update kada oras at ipinapakita dito. Ito ay kasama na ang iyong direktang kita, kita mula sa staking, at kita mula sa iyong team."
-        },
         "segmented_control_tier_one": {
           "title": "Team",
           "description": "Dito maaari mong makita ang listahan ng mga taong ini-imbitahan mo na sumali sa Ice Network. Madali mong maaari i-track ang kanilang status mula dito at magpadala ng mga notification sa mga hindi aktibo."

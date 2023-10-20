@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "PERINGKAT GLOBAL",
       "referrals": "RUJUKAN",
-      "description": "Rujuk lebih banyak pengguna dan dapatkan lebih banyak [[:ice]].",
-      "description_team": "Undang lebih banyak pengguna dan hasilkan lebih banyak [[:ice]]."
+      "description": "Rujuk lebih banyak pengguna dan dapatkan lebih banyak [[:ice]]."
     },
     "referrals": {
       "title": "RUJUKAN",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Gunakan fitur ini untuk mengundang teman-teman Anda untuk bergabung dengan komunitas Ice. Perluas jaringan Anda, bagikan pengalaman, dan dapatkan hadiah bersama."
-        },
         "team": {
           "description": "[[:ice]] lebih baik dengan teman-teman. Di halaman ini, Anda dapat melihat status anggota tim Anda. Anda juga dapat mengirim pesan kepada mereka dari sini."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Di sini Anda akan melihat berapa banyak anggota tim yang Anda miliki secara keseluruhan. Semakin banyak orang yang Anda undang, semakin tinggi bonus Anda."
-        },
-        "earnings": {
-          "description": "Saldo Anda saat ini diperbarui setiap jam dan ditampilkan di sini. Ini termasuk pendapatan langsung dan pendapatan yang di-stake bersama dengan pendapatan dari tim Anda."
-        },
         "segmented_control_tier_one": {
           "title": "Tim",
           "description": "Di sini Anda dapat melihat daftar orang yang telah Anda undang untuk bergabung dengan Jaringan Ice. Anda dapat dengan mudah melacak status mereka dari sini dan mengirim pemberitahuan kepada yang tidak aktif."

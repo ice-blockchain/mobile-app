@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "QLOBAL DƏRƏCƏ",
       "referrals": "İSTİNADLAR",
-      "description": "Daha çox istifadəçi yönəlt və daha çox qazan[[:ice]].",
-      "description_team": "Daha çox istifadəçi dəvət edin və daha çox [[:ice]] qazanın."
+      "description": "Daha çox istifadəçi yönəlt və daha çox qazan[[:ice]]."
     },
     "referrals": {
       "title": "İSTİNADLAR",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Dostlarınızı Ice icmaəsinə qoşulmağa dəvət etmək üçün bu xüsusiyyəti istifadə edin. Sizin şəbəkənizi genişləndirin, təcrübələrinizi bölüşün və birgə mükafat qazanın."
-        },
         "team": {
           "description": "[[:ice]] dostlarınızla birlikdə daha yaxşıdır. Bu səhifədə öz komandanızın vəzifələrini görmək mümkündür. Siz həmçinin onlara buradan xəbərdarlıq göndərə bilərsiniz."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Bu yerə komanda üzvlərinin cəmi sayını görmək mümkündür. Daha çox insanı dəvət etsəniz, mükafatınız o qədər yüksək olar."
-        },
-        "earnings": {
-          "description": "Sizin cari balansınız hər saat yenilənir və burada göstərilir. Bu, sizi mütəmadi vəsaitiniz, sizi gözləmə vəsaiti və komandanızın vəsaitini daxil edir."
-        },
         "segmented_control_tier_one": {
           "title": "Komanda",
           "description": "Bu yerə İce Şəbəkəsinə dəvət etdiyiniz insanların siyahısını görmək mümkündür. Onların vəziyyətini buradan asanlıqla izləyə və fəal olmayanlara bildiriş göndərə bilərsiniz."

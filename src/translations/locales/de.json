@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "GLOBALER RANG",
       "referrals": "EMPFEHLUNGEN",
-      "description": "Empfehlen Sie mehr Nutzer und verdienen Sie mehr [[:ice]].",
-      "description_team": "Lade mehr Benutzer ein und verdiene mehr [[:ice]]."
+      "description": "Empfehlen Sie mehr Nutzer und verdienen Sie mehr [[:ice]]."
     },
     "referrals": {
       "title": "EMPFEHLUNGEN",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Verwenden Sie diese Funktion, um Ihre Freunde zur Teilnahme an der Ice-Community einzuladen. Erweitern Sie Ihr Netzwerk, teilen Sie Erfahrungen und verdienen Sie gemeinsam Belohnungen."
-        },
         "team": {
           "description": "[[:ice]] macht mit Freunden mehr Spaß. Auf dieser Seite können Sie den Status Ihrer Teammitglieder sehen. Sie können sie auch von hier aus kontaktieren."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Hier sehen Sie, wie viele Teammitglieder Sie insgesamt haben. Je mehr Personen Sie einladen, desto höher ist Ihr Bonus."
-        },
-        "earnings": {
-          "description": "Ihr aktueller Kontostand wird stündlich aktualisiert und hier angezeigt. Er umfasst Ihre direkten und gestakten Einnahmen sowie die Einnahmen von Ihrem Team."
-        },
         "segmented_control_tier_one": {
           "title": "Team",
           "description": "Hier können Sie die Liste der Personen sehen, die Sie zur Teilnahme am Ice-Netzwerk eingeladen haben. Sie können ihren Status von hier aus leicht verfolgen und Benachrichtigungen an die inaktiven Mitglieder senden."

@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "XẾP HẠNG TOÀN CẦU",
       "referrals": "LƯỢT GIỚI THIỆU",
-      "description": "Giới thiệu thêm người dùng và kiếm được nhiều [[:ice]] hơn.",
-      "description_team": "Mời thêm người dùng và kiếm nhiều hơn [[:ice]]."
+      "description": "Giới thiệu thêm người dùng và kiếm được nhiều [[:ice]] hơn."
     },
     "referrals": {
       "title": "LƯỢT GIỚI THIỆU",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Sử dụng tính năng này để mời bạn bè tham gia cộng đồng Ice. Mở rộng mạng lưới của bạn, chia sẻ trải nghiệm và kiếm thưởng cùng nhau."
-        },
         "team": {
           "description": "[[:ice]] tốt hơn khi có bạn bè. Trên trang này, bạn có thể xem trạng thái của các thành viên trong đội của bạn. Bạn cũng có thể gửi tin nhắn cho họ từ đây."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Ở đây, bạn sẽ thấy có bao nhiêu thành viên trong đội của bạn tổng cộng. Càng mời nhiều người, thưởng của bạn càng cao."
-        },
-        "earnings": {
-          "description": "Số dư hiện tại của bạn được cập nhật mỗi giờ và được hiển thị ở đây. Nó bao gồm thu nhập trực tiếp của bạn, thu nhập từ staking và thu nhập từ đội của bạn."
-        },
         "segmented_control_tier_one": {
           "title": "Đội",
           "description": "Ở đây, bạn có thể xem danh sách những người bạn đã mời tham gia Ice Network. Bạn có thể dễ dàng theo dõi tình trạng của họ từ đây và gửi thông báo cho những người không hoạt động."

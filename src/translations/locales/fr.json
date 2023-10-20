@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "CLASSEMENT MONDIAL",
       "referrals": "PARRAINAGES",
-      "description": "Parrainez plus d’utilisateurs et gagnez plus d’[[:ice]].",
-      "description_team": "Invitez plus d'utilisateurs et gagnez plus de [[:ice]]."
+      "description": "Parrainez plus d’utilisateurs et gagnez plus d’[[:ice]]."
     },
     "referrals": {
       "title": "PARRAINAGES",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Utilisez cette fonction pour inviter vos amis à rejoindre la communauté Ice. Élargissez votre réseau, partagez des expériences et gagnez des récompenses ensemble."
-        },
         "team": {
           "description": "[[:ice]] est meilleur avec des amis. Sur cette page, vous pouvez voir l'état de vos membres d'équipe. Vous pouvez également les contacter depuis ici."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Ici, vous pouvez voir combien de membres d'équipe vous avez au total. Plus vous invitez de personnes, plus votre bonus sera élevé."
-        },
-        "earnings": {
-          "description": "Votre solde actuel est mis à jour toutes les heures et est affiché ici. Il inclut vos gains directs et accumulés, ainsi que les gains de votre équipe."
-        },
         "segmented_control_tier_one": {
           "title": "Équipe",
           "description": "Ici, vous pouvez voir la liste des personnes que vous avez invitées à rejoindre le réseau Ice. Vous pouvez facilement suivre leur état à partir d'ici et envoyer des notifications aux membres inactifs."

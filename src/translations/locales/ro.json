@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "POZIȚIA GLOBALĂ",
       "referrals": "RECOMANDĂRI",
-      "description": "Recomandă-ne mai multor utilizatori și câștigă mai mult [[:ice]].",
-      "description_team": "Invitați mai mulți utilizatori și câștigați mai mult [[:ice]]."
+      "description": "Recomandă-ne mai multor utilizatori și câștigă mai mult [[:ice]]."
     },
     "referrals": {
       "title": "RECOMANDĂRI",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Folosiți această funcție pentru a invita prietenii să se alăture comunității Ice. Extindeți-vă rețeaua, împărtășiți experiențele și câștigați recompense împreună."
-        },
         "team": {
           "description": "[[:ice]] este mai bun cu prietenii. Pe această pagină puteți vedea starea membrilor echipei dvs. De aici, puteți, de asemenea, să le trimiteți mesaje."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Aici veți vedea câți membri de echipă aveți în total. Cu cât invitați mai multe persoane, cu atât bonusul dvs. va fi mai mare."
-        },
-        "earnings": {
-          "description": "Soldul dvs. curent este actualizat în fiecare oră și este afișat aici. Acesta include câștigurile dvs. directe, câștigurile din staking și câștigurile din echipa dvs."
-        },
         "segmented_control_tier_one": {
           "title": "Echipa",
           "description": "Aici puteți vedea lista persoanelor pe care le-ați invitat să se alăture Rețelei Ice. Puteți urmări cu ușurință starea lor de aici și puteți trimite notificări celor inactivi."

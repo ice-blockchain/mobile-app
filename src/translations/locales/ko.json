@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "글로벌 순위",
       "referrals": "추천인",
-      "description": "더 많이 추천하고 더 많은 [[:ice]]를 적립하세요.",
-      "description_team": "더 많은 사용자를 초대하고 더 많은 [[:ice]]를 벌어 보세요."
+      "description": "더 많이 추천하고 더 많은 [[:ice]]를 적립하세요."
     },
     "referrals": {
       "title": "추천인",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "이 기능을 사용하여 친구들을 Ice 커뮤니티에 초대하고 네트워크를 확장하며 함께 보상을 얻으세요."
-        },
         "team": {
           "description": "[[:ice]] 친구와 함께하면 더 좋습니다. 이 페이지에서 팀 멤버의 상태를 확인할 수 있습니다. 여기서 메시지도 보낼 수 있습니다."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "여기에서 전체 팀 멤버 수를 확인할 수 있습니다. 더 많은 사람을 초대하면 보너스가 더 높아집니다."
-        },
-        "earnings": {
-          "description": "현재 잔액은 매 시간 업데이트되며 여기에 표시됩니다. 직접 수입과 스테이크된 수입과 팀에서 얻은 수입이 포함됩니다."
-        },
         "segmented_control_tier_one": {
           "title": "팀",
           "description": "이곳에서 Ice 네트워크에 초대한 사람들의 목록을 볼 수 있습니다. 여기서 그들의 상태를 쉽게 추적하고 비활성 멤버에게 알림을 보낼 수 있습니다."
