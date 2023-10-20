@@ -10,7 +10,6 @@ import {
   FaceAuthStatus,
 } from '@store/modules/FaceRecognition/types';
 import produce from 'immer';
-import {Platform} from 'react-native';
 import {persistReducer} from 'redux-persist';
 
 export interface State {
@@ -23,7 +22,7 @@ export interface State {
   sessionExpiredAt: number | null;
   activeRequests: number;
 
-  cameraRatio: CameraRatio | null;
+  cameraRatio: CameraRatio;
 }
 
 type Actions = ReturnType<
@@ -51,7 +50,7 @@ const INITIAL_STATE: State = {
   nextEmotionIndex: 0,
   sessionExpiredAt: null,
   activeRequests: 0,
-  cameraRatio: Platform.OS === 'ios' ? '16:9' : null,
+  cameraRatio: '16:9',
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
