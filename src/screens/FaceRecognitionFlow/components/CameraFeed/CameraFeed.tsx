@@ -34,7 +34,9 @@ export const CameraFeed = React.forwardRef(
     const dispatch = useDispatch();
     const getSupportedRatios = async () => {
       if (cameraRef.current && Platform.OS === 'android') {
-        const ratios = await cameraRef.current.getSupportedRatiosAsync();
+        const ratios = await cameraRef.current
+          .getSupportedRatiosAsync()
+          .catch(() => [] as string[]); // catching here to set cameraRatio to '4:3'
         dispatch(
           FaceRecognitionActions.SET_CAMERA_RATIO.STATE.create({
             cameraRatio: ratios.includes('16:9') ? '16:9' : '4:3',
@@ -53,7 +55,7 @@ export const CameraFeed = React.forwardRef(
         <Camera
           ref={cameraRef}
           style={commonStyles.flexOne}
-          ratio={cameraRatio ?? '4:3'}
+          ratio={cameraRatio}
           onCameraReady={() => {
             getSupportedRatios();
             onCameraReady();
@@ -65,7 +67,6 @@ export const CameraFeed = React.forwardRef(
     ) : null;
   },
 );
-
 export const cameraStyles = StyleSheet.create({
   cameraContainer16to9: {
     width: windowWidth,

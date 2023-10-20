@@ -5,19 +5,17 @@ import {COLORS} from '@constants/colors';
 import {VIDEO_DURATION_SEC} from '@constants/faceRecognition';
 import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
-import {
-  CameraFeed,
-  cameraStyles,
-} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
+import {CameraFeed} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
 import {DeviceAngleWarning} from '@screens/FaceRecognitionFlow/components/DeviceAngleWarning';
+import {isSmallDevice} from '@screens/FaceRecognitionFlow/constants';
 import {EmotionCard} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/components/EmotionCard';
 import {StartButton} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/components/StartButton';
 import {useIsDeviceAngleAllowed} from '@screens/FaceRecognitionFlow/hooks/useIsDeviceAngleAllowed';
+import {useMaxHeightStyle} from '@screens/FaceRecognitionFlow/hooks/useMaxHeightStyle';
 import {getPictureCropStartY} from '@screens/FaceRecognitionFlow/utils';
 import {dayjs} from '@services/dayjs';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
-  cameraRatioSelector,
   emotionsAuthEmotionsSelector,
   emotionsAuthNextEmotionIndexSelector,
   emotionsAuthSessionExpiredAtSelector,
@@ -220,8 +218,7 @@ export function GatherEmotionsStep({
     return () => backHandler.remove();
   }, [onGoBack]);
 
-  const cameraRatio = useSelector(cameraRatioSelector);
-
+  const maxHeightStyle = useMaxHeightStyle();
   return (
     <View style={commonStyles.flexOne}>
       <Header
@@ -230,19 +227,16 @@ export function GatherEmotionsStep({
         backgroundColor={'transparent'}
         onGoBack={onGoBack}
       />
-      <View
-        style={
-          cameraRatio === '4:3'
-            ? cameraStyles.cameraContainer4to3
-            : cameraStyles.cameraContainer16to9
-        }>
-        <CameraFeed
-          ref={cameraRef}
-          onCameraReady={() => {
-            setIsCameraReady(true);
-          }}
-        />
-        {isCameraReady && (
+      <View style={[commonStyles.flexOne, maxHeightStyle.maxHeight]}>
+        <View style={StyleSheet.absoluteFill}>
+          <CameraFeed
+            ref={cameraRef}
+            onCameraReady={() => {
+              setIsCameraReady(true);
+            }}
+          />
+        </View>
+        {isCameraReady ? (
           <>
             <View style={styles.bottomContainer}>
               {started && recordingEmotion ? (
@@ -264,7 +258,7 @@ export function GatherEmotionsStep({
               />
             )}
           </>
-        )}
+        ) : null}
       </View>
     </View>
   );
@@ -273,7 +267,7 @@ export function GatherEmotionsStep({
 const styles = StyleSheet.create({
   bottomContainer: {
     position: 'absolute',
-    bottom: rem(38),
+    bottom: isSmallDevice ? rem(20) : rem(38),
     left: rem(16),
     right: rem(16),
     alignItems: 'center',

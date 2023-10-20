@@ -3,6 +3,7 @@
 import {AuthEmotion} from '@api/faceRecognition/types';
 import {COLORS} from '@constants/colors';
 import {Images} from '@images';
+import {EMOTION_IMAGE_SIZE} from '@screens/FaceRecognitionFlow/constants';
 import {ClockIcon} from '@svg/ClockIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -97,8 +98,6 @@ export function EmotionCard({emotion, countDownSecs, previewTimeInMs}: Props) {
   );
 }
 
-const IMAGE_SIZE = rem(120);
-
 const styles = StyleSheet.create({
   container: {
     width: '100%',
@@ -115,8 +114,8 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(12),
   },
   image: {
-    width: IMAGE_SIZE,
-    height: IMAGE_SIZE,
+    width: EMOTION_IMAGE_SIZE,
+    height: EMOTION_IMAGE_SIZE,
   },
   countDownContainer: {
     flexDirection: 'row',

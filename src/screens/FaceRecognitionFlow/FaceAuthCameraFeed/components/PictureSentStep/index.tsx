@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {commonStyles} from '@constants/styles';
 import {useNavigation} from '@react-navigation/native';
 import {cameraStyles} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
 import {StatusOverlay} from '@screens/FaceRecognitionFlow/components/StatusOverlay';
+import {useMaxHeightStyle} from '@screens/FaceRecognitionFlow/hooks/useMaxHeightStyle';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
   cameraRatioSelector,
@@ -44,20 +46,24 @@ export function PictureSentStep({
   };
 
   const cameraRatio = useSelector(cameraRatioSelector);
-
+  const maxHeightStyle = useMaxHeightStyle();
   return (
-    <View
-      style={
-        cameraRatio === '4:3'
-          ? cameraStyles.cameraContainer4to3
-          : cameraStyles.cameraContainer16to9
-      }>
-      <Image
-        resizeMode={'contain'}
-        source={{uri: picture.uri}}
-        style={styles.picture}
-      />
-      <View style={styles.pictureOverlay} />
+    <View style={[commonStyles.flexOne, maxHeightStyle.maxHeight]}>
+      <View style={StyleSheet.absoluteFill}>
+        <View
+          style={
+            cameraRatio === '4:3'
+              ? cameraStyles.cameraContainer4to3
+              : cameraStyles.cameraContainer16to9
+          }>
+          <Image
+            resizeMode={'contain'}
+            source={{uri: picture.uri}}
+            style={styles.picture}
+          />
+          <View style={styles.pictureOverlay} />
+        </View>
+      </View>
       {faceAuthStatus === 'LOADING' ? (
         <StatusOverlay
           description={t('face_auth.auth_status.loading.description')}

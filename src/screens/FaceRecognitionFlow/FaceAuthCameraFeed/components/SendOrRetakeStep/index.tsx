@@ -3,8 +3,11 @@
 import {CheckMark} from '@components/CheckMark';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {commonStyles} from '@constants/styles';
 import {cameraStyles} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
 import {FaceAuthOverlay} from '@screens/FaceRecognitionFlow/components/FaceAuthOverlay';
+import {isSmallDevice} from '@screens/FaceRecognitionFlow/constants';
+import {useMaxHeightStyle} from '@screens/FaceRecognitionFlow/hooks/useMaxHeightStyle';
 import {getPictureCropStartY} from '@screens/FaceRecognitionFlow/utils';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {cameraRatioSelector} from '@store/modules/FaceRecognition/selectors';
@@ -44,20 +47,22 @@ export function SendOrRetakeStep({
   };
 
   const cameraRatio = useSelector(cameraRatioSelector);
-
+  const maxHeightStyle = useMaxHeightStyle();
   return (
-    <View
-      style={
-        cameraRatio === '4:3'
-          ? cameraStyles.cameraContainer4to3
-          : cameraStyles.cameraContainer16to9
-      }>
-      <Image
-        resizeMode={'contain'}
-        source={{uri: picture.uri}}
-        style={styles.picture}
-      />
-      <FaceAuthOverlay />
+    <View style={[commonStyles.flexOne, maxHeightStyle.maxHeight]}>
+      <View
+        style={
+          cameraRatio === '4:3'
+            ? cameraStyles.cameraContainer4to3
+            : cameraStyles.cameraContainer16to9
+        }>
+        <Image
+          resizeMode={'contain'}
+          source={{uri: picture.uri}}
+          style={styles.picture}
+        />
+        <FaceAuthOverlay />
+      </View>
       <View style={styles.buttonContainer}>
         <Touchable
           onPress={onRetakePicture}
@@ -87,7 +92,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     position: 'absolute',
-    bottom: rem(40),
+    bottom: isSmallDevice ? rem(20) : rem(40),
     paddingHorizontal: rem(20),
     flexDirection: 'row',
     width: '100%',
