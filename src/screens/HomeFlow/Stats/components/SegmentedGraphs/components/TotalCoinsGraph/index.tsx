@@ -4,20 +4,26 @@ import {BarGraph} from '@components/BarGraph';
 import {useGetBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetBarGraphDataForStatsPeriod';
 import {SectionHeader} from '@components/SectionHeader';
 import {commonStyles} from '@constants/styles';
+import {StatsPeriodSelector} from '@screens/HomeFlow/Stats/components/SegmentedGraphs/components/StatsPeriodSelector';
+import {StatsPeriod} from '@store/modules/Stats/types';
 import {t} from '@translations/i18n';
-import React, {memo} from 'react';
+import React, {memo, useState} from 'react';
 import {View} from 'react-native';
 
-export const DEFAULT_USER_GROWTH_STATS_PERIOD = 30;
+export const DEFAULT_PERIOD = 14;
 
 export const TotalCoinsGraph = memo(() => {
-  const {totalUsersData} = useGetBarGraphDataForStatsPeriod(
-    DEFAULT_USER_GROWTH_STATS_PERIOD,
-  );
+  const [period, setPeriod] = useState<StatsPeriod>(DEFAULT_PERIOD);
+  const {totalUsersData} = useGetBarGraphDataForStatsPeriod(period);
 
   return (
     <>
-      <SectionHeader title={t('stats.coin_economics')} />
+      <SectionHeader
+        title={t('stats.coin_economics')}
+        action={
+          <StatsPeriodSelector selectedPeriod={period} onChange={setPeriod} />
+        }
+      />
       <View style={commonStyles.flexOne}>
         <BarGraph data={totalUsersData} />
       </View>
