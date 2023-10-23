@@ -27,9 +27,9 @@ export const InviteShare = memo(() => {
         <LinesBackground style={styles.background} />
         <Text style={styles.description}>
           {replaceString(
-isLiteTeam
-? t('override.profile.invite_friends_engage')
-: t('invite_share.description'),
+            isLiteTeam
+              ? t('override.profile.invite_friends_engage')
+              : t('invite_share.description'),
             tagRegex('ice'),
             (match, index) => (
               <IceLabel key={match + index} iconOffsetY={isAndroid ? 3 : 2} />

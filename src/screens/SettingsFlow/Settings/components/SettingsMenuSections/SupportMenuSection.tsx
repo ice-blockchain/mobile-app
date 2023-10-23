@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {isLiteTeam} from '@constants/featureFlags';
 import {LINKS} from '@constants/links';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -43,7 +44,11 @@ export const SupportMenuSection = () => {
       />
       <MenuItem
         title={t('settings.invite_title')}
-        description={t('settings.invite_description')}
+        description={
+          isLiteTeam
+            ? t('override.settings.invite_description')
+            : t('settings.invite_description')
+        }
         renderIcon={() => (
           <InviteIcon
             fill={COLORS.primaryLight}
