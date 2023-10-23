@@ -6,26 +6,33 @@ import {
   DEVICE_SENSORS_UPDATE_INTERVAL_MS,
 } from '@constants/timeouts';
 import {hapticFeedback} from '@utils/device';
-import {DeviceMotion} from 'expo-sensors';
 import {useEffect, useState} from 'react';
+import {
+  accelerometer,
+  SensorTypes,
+  setUpdateIntervalForType,
+} from 'react-native-sensors';
 
 export const useIsDeviceAngleAllowed = () => {
   const [isAllowed, setIsAllowed] = useState<boolean>(true);
 
   useEffect(() => {
-    let subscription: {remove: () => void} | null = null;
-    DeviceMotion.isAvailableAsync().then(isAvailable => {
-      if (isAvailable) {
-        DeviceMotion.setUpdateInterval(DEVICE_SENSORS_UPDATE_INTERVAL_MS);
-        subscription = DeviceMotion.addListener(({rotation}) => {
-          // Despite the typing, `rotation` is null on android during the camera permissions dialog
-          if (rotation) {
-            setIsAllowed(rotation.beta > DEVICE_Y_ALLOWED_ROTATION_RADIANS);
-          }
-        });
+    setUpdateIntervalForType(
+      SensorTypes.accelerometer,
+      DEVICE_SENSORS_UPDATE_INTERVAL_MS,
+    );
+    const subscription = accelerometer.subscribe(data => {
+      if (data?.y != null) {
+        const gravity = 9.81;
+        setIsAllowed(
+          Math.abs(data.y) > gravity - DEVICE_Y_ALLOWED_ROTATION_RADIANS,
+        );
       }
     });
-    return () => subscription?.remove();
+
+    return () => {
+      subscription.unsubscribe();
+    };
   }, []);
 
   useEffect(() => {
