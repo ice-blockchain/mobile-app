@@ -1082,5 +1082,47 @@
       "title": "Opozorilo",
       "description": "Prosimo, ohranite telefon pokonci med gledanjem v kamero"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Prosimo, preverite, ali ste vnesli pravilno vzdevek. Z dokončanjem tega koraka boste postali del ekipe vašega prijatelja."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Spremljajte svoj napredek in globalni status"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Razširite svojo ekipo in ustvarite skupnost"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Razširite svojo ekipo z novimi člani"
+    },
+    "profile": {
+      "invite_friends_engage": "Širite besedo in povabite svoje prijatelje, da se pridružijo skupnosti Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Uporabite to funkcijo, da povabite svoje prijatelje, da se pridružijo skupnosti Ice. Razširite svoje omrežje, delite izkušnje in gradite trajne povezave skupaj."
+        },
+        "wallet": {
+          "description": "Tukaj lahko najdete svoje trenutno stanje Ice skupaj z stopnjo zaslužka."
+        },
+        "earning": {
+          "description": "Ostanite seznanjeni s svojo stopnjo zaslužka in bonusi! Tu lahko preverite svojo trenutno stopnjo, našo osnovno stopnjo in stopnje bonusov."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "V tem razdelku boste videli skupno število članov vaše ekipe, ki ste jih povabili, kar vam omogoča spremljanje rasti in razvoja vaše skupnosti."
+        },
+        "earnings": {
+          "description": "Vaše trenutno stanje se posodablja vsako uro in je tukaj prikazano. Vključuje vaše neposredne in blokirane zaslužke."
+        }
+      }
+    }
   }
 }

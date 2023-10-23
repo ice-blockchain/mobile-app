@@ -995,5 +995,47 @@
       "title": "Babala",
       "description": "Mangyaring panatilihing tuwid ang telepono habang tinitingnan ang kamera"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Siguruhing tama ang inyong ipinasok na pangalang ginagamit. Sa pagkumpleto ng hakbang na ito, magiging bahagi ka ng koponan ng iyong kaibigan."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Subaybayan ang iyong progreso at global na kalagayan"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Palakihin ang iyong koponan at lumikha ng komunidad"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Palakihin ang iyong koponan ng mga bagong miyembro"
+    },
+    "profile": {
+      "invite_friends_engage": "Magkalat ng balita at imbitahan ang iyong mga kaibigan na sumali sa komunidad ng Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Gamitin ang feature na ito upang imbitahan ang iyong mga kaibigan na sumali sa komunidad ng Ice. Palawakin ang iyong network, magbahagi ng karanasan, at magtayo ng matagalang ugnayan kasama sila."
+        },
+        "wallet": {
+          "description": "Dito maaari mong hanapin ang iyong kasalukuyang balanse ng Ice kasama ang rate ng kita."
+        },
+        "earning": {
+          "description": "Manatili sa loop sa iyong rate ng kita at mga bonus! Dito maaari mong suriin ang iyong kasalukuyang rate, ang aming base rate, at mga rate ng bonus."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Sa seksyong ito, makikita mo ang kabuuang bilang ng mga kasapi ng iyong koponan na iyong inimbitahan, na nagbibigay-daan sa iyo na subaybayan ang paglago at pag-unlad ng iyong komunidad."
+        },
+        "earnings": {
+          "description": "Ang iyong kasalukuyang balanse ay mag-a-update kada oras at ipinapakita dito. Ito ay kinabibilangan ng iyong direktang kita at mga kita na naka-lock."
+        }
+      }
+    }
   }
 }

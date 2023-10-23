@@ -1082,5 +1082,47 @@
       "title": "Avertisment",
       "description": "Vă rugăm să țineți telefonul drept în timp ce priviți în cameră"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Asigurați-vă că ați introdus un pseudonim corect. Completarea acestui pas vă va transforma în parte a echipei prietenului dumneavoastră."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Urmăriți progresul dumneavoastră și starea globală"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Creșteți-vă echipa și construiți o comunitate"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Creșteți-vă echipa cu membri noi"
+    },
+    "profile": {
+      "invite_friends_engage": "Răspândiți vestea și invitați-vă prietenii să se alăture comunității Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Utilizați această funcție pentru a invita prietenii să se alăture comunității Ice. Extindeți-vă rețeaua, împărtășiți experiențe și construiți conexiuni durabile împreună."
+        },
+        "wallet": {
+          "description": "Aici puteți găsi soldul dvs. actual Ice, împreună cu rata de câștig."
+        },
+        "earning": {
+          "description": "Mențineți-vă la curent cu rata dvs. de câștig și bonusurile! Aici puteți verifica rata dvs. actuală, rata noastră de bază și ratele bonus."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "În această secțiune, veți vedea numărul total de membri ai echipei pe care i-ați invitat, permițându-vă să urmăriți creșterea și dezvoltarea comunității dvs."
+        },
+        "earnings": {
+          "description": "Soldul dvs. actual este actualizat în fiecare oră și este afișat aici. Acesta include câștigurile dvs. directe și blocate."
+        }
+      }
+    }
   }
 }

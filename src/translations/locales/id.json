@@ -1082,5 +1082,47 @@
       "title": "Peringatan",
       "description": "Mohon tetapkan ponsel lurus saat melihat ke kamera"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Pastikan Anda memasukkan nama panggilan yang benar. Dengan menyelesaikan langkah ini, Anda akan menjadi bagian dari tim teman Anda."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Lacak kemajuan Anda dan status global"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Tingkatkan tim Anda dan bangun komunitas"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Tingkatkan tim Anda dengan anggota baru"
+    },
+    "profile": {
+      "invite_friends_engage": "Sebarkan kabar dan undang teman Anda untuk bergabung dengan komunitas Jaringan Ice!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Gunakan fitur ini untuk mengundang teman Anda untuk bergabung dengan komunitas Ice. Perluas jaringan Anda, bagikan pengalaman, dan bangun hubungan yang langgeng bersama."
+        },
+        "wallet": {
+          "description": "Anda dapat menemukan saldo Ice Anda saat ini di sini, bersama dengan tingkat penghasilan."
+        },
+        "earning": {
+          "description": "Tetap terkini dengan tingkat penghasilan dan bonus Anda! Di sini Anda dapat memeriksa tingkat Anda saat ini, tingkat dasar kami, dan tingkat bonus."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Di bagian ini, Anda akan melihat jumlah total anggota tim yang telah Anda undang, memungkinkan Anda untuk melacak pertumbuhan dan perkembangan komunitas Anda."
+        },
+        "earnings": {
+          "description": "Saldo Anda saat ini diperbarui setiap jam dan ditampilkan di sini. Ini termasuk penghasilan langsung dan yang disetor Anda."
+        }
+      }
+    }
   }
 }

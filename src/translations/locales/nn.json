@@ -1082,5 +1082,47 @@
       "title": "Advarsel",
       "description": "Vennligst hald telefonen rett medan du ser inn i kameraet"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Ver vennligst sikker på at du har skrive inn riktig kallenavn. Ved å fullføre dette trinnet, blir du en del av vennens team."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Spor din framgang og global status"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Vokse ditt team og bygge et fellesskap"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Vokse ditt team med nye medlemmer"
+    },
+    "profile": {
+      "invite_friends_engage": "Spred ordet og inviter vennene dine til å bli med i Ice Network-samfunnet!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Bruk denne funksjonen til å invitere vennene dine til å bli med i Ice-samfunnet. Utvid nettverket ditt, del erfaringer og bygg varige forbindelser sammen."
+        },
+        "wallet": {
+          "description": "Her kan du finne din nåværende Ice-saldo, sammen med inntjeningssatsen din."
+        },
+        "earning": {
+          "description": "Hold deg oppdatert på inntjeningssatsen din og bonuser! Her kan du sjekke din nåværende sats, vår grunnleggende sats og bonussatsene."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "I denne seksjonen vil du se totalt antall teammedlemmer du har invitert, slik at du kan følge med på veksten og utviklingen av fellesskapet ditt."
+        },
+        "earnings": {
+          "description": "Din nåværende saldo oppdateres hver time og vises her. Den inkluderer dine direkte og staked inntekter."
+        }
+      }
+    }
   }
 }

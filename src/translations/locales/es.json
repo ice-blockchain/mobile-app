@@ -1082,5 +1082,47 @@
       "title": "Advertencia",
       "description": "Por favor, mantén el teléfono recto mientras miras la cámara"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Por favor, asegúrese de ingresar el apodo correcto. Al completar este paso, formarás parte del equipo de tu amigo."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Sigue tu progreso y estado global"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Haz crecer tu equipo y construye una comunidad"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Haz crecer tu equipo con nuevos miembros"
+    },
+    "profile": {
+      "invite_friends_engage": "¡Corre la voz e invita a tus amigos a unirse a la comunidad de Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Utiliza esta función para invitar a tus amigos a unirse a la comunidad Ice. Amplía tu red, comparte experiencias y construye conexiones duraderas juntos."
+        },
+        "wallet": {
+          "description": "Aquí puedes encontrar tu saldo actual de Ice, junto con la tasa de ganancia."
+        },
+        "earning": {
+          "description": "¡Mantente al tanto de tu tasa de ganancia y bonificaciones! Aquí puedes consultar tu tasa actual, nuestra tasa base y las tasas de bonificación."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "En esta sección, verás el número total de miembros del equipo que has invitado, lo que te permite seguir el crecimiento y la evolución de tu comunidad."
+        },
+        "earnings": {
+          "description": "Tu saldo actual se actualiza cada hora y se muestra aquí. Incluye tus ganancias directas e invertidas."
+        }
+      }
+    }
   }
 }

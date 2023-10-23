@@ -1082,5 +1082,47 @@
       "title": "Arahan",
       "description": "Sila pegang telefon tegak sambil melihat ke kamera"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Pastikan anda memasukkan nama panggilan yang betul. Dengan menyelesaikan langkah ini, anda akan menjadi sebahagian daripada pasukan rakan anda."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Jejak kemajuan dan status global anda"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Kembangkan pasukan anda dan bina komuniti"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Kembangkan pasukan anda dengan ahli baru"
+    },
+    "profile": {
+      "invite_friends_engage": "Sebarkan berita dan jemput rakan anda untuk menyertai komuniti Rangkaian Ice!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Gunakan ciri ini untuk menjemput rakan-rakan anda untuk menyertai komuniti Ice. Luaskan rangkaian anda, kongsi pengalaman, dan bina hubungan yang berpanjangan bersama-sama."
+        },
+        "wallet": {
+          "description": "Anda boleh mencari baki Ice semasa ini di sini, bersama dengan kadar pendapatan anda."
+        },
+        "earning": {
+          "description": "Bermastautin dengan kadar pendapatan dan bonus anda! Di sini anda boleh menyemak kadar semasa anda, kadar asas kami, dan kadar bonus."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Di bahagian ini, anda akan melihat jumlah ahli pasukan yang anda jemput, membolehkan anda menjejaki pertumbuhan dan perkembangan komuniti anda."
+        },
+        "earnings": {
+          "description": "Baki semasa anda dikemaskini setiap jam dan dipaparkan di sini. Ia termasuk pendapatan terus dan pendapatan staked anda."
+        }
+      }
+    }
   }
 }

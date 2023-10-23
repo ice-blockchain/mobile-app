@@ -1082,5 +1082,47 @@
       "title": "Warnung",
       "description": "Bitte halten Sie das Telefon gerade, während Sie in die Kamera schauen"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Bitte stellen Sie sicher, dass Sie den richtigen Spitznamen eingeben. Durch das Abschließen dieses Schritts werden Sie Teil des Teams Ihres Freundes."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Verfolgen Sie Ihren Fortschritt und Ihren globalen Status"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Erweitern Sie Ihr Team und bauen Sie eine Gemeinschaft auf"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Erweitern Sie Ihr Team mit neuen Mitgliedern"
+    },
+    "profile": {
+      "invite_friends_engage": "Verbreiten Sie die Nachricht und laden Sie Ihre Freunde ein, sich der Ice Network-Community anzuschließen!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Verwenden Sie diese Funktion, um Ihre Freunde zur Teilnahme an der Ice-Community einzuladen. Erweitern Sie Ihr Netzwerk, teilen Sie Erfahrungen und bauen Sie dauerhafte Verbindungen zusammen auf."
+        },
+        "wallet": {
+          "description": "Hier finden Sie Ihr aktuelles Ice-Guthaben zusammen mit dem Verdiensttarif."
+        },
+        "earning": {
+          "description": "Bleiben Sie über Ihren Verdiensttarif und Boni auf dem Laufenden! Hier können Sie Ihren aktuellen Tarif, unseren Basistarif und Bonustarife überprüfen."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "In diesem Abschnitt sehen Sie die Gesamtzahl der Teammitglieder, die Sie eingeladen haben, und können so das Wachstum und die Entwicklung Ihrer Gemeinschaft verfolgen."
+        },
+        "earnings": {
+          "description": "Ihr aktuelles Guthaben wird stündlich aktualisiert und hier angezeigt. Es umfasst Ihre direkten und angelegten Einnahmen."
+        }
+      }
+    }
   }
 }

@@ -1082,5 +1082,47 @@
       "title": "Varování",
       "description": "Prosím, držte telefon rovně při pohledu do kamery"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Prosím, ujistěte se, že zadáváte správný přezdívku. Tímto krokem se stanete součástí týmu vašeho přítele."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Sledujte svůj pokrok a globální stav"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Roste vašeho týmu a vytvářejte komunitu"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Roste vašeho týmu s novými členy"
+    },
+    "profile": {
+      "invite_friends_engage": "Šiřte slovo a pozvěte své přátele, aby se připojili ke komunitě Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Využijte tuto funkci k pozvání svých přátel, aby se připojili k Ice komunitě. Rozšiřte svou síť, sdílejte zkušenosti a společně budujte trvalé vztahy."
+        },
+        "wallet": {
+          "description": "Zde naleznete aktuální zůstatek na vašem účtu Ice spolu s měrou výdělku."
+        },
+        "earning": {
+          "description": "Zůstaňte v obraze ohledně vaší míry výdělku a bonusů! Zde můžete zkontrolovat vaši aktuální míru, naši základní míru a míry bonusů."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "V této sekci uvidíte celkový počet členů týmu, které jste pozvali, což vám umožní sledovat růst a vývoj vaší komunity."
+        },
+        "earnings": {
+          "description": "Váš aktuální zůstatek se aktualizuje každou hodinu a zobrazuje se zde. Zahrnuje vaše přímé a vložené výdělky."
+        }
+      }
+    }
   }
 }

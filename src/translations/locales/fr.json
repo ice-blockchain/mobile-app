@@ -1082,5 +1082,47 @@
       "title": "Avertissement",
       "description": "Veuillez maintenir le téléphone droit en regardant dans l'appareil photo"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Veuillez vous assurer d'entrer le surnom correct. En complétant cette étape, vous ferez partie de l'équipe de votre ami."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Suivez votre progression et votre statut global"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Développez votre équipe et construisez une communauté"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Développez votre équipe avec de nouveaux membres"
+    },
+    "profile": {
+      "invite_friends_engage": "Faites passer le mot et invitez vos amis à rejoindre la communauté Ice Network !"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Utilisez cette fonctionnalité pour inviter vos amis à rejoindre la communauté Ice. Élargissez votre réseau, partagez des expériences et construisez des connexions durables ensemble."
+        },
+        "wallet": {
+          "description": "Vous pouvez trouver ici votre solde Ice actuel, ainsi que le taux de gains."
+        },
+        "earning": {
+          "description": "Restez informé de votre taux de gains et de vos bonus ! Ici, vous pouvez consulter votre taux actuel, notre taux de base et les taux de bonus."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Dans cette section, vous verrez le nombre total de membres de l'équipe que vous avez invités, ce qui vous permettra de suivre la croissance et l'évolution de votre communauté."
+        },
+        "earnings": {
+          "description": "Votre solde actuel est mis à jour toutes les heures et affiché ici. Il comprend vos gains directs et investis."
+        }
+      }
+    }
   }
 }

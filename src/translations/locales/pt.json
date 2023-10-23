@@ -1082,5 +1082,47 @@
       "title": "Aviso",
       "description": "Por favor, mantenha o telefone reto ao olhar para a câmera"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Certifique-se de que você digitou o apelido correto. Ao concluir esta etapa, você se tornará parte da equipe do seu amigo."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Acompanhe seu progresso e status global"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Cresça sua equipe e construa uma comunidade"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Cresça sua equipe com novos membros"
+    },
+    "profile": {
+      "invite_friends_engage": "Espalhe a palavra e convide seus amigos para se juntarem à comunidade Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Use esta função para convidar seus amigos para se juntarem à comunidade Ice. Expanda sua rede, compartilhe experiências e construa conexões duradouras juntos."
+        },
+        "wallet": {
+          "description": "Aqui você pode encontrar seu saldo atual de Ice, juntamente com a taxa de ganho."
+        },
+        "earning": {
+          "description": "Mantenha-se atualizado com sua taxa de ganho e bônus! Aqui você pode verificar sua taxa atual, nossa taxa base e as taxas de bônus."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Nesta seção, você verá o número total de membros da equipe que você convidou, permitindo que você acompanhe o crescimento e desenvolvimento de sua comunidade."
+        },
+        "earnings": {
+          "description": "Seu saldo atual é atualizado a cada hora e é exibido aqui. Ele inclui seus ganhos diretos e bloqueados."
+        }
+      }
+    }
   }
 }

@@ -1082,5 +1082,47 @@
       "title": "Paralajmërim",
       "description": "Ju lutemi mbani telefonin drejt ndërsa shikoni në kamerë"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Ju lutemi sigurohuni që keni vendosur një emër të saktë. Duke përfunduar këtë hap, do të bëheni pjesë e skuadrës së mikut tuaj."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Ndjekni progresin tuaj dhe statusin global"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Rritni ekipin tuaj dhe ndërtoni një komunitet"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Rritni ekipin tuaj me anëtarë të rinj"
+    },
+    "profile": {
+      "invite_friends_engage": "Shpërndani fjalën dhe ftoni miqtë tuaj të bashkohen në komunitetin Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Përdorni këtë veçori për të ftuar miqtë tuaj të bashkohen në komunitetin Ice. Zmadhoni rrjetin tuaj, ndani përvojën dhe ndërtani lidhje të qëndrueshme bashkë."
+        },
+        "wallet": {
+          "description": "Këtu mund të gjeni biletën tuaj të aktualizuar Ice, bashkë me normën e fitimit."
+        },
+        "earning": {
+          "description": "Mbani përditësuar normën tuaj të fitimit dhe bonuset! Këtu mund të kontrolloni normën tuaj aktuale, normën tonë bazë dhe normat e bonusit."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Në këtë seksion, do të shihni numrin total të anëtarëve të ekipit që keni ftuar, duke ju lejuar të ndiqni rritjen dhe zhvillimin e komunitetit tuaj."
+        },
+        "earnings": {
+          "description": "Bilanci juaj aktual përditësohet çdo orë dhe shfaqet këtu. Përfshin të ardhurat tuaja të drejtpërdrejta dhe të bllokuara."
+        }
+      }
+    }
   }
 }

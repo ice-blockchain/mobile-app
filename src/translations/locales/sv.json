@@ -1082,5 +1082,47 @@
       "title": "Varning",
       "description": "Vänligen håll telefonen rak medan du tittar i kameran"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Se till att du har angett rätt smeknamn. Genom att slutföra detta steg kommer du att bli en del av din väns lag."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Följ din framsteg och globala status"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Bygg upp ditt team och skapa en gemenskap"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Bygg upp ditt team med nya medlemmar"
+    },
+    "profile": {
+      "invite_friends_engage": "Sprid ordet och bjud in dina vänner att gå med i Ice Network-communityn!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Använd den här funktionen för att bjuda in dina vänner att gå med i Ice-communityn. Utvidga ditt nätverk, dela erfarenheter och bygg långvariga relationer tillsammans."
+        },
+        "wallet": {
+          "description": "Här hittar du din nuvarande Ice-saldo tillsammans med intjäningsgraden."
+        },
+        "earning": {
+          "description": "Håll dig uppdaterad om din intjäningsgrad och bonusar! Här kan du kontrollera din nuvarande grad, vår grundgrad och bonusgrader."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "I den här sektionen ser du det totala antalet lagmedlemmar du har bjudit in, vilket gör att du kan följa din kommunitets tillväxt och utveckling."
+        },
+        "earnings": {
+          "description": "Ditt nuvarande saldo uppdateras varje timme och visas här. Det inkluderar dina direkta och blockerade intäkter."
+        }
+      }
+    }
   }
 }

@@ -1082,5 +1082,47 @@
       "title": "경고",
       "description": "카메라를 보면서 전화를 곧게 유지해주세요"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "올바른 닉네임을 입력했는지 확인하십시오. 이 단계를 완료하면 친구의 팀의 일원이 됩니다."
+    },
+    "home": {
+      "pioneer": {
+        "description": "진행 상황과 전체 상태를 추적하세요"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "팀을 성장시키고 커뮤니티를 구축하세요"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "새로운 회원으로 팀을 성장시키세요"
+    },
+    "profile": {
+      "invite_friends_engage": "소식을 퍼뜨리고 친구를 Ice Network 커뮤니티에 초대하세요!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "이 기능을 사용하여 친구를 Ice 커뮤니티에 초대하세요. 네트워크를 확장하고 경험을 공유하며 지속적인 연결을 만드세요."
+        },
+        "wallet": {
+          "description": "현재 Ice 잔고와 수익률을 여기에서 찾을 수 있습니다."
+        },
+        "earning": {
+          "description": "수익률과 보너스를 최신 상태로 유지하세요! 여기에서 현재 수익률, 기본 수익률 및 보너스 수익률을 확인할 수 있습니다."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "이 섹션에서는 초대한 팀 멤버의 총 수를 볼 수 있어 커뮤니티의 성장과 진화를 추적할 수 있습니다."
+        },
+        "earnings": {
+          "description": "현재 잔액은 매 시간 업데이트되며 여기에 표시됩니다. 직접 및 스테이크한 수익을 포함합니다."
+        }
+      }
+    }
   }
 }

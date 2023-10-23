@@ -31,7 +31,7 @@ export const Invite = memo(({style}: Props) => (
             url: LINKS.TEAM,
           })
         }>
-        <BorderedInfoIcon />
+        {isLiteTeam ? null : <BorderedInfoIcon />}
       </Touchable>
     </Text>
   </View>

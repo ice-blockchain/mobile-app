@@ -1082,5 +1082,47 @@
       "title": "Upozornenie",
       "description": "Prosím, držte telefón pri pohľade do kamery rovno"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Prosím, uistite sa, že ste zadali správny prezývku. Dokončením tohto kroku sa stanete súčasťou tímu vášho priateľa."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Sledujte svoj pokrok a globálny stav"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Rozširujte svoj tím a budujte komunitu"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Rozširujte svoj tím novými členmi"
+    },
+    "profile": {
+      "invite_friends_engage": "Rozširujte slovo a pozvite svojich priateľov, aby sa pridali k komunite Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Použite túto funkciu na pozvanie svojich priateľov, aby sa pridali k komunite Ice. Rozširujte svoju sieť, zdieľajte skúsenosti a budujte trvalé vzťahy spolu."
+        },
+        "wallet": {
+          "description": "Tu nájdete vašu aktuálnu zostavu Ice spolu s mierou získavania."
+        },
+        "earning": {
+          "description": "Buďte v obraze s vašou mierou získavania a bonusmi! Tu môžete skontrolovať svoju aktuálnu mieru, našu základnú mieru a bonusové sadzby."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "V tejto sekcii uvidíte celkový počet členov tímu, ktorých ste pozvali, čo vám umožní sledovať rast a rozvoj vašej komunity."
+        },
+        "earnings": {
+          "description": "Vaša aktuálna zostava sa aktualizuje každú hodinu a zobrazuje sa tu. Obsahuje vaše priame a uzamknuté zárobky."
+        }
+      }
+    }
   }
 }

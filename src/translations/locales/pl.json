@@ -1082,5 +1082,47 @@
       "title": "Ostrzeżenie",
       "description": "Proszę trzymać telefon prosto podczas patrzenia w kamerę"
     }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Upewnij się, że wprowadziłeś poprawny pseudonim. Ukończenie tego kroku uczyni cię częścią drużyny twojego przyjaciela."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Śledź swój postęp i globalny status"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Rozwijaj swoją drużynę i buduj społeczność"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Rozwijaj swoją drużynę o nowych członków"
+    },
+    "profile": {
+      "invite_friends_engage": "Rozpowszechniaj wieści i zapraszaj swoich przyjaciół do dołączenia do społeczności Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Użyj tej funkcji, aby zaprosić swoich przyjaciół do dołączenia do społeczności Ice. Rozwijaj swoją sieć, dziel się doświadczeniami i buduj trwałe relacje razem."
+        },
+        "wallet": {
+          "description": "Tutaj znajdziesz swoje obecne saldo Ice razem z stopą zarobków."
+        },
+        "earning": {
+          "description": "Bądź na bieżąco z twoją stopą zarobków i bonusami! Tutaj możesz sprawdzić swoją obecną stopę, naszą podstawową stopę i stawki bonusowe."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "W tej sekcji zobaczysz łączną liczbę członków drużyny, których zaprosiłeś, co pozwoli ci śledzić wzrost i rozwój twojej społeczności."
+        },
+        "earnings": {
+          "description": "Twoje obecne saldo jest aktualizowane co godzinę i jest tutaj wyświetlane. Obejmuje to twoje bezpośrednie i zablokowane zarobki."
+        }
+      }
+    }
   }
 }
