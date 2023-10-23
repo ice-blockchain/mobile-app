@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {TaskType} from '@api/tasks/types';
+import {isLiteTeam} from '@constants/featureFlags';
 import {LINKS} from '@constants/links';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -51,7 +52,10 @@ export function useTaskItem(type: TaskType) {
 
   return {
     title: t(`home.tasks.${type}.title`),
-    description: t(`home.tasks.${type}.description`),
+    description:
+      type === 'invite_friends' && isLiteTeam
+        ? t('override.home.tasks.invite_friends.description')
+        : t(`home.tasks.${type}.description`),
     iconBgColor: TASKS[type].iconBgColor,
     activeBgColor: TASKS[type].activeBgColor,
     onPress,

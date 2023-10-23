@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "XẾP HẠNG TOÀN CẦU",
       "referrals": "LƯỢT GIỚI THIỆU",
-      "description": "Giới thiệu thêm người dùng và kiếm được nhiều [[:ice]] hơn.",
-      "description_team": "Mời thêm người dùng và kiếm nhiều hơn [[:ice]]."
+      "description": "Giới thiệu thêm người dùng và kiếm được nhiều [[:ice]] hơn."
     },
     "referrals": {
       "title": "LƯỢT GIỚI THIỆU",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Sử dụng tính năng này để mời bạn bè tham gia cộng đồng Ice. Mở rộng mạng lưới của bạn, chia sẻ trải nghiệm và kiếm thưởng cùng nhau."
-        },
         "team": {
           "description": "[[:ice]] tốt hơn khi có bạn bè. Trên trang này, bạn có thể xem trạng thái của các thành viên trong đội của bạn. Bạn cũng có thể gửi tin nhắn cho họ từ đây."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Ở đây, bạn sẽ thấy có bao nhiêu thành viên trong đội của bạn tổng cộng. Càng mời nhiều người, thưởng của bạn càng cao."
-        },
-        "earnings": {
-          "description": "Số dư hiện tại của bạn được cập nhật mỗi giờ và được hiển thị ở đây. Nó bao gồm thu nhập trực tiếp của bạn, thu nhập từ staking và thu nhập từ đội của bạn."
-        },
         "segmented_control_tier_one": {
           "title": "Đội",
           "description": "Ở đây, bạn có thể xem danh sách những người bạn đã mời tham gia Ice Network. Bạn có thể dễ dàng theo dõi tình trạng của họ từ đây và gửi thông báo cho những người không hoạt động."
@@ -1091,6 +1081,48 @@
     "device_angle_warning": {
       "title": "Cảnh báo",
       "description": "Vui lòng giữ điện thoại thẳng khi nhìn vào máy ảnh"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Vui lòng đảm bảo bạn đã nhập tên hiệu chính xác. Sau khi hoàn thành bước này, bạn sẽ trở thành một phần của đội của bạn bè."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Theo dõi tiến trình của bạn và tình trạng toàn cầu"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Phát triển đội của bạn và xây dựng một cộng đồng"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Phát triển đội của bạn với các thành viên mới"
+    },
+    "profile": {
+      "invite_friends_engage": "Lan truyền tin tức và mời bạn bè tham gia cộng đồng Mạng lưới Ice!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Sử dụng tính năng này để mời bạn bè tham gia cộng đồng Ice. Mở rộng mạng lưới của bạn, chia sẻ trải nghiệm và xây dựng mối quan hệ lâu dài cùng nhau."
+        },
+        "wallet": {
+          "description": "Bạn có thể tìm thấy số dư Ice hiện tại của bạn ở đây, cùng với tỷ lệ thu nhập của bạn."
+        },
+        "earning": {
+          "description": "Giữ cho tỷ lệ thu nhập và tiền thưởng của bạn luôn cập nhật! Ở đây, bạn có thể kiểm tra tỷ lệ hiện tại của bạn, tỷ lệ cơ sở của chúng tôi và tỷ lệ tiền thưởng."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Trong phần này, bạn sẽ thấy tổng số thành viên trong đội bạn đã mời, giúp bạn theo dõi sự phát triển và tiến bộ của cộng đồng của bạn."
+        },
+        "earnings": {
+          "description": "Số dư hiện tại của bạn được cập nhật mỗi giờ và hiển thị ở đây. Nó bao gồm thu nhập trực tiếp và thu nhập đặt cược của bạn."
+        }
+      }
     }
   }
 }

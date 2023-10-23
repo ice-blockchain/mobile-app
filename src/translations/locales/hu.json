@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "GLOBÁLIS HELYEZÉS",
       "referrals": "Ajánlások",
-      "description": "Ajánlj több felhasználót és szerezz több [[:ice]]-t.",
-      "description_team": "Hívj meg több felhasználót és keress több [[:ice]]."
+      "description": "Ajánlj több felhasználót és szerezz több [[:ice]]-t."
     },
     "referrals": {
       "title": "Ajánlások",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Használja ezt a funkciót arra, hogy meghívja barátait, hogy csatlakozzanak az Ice közösséghez. Bővítse hálózatát, ossza meg élményeit és szerezzen jutalmakat együtt."
-        },
         "team": {
           "description": "[[:ice]] jobb barátokkal. Ezen az oldalon láthatja csapatának tagjainak állapotát. Innen is küldhet üzeneteket nekik."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Itt láthatja, hány összes csapattagja van. Minél több embert hív meg, annál magasabb lesz a jutalma."
-        },
-        "earnings": {
-          "description": "Az aktuális egyenlege minden órában frissül, és itt látható. Tartalmazza a közvetlen és letétbe helyezett jövedelmedet, valamint a csapatodból származó jövedelmedet is."
-        },
         "segmented_control_tier_one": {
           "title": "Csapat",
           "description": "Itt láthatja azoknak az embereknek a listáját, akiket meghívott az Ice Hálózathoz. Innen könnyen nyomon követheti az állapotukat, és értesítéseket küldhet a nem aktív tagoknak."
@@ -1091,6 +1081,48 @@
     "device_angle_warning": {
       "title": "Figyelmeztetés",
       "description": "Kérjük, tartsa a telefont egyenesen, amikor a kamerába néz"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Kérjük, győződjön meg róla, hogy helyes becenévet adott meg. Ezzel a lépéssel barátja csapatának részévé válik."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Kövesse nyomon haladását és globális helyzetét"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Növelje csapatát és építsen közösséget"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Növelje csapatát új tagokkal"
+    },
+    "profile": {
+      "invite_friends_engage": "Terjessze a hírt, és hívja meg barátait, hogy csatlakozzanak az Ice Network közösséghez!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Használja ezt a funkciót, hogy meghívja barátait, hogy csatlakozzanak az Ice közösséghez. Bővítse hálózatát, ossza meg élményeit, és építsen tartós kapcsolatokat együtt."
+        },
+        "wallet": {
+          "description": "Itt találja jelenlegi Ice egyenlegét, valamint a kereseti ráta."
+        },
+        "earning": {
+          "description": "Maradjon naprakész a kereseti ráta és a bónuszok terén! Itt ellenőrizheti jelenlegi ráta, alapráta és bónuszráta."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Ebben a szakaszban láthatja az általad meghívott csapattagok teljes számát, lehetővé téve közösségének növekedését és fejlődését."
+        },
+        "earnings": {
+          "description": "Jelenlegi egyenlegét minden órában frissítik és itt jelenítik meg. Tartalmazza közvetlen és befektetett keresetét."
+        }
+      }
     }
   }
 }

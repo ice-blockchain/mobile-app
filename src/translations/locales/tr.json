@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "KÜRESEL SIRALAMA",
       "referrals": "REFERANSLAR",
-      "description": "Daha fazla kullanıcıya referans ol ve daha fazla kazan [[:ice]].",
-      "description_team": "Daha fazla kullanıcıyı davet edin ve daha fazla [[:ice]] kazanın."
+      "description": "Daha fazla kullanıcıya referans ol ve daha fazla kazan [[:ice]]."
     },
     "referrals": {
       "title": "REFERANSLAR",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Arkadaşlarınızı Ice topluluğuna katılmaya davet etmek için bu özelliği kullanın. Ağınızı genişletin, deneyimleri paylaşın ve birlikte ödüller kazanın."
-        },
         "team": {
           "description": "[[:ice]], arkadaşlarınızla daha iyidir. Bu sayfada takım üyelerinizin durumunu görebilirsiniz. Ayrıca buradan onlara mesaj gönderebilirsiniz."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Burada toplam kaç takım üyeniz olduğunu göreceksiniz. Daha fazla kişi davet ederseniz, bonusunuz o kadar yüksek olur."
-        },
-        "earnings": {
-          "description": "Mevcut bakiyeniz her saat güncellenir ve burada gösterilir. Doğrudan kazançlarınız, staking gelirleri ve takımınızın kazançları da dahil olmak üzere bunları içerir."
-        },
         "segmented_control_tier_one": {
           "title": "Takım",
           "description": "Burada Ice Network'e katılmaları için davet ettiğiniz kişilerin listesini görebilirsiniz. Onların durumunu buradan kolayca takip edebilir ve pasif olanlara bildirimler gönderebilirsiniz."
@@ -1091,6 +1081,48 @@
     "device_angle_warning": {
       "title": "Uyarı",
       "description": "Lütfen kameraya bakarken telefonu düz tutun"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Lütfen doğru takma adı girdiğinizden emin olun. Bu adımı tamamladığınızda, arkadaşınızın ekibinin bir parçası olacaksınız."
+    },
+    "home": {
+      "pioneer": {
+        "description": "İlerlemenizi ve küresel durumu takip edin"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Ekibinizi büyütün ve bir topluluk oluşturun"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Yeni üyelerle ekibinizi büyütün"
+    },
+    "profile": {
+      "invite_friends_engage": "Haberleri yayın ve arkadaşlarınızı Ice Network topluluğuna katılmaya davet edin!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Arkadaşlarınızı Ice topluluğuna katılmaya davet etmek için bu özelliği kullanın. Ağınızı genişletin, deneyimleri paylaşın ve kalıcı bağlantılar kurun."
+        },
+        "wallet": {
+          "description": "Mevcut Ice bakiyenizi ve kazanç oranınızı burada bulabilirsiniz."
+        },
+        "earning": {
+          "description": "Kazanç oranınızı ve bonuslarınızı güncel tutun! Burada mevcut oranınızı, temel oranımızı ve bonus oranlarını kontrol edebilirsiniz."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Bu bölümde davet ettiğiniz takım üyelerinin toplam sayısını göreceksiniz, böylece topluluğunuzun büyümesini ve gelişimini takip edebilirsiniz."
+        },
+        "earnings": {
+          "description": "Mevcut bakiyeniz her saat güncellenir ve burada gösterilir. Doğrudan ve staked kazançlarınızı içerir."
+        }
+      }
     }
   }
 }

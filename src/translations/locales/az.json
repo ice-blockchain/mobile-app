@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "QLOBAL DƏRƏCƏ",
       "referrals": "İSTİNADLAR",
-      "description": "Daha çox istifadəçi yönəlt və daha çox qazan[[:ice]].",
-      "description_team": "Daha çox istifadəçi dəvət edin və daha çox [[:ice]] qazanın."
+      "description": "Daha çox istifadəçi yönəlt və daha çox qazan[[:ice]]."
     },
     "referrals": {
       "title": "İSTİNADLAR",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Dostlarınızı Ice icmaəsinə qoşulmağa dəvət etmək üçün bu xüsusiyyəti istifadə edin. Sizin şəbəkənizi genişləndirin, təcrübələrinizi bölüşün və birgə mükafat qazanın."
-        },
         "team": {
           "description": "[[:ice]] dostlarınızla birlikdə daha yaxşıdır. Bu səhifədə öz komandanızın vəzifələrini görmək mümkündür. Siz həmçinin onlara buradan xəbərdarlıq göndərə bilərsiniz."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Bu yerə komanda üzvlərinin cəmi sayını görmək mümkündür. Daha çox insanı dəvət etsəniz, mükafatınız o qədər yüksək olar."
-        },
-        "earnings": {
-          "description": "Sizin cari balansınız hər saat yenilənir və burada göstərilir. Bu, sizi mütəmadi vəsaitiniz, sizi gözləmə vəsaiti və komandanızın vəsaitini daxil edir."
-        },
         "segmented_control_tier_one": {
           "title": "Komanda",
           "description": "Bu yerə İce Şəbəkəsinə dəvət etdiyiniz insanların siyahısını görmək mümkündür. Onların vəziyyətini buradan asanlıqla izləyə və fəal olmayanlara bildiriş göndərə bilərsiniz."
@@ -1091,6 +1081,48 @@
     "device_angle_warning": {
       "title": "Xəbərdarlıq",
       "description": "Kameraya baxarkən telefonu düz tutun, xahiş edirik"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Zəhmət olmasa düzgün adı daxil edəcəyinizə əmin olun. Bu addımla, dostunuzun komandasının bir hissəsi olacaqsınız."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Hərəkətinizi və dünya statusunuzu izləyin"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Sizin komandanızı genişlədin və bir icmaq qurun"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Yeni üzvlərlə komandanızı genişlədin"
+    },
+    "profile": {
+      "invite_friends_engage": "Xəbəri yayın və dostlarınızı Ice Network cəmiyyətinə dəvət edin!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Dostlarınızı Ice cəmiyyətinə dəvət etmək üçün bu xüsusiyyəti istifadə edin. Şəbəkənizi genişlədin, təcrübələrinizi bölün və birlikdə sonsuz əlaqələr qurun."
+        },
+        "wallet": {
+          "description": "Hazırki Ice balansınızı burada tapa bilərsiniz, qazanma dərəcənizlə birlikdə."
+        },
+        "earning": {
+          "description": "Gəlir dərəcənizi və bonuslarınızı güncəl qalın! Burada hazırki dərəcənizi, əsas dərəcəmizi və bonus dərəcələrimizi yoxlaya bilərsiniz."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Bu bölmədə, dəvət etdiyiniz komanda üzvlərinin ümumi sayını görməniz mümkündür, bu sizə cəmiyyətinizin inkişafını və evolyutsiyasını izləmək imkanı verir."
+        },
+        "earnings": {
+          "description": "Hazırki balansınız saatda bir yenilənir və burada göstərilir. Bu, direkt və qoyulmuş gəlirlərinizi daxil edir."
+        }
+      }
     }
   }
 }

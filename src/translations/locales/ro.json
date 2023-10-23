@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "POZIȚIA GLOBALĂ",
       "referrals": "RECOMANDĂRI",
-      "description": "Recomandă-ne mai multor utilizatori și câștigă mai mult [[:ice]].",
-      "description_team": "Invitați mai mulți utilizatori și câștigați mai mult [[:ice]]."
+      "description": "Recomandă-ne mai multor utilizatori și câștigă mai mult [[:ice]]."
     },
     "referrals": {
       "title": "RECOMANDĂRI",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Folosiți această funcție pentru a invita prietenii să se alăture comunității Ice. Extindeți-vă rețeaua, împărtășiți experiențele și câștigați recompense împreună."
-        },
         "team": {
           "description": "[[:ice]] este mai bun cu prietenii. Pe această pagină puteți vedea starea membrilor echipei dvs. De aici, puteți, de asemenea, să le trimiteți mesaje."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Aici veți vedea câți membri de echipă aveți în total. Cu cât invitați mai multe persoane, cu atât bonusul dvs. va fi mai mare."
-        },
-        "earnings": {
-          "description": "Soldul dvs. curent este actualizat în fiecare oră și este afișat aici. Acesta include câștigurile dvs. directe, câștigurile din staking și câștigurile din echipa dvs."
-        },
         "segmented_control_tier_one": {
           "title": "Echipa",
           "description": "Aici puteți vedea lista persoanelor pe care le-ați invitat să se alăture Rețelei Ice. Puteți urmări cu ușurință starea lor de aici și puteți trimite notificări celor inactivi."
@@ -1091,6 +1081,48 @@
     "device_angle_warning": {
       "title": "Avertisment",
       "description": "Vă rugăm să țineți telefonul drept în timp ce priviți în cameră"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Asigurați-vă că ați introdus un pseudonim corect. Completarea acestui pas vă va transforma în parte a echipei prietenului dumneavoastră."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Urmăriți progresul dumneavoastră și starea globală"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Creșteți-vă echipa și construiți o comunitate"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Creșteți-vă echipa cu membri noi"
+    },
+    "profile": {
+      "invite_friends_engage": "Răspândiți vestea și invitați-vă prietenii să se alăture comunității Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Utilizați această funcție pentru a invita prietenii să se alăture comunității Ice. Extindeți-vă rețeaua, împărtășiți experiențe și construiți conexiuni durabile împreună."
+        },
+        "wallet": {
+          "description": "Aici puteți găsi soldul dvs. actual Ice, împreună cu rata de câștig."
+        },
+        "earning": {
+          "description": "Mențineți-vă la curent cu rata dvs. de câștig și bonusurile! Aici puteți verifica rata dvs. actuală, rata noastră de bază și ratele bonus."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "În această secțiune, veți vedea numărul total de membri ai echipei pe care i-ați invitat, permițându-vă să urmăriți creșterea și dezvoltarea comunității dvs."
+        },
+        "earnings": {
+          "description": "Soldul dvs. actual este actualizat în fiecare oră și este afișat aici. Acesta include câștigurile dvs. directe și blocate."
+        }
+      }
     }
   }
 }

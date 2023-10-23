@@ -184,7 +184,6 @@ export type Translations = {
   'home.pioneer.rank': null;
   'home.pioneer.referrals': null;
   'home.pioneer.description': null;
-  'home.pioneer.description_team': null;
   'home.referrals.title': null;
   'home.referrals.title_team': null;
   'home.referrals.description': null;
@@ -479,12 +478,9 @@ export type Translations = {
   'confirm_phone.button': null;
   'confirm_phone.same_phone_error': null;
   'date_select.title': null;
-  'walkthrough.overrides.home.invite.description': null;
   'walkthrough.overrides.home.team.description': null;
   'walkthrough.overrides.home.referralscard.title': null;
   'walkthrough.overrides.home.referralscard.description': null;
-  'walkthrough.overrides.team.referrals.description': null;
-  'walkthrough.overrides.team.earnings.description': null;
   'walkthrough.overrides.team.segmented_control_tier_one.title': null;
   'walkthrough.overrides.team.segmented_control_tier_one.description': null;
   'walkthrough.overrides.team.active_users.description': null;
@@ -676,4 +672,14 @@ export type Translations = {
   'face_auth.emotions_recognition.emotions.surprise': null;
   'face_auth.device_angle_warning.title': null;
   'face_auth.device_angle_warning.description': null;
+  'override.whoInvitedYou.dontHaveInvitationCode': null;
+  'override.home.pioneer.description': null;
+  'override.home.tasks.invite_friends.description': null;
+  'override.settings.invite_description': null;
+  'override.profile.invite_friends_engage': null;
+  'override.walkthrough.home.invite.description': null;
+  'override.walkthrough.home.wallet.description': null;
+  'override.walkthrough.home.earning.description': null;
+  'override.walkthrough.team.referrals.description': null;
+  'override.walkthrough.team.earnings.description': null;
 };

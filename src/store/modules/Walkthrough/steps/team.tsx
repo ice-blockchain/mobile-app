@@ -73,7 +73,7 @@ export const TEAM_WALKTHROUGH_STEPS: WalkthroughStepStaticData<TeamWalkthroughSt
       title: t('walkthrough.team.referrals.title'),
       description: t(
         isLiteTeam
-          ? 'walkthrough.overrides.team.referrals.description'
+          ? 'override.walkthrough.team.referrals.description'
           : 'walkthrough.team.referrals.description',
       ),
       link: 'https://ice.io/#invite',
@@ -85,7 +85,7 @@ export const TEAM_WALKTHROUGH_STEPS: WalkthroughStepStaticData<TeamWalkthroughSt
       title: t('walkthrough.team.earnings.title'),
       description: t(
         isLiteTeam
-          ? 'walkthrough.overrides.team.earnings.description'
+          ? 'override.walkthrough.team.earnings.description'
           : 'walkthrough.team.earnings.description',
       ),
     },

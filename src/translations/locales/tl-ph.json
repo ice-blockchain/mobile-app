@@ -264,8 +264,7 @@
       "rank": "GLOBAL RANK",
       "referrals": "REFERRALS",
       "description_part1": "The more users you refer, the more ",
-      "description_part2": " you earn",
-      "description_team": "Mag-imbita ng mas maraming mga user at kumita ng mas maraming [[:ice]]."
+      "description_part2": " you earn"
     },
     "referrals": {
       "title": "REFERRALS",
@@ -689,9 +688,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Gamitin ang feature na ito upang imbitahan ang iyong mga kaibigan na sumali sa komunidad ng Ice. Palawakin ang iyong network, magbahagi ng mga karanasan, at kumita ng mga premyo nang magkasama."
-        },
         "team": {
           "description": "Mas maganda ang [[:ice]] kasama ang mga kaibigan. Sa pahinang ito, maaari mong tingnan ang status ng mga miyembro ng iyong team. Maari mo rin silang i-message mula dito."
         },
@@ -701,12 +697,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Dito makikita mo kung ilan ang miyembro ng iyong team sa kabuuan. Kapag mas marami kang inimbitahan, mas mataas ang iyong bonus."
-        },
-        "earnings": {
-          "description": "Ang iyong kasalukuyang balanse ay na-update kada oras at ipinapakita dito. Ito ay kasama na ang iyong direktang kita, kita mula sa staking, at kita mula sa iyong team."
-        },
         "segmented_control_tier_one": {
           "title": "Team",
           "description": "Dito maaari mong makita ang listahan ng mga taong ini-imbitahan mo na sumali sa Ice Network. Madali mong maaari i-track ang kanilang status mula dito at magpadala ng mga notification sa mga hindi aktibo."
@@ -1004,6 +994,48 @@
     "device_angle_warning": {
       "title": "Babala",
       "description": "Mangyaring panatilihing tuwid ang telepono habang tinitingnan ang kamera"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Siguruhing tama ang inyong ipinasok na pangalang ginagamit. Sa pagkumpleto ng hakbang na ito, magiging bahagi ka ng koponan ng iyong kaibigan."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Subaybayan ang iyong progreso at global na kalagayan"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Palakihin ang iyong koponan at lumikha ng komunidad"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Palakihin ang iyong koponan ng mga bagong miyembro"
+    },
+    "profile": {
+      "invite_friends_engage": "Magkalat ng balita at imbitahan ang iyong mga kaibigan na sumali sa komunidad ng Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Gamitin ang feature na ito upang imbitahan ang iyong mga kaibigan na sumali sa komunidad ng Ice. Palawakin ang iyong network, magbahagi ng karanasan, at magtayo ng matagalang ugnayan kasama sila."
+        },
+        "wallet": {
+          "description": "Dito maaari mong hanapin ang iyong kasalukuyang balanse ng Ice kasama ang rate ng kita."
+        },
+        "earning": {
+          "description": "Manatili sa loop sa iyong rate ng kita at mga bonus! Dito maaari mong suriin ang iyong kasalukuyang rate, ang aming base rate, at mga rate ng bonus."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Sa seksyong ito, makikita mo ang kabuuang bilang ng mga kasapi ng iyong koponan na iyong inimbitahan, na nagbibigay-daan sa iyo na subaybayan ang paglago at pag-unlad ng iyong komunidad."
+        },
+        "earnings": {
+          "description": "Ang iyong kasalukuyang balanse ay mag-a-update kada oras at ipinapakita dito. Ito ay kinabibilangan ng iyong direktang kita at mga kita na naka-lock."
+        }
+      }
     }
   }
 }
