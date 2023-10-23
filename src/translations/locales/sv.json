@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "GLOBAL RANKNING",
       "referrals": "VÄRVNINGAR",
-      "description": "Värva fler användare och tjäna mer [[:ice]].",
-      "description_team": "Bjuda in fler användare och tjäna mer [[:ice]]."
+      "description": "Värva fler användare och tjäna mer [[:ice]]."
     },
     "referrals": {
       "title": "VÄRVNINGAR",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Använd den här funktionen för att bjuda in dina vänner att gå med i Ice-communityn. Utöka ditt nätverk, dela erfarenheter och tjäna belöningar tillsammans."
-        },
         "team": {
           "description": "[[:ice]] är bättre med vänner. På den här sidan kan du se statusen för dina teammedlemmar. Du kan också skicka meddelanden till dem härifrån."
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Här ser du hur många teammedlemmar du har totalt sett. Ju fler personer du bjuder in, desto högre blir din bonus."
-        },
-        "earnings": {
-          "description": "Ditt nuvarande saldo uppdateras varje timme och visas här. Det inkluderar dina direkta intäkter, intäkter från staking och intäkter från ditt team."
-        },
         "segmented_control_tier_one": {
           "title": "Team",
           "description": "Här kan du se listan över personer du har bjudit in att ansluta till Ice Network. Du kan enkelt följa deras status här och skicka meddelanden till de inaktiva."
@@ -1091,6 +1081,48 @@
     "device_angle_warning": {
       "title": "Varning",
       "description": "Vänligen håll telefonen rak medan du tittar i kameran"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Se till att du har angett rätt smeknamn. Genom att slutföra detta steg kommer du att bli en del av din väns lag."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Följ din framsteg och globala status"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Bygg upp ditt team och skapa en gemenskap"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Bygg upp ditt team med nya medlemmar"
+    },
+    "profile": {
+      "invite_friends_engage": "Sprid ordet och bjud in dina vänner att gå med i Ice Network-communityn!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Använd den här funktionen för att bjuda in dina vänner att gå med i Ice-communityn. Utvidga ditt nätverk, dela erfarenheter och bygg långvariga relationer tillsammans."
+        },
+        "wallet": {
+          "description": "Här hittar du din nuvarande Ice-saldo tillsammans med intjäningsgraden."
+        },
+        "earning": {
+          "description": "Håll dig uppdaterad om din intjäningsgrad och bonusar! Här kan du kontrollera din nuvarande grad, vår grundgrad och bonusgrader."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "I den här sektionen ser du det totala antalet lagmedlemmar du har bjudit in, vilket gör att du kan följa din kommunitets tillväxt och utveckling."
+        },
+        "earnings": {
+          "description": "Ditt nuvarande saldo uppdateras varje timme och visas här. Det inkluderar dina direkta och blockerade intäkter."
+        }
+      }
     }
   }
 }

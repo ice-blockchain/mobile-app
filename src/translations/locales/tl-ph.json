@@ -1,8 +1,8 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welcome to ice",
-      "description": "[[:ice]] is a digital currency that you can earn with your phone. ice is owned and operated by every day users like yourself."
+      "title": "Welcome to Ice",
+      "description": "[[:ice]] is a digital currency that you can earn with your phone. Ice is owned and operated by every day users like yourself."
     },
     "page2": {
       "title": "Planet Friendly",
@@ -15,7 +15,7 @@
     },
     "page4": {
       "title": "Stay Connected",
-      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
+      "description": "Tap [[:iceLogo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that Ice ends up in the hands of real humans, not bots."
     },
     "page5": {
       "title": "Refer & Earn",
@@ -71,14 +71,16 @@
     "tierOne_tab": "Tier 1",
     "tierTwo_tab": "Tier 2",
     "empty": {
-      "title_part1": "You currently don't have any\n",
       "title_part2": " referrals!",
-      "button_title": "Invite Friends"
+      "button_title": "Invite Friends",
+      "t1": "Sa ngayon, wala kang mga T1 referral!",
+      "t2": "Sa ngayon, wala kang mga T2 referral!",
+      "team": "Sa ngayon, wala kang mga miyembro ng team!"
     },
     "contacts": {
       "empty_title": "[[:ice]] is better with friends",
       "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send ice to any of your contacts."
+      "empty_description": "Sync your contacts and see who is already on [[:ice]]. In the future, you will be able to send Ice to any of your contacts."
     },
     "header": {
       "search_placeholder": "Search for users",
@@ -101,7 +103,7 @@
       },
       "all_contacts": "All contacts",
       "invite": "invite",
-      "invitation_text": "Hi {{name}}, I would like to invite you to join ice."
+      "invitation_text": "Hi {{name}}, I would like to invite you to join Ice."
     },
     "tier_one": {
       "header_list": {
@@ -118,9 +120,9 @@
     "logInSignUp": "Log in / Sign up",
     "phone": "Phone",
     "or": "or",
-    "welcome": "Welcome to ice",
+    "welcome": "Welcome to Ice",
     "email": "Email",
-    "slogan": "Global Currency Reset",
+    "slogan": "Ang Decentralized na Kinabukasan",
     "privacy": {
       "description": "By continuing, you agree to our ",
       "terms": "Terms of Service",
@@ -247,7 +249,9 @@
     "active_inviter": "Active inviter",
     "tier_1_ref": "Tier 1 referrals",
     "tier_2_ref": "Tier 2 referrals",
-    "active_miners": "Active referrals"
+    "active_miners": "Active referrals",
+    "team_members": "Mga Miyembro ng Team",
+    "active_team_members": "Mga Aktibong Miyembro ng Team"
   },
   "home": {
     "wallet": {
@@ -267,7 +271,11 @@
       "description": "Referral stats for the previous 5 days",
       "no_referrals_description": "You don't have any referrals yet",
       "users_tier_1": "Users tier 1",
-      "users_tier_2": "Users tier 2"
+      "users_tier_2": "Users tier 2",
+      "title_team": "TEAM",
+      "description_team": "Estadistika ng team para sa mga nakaraang 5 araw",
+      "no_referrals_description_team": "Sa ngayon, wala kang mga miyembro ng team.",
+      "users": "Mga User"
     },
     "adoption": {
       "title": "ADOPTION",
@@ -309,7 +317,8 @@
       "notifications": "Notifications",
       "staking": "Staking",
       "stats": "Stats",
-      "help": "Help"
+      "help": "Help",
+      "tips": "Tips"
     },
     "tasks": {
       "title": "ACHIEVEMENTS"
@@ -349,7 +358,7 @@
     "feedback_title": "Send Feedback",
     "feedback_description": "Share your thoughts with us",
     "invite_title": "Invite a Friend",
-    "invite_description": "Earn extra ice by inviting your friends",
+    "invite_description": "Earn extra Ice by inviting your friends",
     "delete_title": "Delete Account",
     "delete_description": "Erase your account",
     "delete_confirmation_title": "Are you sure you want to remove the account?",
@@ -412,7 +421,7 @@
         },
         "system": {
           "title": "System",
-          "description": "Receive important notifications about the ice app"
+          "description": "Receive important notifications about the Ice app"
         }
       }
     },
@@ -451,7 +460,7 @@
     "copy_link": "Copy link",
     "more": "More",
     "copied": "COPIED",
-    "share_message": "Hi! Join my team on ice Network and receive 10 ice coins when you create an account using my referral code. Download the app:",
+    "share_message": "Hi! Join my team on Ice Network and receive 10 Ice coins when you create an account using my referral code. Download the app:",
     "description_part1": "Spread the word and invite your friends. You earn ",
     "description_part2": " for each new referral you bring."
   },
@@ -461,8 +470,10 @@
     "inactive": "Inactive",
     "referralType": {
       "T1": "Tier 1",
-      "T2": "Tier 2"
-    }
+      "T2": "Tier 2",
+      "team": "Mga Miyembro ng Team"
+    },
+    "team": "Team"
   },
   "personal_information": {
     "first_name": "First name",
@@ -488,14 +499,14 @@
     "time_left": "Time Left",
     "mining_rate": "Earning Rate",
     "appeal": "Boost your earning rate",
-    "benefits_description": "Pre-stake your ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
+    "benefits_description": "Pre-stake your Ice rewards for up to {{periodYears}} years and increase your earning rate by up to {{ratePercentages}}%",
     "bonus_label": "Pre-Staking Bonus",
     "period_label": "Staked Period",
     "title": "Pre-Staking",
     "current_rate": "Current Rate",
     "allocation": "Allocation",
     "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions",
-    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your ice holdings will be locked for the selected period",
+    "terms_agree": "I agree to the [[:ice]] [[:link]]. Your Ice holdings will be locked for the selected period",
     "staking_terms": "Staking Terms",
     "stake_now": "Pre-Stake Now!",
     "balance_label": "Staked balance",
@@ -521,8 +532,8 @@
     "good_morning": "Good morning",
     "good_afternoon": "Good afternoon",
     "good_evening": "Good evening",
-    "ice": "ice",
-    "ice_per_hour": "ice/h",
+    "ice": "Ice",
+    "ice_per_hour": "Ice/h",
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
@@ -534,7 +545,7 @@
     "views": "{{viewsCount}} views"
   },
   "search": {
-    "empty": "Search for contacts, ice friends and members of your micro-community",
+    "empty": "Search for contacts, Ice friends and members of your micro-community",
     "nothing_is_found": "Nothing was found for your query",
     "search_by_country": "Search by country",
     "search_for_users": "Search for users"
@@ -651,7 +662,7 @@
     "snowman": {
       "title": "Snowman",
       "subtitle": "Build a snow empire",
-      "description": "Earn by checking in every 24 hours to show your commitment to the ice network and prove that you're a human, not a bot"
+      "description": "Earn by checking in every 24 hours to show your commitment to the Ice network and prove that you're a human, not a bot"
     },
     "ambassador": {
       "title": "Ambassador",
@@ -668,7 +679,7 @@
   "tasks": {
     "completed": {
       "title": "Congratulations",
-      "description": "Keep mining ice daily to earn extra rewards!"
+      "description": "Keep mining Ice daily to earn extra rewards!"
     }
   },
   "date_select": {
@@ -677,9 +688,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "Gamitin ang feature na ito upang imbitahan ang iyong mga kaibigan na sumali sa komunidad ng Ice. Palawakin ang iyong network, magbahagi ng mga karanasan, at kumita ng mga premyo nang magkasama."
-        },
         "team": {
           "description": "Mas maganda ang [[:ice]] kasama ang mga kaibigan. Sa pahinang ito, maaari mong tingnan ang status ng mga miyembro ng iyong team. Maari mo rin silang i-message mula dito."
         },
@@ -689,12 +697,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Dito makikita mo kung ilan ang miyembro ng iyong team sa kabuuan. Kapag mas marami kang inimbitahan, mas mataas ang iyong bonus."
-        },
-        "earnings": {
-          "description": "Ang iyong kasalukuyang balanse ay na-update kada oras at ipinapakita dito. Ito ay kasama na ang iyong direktang kita, kita mula sa staking, at kita mula sa iyong team."
-        },
         "segmented_control_tier_one": {
           "title": "Team",
           "description": "Dito maaari mong makita ang listahan ng mga taong ini-imbitahan mo na sumali sa Ice Network. Madali mong maaari i-track ang kanilang status mula dito at magpadala ng mga notification sa mga hindi aktibo."
@@ -831,5 +833,209 @@
     "expired_title": "Bonus Expired",
     "expired_message": "Unfortunately, today's bonus has expired. Stay tuned for the next notification!",
     "result_title": "Congratulations"
+  },
+  "ping_referrals_pop_up": {
+    "title": "Paki-antay habang pinu-ping namin lahat ng iyong mga kaibigan · {{count}}"
+  },
+  "creative_library": {
+    "title": "Malikhain na Aklatan ng Ice",
+    "share": "Buohin ang iyong pangarap na koponan sa Ice network!",
+    "get_started": {
+      "header": "Buohin ang Iyong Pangarap na Koponan",
+      "subtitle": "Magsimula sa Ice at buohin ang iyong matagumpay na maliit na komunidad",
+      "description": "Sumali sa mabilis na paglaki ng bilang ng mga gumagamit ng Ice na nagbuo ng kanilang sariling mga maliit na komunidad at kumikita ng higit pang mga gantimpala. Ang aming mga kagamitan sa pag-promote, mga gabay, at mga tip ay nagbibigay ng madali paraan upang ipamahagi ang balita at buohin ang isang matagumpay na komunidad.",
+      "get_started": "Magsimula",
+      "carousel": {
+        "01": {
+          "title": "Sumali",
+          "description": "I-download ang aming app, kunin ang iyong palayaw, at simulan ang pagmimina.\n\nIkaw ay sasali sa isang pandaigdigang komunidad ng mga gumagamit na may pagmamahal sa decentralization, autonomy, at sa kapangyarihan ng mga tao."
+        },
+        "02": {
+          "title": "Mag-imbita",
+          "description": "Imbitahin ang iyong audience na sumali sa Ice at magtrabaho nang magkasama upang mapanatili ang karagdagang mga gantimpala.\n\nDagdag pa, makakatulong ka sa pagpapalaganap ng balita tungkol sa mga benepisyo ng decentralization at sa kinabukasan ng finance."
+        },
+        "03": {
+          "title": "Kumita",
+          "description": "Palawakin ang iyong mga gantimpala sa pamamagitan ng pagpapalaganap ng iyong network at pagsusulong sa iba na sumali sa Ice community.\n\nSumama sa aming misyon na rebolusyunaryuhin ang kinabukasan ng finance sa pamamagitan ng decentralization at autonomy."
+        }
+      }
+    },
+    "carousel": {
+      "01": {
+        "title": "Mga Video",
+        "description": "Gamitin ang aming koleksyon ng mga video upang i-promote ang iyong code ng imbitasyon, lanscape o portrait, may o walang mga subtitle, kami ay nandito para sa iyo.",
+        "action": "Tingnan ang mga video"
+      },
+      "02": {
+        "title": "Mga Larawan",
+        "description": "Isang larawan ay may halagang libo-libong salita. Maaari kang pumili mula sa aming koleksyon ng mga banners, social media assets, mga template, at mga app mockup.",
+        "action": "Tingnan ang mga larawan"
+      },
+      "03": {
+        "title": "Nakabatay na Banner",
+        "description": "Sa aming nakabatay na banner, maaari mong madali nitong i-promote ang Ice sa iyong mga bisita sa website at imbitahin silang sumali sa iyong mirco-komunidad.",
+        "action": "I-install ang banner"
+      }
+    },
+    "social_section": {
+      "share": {
+        "title": "Ibahagi ang Iyong Kuwento",
+        "description": "Ibahagi ang iyong paglalakbay sa Ice network at ang maraming benepisyo nito sa pamamagitan ng pagsusulat ng isang artikulo sa iyong wika.\n\nIbahagi ito sa iyong Blog, Medium, Reddit, Quora, Blogger, at higit pa.\n\nMakakahanap ka ng lahat ng impormasyon tungkol sa Ice at ang mga natatanging features nito sa aming [[:link]]Knowledge Base[[/:link]], [[:link]]Homepage[[/:link]], at [[:link]]FAQ[[/:link]] na pahina."
+      },
+      "spread": {
+        "title": "Magpalaganap ng Balita",
+        "description": "Sumali sa usapan at ipakilala ang Ice network sa iyong mga paboritong forums.\nMagsimula ng mga bagong threads at ibahagi ang iyong mga iniisip tungkol sa decentralization ng finance, ang kinabukasan ng pera, at ang kapangyarihan ng pagbuo ng isang maliit na komunidad sa pamamagitan ng Ice.\n\nMaging isang ☃️ Snowman at magsimula ng diskusyon tungkol sa potensyal ng pandaigdigang currency na ito."
+      },
+      "bring": {
+        "title": "Magdala ng Iyong mga Kaibigan",
+        "description": "Gamitin ang aming madaling gamiting feature na pag-imbita at ibahagi ang iyong personal na code ng imbitasyon sa iyong mga kaibigan sa iyong paboritong social media platforms."
+      }
+    },
+    "promo_section": {
+      "web": {
+        "title": "I-plug & Play para sa mga May-Ari ng Website",
+        "description": "I-embed ang Ice network diretso sa iyong website gamit ang aming simpleng at flexible na JS banner. Ito ay isang mabilis at madaling setup na maaring i-customize upang tugma sa iyong branding ng website. Ito ay isinalin sa 50 mga wika at kompatible sa anumang uri ng website platform.\n\nKopyahin at i-paste ang code sa iyong website, at simulan ang pagpo-promote ng Ice network sa iyong mga bisita ngayon.",
+        "action": "I-install ang banner"
+      },
+      "mobile": {
+        "title": "Aklatan para sa Mga Mobile App",
+        "description": "Integrate ang aming madaling gamiting aklatan sa iyong mobile app at imbitahin ang iyong mga user na sumali sa iyong maliit na komunidad at simulan ang pagmimina.\n\nSa suporta para sa pagsasalin at mga flexible na opsyon sa setup, maaring tiyakin mo na ang lahat ng iyong mga user ay may access sa parehong kahusayang Ice experience, kahit nasaan sila sa mundo.",
+        "action1": "Android library",
+        "action2": "React Native library"
+      }
+    },
+    "practices_section": {
+      "good": {
+        "title": "Mabubuting Pamamaraan",
+        "rules": {
+          "01": {
+            "title": "Maging Tapat",
+            "description": "Magsulat mula sa iyong personal na karanasan at perspektibo. Ibahagi ang iyong tapat na mga saloobin at damdamin tungkol sa Ice network."
+          },
+          "02": {
+            "title": "Gumamit ng Magiliw na Tonong Wika",
+            "description": "Magsulat na para bang ikaw ay nakikipag-usap sa isang kaibigan, at iwasang gumamit ng sobrang teknikal na salita o wika na maaaring mahirap intindihin ng mga mambabasa."
+          },
+          "03": {
+            "title": "Maging Malikhain",
+            "description": "Huwag matakot na mag-eksperimento sa iba't ibang uri ng content, tulad ng mga blog post, video, o mga update sa social media. Mag-enjoy at maging malikhain sa paraan ng iyong pagpo-promote ng Ice network sa iyong audience."
+          }
+        }
+      },
+      "bad": {
+        "title": "Masamang Pamamaraan",
+        "rules": {
+          "01": {
+            "title": "Huwag Mag-Spam",
+            "description": "Iwasang magpadala ng mga di-hiling na mensahe o paulit-ulit na mag-post ng parehong content sa iba't ibang mga platform. Ito ay maaring makita bilang nakaka-abala at nakakairita."
+          },
+          "02": {
+            "title": "Huwag Iligaw ang mga Tao",
+            "description": "Ang proyekto ng Ice ay hindi nagbabayad ng cash sa mga gumagamit, kami ay nagbibigay lamang ng mga gantimpala sa pamamagitan ng Ice coins. Mangyaring iwasang mag-post ng content tulad ng \"I-convert ang iyong Ice sa cash\" o \"Paano kumita ng $100 gamit ang Ice\" at iba pa."
+          },
+          "03": {
+            "title": "Huwag Makilahok sa mga Panloloko",
+            "description": "Nagbibigay halaga kami sa transparency at katapatan sa aming komunidad. Anumang mga aktibidad na pandaraya tulad ng paggawa ng maraming account o pagsusumikap na manipulahin ang Ice network ay hindi papayagan."
+          }
+        }
+      }
+    }
+  },
+  "face_auth": {
+    "header": "Pagkakakilanlan sa Mukha",
+    "title": "KYC Hakbang #1",
+    "description": "Para sa isang maginhawang karanasan, idinadagdag namin ang pagkakakilanlan sa mukha. Ang hakbang na ito ay naglilingkod bilang [[:bold]]Una at pangunahing Hakbang #1 sa KYC[[/:bold]], naghahanda sa iyo para sa isang mabilisang pag-verify para sa hinaharap na Mainnet. \n\nKumpirmahin ang iyong pagkakakilanlan ngayon upang tiyakin ang maayos na paglalakbay sa kinabukasan!",
+    "consent": "Sumasang-ayon ako sa [[:link]]Mga Tuntunin at Kondisyon sa KYC ng Ice[[/:link]].",
+    "confirmation": "Kumpirmahin ko na ang pagkakakilanlan na aking ginagamit para sa autentikasyong ito ay magiging pareho sa nakakabit sa account na ito, at hindi ito maaaring baguhin sa mga susunod na pagkakataon.",
+    "auth_status": {
+      "loading": {
+        "description": "Mangyaring maghintay habang kami ay naga-authenticate sa iyo..."
+      },
+      "success": {
+        "title": "✅ Matagumpay na Autentikasyon",
+        "description": "Salamat sa pagkumpirma ng iyong pagkakakilanlan. Ang iyong sesyon ng check-in ay magsisimula na ngayon.",
+        "action": "Tapos Na"
+      },
+      "failure": {
+        "title": "❌ Nagtagumpay ang Autentikasyon",
+        "description": "Hindi namin ma-verify ang iyong pagkakakilanlan. Mangyaring tiyakin na magandang liwanag at buo ang pagkakakitaan ng iyong mukha, pagkatapos ay subukan ulit.",
+        "action": "Subukan Muli"
+      },
+      "try_later": {
+        "title": "❌ Nagtagumpay ang Autentikasyon",
+        "description": "Hindi namin ma-verify ang iyong pagkakakilanlan. Mangyaring tiyakin na magandang liwanag at buo ang pagkakakitaan ng iyong mukha, at subukan ulit sa loob ng 1 oras.",
+        "action": "Isara"
+      },
+      "continue": {
+        "title": "😁 Pag-verify ng Emosyon sa KYC",
+        "description": "Magaling! Natapos mo na ang unang hakbang sa pamamagitan ng pagkuha ng iyong selfie. Ngayon, hayaan nating magpatuloy sa pamamagitan ng pagsunod sa mga emosyon na ipinapakita upang magpatuloy sa iyong proseso ng KYC.",
+        "action": "Magpatuloy"
+      },
+      "banned": {
+        "title": "❌ Bawal ang Pagmimina",
+        "description": "Natukoy namin na ang iyong pagkakakilanlan ay kaugnay ng isa pang account. Kung sa palagay mo ito ay isang kamalian, mangyaring mag-email sa [[:bold]]feedback@ice.io[[/:bold]] kasama ang iyong nickname at isang mataas-kalidad na selfie.",
+        "action": "Isara"
+      }
+    },
+    "emotions_recognition": {
+      "start": "Simulan",
+      "please_show_this": "Mangyaring ipakita ang emosyong ito",
+      "emotions": {
+        "anger": "galit",
+        "contempt": "hinamak",
+        "disgust": "pagkayamot",
+        "fear": "takot",
+        "happiness": "kaligayahan",
+        "neutral": "neutral",
+        "sadness": "kalungkutan",
+        "surprise": "kagulatang"
+      }
+    },
+    "device_angle_warning": {
+      "title": "Babala",
+      "description": "Mangyaring panatilihing tuwid ang telepono habang tinitingnan ang kamera"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Siguruhing tama ang inyong ipinasok na pangalang ginagamit. Sa pagkumpleto ng hakbang na ito, magiging bahagi ka ng koponan ng iyong kaibigan."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Subaybayan ang iyong progreso at global na kalagayan"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Palakihin ang iyong koponan at lumikha ng komunidad"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Palakihin ang iyong koponan ng mga bagong miyembro"
+    },
+    "profile": {
+      "invite_friends_engage": "Magkalat ng balita at imbitahan ang iyong mga kaibigan na sumali sa komunidad ng Ice Network!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Gamitin ang feature na ito upang imbitahan ang iyong mga kaibigan na sumali sa komunidad ng Ice. Palawakin ang iyong network, magbahagi ng karanasan, at magtayo ng matagalang ugnayan kasama sila."
+        },
+        "wallet": {
+          "description": "Dito maaari mong hanapin ang iyong kasalukuyang balanse ng Ice kasama ang rate ng kita."
+        },
+        "earning": {
+          "description": "Manatili sa loop sa iyong rate ng kita at mga bonus! Dito maaari mong suriin ang iyong kasalukuyang rate, ang aming base rate, at mga rate ng bonus."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "Sa seksyong ito, makikita mo ang kabuuang bilang ng mga kasapi ng iyong koponan na iyong inimbitahan, na nagbibigay-daan sa iyo na subaybayan ang paglago at pag-unlad ng iyong komunidad."
+        },
+        "earnings": {
+          "description": "Ang iyong kasalukuyang balanse ay mag-a-update kada oras at ipinapakita dito. Ito ay kinabibilangan ng iyong direktang kita at mga kita na naka-lock."
+        }
+      }
+    }
   }
 }

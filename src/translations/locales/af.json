@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "GLOBALE RANGORDE",
       "referrals": "VERWYSINGS",
-      "description": "Verwys meer gebruikers en verdien meer [[:ice]].",
-      "description_team": "Nooi meer gebruikers uit en verdien meer [[:ice]]."
+      "description": "Verwys meer gebruikers en verdien meer [[:ice]]."
     },
     "referrals": {
       "title": "VERWYSINGS",
@@ -711,12 +710,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "Hier sal jy sien hoeveel spanlede jy in totaal het. Hoe meer mense jy uitnooi, hoe hoër jou bonus sal wees."
-        },
-        "earnings": {
-          "description": "Jou huidige saldo word elke uur opgedateer en hier vertoon. Dit sluit jou direkte & gestaakte verdienste saam met die verdienste van jou span in."
-        },
         "segmented_control_tier_one": {
           "title": "Span",
           "description": "Hier kan jy die lys van die mense wat jy uitgenooi het om by die Ice-netwerk aan te sluit, sien. Jy kan maklik hulle status van hier af volg en kennisgewings aan die onaktiewe lede stuur."
@@ -1091,6 +1084,48 @@
     "device_angle_warning": {
       "title": "Waarskuwing",
       "description": "Hou asseblief die telefoon regop terwyl jy na die kamera kyk"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "Maak asseblief seker dat jy die korrekte bynaam invoer. Deur hierdie stap te voltooi, sal jy deel word van jou vriend se span."
+    },
+    "home": {
+      "pioneer": {
+        "description": "Volg jou vordering en wêreldwye status op"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "Bou jou span uit en skep 'n gemeenskap"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "Bou jou span uit met nuwe lede"
+    },
+    "profile": {
+      "invite_friends_engage": "Versprei die woord en nooi jou vriende uit om deel te word van die Ice Network-gemeenskap!"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "Gebruik hierdie funksie om jou vriende uit te nooi om deel te word van die Ice-gemeenskap. Brei jou netwerk uit, deel ervarings en bou saam blywende verbindings."
+        },
+        "wallet": {
+          "description": "Jy kan hier jou huidige Ice-balans vind, saam met die verdienkoers."
+        },
+        "earning": {
+          "description": "Bly op hoogte van jou verdienkoers en bonusse! Hier kan jy jou huidige koers, ons basiskoers en bonuskoerse sien."
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "In hierdie afdeling sal jy die totale aantal spanlede sien wat jy uitgenooi het, wat jou in staat stel om die groei en evolusie van jou gemeenskap dop te hou."
+        },
+        "earnings": {
+          "description": "Jou huidige balans word elke uur opgedateer en hier vertoon. Dit sluit jou direkte en gestaakte verdienste in."
+        }
+      }
     }
   }
 }

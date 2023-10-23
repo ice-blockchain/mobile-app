@@ -3,6 +3,7 @@
 import {IceLabel} from '@components/Labels/IceLabel';
 import {LinesBackground} from '@components/LinesBackground';
 import {COLORS} from '@constants/colors';
+import {isLiteTeam} from '@constants/featureFlags';
 import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
@@ -26,7 +27,9 @@ export const InviteShare = memo(() => {
         <LinesBackground style={styles.background} />
         <Text style={styles.description}>
           {replaceString(
-            t('invite_share.description'),
+isLiteTeam
+? t('override.profile.invite_friends_engage')
+: t('invite_share.description'),
             tagRegex('ice'),
             (match, index) => (
               <IceLabel key={match + index} iconOffsetY={isAndroid ? 3 : 2} />

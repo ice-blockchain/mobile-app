@@ -3,6 +3,7 @@
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {CommonInput} from '@components/Inputs/CommonInput';
 import {COLORS} from '@constants/colors';
+import {isLiteTeam} from '@constants/featureFlags';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {FinalizeRegistrationStep} from '@screens/Templates/FinalizeRegistrationStep';
 import {BigHeader} from '@screens/Templates/FinalizeRegistrationStep/components/BigHeader';
@@ -62,7 +63,9 @@ export const WhoInvitedYou = () => {
         <Info
           text={
             <Text style={styles.infoText}>
-              {t('whoInvitedYou.dontHaveInvitationCode', {value: 25})}
+              {isLiteTeam
+                ? t('override.whoInvitedYou.dontHaveInvitationCode')
+                : t('whoInvitedYou.dontHaveInvitationCode')}
             </Text>
           }
           textStyle={styles.infoTextContainer}

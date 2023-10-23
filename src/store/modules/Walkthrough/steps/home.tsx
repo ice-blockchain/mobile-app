@@ -67,7 +67,7 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
       title: t('walkthrough.home.invite.title'),
       description: t(
         isLiteTeam
-          ? 'walkthrough.overrides.home.invite.description'
+          ? 'override.walkthrough.home.invite.description'
           : 'walkthrough.home.invite.description',
       ),
     },
@@ -173,7 +173,9 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
         <WalletIcon color={COLORS.white} width={rem(24)} height={rem(24)} />
       ),
       title: t('walkthrough.home.wallet.title'),
-      description: t('walkthrough.home.wallet.description'),
+      description: isLiteTeam
+        ? t('override.walkthrough.home.wallet.description')
+        : t('walkthrough.home.wallet.description'),
       before: function* () {
         yield navigate({
           name: 'Home',
@@ -193,7 +195,9 @@ export const HOME_WALKTHROUGH_STEPS: WalkthroughStepStaticData<HomeWalkthroughSt
         />
       ),
       title: t('walkthrough.home.earning.title'),
-      description: t('walkthrough.home.earning.description'),
+      description: isLiteTeam
+        ? t('override.walkthrough.home.earning.description')
+        : t('walkthrough.home.earning.description'),
       before: function* () {
         yield navigate({name: 'Home', params: {activePagerCard: 'earning'}});
         yield delay(DELAY);

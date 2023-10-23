@@ -115,7 +115,7 @@ export const LevelCard = forwardRef(
           <Text style={styles.noteText}>
             {replaceString(
               isLiteTeam
-                ? t('home.pioneer.description_team')
+                ? t('override.home.pioneer.description')
                 : t('home.pioneer.description'),
               tagRegex('ice'),
               (match, index) => (

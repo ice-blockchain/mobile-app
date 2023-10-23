@@ -267,8 +267,7 @@
     "pioneer": {
       "rank": "全球排名",
       "referrals": "推荐人",
-      "description": "推荐越多，赚的 [[:ice]] 就越多。",
-      "description_team": "邀请更多用户，赚取更多 [[:ice]]。"
+      "description": "推荐越多，赚的 [[:ice]] 就越多。"
     },
     "referrals": {
       "title": "推荐人",
@@ -699,9 +698,6 @@
   "walkthrough": {
     "overrides": {
       "home": {
-        "invite": {
-          "description": "使用此功能邀请您的朋友加入Ice社区。扩展您的网络，分享经验，一起赚取奖励。"
-        },
         "team": {
           "description": "[[:ice]] 与朋友一起更好。在这个页面上，您可以查看您的团队成员的状态。您还可以从这里向他们发送消息。"
         },
@@ -711,12 +707,6 @@
         }
       },
       "team": {
-        "referrals": {
-          "description": "在这里，您可以看到您的团队总共有多少成员。您邀请的人越多，您的奖金就越高。"
-        },
-        "earnings": {
-          "description": "您当前的余额每小时都会更新，并在这里显示。它包括您的直接收入、抵押收入以及您的团队收入。"
-        },
         "segmented_control_tier_one": {
           "title": "团队",
           "description": "在这里，您可以查看您邀请加入Ice Network的人员名单。您可以从这里轻松跟踪他们的状态，并向不活跃的人发送通知。"
@@ -1091,6 +1081,48 @@
     "device_angle_warning": {
       "title": "警告",
       "description": "查看相机时，请保持手机垂直"
+    }
+  },
+  "override": {
+    "whoInvitedYou": {
+      "dontHaveInvitationCode": "请确保您输入了正确的昵称。完成此步骤后，您将成为您朋友团队的一部分。"
+    },
+    "home": {
+      "pioneer": {
+        "description": "跟踪您的进度和全球状态"
+      },
+      "tasks": {
+        "invite_friends": {
+          "description": "发展您的团队并建立社群"
+        }
+      }
+    },
+    "settings": {
+      "invite_description": "与新成员一起发展您的团队"
+    },
+    "profile": {
+      "invite_friends_engage": "传播消息并邀请您的朋友加入 Ice Network 社群！"
+    },
+    "walkthrough": {
+      "home": {
+        "invite": {
+          "description": "使用此功能邀请您的朋友加入 Ice 社群。扩展您的网络，分享经验并共同建立持久的联系。"
+        },
+        "wallet": {
+          "description": "您可以在这里找到您当前的 Ice 余额，以及您的收益率。"
+        },
+        "earning": {
+          "description": "保持您的收益率和奖金更新！您可以在这里查看当前率，我们的基础率和奖金率。"
+        }
+      },
+      "team": {
+        "referrals": {
+          "description": "在此部分，您将看到您邀请的团队成员总数，可以帮助您跟踪您社群的增长和发展。"
+        },
+        "earnings": {
+          "description": "您的当前余额每小时更新一次，并在此显示。它包括您的直接收益和质押收益。"
+        }
+      }
     }
   }
 }
