@@ -7,11 +7,18 @@ import {
 } from '@constants/timeouts';
 import {hapticFeedback} from '@utils/device';
 import {useEffect, useState} from 'react';
+import {Platform} from 'react-native';
 import {
   accelerometer,
   SensorTypes,
   setUpdateIntervalForType,
 } from 'react-native-sensors';
+
+const GRAVITY = 9.81;
+const THRESHOLD =
+  Platform.OS === 'ios'
+    ? -Math.sin(DEVICE_Y_ALLOWED_ROTATION_RADIANS)
+    : GRAVITY - DEVICE_Y_ALLOWED_ROTATION_RADIANS;
 
 export const useIsDeviceAngleAllowed = () => {
   const [isAllowed, setIsAllowed] = useState<boolean>(true);
@@ -23,9 +30,10 @@ export const useIsDeviceAngleAllowed = () => {
     );
     const subscription = accelerometer.subscribe(data => {
       if (data?.y != null) {
-        const gravity = 9.81;
         setIsAllowed(
-          Math.abs(data.y) > gravity - DEVICE_Y_ALLOWED_ROTATION_RADIANS,
+          Platform.OS === 'ios'
+            ? data.y < THRESHOLD
+            : Math.abs(data.y) > THRESHOLD,
         );
       }
     });
