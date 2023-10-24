@@ -2,7 +2,6 @@
 
 import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
-import {FACE_RECOGNITION_PICTURE_SIZE} from '@constants/faceRecognition';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
@@ -10,7 +9,10 @@ import {
   emotionsAuthSessionSelector,
   emotionsAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
-import {isEmotionsAuthFinalised} from '@store/modules/FaceRecognition/utils';
+import {
+  getCroppedPictureUri,
+  isEmotionsAuthFinalised,
+} from '@store/modules/FaceRecognition/utils';
 import {shallowCompare} from '@utils/array';
 import {showError} from '@utils/errors';
 import {extractFramesWithFFmpeg, getPictureCropStartY} from '@utils/ffmpeg';
@@ -19,6 +21,22 @@ import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 type Actions = ReturnType<
   typeof FaceRecognitionActions.EMOTIONS_AUTH.START.create
 >;
+
+async function getCroppedFrames({
+  frames,
+  pictureWidth,
+  cropStartY,
+}: {
+  frames: string[];
+  pictureWidth: number;
+  cropStartY: number;
+}): Promise<string[]> {
+  return Promise.all(
+    frames.map(frame =>
+      getCroppedPictureUri({pictureUri: frame, pictureWidth, cropStartY}),
+    ),
+  );
+}
 
 export function* initEmotionsAuthSaga(action: Actions) {
   try {
@@ -39,16 +57,21 @@ export function* initEmotionsAuthSaga(action: Actions) {
       extractFramesWithFFmpeg,
       {
         inputUri: videoUri,
+      },
+    );
+    const croppedFrames: SagaReturnType<typeof getCroppedFrames> = yield call(
+      getCroppedFrames,
+      {
+        frames,
+        pictureWidth: videoWidth,
         cropStartY,
-        outputSize: FACE_RECOGNITION_PICTURE_SIZE,
-        width: videoWidth,
       },
     );
     const response: SagaReturnType<typeof Api.faceRecognition.emotionsAuth> =
       yield call(Api.faceRecognition.emotionsAuth, {
         userId,
         sessionId,
-        pictureUris: frames,
+        pictureUris: croppedFrames,
       });
     const emotionsAuthStatus: ReturnType<typeof emotionsAuthStatusSelector> =
       yield select(emotionsAuthStatusSelector);
