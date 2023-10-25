@@ -60,3 +60,6 @@ export const installReferrerSelector = (state: RootState) =>
 
 export const isTeamEnabledSelector = (state: RootState) =>
   !!state.account.authConfig?.team?.enabled;
+
+export const isAchievementsEnabledSelector = (state: RootState) =>
+  !!state.account.authConfig?.achievements?.enabled;
