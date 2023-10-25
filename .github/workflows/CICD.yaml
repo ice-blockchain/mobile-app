@@ -12,7 +12,7 @@ jobs:
   react-native:
     name: React Native -- verify, build, test
     if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
-    runs-on: macOS-latest
+    runs-on: macos-latest-xlarge
     steps:
       - name: Setup Node
         id: setup-node
@@ -106,7 +106,7 @@ jobs:
     # TODO: uncomment this when we start testing.
     # if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
     if: ${{ 1 == 0  }}
-    runs-on: macOS-latest
+    runs-on: macos-latest-xlarge
     steps:
       - uses: actions/cache@v3
         id: cache_all
@@ -241,7 +241,7 @@ jobs:
     # needs: [ios-e2e-test]
     needs: [react-native]
     if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
-    runs-on: macOS-latest
+    runs-on: macos-latest-xlarge
     env:
       FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 180
       FASTLANE_XCODEBUILD_SETTINGS_RETRIES: 10
