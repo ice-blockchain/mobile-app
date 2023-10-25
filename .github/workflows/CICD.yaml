@@ -12,13 +12,13 @@ jobs:
   react-native:
     name: React Native -- verify, build, test
     if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
-    runs-on: macOS-latest
+    runs-on: macos-latest-xlarge
     steps:
       - name: Setup Node
         id: setup-node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
       - name: Checkout main repo
         id: checkout-main-repo
         uses: actions/checkout@v3
@@ -106,7 +106,7 @@ jobs:
     # TODO: uncomment this when we start testing.
     # if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
     if: ${{ 1 == 0  }}
-    runs-on: macOS-latest
+    runs-on: macos-latest-xlarge
     steps:
       - uses: actions/cache@v3
         id: cache_all
@@ -129,7 +129,7 @@ jobs:
         id: setup-node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
       - name: Install Pod Dependencies
         id: install-pod-dependencies
         run: cd ./main-repo/ios && pod install && cd ..
@@ -192,7 +192,7 @@ jobs:
         id: setup-node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
       - name: Setup Java
         id: setup-java
         uses: actions/setup-java@v3
@@ -241,7 +241,7 @@ jobs:
     # needs: [ios-e2e-test]
     needs: [react-native]
     if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
-    runs-on: macOS-latest
+    runs-on: macos-latest-xlarge
     env:
       FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 180
       FASTLANE_XCODEBUILD_SETTINGS_RETRIES: 10
