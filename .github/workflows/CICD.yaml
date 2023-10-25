@@ -18,7 +18,7 @@ jobs:
         id: setup-node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 16
       - name: Checkout main repo
         id: checkout-main-repo
         uses: actions/checkout@v3
@@ -129,7 +129,7 @@ jobs:
         id: setup-node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 16
       - name: Install Pod Dependencies
         id: install-pod-dependencies
         run: cd ./main-repo/ios && pod install && cd ..
@@ -192,7 +192,7 @@ jobs:
         id: setup-node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 16
       - name: Setup Java
         id: setup-java
         uses: actions/setup-java@v3
