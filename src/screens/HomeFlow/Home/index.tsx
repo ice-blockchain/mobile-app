@@ -32,6 +32,8 @@ export const Home = memo(() => {
   const {elementRef, onElementLayout} = useAchievementsWalkthrough();
   const isAchievementsEnabled = useSelector(isAchievementsEnabledSelector);
 
+  const showTasks = !isLiteTeam || isAchievementsEnabled;
+
   return (
     <View style={styles.container}>
       <HomeHeader translateY={translateY} transitionOffset={PAGE_HEIGHT} />
@@ -48,10 +50,9 @@ export const Home = memo(() => {
           <Pager />
           <View style={commonStyles.baseSubScreen}>
             <Overview translateY={translateY} topOffset={PAGE_HEIGHT} />
-            <Team />
+            <Team showEmptyTeamView={!showTasks} />
             <View ref={elementRef} onLayout={onElementLayout}>
-              {!isLiteTeam ? <Tasks /> : null}
-              {isAchievementsEnabled && isLiteTeam ? <Tasks /> : null}
+              {showTasks ? <Tasks /> : null}
             </View>
             <SocialLinks />
           </View>

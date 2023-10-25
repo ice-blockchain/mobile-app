@@ -20,7 +20,11 @@ import {ListRenderItem, StyleSheet, View} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
 import {isAndroid, rem} from 'rn-units';
 
-export const Team = memo(() => {
+type Props = {
+  showEmptyTeamView?: boolean;
+};
+
+export const Team = memo(({showEmptyTeamView}: Props) => {
   const navigation =
     useNavigation<BottomTabNavigationProp<MainTabsParamList>>();
 
@@ -67,7 +71,7 @@ export const Team = memo(() => {
   );
 
   if (referrals.length < 2 && !hasNext) {
-    return null;
+    return showEmptyTeamView ? <View style={styles.emptyTeamView} /> : null;
   }
 
   return (
@@ -109,5 +113,8 @@ const styles = StyleSheet.create({
   },
   activityIndicator: {
     marginLeft: rem(10),
+  },
+  emptyTeamView: {
+    paddingTop: rem(12),
   },
 });
