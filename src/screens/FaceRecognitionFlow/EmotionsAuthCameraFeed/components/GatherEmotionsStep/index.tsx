@@ -18,7 +18,6 @@ import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
   emotionsAuthEmotionsSelector,
   emotionsAuthNextEmotionIndexSelector,
-  emotionsAuthSessionExpiredAtSelector,
   emotionsAuthSessionSelector,
   emotionsAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
@@ -57,7 +56,6 @@ export function GatherEmotionsStep({
   const isDeviceAngleAllowed = useIsDeviceAngleAllowed();
   const emotions = useSelector(emotionsAuthEmotionsSelector);
   const session = useSelector(emotionsAuthSessionSelector);
-  const sessionExpiredAt = useSelector(emotionsAuthSessionExpiredAtSelector);
   const emotionsAuthNextEmotionIndex = useSelector(
     emotionsAuthNextEmotionIndexSelector,
   );
@@ -67,7 +65,6 @@ export function GatherEmotionsStep({
   const emotionsAuthStatus = useSelector(emotionsAuthStatusSelector);
 
   const dispatch = useDispatch();
-  const isSessionExpired = !!sessionExpiredAt && Date.now() > sessionExpiredAt;
 
   const [isVideoRecording, setIsVideoRecording] = useState(false);
   const [isAllRecorded, setIsAllRecorded] = useState(false);
@@ -84,7 +81,6 @@ export function GatherEmotionsStep({
   useEffect(() => {
     if (
       started &&
-      !isSessionExpired &&
       !!session &&
       !!emotions[emotionsAuthNextEmotionIndex] &&
       isCameraReady &&
@@ -162,7 +158,6 @@ export function GatherEmotionsStep({
     emotionsAuthNextEmotionIndex,
     session,
     isCameraReady,
-    isSessionExpired,
     started,
   ]);
 
@@ -170,23 +165,16 @@ export function GatherEmotionsStep({
     if (
       (emotions.length &&
         emotionsAuthNextEmotionIndex >= emotions.length &&
-        emotionsAuthStatus !== 'NEED_MORE_EMOTIONS' &&
-        !isSessionExpired) ||
+        emotionsAuthStatus !== 'NEED_MORE_EMOTIONS') ||
       isEmotionsAuthFinalised(emotionsAuthStatus)
     ) {
       setIsAllRecorded(true);
     }
-  }, [
-    emotions,
-    emotionsAuthNextEmotionIndex,
-    emotionsAuthStatus,
-    isSessionExpired,
-  ]);
+  }, [emotions, emotionsAuthNextEmotionIndex, emotionsAuthStatus]);
 
   useEffect(() => {
     if (
       (!session && !isEmotionsAuthFinalised(emotionsAuthStatus)) ||
-      isSessionExpired ||
       (emotions.length &&
         emotionsAuthNextEmotionIndex >= emotions.length &&
         emotionsAuthStatus === 'NEED_MORE_EMOTIONS')
@@ -198,7 +186,6 @@ export function GatherEmotionsStep({
     emotions.length,
     emotionsAuthNextEmotionIndex,
     emotionsAuthStatus,
-    isSessionExpired,
     session,
   ]);
 
@@ -246,7 +233,10 @@ export function GatherEmotionsStep({
                   previewTimeInMs={WAIT_BEFORE_RECORDING_MS}
                 />
               ) : (
-                <StartButton onPress={onStartPressed} />
+                <StartButton
+                  loading={started && !recordingEmotion}
+                  onPress={onStartPressed}
+                />
               )}
             </View>
             {!isDeviceAngleAllowed && (
