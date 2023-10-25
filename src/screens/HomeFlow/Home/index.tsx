@@ -2,6 +2,7 @@
 
 import {PullToRefreshContainer} from '@components/PullToRefreshContainer';
 import {COLORS} from '@constants/colors';
+import {isLiteTeam} from '@constants/featureFlags';
 import {commonStyles} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
@@ -14,9 +15,11 @@ import {Team} from '@screens/HomeFlow/Home/components/Team';
 import {useAchievementsWalkthrough} from '@screens/HomeFlow/Home/hooks/useAchievementsWalkthrough';
 import {useHandleScrollToParam} from '@screens/HomeFlow/Home/hooks/useHandleScrollToParam';
 import {useHomeRefresh} from '@screens/HomeFlow/Home/hooks/useHomeRefresh';
+import {isAchievementsEnabledSelector} from '@store/modules/Account/selectors';
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated, {useSharedValue} from 'react-native-reanimated';
+import {useSelector} from 'react-redux';
 
 export const Home = memo(() => {
   useFocusStatusBar({style: 'dark-content'});
@@ -27,6 +30,7 @@ export const Home = memo(() => {
 
   const {animatedScrollViewRef} = useHandleScrollToParam();
   const {elementRef, onElementLayout} = useAchievementsWalkthrough();
+  const isAchievementsEnabled = useSelector(isAchievementsEnabledSelector);
 
   return (
     <View style={styles.container}>
@@ -46,7 +50,8 @@ export const Home = memo(() => {
             <Overview translateY={translateY} topOffset={PAGE_HEIGHT} />
             <Team />
             <View ref={elementRef} onLayout={onElementLayout}>
-              <Tasks />
+              {!isLiteTeam ? <Tasks /> : null}
+              {isAchievementsEnabled && isLiteTeam ? <Tasks /> : null}
             </View>
             <SocialLinks />
           </View>

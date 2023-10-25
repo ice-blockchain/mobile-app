@@ -16,4 +16,11 @@ type TeamConfig = {
   team?: {enabled: boolean};
 };
 
-export type AuthConfig = AuthCodeConfig & FaceAuthConfig & TeamConfig;
+type AchievementsConfig = {
+  achievements?: {enabled: boolean};
+};
+
+export type AuthConfig = AuthCodeConfig &
+  FaceAuthConfig &
+  TeamConfig &
+  AchievementsConfig;
