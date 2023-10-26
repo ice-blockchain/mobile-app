@@ -3,22 +3,19 @@
 import {COLORS} from '@constants/colors';
 import {dayjs} from '@services/dayjs';
 import {logError} from '@services/logging';
+import * as Haptics from 'expo-haptics';
+import {ImpactFeedbackStyle} from 'expo-haptics/src/Haptics.types';
 import {Linking} from 'react-native';
-import ReactNativeHapticFeedback, {
-  HapticFeedbackTypes,
-} from 'react-native-haptic-feedback';
 import {
   InAppBrowser,
   InAppBrowserOptions,
 } from 'react-native-inappbrowser-reborn';
 import {wait} from 'rn-units';
 
-export function hapticFeedback(type: HapticFeedbackTypes = 'soft') {
-  const options = {
-    enableVibrateFallback: true,
-    ignoreAndroidSystemSettings: false,
-  };
-  ReactNativeHapticFeedback.trigger(type, options);
+export function hapticFeedback(
+  type: ImpactFeedbackStyle = ImpactFeedbackStyle.Light,
+) {
+  Haptics.impactAsync(type);
 }
 
 export const openLink = async (url: string) => {
