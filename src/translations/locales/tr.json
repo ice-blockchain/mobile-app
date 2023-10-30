@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Lütfen doğru takma adı girdiğinizden emin olun. Bu adımı tamamladığınızda, arkadaşınızın ekibinin bir parçası olacaksınız."
+      "dontHaveInvitationCode": "Lütfen doğru takma adı girdiğinizden emin olun."
     },
     "home": {
       "pioneer": {

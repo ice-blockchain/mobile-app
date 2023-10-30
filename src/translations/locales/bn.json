@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "দয়া করে নির্দিষ্ট নাম লিখুন নেন। এই পদক্ষেপ সম্পন্ন করে আপনি আপনার বন্ধুর দলের একটি অংশ হবেন।"
+      "dontHaveInvitationCode": "দয়া করে নির্দিষ্ট নাম লিখুন নেন।"
     },
     "home": {
       "pioneer": {

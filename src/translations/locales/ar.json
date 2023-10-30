@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "تأكد من إدخال الاسم الصحيح. من خلال إتمام هذه الخطوة، ستصبح جزءًا من فريق صديقك."
+      "dontHaveInvitationCode": "تأكد من إدخال الاسم الصحيح."
     },
     "home": {
       "pioneer": {

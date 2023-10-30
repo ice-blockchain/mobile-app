@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Pastikan anda memasukkan nama panggilan yang betul. Dengan menyelesaikan langkah ini, anda akan menjadi sebahagian daripada pasukan rakan anda."
+      "dontHaveInvitationCode": "Pastikan anda memasukkan nama panggilan yang betul."
     },
     "home": {
       "pioneer": {

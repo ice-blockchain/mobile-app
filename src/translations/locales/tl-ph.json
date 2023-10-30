@@ -998,7 +998,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Siguruhing tama ang inyong ipinasok na pangalang ginagamit. Sa pagkumpleto ng hakbang na ito, magiging bahagi ka ng koponan ng iyong kaibigan."
+      "dontHaveInvitationCode": "Siguruhing tama ang inyong ipinasok na pangalang ginagamit."
     },
     "home": {
       "pioneer": {

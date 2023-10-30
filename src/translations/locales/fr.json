@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Veuillez vous assurer d'entrer le surnom correct. En complétant cette étape, vous ferez partie de l'équipe de votre ami."
+      "dontHaveInvitationCode": "Veuillez vous assurer d'entrer le surnom correct."
     },
     "home": {
       "pioneer": {

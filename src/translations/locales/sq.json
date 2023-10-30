@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Ju lutemi sigurohuni që keni vendosur një emër të saktë. Duke përfunduar këtë hap, do të bëheni pjesë e skuadrës së mikut tuaj."
+      "dontHaveInvitationCode": "Ju lutemi sigurohuni që keni vendosur një emër të saktë."
     },
     "home": {
       "pioneer": {

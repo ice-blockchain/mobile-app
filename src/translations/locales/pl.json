@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Upewnij się, że wprowadziłeś poprawny pseudonim. Ukończenie tego kroku uczyni cię częścią drużyny twojego przyjaciela."
+      "dontHaveInvitationCode": "Upewnij się, że wprowadziłeś poprawny pseudonim."
     },
     "home": {
       "pioneer": {
