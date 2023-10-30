@@ -109,6 +109,14 @@ export function* startMiningSessionSaga(
           });
           return;
         }
+        if (errorData.kycSteps.includes(3) || errorData.kycSteps.includes(5)) {
+          yield removeScreenByName('Tooltip').catch();
+          navigate({
+            name: 'SocialKycFlow',
+            params: {kycStep: errorData.kycSteps[0]},
+          });
+          return;
+        }
       }
     } else if (isApiError(error, 403, 'MINING_DISABLED')) {
       const errorData = error?.response?.data?.data;

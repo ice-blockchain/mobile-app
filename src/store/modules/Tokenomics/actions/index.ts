@@ -7,6 +7,7 @@ import {
   MiningSummary,
   PreStakingSummary,
   RankingSummary,
+  SocialKycStepNumber,
 } from '@api/tokenomics/types';
 import {createAction} from '@store/utils/actions/createAction';
 
@@ -55,7 +56,7 @@ const START_MINING_SESSION = createAction('START_MINING_SESSION', {
   START: (params?: {
     resurrect?: boolean;
     tapToMineActionType?: 'Extended' | 'Default';
-    skipKYCStep?: FaceAuthKycNumber;
+    skipKYCStep?: FaceAuthKycNumber | SocialKycStepNumber;
   }) => params,
   SUCCESS: (miningSummary: MiningSummary | null) => ({miningSummary}),
   FAILED: (errorMessage: string) => ({errorMessage}),

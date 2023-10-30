@@ -13,6 +13,7 @@ export const COLORS = {
   primaryLight01opacity: 'rgba(27, 71, 195, 0.1)',
   secondary: '#707489',
   socialLink: '#3366CC',
+  paleSkyBlue: '#F3F7FC',
   secondaryLight: '#B6B4BA',
   secondaryPale: '#A3A5AA',
   secondaryFaint: '#E3EBF8',

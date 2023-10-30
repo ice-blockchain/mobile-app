@@ -75,3 +75,4 @@ export type BalanceHistoryPoint = {
 export type SELFIE_KYC_STEP = 1;
 export type EMOTIONS_KYC_STEP = 2;
 export type FaceAuthKycNumber = SELFIE_KYC_STEP | EMOTIONS_KYC_STEP;
+export type SocialKycStepNumber = 3 | 5;
