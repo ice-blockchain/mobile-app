@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Se till att du har angett rätt smeknamn. Genom att slutföra detta steg kommer du att bli en del av din väns lag."
+      "dontHaveInvitationCode": "Se till att du har angett rätt smeknamn."
     },
     "home": {
       "pioneer": {

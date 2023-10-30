@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Prosím, uistite sa, že ste zadali správny prezývku. Dokončením tohto kroku sa stanete súčasťou tímu vášho priateľa."
+      "dontHaveInvitationCode": "Prosím, uistite sa, že ste zadali správny prezývku."
     },
     "home": {
       "pioneer": {

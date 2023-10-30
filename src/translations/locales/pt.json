@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Certifique-se de que você digitou o apelido correto. Ao concluir esta etapa, você se tornará parte da equipe do seu amigo."
+      "dontHaveInvitationCode": "Certifique-se de que você digitou o apelido correto."
     },
     "home": {
       "pioneer": {

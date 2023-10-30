@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Bitte stellen Sie sicher, dass Sie den richtigen Spitznamen eingeben. Durch das Abschließen dieses Schritts werden Sie Teil des Teams Ihres Freundes."
+      "dontHaveInvitationCode": "Bitte stellen Sie sicher, dass Sie den richtigen Spitznamen eingeben."
     },
     "home": {
       "pioneer": {

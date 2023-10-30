@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Por favor, asegúrese de ingresar el apodo correcto. Al completar este paso, formarás parte del equipo de tu amigo."
+      "dontHaveInvitationCode": "Por favor, asegúrese de ingresar el apodo correcto."
     },
     "home": {
       "pioneer": {

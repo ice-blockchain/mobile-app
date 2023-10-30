@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "正しいニックネームを入力していることを確認してください。このステップを完了すると、友達のチームの一部になります。"
+      "dontHaveInvitationCode": "正しいニックネームを入力していることを確認してください。"
     },
     "home": {
       "pioneer": {

@@ -1082,7 +1082,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Please make sure you enter the correct nickname. By completing this step, you will become part of your friend’s team."
+      "dontHaveInvitationCode": "Please make sure you enter the correct nickname."
     },
     "home": {
       "pioneer": {

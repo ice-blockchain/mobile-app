@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "올바른 닉네임을 입력했는지 확인하십시오. 이 단계를 완료하면 친구의 팀의 일원이 됩니다."
+      "dontHaveInvitationCode": "올바른 닉네임을 입력했는지 확인하십시오."
     },
     "home": {
       "pioneer": {
