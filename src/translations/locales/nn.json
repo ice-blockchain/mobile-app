@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Ver vennligst sikker på at du har skrive inn riktig kallenavn. Ved å fullføre dette trinnet, blir du en del av vennens team."
+      "dontHaveInvitationCode": "Ver vennligst sikker på at du har skrive inn riktig kallenavn."
     },
     "home": {
       "pioneer": {

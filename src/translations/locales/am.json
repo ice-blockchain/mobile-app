@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "እባክዎ ትክክለኛውን ቅጽል ስም ማስገባትዎን ያረጋግጡ። ይህን ደረጃ በማጠናቀቅ የጓደኛዎ ቡድን አካል ይሆናሉ።"
+      "dontHaveInvitationCode": "እባክዎ ትክክለኛውን ቅጽል ስም ማስገባትዎን ያረጋግጡ።"
     },
     "home": {
       "pioneer": {

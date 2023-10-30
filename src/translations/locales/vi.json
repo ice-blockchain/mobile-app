@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Vui lòng đảm bảo bạn đã nhập tên hiệu chính xác. Sau khi hoàn thành bước này, bạn sẽ trở thành một phần của đội của bạn bè."
+      "dontHaveInvitationCode": "Vui lòng đảm bảo bạn đã nhập tên hiệu chính xác."
     },
     "home": {
       "pioneer": {

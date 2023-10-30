@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Asigurați-vă că ați introdus un pseudonim corect. Completarea acestui pas vă va transforma în parte a echipei prietenului dumneavoastră."
+      "dontHaveInvitationCode": "Asigurați-vă că ați introdus un pseudonim corect."
     },
     "home": {
       "pioneer": {

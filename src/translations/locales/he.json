@@ -1092,7 +1092,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "אנא הוודא שהזנת את הכינוי הנכון. בהשלמת השלב הזה, תהפוך לחלק מצוות החבר של ידידך."
+      "dontHaveInvitationCode": "אנא הוודא שהזנת את הכינוי הנכון."
     },
     "home": {
       "pioneer": {

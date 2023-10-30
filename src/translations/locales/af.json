@@ -1088,7 +1088,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Maak asseblief seker dat jy die korrekte bynaam invoer. Deur hierdie stap te voltooi, sal jy deel word van jou vriend se span."
+      "dontHaveInvitationCode": "Maak asseblief seker dat jy die korrekte bynaam invoer."
     },
     "home": {
       "pioneer": {

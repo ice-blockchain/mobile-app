@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Prosimo, preverite, ali ste vnesli pravilno vzdevek. Z dokončanjem tega koraka boste postali del ekipe vašega prijatelja."
+      "dontHaveInvitationCode": "Prosimo, preverite, ali ste vnesli pravilno vzdevek."
     },
     "home": {
       "pioneer": {

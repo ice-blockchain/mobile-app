@@ -1085,7 +1085,7 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Kérjük, győződjön meg róla, hogy helyes becenévet adott meg. Ezzel a lépéssel barátja csapatának részévé válik."
+      "dontHaveInvitationCode": "Kérjük, győződjön meg róla, hogy helyes becenévet adott meg."
     },
     "home": {
       "pioneer": {
