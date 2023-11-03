@@ -7,6 +7,7 @@ import {
   ROW_HEIGHT,
   Y_AXIS_WIDTH,
 } from '@components/BarGraph';
+import {StatsType} from '@components/BarGraph/components/BarLabel';
 import {BarGraphData} from '@components/BarGraph/types';
 import {SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
@@ -25,9 +26,10 @@ import {screenHeight} from 'rn-units';
 type Props = {
   data: BarGraphData[];
   ListHeader?: ComponentType | ReactElement;
+  type?: StatsType;
 };
 
-export const AnimatedGraph = memo(({data, ListHeader}: Props) => {
+export const AnimatedGraph = memo(({data, ListHeader, type}: Props) => {
   const tabbarOffset = useBottomTabBarOffsetStyle();
   const {transitionEnd} = useScreenTransitionEnd();
   const {stepValue, lastXValue, numberOfSteps} = useMemo(
@@ -70,6 +72,7 @@ export const AnimatedGraph = memo(({data, ListHeader}: Props) => {
           maxValue={lastXValue}
           sharedValue={sharedValue}
           doAnimate={Math.floor(screenHeight / ROW_HEIGHT) > index}
+          type={type}
         />
       )}
       ListFooterComponent={

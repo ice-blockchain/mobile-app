@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {StatsType} from '@components/BarGraph/components/BarLabel';
 import {HorizontalBar} from '@components/BarGraph/components/HorizontalBar';
 import {BarGraphData} from '@components/BarGraph/types';
 import {useScreenTransitionEnd} from '@navigation/hooks/useScreenTransitionEnd';
@@ -64,6 +65,7 @@ type BarItemProps = {
   maxValue: number;
   sharedValue: SharedValue<number>;
   doAnimate: boolean;
+  type?: StatsType;
 };
 
 export const BarItem = memo(
@@ -73,6 +75,7 @@ export const BarItem = memo(
     sharedValue,
     maxValue,
     doAnimate,
+    type,
   }: BarItemProps) => {
     return (
       <View style={styles.row} key={`${label}${value}`}>
@@ -83,6 +86,7 @@ export const BarItem = memo(
           value={value}
           sharedValue={sharedValue}
           doAnimate={doAnimate}
+          type={type}
         />
       </View>
     );

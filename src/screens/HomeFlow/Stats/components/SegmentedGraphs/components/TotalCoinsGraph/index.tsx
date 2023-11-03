@@ -34,7 +34,13 @@ export const TotalCoinsGraph = memo(() => {
     );
   }, [period, filter]);
 
-  return <AnimatedGraph data={totalUsersData} ListHeader={ListHeader} />;
+  return (
+    <AnimatedGraph
+      data={totalUsersData}
+      ListHeader={ListHeader}
+      type="total_coins"
+    />
+  );
 });
 
 const styles = StyleSheet.create({

@@ -7,14 +7,11 @@ import {rem} from 'rn-units';
 
 export const CoinsStackSmallIcon = ({
   color = COLORS.white,
+  width = rem(28),
+  height = rem(28),
   ...props
 }: SvgProps) => (
-  <Svg
-    width={rem(28)}
-    height={rem(28)}
-    fill="none"
-    viewBox="0 0 28 28"
-    {...props}>
+  <Svg width={width} height={height} fill="none" viewBox="0 0 28 28" {...props}>
     <Path
       stroke={color}
       strokeLinecap="round"

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {BarLabel} from '@components/BarGraph/components/BarLabel';
+import {BarLabel, StatsType} from '@components/BarGraph/components/BarLabel';
 import {COLORS} from '@constants/colors';
 import {isRTL} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
@@ -19,6 +19,7 @@ type Props = {
   maxWidth: number;
   sharedValue: SharedValue<number>;
   doAnimate: boolean;
+  type?: StatsType;
 };
 
 export const HorizontalBar = ({
@@ -27,6 +28,7 @@ export const HorizontalBar = ({
   value,
   sharedValue,
   doAnimate,
+  type,
 }: Props) => {
   const isLabelOutside = value / maxValue < 0.2;
   const width = useMemo(
@@ -74,10 +76,12 @@ export const HorizontalBar = ({
           doAnimate && animatedStyle,
           {width},
         ]}>
-        {!isLabelOutside && <BarLabel value={barLabel} color={COLORS.white} />}
+        {!isLabelOutside && (
+          <BarLabel value={barLabel} color={COLORS.white} type={type} />
+        )}
       </Animated.View>
       {isLabelOutside && (
-        <BarLabel value={barLabel} color={COLORS.primaryLight} />
+        <BarLabel value={barLabel} color={COLORS.primaryLight} type={type} />
       )}
     </View>
   );
