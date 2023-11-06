@@ -31,6 +31,8 @@ import {
 } from '@screens/HomeFlow/Home/types';
 import {InAppNotifications} from '@screens/HomeFlow/InAppNotifications';
 import {Stats} from '@screens/HomeFlow/Stats';
+import {TopCountries} from '@screens/HomeFlow/TopCountries';
+import {TopMiners} from '@screens/HomeFlow/TopMiners';
 import {UserGrowthGraph} from '@screens/HomeFlow/UserGrowthGraph';
 import {ImageView} from '@screens/ImageView';
 import {InviteFriend} from '@screens/InviteFlow/InviteFriend';
@@ -171,6 +173,8 @@ export type HomeTabStackParamList = {
       }
     | undefined;
   Stats: undefined;
+  TopMiners: undefined;
+  TopCountries: undefined;
   UserGrowthGraph: {
     category: 'active' | 'total';
     statsPeriod: StatsPeriod;
@@ -225,6 +229,8 @@ const HomeTabStackNavigator = () => (
   <HomeTabStack.Navigator screenOptions={screenOptions}>
     <HomeTabStack.Screen name="Home" component={Home} />
     <HomeTabStack.Screen name="Stats" component={Stats} />
+    <HomeTabStack.Screen name="TopMiners" component={TopMiners} />
+    <HomeTabStack.Screen name="TopCountries" component={TopCountries} />
     <HomeTabStack.Screen name="UserGrowthGraph" component={UserGrowthGraph} />
     <HomeTabStack.Screen name="BalanceHistory" component={BalanceHistory} />
   </HomeTabStack.Navigator>
