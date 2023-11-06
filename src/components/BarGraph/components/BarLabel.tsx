@@ -19,18 +19,28 @@ export const BarLabel = ({value, color, type = 'active_users'}: Props) => {
   return (
     <View style={styles.container}>
       {type === 'total_coins' && (
-        <CoinsStackSmallIcon width={rem(14)} height={rem(14)} />
+        <>
+          <CoinsStackSmallIcon
+            width={rem(14)}
+            height={rem(14)}
+            color={color}
+            style={styles.icon}
+          />
+          <Text style={[styles.dot, {color}]}> </Text>
+        </>
       )}
       {type === 'active_users' && (
-        <TierOneIcon
-          color={color}
-          width={rem(18)}
-          height={rem(18)}
-          style={styles.icon}
-        />
+        <>
+          <TierOneIcon
+            color={color}
+            width={rem(18)}
+            height={rem(18)}
+            style={styles.icon}
+          />
+          <Text style={[styles.dot, {color}]}>●</Text>
+        </>
       )}
 
-      {type === 'active_users' && <Text style={[styles.dot, {color}]}>●</Text>}
       <Text style={[styles.valueText, {color}]}>{value}</Text>
     </View>
   );
