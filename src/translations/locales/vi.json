@@ -68,7 +68,9 @@
     "learn_more": "Tìm hiểu thêm",
     "back_to_login": "Quay lại đăng nhập",
     "follow_us": "Theo dõi chúng tôi",
-    "subscribe": "Đăng ký"
+    "subscribe": "Đăng ký",
+    "not_sure": "Không chắc chắn",
+    "confirm_address": "Xác nhận địa chỉ"
   },
   "team": {
     "contacts_tab": "Danh bạ",
@@ -190,7 +192,10 @@
     "weak_password": "Mật khẩu yếu.",
     "wrong_password": "Sai mật khẩu.",
     "no_camera_permissions": "Chưa cấp quyền truy cập máy ảnh.",
-    "no_library_permissions": "Chưa cấp quyền truy cập thư viện."
+    "no_library_permissions": "Chưa cấp quyền truy cập thư viện.",
+    "blockchain_address_already_taken": "Địa chỉ đã được sử dụng",
+    "invalid_blockchain_address": "Địa chỉ blockchain không hợp lệ",
+    "ethereum_address_not_eoa": "Địa chỉ không phải là EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Cứ 6 ngày liên tiếp thì bạn được nghỉ một ngày.",
       "streak": "CHUỖI",
       "days_off": "NGÀY NGHỈ"
+    },
+    "roadmap": {
+      "title": "LỘ TRÌNH",
+      "button_title": "Sách trắng",
+      "button_subtitle": "Tìm hiểu thêm về tầm nhìn của chúng tôi tại Ice."
+    },
+    "join_mainnet": {
+      "title": "Tham gia Tương lai Phi tập trung",
+      "subtitle": "Nhận cái nhìn sơ bộ về ứng dụng Mainnet sắp tới của chúng tôi và các tính năng độc đáo của nó."
+    },
+    "ethereum_address": {
+      "title": "Địa chỉ Ethereum",
+      "subtitle": "Vui lòng nhập địa chỉ ERC-20 của bạn ở đây."
     }
   },
   "settings": {
@@ -1129,5 +1147,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Địa chỉ Ethereum",
+    "enter_address_title": "Nhập\ndịa chỉ ERC-20 của bạn",
+    "enter_address_description": "Trong giai đoạn Một, token ICE sẽ được phát hành trên blockchain Ethereum. Sau khi Mainnet được khởi chạy, các token có thể trao đổi từ Ethereum sang Ice Open Network (ION) blockchain.",
+    "enter_address_warning": "Vui lòng đảm bảo rằng địa chỉ ERC-20 ở trên là chính xác và bạn sẽ có quyền truy cập vào nó trong suốt giai đoạn Một. Không thể thay đổi sau khi bạn đã xác nhận.",
+    "enter_address_confirmation": "Bạn có chắc chắn rằng địa chỉ ERC-20 là chính xác không? Không thể thay đổi sau khi bạn đã xác nhận."
   }
 }

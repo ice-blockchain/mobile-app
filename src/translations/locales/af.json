@@ -68,7 +68,9 @@
     "learn_more": "Leer meer",
     "back_to_login": "Terug na Aanmelding",
     "follow_us": "Volg ons",
-    "subscribe": "Teken in"
+    "subscribe": "Teken in",
+    "not_sure": "Nie seker nie",
+    "confirm_address": "Bevestig adres"
   },
   "team": {
     "contacts_tab": "Kontakte",
@@ -190,7 +192,10 @@
     "weak_password": "Swak wagwoord.",
     "wrong_password": "Verkeerde wagwoord.",
     "no_camera_permissions": "Kameratoestemmings word nie verleen nie.",
-    "no_library_permissions": "Biblioteektoestemmings word nie verleen nie."
+    "no_library_permissions": "Biblioteektoestemmings word nie verleen nie.",
+    "blockchain_address_already_taken": "Adres is reeds in gebruik",
+    "invalid_blockchain_address": "Ongeldige adres",
+    "ethereum_address_not_eoa": "Adres is nie EOA nie"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Vir elke 6 opeenvolgende dae ontvang jy een dag af.",
       "streak": "STREEP",
       "days_off": "DAE AF"
+    },
+    "roadmap": {
+      "title": "ROETKAART",
+      "button_title": "Witpapier",
+      "button_subtitle": "Leer meer oor ons visie by Ice."
+    },
+    "join_mainnet": {
+      "title": "Sluit aan by die Gedesentraliseerde Toekoms",
+      "subtitle": "Kry 'n voorskou van ons aankomende Hoofnet-toep en sy unieke kenmerke."
+    },
+    "ethereum_address": {
+      "title": "Ethereum-adres",
+      "subtitle": "Voer asseblief jou ERC-20-adres hier in."
     }
   },
   "settings": {
@@ -1132,5 +1150,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Ethereum Adres",
+    "enter_address_title": "Voer jou\nERC-20-adres in",
+    "enter_address_description": "Tydens Fase Een sal die ICE-tokens op die Ethereum-blokchain vrygestel word. Sodra die Hoofnet begin het, sal die tokens oorgeruil kan word van Ethereum na die Ice Open Network (ION) blokchain.",
+    "enter_address_warning": "Maak asseblief seker dat die ERC-20-adres hierbo korrek is en dat jy daarvolgens vir die hele Fase Een periode toegang het. Dit is nie moontlik om dit te verander nadat jy dit bevestig het nie.",
+    "enter_address_confirmation": "Is jy seker dat die ERC-20-adres korrek is? Dit is nie moontlik om dit te verander nadat jy dit bevestig het nie."
   }
 }

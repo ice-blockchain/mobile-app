@@ -68,7 +68,9 @@
     "learn_more": "Pelajari Selengkapnya",
     "back_to_login": "Kembali untuk Masuk",
     "follow_us": "Ikuti Kami",
-    "subscribe": "Berlangganan"
+    "subscribe": "Berlangganan",
+    "not_sure": "Tidak yakin",
+    "confirm_address": "Konfirmasi alamat"
   },
   "team": {
     "contacts_tab": "Kontak",
@@ -190,7 +192,10 @@
     "weak_password": "Kata sandi lemah.",
     "wrong_password": "Kata sandi salah.",
     "no_camera_permissions": "Izin kamera tidak diberikan.",
-    "no_library_permissions": "Izin perpustakaan tidak diberikan."
+    "no_library_permissions": "Izin perpustakaan tidak diberikan.",
+    "blockchain_address_already_taken": "Alamat sudah digunakan",
+    "invalid_blockchain_address": "Alamat blockchain tidak valid",
+    "ethereum_address_not_eoa": "Alamat bukan EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Untuk setiap 6 hari berturut-turut Anda menerima satu hari libur.",
       "streak": "STREAK",
       "days_off": "HARI LIBUR"
+    },
+    "roadmap": {
+      "title": "PETA JALAN",
+      "button_title": "Dokumen Putih",
+      "button_subtitle": "Pelajari lebih lanjut tentang visi kami di Ice."
+    },
+    "join_mainnet": {
+      "title": "Bergabung dengan Masa Depan Terdesentralisasi",
+      "subtitle": "Dapatkan pratinjau aplikasi Mainnet kami yang akan datang dan fitur-fitur uniknya."
+    },
+    "ethereum_address": {
+      "title": "Alamat Ethereum",
+      "subtitle": "Silakan masukkan alamat ERC-20 Anda di sini."
     }
   },
   "settings": {
@@ -1129,5 +1147,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Alamat Ethereum",
+    "enter_address_title": "Masukkan alamat\nERC-20 Anda",
+    "enter_address_description": "Selama Tahap Satu, token ICE akan dirilis di blockchain Ethereum. Setelah Mainnet diluncurkan, token dapat ditukarkan dari Ethereum ke blockchain Ice Open Network (ION).",
+    "enter_address_warning": "Pastikan alamat ERC-20 di atas benar dan Anda akan memiliki akses ke alamat tersebut selama seluruh periode Tahap Satu. Tidak mungkin mengubahnya setelah Anda mengonfirmasikannya.",
+    "enter_address_confirmation": "Apakah Anda yakin alamat ERC-20 sudah benar? Tidak mungkin mengubahnya setelah Anda mengonfirmasikannya."
   }
 }

@@ -68,7 +68,9 @@
     "learn_more": "Dowiedz się więcej",
     "back_to_login": "Powrót do logowania",
     "follow_us": "Śledź nas",
-    "subscribe": "Subskrybuj"
+    "subscribe": "Subskrybuj",
+    "not_sure": "Nie jestem pewny",
+    "confirm_address": "Potwierdź adres"
   },
   "team": {
     "contacts_tab": "Kontakty",
@@ -190,7 +192,10 @@
     "weak_password": "Słabe hasło.",
     "wrong_password": "Błędne hasło.",
     "no_camera_permissions": "Uprawnienia do korzystania z kamery nie zostały przyznane.",
-    "no_library_permissions": "Uprawnienia biblioteczne nie zostały przyznane."
+    "no_library_permissions": "Uprawnienia biblioteczne nie zostały przyznane.",
+    "blockchain_address_already_taken": "Adres jest już zajęty",
+    "invalid_blockchain_address": "Nieprawidłowy adres blockchain",
+    "ethereum_address_not_eoa": "Adres nie jest EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Za każde 6 kolejnych dni przysługuje jeden dzień wolny.",
       "streak": "SERIA",
       "days_off": "DNI WOLNE"
+    },
+    "roadmap": {
+      "title": "MAPA DROGOWA",
+      "button_title": "Biała księga",
+      "button_subtitle": "Dowiedz się więcej o naszej wizji na Ice."
+    },
+    "join_mainnet": {
+      "title": "Dołącz do Zdecentralizowanej Przyszłości",
+      "subtitle": "Otrzymaj przedsmak naszej nadchodzącej aplikacji Mainnet i jej unikalnych funkcji."
+    },
+    "ethereum_address": {
+      "title": "Adres Ethereum",
+      "subtitle": "Proszę wprowadzić swój adres ERC-20 tutaj."
     }
   },
   "settings": {
@@ -1129,5 +1147,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Adres Ethereum",
+    "enter_address_title": "Wprowadź\nswojego adresu ERC-20",
+    "enter_address_description": "W trakcie Fazy Pierwszej tokeny ICE zostaną wypuszczone na blockchainie Ethereum. Po uruchomieniu Mainnet, tokeny będą wymienialne z Ethereum na blockchain Ice Open Network (ION).",
+    "enter_address_warning": "Proszę upewnić się, że adres ERC-20 powyżej jest poprawny i będziesz miał do niego dostęp przez cały okres Fazy Pierwszej. Nie można go zmienić po potwierdzeniu.",
+    "enter_address_confirmation": "Czy jesteś pewien, że adres ERC-20 jest poprawny? Nie można go zmienić po potwierdzeniu."
   }
 }

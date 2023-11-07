@@ -68,7 +68,9 @@
     "learn_more": "Lær mer",
     "back_to_login": "Tilbake til innlogging",
     "follow_us": "Følg oss",
-    "subscribe": "Abonner"
+    "subscribe": "Abonner",
+    "not_sure": "Usikker",
+    "confirm_address": "Bekreft adresse"
   },
   "team": {
     "contacts_tab": "Kontakter",
@@ -190,7 +192,10 @@
     "weak_password": "Svakt passord.",
     "wrong_password": "Feil passord.",
     "no_camera_permissions": "Kameratillatelser er ikke gitt.",
-    "no_library_permissions": "Bibliotekstillatelser gis ikke."
+    "no_library_permissions": "Bibliotekstillatelser gis ikke.",
+    "blockchain_address_already_taken": "Adresse allerede i bruk",
+    "invalid_blockchain_address": "Ugyldig blockchain-adresse",
+    "ethereum_address_not_eoa": "Adresse er ikke EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "For hver 6. påfølgende dag får du en fridag.",
       "streak": "STREAK",
       "days_off": "FRIDAGER"
+    },
+    "roadmap": {
+      "title": "VEGKART",
+      "button_title": "Whitepaper",
+      "button_subtitle": "Lær mer om visjonen vår på Ice."
+    },
+    "join_mainnet": {
+      "title": "Bli med på Den Desentraliserte Fremtiden",
+      "subtitle": "Få en forhåndsvisning av vår kommende Mainnet-app og dens unike funksjoner."
+    },
+    "ethereum_address": {
+      "title": "Ethereum-adresse",
+      "subtitle": "Vennligst skriv inn din ERC-20 adresse her."
     }
   },
   "settings": {
@@ -1129,5 +1147,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Ethereum-adresse",
+    "enter_address_title": "Skriv inn\ndin ERC-20 adresse",
+    "enter_address_description": "I løpet av Fase Én vil ICE-tokenene bli utgitt på Ethereum-blockchainen. Når Mainnet er lansert, kan tokenene byttes fra Ethereum til Ice Open Network (ION) blockchain.",
+    "enter_address_warning": "Vennligst sørg for at ERC-20-adressen ovenfor er korrekt, og at du vil ha tilgang til den i hele Fase Én-perioden. Det er ikke mulig å endre den etter at du har bekreftet den.",
+    "enter_address_confirmation": "Er du sikker på at ERC-20-adressen er korrekt? Det er ikke mulig å endre den etter at du har bekreftet den."
   }
 }

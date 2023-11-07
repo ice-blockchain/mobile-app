@@ -68,7 +68,9 @@
     "learn_more": "Preberi več",
     "back_to_login": "Nazaj na prijavo",
     "follow_us": "Sledi nam",
-    "subscribe": "Naroči se"
+    "subscribe": "Naroči se",
+    "not_sure": "Nisem prepričan",
+    "confirm_address": "Potrdi naslov"
   },
   "team": {
     "contacts_tab": "Kontakti",
@@ -190,7 +192,10 @@
     "weak_password": "Šibko geslo.",
     "wrong_password": "Napačno geslo.",
     "no_camera_permissions": "Dovoljenja za kamero niso odobrena.",
-    "no_library_permissions": "Dovoljenja za knjižnico niso odobrena."
+    "no_library_permissions": "Dovoljenja za knjižnico niso odobrena.",
+    "blockchain_address_already_taken": "Naslov je že v uporabi",
+    "invalid_blockchain_address": "Neveljaven naslov blockchaina",
+    "ethereum_address_not_eoa": "Naslov ni EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Za vsakih 6 zaporednih dni prejmete en prost dan.",
       "streak": "NIZ",
       "days_off": "PROSTIH DNI"
+    },
+    "roadmap": {
+      "title": "Cestna karta",
+      "button_title": "Bela knjiga",
+      "button_subtitle": "Več o naši viziji na Ice."
+    },
+    "join_mainnet": {
+      "title": "Pridružite se decentralizirani prihodnosti",
+      "subtitle": "Oglejte si predogled naše prihajajoče aplikacije Mainnet in njenih edinstvenih funkcij."
+    },
+    "ethereum_address": {
+      "title": "Ethereum naslov",
+      "subtitle": "Prosimo, vnesite svoj naslov ERC-20 tukaj."
     }
   },
   "settings": {
@@ -1129,5 +1147,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Ethereum naslov",
+    "enter_address_title": "Vnesite\nvaš naslov ERC-20",
+    "enter_address_description": "Med fazo 1 bodo žetoni ICE izpuščeni na Ethereum blockchain. Po zagonu Mainneta bodo žetoni mogoče zamenjati iz Ethereuma v blockchain Ice Open Network (ION).",
+    "enter_address_warning": "Prepričajte se, da je zgoraj navedeni naslov ERC-20 pravilen in da boste imeli dostop do njega ves čas faze 1. Po potrditvi ga ni mogoče spremeniti.",
+    "enter_address_confirmation": "Ste prepričani, da je naslov ERC-20 pravilen? Po potrditvi ga ni mogoče spremeniti."
   }
 }

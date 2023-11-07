@@ -68,7 +68,9 @@
     "learn_more": "더 알아보기",
     "back_to_login": "로그인으로 돌아가기",
     "follow_us": "팔로우",
-    "subscribe": "구독"
+    "subscribe": "구독",
+    "not_sure": "확실하지 않음",
+    "confirm_address": "주소 확인"
   },
   "team": {
     "contacts_tab": "연락처",
@@ -190,7 +192,10 @@
     "weak_password": "비밀번호 보안 취약",
     "wrong_password": "잘못된 비밀번호",
     "no_camera_permissions": "카메라 권한이 허용되지 않았습니다.",
-    "no_library_permissions": "라이브러리 권한이 허용되지 않았습니다."
+    "no_library_permissions": "라이브러리 권한이 허용되지 않았습니다.",
+    "blockchain_address_already_taken": "주소가 이미 사용 중입니다",
+    "invalid_blockchain_address": "유효하지 않은 주소",
+    "ethereum_address_not_eoa": "주소가 EOA가 아닙니다"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "6일 연속 체크인하면 하루를 휴일로 받습니다.",
       "streak": "스트릭",
       "days_off": "휴일"
+    },
+    "roadmap": {
+      "title": "로드맵",
+      "button_title": "화이트페이퍼",
+      "button_subtitle": "Ice에서의 우리의 비전에 대해 더 알아보세요."
+    },
+    "join_mainnet": {
+      "title": "분산 미래에 참여하세요",
+      "subtitle": "다가오는 메인넷 앱과 그 독특한 기능을 미리 만나보세요."
+    },
+    "ethereum_address": {
+      "title": "이더리움 주소",
+      "subtitle": "여기에 ERC-20 주소를 입력하세요."
     }
   },
   "settings": {
@@ -1129,5 +1147,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "이더리움 주소",
+    "enter_address_title": "ERC-20 주소를 입력하세요",
+    "enter_address_description": "제 1 단계에서는 ICE 토큰이 이더리움 블록체인에 출시됩니다. 메인넷이 시작되면 토큰을 이더리움에서 Ice Open Network (ION) 블록체인으로 교환할 수 있습니다.",
+    "enter_address_warning": "위의 ERC-20 주소가 올바른지 확인하고 제 1 단계 전체 기간 동안 액세스할 수 있는지 확인하세요. 확인한 후에는 변경할 수 없습니다.",
+    "enter_address_confirmation": "ERC-20 주소가 올바른지 확실합니까? 확인한 후에는 변경할 수 없습니다."
   }
 }

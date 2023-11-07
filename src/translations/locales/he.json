@@ -68,7 +68,9 @@
     "learn_more": "מידע נוסף",
     "back_to_login": "חזרה להתחברות",
     "follow_us": "עקבו אחרינו",
-    "subscribe": "הרשמה"
+    "subscribe": "הרשמה",
+    "not_sure": "לא בטוח/ה",
+    "confirm_address": "אשר כתובת"
   },
   "team": {
     "contacts_tab": "אנשי קשר",
@@ -190,7 +192,10 @@
     "weak_password": "סיסמה חלשה.",
     "wrong_password": "סיסמה שגויה.",
     "no_camera_permissions": "לא הוענקו הרשאות מצלמה.",
-    "no_library_permissions": "לא הוענקו הרשאות ספרייה."
+    "no_library_permissions": "לא הוענקו הרשאות ספרייה.",
+    "blockchain_address_already_taken": "הכתובת כבר תפוסה",
+    "invalid_blockchain_address": "כתובת לא תקינה",
+    "ethereum_address_not_eoa": "הכתובת אינה EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "על כל 6 ימים רצופים מקבלים יום חופש אחד.",
       "streak": "רצף",
       "days_off": "ימי חופש"
+    },
+    "roadmap": {
+      "title": "מפת דרכים",
+      "button_title": "מסמך לבן",
+      "button_subtitle": "מידע נוסף על החזון שלנו ב-Ice."
+    },
+    "join_mainnet": {
+      "title": "הצטרפו לעתיד המבוזר",
+      "subtitle": "קבלו הצצה לאפליקציית Mainnet הקרובה שלנו ולתכליתיות הייחודיות שבה."
+    },
+    "ethereum_address": {
+      "title": "כתובת Ethereum",
+      "subtitle": "אנא הזינו את כתובת ה-ERC-20 שלכם כאן."
     }
   },
   "settings": {
@@ -978,7 +996,7 @@
       },
       "spread": {
         "title": "הפץ את המילה",
-        "description": "הצטרף לשיחה והכנס את רשת Ice לפורומים האהובים עליך.\nהתחל חוטים חדשים ושתף את דעותיך על האומנות הדצנטרלית, עתיד המטבע, וכוח בניית קהילת מיקרו עם Ice.\n\nהיה ☃\uFE0F גבר שלג והצית דיון על הפוטנציאל של מטבע זה הגלובלי."
+        "description": "הצטרף לשיחה והכנס את רשת Ice לפורומים האהובים עליך.\nהתחל חוטים חדשים ושתף את דעותיך על האומנות הדצנטרלית, עתיד המטבע, וכוח בניית קהילת מיקרו עם Ice.\n\nהיה ☃️ גבר שלג והצית דיון על הפוטנציאל של מטבע זה הגלובלי."
       },
       "bring": {
         "title": "הבא את החברים שלך",
@@ -1136,5 +1154,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "כתובת Ethereum",
+    "enter_address_title": "הזינו\nאת כתובת ה-ERC-20 שלכם",
+    "enter_address_description": "במהלך השלב הראשון, הטוקנים של ICE יושחררו על גבי הבלוקצ'יין של Ethereum. לאחר שה-Mainnet יושק, יהיה ניתן להחליף את הטוקנים מ-Ethereum לבלוקצ'יין של Ice Open Network (ION).",
+    "enter_address_warning": "אנא הוודא שכתובת ה-ERC-20 למעלה היא נכונה ושתהיה לכם גישה אליה למשך כל תקופת השלב הראשון. לא ניתן לשנות אותה לאחר שאישרתם אותה.",
+    "enter_address_confirmation": "האם אתם בטוחים שכתובת ה-ERC-20 נכונה? לא ניתן לשנות אותה לאחר שאישרתם אותה."
   }
 }

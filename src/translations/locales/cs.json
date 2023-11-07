@@ -68,7 +68,9 @@
     "learn_more": "Zjistit více",
     "back_to_login": "Zpět na přihlášení",
     "follow_us": "Sledujte nás",
-    "subscribe": "Odebírat"
+    "subscribe": "Odebírat",
+    "not_sure": "Nejsem si jistý/á",
+    "confirm_address": "Potvrdit adresu"
   },
   "team": {
     "contacts_tab": "Kontakty",
@@ -190,7 +192,10 @@
     "weak_password": "Slabé heslo.",
     "wrong_password": "Špatné heslo.",
     "no_camera_permissions": "Nejsou udělena oprávnění k fotoaparátu.",
-    "no_library_permissions": "Nejsou udělena oprávnění ke knihovně."
+    "no_library_permissions": "Nejsou udělena oprávnění ke knihovně.",
+    "blockchain_address_already_taken": "Adresa je již obsazena",
+    "invalid_blockchain_address": "Neplatná adresa",
+    "ethereum_address_not_eoa": "Adresa není EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Za každých 6 po sobě jdoucích dní dostanete jeden den volna.",
       "streak": "ŘADA",
       "days_off": "VOLNÉ DNY"
+    },
+    "roadmap": {
+      "title": "CESTA",
+      "button_title": "Bílá kniha",
+      "button_subtitle": "Dozvědět se více o naší vizi v Ice."
+    },
+    "join_mainnet": {
+      "title": "Připojte se k Decentralizované budoucnosti",
+      "subtitle": "Získejte náhled na naši nadcházející aplikaci pro hlavní síť a její jedinečné funkce."
+    },
+    "ethereum_address": {
+      "title": "Ethereum adresa",
+      "subtitle": "Prosím, zadejte zde svou ERC-20 adresu."
     }
   },
   "settings": {
@@ -1129,5 +1147,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Ethereum Adresa",
+    "enter_address_title": "Zadejte\nsvou ERC-20 adresu",
+    "enter_address_description": "Během Fáze Jedna budou tokeny ICE vydávány na Ethereum blockchainu. Jakmile bude spuštěna hlavní síť, bude možné tokeny směňovat z Ethereum na Ice Open Network (ION) blockchain.",
+    "enter_address_warning": "Prosím, ujistěte se, že výše uvedená ERC-20 adresa je správná a že budete mít přístup k ní po celou dobu Fáze Jedna. Po potvrzení ji nelze změnit.",
+    "enter_address_confirmation": "Jste si jisti, že je ERC-20 adresa správná? Po potvrzení ji nelze změnit."
   }
 }

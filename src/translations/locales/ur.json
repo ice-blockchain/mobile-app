@@ -68,7 +68,9 @@
     "learn_more": "مزید سیکھیں",
     "back_to_login": "لاگ اِن کی طرف واپس",
     "follow_us": "ہمیں فالو کریں",
-    "subscribe": "سبسکرائب کریں"
+    "subscribe": "سبسکرائب کریں",
+    "not_sure": "یقین نہیں",
+    "confirm_address": "پتہ تصدیق کریں"
   },
   "team": {
     "contacts_tab": "روابط",
@@ -190,7 +192,10 @@
     "weak_password": "کمزور پاس ورڈ۔",
     "wrong_password": "غلط پاس ورڈ۔",
     "no_camera_permissions": "کیمرہ کی اجازتیں نہیں دی گئی ہے۔",
-    "no_library_permissions": "لائبریری کی اجازتیں نہیں دی گئی ہیں۔"
+    "no_library_permissions": "لائبریری کی اجازتیں نہیں دی گئی ہیں۔",
+    "blockchain_address_already_taken": "پتہ پہلے ہی لیا گیا ہے",
+    "invalid_blockchain_address": "غیر معتبر بلاک چین پتہ",
+    "ethereum_address_not_eoa": "پتہ EOA نہیں ہے"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "ہر 6 مسلسل دنوں کے لیے، آپ کو ایک دن چھٹی ملے گی۔ ",
       "streak": "اسٹریک",
       "days_off": "چھٹی کے دن"
+    },
+    "roadmap": {
+      "title": "راستے کا نقشہ",
+      "button_title": "وائٹ پیپر",
+      "button_subtitle": "ہماری ویژن کے بارے میں مزید معلومات حاصل کریں"
+    },
+    "join_mainnet": {
+      "title": "مرکزی آئندہ میں شامل ہوں",
+      "subtitle": "ہمارے آنے والے مین نیٹ ایپ کی اور اس کی انوکھی خصوصیات کی پیش نظری حاصل کریں"
+    },
+    "ethereum_address": {
+      "title": "ایتھیریم پتہ",
+      "subtitle": "براہ کرم اپنا ERC-20 پتہ یہاں درج کریں"
     }
   },
   "settings": {
@@ -1136,5 +1154,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "ایتھیریم پتہ",
+    "enter_address_title": "اپنا\nERC-20 پتہ درج کریں",
+    "enter_address_description": "فیز ایک کے دوران، ICE ٹوکن ایتھیریم بلاک چین پر جاری کیے جائیں گے۔ جب مین نیٹ لانچ کی جائے تو ٹوکنز کو ایتھیریم سے آئس اوپن نیٹ ورک (ION) بلاک چین پر تبدیل کیا جاسکتا ہے۔",
+    "enter_address_warning": "براہ کرم یقینی بنائیں کہ اوپر دیے گئے ERC-20 پتہ درست ہے اور آپ کو فیز ایک کے دوران اس تک رسائی ہوگی۔ اسے تصدیق کرنے کے بعد تبدیل نہیں کیا جاسکتا۔",
+    "enter_address_confirmation": "کیا آپ یقینی ہیں کہ ERC-20 پتہ درست ہے؟ اسے تصدیق کرنے کے بعد تبدیل نہیں کیا جاسکتا۔"
   }
 }

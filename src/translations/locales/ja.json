@@ -68,7 +68,9 @@
     "learn_more": "さらに詳しく",
     "back_to_login": "ログインに戻る",
     "follow_us": "アカウントをフォロー",
-    "subscribe": "チャンネル登録"
+    "subscribe": "チャンネル登録",
+    "not_sure": "確信が持てない",
+    "confirm_address": "アドレスを確認"
   },
   "team": {
     "contacts_tab": "連絡先",
@@ -190,7 +192,10 @@
     "weak_password": "パスワードが脆弱です。",
     "wrong_password": "パスワードが違います。",
     "no_camera_permissions": "カメラの使用が許可されていません。",
-    "no_library_permissions": "ライブラリへのアクセスが許可されていません。"
+    "no_library_permissions": "ライブラリへのアクセスが許可されていません。",
+    "blockchain_address_already_taken": "アドレスはすでに使用されています",
+    "invalid_blockchain_address": "無効なアドレス",
+    "ethereum_address_not_eoa": "アドレスはEOAではありません"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "6日間連続でチェックインするごとに、1日の休日が与えられます。",
       "streak": "ストリーク",
       "days_off": "休日"
+    },
+    "roadmap": {
+      "title": "ロードマップ",
+      "button_title": "ホワイトペーパー",
+      "button_subtitle": "アイスのビジョンについて詳しく知る。"
+    },
+    "join_mainnet": {
+      "title": "分散型未来に参加",
+      "subtitle": "今後のメインネットアプリとそのユニークな機能の一部をご紹介します。"
+    },
+    "ethereum_address": {
+      "title": "イーサリアムアドレス",
+      "subtitle": "ここにERC-20アドレスを入力してください。"
     }
   },
   "settings": {
@@ -1129,5 +1147,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "イーサリアムアドレス",
+    "enter_address_title": "あなたの\nERC-20アドレスを入力",
+    "enter_address_description": "フェーズ1では、ICEトークンはEthereumブロックチェーン上にリリースされます。メインネットが開始されると、トークンはEthereumからIce Open Network (ION)ブロックチェーンに交換できるようになります。",
+    "enter_address_warning": "上記のERC-20アドレスが正しいことを確認し、フェーズ1の期間中にアクセスできることを確認してください。確認した後は変更できません。",
+    "enter_address_confirmation": "ERC-20アドレスが正しいことを確認しましたか？確認した後は変更できません。"
   }
 }

@@ -68,7 +68,9 @@
     "learn_more": "Obtén más información",
     "back_to_login": "Volver al inicio de sesión",
     "follow_us": "Síguenos",
-    "subscribe": "Suscribirse"
+    "subscribe": "Suscribirse",
+    "not_sure": "No estoy seguro",
+    "confirm_address": "Confirmar dirección"
   },
   "team": {
     "contacts_tab": "Contactos",
@@ -190,7 +192,10 @@
     "weak_password": "Contraseña poco segura.",
     "wrong_password": "Contraseña incorrecta.",
     "no_camera_permissions": "No se conceden permisos de cámara.",
-    "no_library_permissions": "No se conceden permisos de biblioteca."
+    "no_library_permissions": "No se conceden permisos de biblioteca.",
+    "blockchain_address_already_taken": "Dirección ya utilizada",
+    "invalid_blockchain_address": "Dirección no válida",
+    "ethereum_address_not_eoa": "La dirección no es EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Por cada 6 días consecutivos recibirás un día libre.",
       "streak": "RACHA",
       "days_off": "DÍAS LIBRES"
+    },
+    "roadmap": {
+      "title": "HOJA DE RUTA",
+      "button_title": "Libro blanco",
+      "button_subtitle": "Obtén más información sobre nuestra visión en Ice."
+    },
+    "join_mainnet": {
+      "title": "Únete al Futuro Descentralizado",
+      "subtitle": "Obtén un adelanto de nuestra próxima aplicación Mainnet y sus características únicas."
+    },
+    "ethereum_address": {
+      "title": "Dirección Ethereum",
+      "subtitle": "Por favor, ingresa tu dirección ERC-20 aquí."
     }
   },
   "settings": {
@@ -1129,5 +1147,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Dirección Ethereum",
+    "enter_address_title": "Ingresa tu\ndirección ERC-20",
+    "enter_address_description": "Durante la Fase Uno, los tokens ICE se lanzarán en la cadena de bloques Ethereum. Una vez que se haya lanzado Mainnet, los tokens serán intercambiables desde Ethereum a la cadena de bloques de Ice Open Network (ION).",
+    "enter_address_warning": "Por favor, asegúrate de que la dirección ERC-20 anterior sea correcta y que tendrás acceso a ella durante todo el período de la Fase Uno. No es posible cambiarla después de confirmarla.",
+    "enter_address_confirmation": "¿Estás seguro de que la dirección ERC-20 es correcta? No es posible cambiarla después de confirmarla."
   }
 }

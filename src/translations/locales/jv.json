@@ -64,7 +64,9 @@
     "close": "Close",
     "try_again": "Try Again",
     "view_changelog": "View Changelog",
-    "disable": "Disable"
+    "disable": "Disable",
+    "not_sure": "Aja ora yakin",
+    "confirm_address": "Konfirmasi alamat"
   },
   "team": {
     "contacts_tab": "Contacts",
@@ -186,7 +188,10 @@
     "email_already_in_use": "The email address is already in use by another account.",
     "user_token_expired": "Your credentials is no longer valid. Please sign in again",
     "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again",
-    "same_email": "You can’t use the same e-mail"
+    "same_email": "You can’t use the same e-mail",
+    "blockchain_address_already_taken": "Alamat wis didol",
+    "invalid_blockchain_address": "Alamat blockchain ora sah",
+    "ethereum_address_not_eoa": "Alamat ora EOA"
   },
   "profile": {
     "my_roles": {
@@ -336,6 +341,19 @@
       "description": "Streak refers to how many consecutive days you have checked-in.\nFor each 6 consecutive days you receive one day off.",
       "streak": "STREAK",
       "days_off": "DAYS OFF"
+    },
+    "roadmap": {
+      "title": "PETA RUT",
+      "button_title": "Kertas Putih",
+      "button_subtitle": "Aksara luwih lanjut tentang wawasan kita ing Ice."
+    },
+    "join_mainnet": {
+      "title": "Gabung Karo Masa Depan Desentralisasi",
+      "subtitle": "Dapetake saka pratinjau aplikasi Mainnet kita sing bakal datang lan fitur-fitur unik e."
+    },
+    "ethereum_address": {
+      "title": "Alamat Ethereum",
+      "subtitle": "Tolong lebokake alamat ERC-20 sampeyan ing kene."
     }
   },
   "settings": {
@@ -1042,5 +1060,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Alamat Ethereum",
+    "enter_address_title": "Lebokake\nalamat ERC-20 sampeyan",
+    "enter_address_description": "Ing Fase Siji, token ICE bakal dirilis ing blockchain Ethereum. Sawise Mainnet rampung, token bisa ditukar saka Ethereum menyang blockchain Ice Open Network (ION).",
+    "enter_address_warning": "Pastikan alamat ERC-20 ing ngisor iki sah lan sampeyan bakal duwe akses menyang sampeyan kanggo kabeh periode Fase Siji. Ora bisa ngganti kabeh konfirmasi.",
+    "enter_address_confirmation": "Apa sampeyan yakin yen alamat ERC-20 sah? Ora bisa ngganti kabeh konfirmasi."
   }
 }

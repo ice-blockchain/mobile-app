@@ -68,7 +68,9 @@
     "learn_more": "بیشتر بیاموزید",
     "back_to_login": "بازگشت به صفحه ورود",
     "follow_us": "ما را دنبال کنید",
-    "subscribe": "اشتراک"
+    "subscribe": "اشتراک",
+    "not_sure": "مطمئن نیستم",
+    "confirm_address": "تأیید آدرس"
   },
   "team": {
     "contacts_tab": "راه‌های ارتباطی",
@@ -190,7 +192,10 @@
     "weak_password": "گذرواژه ضعیف است.",
     "wrong_password": "گذرواژه اشتباه است.",
     "no_camera_permissions": "اجازه دسترسی به دوربین اعطا نشده است.",
-    "no_library_permissions": "اجازه دسترسی به مجموع برنامه‌ها اعطا نشده است."
+    "no_library_permissions": "اجازه دسترسی به مجموع برنامه‌ها اعطا نشده است.",
+    "blockchain_address_already_taken": "آدرس قبلاً گرفته شده است",
+    "invalid_blockchain_address": "آدرس نامعتبر است",
+    "ethereum_address_not_eoa": "آدرس EOA نیست"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "به ازای هر 6 روز متوالی یک روز مرخصی دریافت می‌کنید.",
       "streak": "دوره",
       "days_off": "روزهای مرخصی"
+    },
+    "roadmap": {
+      "title": "نقشه راه",
+      "button_title": "کاغذ سفید",
+      "button_subtitle": "در مورد دیدگاه ما در Ice بیشتر بدانید."
+    },
+    "join_mainnet": {
+      "title": "به آینده غیرمتمرکز بپیوندید",
+      "subtitle": "یک نگاهی به برنامه Mainnet آینده ما و ویژگی‌های منحصر به فرد آن بیافکنید."
+    },
+    "ethereum_address": {
+      "title": "آدرس Ethereum",
+      "subtitle": "لطفاً آدرس ERC-20 خود را در اینجا وارد کنید."
     }
   },
   "settings": {
@@ -1136,5 +1154,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "آدرس Ethereum",
+    "enter_address_title": "آدرس ERC-20 خود را وارد کنید",
+    "enter_address_description": "در طول مرحله یک، توکن‌های ICE در بلاکچین Ethereum منتشر خواهند شد. هنگامی که Mainnet راه‌اندازی شده باشد، توکن‌ها از Ethereum به بلاکچین Ice Open Network (ION) قابل مبادله خواهند بود.",
+    "enter_address_warning": "لطفاً از صحت آدرس ERC-20 فوق اطمینان حاصل کنید و اطمینان داشته باشید که در طول کل دوره مرحله یک به آن دسترسی دارید. پس از تأیید آن امکان تغییر آن وجود ندارد.",
+    "enter_address_confirmation": "آیا از صحت آدرس ERC-20 اطمینان دارید؟ پس از تأیید آن امکان تغییر آن وجود ندارد."
   }
 }

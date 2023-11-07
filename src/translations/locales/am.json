@@ -68,7 +68,9 @@
     "learn_more": "የበለጠ ማወቅ",
     "back_to_login": "ወደ መግቢያ ተመለስ",
     "follow_us": "ይከተሉን",
-    "subscribe": "ተመዝገብ"
+    "subscribe": "ተመዝገብ",
+    "not_sure": "እርግጠኛ አይደለሁም",
+    "confirm_address": "አድራሻ አረጋግጥ"
   },
   "team": {
     "contacts_tab": "እውቂያዎች",
@@ -190,7 +192,10 @@
     "weak_password": "ደካማ የይለፍ ቃል።",
     "wrong_password": "የተሳሳተ የይለፍ ቃል።",
     "no_camera_permissions": "የካሜራ ፈቃዶች አልተሰጡም።",
-    "no_library_permissions": "የቤተ-መጽሐፍት ፈቃዶች አልተሰጡም።"
+    "no_library_permissions": "የቤተ-መጽሐፍት ፈቃዶች አልተሰጡም።",
+    "blockchain_address_already_taken": "አድራሻ ቀድሞ ተወስዷል",
+    "invalid_blockchain_address": "ልክ ያልሆነ አድራሻ",
+    "ethereum_address_not_eoa": "አድራሻ ኢኦኤ አይደለም"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "ለእያንዳንዱ 6 ተከታታይ ቀናት የአንድ ቀን እረፍት ያገኛሉ።",
       "streak": "ዥረት",
       "days_off": "የእረፍት ቀን"
+    },
+    "roadmap": {
+      "title": "መድሃኒታችን",
+      "button_title": "ነጭ ወረቀት",
+      "button_subtitle": "በበረዶ ላይ ስላለው ራእያችን የበለጠ ተማር።."
+    },
+    "join_mainnet": {
+      "title": "ያልተማከለ የወደፊትን ተቀላቀል",
+      "subtitle": "የእኛን መጪ የMainnet መተግበሪያ እና ልዩ ባህሪያቱን ያግኙ።"
+    },
+    "ethereum_address": {
+      "title": "Ethereum አድራሻ",
+      "subtitle": "እባክዎ የእርስዎን ERC-20 አድራሻ እዚህ ያስገቡ።"
     }
   },
   "settings": {
@@ -971,7 +989,7 @@
       },
       "spread": {
         "title": "ቃሉን ዘርጋ",
-        "description": "ውይይቱን ይቀላቀሉ እና የ Ice አውታረ መረብን ከሚወዷቸው መድረኮች ጋር ያስተዋውቁ።\nአዲስ ክሮች ይጀምሩ እና ስለ ያልተማከለ ፋይናንስ፣ ስለ ምንዛሪ የወደፊት ሁኔታ እና ከ Ice ጋር የማይክሮ ማህበረሰብ የመገንባት ሃይል ያለዎትን ሀሳብ ያካፍሉ።\n\nየበረዶ ሰው ☃\uFE0F ሁን እና ስለዚህ አለምአቀፋዊ ምንዛሪ አቅም ላይ ውይይት ፍጠር።"
+        "description": "ውይይቱን ይቀላቀሉ እና የ Ice አውታረ መረብን ከሚወዷቸው መድረኮች ጋር ያስተዋውቁ።\nአዲስ ክሮች ይጀምሩ እና ስለ ያልተማከለ ፋይናንስ፣ ስለ ምንዛሪ የወደፊት ሁኔታ እና ከ Ice ጋር የማይክሮ ማህበረሰብ የመገንባት ሃይል ያለዎትን ሀሳብ ያካፍሉ።\n\nየበረዶ ሰው ☃️ ሁን እና ስለዚህ አለምአቀፋዊ ምንዛሪ አቅም ላይ ውይይት ፍጠር።"
       }
     },
     "bring": {
@@ -1129,5 +1147,11 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Ethereum አድራሻ",
+    "enter_address_title": "የእርስዎን\nERC-20 አድራሻ ያስገቡ",
+    "enter_address_description": "በደረጃ አንድ ወቅት የ ICE ቶከኖች በ Ethereum blockchain ላይ ይለቀቃሉ። ሜንኔት አንዴ ከተጀመረ ቶከኖቹ ከEthereum ወደ Ice Open Network (ION) blockchain ይቀየራሉ።",
+    "enter_address_warning": "እባክዎ ከላይ ያለው የ ERC-20 አድራሻ ትክክል መሆኑን እና ለክፍል አንድ ጊዜ በሙሉ መዳረሻ እንደሚኖርዎት ያረጋግጡ። ካረጋገጡ በኋላ መቀየር አይቻልም።"
   }
 }

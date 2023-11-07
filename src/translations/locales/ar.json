@@ -68,7 +68,9 @@
     "learn_more": "تعرف على المزيد",
     "back_to_login": "العودة إلى تسجيل الدخول",
     "follow_us": "تابعنا",
-    "subscribe": "اشترك"
+    "subscribe": "اشترك",
+    "not_sure": "ليس واثقًا",
+    "confirm_address": "تأكيد العنوان"
   },
   "team": {
     "contacts_tab": "جهات الاتصال",
@@ -190,7 +192,10 @@
     "weak_password": "كلمة مرور ضعيفة.",
     "wrong_password": "كلمة مرور خاطئة.",
     "no_camera_permissions": "لم تُمنح أذونات الوصول إلى الكاميرا.",
-    "no_library_permissions": "لم تُمنح الأذونات الوصول إلى المكتبة."
+    "no_library_permissions": "لم تُمنح الأذونات الوصول إلى المكتبة.",
+    "blockchain_address_already_taken": "العنوان مُستخدم بالفعل",
+    "invalid_blockchain_address": "عنوان غير صالح",
+    "ethereum_address_not_eoa": "العنوان ليس EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "لكل 6 أيام متتالية تحصل على يوم عطلة واحد.",
       "streak": "شريط التعاقب",
       "days_off": "أيام العطل"
+    },
+    "roadmap": {
+      "title": "خارطة الطريق",
+      "button_title": "الورقة البيضاء",
+      "button_subtitle": "تعرّف أكثر على رؤيتنا في Ice."
+    },
+    "join_mainnet": {
+      "title": "انضم إلى المستقبل اللامركزي",
+      "subtitle": "احصل على نظرة سريعة على تطبيق الشبكة الرئيسية القادم وميزاته الفريدة."
+    },
+    "ethereum_address": {
+      "title": "عنوان إيثيريوم",
+      "subtitle": "الرجاء إدخال عنوان ERC-20 الخاص بك هنا."
     }
   },
   "settings": {
@@ -1129,5 +1147,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "عنوان إيثيريوم",
+    "enter_address_title": "أدخل\nعنوان ERC-20 الخاص بك",
+    "enter_address_description": "خلال المرحلة الأولى، ستتم إصدار عملات ICE على سلسلة الكتل Ethereum. بمجرد أن يتم إطلاق الشبكة الرئيسية، سيمكن تبادل العملات من Ethereum إلى شبكة Ice Open (ION) Blockchain.",
+    "enter_address_warning": "تأكد من أن عنوان ERC-20 أعلاه صحيح وأن لديك وصول إليه طوال فترة المرحلة الأولى بالكامل. لا يمكن تغييره بعد تأكيده.",
+    "enter_address_confirmation": "هل أنت متأكد من أن عنوان ERC-20 صحيح؟ لا يمكن تغييره بعد تأكيده."
   }
 }

@@ -68,7 +68,9 @@
     "learn_more": "Daha Fazla Bilgi Edin",
     "back_to_login": "Oturum Açmaya Geri Dön",
     "follow_us": "Bizi Takip Et",
-    "subscribe": "Abone Ol"
+    "subscribe": "Abone Ol",
+    "not_sure": "Emin değilim",
+    "confirm_address": "Adresi Onayla"
   },
   "team": {
     "contacts_tab": "Kişiler",
@@ -190,7 +192,10 @@
     "weak_password": "Zayıf parola.",
     "wrong_password": "Yanlış parola.",
     "no_camera_permissions": "Kamera izinleri verilmemiştir.",
-    "no_library_permissions": "Kitaplık izinleri verilmemiştir."
+    "no_library_permissions": "Kitaplık izinleri verilmemiştir.",
+    "blockchain_address_already_taken": "Adres zaten alınmış",
+    "invalid_blockchain_address": "Geçersiz blockchain adresi",
+    "ethereum_address_not_eoa": "Adres EOA değil"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Birbirini takip eden her 6 gün için bir gün izin alırsın.",
       "streak": "KESİNTİSİZLİK",
       "days_off": "İZİN GÜNLERİ"
+    },
+    "roadmap": {
+      "title": "YOL HARİTASI",
+      "button_title": "Beyaz Kağıt",
+      "button_subtitle": "Vizyonumuz hakkında daha fazla bilgi edinin Ice."
+    },
+    "join_mainnet": {
+      "title": "Merkezi Olmayan Geleceğe Katılın",
+      "subtitle": "Yaklaşan Mainnet uygulamamızın ve benzersiz özelliklerinin bir önizlemesini alın."
+    },
+    "ethereum_address": {
+      "title": "Ethereum adresi",
+      "subtitle": "Lütfen ERC-20 adresinizi buraya girin."
     }
   },
   "settings": {
@@ -1129,5 +1147,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Ethereum Adresi",
+    "enter_address_title": "ERC-20 adresinizi\ngirin",
+    "enter_address_description": "Faz 1 sırasında ICE tokenleri Ethereum blockchain üzerine yayınlanacaktır. Mainnet başlatıldığında, tokenler Ethereum'dan Ice Open Network (ION) blockchain'e değiştirilebilir.",
+    "enter_address_warning": "Lütfen yukarıdaki ERC-20 adresinin doğru olduğundan ve Faz 1 süresince erişiminizin olacağından emin olun. Onayladıktan sonra değiştirilemez.",
+    "enter_address_confirmation": "ERC-20 adresinin doğru olduğundan emin misiniz? Onayladıktan sonra değiştirilemez."
   }
 }

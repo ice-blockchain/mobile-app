@@ -68,7 +68,9 @@
     "learn_more": "Докладніше",
     "back_to_login": "Повернутися до входу",
     "follow_us": "Підпишіться на нас",
-    "subscribe": "Підписатися"
+    "subscribe": "Підписатися",
+    "not_sure": "Не впевнений",
+    "confirm_address": "Підтвердити адресу"
   },
   "team": {
     "contacts_tab": "Контакти",
@@ -190,7 +192,10 @@
     "weak_password": "Слабкий пароль.",
     "wrong_password": "Неправильний пароль.",
     "no_camera_permissions": "Дозволи на доступ до камери не надаються.",
-    "no_library_permissions": "Дозволи бібліотеки не надаються."
+    "no_library_permissions": "Дозволи бібліотеки не надаються.",
+    "blockchain_address_already_taken": "Адреса вже використовується",
+    "invalid_blockchain_address": "Недійсна адреса блокчейну",
+    "ethereum_address_not_eoa": "Адреса не є EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "За кожні 6 послідовних днів ви отримуєте один вихідний.",
       "streak": "СЕРІЯ",
       "days_off": "ВИХІДНІ ДНІ"
+    },
+    "roadmap": {
+      "title": "КАРТА ШЛЯХУ",
+      "button_title": "Біла книга",
+      "button_subtitle": "Дізнайтеся більше про наше бачення від Ice."
+    },
+    "join_mainnet": {
+      "title": "Приєднуйтесь до Децентралізованого Майбутнього",
+      "subtitle": "Отримайте попередній перегляд нашого майбутнього додатка Mainnet та його унікальних можливостей."
+    },
+    "ethereum_address": {
+      "title": "Адреса Ethereum",
+      "subtitle": "Будь ласка, введіть вашу адресу ERC-20 тут."
     }
   },
   "settings": {
@@ -1129,5 +1147,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Адреса Ethereum",
+    "enter_address_title": "Введіть\nвашу адресу ERC-20",
+    "enter_address_description": "Під час Фази 1 токени ICE будуть випущені на блокчейні Ethereum. Після запуску Mainnet токени можна буде обміняти з Ethereum на блокчейн Ice Open Network (ION).",
+    "enter_address_warning": "Переконайтеся, що адреса ERC-20 вище вказана правильно, і ви матимете до неї доступ протягом всього періоду Фази 1. Її неможливо буде змінити після підтвердження.",
+    "enter_address_confirmation": "Ви впевнені, що адреса ERC-20 вказана правильно? Її неможливо буде змінити після підтвердження."
   }
 }
