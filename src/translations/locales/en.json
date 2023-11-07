@@ -346,6 +346,9 @@
       "description_part2": "For each 6 consecutive days you receive one day off.",
       "streak": "STREAK",
       "days_off": "DAYS OFF"
+    },
+    "roadmap": {
+      "title": "ROADMAP"
     }
   },
   "settings": {

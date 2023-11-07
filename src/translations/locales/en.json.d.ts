@@ -232,6 +232,7 @@ export type Translations = {
   'home.engagement.description_part2': null;
   'home.engagement.streak': null;
   'home.engagement.days_off': null;
+  'home.roadmap.title': null;
   'settings.title': null;
   'settings.profile': null;
   'settings.legal': null;
