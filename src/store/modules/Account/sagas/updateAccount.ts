@@ -2,7 +2,7 @@
 
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
-import {verifyEthereumAddress} from '@services/ethereum';
+import {isEoaEthereumAddress, isValidEthereumAddress} from '@services/ethereum';
 import {AccountActions} from '@store/modules/Account/actions';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
@@ -16,6 +16,7 @@ const actionCreator = AccountActions.UPDATE_ACCOUNT.START.create;
 
 enum ValidateError {
   InvalidEthereumAddress = 'InvalidEthereumAddress',
+  EthereumAddressIsNotEoa = 'EthereumAddressIsNotEoa',
 }
 
 export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
@@ -39,11 +40,18 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       userInfo.phoneNumberHash = yield call(hashPhoneNumber, normalizedNumber);
     }
 
-    if (
-      userInfo.miningBlockchainAccountAddress &&
-      !verifyEthereumAddress(userInfo.miningBlockchainAccountAddress)
-    ) {
-      throw {code: ValidateError.InvalidEthereumAddress};
+    if (userInfo.miningBlockchainAccountAddress) {
+      if (!isValidEthereumAddress(userInfo.miningBlockchainAccountAddress)) {
+        throw {code: ValidateError.InvalidEthereumAddress};
+      }
+
+      const isEoa: SagaReturnType<typeof isEoaEthereumAddress> = yield call(
+        isEoaEthereumAddress,
+        userInfo.miningBlockchainAccountAddress,
+      );
+      if (!isEoa) {
+        throw {code: ValidateError.EthereumAddressIsNotEoa};
+      }
     }
 
     const modifiedUser: SagaReturnType<typeof Api.user.updateAccount> =
@@ -101,11 +109,15 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
           localizedError = t('errors.blockchain_address_already_taken');
           break;
       }
-    } else if (
-      checkProp(error, 'code') &&
-      error.code === ValidateError.InvalidEthereumAddress
-    ) {
-      localizedError = t('errors.invalid_blockchain_address');
+    } else if (checkProp(error, 'code')) {
+      switch (error.code) {
+        case ValidateError.InvalidEthereumAddress:
+          localizedError = t('errors.invalid_blockchain_address');
+          break;
+        case ValidateError.EthereumAddressIsNotEoa:
+          localizedError = t('errors.ethereum_address_not_eoa');
+          break;
+      }
     }
 
     if (localizedError) {

@@ -142,6 +142,7 @@ export type Translations = {
   'errors.no_library_permissions': null;
   'errors.blockchain_address_already_taken': null;
   'errors.invalid_blockchain_address': null;
+  'errors.ethereum_address_not_eoa': null;
   'profile.my_roles.title': null;
   'profile.mining_calculator': null;
   'profile.invite_friends': null;

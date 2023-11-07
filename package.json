@@ -116,8 +116,9 @@
     "redux-saga": "^1.2.1",
     "rn-android-keyboard-adjust": "^2.1.2",
     "rn-units": "^2.0.5",
-    "web3-validator": "^2.0.2",
-    "yarn": "^1.22.19"
+    "text-encoding": "^0.7.0",
+    "web3": "^4.1.2",
+    "web3-validator": "^2.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

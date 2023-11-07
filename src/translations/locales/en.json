@@ -190,7 +190,8 @@
     "no_camera_permissions": "Camera permissions are not granted.",
     "no_library_permissions": "Library permissions are not granted.",
     "blockchain_address_already_taken": "Address already taken",
-    "invalid_blockchain_address": "Invalid address"
+    "invalid_blockchain_address": "Invalid address",
+    "ethereum_address_not_eoa": "Address is not EOA"
   },
   "profile": {
     "my_roles": {
