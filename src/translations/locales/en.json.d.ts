@@ -52,6 +52,8 @@ export type Translations = {
   'button.back_to_login': null;
   'button.follow_us': null;
   'button.subscribe': null;
+  'button.not_sure': null;
+  'button.confirm_address': null;
   'team.contacts_tab': null;
   'team.tierOne_tab': null;
   'team.tierTwo_tab': null;
@@ -692,4 +694,9 @@ export type Translations = {
   'override.walkthrough.home.earning.description': null;
   'override.walkthrough.team.referrals.description': null;
   'override.walkthrough.team.earnings.description': null;
+  'ethereum_address.title': null;
+  'ethereum_address.enter_address_title': null;
+  'ethereum_address.enter_address_description': null;
+  'ethereum_address.enter_address_warning': null;
+  'ethereum_address.enter_address_confirmation': null;
 };

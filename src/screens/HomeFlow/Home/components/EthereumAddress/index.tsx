@@ -3,19 +3,23 @@
 import {ActionListItem} from '@components/ListItems/ActionListItem';
 import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
-import {LINKS} from '@constants/links';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
+import {MainNavigationParams} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {ChevronSmallIcon} from '@svg/ChevronSmallIcon';
 import {EthereumIcon} from '@svg/EthereumIcon';
 import {t} from '@translations/i18n';
-import {openLinkWithInAppBrowser} from '@utils/device';
 import React, {memo} from 'react';
 import {StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
 export const EthereumAddress = memo(() => {
-  const onPress = () => openLinkWithInAppBrowser({url: LINKS.WHITEPAPER});
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
+
+  const onPress = () => navigation.navigate('EthereumAddress');
 
   return (
     <>

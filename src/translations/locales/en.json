@@ -68,7 +68,9 @@
     "learn_more": "Learn More",
     "back_to_login": "Back to Login",
     "follow_us": "Follow Us",
-    "subscribe": "Subscribe"
+    "subscribe": "Subscribe",
+    "not_sure": "Not sure",
+    "confirm_address": "Confirm address"
   },
   "team": {
     "contacts_tab": "Contacts",
@@ -1139,5 +1141,12 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Ethereum Address",
+    "enter_address_title": "Enter your\nERC-20 address",
+    "enter_address_description": "During Phase One, the ICE tokens will be released on the Ethereum blockchain. Once Mainnet has been launched, the tokens will be swappable from Ethereum to Ice Open Network (ION) blockchain.",
+    "enter_address_warning": "Please make sure that the ERC-20 address above is correct and that you will have access to it for the entire Phase One period. It is not possible to change it after you have confirmed it.",
+    "enter_address_confirmation": "Are you sure that the ERC-20 address is correct? It is not possible to change it after you have confirmed it."
   }
 }
