@@ -2,6 +2,7 @@
 
 import {TotalCoinsFilter} from '@api/statistics/types';
 import {FilterButton} from '@components/Buttons/FilterButton';
+import {t} from '@translations/i18n';
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
@@ -18,10 +19,10 @@ export type Filter = {
 };
 
 export const FILTERS: Filter[] = [
-  {type: 'total', label: 'Total'},
-  {type: 'on-app', label: 'Available on App'},
-  {type: 'pre-staked', label: 'Pre-Staked'},
-  {type: 'on-blockchain', label: 'On Blockchain'},
+  {type: 'total', label: t('stats.filter.total')},
+  {type: 'on-app', label: t('stats.filter.on_app')},
+  {type: 'pre-staked', label: t('stats.filter.pre_staked')},
+  {type: 'on-blockchain', label: t('stats.filter.on_blockchain')},
 ];
 
 export const TotalCoinsFilters = ({onSelect, selectedFilter}: Props) => {
