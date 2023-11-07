@@ -5,6 +5,9 @@ import {COLORS} from '@constants/colors';
 import {font} from '@utils/styles';
 import React, {ReactNode} from 'react';
 import {
+  Image,
+  ImageSourcePropType,
+  ImageStyle,
   StyleProp,
   StyleSheet,
   Text,
@@ -18,11 +21,13 @@ type Props = {
   onPress: () => void;
   LeadingIcon?: ReactNode;
   TrailingIcon?: ReactNode;
+  backgroundImageSource?: ImageSourcePropType;
   containerStyle?: StyleProp<ViewStyle>;
   leadingIconContainerStyle?: StyleProp<ViewStyle>;
   titleTextStyle?: StyleProp<TextStyle>;
   subtitleTextStyle?: StyleProp<TextStyle>;
   trailingIconContainerStyle?: StyleProp<ViewStyle>;
+  backgroundImageStyle?: StyleProp<ImageStyle>;
   title?: string;
   subtitle?: string;
 };
@@ -33,16 +38,29 @@ export const ActionListItem = ({
   onPress,
   LeadingIcon,
   TrailingIcon,
+  backgroundImageSource,
   containerStyle,
   leadingIconContainerStyle,
   titleTextStyle,
   subtitleTextStyle,
   trailingIconContainerStyle,
+  backgroundImageStyle,
   title,
   subtitle,
 }: Props) => {
   return (
-    <Touchable style={[styles.container, containerStyle]} onPress={onPress}>
+    <Touchable onPress={onPress} style={[styles.container, containerStyle]}>
+      {backgroundImageSource && (
+        <Image
+          source={backgroundImageSource}
+          style={[
+            styles.backgroundImage,
+            StyleSheet.absoluteFill,
+            backgroundImageStyle,
+          ]}
+          resizeMode={'cover'}
+        />
+      )}
       {LeadingIcon && (
         <View style={[styles.leadingIconContainer, leadingIconContainerStyle]}>
           {LeadingIcon}
@@ -70,12 +88,19 @@ export const ActionListItem = ({
 
 const styles = StyleSheet.create({
   container: {
-    padding: rem(12),
-    flexDirection: 'row',
-    alignItems: 'center',
     height: rem(60),
     borderRadius: rem(16),
     backgroundColor: COLORS.white,
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: rem(12),
+    flex: 1,
+  },
+  backgroundImage: {
+    borderRadius: rem(16),
+    // Set width and height to undefined to make absoluteFill for image work properly
+    width: undefined,
+    height: undefined,
   },
   leadingIconContainer: {
     width: ICON_CONTAINER_SIZE,

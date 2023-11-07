@@ -237,6 +237,8 @@ export type Translations = {
   'home.roadmap.button_subtitle': null;
   'home.join_mainnet.title': null;
   'home.join_mainnet.subtitle': null;
+  'home.ethereum_address.title': null;
+  'home.ethereum_address.subtitle': null;
   'settings.title': null;
   'settings.profile': null;
   'settings.legal': null;

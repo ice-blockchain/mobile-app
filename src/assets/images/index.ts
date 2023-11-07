@@ -85,6 +85,7 @@ export const Images = {
     levelCardBg: require('./backgrounds/levelCardBg.png'),
     referralsCardBg: require('./backgrounds/referralsCardBg.png'),
     walkthroughBg: require('./backgrounds/walkthrough.png'),
+    darkListItem: require('./backgrounds/darkListItem.png'),
   },
   popUp: {
     updateRequired: require('./popup/please_update.png'),

@@ -4,30 +4,35 @@ import {ActionListItem} from '@components/ListItems/ActionListItem';
 import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
-import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {Images} from '@images';
 import {ChevronSmallIcon} from '@svg/ChevronSmallIcon';
-import {PaperIcon} from '@svg/PaperIcon';
+import {EthereumIcon} from '@svg/EthereumIcon';
 import {t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import React, {memo} from 'react';
 import {StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
-export const Roadmap = memo(() => {
+export const EthereumAddress = memo(() => {
   const onPress = () => openLinkWithInAppBrowser({url: LINKS.WHITEPAPER});
 
   return (
     <>
-      <SectionHeader title={t('home.roadmap.title')} />
+      <SectionHeader title={t('home.ethereum_address.title')} />
       <ActionListItem
         onPress={onPress}
-        LeadingIcon={<PaperIcon />}
-        title={t('home.roadmap.button_title')}
-        subtitle={t('home.roadmap.button_subtitle')}
+        containerStyle={styles.container}
+        LeadingIcon={<EthereumIcon color={COLORS.primaryLight} />}
+        title={t('home.ethereum_address.title')}
+        subtitle={t('home.ethereum_address.subtitle')}
         TrailingIcon={
-          <ChevronSmallIcon style={styles.chevron} color={COLORS.primaryDark} />
+          <ChevronSmallIcon style={styles.chevron} color={COLORS.white} />
         }
-        containerStyle={[styles.container, commonStyles.shadow]}
+        backgroundImageSource={Images.backgrounds.darkListItem}
+        leadingIconContainerStyle={styles.leadingIconContainer}
+        titleTextStyle={styles.text}
+        subtitleTextStyle={styles.text}
       />
     </>
   );
@@ -40,5 +45,11 @@ const styles = StyleSheet.create({
   },
   chevron: {
     transform: [{rotateZ: '-90deg'}],
+  },
+  leadingIconContainer: {
+    backgroundColor: COLORS.white,
+  },
+  text: {
+    color: COLORS.white,
   },
 });

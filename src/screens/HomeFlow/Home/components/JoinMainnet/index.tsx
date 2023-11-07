@@ -16,15 +16,15 @@ export const JoinMainnet = memo(() => {
   const onPress = () => openLinkWithInAppBrowser({url: LINKS.WHITEPAPER});
 
   return (
-    <Touchable onPress={onPress}>
-      <View style={[styles.container, commonStyles.shadow]}>
-        <Image source={Images.card.joinMainnet} style={styles.image} />
-        <View style={styles.body}>
-          <Text style={styles.titleText}>{t('home.join_mainnet.title')}</Text>
-          <Text style={styles.subtitleText}>
-            {t('home.join_mainnet.subtitle')}
-          </Text>
-        </View>
+    <Touchable
+      onPress={onPress}
+      style={[styles.container, commonStyles.shadow]}>
+      <Image source={Images.card.joinMainnet} style={styles.image} />
+      <View style={styles.body}>
+        <Text style={styles.titleText}>{t('home.join_mainnet.title')}</Text>
+        <Text style={styles.subtitleText}>
+          {t('home.join_mainnet.subtitle')}
+        </Text>
       </View>
     </Touchable>
   );

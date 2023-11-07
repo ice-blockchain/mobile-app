@@ -355,6 +355,10 @@
     "join_mainnet": {
       "title": "Join The Decentralized Future",
       "subtitle": "Get a sneak peak of our upcoming Mainnet app and its unique features."
+    },
+    "ethereum_address": {
+      "title": "Ethereum address",
+      "subtitle": "Please enter your ERC-20 address here."
     }
   },
   "settings": {
