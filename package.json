@@ -116,9 +116,7 @@
     "redux-saga": "^1.2.1",
     "rn-android-keyboard-adjust": "^2.1.2",
     "rn-units": "^2.0.5",
-    "text-encoding": "^0.7.0",
-    "web3": "^4.1.2",
-    "web3-validator": "^2.0.2"
+    "viem": "^1.16.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -158,7 +156,7 @@
     "react-test-renderer": "18.2.0",
     "tinypng-cli": "^0.0.7",
     "ts-jest": "^29.0.3",
-    "typescript": "^4.9.3"
+    "typescript": "^5.2.2"
   },
   "engines": {
     "node": ">=16"
