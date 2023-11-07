@@ -22,7 +22,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {CreativeIceLibrary} from '@screens/CreativeIceLibrary';
 import {FaceRecognition} from '@screens/FaceRecognitionFlow';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
-import {EthereumAddress} from '@screens/HomeFlow/EtheriumAddress';
+import {EthereumAddress} from '@screens/HomeFlow/EthereumAddress';
 import {Home} from '@screens/HomeFlow/Home';
 import {
   ActiveOverviewCard,
@@ -152,6 +152,7 @@ export type MainStackParamList = {
   ProfilePrivacyEditStep1: undefined;
   ProfilePrivacyEditStep2: undefined;
   ProfilePrivacyEditStep3: undefined;
+  EthereumAddress: undefined;
 };
 
 export type HomeTabStackParamList = {
@@ -170,7 +171,6 @@ export type HomeTabStackParamList = {
     statsPeriod: StatsPeriod;
   };
   BalanceHistory: undefined;
-  EthereumAddress: undefined;
 };
 
 export type TeamTabStackParamList = {
@@ -224,7 +224,6 @@ const HomeTabStackNavigator = () => (
     <HomeTabStack.Screen name="TopCountries" component={TopCountries} />
     <HomeTabStack.Screen name="UserGrowthGraph" component={UserGrowthGraph} />
     <HomeTabStack.Screen name="BalanceHistory" component={BalanceHistory} />
-    <HomeTabStack.Screen name="EthereumAddress" component={EthereumAddress} />
   </HomeTabStack.Navigator>
 );
 
@@ -437,6 +436,7 @@ export function MainNavigator() {
         options={modalOptions}
         component={JoinTelegramPopUp}
       />
+      <MainStack.Screen name="EthereumAddress" component={EthereumAddress} />
     </MainStack.Navigator>
   );
 }
