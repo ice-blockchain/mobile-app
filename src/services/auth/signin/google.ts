@@ -64,6 +64,8 @@ export const startGoogleSignIn: SocialSignInMethod<{
  * Signs Out from the last used google account
  * That gives a possibility to choose another one
  */
-export const cleanUpGoogleSignIn = () => {
-  return GoogleSignin.signOut().catch();
+export const cleanUpGoogleSignIn = async () => {
+  try {
+    return await GoogleSignin.signOut();
+  } catch {}
 };
