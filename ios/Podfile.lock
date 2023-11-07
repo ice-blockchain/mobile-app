@@ -775,7 +775,8 @@ PODS:
     - FirebaseCoreExtension (= 10.11.0)
     - React-Core
     - RNFBApp
-  - RNGestureHandler (2.12.0):
+  - RNGestureHandler (2.13.4):
+    - RCT-Folly (= 2021.07.22.00)
     - React-Core
   - RNGoogleSignin (10.0.1):
     - GoogleSignIn (~> 7.0)
@@ -1348,7 +1349,7 @@ SPEC CHECKSUMS:
   RNFBApp: fdbde65110240cd843e644270e974e9b455b0fc1
   RNFBAuth: 557866ac2a86d114034c0bcfd37b540a1f33d44a
   RNFBMessaging: 3aca7a5b3b1f79a9ee75026662ea57693436a338
-  RNGestureHandler: dec4645026e7401a0899f2846d864403478ff6a5
+  RNGestureHandler: 6e46dde1f87e5f018a54fe5d40cd0e0b942b49ee
   RNGoogleSignin: ccaa4a81582cf713eea562c5dd9dc1961a715fd0
   RNImageCropPicker: 648356d68fbf9911a1016b3e3723885d28373eda
   RNInAppBrowser: e36d6935517101ccba0e875bac8ad7b0cb655364
