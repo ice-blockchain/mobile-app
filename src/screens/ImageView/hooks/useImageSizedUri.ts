@@ -13,16 +13,16 @@ export const useImageSizedUri = (uri: string, initialSize: number) => {
 
   useEffect(() => {
     if (isRemote) {
-      const fullScreeUri = getImageUriForSize(uri, {
-        width: FULL_SCREEN_IMAGE_SIZE,
-      });
-      Image.prefetch(fullScreeUri)
-        .then(success => {
-          if (success) {
-            setImageUri(fullScreeUri);
-          }
-        })
-        .catch();
+      const prefetch = async () => {
+        try {
+          const fullScreeUri = getImageUriForSize(uri, {
+            width: FULL_SCREEN_IMAGE_SIZE,
+          });
+          await Image.prefetch(fullScreeUri);
+          setImageUri(fullScreeUri);
+        } catch {}
+      };
+      prefetch();
     }
   }, [isRemote, uri]);
 
