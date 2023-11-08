@@ -15,6 +15,21 @@ GoogleSignin.configure({
   webClientId: ENV.GOOGLE_WEB_CLIENT_ID,
 });
 
+/**
+ * According to sentry reports these errors are not handled by @react-native-google-signin/google-signin lib
+ * so we process them manually by code (the codes are returned as strings)
+ *
+ * https://developers.google.com/android/reference/com/google/android/gms/common/ConnectionResult
+ * https://developers.google.com/android/reference/com/google/android/gms/auth/api/signin/GoogleSignInStatusCodes
+ */
+export const GOOGLE_SIGN_IN_CODES = {
+  NETWORK_ERROR: '7',
+  INTERNAL_ERROR: '8',
+  API_UNAVAILABLE: '16',
+  SIGN_IN_FAILED: '12500',
+  SIGN_IN_CURRENTLY_IN_PROGRESS: '12502',
+};
+
 export const startGoogleSignIn: SocialSignInMethod<{
   token: string;
 }> = async () => {
@@ -43,12 +58,23 @@ export const startGoogleSignIn: SocialSignInMethod<{
         case statusCodes.SIGN_IN_CANCELLED:
           return {cancelled: true};
         case statusCodes.IN_PROGRESS:
-          throw new Error(t('errors.auth_in_progress'));
+        case GOOGLE_SIGN_IN_CODES.SIGN_IN_CURRENTLY_IN_PROGRESS:
+          throw {
+            code: AuthError.AuthInProgress,
+            message: t('errors.auth_in_progress'),
+          };
         case statusCodes.PLAY_SERVICES_NOT_AVAILABLE:
-        case 16: // https://developers.google.com/android/reference/com/google/android/gms/common/ConnectionResult#API_UNAVAILABLE
+        case GOOGLE_SIGN_IN_CODES.API_UNAVAILABLE:
           throw {
             code: AuthError.PlayServicesNotAvailable,
             message: t('errors.google_play_services_not_available'),
+          };
+        case GOOGLE_SIGN_IN_CODES.INTERNAL_ERROR:
+        case GOOGLE_SIGN_IN_CODES.NETWORK_ERROR:
+        case GOOGLE_SIGN_IN_CODES.SIGN_IN_FAILED:
+          throw {
+            code: AuthError.UnknownError,
+            message: t('errors.unknown_error'),
           };
         default:
           throw new Error(

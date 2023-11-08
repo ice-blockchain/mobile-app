@@ -27,9 +27,14 @@ export function* signInSocialSaga(
       AccountActions.SIGN_IN_SOCIAL.FAILED.create(getErrorMessage(error)),
     );
     if (
+      // Do not rethrow / log errors that we can do nothing about
       !(
         checkProp(error, 'code') &&
-        error.code === AuthError.PlayServicesNotAvailable
+        [
+          AuthError.PlayServicesNotAvailable,
+          AuthError.AuthInProgress,
+          AuthError.UnknownError,
+        ].includes(error.code as AuthError)
       )
     ) {
       throw error;
