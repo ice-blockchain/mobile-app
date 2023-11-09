@@ -20,7 +20,6 @@ import {useOpenUrlListener} from '@store/modules/Linking/hooks/useOpenUrlListene
 import {useInitNotifications} from '@store/modules/PushNotifications/hooks/useInitNotifications';
 import {useDispatchRestartWalkthrough} from '@store/modules/Walkthrough/hooks/useDispatchRestartWalkthrough';
 import React, {useCallback, useEffect} from 'react';
-import RNBootSplash from 'react-native-bootsplash';
 import {useSelector} from 'react-redux';
 
 function ActiveNavigator() {
@@ -60,7 +59,6 @@ export function Router() {
 
   const onReady = useCallback(() => {
     routingInstrumentation.registerNavigationContainer(navigationRef);
-    RNBootSplash.hide();
   }, []);
 
   const dispatchRestartWalkthrough = useDispatchRestartWalkthrough();
