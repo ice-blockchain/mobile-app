@@ -4,8 +4,7 @@ import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {openLink} from '@utils/device';
 import React, {useCallback} from 'react';
-import {Image} from 'react-native';
-import {ImageSourcePropType, StyleSheet} from 'react-native';
+import {Image, ImageSourcePropType, StyleSheet} from 'react-native';
 import {rem} from 'rn-units';
 
 interface Props {
