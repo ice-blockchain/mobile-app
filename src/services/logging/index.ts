@@ -48,7 +48,7 @@ export function LoggingWrapper(app: React.ComponentType) {
   return Sentry.wrap(app);
 }
 
-export function logError(error: unknown) {
+export function logError(error: unknown, extra: Record<string, unknown> = {}) {
   if (__DEV__) {
     console.error(
       'logError',
@@ -56,6 +56,7 @@ export function logError(error: unknown) {
       error,
       '\n\nstack:',
       checkProp(error, 'stack') && error.stack,
+      extra,
     );
   } else {
     const user = userSelector(store.getState());
@@ -72,10 +73,10 @@ export function logError(error: unknown) {
         error,
         isApiError(error)
           ? {
-              extra: {responseData: error.response?.data},
+              extra: {responseData: error.response?.data, ...extra},
               tags: {api: error.response?.status},
             }
-          : undefined,
+          : {extra},
       );
     });
   }
