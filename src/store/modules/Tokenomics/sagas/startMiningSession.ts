@@ -10,7 +10,6 @@ import {loadLocalAudio} from '@services/audio';
 import {dayjs} from '@services/dayjs';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
-  authConfigSelector,
   firstMiningDateSelector,
   unsafeUserSelector,
   userIdSelector,
@@ -18,11 +17,9 @@ import {
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
-import {emotionsAuthStatusSelector} from '@store/modules/FaceRecognition/selectors';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {
   isMiningActiveSelector,
-  miningStartedSelector,
   tapToMineActionTypeSelector,
 } from '@store/modules/Tokenomics/selectors';
 import {openConfirmResurrect} from '@store/modules/Tokenomics/utils/openConfirmResurrect';
@@ -44,29 +41,9 @@ export function* startMiningSessionSaga(
     typeof TokenomicsActions.START_MINING_SESSION.START.create
   >,
 ) {
-  const emotionsAuthStatus: ReturnType<typeof emotionsAuthStatusSelector> =
-    yield select(emotionsAuthStatusSelector);
-  const authConfig: ReturnType<typeof authConfigSelector> = yield select(
-    authConfigSelector,
-  );
   const user: ReturnType<typeof unsafeUserSelector> = yield select(
     unsafeUserSelector,
   );
-  const miningStarted: ReturnType<typeof miningStartedSelector> = yield select(
-    miningStartedSelector,
-  );
-  if (
-    emotionsAuthStatus !== 'SUCCESS' &&
-    authConfig?.['face-auth']?.enabled &&
-    !!miningStarted // allowing to mine 1st time without face recognition
-  ) {
-    yield removeScreenByName('Tooltip');
-    navigate({
-      name: 'FaceRecognition',
-      params: undefined,
-    });
-    return;
-  }
 
   const tapToMineActionType: ReturnType<typeof tapToMineActionTypeSelector> =
     yield select(tapToMineActionTypeSelector);
@@ -77,6 +54,7 @@ export function* startMiningSessionSaga(
     > = yield call(Api.tokenomics.startMiningSession, {
       userId: user.id,
       resurrect: action.payload?.resurrect,
+      skipKYCStep: action.payload?.skipKYCStep,
     });
     yield put(
       TokenomicsActions.START_MINING_SESSION.SUCCESS.create(miningSummary),
@@ -125,6 +103,30 @@ export function* startMiningSessionSaga(
             ? errorData.duringTheLastXSeconds
             : 0,
       });
+    } else if (isApiError(error, 409, 'KYC_STEP_REQUIRED')) {
+      const errorData = error?.response?.data?.data;
+      if (
+        errorData &&
+        typeof errorData.kycStep === 'number' &&
+        (errorData.kycStep === 1 || errorData.kycStep === 2)
+      ) {
+        yield removeScreenByName('Tooltip').catch();
+        navigate({
+          name: 'FaceRecognition',
+          params: {kycStep: errorData.kycStep},
+        });
+        return;
+      }
+    } else if (isApiError(error, 403, 'MINING_DISABLED')) {
+      const errorData = error?.response?.data?.data;
+      if (errorData && typeof errorData.kycStepBlocked === 'number') {
+        yield removeScreenByName('Tooltip').catch();
+        navigate({
+          name: 'FaceRecognition',
+          params: {kycStep: 2, kycStepBlocked: errorData.kycStepBlocked},
+        });
+        return;
+      }
     } else {
       yield spawn(showError, error);
     }

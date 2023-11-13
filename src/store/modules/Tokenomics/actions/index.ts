@@ -3,6 +3,7 @@
 import {
   BalanceHistoryPoint,
   BalanceSummary,
+  FaceAuthKycNumber,
   MiningSummary,
   PreStakingSummary,
   RankingSummary,
@@ -54,6 +55,7 @@ const START_MINING_SESSION = createAction('START_MINING_SESSION', {
   START: (params?: {
     resurrect?: boolean;
     tapToMineActionType?: 'Extended' | 'Default';
+    skipKYCStep?: FaceAuthKycNumber;
   }) => params,
   SUCCESS: (miningSummary: MiningSummary | null) => ({miningSummary}),
   FAILED: (errorMessage: string) => ({errorMessage}),

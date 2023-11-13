@@ -2,6 +2,7 @@
 
 import {BadgeType} from '@api/achievements/types';
 import {NotificationDeliveryChannel} from '@api/notifications/types';
+import {FaceAuthKycNumber} from '@api/tokenomics/types';
 import {Country} from '@constants/countries';
 import {commonStyles} from '@constants/styles';
 import {ViewMeasurementsResult} from '@ice/react-native';
@@ -102,7 +103,10 @@ export type MainStackParamList = {
     targetCircleSize?: number;
     descriptionOffset?: number;
   };
-  FaceRecognition: undefined;
+  FaceRecognition: {
+    kycStep: FaceAuthKycNumber;
+    kycStepBlocked?: number;
+  };
   Staking: undefined;
   CreativeIceLibrary: undefined;
   ImageView: {
