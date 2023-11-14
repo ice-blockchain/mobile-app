@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {FaceAuthKycNumber} from '@api/tokenomics/types';
 import {CheckMark} from '@components/CheckMark';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
@@ -20,19 +19,14 @@ import {rem} from 'rn-units';
 
 type Props = {
   onGatherMoreEmotions: () => void;
-  kycStep: FaceAuthKycNumber;
 };
 
-export function EmotionsSentStep({onGatherMoreEmotions, kycStep}: Props) {
+export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
   const emotionsAuthStatus = useSelector(emotionsAuthStatusSelector);
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const onFaceAuthSuccess = () => {
-    dispatch(
-      TokenomicsActions.START_MINING_SESSION.START.create({
-        skipKYCStep: kycStep,
-      }),
-    );
+    dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
     navigation.goBack();
   };
 

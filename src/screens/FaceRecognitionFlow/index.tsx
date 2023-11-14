@@ -25,11 +25,9 @@ type FaceRecognitionPhase = 'USER_CONSENT' | 'FACE_AUTH' | 'EMOTIONS_AUTH';
 function renderContent({
   faceRecognitionPhase,
   setFaceRecognitionPhase,
-  kycStep,
 }: {
   faceRecognitionPhase: FaceRecognitionPhase;
   setFaceRecognitionPhase: (phase: FaceRecognitionPhase) => void;
-  kycStep: FaceAuthKycNumber;
 }) {
   switch (faceRecognitionPhase) {
     case 'USER_CONSENT': {
@@ -40,14 +38,10 @@ function renderContent({
       );
     }
     case 'FACE_AUTH': {
-      return (
-        <FaceAuthCameraFeed
-          updateKycStepPassed={() => setFaceRecognitionPhase('EMOTIONS_AUTH')}
-        />
-      );
+      return <FaceAuthCameraFeed />;
     }
     case 'EMOTIONS_AUTH': {
-      return <EmotionsAuthCameraFeed kycStep={kycStep} />;
+      return <EmotionsAuthCameraFeed />;
     }
   }
 }
@@ -99,7 +93,7 @@ export function FaceRecognition() {
           />
         </View>
       ) : (
-        renderContent({faceRecognitionPhase, setFaceRecognitionPhase, kycStep})
+        renderContent({faceRecognitionPhase, setFaceRecognitionPhase})
       )}
     </View>
   );

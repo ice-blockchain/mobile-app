@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {FaceAuthKycNumber} from '@api/tokenomics/types';
 import {commonStyles} from '@constants/styles';
 import {EmotionsSentStep} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/EmotionsSentStep';
 import {GatherEmotionsStep} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep';
@@ -11,11 +10,7 @@ import {useSelector} from 'react-redux';
 
 type EmotionsAuthPhase = 'GATHER_EMOTIONS' | 'ALL_SENT';
 
-type Props = {
-  kycStep: FaceAuthKycNumber;
-};
-
-export function EmotionsAuthCameraFeed({kycStep}: Props) {
+export function EmotionsAuthCameraFeed() {
   const [phase, setPhase] = useState<EmotionsAuthPhase>('GATHER_EMOTIONS');
   const session = useSelector(emotionsAuthSessionSelector);
   const [showStart, setShowStart] = useState(!session);
@@ -39,10 +34,7 @@ export function EmotionsAuthCameraFeed({kycStep}: Props) {
         />
       ) : null}
       {phase === 'ALL_SENT' ? (
-        <EmotionsSentStep
-          onGatherMoreEmotions={onGatherMoreEmotions}
-          kycStep={kycStep}
-        />
+        <EmotionsSentStep onGatherMoreEmotions={onGatherMoreEmotions} />
       ) : null}
     </View>
   );
