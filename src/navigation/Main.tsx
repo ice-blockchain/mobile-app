@@ -105,7 +105,7 @@ export type MainStackParamList = {
   };
   FaceRecognition: {
     kycStep: FaceAuthKycNumber;
-    kycStepBlocked?: number;
+    kycStepBlocked?: FaceAuthKycNumber;
   };
   Staking: undefined;
   CreativeIceLibrary: undefined;

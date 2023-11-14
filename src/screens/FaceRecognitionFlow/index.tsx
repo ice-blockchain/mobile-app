@@ -73,7 +73,7 @@ export function FaceRecognition() {
   const isBanned =
     faceAuthStatus === 'BANNED' ||
     emotionsAuthStatus === 'BANNED' ||
-    kycStepBlocked;
+    !!kycStepBlocked;
 
   const [faceRecognitionPhase, setFaceRecognitionPhase] =
     useState<FaceRecognitionPhase>(() =>
