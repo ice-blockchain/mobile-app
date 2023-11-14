@@ -240,7 +240,7 @@ jobs:
     # TODO: uncomment this when we start testing.
     # needs: [ios-e2e-test]
     needs: [react-native]
-    if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
+    if: ${{ 1 == 0 && (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
     runs-on: macOS-latest
     env:
       FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 180
@@ -369,11 +369,13 @@ jobs:
         run: |
           if [[ ${{ github.event_name == 'pull_request' && github.event.pull_request.draft == false}} == true ]]
             then
+              echo "DEBUG:FIREBASE"
               echo "ANDROID_ARCHIVE_TYPE=apk" >> $GITHUB_ENV
               echo "DEPLOY_TARGET=firebase" >> $GITHUB_ENV
               echo "APP_VERSION=9.9.9" >> $GITHUB_ENV
               echo "RELEASE_NOTES=release_notes:${{ github.head_ref }}" >> $GITHUB_ENV
             else
+              echo "DEBUG:PLAYSTORE"
               echo "ANDROID_ARCHIVE_TYPE=bundle" >> $GITHUB_ENV
               echo "DEPLOY_TARGET=playstore" >> $GITHUB_ENV
               if [[ ${{ github.ref_name == 'master' }} == true ]]
@@ -385,9 +387,11 @@ jobs:
           fi
           if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
             then
+              echo "DEBUG:PROD"
               echo "APP_ENV=production" >> $GITHUB_ENV
               echo "RELEASE_STATUS=completed" >> $GITHUB_ENV
             else
+              echo "DEBUG:STAGING"
               echo "APP_ENV=staging" >> $GITHUB_ENV
               echo "RELEASE_STATUS=draft" >> $GITHUB_ENV
           fi
@@ -406,14 +410,4 @@ jobs:
         id: deploy-app
         run: |
           cd main-repo
-          bundle exec fastlane android deploy target:$DEPLOY_TARGET release_status:$RELEASE_STATUS $RELEASE_NOTES
-      - name: Slack Notification
-        if: ${{ always() && github.event_name == 'push' }}
-        uses: act10ns/slack@v2
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
-          SLACK_MESSAGE_TITLE: Android App Deployment
-        with:
-          config: main-repo/.github/slack.yml
-          status: ${{ job.status }}
-          steps: ${{ '{}' }}
+          echo "DEBUG:$DEPLOY_TARGET"
