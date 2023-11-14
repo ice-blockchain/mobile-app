@@ -23,7 +23,6 @@ import {
 } from '@store/modules/FaceRecognition/selectors';
 import {isEmotionsAuthFinalised} from '@store/modules/FaceRecognition/utils';
 import {t} from '@translations/i18n';
-import {getVideoDimensionsWithFFmpeg} from '@utils/ffmpeg';
 import {Duration} from 'dayjs/plugin/duration';
 import {Camera, VideoQuality} from 'expo-camera';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
@@ -45,6 +44,17 @@ function getSecondsPassed(since: number) {
 // Needed for the Camera component.
 // If to start recording a new video right after previous one is stopped recording there camera feed behaves wierd on ios
 const WAIT_BEFORE_RECORDING_MS = 100;
+
+const QUALITY = VideoQuality[Platform.OS === 'ios' ? '720p' : '480p'];
+
+function qualityToDimensions(quality: '720p' | '480p') {
+  switch (quality) {
+    case '720p':
+      return {width: 720, height: 1280};
+    default:
+      return {width: 480, height: 720};
+  }
+}
 
 export function GatherEmotionsStep({
   onAllEmotionsGathered,
@@ -115,7 +125,7 @@ export function GatherEmotionsStep({
           const video = await cameraRef.current
             .recordAsync({
               maxDuration: 5,
-              quality: VideoQuality[Platform.OS === 'ios' ? '720p' : '480p'],
+              quality: QUALITY,
               mute: true,
             })
             .catch(() => {
@@ -130,10 +140,10 @@ export function GatherEmotionsStep({
             return;
           }
           // You now have the video object which contains the URI to the video file
-          const {width, height} = await getVideoDimensionsWithFFmpeg(video.uri);
           if (toAbort) {
             return;
           }
+          const {height, width} = qualityToDimensions(QUALITY);
           dispatch(
             FaceRecognitionActions.EMOTIONS_AUTH.START.create({
               videoUri: video.uri,

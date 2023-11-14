@@ -7,7 +7,6 @@ import {userIdSelector} from '@store/modules/Account/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
   emotionsAuthEmotionsSelector,
-  emotionsAuthSessionExpiredAtSelector,
   emotionsAuthSessionSelector,
   emotionsAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
@@ -31,20 +30,6 @@ export function* initEmotionsAuthSaga(action: Actions) {
     const userId: ReturnType<typeof userIdSelector> = yield select(
       userIdSelector,
     );
-    const sessionExpiredAt: ReturnType<
-      typeof emotionsAuthSessionExpiredAtSelector
-    > = yield select(emotionsAuthSessionExpiredAtSelector);
-    const isSessionExpired = sessionExpiredAt
-      ? Date.now() >= sessionExpiredAt
-      : false;
-    if (isSessionExpired) {
-      yield put(
-        FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create({
-          status: 'SESSION_EXPIRED',
-        }),
-      );
-      return;
-    }
 
     const frames: SagaReturnType<typeof extractFramesWithFFmpeg> = yield call(
       extractFramesWithFFmpeg,

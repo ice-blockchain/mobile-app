@@ -2,7 +2,6 @@
 
 import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
-import {dayjs} from '@services/dayjs';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {showError} from '@utils/errors';
@@ -22,7 +21,6 @@ export function* fetchEmotionsForAuthSaga() {
       FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.SUCCESS.create({
         emotions: response.emotions,
         sessionId: response.sessionId,
-        sessionExpiredAt: dayjs(response.sessionExpiredAt).valueOf(),
       }),
     );
   } catch (error: unknown) {

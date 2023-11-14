@@ -20,11 +20,7 @@ const FACE_AUTH = createAction('FACE_AUTH', {
 
 const FETCH_EMOTIONS_FOR_AUTH = createAction('FETCH_EMOTIONS_FOR_AUTH', {
   START: true,
-  SUCCESS: (payload: {
-    emotions: AuthEmotion[];
-    sessionId: string;
-    sessionExpiredAt: number;
-  }) => payload,
+  SUCCESS: (payload: {emotions: AuthEmotion[]; sessionId: string}) => payload,
   FAILURE: (payload: {status: EmotionsAuthStatus}) => payload,
 });
 

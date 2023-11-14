@@ -81,26 +81,3 @@ export async function extractFramesWithFFmpeg({
     throw error;
   }
 }
-
-export async function getVideoDimensionsWithFFmpeg(videoUri: string) {
-  let output;
-  try {
-    const session = await FFmpegKit.execute(`-i ${videoUri}`);
-    output = await session.getOutput();
-
-    // Use regex to extract video dimensions from FFmpeg output
-    const regex = /, (\d+)x(\d+),/;
-    const match = output.match(regex);
-
-    if (match) {
-      const height = parseInt(match[1], 10);
-      const width = parseInt(match[2], 10);
-      return {width, height};
-    } else {
-      throw new Error('Failed to extract video dimensions.');
-    }
-  } catch (error) {
-    logError(error, {output});
-    throw error;
-  }
-}

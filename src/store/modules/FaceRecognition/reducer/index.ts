@@ -19,7 +19,6 @@ export interface State {
   sessionId: string | null;
   emotions: AuthEmotion[];
   nextEmotionIndex: number;
-  sessionExpiredAt: number | null;
   activeRequests: number;
 
   cameraRatio: CameraRatio;
@@ -48,7 +47,6 @@ const INITIAL_STATE: State = {
   sessionId: null,
   emotions: [],
   nextEmotionIndex: 0,
-  sessionExpiredAt: null,
   activeRequests: 0,
   cameraRatio: '16:9',
 };
@@ -59,7 +57,6 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       draft.emotions = [];
       draft.sessionId = null;
       draft.nextEmotionIndex = 0;
-      draft.sessionExpiredAt = null;
       draft.activeRequests = 0;
     };
     switch (action.type) {
@@ -78,7 +75,6 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         }
         draft.emotions = action.payload.emotions;
         draft.sessionId = action.payload.sessionId;
-        draft.sessionExpiredAt = action.payload.sessionExpiredAt;
         break;
       case FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.FAILURE.type:
         draft.emotionsAuthStatus = action.payload.status;
@@ -131,13 +127,7 @@ export const faceRecognitionReducer = persistReducer(
   {
     key: 'faceRecognition',
     storage: AsyncStorage,
-    whitelist: [
-      'sessionId',
-      'emotions',
-      'nextEmotionIndex',
-      'sessionExpiredAt',
-      'cameraRatio',
-    ],
+    whitelist: ['sessionId', 'emotions', 'nextEmotionIndex', 'cameraRatio'],
   },
   reducer,
 );
