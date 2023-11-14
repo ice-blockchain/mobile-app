@@ -298,6 +298,7 @@ jobs:
                echo "APP_ENV=staging" >> $GITHUB_ENV
           fi
           echo "BUILD_NUMBER=$(echo $((GITHUB_RUN_NUMBER+2000)))" >> $GITHUB_ENV
+          source .env
       - name: Bump version to v${{ env.APP_VERSION }}
         id: bump-version
         run: |
@@ -392,6 +393,7 @@ jobs:
               echo "RELEASE_STATUS=draft" >> $GITHUB_ENV
           fi
           echo "BUILD_NUMBER=$(echo $((GITHUB_RUN_NUMBER+2000)))" >> $GITHUB_ENV
+          source .env
       - name: Bump version to v${{ env.APP_VERSION }}
         id: bump-version
         run: |
