@@ -16,7 +16,6 @@ import {
 } from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
-import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {
   isMiningActiveSelector,
@@ -58,10 +57,6 @@ export function* startMiningSessionSaga(
     });
     yield put(
       TokenomicsActions.START_MINING_SESSION.SUCCESS.create(miningSummary),
-    );
-    // Reset success emotions auth status here so on next tap to mine a user would have to face auth again
-    yield put(
-      FaceRecognitionActions.RESET_EMOTIONS_SUCCESS_AUTH_STATUS.STATE.create(),
     );
 
     yield call(setFirstMiningDate, user);
@@ -123,7 +118,7 @@ export function* startMiningSessionSaga(
           navigate({
             name: 'FaceRecognition',
             params: {
-              kycSteps: [1],
+              kycSteps: [errorData.kycStepBlocked],
               kycStepBlocked: errorData.kycStepBlocked,
             },
           });

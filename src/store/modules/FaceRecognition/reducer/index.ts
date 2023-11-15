@@ -36,7 +36,6 @@ type Actions = ReturnType<
   | typeof FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create
   | typeof FaceRecognitionActions.RESET_FACE_AUTH_STATUS.STATE.create
   | typeof FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create
-  | typeof FaceRecognitionActions.RESET_EMOTIONS_SUCCESS_AUTH_STATUS.STATE.create
   | typeof FaceRecognitionActions.SET_CAMERA_RATIO.STATE.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
 >;
@@ -107,12 +106,6 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.type:
         draft.emotionsAuthStatus = null;
         resetSession();
-        break;
-      case FaceRecognitionActions.RESET_EMOTIONS_SUCCESS_AUTH_STATUS.STATE.type:
-        if (draft.emotionsAuthStatus === 'SUCCESS') {
-          draft.emotionsAuthStatus = null;
-          resetSession();
-        }
         break;
       case FaceRecognitionActions.SET_CAMERA_RATIO.STATE.type:
         draft.cameraRatio = action.payload.cameraRatio;

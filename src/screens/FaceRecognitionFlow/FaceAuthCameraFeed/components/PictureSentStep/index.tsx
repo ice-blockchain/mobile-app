@@ -42,6 +42,7 @@ export function PictureSentStep({
     navigation.goBack();
   };
   const onFaceAuthTryLater = () => {
+    dispatch(FaceRecognitionActions.RESET_FACE_AUTH_STATUS.STATE.create());
     navigation.goBack();
   };
 

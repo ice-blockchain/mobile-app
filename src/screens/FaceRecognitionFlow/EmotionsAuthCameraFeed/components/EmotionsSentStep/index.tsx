@@ -28,6 +28,7 @@ export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
   const onFaceAuthSuccess = () => {
     dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
     navigation.goBack();
+    dispatch(FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create());
   };
 
   const onBanned = () => {
