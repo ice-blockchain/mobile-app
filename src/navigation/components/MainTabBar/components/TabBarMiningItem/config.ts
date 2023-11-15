@@ -26,6 +26,9 @@ export const MiningButtonConfig: {
     onTap: {
       startMining: true,
     },
+    onLongPress: {
+      startMining: true,
+    },
   },
   active: {
     animation: LottieAnimations.miningActive,
