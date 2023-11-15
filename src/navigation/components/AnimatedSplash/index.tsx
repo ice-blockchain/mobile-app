@@ -9,9 +9,9 @@ import {
   appInitStateSelector,
   isSplashHiddenSelector,
 } from '@store/modules/AppCommon/selectors';
-import React, {useCallback, useState} from 'react';
-import {useEffect} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
+import BootSplash from 'react-native-bootsplash';
 import {useDispatch, useSelector} from 'react-redux';
 
 export const AnimatedSplash = () => {
@@ -37,7 +37,12 @@ export const AnimatedSplash = () => {
   }
 
   return (
-    <View style={styles.container}>
+    <View
+      // Hiding native splash view in `onLayout` callback to make sure that the
+      // AnimatedSplash component is displayed on the screen.
+      // Using `useEffect` in this case leads to a white flickering on Android.
+      onLayout={() => BootSplash.hide()}
+      style={[styles.container, StyleSheet.absoluteFill]}>
       <LottieView
         style={styles.animation}
         source={LottieAnimations.splashLogo}
@@ -52,11 +57,6 @@ export const AnimatedSplash = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: COLORS.primaryLight,
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
   },

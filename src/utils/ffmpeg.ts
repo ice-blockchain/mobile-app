@@ -45,6 +45,7 @@ export async function extractFramesWithFFmpeg({
   outputSize: number;
   cropStartY: number;
 }): Promise<string[]> {
+  let output;
   try {
     const outputUri = `${cacheDirectory}/${getFilenameFromPathWithoutExtension(
       inputUri,
@@ -56,7 +57,7 @@ export async function extractFramesWithFFmpeg({
     if (!returnCode?.isValueSuccess()) {
       throw new Error(`Failed to execute FFmpeg command: ${command}`);
     }
-    const output = await session.getOutput();
+    output = await session.getOutput();
     const numberOfFrames = parseInt(
       output
         .match(/frame=(.*?)(\d+)/g)
@@ -75,16 +76,17 @@ export async function extractFramesWithFFmpeg({
             inputUri,
           )}_${(i + 1).toString().padStart(3, '0')}.jpg`,
       );
-  } catch (e) {
-    logError(e);
-    throw e;
+  } catch (error) {
+    logError(error, {output});
+    throw error;
   }
 }
 
 export async function getVideoDimensionsWithFFmpeg(videoUri: string) {
+  let output;
   try {
     const session = await FFmpegKit.execute(`-i ${videoUri}`);
-    const output = await session.getOutput();
+    output = await session.getOutput();
 
     // Use regex to extract video dimensions from FFmpeg output
     const regex = /, (\d+)x(\d+),/;
@@ -98,7 +100,7 @@ export async function getVideoDimensionsWithFFmpeg(videoUri: string) {
       throw new Error('Failed to extract video dimensions.');
     }
   } catch (error) {
-    logError(error);
+    logError(error, {output});
     throw error;
   }
 }

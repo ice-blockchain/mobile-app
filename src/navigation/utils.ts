@@ -26,20 +26,21 @@ export const getCurrentRouteSync = () => {
 };
 
 export const removeScreenByName = async (screenName: string) => {
-  await navigationReady;
-  const currentStack = navigationRef.getState();
-  const screenIndex = currentStack.routes.findIndex(
-    route => route.name === screenName,
-  );
-  if (screenIndex !== -1) {
-    const newStack = {
-      ...currentStack,
-      routes: currentStack.routes.filter(route => route.name !== screenName),
-    };
-    if (newStack.index >= newStack.routes.length) {
-      newStack.index = newStack.routes.length - 1;
+  const currentStack = await getNavigationState();
+  if (currentStack) {
+    const screenIndex = currentStack.routes.findIndex(
+      route => route.name === screenName,
+    );
+    if (screenIndex !== -1) {
+      const newStack = {
+        ...currentStack,
+        routes: currentStack.routes.filter(route => route.name !== screenName),
+      };
+      if (newStack.index >= newStack.routes.length) {
+        newStack.index = newStack.routes.length - 1;
+      }
+      navigationRef.reset(newStack);
     }
-    navigationRef.reset(newStack);
   }
 };
 
@@ -51,6 +52,14 @@ export const navigate = async (...params: NavigationParams) => {
 export const goBack = async () => {
   await navigationReady;
   return navigationRef.goBack();
+};
+
+export const getNavigationState = async () => {
+  // There are some corner cases when navigationRef.getState() throws "Cannot read property 'routes' of undefined"
+  try {
+    await navigationReady;
+    return navigationRef.getState();
+  } catch {}
 };
 
 export const resetRoot = async (
