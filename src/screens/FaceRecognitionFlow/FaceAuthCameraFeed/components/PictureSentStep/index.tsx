@@ -11,7 +11,6 @@ import {
   cameraRatioSelector,
   faceAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
-import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {LogoIcon} from '@svg/LogoIcon';
 import {RestartIcon} from '@svg/RestartIcon';
 import {t} from '@translations/i18n';
@@ -24,16 +23,17 @@ import {rem} from 'rn-units';
 type Props = {
   picture: CameraCapturedPicture;
   onRetakePicture: () => void;
+  onFaceAuthSuccess: () => void;
 };
 
-export function PictureSentStep({picture, onRetakePicture}: Props) {
+export function PictureSentStep({
+  picture,
+  onRetakePicture,
+  onFaceAuthSuccess,
+}: Props) {
   const faceAuthStatus = useSelector(faceAuthStatusSelector);
   const dispatch = useDispatch();
   const navigation = useNavigation();
-  const onFaceAuthSuccess = () => {
-    dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
-    navigation.goBack();
-  };
   const onFaceAuthFailure = () => {
     dispatch(FaceRecognitionActions.RESET_FACE_AUTH_STATUS.STATE.create());
     onRetakePicture();

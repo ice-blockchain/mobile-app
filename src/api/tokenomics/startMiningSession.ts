@@ -11,7 +11,10 @@ interface Params {
 
 export function startMiningSession({userId, resurrect, skipKYCStep}: Params) {
   return post<
-    {resurrect?: boolean | null; skipKYCStep?: number | null},
+    {resurrect?: boolean | null; skipKYCSteps?: number[] | undefined},
     MiningSummary | null
-  >(`/tokenomics/${userId}/mining-sessions`, {resurrect, skipKYCStep});
+  >(`/tokenomics/${userId}/mining-sessions`, {
+    resurrect,
+    skipKYCSteps: skipKYCStep ? [skipKYCStep] : undefined,
+  });
 }

@@ -103,33 +103,32 @@ export function* startMiningSessionSaga(
             ? errorData.duringTheLastXSeconds
             : 0,
       });
-    } else if (isApiError(error, 409, 'KYC_STEP_REQUIRED')) {
+    } else if (isApiError(error, 409, 'KYC_STEPS_REQUIRED')) {
       const errorData = error?.response?.data?.data;
-      if (
-        errorData &&
-        typeof errorData.kycStep === 'number' &&
-        (errorData.kycStep === 1 || errorData.kycStep === 2)
-      ) {
-        yield removeScreenByName('Tooltip').catch();
-        navigate({
-          name: 'FaceRecognition',
-          params: {kycStep: errorData.kycStep},
-        });
-        return;
+      if (errorData && Array.isArray(errorData.kycSteps)) {
+        if (errorData.kycSteps.includes(1) || errorData.kycSteps.includes(2)) {
+          yield removeScreenByName('Tooltip').catch();
+          navigate({
+            name: 'FaceRecognition',
+            params: {kycSteps: errorData.kycSteps},
+          });
+          return;
+        }
       }
     } else if (isApiError(error, 403, 'MINING_DISABLED')) {
       const errorData = error?.response?.data?.data;
-      if (
-        errorData &&
-        typeof errorData.kycStepBlocked === 'number' &&
-        (errorData.kycStepBlocked === 1 || errorData.kycStepBlocked === 2)
-      ) {
-        yield removeScreenByName('Tooltip').catch();
-        navigate({
-          name: 'FaceRecognition',
-          params: {kycStep: 1, kycStepBlocked: errorData.kycStepBlocked},
-        });
-        return;
+      if (errorData && typeof errorData.kycStepBlocked === 'number') {
+        if (errorData.kycStepBlocked === 1 || errorData.kycStepBlocked === 2) {
+          yield removeScreenByName('Tooltip').catch();
+          navigate({
+            name: 'FaceRecognition',
+            params: {
+              kycSteps: [1],
+              kycStepBlocked: errorData.kycStepBlocked,
+            },
+          });
+          return;
+        }
       }
     } else {
       yield spawn(showError, error);

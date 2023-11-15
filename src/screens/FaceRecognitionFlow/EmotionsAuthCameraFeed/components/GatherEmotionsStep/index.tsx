@@ -2,7 +2,7 @@
 
 import {AuthEmotion} from '@api/faceRecognition/types';
 import {COLORS} from '@constants/colors';
-import {VIDEO_DURATION_SEC} from '@constants/faceRecognition';
+import {VIDEO_DURATION_SEC, VIDEO_QUALITY} from '@constants/faceRecognition';
 import {commonStyles} from '@constants/styles';
 import {Header} from '@navigation/components/Header';
 import {CameraFeed} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
@@ -10,9 +10,9 @@ import {DeviceAngleWarning} from '@screens/FaceRecognitionFlow/components/Device
 import {isSmallDevice} from '@screens/FaceRecognitionFlow/constants';
 import {EmotionCard} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/components/EmotionCard';
 import {StartButton} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/components/StartButton';
+import {useGetVideoDimensions} from '@screens/FaceRecognitionFlow/EmotionsAuthCameraFeed/components/GatherEmotionsStep/hooks/useGetVideoDimensions';
 import {useIsDeviceAngleAllowed} from '@screens/FaceRecognitionFlow/hooks/useIsDeviceAngleAllowed';
 import {useMaxHeightStyle} from '@screens/FaceRecognitionFlow/hooks/useMaxHeightStyle';
-import {getPictureCropStartY} from '@screens/FaceRecognitionFlow/utils';
 import {dayjs} from '@services/dayjs';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
@@ -24,9 +24,9 @@ import {
 import {isEmotionsAuthFinalised} from '@store/modules/FaceRecognition/utils';
 import {t} from '@translations/i18n';
 import {Duration} from 'dayjs/plugin/duration';
-import {Camera, VideoQuality} from 'expo-camera';
+import {Camera} from 'expo-camera';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
-import {BackHandler, Platform, StyleSheet, View} from 'react-native';
+import {BackHandler, StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem, wait} from 'rn-units';
 
@@ -44,17 +44,6 @@ function getSecondsPassed(since: number) {
 // Needed for the Camera component.
 // If to start recording a new video right after previous one is stopped recording there camera feed behaves wierd on ios
 const WAIT_BEFORE_RECORDING_MS = 100;
-
-const QUALITY = VideoQuality[Platform.OS === 'ios' ? '720p' : '480p'];
-
-function qualityToDimensions(quality: '720p' | '480p') {
-  switch (quality) {
-    case '720p':
-      return {width: 720, height: 1280};
-    default:
-      return {width: 480, height: 720};
-  }
-}
 
 export function GatherEmotionsStep({
   onAllEmotionsGathered,
@@ -81,6 +70,8 @@ export function GatherEmotionsStep({
   const [recordingEmotion, setRecordingEmotion] = useState<null | AuthEmotion>(
     null,
   );
+
+  const getVideoDimensions = useGetVideoDimensions();
 
   useEffect(() => {
     if (isAllRecorded && !isVideoRecording && started) {
@@ -125,7 +116,7 @@ export function GatherEmotionsStep({
           const video = await cameraRef.current
             .recordAsync({
               maxDuration: 5,
-              quality: QUALITY,
+              quality: VIDEO_QUALITY,
               mute: true,
             })
             .catch(() => {
@@ -139,19 +130,15 @@ export function GatherEmotionsStep({
           if (toAbort) {
             return;
           }
-          // You now have the video object which contains the URI to the video file
+          const {width, height} = await getVideoDimensions(video.uri);
           if (toAbort) {
             return;
           }
-          const {height, width} = qualityToDimensions(QUALITY);
           dispatch(
             FaceRecognitionActions.EMOTIONS_AUTH.START.create({
               videoUri: video.uri,
-              cropStartY: getPictureCropStartY({
-                pictureWidth: width,
-                pictureHeight: height,
-              }),
               videoWidth: width,
+              videoHeight: height,
             }),
           );
         }
@@ -169,6 +156,7 @@ export function GatherEmotionsStep({
     session,
     isCameraReady,
     started,
+    getVideoDimensions,
   ]);
 
   useEffect(() => {

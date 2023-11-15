@@ -11,8 +11,8 @@ import {createAction} from '@store/utils/actions/createAction';
 const FACE_AUTH = createAction('FACE_AUTH', {
   START: (payload: {
     pictureUri: string;
-    cropStartY: number;
     pictureWidth: number;
+    pictureHeight: number;
   }) => payload,
   SUCCESS: true,
   FAILURE: (payload: {status: FaceAuthStatus}) => payload,
@@ -27,8 +27,8 @@ const FETCH_EMOTIONS_FOR_AUTH = createAction('FETCH_EMOTIONS_FOR_AUTH', {
 const EMOTIONS_AUTH = createAction('EMOTIONS_AUTH', {
   START: (payload: {
     videoUri: string;
-    cropStartY: number;
     videoWidth: number;
+    videoHeight: number;
   }) => payload,
   NEED_MORE_EMOTIONS: (payload: {emotions: AuthEmotion[]}) => payload,
   SUCCESS: true,

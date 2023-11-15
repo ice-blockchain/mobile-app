@@ -104,7 +104,7 @@ export type MainStackParamList = {
     descriptionOffset?: number;
   };
   FaceRecognition: {
-    kycStep: FaceAuthKycNumber;
+    kycSteps: FaceAuthKycNumber[];
     kycStepBlocked?: FaceAuthKycNumber;
   };
   Staking: undefined;

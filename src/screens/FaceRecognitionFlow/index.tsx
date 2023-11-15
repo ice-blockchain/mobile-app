@@ -15,36 +15,13 @@ import {
   emotionsAuthStatusSelector,
   faceAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
+import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {t} from '@translations/i18n';
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 type FaceRecognitionPhase = 'USER_CONSENT' | 'FACE_AUTH' | 'EMOTIONS_AUTH';
-
-function renderContent({
-  faceRecognitionPhase,
-  setFaceRecognitionPhase,
-}: {
-  faceRecognitionPhase: FaceRecognitionPhase;
-  setFaceRecognitionPhase: (phase: FaceRecognitionPhase) => void;
-}) {
-  switch (faceRecognitionPhase) {
-    case 'USER_CONSENT': {
-      return (
-        <FaceAuthUserConsent
-          updateKycStepPassed={() => setFaceRecognitionPhase('FACE_AUTH')}
-        />
-      );
-    }
-    case 'FACE_AUTH': {
-      return <FaceAuthCameraFeed />;
-    }
-    case 'EMOTIONS_AUTH': {
-      return <EmotionsAuthCameraFeed />;
-    }
-  }
-}
 
 function kycStepToFaceRecognitionPhase(kycStepPassed: FaceAuthKycNumber) {
   switch (kycStepPassed) {
@@ -57,10 +34,11 @@ function kycStepToFaceRecognitionPhase(kycStepPassed: FaceAuthKycNumber) {
 
 export function FaceRecognition() {
   const {
-    params: {kycStep, kycStepBlocked},
+    params: {kycSteps, kycStepBlocked},
   } = useRoute<RouteProp<MainStackParamList, 'FaceRecognition'>>();
   useFocusStatusBar({style: 'dark-content'});
   const navigation = useNavigation();
+  const dispatch = useDispatch();
   const faceAuthStatus = useSelector(faceAuthStatusSelector);
   const emotionsAuthStatus = useSelector(emotionsAuthStatusSelector);
 
@@ -71,8 +49,17 @@ export function FaceRecognition() {
 
   const [faceRecognitionPhase, setFaceRecognitionPhase] =
     useState<FaceRecognitionPhase>(() =>
-      kycStepToFaceRecognitionPhase(kycStep),
+      kycStepToFaceRecognitionPhase(kycSteps[0]),
     );
+
+  const onFaceAuthSuccess = () => {
+    if (kycSteps.length > 1) {
+      setFaceRecognitionPhase('EMOTIONS_AUTH');
+    } else {
+      dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
+      navigation.goBack();
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -93,7 +80,19 @@ export function FaceRecognition() {
           />
         </View>
       ) : (
-        renderContent({faceRecognitionPhase, setFaceRecognitionPhase})
+        <>
+          {faceRecognitionPhase === 'USER_CONSENT' ? (
+            <FaceAuthUserConsent
+              updateKycStepPassed={() => setFaceRecognitionPhase('FACE_AUTH')}
+            />
+          ) : null}
+          {faceRecognitionPhase === 'FACE_AUTH' ? (
+            <FaceAuthCameraFeed onFaceAuthSuccess={onFaceAuthSuccess} />
+          ) : null}
+          {faceRecognitionPhase === 'EMOTIONS_AUTH' ? (
+            <EmotionsAuthCameraFeed />
+          ) : null}
+        </>
       )}
     </View>
   );

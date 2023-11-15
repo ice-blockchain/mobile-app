@@ -13,7 +13,7 @@ import {
 import {isEmotionsAuthFinalised} from '@store/modules/FaceRecognition/utils';
 import {shallowCompare} from '@utils/array';
 import {showError} from '@utils/errors';
-import {extractFramesWithFFmpeg} from '@utils/ffmpeg';
+import {extractFramesWithFFmpeg, getPictureCropStartY} from '@utils/ffmpeg';
 import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
 type Actions = ReturnType<
@@ -22,7 +22,7 @@ type Actions = ReturnType<
 
 export function* initEmotionsAuthSaga(action: Actions) {
   try {
-    const {videoUri, cropStartY, videoWidth} = action.payload;
+    const {videoUri, videoWidth, videoHeight} = action.payload;
     const sessionId: ReturnType<typeof emotionsAuthSessionSelector> =
       yield select(emotionsAuthSessionSelector);
     const emotions: ReturnType<typeof emotionsAuthEmotionsSelector> =
@@ -31,6 +31,10 @@ export function* initEmotionsAuthSaga(action: Actions) {
       userIdSelector,
     );
 
+    const cropStartY: SagaReturnType<typeof getPictureCropStartY> = yield call(
+      getPictureCropStartY,
+      {pictureWidth: videoWidth, pictureHeight: videoHeight},
+    );
     const frames: SagaReturnType<typeof extractFramesWithFFmpeg> = yield call(
       extractFramesWithFFmpeg,
       {
