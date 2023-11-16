@@ -14,10 +14,10 @@ import {View} from 'react-native';
 type FaceAuthPhase = 'TAKE_SELFIE' | 'SEND_OR_RETAKE' | 'SENT';
 
 type Props = {
-  updateKycStepPassed: () => void;
+  onFaceAuthSuccess: () => void;
 };
 
-export function FaceAuthCameraFeed({updateKycStepPassed}: Props) {
+export function FaceAuthCameraFeed({onFaceAuthSuccess}: Props) {
   const [faceAuthPhase, setFaceAuthPhase] =
     useState<FaceAuthPhase>('TAKE_SELFIE');
 
@@ -59,7 +59,7 @@ export function FaceAuthCameraFeed({updateKycStepPassed}: Props) {
         <PictureSentStep
           picture={faceAuthPicture}
           onRetakePicture={onRetakePicture}
-          onFaceAuthSuccess={updateKycStepPassed}
+          onFaceAuthSuccess={onFaceAuthSuccess}
         />
       ) : null}
     </View>

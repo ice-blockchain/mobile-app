@@ -8,7 +8,6 @@ import {cameraStyles} from '@screens/FaceRecognitionFlow/components/CameraFeed/C
 import {FaceAuthOverlay} from '@screens/FaceRecognitionFlow/components/FaceAuthOverlay';
 import {isSmallDevice} from '@screens/FaceRecognitionFlow/constants';
 import {useMaxHeightStyle} from '@screens/FaceRecognitionFlow/hooks/useMaxHeightStyle';
-import {getPictureCropStartY} from '@screens/FaceRecognitionFlow/utils';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {cameraRatioSelector} from '@store/modules/FaceRecognition/selectors';
 import {RestartIcon} from '@svg/RestartIcon';
@@ -37,10 +36,7 @@ export function SendOrRetakeStep({
       FaceRecognitionActions.FACE_AUTH.START.create({
         pictureUri: picture.uri,
         pictureWidth: picture.width,
-        cropStartY: getPictureCropStartY({
-          pictureWidth: picture.width,
-          pictureHeight: picture.height,
-        }),
+        pictureHeight: picture.height,
       }),
     );
     onPictureSent();

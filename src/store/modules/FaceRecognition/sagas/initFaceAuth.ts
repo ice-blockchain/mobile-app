@@ -6,7 +6,7 @@ import {FACE_RECOGNITION_PICTURE_SIZE} from '@constants/faceRecognition';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {showError} from '@utils/errors';
-import {cropAndResizeWithFFmpeg} from '@utils/ffmpeg';
+import {cropAndResizeWithFFmpeg, getPictureCropStartY} from '@utils/ffmpeg';
 import {getFilenameFromPath} from '@utils/file';
 import {cacheDirectory} from 'expo-file-system';
 import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
@@ -15,7 +15,12 @@ type Actions = ReturnType<typeof FaceRecognitionActions.FACE_AUTH.START.create>;
 
 export function* initFaceAuthSaga(action: Actions) {
   try {
-    const {pictureUri, cropStartY, pictureWidth} = action.payload;
+    const {pictureUri, pictureWidth, pictureHeight} = action.payload;
+
+    const cropStartY: SagaReturnType<typeof getPictureCropStartY> = yield call(
+      getPictureCropStartY,
+      {pictureWidth, pictureHeight},
+    );
 
     const croppedPictureUri: SagaReturnType<typeof cropAndResizeWithFFmpeg> =
       yield call(cropAndResizeWithFFmpeg, {

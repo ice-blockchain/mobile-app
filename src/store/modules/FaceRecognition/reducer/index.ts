@@ -19,7 +19,6 @@ export interface State {
   sessionId: string | null;
   emotions: AuthEmotion[];
   nextEmotionIndex: number;
-  sessionExpiredAt: number | null;
   activeRequests: number;
 
   cameraRatio: CameraRatio;
@@ -37,7 +36,6 @@ type Actions = ReturnType<
   | typeof FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create
   | typeof FaceRecognitionActions.RESET_FACE_AUTH_STATUS.STATE.create
   | typeof FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create
-  | typeof FaceRecognitionActions.RESET_EMOTIONS_SUCCESS_AUTH_STATUS.STATE.create
   | typeof FaceRecognitionActions.SET_CAMERA_RATIO.STATE.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
 >;
@@ -48,7 +46,6 @@ const INITIAL_STATE: State = {
   sessionId: null,
   emotions: [],
   nextEmotionIndex: 0,
-  sessionExpiredAt: null,
   activeRequests: 0,
   cameraRatio: '16:9',
 };
@@ -59,7 +56,6 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       draft.emotions = [];
       draft.sessionId = null;
       draft.nextEmotionIndex = 0;
-      draft.sessionExpiredAt = null;
       draft.activeRequests = 0;
     };
     switch (action.type) {
@@ -78,7 +74,6 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         }
         draft.emotions = action.payload.emotions;
         draft.sessionId = action.payload.sessionId;
-        draft.sessionExpiredAt = action.payload.sessionExpiredAt;
         break;
       case FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.FAILURE.type:
         draft.emotionsAuthStatus = action.payload.status;
@@ -112,12 +107,6 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.emotionsAuthStatus = null;
         resetSession();
         break;
-      case FaceRecognitionActions.RESET_EMOTIONS_SUCCESS_AUTH_STATUS.STATE.type:
-        if (draft.emotionsAuthStatus === 'SUCCESS') {
-          draft.emotionsAuthStatus = null;
-          resetSession();
-        }
-        break;
       case FaceRecognitionActions.SET_CAMERA_RATIO.STATE.type:
         draft.cameraRatio = action.payload.cameraRatio;
         break;
@@ -131,13 +120,7 @@ export const faceRecognitionReducer = persistReducer(
   {
     key: 'faceRecognition',
     storage: AsyncStorage,
-    whitelist: [
-      'sessionId',
-      'emotions',
-      'nextEmotionIndex',
-      'sessionExpiredAt',
-      'cameraRatio',
-    ],
+    whitelist: ['sessionId', 'emotions', 'nextEmotionIndex', 'cameraRatio'],
   },
   reducer,
 );
