@@ -134,8 +134,6 @@ export async function getVideoDimensionsWithFFmpeg(
       const width = parseInt(match[2], 10);
       return {width, height};
     }
-  } catch (error) {
-    logError(error);
-  }
+  } catch {}
   return qualityToDimensions(VIDEO_QUALITY);
 }
