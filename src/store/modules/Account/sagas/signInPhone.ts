@@ -1,11 +1,16 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {Api} from '@api/index';
 import {signInWithPhoneNumber} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
+import {authConfigSelector} from '@store/modules/Account/selectors';
+import {openPhoneAuthBlocked} from '@store/modules/Account/utils/openPhoneAuthBlocked';
+import {deviceLocationSelector} from '@store/modules/Devices/selectors';
 import {t} from '@translations/i18n';
 import {getErrorMessage} from '@utils/errors';
 import {checkProp} from '@utils/guards';
-import {call, put, SagaReturnType, take} from 'redux-saga/effects';
+import RNLocalize from 'react-native-localize';
+import {call, put, SagaReturnType, select, take} from 'redux-saga/effects';
 
 enum ValidateError {
   InvalidPhone,
@@ -19,6 +24,25 @@ export function* signInPhoneSaga(
 
     if (phoneNumber.trim() === '') {
       throw {code: ValidateError.InvalidPhone};
+    }
+
+    const authPhoneEnabledForCountry: SagaReturnType<
+      typeof checkAuthPhoneEnabledForCountry
+    > = yield call(checkAuthPhoneEnabledForCountry);
+
+    if (!authPhoneEnabledForCountry) {
+      const user: SagaReturnType<typeof getUserByPhoneNumber> = yield call(
+        getUserByPhoneNumber,
+        phoneNumber,
+      );
+      if (!user) {
+        yield call(openPhoneAuthBlocked);
+        yield put(AccountActions.SIGN_IN_PHONE.RESET.create());
+        return;
+      } else if (user.email) {
+        yield put(AccountActions.SIGN_IN_PHONE.RESET.create());
+        return;
+      }
     }
 
     let confirmation: SagaReturnType<typeof signInWithPhoneNumber> = yield call(
@@ -85,4 +109,44 @@ export function* signInPhoneSaga(
       throw error;
     }
   }
+}
+
+function* getUserByPhoneNumber(phoneNumber: string) {
+  const user: SagaReturnType<typeof Api.user.getUserByPhoneNumber> = yield call(
+    Api.user.getUserByPhoneNumber,
+    {phoneNumber},
+  );
+  // TODO::check 404?
+  if (!user) {
+    return null;
+  }
+  return user;
+}
+
+function* checkAuthPhoneEnabledForCountry() {
+  const authConfig: ReturnType<typeof authConfigSelector> = yield select(
+    authConfigSelector,
+  );
+  const deviceSettingsCountry = RNLocalize.getCountry();
+  const deviceLocation: ReturnType<typeof deviceLocationSelector> =
+    yield select(deviceLocationSelector);
+
+  const isEqualsToDeviceCountry = (country: string) => {
+    return [
+      deviceSettingsCountry.toLowerCase(),
+      deviceLocation?.country?.toLowerCase(),
+    ].includes(country.toLowerCase());
+  };
+  if (authConfig) {
+    if (checkProp(authConfig, 'phoneAuthWhiteList')) {
+      return authConfig.phoneAuthWhiteList.some(isEqualsToDeviceCountry);
+    }
+
+    if (checkProp(authConfig, 'phoneAuthBlackList')) {
+      return !authConfig.phoneAuthBlackList.some(isEqualsToDeviceCountry);
+    }
+  }
+
+  //TODO::by default true?
+  return false;
 }

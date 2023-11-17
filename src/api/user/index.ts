@@ -3,6 +3,7 @@
 import {createUser} from './createUser';
 import {deleteUser} from './deleteUser';
 import {getUserById} from './getUserById';
+import {getUserByPhoneNumber} from './getUserByPhoneNumber';
 import {getUserByUsername} from './getUserByUsername';
 import {searchUsers} from './searchUsers';
 import {updateAccount} from './updateAccount';
@@ -12,6 +13,7 @@ export const user = Object.freeze({
   deleteUser,
   getUserById,
   getUserByUsername,
+  getUserByPhoneNumber,
   updateAccount,
   searchUsers,
 });

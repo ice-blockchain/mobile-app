@@ -91,6 +91,7 @@ export const Images = {
     error: require('./popup/oops.png'),
     upToDate: require('./popup/already_updated.png'),
     resurrection: require('./popup/resurrection.png'),
+    phoneBlocked: require('./popup/phoneBlocked.png'),
   },
   share: {
     telegram: require('./share/telegram.png'),

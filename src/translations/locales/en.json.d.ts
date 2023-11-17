@@ -417,6 +417,8 @@ export type Translations = {
   'pop_up.resurrection_yes_confirm_message': null;
   'pop_up.delete_account_confirmation_title': null;
   'pop_up.delete_account_confirmation_text': null;
+  'pop_up.phone_auth_blocked_title': null;
+  'pop_up.phone_auth_blocked_text': null;
   'periods.3_days': null;
   'periods.7_days': null;
   'periods.30_days': null;

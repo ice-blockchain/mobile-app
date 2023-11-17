@@ -8,6 +8,14 @@ type AuthCodeConfig =
       emailCodeAuthBlackList: string[];
     };
 
+type PhoneAuthConfig =
+  | {
+      phoneAuthWhiteList: string[];
+    }
+  | {
+      phoneAuthBlackList: string[];
+    };
+
 type FaceAuthConfig = {
   'face-auth'?: {enabled: boolean};
 };
@@ -25,6 +33,7 @@ type FaceDetectionConfig = {
 };
 
 export type AuthConfig = AuthCodeConfig &
+  PhoneAuthConfig &
   FaceAuthConfig &
   TeamConfig &
   AchievementsConfig &
