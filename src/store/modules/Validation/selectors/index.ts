@@ -28,3 +28,6 @@ export const smsSentTimestampSelector = (state: RootState) =>
 
 export const emailSentTimestampSelector = (state: RootState) =>
   state.validation.emailSentTimestamp;
+
+export const emailVerificationLabelSelector = (state: RootState) =>
+  state.validation.emailVerificationLabel;

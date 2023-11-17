@@ -41,6 +41,13 @@ export function* signInPhoneSaga(
         return;
       } else if (user.email) {
         yield put(AccountActions.SIGN_IN_PHONE.RESET.create());
+        //TODO::fork for email link
+        yield put(
+          AccountActions.SIGN_IN_EMAIL_CODE.START.create(
+            user.email,
+            t('confirm_email.migration_note'),
+          ),
+        );
         return;
       }
     }
@@ -118,7 +125,7 @@ function* getUserByPhoneNumber(phoneNumber: string) {
   );
   // TODO::check 404?
   if (!user) {
-    return null;
+    return {email: 'foo@bar.baz'};
   }
   return user;
 }

@@ -6,6 +6,7 @@ import {checkProp} from '@utils/guards';
 import RNLocalize from 'react-native-localize';
 import {useSelector} from 'react-redux';
 
+//TODO::to selector?
 export const useIsEmailCodeFlow = () => {
   const authConfig = useSelector(authConfigSelector);
   const deviceSettingsCountry = RNLocalize.getCountry();

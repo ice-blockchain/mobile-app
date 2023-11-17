@@ -33,7 +33,7 @@ const SIGN_OUT = createAction('SIGN_OUT', {
 });
 
 const SIGN_IN_EMAIL_LINK = createAction('SIGN_IN_EMAIL_LINK', {
-  START: (email: string) => ({email}),
+  START: (email: string, label: string | null = null) => ({email, label}),
   SET_TEMP_EMAIL: (email: string) => ({email}),
   CONFIRM_TEMP_EMAIL: (link: string) => ({link}),
   SUCCESS: true,
@@ -42,7 +42,7 @@ const SIGN_IN_EMAIL_LINK = createAction('SIGN_IN_EMAIL_LINK', {
 });
 
 const SIGN_IN_EMAIL_CODE = createAction('SIGN_IN_EMAIL_CODE', {
-  START: (email: string) => ({email}),
+  START: (email: string, label: string | null = null) => ({email, label}),
   SET_TEMP_EMAIL: (params: {email: string; code: string}) => params,
   SUCCESS: true,
   FAILED: (errorMessage: string) => ({errorMessage}),

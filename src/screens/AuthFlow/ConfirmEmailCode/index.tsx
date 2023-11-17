@@ -10,16 +10,19 @@ import {LottieAnimations} from '@lottie';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {useConfirmEmailCode} from '@screens/AuthFlow/ConfirmEmailCode/hooks/useConfirmEmailCode';
 import {Header} from '@screens/AuthFlow/ConfirmEmailLink/components/Header';
+import {emailVerificationLabelSelector} from '@store/modules/Validation/selectors';
 import {PenWithFrameIcon} from '@svg/PenWithFrameIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 export const ConfirmEmailCode = () => {
   useFocusStatusBar({style: 'light-content'});
   const {email, code, goBack} = useConfirmEmailCode();
+  const emailVerificationLabel = useSelector(emailVerificationLabelSelector);
 
   return (
     <View style={commonStyles.flexOne}>
@@ -41,7 +44,7 @@ export const ConfirmEmailCode = () => {
         </Touchable>
       </View>
       <Text style={styles.instructionText}>
-        {t('confirm_email.link_instruction')}
+        {emailVerificationLabel ?? t('confirm_email.link_instruction')}
       </Text>
       {code && <EmailCode code={code} containerStyle={styles.emailCode} />}
       <View style={styles.bottomContainer}>
@@ -81,7 +84,7 @@ const styles = StyleSheet.create({
   instructionText: {
     marginTop: rem(24),
     ...font(16, 26, 'medium', 'secondary', 'center'),
-    width: rem(250),
+    marginHorizontal: rem(40),
     alignSelf: 'center',
   },
   emailCode: {

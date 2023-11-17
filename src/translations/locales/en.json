@@ -650,6 +650,7 @@
     "check_email": "Check your email",
     "emailed_link_to": "We emailed a magic link to",
     "link_instruction": "Click the link to log in or sign up.",
+    "migration_note": "We are migrating all existing accounts to login using email by default.",
     "modify_title": "Confirm New Email",
     "modify_description": "Please enter your new email address."
   },

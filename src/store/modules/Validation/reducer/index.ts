@@ -17,6 +17,7 @@ export interface State {
   temporaryEmail: string | null;
   temporaryEmailCode: string | null;
   temporaryEmailVerificationStep: 'email' | 'link' | 'code';
+  emailVerificationLabel: string | null;
   emailSentTimestamp: number | null;
 }
 
@@ -26,9 +27,11 @@ type Actions = ReturnType<
   | typeof AccountActions.SIGN_IN_PHONE.SUCCESS.create
   | typeof AccountActions.SIGN_IN_PHONE.RESEND_SUCCESS.create
   | typeof AccountActions.SIGN_IN_PHONE.RESET.create
+  | typeof AccountActions.SIGN_IN_EMAIL_LINK.START.create
   | typeof AccountActions.SIGN_IN_EMAIL_LINK.SET_TEMP_EMAIL.create
   | typeof AccountActions.SIGN_IN_EMAIL_LINK.SUCCESS.create
   | typeof AccountActions.SIGN_IN_EMAIL_LINK.RESET.create
+  | typeof AccountActions.SIGN_IN_EMAIL_CODE.START.create
   | typeof AccountActions.SIGN_IN_EMAIL_CODE.SET_TEMP_EMAIL.create
   | typeof AccountActions.SIGN_IN_EMAIL_CODE.SUCCESS.create
   | typeof AccountActions.SIGN_IN_EMAIL_CODE.RESET.create
@@ -60,6 +63,7 @@ const INITIAL_STATE: State = {
   temporaryEmail: null,
   temporaryEmailCode: null,
   emailSentTimestamp: null,
+  emailVerificationLabel: null,
   temporaryEmailVerificationStep: 'email',
 };
 
@@ -79,16 +83,23 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case AccountActions.SIGN_IN_PHONE.RESEND_SUCCESS.type:
         draft.smsSentTimestamp = dayjs().valueOf();
         break;
+      case AccountActions.SIGN_IN_EMAIL_LINK.START.type:
+        draft.emailVerificationLabel = action.payload.label;
+        break;
       case AccountActions.SIGN_IN_EMAIL_LINK.SET_TEMP_EMAIL.type:
       case AccountActions.MODIFY_EMAIL_WITH_LINK.SET_TEMP_EMAIL.type:
         draft.temporaryEmail = action.payload.email;
         draft.temporaryEmailVerificationStep = 'link';
         draft.emailSentTimestamp = dayjs().valueOf();
         break;
+      case AccountActions.SIGN_IN_EMAIL_CODE.START.type:
+        draft.emailVerificationLabel = action.payload.label;
+        break;
       case AccountActions.SIGN_IN_EMAIL_CODE.SET_TEMP_EMAIL.type:
       case AccountActions.MODIFY_EMAIL_WITH_CODE.SET_TEMP_EMAIL.type:
         draft.temporaryEmail = action.payload.email;
         draft.temporaryEmailCode = action.payload.code;
+
         draft.temporaryEmailVerificationStep = 'code';
         draft.emailSentTimestamp = dayjs().valueOf();
         break;
