@@ -83,12 +83,12 @@ const styles = StyleSheet.create({
     paddingLeft: 0,
   },
   prefixText: {
-    ...font(16, isIOS ? 21 : 20, 'medium', 'secondary'),
+    ...font(16, 20, 'medium', 'secondary'),
     marginRight: isRTL ? 0 : rem(4),
     marginLeft: isRTL ? rem(4) : 0,
   },
   valueText: {
     alignItems: 'center',
-    ...font(16, 21, 'medium', 'gunmetalGrey', 'left'),
+    ...font(16, isIOS ? 20 : 21, 'medium', 'gunmetalGrey', 'left'),
   },
 });
