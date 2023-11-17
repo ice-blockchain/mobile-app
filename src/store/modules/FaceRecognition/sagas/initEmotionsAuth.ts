@@ -2,7 +2,10 @@
 
 import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
-import {userIdSelector} from '@store/modules/Account/selectors';
+import {
+  isFaceDetectionEnabledSelector,
+  userIdSelector,
+} from '@store/modules/Account/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
   emotionsAuthEmotionsSelector,
@@ -26,14 +29,21 @@ async function getCroppedFrames({
   frames,
   pictureWidth,
   cropStartY,
+  faceDetectionEnabled,
 }: {
   frames: string[];
   pictureWidth: number;
   cropStartY: number;
+  faceDetectionEnabled: boolean;
 }): Promise<string[]> {
   return Promise.all(
     frames.map(frame =>
-      getCroppedPictureUri({pictureUri: frame, pictureWidth, cropStartY}),
+      getCroppedPictureUri({
+        pictureUri: frame,
+        pictureWidth,
+        cropStartY,
+        faceDetectionEnabled,
+      }),
     ),
   );
 }
@@ -49,22 +59,29 @@ export function* initEmotionsAuthSaga(action: Actions) {
       userIdSelector,
     );
 
-    const cropStartY: SagaReturnType<typeof getPictureCropStartY> = yield call(
-      getPictureCropStartY,
-      {pictureWidth: videoWidth, pictureHeight: videoHeight},
-    );
     const frames: SagaReturnType<typeof extractFramesWithFFmpeg> = yield call(
       extractFramesWithFFmpeg,
       {
         inputUri: videoUri,
       },
     );
+
+    const cropStartY: SagaReturnType<typeof getPictureCropStartY> = yield call(
+      getPictureCropStartY,
+      {pictureWidth: videoWidth, pictureHeight: videoHeight},
+    );
+
+    const faceDetectionEnabled: ReturnType<
+      typeof isFaceDetectionEnabledSelector
+    > = yield select(isFaceDetectionEnabledSelector);
+
     const croppedFrames: SagaReturnType<typeof getCroppedFrames> = yield call(
       getCroppedFrames,
       {
         frames,
         pictureWidth: videoWidth,
         cropStartY,
+        faceDetectionEnabled,
       },
     );
     const response: SagaReturnType<typeof Api.faceRecognition.emotionsAuth> =

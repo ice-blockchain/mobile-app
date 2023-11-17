@@ -2,7 +2,10 @@
 
 import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
-import {userIdSelector} from '@store/modules/Account/selectors';
+import {
+  isFaceDetectionEnabledSelector,
+  userIdSelector,
+} from '@store/modules/Account/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {getCroppedPictureUri} from '@store/modules/FaceRecognition/utils';
 import {showError} from '@utils/errors';
@@ -10,6 +13,7 @@ import {getPictureCropStartY} from '@utils/ffmpeg';
 import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
 type Actions = ReturnType<typeof FaceRecognitionActions.FACE_AUTH.START.create>;
+
 export function* initFaceAuthSaga(action: Actions) {
   try {
     const {pictureUri, pictureWidth, pictureHeight} = action.payload;
@@ -19,11 +23,16 @@ export function* initFaceAuthSaga(action: Actions) {
       {pictureWidth, pictureHeight},
     );
 
+    const faceDetectionEnabled: ReturnType<
+      typeof isFaceDetectionEnabledSelector
+    > = yield select(isFaceDetectionEnabledSelector);
+
     const croppedPictureUri: SagaReturnType<typeof getCroppedPictureUri> =
       yield call(getCroppedPictureUri, {
         pictureUri,
         cropStartY,
         pictureWidth,
+        faceDetectionEnabled,
       });
     const userId: ReturnType<typeof userIdSelector> = yield select(
       userIdSelector,

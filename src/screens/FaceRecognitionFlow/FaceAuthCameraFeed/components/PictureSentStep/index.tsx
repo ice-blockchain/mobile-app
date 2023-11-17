@@ -34,7 +34,6 @@ export function PictureSentStep({
   const faceAuthStatus = useSelector(faceAuthStatusSelector);
   const dispatch = useDispatch();
   const navigation = useNavigation();
-
   const onFaceAuthFailure = () => {
     dispatch(FaceRecognitionActions.RESET_FACE_AUTH_STATUS.STATE.create());
     onRetakePicture();

@@ -26,33 +26,39 @@ export async function getCroppedPictureUri({
   pictureUri,
   pictureWidth,
   cropStartY,
+  faceDetectionEnabled,
 }: {
   pictureUri: string;
   pictureWidth: number;
   cropStartY: number;
+  faceDetectionEnabled: boolean;
 }) {
-  const result = await FaceDetector.detectFacesAsync(pictureUri, {
-    mode: FaceDetectorMode.accurate,
-    detectLandmarks: FaceDetectorLandmarks.none,
-    runClassifications: FaceDetectorClassifications.none,
-  });
-  const face = result?.faces?.[0];
-  if (face) {
-    const {size, origin} = face.bounds;
-    const isTaller = size.height > size.width;
-    const faceCropStartX = isTaller
-      ? origin.x - (size.height - size.width) / 2
-      : origin.x;
-    const faceCropStartY = origin.y;
-    const imgWidth = Math.max(size.width, size.height, pictureWidth);
-    return cropAndResizeWithFFmpeg({
-      inputUri: pictureUri,
-      outputUri: `${cacheDirectory}/cropped_${getFilenameFromPath(pictureUri)}`,
-      cropStartY: faceCropStartY,
-      cropStartX: faceCropStartX,
-      imgWidth,
-      outputSize: FACE_RECOGNITION_PICTURE_SIZE,
+  if (faceDetectionEnabled) {
+    const result = await FaceDetector.detectFacesAsync(pictureUri, {
+      mode: FaceDetectorMode.accurate,
+      detectLandmarks: FaceDetectorLandmarks.none,
+      runClassifications: FaceDetectorClassifications.none,
     });
+    const face = result?.faces?.[0];
+    if (face) {
+      const {size, origin} = face.bounds;
+      const isTaller = size.height > size.width;
+      const faceCropStartX = isTaller
+        ? origin.x - (size.height - size.width) / 2
+        : origin.x;
+      const faceCropStartY = origin.y;
+      const imgWidth = Math.max(size.width, size.height, pictureWidth);
+      return cropAndResizeWithFFmpeg({
+        inputUri: pictureUri,
+        outputUri: `${cacheDirectory}/cropped_${getFilenameFromPath(
+          pictureUri,
+        )}`,
+        cropStartY: faceCropStartY,
+        cropStartX: faceCropStartX,
+        imgWidth,
+        outputSize: FACE_RECOGNITION_PICTURE_SIZE,
+      });
+    }
   }
   return cropAndResizeWithFFmpeg({
     inputUri: pictureUri,
