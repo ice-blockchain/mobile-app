@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "Avviso",
       "description": "Si prega di tenere il telefono dritto mentre si guarda nella fotocamera"
+    },
+    "camera_permission": {
+      "title": "Permesso fotocamera",
+      "description": "Per continuare, permetti l'accesso alla fotocamera.",
+      "action": "Permetti accesso"
     }
   },
   "override": {

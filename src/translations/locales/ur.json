@@ -1088,6 +1088,11 @@
     "device_angle_warning": {
       "title": "وارننگ",
       "description": "براہ کرم کیمرے میں دیکھتے وقت فون کو سیدھا رکھیں"
+    },
+    "camera_permission": {
+      "title": "کیمرہ اجازت",
+      "description": "جاری رہنے کے لئے براہ کرم کیمرے تک رسائی دیں۔",
+      "action": "رسائی دینے کی اجازت دیں"
     }
   },
   "override": {

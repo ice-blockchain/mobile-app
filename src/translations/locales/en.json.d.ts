@@ -672,6 +672,9 @@ export type Translations = {
   'face_auth.emotions_recognition.emotions.surprise': null;
   'face_auth.device_angle_warning.title': null;
   'face_auth.device_angle_warning.description': null;
+  'face_auth.camera_permission.title': null;
+  'face_auth.camera_permission.description': null;
+  'face_auth.camera_permission.action': null;
   'override.whoInvitedYou.dontHaveInvitationCode': null;
   'override.home.pioneer.description': null;
   'override.home.tasks.invite_friends.description': null;

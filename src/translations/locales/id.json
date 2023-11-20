@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "Peringatan",
       "description": "Mohon tetapkan ponsel lurus saat melihat ke kamera"
+    },
+    "camera_permission": {
+      "title": "Izin Kamera",
+      "description": "Untuk melanjutkan, harap izinkan akses ke kamera.",
+      "action": "Izinkan akses"
     }
   },
   "override": {

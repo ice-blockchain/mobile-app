@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "चेतावणी",
       "description": "कॅमेऱ्यात पहात असताना कृपया फोन सरळ ठेवा"
+    },
+    "camera_permission": {
+      "title": "कॅमेरा परवाहनी",
+      "description": "सुरुवात करण्यासाठी, कृपया कॅमेरा साठी प्रवेश द्या.",
+      "action": "प्रवेश द्या"
     }
   },
   "override": {

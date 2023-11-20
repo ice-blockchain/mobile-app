@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "Opozorilo",
       "description": "Prosimo, ohranite telefon pokonci med gledanjem v kamero"
+    },
+    "camera_permission": {
+      "title": "Dovoljenje za kamero",
+      "description": "Za nadaljevanje dovolite dostop do kamere.",
+      "action": "Dovoli dostop"
     }
   },
   "override": {

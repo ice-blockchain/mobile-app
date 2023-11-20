@@ -1084,6 +1084,11 @@
     "device_angle_warning": {
       "title": "Waarskuwing",
       "description": "Hou asseblief die telefoon regop terwyl jy na die kamera kyk"
+    },
+    "camera_permission": {
+      "title": "Kamera toestemming",
+      "description": "Om voort te gaan, staan asseblief toegang tot die kamera toe.",
+      "action": "Staan toegang toe"
     }
   },
   "override": {

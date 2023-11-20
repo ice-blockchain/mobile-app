@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "警告",
       "description": "查看相机时，请保持手机垂直"
+    },
+    "camera_permission": {
+      "title": "相机权限",
+      "description": "请允许访问相机以继续。",
+      "action": "允许访问"
     }
   },
   "override": {

@@ -23,7 +23,7 @@ type Props = {
 export function TakeSelfieStep({onPictureTaken}: Props) {
   const cameraRef = useRef<Camera>(null);
   const [isCameraReady, setIsCameraReady] = useState(false);
-  const isDeviceAngleAllowed = useIsDeviceAngleAllowed();
+  const isDeviceAngleAllowed = useIsDeviceAngleAllowed(isCameraReady);
 
   const takePicture = async () => {
     if (cameraRef.current) {

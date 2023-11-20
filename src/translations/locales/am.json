@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "ማስጠንቀቂያ",
       "description": "እባኮትን ወደ ካሜራ እየተመለከቱ ስልኩን ቀጥ አድርገው ይያዙት።"
+    },
+    "camera_permission": {
+      "title": "የካሜራ ፍቃድ",
+      "description": "ለመቀጠል እባክዎን የካሜራ መዳረሻ ይፍቀዱ።",
+      "action": "መዳረሻ ፍቀድ"
     }
   },
   "override": {

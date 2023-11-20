@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "Paralajmërim",
       "description": "Ju lutemi mbani telefonin drejt ndërsa shikoni në kamerë"
+    },
+    "camera_permission": {
+      "title": "Leja e kamerës",
+      "description": "Për të vazhduar, ju lutem lejoni qasjen në kamerë.",
+      "action": "Lejo qasjen"
     }
   },
   "override": {

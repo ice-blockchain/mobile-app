@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "警告",
       "description": "カメラを見ながら電話をまっすぐに保ってください"
+    },
+    "camera_permission": {
+      "title": "カメラの許可",
+      "description": "続行するには、カメラへのアクセスを許可してください。",
+      "action": "アクセスを許可"
     }
   },
   "override": {
