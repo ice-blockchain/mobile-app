@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "تحذير",
       "description": "رجاءً احتفظ بالهاتف مستقيمًا أثناء النظر في الكاميرا"
+    },
+    "camera_permission": {
+      "title": "إذن الكاميرا",
+      "description": "للمتابعة، يرجى السماح بالوصول إلى الكاميرا.",
+      "action": "السماح بالوصول"
     }
   },
   "override": {

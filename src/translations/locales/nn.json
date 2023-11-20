@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "Advarsel",
       "description": "Vennligst hald telefonen rett medan du ser inn i kameraet"
+    },
+    "camera_permission": {
+      "title": "Kameratillatelse",
+      "description": "For å fortsette, vennligst gi tilgang til kameraet.",
+      "action": "Tillat tilgang"
     }
   },
   "override": {

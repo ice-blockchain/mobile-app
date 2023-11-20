@@ -82,3 +82,6 @@ export const isTeamEnabledSelector = (state: RootState) =>
 
 export const isAchievementsEnabledSelector = (state: RootState) =>
   !!state.account.authConfig?.achievements?.enabled;
+
+export const isFaceDetectionEnabledSelector = (state: RootState) =>
+  !!state.account.authConfig?.['face-detection']?.enabled;

@@ -20,7 +20,7 @@ const THRESHOLD =
     ? -Math.sin(DEVICE_Y_ALLOWED_ROTATION_RADIANS)
     : GRAVITY - DEVICE_Y_ALLOWED_ROTATION_RADIANS;
 
-export const useIsDeviceAngleAllowed = () => {
+export const useIsDeviceAngleAllowed = (isReady: boolean) => {
   const [isAllowed, setIsAllowed] = useState<boolean>(true);
 
   useEffect(() => {
@@ -44,14 +44,14 @@ export const useIsDeviceAngleAllowed = () => {
   }, []);
 
   useEffect(() => {
-    if (!isAllowed) {
+    if (!isAllowed && isReady) {
       const interval = setInterval(
         hapticFeedback,
         DEVICE_ANGLE_WARNING_FEEDBACK_INTERVAL_MS,
       );
       return () => clearInterval(interval);
     }
-  }, [isAllowed]);
+  }, [isAllowed, isReady]);
 
   return isAllowed;
 };

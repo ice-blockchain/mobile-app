@@ -2,6 +2,7 @@
 
 import {commonStyles, windowWidth} from '@constants/styles';
 import {useCameraPermissions} from '@hooks/useCameraPermissions';
+import {CameraPermissionNotice} from '@screens/FaceRecognitionFlow/components/CameraPermissionNotice';
 import {FaceAuthOverlay} from '@screens/FaceRecognitionFlow/components/FaceAuthOverlay';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {cameraRatioSelector} from '@store/modules/FaceRecognition/selectors';
@@ -64,7 +65,9 @@ export const CameraFeed = React.forwardRef(
           <FaceAuthOverlay />
         </Camera>
       </View>
-    ) : null;
+    ) : (
+      <CameraPermissionNotice />
+    );
   },
 );
 export const cameraStyles = StyleSheet.create({

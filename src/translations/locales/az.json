@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "Xəbərdarlıq",
       "description": "Kameraya baxarkən telefonu düz tutun, xahiş edirik"
+    },
+    "camera_permission": {
+      "title": "Kamera icazəsi",
+      "description": "Davam etmək üçün, kamerağa girişi icazə verin.",
+      "action": "Girişə icazə verin"
     }
   },
   "override": {

@@ -994,6 +994,11 @@
     "device_angle_warning": {
       "title": "Peringatan",
       "description": "Monggo tuku telepon kokoh nalika ngelihat kamera"
+    },
+    "camera_permission": {
+      "title": "Izin Kamera",
+      "description": "Supaya tetep terus, monggo restuiakses menyang kamera.",
+      "action": "Restuiakses dianjurake"
     }
   },
   "override": {

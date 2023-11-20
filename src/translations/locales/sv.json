@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "Varning",
       "description": "Vänligen håll telefonen rak medan du tittar i kameran"
+    },
+    "camera_permission": {
+      "title": "Kameratillstånd",
+      "description": "För att fortsätta, vänligen tillåt åtkomst till kameran.",
+      "action": "Tillåt åtkomst"
     }
   },
   "override": {

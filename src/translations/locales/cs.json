@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "Varování",
       "description": "Prosím, držte telefon rovně při pohledu do kamery"
+    },
+    "camera_permission": {
+      "title": "Oprávnění k fotoaparátu",
+      "description": "Pro pokračování povolte přístup k fotoaparátu.",
+      "action": "Povolit přístup"
     }
   },
   "override": {

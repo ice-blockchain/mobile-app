@@ -2,15 +2,20 @@
 
 import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
-import {FACE_RECOGNITION_PICTURE_SIZE} from '@constants/faceRecognition';
-import {userIdSelector} from '@store/modules/Account/selectors';
+import {
+  isFaceDetectionEnabledSelector,
+  userIdSelector,
+} from '@store/modules/Account/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
   emotionsAuthEmotionsSelector,
   emotionsAuthSessionSelector,
   emotionsAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
-import {isEmotionsAuthFinalised} from '@store/modules/FaceRecognition/utils';
+import {
+  getCroppedPictureUri,
+  isEmotionsAuthFinalised,
+} from '@store/modules/FaceRecognition/utils';
 import {shallowCompare} from '@utils/array';
 import {showError} from '@utils/errors';
 import {extractFramesWithFFmpeg, getPictureCropStartY} from '@utils/ffmpeg';
@@ -19,6 +24,29 @@ import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 type Actions = ReturnType<
   typeof FaceRecognitionActions.EMOTIONS_AUTH.START.create
 >;
+
+async function getCroppedFrames({
+  frames,
+  pictureWidth,
+  cropStartY,
+  faceDetectionEnabled,
+}: {
+  frames: string[];
+  pictureWidth: number;
+  cropStartY: number;
+  faceDetectionEnabled: boolean;
+}): Promise<string[]> {
+  return Promise.all(
+    frames.map(frame =>
+      getCroppedPictureUri({
+        pictureUri: frame,
+        pictureWidth,
+        cropStartY,
+        faceDetectionEnabled,
+      }),
+    ),
+  );
+}
 
 export function* initEmotionsAuthSaga(action: Actions) {
   try {
@@ -31,24 +59,36 @@ export function* initEmotionsAuthSaga(action: Actions) {
       userIdSelector,
     );
 
-    const cropStartY: SagaReturnType<typeof getPictureCropStartY> = yield call(
-      getPictureCropStartY,
-      {pictureWidth: videoWidth, pictureHeight: videoHeight},
-    );
     const frames: SagaReturnType<typeof extractFramesWithFFmpeg> = yield call(
       extractFramesWithFFmpeg,
       {
         inputUri: videoUri,
+      },
+    );
+
+    const cropStartY: SagaReturnType<typeof getPictureCropStartY> = yield call(
+      getPictureCropStartY,
+      {pictureWidth: videoWidth, pictureHeight: videoHeight},
+    );
+
+    const faceDetectionEnabled: ReturnType<
+      typeof isFaceDetectionEnabledSelector
+    > = yield select(isFaceDetectionEnabledSelector);
+
+    const croppedFrames: SagaReturnType<typeof getCroppedFrames> = yield call(
+      getCroppedFrames,
+      {
+        frames,
+        pictureWidth: videoWidth,
         cropStartY,
-        outputSize: FACE_RECOGNITION_PICTURE_SIZE,
-        width: videoWidth,
+        faceDetectionEnabled,
       },
     );
     const response: SagaReturnType<typeof Api.faceRecognition.emotionsAuth> =
       yield call(Api.faceRecognition.emotionsAuth, {
         userId,
         sessionId,
-        pictureUris: frames,
+        pictureUris: croppedFrames,
       });
     const emotionsAuthStatus: ReturnType<typeof emotionsAuthStatusSelector> =
       yield select(emotionsAuthStatusSelector);

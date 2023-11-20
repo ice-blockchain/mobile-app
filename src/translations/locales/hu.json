@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "Figyelmeztetés",
       "description": "Kérjük, tartsa a telefont egyenesen, amikor a kamerába néz"
+    },
+    "camera_permission": {
+      "title": "Kamera engedély",
+      "description": "Folytatáshoz engedélyezze a kamera hozzáférését.",
+      "action": "Hozzáférés engedélyezése"
     }
   },
   "override": {

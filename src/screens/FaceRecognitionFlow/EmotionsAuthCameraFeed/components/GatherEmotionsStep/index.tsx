@@ -52,7 +52,7 @@ export function GatherEmotionsStep({
 }: Props) {
   const cameraRef = useRef<Camera>(null);
   const [isCameraReady, setIsCameraReady] = useState(false);
-  const isDeviceAngleAllowed = useIsDeviceAngleAllowed();
+  const isDeviceAngleAllowed = useIsDeviceAngleAllowed(isCameraReady);
   const emotions = useSelector(emotionsAuthEmotionsSelector);
   const session = useSelector(emotionsAuthSessionSelector);
   const emotionsAuthNextEmotionIndex = useSelector(

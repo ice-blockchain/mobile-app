@@ -1088,6 +1088,11 @@
     "device_angle_warning": {
       "title": "اخطار",
       "description": "لطفاً تلفن را مستقیم نگه دارید در حین نگاه به دوربین"
+    },
+    "camera_permission": {
+      "title": "مجوز دوربین",
+      "description": "برای ادامه، لطفا دسترسی به دوربین را اجازه دهید.",
+      "action": "اجازه دسترسی"
     }
   },
   "override": {

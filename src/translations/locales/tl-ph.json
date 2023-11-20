@@ -994,6 +994,11 @@
     "device_angle_warning": {
       "title": "Babala",
       "description": "Mangyaring panatilihing tuwid ang telepono habang tinitingnan ang kamera"
+    },
+    "camera_permission": {
+      "title": "Pahintulot ng Kamera",
+      "description": "Upang magpatuloy, paki-allow ang access sa kamera.",
+      "action": "Payagan ang access"
     }
   },
   "override": {

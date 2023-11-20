@@ -1081,6 +1081,11 @@
     "device_angle_warning": {
       "title": "Cảnh báo",
       "description": "Vui lòng giữ điện thoại thẳng khi nhìn vào máy ảnh"
+    },
+    "camera_permission": {
+      "title": "Quyền truy cập máy ảnh",
+      "description": "Để tiếp tục, vui lòng cho phép truy cập máy ảnh.",
+      "action": "Cho phép truy cập"
     }
   },
   "override": {

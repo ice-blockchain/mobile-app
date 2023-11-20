@@ -1088,6 +1088,11 @@
     "device_angle_warning": {
       "title": "אזהרה",
       "description": "אנא החזיקו את הטלפון במעמד הצפייה במצלמה"
+    },
+    "camera_permission": {
+      "title": "רשות מצלמה",
+      "description": "להמשך, אנא אשר גישה למצלמה.",
+      "action": "לאשר גישה"
     }
   },
   "override": {

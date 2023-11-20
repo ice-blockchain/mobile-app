@@ -59,6 +59,7 @@
     "expo": "^49.0.0",
     "expo-barcode-scanner": "^12.5.3",
     "expo-camera": "^13.6.0",
+    "expo-face-detector": "12.4.0",
     "expo-haptics": "12.6.0",
     "exponential-backoff": "^3.1.0",
     "ffmpeg-kit-react-native": "6.0.0",
