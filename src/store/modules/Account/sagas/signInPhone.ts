@@ -4,12 +4,11 @@ import {Api} from '@api/index';
 import {signInWithPhoneNumber} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
-  authConfigSelector,
   isEmailCodeFlowSelector,
+  isPhoneAuthEnabledSelector,
 } from '@store/modules/Account/selectors';
 import {openPhoneAuthBlocked} from '@store/modules/Account/utils/openPhoneAuthBlocked';
-import {deviceLocationSelector} from '@store/modules/Devices/selectors';
-import {deviceLocaleCountry, t} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import {getErrorMessage} from '@utils/errors';
 import {checkProp} from '@utils/guards';
 import {call, put, SagaReturnType, select, take} from 'redux-saga/effects';
@@ -28,11 +27,11 @@ export function* signInPhoneSaga(
       throw {code: ValidateError.InvalidPhone};
     }
 
-    const authPhoneEnabledForCountry: SagaReturnType<
-      typeof checkAuthPhoneEnabledForCountry
-    > = yield call(checkAuthPhoneEnabledForCountry);
+    const isPhoneAuthEnabled: SagaReturnType<
+      typeof isPhoneAuthEnabledSelector
+    > = yield select(isPhoneAuthEnabledSelector);
 
-    if (!authPhoneEnabledForCountry) {
+    if (!isPhoneAuthEnabled) {
       const user: SagaReturnType<typeof getUserByPhoneNumber> = yield call(
         getUserByPhoneNumber,
         phoneNumber,
@@ -130,32 +129,4 @@ function* getUserByPhoneNumber(phoneNumber: string) {
     return {email: 'foo@bar.baz'};
   }
   return user;
-}
-
-//TODO:: to selector
-function* checkAuthPhoneEnabledForCountry() {
-  const authConfig: ReturnType<typeof authConfigSelector> = yield select(
-    authConfigSelector,
-  );
-  const deviceLocation: ReturnType<typeof deviceLocationSelector> =
-    yield select(deviceLocationSelector);
-
-  const isEqualsToDeviceCountry = (country: string) => {
-    return [
-      deviceLocaleCountry.toLowerCase(),
-      deviceLocation?.country?.toLowerCase(),
-    ].includes(country.toLowerCase());
-  };
-  if (authConfig) {
-    if (checkProp(authConfig, 'phoneAuthWhiteList')) {
-      return authConfig.phoneAuthWhiteList.some(isEqualsToDeviceCountry);
-    }
-
-    if (checkProp(authConfig, 'phoneAuthBlackList')) {
-      return !authConfig.phoneAuthBlackList.some(isEqualsToDeviceCountry);
-    }
-  }
-
-  //TODO::by default true?
-  return false;
 }

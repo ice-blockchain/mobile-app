@@ -112,3 +112,26 @@ export const isEmailCodeFlowSelector = createSelector(
     return false;
   },
 );
+
+export const isPhoneAuthEnabledSelector = createSelector(
+  [authConfigSelector, deviceLocationSelector],
+  (authConfig, deviceLocation) => {
+    const isEqualsToDeviceCountry = (country: string) => {
+      return [
+        deviceLocaleCountry.toLowerCase(),
+        deviceLocation?.country?.toLowerCase(),
+      ].includes(country.toLowerCase());
+    };
+    if (authConfig) {
+      if (checkProp(authConfig, 'phoneAuthWhiteList')) {
+        return authConfig.phoneAuthWhiteList.some(isEqualsToDeviceCountry);
+      }
+
+      if (checkProp(authConfig, 'phoneAuthBlackList')) {
+        return !authConfig.phoneAuthBlackList.some(isEqualsToDeviceCountry);
+      }
+    }
+
+    return true;
+  },
+);
