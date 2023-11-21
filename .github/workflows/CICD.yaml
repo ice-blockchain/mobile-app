@@ -403,6 +403,9 @@ jobs:
         id: build-app
         run: |
           cd main-repo
+          echo ">>>>>"
+          echo "$ANDROID_BUILD_TYPE"
+          echo ">>>>>"
           bundle exec fastlane android build type:$ANDROID_ARCHIVE_TYPE
       - name: Deploy Android App to ${{env.DEPLOY_TARGET}}
         id: deploy-app

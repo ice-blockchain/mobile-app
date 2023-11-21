@@ -194,6 +194,9 @@ platform :android do
     lane :build do |options|
         case options[:type]
         when "bundle"
+            puts ">> ENV ANDROID_BUILD_TYPE from outside #{ANDROID_BUILD_TYPE}"
+            foo = ENV["ANDROID_BUILD_TYPE"]
+            puts ">> ENV ANDROID_BUILD_TYPE from ENV #{foo}"
             gradle(
                 project_dir: "android",
                 task: "clean app:bundle#{ANDROID_BUILD_TYPE.capitalize()}"
