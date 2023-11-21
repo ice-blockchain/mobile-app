@@ -40,6 +40,7 @@ export const useSetEmail = () => {
   }, [dispatch, email]);
 
   useEffect(() => {
+    //TODO::do we support link?
     if (emailVerificationStep === 'code') {
       navigation.navigate('ForcedConfirmEmail');
     }

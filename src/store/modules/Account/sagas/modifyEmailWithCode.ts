@@ -2,7 +2,6 @@
 
 import {isApiError} from '@api/client';
 import {EMAIL_CODE_GET_STATUS_INTERVAL_SEC} from '@constants/timeouts';
-import {navigate} from '@navigation/utils';
 import {getConfirmationStatus} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {updateAccountSaga} from '@store/modules/Account/sagas/updateAccount';
@@ -89,7 +88,6 @@ export function* modifyEmailWithCodeSaga({
 
       if (status.confirmed) {
         yield put(AccountActions.MODIFY_EMAIL_WITH_CODE.SUCCESS.create());
-        yield call(navigate, {name: 'Home', params: undefined});
         yield call(openEmailLinked);
         yield put(AccountActions.SIGN_OUT.START.create());
         return;
