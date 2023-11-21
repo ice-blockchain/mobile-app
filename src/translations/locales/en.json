@@ -597,7 +597,11 @@
     "delete_account_confirmation_title": "Confirm Deletion",
     "delete_account_confirmation_text": "Deleting your account will permanently erase all your data, including your Ice balance. Do you want to proceed?",
     "phone_auth_blocked_title": "Registration update",
-    "phone_auth_blocked_text": "We have temporarily suspended the creation of new accounts using the phone number. To continue, you will need to choose either an email address or a login in a social network."
+    "phone_auth_blocked_text": "We have temporarily suspended the creation of new accounts using the phone number. To continue, you will need to choose either an email address or a login in a social network.",
+    "confirm_email_title": "Please confirm your email",
+    "confirm_email_text": "You will need to link an email address and confirm it. In the future, the application will be logged in using your mail.",
+    "email_linked_title": "Successfully linked!",
+    "email_linked_text": "The email has been successfully linked to your account"
   },
   "periods": {
     "3_days": "3 days",

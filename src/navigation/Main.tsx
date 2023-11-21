@@ -20,6 +20,8 @@ import {
 import {NavigatorScreenParams} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {CreativeIceLibrary} from '@screens/CreativeIceLibrary';
+import {ConfirmEmailCode} from '@screens/Email/ConfirmEmailCode';
+import {ForcedSetEmail} from '@screens/Email/ForcedSetEmail';
 import {FaceRecognition} from '@screens/FaceRecognitionFlow';
 import {BalanceHistory} from '@screens/HomeFlow/BalanceHistory';
 import {Home} from '@screens/HomeFlow/Home';
@@ -151,6 +153,8 @@ export type MainStackParamList = {
   ProfilePrivacyEditStep1: undefined;
   ProfilePrivacyEditStep2: undefined;
   ProfilePrivacyEditStep3: undefined;
+  ForcedSetEmail: undefined;
+  ForcedConfirmEmail: undefined;
 };
 
 export type HomeTabStackParamList = {
@@ -433,6 +437,11 @@ export function MainNavigator() {
         name="JoinTelegramPopUp"
         options={modalOptions}
         component={JoinTelegramPopUp}
+      />
+      <MainStack.Screen name="ForcedSetEmail" component={ForcedSetEmail} />
+      <MainStack.Screen
+        name="ForcedConfirmEmail"
+        component={ConfirmEmailCode}
       />
     </MainStack.Navigator>
   );

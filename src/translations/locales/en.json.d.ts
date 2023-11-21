@@ -419,6 +419,10 @@ export type Translations = {
   'pop_up.delete_account_confirmation_text': null;
   'pop_up.phone_auth_blocked_title': null;
   'pop_up.phone_auth_blocked_text': null;
+  'pop_up.confirm_email_title': null;
+  'pop_up.confirm_email_text': null;
+  'pop_up.email_linked_title': null;
+  'pop_up.email_linked_text': null;
   'periods.3_days': null;
   'periods.7_days': null;
   'periods.30_days': null;

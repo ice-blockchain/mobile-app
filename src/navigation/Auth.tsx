@@ -8,11 +8,11 @@ import {
   createNativeStackNavigator,
   NativeStackNavigationProp,
 } from '@react-navigation/native-stack';
-import {ConfirmEmailCode} from '@screens/AuthFlow/ConfirmEmailCode';
 import {ConfirmEmailLink} from '@screens/AuthFlow/ConfirmEmailLink';
 import {ConfirmPhone} from '@screens/AuthFlow/ConfirmPhone';
 import {InvalidLink} from '@screens/AuthFlow/InvalidLink';
 import {SignIn} from '@screens/AuthFlow/SignIn';
+import {ConfirmEmailCode} from '@screens/Email/ConfirmEmailCode';
 import {CountrySelect} from '@screens/Modals/CountrySelect';
 import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
 import {
