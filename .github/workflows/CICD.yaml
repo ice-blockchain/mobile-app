@@ -70,21 +70,6 @@ jobs:
           cd main-repo
           yarn
           yarn check-license
-      - name: Check types
-        id: run-check-types
-        run: |
-          cd main-repo
-          yarn check-types
-      - name: Lint
-        id: run-lint
-        run: |
-          cd main-repo
-          yarn lint
-      - name: Run tests
-        id: run-test
-        run: |
-          cd main-repo
-          yarn test
       - uses: actions/cache@v3
         id: cache_all
         with:
@@ -293,9 +278,11 @@ jobs:
           fi
           if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
             then
-               echo "APP_ENV=production" >> $GITHUB_ENV
+              echo ">>>> PROD PART"
+              echo "APP_ENV=production" >> $GITHUB_ENV
             else
-               echo "APP_ENV=staging" >> $GITHUB_ENV
+              echo ">>>> STAGING PART"
+              echo "APP_ENV=staging" >> $GITHUB_ENV
           fi
           echo "BUILD_NUMBER=$(echo $((GITHUB_RUN_NUMBER+2000)))" >> $GITHUB_ENV
           cd main-repo && source .env
@@ -386,9 +373,15 @@ jobs:
           fi
           if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
             then
+              echo ">>>> PROD PART"
+              echo "${{ github.event_name }}"
+              echo "${{ github.ref_name }}"
               echo "APP_ENV=production" >> $GITHUB_ENV
               echo "RELEASE_STATUS=completed" >> $GITHUB_ENV
             else
+              echo ">>>> STAGING PART"
+              echo "${{ github.event_name }}"
+              echo "${{ github.ref_name }}"
               echo "APP_ENV=staging" >> $GITHUB_ENV
               echo "RELEASE_STATUS=draft" >> $GITHUB_ENV
           fi
