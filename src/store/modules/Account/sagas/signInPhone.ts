@@ -3,13 +3,15 @@
 import {Api} from '@api/index';
 import {signInWithPhoneNumber} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
-import {authConfigSelector} from '@store/modules/Account/selectors';
+import {
+  authConfigSelector,
+  isEmailCodeFlowSelector,
+} from '@store/modules/Account/selectors';
 import {openPhoneAuthBlocked} from '@store/modules/Account/utils/openPhoneAuthBlocked';
 import {deviceLocationSelector} from '@store/modules/Devices/selectors';
-import {t} from '@translations/i18n';
+import {deviceLocaleCountry, t} from '@translations/i18n';
 import {getErrorMessage} from '@utils/errors';
 import {checkProp} from '@utils/guards';
-import RNLocalize from 'react-native-localize';
 import {call, put, SagaReturnType, select, take} from 'redux-saga/effects';
 
 enum ValidateError {
@@ -40,14 +42,14 @@ export function* signInPhoneSaga(
         yield put(AccountActions.SIGN_IN_PHONE.RESET.create());
         return;
       } else if (user.email) {
-        yield put(AccountActions.SIGN_IN_PHONE.RESET.create());
-        //TODO::fork for email link
+        const isEmailCodeFlow: ReturnType<typeof isEmailCodeFlowSelector> =
+          yield select(isEmailCodeFlowSelector);
         yield put(
-          AccountActions.SIGN_IN_EMAIL_CODE.START.create(
-            user.email,
-            t('confirm_email.migration_note'),
-          ),
+          AccountActions[
+            isEmailCodeFlow ? 'SIGN_IN_EMAIL_CODE' : 'SIGN_IN_EMAIL_LINK'
+          ].START.create(user.email, t('confirm_email.migration_note')),
         );
+        yield put(AccountActions.SIGN_IN_PHONE.RESET.create());
         return;
       }
     }
@@ -130,17 +132,17 @@ function* getUserByPhoneNumber(phoneNumber: string) {
   return user;
 }
 
+//TODO:: to selector
 function* checkAuthPhoneEnabledForCountry() {
   const authConfig: ReturnType<typeof authConfigSelector> = yield select(
     authConfigSelector,
   );
-  const deviceSettingsCountry = RNLocalize.getCountry();
   const deviceLocation: ReturnType<typeof deviceLocationSelector> =
     yield select(deviceLocationSelector);
 
   const isEqualsToDeviceCountry = (country: string) => {
     return [
-      deviceSettingsCountry.toLowerCase(),
+      deviceLocaleCountry.toLowerCase(),
       deviceLocation?.country?.toLowerCase(),
     ].includes(country.toLowerCase());
   };

@@ -1,9 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {WELCOME_STEPS} from '@navigation/Welcome';
+import {createSelector} from '@reduxjs/toolkit';
+import {deviceLocationSelector} from '@store/modules/Devices/selectors';
 import {RootState} from '@store/rootReducer';
-import {getLocale} from '@translations/i18n';
+import {deviceLocaleCountry, getLocale} from '@translations/i18n';
 import {SupportedLocale} from '@translations/localeConfig';
+import {checkProp} from '@utils/guards';
 
 export const userIdSelector = (state: RootState) =>
   state.account.user?.id ?? '';
@@ -85,3 +88,27 @@ export const isAchievementsEnabledSelector = (state: RootState) =>
 
 export const isFaceDetectionEnabledSelector = (state: RootState) =>
   !!state.account.authConfig?.['face-detection']?.enabled;
+
+export const isEmailCodeFlowSelector = createSelector(
+  [authConfigSelector, deviceLocationSelector],
+  (authConfig, deviceLocation) => {
+    const isEqualsToDeviceCountry = (country: string) => {
+      return [
+        deviceLocaleCountry.toLowerCase(),
+        deviceLocation?.country?.toLowerCase(),
+      ].includes(country.toLowerCase());
+    };
+
+    if (authConfig) {
+      if (checkProp(authConfig, 'emailCodeAuthWhiteList')) {
+        return authConfig.emailCodeAuthWhiteList.some(isEqualsToDeviceCountry);
+      }
+
+      if (checkProp(authConfig, 'emailCodeAuthBlackList')) {
+        return !authConfig.emailCodeAuthBlackList.some(isEqualsToDeviceCountry);
+      }
+    }
+
+    return false;
+  },
+);

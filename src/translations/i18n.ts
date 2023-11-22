@@ -32,6 +32,8 @@ export const availableLocales = Object.keys(
 
 export const locale = RNLocalize.findBestAvailableLanguage(availableLocales);
 
+export const deviceLocaleCountry = RNLocalize.getCountry();
+
 i18n.defaultLocale = DEFAULT_LOCALE;
 
 const initialLocale =

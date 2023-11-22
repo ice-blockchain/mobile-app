@@ -5,6 +5,7 @@ import {
   failedReasonSelector,
   isLoadingSelector,
 } from '@store/modules/UtilityProcessStatuses/selectors';
+import {RootState} from '@store/rootReducer';
 import {useRef, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
@@ -18,8 +19,14 @@ export const usePhoneAuth = () => {
     failedReasonSelector.bind(null, AccountActions.SIGN_IN_PHONE),
   );
 
+  // Listening to SIGN_IN_EMAIL_CODE and SIGN_IN_EMAIL_LINK because
+  // starting the phone flow may lead to starting email flow if the
+  // former is blocked by auth config
   const isPhoneAuthLoading = useSelector(
-    isLoadingSelector.bind(null, AccountActions.SIGN_IN_PHONE),
+    (state: RootState) =>
+      isLoadingSelector(AccountActions.SIGN_IN_PHONE, state) ||
+      isLoadingSelector(AccountActions.SIGN_IN_EMAIL_CODE, state) ||
+      isLoadingSelector(AccountActions.SIGN_IN_EMAIL_LINK, state),
   );
 
   const resetError = () => {

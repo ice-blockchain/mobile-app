@@ -13,10 +13,11 @@ import {Tab, Tabs} from '@screens/AuthFlow/SignIn/components/Tabs';
 import {SignInEmailCodeForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailCodeForm';
 import {SignInEmailLinkForm} from '@screens/AuthFlow/SignIn/forms/SignInEmailLinkForm';
 import {SignInPhoneForm} from '@screens/AuthFlow/SignIn/forms/SignInPhoneForm';
-import {useIsEmailCodeFlow} from '@screens/AuthFlow/SignIn/hooks/useIsEmailCodeFlow';
 import {useSocialAuth} from '@screens/AuthFlow/SignIn/hooks/useSocialAuth';
+import {isEmailCodeFlowSelector} from '@store/modules/Account/selectors';
 import React, {useMemo, useState} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 export const SignIn = () => {
@@ -28,7 +29,7 @@ export const SignIn = () => {
 
   const [activeTab, setActiveTab] = useState<Tab>('email');
 
-  const isEmailCodeFlow = useIsEmailCodeFlow();
+  const isEmailCodeFlow = useSelector(isEmailCodeFlowSelector);
 
   const Form = useMemo(() => {
     if (activeTab === 'phone') {
