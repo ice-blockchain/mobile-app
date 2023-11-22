@@ -89,7 +89,7 @@ jobs:
         id: cache_all
         with:
           path: ./*
-          key: ${{ github.sha }}
+          key: ${{ github.sha }}_${{ github.ref_name }}
       - name: Slack Notification
         if: ${{ github.event_name == 'push' && success() == false}}
         uses: act10ns/slack@v2
@@ -112,7 +112,7 @@ jobs:
         id: cache_all
         with:
           path: ./*
-          key: ${{ github.sha }}
+          key: ${{ github.sha }}_${{ github.ref_name }}
       - name: Mask APP environment and configuration values in logs
         id: mask-secrets
         run: |
@@ -175,7 +175,7 @@ jobs:
         id: cache_all
         with:
           path: ./*
-          key: ${{ github.sha }}
+          key: ${{ github.sha }}_${{ github.ref_name }}
       - name: Mask APP environment and configuration values in logs
         id: mask-secrets
         run: |
@@ -250,7 +250,7 @@ jobs:
         id: cache_all
         with:
           path: ./*
-          key: ${{ github.sha }}
+          key: ${{ github.sha }}_${{ github.ref_name }}
       - name: Mask APP environment and configuration values in logs
         id: mask-secrets
         run: |
@@ -298,7 +298,6 @@ jobs:
                echo "APP_ENV=staging" >> $GITHUB_ENV
           fi
           echo "BUILD_NUMBER=$(echo $((GITHUB_RUN_NUMBER+2000)))" >> $GITHUB_ENV
-          cd main-repo && source .env
       - name: Bump version to v${{ env.APP_VERSION }}
         id: bump-version
         run: |
@@ -336,7 +335,7 @@ jobs:
         id: cache_all
         with:
           path: ./*
-          key: ${{ github.sha }}
+          key: ${{ github.sha }}_${{ github.ref_name }}
       - name: Mask APP environment and configuration values in logs
         id: mask-secrets
         run: |
@@ -393,7 +392,6 @@ jobs:
               echo "RELEASE_STATUS=draft" >> $GITHUB_ENV
           fi
           echo "BUILD_NUMBER=$(echo $((GITHUB_RUN_NUMBER+2000)))" >> $GITHUB_ENV
-          cd main-repo && source .env
       - name: Bump version to v${{ env.APP_VERSION }}
         id: bump-version
         run: |
