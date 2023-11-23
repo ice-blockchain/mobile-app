@@ -34,6 +34,8 @@ type Props = {
   onAllEmotionsGathered: () => void;
   onStartPressed: () => void;
   started: boolean;
+  faceDetectionEnabled: boolean;
+  onWaitForEmotion: () => void;
 };
 
 function getSecondsPassed(since: number) {
@@ -49,6 +51,8 @@ export function GatherEmotionsStep({
   onAllEmotionsGathered,
   onStartPressed,
   started,
+  faceDetectionEnabled,
+  onWaitForEmotion,
 }: Props) {
   const cameraRef = useRef<Camera>(null);
   const [isCameraReady, setIsCameraReady] = useState(false);
@@ -139,8 +143,10 @@ export function GatherEmotionsStep({
               videoUri: video.uri,
               videoWidth: width,
               videoHeight: height,
+              faceDetectionEnabled,
             }),
           );
+          onWaitForEmotion();
         }
       };
       recordVideo();
@@ -150,6 +156,7 @@ export function GatherEmotionsStep({
       };
     }
   }, [
+    onWaitForEmotion,
     dispatch,
     emotions,
     emotionsAuthNextEmotionIndex,
@@ -157,6 +164,7 @@ export function GatherEmotionsStep({
     isCameraReady,
     started,
     getVideoDimensions,
+    faceDetectionEnabled,
   ]);
 
   useEffect(() => {

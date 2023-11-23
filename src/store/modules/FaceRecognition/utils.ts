@@ -2,7 +2,7 @@
 
 import {FACE_RECOGNITION_PICTURE_SIZE} from '@constants/faceRecognition';
 import {EmotionsAuthStatus} from '@store/modules/FaceRecognition/types';
-import {cropAndResizeWithFFmpeg} from '@utils/ffmpeg';
+import {cropAndResizeWithFFmpeg, getPictureCropStartY} from '@utils/ffmpeg';
 import {getFilenameFromPath} from '@utils/file';
 import * as FaceDetector from 'expo-face-detector';
 import {
@@ -25,12 +25,12 @@ export function isEmotionsAuthFinalised(status: EmotionsAuthStatus | null) {
 export async function getCroppedPictureUri({
   pictureUri,
   pictureWidth,
-  cropStartY,
+  pictureHeight,
   faceDetectionEnabled,
 }: {
   pictureUri: string;
   pictureWidth: number;
-  cropStartY: number;
+  pictureHeight: number;
   faceDetectionEnabled: boolean;
 }) {
   if (faceDetectionEnabled) {
@@ -40,6 +40,7 @@ export async function getCroppedPictureUri({
       runClassifications: FaceDetectorClassifications.none,
     });
     const face = result?.faces?.[0];
+    console.log({face});
     if (face) {
       const {size, origin} = face.bounds;
       const isTaller = size.height > size.width;
@@ -47,7 +48,10 @@ export async function getCroppedPictureUri({
         ? origin.x - (size.height - size.width) / 2
         : origin.x;
       const faceCropStartY = origin.y;
-      const imgWidth = Math.max(size.width, size.height, pictureWidth);
+      const imgWidth = Math.min(
+        Math.max(size.width, size.height),
+        pictureWidth,
+      );
       return cropAndResizeWithFFmpeg({
         inputUri: pictureUri,
         outputUri: `${cacheDirectory}/cropped_${getFilenameFromPath(
@@ -60,6 +64,7 @@ export async function getCroppedPictureUri({
       });
     }
   }
+  const cropStartY = getPictureCropStartY({pictureWidth, pictureHeight});
   return cropAndResizeWithFFmpeg({
     inputUri: pictureUri,
     outputUri: `${cacheDirectory}/cropped_${getFilenameFromPath(pictureUri)}`,

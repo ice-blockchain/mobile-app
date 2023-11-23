@@ -17,3 +17,5 @@ export const emotionsAuthNextEmotionIndexSelector = (state: RootState) =>
   state.faceRecognition.nextEmotionIndex;
 export const cameraRatioSelector = (state: RootState) =>
   state.faceRecognition.cameraRatio;
+export const lastEmotionSelector = (state: RootState) =>
+  state.faceRecognition.lastEmotion;
