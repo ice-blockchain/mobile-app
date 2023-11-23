@@ -2,9 +2,9 @@
 
 import {navigate} from '@navigation/utils';
 import {
+  forceSetEmailSelector,
   isAuthorizedSelector,
   isRegistrationCompleteSelector,
-  unsafeUserSelector,
 } from '@store/modules/Account/selectors';
 import {openSetEmail} from '@store/modules/Account/utils/openSetEmail';
 import {
@@ -26,10 +26,9 @@ export function* forcedSetEmailSaga() {
   if (isAuthorized && isAppActive) {
     yield call(waitForSelector, isRegistrationCompleteSelector);
     yield call(waitForSelector, isSplashHiddenSelector);
-    const user: SagaReturnType<typeof unsafeUserSelector> = yield select(
-      unsafeUserSelector,
-    );
-    if (!user.email) {
+    const forceSetEmail: SagaReturnType<typeof forceSetEmailSelector> =
+      yield select(forceSetEmailSelector);
+    if (forceSetEmail) {
       // Postpone navigation to set-email popup in queue to let the MainNavigator render.
       // Handles the case when MainNavigator also starts to render on isRegistrationComplete (after the Welcome flow).
       yield delay(0);

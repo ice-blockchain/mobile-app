@@ -135,3 +135,6 @@ export const isPhoneAuthEnabledSelector = createSelector(
     return true;
   },
 );
+
+export const forceSetEmailSelector = (state: RootState) =>
+  state.account.forceSetEmail;
