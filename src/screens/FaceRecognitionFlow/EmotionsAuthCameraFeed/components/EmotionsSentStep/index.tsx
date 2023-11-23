@@ -57,7 +57,10 @@ export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
   }, [emotionsAuthStatus, onGatherMoreEmotions]);
 
   const onGoBack = useCallback(() => {
-    if (emotionsAuthStatus !== 'SUCCESS' && emotionsAuthStatus !== 'BANNED') {
+    if (emotionsAuthStatus === 'SUCCESS') {
+      dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
+    }
+    if (emotionsAuthStatus !== 'BANNED') {
       dispatch(
         FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create(),
       );

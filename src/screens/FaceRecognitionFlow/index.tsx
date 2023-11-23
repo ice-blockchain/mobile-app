@@ -15,11 +15,10 @@ import {
   emotionsAuthStatusSelector,
   faceAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
-import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {t} from '@translations/i18n';
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 type FaceRecognitionPhase = 'USER_CONSENT' | 'FACE_AUTH' | 'EMOTIONS_AUTH';
 
@@ -38,7 +37,6 @@ export function FaceRecognition() {
   } = useRoute<RouteProp<MainStackParamList, 'FaceRecognition'>>();
   useFocusStatusBar({style: 'dark-content'});
   const navigation = useNavigation();
-  const dispatch = useDispatch();
   const faceAuthStatus = useSelector(faceAuthStatusSelector);
   const emotionsAuthStatus = useSelector(emotionsAuthStatusSelector);
 
@@ -53,12 +51,7 @@ export function FaceRecognition() {
     );
 
   const onFaceAuthSuccess = () => {
-    if (kycSteps.length > 1) {
-      setFaceRecognitionPhase('EMOTIONS_AUTH');
-    } else {
-      dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
-      navigation.goBack();
-    }
+    setFaceRecognitionPhase('EMOTIONS_AUTH');
   };
 
   return (
@@ -87,7 +80,10 @@ export function FaceRecognition() {
             />
           ) : null}
           {faceRecognitionPhase === 'FACE_AUTH' ? (
-            <FaceAuthCameraFeed onFaceAuthSuccess={onFaceAuthSuccess} />
+            <FaceAuthCameraFeed
+              onFaceAuthSuccess={onFaceAuthSuccess}
+              startMiningOnSuccess={kycSteps.length === 1}
+            />
           ) : null}
           {faceRecognitionPhase === 'EMOTIONS_AUTH' ? (
             <EmotionsAuthCameraFeed />
