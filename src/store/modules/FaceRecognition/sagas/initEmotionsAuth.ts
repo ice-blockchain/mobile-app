@@ -2,8 +2,10 @@
 
 import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
-import {FACE_RECOGNITION_PICTURE_SIZE} from '@constants/faceRecognition';
-import {userIdSelector} from '@store/modules/Account/selectors';
+import {
+  isFaceDetectionEnabledSelector,
+  userIdSelector,
+} from '@store/modules/Account/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
   emotionsAuthEmotionsSelector,
@@ -16,11 +18,7 @@ import {
 } from '@store/modules/FaceRecognition/utils';
 import {shallowCompare} from '@utils/array';
 import {showError} from '@utils/errors';
-import {
-  extractCroppedFramesWithFFmpeg,
-  extractFramesWithFFmpeg,
-  getPictureCropStartY,
-} from '@utils/ffmpeg';
+import {extractFramesWithFFmpeg, getPictureCropStartY} from '@utils/ffmpeg';
 import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
 type Actions = ReturnType<
@@ -28,46 +26,31 @@ type Actions = ReturnType<
 >;
 
 async function getCroppedFrames({
-  videoUri,
+  frames,
   pictureWidth,
-  pictureHeight,
+  cropStartY,
   faceDetectionEnabled,
 }: {
-  videoUri: string;
+  frames: string[];
   pictureWidth: number;
-  pictureHeight: number;
+  cropStartY: number;
   faceDetectionEnabled: boolean;
 }): Promise<string[]> {
-  if (faceDetectionEnabled) {
-    const frames = await extractFramesWithFFmpeg({inputUri: videoUri});
-    return frames.reduce(
-      async (previousPromise: Promise<string[]>, frame: string) => {
-        const accumulatedFrames = await previousPromise;
-        const croppedFrame = await getCroppedPictureUri({
-          pictureUri: frame,
-          pictureWidth,
-          pictureHeight,
-          faceDetectionEnabled,
-        });
-        return [...accumulatedFrames, croppedFrame];
-      },
-      Promise.resolve([]),
-    );
-  } else {
-    const cropStartY = getPictureCropStartY({pictureWidth, pictureHeight});
-    return extractCroppedFramesWithFFmpeg({
-      inputUri: videoUri,
-      cropStartY,
-      width: pictureWidth,
-      outputSize: FACE_RECOGNITION_PICTURE_SIZE,
-    });
-  }
+  return Promise.all(
+    frames.map(frame =>
+      getCroppedPictureUri({
+        pictureUri: frame,
+        pictureWidth,
+        cropStartY,
+        faceDetectionEnabled,
+      }),
+    ),
+  );
 }
 
 export function* initEmotionsAuthSaga(action: Actions) {
   try {
-    const {videoUri, videoWidth, videoHeight, faceDetectionEnabled} =
-      action.payload;
+    const {videoUri, videoWidth, videoHeight} = action.payload;
     const sessionId: ReturnType<typeof emotionsAuthSessionSelector> =
       yield select(emotionsAuthSessionSelector);
     const emotions: ReturnType<typeof emotionsAuthEmotionsSelector> =
@@ -76,12 +59,28 @@ export function* initEmotionsAuthSaga(action: Actions) {
       userIdSelector,
     );
 
+    const frames: SagaReturnType<typeof extractFramesWithFFmpeg> = yield call(
+      extractFramesWithFFmpeg,
+      {
+        inputUri: videoUri,
+      },
+    );
+
+    const cropStartY: SagaReturnType<typeof getPictureCropStartY> = yield call(
+      getPictureCropStartY,
+      {pictureWidth: videoWidth, pictureHeight: videoHeight},
+    );
+
+    const faceDetectionEnabled: ReturnType<
+      typeof isFaceDetectionEnabledSelector
+    > = yield select(isFaceDetectionEnabledSelector);
+
     const croppedFrames: SagaReturnType<typeof getCroppedFrames> = yield call(
       getCroppedFrames,
       {
-        videoUri,
+        frames,
         pictureWidth: videoWidth,
-        pictureHeight: videoHeight,
+        cropStartY,
         faceDetectionEnabled,
       },
     );
@@ -97,19 +96,13 @@ export function* initEmotionsAuthSaga(action: Actions) {
     if (isEmotionsAuthFinalised(emotionsAuthStatus)) {
       return;
     }
-    const lastEmotion = croppedFrames[10] ?? croppedFrames[0];
     if (response.sessionEnded) {
       if (response.result) {
-        yield put(
-          FaceRecognitionActions.EMOTIONS_AUTH.SUCCESS.create({
-            lastEmotion,
-          }),
-        );
+        yield put(FaceRecognitionActions.EMOTIONS_AUTH.SUCCESS.create());
       } else {
         yield put(
           FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.create({
             status: 'TRY_LATER',
-            lastEmotion,
           }),
         );
       }
@@ -119,7 +112,6 @@ export function* initEmotionsAuthSaga(action: Actions) {
           emotions: shallowCompare(emotions, response.emotions)
             ? emotions
             : response.emotions,
-          lastEmotion,
         }),
       );
     }

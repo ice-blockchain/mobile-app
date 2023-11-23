@@ -9,6 +9,7 @@ import {
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {getCroppedPictureUri} from '@store/modules/FaceRecognition/utils';
 import {showError} from '@utils/errors';
+import {getPictureCropStartY} from '@utils/ffmpeg';
 import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
 type Actions = ReturnType<typeof FaceRecognitionActions.FACE_AUTH.START.create>;
@@ -17,6 +18,11 @@ export function* initFaceAuthSaga(action: Actions) {
   try {
     const {pictureUri, pictureWidth, pictureHeight} = action.payload;
 
+    const cropStartY: SagaReturnType<typeof getPictureCropStartY> = yield call(
+      getPictureCropStartY,
+      {pictureWidth, pictureHeight},
+    );
+
     const faceDetectionEnabled: ReturnType<
       typeof isFaceDetectionEnabledSelector
     > = yield select(isFaceDetectionEnabledSelector);
@@ -24,7 +30,7 @@ export function* initFaceAuthSaga(action: Actions) {
     const croppedPictureUri: SagaReturnType<typeof getCroppedPictureUri> =
       yield call(getCroppedPictureUri, {
         pictureUri,
-        pictureHeight,
+        cropStartY,
         pictureWidth,
         faceDetectionEnabled,
       });

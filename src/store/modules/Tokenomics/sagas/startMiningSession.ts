@@ -40,18 +40,6 @@ export function* startMiningSessionSaga(
     typeof TokenomicsActions.START_MINING_SESSION.START.create
   >,
 ) {
-  const user1: ReturnType<typeof unsafeUserSelector> = yield select(
-    unsafeUserSelector,
-  );
-
-  if (user1) {
-    yield removeScreenByName('Tooltip').catch();
-    navigate({
-      name: 'FaceRecognition',
-      params: {kycSteps: [2]},
-    });
-    return;
-  }
   const user: ReturnType<typeof unsafeUserSelector> = yield select(
     unsafeUserSelector,
   );

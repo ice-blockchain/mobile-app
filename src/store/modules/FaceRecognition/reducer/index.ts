@@ -22,8 +22,6 @@ export interface State {
   activeRequests: number;
 
   cameraRatio: CameraRatio;
-
-  lastEmotion: string | null;
 }
 
 type Actions = ReturnType<
@@ -50,7 +48,6 @@ const INITIAL_STATE: State = {
   nextEmotionIndex: 0,
   activeRequests: 0,
   cameraRatio: '16:9',
-  lastEmotion: null,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -60,7 +57,6 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       draft.sessionId = null;
       draft.nextEmotionIndex = 0;
       draft.activeRequests = 0;
-      draft.lastEmotion = null;
     };
     switch (action.type) {
       case FaceRecognitionActions.FACE_AUTH.START.type:
@@ -87,11 +83,9 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.emotionsAuthStatus = 'LOADING';
         draft.nextEmotionIndex += 1;
         draft.activeRequests += 1;
-        draft.lastEmotion = null;
         break;
       case FaceRecognitionActions.EMOTIONS_AUTH.SUCCESS.type:
         draft.emotionsAuthStatus = 'SUCCESS';
-        draft.lastEmotion = action.payload.lastEmotion;
         resetSession();
         break;
       case FaceRecognitionActions.EMOTIONS_AUTH.NEED_MORE_EMOTIONS.type:
@@ -101,11 +95,9 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
           draft.emotionsAuthStatus = 'NEED_MORE_EMOTIONS';
         }
         draft.emotions = action.payload.emotions;
-        draft.lastEmotion = action.payload.lastEmotion;
         break;
       case FaceRecognitionActions.EMOTIONS_AUTH.FAILURE.type:
         draft.emotionsAuthStatus = action.payload.status;
-        draft.lastEmotion = action.payload.lastEmotion ?? null;
         resetSession();
         break;
       case FaceRecognitionActions.RESET_FACE_AUTH_STATUS.STATE.type:

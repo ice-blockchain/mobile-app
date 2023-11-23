@@ -29,15 +29,10 @@ const EMOTIONS_AUTH = createAction('EMOTIONS_AUTH', {
     videoUri: string;
     videoWidth: number;
     videoHeight: number;
-    faceDetectionEnabled: boolean;
   }) => payload,
-  NEED_MORE_EMOTIONS: (payload: {
-    emotions: AuthEmotion[];
-    lastEmotion: string;
-  }) => payload,
-  SUCCESS: (payload: {lastEmotion: string}) => payload,
-  FAILURE: (payload: {status: EmotionsAuthStatus; lastEmotion?: string}) =>
-    payload,
+  NEED_MORE_EMOTIONS: (payload: {emotions: AuthEmotion[]}) => payload,
+  SUCCESS: true,
+  FAILURE: (payload: {status: EmotionsAuthStatus}) => payload,
 });
 
 const RESET_FACE_AUTH_STATUS = createAction('RESET_FACE_AUTH_STATUS', {

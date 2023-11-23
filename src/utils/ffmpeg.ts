@@ -13,8 +13,6 @@ import {cacheDirectory} from 'expo-file-system';
 import {FFmpegKit} from 'ffmpeg-kit-react-native';
 import {screenHeight} from 'rn-units';
 
-// FFmpegKitConfig.disableLogs();
-
 export function getPictureCropStartY({
   pictureWidth,
   pictureHeight,
@@ -47,18 +45,15 @@ export async function cropAndResizeWithFFmpeg({
   cropStartY: number;
   cropStartX: number;
 }) {
-  const command = `-i "${inputUri}" -vf "crop=${imgWidth}:${imgWidth}:${Math.max(
-    cropStartX,
-    0,
-  )}:${Math.max(
-    cropStartY,
-    0,
-  )},scale=${outputSize}:${outputSize}" -update true "${outputUri}"`;
   try {
+    const command = `-i "${inputUri}" -vf "crop=${imgWidth}:${imgWidth}:${Math.max(
+      cropStartX,
+      0,
+    )}:${Math.max(
+      cropStartY,
+      0,
+    )},scale=${outputSize}:${outputSize}" -update true "${outputUri}"`;
     const session = await FFmpegKit.execute(command);
-    if (!session) {
-      throw new Error(`Failed to execute FFmpeg command: ${command}`);
-    }
     const returnCode = await session?.getReturnCode();
 
     if (returnCode?.isValueSuccess()) {
@@ -67,11 +62,7 @@ export async function cropAndResizeWithFFmpeg({
       throw new Error(`Failed to execute FFmpeg command: ${command}`);
     }
   } catch (e) {
-    const error = new Error(
-      `Failed to execute FFmpeg command: ${command}, cropStartY: ${cropStartY}, cropStartX: ${cropStartX}`,
-    );
     logError(e);
-    logError(error);
     throw e;
   }
 }
@@ -87,54 +78,6 @@ export async function extractFramesWithFFmpeg({
       inputUri,
     )}_%03d.jpg`;
     const command = `-i "${inputUri}" -vf "setsar=1,fps=3" "${outputUri}"`;
-    const session = await FFmpegKit.execute(command);
-    const returnCode = await session?.getReturnCode();
-
-    if (!returnCode?.isValueSuccess()) {
-      throw new Error(`Failed to execute FFmpeg command: ${command}`);
-    }
-    output = await session.getOutput();
-    const numberOfFrames = parseInt(
-      output
-        .match(/frame=(.*?)(\d+)/g)
-        ?.pop()
-        ?.match(/\d+/)?.[0] ?? '',
-      10,
-    );
-    if (!numberOfFrames || isNaN(numberOfFrames)) {
-      throw new Error('Error parsing number of frames');
-    }
-    return Array(numberOfFrames)
-      .fill(null)
-      .map(
-        (_, i) =>
-          `${cacheDirectory}/${getFilenameFromPathWithoutExtension(
-            inputUri,
-          )}_${(i + 1).toString().padStart(3, '0')}.jpg`,
-      );
-  } catch (error) {
-    logError(error, {output});
-    throw error;
-  }
-}
-
-export async function extractCroppedFramesWithFFmpeg({
-  inputUri,
-  width,
-  outputSize,
-  cropStartY,
-}: {
-  inputUri: string;
-  width: number;
-  outputSize: number;
-  cropStartY: number;
-}): Promise<string[]> {
-  let output;
-  try {
-    const outputUri = `${cacheDirectory}/${getFilenameFromPathWithoutExtension(
-      inputUri,
-    )}_%03d.jpg`;
-    const command = `-i "${inputUri}" -vf "crop=${width}:${width}:0:${cropStartY},scale=${outputSize}:${outputSize},setsar=1,fps=3" "${outputUri}"`;
     const session = await FFmpegKit.execute(command);
     const returnCode = await session?.getReturnCode();
 
