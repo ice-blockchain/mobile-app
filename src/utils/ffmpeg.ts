@@ -36,23 +36,15 @@ export async function cropAndResizeWithFFmpeg({
   imgWidth,
   outputSize,
   cropStartY,
-  cropStartX,
 }: {
   inputUri: string;
   outputUri: string;
   imgWidth: number;
   outputSize: number;
   cropStartY: number;
-  cropStartX: number;
 }) {
   try {
-    const command = `-i "${inputUri}" -vf "crop=${imgWidth}:${imgWidth}:${Math.max(
-      cropStartX,
-      0,
-    )}:${Math.max(
-      cropStartY,
-      0,
-    )},scale=${outputSize}:${outputSize}" -update true "${outputUri}"`;
+    const command = `-i "${inputUri}" -vf "crop=${imgWidth}:${imgWidth}:0:${cropStartY},scale=${outputSize}:${outputSize}" -update true "${outputUri}"`;
     const session = await FFmpegKit.execute(command);
     const returnCode = await session?.getReturnCode();
 
@@ -69,15 +61,21 @@ export async function cropAndResizeWithFFmpeg({
 
 export async function extractFramesWithFFmpeg({
   inputUri,
+  width,
+  outputSize,
+  cropStartY,
 }: {
   inputUri: string;
+  width: number;
+  outputSize: number;
+  cropStartY: number;
 }): Promise<string[]> {
   let output;
   try {
     const outputUri = `${cacheDirectory}/${getFilenameFromPathWithoutExtension(
       inputUri,
     )}_%03d.jpg`;
-    const command = `-i "${inputUri}" -vf "setsar=1,fps=3" "${outputUri}"`;
+    const command = `-i "${inputUri}" -vf "crop=${width}:${width}:0:${cropStartY},scale=${outputSize}:${outputSize},setsar=1,fps=3" "${outputUri}"`;
     const session = await FFmpegKit.execute(command);
     const returnCode = await session?.getReturnCode();
 

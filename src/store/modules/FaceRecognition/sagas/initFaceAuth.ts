@@ -2,14 +2,13 @@
 
 import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
-import {
-  isFaceDetectionEnabledSelector,
-  userIdSelector,
-} from '@store/modules/Account/selectors';
+import {FACE_RECOGNITION_PICTURE_SIZE} from '@constants/faceRecognition';
+import {userIdSelector} from '@store/modules/Account/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
-import {getCroppedPictureUri} from '@store/modules/FaceRecognition/utils';
 import {showError} from '@utils/errors';
-import {getPictureCropStartY} from '@utils/ffmpeg';
+import {cropAndResizeWithFFmpeg, getPictureCropStartY} from '@utils/ffmpeg';
+import {getFilenameFromPath} from '@utils/file';
+import {cacheDirectory} from 'expo-file-system';
 import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
 type Actions = ReturnType<typeof FaceRecognitionActions.FACE_AUTH.START.create>;
@@ -23,16 +22,15 @@ export function* initFaceAuthSaga(action: Actions) {
       {pictureWidth, pictureHeight},
     );
 
-    const faceDetectionEnabled: ReturnType<
-      typeof isFaceDetectionEnabledSelector
-    > = yield select(isFaceDetectionEnabledSelector);
-
-    const croppedPictureUri: SagaReturnType<typeof getCroppedPictureUri> =
-      yield call(getCroppedPictureUri, {
-        pictureUri,
+    const croppedPictureUri: SagaReturnType<typeof cropAndResizeWithFFmpeg> =
+      yield call(cropAndResizeWithFFmpeg, {
+        inputUri: pictureUri,
+        outputUri: `${cacheDirectory}/cropped_${getFilenameFromPath(
+          pictureUri,
+        )}`,
+        imgWidth: pictureWidth,
         cropStartY,
-        pictureWidth,
-        faceDetectionEnabled,
+        outputSize: FACE_RECOGNITION_PICTURE_SIZE,
       });
     const userId: ReturnType<typeof userIdSelector> = yield select(
       userIdSelector,

@@ -20,12 +20,7 @@ type AchievementsConfig = {
   achievements?: {enabled: boolean};
 };
 
-type FaceDetectionConfig = {
-  'face-detection'?: {enabled: boolean};
-};
-
 export type AuthConfig = AuthCodeConfig &
   FaceAuthConfig &
   TeamConfig &
-  AchievementsConfig &
-  FaceDetectionConfig;
+  AchievementsConfig;
