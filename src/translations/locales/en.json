@@ -1168,7 +1168,7 @@
     "verify_with_title": "Verify with {{method}}",
     "select_method_step": {
       "title": "KYC Step #2",
-      "description": "Verify your account easily by using your existing Facebook or X profile. Please select the preferred method below."
+      "description": "Verify your account easily by using your existing X profile."
     },
     "instructions_step": {
       "show_example": "Show example",
@@ -1209,7 +1209,7 @@
       },
       "pop_up": {
         "title": "Confirmation",
-        "description": "Please make sure that the your post is publicly available and that it contains the exact text provided in the previous screen."
+        "description": "Please make sure that the post is publicly available and that it contains the exact text provided in the previous screen."
       }
     },
     "results_step": {

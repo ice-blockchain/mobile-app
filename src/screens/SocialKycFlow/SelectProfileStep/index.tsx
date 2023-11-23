@@ -9,20 +9,18 @@ import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {PopUpButton} from '@screens/Modals/PopUp/components/PopUpButton';
 import {BUTTON_HEIGHT} from '@screens/SocialKycFlow/constants';
-import {SocialKycMethodSelectionTile} from '@screens/SocialKycFlow/SelectProfileStep/components/SocialKycMethodSelectionTile';
 import {SocialKycActions} from '@store/modules/SocialKyc/actions';
 import {getSocialKycRepostTextStatusSelector} from '@store/modules/SocialKyc/selectors';
 import {SocialKycMethod} from '@store/modules/SocialKyc/types';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {useEffect} from 'react';
-import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 type Props = {
   updateStepPassed: () => void;
-  setSocialKycMethod: (method: SocialKycMethod) => void;
   socialKycMethod: SocialKycMethod | null;
   kycStep: SocialKycStepNumber;
   onGoBack: () => void;
@@ -31,7 +29,6 @@ type Props = {
 
 export function SelectProfileStep({
   updateStepPassed,
-  setSocialKycMethod,
   socialKycMethod,
   kycStep,
   onGoBack,
@@ -69,9 +66,7 @@ export function SelectProfileStep({
         backgroundColor={'transparent'}
         onGoBack={onGoBack}
       />
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
+      <View style={styles.container}>
         <View style={styles.imageContainer}>
           <Image source={Images.badges.socialKyc.start} />
         </View>
@@ -81,48 +76,33 @@ export function SelectProfileStep({
         <Text style={styles.description}>
           {t('social_kyc.select_method_step.description')}
         </Text>
-        <View style={styles.footerContainer}>
-          <View style={styles.selectionsContainer}>
-            <SocialKycMethodSelectionTile
-              socialKycMethod={'X'}
-              setSocialKycMethod={setSocialKycMethod}
-              selectedSocialKycMethod={socialKycMethod}
-            />
-            <View style={styles.separator} />
-            <SocialKycMethodSelectionTile
-              socialKycMethod={'Facebook'}
-              setSocialKycMethod={setSocialKycMethod}
-              selectedSocialKycMethod={socialKycMethod}
-            />
-          </View>
-          <View style={styles.buttonsContainer}>
+      </View>
+      <View style={styles.footerContainer}>
+        <View style={styles.buttonsContainer}>
+          <PopUpButton
+            text={t('button.not_now')}
+            preset={'outlined'}
+            style={styles.button}
+            onPress={onSkip}
+          />
+          <View>
             <PopUpButton
-              text={t('button.not_now')}
-              preset={'outlined'}
-              style={styles.button}
-              onPress={onSkip}
+              text={isLoading ? '' : t('button.continue')}
+              disabled={!socialKycMethod}
+              style={[socialKycMethod ? styles.button : styles.disabledButton]}
+              onPress={isLoading ? undefined : onContinue}
             />
-            <View>
-              <PopUpButton
-                text={isLoading ? '' : t('button.continue')}
-                disabled={!socialKycMethod}
-                style={[
-                  socialKycMethod ? styles.button : styles.disabledButton,
-                ]}
-                onPress={isLoading ? undefined : onContinue}
-              />
-              {isLoading ? (
-                <View style={styles.loadingContainer}>
-                  <ActivityIndicator
-                    theme="dark-content"
-                    style={styles.indicator}
-                  />
-                </View>
-              ) : null}
-            </View>
+            {isLoading ? (
+              <View style={styles.loadingContainer}>
+                <ActivityIndicator
+                  theme="dark-content"
+                  style={styles.indicator}
+                />
+              </View>
+            ) : null}
           </View>
         </View>
-      </ScrollView>
+      </View>
     </View>
   );
 }
@@ -135,10 +115,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.white,
-  },
-  contentContainer: {
-    flexGrow: 1,
-    backgroundColor: COLORS.white,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   imageContainer: {
     alignSelf: 'center',
@@ -154,18 +132,10 @@ const styles = StyleSheet.create({
     ...font(14, 20, 'medium', 'secondary', 'center'),
   },
   footerContainer: {
-    flex: 1,
-    justifyContent: 'flex-end',
     paddingHorizontal: FOOTER_PADDING_HORIZONTAL,
     paddingBottom: rem(40),
   },
-  selectionsContainer: {
-    paddingTop: rem(50),
-    flex: 1,
-    justifyContent: 'center',
-  },
   buttonsContainer: {
-    paddingTop: rem(34),
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -178,9 +148,6 @@ const styles = StyleSheet.create({
     height: BUTTON_HEIGHT,
     backgroundColor: COLORS.primaryDark,
     opacity: 0.5,
-  },
-  separator: {
-    height: rem(16),
   },
   loadingContainer: {
     ...StyleSheet.absoluteFillObject,

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {SocialKycStepNumber} from '@api/tokenomics/types';
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
@@ -18,26 +19,51 @@ import {
 import {ShowExample} from '@screens/SocialKycFlow/InstructionsStep/components/ShowExample';
 import {Tooltip} from '@screens/SocialKycFlow/InstructionsStep/components/Tooltip';
 import {getTranslationsSocialKycMethod} from '@screens/SocialKycFlow/utils';
-import {socialKycRepostTextSelector} from '@store/modules/SocialKyc/selectors';
-import {SocialKycMethod} from '@store/modules/SocialKyc/types';
+import {getFacebookAccessTokenForUserPosts} from '@services/auth/signin/facebook';
+import {SocialKycActions} from '@store/modules/SocialKyc/actions';
+import {
+  socialKycRepostTextSelector,
+  socialKycStatusSelector,
+} from '@store/modules/SocialKyc/selectors';
+import {SocialKycMethod, SocialKycStatus} from '@store/modules/SocialKyc/types';
+import {isSocialKycFinalized} from '@store/modules/SocialKyc/utils';
 import {CopyIcon} from '@svg/CopyIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {ScrollView, StyleSheet, Text, Vibration, View} from 'react-native';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 type Props = {
   updateStepPassed: () => void;
   onGoBack: () => void;
   socialKycMethod: SocialKycMethod;
+  onSkip: (skipKYCStep?: SocialKycStepNumber) => void;
+  kycStep: SocialKycStepNumber;
 };
+
+function getPrimaryButtonText({
+  socialKycMethod,
+  socialKycStatus,
+}: {
+  socialKycMethod: SocialKycMethod;
+  socialKycStatus: SocialKycStatus | null;
+}) {
+  if (socialKycMethod === 'Facebook') {
+    return socialKycStatus === 'LOADING'
+      ? t('social_kyc.verification_step.action.wait')
+      : t('social_kyc.verification_step.action.verify');
+  }
+  return t('button.continue');
+}
 
 export function InstructionsStep({
   updateStepPassed,
   socialKycMethod,
   onGoBack,
+  onSkip,
+  kycStep,
 }: Props) {
   const [isTextCopied, setIsTextCopied] = useState(false);
   const translationsSocialKycMethod =
@@ -47,6 +73,34 @@ export function InstructionsStep({
     Clipboard.setString(repostText);
     setIsTextCopied(true);
     Vibration.vibrate([0, 50]);
+  };
+  const socialKycStatus = useSelector(socialKycStatusSelector);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (socialKycMethod === 'Facebook') {
+      if (isSocialKycFinalized(socialKycStatus)) {
+        updateStepPassed();
+      } else if (socialKycStatus === 'ERROR') {
+        onSkip(kycStep);
+      }
+    }
+  }, [kycStep, onSkip, socialKycMethod, socialKycStatus, updateStepPassed]);
+  const onConfirm = () => {
+    if (socialKycMethod === 'Facebook') {
+      getFacebookAccessTokenForUserPosts()
+        .then(accessToken => {
+          dispatch(
+            SocialKycActions.SOCIAL_KYC_VERIFICATION.START.create({
+              accessToken: accessToken?.accessToken,
+              socialKycMethod,
+              kycStep,
+            }),
+          );
+        })
+        .catch();
+    } else {
+      updateStepPassed();
+    }
   };
   const onContinue = () => {
     navigate({
@@ -69,7 +123,7 @@ export function InstructionsStep({
           },
           {
             text: t('button.confirm'),
-            onPress: updateStepPassed,
+            onPress: onConfirm,
           },
         ],
         dismissOnAndroidHardwareBack: false,
@@ -123,9 +177,10 @@ export function InstructionsStep({
         </View>
         <View style={styles.footerContainer}>
           <PrimaryButton
-            text={t('button.continue')}
+            text={getPrimaryButtonText({socialKycMethod, socialKycStatus})}
             disabled={!isTextCopied}
             style={[socialKycMethod ? styles.button : styles.disabledButton]}
+            loading={socialKycStatus === 'LOADING'}
             onPress={onContinue}
           />
         </View>

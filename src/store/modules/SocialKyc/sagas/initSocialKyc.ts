@@ -14,7 +14,7 @@ type Actions = ReturnType<
 
 export function* initSocialKyc(action: Actions) {
   try {
-    const {postUrl, socialKycMethod, kycStep} = action.payload;
+    const {postUrl, accessToken, socialKycMethod, kycStep} = action.payload;
     const user: SagaReturnType<typeof unsafeUserSelector> = yield select(
       unsafeUserSelector,
     );
@@ -24,6 +24,7 @@ export function* initSocialKyc(action: Actions) {
         kycStep,
         social: socialKycMethodToApiSocialMethod(socialKycMethod),
         link: postUrl,
+        accessToken,
       });
     if (result.result === 'SUCCESS') {
       yield put(SocialKycActions.SOCIAL_KYC_VERIFICATION.SUCCESS.create());

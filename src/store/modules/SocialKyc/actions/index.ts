@@ -6,9 +6,10 @@ import {createAction} from '@store/utils/actions/createAction';
 
 const SOCIAL_KYC_VERIFICATION = createAction('SOCIAL_KYC_VERIFICATION', {
   START: (payload: {
-    postUrl: string;
     socialKycMethod: SocialKycMethod;
     kycStep: SocialKycStepNumber;
+    postUrl?: string;
+    accessToken?: string;
   }) => {
     return payload;
   },

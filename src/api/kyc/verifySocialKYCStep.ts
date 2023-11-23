@@ -17,14 +17,31 @@ type Params = {
   kycStep: SocialKycStepNumber;
   social: SocialMethod;
   link?: string;
+  accessToken?: string;
 };
 
-export function verifySocialKYCStep({language, kycStep, social, link}: Params) {
+export function verifySocialKYCStep({
+  language,
+  kycStep,
+  social,
+  link,
+  accessToken,
+}: Params) {
   if (link) {
     return post<{link: string}, SocialKycData>(
       `/kyc/verifySocialKYCStep?language=${language}&kycStep=${kycStep}&social=${social}`,
       {
         link,
+      },
+    );
+  }
+  if (accessToken) {
+    return post<{facebook: {accessToken: string}}, SocialKycData>(
+      `/kyc/verifySocialKYCStep?language=${language}&kycStep=${kycStep}&social=${social}`,
+      {
+        facebook: {
+          accessToken,
+        },
       },
     );
   }

@@ -30,8 +30,7 @@ export function SocialKycFlow() {
   const [socialKycFlowPhase, setSocialKycFlowPhase] =
     useState<SocialKycFlowPhase>('SELECT_PROFILE_TYPE');
 
-  const [socialKycMethod, setSocialKycMethod] =
-    useState<SocialKycMethod | null>(null);
+  const [socialKycMethod] = useState<SocialKycMethod | null>('X');
 
   const dispatch = useDispatch();
   const navigation = useNavigation();
@@ -56,10 +55,13 @@ export function SocialKycFlow() {
     () => setSocialKycFlowPhase('INSTRUCTIONS'),
     [],
   );
-  const onInstructionsStepPassed = useCallback(
-    () => setSocialKycFlowPhase('VERIFICATION'),
-    [],
-  );
+  const onInstructionsStepPassed = useCallback(() => {
+    if (socialKycMethod === 'Facebook') {
+      setSocialKycFlowPhase('RESULT');
+    } else {
+      setSocialKycFlowPhase('VERIFICATION');
+    }
+  }, [socialKycMethod]);
   const onVerificationStepPassed = useCallback(
     () => setSocialKycFlowPhase('RESULT'),
     [],
@@ -73,13 +75,14 @@ export function SocialKycFlow() {
           onGoBack={onGoBack}
           onSkip={onSkip}
           socialKycMethod={socialKycMethod}
-          setSocialKycMethod={setSocialKycMethod}
           updateStepPassed={onSelectProfileStepPassed}
         />
       ) : null}
       {socialKycFlowPhase === 'INSTRUCTIONS' ? (
         <InstructionsStep
+          kycStep={kycStep}
           onGoBack={onGoBack}
+          onSkip={onSkip}
           socialKycMethod={socialKycMethod ?? 'X'}
           updateStepPassed={onInstructionsStepPassed}
         />
@@ -98,7 +101,6 @@ export function SocialKycFlow() {
           kycStep={kycStep}
           onSkip={onSkip}
           onTryAgain={() => {
-            setSocialKycMethod(null);
             setSocialKycFlowPhase('SELECT_PROFILE_TYPE');
             dispatch(SocialKycActions.RESET_SOCIAL_KYC_STATUS.STATE.create());
           }}
