@@ -1153,6 +1153,8 @@
     "enter_address_title": "ERC-20 adresinizi\ngirin",
     "enter_address_description": "Faz 1 sırasında ICE tokenleri Ethereum blockchain üzerine yayınlanacaktır. Mainnet başlatıldığında, tokenler Ethereum'dan Ice Open Network (ION) blockchain'e değiştirilebilir.",
     "enter_address_warning": "Lütfen yukarıdaki ERC-20 adresinin doğru olduğundan ve Faz 1 süresince erişiminizin olacağından emin olun. Onayladıktan sonra değiştirilemez.",
-    "enter_address_confirmation": "ERC-20 adresinin doğru olduğundan emin misiniz? Onayladıktan sonra değiştirilemez."
+    "enter_address_confirmation": "ERC-20 adresinin doğru olduğundan emin misiniz? Onayladıktan sonra değiştirilemez.",
+    "validators_warning_title": "Adresi Onayla",
+    "validators_warning_text": "Lütfen Ethereum adresini hesaplarına ekleyen kişilerin ana ağın başlatılması için bizim beyaz kağıdımıza göre en iyi 300 doğrulayıcıdan biri olma hakları olmadığını unutmayın."
   }
 }

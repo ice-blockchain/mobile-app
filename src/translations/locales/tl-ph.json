@@ -1042,5 +1042,9 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "validators_warning_title": "Kumpirmahin ang Address",
+    "validators_warning_text": "Pakipansin na ang mga indibidwal na nagdagdag ng Ethereum address sa kanilang account ay hindi karapat-dapat na maging isa sa mga pangunahing 300 validator ayon sa aming whitepaper para sa mainnet launch."
   }
 }

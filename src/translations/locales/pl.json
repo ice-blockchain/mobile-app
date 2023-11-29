@@ -1153,6 +1153,8 @@
     "enter_address_title": "Wprowadź\nswojego adresu ERC-20",
     "enter_address_description": "W trakcie Fazy Pierwszej tokeny ICE zostaną wypuszczone na blockchainie Ethereum. Po uruchomieniu Mainnet, tokeny będą wymienialne z Ethereum na blockchain Ice Open Network (ION).",
     "enter_address_warning": "Proszę upewnić się, że adres ERC-20 powyżej jest poprawny i będziesz miał do niego dostęp przez cały okres Fazy Pierwszej. Nie można go zmienić po potwierdzeniu.",
-    "enter_address_confirmation": "Czy jesteś pewien, że adres ERC-20 jest poprawny? Nie można go zmienić po potwierdzeniu."
+    "enter_address_confirmation": "Czy jesteś pewien, że adres ERC-20 jest poprawny? Nie można go zmienić po potwierdzeniu.",
+    "validators_warning_title": "Potwierdź Adres",
+    "validators_warning_text": "Proszę zauważyć, że osoby, które dodały adres Ethereum do swojego konta, nie spełniają warunków, aby stać się jednym z najlepszych 300 walidatorów zgodnie z naszym białym księgozbiorem na główny start."
   }
 }

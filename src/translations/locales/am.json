@@ -1152,6 +1152,8 @@
     "title": "Ethereum አድራሻ",
     "enter_address_title": "የእርስዎን\nERC-20 አድራሻ ያስገቡ",
     "enter_address_description": "በደረጃ አንድ ወቅት የ ICE ቶከኖች በ Ethereum blockchain ላይ ይለቀቃሉ። ሜንኔት አንዴ ከተጀመረ ቶከኖቹ ከEthereum ወደ Ice Open Network (ION) blockchain ይቀየራሉ።",
-    "enter_address_warning": "እባክዎ ከላይ ያለው የ ERC-20 አድራሻ ትክክል መሆኑን እና ለክፍል አንድ ጊዜ በሙሉ መዳረሻ እንደሚኖርዎት ያረጋግጡ። ካረጋገጡ በኋላ መቀየር አይቻልም።"
+    "enter_address_warning": "እባክዎ ከላይ ያለው የ ERC-20 አድራሻ ትክክል መሆኑን እና ለክፍል አንድ ጊዜ በሙሉ መዳረሻ እንደሚኖርዎት ያረጋግጡ። ካረጋገጡ በኋላ መቀየር አይቻልም።",
+    "validators_warning_title": "አድራሻ አረጋግጥ",
+    "validators_warning_text": "እባክዎን የኢቴሬም አድራሻን ወደ መለያቸው ያከሉ ግለሰቦች ለዋና ኔትዎርክ ማስጀመሪያ በነጭ ወረቀታችን መሰረት ከከፍተኛ 300 አረጋጋጮች ውስጥ አንዱ ለመሆን ብቁ እንዳልሆኑ ልብ ይበሉ።"
   }
 }

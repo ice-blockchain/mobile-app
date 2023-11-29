@@ -1153,6 +1153,8 @@
     "enter_address_title": "Skriv inn\ndin ERC-20 adresse",
     "enter_address_description": "I løpet av Fase Én vil ICE-tokenene bli utgitt på Ethereum-blockchainen. Når Mainnet er lansert, kan tokenene byttes fra Ethereum til Ice Open Network (ION) blockchain.",
     "enter_address_warning": "Vennligst sørg for at ERC-20-adressen ovenfor er korrekt, og at du vil ha tilgang til den i hele Fase Én-perioden. Det er ikke mulig å endre den etter at du har bekreftet den.",
-    "enter_address_confirmation": "Er du sikker på at ERC-20-adressen er korrekt? Det er ikke mulig å endre den etter at du har bekreftet den."
+    "enter_address_confirmation": "Er du sikker på at ERC-20-adressen er korrekt? Det er ikke mulig å endre den etter at du har bekreftet den.",
+    "validators_warning_title": "Bekreft Adresse",
+    "validators_warning_text": "Vennligst merk at personer som har lagt til en Ethereum-adresse på kontoen sin, ikke har rett til å bli en av de øverste 300 validatorer i henhold til vårt whitepaper for hovednettets lansering."
   }
 }

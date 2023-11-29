@@ -1153,6 +1153,8 @@
     "enter_address_title": "Geben Sie\nIhre ERC-20 Adresse ein",
     "enter_address_description": "Während Phase Eins werden die ICE-Token auf der Ethereum-Blockchain freigeschaltet. Sobald das Mainnet gestartet wurde, können die Token von Ethereum auf das Ice Open Network (ION) Blockchain umgewandelt werden.",
     "enter_address_warning": "Bitte stellen Sie sicher, dass die oben angegebene ERC-20 Adresse korrekt ist und dass Sie während der gesamten Phase Eins darauf zugreifen können. Sie können sie nach der Bestätigung nicht mehr ändern.",
-    "enter_address_confirmation": "Sind Sie sicher, dass die ERC-20 Adresse korrekt ist? Sie können sie nach der Bestätigung nicht mehr ändern."
+    "enter_address_confirmation": "Sind Sie sicher, dass die ERC-20 Adresse korrekt ist? Sie können sie nach der Bestätigung nicht mehr ändern.",
+    "validators_warning_title": "Adresse bestätigen",
+    "validators_warning_text": "Bitte beachten Sie, dass Personen, die ihre Ethereum-Adresse zu ihrem Konto hinzugefügt haben, gemäß unserem Whitepaper für den Start des Hauptnetzwerks nicht berechtigt sind, einer der besten 300 Validatoren zu werden."
   }
 }

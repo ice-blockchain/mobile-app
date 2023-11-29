@@ -1150,6 +1150,8 @@
     "enter_address_title": "Enter your\nERC-20 address",
     "enter_address_description": "During Phase One, the ICE tokens will be released on the Ethereum blockchain. Once Mainnet has been launched, the tokens will be swappable from Ethereum to Ice Open Network (ION) blockchain.",
     "enter_address_warning": "Please make sure that the ERC-20 address above is correct and that you will have access to it for the entire Phase One period. It is not possible to change it after you have confirmed it.",
-    "enter_address_confirmation": "Are you sure that the ERC-20 address is correct? It is not possible to change it after you have confirmed it."
+    "enter_address_confirmation": "Are you sure that the ERC-20 address is correct? It is not possible to change it after you have confirmed it.",
+    "validators_warning_title": "Confirm Address",
+    "validators_warning_text": "Please note that individuals who have added an Ethereum address to their account are not eligible to become one of the top 300 validators as per our whitepaper for the mainnet launch."
   }
 }

@@ -1153,6 +1153,8 @@
     "enter_address_title": "Vnesite\nvaš naslov ERC-20",
     "enter_address_description": "Med fazo 1 bodo žetoni ICE izpuščeni na Ethereum blockchain. Po zagonu Mainneta bodo žetoni mogoče zamenjati iz Ethereuma v blockchain Ice Open Network (ION).",
     "enter_address_warning": "Prepričajte se, da je zgoraj navedeni naslov ERC-20 pravilen in da boste imeli dostop do njega ves čas faze 1. Po potrditvi ga ni mogoče spremeniti.",
-    "enter_address_confirmation": "Ste prepričani, da je naslov ERC-20 pravilen? Po potrditvi ga ni mogoče spremeniti."
+    "enter_address_confirmation": "Ste prepričani, da je naslov ERC-20 pravilen? Po potrditvi ga ni mogoče spremeniti.",
+    "validators_warning_title": "Potrdite Naslov",
+    "validators_warning_text": "Prosimo, upoštevajte, da osebe, ki je dodala Ethereum naslov na svoj račun, ni dovoljeno postati eden izmed top 300 validacij glede na naš beli papir za glavni zagon."
   }
 }

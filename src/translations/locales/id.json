@@ -1153,6 +1153,8 @@
     "enter_address_title": "Masukkan alamat\nERC-20 Anda",
     "enter_address_description": "Selama Tahap Satu, token ICE akan dirilis di blockchain Ethereum. Setelah Mainnet diluncurkan, token dapat ditukarkan dari Ethereum ke blockchain Ice Open Network (ION).",
     "enter_address_warning": "Pastikan alamat ERC-20 di atas benar dan Anda akan memiliki akses ke alamat tersebut selama seluruh periode Tahap Satu. Tidak mungkin mengubahnya setelah Anda mengonfirmasikannya.",
-    "enter_address_confirmation": "Apakah Anda yakin alamat ERC-20 sudah benar? Tidak mungkin mengubahnya setelah Anda mengonfirmasikannya."
+    "enter_address_confirmation": "Apakah Anda yakin alamat ERC-20 sudah benar? Tidak mungkin mengubahnya setelah Anda mengonfirmasikannya.",
+    "validators_warning_title": "Konfirmasi Alamat",
+    "validators_warning_text": "Harap diperhatikan bahwa individu yang telah menambahkan alamat Ethereum ke akun mereka tidak memenuhi syarat untuk menjadi salah satu dari 300 validator teratas sesuai dengan whitepaper kami untuk peluncuran mainnet."
   }
 }

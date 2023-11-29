@@ -1153,6 +1153,8 @@
     "enter_address_title": "Zadejte\nsvou ERC-20 adresu",
     "enter_address_description": "Během Fáze Jedna budou tokeny ICE vydávány na Ethereum blockchainu. Jakmile bude spuštěna hlavní síť, bude možné tokeny směňovat z Ethereum na Ice Open Network (ION) blockchain.",
     "enter_address_warning": "Prosím, ujistěte se, že výše uvedená ERC-20 adresa je správná a že budete mít přístup k ní po celou dobu Fáze Jedna. Po potvrzení ji nelze změnit.",
-    "enter_address_confirmation": "Jste si jisti, že je ERC-20 adresa správná? Po potvrzení ji nelze změnit."
+    "enter_address_confirmation": "Jste si jisti, že je ERC-20 adresa správná? Po potvrzení ji nelze změnit.",
+    "validators_warning_title": "Potvrďte Adresu",
+    "validators_warning_text": "Upozorňujeme, že osoby, které přidaly Ethereum adresu k jejich účtu, nemají nárok stát se jedním z nejlepších 300 validátorů podle našeho whitepaperu pro hlavní síťový spuštění."
   }
 }

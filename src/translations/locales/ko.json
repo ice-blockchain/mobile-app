@@ -1153,6 +1153,8 @@
     "enter_address_title": "ERC-20 주소를 입력하세요",
     "enter_address_description": "제 1 단계에서는 ICE 토큰이 이더리움 블록체인에 출시됩니다. 메인넷이 시작되면 토큰을 이더리움에서 Ice Open Network (ION) 블록체인으로 교환할 수 있습니다.",
     "enter_address_warning": "위의 ERC-20 주소가 올바른지 확인하고 제 1 단계 전체 기간 동안 액세스할 수 있는지 확인하세요. 확인한 후에는 변경할 수 없습니다.",
-    "enter_address_confirmation": "ERC-20 주소가 올바른지 확실합니까? 확인한 후에는 변경할 수 없습니다."
+    "enter_address_confirmation": "ERC-20 주소가 올바른지 확실합니까? 확인한 후에는 변경할 수 없습니다.",
+    "validators_warning_title": "주소 확인",
+    "validators_warning_text": "계정에 Ethereum 주소를 추가한 개인은 주요넷 발표를 위한 우리의 화이트페이퍼에 따라 상위 300명의 검증자 중 하나가 될 자격이 없음을 참고하십시오."
   }
 }

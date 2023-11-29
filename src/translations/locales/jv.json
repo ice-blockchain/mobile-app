@@ -1066,6 +1066,8 @@
     "enter_address_title": "Lebokake\nalamat ERC-20 sampeyan",
     "enter_address_description": "Ing Fase Siji, token ICE bakal dirilis ing blockchain Ethereum. Sawise Mainnet rampung, token bisa ditukar saka Ethereum menyang blockchain Ice Open Network (ION).",
     "enter_address_warning": "Pastikan alamat ERC-20 ing ngisor iki sah lan sampeyan bakal duwe akses menyang sampeyan kanggo kabeh periode Fase Siji. Ora bisa ngganti kabeh konfirmasi.",
-    "enter_address_confirmation": "Apa sampeyan yakin yen alamat ERC-20 sah? Ora bisa ngganti kabeh konfirmasi."
+    "enter_address_confirmation": "Apa sampeyan yakin yen alamat ERC-20 sah? Ora bisa ngganti kabeh konfirmasi.",
+    "validators_warning_title": "Konfirmasi Alamat",
+    "validators_warning_text": "Monggo dhuwurake sing individu sing wis nambahi alamat Ethereum menyang akuné ora memenuhi syarat supaya bisa dadi salah siji saka 300 validator paling apik menurut pamrih putih kita kanggo peluncuran mainnet."
   }
 }
