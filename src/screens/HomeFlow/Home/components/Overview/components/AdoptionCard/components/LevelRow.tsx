@@ -6,6 +6,7 @@ import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {CARD_WIDTH} from '@screens/HomeFlow/Home/components/Overview/components/CardBase';
+import {dayjs} from '@services/dayjs';
 import {CheckMarkThinIcon} from '@svg/CheckMarkThinIcon';
 import {LockIcon} from '@svg/LockIcon';
 import {isRTL, t} from '@translations/i18n';
@@ -104,10 +105,14 @@ export const LevelRow = React.memo(
           <View style={[styles.flank, !active && styles.semitransparent]}>
             <View style={commonStyles.flexOne} />
             <Text style={styles.valueText}>
-              {`${formatNumber(item.totalActiveUsers ?? 0)}`}
+              {item.achievementDate
+                ? dayjs(item.achievementDate).format('D MMM')
+                : formatNumber(item.totalActiveUsers ?? 0)}
               <Text style={styles.valueCurrencyText}>
                 {'\n'}
-                {t('home.adoption.users')}
+                {item.achievementDate
+                  ? dayjs(item.achievementDate).format('YYYY')
+                  : t('home.adoption.users')}
               </Text>
             </Text>
           </View>

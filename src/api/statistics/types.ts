@@ -29,6 +29,7 @@ export type AdoptionMilestone = {
   milestone: number;
   achievedAt?: string;
   totalActiveUsers?: number;
+  achievementDate?: string;
 };
 
 export type Adoption = {
