@@ -5,10 +5,13 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
+  actionPayloadSelector,
   failedReasonSelector,
   isLoadingSelector,
 } from '@store/modules/UtilityProcessStatuses/selectors';
+import {RootState} from '@store/rootReducer';
 import {t} from '@translations/i18n';
+import {checkProp} from '@utils/guards';
 import {font} from '@utils/styles';
 import React, {useRef, useState} from 'react';
 import {StyleSheet, Text} from 'react-native';
@@ -25,9 +28,24 @@ export const useSetEthereumAddress = () => {
   const error = useSelector(
     failedReasonSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
   );
-  const loading = useSelector(
-    isLoadingSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
-  );
+
+  const loading = useSelector((state: RootState) => {
+    const isLoading = isLoadingSelector(AccountActions.UPDATE_ACCOUNT, state);
+    if (!isLoading) {
+      return false;
+    }
+
+    const loadingPayload = actionPayloadSelector(
+      AccountActions.UPDATE_ACCOUNT,
+      state,
+    );
+
+    return (
+      checkProp(loadingPayload, 'userInfo') &&
+      checkProp(loadingPayload.userInfo, 'miningBlockchainAccountAddress') &&
+      !!loadingPayload.userInfo.miningBlockchainAccountAddress
+    );
+  });
 
   const onAddressChange = (text: string) => {
     if (error) {

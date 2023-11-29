@@ -22,7 +22,7 @@ import {ScrollView, StyleSheet, Text} from 'react-native';
 import {rem} from 'rn-units';
 
 export const EthereumAddress = memo(() => {
-  useFocusStatusBar({style: 'light-content'});
+  useFocusStatusBar({style: 'dark-content'});
   const {bottom: bottomInset} = useSafeAreaInsets();
   const {scrollRef} = useScrollEndOnKeyboardShown();
   const isKeyboardShown = useIsKeyboardShown();
