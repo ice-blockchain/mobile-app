@@ -116,7 +116,6 @@
     "redux-saga": "^1.2.1",
     "rn-android-keyboard-adjust": "^2.1.2",
     "rn-units": "^2.0.5",
-    "yarn": "^1.22.19",
     "viem": "^1.16.5"
   },
   "devDependencies": {
@@ -151,6 +150,8 @@
     "jest-circus": "^29.3.1",
     "jetifier": "^2.0.0",
     "metro-react-native-babel-preset": "0.76.7",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "prettier": "2.8.0",
     "pretty-quick": "^3.1.3",
     "react-test-renderer": "18.2.0",

@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {MainNavigationParams} from '@navigation/Main';
+import {removeScreenByName} from '@navigation/utils';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
@@ -14,7 +15,7 @@ export const useGoBackIfAddressSet = () => {
 
   useEffect(() => {
     if (user.miningBlockchainAccountAddress) {
-      navigation.goBack();
+      removeScreenByName('EthereumAddress');
     }
   }, [user.miningBlockchainAccountAddress, navigation]);
 };
