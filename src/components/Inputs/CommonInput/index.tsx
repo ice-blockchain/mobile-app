@@ -36,6 +36,7 @@ export type CommonInputProps = TextInputProps & {
   prefix?: ReactNode;
   postfix?: ReactNode;
   reversed?: boolean;
+  showChangeLabel?: boolean;
 };
 
 export const CommonInput = ({
@@ -54,6 +55,7 @@ export const CommonInput = ({
   containerStyle,
   editable = true,
   reversed,
+  showChangeLabel = true,
   style,
   ...textInputProps
 }: CommonInputProps) => {
@@ -122,7 +124,7 @@ export const CommonInput = ({
             {errorText || label}
           </Animated.Text>
         </View>
-        {onChange && (
+        {onChange && showChangeLabel && (
           <Touchable
             style={styles.edit}
             onPress={onChange}

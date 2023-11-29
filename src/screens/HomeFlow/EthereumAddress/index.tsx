@@ -13,6 +13,7 @@ import {EthereumAddressWarning} from '@screens/HomeFlow/EthereumAddress/componen
 import {FramedEthereumIcon} from '@screens/HomeFlow/EthereumAddress/components/FramedEthereumIcon';
 import {useGoBackIfAddressSet} from '@screens/HomeFlow/EthereumAddress/hooks/useGoBackIfAddressSet';
 import {useSetEthereumAddress} from '@screens/HomeFlow/EthereumAddress/hooks/useSetEthereumAddress';
+import {useValidatorsWarning} from '@screens/HomeFlow/EthereumAddress/hooks/useValidatorsWarning';
 import {EthereumBookIcon} from '@svg/EthereumBookIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -25,6 +26,7 @@ export const EthereumAddress = memo(() => {
   const {bottom: bottomInset} = useSafeAreaInsets();
   const {scrollRef} = useScrollEndOnKeyboardShown();
   const isKeyboardShown = useIsKeyboardShown();
+  const {showWarning, isWarningConfirmed} = useValidatorsWarning();
 
   const {address, loading, error, onAddressChange, onSubmit} =
     useSetEthereumAddress();
@@ -57,6 +59,8 @@ export const EthereumAddress = memo(() => {
           containerStyle={styles.input}
           editable={!loading}
           errorText={error}
+          onChange={!isWarningConfirmed ? showWarning : undefined}
+          showChangeLabel={false}
         />
         {!isKeyboardShown && <EthereumAddressWarning style={styles.warning} />}
         <ConfirmAddressButton
