@@ -40,7 +40,7 @@ export const EthereumAddress = memo(() => {
         ref={scrollRef}
         contentContainerStyle={[
           styles.containerContent,
-          {marginBottom: bottomInset},
+          {paddingBottom: Math.max(bottomInset + rem(20), rem(54))},
         ]}
         keyboardShouldPersistTaps={'handled'}
         showsVerticalScrollIndicator={false}>
@@ -99,7 +99,6 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: rem(48),
-    marginBottom: rem(20),
     marginHorizontal: rem(18),
   },
 });
