@@ -12,7 +12,7 @@ const NUMBER_OF_MILESTONES_FROM_API = 3;
 const MILESTONES_BY_DATE = [
   {
     baseMiningRate: '2',
-    achievementDate: '2023-11-29',
+    achievementDate: '2023-12-01',
   },
   {
     baseMiningRate: '1',
