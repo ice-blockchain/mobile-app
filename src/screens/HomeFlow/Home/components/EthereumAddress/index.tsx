@@ -11,7 +11,7 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {ChevronSmallIcon} from '@svg/ChevronSmallIcon';
 import {EthereumIcon} from '@svg/EthereumIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {StyleSheet, Text} from 'react-native';
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     marginTop: rem(16),
   },
   chevron: {
-    transform: [{rotateZ: '-90deg'}],
+    transform: [{rotateZ: isRTL ? '90deg' : '-90deg'}],
   },
   leadingIconContainer: {
     backgroundColor: COLORS.white,

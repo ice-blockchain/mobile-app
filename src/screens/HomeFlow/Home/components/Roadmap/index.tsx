@@ -7,7 +7,7 @@ import {LINKS} from '@constants/links';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {ChevronSmallIcon} from '@svg/ChevronSmallIcon';
 import {PaperIcon} from '@svg/PaperIcon';
-import {t} from '@translations/i18n';
+import {isRTL, t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import React, {memo} from 'react';
 import {StyleSheet} from 'react-native';
@@ -39,6 +39,6 @@ const styles = StyleSheet.create({
     marginTop: rem(16),
   },
   chevron: {
-    transform: [{rotateZ: '-90deg'}],
+    transform: [{rotateZ: isRTL ? '90deg' : '-90deg'}],
   },
 });
