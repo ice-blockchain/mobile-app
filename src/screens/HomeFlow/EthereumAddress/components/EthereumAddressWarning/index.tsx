@@ -14,7 +14,7 @@ type Props = {
 
 export const EthereumAddressWarning = ({style}: Props) => {
   return (
-    <View style={[styles.container, style]}>
+    <View style={style}>
       <View style={styles.warningCard}>
         <InfoIcon
           width={rem(24)}
@@ -31,9 +31,6 @@ export const EthereumAddressWarning = ({style}: Props) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   warningCard: {
     backgroundColor: COLORS.attention,
     flexDirection: 'row',
