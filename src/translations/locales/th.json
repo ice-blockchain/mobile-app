@@ -68,7 +68,9 @@
     "learn_more": "เรียนรู้เพิ่มเติม",
     "back_to_login": "กลับไปล็อกอิน",
     "follow_us": "ติดตามเรา",
-    "subscribe": "สมัครสมาชิก"
+    "subscribe": "สมัครสมาชิก",
+    "not_sure": "ไม่แน่ใจ",
+    "confirm_address": "ยืนยันที่อยู่"
   },
   "team": {
     "contacts_tab": "ผู้ติดต่อ",
@@ -190,7 +192,10 @@
     "weak_password": "รหัสผ่านไม่แข็งแกร่ง",
     "wrong_password": "รหัสผ่านไม่ถูกต้อง",
     "no_camera_permissions": "ไม่ได้มอบการอนุญาตสำหรับกล้อง",
-    "no_library_permissions": "ไม่ได้มอบการอนุญาตสำหรับไลบรารี"
+    "no_library_permissions": "ไม่ได้มอบการอนุญาตสำหรับไลบรารี",
+    "blockchain_address_already_taken": "ที่อยู่ถูกใช้งานแล้ว",
+    "invalid_blockchain_address": "ที่อยู่บล็อกเชนไม่ถูกต้อง",
+    "ethereum_address_not_eoa": "ที่อยู่ไม่ใช่ EOA"
   },
   "profile": {
     "my_roles": {
@@ -348,6 +353,19 @@
       "description_part2": "สำหรับแต่ละ 6 วันที่ต่อเนื่อง คุณจะได้รับวันพักหนึ่งวัน",
       "streak": "ความต่อเนื่อง",
       "days_off": "วันหยุด"
+    },
+    "roadmap": {
+      "title": "แผนที่ถนน",
+      "button_title": "เอกสารขาว",
+      "button_subtitle": "เรียนรู้เพิ่มเติมเกี่ยวกับวิสัยทัศน์ของเราที่ Ice."
+    },
+    "join_mainnet": {
+      "title": "เข้าร่วมอนาคตที่ไม่มีการกำหนด",
+      "subtitle": "รับชมแอป Mainnet ของเราที่กำลังจะมาและคุณลักษณะที่ไม่เหมือนใคร"
+    },
+    "ethereum_address": {
+      "title": "ที่อยู่ Ethereum",
+      "subtitle": "โปรดใส่ที่อยู่ ERC-20 ของคุณที่นี่"
     }
   },
   "settings": {
@@ -1130,5 +1148,14 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "ที่อยู่ Ethereum",
+    "enter_address_title": "ใส่\nที่อยู่ ERC-20 ของคุณ",
+    "enter_address_description": "ระหว่างเฟสหนึ่ง Token ICE จะถูกปล่อยในบล็อกเชน Ethereum หลังจาก Mainnet ถูกเปิดใช้งาน Token จะสามารถแลกเปลี่ยนจาก Ethereum เป็นบล็อกเชน Ice Open Network (ION) ได้",
+    "enter_address_warning": "โปรดตรวจสอบว่าที่อยู่ ERC-20 ด้านบนถูกต้องและคุณจะมีการเข้าถึงมันตลอดระยะเวลาเฟสหนึ่ง ไม่สามารถเปลี่ยนแปลงได้หลังจากคุณยืนยันแล้ว",
+    "enter_address_confirmation": "คุณแน่ใจหรือไม่ว่าที่อยู่ ERC-20 ถูกต้อง? ไม่สามารถเปลี่ยนแปลงได้หลังจากคุณยืนยันแล้ว",
+    "validators_warning_title": "ยืนยันที่อยู่",
+    "validators_warning_text": "โปรดทราบว่าบุคคลที่เพิ่มที่อยู่ Ethereum ลงในบัญชีของพวกเขาไม่มีสิทธิ์เป็นหนึ่งใน 300 ผู้ตรวจสอบที่ดีที่สุดตามหนังสือขาวของเราสำหรับการเปิดตัว mainnet"
   }
 }

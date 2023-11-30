@@ -68,7 +68,9 @@
     "learn_more": "Läs mer",
     "back_to_login": "Tillbaka till inloggning",
     "follow_us": "Följ oss",
-    "subscribe": "Prenumerera"
+    "subscribe": "Prenumerera",
+    "not_sure": "Inte säker",
+    "confirm_address": "Bekräfta adress"
   },
   "team": {
     "contacts_tab": "Kontakter",
@@ -190,7 +192,10 @@
     "weak_password": "Svagt lösenord.",
     "wrong_password": "Fel lösenord.",
     "no_camera_permissions": "Kamerabehörighet beviljas inte.",
-    "no_library_permissions": "Biblioteksbehörigheter beviljas inte."
+    "no_library_permissions": "Biblioteksbehörigheter beviljas inte.",
+    "blockchain_address_already_taken": "Adressen är redan tagen",
+    "invalid_blockchain_address": "Ogiltig blockchain-adress",
+    "ethereum_address_not_eoa": "Adressen är inte EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "För varje 6 dagar du i följd du checkar in får du en ledig dag.",
       "streak": "INCHECKNINGAR I FÖLJD",
       "days_off": "LEDIGA DAGAR"
+    },
+    "roadmap": {
+      "title": "VÄGKARTA",
+      "button_title": "Whitepaper",
+      "button_subtitle": "Lär dig mer om vår vision på Ice."
+    },
+    "join_mainnet": {
+      "title": "Gå med i Den Decentraliserade Framtiden",
+      "subtitle": "Få en förhandsvisning av vår kommande Mainnet-app och dess unika funktioner."
+    },
+    "ethereum_address": {
+      "title": "Ethereum-adress",
+      "subtitle": "Vänligen ange din ERC-20-adress här."
     }
   },
   "settings": {
@@ -1129,5 +1147,14 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Ethereum-adress",
+    "enter_address_title": "Ange\ndin ERC-20-adress",
+    "enter_address_description": "Under Fas Ett kommer ICE-token att släppas på Ethereum-blockkedjan. När Mainnet har lanserats kommer token att kunna bytas från Ethereum till Ice Open Network (ION) blockkedjan.",
+    "enter_address_warning": "Se till att ERC-20-adressen ovan är korrekt och att du kommer att ha tillgång till den under hela Fas Ett-perioden. Det går inte att ändra den efter att du har bekräftat den.",
+    "enter_address_confirmation": "Är du säker på att ERC-20-adressen är korrekt? Det går inte att ändra den efter att du har bekräftat den.",
+    "validators_warning_title": "Bekräfta Adressen",
+    "validators_warning_text": "Observera att personer som har lagt till en Ethereum-adress på sitt konto inte är berättigade att bli en av de 300 bästa validerarna enligt vår whitepaper för huvudnätets lansering."
   }
 }

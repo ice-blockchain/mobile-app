@@ -107,7 +107,9 @@ export const LevelCard = forwardRef(
         HeaderValue={Header}
         sharedIsCollapsed={sharedIsCollapsed}>
         <View style={styles.body}>
-          <Touchable style={styles.column} onPress={onPressReferrals}>
+          <Touchable
+            style={[styles.column, styles.columnLeft]}
+            onPress={onPressReferrals}>
             <Text style={styles.labelText}>{t('home.pioneer.referrals')}</Text>
             <AnimatedNumberText
               value={userReferralCount}
@@ -147,14 +149,15 @@ export const LevelCard = forwardRef(
 const styles = StyleSheet.create({
   body: {
     flexDirection: 'row',
-    marginRight: rem(24),
     flexGrow: 1,
   },
   column: {
-    flex: 1,
     justifyContent: 'flex-end',
     borderWidth: 1, // needed to keep the text borders
     borderColor: COLORS.transparent,
+  },
+  columnLeft: {
+    width: '40%',
   },
   labelText: {
     opacity: 0.5,

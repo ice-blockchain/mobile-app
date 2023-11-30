@@ -6,9 +6,12 @@ import {isLiteTeam} from '@constants/featureFlags';
 import {commonStyles} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
+import {EthereumAddress} from '@screens/HomeFlow/Home/components/EthereumAddress';
 import {HomeHeader} from '@screens/HomeFlow/Home/components/Header';
+import {JoinMainnet} from '@screens/HomeFlow/Home/components/JoinMainnet';
 import {Overview} from '@screens/HomeFlow/Home/components/Overview';
 import {PAGE_HEIGHT, Pager} from '@screens/HomeFlow/Home/components/Pager';
+import {Roadmap} from '@screens/HomeFlow/Home/components/Roadmap';
 import {SocialLinks} from '@screens/HomeFlow/Home/components/SocialLinks';
 import {Tasks} from '@screens/HomeFlow/Home/components/Tasks';
 import {Team} from '@screens/HomeFlow/Home/components/Team';
@@ -51,6 +54,9 @@ export const Home = memo(() => {
           <View style={commonStyles.baseSubScreen}>
             <Overview translateY={translateY} topOffset={PAGE_HEIGHT} />
             <Team showEmptyTeamView={!showTasks} />
+            <EthereumAddress />
+            <Roadmap />
+            <JoinMainnet />
             <View ref={elementRef} onLayout={onElementLayout}>
               {showTasks ? <Tasks /> : null}
             </View>

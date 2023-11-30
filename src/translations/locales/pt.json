@@ -68,7 +68,9 @@
     "learn_more": "Saiba mais",
     "back_to_login": "Voltar ao login",
     "follow_us": "Siga-nos",
-    "subscribe": "Inscreva-se"
+    "subscribe": "Inscreva-se",
+    "not_sure": "Não tenho certeza",
+    "confirm_address": "Confirmar endereço"
   },
   "team": {
     "contacts_tab": "Contatos",
@@ -190,7 +192,10 @@
     "weak_password": "Senha fraca.",
     "wrong_password": "Senha errada.",
     "no_camera_permissions": "As permissões de câmera não foram concedidas.",
-    "no_library_permissions": "As permissões de biblioteca não foram concedidas."
+    "no_library_permissions": "As permissões de biblioteca não foram concedidas.",
+    "blockchain_address_already_taken": "Endereço já utilizado",
+    "invalid_blockchain_address": "Endereço de blockchain inválido",
+    "ethereum_address_not_eoa": "Endereço não é EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Para cada 6 dias consecutivos, você recebe um dia de folga.",
       "streak": "SEQUÊNCIA",
       "days_off": "DIAS DE FOLGA"
+    },
+    "roadmap": {
+      "title": "ROTEIRO",
+      "button_title": "Whitepaper",
+      "button_subtitle": "Saiba mais sobre nossa visão na Ice."
+    },
+    "join_mainnet": {
+      "title": "Junte-se ao Futuro Descentralizado",
+      "subtitle": "Tenha uma prévia do nosso próximo aplicativo Mainnet e suas características únicas."
+    },
+    "ethereum_address": {
+      "title": "Endereço Ethereum",
+      "subtitle": "Por favor, insira o seu endereço ERC-20 aqui."
     }
   },
   "settings": {
@@ -1129,5 +1147,14 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Endereço Ethereum",
+    "enter_address_title": "Insira\no seu endereço ERC-20",
+    "enter_address_description": "Durante a Fase Um, os tokens ICE serão lançados na blockchain Ethereum. Após o lançamento da Mainnet, os tokens serão trocáveis da Ethereum para a blockchain da Ice Open Network (ION).",
+    "enter_address_warning": "Certifique-se de que o endereço ERC-20 acima está correto e que terá acesso a ele durante todo o período da Fase Um. Não é possível alterá-lo após a confirmação.",
+    "enter_address_confirmation": "Tem certeza de que o endereço ERC-20 está correto? Não é possível alterá-lo após a confirmação.",
+    "validators_warning_title": "Confirmar Endereço",
+    "validators_warning_text": "Por favor, note que as pessoas que adicionaram um endereço Ethereum à sua conta não têm direito a se tornarem um dos 300 principais validadores, conforme o nosso whitepaper para o lançamento da mainnet."
   }
 }

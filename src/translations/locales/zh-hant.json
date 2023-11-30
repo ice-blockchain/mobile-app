@@ -1129,5 +1129,9 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "validators_warning_title": "確認地址",
+    "validators_warning_text": "請注意，已將Ethereum地址添加到其帳戶的個人不符合我們的白皮書要求，不能成為前300名驗證者之一，用於主網發布。"
   }
 }

@@ -68,7 +68,9 @@
     "learn_more": "Daha ətraflı öyrən",
     "back_to_login": "Girişə geri dön",
     "follow_us": "Bizi izlə",
-    "subscribe": "Abunə ol"
+    "subscribe": "Abunə ol",
+    "not_sure": "Əmin deyiləm",
+    "confirm_address": "Ünvanı təsdiq edin"
   },
   "team": {
     "contacts_tab": "Kontaktlar",
@@ -190,7 +192,10 @@
     "weak_password": "Zəif şifrə.",
     "wrong_password": "Yalnış şifrə.",
     "no_camera_permissions": "Kamera icazəsi verilməyib.",
-    "no_library_permissions": "Kitabxana icazəsi verilməyib."
+    "no_library_permissions": "Kitabxana icazəsi verilməyib.",
+    "blockchain_address_already_taken": "Ünvan artıq istifadə edilib",
+    "invalid_blockchain_address": "Yanlış ünvan",
+    "ethereum_address_not_eoa": "Ünvan EOA deyil"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Hər ardıcıl 6 günə bir gün istirahət əldə edirsiniz. ",
       "streak": "ZOLAQ",
       "days_off": "İSTİRAHƏT GÜNLƏRİ"
+    },
+    "roadmap": {
+      "title": "YOL XƏRİTƏSİ",
+      "button_title": "Ağdasını",
+      "button_subtitle": "Bizim Ice viziyamız haqqında daha çox öyrənin."
+    },
+    "join_mainnet": {
+      "title": "Mərkəzi Olmayan Gələcəyə qoşulun",
+      "subtitle": "Gələcək əsas şəbəkə tətbiqinin və unikal xüsusiyyətlərinin qısa bir baxışını alın."
+    },
+    "ethereum_address": {
+      "title": "Ethereum ünvanı",
+      "subtitle": "Xahiş edirəm ERC-20 ünvanınızı buraya daxil edin."
     }
   },
   "settings": {
@@ -1129,5 +1147,14 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Ethereum Ünvanı",
+    "enter_address_title": "ERC-20 ünvanınızı daxil edin",
+    "enter_address_description": "Fəzə Bir zamanı ICE tokenləri Ethereum blokçeyndə buraxılacaq. Əsas şəbəkə başladıqdan sonra, tokenlərin Ethereumdan Ice Open Network (ION) blokçeynə dəyişdirilməsi mümkün olacaq.",
+    "enter_address_warning": "Xahiş edirəm yuxarıdakı ERC-20 ünvanının düzgün olduğunu və Fəzə Bir müddəti boyunca buna tam əksərlikdə giriş hüququnuzun olduğunu təsdiq edin. Təsdiq etdikdən sonra dəyişdirmək mümkün deyil.",
+    "enter_address_confirmation": "Əminsinizmi ki, ERC-20 ünvanı düzgündür? Təsdiq etdikdən sonra dəyişdirmək mümkün deyil.",
+    "validators_warning_title": "Ünvanı Təsdiq Et",
+    "validators_warning_text": "Xahiş edirəm diqqət edin ki, Ethereum ünvanını hesabına əlavə edənlər, əsas şəbəkənin istehsalı üçün bizim ağlaşdırmamıza əsasən ən yaxşı 300 doğrulayıcının biri olmaq üçün əhəmiyyət daşımırlar."
   }
 }

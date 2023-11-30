@@ -68,7 +68,9 @@
     "learn_more": "Mëso më shumë",
     "back_to_login": "Kthehu te identifikimi",
     "follow_us": "Na ndiq",
-    "subscribe": "Abonohu"
+    "subscribe": "Abonohu",
+    "not_sure": "Nuk jam i sigurt",
+    "confirm_address": "Konfirmoni adresën"
   },
   "team": {
     "contacts_tab": "Kontaktet",
@@ -190,7 +192,10 @@
     "weak_password": "Fjalëkalim i dobët.",
     "wrong_password": "Fjalëkalim i gabuar.",
     "no_camera_permissions": "Nuk janë dhënë lejet për kamerën.",
-    "no_library_permissions": "Nuk janë dhënë lejet për bibliotekën."
+    "no_library_permissions": "Nuk janë dhënë lejet për bibliotekën.",
+    "blockchain_address_already_taken": "Adresa është tashmë e zënë",
+    "invalid_blockchain_address": "Adresa e blockchain-i nuk është e vlefshme",
+    "ethereum_address_not_eoa": "Adresa nuk është EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Për çdo 6 ditë të njëpasnjëshme ti merr një ditë pushimi.",
       "streak": "RRJEDHA",
       "days_off": "DITË PUSHIMI"
+    },
+    "roadmap": {
+      "title": "HARTA E RRUGËS",
+      "button_title": "Libri i Bardhë",
+      "button_subtitle": "Mësoni më shumë rreth vizionit tonë te Ice."
+    },
+    "join_mainnet": {
+      "title": "Bashkohuni me të Ardhmen e Zdërtuar",
+      "subtitle": "Merrni një shikim paraprak të aplikacionit Mainnet të ardhshëm tonë dhe veçorive të tij unike."
+    },
+    "ethereum_address": {
+      "title": "Adresa Ethereum",
+      "subtitle": "Ju lutemi vendosni adresën tuaj ERC-20 këtu."
     }
   },
   "settings": {
@@ -1129,5 +1147,14 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Adresa Ethereum",
+    "enter_address_title": "Vendos\nadresën tuaj ERC-20",
+    "enter_address_description": "Gjatë Fazës së Parë, tokenat ICE do të dalin në blockchainin Ethereum. Pas lansimit të Mainnet, tokenat do të jenë të shkëmbyeshëm nga Ethereum në blockchainin Ice Open Network (ION).",
+    "enter_address_warning": "Sigurohuni që adresa ERC-20 më lartë është e saktë dhe do të keni akses në të gjithë periudhën e Fazës së Parë. Nuk është e mundur ta ndryshoni pasi ta keni konfirmuar atë.",
+    "enter_address_confirmation": "A jeni të sigurt se adresa ERC-20 është e saktë? Nuk është e mundur ta ndryshoni pasi ta keni konfirmuar atë.",
+    "validators_warning_title": "Konfirmo Adresën",
+    "validators_warning_text": "Ju lutemi vini re se individët që kanë shtuar një adresë Ethereum në llogarinë e tyre nuk janë të përgjegjshëm të bëhen një ndër 300 validatortë më të mirë sipas librit tonë të bardhë për fillimin e rrjetit kryesor."
   }
 }

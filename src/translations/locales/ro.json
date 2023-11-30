@@ -68,7 +68,9 @@
     "learn_more": "Află mai multe",
     "back_to_login": "Înapoi la Conectare",
     "follow_us": "Urmărește-ne",
-    "subscribe": "Abonează-te"
+    "subscribe": "Abonează-te",
+    "not_sure": "Nesigur",
+    "confirm_address": "Confirmă adresa"
   },
   "team": {
     "contacts_tab": "Contacte",
@@ -190,7 +192,10 @@
     "weak_password": "Parolă slabă.",
     "wrong_password": "Parolă greșită.",
     "no_camera_permissions": "Nu sunt acordate permisiunile de acces la camera foto.",
-    "no_library_permissions": "Nu sunt acordate permisiunile de acces la bibliotecă."
+    "no_library_permissions": "Nu sunt acordate permisiunile de acces la bibliotecă.",
+    "blockchain_address_already_taken": "Adresa deja folosită",
+    "invalid_blockchain_address": "Adresă blockchain invalidă",
+    "ethereum_address_not_eoa": "Adresa nu este EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Pentru fiecare 6 zile consecutive primești o zi liberă.",
       "streak": "SERIE NEÎNTRERUPTĂ",
       "days_off": "ZILE LIBERE"
+    },
+    "roadmap": {
+      "title": "HARTĂ RUTIERĂ",
+      "button_title": "Document alb",
+      "button_subtitle": "Află mai multe despre viziunea noastră la Ice."
+    },
+    "join_mainnet": {
+      "title": "Alătură-te Viitorului Decentralizat",
+      "subtitle": "Obține o previzualizare a aplicației noastre Mainnet viitoare și a caracteristicilor sale unice."
+    },
+    "ethereum_address": {
+      "title": "Adresa Ethereum",
+      "subtitle": "Te rugăm să introduci adresa ta ERC-20 aici."
     }
   },
   "settings": {
@@ -971,7 +989,7 @@
       },
       "spread": {
         "title": "Răspândiți vestea",
-        "description": "Alăturați-vă conversației și prezentați rețeaua Ice forumurilor voastre preferate.\nCreați discuții noi și împărtășiți-vă gândurile despre finanțele descentralizate, viitorul monedei și puterea de a construi o micro-comunitate cu Ice.\n\nFii un om de zăpadă ☃\uFE0F și declanșează o discuție despre potențialul acestei monede globale."
+        "description": "Alăturați-vă conversației și prezentați rețeaua Ice forumurilor voastre preferate.\nCreați discuții noi și împărtășiți-vă gândurile despre finanțele descentralizate, viitorul monedei și puterea de a construi o micro-comunitate cu Ice.\n\nFii un om de zăpadă ☃️ și declanșează o discuție despre potențialul acestei monede globale."
       },
       "bring": {
         "title": "Aduceți-vă prietenii la bord",
@@ -1129,5 +1147,14 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Adresa Ethereum",
+    "enter_address_title": "Introdu\nta adresa ERC-20",
+    "enter_address_description": "În timpul Fazei I, tokenurile ICE vor fi lansate pe blockchainul Ethereum. După lansarea Mainnet, tokenurile vor fi interschimbabile de pe Ethereum pe blockchainul Ice Open Network (ION).",
+    "enter_address_warning": "Asigură-te că adresa ERC-20 de mai sus este corectă și că vei avea acces la ea pe toată durata Fazei I. Nu se poate schimba după ce ai confirmat-o.",
+    "enter_address_confirmation": "Ești sigur că adresa ERC-20 este corectă? Nu se poate schimba după ce ai confirmat-o.",
+    "validators_warning_title": "Confirmă Adresa",
+    "validators_warning_text": "Vă rugăm să rețineți că persoanele care au adăugat o adresă Ethereum la contul lor nu sunt eligibile să devină unul dintre cei top 300 de validatori conform whitepaperului pentru lansarea mainnet."
   }
 }

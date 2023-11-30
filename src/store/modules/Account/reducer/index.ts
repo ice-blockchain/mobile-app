@@ -20,6 +20,7 @@ export interface AccountState {
   installReferrer: string | null;
   isPrivacyInfoShown: boolean;
   authConfig: AuthConfig | null;
+  ethereumAddrWarningConfirmed: boolean;
 }
 
 type Actions = ReturnType<
@@ -33,6 +34,7 @@ type Actions = ReturnType<
   | typeof AccountActions.SET_PRIVACY_INFO_SHOW.STATE.create
   | typeof AccountActions.GET_AUTH_CONFIG.SUCCESS.create
   | typeof AccountActions.SET_INSTALL_REFERRER.STATE.create
+  | typeof AccountActions.SET_ETHEREUM_ADDR_WARNING_CONFIRMED.STATE.create
 >;
 
 const INITIAL_STATE: AccountState = {
@@ -44,6 +46,7 @@ const INITIAL_STATE: AccountState = {
   installReferrer: null,
   isPrivacyInfoShown: true,
   authConfig: null,
+  ethereumAddrWarningConfirmed: false,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): AccountState {
@@ -75,6 +78,9 @@ function reducer(state = INITIAL_STATE, action: Actions): AccountState {
       case AccountActions.SET_INSTALL_REFERRER.STATE.type:
         draft.installReferrer = action.payload.installReferrer;
         break;
+      case AccountActions.SET_ETHEREUM_ADDR_WARNING_CONFIRMED.STATE.type:
+        draft.ethereumAddrWarningConfirmed = true;
+        break;
       case AccountActions.SIGN_OUT.SUCCESS.type: {
         return {
           ...INITIAL_STATE,
@@ -89,7 +95,7 @@ export const accountReducer = persistReducer(
   {
     key: 'account',
     storage: AsyncStorage,
-    whitelist: ['installReferrer'],
+    whitelist: ['installReferrer', 'ethereumAddrWarningConfirmed'],
   },
   reducer,
 );

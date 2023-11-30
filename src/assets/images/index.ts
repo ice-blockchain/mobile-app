@@ -85,6 +85,7 @@ export const Images = {
     levelCardBg: require('./backgrounds/levelCardBg.png'),
     referralsCardBg: require('./backgrounds/referralsCardBg.png'),
     walkthroughBg: require('./backgrounds/walkthrough.png'),
+    darkListItem: require('./backgrounds/darkListItem.png'),
   },
   popUp: {
     updateRequired: require('./popup/please_update.png'),
@@ -158,5 +159,8 @@ export const Images = {
     sadness_preview: require('./emotions/sadness_preview.jpg'),
     surprise: require('./emotions/surprise.gif'),
     surprise_preview: require('./emotions/surprise_preview.jpg'),
+  },
+  card: {
+    joinMainnet: require('./card/joinMainnet.png'),
   },
 } as const;

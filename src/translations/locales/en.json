@@ -68,7 +68,9 @@
     "learn_more": "Learn More",
     "back_to_login": "Back to Login",
     "follow_us": "Follow Us",
-    "subscribe": "Subscribe"
+    "subscribe": "Subscribe",
+    "not_sure": "Not sure",
+    "confirm_address": "Confirm address"
   },
   "team": {
     "contacts_tab": "Contacts",
@@ -186,7 +188,10 @@
     "requires_recent_login": "This operation is sensitive and requires recent authentication. Please sign in again.",
     "same_email": "You can’t use the same e-mail.",
     "no_camera_permissions": "Camera permissions are not granted.",
-    "no_library_permissions": "Library permissions are not granted."
+    "no_library_permissions": "Library permissions are not granted.",
+    "blockchain_address_already_taken": "Address already taken",
+    "invalid_blockchain_address": "Invalid address",
+    "ethereum_address_not_eoa": "Address is not EOA"
   },
   "profile": {
     "my_roles": {
@@ -346,6 +351,19 @@
       "description_part2": "For each 6 consecutive days you receive one day off.",
       "streak": "STREAK",
       "days_off": "DAYS OFF"
+    },
+    "roadmap": {
+      "title": "ROADMAP",
+      "button_title": "Whitepaper",
+      "button_subtitle": "Learn more about our vision at Ice."
+    },
+    "join_mainnet": {
+      "title": "Join The Decentralized Future",
+      "subtitle": "Get a sneak peek of our upcoming Mainnet app and its unique features."
+    },
+    "ethereum_address": {
+      "title": "Ethereum address",
+      "subtitle": "Please enter your ERC-20 address here."
     }
   },
   "settings": {
@@ -968,7 +986,7 @@
       },
       "spread": {
         "title": "Spread the Word",
-        "description": "Join the conversation and introduce the Ice network to your favorite forums.\nStart new threads and share your thoughts about decentralized finance, the future of currency, and the power of building a micro-community with Ice.\n\nBe a ☃\uFE0F Snowman and spark a discussion about the potential of this global currency."
+        "description": "Join the conversation and introduce the Ice network to your favorite forums.\nStart new threads and share your thoughts about decentralized finance, the future of currency, and the power of building a micro-community with Ice.\n\nBe a ☃️ Snowman and spark a discussion about the potential of this global currency."
       },
       "bring": {
         "title": "Bring Your Friends Onboard",
@@ -1126,5 +1144,14 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Ethereum Address",
+    "enter_address_title": "Enter your\nERC-20 address",
+    "enter_address_description": "During Phase One, the ICE tokens will be released on the Ethereum blockchain. Once Mainnet has been launched, the tokens will be swappable from Ethereum to Ice Open Network (ION) blockchain.",
+    "enter_address_warning": "Please make sure that the ERC-20 address above is correct and that you will have access to it for the entire Phase One period. It is not possible to change it after you have confirmed it.",
+    "enter_address_confirmation": "Are you sure that the ERC-20 address is correct? It is not possible to change it after you have confirmed it.",
+    "validators_warning_title": "Confirm Address",
+    "validators_warning_text": "Please note that individuals who have added an Ethereum address to their account are not eligible to become one of the top 300 validators as per our whitepaper for the mainnet launch."
   }
 }

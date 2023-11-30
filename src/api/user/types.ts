@@ -73,6 +73,8 @@ export type User = {
     So if now > `repeatableKYCSteps[xxx]` you retry that step
    */
   repeatableKYCSteps?: Record<string, string>;
+
+  miningBlockchainAccountAddress?: string;
 };
 
 export type ReferralType = 'CONTACTS' | 'T1' | 'T2' | 'TEAM';

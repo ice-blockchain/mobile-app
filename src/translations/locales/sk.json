@@ -68,7 +68,9 @@
     "learn_more": "Zistiť viac",
     "back_to_login": "Späť na prihlásenie",
     "follow_us": "Sleduj nás",
-    "subscribe": "Prihlásiť na odber"
+    "subscribe": "Prihlásiť na odber",
+    "not_sure": "Nie som si istý/á",
+    "confirm_address": "Potvrdiť adresu"
   },
   "team": {
     "contacts_tab": "Kontakty",
@@ -190,7 +192,10 @@
     "weak_password": "Slabé heslo.",
     "wrong_password": "Nesprávne heslo.",
     "no_camera_permissions": "Nie sú udelené povolenia na používanie kamery.",
-    "no_library_permissions": "Nie sú udelené povolenia na používanie knižnice."
+    "no_library_permissions": "Nie sú udelené povolenia na používanie knižnice.",
+    "blockchain_address_already_taken": "Adresa už bola použitá",
+    "invalid_blockchain_address": "Neplatná adresa blockchainu",
+    "ethereum_address_not_eoa": "Adresa nie je EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Za každých 6 po sebe nasledujúcich dní dostaneš jeden deň voľna.",
       "streak": "SÉRIA",
       "days_off": "DEŇ VOĽNA"
+    },
+    "roadmap": {
+      "title": "CESTNÁ MAPA",
+      "button_title": "Biela kniha",
+      "button_subtitle": "Dozviete sa viac o našej vízii na Ice."
+    },
+    "join_mainnet": {
+      "title": "Pripojte sa k Decentralizovanej Budúcnosti",
+      "subtitle": "Získajte náhľad na našu nadchádzajúcu aplikáciu Mainnet a jej jedinečné funkcie."
+    },
+    "ethereum_address": {
+      "title": "Ethereum adresa",
+      "subtitle": "Prosím, zadajte váš ERC-20 adresu tu."
     }
   },
   "settings": {
@@ -1129,5 +1147,14 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Ethereum adresa",
+    "enter_address_title": "Zadajte\nvašu adresu ERC-20",
+    "enter_address_description": "Počas Fázy 1 budú tokeny ICE vypustené na blockchain Ethereum. Po spustení Mainnet budú tokeny vymeniteľné z Ethereum na blockchain Ice Open Network (ION).",
+    "enter_address_warning": "Uistite sa, že adresa ERC-20 vyššie je správna a budete mať k nej prístup počas celej Fázy 1. Po jej potvrdení ju nie je možné zmeniť.",
+    "enter_address_confirmation": "Ste si istý, že adresa ERC-20 je správna? Po jej potvrdení ju nie je možné zmeniť.",
+    "validators_warning_title": "Potvrdenie Adresy",
+    "validators_warning_text": "Upozorňujeme, že osoby, ktoré pridali Ethereum adresu do svojho účtu, nie sú oprávnené stať sa jedným z najlepších 300 validátorov podľa našej bielovkovej knihy pre spustenie hlavného siete."
   }
 }

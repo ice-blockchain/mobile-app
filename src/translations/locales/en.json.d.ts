@@ -52,6 +52,8 @@ export type Translations = {
   'button.back_to_login': null;
   'button.follow_us': null;
   'button.subscribe': null;
+  'button.not_sure': null;
+  'button.confirm_address': null;
   'team.contacts_tab': null;
   'team.tierOne_tab': null;
   'team.tierTwo_tab': null;
@@ -138,6 +140,9 @@ export type Translations = {
   'errors.same_email': null;
   'errors.no_camera_permissions': null;
   'errors.no_library_permissions': null;
+  'errors.blockchain_address_already_taken': null;
+  'errors.invalid_blockchain_address': null;
+  'errors.ethereum_address_not_eoa': null;
   'profile.my_roles.title': null;
   'profile.mining_calculator': null;
   'profile.invite_friends': null;
@@ -232,6 +237,13 @@ export type Translations = {
   'home.engagement.description_part2': null;
   'home.engagement.streak': null;
   'home.engagement.days_off': null;
+  'home.roadmap.title': null;
+  'home.roadmap.button_title': null;
+  'home.roadmap.button_subtitle': null;
+  'home.join_mainnet.title': null;
+  'home.join_mainnet.subtitle': null;
+  'home.ethereum_address.title': null;
+  'home.ethereum_address.subtitle': null;
   'settings.title': null;
   'settings.profile': null;
   'settings.legal': null;
@@ -685,4 +697,11 @@ export type Translations = {
   'override.walkthrough.home.earning.description': null;
   'override.walkthrough.team.referrals.description': null;
   'override.walkthrough.team.earnings.description': null;
+  'ethereum_address.title': null;
+  'ethereum_address.enter_address_title': null;
+  'ethereum_address.enter_address_description': null;
+  'ethereum_address.enter_address_warning': null;
+  'ethereum_address.enter_address_confirmation': null;
+  'ethereum_address.validators_warning_title': null;
+  'ethereum_address.validators_warning_text': null;
 };

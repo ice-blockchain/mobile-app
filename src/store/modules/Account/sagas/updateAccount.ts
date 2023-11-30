@@ -2,15 +2,22 @@
 
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
+import {isEoaEthereumAddress, isValidEthereumAddress} from '@services/ethereum';
 import {AccountActions} from '@store/modules/Account/actions';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {showError} from '@utils/errors';
+import {checkProp} from '@utils/guards';
 import {e164PhoneNumber, hashPhoneNumber} from '@utils/phoneNumber';
 import RNRestart from 'react-native-restart';
 import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
 const actionCreator = AccountActions.UPDATE_ACCOUNT.START.create;
+
+enum ValidateError {
+  InvalidEthereumAddress = 'InvalidEthereumAddress',
+  EthereumAddressIsNotEoa = 'EthereumAddressIsNotEoa',
+}
 
 export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
   const user: ReturnType<typeof unsafeUserSelector> = yield select(
@@ -31,6 +38,23 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
 
       userInfo.phoneNumber = normalizedNumber;
       userInfo.phoneNumberHash = yield call(hashPhoneNumber, normalizedNumber);
+    }
+
+    if (checkProp(userInfo, 'miningBlockchainAccountAddress')) {
+      if (
+        !userInfo.miningBlockchainAccountAddress ||
+        !isValidEthereumAddress(userInfo.miningBlockchainAccountAddress)
+      ) {
+        throw {code: ValidateError.InvalidEthereumAddress};
+      }
+
+      const isEoa: SagaReturnType<typeof isEoaEthereumAddress> = yield call(
+        isEoaEthereumAddress,
+        userInfo.miningBlockchainAccountAddress,
+      );
+      if (!isEoa) {
+        throw {code: ValidateError.EthereumAddressIsNotEoa};
+      }
     }
 
     const modifiedUser: SagaReturnType<typeof Api.user.updateAccount> =
@@ -83,6 +107,18 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
         case 'phoneNumberHash':
         case 'phoneNumber':
           localizedError = t('errors.phone_number_already_taken');
+          break;
+        case 'mining_blockchain_account_address':
+          localizedError = t('errors.blockchain_address_already_taken');
+          break;
+      }
+    } else if (checkProp(error, 'code')) {
+      switch (error.code) {
+        case ValidateError.InvalidEthereumAddress:
+          localizedError = t('errors.invalid_blockchain_address');
+          break;
+        case ValidateError.EthereumAddressIsNotEoa:
+          localizedError = t('errors.ethereum_address_not_eoa');
           break;
       }
     }

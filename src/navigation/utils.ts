@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {AuthStackParamList} from '@navigation/Auth';
 import {MainNavigationParams} from '@navigation/Main';
 import {
   createNavigationContainerRef,
@@ -25,7 +26,9 @@ export const getCurrentRouteSync = () => {
   return navigationRef.getCurrentRoute();
 };
 
-export const removeScreenByName = async (screenName: string) => {
+export const removeScreenByName = async (
+  screenName: keyof MainNavigationParams | keyof AuthStackParamList,
+) => {
   const currentStack = await getNavigationState();
   if (currentStack) {
     const screenIndex = currentStack.routes.findIndex(

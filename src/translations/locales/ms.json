@@ -68,7 +68,9 @@
     "learn_more": "Ketahui Lebih Lanjut",
     "back_to_login": "Kembali ke Log Masuk",
     "follow_us": "Ikuti Kami",
-    "subscribe": "Langgan"
+    "subscribe": "Langgan",
+    "not_sure": "Tidak pasti",
+    "confirm_address": "Sahkan alamat"
   },
   "team": {
     "contacts_tab": "Kenalan",
@@ -190,7 +192,10 @@
     "weak_password": "Kata laluan lemah.",
     "wrong_password": "Kata laluan salah.",
     "no_camera_permissions": "Kebenaran kamera tidak diberikan.",
-    "no_library_permissions": "Kebenaran pustaka tidak diberikan."
+    "no_library_permissions": "Kebenaran pustaka tidak diberikan.",
+    "blockchain_address_already_taken": "Alamat sudah diambil",
+    "invalid_blockchain_address": "Alamat blockchain tidak sah",
+    "ethereum_address_not_eoa": "Alamat bukan EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Untuk setiap 6 hari berturut-turut anda akan menerima satu hari cuti.",
       "streak": "BERTURUT-TURUT",
       "days_off": "HARI CUTI"
+    },
+    "roadmap": {
+      "title": "PERANCANGAN JALAN",
+      "button_title": "Buku Putih",
+      "button_subtitle": "Ketahui lebih lanjut tentang visi kami di Ice."
+    },
+    "join_mainnet": {
+      "title": "Sertai Masa Depan Terdesentralisasi",
+      "subtitle": "Dapatkan gambaran awal mengenai aplikasi Mainnet yang akan datang dan ciri-ciri uniknya."
+    },
+    "ethereum_address": {
+      "title": "Alamat Ethereum",
+      "subtitle": "Sila masukkan alamat ERC-20 anda di sini."
     }
   },
   "settings": {
@@ -1129,5 +1147,14 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Alamat Ethereum",
+    "enter_address_title": "Masukkan alamat\nERC-20 anda",
+    "enter_address_description": "Semasa Fasa Satu, token ICE akan dilepaskan di rangkaian blockchain Ethereum. Setelah dilancarkan, token boleh ditukar dari Ethereum ke rangkaian Ice Open Network (ION).",
+    "enter_address_warning": "Pastikan alamat ERC-20 di atas betul dan anda akan memiliki akses kepadanya sepanjang tempoh Fasa Satu. Ia tidak boleh diubah setelah anda mengesahkan.",
+    "enter_address_confirmation": "Adakah anda pasti alamat ERC-20 adalah betul? Ia tidak boleh diubah setelah anda mengesahkan.",
+    "validators_warning_title": "Sahkan Alamat",
+    "validators_warning_text": "Sila ambil perhatian bahawa individu yang telah menambah alamat Ethereum ke akaun mereka tidak layak untuk menjadi salah satu daripada 300 penentusah teratas mengikut buku putih kami untuk pelancaran mainnet."
   }
 }

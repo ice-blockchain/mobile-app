@@ -68,7 +68,9 @@
     "learn_more": "Tudj meg többet",
     "back_to_login": "Vissza a bejelentkezéshez",
     "follow_us": "Kövess minket",
-    "subscribe": "Feliratkozás"
+    "subscribe": "Feliratkozás",
+    "not_sure": "Nem vagyok biztos",
+    "confirm_address": "Cím megerősítése"
   },
   "team": {
     "contacts_tab": "Kapcsolatok",
@@ -190,7 +192,10 @@
     "weak_password": "Gyenge jelszó.",
     "wrong_password": "Rossz jelszó.",
     "no_camera_permissions": "A kamerához való hozzáférés nincs engedélyezve.",
-    "no_library_permissions": "A könyvtárhoz való hozzáférés nincs engedélyezve."
+    "no_library_permissions": "A könyvtárhoz való hozzáférés nincs engedélyezve.",
+    "blockchain_address_already_taken": "Cím már foglalt",
+    "invalid_blockchain_address": "Érvénytelen cím",
+    "ethereum_address_not_eoa": "A cím nem EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "Minden 6 egymást követő nap után egy nap felmentést kapsz",
       "streak": "SOROZAT",
       "days_off": "SZABAD NAPOK"
+    },
+    "roadmap": {
+      "title": "TÉRKÉP",
+      "button_title": "Fehér könyv",
+      "button_subtitle": "Tudj meg többet a víziónkról az Ice-nál."
+    },
+    "join_mainnet": {
+      "title": "Csatlakozz a Decentralizált Jövőhöz",
+      "subtitle": "Tekints be a közelgő Mainnet alkalmazásunkba és annak egyedi funkcióiba."
+    },
+    "ethereum_address": {
+      "title": "Ethereum cím",
+      "subtitle": "Kérlek add meg az ERC-20 címedet itt."
     }
   },
   "settings": {
@@ -1129,5 +1147,14 @@
         }
       }
     }
+  },
+  "ethereum_address": {
+    "title": "Ethereum Cím",
+    "enter_address_title": "Add meg az\nERC-20 címedet",
+    "enter_address_description": "Az Első Fázis során az ICE tokenek az Ethereum blockchainen lesznek kibocsátva. Miután elindult a Mainnet, a tokenek Ethereumról az Ice Open Network (ION) blockchainre cserélhetők.",
+    "enter_address_warning": "Kérlek, győződj meg róla, hogy az fentebb megadott ERC-20 cím helyes, és hogy az egész Első Fázis során hozzáféréssel rendelkezel hozzá. Nem lehet megváltoztatni azt, miután megerősítetted.",
+    "enter_address_confirmation": "Biztos vagy benne, hogy az ERC-20 cím helyes? Megerősítés után nem lehet megváltoztatni.",
+    "validators_warning_title": "Cím megerősítése",
+    "validators_warning_text": "Kérjük, vegye figyelembe, hogy azok az egyének, akik hozzáadtak egy Ethereum címet a fiókjukhoz, nem jogosultak az egyik legjobb 300 validátor közül lenni a fehér könyvünk alapján a mainnet indításához."
   }
 }
