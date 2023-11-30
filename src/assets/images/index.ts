@@ -112,6 +112,8 @@ export const Images = {
     facebook: require('./social/facebook.png'),
     instagram: require('./social/instagram.png'),
     telegram: require('./social/telegram.png'),
+    reddit: require('./social/reddit.png'),
+    discord: require('./social/discord.png'),
   },
   creativeLibrary: {
     getStarted: require('./creative_library/get_started.png'),

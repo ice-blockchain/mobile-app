@@ -6,6 +6,8 @@ export const socialsOrder = [
   'linkedin',
   'facebook',
   'instagram',
+  'reddit',
+  'discord',
 ] as const;
 
 export type SocialType = typeof socialsOrder[number];
