@@ -55,8 +55,7 @@ export const showingsCountSelector = (state: RootState) => {
 };
 
 export const ethereumWarningConfirmedSelector = (state: RootState) => {
-  const user = userSelector(state);
-  return user?.clientData?.ethereumAddressWarningConfirmed ?? false;
+  return state.account.ethereumAddrWarningConfirmed;
 };
 
 export const isPhoneNumberVerifiedSelector = (state: RootState) =>

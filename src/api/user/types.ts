@@ -108,5 +108,4 @@ export type ClientData = {
   miningStateTooltipSeen?: string[];
   phoneNumberIso?: string | null;
   rate?: RateData | null;
-  ethereumAddressWarningConfirmed?: boolean;
 };

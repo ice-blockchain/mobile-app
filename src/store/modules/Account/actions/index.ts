@@ -149,6 +149,13 @@ const SET_INSTALL_REFERRER = createAction('SET_INSTALL_REFERRER', {
   STATE: (payload: {installReferrer: string}) => payload,
 });
 
+const SET_ETHEREUM_ADDR_WARNING_CONFIRMED = createAction(
+  'SET_ETHEREUM_ADDR_WARNING_CONFIRMED',
+  {
+    STATE: true,
+  },
+);
+
 export const AccountActions = Object.freeze({
   SET_TOKEN,
   SET_USER_METADATA,
@@ -168,4 +175,5 @@ export const AccountActions = Object.freeze({
   SET_PRIVACY_INFO_SHOW,
   GET_AUTH_CONFIG,
   SET_INSTALL_REFERRER,
+  SET_ETHEREUM_ADDR_WARNING_CONFIRMED,
 });
