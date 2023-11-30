@@ -1182,15 +1182,6 @@
           "description": "Did you like the pinned post and repost it with a quote using the exact text provided, as in the example?"
         }
       },
-      "fb": {
-        "1": "Open Facebook and search for [[:bold]]Ice: Decentralized Future[[/:bold]] page.",
-        "2": "Find the pinned post, which is the first post on the profile.",
-        "3": "Share the post on your feed using the [[:bold]]EXACT[[/:bold]] text below.",
-        "pop_up": {
-          "title": "Confirmation",
-          "description": "Did you like the pinned post and repost it with a quote using the exact text provided, as in the example?"
-        }
-      },
       "tooltips": {
         "tap_to_copy": "Tap to copy text",
         "copied": "Copied"

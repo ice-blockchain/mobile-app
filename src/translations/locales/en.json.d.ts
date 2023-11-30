@@ -720,11 +720,6 @@ export type Translations = {
   'social_kyc.instructions_step.x.3': null;
   'social_kyc.instructions_step.x.pop_up.title': null;
   'social_kyc.instructions_step.x.pop_up.description': null;
-  'social_kyc.instructions_step.fb.1': null;
-  'social_kyc.instructions_step.fb.2': null;
-  'social_kyc.instructions_step.fb.3': null;
-  'social_kyc.instructions_step.fb.pop_up.title': null;
-  'social_kyc.instructions_step.fb.pop_up.description': null;
   'social_kyc.instructions_step.tooltips.tap_to_copy': null;
   'social_kyc.instructions_step.tooltips.copied': null;
   'social_kyc.verification_step.title': null;

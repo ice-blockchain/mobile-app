@@ -18,7 +18,6 @@ import {
 } from '@screens/SocialKycFlow/constants';
 import {ShowExample} from '@screens/SocialKycFlow/InstructionsStep/components/ShowExample';
 import {Tooltip} from '@screens/SocialKycFlow/InstructionsStep/components/Tooltip';
-import {getTranslationsSocialKycMethod} from '@screens/SocialKycFlow/utils';
 import {getFacebookAccessTokenForUserPosts} from '@services/auth/signin/facebook';
 import {SocialKycActions} from '@store/modules/SocialKyc/actions';
 import {
@@ -66,8 +65,6 @@ export function InstructionsStep({
   kycStep,
 }: Props) {
   const [isTextCopied, setIsTextCopied] = useState(false);
-  const translationsSocialKycMethod =
-    getTranslationsSocialKycMethod(socialKycMethod);
   const repostText = useSelector(socialKycRepostTextSelector);
   const copyText = () => {
     Clipboard.setString(repostText);
@@ -106,14 +103,10 @@ export function InstructionsStep({
     navigate({
       name: 'PopUp',
       params: {
-        title: t(
-          `social_kyc.instructions_step.${translationsSocialKycMethod}.pop_up.title`,
-        ),
+        title: t('social_kyc.instructions_step.x.pop_up.title'),
         message: (
           <Message
-            text={t(
-              `social_kyc.instructions_step.${translationsSocialKycMethod}.pop_up.description`,
-            )}
+            text={t('social_kyc.instructions_step.x.pop_up.description')}
           />
         ),
         buttons: [
@@ -149,23 +142,17 @@ export function InstructionsStep({
         <View style={styles.instructionsContainer}>
           <StepInstruction
             stepNumber={1}
-            description={t(
-              `social_kyc.instructions_step.${translationsSocialKycMethod}.1`,
-            )}
+            description={t('social_kyc.instructions_step.x.1')}
           />
           <View style={styles.separator} />
           <StepInstruction
             stepNumber={2}
-            description={t(
-              `social_kyc.instructions_step.${translationsSocialKycMethod}.2`,
-            )}
+            description={t('social_kyc.instructions_step.x.2')}
           />
           <View style={styles.separator} />
           <StepInstruction
             stepNumber={3}
-            description={t(
-              `social_kyc.instructions_step.${translationsSocialKycMethod}.3`,
-            )}
+            description={t('social_kyc.instructions_step.x.3')}
             allBordersRounded={false}
             rightIcon={<CopyIcon width={rem(24)} />}
             onRightIconPress={copyText}

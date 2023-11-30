@@ -13,6 +13,7 @@ type SocialKycData = {
 };
 
 type Params = {
+  userId: string;
   language: SupportedLocale;
   kycStep: SocialKycStepNumber;
   social: SocialMethod;
@@ -21,6 +22,7 @@ type Params = {
 };
 
 export function verifySocialKYCStep({
+  userId,
   language,
   kycStep,
   social,
@@ -28,10 +30,12 @@ export function verifySocialKYCStep({
   accessToken,
 }: Params) {
   if (link) {
-    return post<{link: string}, SocialKycData>(
-      `/kyc/verifySocialKYCStep?language=${language}&kycStep=${kycStep}&social=${social}`,
+    return post<{twitter: {tweetUrl: string}}, SocialKycData>(
+      `/kyc/verifySocialKYCStep/users/${userId}?language=${language}&kycStep=${kycStep}&social=${social}`,
       {
-        link,
+        twitter: {
+          tweetUrl: link,
+        },
       },
     );
   }
@@ -46,7 +50,7 @@ export function verifySocialKYCStep({
     );
   }
   return post<{}, SocialKycData>(
-    `/kyc/verifySocialKYCStep?language=${language}&kycStep=${kycStep}&social=${social}`,
+    `/kyc/verifySocialKYCStep/users/${userId}?language=${language}&kycStep=${kycStep}&social=${social}`,
     {},
   );
 }

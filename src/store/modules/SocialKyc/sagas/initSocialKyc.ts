@@ -20,6 +20,7 @@ export function* initSocialKyc(action: Actions) {
     );
     const result: SagaReturnType<typeof Api.kyc.verifySocialKYCStep> =
       yield call(Api.kyc.verifySocialKYCStep, {
+        userId: user.id,
         language: user.language,
         kycStep,
         social: socialKycMethodToApiSocialMethod(socialKycMethod),
