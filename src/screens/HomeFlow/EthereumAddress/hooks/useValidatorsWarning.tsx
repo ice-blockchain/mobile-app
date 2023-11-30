@@ -22,9 +22,6 @@ export const useValidatorsWarning = () => {
         {
           text: t('button.not_sure'),
           preset: 'outlined',
-          onPress: () => {
-            navigation.goBack();
-          },
         },
         {
           text: t('button.confirm'),
