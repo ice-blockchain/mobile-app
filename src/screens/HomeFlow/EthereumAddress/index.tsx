@@ -25,7 +25,7 @@ export const EthereumAddress = memo(() => {
   const {bottom: bottomInset} = useSafeAreaInsets();
   const {scrollRef} = useScrollEndOnKeyboardShown();
   const isKeyboardShown = useIsKeyboardShown();
-  const {showWarning, warningConfirmed} = useValidatorsWarning();
+  const {showWarning, needToShowWarning} = useValidatorsWarning();
 
   const {address, loading, error, onAddressChange, onSubmit} =
     useSetEthereumAddress();
@@ -56,7 +56,7 @@ export const EthereumAddress = memo(() => {
           containerStyle={styles.input}
           editable={!loading}
           errorText={error}
-          onChange={!warningConfirmed ? showWarning : undefined}
+          onChange={needToShowWarning ? showWarning : undefined}
           showChangeLabel={false}
         />
         {!isKeyboardShown && <EthereumAddressWarning style={styles.warning} />}
