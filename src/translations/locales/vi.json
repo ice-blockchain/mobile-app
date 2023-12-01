@@ -1152,9 +1152,9 @@
     "title": "Địa chỉ Ethereum",
     "enter_address_title": "Nhập\ndịa chỉ ERC-20 của bạn",
     "enter_address_description": "Trong giai đoạn Một, token ICE sẽ được phát hành trên blockchain Ethereum. Sau khi Mainnet được khởi chạy, các token có thể trao đổi từ Ethereum sang Ice Open Network (ION) blockchain.",
-    "enter_address_warning": "Vui lòng đảm bảo rằng địa chỉ ERC-20 ở trên là chính xác và bạn sẽ có quyền truy cập vào nó trong suốt giai đoạn Một. Không thể thay đổi sau khi bạn đã xác nhận.",
-    "enter_address_confirmation": "Bạn có chắc chắn rằng địa chỉ ERC-20 là chính xác không? Không thể thay đổi sau khi bạn đã xác nhận.",
+    "enter_address_confirmation": "Bạn có chắc chắn rằng địa chỉ ERC-20 là đúng không?",
     "validators_warning_title": "Xác Nhận Địa Chỉ",
-    "validators_warning_text": "Vui lòng lưu ý rằng những người đã thêm địa chỉ Ethereum vào tài khoản của họ không đủ điều kiện trở thành một trong 300 người xác minh hàng đầu theo whitepaper của chúng tôi cho việc ra mắt mainnet."
+    "validators_warning_text": "Vui lòng lưu ý rằng những người đã thêm địa chỉ Ethereum vào tài khoản của họ không đủ điều kiện trở thành một trong 300 người xác minh hàng đầu theo whitepaper của chúng tôi cho việc ra mắt mainnet.",
+    "self_custodial_addr_warning_text": "Chúng tôi khuyên bạn nên sử dụng ví tự lưu trữ như Metamask hoặc Trust Wallet. Không sử dụng bất kỳ địa chỉ exchange nào, vì Ice chỉ sẽ được liệt kê trên Uniswap ban đầu, hoặc bạn có thể đối diện với [[:bold]]nguy cơ mất tiền của bạn[[/:bold]]."
   }
 }

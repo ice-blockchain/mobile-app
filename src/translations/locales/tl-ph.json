@@ -1045,6 +1045,8 @@
   },
   "ethereum_address": {
     "validators_warning_title": "Kumpirmahin ang Address",
-    "validators_warning_text": "Pakipansin na ang mga indibidwal na nagdagdag ng Ethereum address sa kanilang account ay hindi karapat-dapat na maging isa sa mga pangunahing 300 validator ayon sa aming whitepaper para sa mainnet launch."
+    "validators_warning_text": "Pakipansin na ang mga indibidwal na nagdagdag ng Ethereum address sa kanilang account ay hindi karapat-dapat na maging isa sa mga pangunahing 300 validator ayon sa aming whitepaper para sa mainnet launch.",
+    "self_custodial_addr_warning_text": "Inirerekomenda namin ang paggamit ng isang self-custodial na pitaka tulad ng Metamask o Trust Wallet. Huwag gumamit ng anumang exchange address dahil ang Ice ay tanging nakalista lamang sa Uniswap sa simula, o maaari kang mag-risko na [[:bold]]mawala ang iyong mga barya[[/:bold]].",
+    "enter_address_confirmation": "Sigurado ka bang tama ang ERC-20 address?"
   }
 }

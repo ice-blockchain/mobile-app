@@ -1155,9 +1155,9 @@
     "title": "Ethereum Adres",
     "enter_address_title": "Voer jou\nERC-20-adres in",
     "enter_address_description": "Tydens Fase Een sal die ICE-tokens op die Ethereum-blokchain vrygestel word. Sodra die Hoofnet begin het, sal die tokens oorgeruil kan word van Ethereum na die Ice Open Network (ION) blokchain.",
-    "enter_address_warning": "Maak asseblief seker dat die ERC-20-adres hierbo korrek is en dat jy daarvolgens vir die hele Fase Een periode toegang het. Dit is nie moontlik om dit te verander nadat jy dit bevestig het nie.",
-    "enter_address_confirmation": "Is jy seker dat die ERC-20-adres korrek is? Dit is nie moontlik om dit te verander nadat jy dit bevestig het nie.",
+    "enter_address_confirmation": "Is jy seker dat die ERC-20-adres korrek is?",
     "validators_warning_title": "Bevestig Adres",
-    "validators_warning_text": "Let daarop dat individue wat 'n Ethereum-adres aan hul rekening bygevoeg het, nie in aanmerking kom om een van die top 300-validatorse te word volgens ons witboek vir die hoofnetlansering nie."
+    "validators_warning_text": "Let daarop dat individue wat 'n Ethereum-adres aan hul rekening bygevoeg het, nie in aanmerking kom om een van die top 300-validatorse te word volgens ons witboek vir die hoofnetlansering nie.",
+    "self_custodial_addr_warning_text": "Ons adviseer om 'n selfbewaringsbeurs soos Metamask of Trust Wallet te gebruik. Moet nie enige exchange-adres gebruik nie, want Ice sal aanvanklik net op Uniswap gelys word, of jy kan jou munte [[:bold]]verloor[[/:bold]]."
   }
 }

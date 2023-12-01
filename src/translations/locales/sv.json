@@ -1152,9 +1152,9 @@
     "title": "Ethereum-adress",
     "enter_address_title": "Ange\ndin ERC-20-adress",
     "enter_address_description": "Under Fas Ett kommer ICE-token att släppas på Ethereum-blockkedjan. När Mainnet har lanserats kommer token att kunna bytas från Ethereum till Ice Open Network (ION) blockkedjan.",
-    "enter_address_warning": "Se till att ERC-20-adressen ovan är korrekt och att du kommer att ha tillgång till den under hela Fas Ett-perioden. Det går inte att ändra den efter att du har bekräftat den.",
-    "enter_address_confirmation": "Är du säker på att ERC-20-adressen är korrekt? Det går inte att ändra den efter att du har bekräftat den.",
+    "enter_address_confirmation": "Är du säker på att ERC-20-adressen är korrekt?",
     "validators_warning_title": "Bekräfta Adressen",
-    "validators_warning_text": "Observera att personer som har lagt till en Ethereum-adress på sitt konto inte är berättigade att bli en av de 300 bästa validerarna enligt vår whitepaper för huvudnätets lansering."
+    "validators_warning_text": "Observera att personer som har lagt till en Ethereum-adress på sitt konto inte är berättigade att bli en av de 300 bästa validerarna enligt vår whitepaper för huvudnätets lansering.",
+    "self_custodial_addr_warning_text": "Vi rekommenderar att använda en självstyrande plånbok som Metamask eller Trust Wallet. Använd inte någon exchange-adress, eftersom Ice bara kommer att listas på Uniswap i början, eller så kan du riskera att [[:bold]]förlora dina mynt[[/:bold]]."
   }
 }

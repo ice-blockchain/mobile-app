@@ -1152,9 +1152,9 @@
     "title": "イーサリアムアドレス",
     "enter_address_title": "あなたの\nERC-20アドレスを入力",
     "enter_address_description": "フェーズ1では、ICEトークンはEthereumブロックチェーン上にリリースされます。メインネットが開始されると、トークンはEthereumからIce Open Network (ION)ブロックチェーンに交換できるようになります。",
-    "enter_address_warning": "上記のERC-20アドレスが正しいことを確認し、フェーズ1の期間中にアクセスできることを確認してください。確認した後は変更できません。",
-    "enter_address_confirmation": "ERC-20アドレスが正しいことを確認しましたか？確認した後は変更できません。",
+    "enter_address_confirmation": "ERC-20アドレスが正しいことを確認していますか？",
     "validators_warning_title": "アドレスを確認",
-    "validators_warning_text": "Ethereumアドレスをアカウントに追加した個人は、メインネットの発売に関する当社のホワイトペーパーに従い、トップ300のバリデータの1人になる資格がありませんので、ご注意ください。"
+    "validators_warning_text": "Ethereumアドレスをアカウントに追加した個人は、メインネットの発売に関する当社のホワイトペーパーに従い、トップ300のバリデータの1人になる資格がありませんので、ご注意ください。",
+    "self_custodial_addr_warning_text": "MetamaskやTrust Walletなどのセルフカストディアルウォレットを使用することをお勧めします。Iceは最初はUniswapにのみリストされるため、exchangeのアドレスを使用しないでください。さもないと、コインを失う恐れがあります。"
   }
 }

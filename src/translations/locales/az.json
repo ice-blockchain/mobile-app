@@ -1152,9 +1152,9 @@
     "title": "Ethereum Ünvanı",
     "enter_address_title": "ERC-20 ünvanınızı daxil edin",
     "enter_address_description": "Fəzə Bir zamanı ICE tokenləri Ethereum blokçeyndə buraxılacaq. Əsas şəbəkə başladıqdan sonra, tokenlərin Ethereumdan Ice Open Network (ION) blokçeynə dəyişdirilməsi mümkün olacaq.",
-    "enter_address_warning": "Xahiş edirəm yuxarıdakı ERC-20 ünvanının düzgün olduğunu və Fəzə Bir müddəti boyunca buna tam əksərlikdə giriş hüququnuzun olduğunu təsdiq edin. Təsdiq etdikdən sonra dəyişdirmək mümkün deyil.",
-    "enter_address_confirmation": "Əminsinizmi ki, ERC-20 ünvanı düzgündür? Təsdiq etdikdən sonra dəyişdirmək mümkün deyil.",
+    "enter_address_confirmation": "ERC-20 ünvanının düzgün olduğundan əminsinizmi?",
     "validators_warning_title": "Ünvanı Təsdiq Et",
-    "validators_warning_text": "Xahiş edirəm diqqət edin ki, Ethereum ünvanını hesabına əlavə edənlər, əsas şəbəkənin istehsalı üçün bizim ağlaşdırmamıza əsasən ən yaxşı 300 doğrulayıcının biri olmaq üçün əhəmiyyət daşımırlar."
+    "validators_warning_text": "Xahiş edirəm diqqət edin ki, Ethereum ünvanını hesabına əlavə edənlər, əsas şəbəkənin istehsalı üçün bizim ağlaşdırmamıza əsasən ən yaxşı 300 doğrulayıcının biri olmaq üçün əhəmiyyət daşımırlar.",
+    "self_custodial_addr_warning_text": "Metamask və ya Trust Wallet kimi öz-əmanəti qoruyan bir cüzdan istifadə etməyin tövsiyə edirik. İlk başta yalnız Uniswap-da siyahılanacaq Ice kimi heç bir exchange ünvanı istifadə etməyin, yoxsa siklərinizi itirə bilərsiniz."
   }
 }

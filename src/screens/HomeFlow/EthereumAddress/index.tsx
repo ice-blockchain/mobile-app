@@ -11,7 +11,6 @@ import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {ConfirmAddressButton} from '@screens/HomeFlow/EthereumAddress/components/ConfirmAddressButton';
 import {EthereumAddressWarning} from '@screens/HomeFlow/EthereumAddress/components/EthereumAddressWarning';
 import {FramedEthereumIcon} from '@screens/HomeFlow/EthereumAddress/components/FramedEthereumIcon';
-import {useGoBackIfAddressSet} from '@screens/HomeFlow/EthereumAddress/hooks/useGoBackIfAddressSet';
 import {useSetEthereumAddress} from '@screens/HomeFlow/EthereumAddress/hooks/useSetEthereumAddress';
 import {useValidatorsWarning} from '@screens/HomeFlow/EthereumAddress/hooks/useValidatorsWarning';
 import {EthereumBookIcon} from '@svg/EthereumBookIcon';
@@ -26,12 +25,10 @@ export const EthereumAddress = memo(() => {
   const {bottom: bottomInset} = useSafeAreaInsets();
   const {scrollRef} = useScrollEndOnKeyboardShown();
   const isKeyboardShown = useIsKeyboardShown();
-  const {showWarning, warningConfirmed} = useValidatorsWarning();
+  const {showWarning, needToShowWarning} = useValidatorsWarning();
 
   const {address, loading, error, onAddressChange, onSubmit} =
     useSetEthereumAddress();
-
-  useGoBackIfAddressSet();
 
   return (
     <KeyboardAvoider>
@@ -59,7 +56,7 @@ export const EthereumAddress = memo(() => {
           containerStyle={styles.input}
           editable={!loading}
           errorText={error}
-          onChange={!warningConfirmed ? showWarning : undefined}
+          onChange={needToShowWarning ? showWarning : undefined}
           showChangeLabel={false}
         />
         {!isKeyboardShown && <EthereumAddressWarning style={styles.warning} />}

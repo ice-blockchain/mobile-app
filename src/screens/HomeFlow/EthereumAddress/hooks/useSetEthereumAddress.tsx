@@ -3,7 +3,9 @@
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {useGoBackIfAddressSet} from '@screens/HomeFlow/EthereumAddress/hooks/useGoBackIfAddressSet';
 import {AccountActions} from '@store/modules/Account/actions';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {
   failedReasonSelector,
   isLoadingSelector,
@@ -19,8 +21,13 @@ export const useSetEthereumAddress = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
   const dispatch = useDispatch();
-  const [address, setAddress] = useState('');
+  const user = useSelector(unsafeUserSelector);
+  const [address, setAddress] = useState(
+    user.miningBlockchainAccountAddress ?? '',
+  );
   const submittedRef = useRef(false);
+
+  useGoBackIfAddressSet({isFormSubmitted: submittedRef.current});
 
   const error = useSelector(
     failedReasonSelector.bind(null, AccountActions.UPDATE_ACCOUNT),

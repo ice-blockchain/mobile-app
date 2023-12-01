@@ -31,7 +31,6 @@ export const EthereumAddress = memo(() => {
       <SectionHeader title={t('home.ethereum_address.title')} />
       <ActionListItem
         onPress={onPress}
-        disabled={!!user.miningBlockchainAccountAddress}
         containerStyle={styles.container}
         LeadingIcon={<EthereumIcon color={COLORS.primaryLight} />}
         title={t('home.ethereum_address.title')}
@@ -48,9 +47,7 @@ export const EthereumAddress = memo(() => {
           )
         }
         TrailingIcon={
-          user.miningBlockchainAccountAddress ? null : (
-            <ChevronSmallIcon style={styles.chevron} color={COLORS.white} />
-          )
+          <ChevronSmallIcon style={styles.chevron} color={COLORS.white} />
         }
         backgroundImageSource={Images.backgrounds.darkListItem}
         leadingIconContainerStyle={styles.leadingIconContainer}
@@ -76,7 +73,7 @@ const styles = StyleSheet.create({
     color: COLORS.white,
   },
   subtitleText: {
-    width: '80%',
+    width: '90%',
     marginTop: rem(4),
     ...font(12, 14.4, 'medium', 'white'),
   },
