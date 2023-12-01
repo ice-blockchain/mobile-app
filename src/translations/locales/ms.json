@@ -1152,9 +1152,9 @@
     "title": "Alamat Ethereum",
     "enter_address_title": "Masukkan alamat\nERC-20 anda",
     "enter_address_description": "Semasa Fasa Satu, token ICE akan dilepaskan di rangkaian blockchain Ethereum. Setelah dilancarkan, token boleh ditukar dari Ethereum ke rangkaian Ice Open Network (ION).",
-    "enter_address_warning": "Pastikan alamat ERC-20 di atas betul dan anda akan memiliki akses kepadanya sepanjang tempoh Fasa Satu. Ia tidak boleh diubah setelah anda mengesahkan.",
-    "enter_address_confirmation": "Adakah anda pasti alamat ERC-20 adalah betul? Ia tidak boleh diubah setelah anda mengesahkan.",
+    "enter_address_confirmation": "Adakah anda pasti bahawa alamat ERC-20 adalah betul?",
     "validators_warning_title": "Sahkan Alamat",
-    "validators_warning_text": "Sila ambil perhatian bahawa individu yang telah menambah alamat Ethereum ke akaun mereka tidak layak untuk menjadi salah satu daripada 300 penentusah teratas mengikut buku putih kami untuk pelancaran mainnet."
+    "validators_warning_text": "Sila ambil perhatian bahawa individu yang telah menambah alamat Ethereum ke akaun mereka tidak layak untuk menjadi salah satu daripada 300 penentusah teratas mengikut buku putih kami untuk pelancaran mainnet.",
+    "self_custodial_addr_warning_text": "Kami mengesyorkan penggunaan dompet sendiri seperti Metamask atau Trust Wallet. Jangan gunakan sebarang alamat exchange kerana Ice hanya akan disenaraikan di Uniswap pada permulaan, atau anda berisiko [[::bold]]kehilangan mata wang anda[[/::bold]]."
   }
 }

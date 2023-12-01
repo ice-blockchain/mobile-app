@@ -1152,9 +1152,9 @@
     "title": "Adresse Ethereum",
     "enter_address_title": "Entrez votre\nadresse ERC-20",
     "enter_address_description": "Pendant la Phase Un, les jetons ICE seront émis sur la blockchain Ethereum. Une fois que le Mainnet aura été lancé, les jetons seront échangeables d'Ethereum vers la blockchain Ice Open Network (ION).",
-    "enter_address_warning": "Veuillez vous assurer que l'adresse ERC-20 ci-dessus est correcte et que vous y aurez accès pendant toute la Phase Un. Il n'est pas possible de la changer une fois que vous l'avez confirmée.",
-    "enter_address_confirmation": "Êtes-vous sûr que l'adresse ERC-20 est correcte ? Il n'est pas possible de la changer une fois que vous l'avez confirmée.",
+    "enter_address_confirmation": "Êtes-vous sûr que l'adresse ERC-20 est correcte ?",
     "validators_warning_title": "Confirmer l'adresse",
-    "validators_warning_text": "Veuillez noter que les personnes qui ont ajouté une adresse Ethereum à leur compte ne sont pas éligibles pour devenir l'un des 300 meilleurs validateurs selon notre livre blanc pour le lancement de la version principale."
+    "validators_warning_text": "Veuillez noter que les personnes qui ont ajouté une adresse Ethereum à leur compte ne sont pas éligibles pour devenir l'un des 300 meilleurs validateurs selon notre livre blanc pour le lancement de la version principale.",
+    "self_custodial_addr_warning_text": "Nous vous conseillons d'utiliser un portefeuille auto-géré tel que Metamask ou Trust Wallet. N'utilisez aucune adresse d'échange, car Ice ne sera répertorié que sur Uniswap au début, ou vous risquez de [[::bold]]perdre vos pièces[[/::bold]]."
   }
 }

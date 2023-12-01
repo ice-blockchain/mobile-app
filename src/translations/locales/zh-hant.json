@@ -1132,6 +1132,8 @@
   },
   "ethereum_address": {
     "validators_warning_title": "確認地址",
-    "validators_warning_text": "請注意，已將Ethereum地址添加到其帳戶的個人不符合我們的白皮書要求，不能成為前300名驗證者之一，用於主網發布。"
+    "validators_warning_text": "請注意，已將Ethereum地址添加到其帳戶的個人不符合我們的白皮書要求，不能成為前300名驗證者之一，用於主網發布。",
+    "self_custodial_addr_warning_text": "我們建議使用自托管錢包，如Metamask或Trust Wallet。不要使用任何交易所地址，因為Ice將僅在Uniswap上開始列出，否則您可能面臨[[::bold]]失去您的硬幣[[/::bold]] 的風險。",
+    "enter_address_confirmation": "您確定 ERC-20 地址是正確的嗎？"
   }
 }

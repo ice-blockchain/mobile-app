@@ -700,8 +700,8 @@ export type Translations = {
   'ethereum_address.title': null;
   'ethereum_address.enter_address_title': null;
   'ethereum_address.enter_address_description': null;
-  'ethereum_address.enter_address_warning': null;
   'ethereum_address.enter_address_confirmation': null;
   'ethereum_address.validators_warning_title': null;
   'ethereum_address.validators_warning_text': null;
+  'ethereum_address.self_custodial_addr_warning_text': null;
 };

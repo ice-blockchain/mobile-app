@@ -1152,9 +1152,9 @@
     "title": "Adresa Ethereum",
     "enter_address_title": "Introdu\nta adresa ERC-20",
     "enter_address_description": "În timpul Fazei I, tokenurile ICE vor fi lansate pe blockchainul Ethereum. După lansarea Mainnet, tokenurile vor fi interschimbabile de pe Ethereum pe blockchainul Ice Open Network (ION).",
-    "enter_address_warning": "Asigură-te că adresa ERC-20 de mai sus este corectă și că vei avea acces la ea pe toată durata Fazei I. Nu se poate schimba după ce ai confirmat-o.",
-    "enter_address_confirmation": "Ești sigur că adresa ERC-20 este corectă? Nu se poate schimba după ce ai confirmat-o.",
+    "enter_address_confirmation": "Sunteți sigur că adresa ERC-20 este corectă?",
     "validators_warning_title": "Confirmă Adresa",
-    "validators_warning_text": "Vă rugăm să rețineți că persoanele care au adăugat o adresă Ethereum la contul lor nu sunt eligibile să devină unul dintre cei top 300 de validatori conform whitepaperului pentru lansarea mainnet."
+    "validators_warning_text": "Vă rugăm să rețineți că persoanele care au adăugat o adresă Ethereum la contul lor nu sunt eligibile să devină unul dintre cei top 300 de validatori conform whitepaperului pentru lansarea mainnet.",
+    "self_custodial_addr_warning_text": "Vă recomandăm să utilizați un portofel auto-custodial, cum ar fi Metamask sau Trust Wallet. Nu utilizați nicio adresă de exchange, deoarece Ice va fi listat doar pe Uniswap la început, sau puteți risca [[::bold]]pierderea monedelor dumneavoastră[[/::bold]]."
   }
 }
