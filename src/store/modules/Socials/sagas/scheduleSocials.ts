@@ -17,14 +17,22 @@ export function* scheduleSocialsSaga() {
     ReturnType<typeof socialsByUserIdSelector>
   > = yield select(socialsByUserIdSelector(userId));
 
-  if (socialsQueue.length === 0) {
-    const socials = socialsOrder.map(type => ({
-      type,
-      shared: false,
-      dateToShow: dayjs()
-        .add(SOCIALS_POPUP_INTERVAL_SEC, 'seconds')
-        .toISOString(),
-    }));
+  if (socialsQueue.length < socialsOrder.length) {
+    const notQueuedSocials = socialsOrder.filter(socialsType => {
+      return !socialsQueue.find(
+        socialInQueue => socialInQueue.type === socialsType,
+      );
+    });
+
+    const socials = socialsQueue.concat(
+      notQueuedSocials.map(type => ({
+        type,
+        shared: false,
+        dateToShow: dayjs()
+          .add(SOCIALS_POPUP_INTERVAL_SEC, 'seconds')
+          .toISOString(),
+      })),
+    );
     yield put(SocialsActions.SET_SOCIALS.STATE.create({userId, socials}));
   }
 }
