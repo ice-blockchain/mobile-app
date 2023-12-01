@@ -1,21 +1,36 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {MainNavigationParams} from '@navigation/Main';
 import {removeScreenByName} from '@navigation/utils';
-import {useNavigation} from '@react-navigation/native';
-import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {unsafeUserSelector} from '@store/modules/Account/selectors';
+import {AccountActions} from '@store/modules/Account/actions';
+import {
+  actionPayloadSelector,
+  isSuccessSelector,
+} from '@store/modules/UtilityProcessStatuses/selectors';
+import {checkProp} from '@utils/guards';
 import {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
-export const useGoBackIfAddressSet = () => {
-  const user = useSelector(unsafeUserSelector);
-  const navigation =
-    useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
+export const useGoBackIfAddressSet = ({
+  isFormSubmitted,
+}: {
+  isFormSubmitted: boolean;
+}) => {
+  const isSuccessUpdate = useSelector(
+    isSuccessSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
+  );
+
+  const updatePayload = useSelector(
+    actionPayloadSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
+  );
 
   useEffect(() => {
-    if (user.miningBlockchainAccountAddress) {
+    if (
+      isFormSubmitted &&
+      isSuccessUpdate &&
+      checkProp(updatePayload, 'userInfo') &&
+      checkProp(updatePayload.userInfo, 'miningBlockchainAccountAddress')
+    ) {
       removeScreenByName('EthereumAddress');
     }
-  }, [user.miningBlockchainAccountAddress, navigation]);
+  }, [isFormSubmitted, isSuccessUpdate, updatePayload]);
 };

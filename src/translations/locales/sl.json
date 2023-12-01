@@ -1155,6 +1155,6 @@
     "enter_address_confirmation": "Ste prepričani, da je naslov ERC-20 pravilen?",
     "validators_warning_title": "Potrdite Naslov",
     "validators_warning_text": "Prosimo, upoštevajte, da osebe, ki je dodala Ethereum naslov na svoj račun, ni dovoljeno postati eden izmed top 300 validacij glede na naš beli papir za glavni zagon.",
-    "self_custodial_addr_warning_text": "Priporočamo uporabo samostojne upravljane denarnice, kot sta Metamask ali Trust Wallet. Ne uporabljajte nobenega naslova izmenjave (exchange), saj bo Ice na začetku naveden le na Uniswapu, ali pa tvegate [[::bold]]izgubo svojih kovancev[[/::bold]]."
+    "self_custodial_addr_warning_text": "Priporočamo uporabo samostojne upravljane denarnice, kot sta Metamask ali Trust Wallet. Ne uporabljajte nobenega naslova izmenjave (exchange), saj bo Ice na začetku naveden le na Uniswapu, ali pa tvegate [[:bold]]izgubo svojih kovancev[[/:bold]]."
   }
 }

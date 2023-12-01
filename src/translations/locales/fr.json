@@ -1155,6 +1155,6 @@
     "enter_address_confirmation": "Êtes-vous sûr que l'adresse ERC-20 est correcte ?",
     "validators_warning_title": "Confirmer l'adresse",
     "validators_warning_text": "Veuillez noter que les personnes qui ont ajouté une adresse Ethereum à leur compte ne sont pas éligibles pour devenir l'un des 300 meilleurs validateurs selon notre livre blanc pour le lancement de la version principale.",
-    "self_custodial_addr_warning_text": "Nous vous conseillons d'utiliser un portefeuille auto-géré tel que Metamask ou Trust Wallet. N'utilisez aucune adresse d'échange, car Ice ne sera répertorié que sur Uniswap au début, ou vous risquez de [[::bold]]perdre vos pièces[[/::bold]]."
+    "self_custodial_addr_warning_text": "Nous vous conseillons d'utiliser un portefeuille auto-géré tel que Metamask ou Trust Wallet. N'utilisez aucune adresse d'échange, car Ice ne sera répertorié que sur Uniswap au début, ou vous risquez de [[:bold]]perdre vos pièces[[/:bold]]."
   }
 }

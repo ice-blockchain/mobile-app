@@ -11,7 +11,6 @@ import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {ConfirmAddressButton} from '@screens/HomeFlow/EthereumAddress/components/ConfirmAddressButton';
 import {EthereumAddressWarning} from '@screens/HomeFlow/EthereumAddress/components/EthereumAddressWarning';
 import {FramedEthereumIcon} from '@screens/HomeFlow/EthereumAddress/components/FramedEthereumIcon';
-import {useGoBackIfAddressSet} from '@screens/HomeFlow/EthereumAddress/hooks/useGoBackIfAddressSet';
 import {useSetEthereumAddress} from '@screens/HomeFlow/EthereumAddress/hooks/useSetEthereumAddress';
 import {useValidatorsWarning} from '@screens/HomeFlow/EthereumAddress/hooks/useValidatorsWarning';
 import {EthereumBookIcon} from '@svg/EthereumBookIcon';
@@ -30,8 +29,6 @@ export const EthereumAddress = memo(() => {
 
   const {address, loading, error, onAddressChange, onSubmit} =
     useSetEthereumAddress();
-
-  useGoBackIfAddressSet();
 
   return (
     <KeyboardAvoider>

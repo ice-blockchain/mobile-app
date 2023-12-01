@@ -1155,6 +1155,6 @@
     "enter_address_confirmation": "ERC-20 ünvanının düzgün olduğundan əminsinizmi?",
     "validators_warning_title": "Ünvanı Təsdiq Et",
     "validators_warning_text": "Xahiş edirəm diqqət edin ki, Ethereum ünvanını hesabına əlavə edənlər, əsas şəbəkənin istehsalı üçün bizim ağlaşdırmamıza əsasən ən yaxşı 300 doğrulayıcının biri olmaq üçün əhəmiyyət daşımırlar.",
-    "self_custodial_addr_warning_text": "Metamask və ya Trust Wallet kimi öz-əmanəti qoruyan bir cüzdan istifadə etməyin tövsiyə edirik. İlk başta yalnız Uniswap-da siyahılanacaq Ice kimi heç bir exchange ünvanı istifadə etməyin, yoxsa siklərinizi itirə bilərsiniz [[::bold]]."
+    "self_custodial_addr_warning_text": "Metamask və ya Trust Wallet kimi öz-əmanəti qoruyan bir cüzdan istifadə etməyin tövsiyə edirik. İlk başta yalnız Uniswap-da siyahılanacaq Ice kimi heç bir exchange ünvanı istifadə etməyin, yoxsa siklərinizi itirə bilərsiniz."
   }
 }

@@ -1155,6 +1155,6 @@
     "enter_address_confirmation": "Är du säker på att ERC-20-adressen är korrekt?",
     "validators_warning_title": "Bekräfta Adressen",
     "validators_warning_text": "Observera att personer som har lagt till en Ethereum-adress på sitt konto inte är berättigade att bli en av de 300 bästa validerarna enligt vår whitepaper för huvudnätets lansering.",
-    "self_custodial_addr_warning_text": "Vi rekommenderar att använda en självstyrande plånbok som Metamask eller Trust Wallet. Använd inte någon exchange-adress, eftersom Ice bara kommer att listas på Uniswap i början, eller så kan du riskera att [[::bold]]förlora dina mynt[[/::bold]]."
+    "self_custodial_addr_warning_text": "Vi rekommenderar att använda en självstyrande plånbok som Metamask eller Trust Wallet. Använd inte någon exchange-adress, eftersom Ice bara kommer att listas på Uniswap i början, eller så kan du riskera att [[:bold]]förlora dina mynt[[/:bold]]."
   }
 }

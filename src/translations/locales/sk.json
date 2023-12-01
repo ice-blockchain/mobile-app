@@ -1155,6 +1155,6 @@
     "enter_address_confirmation": "Ste si istý, že adresa ERC-20 je správna?",
     "validators_warning_title": "Potvrdenie Adresy",
     "validators_warning_text": "Upozorňujeme, že osoby, ktoré pridali Ethereum adresu do svojho účtu, nie sú oprávnené stať sa jedným z najlepších 300 validátorov podľa našej bielovkovej knihy pre spustenie hlavného siete.",
-    "self_custodial_addr_warning_text": "Odporúčame používať self-custodial peňaženku, ako je Metamask alebo Trust Wallet. Nepoužívajte žiadnu adresu výmeny (exchange), pretože Ice bude na začiatku uvedený iba na Uniswap, alebo môžete riskovať [[::bold]]stratu svojich mincí[[/::bold]]."
+    "self_custodial_addr_warning_text": "Odporúčame používať self-custodial peňaženku, ako je Metamask alebo Trust Wallet. Nepoužívajte žiadnu adresu výmeny (exchange), pretože Ice bude na začiatku uvedený iba na Uniswap, alebo môžete riskovať [[:bold]]stratu svojich mincí[[/:bold]]."
   }
 }
