@@ -52,4 +52,5 @@ export const LINKS = {
     'https://drive.google.com/drive/u/1/folders/1E_3zVZzs2vqUNgUd05qfi6cJ_axjlvQU',
   WHITEPAPER: 'https://ice.io/whitepaper',
   JOIN_DECENTRALIZED_FUTURE: 'https://www.youtube.com/watch?v=h1Kkn4EjSV4',
+  X_REPOST_EXAMPLE: 'https://ice-production.b-cdn.net/assets/x-post.jpg',
 };

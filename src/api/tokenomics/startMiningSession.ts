@@ -19,6 +19,6 @@ export function startMiningSession({userId, resurrect, skipKYCStep}: Params) {
     MiningSummary | null
   >(`/tokenomics/${userId}/mining-sessions`, {
     resurrect,
-    skipKYCSteps: skipKYCStep ? [skipKYCStep] : undefined,
+    skipKYCSteps: skipKYCStep != null ? [skipKYCStep] : undefined,
   });
 }

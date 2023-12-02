@@ -77,7 +77,6 @@ export const Images = {
       fbLight: require('./social/social_kyc/fb_light.png'),
       xDark: require('./social/social_kyc/x_dark.png'),
       xLight: require('./social/social_kyc/x_light.png'),
-      exampleXRepost: require('./badges/social_kyc/example_x_repost.png'),
     },
   },
   phone: {
