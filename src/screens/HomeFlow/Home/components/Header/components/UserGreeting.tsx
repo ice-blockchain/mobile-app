@@ -7,6 +7,8 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {GreetingText} from '@screens/HomeFlow/Home/components/Header/components/GreetingText';
 import {userSelector} from '@store/modules/Account/selectors';
+import {VerifiedSvg} from '@svg/Verified';
+import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import {buildUsernameWithPrefix} from '@utils/username';
 import React from 'react';
@@ -34,6 +36,11 @@ export function UserGreeting({disabled, animatedStyle}: Props) {
   const openProfile = () => {
     navigation.navigate('ProfileTab');
   };
+
+  const showVerifiedHint = () => {
+    console.log('showVerifiedHint');
+  };
+
   return (
     <View style={styles.container}>
       {user?.profilePictureUrl && (
@@ -51,9 +58,21 @@ export function UserGreeting({disabled, animatedStyle}: Props) {
         <Touchable disabled={disabled} onPress={openProfile}>
           <GreetingText />
           {user?.username && (
-            <Text style={styles.usernameText}>
-              {buildUsernameWithPrefix(user.username)}
-            </Text>
+            <View style={styles.usernameContainer}>
+              {!isRTL && (
+                <Touchable onPress={showVerifiedHint}>
+                  <VerifiedSvg style={[styles.badge, styles.badgeRTL]} />
+                </Touchable>
+              )}
+              <Text style={styles.usernameText}>
+                {buildUsernameWithPrefix(user.username)}
+              </Text>
+              {isRTL && (
+                <Touchable onPress={showVerifiedHint}>
+                  <VerifiedSvg style={[styles.badge, styles.badgeNonRTL]} />
+                </Touchable>
+              )}
+            </View>
           )}
         </Touchable>
       </Animated.View>
@@ -73,5 +92,18 @@ const styles = StyleSheet.create({
   usernameText: {
     marginTop: rem(3),
     ...font(15, 20, 'bold', 'downriver'),
+    alignSelf: isRTL ? 'flex-start' : 'auto',
+  },
+  usernameContainer: {
+    flexDirection: 'row',
+  },
+  badge: {
+    marginTop: rem(5),
+  },
+  badgeRTL: {
+    marginRight: rem(4),
+  },
+  badgeNonRTL: {
+    marginLeft: rem(4),
   },
 });
