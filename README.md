@@ -1,11 +1,11 @@
 # Ice Blockchain Mobile App
 
-React Native App for the mining of ice coins
+React Native App for mining ice coins
 
 ## Project Structure
 
 ```
-- src: Main container of all the code inside the application
+- src: Main container of all the codes inside the application
     - api: Methods to communicate with the backend
     - assets: Assets folder to store all the images, icons, fonts, etc
     - components: Folder to store common components that are used throughout the app (such as Button, Switch, Avatar etc)
@@ -21,7 +21,7 @@ React Native App for the mining of ice coins
 - index.js: Entry point of the application as per React-Native standards
 ```
 
-## Run the App locally
+## Running the App locally
 
 - Follow the [steps to setup the environment](https://reactnative.dev/docs/environment-setup)
 
