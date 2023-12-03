@@ -6,7 +6,7 @@ import {MainTabsParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {GreetingText} from '@screens/HomeFlow/Home/components/Header/components/GreetingText';
-import {userSelector} from '@store/modules/Account/selectors';
+import {userSelector, verifiedSelector} from '@store/modules/Account/selectors';
 import {VerifiedSvg} from '@svg/Verified';
 import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -33,13 +33,13 @@ export function UserGreeting({disabled, animatedStyle}: Props) {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainTabsParamList>>();
   const user = useSelector(userSelector);
+  const verified = useSelector(verifiedSelector);
+
   const openProfile = () => {
     navigation.navigate('ProfileTab');
   };
 
-  const showVerifiedHint = () => {
-    console.log('showVerifiedHint');
-  };
+  const showVerifiedHint = () => {};
 
   return (
     <View style={styles.container}>
@@ -59,7 +59,7 @@ export function UserGreeting({disabled, animatedStyle}: Props) {
           <GreetingText />
           {user?.username && (
             <View style={styles.usernameContainer}>
-              {!isRTL && (
+              {!isRTL && verified && (
                 <Touchable onPress={showVerifiedHint}>
                   <VerifiedSvg style={[styles.badge, styles.badgeRTL]} />
                 </Touchable>
@@ -67,7 +67,7 @@ export function UserGreeting({disabled, animatedStyle}: Props) {
               <Text style={styles.usernameText}>
                 {buildUsernameWithPrefix(user.username)}
               </Text>
-              {isRTL && (
+              {isRTL && verified && (
                 <Touchable onPress={showVerifiedHint}>
                   <VerifiedSvg style={[styles.badge, styles.badgeNonRTL]} />
                 </Touchable>

@@ -75,6 +75,11 @@ export type User = {
   repeatableKYCSteps?: Record<string, string>;
 
   miningBlockchainAccountAddress?: string;
+
+  /**
+   * KYC verification status
+   */
+  verified?: boolean | null;
 };
 
 export type ReferralType = 'CONTACTS' | 'T1' | 'T2' | 'TEAM';
