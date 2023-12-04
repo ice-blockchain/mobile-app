@@ -8,6 +8,8 @@ import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffse
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {EthereumAddress} from '@screens/HomeFlow/Home/components/EthereumAddress';
 import {HomeHeader} from '@screens/HomeFlow/Home/components/Header';
+import {useVerifiedTooltip} from '@screens/HomeFlow/Home/components/Header/components/hooks/useVerifiedTooltip';
+import {VerifiedTooltip} from '@screens/HomeFlow/Home/components/Header/components/VerifiedTooltip';
 import {JoinMainnet} from '@screens/HomeFlow/Home/components/JoinMainnet';
 import {Overview} from '@screens/HomeFlow/Home/components/Overview';
 import {PAGE_HEIGHT, Pager} from '@screens/HomeFlow/Home/components/Pager';
@@ -34,12 +36,19 @@ export const Home = memo(() => {
   const {animatedScrollViewRef} = useHandleScrollToParam();
   const {elementRef, onElementLayout} = useAchievementsWalkthrough();
   const isAchievementsEnabled = useSelector(isAchievementsEnabledSelector);
+  const {chevronRef, handleChevronPress, isTooltipVisible, tooltipStyle} =
+    useVerifiedTooltip();
 
   const showTasks = !isLiteTeam || isAchievementsEnabled;
 
   return (
     <View style={styles.container}>
-      <HomeHeader translateY={translateY} transitionOffset={PAGE_HEIGHT} />
+      <HomeHeader
+        translateY={translateY}
+        transitionOffset={PAGE_HEIGHT}
+        chevronRef={chevronRef}
+        onVerifiedChevronPress={handleChevronPress}
+      />
       <PullToRefreshContainer
         style={styles.container}
         onScrollTranslateY={translateY}
@@ -64,6 +73,7 @@ export const Home = memo(() => {
           </View>
         </Animated.ScrollView>
       </PullToRefreshContainer>
+      {isTooltipVisible && <VerifiedTooltip style={tooltipStyle} />}
     </View>
   );
 });

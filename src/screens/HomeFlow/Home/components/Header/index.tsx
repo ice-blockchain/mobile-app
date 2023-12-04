@@ -7,13 +7,16 @@ import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useTopOffsetStyle} from '@navigation/hooks/useTopOffsetStyle';
 import {useUserGreetingWalkthrough} from '@screens/HomeFlow/Home/components/Header/components/hooks/useUserGreetingWalkthrough';
 import {MenuButton} from '@screens/HomeFlow/Home/components/Header/components/MenuButton';
-import {UserGreeting} from '@screens/HomeFlow/Home/components/Header/components/UserGreeting';
+import {
+  UserGreeting,
+  UserGreetingMethods,
+} from '@screens/HomeFlow/Home/components/Header/components/UserGreeting';
 import {useTransitionAnimation} from '@screens/HomeFlow/Home/components/Header/hooks/useTransitionAnimation';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {isRTL} from '@translations/i18n';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
-import React, {memo} from 'react';
+import React, {memo, RefObject} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
@@ -24,56 +27,68 @@ type Props = {
 
   // scroll offset when to start transition animation from 1 state to another
   transitionOffset: number;
+
+  chevronRef?: RefObject<UserGreetingMethods>;
+  onVerifiedChevronPress?: () => void;
 };
 
-export const HomeHeader = memo(({translateY, transitionOffset}: Props) => {
-  const topOffset = useTopOffsetStyle();
-  const balanceSummary = useSelector(balanceSummarySelector);
+export const HomeHeader = memo(
+  ({
+    translateY,
+    transitionOffset,
+    chevronRef,
+    onVerifiedChevronPress,
+  }: Props) => {
+    const topOffset = useTopOffsetStyle();
+    const balanceSummary = useSelector(balanceSummarySelector);
 
-  const {currentAnimationState, fromAnimatedStyle, toAnimatedStyle} =
-    useTransitionAnimation({
-      translateY,
-      transitionOffset,
-    });
+    const {currentAnimationState, fromAnimatedStyle, toAnimatedStyle} =
+      useTransitionAnimation({
+        translateY,
+        transitionOffset,
+      });
 
-  const {elementRef, onElementLayout} = useUserGreetingWalkthrough();
+    const {elementRef, onElementLayout} = useUserGreetingWalkthrough();
 
-  return (
-    <View style={[styles.container, topOffset.current]}>
-      <View style={styles.body}>
-        <View
-          ref={elementRef}
-          onLayout={onElementLayout}
-          style={styles.userGreetingContainer}>
-          <UserGreeting
-            disabled={currentAnimationState !== 'from'}
-            animatedStyle={fromAnimatedStyle}
-          />
+    return (
+      <View style={[styles.container, topOffset.current]}>
+        <View style={styles.body}>
+          <View
+            ref={elementRef}
+            onLayout={onElementLayout}
+            style={styles.userGreetingContainer}>
+            <UserGreeting
+              disabled={currentAnimationState !== 'from'}
+              animatedStyle={fromAnimatedStyle}
+              ref={chevronRef}
+              onVerifiedChevronPress={onVerifiedChevronPress}
+            />
+          </View>
+
+          <Animated.View
+            pointerEvents={'none'}
+            style={[StyleSheet.absoluteFill, styles.balance, toAnimatedStyle]}>
+            <FormattedNumber
+              number={
+                balanceSummary ? formatNumberString(balanceSummary.total) : ''
+              }
+              bodyStyle={styles.balanceText}
+              decimalsStyle={styles.balanceDecimalsText}
+            />
+            <IceLabel
+              iconSize={16}
+              iconOffsetY={0}
+              color={COLORS.primaryDark}
+              textStyle={styles.currencyText}
+            />
+          </Animated.View>
+
+          <MenuButton />
         </View>
-
-        <Animated.View
-          pointerEvents={'none'}
-          style={[StyleSheet.absoluteFill, styles.balance, toAnimatedStyle]}>
-          <FormattedNumber
-            number={
-              balanceSummary ? formatNumberString(balanceSummary.total) : ''
-            }
-            bodyStyle={styles.balanceText}
-            decimalsStyle={styles.balanceDecimalsText}
-          />
-          <IceLabel
-            iconSize={16}
-            iconOffsetY={0}
-            color={COLORS.primaryDark}
-            textStyle={styles.currencyText}
-          />
-        </Animated.View>
-
-        <MenuButton />
       </View>
-    </View>
-  );
-});
+    );
+  },
+);
 
 const styles = StyleSheet.create({
   container: {

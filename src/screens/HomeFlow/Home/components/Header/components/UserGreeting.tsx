@@ -11,12 +11,14 @@ import {VerifiedSvg} from '@svg/Verified';
 import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import {buildUsernameWithPrefix} from '@utils/username';
-import React from 'react';
+import React, {forwardRef, Ref, useImperativeHandle, useRef} from 'react';
 import {
   ImageStyle,
+  LayoutRectangle,
   StyleSheet,
   Text,
   TextStyle,
+  TouchableWithoutFeedback,
   View,
   ViewStyle,
 } from 'react-native';
@@ -24,61 +26,92 @@ import Animated, {AnimatedStyleProp} from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units/index';
 
-type Props = {
+type UserGreetingProps = {
   disabled: boolean;
   animatedStyle?: AnimatedStyleProp<ViewStyle | ImageStyle | TextStyle>;
+  onVerifiedChevronPress?: () => void;
 };
 
-export function UserGreeting({disabled, animatedStyle}: Props) {
-  const navigation =
-    useNavigation<NativeStackNavigationProp<MainTabsParamList>>();
-  const user = useSelector(userSelector);
-  const verified = useSelector(verifiedSelector);
+export type UserGreetingMethods = {
+  measure: () => Promise<LayoutRectangle>;
+};
 
-  const openProfile = () => {
-    navigation.navigate('ProfileTab');
-  };
+export const UserGreeting = forwardRef<UserGreetingMethods, UserGreetingProps>(
+  (
+    {disabled, animatedStyle, onVerifiedChevronPress}: UserGreetingProps,
+    forwardedRef: Ref<UserGreetingMethods>,
+  ) => {
+    const navigation =
+      useNavigation<NativeStackNavigationProp<MainTabsParamList>>();
+    const user = useSelector(userSelector);
+    const verified = useSelector(verifiedSelector);
 
-  const showVerifiedHint = () => {};
+    const chevronRef = useRef<View>(null);
 
-  return (
-    <View style={styles.container}>
-      {user?.profilePictureUrl && (
-        <Touchable onPress={openProfile}>
-          <Avatar
-            uri={user.profilePictureUrl}
-            size={rem(36)}
-            borderRadius={rem(16)}
-            allowFullScreen={false}
-          />
-        </Touchable>
-      )}
+    const openProfile = () => {
+      navigation.navigate('ProfileTab');
+    };
 
-      <Animated.View style={[styles.greeting, animatedStyle]}>
-        <Touchable disabled={disabled} onPress={openProfile}>
-          <GreetingText />
-          {user?.username && (
-            <View style={styles.usernameContainer}>
-              {!isRTL && verified && (
-                <Touchable onPress={showVerifiedHint}>
-                  <VerifiedSvg style={[styles.badge, styles.badgeRTL]} />
-                </Touchable>
-              )}
-              <Text style={styles.usernameText}>
-                {buildUsernameWithPrefix(user.username)}
-              </Text>
-              {isRTL && verified && (
-                <Touchable onPress={showVerifiedHint}>
-                  <VerifiedSvg style={[styles.badge, styles.badgeNonRTL]} />
-                </Touchable>
-              )}
-            </View>
-          )}
-        </Touchable>
-      </Animated.View>
-    </View>
-  );
-}
+    const handleChevronPress = () => {
+      onVerifiedChevronPress?.();
+    };
+
+    const measure = async () => {
+      return new Promise<LayoutRectangle>(resolve => {
+        chevronRef.current?.measure((_, __, width, height, x, y) => {
+          const measurement: LayoutRectangle = {
+            x,
+            y,
+            width,
+            height,
+          };
+          resolve(measurement);
+        });
+      });
+    };
+
+    useImperativeHandle(forwardedRef, () => ({measure}));
+
+    return (
+      <View style={styles.container}>
+        {user?.profilePictureUrl && (
+          <Touchable onPress={openProfile}>
+            <Avatar
+              uri={user.profilePictureUrl}
+              size={rem(36)}
+              borderRadius={rem(16)}
+              allowFullScreen={false}
+            />
+          </Touchable>
+        )}
+        <Animated.View style={[styles.greeting, animatedStyle]}>
+          <Touchable disabled={disabled} onPress={openProfile}>
+            <GreetingText />
+            {user?.username && (
+              <View style={styles.usernameContainer}>
+                {!isRTL && verified && (
+                  <Touchable onPress={handleChevronPress}>
+                    <VerifiedSvg style={[styles.badge, styles.badgeRTL]} />
+                  </Touchable>
+                )}
+                <Text style={styles.usernameText}>
+                  {buildUsernameWithPrefix(user.username)}
+                </Text>
+                {/* {isRTL && verified && ( */}
+                <View ref={chevronRef}>
+                  <TouchableWithoutFeedback onPress={handleChevronPress}>
+                    <VerifiedSvg style={[styles.badge, styles.badgeNonRTL]} />
+                  </TouchableWithoutFeedback>
+                </View>
+                {/* )} */}
+              </View>
+            )}
+          </Touchable>
+        </Animated.View>
+      </View>
+    );
+  },
+);
 
 const styles = StyleSheet.create({
   container: {

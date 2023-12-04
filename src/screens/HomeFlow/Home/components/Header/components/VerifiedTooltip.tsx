@@ -5,14 +5,21 @@ import {COLORS} from '@constants/colors';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleProp, StyleSheet, Text, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
 
-export const VerifiedTooltip = () => {
+export const TOOLTIP_WIDTH = rem(111);
+export const TOOLTIP_HEIGHT = rem(27);
+
+type Props = {
+  style?: StyleProp<ViewStyle>;
+};
+
+export const VerifiedTooltip = ({style}: Props = {}) => {
   return (
     <Tooltip
-      animated={true}
-      style={styles.container}
+      animated={false}
+      style={[styles.container, style]}
       chevronStyle={styles.chevron}>
       <Text style={styles.tooltipText}>{t('home.verified_tooltip.title')}</Text>
     </Tooltip>
@@ -22,18 +29,16 @@ export const VerifiedTooltip = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: COLORS.downriver,
-    width: rem(111),
-    minHeight: rem(27),
+    width: TOOLTIP_WIDTH,
+    minHeight: TOOLTIP_HEIGHT,
     paddingHorizontal: rem(16),
     paddingVertical: rem(6),
     borderRadius: rem(16),
     position: 'absolute',
-    alignSelf: 'center',
     justifyContent: 'center',
-    // bottom: rem(80),
   },
   tooltipText: {
-    ...font(12, 16, 'black', 'white', 'center'),
+    ...font(14, 20, 'medium', 'white', 'center'),
   },
   chevron: {
     position: 'absolute',
