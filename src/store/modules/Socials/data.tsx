@@ -67,12 +67,12 @@ export const socialData: Record<SocialType, SocialData> = {
     linkApp: LINKS.REDDIT_APP,
     linkWeb: LINKS.REDDIT_WEB,
   },
-  discord: {
-    image: Images.social.discord,
-    title: t('social_media.discord.title'),
-    description: t('social_media.discord.description'),
-    buttonTitle: t('button.follow_us'),
-    linkApp: LINKS.DISCORD_APP,
-    linkWeb: LINKS.DISCORD_WEB,
-  },
+  // discord: {
+  //   image: Images.social.discord,
+  //   title: t('social_media.discord.title'),
+  //   description: t('social_media.discord.description'),
+  //   buttonTitle: t('button.follow_us'),
+  //   linkApp: LINKS.DISCORD_APP,
+  //   linkWeb: LINKS.DISCORD_WEB,
+  // },
 };

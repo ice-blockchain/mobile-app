@@ -7,7 +7,7 @@ export const socialsOrder = [
   'facebook',
   'instagram',
   'reddit',
-  'discord',
+  // 'discord',
 ] as const;
 
 export type SocialType = typeof socialsOrder[number];
@@ -16,8 +16,4 @@ export type SocialsShare = {
   type: SocialType;
   dateToShow: string;
   shared: boolean;
-};
-
-export type SocialsShareResult = {
-  status: 'opened' | 'closed' | 'skipped';
 };
