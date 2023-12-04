@@ -68,7 +68,9 @@
     "learn_more": "了解更多",
     "back_to_login": "返回登入",
     "follow_us": "追蹤我們",
-    "subscribe": "訂閱"
+    "subscribe": "訂閱",
+    "not_sure": "不確定",
+    "confirm_address": "確認地址"
   },
   "team": {
     "contacts_tab": "聯絡人",
@@ -190,7 +192,10 @@
     "weak_password": "低強度密碼。",
     "wrong_password": "密碼錯誤。",
     "no_camera_permissions": "未授予相機權限",
-    "no_library_permissions": "未授予資料庫權限"
+    "no_library_permissions": "未授予資料庫權限",
+    "blockchain_address_already_taken": "地址已被使用",
+    "invalid_blockchain_address": "無效的區塊鏈地址",
+    "ethereum_address_not_eoa": "地址不是 EOA"
   },
   "profile": {
     "my_roles": {
@@ -347,6 +352,19 @@
       "description_part2": "每連續簽到 6 天，將可休息一天。",
       "streak": "連續日數",
       "days_off": "休息日數"
+    },
+    "roadmap": {
+      "title": "路線圖",
+      "button_title": "白皮書",
+      "button_subtitle": "了解我們在 Ice 的願景更多信息。"
+    },
+    "join_mainnet": {
+      "title": "加入去中心化的未來",
+      "subtitle": "提前了解我們即將推出的 Mainnet 應用程序及其獨特功能。"
+    },
+    "ethereum_address": {
+      "title": "以太坊地址",
+      "subtitle": "請在此輸入您的 ERC-20 地址。"
     }
   },
   "settings": {
@@ -1131,9 +1149,13 @@
     }
   },
   "ethereum_address": {
+    "title": "以太坊地址",
+    "enter_address_title": "輸入\n您的 ERC-20 地址",
+    "enter_address_description": "在第一階段，ICE 代幣將在以太坊區塊鏈上發布。一旦啟動了主網，代幣將可以從以太坊轉換到 Ice Open Network (ION) 區塊鏈。",
+    "enter_address_warning": "請確保上面的 ERC-20 地址是正確的，並且您將在第一階段的整個時間內都能夠訪問它。一旦確認，將無法更改。",
+    "enter_address_confirmation": "您確定 ERC-20 地址是正確的嗎？",
     "validators_warning_title": "確認地址",
     "validators_warning_text": "請注意，已將Ethereum地址添加到其帳戶的個人不符合我們的白皮書要求，不能成為前300名驗證者之一，用於主網發布。",
-    "self_custodial_addr_warning_text": "我們建議使用自托管錢包，如Metamask或Trust Wallet。不要使用任何交易所地址，因為Ice將僅在Uniswap上開始列出，否則您可能面臨[[:bold]]失去您的硬幣[[/:bold]] 的風險。",
-    "enter_address_confirmation": "您確定 ERC-20 地址是正確的嗎？"
+    "self_custodial_addr_warning_text": "我們建議使用自托管錢包，如Metamask或Trust Wallet。不要使用任何交易所地址，因為Ice將僅在Uniswap上開始列出，否則您可能面臨[[::bold]]失去您的硬幣[[/::bold]] 的風險。"
   }
 }
