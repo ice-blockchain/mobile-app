@@ -54,6 +54,7 @@ export type Translations = {
   'button.subscribe': null;
   'button.not_sure': null;
   'button.confirm_address': null;
+  'button.remove_address': null;
   'team.contacts_tab': null;
   'team.tierOne_tab': null;
   'team.tierTwo_tab': null;

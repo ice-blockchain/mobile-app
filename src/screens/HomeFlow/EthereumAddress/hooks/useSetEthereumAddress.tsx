@@ -44,7 +44,18 @@ export const useSetEthereumAddress = () => {
     setAddress(text);
   };
 
+  const isRemoveAction = !address && !!user?.miningBlockchainAccountAddress;
+
   const onSubmit = () => {
+    if (isRemoveAction) {
+      submittedRef.current = true;
+      dispatch(
+        AccountActions.UPDATE_ACCOUNT.START.create({
+          miningBlockchainAccountAddress: address,
+        }),
+      );
+      return;
+    }
     navigation.navigate('PopUp', {
       title: t('button.confirm_address'),
       message: (
@@ -83,6 +94,7 @@ export const useSetEthereumAddress = () => {
     loading,
     error: submittedRef.current ? error : null,
     onAddressChange,
+    isRemoveAction,
   };
 };
 

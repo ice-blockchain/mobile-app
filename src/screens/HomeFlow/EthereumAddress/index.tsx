@@ -8,7 +8,7 @@ import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {ConfirmAddressButton} from '@screens/HomeFlow/EthereumAddress/components/ConfirmAddressButton';
+import {AddressActionButton} from '@screens/HomeFlow/EthereumAddress/components/AddressActionButton';
 import {EthereumAddressWarning} from '@screens/HomeFlow/EthereumAddress/components/EthereumAddressWarning';
 import {FramedEthereumIcon} from '@screens/HomeFlow/EthereumAddress/components/FramedEthereumIcon';
 import {useSetEthereumAddress} from '@screens/HomeFlow/EthereumAddress/hooks/useSetEthereumAddress';
@@ -27,7 +27,7 @@ export const EthereumAddress = memo(() => {
   const isKeyboardShown = useIsKeyboardShown();
   const {showWarning, needToShowWarning} = useValidatorsWarning();
 
-  const {address, loading, error, onAddressChange, onSubmit} =
+  const {address, loading, error, onAddressChange, onSubmit, isRemoveAction} =
     useSetEthereumAddress();
 
   return (
@@ -60,10 +60,11 @@ export const EthereumAddress = memo(() => {
           showChangeLabel={false}
         />
         {!isKeyboardShown && <EthereumAddressWarning style={styles.warning} />}
-        <ConfirmAddressButton
+        <AddressActionButton
           style={styles.button}
           onPress={onSubmit}
           loading={loading}
+          isRemoveAction={isRemoveAction}
         />
       </ScrollView>
     </KeyboardAvoider>

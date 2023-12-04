@@ -40,7 +40,13 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       userInfo.phoneNumberHash = yield call(hashPhoneNumber, normalizedNumber);
     }
 
-    if (checkProp(userInfo, 'miningBlockchainAccountAddress')) {
+    const isAddrRemoveAction =
+      !userInfo.miningBlockchainAccountAddress &&
+      !!user.miningBlockchainAccountAddress;
+    if (
+      checkProp(userInfo, 'miningBlockchainAccountAddress') &&
+      !isAddrRemoveAction
+    ) {
       if (
         !userInfo.miningBlockchainAccountAddress ||
         !isValidEthereumAddress(userInfo.miningBlockchainAccountAddress)

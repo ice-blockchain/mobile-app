@@ -14,13 +14,22 @@ import {rem} from 'rn-units';
 
 interface Props extends Omit<PrimaryButtonProps, 'text'> {
   style?: StyleProp<ViewStyle>;
+  isRemoveAction?: boolean;
 }
 
-export const ConfirmAddressButton = ({style, ...props}: Props) => {
+export const AddressActionButton = ({
+  style,
+  isRemoveAction,
+  ...props
+}: Props) => {
   return (
     <PrimaryButton
       icon={<EthereumBookIcon color={COLORS.white} />}
-      text={t('button.confirm_address')}
+      text={
+        isRemoveAction
+          ? t('button.remove_address')
+          : t('button.confirm_address')
+      }
       style={[styles.button, style]}
       textStyle={styles.buttonTextStyle}
       {...props}
