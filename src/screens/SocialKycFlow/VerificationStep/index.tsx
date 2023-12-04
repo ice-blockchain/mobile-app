@@ -51,7 +51,7 @@ export function VerificationStep({
     if (isSocialKycFinalized(socialKycStatus)) {
       updateStepPassed();
     } else if (socialKycStatus === 'ERROR') {
-      onSkip(kycStep);
+      onSkip();
     }
   }, [kycStep, onSkip, socialKycStatus, updateStepPassed]);
   const onContinue = () => {

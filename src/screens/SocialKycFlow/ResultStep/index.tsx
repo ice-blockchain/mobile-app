@@ -24,18 +24,17 @@ import {rem} from 'rn-units';
 
 type Props = {
   onTryAgain: () => void;
-  kycStep: SocialKycStepNumber;
   onSkip: (skipKYCStep?: SocialKycStepNumber) => void;
 };
 
-export function ResultStep({onTryAgain, kycStep, onSkip}: Props) {
+export function ResultStep({onTryAgain, onSkip}: Props) {
   const socialKycStatus = useSelector(socialKycStatusSelector);
   const socialKycAttempts = useSelector(socialKycAttemptsSelector);
   const canContinue =
     socialKycStatus === 'SUCCESS' ||
     (socialKycStatus === 'FAILED' && !socialKycAttempts);
   const onContinue = () => {
-    onSkip(socialKycStatus === 'FAILED' ? kycStep : undefined);
+    onSkip();
   };
   return (
     <View style={commonStyles.flexOne}>

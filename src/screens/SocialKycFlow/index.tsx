@@ -98,7 +98,6 @@ export function SocialKycFlow() {
       ) : null}
       {socialKycFlowPhase === 'RESULT' ? (
         <ResultStep
-          kycStep={kycStep}
           onSkip={onSkip}
           onTryAgain={() => {
             setSocialKycFlowPhase('SELECT_PROFILE_TYPE');

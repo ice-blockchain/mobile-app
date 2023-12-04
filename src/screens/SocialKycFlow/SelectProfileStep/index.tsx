@@ -53,7 +53,7 @@ export function SelectProfileStep({
     if (getSocialKycRepostTextStatus === 'SUCCESS') {
       updateStepPassed();
     } else if (getSocialKycRepostTextStatus === 'ERROR') {
-      onSkip(kycStep);
+      onSkip();
     }
   }, [getSocialKycRepostTextStatus, kycStep, onSkip, updateStepPassed]);
   const isLoading = getSocialKycRepostTextStatus === 'LOADING';
@@ -83,7 +83,7 @@ export function SelectProfileStep({
             text={t('button.not_now')}
             preset={'outlined'}
             style={styles.button}
-            onPress={onSkip}
+            onPress={() => onSkip(kycStep)}
           />
           <View>
             <PopUpButton

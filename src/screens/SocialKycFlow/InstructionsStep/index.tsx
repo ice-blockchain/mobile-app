@@ -78,7 +78,7 @@ export function InstructionsStep({
       if (isSocialKycFinalized(socialKycStatus)) {
         updateStepPassed();
       } else if (socialKycStatus === 'ERROR') {
-        onSkip(kycStep);
+        onSkip();
       }
     }
   }, [kycStep, onSkip, socialKycMethod, socialKycStatus, updateStepPassed]);
