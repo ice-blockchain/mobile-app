@@ -937,6 +937,14 @@
       "title": "Přidejte se k nám na Instagramu",
       "description_part1": "Sledování našeho Instagramu je ideální způsob, jak si udržet přehled o dění a propojit se s dalšími lidmi, co mají pro Ice stejný zápal.",
       "description_part2": "Navíc budete první, kdo se dozví o nových funkcích a promo akcích, které hodláme spustit."
+    },
+    "reddit": {
+      "title": "Připojte se k nám na Redditu",
+      "description": "Objevte komunitu Ice na Redditu, kde se stejně smýšlející jednotlivci sdružují, aby sdíleli své myšlenky.\n\nPřipojte se k rozhovoru, kladejte otázky a prozkoumejte zajímavé diskuse o těžbě Ice, funkcích a mnohem více."
+    },
+    "discord": {
+      "title": "Připojte se k nám na Discordu",
+      "description": "Připojte se k naší živé komunitě na Discordu a ponořte se do diskuzí a exkluzivních poznatků o Ice.\n\nZapojte se do živých chatů, buďte informováni o novinkách souvisejících s Ice a buďte součástí komunity, která sdílí vaši vášeň."
     }
   },
   "ping_referrals_pop_up": {

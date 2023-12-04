@@ -940,6 +940,14 @@
       "title": "Sluit by ons aan op Instagram",
       "description_part1": "Om ons op Instagram te volg is 'n goeie manier om op hoogte te bly en kontak te maak met ander gebruikers wat ook passievol is oor Ice",
       "description_part2": "Boonop sal jy die eerste wees wat weet van enige nuwe kenmerke of promosies wat ons bekendstel."
+    },
+    "reddit": {
+      "title": "Sluit by ons aan op Reddit",
+      "description": "Ontdek die Ice-gemeenskap op Reddit, waar soortgelykdenkende individue saamkom om hul gedagtes te deel.\n\nSluit aan by die gesprek, vra vrae, en verken boeiende besprekings oor Ice-myne, kenmerke, en meer."
+    },
+    "discord": {
+      "title": "Sluit by ons aan op Discord",
+      "description": "Sluit aan by ons lewendige Discord-gemeenskap en duik in gesprekke en eksklusiewe insigte oor Ice.\n\nNeem deel aan lewendige geselskappe, bly op hoogte van nuus oor ice, en wees deel van 'n gemeenskap wat jou passie deel."
     }
   },
   "ping_referrals_pop_up": {

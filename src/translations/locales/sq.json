@@ -937,6 +937,14 @@
       "title": " Instagram",
       "description_part1": "Ndjekja në Instagram është mënyrë e mirë për të qëndruar në dijeni dhe për t'u lidhur me përdorues të tjerë që janë gjithashtu të pasionuar pas Ice",
       "description_part2": "Përveç kësaj, do të jesh i pari në dijeni të veçorive të reja ose promovimeve që po hedhim në treg."
+    },
+    "reddit": {
+      "title": "Bashkohuni me ne në Reddit",
+      "description": "Zbuloni komunitetin Ice në Reddit, ku individë me mendime të ngjashme mblidhen për të ndarë mendimet e tyre.\n\nBashkohuni në bisedë, bëni pyetje dhe eksploroni diskutimet interesante mbi minierën e Ice, veçoritë dhe shumë më tepër."
+    },
+    "discord": {
+      "title": "Bashkohuni me ne në Discord",
+      "description": "Bashkohuni me komunitetin tonë të gjallë në Discord dhe zhyteni në biseda dhe pamje ekskluzive mbi Ice.\n\nMerrni pjesë në biseda të gjallë, mbani veten të informuar për lajmet lidhur me Ice dhe bëhuni pjesë e një komuniteti që ndan pasionin tuaj."
     }
   },
   "ping_referrals_pop_up": {

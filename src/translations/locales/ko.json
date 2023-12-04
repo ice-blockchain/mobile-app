@@ -937,6 +937,14 @@
       "title": "Instagram에서 가입하세요",
       "description_part1": "Instagram에서 팔로우하면 모든 소식을 전달받고 ice에 열정을 가진 다른 사용자들과 연대할 수 있습니다.",
       "description_part2": "또한 출시되는 새로운 기능이나 프로모션 소식을 가장 먼저 파악하게 될 것입니다."
+    },
+    "reddit": {
+      "title": "Reddit에서 함께 하세요",
+      "description": "Reddit에서 Ice 커뮤니티를 발견하십시오. 아이스 마이닝, 기능 등에 관한 흥미로운 토론을 탐색하는 유사한 생각을 가진 개인들이 모이는 곳입니다.\n\n대화에 참여하고 질문을 하며 Ice에 대한 흥미로운 토론을 진행하세요."
+    },
+    "discord": {
+      "title": "Discord에서 함께 하세요",
+      "description": "저희 활기찬 Discord 커뮤니티에 참여하고 Ice에 관한 토론과 독점적인 통찰력에 빠져보세요.\n\n생동감 있는 채팅에 참여하고 Ice와 관련된 뉴스를 계속해서 확인하며 여러분의 열정을 공유하는 커뮤니티의 일원이 되세요."
     }
   },
   "ping_referrals_pop_up": {

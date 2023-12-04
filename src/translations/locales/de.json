@@ -937,6 +937,14 @@
       "title": "Schließen Sie sich uns auf Instagram an",
       "description_part1": "Wenn Sie uns auf Instagram folgen, bleiben Sie auf dem Laufenden und können sich mit anderen Nutzern austauschen, die sich ebenfalls für Ice interessieren.",
       "description_part2": "Außerdem erfahren Sie als Erster von neuen Funktionen oder Werbeaktionen, die wir nächstens einführen werden."
+    },
+    "reddit": {
+      "title": "Tritt uns auf Reddit bei",
+      "description": "Entdecke die Ice-Community auf Reddit, wo gleichgesinnte Personen zusammenkommen, um ihre Gedanken auszutauschen.\n\nNimm an der Unterhaltung teil, stelle Fragen und erkunde spannende Diskussionen über Ice-Mining, Funktionen und mehr."
+    },
+    "discord": {
+      "title": "Tritt uns auf Discord bei",
+      "description": "Trete unserer lebendigen Discord-Community bei und tauche in Diskussionen und exklusive Einblicke in Ice ein.\n\nBeteilige dich an lebendigen Gesprächen, bleibe über Ice-bezogene Nachrichten informiert und sei Teil einer Gemeinschaft, die deine Leidenschaft teilt."
     }
   },
   "ping_referrals_pop_up": {

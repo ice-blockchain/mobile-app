@@ -937,6 +937,14 @@
       "title": "Csatlakozz hozzánk Instagramon",
       "description_part1": "Az Instagramon történő követés nagyszerű módja annak, hogy képben maradj és kapcsolatba lépj más felhasználókkal, akiket szintén szenvedélyesen érdekel az Ice.",
       "description_part2": "Emellett te fogsz elsőként értesülni az összes újonnan bevezetett funkcióról és promócióról."
+    },
+    "reddit": {
+      "title": "Csatlakozz hozzánk a Redditen",
+      "description": "Fedezd fel az Ice közösséget a Redditen, ahol az azonos gondolkodású emberek összegyűlnek, hogy megosszák gondolataikat.\n\nCsatlakozz a beszélgetéshez, tedd fel kérdéseidet, és fedezd fel a beszélgetéseket az Ice bányászatról, funkciókról és még sok másról."
+    },
+    "discord": {
+      "title": "Csatlakozz hozzánk a Discordon",
+      "description": "Csatlakozz a vibráló Discord közösségünkhöz és merülj el a beszélgetésekben és exkluzív betekintésekben az Ice-ról.\n\nMerülj el élénk csevegésekben, maradj tájékoztatva az Ice-cel kapcsolatos hírekről, és légy része egy közösségnek, amely megosztja a szenvedélyedet."
     }
   },
   "ping_referrals_pop_up": {

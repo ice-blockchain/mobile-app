@@ -937,6 +937,14 @@
       "title": "Pridružite se nam na Instagramu",
       "description_part1": "Sledenje na Instagramu je odličen način, da ostanete na tekočem in se povežete z drugimi uporabniki, ki so prav tako navdušeni nad aplikacijo Ice",
       "description_part2": "Poleg tega boste prvi izvedeli za vse nove funkcije ali promocije, ki jih uvajamo."
+    },
+    "reddit": {
+      "title": "Pridružite se nam na Redditu",
+      "description": "Odkrijte skupnost Ice na Redditu, kjer se posamezniki z enakimi mnenji združujejo, da delijo svoje misli.\n\nPridružite se pogovoru, postavite vprašanja in raziščite zanimive razprave o rudarjenju Ice, funkcijah in še več."
+    },
+    "discord": {
+      "title": "Pridružite se nam na Discordu",
+      "description": "Pridružite se naši živahni skupnosti na Discordu in se potopite v razprave in ekskluzivne vpoglede v Ice.\n\nSodelujte v živahnih pogovorih, bodite na tekočem z novicami o Ice in postanite del skupnosti, ki deli vašo strast."
     }
   },
   "ping_referrals_pop_up": {
