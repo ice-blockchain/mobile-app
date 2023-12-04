@@ -27,7 +27,6 @@ export const useVerifiedTooltip = () => {
   const measureTooltipPosition = async () => {
     if (chevronRef.current) {
       const result = await chevronRef.current?.measure();
-      console.log('result', result);
       if (result) {
         const calculatedStyle: ViewStyle = {
           top: result.y + TOOLTIP_HEIGHT + 4,

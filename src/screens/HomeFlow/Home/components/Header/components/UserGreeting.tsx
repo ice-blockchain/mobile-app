@@ -90,20 +90,22 @@ export const UserGreeting = forwardRef<UserGreetingMethods, UserGreetingProps>(
             {user?.username && (
               <View style={styles.usernameContainer}>
                 {!isRTL && verified && (
-                  <Touchable onPress={handleChevronPress}>
-                    <VerifiedSvg style={[styles.badge, styles.badgeRTL]} />
-                  </Touchable>
+                  <View ref={chevronRef} collapsable={false}>
+                    <TouchableWithoutFeedback onPress={handleChevronPress}>
+                      <VerifiedSvg style={[styles.badge, styles.badgeRTL]} />
+                    </TouchableWithoutFeedback>
+                  </View>
                 )}
                 <Text style={styles.usernameText}>
                   {buildUsernameWithPrefix(user.username)}
                 </Text>
-                {/* {isRTL && verified && ( */}
-                <View ref={chevronRef}>
-                  <TouchableWithoutFeedback onPress={handleChevronPress}>
-                    <VerifiedSvg style={[styles.badge, styles.badgeNonRTL]} />
-                  </TouchableWithoutFeedback>
-                </View>
-                {/* )} */}
+                {isRTL && verified && (
+                  <View ref={chevronRef} collapsable={false}>
+                    <TouchableWithoutFeedback onPress={handleChevronPress}>
+                      <VerifiedSvg style={[styles.badge, styles.badgeNonRTL]} />
+                    </TouchableWithoutFeedback>
+                  </View>
+                )}
               </View>
             )}
           </Touchable>
