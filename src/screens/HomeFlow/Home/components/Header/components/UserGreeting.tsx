@@ -89,17 +89,10 @@ export const UserGreeting = forwardRef<UserGreetingMethods, UserGreetingProps>(
             <GreetingText />
             {user?.username && (
               <View style={styles.usernameContainer}>
-                {!isRTL && verified && (
-                  <View ref={chevronRef} collapsable={false}>
-                    <TouchableWithoutFeedback onPress={handleChevronPress}>
-                      <VerifiedSvg style={[styles.badge, styles.badgeRTL]} />
-                    </TouchableWithoutFeedback>
-                  </View>
-                )}
                 <Text style={styles.usernameText}>
                   {buildUsernameWithPrefix(user.username)}
                 </Text>
-                {isRTL && verified && (
+                {verified && (
                   <View ref={chevronRef} collapsable={false}>
                     <TouchableWithoutFeedback onPress={handleChevronPress}>
                       <VerifiedSvg style={[styles.badge, styles.badgeNonRTL]} />
