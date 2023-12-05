@@ -9,7 +9,7 @@ export type SocialMethod = 'facebook' | 'twitter';
 type SocialKycData = {
   expectedPostText: string;
   remainingAttempts: number;
-  result: 'SUCCESS';
+  result: 'SUCCESS' | 'FAILURE';
 };
 
 type Params = {

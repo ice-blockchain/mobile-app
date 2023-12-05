@@ -23,7 +23,6 @@ export function SocialKycMethodSelectionTile({
   socialKycMethod,
 }: Props) {
   const isSelected = selectedSocialKycMethod === socialKycMethod;
-  console.log({isSelected});
   return (
     <Touchable
       style={[
