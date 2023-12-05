@@ -43,7 +43,7 @@ export const useOnLayout = () => {
         layout: {width},
       },
     }: LayoutChangeEvent) => {
-      setWrapperWidth(width - rem(22));
+      setWrapperWidth(width - rem(34));
     },
     [],
   );

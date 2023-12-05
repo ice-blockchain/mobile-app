@@ -15,6 +15,7 @@ import {
 import {rem} from 'rn-units';
 
 export const TEXT_MARGIN_LEFT = rem(12);
+export const CHEVRON_MARGIN_LEFT = rem(4);
 export const AVATAR_RADIUS = rem(41);
 export const AVATAR_SMALL_SIZE = rem(36);
 const AVATAR_SMALL_RADIUS = rem(16);
@@ -51,6 +52,15 @@ export const useAnimatedStyles = ({
       animatedIndex.value,
       [0, MAX_SCROLL],
       [0, TEXT_MARGIN_LEFT],
+      Extrapolate.CLAMP,
+    ),
+  );
+
+  const chevronMarginLeft = useDerivedValue(() =>
+    interpolate(
+      animatedIndex.value,
+      [0, MAX_SCROLL],
+      [0, CHEVRON_MARGIN_LEFT],
       Extrapolate.CLAMP,
     ),
   );
@@ -179,7 +189,7 @@ export const useAnimatedStyles = ({
 
     return {
       opacity,
-      marginLeft: 0,
+      marginLeft: chevronMarginLeft.value,
     };
   });
 
