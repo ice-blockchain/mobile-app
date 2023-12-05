@@ -28,6 +28,7 @@ const DEFAULT_ASPECT_RATIO = 0.6179775280898876;
 
 const HEADER_PADDING_TOP = rem(24);
 const IMAGE_PADDING_TOP = rem(24);
+const IMAGE_PADDING_BOTTOM = rem(24);
 const IMAGE_PADDING_HORIZONTAL = rem(16);
 const TOP_OFFSET = HEADER_PADDING_TOP + CLOSE_BUTTON_SIZE + IMAGE_PADDING_TOP;
 const IMAGE_WIDTH = windowWidth - IMAGE_PADDING_HORIZONTAL * 2;
@@ -43,7 +44,12 @@ export const RepostExample = () => {
     });
   }, []);
   const imageHeight = IMAGE_WIDTH / aspectRatio;
-  const sheetTopOffset = windowHeight - imageHeight - bottomInset - TOP_OFFSET;
+  const sheetTopOffset =
+    windowHeight -
+    imageHeight -
+    bottomInset -
+    TOP_OFFSET -
+    IMAGE_PADDING_BOTTOM;
   return (
     <TouchableWithoutFeedback onPress={navigation.goBack}>
       <View style={[styles.background, {paddingTop: sheetTopOffset}]}>
@@ -106,6 +112,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingTop: IMAGE_PADDING_TOP,
+    paddingBottom: IMAGE_PADDING_BOTTOM,
     paddingHorizontal: IMAGE_PADDING_HORIZONTAL,
   },
   title: {

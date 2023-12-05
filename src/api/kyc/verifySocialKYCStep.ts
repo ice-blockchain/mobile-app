@@ -31,7 +31,7 @@ export function verifySocialKYCStep({
 }: Params) {
   if (link) {
     return post<{twitter: {tweetUrl: string}}, SocialKycData>(
-      `/kyc/verifySocialKYCStep/users/${userId}?language=${language}&kycStep=${kycStep}&social=${social}`,
+      `/kyc/verifySocialKYCStep/users/${userId}?verify=true&language=${language}&kycStep=${kycStep}&social=${social}`,
       {
         twitter: {
           tweetUrl: link,
