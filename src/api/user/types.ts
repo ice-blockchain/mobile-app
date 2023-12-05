@@ -76,9 +76,6 @@ export type User = {
 
   miningBlockchainAccountAddress?: string;
 
-  /**
-   * KYC verification status
-   */
   verified?: boolean | null;
 };
 
