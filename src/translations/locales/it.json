@@ -937,6 +937,14 @@
       "title": "Unisciti a noi su Instagram",
       "description_part1": "Seguirci su Instagram è un ottimo modo per rimanere aggiornati e connettersi con altri utenti appassionati di Ice",
       "description_part2": "Inoltre, sarai il primo a conoscere le nuove funzionalità o promozioni che lanceremo."
+    },
+    "reddit": {
+      "title": "Unisciti a noi su Reddit",
+      "description": "Scopri la comunità di Ice su Reddit, dove individui con idee affini si riuniscono per condividere i loro pensieri.\n\nUnisciti alla conversazione, poni domande ed esplora discussioni interessanti sulla mining di Ice, le funzionalità e molto altro."
+    },
+    "discord": {
+      "title": "Unisciti a noi su Discord",
+      "description": "Unisciti alla nostra vivace comunità su Discord e immergiti in discussioni ed esclusive riflessioni su Ice.\n\nPartecipa a chat animate, resta informato sulle notizie legate a Ice e fai parte di una comunità che condivide la tua passione."
     }
   },
   "ping_referrals_pop_up": {

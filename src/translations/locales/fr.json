@@ -937,6 +937,14 @@
       "title": "Rejoignez-nous sur Instagram",
       "description_part1": "Nous suivre sur Instagram est un excellent moyen de vous tenir informé et de communiquer avec d’autres utilisateurs également passionnés par l’Ice.",
       "description_part2": "De plus, vous serez le premier à connaître toutes les nouvelles fonctionnalités ou promotions que nous lançons."
+    },
+    "reddit": {
+      "title": "Rejoignez-nous sur Reddit",
+      "description": "Découvrez la communauté Ice sur Reddit, où des personnes aux idées similaires se réunissent pour partager leurs réflexions.\n\nRejoignez la conversation, posez des questions et explorez des discussions captivantes sur l'extraction de l'Ice, ses fonctionnalités, et bien plus encore."
+    },
+    "discord": {
+      "title": "Rejoignez-nous sur Discord",
+      "description": "Rejoignez notre communauté Discord dynamique et plongez dans des discussions et des informations exclusives sur l'Ice.\n\nParticipez à des chats animés, restez informés des actualités liées à l'Ice, et faites partie d'une communauté qui partage votre passion."
     }
   },
   "ping_referrals_pop_up": {

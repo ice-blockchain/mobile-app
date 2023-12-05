@@ -937,6 +937,14 @@
       "title": "Dołącz do nas na Instagramie",
       "description_part1": "Obserwowanie nas na Instagramie to świetny sposób, aby być na bieżąco i łączyć się z innymi użytkownikami, którzy również pasjonują się Ice",
       "description_part2": "Ponadto jako pierwszy dowiesz się o wszelkich nowych funkcjach lub promocjach, które oferujemy."
+    },
+    "reddit": {
+      "title": "Dołącz do nas na Reddit",
+      "description": "Odkryj społeczność Ice na Reddit, gdzie osoby o podobnych poglądach spotykają się, aby dzielić się swoimi myślami.\n\nDołącz do rozmowy, zadawaj pytania i eksploruj interesujące dyskusje na temat wydobycia Ice, funkcji i wiele więcej."
+    },
+    "discord": {
+      "title": "Dołącz do nas na Discord",
+      "description": "Dołącz do naszej żywiołowej społeczności na Discordzie i zagłębiaj się w dyskusje i ekskluzywne spostrzeżenia na temat Ice.\n\nWeź udział w żywych rozmowach, bądź na bieżąco z wiadomościami związanymi z Ice i stań się częścią społeczności, która dzieli Twoją pasję."
     }
   },
   "ping_referrals_pop_up": {

@@ -937,6 +937,14 @@
       "title": "Bli med oss på Instagram",
       "description_part1": "Å følge oss på Instagram er en fin måte å holde seg oppdatert på og få kontakt med andre brukere som også er lidenskapelig opptatt av Ice",
       "description_part2": "I tillegg vil du være den første som får vite om nye funksjoner eller kampanjer som vi lanserer."
+    },
+    "reddit": {
+      "title": "Bli med oss på Reddit",
+      "description": "Oppdag Ice-samfunnet på Reddit, der likesinnede individer samles for å dele tankene sine.\n\nBli med i samtalen, still spørsmål og utforsk engasjerende diskusjoner om Ice-gruvedrift, funksjoner og mer."
+    },
+    "discord": {
+      "title": "Bli med oss på Discord",
+      "description": "Bli med i vår livlige Discord-fellesskap og dykk ned i diskusjoner og eksklusive innsikter om Ice.\n\nDelta i livlige samtaler, hold deg oppdatert på nyheter om Ice, og vær en del av et fellesskap som deler din lidenskap."
     }
   },
   "ping_referrals_pop_up": {

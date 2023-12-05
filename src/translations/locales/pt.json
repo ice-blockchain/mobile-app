@@ -937,6 +937,14 @@
       "title": "Junte-se a nós no Instagram",
       "description_part1": "Seguir a gente no Instagram é uma ótima maneira de ficar por dentro e de se conectar com outros usuários que também são apaixonados pela Ice.",
       "description_part2": "Além disso, você será o primeiro a saber sobre todos os recursos ou promoções novos que estivermos lançando."
+    },
+    "reddit": {
+      "title": "Junte-se a nós no Reddit",
+      "description": "Descubra a comunidade Ice no Reddit, onde indivíduos com pensamentos semelhantes se reúnem para compartilhar suas ideias.\n\nJunte-se à conversa, faça perguntas e explore discussões envolventes sobre a mineração de Ice, recursos e muito mais."
+    },
+    "discord": {
+      "title": "Junte-se a nós no Discord",
+      "description": "Junte-se à nossa vibrante comunidade no Discord e mergulhe em discussões e insights exclusivos sobre Ice.\n\nParticipe de conversas animadas, mantenha-se informado sobre as notícias relacionadas ao Ice e faça parte de uma comunidade que compartilha sua paixão."
     }
   },
   "ping_referrals_pop_up": {

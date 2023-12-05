@@ -937,6 +937,14 @@
       "title": "Instagram'da bize katıl",
       "description_part1": "Bizi Instagram'da takip etmek, döngüden haberdar olmanın ve aynı zamanda Ice tutkunu olan diğer kullanıcılarla bağlantı kurmanın harika bir yoludur.",
       "description_part2": "Ayrıca, kullanıma sunduğumuz tüm yeni özelliklerden veya promosyonlardan ilk sen haberdar olacaksın."
+    },
+    "reddit": {
+      "title": "Bize Reddit'te Katılın",
+      "description": "Reddit'te Ice topluluğunu keşfedin, benzer düşüncelere sahip bireylerin fikirlerini paylaştığı bir platform.\n\nSohbete katılın, sorular sorun ve Ice madenciliği, özellikler ve daha fazlası hakkında ilgi çekici tartışmaları keşfedin."
+    },
+    "discord": {
+      "title": "Bize Discord'ta Katılın",
+      "description": "Canlı Discord topluluğumuza katılın ve Ice ile ilgili özel içgörüler ve tartışmalara dalın.\n\nCanlı sohbetlere katılın, Ice ile ilgili haberlerden haberdar olun ve tutkunuzu paylaşan bir topluluğun parçası olun."
     }
   },
   "ping_referrals_pop_up": {

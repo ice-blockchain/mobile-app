@@ -602,6 +602,10 @@ export type Translations = {
   'social_media.instagram.title': null;
   'social_media.instagram.description_part1': null;
   'social_media.instagram.description_part2': null;
+  'social_media.reddit.title': null;
+  'social_media.reddit.description': null;
+  'social_media.discord.title': null;
+  'social_media.discord.description': null;
   'ping_referrals_pop_up.title': {count: number | string};
   'creative_library.title': null;
   'creative_library.share': null;

@@ -937,6 +937,14 @@
       "title": "Síguenos en Instagram",
       "description_part1": "Seguirnos en Instagram es una forma fantástica de estar al día y conectar con otros usuarios a los que también les apasiona Ice.",
       "description_part2": "Además, serás el primero en enterarte de cualquier novedad o promoción que lancemos."
+    },
+    "reddit": {
+      "title": "Únete a nosotros en Reddit",
+      "description": "Descubre la comunidad de Ice en Reddit, donde personas con ideas afines se reúnen para compartir sus pensamientos.\n\nÚnete a la conversación, haz preguntas y explora discusiones interesantes sobre la minería de Ice, sus características y mucho más."
+    },
+    "discord": {
+      "title": "Únete a nosotros en Discord",
+      "description": "Únete a nuestra vibrante comunidad en Discord y sumérgete en discusiones e ideas exclusivas sobre Ice.\n\nParticipa en chats animados, mantente informado sobre noticias relacionadas con Ice y forma parte de una comunidad que comparte tu pasión."
     }
   },
   "ping_referrals_pop_up": {

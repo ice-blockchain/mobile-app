@@ -937,6 +937,14 @@
       "title": "Instagram-da bizə qoşulun",
       "description_part1": "Bizi Instagram-da izləmək məlumatlı qalmaq və Ice ilə maraqlanan digər istifadəçilər ilə əlaqə qurmaq üçün əla yoldur. ",
       "description_part2": "Əlavə olaraq, buraxacağımız yeni funksiyalar və ya promoşnlar haqqında ilk məlumatlı siz olacaqsınız."
+    },
+    "reddit": {
+      "title": "Reddit-də bizə qoşulun",
+      "description": "Ice cəmiyyətini Reddit-də kəşf edin, burada eyni fikirlərə sahib insanlar fikirlərini bölüşmək üçün toplanır.\n\nSöhbətə qoşulun, suallar verin və Ice çıxarma, xüsusiyyətləri və daha çoxu haqqında maraqlı müzakirələri araşdırın."
+    },
+    "discord": {
+      "title": "Discord-da bizə qoşulun",
+      "description": "Təcili Discord cəmiyyətimizə qoşulun və Ice haqqında olan müzakirələrə və xüsusi təfəkkürlərə daldırılın.\n\nCanlı söhbətlərə daldırılın, Ice-ə aid xəbərlərdən xəbərdar olun və öz marağı bölüşən bir cəmiyyətin hissəsi olun."
     }
   },
   "ping_referrals_pop_up": {

@@ -937,6 +937,14 @@
       "title": "Följ oss på Instagram",
       "description_part1": "Att följa oss på Instagram är ett bra sätt att hålla sig uppdaterad och få kontakt med andra användare som också brinner för Ice.",
       "description_part2": "Dessutom kommer du att vara den första som får reda på alla nya funktioner eller kampanjer som vi lanserar."
+    },
+    "reddit": {
+      "title": "Gå med oss på Reddit",
+      "description": "Upptäck Ice-samhället på Reddit, där likasinnade individer samlas för att dela sina tankar.\n\nDelta i samtalet, ställ frågor och utforska engagerande diskussioner om Ice-gruvdrift, funktioner och mycket mer."
+    },
+    "discord": {
+      "title": "Gå med oss på Discord",
+      "description": "Gå med i vår livliga Discord-community och dyk ner i diskussioner och exklusiva insikter om Ice.\n\nDelta i levande konversationer, håll dig uppdaterad om nyheter relaterade till Ice och bli en del av en gemenskap som delar din passion."
     }
   },
   "ping_referrals_pop_up": {

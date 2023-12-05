@@ -937,6 +937,14 @@
       "title": "关注我们的 Instagram",
       "description_part1": "在 Instagram 上关注我们是了解最新动态并与其他也对 Ice 充满热情的用户建立联系的好方法",
       "description_part2": "此外，您将会第一时间了解我们即将推出的任何新功能或优惠活动。"
+    },
+    "reddit": {
+      "title": "在Reddit上加入我们",
+      "description": "在Reddit上探索Ice社区，那里志同道合的人聚在一起分享他们的想法。\n\n加入讨论，提出问题，并探索有关Ice挖掘、功能等引人入胜的讨论。"
+    },
+    "discord": {
+      "title": "在Discord上加入我们",
+      "description": "加入我们充满活力的Discord社区，深入讨论和Ice相关的见解。\n\n参与活跃的对话，了解与Ice相关的新闻，并成为一个与您共享激情的社区的一部分。"
     }
   },
   "ping_referrals_pop_up": {

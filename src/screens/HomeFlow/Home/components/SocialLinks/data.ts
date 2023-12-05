@@ -1,14 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {LINKS} from '@constants/links';
-import imgFacebook from '@images/social/icons/facebook.png';
-import imgGithub from '@images/social/icons/github.png';
-import imgInstagram from '@images/social/icons/instagram.png';
-import imgLinkedin from '@images/social/icons/linkedin.png';
-import imgTelegram from '@images/social/icons/telegram.png';
-import imgTiktok from '@images/social/icons/tiktok.png';
-import imgTwitter from '@images/social/icons/twitter.png';
-import imgYoutube from '@images/social/icons/youtube.png';
+import {Images} from '@images';
 import {ImageSourcePropType} from 'react-native';
 
 type SocialLinkType =
@@ -19,7 +12,9 @@ type SocialLinkType =
   | 'FACEBOOK'
   | 'INSTAGRAM'
   | 'LINKEDIN'
-  | 'GITHUB';
+  | 'GITHUB'
+  | 'REDDIT'
+  | 'DISCORD';
 
 export interface SocialLink {
   type: SocialLinkType;
@@ -31,47 +26,59 @@ export interface SocialLink {
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     type: 'TWITTER',
-    icon: imgTwitter,
+    icon: Images.social.icons.twitter,
     linkScheme: LINKS.TWITTER_APP_URL,
     linkUrl: LINKS.TWITTER_PROFILE_URL,
   },
   {
     type: 'TELEGRAM',
-    icon: imgTelegram,
+    icon: Images.social.icons.telegram,
     linkUrl: LINKS.TELEGRAM_PROFILE_URL,
   },
   {
     type: 'YOUTUBE',
-    icon: imgYoutube,
+    icon: Images.social.icons.youtube,
     linkScheme: LINKS.YOUTUBE_APP,
     linkUrl: LINKS.YOUTUBE_WEB,
   },
   {
     type: 'TIKTOK',
-    icon: imgTiktok,
+    icon: Images.social.icons.tiktok,
     linkUrl: LINKS.TIKTOK_WEB,
   },
   {
     type: 'FACEBOOK',
-    icon: imgFacebook,
+    icon: Images.social.icons.facebook,
     linkScheme: LINKS.FACEBOOK_APP,
     linkUrl: LINKS.FACEBOOK_WEB,
   },
   {
     type: 'INSTAGRAM',
-    icon: imgInstagram,
+    icon: Images.social.icons.instagram,
     linkScheme: LINKS.INSTAGRAM_APP,
     linkUrl: LINKS.INSTAGRAM_WEB,
   },
   {
     type: 'LINKEDIN',
-    icon: imgLinkedin,
+    icon: Images.social.icons.linkedin,
     linkScheme: LINKS.LINKEDIN_APP,
     linkUrl: LINKS.LINKEDIN_WEB,
   },
   {
     type: 'GITHUB',
-    icon: imgGithub,
+    icon: Images.social.icons.github,
     linkUrl: LINKS.GITHUB_WEB,
+  },
+  {
+    type: 'REDDIT',
+    icon: Images.social.icons.reddit,
+    linkScheme: LINKS.REDDIT_APP,
+    linkUrl: LINKS.REDDIT_WEB,
+  },
+  {
+    type: 'DISCORD',
+    icon: Images.social.icons.discord,
+    linkScheme: LINKS.DISCORD_APP,
+    linkUrl: LINKS.DISCORD_WEB,
   },
 ];

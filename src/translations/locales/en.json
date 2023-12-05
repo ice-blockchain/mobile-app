@@ -934,6 +934,14 @@
       "title": "Join us on Instagram",
       "description_part1": "Following us on Instagram is a great way to stay in the loop and connect with other users who are also passionate about Ice",
       "description_part2": "Plus, you'll be the first to know about any new features or promotions that we're launching."
+    },
+    "reddit": {
+      "title": "Join us on Reddit",
+      "description": "Discover the Ice community on Reddit, where like-minded individuals come together to share their thoughts.\n\nJoin the conversation, ask questions, and explore engaging discussions about Ice mining, features, and more."
+    },
+    "discord": {
+      "title": "Join us on Discord",
+      "description": "Join our vibrant Discord community and dive into discussions and exclusive insights about Ice.\n\nDive into lively chats, stay informed about ice-related news, and be part of a community that shares your passion."
     }
   },
   "ping_referrals_pop_up": {
