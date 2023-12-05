@@ -170,7 +170,7 @@ export const AvatarHeader = memo(
                 </Animated.Text>
               )}
               {user && !!user.verified && (
-                <Animated.View style={verifiedStyle}>
+                <Animated.View style={[verifiedStyle, styles.chevron]}>
                   <VerifiedSvg />
                 </Animated.View>
               )}
@@ -270,5 +270,8 @@ const styles = StyleSheet.create({
   },
   badge: {
     marginTop: rem(1),
+  },
+  chevron: {
+    marginTop: 4,
   },
 });

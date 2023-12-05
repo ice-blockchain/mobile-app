@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   chevron: {
-    marginTop: rem(3),
-    marginLeft: rem(2),
+    marginTop: rem(4),
+    marginLeft: rem(4),
   },
 });

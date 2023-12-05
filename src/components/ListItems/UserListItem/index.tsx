@@ -14,7 +14,7 @@ import {font} from '@utils/styles';
 import React, {memo, ReactNode} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
-import {rem, screenHeight} from 'rn-units';
+import {isAndroid, rem, screenHeight} from 'rn-units';
 
 const FLAG_WIDTH = rem(24);
 const FLAG_HEIGHT = (FLAG_WIDTH / 20) * 14;
@@ -155,6 +155,6 @@ const styles = StyleSheet.create({
     marginRight: rem(20),
   },
   badge: {
-    marginTop: rem(1),
+    marginTop: isAndroid ? rem(4) : rem(2),
   },
 });
