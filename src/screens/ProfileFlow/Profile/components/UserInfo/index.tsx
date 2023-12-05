@@ -2,6 +2,7 @@
 
 import {User} from '@api/user/types';
 import {LadderBar} from '@screens/ProfileFlow/Profile/components/UserInfo/LadderBar';
+import {VerifiedSvg} from '@svg/Verified';
 import {font} from '@utils/styles';
 import {buildUsernameWithPrefix} from '@utils/username';
 import React from 'react';
@@ -17,9 +18,12 @@ export const USER_INFO_HEIGHT = rem(173);
 export const UserInfo = ({user}: Props) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.usernameText} numberOfLines={1}>
-        {buildUsernameWithPrefix(user?.username)}
-      </Text>
+      <View style={styles.usernameContainer}>
+        <Text style={styles.usernameText} numberOfLines={1}>
+          {buildUsernameWithPrefix(user?.username)}
+        </Text>
+        {!!user?.verified && <VerifiedSvg style={styles.chevron} />}
+      </View>
       <View style={styles.ladderContainer}>
         {!!user && <LadderBar user={user} />}
       </View>
@@ -40,5 +44,13 @@ const styles = StyleSheet.create({
   usernameText: {
     alignSelf: 'center',
     ...font(17, 22, 'semibold'),
+  },
+  usernameContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  chevron: {
+    marginTop: rem(3),
+    marginLeft: rem(2),
   },
 });

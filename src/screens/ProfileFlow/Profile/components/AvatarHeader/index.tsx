@@ -23,6 +23,7 @@ import {
 } from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useAnimatedStyles';
 import {useUpdateAvatarRouteParams} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useUpdateAvatarRouteParam';
 import {useUserContactDetails} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useUserContactDetails';
+import {VerifiedSvg} from '@svg/Verified';
 import {font, mirrorTransform} from '@utils/styles';
 import {buildUsernameWithPrefix} from '@utils/username';
 import React, {memo, useState} from 'react';
@@ -69,6 +70,7 @@ export const AvatarHeader = memo(
       textStyle,
       lettersAvatarStyle,
       iconAvatarStyle,
+      verifiedStyle,
     } = useAnimatedStyles({
       animatedIndex,
       navigationContainerLeftWidth,
@@ -167,6 +169,11 @@ export const AvatarHeader = memo(
                   {buildUsernameWithPrefix(user.username)}
                 </Animated.Text>
               )}
+              {user && !!user.verified && (
+                <Animated.View style={verifiedStyle}>
+                  <VerifiedSvg />
+                </Animated.View>
+              )}
             </Animated.View>
           </View>
           <View
@@ -256,5 +263,12 @@ const styles = StyleSheet.create({
   },
   navigationButton: {
     marginRight: rem(16),
+  },
+  usernameContainer: {
+    flexDirection: 'row',
+    marginRight: rem(20),
+  },
+  badge: {
+    marginTop: rem(1),
   },
 });

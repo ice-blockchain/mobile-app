@@ -169,6 +169,20 @@ export const useAnimatedStyles = ({
     };
   });
 
+  const verifiedStyle = useAnimatedStyle(() => {
+    const opacity = interpolate(
+      animatedIndex.value,
+      [0.81, SCROLL_STEP_1],
+      [0, 1],
+      Extrapolate.CLAMP,
+    );
+
+    return {
+      opacity,
+      marginLeft: 0,
+    };
+  });
+
   const lettersAvatarStyle: AnimatedStyleProp<ViewStyle> = useAnimatedStyle(
     () => {
       const opacity = interpolate(
@@ -200,5 +214,6 @@ export const useAnimatedStyles = ({
     textStyle,
     lettersAvatarStyle,
     iconAvatarStyle,
+    verifiedStyle,
   };
 };
