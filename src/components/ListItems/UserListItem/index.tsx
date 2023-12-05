@@ -9,6 +9,7 @@ import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {getReferralUserSelector} from '@store/modules/Referrals/selectors';
+import {VerifiedSvg} from '@svg/Verified';
 import {font} from '@utils/styles';
 import React, {memo, ReactNode} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
@@ -73,9 +74,18 @@ export const UserListItem = memo(
             />
           </View>
           <View style={styles.body}>
-            <Text style={styles.nameText} numberOfLines={1}>
-              {user.username}
-            </Text>
+            <View style={styles.usernameContainer}>
+              <Text style={styles.nameText} numberOfLines={1}>
+                {user.username}
+              </Text>
+              {!!user.verified && (
+                <VerifiedSvg
+                  style={[styles.badge]}
+                  width={rem(18)}
+                  height={rem(18)}
+                />
+              )}
+            </View>
             {user.phoneNumber ? (
               <Text style={styles.noteText}>{user.phoneNumber}</Text>
             ) : null}
@@ -139,5 +149,12 @@ const styles = StyleSheet.create({
   touchArea: {
     flex: 1,
     flexDirection: 'row',
+  },
+  usernameContainer: {
+    flexDirection: 'row',
+    marginRight: rem(20),
+  },
+  badge: {
+    marginTop: rem(1),
   },
 });

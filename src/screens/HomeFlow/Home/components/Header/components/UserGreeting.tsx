@@ -95,7 +95,7 @@ export const UserGreeting = forwardRef<UserGreetingMethods, UserGreetingProps>(
                 {verified && (
                   <View ref={chevronRef} collapsable={false}>
                     <TouchableWithoutFeedback onPress={handleChevronPress}>
-                      <VerifiedSvg style={[styles.badge, styles.badgeNonRTL]} />
+                      <VerifiedSvg style={styles.badge} />
                     </TouchableWithoutFeedback>
                   </View>
                 )}
@@ -127,11 +127,6 @@ const styles = StyleSheet.create({
   },
   badge: {
     marginTop: rem(5),
-  },
-  badgeRTL: {
-    marginRight: rem(4),
-  },
-  badgeNonRTL: {
     marginLeft: rem(4),
   },
 });
