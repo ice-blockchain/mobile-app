@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Conferma Indirizzo",
     "validators_warning_text": "Si prega di notare che le persone che hanno aggiunto un indirizzo Ethereum al loro account non sono idonee a diventare uno dei primi 300 validatori come da nostro whitepaper per il lancio del mainnet.",
     "self_custodial_addr_warning_text": "Consigliamo di utilizzare un portafoglio self-custodial come Metamask o Trust Wallet. Non utilizzare alcun indirizzo di exchange poiché Ice verrà elencato solo su Uniswap all'inizio, o rischierai [[:bold]]di perdere le tue monete[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Verifica",
+    "verify_with_title": "Verifica con {{method}}",
+    "select_method_step": {
+      "title": "Passaggio KYC #2",
+      "description": "Verifica il tuo account facilmente utilizzando il tuo profilo X esistente."
+    },
+    "instructions_step": {
+      "show_example": "Mostra esempio",
+      "example_title": "Esempio di repost",
+      "x": {
+        "1": "Apri X e cerca l'account [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Trova il post in evidenza, che è il primo post nel profilo.",
+        "3": "❤️ Metti mi piace & 🔄 Ripubblica con [[:bold]]Citazione[[/:bold]] utilizzando il testo [[:bold]]ESATTO[[/:bold]] qui sotto.",
+        "pop_up": {
+          "title": "Conferma",
+          "description": "Hai messo mi piace al post in evidenza e lo hai ripubblicato con una citazione utilizzando il testo esatto fornito, come nell'esempio?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Tocca per copiare il testo",
+        "copied": "Copiato"
+      }
+    },
+    "verification_step": {
+      "title": "Conferma",
+      "description": "Per completare la tua verifica, incolla il link al post in cui hai completato i passaggi precedenti. Assicurati che il link sia corretto.",
+      "placeholder": "Incolla il link",
+      "instructions_step": {
+        "4": "Incolla il link del tuo post qui sotto. 👇"
+      },
+      "action": {
+        "verify": "Verifica",
+        "wait": "Attendere prego",
+        "countdown": "{{countdown}} secondi rimanenti"
+      },
+      "pop_up": {
+        "title": "Conferma",
+        "description": "Assicurati che il post sia pubblicamente disponibile e che contenga il testo esatto fornito nella schermata precedente."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Numero di tentativi rimasti: {{count}}",
+      "success": {
+        "title": "Verifica Completata",
+        "description": "Congratulazioni, hai completato con successo il Passaggio KYC #2. Ora sei verificato."
+      },
+      "error_try_again": {
+        "title": "Errore di Verifica",
+        "description": "Assicurati di aver ripubblicato il post corretto, utilizzando il testo fornito, e che il post sia pubblicamente disponibile."
+      },
+      "error_try_later": {
+        "title": "Errore di Verifica",
+        "description": "Non siamo riusciti a completare la verifica. Puoi riprovare tra 7 giorni."
+      }
+    }
   }
 }

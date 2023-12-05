@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Confirmar Endereço",
     "validators_warning_text": "Por favor, note que as pessoas que adicionaram um endereço Ethereum à sua conta não têm direito a se tornarem um dos 300 principais validadores, conforme o nosso whitepaper para o lançamento da mainnet.",
     "self_custodial_addr_warning_text": "Recomendamos o uso de uma carteira de auto custódia, como o Metamask ou o Trust Wallet. Não use nenhum endereço de exchange, pois o Ice será listado apenas na Uniswap no início, ou você pode correr o risco de [[:bold]]perder suas moedas[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Verificação",
+    "verify_with_title": "Verificar com {{method}}",
+    "select_method_step": {
+      "title": "Passo KYC #2",
+      "description": "Verifique sua conta facilmente usando seu perfil X existente."
+    },
+    "instructions_step": {
+      "show_example": "Mostrar exemplo",
+      "example_title": "Exemplo de repostagem",
+      "x": {
+        "1": "Abra o X e procure a conta [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Encontre a postagem fixada, que é a primeira postagem no perfil.",
+        "3": "❤️ Curta e 🔄 Reposte com [[:bold]]Citação[[/:bold]] usando o texto [[:bold]]EXATO[[/:bold]] abaixo.",
+        "pop_up": {
+          "title": "Confirmação",
+          "description": "Você curtiu a postagem fixada e a repostou com uma citação usando o texto exato fornecido, conforme o exemplo?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Toque para copiar o texto",
+        "copied": "Copiado"
+      }
+    },
+    "verification_step": {
+      "title": "Confirmação",
+      "description": "Para concluir sua verificação, cole o link da postagem onde você concluiu as etapas anteriores. Certifique-se de que o link esteja correto.",
+      "placeholder": "Cole o link",
+      "instructions_step": {
+        "4": "Cole o link da sua postagem abaixo. 👇"
+      },
+      "action": {
+        "verify": "Verificar",
+        "wait": "Aguarde por favor",
+        "countdown": "{{countdown}} segundos restantes"
+      },
+      "pop_up": {
+        "title": "Confirmação",
+        "description": "Certifique-se de que a postagem esteja publicamente disponível e contenha o texto exato fornecido na tela anterior."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Número de tentativas restantes: {{count}}",
+      "success": {
+        "title": "Verificação Concluída",
+        "description": "Parabéns, você concluiu com sucesso o Passo KYC #2. Você está agora verificado."
+      },
+      "error_try_again": {
+        "title": "Erro na Verificação",
+        "description": "Certifique-se de que você repostou a postagem correta, usando o texto fornecido, e que a postagem esteja publicamente disponível."
+      },
+      "error_try_later": {
+        "title": "Erro na Verificação",
+        "description": "Não conseguimos concluir a verificação. Você pode tentar novamente em 7 dias."
+      }
+    }
   }
 }

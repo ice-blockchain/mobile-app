@@ -1176,7 +1176,7 @@
       "x": {
         "1": "Open X and search for [[:bold]]@ice_blockchain[[/:bold]] account.",
         "2": "Find the pinned post, which is the first post on the profile.",
-        "3": "❤\uFE0F Like & \uD83D\uDD04 Repost it with [[:bold]]Quote[[/:bold]] using the [[:bold]]EXACT[[/:bold]] text below.",
+        "3": "❤️ Like & 🔄 Repost it with [[:bold]]Quote[[/:bold]] using the [[:bold]]EXACT[[/:bold]] text below.",
         "pop_up": {
           "title": "Confirmation",
           "description": "Did you like the pinned post and repost it with a quote using the exact text provided, as in the example?"
@@ -1192,11 +1192,12 @@
       "description": "To complete your verification, please paste the link to the post where you completed the previous steps. Ensure the link is correct.",
       "placeholder": "Enter the link",
       "instructions_step": {
-        "4": "Paste the link of your post below. \uD83D\uDC47"
+        "4": "Paste the link of your post below. 👇"
       },
       "action": {
         "verify": "Verify",
-        "wait": "Please wait"
+        "wait": "Please wait",
+        "countdown": "{{countdown}}s remaining"
       },
       "pop_up": {
         "title": "Confirmation",

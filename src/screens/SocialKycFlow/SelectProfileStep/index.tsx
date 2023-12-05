@@ -5,6 +5,7 @@ import {ActivityIndicator} from '@components/ActivityIndicator';
 import {INDICATOR_SIDE_DIMENSION} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {commonStyles, SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
+import {useOnHardwareBack} from '@hooks/useOnHardwareBack';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {PopUpButton} from '@screens/Modals/PopUp/components/PopUpButton';
@@ -57,6 +58,8 @@ export function SelectProfileStep({
     }
   }, [getSocialKycRepostTextStatus, kycStep, onSkip, updateStepPassed]);
   const isLoading = getSocialKycRepostTextStatus === 'LOADING';
+
+  useOnHardwareBack({callback: onGoBack});
 
   return (
     <View style={commonStyles.flexOne}>

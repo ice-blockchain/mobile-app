@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Bekreft Adresse",
     "validators_warning_text": "Ver merksam på at personar som har lagt til ein Ethereum-adresse på kontoen sin, ikkje har rett til å bli ein av dei øvste 300 validerarane i samsvar med vår kvitbok for hovudnettet sitt lansering.",
     "self_custodial_addr_warning_text": "Vi anbefaler å bruke en sjølvstyrt lommebok som Metamask eller Trust Wallet. Ikkje bruk nokon exchange-adresse, sidan Ice berre vil bli oppført på Uniswap i byrjinga, eller du kan risikere [[:bold]]å miste myntane dine[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Verifisering",
+    "verify_with_title": "Verifiser med {{method}}",
+    "select_method_step": {
+      "title": "KYC Trinn #2",
+      "description": "Verifiser kontoen din enkelt ved å bruke din eksisterende X-profil."
+    },
+    "instructions_step": {
+      "show_example": "Vis eksempel",
+      "example_title": "Eksempel på repost",
+      "x": {
+        "1": "Åpne X og søk etter [[:bold]]@ice_blockchain[[/:bold]]-kontoen.",
+        "2": "Finn den festa posten, som er den første posten på profilen.",
+        "3": "❤️ Liker & 🔄 Repost den med [[:bold]]Quote[[/:bold]] ved å bruke den [[:bold]]NØYAKTIGE[[/:bold]] teksten nedenfor.",
+        "pop_up": {
+          "title": "Bekreftelse",
+          "description": "Har du likt den festa posten og repostet den med et sitat ved å bruke nøyaktig tekst som angitt i eksemplet?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Trykk for å kopiere tekst",
+        "copied": "Kopiert"
+      }
+    },
+    "verification_step": {
+      "title": "Bekreftelse",
+      "description": "For å fullføre verifiseringen, vennligst lim inn lenken til innlegget der du fullførte de forrige trinnene. Forsikre deg om at lenken er riktig.",
+      "placeholder": "Lim inn lenken",
+      "instructions_step": {
+        "4": "Lim inn lenken til innlegget ditt nedenfor. 👇"
+      },
+      "action": {
+        "verify": "Verifisere",
+        "wait": "Vennligst vent",
+        "countdown": "{{countdown}} sekunder igjen"
+      },
+      "pop_up": {
+        "title": "Bekreftelse",
+        "description": "Vennligst forsikre deg om at innlegget er offentlig tilgjengelig og inneholder nøyaktig teksten som ble gitt i forrige skjerm."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Antall forsøk igjen: {{count}}",
+      "success": {
+        "title": "Verifisering Fullført",
+        "description": "Gratulerer, du har fullført KYC Trinn #2 vellykket. Du er nå verifisert."
+      },
+      "error_try_again": {
+        "title": "Verifiseringsfeil",
+        "description": "Vennligst forsikre deg om at du har repostet riktig innlegg, brukt den angitte teksten, og at innlegget er offentlig tilgjengelig."
+      },
+      "error_try_later": {
+        "title": "Verifiseringsfeil",
+        "description": "Vi kunne ikke fullføre verifiseringen. Du kan prøve igjen om 7 dager."
+      }
+    }
   }
 }

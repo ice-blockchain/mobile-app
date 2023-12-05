@@ -5,6 +5,7 @@ import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
+import {useOnHardwareBack} from '@hooks/useOnHardwareBack';
 import {Header} from '@navigation/components/Header';
 import {navigate} from '@navigation/utils';
 import Clipboard from '@react-native-clipboard/clipboard';
@@ -124,9 +125,13 @@ export function InstructionsStep({
       },
     });
   };
+
+  useOnHardwareBack({callback: onGoBack, preventDefault: true});
+
   return (
     <View style={commonStyles.flexOne}>
       <Header
+        preventDefaultAction
         color={COLORS.primaryDark}
         title={t('social_kyc.header')}
         backgroundColor={'transparent'}

@@ -34,10 +34,6 @@ export function SocialKycFlow() {
 
   const dispatch = useDispatch();
   const navigation = useNavigation();
-  const onGoBack = useCallback(
-    () => dispatch(SocialKycActions.RESET_SOCIAL_KYC_STATUS.STATE.create()),
-    [dispatch],
-  );
   const onSkip = useCallback(
     (skipKYCStep?: SocialKycStepNumber) => {
       dispatch(
@@ -72,7 +68,9 @@ export function SocialKycFlow() {
       {socialKycFlowPhase === 'SELECT_PROFILE_TYPE' ? (
         <SelectProfileStep
           kycStep={kycStep}
-          onGoBack={onGoBack}
+          onGoBack={() =>
+            dispatch(SocialKycActions.RESET_SOCIAL_KYC_STATUS.STATE.create())
+          }
           onSkip={onSkip}
           socialKycMethod={socialKycMethod}
           updateStepPassed={onSelectProfileStepPassed}
@@ -81,7 +79,10 @@ export function SocialKycFlow() {
       {socialKycFlowPhase === 'INSTRUCTIONS' ? (
         <InstructionsStep
           kycStep={kycStep}
-          onGoBack={onGoBack}
+          onGoBack={() => {
+            dispatch(SocialKycActions.RESET_SOCIAL_KYC_STATUS.STATE.create());
+            setSocialKycFlowPhase('SELECT_PROFILE_TYPE');
+          }}
           onSkip={onSkip}
           socialKycMethod={socialKycMethod ?? 'X'}
           updateStepPassed={onInstructionsStepPassed}
@@ -90,7 +91,7 @@ export function SocialKycFlow() {
       {socialKycFlowPhase === 'VERIFICATION' ? (
         <VerificationStep
           kycStep={kycStep}
-          onGoBack={onGoBack}
+          onGoBack={() => setSocialKycFlowPhase('INSTRUCTIONS')}
           onSkip={onSkip}
           socialKycMethod={socialKycMethod ?? 'X'}
           updateStepPassed={onVerificationStepPassed}

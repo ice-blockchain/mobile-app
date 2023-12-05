@@ -4,6 +4,7 @@ import {SocialKycStepNumber} from '@api/tokenomics/types';
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
+import {useOnHardwareBack} from '@hooks/useOnHardwareBack';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {
@@ -36,6 +37,9 @@ export function ResultStep({onTryAgain, onSkip}: Props) {
   const onContinue = () => {
     onSkip();
   };
+
+  useOnHardwareBack({callback: () => {}, preventDefault: true});
+
   return (
     <View style={commonStyles.flexOne}>
       <Header

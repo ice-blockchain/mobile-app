@@ -119,7 +119,3 @@ const styles = StyleSheet.create({
     borderColor: COLORS.primaryLight,
   },
 });
-
-console.log(
-  (windowWidth - IMAGE_PADDING_HORIZONTAL * 2) / (windowHeight - TOP_OFFSET),
-);

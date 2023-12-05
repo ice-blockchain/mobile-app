@@ -5,6 +5,7 @@ import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {CommonInput} from '@components/Inputs/CommonInput';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
+import {useOnHardwareBack} from '@hooks/useOnHardwareBack';
 import {Header} from '@navigation/components/Header';
 import {navigate} from '@navigation/utils';
 import {Message} from '@screens/Modals/PopUp/components/Message';
@@ -16,9 +17,10 @@ import {
   FOOTER_PADDING_HORIZONTAL,
 } from '@screens/SocialKycFlow/constants';
 import {Confirmation} from '@screens/SocialKycFlow/VerificationStep/components/Confirmation';
+import {useCountdown} from '@screens/SocialKycFlow/VerificationStep/hooks/useCountdown';
 import {SocialKycActions} from '@store/modules/SocialKyc/actions';
 import {socialKycStatusSelector} from '@store/modules/SocialKyc/selectors';
-import {SocialKycMethod} from '@store/modules/SocialKyc/types';
+import {SocialKycMethod, SocialKycStatus} from '@store/modules/SocialKyc/types';
 import {isSocialKycFinalized} from '@store/modules/SocialKyc/utils';
 import {CopyIcon} from '@svg/LinkIcon';
 import {t} from '@translations/i18n';
@@ -37,6 +39,24 @@ type Props = {
 
 const ICON_SIZE = rem(24);
 
+function getButtonText({
+  socialKycStatus,
+  countdown,
+}: {
+  socialKycStatus: SocialKycStatus | null;
+  countdown: number;
+}) {
+  if (socialKycStatus === 'LOADING') {
+    if (countdown) {
+      return t('social_kyc.verification_step.action.countdown', {countdown});
+    }
+    return t('social_kyc.verification_step.action.wait');
+  }
+  return t('social_kyc.verification_step.action.verify');
+}
+
+const VERIFICATION_COUNTDOWN_DURATION = 120;
+
 export function VerificationStep({
   socialKycMethod,
   updateStepPassed,
@@ -54,6 +74,9 @@ export function VerificationStep({
       onSkip();
     }
   }, [kycStep, onSkip, socialKycStatus, updateStepPassed]);
+  const {countdown, startCountdown} = useCountdown({
+    startingValueInSeconds: VERIFICATION_COUNTDOWN_DURATION,
+  });
   const onContinue = () => {
     navigate({
       name: 'PopUp',
@@ -79,6 +102,7 @@ export function VerificationStep({
                   kycStep,
                 }),
               );
+              startCountdown();
             },
           },
         ],
@@ -87,9 +111,13 @@ export function VerificationStep({
       },
     });
   };
+
+  useOnHardwareBack({callback: onGoBack, preventDefault: true});
+
   return (
     <View style={commonStyles.flexOne}>
       <Header
+        preventDefaultAction
         color={COLORS.primaryDark}
         title={t('social_kyc.header')}
         backgroundColor={'transparent'}
@@ -124,14 +152,10 @@ export function VerificationStep({
         <View style={styles.footerContainer}>
           <PrimaryButton
             style={[socialKycMethod ? styles.button : styles.disabledButton]}
-            text={
-              socialKycStatus === 'LOADING'
-                ? t('social_kyc.verification_step.action.wait')
-                : t('social_kyc.verification_step.action.verify')
-            }
+            text={getButtonText({countdown, socialKycStatus})}
             onPress={onContinue}
             loading={socialKycStatus === 'LOADING'}
-            disabled={!repostLinkUrl}
+            disabled={!repostLinkUrl || socialKycStatus === 'LOADING'}
           />
         </View>
       </ScrollView>

@@ -4,7 +4,6 @@ import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {
   EMOTIONS_KYC_STEP,
-  ETH_DISTRIBUTION_KYC_STEP,
   SELFIE_KYC_STEP,
   VERIFY_SOCIAL_ACCOUNT_KYC_STEP,
 } from '@api/tokenomics/constants';
@@ -118,10 +117,7 @@ export function* startMiningSessionSaga(
           });
           return;
         }
-        if (
-          errorData.kycSteps.includes(VERIFY_SOCIAL_ACCOUNT_KYC_STEP) ||
-          errorData.kycSteps.includes(ETH_DISTRIBUTION_KYC_STEP)
-        ) {
+        if (errorData.kycSteps.includes(VERIFY_SOCIAL_ACCOUNT_KYC_STEP)) {
           yield removeScreenByName('Tooltip').catch();
           navigate({
             name: 'SocialKycFlow',

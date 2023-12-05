@@ -1172,5 +1172,62 @@
     "validators_warning_title": "אשר כתובת",
     "validators_warning_text": "שימו לב שאנשים שהוסיפו כתובת Ethereum לחשבונם אינם זכאים להיות אחד מ-300 האומתנים המובילים כפי שנקבע בספר הלבן שלנו לשקיעה ברשת הראשית.",
     "self_custodial_addr_warning_text": "אנחנו ממליצים להשתמש בארנק מסודר עצמאית כמו Metamask או Trust Wallet. אל תשתמשו בכתובת של חלופות כיוון ש-Ice ירשום ב-Uniswap בתחילה בלבד, או תימנעו [[:bold]]לאבד את המטבעות שלכם[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "אימות",
+    "verify_with_title": "אמת עם {{method}}",
+    "select_method_step": {
+      "title": "שלב KYC #2",
+      "description": "אמת את החשבון שלך בקלות באמצעות הפרופיל הקיים שלך ב-X."
+    },
+    "instructions_step": {
+      "show_example": "הצג הסבר",
+      "example_title": "דוגמא לפרסום מחדש",
+      "x": {
+        "1": "פתח את X וחפש את החשבון של [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "מצא את הפרסום המוצמד, שהוא הפרסום הראשון בפרופיל.",
+        "3": "❤️ לייק & 🔄 הפוסט מחדש עם [[:bold]]ציטוט[[/:bold]] באמצעות הטקסט [[:bold]]הדיווח EXACT[[/:bold]] למטה.",
+        "pop_up": {
+          "title": "אישור",
+          "description": "האם היית על הפרסום המוצמד ופירסמת אותו מחדש עם ציטוט באמצעות הטקסט המדויק שסופק, כמו בדוגמא?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "לחץ להעתקת הטקסט",
+        "copied": "הועתק"
+      }
+    },
+    "verification_step": {
+      "title": "אישור",
+      "description": "כדי להשלים את האימות שלך, אנא הדבק את הקישור לפרסום בו ביצעת את השלבים הקודמים. וודא שהקישור נכון.",
+      "placeholder": "הדבק את הקישור",
+      "instructions_step": {
+        "4": "הדבק את הקישור לפרסום שלך למטה. 👇"
+      },
+      "action": {
+        "verify": "אמת",
+        "wait": "אנא המתן",
+        "countdown": "{{countdown}} שניות נשמות"
+      },
+      "pop_up": {
+        "title": "אישור",
+        "description": "ודא שהפרסום זמין לציבור וכי הוא מכיל את הטקסט המדויק שסופק במסך הקודם."
+      }
+    },
+    "results_step": {
+      "attempts_left": "מספר נסיונות שנותר: {{count}}",
+      "success": {
+        "title": "אימות הושלם",
+        "description": "ברכותינו, השלמת את שלב KYC #2 בהצלחה. אתה מאומת כעת."
+      },
+      "error_try_again": {
+        "title": "שגיאת אימות",
+        "description": "ודא שפרסמת את הפרסום הנכון, באמצעות הטקסט שסופק, ושהפרסום זמין לציבור."
+      },
+      "error_try_later": {
+        "title": "שגיאת אימות",
+        "description": "לא הצלחנו להשלים את האימות. תוכל לנסות שוב בעוד 7 ימים."
+      }
+    }
   }
 }

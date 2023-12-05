@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Sahkan Alamat",
     "validators_warning_text": "Sila ambil perhatian bahawa individu yang telah menambah alamat Ethereum ke akaun mereka tidak layak untuk menjadi salah satu daripada 300 penentusah teratas mengikut buku putih kami untuk pelancaran mainnet.",
     "self_custodial_addr_warning_text": "Kami mengesyorkan penggunaan dompet sendiri seperti Metamask atau Trust Wallet. Jangan gunakan sebarang alamat exchange kerana Ice hanya akan disenaraikan di Uniswap pada permulaan, atau anda berisiko [[:bold]]kehilangan mata wang anda[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Pengesahan",
+    "verify_with_title": "Sahkan dengan {{method}}",
+    "select_method_step": {
+      "title": "Langkah KYC #2",
+      "description": "Sahkan akaun anda dengan mudah menggunakan profil X sedia ada anda."
+    },
+    "instructions_step": {
+      "show_example": "Tunjukkan contoh",
+      "example_title": "Contoh repost",
+      "x": {
+        "1": "Buka X dan cari akaun [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Cari pos yang telah dipasang, iaitu pos pertama dalam profil.",
+        "3": "❤️ Suka & 🔄 Repost dengan [[:bold]]Quote[[/:bold]] menggunakan teks [[:bold]]TEPAT[[/:bold]] di bawah.",
+        "pop_up": {
+          "title": "Pengesahan",
+          "description": "Adakah anda telah menyukai pos yang telah dipasang dan repost dengan menggunakan teks yang tepat seperti dalam contoh?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Ketik untuk menyalin teks",
+        "copied": "Disalin"
+      }
+    },
+    "verification_step": {
+      "title": "Pengesahan",
+      "description": "Untuk menyelesaikan pengesahan anda, sila tampal pautan ke pos di mana anda telah menyelesaikan langkah-langkah sebelumnya. Pastikan pautan itu betul.",
+      "placeholder": "Masukkan pautan",
+      "instructions_step": {
+        "4": "Tampal pautan pos anda di bawah. 👇"
+      },
+      "action": {
+        "verify": "Sahkan",
+        "wait": "Sila tunggu",
+        "countdown": "Sisa {{countdown}} saat"
+      },
+      "pop_up": {
+        "title": "Pengesahan",
+        "description": "Sila pastikan bahawa pos itu boleh diakses oleh orang ramai dan mengandungi teks yang tepat seperti yang diberikan dalam skrin sebelumnya."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Baki percubaan: {{count}}",
+      "success": {
+        "title": "Pengesahan Selesai",
+        "description": "Tahniah, anda telah berjaya menyelesaikan Langkah KYC #2. Anda kini disahkan."
+      },
+      "error_try_again": {
+        "title": "Ralat Pengesahan",
+        "description": "Sila pastikan anda telah repost pos yang betul, menggunakan teks yang diberikan, dan pos itu boleh diakses oleh orang ramai."
+      },
+      "error_try_later": {
+        "title": "Ralat Pengesahan",
+        "description": "Kami tidak dapat menyelesaikan pengesahan ini. Anda boleh mencuba lagi dalam 7 hari."
+      }
+    }
   }
 }

@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Xác Nhận Địa Chỉ",
     "validators_warning_text": "Vui lòng lưu ý rằng những người đã thêm địa chỉ Ethereum vào tài khoản của họ không đủ điều kiện trở thành một trong 300 người xác minh hàng đầu theo whitepaper của chúng tôi cho việc ra mắt mainnet.",
     "self_custodial_addr_warning_text": "Chúng tôi khuyên bạn nên sử dụng ví tự lưu trữ như Metamask hoặc Trust Wallet. Không sử dụng bất kỳ địa chỉ exchange nào, vì Ice chỉ sẽ được liệt kê trên Uniswap ban đầu, hoặc bạn có thể đối diện với [[:bold]]nguy cơ mất tiền của bạn[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Xác minh",
+    "verify_with_title": "Xác minh bằng {{method}}",
+    "select_method_step": {
+      "title": "Bước KYC #2",
+      "description": "Xác minh tài khoản của bạn một cách dễ dàng bằng cách sử dụng hồ sơ X hiện có của bạn."
+    },
+    "instructions_step": {
+      "show_example": "Hiển thị ví dụ",
+      "example_title": "Ví dụ về bài đăng lại",
+      "x": {
+        "1": "Mở X và tìm kiếm tài khoản [[:bold]]@ice_blockchain[[/:bold]]",
+        "2": "Tìm bài đăng đã ghim, đó là bài đăng đầu tiên trên hồ sơ.",
+        "3": "❤️ Thích & 🔄 Đăng lại nó với [[:bold]]Trích dẫn[[/:bold]] bằng cách sử dụng văn bản [[:bold]]CHÍNH XÁC[[/:bold]] dưới đây.",
+        "pop_up": {
+          "title": "Xác nhận",
+          "description": "Bạn đã thích bài đăng đã ghim và đăng lại nó với một trích dẫn bằng văn bản chính xác được cung cấp, như trong ví dụ chưa?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Nhấn để sao chép văn bản",
+        "copied": "Đã sao chép"
+      }
+    },
+    "verification_step": {
+      "title": "Xác nhận",
+      "description": "Để hoàn tất quá trình xác minh của bạn, vui lòng dán liên kết đến bài đăng mà bạn đã thực hiện các bước trước đó. Đảm bảo liên kết là chính xác.",
+      "placeholder": "Dán liên kết",
+      "instructions_step": {
+        "4": "Dán liên kết của bài đăng của bạn ở dưới. 👇"
+      },
+      "action": {
+        "verify": "Xác minh",
+        "wait": "Vui lòng đợi",
+        "countdown": "{{countdown}} giây còn lại"
+      },
+      "pop_up": {
+        "title": "Xác nhận",
+        "description": "Vui lòng đảm bảo rằng bài đăng là công khai và chứa đúng văn bản được cung cấp ở màn hình trước đó."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Số lần thử còn lại: {{count}}",
+      "success": {
+        "title": "Xác minh Hoàn tất",
+        "description": "Chúc mừng bạn đã hoàn thành thành công Bước KYC #2. Bây giờ bạn đã được xác minh."
+      },
+      "error_try_again": {
+        "title": "Lỗi Xác minh",
+        "description": "Vui lòng đảm bảo bạn đã đăng lại bài đăng chính xác, sử dụng văn bản được cung cấp và bài đăng là công khai."
+      },
+      "error_try_later": {
+        "title": "Lỗi Xác minh",
+        "description": "Chúng tôi không thể hoàn thành quá trình xác minh. Bạn có thể thử lại sau 7 ngày."
+      }
+    }
   }
 }

@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Cím megerősítése",
     "validators_warning_text": "Kérjük, vegye figyelembe, hogy azok az egyének, akik hozzáadtak egy Ethereum címet a fiókjukhoz, nem jogosultak az egyik legjobb 300 validátor közül lenni a fehér könyvünk alapján a mainnet indításához.",
     "self_custodial_addr_warning_text": "Azt tanácsoljuk, hogy használj egy önkiszolgáló pénztárcát, mint például a Metamask vagy a Trust Wallet. Ne használj exchange címet, mert az Ice csak az Uniswap-on lesz felsorolva kezdetben, vagy kockáztathatod [[:bold]]a cointeid elvesztését[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Ellenőrzés",
+    "verify_with_title": "Ellenőrizd a {{method}} segítségével",
+    "select_method_step": {
+      "title": "KYC 2. lépés",
+      "description": "Ellenőrizd fiókodat könnyedén az X profilod felhasználásával."
+    },
+    "instructions_step": {
+      "show_example": "Példa mutatása",
+      "example_title": "A megosztás példája",
+      "x": {
+        "1": "Nyisd meg az X-et, és keress rá a [[:bold]]@ice_blockchain[[/:bold]] fiókra.",
+        "2": "Keresd meg a rögzített bejegyzést, ami az első bejegyzés a profilban.",
+        "3": "❤️ Like-olj és 🔄 Oszd meg újra [[:bold]]Idézet[[/:bold]] használatával a lentebb található [[:bold]]PONTOS[[/:bold]] szöveggel.",
+        "pop_up": {
+          "title": "Megerősítés",
+          "description": "Lájkoltad a rögzített bejegyzést és megosztottad újra idézettel a pontosan megadott szöveggel, mint a példában?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Kattints a szöveg másolásához",
+        "copied": "Másolva"
+      }
+    },
+    "verification_step": {
+      "title": "Megerősítés",
+      "description": "A megerősítés befejezéséhez kérjük, illeszd be a linket a bejegyzéshez, ahol az előző lépéseket végrehajtottad. Győződj meg róla, hogy a link helyes.",
+      "placeholder": "Illeszd be a linket",
+      "instructions_step": {
+        "4": "Illeszd be a bejegyzésed linkjét alább. 👇"
+      },
+      "action": {
+        "verify": "Megerősítés",
+        "wait": "Kérlek, várj",
+        "countdown": "{{countdown}} másodperc van hátra"
+      },
+      "pop_up": {
+        "title": "Megerősítés",
+        "description": "Győződj meg róla, hogy a bejegyzés nyilvánosan elérhető, és tartalmazza a pontosan megadott szöveget az előző képernyőn."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Hátralévő próbálkozások száma: {{count}}",
+      "success": {
+        "title": "Megerősítés kész",
+        "description": "Gratulálunk, sikeresen befejezted a KYC 2. lépését. Most már megerősített vagy."
+      },
+      "error_try_again": {
+        "title": "Megerősítési hiba",
+        "description": "Győződj meg róla, hogy a megfelelő bejegyzést osztottad meg újra, a megadott szöveggel, és hogy a bejegyzés nyilvánosan elérhető."
+      },
+      "error_try_later": {
+        "title": "Megerősítési hiba",
+        "description": "Nem sikerült befejezni a megerősítést. 7 nap múlva újra próbálkozhatsz."
+      }
+    }
   }
 }
