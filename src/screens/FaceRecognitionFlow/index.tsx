@@ -82,7 +82,7 @@ export function FaceRecognition() {
           {faceRecognitionPhase === 'FACE_AUTH' ? (
             <FaceAuthCameraFeed
               onFaceAuthSuccess={onFaceAuthSuccess}
-              startMiningOnSuccess={kycSteps.length === 1}
+              kycSteps={kycSteps}
             />
           ) : null}
           {faceRecognitionPhase === 'EMOTIONS_AUTH' ? (
