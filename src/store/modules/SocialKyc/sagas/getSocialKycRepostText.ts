@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {is5xxApiError} from '@api/client';
+import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {SocialKycActions} from '@store/modules/SocialKyc/actions';
@@ -36,7 +36,18 @@ export function* getSocialKycRepostText(action: Actions) {
     }
   } catch (error: unknown) {
     yield put(SocialKycActions.GET_SOCIAL_KYC_REPOST_TEXT.ERROR.create());
-    if (is5xxApiError(error)) {
+    if (
+      !(
+        // for those 2 specific errors just silently start the mining. for all others also show the monkey
+        (
+          isApiError(
+            error,
+            409,
+            'SOCIAL_KYC_STEP_ALREADY_COMPLETED_SUCCESSFULLY',
+          ) || isApiError(error, 403, 'SOCIAL_KYC_STEP_NOT_AVAILABLE')
+        )
+      )
+    ) {
       yield spawn(showError, error);
     }
   }
