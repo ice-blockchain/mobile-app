@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Konfirmasi Alamat",
     "validators_warning_text": "Harap diperhatikan bahwa individu yang telah menambahkan alamat Ethereum ke akun mereka tidak memenuhi syarat untuk menjadi salah satu dari 300 validator teratas sesuai dengan whitepaper kami untuk peluncuran mainnet.",
     "self_custodial_addr_warning_text": "Kami menyarankan untuk menggunakan dompet self-custodial seperti Metamask atau Trust Wallet. Jangan gunakan alamat exchange mana pun karena Ice hanya akan terdaftar di Uniswap di awal, atau Anda bisa berisiko [[:bold]]kehilangan koin Anda[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Verifikasi",
+    "verify_with_title": "Verifikasi dengan {{method}}",
+    "select_method_step": {
+      "title": "Langkah KYC #2",
+      "description": "Verifikasi akun Anda dengan mudah menggunakan profil X yang sudah ada."
+    },
+    "instructions_step": {
+      "show_example": "Tampilkan contoh",
+      "example_title": "Contoh repost",
+      "x": {
+        "1": "Buka X dan cari akun [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Temukan pos yang dipasang, yang merupakan pos pertama di profil.",
+        "3": "❤️ Suka & 🔄 Repost dengan [[:bold]]Kutip[[/:bold]] menggunakan teks [[:bold]]TEPAT[[/:bold]] di bawah ini.",
+        "pop_up": {
+          "title": "Konfirmasi",
+          "description": "Apakah Anda menyukai pos yang dipasang dan repost dengan kutipan menggunakan teks yang tepat seperti contoh?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Ketuk untuk menyalin teks",
+        "copied": "Tersalin"
+      }
+    },
+    "verification_step": {
+      "title": "Konfirmasi",
+      "description": "Untuk menyelesaikan verifikasi Anda, silakan tempelkan tautan ke pos di mana Anda menyelesaikan langkah-langkah sebelumnya. Pastikan tautannya benar.",
+      "placeholder": "Masukkan tautan",
+      "instructions_step": {
+        "4": "Tempelkan tautan pos Anda di bawah. 👇"
+      },
+      "action": {
+        "verify": "Verifikasi",
+        "wait": "Harap tunggu",
+        "countdown": "{{countdown}} detik tersisa"
+      },
+      "pop_up": {
+        "title": "Konfirmasi",
+        "description": "Pastikan bahwa pos tersebut dapat diakses oleh publik dan berisi teks yang tepat seperti yang diberikan pada layar sebelumnya."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Jumlah percobaan tersisa: {{count}}",
+      "success": {
+        "title": "Verifikasi Selesai",
+        "description": "Selamat, Anda telah berhasil menyelesaikan Langkah KYC #2. Sekarang Anda sudah terverifikasi."
+      },
+      "error_try_again": {
+        "title": "Kesalahan Verifikasi",
+        "description": "Pastikan bahwa Anda telah melakukan repost pos yang benar, menggunakan teks yang diberikan, dan pos tersebut dapat diakses oleh publik."
+      },
+      "error_try_later": {
+        "title": "Kesalahan Verifikasi",
+        "description": "Kami tidak dapat menyelesaikan verifikasi. Anda dapat mencoba lagi dalam 7 hari."
+      }
+    }
   }
 }

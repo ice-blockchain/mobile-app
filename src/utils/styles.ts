@@ -5,7 +5,7 @@ import {COLORS} from '@constants/colors';
 import {FontFamily, FONTS, FontWight} from '@constants/fonts';
 import {isRTL} from '@translations/i18n';
 import {TextStyle} from 'react-native';
-import {rem} from 'rn-units';
+import {isAndroid, rem} from 'rn-units';
 
 export const font = (
   fontSize: number,
@@ -23,6 +23,13 @@ export const font = (
     textAlign,
   };
 };
+
+export function paddingLeftRtl(padding: number) {
+  return {
+    paddingLeft: isRTL && isAndroid ? null : padding,
+    paddingRight: isRTL && isAndroid ? padding : null,
+  };
+}
 
 export const mirrorTransform = (isReverted?: boolean) => {
   if (isReverted) {

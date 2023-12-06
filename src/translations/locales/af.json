@@ -1168,5 +1168,62 @@
     "validators_warning_title": "Bevestig Adres",
     "validators_warning_text": "Let daarop dat individue wat 'n Ethereum-adres aan hul rekening bygevoeg het, nie in aanmerking kom om een van die top 300-validatorse te word volgens ons witboek vir die hoofnetlansering nie.",
     "self_custodial_addr_warning_text": "Ons adviseer om 'n selfbewaringsbeurs soos Metamask of Trust Wallet te gebruik. Moet nie enige exchange-adres gebruik nie, want Ice sal aanvanklik net op Uniswap gelys word, of jy kan jou munte [[:bold]]verloor[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Verifikasie",
+    "verify_with_title": "Verifieer met {{method}}",
+    "select_method_step": {
+      "title": "KYC Stap #2",
+      "description": "Verifieer jou rekening maklik deur jou bestaande X-profiel te gebruik."
+    },
+    "instructions_step": {
+      "show_example": "Wys voorbeeld",
+      "example_title": "Voorbeeld van die herpos",
+      "x": {
+        "1": "Maak X oop en soek vir [[:bold]]@ice_blockchain[[/:bold]] rekening.",
+        "2": "Vind die vasgepenste pos, wat die eerste pos op die profiel is.",
+        "3": "❤️ Hou van & 🔄 Herpos dit met [[:bold]]Aanhaling[[/:bold]] deur die [[:bold]]PRESIES[[/:bold]] teks hieronder te gebruik.",
+        "pop_up": {
+          "title": "Bevestiging",
+          "description": "Het jy die vasgepenste pos gelike en herpos met 'n aanhaling deur die presiese teks soos in die voorbeeld gebruik?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Klik om teks te kopieer",
+        "copied": "Gekopieer"
+      }
+    },
+    "verification_step": {
+      "title": "Bevestiging",
+      "description": "Om jou verifikasie te voltooi, plak asseblief die skakel na die pos waar jy die vorige stappe voltooi het. Maak seker die skakel is korrek.",
+      "placeholder": "Voer die skakel in",
+      "instructions_step": {
+        "4": "Plak die skakel van jou pos hieronder. 👇"
+      },
+      "action": {
+        "verify": "Verifieer",
+        "wait": "Wag asseblief",
+        "countdown": "{{countdown}}s oorblywend"
+      },
+      "pop_up": {
+        "title": "Bevestiging",
+        "description": "Maak asseblief seker dat die pos openbaar beskikbaar is en dat dit die presiese teks bevat wat in die vorige skerm verskaf is."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Aantal pogings oor: {{count}}",
+      "success": {
+        "title": "Verifikasie Voltooi",
+        "description": "Gelukwens, jy het suksesvol jou KYC Stap #2 voltooi. Jy is nou geverifieer."
+      },
+      "error_try_again": {
+        "title": "Verifikasie Fout",
+        "description": "Maak asseblief seker dat jy die korrekte pos hergepost het met die verskafte teks en dat die pos openbaar beskikbaar is."
+      },
+      "error_try_later": {
+        "title": "Verifikasie Fout",
+        "description": "Ons kon die verifikasie nie voltooi nie. Jy kan weer probeer oor 7 dae."
+      }
+    }
   }
 }

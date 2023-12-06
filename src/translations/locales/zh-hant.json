@@ -1166,5 +1166,62 @@
     "validators_warning_title": "確認地址",
     "validators_warning_text": "請注意，已將Ethereum地址添加到其帳戶的個人不符合我們的白皮書要求，不能成為前300名驗證者之一，用於主網發布。",
     "self_custodial_addr_warning_text": "我們建議使用自托管錢包，如Metamask或Trust Wallet。不要使用任何交易所地址，因為Ice將僅在Uniswap上開始列出，否則您可能面臨[[::bold]]失去您的硬幣[[/::bold]] 的風險。"
+  },
+  "social_kyc": {
+    "header": "驗證",
+    "verify_with_title": "使用{{method}}驗證",
+    "select_method_step": {
+      "title": "KYC 步驟 #2",
+      "description": "使用您現有的 X 檔案輕鬆驗證您的帳戶。"
+    },
+    "instructions_step": {
+      "show_example": "顯示示例",
+      "example_title": "轉發示例",
+      "x": {
+        "1": "打開 X 並搜索 [[:bold]]@ice_blockchain[[/:bold]] 帳戶。",
+        "2": "找到固定的帖子，這是個人檔案上的第一篇帖子。",
+        "3": "❤️ 點贊 & 🔄 轉發，使用下面的[[:bold]]引用[[/:bold]]文本，確保文本[[:bold]]完全一致[[/:bold]]。",
+        "pop_up": {
+          "title": "確認",
+          "description": "您是否喜歡了固定的帖子並使用示例中提供的確切文本進行了轉發？"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "點擊複製文本",
+        "copied": "已複製"
+      }
+    },
+    "verification_step": {
+      "title": "確認",
+      "description": "為了完成您的驗證，請粘貼您完成前面步驟的帖子連結。確保連結正確。",
+      "placeholder": "粘貼連結",
+      "instructions_step": {
+        "4": "在下面粘貼您的帖子連結。👇"
+      },
+      "action": {
+        "verify": "驗證",
+        "wait": "請稍候",
+        "countdown": "剩餘時間：{{countdown}}秒"
+      },
+      "pop_up": {
+        "title": "確認",
+        "description": "請確保該帖子是公開可見的，並且包含前面屏幕上提供的確切文本。"
+      }
+    },
+    "results_step": {
+      "attempts_left": "剩餘嘗試次數：{{count}}",
+      "success": {
+        "title": "驗證完成",
+        "description": "恭喜，您已成功完成 KYC 步驟 #2。您現在已驗證。"
+      },
+      "error_try_again": {
+        "title": "驗證錯誤",
+        "description": "請確保您已正確轉發了帖子，使用了提供的文本，並且帖子是公開可見的。"
+      },
+      "error_try_later": {
+        "title": "驗證錯誤",
+        "description": "我們無法完成驗證。您可以在7天後再次嘗試。"
+      }
+    }
   }
 }

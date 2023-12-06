@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Ünvanı Təsdiq Et",
     "validators_warning_text": "Xahiş edirəm diqqət edin ki, Ethereum ünvanını hesabına əlavə edənlər, əsas şəbəkənin istehsalı üçün bizim ağlaşdırmamıza əsasən ən yaxşı 300 doğrulayıcının biri olmaq üçün əhəmiyyət daşımırlar.",
     "self_custodial_addr_warning_text": "Metamask və ya Trust Wallet kimi öz-əmanəti qoruyan bir cüzdan istifadə etməyin tövsiyə edirik. İlk başta yalnız Uniswap-da siyahılanacaq Ice kimi heç bir exchange ünvanı istifadə etməyin, yoxsa siklərinizi itirə bilərsiniz."
+  },
+  "social_kyc": {
+    "header": "Doğrulama",
+    "verify_with_title": "{{method}} ilə doğrulama",
+    "select_method_step": {
+      "title": "KYC Mərhələsi #2",
+      "description": "Hesabınızı mövcud X profilinizlə asanlıqla doğrulayın."
+    },
+    "instructions_step": {
+      "show_example": "Nümunəni göstər",
+      "example_title": "Yenidən paylaşmanın nümunəsi",
+      "x": {
+        "1": "X tətbiqini açın və [[:bold]]@ice_blockchain[[/:bold]] hesabını axtarın.",
+        "2": "İlkin profil üzərində olan sabit yazını tapın.",
+        "3": "❤️ Bəyənin və 🔄 yenidən paylaşın, [[:bold]]İstifadə[[/:bold]] edərək aşağıdakı [[:bold]]DÜZGÜN[[/:bold]] mətni istifadə edin.",
+        "pop_up": {
+          "title": "Təsdiq",
+          "description": "Sabit yazını bəyəndiniz və təsdiqlənmiş nümunədə olduğu kimi tam metni istifadə edərək yenidən paylaştınız?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Mətni kopyalamaq üçün toxunun",
+        "copied": "Kopyalandı"
+      }
+    },
+    "verification_step": {
+      "title": "Təsdiq",
+      "description": "Sizin təsdiqinizi başa çatmaq üçün, əvvəlki addımları yerinə yetirdiyiniz yazının linkini köçürün. Linkin düzgün olduğundan əmin olun.",
+      "placeholder": "Linki daxil edin",
+      "instructions_step": {
+        "4": "Öz yazınızın linkini aşağıda köçürün. 👇"
+      },
+      "action": {
+        "verify": "Təsdiq et",
+        "wait": "Xahiş edirik gözləyin",
+        "countdown": "{{countdown}} saniyə qalıb"
+      },
+      "pop_up": {
+        "title": "Təsdiq",
+        "description": "Lütfən yazının ictimaiyyətə açıq olduğundan və əvvəlki ekranın içində verilmiş tam metni ehtiva etdiyindən əmin olun."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Qalmış cəhd sayı: {{count}}",
+      "success": {
+        "title": "Təsdiq başa çatdı",
+        "description": "Təbrik edirik, KYC Mərhələsi #2-ni uğurla başa vurduğunuz üçün təsdiq olundunuz. Siz artıq təsdiqlənmişsiniz."
+      },
+      "error_try_again": {
+        "title": "Təsdiq səhvi",
+        "description": "Xahiş edirik təsdiq etdiyiniz yazının doğru olduğundan, təqdim edilmiş mətni istifadə etdiyinizdən və yazı ictimaiyyətə açıq olduğundan əmin olun."
+      },
+      "error_try_later": {
+        "title": "Təsdiq səhvi",
+        "description": "Biz təsdiq prosesini başa çatıra bilmədik. 7 gün sonra yenidən cəhd edə bilərsiniz."
+      }
+    }
   }
 }

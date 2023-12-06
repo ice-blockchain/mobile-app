@@ -7,7 +7,7 @@ export type BaseAuthStatus =
   | 'BANNED'
   | 'TRY_LATER';
 
-export type FaceAuthStatus = BaseAuthStatus;
+export type FaceAuthStatus = BaseAuthStatus | 'SUCCESS_BUT_SKIP_EMOTIONS';
 
 export type EmotionsAuthStatus =
   | BaseAuthStatus

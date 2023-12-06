@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Confirmă Adresa",
     "validators_warning_text": "Vă rugăm să rețineți că persoanele care au adăugat o adresă Ethereum la contul lor nu sunt eligibile să devină unul dintre cei top 300 de validatori conform whitepaperului pentru lansarea mainnet.",
     "self_custodial_addr_warning_text": "Vă recomandăm să utilizați un portofel auto-custodial, cum ar fi Metamask sau Trust Wallet. Nu utilizați nicio adresă de exchange, deoarece Ice va fi listat doar pe Uniswap la început, sau puteți risca [[:bold]]pierderea monedelor dumneavoastră[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Verificare",
+    "verify_with_title": "Verifică cu {{method}}",
+    "select_method_step": {
+      "title": "Pasul KYC #2",
+      "description": "Verifică-ți contul cu ușurință folosind profilul X existent."
+    },
+    "instructions_step": {
+      "show_example": "Arată exemplu",
+      "example_title": "Exemplu de repostare",
+      "x": {
+        "1": "Deschide X și caută contul [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Găsește postarea fixată, care este prima postare în profil.",
+        "3": "❤️ Dă like și 🔄 Repostează cu [[:bold]]Citat[[/:bold]] folosind textul [[:bold]]EXACT[[/:bold]] de mai jos.",
+        "pop_up": {
+          "title": "Confirmare",
+          "description": "Ai dat like la postarea fixată și ai repostat-o cu un citat folosind textul exact furnizat, conform exemplului?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Atinge pentru a copia textul",
+        "copied": "Copiat"
+      }
+    },
+    "verification_step": {
+      "title": "Confirmare",
+      "description": "Pentru a finaliza verificarea, lipește link-ul postării unde ai finalizat pașii anteriori. Asigură-te că link-ul este corect.",
+      "placeholder": "Lipește link-ul",
+      "instructions_step": {
+        "4": "Lipește link-ul postării tale mai jos. 👇"
+      },
+      "action": {
+        "verify": "Verifică",
+        "wait": "Te rugăm să aștepți",
+        "countdown": "{{countdown}} secunde rămase"
+      },
+      "pop_up": {
+        "title": "Confirmare",
+        "description": "Asigură-te că postarea este public disponibilă și conține textul exact furnizat pe ecranul anterior."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Număr de încercări rămase: {{count}}",
+      "success": {
+        "title": "Verificare Finalizată",
+        "description": "Felicitări, ai finalizat cu succes Pasul KYC #2. Ești acum verificat."
+      },
+      "error_try_again": {
+        "title": "Eroare de Verificare",
+        "description": "Asigură-te că ai repostat postarea corectă, folosind textul furnizat, și că postarea este public disponibilă."
+      },
+      "error_try_later": {
+        "title": "Eroare de Verificare",
+        "description": "Nu am putut finaliza verificarea. Poți încerca din nou peste 7 zile."
+      }
+    }
   }
 }

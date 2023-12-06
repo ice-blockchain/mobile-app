@@ -69,6 +69,15 @@ export const Images = {
     placeholder2: require('./badges/placeholder2.png'),
     faceAuth: require('./badges/face_auth.png'),
     cameraPermission: require('./badges/camera_permission.png'),
+    socialKyc: {
+      start: require('./badges/social_kyc/start.png'),
+      success: require('./badges/social_kyc/success.png'),
+      failure: require('./badges/social_kyc/failure.png'),
+      fbDark: require('./social/social_kyc/fb_dark.png'),
+      fbLight: require('./social/social_kyc/fb_light.png'),
+      xDark: require('./social/social_kyc/x_dark.png'),
+      xLight: require('./social/social_kyc/x_light.png'),
+    },
   },
   phone: {
     confirmPhoneNumber: require('./phone/confirmPhoneNumber.png'),

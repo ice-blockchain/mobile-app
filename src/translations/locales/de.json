@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Adresse bestätigen",
     "validators_warning_text": "Bitte beachten Sie, dass Personen, die ihre Ethereum-Adresse zu ihrem Konto hinzugefügt haben, gemäß unserem Whitepaper für den Start des Hauptnetzwerks nicht berechtigt sind, einer der besten 300 Validatoren zu werden.",
     "self_custodial_addr_warning_text": "Wir empfehlen die Verwendung einer selbstverwalteten Wallet wie Metamask oder Trust Wallet. Verwenden Sie keine exchange-Adresse, da Ice zu Beginn nur auf Uniswap gelistet wird, oder Sie riskieren [[:bold]]den Verlust Ihrer Münzen[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Verifizierung",
+    "verify_with_title": "Verifizieren mit {{method}}",
+    "select_method_step": {
+      "title": "KYC Schritt #2",
+      "description": "Verifizieren Sie Ihr Konto einfach mit Ihrem bestehenden X-Profil."
+    },
+    "instructions_step": {
+      "show_example": "Beispiel anzeigen",
+      "example_title": "Beispiel für das erneute Teilen",
+      "x": {
+        "1": "Öffnen Sie X und suchen Sie nach dem Profil [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Finden Sie den angehefteten Beitrag, der der erste Beitrag im Profil ist.",
+        "3": "❤️ Mögen & 🔄 Teilen Sie ihn mit [[:bold]]Zitat[[/:bold]] unter Verwendung des [[:bold]]GENAUEN[[/:bold]] Textes unten.",
+        "pop_up": {
+          "title": "Bestätigung",
+          "description": "Haben Sie den angehefteten Beitrag gemocht und mit einem Zitat unter Verwendung des exakten Textes wie im Beispiel erneut geteilt?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Zum Kopieren antippen",
+        "copied": "Kopiert"
+      }
+    },
+    "verification_step": {
+      "title": "Bestätigung",
+      "description": "Um Ihre Verifizierung abzuschließen, fügen Sie bitte den Link zum Beitrag ein, in dem Sie die vorherigen Schritte abgeschlossen haben. Stellen Sie sicher, dass der Link korrekt ist.",
+      "placeholder": "Link eingeben",
+      "instructions_step": {
+        "4": "Fügen Sie den Link zu Ihrem Beitrag unten ein. 👇"
+      },
+      "action": {
+        "verify": "Verifizieren",
+        "wait": "Bitte warten",
+        "countdown": "Verbleibende Zeit: {{countdown}} Sekunden"
+      },
+      "pop_up": {
+        "title": "Bestätigung",
+        "description": "Stellen Sie bitte sicher, dass der Beitrag öffentlich zugänglich ist und den exakten Text enthält, der auf dem vorherigen Bildschirm angezeigt wird."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Anzahl der Versuche übrig: {{count}}",
+      "success": {
+        "title": "Verifizierung abgeschlossen",
+        "description": "Herzlichen Glückwunsch, Sie haben KYC Schritt #2 erfolgreich abgeschlossen. Sie sind jetzt verifiziert."
+      },
+      "error_try_again": {
+        "title": "Verifizierungsfehler",
+        "description": "Bitte stellen Sie sicher, dass Sie den richtigen Beitrag erneut geteilt haben, den bereitgestellten Text verwendet haben und der Beitrag öffentlich zugänglich ist."
+      },
+      "error_try_later": {
+        "title": "Verifizierungsfehler",
+        "description": "Wir konnten die Verifizierung nicht abschließen. Sie können es in 7 Tagen erneut versuchen."
+      }
+    }
   }
 }

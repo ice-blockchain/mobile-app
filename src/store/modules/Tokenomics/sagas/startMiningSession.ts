@@ -2,6 +2,11 @@
 
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
+import {
+  EMOTIONS_KYC_STEP,
+  SELFIE_KYC_STEP,
+  VERIFY_SOCIAL_ACCOUNT_KYC_STEP,
+} from '@api/tokenomics/constants';
 import {ResurrectRequiredData} from '@api/tokenomics/types';
 import {User} from '@api/user/types';
 import {LocalAudio} from '@audio';
@@ -101,11 +106,22 @@ export function* startMiningSessionSaga(
     } else if (isApiError(error, 409, 'KYC_STEPS_REQUIRED')) {
       const errorData = error?.response?.data?.data;
       if (errorData && Array.isArray(errorData.kycSteps)) {
-        if (errorData.kycSteps.includes(1) || errorData.kycSteps.includes(2)) {
+        if (
+          errorData.kycSteps.includes(SELFIE_KYC_STEP) ||
+          errorData.kycSteps.includes(EMOTIONS_KYC_STEP)
+        ) {
           yield removeScreenByName('Tooltip').catch();
           navigate({
             name: 'FaceRecognition',
             params: {kycSteps: errorData.kycSteps},
+          });
+          return;
+        }
+        if (errorData.kycSteps.includes(VERIFY_SOCIAL_ACCOUNT_KYC_STEP)) {
+          yield removeScreenByName('Tooltip').catch();
+          navigate({
+            name: 'SocialKycFlow',
+            params: {kycStep: errorData.kycSteps[0]},
           });
           return;
         }

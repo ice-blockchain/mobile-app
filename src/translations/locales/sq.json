@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Konfirmo Adresën",
     "validators_warning_text": "Ju lutemi vini re se individët që kanë shtuar një adresë Ethereum në llogarinë e tyre nuk janë të përgjegjshëm të bëhen një ndër 300 validatortë më të mirë sipas librit tonë të bardhë për fillimin e rrjetit kryesor.",
     "self_custodial_addr_warning_text": "Ju këshillojmë të përdorni një arkë self-custodial si Metamask ose Trust Wallet. Mos përdorni asnjë adresë të Bursës (exchange), pasi që Ice do të jetë i listuar vetëm në Uniswap në fillim, ose mund të rrezikoni [[:bold]]humbjen e monedhave tuaja[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Verifikimi",
+    "verify_with_title": "Verifikoni me {{method}}",
+    "select_method_step": {
+      "title": "Hapi KYC #2",
+      "description": "Verifikoni llogarinë tuaj me lehtësi duke përdorur profilin tuaj ekzistues X."
+    },
+    "instructions_step": {
+      "show_example": "Shfaq shembullin",
+      "example_title": "Shembulli i shpërndarjes",
+      "x": {
+        "1": "Hapni X dhe kërkoni llogarinë [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Gjeni postimin e fiksuar, i cili është postimi i parë në profil.",
+        "3": "❤️ Pëlqeni & 🔄 Shpërndani atë me [[:bold]]Citat[[/:bold]] duke përdorur tekstin [[:bold]]PËRFAKS[[/:bold]] më poshtë.",
+        "pop_up": {
+          "title": "Konfirmimi",
+          "description": "A keni pëlqyer postimin e fiksuar dhe e keni shpërndarë me një citat duke përdorur tekstin e përcaktuar në shembull?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Trokit për të kopjuar tekstin",
+        "copied": "Kopjuar"
+      }
+    },
+    "verification_step": {
+      "title": "Konfirmimi",
+      "description": "Për të përfunduar verifikimin, ngjitni lidhjen për postimin ku keni kryer hapat e mëparshëm. Sigurohuni që lidhja është e saktë.",
+      "placeholder": "Ngjitni lidhjen",
+      "instructions_step": {
+        "4": "Ngjitni lidhjen për postimin tuaj më poshtë. 👇"
+      },
+      "action": {
+        "verify": "Verifikoni",
+        "wait": "Ju lutem prisni",
+        "countdown": "{{countdown}} sekonda mbetur"
+      },
+      "pop_up": {
+        "title": "Konfirmimi",
+        "description": "Sigurohuni që postimi është i disponueshëm në mënyrë publike dhe përmban tekstin e saktë të dhënë në ekranin e mëparshëm."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Numri i përpjekjeve të mbetura: {{count}}",
+      "success": {
+        "title": "Verifikimi Përfundoi",
+        "description": "Urime, keni përfunduar me sukses Hapin KYC #2. Tani jeni verifikuar."
+      },
+      "error_try_again": {
+        "title": "Gabim në Verifikim",
+        "description": "Sigurohuni që keni shpërndarë postimin e saktë, duke përdorur tekstin e dhënë, dhe që postimi është i disponueshëm në mënyrë publike."
+      },
+      "error_try_later": {
+        "title": "Gabim në Verifikim",
+        "description": "Ne nuk mund të përfundojmë verifikimin. Mund të provoni përsëri në 7 ditë."
+      }
+    }
   }
 }

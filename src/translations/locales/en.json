@@ -1162,5 +1162,62 @@
     "validators_warning_title": "Confirm Address",
     "validators_warning_text": "Please note that individuals who have added an Ethereum address to their account are not eligible to become one of the top 300 validators as per our whitepaper for the mainnet launch.",
     "self_custodial_addr_warning_text": "We advise using a self-custodial wallet such as Metamask or Trust Wallet. Don't use any exchange address as Ice will only be listed on Uniswap at the beginning, or you can risk [[:bold]]losing your coins[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Verification",
+    "verify_with_title": "Verify with {{method}}",
+    "select_method_step": {
+      "title": "KYC Step #2",
+      "description": "Verify your account easily by using your existing X profile."
+    },
+    "instructions_step": {
+      "show_example": "Show example",
+      "example_title": "Example of the repost",
+      "x": {
+        "1": "Open X and search for [[:bold]]@ice_blockchain[[/:bold]] account.",
+        "2": "Find the pinned post, which is the first post on the profile.",
+        "3": "❤️ Like & 🔄 Repost it with [[:bold]]Quote[[/:bold]] using the [[:bold]]EXACT[[/:bold]] text below.",
+        "pop_up": {
+          "title": "Confirmation",
+          "description": "Did you like the pinned post and repost it with a quote using the exact text provided, as in the example?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Tap to copy text",
+        "copied": "Copied"
+      }
+    },
+    "verification_step": {
+      "title": "Confirmation",
+      "description": "To complete your verification, please paste the link to the post where you completed the previous steps. Ensure the link is correct.",
+      "placeholder": "Enter the link",
+      "instructions_step": {
+        "4": "Paste the link of your post below. 👇"
+      },
+      "action": {
+        "verify": "Verify",
+        "wait": "Please wait",
+        "countdown": "{{countdown}}s remaining"
+      },
+      "pop_up": {
+        "title": "Confirmation",
+        "description": "Please make sure that the post is publicly available and that it contains the exact text provided in the previous screen."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Number of attempts left: {{count}}",
+      "success": {
+        "title": "Verification Completed",
+        "description": "Congratulations, you have successfully completed your KYC Step #2. You are now verified."
+      },
+      "error_try_again": {
+        "title": "Verification Error",
+        "description": "Please make sure that you have reposted the correct post, using the provided text, and that the post is publicly available."
+      },
+      "error_try_later": {
+        "title": "Verification Error",
+        "description": "We couldn't complete the verification. You can try again in 7 days."
+      }
+    }
   }
 }

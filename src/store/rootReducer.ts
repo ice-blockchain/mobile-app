@@ -17,6 +17,7 @@ import {newsReducer} from '@store/modules/News/reducer';
 import {notificationsReducer} from '@store/modules/Notifications/reducer';
 import {permissionsReducer} from '@store/modules/Permissions/reducer';
 import {referralsReducer} from '@store/modules/Referrals/reducer';
+import {socialKycReducer} from '@store/modules/SocialKyc/reducer';
 import {socialsReducer} from '@store/modules/Socials/reducer';
 import {statsReducer} from '@store/modules/Stats/reducer';
 import {statusNotice} from '@store/modules/StatusNotice/reducer';
@@ -41,6 +42,7 @@ export const rootReducer = combineReducers({
   validation: validationReducer,
   collections: collectionsReducer,
   referrals: referralsReducer,
+  socialKyc: socialKycReducer,
   utilityProcessStatuses: processStatusesReducer,
   devices: devicesReducer,
   linking: linkingReducer,

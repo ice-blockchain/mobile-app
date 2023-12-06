@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Potrdite Naslov",
     "validators_warning_text": "Prosimo, upoštevajte, da osebe, ki je dodala Ethereum naslov na svoj račun, ni dovoljeno postati eden izmed top 300 validacij glede na naš beli papir za glavni zagon.",
     "self_custodial_addr_warning_text": "Priporočamo uporabo samostojne upravljane denarnice, kot sta Metamask ali Trust Wallet. Ne uporabljajte nobenega naslova izmenjave (exchange), saj bo Ice na začetku naveden le na Uniswapu, ali pa tvegate [[:bold]]izgubo svojih kovancev[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Preverjanje",
+    "verify_with_title": "Preveri s {{method}}",
+    "select_method_step": {
+      "title": "Korak KYC #2",
+      "description": "Preverite svoj račun enostavno z uporabo svojega obstoječega profila X."
+    },
+    "instructions_step": {
+      "show_example": "Pokaži primer",
+      "example_title": "Primer deljenja",
+      "x": {
+        "1": "Odpri X in poišči račun [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Najdi pripenjeno objavo, ki je prva objava na profilu.",
+        "3": "❤️ Všečkaj & 🔄 Ponovno deli s [[:bold]]Citatom[[/:bold]] in uporabi [[:bold]]TOČEN[[/:bold]] besedilo spodaj.",
+        "pop_up": {
+          "title": "Potrditev",
+          "description": "Ste všečkali pripenjeno objavo in jo ponovno delili s citatom, pri čemer ste uporabili točno besedilo, kot je navedeno v primeru?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Tapnite za kopiranje besedila",
+        "copied": "Kopirano"
+      }
+    },
+    "verification_step": {
+      "title": "Potrditev",
+      "description": "Za dokončanje preverjanja prilepite povezavo do objave, kjer ste izpolnili prejšnje korake. Preverite, ali je povezava pravilna.",
+      "placeholder": "Prilepite povezavo",
+      "instructions_step": {
+        "4": "Prilepite povezavo do svoje objave spodaj. 👇"
+      },
+      "action": {
+        "verify": "Preveri",
+        "wait": "Prosimo, počakajte",
+        "countdown": "Preostali čas: {{countdown}} sekund"
+      },
+      "pop_up": {
+        "title": "Potrditev",
+        "description": "Prepričajte se, da je objava javno dostopna in vsebuje točno besedilo, kot je navedeno na prejšnjem zaslonu."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Število preostalih poskusov: {{count}}",
+      "success": {
+        "title": "Preverjanje končano",
+        "description": "Čestitamo, uspešno ste zaključili Korak KYC #2. Sedaj ste preverjeni."
+      },
+      "error_try_again": {
+        "title": "Napaka preverjanja",
+        "description": "Preverite, ali ste pravilno ponovno delili objavo s uporabo navedenega besedila in ali je objava javno dostopna."
+      },
+      "error_try_later": {
+        "title": "Napaka preverjanja",
+        "description": "Preverjanja nismo mogli dokončati. Poskusite znova čez 7 dni."
+      }
+    }
   }
 }

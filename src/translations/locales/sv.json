@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Bekräfta Adressen",
     "validators_warning_text": "Observera att personer som har lagt till en Ethereum-adress på sitt konto inte är berättigade att bli en av de 300 bästa validerarna enligt vår whitepaper för huvudnätets lansering.",
     "self_custodial_addr_warning_text": "Vi rekommenderar att använda en självstyrande plånbok som Metamask eller Trust Wallet. Använd inte någon exchange-adress, eftersom Ice bara kommer att listas på Uniswap i början, eller så kan du riskera att [[:bold]]förlora dina mynt[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Verifiering",
+    "verify_with_title": "Verifiera med {{method}}",
+    "select_method_step": {
+      "title": "KYC Steg #2",
+      "description": "Verifiera ditt konto enkelt genom att använda din befintliga X-profil."
+    },
+    "instructions_step": {
+      "show_example": "Visa exempel",
+      "example_title": "Exempel på delning",
+      "x": {
+        "1": "Öppna X och sök efter kontot [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Hitta den fastnålda inlägget, som är det första inlägget på profilen.",
+        "3": "❤️ Gilla & 🔄 Dela det med [[:bold]]Citat[[/:bold]] genom att använda [[:bold]]EXAKT[[/:bold]] text nedan.",
+        "pop_up": {
+          "title": "Bekräftelse",
+          "description": "Har du gillat det fastnålade inlägget och delat det med en citat med exakt text som anges, enligt exemplet?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Tryck för att kopiera texten",
+        "copied": "Kopierat"
+      }
+    },
+    "verification_step": {
+      "title": "Bekräftelse",
+      "description": "För att slutföra din verifiering, klistra in länken till inlägget där du utförde de tidigare stegen. Se till att länken är korrekt.",
+      "placeholder": "Klistra in länken",
+      "instructions_step": {
+        "4": "Klistra in länken till ditt inlägg nedan. 👇"
+      },
+      "action": {
+        "verify": "Verifiera",
+        "wait": "Vänligen vänta",
+        "countdown": "{{countdown}} sekunder kvar"
+      },
+      "pop_up": {
+        "title": "Bekräftelse",
+        "description": "Se till att inlägget är offentligt tillgängligt och innehåller exakt text som anges på föregående skärm."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Antal försök kvar: {{count}}",
+      "success": {
+        "title": "Verifiering slutförd",
+        "description": "Grattis, du har framgångsrikt slutfört KYC Steg #2. Du är nu verifierad."
+      },
+      "error_try_again": {
+        "title": "Verifieringsfel",
+        "description": "Se till att du har delat rätt inlägg med den angivna texten och att inlägget är offentligt tillgängligt."
+      },
+      "error_try_later": {
+        "title": "Verifieringsfel",
+        "description": "Vi kunde inte slutföra verifieringen. Du kan försöka igen om 7 dagar."
+      }
+    }
   }
 }

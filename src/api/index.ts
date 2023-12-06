@@ -4,6 +4,7 @@ import {achievements} from '@api/achievements';
 import {auth} from '@api/auth';
 import {devices} from '@api/devices';
 import {faceRecognition} from '@api/faceRecognition';
+import {kyc} from '@api/kyc';
 import {news} from '@api/news';
 import {notifications} from '@api/notifications';
 import {referrals} from '@api/referrals';
@@ -30,4 +31,5 @@ export const Api = Object.freeze({
   notifications,
   auth,
   faceRecognition,
+  kyc,
 });

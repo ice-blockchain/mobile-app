@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Adresi Onayla",
     "validators_warning_text": "Lütfen Ethereum adresini hesaplarına ekleyen kişilerin ana ağın başlatılması için bizim beyaz kağıdımıza göre en iyi 300 doğrulayıcıdan biri olma hakları olmadığını unutmayın.",
     "self_custodial_addr_warning_text": "Metamask veya Trust Wallet gibi kendinizin kontrol ettiği bir cüzdan kullanmanızı tavsiye ederiz. Ice sadece başlangıçta Uniswap'te listelenecektir, veya [[:bold]]paranızı kaybetme riski taşıyabilirsiniz[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Doğrulama",
+    "verify_with_title": "{{method}} ile Doğrula",
+    "select_method_step": {
+      "title": "KYC Adımı #2",
+      "description": "Mevcut X profilinizi kullanarak hesabınızı kolayca doğrulayın."
+    },
+    "instructions_step": {
+      "show_example": "Örnek Göster",
+      "example_title": "Repost Örneği",
+      "x": {
+        "1": "X'i açın ve [[:bold]]@ice_blockchain[[/:bold]] hesabını arayın.",
+        "2": "Profildeki ilk gönderi olan sabitlenmiş gönderiyi bulun.",
+        "3": "❤️ Beğenin ve [[:bold]]Alıntı[[/:bold]] kullanarak aşağıdaki [[:bold]]KESİNLİKLE[[/:bold]] metni kullanarak yeniden paylaşın.",
+        "pop_up": {
+          "title": "Onay",
+          "description": "Sabitlenmiş gönderiyi beğendiniz mi ve tam metni kullanarak alıntıladınız mı, örnekteki gibi?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Metni kopyalamak için dokunun",
+        "copied": "Kopyalandı"
+      }
+    },
+    "verification_step": {
+      "title": "Onay",
+      "description": "Doğrulamanızı tamamlamak için lütfen önceki adımları tamamladığınız gönderinin bağlantısını yapıştırın. Bağlantının doğru olduğundan emin olun.",
+      "placeholder": "Bağlantıyı yapıştırın",
+      "instructions_step": {
+        "4": "Lütfen gönderinizin bağlantısını aşağıya yapıştırın. 👇"
+      },
+      "action": {
+        "verify": "Doğrula",
+        "wait": "Lütfen bekleyin",
+        "countdown": "Kalan süre: {{countdown}} saniye"
+      },
+      "pop_up": {
+        "title": "Onay",
+        "description": "Lütfen gönderinin kamuya açık olduğundan ve önceki ekranda verilen tam metni içerdiğinden emin olun."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Kalan deneme sayısı: {{count}}",
+      "success": {
+        "title": "Doğrulama Tamamlandı",
+        "description": "Tebrikler, KYC Adımı #2'yi başarıyla tamamladınız. Şimdi doğrulandınız."
+      },
+      "error_try_again": {
+        "title": "Doğrulama Hatası",
+        "description": "Lütfen doğru gönderiyi paylaştığınızdan, verilen metni kullandığınızdan ve gönderinin kamuya açık olduğundan emin olun."
+      },
+      "error_try_later": {
+        "title": "Doğrulama Hatası",
+        "description": "Doğrulamayı tamamlayamadık. 7 gün sonra tekrar deneyebilirsiniz."
+      }
+    }
   }
 }

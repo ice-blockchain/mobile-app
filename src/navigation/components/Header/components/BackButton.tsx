@@ -16,6 +16,7 @@ type Props = {
   label?: string;
   allowOnTab?: boolean;
   onGoBack?: () => void;
+  preventDefaultAction?: boolean;
 };
 
 export const BackButton = ({
@@ -24,6 +25,7 @@ export const BackButton = ({
   onGoBack,
   label,
   allowOnTab = false,
+  preventDefaultAction,
 }: Props = {}) => {
   const navigation = useNavigation();
 
@@ -36,6 +38,9 @@ export const BackButton = ({
     <Touchable
       onPress={() => {
         onGoBack?.();
+        if (onGoBack && preventDefaultAction) {
+          return;
+        }
         navigation.goBack();
       }}
       hitSlop={buttonHitSlop}

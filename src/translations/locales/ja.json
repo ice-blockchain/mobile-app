@@ -1165,5 +1165,62 @@
     "validators_warning_title": "アドレスを確認",
     "validators_warning_text": "Ethereumアドレスをアカウントに追加した個人は、メインネットの発売に関する当社のホワイトペーパーに従い、トップ300のバリデータの1人になる資格がありませんので、ご注意ください。",
     "self_custodial_addr_warning_text": "MetamaskやTrust Walletなどのセルフカストディアルウォレットを使用することをお勧めします。Iceは最初はUniswapにのみリストされるため、exchangeのアドレスを使用しないでください。さもないと、コインを失う恐れがあります。"
+  },
+  "social_kyc": {
+    "header": "認証",
+    "verify_with_title": "{{method}}で認証",
+    "select_method_step": {
+      "title": "KYCステップ #2",
+      "description": "既存のXプロフィールを使用してアカウントを簡単に認証します。"
+    },
+    "instructions_step": {
+      "show_example": "例を表示",
+      "example_title": "リポストの例",
+      "x": {
+        "1": "Xを開いて、[[:bold]]@ice_blockchain[[/:bold]] アカウントを検索します。",
+        "2": "プロフィール内で最初の投稿である固定投稿を見つけます。",
+        "3": "❤️ いいね！と 🔄 リポストを、以下の[[:bold]]正確な[[/:bold]]テキストを使って行います。",
+        "pop_up": {
+          "title": "確認",
+          "description": "固定投稿にいいね！をし、提供された正確なテキストを使用してリポストしましたか？"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "テキストをコピーするにはタップ",
+        "copied": "コピー済み"
+      }
+    },
+    "verification_step": {
+      "title": "確認",
+      "description": "認証を完了するには、前のステップで行ったポストへのリンクを貼り付けてください。リンクが正しいことを確認してください。",
+      "placeholder": "リンクを貼り付ける",
+      "instructions_step": {
+        "4": "ポストのリンクを以下に貼り付けてください。👇"
+      },
+      "action": {
+        "verify": "確認",
+        "wait": "お待ちください",
+        "countdown": "{{countdown}}秒 残り"
+      },
+      "pop_up": {
+        "title": "確認",
+        "description": "ポストが一般に公開され、前の画面で提供された正確なテキストを含んでいることを確認してください。"
+      }
+    },
+    "results_step": {
+      "attempts_left": "残りの試行回数: {{count}}",
+      "success": {
+        "title": "認証完了",
+        "description": "おめでとうございます、KYCステップ #2を成功裏に完了しました。あなたは今、認証済みです。"
+      },
+      "error_try_again": {
+        "title": "認証エラー",
+        "description": "正しい投稿を提供されたテキストを使用してリポストしたこと、およびその投稿が一般に公開されていることを確認してください。"
+      },
+      "error_try_later": {
+        "title": "認証エラー",
+        "description": "認証を完了できませんでした。7日後に再試行できます。"
+      }
+    }
   }
 }

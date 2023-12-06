@@ -72,6 +72,12 @@ export type BalanceHistoryPoint = {
   timeSeries?: BalanceHistoryPoint[];
 };
 
-export type SELFIE_KYC_STEP = 1;
-export type EMOTIONS_KYC_STEP = 2;
-export type FaceAuthKycNumber = SELFIE_KYC_STEP | EMOTIONS_KYC_STEP;
+export type SelfieKycStep = 1;
+export type EmotionsKycStep = 2;
+export type FaceAuthKycNumber = SelfieKycStep | EmotionsKycStep;
+
+export type VerifySocialAccountKycStep = 3;
+export type EthDistributionKycStep = 5;
+export type SocialKycStepNumber =
+  | VerifySocialAccountKycStep
+  | EthDistributionKycStep;

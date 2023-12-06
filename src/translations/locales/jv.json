@@ -1070,5 +1070,62 @@
     "validators_warning_title": "Konfirmasi Alamat",
     "validators_warning_text": "Monggo dhuwurake sing individu sing wis nambahi alamat Ethereum menyang akuné ora memenuhi syarat supaya bisa dadi salah siji saka 300 validator paling apik menurut pamrih putih kita kanggo peluncuran mainnet.",
     "self_custodial_addr_warning_text": "Kami sarankan nganggo dompet swadaya kaya Metamask utawa Trust Wallet. Ora nganggo alamat exchange, amarga Ice bakal isih ditampa dina Uniswap nalika ngawitan, utawa sampean bisa riskan [[:bold]]mlebu teka coin sampeyan[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Verifikasi",
+    "verify_with_title": "Verifikasi kan nganggo {{method}}",
+    "select_method_step": {
+      "title": "Langkah KYC #2",
+      "description": "Verifikasi akun sampeyan gampang nganggo profil X sing wis ana."
+    },
+    "instructions_step": {
+      "show_example": "Tampilake conto",
+      "example_title": "Conto repost",
+      "x": {
+        "1": "Buka X lan nyuwun akun [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Goleki pos sing dipentokake, sing yaiku pos paling pisanan ing profil.",
+        "3": "❤️ Keno & 🔄 Repost karo [[:bold]]Kutip[[/:bold]] nganggo teks [[:bold]]TEPATE[[/:bold]] ing ngisor iki.",
+        "pop_up": {
+          "title": "Konfirmasi",
+          "description": "Apa sampeyan nduwei nganggo pos sing dipentokake lan nggawe repost karo kutipan nganggo teks sing tepat kaya conto?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Ketik kanggo nggandheng teks",
+        "copied": "Nggandheng"
+      }
+    },
+    "verification_step": {
+      "title": "Konfirmasi",
+      "description": "Kanggo rampungake verifikasi sampeyan, monggo masukkan tautan menyang pos maneh sampeyan rampungake langkah-langkah sajrone. Pastikan tautane bener.",
+      "placeholder": "Masukkan tautan",
+      "instructions_step": {
+        "4": "Taro tautan pos sampeyan ngisor iki. 👇"
+      },
+      "action": {
+        "verify": "Verifikasi",
+        "wait": "Monggo nunggu",
+        "countdown": "{{countdown}} detik wani"
+      },
+      "pop_up": {
+        "title": "Konfirmasi",
+        "description": "Pastikan yen pos iku bisa diakses dening umum lan nyedhiyakake teks sing tepat kaya conto ing layar sadurunge."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Jumlah percobaan sing ana: {{count}}",
+      "success": {
+        "title": "Verifikasi Rampung",
+        "description": "Selamat, sampeyan wis sukses rampungake Langkah KYC #2. Sampeyan saiki wis verifikasi."
+      },
+      "error_try_again": {
+        "title": "Kesalahan Verifikasi",
+        "description": "Pastikan sampeyan wis repost pos sing bener, nganggo teks sing disediakake, lan pos iku bisa diakses dening umum."
+      },
+      "error_try_later": {
+        "title": "Kesalahan Verifikasi",
+        "description": "Kami ora bisa rampungake verifikasi. Sampeyan bisa nyoba maneh sajrone 7 dino."
+      }
+    }
   }
 }

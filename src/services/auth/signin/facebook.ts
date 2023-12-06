@@ -11,6 +11,14 @@ import {
 
 Settings.initializeSDK();
 
+export async function getFacebookAccessTokenForUserPosts() {
+  const result = await LoginManager.logInWithPermissions(['user_posts']);
+  if (result.isCancelled) {
+    return null;
+  }
+  return AccessToken.getCurrentAccessToken();
+}
+
 export const startFacebookSignIn: SocialSignInMethod<{
   token: string;
 }> = async () => {

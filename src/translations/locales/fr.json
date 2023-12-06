@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Confirmer l'adresse",
     "validators_warning_text": "Veuillez noter que les personnes qui ont ajouté une adresse Ethereum à leur compte ne sont pas éligibles pour devenir l'un des 300 meilleurs validateurs selon notre livre blanc pour le lancement de la version principale.",
     "self_custodial_addr_warning_text": "Nous vous conseillons d'utiliser un portefeuille auto-géré tel que Metamask ou Trust Wallet. N'utilisez aucune adresse d'échange, car Ice ne sera répertorié que sur Uniswap au début, ou vous risquez de [[:bold]]perdre vos pièces[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Vérification",
+    "verify_with_title": "Vérifiez avec {{method}}",
+    "select_method_step": {
+      "title": "Étape KYC #2",
+      "description": "Vérifiez votre compte facilement en utilisant votre profil X existant."
+    },
+    "instructions_step": {
+      "show_example": "Afficher l'exemple",
+      "example_title": "Exemple de retransmission",
+      "x": {
+        "1": "Ouvrez X et recherchez le compte [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Trouvez la publication épinglée, qui est la première publication sur le profil.",
+        "3": "❤️ Aimez & 🔄 Retransmettez-la avec une [[:bold]]Citation[[/:bold]] en utilisant le texte [[:bold]]EXACT[[/:bold]] ci-dessous.",
+        "pop_up": {
+          "title": "Confirmation",
+          "description": "Avez-vous aimé la publication épinglée et l'avez-vous retransmise avec une citation en utilisant le texte exact fourni, comme dans l'exemple ?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Appuyez pour copier le texte",
+        "copied": "Copié"
+      }
+    },
+    "verification_step": {
+      "title": "Confirmation",
+      "description": "Pour compléter votre vérification, veuillez coller le lien vers la publication où vous avez effectué les étapes précédentes. Assurez-vous que le lien est correct.",
+      "placeholder": "Entrez le lien",
+      "instructions_step": {
+        "4": "Collez le lien de votre publication ci-dessous. 👇"
+      },
+      "action": {
+        "verify": "Vérifier",
+        "wait": "Veuillez patienter",
+        "countdown": "{{countdown}}s restantes"
+      },
+      "pop_up": {
+        "title": "Confirmation",
+        "description": "Assurez-vous que la publication est publiquement disponible et qu'elle contient le texte exact fourni à l'écran précédent."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Nombre de tentatives restantes : {{count}}",
+      "success": {
+        "title": "Vérification terminée",
+        "description": "Félicitations, vous avez réussi à compléter votre Étape KYC #2. Vous êtes maintenant vérifié."
+      },
+      "error_try_again": {
+        "title": "Erreur de vérification",
+        "description": "Veuillez vous assurer d'avoir retransmis la bonne publication, en utilisant le texte fourni, et que la publication est publiquement disponible."
+      },
+      "error_try_later": {
+        "title": "Erreur de vérification",
+        "description": "Nous n'avons pas pu terminer la vérification. Vous pouvez réessayer dans 7 jours."
+      }
+    }
   }
 }

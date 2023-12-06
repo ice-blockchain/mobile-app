@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Potvrdenie Adresy",
     "validators_warning_text": "Upozorňujeme, že osoby, ktoré pridali Ethereum adresu do svojho účtu, nie sú oprávnené stať sa jedným z najlepších 300 validátorov podľa našej bielovkovej knihy pre spustenie hlavného siete.",
     "self_custodial_addr_warning_text": "Odporúčame používať self-custodial peňaženku, ako je Metamask alebo Trust Wallet. Nepoužívajte žiadnu adresu výmeny (exchange), pretože Ice bude na začiatku uvedený iba na Uniswap, alebo môžete riskovať [[:bold]]stratu svojich mincí[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Overenie",
+    "verify_with_title": "Overiť pomocou {{method}}",
+    "select_method_step": {
+      "title": "Krok KYC #2",
+      "description": "Overte svoj účet jednoducho pomocou vášho existujúceho profilu X."
+    },
+    "instructions_step": {
+      "show_example": "Zobraziť príklad",
+      "example_title": "Príklad preposielania",
+      "x": {
+        "1": "Otvorte X a vyhľadajte účet [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Nájdite pripevnený príspevok, ktorý je prvým príspevkom na profile.",
+        "3": "❤️ Pridajte Like & 🔄 Prepošlite ho s [[:bold]]Citátom[[/:bold]] použitím [[:bold]]presného[[/:bold]] textu nižšie.",
+        "pop_up": {
+          "title": "Potvrdenie",
+          "description": "Pridali ste Like k pripevnenému príspevku a preposlali ste ho s citátom, používajúc presný text uvedený v príklade?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Kliknite na kopírovanie textu",
+        "copied": "Skopírované"
+      }
+    },
+    "verification_step": {
+      "title": "Potvrdenie",
+      "description": "Pre dokončenie overenia vložte odkaz na príspevok, kde ste dokončili predchádzajúce kroky. Uistite sa, že odkaz je správny.",
+      "placeholder": "Vložte odkaz",
+      "instructions_step": {
+        "4": "Vložte odkaz na váš príspevok nižšie. 👇"
+      },
+      "action": {
+        "verify": "Overiť",
+        "wait": "Prosím, počkajte",
+        "countdown": "Zostáva {{countdown}} sekúnd"
+      },
+      "pop_up": {
+        "title": "Potvrdenie",
+        "description": "Uistite sa, že príspevok je verejne dostupný a obsahuje presný text uvedený na predchádzajúcom obrazovke."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Počet zostávajúcich pokusov: {{count}}",
+      "success": {
+        "title": "Overenie dokončené",
+        "description": "Gratulujeme, úspešne ste dokončili Krok KYC #2. Teraz ste overení."
+      },
+      "error_try_again": {
+        "title": "Chyba overenia",
+        "description": "Uistite sa, že ste správne preposlali príspevok s použitím uvedeného textu a že príspevok je verejne dostupný."
+      },
+      "error_try_later": {
+        "title": "Chyba overenia",
+        "description": "Nepodarilo sa nám dokončiť overenie. Môžete to skúsiť znova o 7 dní."
+      }
+    }
   }
 }

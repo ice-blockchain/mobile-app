@@ -2,7 +2,7 @@
 
 import {BadgeType} from '@api/achievements/types';
 import {NotificationDeliveryChannel} from '@api/notifications/types';
-import {FaceAuthKycNumber} from '@api/tokenomics/types';
+import {FaceAuthKycNumber, SocialKycStepNumber} from '@api/tokenomics/types';
 import {Country} from '@constants/countries';
 import {commonStyles} from '@constants/styles';
 import {ViewMeasurementsResult} from '@ice/react-native';
@@ -53,6 +53,7 @@ import {ProfilePrivacyEditStep1} from '@screens/Modals/ProfilePrivacyEdit/step1'
 import {ProfilePrivacyEditStep2} from '@screens/Modals/ProfilePrivacyEdit/step2';
 import {ProfilePrivacyEditStep3} from '@screens/Modals/ProfilePrivacyEdit/step3';
 import {ReferralCountInfo} from '@screens/Modals/ReferralCountInfo';
+import {RepostExample} from '@screens/Modals/RepostExample';
 import {Tooltip} from '@screens/Modals/Tooltip';
 import {News} from '@screens/News';
 import {Badges} from '@screens/ProfileFlow/Badges';
@@ -67,6 +68,7 @@ import {ModifyPhoneNumber} from '@screens/SettingsFlow/ModifyPhoneNumber';
 import {NotificationSettings} from '@screens/SettingsFlow/NotificationSettings';
 import {PersonalInformation} from '@screens/SettingsFlow/PersonalInformation';
 import {Settings} from '@screens/SettingsFlow/Settings';
+import {SocialKycFlow} from '@screens/SocialKycFlow';
 import {Staking} from '@screens/Staking';
 import {Team} from '@screens/Team';
 import {Walkthrough} from '@screens/Walkthrough';
@@ -108,6 +110,7 @@ export type MainStackParamList = {
     kycSteps: FaceAuthKycNumber[];
     kycStepBlocked?: FaceAuthKycNumber;
   };
+  SocialKycFlow: {kycStep: SocialKycStepNumber};
   Staking: undefined;
   CreativeIceLibrary: undefined;
   ImageView: {
@@ -124,6 +127,7 @@ export type MainStackParamList = {
       onPress: () => void;
     }[];
   };
+  RepostExample: undefined;
   DateSelect: {
     onSelect: (range: {start: string | null; end: string | null}) => void;
   };
@@ -366,11 +370,17 @@ export function MainNavigator() {
         component={ActionSheet}
       />
       <MainStack.Screen
+        name="RepostExample"
+        options={modalOptions}
+        component={RepostExample}
+      />
+      <MainStack.Screen
         name="DateSelect"
         options={modalOptions}
         component={DateSelect}
       />
       <MainStack.Screen name="FaceRecognition" component={FaceRecognition} />
+      <MainStack.Screen name="SocialKycFlow" component={SocialKycFlow} />
       <MainStack.Screen name="Staking" component={Staking} />
       <MainStack.Screen
         name="CreativeIceLibrary"

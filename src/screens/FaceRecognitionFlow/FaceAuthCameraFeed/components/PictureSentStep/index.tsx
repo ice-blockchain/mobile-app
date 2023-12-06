@@ -73,7 +73,8 @@ export function PictureSentStep({
           }
         />
       ) : null}
-      {faceAuthStatus === 'SUCCESS' ? (
+      {faceAuthStatus === 'SUCCESS' ||
+      faceAuthStatus === 'SUCCESS_BUT_SKIP_EMOTIONS' ? (
         <StatusOverlay
           description={t('face_auth.auth_status.continue.description')}
           title={t('face_auth.auth_status.continue.title')}

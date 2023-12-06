@@ -1165,5 +1165,62 @@
     "validators_warning_title": "Potvrďte Adresu",
     "validators_warning_text": "Upozorňujeme, že osoby, které přidaly Ethereum adresu k jejich účtu, nemají nárok stát se jedním z nejlepších 300 validátorů podle našeho whitepaperu pro hlavní síťový spuštění.",
     "self_custodial_addr_warning_text": "Doporučujeme použití self-custodial peněženky jako je Metamask nebo Trust Wallet. Nepoužívejte žádnou adresu směnárny (exchange), protože Ice bude na začátku jen na Uniswap, nebo riskujete [[:bold]]ztrátu svých mincí[[/:bold]]."
+  },
+  "social_kyc": {
+    "header": "Ověření",
+    "verify_with_title": "Ověřte s pomocí {{method}}",
+    "select_method_step": {
+      "title": "KYC Krok #2",
+      "description": "Snadno ověřte svůj účet pomocí vašeho stávajícího profilu X."
+    },
+    "instructions_step": {
+      "show_example": "Zobrazit příklad",
+      "example_title": "Příklad opětovného sdílení",
+      "x": {
+        "1": "Otevřete X a vyhledejte profil [[:bold]]@ice_blockchain[[/:bold]].",
+        "2": "Najděte připnutý příspěvek, což je první příspěvek na profilu.",
+        "3": "❤️ Lajkněte a 🔄 sdílejte ho s [[:bold]]Citací[[/:bold]] s použitím [[:bold]]PŘESNÉHO[[/:bold]] textu níže.",
+        "pop_up": {
+          "title": "Potvrzení",
+          "description": "Lajkli jste připnutý příspěvek a sdíleli jste ho s citací, používajíce přesný text, jak je uvedeno v příkladu?"
+        }
+      },
+      "tooltips": {
+        "tap_to_copy": "Kopírovat text klepnutím",
+        "copied": "Zkopírováno"
+      }
+    },
+    "verification_step": {
+      "title": "Potvrzení",
+      "description": "Pro dokončení ověření vložte odkaz na příspěvek, kde jste provedli předchozí kroky. Ujistěte se, že je odkaz správný.",
+      "placeholder": "Vložte odkaz",
+      "instructions_step": {
+        "4": "Vložte odkaz na váš příspěvek níže. 👇"
+      },
+      "action": {
+        "verify": "Ověřit",
+        "wait": "Počkejte prosím",
+        "countdown": "Zbývá {{countdown}} sekund"
+      },
+      "pop_up": {
+        "title": "Potvrzení",
+        "description": "Ujistěte se, prosím, že je příspěvek veřejně dostupný a obsahuje přesný text uvedený na předchozí obrazovce."
+      }
+    },
+    "results_step": {
+      "attempts_left": "Počet zbývajících pokusů: {{count}}",
+      "success": {
+        "title": "Ověření dokončeno",
+        "description": "Gratulujeme, úspěšně jste dokončili KYC Krok #2. Jste nyní ověřeni."
+      },
+      "error_try_again": {
+        "title": "Chyba ověření",
+        "description": "Ujistěte se, prosím, že jste sdíleli správný příspěvek, použili poskytnutý text a že je příspěvek veřejně dostupný."
+      },
+      "error_try_later": {
+        "title": "Chyba ověření",
+        "description": "Nepodařilo se nám dokončit ověření. Můžete to zkusit znovu za 7 dní."
+      }
+    }
   }
 }

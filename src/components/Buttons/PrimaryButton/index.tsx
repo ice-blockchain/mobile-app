@@ -16,7 +16,7 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import {rem} from 'rn-units';
 
-const INDICATOR_SIDE_DIMENSION = rem(24);
+export const INDICATOR_SIDE_DIMENSION = rem(24);
 
 export interface PrimaryButtonProps extends TouchableProps {
   text: string;

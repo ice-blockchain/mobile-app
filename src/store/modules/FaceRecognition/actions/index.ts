@@ -14,7 +14,7 @@ const FACE_AUTH = createAction('FACE_AUTH', {
     pictureWidth: number;
     pictureHeight: number;
   }) => payload,
-  SUCCESS: true,
+  SUCCESS: (payload: {skipEmotions?: boolean}) => payload,
   FAILURE: (payload: {status: FaceAuthStatus}) => payload,
 });
 

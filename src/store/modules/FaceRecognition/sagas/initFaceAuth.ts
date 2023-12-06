@@ -36,11 +36,16 @@ export function* initFaceAuthSaga(action: Actions) {
       userIdSelector,
     );
 
-    yield call(Api.faceRecognition.faceAuth, {
-      userId,
-      pictureUri: croppedPictureUri,
-    });
-    yield put(FaceRecognitionActions.FACE_AUTH.SUCCESS.create());
+    const result: SagaReturnType<typeof Api.faceRecognition.faceAuth> =
+      yield call(Api.faceRecognition.faceAuth, {
+        userId,
+        pictureUri: croppedPictureUri,
+      });
+    yield put(
+      FaceRecognitionActions.FACE_AUTH.SUCCESS.create({
+        skipEmotions: result?.skipEmotions,
+      }),
+    );
   } catch (error: unknown) {
     if (isApiError(error, 403, 'USER_DISABLED')) {
       yield put(
