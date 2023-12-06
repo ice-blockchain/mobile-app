@@ -366,6 +366,9 @@
     "ethereum_address": {
       "title": "ఇథిరియం చిరునామా",
       "subtitle": "దయచేసి మీ ERC-20 చిరునామాను ఇక్కడ నమోదు చేయండి."
+    },
+    "verified_tooltip": {
+      "title": "KYC ధృడంగా నమోదు"
     }
   },
   "settings": {

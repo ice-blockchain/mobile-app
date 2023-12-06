@@ -366,6 +366,9 @@
     "ethereum_address": {
       "title": "ઈથેરિયમ સરખું",
       "subtitle": "કૃપા કરીને તમારું ERC-20 સરખું અહીં દાખલ કરો."
+    },
+    "verified_tooltip": {
+      "title": "KYC માન્ય કર્યો"
     }
   },
   "settings": {

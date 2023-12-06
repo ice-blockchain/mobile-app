@@ -366,6 +366,9 @@
     "ethereum_address": {
       "title": "Indirizzo Ethereum",
       "subtitle": "Inserisci qui il tuo indirizzo ERC-20."
+    },
+    "verified_tooltip": {
+      "title": "KYC Verificato"
     }
   },
   "settings": {

@@ -366,6 +366,9 @@
     "ethereum_address": {
       "title": "ਈਥੇਰੀਅਮ ਐਡਰੈੱਸ",
       "subtitle": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ERC-20 ਐਡਰੈੱਸ ਇੱਥੇ ਦਿਓ."
+    },
+    "verified_tooltip": {
+      "title": "KYC ਪ੍ਰਮਾਣਿਤ"
     }
   },
   "settings": {

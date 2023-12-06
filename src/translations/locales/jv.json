@@ -355,6 +355,9 @@
     "ethereum_address": {
       "title": "Alamat Ethereum",
       "subtitle": "Tolong lebokake alamat ERC-20 sampeyan ing kene."
+    },
+    "verified_tooltip": {
+      "title": "KYC Terferifikasi"
     }
   },
   "settings": {

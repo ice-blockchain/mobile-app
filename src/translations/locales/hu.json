@@ -366,6 +366,9 @@
     "ethereum_address": {
       "title": "Ethereum cím",
       "subtitle": "Kérlek add meg az ERC-20 címedet itt."
+    },
+    "verified_tooltip": {
+      "title": "KYC Hitelesítve"
     }
   },
   "settings": {
