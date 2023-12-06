@@ -70,7 +70,8 @@
     "follow_us": "تابعنا",
     "subscribe": "اشترك",
     "not_sure": "ليس واثقًا",
-    "confirm_address": "تأكيد العنوان"
+    "confirm_address": "تأكيد العنوان",
+    "remove_address": "إزالة العنوان"
   },
   "team": {
     "contacts_tab": "جهات الاتصال",

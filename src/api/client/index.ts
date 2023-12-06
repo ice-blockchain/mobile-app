@@ -168,7 +168,11 @@ export const buildFormData = (entity: {[key: string]: unknown}) => {
     ) {
       formData.append(key, JSON.stringify(value));
     } else {
-      formData.append(key, value);
+      if (!value && key === 'miningBlockchainAccountAddress') {
+        formData.append('clearMiningBlockchainAccountAddress', true);
+      } else {
+        formData.append(key, value);
+      }
     }
   }
   return formData;

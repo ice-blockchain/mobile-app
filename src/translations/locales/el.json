@@ -70,7 +70,8 @@
     "follow_us": "Ακολουθήστε μας",
     "subscribe": "Εγγραφή",
     "not_sure": "Δεν είμαι σίγουρος/η",
-    "confirm_address": "Επιβεβαιώστε τη διεύθυνση"
+    "confirm_address": "Επιβεβαιώστε τη διεύθυνση",
+    "remove_address": "Αφαίρεση διεύθυνσης"
   },
   "team": {
     "contacts_tab": "Επαφές",

@@ -70,7 +70,8 @@
     "follow_us": "ما را دنبال کنید",
     "subscribe": "اشتراک",
     "not_sure": "مطمئن نیستم",
-    "confirm_address": "تأیید آدرس"
+    "confirm_address": "تأیید آدرس",
+    "remove_address": "حذف آدرس"
   },
   "team": {
     "contacts_tab": "راه‌های ارتباطی",

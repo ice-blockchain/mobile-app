@@ -70,7 +70,8 @@
     "follow_us": "עקבו אחרינו",
     "subscribe": "הרשמה",
     "not_sure": "לא בטוח/ה",
-    "confirm_address": "אשר כתובת"
+    "confirm_address": "אשר כתובת",
+    "remove_address": "הסר כתובת"
   },
   "team": {
     "contacts_tab": "אנשי קשר",

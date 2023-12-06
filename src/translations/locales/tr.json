@@ -70,7 +70,8 @@
     "follow_us": "Bizi Takip Et",
     "subscribe": "Abone Ol",
     "not_sure": "Emin değilim",
-    "confirm_address": "Adresi Onayla"
+    "confirm_address": "Adresi Onayla",
+    "remove_address": "Adresi Kaldır"
   },
   "team": {
     "contacts_tab": "Kişiler",

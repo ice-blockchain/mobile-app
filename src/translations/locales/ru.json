@@ -70,7 +70,8 @@
     "follow_us": "Подпишитесь на нас",
     "subscribe": "Подписаться",
     "not_sure": "Не уверен",
-    "confirm_address": "Подтвердить адрес"
+    "confirm_address": "Подтвердить адрес",
+    "remove_address": "Удалить адрес"
   },
   "team": {
     "contacts_tab": "Контакты",

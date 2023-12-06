@@ -70,7 +70,8 @@
     "follow_us": "팔로우",
     "subscribe": "구독",
     "not_sure": "확실하지 않음",
-    "confirm_address": "주소 확인"
+    "confirm_address": "주소 확인",
+    "remove_address": "주소 제거"
   },
   "team": {
     "contacts_tab": "연락처",

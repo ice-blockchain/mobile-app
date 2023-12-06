@@ -70,7 +70,8 @@
     "follow_us": "हमें फॉलो करें",
     "subscribe": "सब्सक्राइब करें",
     "not_sure": "सटीक नहीं",
-    "confirm_address": "पता सत्यापित करें"
+    "confirm_address": "पता सत्यापित करें",
+    "remove_address": "पता हटाएं"
   },
   "team": {
     "contacts_tab": "संपर्क",

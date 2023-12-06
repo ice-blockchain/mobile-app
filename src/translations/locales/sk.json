@@ -70,7 +70,8 @@
     "follow_us": "Sleduj nás",
     "subscribe": "Prihlásiť na odber",
     "not_sure": "Nie som si istý/á",
-    "confirm_address": "Potvrdiť adresu"
+    "confirm_address": "Potvrdiť adresu",
+    "remove_address": "Odstrániť adresu"
   },
   "team": {
     "contacts_tab": "Kontakty",

@@ -70,7 +70,8 @@
     "follow_us": "追蹤我們",
     "subscribe": "訂閱",
     "not_sure": "不確定",
-    "confirm_address": "確認地址"
+    "confirm_address": "確認地址",
+    "remove_address": "刪除地址"
   },
   "team": {
     "contacts_tab": "聯絡人",

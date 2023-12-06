@@ -70,7 +70,8 @@
     "follow_us": "ይከተሉን",
     "subscribe": "ተመዝገብ",
     "not_sure": "እርግጠኛ አይደለሁም",
-    "confirm_address": "አድራሻ አረጋግጥ"
+    "confirm_address": "አድራሻ አረጋግጥ",
+    "remove_address": "አድራሻ አስወግድ"
   },
   "team": {
     "contacts_tab": "እውቂያዎች",
