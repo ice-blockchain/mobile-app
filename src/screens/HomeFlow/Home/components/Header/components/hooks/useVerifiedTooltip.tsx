@@ -15,15 +15,11 @@ export const useVerifiedTooltip = () => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
   const [tooltipStyle, setTooltipStyle] = useState<ViewStyle>({});
 
-  const updateTooltipVisibleState = (isVisible: boolean) => {
-    setIsTooltipVisible(isVisible);
-  };
-
   const handleChevronPress = async () => {
     if (!isTooltipVisible) {
       await measureTooltipPosition();
     }
-    updateTooltipVisibleState(!isTooltipVisible);
+    setIsTooltipVisible(!isTooltipVisible);
   };
 
   const measureTooltipPosition = async () => {
@@ -45,7 +41,6 @@ export const useVerifiedTooltip = () => {
   return {
     chevronRef,
     isTooltipVisible,
-    updateTooltipVisibleState,
     handleChevronPress,
     tooltipStyle,
   };

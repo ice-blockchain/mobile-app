@@ -272,6 +272,6 @@ const styles = StyleSheet.create({
     marginTop: rem(1),
   },
   chevron: {
-    marginTop: 4,
+    marginTop: rem(4),
   },
 });
