@@ -70,7 +70,8 @@
     "follow_us": "アカウントをフォロー",
     "subscribe": "チャンネル登録",
     "not_sure": "確信が持てない",
-    "confirm_address": "アドレスを確認"
+    "confirm_address": "アドレスを確認",
+    "remove_address": "住所を削除"
   },
   "team": {
     "contacts_tab": "連絡先",

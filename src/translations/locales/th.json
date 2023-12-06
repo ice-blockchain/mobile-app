@@ -70,7 +70,8 @@
     "follow_us": "ติดตามเรา",
     "subscribe": "สมัครสมาชิก",
     "not_sure": "ไม่แน่ใจ",
-    "confirm_address": "ยืนยันที่อยู่"
+    "confirm_address": "ยืนยันที่อยู่",
+    "remove_address": "ลบที่อยู่"
   },
   "team": {
     "contacts_tab": "ผู้ติดต่อ",

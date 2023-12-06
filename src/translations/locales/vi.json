@@ -70,7 +70,8 @@
     "follow_us": "Theo dõi chúng tôi",
     "subscribe": "Đăng ký",
     "not_sure": "Không chắc chắn",
-    "confirm_address": "Xác nhận địa chỉ"
+    "confirm_address": "Xác nhận địa chỉ",
+    "remove_address": "Xóa địa chỉ"
   },
   "team": {
     "contacts_tab": "Danh bạ",

@@ -70,7 +70,8 @@
     "follow_us": "Ikuti Kami",
     "subscribe": "Langgan",
     "not_sure": "Tidak pasti",
-    "confirm_address": "Sahkan alamat"
+    "confirm_address": "Sahkan alamat",
+    "remove_address": "Buang alamat"
   },
   "team": {
     "contacts_tab": "Kenalan",

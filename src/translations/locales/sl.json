@@ -70,7 +70,8 @@
     "follow_us": "Sledi nam",
     "subscribe": "Naroči se",
     "not_sure": "Nisem prepričan",
-    "confirm_address": "Potrdi naslov"
+    "confirm_address": "Potrdi naslov",
+    "remove_address": "Odstrani naslov"
   },
   "team": {
     "contacts_tab": "Kontakti",

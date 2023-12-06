@@ -70,7 +70,8 @@
     "follow_us": "Kövess minket",
     "subscribe": "Feliratkozás",
     "not_sure": "Nem vagyok biztos",
-    "confirm_address": "Cím megerősítése"
+    "confirm_address": "Cím megerősítése",
+    "remove_address": "Cím eltávolítása"
   },
   "team": {
     "contacts_tab": "Kapcsolatok",

@@ -70,7 +70,8 @@
     "follow_us": "Följ oss",
     "subscribe": "Prenumerera",
     "not_sure": "Inte säker",
-    "confirm_address": "Bekräfta adress"
+    "confirm_address": "Bekräfta adress",
+    "remove_address": "Ta bort adressen"
   },
   "team": {
     "contacts_tab": "Kontakter",

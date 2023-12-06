@@ -70,7 +70,8 @@
     "follow_us": "Підпишіться на нас",
     "subscribe": "Підписатися",
     "not_sure": "Не впевнений",
-    "confirm_address": "Підтвердити адресу"
+    "confirm_address": "Підтвердити адресу",
+    "remove_address": "Видалити адресу"
   },
   "team": {
     "contacts_tab": "Контакти",

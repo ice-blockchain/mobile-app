@@ -70,7 +70,8 @@
     "follow_us": "Na ndiq",
     "subscribe": "Abonohu",
     "not_sure": "Nuk jam i sigurt",
-    "confirm_address": "Konfirmoni adresën"
+    "confirm_address": "Konfirmoni adresën",
+    "remove_address": "Hiqi adresën"
   },
   "team": {
     "contacts_tab": "Kontaktet",
