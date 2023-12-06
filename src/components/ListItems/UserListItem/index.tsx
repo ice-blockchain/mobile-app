@@ -20,7 +20,6 @@ const FLAG_WIDTH = rem(24);
 const FLAG_HEIGHT = (FLAG_WIDTH / 20) * 14;
 const SKELETON_HEIGHT = rem(46);
 const SKELETON_MARGIN = rem(16);
-const VERIFIED_ICON_SIZE = rem(18);
 
 export const SKELETONS_PER_SCREEN = Math.ceil(
   screenHeight / (SKELETON_HEIGHT + SKELETON_MARGIN),
@@ -78,13 +77,7 @@ export const UserListItem = memo(
               <Text style={styles.nameText} numberOfLines={1}>
                 {user.username}
               </Text>
-              {!!user.verified && (
-                <VerifiedSvg
-                  style={styles.badge}
-                  width={VERIFIED_ICON_SIZE}
-                  height={VERIFIED_ICON_SIZE}
-                />
-              )}
+              {!!user.verified && <VerifiedSvg style={styles.badge} />}
             </View>
             {user.phoneNumber ? (
               <Text style={styles.noteText}>{user.phoneNumber}</Text>
