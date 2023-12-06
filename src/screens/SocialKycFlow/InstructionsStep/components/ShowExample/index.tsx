@@ -6,11 +6,11 @@ import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {EyeIcon} from '@svg/EyeIcon';
-import {isRTL, t} from '@translations/i18n';
-import {font} from '@utils/styles';
+import {t} from '@translations/i18n';
+import {font, paddingLeftRtl} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {isAndroid, rem} from 'rn-units';
+import {rem} from 'rn-units';
 
 const ICON_SIZE = rem(16);
 
@@ -51,8 +51,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: rem(16),
   },
   text: {
-    paddingLeft: isRTL && isAndroid ? null : rem(6),
-    paddingRight: isRTL && isAndroid ? rem(6) : null,
+    ...paddingLeftRtl(rem(6)),
     ...font(14, 18, 'regular', 'primaryLight', 'left'),
   },
 });

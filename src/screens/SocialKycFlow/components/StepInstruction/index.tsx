@@ -2,11 +2,11 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {isRTL, replaceString, tagRegex} from '@translations/i18n';
-import {font} from '@utils/styles';
+import {replaceString, tagRegex} from '@translations/i18n';
+import {font, paddingLeftRtl} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {isAndroid, rem} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   stepNumber: number;
@@ -78,16 +78,14 @@ const styles = StyleSheet.create({
   },
   text: {
     flex: 1,
-    paddingLeft: isRTL && isAndroid ? null : rem(12),
-    paddingRight: isRTL && isAndroid ? rem(12) : null,
+    ...paddingLeftRtl(rem(12)),
     ...font(14, 20, 'medium', 'primaryDark', 'left'),
   },
   boldText: {
     ...font(14, 20, 'bold', 'primaryDark', 'left'),
   },
   rightIconContainer: {
-    paddingLeft: isRTL && isAndroid ? null : rem(12),
-    paddingRight: isRTL && isAndroid ? rem(12) : null,
+    ...paddingLeftRtl(rem(12)),
     borderStartWidth: rem(1),
     borderStartColor: COLORS.periwinkleGray,
   },

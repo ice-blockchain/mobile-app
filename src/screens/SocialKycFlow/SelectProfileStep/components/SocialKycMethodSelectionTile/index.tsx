@@ -5,11 +5,10 @@ import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {Images} from '@images';
 import {SocialKycMethod} from '@store/modules/SocialKyc/types';
-import {isRTL} from '@translations/i18n';
-import {font} from '@utils/styles';
+import {font, paddingLeftRtl} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text} from 'react-native';
-import {isAndroid, rem} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   setSocialKycMethod: (method: SocialKycMethod) => void;
@@ -71,8 +70,7 @@ const styles = StyleSheet.create({
   },
   title: {
     flex: 1,
-    paddingLeft: isRTL && isAndroid ? null : rem(12),
-    paddingRight: isRTL && isAndroid ? rem(12) : null,
+    ...paddingLeftRtl(rem(12)),
     justifyContent: 'center',
     ...font(17, 22, 'bold', 'primaryDark', 'left'),
     textTransform: 'capitalize',

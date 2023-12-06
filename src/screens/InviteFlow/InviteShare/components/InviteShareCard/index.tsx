@@ -15,9 +15,10 @@ import {shareSingle, shareSMS, Social} from '@services/share';
 import {usernameSelector} from '@store/modules/Account/selectors';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {t} from '@translations/i18n';
+import {hapticFeedback} from '@utils/device';
 import {buildUsernameLink} from '@utils/username';
 import React, {createRef} from 'react';
-import {Share as ShareMore, Vibration} from 'react-native';
+import {Share as ShareMore} from 'react-native';
 import {openComposer} from 'react-native-email-link';
 import {useSelector} from 'react-redux';
 
@@ -75,7 +76,7 @@ const buttons: ShareButton<{url: string; message: string}>[] = [
     icon: Images.share.link,
     onPress: async ({url}) => {
       Clipboard.setString(url);
-      Vibration.vibrate([0, 50]);
+      hapticFeedback();
       copiedRef.current?.updateVisibleState(true);
     },
   },

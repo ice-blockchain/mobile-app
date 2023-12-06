@@ -24,9 +24,9 @@ export function useCountdown({
   const startCountdown = useCallback(() => {
     countdownIntervalRef.current = setInterval(
       () =>
-        setCountdown(c => {
-          if (c > 0) {
-            return c - 1;
+        setCountdown(value => {
+          if (value > 0) {
+            return value - 1;
           }
           stopCountdown();
           return 0;

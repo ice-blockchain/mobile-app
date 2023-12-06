@@ -2,11 +2,11 @@
 
 import {Images} from '@images';
 import {SocialKycMethod} from '@store/modules/SocialKyc/types';
-import {isRTL, t} from '@translations/i18n';
-import {font} from '@utils/styles';
+import {t} from '@translations/i18n';
+import {font, paddingLeftRtl} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {isAndroid, rem} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   socialKycMethod: SocialKycMethod;
@@ -45,8 +45,7 @@ const styles = StyleSheet.create({
     borderRadius: rem(7),
   },
   text: {
-    paddingLeft: isRTL && isAndroid ? null : rem(14),
-    paddingRight: isRTL && isAndroid ? rem(14) : null,
+    ...paddingLeftRtl(rem(14)),
     ...font(24, 32, 'black', 'primaryDark', 'left'),
   },
 });

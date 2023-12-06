@@ -29,9 +29,10 @@ import {SocialKycMethod, SocialKycStatus} from '@store/modules/SocialKyc/types';
 import {isSocialKycFinalized} from '@store/modules/SocialKyc/utils';
 import {CopyIcon} from '@svg/CopyIcon';
 import {t} from '@translations/i18n';
+import {hapticFeedback} from '@utils/device';
 import {font} from '@utils/styles';
 import React, {useEffect, useState} from 'react';
-import {ScrollView, StyleSheet, Text, Vibration, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -70,7 +71,7 @@ export function InstructionsStep({
   const copyText = () => {
     Clipboard.setString(repostText);
     setIsTextCopied(true);
-    Vibration.vibrate([0, 50]);
+    hapticFeedback();
   };
   const socialKycStatus = useSelector(socialKycStatusSelector);
   const dispatch = useDispatch();
@@ -85,6 +86,7 @@ export function InstructionsStep({
   }, [kycStep, onSkip, socialKycMethod, socialKycStatus, updateStepPassed]);
   const onConfirm = () => {
     if (socialKycMethod === 'Facebook') {
+      // TODO: move to saga once facebook flow is enabled
       getFacebookAccessTokenForUserPosts()
         .then(accessToken => {
           dispatch(
