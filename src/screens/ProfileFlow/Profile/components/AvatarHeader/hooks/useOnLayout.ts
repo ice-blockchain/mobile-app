@@ -2,7 +2,6 @@
 
 import {useCallback, useState} from 'react';
 import {LayoutChangeEvent} from 'react-native';
-import {rem} from 'rn-units';
 
 export const useOnLayout = () => {
   const [navigationContainerLeftWidth, setNavigationContainerLeftWidth] =
@@ -43,7 +42,7 @@ export const useOnLayout = () => {
         layout: {width},
       },
     }: LayoutChangeEvent) => {
-      setWrapperWidth(width - rem(34));
+      setWrapperWidth(width);
     },
     [],
   );

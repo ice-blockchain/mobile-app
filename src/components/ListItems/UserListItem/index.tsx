@@ -18,9 +18,9 @@ import {isAndroid, rem, screenHeight} from 'rn-units';
 
 const FLAG_WIDTH = rem(24);
 const FLAG_HEIGHT = (FLAG_WIDTH / 20) * 14;
-
 const SKELETON_HEIGHT = rem(46);
 const SKELETON_MARGIN = rem(16);
+const VERIFIED_ICON_SIZE = rem(18);
 
 export const SKELETONS_PER_SCREEN = Math.ceil(
   screenHeight / (SKELETON_HEIGHT + SKELETON_MARGIN),
@@ -80,9 +80,9 @@ export const UserListItem = memo(
               </Text>
               {!!user.verified && (
                 <VerifiedSvg
-                  style={[styles.badge]}
-                  width={rem(18)}
-                  height={rem(18)}
+                  style={styles.badge}
+                  width={VERIFIED_ICON_SIZE}
+                  height={VERIFIED_ICON_SIZE}
                 />
               )}
             </View>
