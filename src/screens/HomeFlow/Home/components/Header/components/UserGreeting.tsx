@@ -42,10 +42,6 @@ export const UserGreeting = ({disabled, animatedStyle}: UserGreetingProps) => {
     navigation.navigate('ProfileTab');
   };
 
-  const handleChevronPress = () => {
-    showTooltip();
-  };
-
   return (
     <View style={styles.container}>
       {user?.profilePictureUrl && (
@@ -68,7 +64,7 @@ export const UserGreeting = ({disabled, animatedStyle}: UserGreetingProps) => {
               </Text>
               {verified && (
                 <View ref={chevronRef} collapsable={false}>
-                  <TouchableWithoutFeedback onPress={handleChevronPress}>
+                  <TouchableWithoutFeedback onPress={showTooltip}>
                     <VerifiedSvg style={styles.badge} />
                   </TouchableWithoutFeedback>
                 </View>
