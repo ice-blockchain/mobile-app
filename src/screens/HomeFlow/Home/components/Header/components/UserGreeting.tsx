@@ -6,15 +6,15 @@ import {MainTabsParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {GreetingText} from '@screens/HomeFlow/Home/components/Header/components/GreetingText';
+import {useVerifiedTooltip} from '@screens/HomeFlow/Home/components/Header/components/hooks/useVerifiedTooltip';
 import {userSelector, verifiedSelector} from '@store/modules/Account/selectors';
 import {VerifiedSvg} from '@svg/Verified';
 import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import {buildUsernameWithPrefix} from '@utils/username';
-import React, {forwardRef, Ref, useImperativeHandle, useRef} from 'react';
+import React from 'react';
 import {
   ImageStyle,
-  LayoutRectangle,
   StyleSheet,
   Text,
   TextStyle,
@@ -29,84 +29,57 @@ import {rem} from 'rn-units/index';
 type UserGreetingProps = {
   disabled: boolean;
   animatedStyle?: AnimatedStyleProp<ViewStyle | ImageStyle | TextStyle>;
-  onVerifiedChevronPress?: () => void;
 };
 
-export type UserGreetingMethods = {
-  measure: () => Promise<LayoutRectangle>;
+export const UserGreeting = ({disabled, animatedStyle}: UserGreetingProps) => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainTabsParamList>>();
+  const user = useSelector(userSelector);
+  const verified = useSelector(verifiedSelector);
+  const {chevronRef, showTooltip} = useVerifiedTooltip();
+
+  const openProfile = () => {
+    navigation.navigate('ProfileTab');
+  };
+
+  const handleChevronPress = () => {
+    showTooltip();
+  };
+
+  return (
+    <View style={styles.container}>
+      {user?.profilePictureUrl && (
+        <Touchable onPress={openProfile}>
+          <Avatar
+            uri={user.profilePictureUrl}
+            size={rem(36)}
+            borderRadius={rem(16)}
+            allowFullScreen={false}
+          />
+        </Touchable>
+      )}
+      <Animated.View style={[styles.greeting, animatedStyle]}>
+        <Touchable disabled={disabled} onPress={openProfile}>
+          <GreetingText />
+          {user?.username && (
+            <View style={styles.usernameContainer}>
+              <Text style={styles.usernameText}>
+                {buildUsernameWithPrefix(user.username)}
+              </Text>
+              {verified && (
+                <View ref={chevronRef} collapsable={false}>
+                  <TouchableWithoutFeedback onPress={handleChevronPress}>
+                    <VerifiedSvg style={styles.badge} />
+                  </TouchableWithoutFeedback>
+                </View>
+              )}
+            </View>
+          )}
+        </Touchable>
+      </Animated.View>
+    </View>
+  );
 };
-
-export const UserGreeting = forwardRef<UserGreetingMethods, UserGreetingProps>(
-  (
-    {disabled, animatedStyle, onVerifiedChevronPress}: UserGreetingProps,
-    forwardedRef: Ref<UserGreetingMethods>,
-  ) => {
-    const navigation =
-      useNavigation<NativeStackNavigationProp<MainTabsParamList>>();
-    const user = useSelector(userSelector);
-    const verified = useSelector(verifiedSelector);
-
-    const chevronRef = useRef<View>(null);
-
-    const openProfile = () => {
-      navigation.navigate('ProfileTab');
-    };
-
-    const handleChevronPress = () => {
-      onVerifiedChevronPress?.();
-    };
-
-    const measure = async () => {
-      return new Promise<LayoutRectangle>(resolve => {
-        chevronRef.current?.measure((_, __, width, height, x, y) => {
-          const measurement: LayoutRectangle = {
-            x,
-            y,
-            width,
-            height,
-          };
-          resolve(measurement);
-        });
-      });
-    };
-
-    useImperativeHandle(forwardedRef, () => ({measure}));
-
-    return (
-      <View style={styles.container}>
-        {user?.profilePictureUrl && (
-          <Touchable onPress={openProfile}>
-            <Avatar
-              uri={user.profilePictureUrl}
-              size={rem(36)}
-              borderRadius={rem(16)}
-              allowFullScreen={false}
-            />
-          </Touchable>
-        )}
-        <Animated.View style={[styles.greeting, animatedStyle]}>
-          <Touchable disabled={disabled} onPress={openProfile}>
-            <GreetingText />
-            {user?.username && (
-              <View style={styles.usernameContainer}>
-                <Text style={styles.usernameText}>
-                  {buildUsernameWithPrefix(user.username)}
-                </Text>
-                {verified && (
-                  <View ref={chevronRef} collapsable={false}>
-                    <TouchableWithoutFeedback onPress={handleChevronPress}>
-                      <VerifiedSvg style={styles.badge} />
-                    </TouchableWithoutFeedback>
-                  </View>
-                )}
-              </View>
-            )}
-          </Touchable>
-        </Animated.View>
-      </View>
-    );
-  },
-);
 
 const styles = StyleSheet.create({
   container: {

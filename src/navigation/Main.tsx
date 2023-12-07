@@ -55,6 +55,7 @@ import {ProfilePrivacyEditStep3} from '@screens/Modals/ProfilePrivacyEdit/step3'
 import {ReferralCountInfo} from '@screens/Modals/ReferralCountInfo';
 import {RepostExample} from '@screens/Modals/RepostExample';
 import {Tooltip} from '@screens/Modals/Tooltip';
+import {VerifiedTooltipPopUp} from '@screens/Modals/VerifiedTooltipPopUp';
 import {News} from '@screens/News';
 import {Badges} from '@screens/ProfileFlow/Badges';
 import {Profile} from '@screens/ProfileFlow/Profile';
@@ -157,6 +158,9 @@ export type MainStackParamList = {
   ProfilePrivacyEditStep2: undefined;
   ProfilePrivacyEditStep3: undefined;
   EthereumAddress: undefined;
+  VerifiedTooltipPopUp: {
+    hostViewParams: ViewMeasurementsResult;
+  };
 };
 
 export type HomeTabStackParamList = {
@@ -447,6 +451,11 @@ export function MainNavigator() {
         component={JoinTelegramPopUp}
       />
       <MainStack.Screen name="EthereumAddress" component={EthereumAddress} />
+      <MainStack.Screen
+        name="VerifiedTooltipPopUp"
+        component={VerifiedTooltipPopUp}
+        options={modalOptions}
+      />
     </MainStack.Navigator>
   );
 }
