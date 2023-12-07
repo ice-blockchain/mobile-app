@@ -58,10 +58,22 @@ export function SocialKycFlow() {
       setSocialKycFlowPhase('VERIFICATION');
     }
   }, [socialKycMethod]);
+  const onInstructionsStepGoBack = useCallback(() => {
+    dispatch(SocialKycActions.RESET_SOCIAL_KYC_STATUS.STATE.create());
+    setSocialKycFlowPhase('SELECT_PROFILE_TYPE');
+  }, [dispatch]);
   const onVerificationStepPassed = useCallback(
     () => setSocialKycFlowPhase('RESULT'),
     [],
   );
+  const onVerificationStepGoBack = useCallback(() => {
+    dispatch(SocialKycActions.RESET_SOCIAL_KYC_STATUS.STATE.create());
+    setSocialKycFlowPhase('INSTRUCTIONS');
+  }, [dispatch]);
+  const onTryAgain = useCallback(() => {
+    setSocialKycFlowPhase('SELECT_PROFILE_TYPE');
+    dispatch(SocialKycActions.RESET_SOCIAL_KYC_STATUS.STATE.create());
+  }, [dispatch]);
 
   return (
     <View style={styles.container}>
@@ -79,10 +91,7 @@ export function SocialKycFlow() {
       {socialKycFlowPhase === 'INSTRUCTIONS' ? (
         <InstructionsStep
           kycStep={kycStep}
-          onGoBack={() => {
-            dispatch(SocialKycActions.RESET_SOCIAL_KYC_STATUS.STATE.create());
-            setSocialKycFlowPhase('SELECT_PROFILE_TYPE');
-          }}
+          onGoBack={onInstructionsStepGoBack}
           onSkip={onSkip}
           socialKycMethod={socialKycMethod ?? 'X'}
           updateStepPassed={onInstructionsStepPassed}
@@ -91,23 +100,14 @@ export function SocialKycFlow() {
       {socialKycFlowPhase === 'VERIFICATION' ? (
         <VerificationStep
           kycStep={kycStep}
-          onGoBack={() => {
-            dispatch(SocialKycActions.RESET_SOCIAL_KYC_STATUS.STATE.create());
-            setSocialKycFlowPhase('INSTRUCTIONS');
-          }}
+          onGoBack={onVerificationStepGoBack}
           onSkip={onSkip}
           socialKycMethod={socialKycMethod ?? 'X'}
           updateStepPassed={onVerificationStepPassed}
         />
       ) : null}
       {socialKycFlowPhase === 'RESULT' ? (
-        <ResultStep
-          onSkip={onSkip}
-          onTryAgain={() => {
-            setSocialKycFlowPhase('SELECT_PROFILE_TYPE');
-            dispatch(SocialKycActions.RESET_SOCIAL_KYC_STATUS.STATE.create());
-          }}
-        />
+        <ResultStep onSkip={onSkip} onTryAgain={onTryAgain} />
       ) : null}
     </View>
   );
