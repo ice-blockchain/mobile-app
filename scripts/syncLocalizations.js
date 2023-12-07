@@ -49,14 +49,14 @@ function updateJsonFiles(newJsonPath, jsonFilesDirectory) {
     if (file.endsWith('.json')) {
       const jsonFilePath = path.join(jsonFilesDirectory, file);
       const languageCode = path.basename(file, '.json');
-
       ensureValidJsonFile(jsonFilePath);
-
-      if (newJson[languageCode]) {
+      const value =
+        newJson[languageCode] || newJson[`${newJson[languageCode]}.json`];
+      if (value) {
         let existingJson = JSON.parse(
           fs.readFileSync(jsonFilePath, 'utf8') || '{}',
         );
-        deepMerge(existingJson, newJson[languageCode]);
+        deepMerge(existingJson, value);
 
         fs.writeFileSync(
           jsonFilePath,

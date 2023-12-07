@@ -53,7 +53,7 @@ export function SelectProfileStep({
   useEffect(() => {
     if (getSocialKycRepostTextStatus === 'SUCCESS') {
       updateStepPassed();
-    } else if (getSocialKycRepostTextStatus === 'ERROR') {
+    } else if (getSocialKycRepostTextStatus === 'SKIPPABLE_ERROR') {
       onSkip();
     }
   }, [getSocialKycRepostTextStatus, kycStep, onSkip, updateStepPassed]);

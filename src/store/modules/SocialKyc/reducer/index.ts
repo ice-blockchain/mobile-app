@@ -22,6 +22,7 @@ type Actions = ReturnType<
 
 export interface State {
   socialKycStatus: SocialKycStatus | null;
+  socialKycErrorMessage: string | null;
   getSocialKycRepostTextStatus: GetSocialKycRepostTextStatus | null;
   remainingAttempts: number;
   repostText: string | null;
@@ -29,6 +30,7 @@ export interface State {
 
 const INITIAL_STATE: State = {
   socialKycStatus: null,
+  socialKycErrorMessage: null,
   getSocialKycRepostTextStatus: null,
   remainingAttempts: 0,
   repostText: null,
@@ -51,7 +53,10 @@ export function socialKycReducer(
         draft.socialKycStatus = 'FAILED';
         break;
       case SocialKycActions.SOCIAL_KYC_VERIFICATION.ERROR.type:
-        draft.socialKycStatus = 'ERROR';
+        draft.socialKycStatus = action.payload?.skippable
+          ? 'SKIPPABLE_ERROR'
+          : 'ERROR';
+        draft.socialKycErrorMessage = action.payload?.message ?? null;
         break;
       case SocialKycActions.GET_SOCIAL_KYC_REPOST_TEXT.START.type:
         draft.getSocialKycRepostTextStatus = 'LOADING';
@@ -64,6 +69,7 @@ export function socialKycReducer(
         draft.getSocialKycRepostTextStatus = 'ERROR';
         break;
       case SocialKycActions.RESET_SOCIAL_KYC_STATUS.STATE.type:
+        return {...INITIAL_STATE, repostText: draft.repostText};
       case AccountActions.SIGN_OUT.SUCCESS.type:
         return {...INITIAL_STATE};
     }

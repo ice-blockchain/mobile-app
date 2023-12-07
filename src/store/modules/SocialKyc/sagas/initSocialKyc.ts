@@ -5,7 +5,9 @@ import {Api} from '@api/index';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {SocialKycActions} from '@store/modules/SocialKyc/actions';
 import {socialKycMethodToApiSocialMethod} from '@store/modules/SocialKyc/utils';
+import {t} from '@translations/i18n';
 import {showError} from '@utils/errors';
+import {isValidURI} from '@utils/uri';
 import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
 type Actions = ReturnType<
@@ -15,6 +17,18 @@ type Actions = ReturnType<
 export function* initSocialKyc(action: Actions) {
   try {
     const {postUrl, accessToken, socialKycMethod, kycStep} = action.payload;
+    const isValidPostUrl: SagaReturnType<typeof isValidURI> = yield call(
+      isValidURI,
+      postUrl,
+    );
+    if (!isValidPostUrl) {
+      yield put(
+        SocialKycActions.SOCIAL_KYC_VERIFICATION.ERROR.create({
+          message: t('invalid_link.title'),
+        }),
+      );
+      return;
+    }
     const user: SagaReturnType<typeof unsafeUserSelector> = yield select(
       unsafeUserSelector,
     );
@@ -37,19 +51,16 @@ export function* initSocialKyc(action: Actions) {
       );
     }
   } catch (error: unknown) {
-    yield put(SocialKycActions.SOCIAL_KYC_VERIFICATION.ERROR.create());
-    if (
-      !(
-        // for those 2 specific errors just silently start the mining. for all others also show the monkey
-        (
-          isApiError(
-            error,
-            409,
-            'SOCIAL_KYC_STEP_ALREADY_COMPLETED_SUCCESSFULLY',
-          ) || isApiError(error, 403, 'SOCIAL_KYC_STEP_NOT_AVAILABLE')
-        )
-      )
-    ) {
+    const skippable =
+      isApiError(
+        error,
+        409,
+        'SOCIAL_KYC_STEP_ALREADY_COMPLETED_SUCCESSFULLY',
+      ) || isApiError(error, 403, 'SOCIAL_KYC_STEP_NOT_AVAILABLE');
+    yield put(
+      SocialKycActions.SOCIAL_KYC_VERIFICATION.ERROR.create({skippable}),
+    );
+    if (!skippable) {
       yield spawn(showError, error);
     }
   }
