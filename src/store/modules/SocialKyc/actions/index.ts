@@ -14,7 +14,7 @@ const SOCIAL_KYC_VERIFICATION = createAction('SOCIAL_KYC_VERIFICATION', {
     return payload;
   },
   SUCCESS: true,
-  ERROR: true,
+  ERROR: (payload: {skippable?: boolean; message?: string}) => payload,
   FAILURE: (payload: {remainingAttempts: number}) => payload,
 });
 
@@ -24,7 +24,7 @@ const GET_SOCIAL_KYC_REPOST_TEXT = createAction('GET_SOCIAL_KYC_REPOST_TEXT', {
     kycStep: SocialKycStepNumber;
   }) => payload,
   SUCCESS: (payload: {repostText: string}) => payload,
-  ERROR: true,
+  ERROR: (payload: {skippable?: boolean}) => payload,
 });
 
 const RESET_SOCIAL_KYC_STATUS = createAction('RESET_SOCIAL_KYC_STATUS', {

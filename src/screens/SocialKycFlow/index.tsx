@@ -91,7 +91,10 @@ export function SocialKycFlow() {
       {socialKycFlowPhase === 'VERIFICATION' ? (
         <VerificationStep
           kycStep={kycStep}
-          onGoBack={() => setSocialKycFlowPhase('INSTRUCTIONS')}
+          onGoBack={() => {
+            dispatch(SocialKycActions.RESET_SOCIAL_KYC_STATUS.STATE.create());
+            setSocialKycFlowPhase('INSTRUCTIONS');
+          }}
           onSkip={onSkip}
           socialKycMethod={socialKycMethod ?? 'X'}
           updateStepPassed={onVerificationStepPassed}

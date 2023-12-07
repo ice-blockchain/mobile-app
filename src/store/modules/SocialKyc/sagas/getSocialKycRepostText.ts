@@ -32,22 +32,23 @@ export function* getSocialKycRepostText(action: Actions) {
         }),
       );
     } else {
-      yield put(SocialKycActions.GET_SOCIAL_KYC_REPOST_TEXT.ERROR.create());
+      yield put(
+        SocialKycActions.GET_SOCIAL_KYC_REPOST_TEXT.ERROR.create({
+          skippable: true,
+        }),
+      );
     }
   } catch (error: unknown) {
-    yield put(SocialKycActions.GET_SOCIAL_KYC_REPOST_TEXT.ERROR.create());
-    if (
-      !(
-        // for those 2 specific errors just silently start the mining. for all others also show the monkey
-        (
-          isApiError(
-            error,
-            409,
-            'SOCIAL_KYC_STEP_ALREADY_COMPLETED_SUCCESSFULLY',
-          ) || isApiError(error, 403, 'SOCIAL_KYC_STEP_NOT_AVAILABLE')
-        )
-      )
-    ) {
+    const skippable =
+      isApiError(
+        error,
+        409,
+        'SOCIAL_KYC_STEP_ALREADY_COMPLETED_SUCCESSFULLY',
+      ) || isApiError(error, 403, 'SOCIAL_KYC_STEP_NOT_AVAILABLE');
+    yield put(
+      SocialKycActions.GET_SOCIAL_KYC_REPOST_TEXT.ERROR.create({skippable}),
+    );
+    if (!skippable) {
       yield spawn(showError, error);
     }
   }

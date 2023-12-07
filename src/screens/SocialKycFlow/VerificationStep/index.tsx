@@ -19,7 +19,10 @@ import {
 import {Confirmation} from '@screens/SocialKycFlow/VerificationStep/components/Confirmation';
 import {useCountdown} from '@screens/SocialKycFlow/VerificationStep/hooks/useCountdown';
 import {SocialKycActions} from '@store/modules/SocialKyc/actions';
-import {socialKycStatusSelector} from '@store/modules/SocialKyc/selectors';
+import {
+  socialKycErrorMessageSelector,
+  socialKycStatusSelector,
+} from '@store/modules/SocialKyc/selectors';
 import {SocialKycMethod, SocialKycStatus} from '@store/modules/SocialKyc/types';
 import {isSocialKycFinalized} from '@store/modules/SocialKyc/utils';
 import {CopyIcon} from '@svg/LinkIcon';
@@ -66,11 +69,12 @@ export function VerificationStep({
 }: Props) {
   const [repostLinkUrl, setRepostLinkUrl] = useState('');
   const socialKycStatus = useSelector(socialKycStatusSelector);
+  const socialKycErrorMessage = useSelector(socialKycErrorMessageSelector);
   const dispatch = useDispatch();
   useEffect(() => {
     if (isSocialKycFinalized(socialKycStatus)) {
       updateStepPassed();
-    } else if (socialKycStatus === 'ERROR') {
+    } else if (socialKycStatus === 'SKIPPABLE_ERROR') {
       onSkip();
     }
   }, [kycStep, onSkip, socialKycStatus, updateStepPassed]);
@@ -138,7 +142,14 @@ export function VerificationStep({
           <View style={styles.separator} />
           <CommonInput
             label={t('social_kyc.verification_step.placeholder')}
-            onChangeText={setRepostLinkUrl}
+            onChangeText={(text: string) => {
+              if (socialKycErrorMessage) {
+                dispatch(
+                  SocialKycActions.RESET_SOCIAL_KYC_STATUS.STATE.create(),
+                );
+              }
+              setRepostLinkUrl(text);
+            }}
             icon={
               <CopyIcon
                 color={COLORS.secondary}
@@ -146,6 +157,8 @@ export function VerificationStep({
                 height={ICON_SIZE}
               />
             }
+            editable={socialKycStatus !== 'LOADING'}
+            errorText={socialKycErrorMessage}
             value={repostLinkUrl}
           />
         </View>
