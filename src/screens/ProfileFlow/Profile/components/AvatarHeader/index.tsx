@@ -43,6 +43,7 @@ import {useOnLayout} from './hooks/useOnLayout';
 const NOT_FOUND = require('../../assets/images/notFoundPlaceholder.png');
 
 export const AVATAR_SIZE = rem(122);
+const VERIFIED_SIZE = rem(18);
 
 type Props = {
   user: User | null;
@@ -71,6 +72,9 @@ export const AvatarHeader = memo(
       onLayoutTitleText,
     } = useOnLayout();
 
+    const verifiedWidth =
+      user && user.verified ? wrapperWidth - VERIFIED_SIZE * 2 : wrapperWidth;
+
     const {
       titleAnimatedStyle,
       imageAnimatedStyle,
@@ -83,7 +87,7 @@ export const AvatarHeader = memo(
       animatedIndex,
       navigationContainerLeftWidth,
       navigationContainerRightWidth,
-      wrapperWidth,
+      wrapperWidth: verifiedWidth,
       titleTextWidth,
     });
 
@@ -182,7 +186,7 @@ export const AvatarHeader = memo(
                   ref={chevronRef}
                   style={[verifiedStyle, styles.chevron]}>
                   <TouchableWithoutFeedback onPress={showTooltip}>
-                    <VerifiedSvg />
+                    <VerifiedSvg width={VERIFIED_SIZE} height={VERIFIED_SIZE} />
                   </TouchableWithoutFeedback>
                 </Animated.View>
               )}
