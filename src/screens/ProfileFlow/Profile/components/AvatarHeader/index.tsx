@@ -12,6 +12,7 @@ import {QRCodeShareButton} from '@navigation/components/Header/components/QRCode
 import {SettingsButton} from '@navigation/components/Header/components/SettingsButton';
 import {ShowPrivacyButton} from '@navigation/components/Header/components/ShowPrivacyButton';
 import {useTopOffsetStyle} from '@navigation/hooks/useTopOffsetStyle';
+import {useVerifiedTooltip} from '@screens/HomeFlow/Home/components/Header/components/hooks/useVerifiedTooltip';
 import {AgendaContactTooltip} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/AgendaContactTooltip';
 import {ContactsAvatarButton} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/ContactsAvatarButton';
 import {EditAvatarButton} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/EditAvatarButton';
@@ -27,7 +28,13 @@ import {VerifiedSvg} from '@svg/Verified';
 import {font, mirrorTransform} from '@utils/styles';
 import {buildUsernameWithPrefix} from '@utils/username';
 import React, {memo, useState} from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
@@ -47,6 +54,7 @@ type Props = {
 export const AvatarHeader = memo(
   ({user, animatedIndex, isOwner, isLoading = false}: Props) => {
     const topOffset = useTopOffsetStyle();
+    const {chevronRef, showTooltip} = useVerifiedTooltip(-1);
 
     const uri = user?.profilePictureUrl;
 
@@ -170,8 +178,12 @@ export const AvatarHeader = memo(
                 </Animated.Text>
               )}
               {user && !!user.verified && (
-                <Animated.View style={[verifiedStyle, styles.chevron]}>
-                  <VerifiedSvg />
+                <Animated.View
+                  ref={chevronRef}
+                  style={[verifiedStyle, styles.chevron]}>
+                  <TouchableWithoutFeedback onPress={showTooltip}>
+                    <VerifiedSvg />
+                  </TouchableWithoutFeedback>
                 </Animated.View>
               )}
             </Animated.View>

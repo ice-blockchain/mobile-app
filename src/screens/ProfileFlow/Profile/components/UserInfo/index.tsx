@@ -17,7 +17,7 @@ type Props = {
 export const USER_INFO_HEIGHT = rem(173);
 
 export const UserInfo = ({user}: Props) => {
-  const {chevronRef, showTooltip} = useVerifiedTooltip();
+  const {chevronRef, showTooltip} = useVerifiedTooltip(1);
   return (
     <View style={styles.container}>
       <View style={styles.usernameContainer}>

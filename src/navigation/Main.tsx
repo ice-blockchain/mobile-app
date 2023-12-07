@@ -160,6 +160,7 @@ export type MainStackParamList = {
   EthereumAddress: undefined;
   VerifiedTooltipPopUp: {
     hostViewParams: ViewMeasurementsResult;
+    correctiveOffset?: number;
   };
 };
 

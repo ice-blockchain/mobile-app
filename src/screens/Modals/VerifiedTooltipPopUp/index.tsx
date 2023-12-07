@@ -20,7 +20,7 @@ export const VerifiedTooltipPopUp = () => {
     useNavigation<NativeStackNavigationProp<HomeTabStackParamList>>();
 
   const {
-    params: {hostViewParams},
+    params: {hostViewParams, correctiveOffset = 2},
   } = useRoute<RouteProp<MainStackParamList, 'VerifiedTooltipPopUp'>>();
 
   const onClose = useCallback(() => {
@@ -33,15 +33,23 @@ export const VerifiedTooltipPopUp = () => {
       hostViewParams.x -
       TOOLTIP_WIDTH / 2 -
       hostViewParams.width / 2 +
-      2;
+      correctiveOffset;
     const ltrX =
-      hostViewParams.x - TOOLTIP_WIDTH / 2 + hostViewParams.width / 2 + 1;
+      hostViewParams.x -
+      TOOLTIP_WIDTH / 2 +
+      hostViewParams.width / 2 +
+      correctiveOffset;
 
     return {
       top: hostViewParams.y + TOOLTIP_HEIGHT + 4,
       left: isRTL ? rtlX : ltrX,
     };
-  }, [hostViewParams.width, hostViewParams.y, hostViewParams.x]);
+  }, [
+    hostViewParams.width,
+    hostViewParams.y,
+    hostViewParams.x,
+    correctiveOffset,
+  ]);
 
   const tap = Gesture.Tap().onStart(() => {
     runOnJS(onClose)();

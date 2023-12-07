@@ -7,7 +7,7 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {useRef} from 'react';
 import {View} from 'react-native';
 
-export const useVerifiedTooltip = () => {
+export const useVerifiedTooltip = (correctiveOffset?: number) => {
   const chevronRef = useRef<View>(null);
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
@@ -39,6 +39,7 @@ export const useVerifiedTooltip = () => {
       if (result) {
         navigation.navigate('VerifiedTooltipPopUp', {
           hostViewParams: result,
+          correctiveOffset,
         });
       }
     }

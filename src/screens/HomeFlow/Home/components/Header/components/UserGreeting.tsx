@@ -36,7 +36,7 @@ export const UserGreeting = ({disabled, animatedStyle}: UserGreetingProps) => {
     useNavigation<NativeStackNavigationProp<MainTabsParamList>>();
   const user = useSelector(userSelector);
   const verified = useSelector(verifiedSelector);
-  const {chevronRef, showTooltip} = useVerifiedTooltip();
+  const {chevronRef, showTooltip} = useVerifiedTooltip(1);
 
   const openProfile = () => {
     navigation.navigate('ProfileTab');
