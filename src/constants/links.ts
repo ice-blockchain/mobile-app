@@ -53,4 +53,6 @@ export const LINKS = {
   WHITEPAPER: 'https://ice.io/whitepaper',
   JOIN_DECENTRALIZED_FUTURE: 'https://www.youtube.com/watch?v=h1Kkn4EjSV4',
   X_REPOST_EXAMPLE: 'https://ice-production.b-cdn.net/assets/x-post.jpg',
+  X_REPOST_LINK_EXAMPLE:
+    'https://twitter.com/ice_z3us/status/1732445405806477625?t=HgtbOUEVIxMENcUuRKIsQQ&s=19',
 };

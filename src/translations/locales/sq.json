@@ -1206,8 +1206,8 @@
         "countdown": "{{countdown}} sekonda mbetur"
       },
       "pop_up": {
-        "title": "Konfirmimi",
-        "description": "Sigurohuni që postimi është i disponueshëm në mënyrë publike dhe përmban tekstin e saktë të dhënë në ekranin e mëparshëm."
+        "title": "Lidhja e pavlefshme",
+        "description": "Sigurohuni që keni kopjuar lidhjen e duhur.\n\nShembull:\n{{link}}"
       }
     },
     "results_step": {

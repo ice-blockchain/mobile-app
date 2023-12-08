@@ -1206,8 +1206,8 @@
         "countdown": "Kalan süre: {{countdown}} saniye"
       },
       "pop_up": {
-        "title": "Onay",
-        "description": "Lütfen gönderinin kamuya açık olduğundan ve önceki ekranda verilen tam metni içerdiğinden emin olun."
+        "title": "Geçersiz Bağlantı",
+        "description": "Doğru bağlantıyı kopyaladığınızdan emin olun.\n\nÖrnek:\n{{link}}"
       }
     },
     "results_step": {

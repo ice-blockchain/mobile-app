@@ -1206,8 +1206,8 @@
         "countdown": "Verbleibende Zeit: {{countdown}} Sekunden"
       },
       "pop_up": {
-        "title": "Bestätigung",
-        "description": "Stellen Sie bitte sicher, dass der Beitrag öffentlich zugänglich ist und den exakten Text enthält, der auf dem vorherigen Bildschirm angezeigt wird."
+        "title": "Ungültiger Link",
+        "description": "Stellen Sie sicher, dass Sie den richtigen Link kopiert haben.\n\nBeispiel:\n{{link}}"
       }
     },
     "results_step": {

@@ -1209,8 +1209,8 @@
         "countdown": "{{countdown}}s oorblywend"
       },
       "pop_up": {
-        "title": "Bevestiging",
-        "description": "Maak asseblief seker dat die pos openbaar beskikbaar is en dat dit die presiese teks bevat wat in die vorige skerm verskaf is."
+        "title": "Ongeldige Skakel",
+        "description": "Maak asseblief seker dat jy die regte skakel gekopieer het.\n\nVoorbeeld:\n{{link}}"
       }
     },
     "results_step": {

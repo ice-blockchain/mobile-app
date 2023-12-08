@@ -1206,8 +1206,8 @@
         "countdown": "{{countdown}} giây còn lại"
       },
       "pop_up": {
-        "title": "Xác nhận",
-        "description": "Vui lòng đảm bảo rằng bài đăng là công khai và chứa đúng văn bản được cung cấp ở màn hình trước đó."
+        "title": "Liên kết Không Hợp Lệ",
+        "description": "Vui lòng đảm bảo bạn đã sao chép liên kết đúng.\n\nVí dụ:\n{{link}}"
       }
     },
     "results_step": {

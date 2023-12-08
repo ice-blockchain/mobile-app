@@ -1206,8 +1206,8 @@
         "countdown": "{{countdown}} saniyə qalıb"
       },
       "pop_up": {
-        "title": "Təsdiq",
-        "description": "Lütfən yazının ictimaiyyətə açıq olduğundan və əvvəlki ekranın içində verilmiş tam metni ehtiva etdiyindən əmin olun."
+        "title": "Yanlış Keçid",
+        "description": "Zəhmət olmasa düzgün keçidi kopyaladığınızdan əmin olun.\n\nNümunə:\n{{link}}"
       }
     },
     "results_step": {

@@ -1206,8 +1206,8 @@
         "countdown": "{{countdown}} másodperc van hátra"
       },
       "pop_up": {
-        "title": "Megerősítés",
-        "description": "Győződj meg róla, hogy a bejegyzés nyilvánosan elérhető, és tartalmazza a pontosan megadott szöveget az előző képernyőn."
+        "title": "Érvénytelen Hivatkozás",
+        "description": "Győződjön meg arról, hogy a helyes hivatkozást másolta.\n\nPélda:\n{{link}}"
       }
     },
     "results_step": {

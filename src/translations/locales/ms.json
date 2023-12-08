@@ -1206,8 +1206,8 @@
         "countdown": "Sisa {{countdown}} saat"
       },
       "pop_up": {
-        "title": "Pengesahan",
-        "description": "Sila pastikan bahawa pos itu boleh diakses oleh orang ramai dan mengandungi teks yang tepat seperti yang diberikan dalam skrin sebelumnya."
+        "title": "Pautan Tidak Sah",
+        "description": "Pastikan anda telah menyalin pautan yang betul.\n\nContoh:\n{{link}}"
       }
     },
     "results_step": {

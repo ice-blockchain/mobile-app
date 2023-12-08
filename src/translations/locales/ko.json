@@ -1206,8 +1206,8 @@
         "countdown": "{{countdown}}초 남음"
       },
       "pop_up": {
-        "title": "확인",
-        "description": "게시물이 공개되어 있고 이전 화면에서 제공된 정확한 텍스트를 포함하는지 확인하세요."
+        "title": "잘못된 링크",
+        "description": "올바른 링크를 복사했는지 확인하십시오.\n\n예:\n{{link}}"
       }
     },
     "results_step": {

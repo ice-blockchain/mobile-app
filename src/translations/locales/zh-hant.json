@@ -1207,8 +1207,8 @@
         "countdown": "剩餘時間：{{countdown}}秒"
       },
       "pop_up": {
-        "title": "確認",
-        "description": "請確保該帖子是公開可見的，並且包含前面屏幕上提供的確切文本。"
+        "title": "無效連結",
+        "description": "請確保您複製了正確的連結。\n\n示例：\n{{link}}"
       }
     },
     "results_step": {
