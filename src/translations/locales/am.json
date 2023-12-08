@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "አጋጣሚ ስህተት",
-        "description": "እባክዎን ከፈተናው አጋጣሚ ስህተት አይደለም።\n\nምሳሌ:\n{{link}}"
+        "description": "እባክዎን ከፈተናው አጋጣሚ ስህተት አይደለም።\n\n[[:bold]]ምሳሌ:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

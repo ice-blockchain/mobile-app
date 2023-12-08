@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Ugyldig Lenke",
-        "description": "Sjekk at du har kopiert riktig lenke.\n\nEksempel:\n{{link}}"
+        "description": "Sjekk at du har kopiert riktig lenke.\n\n[[:bold]]Eksempel:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

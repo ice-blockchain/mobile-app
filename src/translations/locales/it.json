@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Collegamento Non Valido",
-        "description": "Assicurati di aver copiato il collegamento corretto.\n\nEsempio:\n{{link}}"
+        "description": "Assicurati di aver copiato il collegamento corretto.\n\n[[:bold]]Esempio:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

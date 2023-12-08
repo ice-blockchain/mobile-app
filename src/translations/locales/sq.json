@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Lidhja e pavlefshme",
-        "description": "Sigurohuni që keni kopjuar lidhjen e duhur.\n\nShembull:\n{{link}}"
+        "description": "Sigurohuni që keni kopjuar lidhjen e duhur.\n\n[[:bold]]Shembull:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

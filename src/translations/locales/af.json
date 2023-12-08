@@ -1210,7 +1210,7 @@
       },
       "pop_up": {
         "title": "Ongeldige Skakel",
-        "description": "Maak asseblief seker dat jy die regte skakel gekopieer het.\n\nVoorbeeld:\n{{link}}"
+        "description": "Maak asseblief seker dat jy die regte skakel gekopieer het.\n\n[[:bold]]Voorbeeld:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

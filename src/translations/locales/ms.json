@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Pautan Tidak Sah",
-        "description": "Pastikan anda telah menyalin pautan yang betul.\n\nContoh:\n{{link}}"
+        "description": "Pastikan anda telah menyalin pautan yang betul.\n\n[[:bold]]Contoh:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

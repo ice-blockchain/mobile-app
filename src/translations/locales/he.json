@@ -1214,7 +1214,7 @@
       },
       "pop_up": {
         "title": "קישור לא חוקי",
-        "description": "וודא שהעתקת את הקישור הנכון.\n\nדוגמה:\n{{link}}"
+        "description": "וודא שהעתקת את הקישור הנכון.\n\n[[:bold]]דוגמה:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

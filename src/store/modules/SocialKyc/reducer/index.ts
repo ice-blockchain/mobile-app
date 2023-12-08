@@ -44,6 +44,7 @@ export function socialKycReducer(
     switch (action.type) {
       case SocialKycActions.SOCIAL_KYC_VERIFICATION.START.type:
         draft.socialKycStatus = 'LOADING';
+        draft.socialKycErrorMessage = null;
         break;
       case SocialKycActions.SOCIAL_KYC_VERIFICATION.SUCCESS.type:
         draft.socialKycStatus = 'SUCCESS';

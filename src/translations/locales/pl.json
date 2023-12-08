@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Nieprawidłowe Łącze",
-        "description": "Upewnij się, że skopiowałeś właściwe łącze.\n\nPrzykład:\n{{link}}"
+        "description": "Upewnij się, że skopiowałeś właściwe łącze.\n\n[[:bold]]Przykład:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

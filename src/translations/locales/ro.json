@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Link Nevalid",
-        "description": "Asigurați-vă că ați copiat link-ul corect.\n\nExemplu:\n{{link}}"
+        "description": "Asigurați-vă că ați copiat link-ul corect.\n\n[[:bold]]Exemplu:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

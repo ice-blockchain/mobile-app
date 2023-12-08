@@ -1208,7 +1208,7 @@
       },
       "pop_up": {
         "title": "无效链接",
-        "description": "请确保您复制了正确的链接。\n\n示例：\n{{link}}"
+        "description": "请确保您复制了正确的链接。\n\n[[:bold]]示例：[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

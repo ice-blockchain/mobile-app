@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Link Inválido",
-        "description": "Certifique-se de que copiou o link correto.\n\nExemplo:\n{{link}}"
+        "description": "Certifique-se de que copiou o link correto.\n\n[[:bold]]Exemplo:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

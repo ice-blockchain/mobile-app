@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Liên kết Không Hợp Lệ",
-        "description": "Vui lòng đảm bảo bạn đã sao chép liên kết đúng.\n\nVí dụ:\n{{link}}"
+        "description": "Vui lòng đảm bảo bạn đã sao chép liên kết đúng.\n\n[[:bold]]Ví dụ:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

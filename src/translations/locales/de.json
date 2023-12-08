@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Ungültiger Link",
-        "description": "Stellen Sie sicher, dass Sie den richtigen Link kopiert haben.\n\nBeispiel:\n{{link}}"
+        "description": "Stellen Sie sicher, dass Sie den richtigen Link kopiert haben.\n\n[[:bold]]Beispiel:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

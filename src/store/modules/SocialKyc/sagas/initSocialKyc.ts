@@ -9,6 +9,7 @@ import {t} from '@translations/i18n';
 import {showError} from '@utils/errors';
 import {isValidURI} from '@utils/uri';
 import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
+import {wait} from 'rn-units';
 
 type Actions = ReturnType<
   typeof SocialKycActions.SOCIAL_KYC_VERIFICATION.START.create
@@ -22,6 +23,9 @@ export function* initSocialKyc(action: Actions) {
       postUrl,
     );
     if (!isValidPostUrl) {
+      // wait here for LOADING status to be reflected in UI.
+      // Because if it was ERROR before SocialKycActions.SOCIAL_KYC_VERIFICATION.START call and gets failed here again on UI the status is not reset
+      yield call(wait, 100);
       yield put(
         SocialKycActions.SOCIAL_KYC_VERIFICATION.ERROR.create({
           message: t('invalid_link.title'),

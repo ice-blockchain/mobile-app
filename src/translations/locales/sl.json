@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Neveljavna Povezava",
-        "description": "Prepričajte se, da ste kopirali pravilno povezavo.\n\nPrimer:\n{{link}}"
+        "description": "Prepričajte se, da ste kopirali pravilno povezavo.\n\n[[:bold]]Primer:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

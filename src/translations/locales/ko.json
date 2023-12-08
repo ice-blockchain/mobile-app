@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "잘못된 링크",
-        "description": "올바른 링크를 복사했는지 확인하십시오.\n\n예:\n{{link}}"
+        "description": "올바른 링크를 복사했는지 확인하십시오.\n\n[[:bold]]예:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

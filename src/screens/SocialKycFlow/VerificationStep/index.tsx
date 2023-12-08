@@ -80,11 +80,16 @@ export function VerificationStep({
       onSkip();
     }
   }, [kycStep, onSkip, socialKycStatus, updateStepPassed]);
-  const {countdown, startCountdown} = useCountdown({
+  const {countdown, startCountdown, stopCountdown} = useCountdown({
     startingValueInSeconds: VERIFICATION_COUNTDOWN_DURATION,
   });
   useEffect(() => {
-    if (socialKycErrorMessage) {
+    if (socialKycStatus !== 'LOADING') {
+      stopCountdown();
+    }
+  }, [socialKycStatus, stopCountdown]);
+  useEffect(() => {
+    if (socialKycErrorMessage && socialKycStatus === 'ERROR') {
       navigate({
         name: 'PopUp',
         params: {
@@ -108,10 +113,11 @@ export function VerificationStep({
           ],
           dismissOnAndroidHardwareBack: false,
           dismissOnOutsideTouch: false,
+          dismissOnButtonPress: true,
         },
       });
     }
-  }, [dispatch, socialKycErrorMessage]);
+  }, [dispatch, socialKycErrorMessage, socialKycStatus]);
   const onContinue = () => {
     dispatch(
       SocialKycActions.SOCIAL_KYC_VERIFICATION.START.create({
@@ -171,7 +177,7 @@ export function VerificationStep({
         </View>
         <View style={styles.footerContainer}>
           <PrimaryButton
-            style={[socialKycMethod ? styles.button : styles.disabledButton]}
+            style={styles.button}
             text={getButtonText({countdown, socialKycStatus})}
             onPress={onContinue}
             loading={socialKycStatus === 'LOADING'}
@@ -213,11 +219,6 @@ const styles = StyleSheet.create({
   button: {
     width: BUTTON_WIDTH,
     height: BUTTON_HEIGHT,
-  },
-  disabledButton: {
-    width: BUTTON_WIDTH,
-    backgroundColor: COLORS.primaryDark,
-    opacity: 0.5,
   },
   warningText: {
     ...font(24, 32, 'black', 'attention', 'center'),

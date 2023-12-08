@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "無効なリンク",
-        "description": "正しいリンクをコピーしたことを確認してください。\n\n例：\n{{link}}"
+        "description": "正しいリンクをコピーしたことを確認してください。\n\n[[:bold]]例：[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

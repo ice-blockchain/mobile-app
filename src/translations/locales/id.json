@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Tautan Tidak Valid",
-        "description": "Pastikan Anda telah menyalin tautan yang benar.\n\nContoh:\n{{link}}"
+        "description": "Pastikan Anda telah menyalin tautan yang benar.\n\n[[:bold]]Contoh:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

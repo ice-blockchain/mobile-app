@@ -1112,7 +1112,7 @@
       },
       "pop_up": {
         "title": "Tautan Salah",
-        "description": "Pastikan sampeyan wis nggandheng tautan sing bener.\n\nConto:\n{{link}}"
+        "description": "Pastikan sampeyan wis nggandheng tautan sing bener.\n\n[[:bold]]Conto:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

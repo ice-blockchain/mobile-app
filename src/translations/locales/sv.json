@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Ogiltig Länk",
-        "description": "Se till att du har kopierat rätt länk.\n\nExempel:\n{{link}}"
+        "description": "Se till att du har kopierat rätt länk.\n\n[[:bold]]Exempel:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

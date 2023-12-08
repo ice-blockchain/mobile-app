@@ -1204,7 +1204,7 @@
       },
       "pop_up": {
         "title": "Invalid Link",
-        "description": "Please make sure you have copied the correct link. \n\nExample:\n{{link}}"
+        "description": "Please make sure you have copied the correct link.\n\n[[:bold]]Example:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

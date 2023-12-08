@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Érvénytelen Hivatkozás",
-        "description": "Győződjön meg arról, hogy a helyes hivatkozást másolta.\n\nPélda:\n{{link}}"
+        "description": "Győződjön meg arról, hogy a helyes hivatkozást másolta.\n\n[[:bold]]Példa:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

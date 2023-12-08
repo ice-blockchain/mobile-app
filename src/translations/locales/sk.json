@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Neplatný odkaz",
-        "description": "Uistite sa, že ste skopírovali správny odkaz.\n\nPríklad:\n{{link}}"
+        "description": "Uistite sa, že ste skopírovali správny odkaz.\n\n[[:bold]]Príklad:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Geçersiz Bağlantı",
-        "description": "Doğru bağlantıyı kopyaladığınızdan emin olun.\n\nÖrnek:\n{{link}}"
+        "description": "Doğru bağlantıyı kopyaladığınızdan emin olun.\n\n[[:bold]]Örnek:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

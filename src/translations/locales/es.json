@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Enlace Inválido",
-        "description": "Asegúrese de haber copiado el enlace correcto.\n\nEjemplo:\n{{link}}"
+        "description": "Asegúrese de haber copiado el enlace correcto.\n\n[[:bold]]Ejemplo:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

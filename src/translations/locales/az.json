@@ -1207,7 +1207,7 @@
       },
       "pop_up": {
         "title": "Yanlış Keçid",
-        "description": "Zəhmət olmasa düzgün keçidi kopyaladığınızdan əmin olun.\n\nNümunə:\n{{link}}"
+        "description": "Zəhmət olmasa düzgün keçidi kopyaladığınızdan əmin olun.\n\n[[:bold]]Nümunə:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {
