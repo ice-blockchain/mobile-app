@@ -4,7 +4,7 @@ import {ViewMeasurementsResult} from '@ice/react-native';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {useRef} from 'react';
+import {useCallback, useRef} from 'react';
 import {View} from 'react-native';
 
 export const useVerifiedTooltip = (correctiveOffset?: number) => {
@@ -12,11 +12,7 @@ export const useVerifiedTooltip = (correctiveOffset?: number) => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
 
-  const showTooltip = async () => {
-    await measureAndShow();
-  };
-
-  const measure = async () => {
+  const measure = useCallback(async () => {
     return new Promise<ViewMeasurementsResult>(resolve => {
       chevronRef.current?.measure((_, __, width, height, x, y) => {
         const measurement: ViewMeasurementsResult = {
@@ -30,9 +26,9 @@ export const useVerifiedTooltip = (correctiveOffset?: number) => {
         resolve(measurement);
       });
     });
-  };
+  }, [chevronRef]);
 
-  const measureAndShow = async () => {
+  const measureAndShow = useCallback(async () => {
     if (chevronRef.current) {
       const result = await measure();
 
@@ -43,7 +39,11 @@ export const useVerifiedTooltip = (correctiveOffset?: number) => {
         });
       }
     }
-  };
+  }, [measure, navigation, correctiveOffset]);
+
+  const showTooltip = useCallback(async () => {
+    await measureAndShow();
+  }, [measureAndShow]);
 
   return {
     chevronRef,
