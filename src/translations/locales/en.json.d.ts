@@ -245,6 +245,7 @@ export type Translations = {
   'home.join_mainnet.subtitle': null;
   'home.ethereum_address.title': null;
   'home.ethereum_address.subtitle': null;
+  'home.verified_tooltip.title': null;
   'settings.title': null;
   'settings.profile': null;
   'settings.legal': null;

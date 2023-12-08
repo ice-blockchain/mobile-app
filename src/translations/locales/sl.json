@@ -366,6 +366,9 @@
     "ethereum_address": {
       "title": "Ethereum naslov",
       "subtitle": "Prosimo, vnesite svoj naslov ERC-20 tukaj."
+    },
+    "verified_tooltip": {
+      "title": "KYC Preverjeno"
     }
   },
   "settings": {

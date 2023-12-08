@@ -366,6 +366,9 @@
     "ethereum_address": {
       "title": "عنوان إيثيريوم",
       "subtitle": "الرجاء إدخال عنوان ERC-20 الخاص بك هنا."
+    },
+    "verified_tooltip": {
+      "title": "تم التحقق من KYC"
     }
   },
   "settings": {

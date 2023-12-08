@@ -366,6 +366,9 @@
     "ethereum_address": {
       "title": "ईथेरीयम पता",
       "subtitle": "कृपया अपना ERC-20 पता यहां दर्ज करें।"
+    },
+    "verified_tooltip": {
+      "title": "KYC सत्यापित"
     }
   },
   "settings": {

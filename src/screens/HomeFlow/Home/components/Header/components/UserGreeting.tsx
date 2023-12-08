@@ -6,7 +6,10 @@ import {MainTabsParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {GreetingText} from '@screens/HomeFlow/Home/components/Header/components/GreetingText';
-import {userSelector} from '@store/modules/Account/selectors';
+import {useVerifiedTooltip} from '@screens/HomeFlow/Home/components/Header/components/hooks/useVerifiedTooltip';
+import {userSelector, verifiedSelector} from '@store/modules/Account/selectors';
+import {VerifiedSvg} from '@svg/Verified';
+import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import {buildUsernameWithPrefix} from '@utils/username';
 import React from 'react';
@@ -15,6 +18,7 @@ import {
   StyleSheet,
   Text,
   TextStyle,
+  TouchableWithoutFeedback,
   View,
   ViewStyle,
 } from 'react-native';
@@ -22,18 +26,22 @@ import Animated, {AnimatedStyleProp} from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units/index';
 
-type Props = {
+type UserGreetingProps = {
   disabled: boolean;
   animatedStyle?: AnimatedStyleProp<ViewStyle | ImageStyle | TextStyle>;
 };
 
-export function UserGreeting({disabled, animatedStyle}: Props) {
+export const UserGreeting = ({disabled, animatedStyle}: UserGreetingProps) => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainTabsParamList>>();
   const user = useSelector(userSelector);
+  const verified = useSelector(verifiedSelector);
+  const {chevronRef, showTooltip} = useVerifiedTooltip(1);
+
   const openProfile = () => {
     navigation.navigate('ProfileTab');
   };
+
   return (
     <View style={styles.container}>
       {user?.profilePictureUrl && (
@@ -46,20 +54,28 @@ export function UserGreeting({disabled, animatedStyle}: Props) {
           />
         </Touchable>
       )}
-
       <Animated.View style={[styles.greeting, animatedStyle]}>
         <Touchable disabled={disabled} onPress={openProfile}>
           <GreetingText />
           {user?.username && (
-            <Text style={styles.usernameText}>
-              {buildUsernameWithPrefix(user.username)}
-            </Text>
+            <View style={styles.usernameContainer}>
+              <Text style={styles.usernameText}>
+                {buildUsernameWithPrefix(user.username)}
+              </Text>
+              {verified && (
+                <View ref={chevronRef} collapsable={false}>
+                  <TouchableWithoutFeedback onPress={showTooltip}>
+                    <VerifiedSvg style={styles.badge} />
+                  </TouchableWithoutFeedback>
+                </View>
+              )}
+            </View>
           )}
         </Touchable>
       </Animated.View>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -73,5 +89,13 @@ const styles = StyleSheet.create({
   usernameText: {
     marginTop: rem(3),
     ...font(15, 20, 'bold', 'downriver'),
+    alignSelf: isRTL ? 'flex-start' : 'auto',
+  },
+  usernameContainer: {
+    flexDirection: 'row',
+  },
+  badge: {
+    marginTop: rem(5),
+    marginLeft: rem(4),
   },
 });

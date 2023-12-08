@@ -9,15 +9,15 @@ import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {getReferralUserSelector} from '@store/modules/Referrals/selectors';
+import {VerifiedSvg} from '@svg/Verified';
 import {font} from '@utils/styles';
 import React, {memo, ReactNode} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
-import {rem, screenHeight} from 'rn-units';
+import {isAndroid, rem, screenHeight} from 'rn-units';
 
 const FLAG_WIDTH = rem(24);
 const FLAG_HEIGHT = (FLAG_WIDTH / 20) * 14;
-
 const SKELETON_HEIGHT = rem(46);
 const SKELETON_MARGIN = rem(16);
 
@@ -73,9 +73,12 @@ export const UserListItem = memo(
             />
           </View>
           <View style={styles.body}>
-            <Text style={styles.nameText} numberOfLines={1}>
-              {user.username}
-            </Text>
+            <View style={styles.usernameContainer}>
+              <Text style={styles.nameText} numberOfLines={1}>
+                {user.username}
+              </Text>
+              {!!user.verified && <VerifiedSvg style={styles.badge} />}
+            </View>
             {user.phoneNumber ? (
               <Text style={styles.noteText}>{user.phoneNumber}</Text>
             ) : null}
@@ -139,5 +142,12 @@ const styles = StyleSheet.create({
   touchArea: {
     flex: 1,
     flexDirection: 'row',
+  },
+  usernameContainer: {
+    flexDirection: 'row',
+    marginRight: rem(20),
+  },
+  badge: {
+    marginTop: isAndroid ? rem(4) : rem(2),
   },
 });

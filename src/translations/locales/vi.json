@@ -366,6 +366,9 @@
     "ethereum_address": {
       "title": "Địa chỉ Ethereum",
       "subtitle": "Vui lòng nhập địa chỉ ERC-20 của bạn ở đây."
+    },
+    "verified_tooltip": {
+      "title": "KYC Đã Xác Minh"
     }
   },
   "settings": {

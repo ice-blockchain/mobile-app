@@ -366,6 +366,9 @@
     "ethereum_address": {
       "title": "ایتھیریم پتہ",
       "subtitle": "براہ کرم اپنا ERC-20 پتہ یہاں درج کریں"
+    },
+    "verified_tooltip": {
+      "title": "KYC تصدیق شدہ"
     }
   },
   "settings": {

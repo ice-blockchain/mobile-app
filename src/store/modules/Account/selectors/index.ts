@@ -86,3 +86,6 @@ export const isTeamEnabledSelector = (state: RootState) =>
 
 export const isAchievementsEnabledSelector = (state: RootState) =>
   !!state.account.authConfig?.achievements?.enabled;
+
+export const verifiedSelector = (state: RootState) =>
+  !!state.account.user?.verified;

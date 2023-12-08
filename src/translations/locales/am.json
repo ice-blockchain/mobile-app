@@ -366,6 +366,9 @@
     "ethereum_address": {
       "title": "Ethereum አድራሻ",
       "subtitle": "እባክዎ የእርስዎን ERC-20 አድራሻ እዚህ ያስገቡ።"
+    },
+    "verified_tooltip": {
+      "title": "KYC የተረጋገጠ"
     }
   },
   "settings": {

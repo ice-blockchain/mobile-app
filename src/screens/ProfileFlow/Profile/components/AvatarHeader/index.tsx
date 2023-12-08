@@ -12,6 +12,7 @@ import {QRCodeShareButton} from '@navigation/components/Header/components/QRCode
 import {SettingsButton} from '@navigation/components/Header/components/SettingsButton';
 import {ShowPrivacyButton} from '@navigation/components/Header/components/ShowPrivacyButton';
 import {useTopOffsetStyle} from '@navigation/hooks/useTopOffsetStyle';
+import {useVerifiedTooltip} from '@screens/HomeFlow/Home/components/Header/components/hooks/useVerifiedTooltip';
 import {AgendaContactTooltip} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/AgendaContactTooltip';
 import {ContactsAvatarButton} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/ContactsAvatarButton';
 import {EditAvatarButton} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/EditAvatarButton';
@@ -23,10 +24,17 @@ import {
 } from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useAnimatedStyles';
 import {useUpdateAvatarRouteParams} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useUpdateAvatarRouteParam';
 import {useUserContactDetails} from '@screens/ProfileFlow/Profile/components/AvatarHeader/hooks/useUserContactDetails';
+import {VerifiedSvg} from '@svg/Verified';
 import {font, mirrorTransform} from '@utils/styles';
 import {buildUsernameWithPrefix} from '@utils/username';
 import React, {memo, useState} from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
@@ -35,6 +43,7 @@ import {useOnLayout} from './hooks/useOnLayout';
 const NOT_FOUND = require('../../assets/images/notFoundPlaceholder.png');
 
 export const AVATAR_SIZE = rem(122);
+const VERIFIED_SIZE = rem(18);
 
 type Props = {
   user: User | null;
@@ -46,6 +55,7 @@ type Props = {
 export const AvatarHeader = memo(
   ({user, animatedIndex, isOwner, isLoading = false}: Props) => {
     const topOffset = useTopOffsetStyle();
+    const {chevronRef, showTooltip} = useVerifiedTooltip(-1);
 
     const uri = user?.profilePictureUrl;
 
@@ -62,6 +72,9 @@ export const AvatarHeader = memo(
       onLayoutTitleText,
     } = useOnLayout();
 
+    const verifiedWidth =
+      user && user.verified ? wrapperWidth - VERIFIED_SIZE * 2 : wrapperWidth;
+
     const {
       titleAnimatedStyle,
       imageAnimatedStyle,
@@ -69,11 +82,12 @@ export const AvatarHeader = memo(
       textStyle,
       lettersAvatarStyle,
       iconAvatarStyle,
+      verifiedStyle,
     } = useAnimatedStyles({
       animatedIndex,
       navigationContainerLeftWidth,
       navigationContainerRightWidth,
-      wrapperWidth,
+      wrapperWidth: verifiedWidth,
       titleTextWidth,
     });
 
@@ -167,6 +181,15 @@ export const AvatarHeader = memo(
                   {buildUsernameWithPrefix(user.username)}
                 </Animated.Text>
               )}
+              {user && !!user.verified && (
+                <Animated.View
+                  ref={chevronRef}
+                  style={[verifiedStyle, styles.chevron]}>
+                  <TouchableWithoutFeedback onPress={showTooltip}>
+                    <VerifiedSvg width={VERIFIED_SIZE} height={VERIFIED_SIZE} />
+                  </TouchableWithoutFeedback>
+                </Animated.View>
+              )}
             </Animated.View>
           </View>
           <View
@@ -256,5 +279,15 @@ const styles = StyleSheet.create({
   },
   navigationButton: {
     marginRight: rem(16),
+  },
+  usernameContainer: {
+    flexDirection: 'row',
+    marginRight: rem(20),
+  },
+  badge: {
+    marginTop: rem(1),
+  },
+  chevron: {
+    marginTop: rem(4),
   },
 });

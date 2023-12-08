@@ -366,6 +366,9 @@
     "ethereum_address": {
       "title": "以太坊地址",
       "subtitle": "请在此处输入您的 ERC-20 地址。"
+    },
+    "verified_tooltip": {
+      "title": "KYC 已验证"
     }
   },
   "settings": {
