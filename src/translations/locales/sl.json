@@ -1206,8 +1206,8 @@
         "countdown": "Preostali čas: {{countdown}} sekund"
       },
       "pop_up": {
-        "title": "Potrditev",
-        "description": "Prepričajte se, da je objava javno dostopna in vsebuje točno besedilo, kot je navedeno na prejšnjem zaslonu."
+        "title": "Neveljavna Povezava",
+        "description": "Prepričajte se, da ste kopirali pravilno povezavo.\n\n[[:bold]]Primer:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

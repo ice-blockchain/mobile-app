@@ -1206,8 +1206,8 @@
         "countdown": "{{countdown}} secondi rimanenti"
       },
       "pop_up": {
-        "title": "Conferma",
-        "description": "Assicurati che il post sia pubblicamente disponibile e che contenga il testo esatto fornito nella schermata precedente."
+        "title": "Collegamento Non Valido",
+        "description": "Assicurati di aver copiato il collegamento corretto.\n\n[[:bold]]Esempio:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

@@ -1206,8 +1206,8 @@
         "countdown": "{{countdown}} sekunder kvar"
       },
       "pop_up": {
-        "title": "Bekräftelse",
-        "description": "Se till att inlägget är offentligt tillgängligt och innehåller exakt text som anges på föregående skärm."
+        "title": "Ogiltig Länk",
+        "description": "Se till att du har kopierat rätt länk.\n\n[[:bold]]Exempel:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

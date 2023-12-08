@@ -1206,8 +1206,8 @@
         "countdown": "{{countdown}}s restantes"
       },
       "pop_up": {
-        "title": "Confirmation",
-        "description": "Assurez-vous que la publication est publiquement disponible et qu'elle contient le texte exact fourni à l'écran précédent."
+        "title": "Lien Invalide",
+        "description": "Assurez-vous d'avoir copié le bon lien.\n\n[[:bold]]Exemple:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

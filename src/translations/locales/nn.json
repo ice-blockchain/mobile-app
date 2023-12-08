@@ -1206,8 +1206,8 @@
         "countdown": "{{countdown}} sekunder igjen"
       },
       "pop_up": {
-        "title": "Bekreftelse",
-        "description": "Vennligst forsikre deg om at innlegget er offentlig tilgjengelig og inneholder nøyaktig teksten som ble gitt i forrige skjerm."
+        "title": "Ugyldig Lenke",
+        "description": "Sjekk at du har kopiert riktig lenke.\n\n[[:bold]]Eksempel:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

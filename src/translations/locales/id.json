@@ -1206,8 +1206,8 @@
         "countdown": "{{countdown}} detik tersisa"
       },
       "pop_up": {
-        "title": "Konfirmasi",
-        "description": "Pastikan bahwa pos tersebut dapat diakses oleh publik dan berisi teks yang tepat seperti yang diberikan pada layar sebelumnya."
+        "title": "Tautan Tidak Valid",
+        "description": "Pastikan Anda telah menyalin tautan yang benar.\n\n[[:bold]]Contoh:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

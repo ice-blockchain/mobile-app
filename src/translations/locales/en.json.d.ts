@@ -731,7 +731,7 @@ export type Translations = {
   'social_kyc.verification_step.action.wait': null;
   'social_kyc.verification_step.action.countdown': {countdown: number | string};
   'social_kyc.verification_step.pop_up.title': null;
-  'social_kyc.verification_step.pop_up.description': null;
+  'social_kyc.verification_step.pop_up.description': {link: number | string};
   'social_kyc.results_step.attempts_left': {count: number | string};
   'social_kyc.results_step.success.title': null;
   'social_kyc.results_step.success.description': null;

@@ -4,6 +4,7 @@ import {SocialKycStepNumber} from '@api/tokenomics/types';
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {CommonInput} from '@components/Inputs/CommonInput';
 import {COLORS} from '@constants/colors';
+import {LINKS} from '@constants/links';
 import {commonStyles} from '@constants/styles';
 import {useOnHardwareBack} from '@hooks/useOnHardwareBack';
 import {Header} from '@navigation/components/Header';
@@ -27,8 +28,9 @@ import {SocialKycMethod, SocialKycStatus} from '@store/modules/SocialKyc/types';
 import {isSocialKycFinalized} from '@store/modules/SocialKyc/utils';
 import {CopyIcon} from '@svg/LinkIcon';
 import {t} from '@translations/i18n';
+import {font} from '@utils/styles';
 import React, {useEffect, useState} from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -78,42 +80,53 @@ export function VerificationStep({
       onSkip();
     }
   }, [kycStep, onSkip, socialKycStatus, updateStepPassed]);
-  const {countdown, startCountdown} = useCountdown({
+  const {countdown, startCountdown, stopCountdown} = useCountdown({
     startingValueInSeconds: VERIFICATION_COUNTDOWN_DURATION,
   });
-  const onContinue = () => {
-    navigate({
-      name: 'PopUp',
-      params: {
-        title: t('social_kyc.verification_step.pop_up.title'),
-        message: (
-          <Message
-            text={t('social_kyc.verification_step.pop_up.description')}
-          />
-        ),
-        buttons: [
-          {
-            text: t('button.no'),
-            preset: 'outlined',
-          },
-          {
-            text: t('button.confirm'),
-            onPress: () => {
-              dispatch(
-                SocialKycActions.SOCIAL_KYC_VERIFICATION.START.create({
-                  postUrl: repostLinkUrl,
-                  socialKycMethod,
-                  kycStep,
-                }),
-              );
-              startCountdown();
+  useEffect(() => {
+    if (socialKycStatus !== 'LOADING') {
+      stopCountdown();
+    }
+  }, [socialKycStatus, stopCountdown]);
+  useEffect(() => {
+    if (socialKycErrorMessage && socialKycStatus === 'ERROR') {
+      navigate({
+        name: 'PopUp',
+        params: {
+          title: (
+            <Text style={styles.warningText}>
+              {t('social_kyc.verification_step.pop_up.title')}
+            </Text>
+          ),
+          message: (
+            <Message
+              text={t('social_kyc.verification_step.pop_up.description', {
+                link: LINKS.X_REPOST_LINK_EXAMPLE,
+              })}
+            />
+          ),
+          buttons: [
+            {
+              text: t('button.close'),
+              style: styles.closeButton,
             },
-          },
-        ],
-        dismissOnAndroidHardwareBack: false,
-        dismissOnOutsideTouch: false,
-      },
-    });
+          ],
+          dismissOnAndroidHardwareBack: false,
+          dismissOnOutsideTouch: false,
+          dismissOnButtonPress: true,
+        },
+      });
+    }
+  }, [dispatch, socialKycErrorMessage, socialKycStatus]);
+  const onContinue = () => {
+    dispatch(
+      SocialKycActions.SOCIAL_KYC_VERIFICATION.START.create({
+        postUrl: repostLinkUrl,
+        socialKycMethod,
+        kycStep,
+      }),
+    );
+    startCountdown();
   };
 
   useOnHardwareBack({callback: onGoBack, preventDefault: true});
@@ -164,7 +177,7 @@ export function VerificationStep({
         </View>
         <View style={styles.footerContainer}>
           <PrimaryButton
-            style={[socialKycMethod ? styles.button : styles.disabledButton]}
+            style={styles.button}
             text={getButtonText({countdown, socialKycStatus})}
             onPress={onContinue}
             loading={socialKycStatus === 'LOADING'}
@@ -207,9 +220,10 @@ const styles = StyleSheet.create({
     width: BUTTON_WIDTH,
     height: BUTTON_HEIGHT,
   },
-  disabledButton: {
-    width: BUTTON_WIDTH,
-    backgroundColor: COLORS.primaryDark,
-    opacity: 0.5,
+  warningText: {
+    ...font(24, 32, 'black', 'attention', 'center'),
+  },
+  closeButton: {
+    width: '70%',
   },
 });

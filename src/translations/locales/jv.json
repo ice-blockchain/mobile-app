@@ -1111,8 +1111,8 @@
         "countdown": "{{countdown}} detik wani"
       },
       "pop_up": {
-        "title": "Konfirmasi",
-        "description": "Pastikan yen pos iku bisa diakses dening umum lan nyedhiyakake teks sing tepat kaya conto ing layar sadurunge."
+        "title": "Tautan Salah",
+        "description": "Pastikan sampeyan wis nggandheng tautan sing bener.\n\n[[:bold]]Conto:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

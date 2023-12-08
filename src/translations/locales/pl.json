@@ -1206,8 +1206,8 @@
         "countdown": "Pozostało {{countdown}} sekund"
       },
       "pop_up": {
-        "title": "Potwierdzenie",
-        "description": "Upewnij się, że post jest publicznie dostępny i zawiera dokładny tekst podany na poprzednim ekranie."
+        "title": "Nieprawidłowe Łącze",
+        "description": "Upewnij się, że skopiowałeś właściwe łącze.\n\n[[:bold]]Przykład:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

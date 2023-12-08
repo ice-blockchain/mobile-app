@@ -1206,8 +1206,8 @@
         "countdown": "Zbývá {{countdown}} sekund"
       },
       "pop_up": {
-        "title": "Potvrzení",
-        "description": "Ujistěte se, prosím, že je příspěvek veřejně dostupný a obsahuje přesný text uvedený na předchozí obrazovce."
+        "title": "Neplatný odkaz",
+        "description": "Ujistěte se, že jste zkopírovali správný odkaz.\n\n[[:bold]]Příklad:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

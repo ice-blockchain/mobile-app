@@ -1206,8 +1206,8 @@
         "countdown": "{{countdown}} segundos restantes"
       },
       "pop_up": {
-        "title": "Confirmação",
-        "description": "Certifique-se de que a postagem esteja publicamente disponível e contenha o texto exato fornecido na tela anterior."
+        "title": "Link Inválido",
+        "description": "Certifique-se de que copiou o link correto.\n\n[[:bold]]Exemplo:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

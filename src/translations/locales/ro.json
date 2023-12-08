@@ -1206,8 +1206,8 @@
         "countdown": "{{countdown}} secunde rămase"
       },
       "pop_up": {
-        "title": "Confirmare",
-        "description": "Asigură-te că postarea este public disponibilă și conține textul exact furnizat pe ecranul anterior."
+        "title": "Link Nevalid",
+        "description": "Asigurați-vă că ați copiat link-ul corect.\n\n[[:bold]]Exemplu:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

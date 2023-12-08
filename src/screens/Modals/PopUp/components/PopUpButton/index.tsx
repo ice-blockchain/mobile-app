@@ -8,12 +8,13 @@ import {COLORS} from '@constants/colors';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleProp, StyleSheet, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
 
 export interface PopUpButtonProps extends PrimaryButtonProps {
   preset?: 'default' | 'destructive' | 'outlined';
   onCheckboxPress?: (checked: boolean) => void;
+  style?: StyleProp<ViewStyle>;
 }
 
 export const DEFAULT_DIALOG_YES_BUTTON: PopUpButtonProps = {

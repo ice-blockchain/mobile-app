@@ -1206,8 +1206,8 @@
         "countdown": "{{countdown}}s restantes"
       },
       "pop_up": {
-        "title": "Confirmación",
-        "description": "Por favor, asegúrate de que la publicación esté disponible públicamente y que contenga el texto exacto proporcionado en la pantalla anterior."
+        "title": "Enlace Inválido",
+        "description": "Asegúrese de haber copiado el enlace correcto.\n\n[[:bold]]Ejemplo:[[/:bold]]\n{{link}}"
       }
     },
     "results_step": {

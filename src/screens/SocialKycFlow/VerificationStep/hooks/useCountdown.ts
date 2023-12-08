@@ -35,5 +35,5 @@ export function useCountdown({
     );
   }, [stopCountdown]);
 
-  return {countdown, startCountdown};
+  return {countdown, startCountdown, stopCountdown};
 }
