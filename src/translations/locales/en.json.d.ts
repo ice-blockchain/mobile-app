@@ -709,6 +709,8 @@ export type Translations = {
   'ethereum_address.enter_address_confirmation': null;
   'ethereum_address.validators_warning_title': null;
   'ethereum_address.validators_warning_text': null;
+  'ethereum_address.okxWalletDescription': null;
+  'ethereum_address.okxWalletAction': null;
   'social_kyc.header': null;
   'social_kyc.verify_with_title': {method: number | string};
   'social_kyc.select_method_step.title': null;

@@ -185,5 +185,6 @@ export const Images = {
   },
   card: {
     joinMainnet: require('./card/joinMainnet.png'),
+    okxWallet: require('./card/okxWallet.png'),
   },
 } as const;
