@@ -1166,7 +1166,9 @@
     "enter_address_description": "Az Első Fázis során az ICE tokenek az Ethereum blockchainen lesznek kibocsátva. Miután elindult a Mainnet, a tokenek Ethereumról az Ice Open Network (ION) blockchainre cserélhetők.",
     "enter_address_confirmation": "Biztos benne, hogy az ERC-20 cím helyes?",
     "validators_warning_title": "Cím megerősítése",
-    "validators_warning_text": "Kérjük, vegye figyelembe, hogy azok az egyének, akik hozzáadtak egy Ethereum címet a fiókjukhoz, nem jogosultak az egyik legjobb 300 validátor közül lenni a fehér könyvünk alapján a mainnet indításához."
+    "validators_warning_text": "Kérjük, vegye figyelembe, hogy azok az egyének, akik hozzáadtak egy Ethereum címet a fiókjukhoz, nem jogosultak az egyik legjobb 300 validátor közül lenni a fehér könyvünk alapján a mainnet indításához.",
+    "okxWalletDescription": "Védje meg érméit az OKX Wallet segítségével, a megbízható önkezelésű hivatalos pénztárcapartnerünkkel.",
+    "okxWalletAction": "OKX WALLET LETÖLTÉSE"
   },
   "social_kyc": {
     "header": "Ellenőrzés",

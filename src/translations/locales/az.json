@@ -1166,7 +1166,9 @@
     "enter_address_description": "Fəzə Bir zamanı ICE tokenləri Ethereum blokçeyndə buraxılacaq. Əsas şəbəkə başladıqdan sonra, tokenlərin Ethereumdan Ice Open Network (ION) blokçeynə dəyişdirilməsi mümkün olacaq.",
     "enter_address_confirmation": "ERC-20 ünvanının düzgün olduğundan əminsinizmi?",
     "validators_warning_title": "Ünvanı Təsdiq Et",
-    "validators_warning_text": "Xahiş edirəm diqqət edin ki, Ethereum ünvanını hesabına əlavə edənlər, əsas şəbəkənin istehsalı üçün bizim ağlaşdırmamıza əsasən ən yaxşı 300 doğrulayıcının biri olmaq üçün əhəmiyyət daşımırlar."
+    "validators_warning_text": "Xahiş edirəm diqqət edin ki, Ethereum ünvanını hesabına əlavə edənlər, əsas şəbəkənin istehsalı üçün bizim ağlaşdırmamıza əsasən ən yaxşı 300 doğrulayıcının biri olmaq üçün əhəmiyyət daşımırlar.",
+    "okxWalletDescription": "OKX Wallet il əhvalatınızı təminat altına alın, bizim etibarlı öz-özünü idarə edən rəsmi cüzdan tərəfdaşımız.",
+    "okxWalletAction": "OKX CÜZDANINI YÜKLƏYİN"
   },
   "social_kyc": {
     "header": "Doğrulama",

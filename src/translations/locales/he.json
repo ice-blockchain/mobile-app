@@ -1173,7 +1173,9 @@
     "enter_address_description": "במהלך השלב הראשון, הטוקנים של ICE יושחררו על גבי הבלוקצ'יין של Ethereum. לאחר שה-Mainnet יושק, יהיה ניתן להחליף את הטוקנים מ-Ethereum לבלוקצ'יין של Ice Open Network (ION).",
     "enter_address_confirmation": "האם אתה בטוח שכתובת ERC-20 היא נכונה?",
     "validators_warning_title": "אשר כתובת",
-    "validators_warning_text": "שימו לב שאנשים שהוסיפו כתובת Ethereum לחשבונם אינם זכאים להיות אחד מ-300 האומתנים המובילים כפי שנקבע בספר הלבן שלנו לשקיעה ברשת הראשית."
+    "validators_warning_text": "שימו לב שאנשים שהוסיפו כתובת Ethereum לחשבונם אינם זכאים להיות אחד מ-300 האומתנים המובילים כפי שנקבע בספר הלבן שלנו לשקיעה ברשת הראשית.",
+    "okxWalletDescription": "אבטח את המטבעות שלך עם OKX Wallet, שותף הארנק הרשמי שלנו לניהול עצמי האמין.",
+    "okxWalletAction": "הורד את OKX WALLET"
   },
   "social_kyc": {
     "header": "אימות",

@@ -1167,7 +1167,9 @@
     "enter_address_warning": "请确保上面的 ERC-20 地址是正确的，并且您将在第一阶段的整个时间内都能够访问它。一旦确认，将无法更改。",
     "enter_address_confirmation": "您确定 ERC-20 地址是正确的吗？",
     "validators_warning_title": "确认地址",
-    "validators_warning_text": "请注意，已将Ethereum地址添加到其帐户的个人不符合我们的白皮书要求，不能成为前300名验证者之一，用于主网发布。"
+    "validators_warning_text": "请注意，已将Ethereum地址添加到其帐户的个人不符合我们的白皮书要求，不能成为前300名验证者之一，用于主网发布。",
+    "okxWalletDescription": "使用OKX Wallet安全保管您的硬币，我们值得信赖的自托管官方钱包合作伙伴。",
+    "okxWalletAction": "下载OKX WALLET"
   },
   "social_kyc": {
     "header": "验证",

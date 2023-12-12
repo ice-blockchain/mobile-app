@@ -1173,7 +1173,9 @@
     "enter_address_description": "در طول مرحله یک، توکن‌های ICE در بلاکچین Ethereum منتشر خواهند شد. هنگامی که Mainnet راه‌اندازی شده باشد، توکن‌ها از Ethereum به بلاکچین Ice Open Network (ION) قابل مبادله خواهند بود.",
     "enter_address_confirmation": "آیا از صحت آدرس ERC-20 اطمینان دارید؟",
     "validators_warning_title": "تأیید آدرس",
-    "validators_warning_text": "لطفاً توجه داشته باشید که افرادی که آدرس Ethereum را به حساب خود اضافه کرده‌اند، از طریق کتاب سفید ما برای راه‌اندازی شبکه اصلی معتبر نیستند."
+    "validators_warning_text": "لطفاً توجه داشته باشید که افرادی که آدرس Ethereum را به حساب خود اضافه کرده‌اند، از طریق کتاب سفید ما برای راه‌اندازی شبکه اصلی معتبر نیستند.",
+    "okxWalletDescription": "سکه‌های خود را با کیف پول OKX، شریک اصلی خودمدیری اعتمادی ما محافظت کنید.",
+    "okxWalletAction": "OKX WALLET را بارگیری کنید"
   },
   "social_kyc": {
     "header": "تایید هویت",

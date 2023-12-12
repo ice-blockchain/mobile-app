@@ -1166,7 +1166,9 @@
     "enter_address_description": "În timpul Fazei I, tokenurile ICE vor fi lansate pe blockchainul Ethereum. După lansarea Mainnet, tokenurile vor fi interschimbabile de pe Ethereum pe blockchainul Ice Open Network (ION).",
     "enter_address_confirmation": "Sunteți sigur că adresa ERC-20 este corectă?",
     "validators_warning_title": "Confirmă Adresa",
-    "validators_warning_text": "Vă rugăm să rețineți că persoanele care au adăugat o adresă Ethereum la contul lor nu sunt eligibile să devină unul dintre cei top 300 de validatori conform whitepaperului pentru lansarea mainnet."
+    "validators_warning_text": "Vă rugăm să rețineți că persoanele care au adăugat o adresă Ethereum la contul lor nu sunt eligibile să devină unul dintre cei top 300 de validatori conform whitepaperului pentru lansarea mainnet.",
+    "okxWalletDescription": "Securizați-vă monedele cu OKX Wallet, partenerul nostru de portofel oficial de auto-administrare de încredere.",
+    "okxWalletAction": "DESCĂRCAȚI PORTOFELUL OKX"
   },
   "social_kyc": {
     "header": "Verificare",

@@ -1166,7 +1166,9 @@
     "enter_address_description": "Durante a Fase Um, os tokens ICE serão lançados na blockchain Ethereum. Após o lançamento da Mainnet, os tokens serão trocáveis da Ethereum para a blockchain da Ice Open Network (ION).",
     "enter_address_confirmation": "Você tem certeza de que o endereço ERC-20 está correto?",
     "validators_warning_title": "Confirmar Endereço",
-    "validators_warning_text": "Por favor, note que as pessoas que adicionaram um endereço Ethereum à sua conta não têm direito a se tornarem um dos 300 principais validadores, conforme o nosso whitepaper para o lançamento da mainnet."
+    "validators_warning_text": "Por favor, note que as pessoas que adicionaram um endereço Ethereum à sua conta não têm direito a se tornarem um dos 300 principais validadores, conforme o nosso whitepaper para o lançamento da mainnet.",
+    "okxWalletDescription": "Proteja suas moedas com a Carteira OKX, nosso parceiro oficial de carteira autônoma confiável.",
+    "okxWalletAction": "BAIXAR CARTEIRA OKX"
   },
   "social_kyc": {
     "header": "Verificação",

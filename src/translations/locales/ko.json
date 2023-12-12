@@ -1166,7 +1166,9 @@
     "enter_address_description": "제 1 단계에서는 ICE 토큰이 이더리움 블록체인에 출시됩니다. 메인넷이 시작되면 토큰을 이더리움에서 Ice Open Network (ION) 블록체인으로 교환할 수 있습니다.",
     "enter_address_confirmation": "ERC-20 주소가 정확한가요?",
     "validators_warning_title": "주소 확인",
-    "validators_warning_text": "계정에 Ethereum 주소를 추가한 개인은 주요넷 발표를 위한 우리의 화이트페이퍼에 따라 상위 300명의 검증자 중 하나가 될 자격이 없음을 참고하십시오."
+    "validators_warning_text": "계정에 Ethereum 주소를 추가한 개인은 주요넷 발표를 위한 우리의 화이트페이퍼에 따라 상위 300명의 검증자 중 하나가 될 자격이 없음을 참고하십시오.",
+    "okxWalletDescription": "OKX Wallet을 사용하여 동전을 안전하게 보호하고 우리의 신뢰할 수 있는 자체 관리 공식 월렛 파트너입니다.",
+    "okxWalletAction": "OKX WALLET 다운로드"
   },
   "social_kyc": {
     "header": "인증",

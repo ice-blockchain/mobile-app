@@ -1166,7 +1166,9 @@
     "enter_address_description": "Under Fas Ett kommer ICE-token att släppas på Ethereum-blockkedjan. När Mainnet har lanserats kommer token att kunna bytas från Ethereum till Ice Open Network (ION) blockkedjan.",
     "enter_address_confirmation": "Är du säker på att ERC-20-adressen är korrekt?",
     "validators_warning_title": "Bekräfta Adressen",
-    "validators_warning_text": "Observera att personer som har lagt till en Ethereum-adress på sitt konto inte är berättigade att bli en av de 300 bästa validerarna enligt vår whitepaper för huvudnätets lansering."
+    "validators_warning_text": "Observera att personer som har lagt till en Ethereum-adress på sitt konto inte är berättigade att bli en av de 300 bästa validerarna enligt vår whitepaper för huvudnätets lansering.",
+    "okxWalletDescription": "Säkra dina mynt med OKX Wallet, vår pålitliga självständiga officiella plånbokspartner.",
+    "okxWalletAction": "LADDA NER OKX PLÅNBOK"
   },
   "social_kyc": {
     "header": "Verifiering",
