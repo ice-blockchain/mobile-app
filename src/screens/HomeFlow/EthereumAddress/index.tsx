@@ -73,7 +73,7 @@ export const EthereumAddress = memo(() => {
 
 const styles = StyleSheet.create({
   containerContent: {
-    marginHorizontal: SCREEN_SIDE_OFFSET,
+    paddingHorizontal: SCREEN_SIDE_OFFSET,
     flexGrow: 1,
   },
   icon: {
