@@ -1166,8 +1166,7 @@
     "enter_address_description": "Az Első Fázis során az ICE tokenek az Ethereum blockchainen lesznek kibocsátva. Miután elindult a Mainnet, a tokenek Ethereumról az Ice Open Network (ION) blockchainre cserélhetők.",
     "enter_address_confirmation": "Biztos benne, hogy az ERC-20 cím helyes?",
     "validators_warning_title": "Cím megerősítése",
-    "validators_warning_text": "Kérjük, vegye figyelembe, hogy azok az egyének, akik hozzáadtak egy Ethereum címet a fiókjukhoz, nem jogosultak az egyik legjobb 300 validátor közül lenni a fehér könyvünk alapján a mainnet indításához.",
-    "self_custodial_addr_warning_text": "Azt tanácsoljuk, hogy használj egy önkiszolgáló pénztárcát, mint például a Metamask vagy a Trust Wallet. Ne használj exchange címet, mert az Ice csak az Uniswap-on lesz felsorolva kezdetben, vagy kockáztathatod [[:bold]]a cointeid elvesztését[[/:bold]]."
+    "validators_warning_text": "Kérjük, vegye figyelembe, hogy azok az egyének, akik hozzáadtak egy Ethereum címet a fiókjukhoz, nem jogosultak az egyik legjobb 300 validátor közül lenni a fehér könyvünk alapján a mainnet indításához."
   },
   "social_kyc": {
     "header": "Ellenőrzés",

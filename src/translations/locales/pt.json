@@ -1166,8 +1166,7 @@
     "enter_address_description": "Durante a Fase Um, os tokens ICE serão lançados na blockchain Ethereum. Após o lançamento da Mainnet, os tokens serão trocáveis da Ethereum para a blockchain da Ice Open Network (ION).",
     "enter_address_confirmation": "Você tem certeza de que o endereço ERC-20 está correto?",
     "validators_warning_title": "Confirmar Endereço",
-    "validators_warning_text": "Por favor, note que as pessoas que adicionaram um endereço Ethereum à sua conta não têm direito a se tornarem um dos 300 principais validadores, conforme o nosso whitepaper para o lançamento da mainnet.",
-    "self_custodial_addr_warning_text": "Recomendamos o uso de uma carteira de auto custódia, como o Metamask ou o Trust Wallet. Não use nenhum endereço de exchange, pois o Ice será listado apenas na Uniswap no início, ou você pode correr o risco de [[:bold]]perder suas moedas[[/:bold]]."
+    "validators_warning_text": "Por favor, note que as pessoas que adicionaram um endereço Ethereum à sua conta não têm direito a se tornarem um dos 300 principais validadores, conforme o nosso whitepaper para o lançamento da mainnet."
   },
   "social_kyc": {
     "header": "Verificação",

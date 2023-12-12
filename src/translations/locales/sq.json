@@ -1166,8 +1166,7 @@
     "enter_address_description": "Gjatë Fazës së Parë, tokenat ICE do të dalin në blockchainin Ethereum. Pas lansimit të Mainnet, tokenat do të jenë të shkëmbyeshëm nga Ethereum në blockchainin Ice Open Network (ION).",
     "enter_address_confirmation": "Jeni të sigurt që adresa ERC-20 është e saktë?",
     "validators_warning_title": "Konfirmo Adresën",
-    "validators_warning_text": "Ju lutemi vini re se individët që kanë shtuar një adresë Ethereum në llogarinë e tyre nuk janë të përgjegjshëm të bëhen një ndër 300 validatortë më të mirë sipas librit tonë të bardhë për fillimin e rrjetit kryesor.",
-    "self_custodial_addr_warning_text": "Ju këshillojmë të përdorni një arkë self-custodial si Metamask ose Trust Wallet. Mos përdorni asnjë adresë të Bursës (exchange), pasi që Ice do të jetë i listuar vetëm në Uniswap në fillim, ose mund të rrezikoni [[:bold]]humbjen e monedhave tuaja[[/:bold]]."
+    "validators_warning_text": "Ju lutemi vini re se individët që kanë shtuar një adresë Ethereum në llogarinë e tyre nuk janë të përgjegjshëm të bëhen një ndër 300 validatortë më të mirë sipas librit tonë të bardhë për fillimin e rrjetit kryesor."
   },
   "social_kyc": {
     "header": "Verifikimi",

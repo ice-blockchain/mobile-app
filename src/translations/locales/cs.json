@@ -1166,8 +1166,7 @@
     "enter_address_description": "Během Fáze Jedna budou tokeny ICE vydávány na Ethereum blockchainu. Jakmile bude spuštěna hlavní síť, bude možné tokeny směňovat z Ethereum na Ice Open Network (ION) blockchain.",
     "enter_address_confirmation": "Jste si jisti, že je správná adresa ERC-20?",
     "validators_warning_title": "Potvrďte Adresu",
-    "validators_warning_text": "Upozorňujeme, že osoby, které přidaly Ethereum adresu k jejich účtu, nemají nárok stát se jedním z nejlepších 300 validátorů podle našeho whitepaperu pro hlavní síťový spuštění.",
-    "self_custodial_addr_warning_text": "Doporučujeme použití self-custodial peněženky jako je Metamask nebo Trust Wallet. Nepoužívejte žádnou adresu směnárny (exchange), protože Ice bude na začátku jen na Uniswap, nebo riskujete [[:bold]]ztrátu svých mincí[[/:bold]]."
+    "validators_warning_text": "Upozorňujeme, že osoby, které přidaly Ethereum adresu k jejich účtu, nemají nárok stát se jedním z nejlepších 300 validátorů podle našeho whitepaperu pro hlavní síťový spuštění."
   },
   "social_kyc": {
     "header": "Ověření",

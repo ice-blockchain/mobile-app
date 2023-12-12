@@ -1166,8 +1166,7 @@
     "enter_address_description": "I løpet av Fase Én vil ICE-tokenene bli utgitt på Ethereum-blockchainen. Når Mainnet er lansert, kan tokenene byttes fra Ethereum til Ice Open Network (ION) blockchain.",
     "enter_address_confirmation": "Er du sikker på at ERC-20-adressa er rett?",
     "validators_warning_title": "Bekreft Adresse",
-    "validators_warning_text": "Ver merksam på at personar som har lagt til ein Ethereum-adresse på kontoen sin, ikkje har rett til å bli ein av dei øvste 300 validerarane i samsvar med vår kvitbok for hovudnettet sitt lansering.",
-    "self_custodial_addr_warning_text": "Vi anbefaler å bruke en sjølvstyrt lommebok som Metamask eller Trust Wallet. Ikkje bruk nokon exchange-adresse, sidan Ice berre vil bli oppført på Uniswap i byrjinga, eller du kan risikere [[:bold]]å miste myntane dine[[/:bold]]."
+    "validators_warning_text": "Ver merksam på at personar som har lagt til ein Ethereum-adresse på kontoen sin, ikkje har rett til å bli ein av dei øvste 300 validerarane i samsvar med vår kvitbok for hovudnettet sitt lansering."
   },
   "social_kyc": {
     "header": "Verifisering",
