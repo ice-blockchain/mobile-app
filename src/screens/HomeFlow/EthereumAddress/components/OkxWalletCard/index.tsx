@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {Touchable} from '@components/Touchable';
-import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
 import {Images} from '@images';
 import {DownloadIcon} from '@svg/DownloadIcon';
@@ -29,7 +28,12 @@ export const OkxWalletCard = ({style}: Props) => {
       <Touchable
         style={styles.card}
         onPress={() => openLinkWithInAppBrowser({url: LINKS.OKX_WALLET})}>
-        <Image source={Images.card.okxWallet} style={styles.image} />
+        <Image
+          source={Images.backgrounds.blueSquaresBg}
+          style={[StyleSheet.absoluteFill, styles.backgroundImage]}
+          resizeMode={'stretch'}
+        />
+        <Image source={Images.card.okxWallet} style={styles.logoImage} />
         <Text style={styles.descriptionText}>
           {t('ethereum_address.okxWalletDescription')}
         </Text>
@@ -49,12 +53,16 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   card: {
-    backgroundColor: COLORS.primaryLight,
     borderRadius: rem(16),
     paddingVertical: rem(14),
+    overflow: 'hidden',
     alignItems: 'center',
   },
-  image: {
+  backgroundImage: {
+    width: undefined,
+    height: undefined,
+  },
+  logoImage: {
     width: rem(80),
     height: rem(45),
   },

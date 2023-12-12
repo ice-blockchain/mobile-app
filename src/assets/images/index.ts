@@ -95,6 +95,7 @@ export const Images = {
     referralsCardBg: require('./backgrounds/referralsCardBg.png'),
     walkthroughBg: require('./backgrounds/walkthrough.png'),
     darkListItem: require('./backgrounds/darkListItem.png'),
+    blueSquaresBg: require('./backgrounds/blueSquaresBg.png'),
   },
   popUp: {
     updateRequired: require('./popup/please_update.png'),
