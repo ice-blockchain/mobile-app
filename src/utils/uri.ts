@@ -5,6 +5,7 @@ export function isValidURI(uri: string | undefined) {
     return false;
   }
   try {
+    // eslint-disable-next-line no-new
     new URL(uri);
     return true;
   } catch (error) {
