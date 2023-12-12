@@ -2,6 +2,7 @@
 
 import {Touchable} from '@components/Touchable';
 import {LINKS} from '@constants/links';
+import {commonStyles} from '@constants/styles';
 import {Images} from '@images';
 import {DownloadIcon} from '@svg/DownloadIcon';
 import {t} from '@translations/i18n';
@@ -24,7 +25,7 @@ type Props = {
 
 export const OkxWalletCard = ({style}: Props) => {
   return (
-    <View style={[styles.container, style]}>
+    <View style={[commonStyles.flexOne, style]}>
       <Touchable
         style={styles.card}
         onPress={() => openLinkWithInAppBrowser({url: LINKS.OKX_WALLET})}>
@@ -49,9 +50,6 @@ export const OkxWalletCard = ({style}: Props) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   card: {
     borderRadius: rem(16),
     paddingVertical: rem(14),
