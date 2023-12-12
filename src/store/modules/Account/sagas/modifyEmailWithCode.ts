@@ -6,6 +6,11 @@ import {getConfirmationStatus} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {updateAccountSaga} from '@store/modules/Account/sagas/updateAccount';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
+import {
+  isValidationError,
+  ValidationError,
+  ValidationErrorCode,
+} from '@store/modules/Validation/errors/validationError';
 import {t} from '@translations/i18n';
 import {validateEmail} from '@utils/email';
 import {getErrorMessage} from '@utils/errors';
@@ -23,11 +28,6 @@ import {
 
 const actionCreator = AccountActions.MODIFY_EMAIL_WITH_CODE.START.create;
 
-enum ValidateError {
-  InvalidEmail,
-  SameEmail,
-}
-
 export function* modifyEmailWithCodeSaga({
   payload: {email},
 }: ReturnType<typeof actionCreator>) {
@@ -36,9 +36,9 @@ export function* modifyEmailWithCodeSaga({
   );
   try {
     if (!validateEmail(email)) {
-      throw {code: ValidateError.InvalidEmail};
+      throw new ValidationError(ValidationErrorCode.InvalidEmail);
     } else if (email.toLowerCase() === user.email?.toLowerCase()) {
-      throw {code: ValidateError.SameEmail};
+      throw new ValidationError(ValidationErrorCode.SameEmail);
     }
 
     yield call(
@@ -94,15 +94,8 @@ export function* modifyEmailWithCodeSaga({
   } catch (error) {
     let localizedError;
 
-    if (checkProp(error, 'code')) {
-      switch (error.code) {
-        case ValidateError.InvalidEmail:
-          localizedError = t('errors.invalid_email');
-          break;
-        case ValidateError.SameEmail:
-          localizedError = t('errors.same_email');
-          break;
-      }
+    if (isValidationError(error)) {
+      localizedError = error.message;
     }
 
     if (

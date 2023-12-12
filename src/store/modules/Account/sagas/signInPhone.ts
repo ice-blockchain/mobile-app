@@ -2,14 +2,13 @@
 
 import {signInWithPhoneNumber} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
-import {t} from '@translations/i18n';
+import {
+  isValidationError,
+  ValidationError,
+  ValidationErrorCode,
+} from '@store/modules/Validation/errors/validationError';
 import {getErrorMessage} from '@utils/errors';
-import {checkProp} from '@utils/guards';
 import {call, put, SagaReturnType, take} from 'redux-saga/effects';
-
-enum ValidateError {
-  InvalidPhone,
-}
 
 export function* signInPhoneSaga(
   startAction: ReturnType<typeof AccountActions.SIGN_IN_PHONE.START.create>,
@@ -18,7 +17,7 @@ export function* signInPhoneSaga(
     const {phoneNumber, isoCode} = startAction.payload;
 
     if (phoneNumber.trim() === '') {
-      throw {code: ValidateError.InvalidPhone};
+      throw new ValidationError(ValidationErrorCode.InvalidPhone);
     }
 
     let confirmation: SagaReturnType<typeof signInWithPhoneNumber> = yield call(
@@ -74,10 +73,8 @@ export function* signInPhoneSaga(
       }
     }
   } catch (error) {
-    if (checkProp(error, 'code') && error.code === ValidateError.InvalidPhone) {
-      yield put(
-        AccountActions.SIGN_IN_PHONE.FAILED.create(t('errors.invalid_phone')),
-      );
+    if (isValidationError(error)) {
+      yield put(AccountActions.SIGN_IN_PHONE.FAILED.create(error.message));
     } else {
       yield put(
         AccountActions.SIGN_IN_PHONE.FAILED.create(getErrorMessage(error)),

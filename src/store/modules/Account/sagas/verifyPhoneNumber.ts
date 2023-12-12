@@ -3,16 +3,15 @@
 import {verifyPhoneNumber} from '@services/auth';
 import {AccountActions} from '@store/modules/Account/actions';
 import {userSelector} from '@store/modules/Account/selectors';
-import {t} from '@translations/i18n';
+import {
+  isValidationError,
+  ValidationError,
+  ValidationErrorCode,
+} from '@store/modules/Validation/errors/validationError';
 import {getErrorMessage} from '@utils/errors';
-import {checkProp} from '@utils/guards';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
 const actionCreator = AccountActions.VERIFY_PHONE_NUMBER.START.create;
-
-enum ValidateError {
-  SamePhoneNumber,
-}
 
 export function* verifyPhoneNumberSaga(
   action: ReturnType<typeof actionCreator>,
@@ -23,7 +22,7 @@ export function* verifyPhoneNumberSaga(
 
   try {
     if (phoneNumber === user?.phoneNumber) {
-      throw {code: ValidateError.SamePhoneNumber};
+      throw new ValidationError(ValidationErrorCode.SamePhoneNumber);
     }
 
     const verificationId: SagaReturnType<typeof verifyPhoneNumber> = yield call(
@@ -40,11 +39,8 @@ export function* verifyPhoneNumberSaga(
   } catch (error) {
     let validateError;
 
-    if (
-      checkProp(error, 'code') &&
-      error.code === ValidateError.SamePhoneNumber
-    ) {
-      validateError = t('confirm_phone.same_phone_error');
+    if (isValidationError(error)) {
+      validateError = error.message;
     }
 
     yield put(

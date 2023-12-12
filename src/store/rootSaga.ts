@@ -29,6 +29,7 @@ import {statsWatchers} from '@store/modules/Stats/sagas';
 import {statusNoticeWatchers} from '@store/modules/StatusNotice/sagas';
 import {tokenomicsWatchers} from '@store/modules/Tokenomics/sagas';
 import {usersWatchers} from '@store/modules/Users/sagas';
+import {isValidationError} from '@store/modules/Validation/errors/validationError';
 import {validationWatchers} from '@store/modules/Validation/sagas';
 import {walkthroughWatchers} from '@store/modules/Walkthrough/sagas';
 import {AppState} from 'react-native';
@@ -116,6 +117,13 @@ const shouldLog = (error: unknown) => {
    * Some started requests may fail when app goes background
    */
   if (isNetworkError(error) && AppState.currentState !== 'active') {
+    return false;
+  }
+
+  /**
+   * Local validation errors, e.g. "invalid phone number"
+   */
+  if (isValidationError(error)) {
     return false;
   }
 
