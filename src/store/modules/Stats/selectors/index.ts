@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {TimeSeries} from '@api/statistics/types';
+import {UserGrowthTimeSeries} from '@api/statistics/types';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {RootState} from '@store/rootReducer';
 
 export const getUserGrowthStatsSelector =
   (period: StatsPeriod) =>
-  (state: RootState): TimeSeries[] => {
+  (state: RootState): UserGrowthTimeSeries[] => {
     return state.stats.userGrowth.timeSeriesStatsMap[period] ?? [];
   };
 
