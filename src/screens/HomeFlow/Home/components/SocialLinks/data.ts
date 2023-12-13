@@ -13,8 +13,8 @@ type SocialLinkType =
   | 'INSTAGRAM'
   | 'LINKEDIN'
   | 'GITHUB'
-  | 'REDDIT'
-  | 'DISCORD';
+  | 'REDDIT';
+// | 'DISCORD';
 
 export interface SocialLink {
   type: SocialLinkType;
@@ -75,10 +75,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
     linkScheme: LINKS.REDDIT_APP,
     linkUrl: LINKS.REDDIT_WEB,
   },
-  {
-    type: 'DISCORD',
-    icon: Images.social.icons.discord,
-    linkScheme: LINKS.DISCORD_APP,
-    linkUrl: LINKS.DISCORD_WEB,
-  },
+  // {
+  //   type: 'DISCORD',
+  //   icon: Images.social.icons.discord,
+  //   linkScheme: LINKS.DISCORD_APP,
+  //   linkUrl: LINKS.DISCORD_WEB,
+  // },
 ];

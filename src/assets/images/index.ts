@@ -123,7 +123,7 @@ export const Images = {
     instagram: require('./social/instagram.png'),
     telegram: require('./social/telegram.png'),
     reddit: require('./social/reddit.png'),
-    discord: require('./social/discord.png'),
+    // discord: require('./social/discord.png'),
     icons: {
       facebook: require('./social/icons/facebook.png'),
       github: require('./social/icons/github.png'),
@@ -134,7 +134,7 @@ export const Images = {
       twitter: require('./social/icons/twitter.png'),
       youtube: require('./social/icons/youtube.png'),
       reddit: require('./social/icons/reddit.png'),
-      discord: require('./social/icons/discord.png'),
+      // discord: require('./social/icons/discord.png'),
     },
   },
   creativeLibrary: {
