@@ -1226,5 +1226,19 @@
         "description": "Preverjanja nismo mogli dokončati. Poskusite znova čez 7 dni."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Porazdelitev Ethereum",
+      "description": "Svoje Ethereum ICE kovance prejmite tako, da preprosto preverite svoj račun s svojim obstoječim profilom X."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Kliknite na povezavo [[:bold]]tukaj[[/:bold]] za neposredno odpiranje naše objave X.",
+        "pop_up": {
+          "description": "Sledite navodilom in poskrbite, da ste v prvem koraku kliknili na povezavo, da neposredno odprete našo objavo X."
+        }
+      }
+    }
   }
 }

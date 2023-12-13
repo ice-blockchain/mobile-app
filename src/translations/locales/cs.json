@@ -1226,5 +1226,19 @@
         "description": "Nepodařilo se nám dokončit ověření. Můžete to zkusit znovu za 7 dní."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Rozdělení Ethereum",
+      "description": "Získejte své Ethereum ICE mince ověřením svého účtu snadno pomocí vašeho stávajícího profilu X."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Klikněte na odkaz [[:bold]]zde[[/:bold]] pro přímé otevření naší X pošty.",
+        "pop_up": {
+          "description": "Prosím, postupujte podle pokynů a ujistěte se, že jste v prvním kroku klikli na odkaz pro přímé otevření naší X pošty."
+        }
+      }
+    }
   }
 }

@@ -7,7 +7,8 @@ import {LINKS} from '@constants/links';
 import {windowHeight, windowWidth} from '@constants/styles';
 import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useBottomOffsetStyle} from '@navigation/hooks/useBottomOffsetStyle';
-import {useNavigation} from '@react-navigation/native';
+import {MainStackParamList} from '@navigation/Main';
+import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {CloseIcon} from '@svg/CloseIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -35,14 +36,20 @@ const IMAGE_WIDTH = windowWidth - IMAGE_PADDING_HORIZONTAL * 2;
 
 export const RepostExample = () => {
   const navigation = useNavigation();
+  const {
+    params: {isDistributionFlow},
+  } = useRoute<RouteProp<MainStackParamList, 'RepostExample'>>();
   const bottomOffsetStyle = useBottomOffsetStyle();
   const {bottom: bottomInset} = useSafeAreaInsets();
   const [aspectRatio, setAspectRatio] = useState(DEFAULT_ASPECT_RATIO);
+  const imageUrl = isDistributionFlow
+    ? LINKS.DIST_REPOST_EXAMPLE
+    : LINKS.X_REPOST_EXAMPLE;
   useEffect(() => {
-    Image.getSize(LINKS.X_REPOST_EXAMPLE, (width, height) => {
+    Image.getSize(imageUrl, (width, height) => {
       setAspectRatio(width / height);
     });
-  }, []);
+  }, [imageUrl]);
   const imageHeight = IMAGE_WIDTH / aspectRatio;
   const sheetTopOffset =
     windowHeight -
@@ -72,7 +79,7 @@ export const RepostExample = () => {
                 styles.imageContainer,
                 {width: IMAGE_WIDTH, height: imageHeight},
               ]}
-              source={{uri: LINKS.X_REPOST_EXAMPLE}}
+              source={{uri: imageUrl}}
             />
           </View>
         </Animated.View>

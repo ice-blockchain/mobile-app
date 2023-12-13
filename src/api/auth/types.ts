@@ -20,7 +20,15 @@ type AchievementsConfig = {
   achievements?: {enabled: boolean};
 };
 
+type EthDistributionKyc = {
+  'social2-kyc': {
+    enabled: boolean;
+    'x-post-link'?: string;
+  };
+};
+
 export type AuthConfig = AuthCodeConfig &
   FaceAuthConfig &
   TeamConfig &
-  AchievementsConfig;
+  AchievementsConfig &
+  EthDistributionKyc;

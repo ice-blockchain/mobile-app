@@ -10,6 +10,7 @@ import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {PopUpButton} from '@screens/Modals/PopUp/components/PopUpButton';
 import {BUTTON_HEIGHT} from '@screens/SocialKycFlow/constants';
+import {kycStepToTranslationsPathPrefix} from '@screens/SocialKycFlow/utils';
 import {SocialKycActions} from '@store/modules/SocialKyc/actions';
 import {getSocialKycRepostTextStatusSelector} from '@store/modules/SocialKyc/selectors';
 import {SocialKycMethod} from '@store/modules/SocialKyc/types';
@@ -56,10 +57,12 @@ export function SelectProfileStep({
     } else if (getSocialKycRepostTextStatus === 'SKIPPABLE_ERROR') {
       onSkip();
     }
-  }, [getSocialKycRepostTextStatus, kycStep, onSkip, updateStepPassed]);
+  }, [getSocialKycRepostTextStatus, onSkip, updateStepPassed]);
   const isLoading = getSocialKycRepostTextStatus === 'LOADING';
 
   useOnHardwareBack({callback: onGoBack});
+
+  const translationsPrefix = kycStepToTranslationsPathPrefix(kycStep);
 
   return (
     <View style={commonStyles.flexOne}>
@@ -74,10 +77,10 @@ export function SelectProfileStep({
           <Image source={Images.badges.socialKyc.start} />
         </View>
         <Text style={styles.title}>
-          {t('social_kyc.select_method_step.title')}
+          {t(`${translationsPrefix}.select_method_step.title`)}
         </Text>
         <Text style={styles.description}>
-          {t('social_kyc.select_method_step.description')}
+          {t(`${translationsPrefix}.select_method_step.description`)}
         </Text>
       </View>
       <View style={styles.footerContainer}>

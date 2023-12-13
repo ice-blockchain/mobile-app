@@ -1226,5 +1226,19 @@
         "description": "Biz təsdiq prosesini başa çatıra bilmədik. 7 gün sonra yenidən cəhd edə bilərsiniz."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Ethereum Təqsimatı",
+      "description": "Hesabınızı sadəcə mövcud X profiliniz istifadə edərək yoxlayaraq Ethereum ICE koinlərinizi qəbul edin."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "X postumuzu doğrudan açmaq üçün [[:bold]]buraya[[/:bold]] toxunun.",
+        "pop_up": {
+          "description": "X postumuzu açmaq üçün birinci addımı tıkladığınızdan əmin olmaqla təlimatları izləyin."
+        }
+      }
+    }
   }
 }

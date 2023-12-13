@@ -1226,5 +1226,19 @@
         "description": "Kami tidak dapat menyelesaikan pengesahan ini. Anda boleh mencuba lagi dalam 7 hari."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Pembahagian Ethereum",
+      "description": "Dapatkan koin Ethereum ICE anda dengan mengesahkan akaun anda dengan mudah menggunakan profil X anda yang sedia ada."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Klik pautan [[:bold]]di sini[[/:bold]] untuk membuka terus kiriman X kami.",
+        "pop_up": {
+          "description": "Ikuti arahan dan pastikan anda telah mengklik pautan dalam langkah pertama untuk membuka terus kiriman X kami."
+        }
+      }
+    }
   }
 }

@@ -1226,5 +1226,19 @@
         "description": "Nous n'avons pas pu terminer la vérification. Vous pouvez réessayer dans 7 jours."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Distribution Ethereum",
+      "description": "Recevez vos pièces Ethereum ICE en vérifiant facilement votre compte à l'aide de votre profil X existant."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Cliquez sur le lien [[:bold]]ici[[/:bold]] pour ouvrir directement notre publication X.",
+        "pop_up": {
+          "description": "Suivez les instructions et assurez-vous d'avoir cliqué sur le lien à la première étape pour ouvrir directement notre publication X."
+        }
+      }
+    }
   }
 }

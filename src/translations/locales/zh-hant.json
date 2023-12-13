@@ -1226,5 +1226,19 @@
         "description": "我們無法完成驗證。您可以在7天後再次嘗試。"
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "以太坊分發",
+      "description": "輕鬆通過使用您的現有X個人檔案來驗證您的帳戶，以獲得您的以太坊ICE代幣。"
+    },
+    "instructions_step": {
+      "x": {
+        "1": "點擊[[:bold]]這裡[[/:bold]]的鏈接，直接打開我們的X帖子。",
+        "pop_up": {
+          "description": "遵循說明，確保您在第一步中單擊了鏈接以直接打開我們的X帖子。"
+        }
+      }
+    }
   }
 }

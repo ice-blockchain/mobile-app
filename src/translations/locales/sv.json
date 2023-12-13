@@ -1226,5 +1226,19 @@
         "description": "Vi kunde inte slutföra verifieringen. Du kan försöka igen om 7 dagar."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Ethereum Distribution",
+      "description": "Få dina Ethereum ICE-mynt genom att enkelt verifiera ditt konto med din befintliga X-profil."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Klicka på länken [[:bold]]här[[/:bold]] för att öppna vår X-post direkt.",
+        "pop_up": {
+          "description": "Följ instruktionerna och se till att du har klickat på länken i det första steget för att öppna vår X-post direkt."
+        }
+      }
+    }
   }
 }

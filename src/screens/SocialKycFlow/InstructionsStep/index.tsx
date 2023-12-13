@@ -1,5 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {
+  ETH_DISTRIBUTION_KYC_STEP,
+  VERIFY_SOCIAL_ACCOUNT_KYC_STEP,
+} from '@api/tokenomics/constants';
 import {SocialKycStepNumber} from '@api/tokenomics/types';
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {Touchable} from '@components/Touchable';
@@ -7,9 +11,7 @@ import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {useOnHardwareBack} from '@hooks/useOnHardwareBack';
 import {Header} from '@navigation/components/Header';
-import {navigate} from '@navigation/utils';
 import Clipboard from '@react-native-clipboard/clipboard';
-import {Message} from '@screens/Modals/PopUp/components/Message';
 import {StepInstruction} from '@screens/SocialKycFlow/components/StepInstruction';
 import {VerifyWithHeader} from '@screens/SocialKycFlow/components/VerifyWithHeader';
 import {
@@ -19,6 +21,8 @@ import {
 } from '@screens/SocialKycFlow/constants';
 import {ShowExample} from '@screens/SocialKycFlow/InstructionsStep/components/ShowExample';
 import {Tooltip} from '@screens/SocialKycFlow/InstructionsStep/components/Tooltip';
+import {useOnContinue} from '@screens/SocialKycFlow/InstructionsStep/hooks/useOnContinue';
+import {kycStepToTranslationsPathPrefix} from '@screens/SocialKycFlow/utils';
 import {getFacebookAccessTokenForUserPosts} from '@services/auth/signin/facebook';
 import {SocialKycActions} from '@store/modules/SocialKyc/actions';
 import {
@@ -31,7 +35,7 @@ import {CopyIcon} from '@svg/CopyIcon';
 import {t} from '@translations/i18n';
 import {hapticFeedback} from '@utils/device';
 import {font} from '@utils/styles';
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
@@ -84,7 +88,7 @@ export function InstructionsStep({
       }
     }
   }, [kycStep, onSkip, socialKycMethod, socialKycStatus, updateStepPassed]);
-  const onConfirm = () => {
+  const onConfirm = useCallback(() => {
     if (socialKycMethod === 'Facebook') {
       // TODO: move to saga once facebook flow is enabled
       getFacebookAccessTokenForUserPosts()
@@ -101,34 +105,17 @@ export function InstructionsStep({
     } else {
       updateStepPassed();
     }
-  };
-  const onContinue = () => {
-    navigate({
-      name: 'PopUp',
-      params: {
-        title: t('social_kyc.instructions_step.x.pop_up.title'),
-        message: (
-          <Message
-            text={t('social_kyc.instructions_step.x.pop_up.description')}
-          />
-        ),
-        buttons: [
-          {
-            text: t('button.no'),
-            preset: 'outlined',
-          },
-          {
-            text: t('button.confirm'),
-            onPress: onConfirm,
-          },
-        ],
-        dismissOnAndroidHardwareBack: false,
-        dismissOnOutsideTouch: false,
-      },
-    });
-  };
+  }, [dispatch, kycStep, socialKycMethod, updateStepPassed]);
+
+  const isDistributionFlow = kycStep === ETH_DISTRIBUTION_KYC_STEP;
+  const {onContinue, onStepOne} = useOnContinue({
+    onConfirm,
+    isDistributionFlow,
+  });
 
   useOnHardwareBack({callback: onGoBack, preventDefault: true});
+
+  const translationsPrefix = kycStepToTranslationsPathPrefix(kycStep);
 
   return (
     <View style={commonStyles.flexOne}>
@@ -144,21 +131,26 @@ export function InstructionsStep({
         contentContainerStyle={styles.contentContainer}>
         <VerifyWithHeader socialKycMethod={socialKycMethod} />
         <View style={styles.showExampleContainer}>
-          {socialKycMethod === 'X' ? <ShowExample /> : null}
+          {socialKycMethod === 'X' ? (
+            <ShowExample isDistributionFlow={isDistributionFlow} />
+          ) : null}
         </View>
         <View style={styles.instructionsContainer}>
           <StepInstruction
             stepNumber={1}
-            description={t('social_kyc.instructions_step.x.1')}
+            description={t(`${translationsPrefix}.instructions_step.x.1`)}
+            onPress={onStepOne}
           />
           <View style={styles.separator} />
-          <StepInstruction
-            stepNumber={2}
-            description={t('social_kyc.instructions_step.x.2')}
-          />
+          {kycStep === VERIFY_SOCIAL_ACCOUNT_KYC_STEP ? (
+            <StepInstruction
+              stepNumber={2}
+              description={t('social_kyc.instructions_step.x.2')}
+            />
+          ) : null}
           <View style={styles.separator} />
           <StepInstruction
-            stepNumber={3}
+            stepNumber={kycStep === VERIFY_SOCIAL_ACCOUNT_KYC_STEP ? 3 : 2}
             description={t('social_kyc.instructions_step.x.3')}
             allBordersRounded={false}
             rightIcon={<CopyIcon width={rem(24)} />}

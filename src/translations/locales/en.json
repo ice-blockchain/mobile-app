@@ -1223,5 +1223,19 @@
         "description": "We couldn't complete the verification. You can try again in 7 days."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Ethereum Distribution",
+      "description": "Receive your Ethereum ICE coins by verifying your account easily using your existing X profile."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Tap the link [[:bold]]here[[/:bold]] to open our X post directly.",
+        "pop_up": {
+          "description": "Please follow the instructions and make sure that you tapped on the link in first step to open our X post."
+        }
+      }
+    }
   }
 }

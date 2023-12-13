@@ -1229,5 +1229,19 @@
         "description": "Ons kon die verifikasie nie voltooi nie. Jy kan weer probeer oor 7 dae."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Ethereum Verspreiding",
+      "description": "Ontvang jou Ethereum ICE-munte deur jou rekening maklik te verifieer met behulp van jou bestaande X-profiel."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Tik op die skakel [[:bold]]hier[[/:bold]] om ons X-pos direk te oop.",
+        "pop_up": {
+          "description": "Volg asseblief die instruksies en maak seker dat jy in die eerste stap op die skakel getik het om ons X-pos direk te oop te maak."
+        }
+      }
+    }
   }
 }

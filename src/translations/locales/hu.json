@@ -1226,5 +1226,19 @@
         "description": "Nem sikerült befejezni a megerősítést. 7 nap múlva újra próbálkozhatsz."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Ethereum Osztás",
+      "description": "Az Ethereum ICE érméid fogadd az X profilod használatával egyszerűen ellenőrizve a fiókodat."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Kattints a [[:bold]]itt[[/:bold]] található hivatkozásra az X posztunk közvetlen megnyitásához.",
+        "pop_up": {
+          "description": "Kérjük, kövesse az utasításokat, és győződjön meg róla, hogy az első lépésben kattintott a hivatkozásra az X posztunk közvetlen megnyitásához."
+        }
+      }
+    }
   }
 }
