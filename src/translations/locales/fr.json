@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "Adresse Ethereum",
-      "subtitle": "Veuillez entrer votre adresse ERC-20 ici."
+      "subtitle": "Veuillez entrer votre adresse Ethereum ici."
     },
     "verified_tooltip": {
       "title": "KYC Vérifié"
@@ -1162,12 +1162,13 @@
   },
   "ethereum_address": {
     "title": "Adresse Ethereum",
-    "enter_address_title": "Entrez votre\nadresse ERC-20",
+    "enter_address_title": "Entrez votre\nadresse Ethereum",
     "enter_address_description": "Pendant la Phase Un, les jetons ICE seront émis sur la blockchain Ethereum. Une fois que le Mainnet aura été lancé, les jetons seront échangeables d'Ethereum vers la blockchain Ice Open Network (ION).",
-    "enter_address_confirmation": "Êtes-vous sûr que l'adresse ERC-20 est correcte ?",
+    "enter_address_confirmation": "Êtes-vous sûr que l'adresse Ethereum est correcte ?",
     "validators_warning_title": "Confirmer l'adresse",
     "validators_warning_text": "Veuillez noter que les personnes qui ont ajouté une adresse Ethereum à leur compte ne sont pas éligibles pour devenir l'un des 300 meilleurs validateurs selon notre livre blanc pour le lancement de la version principale.",
-    "self_custodial_addr_warning_text": "Nous vous conseillons d'utiliser un portefeuille auto-géré tel que Metamask ou Trust Wallet. N'utilisez aucune adresse d'échange, car Ice ne sera répertorié que sur Uniswap au début, ou vous risquez de [[:bold]]perdre vos pièces[[/:bold]]."
+    "okxWalletDescription": "Sécurisez vos pièces avec OKX Wallet, notre partenaire de portefeuille officiel de confiance en libre gestion.",
+    "okxWalletAction": "TÉLÉCHARGER LE PORTEFEUILLE OKX"
   },
   "social_kyc": {
     "header": "Vérification",

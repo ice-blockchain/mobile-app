@@ -95,6 +95,7 @@ export const Images = {
     referralsCardBg: require('./backgrounds/referralsCardBg.png'),
     walkthroughBg: require('./backgrounds/walkthrough.png'),
     darkListItem: require('./backgrounds/darkListItem.png'),
+    blueSquaresBg: require('./backgrounds/blueSquaresBg.png'),
   },
   popUp: {
     updateRequired: require('./popup/please_update.png'),
@@ -185,5 +186,6 @@ export const Images = {
   },
   card: {
     joinMainnet: require('./card/joinMainnet.png'),
+    okxWallet: require('./card/okxWallet.png'),
   },
 } as const;

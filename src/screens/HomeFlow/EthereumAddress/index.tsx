@@ -9,8 +9,8 @@ import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {AddressActionButton} from '@screens/HomeFlow/EthereumAddress/components/AddressActionButton';
-import {EthereumAddressWarning} from '@screens/HomeFlow/EthereumAddress/components/EthereumAddressWarning';
 import {FramedEthereumIcon} from '@screens/HomeFlow/EthereumAddress/components/FramedEthereumIcon';
+import {OkxWalletCard} from '@screens/HomeFlow/EthereumAddress/components/OkxWalletCard';
 import {useSetEthereumAddress} from '@screens/HomeFlow/EthereumAddress/hooks/useSetEthereumAddress';
 import {useValidatorsWarning} from '@screens/HomeFlow/EthereumAddress/hooks/useValidatorsWarning';
 import {EthereumBookIcon} from '@svg/EthereumBookIcon';
@@ -59,7 +59,7 @@ export const EthereumAddress = memo(() => {
           onChange={needToShowWarning ? showWarning : undefined}
           showChangeLabel={false}
         />
-        {!isKeyboardShown && <EthereumAddressWarning style={styles.warning} />}
+        {!isKeyboardShown && <OkxWalletCard style={styles.walletCard} />}
         <AddressActionButton
           style={styles.button}
           onPress={onSubmit}
@@ -73,7 +73,7 @@ export const EthereumAddress = memo(() => {
 
 const styles = StyleSheet.create({
   containerContent: {
-    marginHorizontal: SCREEN_SIDE_OFFSET,
+    paddingHorizontal: SCREEN_SIDE_OFFSET,
     flexGrow: 1,
   },
   icon: {
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
   input: {
     marginTop: rem(74),
   },
-  warning: {
+  walletCard: {
     marginTop: rem(24),
   },
   button: {

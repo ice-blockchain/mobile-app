@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "Ethereum ünvanı",
-      "subtitle": "Xahiş edirəm ERC-20 ünvanınızı buraya daxil edin."
+      "subtitle": "Xahiş edirəm Ethereum ünvanınızı buraya daxil edin."
     },
     "verified_tooltip": {
       "title": "KYC Təsdiqləndi"
@@ -1162,12 +1162,13 @@
   },
   "ethereum_address": {
     "title": "Ethereum Ünvanı",
-    "enter_address_title": "ERC-20 ünvanınızı daxil edin",
+    "enter_address_title": "Ethereum ünvanınızı daxil edin",
     "enter_address_description": "Fəzə Bir zamanı ICE tokenləri Ethereum blokçeyndə buraxılacaq. Əsas şəbəkə başladıqdan sonra, tokenlərin Ethereumdan Ice Open Network (ION) blokçeynə dəyişdirilməsi mümkün olacaq.",
-    "enter_address_confirmation": "ERC-20 ünvanının düzgün olduğundan əminsinizmi?",
+    "enter_address_confirmation": "Ethereum ünvanının düzgün olduğundan əminsinizmi?",
     "validators_warning_title": "Ünvanı Təsdiq Et",
     "validators_warning_text": "Xahiş edirəm diqqət edin ki, Ethereum ünvanını hesabına əlavə edənlər, əsas şəbəkənin istehsalı üçün bizim ağlaşdırmamıza əsasən ən yaxşı 300 doğrulayıcının biri olmaq üçün əhəmiyyət daşımırlar.",
-    "self_custodial_addr_warning_text": "Metamask və ya Trust Wallet kimi öz-əmanəti qoruyan bir cüzdan istifadə etməyin tövsiyə edirik. İlk başta yalnız Uniswap-da siyahılanacaq Ice kimi heç bir exchange ünvanı istifadə etməyin, yoxsa siklərinizi itirə bilərsiniz."
+    "okxWalletDescription": "OKX Wallet il əhvalatınızı təminat altına alın, bizim etibarlı öz-özünü idarə edən rəsmi cüzdan tərəfdaşımız.",
+    "okxWalletAction": "OKX CÜZDANINI YÜKLƏYİN"
   },
   "social_kyc": {
     "header": "Doğrulama",

@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "ਈਥੇਰੀਅਮ ਐਡਰੈੱਸ",
-      "subtitle": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ERC-20 ਐਡਰੈੱਸ ਇੱਥੇ ਦਿਓ."
+      "subtitle": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ Ethereum ਐਡਰੈੱਸ ਇੱਥੇ ਦਿਓ."
     },
     "verified_tooltip": {
       "title": "KYC ਪ੍ਰਮਾਣਿਤ"
@@ -1162,12 +1162,13 @@
   },
   "ethereum_address": {
     "title": "ਈਥੇਰੀਅਮ ਐਡਰੈੱਸ",
-    "enter_address_title": "ਆਪਣਾ\nERC-20 ਐਡਰੈੱਸ ਦਿਓ",
+    "enter_address_title": "ਆਪਣਾ\nEthereum ਐਡਰੈੱਸ ਦਿਓ",
     "enter_address_description": "ਫੇਜ ਵਨ ਦੌਰਾਨ, ICE ਟੋਕਨ ਈਥੇਰੀਅਮ ਬਲਾਕਚੈਨ 'ਤੇ ਜਾਰੀ ਕੀਤੇ ਜਾਣਗੇ. ਜਦੋਂ ਮੈਨਨੈੱਟ ਲਾਂਚ ਹੋ ਜਾਵੇ, ਤੋਕਨਾਂ ਨੂੰ ਈਥੇਰੀਅਮ ਤੋਂ ਆਈਸ ਓਪਨ ਨੈੱਟਵਰਕ (ION) ਬਲਾਕਚੈਨ 'ਤੇ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ।",
-    "enter_address_confirmation": "ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ERC-20 ਪਤਾ ਸਹੀ ਹੈ?",
+    "enter_address_confirmation": "ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ Ethereum ਪਤਾ ਸਹੀ ਹੈ?",
     "validators_warning_title": "ਪਤਾ ਪੁਸ਼ਟੀ ਕਰੋ",
     "validators_warning_text": "ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਦਿਓ ਕਿ ਉਹ ਵੀਅਕਾਸਕ ਜਿਹੜੇ ਆਪਣੇ ਖਾਤੇ ਵਿੱਚ ਇਕ Ethereum ਪਤਾ ਸ਼ਾਮਲ ਕਰ ਲਿਆ ਹੈ, ਸਾਡੇ ਮੁੱਖ ਨੈੱਟ ਲਾਂਚ ਲਈ ਸਾਡੇ ਸਫੇਦ ਪੇਪਰ ਦੇ ਅਨੁਸਾਰ ਸਿਖਰੇ 300 ਵੈਲੀਡੇਟਰ ਵਿੱਚ ਸਿੱਖਰਨ ਲਈ ਯੋਗ ਨਹੀਂ ਹਨ।",
-    "self_custodial_addr_warning_text": "ਅਸੀਂ ਆਪਣੀ ਆਤਮ-ਸੰਭਾਲ ਵਾਲੀ ਵਾਲੇ ਜੈਸੇ Metamask ਜਾਂ Trust Wallet ਵਰਤਾਂ ਦੀ ਸਿਫਾਰਿਸ਼ ਕਰਦੇ ਹਾਂ। ਇੱਥੇ ਕੋਈ ਵੀ ਐਕਸਚੇਂਜ ਐਡਰੈੱਸ ਨੂੰ ਵਰਤਣ ਨਾਲ, ਕਿਉਂਕਿ Ice ਸਿਰਫ ਸ਼ੁਰੂਆਤ ਵਿਚ ਉਨੀਸਵਾਪ 'ਤੇ ਹੀ ਦਾਖਲ ਹੋਵੇਗਾ, ਜਾਂ ਤੁਸੀਂ ਆਪਣੇ ਸਿੱਕੇ [[:bold]]ਗੁੰਬਦਿਲ ਹੋਣ ਦਾ ਖ਼ਤਰਾ[[/:bold]]."
+    "okxWalletDescription": "ਆਪਣੇ ਕਿੱਪੇ ਨੂੰ OKX Wallet ਨਾਲ ਸੁਰੱਖਿਅਤ ਕਰੋ, ਸਾਡੇ ਭਰੋਸੇਯੋਗ ਆਤਮ-ਕੁਸ਼ਲ ਆਫ਼ਿਸ਼ਿਅਲ ਵਾਲੈਟ ਪਾਰਟਨਰ ਨਾਲ।",
+    "okxWalletAction": "OKX ਵਾਲੇਟ ਡਾਊਨਲੋਡ ਕਰੋ"
   },
   "social_kyc": {
     "header": "ਪੁਸ਼ਟੀਕਰਣ",

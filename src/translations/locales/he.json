@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "כתובת Ethereum",
-      "subtitle": "אנא הזינו את כתובת ה-ERC-20 שלכם כאן."
+      "subtitle": "אנא הזינו את כתובת ה-Ethereum שלכם כאן."
     },
     "verified_tooltip": {
       "title": "KYC מאומת"
@@ -1169,12 +1169,13 @@
   },
   "ethereum_address": {
     "title": "כתובת Ethereum",
-    "enter_address_title": "הזינו\nאת כתובת ה-ERC-20 שלכם",
+    "enter_address_title": "הזינו\nאת כתובת ה-Ethereum שלכם",
     "enter_address_description": "במהלך השלב הראשון, הטוקנים של ICE יושחררו על גבי הבלוקצ'יין של Ethereum. לאחר שה-Mainnet יושק, יהיה ניתן להחליף את הטוקנים מ-Ethereum לבלוקצ'יין של Ice Open Network (ION).",
-    "enter_address_confirmation": "האם אתה בטוח שכתובת ERC-20 היא נכונה?",
+    "enter_address_confirmation": "האם אתה בטוח שכתובת Ethereum היא נכונה?",
     "validators_warning_title": "אשר כתובת",
     "validators_warning_text": "שימו לב שאנשים שהוסיפו כתובת Ethereum לחשבונם אינם זכאים להיות אחד מ-300 האומתנים המובילים כפי שנקבע בספר הלבן שלנו לשקיעה ברשת הראשית.",
-    "self_custodial_addr_warning_text": "אנחנו ממליצים להשתמש בארנק מסודר עצמאית כמו Metamask או Trust Wallet. אל תשתמשו בכתובת של חלופות כיוון ש-Ice ירשום ב-Uniswap בתחילה בלבד, או תימנעו [[:bold]]לאבד את המטבעות שלכם[[/:bold]]."
+    "okxWalletDescription": "אבטח את המטבעות שלך עם OKX Wallet, שותף הארנק הרשמי שלנו לניהול עצמי האמין.",
+    "okxWalletAction": "הורד את OKX WALLET"
   },
   "social_kyc": {
     "header": "אימות",

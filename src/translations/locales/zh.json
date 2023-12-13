@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "以太坊地址",
-      "subtitle": "请在此处输入您的 ERC-20 地址。"
+      "subtitle": "请在此处输入您的 Ethereum 地址。"
     },
     "verified_tooltip": {
       "title": "KYC 已验证"
@@ -1162,13 +1162,13 @@
   },
   "ethereum_address": {
     "title": "以太坊地址",
-    "enter_address_title": "输入\n您的 ERC-20 地址",
+    "enter_address_title": "输入\n您的 Ethereum 地址",
     "enter_address_description": "在第一阶段，ICE 代币将在以太坊区块链上发布。一旦启动了主网，代币将可以从以太坊转换到 Ice Open Network (ION) 区块链。",
-    "enter_address_warning": "请确保上面的 ERC-20 地址是正确的，并且您将在第一阶段的整个时间内都能够访问它。一旦确认，将无法更改。",
-    "enter_address_confirmation": "您确定 ERC-20 地址是正确的吗？",
+    "enter_address_confirmation": "您确定 Ethereum 地址是正确的吗？",
     "validators_warning_title": "确认地址",
     "validators_warning_text": "请注意，已将Ethereum地址添加到其帐户的个人不符合我们的白皮书要求，不能成为前300名验证者之一，用于主网发布。",
-    "self_custodial_addr_warning_text": "我们建议使用自托管钱包，如Metamask或Trust Wallet。不要使用任何交易所地址，因为Ice将仅在Uniswap上开始列出，否则您可能面临[[::bold]]失去您的硬币[[/::bold]] 的风险。"
+    "okxWalletDescription": "使用OKX Wallet安全保管您的硬币，我们值得信赖的自托管官方钱包合作伙伴。",
+    "okxWalletAction": "下载OKX WALLET"
   },
   "social_kyc": {
     "header": "验证",
