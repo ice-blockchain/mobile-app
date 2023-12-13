@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "Dirección Ethereum",
-      "subtitle": "Por favor, ingresa tu dirección ERC-20 aquí."
+      "subtitle": "Por favor, ingresa tu dirección Ethereum aquí."
     },
     "verified_tooltip": {
       "title": "KYC Verificado"
@@ -1162,9 +1162,9 @@
   },
   "ethereum_address": {
     "title": "Dirección Ethereum",
-    "enter_address_title": "Ingresa tu\ndirección ERC-20",
+    "enter_address_title": "Ingresa tu\ndirección Ethereum",
     "enter_address_description": "Durante la Fase Uno, los tokens ICE se lanzarán en la cadena de bloques Ethereum. Una vez que se haya lanzado Mainnet, los tokens serán intercambiables desde Ethereum a la cadena de bloques de Ice Open Network (ION).",
-    "enter_address_confirmation": "¿Estás seguro de que la dirección ERC-20 es correcta?",
+    "enter_address_confirmation": "¿Estás seguro de que la dirección Ethereum es correcta?",
     "validators_warning_title": "Confirmar Dirección",
     "validators_warning_text": "Por favor, tenga en cuenta que las personas que han agregado una dirección de Ethereum a su cuenta no son elegibles para convertirse en uno de los 300 principales validadores según nuestro libro blanco para el lanzamiento de la red principal.",
     "okxWalletDescription": "Asegure sus monedas con OKX Wallet, nuestro confiable socio de cartera oficial de autogestión.",

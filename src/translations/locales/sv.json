@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "Ethereum-adress",
-      "subtitle": "Vänligen ange din ERC-20-adress här."
+      "subtitle": "Vänligen ange din Ethereum-adress här."
     },
     "verified_tooltip": {
       "title": "KYC Verifierad"
@@ -1162,9 +1162,9 @@
   },
   "ethereum_address": {
     "title": "Ethereum-adress",
-    "enter_address_title": "Ange\ndin ERC-20-adress",
+    "enter_address_title": "Ange\ndin Ethereum-adress",
     "enter_address_description": "Under Fas Ett kommer ICE-token att släppas på Ethereum-blockkedjan. När Mainnet har lanserats kommer token att kunna bytas från Ethereum till Ice Open Network (ION) blockkedjan.",
-    "enter_address_confirmation": "Är du säker på att ERC-20-adressen är korrekt?",
+    "enter_address_confirmation": "Är du säker på att Ethereum-adressen är korrekt?",
     "validators_warning_title": "Bekräfta Adressen",
     "validators_warning_text": "Observera att personer som har lagt till en Ethereum-adress på sitt konto inte är berättigade att bli en av de 300 bästa validerarna enligt vår whitepaper för huvudnätets lansering.",
     "okxWalletDescription": "Säkra dina mynt med OKX Wallet, vår pålitliga självständiga officiella plånbokspartner.",

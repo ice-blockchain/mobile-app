@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "Ethereum adresi",
-      "subtitle": "Lütfen ERC-20 adresinizi buraya girin."
+      "subtitle": "Lütfen Ethereum adresinizi buraya girin."
     },
     "verified_tooltip": {
       "title": "KYC Onaylandı"
@@ -1162,9 +1162,9 @@
   },
   "ethereum_address": {
     "title": "Ethereum Adresi",
-    "enter_address_title": "ERC-20 adresinizi\ngirin",
+    "enter_address_title": "Ethereum adresinizi\ngirin",
     "enter_address_description": "Faz 1 sırasında ICE tokenleri Ethereum blockchain üzerine yayınlanacaktır. Mainnet başlatıldığında, tokenler Ethereum'dan Ice Open Network (ION) blockchain'e değiştirilebilir.",
-    "enter_address_confirmation": "ERC-20 adresinin doğru olduğundan emin misiniz?",
+    "enter_address_confirmation": "Ethereum adresinin doğru olduğundan emin misiniz?",
     "validators_warning_title": "Adresi Onayla",
     "validators_warning_text": "Lütfen Ethereum adresini hesaplarına ekleyen kişilerin ana ağın başlatılması için bizim beyaz kağıdımıza göre en iyi 300 doğrulayıcıdan biri olma hakları olmadığını unutmayın.",
     "okxWalletDescription": "OKX Wallet ile paralarınızı güvence altına alın, güvendiğimiz kendi kendine saklama resmi cüzdan ortağımız.",

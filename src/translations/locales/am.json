@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "Ethereum አድራሻ",
-      "subtitle": "እባክዎ የእርስዎን ERC-20 አድራሻ እዚህ ያስገቡ።"
+      "subtitle": "እባክዎ የእርስዎን Ethereum አድራሻ እዚህ ያስገቡ።"
     },
     "verified_tooltip": {
       "title": "KYC የተረጋገጠ"
@@ -1162,9 +1162,9 @@
   },
   "ethereum_address": {
     "title": "Ethereum አድራሻ",
-    "enter_address_title": "የእርስዎን\nERC-20 አድራሻ ያስገቡ",
+    "enter_address_title": "የእርስዎን\nEthereum አድራሻ ያስገቡ",
     "enter_address_description": "በደረጃ አንድ ወቅት የ ICE ቶከኖች በ Ethereum blockchain ላይ ይለቀቃሉ። ሜንኔት አንዴ ከተጀመረ ቶከኖቹ ከEthereum ወደ Ice Open Network (ION) blockchain ይቀየራሉ።",
-    "enter_address_confirmation": "የ ERC-20 አድራሻ ትክክል መሆኑን እርግጠኛ ነዎት?",
+    "enter_address_confirmation": "የ Ethereum አድራሻ ትክክል መሆኑን እርግጠኛ ነዎት?",
     "validators_warning_title": "አድራሻ አረጋግጥ",
     "validators_warning_text": "እባክዎን የኢቴሬም አድራሻን ወደ መለያቸው ያከሉ ግለሰቦች ለዋና ኔትዎርክ ማስጀመሪያ በነጭ ወረቀታችን መሰረት ከከፍተኛ 300 አረጋጋጮች ውስጥ አንዱ ለመሆን ብቁ እንዳልሆኑ ልብ ይበሉ።",
     "okxWalletDescription": "እኛን ማያያዣ በማብራሪ የሚታይታይ ህግ እንዴት እንዲወርድ የOKX ገባዎችዎን ያግኙ።",

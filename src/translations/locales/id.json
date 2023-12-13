@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "Alamat Ethereum",
-      "subtitle": "Silakan masukkan alamat ERC-20 Anda di sini."
+      "subtitle": "Silakan masukkan alamat Ethereum Anda di sini."
     },
     "verified_tooltip": {
       "title": "KYC Terverifikasi"
@@ -1162,9 +1162,9 @@
   },
   "ethereum_address": {
     "title": "Alamat Ethereum",
-    "enter_address_title": "Masukkan alamat\nERC-20 Anda",
+    "enter_address_title": "Masukkan alamat\nEthereum Anda",
     "enter_address_description": "Selama Tahap Satu, token ICE akan dirilis di blockchain Ethereum. Setelah Mainnet diluncurkan, token dapat ditukarkan dari Ethereum ke blockchain Ice Open Network (ION).",
-    "enter_address_confirmation": "Apakah Anda yakin bahwa alamat ERC-20 ini benar?",
+    "enter_address_confirmation": "Apakah Anda yakin bahwa alamat Ethereum ini benar?",
     "validators_warning_title": "Konfirmasi Alamat",
     "validators_warning_text": "Harap diperhatikan bahwa individu yang telah menambahkan alamat Ethereum ke akun mereka tidak memenuhi syarat untuk menjadi salah satu dari 300 validator teratas sesuai dengan whitepaper kami untuk peluncuran mainnet.",
     "okxWalletDescription": "Amanahkan koin Anda dengan OKX Wallet, mitra dompet resmi pengelolaan sendiri yang terpercaya kami.",

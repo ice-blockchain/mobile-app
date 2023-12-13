@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "Адрес Ethereum",
-      "subtitle": "Пожалуйста, введите свой адрес ERC-20 здесь."
+      "subtitle": "Пожалуйста, введите свой адрес Ethereum здесь."
     },
     "verified_tooltip": {
       "title": "KYC Подтверждено"
@@ -1162,9 +1162,9 @@
   },
   "ethereum_address": {
     "title": "Адрес Ethereum",
-    "enter_address_title": "Введите\nваш адрес ERC-20",
+    "enter_address_title": "Введите\nваш адрес Ethereum",
     "enter_address_description": "Во время Фазы 1 токены ICE будут выпущены на блокчейне Ethereum. После запуска Mainnet токены можно будет обменивать с Ethereum на блокчейн Ice Open Network (ION).",
-    "enter_address_confirmation": "Вы уверены, что адрес ERC-20 верный?",
+    "enter_address_confirmation": "Вы уверены, что адрес Ethereum верный?",
     "validators_warning_title": "Подтвердите Адрес",
     "validators_warning_text": "Обратите внимание, что лица, добавившие адрес Ethereum в свой аккаунт, не имеют права стать одним из лучших 300 валидаторов согласно нашему белой книге для запуска основной сети.",
     "okxWalletDescription": "Обеспечьте безопасность ваших монет с помощью OKX Wallet, нашего надежного официального партнера по управлению кошельком.",

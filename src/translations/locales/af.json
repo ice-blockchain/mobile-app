@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "Ethereum-adres",
-      "subtitle": "Voer asseblief jou ERC-20-adres hier in."
+      "subtitle": "Voer asseblief jou Ethereum-adres hier in."
     },
     "verified_tooltip": {
       "title": "KYC Geverifieer"
@@ -1165,9 +1165,9 @@
   },
   "ethereum_address": {
     "title": "Ethereum Adres",
-    "enter_address_title": "Voer jou\nERC-20-adres in",
+    "enter_address_title": "Voer jou\nEthereum-adres in",
     "enter_address_description": "Tydens Fase Een sal die ICE-tokens op die Ethereum-blokchain vrygestel word. Sodra die Hoofnet begin het, sal die tokens oorgeruil kan word van Ethereum na die Ice Open Network (ION) blokchain.",
-    "enter_address_confirmation": "Is jy seker dat die ERC-20-adres korrek is?",
+    "enter_address_confirmation": "Is jy seker dat die Ethereum-adres korrek is?",
     "validators_warning_title": "Bevestig Adres",
     "validators_warning_text": "Let daarop dat individue wat 'n Ethereum-adres aan hul rekening bygevoeg het, nie in aanmerking kom om een van die top 300-validatorse te word volgens ons witboek vir die hoofnetlansering nie.",
     "okxWalletDescription": "Beveilig jou munte met OKX Wallet, ons vertroude self-bewaar offisiële wallet-maatskappy.",

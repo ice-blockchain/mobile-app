@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "عنوان إيثيريوم",
-      "subtitle": "الرجاء إدخال عنوان ERC-20 الخاص بك هنا."
+      "subtitle": "الرجاء إدخال عنوان Ethereum الخاص بك هنا."
     },
     "verified_tooltip": {
       "title": "تم التحقق من KYC"
@@ -1162,9 +1162,9 @@
   },
   "ethereum_address": {
     "title": "عنوان إيثيريوم",
-    "enter_address_title": "أدخل\nعنوان ERC-20 الخاص بك",
+    "enter_address_title": "أدخل\nعنوان Ethereum الخاص بك",
     "enter_address_description": "خلال المرحلة الأولى، ستتم إصدار عملات ICE على سلسلة الكتل Ethereum. بمجرد أن يتم إطلاق الشبكة الرئيسية، سيمكن تبادل العملات من Ethereum إلى شبكة Ice Open (ION) Blockchain.",
-    "enter_address_confirmation": "هل أنت متأكد من أن عنوان ERC-20 صحيح؟",
+    "enter_address_confirmation": "هل أنت متأكد من أن عنوان Ethereum صحيح؟",
     "validators_warning_title": "تأكيد العنوان",
     "validators_warning_text": "يرجى ملاحظة أن الأفراد الذين أضافوا عنوان Ethereum إلى حسابهم ليس لديهم الحق في أن يصبحوا واحدًا من أفضل 300 مُحقق وفقًا لورقتنا البيضاء لإطلاق الشبكة الرئيسية.",
     "okxWalletDescription": "آمن عملاتك مع محفظة OKX، شريك محفظة العملات الرسمية الذاتية التصرف الموثوق بها لدينا.",

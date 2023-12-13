@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "Διεύθυνση Ethereum",
-      "subtitle": "Παρακαλώ εισάγετε τη διεύθυνση ERC-20 σας εδώ."
+      "subtitle": "Παρακαλώ εισάγετε τη διεύθυνση Ethereum σας εδώ."
     },
     "verified_tooltip": {
       "title": "Επιβεβαιώθηκε το KYC"
@@ -1162,9 +1162,9 @@
   },
   "ethereum_address": {
     "title": "Διεύθυνση Ethereum",
-    "enter_address_title": "Εισάγετε\nτη διεύθυνση ERC-20 σας",
+    "enter_address_title": "Εισάγετε\nτη διεύθυνση Ethereum σας",
     "enter_address_description": "Κατά τη διάρκεια της Φάσης Ένα, τα κέρματα ICE θα εκδοθούν στο Ethereum blockchain. Αφού ξεκινήσει το Mainnet, τα κέρματα θα είναι αντικαταστάσιμα από το Ethereum στο Ice Open Network (ION) blockchain.",
-    "enter_address_confirmation": "Είστε σίγουροι ότι η διεύθυνση ERC-20 είναι σωστή;",
+    "enter_address_confirmation": "Είστε σίγουροι ότι η διεύθυνση Ethereum είναι σωστή;",
     "validators_warning_title": "Επιβεβαίωση Διεύθυνσης",
     "validators_warning_text": "Σημειώστε ότι άτομα που έχουν προσθέσει μια διεύθυνση Ethereum στον λογαριασμό τους δεν είναι επιλέξιμα να γίνουν ένας από τους κορυφαίους 300 επικυρωτές σύμφωνα με το Λευκό μας Βιβλίο για την κύρια δίκτυα.",
     "okxWalletDescription": "Ασφαλίστε τα κέρματά σας με το OKX Wallet, τον αξιόπιστο αυτό-κηδεμόνα επίσημο εταίρο μας.",

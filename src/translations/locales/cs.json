@@ -365,7 +365,7 @@
     },
     "ethereum_address": {
       "title": "Ethereum adresa",
-      "subtitle": "Prosím, zadejte zde svou ERC-20 adresu."
+      "subtitle": "Prosím, zadejte zde svou Ethereum adresu."
     },
     "verified_tooltip": {
       "title": "KYC ověřeno"
@@ -1162,9 +1162,9 @@
   },
   "ethereum_address": {
     "title": "Ethereum Adresa",
-    "enter_address_title": "Zadejte\nsvou ERC-20 adresu",
+    "enter_address_title": "Zadejte\nsvou Ethereum adresu",
     "enter_address_description": "Během Fáze Jedna budou tokeny ICE vydávány na Ethereum blockchainu. Jakmile bude spuštěna hlavní síť, bude možné tokeny směňovat z Ethereum na Ice Open Network (ION) blockchain.",
-    "enter_address_confirmation": "Jste si jisti, že je správná adresa ERC-20?",
+    "enter_address_confirmation": "Jste si jisti, že je správná adresa Ethereum?",
     "validators_warning_title": "Potvrďte Adresu",
     "validators_warning_text": "Upozorňujeme, že osoby, které přidaly Ethereum adresu k jejich účtu, nemají nárok stát se jedním z nejlepších 300 validátorů podle našeho whitepaperu pro hlavní síťový spuštění.",
     "okxWalletDescription": "Zabezpečte své mince s OKX Wallet, naším důvěryhodným samostatným oficiálním partnerem pro peněženky.",
