@@ -3,13 +3,13 @@
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {isEoaEthereumAddress, isValidEthereumAddress} from '@services/ethereum';
-import {AccountActions} from '@store/modules/Account/actions';
-import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {
   isValidationError,
   ValidationError,
   ValidationErrorCode,
-} from '@store/modules/Validation/errors/validationError';
+} from '@store/errors/validation';
+import {AccountActions} from '@store/modules/Account/actions';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {showError} from '@utils/errors';
 import {checkProp} from '@utils/guards';

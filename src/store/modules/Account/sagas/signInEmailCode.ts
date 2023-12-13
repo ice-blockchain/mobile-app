@@ -7,14 +7,14 @@ import {
   persistToken,
   sendCustomSignInLinkToEmail,
 } from '@services/auth';
-import {AccountActions} from '@store/modules/Account/actions';
-import {appLocaleSelector} from '@store/modules/Account/selectors';
-import {deviceUniqueIdSelector} from '@store/modules/Devices/selectors';
 import {
   isValidationError,
   ValidationError,
   ValidationErrorCode,
-} from '@store/modules/Validation/errors/validationError';
+} from '@store/errors/validation';
+import {AccountActions} from '@store/modules/Account/actions';
+import {appLocaleSelector} from '@store/modules/Account/selectors';
+import {deviceUniqueIdSelector} from '@store/modules/Devices/selectors';
 import {t} from '@translations/i18n';
 import {validateEmail} from '@utils/email';
 import {getErrorMessage} from '@utils/errors';

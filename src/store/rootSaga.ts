@@ -3,6 +3,7 @@
 import {isApiError, isNetworkError} from '@api/client';
 import {isAuthError} from '@services/auth';
 import {logError} from '@services/logging';
+import {isValidationError} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
 import {authWatchers} from '@store/modules/Account/sagas';
 import {achievementsWatchers} from '@store/modules/Achievements/sagas';
@@ -29,7 +30,6 @@ import {statsWatchers} from '@store/modules/Stats/sagas';
 import {statusNoticeWatchers} from '@store/modules/StatusNotice/sagas';
 import {tokenomicsWatchers} from '@store/modules/Tokenomics/sagas';
 import {usersWatchers} from '@store/modules/Users/sagas';
-import {isValidationError} from '@store/modules/Validation/errors/validationError';
 import {validationWatchers} from '@store/modules/Validation/sagas';
 import {walkthroughWatchers} from '@store/modules/Walkthrough/sagas';
 import {AppState} from 'react-native';

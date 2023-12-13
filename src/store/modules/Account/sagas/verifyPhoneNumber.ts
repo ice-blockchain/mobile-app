@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {verifyPhoneNumber} from '@services/auth';
-import {AccountActions} from '@store/modules/Account/actions';
-import {userSelector} from '@store/modules/Account/selectors';
 import {
   isValidationError,
   ValidationError,
   ValidationErrorCode,
-} from '@store/modules/Validation/errors/validationError';
+} from '@store/errors/validation';
+import {AccountActions} from '@store/modules/Account/actions';
+import {userSelector} from '@store/modules/Account/selectors';
 import {getErrorMessage} from '@utils/errors';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 

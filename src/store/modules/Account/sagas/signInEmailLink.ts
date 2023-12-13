@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {sendSignInLinkToEmail, signInWithEmailLink} from '@services/auth';
-import {AccountActions} from '@store/modules/Account/actions';
 import {
   isValidationError,
   ValidationError,
   ValidationErrorCode,
-} from '@store/modules/Validation/errors/validationError';
+} from '@store/errors/validation';
+import {AccountActions} from '@store/modules/Account/actions';
 import {validateEmail} from '@utils/email';
 import {getErrorMessage} from '@utils/errors';
 import {call, put, take} from 'redux-saga/effects';

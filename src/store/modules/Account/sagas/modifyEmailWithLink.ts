@@ -2,14 +2,14 @@
 
 import {User} from '@api/user/types';
 import {verifyBeforeUpdateEmail} from '@services/auth';
-import {AccountActions} from '@store/modules/Account/actions';
-import {updateAccountSaga} from '@store/modules/Account/sagas/updateAccount';
-import {userSelector} from '@store/modules/Account/selectors';
 import {
   isValidationError,
   ValidationError,
   ValidationErrorCode,
-} from '@store/modules/Validation/errors/validationError';
+} from '@store/errors/validation';
+import {AccountActions} from '@store/modules/Account/actions';
+import {updateAccountSaga} from '@store/modules/Account/sagas/updateAccount';
+import {userSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {validateEmail} from '@utils/email';
 import {getErrorMessage} from '@utils/errors';
