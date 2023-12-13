@@ -196,7 +196,8 @@
     "no_library_permissions": "라이브러리 권한이 허용되지 않았습니다.",
     "blockchain_address_already_taken": "주소가 이미 사용 중입니다",
     "invalid_blockchain_address": "유효하지 않은 주소",
-    "ethereum_address_not_eoa": "주소가 EOA가 아닙니다"
+    "ethereum_address_not_eoa": "주소가 EOA가 아닙니다",
+    "same_phone_error": "같은 번호를 사용할 수 없습니다."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "전화 확인",
     "modify_description": "국가 코드를 확인하고 전화번호를 입력하세요.",
-    "button": "국가와 전화 확인",
-    "same_phone_error": "같은 번호를 사용할 수 없습니다."
+    "button": "국가와 전화 확인"
   },
   "date_select": {
     "title": "날짜 선택"

@@ -196,7 +196,8 @@
     "no_library_permissions": "ライブラリへのアクセスが許可されていません。",
     "blockchain_address_already_taken": "アドレスはすでに使用されています",
     "invalid_blockchain_address": "無効なアドレス",
-    "ethereum_address_not_eoa": "アドレスはEOAではありません"
+    "ethereum_address_not_eoa": "アドレスはEOAではありません",
+    "same_phone_error": "同じ番号を使うことはできません。"
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "電話番号認証",
     "modify_description": "国番号を確認し、電話番号を入力してください。",
-    "button": "国と電話番号を確認",
-    "same_phone_error": "同じ番号を使うことはできません。"
+    "button": "国と電話番号を確認"
   },
   "date_select": {
     "title": "日付を選択"

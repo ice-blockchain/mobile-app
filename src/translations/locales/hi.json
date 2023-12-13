@@ -196,7 +196,8 @@
     "no_library_permissions": "लाइब्रेरी की अनुमति नहीं दी जाती है।",
     "blockchain_address_already_taken": "पता पहले ही लिया गया है",
     "invalid_blockchain_address": "अवैध पता",
-    "ethereum_address_not_eoa": "पता EOA नहीं है"
+    "ethereum_address_not_eoa": "पता EOA नहीं है",
+    "same_phone_error": "आप एक ही नंबर का उपयोग नहीं कर सकते।"
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "नए फोन की पुष्टि करें",
     "modify_description": "कृपया अपने देश कोड की पुष्टि करें और अपना नया फ़ोन नंबर दर्ज करें।",
-    "button": "देश और फ़ोन की पुष्टि करें",
-    "same_phone_error": "आप एक ही नंबर का उपयोग नहीं कर सकते।"
+    "button": "देश और फ़ोन की पुष्टि करें"
   },
   "date_select": {
     "title": "तारीख़ चुनें"

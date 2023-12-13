@@ -196,7 +196,8 @@
     "no_library_permissions": "ಲೈಬ್ರರಿ ಅನುಮತಿಗಳನ್ನು ಸಮ್ಮತಿಸಿಲ್ಲ",
     "blockchain_address_already_taken": "ವಿಳಾಸ ಈಗಾಗಲೇ ಸೇರಿಸಲಾಗಿದೆ",
     "invalid_blockchain_address": "ಅಮಾನ್ಯ ವಿಳಾಸ",
-    "ethereum_address_not_eoa": "ವಿಳಾಸ EOA ಅಲ್ಲ"
+    "ethereum_address_not_eoa": "ವಿಳಾಸ EOA ಅಲ್ಲ",
+    "same_phone_error": "ನೀವು ಅದೇ ನಂಬರನ್ನು ಬಳಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "ಪೋನ್  ಖಚಿತಪಡಿಸಿ",
     "modify_description": "ದಯವಿಟ್ಟು ನಿಮ್ಮ ದೇಶದ ಕೋಡ್ ಅನ್ನು ದೃಢೀಕರಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ.",
-    "button": "ನಿಮ್ಮ ಪೋನ್ ಮತ್ತು ದೇಶವನ್ನು ಖಚಿತಪಡಿಸಿ",
-    "same_phone_error": "ನೀವು ಅದೇ ನಂಬರನ್ನು ಬಳಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
+    "button": "ನಿಮ್ಮ ಪೋನ್ ಮತ್ತು ದೇಶವನ್ನು ಖಚಿತಪಡಿಸಿ"
   },
   "date_select": {
     "title": "ದಿನಾಂಕವನ್ನು ಆರಿಸಿ"

@@ -196,7 +196,8 @@
     "no_library_permissions": "Nejsou udělena oprávnění ke knihovně.",
     "blockchain_address_already_taken": "Adresa je již obsazena",
     "invalid_blockchain_address": "Neplatná adresa",
-    "ethereum_address_not_eoa": "Adresa není EOA"
+    "ethereum_address_not_eoa": "Adresa není EOA",
+    "same_phone_error": "Nemůžete použít stejné číslo."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Potvrzení telefonu",
     "modify_description": "Potvrďte kód vaší země a zadejte telefonní číslo.",
-    "button": "Potvrdit zemi a telefon",
-    "same_phone_error": "Nemůžete použít stejné číslo."
+    "button": "Potvrdit zemi a telefon"
   },
   "date_select": {
     "title": "Výběr data"

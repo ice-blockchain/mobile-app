@@ -196,7 +196,8 @@
     "no_library_permissions": "Biblioteksbehörigheter beviljas inte.",
     "blockchain_address_already_taken": "Adressen är redan tagen",
     "invalid_blockchain_address": "Ogiltig blockchain-adress",
-    "ethereum_address_not_eoa": "Adressen är inte EOA"
+    "ethereum_address_not_eoa": "Adressen är inte EOA",
+    "same_phone_error": "Du kan inte använda samma nummer."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Bekräfta telefon",
     "modify_description": "Bekräfta din landskod och ange ditt telefonnummer.",
-    "button": "Bekräfta land och telefon",
-    "same_phone_error": "Du kan inte använda samma nummer."
+    "button": "Bekräfta land och telefon"
   },
   "date_select": {
     "title": "Välj datum"

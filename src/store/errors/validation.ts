@@ -15,7 +15,7 @@ const validationErrorMessages: {[code in ValidationErrorCode]: string} = {
   InvalidEmail: t('errors.invalid_email'),
   SameEmail: t('errors.same_email'),
   InvalidPhone: t('errors.invalid_phone'),
-  SamePhoneNumber: t('confirm_phone.same_phone_error'),
+  SamePhoneNumber: t('errors.same_phone_error'),
   InvalidEthereumAddress: t('errors.invalid_blockchain_address'),
   EthereumAddressIsNotEoa: t('errors.ethereum_address_not_eoa'),
 };

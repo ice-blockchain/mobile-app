@@ -196,7 +196,8 @@
     "no_library_permissions": "لم تُمنح الأذونات الوصول إلى المكتبة.",
     "blockchain_address_already_taken": "العنوان مُستخدم بالفعل",
     "invalid_blockchain_address": "عنوان غير صالح",
-    "ethereum_address_not_eoa": "العنوان ليس EOA"
+    "ethereum_address_not_eoa": "العنوان ليس EOA",
+    "same_phone_error": "لا يمكنك استخدام نفس الرقم."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "تأكيد رقم الهاتف",
     "modify_description": "يُرجى تأكيد رمز البلد وإدخال رقم هاتفك.",
-    "button": "تأكيد البلد ورقم الهاتف",
-    "same_phone_error": "لا يمكنك استخدام نفس الرقم."
+    "button": "تأكيد البلد ورقم الهاتف"
   },
   "date_select": {
     "title": "اختر التاريخ"

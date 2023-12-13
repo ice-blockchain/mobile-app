@@ -196,7 +196,8 @@
     "no_library_permissions": "ไม่ได้มอบการอนุญาตสำหรับไลบรารี",
     "blockchain_address_already_taken": "ที่อยู่ถูกใช้งานแล้ว",
     "invalid_blockchain_address": "ที่อยู่บล็อกเชนไม่ถูกต้อง",
-    "ethereum_address_not_eoa": "ที่อยู่ไม่ใช่ EOA"
+    "ethereum_address_not_eoa": "ที่อยู่ไม่ใช่ EOA",
+    "same_phone_error": "คุณไม่สามารถใช้หมายเลขเดียวกัน"
   },
   "profile": {
     "my_roles": {
@@ -712,8 +713,7 @@
   "confirm_phone": {
     "modify_title": "ยืนยันโทรศัพท์",
     "modify_description": "โปรดยืนยันรหัสประเทศแล้วกรอกหมายเลขโทรศัพท์ของคุณ",
-    "button": "ยืนยันประเทศและโทรศัพท์",
-    "same_phone_error": "คุณไม่สามารถใช้หมายเลขเดียวกัน"
+    "button": "ยืนยันประเทศและโทรศัพท์"
   },
   "date_select": {
     "title": "เลือกวันที่"

@@ -144,6 +144,7 @@ export type Translations = {
   'errors.blockchain_address_already_taken': null;
   'errors.invalid_blockchain_address': null;
   'errors.ethereum_address_not_eoa': null;
+  'errors.same_phone_error': null;
   'profile.my_roles.title': null;
   'profile.mining_calculator': null;
   'profile.invite_friends': null;
@@ -490,7 +491,6 @@ export type Translations = {
   'confirm_phone.modify_title': null;
   'confirm_phone.modify_description': null;
   'confirm_phone.button': null;
-  'confirm_phone.same_phone_error': null;
   'date_select.title': null;
   'walkthrough.overrides.home.team.description': null;
   'walkthrough.overrides.home.referralscard.title': null;

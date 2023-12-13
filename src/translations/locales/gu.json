@@ -196,7 +196,8 @@
     "no_library_permissions": "લાઇબ્રરી પરવાનગી આપવામાં નથી આવી.",
     "blockchain_address_already_taken": "સરખું પહેલેથી પકડાઈ છે",
     "invalid_blockchain_address": "અમાન્ય સરખું",
-    "ethereum_address_not_eoa": "સરખું EOA નથી"
+    "ethereum_address_not_eoa": "સરખું EOA નથી",
+    "same_phone_error": "તમે સમાન નંબરનો ઉપયોગ ન કરી શકો."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "ફોનની પુષ્ટિ કરો",
     "modify_description": "કૃપા કરીને તમારા દેશના કોડની પુષ્ટિ કરો અને તમારો ફોન નંબર દાખલ કરો.",
-    "button": "દેશ અને ફોનની પુષ્ટિ કરો",
-    "same_phone_error": "તમે સમાન નંબરનો ઉપયોગ ન કરી શકો."
+    "button": "દેશ અને ફોનની પુષ્ટિ કરો"
   },
   "date_select": {
     "title": "તારીખ પસંદ કરો"

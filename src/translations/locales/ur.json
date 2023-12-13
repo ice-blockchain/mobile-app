@@ -196,7 +196,8 @@
     "no_library_permissions": "لائبریری کی اجازتیں نہیں دی گئی ہیں۔",
     "blockchain_address_already_taken": "پتہ پہلے ہی لیا گیا ہے",
     "invalid_blockchain_address": "غیر معتبر بلاک چین پتہ",
-    "ethereum_address_not_eoa": "پتہ EOA نہیں ہے"
+    "ethereum_address_not_eoa": "پتہ EOA نہیں ہے",
+    "same_phone_error": "آپ وہی نمبر استعمال نہیں کر سکتے۔"
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "فون کی تصدیق کریں",
     "modify_description": "براہ کرم اپنے ملکی کوڈ کی تصدیق کریں اور اپنا فون نمبر درج کریں۔",
-    "button": "اپنے ملک اور فون کی تصدیق کریں",
-    "same_phone_error": "آپ وہی نمبر استعمال نہیں کر سکتے۔"
+    "button": "اپنے ملک اور فون کی تصدیق کریں"
   },
   "date_select": {
     "title": "تاریخ منتخب کریں"

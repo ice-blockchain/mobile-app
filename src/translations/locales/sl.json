@@ -196,7 +196,8 @@
     "no_library_permissions": "Dovoljenja za knjižnico niso odobrena.",
     "blockchain_address_already_taken": "Naslov je že v uporabi",
     "invalid_blockchain_address": "Neveljaven naslov blockchaina",
-    "ethereum_address_not_eoa": "Naslov ni EOA"
+    "ethereum_address_not_eoa": "Naslov ni EOA",
+    "same_phone_error": "Ne morete uporabiti iste številke."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Potrdite telefon",
     "modify_description": "Potrdite kodo države in vnesite svojo telefonsko številko.",
-    "button": "Potrdite državo in telefon",
-    "same_phone_error": "Ne morete uporabiti iste številke."
+    "button": "Potrdite državo in telefon"
   },
   "date_select": {
     "title": "Izberite datum"

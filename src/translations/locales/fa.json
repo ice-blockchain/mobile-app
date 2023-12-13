@@ -196,7 +196,8 @@
     "no_library_permissions": "اجازه دسترسی به مجموع برنامه‌ها اعطا نشده است.",
     "blockchain_address_already_taken": "آدرس قبلاً گرفته شده است",
     "invalid_blockchain_address": "آدرس نامعتبر است",
-    "ethereum_address_not_eoa": "آدرس EOA نیست"
+    "ethereum_address_not_eoa": "آدرس EOA نیست",
+    "same_phone_error": "شما نمی‌توانید از همان شماره استفاده کنید."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "تأیید تلفن",
     "modify_description": "لطفاً کد کشور خود را تأیید و شماره تلفن خود را وارد کنید.",
-    "button": "تأیید کشور و تلفن",
-    "same_phone_error": "شما نمی‌توانید از همان شماره استفاده کنید."
+    "button": "تأیید کشور و تلفن"
   },
   "date_select": {
     "title": "انتخاب تاریخ"

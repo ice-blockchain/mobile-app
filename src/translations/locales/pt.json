@@ -196,7 +196,8 @@
     "no_library_permissions": "As permissões de biblioteca não foram concedidas.",
     "blockchain_address_already_taken": "Endereço já utilizado",
     "invalid_blockchain_address": "Endereço de blockchain inválido",
-    "ethereum_address_not_eoa": "Endereço não é EOA"
+    "ethereum_address_not_eoa": "Endereço não é EOA",
+    "same_phone_error": "Você não pode usar o mesmo número."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Confirmar telefone",
     "modify_description": "Confirme o código do seu país e insira o seu número de telefone.",
-    "button": "Confirme o país e o telefone",
-    "same_phone_error": "Você não pode usar o mesmo número."
+    "button": "Confirme o país e o telefone"
   },
   "date_select": {
     "title": "Escolha a data"

@@ -196,7 +196,8 @@
     "no_library_permissions": "Kebenaran pustaka tidak diberikan.",
     "blockchain_address_already_taken": "Alamat sudah diambil",
     "invalid_blockchain_address": "Alamat blockchain tidak sah",
-    "ethereum_address_not_eoa": "Alamat bukan EOA"
+    "ethereum_address_not_eoa": "Alamat bukan EOA",
+    "same_phone_error": "Anda tidak boleh menggunakan nombor yang sama."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Sahkan Telefon",
     "modify_description": "Sila sahkan kod negara anda dan masukkan nombor telefon anda.",
-    "button": "Sahkan negara dan telefon",
-    "same_phone_error": "Anda tidak boleh menggunakan nombor yang sama."
+    "button": "Sahkan negara dan telefon"
   },
   "date_select": {
     "title": "Pilih tarikh"

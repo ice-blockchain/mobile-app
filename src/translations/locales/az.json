@@ -196,7 +196,8 @@
     "no_library_permissions": "Kitabxana icazəsi verilməyib.",
     "blockchain_address_already_taken": "Ünvan artıq istifadə edilib",
     "invalid_blockchain_address": "Yanlış ünvan",
-    "ethereum_address_not_eoa": "Ünvan EOA deyil"
+    "ethereum_address_not_eoa": "Ünvan EOA deyil",
+    "same_phone_error": "Eyni nömrədən istifadə edə bilməzsən."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Telefonu təsdiq et ",
     "modify_description": "Ölkə kodunu təsdiq etmək və telefon nömrəni daxil etmək xahiş olunur.",
-    "button": "Ölkəni və telefonu təsdiq et",
-    "same_phone_error": "Eyni nömrədən istifadə edə bilməzsən."
+    "button": "Ölkəni və telefonu təsdiq et"
   },
   "date_select": {
     "title": "Tarix seç"
