@@ -7,7 +7,7 @@ import {
   ROW_HEIGHT,
   Y_AXIS_WIDTH,
 } from '@components/BarGraph';
-import {useGetBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetBarGraphDataForStatsPeriod';
+import {useGetUserGrowthBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetUserGrowthBarGraphDataForStatsPeriod';
 import {LinesBackground} from '@components/LinesBackground';
 import {DropDownMenu} from '@components/Menu/DropDownMenu';
 import {PullToRefreshContainer} from '@components/PullToRefreshContainer';
@@ -60,7 +60,7 @@ export const UserGrowthGraph = memo(() => {
   }, [paramsStatsPeriod]);
 
   const {activeUsersData, totalUsersData} =
-    useGetBarGraphDataForStatsPeriod(statsPeriod);
+    useGetUserGrowthBarGraphDataForStatsPeriod(statsPeriod);
 
   const handleRef = useRef<{cancel: () => void} | undefined>();
   const onPeriodChange = (index: number) => {

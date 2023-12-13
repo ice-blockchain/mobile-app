@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {TotalCoinsTimeSeries} from '@api/tokenomics/types';
 import {dayjs} from '@services/dayjs';
+import {StatsPeriod} from '@store/modules/Stats/types';
 import {MiningState} from '@store/modules/Tokenomics/types';
 import {RootState} from '@store/rootReducer';
 
@@ -70,3 +72,9 @@ export const balanceHistorySelector = (state: RootState) => {
 export const tapToMineActionTypeSelector = (state: RootState) => {
   return state.tokenomics.tapToMineActionType;
 };
+
+export const getTotalCoinsStatsSelector =
+  (period: StatsPeriod) =>
+  (state: RootState): TotalCoinsTimeSeries[] => {
+    return state.tokenomics.totalCoins.timeSeriesStatsMap[period] ?? [];
+  };

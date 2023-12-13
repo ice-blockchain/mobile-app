@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {TotalCoinsFilter} from '@api/statistics/types';
-import {useGetBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetBarGraphDataForStatsPeriod';
+import {useGetTotalCoinsBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetTotalCoinsBarGraphDataForStatsPeriod';
 import {SectionHeader} from '@components/SectionHeader';
 import {AnimatedGraph} from '@screens/HomeFlow/Stats/components/SegmentedGraphs/components/AnimatedGraph';
 import {StatsPeriodSelector} from '@screens/HomeFlow/Stats/components/SegmentedGraphs/components/StatsPeriodSelector';
@@ -18,7 +18,7 @@ export const DEFAULT_FILTER = 'total';
 export const TotalCoinsGraph = memo(() => {
   const [period, setPeriod] = useState<StatsPeriod>(DEFAULT_PERIOD);
   const [filter, setFilter] = useState<TotalCoinsFilter>(DEFAULT_FILTER);
-  const {totalUsersData} = useGetBarGraphDataForStatsPeriod(period); //TODO::select data
+  const {totalData} = useGetTotalCoinsBarGraphDataForStatsPeriod(period);
 
   const ListHeader = useMemo(() => {
     return (
@@ -36,7 +36,7 @@ export const TotalCoinsGraph = memo(() => {
 
   return (
     <AnimatedGraph
-      data={totalUsersData}
+      data={totalData}
       ListHeader={ListHeader}
       type="total_coins"
     />

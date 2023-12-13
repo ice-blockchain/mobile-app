@@ -6,6 +6,7 @@ import {getBalanceSummary} from './getBalanceSummary';
 import {getMiningSummary} from './getMiningSummary';
 import {getPreStakingSummary} from './getPreStakingSummary';
 import {getRankingSummary} from './getRankingSummary';
+import {getTotalCoins} from './getTotalCoins';
 import {startMiningSession} from './startMiningSession';
 import {startOrUpdatePreStaking} from './startOrUpdatePreStaking';
 
@@ -18,4 +19,5 @@ export const tokenomics = Object.freeze({
   getBalanceHistory,
   startOrUpdatePreStaking,
   claimExtraBonus,
+  getTotalCoins,
 });

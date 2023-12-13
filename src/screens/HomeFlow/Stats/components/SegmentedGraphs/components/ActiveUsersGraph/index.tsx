@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {useGetBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetBarGraphDataForStatsPeriod';
+import {useGetUserGrowthBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetUserGrowthBarGraphDataForStatsPeriod';
 import {SectionHeader} from '@components/SectionHeader';
 import {commonStyles} from '@constants/styles';
 import {AnimatedGraph} from '@screens/HomeFlow/Stats/components/SegmentedGraphs/components/AnimatedGraph';
@@ -15,7 +15,7 @@ export const DEFAULT_PERIOD = 14;
 
 export const ActiveUsersGraph = memo(() => {
   const [period, setPeriod] = useState<StatsPeriod>(DEFAULT_PERIOD);
-  const {activeUsersData} = useGetBarGraphDataForStatsPeriod(period);
+  const {activeUsersData} = useGetUserGrowthBarGraphDataForStatsPeriod(period);
 
   const ListHeader = useMemo(() => {
     return (

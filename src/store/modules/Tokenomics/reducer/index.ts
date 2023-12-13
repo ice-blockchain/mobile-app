@@ -6,6 +6,7 @@ import {
   MiningSummary,
   PreStakingSummary,
   RankingSummary,
+  TotalCoinsTimeSeries,
 } from '@api/tokenomics/types';
 import {AccountActions} from '@store/modules/Account/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
@@ -26,9 +27,17 @@ export interface State {
     pageNumber: number;
   };
   tapToMineActionType?: 'Extended' | 'Default';
+  totalCoins: {
+    timeSeriesStatsMap: {[key: number]: TotalCoinsTimeSeries[]};
+    blockchain: number;
+    preStaking: number;
+    standard: number;
+    total: number;
+  };
 }
 
 type Actions = ReturnType<
+  | typeof TokenomicsActions.GET_TOTAL_COINS_STATS.SUCCESS.create
   | typeof TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.create
   | typeof TokenomicsActions.START_MINING_SESSION.START.create
   | typeof TokenomicsActions.START_MINING_SESSION.SUCCESS.create
@@ -53,11 +62,28 @@ const INITIAL_STATE: State = {
     endDate: null,
     pageNumber: 0,
   },
+  totalCoins: {
+    timeSeriesStatsMap: {},
+    blockchain: 0,
+    preStaking: 0,
+    standard: 0,
+    total: 0,
+  },
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
   return produce(state, draft => {
     switch (action.type) {
+      case TokenomicsActions.GET_TOTAL_COINS_STATS.SUCCESS.type: {
+        const {statsPeriod, totalCoins} = action.payload;
+        draft.totalCoins.timeSeriesStatsMap[statsPeriod] =
+          totalCoins.timeSeries;
+        draft.totalCoins.blockchain = totalCoins.blockchain;
+        draft.totalCoins.preStaking = totalCoins.preStaking;
+        draft.totalCoins.standard = totalCoins.standard;
+        draft.totalCoins.total = totalCoins.total;
+        break;
+      }
       case TokenomicsActions.START_MINING_SESSION.START.type:
         if (action.payload?.tapToMineActionType) {
           draft.tapToMineActionType = action.payload.tapToMineActionType;
