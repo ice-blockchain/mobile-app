@@ -7,6 +7,11 @@ import {
   persistToken,
   sendCustomSignInLinkToEmail,
 } from '@services/auth';
+import {
+  isValidationError,
+  ValidationError,
+  ValidationErrorCode,
+} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
 import {appLocaleSelector} from '@store/modules/Account/selectors';
 import {deviceUniqueIdSelector} from '@store/modules/Devices/selectors';
@@ -25,10 +30,6 @@ import {
   take,
 } from 'redux-saga/effects';
 
-enum ValidateError {
-  InvalidEmail = 'InvalidEmail',
-}
-
 export function* signInEmailCodeSaga(
   startAction: ReturnType<
     typeof AccountActions.SIGN_IN_EMAIL_CODE.START.create
@@ -37,7 +38,7 @@ export function* signInEmailCodeSaga(
   try {
     const email = startAction.payload.email;
     if (!validateEmail(email)) {
-      throw {code: ValidateError.InvalidEmail};
+      throw new ValidationError(ValidationErrorCode.InvalidEmail);
     }
 
     const deviceUniqueId: SagaReturnType<typeof deviceUniqueIdSelector> =
@@ -105,7 +106,8 @@ export function* signInEmailCodeSaga(
   } catch (error) {
     let localizedError = null;
     if (
-      (checkProp(error, 'code') && error.code === ValidateError.InvalidEmail) ||
+      (isValidationError(error) &&
+        error.code === ValidationErrorCode.InvalidEmail) ||
       isApiError(error, 400, 'INVALID_EMAIL')
     ) {
       localizedError = t('errors.invalid_email');

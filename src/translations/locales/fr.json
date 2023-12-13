@@ -196,7 +196,8 @@
     "no_library_permissions": "Les autorisations de bibliothèque ne sont pas accordées.",
     "blockchain_address_already_taken": "Adresse déjà prise",
     "invalid_blockchain_address": "Adresse non valide",
-    "ethereum_address_not_eoa": "L'adresse n'est pas une EOA"
+    "ethereum_address_not_eoa": "L'adresse n'est pas une EOA",
+    "same_phone_error": "Vous ne pouvez pas utiliser le même numéro."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Confirmer le téléphone",
     "modify_description": "Veuillez confirmer le code de votre pays et entrer votre numéro de téléphone.",
-    "button": "Confirmer le pays et le téléphone",
-    "same_phone_error": "Vous ne pouvez pas utiliser le même numéro."
+    "button": "Confirmer le pays et le téléphone"
   },
   "date_select": {
     "title": "Choisir la date"

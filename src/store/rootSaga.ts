@@ -3,6 +3,7 @@
 import {isApiError, isNetworkError} from '@api/client';
 import {isAuthError} from '@services/auth';
 import {logError} from '@services/logging';
+import {isValidationError} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
 import {authWatchers} from '@store/modules/Account/sagas';
 import {achievementsWatchers} from '@store/modules/Achievements/sagas';
@@ -116,6 +117,13 @@ const shouldLog = (error: unknown) => {
    * Some started requests may fail when app goes background
    */
   if (isNetworkError(error) && AppState.currentState !== 'active') {
+    return false;
+  }
+
+  /**
+   * Local validation errors, e.g. "invalid phone number"
+   */
+  if (isValidationError(error)) {
     return false;
   }
 

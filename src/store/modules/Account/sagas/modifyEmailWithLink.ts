@@ -2,21 +2,20 @@
 
 import {User} from '@api/user/types';
 import {verifyBeforeUpdateEmail} from '@services/auth';
+import {
+  isValidationError,
+  ValidationError,
+  ValidationErrorCode,
+} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
 import {updateAccountSaga} from '@store/modules/Account/sagas/updateAccount';
 import {userSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import {validateEmail} from '@utils/email';
 import {getErrorMessage} from '@utils/errors';
-import {checkProp} from '@utils/guards';
 import {call, put, select, take} from 'redux-saga/effects';
 
 const actionCreator = AccountActions.MODIFY_EMAIL_WITH_LINK.START.create;
-
-enum ValidateError {
-  InvalidEmail,
-  SameEmail,
-}
 
 export function* modifyEmailWithLinkSaga({
   payload: {email},
@@ -24,9 +23,9 @@ export function* modifyEmailWithLinkSaga({
   const user: User = yield select(userSelector);
   try {
     if (!validateEmail(email)) {
-      throw {code: ValidateError.InvalidEmail};
+      throw new ValidationError(ValidationErrorCode.InvalidEmail);
     } else if (email.toLowerCase() === user?.email?.toLowerCase()) {
-      throw {code: ValidateError.SameEmail};
+      throw new ValidationError(ValidationErrorCode.SameEmail);
     }
 
     yield call(verifyBeforeUpdateEmail, email);
@@ -86,15 +85,8 @@ export function* modifyEmailWithLinkSaga({
   } catch (error) {
     let validateError;
 
-    if (checkProp(error, 'code')) {
-      switch (error.code) {
-        case ValidateError.InvalidEmail:
-          validateError = t('errors.invalid_email');
-          break;
-        case ValidateError.SameEmail:
-          validateError = t('errors.same_email');
-          break;
-      }
+    if (isValidationError(error)) {
+      validateError = error.message;
     }
 
     yield put(

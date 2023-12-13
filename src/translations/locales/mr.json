@@ -196,7 +196,8 @@
     "no_library_permissions": "लायब्ररी परवानग्या दिलेल्या नाहीत.",
     "blockchain_address_already_taken": "पत्ता आधीच घेतला आहे",
     "invalid_blockchain_address": "अवैध पत्ता",
-    "ethereum_address_not_eoa": "पत्ता EOA नसतो"
+    "ethereum_address_not_eoa": "पत्ता EOA नसतो",
+    "same_phone_error": "तुम्ही तोच नंबर वापरू शकत नाही."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "फोनची पुष्टी करा",
     "modify_description": "कृपया तुमच्या देशाच्या कोडची पुष्टी करा आणि तुमचा फोन नंबर प्रविष्ट करा.",
-    "button": "फोन व देशाची पुष्टी करा",
-    "same_phone_error": "तुम्ही तोच नंबर वापरू शकत नाही."
+    "button": "फोन व देशाची पुष्टी करा"
   },
   "date_select": {
     "title": "तारीख निवडा"

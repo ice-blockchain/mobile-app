@@ -196,7 +196,8 @@
     "no_library_permissions": "Δεν έχει χορηγηθεί άδεια χρήσης στην βιβλιοθήκη.",
     "blockchain_address_already_taken": "Η διεύθυνση έχει ήδη ληφθεί",
     "invalid_blockchain_address": "Μη έγκυρη διεύθυνση",
-    "ethereum_address_not_eoa": "Η διεύθυνση δεν είναι EOA"
+    "ethereum_address_not_eoa": "Η διεύθυνση δεν είναι EOA",
+    "same_phone_error": "Δεν μπορείτε να χρησιμοποιήσετε τον ίδιο αριθμό."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Επιβεβαίωση τηλεφώνου",
     "modify_description": "Επιβεβαιώστε τον κωδικό της χώρας σας και πληκτρολογήστε τον αριθμό τηλεφώνου σας.",
-    "button": "Επιβεβαιώστε τη χώρα και το τηλέφωνο",
-    "same_phone_error": "Δεν μπορείτε να χρησιμοποιήσετε τον ίδιο αριθμό."
+    "button": "Επιβεβαιώστε τη χώρα και το τηλέφωνο"
   },
   "date_select": {
     "title": "Επιλέξτε ημερομηνία"

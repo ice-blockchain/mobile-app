@@ -196,7 +196,8 @@
     "no_library_permissions": "Дозволи бібліотеки не надаються.",
     "blockchain_address_already_taken": "Адреса вже використовується",
     "invalid_blockchain_address": "Недійсна адреса блокчейну",
-    "ethereum_address_not_eoa": "Адреса не є EOA"
+    "ethereum_address_not_eoa": "Адреса не є EOA",
+    "same_phone_error": "Не можна використовувати той же самий номер."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Підтвердити номер телефону",
     "modify_description": "Підтвердьте код країни та введіть номер телефону.",
-    "button": "Підтвердьте країну та телефон",
-    "same_phone_error": "Не можна використовувати той же самий номер."
+    "button": "Підтвердьте країну та телефон"
   },
   "date_select": {
     "title": "Виберіть дату"

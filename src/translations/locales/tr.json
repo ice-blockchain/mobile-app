@@ -196,7 +196,8 @@
     "no_library_permissions": "Kitaplık izinleri verilmemiştir.",
     "blockchain_address_already_taken": "Adres zaten alınmış",
     "invalid_blockchain_address": "Geçersiz blockchain adresi",
-    "ethereum_address_not_eoa": "Adres EOA değil"
+    "ethereum_address_not_eoa": "Adres EOA değil",
+    "same_phone_error": "Aynı numarayı kullanamazsın."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Telefonu Onayla",
     "modify_description": "Lütfen ülke kodunu onayla ve telefon numaranı gir.",
-    "button": "Ülkeyi ve telefonu onayla",
-    "same_phone_error": "Aynı numarayı kullanamazsın."
+    "button": "Ülkeyi ve telefonu onayla"
   },
   "date_select": {
     "title": "Tarih seç"

@@ -196,7 +196,8 @@
     "no_library_permissions": "未授予照片库权限。",
     "blockchain_address_already_taken": "地址已被占用",
     "invalid_blockchain_address": "无效的区块链地址",
-    "ethereum_address_not_eoa": "地址不是 EOA"
+    "ethereum_address_not_eoa": "地址不是 EOA",
+    "same_phone_error": "您不能使用同一个电话号码。"
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "确认电话号码",
     "modify_description": "请确认您的国家/地区代码并输入您的电话号码。",
-    "button": "确认国家/地区和电话号码",
-    "same_phone_error": "您不能使用同一个电话号码。"
+    "button": "确认国家/地区和电话号码"
   },
   "date_select": {
     "title": "选择日期"

@@ -196,7 +196,8 @@
     "no_library_permissions": "లైబ్రరీ అనుమతులు మంజూరు చేయలేదు.",
     "blockchain_address_already_taken": "చిరునామా ఇప్పటికే సేకరించబడింది",
     "invalid_blockchain_address": "చెల్లని బ్లాక్‌చేన్ చిరునామా",
-    "ethereum_address_not_eoa": "చిరునామా EOA కాదు"
+    "ethereum_address_not_eoa": "చిరునామా EOA కాదు",
+    "same_phone_error": "మీరు ఒకేనెంబర్​ను ఉపయోగించలేరు."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "ఫోన్ ధృవీకరించండి",
     "modify_description": "దయచేసి మీ దేశం కోడ్ ధృవీకరించండి మరియు మీ ఫోన్ నెంబర్ నమోదు చేయండి.",
-    "button": "దేశం మరియు ఫోన్ ధృవీకరించండి",
-    "same_phone_error": "మీరు ఒకేనెంబర్​ను ఉపయోగించలేరు."
+    "button": "దేశం మరియు ఫోన్ ధృవీకరించండి"
   },
   "date_select": {
     "title": "తేదీని ఎంచుకోండి"

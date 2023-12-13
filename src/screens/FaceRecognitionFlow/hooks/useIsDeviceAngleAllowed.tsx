@@ -28,14 +28,18 @@ export const useIsDeviceAngleAllowed = (isReady: boolean) => {
       SensorTypes.accelerometer,
       DEVICE_SENSORS_UPDATE_INTERVAL_MS,
     );
-    const subscription = accelerometer.subscribe(data => {
-      if (data?.y != null) {
-        setIsAllowed(
-          Platform.OS === 'ios'
-            ? data.y < THRESHOLD
-            : Math.abs(data.y) > THRESHOLD,
-        );
-      }
+    const subscription = accelerometer.subscribe({
+      next: data => {
+        if (data?.y != null) {
+          setIsAllowed(
+            Platform.OS === 'ios'
+              ? data.y < THRESHOLD
+              : Math.abs(data.y) > THRESHOLD,
+          );
+        }
+      },
+      // ignoring "accelerometer is not available" error
+      error: () => null,
     });
 
     return () => {

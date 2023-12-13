@@ -196,7 +196,8 @@
     "no_library_permissions": "Biblioteektoestemmings word nie verleen nie.",
     "blockchain_address_already_taken": "Adres is reeds in gebruik",
     "invalid_blockchain_address": "Ongeldige adres",
-    "ethereum_address_not_eoa": "Adres is nie EOA nie"
+    "ethereum_address_not_eoa": "Adres is nie EOA nie",
+    "same_phone_error": "Jy kan nie dieselfde nommer gebruik nie."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Bevestig Foon",
     "modify_description": "Bevestig asseblief jou landkode en voer jou foonnommer in.",
-    "button": "Bevestig land en telefoon",
-    "same_phone_error": "Jy kan nie dieselfde nommer gebruik nie."
+    "button": "Bevestig land en telefoon"
   },
   "date_select": {
     "title": "Kies datum"

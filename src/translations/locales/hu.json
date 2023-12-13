@@ -196,7 +196,8 @@
     "no_library_permissions": "A könyvtárhoz való hozzáférés nincs engedélyezve.",
     "blockchain_address_already_taken": "Cím már foglalt",
     "invalid_blockchain_address": "Érvénytelen cím",
-    "ethereum_address_not_eoa": "A cím nem EOA"
+    "ethereum_address_not_eoa": "A cím nem EOA",
+    "same_phone_error": "Nem használhatod ugyanazt a számot."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Telefon megerősítése",
     "modify_description": "Kérjük, erősítsd meg az országhívódat és add meg a telefonszámodat.",
-    "button": "Ország és telefon megerősítése",
-    "same_phone_error": "Nem használhatod ugyanazt a számot."
+    "button": "Ország és telefon megerősítése"
   },
   "date_select": {
     "title": "Dátum kiválasztása"

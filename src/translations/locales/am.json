@@ -196,7 +196,8 @@
     "no_library_permissions": "የቤተ-መጽሐፍት ፈቃዶች አልተሰጡም።",
     "blockchain_address_already_taken": "አድራሻ ቀድሞ ተወስዷል",
     "invalid_blockchain_address": "ልክ ያልሆነ አድራሻ",
-    "ethereum_address_not_eoa": "አድራሻ ኢኦኤ አይደለም"
+    "ethereum_address_not_eoa": "አድራሻ ኢኦኤ አይደለም",
+    "same_phone_error": "ተመሳሳይ ቁጥር መጠቀም አይችሉም"
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "ስልክ አረጋግጥ",
     "modify_description": "አባክዎ የሀገርዎን ኮድ ያረጋግጡ እና ስልክዎን ያስገቡ።",
-    "button": "ሀገር እና ስልክ አረጋግጥ",
-    "same_phone_error": "ተመሳሳይ ቁጥር መጠቀም አይችሉም"
+    "button": "ሀገር እና ስልክ አረጋግጥ"
   },
   "date_select": {
     "title": "ቀን ምረጥ"

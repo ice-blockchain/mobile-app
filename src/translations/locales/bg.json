@@ -196,7 +196,8 @@
     "no_library_permissions": "Не са предоставени разрешения за библиотеката.",
     "blockchain_address_already_taken": "Адресът вече е зает",
     "invalid_blockchain_address": "Невалиден адрес",
-    "ethereum_address_not_eoa": "Адресът не е EOA"
+    "ethereum_address_not_eoa": "Адресът не е EOA",
+    "same_phone_error": "Не може да използвате същия номер."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Потвърди телефон",
     "modify_description": "Потвърдете кода на държавата си и въведете телефонния си номер.",
-    "button": "Потвърди държава и телефон",
-    "same_phone_error": "Не може да използвате същия номер."
+    "button": "Потвърди държава и телефон"
   },
   "date_select": {
     "title": "Избери дата"

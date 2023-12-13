@@ -1,16 +1,15 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {sendSignInLinkToEmail, signInWithEmailLink} from '@services/auth';
+import {
+  isValidationError,
+  ValidationError,
+  ValidationErrorCode,
+} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
-import {t} from '@translations/i18n';
 import {validateEmail} from '@utils/email';
 import {getErrorMessage} from '@utils/errors';
-import {checkProp} from '@utils/guards';
 import {call, put, take} from 'redux-saga/effects';
-
-enum ValidateError {
-  InvalidEmail,
-}
 
 export function* signInEmailLinkSaga(
   startAction: ReturnType<
@@ -21,7 +20,7 @@ export function* signInEmailLinkSaga(
     const email = startAction.payload.email;
 
     if (!validateEmail(email)) {
-      throw {code: ValidateError.InvalidEmail};
+      throw new ValidationError(ValidationErrorCode.InvalidEmail);
     }
 
     yield call(sendSignInLinkToEmail, email);
@@ -58,12 +57,8 @@ export function* signInEmailLinkSaga(
       }
     }
   } catch (error) {
-    if (checkProp(error, 'code') && error.code === ValidateError.InvalidEmail) {
-      yield put(
-        AccountActions.SIGN_IN_EMAIL_LINK.FAILED.create(
-          t('errors.invalid_email'),
-        ),
-      );
+    if (isValidationError(error)) {
+      yield put(AccountActions.SIGN_IN_EMAIL_LINK.FAILED.create(error.message));
     } else {
       yield put(
         AccountActions.SIGN_IN_EMAIL_LINK.FAILED.create(getErrorMessage(error)),

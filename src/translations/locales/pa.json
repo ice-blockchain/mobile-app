@@ -196,7 +196,8 @@
     "no_library_permissions": "ਲਾਇਬ੍ਰੇਰੀ ਦੀ ਆਗਿਆਵਾਂ ਨਹੀਂ ਦਿੱਤੀ ਗਈ ਹਨ।",
     "blockchain_address_already_taken": "ਐਡਰੈੱਸ ਪਹਿਲਾਂ ਹੀ ਲਿਆਇਆ ਹੈ",
     "invalid_blockchain_address": "ਅਵੈਧ ਬਲਾਕਚੈਨ ਐਡਰੈੱਸ",
-    "ethereum_address_not_eoa": "ਐਡਰੈੱਸ EOA ਨਹੀਂ ਹੈ"
+    "ethereum_address_not_eoa": "ਐਡਰੈੱਸ EOA ਨਹੀਂ ਹੈ",
+    "same_phone_error": "ਤੁਸੀਂ ਇੱਕੋ ਨੰਬਰ ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਕਰ ਸਕਦੇ।"
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "ਫੋਨ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
     "modify_description": "ਆਪਣੇ ਦੇਸ਼ ਦੇ ਕੋਡ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ ਅਤੇ ਆਪਣਾ ਫੋਨ ਨੰਬਰ ਦਾਖਲ ਕਰੋ।",
-    "button": "ਦੇਸ਼ ਅਤੇ ਫ਼ੋਨ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
-    "same_phone_error": "ਤੁਸੀਂ ਇੱਕੋ ਨੰਬਰ ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਕਰ ਸਕਦੇ।"
+    "button": "ਦੇਸ਼ ਅਤੇ ਫ਼ੋਨ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ"
   },
   "date_select": {
     "title": "ਮਿਤੀ ਚੁਣੋ"

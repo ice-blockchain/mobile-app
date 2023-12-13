@@ -196,7 +196,8 @@
     "no_library_permissions": "Chưa cấp quyền truy cập thư viện.",
     "blockchain_address_already_taken": "Địa chỉ đã được sử dụng",
     "invalid_blockchain_address": "Địa chỉ blockchain không hợp lệ",
-    "ethereum_address_not_eoa": "Địa chỉ không phải là EOA"
+    "ethereum_address_not_eoa": "Địa chỉ không phải là EOA",
+    "same_phone_error": "Bạn không thể sử dụng cùng một số điện thoại."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Xác nhận số điện thoại",
     "modify_description": "Vui lòng xác nhận mã quốc gia của bạn và nhập số điện thoại của bạn.",
-    "button": "Xác nhận quốc gia và số điện thoại",
-    "same_phone_error": "Bạn không thể sử dụng cùng một số điện thoại."
+    "button": "Xác nhận quốc gia và số điện thoại"
   },
   "date_select": {
     "title": "Chọn ngày"

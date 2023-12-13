@@ -196,7 +196,8 @@
     "no_library_permissions": "לא הוענקו הרשאות ספרייה.",
     "blockchain_address_already_taken": "הכתובת כבר תפוסה",
     "invalid_blockchain_address": "כתובת לא תקינה",
-    "ethereum_address_not_eoa": "הכתובת אינה EOA"
+    "ethereum_address_not_eoa": "הכתובת אינה EOA",
+    "same_phone_error": "לא ניתן להשתמש באותו המספר."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "אישור טלפון",
     "modify_description": "אנא אשרו את קידומת המדינה שלכם והזינו את מספר הטלפון שלכם.",
-    "button": "אישור המדינה והטלפון",
-    "same_phone_error": "לא ניתן להשתמש באותו המספר."
+    "button": "אישור המדינה והטלפון"
   },
   "date_select": {
     "title": "בחירת תאריך"

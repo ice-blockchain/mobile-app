@@ -196,7 +196,8 @@
     "no_library_permissions": "Nu sunt acordate permisiunile de acces la bibliotecă.",
     "blockchain_address_already_taken": "Adresa deja folosită",
     "invalid_blockchain_address": "Adresă blockchain invalidă",
-    "ethereum_address_not_eoa": "Adresa nu este EOA"
+    "ethereum_address_not_eoa": "Adresa nu este EOA",
+    "same_phone_error": "Nu poți folosi același număr."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Confirmă telefonul",
     "modify_description": "Te rugăm să îți confirmi codul de țară și să introduci numărul tău de telefon.",
-    "button": "Confirmă țara și telefonul",
-    "same_phone_error": "Nu poți folosi același număr."
+    "button": "Confirmă țara și telefonul"
   },
   "date_select": {
     "title": "Alege data"

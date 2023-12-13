@@ -196,7 +196,8 @@
     "no_library_permissions": "Nuk janë dhënë lejet për bibliotekën.",
     "blockchain_address_already_taken": "Adresa është tashmë e zënë",
     "invalid_blockchain_address": "Adresa e blockchain-i nuk është e vlefshme",
-    "ethereum_address_not_eoa": "Adresa nuk është EOA"
+    "ethereum_address_not_eoa": "Adresa nuk është EOA",
+    "same_phone_error": "Nuk mund të përdorësh të njëjtin numër."
   },
   "profile": {
     "my_roles": {
@@ -711,8 +712,7 @@
   "confirm_phone": {
     "modify_title": "Konfirmo telefonin",
     "modify_description": "Të lutemi konfirmo prefiksin e shtetit tënd dhe fut numrin e telefonit.",
-    "button": "Konfirmo shtetin dhe telefonin",
-    "same_phone_error": "Nuk mund të përdorësh të njëjtin numër."
+    "button": "Konfirmo shtetin dhe telefonin"
   },
   "date_select": {
     "title": "Zgjidh datën"
