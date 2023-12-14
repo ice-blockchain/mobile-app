@@ -2,6 +2,7 @@
 
 import {ReferralType} from '@api/user/types';
 import {ActivityIndicator} from '@components/ActivityIndicator';
+import {BottomSheetFlatList} from '@components/BottomSheet';
 import {ListItemSkeleton} from '@components/ListItems/ListItemSkeleton';
 import {
   SKELETONS_PER_SCREEN,
@@ -9,7 +10,6 @@ import {
 } from '@components/ListItems/UserListItem';
 import {UserListPingButton} from '@components/ListItems/UserListItem/components/UserListPingButton';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {BottomSheetFlatList} from '@gorhom/bottom-sheet';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {EmptyTier} from '@screens/Team/components/TierList/components/EmptyTier';
 import {ListHeader} from '@screens/Team/components/TierList/components/Header';

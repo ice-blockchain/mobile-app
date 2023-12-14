@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {ReferralType} from '@api/user/types';
-import {BottomSheetFlatListMethods} from '@gorhom/bottom-sheet';
+import {BottomSheetFlatListMethods} from '@components/BottomSheet';
 import {useEffect, useRef} from 'react';
 
 export const useAddCollapsedSnapPointListener = ({

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {BottomSheetScrollView} from '@components/BottomSheet';
 import {isLinkPhoneNumberEnabled} from '@constants/featureFlags';
-import {BottomSheetScrollView} from '@gorhom/bottom-sheet';
 import {ConfirmPhoneNumber} from '@screens/Team/components/Contacts/components/ConfirmPhoneNumber';
 import {ContactsList} from '@screens/Team/components/Contacts/components/ContactsList';
 import {ContactsPermissions} from '@screens/Team/components/Contacts/components/ContactsPermissions';

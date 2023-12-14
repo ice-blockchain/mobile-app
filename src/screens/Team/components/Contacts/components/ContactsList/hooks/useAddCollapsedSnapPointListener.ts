@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {BottomSheetSectionListMethods} from '@gorhom/bottom-sheet';
+import {BottomSheetSectionListMethods} from '@components/BottomSheet';
 import {AGENDA} from '@screens/Team/constants';
 import {useEffect, useRef} from 'react';
 

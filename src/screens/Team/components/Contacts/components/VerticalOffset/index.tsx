@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {BottomSheetScrollView} from '@components/BottomSheet';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
-import {BottomSheetScrollView} from '@gorhom/bottom-sheet';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import React, {ReactNode} from 'react';
 import {isIOS} from 'rn-units';
