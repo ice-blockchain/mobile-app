@@ -2,6 +2,7 @@
 
 import {HEADER_HEIGHT} from '@navigation/components/Header';
 import {AVATAR_SIZE} from '@screens/ProfileFlow/Profile/components/AvatarHeader';
+import {VERIFIED_SIZE} from '@screens/ProfileFlow/Profile/components/AvatarHeader/constants';
 import {isRTL} from '@translations/i18n';
 import {ViewStyle} from 'react-native';
 import {
@@ -189,6 +190,12 @@ export const useAnimatedStyles = ({
 
     return {
       opacity,
+      width: interpolate(
+        animatedIndex.value,
+        [0.81, SCROLL_STEP_1],
+        [0, VERIFIED_SIZE],
+        Extrapolate.CLAMP,
+      ),
       marginLeft: chevronMargin.value,
       marginRight: chevronMargin.value,
     };

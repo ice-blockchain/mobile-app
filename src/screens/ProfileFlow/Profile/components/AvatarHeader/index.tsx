@@ -16,6 +16,7 @@ import {useVerifiedTooltip} from '@screens/HomeFlow/Home/components/Header/compo
 import {AgendaContactTooltip} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/AgendaContactTooltip';
 import {ContactsAvatarButton} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/ContactsAvatarButton';
 import {EditAvatarButton} from '@screens/ProfileFlow/Profile/components/AvatarHeader/components/EditAvatarButton';
+import {VERIFIED_SIZE} from '@screens/ProfileFlow/Profile/components/AvatarHeader/constants';
 import {
   AVATAR_RADIUS,
   AVATAR_SMALL_SIZE,
@@ -43,7 +44,6 @@ import {useOnLayout} from './hooks/useOnLayout';
 const NOT_FOUND = require('../../assets/images/notFoundPlaceholder.png');
 
 export const AVATAR_SIZE = rem(122);
-const VERIFIED_SIZE = rem(18);
 
 type Props = {
   user: User | null;
@@ -72,9 +72,6 @@ export const AvatarHeader = memo(
       onLayoutTitleText,
     } = useOnLayout();
 
-    const verifiedWidth =
-      user && user.verified ? wrapperWidth - VERIFIED_SIZE * 2 : wrapperWidth;
-
     const {
       titleAnimatedStyle,
       imageAnimatedStyle,
@@ -87,7 +84,7 @@ export const AvatarHeader = memo(
       animatedIndex,
       navigationContainerLeftWidth,
       navigationContainerRightWidth,
-      wrapperWidth: verifiedWidth,
+      wrapperWidth,
       titleTextWidth,
     });
 
