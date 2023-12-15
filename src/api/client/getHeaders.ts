@@ -6,6 +6,9 @@ import DeviceInfo from 'react-native-device-info';
 export const getHeaders = () => {
   return {
     'Mobile-App-Version': `${Platform.OS} - ${DeviceInfo.getVersion()}`,
-    'Cache-Control': 'no-cache',
   };
+};
+
+export const NO_CACHE_HEADERS = {
+  'Cache-Control': 'no-cache',
 };
