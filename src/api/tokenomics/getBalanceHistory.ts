@@ -21,7 +21,7 @@ export function getBalanceHistory({
   offset,
   tz,
 }: Params) {
-  return get<BalanceHistoryPoint[]>(
+  return get<BalanceHistoryPoint[] | null>(
     `/tokenomics/${userId}/balance-history`,
     {
       startDate,
