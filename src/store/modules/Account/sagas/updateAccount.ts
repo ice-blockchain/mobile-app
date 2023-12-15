@@ -146,7 +146,12 @@ function* validateMiningBlockchainAccountAddress(
         throw new ValidationError(ValidationErrorCode.EthereumAddressIsNotEoa);
       }
     } catch (error) {
-      if ((error as IsEoaEthereumAddressError).name !== 'HttpRequestError') {
+      const typedError = error as IsEoaEthereumAddressError;
+      const networkErrorTypes: typeof typedError['name'][] = [
+        'HttpRequestError',
+        'TimeoutError',
+      ];
+      if (!networkErrorTypes.includes(typedError.name)) {
         logError(error);
       }
       throw new ValidationError(
