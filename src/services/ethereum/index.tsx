@@ -1,6 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Address, createPublicClient, http, isAddress} from 'viem';
+import {
+  Address,
+  createPublicClient,
+  GetBytecodeErrorType,
+  http,
+  isAddress,
+} from 'viem';
 import {mainnet} from 'viem/chains';
 
 export const isValidEthereumAddress = (address: string): boolean => {
@@ -20,3 +26,5 @@ export const isEoaEthereumAddress = async (
   });
   return !code;
 };
+
+export type IsEoaEthereumAddressError = GetBytecodeErrorType;

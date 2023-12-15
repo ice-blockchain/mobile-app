@@ -145,6 +145,7 @@ export type Translations = {
   'errors.invalid_blockchain_address': null;
   'errors.ethereum_address_not_eoa': null;
   'errors.same_phone_error': null;
+  'errors.unable_to_validate_eth_addr_eoa': null;
   'profile.my_roles.title': null;
   'profile.mining_calculator': null;
   'profile.invite_friends': null;
