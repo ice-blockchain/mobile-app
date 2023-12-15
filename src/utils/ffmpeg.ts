@@ -80,7 +80,11 @@ export async function extractFramesWithFFmpeg({
     const returnCode = await session?.getReturnCode();
 
     if (!returnCode?.isValueSuccess()) {
-      throw new Error(`Failed to execute FFmpeg command: ${command}`);
+      throw new Error(
+        `Failed to execute FFmpeg command: ${command}. Return code is ${
+          returnCode?.getValue() ?? 'unknown'
+        }`,
+      );
     }
     output = await session.getOutput();
     const numberOfFrames = parseInt(
