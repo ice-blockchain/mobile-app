@@ -1,37 +1,25 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {dayjs} from '@services/dayjs';
+import {Api} from '@api/index';
 import {StatsActions} from '@store/modules/Stats/actions';
+import {getTimezoneOffset} from '@utils/device';
 import {getErrorMessage} from '@utils/errors';
-import {put} from 'redux-saga/effects';
+import {call, put, SagaReturnType} from 'redux-saga/effects';
 
 export function* getUserGrowthStats(
   action: ReturnType<typeof StatsActions.GET_USER_GROWTH_STATS.START.create>,
 ) {
   const {statsPeriod} = action.payload;
   try {
-    // const {
-    //   data: userGrowth,
-    // }: SagaReturnType<typeof Api.statistics.getUserGrowth> = yield call(
-    //   Api.statistics.getUserGrowth,
-    //   {
-    //     days: statsPeriod,
-    //     tz: getTimezoneOffset(),
-    //   },
-    // );
-
-    //TODO::mock data
-    const userGrowth = {
-      active: 1000,
-      total: 230102,
-      timeSeries: Array(statsPeriod)
-        .fill(null)
-        .map((_, index) => ({
-          date: dayjs().subtract(index, 'day').toISOString(),
-          active: Math.floor(Math.random() * 10000),
-          total: Math.floor(Math.random() * 10000),
-        })),
-    };
+    const {
+      data: userGrowth,
+    }: SagaReturnType<typeof Api.statistics.getUserGrowth> = yield call(
+      Api.statistics.getUserGrowth,
+      {
+        days: statsPeriod,
+        tz: getTimezoneOffset(),
+      },
+    );
 
     yield put(
       StatsActions.GET_USER_GROWTH_STATS.SUCCESS.create(
