@@ -1167,8 +1167,8 @@
     "enter_address_confirmation": "Você tem certeza de que o endereço Ethereum está correto?",
     "validators_warning_title": "Confirmar Endereço",
     "validators_warning_text": "Por favor, note que as pessoas que adicionaram um endereço Ethereum à sua conta não têm direito a se tornarem um dos 300 principais validadores, conforme o nosso whitepaper para o lançamento da mainnet.",
-    "okxWalletDescription": "Proteja suas moedas com a Carteira OKX, nosso parceiro oficial de carteira autônoma confiável.",
-    "okxWalletAction": "BAIXAR CARTEIRA OKX"
+    "okxWalletDescription": "Recomendamos o uso do seu endereço Ethereum na [[:bold]]OKX Exchange[[/:bold]] para evitar quaisquer taxas de gás.\n\nSe a OKX não estiver disponível no seu país, você pode usar uma carteira auto custodial, como o MetaMask ou Trust Wallet.",
+    "okxWalletAction": "CRIAR CONTA NA OKX"
   },
   "social_kyc": {
     "header": "Verificação",
