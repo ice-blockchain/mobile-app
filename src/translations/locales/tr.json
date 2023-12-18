@@ -1167,8 +1167,8 @@
     "enter_address_confirmation": "Ethereum adresinin doğru olduğundan emin misiniz?",
     "validators_warning_title": "Adresi Onayla",
     "validators_warning_text": "Lütfen Ethereum adresini hesaplarına ekleyen kişilerin ana ağın başlatılması için bizim beyaz kağıdımıza göre en iyi 300 doğrulayıcıdan biri olma hakları olmadığını unutmayın.",
-    "okxWalletDescription": "OKX Wallet ile paralarınızı güvence altına alın, güvendiğimiz kendi kendine saklama resmi cüzdan ortağımız.",
-    "okxWalletAction": "OKX CÜZDANINI İNDİR"
+    "okxWalletDescription": "Herhangi bir gaz ücretinden kaçınmak için Ethereum adresinizi [[:bold]]OKX Exchange[[/:bold]] üzerinde kullanmanızı öneririz.\n\nEğer OKX ülkenizde kullanılamıyorsa, MetaMask veya Trust Wallet gibi kendi kendinize sahip çıkabileceğiniz bir cüzdan kullanabilirsiniz.",
+    "okxWalletAction": "OKX ÜZERİNDE HESAP OLUŞTURUN"
   },
   "social_kyc": {
     "header": "Doğrulama",
