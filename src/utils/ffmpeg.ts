@@ -11,6 +11,7 @@ import {logError} from '@services/logging';
 import {getFilenameFromPathWithoutExtension} from '@utils/file';
 import {cacheDirectory} from 'expo-file-system';
 import {FFmpegKit} from 'ffmpeg-kit-react-native';
+import {AppState} from 'react-native';
 import {screenHeight} from 'rn-units';
 
 export function getPictureCropStartY({
@@ -106,7 +107,13 @@ export async function extractFramesWithFFmpeg({
           )}_${(i + 1).toString().padStart(3, '0')}.jpg`,
       );
   } catch (error) {
-    logError(error, {output});
+    if (AppState.currentState === 'active') {
+      // * User sets the app to background during the func execution ->
+      // * OS sets the app to low memory ->
+      // * FFMpeg error.
+      // Ignoring this kind of errors to reduce the noise in Sentry.
+      logError(error, {output});
+    }
     throw error;
   }
 }
