@@ -51,7 +51,12 @@ export const PagerHeader = () => {
             value={balanceSummary && formatNumberString(balanceSummary.total)}
           />
           <DataCellSeparator />
-          <BlockchainCell value={'0.00'} />
+          <BlockchainCell
+            value={
+              balanceSummary &&
+              formatNumberString(balanceSummary.totalMiningBlockchain)
+            }
+          />
           <Touchable
             onPress={onLinkPress}
             style={styles.slideLink}
