@@ -10,7 +10,6 @@ export const LINKS = {
   PRIVACY: t('links.privacy'),
   TERMS: t('links.terms'),
   MAIN: t('links.main'),
-  BLOCK_EXPLORER: ENV.BLOCK_EXPLORER_URL,
   FIREBASE_NOTICE: 'https://ice.io/firebase-notice',
   KNOWLEDGE_BASE: 'https://ice.io/knowledge-base',
   BONUSES: 'https://ice.io/bonuses',
@@ -56,4 +55,5 @@ export const LINKS = {
   X_REPOST_LINK_EXAMPLE:
     'https://twitter.com/ice_z3us/status/1732445405806477625?t=HgtbOUEVIxMENcUuRKIsQQ&s=19',
   OKX_WALLET: 'https://www.okx.com/join',
+  ETHERSCAN: 'https://etherscan.io/address',
 };

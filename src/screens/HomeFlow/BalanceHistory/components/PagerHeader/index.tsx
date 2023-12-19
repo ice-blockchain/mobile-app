@@ -1,18 +1,14 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {PagerIndicators} from '@components/PagerIndicators';
-import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {LINKS} from '@constants/links';
-import {SMALL_BUTTON_HIT_SLOP} from '@constants/styles';
 import {BlockchainCell} from '@screens/HomeFlow/BalanceHistory/components/PagerHeader/components/BlockchainCell';
 import {DataCellSeparator} from '@screens/HomeFlow/BalanceHistory/components/PagerHeader/components/DataCell';
+import {ExternalLink} from '@screens/HomeFlow/BalanceHistory/components/PagerHeader/components/ExternalLink';
 import {WalletCell} from '@screens/HomeFlow/BalanceHistory/components/PagerHeader/components/WalletCell';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
-import {ArrowLink} from '@svg/ArrowLink';
 import {BottomBump} from '@svg/BottomBump';
 import {t} from '@translations/i18n';
-import {openLinkWithInAppBrowser} from '@utils/device';
 import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {useState} from 'react';
@@ -36,10 +32,6 @@ export const PagerHeader = () => {
     setActiveIndex(event.nativeEvent.position);
   };
 
-  const onLinkPress = () => {
-    openLinkWithInAppBrowser({url: LINKS.BLOCK_EXPLORER ?? ''});
-  };
-
   return (
     <View style={styles.container}>
       <PagerView
@@ -57,12 +49,7 @@ export const PagerHeader = () => {
               formatNumberString(balanceSummary.totalMiningBlockchain)
             }
           />
-          <Touchable
-            onPress={onLinkPress}
-            style={styles.slideLink}
-            hitSlop={SMALL_BUTTON_HIT_SLOP}>
-            <ArrowLink width={rem(16)} height={rem(16)} />
-          </Touchable>
+          <ExternalLink style={styles.slideLink} />
         </View>
         <View style={styles.slide}>
           <WalletCell
