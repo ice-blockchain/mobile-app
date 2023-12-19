@@ -602,7 +602,7 @@
     "wallet": "Portfel",
     "blockchain": "Blockchain",
     "wallet_update_interval": "aktualizowane co godzinę",
-    "blockchain_update_interval": "aktualizowane co 24 godziny",
+    "blockchain_update_interval": "aktualizowane co 28 dni",
     "list_end_label": "jest to ostatni wpis w historii salda.",
     "no_data": "Brak danych do wyświetlenia dla określonego okresu."
   },

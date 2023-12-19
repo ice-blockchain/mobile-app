@@ -602,7 +602,7 @@
     "wallet": "Гаманець",
     "blockchain": "Блокчейн",
     "wallet_update_interval": "оновлюється щогодини",
-    "blockchain_update_interval": "оновлюється кожні 24 години",
+    "blockchain_update_interval": "оновлюється кожні 28 днів",
     "list_end_label": "це останній запис історії балансу.",
     "no_data": "Немає даних для відображення за вказаний період."
   },

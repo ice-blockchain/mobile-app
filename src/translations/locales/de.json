@@ -602,7 +602,7 @@
     "wallet": "Wallet",
     "blockchain": "Blockchain",
     "wallet_update_interval": "Stündlich aktualisiert",
-    "blockchain_update_interval": "Alle 24 Stunden aktualisiert",
+    "blockchain_update_interval": "alle 28 Tage aktualisiert",
     "list_end_label": "Dies ist der letzte Eintrag im Guthabenverlauf.",
     "no_data": "Für den angegebenen Zeitraum gibt es keine Daten, die angezeigt werden können."
   },

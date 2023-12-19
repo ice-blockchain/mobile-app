@@ -602,7 +602,7 @@
     "wallet": "Denarnica",
     "blockchain": "Blockchain",
     "wallet_update_interval": "posodobljeno vsako uro",
-    "blockchain_update_interval": "posodobljeno vsakih 24 ur",
+    "blockchain_update_interval": "posodobi se vsakih 28 dni",
     "list_end_label": "to je zadnji vnos v zgodovino stanja.",
     "no_data": "Za navedeno obdobje ni podatkov za prikaz."
   },

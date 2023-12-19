@@ -602,7 +602,7 @@
     "wallet": "Cüzdan",
     "blockchain": "Blok Zincir",
     "wallet_update_interval": "saatte bir güncellenir",
-    "blockchain_update_interval": "24 saatte bir güncellenir",
+    "blockchain_update_interval": "her 28 günde güncellenir",
     "list_end_label": "bu, bakiye geçmişinin son girişidir.",
     "no_data": "Belirtilen dönem için görüntülenecek veri yok."
   },

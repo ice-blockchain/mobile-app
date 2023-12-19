@@ -602,7 +602,7 @@
     "wallet": "Plånbok",
     "blockchain": "Blockkedja",
     "wallet_update_interval": "uppdateras varje timme",
-    "blockchain_update_interval": "uppdateras var 24:e timme",
+    "blockchain_update_interval": "uppdateras varje 28 dagar",
     "list_end_label": "detta är den sista posten i saldohistoriken.",
     "no_data": "Det finns inga data att visa för den angivna perioden."
   },

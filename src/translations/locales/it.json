@@ -602,7 +602,7 @@
     "wallet": "Portafoglio",
     "blockchain": "Blockchain",
     "wallet_update_interval": "aggiornato ogni ora",
-    "blockchain_update_interval": "aggiornato ogni 24 ore",
+    "blockchain_update_interval": "aggiornato ogni 28 giorni",
     "list_end_label": "questa è l'ultima voce della cronologia del saldo.",
     "no_data": "Non ci sono dati da visualizzare per il periodo specificato."
   },

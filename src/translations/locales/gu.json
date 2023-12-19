@@ -602,7 +602,7 @@
     "wallet": "વૉલેટ",
     "blockchain": "બ્લોકચેન",
     "wallet_update_interval": "દર કલાકે અપડેટ થાય છે",
-    "blockchain_update_interval": "દર 24 કલાકે અપડેટ થાય છે",
+    "blockchain_update_interval": "પ્રતિ 28 દિવસે અપડેટ થાય છે",
     "list_end_label": "બેલેન્સ ઇતિહાસની આ છેલ્લી એન્ટ્રી છે.",
     "no_data": "ઉલ્લેખિત સમયગાળા દરમિયાન પ્રદર્શિત કરવા માટે કોઈ ડેટા નથી."
   },

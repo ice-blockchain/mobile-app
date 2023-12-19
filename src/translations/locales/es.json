@@ -602,7 +602,7 @@
     "wallet": "Monedero",
     "blockchain": "Cadena de bloques",
     "wallet_update_interval": "actualizado cada hora",
-    "blockchain_update_interval": "actualizado cada 24 horas",
+    "blockchain_update_interval": "actualizado cada 28 días",
     "list_end_label": "esta es la última entrada del historial del saldo.",
     "no_data": "No hay datos para mostrar para el periodo especificado."
   },

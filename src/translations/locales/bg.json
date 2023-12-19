@@ -602,7 +602,7 @@
     "wallet": "Портфейл",
     "blockchain": "Блокчейн",
     "wallet_update_interval": "обновявано всеки час",
-    "blockchain_update_interval": "обновявано на 24 часа",
+    "blockchain_update_interval": "актуализира се на всеки 28 дни",
     "list_end_label": "това е последният запис от историята на баланса.",
     "no_data": "Няма данни за показване за посочения период."
   },

@@ -602,7 +602,7 @@
     "wallet": "PUL QABI",
     "blockchain": "Blokçeyn",
     "wallet_update_interval": "hər saat yenilənir",
-    "blockchain_update_interval": "hər 24 saatdan bir yenilənir",
+    "blockchain_update_interval": "hər 28 gün yenilənir",
     "list_end_label": "bu balans tarixinin son əməliyyatıdır.",
     "no_data": "Seçilmiş müddət üzrə göstərməyə məlumat yoxdur."
   },

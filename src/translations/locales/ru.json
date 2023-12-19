@@ -602,7 +602,7 @@
     "wallet": "Кошелек",
     "blockchain": "Блокчейн",
     "wallet_update_interval": "обновляется каждый час",
-    "blockchain_update_interval": "обновляется каждые 24 часа",
+    "blockchain_update_interval": "обновляется каждые 28 дней",
     "list_end_label": "это последняя запись в истории баланса.",
     "no_data": "Нет данных для отображения за указанный период."
   },

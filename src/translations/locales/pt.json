@@ -602,7 +602,7 @@
     "wallet": "Carteira",
     "blockchain": "Blockchain",
     "wallet_update_interval": "atualizada de hora em hora",
-    "blockchain_update_interval": "atualizada a cada 24 horas",
+    "blockchain_update_interval": "atualizado a cada 28 dias",
     "list_end_label": "esta é a última entrada do histórico do saldo.",
     "no_data": "Não há dados para exibir em relação ao período especificado."
   },

@@ -602,7 +602,7 @@
     "wallet": "Lommebok",
     "blockchain": "Blokkjede",
     "wallet_update_interval": "oppdateres hver time",
-    "blockchain_update_interval": "oppdateres hver 24. time",
+    "blockchain_update_interval": "oppdatert kvar 28 dagar",
     "list_end_label": "dette er den siste oppføringen i saldohistorikken.",
     "no_data": "Det er ingen data å vise for den angitte perioden."
   },

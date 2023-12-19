@@ -602,7 +602,7 @@
     "wallet": "Ví",
     "blockchain": "Chuỗi khối",
     "wallet_update_interval": "được cập nhật mỗi giờ",
-    "blockchain_update_interval": "được cập nhật mỗi 24 giờ",
+    "blockchain_update_interval": "được cập nhật mỗi 28 ngày",
     "list_end_label": "đây là mục cuối cùng của lịch sử số dư.",
     "no_data": "Không có dữ liệu để hiển thị trong khoảng thời gian được chỉ định."
   },

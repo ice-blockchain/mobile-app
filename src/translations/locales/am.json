@@ -602,7 +602,7 @@
     "wallet": "ዋሌት",
     "blockchain": "ብሎክቼይን",
     "wallet_update_interval": "በየሰዓቱ ይዘምናል",
-    "blockchain_update_interval": "በየ 24 ሰዓቱ ይዘምናል",
+    "blockchain_update_interval": "ቅዳሜ 28 ቀን ይጠቀምያል",
     "list_end_label": "ይህ የሂሳብ ታሪክ የመጨረሻው ግቤት ነው።",
     "no_data": "ለተገለጸው ጊዜ የሚታይ ምንም ውሂብ የለም።"
   },

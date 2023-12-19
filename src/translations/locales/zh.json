@@ -602,7 +602,7 @@
     "wallet": "钱包",
     "blockchain": "区块链",
     "wallet_update_interval": "每小时更新一次",
-    "blockchain_update_interval": "每 24 小时更新一次",
+    "blockchain_update_interval": "每28天更新一次",
     "list_end_label": "这是余额历史记录的最后一条。",
     "no_data": "指定期间内没有要显示的数据。"
   },
