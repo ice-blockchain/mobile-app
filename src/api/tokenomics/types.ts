@@ -43,6 +43,7 @@ export type BalanceSummary = {
   t2: string;
   total: string;
   totalReferrals: string;
+  totalMiningBlockchain: string;
 };
 
 export type ResurrectRequiredData = {
