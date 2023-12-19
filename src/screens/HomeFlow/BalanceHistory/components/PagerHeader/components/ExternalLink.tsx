@@ -10,7 +10,6 @@ import {openLinkWithInAppBrowser} from '@utils/device';
 import React from 'react';
 import {StyleProp, ViewStyle} from 'react-native';
 import {useSelector} from 'react-redux';
-import {rem} from 'rn-units';
 
 type Props = {
   style?: StyleProp<ViewStyle>;
@@ -37,7 +36,7 @@ export const ExternalLink = ({style}: Props) => {
       onPress={onLinkPress}
       style={style}
       hitSlop={SMALL_BUTTON_HIT_SLOP}>
-      <ArrowLink width={rem(16)} height={rem(16)} />
+      <ArrowLink />
     </Touchable>
   );
 };
