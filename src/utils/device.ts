@@ -3,6 +3,7 @@
 import {COLORS} from '@constants/colors';
 import {dayjs} from '@services/dayjs';
 import {logError} from '@services/logging';
+import {checkProp} from '@utils/guards';
 import * as Haptics from 'expo-haptics';
 import {ImpactFeedbackStyle} from 'expo-haptics/src/Haptics.types';
 import {Linking} from 'react-native';
@@ -27,9 +28,28 @@ export const openLink = async (url: string) => {
     }
     return false;
   } catch (error) {
-    logError(error);
+    if (!isOpayBrowserError(error)) {
+      logError(error);
+    }
     return false;
   }
+};
+
+/**
+ * Some devices have their own custom Android-based Operating Systems.
+ * Such as TECNO's HiOS and Infinix's XOS.
+ * These systems include a custom browser - com.opay.webview.WebFoundationActivity.
+ * This browser is a default handler for http/https schemes.
+ * However they also made the activity of this browser "not exported",
+ * so any attempt to start an intent with one of these schemes results
+ * in a "Permission Denial" error.
+ */
+const isOpayBrowserError = (error: unknown) => {
+  return (
+    checkProp(error, 'message') &&
+    typeof error.message === 'string' &&
+    error.message.includes('com.opay.webview.WebFoundationActivity')
+  );
 };
 
 export const openLinkWithInAppBrowser = async ({
