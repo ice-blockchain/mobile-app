@@ -1141,7 +1141,8 @@
       "x": {
         "1": "Klik tautan [[:bold]]iku[[/:bold]] nganti mbukak langsung tulisan X kita.",
         "pop_up": {
-          "description": "Tetepi pandhuan lan pastiake sampeyan wis ndelikaké tautan ing langkah awal kanggo mbukak langsung tulisan X kita."
+          "description": "Tetepi pandhuan lan pastiake sampeyan wis ndelikaké tautan ing langkah awal kanggo mbukak langsung tulisan X kita.",
+          "description2": "Apakah sampeyan seneng postingan sing bener lan nerusakaké karo qouw menggunakan teks sing tepat sing dadi conto?"
         }
       }
     }

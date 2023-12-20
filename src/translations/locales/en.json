@@ -1233,7 +1233,8 @@
       "x": {
         "1": "Tap the link [[:bold]]here[[/:bold]] to open our X post directly.",
         "pop_up": {
-          "description": "Please follow the instructions and make sure that you tapped on the link in first step to open our X post."
+          "description": "Please follow the instructions and make sure that you tapped on the link in first step to open our X post.",
+          "description2": "Did you liked the correct post and reposted it with quote using the exact text provided, as in the example?"
         }
       }
     }

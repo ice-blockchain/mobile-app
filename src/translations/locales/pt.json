@@ -1236,7 +1236,8 @@
       "x": {
         "1": "Clique no link [[:bold]]aqui[[/:bold]] para abrir diretamente a nossa postagem X.",
         "pop_up": {
-          "description": "Siga as instruções e certifique-se de ter clicado no link no primeiro passo para abrir diretamente a nossa postagem X."
+          "description": "Siga as instruções e certifique-se de ter clicado no link no primeiro passo para abrir diretamente a nossa postagem X.",
+          "description2": "Você curtiu a postagem correta e a repostou com uma citação usando o texto exato fornecido, como no exemplo?"
         }
       }
     }

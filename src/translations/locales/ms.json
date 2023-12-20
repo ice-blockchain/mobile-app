@@ -1236,7 +1236,8 @@
       "x": {
         "1": "Klik pautan [[:bold]]di sini[[/:bold]] untuk membuka terus kiriman X kami.",
         "pop_up": {
-          "description": "Ikuti arahan dan pastikan anda telah mengklik pautan dalam langkah pertama untuk membuka terus kiriman X kami."
+          "description": "Ikuti arahan dan pastikan anda telah mengklik pautan dalam langkah pertama untuk membuka terus kiriman X kami.",
+          "description2": "Adakah anda menyukai pos yang betul dan menyebarkannya semula dengan petikan menggunakan teks yang tepat seperti dalam contoh?"
         }
       }
     }

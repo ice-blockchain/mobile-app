@@ -1236,7 +1236,8 @@
       "x": {
         "1": "Klicka på länken [[:bold]]här[[/:bold]] för att öppna vår X-post direkt.",
         "pop_up": {
-          "description": "Följ instruktionerna och se till att du har klickat på länken i det första steget för att öppna vår X-post direkt."
+          "description": "Följ instruktionerna och se till att du har klickat på länken i det första steget för att öppna vår X-post direkt.",
+          "description2": "Gillade du rätt inlägg och delade det med ett citat med exakt text som angivits, som i exemplet?"
         }
       }
     }

@@ -1239,7 +1239,8 @@
       "x": {
         "1": "Tik op die skakel [[:bold]]hier[[/:bold]] om ons X-pos direk te oop.",
         "pop_up": {
-          "description": "Volg asseblief die instruksies en maak seker dat jy in die eerste stap op die skakel getik het om ons X-pos direk te oop te maak."
+          "description": "Volg asseblief die instruksies en maak seker dat jy in die eerste stap op die skakel getik het om ons X-pos direk te oop te maak.",
+          "description2": "Het jy die regte pos gelike en dit met 'n aanhalingsteken herpos met die presiese teks wat verskaf is, soos in die voorbeeld?"
         }
       }
     }

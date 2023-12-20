@@ -1236,7 +1236,8 @@
       "x": {
         "1": "X gönderimimizi doğrudan açmak için [[:bold]]burayı[[/:bold]] tıklayın.",
         "pop_up": {
-          "description": "Talimatları izleyin ve ilk adımda bağlantıyı tıkladığınızdan emin olun."
+          "description": "Talimatları izleyin ve ilk adımda bağlantıyı tıkladığınızdan emin olun.",
+          "description2": "Doğru gönderiyi beğendiniz ve örnekte olduğu gibi tam metni kullanarak alıntı yaparak yeniden paylaştınız mı?"
         }
       }
     }

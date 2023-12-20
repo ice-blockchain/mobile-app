@@ -1236,7 +1236,8 @@
       "x": {
         "1": "Nhấn vào liên kết [[:bold]]tại đây[[/:bold]] để mở trực tiếp bài viết X của chúng tôi.",
         "pop_up": {
-          "description": "Tuân theo hướng dẫn và đảm bảo bạn đã nhấn vào liên kết trong bước đầu tiên để mở trực tiếp bài viết X của chúng tôi."
+          "description": "Tuân theo hướng dẫn và đảm bảo bạn đã nhấn vào liên kết trong bước đầu tiên để mở trực tiếp bài viết X của chúng tôi.",
+          "description2": "Bạn có thích bài viết đúng và chia sẻ lại nó với dấu trích dẫn sử dụng văn bản chính xác được cung cấp, như trong ví dụ không?"
         }
       }
     }

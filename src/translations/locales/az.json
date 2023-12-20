@@ -1236,7 +1236,8 @@
       "x": {
         "1": "X postumuzu doğrudan açmaq üçün [[:bold]]buraya[[/:bold]] toxunun.",
         "pop_up": {
-          "description": "X postumuzu açmaq üçün birinci addımı tıkladığınızdan əmin olmaqla təlimatları izləyin."
+          "description": "X postumuzu açmaq üçün birinci addımı tıkladığınızdan əmin olmaqla təlimatları izləyin.",
+          "description2": "Siz düzgün postu bəyəndiniz və onu əks etdirək, təqdim edilmiş dəqiqlik mətni ilə təkrar etdinizmi, məsələn?"
         }
       }
     }

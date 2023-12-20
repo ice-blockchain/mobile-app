@@ -1236,7 +1236,8 @@
       "x": {
         "1": "Klicken Sie auf den Link [[:bold]]hier[[/:bold]], um unseren X-Beitrag direkt zu öffnen.",
         "pop_up": {
-          "description": "Bitte folgen Sie den Anweisungen und stellen Sie sicher, dass Sie im ersten Schritt auf den Link geklickt haben, um unseren X-Beitrag direkt zu öffnen."
+          "description": "Bitte folgen Sie den Anweisungen und stellen Sie sicher, dass Sie im ersten Schritt auf den Link geklickt haben, um unseren X-Beitrag direkt zu öffnen.",
+          "description2": "Hast du den richtigen Beitrag gemocht und ihn mit einem Zitat und dem exakten Text, wie im Beispiel gezeigt, erneut geteilt?"
         }
       }
     }

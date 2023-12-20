@@ -49,7 +49,11 @@ export function useOnContinue({
         name: 'PopUp',
         params: {
           title: t('social_kyc.instructions_step.x.pop_up.title'),
-          message: t('social_kyc.instructions_step.x.pop_up.description'),
+          message: t(
+            isDistributionFlow
+              ? 'distribution_kyc.instructions_step.x.pop_up.description2'
+              : 'social_kyc.instructions_step.x.pop_up.description',
+          ),
           buttons: [
             {
               text: t('button.no'),
