@@ -1240,6 +1240,11 @@
           "description2": "Czy polubiłeś właściwy post i ponownie opublikowałeś go z cytatem, używając dokładnego tekstu, jak w przykładzie?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulacje, pomyślnie zakończyłeś proces weryfikacji. Teraz jesteś uprawniony do dystrybucji Ethereum."
+      }
     }
   }
 }

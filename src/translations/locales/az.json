@@ -1240,6 +1240,11 @@
           "description2": "Siz düzgün postu bəyəndiniz və onu əks etdirək, təqdim edilmiş dəqiqlik mətni ilə təkrar etdinizmi, məsələn?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Təbriklər, verifikasiyanızı uğurla başa çatdınız. Siz artıq Ethereum təqdimatı üçün nüfuzlu olmusunuzdur."
+      }
     }
   }
 }

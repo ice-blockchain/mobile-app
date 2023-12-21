@@ -11,7 +11,11 @@ import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export function Details() {
+type Props = {
+  isDistributionFlow: boolean;
+};
+
+export function Details({isDistributionFlow}: Props) {
   const socialKycStatus = useSelector(socialKycStatusSelector);
   const socialKycAttempts = useSelector(socialKycAttemptsSelector);
 
@@ -22,7 +26,9 @@ export function Details() {
           {t('social_kyc.results_step.success.title')}
         </Text>
         <Text style={styles.text}>
-          {t('social_kyc.results_step.success.description')}
+          {isDistributionFlow
+            ? t('distribution_kyc.results_step.success.description')
+            : t('social_kyc.results_step.success.description')}
         </Text>
       </View>
     );

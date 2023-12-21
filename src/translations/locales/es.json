@@ -1240,6 +1240,11 @@
           "description2": "¿Te gustó la publicación correcta y la compartiste con una cita usando el texto exacto proporcionado, como en el ejemplo?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "¡Felicidades, has completado exitosamente tu verificación! Ahora eres elegible para la distribución de Ethereum."
+      }
     }
   }
 }

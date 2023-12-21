@@ -1240,6 +1240,11 @@
           "description2": "Ați apreciat postarea corectă și ați repostat-o cu o citare folosind textul exact furnizat, așa cum este în exemplu?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Felicitări, ați finalizat cu succes verificarea. Sunteți acum eligibil pentru distribuția Ethereum."
+      }
     }
   }
 }

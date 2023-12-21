@@ -1243,6 +1243,11 @@
           "description2": "Het jy die regte pos gelike en dit met 'n aanhalingsteken herpos met die presiese teks wat verskaf is, soos in die voorbeeld?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Geluk, u het u verifikasie suksesvol voltooi. U is nou geregtig vir die Ethereum-verspreiding."
+      }
     }
   }
 }

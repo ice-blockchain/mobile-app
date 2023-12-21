@@ -1240,6 +1240,11 @@
           "description2": "Lika du rett innlegg og delte det med sitat ved å bruke nøyaktig tekst som ble gitt, som i eksemplet?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulerer, du har fullført verifiseringen din med suksess. Du er nå kvalifisert for Ethereum-distribusjonen."
+      }
     }
   }
 }

@@ -1240,6 +1240,11 @@
           "description2": "Označili jste správný příspěvek a sdíleli jste ho s citátem, používajíce přesný text uvedený v příkladu?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulujeme, úspěšně jste dokončili svou verifikaci. Nyní jste oprávněni k distribuci Ethereum."
+      }
     }
   }
 }

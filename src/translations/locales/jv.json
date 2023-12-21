@@ -1145,6 +1145,11 @@
           "description2": "Apakah sampeyan seneng postingan sing bener lan nerusakaké karo qouw menggunakan teks sing tepat sing dadi conto?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Selamat, sampeyan wis sukses rampungake verifikasi sampeyan. Aku saiki kapisan kang nggoleki kanggo distribusi Ethereum."
+      }
     }
   }
 }

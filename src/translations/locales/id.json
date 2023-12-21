@@ -1240,6 +1240,11 @@
           "description2": "Apakah Anda menyukai postingan yang benar dan mempostingnya kembali dengan mengutip menggunakan teks yang tepat seperti contoh yang diberikan?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Selamat, Anda telah berhasil menyelesaikan verifikasi Anda. Anda sekarang memenuhi syarat untuk distribusi Ethereum."
+      }
     }
   }
 }

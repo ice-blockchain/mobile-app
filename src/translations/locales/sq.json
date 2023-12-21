@@ -1240,6 +1240,11 @@
           "description2": "A ju pëlqeu postimi i saktë dhe e postuat atë përsëri me një citat duke përdorur tekstin e saktë të dhënë, ashtu si në shembull?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Urime, keni përfunduar me sukses verifikimin tuaj. Tani jeni e përbashkët për shpërndarjen e Ethereum."
+      }
     }
   }
 }

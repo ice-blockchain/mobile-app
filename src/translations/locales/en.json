@@ -1237,6 +1237,11 @@
           "description2": "Did you liked the correct post and reposted it with quote using the exact text provided, as in the example?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Congratulations, you have successfully completed your verification. You are now eligible for the Ethereum distribution."
+      }
     }
   }
 }

@@ -1240,6 +1240,11 @@
           "description2": "Gillade du rätt inlägg och delade det med ett citat med exakt text som angivits, som i exemplet?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Grattis, du har framgångsrikt slutfört din verifiering. Du är nu berättigad till Ethereum-distributionen."
+      }
     }
   }
 }

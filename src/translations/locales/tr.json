@@ -1240,6 +1240,11 @@
           "description2": "Doğru gönderiyi beğendiniz ve örnekte olduğu gibi tam metni kullanarak alıntı yaparak yeniden paylaştınız mı?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Tebrikler, başarıyla doğrulamanızı tamamladınız. Şimdi Ethereum dağıtımı için uygunsiniz."
+      }
     }
   }
 }

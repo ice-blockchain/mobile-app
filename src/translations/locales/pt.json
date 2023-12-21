@@ -1240,6 +1240,11 @@
           "description2": "Você curtiu a postagem correta e a repostou com uma citação usando o texto exato fornecido, como no exemplo?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Parabéns, você concluiu com sucesso a sua verificação. Você agora está elegível para a distribuição de Ethereum."
+      }
     }
   }
 }

@@ -1240,6 +1240,11 @@
           "description2": "Adakah anda menyukai pos yang betul dan menyebarkannya semula dengan petikan menggunakan teks yang tepat seperti dalam contoh?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Tahniah, anda telah berjaya menyelesaikan pengesahan anda. Anda kini layak untuk distribusi Ethereum."
+      }
     }
   }
 }

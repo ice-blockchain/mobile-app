@@ -1240,6 +1240,11 @@
           "description2": "Hast du den richtigen Beitrag gemocht und ihn mit einem Zitat und dem exakten Text, wie im Beispiel gezeigt, erneut geteilt?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Herzlichen Glückwunsch, Sie haben Ihre Verifizierung erfolgreich abgeschlossen. Sie sind jetzt für die Ethereum-Verteilung berechtigt."
+      }
     }
   }
 }

@@ -1240,6 +1240,11 @@
           "description2": "Ti è piaciuto il post corretto e lo hai ripostato con una citazione utilizzando il testo esatto fornito, come nell'esempio?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Congratulazioni, hai completato con successo la tua verifica. Ora sei idoneo per la distribuzione di Ethereum."
+      }
     }
   }
 }

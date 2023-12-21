@@ -1240,6 +1240,11 @@
           "description2": "Tetszett a megfelelő bejegyzés és újraközölted az idézet használatával a pontos szöveggel, mint a példában?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulálok, sikeresen befejezted a hitelesítést. Most jogosult vagy az Ethereum terjesztésre."
+      }
     }
   }
 }

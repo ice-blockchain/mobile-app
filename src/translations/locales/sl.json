@@ -1240,6 +1240,11 @@
           "description2": "Ste všečkali pravilno objavo in jo ponovno objavili s citatom, pri čemer ste uporabili točen besedilo, kot je prikazano v primeru?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Čestitamo, uspešno ste zaključili svojo preverjanje. Sedaj ste upravičeni do distribucije Ethereum."
+      }
     }
   }
 }

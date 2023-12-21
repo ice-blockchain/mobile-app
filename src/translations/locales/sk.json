@@ -1240,6 +1240,11 @@
           "description2": "Označili ste správnu publikáciu a zdieľali ste ju s citáciou pomocou presného textu uvedeného v príklade?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulujeme, úspešne ste dokončili vašu overovaciu. Teraz máte nárok na distribúciu Ethereum."
+      }
     }
   }
 }

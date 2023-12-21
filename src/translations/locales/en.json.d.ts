@@ -745,4 +745,5 @@ export type Translations = {
   'distribution_kyc.instructions_step.x.1': null;
   'distribution_kyc.instructions_step.x.pop_up.description': null;
   'distribution_kyc.instructions_step.x.pop_up.description2': null;
+  'distribution_kyc.results_step.success.description': null;
 };

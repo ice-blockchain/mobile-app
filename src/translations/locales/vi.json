@@ -1240,6 +1240,11 @@
           "description2": "Bạn có thích bài viết đúng và chia sẻ lại nó với dấu trích dẫn sử dụng văn bản chính xác được cung cấp, như trong ví dụ không?"
         }
       }
+    },
+    "results_step": {
+      "success": {
+        "description": "Chúc mừng bạn đã hoàn thành xác minh của mình thành công. Bây giờ bạn đã đủ điều kiện để tham gia phân phối Ethereum."
+      }
     }
   }
 }

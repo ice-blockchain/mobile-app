@@ -107,7 +107,7 @@ export function SocialKycFlow() {
         />
       ) : null}
       {socialKycFlowPhase === 'RESULT' ? (
-        <ResultStep onSkip={onSkip} onTryAgain={onTryAgain} />
+        <ResultStep onSkip={onSkip} onTryAgain={onTryAgain} kycStep={kycStep} />
       ) : null}
     </View>
   );
