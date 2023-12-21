@@ -41,7 +41,7 @@ export const SegmentedGraphs = memo(() => {
       />
       <PagerView
         initialPage={0}
-        style={styles.segmentPager}
+        style={commonStyles.flexOne}
         ref={pagerRef}
         onPageSelected={onPageChange}>
         <ActiveUsersGraph />
@@ -55,16 +55,5 @@ const styles = StyleSheet.create({
   segmentSwitcher: {
     marginTop: rem(20),
     marginHorizontal: rem(20),
-  },
-  sectionHeaderChevron: {
-    transform: [{rotate: '180deg'}],
-    marginLeft: rem(6),
-    marginBottom: rem(8),
-  },
-  segmentPager: {
-    flex: 1,
-  },
-  segmentSlide: {
-    paddingHorizontal: rem(20),
   },
 });

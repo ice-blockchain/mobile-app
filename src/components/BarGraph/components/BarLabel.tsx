@@ -19,15 +19,12 @@ export const BarLabel = ({value, color, type = 'active_users'}: Props) => {
   return (
     <View style={styles.container}>
       {type === 'total_coins' && (
-        <>
-          <CoinsStackSmallIcon
-            width={rem(14)}
-            height={rem(14)}
-            color={color}
-            style={styles.icon}
-          />
-          <Text style={[styles.dot, {color}]}> </Text>
-        </>
+        <CoinsStackSmallIcon
+          width={rem(14)}
+          height={rem(14)}
+          color={color}
+          style={styles.icon}
+        />
       )}
       {type === 'active_users' && (
         <>

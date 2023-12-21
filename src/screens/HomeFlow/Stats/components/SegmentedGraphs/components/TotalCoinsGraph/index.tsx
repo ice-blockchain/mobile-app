@@ -22,43 +22,36 @@ export const TotalCoinsGraph = memo(() => {
   const {totalData, blockchainData, standardData, preStakingData} =
     useGetTotalCoinsBarGraphDataForStatsPeriod(period);
 
-  const dataForFilter = useMemo(() => {
-    let data: BarGraphData[] = [];
+  const dataForFilter: BarGraphData[] = useMemo(() => {
     switch (filter) {
       case 'total':
-        data = totalData;
-        break;
+        return totalData;
       case 'on-app':
-        data = standardData;
-        break;
+        return standardData;
       case 'on-blockchain':
-        data = blockchainData;
-        break;
+        return blockchainData;
       case 'pre-staked':
-        data = preStakingData;
-        break;
+        return preStakingData;
     }
-    return data;
   }, [blockchainData, filter, preStakingData, standardData, totalData]);
-
-  const ListHeader = useMemo(() => {
-    return (
-      <View style={styles.listHeader}>
-        <SectionHeader
-          title={t('stats.total_coins')}
-          action={
-            <StatsPeriodSelector selectedPeriod={period} onChange={setPeriod} />
-          }
-        />
-        <TotalCoinsFilters selectedFilter={filter} onSelect={setFilter} />
-      </View>
-    );
-  }, [period, filter]);
 
   return (
     <AnimatedGraph
       data={dataForFilter}
-      ListHeader={ListHeader}
+      ListHeader={
+        <View style={styles.listHeader}>
+          <SectionHeader
+            title={t('stats.total_coins')}
+            action={
+              <StatsPeriodSelector
+                selectedPeriod={period}
+                onChange={setPeriod}
+              />
+            }
+          />
+          <TotalCoinsFilters selectedFilter={filter} onSelect={setFilter} />
+        </View>
+      }
       type="total_coins"
     />
   );

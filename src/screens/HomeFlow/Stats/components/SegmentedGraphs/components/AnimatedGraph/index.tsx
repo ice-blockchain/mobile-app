@@ -60,11 +60,7 @@ export const AnimatedGraph = memo(({data, ListHeader, type}: Props) => {
       initialNumToRender={14}
       showsVerticalScrollIndicator={false}
       removeClippedSubviews={false}
-      getItemLayout={(_, index) => ({
-        length: ROW_HEIGHT,
-        offset: ROW_HEIGHT * index,
-        index,
-      })}
+      getItemLayout={getItemLayout}
       renderItem={({item, index}) => (
         <BarItem
           item={item}
@@ -85,6 +81,12 @@ export const AnimatedGraph = memo(({data, ListHeader, type}: Props) => {
       ListHeaderComponent={ListHeader}
     />
   );
+});
+
+const getItemLayout = (_: unknown, index: number) => ({
+  length: ROW_HEIGHT,
+  offset: ROW_HEIGHT * index,
+  index,
 });
 
 const styles = StyleSheet.create({
