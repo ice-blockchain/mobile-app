@@ -1181,8 +1181,8 @@
     "enter_address_confirmation": "آیا از صحت آدرس Ethereum اطمینان دارید؟",
     "validators_warning_title": "تأیید آدرس",
     "validators_warning_text": "لطفاً توجه داشته باشید که افرادی که آدرس Ethereum را به حساب خود اضافه کرده‌اند، از طریق کتاب سفید ما برای راه‌اندازی شبکه اصلی معتبر نیستند.",
-    "okxWalletDescription": "ما پیشنهاد می‌دهیم از آدرس Ethereum از صرافی [[:bold]]OKX Exchange[[/:bold]] برای جلوگیری از هرگونه هزینه گاز استفاده کنید.\n\nاگر OKX در کشور شما موجود نیست، می‌توانید از یک کیف پول خودمدیریتی مانند MetaMask یا Trust Wallet استفاده کنید.",
-    "okxWalletAction": "ایجاد حساب در OKX"
+    "okxWalletDescription": "سکه‌های خود را با کیف پول OKX، شریک اصلی خودمدیری اعتمادی ما محافظت کنید.",
+    "okxWalletAction": "OKX WALLET را بارگیری کنید"
   },
   "social_kyc": {
     "header": "تایید هویت",

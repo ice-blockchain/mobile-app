@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   icon: {
-    marginTop: rem(24),
+    marginTop: rem(45),
     alignSelf: 'center',
   },
   titleText: {

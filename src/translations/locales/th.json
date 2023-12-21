@@ -1175,8 +1175,8 @@
     "enter_address_confirmation": "คุณแน่ใจหรือไม่ว่าที่อยู่ Ethereum ถูกต้องหรือไม่?",
     "validators_warning_title": "ยืนยันที่อยู่",
     "validators_warning_text": "โปรดทราบว่าบุคคลที่เพิ่มที่อยู่ Ethereum ลงในบัญชีของพวกเขาไม่มีสิทธิ์เป็นหนึ่งใน 300 ผู้ตรวจสอบที่ดีที่สุดตามหนังสือขาวของเราสำหรับการเปิดตัว mainnet",
-    "okxWalletDescription": "เราแนะนำให้ใช้ที่อยู่ Ethereum ของคุณใน [[:bold]]OKX Exchange[[/:bold]] เพื่อหลีกเลี่ยงค่าธรรมเนียมแก๊สใด ๆ\n\nหาก OKX ไม่พร้อมใช้งานในประเทศของคุณ คุณสามารถใช้กระเป๋าสตางค์ที่คุณดูแลเอง เช่น MetaMask หรือ Trust Wallet",
-    "okxWalletAction": "สร้างบัญชีบน OKX"
+    "okxWalletDescription": "รักษาเหรียญของคุณด้วย OKX Wallet พาร์ทเนอร์กระเป๋าเงินที่มีความเชื่อถือจากตัวเราเอง",
+    "okxWalletAction": "ดาวน์โหลด OKX WALLET"
   },
   "social_kyc": {
     "header": "การยืนยันตัวตน",

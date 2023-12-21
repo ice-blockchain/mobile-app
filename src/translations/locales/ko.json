@@ -1174,8 +1174,8 @@
     "enter_address_confirmation": "Ethereum 주소가 정확한가요?",
     "validators_warning_title": "주소 확인",
     "validators_warning_text": "계정에 Ethereum 주소를 추가한 개인은 주요넷 발표를 위한 우리의 화이트페이퍼에 따라 상위 300명의 검증자 중 하나가 될 자격이 없음을 참고하십시오.",
-    "okxWalletDescription": "[[:bold]]OKX Exchange[[/:bold]] 에서 제공하는 Ethereum 주소를 사용하여 가스 수수료를 피하도록 권장합니다.\n\n당신의 국가에서 OKX를 사용할 수 없는 경우 MetaMask 또는 Trust Wallet과 같은 자체 보관 지갑을 사용할 수 있습니다.",
-    "okxWalletAction": "OKX 계정 만들기"
+    "okxWalletDescription": "OKX Wallet을 사용하여 동전을 안전하게 보호하고 우리의 신뢰할 수 있는 자체 관리 공식 월렛 파트너입니다.",
+    "okxWalletAction": "OKX WALLET 다운로드"
   },
   "social_kyc": {
     "header": "인증",

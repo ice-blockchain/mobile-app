@@ -1174,8 +1174,8 @@
     "enter_address_confirmation": "Er du sikker på at Ethereum-adressen er riktig?",
     "validators_warning_title": "Bekreft Adresse",
     "validators_warning_text": "Vennligst merk at personer som har lagt til en Ethereum-adresse på kontoen sin, ikke har rett til å bli en av de øverste 300 validatorer i henhold til vårt whitepaper for hovednettets lansering.",
-    "okxWalletDescription": "Vi anbefaler å bruke din [[:bold]]OKX Exchange[[/:bold]] Ethereum-adresse for å unngå eventuelle gassavgifter.\n\nHvis OKX ikke er tilgjengelig i landet ditt, kan du bruke en selvstyrte lommebok som MetaMask eller Trust Wallet.",
-    "okxWalletAction": "OPPRETT KONTO PÅ OKX"
+    "okxWalletDescription": "Sikre myntene dine med OKX Wallet, vår pålitelige offisielle selvstyrende lommebokspartner.",
+    "okxWalletAction": "LAST NED OKX WALLET"
   },
   "social_kyc": {
     "header": "Verifisering",

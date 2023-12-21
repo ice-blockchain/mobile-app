@@ -1174,8 +1174,8 @@
     "enter_address_confirmation": "क्या आप यकीन हैं कि Ethereum पता सही है?",
     "validators_warning_title": "पता सत्यापित करें",
     "validators_warning_text": "कृपया ध्यान दें कि वे व्यक्तियाँ जिन्होंने अपने खाते में एक Ethereum पता जोड़ लिया है, हमारे मुख्यनेट लॉन्च के लिए हमारे सफेद पेपर के अनुसार शीर्ष 300 वैधाता में से एक बनने के योग्य नहीं हैं।",
-    "okxWalletDescription": "हम सुझाव देते हैं कि आप गैस शुल्क से बचने के लिए अपना [[:bold]]OKX Exchange[[/:bold]] Ethereum पता उपयोग करें।\n\nअगर आपके देश में OKX उपलब्ध नहीं है, तो आप MetaMask या Trust Wallet जैसे खुद की देखभाल वाली वॉलेट का उपयोग कर सकते हैं।",
-    "okxWalletAction": "OKX पर खाता बनाएं"
+    "okxWalletDescription": "अपने सिक्कों को OKX वॉलेट के साथ सुरक्षित करें, हमारे विश्वसनीय स्व-संरक्षक आधिकारिक वॉलेट पार्टनर के साथ।",
+    "okxWalletAction": "OKX वॉलेट डाउनलोड करें"
   },
   "social_kyc": {
     "header": "सत्यापन",

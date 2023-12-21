@@ -1079,8 +1079,8 @@
     "enter_address_confirmation": "Apa sampeyan yakin yen alamat Ethereum bener?",
     "validators_warning_title": "Konfirmasi Alamat",
     "validators_warning_text": "Monggo dhuwurake sing individu sing wis nambahi alamat Ethereum menyang akuné ora memenuhi syarat supaya bisa dadi salah siji saka 300 validator paling apik menurut pamrih putih kita kanggo peluncuran mainnet.",
-    "okxWalletDescription": "Kami sarankan nganggo alamat Ethereum [[:bold]]OKX Exchange[[/:bold]] sampeyan kanggo nghindari beban gas apa wae.\n\nYen OKX ora kasedhiya ing nagara sampeyan, sampeyan bisa nganggo dompet self-custodial kaya MetaMask utawa Trust Wallet.",
-    "okxWalletAction": "GAWÉ AKUN SAJABATÉ OKX"
+    "okxWalletDescription": "Amanaken koin sampeyan nganggo OKX Wallet, mitra dompet resmi sendiri sing bisa dipercaya kita.",
+    "okxWalletAction": "DOWNLOAD OKX WALLET"
   },
   "social_kyc": {
     "header": "Verifikasi",
