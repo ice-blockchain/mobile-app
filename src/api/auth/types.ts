@@ -27,7 +27,7 @@ type EthDistributionKyc = {
   };
 };
 
-export type AuthConfig = AuthCodeConfig &
+export type FeatureToggleConfig = AuthCodeConfig &
   FaceAuthConfig &
   TeamConfig &
   AchievementsConfig &

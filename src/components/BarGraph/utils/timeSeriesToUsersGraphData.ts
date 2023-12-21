@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {TimeSeries} from '@api/statistics/types';
+import {UserGrowthTimeSeries} from '@api/statistics/types';
 import {BarGraphData} from '@components/BarGraph/types';
 import {dayjs} from '@services/dayjs';
 import {UsersBarGraphData} from '@store/modules/Stats/types';
 
-export function timeSeriesToUsersData({
+export function timeSeriesToUsersGraphData({
   timeSeries,
 }: {
-  timeSeries: TimeSeries[];
+  timeSeries: UserGrowthTimeSeries[];
 }): UsersBarGraphData {
   if (!timeSeries?.length) {
     return {

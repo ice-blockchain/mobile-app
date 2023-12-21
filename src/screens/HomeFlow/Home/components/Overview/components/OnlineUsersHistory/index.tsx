@@ -2,7 +2,7 @@
 
 import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {VerticalBar} from '@components/BarGraph/components/VerticalBar';
-import {useGetBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetBarGraphDataForStatsPeriod';
+import {useGetUserGrowthBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetUserGrowthBarGraphDataForStatsPeriod';
 import {COLORS} from '@constants/colors';
 import {Images} from '@images';
 import {
@@ -33,7 +33,7 @@ type Props = {
 };
 
 export const OnlineUsersHistory = ({sharedIsCollapsed}: Props) => {
-  const {activeUsersData: data} = useGetBarGraphDataForStatsPeriod(
+  const {activeUsersData: data} = useGetUserGrowthBarGraphDataForStatsPeriod(
     USER_GROWTH_STATS_PERIOD,
   );
 

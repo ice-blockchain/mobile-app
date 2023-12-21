@@ -20,6 +20,7 @@ export function* getUserGrowthStats(
         tz: getTimezoneOffset(),
       },
     );
+
     yield put(
       StatsActions.GET_USER_GROWTH_STATS.SUCCESS.create(
         statsPeriod,

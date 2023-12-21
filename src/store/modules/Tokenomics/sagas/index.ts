@@ -8,6 +8,7 @@ import {getBalanceSummarySaga} from '@store/modules/Tokenomics/sagas/getBalanceS
 import {getMiningSummarySaga} from '@store/modules/Tokenomics/sagas/getMiningSummary';
 import {getPreStakingSummarySaga} from '@store/modules/Tokenomics/sagas/getPreStakingSummary';
 import {getRankingSummarySaga} from '@store/modules/Tokenomics/sagas/getRankingSummary';
+import {getTotalCoinsStatsSaga} from '@store/modules/Tokenomics/sagas/getTotalCoinsStats';
 import {handleExtraBonusSaga} from '@store/modules/Tokenomics/sagas/handleExtraBonus';
 import {startMiningSessionSaga} from '@store/modules/Tokenomics/sagas/startMiningSession';
 import {startOrUpdatePreStakingSaga} from '@store/modules/Tokenomics/sagas/startPreStaking';
@@ -71,5 +72,9 @@ export const tokenomicsWatchers = [
   takeLatest(
     TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type,
     handleExtraBonusSaga,
+  ),
+  takeLatest(
+    TokenomicsActions.GET_TOTAL_COINS_STATS.START.type,
+    getTotalCoinsStatsSaga,
   ),
 ];

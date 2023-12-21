@@ -555,7 +555,14 @@
     "top_miners": "Pengguna teratas",
     "top_countries": "Negara teratas",
     "online_miners": "Pengguna dalam talian",
-    "detailed_information": "Maklumat terperinci"
+    "detailed_information": "Maklumat terperinci",
+    "total_coins": "Jumlah Koin",
+    "filter": {
+      "total": "Jumlah Keseluruhan",
+      "on_app": "Boleh Didapati di Aplikasi",
+      "pre_staked": "Prastake",
+      "on_blockchain": "Pada Rantai Blok"
+    }
   },
   "update_required": {
     "title": "Sila Kemas Kini",

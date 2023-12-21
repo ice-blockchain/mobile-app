@@ -555,7 +555,14 @@
     "top_miners": "Top gebruikers",
     "top_countries": "Top lande",
     "online_miners": "Aanlyn gebruikers",
-    "detailed_information": "Gedetailleerde inligting"
+    "detailed_information": "Gedetailleerde inligting",
+    "total_coins": "Totale munte",
+    "filter": {
+      "total": "Totaal",
+      "on_app": "Beskikbaar op App",
+      "pre_staked": "Vooraf gestaak",
+      "on_blockchain": "Op die blokketting"
+    }
   },
   "update_required": {
     "title": "Dateer asseblief op",

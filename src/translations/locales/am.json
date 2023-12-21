@@ -555,7 +555,14 @@
     "top_miners": "ከፍተኛ ተጠቃሚዎች",
     "top_countries": "ከፍተኛ ሀገሮች",
     "online_miners": "የመስመር ላይ ተጠቃሚዎች",
-    "detailed_information": "ዝርዝር መረጃ"
+    "detailed_information": "ዝርዝር መረጃ",
+    "total_coins": "አጠቃቀም ማእከላዊ",
+    "filter": {
+      "total": "ጠቅላላ",
+      "on_app": "በመተግበሪያ ውስጥ ያሉ",
+      "pre_staked": "ማረጋገጫ ቀረበ",
+      "on_blockchain": "በብሎኬድ ላይ"
+    }
   },
   "update_required": {
     "title": "እባክዎ ያዘምኑ",

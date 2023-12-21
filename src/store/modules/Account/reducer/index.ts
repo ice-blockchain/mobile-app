@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {AuthConfig} from '@api/auth/types';
+import {FeatureToggleConfig} from '@api/auth/types';
 import {User} from '@api/user/types';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {SignInUserInfo} from '@services/auth/signin/types';
@@ -19,8 +19,8 @@ export interface AccountState {
   userInfo: SignInUserInfo | null;
   installReferrer: string | null;
   isPrivacyInfoShown: boolean;
-  authConfig: AuthConfig | null;
   ethereumAddrWarningConfirmed: boolean;
+  authConfig: FeatureToggleConfig | null;
 }
 
 type Actions = ReturnType<

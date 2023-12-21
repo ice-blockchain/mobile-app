@@ -8,6 +8,9 @@ import {collectionSelector} from '@store/modules/Collections/selectors';
 import {t} from '@translations/i18n';
 import React, {memo} from 'react';
 
+/**
+ * Not used
+ */
 export const TopCountries = memo(() => {
   return (
     <CollectionList

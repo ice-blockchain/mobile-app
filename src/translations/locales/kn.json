@@ -555,7 +555,14 @@
     "top_miners": "ಟಾಪ್ ಬಳಕೆದಾರರು",
     "top_countries": "ಟಾಪ್ ದೇಶಗಳು",
     "online_miners": "ಆನ್ ಲೈನ್ ಬಳಕೆದಾರರು",
-    "detailed_information": "ವಿವರವಾದ ಮಾಹಿತಿ"
+    "detailed_information": "ವಿವರವಾದ ಮಾಹಿತಿ",
+    "total_coins": "ಒಟ್ಟು ನಾಣ್ಯಗಳು",
+    "filter": {
+      "total": "ಒಟ್ಟು",
+      "on_app": "App ಲಲ್ಲಿ ಲಭ್ಯವಿದೆ",
+      "pre_staked": "ಮೊದಲು ಸ್ಟೇಕ್ ಮಾಡಿದೆ",
+      "on_blockchain": "ಬ್ಲಾಕ್‌ಚೇನ್‌ನಲ್ಲಿ"
+    }
   },
   "update_required": {
     "title": "ದಯವಿಟ್ಟು ನವೀಕರಿಸಿ",

@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Adoption, TimeSeries} from '@api/statistics/types';
+import {Adoption, UserGrowthTimeSeries} from '@api/statistics/types';
 import {StatsActions} from '@store/modules/Stats/actions';
 import produce from 'immer';
 
 export interface StatsState {
   userGrowth: {
-    timeSeriesStatsMap: {[key: number]: TimeSeries[]};
+    timeSeriesStatsMap: {[key: number]: UserGrowthTimeSeries[]};
     active: number;
     total: number;
   };

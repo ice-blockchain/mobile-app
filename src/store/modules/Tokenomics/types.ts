@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {BarGraphData} from '@components/BarGraph/types';
+
 export type MiningState =
   | 'inactive'
   | 'active'
@@ -8,3 +10,10 @@ export type MiningState =
   | 'holidayActive'
   | 'holidayRestart'
   | 'holidayExpire';
+
+export type TotalCoinsBarGraphData = {
+  blockchainData: BarGraphData[];
+  preStakingData: BarGraphData[];
+  standardData: BarGraphData[];
+  totalData: BarGraphData[];
+};

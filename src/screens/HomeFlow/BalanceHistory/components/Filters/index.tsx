@@ -1,15 +1,15 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {
+  FilterButton,
+  FilterButtonDivider,
+} from '@components/Buttons/FilterButton';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {
-  FilterButton,
-  FilterButtonDivider,
-} from '@screens/HomeFlow/BalanceHistory/components/Filters/components/FilterButton';
 import {ResetFilterButton} from '@screens/HomeFlow/BalanceHistory/components/Filters/components/ResetFilterButton';
 import {buildDateRangeText} from '@screens/HomeFlow/BalanceHistory/components/Filters/utils/buildDateRangeText';
 import {dayjs} from '@services/dayjs';

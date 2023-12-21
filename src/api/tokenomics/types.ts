@@ -82,3 +82,19 @@ export type EthDistributionKycStep = 5;
 export type SocialKycStepNumber =
   | VerifySocialAccountKycStep
   | EthDistributionKycStep;
+
+export type TotalCoins = {
+  blockchain: number;
+  preStaking: number;
+  standard: number;
+  total: number;
+  timeSeries: TotalCoinsTimeSeries[];
+};
+
+export type TotalCoinsTimeSeries = {
+  date: string; // "2022-11-30T16:35:02.996090946Z",
+  blockchain: number;
+  preStaking: number;
+  standard: number;
+  total: number;
+};

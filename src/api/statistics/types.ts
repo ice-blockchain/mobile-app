@@ -15,10 +15,10 @@ export type Miner = {
 export type UserGrowth = {
   active: number; //  0,
   total: number; // 20
-  timeSeries: TimeSeries[];
+  timeSeries: UserGrowthTimeSeries[];
 };
 
-export type TimeSeries = {
+export type UserGrowthTimeSeries = {
   date: string; // "2022-11-30T16:35:02.996090946Z",
   active: number; // 0,
   total: number; // 20
@@ -36,3 +36,9 @@ export type Adoption = {
   milestones: AdoptionMilestone[];
   totalActiveUsers: number;
 };
+
+export type TotalCoinsFilter =
+  | 'total'
+  | 'on-app'
+  | 'pre-staked'
+  | 'on-blockchain';

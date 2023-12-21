@@ -22,12 +22,16 @@ const SKELETONS = Array(COUNTRIES_COUNT)
   .fill(null)
   .map((_, index) => <ListItemSkeleton key={index} />);
 
+/**
+ * Not used
+ */
 export const TopCountries = memo(() => {
   const navigation =
     useNavigation<NativeStackNavigationProp<HomeTabStackParamList>>();
 
   const onSeeAllPress = useCallback(() => {
-    navigation.navigate('TopCountries');
+    // navigation.navigate('TopCountries');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [navigation]);
 
   const {data, fetch, hasNext} = useFetchCollection({

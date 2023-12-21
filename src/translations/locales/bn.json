@@ -555,7 +555,14 @@
     "top_miners": "শীর্ষ ব্যবহারকারী",
     "top_countries": "শীর্ষ দেশ",
     "online_miners": "অনলাইন ব্যবহারকারী",
-    "detailed_information": "বিস্তারিত তথ্য"
+    "detailed_information": "বিস্তারিত তথ্য",
+    "total_coins": "মোট কয়েন",
+    "filter": {
+      "total": "মোট",
+      "on_app": "অ্যাপে উপলব্ধ",
+      "pre_staked": "প্রি-স্টেকড",
+      "on_blockchain": "ব্লকচেইনে"
+    }
   },
   "update_required": {
     "title": "অনুগ্রহ করে আপডেট করুন",

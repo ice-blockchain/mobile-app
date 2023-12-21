@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {timeSeriesToUsersData} from '@components/BarGraph/utils/timeSeriesToGraphData';
+import {timeSeriesToUsersGraphData} from '@components/BarGraph/utils/timeSeriesToUsersGraphData';
 import {isSplashHiddenSelector} from '@store/modules/AppCommon/selectors';
 import {StatsActions} from '@store/modules/Stats/actions';
 import {getUserGrowthStatsSelector} from '@store/modules/Stats/selectors';
@@ -8,14 +8,14 @@ import {StatsPeriod, UsersBarGraphData} from '@store/modules/Stats/types';
 import {useEffect, useMemo} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
-export function useGetBarGraphDataForStatsPeriod(
+export function useGetUserGrowthBarGraphDataForStatsPeriod(
   statsPeriod: StatsPeriod,
 ): UsersBarGraphData {
   const timeSeries = useSelector(getUserGrowthStatsSelector(statsPeriod));
   const isSplashHidden = useSelector(isSplashHiddenSelector);
 
   const usersBarGraphData: UsersBarGraphData = useMemo(() => {
-    return timeSeriesToUsersData({
+    return timeSeriesToUsersGraphData({
       timeSeries,
     });
   }, [timeSeries]);

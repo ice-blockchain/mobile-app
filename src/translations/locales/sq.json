@@ -555,7 +555,14 @@
     "top_miners": "Përdoruesit kryesorë",
     "top_countries": "Vendet kryesore",
     "online_miners": "Përdoruesit në internet",
-    "detailed_information": "Informacion i detajuar"
+    "detailed_information": "Informacion i detajuar",
+    "total_coins": "Totali i monedhëve",
+    "filter": {
+      "total": "Totali",
+      "on_app": "I disponueshëm në aplikacion",
+      "pre_staked": "Përpara staked",
+      "on_blockchain": "Në blockchain"
+    }
   },
   "update_required": {
     "title": "Të lutemi përditëso",

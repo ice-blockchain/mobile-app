@@ -555,7 +555,14 @@
     "top_miners": "टॉप वापरकर्ते",
     "top_countries": "टॉप देश",
     "online_miners": "ऑनलाईन वापरकर्ते",
-    "detailed_information": "सविस्तर माहिती"
+    "detailed_information": "सविस्तर माहिती",
+    "total_coins": "एकूण सिक्के",
+    "filter": {
+      "total": "एकूण",
+      "on_app": "अॅपमध्ये उपलब्ध",
+      "pre_staked": "मुख्यस्थित",
+      "on_blockchain": "ब्लॉकचेन वर"
+    }
   },
   "update_required": {
     "title": "कृपया अपडेट करा",

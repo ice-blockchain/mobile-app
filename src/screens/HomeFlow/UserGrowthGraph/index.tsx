@@ -7,8 +7,9 @@ import {
   ROW_HEIGHT,
   Y_AXIS_WIDTH,
 } from '@components/BarGraph';
-import {useGetBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetBarGraphDataForStatsPeriod';
+import {useGetUserGrowthBarGraphDataForStatsPeriod} from '@components/BarGraph/hooks/useGetUserGrowthBarGraphDataForStatsPeriod';
 import {LinesBackground} from '@components/LinesBackground';
+import {DropDownMenu} from '@components/Menu/DropDownMenu';
 import {PullToRefreshContainer} from '@components/PullToRefreshContainer';
 import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
@@ -19,7 +20,6 @@ import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {useScreenTransitionEnd} from '@navigation/hooks/useScreenTransitionEnd';
 import {HomeTabStackParamList} from '@navigation/Main';
 import {RouteProp, useRoute} from '@react-navigation/native';
-import {PeriodSelect} from '@screens/HomeFlow/Stats/components/UsersGrowthGraph/components/PeriodSelect';
 import {STATS_PERIODS} from '@store/modules/Stats/constants';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {t} from '@translations/i18n';
@@ -34,6 +34,9 @@ const PERIODS: {label: string; period: StatsPeriod}[] = STATS_PERIODS.map(
   (period: StatsPeriod) => ({label: t(`periods.${period}_days`), period}),
 );
 
+/**
+ * Not used
+ */
 export const UserGrowthGraph = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const tabbarOffset = useBottomTabBarOffsetStyle();
@@ -57,7 +60,7 @@ export const UserGrowthGraph = memo(() => {
   }, [paramsStatsPeriod]);
 
   const {activeUsersData, totalUsersData} =
-    useGetBarGraphDataForStatsPeriod(statsPeriod);
+    useGetUserGrowthBarGraphDataForStatsPeriod(statsPeriod);
 
   const handleRef = useRef<{cancel: () => void} | undefined>();
   const onPeriodChange = (index: number) => {
@@ -146,7 +149,7 @@ export const UserGrowthGraph = memo(() => {
               <SectionHeader
                 title={isTotal ? t('stats.total') : t('stats.active')}
                 action={
-                  <PeriodSelect
+                  <DropDownMenu
                     selectedIndex={periodIndex}
                     options={PERIODS}
                     onChange={onPeriodChange}

@@ -555,7 +555,14 @@
     "top_miners": "کاربران برتر",
     "top_countries": "کشورهای برتر",
     "online_miners": "کاربران آنلاین",
-    "detailed_information": "اطلاعات دقیق"
+    "detailed_information": "اطلاعات دقیق",
+    "total_coins": "کل سکه‌ها",
+    "filter": {
+      "total": "کل",
+      "on_app": "در دسترس در برنامه",
+      "pre_staked": "پیش‌استیک شده",
+      "on_blockchain": "در بلاکچین"
+    }
   },
   "update_required": {
     "title": "لطفاً به‌روزرسانی کنید",

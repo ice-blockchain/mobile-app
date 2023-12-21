@@ -555,7 +555,14 @@
     "top_miners": "ਚੋਟੀ ਦੇ ਉਪਭੋਗਤਾ",
     "top_countries": "ਚੋਟੀ ਦੇ ਦੇਸ਼",
     "online_miners": "ਔਨਲਾਈਨ ਉਪਭੋਗਤਾ",
-    "detailed_information": "ਵਿਸਤ੍ਰਿਤ ਜਾਣਕਾਰੀ"
+    "detailed_information": "ਵਿਸਤ੍ਰਿਤ ਜਾਣਕਾਰੀ",
+    "total_coins": "ਕੁੱਲ ਸਿੱਕੇ",
+    "filter": {
+      "total": "ਕੁੱਲ",
+      "on_app": "ਐਪ ਉੱਤੇ ਉਪਲਬਧ",
+      "pre_staked": "ਪੂਰਵ-ਸਟੇਕ",
+      "on_blockchain": "ਬਲਾਕਚੇਨ ਉੱਤੇ"
+    }
   },
   "update_required": {
     "title": "ਕਿਰਪਾ ਕਰਕੇ ਅੱਪਡੇਟ ਕਰੋ",

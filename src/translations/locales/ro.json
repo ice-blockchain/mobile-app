@@ -555,7 +555,14 @@
     "top_miners": "Top utilizatori",
     "top_countries": "Top țări",
     "online_miners": "Utilizatori online",
-    "detailed_information": "Informații detaliate"
+    "detailed_information": "Informații detaliate",
+    "total_coins": "Total monede",
+    "filter": {
+      "total": "Total",
+      "on_app": "Disponibil în aplicație",
+      "pre_staked": "Pre-staked",
+      "on_blockchain": "Blockchain"
+    }
   },
   "update_required": {
     "title": "Te rugăm să actualizezi",

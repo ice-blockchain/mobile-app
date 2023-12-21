@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {AuthConfig} from '@api/auth/types';
+import {FeatureToggleConfig} from '@api/auth/types';
 import {User} from '@api/user/types';
 import {
   SignInUserInfo,
@@ -141,7 +141,7 @@ const SET_PRIVACY_INFO_SHOW = createAction('SET_PRIVACY_INFO_SHOW', {
 });
 
 const GET_AUTH_CONFIG = createAction('GET_AUTH_CONFIG', {
-  SUCCESS: (config: AuthConfig | null) => ({config}),
+  SUCCESS: (config: FeatureToggleConfig | null) => ({config}),
   FAILED: (errorMessage: string) => ({errorMessage}),
 });
 

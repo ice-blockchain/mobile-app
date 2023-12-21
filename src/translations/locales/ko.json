@@ -555,7 +555,14 @@
     "top_miners": "최고 사용자",
     "top_countries": "최고 국가",
     "online_miners": "온라인 사용자",
-    "detailed_information": "상세 정보"
+    "detailed_information": "상세 정보",
+    "total_coins": "총 코인",
+    "filter": {
+      "total": "총합",
+      "on_app": "앱에서 사용 가능",
+      "pre_staked": "사전 스테이크",
+      "on_blockchain": "블록체인 상에"
+    }
   },
   "update_required": {
     "title": "업데이트하세요",
