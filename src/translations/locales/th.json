@@ -603,7 +603,7 @@
     "wallet": "กระเป๋าเงิน",
     "blockchain": "บล็อกเชน",
     "wallet_update_interval": "อัปเดตทุกชั่วโมง",
-    "blockchain_update_interval": "อัปเดตทุก 24 ชั่วโมง",
+    "blockchain_update_interval": "อัปเดตทุก 28 วัน",
     "list_end_label": "นี่คือรายการสุดท้ายของประวัติยอดคงเหลือ",
     "no_data": "ไม่มีข้อมูลให้แสดงสำหรับช่วงเวลาที่ระบุ"
   },

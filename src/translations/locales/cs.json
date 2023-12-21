@@ -602,7 +602,7 @@
     "wallet": "Peněženka",
     "blockchain": "Blockchain",
     "wallet_update_interval": "aktualizováno každou hodinu",
-    "blockchain_update_interval": "aktualizováno každých 24 hodin",
+    "blockchain_update_interval": "aktualizováno každých 28 dnů",
     "list_end_label": "toto je poslední položka v historii zůstatku.",
     "no_data": "Pro zvolené období nejsou k dispozici žádné údaje."
   },

@@ -602,7 +602,7 @@
     "wallet": "वॉलेट",
     "blockchain": "ब्लॉकचेन",
     "wallet_update_interval": "दर तासाला अपडेट होते",
-    "blockchain_update_interval": "दर 24 तासांनी अपडेट होते",
+    "blockchain_update_interval": "प्रत्येक 28 दिवसाने अद्यतनित",
     "list_end_label": "शिल्लक इतिहासाची ही शेवटची नोंद आहे.",
     "no_data": "निर्धारित कालावधीसाठी प्रदर्शित करण्यासाठी कोणताही डेटा नाही."
   },

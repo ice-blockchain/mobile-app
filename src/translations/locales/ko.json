@@ -602,7 +602,7 @@
     "wallet": "지갑",
     "blockchain": "블록체인",
     "wallet_update_interval": "한 시간마다 업데이트됨",
-    "blockchain_update_interval": "24시간마다 업데이트됨",
+    "blockchain_update_interval": "28 일마다 업데이트됨",
     "list_end_label": "이는 최근 잔액 내역입니다.",
     "no_data": "지정된 기간 동안 표시할 데이터가 없습니다."
   },

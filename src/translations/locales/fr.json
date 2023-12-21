@@ -602,7 +602,7 @@
     "wallet": "Portefeuille",
     "blockchain": "Blockchain",
     "wallet_update_interval": "mise à jour toutes les heures",
-    "blockchain_update_interval": "mise à jour toutes les 24 heures",
+    "blockchain_update_interval": "mis à jour tous les 28 jours",
     "list_end_label": "il s’agit de la dernière entrée de l’historique du solde.",
     "no_data": "Il n’y a pas de données à afficher pour la période spécifiée."
   },

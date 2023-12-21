@@ -602,7 +602,7 @@
     "wallet": "DOMPET",
     "blockchain": "Blockchain",
     "wallet_update_interval": "dikemas kini setiap jam",
-    "blockchain_update_interval": "dikemas kini setiap 24 jam",
+    "blockchain_update_interval": "dikemaskini setiap 28 hari",
     "list_end_label": "ini ialah masukan terakhir sejarah baki.",
     "no_data": "Tiada data untuk dipaparkan untuk tempoh yang dinyatakan."
   },

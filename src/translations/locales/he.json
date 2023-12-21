@@ -602,7 +602,7 @@
     "wallet": "ארנק",
     "blockchain": "בלוקצ'יין",
     "wallet_update_interval": "מתעדכן כל שעה",
-    "blockchain_update_interval": "מתעדכן כל 24 שעות",
+    "blockchain_update_interval": "מתעדכן כל 28 ימים",
     "list_end_label": "זוהי הרשומה האחרונה בהיסטוריית היתרה.",
     "no_data": "אין נתונים להצגה עבור התקופה שצוינה."
   },

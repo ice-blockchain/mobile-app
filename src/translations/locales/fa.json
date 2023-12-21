@@ -602,7 +602,7 @@
     "wallet": "کیف پول",
     "blockchain": "بلاک‌چین",
     "wallet_update_interval": "هر ساعت به‌روز شود",
-    "blockchain_update_interval": "هر 24 ساعت به‌روز شود",
+    "blockchain_update_interval": "هر 28 روز به‌روزرسانی می‌شود",
     "list_end_label": "این آخرین مورد فهرست موجودی است.",
     "no_data": "برای دوره تعیین شده هیچ داده‌ای وجود ندارد."
   },

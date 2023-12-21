@@ -602,7 +602,7 @@
     "wallet": "Portofel",
     "blockchain": "Blockchain",
     "wallet_update_interval": "actualizat o dată pe oră",
-    "blockchain_update_interval": "actualizat o dată la 24 de ore",
+    "blockchain_update_interval": "actualizat la fiecare 28 de zile",
     "list_end_label": "aceasta este ultima înregistrare din istoricul soldului.",
     "no_data": "Nu există date de afișat pentru perioada specificată."
   },

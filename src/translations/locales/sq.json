@@ -602,7 +602,7 @@
     "wallet": "Kuleta",
     "blockchain": "Zinxhiri me blloqe",
     "wallet_update_interval": "përditësuar çdo orë",
-    "blockchain_update_interval": "përditësuar çdo 24 orë",
+    "blockchain_update_interval": "azhurnohet çdo 28 ditë",
     "list_end_label": "kjo është hyrja e fundit e historikut të shumës në gjendje.",
     "no_data": "Nuk ka të dhëna të disponuara "
   },
