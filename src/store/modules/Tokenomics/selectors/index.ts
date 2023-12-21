@@ -78,3 +78,7 @@ export const getTotalCoinsStatsSelector =
   (state: RootState): TotalCoinsTimeSeries[] => {
     return state.tokenomics.totalCoins.timeSeriesStatsMap[period] ?? [];
   };
+
+export const totalCoinsSelector = (state: RootState) => {
+  return state.tokenomics.totalCoins.total;
+};

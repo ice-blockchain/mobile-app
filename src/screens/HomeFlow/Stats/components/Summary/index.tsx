@@ -1,10 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {
-  totalActiveUsersSelector,
-  totalUsersSelector,
-} from '@store/modules/Stats/selectors';
+import {totalActiveUsersSelector} from '@store/modules/Stats/selectors';
+import {totalCoinsSelector} from '@store/modules/Tokenomics/selectors';
 import {CoinsStackSmallIcon} from '@svg/CoinsStackSmallIcon';
 import {LogoIcon} from '@svg/LogoIcon';
 import {t} from '@translations/i18n';
@@ -17,7 +15,7 @@ import {rem} from 'rn-units';
 
 export const Summary = memo(() => {
   const totalActiveUsers = useSelector(totalActiveUsersSelector);
-  const totalUsers = useSelector(totalUsersSelector); //TODO::pick total coins instead
+  const totalCoins = useSelector(totalCoinsSelector);
   return (
     <View style={styles.container}>
       <View style={styles.cell}>
@@ -38,7 +36,10 @@ export const Summary = memo(() => {
         <View style={styles.cellData}>
           <Text style={styles.labelText}>{t('stats.header_total_coins')}</Text>
           <Text style={styles.valueText}>
-            {formatNumber(totalUsers, {notation: 'compact'})}
+            {formatNumber(totalCoins, {
+              notation: 'compact',
+              maximumFractionDigits: 1,
+            })}
           </Text>
         </View>
       </View>
