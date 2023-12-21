@@ -1278,5 +1278,16 @@
       "title": "Verifikasi Rampung",
       "description": "Selamat, sampeyan wis rampung verifikasi KYC sampeyan. Jawaban sing bener terus menerus udikake dedikasi lan pengetahuan sampeyan. Sampeyan saiki wis diverifikasi."
     }
+  },
+  "distribution_kyc_2": {
+    "select_method_step": {
+      "title": "Pamirsaan BNB Smart Chain",
+      "description": "Ciptakake kahanan pangiriman koin ICE BNB Smart Chain bulanan dening dukungan aktif terhadap pengumuman Exchange paling anyar ing X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Selamat, sampeyan wis berhasil rampungaken verifikasi sampeyan. Saiki sampeyan duwe hak kanggo ngowahi status pamirsaan BNB Smart Chain bulanan sampeyan."
+      }
+    }
   }
 }

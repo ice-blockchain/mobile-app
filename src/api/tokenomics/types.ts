@@ -77,13 +77,11 @@ export type SelfieKycStep = 1;
 export type EmotionsKycStep = 2;
 export type VerifySocialAccountKycStep = 3;
 export type QuizKycStep = 4;
-export type EthDistributionKycStep = 5;
+export type DistributionKycStep = 5;
 
 export type FaceAuthKycNumber = SelfieKycStep | EmotionsKycStep;
 
-export type SocialKycStepNumber =
-  | VerifySocialAccountKycStep
-  | EthDistributionKycStep;
+export type SocialKycStepNumber = number;
 
 export type TotalCoins = {
   blockchain: number;

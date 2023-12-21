@@ -79,7 +79,7 @@ export function VerificationStep({
     } else if (socialKycStatus === 'SKIPPABLE_ERROR') {
       onSkip();
     }
-  }, [kycStep, onSkip, socialKycStatus, updateStepPassed]);
+  }, [onSkip, socialKycStatus, updateStepPassed]);
   const {countdown, startCountdown, stopCountdown} = useCountdown({
     startingValueInSeconds: VERIFICATION_COUNTDOWN_DURATION,
   });

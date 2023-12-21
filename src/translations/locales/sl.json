@@ -1371,5 +1371,16 @@
       "title": "Preverjanje je uspešno zaključeno",
       "description": "Čestitamo, uspešno ste zaključili KYC. Vaši dosledni pravilni odgovori so dokazali vašo predanost in znanje. Sedaj ste preverjeni."
     }
+  },
+  "distribution_kyc_2": {
+    "select_method_step": {
+      "title": "Razdeljevanje BNB Smart Chain",
+      "description": "Ohranite svojo upravičenost za mesečno razdeljevanje kovancev ICE BNB Smart Chain z aktivno podporo najnovejših objav menjalnikov na X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Čestitke, uspešno ste opravili svojo preverjanje. Zdaj ste upravičeni do vzdrževanja svojega mesečnega statusa razdeljevanja BNB Smart Chain."
+      }
+    }
   }
 }

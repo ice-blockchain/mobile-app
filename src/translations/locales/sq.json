@@ -1371,5 +1371,16 @@
       "title": "Verifikimi i Përfunduar",
       "description": "Urime, keni përfunduar me sukses KYC tuaj. Përgjigjet tuaja të vazhdueshme të sakta kanë provuar përkushtimin dhe njohuritë tuaja. Tani jeni të verifikuar."
     }
+  },
+  "distribution_kyc_2": {
+    "select_method_step": {
+      "title": "Shpërndarja e BNB Smart Chain",
+      "description": "Mbani përmbajtjen tuaj mujore për të drejtuarit e monedhave ICE të BNB Smart Chain duke mbështetur aktivisht njoftimet më të reja të Bursës në X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Urime, keni përfunduar me sukses verifikimin tuaj. Tani keni të drejtë të mbani statusin tuaj mujor të shpërndarjes së BNB Smart Chain."
+      }
+    }
   }
 }

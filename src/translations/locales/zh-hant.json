@@ -1371,5 +1371,16 @@
       "title": "驗證完成",
       "description": "恭喜，您已成功完成KYC。您持續的正確回答證明了您的奉獻和知識。您現在已經驗證。"
     }
+  },
+  "distribution_kyc_2": {
+    "select_method_step": {
+      "title": "BNB智能鏈分配",
+      "description": "通過積極支持X上最新的交易所公告，保持您每月BNB智能鏈ICE幣分配資格。"
+    },
+    "results_step": {
+      "success": {
+        "description": "恭喜您成功完成了您的驗證。現在您有資格保持每月BNB智能鏈分配狀態。"
+      }
+    }
   }
 }

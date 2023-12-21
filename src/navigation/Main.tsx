@@ -135,7 +135,7 @@ export type MainStackParamList = {
       onPress: () => void;
     }[];
   };
-  RepostExample: {isDistributionFlow?: boolean};
+  RepostExample: {kycStep: SocialKycStepNumber};
   DateSelect: {
     onSelect: (range: {start: string | null; end: string | null}) => void;
   };

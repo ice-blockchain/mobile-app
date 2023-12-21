@@ -1371,5 +1371,16 @@
       "title": "Sikeres Megerősítés",
       "description": "Gratulálunk, sikeresen teljesítetted a KYC folyamatot. Állandóan helyes válaszaid alátámasztották elkötelezettségedet és tudásodat. Most már megerősítettél."
     }
+  },
+  "distribution_kyc_2": {
+    "select_method_step": {
+      "title": "BNB Smart Chain Osztás",
+      "description": "Tartsd fenn a havi BNB Smart Chain ICE érmék osztási jogosultságodat a legfrissebb Csere-hirdetések aktív támogatásával az X-en."
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulálunk, sikeresen befejezted az azonosításodat. Most jogosult vagy fenntartani a havi BNB Smart Chain osztási státuszodat."
+      }
+    }
   }
 }

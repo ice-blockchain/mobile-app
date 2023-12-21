@@ -3,8 +3,8 @@
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {
+  DISTRIBUTION_KYC_STEP,
   EMOTIONS_KYC_STEP,
-  ETH_DISTRIBUTION_KYC_STEP,
   QUIZ_KYC_STEP,
   SELFIE_KYC_STEP,
   VERIFY_SOCIAL_ACCOUNT_KYC_STEP,
@@ -17,6 +17,7 @@ import {loadLocalAudio} from '@services/audio';
 import {dayjs} from '@services/dayjs';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
+  dynamicDistributionDataSelector,
   firstMiningDateSelector,
   unsafeUserSelector,
   userIdSelector,
@@ -121,7 +122,7 @@ export function* startMiningSessionSaga(
           return;
         } else if (
           errorData.kycSteps.includes(VERIFY_SOCIAL_ACCOUNT_KYC_STEP) ||
-          errorData.kycSteps.includes(ETH_DISTRIBUTION_KYC_STEP)
+          errorData.kycSteps.includes(DISTRIBUTION_KYC_STEP)
         ) {
           navigate({
             name: 'SocialKycFlow',
@@ -131,6 +132,19 @@ export function* startMiningSessionSaga(
         } else if (errorData.kycSteps.includes(QUIZ_KYC_STEP)) {
           yield put(QuizActions.START_OR_CONTINUE_QUIZ_FLOW.STATE.create());
           return;
+        } else {
+          const kycStep = errorData.kycSteps?.[0] ?? 0;
+          const dynamicDistributionData: ReturnType<
+            typeof dynamicDistributionDataSelector
+          > = yield select(dynamicDistributionDataSelector);
+          if (dynamicDistributionData?.some(data => data?.step === kycStep)) {
+            yield removeScreenByName('Tooltip').catch();
+            navigate({
+              name: 'SocialKycFlow',
+              params: {kycStep},
+            });
+            return;
+          }
         }
       }
     } else if (isApiError(error, 403, 'MINING_DISABLED')) {

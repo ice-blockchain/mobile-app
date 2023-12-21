@@ -90,10 +90,13 @@ export const isAchievementsEnabledSelector = (state: RootState) =>
 export const verifiedSelector = (state: RootState) =>
   !!state.account.user?.verified;
 
-export const ethDistributionXPostLinkSelector = (state: RootState) =>
+export const distributionXPostLinkSelector = (state: RootState) =>
   state.account.authConfig?.['social2-kyc']?.['x-post-link'];
 
 export const quizTermsAcceptedSelector = (state: RootState) => {
   const user = userSelector(state);
   return user?.clientData?.quiz?.quizTermsAccepted;
 };
+
+export const dynamicDistributionDataSelector = (state: RootState) =>
+  state.account.authConfig?.['dynamic-distribution-kyc'];
