@@ -34,7 +34,7 @@ export const Summary = memo(() => {
       <View style={[styles.cell, styles.cellRight]}>
         <CoinsStackSmallIcon />
         <View style={styles.cellData}>
-          <Text style={styles.labelText}>{t('stats.header_total_coins')}</Text>
+          <Text style={styles.labelText}>{t('stats.total_coins')}</Text>
           <Text style={styles.valueText}>
             {formatNumber(totalCoins, {
               notation: 'compact',

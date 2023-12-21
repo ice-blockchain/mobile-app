@@ -556,14 +556,12 @@
     "online_miners": "Online users",
     "detailed_information": "Detailed information",
     "total_coins": "Total coins",
-    "coin_economics": "Coin economic",
     "filter": {
       "total": "Total",
       "on_app": "Available on App",
       "pre_staked": "Pre-Staked",
       "on_blockchain": "On Blockchain"
-    },
-    "header_total_coins": "Total coins"
+    }
   },
   "update_required": {
     "title": "Please Update",
