@@ -34,6 +34,9 @@ const PERIODS: {label: string; period: StatsPeriod}[] = STATS_PERIODS.map(
   (period: StatsPeriod) => ({label: t(`periods.${period}_days`), period}),
 );
 
+/**
+ * Not used
+ */
 export const UserGrowthGraph = memo(() => {
   useFocusStatusBar({style: 'light-content'});
   const tabbarOffset = useBottomTabBarOffsetStyle();

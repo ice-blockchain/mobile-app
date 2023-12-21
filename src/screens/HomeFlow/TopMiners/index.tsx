@@ -14,6 +14,9 @@ import {formatNumberString} from '@utils/numbers';
 import {uniqueId} from 'lodash';
 import React, {memo, useCallback} from 'react';
 
+/**
+ * Not used
+ */
 export const TopMiners = memo(() => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();

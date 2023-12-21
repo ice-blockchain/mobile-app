@@ -25,6 +25,10 @@ const SKELETONS = Array(MINERS_COUNT)
   .fill(null)
   .map((_, index) => <ListItemSkeleton key={index} />);
 
+/**
+ * Not used
+ */
+
 export const TopMiners = memo(() => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
