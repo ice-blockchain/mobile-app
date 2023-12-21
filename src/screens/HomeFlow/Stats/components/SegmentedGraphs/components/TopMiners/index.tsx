@@ -5,7 +5,6 @@ import {ListItemSkeleton} from '@components/ListItems/ListItemSkeleton';
 import {UserListItemCompact} from '@components/ListItems/UserListItemCompact';
 import {SectionHeader} from '@components/SectionHeader';
 import {Touchable} from '@components/Touchable';
-import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useFetchCollection} from '@hooks/useFetchCollection';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -25,17 +24,12 @@ const SKELETONS = Array(MINERS_COUNT)
   .fill(null)
   .map((_, index) => <ListItemSkeleton key={index} />);
 
-/**
- * Not used
- */
-
 export const TopMiners = memo(() => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
 
   const onSeeAllPress = useCallback(() => {
-    // navigation.navigate('TopMiners');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    navigation.navigate('TopMiners');
   }, [navigation]);
 
   const {data, fetch, hasNext} = useFetchCollection({
@@ -66,6 +60,7 @@ export const TopMiners = memo(() => {
         title={t('stats.top_miners')}
         action={t('button.see_all')}
         onActionPress={onSeeAllPress}
+        style={styles.header}
       />
       <View style={styles.list}>
         {hasNext && !displayData.length
@@ -96,6 +91,8 @@ const styles = StyleSheet.create({
   },
   list: {
     marginTop: rem(4),
-    marginHorizontal: SCREEN_SIDE_OFFSET,
+  },
+  header: {
+    marginHorizontal: 0,
   },
 });

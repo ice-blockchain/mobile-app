@@ -26,62 +26,68 @@ import {screenHeight} from 'rn-units';
 type Props = {
   data: BarGraphData[];
   ListHeader?: ComponentType | ReactElement;
+  ListFooter?: ComponentType | ReactElement;
   type?: StatsType;
 };
 
-export const AnimatedGraph = memo(({data, ListHeader, type}: Props) => {
-  const tabbarOffset = useBottomTabBarOffsetStyle();
-  const {transitionEnd} = useScreenTransitionEnd();
-  const {stepValue, lastXValue, numberOfSteps} = useMemo(
-    () => getValueData(data),
-    [data],
-  );
+export const AnimatedGraph = memo(
+  ({data, ListHeader, ListFooter, type}: Props) => {
+    const tabbarOffset = useBottomTabBarOffsetStyle();
+    const {transitionEnd} = useScreenTransitionEnd();
+    const {stepValue, lastXValue, numberOfSteps} = useMemo(
+      () => getValueData(data),
+      [data],
+    );
 
-  const barWidth = windowWidth - Y_AXIS_WIDTH - SCREEN_SIDE_OFFSET * 2;
-  const sharedValue = useSharedValue(-1);
+    const barWidth = windowWidth - Y_AXIS_WIDTH - SCREEN_SIDE_OFFSET * 2;
+    const sharedValue = useSharedValue(-1);
 
-  const lastElement = data[data.length - 1];
+    const lastElement = data[data.length - 1];
 
-  useEffect(() => {
-    if (transitionEnd && lastElement?.value != null && data.length) {
-      sharedValue.value = -1;
-      const handle = requestAnimationFrame(() => {
-        sharedValue.value = withTiming(0, {duration: 300});
-      });
-      return () => cancelAnimationFrame(handle);
-    }
-  }, [transitionEnd, lastElement?.value, data.length, sharedValue]);
-
-  return (
-    <Animated.FlatList
-      contentContainerStyle={[styles.contentContainer, tabbarOffset.current]}
-      ListHeaderComponentStyle={styles.header}
-      data={data}
-      initialNumToRender={14}
-      showsVerticalScrollIndicator={false}
-      removeClippedSubviews={false}
-      getItemLayout={getItemLayout}
-      renderItem={({item, index}) => (
-        <BarItem
-          item={item}
-          maxWidth={barWidth}
-          maxValue={lastXValue}
-          sharedValue={sharedValue}
-          doAnimate={Math.floor(screenHeight / ROW_HEIGHT) > index}
-          type={type}
-        />
-      )}
-      ListFooterComponent={
-        <BarFooter
-          barWidth={barWidth}
-          stepValue={stepValue}
-          numberOfSteps={numberOfSteps}
-        />
+    useEffect(() => {
+      if (transitionEnd && lastElement?.value != null && data.length) {
+        sharedValue.value = -1;
+        const handle = requestAnimationFrame(() => {
+          sharedValue.value = withTiming(0, {duration: 300});
+        });
+        return () => cancelAnimationFrame(handle);
       }
-      ListHeaderComponent={ListHeader}
-    />
-  );
-});
+    }, [transitionEnd, lastElement?.value, data.length, sharedValue]);
+
+    return (
+      <Animated.FlatList
+        contentContainerStyle={[styles.contentContainer, tabbarOffset.current]}
+        ListHeaderComponentStyle={styles.header}
+        data={data}
+        initialNumToRender={14}
+        showsVerticalScrollIndicator={false}
+        removeClippedSubviews={false}
+        getItemLayout={getItemLayout}
+        renderItem={({item, index}) => (
+          <BarItem
+            item={item}
+            maxWidth={barWidth}
+            maxValue={lastXValue}
+            sharedValue={sharedValue}
+            doAnimate={Math.floor(screenHeight / ROW_HEIGHT) > index}
+            type={type}
+          />
+        )}
+        ListFooterComponent={
+          <>
+            <BarFooter
+              barWidth={barWidth}
+              stepValue={stepValue}
+              numberOfSteps={numberOfSteps}
+            />
+            {ListFooter}
+          </>
+        }
+        ListHeaderComponent={ListHeader}
+      />
+    );
+  },
+);
 
 const getItemLayout = (_: unknown, index: number) => ({
   length: ROW_HEIGHT,

@@ -5,6 +5,7 @@ import {SectionHeader} from '@components/SectionHeader';
 import {commonStyles} from '@constants/styles';
 import {AnimatedGraph} from '@screens/HomeFlow/Stats/components/SegmentedGraphs/components/AnimatedGraph';
 import {StatsPeriodSelector} from '@screens/HomeFlow/Stats/components/SegmentedGraphs/components/StatsPeriodSelector';
+import {TopMiners} from '@screens/HomeFlow/Stats/components/SegmentedGraphs/components/TopMiners';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {t} from '@translations/i18n';
 import React, {memo, useState} from 'react';
@@ -33,6 +34,7 @@ export const ActiveUsersGraph = memo(() => {
             }
           />
         }
+        ListFooter={<TopMiners />}
       />
     </View>
   );

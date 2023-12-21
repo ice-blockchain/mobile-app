@@ -31,6 +31,7 @@ import {
 } from '@screens/HomeFlow/Home/types';
 import {InAppNotifications} from '@screens/HomeFlow/InAppNotifications';
 import {Stats} from '@screens/HomeFlow/Stats';
+import {TopMiners} from '@screens/HomeFlow/TopMiners';
 import {UserGrowthGraph} from '@screens/HomeFlow/UserGrowthGraph';
 import {ImageView} from '@screens/ImageView';
 import {InviteFriend} from '@screens/InviteFlow/InviteFriend';
@@ -160,6 +161,7 @@ export type MainStackParamList = {
     hostViewParams: ViewMeasurementsResult;
     correctiveOffset?: number;
   };
+  TopMiners: undefined;
 };
 
 export type HomeTabStackParamList = {
@@ -451,6 +453,7 @@ export function MainNavigator() {
         component={VerifiedTooltipPopUp}
         options={modalOptions}
       />
+      <MainStack.Screen name="TopMiners" component={TopMiners} />
     </MainStack.Navigator>
   );
 }
