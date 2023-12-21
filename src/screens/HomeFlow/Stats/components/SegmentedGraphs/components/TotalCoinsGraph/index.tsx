@@ -13,7 +13,7 @@ import React, {memo, useMemo, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
-export const DEFAULT_PERIOD = 14;
+export const DEFAULT_PERIOD = 7;
 export const DEFAULT_FILTER = 'total';
 
 export const TotalCoinsGraph = memo(() => {
