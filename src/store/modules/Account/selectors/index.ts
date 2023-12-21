@@ -89,3 +89,6 @@ export const isAchievementsEnabledSelector = (state: RootState) =>
 
 export const verifiedSelector = (state: RootState) =>
   !!state.account.user?.verified;
+
+export const ethDistributionXPostLinkSelector = (state: RootState) =>
+  state.account.authConfig?.['social2-kyc']?.['x-post-link'];

@@ -1226,5 +1226,25 @@
         "description": "Doğrulamayı tamamlayamadık. 7 gün sonra tekrar deneyebilirsiniz."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Ethereum Dağıtımı",
+      "description": "Mevcut X profilinizi kullanarak hesabınızı kolayca doğrulayarak Ethereum ICE coinlerinizi alın."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "X gönderimimizi doğrudan açmak için [[:bold]]burayı[[/:bold]] tıklayın.",
+        "pop_up": {
+          "description": "Talimatları izleyin ve ilk adımda bağlantıyı tıkladığınızdan emin olun.",
+          "description2": "Doğru gönderiyi beğendiniz ve örnekte olduğu gibi tam metni kullanarak alıntı yaparak yeniden paylaştınız mı?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Tebrikler, başarıyla doğrulamanızı tamamladınız. Şimdi Ethereum dağıtımı için uygunsiniz."
+      }
+    }
   }
 }

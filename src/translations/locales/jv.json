@@ -1131,5 +1131,25 @@
         "description": "Kami ora bisa rampungake verifikasi. Sampeyan bisa nyoba maneh sajrone 7 dino."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Pembagian Ethereum",
+      "description": "Terima koin Ethereum ICE Anda dengan memverifikasi akun Anda dengan mudah menggunakan profil X Anda yang sudah ada."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Klik tautan [[:bold]]iku[[/:bold]] nganti mbukak langsung tulisan X kita.",
+        "pop_up": {
+          "description": "Tetepi pandhuan lan pastiake sampeyan wis ndelikaké tautan ing langkah awal kanggo mbukak langsung tulisan X kita.",
+          "description2": "Apakah sampeyan seneng postingan sing bener lan nerusakaké karo qouw menggunakan teks sing tepat sing dadi conto?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Selamat, sampeyan wis sukses rampungake verifikasi sampeyan. Aku saiki kapisan kang nggoleki kanggo distribusi Ethereum."
+      }
+    }
   }
 }

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {ETH_DISTRIBUTION_KYC_STEP} from '@api/tokenomics/constants';
 import {SocialKycStepNumber} from '@api/tokenomics/types';
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
@@ -24,11 +25,12 @@ import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 type Props = {
+  kycStep: SocialKycStepNumber;
   onTryAgain: () => void;
   onSkip: (skipKYCStep?: SocialKycStepNumber) => void;
 };
 
-export function ResultStep({onTryAgain, onSkip}: Props) {
+export function ResultStep({onTryAgain, onSkip, kycStep}: Props) {
   const socialKycStatus = useSelector(socialKycStatusSelector);
   const socialKycAttempts = useSelector(socialKycAttemptsSelector);
   const canContinue =
@@ -37,6 +39,8 @@ export function ResultStep({onTryAgain, onSkip}: Props) {
   const onContinue = () => {
     onSkip();
   };
+
+  const isDistributionFlow = kycStep === ETH_DISTRIBUTION_KYC_STEP;
 
   useOnHardwareBack({callback: () => {}, preventDefault: true});
 
@@ -61,7 +65,7 @@ export function ResultStep({onTryAgain, onSkip}: Props) {
           />
         </View>
         <View style={styles.detailsContainer}>
-          <Details />
+          <Details isDistributionFlow={isDistributionFlow} />
         </View>
         <View style={styles.footerContainer}>
           <PrimaryButton

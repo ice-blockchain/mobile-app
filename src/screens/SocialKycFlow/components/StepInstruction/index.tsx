@@ -14,6 +14,7 @@ type Props = {
   allBordersRounded?: boolean;
   rightIcon?: React.ReactNode;
   onRightIconPress?: () => void;
+  onPress?: () => void;
 };
 
 export function StepInstruction({
@@ -22,9 +23,11 @@ export function StepInstruction({
   allBordersRounded = true,
   rightIcon,
   onRightIconPress,
+  onPress,
 }: Props) {
   return (
-    <View
+    <Touchable
+      onPress={onPress}
       style={[
         styles.container,
         allBordersRounded ? styles.borderRadius : null,
@@ -44,7 +47,7 @@ export function StepInstruction({
           {rightIcon}
         </Touchable>
       ) : null}
-    </View>
+    </Touchable>
   );
 }
 

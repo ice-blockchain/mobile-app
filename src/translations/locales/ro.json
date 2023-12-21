@@ -1226,5 +1226,25 @@
         "description": "Nu am putut finaliza verificarea. Poți încerca din nou peste 7 zile."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Distribuție Ethereum",
+      "description": "Primiți monedele dvs. Ethereum ICE prin verificarea contului dvs. cu ușurință folosind profilul dvs. X existent."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Faceți clic pe linkul [[:bold]]aici[[/:bold]] pentru a deschide direct postarea noastră X.",
+        "pop_up": {
+          "description": "Urmați instrucțiunile și asigurați-vă că ați făcut clic pe link în primul pas pentru a deschide direct postarea noastră X.",
+          "description2": "Ați apreciat postarea corectă și ați repostat-o cu o citare folosind textul exact furnizat, așa cum este în exemplu?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Felicitări, ați finalizat cu succes verificarea. Sunteți acum eligibil pentru distribuția Ethereum."
+      }
+    }
   }
 }

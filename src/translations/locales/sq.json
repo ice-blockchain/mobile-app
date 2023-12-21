@@ -1226,5 +1226,25 @@
         "description": "Ne nuk mund të përfundojmë verifikimin. Mund të provoni përsëri në 7 ditë."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Rrjedhja e Ethereumit",
+      "description": "Merrni monedhat tuaja Ethereum ICE duke verifikuar llogarinë tuaj me lehtësi duke përdorur profilin tuaj X ekzistues."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Klikoni në lidhjen [[:bold]]këtu[[/:bold]] për të hapur drejtpërdrejt postimin tonë X.",
+        "pop_up": {
+          "description": "Përcjellni udhëzimet dhe sigurohuni që keni klikuar në lidhjen në hapin e parë për të hapur drejtpërdrejt postimin tonë X.",
+          "description2": "A ju pëlqeu postimi i saktë dhe e postuat atë përsëri me një citat duke përdorur tekstin e saktë të dhënë, ashtu si në shembull?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Urime, keni përfunduar me sukses verifikimin tuaj. Tani jeni e përbashkët për shpërndarjen e Ethereum."
+      }
+    }
   }
 }

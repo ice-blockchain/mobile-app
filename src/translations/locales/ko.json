@@ -1226,5 +1226,25 @@
         "description": "인증을 완료할 수 없습니다. 7일 후에 다시 시도할 수 있습니다."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "이더리움 분배",
+      "description": "기존의 X 프로필을 사용하여 계정을 쉽게 확인하고 이더리움 ICE 코인을 받아보세요."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "[[:bold]]여기[[/:bold]] 링크를 클릭하여 직접 X 글을 열어보세요.",
+        "pop_up": {
+          "description": "지침을 따르고 첫 번째 단계에서 링크를 클릭하여 직접 X 글을 열었는지 확인하세요.",
+          "description2": "올바른 게시물을 좋아하고 해당 예제처럼 정확한 텍스트를 사용하여 인용구와 함께 다시 게시하셨나요?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "축하합니다, 귀하의 확인을 성공적으로 완료하였습니다. 이제 Ethereum 분배를 받을 자격이 있습니다."
+      }
+    }
   }
 }

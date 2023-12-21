@@ -1226,5 +1226,25 @@
         "description": "Wir konnten die Verifizierung nicht abschließen. Sie können es in 7 Tagen erneut versuchen."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Ethereum Verteilung",
+      "description": "Erhalten Sie Ihre Ethereum ICE-Münzen, indem Sie Ihr Konto einfach mit Ihrem vorhandenen X-Profil verifizieren."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Klicken Sie auf den Link [[:bold]]hier[[/:bold]], um unseren X-Beitrag direkt zu öffnen.",
+        "pop_up": {
+          "description": "Bitte folgen Sie den Anweisungen und stellen Sie sicher, dass Sie im ersten Schritt auf den Link geklickt haben, um unseren X-Beitrag direkt zu öffnen.",
+          "description2": "Hast du den richtigen Beitrag gemocht und ihn mit einem Zitat und dem exakten Text, wie im Beispiel gezeigt, erneut geteilt?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Herzlichen Glückwunsch, Sie haben Ihre Verifizierung erfolgreich abgeschlossen. Sie sind jetzt für die Ethereum-Verteilung berechtigt."
+      }
+    }
   }
 }

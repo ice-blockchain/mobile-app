@@ -14,13 +14,19 @@ import {rem} from 'rn-units';
 
 const ICON_SIZE = rem(16);
 
-export function ShowExample() {
+export function ShowExample({
+  isDistributionFlow,
+}: {
+  isDistributionFlow: boolean;
+}) {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
   return (
     <Touchable
       style={styles.outerContainer}
-      onPress={() => navigation.navigate('RepostExample')}>
+      onPress={() =>
+        navigation.navigate('RepostExample', {isDistributionFlow})
+      }>
       <View style={styles.container}>
         <EyeIcon
           width={ICON_SIZE}

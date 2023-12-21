@@ -1226,5 +1226,25 @@
         "description": "Chúng tôi không thể hoàn thành quá trình xác minh. Bạn có thể thử lại sau 7 ngày."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Phân phối Ethereum",
+      "description": "Nhận các đồng tiền Ethereum ICE của bạn bằng cách dễ dàng xác minh tài khoản của bạn bằng cách sử dụng hồ sơ X hiện có của bạn."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Nhấn vào liên kết [[:bold]]tại đây[[/:bold]] để mở trực tiếp bài viết X của chúng tôi.",
+        "pop_up": {
+          "description": "Tuân theo hướng dẫn và đảm bảo bạn đã nhấn vào liên kết trong bước đầu tiên để mở trực tiếp bài viết X của chúng tôi.",
+          "description2": "Bạn có thích bài viết đúng và chia sẻ lại nó với dấu trích dẫn sử dụng văn bản chính xác được cung cấp, như trong ví dụ không?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Chúc mừng bạn đã hoàn thành xác minh của mình thành công. Bây giờ bạn đã đủ điều kiện để tham gia phân phối Ethereum."
+      }
+    }
   }
 }

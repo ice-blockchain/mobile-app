@@ -128,7 +128,7 @@ export type MainStackParamList = {
       onPress: () => void;
     }[];
   };
-  RepostExample: undefined;
+  RepostExample: {isDistributionFlow?: boolean};
   DateSelect: {
     onSelect: (range: {start: string | null; end: string | null}) => void;
   };

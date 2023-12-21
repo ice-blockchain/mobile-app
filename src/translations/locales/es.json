@@ -1226,5 +1226,25 @@
         "description": "No pudimos completar la verificación. Puedes intentarlo de nuevo en 7 días."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Distribución de Ethereum",
+      "description": "Reciba sus monedas Ethereum ICE verificando su cuenta fácilmente utilizando su perfil X existente."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Haga clic en el enlace [[:bold]]aquí[[/:bold]] para abrir directamente nuestra publicación X.",
+        "pop_up": {
+          "description": "Siga las instrucciones y asegúrese de haber hecho clic en el enlace en el primer paso para abrir directamente nuestra publicación X.",
+          "description2": "¿Te gustó la publicación correcta y la compartiste con una cita usando el texto exacto proporcionado, como en el ejemplo?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "¡Felicidades, has completado exitosamente tu verificación! Ahora eres elegible para la distribución de Ethereum."
+      }
+    }
   }
 }

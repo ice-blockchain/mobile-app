@@ -740,4 +740,10 @@ export type Translations = {
   'social_kyc.results_step.error_try_again.description': null;
   'social_kyc.results_step.error_try_later.title': null;
   'social_kyc.results_step.error_try_later.description': null;
+  'distribution_kyc.select_method_step.title': null;
+  'distribution_kyc.select_method_step.description': null;
+  'distribution_kyc.instructions_step.x.1': null;
+  'distribution_kyc.instructions_step.x.pop_up.description': null;
+  'distribution_kyc.instructions_step.x.pop_up.description2': null;
+  'distribution_kyc.results_step.success.description': null;
 };

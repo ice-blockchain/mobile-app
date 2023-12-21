@@ -1226,5 +1226,25 @@
         "description": "Kami tidak dapat menyelesaikan verifikasi. Anda dapat mencoba lagi dalam 7 hari."
       }
     }
+  },
+  "distribution_kyc": {
+    "select_method_step": {
+      "title": "Distribusi Ethereum",
+      "description": "Terima koin Ethereum ICE Anda dengan memverifikasi akun Anda dengan mudah menggunakan profil X Anda yang sudah ada."
+    },
+    "instructions_step": {
+      "x": {
+        "1": "Klik tautan [[:bold]]di sini[[/:bold]] untuk membuka langsung kiriman X kami.",
+        "pop_up": {
+          "description": "Ikuti petunjuk dan pastikan Anda telah mengklik tautan pada langkah pertama untuk membuka langsung kiriman X kami.",
+          "description2": "Apakah Anda menyukai postingan yang benar dan mempostingnya kembali dengan mengutip menggunakan teks yang tepat seperti contoh yang diberikan?"
+        }
+      }
+    },
+    "results_step": {
+      "success": {
+        "description": "Selamat, Anda telah berhasil menyelesaikan verifikasi Anda. Anda sekarang memenuhi syarat untuk distribusi Ethereum."
+      }
+    }
   }
 }
