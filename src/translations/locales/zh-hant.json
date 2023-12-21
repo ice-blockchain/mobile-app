@@ -555,7 +555,14 @@
     "top_miners": "使用者排名",
     "top_countries": "國家排名",
     "online_miners": "線上使用者",
-    "detailed_information": "詳細資訊"
+    "detailed_information": "詳細資訊",
+    "total_coins": "總硬幣數量",
+    "filter": {
+      "total": "總量",
+      "on_app": "在應用程式上可用",
+      "pre_staked": "預先抵押",
+      "on_blockchain": "在區塊鏈上"
+    }
   },
   "update_required": {
     "title": "請進行更新",

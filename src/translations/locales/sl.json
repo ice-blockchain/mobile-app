@@ -555,7 +555,14 @@
     "top_miners": "Najboljši uporabniki",
     "top_countries": "Najboljše države",
     "online_miners": "Spletni uporabniki",
-    "detailed_information": "Podrobne informacije"
+    "detailed_information": "Podrobne informacije",
+    "total_coins": "Skupno kovancev",
+    "filter": {
+      "total": "Skupaj",
+      "on_app": "Na voljo v aplikaciji",
+      "pre_staked": "Pred stavko",
+      "on_blockchain": "Na verigi blokov"
+    }
   },
   "update_required": {
     "title": "Prosimo, posodobite",

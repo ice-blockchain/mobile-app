@@ -555,7 +555,14 @@
     "top_miners": "ટોચના વપરાશકર્તાઓ",
     "top_countries": "ટોચના દેશો",
     "online_miners": "ઑનલાઇન વપરાશકર્તાઓ",
-    "detailed_information": "વિગતવાર માહિતી"
+    "detailed_information": "વિગતવાર માહિતી",
+    "total_coins": "કુલ સિક્કો",
+    "filter": {
+      "total": "કુલ",
+      "on_app": "એપ્લિકેશન પર ઉપલબ્ધ",
+      "pre_staked": "પ્રી-સ્ટેક્ડ",
+      "on_blockchain": "બ્લોકચેન પર"
+    }
   },
   "update_required": {
     "title": "કૃપા કરીને અપડેટ કરો",

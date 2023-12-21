@@ -555,7 +555,14 @@
     "top_miners": "Người dùng hàng đầu",
     "top_countries": "Các quốc gia hàng đầu",
     "online_miners": "Người dùng trực tuyến",
-    "detailed_information": "Thông tin chi tiết"
+    "detailed_information": "Thông tin chi tiết",
+    "total_coins": "Tổng số đồng tiền",
+    "filter": {
+      "total": "Tổng",
+      "on_app": "Có sẵn trên ứng dụng",
+      "pre_staked": "Trước khi gắn cờ",
+      "on_blockchain": "Trên Blockchain"
+    }
   },
   "update_required": {
     "title": "Vui lòng cập nhật",

@@ -555,7 +555,14 @@
     "top_miners": "Pengguna teratas",
     "top_countries": "Negara teratas",
     "online_miners": "Pengguna online",
-    "detailed_information": "Informasi mendetail"
+    "detailed_information": "Informasi mendetail",
+    "total_coins": "Total koin",
+    "filter": {
+      "total": "Total",
+      "on_app": "Tersedia di Aplikasi",
+      "pre_staked": "Pre-Staked",
+      "on_blockchain": "Di Blockchain"
+    }
   },
   "update_required": {
     "title": "Perbarui",

@@ -544,7 +544,14 @@
     "top_miners": "Top users",
     "top_countries": "Top countries",
     "online_miners": "Online users",
-    "detailed_information": "Detailed information"
+    "detailed_information": "Detailed information",
+    "total_coins": "Jumlah Koin",
+    "filter": {
+      "total": "Total",
+      "on_app": "Tersedia di Aplikasi",
+      "pre_staked": "Pre-Staked",
+      "on_blockchain": "Di Blockchain"
+    }
   },
   "update_required": {
     "title": "Please Update",

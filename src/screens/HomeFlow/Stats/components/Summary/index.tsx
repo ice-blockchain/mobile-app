@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   },
   cellRight: {
     justifyContent: 'flex-end',
-    paddingEnd: rem(56),
+    paddingEnd: rem(26),
   },
   cellData: {
     marginStart: rem(8),

@@ -555,7 +555,14 @@
     "top_miners": "Toppbrukere",
     "top_countries": "Toppland",
     "online_miners": "Nettbrukere",
-    "detailed_information": "Detaljert informasjon"
+    "detailed_information": "Detaljert informasjon",
+    "total_coins": "Totalt antall mynter",
+    "filter": {
+      "total": "Total",
+      "on_app": "Tilgjengelig på appen",
+      "pre_staked": "Forhåndsvalgt",
+      "on_blockchain": "På blockchainen"
+    }
   },
   "update_required": {
     "title": "Vennligst oppdater",

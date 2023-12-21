@@ -555,7 +555,14 @@
     "top_miners": "Κορυφαίοι χρήστες",
     "top_countries": "Κορυφαίες χώρες",
     "online_miners": "Online χρήστες",
-    "detailed_information": "Λεπτομερείς πληροφορίες"
+    "detailed_information": "Λεπτομερείς πληροφορίες",
+    "total_coins": "Συνολικά κέρματα",
+    "filter": {
+      "total": "Συνολικά",
+      "on_app": "Διαθέσιμα στην εφαρμογή",
+      "pre_staked": "Προεγγυημένα",
+      "on_blockchain": "Στο blockchain"
+    }
   },
   "update_required": {
     "title": "Παρακαλώ ενημερώστε",

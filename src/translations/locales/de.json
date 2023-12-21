@@ -555,7 +555,14 @@
     "top_miners": "Top-Nutzer",
     "top_countries": "Top-Länder",
     "online_miners": "Online-Nutzer",
-    "detailed_information": "Ausführliche Informationen"
+    "detailed_information": "Ausführliche Informationen",
+    "total_coins": "Gesamtmünzen",
+    "filter": {
+      "total": "Gesamt",
+      "on_app": "Verfügbar in der App",
+      "pre_staked": "Vorab gestaked",
+      "on_blockchain": "Auf der Blockchain"
+    }
   },
   "update_required": {
     "title": "Bitte aktualisieren",

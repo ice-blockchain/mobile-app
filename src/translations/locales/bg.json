@@ -555,7 +555,14 @@
     "top_miners": "Топ потребители",
     "top_countries": "Топ държави",
     "online_miners": "Онлайн потребители",
-    "detailed_information": "Подробна информация"
+    "detailed_information": "Подробна информация",
+    "total_coins": "Общо монети",
+    "filter": {
+      "total": "Общо",
+      "on_app": "Наличен в приложението",
+      "pre_staked": "Предварително оценен",
+      "on_blockchain": "На блокчейн"
+    }
   },
   "update_required": {
     "title": "Обновете",

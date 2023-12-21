@@ -555,7 +555,14 @@
     "top_miners": "Топ користувачів",
     "top_countries": "Найпопулярніші країни",
     "online_miners": "Онлайн-користувачі",
-    "detailed_information": "Детальна інформація"
+    "detailed_information": "Детальна інформація",
+    "total_coins": "Загальна кількість монет",
+    "filter": {
+      "total": "Загальна",
+      "on_app": "Доступно в додатку",
+      "pre_staked": "Попередній стейк",
+      "on_blockchain": "На блокчейні"
+    }
   },
   "update_required": {
     "title": "Будь ласка, оновіть",

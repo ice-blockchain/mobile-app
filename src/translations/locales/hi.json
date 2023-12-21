@@ -555,7 +555,14 @@
     "top_miners": "शीर्ष उपयोगकर्ता",
     "top_countries": "शीर्ष देश",
     "online_miners": "ऑनलाइन उपयोगकर्ता",
-    "detailed_information": "विस्तृत जानकारी"
+    "detailed_information": "विस्तृत जानकारी",
+    "total_coins": "कुल सिक्के",
+    "filter": {
+      "total": "कुल",
+      "on_app": "ऐप पर उपलब्ध",
+      "pre_staked": "पूर्व-स्टेक्ड",
+      "on_blockchain": "ब्लॉकचेन पर"
+    }
   },
   "update_required": {
     "title": "कृपया अपडेट करें",

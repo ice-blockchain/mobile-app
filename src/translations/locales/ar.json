@@ -555,7 +555,14 @@
     "top_miners": "أفضل المستخدمين",
     "top_countries": "أفضل البلدان",
     "online_miners": "المستخدمون عبر الإنترنت",
-    "detailed_information": "معلومات تفصيلية"
+    "detailed_information": "معلومات تفصيلية",
+    "total_coins": "إجمالي العملات",
+    "filter": {
+      "total": "الإجمالي",
+      "on_app": "متاح على التطبيق",
+      "pre_staked": "مرهونة مسبقاً",
+      "on_blockchain": "على البلوكشين"
+    }
   },
   "update_required": {
     "title": "يُرجى التحديث",

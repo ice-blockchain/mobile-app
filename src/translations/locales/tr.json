@@ -555,7 +555,14 @@
     "top_miners": "En popüler kullanıcılar",
     "top_countries": "En popüler ülkeler",
     "online_miners": "Çevrimiçi kullanıcılar",
-    "detailed_information": "Detaylı bilgi"
+    "detailed_information": "Detaylı bilgi",
+    "total_coins": "Toplam Madeni Para",
+    "filter": {
+      "total": "Toplam",
+      "on_app": "Uygulamada Mevcut",
+      "pre_staked": "Önceden Stake Edilen",
+      "on_blockchain": "Blockchain Üzerinde"
+    }
   },
   "update_required": {
     "title": "Lütfen Güncelle",

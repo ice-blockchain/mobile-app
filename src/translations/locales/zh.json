@@ -555,7 +555,14 @@
     "top_miners": "热门用户",
     "top_countries": "热门国家/地区",
     "online_miners": "在线用户",
-    "detailed_information": "详细信息"
+    "detailed_information": "详细信息",
+    "total_coins": "总硬币数量",
+    "filter": {
+      "total": "总量",
+      "on_app": "在应用上可用",
+      "pre_staked": "预先抵押",
+      "on_blockchain": "在区块链上"
+    }
   },
   "update_required": {
     "title": "请更新",

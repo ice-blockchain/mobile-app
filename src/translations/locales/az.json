@@ -555,7 +555,14 @@
     "top_miners": "Top istifadəçilər",
     "top_countries": "Top ölkələr",
     "online_miners": "Onlayn istifadəçilər",
-    "detailed_information": "Detallı məlumat"
+    "detailed_information": "Detallı məlumat",
+    "total_coins": "Ümumi kreditlər",
+    "filter": {
+      "total": "Ümumi",
+      "on_app": "Tətbiq üçün mövcuddur",
+      "pre_staked": "Əvvəlcədən stake edilmiş",
+      "on_blockchain": "Bloq çəkisində"
+    }
   },
   "update_required": {
     "title": "Xahiş olunur yeniləyin ",

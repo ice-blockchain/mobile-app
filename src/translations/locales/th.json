@@ -556,7 +556,14 @@
     "top_miners": "ผู้ใช้อันดับต้น",
     "top_countries": "ประเทศอันดับต้น",
     "online_miners": "ผู้ใช้ทางออนไลน์",
-    "detailed_information": "ข้อมูลอย่างละเอียด"
+    "detailed_information": "ข้อมูลอย่างละเอียด",
+    "total_coins": "จำนวนเหรียญทั้งหมด",
+    "filter": {
+      "total": "รวม",
+      "on_app": "มีในแอป",
+      "pre_staked": "ก่อนเข็มกลาด",
+      "on_blockchain": "บนบล็อกเชน"
+    }
   },
   "update_required": {
     "title": "โปรดอัปเดต",

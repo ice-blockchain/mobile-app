@@ -555,7 +555,14 @@
     "top_miners": "سر فہرست صارفین",
     "top_countries": "سر فہرست ممالک",
     "online_miners": "آن لائن صارفین",
-    "detailed_information": "تفصیلی معلومات"
+    "detailed_information": "تفصیلی معلومات",
+    "total_coins": "کل سکے",
+    "filter": {
+      "total": "کل",
+      "on_app": "ایپلیکیشن میں دستیاب ہے",
+      "pre_staked": "پیش سٹیک",
+      "on_blockchain": "بلاک چین پر"
+    }
   },
   "update_required": {
     "title": "براہ کرم اپڈیٹ کریں",

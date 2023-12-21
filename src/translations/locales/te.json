@@ -555,7 +555,14 @@
     "top_miners": "టాప్ యూజర్​లు",
     "top_countries": "టాప్ దేశాలు",
     "online_miners": "ఆన్​లైన్ యూజర్​లు",
-    "detailed_information": "సవిస్తరమైన సమాచారం"
+    "detailed_information": "సవిస్తరమైన సమాచారం",
+    "total_coins": "మొత్తం కాయినులు",
+    "filter": {
+      "total": "మొత్తం",
+      "on_app": "అప్లికేషన్‌లో అందుబాటులో",
+      "pre_staked": "ప్రీ-స్టేక్‌డ్",
+      "on_blockchain": "బ్లాక్‌చైన్‌లో"
+    }
   },
   "update_required": {
     "title": "దయచేసి అప్​డేట్ చేయండి",

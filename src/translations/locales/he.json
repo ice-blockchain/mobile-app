@@ -555,7 +555,14 @@
     "top_miners": "משתמשים מובילים",
     "top_countries": "מדינות מובילות",
     "online_miners": "משתמשים מקוונים",
-    "detailed_information": "מידע מפורט"
+    "detailed_information": "מידע מפורט",
+    "total_coins": "סך המטבעות",
+    "filter": {
+      "total": "כולם",
+      "on_app": "זמין באפליקציה",
+      "pre_staked": "מראש מסומן",
+      "on_blockchain": "על הבלוקצ'יין"
+    }
   },
   "update_required": {
     "title": "נא לעדכן",

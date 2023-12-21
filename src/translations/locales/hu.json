@@ -555,7 +555,14 @@
     "top_miners": "Top felhasználók",
     "top_countries": "Top országok",
     "online_miners": "Online felhasználók",
-    "detailed_information": "Részletes információ"
+    "detailed_information": "Részletes információ",
+    "total_coins": "Összes érme",
+    "filter": {
+      "total": "Összesen",
+      "on_app": "Elérhető az alkalmazásban",
+      "pre_staked": "Előre lerakott",
+      "on_blockchain": "A blokkláncban"
+    }
   },
   "update_required": {
     "title": "Kérjük, frissítsd",

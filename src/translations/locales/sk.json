@@ -555,7 +555,14 @@
     "top_miners": "Top používatelia",
     "top_countries": "Top krajiny",
     "online_miners": "Online používatelia",
-    "detailed_information": "Podrobné informácie"
+    "detailed_information": "Podrobné informácie",
+    "total_coins": "Celkový počet mincí",
+    "filter": {
+      "total": "Celkovo",
+      "on_app": "Dostupné v aplikácii",
+      "pre_staked": "Predstavené",
+      "on_blockchain": "Na blockchaine"
+    }
   },
   "update_required": {
     "title": "Prosím, aktualizuj",

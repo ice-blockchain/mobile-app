@@ -555,7 +555,14 @@
     "top_miners": "トップユーザー",
     "top_countries": "上位国",
     "online_miners": "オンラインユーザー",
-    "detailed_information": "詳細情報"
+    "detailed_information": "詳細情報",
+    "total_coins": "総コイン数",
+    "filter": {
+      "total": "合計",
+      "on_app": "アプリで利用可能",
+      "pre_staked": "事前ステーク",
+      "on_blockchain": "ブロックチェーン上"
+    }
   },
   "update_required": {
     "title": "アップデートしてください",
