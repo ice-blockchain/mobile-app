@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "Naslov je že v uporabi",
     "invalid_blockchain_address": "Neveljaven naslov blockchaina",
     "ethereum_address_not_eoa": "Naslov ni EOA",
-    "same_phone_error": "Ne morete uporabiti iste številke."
+    "same_phone_error": "Ne morete uporabiti iste številke.",
+    "unable_to_validate_eth_addr_eoa": "Ni mogoče potrditi naslova EOA"
   },
   "profile": {
     "my_roles": {

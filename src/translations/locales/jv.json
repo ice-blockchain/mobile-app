@@ -193,7 +193,8 @@
     "blockchain_address_already_taken": "Alamat wis didol",
     "invalid_blockchain_address": "Alamat blockchain ora sah",
     "ethereum_address_not_eoa": "Alamat ora EOA",
-    "same_phone_error": "You can’t use the same number"
+    "same_phone_error": "You can’t use the same number",
+    "unable_to_validate_eth_addr_eoa": "Ora bisa ngrusakna alamat EOA"
   },
   "profile": {
     "my_roles": {

@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "ঠিকানা ইতিমধ্যে নেওয়া হয়েছে",
     "invalid_blockchain_address": "অবৈধ ঠিকানা",
     "ethereum_address_not_eoa": "ঠিকানা EOA নয়",
-    "same_phone_error": "আপনি একই নম্বর ব্যবহার করতে পারবেন না।"
+    "same_phone_error": "আপনি একই নম্বর ব্যবহার করতে পারবেন না।",
+    "unable_to_validate_eth_addr_eoa": "EOA ঠিকানা যাচাই করতে অক্ষম"
   },
   "profile": {
     "my_roles": {

@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "पत्ता आधीच घेतला आहे",
     "invalid_blockchain_address": "अवैध पत्ता",
     "ethereum_address_not_eoa": "पत्ता EOA नसतो",
-    "same_phone_error": "तुम्ही तोच नंबर वापरू शकत नाही."
+    "same_phone_error": "तुम्ही तोच नंबर वापरू शकत नाही.",
+    "unable_to_validate_eth_addr_eoa": "EOA पत्ता मान्यता देऊ शकत नाही"
   },
   "profile": {
     "my_roles": {

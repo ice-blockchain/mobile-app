@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "Η διεύθυνση έχει ήδη ληφθεί",
     "invalid_blockchain_address": "Μη έγκυρη διεύθυνση",
     "ethereum_address_not_eoa": "Η διεύθυνση δεν είναι EOA",
-    "same_phone_error": "Δεν μπορείτε να χρησιμοποιήσετε τον ίδιο αριθμό."
+    "same_phone_error": "Δεν μπορείτε να χρησιμοποιήσετε τον ίδιο αριθμό.",
+    "unable_to_validate_eth_addr_eoa": "Δεν είναι δυνατή η επικύρωση της διεύθυνσης EOA"
   },
   "profile": {
     "my_roles": {

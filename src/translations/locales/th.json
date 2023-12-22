@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "ที่อยู่ถูกใช้งานแล้ว",
     "invalid_blockchain_address": "ที่อยู่บล็อกเชนไม่ถูกต้อง",
     "ethereum_address_not_eoa": "ที่อยู่ไม่ใช่ EOA",
-    "same_phone_error": "คุณไม่สามารถใช้หมายเลขเดียวกัน"
+    "same_phone_error": "คุณไม่สามารถใช้หมายเลขเดียวกัน",
+    "unable_to_validate_eth_addr_eoa": "ไม่สามารถตรวจสอบ EOA ได้"
   },
   "profile": {
     "my_roles": {

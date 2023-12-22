@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "Adres zaten alınmış",
     "invalid_blockchain_address": "Geçersiz blockchain adresi",
     "ethereum_address_not_eoa": "Adres EOA değil",
-    "same_phone_error": "Aynı numarayı kullanamazsın."
+    "same_phone_error": "Aynı numarayı kullanamazsın.",
+    "unable_to_validate_eth_addr_eoa": "EOA adresi doğrulanamıyor"
   },
   "profile": {
     "my_roles": {

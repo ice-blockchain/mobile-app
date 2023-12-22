@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "చిరునామా ఇప్పటికే సేకరించబడింది",
     "invalid_blockchain_address": "చెల్లని బ్లాక్‌చేన్ చిరునామా",
     "ethereum_address_not_eoa": "చిరునామా EOA కాదు",
-    "same_phone_error": "మీరు ఒకేనెంబర్​ను ఉపయోగించలేరు."
+    "same_phone_error": "మీరు ఒకేనెంబర్​ను ఉపయోగించలేరు.",
+    "unable_to_validate_eth_addr_eoa": "EOA చిరునామాను ప్రమాణించలేము"
   },
   "profile": {
     "my_roles": {

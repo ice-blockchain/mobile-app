@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "הכתובת כבר תפוסה",
     "invalid_blockchain_address": "כתובת לא תקינה",
     "ethereum_address_not_eoa": "הכתובת אינה EOA",
-    "same_phone_error": "לא ניתן להשתמש באותו המספר."
+    "same_phone_error": "לא ניתן להשתמש באותו המספר.",
+    "unable_to_validate_eth_addr_eoa": "לא ניתן לוודא את כתובת EOA"
   },
   "profile": {
     "my_roles": {

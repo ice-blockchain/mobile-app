@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "地址已被占用",
     "invalid_blockchain_address": "无效的区块链地址",
     "ethereum_address_not_eoa": "地址不是 EOA",
-    "same_phone_error": "您不能使用同一个电话号码。"
+    "same_phone_error": "您不能使用同一个电话号码。",
+    "unable_to_validate_eth_addr_eoa": "无法验证EOA地址"
   },
   "profile": {
     "my_roles": {

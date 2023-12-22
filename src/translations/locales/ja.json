@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "アドレスはすでに使用されています",
     "invalid_blockchain_address": "無効なアドレス",
     "ethereum_address_not_eoa": "アドレスはEOAではありません",
-    "same_phone_error": "同じ番号を使うことはできません。"
+    "same_phone_error": "同じ番号を使うことはできません。",
+    "unable_to_validate_eth_addr_eoa": "EOAアドレスを検証できません"
   },
   "profile": {
     "my_roles": {

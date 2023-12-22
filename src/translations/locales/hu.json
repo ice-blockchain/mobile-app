@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "Cím már foglalt",
     "invalid_blockchain_address": "Érvénytelen cím",
     "ethereum_address_not_eoa": "A cím nem EOA",
-    "same_phone_error": "Nem használhatod ugyanazt a számot."
+    "same_phone_error": "Nem használhatod ugyanazt a számot.",
+    "unable_to_validate_eth_addr_eoa": "Az EOA cím ellenőrzése nem lehetséges"
   },
   "profile": {
     "my_roles": {

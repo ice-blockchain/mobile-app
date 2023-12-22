@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "Адреса вже використовується",
     "invalid_blockchain_address": "Недійсна адреса блокчейну",
     "ethereum_address_not_eoa": "Адреса не є EOA",
-    "same_phone_error": "Не можна використовувати той же самий номер."
+    "same_phone_error": "Не можна використовувати той же самий номер.",
+    "unable_to_validate_eth_addr_eoa": "Неможливо перевірити адресу EOA"
   },
   "profile": {
     "my_roles": {

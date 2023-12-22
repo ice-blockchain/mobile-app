@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "پتہ پہلے ہی لیا گیا ہے",
     "invalid_blockchain_address": "غیر معتبر بلاک چین پتہ",
     "ethereum_address_not_eoa": "پتہ EOA نہیں ہے",
-    "same_phone_error": "آپ وہی نمبر استعمال نہیں کر سکتے۔"
+    "same_phone_error": "آپ وہی نمبر استعمال نہیں کر سکتے۔",
+    "unable_to_validate_eth_addr_eoa": "EOA کا پتہ تصدیق نہیں کیا جا سکتا"
   },
   "profile": {
     "my_roles": {
