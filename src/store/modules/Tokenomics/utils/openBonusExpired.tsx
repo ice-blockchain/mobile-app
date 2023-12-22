@@ -17,6 +17,7 @@ export const openBonusExpired = () => {
 
   navigate({
     name: 'PopUp',
+    key: 'bonus-expired-popup',
     params: {
       animationProps: {source: LottieAnimations.bonusExpired},
       title: t('extra_bonus.expired_title'),

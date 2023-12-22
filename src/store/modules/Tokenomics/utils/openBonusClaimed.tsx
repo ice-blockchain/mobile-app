@@ -30,6 +30,7 @@ export const openBonusClaimed = ({claimedBonus}: {claimedBonus: number}) => {
 
   navigate({
     name: 'PopUp',
+    key: 'bonus-claimed-popup',
     params: {
       animationProps: {source: animationSource},
       banner: `${FORCE_LTR_TEXT_CHAR}+${claimedBonus}%`,

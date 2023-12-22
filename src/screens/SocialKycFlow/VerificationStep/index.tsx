@@ -92,6 +92,7 @@ export function VerificationStep({
     if (socialKycErrorMessage && socialKycStatus === 'ERROR') {
       navigate({
         name: 'PopUp',
+        key: 'social-kyc-verification-popup',
         params: {
           title: (
             <Text style={styles.warningText}>
