@@ -5,7 +5,7 @@ import {Images} from '@images';
 import {navigate} from '@navigation/utils';
 import {UpdateIcon} from '@svg/UpdateIcon';
 import {t} from '@translations/i18n';
-import {openLink} from '@utils/device';
+import {openLink, openLinkWithInAppBrowser} from '@utils/device';
 import React from 'react';
 import {isIOS} from 'rn-units';
 
@@ -23,7 +23,14 @@ export const openUpdateRequired = () => {
         {
           icon: <UpdateIcon />,
           text: t('pop_up.please_update'),
-          onPress: () => openLink(isIOS ? LINKS.APP_STORE : LINKS.APP_UPDATE),
+          /**
+           * Opening the link in in-app browser on Android because of the Opay browser issue.
+           * See `isOpayBrowserError`.
+           */
+          onPress: () =>
+            isIOS
+              ? openLink(LINKS.APP_STORE)
+              : openLinkWithInAppBrowser({url: LINKS.APP_UPDATE}),
         },
       ],
       dismissOnOutsideTouch: false,
