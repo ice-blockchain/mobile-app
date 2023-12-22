@@ -28,7 +28,7 @@ export const getBarGraphHeight = (numberOfRows: number) => {
 export function getValueData(data: BarGraphData[]) {
   const maxValue = data.length ? Math.max(...data.map(({value}) => value)) : 0;
   const stepValue = Math.ceil(maxValue / NUMBER_OF_STEPS_X);
-  const numberOfSteps = Math.min(maxValue, NUMBER_OF_STEPS_X);
+  const numberOfSteps = Math.ceil(Math.min(maxValue, NUMBER_OF_STEPS_X));
   const lastXValue = stepValue * numberOfSteps;
 
   return {stepValue, lastXValue, numberOfSteps};
