@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "Địa chỉ đã được sử dụng",
     "invalid_blockchain_address": "Địa chỉ blockchain không hợp lệ",
     "ethereum_address_not_eoa": "Địa chỉ không phải là EOA",
-    "same_phone_error": "Bạn không thể sử dụng cùng một số điện thoại."
+    "same_phone_error": "Bạn không thể sử dụng cùng một số điện thoại.",
+    "unable_to_validate_eth_addr_eoa": "Không thể xác minh địa chỉ EOA"
   },
   "profile": {
     "my_roles": {

@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "አድራሻ ቀድሞ ተወስዷል",
     "invalid_blockchain_address": "ልክ ያልሆነ አድራሻ",
     "ethereum_address_not_eoa": "አድራሻ ኢኦኤ አይደለም",
-    "same_phone_error": "ተመሳሳይ ቁጥር መጠቀም አይችሉም"
+    "same_phone_error": "ተመሳሳይ ቁጥር መጠቀም አይችሉም",
+    "unable_to_validate_eth_addr_eoa": "አይዛመው የኢትዮጵያ አካውንት ማውረድ እንዲችል አይችልም"
   },
   "profile": {
     "my_roles": {

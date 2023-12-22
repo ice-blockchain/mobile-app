@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import BottomSheet from '@components/BottomSheet';
 import {commonStyles} from '@constants/styles';
-import BottomSheet from '@gorhom/bottom-sheet';
 import {useSafeAreaFrame} from '@hooks/useSafeAreaFrame';
 import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {HEADER_HEIGHT} from '@navigation/components/Header';

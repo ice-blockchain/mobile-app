@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "Adressen är redan tagen",
     "invalid_blockchain_address": "Ogiltig blockchain-adress",
     "ethereum_address_not_eoa": "Adressen är inte EOA",
-    "same_phone_error": "Du kan inte använda samma nummer."
+    "same_phone_error": "Du kan inte använda samma nummer.",
+    "unable_to_validate_eth_addr_eoa": "Kan inte validera EOA-adressen"
   },
   "profile": {
     "my_roles": {

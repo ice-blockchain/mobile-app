@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {ActivityIndicator} from '@components/ActivityIndicator';
+import {BottomSheetSectionList} from '@components/BottomSheet';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {BottomSheetSectionList} from '@gorhom/bottom-sheet';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useAddCollapsedSnapPointListener} from '@screens/Team/components/Contacts/components/ContactsList/hooks/useAddCollapsedSnapPointListener';
 import {useContactsListRenderItems} from '@screens/Team/components/Contacts/components/ContactsList/hooks/useContactsListRenderItems';

@@ -66,6 +66,11 @@ module.exports = {
                 name: 'react-native-share',
                 message: 'Please use custom wrapper from @services/share',
               },
+              {
+                name: '@gorhom/bottom-sheet',
+                message:
+                  'Please use custom wrapper from @component/BottomSheet',
+              },
             ],
           },
         ],

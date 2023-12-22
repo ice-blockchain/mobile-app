@@ -42,6 +42,16 @@
       android:fullBackupContent="@xml/com_moengage_backup_descriptor"
       android:dataExtractionRules="@xml/com_moengage_data_extraction_rules">
 
+      <!--
+        Disabling Sentry ANR reporting, since there are a lot of Background ANR reports
+        that are not visible to users and are occured on some exotic devices.
+        For example 60% of background ANRs are reported from device model CPH2357 only.
+        User-perceived ANRs (the ones that are visible to users through a dialog on the screen)
+        are still reported by Google Play Console and might be debugged there.
+        https://docs.sentry.io/platforms/android/configuration/app-not-respond/
+      -->
+      <meta-data android:name="io.sentry.anr.enable" android:value="false" />
+
       <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/FACEBOOK_APP_ID"/>
       <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/FACEBOOK_CLIENT_TOKEN"/>
       <meta-data

@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {BalanceHistoryPoint} from '@api/tokenomics/types';
-import {Touchable} from '@components/Touchable';
-import {commonStyles} from '@constants/styles';
 import {
   BottomSheetSectionList,
   ScrollEventsHandlersHookType,
-} from '@gorhom/bottom-sheet';
+} from '@components/BottomSheet';
+import {Touchable} from '@components/Touchable';
+import {commonStyles} from '@constants/styles';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {Filter} from '@screens/HomeFlow/BalanceHistory/components/Filters';
 import {EmptyHistory} from '@screens/HomeFlow/BalanceHistory/components/HistoryList/components/EmptyHistory';

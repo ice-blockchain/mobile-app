@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {BottomSheet, BottomSheetScrollView} from '@components/BottomSheet';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import BottomSheet, {BottomSheetScrollView} from '@gorhom/bottom-sheet';
 import {useSafeAreaFrame} from '@hooks/useSafeAreaFrame';
 import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {HEADER_HEIGHT} from '@navigation/components/Header';

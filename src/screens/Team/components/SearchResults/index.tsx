@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {TeamUserType, User} from '@api/user/types';
+import {BottomSheetSectionList} from '@components/BottomSheet';
 import {UserListItem} from '@components/ListItems/UserListItem';
 import {UserListPingButton} from '@components/ListItems/UserListItem/components/UserListPingButton';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {BottomSheetSectionList} from '@gorhom/bottom-sheet';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';

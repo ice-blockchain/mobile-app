@@ -2,7 +2,12 @@
 
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
-import {isEoaEthereumAddress, isValidEthereumAddress} from '@services/ethereum';
+import {
+  isEoaEthereumAddress,
+  IsEoaEthereumAddressError,
+  isValidEthereumAddress,
+} from '@services/ethereum';
+import {logError} from '@services/logging';
 import {
   isValidationError,
   ValidationError,
@@ -40,27 +45,11 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       userInfo.phoneNumberHash = yield call(hashPhoneNumber, normalizedNumber);
     }
 
-    const isAddrRemoveAction =
-      !userInfo.miningBlockchainAccountAddress &&
-      !!user.miningBlockchainAccountAddress;
-    if (
-      checkProp(userInfo, 'miningBlockchainAccountAddress') &&
-      !isAddrRemoveAction
-    ) {
-      if (
-        !userInfo.miningBlockchainAccountAddress ||
-        !isValidEthereumAddress(userInfo.miningBlockchainAccountAddress)
-      ) {
-        throw new ValidationError(ValidationErrorCode.InvalidEthereumAddress);
-      }
-
-      const isEoa: SagaReturnType<typeof isEoaEthereumAddress> = yield call(
-        isEoaEthereumAddress,
+    if (checkProp(userInfo, 'miningBlockchainAccountAddress')) {
+      yield call(
+        validateMiningBlockchainAccountAddress,
         userInfo.miningBlockchainAccountAddress,
       );
-      if (!isEoa) {
-        throw new ValidationError(ValidationErrorCode.EthereumAddressIsNotEoa);
-      }
     }
 
     const modifiedUser: SagaReturnType<typeof Api.user.updateAccount> =
@@ -129,5 +118,45 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       yield spawn(showError, error);
     }
     throw error;
+  }
+}
+
+function* validateMiningBlockchainAccountAddress(
+  miningBlockchainAccountAddress?: string,
+) {
+  const user: ReturnType<typeof unsafeUserSelector> = yield select(
+    unsafeUserSelector,
+  );
+  const isAddrRemoveAction =
+    !miningBlockchainAccountAddress && !!user.miningBlockchainAccountAddress;
+  if (!isAddrRemoveAction) {
+    if (
+      !miningBlockchainAccountAddress ||
+      !isValidEthereumAddress(miningBlockchainAccountAddress)
+    ) {
+      throw new ValidationError(ValidationErrorCode.InvalidEthereumAddress);
+    }
+
+    try {
+      const isEoa: SagaReturnType<typeof isEoaEthereumAddress> = yield call(
+        isEoaEthereumAddress,
+        miningBlockchainAccountAddress,
+      );
+      if (!isEoa) {
+        throw new ValidationError(ValidationErrorCode.EthereumAddressIsNotEoa);
+      }
+    } catch (error) {
+      const typedError = error as IsEoaEthereumAddressError;
+      const networkErrorTypes: typeof typedError['name'][] = [
+        'HttpRequestError',
+        'TimeoutError',
+      ];
+      if (!networkErrorTypes.includes(typedError.name)) {
+        logError(error);
+      }
+      throw new ValidationError(
+        ValidationErrorCode.UnableToValidateEthereumAddressEoa,
+      );
+    }
   }
 }

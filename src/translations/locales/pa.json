@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "ਐਡਰੈੱਸ ਪਹਿਲਾਂ ਹੀ ਲਿਆਇਆ ਹੈ",
     "invalid_blockchain_address": "ਅਵੈਧ ਬਲਾਕਚੈਨ ਐਡਰੈੱਸ",
     "ethereum_address_not_eoa": "ਐਡਰੈੱਸ EOA ਨਹੀਂ ਹੈ",
-    "same_phone_error": "ਤੁਸੀਂ ਇੱਕੋ ਨੰਬਰ ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਕਰ ਸਕਦੇ।"
+    "same_phone_error": "ਤੁਸੀਂ ਇੱਕੋ ਨੰਬਰ ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਕਰ ਸਕਦੇ।",
+    "unable_to_validate_eth_addr_eoa": "EOA ਐਡਰੈੱਸ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ"
   },
   "profile": {
     "my_roles": {

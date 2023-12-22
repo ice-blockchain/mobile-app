@@ -4,7 +4,7 @@ import {
   ScrollEventHandlerCallbackType,
   ScrollEventsHandlersHookType,
   useScrollEventsHandlersDefault,
-} from '@gorhom/bottom-sheet';
+} from '@components/BottomSheet';
 import {ScrollEventContextType} from '@gorhom/bottom-sheet/lib/typescript/hooks/useScrollEventsHandlersDefault';
 import {
   SharedValue,

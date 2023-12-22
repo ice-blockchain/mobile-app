@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "Dirección ya utilizada",
     "invalid_blockchain_address": "Dirección no válida",
     "ethereum_address_not_eoa": "La dirección no es EOA",
-    "same_phone_error": "No puedes usar el mismo número."
+    "same_phone_error": "No puedes usar el mismo número.",
+    "unable_to_validate_eth_addr_eoa": "No se puede validar la dirección EOA"
   },
   "profile": {
     "my_roles": {

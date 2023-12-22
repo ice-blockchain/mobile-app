@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "ವಿಳಾಸ ಈಗಾಗಲೇ ಸೇರಿಸಲಾಗಿದೆ",
     "invalid_blockchain_address": "ಅಮಾನ್ಯ ವಿಳಾಸ",
     "ethereum_address_not_eoa": "ವಿಳಾಸ EOA ಅಲ್ಲ",
-    "same_phone_error": "ನೀವು ಅದೇ ನಂಬರನ್ನು ಬಳಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
+    "same_phone_error": "ನೀವು ಅದೇ ನಂಬರನ್ನು ಬಳಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
+    "unable_to_validate_eth_addr_eoa": "EOA ವಿಳಾಸವನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
   },
   "profile": {
     "my_roles": {

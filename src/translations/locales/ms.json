@@ -197,7 +197,8 @@
     "blockchain_address_already_taken": "Alamat sudah diambil",
     "invalid_blockchain_address": "Alamat blockchain tidak sah",
     "ethereum_address_not_eoa": "Alamat bukan EOA",
-    "same_phone_error": "Anda tidak boleh menggunakan nombor yang sama."
+    "same_phone_error": "Anda tidak boleh menggunakan nombor yang sama.",
+    "unable_to_validate_eth_addr_eoa": "Tidak dapat mengesahkan alamat EOA"
   },
   "profile": {
     "my_roles": {

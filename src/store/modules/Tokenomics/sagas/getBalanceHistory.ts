@@ -30,7 +30,7 @@ export function* getBalanceHistorySaga({
         userIdSelector,
       );
 
-      const {data}: SagaReturnType<typeof Api.tokenomics.getBalanceHistory> =
+      const response: SagaReturnType<typeof Api.tokenomics.getBalanceHistory> =
         yield call(Api.tokenomics.getBalanceHistory, {
           userId,
           offset: nextPageNumber * PAGE_SIZE,
@@ -39,6 +39,8 @@ export function* getBalanceHistorySaga({
           limit: PAGE_SIZE,
           tz: getTimezoneOffset(),
         });
+
+      const data = response.data ?? [];
 
       yield put(
         TokenomicsActions.GET_BALANCE_HISTORY.SUCCESS.create({

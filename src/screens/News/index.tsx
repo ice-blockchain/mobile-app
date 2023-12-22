@@ -1,21 +1,20 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {ActivityIndicator} from '@components/ActivityIndicator';
+import {BottomSheet, BottomSheetFlatList} from '@components/BottomSheet';
 import {RefreshIceIcon} from '@components/RefreshControl';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import BottomSheet, {BottomSheetFlatList} from '@gorhom/bottom-sheet';
-import {useSafeAreaFrame} from '@hooks/useSafeAreaFrame';
-import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {useReleasedNewsWalkthrough} from '@screens/News/hooks/useReleasedNewsWalkthrough';
+import {useSnapPoints} from '@screens/News/hooks/useSnapPoints';
 import {NEWS_LOAD_LIMIT} from '@store/modules/News/sagas/loadNewsSaga';
 import {NewsSelectors} from '@store/modules/News/selectors';
 import {NoMoreNewsIcon} from '@svg/NoMoreNewsIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
-import React, {useCallback, useMemo} from 'react';
+import React, {useCallback} from 'react';
 import {ListRenderItem, StyleSheet, Text, View} from 'react-native';
 import {
   interpolate,
@@ -26,8 +25,6 @@ import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 import {
-  FEATURED_HEADER_COLLAPSED_HEIGHT,
-  FEATURED_HEADER_EXPANDED_HEIGHT,
   FEATURED_HEADER_OVERLAP,
   FeaturedNewsArticle,
 } from './components/FeaturedNewsArticle';
@@ -36,10 +33,6 @@ import {useOnRefresh} from './hooks/useOnRefresh';
 
 export const News = () => {
   useFocusStatusBar({style: 'light-content'});
-
-  const safeAreaInsets = useSafeAreaInsets();
-
-  const frame = useSafeAreaFrame();
 
   const tabBarOffset = useBottomTabBarOffsetStyle();
 
@@ -55,18 +48,7 @@ export const News = () => {
 
   const data = useSelector(NewsSelectors.getNewsIds);
 
-  const snapPointsData = useMemo(() => {
-    const collapsed =
-      frame.height - FEATURED_HEADER_EXPANDED_HEIGHT + FEATURED_HEADER_OVERLAP;
-
-    const expanded =
-      frame.height - safeAreaInsets.top - FEATURED_HEADER_COLLAPSED_HEIGHT;
-
-    return {
-      points: [collapsed, expanded],
-      delta: Math.abs(collapsed - expanded),
-    };
-  }, [frame.height, safeAreaInsets.top]);
+  const {snapPointsData} = useSnapPoints();
 
   const renderEmptyList = useCallback(() => {
     return (
