@@ -56,35 +56,39 @@ export const useSetEthereumAddress = () => {
       );
       return;
     }
-    navigation.navigate('PopUp', {
-      title: t('button.confirm_address'),
-      message: (
-        <>
-          <Text style={styles.messageText}>
-            {t('ethereum_address.enter_address_confirmation')}
-          </Text>
-          <Text style={[styles.messageText, styles.messageTextBold]}>
-            {address}
-          </Text>
-        </>
-      ),
-      buttons: [
-        {
-          text: t('button.not_sure'),
-          preset: 'outlined',
-        },
-        {
-          text: t('button.confirm'),
-          onPress: () => {
-            submittedRef.current = true;
-            dispatch(
-              AccountActions.UPDATE_ACCOUNT.START.create({
-                miningBlockchainAccountAddress: address,
-              }),
-            );
+    navigation.navigate({
+      name: 'PopUp',
+      key: 'confirm-eth-address-popup',
+      params: {
+        title: t('button.confirm_address'),
+        message: (
+          <>
+            <Text style={styles.messageText}>
+              {t('ethereum_address.enter_address_confirmation')}
+            </Text>
+            <Text style={[styles.messageText, styles.messageTextBold]}>
+              {address}
+            </Text>
+          </>
+        ),
+        buttons: [
+          {
+            text: t('button.not_sure'),
+            preset: 'outlined',
           },
-        },
-      ],
+          {
+            text: t('button.confirm'),
+            onPress: () => {
+              submittedRef.current = true;
+              dispatch(
+                AccountActions.UPDATE_ACCOUNT.START.create({
+                  miningBlockchainAccountAddress: address,
+                }),
+              );
+            },
+          },
+        ],
+      },
     });
   };
 

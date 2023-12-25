@@ -44,18 +44,22 @@ export const useSetEmail = () => {
   }, [dispatch, email]);
 
   const onSubmitPress = useCallback(() => {
-    navigation.navigate('PopUp', {
-      title: t('settings.confirm_email_confirmation_title'),
-      message: t('settings.update_email_confirmation_subtitle'),
-      buttons: [
-        DEFAULT_DIALOG_NO_BUTTON,
-        {
-          text: t('button.continue'),
-          onPress: () => {
-            sendVerificationEmail();
+    navigation.navigate({
+      name: 'PopUp',
+      key: 'confirm-email-popup',
+      params: {
+        title: t('settings.confirm_email_confirmation_title'),
+        message: t('settings.update_email_confirmation_subtitle'),
+        buttons: [
+          DEFAULT_DIALOG_NO_BUTTON,
+          {
+            text: t('button.continue'),
+            onPress: () => {
+              sendVerificationEmail();
+            },
           },
-        },
-      ],
+        ],
+      },
     });
   }, [navigation, sendVerificationEmail]);
 

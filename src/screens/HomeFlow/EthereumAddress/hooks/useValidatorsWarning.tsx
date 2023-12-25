@@ -21,23 +21,27 @@ export const useValidatorsWarning = () => {
     !user.miningBlockchainAccountAddress && !warningConfirmed;
 
   const showWarning = () => {
-    navigation.navigate('PopUp', {
-      title: t('ethereum_address.validators_warning_title'),
-      message: t('ethereum_address.validators_warning_text'),
-      buttons: [
-        {
-          text: t('button.not_sure'),
-          preset: 'outlined',
-        },
-        {
-          text: t('button.confirm'),
-          onPress: () => {
-            dispatch(
-              AccountActions.SET_ETHEREUM_ADDR_WARNING_CONFIRMED.STATE.create(),
-            );
+    navigation.navigate({
+      name: 'PopUp',
+      key: 'eth-address-warning-popup',
+      params: {
+        title: t('ethereum_address.validators_warning_title'),
+        message: t('ethereum_address.validators_warning_text'),
+        buttons: [
+          {
+            text: t('button.not_sure'),
+            preset: 'outlined',
           },
-        },
-      ],
+          {
+            text: t('button.confirm'),
+            onPress: () => {
+              dispatch(
+                AccountActions.SET_ETHEREUM_ADDR_WARNING_CONFIRMED.STATE.create(),
+              );
+            },
+          },
+        ],
+      },
     });
   };
 

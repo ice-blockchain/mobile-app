@@ -63,20 +63,24 @@ export const NotificationControls = ({
   );
 
   const onDisableAllNotifications = useCallback(() => {
-    navigation.navigate('PopUp', {
-      title: t('settings.notifications.disable_notifications'),
-      message: t('settings.notifications.disable_notifications_description'),
-      buttons: [
-        {
-          text: t('button.disable'),
-          preset: 'outlined',
-          onPress: () =>
-            changeNotificationSettings(DISABLE_ALL_NOTIFICATION_DOMAIN, true),
-        },
-        {
-          text: t('button.cancel'),
-        },
-      ],
+    navigation.navigate({
+      name: 'PopUp',
+      key: 'confirm-disable-notifications-popup',
+      params: {
+        title: t('settings.notifications.disable_notifications'),
+        message: t('settings.notifications.disable_notifications_description'),
+        buttons: [
+          {
+            text: t('button.disable'),
+            preset: 'outlined',
+            onPress: () =>
+              changeNotificationSettings(DISABLE_ALL_NOTIFICATION_DOMAIN, true),
+          },
+          {
+            text: t('button.cancel'),
+          },
+        ],
+      },
     });
   }, [changeNotificationSettings, navigation]);
 
