@@ -26,7 +26,7 @@ export const openConfirmResurrectNo = (params: ResurrectRequiredData) => {
 
   navigate({
     name: 'PopUp',
-    key: 'confirm-resurrect-no-popup',
+    key: 'confirm-resurrect-popup',
     params: {
       imageProps: {source: Images.popUp.resurrection},
       title: t('pop_up.please_confirm'),
