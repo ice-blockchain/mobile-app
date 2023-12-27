@@ -1175,8 +1175,8 @@
     "enter_address_confirmation": "Ste prepričani, da je naslov Ethereum pravilen?",
     "validators_warning_title": "Potrdite Naslov",
     "validators_warning_text": "Prosimo, upoštevajte, da osebe, ki je dodala Ethereum naslov na svoj račun, ni dovoljeno postati eden izmed top 300 validacij glede na naš beli papir za glavni zagon.",
-    "okxWalletDescription": "Priporočamo uporabo vašega naslova Ethereum iz [[:bold]]OKX Exchange[[/:bold]] za izogibanje stroškom plina.\n\nČe OKX ni na voljo v vaši državi, lahko uporabite svojo lastno upravljano denarnico, kot je MetaMask ali Trust Wallet.",
-    "okxWalletAction": "USTVARI RAČUN NA OKX"
+    "okxWalletDescription": "Zaščitite svoje kovance s OKX Wallet, našim zaupanja vrednim samostojnim uradnim partnerjem za denarnice.",
+    "okxWalletAction": "PRENESITE OKX DENARNICO"
   },
   "social_kyc": {
     "header": "Preverjanje",

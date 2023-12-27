@@ -1175,8 +1175,8 @@
     "enter_address_confirmation": "Adakah anda pasti bahawa alamat Ethereum adalah betul?",
     "validators_warning_title": "Sahkan Alamat",
     "validators_warning_text": "Sila ambil perhatian bahawa individu yang telah menambah alamat Ethereum ke akaun mereka tidak layak untuk menjadi salah satu daripada 300 penentusah teratas mengikut buku putih kami untuk pelancaran mainnet.",
-    "okxWalletDescription": "Kami mengesyorkan penggunaan alamat Ethereum [[:bold]]OKX Exchange[[/:bold]] anda untuk mengelakkan sebarang yuran gas.\n\nJika OKX tidak tersedia di negara anda, anda boleh menggunakan dompet sendiri seperti MetaMask atau Trust Wallet.",
-    "okxWalletAction": "CIPTA AKAUN DI OKX"
+    "okxWalletDescription": "Selamatkan mata wang anda dengan OKX Wallet, rakan dompet rasmi penjagaan sendiri kami yang dipercayai.",
+    "okxWalletAction": "MUAT TURUN OKX WALLET"
   },
   "social_kyc": {
     "header": "Pengesahan",

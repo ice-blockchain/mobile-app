@@ -1175,8 +1175,8 @@
     "enter_address_confirmation": "您确定 Ethereum 地址是正确的吗？",
     "validators_warning_title": "确认地址",
     "validators_warning_text": "请注意，已将Ethereum地址添加到其帐户的个人不符合我们的白皮书要求，不能成为前300名验证者之一，用于主网发布。",
-    "okxWalletDescription": "我们建议您使用[[:bold]]OKX Exchange[[/:bold]]提供的Ethereum地址，以避免任何气体费用。\n\n如果在您的国家不提供OKX，您可以使用自托管钱包，如MetaMask或Trust Wallet。",
-    "okxWalletAction": "在OKX上创建账户"
+    "okxWalletDescription": "使用OKX Wallet安全保管您的硬币，我们值得信赖的自托管官方钱包合作伙伴。",
+    "okxWalletAction": "下载OKX WALLET"
   },
   "social_kyc": {
     "header": "验证",

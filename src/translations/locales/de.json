@@ -1175,8 +1175,8 @@
     "enter_address_confirmation": "Sind Sie sicher, dass die Ethereum-Adresse korrekt ist?",
     "validators_warning_title": "Adresse bestätigen",
     "validators_warning_text": "Bitte beachten Sie, dass Personen, die ihre Ethereum-Adresse zu ihrem Konto hinzugefügt haben, gemäß unserem Whitepaper für den Start des Hauptnetzwerks nicht berechtigt sind, einer der besten 300 Validatoren zu werden.",
-    "okxWalletDescription": "Wir empfehlen die Verwendung Ihrer Ethereum-Adresse auf der [[:bold]]OKX Exchange-Plattform[[/:bold]], um Gasgebühren zu vermeiden.\n\nWenn OKX in Ihrem Land nicht verfügbar ist, können Sie eine eigene Wallet wie MetaMask oder Trust Wallet verwenden.",
-    "okxWalletAction": "KONTO BEI OKX ERSTELLEN"
+    "okxWalletDescription": "Sichern Sie Ihre Münzen mit OKX Wallet, unserem vertrauenswürdigen selbstverwalteten offiziellen Wallet-Partner.",
+    "okxWalletAction": "OKX WALLET HERUNTERLADEN"
   },
   "social_kyc": {
     "header": "Verifizierung",

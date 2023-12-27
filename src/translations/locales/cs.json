@@ -1175,8 +1175,8 @@
     "enter_address_confirmation": "Jste si jisti, že je správná adresa Ethereum?",
     "validators_warning_title": "Potvrďte Adresu",
     "validators_warning_text": "Upozorňujeme, že osoby, které přidaly Ethereum adresu k jejich účtu, nemají nárok stát se jedním z nejlepších 300 validátorů podle našeho whitepaperu pro hlavní síťový spuštění.",
-    "okxWalletDescription": "Doporučujeme používat svou adresu Ethereum na platformě [[:bold]]OKX Exchange[[/:bold]], abyste se vyhnuli poplatkům za plyn.\n\nPokud není OKX k dispozici ve vaší zemi, můžete použít svou vlastní peněženku, jako je MetaMask nebo Trust Wallet.",
-    "okxWalletAction": "VYTVOŘIT ÚČET NA OKX"
+    "okxWalletDescription": "Zabezpečte své mince s OKX Wallet, naším důvěryhodným samostatným oficiálním partnerem pro peněženky.",
+    "okxWalletAction": "STÁHNOUT OKX WALLET"
   },
   "social_kyc": {
     "header": "Ověření",

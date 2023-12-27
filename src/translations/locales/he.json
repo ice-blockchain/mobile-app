@@ -1182,8 +1182,8 @@
     "enter_address_confirmation": "האם אתה בטוח שכתובת Ethereum היא נכונה?",
     "validators_warning_title": "אשר כתובת",
     "validators_warning_text": "שימו לב שאנשים שהוסיפו כתובת Ethereum לחשבונם אינם זכאים להיות אחד מ-300 האומתנים המובילים כפי שנקבע בספר הלבן שלנו לשקיעה ברשת הראשית.",
-    "okxWalletDescription": "אנו ממליצים להשתמש בכתובת Ethereum של [[:bold]]OKX Exchange[[/:bold]] כדי להימנע מדמי הגז.\n\nאם OKX אינו זמין במדינתך, תוכל להשתמש בארנק מתמקד עצמאי כמו MetaMask או Trust Wallet.",
-    "okxWalletAction": "יצירת חשבון ב-OKX"
+    "okxWalletDescription": "אבטח את המטבעות שלך עם OKX Wallet, שותף הארנק הרשמי שלנו לניהול עצמי האמין.",
+    "okxWalletAction": "הורד את OKX WALLET"
   },
   "social_kyc": {
     "header": "אימות",

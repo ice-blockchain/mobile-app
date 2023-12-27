@@ -1175,8 +1175,8 @@
     "enter_address_confirmation": "Biztos benne, hogy az Ethereum cím helyes?",
     "validators_warning_title": "Cím megerősítése",
     "validators_warning_text": "Kérjük, vegye figyelembe, hogy azok az egyének, akik hozzáadtak egy Ethereum címet a fiókjukhoz, nem jogosultak az egyik legjobb 300 validátor közül lenni a fehér könyvünk alapján a mainnet indításához.",
-    "okxWalletDescription": "A gáz díjak elkerülése érdekében javasoljuk, hogy használja a [[:bold]]OKX Exchange[[/:bold]] Ethereum címét.\n\nHa az OKX nem elérhető az Ön országában, használhat egy önellátó pénztárcát, mint például a MetaMask vagy a Trust Wallet.",
-    "okxWalletAction": "OKX SZÁMLA LÉTREHOZÁSA"
+    "okxWalletDescription": "Védje meg érméit az OKX Wallet segítségével, a megbízható önkezelésű hivatalos pénztárcapartnerünkkel.",
+    "okxWalletAction": "OKX WALLET LETÖLTÉSE"
   },
   "social_kyc": {
     "header": "Ellenőrzés",

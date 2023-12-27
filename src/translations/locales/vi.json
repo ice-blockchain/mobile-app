@@ -1175,8 +1175,8 @@
     "enter_address_confirmation": "Bạn có chắc chắn rằng địa chỉ Ethereum là đúng không?",
     "validators_warning_title": "Xác Nhận Địa Chỉ",
     "validators_warning_text": "Vui lòng lưu ý rằng những người đã thêm địa chỉ Ethereum vào tài khoản của họ không đủ điều kiện trở thành một trong 300 người xác minh hàng đầu theo whitepaper của chúng tôi cho việc ra mắt mainnet.",
-    "okxWalletDescription": "Chúng tôi khuyên bạn sử dụng địa chỉ Ethereum của [[:bold]]OKX Exchange[[/:bold]] để tránh mọi khoản phí gas.\n\nNếu OKX không có sẵn trong quốc gia của bạn, bạn có thể sử dụng ví tự quản lý như MetaMask hoặc Trust Wallet.",
-    "okxWalletAction": "TẠO TÀI KHOẢN TRÊN OKX"
+    "okxWalletDescription": "Bảo vệ đồng của bạn với OKX Wallet, đối tác ví tự lưu trữ chính thức đáng tin cậy của chúng tôi.",
+    "okxWalletAction": "TẢI VỀ OKX WALLET"
   },
   "social_kyc": {
     "header": "Xác minh",
