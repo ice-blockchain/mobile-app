@@ -3,6 +3,7 @@
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {
+  isChecksummedAddress,
   isEoaEthereumAddress,
   IsEoaEthereumAddressError,
   isValidEthereumAddress,
@@ -50,6 +51,11 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
         validateMiningBlockchainAccountAddress,
         userInfo.miningBlockchainAccountAddress,
       );
+
+      if (userInfo.miningBlockchainAccountAddress) {
+        userInfo.miningBlockchainAccountAddress =
+          userInfo.miningBlockchainAccountAddress.toLowerCase();
+      }
     }
 
     const modifiedUser: SagaReturnType<typeof Api.user.updateAccount> =
@@ -135,6 +141,12 @@ function* validateMiningBlockchainAccountAddress(
       !isValidEthereumAddress(miningBlockchainAccountAddress)
     ) {
       throw new ValidationError(ValidationErrorCode.InvalidEthereumAddress);
+    }
+
+    if (!isChecksummedAddress(miningBlockchainAccountAddress)) {
+      throw new ValidationError(
+        ValidationErrorCode.EthereumAddressIsNotChecksummed,
+      );
     }
 
     try {

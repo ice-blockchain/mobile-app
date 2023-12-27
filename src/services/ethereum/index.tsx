@@ -2,6 +2,7 @@
 
 import {
   Address,
+  checksumAddress,
   createPublicClient,
   GetBytecodeErrorType,
   http,
@@ -25,6 +26,10 @@ export const isEoaEthereumAddress = async (
     address: address as Address,
   });
   return !code;
+};
+
+export const isChecksummedAddress = (address: string): boolean => {
+  return checksumAddress(address as Address) === address;
 };
 
 export type IsEoaEthereumAddressError = GetBytecodeErrorType;

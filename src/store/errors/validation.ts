@@ -10,6 +10,7 @@ export enum ValidationErrorCode {
   InvalidEthereumAddress = 'InvalidEthereumAddress',
   EthereumAddressIsNotEoa = 'EthereumAddressIsNotEoa',
   UnableToValidateEthereumAddressEoa = 'UnableToValidateEthereumAddressEoa',
+  EthereumAddressIsNotChecksummed = 'EthereumAddressIsNotChecksummed',
 }
 
 const validationErrorMessages: {[code in ValidationErrorCode]: string} = {
@@ -22,6 +23,7 @@ const validationErrorMessages: {[code in ValidationErrorCode]: string} = {
   UnableToValidateEthereumAddressEoa: t(
     'errors.unable_to_validate_eth_addr_eoa',
   ),
+  EthereumAddressIsNotChecksummed: t('errors.ethereum_address_not_checksummed'),
 };
 
 export class ValidationError extends Error {

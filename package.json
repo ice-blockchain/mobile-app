@@ -61,6 +61,7 @@
     "expo-camera": "^13.6.0",
     "expo-haptics": "12.6.0",
     "exponential-backoff": "^3.1.0",
+    "fast-text-encoding": "^1.0.6",
     "ffmpeg-kit-react-native": "6.0.0",
     "getstream": "^8.1.0",
     "i18n-js": "^4.1.1",
