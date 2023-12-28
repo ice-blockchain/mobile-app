@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "유효하지 않은 주소",
     "ethereum_address_not_eoa": "주소가 EOA가 아닙니다",
     "same_phone_error": "같은 번호를 사용할 수 없습니다.",
-    "unable_to_validate_eth_addr_eoa": "EOA 주소를 확인할 수 없습니다"
+    "unable_to_validate_eth_addr_eoa": "EOA 주소를 확인할 수 없습니다",
+    "ethereum_address_not_checksummed": "주소가 확인되지 않았습니다"
   },
   "profile": {
     "my_roles": {
@@ -366,8 +367,8 @@
       "subtitle": "다가오는 메인넷 앱과 그 독특한 기능을 미리 만나보세요."
     },
     "ethereum_address": {
-      "title": "이더리움 주소",
-      "subtitle": "여기에 Ethereum 주소를 입력하세요."
+      "title": "BNB Smart Chain 주소",
+      "subtitle": "여기에 BSC 주소를 입력하십시오."
     },
     "verified_tooltip": {
       "title": "KYC 인증됨"
@@ -1169,12 +1170,12 @@
     }
   },
   "ethereum_address": {
-    "title": "이더리움 주소",
-    "enter_address_title": "Ethereum 주소를 입력하세요",
-    "enter_address_description": "제 1 단계에서는 ICE 토큰이 이더리움 블록체인에 출시됩니다. 메인넷이 시작되면 토큰을 이더리움에서 Ice Open Network (ION) 블록체인으로 교환할 수 있습니다.",
-    "enter_address_confirmation": "Ethereum 주소가 정확한가요?",
+    "title": "BNB Smart Chain 주소",
+    "enter_address_title": "당신의\nBNB Smart Chain 주소를 입력하십시오",
+    "enter_address_description": "제1 단계에서 ICE 토큰은 BNB Smart Chain 블록체인에 출시됩니다. 메인넷트가 시작되면 토큰은 BNB Smart Chain에서 Ice Open Network (ION) 블록체인으로 교환 가능합니다.",
+    "enter_address_confirmation": "BNB Smart Chain 주소가 정확한지 확신하십니까?",
     "validators_warning_title": "주소 확인",
-    "validators_warning_text": "계정에 Ethereum 주소를 추가한 개인은 주요넷 발표를 위한 우리의 화이트페이퍼에 따라 상위 300명의 검증자 중 하나가 될 자격이 없음을 참고하십시오.",
+    "validators_warning_text": "주의: BNB Smart Chain 주소를 계정에 추가한 개인은 메인넷트 론칭을 위한 저희 화이트페이퍼에 명시된 대로 최상위 300개 유효성 검사자 중 하나가 될 자격이 없습니다.",
     "okxWalletDescription": "OKX Wallet을 사용하여 동전을 안전하게 보호하고 우리의 신뢰할 수 있는 자체 관리 공식 월렛 파트너입니다.",
     "okxWalletAction": "OKX WALLET 다운로드"
   },
@@ -1237,8 +1238,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "이더리움 분배",
-      "description": "기존의 X 프로필을 사용하여 계정을 쉽게 확인하고 이더리움 ICE 코인을 받아보세요."
+      "title": "BNB Smart Chain 분배",
+      "description": "기존 X 프로필을 사용하여 계정을 손쉽게 확인하고 BNB Smart Chain ICE 코인을 수령하십시오."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1252,7 @@
     },
     "results_step": {
       "success": {
-        "description": "축하합니다, 귀하의 확인을 성공적으로 완료하였습니다. 이제 Ethereum 분배를 받을 자격이 있습니다."
+        "description": "축하합니다, 당신은 성공적으로 검증을 완료하셨습니다. 이제 BNB Smart Chain 분배 자격이 부여됩니다."
       }
     }
   }

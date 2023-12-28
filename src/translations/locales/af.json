@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "Ongeldige adres",
     "ethereum_address_not_eoa": "Adres is nie EOA nie",
     "same_phone_error": "Jy kan nie dieselfde nommer gebruik nie.",
-    "unable_to_validate_eth_addr_eoa": "Kan nie EOA valideer nie"
+    "unable_to_validate_eth_addr_eoa": "Kan nie EOA valideer nie",
+    "ethereum_address_not_checksummed": "Adres is nie gechecksum nie"
   },
   "profile": {
     "my_roles": {
@@ -366,8 +367,8 @@
       "subtitle": "Kry 'n voorskou van ons aankomende Hoofnet-toep en sy unieke kenmerke."
     },
     "ethereum_address": {
-      "title": "Ethereum-adres",
-      "subtitle": "Voer asseblief jou Ethereum-adres hier in."
+      "title": "BNB Smart Chain-adres",
+      "subtitle": "Voer asseblief jou BSC-adres hier in."
     },
     "verified_tooltip": {
       "title": "KYC Geverifieer"
@@ -1172,12 +1173,12 @@
     }
   },
   "ethereum_address": {
-    "title": "Ethereum Adres",
-    "enter_address_title": "Voer jou\nEthereum-adres in",
-    "enter_address_description": "Tydens Fase Een sal die ICE-tokens op die Ethereum-blokchain vrygestel word. Sodra die Hoofnet begin het, sal die tokens oorgeruil kan word van Ethereum na die Ice Open Network (ION) blokchain.",
-    "enter_address_confirmation": "Is jy seker dat die Ethereum-adres korrek is?",
+    "title": "BNB Smart Chain-adres",
+    "enter_address_title": "Voer jou\nBNB Smart Chain-adres in",
+    "enter_address_description": "Tydens Fase Een sal die ICE-tokens op die BNB Smart Chain blockchain vrygestel word. Sodra die hoofnet geloods is, sal die tokens vanaf die BNB Smart Chain na die Ice Open Network (ION) blockchain geruil kan word.",
+    "enter_address_confirmation": "Is jy seker dat die BNB Smart Chain-adres korrek is?",
     "validators_warning_title": "Bevestig Adres",
-    "validators_warning_text": "Let daarop dat individue wat 'n Ethereum-adres aan hul rekening bygevoeg het, nie in aanmerking kom om een van die top 300-validatorse te word volgens ons witboek vir die hoofnetlansering nie.",
+    "validators_warning_text": "Let daarop dat individue wat 'n BNB Smart Chain-adres bygevoeg het tot hul rekening, nie in aanmerking kom om een van die top 300-valideerders te word nie, soos uiteengesit in ons whitepaper vir die hoofnet-lansering nie.",
     "okxWalletDescription": "Beveilig jou munte met OKX Wallet, ons vertroude self-bewaar offisiële wallet-maatskappy.",
     "okxWalletAction": "LAAI OKX-PLIG AF"
   },
@@ -1240,8 +1241,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "Ethereum Verspreiding",
-      "description": "Ontvang jou Ethereum ICE-munte deur jou rekening maklik te verifieer met behulp van jou bestaande X-profiel."
+      "title": "BNB Smart Chain-verspreiding",
+      "description": "Ontvang jou BNB Smart Chain ICE-munte deur jou rekening maklik te verifieer met behulp van jou bestaande X-profiel."
     },
     "instructions_step": {
       "x": {
@@ -1254,7 +1255,7 @@
     },
     "results_step": {
       "success": {
-        "description": "Geluk, u het u verifikasie suksesvol voltooi. U is nou geregtig vir die Ethereum-verspreiding."
+        "description": "Gelukwens, jy het jou verifikasie suksesvol voltooi. Jy kom nou in aanmerking vir die BNB Smart Chain-verspreiding."
       }
     }
   }

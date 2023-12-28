@@ -1172,7 +1172,7 @@
     "enter_address_description": "During Phase One, the ICE tokens will be released on the BNB Smart Chain blockchain. Once Mainnet has been launched, the tokens will be swappable from BNB Smart Chain to Ice Open Network (ION) blockchain.",
     "enter_address_confirmation": "Are you sure that the BNB Smart Chain address is correct?",
     "validators_warning_title": "Confirm Address",
-    "validators_warning_text": "Please note that individuals who have added an BNB Smart Chain address to their account are not eligible to become one of the top 300 validators as per our whitepaper for the mainnet launch.",
+    "validators_warning_text": "Please note that individuals who have added a BNB Smart Chain address to their account are not eligible to become one of the top 300 validators as per our whitepaper for the mainnet launch.",
     "okxWalletDescription": "Secure your coins with OKX Wallet, our trusted self-custodial official wallet partner.",
     "okxWalletAction": "DOWNLOAD OKX WALLET"
   },

@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "无效的区块链地址",
     "ethereum_address_not_eoa": "地址不是 EOA",
     "same_phone_error": "您不能使用同一个电话号码。",
-    "unable_to_validate_eth_addr_eoa": "无法验证EOA地址"
+    "unable_to_validate_eth_addr_eoa": "无法验证EOA地址",
+    "ethereum_address_not_checksummed": "地址无法验证"
   },
   "profile": {
     "my_roles": {
@@ -366,8 +367,8 @@
       "subtitle": "提前了解我们即将推出的 Mainnet 应用程序及其独特功能。"
     },
     "ethereum_address": {
-      "title": "以太坊地址",
-      "subtitle": "请在此处输入您的 Ethereum 地址。"
+      "title": "BNB Smart Chain地址",
+      "subtitle": "请在此处输入您的BSC地址。"
     },
     "verified_tooltip": {
       "title": "KYC 已验证"
@@ -1169,12 +1170,12 @@
     }
   },
   "ethereum_address": {
-    "title": "以太坊地址",
-    "enter_address_title": "输入\n您的 Ethereum 地址",
-    "enter_address_description": "在第一阶段，ICE 代币将在以太坊区块链上发布。一旦启动了主网，代币将可以从以太坊转换到 Ice Open Network (ION) 区块链。",
-    "enter_address_confirmation": "您确定 Ethereum 地址是正确的吗？",
+    "title": "BNB Smart Chain地址",
+    "enter_address_title": "在此处输入您的\nBNB Smart Chain地址",
+    "enter_address_description": "在第一阶段期间，ICE代币将在BNB Smart Chain区块链上发布。在Mainnet启动后，您可以将代币从BNB Smart Chain交换到Ice Open Network（ION）区块链。",
+    "enter_address_confirmation": "您确定您的BNB Smart Chain地址是正确的吗？",
     "validators_warning_title": "确认地址",
-    "validators_warning_text": "请注意，已将Ethereum地址添加到其帐户的个人不符合我们的白皮书要求，不能成为前300名验证者之一，用于主网发布。",
+    "validators_warning_text": "请注意：将BNB Smart Chain地址添加到其帐户的个人不有资格成为我们白皮书中主网启动的300个主验证者之一。",
     "okxWalletDescription": "使用OKX Wallet安全保管您的硬币，我们值得信赖的自托管官方钱包合作伙伴。",
     "okxWalletAction": "下载OKX WALLET"
   },
@@ -1237,8 +1238,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "以太坊分发",
-      "description": "通过使用您的现有X个人资料轻松验证您的帐户，获取您的以太坊ICE代币。"
+      "title": "BNB Smart Chain分发",
+      "description": "通过使用您现有的X个人资料轻松验证您的帐户，接收您在BNB Smart Chain上的ICE代币。"
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1252,7 @@
     },
     "results_step": {
       "success": {
-        "description": "恭喜，您已成功完成验证。您现在有资格参与以太坊的分发。"
+        "description": "恭喜，您已成功完成验证。现在，您有资格参与BNB Smart Chain分发。"
       }
     }
   }

@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "無効なアドレス",
     "ethereum_address_not_eoa": "アドレスはEOAではありません",
     "same_phone_error": "同じ番号を使うことはできません。",
-    "unable_to_validate_eth_addr_eoa": "EOAアドレスを検証できません"
+    "unable_to_validate_eth_addr_eoa": "EOAアドレスを検証できません",
+    "ethereum_address_not_checksummed": "アドレスが検証されていません"
   },
   "profile": {
     "my_roles": {
@@ -366,8 +367,8 @@
       "subtitle": "今後のメインネットアプリとそのユニークな機能の一部をご紹介します。"
     },
     "ethereum_address": {
-      "title": "イーサリアムアドレス",
-      "subtitle": "ここにEthereumアドレスを入力してください。"
+      "title": "BNB Smart Chain アドレス",
+      "subtitle": "ここにBSCアドレスを入力してください。"
     },
     "verified_tooltip": {
       "title": "KYC 認証済み"
@@ -1169,12 +1170,12 @@
     }
   },
   "ethereum_address": {
-    "title": "イーサリアムアドレス",
-    "enter_address_title": "あなたの\nEthereumアドレスを入力",
-    "enter_address_description": "フェーズ1では、ICEトークンはEthereumブロックチェーン上にリリースされます。メインネットが開始されると、トークンはEthereumからIce Open Network (ION)ブロックチェーンに交換できるようになります。",
-    "enter_address_confirmation": "Ethereumアドレスが正しいことを確認していますか？",
+    "title": "BNB Smart Chain アドレス",
+    "enter_address_title": "あなたの\nBNB Smart Chain アドレスを入力してください",
+    "enter_address_description": "フェーズ1中、ICEトークンはBNB Smart Chainブロックチェーン上にリリースされます。メインネットが開始されると、トークンはBNB Smart ChainからIce Open Network（ION）ブロックチェーンに交換できるようになります。",
+    "enter_address_confirmation": "BNB Smart Chainアドレスが正しいことを確認していますか？",
     "validators_warning_title": "アドレスを確認",
-    "validators_warning_text": "Ethereumアドレスをアカウントに追加した個人は、メインネットの発売に関する当社のホワイトペーパーに従い、トップ300のバリデータの1人になる資格がありませんので、ご注意ください。",
+    "validators_warning_text": "アカウントにBNB Smart Chainアドレスを追加した個人は、メインネットの発売に関するホワイトペーパーに従ってトップ300バリデータの1つになる資格がありません。",
     "okxWalletDescription": "OKX Walletを使ってコインを安全に保護し、信頼できる自己管理型の公式ウォレットパートナーです。",
     "okxWalletAction": "OKX WALLETをダウンロード"
   },
@@ -1237,8 +1238,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "イーサリアムの配布",
-      "description": "既存のXプロファイルを使用して、アカウントを簡単に確認して、Ethereum ICEコインを受け取ります。"
+      "title": "BNB Smart Chainディストリビューション",
+      "description": "既存のXプロファイルを使用してアカウントを簡単に確認し、BNB Smart Chain ICEコインを受け取ります。"
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1252,7 @@
     },
     "results_step": {
       "success": {
-        "description": "おめでとうございます、正常に確認が完了しました。現在、Ethereumの分配の対象となっています。"
+        "description": "おめでとうございます、あなたは確認を成功裡に完了しました。BNB Smart Chainディストリビューションの対象となります。"
       }
     }
   }

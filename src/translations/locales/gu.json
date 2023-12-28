@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "અમાન્ય સરખું",
     "ethereum_address_not_eoa": "સરખું EOA નથી",
     "same_phone_error": "તમે સમાન નંબરનો ઉપયોગ ન કરી શકો.",
-    "unable_to_validate_eth_addr_eoa": "EOA સરનામું માન્ય કરવામાં આવતી નથી"
+    "unable_to_validate_eth_addr_eoa": "EOA સરનામું માન્ય કરવામાં આવતી નથી",
+    "ethereum_address_not_checksummed": "સરનામું ચેકસમ નથી"
   },
   "profile": {
     "my_roles": {
@@ -366,8 +367,8 @@
       "subtitle": "આમાંથી આવતી મેનનેટ એપ્લિકેશન અને તેની વિશેષ વ્યક્તિગત વ્યાપાર વેચાણવાળી વ્યાપાર મુકાબલો."
     },
     "ethereum_address": {
-      "title": "ઈથેરિયમ સરખું",
-      "subtitle": "કૃપા કરીને તમારું Ethereum સરખું અહીં દાખલ કરો."
+      "title": "BNB Smart Chain સરનામું",
+      "subtitle": "કૃપા કરીને અહીં તમારો BSC સરનામું દાખલ કરો."
     },
     "verified_tooltip": {
       "title": "KYC માન્ય કર્યો"
@@ -1169,12 +1170,12 @@
     }
   },
   "ethereum_address": {
-    "title": "ઈથેરિયમ સરખું",
-    "enter_address_title": "તમારું\nEthereum સરખું દાખલ કરો",
-    "enter_address_description": "ફેઝ વન દરમ્યાન, ICE ટોકન્સ ઈથેરિયમ બ્લોકચેન પર મુકાબલેલી છે. એકવખત્ મેનનેટ ચાલનાર છે, તે ટોકન્સ ઈથેરિયમમાંથી આઇસ ઓપન નેટવર્ક (ION) બ્લોકચેનમાં બદલી શકાશે.",
-    "enter_address_confirmation": "શું તમે ખોટો છો કે Ethereum સરકાર સાચો છે?",
+    "title": "BNB Smart Chain સરનામું",
+    "enter_address_title": "તમારો\nBNB Smart Chain સરનામું દાખલ કરો",
+    "enter_address_description": "ફેઝ વન દરમ્યાન, ICE ટોકન્સ BNB Smart Chain બ્લોકચેન પર મુકવામાં આવશે. એકવખત Mainnet લોન્ચ થઈ જય, ICE ટોકન્સ BNB Smart Chain થી Ice Open Network (ION) બ્લોકચેન પર વદળી શકશે.",
+    "enter_address_confirmation": "શું તમે ખરો છો કે BNB Smart Chain સરનામું સાચો છે?",
     "validators_warning_title": "સરખું સરખું પત્ર",
-    "validators_warning_text": "મેળવેલા મોકલેલી અનેથડ્યો યુજર્સ્ ધ્યાનમાં રાખો કે તેમના એક Ethereum સરખું ઉપયોગકર્તાના ગણવામાં આવ્યા છે તે આમાં થવાનો હકદાર નથી, અમારી મુખ્ય નેટવર્ક લોન્ચ માટે અમારા વ્હાઇટપેપર પ્રમાણે.",
+    "validators_warning_text": "મહેન્દ્રો, જે વ્યક્તિઓને તેમનો એકાઉન્ટ માં BNB Smart Chain સરનામું ઉમેર્યો છે, તે મુખ્ય નેટવર્ક લોન્ચ માટે આમનો ૩૦૦ ટોપ વેલીડેટર્સના વચ્ચેનો એક નથી બનવાનો અધિકાર રાખે છે.",
     "okxWalletDescription": "આપણી નિમ્નાધિકારી આધિકારિક મંડણીનો પાર્ટનર સાથે OKX વોલેટ સાથે આપણી નાણાઓને સુરક્ષિત કરો.",
     "okxWalletAction": "OKX વોલેટ ડાઉનલોડ કરો"
   },
@@ -1237,8 +1238,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "ઇથેરિયમ વિતરણ",
-      "description": "તમારી એક્ઝિસ્ટિંગ X પ્રોફાઇલનો ઉપયોગ કરીને તમારો એકાઉન્ટ સરળતાથી ચકાસો લઈને તમારી Ethereum ICE મુદ્રાઓ મેળવો."
+      "title": "BNB Smart Chain વિતરણ",
+      "description": "આપનો મૌજૂદ X પ્રોફાઇલ વાપરીને આપનો એકાઉન્ટ સહજેથી યથાર્થ કરીને આપનાં BNB Smart Chain ICE ટોકન્સ મેળવો."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1252,7 @@
     },
     "results_step": {
       "success": {
-        "description": "મુબારક હો, તમે તમારું ચકાસું સફળતાપૂર્વક પૂર્ણ કર્યું છો. હવે તમે Ethereum વિતરણ માટે યોગ્ય છો."
+        "description": "અભિનંદન, તમે સફળતાપૂર્ણ રીતે તમારી ચકાસણી પૂર્ણ કર્યી છો. તમે હવે BNB Smart Chain વિતરણ માટે યોગ્ય છો."
       }
     }
   }

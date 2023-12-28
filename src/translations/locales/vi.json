@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "Địa chỉ blockchain không hợp lệ",
     "ethereum_address_not_eoa": "Địa chỉ không phải là EOA",
     "same_phone_error": "Bạn không thể sử dụng cùng một số điện thoại.",
-    "unable_to_validate_eth_addr_eoa": "Không thể xác minh địa chỉ EOA"
+    "unable_to_validate_eth_addr_eoa": "Không thể xác minh địa chỉ EOA",
+    "ethereum_address_not_checksummed": "Địa chỉ không được xác minh"
   },
   "profile": {
     "my_roles": {
@@ -366,8 +367,8 @@
       "subtitle": "Nhận cái nhìn sơ bộ về ứng dụng Mainnet sắp tới của chúng tôi và các tính năng độc đáo của nó."
     },
     "ethereum_address": {
-      "title": "Địa chỉ Ethereum",
-      "subtitle": "Vui lòng nhập địa chỉ Ethereum của bạn ở đây."
+      "title": "Địa chỉ BNB Smart Chain",
+      "subtitle": "Vui lòng nhập địa chỉ BSC của bạn ở đây."
     },
     "verified_tooltip": {
       "title": "KYC Đã Xác Minh"
@@ -1169,12 +1170,12 @@
     }
   },
   "ethereum_address": {
-    "title": "Địa chỉ Ethereum",
-    "enter_address_title": "Nhập\ndịa chỉ Ethereum của bạn",
-    "enter_address_description": "Trong giai đoạn Một, token ICE sẽ được phát hành trên blockchain Ethereum. Sau khi Mainnet được khởi chạy, các token có thể trao đổi từ Ethereum sang Ice Open Network (ION) blockchain.",
-    "enter_address_confirmation": "Bạn có chắc chắn rằng địa chỉ Ethereum là đúng không?",
+    "title": "Địa chỉ BNB Smart Chain",
+    "enter_address_title": "Nhập địa chỉ\ncủa bạn vào đây",
+    "enter_address_description": "Trong giai đoạn Một, token ICE sẽ được phát hành trên blockchain BNB Smart Chain. Sau khi Mainnet được khởi chạy, token có thể được đổi từ BNB Smart Chain sang mạng lưới Ice Open Network (ION).",
+    "enter_address_confirmation": "Bạn có chắc rằng địa chỉ BNB Smart Chain của bạn là chính xác không?",
     "validators_warning_title": "Xác Nhận Địa Chỉ",
-    "validators_warning_text": "Vui lòng lưu ý rằng những người đã thêm địa chỉ Ethereum vào tài khoản của họ không đủ điều kiện trở thành một trong 300 người xác minh hàng đầu theo whitepaper của chúng tôi cho việc ra mắt mainnet.",
+    "validators_warning_text": "Vui lòng lưu ý: Những người đã thêm địa chỉ BNB Smart Chain vào tài khoản của họ không được phép trở thành một trong 300 người xác minh chính theo whitepaper của chúng tôi cho sự ra mắt mạng chính.",
     "okxWalletDescription": "Bảo vệ đồng của bạn với OKX Wallet, đối tác ví tự lưu trữ chính thức đáng tin cậy của chúng tôi.",
     "okxWalletAction": "TẢI VỀ OKX WALLET"
   },
@@ -1237,8 +1238,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "Phân phối Ethereum",
-      "description": "Nhận các đồng tiền Ethereum ICE của bạn bằng cách dễ dàng xác minh tài khoản của bạn bằng cách sử dụng hồ sơ X hiện có của bạn."
+      "title": "Phân phối BNB Smart Chain",
+      "description": "Nhận các đồng ICE của bạn trên BNB Smart Chain bằng cách xác minh tài khoản của bạn dễ dàng bằng hồ sơ X hiện có."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1252,7 @@
     },
     "results_step": {
       "success": {
-        "description": "Chúc mừng bạn đã hoàn thành xác minh của mình thành công. Bây giờ bạn đã đủ điều kiện để tham gia phân phối Ethereum."
+        "description": "Chúc mừng, bạn đã hoàn thành việc xác minh của mình thành công. Bây giờ bạn đã đủ điều kiện để tham gia phân phối BNB Smart Chain."
       }
     }
   }

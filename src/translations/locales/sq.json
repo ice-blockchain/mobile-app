@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "Adresa e blockchain-i nuk është e vlefshme",
     "ethereum_address_not_eoa": "Adresa nuk është EOA",
     "same_phone_error": "Nuk mund të përdorësh të njëjtin numër.",
-    "unable_to_validate_eth_addr_eoa": "E pamundur për të vërtetuar adresën EOA"
+    "unable_to_validate_eth_addr_eoa": "E pamundur për të vërtetuar adresën EOA",
+    "ethereum_address_not_checksummed": "Adresa nuk është verifikuar"
   },
   "profile": {
     "my_roles": {
@@ -366,8 +367,8 @@
       "subtitle": "Merrni një shikim paraprak të aplikacionit Mainnet të ardhshëm tonë dhe veçorive të tij unike."
     },
     "ethereum_address": {
-      "title": "Adresa Ethereum",
-      "subtitle": "Ju lutemi vendosni adresën tuaj Ethereum këtu."
+      "title": "Adresa BNB Smart Chain",
+      "subtitle": "Ju lutem futni adresën tuaj BSC këtu."
     },
     "verified_tooltip": {
       "title": "KYC Verifikuar"
@@ -1169,12 +1170,12 @@
     }
   },
   "ethereum_address": {
-    "title": "Adresa Ethereum",
-    "enter_address_title": "Vendos\nadresën tuaj Ethereum",
-    "enter_address_description": "Gjatë Fazës së Parë, tokenat ICE do të dalin në blockchainin Ethereum. Pas lansimit të Mainnet, tokenat do të jenë të shkëmbyeshëm nga Ethereum në blockchainin Ice Open Network (ION).",
-    "enter_address_confirmation": "Jeni të sigurt që adresa Ethereum është e saktë?",
+    "title": "Adresa BNB Smart Chain",
+    "enter_address_title": "Futni adresën tuaj\nBNB Smart Chain",
+    "enter_address_description": "Gjatë Fazës Së Parë, tokenat ICE do të lansohen në blockchainin BNB Smart Chain. Pas lëshimit të Mainnet, tokenat mund të ndërrohen nga BNB Smart Chain në blockchainin Ice Open Network (ION).",
+    "enter_address_confirmation": "A jeni të sigurt se adresa juaj BNB Smart Chain është e saktë?",
     "validators_warning_title": "Konfirmo Adresën",
-    "validators_warning_text": "Ju lutemi vini re se individët që kanë shtuar një adresë Ethereum në llogarinë e tyre nuk janë të përgjegjshëm të bëhen një ndër 300 validatortë më të mirë sipas librit tonë të bardhë për fillimin e rrjetit kryesor.",
+    "validators_warning_text": "Ju lutem vini re: Personat që kanë shtuar një adresë BNB Smart Chain në llogarinë e tyre nuk janë të kualifikuar për të bërë një prej 300 validatoreve kryesorë, sipas specifikimeve në whitepaper tonë për lëshimin e rrjetit kryesor.",
     "okxWalletDescription": "Siguro këmbët tuaja me OKX Wallet, partnerin tonë të besueshëm të ofertës zyrtare të ndryshimit të vetvetes.",
     "okxWalletAction": "SHKARKONI OKX WALLET"
   },
@@ -1237,8 +1238,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "Rrjedhja e Ethereumit",
-      "description": "Merrni monedhat tuaja Ethereum ICE duke verifikuar llogarinë tuaj me lehtësi duke përdorur profilin tuaj X ekzistues."
+      "title": "Distribucioni i BNB Smart Chain",
+      "description": "Merrni monedhat ICE të BNB Smart Chain duke verifikuar llogarinë tuaj lehtësisht duke përdorur profilin X ekzistues."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1252,7 @@
     },
     "results_step": {
       "success": {
-        "description": "Urime, keni përfunduar me sukses verifikimin tuaj. Tani jeni e përbashkët për shpërndarjen e Ethereum."
+        "description": "Urime, keni përfunduar me sukses verifikimin tuaj. Tani jeni të kualifikuar për distribucionin e BNB Smart Chain."
       }
     }
   }

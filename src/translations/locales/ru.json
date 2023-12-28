@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "Недействительный адрес блокчейн",
     "ethereum_address_not_eoa": "Адрес не является EOA",
     "same_phone_error": "Вы не можете использовать один и тот же номер.",
-    "unable_to_validate_eth_addr_eoa": "Не удалось проверить адрес EOA"
+    "unable_to_validate_eth_addr_eoa": "Не удалось проверить адрес EOA",
+    "ethereum_address_not_checksummed": "Адрес не подтвержден"
   },
   "profile": {
     "my_roles": {
@@ -366,8 +367,8 @@
       "subtitle": "Получите предварительный просмотр нашего предстоящего приложения Mainnet и его уникальных возможностей."
     },
     "ethereum_address": {
-      "title": "Адрес Ethereum",
-      "subtitle": "Пожалуйста, введите свой адрес Ethereum здесь."
+      "title": "Адрес BNB Smart Chain",
+      "subtitle": "Пожалуйста, введите ваш адрес BSC здесь."
     },
     "verified_tooltip": {
       "title": "KYC Подтверждено"
@@ -1169,12 +1170,12 @@
     }
   },
   "ethereum_address": {
-    "title": "Адрес Ethereum",
-    "enter_address_title": "Введите\nваш адрес Ethereum",
-    "enter_address_description": "Во время Фазы 1 токены ICE будут выпущены на блокчейне Ethereum. После запуска Mainnet токены можно будет обменивать с Ethereum на блокчейн Ice Open Network (ION).",
-    "enter_address_confirmation": "Вы уверены, что адрес Ethereum верный?",
+    "title": "Адрес BNB Smart Chain",
+    "enter_address_title": "Введите ваш\nадрес BNB Smart Chain",
+    "enter_address_description": "Во время Фазы Один токены ICE будут выпущены на блокчейне BNB Smart Chain. После запуска Mainnet токены можно будет обменять с BNB Smart Chain на блокчейн Ice Open Network (ION).",
+    "enter_address_confirmation": "Вы уверены, что ваш адрес BNB Smart Chain верен?",
     "validators_warning_title": "Подтвердите Адрес",
-    "validators_warning_text": "Обратите внимание, что лица, добавившие адрес Ethereum в свой аккаунт, не имеют права стать одним из лучших 300 валидаторов согласно нашему белой книге для запуска основной сети.",
+    "validators_warning_text": "Обратите внимание: лица, добавившие адрес BNB Smart Chain в свой аккаунт, не имеют права стать одним из 300 ведущих валидаторов, как указано в нашем белой бумаге для запуска главной сети.",
     "okxWalletDescription": "Обеспечьте безопасность ваших монет с помощью OKX Wallet, нашего надежного официального партнера по управлению кошельком.",
     "okxWalletAction": "СКАЧАТЬ КОШЕЛЕК OKX"
   },
@@ -1237,8 +1238,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "Распределение Ethereum",
-      "description": "Получите монеты Ethereum ICE, проверив свою учетную запись с легкостью, используя ваш профиль X."
+      "title": "Распределение BNB Smart Chain",
+      "description": "Получите монеты ICE BNB Smart Chain, легко верифицировав свой аккаунт с использованием существующего профиля X."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1252,7 @@
     },
     "results_step": {
       "success": {
-        "description": "Поздравляем, вы успешно завершили проверку. Теперь вы имеете право на распределение Ethereum."
+        "description": "Поздравляем, вы успешно прошли верификацию. Теперь вы имеете право на распределение BNB Smart Chain."
       }
     }
   }

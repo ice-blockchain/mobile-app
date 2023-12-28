@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "ที่อยู่บล็อกเชนไม่ถูกต้อง",
     "ethereum_address_not_eoa": "ที่อยู่ไม่ใช่ EOA",
     "same_phone_error": "คุณไม่สามารถใช้หมายเลขเดียวกัน",
-    "unable_to_validate_eth_addr_eoa": "ไม่สามารถตรวจสอบ EOA ได้"
+    "unable_to_validate_eth_addr_eoa": "ไม่สามารถตรวจสอบ EOA ได้",
+    "ethereum_address_not_checksummed": "ที่อยู่ไม่ได้รับการตรวจสอบ"
   },
   "profile": {
     "my_roles": {
@@ -367,8 +368,8 @@
       "subtitle": "รับชมแอป Mainnet ของเราที่กำลังจะมาและคุณลักษณะที่ไม่เหมือนใคร"
     },
     "ethereum_address": {
-      "title": "ที่อยู่ Ethereum",
-      "subtitle": "โปรดใส่ที่อยู่ Ethereum ของคุณที่นี่"
+      "title": "ที่อยู่ BNB Smart Chain",
+      "subtitle": "โปรดป้อนที่อยู่ BSC ของคุณที่นี่"
     },
     "verified_tooltip": {
       "title": "KYC ตรวจสอบแล้ว"
@@ -1170,12 +1171,12 @@
     }
   },
   "ethereum_address": {
-    "title": "ที่อยู่ Ethereum",
-    "enter_address_title": "ใส่\nที่อยู่ Ethereum ของคุณ",
-    "enter_address_description": "ระหว่างเฟสหนึ่ง Token ICE จะถูกปล่อยในบล็อกเชน Ethereum หลังจาก Mainnet ถูกเปิดใช้งาน Token จะสามารถแลกเปลี่ยนจาก Ethereum เป็นบล็อกเชน Ice Open Network (ION) ได้",
-    "enter_address_confirmation": "คุณแน่ใจหรือไม่ว่าที่อยู่ Ethereum ถูกต้องหรือไม่?",
+    "title": "ที่อยู่ BNB Smart Chain",
+    "enter_address_title": "ป้อนที่อยู่\nBNB Smart Chain ของคุณ",
+    "enter_address_description": "ในช่วงเฟสหนึ่งเหรียญ ICE จะถูกเปิดตัวบนบล็อกเชน BNB Smart Chain หลังจากเปิดตัว Mainnet เหรียญสามารถแลกเปลี่ยนจาก BNB Smart Chain เป็น Ice Open Network (ION) บล็อกเชนได้",
+    "enter_address_confirmation": "คุณแน่ใจหรือไม่ว่าที่อยู่ BNB Smart Chain ของคุณถูกต้อง?",
     "validators_warning_title": "ยืนยันที่อยู่",
-    "validators_warning_text": "โปรดทราบว่าบุคคลที่เพิ่มที่อยู่ Ethereum ลงในบัญชีของพวกเขาไม่มีสิทธิ์เป็นหนึ่งใน 300 ผู้ตรวจสอบที่ดีที่สุดตามหนังสือขาวของเราสำหรับการเปิดตัว mainnet",
+    "validators_warning_text": "โปรดทราบ: บุคคลที่เพิ่มที่อยู่ BNB Smart Chain ในบัญชีของพวกเขาไม่มีสิทธิ์เป็นหนึ่งใน 300 ผู้ตรวจสอบหลักตาม whitepaper สำหรับการเปิดตัวของ Mainnet",
     "okxWalletDescription": "รักษาเหรียญของคุณด้วย OKX Wallet พาร์ทเนอร์กระเป๋าเงินที่มีความเชื่อถือจากตัวเราเอง",
     "okxWalletAction": "ดาวน์โหลด OKX WALLET"
   },
@@ -1238,8 +1239,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "กระจาย Ethereum",
-      "description": "รับเหรียญ Ethereum ICE ของคุณโดยการยืนยันบัญชีของคุณอย่างง่ายด้วยโปรไฟล์ X ที่มีอยู่ของคุณ"
+      "title": "การแจกจ่าย BNB Smart Chain",
+      "description": "รับเหรียญ ICE ของคุณบน BNB Smart Chain โดยการยืนยันบัญชีของคุณอย่างง่ายดายด้วยโปรไฟล์ X ที่มีอยู่"
     },
     "instructions_step": {
       "x": {
@@ -1252,7 +1253,7 @@
     },
     "results_step": {
       "success": {
-        "description": "ขอแสดงความยินดี คุณได้ทำการยืนยันเรียบร้อยแล้ว คุณสามารถรับ Ethereum ได้แล้ว"
+        "description": "ขอแสดงความยินดีครับ คุณได้ทำการยืนยันบัญชีของคุณเรียบร้อยแล้ว คุณสามารถรับการแจกจ่าย BNB Smart Chain ได้แล้ว"
       }
     }
   }

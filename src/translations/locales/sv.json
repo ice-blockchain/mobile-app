@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "Ogiltig blockchain-adress",
     "ethereum_address_not_eoa": "Adressen är inte EOA",
     "same_phone_error": "Du kan inte använda samma nummer.",
-    "unable_to_validate_eth_addr_eoa": "Kan inte validera EOA-adressen"
+    "unable_to_validate_eth_addr_eoa": "Kan inte validera EOA-adressen",
+    "ethereum_address_not_checksummed": "Adressen är inte validerad"
   },
   "profile": {
     "my_roles": {
@@ -366,8 +367,8 @@
       "subtitle": "Få en förhandsvisning av vår kommande Mainnet-app och dess unika funktioner."
     },
     "ethereum_address": {
-      "title": "Ethereum-adress",
-      "subtitle": "Vänligen ange din Ethereum-adress här."
+      "title": "BNB Smart Chain-adress",
+      "subtitle": "Vänligen ange din BSC-adress här."
     },
     "verified_tooltip": {
       "title": "KYC Verifierad"
@@ -1169,12 +1170,12 @@
     }
   },
   "ethereum_address": {
-    "title": "Ethereum-adress",
-    "enter_address_title": "Ange\ndin Ethereum-adress",
-    "enter_address_description": "Under Fas Ett kommer ICE-token att släppas på Ethereum-blockkedjan. När Mainnet har lanserats kommer token att kunna bytas från Ethereum till Ice Open Network (ION) blockkedjan.",
-    "enter_address_confirmation": "Är du säker på att Ethereum-adressen är korrekt?",
+    "title": "BNB Smart Chain-adress",
+    "enter_address_title": "Ange din\nBNB Smart Chain-adress",
+    "enter_address_description": "Under Fas Ett kommer ICE-token att släppas på BNB Smart Chain-blockkedjan. Efter Mainnet-lanseringen kan token bytas från BNB Smart Chain till Ice Open Network (ION)-blockkedjan.",
+    "enter_address_confirmation": "Är du säker på att din BNB Smart Chain-adress är korrekt?",
     "validators_warning_title": "Bekräfta Adressen",
-    "validators_warning_text": "Observera att personer som har lagt till en Ethereum-adress på sitt konto inte är berättigade att bli en av de 300 bästa validerarna enligt vår whitepaper för huvudnätets lansering.",
+    "validators_warning_text": "Observera: Personer som har lagt till en BNB Smart Chain-adress på sitt konto är inte kvalificerade att bli en av de 300 främsta validerarna enligt vår whitepaper för huvudnätets lansering.",
     "okxWalletDescription": "Säkra dina mynt med OKX Wallet, vår pålitliga självständiga officiella plånbokspartner.",
     "okxWalletAction": "LADDA NER OKX PLÅNBOK"
   },
@@ -1237,8 +1238,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "Ethereum Distribution",
-      "description": "Få dina Ethereum ICE-mynt genom att enkelt verifiera ditt konto med din befintliga X-profil."
+      "title": "BNB Smart Chain-distribution",
+      "description": "Ta emot dina ICE-mynt på BNB Smart Chain genom att verifiera ditt konto enkelt med din befintliga X-profil."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1252,7 @@
     },
     "results_step": {
       "success": {
-        "description": "Grattis, du har framgångsrikt slutfört din verifiering. Du är nu berättigad till Ethereum-distributionen."
+        "description": "Grattis, du har framgångsrikt slutfört din verifiering. Du är nu berättigad till BNB Smart Chain-distributionen."
       }
     }
   }

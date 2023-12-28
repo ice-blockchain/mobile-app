@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "آدرس نامعتبر است",
     "ethereum_address_not_eoa": "آدرس EOA نیست",
     "same_phone_error": "شما نمی‌توانید از همان شماره استفاده کنید.",
-    "unable_to_validate_eth_addr_eoa": "امکان تأیید آدرس EOA وجود ندارد"
+    "unable_to_validate_eth_addr_eoa": "امکان تأیید آدرس EOA وجود ندارد",
+    "ethereum_address_not_checksummed": "آدرس چک‌نشده است"
   },
   "profile": {
     "my_roles": {
@@ -366,8 +367,8 @@
       "subtitle": "یک نگاهی به برنامه Mainnet آینده ما و ویژگی‌های منحصر به فرد آن بیافکنید."
     },
     "ethereum_address": {
-      "title": "آدرس Ethereum",
-      "subtitle": "لطفاً آدرس Ethereum خود را در اینجا وارد کنید."
+      "title": "آدرس BNB Smart Chain",
+      "subtitle": "لطفاً آدرس BSC خود را اینجا وارد کنید."
     },
     "verified_tooltip": {
       "title": "KYC تایید شده"
@@ -1176,12 +1177,12 @@
     }
   },
   "ethereum_address": {
-    "title": "آدرس Ethereum",
-    "enter_address_title": "آدرس Ethereum خود را وارد کنید",
-    "enter_address_description": "در طول مرحله یک، توکن‌های ICE در بلاکچین Ethereum منتشر خواهند شد. هنگامی که Mainnet راه‌اندازی شده باشد، توکن‌ها از Ethereum به بلاکچین Ice Open Network (ION) قابل مبادله خواهند بود.",
-    "enter_address_confirmation": "آیا از صحت آدرس Ethereum اطمینان دارید؟",
+    "title": "آدرس BNB Smart Chain",
+    "enter_address_title": "آدرس BNB Smart Chain خود را وارد کنید",
+    "enter_address_description": "در طول مرحله یک، توکن‌های ICE در بلاکچین BNB Smart Chain منتشر خواهند شد. پس از راه‌اندازی Mainnet، این توکن‌ها قابل معامله از BNB Smart Chain به بلاکچین Ice Open Network (ION) خواهند بود.",
+    "enter_address_confirmation": "آیا مطمئن هستید که آدرس BNB Smart Chain صحیح است؟",
     "validators_warning_title": "تأیید آدرس",
-    "validators_warning_text": "لطفاً توجه داشته باشید که افرادی که آدرس Ethereum را به حساب خود اضافه کرده‌اند، از طریق کتاب سفید ما برای راه‌اندازی شبکه اصلی معتبر نیستند.",
+    "validators_warning_text": "لطفاً توجه داشته باشید که افرادی که یک آدرس BNB Smart Chain را به حساب کاربری خود اضافه کرده‌اند، مشمول شدن در بین ۳۰۰ تای اول تأییدکننده‌ها بر اساس کتاب سفید ما برای راه‌اندازی Mainnet نمی‌شوند.",
     "okxWalletDescription": "سکه‌های خود را با کیف پول OKX، شریک اصلی خودمدیری اعتمادی ما محافظت کنید.",
     "okxWalletAction": "OKX WALLET را بارگیری کنید"
   },
@@ -1244,8 +1245,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "توزیع اتریوم",
-      "description": "از طریق تأیید حساب خود با استفاده از پروفایل X موجود خود به راحتی سکه‌های اتریوم ICE خود را دریافت کنید."
+      "title": "توزیع BNB Smart Chain",
+      "description": "توکن‌های ICE BNB Smart Chain خود را با تأیید حساب خود با استفاده از پروفایل X موجودتان به سادگی دریافت کنید."
     },
     "instructions_step": {
       "x": {
@@ -1258,7 +1259,7 @@
     },
     "results_step": {
       "success": {
-        "description": "تبریک می‌گوییم، شما با موفقیت فرآیند تایید خود را انجام داده‌اید. اکنون شما برای توزیع اتریوم واجد شرایط هستید."
+        "description": "تبریک می‌گوییم، شما با موفقیت تأیید حساب خود را تکمیل کرده‌اید. اکنون مشمول توزیع BNB Smart Chain هستید."
       }
     }
   }

@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "ਅਵੈਧ ਬਲਾਕਚੈਨ ਐਡਰੈੱਸ",
     "ethereum_address_not_eoa": "ਐਡਰੈੱਸ EOA ਨਹੀਂ ਹੈ",
     "same_phone_error": "ਤੁਸੀਂ ਇੱਕੋ ਨੰਬਰ ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਕਰ ਸਕਦੇ।",
-    "unable_to_validate_eth_addr_eoa": "EOA ਐਡਰੈੱਸ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ"
+    "unable_to_validate_eth_addr_eoa": "EOA ਐਡਰੈੱਸ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ",
+    "ethereum_address_not_checksummed": "ਐਡਰੈੱਸ ਪੁਸ਼ਟੀਕਰਣ ਨਹੀਂ ਹੈ"
   },
   "profile": {
     "my_roles": {
@@ -366,8 +367,8 @@
       "subtitle": "ਆਉਣ ਵਾਲੇ ਮੈਨਨੈੱਟ ਐਪ ਅਤੇ ਇਸਦੇ ਅਨੋਖੇ ਫੀਚਰਾਂ ਦੀ ਇੱਕ ਝਲਕ ਪ੍ਰਾਪਤ ਕਰੋ."
     },
     "ethereum_address": {
-      "title": "ਈਥੇਰੀਅਮ ਐਡਰੈੱਸ",
-      "subtitle": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ Ethereum ਐਡਰੈੱਸ ਇੱਥੇ ਦਿਓ."
+      "title": "BNB Smart Chain ਐਡਰੈੱਸ",
+      "subtitle": "ਕਿਰਪਾ ਕਰਕੇ ਇੱਥੇ ਆਪਣਾ BSC ਐਡਰੈੱਸ ਦਰਜ ਕਰੋ।"
     },
     "verified_tooltip": {
       "title": "KYC ਪ੍ਰਮਾਣਿਤ"
@@ -1169,12 +1170,12 @@
     }
   },
   "ethereum_address": {
-    "title": "ਈਥੇਰੀਅਮ ਐਡਰੈੱਸ",
-    "enter_address_title": "ਆਪਣਾ\nEthereum ਐਡਰੈੱਸ ਦਿਓ",
-    "enter_address_description": "ਫੇਜ ਵਨ ਦੌਰਾਨ, ICE ਟੋਕਨ ਈਥੇਰੀਅਮ ਬਲਾਕਚੈਨ 'ਤੇ ਜਾਰੀ ਕੀਤੇ ਜਾਣਗੇ. ਜਦੋਂ ਮੈਨਨੈੱਟ ਲਾਂਚ ਹੋ ਜਾਵੇ, ਤੋਕਨਾਂ ਨੂੰ ਈਥੇਰੀਅਮ ਤੋਂ ਆਈਸ ਓਪਨ ਨੈੱਟਵਰਕ (ION) ਬਲਾਕਚੈਨ 'ਤੇ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ।",
-    "enter_address_confirmation": "ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ Ethereum ਪਤਾ ਸਹੀ ਹੈ?",
+    "title": "BNB Smart Chain ਐਡਰੈੱਸ",
+    "enter_address_title": "ਆਪਣਾ\nBNB Smart Chain ਐਡਰੈੱਸ ਦਾਖਲ ਕਰੋ",
+    "enter_address_description": "ਫੇਜ ਵਰਗ 1 ਦੌਰਾਨ, ICE ਟੋਕਨ BNB ਸਮਾਰਟ ਚੇਨ ਬਲਾਕਚੇਨ 'ਤੇ ਜਾਰੀ ਕੀਤੇ ਜਾਣਗੇ। ਜਦੋਂ ਮੈਨਨੈੱਟ ਲਾਂਚ ਹੋਵੇਗਾ, ਟੋਕਨ ਨੂੰ BNB ਸਮਾਰਟ ਚੇਨ ਤੋਂ Ice ਓਪਨ ਨੈੱਟਵਰਕ (ION) ਬਲਾਕਚੇਨ 'ਤੇ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ।",
+    "enter_address_confirmation": "ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਹਾਨੂੰ ਆਪਣਾ BNB ਸਮਾਰਟ ਚੇਨ ਐਡਰੈੱਸ ਸਹੀ ਹੈ?",
     "validators_warning_title": "ਪਤਾ ਪੁਸ਼ਟੀ ਕਰੋ",
-    "validators_warning_text": "ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਦਿਓ ਕਿ ਉਹ ਵੀਅਕਾਸਕ ਜਿਹੜੇ ਆਪਣੇ ਖਾਤੇ ਵਿੱਚ ਇਕ Ethereum ਪਤਾ ਸ਼ਾਮਲ ਕਰ ਲਿਆ ਹੈ, ਸਾਡੇ ਮੁੱਖ ਨੈੱਟ ਲਾਂਚ ਲਈ ਸਾਡੇ ਸਫੇਦ ਪੇਪਰ ਦੇ ਅਨੁਸਾਰ ਸਿਖਰੇ 300 ਵੈਲੀਡੇਟਰ ਵਿੱਚ ਸਿੱਖਰਨ ਲਈ ਯੋਗ ਨਹੀਂ ਹਨ।",
+    "validators_warning_text": "ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਦੇਓ: ਜਿਹੜੇ ਲੋਕ ਆਪਣੇ ਖਾਤੇ ਵਿੱਚ BNB ਸਮਾਰਟ ਚੇਨ ਐਡਰੈੱਸ ਸ਼ਾਮਲ ਕੀਤਾ ਹੈ, ਉਹ ਸਿੱਧੇ ਹੇਡਨੈਟ ਦੇ ਲਾਂਚ ਲਈ ਸਾਡੇ ਵਾਇਟਪੇਪਰ ਦੇ ਮੁਤਾਬਕ ਸਭ ਤੋਂ ਉੱਚੀ 300 ਮੰਗੂ ਵੈਲੀਡੇਟਰਾਂ ਵਿੱਚਨੋਂ ਇਕ ਨਹੀਂ ਬਣ ਸਕਦੇ।",
     "okxWalletDescription": "ਆਪਣੇ ਕਿੱਪੇ ਨੂੰ OKX Wallet ਨਾਲ ਸੁਰੱਖਿਅਤ ਕਰੋ, ਸਾਡੇ ਭਰੋਸੇਯੋਗ ਆਤਮ-ਕੁਸ਼ਲ ਆਫ਼ਿਸ਼ਿਅਲ ਵਾਲੈਟ ਪਾਰਟਨਰ ਨਾਲ।",
     "okxWalletAction": "OKX ਵਾਲੇਟ ਡਾਊਨਲੋਡ ਕਰੋ"
   },
@@ -1237,8 +1238,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "ਇਥੇਰੀਅਮ ਵੰਡੋ",
-      "description": "ਆਪਣੇ ਖਾਤੇ ਨੂੰ ਆਸਾਨੀ ਨਾਲ ਤੁਹਾਡੇ ਮੌਜੂਦਾ X ਪ੍ਰੋਫਾਇਲ ਦੀ ਖਾਤਿਆਂ ਦੀ ਪੁਸ਼ਟੀ ਕਰਕੇ ਆਪਣੇ Ethereum ICE ਸਿੱਕੇ ਪ੍ਰਾਪਤ ਕਰੋ."
+      "title": "BNB Smart Chain ਵਿੱਤਰਨ",
+      "description": "ਆਪਣੇ ਮੌਜੂਦਾ X ਪ੍ਰੋਫਾਈਲ ਨੂੰ ਵਰਤ ਕੇ ਆਪਣੇ ਖਾਤੇ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਨਾਲ ਤੁਹਾਨੂੰ ਆਪਣੇ BNB ਸਮਾਰਟ ਚੇਨ ICE ਕਵਣਾਂਸ ਪ੍ਰਾਪਤ ਹੋਵੇਗਾ।"
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1252,7 @@
     },
     "results_step": {
       "success": {
-        "description": "ਮੁਬਾਰਕ ਹੈ, ਤੁਸੀਂ ਆਪਣੀ ਪੜਤਾਲਾਂ ਨੂੰ ਸਫਲਤਾਪੂਰਕ ਮੁਕੰਮਲ ਕੀਤਾ ਹੈ। ਹੁਣ ਤੁਸੀਂ Ethereum ਦੀ ਵੰਡ ਲਈ ਯੋਗਦਾਨ ਦਿੰਦੇ ਹੋ।"
+        "description": "ਮੁਬਾਰਕ ਹੋ, ਤੁਸੀਂ ਆਪਣੇ ਪੁਸ਼ਟੀਕਰਣ ਨੂੰ ਸਫਲਤਾਪੂਰਵਕ ਮੁਕੰਮਲ ਕਰ ਲਿਆ ਹੈ। ਤੁਸੀਂ ਹੁਣ BNB ਸਮਾਰਟ ਚੇਨ ਵਿੱਤਰਨ ਦੇ ਯੋਗ ਹੋ।"
       }
     }
   }

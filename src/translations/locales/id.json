@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "Alamat blockchain tidak valid",
     "ethereum_address_not_eoa": "Alamat bukan EOA",
     "same_phone_error": "Anda tidak dapat menggunakan nomor yang sama.",
-    "unable_to_validate_eth_addr_eoa": "Tidak dapat memvalidasi alamat EOA"
+    "unable_to_validate_eth_addr_eoa": "Tidak dapat memvalidasi alamat EOA",
+    "ethereum_address_not_checksummed": "Alamat tidak terverifikasi"
   },
   "profile": {
     "my_roles": {
@@ -366,8 +367,8 @@
       "subtitle": "Dapatkan pratinjau aplikasi Mainnet kami yang akan datang dan fitur-fitur uniknya."
     },
     "ethereum_address": {
-      "title": "Alamat Ethereum",
-      "subtitle": "Silakan masukkan alamat Ethereum Anda di sini."
+      "title": "Alamat BNB Smart Chain",
+      "subtitle": "Silakan masukkan alamat BSC Anda di sini."
     },
     "verified_tooltip": {
       "title": "KYC Terverifikasi"
@@ -1169,12 +1170,12 @@
     }
   },
   "ethereum_address": {
-    "title": "Alamat Ethereum",
-    "enter_address_title": "Masukkan alamat\nEthereum Anda",
-    "enter_address_description": "Selama Tahap Satu, token ICE akan dirilis di blockchain Ethereum. Setelah Mainnet diluncurkan, token dapat ditukarkan dari Ethereum ke blockchain Ice Open Network (ION).",
-    "enter_address_confirmation": "Apakah Anda yakin bahwa alamat Ethereum ini benar?",
+    "title": "Alamat BNB Smart Chain",
+    "enter_address_title": "Masukkan alamat\nBNB Smart Chain Anda",
+    "enter_address_description": "Selama Tahap Satu, token ICE akan dirilis di blockchain BNB Smart Chain. Begitu Mainnet diluncurkan, token dapat ditukar dari BNB Smart Chain ke Ice Open Network (ION) blockchain.",
+    "enter_address_confirmation": "Apakah Anda yakin bahwa alamat BNB Smart Chain ini benar?",
     "validators_warning_title": "Konfirmasi Alamat",
-    "validators_warning_text": "Harap diperhatikan bahwa individu yang telah menambahkan alamat Ethereum ke akun mereka tidak memenuhi syarat untuk menjadi salah satu dari 300 validator teratas sesuai dengan whitepaper kami untuk peluncuran mainnet.",
+    "validators_warning_text": "Harap dicatat bahwa individu yang telah menambahkan alamat BNB Smart Chain ke akun mereka tidak memenuhi syarat untuk menjadi salah satu validator teratas sesuai dengan whitepaper kami untuk peluncuran mainnet.",
     "okxWalletDescription": "Amanahkan koin Anda dengan OKX Wallet, mitra dompet resmi pengelolaan sendiri yang terpercaya kami.",
     "okxWalletAction": "UNDUH OKX WALLET"
   },
@@ -1237,8 +1238,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "Distribusi Ethereum",
-      "description": "Terima koin Ethereum ICE Anda dengan memverifikasi akun Anda dengan mudah menggunakan profil X Anda yang sudah ada."
+      "title": "Distribusi BNB Smart Chain",
+      "description": "Terima koin ICE BNB Smart Chain Anda dengan memverifikasi akun Anda dengan mudah menggunakan profil X yang sudah ada."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1252,7 @@
     },
     "results_step": {
       "success": {
-        "description": "Selamat, Anda telah berhasil menyelesaikan verifikasi Anda. Anda sekarang memenuhi syarat untuk distribusi Ethereum."
+        "description": "Selamat, Anda telah berhasil menyelesaikan verifikasi Anda. Anda sekarang memenuhi syarat untuk distribusi BNB Smart Chain."
       }
     }
   }

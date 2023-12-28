@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "ልክ ያልሆነ አድራሻ",
     "ethereum_address_not_eoa": "አድራሻ ኢኦኤ አይደለም",
     "same_phone_error": "ተመሳሳይ ቁጥር መጠቀም አይችሉም",
-    "unable_to_validate_eth_addr_eoa": "አይዛመው የኢትዮጵያ አካውንት ማውረድ እንዲችል አይችልም"
+    "unable_to_validate_eth_addr_eoa": "አይዛመው የኢትዮጵያ አካውንት ማውረድ እንዲችል አይችልም",
+    "ethereum_address_not_checksummed": "አድራሻ ቀረቡ፡ በል ቀየ"
   },
   "profile": {
     "my_roles": {
@@ -366,8 +367,8 @@
       "subtitle": "የእኛን መጪ የMainnet መተግበሪያ እና ልዩ ባህሪያቱን ያግኙ።"
     },
     "ethereum_address": {
-      "title": "Ethereum አድራሻ",
-      "subtitle": "እባክዎ የእርስዎን Ethereum አድራሻ እዚህ ያስገቡ።"
+      "title": "BNB Smart Chain አድራሻ",
+      "subtitle": "እባክዎን የህክም አድራሻዎን እዚህ ይህንን ይጎብኙ።"
     },
     "verified_tooltip": {
       "title": "KYC የተረጋገጠ"
@@ -1169,12 +1170,12 @@
     }
   },
   "ethereum_address": {
-    "title": "Ethereum አድራሻ",
-    "enter_address_title": "የእርስዎን\nEthereum አድራሻ ያስገቡ",
-    "enter_address_description": "በደረጃ አንድ ወቅት የ ICE ቶከኖች በ Ethereum blockchain ላይ ይለቀቃሉ። ሜንኔት አንዴ ከተጀመረ ቶከኖቹ ከEthereum ወደ Ice Open Network (ION) blockchain ይቀየራሉ።",
-    "enter_address_confirmation": "የ Ethereum አድራሻ ትክክል መሆኑን እርግጠኛ ነዎት?",
+    "title": "BNB Smart Chain አድራሻ",
+    "enter_address_title": "የህክም አድራሻዎን ይምረጡ",
+    "enter_address_description": "በየክፍል አንድ ኢስ ICE ቶኪን በ BNB Smart Chain ባህሪ ለመቆጣጠር ማለት ነው። በቅደም ጐንደር እቆጠታለሁ ከህክም አድራሻዎን የምትጎበኙት ቦታ በ BNB Smart Chain ይደሰቱበታል (ION) ባህሪዎን በቀጥታ ይከፍታል።",
+    "enter_address_confirmation": "እርስዎ የ BNB Smart Chain አድራሻ ነው የሚያመለክተው ነውም፣ በማለት ይጎብኛልን?",
     "validators_warning_title": "አድራሻ አረጋግጥ",
-    "validators_warning_text": "እባክዎን የኢቴሬም አድራሻን ወደ መለያቸው ያከሉ ግለሰቦች ለዋና ኔትዎርክ ማስጀመሪያ በነጭ ወረቀታችን መሰረት ከከፍተኛ 300 አረጋጋጮች ውስጥ አንዱ ለመሆን ብቁ እንዳልሆኑ ልብ ይበሉ።",
+    "validators_warning_text": "እባክዎን ባንዳርነት በህክም አድራሻ አድርገዋል ከእኛው አይምሰልሽም፣ ብኛው የምርምርን ቅርጸ ከከባድ የተመለከተውን አግባብ በማድረግ ልክ ልንሄድ ትችላላችሁ።",
     "okxWalletDescription": "እኛን ማያያዣ በማብራሪ የሚታይታይ ህግ እንዴት እንዲወርድ የOKX ገባዎችዎን ያግኙ።",
     "okxWalletAction": "OKX ወልቃቂያን እንዴት ይጫኑ"
   },
@@ -1237,8 +1238,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "ኢጣልየም ቅርብ",
-      "description": "እንዲህም አገልግሎት ያለበት አካውንት የቅርብ ICE ኮድ ያለበት ማስታወቂያዎችህን ለመልቀቅ የሚገኙበት X መገልገያያንን በቀጥታ በእርስዎ ያሉትን እቃዎች ውስጥ በመጫን ላይ ነው።"
+      "title": "BNB Smart Chain ከፍተኛ አገልግሎት",
+      "description": "በቅርጸ አድራሻ የሚገኝ የህክም አድራሻ ICE ቶኪንን በቀጥታ በህክም አድራሻዎን ማረጋገጥ ማቅረብ ተቀብላለሁ።"
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1252,7 @@
     },
     "results_step": {
       "success": {
-        "description": "እንኳን እንዴት አሁንም አስተዳዳሪን ማድረግ አለብን። ለEthereum ውስጥ መጠቀም ይችላል።"
+        "description": "እንኳን እንዴት ታላቅ እርምስ እንዳለህ፣ እንዴት ታስቦህ ትልቅ ህክም አድራሻ በተመሰገነ የሚሆን ነገር ስለሚገኝ፣ እባክዎ ይህን ነገር ተቀብላል።"
       }
     }
   }

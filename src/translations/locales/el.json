@@ -198,7 +198,8 @@
     "invalid_blockchain_address": "Μη έγκυρη διεύθυνση",
     "ethereum_address_not_eoa": "Η διεύθυνση δεν είναι EOA",
     "same_phone_error": "Δεν μπορείτε να χρησιμοποιήσετε τον ίδιο αριθμό.",
-    "unable_to_validate_eth_addr_eoa": "Δεν είναι δυνατή η επικύρωση της διεύθυνσης EOA"
+    "unable_to_validate_eth_addr_eoa": "Δεν είναι δυνατή η επικύρωση της διεύθυνσης EOA",
+    "ethereum_address_not_checksummed": "Η διεύθυνση δεν είναι ελεγμένη"
   },
   "profile": {
     "my_roles": {
@@ -366,8 +367,8 @@
       "subtitle": "Πάρτε μια εικόνα της επερχόμενης εφαρμογής Mainnet και των μοναδικών χαρακτηριστικών της."
     },
     "ethereum_address": {
-      "title": "Διεύθυνση Ethereum",
-      "subtitle": "Παρακαλώ εισάγετε τη διεύθυνση Ethereum σας εδώ."
+      "title": "Διεύθυνση BNB Smart Chain",
+      "subtitle": "Παρακαλούμε εισαγάγετε τη διεύθυνση BSC σας εδώ."
     },
     "verified_tooltip": {
       "title": "Επιβεβαιώθηκε το KYC"
@@ -1169,12 +1170,12 @@
     }
   },
   "ethereum_address": {
-    "title": "Διεύθυνση Ethereum",
-    "enter_address_title": "Εισάγετε\nτη διεύθυνση Ethereum σας",
-    "enter_address_description": "Κατά τη διάρκεια της Φάσης Ένα, τα κέρματα ICE θα εκδοθούν στο Ethereum blockchain. Αφού ξεκινήσει το Mainnet, τα κέρματα θα είναι αντικαταστάσιμα από το Ethereum στο Ice Open Network (ION) blockchain.",
-    "enter_address_confirmation": "Είστε σίγουροι ότι η διεύθυνση Ethereum είναι σωστή;",
+    "title": "Διεύθυνση BNB Smart Chain",
+    "enter_address_title": "Εισαγάγετε τη\nδιεύθυνση BNB Smart Chain σας",
+    "enter_address_description": "Κατά τη διάρκεια της φάσης Ένα, τα κέρματα ICE θα εκδοθούν στην αλυσίδα BNB Smart Chain. Αφού εκκινηθεί το κυρίως δίκτυο, τα κέρματα θα είναι ανταλλάσσονται από τη BNB Smart Chain στην αλυσίδα Ice Open Network (ION).",
+    "enter_address_confirmation": "Είστε σίγουροι ότι η διεύθυνση BNB Smart Chain είναι σωστή;",
     "validators_warning_title": "Επιβεβαίωση Διεύθυνσης",
-    "validators_warning_text": "Σημειώστε ότι άτομα που έχουν προσθέσει μια διεύθυνση Ethereum στον λογαριασμό τους δεν είναι επιλέξιμα να γίνουν ένας από τους κορυφαίους 300 επικυρωτές σύμφωνα με το Λευκό μας Βιβλίο για την κύρια δίκτυα.",
+    "validators_warning_text": "Σημειώστε ότι οι άνθρωποι που έχουν προσθέσει μια διεύθυνση BNB Smart Chain στον λογαριασμό τους δεν είναι επιλέξιμοι να γίνουν ένας από τους 300 κορυφαίους επικυρωτές σύμφωνα με το Λευκό μας Βιβλίο για την έναρξη του κύριου δικτύου.",
     "okxWalletDescription": "Ασφαλίστε τα κέρματά σας με το OKX Wallet, τον αξιόπιστο αυτό-κηδεμόνα επίσημο εταίρο μας.",
     "okxWalletAction": "ΛΗΨΗ OKX WALLET"
   },
@@ -1237,8 +1238,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "Διανομή Ethereum",
-      "description": "Λάβετε τα Ethereum ICE νομίσματά σας επιβεβαιώνοντας τον λογαριασμό σας εύκολα χρησιμοποιώντας το υπάρχον προφίλ X σας."
+      "title": "Διανομή BNB Smart Chain",
+      "description": "Λάβετε τα κέρματά σας BNB Smart Chain ICE επαληθεύοντας τον λογαριασμό σας εύκολα χρησιμοποιώντας το υπάρχον προφίλ X σας."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1252,7 @@
     },
     "results_step": {
       "success": {
-        "description": "Συγχαρητήρια, ολοκληρώσατε με επιτυχία την επαλήθευσή σας. Είστε τώρα επιλέξιμοι για τη διανομή Ethereum."
+        "description": "Συγχαρητήρια, ολοκληρώσατε επιτυχώς την επαλήθευσή σας. Είστε τώρα επιλέξιμοι για τη διανομή BNB Smart Chain."
       }
     }
   }
