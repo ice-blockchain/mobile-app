@@ -8,21 +8,21 @@ import {
   http,
   isAddress,
 } from 'viem';
-import {mainnet} from 'viem/chains';
+import {bsc} from 'viem/chains';
 
 export const isValidEthereumAddress = (address: string): boolean => {
   return isAddress(address);
 };
 
-export const ethereumMainnetClient = createPublicClient({
-  chain: mainnet,
+export const bscClient = createPublicClient({
+  chain: bsc,
   transport: http(),
 });
 
 export const isEoaEthereumAddress = async (
   address: string,
 ): Promise<boolean> => {
-  const code = await ethereumMainnetClient.getBytecode({
+  const code = await bscClient.getBytecode({
     address: address as Address,
   });
   return !code;

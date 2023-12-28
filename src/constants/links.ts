@@ -56,5 +56,5 @@ export const LINKS = {
   X_REPOST_LINK_EXAMPLE:
     'https://twitter.com/ice_z3us/status/1732445405806477625?t=HgtbOUEVIxMENcUuRKIsQQ&s=19',
   OKX_WALLET: 'https://www.okx.com/web3',
-  ETHERSCAN: 'https://etherscan.io/address',
+  BSCSCAN: 'https://bscscan.com/address',
 };

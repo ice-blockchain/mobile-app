@@ -26,7 +26,7 @@ export const ExternalLink = ({style}: Props) => {
       balanceSummary.totalMiningBlockchain !== '0.00'
     ) {
       openLinkWithInAppBrowser({
-        url: `${LINKS.ETHERSCAN}/${user.miningBlockchainAccountAddress}`,
+        url: `${LINKS.BSCSCAN}/${user.miningBlockchainAccountAddress}`,
       });
     }
   };
