@@ -19,11 +19,11 @@ const validationErrorMessages: {[code in ValidationErrorCode]: string} = {
   InvalidPhone: t('errors.invalid_phone'),
   SamePhoneNumber: t('errors.same_phone_error'),
   InvalidEthereumAddress: t('errors.invalid_blockchain_address'),
-  EthereumAddressIsNotEoa: t('errors.ethereum_address_not_eoa'),
+  EthereumAddressIsNotEoa: t('errors.address_not_eoa'),
   UnableToValidateEthereumAddressEoa: t(
-    'errors.unable_to_validate_eth_addr_eoa',
+    'errors.unable_to_validate_bsc_addr_eoa',
   ),
-  EthereumAddressIsNotChecksummed: t('errors.ethereum_address_not_checksummed'),
+  EthereumAddressIsNotChecksummed: t('errors.address_not_checksummed'),
 };
 
 export class ValidationError extends Error {

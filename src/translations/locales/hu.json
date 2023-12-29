@@ -196,10 +196,10 @@
     "no_library_permissions": "A könyvtárhoz való hozzáférés nincs engedélyezve.",
     "blockchain_address_already_taken": "Cím már foglalt",
     "invalid_blockchain_address": "Érvénytelen cím",
-    "ethereum_address_not_eoa": "A cím nem EOA",
+    "address_not_eoa": "A cím nem EOA",
     "same_phone_error": "Nem használhatod ugyanazt a számot.",
-    "unable_to_validate_eth_addr_eoa": "Az EOA cím ellenőrzése nem lehetséges",
-    "ethereum_address_not_checksummed": "A cím nincs ellenőrizve"
+    "unable_to_validate_bsc_addr_eoa": "Az EOA cím ellenőrzése nem lehetséges",
+    "address_not_checksummed": "A cím nincs ellenőrizve"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Csatlakozz a Decentralizált Jövőhöz",
       "subtitle": "Tekints be a közelgő Mainnet alkalmazásunkba és annak egyedi funkcióiba."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain cím",
       "subtitle": "Kérjük, adja meg BSC címét itt."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain cím",
     "enter_address_title": "Adja meg\nBNB Smart Chain címét",
     "enter_address_description": "Az Első Fázis során az ICE érméket a BNB Smart Chain blokkláncán bocsátják ki. Miután a Mainnet elindult, az érméket BNB Smart Chain-ről Ice Open Network (ION) blokkláncre cserélheti.",

@@ -192,10 +192,10 @@
     "same_email": "You can’t use the same e-mail",
     "blockchain_address_already_taken": "Alamat wis didol",
     "invalid_blockchain_address": "Alamat blockchain ora sah",
-    "ethereum_address_not_eoa": "Alamat ora EOA",
+    "address_not_eoa": "Alamat ora EOA",
     "same_phone_error": "You can’t use the same number",
-    "unable_to_validate_eth_addr_eoa": "Ora bisa ngrusakna alamat EOA",
-    "ethereum_address_not_checksummed": "Alamat tidak terverifikasi"
+    "unable_to_validate_bsc_addr_eoa": "Ora bisa ngrusakna alamat EOA",
+    "address_not_checksummed": "Alamat tidak terverifikasi"
   },
   "profile": {
     "my_roles": {
@@ -355,7 +355,7 @@
       "title": "Gabung Karo Masa Depan Desentralisasi",
       "subtitle": "Dapetake saka pratinjau aplikasi Mainnet kita sing bakal datang lan fitur-fitur unik e."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "Alamat BNB Smart Chain",
       "subtitle": "Tolong masukkan alamat BSC Anda di sini."
     },
@@ -1074,7 +1074,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "Alamat BNB Smart Chain",
     "enter_address_title": "Masukkan alamat\nBNB Smart Chain Anda",
     "enter_address_description": "Selama Fase Satu, token ICE akan dirilis di blockchain BNB Smart Chain. Begitu Mainnet diluncurkan, token akan dapat ditukar dari BNB Smart Chain ke blockchain Ice Open Network (ION).",

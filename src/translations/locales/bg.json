@@ -196,10 +196,10 @@
     "no_library_permissions": "Не са предоставени разрешения за библиотеката.",
     "blockchain_address_already_taken": "Адресът вече е зает",
     "invalid_blockchain_address": "Невалиден адрес",
-    "ethereum_address_not_eoa": "Адресът не е EOA",
+    "address_not_eoa": "Адресът не е EOA",
     "same_phone_error": "Не може да използвате същия номер.",
-    "unable_to_validate_eth_addr_eoa": "Неуспешна валидация на EOA адрес",
-    "ethereum_address_not_checksummed": "Адресът не е сумиран"
+    "unable_to_validate_bsc_addr_eoa": "Неуспешна валидация на EOA адрес",
+    "address_not_checksummed": "Адресът не е сумиран"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Присъединете се към Децентрализирания бъдеще",
       "subtitle": "Получете предварителен преглед на нашето предстоящо приложение за главна мрежа и неговите уникални функции."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "Адрес на BNB Smart Chain",
       "subtitle": "Моля, въведете вашия адрес на BSC тук."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "Адрес на BNB Smart Chain",
     "enter_address_title": "Въведете вашия\nадрес на BNB Smart Chain",
     "enter_address_description": "През фаза едно, токените ICE ще бъдат пуснати на блокчейна на BNB Smart Chain. След като бъде пусната основната мрежа, токените ще могат да бъдат разменяни от BNB Smart Chain към блокчейна на Ice Open Network (ION).",

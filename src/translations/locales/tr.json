@@ -196,10 +196,10 @@
     "no_library_permissions": "Kitaplık izinleri verilmemiştir.",
     "blockchain_address_already_taken": "Adres zaten alınmış",
     "invalid_blockchain_address": "Geçersiz blockchain adresi",
-    "ethereum_address_not_eoa": "Adres EOA değil",
+    "address_not_eoa": "Adres EOA değil",
     "same_phone_error": "Aynı numarayı kullanamazsın.",
-    "unable_to_validate_eth_addr_eoa": "EOA adresi doğrulanamıyor",
-    "ethereum_address_not_checksummed": "Adres doğrulanamıyor"
+    "unable_to_validate_bsc_addr_eoa": "EOA adresi doğrulanamıyor",
+    "address_not_checksummed": "Adres doğrulanamıyor"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Merkezi Olmayan Geleceğe Katılın",
       "subtitle": "Yaklaşan Mainnet uygulamamızın ve benzersiz özelliklerinin bir önizlemesini alın."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain Adresi",
       "subtitle": "Lütfen BSC adresinizi buraya girin."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain Adresi",
     "enter_address_title": "BNB Smart Chain adresinizi\nburaya girin",
     "enter_address_description": "Faz 1 sırasında ICE jetonları BNB Smart Chain blockchain üzerinde piyasaya sürülecektir. Mainnet başlatıldıktan sonra, jetonlar BNB Smart Chain'den Ice Open Network (ION) blockchainine değiştirilebilir.",

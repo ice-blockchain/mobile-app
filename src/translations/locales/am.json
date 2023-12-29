@@ -196,10 +196,10 @@
     "no_library_permissions": "የቤተ-መጽሐፍት ፈቃዶች አልተሰጡም።",
     "blockchain_address_already_taken": "አድራሻ ቀድሞ ተወስዷል",
     "invalid_blockchain_address": "ልክ ያልሆነ አድራሻ",
-    "ethereum_address_not_eoa": "አድራሻ ኢኦኤ አይደለም",
+    "address_not_eoa": "አድራሻ ኢኦኤ አይደለም",
     "same_phone_error": "ተመሳሳይ ቁጥር መጠቀም አይችሉም",
-    "unable_to_validate_eth_addr_eoa": "አይዛመው የኢትዮጵያ አካውንት ማውረድ እንዲችል አይችልም",
-    "ethereum_address_not_checksummed": "አድራሻ ቀረቡ፡ በል ቀየ"
+    "unable_to_validate_bsc_addr_eoa": "አይዛመው የኢትዮጵያ አካውንት ማውረድ እንዲችል አይችልም",
+    "address_not_checksummed": "አድራሻ ቀረቡ፡ በል ቀየ"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "ያልተማከለ የወደፊትን ተቀላቀል",
       "subtitle": "የእኛን መጪ የMainnet መተግበሪያ እና ልዩ ባህሪያቱን ያግኙ።"
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain አድራሻ",
       "subtitle": "እባክዎን የህክም አድራሻዎን እዚህ ይህንን ይጎብኙ።"
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain አድራሻ",
     "enter_address_title": "የህክም አድራሻዎን ይምረጡ",
     "enter_address_description": "በየክፍል አንድ ኢስ ICE ቶኪን በ BNB Smart Chain ባህሪ ለመቆጣጠር ማለት ነው። በቅደም ጐንደር እቆጠታለሁ ከህክም አድራሻዎን የምትጎበኙት ቦታ በ BNB Smart Chain ይደሰቱበታል (ION) ባህሪዎን በቀጥታ ይከፍታል።",

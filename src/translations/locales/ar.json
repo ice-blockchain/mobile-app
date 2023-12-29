@@ -196,10 +196,10 @@
     "no_library_permissions": "لم تُمنح الأذونات الوصول إلى المكتبة.",
     "blockchain_address_already_taken": "العنوان مُستخدم بالفعل",
     "invalid_blockchain_address": "عنوان غير صالح",
-    "ethereum_address_not_eoa": "العنوان ليس EOA",
+    "address_not_eoa": "العنوان ليس EOA",
     "same_phone_error": "لا يمكنك استخدام نفس الرقم.",
-    "unable_to_validate_eth_addr_eoa": "غير قادر على التحقق من عنوان EOA",
-    "ethereum_address_not_checksummed": "العنوان غير محقق"
+    "unable_to_validate_bsc_addr_eoa": "غير قادر على التحقق من عنوان EOA",
+    "address_not_checksummed": "العنوان غير محقق"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "انضم إلى المستقبل اللامركزي",
       "subtitle": "احصل على نظرة سريعة على تطبيق الشبكة الرئيسية القادم وميزاته الفريدة."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "عنوان سلسلة BNB الذكية",
       "subtitle": "الرجاء إدخال عنوان BSC الخاص بك هنا."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "عنوان سلسلة BNB الذكية",
     "enter_address_title": "أدخل عنوان\nسلسلة BNB الذكية الخاص بك",
     "enter_address_description": "خلال المرحلة الأولى، ستتم إصدار عملات ICE على سلسلة BNB Smart Chain. بمجرد أن يتم إطلاق الشبكة الرئيسية، ستكون العملات قابلة للتبادل من BNB Smart Chain إلى شبكة Ice Open Network (ION).",

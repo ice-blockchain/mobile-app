@@ -196,10 +196,10 @@
     "no_library_permissions": "לא הוענקו הרשאות ספרייה.",
     "blockchain_address_already_taken": "הכתובת כבר תפוסה",
     "invalid_blockchain_address": "כתובת לא תקינה",
-    "ethereum_address_not_eoa": "הכתובת אינה EOA",
+    "address_not_eoa": "הכתובת אינה EOA",
     "same_phone_error": "לא ניתן להשתמש באותו המספר.",
-    "unable_to_validate_eth_addr_eoa": "לא ניתן לוודא את כתובת EOA",
-    "ethereum_address_not_checksummed": "הכתובת אינה בדוקה"
+    "unable_to_validate_bsc_addr_eoa": "לא ניתן לוודא את כתובת EOA",
+    "address_not_checksummed": "הכתובת אינה בדוקה"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "הצטרפו לעתיד המבוזר",
       "subtitle": "קבלו הצצה לאפליקציית Mainnet הקרובה שלנו ולתכליתיות הייחודיות שבה."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "כתובת BNB Smart Chain",
       "subtitle": "אנא הזן את כתובת ה- BSC שלך כאן."
     },
@@ -1176,7 +1176,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "כתובת BNB Smart Chain",
     "enter_address_title": "הזן את\nכתובת ה- BNB Smart Chain שלך",
     "enter_address_description": "במהלך השלב הראשון, המטבעות ICE יופצו ברשת הבלוקצ'יין של BNB Smart Chain. לאחר השקת הרשת הראשית, המטבעות יהיו ניתנים להחלפה מ-BNB Smart Chain לרשת הבלוקצ'יין של Ice Open Network (ION).",

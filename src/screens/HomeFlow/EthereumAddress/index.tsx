@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {FramedBscIcon} from '@components/FramedBscIcon';
 import {CommonInput} from '@components/Inputs/CommonInput';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
@@ -9,11 +10,10 @@ import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {AddressActionButton} from '@screens/HomeFlow/EthereumAddress/components/AddressActionButton';
-import {FramedEthereumIcon} from '@screens/HomeFlow/EthereumAddress/components/FramedEthereumIcon';
 import {OkxWalletCard} from '@screens/HomeFlow/EthereumAddress/components/OkxWalletCard';
 import {useSetEthereumAddress} from '@screens/HomeFlow/EthereumAddress/hooks/useSetEthereumAddress';
 import {useValidatorsWarning} from '@screens/HomeFlow/EthereumAddress/hooks/useValidatorsWarning';
-import {EthereumBookIcon} from '@svg/EthereumBookIcon';
+import {BscBookIcon} from '@svg/BscBookIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
@@ -32,7 +32,7 @@ export const EthereumAddress = memo(() => {
 
   return (
     <KeyboardAvoider>
-      <Header title={t('ethereum_address.title')} />
+      <Header title={t('bsc_address.title')} />
       <ScrollView
         ref={scrollRef}
         contentContainerStyle={[
@@ -41,16 +41,16 @@ export const EthereumAddress = memo(() => {
         ]}
         keyboardShouldPersistTaps={'handled'}
         showsVerticalScrollIndicator={false}>
-        <FramedEthereumIcon style={styles.icon} />
+        <FramedBscIcon style={styles.icon} />
         <Text style={styles.titleText}>
-          {t('ethereum_address.enter_address_title')}
+          {t('bsc_address.enter_address_title')}
         </Text>
         <Text style={styles.descriptionText}>
-          {t('ethereum_address.enter_address_description')}
+          {t('bsc_address.enter_address_description')}
         </Text>
         <CommonInput
-          icon={<EthereumBookIcon />}
-          label={t('ethereum_address.title')}
+          icon={<BscBookIcon />}
+          label={t('bsc_address.title')}
           value={address}
           onChangeText={onAddressChange}
           containerStyle={styles.input}

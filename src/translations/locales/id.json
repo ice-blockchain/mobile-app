@@ -196,10 +196,10 @@
     "no_library_permissions": "Izin perpustakaan tidak diberikan.",
     "blockchain_address_already_taken": "Alamat sudah digunakan",
     "invalid_blockchain_address": "Alamat blockchain tidak valid",
-    "ethereum_address_not_eoa": "Alamat bukan EOA",
+    "address_not_eoa": "Alamat bukan EOA",
     "same_phone_error": "Anda tidak dapat menggunakan nomor yang sama.",
-    "unable_to_validate_eth_addr_eoa": "Tidak dapat memvalidasi alamat EOA",
-    "ethereum_address_not_checksummed": "Alamat tidak terverifikasi"
+    "unable_to_validate_bsc_addr_eoa": "Tidak dapat memvalidasi alamat EOA",
+    "address_not_checksummed": "Alamat tidak terverifikasi"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Bergabung dengan Masa Depan Terdesentralisasi",
       "subtitle": "Dapatkan pratinjau aplikasi Mainnet kami yang akan datang dan fitur-fitur uniknya."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "Alamat BNB Smart Chain",
       "subtitle": "Silakan masukkan alamat BSC Anda di sini."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "Alamat BNB Smart Chain",
     "enter_address_title": "Masukkan alamat\nBNB Smart Chain Anda",
     "enter_address_description": "Selama Tahap Satu, token ICE akan dirilis di blockchain BNB Smart Chain. Begitu Mainnet diluncurkan, token dapat ditukar dari BNB Smart Chain ke Ice Open Network (ION) blockchain.",

@@ -192,10 +192,10 @@
     "no_library_permissions": "Library permissions are not granted.",
     "blockchain_address_already_taken": "Address already taken",
     "invalid_blockchain_address": "Invalid address",
-    "ethereum_address_not_eoa": "Address is not EOA",
+    "address_not_eoa": "Address is not EOA",
     "same_phone_error": "You can’t use the same number.",
-    "unable_to_validate_eth_addr_eoa": "Unable to validate EOA",
-    "ethereum_address_not_checksummed": "Address is not checksummed"
+    "unable_to_validate_bsc_addr_eoa": "Unable to validate EOA",
+    "address_not_checksummed": "Address is not checksummed"
   },
   "profile": {
     "my_roles": {
@@ -365,7 +365,7 @@
       "title": "Join The Decentralized Future",
       "subtitle": "Get a sneak peek of our upcoming Mainnet app and its unique features."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain address",
       "subtitle": "Please enter your BSC address here."
     },
@@ -1166,7 +1166,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain address",
     "enter_address_title": "Enter your\nBNB Smart Chain address",
     "enter_address_description": "During Phase One, the ICE tokens will be released on the BNB Smart Chain blockchain. Once Mainnet has been launched, the tokens will be swappable from BNB Smart Chain to Ice Open Network (ION) blockchain.",

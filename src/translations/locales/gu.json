@@ -196,10 +196,10 @@
     "no_library_permissions": "લાઇબ્રરી પરવાનગી આપવામાં નથી આવી.",
     "blockchain_address_already_taken": "સરખું પહેલેથી પકડાઈ છે",
     "invalid_blockchain_address": "અમાન્ય સરખું",
-    "ethereum_address_not_eoa": "સરખું EOA નથી",
+    "address_not_eoa": "સરખું EOA નથી",
     "same_phone_error": "તમે સમાન નંબરનો ઉપયોગ ન કરી શકો.",
-    "unable_to_validate_eth_addr_eoa": "EOA સરનામું માન્ય કરવામાં આવતી નથી",
-    "ethereum_address_not_checksummed": "સરનામું ચેકસમ નથી"
+    "unable_to_validate_bsc_addr_eoa": "EOA સરનામું માન્ય કરવામાં આવતી નથી",
+    "address_not_checksummed": "સરનામું ચેકસમ નથી"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "ડિસેન્ટ્રલાઇઝ્ડ ભવિષ્યમાં શામેલ થવાનો સૌથું પહેલું ગમતું લઈ નીચે",
       "subtitle": "આમાંથી આવતી મેનનેટ એપ્લિકેશન અને તેની વિશેષ વ્યક્તિગત વ્યાપાર વેચાણવાળી વ્યાપાર મુકાબલો."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain સરનામું",
       "subtitle": "કૃપા કરીને અહીં તમારો BSC સરનામું દાખલ કરો."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain સરનામું",
     "enter_address_title": "તમારો\nBNB Smart Chain સરનામું દાખલ કરો",
     "enter_address_description": "ફેઝ વન દરમ્યાન, ICE ટોકન્સ BNB Smart Chain બ્લોકચેન પર મુકવામાં આવશે. એકવખત Mainnet લોન્ચ થઈ જય, ICE ટોકન્સ BNB Smart Chain થી Ice Open Network (ION) બ્લોકચેન પર વદળી શકશે.",

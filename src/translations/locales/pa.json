@@ -196,10 +196,10 @@
     "no_library_permissions": "ਲਾਇਬ੍ਰੇਰੀ ਦੀ ਆਗਿਆਵਾਂ ਨਹੀਂ ਦਿੱਤੀ ਗਈ ਹਨ।",
     "blockchain_address_already_taken": "ਐਡਰੈੱਸ ਪਹਿਲਾਂ ਹੀ ਲਿਆਇਆ ਹੈ",
     "invalid_blockchain_address": "ਅਵੈਧ ਬਲਾਕਚੈਨ ਐਡਰੈੱਸ",
-    "ethereum_address_not_eoa": "ਐਡਰੈੱਸ EOA ਨਹੀਂ ਹੈ",
+    "address_not_eoa": "ਐਡਰੈੱਸ EOA ਨਹੀਂ ਹੈ",
     "same_phone_error": "ਤੁਸੀਂ ਇੱਕੋ ਨੰਬਰ ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਕਰ ਸਕਦੇ।",
-    "unable_to_validate_eth_addr_eoa": "EOA ਐਡਰੈੱਸ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ",
-    "ethereum_address_not_checksummed": "ਐਡਰੈੱਸ ਪੁਸ਼ਟੀਕਰਣ ਨਹੀਂ ਹੈ"
+    "unable_to_validate_bsc_addr_eoa": "EOA ਐਡਰੈੱਸ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ",
+    "address_not_checksummed": "ਐਡਰੈੱਸ ਪੁਸ਼ਟੀਕਰਣ ਨਹੀਂ ਹੈ"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "ਡੀਸੈਂਟਰਲਾਈਜ਼ਡ ਭਵਿੱਖ ਵਿੱਚ ਸ਼ਾਮਿਲ ਹੋਵੋ",
       "subtitle": "ਆਉਣ ਵਾਲੇ ਮੈਨਨੈੱਟ ਐਪ ਅਤੇ ਇਸਦੇ ਅਨੋਖੇ ਫੀਚਰਾਂ ਦੀ ਇੱਕ ਝਲਕ ਪ੍ਰਾਪਤ ਕਰੋ."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain ਐਡਰੈੱਸ",
       "subtitle": "ਕਿਰਪਾ ਕਰਕੇ ਇੱਥੇ ਆਪਣਾ BSC ਐਡਰੈੱਸ ਦਰਜ ਕਰੋ।"
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain ਐਡਰੈੱਸ",
     "enter_address_title": "ਆਪਣਾ\nBNB Smart Chain ਐਡਰੈੱਸ ਦਾਖਲ ਕਰੋ",
     "enter_address_description": "ਫੇਜ ਵਰਗ 1 ਦੌਰਾਨ, ICE ਟੋਕਨ BNB ਸਮਾਰਟ ਚੇਨ ਬਲਾਕਚੇਨ 'ਤੇ ਜਾਰੀ ਕੀਤੇ ਜਾਣਗੇ। ਜਦੋਂ ਮੈਨਨੈੱਟ ਲਾਂਚ ਹੋਵੇਗਾ, ਟੋਕਨ ਨੂੰ BNB ਸਮਾਰਟ ਚੇਨ ਤੋਂ Ice ਓਪਨ ਨੈੱਟਵਰਕ (ION) ਬਲਾਕਚੇਨ 'ਤੇ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ।",

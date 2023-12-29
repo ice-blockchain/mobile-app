@@ -196,10 +196,10 @@
     "no_library_permissions": "لائبریری کی اجازتیں نہیں دی گئی ہیں۔",
     "blockchain_address_already_taken": "پتہ پہلے ہی لیا گیا ہے",
     "invalid_blockchain_address": "غیر معتبر بلاک چین پتہ",
-    "ethereum_address_not_eoa": "پتہ EOA نہیں ہے",
+    "address_not_eoa": "پتہ EOA نہیں ہے",
     "same_phone_error": "آپ وہی نمبر استعمال نہیں کر سکتے۔",
-    "unable_to_validate_eth_addr_eoa": "EOA کا پتہ تصدیق نہیں کیا جا سکتا",
-    "ethereum_address_not_checksummed": "پتہ تصدیق نہیں کیا گیا"
+    "unable_to_validate_bsc_addr_eoa": "EOA کا پتہ تصدیق نہیں کیا جا سکتا",
+    "address_not_checksummed": "پتہ تصدیق نہیں کیا گیا"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "مرکزی آئندہ میں شامل ہوں",
       "subtitle": "ہمارے آنے والے مین نیٹ ایپ کی اور اس کی انوکھی خصوصیات کی پیش نظری حاصل کریں"
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain پتا",
       "subtitle": "براہ کرم اپنا BSC پتا یہاں درج کریں۔"
     },
@@ -1176,7 +1176,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain پتا",
     "enter_address_title": "اپنا\nBNB Smart Chain پتا درج کریں",
     "enter_address_description": "فیز ایکس کے دوران آئس ٹوکن BNB Smart Chain بلاک چین پر جاری کیے جائیں گے۔ مین نیٹ کی شروعات کے بعد، ٹوکنز کو BNB Smart Chain سے Ice Open Network (ION) بلاک چین میں تبدیل کیا جا سکتا ہے۔",

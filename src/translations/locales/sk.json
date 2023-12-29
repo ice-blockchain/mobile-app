@@ -196,10 +196,10 @@
     "no_library_permissions": "Nie sú udelené povolenia na používanie knižnice.",
     "blockchain_address_already_taken": "Adresa už bola použitá",
     "invalid_blockchain_address": "Neplatná adresa blockchainu",
-    "ethereum_address_not_eoa": "Adresa nie je EOA",
+    "address_not_eoa": "Adresa nie je EOA",
     "same_phone_error": "Nemôžeš použiť to isté číslo",
-    "unable_to_validate_eth_addr_eoa": "Nedá sa overiť adresa EOA",
-    "ethereum_address_not_checksummed": "Adresa nie je overená"
+    "unable_to_validate_bsc_addr_eoa": "Nedá sa overiť adresa EOA",
+    "address_not_checksummed": "Adresa nie je overená"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Pripojte sa k Decentralizovanej Budúcnosti",
       "subtitle": "Získajte náhľad na našu nadchádzajúcu aplikáciu Mainnet a jej jedinečné funkcie."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "Adresa BNB Smart Chain",
       "subtitle": "Prosím, zadajte svoju adresu BSC sem."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "Adresa BNB Smart Chain",
     "enter_address_title": "Zadajte svoju\nadresu BNB Smart Chain",
     "enter_address_description": "Počas Fázy Jedna budú tokeny ICE vydané na blockchaine BNB Smart Chain. Po spustení Mainnetu budú môcť byť tokeny vymenené z BNB Smart Chain na blockchaine Ice Open Network (ION).",

@@ -196,10 +196,10 @@
     "no_library_permissions": "As permissões de biblioteca não foram concedidas.",
     "blockchain_address_already_taken": "Endereço já utilizado",
     "invalid_blockchain_address": "Endereço de blockchain inválido",
-    "ethereum_address_not_eoa": "Endereço não é EOA",
+    "address_not_eoa": "Endereço não é EOA",
     "same_phone_error": "Você não pode usar o mesmo número.",
-    "unable_to_validate_eth_addr_eoa": "Não é possível validar o endereço EOA",
-    "ethereum_address_not_checksummed": "Endereço não validado"
+    "unable_to_validate_bsc_addr_eoa": "Não é possível validar o endereço EOA",
+    "address_not_checksummed": "Endereço não validado"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Junte-se ao Futuro Descentralizado",
       "subtitle": "Tenha uma prévia do nosso próximo aplicativo Mainnet e suas características únicas."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "Endereço BNB Smart Chain",
       "subtitle": "Por favor, insira o seu endereço BSC aqui."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "Endereço BNB Smart Chain",
     "enter_address_title": "Insira o seu\nendereço BNB Smart Chain",
     "enter_address_description": "Durante a Fase Um, os tokens ICE serão lançados na blockchain BNB Smart Chain. Após o lançamento do Mainnet, os tokens poderão ser trocados da BNB Smart Chain para a blockchain Ice Open Network (ION).",

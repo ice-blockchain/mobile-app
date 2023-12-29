@@ -196,10 +196,10 @@
     "no_library_permissions": "লাইব্রেরির অনুমতি দেওয়া হয় না।",
     "blockchain_address_already_taken": "ঠিকানা ইতিমধ্যে নেওয়া হয়েছে",
     "invalid_blockchain_address": "অবৈধ ঠিকানা",
-    "ethereum_address_not_eoa": "ঠিকানা EOA নয়",
+    "address_not_eoa": "ঠিকানা EOA নয়",
     "same_phone_error": "আপনি একই নম্বর ব্যবহার করতে পারবেন না।",
-    "unable_to_validate_eth_addr_eoa": "EOA ঠিকানা যাচাই করতে অক্ষম",
-    "ethereum_address_not_checksummed": "ঠিকানা পরীক্ষামূলক নয়"
+    "unable_to_validate_bsc_addr_eoa": "EOA ঠিকানা যাচাই করতে অক্ষম",
+    "address_not_checksummed": "ঠিকানা পরীক্ষামূলক নয়"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "ডিসেন্ট্রালাইজড ভবিষ্যতে যোগদান করুন",
       "subtitle": "আমাদের আসন্ন মেইননেট অ্যাপ এবং তার অনন্য বৈশিষ্ট্যগুলির একটি স্পষ্ট ঝলক পেতে নিন।"
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB স্মার্ট চেইন ঠিকানা",
       "subtitle": "দয়া করে আপনার BSC ঠিকানা এখানে লিখুন।"
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB স্মার্ট চেইন ঠিকানা",
     "enter_address_title": "আপনার\nBNB স্মার্ট চেইন ঠিকানা লিখুন",
     "enter_address_description": "পর্যায় একে, ICE টোকেনগুলি BNB স্মার্ট চেইন ব্লকচেইনে মুক্তি পাবে। একবার মেইননেট চালু হলে, টোকেনগুলি বিনামূল্যে BNB স্মার্ট চেইন থেকে আইস ওপেন নেটওয়ার্ক (ION) ব্লকচেইনে পরিবর্তন করা যাবে।",

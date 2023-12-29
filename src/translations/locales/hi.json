@@ -196,10 +196,10 @@
     "no_library_permissions": "लाइब्रेरी की अनुमति नहीं दी जाती है।",
     "blockchain_address_already_taken": "पता पहले ही लिया गया है",
     "invalid_blockchain_address": "अवैध पता",
-    "ethereum_address_not_eoa": "पता EOA नहीं है",
+    "address_not_eoa": "पता EOA नहीं है",
     "same_phone_error": "आप एक ही नंबर का उपयोग नहीं कर सकते।",
-    "unable_to_validate_eth_addr_eoa": "EOA पता सत्यापित करने में असमर्थ",
-    "ethereum_address_not_checksummed": "पता सत्यापित नहीं है"
+    "unable_to_validate_bsc_addr_eoa": "EOA पता सत्यापित करने में असमर्थ",
+    "address_not_checksummed": "पता सत्यापित नहीं है"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "डिसेंट्रलाइज्ड फ्यूचर में शामिल हों",
       "subtitle": "हमारे आगामी मेननेट ऐप और उसके अनूठे फीचर्स का एक स्नीक पीक प्राप्त करें।"
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain पता",
       "subtitle": "कृपया यहां अपना BSC पता दर्ज करें।"
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain पता",
     "enter_address_title": "अपना\nBNB Smart Chain पता दर्ज करें",
     "enter_address_description": "फेज वन के दौरान, ICE टोकन BNB Smart Chain ब्लॉकचेन पर जारी किए जाएंगे। जैसे ही मेननेट लॉन्च हो जाएगा, टोकन BNB Smart Chain से Ice Open Network (ION) ब्लॉकचेन पर स्वैप किए जा सकेंगे।",

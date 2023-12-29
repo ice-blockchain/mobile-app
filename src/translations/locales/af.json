@@ -196,10 +196,10 @@
     "no_library_permissions": "Biblioteektoestemmings word nie verleen nie.",
     "blockchain_address_already_taken": "Adres is reeds in gebruik",
     "invalid_blockchain_address": "Ongeldige adres",
-    "ethereum_address_not_eoa": "Adres is nie EOA nie",
+    "address_not_eoa": "Adres is nie EOA nie",
     "same_phone_error": "Jy kan nie dieselfde nommer gebruik nie.",
-    "unable_to_validate_eth_addr_eoa": "Kan nie EOA valideer nie",
-    "ethereum_address_not_checksummed": "Adres is nie gechecksum nie"
+    "unable_to_validate_bsc_addr_eoa": "Kan nie EOA valideer nie",
+    "address_not_checksummed": "Adres is nie gechecksum nie"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Sluit aan by die Gedesentraliseerde Toekoms",
       "subtitle": "Kry 'n voorskou van ons aankomende Hoofnet-toep en sy unieke kenmerke."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain-adres",
       "subtitle": "Voer asseblief jou BSC-adres hier in."
     },
@@ -1172,7 +1172,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain-adres",
     "enter_address_title": "Voer jou\nBNB Smart Chain-adres in",
     "enter_address_description": "Tydens Fase Een sal die ICE-tokens op die BNB Smart Chain blockchain vrygestel word. Sodra die hoofnet geloods is, sal die tokens vanaf die BNB Smart Chain na die Ice Open Network (ION) blockchain geruil kan word.",

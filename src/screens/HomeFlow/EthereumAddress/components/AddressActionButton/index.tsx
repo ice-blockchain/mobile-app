@@ -5,7 +5,7 @@ import {
   PrimaryButtonProps,
 } from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
-import {EthereumBookIcon} from '@svg/EthereumBookIcon';
+import {BscBookIcon} from '@svg/BscBookIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
@@ -24,7 +24,7 @@ export const AddressActionButton = ({
 }: Props) => {
   return (
     <PrimaryButton
-      icon={<EthereumBookIcon color={COLORS.white} />}
+      icon={<BscBookIcon color={COLORS.white} />}
       text={
         isRemoveAction
           ? t('button.remove_address')

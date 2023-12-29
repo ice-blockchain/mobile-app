@@ -196,10 +196,10 @@
     "no_library_permissions": "Dovoljenja za knjižnico niso odobrena.",
     "blockchain_address_already_taken": "Naslov je že v uporabi",
     "invalid_blockchain_address": "Neveljaven naslov blockchaina",
-    "ethereum_address_not_eoa": "Naslov ni EOA",
+    "address_not_eoa": "Naslov ni EOA",
     "same_phone_error": "Ne morete uporabiti iste številke.",
-    "unable_to_validate_eth_addr_eoa": "Ni mogoče potrditi naslova EOA",
-    "ethereum_address_not_checksummed": "Naslov ni preverjen"
+    "unable_to_validate_bsc_addr_eoa": "Ni mogoče potrditi naslova EOA",
+    "address_not_checksummed": "Naslov ni preverjen"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Pridružite se decentralizirani prihodnosti",
       "subtitle": "Oglejte si predogled naše prihajajoče aplikacije Mainnet in njenih edinstvenih funkcij."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "Naslov BNB Smart Chain",
       "subtitle": "Prosimo, vnesite svoj naslov BSC tukaj."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "Naslov BNB Smart Chain",
     "enter_address_title": "Vnesite svoj\nnaslov BNB Smart Chain",
     "enter_address_description": "Med Fazo Ena bodo žetoni ICE izdani na verigi BNB Smart Chain. Po zagonu Mainneta bodo lahko žetoni zamenjani iz BNB Smart Chain v verigo Ice Open Network (ION).",

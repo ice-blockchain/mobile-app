@@ -196,10 +196,10 @@
     "no_library_permissions": "Les autorisations de bibliothèque ne sont pas accordées.",
     "blockchain_address_already_taken": "Adresse déjà prise",
     "invalid_blockchain_address": "Adresse non valide",
-    "ethereum_address_not_eoa": "L'adresse n'est pas une EOA",
+    "address_not_eoa": "L'adresse n'est pas une EOA",
     "same_phone_error": "Vous ne pouvez pas utiliser le même numéro.",
-    "unable_to_validate_eth_addr_eoa": "Impossible de valider l'adresse EOA",
-    "ethereum_address_not_checksummed": "L'adresse n'est pas vérifiée"
+    "unable_to_validate_bsc_addr_eoa": "Impossible de valider l'adresse EOA",
+    "address_not_checksummed": "L'adresse n'est pas vérifiée"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Rejoignez le Futur Décentralisé",
       "subtitle": "Obtenez un aperçu de notre prochaine application Mainnet et de ses fonctionnalités uniques."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "Adresse BNB Smart Chain",
       "subtitle": "Veuillez entrer votre adresse BSC ici."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "Adresse BNB Smart Chain",
     "enter_address_title": "Entrez votre\nadresse BNB Smart Chain",
     "enter_address_description": "Pendant la Phase Un, les jetons ICE seront publiés sur la blockchain BNB Smart Chain. Une fois que le Mainnet sera lancé, les jetons seront échangeables de la BNB Smart Chain à la blockchain Ice Open Network (ION).",

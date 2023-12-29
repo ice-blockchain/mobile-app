@@ -196,10 +196,10 @@
     "no_library_permissions": "Chưa cấp quyền truy cập thư viện.",
     "blockchain_address_already_taken": "Địa chỉ đã được sử dụng",
     "invalid_blockchain_address": "Địa chỉ blockchain không hợp lệ",
-    "ethereum_address_not_eoa": "Địa chỉ không phải là EOA",
+    "address_not_eoa": "Địa chỉ không phải là EOA",
     "same_phone_error": "Bạn không thể sử dụng cùng một số điện thoại.",
-    "unable_to_validate_eth_addr_eoa": "Không thể xác minh địa chỉ EOA",
-    "ethereum_address_not_checksummed": "Địa chỉ không được xác minh"
+    "unable_to_validate_bsc_addr_eoa": "Không thể xác minh địa chỉ EOA",
+    "address_not_checksummed": "Địa chỉ không được xác minh"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Tham gia Tương lai Phi tập trung",
       "subtitle": "Nhận cái nhìn sơ bộ về ứng dụng Mainnet sắp tới của chúng tôi và các tính năng độc đáo của nó."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "Địa chỉ BNB Smart Chain",
       "subtitle": "Vui lòng nhập địa chỉ BSC của bạn ở đây."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "Địa chỉ BNB Smart Chain",
     "enter_address_title": "Nhập địa chỉ\ncủa bạn vào đây",
     "enter_address_description": "Trong giai đoạn Một, token ICE sẽ được phát hành trên blockchain BNB Smart Chain. Sau khi Mainnet được khởi chạy, token có thể được đổi từ BNB Smart Chain sang mạng lưới Ice Open Network (ION).",

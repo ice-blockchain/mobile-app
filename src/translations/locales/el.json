@@ -196,10 +196,10 @@
     "no_library_permissions": "Δεν έχει χορηγηθεί άδεια χρήσης στην βιβλιοθήκη.",
     "blockchain_address_already_taken": "Η διεύθυνση έχει ήδη ληφθεί",
     "invalid_blockchain_address": "Μη έγκυρη διεύθυνση",
-    "ethereum_address_not_eoa": "Η διεύθυνση δεν είναι EOA",
+    "address_not_eoa": "Η διεύθυνση δεν είναι EOA",
     "same_phone_error": "Δεν μπορείτε να χρησιμοποιήσετε τον ίδιο αριθμό.",
-    "unable_to_validate_eth_addr_eoa": "Δεν είναι δυνατή η επικύρωση της διεύθυνσης EOA",
-    "ethereum_address_not_checksummed": "Η διεύθυνση δεν είναι ελεγμένη"
+    "unable_to_validate_bsc_addr_eoa": "Δεν είναι δυνατή η επικύρωση της διεύθυνσης EOA",
+    "address_not_checksummed": "Η διεύθυνση δεν είναι ελεγμένη"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Ενταχθείτε στο Αποκεντρωμένο Μέλλον",
       "subtitle": "Πάρτε μια εικόνα της επερχόμενης εφαρμογής Mainnet και των μοναδικών χαρακτηριστικών της."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "Διεύθυνση BNB Smart Chain",
       "subtitle": "Παρακαλούμε εισαγάγετε τη διεύθυνση BSC σας εδώ."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "Διεύθυνση BNB Smart Chain",
     "enter_address_title": "Εισαγάγετε τη\nδιεύθυνση BNB Smart Chain σας",
     "enter_address_description": "Κατά τη διάρκεια της φάσης Ένα, τα κέρματα ICE θα εκδοθούν στην αλυσίδα BNB Smart Chain. Αφού εκκινηθεί το κυρίως δίκτυο, τα κέρματα θα είναι ανταλλάσσονται από τη BNB Smart Chain στην αλυσίδα Ice Open Network (ION).",

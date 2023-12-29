@@ -196,10 +196,10 @@
     "no_library_permissions": "ไม่ได้มอบการอนุญาตสำหรับไลบรารี",
     "blockchain_address_already_taken": "ที่อยู่ถูกใช้งานแล้ว",
     "invalid_blockchain_address": "ที่อยู่บล็อกเชนไม่ถูกต้อง",
-    "ethereum_address_not_eoa": "ที่อยู่ไม่ใช่ EOA",
+    "address_not_eoa": "ที่อยู่ไม่ใช่ EOA",
     "same_phone_error": "คุณไม่สามารถใช้หมายเลขเดียวกัน",
-    "unable_to_validate_eth_addr_eoa": "ไม่สามารถตรวจสอบ EOA ได้",
-    "ethereum_address_not_checksummed": "ที่อยู่ไม่ได้รับการตรวจสอบ"
+    "unable_to_validate_bsc_addr_eoa": "ไม่สามารถตรวจสอบ EOA ได้",
+    "address_not_checksummed": "ที่อยู่ไม่ได้รับการตรวจสอบ"
   },
   "profile": {
     "my_roles": {
@@ -367,7 +367,7 @@
       "title": "เข้าร่วมอนาคตที่ไม่มีการกำหนด",
       "subtitle": "รับชมแอป Mainnet ของเราที่กำลังจะมาและคุณลักษณะที่ไม่เหมือนใคร"
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "ที่อยู่ BNB Smart Chain",
       "subtitle": "โปรดป้อนที่อยู่ BSC ของคุณที่นี่"
     },
@@ -1170,7 +1170,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "ที่อยู่ BNB Smart Chain",
     "enter_address_title": "ป้อนที่อยู่\nBNB Smart Chain ของคุณ",
     "enter_address_description": "ในช่วงเฟสหนึ่งเหรียญ ICE จะถูกเปิดตัวบนบล็อกเชน BNB Smart Chain หลังจากเปิดตัว Mainnet เหรียญสามารถแลกเปลี่ยนจาก BNB Smart Chain เป็น Ice Open Network (ION) บล็อกเชนได้",

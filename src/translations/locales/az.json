@@ -196,10 +196,10 @@
     "no_library_permissions": "Kitabxana icazəsi verilməyib.",
     "blockchain_address_already_taken": "Ünvan artıq istifadə edilib",
     "invalid_blockchain_address": "Yanlış ünvan",
-    "ethereum_address_not_eoa": "Ünvan EOA deyil",
+    "address_not_eoa": "Ünvan EOA deyil",
     "same_phone_error": "Eyni nömrədən istifadə edə bilməzsən.",
-    "unable_to_validate_eth_addr_eoa": "EOA ünvanını doğrulamaq mümkün olmur",
-    "ethereum_address_not_checksummed": "Ünvan check olunmayıb"
+    "unable_to_validate_bsc_addr_eoa": "EOA ünvanını doğrulamaq mümkün olmur",
+    "address_not_checksummed": "Ünvan check olunmayıb"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Mərkəzi Olmayan Gələcəyə qoşulun",
       "subtitle": "Gələcək əsas şəbəkə tətbiqinin və unikal xüsusiyyətlərinin qısa bir baxışını alın."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain ünvanı",
       "subtitle": "Zəhmət olmasa BSC ünvanınızı buraya daxil edin."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain ünvanı",
     "enter_address_title": "BNB Smart Chain\nünvanınızı daxil edin",
     "enter_address_description": "Fəzlə bir zaman ICE tokenləri BNB Smart Chain blockchainində işləyəcək. Əsas şəbəkə işə salındıqdan sonra, tokenləri BNB Smart Chain-dən Ice Open Network (ION) blockchaininə dəyişdirə bilərsiniz.",

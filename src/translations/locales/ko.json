@@ -196,10 +196,10 @@
     "no_library_permissions": "라이브러리 권한이 허용되지 않았습니다.",
     "blockchain_address_already_taken": "주소가 이미 사용 중입니다",
     "invalid_blockchain_address": "유효하지 않은 주소",
-    "ethereum_address_not_eoa": "주소가 EOA가 아닙니다",
+    "address_not_eoa": "주소가 EOA가 아닙니다",
     "same_phone_error": "같은 번호를 사용할 수 없습니다.",
-    "unable_to_validate_eth_addr_eoa": "EOA 주소를 확인할 수 없습니다",
-    "ethereum_address_not_checksummed": "주소가 확인되지 않았습니다"
+    "unable_to_validate_bsc_addr_eoa": "EOA 주소를 확인할 수 없습니다",
+    "address_not_checksummed": "주소가 확인되지 않았습니다"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "분산 미래에 참여하세요",
       "subtitle": "다가오는 메인넷 앱과 그 독특한 기능을 미리 만나보세요."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain 주소",
       "subtitle": "여기에 BSC 주소를 입력하십시오."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain 주소",
     "enter_address_title": "당신의\nBNB Smart Chain 주소를 입력하십시오",
     "enter_address_description": "제1 단계에서 ICE 토큰은 BNB Smart Chain 블록체인에 출시됩니다. 메인넷트가 시작되면 토큰은 BNB Smart Chain에서 Ice Open Network (ION) 블록체인으로 교환 가능합니다.",

@@ -196,10 +196,10 @@
     "no_library_permissions": "Nejsou udělena oprávnění ke knihovně.",
     "blockchain_address_already_taken": "Adresa je již obsazena",
     "invalid_blockchain_address": "Neplatná adresa",
-    "ethereum_address_not_eoa": "Adresa není EOA",
+    "address_not_eoa": "Adresa není EOA",
     "same_phone_error": "Nemůžete použít stejné číslo.",
-    "unable_to_validate_eth_addr_eoa": "Nelze ověřit EOA adresu",
-    "ethereum_address_not_checksummed": "Adresa není kontrolní součet"
+    "unable_to_validate_bsc_addr_eoa": "Nelze ověřit EOA adresu",
+    "address_not_checksummed": "Adresa není kontrolní součet"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Připojte se k Decentralizované budoucnosti",
       "subtitle": "Získejte náhled na naši nadcházející aplikaci pro hlavní síť a její jedinečné funkce."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "Adresa BNB Smart Chain",
       "subtitle": "Prosím, zadejte zde svou adresu BSC."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "Adresa BNB Smart Chain",
     "enter_address_title": "Zadejte svou\nadresu BNB Smart Chain",
     "enter_address_description": "Během fáze jedna budou tokeny ICE vydány na blockchainu BNB Smart Chain. Jakmile bude spuštěna hlavní síť, bude možné tokeny směnit z BNB Smart Chain na blockchain Ice Open Network (ION).",

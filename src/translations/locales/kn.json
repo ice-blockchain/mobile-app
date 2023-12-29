@@ -196,10 +196,10 @@
     "no_library_permissions": "ಲೈಬ್ರರಿ ಅನುಮತಿಗಳನ್ನು ಸಮ್ಮತಿಸಿಲ್ಲ",
     "blockchain_address_already_taken": "ವಿಳಾಸ ಈಗಾಗಲೇ ಸೇರಿಸಲಾಗಿದೆ",
     "invalid_blockchain_address": "ಅಮಾನ್ಯ ವಿಳಾಸ",
-    "ethereum_address_not_eoa": "ವಿಳಾಸ EOA ಅಲ್ಲ",
+    "address_not_eoa": "ವಿಳಾಸ EOA ಅಲ್ಲ",
     "same_phone_error": "ನೀವು ಅದೇ ನಂಬರನ್ನು ಬಳಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
-    "unable_to_validate_eth_addr_eoa": "EOA ವಿಳಾಸವನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
-    "ethereum_address_not_checksummed": "ವಿಳಾಸವು ಪರಿಶೀಲಿಸಲ್ಪಟ್ಟಿಲ್ಲ"
+    "unable_to_validate_bsc_addr_eoa": "EOA ವಿಳಾಸವನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
+    "address_not_checksummed": "ವಿಳಾಸವು ಪರಿಶೀಲಿಸಲ್ಪಟ್ಟಿಲ್ಲ"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "ಡಿಸೆಂಟ್ರಲೈಸ್ಡ್ ಭವಿಷ್ಯದಲ್ಲಿ ಸೇರಿಕೊಳ್ಳಿ",
       "subtitle": "ನಮ್ಮ ಬರುವ ಮುಖ್ಯನೆಟ್ ಅಪ್ಲಿಕೇಶನ್ ಮತ್ತು ಅದರ ವಿಶೇಷ ವೈಶಿಷ್ಟ್ಯಗಳ ಬಗ್ಗೆ ಸ್ನೀಕ್ ಪೀಕ್ ಸಿಗಿದೆ."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain ವಿಳಾಸ",
       "subtitle": "ದಯವಿಟ್ಟು ನಿಮ್ಮ BSC ವಿಳಾಸವನ್ನು ಇಲ್ಲಿ ನಮೂದಿಸಿ."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain ವಿಳಾಸ",
     "enter_address_title": "ನಿಮ್ಮ\nBNB Smart Chain ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ",
     "enter_address_description": "ಹೊರಗಿನ ಹಂತದಲ್ಲಿ, ICE ಟೋಕನ್‌ಗಳು BNB Smart Chain ಬ್ಲಾಕ್‌ಚೇನ್‌ನಲ್ಲಿ ಬಿಡುಗಡೆಯಾಗುತ್ತವೆ. ಮುಖ್ಯನೆಟ್ ಪ್ರಾರಂಭವಾದ ನಂತರ, ಟೋಕನ್‌ಗಳನ್ನು BNB Smart Chain ನಿಂದ Ice ಸ್ವತಂತ್ರ ನೆಟ್‌ವರ್ಕ್‌ಗೆ (ION) ಬಿಟ್ಟುವಂತೆ ಬದಲಾಯಿಸಬಹುದು.",

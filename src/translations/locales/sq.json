@@ -196,10 +196,10 @@
     "no_library_permissions": "Nuk janë dhënë lejet për bibliotekën.",
     "blockchain_address_already_taken": "Adresa është tashmë e zënë",
     "invalid_blockchain_address": "Adresa e blockchain-i nuk është e vlefshme",
-    "ethereum_address_not_eoa": "Adresa nuk është EOA",
+    "address_not_eoa": "Adresa nuk është EOA",
     "same_phone_error": "Nuk mund të përdorësh të njëjtin numër.",
-    "unable_to_validate_eth_addr_eoa": "E pamundur për të vërtetuar adresën EOA",
-    "ethereum_address_not_checksummed": "Adresa nuk është verifikuar"
+    "unable_to_validate_bsc_addr_eoa": "E pamundur për të vërtetuar adresën EOA",
+    "address_not_checksummed": "Adresa nuk është verifikuar"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Bashkohuni me të Ardhmen e Zdërtuar",
       "subtitle": "Merrni një shikim paraprak të aplikacionit Mainnet të ardhshëm tonë dhe veçorive të tij unike."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "Adresa BNB Smart Chain",
       "subtitle": "Ju lutem futni adresën tuaj BSC këtu."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "Adresa BNB Smart Chain",
     "enter_address_title": "Futni adresën tuaj\nBNB Smart Chain",
     "enter_address_description": "Gjatë Fazës Së Parë, tokenat ICE do të lansohen në blockchainin BNB Smart Chain. Pas lëshimit të Mainnet, tokenat mund të ndërrohen nga BNB Smart Chain në blockchainin Ice Open Network (ION).",

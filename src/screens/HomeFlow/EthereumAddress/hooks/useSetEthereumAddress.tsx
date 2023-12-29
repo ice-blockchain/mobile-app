@@ -58,13 +58,13 @@ export const useSetEthereumAddress = () => {
     }
     navigation.navigate({
       name: 'PopUp',
-      key: 'confirm-eth-address-popup',
+      key: 'confirm-bsc-address-popup',
       params: {
         title: t('button.confirm_address'),
         message: (
           <>
             <Text style={styles.messageText}>
-              {t('ethereum_address.enter_address_confirmation')}
+              {t('bsc_address.enter_address_confirmation')}
             </Text>
             <Text style={[styles.messageText, styles.messageTextBold]}>
               {address}

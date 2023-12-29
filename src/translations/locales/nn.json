@@ -196,10 +196,10 @@
     "no_library_permissions": "Bibliotekstillatelser gis ikke.",
     "blockchain_address_already_taken": "Adresse allerede i bruk",
     "invalid_blockchain_address": "Ugyldig blockchain-adresse",
-    "ethereum_address_not_eoa": "Adresse er ikke EOA",
+    "address_not_eoa": "Adresse er ikke EOA",
     "same_phone_error": "Du kan ikke bruke samme nummer.",
-    "unable_to_validate_eth_addr_eoa": "Kan ikke validere EOA-adressen",
-    "ethereum_address_not_checksummed": "Adressen er ikke bekreftet"
+    "unable_to_validate_bsc_addr_eoa": "Kan ikke validere EOA-adressen",
+    "address_not_checksummed": "Adressen er ikke bekreftet"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Bli med på Den Desentraliserte Fremtiden",
       "subtitle": "Få en forhåndsvisning av vår kommende Mainnet-app og dens unike funksjoner."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain-adresse",
       "subtitle": "Vennligst skriv inn din BSC-adresse her."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain-adresse",
     "enter_address_title": "Skriv inn din\nBNB Smart Chain-adresse",
     "enter_address_description": "I løpet av Fase Én vil ICE-token bli utgitt på BNB Smart Chain blockchain. Når Mainnet er lansert, kan token byttes fra BNB Smart Chain til Ice Open Network (ION) blockchain.",

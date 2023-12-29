@@ -196,10 +196,10 @@
     "no_library_permissions": "Дозволи бібліотеки не надаються.",
     "blockchain_address_already_taken": "Адреса вже використовується",
     "invalid_blockchain_address": "Недійсна адреса блокчейну",
-    "ethereum_address_not_eoa": "Адреса не є EOA",
+    "address_not_eoa": "Адреса не є EOA",
     "same_phone_error": "Не можна використовувати той же самий номер.",
-    "unable_to_validate_eth_addr_eoa": "Неможливо перевірити адресу EOA",
-    "ethereum_address_not_checksummed": "Адреса не підтверджена"
+    "unable_to_validate_bsc_addr_eoa": "Неможливо перевірити адресу EOA",
+    "address_not_checksummed": "Адреса не підтверджена"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Приєднуйтесь до Децентралізованого Майбутнього",
       "subtitle": "Отримайте попередній перегляд нашого майбутнього додатка Mainnet та його унікальних можливостей."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "Адреса BNB Smart Chain",
       "subtitle": "Будь ласка, введіть свою адресу BSC тут."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "Адреса BNB Smart Chain",
     "enter_address_title": "Введіть свою\nадресу BNB Smart Chain",
     "enter_address_description": "Під час Фази Один токени ICE будуть випущені на блокчейні BNB Smart Chain. Після запуску Mainnet токени можна буде обміняти з BNB Smart Chain на блокчейн Ice Open Network (ION).",

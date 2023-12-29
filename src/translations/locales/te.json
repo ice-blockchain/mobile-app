@@ -196,10 +196,10 @@
     "no_library_permissions": "లైబ్రరీ అనుమతులు మంజూరు చేయలేదు.",
     "blockchain_address_already_taken": "చిరునామా ఇప్పటికే సేకరించబడింది",
     "invalid_blockchain_address": "చెల్లని బ్లాక్‌చేన్ చిరునామా",
-    "ethereum_address_not_eoa": "చిరునామా EOA కాదు",
+    "address_not_eoa": "చిరునామా EOA కాదు",
     "same_phone_error": "మీరు ఒకేనెంబర్​ను ఉపయోగించలేరు.",
-    "unable_to_validate_eth_addr_eoa": "EOA చిరునామాను ప్రమాణించలేము",
-    "ethereum_address_not_checksummed": "చిరునామా ధృడీకరించబడలేదు"
+    "unable_to_validate_bsc_addr_eoa": "EOA చిరునామాను ప్రమాణించలేము",
+    "address_not_checksummed": "చిరునామా ధృడీకరించబడలేదు"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "డిసెంట్రలైజ్డ్ భవిష్యత్తుకు చేరండి",
       "subtitle": "మా తరపున రెండు అద్వితీయ విశేషాలను కలిగి ఉన్న మా కనబడిన Mainnet అనువర్తన కి ఒక దృష్టికరం పొందండి."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain చిరునామా",
       "subtitle": "దయచేసి మీ BSC చిరునామాను ఇక్కడ నమోదు చేయండి."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain చిరునామా",
     "enter_address_title": "మీరు\nBNB Smart Chain చిరునామాను నమోదు చేయండి",
     "enter_address_description": "ఫేజ్ వన్నాలలో, ICE టోకెన్లు BNB Smart Chain బ్లాక్చేన్‌లో ప్రకటించబడుతాయి. మీనెట్ అనుప్రయాణం ప్రారంభమయ్యాక, ఈ టోకెన్‌లను BNB Smart Chain నుండి Ice Open Network (ION) బ్లాక్చేన్‌కు వదలించవచ్చు.",

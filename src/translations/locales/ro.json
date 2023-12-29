@@ -196,10 +196,10 @@
     "no_library_permissions": "Nu sunt acordate permisiunile de acces la bibliotecă.",
     "blockchain_address_already_taken": "Adresa deja folosită",
     "invalid_blockchain_address": "Adresă blockchain invalidă",
-    "ethereum_address_not_eoa": "Adresa nu este EOA",
+    "address_not_eoa": "Adresa nu este EOA",
     "same_phone_error": "Nu poți folosi același număr.",
-    "unable_to_validate_eth_addr_eoa": "Imposibil de validat adresa EOA",
-    "ethereum_address_not_checksummed": "Adresa nu este validată"
+    "unable_to_validate_bsc_addr_eoa": "Imposibil de validat adresa EOA",
+    "address_not_checksummed": "Adresa nu este validată"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "Alătură-te Viitorului Decentralizat",
       "subtitle": "Obține o previzualizare a aplicației noastre Mainnet viitoare și a caracteristicilor sale unice."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "Adresa BNB Smart Chain",
       "subtitle": "Vă rugăm să introduceți adresa BSC aici."
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "Adresa BNB Smart Chain",
     "enter_address_title": "Introduceți adresa\nBNB Smart Chain",
     "enter_address_description": "În timpul Fazei Unu, tokenurile ICE vor fi lansate pe blockchainul BNB Smart Chain. După lansarea Mainnet, tokenurile pot fi schimbate de pe BNB Smart Chain pe blockchainul Ice Open Network (ION).",

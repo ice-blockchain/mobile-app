@@ -196,10 +196,10 @@
     "no_library_permissions": "ライブラリへのアクセスが許可されていません。",
     "blockchain_address_already_taken": "アドレスはすでに使用されています",
     "invalid_blockchain_address": "無効なアドレス",
-    "ethereum_address_not_eoa": "アドレスはEOAではありません",
+    "address_not_eoa": "アドレスはEOAではありません",
     "same_phone_error": "同じ番号を使うことはできません。",
-    "unable_to_validate_eth_addr_eoa": "EOAアドレスを検証できません",
-    "ethereum_address_not_checksummed": "アドレスが検証されていません"
+    "unable_to_validate_bsc_addr_eoa": "EOAアドレスを検証できません",
+    "address_not_checksummed": "アドレスが検証されていません"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "分散型未来に参加",
       "subtitle": "今後のメインネットアプリとそのユニークな機能の一部をご紹介します。"
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain アドレス",
       "subtitle": "ここにBSCアドレスを入力してください。"
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain アドレス",
     "enter_address_title": "あなたの\nBNB Smart Chain アドレスを入力してください",
     "enter_address_description": "フェーズ1中、ICEトークンはBNB Smart Chainブロックチェーン上にリリースされます。メインネットが開始されると、トークンはBNB Smart ChainからIce Open Network（ION）ブロックチェーンに交換できるようになります。",

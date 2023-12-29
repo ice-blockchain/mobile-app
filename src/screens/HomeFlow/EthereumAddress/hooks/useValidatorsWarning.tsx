@@ -23,10 +23,10 @@ export const useValidatorsWarning = () => {
   const showWarning = () => {
     navigation.navigate({
       name: 'PopUp',
-      key: 'eth-address-warning-popup',
+      key: 'bsc-address-warning-popup',
       params: {
-        title: t('ethereum_address.validators_warning_title'),
-        message: t('ethereum_address.validators_warning_text'),
+        title: t('bsc_address.validators_warning_title'),
+        message: t('bsc_address.validators_warning_text'),
         buttons: [
           {
             text: t('button.not_sure'),

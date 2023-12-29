@@ -196,10 +196,10 @@
     "no_library_permissions": "اجازه دسترسی به مجموع برنامه‌ها اعطا نشده است.",
     "blockchain_address_already_taken": "آدرس قبلاً گرفته شده است",
     "invalid_blockchain_address": "آدرس نامعتبر است",
-    "ethereum_address_not_eoa": "آدرس EOA نیست",
+    "address_not_eoa": "آدرس EOA نیست",
     "same_phone_error": "شما نمی‌توانید از همان شماره استفاده کنید.",
-    "unable_to_validate_eth_addr_eoa": "امکان تأیید آدرس EOA وجود ندارد",
-    "ethereum_address_not_checksummed": "آدرس چک‌نشده است"
+    "unable_to_validate_bsc_addr_eoa": "امکان تأیید آدرس EOA وجود ندارد",
+    "address_not_checksummed": "آدرس چک‌نشده است"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "به آینده غیرمتمرکز بپیوندید",
       "subtitle": "یک نگاهی به برنامه Mainnet آینده ما و ویژگی‌های منحصر به فرد آن بیافکنید."
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "آدرس BNB Smart Chain",
       "subtitle": "لطفاً آدرس BSC خود را اینجا وارد کنید."
     },
@@ -1176,7 +1176,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "آدرس BNB Smart Chain",
     "enter_address_title": "آدرس BNB Smart Chain خود را وارد کنید",
     "enter_address_description": "در طول مرحله یک، توکن‌های ICE در بلاکچین BNB Smart Chain منتشر خواهند شد. پس از راه‌اندازی Mainnet، این توکن‌ها قابل معامله از BNB Smart Chain به بلاکچین Ice Open Network (ION) خواهند بود.",

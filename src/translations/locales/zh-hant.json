@@ -196,10 +196,10 @@
     "no_library_permissions": "未授予資料庫權限",
     "blockchain_address_already_taken": "地址已被使用",
     "invalid_blockchain_address": "無效的區塊鏈地址",
-    "ethereum_address_not_eoa": "地址不是 EOA",
+    "address_not_eoa": "地址不是 EOA",
     "same_phone_error": "您無法使用相同的號碼。",
-    "unable_to_validate_eth_addr_eoa": "無法驗證EOA地址",
-    "ethereum_address_not_checksummed": "地址無法驗證"
+    "unable_to_validate_bsc_addr_eoa": "無法驗證EOA地址",
+    "address_not_checksummed": "地址無法驗證"
   },
   "profile": {
     "my_roles": {
@@ -366,7 +366,7 @@
       "title": "加入去中心化的未來",
       "subtitle": "提前了解我們即將推出的 Mainnet 應用程序及其獨特功能。"
     },
-    "ethereum_address": {
+    "bsc_address": {
       "title": "BNB Smart Chain地址",
       "subtitle": "請在此處輸入您的BSC地址。"
     },
@@ -1169,7 +1169,7 @@
       }
     }
   },
-  "ethereum_address": {
+  "bsc_address": {
     "title": "BNB Smart Chain地址",
     "enter_address_title": "在此處輸入您的\nBNB Smart Chain地址",
     "enter_address_description": "在第一階段期間，ICE代幣將在BNB Smart Chain區塊鏈上發布。在Mainnet啟動後，您可以將代幣從BNB Smart Chain交換到Ice Open Network（ION）區塊鏈。",

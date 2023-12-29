@@ -36,12 +36,12 @@ export const OkxWalletCard = ({style}: Props) => {
         />
         <Image source={Images.card.okxWallet} style={styles.logoImage} />
         <Text style={styles.descriptionText}>
-          {t('ethereum_address.okxWalletDescription')}
+          {t('bsc_address.okxWalletDescription')}
         </Text>
         <View style={styles.action}>
           <DownloadIcon />
           <Text style={styles.actionText}>
-            {t('ethereum_address.okxWalletAction')}
+            {t('bsc_address.okxWalletAction')}
           </Text>
         </View>
       </Touchable>
