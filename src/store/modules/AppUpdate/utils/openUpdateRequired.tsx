@@ -15,6 +15,7 @@ export const openUpdateRequired = () => {
 
   navigate({
     name: 'PopUp',
+    key: 'update-required-popup',
     params: {
       imageProps: {source: Images.popUp.updateRequired},
       title: t('pop_up.update_now'),

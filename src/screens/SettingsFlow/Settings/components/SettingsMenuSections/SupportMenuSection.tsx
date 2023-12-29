@@ -60,6 +60,7 @@ export const SupportMenuSection = () => {
         onPress={() => {
           navigation.navigate({
             name: 'PopUp',
+            key: 'delete-account-confirmation-popup',
             params: {
               title: t('pop_up.delete_account_confirmation_title'),
               message: t('pop_up.delete_account_confirmation_text'),

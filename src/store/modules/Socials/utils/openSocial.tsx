@@ -23,6 +23,7 @@ export const openSocial = (type: SocialType) => {
 
   navigate({
     name: 'PopUp',
+    key: 'social-popup',
     params: {
       imageProps: {source: socialData[type].image},
       imageStyle: styles.imageStyle,

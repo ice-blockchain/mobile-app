@@ -32,6 +32,7 @@ export function UserConsent({updateKycStepPassed}: Props) {
   const onContinue = () => {
     navigate({
       name: 'PopUp',
+      key: 'face-auth-consent-popup',
       params: {
         title: t('face_auth.title'),
         message: <Message text={t('face_auth.confirmation')} />,

@@ -18,25 +18,29 @@ export const useConfirmChangeLanguageDialog = () => {
   return {
     openConfirmationDialog: useCallback(
       (language: SupportedLocale) => {
-        navigation.navigate('PopUp', {
-          title: t('settings.change_lang_confirm.title'),
-          message: t('settings.change_lang_confirm.prompt'),
-          buttons: [
-            DEFAULT_DIALOG_NO_BUTTON,
-            {
-              text: t('button.change'),
-              onPress: () => {
-                dispatch(
-                  AccountActions.UPDATE_ACCOUNT.START.create({
-                    language,
-                  }),
-                );
-                AnalyticsEventLogger.trackChangeLanguage({
-                  newLanguage: language,
-                });
+        navigation.navigate({
+          name: 'PopUp',
+          key: 'confirm-lang-popup',
+          params: {
+            title: t('settings.change_lang_confirm.title'),
+            message: t('settings.change_lang_confirm.prompt'),
+            buttons: [
+              DEFAULT_DIALOG_NO_BUTTON,
+              {
+                text: t('button.change'),
+                onPress: () => {
+                  dispatch(
+                    AccountActions.UPDATE_ACCOUNT.START.create({
+                      language,
+                    }),
+                  );
+                  AnalyticsEventLogger.trackChangeLanguage({
+                    newLanguage: language,
+                  });
+                },
               },
-            },
-          ],
+            ],
+          },
         });
       },
       [dispatch, navigation],

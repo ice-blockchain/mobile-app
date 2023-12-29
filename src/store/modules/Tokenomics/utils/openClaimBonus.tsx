@@ -37,6 +37,7 @@ export const openClaimBonus = () => {
 
   navigate({
     name: 'PopUp',
+    key: 'claim-bonus-popup',
     params: {
       animationProps: {source: LottieAnimations.bonusClaim},
       title: t('extra_bonus.claim_title'),

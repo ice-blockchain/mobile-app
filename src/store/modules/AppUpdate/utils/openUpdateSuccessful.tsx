@@ -14,6 +14,7 @@ export const openUpdateSuccessful = () => {
 
   navigate({
     name: 'PopUp',
+    key: 'update-successful-popup',
     params: {
       imageProps: {source: Images.popUp.upToDate},
       title: t('pop_up.you_are_up_to_date'),

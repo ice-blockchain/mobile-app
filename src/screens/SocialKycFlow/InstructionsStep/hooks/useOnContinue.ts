@@ -30,6 +30,7 @@ export function useOnContinue({
     if (isDistributionFlow && !tappedTheLinkRef.current) {
       navigate({
         name: 'PopUp',
+        key: 'social-kyc-instructions-popup',
         params: {
           title: t('social_kyc.instructions_step.x.pop_up.title'),
           message: t('distribution_kyc.instructions_step.x.pop_up.description'),
@@ -47,6 +48,7 @@ export function useOnContinue({
     } else {
       navigate({
         name: 'PopUp',
+        key: 'social-kyc-instructions-popup',
         params: {
           title: t('social_kyc.instructions_step.x.pop_up.title'),
           message: t(

@@ -38,18 +38,22 @@ export const useControlHandlers = (user: User) => {
   );
 
   const onEmailPress = useCallback(() => {
-    navigation.navigate('PopUp', {
-      title: t('settings.update_email_confirmation_title'),
-      message: t('settings.update_email_confirmation_subtitle'),
-      buttons: [
-        DEFAULT_DIALOG_NO_BUTTON,
-        {
-          text: t('button.yes'),
-          onPress: () => {
-            navigation.navigate('ModifyEmail');
+    navigation.navigate({
+      name: 'PopUp',
+      key: 'confirm-update-email-popup',
+      params: {
+        title: t('settings.update_email_confirmation_title'),
+        message: t('settings.update_email_confirmation_subtitle'),
+        buttons: [
+          DEFAULT_DIALOG_NO_BUTTON,
+          {
+            text: t('button.yes'),
+            onPress: () => {
+              navigation.navigate('ModifyEmail');
+            },
           },
-        },
-      ],
+        ],
+      },
     });
   }, [navigation]);
 

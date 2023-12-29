@@ -44,20 +44,24 @@ export const Footer = memo(({parameters}: Props) => {
   const balanceSummary = useSelector(balanceSummarySelector);
 
   const onStakePress = () => {
-    navigation.navigate('PopUp', {
-      title: t('staking.confirm_title'),
-      message: t('staking.confirm_subtitle'),
-      buttons: [
-        DEFAULT_DIALOG_NO_BUTTON,
-        {
-          text: t('button.confirm'),
-          onPress: () => {
-            if (parameters.current) {
-              confirmPreStaking(parameters.current);
-            }
+    navigation.navigate({
+      name: 'PopUp',
+      key: 'confirm-staking-popup',
+      params: {
+        title: t('staking.confirm_title'),
+        message: t('staking.confirm_subtitle'),
+        buttons: [
+          DEFAULT_DIALOG_NO_BUTTON,
+          {
+            text: t('button.confirm'),
+            onPress: () => {
+              if (parameters.current) {
+                confirmPreStaking(parameters.current);
+              }
+            },
           },
-        },
-      ],
+        ],
+      },
     });
   };
 

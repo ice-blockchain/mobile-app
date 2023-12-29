@@ -32,7 +32,7 @@ export const showError = (error: unknown) => {
      * Setting a key to distinguish Error PopUp from other PopUps
      * to display them over each other instead of substitution
      */
-    key: 'Error',
+    key: 'error-popup',
     name: 'PopUp',
     params: {
       imageProps: {source: Images.popUp.error},
