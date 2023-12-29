@@ -36,7 +36,7 @@ export const useValidatorsWarning = () => {
             text: t('button.confirm'),
             onPress: () => {
               dispatch(
-                AccountActions. SET_BSC_ADDR_WARNING_CONFIRMED.STATE.create(),
+                AccountActions.SET_BSC_ADDR_WARNING_CONFIRMED.STATE.create(),
               );
             },
           },
