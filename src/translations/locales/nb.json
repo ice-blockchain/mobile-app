@@ -196,9 +196,9 @@
     "no_library_permissions": "Bibliotekstillatelser gis ikke.",
     "blockchain_address_already_taken": "Adresse allerede i bruk",
     "invalid_blockchain_address": "Ugyldig blockchain-adresse",
-    "ethereum_address_not_eoa": "Adresse er ikke EOA",
+    "address_not_eoa": "Adresse er ikke EOA",
     "same_phone_error": "Du kan ikke bruke samme nummer.",
-    "unable_to_validate_eth_addr_eoa": "Kan ikke validere EOA-adressen"
+    "unable_to_validate_bsc_addr_eoa": "Kan ikke validere EOA-adressen"
   },
   "profile": {
     "my_roles": {
@@ -365,9 +365,9 @@
       "title": "Bli med på Den Desentraliserte Fremtiden",
       "subtitle": "Få en forhåndsvisning av vår kommende Mainnet-app og dens unike funksjoner."
     },
-    "ethereum_address": {
-      "title": "Ethereum-adresse",
-      "subtitle": "Vennligst skriv inn din Ethereum adresse her."
+    "bsc_address": {
+      "title": "BNB Smart Chain-adresse",
+      "subtitle": "Vennligst skriv inn din BSC-adresse her."
     },
     "verified_tooltip": {
       "title": "KYC Verifisert"
@@ -1168,15 +1168,15 @@
       }
     }
   },
-  "ethereum_address": {
-    "title": "Ethereum-adresse",
-    "enter_address_title": "Skriv inn\ndin Ethereum adresse",
-    "enter_address_description": "I løpet av Fase Én vil ICE-tokenene bli utgitt på Ethereum-blockchainen. Når Mainnet er lansert, kan tokenene byttes fra Ethereum til Ice Open Network (ION) blockchain.",
-    "enter_address_confirmation": "Er du sikker på at Ethereum-adressen er riktig?",
+  "bsc_address": {
+    "title": "BNB Smart Chain-adresse",
+    "enter_address_title": "Skriv inn din\nBNB Smart Chain-adresse",
+    "enter_address_description": "I løpet av Fase Én vil ICE-token bli utgitt på BNB Smart Chain blockchain. Når Mainnet er lansert, kan token byttes fra BNB Smart Chain til Ice Open Network (ION) blockchain.",
+    "enter_address_confirmation": "Er du sikker på at BNB Smart Chain-adressen din er riktig?",
     "validators_warning_title": "Bekreft Adresse",
-    "validators_warning_text": "Vennligst merk at personer som har lagt til en Ethereum-adresse på kontoen sin, ikke har rett til å bli en av de øverste 300 validatorer i henhold til vårt whitepaper for hovednettets lansering.",
-    "okxWalletDescription": "Vi anbefaler å bruke din [[:bold]]OKX Exchange[[/:bold]] Ethereum-adresse for å unngå eventuelle gassavgifter.\n\nHvis OKX ikke er tilgjengelig i landet ditt, kan du bruke en selvstyrte lommebok som MetaMask eller Trust Wallet.",
-    "okxWalletAction": "OPPRETT KONTO PÅ OKX"
+    "validators_warning_text": "Vennligst merk: Personer som har lagt til en BNB Smart Chain-adresse i kontoen sin, er ikke kvalifisert til å bli en av de øverste 300 validatorer som angitt i vår whitepaper for hovednettets lansering.",
+    "okxWalletDescription": "Sikre myntene dine med OKX Wallet, vår pålitelige offisielle selvstyrende lommebokspartner.",
+    "okxWalletAction": "LAST NED OKX WALLET"
   },
   "social_kyc": {
     "header": "Verifisering",
@@ -1237,8 +1237,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "Ethereum Distribusjon",
-      "description": "Få Ethereum ICE-myntene dine ved å verifisere kontoen din enkelt ved hjelp av din eksisterende X-profil."
+      "title": "BNB Smart Chain-distribusjon",
+      "description": "Motta dine BNB Smart Chain ICE-mynter ved å verifisere kontoen din enkelt ved å bruke eksisterende X-profil."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1251,7 @@
     },
     "results_step": {
       "success": {
-        "description": "Gratulerer, du har fullført verifiseringen din med suksess. Du er nå kvalifisert for Ethereum-distribusjonen."
+        "description": "Gratulerer, du har fullført verifiseringen din med suksess. Du er nå kvalifisert for BNB Smart Chain-distribusjon."
       }
     }
   }

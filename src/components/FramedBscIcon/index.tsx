@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {EthereumIcon} from '@svg/EthereumIcon';
+import {BscIcon} from '@svg/BscIcon';
 import React from 'react';
 import {StyleProp, StyleSheet, View, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
@@ -11,12 +11,18 @@ const ICON_SIZE = rem(36);
 
 type Props = {
   style?: StyleProp<ViewStyle>;
+  iconColor?: string;
+  iconSize?: number;
 };
 
-export const FramedEthereumIcon = ({style}: Props) => {
+export const FramedBscIcon = ({
+  style,
+  iconColor,
+  iconSize = ICON_SIZE,
+}: Props) => {
   return (
     <View style={[styles.container, style]}>
-      <EthereumIcon width={ICON_SIZE} height={ICON_SIZE} />
+      <BscIcon width={iconSize} height={iconSize} color={iconColor} />
     </View>
   );
 };

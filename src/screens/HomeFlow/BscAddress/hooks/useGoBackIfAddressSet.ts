@@ -30,7 +30,7 @@ export const useGoBackIfAddressSet = ({
       checkProp(updatePayload, 'userInfo') &&
       checkProp(updatePayload.userInfo, 'miningBlockchainAccountAddress')
     ) {
-      removeScreenByName('EthereumAddress');
+      removeScreenByName('BscAddress');
     }
   }, [isFormSubmitted, isSuccessUpdate, updatePayload]);
 };

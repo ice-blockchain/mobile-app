@@ -5,7 +5,7 @@ import {LINKS} from '@constants/links';
 import {commonStyles} from '@constants/styles';
 import {Images} from '@images';
 import {DownloadIcon} from '@svg/DownloadIcon';
-import {replaceString, t, tagRegex} from '@translations/i18n';
+import {t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
 import React from 'react';
@@ -32,24 +32,16 @@ export const OkxWalletCard = ({style}: Props) => {
         <Image
           source={Images.backgrounds.blueSquaresBg}
           style={[StyleSheet.absoluteFill, styles.backgroundImage]}
-          resizeMode={'repeat'}
+          resizeMode={'stretch'}
         />
         <Image source={Images.card.okxWallet} style={styles.logoImage} />
         <Text style={styles.descriptionText}>
-          {replaceString(
-            t('ethereum_address.okxWalletDescription'),
-            tagRegex('bold', false),
-            (match, index) => (
-              <Text key={match + index} style={styles.boldDescriptionText}>
-                {match}
-              </Text>
-            ),
-          )}
+          {t('bsc_address.okxWalletDescription')}
         </Text>
         <View style={styles.action}>
           <DownloadIcon />
           <Text style={styles.actionText}>
-            {t('ethereum_address.okxWalletAction')}
+            {t('bsc_address.okxWalletAction')}
           </Text>
         </View>
       </Touchable>
@@ -69,16 +61,13 @@ const styles = StyleSheet.create({
     height: undefined,
   },
   logoImage: {
-    width: rem(126),
-    height: rem(38),
+    width: rem(80),
+    height: rem(45),
   },
   descriptionText: {
     marginTop: rem(12),
-    marginHorizontal: rem(26),
+    marginHorizontal: rem(40),
     ...font(12, 18, 'regular', 'white', 'center'),
-  },
-  boldDescriptionText: {
-    ...font(12, 18, 'bold', 'white', 'center'),
   },
   action: {
     marginTop: rem(12),

@@ -132,9 +132,9 @@ export function* handleUrlSaga(action: ReturnType<typeof actionCreator>) {
       });
       yield put(TokenomicsActions.CLAIM_DAILY_BONUS.STATE.create());
       break;
-    case 'eth-address':
+    case 'bsc-address':
       navigate({
-        name: 'EthereumAddress',
+        name: 'BscAddress',
         params: undefined,
       });
       break;

@@ -196,9 +196,9 @@
     "no_library_permissions": "लायब्ररी परवानग्या दिलेल्या नाहीत.",
     "blockchain_address_already_taken": "पत्ता आधीच घेतला आहे",
     "invalid_blockchain_address": "अवैध पत्ता",
-    "ethereum_address_not_eoa": "पत्ता EOA नसतो",
+    "address_not_eoa": "पत्ता EOA नसतो",
     "same_phone_error": "तुम्ही तोच नंबर वापरू शकत नाही.",
-    "unable_to_validate_eth_addr_eoa": "EOA पत्ता मान्यता देऊ शकत नाही"
+    "unable_to_validate_bsc_addr_eoa": "EOA पत्ता मान्यता देऊ शकत नाही"
   },
   "profile": {
     "my_roles": {
@@ -365,9 +365,9 @@
       "title": "डीसेंट्रलाइझ्ड भविष्यात सामील व्हा",
       "subtitle": "आपल्या आगवडच्या मेननेट अ‍ॅपच्या आणि त्याच्या अद्वितीय सुविधांच्या सूचना मिळवा."
     },
-    "ethereum_address": {
-      "title": "ईथेरीयम पत्ता",
-      "subtitle": "कृपया आपला Ethereum पत्ता येथे प्रविष्ट करा."
+    "bsc_address": {
+      "title": "BNB Smart Chain पत्ता",
+      "subtitle": "कृपया येथे आपला BSC पत्ता प्रविष्ट करा."
     },
     "verified_tooltip": {
       "title": "KYC सत्यापित"
@@ -1168,15 +1168,15 @@
       }
     }
   },
-  "ethereum_address": {
-    "title": "ईथेरीयम पत्ता",
-    "enter_address_title": "आपला\nEthereum पत्ता प्रविष्ट करा",
-    "enter_address_description": "प्रथम प्रक्रियेदरम्यान, ICE टोकन्स ईथेरीयम ब्लॉकचेनवर प्रकाशित केल्या जातील. एकदम मेननेट सुरू झाल्यानंतर, ईथेरीयममधून आयस ओपन नेटवर्क (ION) ब्लॉकचेनवर टोकन्स स्वप्प केल्या जाऊ शकतात.",
-    "enter_address_confirmation": "की तुम्ही Ethereum पत्ता सचेत आहात का?",
+  "bsc_address": {
+    "title": "BNB Smart Chain पत्ता",
+    "enter_address_title": "आपला\nBNB Smart Chain पत्ता प्रविष्ट करा",
+    "enter_address_description": "प्रथम पडद्यात, ICE टोकन BNB Smart Chain ब्लॉकचेनवर जारी होईल. एकमेकन ब्लॉकचेन सुरू होता, टोकन ब्लॉकचेनवरून BNB Smart Chain ते आयस ओपन नेटवर्क (ION) ब्लॉकचेनक्षेत्रावर बदलता येईल.",
+    "enter_address_confirmation": "की आपल्याला खात्याचा BNB Smart Chain पत्ता सापडला आहे का?",
     "validators_warning_title": "पत्ता किंवा ठिकाण सत्यापीत करा",
-    "validators_warning_text": "कृपया लक्षात घ्या की त्यांच्याकडून आपल्याला Ethereum पत्ता आपल्या खात्यात जोडला आहे त्यांची मुख्यनेट लॉन्चसाठी आमच्या व्हायटपेपरच्या सारण्य 300 वॅलिडेटर्स मध्ये एक आहे हे लक्षात घ्या.",
-    "okxWalletDescription": "गॅस फीसस सुटीची व्यवस्था करण्यासाठी आपल्याला आपल्या [[:bold]]OKX Exchange[[/:bold]] एथेरियम पत्त्याचा वापर करण्याची सल्ला देतो.\n\nआपल्या देशात OKX उपलब्ध नसल्यास, आपण MetaMask किंवा Trust Wallet यासारख्या स्वत: संरक्षित वॉलेटचा वापर करू शकता.",
-    "okxWalletAction": "OKX वर खाता तयार करा"
+    "validators_warning_text": "कृपया लक्षात घ्या: ज्यांनी आपल्या खात्यात BNB Smart Chain पत्ता जोडला आहे, त्यांच्याकडून मुख्यनेट्वर लॉन्चिंगसाठी आमच्या व्हायटपेपरमध्ये स्पष्टपणे 300 वैधात्य चाचणीकर्त्यांपैकी एक व्हा हे हक्क नाही.",
+    "okxWalletDescription": "आपल्या सिक्का अंदाजाने OKX वॉलेटसह सुरक्षित करा, आमच्या विश्वासाने आपल्याच्या स्वयंप्रबंध आधिकारिक वॉलेट संगठनाचा साथी.",
+    "okxWalletAction": "OKX वॉलेट डाउनलोड करा"
   },
   "social_kyc": {
     "header": "प्रमाणित करणे",
@@ -1237,8 +1237,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "इथेरियम वितरण",
-      "description": "आपल्या व्यक्तिगत X प्रोफाइलचा वापर करून आपले खाते सोडवण्याच्या विशेषांकनाची सोय करून आपले इथेरियम ICE सिक्के प्राप्त करा."
+      "title": "BNB Smart Chain वितरण",
+      "description": "आपले व्यक्तिगत X प्रोफाइल वापरून आपल्या खात्याची पुष्टी आस्वाद्य देऊन आपले BNB Smart Chain ICE सिक्के प्राप्त करा."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1251,7 @@
     },
     "results_step": {
       "success": {
-        "description": "अभिनंदन, आपली पडताळणी सफळतेच्या संपूर्ण आणली आहे. आता आपल्याला Ethereum वितरणासाठी पात्र आहे."
+        "description": "अभिनंदन, आपण आपल्या पुष्टीकरणाचा यशस्वीपणे पूर्ण केलाआहे. आपल्याला आता BNB Smart Chain वितरणासाठी पात्र आहे."
       }
     }
   }

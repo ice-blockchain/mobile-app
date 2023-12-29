@@ -196,9 +196,9 @@
     "no_library_permissions": "A könyvtárhoz való hozzáférés nincs engedélyezve.",
     "blockchain_address_already_taken": "Cím már foglalt",
     "invalid_blockchain_address": "Érvénytelen cím",
-    "ethereum_address_not_eoa": "A cím nem EOA",
+    "address_not_eoa": "A cím nem EOA",
     "same_phone_error": "Nem használhatod ugyanazt a számot.",
-    "unable_to_validate_eth_addr_eoa": "Az EOA cím ellenőrzése nem lehetséges"
+    "unable_to_validate_bsc_addr_eoa": "Az EOA cím ellenőrzése nem lehetséges"
   },
   "profile": {
     "my_roles": {
@@ -365,9 +365,9 @@
       "title": "Csatlakozz a Decentralizált Jövőhöz",
       "subtitle": "Tekints be a közelgő Mainnet alkalmazásunkba és annak egyedi funkcióiba."
     },
-    "ethereum_address": {
-      "title": "Ethereum cím",
-      "subtitle": "Kérlek add meg az Ethereum címedet itt."
+    "bsc_address": {
+      "title": "BNB Smart Chain cím",
+      "subtitle": "Kérjük, adja meg BSC címét itt."
     },
     "verified_tooltip": {
       "title": "KYC Hitelesítve"
@@ -1168,15 +1168,15 @@
       }
     }
   },
-  "ethereum_address": {
-    "title": "Ethereum Cím",
-    "enter_address_title": "Add meg az\nEthereum címedet",
-    "enter_address_description": "Az Első Fázis során az ICE tokenek az Ethereum blockchainen lesznek kibocsátva. Miután elindult a Mainnet, a tokenek Ethereumról az Ice Open Network (ION) blockchainre cserélhetők.",
-    "enter_address_confirmation": "Biztos benne, hogy az Ethereum cím helyes?",
+  "bsc_address": {
+    "title": "BNB Smart Chain cím",
+    "enter_address_title": "Adja meg\nBNB Smart Chain címét",
+    "enter_address_description": "Az Első Fázis során az ICE érméket a BNB Smart Chain blokkláncán bocsátják ki. Miután a Mainnet elindult, az érméket BNB Smart Chain-ről Ice Open Network (ION) blokkláncre cserélheti.",
+    "enter_address_confirmation": "Biztos benne, hogy a BNB Smart Chain cím helyes?",
     "validators_warning_title": "Cím megerősítése",
-    "validators_warning_text": "Kérjük, vegye figyelembe, hogy azok az egyének, akik hozzáadtak egy Ethereum címet a fiókjukhoz, nem jogosultak az egyik legjobb 300 validátor közül lenni a fehér könyvünk alapján a mainnet indításához.",
-    "okxWalletDescription": "A gáz díjak elkerülése érdekében javasoljuk, hogy használja a [[:bold]]OKX Exchange[[/:bold]] Ethereum címét.\n\nHa az OKX nem elérhető az Ön országában, használhat egy önellátó pénztárcát, mint például a MetaMask vagy a Trust Wallet.",
-    "okxWalletAction": "OKX SZÁMLA LÉTREHOZÁSA"
+    "validators_warning_text": "Kérjük, vegye figyelembe, hogy azok az egyének, akik hozzáadtak egy BNB Smart Chain címet a fiókjukhoz, nem jogosultak arra, hogy a whitepaperünk szerint a Mainnet indulásához tartozó top 300 validátor egyike legyenek.",
+    "okxWalletDescription": "Védje meg érméit az OKX Wallet segítségével, a megbízható önkezelésű hivatalos pénztárcapartnerünkkel.",
+    "okxWalletAction": "OKX WALLET LETÖLTÉSE"
   },
   "social_kyc": {
     "header": "Ellenőrzés",
@@ -1237,8 +1237,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "Ethereum Osztás",
-      "description": "Az Ethereum ICE érméid fogadd az X profilod használatával egyszerűen ellenőrizve a fiókodat."
+      "title": "BNB Smart Chain elosztás",
+      "description": "Vegye át BNB Smart Chain ICE érmeit könnyedén a meglévő X profiljának használatával történő fiókja ellenőrzésével."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1251,7 @@
     },
     "results_step": {
       "success": {
-        "description": "Gratulálok, sikeresen befejezted a hitelesítést. Most jogosult vagy az Ethereum terjesztésre."
+        "description": "Gratulálunk, sikeresen befejezte az ellenőrzését. Most jogosult a BNB Smart Chain elosztásra."
       }
     }
   }

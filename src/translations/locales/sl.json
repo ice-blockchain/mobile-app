@@ -196,9 +196,9 @@
     "no_library_permissions": "Dovoljenja za knjižnico niso odobrena.",
     "blockchain_address_already_taken": "Naslov je že v uporabi",
     "invalid_blockchain_address": "Neveljaven naslov blockchaina",
-    "ethereum_address_not_eoa": "Naslov ni EOA",
+    "address_not_eoa": "Naslov ni EOA",
     "same_phone_error": "Ne morete uporabiti iste številke.",
-    "unable_to_validate_eth_addr_eoa": "Ni mogoče potrditi naslova EOA"
+    "unable_to_validate_bsc_addr_eoa": "Ni mogoče potrditi naslova EOA"
   },
   "profile": {
     "my_roles": {
@@ -365,9 +365,9 @@
       "title": "Pridružite se decentralizirani prihodnosti",
       "subtitle": "Oglejte si predogled naše prihajajoče aplikacije Mainnet in njenih edinstvenih funkcij."
     },
-    "ethereum_address": {
-      "title": "Ethereum naslov",
-      "subtitle": "Prosimo, vnesite svoj naslov Ethereum tukaj."
+    "bsc_address": {
+      "title": "Naslov BNB Smart Chain",
+      "subtitle": "Prosimo, vnesite svoj naslov BSC tukaj."
     },
     "verified_tooltip": {
       "title": "KYC Preverjeno"
@@ -1168,15 +1168,15 @@
       }
     }
   },
-  "ethereum_address": {
-    "title": "Ethereum naslov",
-    "enter_address_title": "Vnesite\nvaš naslov Ethereum",
-    "enter_address_description": "Med fazo 1 bodo žetoni ICE izpuščeni na Ethereum blockchain. Po zagonu Mainneta bodo žetoni mogoče zamenjati iz Ethereuma v blockchain Ice Open Network (ION).",
-    "enter_address_confirmation": "Ste prepričani, da je naslov Ethereum pravilen?",
+  "bsc_address": {
+    "title": "Naslov BNB Smart Chain",
+    "enter_address_title": "Vnesite svoj\nnaslov BNB Smart Chain",
+    "enter_address_description": "Med Fazo Ena bodo žetoni ICE izdani na verigi BNB Smart Chain. Po zagonu Mainneta bodo lahko žetoni zamenjani iz BNB Smart Chain v verigo Ice Open Network (ION).",
+    "enter_address_confirmation": "Ste prepričani, da je vaš naslov BNB Smart Chain pravilen?",
     "validators_warning_title": "Potrdite Naslov",
-    "validators_warning_text": "Prosimo, upoštevajte, da osebe, ki je dodala Ethereum naslov na svoj račun, ni dovoljeno postati eden izmed top 300 validacij glede na naš beli papir za glavni zagon.",
-    "okxWalletDescription": "Priporočamo uporabo vašega naslova Ethereum iz [[:bold]]OKX Exchange[[/:bold]] za izogibanje stroškom plina.\n\nČe OKX ni na voljo v vaši državi, lahko uporabite svojo lastno upravljano denarnico, kot je MetaMask ali Trust Wallet.",
-    "okxWalletAction": "USTVARI RAČUN NA OKX"
+    "validators_warning_text": "Opozorilo: Osebe, ki so dodale naslov BNB Smart Chain na svoj račun, niso upravičene postati eden od 300 glavnih validatojev, kot je navedeno v našem beli knjigi za zagon glavne mreže.",
+    "okxWalletDescription": "Zaščitite svoje kovance s OKX Wallet, našim zaupanja vrednim samostojnim uradnim partnerjem za denarnice.",
+    "okxWalletAction": "PRENESITE OKX DENARNICO"
   },
   "social_kyc": {
     "header": "Preverjanje",
@@ -1237,8 +1237,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "Porazdelitev Ethereum",
-      "description": "Svoje Ethereum ICE kovance prejmite tako, da preprosto preverite svoj račun s svojim obstoječim profilom X."
+      "title": "Distribucija BNB Smart Chain",
+      "description": "Prejmite svoje kovance ICE BNB Smart Chain tako, da preverite svoj račun enostavno s pomočjo obstoječega profila X."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1251,7 @@
     },
     "results_step": {
       "success": {
-        "description": "Čestitamo, uspešno ste zaključili svojo preverjanje. Sedaj ste upravičeni do distribucije Ethereum."
+        "description": "Čestitamo, uspešno ste zaključili preverjanje. Sedaj ste upravičeni do distribucije BNB Smart Chain."
       }
     }
   }

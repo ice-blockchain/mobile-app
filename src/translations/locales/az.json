@@ -196,9 +196,9 @@
     "no_library_permissions": "Kitabxana icazəsi verilməyib.",
     "blockchain_address_already_taken": "Ünvan artıq istifadə edilib",
     "invalid_blockchain_address": "Yanlış ünvan",
-    "ethereum_address_not_eoa": "Ünvan EOA deyil",
+    "address_not_eoa": "Ünvan EOA deyil",
     "same_phone_error": "Eyni nömrədən istifadə edə bilməzsən.",
-    "unable_to_validate_eth_addr_eoa": "EOA ünvanını doğrulamaq mümkün olmur"
+    "unable_to_validate_bsc_addr_eoa": "EOA ünvanını doğrulamaq mümkün olmur"
   },
   "profile": {
     "my_roles": {
@@ -365,9 +365,9 @@
       "title": "Mərkəzi Olmayan Gələcəyə qoşulun",
       "subtitle": "Gələcək əsas şəbəkə tətbiqinin və unikal xüsusiyyətlərinin qısa bir baxışını alın."
     },
-    "ethereum_address": {
-      "title": "Ethereum ünvanı",
-      "subtitle": "Xahiş edirəm Ethereum ünvanınızı buraya daxil edin."
+    "bsc_address": {
+      "title": "BNB Smart Chain ünvanı",
+      "subtitle": "Zəhmət olmasa BSC ünvanınızı buraya daxil edin."
     },
     "verified_tooltip": {
       "title": "KYC Təsdiqləndi"
@@ -1168,15 +1168,15 @@
       }
     }
   },
-  "ethereum_address": {
-    "title": "Ethereum Ünvanı",
-    "enter_address_title": "Ethereum ünvanınızı daxil edin",
-    "enter_address_description": "Fəzə Bir zamanı ICE tokenləri Ethereum blokçeyndə buraxılacaq. Əsas şəbəkə başladıqdan sonra, tokenlərin Ethereumdan Ice Open Network (ION) blokçeynə dəyişdirilməsi mümkün olacaq.",
-    "enter_address_confirmation": "Ethereum ünvanının düzgün olduğundan əminsinizmi?",
+  "bsc_address": {
+    "title": "BNB Smart Chain ünvanı",
+    "enter_address_title": "BNB Smart Chain\nünvanınızı daxil edin",
+    "enter_address_description": "Fəzlə bir zaman ICE tokenləri BNB Smart Chain blockchainində işləyəcək. Əsas şəbəkə işə salındıqdan sonra, tokenləri BNB Smart Chain-dən Ice Open Network (ION) blockchaininə dəyişdirə bilərsiniz.",
+    "enter_address_confirmation": "BNB Smart Chain ünvanının düzgün olduğundan əminsinizmi?",
     "validators_warning_title": "Ünvanı Təsdiq Et",
-    "validators_warning_text": "Xahiş edirəm diqqət edin ki, Ethereum ünvanını hesabına əlavə edənlər, əsas şəbəkənin istehsalı üçün bizim ağlaşdırmamıza əsasən ən yaxşı 300 doğrulayıcının biri olmaq üçün əhəmiyyət daşımırlar.",
-    "okxWalletDescription": "Gaz ödənişlərindən qaçmaq üçün [[:bold]]OKX Exchange[[/:bold]] Ethereum ünvanınızı istifadə etmənizi tövsiyə edirik.\n\nƏgər OKX sizin ölkənizdə mövcud deyilsə, MetaMask və ya Trust Wallet kimi özünüzün idarəetməli cüzdanını istifadə edə bilərsiniz.",
-    "okxWalletAction": "OKX-DA HESAB AÇIN"
+    "validators_warning_text": "Xüsusiylə öz hesabına BNB Smart Chain ünvanını əlavə edən şəxslər, əsas şəbəkə işə salınmasına görə ağın ən yaxşı 300 təsdiqləyicisindən biri olmağa layiq deyillər.",
+    "okxWalletDescription": "OKX Wallet il əhvalatınızı təminat altına alın, bizim etibarlı öz-özünü idarə edən rəsmi cüzdan tərəfdaşımız.",
+    "okxWalletAction": "OKX CÜZDANINI YÜKLƏYİN"
   },
   "social_kyc": {
     "header": "Doğrulama",
@@ -1237,8 +1237,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "Ethereum Təqsimatı",
-      "description": "Hesabınızı sadəcə mövcud X profiliniz istifadə edərək yoxlayaraq Ethereum ICE koinlərinizi qəbul edin."
+      "title": "BNB Smart Chain Təqdimatı",
+      "description": "Mövcud X profilinizi istifadə edərək hesabınızı asanlıqla təsdiq edərək BNB Smart Chain ICE tokenlərinizi qəbul edin."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1251,7 @@
     },
     "results_step": {
       "success": {
-        "description": "Təbriklər, verifikasiyanızı uğurla başa çatdınız. Siz artıq Ethereum təqdimatı üçün nüfuzlu olmusunuzdur."
+        "description": "Təbrik edirik, sizi uğurla təsdiq etdiniz. Siz artıq BNB Smart Chain təqdimatı üçün layiqsiniz."
       }
     }
   }

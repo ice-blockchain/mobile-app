@@ -196,9 +196,9 @@
     "no_library_permissions": "لم تُمنح الأذونات الوصول إلى المكتبة.",
     "blockchain_address_already_taken": "العنوان مُستخدم بالفعل",
     "invalid_blockchain_address": "عنوان غير صالح",
-    "ethereum_address_not_eoa": "العنوان ليس EOA",
+    "address_not_eoa": "العنوان ليس EOA",
     "same_phone_error": "لا يمكنك استخدام نفس الرقم.",
-    "unable_to_validate_eth_addr_eoa": "غير قادر على التحقق من عنوان EOA"
+    "unable_to_validate_bsc_addr_eoa": "غير قادر على التحقق من عنوان EOA"
   },
   "profile": {
     "my_roles": {
@@ -365,9 +365,9 @@
       "title": "انضم إلى المستقبل اللامركزي",
       "subtitle": "احصل على نظرة سريعة على تطبيق الشبكة الرئيسية القادم وميزاته الفريدة."
     },
-    "ethereum_address": {
-      "title": "عنوان إيثيريوم",
-      "subtitle": "الرجاء إدخال عنوان Ethereum الخاص بك هنا."
+    "bsc_address": {
+      "title": "عنوان سلسلة BNB الذكية",
+      "subtitle": "الرجاء إدخال عنوان BSC الخاص بك هنا."
     },
     "verified_tooltip": {
       "title": "تم التحقق من KYC"
@@ -1168,15 +1168,15 @@
       }
     }
   },
-  "ethereum_address": {
-    "title": "عنوان إيثيريوم",
-    "enter_address_title": "أدخل\nعنوان Ethereum الخاص بك",
-    "enter_address_description": "خلال المرحلة الأولى، ستتم إصدار عملات ICE على سلسلة الكتل Ethereum. بمجرد أن يتم إطلاق الشبكة الرئيسية، سيمكن تبادل العملات من Ethereum إلى شبكة Ice Open (ION) Blockchain.",
-    "enter_address_confirmation": "هل أنت متأكد من أن عنوان Ethereum صحيح؟",
+  "bsc_address": {
+    "title": "عنوان سلسلة BNB الذكية",
+    "enter_address_title": "أدخل عنوان\nسلسلة BNB الذكية الخاص بك",
+    "enter_address_description": "خلال المرحلة الأولى، ستتم إصدار عملات ICE على سلسلة BNB Smart Chain. بمجرد أن يتم إطلاق الشبكة الرئيسية، ستكون العملات قابلة للتبادل من BNB Smart Chain إلى شبكة Ice Open Network (ION).",
+    "enter_address_confirmation": "هل أنت متأكد من صحة عنوان سلسلة BNB الذكية؟",
     "validators_warning_title": "تأكيد العنوان",
-    "validators_warning_text": "يرجى ملاحظة أن الأفراد الذين أضافوا عنوان Ethereum إلى حسابهم ليس لديهم الحق في أن يصبحوا واحدًا من أفضل 300 مُحقق وفقًا لورقتنا البيضاء لإطلاق الشبكة الرئيسية.",
-    "okxWalletDescription": "نوصي باستخدام عنوان Ethereum لمنصة [[:bold]]OKX Exchange[[/:bold]] الخاص بك لتجنب أي رسوم غاز.\n\nإذا لم تكن منصة OKX متاحة في بلدك، يمكنك استخدام محفظة خاصة بك مثل MetaMask أو Trust Wallet.",
-    "okxWalletAction": "إنشاء حساب على OKX"
+    "validators_warning_text": "يرجى ملاحظة أن الأفراد الذين قاموا بإضافة عنوان سلسلة BNB Smart Chain إلى حساباتهم غير مؤهلين ليكونوا واحدًا من أفضل 300 مصادق حسب كتابنا الأبيض لإطلاق الشبكة الرئيسية.",
+    "okxWalletDescription": "آمن عملاتك مع محفظة OKX، شريك محفظة العملات الرسمية الذاتية التصرف الموثوق بها لدينا.",
+    "okxWalletAction": "قم بتنزيل محفظة OKX"
   },
   "social_kyc": {
     "header": "التحقق",
@@ -1237,8 +1237,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "توزيع الإيثريوم",
-      "description": "استلم عملات الإيثريوم ICE الخاصة بك عن طريق التحقق من حسابك بسهولة باستخدام ملفك الشخصي X الحالي."
+      "title": "توزيع سلسلة BNB الذكية",
+      "description": "احصل على عملات BNB Smart Chain ICE الخاصة بك بسهولة عن طريق التحقق من حسابك باستخدام ملف تعريف X الخاص بك."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1251,7 @@
     },
     "results_step": {
       "success": {
-        "description": "تهانينا، لقد أكملت التحقق الخاص بك بنجاح. أنت الآن مؤهل لتوزيع Ethereum."
+        "description": "تهانينا، لقد أكملت التحقق الخاص بك بنجاح. أنت الآن مؤهل لتلقي توزيع سلسلة BNB الذكية."
       }
     }
   }

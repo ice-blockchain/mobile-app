@@ -7,9 +7,9 @@ export enum ValidationErrorCode {
   InvalidEmail = 'InvalidEmail',
   SameEmail = 'SameEmail',
   InvalidPhone = 'InvalidPhone',
-  InvalidEthereumAddress = 'InvalidEthereumAddress',
-  EthereumAddressIsNotEoa = 'EthereumAddressIsNotEoa',
-  UnableToValidateEthereumAddressEoa = 'UnableToValidateEthereumAddressEoa',
+  InvalidBscAddress = 'InvalidBscAddress',
+  BscAddressIsNotEoa = 'BscAddressIsNotEoa',
+  UnableToValidateBscAddressEoa = 'UnableToValidateBscAddressEoa',
 }
 
 const validationErrorMessages: {[code in ValidationErrorCode]: string} = {
@@ -17,11 +17,9 @@ const validationErrorMessages: {[code in ValidationErrorCode]: string} = {
   SameEmail: t('errors.same_email'),
   InvalidPhone: t('errors.invalid_phone'),
   SamePhoneNumber: t('errors.same_phone_error'),
-  InvalidEthereumAddress: t('errors.invalid_blockchain_address'),
-  EthereumAddressIsNotEoa: t('errors.ethereum_address_not_eoa'),
-  UnableToValidateEthereumAddressEoa: t(
-    'errors.unable_to_validate_eth_addr_eoa',
-  ),
+  InvalidBscAddress: t('errors.invalid_blockchain_address'),
+  BscAddressIsNotEoa: t('errors.address_not_eoa'),
+  UnableToValidateBscAddressEoa: t('errors.unable_to_validate_bsc_addr_eoa'),
 };
 
 export class ValidationError extends Error {

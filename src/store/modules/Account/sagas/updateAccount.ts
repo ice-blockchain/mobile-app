@@ -3,10 +3,11 @@
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {
-  isEoaEthereumAddress,
-  IsEoaEthereumAddressError,
-  isValidEthereumAddress,
-} from '@services/ethereum';
+  EoaBscAddressError,
+  isEoaBscAddress,
+  isValidBscAddress,
+  unchecksummAddress,
+} from '@services/bsc';
 import {logError} from '@services/logging';
 import {
   isValidationError,
@@ -50,6 +51,12 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
         validateMiningBlockchainAccountAddress,
         userInfo.miningBlockchainAccountAddress,
       );
+
+      if (userInfo.miningBlockchainAccountAddress) {
+        userInfo.miningBlockchainAccountAddress = unchecksummAddress(
+          userInfo.miningBlockchainAccountAddress,
+        );
+      }
     }
 
     const modifiedUser: SagaReturnType<typeof Api.user.updateAccount> =
@@ -132,21 +139,21 @@ function* validateMiningBlockchainAccountAddress(
   if (!isAddrRemoveAction) {
     if (
       !miningBlockchainAccountAddress ||
-      !isValidEthereumAddress(miningBlockchainAccountAddress)
+      !isValidBscAddress(miningBlockchainAccountAddress)
     ) {
-      throw new ValidationError(ValidationErrorCode.InvalidEthereumAddress);
+      throw new ValidationError(ValidationErrorCode.InvalidBscAddress);
     }
 
     try {
-      const isEoa: SagaReturnType<typeof isEoaEthereumAddress> = yield call(
-        isEoaEthereumAddress,
+      const isEoa: SagaReturnType<typeof isEoaBscAddress> = yield call(
+        isEoaBscAddress,
         miningBlockchainAccountAddress,
       );
       if (!isEoa) {
-        throw new ValidationError(ValidationErrorCode.EthereumAddressIsNotEoa);
+        throw new ValidationError(ValidationErrorCode.BscAddressIsNotEoa);
       }
     } catch (error) {
-      const typedError = error as IsEoaEthereumAddressError;
+      const typedError = error as EoaBscAddressError;
       const networkErrorTypes: typeof typedError['name'][] = [
         'HttpRequestError',
         'TimeoutError',
@@ -155,7 +162,7 @@ function* validateMiningBlockchainAccountAddress(
         logError(error);
       }
       throw new ValidationError(
-        ValidationErrorCode.UnableToValidateEthereumAddressEoa,
+        ValidationErrorCode.UnableToValidateBscAddressEoa,
       );
     }
   }

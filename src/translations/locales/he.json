@@ -196,9 +196,9 @@
     "no_library_permissions": "לא הוענקו הרשאות ספרייה.",
     "blockchain_address_already_taken": "הכתובת כבר תפוסה",
     "invalid_blockchain_address": "כתובת לא תקינה",
-    "ethereum_address_not_eoa": "הכתובת אינה EOA",
+    "address_not_eoa": "הכתובת אינה EOA",
     "same_phone_error": "לא ניתן להשתמש באותו המספר.",
-    "unable_to_validate_eth_addr_eoa": "לא ניתן לוודא את כתובת EOA"
+    "unable_to_validate_bsc_addr_eoa": "לא ניתן לוודא את כתובת EOA"
   },
   "profile": {
     "my_roles": {
@@ -365,9 +365,9 @@
       "title": "הצטרפו לעתיד המבוזר",
       "subtitle": "קבלו הצצה לאפליקציית Mainnet הקרובה שלנו ולתכליתיות הייחודיות שבה."
     },
-    "ethereum_address": {
-      "title": "כתובת Ethereum",
-      "subtitle": "אנא הזינו את כתובת ה-Ethereum שלכם כאן."
+    "bsc_address": {
+      "title": "כתובת BNB Smart Chain",
+      "subtitle": "אנא הזן את כתובת ה- BSC שלך כאן."
     },
     "verified_tooltip": {
       "title": "KYC מאומת"
@@ -1175,15 +1175,15 @@
       }
     }
   },
-  "ethereum_address": {
-    "title": "כתובת Ethereum",
-    "enter_address_title": "הזינו\nאת כתובת ה-Ethereum שלכם",
-    "enter_address_description": "במהלך השלב הראשון, הטוקנים של ICE יושחררו על גבי הבלוקצ'יין של Ethereum. לאחר שה-Mainnet יושק, יהיה ניתן להחליף את הטוקנים מ-Ethereum לבלוקצ'יין של Ice Open Network (ION).",
-    "enter_address_confirmation": "האם אתה בטוח שכתובת Ethereum היא נכונה?",
+  "bsc_address": {
+    "title": "כתובת BNB Smart Chain",
+    "enter_address_title": "הזן את\nכתובת ה- BNB Smart Chain שלך",
+    "enter_address_description": "במהלך השלב הראשון, המטבעות ICE יופצו ברשת הבלוקצ'יין של BNB Smart Chain. לאחר השקת הרשת הראשית, המטבעות יהיו ניתנים להחלפה מ-BNB Smart Chain לרשת הבלוקצ'יין של Ice Open Network (ION).",
+    "enter_address_confirmation": "האם אתה בטוח שכתובת BNB Smart Chain היא נכונה?",
     "validators_warning_title": "אשר כתובת",
-    "validators_warning_text": "שימו לב שאנשים שהוסיפו כתובת Ethereum לחשבונם אינם זכאים להיות אחד מ-300 האומתנים המובילים כפי שנקבע בספר הלבן שלנו לשקיעה ברשת הראשית.",
-    "okxWalletDescription": "אנו ממליצים להשתמש בכתובת Ethereum של [[:bold]]OKX Exchange[[/:bold]] כדי להימנע מדמי הגז.\n\nאם OKX אינו זמין במדינתך, תוכל להשתמש בארנק מתמקד עצמאי כמו MetaMask או Trust Wallet.",
-    "okxWalletAction": "יצירת חשבון ב-OKX"
+    "validators_warning_text": "שים לב שאנשים שהוסיפו כתובת BNB Smart Chain לחשבונם אינם זכאים להפוך לאחד מ-300 הבודקים העליונים כמו שמפורט בספר הלבן שלנו לשקת הרשת הראשית.",
+    "okxWalletDescription": "אבטח את המטבעות שלך עם OKX Wallet, שותף הארנק הרשמי שלנו לניהול עצמי האמין.",
+    "okxWalletAction": "הורד את OKX WALLET"
   },
   "social_kyc": {
     "header": "אימות",
@@ -1244,8 +1244,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "הפצת Ethereum",
-      "description": "קבלו את מטבעות ה-Ethereum ICE שלכם על ידי אימות חשבונכם בקלות באמצעות פרופיל X הקיים שלכם."
+      "title": "הפצת BNB Smart Chain",
+      "description": "קבל את המטבעות ICE שלך ב-BNB Smart Chain על ידי אימות החשבון שלך בקלות באמצעות הפרופיל הקיים שלך ב-X."
     },
     "instructions_step": {
       "x": {
@@ -1258,7 +1258,7 @@
     },
     "results_step": {
       "success": {
-        "description": "מזל טוב, השלמת בהצלחה את האימות שלך. אתה זכאי כעת להפצת Ethereum."
+        "description": "מזל טוב, הצלחת להשלים בהצלחה את האימות שלך. אתה כעת זכאי להפצת BNB Smart Chain."
       }
     }
   }

@@ -192,9 +192,9 @@
     "no_library_permissions": "Library permissions are not granted.",
     "blockchain_address_already_taken": "Address already taken",
     "invalid_blockchain_address": "Invalid address",
-    "ethereum_address_not_eoa": "Address is not EOA",
+    "address_not_eoa": "Address is not EOA",
     "same_phone_error": "You can’t use the same number.",
-    "unable_to_validate_eth_addr_eoa": "Unable to validate EOA"
+    "unable_to_validate_bsc_addr_eoa": "Unable to validate EOA"
   },
   "profile": {
     "my_roles": {
@@ -364,9 +364,9 @@
       "title": "Join The Decentralized Future",
       "subtitle": "Get a sneak peek of our upcoming Mainnet app and its unique features."
     },
-    "ethereum_address": {
-      "title": "Ethereum address",
-      "subtitle": "Please enter your Ethereum address here."
+    "bsc_address": {
+      "title": "BNB Smart Chain address",
+      "subtitle": "Please enter your BSC address here."
     },
     "verified_tooltip": {
       "title": "KYC Verified"
@@ -1165,15 +1165,15 @@
       }
     }
   },
-  "ethereum_address": {
-    "title": "Ethereum Address",
-    "enter_address_title": "Enter your\nEthereum address",
-    "enter_address_description": "During Phase One, the ICE tokens will be released on the Ethereum blockchain. Once Mainnet has been launched, the tokens will be swappable from Ethereum to Ice Open Network (ION) blockchain.",
-    "enter_address_confirmation": "Are you sure that the Ethereum address is correct?",
+  "bsc_address": {
+    "title": "BNB Smart Chain address",
+    "enter_address_title": "Enter your\nBNB Smart Chain address",
+    "enter_address_description": "During Phase One, the ICE tokens will be released on the BNB Smart Chain blockchain. Once Mainnet has been launched, the tokens will be swappable from BNB Smart Chain to Ice Open Network (ION) blockchain.",
+    "enter_address_confirmation": "Are you sure that the BNB Smart Chain address is correct?",
     "validators_warning_title": "Confirm Address",
-    "validators_warning_text": "Please note that individuals who have added an Ethereum address to their account are not eligible to become one of the top 300 validators as per our whitepaper for the mainnet launch.",
-    "okxWalletDescription": "We recommend using your [[:bold]]OKX Exchange[[/:bold]] Ethereum address to avoid any gas fees.\n\nIf OKX isn't available in your country, you can use a self-custodial wallet such as MetaMask or Trust Wallet.",
-    "okxWalletAction": "CREATE ACCOUNT ON OKX"
+    "validators_warning_text": "Please note that individuals who have added a BNB Smart Chain address to their account are not eligible to become one of the top 300 validators as per our whitepaper for the mainnet launch.",
+    "okxWalletDescription": "Secure your coins with OKX Wallet, our trusted self-custodial official wallet partner.",
+    "okxWalletAction": "DOWNLOAD OKX WALLET"
   },
   "social_kyc": {
     "header": "Verification",
@@ -1234,8 +1234,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "Ethereum Distribution",
-      "description": "Receive your Ethereum ICE coins by verifying your account easily using your existing X profile."
+      "title": "BNB Smart Chain Distribution",
+      "description": "Receive your BNB Smart Chain ICE coins by verifying your account easily using your existing X profile."
     },
     "instructions_step": {
       "x": {
@@ -1248,7 +1248,7 @@
     },
     "results_step": {
       "success": {
-        "description": "Congratulations, you have successfully completed your verification. You are now eligible for the Ethereum distribution."
+        "description": "Congratulations, you have successfully completed your verification. You are now eligible for the BNB Smart Chain distribution."
       }
     }
   }

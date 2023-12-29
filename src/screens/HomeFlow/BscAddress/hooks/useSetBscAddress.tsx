@@ -3,7 +3,7 @@
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {useGoBackIfAddressSet} from '@screens/HomeFlow/EthereumAddress/hooks/useGoBackIfAddressSet';
+import {useGoBackIfAddressSet} from '@screens/HomeFlow/BscAddress/hooks/useGoBackIfAddressSet';
 import {AccountActions} from '@store/modules/Account/actions';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {
@@ -17,7 +17,7 @@ import {StyleSheet, Text} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const useSetEthereumAddress = () => {
+export const useSetBscAddress = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
   const dispatch = useDispatch();
@@ -58,13 +58,13 @@ export const useSetEthereumAddress = () => {
     }
     navigation.navigate({
       name: 'PopUp',
-      key: 'confirm-eth-address-popup',
+      key: 'confirm-bsc-address-popup',
       params: {
         title: t('button.confirm_address'),
         message: (
           <>
             <Text style={styles.messageText}>
-              {t('ethereum_address.enter_address_confirmation')}
+              {t('bsc_address.enter_address_confirmation')}
             </Text>
             <Text style={[styles.messageText, styles.messageTextBold]}>
               {address}

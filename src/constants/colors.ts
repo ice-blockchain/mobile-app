@@ -57,5 +57,6 @@ export const COLORS = {
   koromiko: '#FFBE6C',
   neonCarrot: '#FEA43A',
   sunshineGold: '#FFC444',
+  goldenZest: '#F3BA2F',
   danube: '#5c7cd4',
 };

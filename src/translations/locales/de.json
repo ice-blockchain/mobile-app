@@ -196,9 +196,9 @@
     "no_library_permissions": "Bibliotheksberechtigungen werden nicht erteilt.",
     "blockchain_address_already_taken": "Adresse bereits vergeben",
     "invalid_blockchain_address": "Ungültige Adresse",
-    "ethereum_address_not_eoa": "Adresse ist nicht EOA",
+    "address_not_eoa": "Adresse ist nicht EOA",
     "same_phone_error": "Sie können nicht dieselbe Nummer verwenden.",
-    "unable_to_validate_eth_addr_eoa": "EOA-Adresse kann nicht validiert werden"
+    "unable_to_validate_bsc_addr_eoa": "EOA-Adresse kann nicht validiert werden"
   },
   "profile": {
     "my_roles": {
@@ -365,9 +365,9 @@
       "title": "Tritt der dezentralisierten Zukunft bei",
       "subtitle": "Bekommen Sie einen Einblick in unsere kommende Mainnet-App und ihre einzigartigen Funktionen."
     },
-    "ethereum_address": {
-      "title": "Ethereum Adresse",
-      "subtitle": "Bitte geben Sie Ihre Ethereum Adresse hier ein."
+    "bsc_address": {
+      "title": "BNB Smart Chain Adresse",
+      "subtitle": "Bitte geben Sie hier Ihre BSC-Adresse ein."
     },
     "verified_tooltip": {
       "title": "KYC Verifiziert"
@@ -1168,15 +1168,15 @@
       }
     }
   },
-  "ethereum_address": {
-    "title": "Ethereum Adresse",
-    "enter_address_title": "Geben Sie\nIhre Ethereum Adresse ein",
-    "enter_address_description": "Während Phase Eins werden die ICE-Token auf der Ethereum-Blockchain freigeschaltet. Sobald das Mainnet gestartet wurde, können die Token von Ethereum auf das Ice Open Network (ION) Blockchain umgewandelt werden.",
-    "enter_address_confirmation": "Sind Sie sicher, dass die Ethereum-Adresse korrekt ist?",
+  "bsc_address": {
+    "title": "BNB Smart Chain Adresse",
+    "enter_address_title": "Geben Sie Ihre\nBNB Smart Chain Adresse ein",
+    "enter_address_description": "Während Phase One werden die ICE-Token auf der BNB Smart Chain Blockchain veröffentlicht. Sobald das Mainnet gestartet wurde, können die Token von der BNB Smart Chain auf die Ice Open Network (ION) Blockchain umgestellt werden.",
+    "enter_address_confirmation": "Sind Sie sicher, dass die BNB Smart Chain Adresse korrekt ist?",
     "validators_warning_title": "Adresse bestätigen",
-    "validators_warning_text": "Bitte beachten Sie, dass Personen, die ihre Ethereum-Adresse zu ihrem Konto hinzugefügt haben, gemäß unserem Whitepaper für den Start des Hauptnetzwerks nicht berechtigt sind, einer der besten 300 Validatoren zu werden.",
-    "okxWalletDescription": "Wir empfehlen die Verwendung Ihrer Ethereum-Adresse auf der [[:bold]]OKX Exchange-Plattform[[/:bold]], um Gasgebühren zu vermeiden.\n\nWenn OKX in Ihrem Land nicht verfügbar ist, können Sie eine eigene Wallet wie MetaMask oder Trust Wallet verwenden.",
-    "okxWalletAction": "KONTO BEI OKX ERSTELLEN"
+    "validators_warning_text": "Bitte beachten Sie, dass Personen, die ihrer Konto eine BNB Smart Chain Adresse hinzugefügt haben, gemäß unserem Whitepaper für den Start des Mainnets nicht berechtigt sind, einer der Top 300 Validatoren zu werden.",
+    "okxWalletDescription": "Sichern Sie Ihre Münzen mit OKX Wallet, unserem vertrauenswürdigen selbstverwalteten offiziellen Wallet-Partner.",
+    "okxWalletAction": "OKX WALLET HERUNTERLADEN"
   },
   "social_kyc": {
     "header": "Verifizierung",
@@ -1237,8 +1237,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "Ethereum Verteilung",
-      "description": "Erhalten Sie Ihre Ethereum ICE-Münzen, indem Sie Ihr Konto einfach mit Ihrem vorhandenen X-Profil verifizieren."
+      "title": "BNB Smart Chain Verteilung",
+      "description": "Erhalten Sie Ihre BNB Smart Chain ICE-Münzen, indem Sie Ihren Account einfach mit Ihrem vorhandenen X-Profil verifizieren."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1251,7 @@
     },
     "results_step": {
       "success": {
-        "description": "Herzlichen Glückwunsch, Sie haben Ihre Verifizierung erfolgreich abgeschlossen. Sie sind jetzt für die Ethereum-Verteilung berechtigt."
+        "description": "Herzlichen Glückwunsch, Sie haben Ihre Verifizierung erfolgreich abgeschlossen. Sie sind jetzt für die BNB Smart Chain Verteilung berechtigt."
       }
     }
   }

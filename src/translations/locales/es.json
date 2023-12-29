@@ -196,9 +196,9 @@
     "no_library_permissions": "No se conceden permisos de biblioteca.",
     "blockchain_address_already_taken": "Dirección ya utilizada",
     "invalid_blockchain_address": "Dirección no válida",
-    "ethereum_address_not_eoa": "La dirección no es EOA",
+    "address_not_eoa": "La dirección no es EOA",
     "same_phone_error": "No puedes usar el mismo número.",
-    "unable_to_validate_eth_addr_eoa": "No se puede validar la dirección EOA"
+    "unable_to_validate_bsc_addr_eoa": "No se puede validar la dirección EOA"
   },
   "profile": {
     "my_roles": {
@@ -365,9 +365,9 @@
       "title": "Únete al Futuro Descentralizado",
       "subtitle": "Obtén un adelanto de nuestra próxima aplicación Mainnet y sus características únicas."
     },
-    "ethereum_address": {
-      "title": "Dirección Ethereum",
-      "subtitle": "Por favor, ingresa tu dirección Ethereum aquí."
+    "bsc_address": {
+      "title": "Dirección de BNB Smart Chain",
+      "subtitle": "Por favor, ingrese su dirección de BSC aquí."
     },
     "verified_tooltip": {
       "title": "KYC Verificado"
@@ -1168,15 +1168,15 @@
       }
     }
   },
-  "ethereum_address": {
-    "title": "Dirección Ethereum",
-    "enter_address_title": "Ingresa tu\ndirección Ethereum",
-    "enter_address_description": "Durante la Fase Uno, los tokens ICE se lanzarán en la cadena de bloques Ethereum. Una vez que se haya lanzado Mainnet, los tokens serán intercambiables desde Ethereum a la cadena de bloques de Ice Open Network (ION).",
-    "enter_address_confirmation": "¿Estás seguro de que la dirección Ethereum es correcta?",
+  "bsc_address": {
+    "title": "Dirección de BNB Smart Chain",
+    "enter_address_title": "Ingrese su\nDirección de BNB Smart Chain",
+    "enter_address_description": "Durante la Fase Uno, los tokens ICE se lanzarán en la cadena de bloques de BNB Smart Chain. Una vez que se haya lanzado la red principal, los tokens serán intercambiables desde BNB Smart Chain a la cadena de bloques de Ice Open Network (ION).",
+    "enter_address_confirmation": "¿Estás seguro de que la dirección de BNB Smart Chain es correcta?",
     "validators_warning_title": "Confirmar Dirección",
-    "validators_warning_text": "Por favor, tenga en cuenta que las personas que han agregado una dirección de Ethereum a su cuenta no son elegibles para convertirse en uno de los 300 principales validadores según nuestro libro blanco para el lanzamiento de la red principal.",
-    "okxWalletDescription": "Recomendamos usar su dirección Ethereum de [[:bold]]OKX Exchange[[/:bold]] para evitar cualquier tarifa de gas.\n\nSi OKX no está disponible en su país, puede usar una billetera autogestionada como MetaMask o Trust Wallet.",
-    "okxWalletAction": "CREAR CUENTA EN OKX"
+    "validators_warning_text": "Tenga en cuenta que las personas que han agregado una dirección de BNB Smart Chain a su cuenta no son elegibles para convertirse en uno de los 300 principales validadores según nuestro libro blanco para el lanzamiento de la red principal.",
+    "okxWalletDescription": "Asegure sus monedas con OKX Wallet, nuestro confiable socio de cartera oficial de autogestión.",
+    "okxWalletAction": "DESCARGAR OKX WALLET"
   },
   "social_kyc": {
     "header": "Verificación",
@@ -1237,8 +1237,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "Distribución de Ethereum",
-      "description": "Reciba sus monedas Ethereum ICE verificando su cuenta fácilmente utilizando su perfil X existente."
+      "title": "Distribución de BNB Smart Chain",
+      "description": "Reciba sus monedas ICE de BNB Smart Chain verificando su cuenta fácilmente mediante su perfil X existente."
     },
     "instructions_step": {
       "x": {
@@ -1251,7 +1251,7 @@
     },
     "results_step": {
       "success": {
-        "description": "¡Felicidades, has completado exitosamente tu verificación! Ahora eres elegible para la distribución de Ethereum."
+        "description": "Felicidades, ha completado con éxito su verificación. Ahora es elegible para la distribución de BNB Smart Chain."
       }
     }
   }

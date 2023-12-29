@@ -196,9 +196,9 @@
     "no_library_permissions": "لائبریری کی اجازتیں نہیں دی گئی ہیں۔",
     "blockchain_address_already_taken": "پتہ پہلے ہی لیا گیا ہے",
     "invalid_blockchain_address": "غیر معتبر بلاک چین پتہ",
-    "ethereum_address_not_eoa": "پتہ EOA نہیں ہے",
+    "address_not_eoa": "پتہ EOA نہیں ہے",
     "same_phone_error": "آپ وہی نمبر استعمال نہیں کر سکتے۔",
-    "unable_to_validate_eth_addr_eoa": "EOA کا پتہ تصدیق نہیں کیا جا سکتا"
+    "unable_to_validate_bsc_addr_eoa": "EOA کا پتہ تصدیق نہیں کیا جا سکتا"
   },
   "profile": {
     "my_roles": {
@@ -365,9 +365,9 @@
       "title": "مرکزی آئندہ میں شامل ہوں",
       "subtitle": "ہمارے آنے والے مین نیٹ ایپ کی اور اس کی انوکھی خصوصیات کی پیش نظری حاصل کریں"
     },
-    "ethereum_address": {
-      "title": "ایتھیریم پتہ",
-      "subtitle": "براہ کرم اپنا Ethereum پتہ یہاں درج کریں"
+    "bsc_address": {
+      "title": "BNB Smart Chain پتا",
+      "subtitle": "براہ کرم اپنا BSC پتا یہاں درج کریں۔"
     },
     "verified_tooltip": {
       "title": "KYC تصدیق شدہ"
@@ -1175,15 +1175,15 @@
       }
     }
   },
-  "ethereum_address": {
-    "title": "ایتھیریم پتہ",
-    "enter_address_title": "اپنا\nEthereum پتہ درج کریں",
-    "enter_address_description": "فیز ایک کے دوران، ICE ٹوکن ایتھیریم بلاک چین پر جاری کیے جائیں گے۔ جب مین نیٹ لانچ کی جائے تو ٹوکنز کو ایتھیریم سے آئس اوپن نیٹ ورک (ION) بلاک چین پر تبدیل کیا جاسکتا ہے۔",
-    "enter_address_confirmation": "کیا آپ یقینی ہیں کہ Ethereum پتہ درست ہے؟",
+  "bsc_address": {
+    "title": "BNB Smart Chain پتا",
+    "enter_address_title": "اپنا\nBNB Smart Chain پتا درج کریں",
+    "enter_address_description": "فیز ایکس کے دوران آئس ٹوکن BNB Smart Chain بلاک چین پر جاری کیے جائیں گے۔ مین نیٹ کی شروعات کے بعد، ٹوکنز کو BNB Smart Chain سے Ice Open Network (ION) بلاک چین میں تبدیل کیا جا سکتا ہے۔",
+    "enter_address_confirmation": "کیا آپ یقینی ہیں کہ آپ کا BNB Smart Chain پتا صحیح ہے؟",
     "validators_warning_title": "پتہ تصدیق کریں",
-    "validators_warning_text": "براہ کرم نوٹ کریں کہ ان افراد کو جو نے اپنے اکاؤنٹ میں ایک ایتھیریم پتہ شامل کیا ہے ان کا کوئی اہلیت نہیں ہے کہ وہ ہماری میں نیٹ کے لئے ہماری وائٹ پیپر کے مطابق 300 بہترین ویرافائر میں سے ایک بن سکیں۔",
-    "okxWalletDescription": "ہم آپ کو ہماری توجہ [[:bold]]OKX Exchange[[/:bold]] کے Ethereum پتہ استعمال کرنے کی تجویز دیتے ہیں تاکہ کوئی گیس فیس سے بچا جا سکے۔\n\nاگر آپ کے ملک میں OKX دستیاب نہیں ہے تو آپ ایسا خود کی ذمہ داری والا والیٹ جیسے MetaMask یا Trust Wallet کا استعمال کر سکتے ہیں۔",
-    "okxWalletAction": "OKX پر اکاؤنٹ بنائیں"
+    "validators_warning_text": "براہ کرم نوٹ کریں: ان افراد کو ہمارے وائٹ پیپر کے مین نیٹ کی شروعات کے لئے 300 موثر ویریفائرز میں سے ایک بننے کا حق نہیں ہے جو اپنے اکاؤنٹ میں BNB Smart Chain پتا شامل کر چکے ہیں۔",
+    "okxWalletDescription": "اپنے کوئنز کو OKX والٹ کے ساتھ محفوظ کریں، ہمارے بھروسے کے لائسنس خود کی دستخودی آفیشل والٹ پارٹنر کے ساتھ۔",
+    "okxWalletAction": "OKX WALLET ڈاؤن لوڈ کریں"
   },
   "social_kyc": {
     "header": "تصدیق",
@@ -1244,8 +1244,8 @@
   },
   "distribution_kyc": {
     "select_method_step": {
-      "title": "ایتھیریم تقسیم",
-      "description": "اپنے موجودہ X پروفائل کا استعمال کرکے اپنے اکاؤنٹ کی تصدیق کرکے اپنے اتھیریم آئس کوائن حاصل کریں۔"
+      "title": "BNB Smart Chain تقسیم",
+      "description": "اپنے موجودہ X پروفائل کا استعمال کر کے اپنے اکاؤنٹ کی تصدیق کرتے ہوئے BNB Smart Chain پر اپنے ICE کوئنز حاصل کریں۔"
     },
     "instructions_step": {
       "x": {
@@ -1258,7 +1258,7 @@
     },
     "results_step": {
       "success": {
-        "description": "مبارک ہو، آپ نے اپنی تصدیق کامیابی سے مکمل کرلی ہے۔ اب آپ Ethereum کی تقسیم کے لئے اہل ہیں۔"
+        "description": "مبارک ہو، آپ نے اپنی تصدیق کامیابی سے مکمل کر لی ہے۔ اب آپ BNB Smart Chain تقسیم کے لئے اہل ہیں۔"
       }
     }
   }
