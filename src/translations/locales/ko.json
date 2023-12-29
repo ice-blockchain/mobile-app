@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "유효하지 않은 주소",
     "address_not_eoa": "주소가 EOA가 아닙니다",
     "same_phone_error": "같은 번호를 사용할 수 없습니다.",
-    "unable_to_validate_bsc_addr_eoa": "EOA 주소를 확인할 수 없습니다",
-    "address_not_checksummed": "주소가 확인되지 않았습니다"
+    "unable_to_validate_bsc_addr_eoa": "EOA 주소를 확인할 수 없습니다"
   },
   "profile": {
     "my_roles": {

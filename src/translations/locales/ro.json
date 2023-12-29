@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "Adresă blockchain invalidă",
     "address_not_eoa": "Adresa nu este EOA",
     "same_phone_error": "Nu poți folosi același număr.",
-    "unable_to_validate_bsc_addr_eoa": "Imposibil de validat adresa EOA",
-    "address_not_checksummed": "Adresa nu este validată"
+    "unable_to_validate_bsc_addr_eoa": "Imposibil de validat adresa EOA"
   },
   "profile": {
     "my_roles": {

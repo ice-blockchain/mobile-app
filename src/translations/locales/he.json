@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "כתובת לא תקינה",
     "address_not_eoa": "הכתובת אינה EOA",
     "same_phone_error": "לא ניתן להשתמש באותו המספר.",
-    "unable_to_validate_bsc_addr_eoa": "לא ניתן לוודא את כתובת EOA",
-    "address_not_checksummed": "הכתובת אינה בדוקה"
+    "unable_to_validate_bsc_addr_eoa": "לא ניתן לוודא את כתובת EOA"
   },
   "profile": {
     "my_roles": {

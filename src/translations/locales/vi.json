@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "Địa chỉ blockchain không hợp lệ",
     "address_not_eoa": "Địa chỉ không phải là EOA",
     "same_phone_error": "Bạn không thể sử dụng cùng một số điện thoại.",
-    "unable_to_validate_bsc_addr_eoa": "Không thể xác minh địa chỉ EOA",
-    "address_not_checksummed": "Địa chỉ không được xác minh"
+    "unable_to_validate_bsc_addr_eoa": "Không thể xác minh địa chỉ EOA"
   },
   "profile": {
     "my_roles": {

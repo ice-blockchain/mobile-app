@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "અમાન્ય સરખું",
     "address_not_eoa": "સરખું EOA નથી",
     "same_phone_error": "તમે સમાન નંબરનો ઉપયોગ ન કરી શકો.",
-    "unable_to_validate_bsc_addr_eoa": "EOA સરનામું માન્ય કરવામાં આવતી નથી",
-    "address_not_checksummed": "સરનામું ચેકસમ નથી"
+    "unable_to_validate_bsc_addr_eoa": "EOA સરનામું માન્ય કરવામાં આવતી નથી"
   },
   "profile": {
     "my_roles": {

@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "Geçersiz blockchain adresi",
     "address_not_eoa": "Adres EOA değil",
     "same_phone_error": "Aynı numarayı kullanamazsın.",
-    "unable_to_validate_bsc_addr_eoa": "EOA adresi doğrulanamıyor",
-    "address_not_checksummed": "Adres doğrulanamıyor"
+    "unable_to_validate_bsc_addr_eoa": "EOA adresi doğrulanamıyor"
   },
   "profile": {
     "my_roles": {

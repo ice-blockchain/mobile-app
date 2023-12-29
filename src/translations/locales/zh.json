@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "无效的区块链地址",
     "address_not_eoa": "地址不是 EOA",
     "same_phone_error": "您不能使用同一个电话号码。",
-    "unable_to_validate_bsc_addr_eoa": "无法验证EOA地址",
-    "address_not_checksummed": "地址无法验证"
+    "unable_to_validate_bsc_addr_eoa": "无法验证EOA地址"
   },
   "profile": {
     "my_roles": {

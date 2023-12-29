@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "Neveljaven naslov blockchaina",
     "address_not_eoa": "Naslov ni EOA",
     "same_phone_error": "Ne morete uporabiti iste številke.",
-    "unable_to_validate_bsc_addr_eoa": "Ni mogoče potrditi naslova EOA",
-    "address_not_checksummed": "Naslov ni preverjen"
+    "unable_to_validate_bsc_addr_eoa": "Ni mogoče potrditi naslova EOA"
   },
   "profile": {
     "my_roles": {

@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "ልክ ያልሆነ አድራሻ",
     "address_not_eoa": "አድራሻ ኢኦኤ አይደለም",
     "same_phone_error": "ተመሳሳይ ቁጥር መጠቀም አይችሉም",
-    "unable_to_validate_bsc_addr_eoa": "አይዛመው የኢትዮጵያ አካውንት ማውረድ እንዲችል አይችልም",
-    "address_not_checksummed": "አድራሻ ቀረቡ፡ በል ቀየ"
+    "unable_to_validate_bsc_addr_eoa": "አይዛመው የኢትዮጵያ አካውንት ማውረድ እንዲችል አይችልም"
   },
   "profile": {
     "my_roles": {

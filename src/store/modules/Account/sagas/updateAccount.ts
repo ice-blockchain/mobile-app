@@ -3,9 +3,8 @@
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {
-  isChecksummedAddress,
+  EoaBscAddressError,
   isEoaBscAddress,
-  IsEoaBscAddressError,
   isValidBscAddress,
 } from '@services/bsc';
 import {logError} from '@services/logging';
@@ -143,10 +142,6 @@ function* validateMiningBlockchainAccountAddress(
       throw new ValidationError(ValidationErrorCode.InvalidBscAddress);
     }
 
-    if (!isChecksummedAddress(miningBlockchainAccountAddress)) {
-      throw new ValidationError(ValidationErrorCode.BscAddressIsNotChecksummed);
-    }
-
     try {
       const isEoa: SagaReturnType<typeof isEoaBscAddress> = yield call(
         isEoaBscAddress,
@@ -156,7 +151,7 @@ function* validateMiningBlockchainAccountAddress(
         throw new ValidationError(ValidationErrorCode.BscAddressIsNotEoa);
       }
     } catch (error) {
-      const typedError = error as IsEoaBscAddressError;
+      const typedError = error as EoaBscAddressError;
       const networkErrorTypes: typeof typedError['name'][] = [
         'HttpRequestError',
         'TimeoutError',

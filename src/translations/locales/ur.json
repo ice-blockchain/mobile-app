@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "غیر معتبر بلاک چین پتہ",
     "address_not_eoa": "پتہ EOA نہیں ہے",
     "same_phone_error": "آپ وہی نمبر استعمال نہیں کر سکتے۔",
-    "unable_to_validate_bsc_addr_eoa": "EOA کا پتہ تصدیق نہیں کیا جا سکتا",
-    "address_not_checksummed": "پتہ تصدیق نہیں کیا گیا"
+    "unable_to_validate_bsc_addr_eoa": "EOA کا پتہ تصدیق نہیں کیا جا سکتا"
   },
   "profile": {
     "my_roles": {

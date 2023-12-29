@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "ಅಮಾನ್ಯ ವಿಳಾಸ",
     "address_not_eoa": "ವಿಳಾಸ EOA ಅಲ್ಲ",
     "same_phone_error": "ನೀವು ಅದೇ ನಂಬರನ್ನು ಬಳಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
-    "unable_to_validate_bsc_addr_eoa": "EOA ವಿಳಾಸವನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
-    "address_not_checksummed": "ವಿಳಾಸವು ಪರಿಶೀಲಿಸಲ್ಪಟ್ಟಿಲ್ಲ"
+    "unable_to_validate_bsc_addr_eoa": "EOA ವಿಳಾಸವನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
   },
   "profile": {
     "my_roles": {

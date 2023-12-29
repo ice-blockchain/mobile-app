@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "Dirección no válida",
     "address_not_eoa": "La dirección no es EOA",
     "same_phone_error": "No puedes usar el mismo número.",
-    "unable_to_validate_bsc_addr_eoa": "No se puede validar la dirección EOA",
-    "address_not_checksummed": "La dirección no está validada"
+    "unable_to_validate_bsc_addr_eoa": "No se puede validar la dirección EOA"
   },
   "profile": {
     "my_roles": {

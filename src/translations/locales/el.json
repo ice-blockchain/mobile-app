@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "Μη έγκυρη διεύθυνση",
     "address_not_eoa": "Η διεύθυνση δεν είναι EOA",
     "same_phone_error": "Δεν μπορείτε να χρησιμοποιήσετε τον ίδιο αριθμό.",
-    "unable_to_validate_bsc_addr_eoa": "Δεν είναι δυνατή η επικύρωση της διεύθυνσης EOA",
-    "address_not_checksummed": "Η διεύθυνση δεν είναι ελεγμένη"
+    "unable_to_validate_bsc_addr_eoa": "Δεν είναι δυνατή η επικύρωση της διεύθυνσης EOA"
   },
   "profile": {
     "my_roles": {

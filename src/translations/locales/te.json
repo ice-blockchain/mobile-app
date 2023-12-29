@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "చెల్లని బ్లాక్‌చేన్ చిరునామా",
     "address_not_eoa": "చిరునామా EOA కాదు",
     "same_phone_error": "మీరు ఒకేనెంబర్​ను ఉపయోగించలేరు.",
-    "unable_to_validate_bsc_addr_eoa": "EOA చిరునామాను ప్రమాణించలేము",
-    "address_not_checksummed": "చిరునామా ధృడీకరించబడలేదు"
+    "unable_to_validate_bsc_addr_eoa": "EOA చిరునామాను ప్రమాణించలేము"
   },
   "profile": {
     "my_roles": {

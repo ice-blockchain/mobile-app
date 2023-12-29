@@ -2,7 +2,6 @@
 
 import {
   Address,
-  checksumAddress,
   createPublicClient,
   GetBytecodeErrorType,
   http,
@@ -26,8 +25,4 @@ export const isEoaBscAddress = async (address: string): Promise<boolean> => {
   return !code;
 };
 
-export const isChecksummedAddress = (address: string): boolean => {
-  return checksumAddress(address as Address) === address;
-};
-
-export type IsEoaBscAddressError = GetBytecodeErrorType;
+export type EoaBscAddressError = GetBytecodeErrorType;

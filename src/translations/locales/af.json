@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "Ongeldige adres",
     "address_not_eoa": "Adres is nie EOA nie",
     "same_phone_error": "Jy kan nie dieselfde nommer gebruik nie.",
-    "unable_to_validate_bsc_addr_eoa": "Kan nie EOA valideer nie",
-    "address_not_checksummed": "Adres is nie gechecksum nie"
+    "unable_to_validate_bsc_addr_eoa": "Kan nie EOA valideer nie"
   },
   "profile": {
     "my_roles": {

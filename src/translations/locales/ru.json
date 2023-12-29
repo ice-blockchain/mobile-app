@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "Недействительный адрес блокчейн",
     "address_not_eoa": "Адрес не является EOA",
     "same_phone_error": "Вы не можете использовать один и тот же номер.",
-    "unable_to_validate_bsc_addr_eoa": "Не удалось проверить адрес EOA",
-    "address_not_checksummed": "Адрес не подтвержден"
+    "unable_to_validate_bsc_addr_eoa": "Не удалось проверить адрес EOA"
   },
   "profile": {
     "my_roles": {

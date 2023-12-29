@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "अवैध पत्ता",
     "address_not_eoa": "पत्ता EOA नसतो",
     "same_phone_error": "तुम्ही तोच नंबर वापरू शकत नाही.",
-    "unable_to_validate_bsc_addr_eoa": "EOA पत्ता मान्यता देऊ शकत नाही",
-    "address_not_checksummed": "पत्ता तपासण्यात आला नाही"
+    "unable_to_validate_bsc_addr_eoa": "EOA पत्ता मान्यता देऊ शकत नाही"
   },
   "profile": {
     "my_roles": {

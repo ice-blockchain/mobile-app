@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "ที่อยู่บล็อกเชนไม่ถูกต้อง",
     "address_not_eoa": "ที่อยู่ไม่ใช่ EOA",
     "same_phone_error": "คุณไม่สามารถใช้หมายเลขเดียวกัน",
-    "unable_to_validate_bsc_addr_eoa": "ไม่สามารถตรวจสอบ EOA ได้",
-    "address_not_checksummed": "ที่อยู่ไม่ได้รับการตรวจสอบ"
+    "unable_to_validate_bsc_addr_eoa": "ไม่สามารถตรวจสอบ EOA ได้"
   },
   "profile": {
     "my_roles": {

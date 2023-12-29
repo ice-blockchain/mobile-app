@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "عنوان غير صالح",
     "address_not_eoa": "العنوان ليس EOA",
     "same_phone_error": "لا يمكنك استخدام نفس الرقم.",
-    "unable_to_validate_bsc_addr_eoa": "غير قادر على التحقق من عنوان EOA",
-    "address_not_checksummed": "العنوان غير محقق"
+    "unable_to_validate_bsc_addr_eoa": "غير قادر على التحقق من عنوان EOA"
   },
   "profile": {
     "my_roles": {

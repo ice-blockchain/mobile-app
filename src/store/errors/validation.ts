@@ -10,7 +10,6 @@ export enum ValidationErrorCode {
   InvalidBscAddress = 'InvalidBscAddress',
   BscAddressIsNotEoa = 'BscAddressIsNotEoa',
   UnableToValidateBscAddressEoa = 'UnableToValidateBscAddressEoa',
-  BscAddressIsNotChecksummed = 'BscAddressIsNotChecksummed',
 }
 
 const validationErrorMessages: {[code in ValidationErrorCode]: string} = {
@@ -21,7 +20,6 @@ const validationErrorMessages: {[code in ValidationErrorCode]: string} = {
   InvalidBscAddress: t('errors.invalid_blockchain_address'),
   BscAddressIsNotEoa: t('errors.address_not_eoa'),
   UnableToValidateBscAddressEoa: t('errors.unable_to_validate_bsc_addr_eoa'),
-  BscAddressIsNotChecksummed: t('errors.address_not_checksummed'),
 };
 
 export class ValidationError extends Error {

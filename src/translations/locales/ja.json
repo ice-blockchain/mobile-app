@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "無効なアドレス",
     "address_not_eoa": "アドレスはEOAではありません",
     "same_phone_error": "同じ番号を使うことはできません。",
-    "unable_to_validate_bsc_addr_eoa": "EOAアドレスを検証できません",
-    "address_not_checksummed": "アドレスが検証されていません"
+    "unable_to_validate_bsc_addr_eoa": "EOAアドレスを検証できません"
   },
   "profile": {
     "my_roles": {

@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "অবৈধ ঠিকানা",
     "address_not_eoa": "ঠিকানা EOA নয়",
     "same_phone_error": "আপনি একই নম্বর ব্যবহার করতে পারবেন না।",
-    "unable_to_validate_bsc_addr_eoa": "EOA ঠিকানা যাচাই করতে অক্ষম",
-    "address_not_checksummed": "ঠিকানা পরীক্ষামূলক নয়"
+    "unable_to_validate_bsc_addr_eoa": "EOA ঠিকানা যাচাই করতে অক্ষম"
   },
   "profile": {
     "my_roles": {

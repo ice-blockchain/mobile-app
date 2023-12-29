@@ -146,7 +146,6 @@ export type Translations = {
   'errors.address_not_eoa': null;
   'errors.same_phone_error': null;
   'errors.unable_to_validate_bsc_addr_eoa': null;
-  'errors.address_not_checksummed': null;
   'profile.my_roles.title': null;
   'profile.mining_calculator': null;
   'profile.invite_friends': null;

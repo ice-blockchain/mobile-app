@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "अवैध पता",
     "address_not_eoa": "पता EOA नहीं है",
     "same_phone_error": "आप एक ही नंबर का उपयोग नहीं कर सकते।",
-    "unable_to_validate_bsc_addr_eoa": "EOA पता सत्यापित करने में असमर्थ",
-    "address_not_checksummed": "पता सत्यापित नहीं है"
+    "unable_to_validate_bsc_addr_eoa": "EOA पता सत्यापित करने में असमर्थ"
   },
   "profile": {
     "my_roles": {

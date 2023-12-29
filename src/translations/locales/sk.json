@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "Neplatná adresa blockchainu",
     "address_not_eoa": "Adresa nie je EOA",
     "same_phone_error": "Nemôžeš použiť to isté číslo",
-    "unable_to_validate_bsc_addr_eoa": "Nedá sa overiť adresa EOA",
-    "address_not_checksummed": "Adresa nie je overená"
+    "unable_to_validate_bsc_addr_eoa": "Nedá sa overiť adresa EOA"
   },
   "profile": {
     "my_roles": {

@@ -194,8 +194,7 @@
     "invalid_blockchain_address": "Alamat blockchain ora sah",
     "address_not_eoa": "Alamat ora EOA",
     "same_phone_error": "You can’t use the same number",
-    "unable_to_validate_bsc_addr_eoa": "Ora bisa ngrusakna alamat EOA",
-    "address_not_checksummed": "Alamat tidak terverifikasi"
+    "unable_to_validate_bsc_addr_eoa": "Ora bisa ngrusakna alamat EOA"
   },
   "profile": {
     "my_roles": {

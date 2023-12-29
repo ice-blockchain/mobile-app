@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {registerBackgroundTasksHeadlessTask} from '@store/modules/BackgroundTasks/headless';
-import 'fast-text-encoding'; // required for TextEncoder used by viem
 import {AppRegistry} from 'react-native';
 import 'react-native-url-polyfill/auto';
 import {name as appName} from './app.json';

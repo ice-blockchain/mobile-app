@@ -198,8 +198,7 @@
     "invalid_blockchain_address": "Yanlış ünvan",
     "address_not_eoa": "Ünvan EOA deyil",
     "same_phone_error": "Eyni nömrədən istifadə edə bilməzsən.",
-    "unable_to_validate_bsc_addr_eoa": "EOA ünvanını doğrulamaq mümkün olmur",
-    "address_not_checksummed": "Ünvan check olunmayıb"
+    "unable_to_validate_bsc_addr_eoa": "EOA ünvanını doğrulamaq mümkün olmur"
   },
   "profile": {
     "my_roles": {
