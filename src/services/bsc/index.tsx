@@ -10,7 +10,7 @@ import {
 } from 'viem';
 import {bsc} from 'viem/chains';
 
-export const isValidEthereumAddress = (address: string): boolean => {
+export const isValidBscAddress = (address: string): boolean => {
   return isAddress(address);
 };
 
@@ -19,9 +19,7 @@ export const bscClient = createPublicClient({
   transport: http(),
 });
 
-export const isEoaEthereumAddress = async (
-  address: string,
-): Promise<boolean> => {
+export const isEoaBscAddress = async (address: string): Promise<boolean> => {
   const code = await bscClient.getBytecode({
     address: address as Address,
   });
@@ -32,4 +30,4 @@ export const isChecksummedAddress = (address: string): boolean => {
   return checksumAddress(address as Address) === address;
 };
 
-export type IsEoaEthereumAddressError = GetBytecodeErrorType;
+export type IsEoaBscAddressError = GetBytecodeErrorType;

@@ -5,7 +5,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
-  ethereumWarningConfirmedSelector,
+  bscWarningConfirmedSelector,
   unsafeUserSelector,
 } from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
@@ -16,7 +16,7 @@ export const useValidatorsWarning = () => {
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
   const dispatch = useDispatch();
   const user = useSelector(unsafeUserSelector);
-  const warningConfirmed = useSelector(ethereumWarningConfirmedSelector);
+  const warningConfirmed = useSelector(bscWarningConfirmedSelector);
   const needToShowWarning =
     !user.miningBlockchainAccountAddress && !warningConfirmed;
 
@@ -36,7 +36,7 @@ export const useValidatorsWarning = () => {
             text: t('button.confirm'),
             onPress: () => {
               dispatch(
-                AccountActions.SET_ETHEREUM_ADDR_WARNING_CONFIRMED.STATE.create(),
+                AccountActions. SET_BSC_ADDR_WARNING_CONFIRMED.STATE.create(),
               );
             },
           },

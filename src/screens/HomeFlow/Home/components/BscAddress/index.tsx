@@ -21,13 +21,13 @@ import {rem} from 'rn-units';
 const ICON_CONTAINER_SIZE = rem(36);
 const ICON_SIZE = rem(24);
 
-export const EthereumAddress = memo(() => {
+export const BscAddress = memo(() => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
 
   const user = useSelector(unsafeUserSelector);
 
-  const onPress = () => navigation.navigate('EthereumAddress');
+  const onPress = () => navigation.navigate('BscAddress');
 
   return (
     <>

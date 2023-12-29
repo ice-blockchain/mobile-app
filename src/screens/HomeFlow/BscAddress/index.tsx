@@ -9,10 +9,10 @@ import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {AddressActionButton} from '@screens/HomeFlow/EthereumAddress/components/AddressActionButton';
-import {OkxWalletCard} from '@screens/HomeFlow/EthereumAddress/components/OkxWalletCard';
-import {useSetEthereumAddress} from '@screens/HomeFlow/EthereumAddress/hooks/useSetEthereumAddress';
-import {useValidatorsWarning} from '@screens/HomeFlow/EthereumAddress/hooks/useValidatorsWarning';
+import {AddressActionButton} from '@screens/HomeFlow/BscAddress/components/AddressActionButton';
+import {OkxWalletCard} from '@screens/HomeFlow/BscAddress/components/OkxWalletCard';
+import {useSetBscAddress} from '@screens/HomeFlow/BscAddress/hooks/useSetBscAddress';
+import {useValidatorsWarning} from '@screens/HomeFlow/BscAddress/hooks/useValidatorsWarning';
 import {BscBookIcon} from '@svg/BscBookIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -20,7 +20,7 @@ import React, {memo} from 'react';
 import {ScrollView, StyleSheet, Text} from 'react-native';
 import {rem} from 'rn-units';
 
-export const EthereumAddress = memo(() => {
+export const BscAddress = memo(() => {
   useFocusStatusBar({style: 'dark-content'});
   const {bottom: bottomInset} = useSafeAreaInsets();
   const {scrollRef} = useScrollEndOnKeyboardShown();
@@ -28,7 +28,7 @@ export const EthereumAddress = memo(() => {
   const {showWarning, needToShowWarning} = useValidatorsWarning();
 
   const {address, loading, error, onAddressChange, onSubmit, isRemoveAction} =
-    useSetEthereumAddress();
+    useSetBscAddress();
 
   return (
     <KeyboardAvoider>
