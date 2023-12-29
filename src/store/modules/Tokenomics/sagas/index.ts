@@ -63,14 +63,10 @@ export const tokenomicsWatchers = [
     getBalanceHistorySaga,
   ),
   takeLeading(
-    TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.type,
-    handleExtraBonusSaga,
-  ),
-  /**
-   * Separate flow to get rid of messing with the mining summary success action
-   */
-  takeLatest(
-    TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type,
+    [
+      TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.type,
+      TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type,
+    ],
     handleExtraBonusSaga,
   ),
   takeLatest(
