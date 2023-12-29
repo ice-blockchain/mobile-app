@@ -6,6 +6,7 @@ import {
   EoaBscAddressError,
   isEoaBscAddress,
   isValidBscAddress,
+  unchecksummAddress,
 } from '@services/bsc';
 import {logError} from '@services/logging';
 import {
@@ -52,8 +53,9 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       );
 
       if (userInfo.miningBlockchainAccountAddress) {
-        userInfo.miningBlockchainAccountAddress =
-          userInfo.miningBlockchainAccountAddress.toLowerCase();
+        userInfo.miningBlockchainAccountAddress = unchecksummAddress(
+          userInfo.miningBlockchainAccountAddress,
+        );
       }
     }
 

@@ -25,4 +25,8 @@ export const isEoaBscAddress = async (address: string): Promise<boolean> => {
   return !code;
 };
 
+export const unchecksummAddress = (address: string) => {
+  return address.toLowerCase();
+};
+
 export type EoaBscAddressError = GetBytecodeErrorType;
