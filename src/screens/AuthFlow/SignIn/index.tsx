@@ -56,6 +56,7 @@ export const SignIn = () => {
             onSelect={setActiveTab}
             selected={activeTab}
             containerStyle={styles.tabs}
+            hiddenTab="phone"
           />
           <View style={styles.form}>
             <Form />
