@@ -1,85 +1,107 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {signInWithPhoneNumber} from '@services/auth';
-import {
-  isValidationError,
-  ValidationError,
-  ValidationErrorCode,
-} from '@store/errors/validation';
+import {getValidUserForPhoneNumberMigration} from '@api/auth/getValidUserForPhoneNumberMigration';
+import {isApiError} from '@api/client';
+import {ValidationError, ValidationErrorCode} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
+import {registrationUpdate} from '@store/modules/Account/utils/registrationUpdate';
 import {getErrorMessage} from '@utils/errors';
-import {call, put, SagaReturnType, take} from 'redux-saga/effects';
+import {call, put, SagaReturnType} from 'redux-saga/effects';
 
 export function* signInPhoneSaga(
   startAction: ReturnType<typeof AccountActions.SIGN_IN_PHONE.START.create>,
 ) {
+  const {phoneNumber, isoCode} = startAction.payload;
   try {
-    const {phoneNumber, isoCode} = startAction.payload;
-
     if (phoneNumber.trim() === '') {
       throw new ValidationError(ValidationErrorCode.InvalidPhone);
     }
 
-    let confirmation: SagaReturnType<typeof signInWithPhoneNumber> = yield call(
-      signInWithPhoneNumber,
-      phoneNumber,
-    );
+    let cleanPhoneNumber = phoneNumber.replace('+', '');
 
-    yield put(
-      AccountActions.SIGN_IN_PHONE.SET_TEMP_PHONE_AND_ISO.create(
-        phoneNumber,
-        isoCode,
-      ),
-    );
+    const user: SagaReturnType<typeof getValidUserForPhoneNumberMigration> =
+      yield call(getValidUserForPhoneNumberMigration, {
+        phoneNumber: cleanPhoneNumber,
+      });
 
-    let finished = false;
-    while (!finished) {
-      const action: ReturnType<
-        | typeof AccountActions.SIGN_IN_PHONE.CONFIRM_TEMP_PHONE.create
-        | typeof AccountActions.SIGN_IN_PHONE.RESEND.create
-        | typeof AccountActions.SIGN_IN_PHONE.RESET.create
-      > = yield take([
-        AccountActions.SIGN_IN_PHONE.CONFIRM_TEMP_PHONE.type,
-        AccountActions.SIGN_IN_PHONE.RESEND.type,
-        AccountActions.SIGN_IN_PHONE.RESET.type,
-      ]);
+    if (user) {
+      //TODO: handle existing user flow
 
-      switch (action.type) {
-        case AccountActions.SIGN_IN_PHONE.CONFIRM_TEMP_PHONE.type: {
-          try {
-            yield call(
-              [confirmation, confirmation.confirm],
-              action.payload.code,
-            );
-            yield put(AccountActions.SIGN_IN_PHONE.SUCCESS.create());
-            finished = true;
-          } catch (error) {
-            yield put(
-              AccountActions.SIGN_IN_PHONE.FAILED.create(
-                getErrorMessage(error),
-              ),
-            );
-          }
-          break;
-        }
-        case AccountActions.SIGN_IN_PHONE.RESEND.type: {
-          confirmation = yield call(signInWithPhoneNumber, phoneNumber);
-          yield put(AccountActions.SIGN_IN_PHONE.RESEND_SUCCESS.create());
-          break;
-        }
-        case AccountActions.SIGN_IN_PHONE.RESET.type:
-          finished = true;
-          break;
-      }
+      yield put(
+        AccountActions.SIGN_IN_PHONE.SET_TEMP_PHONE_AND_ISO.create(
+          phoneNumber,
+          isoCode,
+        ),
+      );
     }
+
+    console.log('getValidUserForPhoneNumberMigration:\n', user);
   } catch (error) {
-    if (isValidationError(error)) {
-      yield put(AccountActions.SIGN_IN_PHONE.FAILED.create(error.message));
+    if (isApiError(error, 404, 'USER_NOT_FOUND')) {
+      yield call(registrationUpdate);
+      yield put(AccountActions.SIGN_IN_PHONE.RESET.create());
     } else {
       yield put(
         AccountActions.SIGN_IN_PHONE.FAILED.create(getErrorMessage(error)),
       );
-      throw error;
     }
   }
+
+  // yield put(
+  //   AccountActions.SIGN_IN_PHONE.SET_TEMP_PHONE_AND_ISO.create(
+  //     phoneNumber,
+  //     isoCode,
+  //   ),
+  // );
+
+  //   let finished = false;
+  //   while (!finished) {
+  //     const action: ReturnType<
+  //       | typeof AccountActions.SIGN_IN_PHONE.CONFIRM_TEMP_PHONE.create
+  //       | typeof AccountActions.SIGN_IN_PHONE.RESEND.create
+  //       | typeof AccountActions.SIGN_IN_PHONE.RESET.create
+  //     > = yield take([
+  //       AccountActions.SIGN_IN_PHONE.CONFIRM_TEMP_PHONE.type,
+  //       AccountActions.SIGN_IN_PHONE.RESEND.type,
+  //       AccountActions.SIGN_IN_PHONE.RESET.type,
+  //     ]);
+
+  //     switch (action.type) {
+  //       case AccountActions.SIGN_IN_PHONE.CONFIRM_TEMP_PHONE.type: {
+  //         try {
+  //           yield call(
+  //             [confirmation, confirmation.confirm],
+  //             action.payload.code,
+  //           );
+  //           yield put(AccountActions.SIGN_IN_PHONE.SUCCESS.create());
+  //           finished = true;
+  //         } catch (error) {
+  //           yield put(
+  //             AccountActions.SIGN_IN_PHONE.FAILED.create(
+  //               getErrorMessage(error),
+  //             ),
+  //           );
+  //         }
+  //         break;
+  //       }
+  //       case AccountActions.SIGN_IN_PHONE.RESEND.type: {
+  //         confirmation = yield call(signInWithPhoneNumber, phoneNumber);
+  //         yield put(AccountActions.SIGN_IN_PHONE.RESEND_SUCCESS.create());
+  //         break;
+  //       }
+  //       case AccountActions.SIGN_IN_PHONE.RESET.type:
+  //         finished = true;
+  //         break;
+  //     }
+  //   }
+  // } catch (error) {
+  //   if (isValidationError(error)) {
+  //     yield put(AccountActions.SIGN_IN_PHONE.FAILED.create(error.message));
+  //   } else {
+  //     yield put(
+  //       AccountActions.SIGN_IN_PHONE.FAILED.create(getErrorMessage(error)),
+  //     );
+  //     throw error;
+  //   }
+  // }
 }

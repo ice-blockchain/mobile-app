@@ -4,16 +4,16 @@ import {Images} from '@images';
 import {navigate} from '@navigation/utils';
 import {t} from '@translations/i18n';
 
-export const registrationUpdate = () => {
+export const linkYourEmail = () => {
   let resultResolve: () => void;
   const resultPromise = new Promise<void>(r => (resultResolve = r));
 
   navigate({
     name: 'PopUp',
     params: {
-      imageProps: {source: Images.popUp.registrationUpdate},
-      title: t('pop_up.registration_update_title'),
-      message: t('pop_up.registration_update_text'),
+      imageProps: {source: Images.popUp.linkEmail},
+      title: t('pop_up.link_email_title'),
+      message: t('pop_up.link_email_text'),
       buttons: [
         {
           text: t('button.continue'),
