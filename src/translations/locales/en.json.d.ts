@@ -438,6 +438,14 @@ export type Translations = {
   'pop_up.resurrection_yes_confirm_message': null;
   'pop_up.delete_account_confirmation_title': null;
   'pop_up.delete_account_confirmation_text': null;
+  'pop_up.registration_update_title': null;
+  'pop_up.registration_update_text': null;
+  'pop_up.link_email_title': null;
+  'pop_up.link_email_text': null;
+  'pop_up.account_error_title': null;
+  'pop_up.account_error_text': null;
+  'pop_up.login_via_email_title': null;
+  'pop_up.login_via_email_text': null;
   'periods.3_days': null;
   'periods.7_days': null;
   'periods.30_days': null;
@@ -767,4 +775,7 @@ export type Translations = {
   'distribution_kyc.instructions_step.x.pop_up.description': null;
   'distribution_kyc.instructions_step.x.pop_up.description2': null;
   'distribution_kyc.results_step.success.description': null;
+  'account_confirmation.title': null;
+  'account_confirmation.description': null;
+  'account_confirmation.description2': null;
 };

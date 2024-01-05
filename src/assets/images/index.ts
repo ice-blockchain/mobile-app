@@ -102,6 +102,9 @@ export const Images = {
     error: require('./popup/oops.png'),
     upToDate: require('./popup/already_updated.png'),
     resurrection: require('./popup/resurrection.png'),
+    accountError: require('./popup/account_error.png'),
+    linkEmail: require('./popup/link_email.png'),
+    registrationUpdate: require('./popup/registration_update.png'),
   },
   share: {
     telegram: require('./share/telegram.png'),
@@ -188,5 +191,8 @@ export const Images = {
   card: {
     joinMainnet: require('./card/joinMainnet.png'),
     okxWallet: require('./card/okxWallet.png'),
+  },
+  auth: {
+    accountConfirmation: require('./auth/account_confirmation.png'),
   },
 } as const;
