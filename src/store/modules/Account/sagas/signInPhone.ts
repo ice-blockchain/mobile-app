@@ -18,7 +18,7 @@ export function* signInPhoneSaga(
       throw new ValidationError(ValidationErrorCode.InvalidPhone);
     }
 
-    let cleanPhoneNumber = phoneNumber.replace('+', '');
+    let cleanPhoneNumber = phoneNumber.replace(/ /g, '');
 
     const user: SagaReturnType<typeof getValidUserForPhoneNumberMigration> =
       yield call(getValidUserForPhoneNumberMigration, {

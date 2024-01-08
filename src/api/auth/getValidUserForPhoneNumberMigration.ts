@@ -9,12 +9,17 @@ type Params = {
 };
 
 export function getValidUserForPhoneNumberMigration(params: Params) {
-  let paramsString = `phoneNumber=${params.phoneNumber}`;
+  let paramsString = `phoneNumber=${encodeURIComponent(params.phoneNumber)}`;
+
   if (params.email) {
-    paramsString += `&email=${params.email}`;
+    paramsString += `&email=${encodeURIComponent(params.email)}`;
   }
+
   return post<Params, User>(
     `auth/getValidUserForPhoneNumberMigration?${paramsString}`,
-    params,
+    {
+      phoneNumber: params.phoneNumber,
+      email: params.email,
+    },
   );
 }
