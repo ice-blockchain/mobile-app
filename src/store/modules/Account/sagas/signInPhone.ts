@@ -5,6 +5,7 @@ import {isApiError} from '@api/client';
 import {ValidationError, ValidationErrorCode} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
 import {accountError} from '@store/modules/Account/utils/accountError';
+import {linkYourEmail} from '@store/modules/Account/utils/linkYourEmail';
 import {loginViaEmail} from '@store/modules/Account/utils/loginViaEmail';
 import {registrationUpdate} from '@store/modules/Account/utils/registrationUpdate';
 import {getErrorMessage} from '@utils/errors';
@@ -27,8 +28,7 @@ export function* signInPhoneSaga(
       });
 
     if (user) {
-      //TODO: handle existing user flow
-
+      yield call(linkYourEmail);
       yield put(
         AccountActions.SIGN_IN_PHONE.SET_TEMP_PHONE_AND_ISO.create(
           phoneNumber,
@@ -36,8 +36,6 @@ export function* signInPhoneSaga(
         ),
       );
     }
-
-    console.log('getValidUserForPhoneNumberMigration:\n', user);
   } catch (error) {
     if (isApiError(error, 404, 'USER_NOT_FOUND')) {
       yield call(registrationUpdate);
