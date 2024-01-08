@@ -4,6 +4,7 @@ import {getValidUserForPhoneNumberMigration} from '@api/auth/getValidUserForPhon
 import {isApiError} from '@api/client';
 import {ValidationError, ValidationErrorCode} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
+import {accountError} from '@store/modules/Account/utils/accountError';
 import {registrationUpdate} from '@store/modules/Account/utils/registrationUpdate';
 import {getErrorMessage} from '@utils/errors';
 import {call, put, SagaReturnType} from 'redux-saga/effects';
@@ -39,6 +40,9 @@ export function* signInPhoneSaga(
   } catch (error) {
     if (isApiError(error, 404, 'USER_NOT_FOUND')) {
       yield call(registrationUpdate);
+      yield put(AccountActions.SIGN_IN_PHONE.RESET.create());
+    } else if (isApiError(error, 403, 'ACCOUNT_LOST')) {
+      yield call(accountError);
       yield put(AccountActions.SIGN_IN_PHONE.RESET.create());
     } else {
       yield put(
