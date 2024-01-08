@@ -5,6 +5,7 @@ import {isApiError} from '@api/client';
 import {ValidationError, ValidationErrorCode} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
 import {accountError} from '@store/modules/Account/utils/accountError';
+import {loginViaEmail} from '@store/modules/Account/utils/loginViaEmail';
 import {registrationUpdate} from '@store/modules/Account/utils/registrationUpdate';
 import {getErrorMessage} from '@utils/errors';
 import {call, put, SagaReturnType} from 'redux-saga/effects';
@@ -43,6 +44,9 @@ export function* signInPhoneSaga(
       yield put(AccountActions.SIGN_IN_PHONE.RESET.create());
     } else if (isApiError(error, 403, 'ACCOUNT_LOST')) {
       yield call(accountError);
+      yield put(AccountActions.SIGN_IN_PHONE.RESET.create());
+    } else if (isApiError(error, 409, 'EMAIL_ALREADY_SET')) {
+      yield call(loginViaEmail);
       yield put(AccountActions.SIGN_IN_PHONE.RESET.create());
     } else {
       yield put(
