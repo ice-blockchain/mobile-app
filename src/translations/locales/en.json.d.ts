@@ -614,6 +614,9 @@ export type Translations = {
   'social_media.reddit.description': null;
   'social_media.discord.title': null;
   'social_media.discord.description': null;
+  'social_media.zeus_twitter.title': null;
+  'social_media.zeus_twitter.description': null;
+  'social_media.zeus_twitter.button': null;
   'ping_referrals_pop_up.title': {count: number | string};
   'creative_library.title': null;
   'creative_library.share': null;

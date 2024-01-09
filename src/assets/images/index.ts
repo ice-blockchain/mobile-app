@@ -124,6 +124,7 @@ export const Images = {
     telegram: require('./social/telegram.png'),
     reddit: require('./social/reddit.png'),
     // discord: require('./social/discord.png'),
+    twitter: require('./social/twitter.png'),
     icons: {
       facebook: require('./social/icons/facebook.png'),
       github: require('./social/icons/github.png'),

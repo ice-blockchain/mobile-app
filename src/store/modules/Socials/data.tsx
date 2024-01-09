@@ -15,6 +15,14 @@ export interface SocialData {
   linkWeb: string;
 }
 export const socialData: Record<SocialType, SocialData> = {
+  zeusTwitter: {
+    image: Images.social.twitter,
+    title: t('social_media.zeus_twitter.title'),
+    description: t('social_media.zeus_twitter.description'),
+    buttonTitle: t('social_media.zeus_twitter.button'),
+    linkApp: LINKS.TWITTER_ZEUS_APP_URL,
+    linkWeb: LINKS.TWITTER_ZEUS_WEB_URL,
+  },
   tiktok: {
     image: Images.social.tiktok,
     title: t('social_media.tiktok.title'),
