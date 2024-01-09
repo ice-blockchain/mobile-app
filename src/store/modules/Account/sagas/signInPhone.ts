@@ -14,7 +14,7 @@ import {call, put, SagaReturnType} from 'redux-saga/effects';
 export function* signInPhoneSaga(
   startAction: ReturnType<typeof AccountActions.SIGN_IN_PHONE.START.create>,
 ) {
-  const {phoneNumber, isoCode} = startAction.payload;
+  const {phoneNumber} = startAction.payload;
   try {
     if (phoneNumber.trim() === '') {
       throw new ValidationError(ValidationErrorCode.InvalidPhone);
@@ -22,18 +22,17 @@ export function* signInPhoneSaga(
 
     let cleanPhoneNumber = phoneNumber.replace(/ /g, '');
 
-    const user: SagaReturnType<typeof getValidUserForPhoneNumberMigration> =
+    const result: SagaReturnType<typeof getValidUserForPhoneNumberMigration> =
       yield call(getValidUserForPhoneNumberMigration, {
         phoneNumber: cleanPhoneNumber,
       });
 
-    if (user) {
+    if (result) {
       yield call(linkYourEmail);
       yield put(
-        AccountActions.SIGN_IN_PHONE.SET_TEMP_PHONE_AND_ISO.create(
-          phoneNumber,
-          isoCode,
-        ),
+        AccountActions.SIGN_IN_PHONE.SET_TEMP_USERID.create({
+          userId: result.id,
+        }),
       );
     }
   } catch (error) {

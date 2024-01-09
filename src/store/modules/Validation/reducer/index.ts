@@ -18,6 +18,7 @@ export interface State {
   temporaryEmailCode: string | null;
   temporaryEmailVerificationStep: 'email' | 'link' | 'code';
   emailSentTimestamp: number | null;
+  temporaryUserId: string | null;
 }
 
 type Actions = ReturnType<
@@ -26,6 +27,7 @@ type Actions = ReturnType<
   | typeof AccountActions.SIGN_IN_PHONE.SUCCESS.create
   | typeof AccountActions.SIGN_IN_PHONE.RESEND_SUCCESS.create
   | typeof AccountActions.SIGN_IN_PHONE.RESET.create
+  | typeof AccountActions.SIGN_IN_PHONE.SET_TEMP_USERID.create
   | typeof AccountActions.SIGN_IN_EMAIL_LINK.SET_TEMP_EMAIL.create
   | typeof AccountActions.SIGN_IN_EMAIL_LINK.SUCCESS.create
   | typeof AccountActions.SIGN_IN_EMAIL_LINK.RESET.create
@@ -61,6 +63,7 @@ const INITIAL_STATE: State = {
   temporaryEmailCode: null,
   emailSentTimestamp: null,
   temporaryEmailVerificationStep: 'email',
+  temporaryUserId: null,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -78,6 +81,9 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         break;
       case AccountActions.SIGN_IN_PHONE.RESEND_SUCCESS.type:
         draft.smsSentTimestamp = dayjs().valueOf();
+        break;
+      case AccountActions.SIGN_IN_PHONE.SET_TEMP_USERID.type:
+        draft.temporaryUserId = action.payload.userId;
         break;
       case AccountActions.SIGN_IN_EMAIL_LINK.SET_TEMP_EMAIL.type:
       case AccountActions.MODIFY_EMAIL_WITH_LINK.SET_TEMP_EMAIL.type:
@@ -107,6 +113,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.temporaryVerificationId = null;
         draft.temporaryPhoneNumber = null;
         draft.temporaryPhoneVerificationStep = 'phone';
+        draft.temporaryUserId = null;
         break;
       case ValidationActions.EMAIL_VALIDATION.SUCCESS.type:
       case ValidationActions.EMAIL_VALIDATION.RESET.type:

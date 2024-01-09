@@ -55,6 +55,7 @@ const SIGN_IN_PHONE = createAction('SIGN_IN_PHONE', {
     phoneNumber,
     isoCode,
   }),
+  SET_TEMP_USERID: (params: {userId: string}) => params,
   RESEND: true,
   RESEND_SUCCESS: true,
   CONFIRM_TEMP_PHONE: (code: string) => ({code}),

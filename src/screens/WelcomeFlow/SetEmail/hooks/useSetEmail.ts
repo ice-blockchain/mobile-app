@@ -10,6 +10,7 @@ import {
   isLoadingSelector,
 } from '@store/modules/UtilityProcessStatuses/selectors';
 import {ValidationActions} from '@store/modules/Validation/actions';
+import {phoneNumberMigrationSelector} from '@store/modules/Validation/selectors';
 import {t} from '@translations/i18n';
 import {useCallback, useState} from 'react';
 import {Keyboard} from 'react-native';
@@ -19,6 +20,8 @@ export const useSetEmail = () => {
   const dispatch = useDispatch();
   const navigation =
     useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
+
+  const isPhoneMigrationFlow = useSelector(phoneNumberMigrationSelector);
 
   const updateError = useSelector(
     failedReasonSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
@@ -39,9 +42,12 @@ export const useSetEmail = () => {
 
   const sendVerificationEmail = useCallback(() => {
     Keyboard.dismiss();
-    dispatch(ValidationActions.EMAIL_VALIDATION.RESET.create());
-    dispatch(AccountActions.MODIFY_EMAIL_WITH_LINK.START.create(email));
-  }, [dispatch, email]);
+    if (isPhoneMigrationFlow) {
+    } else {
+      dispatch(ValidationActions.EMAIL_VALIDATION.RESET.create());
+      dispatch(AccountActions.MODIFY_EMAIL_WITH_LINK.START.create(email));
+    }
+  }, [dispatch, email, isPhoneMigrationFlow]);
 
   const onSubmitPress = useCallback(() => {
     navigation.navigate({
