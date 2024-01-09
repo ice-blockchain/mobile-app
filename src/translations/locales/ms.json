@@ -957,6 +957,11 @@
     "discord": {
       "title": "Sertai Kami di Discord",
       "description": "Sertai komuniti Discord yang bertenaga kami dan terlibat dalam perbincangan dan pandangan eksklusif mengenai Ice.\n\nTerlibat dalam perbualan yang aktif, kekal dimaklumkan tentang berita berkaitan Ice, dan menjadi sebahagian daripada komuniti yang berkongsi minat anda."
+    },
+    "zeus_twitter": {
+      "title": "Ikuti Zeus di X",
+      "description": "Ikuti Zeus, pengasas berwawasan kami, di X, di mana beliau berkongsi pandangan, kemas kini, dan pemikiran mengenai misi kami. Sertai perbualan, tanyakan soalan, dan kekal berhubung dengan pemimpin yang memberi inspirasi kami semasa kita mula perjalanan yang mengujakan ini bersama-sama.",
+      "button": "Ikuti Zeus"
     }
   },
   "ping_referrals_pop_up": {

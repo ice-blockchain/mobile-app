@@ -957,6 +957,11 @@
     "discord": {
       "title": "Pripojte sa k nám na Discord",
       "description": "Pripojte sa k našej aktívnej komunite na Discord a ponorte sa do diskusií a exkluzívnych pohľadov na Ice.\n\nZúčastnite sa živých rozhovorov, udržujte sa informovaní o novinkách týkajúcich sa Ice a stanete sa súčasťou komunity, ktorá zdieľa vašu vášeň."
+    },
+    "zeus_twitter": {
+      "title": "Sledujte Zeusa na X",
+      "description": "Sledujte Zeusa, našeho výkonného zakladatele, na X, kde zdieľa svoje pohľady, aktualizácie a myšlienky na našu misiu. Pripojte sa k rozhovoru, položte otázky a zostante v kontakte s našim inšpirujúcim lídrom, keď sa spoločne vyberieme na túto vzrušujúcu cestu.",
+      "button": "Sledujte Zeusa"
     }
   },
   "ping_referrals_pop_up": {

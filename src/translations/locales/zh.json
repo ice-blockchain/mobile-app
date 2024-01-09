@@ -957,6 +957,11 @@
     "discord": {
       "title": "在Discord上加入我们",
       "description": "加入我们充满活力的Discord社区，深入讨论和Ice相关的见解。\n\n参与活跃的对话，了解与Ice相关的新闻，并成为一个与您共享激情的社区的一部分。"
+    },
+    "zeus_twitter": {
+      "title": "在X上关注Zeus",
+      "description": "在X上关注Zeus，我们的有远见的创始人，在那里他分享关于我们使命的见解、更新和想法。加入对话，提问问题，并与我们的鼓舞人心的领袖保持联系，当我们一起踏上这段激动人心的旅程时。",
+      "button": "关注Zeus"
     }
   },
   "ping_referrals_pop_up": {

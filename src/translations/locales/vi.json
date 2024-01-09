@@ -957,6 +957,11 @@
     "discord": {
       "title": "Tham gia cùng chúng tôi trên Discord",
       "description": "Tham gia cộng đồng nhiệt huyết của chúng tôi trên Discord và đắm chìm vào cuộc trò chuyện và cái nhìn độc đáo về Ice.\n\nTham gia cuộc trò chuyện sống động, cập nhật tin tức liên quan đến Ice và trở thành một phần của một cộng đồng chia sẻ đam mê của bạn."
+    },
+    "zeus_twitter": {
+      "title": "Theo dõi Zeus trên X",
+      "description": "Theo dõi Zeus, người sáng lập tầm nhìn của chúng tôi, trên X, nơi ông chia sẻ thông tin, cập nhật và suy nghĩ về sứ mệnh của chúng tôi. Tham gia cuộc trò chuyện, đặt câu hỏi và duy trì liên lạc với người lãnh đạo truyền cảm hứng của chúng tôi khi chúng tôi bắt đầu hành trình thú vị này cùng nhau.",
+      "button": "Theo dõi Zeus"
     }
   },
   "ping_referrals_pop_up": {
