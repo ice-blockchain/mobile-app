@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "yarn run:bundler",
-    "run:android": "react-native run-android --appIdSuffix=staging",
+    "run:android": "react-native run-android --appIdSuffix=staging --active-arch-only",
     "run:ios": "react-native run-ios",
     "run:bundler": "react-native start --reset-cache",
     "clean:android": "cd android && ./gradlew clean",

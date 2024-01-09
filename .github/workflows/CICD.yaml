@@ -24,12 +24,12 @@ jobs:
         uses: actions/checkout@v3
         with:
           path: main-repo
-      - name: Checkout the target 'master' branch of 'mobile-app-secrets'
+      - name: Checkout the target 'feature/build_speed_up' branch of 'mobile-app-secrets'
         id: checkout-secrets
         uses: actions/checkout@v3
         with:
           repository: ${{ secrets.MOBILE_APP_SECRETS_REPO }}
-          ref: master
+          ref: feature/build_speed_up
           token: ${{ secrets.ICE_CI_CD_BOT_GH_PAT }}
           path: mobile-app-secrets
           fetch-depth: 0
