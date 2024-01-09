@@ -59,15 +59,15 @@ export const Team = memo(({showEmptyTeamView}: Props) => {
       return (
         <View
           key={index}
-          // ItemSeparatorComponent doesn't work with RTL in expected manner.
+          // ItemSeparatorComponent doesn't work with RTL as expected.
           // So have to use a wrapper with a margin.
-          style={index < referrals.length - 1 ? styles.separator : null}
+          style={styles.separator}
           onLayout={onLayout}>
           {item ? <TeamMember userId={item} /> : <TeamMemberSkeleton />}
         </View>
       );
     },
-    [onLayout, referrals.length],
+    [onLayout],
   );
 
   if (referrals.length < 2 && !hasNext) {
