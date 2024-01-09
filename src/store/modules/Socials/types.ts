@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 export const socialsOrder = [
-  'zeusTwitter',
+  'iceFounderTwitter',
   'tiktok',
   'youtube',
   'linkedin',

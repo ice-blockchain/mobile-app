@@ -15,13 +15,13 @@ export interface SocialData {
   linkWeb: string;
 }
 export const socialData: Record<SocialType, SocialData> = {
-  zeusTwitter: {
+  iceFounderTwitter: {
     image: Images.social.twitter,
-    title: t('social_media.zeus_twitter.title'),
-    description: t('social_media.zeus_twitter.description'),
-    buttonTitle: t('social_media.zeus_twitter.button'),
-    linkApp: LINKS.TWITTER_ZEUS_APP_URL,
-    linkWeb: LINKS.TWITTER_ZEUS_WEB_URL,
+    title: t('social_media.ice_founder_twitter.title'),
+    description: t('social_media.ice_founder_twitter.description'),
+    buttonTitle: t('social_media.ice_founder_twitter.button'),
+    linkApp: LINKS.TWITTER_ICE_FOUNDER_APP_URL,
+    linkWeb: LINKS.TWITTER_ICE_FOUNDER_WEB_URL,
   },
   tiktok: {
     image: Images.social.tiktok,
