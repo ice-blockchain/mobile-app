@@ -35,6 +35,7 @@ export const ActiveUsersGraph = memo(() => {
           />
         }
         ListFooter={<TopMiners />}
+        type={'active_users'}
       />
     </View>
   );

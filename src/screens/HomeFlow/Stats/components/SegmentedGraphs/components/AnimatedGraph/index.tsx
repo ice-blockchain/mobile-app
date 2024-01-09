@@ -27,7 +27,7 @@ type Props = {
   data: BarGraphData[];
   ListHeader?: ComponentType | ReactElement;
   ListFooter?: ComponentType | ReactElement;
-  type?: StatsType;
+  type: StatsType;
 };
 
 export const AnimatedGraph = memo(

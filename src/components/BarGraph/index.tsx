@@ -12,6 +12,7 @@ import {SharedValue, useSharedValue, withTiming} from 'react-native-reanimated';
 import {rem} from 'rn-units';
 
 type Props = {
+  type: StatsType;
   data: BarGraphData[];
 };
 
@@ -65,7 +66,7 @@ type BarItemProps = {
   maxValue: number;
   sharedValue: SharedValue<number>;
   doAnimate: boolean;
-  type?: StatsType;
+  type: StatsType;
 };
 
 export const BarItem = memo(
@@ -93,7 +94,7 @@ export const BarItem = memo(
   },
 );
 
-export const BarGraph = memo(({data}: Props) => {
+export const BarGraph = memo(({data, type}: Props) => {
   const {stepValue, lastXValue, numberOfSteps} = useMemo(
     () => getValueData(data),
     [data],
@@ -129,6 +130,7 @@ export const BarGraph = memo(({data}: Props) => {
           maxValue={lastXValue}
           sharedValue={sharedValue}
           doAnimate={true}
+          type={type}
         />
       ))}
       <BarFooter

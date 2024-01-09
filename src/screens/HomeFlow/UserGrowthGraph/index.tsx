@@ -135,6 +135,7 @@ export const UserGrowthGraph = memo(() => {
               maxValue={lastXValue}
               sharedValue={sharedValue}
               doAnimate={Math.floor(screenHeight / ROW_HEIGHT) > index}
+              type={'active_users'}
             />
           )}
           ListFooterComponent={
