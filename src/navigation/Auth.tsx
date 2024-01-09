@@ -18,7 +18,7 @@ import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
 import {SetEmail} from '@screens/WelcomeFlow/SetEmail';
 import {
   emailVerificationStepSelector,
-  phoneNumberMigrationSelector,
+  migrationUserIdSelector,
   phoneVerificationStepSelector,
 } from '@store/modules/Validation/selectors';
 import React, {useEffect, useMemo} from 'react';
@@ -42,7 +42,7 @@ const AuthStack = createNativeStackNavigator<AuthStackParamList>();
 export function AuthNavigator() {
   const emailVerificationStep = useSelector(emailVerificationStepSelector);
   const phoneVerificationStep = useSelector(phoneVerificationStepSelector);
-  const phoneMigrationStarted = useSelector(phoneNumberMigrationSelector);
+  const phoneMigrationStarted = useSelector(migrationUserIdSelector);
   const navigation =
     useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
 

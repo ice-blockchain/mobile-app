@@ -18,7 +18,8 @@ export interface State {
   temporaryEmailCode: string | null;
   temporaryEmailVerificationStep: 'email' | 'link' | 'code';
   emailSentTimestamp: number | null;
-  temporaryUserId: string | null;
+  temporaryMigrationUserId: string | null;
+  temporaryMigrationPhoneNumber: string | undefined;
 }
 
 type Actions = ReturnType<
@@ -27,7 +28,7 @@ type Actions = ReturnType<
   | typeof AccountActions.SIGN_IN_PHONE.SUCCESS.create
   | typeof AccountActions.SIGN_IN_PHONE.RESEND_SUCCESS.create
   | typeof AccountActions.SIGN_IN_PHONE.RESET.create
-  | typeof AccountActions.SIGN_IN_PHONE.SET_TEMP_USERID.create
+  | typeof AccountActions.SIGN_IN_PHONE.SET_MIGRATION_DATA.create
   | typeof AccountActions.SIGN_IN_EMAIL_LINK.SET_TEMP_EMAIL.create
   | typeof AccountActions.SIGN_IN_EMAIL_LINK.SUCCESS.create
   | typeof AccountActions.SIGN_IN_EMAIL_LINK.RESET.create
@@ -50,6 +51,7 @@ type Actions = ReturnType<
   | typeof AccountActions.MODIFY_EMAIL_WITH_CODE.SUCCESS.create
   | typeof AccountActions.VERIFY_PHONE_NUMBER.SUCCESS.create
   | typeof AccountActions.VERIFY_PHONE_NUMBER.RESET.create
+  | typeof AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.RESET.create
 >;
 
 const INITIAL_STATE: State = {
@@ -63,7 +65,8 @@ const INITIAL_STATE: State = {
   temporaryEmailCode: null,
   emailSentTimestamp: null,
   temporaryEmailVerificationStep: 'email',
-  temporaryUserId: null,
+  temporaryMigrationUserId: null,
+  temporaryMigrationPhoneNumber: undefined,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -82,8 +85,9 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case AccountActions.SIGN_IN_PHONE.RESEND_SUCCESS.type:
         draft.smsSentTimestamp = dayjs().valueOf();
         break;
-      case AccountActions.SIGN_IN_PHONE.SET_TEMP_USERID.type:
-        draft.temporaryUserId = action.payload.userId;
+      case AccountActions.SIGN_IN_PHONE.SET_MIGRATION_DATA.type:
+        draft.temporaryMigrationUserId = action.payload.userId;
+        draft.temporaryMigrationPhoneNumber = action.payload.phoneNumber;
         break;
       case AccountActions.SIGN_IN_EMAIL_LINK.SET_TEMP_EMAIL.type:
       case AccountActions.MODIFY_EMAIL_WITH_LINK.SET_TEMP_EMAIL.type:
@@ -110,10 +114,12 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case AccountActions.VERIFY_PHONE_NUMBER.RESET.type:
       case ValidationActions.PHONE_VALIDATION.SUCCESS.type:
       case ValidationActions.PHONE_VALIDATION.RESET.type:
+      case AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.RESET.type:
         draft.temporaryVerificationId = null;
         draft.temporaryPhoneNumber = null;
         draft.temporaryPhoneVerificationStep = 'phone';
-        draft.temporaryUserId = null;
+        draft.temporaryMigrationUserId = null;
+        draft.temporaryMigrationPhoneNumber = undefined;
         break;
       case ValidationActions.EMAIL_VALIDATION.SUCCESS.type:
       case ValidationActions.EMAIL_VALIDATION.RESET.type:

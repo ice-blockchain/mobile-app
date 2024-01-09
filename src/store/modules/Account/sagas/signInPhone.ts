@@ -30,8 +30,9 @@ export function* signInPhoneSaga(
     if (result) {
       yield call(linkYourEmail);
       yield put(
-        AccountActions.SIGN_IN_PHONE.SET_TEMP_USERID.create({
+        AccountActions.SIGN_IN_PHONE.SET_MIGRATION_DATA.create({
           userId: result.id,
+          phoneNumber: cleanPhoneNumber,
         }),
       );
     }

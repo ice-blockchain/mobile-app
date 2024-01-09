@@ -10,7 +10,7 @@ import {
   isLoadingSelector,
 } from '@store/modules/UtilityProcessStatuses/selectors';
 import {ValidationActions} from '@store/modules/Validation/actions';
-import {phoneNumberMigrationSelector} from '@store/modules/Validation/selectors';
+import {migrationUserIdSelector} from '@store/modules/Validation/selectors';
 import {t} from '@translations/i18n';
 import {useCallback, useState} from 'react';
 import {Keyboard} from 'react-native';
@@ -21,13 +21,25 @@ export const useSetEmail = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
 
-  const isPhoneMigrationFlow = useSelector(phoneNumberMigrationSelector);
+  const isPhoneMigrationFlow = useSelector(migrationUserIdSelector);
 
   const updateError = useSelector(
     failedReasonSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
   );
+
   const updateLoading = useSelector(
     isLoadingSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
+  );
+
+  const migrationError = useSelector(
+    failedReasonSelector.bind(
+      null,
+      AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL,
+    ),
+  );
+
+  const migrationLoading = useSelector(
+    isLoadingSelector.bind(null, AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL),
   );
 
   const [email, setEmail] = useState('');
@@ -37,12 +49,18 @@ export const useSetEmail = () => {
   };
 
   const onBack = () => {
+    if (isPhoneMigrationFlow) {
+      dispatch(AccountActions.SIGN_IN_PHONE.RESET.create());
+    }
     navigation.goBack();
   };
 
   const sendVerificationEmail = useCallback(() => {
     Keyboard.dismiss();
     if (isPhoneMigrationFlow) {
+      dispatch(
+        AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.START.create(email),
+      );
     } else {
       dispatch(ValidationActions.EMAIL_VALIDATION.RESET.create());
       dispatch(AccountActions.MODIFY_EMAIL_WITH_LINK.START.create(email));
@@ -50,30 +68,36 @@ export const useSetEmail = () => {
   }, [dispatch, email, isPhoneMigrationFlow]);
 
   const onSubmitPress = useCallback(() => {
-    navigation.navigate({
-      name: 'PopUp',
-      key: 'confirm-email-popup',
-      params: {
-        title: t('settings.confirm_email_confirmation_title'),
-        message: t('settings.update_email_confirmation_subtitle'),
-        buttons: [
-          DEFAULT_DIALOG_NO_BUTTON,
-          {
-            text: t('button.continue'),
-            onPress: () => {
-              sendVerificationEmail();
+    if (isPhoneMigrationFlow) {
+      sendVerificationEmail();
+    } else {
+      navigation.navigate({
+        name: 'PopUp',
+        key: 'confirm-email-popup',
+        params: {
+          title: t('settings.confirm_email_confirmation_title'),
+          message: t('settings.update_email_confirmation_subtitle'),
+          buttons: [
+            DEFAULT_DIALOG_NO_BUTTON,
+            {
+              text: t('button.continue'),
+              onPress: () => {
+                sendVerificationEmail();
+              },
             },
-          },
-        ],
-      },
-    });
-  }, [navigation, sendVerificationEmail]);
+          ],
+        },
+      });
+    }
+  }, [navigation, sendVerificationEmail, isPhoneMigrationFlow]);
 
   return {
     email,
     onChangeEmail,
     updateError,
+    migrationError,
     updateLoading,
+    migrationLoading,
     onSubmitPress,
     onBack,
   };

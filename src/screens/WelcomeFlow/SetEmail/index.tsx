@@ -14,7 +14,9 @@ export const SetEmail = () => {
     email,
     onChangeEmail,
     updateError,
+    migrationError,
     updateLoading,
+    migrationLoading,
     onSubmitPress,
     onBack,
   } = useSetEmail();
@@ -36,15 +38,15 @@ export const SetEmail = () => {
         <EmailInput
           onChangeText={onChangeEmail}
           value={email}
-          errorText={updateError}
+          errorText={updateError || migrationError}
         />
       }
       info={<Info text={t('confirm_email.note')} />}
       button={
         <PrimaryButton
-          text={t('button.complete')}
+          text={t('button.continue')}
           onPress={onSubmitPress}
-          loading={updateLoading}
+          loading={updateLoading || migrationLoading}
           disabled={email.trim() === ''}
         />
       }

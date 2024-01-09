@@ -5,6 +5,7 @@ import {deleteAccountSaga} from '@store/modules/Account/sagas/deleteAccount';
 import {getAccountSaga} from '@store/modules/Account/sagas/getAccount';
 import {getAuthConfigSaga} from '@store/modules/Account/sagas/getAuthConfig';
 import {getInstallReferrerSaga} from '@store/modules/Account/sagas/getInstallReferrer';
+import {migratePhoneNumberSaga} from '@store/modules/Account/sagas/migratePhoneNumber';
 import {modifyEmailWithCodeSaga} from '@store/modules/Account/sagas/modifyEmailWithCode';
 import {modifyEmailWithLinkSaga} from '@store/modules/Account/sagas/modifyEmailWithLink';
 import {signInEmailCodeSaga} from '@store/modules/Account/sagas/signInEmailCode';
@@ -30,6 +31,10 @@ export const authWatchers = [
   takeLeading(
     AccountActions.SIGN_IN_EMAIL_CODE.START.type,
     signInEmailCodeSaga,
+  ),
+  takeLeading(
+    AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.START.type,
+    migratePhoneNumberSaga,
   ),
   takeLeading(AccountActions.SIGN_IN_PHONE.START.type, signInPhoneSaga),
   takeLeading(AccountActions.SIGN_IN_SOCIAL.START.type, signInSocialSaga),
