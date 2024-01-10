@@ -33,7 +33,7 @@ export const TASKS: {[key in TaskType]: TaskInfo} = {
   },
   follow_us_on_twitter: {
     iconBgColor: COLORS.toreaBay,
-    icon: <TwitterIcon />,
+    icon: <TwitterIcon color={COLORS.white} />,
   },
   join_telegram: {
     iconBgColor: COLORS.royalBlue,

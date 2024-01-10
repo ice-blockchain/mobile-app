@@ -5,7 +5,7 @@ import * as React from 'react';
 import {Path, Svg, SvgProps} from 'react-native-svg';
 import {rem} from 'rn-units';
 
-export const TwitterIcon = ({color = COLORS.white, ...props}: SvgProps) => {
+export const TwitterIcon = ({color = COLORS.black, ...props}: SvgProps) => {
   return (
     <Svg
       width={rem(20)}
