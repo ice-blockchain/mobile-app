@@ -69,6 +69,7 @@ const MIGRATE_PHONE_NUMBER_TO_EMAIL = createAction(
   'MIGRATE_PHONE_NUMBER_TO_EMAIL',
   {
     START: (email: string) => ({email}),
+    SET_SESSION: (loginSession: string) => ({loginSession}),
     SUCCESS: true,
     FAILED: (errorMessage: string) => ({errorMessage}),
     RESET: true,
@@ -167,6 +168,14 @@ const SET_BSC_ADDR_WARNING_CONFIRMED = createAction(
   },
 );
 
+const MIGRATE_EMAIL_WITH_CODE = createAction('MIGRATE_EMAIL_WITH_CODE', {
+  START: true,
+  SET_CODE: (code: string) => ({code}),
+  SUCCESS: true,
+  FAILED: (errorMessage: string) => ({errorMessage}),
+  RESET: true,
+});
+
 export const AccountActions = Object.freeze({
   SET_TOKEN,
   SET_USER_METADATA,
@@ -188,4 +197,5 @@ export const AccountActions = Object.freeze({
   SET_INSTALL_REFERRER,
   SET_BSC_ADDR_WARNING_CONFIRMED,
   MIGRATE_PHONE_NUMBER_TO_EMAIL,
+  MIGRATE_EMAIL_WITH_CODE,
 });

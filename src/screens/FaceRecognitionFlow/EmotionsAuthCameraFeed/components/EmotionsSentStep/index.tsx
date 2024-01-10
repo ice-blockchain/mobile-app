@@ -3,8 +3,10 @@
 import {CheckMark} from '@components/CheckMark';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
+import {AuthStackParamList} from '@navigation/Auth';
 import {Header} from '@navigation/components/Header';
 import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {StatusOverlay} from '@screens/FaceRecognitionFlow/components/StatusOverlay';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {emotionsAuthStatusSelector} from '@store/modules/FaceRecognition/selectors';
@@ -29,11 +31,21 @@ export function EmotionsSentStep({
   const emotionsAuthStatus = useSelector(emotionsAuthStatusSelector);
   const dispatch = useDispatch();
   const navigation = useNavigation();
+  const authNavigation =
+    useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
+
   const onFaceAuthSuccess = () => {
-    //TODO: replace with email code confirmation
-    dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
-    navigation.goBack();
-    dispatch(FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create());
+    if (isPhoneMigrationFlow) {
+      authNavigation.navigate('MigrationEmailCode', {
+        isPhoneMigrationFlow: true,
+      });
+    } else {
+      dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
+      navigation.goBack();
+      dispatch(
+        FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create(),
+      );
+    }
   };
 
   const onBanned = () => {

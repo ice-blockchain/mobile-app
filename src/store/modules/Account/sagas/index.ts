@@ -5,6 +5,7 @@ import {deleteAccountSaga} from '@store/modules/Account/sagas/deleteAccount';
 import {getAccountSaga} from '@store/modules/Account/sagas/getAccount';
 import {getAuthConfigSaga} from '@store/modules/Account/sagas/getAuthConfig';
 import {getInstallReferrerSaga} from '@store/modules/Account/sagas/getInstallReferrer';
+import {migrateEmailWithCodeSaga} from '@store/modules/Account/sagas/migrateEmailWithCode';
 import {migratePhoneNumberSaga} from '@store/modules/Account/sagas/migratePhoneNumber';
 import {modifyEmailWithCodeSaga} from '@store/modules/Account/sagas/modifyEmailWithCode';
 import {modifyEmailWithLinkSaga} from '@store/modules/Account/sagas/modifyEmailWithLink';
@@ -64,6 +65,10 @@ export const authWatchers = [
   takeLatest(
     AccountActions.VERIFY_PHONE_NUMBER.START.type,
     verifyPhoneNumberSaga,
+  ),
+  takeLatest(
+    AccountActions.MIGRATE_EMAIL_WITH_CODE.START.type,
+    migrateEmailWithCodeSaga,
   ),
   takeLatest(
     [

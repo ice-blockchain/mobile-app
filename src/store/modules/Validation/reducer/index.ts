@@ -21,6 +21,8 @@ export interface State {
   temporaryMigrationUserId: string | undefined;
   temporaryMigrationPhoneNumber: string | undefined;
   temporaryMigrationEmail: string | undefined;
+  temporaryMigrationEmailCode: string | undefined;
+  temporaryMigrationLoginSession: string | undefined;
 }
 
 type Actions = ReturnType<
@@ -54,6 +56,8 @@ type Actions = ReturnType<
   | typeof AccountActions.VERIFY_PHONE_NUMBER.RESET.create
   | typeof AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.RESET.create
   | typeof AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.START.create
+  | typeof AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.SET_SESSION.create
+  | typeof AccountActions.MIGRATE_EMAIL_WITH_CODE.SET_CODE.create
 >;
 
 const INITIAL_STATE: State = {
@@ -70,6 +74,8 @@ const INITIAL_STATE: State = {
   temporaryMigrationUserId: undefined,
   temporaryMigrationPhoneNumber: undefined,
   temporaryMigrationEmail: undefined,
+  temporaryMigrationEmailCode: undefined,
+  temporaryMigrationLoginSession: undefined,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -124,9 +130,17 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.temporaryMigrationUserId = undefined;
         draft.temporaryMigrationPhoneNumber = undefined;
         draft.temporaryMigrationEmail = undefined;
+        draft.temporaryMigrationEmailCode = undefined;
+        draft.temporaryMigrationLoginSession = undefined;
         break;
       case AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.START.type:
         draft.temporaryMigrationEmail = action.payload.email;
+        break;
+      case AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.SET_SESSION.type:
+        draft.temporaryMigrationLoginSession = action.payload.loginSession;
+        break;
+      case AccountActions.MIGRATE_EMAIL_WITH_CODE.SET_CODE.type:
+        draft.temporaryMigrationEmailCode = action.payload.code;
         break;
       case ValidationActions.EMAIL_VALIDATION.SUCCESS.type:
       case ValidationActions.EMAIL_VALIDATION.RESET.type:

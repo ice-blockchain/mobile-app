@@ -3,6 +3,7 @@
 import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {FACE_RECOGNITION_PICTURE_SIZE} from '@constants/faceRecognition';
+import {AccountActions} from '@store/modules/Account/actions';
 import {
   appLocaleSelector,
   userIdSelector,
@@ -72,6 +73,15 @@ export function* initEmotionsAuthSaga(action: Actions) {
         email: migrationEmail,
         language: locale,
       });
+
+    if (response.loginSession) {
+      yield put(
+        AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.SET_SESSION.create(
+          response.loginSession,
+        ),
+      );
+    }
+
     const emotionsAuthStatus: ReturnType<typeof emotionsAuthStatusSelector> =
       yield select(emotionsAuthStatusSelector);
     // If while we were waiting for this response the whole auth is already finalised

@@ -44,6 +44,9 @@ export type AuthStackParamList = {
     kycStepBlocked?: FaceAuthKycNumber;
     isPhoneMigrationFlow?: boolean;
   };
+  MigrationEmailCode: {
+    isPhoneMigrationFlow: boolean;
+  };
 };
 
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
@@ -98,6 +101,10 @@ export function AuthNavigator() {
         component={AccountConfirmation}
       />
       <AuthStack.Screen name="FaceRecognition" component={FaceRecognition} />
+      <AuthStack.Screen
+        name="MigrationEmailCode"
+        component={ConfirmEmailCode}
+      />
     </AuthStack.Navigator>
   );
 }

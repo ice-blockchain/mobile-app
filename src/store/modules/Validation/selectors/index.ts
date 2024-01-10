@@ -37,3 +37,9 @@ export const migrationPhoneNumberSelector = (state: RootState) =>
 
 export const migrationEmailSelector = (state: RootState) =>
   state.validation.temporaryMigrationEmail;
+
+export const migrationEmailCodeSelector = (state: RootState) =>
+  state.validation.temporaryMigrationEmailCode;
+
+export const migrationLoginSessionSelector = (state: RootState) =>
+  state.validation.temporaryMigrationLoginSession;
