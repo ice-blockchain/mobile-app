@@ -14,6 +14,18 @@ export interface SocialData {
   linkApp: string;
   linkWeb: string;
 }
+
+export const socialTypesOrder = [
+  'iceFounderTwitter',
+  'tiktok',
+  'youtube',
+  'linkedin',
+  'facebook',
+  'instagram',
+  'reddit',
+  // 'discord',
+] as const;
+
 export const socialData: Record<SocialType, SocialData> = {
   iceFounderTwitter: {
     image: Images.social.twitter,

@@ -1,17 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
-export const socialsOrder = [
-  'iceFounderTwitter',
-  'tiktok',
-  'youtube',
-  'linkedin',
-  'facebook',
-  'instagram',
-  'reddit',
-  // 'discord',
-] as const;
+import {socialTypesOrder} from '@store/modules/Socials/data';
 
-export type SocialType = typeof socialsOrder[number];
+export type SocialType = typeof socialTypesOrder[number];
 
 export type SocialsShare = {
   type: SocialType;
