@@ -61,7 +61,7 @@ export const TeamMemberSkeleton = () => (
   </SkeletonPlaceholder>
 );
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   usernameText: {
     marginTop: USERNAME_OFFSET,
     width: TEAM_MEMBER_SIZE,
