@@ -1233,8 +1233,8 @@
     "enter_address_confirmation": "እርስዎ የ BNB Smart Chain አድራሻ ነው የሚያመለክተው ነውም፣ በማለት ይጎብኛልን?",
     "validators_warning_title": "አድራሻ አረጋግጥ",
     "validators_warning_text": "እባክዎን ባንዳርነት በህክም አድራሻ አድርገዋል ከእኛው አይምሰልሽም፣ ብኛው የምርምርን ቅርጸ ከከባድ የተመለከተውን አግባብ በማድረግ ልክ ልንሄድ ትችላላችሁ።",
-    "okxWalletDescription": "እኛን ማያያዣ በማብራሪ የሚታይታይ ህግ እንዴት እንዲወርድ የOKX ገባዎችዎን ያግኙ።",
-    "okxWalletAction": "OKX ወልቃቂያን እንዴት ይጫኑ"
+    "okxWalletDescription": "እኛን ለማሳደግ የምትፈልጉ ለስራችሁ [[:bold]]OKX ቅጥፋት[[/:bold]] BNB ስልም አዘጋጅልን።\n\nያሁኑት አንዳንድ ሜትራማስካንድ ወለት በሰርቨርማስካንድ የሚገመግመውን ስልም በመጠቀም እዚህ ይግቡ።",
+    "okxWalletAction": "አካውንት ይፍጠሩ ከ OKX"
   },
   "social_kyc": {
     "header": "ማረጋገጫ",

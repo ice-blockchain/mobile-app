@@ -1233,8 +1233,8 @@
     "enter_address_confirmation": "Biztos benne, hogy a BNB Smart Chain cím helyes?",
     "validators_warning_title": "Cím megerősítése",
     "validators_warning_text": "Kérjük, vegye figyelembe, hogy azok az egyének, akik hozzáadtak egy BNB Smart Chain címet a fiókjukhoz, nem jogosultak arra, hogy a whitepaperünk szerint a Mainnet indulásához tartozó top 300 validátor egyike legyenek.",
-    "okxWalletDescription": "Védje meg érméit az OKX Wallet segítségével, a megbízható önkezelésű hivatalos pénztárcapartnerünkkel.",
-    "okxWalletAction": "OKX WALLET LETÖLTÉSE"
+    "okxWalletDescription": "Ajánljuk, hogy használja az [[:bold]]OKX Exchange[[/:bold]] BNB Smart Chain címét, hogy elkerülje a gáz díjakat.\n\nHa az OKX nem elérhető az Ön országában, használhat egy önálló tárcát, mint például a MetaMask vagy a Trust Wallet.",
+    "okxWalletAction": "FIÓK LÉTREHOZÁSA AZ OKX-EN"
   },
   "social_kyc": {
     "header": "Ellenőrzés",
