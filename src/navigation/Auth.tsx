@@ -89,7 +89,6 @@ export function AuthNavigator() {
       <AuthStack.Screen
         name="AccountConfirmation"
         component={AccountConfirmation}
-        options={{headerShown: true}}
       />
     </AuthStack.Navigator>
   );

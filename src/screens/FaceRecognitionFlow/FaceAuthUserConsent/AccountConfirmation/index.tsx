@@ -4,7 +4,9 @@ import {PopUpButton} from '@components/Buttons/PopUpButton';
 import {CheckBox} from '@components/CheckBox';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
+import {commonStyles} from '@constants/styles';
 import {Images} from '@images';
+import {Header} from '@navigation/components/Header';
 import {useNavigation} from '@react-navigation/native';
 import {
   BUTTON_WIDTH,
@@ -41,61 +43,72 @@ export function AccountConfirmation({updateKycStepPassed}: Props) {
   };
 
   return (
-    <ScrollView
-      style={styles.container}
-      contentContainerStyle={styles.contentContainer}>
-      <View style={styles.imageContainer}>
-        <Image source={Images.auth.accountConfirmation} />
-      </View>
-      <Text style={styles.title}>{t('account_confirmation.title')}</Text>
-      <Text style={styles.description}>
-        {t('account_confirmation.description')}
-      </Text>
-      <Text style={styles.description}>
-        {t('account_confirmation.description')}
-      </Text>
-      <View style={styles.footerContainer}>
-        <View style={styles.checkboxRow}>
-          <CheckBox
-            checked={isAgreeWithTermsAndConditions}
-            onValueChange={setIsAgreeWithTermsAndConditions}
-          />
-          <Text style={styles.noteText}>
-            {replaceString(
-              t('face_auth.consent'),
-              tagRegex('link', false),
-              (match, index) => (
-                <Text
-                  key={match + index}
-                  style={styles.termsLink}
-                  onPress={() => openLinkWithInAppBrowser({url: LINKS.TERMS})}>
-                  {match}
-                </Text>
-              ),
-            )}
-          </Text>
+    <View style={commonStyles.flexOne}>
+      <Header
+        color={COLORS.primaryDark}
+        title={t('account_confirmation.title')}
+        backgroundColor={'transparent'}
+        onGoBack={onBack}
+      />
+
+      <ScrollView
+        style={styles.container}
+        contentContainerStyle={styles.contentContainer}>
+        <View style={styles.imageContainer}>
+          <Image source={Images.auth.accountConfirmation} />
         </View>
-        <View style={styles.buttonsContainer}>
-          <PopUpButton
-            text={t('button.cancel')}
-            preset={'outlined'}
-            style={styles.button}
-            onPress={onBack}
-          />
-          <PopUpButton
-            text={t('button.continue')}
-            disabled={!isAgreeWithTermsAndConditions}
-            icon={<FaceAuthIcon />}
-            style={[
-              isAgreeWithTermsAndConditions
-                ? styles.button
-                : styles.disabledButton,
-            ]}
-            onPress={onContinue}
-          />
+        <Text style={styles.title}>{t('account_confirmation.title')}</Text>
+        <Text style={styles.description}>
+          {t('account_confirmation.description')}
+        </Text>
+        <Text style={styles.description}>
+          {t('account_confirmation.description')}
+        </Text>
+        <View style={styles.footerContainer}>
+          <View style={styles.checkboxRow}>
+            <CheckBox
+              checked={isAgreeWithTermsAndConditions}
+              onValueChange={setIsAgreeWithTermsAndConditions}
+            />
+            <Text style={styles.noteText}>
+              {replaceString(
+                t('face_auth.consent'),
+                tagRegex('link', false),
+                (match, index) => (
+                  <Text
+                    key={match + index}
+                    style={styles.termsLink}
+                    onPress={() =>
+                      openLinkWithInAppBrowser({url: LINKS.TERMS})
+                    }>
+                    {match}
+                  </Text>
+                ),
+              )}
+            </Text>
+          </View>
+          <View style={styles.buttonsContainer}>
+            <PopUpButton
+              text={t('button.cancel')}
+              preset={'outlined'}
+              style={styles.button}
+              onPress={onBack}
+            />
+            <PopUpButton
+              text={t('button.continue')}
+              disabled={!isAgreeWithTermsAndConditions}
+              icon={<FaceAuthIcon />}
+              style={[
+                isAgreeWithTermsAndConditions
+                  ? styles.button
+                  : styles.disabledButton,
+              ]}
+              onPress={onContinue}
+            />
+          </View>
         </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 }
 
