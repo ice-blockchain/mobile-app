@@ -1233,8 +1233,8 @@
     "enter_address_confirmation": "Er du sikker på at BNB Smart Chain-adressen din er riktig?",
     "validators_warning_title": "Bekreft Adresse",
     "validators_warning_text": "Vennligst merk: Personer som har lagt til en BNB Smart Chain-adresse i kontoen sin, er ikke kvalifisert til å bli en av de øverste 300 validatorer som angitt i vår whitepaper for hovednettets lansering.",
-    "okxWalletDescription": "Sikre myntene dine med OKX Wallet, vår pålitelige offisielle selvstyrende lommebokspartner.",
-    "okxWalletAction": "LAST NED OKX WALLET"
+    "okxWalletDescription": "Vi anbefaler å bruke din [[:bold]]OKX Exchange[[/:bold]] BNB Smart Chain-adresse for å unngå eventuelle gassgebyrer.\n\nHvis OKX ikke er tilgjengelig i landet ditt, kan du bruke en selvstyrt lommebok som MetaMask eller Trust Wallet.",
+    "okxWalletAction": "OPPRETT KONTO PÅ OKX"
   },
   "social_kyc": {
     "header": "Verifisering",

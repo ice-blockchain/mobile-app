@@ -1233,8 +1233,8 @@
     "enter_address_confirmation": "BNB Smart Chain ünvanının düzgün olduğundan əminsinizmi?",
     "validators_warning_title": "Ünvanı Təsdiq Et",
     "validators_warning_text": "Xüsusiylə öz hesabına BNB Smart Chain ünvanını əlavə edən şəxslər, əsas şəbəkə işə salınmasına görə ağın ən yaxşı 300 təsdiqləyicisindən biri olmağa layiq deyillər.",
-    "okxWalletDescription": "OKX Wallet il əhvalatınızı təminat altına alın, bizim etibarlı öz-özünü idarə edən rəsmi cüzdan tərəfdaşımız.",
-    "okxWalletAction": "OKX CÜZDANINI YÜKLƏYİN"
+    "okxWalletDescription": "[[:bold]]OKX Exchange[[/:bold]] BNB Smart Chain ünvanınızı istifadə etmənizi təklif edirik, hər hansı bir qaz haqqından qaçmaq üçün.\n\nƏgər OKX ölkənizdə mövcud deyilsə, MetaMask və ya Trust Wallet kimi özünüzün qeydiyyatlı cib qutularından istifadə edə bilərsiniz.",
+    "okxWalletAction": "OKX-DƏ HESAB AÇIN"
   },
   "social_kyc": {
     "header": "Doğrulama",

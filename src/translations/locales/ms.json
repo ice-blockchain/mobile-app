@@ -1233,8 +1233,8 @@
     "enter_address_confirmation": "Adakah anda pasti alamat BNB Smart Chain anda betul?",
     "validators_warning_title": "Sahkan Alamat",
     "validators_warning_text": "Sila ambil perhatian bahawa individu yang telah menambah alamat BNB Smart Chain ke dalam akaun mereka tidak layak menjadi salah satu validator teratas seperti yang dinyatakan dalam whitepaper kami untuk pelancaran mainnet.",
-    "okxWalletDescription": "Selamatkan mata wang anda dengan OKX Wallet, rakan dompet rasmi penjagaan sendiri kami yang dipercayai.",
-    "okxWalletAction": "MUAT TURUN OKX WALLET"
+    "okxWalletDescription": "Kami mencadangkan untuk menggunakan alamat BNB Smart Chain dari [[:bold]]Bursa OKX[[/:bold]] untuk mengelakkan sebarang caj gas.\n\nJika OKX tidak tersedia di negara anda, anda boleh menggunakan dompet penjagaan sendiri seperti MetaMask atau Trust Wallet.",
+    "okxWalletAction": "CIPTA AKAUN DI OKX"
   },
   "social_kyc": {
     "header": "Pengesahan",
