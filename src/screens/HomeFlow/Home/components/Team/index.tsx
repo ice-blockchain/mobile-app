@@ -8,6 +8,7 @@ import {MainTabsParamList} from '@navigation/Main';
 import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
 import {useNavigation} from '@react-navigation/native';
 import {
+  styles as teamMemberStyles,
   TeamMember,
   TeamMemberSkeleton,
 } from '@screens/HomeFlow/Home/components/Team/components/TeamMember';
@@ -83,12 +84,15 @@ export const Team = memo(({showEmptyTeamView}: Props) => {
       />
       <FlatList
         horizontal
+        overScrollMode={'never'}
         ref={flatListRef}
         data={referrals.length ? referrals : Array<null>(6).fill(null)}
         renderItem={renderItem}
         ListFooterComponent={
           loadNextLoading ? (
-            <ActivityIndicator style={styles.activityIndicator} />
+            <View style={teamMemberStyles.skeleton}>
+              <ActivityIndicator style={styles.activityIndicator} />
+            </View>
           ) : null
         }
         showsHorizontalScrollIndicator={false}
@@ -112,7 +116,9 @@ const styles = StyleSheet.create({
     flexDirection: isRTL && isAndroid ? 'row-reverse' : 'row',
   },
   activityIndicator: {
-    marginLeft: rem(10),
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
   },
   emptyTeamView: {
     paddingTop: rem(12),
