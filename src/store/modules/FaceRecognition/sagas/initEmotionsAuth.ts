@@ -3,7 +3,10 @@
 import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {FACE_RECOGNITION_PICTURE_SIZE} from '@constants/faceRecognition';
-import {userIdSelector} from '@store/modules/Account/selectors';
+import {
+  appLocaleSelector,
+  userIdSelector,
+} from '@store/modules/Account/selectors';
 import {deviceUniqueIdSelector} from '@store/modules/Devices/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
@@ -42,6 +45,9 @@ export function* initEmotionsAuthSaga(action: Actions) {
 
     const deviceUniqueId: ReturnType<typeof deviceUniqueIdSelector> =
       yield select(deviceUniqueIdSelector);
+    const locale: ReturnType<typeof appLocaleSelector> = yield select(
+      appLocaleSelector,
+    );
 
     const cropStartY: SagaReturnType<typeof getPictureCropStartY> = yield call(
       getPictureCropStartY,
@@ -64,6 +70,7 @@ export function* initEmotionsAuthSaga(action: Actions) {
         isPhoneMigrationFlow: true, //TODO: handle migration flow, set only if needed
         deviceUniqueId,
         email: migrationEmail,
+        language: locale,
       });
     const emotionsAuthStatus: ReturnType<typeof emotionsAuthStatusSelector> =
       yield select(emotionsAuthStatusSelector);
