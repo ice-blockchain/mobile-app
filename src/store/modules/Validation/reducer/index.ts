@@ -20,6 +20,7 @@ export interface State {
   emailSentTimestamp: number | null;
   temporaryMigrationUserId: string | undefined;
   temporaryMigrationPhoneNumber: string | undefined;
+  temporaryMigrationEmail: string | undefined;
 }
 
 type Actions = ReturnType<
@@ -52,6 +53,7 @@ type Actions = ReturnType<
   | typeof AccountActions.VERIFY_PHONE_NUMBER.SUCCESS.create
   | typeof AccountActions.VERIFY_PHONE_NUMBER.RESET.create
   | typeof AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.RESET.create
+  | typeof AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.START.create
 >;
 
 const INITIAL_STATE: State = {
@@ -67,6 +69,7 @@ const INITIAL_STATE: State = {
   temporaryEmailVerificationStep: 'email',
   temporaryMigrationUserId: undefined,
   temporaryMigrationPhoneNumber: undefined,
+  temporaryMigrationEmail: undefined,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -120,6 +123,10 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.temporaryPhoneVerificationStep = 'phone';
         draft.temporaryMigrationUserId = undefined;
         draft.temporaryMigrationPhoneNumber = undefined;
+        draft.temporaryMigrationEmail = undefined;
+        break;
+      case AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.START.type:
+        draft.temporaryMigrationEmail = action.payload.email;
         break;
       case ValidationActions.EMAIL_VALIDATION.SUCCESS.type:
       case ValidationActions.EMAIL_VALIDATION.RESET.type:

@@ -4,6 +4,7 @@ import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
+import {migrationUserIdSelector} from '@store/modules/Validation/selectors';
 import {showError} from '@utils/errors';
 import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
 
@@ -12,10 +13,14 @@ export function* fetchEmotionsForAuthSaga() {
     const userId: ReturnType<typeof userIdSelector> = yield select(
       userIdSelector,
     );
+    const migrationUserId: ReturnType<typeof migrationUserIdSelector> =
+      yield select(migrationUserIdSelector);
+
     const response: SagaReturnType<
       typeof Api.faceRecognition.fetchEmotionsForAuth
     > = yield call(Api.faceRecognition.fetchEmotionsForAuth, {
-      userId,
+      userId: migrationUserId || userId,
+      isPhoneMigrationFlow: true, //TODO: handle migration flow, set only if needed
     });
     yield put(
       FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.SUCCESS.create({

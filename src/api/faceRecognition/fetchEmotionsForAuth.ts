@@ -11,8 +11,23 @@ type Response = {
 
 export function fetchEmotionsForAuth({
   userId,
+  isPhoneMigrationFlow,
 }: {
   userId: string;
+  isPhoneMigrationFlow?: boolean;
 }): Promise<Response> {
-  return post<null, Response>(`/face-auth/emotions/${userId}`, null);
+  let migrationHeaders;
+
+  if (isPhoneMigrationFlow) {
+    migrationHeaders = {
+      'X-Migrate-Phone-Number-To-Email': true,
+    };
+  }
+
+  return post<null, Response>(
+    `/face-auth/emotions/${userId}`,
+    null,
+    undefined,
+    {headers: migrationHeaders},
+  );
 }

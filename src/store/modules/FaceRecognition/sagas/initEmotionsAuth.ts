@@ -4,6 +4,7 @@ import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
 import {FACE_RECOGNITION_PICTURE_SIZE} from '@constants/faceRecognition';
 import {userIdSelector} from '@store/modules/Account/selectors';
+import {deviceUniqueIdSelector} from '@store/modules/Devices/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {
   emotionsAuthEmotionsSelector,
@@ -11,6 +12,10 @@ import {
   emotionsAuthStatusSelector,
 } from '@store/modules/FaceRecognition/selectors';
 import {isEmotionsAuthFinalised} from '@store/modules/FaceRecognition/utils';
+import {
+  migrationEmailSelector,
+  migrationUserIdSelector,
+} from '@store/modules/Validation/selectors';
 import {shallowCompare} from '@utils/array';
 import {showError} from '@utils/errors';
 import {extractFramesWithFFmpeg, getPictureCropStartY} from '@utils/ffmpeg';
@@ -30,6 +35,13 @@ export function* initEmotionsAuthSaga(action: Actions) {
     const userId: ReturnType<typeof userIdSelector> = yield select(
       userIdSelector,
     );
+    const migrationEmail: ReturnType<typeof migrationEmailSelector> =
+      yield select(migrationEmailSelector);
+    const migrationUserId: ReturnType<typeof migrationUserIdSelector> =
+      yield select(migrationUserIdSelector);
+
+    const deviceUniqueId: ReturnType<typeof deviceUniqueIdSelector> =
+      yield select(deviceUniqueIdSelector);
 
     const cropStartY: SagaReturnType<typeof getPictureCropStartY> = yield call(
       getPictureCropStartY,
@@ -46,9 +58,12 @@ export function* initEmotionsAuthSaga(action: Actions) {
     );
     const response: SagaReturnType<typeof Api.faceRecognition.emotionsAuth> =
       yield call(Api.faceRecognition.emotionsAuth, {
-        userId,
+        userId: migrationUserId || userId, //isPhoneMigrationFlow ? userId : migrationUserId,
         sessionId,
         pictureUris: frames,
+        isPhoneMigrationFlow: true, //TODO: handle migration flow, set only if needed
+        deviceUniqueId,
+        email: migrationEmail,
       });
     const emotionsAuthStatus: ReturnType<typeof emotionsAuthStatusSelector> =
       yield select(emotionsAuthStatusSelector);
