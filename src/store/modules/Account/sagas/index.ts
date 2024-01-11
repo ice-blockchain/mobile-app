@@ -15,6 +15,7 @@ import {signInPhoneSaga} from '@store/modules/Account/sagas/signInPhone';
 import {signInSocialSaga} from '@store/modules/Account/sagas/signInSocial';
 import {signOutSaga} from '@store/modules/Account/sagas/signOut';
 import {subscribeUserChangedSaga} from '@store/modules/Account/sagas/subscribeUserChanged';
+import {successfullyLinkedSaga} from '@store/modules/Account/sagas/successfullyLinked';
 import {syncLanguageCodeSaga} from '@store/modules/Account/sagas/syncLanguageCode';
 import {syncRtlSaga} from '@store/modules/Account/sagas/syncRTL';
 import {updateAccountSaga} from '@store/modules/Account/sagas/updateAccount';
@@ -69,6 +70,10 @@ export const authWatchers = [
   takeLatest(
     AccountActions.MIGRATE_EMAIL_WITH_CODE.START.type,
     migrateEmailWithCodeSaga,
+  ),
+  takeLatest(
+    AccountActions.MIGRATE_EMAIL_WITH_CODE.SUCCESS.type,
+    successfullyLinkedSaga,
   ),
   takeLatest(
     [
