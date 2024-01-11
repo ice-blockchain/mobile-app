@@ -712,6 +712,8 @@ export type Translations = {
   'face_auth.selfie_guidelines.check_6': null;
   'face_auth.selfie_guidelines.warning': null;
   'face_auth.selfie_guidelines.confirmation': null;
+  'face_auth.selfie_guidelines.popup_title': null;
+  'face_auth.selfie_guidelines.popup_body': null;
   'override.whoInvitedYou.dontHaveInvitationCode': null;
   'override.home.pioneer.description': null;
   'override.home.tasks.invite_friends.description': null;

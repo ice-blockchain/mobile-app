@@ -1137,7 +1137,9 @@
       "check_5": "✅ No blurry or foggy photos.",
       "check_6": "✅ Clean camera lens.",
       "warning": "If you don’t follow the guidelines above, you might lose access to your account.",
-      "confirmation": "I confirm that I will follow the criteria."
+      "confirmation": "I confirm that I will follow the criteria.",
+      "popup_title": "Confirmation",
+      "popup_body": "Do you confirm that you have followed all the selfie guidelines?"
     }
   },
   "override": {

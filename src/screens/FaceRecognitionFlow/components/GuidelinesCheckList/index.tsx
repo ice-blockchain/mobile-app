@@ -7,7 +7,7 @@ import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
-  style?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 };
 
 const checks = [
@@ -19,9 +19,9 @@ const checks = [
   t('face_auth.selfie_guidelines.check_6'),
 ];
 
-export const CheckList = ({style}: Props) => {
+export const GuidelinesCheckList = ({containerStyle}: Props) => {
   return (
-    <View style={style}>
+    <View style={containerStyle}>
       {checks.map((check, index) => (
         <Text key={index} style={styles.checkText}>
           {check}

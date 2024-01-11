@@ -2,15 +2,15 @@
 
 import {PopUpButton} from '@components/Buttons/PopUpButton';
 import {CheckBox} from '@components/CheckBox';
+import {Warning} from '@components/Warning';
 import {COLORS} from '@constants/colors';
 import {Images} from '@images';
 import {useNavigation} from '@react-navigation/native';
+import {GuidelinesCheckList} from '@screens/FaceRecognitionFlow/components/GuidelinesCheckList';
 import {
   BUTTON_WIDTH,
   FOOTER_PADDING_HORIZONTAL,
 } from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/constants';
-import {CheckList} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/SelfieGuidelines/components/CheckList';
-import {Warning} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/SelfieGuidelines/components/Warning';
 import {FaceAuthIcon} from '@svg/FaceAuthIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -36,10 +36,10 @@ export function SelfieGuidelines({onStepComplete}: Props) {
       <Text style={styles.description}>
         {t('face_auth.selfie_guidelines.instruction')}
       </Text>
-      <CheckList style={styles.checkList} />
+      <GuidelinesCheckList containerStyle={styles.checkList} />
       <Warning
-        label={t('face_auth.selfie_guidelines.warning')}
-        style={styles.warning}
+        text={t('face_auth.selfie_guidelines.warning')}
+        containerStyle={styles.warning}
       />
       <View style={styles.footerContainer}>
         <View style={styles.checkboxRow}>

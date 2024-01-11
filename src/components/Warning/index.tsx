@@ -8,20 +8,20 @@ import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
-  label: string;
-  style?: StyleProp<ViewStyle>;
+  text: string;
+  containerStyle?: StyleProp<ViewStyle>;
 };
 
-export const Warning = ({label, style}: Props) => {
+export const Warning = ({text, containerStyle}: Props) => {
   return (
-    <View style={[styles.container, style]}>
+    <View style={[styles.container, containerStyle]}>
       <InfoIcon
         color={COLORS.white}
         secondaryColor={COLORS.attention}
         width={rem(20)}
         height={rem(20)}
       />
-      <Text style={styles.warningText}>{label}</Text>
+      <Text style={styles.warningText}>{text}</Text>
     </View>
   );
 };

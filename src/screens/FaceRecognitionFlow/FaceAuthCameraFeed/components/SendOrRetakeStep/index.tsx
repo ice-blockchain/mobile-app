@@ -7,8 +7,8 @@ import {commonStyles} from '@constants/styles';
 import {cameraStyles} from '@screens/FaceRecognitionFlow/components/CameraFeed/CameraFeed';
 import {FaceAuthOverlay} from '@screens/FaceRecognitionFlow/components/FaceAuthOverlay';
 import {isSmallDevice} from '@screens/FaceRecognitionFlow/constants';
+import {useSendPicture} from '@screens/FaceRecognitionFlow/FaceAuthCameraFeed/components/SendOrRetakeStep/hooks/useSendPicture';
 import {useMaxHeightStyle} from '@screens/FaceRecognitionFlow/hooks/useMaxHeightStyle';
-import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {cameraRatioSelector} from '@store/modules/FaceRecognition/selectors';
 import {RestartIcon} from '@svg/RestartIcon';
 import {t} from '@translations/i18n';
@@ -16,7 +16,7 @@ import {font} from '@utils/styles';
 import {CameraCapturedPicture} from 'expo-camera';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -30,17 +30,7 @@ export function SendOrRetakeStep({
   onPictureSent,
   picture,
 }: Props) {
-  const dispatch = useDispatch();
-  const sendPicture = () => {
-    dispatch(
-      FaceRecognitionActions.FACE_AUTH.START.create({
-        pictureUri: picture.uri,
-        pictureWidth: picture.width,
-        pictureHeight: picture.height,
-      }),
-    );
-    onPictureSent();
-  };
+  const {sendPicture} = useSendPicture({picture, onPictureSent});
 
   const cameraRatio = useSelector(cameraRatioSelector);
   const maxHeightStyle = useMaxHeightStyle();
