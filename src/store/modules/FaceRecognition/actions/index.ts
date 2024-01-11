@@ -19,7 +19,7 @@ const FACE_AUTH = createAction('FACE_AUTH', {
 });
 
 const FETCH_EMOTIONS_FOR_AUTH = createAction('FETCH_EMOTIONS_FOR_AUTH', {
-  START: true,
+  START: (isPhoneMigrationFlow: boolean) => ({isPhoneMigrationFlow}),
   SUCCESS: (payload: {emotions: AuthEmotion[]; sessionId: string}) => payload,
   FAILURE: (payload: {status: EmotionsAuthStatus}) => payload,
 });
@@ -29,6 +29,7 @@ const EMOTIONS_AUTH = createAction('EMOTIONS_AUTH', {
     videoUri: string;
     videoWidth: number;
     videoHeight: number;
+    isPhoneMigrationFlow: boolean;
   }) => payload,
   NEED_MORE_EMOTIONS: (payload: {emotions: AuthEmotion[]}) => payload,
   SUCCESS: true,

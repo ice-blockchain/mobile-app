@@ -31,7 +31,8 @@ type Actions = ReturnType<
 
 export function* initEmotionsAuthSaga(action: Actions) {
   try {
-    const {videoUri, videoWidth, videoHeight} = action.payload;
+    const {videoUri, videoWidth, videoHeight, isPhoneMigrationFlow} =
+      action.payload;
     const sessionId: ReturnType<typeof emotionsAuthSessionSelector> =
       yield select(emotionsAuthSessionSelector);
     const emotions: ReturnType<typeof emotionsAuthEmotionsSelector> =
@@ -65,10 +66,10 @@ export function* initEmotionsAuthSaga(action: Actions) {
     );
     const response: SagaReturnType<typeof Api.faceRecognition.emotionsAuth> =
       yield call(Api.faceRecognition.emotionsAuth, {
-        userId: migrationUserId || userId, //isPhoneMigrationFlow ? userId : migrationUserId,
+        userId: isPhoneMigrationFlow ? migrationUserId || '' : userId,
         sessionId,
         pictureUris: frames,
-        isPhoneMigrationFlow: true, //TODO: handle migration flow, set only if needed
+        isPhoneMigrationFlow: isPhoneMigrationFlow,
         deviceUniqueId,
         email: migrationEmail,
         language: locale,

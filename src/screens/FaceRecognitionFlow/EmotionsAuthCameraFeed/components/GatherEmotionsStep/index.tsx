@@ -141,6 +141,7 @@ export function GatherEmotionsStep({
               videoUri: video.uri,
               videoWidth: width,
               videoHeight: height,
+              isPhoneMigrationFlow,
             }),
           );
         }
@@ -159,6 +160,7 @@ export function GatherEmotionsStep({
     isCameraReady,
     started,
     getVideoDimensions,
+    isPhoneMigrationFlow,
   ]);
 
   useEffect(() => {
@@ -179,7 +181,11 @@ export function GatherEmotionsStep({
         emotionsAuthNextEmotionIndex >= emotions.length &&
         emotionsAuthStatus === 'NEED_MORE_EMOTIONS')
     ) {
-      dispatch(FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.START.create());
+      dispatch(
+        FaceRecognitionActions.FETCH_EMOTIONS_FOR_AUTH.START.create(
+          isPhoneMigrationFlow,
+        ),
+      );
     }
   }, [
     dispatch,
@@ -187,6 +193,7 @@ export function GatherEmotionsStep({
     emotionsAuthNextEmotionIndex,
     emotionsAuthStatus,
     session,
+    isPhoneMigrationFlow,
   ]);
 
   const onGoBack = useCallback(() => {
