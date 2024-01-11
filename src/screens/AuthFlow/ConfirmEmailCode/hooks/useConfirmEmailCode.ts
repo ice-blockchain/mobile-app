@@ -22,7 +22,7 @@ import {useDispatch, useSelector} from 'react-redux';
 
 export const useConfirmEmailCode = () => {
   const route = useRoute<RouteProp<AuthStackParamList, 'MigrationEmailCode'>>();
-  const {isPhoneMigrationFlow} = route.params;
+  const isPhoneMigrationFlow = route.params?.isPhoneMigrationFlow;
 
   const dispatch = useDispatch();
 
