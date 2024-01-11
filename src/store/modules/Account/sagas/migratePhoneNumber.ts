@@ -4,9 +4,9 @@ import {getValidUserForPhoneNumberMigration} from '@api/auth/getValidUserForPhon
 import {isApiError} from '@api/client';
 import {ValidationError, ValidationErrorCode} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
+import {emailAlreadyInUse} from '@store/modules/Account/utils/emailAlreadyInUse';
 import {loginViaEmail} from '@store/modules/Account/utils/loginViaEmail';
 import {migrationPhoneNumberSelector} from '@store/modules/Validation/selectors';
-import {t} from '@translations/i18n';
 import {validateEmail} from '@utils/email';
 import {getErrorMessage} from '@utils/errors';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
@@ -37,11 +37,8 @@ export function* migratePhoneNumberSaga(
       yield call(loginViaEmail);
       yield put(AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.RESET.create());
     } else if (isApiError(error, 409, 'EMAIL_USED_BY_SOMEBODY_ELSE')) {
-      yield put(
-        AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.FAILED.create(
-          t('errors.email_already_taken'),
-        ),
-      );
+      yield call(emailAlreadyInUse);
+      yield put(AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.CLEAR.create());
     } else {
       yield put(
         AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.FAILED.create(

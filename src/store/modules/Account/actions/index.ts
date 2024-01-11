@@ -73,6 +73,7 @@ const MIGRATE_PHONE_NUMBER_TO_EMAIL = createAction(
     SUCCESS: true,
     FAILED: (errorMessage: string) => ({errorMessage}),
     RESET: true,
+    CLEAR: true,
   },
 );
 
