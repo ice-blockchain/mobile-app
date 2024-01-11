@@ -1,10 +1,13 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {Badge} from '@components/Badge';
+import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {NewsActions} from '@store/modules/News/actions';
 import {NewsSelectors} from '@store/modules/News/selectors';
 import {LampActiveIcon} from '@svg/LampActiveIcon';
 import {LampInactiveIcon} from '@svg/LampInactiveIcon';
+import {StatsIcon} from '@svg/StatsIcon';
 import React, {useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
@@ -15,6 +18,7 @@ type Props = {
 };
 
 const ICON_SIZE = rem(40);
+const STATS_ICON_SIZE = rem(27);
 
 export const NewsIcon = ({focused}: Props) => {
   const dispatch = useDispatch();
@@ -24,6 +28,22 @@ export const NewsIcon = ({focused}: Props) => {
   useEffect(() => {
     dispatch(NewsActions.UNREAD_NEWS_COUNT_LOAD.START.create());
   }, [dispatch]);
+
+  if (isLightDesign) {
+    return focused ? (
+      <StatsIcon
+        color={COLORS.primaryLight}
+        width={STATS_ICON_SIZE}
+        height={STATS_ICON_SIZE}
+      />
+    ) : (
+      <StatsIcon
+        color={COLORS.secondary}
+        width={STATS_ICON_SIZE}
+        height={STATS_ICON_SIZE}
+      />
+    );
+  }
 
   return (
     <View>

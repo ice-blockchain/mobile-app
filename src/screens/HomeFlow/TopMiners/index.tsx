@@ -3,6 +3,7 @@
 import {Miner} from '@api/statistics/types';
 import {UserListItemCompact} from '@components/ListItems/UserListItemCompact';
 import {Touchable} from '@components/Touchable';
+import {isLightDesign} from '@constants/featureFlags';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -23,7 +24,7 @@ export const TopMiners = memo(() => {
       <Touchable
         key={item.userId ?? uniqueId()}
         onPress={() => {
-          if (item.userId) {
+          if (item.userId && !isLightDesign) {
             navigation.navigate('UserProfile', {userId: item.userId!});
           }
         }}>

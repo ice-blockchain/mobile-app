@@ -2,6 +2,7 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {LINKS} from '@constants/links';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
@@ -24,7 +25,9 @@ export const JoinMainnet = memo(() => {
       <View style={styles.body}>
         <Text style={styles.titleText}>{t('home.join_mainnet.title')}</Text>
         <Text style={styles.subtitleText}>
-          {t('home.join_mainnet.subtitle')}
+          {isLightDesign
+            ? t('override.home.join_mainnet.subtitle')
+            : t('home.join_mainnet.subtitle')}
         </Text>
       </View>
     </Touchable>

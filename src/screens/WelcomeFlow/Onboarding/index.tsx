@@ -53,6 +53,7 @@ export const Onboarding = () => {
           <Controls
             isLastPage={currentPage === slides.length - 1}
             goNextPage={goNextPage}
+            slide={slides[currentPage]}
             finishOnboarding={finishOnboarding}
           />
         </>

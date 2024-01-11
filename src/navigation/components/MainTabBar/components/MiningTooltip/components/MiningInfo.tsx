@@ -3,6 +3,7 @@
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useCountdown} from '@hooks/useCountdown';
 import {
@@ -87,7 +88,11 @@ export const MiningInfo = ({oneColumn}: Props) => {
             <FormattedNumber
               number={`${
                 {positive: '+', negative: '-', none: ''}[miningRates.type] ?? ''
-              }${formatNumberString(miningRates.total.amount)}`}
+              }${formatNumberString(
+                isLightDesign && miningRates?.type !== 'negative'
+                  ? miningRates.base.amount
+                  : miningRates.total.amount,
+              )}`}
               bodyStyle={styles.valueText}
               decimalsStyle={styles.valueDecimalsText}
             />

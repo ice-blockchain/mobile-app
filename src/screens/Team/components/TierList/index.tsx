@@ -108,6 +108,7 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: SCREEN_SIDE_OFFSET,
     paddingTop: CONTAINER_PADDING_TOP,
+    flexGrow: 1,
   },
   loadingIndicator: {
     alignItems: 'center',

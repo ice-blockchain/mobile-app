@@ -5,6 +5,7 @@ import {ListItemSkeleton} from '@components/ListItems/ListItemSkeleton';
 import {UserListItemCompact} from '@components/ListItems/UserListItemCompact';
 import {SectionHeader} from '@components/SectionHeader';
 import {Touchable} from '@components/Touchable';
+import {isLightDesign} from '@constants/featureFlags';
 import {useFetchCollection} from '@hooks/useFetchCollection';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -69,7 +70,7 @@ export const TopMiners = memo(() => {
               <Touchable
                 key={user.userId ?? uniqueId()}
                 onPress={() => {
-                  if (user.userId) {
+                  if (user.userId && !isLightDesign) {
                     navigation.navigate('UserProfile', {userId: user.userId!});
                   }
                 }}>

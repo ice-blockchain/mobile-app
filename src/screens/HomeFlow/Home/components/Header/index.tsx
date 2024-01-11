@@ -3,6 +3,7 @@
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useTopOffsetStyle} from '@navigation/hooks/useTopOffsetStyle';
 import {useUserGreetingWalkthrough} from '@screens/HomeFlow/Home/components/Header/components/hooks/useUserGreetingWalkthrough';
@@ -69,7 +70,7 @@ export const HomeHeader = memo(({translateY, transitionOffset}: Props) => {
           />
         </Animated.View>
 
-        <MenuButton />
+        {isLightDesign ? null : <MenuButton />}
       </View>
     </View>
   );

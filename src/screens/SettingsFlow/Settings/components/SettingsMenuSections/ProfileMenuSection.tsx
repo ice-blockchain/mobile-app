@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {isLightDesign} from '@constants/featureFlags';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -44,15 +45,17 @@ export const ProfileMenuSection = () => {
           })
         }
       />
-      <MenuItem
-        title={t('settings.inapp_privacy_title')}
-        description={t('settings.inapp_privacy_description')}
-        renderIcon={CertificateIcon}
-        onPress={() => {
-          navigation.goBack();
-          navigation.push('ProfilePrivacyEditStep1');
-        }}
-      />
+      {isLightDesign ? null : (
+        <MenuItem
+          title={t('settings.inapp_privacy_title')}
+          description={t('settings.inapp_privacy_description')}
+          renderIcon={CertificateIcon}
+          onPress={() => {
+            navigation.goBack();
+            navigation.push('ProfilePrivacyEditStep1');
+          }}
+        />
+      )}
     </>
   );
 };

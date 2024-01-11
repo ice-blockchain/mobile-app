@@ -4,6 +4,7 @@ import {Avatar} from '@components/Avatar/Avatar';
 import {UserListItemButton} from '@components/ListItems/UserListItem/components/UserListItemButton';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {TeamContactInvite} from '@screens/Team/components/Contacts/components/ContactsList/assets/svg/TeamContactInvite';
 import {MultipleNumbers} from '@screens/Team/components/Contacts/components/ContactsList/components/MultipleNumbers';
 import {t} from '@translations/i18n';
@@ -100,11 +101,13 @@ export const ContactItem = memo(
             </View>
           )}
         </View>
-        <UserListItemButton
-          text={t('team.contacts_list.invite')}
-          icon={<TeamContactInvite fill={COLORS.primaryDark} />}
-          onPress={() => onInvite(contact)}
-        />
+        {isLightDesign ? null : (
+          <UserListItemButton
+            text={t('team.contacts_list.invite')}
+            icon={<TeamContactInvite fill={COLORS.primaryDark} />}
+            onPress={() => onInvite(contact)}
+          />
+        )}
       </Touchable>
     );
   },

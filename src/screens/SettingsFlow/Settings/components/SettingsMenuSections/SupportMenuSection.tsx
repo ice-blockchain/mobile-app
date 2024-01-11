@@ -2,6 +2,7 @@
 
 import {DEFAULT_DIALOG_NO_BUTTON} from '@components/Buttons/PopUpButton';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {LINKS} from '@constants/links';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -41,18 +42,20 @@ export const SupportMenuSection = () => {
           });
         }}
       />
-      <MenuItem
-        title={t('settings.invite_title')}
-        description={t('settings.invite_description')}
-        renderIcon={() => (
-          <InviteIcon
-            fill={COLORS.primaryLight}
-            width={rem(24)}
-            height={rem(24)}
-          />
-        )}
-        onPress={() => navigation.navigate('InviteShare')}
-      />
+      {isLightDesign ? null : (
+        <MenuItem
+          title={t('settings.invite_title')}
+          description={t('settings.invite_description')}
+          renderIcon={() => (
+            <InviteIcon
+              fill={COLORS.primaryLight}
+              width={rem(24)}
+              height={rem(24)}
+            />
+          )}
+          onPress={() => navigation.navigate('InviteShare')}
+        />
+      )}
       <MenuItem
         title={t('settings.delete_title')}
         description={t('settings.delete_description')}

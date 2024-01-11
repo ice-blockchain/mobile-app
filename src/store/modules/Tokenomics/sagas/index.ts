@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {isLightDesign} from '@constants/featureFlags';
 import {AccountActions} from '@store/modules/Account/actions';
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
@@ -63,10 +64,12 @@ export const tokenomicsWatchers = [
     getBalanceHistorySaga,
   ),
   takeLeading(
-    [
-      TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.type,
-      TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type,
-    ],
+    isLightDesign
+      ? []
+      : [
+          TokenomicsActions.GET_MINING_SUMMARY.SUCCESS.type,
+          TokenomicsActions.CLAIM_DAILY_BONUS.STATE.type,
+        ],
     handleExtraBonusSaga,
   ),
   takeLatest(

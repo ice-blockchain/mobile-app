@@ -2,6 +2,7 @@
 
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -23,22 +24,25 @@ export function EmptyTier({title}: Props) {
     useNavigation<NativeStackNavigationProp<MainStackParamList>>();
 
   return (
-    <View style={styles.container}>
+    <View
+      style={isLightDesign ? styles.lightDesignContainer : styles.container}>
       <Image
         source={teamEmptyImage}
         style={styles.image}
         resizeMode="contain"
       />
       <Text style={styles.title}>{title}</Text>
-      <PrimaryButton
-        text={t('team.empty.button_title')}
-        onPress={() => navigation.navigate('InviteShare')}
-        style={styles.button}
-        textStyle={styles.buttonText}
-        icon={
-          <InviteIcon fill={COLORS.white} width={rem(24)} height={rem(24)} />
-        }
-      />
+      {isLightDesign ? null : (
+        <PrimaryButton
+          text={t('team.empty.button_title')}
+          onPress={() => navigation.navigate('InviteShare')}
+          style={styles.button}
+          textStyle={styles.buttonText}
+          icon={
+            <InviteIcon fill={COLORS.white} width={rem(24)} height={rem(24)} />
+          }
+        />
+      )}
     </View>
   );
 }
@@ -48,6 +52,13 @@ const styles = StyleSheet.create({
     paddingTop: rem(24),
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  lightDesignContainer: {
+    paddingBottom: rem(24),
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
+    flexGrow: 1,
   },
   image: {
     width: rem(200),

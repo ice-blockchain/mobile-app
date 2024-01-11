@@ -2,6 +2,7 @@
 
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {commonStyles} from '@constants/styles';
 import {PAGE_HEIGHT} from '@screens/HomeFlow/Home/components/Pager';
 import {PageSkeleton} from '@screens/HomeFlow/Home/components/Pager/components/PageSkeleton';
@@ -82,12 +83,14 @@ export const Wallet = memo(({darkMode}: Props) => {
             iconSize={rem(20)}
           />
         </View>
-        <View
-          ref={elementRef}
-          onLayout={onElementLayout}
-          style={styles.infoButton}>
-          <BalanceHistoryButton />
-        </View>
+        {isLightDesign ? null : (
+          <View
+            ref={elementRef}
+            onLayout={onElementLayout}
+            style={styles.infoButton}>
+            <BalanceHistoryButton />
+          </View>
+        )}
       </View>
       <View style={styles.miningRate}>
         <Text style={styles.rateLabelText}>{t('home.wallet.rate')}</Text>

@@ -3,6 +3,7 @@
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {CommonInput} from '@components/Inputs/CommonInput';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {FinalizeRegistrationStep} from '@screens/Templates/FinalizeRegistrationStep';
 import {BigHeader} from '@screens/Templates/FinalizeRegistrationStep/components/BigHeader';
@@ -34,7 +35,11 @@ export const ClaimUsername = () => {
       header={
         <BigHeader
           title={t('claimUsername.title')}
-          description={t('claimUsername.description')}
+          description={
+            isLightDesign
+              ? t('override.claimUsername.description')
+              : t('claimUsername.description')
+          }
           progressPercentage={0}
         />
       }

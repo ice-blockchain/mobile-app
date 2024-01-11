@@ -3,7 +3,7 @@
 import {IceLabel} from '@components/Labels/IceLabel';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {isLiteTeam} from '@constants/featureFlags';
+import {isLightDesign, isLiteTeam} from '@constants/featureFlags';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -34,6 +34,10 @@ export const InviteButton = ({style}: Props = {}) => {
       eventName: EVENT_NAMES.INVITE_FRIENDS_BANNER_PRESSED,
     });
   };
+
+  if (isLightDesign) {
+    return null;
+  }
 
   return (
     <Touchable style={[styles.button, style]} onPress={onInvitePress}>

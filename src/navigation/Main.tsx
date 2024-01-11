@@ -4,6 +4,7 @@ import {BadgeType} from '@api/achievements/types';
 import {NotificationDeliveryChannel} from '@api/notifications/types';
 import {FaceAuthKycNumber, SocialKycStepNumber} from '@api/tokenomics/types';
 import {Country} from '@constants/countries';
+import {isLightDesign} from '@constants/featureFlags';
 import {commonStyles} from '@constants/styles';
 import {ViewMeasurementsResult} from '@ice/react-native';
 import {MainTabBar} from '@navigation/components/MainTabBar';
@@ -236,7 +237,7 @@ const HomeTabStackNavigator = () => (
 const ProfileTabStackNavigator = () => (
   <ProfileTabStack.Navigator
     screenOptions={screenOptions}
-    initialRouteName={'MyProfile'}>
+    initialRouteName={isLightDesign ? 'Settings' : 'MyProfile'}>
     <ProfileTabStack.Screen name="MyProfile" component={Profile} />
     <ProfileTabStack.Screen name="Roles" component={Roles} />
     <ProfileTabStack.Screen
@@ -317,7 +318,7 @@ const MainTabs = () => {
         />
         <Tabs.Screen
           name="NewsTab"
-          component={News}
+          component={isLightDesign ? Stats : News}
           options={{
             tabBarIcon: NewsIcon,
             tabBarIconStyle: iconStyles.newsIconStyle,
