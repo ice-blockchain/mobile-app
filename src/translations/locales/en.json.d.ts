@@ -702,6 +702,16 @@ export type Translations = {
   'face_auth.camera_permission.title': null;
   'face_auth.camera_permission.description': null;
   'face_auth.camera_permission.action': null;
+  'face_auth.selfie_guidelines.title': null;
+  'face_auth.selfie_guidelines.instruction': null;
+  'face_auth.selfie_guidelines.check_1': null;
+  'face_auth.selfie_guidelines.check_2': null;
+  'face_auth.selfie_guidelines.check_3': null;
+  'face_auth.selfie_guidelines.check_4': null;
+  'face_auth.selfie_guidelines.check_5': null;
+  'face_auth.selfie_guidelines.check_6': null;
+  'face_auth.selfie_guidelines.warning': null;
+  'face_auth.selfie_guidelines.confirmation': null;
   'override.whoInvitedYou.dontHaveInvitationCode': null;
   'override.home.pioneer.description': null;
   'override.home.tasks.invite_friends.description': null;

@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     paddingHorizontal: FOOTER_PADDING_HORIZONTAL,
     paddingBottom: rem(40),
-    paddingTop: rem(8),
+    paddingTop: rem(22),
   },
   checkboxRow: {
     flexDirection: 'row',

@@ -3,16 +3,16 @@
 import {PopUpButton} from '@components/Buttons/PopUpButton';
 import {CheckBox} from '@components/CheckBox';
 import {COLORS} from '@constants/colors';
-import {LINKS} from '@constants/links';
 import {Images} from '@images';
 import {useNavigation} from '@react-navigation/native';
 import {
   BUTTON_WIDTH,
   FOOTER_PADDING_HORIZONTAL,
 } from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/constants';
+import {CheckList} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/SelfieGuidelines/components/CheckList';
+import {Warning} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/SelfieGuidelines/components/Warning';
 import {FaceAuthIcon} from '@svg/FaceAuthIcon';
-import {replaceString, t, tagRegex} from '@translations/i18n';
-import {openLinkWithInAppBrowser} from '@utils/device';
+import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {useState} from 'react';
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
@@ -24,8 +24,7 @@ type Props = {
 
 export function SelfieGuidelines({onStepComplete}: Props) {
   const navigation = useNavigation();
-  const [isAgreeWithTermsAndConditions, setIsAgreeWithTermsAndConditions] =
-    useState(false);
+  const [confirmed, setConfirmed] = useState(false);
   return (
     <ScrollView
       style={styles.container}
@@ -33,37 +32,20 @@ export function SelfieGuidelines({onStepComplete}: Props) {
       <View style={styles.imageContainer}>
         <Image source={Images.badges.faceAuth} />
       </View>
-      <Text style={styles.title}>{t('face_auth.title')}</Text>
+      <Text style={styles.title}>{t('face_auth.selfie_guidelines.title')}</Text>
       <Text style={styles.description}>
-        {replaceString(
-          t('face_auth.description'),
-          tagRegex('bold', false),
-          (match, index) => (
-            <Text key={match + index} style={styles.bold}>
-              {match}
-            </Text>
-          ),
-        )}
+        {t('face_auth.selfie_guidelines.instruction')}
       </Text>
+      <CheckList style={styles.checkList} />
+      <Warning
+        label={t('face_auth.selfie_guidelines.warning')}
+        style={styles.warning}
+      />
       <View style={styles.footerContainer}>
         <View style={styles.checkboxRow}>
-          <CheckBox
-            checked={isAgreeWithTermsAndConditions}
-            onValueChange={setIsAgreeWithTermsAndConditions}
-          />
+          <CheckBox checked={confirmed} onValueChange={setConfirmed} />
           <Text style={styles.noteText}>
-            {replaceString(
-              t('face_auth.consent'),
-              tagRegex('link', false),
-              (match, index) => (
-                <Text
-                  key={match + index}
-                  style={styles.termsLink}
-                  onPress={() => openLinkWithInAppBrowser({url: LINKS.TERMS})}>
-                  {match}
-                </Text>
-              ),
-            )}
+            {t('face_auth.selfie_guidelines.confirmation')}
           </Text>
         </View>
         <View style={styles.buttonsContainer}>
@@ -75,13 +57,9 @@ export function SelfieGuidelines({onStepComplete}: Props) {
           />
           <PopUpButton
             text={t('button.continue')}
-            disabled={!isAgreeWithTermsAndConditions}
+            disabled={!confirmed}
             icon={<FaceAuthIcon />}
-            style={[
-              isAgreeWithTermsAndConditions
-                ? styles.button
-                : styles.disabledButton,
-            ]}
+            style={[confirmed ? styles.button : styles.disabledButton]}
             onPress={onStepComplete}
           />
         </View>
@@ -98,6 +76,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     flexGrow: 1,
     backgroundColor: COLORS.white,
+    paddingHorizontal: FOOTER_PADDING_HORIZONTAL,
   },
   imageContainer: {
     alignSelf: 'center',
@@ -109,18 +88,19 @@ const styles = StyleSheet.create({
   },
   description: {
     paddingTop: rem(16),
-    paddingHorizontal: rem(48),
-    ...font(14, 20, 'medium', 'secondary', 'center'),
+    ...font(14, 20, 'medium', 'secondary'),
   },
-  bold: {
-    ...font(14, 20, 'bold', 'secondary', 'center'),
+  checkList: {
+    marginTop: rem(12),
+  },
+  warning: {
+    marginTop: rem(16),
   },
   footerContainer: {
     flex: 1,
     justifyContent: 'flex-end',
-    paddingHorizontal: FOOTER_PADDING_HORIZONTAL,
     paddingBottom: rem(40),
-    paddingTop: rem(8),
+    paddingTop: rem(22),
   },
   checkboxRow: {
     flexDirection: 'row',
@@ -130,9 +110,6 @@ const styles = StyleSheet.create({
   noteText: {
     paddingHorizontal: rem(12),
     ...font(14, 18, 'medium', 'primaryDark'),
-  },
-  termsLink: {
-    color: COLORS.primaryLight,
   },
   buttonsContainer: {
     paddingTop: rem(34),
