@@ -38,7 +38,8 @@ export const Summary = memo(() => {
           <Text style={styles.valueText}>
             {formatNumber(totalCoins, {
               notation: 'compact',
-              maximumFractionDigits: 1,
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
             })}
           </Text>
         </View>

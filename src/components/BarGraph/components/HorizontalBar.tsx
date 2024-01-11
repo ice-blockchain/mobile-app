@@ -19,7 +19,7 @@ type Props = {
   maxWidth: number;
   sharedValue: SharedValue<number>;
   doAnimate: boolean;
-  type?: StatsType;
+  type: StatsType;
 };
 
 export const HorizontalBar = ({
@@ -61,11 +61,7 @@ export const HorizontalBar = ({
     return null;
   }
 
-  const barLabel = formatNumber(value, {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 1,
-    notation: 'compact',
-  });
+  const barLabel = formatBarValue(value, type);
 
   return (
     <View style={styles.container}>
@@ -85,6 +81,24 @@ export const HorizontalBar = ({
       )}
     </View>
   );
+};
+
+const formatBarValue = (value: number, type: StatsType): string => {
+  switch (type) {
+    case 'active_users':
+      return formatNumber(value, {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 1,
+        notation: 'compact',
+      });
+    case 'total_coins': {
+      return formatNumber(value, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+        notation: 'compact',
+      });
+    }
+  }
 };
 
 const styles = StyleSheet.create({
