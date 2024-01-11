@@ -13,12 +13,11 @@ import {call, delay} from 'redux-saga/effects';
  * to email migration
  */
 export function* successfullyLinkedSaga() {
+  yield call(waitForSelector, isRegistrationCompleteSelector);
+  yield call(waitForSelector, isAuthorizedSelector);
   /*
    * wait few secs before showing
    * */
   yield delay(2000);
-
-  yield call(waitForSelector, isRegistrationCompleteSelector);
-  yield call(waitForSelector, isAuthorizedSelector);
   yield call(successfullyLinked);
 }
