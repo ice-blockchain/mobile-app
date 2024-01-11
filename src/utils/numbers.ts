@@ -17,22 +17,27 @@ export function formatNumber(
     notation?: 'standard' | 'scientific' | 'engineering' | 'compact';
   } = {},
 ) {
-  // Compact notation doesn't work on iOS:
-  // https://github.com/facebook/hermes/issues/23#issuecomment-1253927200
-  // Remove polyfill when implemented
-  if (notation === 'compact' && isIOS) {
-    return compactFormat(input, 'en', null, {
-      significantDigits: minimumFractionDigits,
-      minimumFractionDigits,
-      maximumFractionDigits,
-    });
-  }
-
   const key = notation + minimumFractionDigits + maximumFractionDigits;
 
   if (!formatters[key]) {
     formatters[key] = Intl.NumberFormat('en', {
       notation,
+      minimumFractionDigits,
+      maximumFractionDigits,
+    });
+  }
+
+  // Compact notation doesn't work on iOS:
+  // https://github.com/facebook/hermes/issues/23#issuecomment-1253927200
+  // Remove polyfill when implemented
+  if (notation === 'compact' && isIOS) {
+    if (input < 1000) {
+      // polyfill for compact notation doesn't apply formatting for numbers lower than 1000
+      // but the build in Intl do the job here
+      return formatters[key].format(input);
+    }
+    return compactFormat(input, 'en', null, {
+      significantDigits: minimumFractionDigits,
       minimumFractionDigits,
       maximumFractionDigits,
     });
