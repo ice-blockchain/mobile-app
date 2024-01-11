@@ -105,6 +105,7 @@ export const Images = {
     accountError: require('./popup/account_error.png'),
     linkEmail: require('./popup/link_email.png'),
     registrationUpdate: require('./popup/registration_update.png'),
+    linked: require('./popup/linked.png'),
   },
   share: {
     telegram: require('./share/telegram.png'),

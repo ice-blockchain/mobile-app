@@ -446,6 +446,11 @@ export type Translations = {
   'pop_up.account_error_text': null;
   'pop_up.login_via_email_title': null;
   'pop_up.login_via_email_text': null;
+  'pop_up.email_in_use_title': null;
+  'pop_up.email_in_use_text_part1': null;
+  'pop_up.email_in_use_text_part2': null;
+  'pop_up.successfully_linked_title': null;
+  'pop_up.successfully_linked_text': null;
   'periods.3_days': null;
   'periods.7_days': null;
   'periods.30_days': null;

@@ -634,7 +634,12 @@
     "account_error_title": "Account error",
     "account_error_text": "We have suspended the login using the phone number. Unfortunately your account did not pass KYC and is not eligible for recovery.",
     "login_via_email_title": "Please login via email",
-    "login_via_email_text": "We have suspended the login using the phone number. Please use the email associated to your account in order to be able to login."
+    "login_via_email_text": "We have suspended the login using the phone number. Please use the email associated to your account in order to be able to login.",
+    "email_in_use_title": "Email already in use",
+    "email_in_use_text_part1": "The email address you're trying to link is already in use.",
+    "email_in_use_text_part2": "If this is your email address, please first log in with it, finalize the registration process and delete that account to make the email available, then return to the login with phone number to complete the linking process.",
+    "successfully_linked_title": "Successfully linked!",
+    "successfully_linked_text": "The email has been successfully linked to your account"
   },
   "periods": {
     "3_days": "3 days",
