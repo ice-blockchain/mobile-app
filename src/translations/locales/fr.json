@@ -1129,6 +1129,20 @@
       "title": "Permission de la caméra",
       "description": "Pour continuer, veuillez autoriser l'accès à la caméra.",
       "action": "Autoriser l'accès"
+    },
+    "selfie_guidelines": {
+      "title": "Directives pour les selfies",
+      "instruction": "Avant de continuer, veuillez suivre ces directives pour une authentification faciale KYC réussie :",
+      "check_1": "✅ Assurez-vous d'avoir une photo de haute qualité.",
+      "check_2": "✅ Assurez-vous d'avoir un bon éclairage.",
+      "check_3": "✅ Assurez-vous d'avoir un fond clair.",
+      "check_4": "✅ Pas de photos sombres.",
+      "check_5": "✅ Pas de photos floues ou brumeuses.",
+      "check_6": "✅ Nettoyez l'objectif de l'appareil photo.",
+      "warning": "Si vous ne suivez pas les directives ci-dessus, vous pourriez perdre l'accès à votre compte.",
+      "confirmation": "Je confirme que je suivrai les critères.",
+      "popup_title": "Confirmation",
+      "popup_body": "Confirmez-vous avoir suivi toutes les directives pour les selfies ?"
     }
   },
   "override": {

@@ -1129,6 +1129,20 @@
       "title": "Kameratillstånd",
       "description": "För att fortsätta, vänligen tillåt åtkomst till kameran.",
       "action": "Tillåt åtkomst"
+    },
+    "selfie_guidelines": {
+      "title": "Selfie-riktlinjer",
+      "instruction": "Innan du fortsätter, följ dessa riktlinjer för en framgångsrik ansiktsautentisering KYC:",
+      "check_1": "✅ Se till att du har en högkvalitativ bild.",
+      "check_2": "✅ Ha bra belysning.",
+      "check_3": "✅ Ha en ren bakgrund.",
+      "check_4": "✅ Inga mörka bilder.",
+      "check_5": "✅ Inga suddiga eller dimmiga bilder.",
+      "check_6": "✅ Rengör kameraobjektivet.",
+      "warning": "Om du inte följer ovanstående riktlinjer kan du förlora åtkomsten till ditt konto.",
+      "confirmation": "Jag bekräftar att jag kommer att följa kriterierna.",
+      "popup_title": "Bekräftelse",
+      "popup_body": "Bekräftar du att du har följt alla selfie-riktlinjer?"
     }
   },
   "override": {

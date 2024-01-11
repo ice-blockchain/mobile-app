@@ -1129,6 +1129,20 @@
       "title": "Kameratillatelse",
       "description": "For å fortsette, vennligst gi tilgang til kameraet.",
       "action": "Tillat tilgang"
+    },
+    "selfie_guidelines": {
+      "title": "Selfie Retningslinjer",
+      "instruction": "Før du fortsetter, vennligst følg disse retningslinjene for en vellykket KYC ansiktsautentisering:",
+      "check_1": "✅ Forsikre deg om at du har et bilde av høy kvalitet.",
+      "check_2": "✅ Ha god belysning.",
+      "check_3": "✅ Ha en ren bakgrunn.",
+      "check_4": "✅ Ingen mørke bilder.",
+      "check_5": "✅ Ingen uskarpe eller tåkete bilder.",
+      "check_6": "✅ Rengjør kameraets linse.",
+      "warning": "Hvis du ikke følger retningslinjene ovenfor, kan du miste tilgangen til kontoen din.",
+      "confirmation": "Jeg bekrefter at jeg vil følge kriteriene.",
+      "popup_title": "Bekreftelse",
+      "popup_body": "Bekrefter du at du har fulgt alle selfie retningslinjene?"
     }
   },
   "override": {

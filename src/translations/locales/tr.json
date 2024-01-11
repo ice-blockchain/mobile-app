@@ -1129,6 +1129,20 @@
       "title": "Kamera İzni",
       "description": "Devam etmek için lütfen kameraya erişime izin verin.",
       "action": "Erişime izin ver"
+    },
+    "selfie_guidelines": {
+      "title": "Selfie Talimatları",
+      "instruction": "Devam etmeden önce, başarılı bir yüz kimlik doğrulama için bu talimatları izleyin:",
+      "check_1": "✅ Yüksek kaliteli bir fotoğrafınız olduğundan emin olun.",
+      "check_2": "✅ Işıklandırmanın iyi olduğundan emin olun.",
+      "check_3": "✅ Temiz bir arka planınız olsun.",
+      "check_4": "✅ Karanlık fotoğraflar olmasın.",
+      "check_5": "✅ Bulanık veya sisli fotoğraflar olmasın.",
+      "check_6": "✅ Kamera lensini temizleyin.",
+      "warning": "Yukarıdaki talimatları izlemezseniz, hesabınıza erişimi kaybedebilirsiniz.",
+      "confirmation": "Kriterleri izleyeceğimi onaylıyorum.",
+      "popup_title": "Onay",
+      "popup_body": "Tüm selfie talimatlarını izlediğinizi onaylıyor musunuz?"
     }
   },
   "override": {

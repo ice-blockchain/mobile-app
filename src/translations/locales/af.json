@@ -1132,6 +1132,20 @@
       "title": "Kamera toestemming",
       "description": "Om voort te gaan, staan asseblief toegang tot die kamera toe.",
       "action": "Staan toegang toe"
+    },
+    "selfie_guidelines": {
+      "title": "Selfie Riglyne",
+      "instruction": "Voordat u voortgaan, volg asseblief hierdie riglyne vir 'n suksesvolle KYC gesig verifikasie:",
+      "check_1": "✅ Maak seker jy het 'n hoë kwaliteit foto.",
+      "check_2": "✅ Het goeie beligting.",
+      "check_3": "✅ Het 'n skoon agtergrond.",
+      "check_4": "✅ Geen donker fotos nie.",
+      "check_5": "✅ Geen wazige of mistige fotos nie.",
+      "check_6": "✅ Skoon kamera-lens.",
+      "warning": "As u nie die bogenoemde riglyne volg nie, kan u toegang tot u rekening verloor.",
+      "confirmation": "Ek bevestig dat ek aan die kriteria sal voldoen.",
+      "popup_title": "Bevestiging",
+      "popup_body": "Bevestig u dat u al die selfie riglyne gevolg het?"
     }
   },
   "override": {

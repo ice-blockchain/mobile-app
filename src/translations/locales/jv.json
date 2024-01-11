@@ -1029,6 +1029,20 @@
       "title": "Izin Kamera",
       "description": "Supaya tetep terus, monggo restuiakses menyang kamera.",
       "action": "Restuiakses dianjurake"
+    },
+    "selfie_guidelines": {
+      "title": "Panduan Selfie",
+      "instruction": "Pra lanjut, palupi panduan iki kanggo autentikasi wajah KYC sing sukses:",
+      "check_1": "✅ Pastikan sampeyan duwe gambar sing kualitasé apik.",
+      "check_2": "✅ Duwe panggonan sing apik.",
+      "check_3": "✅ Duwe latar belakang sing apik.",
+      "check_4": "✅ Durung ana gambar sing gelap.",
+      "check_5": "✅ Durung ana gambar sing sambrama utawa mbledhek.",
+      "check_6": "✅ Bersihake lensa kamera.",
+      "warning": "Yen sampeyan ora nggandhengi panduan ing sajeroning, sampeyan bisa kehilangan akses menyang akun sampeyan.",
+      "confirmation": "Aku ngonfirmasi sing aku bakal nggandhengi kriteria.",
+      "popup_title": "Konfirmasi",
+      "popup_body": "Apakah sampeyan ngonfirmasi sing sampeyan wis nggandhengi kabeh panduan selfie?"
     }
   },
   "override": {

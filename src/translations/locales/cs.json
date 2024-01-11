@@ -1129,6 +1129,20 @@
       "title": "Oprávnění k fotoaparátu",
       "description": "Pro pokračování povolte přístup k fotoaparátu.",
       "action": "Povolit přístup"
+    },
+    "selfie_guidelines": {
+      "title": "Pokyny pro selfie",
+      "instruction": "Před pokračováním postupujte podle těchto pokynů pro úspěšnou KYC ověření obličeje:",
+      "check_1": "✅ Ujistěte se, že máte fotografii vysoké kvality.",
+      "check_2": "✅ Mějte dobré osvětlení.",
+      "check_3": "✅ Mějte čisté pozadí.",
+      "check_4": "✅ Žádné tmavé fotografie.",
+      "check_5": "✅ Žádné rozmazané nebo mlžné fotografie.",
+      "check_6": "✅ Čistý objektiv kamery.",
+      "warning": "Pokud nepostupujete podle uvedených pokynů, můžete přijít o přístup ke svému účtu.",
+      "confirmation": "Potvrzuji, že budu dodržovat kritéria.",
+      "popup_title": "Potvrzení",
+      "popup_body": "Potvrzujete, že jste dodrželi všechny pokyny pro selfie?"
     }
   },
   "override": {
