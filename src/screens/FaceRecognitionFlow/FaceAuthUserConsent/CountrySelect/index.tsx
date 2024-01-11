@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {User} from '@api/user/types';
+import {PopUpButton} from '@components/Buttons/PopUpButton';
 import {COLORS} from '@constants/colors';
 import {Country} from '@constants/countries';
 import {commonStyles} from '@constants/styles';
 import {BUTTON_WIDTH} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/constants';
-import {PopUpButton} from '@screens/Modals/PopUp/components/PopUpButton';
 import {CountrySelectFeed} from '@screens/Templates/CountrySelectFeed';
 import {AccountActions} from '@store/modules/Account/actions';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
@@ -21,10 +21,10 @@ import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 type Props = {
-  onContinue: () => void;
+  onStepComplete: () => void;
 };
 
-export function CountrySelect({onContinue}: Props) {
+export function CountrySelect({onStepComplete}: Props) {
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
   const user = useSelector(unsafeUserSelector);
   const [isUpdateSent, setIsUpdateSent] = useState(false);
@@ -40,13 +40,13 @@ export function CountrySelect({onContinue}: Props) {
   useEffect(() => {
     if (isUpdateSent) {
       if (isSuccessUpdate) {
-        onContinue();
+        onStepComplete();
       }
       if (isFailureUpdate) {
         setIsUpdateSent(false);
       }
     }
-  }, [isFailureUpdate, isSuccessUpdate, isUpdateSent, onContinue]);
+  }, [isFailureUpdate, isSuccessUpdate, isUpdateSent, onStepComplete]);
 
   return (
     <View style={commonStyles.flexOne}>

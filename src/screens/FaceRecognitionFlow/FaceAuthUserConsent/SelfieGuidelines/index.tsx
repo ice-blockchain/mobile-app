@@ -5,13 +5,11 @@ import {CheckBox} from '@components/CheckBox';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
 import {Images} from '@images';
-import {navigate} from '@navigation/utils';
 import {useNavigation} from '@react-navigation/native';
 import {
   BUTTON_WIDTH,
   FOOTER_PADDING_HORIZONTAL,
 } from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/constants';
-import {Message} from '@screens/Modals/PopUp/components/Message';
 import {FaceAuthIcon} from '@svg/FaceAuthIcon';
 import {replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
@@ -24,32 +22,10 @@ type Props = {
   onStepComplete: () => void;
 };
 
-export function UserConsent({onStepComplete}: Props) {
+export function SelfieGuidelines({onStepComplete}: Props) {
   const navigation = useNavigation();
   const [isAgreeWithTermsAndConditions, setIsAgreeWithTermsAndConditions] =
     useState(false);
-  const onContinue = () => {
-    navigate({
-      name: 'PopUp',
-      key: 'face-auth-consent-popup',
-      params: {
-        title: t('face_auth.title'),
-        message: <Message text={t('face_auth.confirmation')} />,
-        buttons: [
-          {
-            text: t('button.cancel'),
-            preset: 'outlined',
-          },
-          {
-            text: t('button.continue'),
-            onPress: onStepComplete,
-          },
-        ],
-        dismissOnAndroidHardwareBack: false,
-        dismissOnOutsideTouch: false,
-      },
-    });
-  };
   return (
     <ScrollView
       style={styles.container}
@@ -106,7 +82,7 @@ export function UserConsent({onStepComplete}: Props) {
                 ? styles.button
                 : styles.disabledButton,
             ]}
-            onPress={onContinue}
+            onPress={onStepComplete}
           />
         </View>
       </View>

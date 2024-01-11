@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {User} from '@api/user/types';
+import {DEFAULT_DIALOG_NO_BUTTON} from '@components/Buttons/PopUpButton';
 import {CroppedImage} from '@hooks/useActionSheetUpdateAvatar';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {DEFAULT_DIALOG_NO_BUTTON} from '@screens/Modals/PopUp/components/PopUpButton';
 import {useUserDraft} from '@screens/SettingsFlow/PersonalInformation/hooks/useUserDraft';
 import {t} from '@translations/i18n';
 import {getFilenameFromPath} from '@utils/file';

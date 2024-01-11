@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PopUpButtonProps} from '@components/Buttons/PopUpButton';
 import {COLORS} from '@constants/colors';
 import {navigate} from '@navigation/utils';
-import {PopUpButtonProps} from '@screens/Modals/PopUp/components/PopUpButton';
 import {socialData} from '@store/modules/Socials/data';
 import {SocialType} from '@store/modules/Socials/types';
 import {InviteIcon} from '@svg/InviteIcon';
