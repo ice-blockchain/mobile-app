@@ -14,11 +14,17 @@ export function shallowCompareUnsorted<T>(
   if (a1.length !== a2.length) {
     return false;
   }
-  if (!a1.every(value => a2.includes(value))) {
-    return false;
+
+  const diff = new Set(a1);
+
+  for (let value of a2) {
+    if (diff.size === 0) {
+      return false;
+    }
+    if (!diff.delete(value)) {
+      return false;
+    }
   }
-  if (!a2.every(value => a1.includes(value))) {
-    return false;
-  }
+
   return true;
 }
