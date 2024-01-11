@@ -957,6 +957,11 @@
     "discord": {
       "title": "Bli med oss på Discord",
       "description": "Bli med i vår livlige Discord-fellesskap og dykk ned i diskusjoner og eksklusive innsikter om Ice.\n\nDelta i livlige samtaler, hold deg oppdatert på nyheter om Ice, og vær en del av et fellesskap som deler din lidenskap."
+    },
+    "ice_founder_twitter": {
+      "title": "Følg Zeus på X",
+      "description": "Følg Zeus, vår visjonære grunnlegger, på X, der han deler innsikt, oppdateringer og tanker om vår misjon. Bli med i samtalen, still spørsmål og hold kontakten med vår inspirerende leder mens vi starter denne spennende reisen sammen.",
+      "button": "Følg Zeus"
     }
   },
   "ping_referrals_pop_up": {

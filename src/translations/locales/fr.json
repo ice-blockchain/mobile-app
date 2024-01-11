@@ -957,6 +957,11 @@
     "discord": {
       "title": "Rejoignez-nous sur Discord",
       "description": "Rejoignez notre communauté Discord dynamique et plongez dans des discussions et des informations exclusives sur l'Ice.\n\nParticipez à des chats animés, restez informés des actualités liées à l'Ice, et faites partie d'une communauté qui partage votre passion."
+    },
+    "ice_founder_twitter": {
+      "title": "Suivez Zeus sur X",
+      "description": "Suivez Zeus, notre fondateur visionnaire, sur X, où il partage des idées, des mises à jour et des réflexions sur notre mission. Rejoignez la conversation, posez des questions et restez connecté avec notre leader inspirant alors que nous nous lançons dans ce voyage passionnant ensemble.",
+      "button": "Suivre Zeus"
     }
   },
   "ping_referrals_pop_up": {

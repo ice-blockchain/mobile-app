@@ -957,6 +957,11 @@
     "discord": {
       "title": "Csatlakozz hozzánk a Discordon",
       "description": "Csatlakozz a vibráló Discord közösségünkhöz és merülj el a beszélgetésekben és exkluzív betekintésekben az Ice-ról.\n\nMerülj el élénk csevegésekben, maradj tájékoztatva az Ice-cel kapcsolatos hírekről, és légy része egy közösségnek, amely megosztja a szenvedélyedet."
+    },
+    "ice_founder_twitter": {
+      "title": "Kövesse Zeust az X-en",
+      "description": "Kövesse Zeust, a látomásos alapítónkat az X-en, ahol megosztja az ötleteket, frissítéseket és gondolatokat a küldetésünkről. Csatlakozzon a beszélgetéshez, tegyen fel kérdéseket és maradjon kapcsolatban az inspiráló vezetőnkkel, ahogy együtt indulunk ennek izgalmas utazásnak a nyomában.",
+      "button": "Kövesse Zeust"
     }
   },
   "ping_referrals_pop_up": {

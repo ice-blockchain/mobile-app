@@ -960,6 +960,11 @@
     "discord": {
       "title": "Sluit by ons aan op Discord",
       "description": "Sluit aan by ons lewendige Discord-gemeenskap en duik in gesprekke en eksklusiewe insigte oor Ice.\n\nNeem deel aan lewendige geselskappe, bly op hoogte van nuus oor ice, en wees deel van 'n gemeenskap wat jou passie deel."
+    },
+    "ice_founder_twitter": {
+      "title": "Volg Zeus op X",
+      "description": "Volg Zeus, ons visionêre stigter, op X, waar hy insigte, opdaterings en gedagtes oor ons missie deel. Sluit aan by die gesprek, vra vrae en bly in kontak met ons inspirerende leier terwyl ons saam aan hierdie opwindende reis begin.",
+      "button": "Volg Zeus"
     }
   },
   "ping_referrals_pop_up": {

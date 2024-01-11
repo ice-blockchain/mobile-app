@@ -36,6 +36,8 @@ export const LINKS = {
   REDDIT_WEB: 'https://www.reddit.com/r/iceblockchain',
   // DISCORD_APP: '',
   // DISCORD_WEB: '',
+  TWITTER_ICE_FOUNDER_APP_URL: 'twitter://user?screen_name=ice_z3us',
+  TWITTER_ICE_FOUNDER_WEB_URL: 'https://twitter.com/ice_z3us',
   APP_UPDATE: 'https://ice.io/app-update',
   GITHUB_WEB: 'https://github.com/ice-blockchain',
   HOW_TO_BOOTS_EARNINGS: 'https://ice.io/how-to-boost-your-earnings',

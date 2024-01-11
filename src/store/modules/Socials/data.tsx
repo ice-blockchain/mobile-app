@@ -14,7 +14,27 @@ export interface SocialData {
   linkApp: string;
   linkWeb: string;
 }
+
+export const socialTypesOrder = [
+  'iceFounderTwitter',
+  'tiktok',
+  'youtube',
+  'linkedin',
+  'facebook',
+  'instagram',
+  'reddit',
+  // 'discord',
+] as const;
+
 export const socialData: Record<SocialType, SocialData> = {
+  iceFounderTwitter: {
+    image: Images.social.twitter,
+    title: t('social_media.ice_founder_twitter.title'),
+    description: t('social_media.ice_founder_twitter.description'),
+    buttonTitle: t('social_media.ice_founder_twitter.button'),
+    linkApp: LINKS.TWITTER_ICE_FOUNDER_APP_URL,
+    linkWeb: LINKS.TWITTER_ICE_FOUNDER_WEB_URL,
+  },
   tiktok: {
     image: Images.social.tiktok,
     title: t('social_media.tiktok.title'),

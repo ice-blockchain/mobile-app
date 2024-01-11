@@ -957,6 +957,11 @@
     "discord": {
       "title": "Discord-da bizə qoşulun",
       "description": "Təcili Discord cəmiyyətimizə qoşulun və Ice haqqında olan müzakirələrə və xüsusi təfəkkürlərə daldırılın.\n\nCanlı söhbətlərə daldırılın, Ice-ə aid xəbərlərdən xəbərdar olun və öz marağı bölüşən bir cəmiyyətin hissəsi olun."
+    },
+    "ice_founder_twitter": {
+      "title": "Zeus'u X platformasında izləyin",
+      "description": "Visioner təsisçimiz olan Zeus'u X platformasında izləyin, burada missiyamız haqqında baxışlar, yeniliklər və fikirləri bölüşür. Müzakirə qoşulun, suallar verin və biz birgə bu maraqlı səyahətinə başlayarkən təsirli liderimizlə əlaqəni qoruyun.",
+      "button": "Zeus'u izləyin"
     }
   },
   "ping_referrals_pop_up": {
