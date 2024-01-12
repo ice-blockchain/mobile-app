@@ -1167,16 +1167,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "אנא הוודא שהזנת את הכינוי הנכון."
+      "dontHaveInvitationCode": "אנא הוודא שהזנת את הכינוי הנכון.",
+      "description": "הזן את שמו של החבר שהזמין אותך."
     },
     "home": {
       "pioneer": {
-        "description": "עקוב אחר התקדמותך והמעמד הגלובלי שלך"
+        "description": "עקוב אחר התקדמותך והמעמד הגלובלי שלך",
+        "referrals": "חברים"
       },
       "tasks": {
         "invite_friends": {
           "description": "צמח את הצוות שלך ובנה קהילה"
         }
+      },
+      "team": {
+        "title": "חברים",
+        "view_team": "הצג חברים"
+      },
+      "roadmap": {
+        "button_subtitle": "מידע נוסף על החזון העתידי שלנו ב-Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "קבלו הצצה לאפליקציית Mainnet שלנו לעתיד ולתכניות הייחודיות שבה, שתשוחרר בסופו של שנת 2024."
       }
     },
     "settings": {
@@ -1204,6 +1216,20 @@
         "earnings": {
           "description": "היתרה הנוכחית שלך מתעדכנת כל שעה ומוצגת כאן. היא כוללת את הרווחים הישירים והמשוםם שלך."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "החברים שלך יצטרכו להשתמש בשם המשתמש הזה כאשר הם מצטרפים ל-[[:ice]]."
+    },
+    "users": {
+      "team": "חברים"
+    },
+    "team": {
+      "empty": {
+        "team": "אין לך כרגע אף חבר!"
+      },
+      "contacts": {
+        "empty_description": "סנכרן את אנשי הקשר שלך וראה מי כבר נמצא ב-[[:ice]]."
       }
     }
   },

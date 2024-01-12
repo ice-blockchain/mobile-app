@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Prosimo, preverite, ali ste vnesli pravilno vzdevek."
+      "dontHaveInvitationCode": "Prosimo, preverite, ali ste vnesli pravilno vzdevek.",
+      "description": "Vnesite vzdevek prijatelja, ki vas je povabil."
     },
     "home": {
       "pioneer": {
-        "description": "Spremljajte svoj napredek in globalni status"
+        "description": "Spremljajte svoj napredek in globalni status",
+        "referrals": "PRIJATELJI"
       },
       "tasks": {
         "invite_friends": {
           "description": "Razširite svojo ekipo in ustvarite skupnost"
         }
+      },
+      "team": {
+        "title": "Prijatelji",
+        "view_team": "poglej prijatelje"
+      },
+      "roadmap": {
+        "button_subtitle": "Poiščite več informacij o naši viziji prihodnosti na Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Pridobite predogled naše prihajajoče aplikacije Mainnet in njenih edinstvenih funkcij, ki bodo izdane proti koncu leta 2024."
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "Vaše trenutno stanje se posodablja vsako uro in je tukaj prikazano. Vključuje vaše neposredne in blokirane zaslužke."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "Vaši prijatelji morajo pri prijavi na [[:ice]] uporabiti ta vzdevek."
+    },
+    "users": {
+      "team": "Prijatelji"
+    },
+    "team": {
+      "empty": {
+        "team": "Trenutno nimate prijateljev!"
+      },
+      "contacts": {
+        "empty_description": "Sinhronizirajte svoje stike in poglejte, kdo je že na [[:ice]]."
       }
     }
   },

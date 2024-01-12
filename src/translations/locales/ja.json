@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "正しいニックネームを入力していることを確認してください。"
+      "dontHaveInvitationCode": "正しいニックネームを入力していることを確認してください。",
+      "description": "あなたを招待した友達のニックネームを入力してください。"
     },
     "home": {
       "pioneer": {
-        "description": "進捗とグローバルステータスを追跡する"
+        "description": "進捗とグローバルステータスを追跡する",
+        "referrals": "友達"
       },
       "tasks": {
         "invite_friends": {
           "description": "チームを育て、コミュニティを築く"
         }
+      },
+      "team": {
+        "title": "友達",
+        "view_team": "友達を表示"
+      },
+      "roadmap": {
+        "button_subtitle": "Iceの将来のビジョンについて詳しく学びましょう。"
+      },
+      "join_mainnet": {
+        "subtitle": "将来のMainnetアプリとそのユニークな機能の一部を、2024年末にリリース予定ですので、ぜひご覧ください。"
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "現在の残高は毎時更新され、ここに表示されます。直接の収益とステークされた収益が含まれています。"
         }
+      }
+    },
+    "claimUsername": {
+      "description": "友達は[[:ice]]に参加する際、このニックネームを使用する必要があります。"
+    },
+    "users": {
+      "team": "友達"
+    },
+    "team": {
+      "empty": {
+        "team": "現在、友達はいません！"
+      },
+      "contacts": {
+        "empty_description": "連絡先を同期して、すでに[[:ice]]にいる人を見つけましょう。"
       }
     }
   },

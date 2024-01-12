@@ -1161,7 +1161,7 @@
       "dontHaveInvitationCode": "Please make sure you enter the correct nickname."
     },
     "claimUsername": {
-      "description": "Your friends will need to use this nickname when joining [[:ice]]"
+      "description": "Your friends will need to use this nickname when joining [[:ice]]."
     },
     "users": {
       "team": "Friends"

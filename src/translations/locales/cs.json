@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Prosím, ujistěte se, že zadáváte správný přezdívku."
+      "dontHaveInvitationCode": "Prosím, ujistěte se, že zadáváte správný přezdívku.",
+      "description": "Zadejte přezdívku přítele, který vás pozval."
     },
     "home": {
       "pioneer": {
-        "description": "Sledujte svůj pokrok a globální stav"
+        "description": "Sledujte svůj pokrok a globální stav",
+        "referrals": "PŘÁTELÉ"
       },
       "tasks": {
         "invite_friends": {
           "description": "Roste vašeho týmu a vytvářejte komunitu"
         }
+      },
+      "team": {
+        "title": "Přátelé",
+        "view_team": "zobrazit přátele"
+      },
+      "roadmap": {
+        "button_subtitle": "Dozvědět se více o naší budoucí vizi v Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Podívejte se na náš budoucí Mainnetovou aplikaci a její unikátní funkce, které budou uvedeny na konci roku 2024."
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "Váš aktuální zůstatek se aktualizuje každou hodinu a zobrazuje se zde. Zahrnuje vaše přímé a vložené výdělky."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "Vaši přátelé budou muset použít tuto přezdívku při připojení k [[:ice]]."
+    },
+    "users": {
+      "team": "Přátelé"
+    },
+    "team": {
+      "empty": {
+        "team": "Momentálně nemáte žádné přátele!"
+      },
+      "contacts": {
+        "empty_description": "Synchronizujte své kontakty a zjistěte, kdo je již na [[:ice]]."
       }
     }
   },

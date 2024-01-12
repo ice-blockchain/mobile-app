@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Vui lòng đảm bảo bạn đã nhập tên hiệu chính xác."
+      "dontHaveInvitationCode": "Vui lòng đảm bảo bạn đã nhập tên hiệu chính xác.",
+      "description": "Nhập biệt danh của người bạn mời bạn."
     },
     "home": {
       "pioneer": {
-        "description": "Theo dõi tiến trình của bạn và tình trạng toàn cầu"
+        "description": "Theo dõi tiến trình của bạn và tình trạng toàn cầu",
+        "referrals": "BẠN BÈ"
       },
       "tasks": {
         "invite_friends": {
           "description": "Phát triển đội của bạn và xây dựng một cộng đồng"
         }
+      },
+      "team": {
+        "title": "Bạn bè",
+        "view_team": "xem bạn bè"
+      },
+      "roadmap": {
+        "button_subtitle": "Tìm hiểu thêm về tầm nhìn tương lai của chúng tôi tại Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Nhận cái nhìn sơ qua về ứng dụng Mainnet của chúng tôi sắp tới và những tính năng độc đáo của nó sẽ ra mắt vào cuối năm 2024."
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "Số dư hiện tại của bạn được cập nhật mỗi giờ và hiển thị ở đây. Nó bao gồm thu nhập trực tiếp và thu nhập đặt cược của bạn."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "Bạn bè của bạn phải sử dụng biệt danh này khi tham gia [[:ice]]."
+    },
+    "users": {
+      "team": "Bạn bè"
+    },
+    "team": {
+      "empty": {
+        "team": "Hiện tại bạn không có bạn bè nào!"
+      },
+      "contacts": {
+        "empty_description": "Đồng bộ hóa danh bạ của bạn và xem ai đã có trong [[:ice]]."
       }
     }
   },

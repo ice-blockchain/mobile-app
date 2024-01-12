@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Asigurați-vă că ați introdus un pseudonim corect."
+      "dontHaveInvitationCode": "Asigurați-vă că ați introdus un pseudonim corect.",
+      "description": "Introduceți numele de utilizator al prietenului care v-a invitat."
     },
     "home": {
       "pioneer": {
-        "description": "Urmăriți progresul dumneavoastră și starea globală"
+        "description": "Urmăriți progresul dumneavoastră și starea globală",
+        "referrals": "PRIETENI"
       },
       "tasks": {
         "invite_friends": {
           "description": "Creșteți-vă echipa și construiți o comunitate"
         }
+      },
+      "team": {
+        "title": "Prieteni",
+        "view_team": "vezi prietenii"
+      },
+      "roadmap": {
+        "button_subtitle": "Aflați mai multe despre viziunea noastră de viitor la Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Obțineți o privire de ansamblu asupra aplicației noastre Mainnet viitoare și a caracteristicilor sale unice, care vor fi lansate la sfârșitul anului 2024."
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "Soldul dvs. actual este actualizat în fiecare oră și este afișat aici. Acesta include câștigurile dvs. directe și blocate."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "Prietenii tăi trebuie să folosească acest nume de utilizator când se alătură la [[:ice]]."
+    },
+    "users": {
+      "team": "Prieteni"
+    },
+    "team": {
+      "empty": {
+        "team": "Momentan nu aveți niciun prieten!"
+      },
+      "contacts": {
+        "empty_description": "Sincronizați contactele și vedeți cine este deja pe [[:ice]]."
       }
     }
   },

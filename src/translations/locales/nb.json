@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Vennligst sørg for at du har skrevet inn riktig kallenavn."
+      "dontHaveInvitationCode": "Vennligst sørg for at du har skrevet inn riktig kallenavn.",
+      "description": "Skriv inn kallenavnet til vennen som inviterte deg."
     },
     "home": {
       "pioneer": {
-        "description": "Spor fremgangen din og den globale statusen"
+        "description": "Spor fremgangen din og den globale statusen",
+        "referrals": "VENNER"
       },
       "tasks": {
         "invite_friends": {
           "description": "Vokse teamet ditt og bygge et fellesskap"
         }
+      },
+      "team": {
+        "title": "Venner",
+        "view_team": "se venner"
+      },
+      "roadmap": {
+        "button_subtitle": "Få mer informasjon om vår fremtidsvisjon på Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Få en sniktitt på vår kommende Mainnet-app og dens unike funksjoner, som vil bli lansert mot slutten av 2024."
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "Din nåværende saldo oppdateres hver time og vises her. Den inkluderer dine direkte og staked inntekter."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "Vennene dine må bruke dette kallenavnet når de blir med i [[:ice]]."
+    },
+    "users": {
+      "team": "Venner"
+    },
+    "team": {
+      "empty": {
+        "team": "Du har for øyeblikket ingen venner!"
+      },
+      "contacts": {
+        "empty_description": "Synkroniser kontaktene dine og se hvem som allerede er på [[:ice]]."
       }
     }
   },

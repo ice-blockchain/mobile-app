@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "請確保您輸入正確的暱稱。"
+      "dontHaveInvitationCode": "請確保您輸入正確的暱稱。",
+      "description": "輸入邀請您的朋友的暱稱。"
     },
     "home": {
       "pioneer": {
-        "description": "追蹤您的進度和全球狀態"
+        "description": "追蹤您的進度和全球狀態",
+        "referrals": "朋友"
       },
       "tasks": {
         "invite_friends": {
           "description": "發展您的團隊並建立社群"
         }
+      },
+      "team": {
+        "title": "朋友",
+        "view_team": "查看朋友"
+      },
+      "roadmap": {
+        "button_subtitle": "了解更多有關我們在 Ice 未來願景的資訊。"
+      },
+      "join_mainnet": {
+        "subtitle": "提前瞭解我們即將推出的 Mainnet 應用程式及其獨特功能，將於 2024 年底發布。"
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "您的當前餘額每小時更新一次，並在此顯示。它包括您的直接收益和质押收益。"
         }
+      }
+    },
+    "claimUsername": {
+      "description": "您的朋友加入 [[:ice]] 時必須使用此暱稱。"
+    },
+    "users": {
+      "team": "朋友"
+    },
+    "team": {
+      "empty": {
+        "team": "目前您沒有朋友！"
+      },
+      "contacts": {
+        "empty_description": "同步您的聯絡人並查看誰已經在 [[:ice]] 上。"
       }
     }
   },

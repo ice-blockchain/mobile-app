@@ -1163,16 +1163,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Maak asseblief seker dat jy die korrekte bynaam invoer."
+      "dontHaveInvitationCode": "Maak asseblief seker dat jy die korrekte bynaam invoer.",
+      "description": "Voer die bynaam van die vriend in wat jou genooi het."
     },
     "home": {
       "pioneer": {
-        "description": "Volg jou vordering en wêreldwye status op"
+        "description": "Volg jou vordering en wêreldwye status op",
+        "referrals": "VRIENDE"
       },
       "tasks": {
         "invite_friends": {
           "description": "Bou jou span uit en skep 'n gemeenskap"
         }
+      },
+      "team": {
+        "title": "Vriende",
+        "view_team": "sien vriende"
+      },
+      "roadmap": {
+        "button_subtitle": "Leer meer oor ons toekomstige visie by Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Kry 'n voorsmaak van ons toekomstige Mainnet-app en sy unieke eienskappe, wat aan die einde van 2024 vrygestel sal word."
       }
     },
     "settings": {
@@ -1200,6 +1212,20 @@
         "earnings": {
           "description": "Jou huidige balans word elke uur opgedateer en hier vertoon. Dit sluit jou direkte en gestaakte verdienste in."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "Jou vriende sal hierdie bynaam moet gebruik wanneer hulle by [[:ice]] aansluit."
+    },
+    "users": {
+      "team": "Vriende"
+    },
+    "team": {
+      "empty": {
+        "team": "Jy het tans nie enige vriende nie!"
+      },
+      "contacts": {
+        "empty_description": "Synchroniseer jou kontakte en sien wie is reeds op [[:ice]]."
       }
     }
   },

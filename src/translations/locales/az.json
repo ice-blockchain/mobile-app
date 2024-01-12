@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Zəhmət olmasa düzgün adı daxil edəcəyinizə əmin olun."
+      "dontHaveInvitationCode": "Zəhmət olmasa düzgün adı daxil edəcəyinizə əmin olun.",
+      "description": "Sizi dəvət edən dostunuzun nikini daxil edin."
     },
     "home": {
       "pioneer": {
-        "description": "Hərəkətinizi və dünya statusunuzu izləyin"
+        "description": "Hərəkətinizi və dünya statusunuzu izləyin",
+        "referrals": "DOSTLAR"
       },
       "tasks": {
         "invite_friends": {
           "description": "Sizin komandanızı genişlədin və bir icmaq qurun"
         }
+      },
+      "team": {
+        "title": "Dostlar",
+        "view_team": "dostları göstər"
+      },
+      "roadmap": {
+        "button_subtitle": "Gələcək planımızı Ice-də daha ətraflı öyrənin."
+      },
+      "join_mainnet": {
+        "subtitle": "Gələcək 2024-cü ilin sonlarında buraxılacaq olan Mainnet tətbiqimiz və onun unikal xüsusiyyətləri barədə ətraflı məlumat alın."
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "Hazırki balansınız saatda bir yenilənir və burada göstərilir. Bu, direkt və qoyulmuş gəlirlərinizi daxil edir."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "Dostlarınız [[:ice]] qoşularkən bu nikni istifadə etməlidirlər."
+    },
+    "users": {
+      "team": "Dostlar"
+    },
+    "team": {
+      "empty": {
+        "team": "Sizdə hazırda heç bir dostunuz yoxdur!"
+      },
+      "contacts": {
+        "empty_description": "Əlaqələrinizi sinxronlaşdırın və kimin [[:ice]]-də olduğunu görün."
       }
     }
   },

@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "تأكد من إدخال الاسم الصحيح."
+      "dontHaveInvitationCode": "تأكد من إدخال الاسم الصحيح.",
+      "description": "أدخل اسم الصديق الذي دعاك."
     },
     "home": {
       "pioneer": {
-        "description": "تتبع تقدمك ووضعك العالمي"
+        "description": "تتبع تقدمك ووضعك العالمي",
+        "referrals": "أصدقاء"
       },
       "tasks": {
         "invite_friends": {
           "description": "قم بتوسيع فريقك وبناء مجتمع"
         }
+      },
+      "team": {
+        "title": "الأصدقاء",
+        "view_team": "عرض الأصدقاء"
+      },
+      "roadmap": {
+        "button_subtitle": "تعرّف على مزيد عن رؤيتنا المستقبلية في Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "احصل على لمحة سريعة عن تطبيق Mainnet الخاص بنا في المستقبل وميزاته الفريدة، والذي سيتم إصداره في نهاية عام 2024."
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "يتم تحديث رصيدك الحالي كل ساعة ويتم عرضه هنا. يشمل ربحك المباشر والمستثمر."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "سيحتاج أصدقاؤك إلى استخدام هذا الاسم عند الانضمام إلى [[:ice]]."
+    },
+    "users": {
+      "team": "الأصدقاء"
+    },
+    "team": {
+      "empty": {
+        "team": "لا يوجد لديك حاليًا أصدقاء!"
+      },
+      "contacts": {
+        "empty_description": "مزامنة جهات الاتصال الخاصة بك ورؤية من هو موجود بالفعل على [[:ice]]."
       }
     }
   },
