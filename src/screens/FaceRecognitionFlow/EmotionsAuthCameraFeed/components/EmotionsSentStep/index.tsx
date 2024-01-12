@@ -30,13 +30,13 @@ export function EmotionsSentStep({
 }: Props) {
   const emotionsAuthStatus = useSelector(emotionsAuthStatusSelector);
   const dispatch = useDispatch();
-  const navigation = useNavigation();
-  const authNavigation =
+
+  const navigation =
     useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
 
   const onFaceAuthSuccess = () => {
     if (isPhoneMigrationFlow) {
-      authNavigation.navigate('ConfirmEmailCode', {
+      navigation.navigate('ConfirmEmailCode', {
         isPhoneMigrationFlow: true,
       });
     } else {
