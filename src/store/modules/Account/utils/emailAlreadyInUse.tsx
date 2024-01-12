@@ -13,7 +13,9 @@ export const emailAlreadyInUse = () => {
     params: {
       imageProps: {source: Images.popUp.registrationUpdate},
       title: t('pop_up.email_in_use_title'),
-      message: t('pop_up.email_in_use_text'),
+      message: `${t('pop_up.email_in_use_text_part1')}\n\n${t(
+        'pop_up.email_in_use_text_part2',
+      )}`,
       buttons: [
         {
           text: t('button.continue'),
