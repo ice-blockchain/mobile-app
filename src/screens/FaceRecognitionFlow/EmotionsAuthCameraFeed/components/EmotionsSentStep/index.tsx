@@ -36,7 +36,7 @@ export function EmotionsSentStep({
 
   const onFaceAuthSuccess = () => {
     if (isPhoneMigrationFlow) {
-      authNavigation.navigate('MigrationEmailCode', {
+      authNavigation.navigate('ConfirmEmailCode', {
         isPhoneMigrationFlow: true,
       });
     } else {

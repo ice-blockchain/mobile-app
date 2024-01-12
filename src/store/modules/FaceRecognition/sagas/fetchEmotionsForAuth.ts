@@ -2,6 +2,7 @@
 
 import {is5xxApiError, isApiError} from '@api/client';
 import {Api} from '@api/index';
+import {user} from '@api/user';
 import {userIdSelector} from '@store/modules/Account/selectors';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {migrationUserIdSelector} from '@store/modules/Validation/selectors';
@@ -15,16 +16,20 @@ type Actions = ReturnType<
 export function* fetchEmotionsForAuthSaga(action: Actions) {
   const {isPhoneMigrationFlow} = action.payload;
   try {
-    const userId: ReturnType<typeof userIdSelector> = yield select(
-      userIdSelector,
+    const userId: ReturnType<
+      typeof migrationUserIdSelector | typeof userIdSelector
+    > = yield select(
+      isPhoneMigrationFlow ? migrationUserIdSelector : userIdSelector,
     );
-    const migrationUserId: ReturnType<typeof migrationUserIdSelector> =
-      yield select(migrationUserIdSelector);
+
+    if (isPhoneMigrationFlow && !user) {
+      throw new Error('Migration user is not defined');
+    }
 
     const response: SagaReturnType<
       typeof Api.faceRecognition.fetchEmotionsForAuth
     > = yield call(Api.faceRecognition.fetchEmotionsForAuth, {
-      userId: migrationUserId || userId,
+      userId: userId!,
       isPhoneMigrationFlow: isPhoneMigrationFlow,
     });
     yield put(

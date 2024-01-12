@@ -27,7 +27,7 @@ export function emotionsAuth({
   isPhoneMigrationFlow?: boolean;
   deviceUniqueId?: string;
   language?: string;
-  email?: string;
+  email?: string | null;
 }): Promise<Response> {
   const formData = buildFormData({
     image: pictureUris.map(pictureUri => ({

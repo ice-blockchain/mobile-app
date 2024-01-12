@@ -3,7 +3,6 @@
 import {isApiError} from '@api/client';
 import {EMAIL_CODE_GET_STATUS_INTERVAL_SEC} from '@constants/timeouts';
 import {getConfirmationStatus, persistToken} from '@services/auth';
-import {isValidationError} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
 import {migrationLoginSessionSelector} from '@store/modules/Validation/selectors';
 import {t} from '@translations/i18n';
@@ -78,10 +77,6 @@ export function* migrateEmailWithCodeSaga() {
     }
   } catch (error) {
     let localizedError;
-
-    if (isValidationError(error)) {
-      localizedError = error.message;
-    }
 
     if (
       isApiError(error, 409, 'CONFLICT_WITH_ANOTHER_USER') &&

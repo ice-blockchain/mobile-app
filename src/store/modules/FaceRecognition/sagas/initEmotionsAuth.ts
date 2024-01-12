@@ -64,9 +64,14 @@ export function* initEmotionsAuthSaga(action: Actions) {
         width: videoWidth,
       },
     );
+
+    if (isPhoneMigrationFlow && !migrationUserId) {
+      throw new Error('migrationUserId is not defined');
+    }
+
     const response: SagaReturnType<typeof Api.faceRecognition.emotionsAuth> =
       yield call(Api.faceRecognition.emotionsAuth, {
-        userId: isPhoneMigrationFlow ? migrationUserId || '' : userId,
+        userId: isPhoneMigrationFlow ? migrationUserId! : userId,
         sessionId,
         pictureUris: frames,
         isPhoneMigrationFlow: isPhoneMigrationFlow,

@@ -10,5 +10,10 @@ export const isOnboardingViewedSelector =
     state.users.onboardingIds.includes(userId || '');
 
 export const isMigrationAgreementViewedSelector =
-  (userId: string | undefined) => (state: RootState) =>
-    state.users.migrationAgreementIds.includes(userId || '');
+  (userId: string | null) => (state: RootState) => {
+    if (!userId) {
+      return null;
+    } else {
+      return state.users.migrationAgreementIds.includes(userId);
+    }
+  };

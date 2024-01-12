@@ -18,11 +18,11 @@ export interface State {
   temporaryEmailCode: string | null;
   temporaryEmailVerificationStep: 'email' | 'link' | 'code';
   emailSentTimestamp: number | null;
-  temporaryMigrationUserId: string | undefined;
-  temporaryMigrationPhoneNumber: string | undefined;
-  temporaryMigrationEmail: string | undefined;
-  temporaryMigrationEmailCode: string | undefined;
-  temporaryMigrationLoginSession: string | undefined;
+  temporaryMigrationUserId: string | null;
+  temporaryMigrationPhoneNumber: string | null;
+  temporaryMigrationEmail: string | null;
+  temporaryMigrationEmailCode: string | null;
+  temporaryMigrationLoginSession: string | null;
 }
 
 type Actions = ReturnType<
@@ -57,6 +57,7 @@ type Actions = ReturnType<
   | typeof AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.RESET.create
   | typeof AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.START.create
   | typeof AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.SET_SESSION.create
+  | typeof AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.EDIT_EMAIL.create
   | typeof AccountActions.MIGRATE_EMAIL_WITH_CODE.SET_CODE.create
 >;
 
@@ -71,11 +72,11 @@ const INITIAL_STATE: State = {
   temporaryEmailCode: null,
   emailSentTimestamp: null,
   temporaryEmailVerificationStep: 'email',
-  temporaryMigrationUserId: undefined,
-  temporaryMigrationPhoneNumber: undefined,
-  temporaryMigrationEmail: undefined,
-  temporaryMigrationEmailCode: undefined,
-  temporaryMigrationLoginSession: undefined,
+  temporaryMigrationUserId: null,
+  temporaryMigrationPhoneNumber: null,
+  temporaryMigrationEmail: null,
+  temporaryMigrationEmailCode: null,
+  temporaryMigrationLoginSession: null,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -127,11 +128,16 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.temporaryVerificationId = null;
         draft.temporaryPhoneNumber = null;
         draft.temporaryPhoneVerificationStep = 'phone';
-        draft.temporaryMigrationUserId = undefined;
-        draft.temporaryMigrationPhoneNumber = undefined;
-        draft.temporaryMigrationEmail = undefined;
-        draft.temporaryMigrationEmailCode = undefined;
-        draft.temporaryMigrationLoginSession = undefined;
+        draft.temporaryMigrationUserId = null;
+        draft.temporaryMigrationPhoneNumber = null;
+        draft.temporaryMigrationEmail = null;
+        draft.temporaryMigrationEmailCode = null;
+        draft.temporaryMigrationLoginSession = null;
+        break;
+      case AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.EDIT_EMAIL.type:
+        draft.temporaryMigrationEmail = null;
+        draft.temporaryMigrationEmailCode = null;
+        draft.temporaryMigrationLoginSession = null;
         break;
       case AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.START.type:
         draft.temporaryMigrationEmail = action.payload.email;

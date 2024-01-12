@@ -9,6 +9,7 @@ import {
 } from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AccountActions} from '@store/modules/Account/actions';
+import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {failedReasonSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {
   emailVerificationCodeSelector,
@@ -21,24 +22,50 @@ import {BackHandler} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 export const useConfirmEmailCode = () => {
-  const route = useRoute<RouteProp<AuthStackParamList, 'MigrationEmailCode'>>();
+  const route = useRoute<RouteProp<AuthStackParamList, 'ConfirmEmailCode'>>();
   const isPhoneMigrationFlow = route.params?.isPhoneMigrationFlow;
 
   const dispatch = useDispatch();
 
   const navigation =
     useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
-  const temporaryEmail = useSelector(temporaryEmailSelector);
-  const temporaryCode = useSelector(emailVerificationCodeSelector);
-  const migrationEmail = useSelector(migrationEmailSelector);
-  const migrationCode = useSelector(migrationEmailCodeSelector);
+
+  const email = useSelector(
+    isPhoneMigrationFlow ? migrationEmailSelector : temporaryEmailSelector,
+    () => true,
+  );
+
+  const code = useSelector(
+    isPhoneMigrationFlow
+      ? migrationEmailCodeSelector
+      : emailVerificationCodeSelector,
+  );
 
   const validateError = useSelector(
     failedReasonSelector.bind(null, AccountActions.SIGN_IN_EMAIL_CODE),
   );
 
   const goBack = () => {
-    dispatch(AccountActions.SIGN_IN_EMAIL_CODE.RESET.create());
+    if (isPhoneMigrationFlow) {
+      onEditEmail();
+    } else {
+      dispatch(AccountActions.SIGN_IN_EMAIL_CODE.RESET.create());
+    }
+  };
+
+  const onEditEmail = () => {
+    if (isPhoneMigrationFlow) {
+      dispatch(
+        FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create(),
+      );
+      dispatch(AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.RESET.create());
+      navigation.reset({
+        index: 0,
+        routes: [{name: 'SignIn' as keyof AuthStackParamList}],
+      });
+    } else {
+      dispatch(AccountActions.SIGN_IN_EMAIL_CODE.RESET.create());
+    }
   };
 
   useFocusEffect(
@@ -46,12 +73,16 @@ export const useConfirmEmailCode = () => {
       const subscription = BackHandler.addEventListener(
         'hardwareBackPress',
         () => {
-          dispatch(AccountActions.SIGN_IN_EMAIL_CODE.RESET.create());
+          if (isPhoneMigrationFlow) {
+            navigation.goBack();
+          } else {
+            dispatch(AccountActions.SIGN_IN_EMAIL_CODE.RESET.create());
+          }
           return true;
         },
       );
       return () => subscription.remove();
-    }, [dispatch]),
+    }, [dispatch, navigation, isPhoneMigrationFlow]),
   );
 
   useEffect(() => {
@@ -67,9 +98,10 @@ export const useConfirmEmailCode = () => {
   }, [validateError, navigation, isPhoneMigrationFlow]);
 
   return {
-    email: isPhoneMigrationFlow ? migrationEmail : temporaryEmail,
-    code: isPhoneMigrationFlow ? migrationCode : temporaryCode,
+    email,
+    code,
     validateError,
     goBack,
+    onEditEmail,
   };
 };

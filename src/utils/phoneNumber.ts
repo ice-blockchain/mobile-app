@@ -67,3 +67,7 @@ export const internationalPhoneNumber = (
     ) ?? null
   );
 };
+
+export const cleanNumberFromWhiteSpaces = (phone: string) => {
+  return phone.replace(/ /g, '');
+};

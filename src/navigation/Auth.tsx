@@ -30,7 +30,7 @@ import {useSelector} from 'react-redux';
 export type AuthStackParamList = {
   SignIn: undefined;
   ConfirmEmailLink: undefined;
-  ConfirmEmailCode: undefined;
+  ConfirmEmailCode?: {isPhoneMigrationFlow: boolean};
   ConfirmPhone: undefined;
   CountrySelect: {
     onSelect: (country: Country) => void;
@@ -43,9 +43,6 @@ export type AuthStackParamList = {
     kycSteps: FaceAuthKycNumber[];
     kycStepBlocked?: FaceAuthKycNumber;
     isPhoneMigrationFlow?: boolean;
-  };
-  MigrationEmailCode: {
-    isPhoneMigrationFlow: boolean;
   };
 };
 
@@ -101,10 +98,6 @@ export function AuthNavigator() {
         component={AccountConfirmation}
       />
       <AuthStack.Screen name="FaceRecognition" component={FaceRecognition} />
-      <AuthStack.Screen
-        name="MigrationEmailCode"
-        component={ConfirmEmailCode}
-      />
     </AuthStack.Navigator>
   );
 }

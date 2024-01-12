@@ -8,11 +8,11 @@ import {commonStyles} from '@constants/styles';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {useNavigation} from '@react-navigation/native';
+import {useAgreeWithTerms} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/AccountConfirmation/hooks/useAgreeWithTerms';
 import {
   BUTTON_WIDTH,
   FOOTER_PADDING_HORIZONTAL,
 } from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/constants';
-import {useAgreeWithTerms} from '@screens/FaceRecognitionFlow/hooks/useAgreeWithTerms';
 import {AccountActions} from '@store/modules/Account/actions';
 import {FaceAuthIcon} from '@svg/FaceAuthIcon';
 import {replaceString, t, tagRegex} from '@translations/i18n';
@@ -53,7 +53,7 @@ export function AccountConfirmation() {
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
         <View style={styles.imageContainer}>
-          <Image source={Images.auth.accountConfirmation} />
+          <Image source={Images.badges.faceAuth} />
         </View>
         <Text style={styles.title}>{t('account_confirmation.title')}</Text>
         <Text style={styles.description}>

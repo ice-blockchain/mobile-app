@@ -9,6 +9,7 @@ import {linkYourEmail} from '@store/modules/Account/utils/linkYourEmail';
 import {loginViaEmail} from '@store/modules/Account/utils/loginViaEmail';
 import {registrationUpdate} from '@store/modules/Account/utils/registrationUpdate';
 import {getErrorMessage} from '@utils/errors';
+import {cleanNumberFromWhiteSpaces} from '@utils/phoneNumber';
 import {call, put, SagaReturnType} from 'redux-saga/effects';
 
 export function* signInPhoneSaga(
@@ -20,7 +21,7 @@ export function* signInPhoneSaga(
       throw new ValidationError(ValidationErrorCode.InvalidPhone);
     }
 
-    let cleanPhoneNumber = phoneNumber.replace(/ /g, '');
+    const cleanPhoneNumber = cleanNumberFromWhiteSpaces(phoneNumber);
 
     const result: SagaReturnType<typeof getValidUserForPhoneNumberMigration> =
       yield call(getValidUserForPhoneNumberMigration, {

@@ -3,7 +3,6 @@
 import {EMOTIONS_KYC_STEP} from '@api/tokenomics/constants';
 import {DEFAULT_DIALOG_NO_BUTTON} from '@components/Buttons/PopUpButton';
 import {AuthStackParamList} from '@navigation/Auth';
-import {navigate} from '@navigation/utils';
 import {WelcomeStackParamList} from '@navigation/Welcome';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -24,10 +23,9 @@ import {useDispatch, useSelector} from 'react-redux';
 export const useSetEmail = () => {
   const dispatch = useDispatch();
   const navigation =
-    useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
-
-  const authNavigation =
-    useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
+    useNavigation<
+      NativeStackNavigationProp<WelcomeStackParamList & AuthStackParamList>
+    >();
 
   const migrationUserId = useSelector(migrationUserIdSelector);
 
@@ -35,23 +33,22 @@ export const useSetEmail = () => {
     isMigrationAgreementViewedSelector(migrationUserId),
   );
 
-  const updateError = useSelector(
-    failedReasonSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
-  );
-
-  const updateLoading = useSelector(
-    isLoadingSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
-  );
-
-  const migrationError = useSelector(
+  const error = useSelector(
     failedReasonSelector.bind(
       null,
-      AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL,
+      migrationUserId
+        ? AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL
+        : AccountActions.UPDATE_ACCOUNT,
     ),
   );
 
-  const migrationLoading = useSelector(
-    isLoadingSelector.bind(null, AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL),
+  const loading = useSelector(
+    isLoadingSelector.bind(
+      null,
+      migrationUserId
+        ? AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL
+        : AccountActions.UPDATE_ACCOUNT,
+    ),
   );
 
   const isSuccessMigration = useSelector(
@@ -67,15 +64,15 @@ export const useSetEmail = () => {
   useEffect(() => {
     if (isSuccessMigration) {
       if (isViewedAgreement) {
-        navigate({
+        navigation.navigate({
           name: 'FaceRecognition',
           params: {kycSteps: [EMOTIONS_KYC_STEP], isPhoneMigrationFlow: true},
         });
       } else {
-        authNavigation.replace('AccountConfirmation');
+        navigation.replace('AccountConfirmation');
       }
     }
-  }, [isSuccessMigration, isViewedAgreement, authNavigation]);
+  }, [isSuccessMigration, isViewedAgreement, navigation]);
 
   const onBack = () => {
     if (migrationUserId) {
@@ -123,10 +120,8 @@ export const useSetEmail = () => {
   return {
     email,
     onChangeEmail,
-    updateError,
-    migrationError,
-    updateLoading,
-    migrationLoading,
+    error,
+    loading,
     onSubmitPress,
     onBack,
   };
