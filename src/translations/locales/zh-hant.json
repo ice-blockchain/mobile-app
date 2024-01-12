@@ -1129,6 +1129,20 @@
       "title": "相機權限",
       "description": "請允許訪問相機以繼續。",
       "action": "允許訪問"
+    },
+    "selfie_guidelines": {
+      "title": "自拍指南",
+      "instruction": "在繼續之前，請遵循以下自拍 KYC 成功認證的指南：",
+      "check_1": "✅ 確保您有高品質的照片。",
+      "check_2": "✅ 有足夠的照明。",
+      "check_3": "✅ 有乾淨的背景。",
+      "check_4": "✅ 沒有暗的照片。",
+      "check_5": "✅ 沒有模糊或有霧的照片。",
+      "check_6": "✅ 清潔相機鏡頭。",
+      "warning": "如果您不遵循上述指南，您可能會失去訪問您的帳戶的權利。",
+      "confirmation": "我確認我將遵循這些標準。",
+      "popup_title": "確認",
+      "popup_body": "您確認您已經遵循了所有自拍指南嗎？"
     }
   },
   "override": {

@@ -1129,6 +1129,20 @@
       "title": "Kebenaran Kamera",
       "description": "Untuk teruskan, sila benarkan akses kepada kamera.",
       "action": "Benarkan akses"
+    },
+    "selfie_guidelines": {
+      "title": "Panduan Selfie",
+      "instruction": "Sebelum meneruskan, sila ikuti panduan ini untuk pengesahan muka KYC yang berjaya:",
+      "check_1": "✅ Pastikan anda mempunyai gambar berkualiti tinggi.",
+      "check_2": "✅ Pastikan pencahayaan yang baik.",
+      "check_3": "✅ Pastikan latar belakang bersih.",
+      "check_4": "✅ Tiada gambar gelap.",
+      "check_5": "✅ Tiada gambar kabur atau berkabus.",
+      "check_6": "✅ Bersihkan lensa kamera.",
+      "warning": "Jika anda tidak mengikuti panduan di atas, anda mungkin kehilangan akses ke akaun anda.",
+      "confirmation": "Saya mengesahkan bahawa saya akan mengikuti kriteria.",
+      "popup_title": "Pengesahan",
+      "popup_body": "Adakah anda mengesahkan bahawa anda telah mengikuti semua panduan selfie?"
     }
   },
   "override": {

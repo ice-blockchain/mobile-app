@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {DEFAULT_DIALOG_NO_BUTTON} from '@components/Buttons/PopUpButton';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {DEFAULT_DIALOG_NO_BUTTON} from '@screens/Modals/PopUp/components/PopUpButton';
 import {MenuItem} from '@screens/SettingsFlow/Settings/components/MenuItem.tsx';
 import {SectionTitle} from '@screens/SettingsFlow/Settings/components/SectionTitle';
 import {AccountActions} from '@store/modules/Account/actions';

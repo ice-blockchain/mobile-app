@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PopUpButton} from '@components/Buttons/PopUpButton';
 import {CommonInput} from '@components/Inputs/CommonInput';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {stopPropagation} from '@components/KeyboardDismiss';
@@ -9,7 +10,6 @@ import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
 import {useNavigation} from '@react-navigation/native';
 import {Message} from '@screens/Modals/PopUp/components/Message';
-import {PopUpButton} from '@screens/Modals/PopUp/components/PopUpButton';
 import {Title} from '@screens/Modals/PopUp/components/Title';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {ManIcon} from '@svg/ManIcon';

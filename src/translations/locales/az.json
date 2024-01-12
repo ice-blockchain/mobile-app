@@ -1129,6 +1129,20 @@
       "title": "Kamera icazəsi",
       "description": "Davam etmək üçün, kamerağa girişi icazə verin.",
       "action": "Girişə icazə verin"
+    },
+    "selfie_guidelines": {
+      "title": "Öz şəkil təlimatları",
+      "instruction": "Davam etmədən əvvəl, KYC üz üzərindən identifikasiya uğurla başa çatdırmaq üçün bu təlimatları izləyin:",
+      "check_1": "✅ Yüksək keyfiyyətli şəkil olduğundan əmin olun.",
+      "check_2": "✅ Yaxşı işıq altında olun.",
+      "check_3": "✅ Aydın bir fonunuz olsun.",
+      "check_4": "✅ Tünd şəkillər olmasın.",
+      "check_5": "✅ Bulanıq və ya dumanlı şəkillər olmasın.",
+      "check_6": "✅ Kamera lensini təmizləyin.",
+      "warning": "Yuxarıdakı təlimatları əgər izləməsəniz, hesabınıza girişi itirə bilərsiniz.",
+      "confirmation": "Mən bütün öz şəkil təlimatlarını izləyəcəyimi təsdiq edirəm.",
+      "popup_title": "Təsdiq",
+      "popup_body": "Siz bütün öz şəkil təlimatlarını izlədiyinizi təsdiq edirsinizmi?"
     }
   },
   "override": {

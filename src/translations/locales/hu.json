@@ -1129,6 +1129,20 @@
       "title": "Kamera engedély",
       "description": "Folytatáshoz engedélyezze a kamera hozzáférését.",
       "action": "Hozzáférés engedélyezése"
+    },
+    "selfie_guidelines": {
+      "title": "Szelfi útmutató",
+      "instruction": "Mielőtt folytatnád, kövesd az alábbi útmutatást a sikeres KYC arcazonosításhoz:",
+      "check_1": "✅ Győződj meg róla, hogy magas minőségű fotód van.",
+      "check_2": "✅ Legyen jó fényviszony.",
+      "check_3": "✅ Tiszta háttér legyen.",
+      "check_4": "✅ Ne legyenek sötét fotók.",
+      "check_5": "✅ Ne legyenek homályos vagy ködös fotók.",
+      "check_6": "✅ Tisztítsd meg a kamera lencséjét.",
+      "warning": "Ha nem követed az fentieket, elveszítheted a hozzáférést a fiókodhoz.",
+      "confirmation": "Megerősítem, hogy követni fogom a kritériumokat.",
+      "popup_title": "Megerősítés",
+      "popup_body": "Megerősíted, hogy követted az összes szelfi útmutatót?"
     }
   },
   "override": {

@@ -1129,6 +1129,20 @@
       "title": "Uprawnienia aparatu",
       "description": "Aby kontynuować, proszę zezwolić na dostęp do aparatu.",
       "action": "Zezwól na dostęp"
+    },
+    "selfie_guidelines": {
+      "title": "Wytyczne dotyczące Selfie",
+      "instruction": "Zanim przejdziesz dalej, proszę postępuj zgodnie z tymi wytycznymi, aby pomyślnie przeprowadzić autentykację KYC twarzy:",
+      "check_1": "✅ Upewnij się, że masz wysokiej jakości zdjęcie.",
+      "check_2": "✅ Upewnij się, że masz dobre oświetlenie.",
+      "check_3": "✅ Upewnij się, że masz czyste tło.",
+      "check_4": "✅ Brak ciemnych zdjęć.",
+      "check_5": "✅ Brak rozmazanych lub zamglonych zdjęć.",
+      "check_6": "✅ Wyczyść obiektyw kamery.",
+      "warning": "Jeśli nie będziesz przestrzegać powyższych wytycznych, możesz utracić dostęp do swojego konta.",
+      "confirmation": "Potwierdzam, że będę przestrzegać kryteriów.",
+      "popup_title": "Potwierdzenie",
+      "popup_body": "Czy potwierdzasz, że przestrzegłeś wszystkich wytycznych dotyczących selfie?"
     }
   },
   "override": {

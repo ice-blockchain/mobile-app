@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PopUpButtonProps} from '@components/Buttons/PopUpButton';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
 import {LottieAnimations} from '@lottie';
 import {navigate} from '@navigation/utils';
 import {Message} from '@screens/Modals/PopUp/components/Message';
-import {PopUpButtonProps} from '@screens/Modals/PopUp/components/PopUpButton';
 import {Warning} from '@screens/Modals/PopUp/components/Warning';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
 import {replaceString, t, tagRegex} from '@translations/i18n';

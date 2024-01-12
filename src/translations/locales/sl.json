@@ -1129,6 +1129,20 @@
       "title": "Dovoljenje za kamero",
       "description": "Za nadaljevanje dovolite dostop do kamere.",
       "action": "Dovoli dostop"
+    },
+    "selfie_guidelines": {
+      "title": "Smernice za selfije",
+      "instruction": "Preden nadaljujete, upoštevajte te smernice za uspešno preverjanje identitete KYC s selfijem:",
+      "check_1": "✅ Poskrbite, da imate visokokakovostno fotografijo.",
+      "check_2": "✅ Zagotovite dobro osvetlitev.",
+      "check_3": "✅ Imejte čisto ozadje.",
+      "check_4": "✅ Brez temnih fotografij.",
+      "check_5": "✅ Brez zamegljenih ali meglenih fotografij.",
+      "check_6": "✅ Očistite objektiv kamere.",
+      "warning": "Če ne boste upoštevali navedenih smernic, lahko izgubite dostop do svojega računa.",
+      "confirmation": "Potrjujem, da bom upošteval(a) kriterije.",
+      "popup_title": "Potrditev",
+      "popup_body": "Ali potrjujete, da ste upoštevali vse smernice za selfije?"
     }
   },
   "override": {

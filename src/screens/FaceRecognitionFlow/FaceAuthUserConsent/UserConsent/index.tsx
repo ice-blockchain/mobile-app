@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PopUpButton} from '@components/Buttons/PopUpButton';
 import {CheckBox} from '@components/CheckBox';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
-import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
 import {navigate} from '@navigation/utils';
 import {useNavigation} from '@react-navigation/native';
@@ -12,7 +12,6 @@ import {
   FOOTER_PADDING_HORIZONTAL,
 } from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/constants';
 import {Message} from '@screens/Modals/PopUp/components/Message';
-import {PopUpButton} from '@screens/Modals/PopUp/components/PopUpButton';
 import {FaceAuthIcon} from '@svg/FaceAuthIcon';
 import {replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
@@ -22,10 +21,10 @@ import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
-  updateKycStepPassed: () => void;
+  onStepComplete: () => void;
 };
 
-export function UserConsent({updateKycStepPassed}: Props) {
+export function UserConsent({onStepComplete}: Props) {
   const navigation = useNavigation();
   const [isAgreeWithTermsAndConditions, setIsAgreeWithTermsAndConditions] =
     useState(false);
@@ -43,7 +42,7 @@ export function UserConsent({updateKycStepPassed}: Props) {
           },
           {
             text: t('button.continue'),
-            onPress: updateKycStepPassed,
+            onPress: onStepComplete,
           },
         ],
         dismissOnAndroidHardwareBack: false,
@@ -129,11 +128,11 @@ const styles = StyleSheet.create({
     paddingTop: rem(20),
   },
   title: {
-    paddingTop: SCREEN_SIDE_OFFSET,
+    paddingTop: rem(8),
     ...font(24, 34, 'black', 'primaryDark', 'center'),
   },
   description: {
-    paddingTop: SCREEN_SIDE_OFFSET,
+    paddingTop: rem(16),
     paddingHorizontal: rem(48),
     ...font(14, 20, 'medium', 'secondary', 'center'),
   },
@@ -145,6 +144,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     paddingHorizontal: FOOTER_PADDING_HORIZONTAL,
     paddingBottom: rem(40),
+    paddingTop: rem(22),
   },
   checkboxRow: {
     flexDirection: 'row',

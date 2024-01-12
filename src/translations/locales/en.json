@@ -1126,6 +1126,20 @@
       "title": "Camera permission",
       "description": "To continue, please allow access to camera.",
       "action": "Allow access"
+    },
+    "selfie_guidelines": {
+      "title": "Selfie Guidelines",
+      "instruction": "Before proceeding, please follow these guidelines for a successful KYC face authentication:",
+      "check_1": "✅ Make sure you have a high-quality photo.",
+      "check_2": "✅ Have good lighting.",
+      "check_3": "✅ Have a clear background.",
+      "check_4": "✅ No dark photos.",
+      "check_5": "✅ No blurry or foggy photos.",
+      "check_6": "✅ Clean camera lens.",
+      "warning": "If you don't follow the guidelines above, you might lose access to your account.",
+      "confirmation": "I confirm that I will follow the criteria.",
+      "popup_title": "Confirmation",
+      "popup_body": "Do you confirm that you have followed all the selfie guidelines?"
     }
   },
   "override": {

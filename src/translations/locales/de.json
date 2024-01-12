@@ -1129,6 +1129,20 @@
       "title": "Kameraberechtigung",
       "description": "Um fortzufahren, erlauben Sie bitte den Zugriff auf die Kamera.",
       "action": "Zugriff erlauben"
+    },
+    "selfie_guidelines": {
+      "title": "Selfie-Richtlinien",
+      "instruction": "Bitte folgen Sie vor der Fortsetzung diesen Richtlinien für eine erfolgreiche KYC-Gesichtsauthentifizierung:",
+      "check_1": "✅ Stellen Sie sicher, dass Sie ein hochwertiges Foto haben.",
+      "check_2": "✅ Sorgen Sie für gutes Licht.",
+      "check_3": "✅ Haben Sie einen klaren Hintergrund.",
+      "check_4": "✅ Keine dunklen Fotos.",
+      "check_5": "✅ Keine unscharfen oder verschwommenen Fotos.",
+      "check_6": "✅ Reinigen Sie die Kameraobjektiv.",
+      "warning": "Wenn Sie die oben genannten Richtlinien nicht befolgen, könnten Sie den Zugang zu Ihrem Konto verlieren.",
+      "confirmation": "Ich bestätige, dass ich die Kriterien befolgen werde.",
+      "popup_title": "Bestätigung",
+      "popup_body": "Bestätigen Sie, dass Sie alle Selfie-Richtlinien befolgt haben?"
     }
   },
   "override": {

@@ -1129,6 +1129,20 @@
       "title": "Izin Kamera",
       "description": "Untuk melanjutkan, harap izinkan akses ke kamera.",
       "action": "Izinkan akses"
+    },
+    "selfie_guidelines": {
+      "title": "Pedoman Selfie",
+      "instruction": "Sebelum melanjutkan, ikuti panduan ini untuk keberhasilan otentikasi wajah KYC:",
+      "check_1": "✅ Pastikan Anda memiliki foto berkualitas tinggi.",
+      "check_2": "✅ Gunakan pencahayaan yang baik.",
+      "check_3": "✅ Pastikan latar belakang bersih.",
+      "check_4": "✅ Tidak ada foto yang gelap.",
+      "check_5": "✅ Tidak ada foto yang buram atau berkabut.",
+      "check_6": "✅ Bersihkan lensa kamera.",
+      "warning": "Jika Anda tidak mengikuti panduan di atas, Anda mungkin kehilangan akses ke akun Anda.",
+      "confirmation": "Saya mengkonfirmasi bahwa saya akan mengikuti kriteria.",
+      "popup_title": "Konfirmasi",
+      "popup_body": "Apakah Anda mengkonfirmasi bahwa Anda telah mengikuti semua panduan selfie?"
     }
   },
   "override": {

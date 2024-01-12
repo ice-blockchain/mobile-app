@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PopUpButton, PopUpButtonProps} from '@components/Buttons/PopUpButton';
 import {stopPropagation} from '@components/KeyboardDismiss';
 import {LottieView, LottieViewProps} from '@components/LottieView';
 import {COLORS} from '@constants/colors';
@@ -10,10 +11,6 @@ import {Banner} from '@screens/Modals/PopUp/components/Banner';
 import {Checkbox} from '@screens/Modals/PopUp/components/Checkbox';
 import {CloseButton} from '@screens/Modals/PopUp/components/CloseButton';
 import {Message} from '@screens/Modals/PopUp/components/Message';
-import {
-  PopUpButton,
-  PopUpButtonProps,
-} from '@screens/Modals/PopUp/components/PopUpButton';
 import {Title} from '@screens/Modals/PopUp/components/Title';
 import {Warning} from '@screens/Modals/PopUp/components/Warning';
 import React, {ReactNode, useEffect, useState} from 'react';

@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PopUpButton} from '@components/Buttons/PopUpButton';
 import {COLORS} from '@constants/colors';
 import {Images} from '@images';
-import {PopUpButton} from '@screens/Modals/PopUp/components/PopUpButton';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';

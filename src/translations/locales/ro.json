@@ -1129,6 +1129,20 @@
       "title": "Permisiune cameră",
       "description": "Pentru a continua, vă rugăm să permiteți accesul la cameră.",
       "action": "Permiteți accesul"
+    },
+    "selfie_guidelines": {
+      "title": "Ghiduri Selfie",
+      "instruction": "Înainte de a continua, vă rugăm să urmați aceste ghiduri pentru o autentificare facială KYC de succes:",
+      "check_1": "✅ Asigurați-vă că aveți o fotografie de înaltă calitate.",
+      "check_2": "✅ Asigurați-vă că aveți o iluminare bună.",
+      "check_3": "✅ Asigurați-vă că aveți un fundal curat.",
+      "check_4": "✅ Fără fotografii întunecate.",
+      "check_5": "✅ Fără fotografii neclare sau încețoșate.",
+      "check_6": "✅ Curățați lentila camerei.",
+      "warning": "Dacă nu urmați ghidurile de mai sus, puteți pierde accesul la contul dvs.",
+      "confirmation": "Confirm că voi urma criteriile.",
+      "popup_title": "Confirmare",
+      "popup_body": "Confirmați că ați urmat toate ghidurile pentru selfie?"
     }
   },
   "override": {

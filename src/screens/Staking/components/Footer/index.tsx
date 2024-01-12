@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {DEFAULT_DIALOG_NO_BUTTON} from '@components/Buttons/PopUpButton';
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {CheckBox} from '@components/CheckBox';
 import {IceLabel} from '@components/Labels/IceLabel';
@@ -10,7 +11,6 @@ import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {DEFAULT_DIALOG_NO_BUTTON} from '@screens/Modals/PopUp/components/PopUpButton';
 import {usePreStaking} from '@screens/Staking/hooks/usePreStaking';
 import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';

@@ -1129,6 +1129,20 @@
       "title": "Leja e kamerës",
       "description": "Për të vazhduar, ju lutem lejoni qasjen në kamerë.",
       "action": "Lejo qasjen"
+    },
+    "selfie_guidelines": {
+      "title": "Udhëzime për Selfie",
+      "instruction": "Para se të vazhdoni, ju lutemi ndiqni këto udhëzime për një verifikim të suksesshëm të fytyrës KYC:",
+      "check_1": "✅ Sigurohuni që keni një foto të cilësisë së lartë.",
+      "check_2": "✅ Sigurohuni që keni ndriçim të mirë.",
+      "check_3": "✅ Sigurohuni që keni sfond të pastër.",
+      "check_4": "✅ Pa foto të errëta.",
+      "check_5": "✅ Pa foto të mbyllura ose të mjegullta.",
+      "check_6": "✅ Pastrojeni lentinë e kamerës.",
+      "warning": "Nëse nuk ndiqni udhëzimet e mësipërme, mund të humbisni qasjen në llogarinë tuaj.",
+      "confirmation": "Unë konfirmoj se do të ndjek kriteret.",
+      "popup_title": "Konfirmim",
+      "popup_body": "A e konfirmoni se keni ndjekur të gjitha udhëzimet për selfie?"
     }
   },
   "override": {

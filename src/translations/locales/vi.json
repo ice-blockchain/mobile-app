@@ -1129,6 +1129,20 @@
       "title": "Quyền truy cập máy ảnh",
       "description": "Để tiếp tục, vui lòng cho phép truy cập máy ảnh.",
       "action": "Cho phép truy cập"
+    },
+    "selfie_guidelines": {
+      "title": "Hướng dẫn Selfie",
+      "instruction": "Trước khi tiếp tục, hãy tuân thủ các hướng dẫn sau để thực hiện xác minh KYC bằng khuôn mặt thành công:",
+      "check_1": "✅ Đảm bảo bạn có hình ảnh chất lượng cao.",
+      "check_2": "✅ Có đủ ánh sáng.",
+      "check_3": "✅ Có nền sạch sẽ.",
+      "check_4": "✅ Không có hình ảnh tối.",
+      "check_5": "✅ Không có hình ảnh mờ hoặc sương mù.",
+      "check_6": "✅ Làm sạch ống kính máy ảnh.",
+      "warning": "Nếu bạn không tuân thủ các hướng dẫn trên, bạn có thể mất quyền truy cập vào tài khoản của mình.",
+      "confirmation": "Tôi xác nhận rằng tôi sẽ tuân theo các tiêu chí.",
+      "popup_title": "Xác nhận",
+      "popup_body": "Bạn có xác nhận rằng bạn đã tuân thủ tất cả các hướng dẫn về selfie không?"
     }
   },
   "override": {

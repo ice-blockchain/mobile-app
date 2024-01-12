@@ -2,13 +2,13 @@
 
 import {SocialKycStepNumber} from '@api/tokenomics/types';
 import {ActivityIndicator} from '@components/ActivityIndicator';
+import {PopUpButton} from '@components/Buttons/PopUpButton';
 import {INDICATOR_SIDE_DIMENSION} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {commonStyles, SCREEN_SIDE_OFFSET, windowWidth} from '@constants/styles';
 import {useOnHardwareBack} from '@hooks/useOnHardwareBack';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
-import {PopUpButton} from '@screens/Modals/PopUp/components/PopUpButton';
 import {BUTTON_HEIGHT} from '@screens/SocialKycFlow/constants';
 import {kycStepToTranslationsPathPrefix} from '@screens/SocialKycFlow/utils';
 import {SocialKycActions} from '@store/modules/SocialKyc/actions';

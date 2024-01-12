@@ -1129,6 +1129,20 @@
       "title": "Povolenie kamery",
       "description": "Pre pokračovanie povolte prístup ku kamere.",
       "action": "Povoliť prístup"
+    },
+    "selfie_guidelines": {
+      "title": "Pokyny pre Selfie",
+      "instruction": "Predtým, než budete pokračovať, dodržiavajte tieto pokyny pre úspešnú autentifikáciu tváre KYC:",
+      "check_1": "✅ Uistite sa, že máte fotografiu vysokého kvality.",
+      "check_2": "✅ Majte dobré osvetlenie.",
+      "check_3": "✅ Majte čisté pozadie.",
+      "check_4": "✅ Žiadne tmavé fotografie.",
+      "check_5": "✅ Žiadne rozmazané alebo zamračené fotografie.",
+      "check_6": "✅ Vyčistite objektív kamery.",
+      "warning": "Ak nebudete dodržiavať uvedené pokyny, môžete prísť o prístup k svojmu účtu.",
+      "confirmation": "Potvrdzujem, že budem dodržiavať kritériá.",
+      "popup_title": "Potvrdenie",
+      "popup_body": "Potvrdzujete, že ste dodržali všetky pokyny pre selfie?"
     }
   },
   "override": {

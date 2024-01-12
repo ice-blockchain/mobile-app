@@ -1129,6 +1129,20 @@
       "title": "Permesso fotocamera",
       "description": "Per continuare, permetti l'accesso alla fotocamera.",
       "action": "Permetti accesso"
+    },
+    "selfie_guidelines": {
+      "title": "Linee Guida per i Selfie",
+      "instruction": "Prima di procedere, segui queste linee guida per una corretta autenticazione del viso KYC:",
+      "check_1": "✅ Assicurati di avere una foto di alta qualità.",
+      "check_2": "✅ Assicurati di avere una buona illuminazione.",
+      "check_3": "✅ Assicurati di avere uno sfondo chiaro.",
+      "check_4": "✅ Niente foto scure.",
+      "check_5": "✅ Niente foto sfocate o nebbiose.",
+      "check_6": "✅ Pulisci la lente della fotocamera.",
+      "warning": "Se non segui le linee guida di cui sopra, potresti perdere l'accesso al tuo account.",
+      "confirmation": "Confermo che seguirò i criteri.",
+      "popup_title": "Conferma",
+      "popup_body": "Confermi di aver seguito tutte le linee guida per i selfie?"
     }
   },
   "override": {

@@ -1129,6 +1129,20 @@
       "title": "Permiso de cámara",
       "description": "Para continuar, por favor permita el acceso a la cámara.",
       "action": "Permitir acceso"
+    },
+    "selfie_guidelines": {
+      "title": "Directrices para Selfies",
+      "instruction": "Antes de continuar, siga estas directrices para una autenticación facial KYC exitosa:",
+      "check_1": "✅ Asegúrese de tener una foto de alta calidad.",
+      "check_2": "✅ Tenga una buena iluminación.",
+      "check_3": "✅ Tenga un fondo claro.",
+      "check_4": "✅ Sin fotos oscuras.",
+      "check_5": "✅ Sin fotos borrosas o nubladas.",
+      "check_6": "✅ Limpie la lente de la cámara.",
+      "warning": "Si no sigue las directrices anteriores, podría perder el acceso a su cuenta.",
+      "confirmation": "Confirmo que seguiré los criterios.",
+      "popup_title": "Confirmación",
+      "popup_body": "¿Confirma que ha seguido todas las directrices para selfies?"
     }
   },
   "override": {
