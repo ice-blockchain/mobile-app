@@ -6,7 +6,7 @@ import {WelcomeStackParamList} from '@navigation/Welcome';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AccountActions} from '@store/modules/Account/actions';
-import {isOnboardingViewedSelector} from '@store/modules/Users/selectors';
+import {isMigrationAgreementViewedSelector} from '@store/modules/Users/selectors';
 import {
   failedReasonSelector,
   isLoadingSelector,
@@ -30,7 +30,7 @@ export const useSetEmail = () => {
   const migrationUserId = useSelector(migrationUserIdSelector);
 
   const isViewedAgreement = useSelector(
-    isOnboardingViewedSelector(migrationUserId),
+    isMigrationAgreementViewedSelector(migrationUserId),
   );
 
   const updateError = useSelector(
@@ -65,9 +65,9 @@ export const useSetEmail = () => {
   useEffect(() => {
     if (isSuccessMigration) {
       if (isViewedAgreement) {
-        authNavigation.replace('AccountConfirmation');
-      } else {
         //TODO: show emotions
+      } else {
+        authNavigation.replace('AccountConfirmation');
       }
     }
   }, [isSuccessMigration, isViewedAgreement, authNavigation]);

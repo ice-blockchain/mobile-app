@@ -12,6 +12,7 @@ import {
   BUTTON_WIDTH,
   FOOTER_PADDING_HORIZONTAL,
 } from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/constants';
+import {useAgreeWithTerms} from '@screens/FaceRecognitionFlow/hooks/useAgreeWithTerms';
 import {AccountActions} from '@store/modules/Account/actions';
 import {FaceAuthIcon} from '@svg/FaceAuthIcon';
 import {replaceString, t, tagRegex} from '@translations/i18n';
@@ -22,18 +23,16 @@ import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {rem} from 'rn-units';
 
-type Props = {
-  updateKycStepPassed?: () => void;
-};
-
-export function AccountConfirmation({updateKycStepPassed}: Props) {
+export function AccountConfirmation() {
   const navigation = useNavigation();
   const dispatch = useDispatch();
+
+  const {agreeWithTerms} = useAgreeWithTerms();
   const [isAgreeWithTermsAndConditions, setIsAgreeWithTermsAndConditions] =
     useState(false);
 
   const onContinue = () => {
-    updateKycStepPassed?.();
+    agreeWithTerms();
   };
 
   const onBack = () => {
@@ -50,7 +49,6 @@ export function AccountConfirmation({updateKycStepPassed}: Props) {
         backgroundColor={'transparent'}
         onGoBack={onBack}
       />
-
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
