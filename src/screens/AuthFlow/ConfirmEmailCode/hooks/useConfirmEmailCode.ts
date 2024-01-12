@@ -55,7 +55,6 @@ export const useConfirmEmailCode = () => {
   );
 
   useEffect(() => {
-    console.log('isMigrationFlow: ', isPhoneMigrationFlow);
     if (isPhoneMigrationFlow) {
       dispatch(AccountActions.MIGRATE_EMAIL_WITH_CODE.START.create());
     }
