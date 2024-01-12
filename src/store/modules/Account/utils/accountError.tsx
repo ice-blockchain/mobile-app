@@ -11,7 +11,7 @@ export const accountError = () => {
   navigate({
     name: 'PopUp',
     params: {
-      imageProps: {source: Images.popUp.accountError},
+      imageProps: {source: Images.popUp.registrationUpdate},
       title: t('pop_up.account_error_title'),
       message: t('pop_up.account_error_text'),
       buttons: [

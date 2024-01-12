@@ -102,7 +102,6 @@ export const Images = {
     error: require('./popup/oops.png'),
     upToDate: require('./popup/already_updated.png'),
     resurrection: require('./popup/resurrection.png'),
-    accountError: require('./popup/account_error.png'),
     linkEmail: require('./popup/link_email.png'),
     registrationUpdate: require('./popup/registration_update.png'),
     linked: require('./popup/linked.png'),
