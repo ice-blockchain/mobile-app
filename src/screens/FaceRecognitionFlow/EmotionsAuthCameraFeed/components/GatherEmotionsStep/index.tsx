@@ -34,6 +34,7 @@ type Props = {
   onAllEmotionsGathered: () => void;
   onStartPressed: () => void;
   started: boolean;
+  isPhoneMigrationFlow: boolean;
 };
 
 function getSecondsPassed(since: number) {
@@ -49,6 +50,7 @@ export function GatherEmotionsStep({
   onAllEmotionsGathered,
   onStartPressed,
   started,
+  isPhoneMigrationFlow,
 }: Props) {
   const cameraRef = useRef<Camera>(null);
   const [isCameraReady, setIsCameraReady] = useState(false);
@@ -208,7 +210,11 @@ export function GatherEmotionsStep({
     <View style={commonStyles.flexOne}>
       <Header
         color={COLORS.primaryDark}
-        title={t('face_auth.header')}
+        title={
+          isPhoneMigrationFlow
+            ? t('account_confirmation.title')
+            : t('face_auth.header')
+        }
         backgroundColor={'transparent'}
         onGoBack={onGoBack}
       />

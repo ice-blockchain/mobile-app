@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {EMOTIONS_KYC_STEP} from '@api/tokenomics/constants';
+import {navigate} from '@navigation/utils';
 import {UsersActions} from '@store/modules/Users/actions';
 import {migrationUserIdSelector} from '@store/modules/Validation/selectors';
 import {useCallback} from 'react';
@@ -16,7 +18,10 @@ export const useAgreeWithTerms = () => {
           migrationUserId,
         ),
       );
-      //TODO: start emotions flow
+      navigate({
+        name: 'FaceRecognition',
+        params: {kycSteps: [EMOTIONS_KYC_STEP], isPhoneMigrationFlow: true},
+      });
     }
   }, [dispatch, migrationUserId]);
 

@@ -19,13 +19,18 @@ import {rem} from 'rn-units';
 
 type Props = {
   onGatherMoreEmotions: () => void;
+  isPhoneMigrationFlow: boolean;
 };
 
-export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
+export function EmotionsSentStep({
+  onGatherMoreEmotions,
+  isPhoneMigrationFlow,
+}: Props) {
   const emotionsAuthStatus = useSelector(emotionsAuthStatusSelector);
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const onFaceAuthSuccess = () => {
+    //TODO: replace with email code confirmation
     dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
     navigation.goBack();
     dispatch(FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create());
@@ -81,7 +86,11 @@ export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
     <View style={commonStyles.flexOne}>
       <Header
         color={COLORS.primaryDark}
-        title={t('face_auth.header')}
+        title={
+          isPhoneMigrationFlow
+            ? t('account_confirmation.title')
+            : t('face_auth.header')
+        }
         backgroundColor={'transparent'}
         onGoBack={onGoBack}
       />

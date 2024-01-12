@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {FaceAuthKycNumber} from '@api/tokenomics/types';
 import {Country} from '@constants/countries';
 import {modalOptions, screenOptions} from '@navigation/options';
 import {getCurrentRoute} from '@navigation/utils';
@@ -13,6 +14,7 @@ import {ConfirmEmailLink} from '@screens/AuthFlow/ConfirmEmailLink';
 import {ConfirmPhone} from '@screens/AuthFlow/ConfirmPhone';
 import {InvalidLink} from '@screens/AuthFlow/InvalidLink';
 import {SignIn} from '@screens/AuthFlow/SignIn';
+import {FaceRecognition} from '@screens/FaceRecognitionFlow';
 import {AccountConfirmation} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/AccountConfirmation';
 import {CountrySelect} from '@screens/Modals/CountrySelect';
 import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
@@ -37,6 +39,11 @@ export type AuthStackParamList = {
   PopUp: PopUpProps;
   SetEmail: undefined;
   AccountConfirmation: undefined;
+  FaceRecognition: {
+    kycSteps: FaceAuthKycNumber[];
+    kycStepBlocked?: FaceAuthKycNumber;
+    isPhoneMigrationFlow?: boolean;
+  };
 };
 
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
@@ -90,6 +97,7 @@ export function AuthNavigator() {
         name="AccountConfirmation"
         component={AccountConfirmation}
       />
+      <AuthStack.Screen name="FaceRecognition" component={FaceRecognition} />
     </AuthStack.Navigator>
   );
 }

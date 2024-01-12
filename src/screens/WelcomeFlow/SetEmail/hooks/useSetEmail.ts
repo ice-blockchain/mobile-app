@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {EMOTIONS_KYC_STEP} from '@api/tokenomics/constants';
 import {DEFAULT_DIALOG_NO_BUTTON} from '@components/Buttons/PopUpButton';
 import {AuthStackParamList} from '@navigation/Auth';
+import {navigate} from '@navigation/utils';
 import {WelcomeStackParamList} from '@navigation/Welcome';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -65,7 +67,10 @@ export const useSetEmail = () => {
   useEffect(() => {
     if (isSuccessMigration) {
       if (isViewedAgreement) {
-        //TODO: show emotions
+        navigate({
+          name: 'FaceRecognition',
+          params: {kycSteps: [EMOTIONS_KYC_STEP], isPhoneMigrationFlow: true},
+        });
       } else {
         authNavigation.replace('AccountConfirmation');
       }
