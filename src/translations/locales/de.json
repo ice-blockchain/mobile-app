@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Sie werden Ihre [[:amount]] Münzen für immer verlieren. Sind Sie sicher, dass Sie weitermachen wollen?",
     "resurrection_yes_confirm_message": "Sie können nur einmal wiederauferstehen! Sind Sie sicher, dass Sie weitermachen wollen? Die [[:amount]] Münzen werden Ihrem Guthaben innerhalb der nächsten Stunde wieder gutgeschrieben.",
     "delete_account_confirmation_title": "Bestätigen Sie die Löschung",
-    "delete_account_confirmation_text": "Durch die Löschung Ihres Kontos werden alle Ihre Daten, einschließlich Ihres Ice-Guthabens, endgültig gelöscht. Möchten Sie fortfahren?"
+    "delete_account_confirmation_text": "Durch die Löschung Ihres Kontos werden alle Ihre Daten, einschließlich Ihres Ice-Guthabens, endgültig gelöscht. Möchten Sie fortfahren?",
+    "registration_update_title": "Registrierungsupdate",
+    "registration_update_text": "Wir haben die Erstellung neuer Konten über die Telefonnummer ausgesetzt. Um fortzufahren, müssen Sie entweder eine E-Mail-Adresse auswählen oder sich über ein soziales Netzwerk anmelden.",
+    "link_email_title": "Verknüpfen Sie Ihre E-Mail",
+    "link_email_text": "Wir haben die Anmeldung über die Telefonnummer ausgesetzt. Bitte verknüpfen Sie Ihre E-Mail-Adresse und bestätigen Sie sie, um sich anmelden zu können.",
+    "account_error_title": "Konto-Fehler",
+    "account_error_text": "Wir haben die Anmeldung über die Telefonnummer ausgesetzt. Leider hat Ihr Konto die KYC-Verifizierung nicht bestanden und kann nicht wiederhergestellt werden.",
+    "login_via_email_title": "Bitte melden Sie sich über E-Mail an",
+    "login_via_email_text": "Wir haben die Anmeldung über die Telefonnummer ausgesetzt. Bitte verwenden Sie die mit Ihrem Konto verknüpfte E-Mail-Adresse, um sich anzumelden.",
+    "email_in_use_title": "E-Mail bereits in Verwendung",
+    "email_in_use_text_part1": "Die E-Mail-Adresse, die Sie verknüpfen möchten, wird bereits verwendet.",
+    "email_in_use_text_part2": "Wenn dies Ihre E-Mail-Adresse ist, melden Sie sich bitte zunächst damit an, schließen Sie den Registrierungsvorgang ab und löschen Sie dieses Konto, um die E-Mail-Adresse freizugeben, und kehren Sie dann zurück, um sich über die Telefonnummer anzumelden und den Verknüpfungsvorgang abzuschließen.",
+    "successfully_linked_title": "Erfolgreich verknüpft!",
+    "successfully_linked_text": "Die E-Mail wurde erfolgreich mit Ihrem Konto verknüpft."
   },
   "periods": {
     "3_days": "3 Tage",
@@ -1273,5 +1286,10 @@
         "description": "Herzlichen Glückwunsch, Sie haben Ihre Verifizierung erfolgreich abgeschlossen. Sie sind jetzt für die BNB Smart Chain Verteilung berechtigt."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Konto-Bestätigung",
+    "description": "Um Ihre Kontoidentität zu überprüfen und Ihre E-Mail sicher zu verknüpfen, stellen Sie sicher, dass Sie den Emotionstest während des Authentifizierungsvorgangs erfolgreich bestehen.",
+    "description2": "Dieser Schritt hilft uns, die Sicherheit und Authentizität Ihres Kontos sicherzustellen. Vielen Dank für Ihre Mitarbeit!"
   }
 }

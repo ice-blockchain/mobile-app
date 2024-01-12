@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "您將永遠失去您的 [[:amount]] 幣。 確定要繼續嗎？",
     "resurrection_yes_confirm_message": "您只能復活一次！ 確定要繼續嗎？ [[:amount]] 幣將於接下來一小時內歸還至您的餘額。",
     "delete_account_confirmation_title": "確認刪除",
-    "delete_account_confirmation_text": "刪除帳號將永久消除您的數據，包含您的 Ice 餘額。 要繼續進行嗎？"
+    "delete_account_confirmation_text": "刪除帳號將永久消除您的數據，包含您的 Ice 餘額。 要繼續進行嗎？",
+    "registration_update_title": "註冊更新",
+    "registration_update_text": "我們暫停使用電話號碼創建新帳戶。為了繼續，您需要選擇電子郵件地址或透過社交網絡登錄。",
+    "link_email_title": "鏈接您的電子郵件",
+    "link_email_text": "我們暫停使用電話號碼登錄。請鏈接您的電子郵件地址並確認以便能夠登錄。",
+    "account_error_title": "帳戶錯誤",
+    "account_error_text": "我們暫停使用電話號碼登錄。很抱歉，您的帳戶未通過KYC驗證，無法恢復。",
+    "login_via_email_title": "請使用電子郵件登錄",
+    "login_via_email_text": "我們暫停使用電話號碼登錄。請使用與您的帳戶相關聯的電子郵件地址登錄。",
+    "email_in_use_title": "電子郵件已被使用",
+    "email_in_use_text_part1": "您正嘗試鏈接的電子郵件地址已被使用。",
+    "email_in_use_text_part2": "如果這是您的電子郵件地址，請先使用它登錄，完成註冊流程並刪除該帳戶以使電子郵件可用，然後返回使用電話號碼登錄以完成鏈接過程。",
+    "successfully_linked_title": "鏈接成功！",
+    "successfully_linked_text": "電子郵件已成功鏈接到您的帳戶。"
   },
   "periods": {
     "3_days": "3 天",
@@ -1273,5 +1286,10 @@
         "description": "恭喜，您已成功完成驗證。現在，您有資格參與BNB Smart Chain分發。"
       }
     }
+  },
+  "account_confirmation": {
+    "title": "帳戶確認",
+    "description": "為了驗證您的帳戶身份並安全地鏈接您的電子郵件地址，請確保您在身份驗證過程中成功通過了我們的情感檢查。",
+    "description2": "這一步幫助我們確保您的帳戶的安全性和真實性。感謝您的合作！"
   }
 }

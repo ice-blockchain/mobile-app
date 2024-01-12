@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Navždy stratíš svojich [[:amount]] mincí. Určite chceš pokračovať?",
     "resurrection_yes_confirm_message": "Obnoviť môžeš iba raz! Určite chceš pokračovať? Tvojich [[:amount]] mincí sa ti vráti počas nasledujúcej hodiny.",
     "delete_account_confirmation_title": "Potvrdiť vymazanie",
-    "delete_account_confirmation_text": "Vymazaním konta sa navždy stratia tvoje údaje, vrátane zostatkov Ice. Chceš pokračovať?"
+    "delete_account_confirmation_text": "Vymazaním konta sa navždy stratia tvoje údaje, vrátane zostatkov Ice. Chceš pokračovať?",
+    "registration_update_title": "Aktualizácia registrácie",
+    "registration_update_text": "Dočasne sme pozastavili vytváranie nových účtov pomocou telefónneho čísla. Na pokračovanie budete musieť vybrať buď e-mailovú adresu, alebo prihlásiť sa cez sociálne siete.",
+    "link_email_title": "Prepojte svoj e-mail",
+    "link_email_text": "Dočasne sme pozastavili prihlásenie pomocou telefónneho čísla. Prosím, prepojte svoju e-mailovú adresu a potvrďte ju, aby ste sa mohli prihlásiť.",
+    "account_error_title": "Chyba účtu",
+    "account_error_text": "Dočasne sme pozastavili prihlásenie pomocou telefónneho čísla. Ľutujeme, váš účet neprešiel procesom KYC a nie je oprávnený k obnoveniu.",
+    "login_via_email_title": "Prosím, prihláste sa cez e-mail",
+    "login_via_email_text": "Dočasne sme pozastavili prihlásenie pomocou telefónneho čísla. Použite prosím e-mailovú adresu spojenú s vaším účtom na prihlásenie.",
+    "email_in_use_title": "E-mailová adresa je už používaná",
+    "email_in_use_text_part1": "E-mailová adresa, ktorú sa pokúšate prepojiť, je už používaná.",
+    "email_in_use_text_part2": "Ak je to vaša e-mailová adresa, prihláste sa s ňou najskôr, dokončite proces registrácie a vymažte tento účet, aby ste uvoľnili e-mailovú adresu, a potom sa vráťte k prihláseniu cez telefónne číslo a dokončite proces prepojenia.",
+    "successfully_linked_title": "Úspešne prepojené!",
+    "successfully_linked_text": "E-mailová adresa bola úspešne prepojená s vaším účtom."
   },
   "periods": {
     "3_days": "3 dni",
@@ -1273,5 +1286,10 @@
         "description": "Gratulujeme, úspešne ste dokončili overenie. Teraz máte nárok na distribúciu BNB Smart Chain."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Potvrdenie účtu",
+    "description": "Na overenie identity vášho účtu a bezpečné prepojenie e-mailovej adresy sa uistite, že úspešne prejdete testom emócií počas autentifikácie.",
+    "description2": "Tento krok nám pomáha zabezpečiť bezpečnosť a autenticitu vášho účtu. Ďakujeme za spoluprácu!"
   }
 }

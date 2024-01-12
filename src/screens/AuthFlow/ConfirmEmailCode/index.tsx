@@ -19,7 +19,7 @@ import {rem} from 'rn-units';
 
 export const ConfirmEmailCode = () => {
   useFocusStatusBar({style: 'light-content'});
-  const {email, code, goBack} = useConfirmEmailCode();
+  const {email, code, goBack, onEditEmail} = useConfirmEmailCode();
 
   return (
     <View style={commonStyles.flexOne}>
@@ -32,7 +32,7 @@ export const ConfirmEmailCode = () => {
         <Text style={styles.emailText} numberOfLines={1}>
           {email}
         </Text>
-        <Touchable hitSlop={MIDDLE_BUTTON_HIT_SLOP} onPress={goBack}>
+        <Touchable hitSlop={MIDDLE_BUTTON_HIT_SLOP} onPress={onEditEmail}>
           <PenWithFrameIcon
             width={rem(14)}
             height={rem(14)}

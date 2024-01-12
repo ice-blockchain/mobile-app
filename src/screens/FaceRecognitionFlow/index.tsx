@@ -3,6 +3,7 @@
 import {FaceAuthKycNumber} from '@api/tokenomics/types';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
+import {AuthStackParamList} from '@navigation/Auth';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {MainStackParamList} from '@navigation/Main';
@@ -33,8 +34,11 @@ function kycStepToFaceRecognitionPhase(kycStepPassed: FaceAuthKycNumber) {
 
 export function FaceRecognition() {
   const {
-    params: {kycSteps, kycStepBlocked},
-  } = useRoute<RouteProp<MainStackParamList, 'FaceRecognition'>>();
+    params: {kycSteps, kycStepBlocked, isPhoneMigrationFlow = false},
+  } =
+    useRoute<
+      RouteProp<MainStackParamList | AuthStackParamList, 'FaceRecognition'>
+    >();
   useFocusStatusBar({style: 'dark-content'});
   const navigation = useNavigation();
   const faceAuthStatus = useSelector(faceAuthStatusSelector);
@@ -60,7 +64,11 @@ export function FaceRecognition() {
         <View style={commonStyles.flexOne}>
           <Header
             color={COLORS.primaryDark}
-            title={t('face_auth.header')}
+            title={
+              isPhoneMigrationFlow
+                ? t('account_confirmation.title')
+                : t('face_auth.header')
+            }
             backgroundColor={'transparent'}
           />
           <StatusOverlay
@@ -86,7 +94,9 @@ export function FaceRecognition() {
             />
           ) : null}
           {faceRecognitionPhase === 'EMOTIONS_AUTH' ? (
-            <EmotionsAuthCameraFeed />
+            <EmotionsAuthCameraFeed
+              isPhoneMigrationFlow={isPhoneMigrationFlow}
+            />
           ) : null}
         </>
       )}

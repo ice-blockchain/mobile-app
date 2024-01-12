@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "[[:amount]] coinlarını sonsuza kadar kaybedeceksin. Devam etmek istediğine emin misin?",
     "resurrection_yes_confirm_message": "Sadece bir kez diriltebilirsin! Devam etmek istediğine emin misin? [[:amount]] coinlar, sonraki saat içinde bakiyene geri dönecektir.",
     "delete_account_confirmation_title": "Silme İşlemini Onayla",
-    "delete_account_confirmation_text": "Hesabını silmek, Ice bakiyen dahil olmak üzere tüm verilerini kalıcı olarak siler. Devam etmek istiyor musun?"
+    "delete_account_confirmation_text": "Hesabını silmek, Ice bakiyen dahil olmak üzere tüm verilerini kalıcı olarak siler. Devam etmek istiyor musun?",
+    "registration_update_title": "Kayıt Güncellemesi",
+    "registration_update_text": "Telefon numarası kullanarak yeni hesapların oluşturulmasını geçici olarak durdurduk. Devam etmek için ya e-posta adresi seçmelisiniz veya sosyal ağ üzerinden giriş yapmalısınız.",
+    "link_email_title": "E-postanızı Bağlayın",
+    "link_email_text": "Telefon numarasıyla girişi geçici olarak durdurduk. Devam etmek için lütfen e-posta adresinizi bağlayın ve onaylayın.",
+    "account_error_title": "Hesap Hatası",
+    "account_error_text": "Telefon numarası kullanarak girişi geçici olarak durdurduk. Üzgünüz, hesabınız KYC sürecini geçemedi ve kurtarılmaya uygun değil.",
+    "login_via_email_title": "Lütfen E-posta ile Giriş Yapın",
+    "login_via_email_text": "Telefon numarasıyla girişi geçici olarak durdurduk. Lütfen hesabınıza bağlı olan e-posta adresini kullanarak giriş yapın.",
+    "email_in_use_title": "E-posta Zaten Kullanımda",
+    "email_in_use_text_part1": "Bağlamaya çalıştığınız e-posta adresi zaten kullanımda.",
+    "email_in_use_text_part2": "Eğer bu sizin e-posta adresinizse, lütfen önce bununla giriş yapın, kayıt işlemini tamamlayın ve e-postayı kullanılabilir hale getirmek için o hesabı silin, sonra telefon numarasıyla giriş yaparak bağlama işlemini tamamlayın.",
+    "successfully_linked_title": "Başarıyla Bağlandı!",
+    "successfully_linked_text": "E-posta adresi başarıyla hesabınıza bağlandı."
   },
   "periods": {
     "3_days": "3 gün",
@@ -1273,5 +1286,10 @@
         "description": "Tebrikler, doğrulamanızı başarıyla tamamladınız. Şimdi BNB Smart Chain dağıtımına hak kazandınız."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Hesap Onayı",
+    "description": "Hesabınızın kimliğini doğrulamak ve e-posta adresinizi güvenli bir şekilde bağlamak için lütfen kimlik doğrulama sürecimiz sırasında duygusal bir kontrolü başarıyla geçtiğinizden emin olun.",
+    "description2": "Bu adım, hesabınızın güvenliği ve gerçekliğini sağlamamıza yardımcı olur. İşbirliğiniz için teşekkür ederiz!"
   }
 }

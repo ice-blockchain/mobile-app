@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "您将永远失去您的 [[:amount]] 枚硬币。确定要继续吗？",
     "resurrection_yes_confirm_message": "您只能复活一次！确定要继续吗？[[:amount]] 枚硬币将在一小时内返回您的余额。",
     "delete_account_confirmation_title": "确认删除",
-    "delete_account_confirmation_text": "删除您的帐户将永久删除您的所有数据，包括您的 Ice 余额。要继续吗？"
+    "delete_account_confirmation_text": "删除您的帐户将永久删除您的所有数据，包括您的 Ice 余额。要继续吗？",
+    "registration_update_title": "注册更新",
+    "registration_update_text": "我们暂时停止使用电话号码创建新帐户。要继续，您需要选择电子邮件地址或通过社交网络登录。",
+    "link_email_title": "链接您的电子邮件",
+    "link_email_text": "我们暂时停止使用电话号码登录。请链接您的电子邮件地址并确认以便能够登录。",
+    "account_error_title": "帐户错误",
+    "account_error_text": "我们暂时停止使用电话号码登录。很抱歉，您的帐户未通过KYC验证，无法恢复。",
+    "login_via_email_title": "请使用电子邮件登录",
+    "login_via_email_text": "我们暂时停止使用电话号码登录。请使用与您的帐户相关联的电子邮件地址登录。",
+    "email_in_use_title": "电子邮件已被使用",
+    "email_in_use_text_part1": "您正尝试链接的电子邮件地址已被使用。",
+    "email_in_use_text_part2": "如果这是您的电子邮件地址，请先使用它登录，完成注册流程并删除该帐户以使电子邮件可用，然后返回使用电话号码登录以完成链接过程。",
+    "successfully_linked_title": "链接成功！",
+    "successfully_linked_text": "电子邮件已成功链接到您的帐户。"
   },
   "periods": {
     "3_days": "3 天",
@@ -1273,5 +1286,10 @@
         "description": "恭喜，您已成功完成验证。现在，您有资格参与BNB Smart Chain分发。"
       }
     }
+  },
+  "account_confirmation": {
+    "title": "帐户确认",
+    "description": "为了验证您的帐户身份并安全地链接您的电子邮件地址，请确保您在身份验证过程中成功通过了我们的情感检查。",
+    "description2": "这一步帮助我们确保您的帐户的安全性和真实性。感谢您的合作！"
   }
 }

@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "[[:amount]] sikkələrini həmişəlik itirəcəksən. Davam etmək istədiyindən əminsən?",
     "resurrection_yes_confirm_message": "Ancaq bir dəfə dirilə bilərsən! Davam etmək istədiyindən əminsən? Növbəti saat ərzində [[:amount]] sikkələri balansına qayıdacaq.",
     "delete_account_confirmation_title": "Silməni təsdiq et",
-    "delete_account_confirmation_text": "Hesabı silməklə Ice balansın daxil olmaqla bütün məlumatların həmişəlik silinmiş olacaq. Davam etmək istəyirsən?"
+    "delete_account_confirmation_text": "Hesabı silməklə Ice balansın daxil olmaqla bütün məlumatların həmişəlik silinmiş olacaq. Davam etmək istəyirsən?",
+    "registration_update_title": "Qeydiyyat yeniləməsi",
+    "registration_update_text": "Biz telefon nömrəsi istifadə edərək yeni hesablar yaratmağı dayandırdıq. Davam etmək üçün, e-poçt ünvanını və ya sosial şəbəkədə giriş seçməlisiniz.",
+    "link_email_title": "E-poçtunuzu bağlayın",
+    "link_email_text": "Biz telefon nömrəsi ilə girişi dayandırdıq. Giriş etmək üçün, e-poçt ünvanınızı bağlayın və təsdiqləyin.",
+    "account_error_title": "Hesab səhvi",
+    "account_error_text": "Biz telefon nömrəsi ilə girişi dayandırdıq. Təəssüf ki, hesabınız KYC keçməyib və bərpa edilmir.",
+    "login_via_email_title": "Zəhmət olmasa e-poçt vasitəsilə daxil olun",
+    "login_via_email_text": "Biz telefon nömrəsi ilə girişi dayandırdıq. Daxil olmaq üçün, hesabınıza bağlı e-poçt ünvanınızı istifadə edin.",
+    "email_in_use_title": "E-poçt artıq istifadə edilir",
+    "email_in_use_text_part1": "Bağlamağa çalışdığınız e-poçt ünvanı artıq istifadə edilir.",
+    "email_in_use_text_part2": "Əgər bu sizin e-poçt ünvanınızdırsa, xahiş edirik, əvvəlcə onunla daxil olun, qeydiyyat prosesini başa vurun və bu e-poçtu əlçatmaz etmək üçün hesabı silin, sonra telefon nömrəsi ilə daxil olmağa qayıdın və bağlama prosesini başa çatdırın.",
+    "successfully_linked_title": "Uğurla bağlandı!",
+    "successfully_linked_text": "E-poçt uğurla hesabınıza bağlandı"
   },
   "periods": {
     "3_days": "3 gün",
@@ -1273,5 +1286,10 @@
         "description": "Təbrik edirik, sizi uğurla təsdiq etdiniz. Siz artıq BNB Smart Chain təqdimatı üçün layiqsiniz."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Hesab təsdiqi",
+    "description": "Hesabınızın kimliyini təsdiq etmək və təhlükəsiz şəkildə e-poçtunuzu bağlamaq üçün, lütfən sizi kimlik və təhlükəsizlik yoxlama testində uğurla keçdiyinizdən əmin olun.",
+    "description2": "Bu addım bizə hesabınızın təhlükəsizliyini və asılılığını təmin etməyimizə kömək edir. Sizin əməyiniz üçün təşəkkür edirik!"
   }
 }

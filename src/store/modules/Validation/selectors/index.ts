@@ -28,3 +28,18 @@ export const smsSentTimestampSelector = (state: RootState) =>
 
 export const emailSentTimestampSelector = (state: RootState) =>
   state.validation.emailSentTimestamp;
+
+export const migrationUserIdSelector = (state: RootState) =>
+  state.validation.temporaryMigrationUserId;
+
+export const migrationPhoneNumberSelector = (state: RootState) =>
+  state.validation.temporaryMigrationPhoneNumber;
+
+export const migrationEmailSelector = (state: RootState) =>
+  state.validation.temporaryMigrationEmail;
+
+export const migrationEmailCodeSelector = (state: RootState) =>
+  state.validation.temporaryMigrationEmailCode;
+
+export const migrationLoginSessionSelector = (state: RootState) =>
+  state.validation.temporaryMigrationLoginSession;

@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Anda akan kehilangan syiling [[:amount]] anda buat selama-lamanya. Adakah anda pasti ingin meneruskan?",
     "resurrection_yes_confirm_message": "Anda hanya boleh dihidupkan semula sekali sahaja! Adakah anda pasti ingin meneruskan? Syiling [[:amount]] akan dikembalikan ke baki anda dalam jam seterusnya.",
     "delete_account_confirmation_title": "Sahkan Pemadaman",
-    "delete_account_confirmation_text": "Memadamkan akaun anda akan memadamkan semua data anda secara kekal, termasuk baki Ice anda. Adakah anda ingin meneruskan?"
+    "delete_account_confirmation_text": "Memadamkan akaun anda akan memadamkan semua data anda secara kekal, termasuk baki Ice anda. Adakah anda ingin meneruskan?",
+    "registration_update_title": "Kemas kini Pendaftaran",
+    "registration_update_text": "Kami telah menangguhkan penciptaan akaun baru menggunakan nombor telefon. Untuk terus, anda perlu memilih sama ada alamat emel atau log masuk melalui rangkaian sosial.",
+    "link_email_title": "Sambung alamat emel anda",
+    "link_email_text": "Kami telah menangguhkan log masuk menggunakan nombor telefon. Sila sambungkan alamat emel anda dan sahkan untuk boleh log masuk.",
+    "account_error_title": "Ralat Akaun",
+    "account_error_text": "Kami telah menangguhkan log masuk menggunakan nombor telefon. Malangnya, akaun anda tidak lulus KYC dan tidak layak dipulihkan.",
+    "login_via_email_title": "Sila log masuk melalui emel",
+    "login_via_email_text": "Kami telah menangguhkan log masuk menggunakan nombor telefon. Sila gunakan alamat emel yang berkaitan dengan akaun anda untuk boleh log masuk.",
+    "email_in_use_title": "Alamat emel sudah digunakan",
+    "email_in_use_text_part1": "Alamat emel yang anda cuba sambungkan telah digunakan.",
+    "email_in_use_text_part2": "Jika ini adalah alamat emel anda, sila log masuk terlebih dahulu menggunakan alamat itu, lengkapkan proses pendaftaran, dan padam akaun tersebut untuk menjadikan alamat emel itu boleh digunakan, kemudian kembali ke log masuk menggunakan nombor telefon untuk lengkapkan proses penyambungan.",
+    "successfully_linked_title": "Berjaya disambungkan!",
+    "successfully_linked_text": "Alamat emel telah berjaya disambungkan dengan akaun anda."
   },
   "periods": {
     "3_days": "3 hari",
@@ -1273,5 +1286,10 @@
         "description": "Tahniah, anda telah berjaya menyelesaikan pengesahan anda. Anda kini layak untuk pembahagian BNB Smart Chain."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Pengesahan Akaun",
+    "description": "Untuk mengesahkan identiti akaun anda dan menyambung alamat emel anda dengan selamat, sila pastikan anda berjaya lulus ujian emosi semasa proses pengesahan.",
+    "description2": "Langkah ini membantu kami memastikan keselamatan dan ketulenan akaun anda. Terima kasih atas kerjasama anda!"
   }
 }

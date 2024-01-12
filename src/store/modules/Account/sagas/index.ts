@@ -5,6 +5,8 @@ import {deleteAccountSaga} from '@store/modules/Account/sagas/deleteAccount';
 import {getAccountSaga} from '@store/modules/Account/sagas/getAccount';
 import {getAuthConfigSaga} from '@store/modules/Account/sagas/getAuthConfig';
 import {getInstallReferrerSaga} from '@store/modules/Account/sagas/getInstallReferrer';
+import {migrateEmailWithCodeSaga} from '@store/modules/Account/sagas/migrateEmailWithCode';
+import {migratePhoneNumberSaga} from '@store/modules/Account/sagas/migratePhoneNumber';
 import {modifyEmailWithCodeSaga} from '@store/modules/Account/sagas/modifyEmailWithCode';
 import {modifyEmailWithLinkSaga} from '@store/modules/Account/sagas/modifyEmailWithLink';
 import {signInEmailCodeSaga} from '@store/modules/Account/sagas/signInEmailCode';
@@ -13,6 +15,7 @@ import {signInPhoneSaga} from '@store/modules/Account/sagas/signInPhone';
 import {signInSocialSaga} from '@store/modules/Account/sagas/signInSocial';
 import {signOutSaga} from '@store/modules/Account/sagas/signOut';
 import {subscribeUserChangedSaga} from '@store/modules/Account/sagas/subscribeUserChanged';
+import {successfullyLinkedSaga} from '@store/modules/Account/sagas/successfullyLinked';
 import {syncLanguageCodeSaga} from '@store/modules/Account/sagas/syncLanguageCode';
 import {syncRtlSaga} from '@store/modules/Account/sagas/syncRTL';
 import {updateAccountSaga} from '@store/modules/Account/sagas/updateAccount';
@@ -30,6 +33,10 @@ export const authWatchers = [
   takeLeading(
     AccountActions.SIGN_IN_EMAIL_CODE.START.type,
     signInEmailCodeSaga,
+  ),
+  takeLeading(
+    AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.START.type,
+    migratePhoneNumberSaga,
   ),
   takeLeading(AccountActions.SIGN_IN_PHONE.START.type, signInPhoneSaga),
   takeLeading(AccountActions.SIGN_IN_SOCIAL.START.type, signInSocialSaga),
@@ -59,6 +66,14 @@ export const authWatchers = [
   takeLatest(
     AccountActions.VERIFY_PHONE_NUMBER.START.type,
     verifyPhoneNumberSaga,
+  ),
+  takeLatest(
+    AccountActions.MIGRATE_EMAIL_WITH_CODE.START.type,
+    migrateEmailWithCodeSaga,
+  ),
+  takeLatest(
+    AccountActions.MIGRATE_EMAIL_WITH_CODE.SUCCESS.type,
+    successfullyLinkedSaga,
   ),
   takeLatest(
     [

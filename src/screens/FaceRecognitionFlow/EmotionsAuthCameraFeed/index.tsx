@@ -10,7 +10,11 @@ import {useSelector} from 'react-redux';
 
 type EmotionsAuthPhase = 'GATHER_EMOTIONS' | 'ALL_SENT';
 
-export function EmotionsAuthCameraFeed() {
+type Props = {
+  isPhoneMigrationFlow: boolean;
+};
+
+export function EmotionsAuthCameraFeed({isPhoneMigrationFlow}: Props) {
   const [phase, setPhase] = useState<EmotionsAuthPhase>('GATHER_EMOTIONS');
   const session = useSelector(emotionsAuthSessionSelector);
   const [showStart, setShowStart] = useState(!session);
@@ -31,10 +35,14 @@ export function EmotionsAuthCameraFeed() {
           onAllEmotionsGathered={onAllEmotionsGathered}
           onStartPressed={onStartPressed}
           started={!showStart}
+          isPhoneMigrationFlow={isPhoneMigrationFlow}
         />
       ) : null}
       {phase === 'ALL_SENT' ? (
-        <EmotionsSentStep onGatherMoreEmotions={onGatherMoreEmotions} />
+        <EmotionsSentStep
+          onGatherMoreEmotions={onGatherMoreEmotions}
+          isPhoneMigrationFlow={isPhoneMigrationFlow}
+        />
       ) : null}
     </View>
   );

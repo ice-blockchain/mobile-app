@@ -15,7 +15,15 @@ const UPDATE_VIEWED_ONBOARDINGS = createAction('UPDATE_VIEWED_ONBOARDINGS', {
   STATE: (userId: string) => ({userId}),
 });
 
+const UPDATE_VIEWED_MIGRATION_AGREEMENT = createAction(
+  'UPDATE_VIEWED_MIGRATION_AGREEMENT',
+  {
+    STATE: (migrationUserId: string) => ({migrationUserId}),
+  },
+);
+
 export const UsersActions = Object.freeze({
   GET_USER_BY_ID,
   UPDATE_VIEWED_ONBOARDINGS,
+  UPDATE_VIEWED_MIGRATION_AGREEMENT,
 });

@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Örökre el fogod [[:amount]] veszíteni a coinokat. Biztosan tovább szeretnél lépni?",
     "resurrection_yes_confirm_message": "A feltámasztás csak egyszer lehetséges! Biztosan tovább szeretnél lépni? A [[:amount]] coinok a következő egy órában fognak visszakerülni az egyenlegedre.",
     "delete_account_confirmation_title": "Törlés megerősítése",
-    "delete_account_confirmation_text": "A fiókod törlésével véglegesen törlésre kerül az összes adatod, beleértve az Ice egyenleged is. Szeretnéd folytatni?"
+    "delete_account_confirmation_text": "A fiókod törlésével véglegesen törlésre kerül az összes adatod, beleértve az Ice egyenleged is. Szeretnéd folytatni?",
+    "registration_update_title": "Regisztrációs frissítés",
+    "registration_update_text": "A telefonos szám használatával történő új fiókok létrehozását felfüggesztettük. A folytatáshoz válasszon e-mail címet vagy bejelentkezést a közösségi hálózaton keresztül.",
+    "link_email_title": "Kapcsolja össze az e-mail címét",
+    "link_email_text": "A telefonos szám használatával történő bejelentkezést felfüggesztettük. Kérjük, kapcsolja össze e-mail címét és erősítse meg, hogy be tudjon jelentkezni.",
+    "account_error_title": "Fiók hiba",
+    "account_error_text": "A telefonos szám használatával történő bejelentkezést felfüggesztettük. Sajnálattal közöljük, hogy a fiókja nem megy át a KYC ellenőrzésen, és nem állítható helyre.",
+    "login_via_email_title": "Kérjük, jelentkezzen be e-mail címmel",
+    "login_via_email_text": "A telefonos szám használatával történő bejelentkezést felfüggesztettük. Kérjük, használja a fiókjához kapcsolt e-mail címet a bejelentkezéshez.",
+    "email_in_use_title": "Az e-mail cím már használatban van",
+    "email_in_use_text_part1": "Az e-mail címet, amelyet megpróbál csatlakoztatni, már használják.",
+    "email_in_use_text_part2": "Ha ez az Ön e-mail címe, először jelentkezzen be vele, fejezze be a regisztrációs folyamatot, és törölje azt a fiókot, hogy az e-mail cím elérhető legyen, majd térjen vissza a telefonos szám használatával történő bejelentkezéshez a csatlakoztatási folyamat befejezéséhez.",
+    "successfully_linked_title": "Sikeresen csatlakoztatva!",
+    "successfully_linked_text": "Az e-mail címe sikeresen csatlakoztatva a fiókjához."
   },
   "periods": {
     "3_days": "3 nap",
@@ -1273,5 +1286,10 @@
         "description": "Gratulálunk, sikeresen befejezte az ellenőrzését. Most jogosult a BNB Smart Chain elosztásra."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Fiók megerősítése",
+    "description": "Az Ön fiókjának azonosításához és e-mail címének biztonságos csatlakoztatásához kérjük, győződjön meg róla, hogy sikeresen átmegy érzelmi ellenőrzésünkön az azonosítási folyamat során.",
+    "description2": "Ez a lépés segít nekünk biztosítani fiókja biztonságát és hitelességét. Köszönjük együttműködését!"
   }
 }

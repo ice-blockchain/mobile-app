@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Navždy přijdete o [[:amount]] coinů. Opravdu chcete pokračovat?",
     "resurrection_yes_confirm_message": "Vzkřísit se můžete nechat pouze jednou! Opravdu chcete pokračovat? [[:amount]] coinů se během nadcházející hodiny připíše zpět k vašemu zůstatku.",
     "delete_account_confirmation_title": "Potvrďte smazání",
-    "delete_account_confirmation_text": "Odstraněním účtu dojde k trvalému smazání všech vašich dat včetně zůstatku Ice. Chcete pokračovat?"
+    "delete_account_confirmation_text": "Odstraněním účtu dojde k trvalému smazání všech vašich dat včetně zůstatku Ice. Chcete pokračovat?",
+    "registration_update_title": "Aktualizace registrace",
+    "registration_update_text": "Přestali jsme vytvářet nové účty pomocí telefonního čísla. Pro pokračování budete muset vybrat buď e-mailovou adresu nebo přihlášení pomocí sociální sítě.",
+    "link_email_title": "Propojte svůj e-mail",
+    "link_email_text": "Přestali jsme přihlašování pomocí telefonního čísla. Prosím, propojte svou e-mailovou adresu a potvrďte ji, abyste mohli provádět přihlášení.",
+    "account_error_title": "Chyba účtu",
+    "account_error_text": "Přestali jsme přihlašování pomocí telefonního čísla. Bohužel Váš účet neprošel ověřením KYC a nelze jej obnovit.",
+    "login_via_email_title": "Prosím, přihlašte se pomocí e-mailu",
+    "login_via_email_text": "Přestali jsme přihlašování pomocí telefonního čísla. Prosím, použijte e-mailovou adresu připojenou k Vašemu účtu pro přihlášení.",
+    "email_in_use_title": "E-mail již používán",
+    "email_in_use_text_part1": "E-mailová adresa, kterou se snažíte propojit, je již používána.",
+    "email_in_use_text_part2": "Pokud je toto Vaše e-mailová adresa, přihlašte se nejprve pomocí ní, dokončete proces registrace a smažte tento účet, aby byla e-mailová adresa k dispozici, a poté se vraťte a přihlaste se pomocí telefonního čísla pro dokončení procesu propojení.",
+    "successfully_linked_title": "Úspěšně propojeno!",
+    "successfully_linked_text": "E-mail byl úspěšně propojen s Vaším účtem."
   },
   "periods": {
     "3_days": "3 dny",
@@ -1273,5 +1286,10 @@
         "description": "Gratulujeme, úspěšně jste dokončili ověření. Nyní máte nárok na distribuci BNB Smart Chain."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Potvrzení účtu",
+    "description": "Pro ověření identity Vašeho účtu a bezpečné propojení e-mailu si ujistěte, že během procesu ověření úspěšně projdete testem emocí.",
+    "description2": "Tento krok nám pomáhá zajistit bezpečnost a autentičnost Vašeho účtu. Děkujeme za spolupráci!"
   }
 }

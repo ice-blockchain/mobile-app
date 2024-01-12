@@ -3,8 +3,10 @@
 import {CheckMark} from '@components/CheckMark';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
+import {AuthStackParamList} from '@navigation/Auth';
 import {Header} from '@navigation/components/Header';
 import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {StatusOverlay} from '@screens/FaceRecognitionFlow/components/StatusOverlay';
 import {FaceRecognitionActions} from '@store/modules/FaceRecognition/actions';
 import {emotionsAuthStatusSelector} from '@store/modules/FaceRecognition/selectors';
@@ -19,16 +21,31 @@ import {rem} from 'rn-units';
 
 type Props = {
   onGatherMoreEmotions: () => void;
+  isPhoneMigrationFlow: boolean;
 };
 
-export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
+export function EmotionsSentStep({
+  onGatherMoreEmotions,
+  isPhoneMigrationFlow,
+}: Props) {
   const emotionsAuthStatus = useSelector(emotionsAuthStatusSelector);
   const dispatch = useDispatch();
-  const navigation = useNavigation();
+
+  const navigation =
+    useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
+
   const onFaceAuthSuccess = () => {
-    dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
-    navigation.goBack();
-    dispatch(FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create());
+    if (isPhoneMigrationFlow) {
+      navigation.navigate('ConfirmEmailCode', {
+        isPhoneMigrationFlow: true,
+      });
+    } else {
+      dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
+      navigation.goBack();
+      dispatch(
+        FaceRecognitionActions.RESET_EMOTIONS_AUTH_STATUS.STATE.create(),
+      );
+    }
   };
 
   const onBanned = () => {
@@ -81,7 +98,11 @@ export function EmotionsSentStep({onGatherMoreEmotions}: Props) {
     <View style={commonStyles.flexOne}>
       <Header
         color={COLORS.primaryDark}
-        title={t('face_auth.header')}
+        title={
+          isPhoneMigrationFlow
+            ? t('account_confirmation.title')
+            : t('face_auth.header')
+        }
         backgroundColor={'transparent'}
         onGoBack={onGoBack}
       />

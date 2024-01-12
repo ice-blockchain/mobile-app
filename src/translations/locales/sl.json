@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Za vedno boste izgubili svoje [[:amount]] kovance. Ste prepričani, da želite nadaljevati?",
     "resurrection_yes_confirm_message": "Obudite jih lahko le enkrat! Ste prepričani, da želite nadaljevati? [[:amount]] Kovanci se bodo vrnili na vaše stanje v naslednji uri.",
     "delete_account_confirmation_title": "Potrdite izbris",
-    "delete_account_confirmation_text": "Če izbrišete svoj račun, boste trajno izbrisali vse svoje podatke, vključno z vašim stanjem kovancev Ice. Želite nadaljevati?"
+    "delete_account_confirmation_text": "Če izbrišete svoj račun, boste trajno izbrisali vse svoje podatke, vključno z vašim stanjem kovancev Ice. Želite nadaljevati?",
+    "registration_update_title": "Posodobitev registracije",
+    "registration_update_text": "Začasno smo ustavili ustvarjanje novih računov s pomočjo telefonske številke. Za nadaljevanje boste morali izbrati ali e-poštni naslov ali se prijaviti prek družbenih omrežij.",
+    "link_email_title": "Povežite svoj e-poštni naslov",
+    "link_email_text": "Začasno smo ustavili prijavo s pomočjo telefonske številke. Prosimo, povežite svoj e-poštni naslov in ga potrdite, da se lahko prijavite.",
+    "account_error_title": "Napaka računa",
+    "account_error_text": "Začasno smo ustavili prijavo s pomočjo telefonske številke. Vaš račun žal ni uspešno opravil postopka KYC in ni upravičen do obnovitve.",
+    "login_via_email_title": "Prosimo, prijavite se prek e-pošte",
+    "login_via_email_text": "Začasno smo ustavili prijavo s pomočjo telefonske številke. Prosimo, uporabite e-poštni naslov, povezan z vašim računom, za prijavo.",
+    "email_in_use_title": "E-poštni naslov je že v uporabi",
+    "email_in_use_text_part1": "E-poštni naslov, ki ga poskušate povezati, je že v uporabi.",
+    "email_in_use_text_part2": "Če je to vaš e-poštni naslov, se najprej prijavite z njim, zaključite postopek registracije in izbrišite ta račun, da sprostite e-poštni naslov, nato pa se vrnite k prijavi prek telefonske številke, da dokončate postopek povezave.",
+    "successfully_linked_title": "Uspešno povezano!",
+    "successfully_linked_text": "E-poštni naslov je uspešno povezan z vašim računom."
   },
   "periods": {
     "3_days": "3 dni",
@@ -1273,5 +1286,10 @@
         "description": "Čestitamo, uspešno ste zaključili preverjanje. Sedaj ste upravičeni do distribucije BNB Smart Chain."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Potrditev računa",
+    "description": "Da preverite identiteto svojega računa in varno povežete svoj e-poštni naslov, se prepričajte, da uspešno opravite test čustev med postopkom avtentikacije.",
+    "description2": "Ta korak nam pomaga zagotoviti varnost in avtentičnost vašega računa. Hvala za sodelovanje!"
   }
 }

@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Do t'i humbasësh [[:amount]] monedhat përgjithmonë. Je i sigurt se dëshiron të vazhdosh?",
     "resurrection_yes_confirm_message": "Ringjalljen mund ta bësh vetëm një herë! Je i sigurt se dëshiron të vazhdosh? Monedhat [[:amount]] do t'i rikthehen shumës në gjendje brenda orës.",
     "delete_account_confirmation_title": "Konfirmo fshirjen",
-    "delete_account_confirmation_text": "Fshirja e llogarisë do t'i heqë përgjithmonë të gjitha të dhënat, përfshirë shumë në gjendje në Ice. Dëshiron të vazhdosh?"
+    "delete_account_confirmation_text": "Fshirja e llogarisë do t'i heqë përgjithmonë të gjitha të dhënat, përfshirë shumë në gjendje në Ice. Dëshiron të vazhdosh?",
+    "registration_update_title": "Përditësim i Regjistrimit",
+    "registration_update_text": "Ne kemi ndërprerë përkohësisht krijimin e llogarive të reja duke përdorur numrin e telefonit. Për të vazhduar, duhet të zgjidhni ose një adresë emaili ose të bëni hyrjen përmes rrjeteve sociale.",
+    "link_email_title": "Lidhni adresën tuaj të emailit",
+    "link_email_text": "Ne kemi ndërprerë përkohësisht hyrjen duke përdorur numrin e telefonit. Ju lutemi lidhni adresën tuaj të emailit dhe konfirmoni atë për të mundur të bëni hyrjen.",
+    "account_error_title": "Gabim i Llogarisë",
+    "account_error_text": "Ne kemi ndërprerë përkohësisht hyrjen duke përdorur numrin e telefonit. Na vjen keq, llogaria juaj nuk ka kaluar procesin KYC dhe nuk është e përshkallëzueshme.",
+    "login_via_email_title": "Ju lutemi, hyni përmes emailit",
+    "login_via_email_text": "Ne kemi ndërprerë përkohësisht hyrjen duke përdorur numrin e telefonit. Ju lutemi përdorni adresën tuaj të emailit të lidhur me llogarinë tuaj për të bërë hyrjen.",
+    "email_in_use_title": "Adresa e Emailit është tashmë në përdorim",
+    "email_in_use_text_part1": "Adresa e emailit që po përpiqeni ta lidhni është tashmë në përdorim.",
+    "email_in_use_text_part2": "Nëse kjo është adresa juaj e emailit, ju lutemi hyni me të së pari, finalizoni procesin e regjistrimit dhe fshini këtë llogari për të liruar adresën e emailit, pastaj kthehuni tek hyrja me numrin e telefonit për të përfunduar procesin e lidhjes.",
+    "successfully_linked_title": "Lidhur me Sukses!",
+    "successfully_linked_text": "Adresa e emailit është lidhur me sukses me llogarinë tuaj."
   },
   "periods": {
     "3_days": "3 ditë",
@@ -1273,5 +1286,10 @@
         "description": "Urime, keni përfunduar me sukses verifikimin tuaj. Tani jeni të kualifikuar për distribucionin e BNB Smart Chain."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Konfirmimi i Llogarisë",
+    "description": "Për të verifikuar identitetin e llogarisë suaj dhe lidhur sigurtësisht adresën tuaj të emailit, ju lutemi sigurohuni që keni kaluar me sukses testin e emocioneve gjatë procesit të autentikimit.",
+    "description2": "Ky hap na ndihmon të sigurojmë sigurinë dhe autenticitetin e llogarisë suaj. Ju falenderojmë për bashkëpunimin!"
   }
 }

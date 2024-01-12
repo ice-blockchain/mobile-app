@@ -626,7 +626,20 @@
     "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
     "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour.",
     "delete_account_confirmation_title": "Confirm Deletion",
-    "delete_account_confirmation_text": "Deleting your account will permanently erase all your data, including your Ice balance. Do you want to proceed?"
+    "delete_account_confirmation_text": "Deleting your account will permanently erase all your data, including your Ice balance. Do you want to proceed?",
+    "registration_update_title": "Registration update",
+    "registration_update_text": "We have suspended the creation of new accounts using the phone number. To continue, you will need to choose either an email address or a login in a social network.",
+    "link_email_title": "Link your email",
+    "link_email_text": "We have suspended the login using the phone number. Please link your email address and confirm it in order to be able to login.",
+    "account_error_title": "Account error",
+    "account_error_text": "We have suspended the login using the phone number. Unfortunately your account did not pass KYC and is not eligible for recovery.",
+    "login_via_email_title": "Please login via email",
+    "login_via_email_text": "We have suspended the login using the phone number. Please use the email associated to your account in order to be able to login.",
+    "email_in_use_title": "Email already in use",
+    "successfully_linked_title": "Successfully linked!",
+    "successfully_linked_text": "The email has been successfully linked to your account.",
+    "email_in_use_text_part1": "The email address you're trying to link is already in use.",
+    "email_in_use_text_part2": "If this is your email address, please first log in with it, finalize the registration process and delete that account to make the email available, then return to the login with phone number to complete the linking process."
   },
   "periods": {
     "3_days": "3 days",
@@ -1270,5 +1283,10 @@
         "description": "Congratulations, you have successfully completed your verification. You are now eligible for the BNB Smart Chain distribution."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Account confirmation",
+    "description": "To verify your account identity and securely link your email, please ensure that you successfully pass our emotions check during the authentication process.",
+    "description2": "This step helps us ensure the security and authenticity of your account. Thank you for your cooperation!"
   }
 }

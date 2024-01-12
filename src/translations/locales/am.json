@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "የእርስዎን [[:amount]] ሳንቲሞችን ለዘላለም ያጧቸዋል። እርግጠኛ ነዎት መቀጠል ይፈልጋሉ?",
     "resurrection_yes_confirm_message": "አንድ ጊዜ ብቻ ነው ማስነሳት የሚችሉት! እርግጠኛ ነዎት መቀጠል ይፈልጋሉ? The [[:amount]] coins will return to your balance within the next hour.",
     "delete_account_confirmation_title": "ስረዛውን አረጋግጥ",
-    "delete_account_confirmation_text": "የእርስዎን መለያ መሰረዝ የ Ice ቀሪ ሂሳብዎን ጨምሮ ሁሉንም ውሂብዎን እስከመጨረሻው ይሰርዛል። መቀጠል ይፈልጋሉ?"
+    "delete_account_confirmation_text": "የእርስዎን መለያ መሰረዝ የ Ice ቀሪ ሂሳብዎን ጨምሮ ሁሉንም ውሂብዎን እስከመጨረሻው ይሰርዛል። መቀጠል ይፈልጋሉ?",
+    "registration_update_title": "የመመዝገብ ዝርዝር አዘጋጅ",
+    "registration_update_text": "የተለያዩ አካዋቂዎች ለተከላከዉ የሞባይል ቁልፍ መዝገብን ማቀድ አለብን። ለተጠቃሚ ወይም ላሞች ይህን ምዝገባ በኢሜል አይነሳም ወይም ስለዚህ የሚጠቀሙት የሞባይል አካዋቂዎች ልጆች ይልማውን ያደርጋሉ።",
+    "link_email_title": "ኢሜልዎን አካውንሎ",
+    "link_email_text": "የሞባይል ቁልፍ ለተከላከዉ ማቀድ አዘጋጅህ አልቀረህም። እስካሁን ከኢሜል እንዳልነሳህ ቁልፍ አካውንሎዎችዎን አስታውሳለሁ።",
+    "account_error_title": "መለያ ስስተይር",
+    "account_error_text": "የተለያዩ ሞባይል ቁልፍን ለመቀድ ሳያቀርብ አካባቢህ ምርመራ አልተሳካም።",
+    "login_via_email_title": "ኢሜል ጋር አግባ",
+    "login_via_email_text": "የተለያዩ ሞባይል ቁልፍን ለመቀድ ሳያቀርብ እናውጣለን። ቁልፍዎን እናሳውቃለን።",
+    "email_in_use_title": "ኢሜል ከሆነ",
+    "email_in_use_text_part1": "የሚያዘጋጅባት ኢሜል አይደለም።",
+    "email_in_use_text_part2": "ይህ ኢሜል አይደለም። እዚህ ከሞባይል ቁልፍ ማቀድ ተጠቀሙ፤ እናሁን የሚወስድውን ሞባይል ቁልፍ እቀጣጠመር፣ እንዲሁም ይሄን ሞባይል ቁልፍ ለመቀድ ቀጥሎ አካውንሎዎችዎን መቀበል እንዳለበት ተመልክተዋል።",
+    "successfully_linked_title": "በማስተካከያ ተከራይ!",
+    "successfully_linked_text": "የሚያዘጋጅባት ኢሜል ወደ ሞባይልህ ተከራይታል"
   },
   "periods": {
     "3_days": "3 ቀናት",
@@ -1273,5 +1286,10 @@
         "description": "እንኳን እንዴት ታላቅ እርምስ እንዳለህ፣ እንዴት ታስቦህ ትልቅ ህክም አድራሻ በተመሰገነ የሚሆን ነገር ስለሚገኝ፣ እባክዎ ይህን ነገር ተቀብላል።"
       }
     }
+  },
+  "account_confirmation": {
+    "title": "መለያ አማራጭ",
+    "description": "እባክዎ እንዲህ የሚያስተዳድር እችንት፣ ቁልፍዎን በተላከዉ እንዴት ሊተግባት ይችላል።",
+    "description2": "ይህ ማሳወቅ እኛን የሞባይል መለያንና የእርስዎን ኢሜል በተላከዉ እንዴት ሊሳቅ ይችላል። እኛን የተሳሳተ እና የአትታውሰዉ እችንት። እኛን የሚያማርክ እንችላላለን!"
   }
 }

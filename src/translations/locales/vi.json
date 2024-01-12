@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Bạn sẽ mất vĩnh viễn [[:amount]] đồng. Bạn có chắc chắn muốn tiếp tục không?",
     "resurrection_yes_confirm_message": "Bạn chỉ có thể hồi sinh một lần! Bạn có chắc chắn muốn tiếp tục không? [[:amount]] đồng sẽ được hoàn trả vào số dư của bạn trong vòng một giờ tới.",
     "delete_account_confirmation_title": "Xác nhận xóa",
-    "delete_account_confirmation_text": "Xóa tài khoản của bạn sẽ xóa vĩnh viễn tất cả dữ liệu của bạn, bao gồm cả số dư Ice của bạn. Bạn có muốn tiến hành không?"
+    "delete_account_confirmation_text": "Xóa tài khoản của bạn sẽ xóa vĩnh viễn tất cả dữ liệu của bạn, bao gồm cả số dư Ice của bạn. Bạn có muốn tiến hành không?",
+    "registration_update_title": "Cập Nhật Đăng Ký",
+    "registration_update_text": "Chúng tôi đã tạm ngừng việc tạo tài khoản mới bằng số điện thoại. Để tiếp tục, bạn cần chọn địa chỉ email hoặc đăng nhập thông qua mạng xã hội.",
+    "link_email_title": "Liên Kết Địa Chỉ Email",
+    "link_email_text": "Chúng tôi đã tạm ngừng đăng nhập bằng số điện thoại. Vui lòng liên kết địa chỉ email của bạn và xác nhận để có thể đăng nhập.",
+    "account_error_title": "Lỗi Tài Khoản",
+    "account_error_text": "Chúng tôi đã tạm ngừng đăng nhập bằng số điện thoại. Xin lỗi, tài khoản của bạn không qua được KYC và không đủ điều kiện để khôi phục.",
+    "login_via_email_title": "Vui lòng Đăng Nhập Bằng Email",
+    "login_via_email_text": "Chúng tôi đã tạm ngừng đăng nhập bằng số điện thoại. Vui lòng sử dụng địa chỉ email được liên kết với tài khoản của bạn để đăng nhập.",
+    "email_in_use_title": "Email Đã Được Sử Dụng",
+    "email_in_use_text_part1": "Địa chỉ email bạn đang cố gắng liên kết đã được sử dụng.",
+    "email_in_use_text_part2": "Nếu đây là địa chỉ email của bạn, vui lòng đăng nhập trước với nó, hoàn tất quá trình đăng ký và xóa tài khoản đó để có sẵn địa chỉ email, sau đó quay lại đăng nhập bằng số điện thoại để hoàn thành quá trình liên kết.",
+    "successfully_linked_title": "Liên Kết Thành Công!",
+    "successfully_linked_text": "Địa chỉ email đã được liên kết thành công với tài khoản của bạn."
   },
   "periods": {
     "3_days": "3 ngày",
@@ -1273,5 +1286,10 @@
         "description": "Chúc mừng, bạn đã hoàn thành việc xác minh của mình thành công. Bây giờ bạn đã đủ điều kiện để tham gia phân phối BNB Smart Chain."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Xác Nhận Tài Khoản",
+    "description": "Để xác minh danh tính tài khoản của bạn và liên kết địa chỉ email của bạn một cách an toàn, vui lòng đảm bảo rằng bạn đã vượt qua thành công bước kiểm tra cảm xúc của chúng tôi trong quá trình xác thực.",
+    "description2": "Bước này giúp chúng tôi đảm bảo tính bảo mật và xác thực của tài khoản của bạn. Cảm ơn sự hợp tác của bạn!"
   }
 }

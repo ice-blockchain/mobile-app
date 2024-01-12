@@ -109,6 +109,7 @@ export type MainStackParamList = {
   FaceRecognition: {
     kycSteps: FaceAuthKycNumber[];
     kycStepBlocked?: FaceAuthKycNumber;
+    isPhoneMigrationFlow?: boolean;
   };
   SocialKycFlow: {kycStep: SocialKycStepNumber};
   Staking: undefined;

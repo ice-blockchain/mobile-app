@@ -612,7 +612,20 @@
     "resurrection_warning": "You can only resurrect one time!",
     "please_confirm": "Please confirm",
     "resurrection_no_confirm_message": "You will lose your [[:amount]] coins forever. Are you sure you want to continue?",
-    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour."
+    "resurrection_yes_confirm_message": "You can only resurrect one time! Are you sure you want to continue? The [[:amount]] coins will return to your balance within the next hour.",
+    "registration_update_title": "Pembaruan Pendaftaran",
+    "registration_update_text": "Kami nangguhake pembuatan akun anyar nganggo nomer telpon. Kanggo ngarepake, sampeyan perlu milih antara alamat email utawa login menyang jaringan sosial.",
+    "link_email_title": "Tautke alamat email sampeyan",
+    "link_email_text": "Kami nangguhake login nganggo nomer telpon. Mangga tautke alamat email sampeyan lan konfirmasi supaya bisa login.",
+    "account_error_title": "Kesalahan Akun",
+    "account_error_text": "Kami nangguhake login nganggo nomer telpon. Sayang, akun sampeyan ora lulus verifikasi KYC lan ora bisa dipulihake.",
+    "login_via_email_title": "Mangga login menyang alamat email",
+    "login_via_email_text": "Kami nangguhake login nganggo nomer telpon. Mangga gumantung alamat email sing terkoneksi karo akun sampeyan kanggo login.",
+    "email_in_use_title": "Email wis digunakake",
+    "email_in_use_text_part1": "Alamat email sing sampeyan nyoba tautake wis digunakake.",
+    "email_in_use_text_part2": "Yen iki alamat email sampeyan, mangga login nanggung ana, rampungake proses registrasi, lan hapus akun iku supaya email wis tersedia, terus balik menyang login nganggo nomer telpon kanggo rampungake proses tautan.",
+    "successfully_linked_title": "Sukses ditautake!",
+    "successfully_linked_text": "Alamat email wis ditautake sukses menyang akun sampeyan."
   },
   "periods": {
     "3_days": "3 days",
@@ -1180,5 +1193,10 @@
       "description": "Ikuti Zeus, pendiri visioner kita, ing X, ngendi dheweke duwe wawasan, kabar anyar, lan pemikiran tentang misi kita. Gabung ana percakapan, tanya pitakonan, lan tetep terhubung karo pemimpin inspiratif kita nalika kita mulai perjalanan sing seru iki bareng.",
       "button": "Ikuti Zeus"
     }
+  },
+  "account_confirmation": {
+    "title": "Konfirmasi Akun",
+    "description": "Kanggo ngonfirmasi identitas akun sampeyan lan tautake alamat email sampeyan kanthi aman, mangga pastikan sampeyan sukses lewat pemeriksaan emosi kita selama proses otentikasi.",
+    "description2": "Langkah iki nglakokake kita ngamotasi keamanan lan otentisitas akun sampeyan. Matur nuwun kanggo kerjasamane!"
   }
 }

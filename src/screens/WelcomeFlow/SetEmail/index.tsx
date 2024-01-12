@@ -10,14 +10,8 @@ import {t} from '@translations/i18n';
 import React from 'react';
 
 export const SetEmail = () => {
-  const {
-    email,
-    onChangeEmail,
-    updateError,
-    updateLoading,
-    onSubmitPress,
-    onBack,
-  } = useSetEmail();
+  const {email, onChangeEmail, error, loading, onSubmitPress, onBack} =
+    useSetEmail();
 
   return (
     <FinalizeRegistrationStep
@@ -36,15 +30,15 @@ export const SetEmail = () => {
         <EmailInput
           onChangeText={onChangeEmail}
           value={email}
-          errorText={updateError}
+          errorText={error}
         />
       }
       info={<Info text={t('confirm_email.note')} />}
       button={
         <PrimaryButton
-          text={t('button.complete')}
+          text={t('button.continue')}
           onPress={onSubmitPress}
-          loading={updateLoading}
+          loading={loading}
           disabled={email.trim() === ''}
         />
       }
