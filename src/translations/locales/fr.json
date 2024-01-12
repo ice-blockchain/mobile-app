@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Vous perdrez vos [[:amount]] pièces pour toujours. Voulez-vous vraiment continuer ?",
     "resurrection_yes_confirm_message": "Vous ne pouvez ressusciter qu’une seule fois ! Voulez-vous vraiment continuer ? Les [[:amount]] pièces reviendront dans votre solde sous une heure.",
     "delete_account_confirmation_title": "Confirmer la suppression",
-    "delete_account_confirmation_text": "La suppression de votre compte effacera définitivement toutes vos données, y compris votre solde Ice. Voulez-vous continuer ?"
+    "delete_account_confirmation_text": "La suppression de votre compte effacera définitivement toutes vos données, y compris votre solde Ice. Voulez-vous continuer ?",
+    "registration_update_title": "Mise à jour de l'inscription",
+    "registration_update_text": "Nous avons suspendu la création de nouveaux comptes utilisant le numéro de téléphone. Pour continuer, vous devrez choisir soit une adresse e-mail, soit une connexion via un réseau social.",
+    "link_email_title": "Liez votre adresse e-mail",
+    "link_email_text": "Nous avons suspendu la connexion via le numéro de téléphone. Veuillez lier votre adresse e-mail et la confirmer afin de pouvoir vous connecter.",
+    "account_error_title": "Erreur de compte",
+    "account_error_text": "Nous avons suspendu la connexion via le numéro de téléphone. Malheureusement, votre compte n'a pas réussi la vérification KYC et n'est pas éligible à la récupération.",
+    "login_via_email_title": "Veuillez vous connecter via l'e-mail",
+    "login_via_email_text": "Nous avons suspendu la connexion via le numéro de téléphone. Veuillez utiliser l'adresse e-mail associée à votre compte afin de pouvoir vous connecter.",
+    "email_in_use_title": "Adresse e-mail déjà utilisée",
+    "email_in_use_text_part1": "L'adresse e-mail que vous essayez de lier est déjà utilisée.",
+    "email_in_use_text_part2": "Si cette adresse e-mail vous appartient, veuillez d'abord vous connecter avec elle, finaliser le processus d'inscription et supprimer ce compte pour libérer l'adresse e-mail, puis revenir à la connexion avec le numéro de téléphone pour compléter le processus de liaison.",
+    "successfully_linked_title": "Lien établi avec succès !",
+    "successfully_linked_text": "L'adresse e-mail a été liée avec succès à votre compte."
   },
   "periods": {
     "3_days": "trois jours",
@@ -1273,5 +1286,10 @@
         "description": "Félicitations, vous avez réussi à terminer votre vérification. Vous êtes désormais éligible pour la distribution BNB Smart Chain."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Confirmation du compte",
+    "description": "Pour vérifier l'identité de votre compte et lier votre adresse e-mail en toute sécurité, assurez-vous de réussir avec succès notre vérification des émotions lors du processus d'authentification.",
+    "description2": "Cette étape nous aide à garantir la sécurité et l'authenticité de votre compte. Merci pour votre coopération !"
   }
 }

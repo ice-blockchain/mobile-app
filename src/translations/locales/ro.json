@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Îți vei pierde cele [[:amount]] monede pentru totdeauna. Sigur vrei să continui?",
     "resurrection_yes_confirm_message": "Te poți regenera o singură dată! Sigur vrei să continui? Cele [[:amount]] monede vor reveni în soldul tău în următoarea oră.",
     "delete_account_confirmation_title": "Confirmă ștergerea",
-    "delete_account_confirmation_text": "Prin ștergerea contului tău, toate datele tale, inclusiv soldul tău Ice, vor fi șterse definitiv. Vrei să continui?"
+    "delete_account_confirmation_text": "Prin ștergerea contului tău, toate datele tale, inclusiv soldul tău Ice, vor fi șterse definitiv. Vrei să continui?",
+    "registration_update_title": "Actualizare Înregistrare",
+    "registration_update_text": "Am suspendat temporar crearea de conturi noi folosind numărul de telefon. Pentru a continua, va trebui să alegeți fie o adresă de e-mail, fie să vă autentificați prin intermediul rețelelor sociale.",
+    "link_email_title": "Legați adresa dvs. de e-mail",
+    "link_email_text": "Am suspendat temporar autentificarea folosind numărul de telefon. Vă rugăm să atribuiți adresa dvs. de e-mail și să o confirmați pentru a putea să vă autentificați.",
+    "account_error_title": "Eroare de cont",
+    "account_error_text": "Am suspendat temporar autentificarea folosind numărul de telefon. Din păcate, contul dvs. nu a trecut de KYC și nu este eligibil pentru recuperare.",
+    "login_via_email_title": "Vă rugăm să vă autentificați prin e-mail",
+    "login_via_email_text": "Am suspendat temporar autentificarea folosind numărul de telefon. Vă rugăm să utilizați adresa de e-mail asociată contului dvs. pentru a vă autentifica.",
+    "email_in_use_title": "Adresa de e-mail este deja în uz",
+    "email_in_use_text_part1": "Adresa de e-mail pe care încercați să o legați este deja în uz.",
+    "email_in_use_text_part2": "Dacă aceasta este adresa dvs. de e-mail, vă rugăm să vă autentificați mai întâi cu ea, finalizați procesul de înregistrare și ștergeți acel cont pentru a elibera adresa de e-mail, apoi reveniți la autentificarea cu numărul de telefon pentru a finaliza procesul de legare.",
+    "successfully_linked_title": "Atribuit cu succes!",
+    "successfully_linked_text": "Adresa dvs. de e-mail a fost atribuită cu succes de contul dvs."
   },
   "periods": {
     "3_days": "3 zile",
@@ -1273,5 +1286,10 @@
         "description": "Felicitări, ați finalizat cu succes verificarea. Acum sunteți eligibil pentru distribuția BNB Smart Chain."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Confirmarea contului",
+    "description": "Pentru a vă verifica identitatea contului și pentru a vă lega în siguranță adresa de e-mail, asigurați-vă că treceți cu succes testul de emoții în timpul procesului de autentificare.",
+    "description2": "Acest pas ne ajută să asigurăm securitatea și autenticitatea contului dvs. Vă mulțumim pentru colaborare!"
   }
 }

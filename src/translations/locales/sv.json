@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Du kommer att förlora dina [[:amount]] mynt för alltid. Är du säker på att du vill fortsätta?",
     "resurrection_yes_confirm_message": "Du kan bara återuppstå en gång! Är du säker på att du vill fortsätta? De [[:amount]] mynten kommer att återföras till ditt saldo inom den närmaste timmen.",
     "delete_account_confirmation_title": "Bekräfta borttagning",
-    "delete_account_confirmation_text": "Om du tar bort ditt konto raderas alla dina data permanent, inklusive ditt Ice-saldo. Vill du fortsätta?"
+    "delete_account_confirmation_text": "Om du tar bort ditt konto raderas alla dina data permanent, inklusive ditt Ice-saldo. Vill du fortsätta?",
+    "registration_update_title": "Uppdatering av registrering",
+    "registration_update_text": "Vi har tillfälligt avbrutit skapandet av nya konton med telefonnummer. För att fortsätta måste du antingen välja en e-postadress eller logga in via sociala nätverk.",
+    "link_email_title": "Koppla din e-postadress",
+    "link_email_text": "Vi har tillfälligt avbrutit inloggning med telefonnummer. Vänligen koppla din e-postadress och bekräfta den för att kunna logga in.",
+    "account_error_title": "Kontofel",
+    "account_error_text": "Vi har tillfälligt avbrutit inloggning med telefonnummer. Tyvärr har ditt konto inte passerat KYC-processen och är inte berättigat till återställning.",
+    "login_via_email_title": "Vänligen logga in via e-post",
+    "login_via_email_text": "Vi har tillfälligt avbrutit inloggning med telefonnummer. Vänligen använd e-postadressen kopplad till ditt konto för att logga in.",
+    "email_in_use_title": "E-postadressen används redan",
+    "email_in_use_text_part1": "E-postadressen du försöker koppla är redan i bruk.",
+    "email_in_use_text_part2": "Om detta är din e-postadress, vänligen logga in med den först, slutför registreringsprocessen och ta bort det kontot för att göra e-postadressen tillgänglig, sedan återvänd till inloggning med telefonnummer för att slutföra kopplingsprocessen.",
+    "successfully_linked_title": "Framgångsrikt kopplat!",
+    "successfully_linked_text": "E-postadressen har framgångsrikt kopplats till ditt konto."
   },
   "periods": {
     "3_days": "3 dagarna",
@@ -1273,5 +1286,10 @@
         "description": "Grattis, du har framgångsrikt slutfört din verifiering. Du är nu berättigad till BNB Smart Chain-distributionen."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Kontobekräftelse",
+    "description": "För att verifiera din kontoidentitet och säkert koppla din e-postadress, se till att du lyckas passera vårt känslotest under autentiseringsprocessen.",
+    "description2": "Det här steget hjälper oss att säkerställa säkerheten och äktheten av ditt konto. Tack för ditt samarbete!"
   }
 }

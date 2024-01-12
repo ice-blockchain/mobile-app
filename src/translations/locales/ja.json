@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "[[:amount]]枚のコインが永久に失われます。本当に続行しますか？",
     "resurrection_yes_confirm_message": "このチャンスを逃すと、復活させられる機会は二度とありません！本当に続行しますか？[[:amount]]枚のコインは1時間以内に残高に戻ります。",
     "delete_account_confirmation_title": "削除の確認",
-    "delete_account_confirmation_text": "アカウントを削除すると、iceの残高を含む全てのデータが永久に消去されます。続行しますか？"
+    "delete_account_confirmation_text": "アカウントを削除すると、iceの残高を含む全てのデータが永久に消去されます。続行しますか？",
+    "registration_update_title": "登録の更新",
+    "registration_update_text": "電話番号を使用した新しいアカウントの作成を一時停止しました。続行するには、メールアドレスまたはソーシャルネットワークを使用したログインの選択が必要です。",
+    "link_email_title": "メールアドレスをリンク",
+    "link_email_text": "電話番号を使用したログインを一時停止しました。ログインできるようにするには、メールアドレスをリンクし、確認する必要があります。",
+    "account_error_title": "アカウントエラー",
+    "account_error_text": "電話番号を使用したログインを一時停止しました。残念ながら、あなたのアカウントはKYCの検証に合格せず、回復できません。",
+    "login_via_email_title": "メールアドレスを使用してログインしてください",
+    "login_via_email_text": "電話番号を使用したログインを一時停止しました。アカウントに関連付けられたメールアドレスを使用してログインしてください。",
+    "email_in_use_title": "既に使用中のメールアドレス",
+    "email_in_use_text_part1": "リンクしようとしているメールアドレスはすでに使用中です。",
+    "email_in_use_text_part2": "これがあなたのメールアドレスの場合、まずそれを使用してログインし、登録プロセスを完了し、そのアカウントを削除してメールアドレスを使用可能にし、その後、電話番号を使用したログインに戻り、リンクプロセスを完了してください。",
+    "successfully_linked_title": "リンクが成功しました！",
+    "successfully_linked_text": "メールアドレスがアカウントに正常にリンクされました。"
   },
   "periods": {
     "3_days": "3日",
@@ -1273,5 +1286,10 @@
         "description": "おめでとうございます、あなたは確認を成功裡に完了しました。BNB Smart Chainディストリビューションの対象となります。"
       }
     }
+  },
+  "account_confirmation": {
+    "title": "アカウント確認",
+    "description": "アカウントの身元を確認し、メールアドレスを安全にリンクするために、認証プロセス中に当社の感情チェックを成功裏にパスすることを確認してください。",
+    "description2": "このステップは、アカウントのセキュリティと正当性を確保するのに役立ちます。ご協力いただきありがとうございます！"
   }
 }

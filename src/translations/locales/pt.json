@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Você perderá suas [[:amount]] moedas para sempre. Tem certeza de que deseja continuar?",
     "resurrection_yes_confirm_message": "Você só pode ressuscitar uma vez! Tem certeza de que deseja continuar? As [[:amount]] moedas voltarão ao seu saldo na próxima hora.",
     "delete_account_confirmation_title": "Confirmar exclusão",
-    "delete_account_confirmation_text": "A exclusão da sua conta apagará permanentemente todos os seus dados, incluindo seu saldo em Ice. Deseja continuar?"
+    "delete_account_confirmation_text": "A exclusão da sua conta apagará permanentemente todos os seus dados, incluindo seu saldo em Ice. Deseja continuar?",
+    "registration_update_title": "Atualização de Registro",
+    "registration_update_text": "Temporariamente suspendemos a criação de novas contas usando o número de telefone. Para continuar, você precisará escolher um endereço de e-mail ou fazer login por meio de redes sociais.",
+    "link_email_title": "Vincule seu e-mail",
+    "link_email_text": "Temporariamente suspendemos o login usando o número de telefone. Por favor, vincule seu endereço de e-mail e o confirme para poder fazer login.",
+    "account_error_title": "Erro na Conta",
+    "account_error_text": "Temporariamente suspendemos o login usando o número de telefone. Infelizmente, sua conta não passou pelo KYC e não é elegível para recuperação.",
+    "login_via_email_title": "Por favor, faça login via e-mail",
+    "login_via_email_text": "Temporariamente suspendemos o login usando o número de telefone. Por favor, use o endereço de e-mail associado à sua conta para fazer login.",
+    "email_in_use_title": "E-mail já está em uso",
+    "email_in_use_text_part1": "O endereço de e-mail que você está tentando vincular já está em uso.",
+    "email_in_use_text_part2": "Se este for o seu endereço de e-mail, faça login com ele primeiro, conclua o processo de registro e exclua essa conta para disponibilizar o endereço de e-mail, depois retorne ao login com número de telefone para concluir o processo de vinculação.",
+    "successfully_linked_title": "Vinculado com sucesso!",
+    "successfully_linked_text": "O endereço de e-mail foi vinculado com sucesso à sua conta."
   },
   "periods": {
     "3_days": "3 dias",
@@ -1273,5 +1286,10 @@
         "description": "Parabéns, você concluiu com sucesso a sua verificação. Agora você está elegível para a distribuição BNB Smart Chain."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Confirmação da Conta",
+    "description": "Para verificar a identidade da sua conta e vincular com segurança o seu endereço de e-mail, certifique-se de passar com sucesso no teste de emoções durante o processo de autenticação.",
+    "description2": "Esta etapa nos ajuda a garantir a segurança e autenticidade da sua conta. Obrigado pela sua cooperação!"
   }
 }

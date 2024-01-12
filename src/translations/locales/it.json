@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Perderai le tue monete [[:amount]] per sempre. Sei sicuro di voler continuare?",
     "resurrection_yes_confirm_message": "Puoi resuscitare solo una volta! Sei sicuro di voler continuare? Le monete [[:amount]] torneranno sul tuo saldo entro l'ora successiva.",
     "delete_account_confirmation_title": "Conferma eliminazione",
-    "delete_account_confirmation_text": "L'eliminazione del tuo account comporterà la cancellazione definitiva di tutti i tuoi dati, incluso il tuo saldo Ice. Desideri procedere?"
+    "delete_account_confirmation_text": "L'eliminazione del tuo account comporterà la cancellazione definitiva di tutti i tuoi dati, incluso il tuo saldo Ice. Desideri procedere?",
+    "registration_update_title": "Aggiornamento Registrazione",
+    "registration_update_text": "Abbiamo sospeso la creazione di nuovi account tramite il numero di telefono. Per continuare, dovrai scegliere tra un indirizzo email o il login tramite social network.",
+    "link_email_title": "Collega il tuo indirizzo email",
+    "link_email_text": "Abbiamo sospeso il login tramite il numero di telefono. Ti preghiamo di collegare il tuo indirizzo email e confermarlo per poter effettuare il login.",
+    "account_error_title": "Errore dell'account",
+    "account_error_text": "Abbiamo sospeso il login tramite il numero di telefono. Purtroppo, il tuo account non ha superato la verifica KYC ed è irrecuperabile.",
+    "login_via_email_title": "Effettua il login tramite email",
+    "login_via_email_text": "Abbiamo sospeso il login tramite il numero di telefono. Usa l'indirizzo email associato al tuo account per effettuare il login.",
+    "email_in_use_title": "Indirizzo email già in uso",
+    "email_in_use_text_part1": "L'indirizzo email che stai cercando di collegare è già in uso.",
+    "email_in_use_text_part2": "Se questo è il tuo indirizzo email, effettua prima il login con esso, completa il processo di registrazione e elimina quell'account per rendere disponibile l'indirizzo email, quindi torna al login tramite il numero di telefono per completare la procedura di collegamento.",
+    "successfully_linked_title": "Collegamento effettuato con successo!",
+    "successfully_linked_text": "L'indirizzo email è stato collegato con successo al tuo account."
   },
   "periods": {
     "3_days": "3 giorni",
@@ -1273,5 +1286,10 @@
         "description": "Congratulazioni, hai completato con successo la tua verifica. Ora sei idoneo per la distribuzione BNB Smart Chain."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Conferma dell'account",
+    "description": "Per verificare l'identità del tuo account e collegare in modo sicuro il tuo indirizzo email, assicurati di superare con successo il nostro controllo emotivo durante il processo di autenticazione.",
+    "description2": "Questo passaggio ci aiuta a garantire la sicurezza e l'autenticità del tuo account. Grazie per la tua collaborazione!"
   }
 }

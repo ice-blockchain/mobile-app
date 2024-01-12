@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "[[:amount]] 코인을 영원히 잃게 됩니다. 정말 계속하시겠습니까?",
     "resurrection_yes_confirm_message": "단 한 번만 되살릴 수 있습니다! 정말 계속하시겠습니까? 한 시간 안에 [[:amount]] 코인이 잔액에 반영될 것입니다.",
     "delete_account_confirmation_title": "삭제 확인",
-    "delete_account_confirmation_text": "계정을 삭제하면 Ice 잔액을 물론 모든 데이터가 영원히 지워집니다. 계속하시겠습니까?"
+    "delete_account_confirmation_text": "계정을 삭제하면 Ice 잔액을 물론 모든 데이터가 영원히 지워집니다. 계속하시겠습니까?",
+    "registration_update_title": "등록 업데이트",
+    "registration_update_text": "전화번호를 사용한 새 계정 생성을 일시 중단했습니다. 계속하려면 이메일 주소 또는 소셜 네트워크를 통한 로그인을 선택해야 합니다.",
+    "link_email_title": "이메일 주소 연결",
+    "link_email_text": "전화번호를 사용한 로그인을 일시 중단했습니다. 로그인하려면 이메일 주소를 연결하고 확인해야 합니다.",
+    "account_error_title": "계정 오류",
+    "account_error_text": "전화번호를 사용한 로그인을 일시 중단했습니다. 죄송하지만 귀하의 계정은 KYC 검증을 통과하지 못했으며 복구할 수 없습니다.",
+    "login_via_email_title": "이메일을 통해 로그인하세요",
+    "login_via_email_text": "전화번호를 사용한 로그인을 일시 중단했습니다. 계정에 연결된 이메일 주소를 사용하여 로그인하세요.",
+    "email_in_use_title": "이미 사용 중인 이메일 주소",
+    "email_in_use_text_part1": "연결하려는 이메일 주소는 이미 사용 중입니다.",
+    "email_in_use_text_part2": "이 이메일 주소가 귀하의 이메일 주소인 경우, 먼저 해당 이메일 주소로 로그인하고 등록 프로세스를 완료하고 해당 계정을 삭제하여 이메일을 사용 가능하게 한 다음 전화번호를 사용한 로그인으로 돌아가 연결 프로세스를 완료하세요.",
+    "successfully_linked_title": "성공적으로 연결되었습니다!",
+    "successfully_linked_text": "이메일이 계정에 성공적으로 연결되었습니다."
   },
   "periods": {
     "3_days": "3일",
@@ -1273,5 +1286,10 @@
         "description": "축하합니다, 당신은 성공적으로 검증을 완료하셨습니다. 이제 BNB Smart Chain 분배 자격이 부여됩니다."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "계정 확인",
+    "description": "귀하의 계정 신원을 확인하고 이메일을 안전하게 연결하려면 인증 프로세스 중 감정 검사를 성공적으로 통과해야 합니다.",
+    "description2": "이 단계는 귀하의 계정의 보안과 진정성을 보장하는 데 도움이 됩니다. 협조해 주셔서 감사합니다!"
   }
 }

@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "[[:amount]] koin Anda akan hilang selamanya. Yakin lanjutkan?",
     "resurrection_yes_confirm_message": "Anda hanya bisa pulih satu kali! Yakin lanjutkan? [[:amount]] koin akan kembali ke saldo Anda dalam satu jam berikutnya.",
     "delete_account_confirmation_title": "Konfirmasikan Penghapusan",
-    "delete_account_confirmation_text": "Semua data termasuk saldo Ice Anda akan hilang secara permanen apabila akun dihapus. Lanjutkan?"
+    "delete_account_confirmation_text": "Semua data termasuk saldo Ice Anda akan hilang secara permanen apabila akun dihapus. Lanjutkan?",
+    "registration_update_title": "Pembaruan Pendaftaran",
+    "registration_update_text": "Kami telah menangguhkan pembuatan akun baru menggunakan nomor telepon. Untuk melanjutkan, Anda perlu memilih antara alamat email atau login melalui jaringan sosial.",
+    "link_email_title": "Hubungkan alamat email Anda",
+    "link_email_text": "Kami telah menangguhkan login menggunakan nomor telepon. Silakan hubungkan alamat email Anda dan konfirmasi agar dapat login.",
+    "account_error_title": "Kesalahan Akun",
+    "account_error_text": "Kami telah menangguhkan login menggunakan nomor telepon. Sayangnya, akun Anda tidak berhasil melewati verifikasi KYC dan tidak dapat dipulihkan.",
+    "login_via_email_title": "Silakan login melalui email",
+    "login_via_email_text": "Kami telah menangguhkan login menggunakan nomor telepon. Silakan gunakan alamat email yang terhubung ke akun Anda untuk login.",
+    "email_in_use_title": "Email sudah digunakan",
+    "email_in_use_text_part1": "Alamat email yang Anda coba hubungkan sudah digunakan.",
+    "email_in_use_text_part2": "Jika ini adalah alamat email Anda, silakan login terlebih dahulu dengannya, selesaikan proses pendaftaran, dan hapus akun tersebut agar email tersedia, kemudian kembali ke login menggunakan nomor telepon untuk menyelesaikan proses penghubungan.",
+    "successfully_linked_title": "Berhasil dihubungkan!",
+    "successfully_linked_text": "Alamat email telah berhasil dihubungkan ke akun Anda."
   },
   "periods": {
     "3_days": "3 hari",
@@ -1273,5 +1286,10 @@
         "description": "Selamat, Anda telah berhasil menyelesaikan verifikasi Anda. Anda sekarang memenuhi syarat untuk distribusi BNB Smart Chain."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Konfirmasi Akun",
+    "description": "Untuk memverifikasi identitas akun Anda dan menghubungkan alamat email Anda secara aman, pastikan Anda berhasil melewati pemeriksaan emosi kami selama proses otentikasi.",
+    "description2": "Langkah ini membantu kami memastikan keamanan dan otentisitas akun Anda. Terima kasih atas kerjasamanya!"
   }
 }

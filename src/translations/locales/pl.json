@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Stracisz następującą liczbę monet na zawsze: [[:amount]]. Czy na pewno chcesz kontynuować?",
     "resurrection_yes_confirm_message": "Wskrzeszenie jest możliwe tylko raz! Czy na pewno chcesz kontynuować? Monety, które powrócą na saldo w ciągu następnej godziny: [[:amount]].",
     "delete_account_confirmation_title": "Potwierdź usunięcie",
-    "delete_account_confirmation_text": "Usunięcie konta spowoduje trwałe usunięcie wszystkich danych, w tym salda Ice. Czy chcesz kontynuować?"
+    "delete_account_confirmation_text": "Usunięcie konta spowoduje trwałe usunięcie wszystkich danych, w tym salda Ice. Czy chcesz kontynuować?",
+    "registration_update_title": "Aktualizacja rejestracji",
+    "registration_update_text": "Tymczasowo wstrzymaliśmy tworzenie nowych kont za pomocą numeru telefonu. Aby kontynuować, musisz wybrać adres e-mail lub logowanie za pomocą sieci społecznościowych.",
+    "link_email_title": "Połącz swój adres e-mail",
+    "link_email_text": "Tymczasowo wstrzymaliśmy logowanie za pomocą numeru telefonu. Proszę połącz swój adres e-mail i potwierdź go, aby móc się zalogować.",
+    "account_error_title": "Błąd konta",
+    "account_error_text": "Tymczasowo wstrzymaliśmy logowanie za pomocą numeru telefonu. Niestety twoje konto nie przeszło procesu KYC i nie jest uprawnione do odzyskania.",
+    "login_via_email_title": "Proszę zaloguj się za pomocą adresu e-mail",
+    "login_via_email_text": "Tymczasowo wstrzymaliśmy logowanie za pomocą numeru telefonu. Proszę użyj adresu e-mail powiązanego z twoim kontem, aby się zalogować.",
+    "email_in_use_title": "Adres e-mail jest już używany",
+    "email_in_use_text_part1": "Adres e-mail, który próbujesz połączyć, jest już używany.",
+    "email_in_use_text_part2": "Jeśli to jest twój adres e-mail, zaloguj się najpierw za jego pomocą, zakończ proces rejestracji i usuń to konto, aby uwolnić adres e-mail, a następnie wróć, aby zalogować się za pomocą numeru telefonu i ukończyć proces łączenia.",
+    "successfully_linked_title": "Pomyślnie połączono!",
+    "successfully_linked_text": "Adres e-mail został pomyślnie połączony z twoim kontem."
   },
   "periods": {
     "3_days": "3 dni",
@@ -1273,5 +1286,10 @@
         "description": "Gratulacje, ukończyłeś pomyślnie weryfikację. Teraz jesteś uprawniony do otrzymywania dystrybucji BNB Smart Chain."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Potwierdzenie konta",
+    "description": "Aby zweryfikować tożsamość twojego konta i bezpiecznie połączyć swój adres e-mail, upewnij się, że pomyślnie przejdziesz test emocji podczas procesu uwierzytelniania.",
+    "description2": "Ten krok pomaga nam zapewnić bezpieczeństwo i autentyczność twojego konta. Dziękujemy za współpracę!"
   }
 }

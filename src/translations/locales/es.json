@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Perderás tus [[:amount]] monedas para siempre. ¿Seguro que quieres continuar?",
     "resurrection_yes_confirm_message": "¡Solo puedes resucitar una vez! ¿Seguro que quieres continuar? Las [[:amount]] monedas volverán a tu saldo en la próxima hora.",
     "delete_account_confirmation_title": "Confirmar eliminación",
-    "delete_account_confirmation_text": "Al eliminar tu cuenta, se borrarán permanentemente todos tus datos, incluido tu saldo de Ice. ¿Quieres continuar?"
+    "delete_account_confirmation_text": "Al eliminar tu cuenta, se borrarán permanentemente todos tus datos, incluido tu saldo de Ice. ¿Quieres continuar?",
+    "registration_update_title": "Actualización de registro",
+    "registration_update_text": "Hemos suspendido la creación de nuevas cuentas utilizando el número de teléfono. Para continuar, deberá elegir una dirección de correo electrónico o iniciar sesión en una red social.",
+    "link_email_title": "Enlace su correo electrónico",
+    "link_email_text": "Hemos suspendido el inicio de sesión utilizando el número de teléfono. Por favor, enlace su dirección de correo electrónico y confírmela para poder iniciar sesión.",
+    "account_error_title": "Error de cuenta",
+    "account_error_text": "Hemos suspendido el inicio de sesión utilizando el número de teléfono. Lamentablemente, su cuenta no pasó la verificación KYC y no es elegible para su recuperación.",
+    "login_via_email_title": "Por favor, inicie sesión a través del correo electrónico",
+    "login_via_email_text": "Hemos suspendido el inicio de sesión utilizando el número de teléfono. Por favor, utilice el correo electrónico asociado a su cuenta para poder iniciar sesión.",
+    "email_in_use_title": "Correo electrónico ya en uso",
+    "email_in_use_text_part1": "La dirección de correo electrónico que está intentando enlazar ya está en uso.",
+    "email_in_use_text_part2": "Si esta es su dirección de correo electrónico, por favor, inicie sesión primero con ella, finalice el proceso de registro y elimine esa cuenta para liberar el correo electrónico, luego vuelva al inicio de sesión con el número de teléfono para completar el proceso de enlace.",
+    "successfully_linked_title": "¡Enlazado con éxito!",
+    "successfully_linked_text": "El correo electrónico se ha enlazado con éxito a su cuenta."
   },
   "periods": {
     "3_days": "3 días",
@@ -1273,5 +1286,10 @@
         "description": "Felicidades, ha completado con éxito su verificación. Ahora es elegible para la distribución de BNB Smart Chain."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Confirmación de cuenta",
+    "description": "Para verificar la identidad de su cuenta y enlazar su correo electrónico de manera segura, asegúrese de pasar con éxito nuestra verificación de emociones durante el proceso de autenticación.",
+    "description2": "Este paso nos ayuda a garantizar la seguridad y autenticidad de su cuenta. ¡Gracias por su cooperación!"
   }
 }

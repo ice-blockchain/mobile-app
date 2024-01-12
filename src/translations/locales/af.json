@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Jy sal jou [[:amount]] munte vir ewig verloor. Is jy seker jy wil voortgaan?",
     "resurrection_yes_confirm_message": "Jy kan net een keer opstaan! Is jy seker jy wil voortgaan? Die [[:amount]] munte sal binne die volgende uur na jou balans terugkeer.",
     "delete_account_confirmation_title": "Bevestig Skrap",
-    "delete_account_confirmation_text": "As jy jou rekening skrap, sal al jou data permanent uitgevee word, insluitend jou Ice balans. Wil jy voortgaan?"
+    "delete_account_confirmation_text": "As jy jou rekening skrap, sal al jou data permanent uitgevee word, insluitend jou Ice balans. Wil jy voortgaan?",
+    "registration_update_title": "Registrasie opdateer",
+    "registration_update_text": "Ons het die skep van nuwe rekeninge met behulp van die telefoonnommer opgeskort. Om voort te gaan, sal u 'n e-posadres of 'n aanmelding in 'n sosiale netwerk moet kies.",
+    "link_email_title": "Koppel u e-pos",
+    "link_email_text": "Ons het die aanmelding met die telefoonnommer opgeskort. Koppel asseblief u e-posadres en bevestig dit om aan te meld.",
+    "account_error_title": "Rekeningfout",
+    "account_error_text": "Ons het die aanmelding met die telefoonnommer opgeskort. Ongelukkig het u rekening nie KYC geslaag nie en is nie geregtig op herstel nie.",
+    "login_via_email_title": "Meld asseblief aan via e-pos",
+    "login_via_email_text": "Ons het die aanmelding met die telefoonnommer opgeskort. Gebruik asseblief die e-pos wat aan u rekening gekoppel is om aan te meld.",
+    "email_in_use_title": "E-pos alreeds in gebruik",
+    "email_in_use_text_part1": "Die e-posadres wat u probeer koppel, is reeds in gebruik.",
+    "email_in_use_text_part2": "Indien dit u e-posadres is, meld asseblief eers daarmee aan, voltooi die registrasieproses en verwyder daardie rekening om die e-pos beskikbaar te maak, keer dan terug na die aanmelding met die telefoonnommer om die koppelproses te voltooi.",
+    "successfully_linked_title": "Suksesvol gekoppel!",
+    "successfully_linked_text": "Die e-pos is suksesvol aan u rekening gekoppel"
   },
   "periods": {
     "3_days": "3 dae",
@@ -1276,5 +1289,10 @@
         "description": "Gelukwens, jy het jou verifikasie suksesvol voltooi. Jy kom nou in aanmerking vir die BNB Smart Chain-verspreiding."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Rekeningbevestiging",
+    "description": "Om u rekeningidentiteit te verifieer en u e-pos veilig te koppel, moet u verseker dat u suksesvol deur ons emosie-kontrole tydens die outentiseringsproses gaan.",
+    "description2": "Hierdie stap help ons om die veiligheid en egtheid van u rekening te verseker. Dankie vir u samewerking!"
   }
 }

@@ -627,7 +627,20 @@
     "resurrection_no_confirm_message": "Du vil miste dine [[:amount]]-mynter for alltid. Er du sikker på at du vil fortsette?",
     "resurrection_yes_confirm_message": "Du kan bare gjenopplive én gang! Er du sikker på at du vil fortsette? [[:amount]]-myntene vil gå tilbake til saldoen din i løpet av den neste timen.",
     "delete_account_confirmation_title": "Bekreft sletting",
-    "delete_account_confirmation_text": "Hvis du sletter kontoen din, slettes alle dataene dine permanent, inkludert Ice-saldoen. Vil du fortsette?"
+    "delete_account_confirmation_text": "Hvis du sletter kontoen din, slettes alle dataene dine permanent, inkludert Ice-saldoen. Vil du fortsette?",
+    "registration_update_title": "Oppdatering av registrering",
+    "registration_update_text": "Vi har midlertidig suspendert opprettelsen av nye kontoer ved bruk av telefonnummer. For å fortsette, må du velge enten en e-postadresse eller pålogging via sosiale nettverk.",
+    "link_email_title": "Koble til e-postadressen din",
+    "link_email_text": "Vi har midlertidig suspendert pålogging ved bruk av telefonnummer. Vennligst koble til e-postadressen din og bekreft den for å kunne logge inn.",
+    "account_error_title": "Konto-feil",
+    "account_error_text": "Vi har midlertidig suspendert pålogging ved bruk av telefonnummer. Dessverre har kontoen din ikke bestått KYC og er ikke kvalifisert for gjenoppretting.",
+    "login_via_email_title": "Vennligst logg inn via e-post",
+    "login_via_email_text": "Vi har midlertidig suspendert pålogging ved bruk av telefonnummer. Vennligst bruk e-postadressen som er knyttet til kontoen din for å kunne logge inn.",
+    "email_in_use_title": "E-postadressen er allerede i bruk",
+    "email_in_use_text_part1": "E-postadressen du prøver å koble til, er allerede i bruk.",
+    "email_in_use_text_part2": "Hvis dette er din e-postadresse, vennligst logg inn med den først, fullfør registreringsprosessen og slett den kontoen for å gjøre e-postadressen tilgjengelig, og gå deretter til pålogging med telefonnummer for å fullføre koblingsprosessen.",
+    "successfully_linked_title": "Vellykket koblet!",
+    "successfully_linked_text": "E-postadressen er nå vellykket koblet til kontoen din."
   },
   "periods": {
     "3_days": "3 dager",
@@ -1273,5 +1286,10 @@
         "description": "Gratulerer, du har fullført verifiseringen din med suksess. Du er nå kvalifisert for BNB Smart Chain-distribusjon."
       }
     }
+  },
+  "account_confirmation": {
+    "title": "Kontobekreftelse",
+    "description": "For å verifisere identiteten til kontoen din og trygt koble e-postadressen din, sørg for å bestå følelseskontrollen i autentiseringen.",
+    "description2": "Dette trinnet hjelper oss med å sikre sikkerheten og autentisiteten til kontoen din. Takk for samarbeidet ditt!"
   }
 }
