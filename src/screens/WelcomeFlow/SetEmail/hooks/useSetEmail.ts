@@ -1,18 +1,21 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {DEFAULT_DIALOG_NO_BUTTON} from '@components/Buttons/PopUpButton';
+import {AuthStackParamList} from '@navigation/Auth';
 import {WelcomeStackParamList} from '@navigation/Welcome';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {AccountActions} from '@store/modules/Account/actions';
+import {isOnboardingViewedSelector} from '@store/modules/Users/selectors';
 import {
   failedReasonSelector,
   isLoadingSelector,
+  isSuccessSelector,
 } from '@store/modules/UtilityProcessStatuses/selectors';
 import {ValidationActions} from '@store/modules/Validation/actions';
 import {migrationUserIdSelector} from '@store/modules/Validation/selectors';
 import {t} from '@translations/i18n';
-import {useCallback, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import {Keyboard} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
@@ -21,7 +24,14 @@ export const useSetEmail = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
 
-  const isPhoneMigrationFlow = useSelector(migrationUserIdSelector);
+  const authNavigation =
+    useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
+
+  const migrationUserId = useSelector(migrationUserIdSelector);
+
+  const isViewedAgreement = useSelector(
+    isOnboardingViewedSelector(migrationUserId),
+  );
 
   const updateError = useSelector(
     failedReasonSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
@@ -42,14 +52,28 @@ export const useSetEmail = () => {
     isLoadingSelector.bind(null, AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL),
   );
 
+  const isSuccessMigration = useSelector(
+    isSuccessSelector.bind(null, AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL),
+  );
+
   const [email, setEmail] = useState('');
 
   const onChangeEmail = (text: string) => {
     setEmail(text);
   };
 
+  useEffect(() => {
+    if (isSuccessMigration) {
+      if (isViewedAgreement) {
+        authNavigation.replace('AccountConfirmation');
+      } else {
+        //TODO: show emotions
+      }
+    }
+  }, [isSuccessMigration, isViewedAgreement, authNavigation]);
+
   const onBack = () => {
-    if (isPhoneMigrationFlow) {
+    if (migrationUserId) {
       dispatch(AccountActions.SIGN_IN_PHONE.RESET.create());
     }
     navigation.goBack();
@@ -57,7 +81,7 @@ export const useSetEmail = () => {
 
   const sendVerificationEmail = useCallback(() => {
     Keyboard.dismiss();
-    if (isPhoneMigrationFlow) {
+    if (migrationUserId) {
       dispatch(
         AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.START.create(email),
       );
@@ -65,10 +89,10 @@ export const useSetEmail = () => {
       dispatch(ValidationActions.EMAIL_VALIDATION.RESET.create());
       dispatch(AccountActions.MODIFY_EMAIL_WITH_LINK.START.create(email));
     }
-  }, [dispatch, email, isPhoneMigrationFlow]);
+  }, [dispatch, email, migrationUserId]);
 
   const onSubmitPress = useCallback(() => {
-    if (isPhoneMigrationFlow) {
+    if (migrationUserId) {
       sendVerificationEmail();
     } else {
       navigation.navigate({
@@ -89,7 +113,7 @@ export const useSetEmail = () => {
         },
       });
     }
-  }, [navigation, sendVerificationEmail, isPhoneMigrationFlow]);
+  }, [navigation, sendVerificationEmail, migrationUserId]);
 
   return {
     email,

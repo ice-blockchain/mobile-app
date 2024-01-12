@@ -13,6 +13,7 @@ import {ConfirmEmailLink} from '@screens/AuthFlow/ConfirmEmailLink';
 import {ConfirmPhone} from '@screens/AuthFlow/ConfirmPhone';
 import {InvalidLink} from '@screens/AuthFlow/InvalidLink';
 import {SignIn} from '@screens/AuthFlow/SignIn';
+import {AccountConfirmation} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/AccountConfirmation';
 import {CountrySelect} from '@screens/Modals/CountrySelect';
 import {PopUp, PopUpProps} from '@screens/Modals/PopUp';
 import {SetEmail} from '@screens/WelcomeFlow/SetEmail';
@@ -35,6 +36,7 @@ export type AuthStackParamList = {
   InvalidLink: undefined;
   PopUp: PopUpProps;
   SetEmail: undefined;
+  AccountConfirmation: undefined;
 };
 
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
@@ -84,6 +86,10 @@ export function AuthNavigator() {
       <AuthStack.Screen name="InvalidLink" component={InvalidLink} />
       <AuthStack.Screen name="PopUp" options={modalOptions} component={PopUp} />
       <AuthStack.Screen name="SetEmail" component={SetEmail} />
+      <AuthStack.Screen
+        name="AccountConfirmation"
+        component={AccountConfirmation}
+      />
     </AuthStack.Navigator>
   );
 }

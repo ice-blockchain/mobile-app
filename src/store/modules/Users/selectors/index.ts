@@ -8,3 +8,7 @@ export const userByIdSelector = (userId: string) => (state: RootState) =>
 export const isOnboardingViewedSelector =
   (userId: string | undefined) => (state: RootState) =>
     state.users.onboardingIds.includes(userId || '');
+
+export const isMigrationAgreementViewedSelector =
+  (userId: string | undefined) => (state: RootState) =>
+    state.users.migrationAgreementIds.includes(userId || '');

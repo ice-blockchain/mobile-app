@@ -11,12 +11,14 @@ export interface State {
   entities: {[userId: string]: User};
   error: string | null;
   onboardingIds: string[];
+  migrationAgreementIds: string[];
 }
 
 type Actions = ReturnType<
   | typeof UsersActions.GET_USER_BY_ID.SUCCESS.create
   | typeof UsersActions.GET_USER_BY_ID.FAILED.create
   | typeof UsersActions.UPDATE_VIEWED_ONBOARDINGS.STATE.create
+  | typeof UsersActions.UPDATE_VIEWED_MIGRATION_AGREEMENT.STATE.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
 >;
 
@@ -24,6 +26,7 @@ const INITIAL_STATE: State = {
   entities: {},
   error: null,
   onboardingIds: [],
+  migrationAgreementIds: [],
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -46,6 +49,16 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         }
         break;
 
+      case UsersActions.UPDATE_VIEWED_MIGRATION_AGREEMENT.STATE.type:
+        const {migrationUserId} = action.payload;
+        if (!state.migrationAgreementIds.includes(migrationUserId)) {
+          draft.migrationAgreementIds = [
+            ...state.migrationAgreementIds,
+            migrationUserId,
+          ];
+        }
+        break;
+
       case AccountActions.SIGN_OUT.SUCCESS.type: {
         return {
           ...INITIAL_STATE,
@@ -60,7 +73,7 @@ export const usersReducer = persistReducer(
   {
     key: 'users',
     storage: AsyncStorage,
-    whitelist: ['onboardingIds'],
+    whitelist: ['onboardingIds', 'migrationAgreementIds'],
   },
   reducer,
 );

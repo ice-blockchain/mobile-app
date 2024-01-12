@@ -18,7 +18,7 @@ export interface State {
   temporaryEmailCode: string | null;
   temporaryEmailVerificationStep: 'email' | 'link' | 'code';
   emailSentTimestamp: number | null;
-  temporaryMigrationUserId: string | null;
+  temporaryMigrationUserId: string | undefined;
   temporaryMigrationPhoneNumber: string | undefined;
 }
 
@@ -65,7 +65,7 @@ const INITIAL_STATE: State = {
   temporaryEmailCode: null,
   emailSentTimestamp: null,
   temporaryEmailVerificationStep: 'email',
-  temporaryMigrationUserId: null,
+  temporaryMigrationUserId: undefined,
   temporaryMigrationPhoneNumber: undefined,
 };
 
@@ -118,7 +118,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.temporaryVerificationId = null;
         draft.temporaryPhoneNumber = null;
         draft.temporaryPhoneVerificationStep = 'phone';
-        draft.temporaryMigrationUserId = null;
+        draft.temporaryMigrationUserId = undefined;
         draft.temporaryMigrationPhoneNumber = undefined;
         break;
       case ValidationActions.EMAIL_VALIDATION.SUCCESS.type:

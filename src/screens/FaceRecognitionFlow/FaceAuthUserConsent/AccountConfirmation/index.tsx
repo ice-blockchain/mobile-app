@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PopUpButton} from '@components/Buttons/PopUpButton';
 import {CheckBox} from '@components/CheckBox';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
@@ -9,7 +10,6 @@ import {
   BUTTON_WIDTH,
   FOOTER_PADDING_HORIZONTAL,
 } from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/constants';
-import {PopUpButton} from '@screens/Modals/PopUp/components/PopUpButton';
 import {FaceAuthIcon} from '@svg/FaceAuthIcon';
 import {replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
