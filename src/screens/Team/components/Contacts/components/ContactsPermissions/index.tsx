@@ -3,6 +3,7 @@
 import {IceLabel} from '@components/Labels/IceLabel';
 import {TagWrapper} from '@components/TagWrapper';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {useBottomTabBarOffsetStyle} from '@navigation/hooks/useBottomTabBarOffsetStyle';
 import {AllowContactsButton} from '@screens/Team/components/Contacts/components/ContactsPermissions/components/AllowContactsButton';
 import {useAllowContactsWalkthrough} from '@screens/Team/components/Contacts/components/ContactsPermissions/hooks/useAllowContactsWalkthrough';
@@ -42,7 +43,9 @@ export const ContactsPermissions = () => {
       <View style={styles.descriptionContainer}>
         <Text style={styles.description}>
           {replaceString(
-            t('team.contacts.empty_description'),
+            isLightDesign
+              ? t('override.team.contacts.empty_description')
+              : t('team.contacts.empty_description'),
             tagRegex('ice'),
             (match, index) => (
               <IceLabel

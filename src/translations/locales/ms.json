@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Pastikan anda memasukkan nama panggilan yang betul."
+      "dontHaveInvitationCode": "Pastikan anda memasukkan nama panggilan yang betul.",
+      "description": "Masukkan nama panggilan rakan yang menjemput anda."
     },
     "home": {
       "pioneer": {
-        "description": "Jejak kemajuan dan status global anda"
+        "description": "Jejak kemajuan dan status global anda",
+        "referrals": "RAKAN-RAMAI"
       },
       "tasks": {
         "invite_friends": {
           "description": "Kembangkan pasukan anda dan bina komuniti"
         }
+      },
+      "team": {
+        "title": "Rakan-rakan",
+        "view_team": "lihat rakan-rakan"
+      },
+      "roadmap": {
+        "button_subtitle": "Dapatkan maklumat lanjut tentang wawasan masa depan kami di Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Dapatkan gambaran awal tentang aplikasi Mainnet kami yang akan datang dan ciri-ciri uniknya yang akan dilancarkan pada penghujung 2024."
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "Baki semasa anda dikemaskini setiap jam dan dipaparkan di sini. Ia termasuk pendapatan terus dan pendapatan staked anda."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "Rakan-rakan anda perlu menggunakan nama panggilan ini apabila menyertai [[:ice]]."
+    },
+    "users": {
+      "team": "Rakan-rakan"
+    },
+    "team": {
+      "empty": {
+        "team": "Pada masa ini, anda tidak mempunyai rakan-rakan!"
+      },
+      "contacts": {
+        "empty_description": "Selaraskan kenalan anda dan lihat siapa yang sudah ada di [[:ice]]."
       }
     }
   },

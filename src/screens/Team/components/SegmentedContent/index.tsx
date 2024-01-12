@@ -67,7 +67,7 @@ export const SegmentedContent = memo(
             <View style={styles.flex}>
               <TierList
                 referralType={isLiteTeam && isTeamEnabled ? 'TEAM' : 'T1'}
-                emptyTitle={t('team.empty.team')}
+                emptyTitle={t('override.team.empty.team')}
                 focused={activeIndex === LiteSegmentIndex.Team}
                 addCollapsedSnapPointListener={addCollapsedSnapPointListener}
               />

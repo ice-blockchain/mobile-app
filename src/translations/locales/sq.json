@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Ju lutemi sigurohuni që keni vendosur një emër të saktë."
+      "dontHaveInvitationCode": "Ju lutemi sigurohuni që keni vendosur një emër të saktë.",
+      "description": "Vendosni pseudonimin e miqës që ju ftoi."
     },
     "home": {
       "pioneer": {
-        "description": "Ndjekni progresin tuaj dhe statusin global"
+        "description": "Ndjekni progresin tuaj dhe statusin global",
+        "referrals": "MIQTË"
       },
       "tasks": {
         "invite_friends": {
           "description": "Rritni ekipin tuaj dhe ndërtoni një komunitet"
         }
+      },
+      "team": {
+        "title": "Miqtë",
+        "view_team": "shiko miqtë"
+      },
+      "roadmap": {
+        "button_subtitle": "Merrni më shumë informacion mbi vizionin tonë të ardhshëm në Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Merrni një shikim paraprak në aplikacionin tonë Mainnet të ardhshëm dhe veçoritë unike të tij që do të lansohen në fund të vitit 2024."
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "Bilanci juaj aktual përditësohet çdo orë dhe shfaqet këtu. Përfshin të ardhurat tuaja të drejtpërdrejta dhe të bllokuara."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "Miqtë tuaj duhet të përdorin këtë pseudonim kur bashkohen me [[:ice]]."
+    },
+    "users": {
+      "team": "Miqtë"
+    },
+    "team": {
+      "empty": {
+        "team": "Momentalisht nuk keni miq!"
+      },
+      "contacts": {
+        "empty_description": "Sinkronizoni kontaktet tuaja dhe shikoni kush është već në [[:ice]]."
       }
     }
   },

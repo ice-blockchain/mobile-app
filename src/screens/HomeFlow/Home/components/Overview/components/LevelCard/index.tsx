@@ -4,7 +4,7 @@ import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {isLiteTeam} from '@constants/featureFlags';
+import {isLightDesign, isLiteTeam} from '@constants/featureFlags';
 import {Images} from '@images';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -36,12 +36,12 @@ import {
   TextProps,
   View,
 } from 'react-native';
-import Animated from 'react-native-reanimated';
+import {SharedValue} from 'react-native-reanimated';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 interface Props {
-  sharedIsCollapsed: Animated.SharedValue<number>;
+  sharedIsCollapsed: SharedValue<number>;
   onLayout?: (event: LayoutChangeEvent) => void;
 }
 
@@ -65,11 +65,15 @@ export const LevelCard = forwardRef(
     );
 
     const onPressReferrals = () => {
-      navigation.navigate('ProfileTab');
+      if (!isLightDesign) {
+        navigation.navigate('ProfileTab');
+      }
     };
 
     const onPressRank = () => {
-      navigation.navigate('Stats');
+      if (!isLightDesign) {
+        navigation.navigate('Stats');
+      }
     };
 
     const Header = useCallback(
@@ -110,7 +114,11 @@ export const LevelCard = forwardRef(
           <Touchable
             style={[styles.column, styles.columnLeft]}
             onPress={onPressReferrals}>
-            <Text style={styles.labelText}>{t('home.pioneer.referrals')}</Text>
+            <Text style={styles.labelText}>
+              {isLightDesign
+                ? t('override.home.pioneer.referrals')
+                : t('home.pioneer.referrals')}
+            </Text>
             <AnimatedNumberText
               value={userReferralCount}
               style={styles.valueText}
@@ -129,17 +137,19 @@ export const LevelCard = forwardRef(
           </Touchable>
         </View>
         <View style={styles.bottomContainer}>
-          <Text style={styles.noteText}>
-            {replaceString(
-              isLiteTeam
-                ? t('override.home.pioneer.description')
-                : t('home.pioneer.description'),
-              tagRegex('ice'),
-              (match, index) => (
-                <IceLabel key={match + index} iconSize={12} />
-              ),
-            )}
-          </Text>
+          {isLightDesign ? null : (
+            <Text style={styles.noteText}>
+              {replaceString(
+                isLiteTeam
+                  ? t('override.home.pioneer.description')
+                  : t('home.pioneer.description'),
+                tagRegex('ice'),
+                (match, index) => (
+                  <IceLabel key={match + index} iconSize={12} />
+                ),
+              )}
+            </Text>
+          )}
         </View>
       </CardBase>
     );

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {isLiteTeam} from '@constants/featureFlags';
+import {isLightDesign} from '@constants/featureFlags';
 import {WELCOME_STEPS, WelcomeStackParamList} from '@navigation/Welcome';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -19,6 +19,12 @@ import {
 } from '@store/modules/UtilityProcessStatuses/selectors';
 import {useCallback, useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
+
+const LIGHT_DESIGN_EXCLUDED_SLIDES = new Set([
+  'stayConnected',
+  'referAndEarn',
+  'notifications',
+]);
 
 export const useFinishOnboarding = () => {
   const [slides, setSlides] = useState<OnboardingSlide[]>([]);
@@ -74,8 +80,10 @@ export const useFinishOnboarding = () => {
         slide => slide.key !== 'notifications',
       );
     }
-    if (isLiteTeam) {
-      slidesToShow = slidesToShow.filter(slide => slide.key !== 'referAndEarn');
+    if (isLightDesign) {
+      slidesToShow = slidesToShow.filter(
+        slide => !LIGHT_DESIGN_EXCLUDED_SLIDES.has(slide.key),
+      );
     }
     setSlides(slidesToShow);
   }, [canAskNotificationPermission]);

@@ -2,6 +2,7 @@
 
 import {Avatar} from '@components/Avatar/Avatar';
 import {Touchable} from '@components/Touchable';
+import {isLightDesign} from '@constants/featureFlags';
 import {MainTabsParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -39,7 +40,9 @@ export const UserGreeting = ({disabled, animatedStyle}: UserGreetingProps) => {
   const {chevronRef, showTooltip} = useVerifiedTooltip(1);
 
   const openProfile = () => {
-    navigation.navigate('ProfileTab');
+    if (!isLightDesign) {
+      navigation.navigate('ProfileTab');
+    }
   };
 
   return (

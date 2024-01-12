@@ -13,3 +13,4 @@ export const isLinkPhoneNumberEnabled = false;
 export const isChangePhoneNumberEnabled = false;
 
 export const isLiteTeam = isIOS;
+export const isLightDesign = isIOS;

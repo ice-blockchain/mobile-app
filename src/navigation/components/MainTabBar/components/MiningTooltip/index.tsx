@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useIsEnglishLocale} from '@hooks/useIsEnglishLocale';
 import {MiningInfo} from '@navigation/components/MainTabBar/components/MiningTooltip/components/MiningInfo';
@@ -43,7 +44,9 @@ export const MiningTooltip = () => {
     <View
       style={[styles.container, isPreStakingActive && styles.container_big]}>
       <MiningInfo oneColumn={oneColumn} />
-      {isPreStakingActive ? (
+      {isLightDesign ? (
+        <View style={styles.bottomContainer} />
+      ) : isPreStakingActive ? (
         <PreStakingInfo oneColumn={oneColumn} />
       ) : (
         <PreStakingCall oneColumn={oneColumn} />
@@ -61,5 +64,8 @@ const styles = StyleSheet.create({
   },
   container_big: {
     paddingTop: STACK_MAN_HEIGHT - STACK_MAN_OVERFLOW,
+  },
+  bottomContainer: {
+    marginTop: rem(28),
   },
 });

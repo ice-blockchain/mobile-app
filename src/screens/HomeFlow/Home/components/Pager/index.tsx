@@ -2,6 +2,7 @@
 
 import {PagerIndicators} from '@components/PagerIndicators';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {commonStyles} from '@constants/styles';
 import {HomeTabStackParamList} from '@navigation/Main';
 import {RouteProp, useRoute} from '@react-navigation/native';
@@ -11,9 +12,8 @@ import {MiningRate} from '@screens/HomeFlow/Home/components/Pager/components/Min
 import {Wallet} from '@screens/HomeFlow/Home/components/Pager/components/Wallet';
 import {usePagerCardsWalkthrough} from '@screens/HomeFlow/Home/components/Pager/hooks/usePagerCardsWalkthrough';
 import {ActivePagerCard} from '@screens/HomeFlow/Home/types';
-import React, {memo, useEffect, useRef, useState} from 'react';
-import {PixelRatio} from 'react-native';
-import {StyleSheet, View} from 'react-native';
+import React, {memo, useEffect, useMemo, useRef, useState} from 'react';
+import {PixelRatio, StyleSheet, View} from 'react-native';
 import PagerView, {PagerViewOnPageSelectedEvent} from 'react-native-pager-view';
 import {rem} from 'rn-units';
 
@@ -54,6 +54,24 @@ export const Pager = memo(() => {
 
   const {onElementLayout, elementRef} = usePagerCardsWalkthrough();
 
+  const pages = useMemo(
+    () =>
+      [
+        <View key={'wallet'} style={styles.slide}>
+          <Wallet />
+        </View>,
+        isLightDesign ? null : (
+          <View key={'mining_rate'} style={styles.slide}>
+            <MiningRate />
+          </View>
+        ),
+        <View key={'engagement'} style={styles.slide}>
+          <Engagement />
+        </View>,
+      ].filter(Boolean),
+    [],
+  );
+
   return (
     <View
       style={[commonStyles.baseSubScreen, styles.container]}
@@ -64,20 +82,12 @@ export const Pager = memo(() => {
         initialPage={activeIndex}
         onPageSelected={onPageChange}
         style={styles.pager}>
-        <View style={styles.slide}>
-          <Wallet />
-        </View>
-        <View style={styles.slide}>
-          <MiningRate />
-        </View>
-        <View style={styles.slide}>
-          <Engagement />
-        </View>
+        {pages}
       </PagerView>
       <PagerIndicators
         activeIndex={activeIndex}
         style={styles.indicators}
-        total={3}
+        total={pages.length}
       />
     </View>
   );

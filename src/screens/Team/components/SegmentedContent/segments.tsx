@@ -40,7 +40,7 @@ export const SEGMENTS: Readonly<SegmentData[]> = isLiteTeam
         renderText: (active: boolean) => {
           return (
             <TeamSectionSegmentHeader
-              headerText={t('users.team')}
+              headerText={t('override.users.team')}
               active={active}
               icon={
                 <View style={styles.tierIcon}>

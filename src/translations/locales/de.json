@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Bitte stellen Sie sicher, dass Sie den richtigen Spitznamen eingeben."
+      "dontHaveInvitationCode": "Bitte stellen Sie sicher, dass Sie den richtigen Spitznamen eingeben.",
+      "description": "Geben Sie den Spitznamen Ihres Freundes ein, der Sie eingeladen hat."
     },
     "home": {
       "pioneer": {
-        "description": "Verfolgen Sie Ihren Fortschritt und Ihren globalen Status"
+        "description": "Verfolgen Sie Ihren Fortschritt und Ihren globalen Status",
+        "referrals": "FREUNDE"
       },
       "tasks": {
         "invite_friends": {
           "description": "Erweitern Sie Ihr Team und bauen Sie eine Gemeinschaft auf"
         }
+      },
+      "team": {
+        "title": "Freunde",
+        "view_team": "Freunde anzeigen"
+      },
+      "roadmap": {
+        "button_subtitle": "Erfahren Sie mehr über unsere zukünftige Vision bei Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Erhalten Sie einen exklusiven Einblick in unsere zukünftige Mainnet-App und ihre einzigartigen Funktionen, die Ende 2024 veröffentlicht wird."
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "Ihr aktuelles Guthaben wird stündlich aktualisiert und hier angezeigt. Es umfasst Ihre direkten und angelegten Einnahmen."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "Ihre Freunde müssen diesen Spitznamen verwenden, wenn sie sich bei [[:ice]] anmelden."
+    },
+    "users": {
+      "team": "Freunde"
+    },
+    "team": {
+      "empty": {
+        "team": "Sie haben derzeit keine Freunde!"
+      },
+      "contacts": {
+        "empty_description": "Synchronisieren Sie Ihre Kontakte und sehen Sie, wer bereits auf [[:ice]] ist."
       }
     }
   },

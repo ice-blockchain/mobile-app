@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Kérjük, győződjön meg róla, hogy helyes becenévet adott meg."
+      "dontHaveInvitationCode": "Kérjük, győződjön meg róla, hogy helyes becenévet adott meg.",
+      "description": "Add meg azt a barátod becenévét, aki meghívott téged."
     },
     "home": {
       "pioneer": {
-        "description": "Kövesse nyomon haladását és globális helyzetét"
+        "description": "Kövesse nyomon haladását és globális helyzetét",
+        "referrals": "BARÁTOK"
       },
       "tasks": {
         "invite_friends": {
           "description": "Növelje csapatát és építsen közösséget"
         }
+      },
+      "team": {
+        "title": "Barátok",
+        "view_team": "barátok megtekintése"
+      },
+      "roadmap": {
+        "button_subtitle": "Tudj meg többet a jövőbeli víziónkról az Ice-nál."
+      },
+      "join_mainnet": {
+        "subtitle": "Láss betekintést a jövőbeli Mainnet alkalmazásunkba és annak egyedi funkcióiba, amelyeket 2024 végén fogunk kiadni."
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "Jelenlegi egyenlegét minden órában frissítik és itt jelenítik meg. Tartalmazza közvetlen és befektetett keresetét."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "A barátaidnak ezt a becenévet kell használniuk, amikor csatlakoznak a [[:ice]]-hez."
+    },
+    "users": {
+      "team": "Barátok"
+    },
+    "team": {
+      "empty": {
+        "team": "Jelenleg nincsenek barátaid!"
+      },
+      "contacts": {
+        "empty_description": "Szinkronizáld a kapcsolataidat, és nézd meg, ki van már [[:ice]]-on."
       }
     }
   },

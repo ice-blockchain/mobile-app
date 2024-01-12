@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {isLightDesign} from '@constants/featureFlags';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Info} from '@screens/Team/components/Header/components/Info';
 import {Search} from '@screens/Team/components/Header/components/Search';
@@ -57,7 +58,7 @@ export const Header = memo(({isSearchActive, setIsSearchActive}: Props) => {
         onClosePress={onClosePress}
         onFocus={onFocus}
       />
-      <Info />
+      {isLightDesign ? null : <Info />}
     </View>
   );
 });

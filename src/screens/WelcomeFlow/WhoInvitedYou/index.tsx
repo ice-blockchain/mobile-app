@@ -3,7 +3,7 @@
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {CommonInput} from '@components/Inputs/CommonInput';
 import {COLORS} from '@constants/colors';
-import {isLiteTeam} from '@constants/featureFlags';
+import {isLightDesign, isLiteTeam} from '@constants/featureFlags';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {FinalizeRegistrationStep} from '@screens/Templates/FinalizeRegistrationStep';
 import {BigHeader} from '@screens/Templates/FinalizeRegistrationStep/components/BigHeader';
@@ -36,7 +36,11 @@ export const WhoInvitedYou = () => {
       header={
         <BigHeader
           title={t('whoInvitedYou.title')}
-          description={t('whoInvitedYou.description')}
+          description={
+            isLightDesign
+              ? t('override.whoInvitedYou.description')
+              : t('whoInvitedYou.description')
+          }
           progressPercentage={33}
         />
       }

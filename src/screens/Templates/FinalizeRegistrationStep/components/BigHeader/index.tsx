@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {IceLabel} from '@components/Labels/IceLabel';
 import {ProgressBar} from '@components/ProgressBar';
 import {useTopOffsetStyle} from '@hooks/useTopOffsetStyle';
+import {replaceString, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {ReactNode} from 'react';
 import {
@@ -13,7 +15,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import {hasNotch} from 'react-native-device-info';
-import {rem} from 'rn-units';
+import {isAndroid, rem} from 'rn-units';
 
 type Props = {
   title: string;
@@ -41,7 +43,15 @@ export const BigHeader = ({
         <View style={styles.body}>
           <Text style={[styles.titleText, titleStyle]}>{title}</Text>
           <Text style={[styles.descriptionText, descriptionStyle]}>
-            {description}
+            {typeof description === 'string'
+              ? replaceString(description, tagRegex('ice'), (match, index) => (
+                  <IceLabel
+                    key={match + index}
+                    iconSize={18}
+                    iconOffsetY={isAndroid ? 4 : 3}
+                  />
+                ))
+              : description}
           </Text>
         </View>
         <ProgressBar

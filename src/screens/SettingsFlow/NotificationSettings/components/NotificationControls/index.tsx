@@ -5,6 +5,7 @@ import {
   NotificationDeliveryChannel,
   NotificationDomainToggles,
 } from '@api/notifications/types';
+import {isLightDesign} from '@constants/featureFlags';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -23,6 +24,14 @@ type Props = {
   notificationSettings: NotificationDomainToggles;
   notificationDeliveryChannel: NotificationDeliveryChannel;
 };
+
+const LIGHT_DESIGN_NOTIFICATION_TYPES = new Set([
+  'disable_all',
+  'weekly_stats',
+  'weekly_report',
+  'news',
+  'system',
+]);
 
 export const NotificationControls = ({
   notificationSettings,
@@ -89,45 +98,52 @@ export const NotificationControls = ({
   );
   return (
     <View style={styles.notificationsContainer}>
-      {notificationSettings.map(({type, enabled}) => {
-        if (type === DISABLE_ALL_NOTIFICATION_DOMAIN) {
-          return (
-            <AllNotifications
-              key={type}
-              label={
-                isPushNotificationChannel
-                  ? t('settings.push_notifications_title')
-                  : t('settings.email_notifications_title')
-              }
-              value={
-                !enabled && (!isPushNotificationChannel || hasPushPermissions)
-              }
-              onValueChange={(value: boolean) => {
-                if (value) {
-                  changeNotificationSettings(
-                    DISABLE_ALL_NOTIFICATION_DOMAIN,
-                    false,
-                  );
-                } else {
-                  onDisableAllNotifications();
+      {notificationSettings
+        .filter(({type}) => {
+          if (isLightDesign) {
+            return LIGHT_DESIGN_NOTIFICATION_TYPES.has(type);
+          }
+          return true;
+        })
+        .map(({type, enabled}) => {
+          if (type === DISABLE_ALL_NOTIFICATION_DOMAIN) {
+            return (
+              <AllNotifications
+                key={type}
+                label={
+                  isPushNotificationChannel
+                    ? t('settings.push_notifications_title')
+                    : t('settings.email_notifications_title')
                 }
-              }}
+                value={
+                  !enabled && (!isPushNotificationChannel || hasPushPermissions)
+                }
+                onValueChange={(value: boolean) => {
+                  if (value) {
+                    changeNotificationSettings(
+                      DISABLE_ALL_NOTIFICATION_DOMAIN,
+                      false,
+                    );
+                  } else {
+                    onDisableAllNotifications();
+                  }
+                }}
+              />
+            );
+          }
+          return (
+            <NotificationRow
+              key={type}
+              onPress={() => changeNotificationSettings(type, !enabled)}
+              type={type}
+              checked={enabled}
+              disabled={
+                !!disableAll?.enabled ||
+                (isPushNotificationChannel && !hasPushPermissions)
+              }
             />
           );
-        }
-        return (
-          <NotificationRow
-            key={type}
-            onPress={() => changeNotificationSettings(type, !enabled)}
-            type={type}
-            checked={enabled}
-            disabled={
-              !!disableAll?.enabled ||
-              (isPushNotificationChannel && !hasPushPermissions)
-            }
-          />
-        );
-      })}
+        })}
     </View>
   );
 };

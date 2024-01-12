@@ -1157,16 +1157,42 @@
   },
   "override": {
     "whoInvitedYou": {
+      "description": "Enter the nickname of the friend who invited you.",
       "dontHaveInvitationCode": "Please make sure you enter the correct nickname."
+    },
+    "claimUsername": {
+      "description": "Your friends will need to use this nickname when joining [[:ice]]."
+    },
+    "users": {
+      "team": "Friends"
     },
     "home": {
       "pioneer": {
-        "description": "Track your progress and global status"
+        "description": "Track your progress and global status",
+        "referrals": "FRIENDS"
       },
       "tasks": {
         "invite_friends": {
           "description": "Grow your team and build a community"
         }
+      },
+      "team": {
+        "title": "Friends",
+        "view_team": "view friends"
+      },
+      "roadmap": {
+        "button_subtitle": "Learn more about our future vision at Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Get a sneak peak of our future Mainnet app and its unique features, to be released at the end of 2024."
+      }
+    },
+    "team": {
+      "empty": {
+        "team": "You currently don't have any friends!"
+      },
+      "contacts": {
+        "empty_description": "Sync your contacts and see who is already on [[:ice]]."
       }
     },
     "settings": {

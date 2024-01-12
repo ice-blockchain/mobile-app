@@ -4,6 +4,7 @@ import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {smallHeightDevice} from '@constants/styles';
+import {OnboardingSlide} from '@screens/WelcomeFlow/Onboarding/slides';
 import {PermissionsActions} from '@store/modules/Permissions/actions';
 import {canAskPermissionSelector} from '@store/modules/Permissions/selectors';
 import {t} from '@translations/i18n';
@@ -16,22 +17,29 @@ import {rem} from 'rn-units';
 type Props = {
   isLastPage: boolean;
   goNextPage: () => void;
+  slide: OnboardingSlide;
   finishOnboarding: () => void;
 };
 
-export const Controls = ({isLastPage, goNextPage, finishOnboarding}: Props) => {
+export const Controls = ({
+  isLastPage,
+  goNextPage,
+  finishOnboarding,
+  slide,
+}: Props) => {
   const dispatch = useDispatch();
 
   const canAskNotificationPermission = useSelector(
     canAskPermissionSelector('pushNotifications'),
   );
 
-  const showNotNow = isLastPage && canAskNotificationPermission;
+  const canRequestNotificationPermission =
+    canAskNotificationPermission && slide.key === 'notifications';
 
   return (
     <View style={styles.container}>
       <View style={styles.buttons}>
-        {showNotNow && (
+        {canRequestNotificationPermission && (
           <Touchable onPress={finishOnboarding}>
             <Text style={styles.linkText}>{t('welcome.page6.not_now')}</Text>
           </Touchable>
@@ -39,19 +47,22 @@ export const Controls = ({isLastPage, goNextPage, finishOnboarding}: Props) => {
         <PrimaryButton
           text={t('button.next_step')}
           onPress={() => {
-            if (showNotNow) {
+            if (canRequestNotificationPermission) {
               dispatch(
                 PermissionsActions.GET_PERMISSIONS.START.create(
                   'pushNotifications',
                 ),
               );
-            } else if (isLastPage && !canAskNotificationPermission) {
+            } else if (isLastPage) {
               finishOnboarding();
             } else {
               goNextPage();
             }
           }}
-          style={[styles.button, showNotNow && styles.button_small]}
+          style={[
+            styles.button,
+            canRequestNotificationPermission && styles.button_small,
+          ]}
         />
       </View>
     </View>

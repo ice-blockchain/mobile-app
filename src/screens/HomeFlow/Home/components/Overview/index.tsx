@@ -4,6 +4,7 @@ import {InviteButton} from '@components/Buttons/InviteButton';
 import {FlipCard, FlipCardMethods} from '@components/FlipCard';
 import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {DISTANCE_TO_OVERLAP} from '@screens/HomeFlow/Home/components/constants';
@@ -122,18 +123,20 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
             ref={profileCardRef}
           />
 
-          <View onLayout={onReferralsCardLayout} ref={referralsCardRef}>
-            <FlipCard
-              disabled={isCollapsed}
-              stylesContainer={styles.flipCardContainer}
-              front={<ReferralsCard sharedIsCollapsed={sharedIsCollapsed} />}
-              back={
-                <ReferralAcquisitionHistory
-                  sharedIsCollapsed={sharedIsCollapsed}
-                />
-              }
-            />
-          </View>
+          {isLightDesign ? null : (
+            <View onLayout={onReferralsCardLayout} ref={referralsCardRef}>
+              <FlipCard
+                disabled={isCollapsed}
+                stylesContainer={styles.flipCardContainer}
+                front={<ReferralsCard sharedIsCollapsed={sharedIsCollapsed} />}
+                back={
+                  <ReferralAcquisitionHistory
+                    sharedIsCollapsed={sharedIsCollapsed}
+                  />
+                }
+              />
+            </View>
+          )}
 
           <View ref={adoptionCardRef} onLayout={onAdoptionCardLayout}>
             <FlipCard
@@ -154,9 +157,11 @@ export const Overview = memo(({translateY, topOffset}: Props) => {
         </Animated.ScrollView>
       </Animated.View>
 
-      <View ref={inviteFriendsRef} onLayout={onInviteFriendsLayout}>
-        <InviteButton />
-      </View>
+      {isLightDesign ? null : (
+        <View ref={inviteFriendsRef} onLayout={onInviteFriendsLayout}>
+          <InviteButton />
+        </View>
+      )}
     </>
   );
 });

@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "올바른 닉네임을 입력했는지 확인하십시오."
+      "dontHaveInvitationCode": "올바른 닉네임을 입력했는지 확인하십시오.",
+      "description": "당신을 초대한 친구의 별명을 입력하십시오."
     },
     "home": {
       "pioneer": {
-        "description": "진행 상황과 전체 상태를 추적하세요"
+        "description": "진행 상황과 전체 상태를 추적하세요",
+        "referrals": "친구"
       },
       "tasks": {
         "invite_friends": {
           "description": "팀을 성장시키고 커뮤니티를 구축하세요"
         }
+      },
+      "team": {
+        "title": "친구",
+        "view_team": "친구 보기"
+      },
+      "roadmap": {
+        "button_subtitle": "아이스의 미래 비전에 대해 더 알아보십시오."
+      },
+      "join_mainnet": {
+        "subtitle": "우리의 미래 Mainnet 앱과 그 독특한 기능에 대한 미리보기를 얻어보십시오. 2024년 말에 출시 예정입니다."
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "현재 잔액은 매 시간 업데이트되며 여기에 표시됩니다. 직접 및 스테이크한 수익을 포함합니다."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "당신의 친구들은 [[:ice]]에 가입할 때 이 별명을 사용해야 합니다."
+    },
+    "users": {
+      "team": "친구"
+    },
+    "team": {
+      "empty": {
+        "team": "현재 친구가 없습니다!"
+      },
+      "contacts": {
+        "empty_description": "연락처를 동기화하고 이미 [[:ice]]에 있는 사람을 확인하십시오."
       }
     }
   },

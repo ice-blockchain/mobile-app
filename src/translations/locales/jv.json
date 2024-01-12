@@ -1060,16 +1060,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Monggo pastikan sampeyan nglebokna jeneng panggonan sing bener."
+      "dontHaveInvitationCode": "Monggo pastikan sampeyan nglebokna jeneng panggonan sing bener.",
+      "description": "Tulis jeneng teman sing ngundang sampeyan."
     },
     "home": {
       "pioneer": {
-        "description": "Gawé jejak kemajuan lan status global sampeyan"
+        "description": "Gawé jejak kemajuan lan status global sampeyan",
+        "referrals": "TEMAN"
       },
       "tasks": {
         "invite_friends": {
           "description": "Miturutake tim sampeyan lan mbangun komunitas"
         }
+      },
+      "team": {
+        "title": "Teman",
+        "view_team": "tampilke teman"
+      },
+      "roadmap": {
+        "button_subtitle": "Leren luwih lanjut tentang wawasan ing depan nang Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Daptarake pitulung menyang aplikasi Mainnet ing depan lan fitur-fitur uniké, sing bakal dirilis ing akhir taun 2024."
       }
     },
     "settings": {
@@ -1097,6 +1109,20 @@
         "earnings": {
           "description": "Saldo saiki sampeyan dianyari saben jam lan dadi ndeleng ing kene. Ana panghasilan langsung lan staked panjenengan."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "Teman-teman sampeyan kudu nggunakake jeneng sing ana saiki nalika mlebu [[:ice]]."
+    },
+    "users": {
+      "team": "Teman"
+    },
+    "team": {
+      "empty": {
+        "team": "Saiki sampeyan ora duwe teman!"
+      },
+      "contacts": {
+        "empty_description": "Synchronize kontak sampeyan lan delok sapeyan sing wis ana ing [[:ice]]."
       }
     }
   },

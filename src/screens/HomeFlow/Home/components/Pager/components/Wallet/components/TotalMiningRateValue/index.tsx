@@ -3,6 +3,7 @@
 import {AnimatedNumberText} from '@components/AnimatedNumberText';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {miningRatesSelector} from '@store/modules/Tokenomics/selectors';
 import {formatNumberString, parseNumber} from '@utils/numbers';
 import React, {useCallback, useMemo} from 'react';
@@ -47,10 +48,14 @@ export const TotalMiningRateValue = ({style}: Props) => {
     [rateValueTextStyle, style],
   );
 
+  const rate =
+    isLightDesign && miningRates?.type !== 'negative'
+      ? miningRates?.base.amount ?? '0'
+      : miningRates?.total.amount ?? '0';
   return (
     <AnimatedNumberText
       value={
-        parseNumber(miningRates?.total.amount ?? '0') *
+        parseNumber(rate) *
         {
           positive: 1,
           negative: -1,

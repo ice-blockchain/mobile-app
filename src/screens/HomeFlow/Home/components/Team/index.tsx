@@ -2,6 +2,7 @@
 
 import {ActivityIndicator} from '@components/ActivityIndicator';
 import {SectionHeader} from '@components/SectionHeader';
+import {isLightDesign} from '@constants/featureFlags';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {useFetchCollection} from '@hooks/useFetchCollection';
 import {MainTabsParamList} from '@navigation/Main';
@@ -21,11 +22,7 @@ import {ListRenderItem, StyleSheet, View} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
 import {isAndroid, rem} from 'rn-units';
 
-type Props = {
-  showEmptyTeamView?: boolean;
-};
-
-export const Team = memo(({showEmptyTeamView}: Props) => {
+export const Team = memo(() => {
   const navigation =
     useNavigation<BottomTabNavigationProp<MainTabsParamList>>();
 
@@ -72,14 +69,20 @@ export const Team = memo(({showEmptyTeamView}: Props) => {
   );
 
   if (referrals.length < 2 && !hasNext) {
-    return showEmptyTeamView ? <View style={styles.emptyTeamView} /> : null;
+    return <View style={styles.emptyTeamView} />;
   }
 
   return (
     <>
       <SectionHeader
-        title={t('home.team.title')}
-        action={t('home.team.view_team')}
+        title={
+          isLightDesign ? t('override.home.team.title') : t('home.team.title')
+        }
+        action={
+          isLightDesign
+            ? t('override.home.team.view_team')
+            : t('home.team.view_team')
+        }
         onActionPress={onViewTeamPress}
       />
       <FlatList

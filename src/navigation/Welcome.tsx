@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {isLightDesign} from '@constants/featureFlags';
 import {modalOptions, screenOptions} from '@navigation/options';
 import {resetRoot} from '@navigation/utils';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -70,6 +71,9 @@ export const WELCOME_STEPS: {
   {
     name: 'IceBonus',
     finished: () => {
+      if (isLightDesign) {
+        return true;
+      }
       return !!userSelector(
         store.getState(),
       )?.clientData?.registrationProcessFinalizedSteps?.includes('iceBonus');

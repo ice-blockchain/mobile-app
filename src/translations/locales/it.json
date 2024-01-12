@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "Assicurati di inserire il nickname corretto."
+      "dontHaveInvitationCode": "Assicurati di inserire il nickname corretto.",
+      "description": "Inserisci il soprannome dell'amico che ti ha invitato."
     },
     "home": {
       "pioneer": {
-        "description": "Tieni traccia dei tuoi progressi e dello stato globale"
+        "description": "Tieni traccia dei tuoi progressi e dello stato globale",
+        "referrals": "AMICI"
       },
       "tasks": {
         "invite_friends": {
           "description": "Cresci il tuo team e costruisci una comunità"
         }
+      },
+      "team": {
+        "title": "Amici",
+        "view_team": "visualizza amici"
+      },
+      "roadmap": {
+        "button_subtitle": "Scopri di più sulla nostra visione futura su Ice."
+      },
+      "join_mainnet": {
+        "subtitle": "Ottieni un'anteprima dell'app Mainnet futura e delle sue caratteristiche uniche, che verrà rilasciata alla fine del 2024."
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "Il tuo saldo attuale viene aggiornato ogni ora e viene visualizzato qui. Comprende i tuoi guadagni diretti e quelli staked."
         }
+      }
+    },
+    "claimUsername": {
+      "description": "I tuoi amici dovranno usare questo soprannome quando si uniranno a [[:ice]]."
+    },
+    "users": {
+      "team": "Amici"
+    },
+    "team": {
+      "empty": {
+        "team": "Attualmente non hai amici!"
+      },
+      "contacts": {
+        "empty_description": "Sincronizza i tuoi contatti e scopri chi è già su [[:ice]]."
       }
     }
   },

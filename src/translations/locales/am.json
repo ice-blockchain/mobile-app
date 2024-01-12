@@ -1160,16 +1160,28 @@
   },
   "override": {
     "whoInvitedYou": {
-      "dontHaveInvitationCode": "እባክዎ ትክክለኛውን ቅጽል ስም ማስገባትዎን ያረጋግጡ።"
+      "dontHaveInvitationCode": "እባክዎ ትክክለኛውን ቅጽል ስም ማስገባትዎን ያረጋግጡ።",
+      "description": "ልጋውን ያስተዳዳሉ የሚፈልጉትን የጥቅም ስም ያስገቡ።"
     },
     "home": {
       "pioneer": {
-        "description": "የእርስዎን እድገት እና ዓለም አቀፋዊ ሁኔታ ይከታተሉ"
+        "description": "የእርስዎን እድገት እና ዓለም አቀፋዊ ሁኔታ ይከታተሉ",
+        "referrals": "ልጋውያን"
       },
       "tasks": {
         "invite_friends": {
           "description": "ቡድንዎን ያሳድጉ እና ማህበረሰብ ይገንቡ"
         }
+      },
+      "team": {
+        "title": "ልጋውያን",
+        "view_team": "ልጋውያን ይመልከቱ"
+      },
+      "roadmap": {
+        "button_subtitle": "በአይስ የእኛ የማህበራዊ መግለጫውን በተጨማሪ ይቀረቡ."
+      },
+      "join_mainnet": {
+        "subtitle": "የኛው የቀጥታ መግቢያ አፕስንን እና የቀጥታ ስራውን በ2024 እስከ ማዕከል አደረጋችሁ።"
       }
     },
     "settings": {
@@ -1197,6 +1209,20 @@
         "earnings": {
           "description": "የአሁኑ ቀሪ ሒሳብዎ በየሰዓቱ ዘምኗል እና እዚህ ይታያል። የእርስዎን ቀጥተኛ እና የተያዙ ገቢዎችን ያካትታል።"
         }
+      }
+    },
+    "claimUsername": {
+      "description": "ልጋውያንን በ[[:ice]] ይዘገቡ፣ በዚህ ጥቅም ስም እንዴት ባዶ ይሆናል."
+    },
+    "users": {
+      "team": "ልጋውያን"
+    },
+    "team": {
+      "empty": {
+        "team": "ማእከል አለባቸው!"
+      },
+      "contacts": {
+        "empty_description": "የሙከራውን ስምንት ተይምንቶችን እናቀርባለን እና የሚገቡትን ሰዎችን ያግባሉ በ[[:ice]] ውስጥ."
       }
     }
   },
