@@ -124,11 +124,11 @@ const styles = StyleSheet.create({
     paddingTop: rem(20),
   },
   title: {
-    paddingTop: 10,
+    paddingTop: rem(8),
     ...font(24, 34, 'black', 'primaryDark', 'center'),
   },
   description: {
-    paddingTop: 16,
+    paddingTop: rem(16),
     paddingHorizontal: rem(48),
     ...font(14, 20, 'medium', 'secondary', 'center'),
   },
@@ -137,6 +137,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     paddingHorizontal: FOOTER_PADDING_HORIZONTAL,
     paddingBottom: rem(40),
+    paddingTop: rem(22),
   },
   checkboxRow: {
     flexDirection: 'row',
