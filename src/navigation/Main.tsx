@@ -11,6 +11,7 @@ import {MainTabBar} from '@navigation/components/MainTabBar';
 import {HomeIcon} from '@navigation/components/MainTabBar/components/Icons/HomeIcon';
 import {NewsIcon} from '@navigation/components/MainTabBar/components/Icons/NewsIcon';
 import {ProfileIcon} from '@navigation/components/MainTabBar/components/Icons/ProfileIcon';
+import {StatsTabIcon} from '@navigation/components/MainTabBar/components/Icons/StatsTabIcon';
 import {TeamIcon} from '@navigation/components/MainTabBar/components/Icons/TeamIcon';
 import {StatusNotice} from '@navigation/components/StatusNotice';
 import {modalOptions, screenOptions, tabOptions} from '@navigation/options';
@@ -320,7 +321,7 @@ const MainTabs = () => {
           name="NewsTab"
           component={isLightDesign ? Stats : News}
           options={{
-            tabBarIcon: NewsIcon,
+            tabBarIcon: isLightDesign ? StatsTabIcon : NewsIcon,
             tabBarIconStyle: iconStyles.newsIconStyle,
           }}
           listeners={getListeners('news')}
