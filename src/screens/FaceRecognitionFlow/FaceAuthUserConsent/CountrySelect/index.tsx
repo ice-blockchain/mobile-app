@@ -5,7 +5,10 @@ import {PopUpButton} from '@components/Buttons/PopUpButton';
 import {COLORS} from '@constants/colors';
 import {Country} from '@constants/countries';
 import {commonStyles} from '@constants/styles';
-import {BUTTON_WIDTH} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/constants';
+import {
+  BUTTON_WIDTH,
+  FOOTER_PADDING_HORIZONTAL,
+} from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/constants';
 import {CountrySelectFeed} from '@screens/Templates/CountrySelectFeed';
 import {AccountActions} from '@store/modules/Account/actions';
 import {unsafeUserSelector} from '@store/modules/Account/selectors';
@@ -88,7 +91,7 @@ const styles = StyleSheet.create({
   buttonsContainer: {
     paddingTop: rem(12),
     paddingBottom: rem(34),
-    paddingHorizontal: rem(34),
+    paddingHorizontal: FOOTER_PADDING_HORIZONTAL,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
