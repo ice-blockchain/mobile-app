@@ -10,12 +10,14 @@ import {
   BUTTON_WIDTH,
   FOOTER_PADDING_HORIZONTAL,
 } from '@screens/FaceRecognitionFlow/FaceAuthUserConsent/constants';
+import {AccountActions} from '@store/modules/Account/actions';
 import {FaceAuthIcon} from '@svg/FaceAuthIcon';
 import {replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
 import React, {useState} from 'react';
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {useDispatch} from 'react-redux';
 import {rem} from 'rn-units';
 
 type Props = {
@@ -24,11 +26,18 @@ type Props = {
 
 export function AccountConfirmation({updateKycStepPassed}: Props) {
   const navigation = useNavigation();
+  const dispatch = useDispatch();
   const [isAgreeWithTermsAndConditions, setIsAgreeWithTermsAndConditions] =
     useState(false);
 
   const onContinue = () => {
     updateKycStepPassed?.();
+  };
+
+  const onBack = () => {
+    dispatch(AccountActions.SIGN_IN_PHONE.RESET.create());
+    dispatch(AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.RESET.create());
+    navigation.goBack();
   };
 
   return (
@@ -71,7 +80,7 @@ export function AccountConfirmation({updateKycStepPassed}: Props) {
             text={t('button.cancel')}
             preset={'outlined'}
             style={styles.button}
-            onPress={navigation.goBack}
+            onPress={onBack}
           />
           <PopUpButton
             text={t('button.continue')}

@@ -24,7 +24,7 @@ export const usePhoneAuth = () => {
 
   const resetError = () => {
     if (phoneAuthFailedReason) {
-      dispatch(AccountActions.SIGN_IN_PHONE.RESET);
+      dispatch(AccountActions.SIGN_IN_PHONE.RESET.create());
     }
   };
 

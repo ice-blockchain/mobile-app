@@ -31,7 +31,6 @@ export function* migratePhoneNumberSaga(
       });
     if (result) {
       yield put(AccountActions.MIGRATE_PHONE_NUMBER_TO_EMAIL.SUCCESS.create());
-      // TODO: check and show agreement
     }
   } catch (error) {
     if (isApiError(error, 409, 'EMAIL_ALREADY_SET')) {
