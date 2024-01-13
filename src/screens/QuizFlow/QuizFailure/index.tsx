@@ -23,7 +23,7 @@ import {Image, StyleSheet, Text, View} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const MiningDisabled = () => {
+export const QuizFailure = () => {
   useFocusStatusBar({style: 'dark-content'});
   const {shadowStyle} = useScrollShadow();
 

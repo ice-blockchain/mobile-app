@@ -11,6 +11,6 @@ export function* startQuizFlowSaga() {
   if (quizTermsAccepted) {
     navigate({name: 'QuizTheme', params: undefined});
   } else {
-    navigate({name: 'CommunityUpdate', params: undefined});
+    navigate({name: 'QuizTerms', params: undefined});
   }
 }

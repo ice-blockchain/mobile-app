@@ -62,10 +62,10 @@ import {Badges} from '@screens/ProfileFlow/Badges';
 import {Profile} from '@screens/ProfileFlow/Profile';
 import {ProfileActionType} from '@screens/ProfileFlow/Profile/types';
 import {Roles} from '@screens/ProfileFlow/Roles';
-import {CommunityUpdate} from '@screens/QuizFlow/CommunityUpdate';
-import {MiningDisabled} from '@screens/QuizFlow/MiningDisabled';
 import {Quiz} from '@screens/QuizFlow/Quiz';
+import {QuizFailure} from '@screens/QuizFlow/QuizFailure';
 import {QuizSuccess} from '@screens/QuizFlow/QuizSuccess';
+import {QuizTerms} from '@screens/QuizFlow/QuizTerms';
 import {QuizTheme} from '@screens/QuizFlow/Theme';
 import {ConfirmEmail} from '@screens/SettingsFlow/ConfirmEmail';
 import {ConfirmPhoneNumber} from '@screens/SettingsFlow/ConfirmPhoneNumber';
@@ -170,10 +170,10 @@ export type MainStackParamList = {
     correctiveOffset?: number;
   };
   TopMiners: undefined;
-  CommunityUpdate: undefined;
+  QuizTerms: undefined;
   QuizTheme: undefined;
   Quiz: undefined;
-  MiningDisabled: undefined;
+  QuizFailure: undefined;
   QuizSuccess: undefined;
 };
 
@@ -467,14 +467,10 @@ export function MainNavigator() {
         options={modalOptions}
       />
       <MainStack.Screen name="TopMiners" component={TopMiners} />
-      <MainStack.Screen name="CommunityUpdate" component={CommunityUpdate} />
+      <MainStack.Screen name="QuizTerms" component={QuizTerms} />
       <MainStack.Screen name="QuizTheme" component={QuizTheme} />
       <MainStack.Screen name="Quiz" component={Quiz} />
-      <MainStack.Screen
-        name="MiningDisabled"
-        component={MiningDisabled}
-        options={modalOptions}
-      />
+      <MainStack.Screen name="QuizFailure" component={QuizFailure} />
       <MainStack.Screen name="QuizSuccess" component={QuizSuccess} />
     </MainStack.Navigator>
   );

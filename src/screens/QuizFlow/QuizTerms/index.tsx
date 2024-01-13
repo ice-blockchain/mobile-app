@@ -10,17 +10,17 @@ import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {InfoBlock} from '@screens/QuizFlow/CommunityUpdate/components/InfoBlock';
-import {PrivacyTerms} from '@screens/QuizFlow/CommunityUpdate/components/PrivacyTerms';
-import {useNavigateNextStep} from '@screens/QuizFlow/CommunityUpdate/hooks/useNavigateNextStep';
-import {useSetQuizTerms} from '@screens/QuizFlow/CommunityUpdate/hooks/useSetQuizTerms';
+import {InfoBlock} from '@screens/QuizFlow/QuizTerms/components/InfoBlock';
+import {PrivacyTerms} from '@screens/QuizFlow/QuizTerms/components/PrivacyTerms';
+import {useNavigateNextStep} from '@screens/QuizFlow/QuizTerms/hooks/useNavigateNextStep';
+import {useSetQuizTerms} from '@screens/QuizFlow/QuizTerms/hooks/useSetQuizTerms';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
-export const CommunityUpdate = () => {
+export const QuizTerms = () => {
   useFocusStatusBar({style: 'dark-content'});
   const {shadowStyle} = useScrollShadow();
 
@@ -41,40 +41,34 @@ export const CommunityUpdate = () => {
       <Header
         containerStyle={shadowStyle}
         color={COLORS.primaryDark}
-        title={t('quiz.community_update.navigation_title')}
+        title={t('quiz.terms.navigation_title')}
       />
       <ScrollView
         style={commonStyles.flexOne}
         contentContainerStyle={styles.contentContainer}
         showsVerticalScrollIndicator={false}>
         <Image source={Images.quiz.quiz} style={styles.icon} />
-        <Text style={styles.title}>{t('quiz.community_update.title')}</Text>
-        <Text style={styles.description}>
-          {t('quiz.community_update.description')}
-        </Text>
+        <Text style={styles.title}>{t('quiz.terms.title')}</Text>
+        <Text style={styles.description}>{t('quiz.terms.description')}</Text>
         <InfoBlock
-          title={t('quiz.community_update.knowledge_verification.title')}
-          description={t(
-            'quiz.community_update.knowledge_verification.description',
-          )}
+          title={t('quiz.terms.knowledge_verification.title')}
+          description={t('quiz.terms.knowledge_verification.description')}
           points={[
-            t('quiz.community_update.knowledge_verification.point1'),
-            t('quiz.community_update.knowledge_verification.point2'),
-            t('quiz.community_update.knowledge_verification.point3'),
+            t('quiz.terms.knowledge_verification.point1'),
+            t('quiz.terms.knowledge_verification.point2'),
+            t('quiz.terms.knowledge_verification.point3'),
           ]}
         />
         <InfoBlock
-          title={t('quiz.community_update.community_engagement.title')}
-          description={t(
-            'quiz.community_update.community_engagement.description',
-          )}
+          title={t('quiz.terms.community_engagement.title')}
+          description={t('quiz.terms.community_engagement.description')}
           points={[
-            t('quiz.community_update.community_engagement.point1'),
-            t('quiz.community_update.community_engagement.point2'),
-            t('quiz.community_update.community_engagement.point3'),
+            t('quiz.terms.community_engagement.point1'),
+            t('quiz.terms.community_engagement.point2'),
+            t('quiz.terms.community_engagement.point3'),
           ]}
           bottomDescription={t(
-            'quiz.community_update.community_engagement.bottom_description',
+            'quiz.terms.community_engagement.bottom_description',
           )}
         />
         <PrivacyTerms

@@ -43,7 +43,7 @@ export const useQuizQuestionnaire = () => {
   useEffect(() => {
     if (isSuccessQuiz && quizResult === 'FAILURE') {
       navigation.popToTop();
-      navigation.navigate('MiningDisabled');
+      navigation.navigate('QuizFailure');
     }
   }, [isSuccessQuiz, quizResult, navigation]);
 

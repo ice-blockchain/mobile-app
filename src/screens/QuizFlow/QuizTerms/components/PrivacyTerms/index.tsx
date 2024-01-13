@@ -20,7 +20,7 @@ export const PrivacyTerms = ({onCheckBoxPress, isAgreeWithTerms}: Props) => {
   };
 
   const text = replaceString(
-    t('quiz.community_update.terms_privacy'),
+    t('quiz.terms.terms_privacy'),
     tagRegex('link', false),
     (match, index) => {
       return (
