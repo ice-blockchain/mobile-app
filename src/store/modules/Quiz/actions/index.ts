@@ -19,7 +19,9 @@ const START_OR_CONTINUE_QUIZ_FLOW = createAction(
 );
 
 const ACCEPT_QUIZ_TERMS = createAction('ACCEPT_QUIZ_TERMS', {
-  STATE: true,
+  START: true,
+  SUCCESS: true,
+  FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
 const RESET_QUIZ = createAction('RESET_QUIZ', {

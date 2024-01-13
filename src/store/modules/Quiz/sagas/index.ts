@@ -15,5 +15,5 @@ export const quizWatchers = [
     QuizActions.START_OR_CONTINUE_QUIZ_FLOW.STATE.type,
     startQuizFlowSaga,
   ),
-  takeLatest(QuizActions.ACCEPT_QUIZ_TERMS.STATE.type, acceptQuizTermsSaga),
+  takeLatest(QuizActions.ACCEPT_QUIZ_TERMS.START.type, acceptQuizTermsSaga),
 ];

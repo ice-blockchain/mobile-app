@@ -92,3 +92,8 @@ export const verifiedSelector = (state: RootState) =>
 
 export const ethDistributionXPostLinkSelector = (state: RootState) =>
   state.account.authConfig?.['social2-kyc']?.['x-post-link'];
+
+export const quizTermsAcceptedSelector = (state: RootState) => {
+  const user = userSelector(state);
+  return user?.clientData?.quiz?.quizTermsAccepted;
+};

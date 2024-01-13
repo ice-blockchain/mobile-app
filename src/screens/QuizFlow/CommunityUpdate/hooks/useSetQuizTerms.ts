@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {AccountActions} from '@store/modules/Account/actions';
 import {QuizActions} from '@store/modules/Quiz/actions';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {useState} from 'react';
@@ -10,13 +9,18 @@ export const useSetQuizTerms = () => {
   const dispatch = useDispatch();
   const [termsAccepted, setTermsAccepted] = useState(false);
 
-  const confirmTerms = () => {
-    dispatch(QuizActions.ACCEPT_QUIZ_TERMS.STATE.create());
+  const saveTermsAccepted = () => {
+    dispatch(QuizActions.ACCEPT_QUIZ_TERMS.START.create());
   };
 
-  const isConfirmLoading = useSelector(
-    isLoadingSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
+  const isSaveTermsAcceptedLoading = useSelector(
+    isLoadingSelector.bind(null, QuizActions.ACCEPT_QUIZ_TERMS),
   );
 
-  return {termsAccepted, setTermsAccepted, confirmTerms, isConfirmLoading};
+  return {
+    termsAccepted,
+    setTermsAccepted,
+    saveTermsAccepted,
+    isSaveTermsAcceptedLoading,
+  };
 };

@@ -12,6 +12,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {InfoBlock} from '@screens/QuizFlow/CommunityUpdate/components/InfoBlock';
 import {PrivacyTerms} from '@screens/QuizFlow/CommunityUpdate/components/PrivacyTerms';
+import {useNavigateNextStep} from '@screens/QuizFlow/CommunityUpdate/hooks/useNavigateNextStep';
 import {useSetQuizTerms} from '@screens/QuizFlow/CommunityUpdate/hooks/useSetQuizTerms';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -26,8 +27,14 @@ export const CommunityUpdate = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainStackParamList>>();
 
-  const {termsAccepted, setTermsAccepted, confirmTerms, isConfirmLoading} =
-    useSetQuizTerms();
+  const {
+    termsAccepted,
+    setTermsAccepted,
+    saveTermsAccepted,
+    isSaveTermsAcceptedLoading,
+  } = useSetQuizTerms();
+
+  useNavigateNextStep();
 
   return (
     <View style={commonStyles.flexOne}>
@@ -86,9 +93,9 @@ export const CommunityUpdate = () => {
         />
         <PopUpButton
           text={t('button.continue')}
-          onPress={confirmTerms}
-          disabled={!termsAccepted || isConfirmLoading}
-          loading={isConfirmLoading}
+          onPress={saveTermsAccepted}
+          disabled={!termsAccepted || isSaveTermsAcceptedLoading}
+          loading={isSaveTermsAcceptedLoading}
           style={styles.button}
         />
       </View>
