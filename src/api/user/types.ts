@@ -104,10 +104,15 @@ export type RateData = {
   lastShowingDate?: string | null;
 };
 
+export type QuizData = {
+  quizTermsAccepted?: boolean | null;
+};
+
 export type ClientData = {
   registrationProcessFinalizedSteps?: RegistrationProcessFinalizedStep[];
   walkthroughProgress?: {[key in WalkthroughStepKey]?: WalkthroughStepProgress};
   miningStateTooltipSeen?: string[];
   phoneNumberIso?: string | null;
   rate?: RateData | null;
+  quiz?: QuizData | null;
 };

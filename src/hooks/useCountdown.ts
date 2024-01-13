@@ -7,6 +7,7 @@ export const useCountdown = (duration: Duration) => {
   const initialized = useRef(false);
   const [durationLeft, setDurationLeft] = useState<Duration>(duration.clone());
   const isCountdownOver = durationLeft.asMilliseconds() <= 0;
+  const [isStopped, setIsStopped] = useState(false);
 
   useEffect(() => {
     if (initialized.current) {
@@ -17,13 +18,21 @@ export const useCountdown = (duration: Duration) => {
   }, [duration]);
 
   useEffect(() => {
-    if (!isCountdownOver) {
+    if (!isCountdownOver && !isStopped) {
       const interval = setInterval(() => {
         setDurationLeft(left => left.subtract(1, 's'));
       }, 1000);
       return () => clearInterval(interval);
     }
-  }, [isCountdownOver]);
+  }, [isCountdownOver, isStopped]);
 
-  return {durationLeft, isCountdownOver};
+  const resetTimer = () => {
+    setDurationLeft(duration.clone());
+  };
+
+  const stopCountdown = () => {
+    setIsStopped(true);
+  };
+
+  return {durationLeft, isCountdownOver, resetTimer, stopCountdown, isStopped};
 };

@@ -78,6 +78,7 @@ export type EmotionsKycStep = 2;
 export type FaceAuthKycNumber = SelfieKycStep | EmotionsKycStep;
 
 export type VerifySocialAccountKycStep = 3;
+export type QuizKycStep = 4;
 export type EthDistributionKycStep = 5;
 export type SocialKycStepNumber =
   | VerifySocialAccountKycStep

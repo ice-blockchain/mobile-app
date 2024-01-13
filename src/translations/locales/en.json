@@ -71,7 +71,10 @@
     "subscribe": "Subscribe",
     "not_sure": "Not sure",
     "confirm_address": "Confirm address",
-    "remove_address": "Remove address"
+    "remove_address": "Remove address",
+    "start": "Start",
+    "faq": "FAQ",
+    "knowledge_base": "Knowledge Base"
   },
   "team": {
     "contacts_tab": "Contacts",
@@ -1314,5 +1317,72 @@
     "title": "Account confirmation",
     "description": "To verify your account identity and securely link your email, please ensure that you successfully pass our emotions check during the authentication process.",
     "description2": "This step helps us ensure the security and authenticity of your account. Thank you for your cooperation!"
+  },
+  "quiz": {
+    "community_update": {
+      "navigation_title": "Community Update",
+      "title": "Community Update",
+      "description": "At Ice, we believe in fostering a community of active and informed members. Our mission is to ensure that Ice coins are distributed to those who are genuinely engaged and aligned with our vision.",
+      "knowledge_verification": {
+        "title": "💡 Knowledge Verification",
+        "description": "To ensure our community is well-informed and aligned with our vision:",
+        "point1": "You'll be presented with a question derived from our comprehensive resources.",
+        "point2": "A correct response affirms your understanding, allowing you to initiate your mining session.",
+        "point3": "An incorrect response indicates a need for further engagement with our materials."
+      },
+      "slashing_alert": {
+        "title": "🚨 Slashing Mode Alert",
+        "description": "To prioritize the distribution of Ice coins to our active users:",
+        "point1": "Incorrect answers will place your account in Slashing Mode for 24 hours.",
+        "point2": "During this period, a portion of your Ice coins will be slashed.",
+        "point3": "We encourage you to utilize this time to deepen your understanding by exploring our FAQ, Knowledge Base, and Whitepaper Summary available on our website."
+      },
+      "community_engagement": {
+        "title": "🙌 Active Community Engagement",
+        "description": "Your engagement within the Ice Ecosystem directly influences your mining capabilities:",
+        "point1": "Stay Updated: Engage with our news articles and videos.",
+        "point2": "Participate Actively: Join our Personal Development Program and live sessions on YouTube or Twitter Space.",
+        "point3": "Social Interactions: Boost your presence by liking, sharing, following, or posting about Ice.",
+        "bottomDescription": "The more engaged you are, the higher your positive interaction score, enabling you to extend your mining session seamlessly."
+      },
+      "terms_privacy": "I understand & I agree with the [[:link]]Terms and Conditions.[[/:link]]"
+    },
+    "theme": {
+      "navigation_title": "Quiz",
+      "todays_theme": "Today’s Theme: Coin Economics",
+      "knowledge_check": "🧠 Knowledge Check:",
+      "question_options": "One question, four options.",
+      "answer_correctly": "Answer correctly to start/extend mining.",
+      "wrong_answer": "Oops, wrong answer? Try again in 24 hours.",
+      "info": "📚 All info for this quiz can be read [[:link]]here.[[/:link]]",
+      "why_quiz": "Why the Quiz?",
+      "why_quiz_description": "We're all about smart, safe, and informed mining. This small step ensures our Ice community thrives with knowledge and understanding!"
+    },
+    "mining_disabled": {
+      "navigation_title": "Quiz",
+      "title": "Mining Disabled",
+      "description": "You answered the question incorrectly, so mining is disabled for the next 24 hours.",
+      "check_faq": "In order to answer correctly next time, we suggest you familiarize yourself with our knowledge base and FAQ."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Question {{current}} of {{total}}",
+      "time_over": "⌛️  Time is over",
+      "correct_answer": "👏  Correct answer!",
+      "wrong_answer": "🙁  Wrong answer!",
+      "correct_answers": "Correct Answers",
+      "wrong_answers": "Wrong Answers"
+    },
+    "quiz_failure": {
+      "title": "Quiz failed, try again later"
+    },
+    "confirmation_popup": {
+      "title": "Confirmation",
+      "start_description": "Are you sure you want to start the quiz?",
+      "cancel_description": "Are you sure you want to cancel the quiz?"
+    },
+    "quiz_success": {
+      "title": "Quiz completed successfully",
+      "description": "You have successfully completed the quiz. You are now verified. Your knowledge now verified"
+    }
   }
 }

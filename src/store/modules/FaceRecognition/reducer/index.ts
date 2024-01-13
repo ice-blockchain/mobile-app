@@ -20,7 +20,6 @@ export interface State {
   emotions: AuthEmotion[];
   nextEmotionIndex: number;
   activeRequests: number;
-
   cameraRatio: CameraRatio;
 }
 
