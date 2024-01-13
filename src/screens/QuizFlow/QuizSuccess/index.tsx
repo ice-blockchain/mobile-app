@@ -6,7 +6,6 @@ import {Images} from '@images';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {AVATAR_SIDE_DIMENSION} from '@screens/QuizFlow/Theme';
 import {QuizActions} from '@store/modules/Quiz/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {t} from '@translations/i18n';
@@ -57,8 +56,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     alignSelf: 'center',
-    width: AVATAR_SIDE_DIMENSION,
-    height: AVATAR_SIDE_DIMENSION,
+    width: '65%',
     marginBottom: rem(26),
   },
   title: {

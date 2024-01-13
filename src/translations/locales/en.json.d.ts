@@ -814,10 +814,10 @@ export type Translations = {
   'quiz.theme.navigation_title': null;
   'quiz.theme.todays_theme': null;
   'quiz.theme.knowledge_check': null;
-  'quiz.theme.question_options': null;
-  'quiz.theme.answer_correctly': null;
-  'quiz.theme.wrong_answer': null;
-  'quiz.theme.info': null;
+  'quiz.theme.point1': null;
+  'quiz.theme.point2': null;
+  'quiz.theme.point3': null;
+  'quiz.theme.point4': null;
   'quiz.theme.why_quiz': null;
   'quiz.theme.why_quiz_description': null;
   'quiz.mining_disabled.navigation_title': null;

@@ -21,9 +21,7 @@ import {font} from '@utils/styles';
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {useDispatch} from 'react-redux';
-import {rem, screenWidth} from 'rn-units';
-
-export const AVATAR_SIDE_DIMENSION = screenWidth * 0.65;
+import {rem} from 'rn-units';
 
 export const MiningDisabled = () => {
   useFocusStatusBar({style: 'dark-content'});
@@ -90,8 +88,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     alignSelf: 'center',
-    width: AVATAR_SIDE_DIMENSION,
-    height: AVATAR_SIDE_DIMENSION,
+    width: '65%',
     marginTop: rem(18),
   },
   title: {

@@ -1341,13 +1341,13 @@
       "terms_privacy": "I understand & I agree with the [[:link]]Terms and Conditions.[[/:link]]"
     },
     "theme": {
-      "navigation_title": "Quiz",
-      "todays_theme": "Today’s Theme: Coin Economics",
+      "navigation_title": "KYC Step #3",
+      "todays_theme": "KYC Step #3",
       "knowledge_check": "🧠 Knowledge Check:",
-      "question_options": "One question, four options.",
-      "answer_correctly": "Answer correctly to start/extend mining.",
-      "wrong_answer": "Oops, wrong answer? Try again in 24 hours.",
-      "info": "📚 All info for this quiz can be read [[:link]]here.[[/:link]]",
+      "point1": "There are 21 questions in total.",
+      "point2": "To pass the quiz, you need to answer at least 18 questions correctly.",
+      "point3": "Oops, failed quiz? Try again next week.",
+      "point4": "📚 All info for this quiz can be read [[:link]]here[[/:link]].",
       "why_quiz": "Why the Quiz?",
       "why_quiz_description": "We're all about smart, safe, and informed mining. This small step ensures our Ice community thrives with knowledge and understanding!"
     },
