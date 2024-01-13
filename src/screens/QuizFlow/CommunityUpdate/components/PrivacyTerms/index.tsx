@@ -7,7 +7,7 @@ import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {rem, screenWidth} from 'rn-units';
+import {rem} from 'rn-units';
 
 type Props = {
   onCheckBoxPress: (value: boolean) => void;
@@ -52,10 +52,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
+    flex: 1,
     ...font(14, 19, 'medium', 'primaryDark', 'left'),
-    marginRight: rem(20),
-    marginLeft: rem(6),
-    width: screenWidth * 0.77,
+    marginEnd: rem(20),
   },
   link: {
     ...font(14, 19, 'regular', 'primaryLight'),

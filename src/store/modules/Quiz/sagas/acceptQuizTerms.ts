@@ -3,11 +3,7 @@
 import {QuizData, User} from '@api/user/types';
 import {navigate} from '@navigation/utils';
 import {AccountActions} from '@store/modules/Account/actions';
-import {
-  isAuthorizedSelector,
-  userSelector,
-} from '@store/modules/Account/selectors';
-import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
+import {unsafeUserSelector} from '@store/modules/Account/selectors';
 import {
   call,
   CallEffect,
@@ -17,22 +13,11 @@ import {
 } from 'redux-saga/effects';
 
 export function* acceptQuizTermsSaga() {
-  const isAppActive: ReturnType<typeof isAppActiveSelector> = yield select(
-    isAppActiveSelector,
+  const user: SagaReturnType<typeof unsafeUserSelector> = yield select(
+    unsafeUserSelector,
   );
-  const isAuthorized: ReturnType<typeof isAuthorizedSelector> = yield select(
-    isAuthorizedSelector,
-  );
-
-  const user: SagaReturnType<typeof userSelector> = yield select(userSelector);
-  if (!isAppActive || !isAuthorized) {
-    return;
-  }
-
-  if (user) {
-    yield call(updateQuizData, user, {quizTermsAccepted: true});
-    navigate({name: 'QuizTheme', params: undefined});
-  }
+  yield call(updateQuizData, user, {quizTermsAccepted: true});
+  navigate({name: 'QuizTheme', params: undefined});
 }
 
 function* updateQuizData(user: User, params: QuizData) {

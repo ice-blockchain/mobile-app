@@ -1320,22 +1320,15 @@
   },
   "quiz": {
     "community_update": {
-      "navigation_title": "Community Update",
-      "title": "Community Update",
+      "navigation_title": "KYC Step #3",
+      "title": "KYC Step #3",
       "description": "At Ice, we believe in fostering a community of active and informed members. Our mission is to ensure that Ice coins are distributed to those who are genuinely engaged and aligned with our vision.",
       "knowledge_verification": {
         "title": "💡 Knowledge Verification",
         "description": "To ensure our community is well-informed and aligned with our vision:",
-        "point1": "You'll be presented with a question derived from our comprehensive resources.",
-        "point2": "A correct response affirms your understanding, allowing you to initiate your mining session.",
-        "point3": "An incorrect response indicates a need for further engagement with our materials."
-      },
-      "slashing_alert": {
-        "title": "🚨 Slashing Mode Alert",
-        "description": "To prioritize the distribution of Ice coins to our active users:",
-        "point1": "Incorrect answers will place your account in Slashing Mode for 24 hours.",
-        "point2": "During this period, a portion of your Ice coins will be slashed.",
-        "point3": "We encourage you to utilize this time to deepen your understanding by exploring our FAQ, Knowledge Base, and Whitepaper Summary available on our website."
+        "point1": "You'll be presented with 21 questions derived from our comprehensive resources.",
+        "point2": "A passed quiz confirms your understanding and dedication.",
+        "point3": "A failed quiz indicates a need for further engagement with our materials."
       },
       "community_engagement": {
         "title": "🙌 Active Community Engagement",
@@ -1343,7 +1336,7 @@
         "point1": "Stay Updated: Engage with our news articles and videos.",
         "point2": "Participate Actively: Join our Personal Development Program and live sessions on YouTube or Twitter Space.",
         "point3": "Social Interactions: Boost your presence by liking, sharing, following, or posting about Ice.",
-        "bottomDescription": "The more engaged you are, the higher your positive interaction score, enabling you to extend your mining session seamlessly."
+        "bottom_description": "The more engaged you are, the higher your positive interaction score, enabling you to go through the KYC process."
       },
       "terms_privacy": "I understand & I agree with the [[:link]]Terms and Conditions.[[/:link]]"
     },

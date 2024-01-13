@@ -7,10 +7,10 @@ import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
 type Props = {
-  title: String;
-  points: String[];
-  description: String;
-  bottomDescription?: String | null;
+  title: string;
+  points: string[];
+  description: string;
+  bottomDescription?: string | null;
 };
 
 export function InfoBlock({

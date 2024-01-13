@@ -804,17 +804,12 @@ export type Translations = {
   'quiz.community_update.knowledge_verification.point1': null;
   'quiz.community_update.knowledge_verification.point2': null;
   'quiz.community_update.knowledge_verification.point3': null;
-  'quiz.community_update.slashing_alert.title': null;
-  'quiz.community_update.slashing_alert.description': null;
-  'quiz.community_update.slashing_alert.point1': null;
-  'quiz.community_update.slashing_alert.point2': null;
-  'quiz.community_update.slashing_alert.point3': null;
   'quiz.community_update.community_engagement.title': null;
   'quiz.community_update.community_engagement.description': null;
   'quiz.community_update.community_engagement.point1': null;
   'quiz.community_update.community_engagement.point2': null;
   'quiz.community_update.community_engagement.point3': null;
-  'quiz.community_update.community_engagement.bottomDescription': null;
+  'quiz.community_update.community_engagement.bottom_description': null;
   'quiz.community_update.terms_privacy': null;
   'quiz.theme.navigation_title': null;
   'quiz.theme.todays_theme': null;

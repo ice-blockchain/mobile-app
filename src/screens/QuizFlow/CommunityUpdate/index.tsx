@@ -17,10 +17,7 @@ import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
-import {hasNotch} from 'react-native-device-info';
-import {rem, screenWidth} from 'rn-units';
-
-export const AVATAR_SIDE_DIMENSION = screenWidth * 0.65;
+import {rem} from 'rn-units';
 
 export const CommunityUpdate = () => {
   useFocusStatusBar({style: 'dark-content'});
@@ -33,13 +30,14 @@ export const CommunityUpdate = () => {
     useSetQuizTerms();
 
   return (
-    <View style={styles.container}>
+    <View style={commonStyles.flexOne}>
       <Header
         containerStyle={shadowStyle}
         color={COLORS.primaryDark}
         title={t('quiz.community_update.navigation_title')}
       />
       <ScrollView
+        style={commonStyles.flexOne}
         contentContainerStyle={styles.contentContainer}
         showsVerticalScrollIndicator={false}>
         <Image source={Images.quiz.quiz} style={styles.icon} />
@@ -59,15 +57,6 @@ export const CommunityUpdate = () => {
           ]}
         />
         <InfoBlock
-          title={t('quiz.community_update.slashing_alert.title')}
-          description={t('quiz.community_update.slashing_alert.description')}
-          points={[
-            t('quiz.community_update.slashing_alert.point1'),
-            t('quiz.community_update.slashing_alert.point2'),
-            t('quiz.community_update.slashing_alert.point3'),
-          ]}
-        />
-        <InfoBlock
           title={t('quiz.community_update.community_engagement.title')}
           description={t(
             'quiz.community_update.community_engagement.description',
@@ -78,7 +67,7 @@ export const CommunityUpdate = () => {
             t('quiz.community_update.community_engagement.point3'),
           ]}
           bottomDescription={t(
-            'quiz.community_update.community_engagement.bottomDescription',
+            'quiz.community_update.community_engagement.bottom_description',
           )}
         />
         <PrivacyTerms
@@ -88,7 +77,7 @@ export const CommunityUpdate = () => {
       </ScrollView>
       <View style={[styles.buttonsContainer, commonStyles.shadow]}>
         <PopUpButton
-          text={t('button.cancel')}
+          text={t('button.not_now')}
           preset="outlined"
           onPress={() => {
             navigation.goBack();
@@ -108,24 +97,19 @@ export const CommunityUpdate = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.white,
-  },
   icon: {
     alignSelf: 'center',
-    width: AVATAR_SIDE_DIMENSION,
-    height: AVATAR_SIDE_DIMENSION,
+    width: '65%',
     marginTop: rem(18),
   },
   title: {
     ...font(24, 30, 'black', 'primaryDark', 'left'),
-    marginTop: rem(25),
+    marginTop: rem(24),
   },
   contentContainer: {
     paddingHorizontal: rem(16),
+    paddingBottom: rem(20),
     flexGrow: 1,
-    paddingBottom: hasNotch() ? rem(120) : rem(105),
   },
   description: {
     ...font(14, 19, 'medium', 'secondary', 'left'),
@@ -133,16 +117,12 @@ const styles = StyleSheet.create({
   },
   buttonsContainer: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
     justifyContent: 'center',
-    position: 'absolute',
-    width: screenWidth,
-    height: hasNotch() ? rem(98) : rem(85),
-    bottom: 0,
     backgroundColor: COLORS.white,
     paddingTop: rem(16),
+    paddingBottom: rem(30),
   },
   button: {
-    width: screenWidth * 0.4,
+    width: '40%',
   },
 });
