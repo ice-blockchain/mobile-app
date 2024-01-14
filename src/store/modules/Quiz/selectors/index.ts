@@ -23,7 +23,7 @@ export const questionTitleSelector = (state: RootState) => {
 
 export const questionOptionsSelector = (state: RootState) => {
   const options = state.quiz.quiz?.progress?.nextQuestion?.options;
-  return options || [];
+  return options ?? [];
 };
 
 export const expiresAtSelector = (state: RootState) => {

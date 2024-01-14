@@ -11,6 +11,8 @@ import {StyleSheet, View} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
+export const ANSWER_STARTS_HEIGHT = rem(32);
+
 export const AnswerStats = () => {
   const correctAnswers = useSelector(correctAnswersSelector);
   const incorrectAnswers = useSelector(incorrectAnswersSelector);
@@ -29,6 +31,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     paddingBottom: rem(12),
+    height: ANSWER_STARTS_HEIGHT,
   },
   verticalSeparator: {
     marginHorizontal: rem(20),

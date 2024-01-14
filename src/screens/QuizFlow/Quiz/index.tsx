@@ -6,7 +6,10 @@ import {commonStyles} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {AnswerStats} from '@screens/QuizFlow/Quiz/components/AnswerStats';
+import {
+  ANSWER_STARTS_HEIGHT,
+  AnswerStats,
+} from '@screens/QuizFlow/Quiz/components/AnswerStats';
 import {QuestionPage} from '@screens/QuizFlow/Quiz/components/QuestionPage';
 import {TimeOver} from '@screens/QuizFlow/Quiz/components/TimeOver';
 import {useQuestionTimeCounter} from '@screens/QuizFlow/Quiz/hooks/useQuestionTimeCounter';
@@ -83,6 +86,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   contentContainer: {
+    paddingTop: ANSWER_STARTS_HEIGHT,
     flexGrow: 1,
   },
   button: {
