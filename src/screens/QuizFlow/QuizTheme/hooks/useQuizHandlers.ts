@@ -15,7 +15,7 @@ import {t} from '@translations/i18n';
 import {useEffect, useRef} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
-export const useStartQuiz = () => {
+export const useQuizHandlers = () => {
   const startPressed = useRef(false);
   const dispatch = useDispatch();
 

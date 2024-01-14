@@ -12,6 +12,7 @@ import {
 } from '@screens/QuizFlow/Quiz/components/AnswerStats';
 import {QuestionPage} from '@screens/QuizFlow/Quiz/components/QuestionPage';
 import {TimeOver} from '@screens/QuizFlow/Quiz/components/TimeOver';
+import {useCancelQuiz} from '@screens/QuizFlow/Quiz/hooks/useCancelQuiz';
 import {useQuestionTimeCounter} from '@screens/QuizFlow/Quiz/hooks/useQuestionTimeCounter';
 import {useQuizQuestionnaire} from '@screens/QuizFlow/Quiz/hooks/useQuizQuestionnaire';
 import {t} from '@translations/i18n';
@@ -26,6 +27,8 @@ export const Quiz = () => {
   const [selectedAnswerIndex, setSelectedAnswerIndex] = React.useState<
     null | number
   >(null);
+
+  const {cancelQuiz} = useCancelQuiz();
 
   const {
     isLoadingQuiz,
@@ -50,7 +53,9 @@ export const Quiz = () => {
         title={t('quiz.quiz_questionnaire.navigation_title', {
           current: currentQuestionCount ?? 0,
           total: maxQuestions ?? 0,
-        })}>
+        })}
+        onGoBack={cancelQuiz}
+        preventDefaultAction={true}>
         <AnswerStats />
       </Header>
       <ScrollView

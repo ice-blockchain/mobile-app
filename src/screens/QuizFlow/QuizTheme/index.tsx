@@ -9,7 +9,7 @@ import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {useStartQuiz} from '@screens/QuizFlow/QuizTheme/hooks/useStartQuiz';
+import {useQuizHandlers} from '@screens/QuizFlow/QuizTheme/hooks/useQuizHandlers';
 import {replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
@@ -21,7 +21,7 @@ export const QuizTheme = () => {
   useFocusStatusBar({style: 'dark-content'});
   const {shadowStyle} = useScrollShadow();
 
-  const {startQuiz, cancelQuiz, startQuizLoading} = useStartQuiz();
+  const {startQuiz, cancelQuiz, startQuizLoading} = useQuizHandlers();
 
   return (
     <View style={commonStyles.flexOne}>
