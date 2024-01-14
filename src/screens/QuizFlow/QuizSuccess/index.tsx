@@ -30,7 +30,7 @@ export const QuizSuccess = () => {
 
   const handleContinue = () => {
     dispatch(QuizActions.RESET_QUIZ.RESET.create());
-    dispatch(TokenomicsActions.START_MINING_SESSION.START.create({}));
+    dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
     navigation.popToTop();
   };
 
