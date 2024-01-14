@@ -26,8 +26,8 @@ export const useAnimateOptions = ({options}: {options: string[]}) => {
           easing: Easing.linear,
         },
         () => {
-          animation.value = 0;
           runOnJS(updateOptions)();
+          animation.value = 0;
         },
       );
     }

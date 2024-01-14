@@ -39,12 +39,10 @@ const buildTimerButtonTitle = ({
   }
 
   if (durationLeft.asMinutes() > 1) {
-    const remainingMinutes = durationLeft.asMinutes().toFixed(0);
-    const remainingSeconds = durationLeft.asSeconds() % 60;
     return `${t(
       'button.continue',
-    )} - ${remainingMinutes}m ${remainingSeconds}s`;
-  } else {
-    return `${t('button.continue')} - ${durationLeft.asSeconds()}s`;
+    )} - ${durationLeft.minutes()}m ${durationLeft.seconds()}s`;
   }
+
+  return `${t('button.continue')} - ${durationLeft.asSeconds()}s`;
 };

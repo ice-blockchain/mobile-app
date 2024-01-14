@@ -2,26 +2,25 @@
 
 import {Answer} from '@screens/QuizFlow/Quiz/components/QuestionPage/components/Answer';
 import {useAnimateOptions} from '@screens/QuizFlow/Quiz/components/QuestionPage/hooks/useAnimateOptions';
-import {
-  questionOptionsSelector,
-  questionTitleSelector,
-} from '@store/modules/Quiz/selectors';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import Animated from 'react-native-reanimated';
-import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 type Props = {
   onAnswerSelected: (index: number) => void;
   selectedIndex: number | null;
+  question: string;
+  options: string[];
 };
 
-export const QuestionPage = ({onAnswerSelected, selectedIndex}: Props) => {
-  const questionTitle = useSelector(questionTitleSelector);
-  const options = useSelector(questionOptionsSelector);
-
+export const QuestionPage = ({
+  onAnswerSelected,
+  selectedIndex,
+  question,
+  options,
+}: Props) => {
   const handlePress = (answerIndex: number) => {
     onAnswerSelected(answerIndex);
   };
@@ -30,7 +29,7 @@ export const QuestionPage = ({onAnswerSelected, selectedIndex}: Props) => {
 
   return (
     <Animated.View style={[styles.container, animatedStyle]}>
-      <Text style={styles.title}>{questionTitle}</Text>
+      <Text style={styles.title}>{question}</Text>
       <View style={styles.answersContainer}>
         {options.map((answer: string, index: number) => {
           return (

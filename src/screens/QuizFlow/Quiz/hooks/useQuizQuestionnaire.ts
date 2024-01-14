@@ -9,10 +9,13 @@ import {
   currentQuestionCountSelector,
   incorrectAnswersSelector,
   maxQuestionsCountSelector,
+  questionOptionsSelector,
+  questionTitleSelector,
   quizResultSelector,
 } from '@store/modules/Quiz/selectors';
 import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
-import {useEffect} from 'react';
+import {shuffle} from 'lodash';
+import {useEffect, useMemo} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
 export const useQuizQuestionnaire = () => {
@@ -24,6 +27,12 @@ export const useQuizQuestionnaire = () => {
   const correctAnswers = useSelector(correctAnswersSelector);
   const incorrectAnswers = useSelector(incorrectAnswersSelector);
   const quizResult = useSelector(quizResultSelector);
+  const questionTitle = useSelector(questionTitleSelector);
+  const options = useSelector(questionOptionsSelector);
+
+  const shuffledOptions = useMemo(() => {
+    return shuffle(options);
+  }, [options]);
 
   const dispatch = useDispatch();
 
@@ -40,9 +49,10 @@ export const useQuizQuestionnaire = () => {
   }, [quizResult, navigation]);
 
   const submitAnswer = (index: number) => {
+    const originalIndex = options.indexOf(shuffledOptions[index]);
     dispatch(
       QuizActions.START_OR_CONTINUE_QUIZ.START.create({
-        selectedOption: index,
+        selectedOption: originalIndex,
       }),
     );
   };
@@ -54,5 +64,7 @@ export const useQuizQuestionnaire = () => {
     currentQuestionCount,
     correctAnswers,
     incorrectAnswers,
+    questionTitle,
+    options: shuffledOptions,
   };
 };

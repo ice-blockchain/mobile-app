@@ -24,8 +24,14 @@ export const Quiz = () => {
     null | number
   >(null);
 
-  const {isLoadingQuiz, maxQuestions, currentQuestionCount, submitAnswer} =
-    useQuizQuestionnaire();
+  const {
+    isLoadingQuiz,
+    maxQuestions,
+    currentQuestionCount,
+    questionTitle,
+    options,
+    submitAnswer,
+  } = useQuizQuestionnaire();
 
   const {isCountdownOver, timerButtonTitle} = useQuestionTimeCounter();
 
@@ -53,6 +59,8 @@ export const Quiz = () => {
         <QuestionPage
           onAnswerSelected={setSelectedAnswerIndex}
           selectedIndex={selectedAnswerIndex}
+          question={questionTitle}
+          options={options}
         />
         <TimeOver visible={isCountdownOver} />
       </ScrollView>
