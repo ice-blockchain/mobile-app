@@ -5,6 +5,7 @@ import {PopUpButton} from '@components/Buttons/PopUpButton';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
 import {commonStyles} from '@constants/styles';
+import {useOnHardwareBack} from '@hooks/useOnHardwareBack';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
@@ -22,6 +23,8 @@ export const QuizTheme = () => {
   const {shadowStyle} = useScrollShadow();
 
   const {startQuiz, cancelQuiz, startQuizLoading} = useQuizHandlers();
+
+  useOnHardwareBack({callback: cancelQuiz, preventDefault: true});
 
   return (
     <View style={commonStyles.flexOne}>

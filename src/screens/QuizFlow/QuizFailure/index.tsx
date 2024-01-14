@@ -5,6 +5,7 @@ import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
 import {commonStyles} from '@constants/styles';
+import {useOnHardwareBack} from '@hooks/useOnHardwareBack';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
@@ -47,6 +48,8 @@ export const QuizFailure = () => {
     dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
     navigation.popToTop();
   };
+
+  useOnHardwareBack({callback: handleClose, preventDefault: true});
 
   return (
     <SafeAreaView style={commonStyles.flexOne} edges={['bottom']}>
