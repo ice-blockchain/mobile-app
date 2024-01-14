@@ -7,7 +7,6 @@ import {QuizActions} from '@store/modules/Quiz/actions';
 import {
   correctAnswersSelector,
   currentQuestionCountSelector,
-  expiresAtSelector,
   incorrectAnswersSelector,
   maxQuestionsCountSelector,
   quizResultSelector,
@@ -25,7 +24,6 @@ export const useQuizQuestionnaire = () => {
   const correctAnswers = useSelector(correctAnswersSelector);
   const incorrectAnswers = useSelector(incorrectAnswersSelector);
   const quizResult = useSelector(quizResultSelector);
-  const expiresAt = useSelector(expiresAtSelector);
 
   const dispatch = useDispatch();
 
@@ -56,6 +54,5 @@ export const useQuizQuestionnaire = () => {
     currentQuestionCount,
     correctAnswers,
     incorrectAnswers,
-    expiresAt,
   };
 };
