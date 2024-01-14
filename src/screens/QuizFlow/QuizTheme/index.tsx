@@ -9,7 +9,7 @@ import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {useStartQuiz} from '@screens/QuizFlow/Theme/hooks/useStartQuiz';
+import {useStartQuiz} from '@screens/QuizFlow/QuizTheme/hooks/useStartQuiz';
 import {replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
@@ -28,7 +28,7 @@ export const QuizTheme = () => {
       <Header
         containerStyle={shadowStyle}
         color={COLORS.primaryDark}
-        title={t('quiz.theme.navigation_title')}
+        title={t('quiz.title')}
         onGoBack={cancelQuiz}
         preventDefaultAction={true}
       />
@@ -36,7 +36,7 @@ export const QuizTheme = () => {
         contentContainerStyle={styles.contentContainer}
         showsVerticalScrollIndicator={false}>
         <Image source={Images.quiz.quiz} style={styles.icon} />
-        <Text style={styles.title}>{t('quiz.theme.todays_theme')}</Text>
+        <Text style={styles.title}>{t('quiz.title')}</Text>
         <Text style={styles.subtitle}>{t('quiz.theme.knowledge_check')}</Text>
         <View style={styles.bulletsContainer}>
           {points.map((point, index) => (
@@ -76,8 +76,9 @@ export const QuizTheme = () => {
 const styles = StyleSheet.create({
   icon: {
     alignSelf: 'center',
-    width: '65%',
     marginTop: rem(18),
+    width: rem(243),
+    height: rem(232),
   },
   title: {
     ...font(24, 30, 'bold', 'primaryDark', 'left'),
@@ -97,7 +98,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: COLORS.white,
     paddingTop: rem(16),
-    paddingBottom: rem(30),
+    paddingBottom: rem(34),
   },
   button: {
     width: '40%',

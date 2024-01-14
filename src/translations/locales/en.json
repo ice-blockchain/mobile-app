@@ -1319,9 +1319,8 @@
     "description2": "This step helps us ensure the security and authenticity of your account. Thank you for your cooperation!"
   },
   "quiz": {
+    "title": "KYC Step #3",
     "terms": {
-      "navigation_title": "KYC Step #3",
-      "title": "KYC Step #3",
       "description": "At Ice, we believe in fostering a community of active and informed members. Our mission is to ensure that Ice coins are distributed to those who are genuinely engaged and aligned with our vision.",
       "knowledge_verification": {
         "title": "💡 Knowledge Verification",
@@ -1341,8 +1340,6 @@
       "terms_privacy": "I understand & I agree with the [[:link]]Terms and Conditions.[[/:link]]"
     },
     "theme": {
-      "navigation_title": "KYC Step #3",
-      "todays_theme": "KYC Step #3",
       "knowledge_check": "🧠 Knowledge Check:",
       "point1": "There are 21 questions in total.",
       "point2": "To pass the quiz, you need to answer at least 18 questions correctly.",
@@ -1352,9 +1349,8 @@
       "why_quiz_description": "We're all about smart, safe, and informed mining. This small step ensures our Ice community thrives with knowledge and understanding!"
     },
     "mining_disabled": {
-      "navigation_title": "Quiz",
-      "title": "Mining Disabled",
-      "description": "You answered the question incorrectly, so mining is disabled for the next 24 hours.",
+      "title": "Failed Quiz",
+      "description": "You didn’t answer more than 18 questions correctly, so you can’t pass the KYC Step #3. You can try again in one week.",
       "check_faq": "In order to answer correctly next time, we suggest you familiarize yourself with our knowledge base and FAQ."
     },
     "quiz_questionnaire": {
@@ -1374,8 +1370,8 @@
       "cancel_description": "Are you sure you want to cancel the quiz?"
     },
     "quiz_success": {
-      "title": "Quiz completed successfully",
-      "description": "You have successfully completed the quiz. You are now verified. Your knowledge now verified"
+      "title": "Verification Completed",
+      "description": "Congratulations, you have successfully completed your KYC. Your consistent correct answers have proven your dedication and knowledge. You are now verified."
     }
   }
 }

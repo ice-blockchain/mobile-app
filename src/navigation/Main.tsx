@@ -66,7 +66,7 @@ import {Quiz} from '@screens/QuizFlow/Quiz';
 import {QuizFailure} from '@screens/QuizFlow/QuizFailure';
 import {QuizSuccess} from '@screens/QuizFlow/QuizSuccess';
 import {QuizTerms} from '@screens/QuizFlow/QuizTerms';
-import {QuizTheme} from '@screens/QuizFlow/Theme';
+import {QuizTheme} from '@screens/QuizFlow/QuizTheme';
 import {ConfirmEmail} from '@screens/SettingsFlow/ConfirmEmail';
 import {ConfirmPhoneNumber} from '@screens/SettingsFlow/ConfirmPhoneNumber';
 import {LanguageSettings} from '@screens/SettingsFlow/LanguageSettings';

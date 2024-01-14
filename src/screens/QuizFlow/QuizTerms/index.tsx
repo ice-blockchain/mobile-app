@@ -41,14 +41,14 @@ export const QuizTerms = () => {
       <Header
         containerStyle={shadowStyle}
         color={COLORS.primaryDark}
-        title={t('quiz.terms.navigation_title')}
+        title={t('quiz.title')}
       />
       <ScrollView
         style={commonStyles.flexOne}
         contentContainerStyle={styles.contentContainer}
         showsVerticalScrollIndicator={false}>
         <Image source={Images.quiz.quiz} style={styles.icon} />
-        <Text style={styles.title}>{t('quiz.terms.title')}</Text>
+        <Text style={styles.title}>{t('quiz.title')}</Text>
         <Text style={styles.description}>{t('quiz.terms.description')}</Text>
         <InfoBlock
           title={t('quiz.terms.knowledge_verification.title')}
@@ -100,8 +100,9 @@ export const QuizTerms = () => {
 const styles = StyleSheet.create({
   icon: {
     alignSelf: 'center',
-    width: '65%',
     marginTop: rem(18),
+    width: rem(243),
+    height: rem(232),
   },
   title: {
     ...font(24, 30, 'black', 'primaryDark', 'left'),
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: COLORS.white,
     paddingTop: rem(16),
-    paddingBottom: rem(30),
+    paddingBottom: rem(34),
   },
   button: {
     width: '40%',

@@ -12,10 +12,7 @@ import {
   maxQuestionsCountSelector,
   quizResultSelector,
 } from '@store/modules/Quiz/selectors';
-import {
-  isLoadingSelector,
-  isSuccessSelector,
-} from '@store/modules/UtilityProcessStatuses/selectors';
+import {isLoadingSelector} from '@store/modules/UtilityProcessStatuses/selectors';
 import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
@@ -36,16 +33,13 @@ export const useQuizQuestionnaire = () => {
     isLoadingSelector.bind(null, QuizActions.START_OR_CONTINUE_QUIZ),
   );
 
-  const isSuccessQuiz = useSelector(
-    isSuccessSelector.bind(null, QuizActions.START_OR_CONTINUE_QUIZ),
-  );
-
   useEffect(() => {
-    if (isSuccessQuiz && quizResult === 'FAILURE') {
-      navigation.popToTop();
-      navigation.navigate('QuizFailure');
+    if (quizResult) {
+      navigation.replace(
+        quizResult === 'SUCCESS' ? 'QuizSuccess' : 'QuizFailure',
+      );
     }
-  }, [isSuccessQuiz, quizResult, navigation]);
+  }, [quizResult, navigation]);
 
   const submitAnswer = (index: number) => {
     dispatch(

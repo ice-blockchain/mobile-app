@@ -193,7 +193,7 @@ export const Images = {
     okxWallet: require('./card/okxWallet.png'),
   },
   quiz: {
-    mining_disabled: require('./quiz/miningDisabled.png'),
+    quizFailed: require('./quiz/quiz_failed.png'),
     quiz: require('./quiz/quiz.png'),
   },
 } as const;

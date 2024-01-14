@@ -3,7 +3,7 @@
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
-import {commonStyles, windowWidth} from '@constants/styles';
+import {commonStyles} from '@constants/styles';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
@@ -19,7 +19,8 @@ import {t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {useDispatch} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -46,82 +47,77 @@ export const QuizFailure = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={commonStyles.flexOne} edges={['bottom']}>
       <Header
         containerStyle={shadowStyle}
         color={COLORS.primaryDark}
-        title={t('quiz.mining_disabled.navigation_title')}
+        title={t('quiz.title')}
         showBackButton={false}
-        renderRightButtons={() => (
-          <CloseButton style={styles.closeButton} onPress={handleClose} />
-        )}
+        renderRightButtons={() => <CloseButton onPress={handleClose} />}
       />
-      <Image source={Images.quiz.mining_disabled} style={styles.icon} />
-      <Text style={styles.title}>{t('quiz.mining_disabled.title')}</Text>
-      <Text style={styles.description}>
-        {t('quiz.mining_disabled.description')}
-      </Text>
-      <Text style={styles.checkFaq}>{t('quiz.mining_disabled.check_faq')}</Text>
-      <View style={commonStyles.flexOne} />
-      <View style={styles.buttons}>
-        <PrimaryButton
-          onPress={handleFAQ}
-          text={t('button.faq')}
-          icon={<QuestionIcon />}
-          style={styles.button}
-        />
-        <PrimaryButton
-          onPress={handleKnowledgeBase}
-          text={t('button.knowledge_base')}
-          icon={<BookIcon />}
-          style={[styles.button, styles.knowledgeButton]}
-        />
-      </View>
-    </View>
+      <ScrollView
+        style={commonStyles.flexOne}
+        contentContainerStyle={styles.contentContainer}
+        showsVerticalScrollIndicator={false}>
+        <View style={commonStyles.flexOne}>
+          <Image source={Images.quiz.quizFailed} style={styles.icon} />
+          <Text style={styles.title}>{t('quiz.mining_disabled.title')}</Text>
+          <View style={styles.description}>
+            <Text style={styles.descriptionText}>
+              {t('quiz.mining_disabled.description')}
+            </Text>
+            <Text style={styles.descriptionText}>
+              {t('quiz.mining_disabled.check_faq')}
+            </Text>
+          </View>
+        </View>
+        <View style={styles.buttons}>
+          <PrimaryButton
+            onPress={handleFAQ}
+            text={t('button.faq')}
+            icon={<QuestionIcon />}
+            style={styles.button}
+          />
+          <PrimaryButton
+            onPress={handleKnowledgeBase}
+            text={t('button.knowledge_base')}
+            icon={<BookIcon />}
+            style={styles.button}
+          />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.white,
+  contentContainer: {
+    flexGrow: 1,
+    paddingHorizontal: rem(40),
   },
   icon: {
     alignSelf: 'center',
-    width: '65%',
-    marginTop: rem(18),
+    marginTop: rem(45),
+    width: rem(250),
+    height: rem(250),
   },
   title: {
     ...font(24, 30, 'black', 'primaryDark', 'center'),
     marginTop: rem(24),
   },
   buttons: {
-    marginBottom: rem(60),
-  },
-  closeButton: {
-    position: 'absolute',
-    top: rem(22),
-    right: rem(5),
+    marginBottom: rem(8),
   },
   description: {
-    ...font(14, 19, 'medium', 'secondary', 'center'),
-    marginTop: rem(20),
-    marginHorizontal: rem(53),
+    marginTop: rem(10),
   },
-  checkFaq: {
-    ...font(14, 19, 'medium', 'secondary', 'center'),
-    marginTop: rem(24),
-    marginHorizontal: rem(45),
+  descriptionText: {
+    ...font(14, 18, 'medium', 'secondary', 'center'),
+    marginTop: rem(10),
   },
   button: {
-    width: windowWidth - rem(90),
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: rem(40),
-    borderRadius: rem(12),
-    alignSelf: 'center',
-  },
-  knowledgeButton: {
+    height: rem(48),
+    borderRadius: rem(16),
     marginTop: rem(20),
   },
 });

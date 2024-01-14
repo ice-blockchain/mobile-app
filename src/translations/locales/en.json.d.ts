@@ -796,8 +796,7 @@ export type Translations = {
   'account_confirmation.title': null;
   'account_confirmation.description': null;
   'account_confirmation.description2': null;
-  'quiz.terms.navigation_title': null;
-  'quiz.terms.title': null;
+  'quiz.title': null;
   'quiz.terms.description': null;
   'quiz.terms.knowledge_verification.title': null;
   'quiz.terms.knowledge_verification.description': null;
@@ -811,8 +810,6 @@ export type Translations = {
   'quiz.terms.community_engagement.point3': null;
   'quiz.terms.community_engagement.bottom_description': null;
   'quiz.terms.terms_privacy': null;
-  'quiz.theme.navigation_title': null;
-  'quiz.theme.todays_theme': null;
   'quiz.theme.knowledge_check': null;
   'quiz.theme.point1': null;
   'quiz.theme.point2': null;
@@ -820,7 +817,6 @@ export type Translations = {
   'quiz.theme.point4': null;
   'quiz.theme.why_quiz': null;
   'quiz.theme.why_quiz_description': null;
-  'quiz.mining_disabled.navigation_title': null;
   'quiz.mining_disabled.title': null;
   'quiz.mining_disabled.description': null;
   'quiz.mining_disabled.check_faq': null;
