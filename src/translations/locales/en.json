@@ -1356,8 +1356,6 @@
     "quiz_questionnaire": {
       "navigation_title": "Question {{current}} of {{total}}",
       "time_over": "⌛️  Time is over",
-      "correct_answer": "👏  Correct answer!",
-      "wrong_answer": "🙁  Wrong answer!",
       "correct_answers": "Correct Answers",
       "wrong_answers": "Wrong Answers"
     },

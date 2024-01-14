@@ -1,16 +1,19 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
-import {AnswersCounter} from '@screens/QuizFlow/Quiz/components/AnswersCounter';
-import {useQuizQuestionnaire} from '@screens/QuizFlow/Quiz/hooks/useQuizQuestionnaire';
+import {AnswersCounter} from '@screens/QuizFlow/Quiz/components/AnswerStats/components/AnswersCounter';
+import {
+  correctAnswersSelector,
+  incorrectAnswersSelector,
+} from '@store/modules/Quiz/selectors';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const QUIZ_STATS_HEIGHT = rem(42);
-
 export const AnswerStats = () => {
-  const {correctAnswers, incorrectAnswers} = useQuizQuestionnaire();
+  const correctAnswers = useSelector(correctAnswersSelector);
+  const incorrectAnswers = useSelector(incorrectAnswersSelector);
 
   return (
     <View style={styles.container}>
@@ -23,15 +26,14 @@ export const AnswerStats = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: QUIZ_STATS_HEIGHT,
-    justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
+    paddingBottom: rem(12),
   },
   verticalSeparator: {
     marginHorizontal: rem(20),
     width: rem(1),
-    height: rem(16),
+    height: '100%',
     backgroundColor: COLORS.secondaryFaint,
   },
 });

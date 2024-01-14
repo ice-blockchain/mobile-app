@@ -56,7 +56,6 @@ export const useQuizQuestionnaire = () => {
     currentQuestionCount,
     correctAnswers,
     incorrectAnswers,
-    quizResult,
     expiresAt,
   };
 };

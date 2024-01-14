@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {windowWidth} from '@constants/styles';
-import {Answer} from '@screens/QuizFlow/Quiz/components/Answer';
+import {Answer} from '@screens/QuizFlow/Quiz/components/QuestionPage/components/Answer';
 import {useQuestionPage} from '@screens/QuizFlow/Quiz/components/QuestionPage/hooks/useQuestionPage';
 import {font} from '@utils/styles';
 import React, {useEffect} from 'react';
@@ -13,7 +13,6 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 import {rem} from 'rn-units';
-
 type Props = {
   onAnswerSelected: (index: number) => void;
   selectedIndex: number | null;

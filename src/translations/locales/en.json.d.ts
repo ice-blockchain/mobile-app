@@ -825,8 +825,6 @@ export type Translations = {
     total: number | string;
   };
   'quiz.quiz_questionnaire.time_over': null;
-  'quiz.quiz_questionnaire.correct_answer': null;
-  'quiz.quiz_questionnaire.wrong_answer': null;
   'quiz.quiz_questionnaire.correct_answers': null;
   'quiz.quiz_questionnaire.wrong_answers': null;
   'quiz.quiz_failure.title': null;
