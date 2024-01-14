@@ -18,7 +18,7 @@ export function startOrContinueQuiz({
   questionNumber,
 }: Params) {
   return post<null, Quiz>(
-    `/kyc/startOrContinueKYCStep4Session/users/${userId}?language=${language}&selectedOption=${selectedOption}&questionNumber=${questionNumber}`,
+    `/kyc/startOrContinueKYCStep4Session/users/${userId}?questionNumber=${questionNumber}&language=${language}&selectedOption=${selectedOption}`,
     null,
   );
 }
