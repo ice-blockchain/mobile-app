@@ -21,7 +21,6 @@ export const useQuestionTimeCounter = () => {
   const {durationLeft, isCountdownOver} = useCountdown(resendDuration);
 
   return {
-    resendDuration,
     isCountdownOver,
     timerButtonTitle: buildTimerButtonTitle({durationLeft, isCountdownOver}),
   };

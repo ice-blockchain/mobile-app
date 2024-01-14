@@ -15,20 +15,13 @@ type Props = {
   onPress: (index: number) => void;
   answerIndex: number;
 };
-export const Answer = ({
-  answer,
-  isSelected,
-  onPress,
-  answerIndex,
-  ...props
-}: Props) => {
+export const Answer = ({answer, isSelected, onPress, answerIndex}: Props) => {
   return (
     <TouchableWithoutFeedback
       style={styles.container}
       onPress={() => {
         onPress(answerIndex);
-      }}
-      {...props}>
+      }}>
       <View
         style={[
           styles.itemContainer,
@@ -55,7 +48,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     minHeight: rem(69),
     borderRadius: rem(16),
-    width: '100%',
+    flex: 1,
     justifyContent: 'center',
     flexDirection: 'row',
   },
