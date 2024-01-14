@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {PullToRefreshContainer} from '@components/PullToRefreshContainer';
 import {COLORS} from '@constants/colors';
 import {isLightDesign} from '@constants/featureFlags';
@@ -20,18 +19,16 @@ import {useAchievementsWalkthrough} from '@screens/HomeFlow/Home/hooks/useAchiev
 import {useHandleScrollToParam} from '@screens/HomeFlow/Home/hooks/useHandleScrollToParam';
 import {useHomeRefresh} from '@screens/HomeFlow/Home/hooks/useHomeRefresh';
 import {isAchievementsEnabledSelector} from '@store/modules/Account/selectors';
-import {QuizActions} from '@store/modules/Quiz/actions';
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated, {useSharedValue} from 'react-native-reanimated';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 export const Home = memo(() => {
   useFocusStatusBar({style: 'dark-content'});
   const tabBarOffset = useBottomTabBarOffsetStyle();
   const {onRefresh, refreshing} = useHomeRefresh();
-  const dispatch = useDispatch();
 
   const translateY = useSharedValue(0);
 
@@ -40,10 +37,6 @@ export const Home = memo(() => {
   const isAchievementsEnabled = useSelector(isAchievementsEnabledSelector);
 
   const showTasks = !isLightDesign || isAchievementsEnabled;
-
-  const startQuiz = () => {
-    dispatch(QuizActions.START_OR_CONTINUE_QUIZ_FLOW.STATE.create());
-  };
 
   return (
     <View style={styles.container}>
@@ -68,11 +61,6 @@ export const Home = memo(() => {
             <BscAddress />
             <Roadmap />
             <JoinMainnet />
-            <PrimaryButton
-              text="Start quiz"
-              style={styles.quizButton}
-              onPress={startQuiz}
-            />
             <View ref={elementRef} onLayout={onElementLayout}>
               {showTasks ? <Tasks /> : null}
             </View>
@@ -91,9 +79,5 @@ const styles = StyleSheet.create({
   },
   section: {
     marginTop: -rem(24),
-  },
-  quizButton: {
-    marginHorizontal: rem(50),
-    marginVertical: rem(25),
   },
 });
