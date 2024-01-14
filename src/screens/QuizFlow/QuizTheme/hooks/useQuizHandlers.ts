@@ -46,7 +46,7 @@ export const useQuizHandlers = () => {
           text: t('button.confirm'),
           onPress: () => {
             startPressed.current = true;
-            dispatch(QuizActions.START_OR_CONTINUE_QUIZ.START.create({}));
+            dispatch(QuizActions.START_OR_CONTINUE_QUIZ.START.create());
           },
         },
       ],
@@ -67,6 +67,7 @@ export const useQuizHandlers = () => {
                 skipKYCStep: QUIZ_KYC_STEP,
               }),
             );
+            dispatch(QuizActions.RESET_QUIZ.RESET.create());
             navigation.goBack();
           },
         },

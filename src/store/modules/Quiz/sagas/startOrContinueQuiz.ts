@@ -15,8 +15,7 @@ type Actions = ReturnType<
   typeof QuizActions.START_OR_CONTINUE_QUIZ.START.create
 >;
 
-export function* startOrContinueQuizSaga(action: Actions) {
-  const {selectedOption} = action.payload;
+export function* startOrContinueQuizSaga({payload}: Actions) {
   const user: SagaReturnType<typeof unsafeUserSelector> = yield select(
     unsafeUserSelector,
   );
@@ -26,16 +25,23 @@ export function* startOrContinueQuizSaga(action: Actions) {
   );
 
   try {
+    const nextQuestionNumber = currentQuiz?.progress?.nextQuestion.number;
+
+    if (payload && nextQuestionNumber == null) {
+      throw new Error('Answer question error - current quiz progress is null');
+    }
+
+    const selectedOption = payload ? payload.selectedOption : START_QUIZ_CODE;
+    const questionNumber =
+      payload && nextQuestionNumber ? nextQuestionNumber : START_QUIZ_CODE;
+
     const quiz: SagaReturnType<typeof Api.kyc.startOrContinueQuiz> = yield call(
       Api.kyc.startOrContinueQuiz,
       {
         userId: user.id,
         language: user.language,
-        selectedOption: selectedOption ?? START_QUIZ_CODE,
-        questionNumber:
-          currentQuiz && currentQuiz.progress
-            ? currentQuiz.progress.nextQuestion.number
-            : START_QUIZ_CODE,
+        selectedOption,
+        questionNumber,
       },
     );
 

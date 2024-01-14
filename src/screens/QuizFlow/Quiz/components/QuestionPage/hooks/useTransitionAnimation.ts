@@ -35,11 +35,16 @@ export const useTransitionAnimation = ({
         },
         () => {
           runOnJS(updateVisibility)();
-          animation.value = 0;
         },
       );
     }
   }, [visibleOptions, animation, options, question]);
+
+  useEffect(() => {
+    if (visibleOptions === options) {
+      animation.value = 0;
+    }
+  }, [animation, options, visibleOptions]);
 
   const animatedStyle = useAnimatedStyle(() => {
     return {

@@ -4,7 +4,7 @@ import {Quiz} from '@api/kyc/types';
 import {createAction} from '@store/utils/actions/createAction';
 
 const START_OR_CONTINUE_QUIZ = createAction('START_OR_CONTINUE_QUIZ', {
-  START: (payload: {selectedOption?: number}) => payload,
+  START: (payload?: {selectedOption: number}) => payload,
   SUCCESS: (payload: {quiz: Quiz}) => payload,
   FAILED: (errorMessage: string) => ({errorMessage}),
   RESET: true,
