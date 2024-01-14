@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {CloseButton} from '@components/Buttons/CloseButton';
 import {PopUpButton, PopUpButtonProps} from '@components/Buttons/PopUpButton';
 import {stopPropagation} from '@components/KeyboardDismiss';
 import {LottieView, LottieViewProps} from '@components/LottieView';
@@ -9,7 +10,6 @@ import {MainStackParamList} from '@navigation/Main';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {Banner} from '@screens/Modals/PopUp/components/Banner';
 import {Checkbox} from '@screens/Modals/PopUp/components/Checkbox';
-import {CloseButton} from '@screens/Modals/PopUp/components/CloseButton';
 import {Message} from '@screens/Modals/PopUp/components/Message';
 import {Title} from '@screens/Modals/PopUp/components/Title';
 import {Warning} from '@screens/Modals/PopUp/components/Warning';

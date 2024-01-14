@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {CloseButton} from '@components/Buttons/CloseButton';
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
@@ -11,7 +12,6 @@ import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {CloseButton} from '@screens/Modals/PopUp/components/CloseButton';
 import {QuizActions} from '@store/modules/Quiz/actions';
 import {BookIcon} from '@svg/BookIcon';
 import {QuestionIcon} from '@svg/QuestionIcon';
