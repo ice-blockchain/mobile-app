@@ -15,7 +15,7 @@ import {TimeOver} from '@screens/QuizFlow/Quiz/components/TimeOver';
 import {useQuestionTimeCounter} from '@screens/QuizFlow/Quiz/hooks/useQuestionTimeCounter';
 import {useQuizQuestionnaire} from '@screens/QuizFlow/Quiz/hooks/useQuizQuestionnaire';
 import {t} from '@translations/i18n';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import {rem} from 'rn-units';
 
@@ -38,12 +38,9 @@ export const Quiz = () => {
 
   const {isCountdownOver, timerButtonTitle} = useQuestionTimeCounter();
 
-  const handleContinue = () => {
-    if (selectedAnswerIndex) {
-      setSelectedAnswerIndex(null);
-      submitAnswer(selectedAnswerIndex);
-    }
-  };
+  useEffect(() => {
+    setSelectedAnswerIndex(null);
+  }, [options]);
 
   return (
     <View style={styles.container}>
@@ -69,7 +66,11 @@ export const Quiz = () => {
       </ScrollView>
       <View style={[styles.buttonsContainer, commonStyles.shadow]}>
         <PrimaryButton
-          onPress={handleContinue}
+          onPress={() => {
+            if (selectedAnswerIndex !== null) {
+              submitAnswer(selectedAnswerIndex);
+            }
+          }}
           text={timerButtonTitle}
           style={styles.button}
           loading={isLoadingQuiz}

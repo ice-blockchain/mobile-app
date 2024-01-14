@@ -10,14 +10,22 @@ import {
   withTiming,
 } from 'react-native-reanimated';
 
-export const useAnimateOptions = ({options}: {options: string[]}) => {
+export const useTransitionAnimation = ({
+  options,
+  question,
+}: {
+  options: string[];
+  question: string;
+}) => {
   const animation = useSharedValue(0);
   const [visibleOptions, setVisibleOptions] = useState<string[]>(options);
+  const [visibleQuestion, setVisibleQuestion] = useState<string>(question);
 
   useEffect(() => {
     if (visibleOptions.length && options.length && visibleOptions !== options) {
-      const updateOptions = () => {
+      const updateVisibility = () => {
         setVisibleOptions(options);
+        setVisibleQuestion(question);
       };
       animation.value = withTiming(
         1,
@@ -26,12 +34,12 @@ export const useAnimateOptions = ({options}: {options: string[]}) => {
           easing: Easing.linear,
         },
         () => {
-          runOnJS(updateOptions)();
+          runOnJS(updateVisibility)();
           animation.value = 0;
         },
       );
     }
-  }, [visibleOptions, animation, options]);
+  }, [visibleOptions, animation, options, question]);
 
   const animatedStyle = useAnimatedStyle(() => {
     return {
@@ -39,5 +47,5 @@ export const useAnimateOptions = ({options}: {options: string[]}) => {
     };
   });
 
-  return {animatedStyle};
+  return {animatedStyle, visibleOptions, visibleQuestion};
 };

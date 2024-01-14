@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {Answer} from '@screens/QuizFlow/Quiz/components/QuestionPage/components/Answer';
-import {useAnimateOptions} from '@screens/QuizFlow/Quiz/components/QuestionPage/hooks/useAnimateOptions';
+import {useTransitionAnimation} from '@screens/QuizFlow/Quiz/components/QuestionPage/hooks/useTransitionAnimation';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -25,13 +25,14 @@ export const QuestionPage = ({
     onAnswerSelected(answerIndex);
   };
 
-  const {animatedStyle} = useAnimateOptions({options});
+  const {animatedStyle, visibleOptions, visibleQuestion} =
+    useTransitionAnimation({options, question});
 
   return (
     <Animated.View style={[styles.container, animatedStyle]}>
-      <Text style={styles.title}>{question}</Text>
+      <Text style={styles.title}>{visibleQuestion}</Text>
       <View style={styles.answersContainer}>
-        {options.map((answer: string, index: number) => {
+        {visibleOptions.map((answer: string, index: number) => {
           return (
             <Answer
               key={answer}
