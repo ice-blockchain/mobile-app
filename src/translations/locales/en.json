@@ -1350,12 +1350,12 @@
     },
     "mining_disabled": {
       "title": "Failed Quiz",
-      "description": "You didn’t answer more than 18 questions correctly, so you can’t pass the KYC Step #3. You can try again in one week.",
+      "description": "You didn't answer more than 18 questions correctly, so you can't pass the KYC Step #3. You can try again in one week.",
       "check_faq": "In order to answer correctly next time, we suggest you familiarize yourself with our knowledge base and FAQ."
     },
     "quiz_questionnaire": {
       "navigation_title": "Question {{current}} of {{total}}",
-      "time_over": "⌛️  Time is over",
+      "time_over": "⌛️ Time is over",
       "correct_answers": "Correct Answers",
       "wrong_answers": "Wrong Answers"
     },
@@ -1367,6 +1367,15 @@
     "quiz_success": {
       "title": "Verification Completed",
       "description": "Congratulations, you have successfully completed your KYC. Your consistent correct answers have proven your dedication and knowledge. You are now verified."
+    },
+    "theme": {
+      "knowledge_check": "🧠 Knowledge Check:",
+      "point1": "There are 21 questions in total.",
+      "point2": "To pass the quiz, you need to answer at least 18 questions correctly.",
+      "point3": "Oops, failed quiz? Try again next week.",
+      "point4": "📚 All info for this quiz can be read [[:link]]here[[/:link]].",
+      "why_quiz": "Why the Quiz?",
+      "why_quiz_description": "We're all about smart, safe, and informed mining. This small step ensures our Ice community thrives with knowledge and understanding!"
     }
   }
 }

@@ -71,7 +71,10 @@
     "subscribe": "Suscribirse",
     "not_sure": "No estoy seguro",
     "confirm_address": "Confirmar dirección",
-    "remove_address": "Eliminar dirección"
+    "remove_address": "Eliminar dirección",
+    "start": "Comenzar",
+    "faq": "Preguntas Frecuentes",
+    "knowledge_base": "Base de Conocimientos"
   },
   "team": {
     "contacts_tab": "Contactos",
@@ -1317,5 +1320,56 @@
     "title": "Confirmación de cuenta",
     "description": "Para verificar la identidad de su cuenta y enlazar su correo electrónico de manera segura, asegúrese de pasar con éxito nuestra verificación de emociones durante el proceso de autenticación.",
     "description2": "Este paso nos ayuda a garantizar la seguridad y autenticidad de su cuenta. ¡Gracias por su cooperación!"
+  },
+  "quiz": {
+    "title": "Paso KYC #3",
+    "terms": {
+      "description": "En Ice, creemos en fomentar una comunidad de miembros activos e informados. Nuestra misión es asegurar que las monedas de Ice se distribuyan a aquellos que estén verdaderamente comprometidos y alineados con nuestra visión.",
+      "knowledge_verification": {
+        "title": "💡 Verificación de Conocimientos",
+        "description": "Para asegurarnos de que nuestra comunidad esté bien informada y alineada con nuestra visión:",
+        "point1": "Se le presentarán 21 preguntas derivadas de nuestros recursos completos.",
+        "point2": "Un cuestionario aprobado confirma su comprensión y dedicación.",
+        "point3": "Un cuestionario no aprobado indica la necesidad de una mayor interacción con nuestros materiales."
+      },
+      "community_engagement": {
+        "title": "🙌 Compromiso Activo con la Comunidad",
+        "description": "Su compromiso dentro del Ecosistema Ice influye directamente en sus capacidades de minería:",
+        "point1": "Manténgase Actualizado: Participe en nuestros artículos de noticias y videos.",
+        "point2": "Participe Activamente: Únase a nuestro Programa de Desarrollo Personal y sesiones en vivo en YouTube o Twitter Space.",
+        "point3": "Interacciones Sociales: Aumente su presencia dando like, compartiendo, siguiendo o publicando sobre Ice.",
+        "bottom_description": "Cuanto más comprometido esté, más alto será su puntaje de interacción positiva, lo que le permitirá pasar por el proceso KYC."
+      },
+      "terms_privacy": "Entiendo y acepto los [[:link]]Términos y Condiciones[[/:link]]."
+    },
+    "theme": {
+      "knowledge_check": "🧠 Verificación de Conocimientos:",
+      "point1": "Hay un total de 21 preguntas.",
+      "point2": "Para aprobar el cuestionario, debe responder al menos 18 preguntas correctamente.",
+      "point3": "¡Ups, cuestionario no aprobado? Inténtelo de nuevo la próxima semana.",
+      "point4": "📚 Toda la información para este cuestionario se puede leer [[:link]]aquí[[/:link]].",
+      "why_quiz": "¿Por qué el Cuestionario?",
+      "why_quiz_description": "Nos enfocamos en la minería inteligente, segura y bien informada. Este pequeño paso asegura que nuestra comunidad Ice prospere con conocimiento y comprensión."
+    },
+    "mining_disabled": {
+      "title": "Cuestionario No Aprobado",
+      "description": "No respondió más de 18 preguntas correctamente, por lo que no puede pasar el Paso KYC #3. Puede intentarlo nuevamente en una semana.",
+      "check_faq": "Para responder correctamente la próxima vez, le sugerimos que se familiarice con nuestra base de conocimientos y preguntas frecuentes."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Pregunta {{current}} de {{total}}",
+      "time_over": "⌛️ Se acabó el tiempo",
+      "correct_answers": "Respuestas Correctas",
+      "wrong_answers": "Respuestas Incorrectas"
+    },
+    "confirmation_popup": {
+      "title": "Confirmación",
+      "start_description": "¿Está seguro de que desea comenzar el cuestionario?",
+      "cancel_description": "¿Está seguro de que desea cancelar el cuestionario?"
+    },
+    "quiz_success": {
+      "title": "Verificación Completada",
+      "description": "Felicitaciones, ha completado con éxito su KYC. Sus respuestas consistentemente correctas han demostrado su dedicación y conocimiento. Ahora está verificado."
+    }
   }
 }

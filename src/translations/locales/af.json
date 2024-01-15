@@ -71,7 +71,10 @@
     "subscribe": "Teken in",
     "not_sure": "Nie seker nie",
     "confirm_address": "Bevestig adres",
-    "remove_address": "Verwyder adres"
+    "remove_address": "Verwyder adres",
+    "start": "Begin",
+    "faq": "FAQ",
+    "knowledge_base": "Kennisbank"
   },
   "team": {
     "contacts_tab": "Kontakte",
@@ -1320,5 +1323,56 @@
     "title": "Rekeningbevestiging",
     "description": "Om u rekeningidentiteit te verifieer en u e-pos veilig te koppel, moet u verseker dat u suksesvol deur ons emosie-kontrole tydens die outentiseringsproses gaan.",
     "description2": "Hierdie stap help ons om die veiligheid en egtheid van u rekening te verseker. Dankie vir u samewerking!"
+  },
+  "quiz": {
+    "title": "KYC Stap #3",
+    "terms": {
+      "description": "By Ice, glo ons in die bevordering van 'n gemeenskap van aktiewe en ingeligte lede. Ons missie is om te verseker dat Ice-munte aan dié wat werklik betrokke is en ooreenstem met ons visie, uitgedeel word.",
+      "knowledge_verification": {
+        "title": "💡 Kennis Verifikasie",
+        "description": "Om te verseker dat ons gemeenskap goed ingelig is en ooreenstem met ons visie:",
+        "point1": "Jy sal voorgele word met 21 vrae wat uit ons omvattende bronne afgelei is.",
+        "point2": " 'n Geslaagde toets bevestig jou begrip en toewyding.",
+        "point3": " 'n Mislukte toets dui op 'n behoefte aan verdere betrokkenheid met ons materiaal."
+      },
+      "community_engagement": {
+        "title": "🙌 Aktiewe Gemeenskapsbetrokkenheid",
+        "description": "Jou betrokkenheid binne die Ice-ekosisteem beïnvloed direk jou mynboumoontlikhede:",
+        "point1": "Bly op hoogte: Betrokkenheid met ons nuusartikels en video's.",
+        "point2": "Neem aktief deel: Sluit aan by ons Persoonlike Ontwikkelingsprogram en lewende sessies op YouTube of Twitter Space.",
+        "point3": "Sosiale interaksies: Verbeter jou teenwoordigheid deur te like, deel, volg, of pos te plaas oor Ice.",
+        "bottom_description": "Hoe meer betrokke jy is, hoe hoër jou positiewe interaksiesyfer, wat jou in staat stel om die KYC-proses te deurloop."
+      },
+      "terms_privacy": "Ek verstaan ​​en stem in met die [[:link]]Algemene Voorwaardes[[/:link]]."
+    },
+    "theme": {
+      "knowledge_check": "🧠 Kennistoets:",
+      "point1": "Daar is in totaal 21 vrae.",
+      "point2": "Om die toets te slaag, moet jy ten minste 18 vrae korrek beantwoord.",
+      "point3": "Oeps, mislukte toets? Probeer volgende week weer.",
+      "point4": "📚 Alle inligting vir hierdie toets kan [[:link]]hier[[/:link]] gelees word.",
+      "why_quiz": "Hoekom die Toets?",
+      "why_quiz_description": "Ons is almal oor slim, veilige en ingeligte mynbou. Hierdie klein stap verseker dat ons Ice-gemeenskap met kennis en begrip floreer!"
+    },
+    "mining_disabled": {
+      "title": "Mislukte Toets",
+      "description": "Jy het nie meer as 18 vrae korrek beantwoord nie, so jy kan nie die KYC-stap #3 slaag nie. Jy kan weer in een week probeer.",
+      "check_faq": "Om volgende keer reg te antwoord, stel ons voor dat jy jou bekendstel met ons kennisbank en FAQ."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Vraag {{current}} van {{total}}",
+      "time_over": "⌛️ Tyd is verby",
+      "correct_answers": "Korrek Antwoorde",
+      "wrong_answers": "Verkeerde Antwoorde"
+    },
+    "confirmation_popup": {
+      "title": "Bevestiging",
+      "start_description": "Is jy seker jy wil die toets begin?",
+      "cancel_description": "Is jy seker jy wil die toets kanselleer?"
+    },
+    "quiz_success": {
+      "title": "Verifikasie Voltooi",
+      "description": "Gelukwens, jy het jou KYC suksesvol voltooi. Jou konsekwente korrekte antwoorde het jou toewyding en kennis bewys. Jy is nou geverifieer."
+    }
   }
 }

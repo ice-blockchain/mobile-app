@@ -71,7 +71,10 @@
     "subscribe": "Abbonati",
     "not_sure": "Non sono sicuro",
     "confirm_address": "Conferma l'indirizzo",
-    "remove_address": "Rimuovi indirizzo"
+    "remove_address": "Rimuovi indirizzo",
+    "start": "Inizia",
+    "faq": "Domande frequenti",
+    "knowledge_base": "Base di conoscenza"
   },
   "team": {
     "contacts_tab": "Contatti",
@@ -1317,5 +1320,56 @@
     "title": "Conferma dell'account",
     "description": "Per verificare l'identità del tuo account e collegare in modo sicuro il tuo indirizzo email, assicurati di superare con successo il nostro controllo emotivo durante il processo di autenticazione.",
     "description2": "Questo passaggio ci aiuta a garantire la sicurezza e l'autenticità del tuo account. Grazie per la tua collaborazione!"
+  },
+  "quiz": {
+    "title": "Passaggio KYC #3",
+    "terms": {
+      "description": "In Ice, crediamo nel promuovere una comunità di membri attivi e informati. La nostra missione è assicurare che le monete Ice vengano distribuite a coloro che sono realmente coinvolti e in sintonia con la nostra visione.",
+      "knowledge_verification": {
+        "title": "💡 Verifica della conoscenza",
+        "description": "Per assicurare che la nostra comunità sia ben informata e in linea con la nostra visione:",
+        "point1": "Ti verranno presentate 21 domande derivate dalle nostre risorse complete.",
+        "point2": "Un quiz superato conferma la tua comprensione e dedizione.",
+        "point3": "Un quiz fallito indica la necessità di ulteriori interazioni con i nostri materiali."
+      },
+      "community_engagement": {
+        "title": "🙌 Coinvolgimento attivo nella comunità",
+        "description": "Il tuo coinvolgimento nell'Ecosistema Ice influenza direttamente le tue capacità di mining:",
+        "point1": "Rimani aggiornato: Partecipa alle nostre notizie e ai video.",
+        "point2": "Partecipa attivamente: Unisciti al nostro Programma di Sviluppo Personale e alle sessioni live su YouTube o Twitter Space.",
+        "point3": "Interazioni sociali: Aumenta la tua presenza mettendo like, condividendo, seguendo o pubblicando informazioni su Ice.",
+        "bottom_description": "Più sei coinvolto, più alto sarà il tuo punteggio di interazione positiva, consentendoti di superare il processo KYC."
+      },
+      "terms_privacy": "Capisco e accetto i [[:link]]Termini e Condizioni[[/:link]]."
+    },
+    "theme": {
+      "knowledge_check": "🧠 Controllo della conoscenza:",
+      "point1": "Ci sono in totale 21 domande.",
+      "point2": "Per superare il quiz, devi rispondere correttamente a almeno 18 domande.",
+      "point3": "Ops, quiz fallito? Riprova la prossima settimana.",
+      "point4": "📚 Tutte le informazioni per questo quiz possono essere lette [[:link]]qui[[/:link]].",
+      "why_quiz": "Perché il Quiz?",
+      "why_quiz_description": "Siamo tutti per il mining intelligente, sicuro e informato. Questo piccolo passo assicura che la nostra comunità Ice prosperi con conoscenza e comprensione!"
+    },
+    "mining_disabled": {
+      "title": "Quiz Fallito",
+      "description": "Non hai risposto correttamente a più di 18 domande, quindi non puoi superare il Passaggio KYC #3. Puoi riprovare la prossima settimana.",
+      "check_faq": "Per rispondere correttamente la prossima volta, ti consigliamo di familiarizzare con la nostra base di conoscenza e le nostre domande frequenti."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Domanda {{current}} di {{total}}",
+      "time_over": "⌛️ Il tempo è scaduto",
+      "correct_answers": "Risposte corrette",
+      "wrong_answers": "Risposte sbagliate"
+    },
+    "confirmation_popup": {
+      "title": "Conferma",
+      "start_description": "Sei sicuro di voler iniziare il quiz?",
+      "cancel_description": "Sei sicuro di voler annullare il quiz?"
+    },
+    "quiz_success": {
+      "title": "Verifica Completata",
+      "description": "Congratulazioni, hai completato con successo il tuo KYC. Le tue risposte corrette costanti hanno dimostrato la tua dedizione e conoscenza. Sei ora verificato."
+    }
   }
 }

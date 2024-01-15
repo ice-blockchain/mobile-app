@@ -71,7 +71,10 @@
     "subscribe": "Abone Ol",
     "not_sure": "Emin değilim",
     "confirm_address": "Adresi Onayla",
-    "remove_address": "Adresi Kaldır"
+    "remove_address": "Adresi Kaldır",
+    "start": "Başla",
+    "faq": "SSS",
+    "knowledge_base": "Bilgi Tabanı"
   },
   "team": {
     "contacts_tab": "Kişiler",
@@ -1317,5 +1320,56 @@
     "title": "Hesap Onayı",
     "description": "Hesabınızın kimliğini doğrulamak ve e-posta adresinizi güvenli bir şekilde bağlamak için lütfen kimlik doğrulama sürecimiz sırasında duygusal bir kontrolü başarıyla geçtiğinizden emin olun.",
     "description2": "Bu adım, hesabınızın güvenliği ve gerçekliğini sağlamamıza yardımcı olur. İşbirliğiniz için teşekkür ederiz!"
+  },
+  "quiz": {
+    "title": "KYC Adımı #3",
+    "terms": {
+      "description": "Ice'de, aktif ve bilgili üyelerin bir topluluğunu teşvik etmeye inanıyoruz. Misyonumuz, Ice coin'lerin, gerçekten bağlı ve vizyonumuzla uyumlu olanlara dağıtılmasını sağlamaktır.",
+      "knowledge_verification": {
+        "title": "💡 Bilgi Doğrulama",
+        "description": "Topluluğumuzun iyi bilgilendirilmiş ve vizyonumuzla uyumlu olduğundan emin olmak için:",
+        "point1": "Kapsamlı kaynaklarımızdan türetilen 21 soru ile karşılaşacaksınız.",
+        "point2": "Başarılı bir sınav, anlayışınızı ve bağlılığınızı doğrular.",
+        "point3": "Başarısız bir sınav, materyallerimizle daha fazla etkileşim gerektirdiğini gösterir."
+      },
+      "community_engagement": {
+        "title": "🙌 Aktif Topluluk Katılımı",
+        "description": "Ice Ekosistemi içindeki katılımınız, madencilik yeteneklerinizi doğrudan etkiler:",
+        "point1": "Güncel Kalın: Haber makalelerimiz ve videolarımızla etkileşimde bulunun.",
+        "point2": "Aktif Katılım: Kişisel Gelişim Programımıza katılın ve YouTube veya Twitter Space'deki canlı oturumlara katılın.",
+        "point3": "Sosyal Etkileşimler: Ice hakkında beğenme, paylaşma, takip etme veya paylaşma yaparak varlığınızı artırın.",
+        "bottom_description": "Daha fazla katıldıkça, pozitif etkileşim puanınız o kadar yüksek olur ve KYC sürecini geçmenizi sağlar."
+      },
+      "terms_privacy": "[[:link]]Kullanım Koşulları ve Gizlilik Politikamızı[[/:link]] anladım ve kabul ediyorum."
+    },
+    "theme": {
+      "knowledge_check": "🧠 Bilgi Kontrolü:",
+      "point1": "Toplamda 21 soru bulunmaktadır.",
+      "point2": "Sınavı geçmek için en az 18 soruya doğru cevap vermelisiniz.",
+      "point3": "Hata yaptınız mı? Bir sonraki hafta tekrar deneyin.",
+      "point4": "Bu sınavla ilgili tüm bilgileri buradan [[[:link]]] okuyabilirsiniz.",
+      "why_quiz": "Neden Sınav?",
+      "why_quiz_description": "Biz, akıllı, güvenli ve bilgilendirilmiş madencilik hakkında her şeyiz. Bu küçük adım, Ice topluluğumuzun bilgi ve anlayışla gelişmesini sağlar!"
+    },
+    "mining_disabled": {
+      "title": "Başarısız Sınav",
+      "description": "18 sorudan daha azını doğru cevaplamadığınız için KYC Adımı #3'ü geçemezsiniz. Bir hafta sonra tekrar deneyebilirsiniz.",
+      "check_faq": "Bir sonraki sefer doğru cevap vermek için, bilgi tabanımızı ve Sıkça Sorulan Soruları incelemenizi öneririz."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Soru {{current}} / {{total}}",
+      "time_over": "⌛️ Süre doldu",
+      "correct_answers": "Doğru Cevaplar",
+      "wrong_answers": "Yanlış Cevaplar"
+    },
+    "confirmation_popup": {
+      "title": "Onay",
+      "start_description": "Sınavı başlatmak istediğinizden emin misiniz?",
+      "cancel_description": "Sınavı iptal etmek istediğinizden emin misiniz?"
+    },
+    "quiz_success": {
+      "title": "Doğrulama Tamamlandı",
+      "description": "Tebrikler, KYC'nizi başarıyla tamamladınız. Sürekli doğru cevaplarınız bağlılığınızı ve bilginizi kanıtladı. Şimdi doğrulandınız."
+    }
   }
 }

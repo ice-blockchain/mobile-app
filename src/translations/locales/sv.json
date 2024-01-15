@@ -71,7 +71,10 @@
     "subscribe": "Prenumerera",
     "not_sure": "Inte säker",
     "confirm_address": "Bekräfta adress",
-    "remove_address": "Ta bort adressen"
+    "remove_address": "Ta bort adressen",
+    "start": "Börja",
+    "faq": "Vanliga frågor",
+    "knowledge_base": "Kunskapsbas"
   },
   "team": {
     "contacts_tab": "Kontakter",
@@ -1317,5 +1320,56 @@
     "title": "Kontobekräftelse",
     "description": "För att verifiera din kontoidentitet och säkert koppla din e-postadress, se till att du lyckas passera vårt känslotest under autentiseringsprocessen.",
     "description2": "Det här steget hjälper oss att säkerställa säkerheten och äktheten av ditt konto. Tack för ditt samarbete!"
+  },
+  "quiz": {
+    "title": "KYC Steg #3",
+    "terms": {
+      "description": "På Ice tror vi på att främja en gemenskap av aktiva och informerade medlemmar. Vår mission är att se till att Ice-mynten fördelas till de som verkligen engagerar sig och delar vår vision.",
+      "knowledge_verification": {
+        "title": "💡 Kunskapsverifiering",
+        "description": "För att säkerställa att vår gemenskap är väl informerad och delar vår vision:",
+        "point1": "Du kommer att presenteras med 21 frågor som härrör från våra omfattande resurser.",
+        "point2": "Ett godkänt quiz bekräftar din förståelse och engagemang.",
+        "point3": "Ett misslyckat quiz indikerar behovet av ytterligare engagemang med vårt material."
+      },
+      "community_engagement": {
+        "title": "🙌 Aktivt gemenskapsengagemang",
+        "description": "Ditt engagemang inom Ice-ekosystemet påverkar direkt din gruvkapacitet:",
+        "point1": "Håll dig uppdaterad: Engagera dig med våra nyhetsartiklar och videor.",
+        "point2": "Delta aktivt: Gå med i vårt personliga utvecklingsprogram och live-sändningar på YouTube eller Twitter Space.",
+        "point3": "Sociala interaktioner: Öka din närvaro genom att gilla, dela, följa eller posta om Ice.",
+        "bottom_description": "Ju mer engagerade du är, desto högre blir din positiva interaktionspoäng, vilket möjliggör KYC-processen."
+      },
+      "terms_privacy": "Jag förstår och godkänner [[:link]]Användarvillkoren och sekretesspolicyn[[/:link]]."
+    },
+    "theme": {
+      "knowledge_check": "🧠 Kunskapskontroll:",
+      "point1": "Det finns sammanlagt 21 frågor.",
+      "point2": "För att klara quizen måste du svara rätt på minst 18 frågor.",
+      "point3": "Hoppsan, misslyckades quiz? Försök igen nästa vecka.",
+      "point4": "📚 All information om detta quiz kan läsas [[:link]]här[[/:link]].",
+      "why_quiz": "Varför quizen?",
+      "why_quiz_description": "Vi handlar om smart, säker och informerad gruvdrift. Detta lilla steg säkerställer att vår Ice-gemenskap blomstrar med kunskap och förståelse!"
+    },
+    "mining_disabled": {
+      "title": "Misslyckad quiz",
+      "description": "Du svarade inte rätt på mer än 18 frågor, så du kan inte klara KYC Steg #3. Du kan försöka igen om en vecka.",
+      "check_faq": "För att svara rätt nästa gång föreslår vi att du bekantar dig med vår kunskapsbas och vanliga frågor."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Fråga {{current}} av {{total}}",
+      "time_over": "⌛️ Tiden är slut",
+      "correct_answers": "Rätta svar",
+      "wrong_answers": "Fel svar"
+    },
+    "confirmation_popup": {
+      "title": "Bekräftelse",
+      "start_description": "Är du säker på att du vill starta quizen?",
+      "cancel_description": "Är du säker på att du vill avbryta quizen?"
+    },
+    "quiz_success": {
+      "title": "Verifiering slutförd",
+      "description": "Grattis, du har framgångsrikt slutfört din KYC. Dina konsekvent rätta svar har bevisat ditt engagemang och din kunskap. Du är nu verifierad."
+    }
   }
 }

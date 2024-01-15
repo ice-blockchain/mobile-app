@@ -71,7 +71,10 @@
     "subscribe": "Berlangganan",
     "not_sure": "Tidak yakin",
     "confirm_address": "Konfirmasi alamat",
-    "remove_address": "Hapus alamat"
+    "remove_address": "Hapus alamat",
+    "start": "Mulai",
+    "faq": "FAQ",
+    "knowledge_base": "Basis Pengetahuan"
   },
   "team": {
     "contacts_tab": "Kontak",
@@ -1317,5 +1320,56 @@
     "title": "Konfirmasi Akun",
     "description": "Untuk memverifikasi identitas akun Anda dan menghubungkan alamat email Anda secara aman, pastikan Anda berhasil melewati pemeriksaan emosi kami selama proses otentikasi.",
     "description2": "Langkah ini membantu kami memastikan keamanan dan otentisitas akun Anda. Terima kasih atas kerjasamanya!"
+  },
+  "quiz": {
+    "title": "Langkah KYC #3",
+    "terms": {
+      "description": "Di Ice, kami percaya dalam memupuk komunitas anggota yang aktif dan terinformasi. Misi kami adalah memastikan bahwa koin Ice didistribusikan kepada mereka yang benar-benar terlibat dan sejalan dengan visi kami.",
+      "knowledge_verification": {
+        "title": "💡 Verifikasi Pengetahuan",
+        "description": "Untuk memastikan komunitas kami terinformasi dengan baik dan sejalan dengan visi kami:",
+        "point1": "Anda akan disajikan dengan 21 pertanyaan yang berasal dari sumber daya kami yang komprehensif.",
+        "point2": "Kuis yang lulus mengkonfirmasi pemahaman dan dedikasi Anda.",
+        "point3": "Kuis yang gagal menunjukkan kebutuhan untuk lebih berinteraksi dengan materi kami."
+      },
+      "community_engagement": {
+        "title": "🙌 Keterlibatan Komunitas Aktif",
+        "description": "Keterlibatan Anda dalam Ekosistem Ice secara langsung memengaruhi kemampuan penambangan Anda:",
+        "point1": "Tetap Terkini: Terlibat dengan artikel berita dan video kami.",
+        "point2": "Berkontribusi Aktif: Bergabung dengan Program Pengembangan Pribadi kami dan sesi live di YouTube atau Twitter Space.",
+        "point3": "Interaksi Sosial: Tingkatkan kehadiran Anda dengan menyukai, berbagi, mengikuti, atau memposting tentang Ice.",
+        "bottom_description": "Semakin aktif Anda, semakin tinggi skor interaksi positif Anda, memungkinkan Anda melewati proses KYC."
+      },
+      "terms_privacy": "Saya memahami & Saya setuju dengan [[:link]]Syarat dan Ketentuan[[/:link]]."
+    },
+    "theme": {
+      "knowledge_check": "🧠 Pemeriksaan Pengetahuan:",
+      "point1": "Ada 21 pertanyaan secara total.",
+      "point2": "Untuk lulus kuis, Anda perlu menjawab setidaknya 18 pertanyaan dengan benar.",
+      "point3": "Oops, gagal kuis? Coba lagi minggu depan.",
+      "point4": "📚 Semua informasi untuk kuis ini dapat dibaca [[:link]]di sini[[/:link]].",
+      "why_quiz": "Mengapa Kuis Ini?",
+      "why_quiz_description": "Kami peduli tentang penambangan yang cerdas, aman, dan terinformasi. Langkah kecil ini memastikan komunitas Ice kami berkembang dengan pengetahuan dan pemahaman!"
+    },
+    "mining_disabled": {
+      "title": "Kuis Gagal",
+      "description": "Anda tidak menjawab lebih dari 18 pertanyaan dengan benar, sehingga Anda tidak dapat melewati Langkah KYC #3. Anda dapat mencoba lagi dalam satu minggu.",
+      "check_faq": "Untuk menjawab dengan benar next time, kami sarankan Anda mengenal lebih dekat basis pengetahuan kami dan FAQ kami."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Pertanyaan {{current}} dari {{total}}",
+      "time_over": "⌛️ Waktu telah habis",
+      "correct_answers": "Jawaban Benar",
+      "wrong_answers": "Jawaban Salah"
+    },
+    "confirmation_popup": {
+      "title": "Konfirmasi",
+      "start_description": "Apakah Anda yakin ingin memulai kuis?",
+      "cancel_description": "Apakah Anda yakin ingin membatalkan kuis?"
+    },
+    "quiz_success": {
+      "title": "Verifikasi Selesai",
+      "description": "Selamat, Anda telah berhasil menyelesaikan KYC Anda. Jawaban yang benar secara konsisten telah membuktikan dedikasi dan pengetahuan Anda. Anda sekarang diverifikasi."
+    }
   }
 }

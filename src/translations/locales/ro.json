@@ -71,7 +71,10 @@
     "subscribe": "Abonează-te",
     "not_sure": "Nesigur",
     "confirm_address": "Confirmă adresa",
-    "remove_address": "Șterge adresa"
+    "remove_address": "Șterge adresa",
+    "start": "Începe",
+    "faq": "Întrebări frecvente",
+    "knowledge_base": "Baza de cunoștințe"
   },
   "team": {
     "contacts_tab": "Contacte",
@@ -1317,5 +1320,56 @@
     "title": "Confirmarea contului",
     "description": "Pentru a vă verifica identitatea contului și pentru a vă lega în siguranță adresa de e-mail, asigurați-vă că treceți cu succes testul de emoții în timpul procesului de autentificare.",
     "description2": "Acest pas ne ajută să asigurăm securitatea și autenticitatea contului dvs. Vă mulțumim pentru colaborare!"
+  },
+  "quiz": {
+    "title": "Pasul KYC #3",
+    "terms": {
+      "description": "La Ice, credem în promovarea unei comunități de membri activi și informați. Misiunea noastră este să asigurăm distribuirea monedelor Ice către cei cu adevărat angajați și aliniați cu viziunea noastră.",
+      "knowledge_verification": {
+        "title": "💡 Verificarea Cunoștințelor",
+        "description": "Pentru a ne asigura că comunitatea noastră este bine informată și aliniată cu viziunea noastră:",
+        "point1": "Veți fi prezentat cu 21 de întrebări derivate din resursele noastre cuprinzătoare.",
+        "point2": "Un quiz trecut confirmă înțelegerea și dedicarea dvs.",
+        "point3": "Un quiz eșuat indică necesitatea unui angajament mai mare cu materialele noastre."
+      },
+      "community_engagement": {
+        "title": "🙌 Angajament Activ în Comunitate",
+        "description": "Angajamentul dvs. în Ecosistemul Ice influențează direct capacitățile dvs. de minerit:",
+        "point1": "Rămâneți Actualizați: Angajați-vă cu articolele noastre de știri și videoclipuri.",
+        "point2": "Participați Activ: Alăturați-vă Programului de Dezvoltare Personală și sesiunilor live pe YouTube sau Twitter Space.",
+        "point3": "Interacțiuni Sociale: Creșteți prezența dvs. printr-un like, share, follow sau postare despre Ice.",
+        "bottom_description": "Cu cât sunteți mai implicați, cu atât scorul dvs. de interacțiune pozitivă este mai mare, permițându-vă să treceți prin procesul KYC."
+      },
+      "terms_privacy": "Înțeleg și sunt de acord cu [[:link]]Termenii și Condițiile[[/:link]]."
+    },
+    "theme": {
+      "knowledge_check": "🧠 Verificare Cunoștințe:",
+      "point1": "Sunt în total 21 de întrebări.",
+      "point2": "Pentru a trece testul, trebuie să răspundeți corect la cel puțin 18 întrebări.",
+      "point3": "Ups, testul a fost eșuat? Încercați din nou săptămâna viitoare.",
+      "point4": "📚 Toate informațiile despre acest quiz pot fi citite [[:link]]aici[[/:link]].",
+      "why_quiz": "De ce Quiz-ul?",
+      "why_quiz_description": "Suntem dedicați minatului inteligent, sigur și informat. Acest mic pas asigură că comunitatea Ice prosperează cu cunoștințe și înțelegere!"
+    },
+    "mining_disabled": {
+      "title": "Quiz Eșuat",
+      "description": "Nu ați răspuns corect la mai mult de 18 întrebări, așa că nu puteți trece de Etapa KYC #3. Puteți încerca din nou în săptămâna următoare.",
+      "check_faq": "Pentru a răspunde corect data viitoare, vă sugerăm să vă familiarizați cu Baza noastră de Cunoștințe și Întrebările Frecvente."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Întrebarea {{current}} din {{total}}",
+      "time_over": "⌛️ Timpul s-a terminat",
+      "correct_answers": "Răspunsuri Corecte",
+      "wrong_answers": "Răspunsuri Greșite"
+    },
+    "confirmation_popup": {
+      "title": "Confirmare",
+      "start_description": "Sunteți sigur că doriți să începeți quiz-ul?",
+      "cancel_description": "Sunteți sigur că doriți să anulați quiz-ul?"
+    },
+    "quiz_success": {
+      "title": "Verificare Completă",
+      "description": "Felicitări, ați finalizat cu succes KYC-ul dvs. Răspunsurile dvs. corecte și constante au dovedit dedicația și cunoștințele dvs. Acum sunteți verificat."
+    }
   }
 }

@@ -71,7 +71,10 @@
     "subscribe": "הרשמה",
     "not_sure": "לא בטוח/ה",
     "confirm_address": "אשר כתובת",
-    "remove_address": "הסר כתובת"
+    "remove_address": "הסר כתובת",
+    "start": "התחלה",
+    "faq": "שאלות נפוצות",
+    "knowledge_base": "בסיס ידע"
   },
   "team": {
     "contacts_tab": "אנשי קשר",
@@ -1324,5 +1327,56 @@
     "title": "אימות החשבון",
     "description": "כדי לאמת את זהות החשבון שלך ולקשור בבטחה את כתובת הדואר האלקטרוני שלך, אנא וודא שאתה עובר בהצלחה את בדיקת הרגשות שלנו במהלך תהליך האימות.",
     "description2": "שלב זה עוזר לנו לוודא את ביטחונך והאמיתות שבחשבונך. תודה על שיתוף הפעולה!"
+  },
+  "quiz": {
+    "title": "שלב KYC #3",
+    "terms": {
+      "description": "ב-Ice, אנחנו מאמינים בקידום קהילה של חברים פעילים ומודעים. משימתנו היא להבטיח שמטבעות ה-Ice מתווצת לאלה שמעוררים עניין אמיתי ומיושבים עם החזון שלנו.",
+      "knowledge_verification": {
+        "title": "💡 אימות הבנת הידע",
+        "description": "כדי לוודא שהקהילה שלנו מודעת היטב ומיושבת עם החזון שלנו:",
+        "point1": "תתבקש לענות על 21 שאלות הנגזרות ממקורותינו המקיפים.",
+        "point2": "סיום השאלון מאמת את ההבנה וההקדשה שלך.",
+        "point3": "סיום השאלון בהצלחה מעיד על צורך להשקיע עוד בחומרי הלמידה שלנו."
+      },
+      "community_engagement": {
+        "title": "🙌 התעסקות פעילה בקהילה",
+        "description": "ההשתייכות שלך בתוך האקוסיסטם של Ice משפיעה ישירות על יכולות הכרייתך:",
+        "point1": "הישאר מעודכן: התעסק במאמרי החדשות שלנו ובסרטוני הווידאו.",
+        "point2": "השתתף בפעילות: הצטרף לתכנית הפיתוח האישי שלנו ולסשנים חיים ב-YouTube או ב-Twitter Space.",
+        "point3": "אינטראקציות חברתיות: הגבר את הנוכחות שלך על ידי לייקים, שיתופים, מעקב או פרסום אודות Ice.",
+        "bottom_description": "ככל שתהיה יותר מעורב, כך יהיה לך ציון אינטראקציה חיובי יותר, מאפשר לך לעבור את תהליך ה-KYC."
+      },
+      "terms_privacy": "אני מבין ומסכים עם [[:link]]תנאי השימוש[[/:link]]."
+    },
+    "theme": {
+      "knowledge_check": "🧠 בדיקת ידע:",
+      "point1": "ישנם 21 שאלות בסך הכל.",
+      "point2": "כדי לעבור את השאלון, עליך לענות על לפחות 18 שאלות בצורה נכונה.",
+      "point3": "אופס, נכשלת בשאלון? נסה שוב בשבוע הבא.",
+      "point4": "📚 כל המידע לגבי השאלון ניתן לקרוא [[:link]]כאן[[/:link]].",
+      "why_quiz": "למה השאלון?",
+      "why_quiz_description": "אנחנו מתמקדים בכריית מטבע חכמה, בטוחה ומודעת. הצעד הזה הקטן מבטיח שקהילת Ice שלנו תצמח עם ידע והבנה!"
+    },
+    "mining_disabled": {
+      "title": "שאלון נכשל",
+      "description": "אתה לא ענית על יותר מ-18 שאלות בצורה נכונה, לכן אינך יכול לעבור את שלב KYC #3. תוכל לנסות שוב בשבוע הבא.",
+      "check_faq": "כדי לענות נכון בפעם הבאה, אנו ממליצים לך להתנסות עם בסיס הידע שלנו ושאלות הנפוצות שלנו."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "שאלה {{current}} מתוך {{total}}",
+      "time_over": "⌛️ הזמן נגמר",
+      "correct_answers": "תשובות נכונות",
+      "wrong_answers": "תשובות שגויות"
+    },
+    "confirmation_popup": {
+      "title": "אישור",
+      "start_description": "האם אתה בטוח שברצונך להתחיל את השאלון?",
+      "cancel_description": "האם אתה בטוח שברצונך לבטל את השאלון?"
+    },
+    "quiz_success": {
+      "title": "הצלחה באימות",
+      "description": "מזל טוב, הצלחת להשלים בהצלחה את שלב ה-KYC שלך. התשובות הנכונות והתמידות שלך הוכיחו את ההתמקדות והידע שלך. אתה כעת מאומת."
+    }
   }
 }
