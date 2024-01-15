@@ -827,7 +827,6 @@ export type Translations = {
   'quiz.quiz_questionnaire.time_over': null;
   'quiz.quiz_questionnaire.correct_answers': null;
   'quiz.quiz_questionnaire.wrong_answers': null;
-  'quiz.quiz_failure.title': null;
   'quiz.confirmation_popup.title': null;
   'quiz.confirmation_popup.start_description': null;
   'quiz.confirmation_popup.cancel_description': null;

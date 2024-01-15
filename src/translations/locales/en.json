@@ -1359,9 +1359,6 @@
       "correct_answers": "Correct Answers",
       "wrong_answers": "Wrong Answers"
     },
-    "quiz_failure": {
-      "title": "Quiz failed, try again later"
-    },
     "confirmation_popup": {
       "title": "Confirmation",
       "start_description": "Are you sure you want to start the quiz?",
