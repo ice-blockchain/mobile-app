@@ -6,7 +6,7 @@ import {useEffect, useMemo, useRef, useState} from 'react';
 
 export const useCountdown = (duration: Duration) => {
   const initialized = useRef(false);
-  // Using endTime instead of substituting from the initial duration
+  // Using endTime instead of subtraction from the initial duration
   // to handle app background case when setInterval stops
   const endTime = useMemo(() => dayjs().add(duration), [duration]);
   const [durationLeft, setDurationLeft] = useState<Duration>(duration.clone());

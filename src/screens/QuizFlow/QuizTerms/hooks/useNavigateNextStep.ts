@@ -14,7 +14,7 @@ export const useNavigateNextStep = () => {
 
   useEffect(() => {
     if (quizTermsAccepted) {
-      navigation.replace('QuizTheme');
+      navigation.replace('QuizIntro');
     }
   }, [quizTermsAccepted, navigation]);
 };

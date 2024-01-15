@@ -10,7 +10,7 @@ import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {useQuizHandlers} from '@screens/QuizFlow/QuizTheme/hooks/useQuizHandlers';
+import {useQuizHandlers} from '@screens/QuizFlow/QuizIntro/hooks/useQuizHandlers';
 import {replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
@@ -18,7 +18,7 @@ import React from 'react';
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 
-export const QuizTheme = () => {
+export const QuizIntro = () => {
   useFocusStatusBar({style: 'dark-content'});
   const {shadowStyle} = useScrollShadow();
 
@@ -40,7 +40,7 @@ export const QuizTheme = () => {
         showsVerticalScrollIndicator={false}>
         <Image source={Images.quiz.quiz} style={styles.icon} />
         <Text style={styles.title}>{t('quiz.title')}</Text>
-        <Text style={styles.subtitle}>{t('quiz.theme.knowledge_check')}</Text>
+        <Text style={styles.subtitle}>{t('quiz.intro.knowledge_check')}</Text>
         <View style={styles.bulletsContainer}>
           {points.map((point, index) => (
             <BulletDescription
@@ -52,9 +52,9 @@ export const QuizTheme = () => {
             />
           ))}
         </View>
-        <Text style={styles.subtitle}>{t('quiz.theme.why_quiz')}</Text>
+        <Text style={styles.subtitle}>{t('quiz.intro.why_quiz')}</Text>
         <Text style={styles.whyQuizDescription}>
-          {t('quiz.theme.why_quiz_description')}
+          {t('quiz.intro.why_quiz_description')}
         </Text>
       </ScrollView>
       <View style={[styles.buttonsContainer, commonStyles.shadow]}>
@@ -128,11 +128,11 @@ const styles = StyleSheet.create({
 });
 
 const points = [
-  t('quiz.theme.point1'),
-  t('quiz.theme.point2'),
-  t('quiz.theme.point3'),
+  t('quiz.intro.point1'),
+  t('quiz.intro.point2'),
+  t('quiz.intro.point3'),
   replaceString(
-    t('quiz.theme.point4'),
+    t('quiz.intro.point4'),
     tagRegex('link', false),
     (match, index) => {
       return (

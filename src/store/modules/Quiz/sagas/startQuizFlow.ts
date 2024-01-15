@@ -9,7 +9,7 @@ export function* startQuizFlowSaga() {
     yield select(quizTermsAcceptedSelector);
 
   if (quizTermsAccepted) {
-    navigate({name: 'QuizTheme', params: undefined});
+    navigate({name: 'QuizIntro', params: undefined});
   } else {
     navigate({name: 'QuizTerms', params: undefined});
   }

@@ -1339,7 +1339,7 @@
       },
       "terms_privacy": "I understand & I agree with the [[:link]]Terms and Conditions.[[/:link]]"
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Knowledge Check:",
       "point1": "There are 21 questions in total.",
       "point2": "To pass the quiz, you need to answer at least 18 questions correctly.",
