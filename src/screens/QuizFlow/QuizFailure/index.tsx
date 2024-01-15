@@ -22,7 +22,6 @@ import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
 import React from 'react';
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import {useDispatch} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -52,7 +51,7 @@ export const QuizFailure = () => {
   useOnHardwareBack({callback: handleClose, preventDefault: true});
 
   return (
-    <SafeAreaView style={commonStyles.flexOne} edges={['bottom']}>
+    <View style={commonStyles.flexOne}>
       <Header
         containerStyle={shadowStyle}
         color={COLORS.primaryDark}
@@ -91,7 +90,7 @@ export const QuizFailure = () => {
           />
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -111,7 +110,8 @@ const styles = StyleSheet.create({
     marginTop: rem(24),
   },
   buttons: {
-    marginBottom: rem(8),
+    paddingTop: rem(10),
+    paddingBottom: rem(34),
   },
   description: {
     marginTop: rem(10),
