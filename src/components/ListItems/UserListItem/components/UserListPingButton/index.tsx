@@ -2,6 +2,7 @@
 
 import {UserListItemButton} from '@components/ListItems/UserListItem/components/UserListItemButton';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -30,7 +31,7 @@ export const UserListPingButton = ({userId}: Props) => {
     navigation.navigate('PingReferralsPopUp', {userId});
   };
 
-  if (isNil(pinged)) {
+  if (isNil(pinged) || isLightDesign) {
     return null;
   }
 
