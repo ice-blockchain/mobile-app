@@ -128,7 +128,11 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
           const firstIncomingHistoryItem = data[0];
           let mergedHistory: BalanceHistoryPoint[] = [];
 
-          if (lastCurrentHistoryItem?.time === firstIncomingHistoryItem?.time) {
+          if (
+            lastCurrentHistoryItem &&
+            firstIncomingHistoryItem &&
+            lastCurrentHistoryItem.time === firstIncomingHistoryItem.time
+          ) {
             mergedHistory = [
               ...currentHistory.slice(0, currentHistory.length - 1),
               {

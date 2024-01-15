@@ -6,7 +6,7 @@ export const getBalanceHistoryLength = (
   balanceHistory: BalanceHistoryPoint[],
 ) => {
   return balanceHistory.reduce(
-    (total, point) => (total += point.timeSeries?.length ?? 0),
+    (total, point) => total + (point.timeSeries?.length ?? 0),
     0,
   );
 };

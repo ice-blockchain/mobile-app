@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {Api} from '@api/index';
+import {logError} from '@services/logging';
 import {
   isAuthorizedSelector,
   userIdSelector,
@@ -40,7 +41,16 @@ export function* getBalanceHistorySaga({
           tz: getTimezoneOffset(),
         });
 
-      const data = response.data ?? [];
+      let data = response.data ?? [];
+
+      // TODO:: remove when data.reduce -> undefined is not a function error (getBalanceHistoryLength) in Sentry is resolved
+      if (!Array.isArray(data)) {
+        logError(new Error('Incorrect getBalanceHistory response type'), {
+          type: typeof response.data,
+          data: response.data,
+        });
+        data = [];
+      }
 
       yield put(
         TokenomicsActions.GET_BALANCE_HISTORY.SUCCESS.create({
