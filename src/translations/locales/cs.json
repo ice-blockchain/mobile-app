@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Rozumím a souhlasím s [[:link]]Podmínkami a pravidly[[/:link]]."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Kontrola znalostí:",
       "point1": "Celkem je 21 otázek.",
       "point2": "Chcete-li projít kvízem, musíte správně odpovědět na nejméně 18 otázek.",

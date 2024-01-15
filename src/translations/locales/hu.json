@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Értem és elfogadom a [[:link]]Felhasználási Feltételeket[[/:link]]."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Tudás Ellenőrzés:",
       "point1": "Összesen 21 kérdés van.",
       "point2": "A kvíz sikeres teljesítéséhez legalább 18 kérdést kell helyesen megválaszolni.",

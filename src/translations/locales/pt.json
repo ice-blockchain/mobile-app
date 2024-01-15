@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Eu entendo e concordo com os [[:link]]Termos e Condições[[/:link]]."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Verificação de Conhecimento:",
       "point1": "São 21 perguntas no total.",
       "point2": "Para passar no quiz, você precisa responder corretamente pelo menos 18 perguntas.",

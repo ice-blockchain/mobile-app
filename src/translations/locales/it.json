@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Capisco e accetto i [[:link]]Termini e Condizioni[[/:link]]."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Controllo della conoscenza:",
       "point1": "Ci sono in totale 21 domande.",
       "point2": "Per superare il quiz, devi rispondere correttamente a almeno 18 domande.",

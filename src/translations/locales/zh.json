@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "我理解并同意[[:link]]使用条款和隐私政策[[/:link]]。"
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 知识检查：",
       "point1": "总共有21个问题。",
       "point2": "要通过测验，您需要至少正确回答18个问题。",

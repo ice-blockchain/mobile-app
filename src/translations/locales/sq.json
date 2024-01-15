@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Unë kuptoj dhe pajtohem me [[:link]]Kushtet dhe Kushtet e Privatësisë[[/:link]]."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Kontrolli i njohurive:",
       "point1": "Ka gjithsej 21 pyetje.",
       "point2": "Për të kaluar testin, ju duhet të përgjigjeni saktësisht në të paktën 18 pyetje.",

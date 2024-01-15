@@ -1349,7 +1349,7 @@
       },
       "terms_privacy": "אני מבין ומסכים עם [[:link]]תנאי השימוש[[/:link]]."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 בדיקת ידע:",
       "point1": "ישנם 21 שאלות בסך הכל.",
       "point2": "כדי לעבור את השאלון, עליך לענות על לפחות 18 שאלות בצורה נכונה.",

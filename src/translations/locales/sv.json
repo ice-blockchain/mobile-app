@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Jag förstår och godkänner [[:link]]Användarvillkoren och sekretesspolicyn[[/:link]]."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Kunskapskontroll:",
       "point1": "Det finns sammanlagt 21 frågor.",
       "point2": "För att klara quizen måste du svara rätt på minst 18 frågor.",

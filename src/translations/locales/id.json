@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Saya memahami & Saya setuju dengan [[:link]]Syarat dan Ketentuan[[/:link]]."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Pemeriksaan Pengetahuan:",
       "point1": "Ada 21 pertanyaan secara total.",
       "point2": "Untuk lulus kuis, Anda perlu menjawab setidaknya 18 pertanyaan dengan benar.",

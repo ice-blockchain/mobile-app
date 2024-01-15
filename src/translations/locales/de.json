@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Ich verstehe und stimme den [[:link]]Nutzungsbedingungen und Datenschutzbestimmungen[[/:link]] zu."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Wissensüberprüfung:",
       "point1": "Insgesamt gibt es 21 Fragen.",
       "point2": "Um den Test zu bestehen, müssen Sie mindestens 18 Fragen korrekt beantworten.",

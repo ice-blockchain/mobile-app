@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "[[:link]]Kullanım Koşulları ve Gizlilik Politikamızı[[/:link]] anladım ve kabul ediyorum."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Bilgi Kontrolü:",
       "point1": "Toplamda 21 soru bulunmaktadır.",
       "point2": "Sınavı geçmek için en az 18 soruya doğru cevap vermelisiniz.",

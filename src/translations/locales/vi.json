@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Tôi hiểu và tôi đồng ý với [[:link]]Điều khoản và Điều kiện[[/:link]] cùng với Chính sách bảo mật[[/:link]]."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Kiểm tra kiến thức:",
       "point1": "Tổng cộng có 21 câu hỏi.",
       "point2": "Để đậu bài kiểm tra, bạn cần trả lời ít nhất 18 câu hỏi đúng.",

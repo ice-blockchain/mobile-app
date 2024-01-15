@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Eg forstår og aksepterer [[:link]]Vilkår og betingelsar[[/:link]]."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Kunnskapssjekk:",
       "point1": "Det er totalt 21 spørsmål.",
       "point2": "For å bestå quizen, må du svare rett på minst 18 spørsmål.",

@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "[[:link]]Əməliyyat Şərtləri və Qaydalarına[[/:link]] razıyam."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Bilik Yoxlama:",
       "point1": "Ümumi olaraq, 21 sual var.",
       "point2": "Testi keçmək üçün ən azı 18 sualı düzgün cavab verməlisiniz.",

@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Rozumiem i zgadzam się z [[:link]]Regulaminem[[/:link]]."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Sprawdzenie wiedzy:",
       "point1": "W sumie jest 21 pytań.",
       "point2": "Aby zaliczyć quiz, musisz poprawnie odpowiedzieć na co najmniej 18 pytań.",

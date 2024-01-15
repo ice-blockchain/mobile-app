@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Înțeleg și sunt de acord cu [[:link]]Termenii și Condițiile[[/:link]]."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Verificare Cunoștințe:",
       "point1": "Sunt în total 21 de întrebări.",
       "point2": "Pentru a trece testul, trebuie să răspundeți corect la cel puțin 18 întrebări.",

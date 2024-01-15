@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Rozumiem a súhlasím s [[:link]]Podmienkami a ochranou osobných údajov[[/:link]]."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Kontrola znalostí:",
       "point1": "Celkovo je 21 otázok.",
       "point2": "Na úspešné absolvovanie kvízu musíte správne odpovedať aspoň na 18 otázok.",

@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Razumem in se strinjam s [[:link]]Pogoji uporabe in politiko zasebnosti[[/:link]]."
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Preverjanje znanja:",
       "point1": "Skupno je 21 vprašanj.",
       "point2": "Da uspešno opravite kviz, morate pravilno odgovoriti na vsaj 18 vprašanj.",

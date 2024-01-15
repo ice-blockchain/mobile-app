@@ -1342,7 +1342,7 @@
       },
       "terms_privacy": "Saya faham & Saya bersetuju dengan [[:link]]Terma dan Syarat.[[/:link]]"
     },
-    "theme": {
+    "intro": {
       "knowledge_check": "🧠 Pemeriksaan Pengetahuan:",
       "point1": "Terdapat 21 soalan secara keseluruhan.",
       "point2": "Untuk lulus kuis, anda perlu menjawab sekurang-kurangnya 18 soalan dengan betul.",
