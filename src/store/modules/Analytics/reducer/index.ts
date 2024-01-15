@@ -15,7 +15,7 @@ export interface State {
 type Actions = ReturnType<
   | typeof AnalyticsActions.UPDATE_REFERRED_BY.SUCCESS.create
   | typeof AnalyticsActions.TRACK_SIGN_IN.SUCCESS.create
-  | typeof AnalyticsActions.TRACK_SIGN_UP.SUCCESS.create
+  | typeof AnalyticsActions.TRACK_SIGN_UP.START.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
 >;
 
@@ -29,7 +29,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.referredById = action.payload.referredById;
         break;
       case AnalyticsActions.TRACK_SIGN_IN.SUCCESS.type:
-      case AnalyticsActions.TRACK_SIGN_UP.SUCCESS.type:
+      case AnalyticsActions.TRACK_SIGN_UP.START.type:
         draft.authTracked = true;
         break;
       case AccountActions.SIGN_OUT.SUCCESS.type:
