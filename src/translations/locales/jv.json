@@ -1133,8 +1133,8 @@
     "enter_address_confirmation": "Apakah Anda yakin bahwa alamat BNB Smart Chain ini benar?",
     "validators_warning_title": "Konfirmasi Alamat",
     "validators_warning_text": "Harap dicatat bahwa individu yang telah menambahkan alamat BNB Smart Chain ke akun mereka tidak memenuhi syarat untuk menjadi salah satu validator teratas sesuai dengan whitepaper kami untuk peluncuran mainnet.",
-    "okxWalletDescription": "Amanaken koin sampeyan nganggo OKX Wallet, mitra dompet resmi sendiri sing bisa dipercaya kita.",
-    "okxWalletAction": "DOWNLOAD OKX WALLET"
+    "okxWalletDescription": "Kami sarankan nggunakake alamat BNB Smart Chain saka [[:bold]]OKX Exchange[[/:bold]] kanggo ngindari biaya gas apa wae.\n\nYen OKX ora ditemtokake ing negara sampeyan, sampeyan bisa nggunakake dompet self-custodial kaya MetaMask utawa Trust Wallet.",
+    "okxWalletAction": "GODHONG AKUN NING OKX"
   },
   "social_kyc": {
     "header": "Verifikasi",

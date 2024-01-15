@@ -1240,8 +1240,8 @@
     "enter_address_confirmation": "האם אתה בטוח שכתובת BNB Smart Chain היא נכונה?",
     "validators_warning_title": "אשר כתובת",
     "validators_warning_text": "שים לב שאנשים שהוסיפו כתובת BNB Smart Chain לחשבונם אינם זכאים להפוך לאחד מ-300 הבודקים העליונים כמו שמפורט בספר הלבן שלנו לשקת הרשת הראשית.",
-    "okxWalletDescription": "אבטח את המטבעות שלך עם OKX Wallet, שותף הארנק הרשמי שלנו לניהול עצמי האמין.",
-    "okxWalletAction": "הורד את OKX WALLET"
+    "okxWalletDescription": "אנחנו ממליצים להשתמש בכתובת ה- [[:bold]]BNB Smart Chain של אוסף הסדרות OKX[[/:bold]] כדי להימנע מעמלות גז.\n\nאם OKX אינו זמין במדינתך, תוכל להשתמש בארנק עצמאי כמו MetaMask או Trust Wallet.",
+    "okxWalletAction": "צור חשבון ב-OKX"
   },
   "social_kyc": {
     "header": "אימות",

@@ -1233,8 +1233,8 @@
     "enter_address_confirmation": "Êtes-vous sûr que l'adresse BNB Smart Chain est correcte ?",
     "validators_warning_title": "Confirmer l'adresse",
     "validators_warning_text": "Veuillez noter que les personnes qui ont ajouté une adresse BNB Smart Chain à leur compte ne sont pas éligibles pour devenir l'un des 300 meilleurs validateurs conformément à notre livre blanc pour le lancement du Mainnet.",
-    "okxWalletDescription": "Sécurisez vos pièces avec OKX Wallet, notre partenaire de portefeuille officiel de confiance en libre gestion.",
-    "okxWalletAction": "TÉLÉCHARGER LE PORTEFEUILLE OKX"
+    "okxWalletDescription": "Nous recommandons d'utiliser votre adresse BNB Smart Chain de [[:bold]]OKX Exchange[[/:bold]] pour éviter les frais de gaz.\n\nSi OKX n'est pas disponible dans votre pays, vous pouvez utiliser un portefeuille auto-hébergé tel que MetaMask ou Trust Wallet.",
+    "okxWalletAction": "CRÉER UN COMPTE SUR OKX"
   },
   "social_kyc": {
     "header": "Vérification",

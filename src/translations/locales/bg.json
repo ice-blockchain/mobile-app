@@ -1233,8 +1233,8 @@
     "enter_address_confirmation": "Сигурни ли сте, че адресът на BNB Smart Chain е правилен?",
     "validators_warning_title": "Потвърдете адреса",
     "validators_warning_text": "Моля, обърнете внимание, че лицата, които са добавили адрес на BNB Smart Chain към своя акаунт, нямат право да станат един от първите 300 валидатори, съгласно нашата бели книги за пускане на основна мрежа.",
-    "okxWalletDescription": "Осигурете си монетите си с OKX Wallet, нашият доверен самостоятелен официален партньор по портфейла.",
-    "okxWalletAction": "ИЗТЕГЛЕТЕ OKX ПОРТФЕЙЛА"
+    "okxWalletDescription": "Препоръчваме ви да използвате вашия адрес на [[:bold]]BNB Smart Chain на OKX Exchange[[/:bold]] , за да избегнете каквито и да е такси за газ.\n\nАко OKX не е достъпен вашията страна, можете да използвате собствена портфейл като MetaMask или Trust Wallet.",
+    "okxWalletAction": "СЪЗДАЙТЕ АКАУНТ В OKX"
   },
   "social_kyc": {
     "header": "Потвърждение",

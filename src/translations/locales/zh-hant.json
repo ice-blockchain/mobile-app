@@ -1233,8 +1233,8 @@
     "enter_address_confirmation": "您確定您的BNB Smart Chain地址是正確的嗎？",
     "validators_warning_title": "確認地址",
     "validators_warning_text": "請注意：將BNB Smart Chain地址添加到其帳戶的個人不有資格成為我們白皮書中主網啟動的300個主驗證者之一。",
-    "okxWalletDescription": "使用OKX Wallet安全保管您的硬幣，我們值得信賴的自托管官方錢包合作夥伴。",
-    "okxWalletAction": "下載OKX WALLET"
+    "okxWalletDescription": "我們建議您使用來自[[:bold]]OKX Exchange[[/:bold]]的BNB Smart Chain地址，以避免任何燃氣費用。\n\n如果在您的國家不可用OKX，您可以使用自托管錢包，例如MetaMask或Trust Wallet。",
+    "okxWalletAction": "在OKX上創建帳戶"
   },
   "social_kyc": {
     "header": "驗證",
