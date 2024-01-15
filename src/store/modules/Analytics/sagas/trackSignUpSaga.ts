@@ -10,7 +10,7 @@ import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {EVENT_NAMES} from '@store/modules/Analytics/constants';
 import {referredBySelector} from '@store/modules/Analytics/selectors';
 import {waitForSelector} from '@store/utils/sagas/effects';
-import {call, select} from 'redux-saga/effects';
+import {call, put, select} from 'redux-saga/effects';
 
 type Actions = ReturnType<typeof AnalyticsActions.TRACK_SIGN_UP.START.create>;
 
@@ -39,4 +39,6 @@ export function* trackSignUpSaga(action: Actions) {
     'Register Method',
     signInType ?? '',
   );
+
+  yield put(AnalyticsActions.TRACK_SIGN_UP.SUCCESS.create());
 }

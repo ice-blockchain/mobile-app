@@ -64,11 +64,6 @@ export function* userStateChangeSaga() {
          * In other cases we trigger it manually.
          */
         yield put(AccountActions.USER_STATE_CHANGE.START.create());
-        if (createdUser) {
-          yield put(
-            AnalyticsActions.TRACK_SIGN_UP.START.create({user: createdUser}),
-          );
-        }
         return;
       }
 
@@ -194,7 +189,9 @@ function* createUser({
     },
   );
 
-  yield put(AnalyticsActions.TRACK_SIGN_UP.SUCCESS.create());
+  if (user) {
+    yield put(AnalyticsActions.TRACK_SIGN_UP.START.create({user}));
+  }
 
   return user;
 }
