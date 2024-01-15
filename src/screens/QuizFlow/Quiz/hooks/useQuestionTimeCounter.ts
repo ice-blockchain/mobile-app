@@ -4,6 +4,7 @@ import {useCountdown} from '@hooks/useCountdown';
 import {dayjs} from '@services/dayjs';
 import {expiresAtSelector} from '@store/modules/Quiz/selectors';
 import {t} from '@translations/i18n';
+import {getDurationString} from '@utils/date';
 import {Duration} from 'dayjs/plugin/duration';
 import {useMemo} from 'react';
 import {useSelector} from 'react-redux';
@@ -37,11 +38,5 @@ const buildTimerButtonTitle = ({
     return t('button.continue');
   }
 
-  if (durationLeft.asMinutes() > 1) {
-    return `${t(
-      'button.continue',
-    )} - ${durationLeft.minutes()}m ${durationLeft.seconds()}s`;
-  }
-
-  return `${t('button.continue')} - ${durationLeft.asSeconds()}s`;
+  return `${t('button.continue')} - ${getDurationString(durationLeft)}`;
 };
