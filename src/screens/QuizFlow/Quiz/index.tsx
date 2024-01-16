@@ -75,14 +75,16 @@ export const Quiz = () => {
       <View style={[styles.buttonsContainer, commonStyles.shadow]}>
         <PrimaryButton
           onPress={() => {
-            if (selectedAnswerIndex !== null) {
-              submitAnswer(selectedAnswerIndex);
+            if (selectedAnswerIndex !== null || isCountdownOver) {
+              submitAnswer(selectedAnswerIndex ?? 0);
             }
           }}
           text={timerButtonTitle}
           style={styles.button}
           loading={isLoadingQuiz}
-          disabled={isLoadingQuiz || selectedAnswerIndex === null}
+          disabled={
+            isLoadingQuiz || (selectedAnswerIndex === null && !isCountdownOver)
+          }
         />
       </View>
     </View>
