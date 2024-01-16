@@ -3,6 +3,7 @@
 import {PopUpButton} from '@components/Buttons/PopUpButton';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
+import {useOnHardwareBack} from '@hooks/useOnHardwareBack';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
@@ -30,6 +31,8 @@ export const QuizTerms = () => {
   } = useSetQuizTerms();
 
   const {cancelQuiz} = useCancelQuiz();
+
+  useOnHardwareBack({callback: cancelQuiz, preventDefault: true});
 
   useNavigateNextStep();
 
