@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {QUIZ_KYC_STEP} from '@api/tokenomics/constants';
-import {DEFAULT_DIALOG_NO_BUTTON} from '@components/Buttons/PopUpButton';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -20,7 +19,10 @@ export const useCancelQuiz = () => {
       title: t('quiz.confirmation_popup.title'),
       message: t('quiz.confirmation_popup.cancel_description'),
       buttons: [
-        DEFAULT_DIALOG_NO_BUTTON,
+        {
+          text: t('button.no'),
+          preset: 'outlined',
+        },
         {
           text: t('button.confirm'),
           onPress: () => {
