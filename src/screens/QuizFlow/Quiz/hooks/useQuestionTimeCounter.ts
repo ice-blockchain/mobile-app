@@ -34,7 +34,7 @@ const buildTimerButtonTitle = ({
   durationLeft: Duration;
   isCountdownOver: boolean;
 }) => {
-  if (isCountdownOver) {
+  if (isCountdownOver || durationLeft.asSeconds() < 1) {
     return t('button.continue');
   }
 
