@@ -10,7 +10,8 @@ import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {useQuizHandlers} from '@screens/QuizFlow/QuizIntro/hooks/useQuizHandlers';
+import {useCancelQuiz} from '@screens/QuizFlow/hooks/useCancelQuiz';
+import {useStartQuiz} from '@screens/QuizFlow/QuizIntro/hooks/useStartQuiz';
 import {replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
 import {font} from '@utils/styles';
@@ -22,7 +23,9 @@ export const QuizIntro = () => {
   useFocusStatusBar({style: 'dark-content'});
   const {shadowStyle} = useScrollShadow();
 
-  const {startQuiz, cancelQuiz, startQuizLoading} = useQuizHandlers();
+  const {startQuiz, startQuizLoading} = useStartQuiz();
+
+  const {cancelQuiz} = useCancelQuiz();
 
   useOnHardwareBack({callback: cancelQuiz, preventDefault: true});
 

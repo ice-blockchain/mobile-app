@@ -7,9 +7,7 @@ import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {MainStackParamList} from '@navigation/Main';
-import {useNavigation} from '@react-navigation/native';
-import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {useCancelQuiz} from '@screens/QuizFlow/hooks/useCancelQuiz';
 import {InfoBlock} from '@screens/QuizFlow/QuizTerms/components/InfoBlock';
 import {PrivacyTerms} from '@screens/QuizFlow/QuizTerms/components/PrivacyTerms';
 import {useNavigateNextStep} from '@screens/QuizFlow/QuizTerms/hooks/useNavigateNextStep';
@@ -24,15 +22,14 @@ export const QuizTerms = () => {
   useFocusStatusBar({style: 'dark-content'});
   const {shadowStyle} = useScrollShadow();
 
-  const navigation =
-    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
-
   const {
     termsAccepted,
     setTermsAccepted,
     saveTermsAccepted,
     isSaveTermsAcceptedLoading,
   } = useSetQuizTerms();
+
+  const {cancelQuiz} = useCancelQuiz();
 
   useNavigateNextStep();
 
@@ -80,9 +77,7 @@ export const QuizTerms = () => {
         <PopUpButton
           text={t('button.not_now')}
           preset="outlined"
-          onPress={() => {
-            navigation.goBack();
-          }}
+          onPress={cancelQuiz}
           style={styles.button}
         />
         <PopUpButton
