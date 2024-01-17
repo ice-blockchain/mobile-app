@@ -9,7 +9,7 @@ export enum BackgroundTask {
 export const BACKGROUND_TASKS: TaskConfig[] = [
   {
     taskId: BackgroundTask.SyncContacts,
-    delay: 60 * 60 * 1000, // milliseconds
+    delay: 24 * 60 * 60 * 1000, // milliseconds
     periodic: true,
     stopOnTerminate: false,
     startOnBoot: true,
