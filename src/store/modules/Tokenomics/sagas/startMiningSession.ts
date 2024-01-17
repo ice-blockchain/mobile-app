@@ -138,7 +138,6 @@ export function* startMiningSessionSaga(
             typeof dynamicDistributionDataSelector
           > = yield select(dynamicDistributionDataSelector);
           if (dynamicDistributionData?.some(data => data?.step === kycStep)) {
-            yield removeScreenByName('Tooltip').catch();
             navigate({
               name: 'SocialKycFlow',
               params: {kycStep},
