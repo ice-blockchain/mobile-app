@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
-export type DataNotificationType = 'delayed';
+export type DataMessageType = 'delayed';
 
-export type DelayedNotificationData = {
+export type DelayedDataMessageData = {
   title: string;
   body: string;
   minDelaySec?: string;

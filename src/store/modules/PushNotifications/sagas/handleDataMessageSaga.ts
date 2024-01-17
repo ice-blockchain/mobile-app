@@ -14,8 +14,8 @@ import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {PushNotificationsActions} from '@store/modules/PushNotifications/actions';
 import {CHANNEL_ID} from '@store/modules/PushNotifications/constants';
 import {
-  DataNotificationType,
-  DelayedNotificationData,
+  DataMessageType,
+  DelayedDataMessageData,
 } from '@store/modules/PushNotifications/types';
 import {isDataOnlyMessage} from '@store/modules/PushNotifications/utils/isDataOnlyMessage';
 import {call, SagaReturnType, select} from 'redux-saga/effects';
@@ -25,26 +25,22 @@ export function* handleDataMessageSaga({
 }: ReturnType<
   typeof PushNotificationsActions.DATA_MESSAGE_ARRIVE.STATE.create
 >) {
-  console.log('message', message);
-
   if (!isDataOnlyMessage(message)) {
     throw new Error('Message is not data-only');
   }
 
-  switch (message.data?.type as DataNotificationType) {
+  switch (message.data?.type as DataMessageType) {
     case 'delayed':
-      yield call(handleDelayedNotification, {
-        data: message.data as DelayedNotificationData,
+      yield call(handleDelayedDataMessage, {
+        data: message.data as DelayedDataMessageData,
       });
       break;
     default:
-      logError(
-        `Unable to handle data notification type: ${message.data?.type}`,
-      );
+      logError(`Unable to handle data message type: ${message.data?.type}`);
   }
 }
 
-function* handleDelayedNotification({data}: {data: DelayedNotificationData}) {
+function* handleDelayedDataMessage({data}: {data: DelayedDataMessageData}) {
   const {title, body, imageUrl, minDelaySec, maxDelaySec} = data;
 
   const minDelay = minDelaySec ? parseInt(minDelaySec, 10) : 0;
