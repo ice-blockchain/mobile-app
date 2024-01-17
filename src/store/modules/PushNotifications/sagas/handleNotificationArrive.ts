@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {COLORS} from '@constants/colors';
 import notifee, {AndroidImportance, AndroidStyle} from '@notifee/react-native';
 import {isSplashHiddenSelector} from '@store/modules/AppCommon/selectors';
 import {LinkingActions} from '@store/modules/Linking/actions';
@@ -28,7 +29,7 @@ export function* handleNotificationArriveSaga(
           channelId: CHANNEL_ID,
           smallIcon: 'ic_stat_notification',
           sound: 'default',
-          color: '#1B47C3',
+          color: COLORS.primaryLight,
           ...(message.notification.android?.imageUrl
             ? {
                 largeIcon: message.notification.android?.imageUrl,
