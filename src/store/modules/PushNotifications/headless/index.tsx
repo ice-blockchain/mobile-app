@@ -10,7 +10,7 @@ const backgroundMessageHandler = async (
   message: FirebaseMessagingTypes.RemoteMessage,
 ) => {
   //TODO::promise resolve
-  if (message.data?.delayed) {
+  if (message.data?.delayed === 'true') {
     store.dispatch(
       PushNotificationsActions.DELAYED_NOTIFICATION_ARRIVE.STATE.create({
         message,

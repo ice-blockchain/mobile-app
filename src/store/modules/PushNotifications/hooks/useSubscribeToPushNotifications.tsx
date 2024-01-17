@@ -50,7 +50,7 @@ export function useSubscribeToPushNotifications() {
 
     const unsubscribeFromOnMessage = messaging().onMessage(
       (message: FirebaseMessagingTypes.RemoteMessage) => {
-        if (message.data?.delayed) {
+        if (message.data?.delayed === 'true') {
           dispatch(
             PushNotificationsActions.DELAYED_NOTIFICATION_ARRIVE.STATE.create({
               message,

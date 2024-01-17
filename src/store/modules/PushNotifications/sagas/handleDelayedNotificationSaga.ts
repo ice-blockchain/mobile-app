@@ -15,9 +15,6 @@ import {CHANNEL_ID} from '@store/modules/PushNotifications/constants';
 import {DelayedNotificationData} from '@store/modules/PushNotifications/types';
 import {call, SagaReturnType, select} from 'redux-saga/effects';
 
-const MIN_DELAY_SEC = 0;
-const MAX_DELAY_SEC = 5; // 30 * 60;
-
 export function* handleDelayedNotificationSaga({
   payload: {message},
 }: ReturnType<
@@ -25,11 +22,21 @@ export function* handleDelayedNotificationSaga({
 >) {
   console.log('handleDelayedNotificationSaga');
 
-  if (!message.data?.delayed) {
+  if (message.data?.delayed !== 'true') {
     throw new Error('Message is not delayed or data is null');
   }
 
-  const {title, body, imageUrl} = message.data as DelayedNotificationData;
+  const {title, body, imageUrl, minDelaySec, maxDelaySec} =
+    message.data as DelayedNotificationData;
+
+  const minDelay = parseInt(minDelaySec, 10);
+  const maxDelay = parseInt(maxDelaySec, 10);
+
+  if (isNaN(minDelay) || isNaN(maxDelay)) {
+    throw new Error(
+      `Delayed message min / max delay is incorrect, minDelay=${minDelaySec} maxDelay=${maxDelaySec}`,
+    );
+  }
 
   const isAppActive: SagaReturnType<typeof isAppActiveSelector> = yield select(
     isAppActiveSelector,
@@ -37,7 +44,7 @@ export function* handleDelayedNotificationSaga({
 
   const delaySec = isAppActive
     ? 0
-    : Math.round(MIN_DELAY_SEC + Math.random() * MAX_DELAY_SEC);
+    : Math.round(minDelay + Math.random() * maxDelay);
 
   const notification: Notification = {
     title: title,
