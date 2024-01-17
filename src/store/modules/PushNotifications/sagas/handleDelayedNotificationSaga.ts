@@ -44,7 +44,7 @@ export function* handleDelayedNotificationSaga({
 
   const delaySec = isAppActive
     ? 0
-    : Math.round(minDelay + Math.random() * maxDelay);
+    : Math.round(minDelay + Math.random() * (maxDelay - minDelay));
 
   const notification: Notification = {
     title: title,
@@ -62,10 +62,13 @@ export function* handleDelayedNotificationSaga({
           }
         : {}),
       importance: AndroidImportance.HIGH,
+      pressAction: {
+        id: 'default',
+      },
     },
   };
 
-  if (delaySec) {
+  if (delaySec > 0) {
     const trigger: TimestampTrigger = {
       type: TriggerType.TIMESTAMP,
       timestamp: dayjs().add(delaySec, 's').valueOf(),
