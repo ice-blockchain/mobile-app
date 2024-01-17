@@ -10,7 +10,6 @@ import {isDataOnlyMessage} from '@store/modules/PushNotifications/utils/isDataOn
 const backgroundMessageHandler = async (
   message: FirebaseMessagingTypes.RemoteMessage,
 ) => {
-  //TODO::promise resolve
   if (isDataOnlyMessage(message)) {
     store.dispatch(
       PushNotificationsActions.DATA_MESSAGE_ARRIVE.STATE.create({

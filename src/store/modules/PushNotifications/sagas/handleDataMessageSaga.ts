@@ -82,8 +82,6 @@ function* handleDelayedDataMessage({data}: {data: DelayedDataMessageData}) {
     },
   };
 
-  console.log('delaySec', delaySec);
-
   if (delaySec > 0) {
     const trigger: TimestampTrigger = {
       type: TriggerType.TIMESTAMP,
