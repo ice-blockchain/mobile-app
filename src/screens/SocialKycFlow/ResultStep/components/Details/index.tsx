@@ -30,7 +30,7 @@ export function Details({kycStep}: Props) {
           {t('social_kyc.results_step.success.title')}
         </Text>
         <Text style={styles.text}>
-          {`${translationsPrefix}.results_step.success.description`}
+          {t(`${translationsPrefix}.results_step.success.description`)}
         </Text>
       </View>
     );

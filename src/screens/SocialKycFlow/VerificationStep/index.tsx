@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {VERIFY_SOCIAL_ACCOUNT_KYC_STEP} from '@api/tokenomics/constants';
 import {SocialKycStepNumber} from '@api/tokenomics/types';
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {CommonInput} from '@components/Inputs/CommonInput';
@@ -150,7 +151,7 @@ export function VerificationStep({
         </View>
         <View style={styles.instructionsContainer}>
           <StepInstruction
-            stepNumber={4}
+            stepNumber={kycStep === VERIFY_SOCIAL_ACCOUNT_KYC_STEP ? 4 : 3}
             description={t('social_kyc.verification_step.instructions_step.4')}
           />
           <View style={styles.separator} />
