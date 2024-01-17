@@ -1372,7 +1372,7 @@
       "description": "Tahniah, anda telah berjaya menyelesaikan KYC anda. Jawapan yang betul dan konsisten anda telah membuktikan komitmen dan pengetahuan anda. Anda kini disahkan."
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "Pembahagian BNB Smart Chain",
       "description": "Mengekalkan kelayakan pembahagian syiling ICE BNB Smart Chain bulanan anda dengan menyokong dengan aktifnya pengumuman-pengumuman pertukaran terkini di X."

@@ -1375,7 +1375,7 @@
       "description": "Gelukwens, jy het jou KYC suksesvol voltooi. Jou konsekwente korrekte antwoorde het jou toewyding en kennis bewys. Jy is nou geverifieer."
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "BNB Slim Kettingverspreiding",
       "description": "Handhaaf jou maandelikse BNB Slim Ketting ICE-muntenverspreidingsgeregtigheid deur aktief die nuutste Ruil-aankondigings op X te ondersteun."

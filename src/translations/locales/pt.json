@@ -1372,7 +1372,7 @@
       "description": "Parabéns, você concluiu com sucesso seu KYC. Suas respostas corretas e consistentes provaram sua dedicação e conhecimento. Você agora está verificado."
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "Distribuição BNB Smart Chain",
       "description": "Mantenha sua elegibilidade para a distribuição mensal das moedas ICE da BNB Smart Chain apoiando ativamente os anúncios mais recentes da Exchange no X."

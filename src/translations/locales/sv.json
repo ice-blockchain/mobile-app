@@ -1372,7 +1372,7 @@
       "description": "Grattis, du har framgångsrikt slutfört din KYC. Dina konsekvent rätta svar har bevisat ditt engagemang och din kunskap. Du är nu verifierad."
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "BNB Smart Chain Distribution",
       "description": "Behåll din månatliga kvalificering för distribution av ICE-mynt från BNB Smart Chain genom att aktivt stödja de senaste utbytens meddelanden på X."

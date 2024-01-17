@@ -1372,7 +1372,7 @@
       "description": "Gratulujeme, úspešne ste dokončili svoje KYC. Vaše konzistentné správne odpovede potvrdili vašu oddanosť a znalosti. Teraz ste overení."
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "Distribúcia BNB Smart Chain",
       "description": "Aktívnou podporou najnovších oznámení o Exchange na X udržiavajte svoju oprávnenosť k mesačnej distribúcii mincí BNB Smart Chain ICE."

@@ -1372,7 +1372,7 @@
       "description": "تهانينا، لقد أكملت بنجاح KYC الخاص بك. أثبتت إجاباتك الصحيحة المستمرة تفانيك ومعرفتك. أنت موثق الآن."
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "توزيع BNB Smart Chain",
       "description": "حافظ على أهليتك للحصول على توزيع عملة ICE على سلسلة BNB Smart الشهري من خلال دعم الإعلانات الأخيرة على X بنشاط."

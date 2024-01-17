@@ -1372,7 +1372,7 @@
       "description": "Selamat, Anda telah berhasil menyelesaikan KYC Anda. Jawaban yang benar secara konsisten telah membuktikan dedikasi dan pengetahuan Anda. Anda sekarang diverifikasi."
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "Distribusi BNB Smart Chain",
       "description": "Pertahankan kelayakan distribusi koin ICE BNB Smart Chain bulanan Anda dengan mendukung aktivitas terbaru di Exchange di X."

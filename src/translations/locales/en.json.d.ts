@@ -835,7 +835,4 @@ export type Translations = {
   'distribution_kyc_dynamic.select_method_step.title': null;
   'distribution_kyc_dynamic.select_method_step.description': null;
   'distribution_kyc_dynamic.results_step.success.description': null;
-  'distribution_kyc_2.select_method_step.title': null;
-  'distribution_kyc_2.select_method_step.description': null;
-  'distribution_kyc_2.results_step.success.description': null;
 };

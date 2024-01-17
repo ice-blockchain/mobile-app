@@ -1379,7 +1379,7 @@
       "description": "تبریک می‌گوییم، شما به موفقیت مرحله KYC خود را تکمیل کردید. پاسخ‌های درست پی در پی شما تعهد و دانش شما را اثبات کرده‌اند. اکنون تایید شده‌اید."
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "توزیع BNB Smart Chain",
       "description": "با فعالیت در حمایت از آخرین اعلان‌های صرافی در X، اهلیت توزیع ماهیانه سکه‌های ICE BNB Smart Chain خود را حفظ کنید."

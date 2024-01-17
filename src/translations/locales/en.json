@@ -1379,16 +1379,5 @@
         "description": "Congratulations, you have successfully completed your verification. You are now eligible to maintain your monthly BNB Smart Chain distribution status."
       }
     }
-  },
-  "distribution_kyc_2": {
-    "select_method_step": {
-      "title": "BNB Smart Chain Distribution",
-      "description": "Maintain your monthly BNB Smart Chain ICE coins distribution eligibility by actively supporting the latest Exchange announcements on X."
-    },
-    "results_step": {
-      "success": {
-        "description": "Congratulations, you have successfully completed your verification. You are now eligible to maintain your monthly BNB Smart Chain distribution status."
-      }
-    }
   }
 }

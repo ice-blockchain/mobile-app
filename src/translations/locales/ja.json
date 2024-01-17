@@ -1372,7 +1372,7 @@
       "description": "おめでとうございます、KYCを成功裏に完了しました。一貫して正しい回答があなたの献身と知識を証明しました。あなたは今、確認されています。"
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "BNBスマートチェーン配布",
       "description": "Xで最新の取引所の発表を積極的にサポートすることにより、月次BNBスマートチェーンICEコインの配布資格を維持してください。"

@@ -1372,7 +1372,7 @@
       "description": "Gratulacje, zakończyłeś pomyślnie swoje KYC. Twoje ciągłe poprawne odpowiedzi potwierdziły Twoje zaangażowanie i wiedzę. Jesteś teraz zweryfikowany."
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "Dystrybucja BNB Smart Chain",
       "description": "Zachowaj swoją uprawnienie do miesięcznej dystrybucji monet ICE BNB Smart Chain, aktywnie wspierając najnowsze ogłoszenia giełd na X."

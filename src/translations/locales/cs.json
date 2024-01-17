@@ -1372,7 +1372,7 @@
       "description": "Gratulujeme, úspěšně jste dokončili svůj KYC. Vaše stále správné odpovědi potvrdily vaše odhodlání a znalosti. Jste nyní ověřeni."
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "Distribuce BNB Smart Chain",
       "description": "Udržujte svou oprávněnost k měsíční distribuci mincí BNB Smart Chain aktivní podporou nejnovějších oznámení burz na X."

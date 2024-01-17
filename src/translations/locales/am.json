@@ -1371,7 +1371,7 @@
       "description": "እንኳን በKYC እባክዎ ተስቀድናቸዋል። እባክዎች በምንም ነገር የሚደርጉ የታወቀውና የሚሰጡ ምላሽ ከእኛ ተተማመን ስለተሳስባችሁ ሚኒኬር አፈፃን ያበረታሉ።"
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "BNB Smart Chain የህብረት ህብረት",
       "description": "የተማሪ በX የታለፉ የቀጣይ ቢሮክስ አይስ መካከልን በመስጠት ቀጥታ የቀጣይ ቢሮክስ አይስ መካከል አሁን ለመቀጣጠል መጠበቅን።"

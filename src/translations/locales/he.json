@@ -1379,7 +1379,7 @@
       "description": "מזל טוב, הצלחת להשלים בהצלחה את שלב ה-KYC שלך. התשובות הנכונות והתמידות שלך הוכיחו את ההתמקדות והידע שלך. אתה כעת מאומת."
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "הפצת BNB Smart Chain",
       "description": "שמרו על זכאותכם להפצת מטבעות ICE של BNB Smart Chain באופן פעיל על ידי תמיכה בהודעות ההצהרה האחרונות ב-X."

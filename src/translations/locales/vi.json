@@ -1372,7 +1372,7 @@
       "description": "Xin chúc mừng, bạn đã hoàn thành thành công KYC của bạn. Các câu trả lời chính xác liên tục của bạn đã chứng minh sự tận tụy và kiến thức của bạn. Bây giờ bạn đã được xác minh."
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "Phân phối BNB Smart Chain",
       "description": "Duy trì đủ điều kiện hàng tháng để phân phối đồng ICE từ BNB Smart Chain bằng cách ủng hộ mạnh mẽ các thông báo trao đổi mới nhất trên X."

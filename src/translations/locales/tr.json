@@ -1372,7 +1372,7 @@
       "description": "Tebrikler, KYC'nizi başarıyla tamamladınız. Sürekli doğru cevaplarınız bağlılığınızı ve bilginizi kanıtladı. Şimdi doğrulandınız."
     }
   },
-  "distribution_kyc_2": {
+  "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "BNB Akıllı Zincir Dağıtımı",
       "description": "X üzerindeki en son Borsa duyurularını aktif olarak destekleyerek aylık BNB Akıllı Zincir ICE coin dağıtım uygunluğunuzu sürdürün."
