@@ -7,6 +7,7 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {QuizActions} from '@store/modules/Quiz/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {t} from '@translations/i18n';
+import {useCallback} from 'react';
 import {useDispatch} from 'react-redux';
 
 export const useCancelQuiz = () => {
@@ -14,7 +15,7 @@ export const useCancelQuiz = () => {
     useNavigation<NativeStackNavigationProp<MainStackParamList>>();
   const dispatch = useDispatch();
 
-  const cancelQuiz = () => {
+  const cancelQuiz = useCallback(() => {
     navigation.navigate('PopUp', {
       title: t('quiz.confirmation_popup.title'),
       message: t('quiz.confirmation_popup.cancel_description'),
@@ -37,7 +38,7 @@ export const useCancelQuiz = () => {
         },
       ],
     });
-  };
+  }, [dispatch, navigation]);
 
   return {
     cancelQuiz,
