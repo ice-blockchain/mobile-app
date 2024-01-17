@@ -62,6 +62,11 @@ import {Badges} from '@screens/ProfileFlow/Badges';
 import {Profile} from '@screens/ProfileFlow/Profile';
 import {ProfileActionType} from '@screens/ProfileFlow/Profile/types';
 import {Roles} from '@screens/ProfileFlow/Roles';
+import {Quiz} from '@screens/QuizFlow/Quiz';
+import {QuizFailure} from '@screens/QuizFlow/QuizFailure';
+import {QuizIntro} from '@screens/QuizFlow/QuizIntro';
+import {QuizSuccess} from '@screens/QuizFlow/QuizSuccess';
+import {QuizTerms} from '@screens/QuizFlow/QuizTerms';
 import {ConfirmEmail} from '@screens/SettingsFlow/ConfirmEmail';
 import {ConfirmPhoneNumber} from '@screens/SettingsFlow/ConfirmPhoneNumber';
 import {LanguageSettings} from '@screens/SettingsFlow/LanguageSettings';
@@ -165,6 +170,11 @@ export type MainStackParamList = {
     correctiveOffset?: number;
   };
   TopMiners: undefined;
+  QuizTerms: undefined;
+  QuizIntro: undefined;
+  Quiz: undefined;
+  QuizFailure: undefined;
+  QuizSuccess: undefined;
 };
 
 export type HomeTabStackParamList = {
@@ -457,6 +467,11 @@ export function MainNavigator() {
         options={modalOptions}
       />
       <MainStack.Screen name="TopMiners" component={TopMiners} />
+      <MainStack.Screen name="QuizTerms" component={QuizTerms} />
+      <MainStack.Screen name="QuizIntro" component={QuizIntro} />
+      <MainStack.Screen name="Quiz" component={Quiz} />
+      <MainStack.Screen name="QuizFailure" component={QuizFailure} />
+      <MainStack.Screen name="QuizSuccess" component={QuizSuccess} />
     </MainStack.Navigator>
   );
 }

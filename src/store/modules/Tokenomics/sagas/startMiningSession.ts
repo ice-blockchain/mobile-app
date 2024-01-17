@@ -5,6 +5,7 @@ import {Api} from '@api/index';
 import {
   EMOTIONS_KYC_STEP,
   ETH_DISTRIBUTION_KYC_STEP,
+  QUIZ_KYC_STEP,
   SELFIE_KYC_STEP,
   VERIFY_SOCIAL_ACCOUNT_KYC_STEP,
 } from '@api/tokenomics/constants';
@@ -22,6 +23,7 @@ import {
 } from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
+import {QuizActions} from '@store/modules/Quiz/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {
   isMiningActiveSelector,
@@ -107,33 +109,37 @@ export function* startMiningSessionSaga(
     } else if (isApiError(error, 409, 'KYC_STEPS_REQUIRED')) {
       const errorData = error?.response?.data?.data;
       if (errorData && Array.isArray(errorData.kycSteps)) {
+        yield removeScreenByName('Tooltip').catch();
         if (
           errorData.kycSteps.includes(SELFIE_KYC_STEP) ||
           errorData.kycSteps.includes(EMOTIONS_KYC_STEP)
         ) {
-          yield removeScreenByName('Tooltip').catch();
           navigate({
             name: 'FaceRecognition',
             params: {kycSteps: errorData.kycSteps},
           });
           return;
-        }
-        if (
+        } else if (
           errorData.kycSteps.includes(VERIFY_SOCIAL_ACCOUNT_KYC_STEP) ||
           errorData.kycSteps.includes(ETH_DISTRIBUTION_KYC_STEP)
         ) {
-          yield removeScreenByName('Tooltip').catch();
           navigate({
             name: 'SocialKycFlow',
             params: {kycStep: errorData.kycSteps[0]},
           });
+          return;
+        } else if (errorData.kycSteps.includes(QUIZ_KYC_STEP)) {
+          yield put(QuizActions.START_OR_CONTINUE_QUIZ_FLOW.STATE.create());
           return;
         }
       }
     } else if (isApiError(error, 403, 'MINING_DISABLED')) {
       const errorData = error?.response?.data?.data;
       if (errorData && typeof errorData.kycStepBlocked === 'number') {
-        if (errorData.kycStepBlocked === 1 || errorData.kycStepBlocked === 2) {
+        if (
+          errorData.kycStepBlocked === SELFIE_KYC_STEP ||
+          errorData.kycStepBlocked === EMOTIONS_KYC_STEP
+        ) {
           yield removeScreenByName('Tooltip').catch();
           navigate({
             name: 'FaceRecognition',

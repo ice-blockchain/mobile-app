@@ -71,7 +71,10 @@
     "subscribe": "Subscribe",
     "not_sure": "Not sure",
     "confirm_address": "Confirm address",
-    "remove_address": "Remove address"
+    "remove_address": "Remove address",
+    "start": "Start",
+    "faq": "FAQ",
+    "knowledge_base": "Knowledge Base"
   },
   "team": {
     "contacts_tab": "Contacts",
@@ -1314,5 +1317,56 @@
     "title": "Account confirmation",
     "description": "To verify your account identity and securely link your email, please ensure that you successfully pass our emotions check during the authentication process.",
     "description2": "This step helps us ensure the security and authenticity of your account. Thank you for your cooperation!"
+  },
+  "quiz": {
+    "title": "KYC Step #3",
+    "terms": {
+      "description": "At Ice, we believe in fostering a community of active and informed members. Our mission is to ensure that Ice coins are distributed to those who are genuinely engaged and aligned with our vision.",
+      "knowledge_verification": {
+        "title": "💡 Knowledge Verification",
+        "description": "To ensure our community is well-informed and aligned with our vision:",
+        "point1": "You'll be presented with 21 questions derived from our comprehensive resources.",
+        "point2": "A passed quiz confirms your understanding and dedication.",
+        "point3": "A failed quiz indicates a need for further engagement with our materials."
+      },
+      "community_engagement": {
+        "title": "🙌 Active Community Engagement",
+        "description": "Your engagement within the Ice Ecosystem directly influences your mining capabilities:",
+        "point1": "Stay Updated: Engage with our news articles and videos.",
+        "point2": "Participate Actively: Join our Personal Development Program and live sessions on YouTube or Twitter Space.",
+        "point3": "Social Interactions: Boost your presence by liking, sharing, following, or posting about Ice.",
+        "bottom_description": "The more engaged you are, the higher your positive interaction score, enabling you to go through the KYC process."
+      },
+      "terms_privacy": "I understand & I agree with the [[:link]]Terms and Conditions.[[/:link]]"
+    },
+    "intro": {
+      "knowledge_check": "🧠 Knowledge Check:",
+      "point1": "There are 21 questions in total.",
+      "point2": "To pass the quiz, you need to answer at least 18 questions correctly.",
+      "point3": "Oops, failed quiz? Try again next week.",
+      "point4": "📚 All info for this quiz can be read [[:link]]here[[/:link]].",
+      "why_quiz": "Why the Quiz?",
+      "why_quiz_description": "We're all about smart, safe, and informed mining. This small step ensures our Ice community thrives with knowledge and understanding!"
+    },
+    "mining_disabled": {
+      "title": "Failed Quiz",
+      "description": "You didn't answer more than 18 questions correctly, so you can't pass the KYC Step #3. You can try again in one week.",
+      "check_faq": "In order to answer correctly next time, we suggest you familiarize yourself with our knowledge base and FAQ."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Question {{current}} of {{total}}",
+      "time_over": "⌛️ Time is over",
+      "correct_answers": "Correct Answers",
+      "wrong_answers": "Wrong Answers"
+    },
+    "confirmation_popup": {
+      "title": "Confirmation",
+      "start_description": "Are you sure you want to start the quiz?",
+      "cancel_description": "Are you sure you want to cancel the quiz?"
+    },
+    "quiz_success": {
+      "title": "Verification Completed",
+      "description": "Congratulations, you have successfully completed your KYC. Your consistent correct answers have proven your dedication and knowledge. You are now verified."
+    }
   }
 }

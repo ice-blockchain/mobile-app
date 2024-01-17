@@ -71,7 +71,10 @@
     "subscribe": "S’abonner",
     "not_sure": "Pas sûr",
     "confirm_address": "Confirmer l'adresse",
-    "remove_address": "Supprimer l'adresse"
+    "remove_address": "Supprimer l'adresse",
+    "start": "Commencer",
+    "faq": "FAQ",
+    "knowledge_base": "Base de Connaissances"
   },
   "team": {
     "contacts_tab": "Contacts",
@@ -1317,5 +1320,56 @@
     "title": "Confirmation du compte",
     "description": "Pour vérifier l'identité de votre compte et lier votre adresse e-mail en toute sécurité, assurez-vous de réussir avec succès notre vérification des émotions lors du processus d'authentification.",
     "description2": "Cette étape nous aide à garantir la sécurité et l'authenticité de votre compte. Merci pour votre coopération !"
+  },
+  "quiz": {
+    "title": "Étape KYC #3",
+    "terms": {
+      "description": "Chez Ice, nous croyons en favoriser une communauté de membres actifs et informés. Notre mission est de garantir que les jetons Ice soient distribués à ceux qui sont réellement engagés et alignés avec notre vision.",
+      "knowledge_verification": {
+        "title": "💡 Vérification des Connaissances",
+        "description": "Pour nous assurer que notre communauté est bien informée et alignée avec notre vision :",
+        "point1": "Vous serez présenté avec 21 questions tirées de nos ressources complètes.",
+        "point2": "Un quiz réussi confirme votre compréhension et votre dévouement.",
+        "point3": "Un quiz échoué indique un besoin d'engagement supplémentaire avec nos documents."
+      },
+      "community_engagement": {
+        "title": "🙌 Engagement Actif dans la Communauté",
+        "description": "Votre engagement au sein de l'Écosystème Ice influence directement vos capacités de minage :",
+        "point1": "Restez Informé : Impliquez-vous avec nos articles de presse et vidéos.",
+        "point2": "Participez Activement : Rejoignez notre Programme de Développement Personnel et nos sessions en direct sur YouTube ou Twitter Space.",
+        "point3": "Interactions Sociales : Boostez votre présence en aimant, partageant, suivant ou en publiant sur Ice.",
+        "bottom_description": "Plus vous êtes engagé, plus votre score d'interaction positive est élevé, vous permettant de passer par le processus KYC."
+      },
+      "terms_privacy": "Je comprends et j'accepte les [[:link]]Termes et Conditions[[/:link]]."
+    },
+    "intro": {
+      "knowledge_check": "🧠 Vérification des Connaissances :",
+      "point1": "Il y a un total de 21 questions.",
+      "point2": "Pour réussir le quiz, vous devez répondre correctement à au moins 18 questions.",
+      "point3": "Oops, quiz échoué ? Réessayez la semaine prochaine.",
+      "point4": "📚 Toutes les informations pour ce quiz peuvent être lues [[:link]]ici[[/:link]].",
+      "why_quiz": "Pourquoi le Quiz ?",
+      "why_quiz_description": "Nous mettons l'accent sur le minage intelligent, sûr et informé. Cette petite étape assure que notre communauté Ice prospère avec connaissance et compréhension !"
+    },
+    "mining_disabled": {
+      "title": "Quiz Échoué",
+      "description": "Vous n'avez pas répondu correctement à plus de 18 questions, donc vous ne pouvez pas passer l'Étape KYC #3. Vous pouvez réessayer la semaine prochaine.",
+      "check_faq": "Pour répondre correctement la prochaine fois, nous vous suggérons de vous familiariser avec notre base de connaissances et notre FAQ."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Question {{current}} sur {{total}}",
+      "time_over": "⌛️ Le temps est écoulé",
+      "correct_answers": "Réponses Correctes",
+      "wrong_answers": "Réponses Incorrectes"
+    },
+    "confirmation_popup": {
+      "title": "Confirmation",
+      "start_description": "Êtes-vous sûr de vouloir commencer le quiz ?",
+      "cancel_description": "Êtes-vous sûr de vouloir annuler le quiz ?"
+    },
+    "quiz_success": {
+      "title": "Vérification Terminée",
+      "description": "Félicitations, vous avez terminé avec succès votre KYC. Vos réponses correctes constantes ont prouvé votre dévouement et vos connaissances. Vous êtes maintenant vérifié."
+    }
   }
 }

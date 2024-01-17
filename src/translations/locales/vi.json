@@ -71,7 +71,10 @@
     "subscribe": "Đăng ký",
     "not_sure": "Không chắc chắn",
     "confirm_address": "Xác nhận địa chỉ",
-    "remove_address": "Xóa địa chỉ"
+    "remove_address": "Xóa địa chỉ",
+    "start": "Bắt đầu",
+    "faq": "Câu hỏi thường gặp",
+    "knowledge_base": "Cơ sở kiến thức"
   },
   "team": {
     "contacts_tab": "Danh bạ",
@@ -1317,5 +1320,56 @@
     "title": "Xác Nhận Tài Khoản",
     "description": "Để xác minh danh tính tài khoản của bạn và liên kết địa chỉ email của bạn một cách an toàn, vui lòng đảm bảo rằng bạn đã vượt qua thành công bước kiểm tra cảm xúc của chúng tôi trong quá trình xác thực.",
     "description2": "Bước này giúp chúng tôi đảm bảo tính bảo mật và xác thực của tài khoản của bạn. Cảm ơn sự hợp tác của bạn!"
+  },
+  "quiz": {
+    "title": "KYC Bước #3",
+    "terms": {
+      "description": "Tại Ice, chúng tôi tin tưởng trong việc tạo dựng một cộng đồng thành viên hoạt động và thông tin. Sứ mệnh của chúng tôi là đảm bảo rằng các đồng Ice được phân phối cho những người thực sự tham gia và chia sẻ tầm nhìn của chúng tôi.",
+      "knowledge_verification": {
+        "title": "💡 Xác minh kiến thức",
+        "description": "Để đảm bảo cộng đồng của chúng tôi được thông tin và đồng lòng với tầm nhìn của chúng tôi:",
+        "point1": "Bạn sẽ được đặt ra 21 câu hỏi dựa trên nguồn tài liệu phong phú của chúng tôi.",
+        "point2": "Kết quả đạt được từ bài kiểm tra xác minh hiểu biết và tận tụy của bạn.",
+        "point3": "Kết quả kiểm tra không đạt cho thấy cần phải tương tác thêm với tài liệu của chúng tôi."
+      },
+      "community_engagement": {
+        "title": "🙌 Tương tác cộng đồng tích cực",
+        "description": "Sự tham gia của bạn trong Hệ sinh thái Ice ảnh hưởng trực tiếp đến khả năng đào của bạn:",
+        "point1": "Luôn cập nhật: Tương tác với bài viết tin tức và video của chúng tôi.",
+        "point2": "Tham gia tích cực: Tham gia vào Chương trình Phát triển Cá nhân của chúng tôi và các buổi trực tiếp trên YouTube hoặc Twitter Space.",
+        "point3": "Tương tác xã hội: Tăng sự hiện diện của bạn bằng cách thích, chia sẻ, theo dõi hoặc đăng bài về Ice.",
+        "bottom_description": "Bạn càng tương tác tích cực, điểm tương tác tích cực càng cao, giúp bạn đi qua quy trình KYC."
+      },
+      "terms_privacy": "Tôi hiểu và tôi đồng ý với [[:link]]Điều khoản và Điều kiện[[/:link]] cùng với Chính sách bảo mật[[/:link]]."
+    },
+    "intro": {
+      "knowledge_check": "🧠 Kiểm tra kiến thức:",
+      "point1": "Tổng cộng có 21 câu hỏi.",
+      "point2": "Để đậu bài kiểm tra, bạn cần trả lời ít nhất 18 câu hỏi đúng.",
+      "point3": "Rất tiếc, bài kiểm tra không đỗ? Hãy thử lại vào tuần sau.",
+      "point4": "📚 Tất cả thông tin về bài kiểm tra này có thể đọc [[:link]]tại đây[[/:link]].",
+      "why_quiz": "Tại sao có bài kiểm tra?",
+      "why_quiz_description": "Chúng tôi luôn ủng hộ việc đào mỏ thông minh, an toàn và được thông tin đầy đủ. Bước nhỏ này đảm bảo cộng đồng Ice của chúng tôi phát triển với kiến thức và hiểu biết!"
+    },
+    "mining_disabled": {
+      "title": "Bài kiểm tra không đỗ",
+      "description": "Bạn đã không trả lời đúng hơn 18 câu hỏi, vì vậy bạn không thể hoàn thành Bước KYC #3. Bạn có thể thử lại vào tuần sau.",
+      "check_faq": "Để trả lời đúng vào lần sau, chúng tôi đề xuất bạn tìm hiểu về cơ sở kiến thức và Câu hỏi thường gặp của chúng tôi."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Câu hỏi {{current}} của {{total}}",
+      "time_over": "⌛️ Hết giờ",
+      "correct_answers": "Câu trả lời đúng",
+      "wrong_answers": "Câu trả lời sai"
+    },
+    "confirmation_popup": {
+      "title": "Xác nhận",
+      "start_description": "Bạn có chắc chắn muốn bắt đầu bài kiểm tra không?",
+      "cancel_description": "Bạn có chắc chắn muốn hủy bài kiểm tra không?"
+    },
+    "quiz_success": {
+      "title": "Xác minh Hoàn tất",
+      "description": "Xin chúc mừng, bạn đã hoàn thành thành công KYC của bạn. Các câu trả lời chính xác liên tục của bạn đã chứng minh sự tận tụy và kiến thức của bạn. Bây giờ bạn đã được xác minh."
+    }
   }
 }

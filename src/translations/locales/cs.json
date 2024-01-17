@@ -71,7 +71,10 @@
     "subscribe": "Odebírat",
     "not_sure": "Nejsem si jistý/á",
     "confirm_address": "Potvrdit adresu",
-    "remove_address": "Odstranit adresu"
+    "remove_address": "Odstranit adresu",
+    "start": "Začít",
+    "faq": "FAQ",
+    "knowledge_base": "Základní znalosti"
   },
   "team": {
     "contacts_tab": "Kontakty",
@@ -1317,5 +1320,56 @@
     "title": "Potvrzení účtu",
     "description": "Pro ověření identity Vašeho účtu a bezpečné propojení e-mailu si ujistěte, že během procesu ověření úspěšně projdete testem emocí.",
     "description2": "Tento krok nám pomáhá zajistit bezpečnost a autentičnost Vašeho účtu. Děkujeme za spolupráci!"
+  },
+  "quiz": {
+    "title": "KYC Krok #3",
+    "terms": {
+      "description": "V Ice věříme v podporu aktivního a informovaného společenství. Naším cílem je zajistit, že mince Ice jsou distribuovány těm, kteří jsou opravdu angažovaní a sdílejí naši vizi.",
+      "knowledge_verification": {
+        "title": "💡 Ověření znalostí",
+        "description": "Pro zajištění toho, že naše společenství je dobře informované a sdílí naši vizi:",
+        "point1": "Budete vystaveni 21 otázkám odvozeným z našich komplexních zdrojů.",
+        "point2": "Úspěšné složení kvízu potvrzuje vaše porozumění a odhodlání.",
+        "point3": "Neúspěšný kvíz naznačuje potřebu dalšího zapojení se s naším materiálem."
+      },
+      "community_engagement": {
+        "title": "🙌 Aktivní zapojení do komunity",
+        "description": "Vaše zapojení v rámci ekosystému Ice přímo ovlivňuje vaše těžební schopnosti:",
+        "point1": "Buďte v obraze: Zapojte se do našich zpravodajských článků a videí.",
+        "point2": "Aktivně se zapojujte: Připojte se k našemu Programu osobního rozvoje a živým relacím na YouTube nebo Twitter Space.",
+        "point3": "Sociální interakce: Zvyšte svou přítomnost tím, že budete líbit, sdílet, sledovat nebo přispívat o Ice.",
+        "bottom_description": "Čím více se angažujete, tím vyšší je vaše skóre pozitivní interakce, což vám umožní projít KYC procesem."
+      },
+      "terms_privacy": "Rozumím a souhlasím s [[:link]]Podmínkami a pravidly[[/:link]]."
+    },
+    "intro": {
+      "knowledge_check": "🧠 Kontrola znalostí:",
+      "point1": "Celkem je 21 otázek.",
+      "point2": "Chcete-li projít kvízem, musíte správně odpovědět na nejméně 18 otázek.",
+      "point3": "Oops, selhal kvíz? Zkuste to znovu příští týden.",
+      "point4": "📚 Všechny informace k tomuto kvízu můžete číst [[:link]]zde[[/:link]].",
+      "why_quiz": "Proč kvíz?",
+      "why_quiz_description": "Jsme zde pro inteligentní, bezpečné a informované těžení. Tento malý krok zajišťuje, že naše společenství Ice roste s vědomím a porozuměním!"
+    },
+    "mining_disabled": {
+      "title": "Selhal kvíz",
+      "description": "Nesprávně jste odpověděli na více než 18 otázek, takže nemůžete projít KYC Krokem #3. Můžete to zkusit znovu za týden.",
+      "check_faq": "Abyste příště odpovídali správně, doporučujeme se seznámit s našimi základními znalostmi a FAQ."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Otázka {{current}} z {{total}}",
+      "time_over": "⌛️ Vypršel čas",
+      "correct_answers": "Správné odpovědi",
+      "wrong_answers": "Nesprávné odpovědi"
+    },
+    "confirmation_popup": {
+      "title": "Potvrzení",
+      "start_description": "Jste si jisti, že chcete začít kvíz?",
+      "cancel_description": "Jste si jisti, že chcete zrušit kvíz?"
+    },
+    "quiz_success": {
+      "title": "Ověření dokončeno",
+      "description": "Gratulujeme, úspěšně jste dokončili svůj KYC. Vaše stále správné odpovědi potvrdily vaše odhodlání a znalosti. Jste nyní ověřeni."
+    }
   }
 }

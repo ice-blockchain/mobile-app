@@ -71,7 +71,10 @@
     "subscribe": "Abonnieren",
     "not_sure": "Nicht sicher",
     "confirm_address": "Adresse bestätigen",
-    "remove_address": "Adresse entfernen"
+    "remove_address": "Adresse entfernen",
+    "start": "Start",
+    "faq": "FAQ",
+    "knowledge_base": "Wissensdatenbank"
   },
   "team": {
     "contacts_tab": "Kontakte",
@@ -1317,5 +1320,56 @@
     "title": "Konto-Bestätigung",
     "description": "Um Ihre Kontoidentität zu überprüfen und Ihre E-Mail sicher zu verknüpfen, stellen Sie sicher, dass Sie den Emotionstest während des Authentifizierungsvorgangs erfolgreich bestehen.",
     "description2": "Dieser Schritt hilft uns, die Sicherheit und Authentizität Ihres Kontos sicherzustellen. Vielen Dank für Ihre Mitarbeit!"
+  },
+  "quiz": {
+    "title": "KYC Schritt #3",
+    "terms": {
+      "description": "Bei Ice setzen wir auf die Förderung einer Gemeinschaft aktiver und informierter Mitglieder. Unsere Mission ist es sicherzustellen, dass Ice Coins an diejenigen verteilt werden, die wirklich engagiert sind und unsere Vision teilen.",
+      "knowledge_verification": {
+        "title": "💡 Wissensüberprüfung",
+        "description": "Um sicherzustellen, dass unsere Gemeinschaft gut informiert ist und unsere Vision teilt:",
+        "point1": "Ihnen werden 21 Fragen aus unseren umfassenden Ressourcen gestellt.",
+        "point2": "Ein bestandener Test bestätigt Ihr Verständnis und Ihre Hingabe.",
+        "point3": "Ein nicht bestandener Test zeigt den Bedarf an weiterem Engagement mit unseren Materialien auf."
+      },
+      "community_engagement": {
+        "title": "🙌 Aktives Gemeinschaftsengagement",
+        "description": "Ihr Engagement innerhalb des Ice-Ökosystems beeinflusst direkt Ihre Mining-Fähigkeiten:",
+        "point1": "Bleiben Sie auf dem Laufenden: Engagieren Sie sich mit unseren Nachrichtenartikeln und Videos.",
+        "point2": "Nehmen Sie aktiv teil: Treten Sie unserem Personal Development Program und Live-Sessions auf YouTube oder Twitter Space bei.",
+        "point3": "Soziale Interaktionen: Steigern Sie Ihre Präsenz, indem Sie Ice liken, teilen, folgen oder darüber posten.",
+        "bottom_description": "Je aktiver Sie sind, desto höher ist Ihre positive Interaktionsbewertung, was Ihnen ermöglicht, den KYC-Prozess zu durchlaufen."
+      },
+      "terms_privacy": "Ich verstehe und stimme den [[:link]]Nutzungsbedingungen und Datenschutzbestimmungen[[/:link]] zu."
+    },
+    "intro": {
+      "knowledge_check": "🧠 Wissensüberprüfung:",
+      "point1": "Insgesamt gibt es 21 Fragen.",
+      "point2": "Um den Test zu bestehen, müssen Sie mindestens 18 Fragen korrekt beantworten.",
+      "point3": "Oops, Test nicht bestanden? Versuchen Sie es nächste Woche erneut.",
+      "point4": "📚 Alle Informationen zu diesem Test können [[:link]]hier[[/:link]] nachgelesen werden.",
+      "why_quiz": "Warum der Test?",
+      "why_quiz_description": "Wir setzen auf intelligentes, sicheres und informiertes Mining. Dieser kleine Schritt gewährleistet, dass unsere Ice-Community mit Wissen und Verständnis wächst!"
+    },
+    "mining_disabled": {
+      "title": "Test nicht bestanden",
+      "description": "Sie haben weniger als 18 Fragen korrekt beantwortet, daher können Sie den KYC Schritt #3 nicht bestehen. Sie können es in einer Woche erneut versuchen.",
+      "check_faq": "Um beim nächsten Mal richtig zu antworten, empfehlen wir Ihnen, sich mit unserer Wissensdatenbank und den FAQ vertraut zu machen."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Frage {{current}} von {{total}}",
+      "time_over": "⌛️ Zeit ist abgelaufen",
+      "correct_answers": "Richtige Antworten",
+      "wrong_answers": "Falsche Antworten"
+    },
+    "confirmation_popup": {
+      "title": "Bestätigung",
+      "start_description": "Sind Sie sicher, dass Sie den Test starten möchten?",
+      "cancel_description": "Sind Sie sicher, dass Sie den Test abbrechen möchten?"
+    },
+    "quiz_success": {
+      "title": "Überprüfung abgeschlossen",
+      "description": "Herzlichen Glückwunsch, Sie haben Ihre KYC erfolgreich abgeschlossen. Ihre konstant richtigen Antworten haben Ihr Engagement und Wissen bewiesen. Sie sind jetzt verifiziert."
+    }
   }
 }

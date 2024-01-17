@@ -8,10 +8,6 @@ type AuthCodeConfig =
       emailCodeAuthBlackList: string[];
     };
 
-type FaceAuthConfig = {
-  'face-auth'?: {enabled: boolean};
-};
-
 type TeamConfig = {
   team?: {enabled: boolean};
 };
@@ -28,7 +24,6 @@ type EthDistributionKyc = {
 };
 
 export type FeatureToggleConfig = AuthCodeConfig &
-  FaceAuthConfig &
   TeamConfig &
   AchievementsConfig &
   EthDistributionKyc;

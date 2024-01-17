@@ -71,7 +71,10 @@
     "subscribe": "Naroči se",
     "not_sure": "Nisem prepričan",
     "confirm_address": "Potrdi naslov",
-    "remove_address": "Odstrani naslov"
+    "remove_address": "Odstrani naslov",
+    "start": "Začni",
+    "faq": "Pogosta vprašanja",
+    "knowledge_base": "Osnovno znanje"
   },
   "team": {
     "contacts_tab": "Kontakti",
@@ -1317,5 +1320,56 @@
     "title": "Potrditev računa",
     "description": "Da preverite identiteto svojega računa in varno povežete svoj e-poštni naslov, se prepričajte, da uspešno opravite test čustev med postopkom avtentikacije.",
     "description2": "Ta korak nam pomaga zagotoviti varnost in avtentičnost vašega računa. Hvala za sodelovanje!"
+  },
+  "quiz": {
+    "title": "KYC Korak #3",
+    "terms": {
+      "description": "V podjetju Ice verjamemo v spodbujanje skupnosti aktivnih in informiranih članov. Naša misija je zagotoviti distribucijo Ice kovancev tistim, ki so resnično vključeni in delijo našo vizijo.",
+      "knowledge_verification": {
+        "title": "💡 Preverjanje znanja",
+        "description": "Da bi zagotovili, da je naša skupnost dobro obveščena in se zavzema za našo vizijo:",
+        "point1": "Predstavili vam bomo 21 vprašanj, izpeljanih iz naših obsežnih virov.",
+        "point2": "Uspešen kviz potrjuje vaše razumevanje in zavezanost.",
+        "point3": "Neuspešen kviz kaže na potrebo po večjem sodelovanju z našimi materiali."
+      },
+      "community_engagement": {
+        "title": "🙌 Aktivno sodelovanje v skupnosti",
+        "description": "Vaše sodelovanje v ekosistemu Ice neposredno vpliva na vaše zmogljivosti rudarjenja:",
+        "point1": "Ostanite na tekočem: Vključite se v naše novice in videoposnetke.",
+        "point2": "Aktivno sodelujte: Pridružite se našemu programu osebnega razvoja in v živo na YouTube ali Twitter Space.",
+        "point3": "Družbene interakcije: Povečajte svojo prisotnost s všečkanjem, deljenjem, sledenjem ali objavljanjem o Ice.",
+        "bottom_description": "Bolj ko ste aktivni, višja je vaša pozitivna ocena interakcije, kar vam omogoča, da opravite postopek KYC."
+      },
+      "terms_privacy": "Razumem in se strinjam s [[:link]]Pogoji uporabe in politiko zasebnosti[[/:link]]."
+    },
+    "intro": {
+      "knowledge_check": "🧠 Preverjanje znanja:",
+      "point1": "Skupno je 21 vprašanj.",
+      "point2": "Da uspešno opravite kviz, morate pravilno odgovoriti na vsaj 18 vprašanj.",
+      "point3": "Opa, kviz ni uspel? Poskusite znova naslednji teden.",
+      "point4": "📚 Vse informacije o tem kvizu so na voljo [[:link]]tukaj[[/:link]].",
+      "why_quiz": "Zakaj kviz?",
+      "why_quiz_description": "Zavzemamo se za pametno, varno in informirano rudarjenje. Ta majhen korak zagotavlja, da bo skupnost Ice cvetela z znanjem in razumevanjem!"
+    },
+    "mining_disabled": {
+      "title": "Kviz ni uspel",
+      "description": "Niste pravilno odgovorili na več kot 18 vprašanj, zato ne morete opraviti KYC Koraka #3. Poskusite znova naslednji teden.",
+      "check_faq": "Da boste naslednjič pravilno odgovorili, vam priporočamo, da se seznanite z našim osnovnim znanjem in pogostimi vprašanji."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Vprašanje {{current}} od {{total}}",
+      "time_over": "⌛️ Čas je potekel",
+      "correct_answers": "Pravilni odgovori",
+      "wrong_answers": "Napačni odgovori"
+    },
+    "confirmation_popup": {
+      "title": "Potrditev",
+      "start_description": "Ste prepričani, da želite začeti kviz?",
+      "cancel_description": "Ste prepričani, da želite preklicati kviz?"
+    },
+    "quiz_success": {
+      "title": "Preverjanje je uspešno zaključeno",
+      "description": "Čestitamo, uspešno ste zaključili KYC. Vaši dosledni pravilni odgovori so dokazali vašo predanost in znanje. Sedaj ste preverjeni."
+    }
   }
 }

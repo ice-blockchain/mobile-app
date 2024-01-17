@@ -11,14 +11,21 @@ import {rem} from 'rn-units';
 
 type Props = {
   style?: StyleProp<ViewStyle>;
+  onPress?: () => void;
 };
 
-export const CloseButton = ({style}: Props) => {
+export const CloseButton = ({style, onPress}: Props) => {
   const navigation = useNavigation();
   return (
     <Touchable
       hitSlop={MIDDLE_BUTTON_HIT_SLOP}
-      onPress={navigation.goBack}
+      onPress={() => {
+        if (onPress) {
+          onPress();
+        } else {
+          navigation.goBack();
+        }
+      }}
       style={style}>
       <CloseIcon color={COLORS.black} width={rem(12)} height={rem(12)} />
     </Touchable>

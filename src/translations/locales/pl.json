@@ -71,7 +71,10 @@
     "subscribe": "Subskrybuj",
     "not_sure": "Nie jestem pewny",
     "confirm_address": "Potwierdź adres",
-    "remove_address": "Usuń adres"
+    "remove_address": "Usuń adres",
+    "start": "Rozpocznij",
+    "faq": "FAQ",
+    "knowledge_base": "Baza wiedzy"
   },
   "team": {
     "contacts_tab": "Kontakty",
@@ -1317,5 +1320,56 @@
     "title": "Potwierdzenie konta",
     "description": "Aby zweryfikować tożsamość twojego konta i bezpiecznie połączyć swój adres e-mail, upewnij się, że pomyślnie przejdziesz test emocji podczas procesu uwierzytelniania.",
     "description2": "Ten krok pomaga nam zapewnić bezpieczeństwo i autentyczność twojego konta. Dziękujemy za współpracę!"
+  },
+  "quiz": {
+    "title": "KYC Krok #3",
+    "terms": {
+      "description": "W Ice wierzymy w tworzenie społeczności aktywnych i dobrze poinformowanych członków. Nasza misja polega na zapewnieniu, że monety Ice trafiają do tych, którzy naprawdę zaangażowani są i współgrają z naszą wizją.",
+      "knowledge_verification": {
+        "title": "💡 Weryfikacja wiedzy",
+        "description": "Aby upewnić się, że nasza społeczność jest dobrze poinformowana i zgadza się z naszą wizją:",
+        "point1": "Otrzymasz 21 pytań opartych na naszych obszernych zasobach.",
+        "point2": "Zaliczenie quizu potwierdza Twoje zrozumienie i zaangażowanie.",
+        "point3": "Niezdany quiz wskazuje konieczność dalszego zapoznania się z naszymi materiałami."
+      },
+      "community_engagement": {
+        "title": "🙌 Aktywne zaangażowanie społeczności",
+        "description": "Twoje zaangażowanie w ekosystemie Ice ma bezpośredni wpływ na Twoje możliwości wydobywcze:",
+        "point1": "Bądź na bieżąco: Śledź nasze artykuły i filmy informacyjne.",
+        "point2": "Aktywny udział: Dołącz do naszego programu rozwoju osobistego i udziału w sesjach na żywo na YouTube lub Twitter Space.",
+        "point3": "Interakcje społeczne: Zwiększ swoją obecność, lubiąc, udostępniając, śledząc lub publikując treści o Ice.",
+        "bottom_description": "Im bardziej jesteś zaangażowany, tym wyższy jest Twój wynik pozytywnych interakcji, co umożliwia przejście procesu KYC."
+      },
+      "terms_privacy": "Rozumiem i zgadzam się z [[:link]]Regulaminem[[/:link]]."
+    },
+    "intro": {
+      "knowledge_check": "🧠 Sprawdzenie wiedzy:",
+      "point1": "W sumie jest 21 pytań.",
+      "point2": "Aby zaliczyć quiz, musisz poprawnie odpowiedzieć na co najmniej 18 pytań.",
+      "point3": "Oops, nie zdałeś quizu? Spróbuj ponownie w następnym tygodniu.",
+      "point4": "📚 Wszystkie informacje o tym quizie można przeczytać [[:link]]tutaj[[/:link]].",
+      "why_quiz": "Dlaczego quiz?",
+      "why_quiz_description": "Jesteśmy zwolennikami inteligentnego, bezpiecznego i dobrze poinformowanego wydobycia. Ten mały krok zapewnia, że społeczność Ice kwitnie wiedzą i zrozumieniem!"
+    },
+    "mining_disabled": {
+      "title": "Niezdany Quiz",
+      "description": "Nie odpowiedziałeś na więcej niż 18 pytań poprawnie, więc nie możesz zaliczyć KYC Krok #3. Możesz spróbować ponownie za tydzień.",
+      "check_faq": "Aby odpowiedzieć poprawnie następnym razem, zalecamy zapoznanie się z naszą bazą wiedzy i FAQ."
+    },
+    "quiz_questionnaire": {
+      "navigation_title": "Pytanie {{current}} z {{total}}",
+      "time_over": "⌛️ Czas minął",
+      "correct_answers": "Poprawne Odpowiedzi",
+      "wrong_answers": "Błędne Odpowiedzi"
+    },
+    "confirmation_popup": {
+      "title": "Potwierdzenie",
+      "start_description": "Czy na pewno chcesz rozpocząć quiz?",
+      "cancel_description": "Czy na pewno chcesz anulować quiz?"
+    },
+    "quiz_success": {
+      "title": "Zakończono Weryfikację",
+      "description": "Gratulacje, zakończyłeś pomyślnie swoje KYC. Twoje ciągłe poprawne odpowiedzi potwierdziły Twoje zaangażowanie i wiedzę. Jesteś teraz zweryfikowany."
+    }
   }
 }

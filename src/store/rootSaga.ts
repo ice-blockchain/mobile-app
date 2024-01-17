@@ -22,6 +22,7 @@ import {newsWatchers} from '@store/modules/News/sagas';
 import {notificationsWatchers} from '@store/modules/Notifications/sagas';
 import {permissionsWatchers} from '@store/modules/Permissions/sagas';
 import {pushNotificationsWatchers} from '@store/modules/PushNotifications/sagas';
+import {quizWatchers} from '@store/modules/Quiz/sagas';
 import {rateAppWatchers} from '@store/modules/RateApp/sagas';
 import {referralsWatchers} from '@store/modules/Referrals/sagas';
 import {socialKycWatchers} from '@store/modules/SocialKyc/sagas';
@@ -64,6 +65,7 @@ const watchers = [
   ...inAppNotificationsWatchers,
   ...backgroundTasksWatchers,
   ...socialsWatchers,
+  ...quizWatchers,
 ];
 
 export function* rootSaga(): SagaIterator {

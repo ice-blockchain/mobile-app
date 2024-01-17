@@ -6,6 +6,7 @@ import {
   FaceAuthKycNumber,
   MiningSummary,
   PreStakingSummary,
+  QuizKycStep,
   RankingSummary,
   SocialKycStepNumber,
   TotalCoins,
@@ -58,7 +59,7 @@ const START_MINING_SESSION = createAction('START_MINING_SESSION', {
   START: (params?: {
     resurrect?: boolean;
     tapToMineActionType?: 'Extended' | 'Default';
-    skipKYCStep?: FaceAuthKycNumber | SocialKycStepNumber;
+    skipKYCStep?: FaceAuthKycNumber | SocialKycStepNumber | QuizKycStep;
   }) => params,
   SUCCESS: (miningSummary: MiningSummary | null) => ({miningSummary}),
   FAILED: (errorMessage: string) => ({errorMessage}),
