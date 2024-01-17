@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {ETH_DISTRIBUTION_KYC_STEP} from '@api/tokenomics/constants';
 import {SocialKycStepNumber} from '@api/tokenomics/types';
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
@@ -40,8 +39,6 @@ export function ResultStep({onTryAgain, onSkip, kycStep}: Props) {
     onSkip();
   };
 
-  const isDistributionFlow = kycStep === ETH_DISTRIBUTION_KYC_STEP;
-
   useOnHardwareBack({callback: () => {}, preventDefault: true});
 
   return (
@@ -65,7 +62,7 @@ export function ResultStep({onTryAgain, onSkip, kycStep}: Props) {
           />
         </View>
         <View style={styles.detailsContainer}>
-          <Details isDistributionFlow={isDistributionFlow} />
+          <Details kycStep={kycStep} />
         </View>
         <View style={styles.footerContainer}>
           <PrimaryButton

@@ -1371,5 +1371,16 @@
       "title": "Təsdiq Başa Çatdı",
       "description": "Təbriklər, siz KYC-nizi uğurla başa çatdırdınız. Sizin sürətli düzgün cavablarınız sizin həsrətinizi və bilikinizi sübut etdi. Siz artıq təsdiqləndiniz."
     }
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNB Smart Chain Təqdimatı",
+      "description": "BNB Smart Chain ICE koinlərinin aylıq təqdimat elanlarını aktiv şəkildə dəstəkləyərək aylıq BNB Smart Chain ICE koinlərinin təqdimatı üçün əhalinin elanlarını aktiv şəkildə dəstəkləyərək aylıq BNB Smart Chain ICE koinlərinin təqdimatı üçün əhalinin elanlarını aktiv şəkildə dəstəkləyin."
+    },
+    "results_step": {
+      "success": {
+        "description": "Təbrik edirik, sizi uğurla təsdiq etdiniz. Artıq aylıq BNB Smart Chain təqdimat statusunuzu qorumaq üçün əhəmiyyətli olduğunuzu qeyd edirik."
+      }
+    }
   }
 }

@@ -1371,5 +1371,16 @@
       "title": "검증 완료",
       "description": "축하합니다, KYC를 성공적으로 완료하셨습니다. 일관되게 올바른 답변으로 귀하의 헌신과 지식을 증명했습니다. 이제 귀하가 검증되었습니다."
     }
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNB 스마트 체인 배포",
+      "description": "X에서 최신 거래소 공지사항을 적극적으로 지원하여 매월 BNB 스마트 체인 ICE 코인 분배 자격을 유지하십시오."
+    },
+    "results_step": {
+      "success": {
+        "description": "축하합니다. 귀하의 확인 작업을 성공적으로 완료하셨습니다. 이제 월간 BNB 스마트 체인 분배 상태를 유지할 자격이 있습니다."
+      }
+    }
   }
 }

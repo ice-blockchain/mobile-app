@@ -16,14 +16,22 @@ type AchievementsConfig = {
   achievements?: {enabled: boolean};
 };
 
-type EthDistributionKyc = {
+type DistributionKyc = {
   'social2-kyc': {
-    enabled: boolean;
     'x-post-link'?: string;
   };
+};
+
+type DynamicDistributionKyc = {
+  'dynamic-distribution-kyc': {
+    step: number;
+    xPostLink?: string;
+    xPostExample?: string;
+  }[];
 };
 
 export type FeatureToggleConfig = AuthCodeConfig &
   TeamConfig &
   AchievementsConfig &
-  EthDistributionKyc;
+  DistributionKyc &
+  DynamicDistributionKyc;

@@ -3,12 +3,12 @@
 import {stopPropagation} from '@components/KeyboardDismiss';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {LINKS} from '@constants/links';
 import {windowHeight, windowWidth} from '@constants/styles';
 import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useBottomOffsetStyle} from '@navigation/hooks/useBottomOffsetStyle';
 import {MainStackParamList} from '@navigation/Main';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
+import {useKycStepRepostExampleUrl} from '@screens/Modals/RepostExample/hooks/useKycStepRepostExampleUrl';
 import {CloseIcon} from '@svg/CloseIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -37,14 +37,12 @@ const IMAGE_WIDTH = windowWidth - IMAGE_PADDING_HORIZONTAL * 2;
 export const RepostExample = () => {
   const navigation = useNavigation();
   const {
-    params: {isDistributionFlow},
+    params: {kycStep},
   } = useRoute<RouteProp<MainStackParamList, 'RepostExample'>>();
   const bottomOffsetStyle = useBottomOffsetStyle();
   const {bottom: bottomInset} = useSafeAreaInsets();
   const [aspectRatio, setAspectRatio] = useState(DEFAULT_ASPECT_RATIO);
-  const imageUrl = isDistributionFlow
-    ? LINKS.DIST_REPOST_EXAMPLE
-    : LINKS.X_REPOST_EXAMPLE;
+  const imageUrl = useKycStepRepostExampleUrl(kycStep);
   useEffect(() => {
     Image.getSize(imageUrl, (width, height) => {
       setAspectRatio(width / height);

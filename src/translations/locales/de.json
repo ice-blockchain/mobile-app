@@ -1371,5 +1371,16 @@
       "title": "Überprüfung abgeschlossen",
       "description": "Herzlichen Glückwunsch, Sie haben Ihre KYC erfolgreich abgeschlossen. Ihre konstant richtigen Antworten haben Ihr Engagement und Wissen bewiesen. Sie sind jetzt verifiziert."
     }
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNB Smart Chain Verteilung",
+      "description": "Halten Sie Ihre Berechtigung zur monatlichen Verteilung der BNB Smart Chain ICE-Münzen aufrecht, indem Sie die neuesten Ankündigungen der Börsen auf X aktiv unterstützen."
+    },
+    "results_step": {
+      "success": {
+        "description": "Herzlichen Glückwunsch, Sie haben Ihre Verifizierung erfolgreich abgeschlossen. Sie sind jetzt berechtigt, Ihren monatlichen Status der BNB Smart Chain-Verteilung aufrechtzuerhalten."
+      }
+    }
   }
 }

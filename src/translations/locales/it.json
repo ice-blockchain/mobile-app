@@ -1371,5 +1371,16 @@
       "title": "Verifica Completata",
       "description": "Congratulazioni, hai completato con successo il tuo KYC. Le tue risposte corrette costanti hanno dimostrato la tua dedizione e conoscenza. Sei ora verificato."
     }
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "Distribuzione di BNB Smart Chain",
+      "description": "Mantieni la tua idoneità per la distribuzione mensile delle monete ICE di BNB Smart Chain sostenendo attivamente le ultime notizie sugli Exchange su X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Congratulazioni, hai completato con successo la tua verifica. Ora sei idoneo a mantenere lo stato di distribuzione mensile di BNB Smart Chain."
+      }
+    }
   }
 }

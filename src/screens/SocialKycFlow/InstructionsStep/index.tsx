@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {
-  ETH_DISTRIBUTION_KYC_STEP,
-  VERIFY_SOCIAL_ACCOUNT_KYC_STEP,
-} from '@api/tokenomics/constants';
+import {VERIFY_SOCIAL_ACCOUNT_KYC_STEP} from '@api/tokenomics/constants';
 import {SocialKycStepNumber} from '@api/tokenomics/types';
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {Touchable} from '@components/Touchable';
@@ -22,7 +19,7 @@ import {
 import {ShowExample} from '@screens/SocialKycFlow/InstructionsStep/components/ShowExample';
 import {Tooltip} from '@screens/SocialKycFlow/InstructionsStep/components/Tooltip';
 import {useOnContinue} from '@screens/SocialKycFlow/InstructionsStep/hooks/useOnContinue';
-import {kycStepToTranslationsPathPrefix} from '@screens/SocialKycFlow/utils';
+import {isDistributionKyc} from '@screens/SocialKycFlow/utils';
 import {getFacebookAccessTokenForUserPosts} from '@services/auth/signin/facebook';
 import {SocialKycActions} from '@store/modules/SocialKyc/actions';
 import {
@@ -87,7 +84,7 @@ export function InstructionsStep({
         onSkip();
       }
     }
-  }, [kycStep, onSkip, socialKycMethod, socialKycStatus, updateStepPassed]);
+  }, [onSkip, socialKycMethod, socialKycStatus, updateStepPassed]);
   const onConfirm = useCallback(() => {
     if (socialKycMethod === 'Facebook') {
       // TODO: move to saga once facebook flow is enabled
@@ -107,15 +104,13 @@ export function InstructionsStep({
     }
   }, [dispatch, kycStep, socialKycMethod, updateStepPassed]);
 
-  const isDistributionFlow = kycStep === ETH_DISTRIBUTION_KYC_STEP;
+  const isDistributionFlow = isDistributionKyc(kycStep);
   const {onContinue, onStepOne} = useOnContinue({
     onConfirm,
-    isDistributionFlow,
+    kycStep,
   });
 
   useOnHardwareBack({callback: onGoBack, preventDefault: true});
-
-  const translationsPrefix = kycStepToTranslationsPathPrefix(kycStep);
 
   return (
     <View style={commonStyles.flexOne}>
@@ -131,14 +126,16 @@ export function InstructionsStep({
         contentContainerStyle={styles.contentContainer}>
         <VerifyWithHeader socialKycMethod={socialKycMethod} />
         <View style={styles.showExampleContainer}>
-          {socialKycMethod === 'X' ? (
-            <ShowExample isDistributionFlow={isDistributionFlow} />
-          ) : null}
+          {socialKycMethod === 'X' ? <ShowExample kycStep={kycStep} /> : null}
         </View>
         <View style={styles.instructionsContainer}>
           <StepInstruction
             stepNumber={1}
-            description={t(`${translationsPrefix}.instructions_step.x.1`)}
+            description={
+              isDistributionFlow
+                ? t('distribution_kyc.instructions_step.x.1')
+                : t('social_kyc.instructions_step.x.1')
+            }
             onPress={onStepOne}
           />
           <View style={styles.separator} />

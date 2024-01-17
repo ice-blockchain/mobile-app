@@ -1371,5 +1371,16 @@
       "title": "Verifikasjon Fullført",
       "description": "Gratulerer, du har fullført KYC på ein vellykka måte. Dei stadig rette svarene dine har bevist innsatsen og kunnskapen din. Du er no verifisert."
     }
+  },
+  "distribution_kyc_dynamic": {
+    "select_method_step": {
+      "title": "BNB Smart Chain Distribusjon",
+      "description": "Oppretthold din månedlige kvalifisering for distribusjon av BNB Smart Chain ICE-mynter ved å aktivt støtte de siste utvekslingsmeldingene på X."
+    },
+    "results_step": {
+      "success": {
+        "description": "Gratulerer, du har fullført verifiseringen din. Du er nå kvalifisert for å opprettholde din månedlige status for distribusjon av BNB Smart Chain."
+      }
+    }
   }
 }

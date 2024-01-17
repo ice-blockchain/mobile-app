@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {SocialKycStepNumber} from '@api/tokenomics/types';
+import {kycStepToTranslationsPathPrefix} from '@screens/SocialKycFlow/utils';
 import {
   socialKycAttemptsSelector,
   socialKycStatusSelector,
@@ -12,12 +14,14 @@ import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 type Props = {
-  isDistributionFlow: boolean;
+  kycStep: SocialKycStepNumber;
 };
 
-export function Details({isDistributionFlow}: Props) {
+export function Details({kycStep}: Props) {
   const socialKycStatus = useSelector(socialKycStatusSelector);
   const socialKycAttempts = useSelector(socialKycAttemptsSelector);
+
+  const translationsPrefix = kycStepToTranslationsPathPrefix(kycStep);
 
   if (socialKycStatus === 'SUCCESS') {
     return (
@@ -26,9 +30,7 @@ export function Details({isDistributionFlow}: Props) {
           {t('social_kyc.results_step.success.title')}
         </Text>
         <Text style={styles.text}>
-          {isDistributionFlow
-            ? t('distribution_kyc.results_step.success.description')
-            : t('social_kyc.results_step.success.description')}
+          {t(`${translationsPrefix}.results_step.success.description`)}
         </Text>
       </View>
     );
