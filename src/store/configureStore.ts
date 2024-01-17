@@ -51,6 +51,7 @@ export const store = configureStore({
           'utilityProcessStatuses.SET_WALKTHROUGH_STEP_ELEMENT_DATA.payload.elementData',
           'walkthrough.stepElements',
           'utilityProcessStatuses.SYNC_CONTACTS_BACKGROUND_TASK.payload.finishTask',
+          'utilityProcessStatuses.DATA_MESSAGE_ARRIVE.payload.finishTask',
         ],
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },

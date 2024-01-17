@@ -66,7 +66,7 @@ function* handleDelayedDataMessage({data}: {data: DelayedDataMessageData}) {
 
   const notification: Notification = {
     title: title,
-    body: body + ' ' + `(Delayed by ${delaySec} sec)`,
+    body,
     data,
     android: {
       channelId: CHANNEL_ID,

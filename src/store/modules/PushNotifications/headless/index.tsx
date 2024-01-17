@@ -13,17 +13,17 @@ import {isDataOnlyMessage} from '@store/modules/PushNotifications/utils/isDataOn
 const backgroundMessageHandler = async (
   message: FirebaseMessagingTypes.RemoteMessage,
 ) => {
-  let finishTask;
-  const deferred = new Promise(resolve => (finishTask = resolve));
   if (isDataOnlyMessage(message)) {
+    let finishTask;
+    const deferred = new Promise(resolve => (finishTask = resolve));
     store.dispatch(
       PushNotificationsActions.DATA_MESSAGE_ARRIVE.STATE.create({
         message,
         finishTask,
       }),
     );
+    await deferred;
   }
-  await deferred;
 };
 
 export const registerBackgroundMessageHandler = () => {
