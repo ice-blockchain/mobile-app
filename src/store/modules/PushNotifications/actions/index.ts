@@ -11,16 +11,12 @@ const NOTIFICATION_ARRIVE = createAction('NOTIFICATION_ARRIVE', {
   STATE: (payload: {message?: FirebaseMessagingTypes.RemoteMessage}) => payload,
 });
 
-const DELAYED_NOTIFICATION_ARRIVE = createAction(
-  'DELAYED_NOTIFICATION_ARRIVE',
-  {
-    STATE: (payload: {message: FirebaseMessagingTypes.RemoteMessage}) =>
-      payload,
-  },
-);
+const DATA_MESSAGE_ARRIVE = createAction('DATA_MESSAGE_ARRIVE', {
+  STATE: (payload: {message: FirebaseMessagingTypes.RemoteMessage}) => payload,
+});
 
 export const PushNotificationsActions = Object.freeze({
   NOTIFICATION_PRESS,
   NOTIFICATION_ARRIVE,
-  DELAYED_NOTIFICATION_ARRIVE,
+  DATA_MESSAGE_ARRIVE,
 });

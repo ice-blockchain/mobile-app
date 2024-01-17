@@ -5,14 +5,15 @@ import messaging, {
 } from '@react-native-firebase/messaging';
 import {store} from '@store/configureStore';
 import {PushNotificationsActions} from '@store/modules/PushNotifications/actions';
+import {isDataOnlyMessage} from '@store/modules/PushNotifications/utils/isDataOnlyMessage';
 
 const backgroundMessageHandler = async (
   message: FirebaseMessagingTypes.RemoteMessage,
 ) => {
   //TODO::promise resolve
-  if (message.data?.delayed === 'true') {
+  if (isDataOnlyMessage(message)) {
     store.dispatch(
-      PushNotificationsActions.DELAYED_NOTIFICATION_ARRIVE.STATE.create({
+      PushNotificationsActions.DATA_MESSAGE_ARRIVE.STATE.create({
         message,
       }),
     );

@@ -9,28 +9,46 @@ import notifee, {
   TriggerType,
 } from '@notifee/react-native';
 import {dayjs} from '@services/dayjs';
+import {logError} from '@services/logging';
 import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {PushNotificationsActions} from '@store/modules/PushNotifications/actions';
 import {CHANNEL_ID} from '@store/modules/PushNotifications/constants';
-import {DelayedNotificationData} from '@store/modules/PushNotifications/types';
+import {
+  DataNotificationType,
+  DelayedNotificationData,
+} from '@store/modules/PushNotifications/types';
+import {isDataOnlyMessage} from '@store/modules/PushNotifications/utils/isDataOnlyMessage';
 import {call, SagaReturnType, select} from 'redux-saga/effects';
 
-export function* handleDelayedNotificationSaga({
+export function* handleDataMessageSaga({
   payload: {message},
 }: ReturnType<
-  typeof PushNotificationsActions.DELAYED_NOTIFICATION_ARRIVE.STATE.create
+  typeof PushNotificationsActions.DATA_MESSAGE_ARRIVE.STATE.create
 >) {
-  console.log('handleDelayedNotificationSaga');
+  console.log('message', message);
 
-  if (message.data?.delayed !== 'true') {
-    throw new Error('Message is not delayed or data is null');
+  if (!isDataOnlyMessage(message)) {
+    throw new Error('Message is not data-only');
   }
 
-  const {title, body, imageUrl, minDelaySec, maxDelaySec} =
-    message.data as DelayedNotificationData;
+  switch (message.data?.type as DataNotificationType) {
+    case 'delayed':
+      yield call(handleDelayedNotification, {
+        data: message.data as DelayedNotificationData,
+      });
+      break;
+    default:
+      logError(
+        `Unable to handle data notification type: ${message.data?.type}`,
+      );
+  }
+}
 
-  const minDelay = parseInt(minDelaySec, 10);
-  const maxDelay = parseInt(maxDelaySec, 10);
+function* handleDelayedNotification({data}: {data: DelayedNotificationData}) {
+  const {title, body, imageUrl, minDelaySec, maxDelaySec} = data;
+
+  const minDelay = minDelaySec ? parseInt(minDelaySec, 10) : 0;
+  const maxDelay = maxDelaySec ? parseInt(maxDelaySec, 10) : 0;
 
   if (isNaN(minDelay) || isNaN(maxDelay)) {
     throw new Error(
@@ -49,7 +67,7 @@ export function* handleDelayedNotificationSaga({
   const notification: Notification = {
     title: title,
     body: body + ' ' + `(Delayed by ${delaySec} sec)`,
-    data: message.data,
+    data,
     android: {
       channelId: CHANNEL_ID,
       smallIcon: 'ic_stat_notification',
@@ -67,6 +85,8 @@ export function* handleDelayedNotificationSaga({
       },
     },
   };
+
+  console.log('delaySec', delaySec);
 
   if (delaySec > 0) {
     const trigger: TimestampTrigger = {

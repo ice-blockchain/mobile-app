@@ -17,13 +17,17 @@ export function useSubscribeToChannelTopic(channelName: NotificationDomain) {
   const userId = useSelector(userIdSelector);
 
   useEffect(() => {
-    const topicName = `${channelName}_${language}`;
+    const deprecatedTopicName = `${channelName}_${language}`;
+    const topicName = `${channelName}_${language}_v2`;
+
     if (channelEnabled && language && userId) {
+      messaging().unsubscribeFromTopic(deprecatedTopicName).catch(logError);
       messaging().subscribeToTopic(topicName).catch(logError);
     }
     return () => {
       if (language) {
         messaging().unsubscribeFromTopic(topicName).catch(logError);
+        messaging().unsubscribeFromTopic(deprecatedTopicName).catch(logError);
       }
     };
   }, [channelEnabled, channelName, language, userId]);
