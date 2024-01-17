@@ -21,7 +21,7 @@ import {isDataOnlyMessage} from '@store/modules/PushNotifications/utils/isDataOn
 import {call, SagaReturnType, select} from 'redux-saga/effects';
 
 export function* handleDataMessageSaga({
-  payload: {message},
+  payload: {message, finishTask},
 }: ReturnType<
   typeof PushNotificationsActions.DATA_MESSAGE_ARRIVE.STATE.create
 >) {
@@ -37,6 +37,10 @@ export function* handleDataMessageSaga({
       break;
     default:
       logError(`Unable to handle data message type: ${message.data?.type}`);
+  }
+
+  if (finishTask) {
+    yield call(finishTask);
   }
 }
 
