@@ -3,13 +3,19 @@
 import messaging, {
   FirebaseMessagingTypes,
 } from '@react-native-firebase/messaging';
+import {store} from '@store/configureStore';
+import {PushNotificationsActions} from '@store/modules/PushNotifications/actions';
 
 const backgroundMessageHandler = async (
   message: FirebaseMessagingTypes.RemoteMessage,
 ) => {
-  console.log('backgroundMessageHandler message', message);
-
+  //TODO::promise resolve
   if (message.data?.delayed) {
+    store.dispatch(
+      PushNotificationsActions.DELAYED_NOTIFICATION_ARRIVE.STATE.create({
+        message,
+      }),
+    );
   }
 };
 
