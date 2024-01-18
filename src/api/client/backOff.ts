@@ -8,7 +8,7 @@ import {AppState} from 'react-native';
 
 export const DEFAULT_BACK_OFF_OPTIONS = {
   delayFirstAttempt: false,
-  jitter: 'full',
+  jitter: 'none',
   numOfAttempts: 25,
   maxDelay: 10000,
   startingDelay: 1000,
