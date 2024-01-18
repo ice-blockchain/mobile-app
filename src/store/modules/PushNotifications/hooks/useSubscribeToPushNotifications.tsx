@@ -5,6 +5,7 @@ import type {FirebaseMessagingTypes} from '@react-native-firebase/messaging';
 import messaging from '@react-native-firebase/messaging';
 import {PushNotificationsActions} from '@store/modules/PushNotifications/actions';
 import {CHANNEL_ID} from '@store/modules/PushNotifications/constants';
+import {isDataOnlyMessage} from '@store/modules/PushNotifications/utils/isDataOnlyMessage';
 import {useEffect} from 'react';
 import {useDispatch} from 'react-redux';
 
@@ -50,11 +51,19 @@ export function useSubscribeToPushNotifications() {
 
     const unsubscribeFromOnMessage = messaging().onMessage(
       (message: FirebaseMessagingTypes.RemoteMessage) => {
-        dispatch(
-          PushNotificationsActions.NOTIFICATION_ARRIVE.STATE.create({
-            message,
-          }),
-        );
+        if (isDataOnlyMessage(message)) {
+          dispatch(
+            PushNotificationsActions.DATA_MESSAGE_ARRIVE.STATE.create({
+              message,
+            }),
+          );
+        } else {
+          dispatch(
+            PushNotificationsActions.NOTIFICATION_ARRIVE.STATE.create({
+              message,
+            }),
+          );
+        }
       },
     );
 

@@ -11,7 +11,15 @@ const NOTIFICATION_ARRIVE = createAction('NOTIFICATION_ARRIVE', {
   STATE: (payload: {message?: FirebaseMessagingTypes.RemoteMessage}) => payload,
 });
 
+const DATA_MESSAGE_ARRIVE = createAction('DATA_MESSAGE_ARRIVE', {
+  STATE: (payload: {
+    message: FirebaseMessagingTypes.RemoteMessage;
+    finishTask?: () => void;
+  }) => payload,
+});
+
 export const PushNotificationsActions = Object.freeze({
   NOTIFICATION_PRESS,
   NOTIFICATION_ARRIVE,
+  DATA_MESSAGE_ARRIVE,
 });
