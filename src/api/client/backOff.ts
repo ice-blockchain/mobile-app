@@ -11,7 +11,7 @@ export const DEFAULT_BACK_OFF_OPTIONS = {
   jitter: 'full',
   numOfAttempts: 25,
   maxDelay: 10000,
-  startingDelay: 5000,
+  startingDelay: 1000,
   timeMultiple: 5,
   retry: async (error: unknown) => {
     if (
