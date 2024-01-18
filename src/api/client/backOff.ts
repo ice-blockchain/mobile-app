@@ -7,11 +7,11 @@ import {backOff} from 'exponential-backoff';
 import {AppState} from 'react-native';
 
 export const DEFAULT_BACK_OFF_OPTIONS = {
-  delayFirstAttempt: true,
-  jitter: 'full',
+  delayFirstAttempt: false,
+  jitter: 'none',
   numOfAttempts: 25,
-  maxDelay: 1000,
-  startingDelay: 10,
+  maxDelay: 10000,
+  startingDelay: 1000,
   timeMultiple: 5,
   retry: async (error: unknown) => {
     if (
