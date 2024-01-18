@@ -25,22 +25,24 @@ export function* handleDataMessageSaga({
 }: ReturnType<
   typeof PushNotificationsActions.DATA_MESSAGE_ARRIVE.STATE.create
 >) {
-  if (!isDataOnlyMessage(message)) {
-    throw new Error('Message is not data-only');
-  }
+  try {
+    if (!isDataOnlyMessage(message)) {
+      throw new Error('Message is not data-only');
+    }
 
-  switch (message.data?.type as DataMessageType) {
-    case 'delayed':
-      yield call(handleDelayedDataMessage, {
-        data: message.data as DelayedDataMessageData,
-      });
-      break;
-    default:
-      logError(`Unable to handle data message type: ${message.data?.type}`);
-  }
-
-  if (finishTask) {
-    yield call(finishTask);
+    switch (message.data?.type as DataMessageType) {
+      case 'delayed':
+        yield call(handleDelayedDataMessage, {
+          data: message.data as DelayedDataMessageData,
+        });
+        break;
+      default:
+        logError(`Unable to handle data message type: ${message.data?.type}`);
+    }
+  } finally {
+    if (finishTask) {
+      yield call(finishTask);
+    }
   }
 }
 
@@ -65,7 +67,7 @@ function* handleDelayedDataMessage({data}: {data: DelayedDataMessageData}) {
     : Math.round(minDelay + Math.random() * (maxDelay - minDelay));
 
   const notification: Notification = {
-    title: title,
+    title,
     body,
     data,
     android: {
