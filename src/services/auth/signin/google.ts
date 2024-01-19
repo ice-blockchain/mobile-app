@@ -92,6 +92,8 @@ export const startGoogleSignIn: SocialSignInMethod<{
  */
 export const cleanUpGoogleSignIn = async () => {
   try {
-    return await GoogleSignin.signOut();
+    if (await GoogleSignin.isSignedIn()) {
+      await GoogleSignin.signOut();
+    }
   } catch {}
 };
