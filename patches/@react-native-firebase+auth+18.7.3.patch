@@ -1,0 +1,22 @@
+diff --git a/node_modules/@react-native-firebase/auth/lib/index.d.ts b/node_modules/@react-native-firebase/auth/lib/index.d.ts
+index 8041c2d..cdb8189 100644
+--- a/node_modules/@react-native-firebase/auth/lib/index.d.ts
++++ b/node_modules/@react-native-firebase/auth/lib/index.d.ts
+@@ -113,12 +113,15 @@ export namespace FirebaseAuthTypes {
+    * Interface that represents an OAuth provider. Implemented by other providers.
+    */
+   export interface OAuthProvider {
++    /**
++     * The provider ID of the provider.
++     */
++    PROVIDER_ID: string;
+     /**
+      * The provider ID of the provider.
+      * @param providerId
+      */
+-    // eslint-disable-next-line @typescript-eslint/no-misused-new
+-    new (providerId: string): AuthProvider;
++    new (providerId: string): OAuthProvider;
+     /**
+      * Creates a new `AuthCredential`.
+      *
