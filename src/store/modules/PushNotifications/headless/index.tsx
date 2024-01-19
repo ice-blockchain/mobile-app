@@ -3,9 +3,10 @@
 import messaging, {
   FirebaseMessagingTypes,
 } from '@react-native-firebase/messaging';
-import {store} from '@store/configureStore';
 import {PushNotificationsActions} from '@store/modules/PushNotifications/actions';
+import {handleDataMessageSaga} from '@store/modules/PushNotifications/sagas/handleDataMessageSaga';
 import {isDataOnlyMessage} from '@store/modules/PushNotifications/utils/isDataOnlyMessage';
+import {runSaga} from 'redux-saga';
 
 /**
  * Resolve handler promise only when all the work is done
@@ -15,7 +16,9 @@ const backgroundMessageHandler = async (
 ) => {
   if (isDataOnlyMessage(message)) {
     await new Promise<void>(resolve => {
-      store.dispatch(
+      runSaga(
+        {},
+        handleDataMessageSaga,
         PushNotificationsActions.DATA_MESSAGE_ARRIVE.STATE.create({
           message,
           finishTask: resolve,

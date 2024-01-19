@@ -10,7 +10,6 @@ import notifee, {
 } from '@notifee/react-native';
 import {dayjs} from '@services/dayjs';
 import {logError} from '@services/logging';
-import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {PushNotificationsActions} from '@store/modules/PushNotifications/actions';
 import {CHANNEL_ID} from '@store/modules/PushNotifications/constants';
 import {
@@ -18,7 +17,8 @@ import {
   DelayedDataMessageData,
 } from '@store/modules/PushNotifications/types';
 import {isDataOnlyMessage} from '@store/modules/PushNotifications/utils/isDataOnlyMessage';
-import {call, SagaReturnType, select} from 'redux-saga/effects';
+import {AppState} from 'react-native';
+import {call} from 'redux-saga/effects';
 
 export function* handleDataMessageSaga({
   payload: {message, finishTask},
@@ -46,6 +46,12 @@ export function* handleDataMessageSaga({
   }
 }
 
+/**
+ * WARNING: Do not use `put` or `select` effects here since this saga
+ * is called in detached mode, if the app is in background state.
+ * The goal for that is to prevent app initialization, thereby
+ * avoid unnecessary backend / firebase calls.
+ */
 function* handleDelayedDataMessage({data}: {data: DelayedDataMessageData}) {
   const {title, body, imageUrl, minDelaySec, maxDelaySec} = data;
 
@@ -58,13 +64,10 @@ function* handleDelayedDataMessage({data}: {data: DelayedDataMessageData}) {
     );
   }
 
-  const isAppActive: SagaReturnType<typeof isAppActiveSelector> = yield select(
-    isAppActiveSelector,
-  );
-
-  const delaySec = isAppActive
-    ? 0
-    : Math.round(minDelay + Math.random() * (maxDelay - minDelay));
+  const delaySec =
+    AppState.currentState === 'active'
+      ? 0
+      : Math.round(minDelay + Math.random() * (maxDelay - minDelay));
 
   const notification: Notification = {
     title,
