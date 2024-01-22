@@ -6,7 +6,15 @@ import {removeInvalidUsernameCharacters} from '@utils/username';
 
 export const twitterSignIn = async () => {
   try {
-    const userCredential = await auth().signInWithProvider('twitter.com');
+    const provider = new auth.OAuthProvider(
+      auth.TwitterAuthProvider.PROVIDER_ID,
+    );
+
+    provider.setCustomParameters({
+      lang: auth().languageCode,
+    });
+
+    const userCredential = await auth().signInWithPopup(provider);
 
     return {
       cancelled: false,

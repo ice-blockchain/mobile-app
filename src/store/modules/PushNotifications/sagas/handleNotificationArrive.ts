@@ -47,9 +47,9 @@ export function* handleNotificationArriveSaga(
       });
     }
   } else {
-    if (message?.data?.deeplink) {
+    if (typeof message?.data?.deeplink === 'string') {
       yield put(
-        LinkingActions.HANDLE_URL.STATE.create(message?.data?.deeplink, true),
+        LinkingActions.HANDLE_URL.STATE.create(message.data.deeplink, true),
       );
     }
   }
