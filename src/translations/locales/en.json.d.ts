@@ -756,8 +756,7 @@ export type Translations = {
   'bsc_address.enter_address_confirmation': null;
   'bsc_address.validators_warning_title': null;
   'bsc_address.validators_warning_text': null;
-  'bsc_address.okxWalletDescription': null;
-  'bsc_address.okxWalletAction': null;
+  'bsc_address.walletDescription': null;
   'social_kyc.header': null;
   'social_kyc.verify_with_title': {method: number | string};
   'social_kyc.select_method_step.title': null;

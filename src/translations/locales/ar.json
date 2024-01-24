@@ -1236,8 +1236,7 @@
     "enter_address_confirmation": "هل أنت متأكد من صحة عنوان سلسلة BNB الذكية؟",
     "validators_warning_title": "تأكيد العنوان",
     "validators_warning_text": "يرجى ملاحظة أن الأفراد الذين قاموا بإضافة عنوان سلسلة BNB Smart Chain إلى حساباتهم غير مؤهلين ليكونوا واحدًا من أفضل 300 مصادق حسب كتابنا الأبيض لإطلاق الشبكة الرئيسية.",
-    "okxWalletDescription": "نوصي باستخدام عنوان [[:bold]]BNB Smart Chain لمنصة OKX التبادلية[[/:bold]] لتجنب أي رسوم غاز.\n\nإذا لم تكن منصة OKX متاحة في بلدك، يمكنك استخدام محفظة ذاتية الاستضافة مثل MetaMask أو Trust Wallet.",
-    "okxWalletAction": "إنشاء حساب على OKX"
+    "walletDescription": "ننصح باستخدام محفظة ذاتية الحراسة مثل [[:bold]]Metamask[[/:bold]] أو [[:bold]]Trust Wallet[[/:bold]].\n\nيرجى التأكد من مراجعة عنوان محفظتك مرتين للتأكد من أنك ستتلقى التوزيع."
   },
   "social_kyc": {
     "header": "التحقق",

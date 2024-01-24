@@ -190,7 +190,7 @@ export const Images = {
   },
   card: {
     joinMainnet: require('./card/joinMainnet.png'),
-    okxWallet: require('./card/okxWallet.png'),
+    wallet: require('./card/wallet.png'),
   },
   quiz: {
     quizFailed: require('./quiz/quiz_failed.png'),

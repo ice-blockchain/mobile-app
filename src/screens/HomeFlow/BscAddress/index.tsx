@@ -10,7 +10,7 @@ import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {AddressActionButton} from '@screens/HomeFlow/BscAddress/components/AddressActionButton';
-import {OkxWalletCard} from '@screens/HomeFlow/BscAddress/components/OkxWalletCard';
+import {WalletCard} from '@screens/HomeFlow/BscAddress/components/WalletCard';
 import {useSetBscAddress} from '@screens/HomeFlow/BscAddress/hooks/useSetBscAddress';
 import {useValidatorsWarning} from '@screens/HomeFlow/BscAddress/hooks/useValidatorsWarning';
 import {BscBookIcon} from '@svg/BscBookIcon';
@@ -59,7 +59,7 @@ export const BscAddress = memo(() => {
           onChange={needToShowWarning ? showWarning : undefined}
           showChangeLabel={false}
         />
-        {!isKeyboardShown && <OkxWalletCard style={styles.walletCard} />}
+        {!isKeyboardShown && <WalletCard style={styles.walletCard} />}
         <AddressActionButton
           style={styles.button}
           onPress={onSubmit}
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     ...font(14, 20, 'medium', 'secondary', 'center'),
   },
   input: {
-    marginTop: rem(74),
+    marginTop: rem(50),
   },
   walletCard: {
     marginTop: rem(24),

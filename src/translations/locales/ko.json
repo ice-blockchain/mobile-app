@@ -1236,8 +1236,7 @@
     "enter_address_confirmation": "BNB Smart Chain 주소가 정확한지 확신하십니까?",
     "validators_warning_title": "주소 확인",
     "validators_warning_text": "주의: BNB Smart Chain 주소를 계정에 추가한 개인은 메인넷트 론칭을 위한 저희 화이트페이퍼에 명시된 대로 최상위 300개 유효성 검사자 중 하나가 될 자격이 없습니다.",
-    "okxWalletDescription": "가스 수수료를 피하기 위해 [[:bold]]OKX 거래소[[/:bold]] BNB 스마트 체인 주소를 사용하는 것을 권장합니다.\n\nOKX가 귀하의 국가에서 사용할 수 없는 경우 MetaMask 또는 Trust Wallet과 같은 자체 보관 월렛을 사용할 수 있습니다.",
-    "okxWalletAction": "OKX에서 계정 생성"
+    "walletDescription": "[[:bold]]Metamask[[/:bold]] 또는 [[:bold]]Trust Wallet[[/:bold]]과 같은 자체 보유 월렛 사용을 권장합니다.\n\n배포를 받을 확실성을 위해 월렛 주소를 두 번 확인하십시오."
   },
   "social_kyc": {
     "header": "인증",

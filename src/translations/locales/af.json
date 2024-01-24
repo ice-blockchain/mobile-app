@@ -1239,8 +1239,7 @@
     "enter_address_confirmation": "Is jy seker dat die BNB Smart Chain-adres korrek is?",
     "validators_warning_title": "Bevestig Adres",
     "validators_warning_text": "Let daarop dat individue wat 'n BNB Smart Chain-adres bygevoeg het tot hul rekening, nie in aanmerking kom om een van die top 300-valideerders te word nie, soos uiteengesit in ons whitepaper vir die hoofnet-lansering nie.",
-    "okxWalletDescription": "Ons beveel aan om jou [[:bold]]OKX-beurs[[/:bold]] BNB Slim Kettingadres te gebruik om enige gasgelde te vermy.\n\nAs OKX nie in jou land beskikbaar is nie, kan jy 'n selfsorgende beurs soos MetaMask of Trust Wallet gebruik.",
-    "okxWalletAction": "SKEP REKENING OP OKX"
+    "walletDescription": "Ons adviseer om 'n self-bestuurde beursie soos [[:bold]]Metamask[[/:bold]] of [[:bold]]Trust Wallet[[/:bold]] te gebruik.\n\nMaak asseblief seker dat jy jou beursie-adres dubbelkontroleer om seker te maak dat jy die verspreiding ontvang."
   },
   "social_kyc": {
     "header": "Verifikasie",
