@@ -6,25 +6,18 @@ import {CheckBox} from '@components/CheckBox';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
-import {STAKING_ALLOCATION_MAX, STAKING_YEARS_MAX} from '@constants/staking';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {usePreStaking} from '@screens/Staking/hooks/usePreStaking';
-import {balanceSummarySelector} from '@store/modules/Tokenomics/selectors';
 import {CoinsStackIcon} from '@svg/CoinsStackIcon';
-import {YearsOutlineIcon} from '@svg/YearsOutlineIcon';
-import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
+import {replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
-import {formatNumberString} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo, RefObject, useMemo, useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {useSelector} from 'react-redux';
 import {isAndroid, rem} from 'rn-units';
-
-import {InfoRow} from './components/InfoRow';
 
 type Props = {
   parameters: RefObject<{years: number; allocation: number} | null>;
@@ -33,15 +26,9 @@ type Props = {
 export const Footer = memo(({parameters}: Props) => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
-  const {preStakingSummary, preStakingLoading, confirmPreStaking} =
-    usePreStaking();
+  const {preStakingLoading, confirmPreStaking} = usePreStaking();
   const [termsAccepted, setTermsAccepted] = useState(false);
-  const maxValuesSet =
-    preStakingSummary?.years === STAKING_YEARS_MAX &&
-    preStakingSummary.allocation === STAKING_ALLOCATION_MAX;
-  const buttonDisabled = !termsAccepted || maxValuesSet;
-
-  const balanceSummary = useSelector(balanceSummarySelector);
+  const buttonDisabled = !termsAccepted;
 
   const onStakePress = () => {
     navigation.navigate({
@@ -89,29 +76,6 @@ export const Footer = memo(({parameters}: Props) => {
       </Text>
     ));
   }, []);
-
-  if (maxValuesSet) {
-    return (
-      <>
-        <InfoRow
-          key={'staking.period'}
-          style={[styles.infoRowContainer, styles.infoRowContainerTop]}
-          Icon={YearsOutlineIcon}
-          label={t('staking.period_label')}
-          value={preStakingSummary?.years ?? '0'}
-          unit={t('global.years').toLowerCase()}
-        />
-        <InfoRow
-          key={'staking.balance'}
-          style={styles.infoRowContainer}
-          Icon={CoinsStackIcon}
-          label={t('staking.balance_label')}
-          value={formatNumberString(balanceSummary?.preStaking ?? '0')}
-          unit={<IceLabel reversed={isRTL} color={COLORS.primaryLight} />}
-        />
-      </>
-    );
-  }
 
   return (
     <View style={styles.container}>
