@@ -19,7 +19,7 @@ export function* startOrUpdatePreStakingSaga({
       typeof Api.tokenomics.startOrUpdatePreStaking
     > = yield call(Api.tokenomics.startOrUpdatePreStaking, {
       userId,
-      years,
+      years: allocation !== 0 ? years : 0,
       allocation,
     });
     yield put(

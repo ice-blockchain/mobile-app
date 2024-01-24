@@ -17,10 +17,7 @@ export const useCalculatorSliderValues = () => {
   const preStakingSummary = useSelector(preStakingSummarySelector, () => true);
 
   return useMemo(() => {
-    const availableStakingYearsMin = Math.max(
-      STAKING_YEARS_MIN,
-      preStakingSummary?.years ?? 0,
-    );
+    const availableStakingYearsMin = STAKING_YEARS_MIN;
     const availableStakingYearsMax = STAKING_YEARS_MAX;
     const availableYearsPercentage =
       100 -
@@ -30,10 +27,7 @@ export const useCalculatorSliderValues = () => {
     const stakingYearsInitialValue =
       preStakingSummary?.years ?? STAKING_YEARS_DEFAULT;
 
-    const availableAllocationMin = Math.max(
-      STAKING_ALLOCATION_MIN,
-      preStakingSummary?.allocation ?? 0,
-    );
+    const availableAllocationMin = STAKING_ALLOCATION_MIN;
     const availableAllocationMax = STAKING_ALLOCATION_MAX;
     const availableAllocationPercentage =
       100 -
