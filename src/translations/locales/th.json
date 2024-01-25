@@ -1237,8 +1237,7 @@
     "enter_address_confirmation": "คุณแน่ใจหรือไม่ว่าที่อยู่ BNB Smart Chain ของคุณถูกต้อง?",
     "validators_warning_title": "ยืนยันที่อยู่",
     "validators_warning_text": "โปรดทราบ: บุคคลที่เพิ่มที่อยู่ BNB Smart Chain ในบัญชีของพวกเขาไม่มีสิทธิ์เป็นหนึ่งใน 300 ผู้ตรวจสอบหลักตาม whitepaper สำหรับการเปิดตัวของ Mainnet",
-    "okxWalletDescription": "เราขอแนะนำให้ใช้ที่อยู่ BNB Smart Chain ของ [[:bold]]OKX Exchange[[/:bold]] เพื่อหลีกเลี่ยงค่าธรรมเนียมแก๊ส\n\nหาก OKX ไม่พร้อมใช้งานในประเทศของคุณ คุณสามารถใช้กระเป๋าเงินระดับคุณเอง เช่น MetaMask หรือ Trust Wallet",
-    "okxWalletAction": "สร้างบัญชีบน OKX"
+    "walletDescription": "เราแนะนำให้ใช้กระเป๋าเงินที่ดูแลตนเองเช่น [[:bold]]Metamask[[/:bold]] หรือ [[:bold]]Trust Wallet[[/:bold]]\n\nโปรดตรวจสอบที่อยู่กระเป๋าเงินของคุณสองครั้งเพื่อให้แน่ใจว่าคุณจะได้รับการแจกจ่าย"
   },
   "social_kyc": {
     "header": "การยืนยันตัวตน",

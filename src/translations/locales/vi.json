@@ -1236,8 +1236,7 @@
     "enter_address_confirmation": "Bạn có chắc rằng địa chỉ BNB Smart Chain của bạn là chính xác không?",
     "validators_warning_title": "Xác Nhận Địa Chỉ",
     "validators_warning_text": "Vui lòng lưu ý: Những người đã thêm địa chỉ BNB Smart Chain vào tài khoản của họ không được phép trở thành một trong 300 người xác minh chính theo whitepaper của chúng tôi cho sự ra mắt mạng chính.",
-    "okxWalletDescription": "Chúng tôi khuyên bạn nên sử dụng địa chỉ BNB Smart Chain từ [[:bold]]OKX Exchange[[/:bold]] để tránh bất kỳ phí gas nào.\n\nNếu OKX không khả dụng trong nước của bạn, bạn có thể sử dụng ví tự quản lý như MetaMask hoặc Trust Wallet.",
-    "okxWalletAction": "TẠO TÀI KHOẢN TRÊN OKX"
+    "walletDescription": "Chúng tôi khuyên bạn nên sử dụng một ví tự quản lý như [[:bold]]Metamask[[/:bold]] hoặc [[:bold]]Trust Wallet[[/:bold]].\n\nVui lòng đảm bảo bạn kiểm tra địa chỉ ví của mình hai lần để đảm bảo bạn sẽ nhận được phân phối."
   },
   "social_kyc": {
     "header": "Xác minh",

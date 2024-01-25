@@ -1233,8 +1233,7 @@
     "enter_address_confirmation": "Are you sure that the BNB Smart Chain address is correct?",
     "validators_warning_title": "Confirm Address",
     "validators_warning_text": "Please note that individuals who have added a BNB Smart Chain address to their account are not eligible to become one of the top 300 validators as per our whitepaper for the mainnet launch.",
-    "okxWalletDescription": "We recommend using your [[:bold]]OKX Exchange[[/:bold]] BNB Smart Chain address to avoid any gas fees.\n\nIf OKX isn't available in your country, you can use a self-custodial wallet such as MetaMask or Trust Wallet.",
-    "okxWalletAction": "CREATE ACCOUNT ON OKX"
+    "walletDescription": "We advise using a self-custodial wallet such as [[:bold]]Metamask[[/:bold]] or [[:bold]]Trust Wallet[[/:bold]].\n\nPlease ensure that you double-check your wallet address to make sure you will receive the distribution."
   },
   "social_kyc": {
     "header": "Verification",
