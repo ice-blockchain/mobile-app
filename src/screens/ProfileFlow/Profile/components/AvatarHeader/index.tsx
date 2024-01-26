@@ -163,7 +163,7 @@ export const AvatarHeader = memo(
                     iconStyle={iconAvatarStyle}
                   />
                 )}
-                {contactDetails && (
+                {contactDetails && !isOwner && (
                   <ContactsAvatarButton
                     onPress={() => setIsTooltipVisible(state => !state)}
                     contacts={contactDetails}
