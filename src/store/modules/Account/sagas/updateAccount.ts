@@ -153,6 +153,10 @@ function* validateMiningBlockchainAccountAddress(
         throw new ValidationError(ValidationErrorCode.BscAddressIsNotEoa);
       }
     } catch (error) {
+      if (isValidationError(error)) {
+        throw error;
+      }
+
       const typedError = error as EoaBscAddressError;
       const networkErrorTypes: typeof typedError['name'][] = [
         'HttpRequestError',
