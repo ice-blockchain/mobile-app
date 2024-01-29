@@ -34,8 +34,14 @@ export const useFinishOnboarding = () => {
     useNavigation<NativeStackNavigationProp<WelcomeStackParamList>>();
   const user = useSelector(unsafeUserSelector);
 
+  /**
+   * Do not subscribe to `canAskPermissionSelector('pushNotifications')`
+   * because otherwise the number of slides is changed
+   * when user grants / denies permissions on the "notifications" slide.
+   */
   const canAskNotificationPermission = useSelector(
     canAskPermissionSelector('pushNotifications'),
+    () => true,
   );
 
   const loading = useSelector(
