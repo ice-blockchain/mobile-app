@@ -832,6 +832,10 @@ export type Translations = {
   'quiz.confirmation_popup.cancel_description': null;
   'quiz.quiz_success.title': null;
   'quiz.quiz_success.description': null;
+  'quiz.action': null;
+  'quiz.reminder': null;
+  'quiz.retries': {number: number | string};
+  'quiz.days_left': {days: number | string};
   'distribution_kyc_dynamic.select_method_step.title': null;
   'distribution_kyc_dynamic.select_method_step.description': null;
   'distribution_kyc_dynamic.results_step.success.description': null;

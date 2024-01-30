@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   titleText: {
-    ...font(14, 17, 'black', 'primaryDark'),
+    ...font(14, 17, 'bold', 'primaryDark'),
   },
   subtitleText: {
     marginTop: rem(4),

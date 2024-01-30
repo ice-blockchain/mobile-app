@@ -1367,7 +1367,11 @@
     "quiz_success": {
       "title": "Verification Completed",
       "description": "Congratulations, you have successfully completed your KYC. Your consistent correct answers have proven your dedication and knowledge. You are now verified."
-    }
+    },
+    "action": "Complete the quiz",
+    "reminder": "We remind you that you need to complete the test in order to be able to receive coins.",
+    "retries": "Retries: {{number}}",
+    "days_left": "Days left: {{days}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
