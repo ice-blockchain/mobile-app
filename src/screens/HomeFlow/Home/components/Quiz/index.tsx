@@ -30,26 +30,30 @@ export const Quiz = memo(() => {
       leadingIconContainerStyle={styles.leadingIconContainer}
       title={t('quiz.action')}
       subtitle={
-        <View style={styles.subtitle}>
-          <RestartIcon
-            color={COLORS.secondary}
-            width={rem(14)}
-            height={rem(14)}
-            style={styles.retriesIcon}
-          />
-          <Text style={[styles.subtitleText, styles.retriesText]}>
-            {t('quiz.retries', {number: 2})}
-          </Text>
-          <ClockIcon
-            color={COLORS.secondary}
-            width={rem(11)}
-            height={rem(11)}
-            style={styles.timeLeftIcon}
-          />
-          <Text style={styles.subtitleText}>
-            {t('quiz.days_left', {days: 5})}
-          </Text>
-        </View>
+        <>
+          <View style={styles.subtitleRow}>
+            <RestartIcon
+              color={COLORS.secondary}
+              width={rem(14)}
+              height={rem(14)}
+              style={styles.retriesIcon}
+            />
+            <Text style={styles.subtitleText}>
+              {t('quiz.retries', {number: 2})}
+            </Text>
+          </View>
+          <View style={styles.subtitleRow}>
+            <ClockIcon
+              color={COLORS.secondary}
+              width={rem(11)}
+              height={rem(11)}
+              style={styles.timeLeftIcon}
+            />
+            <Text style={styles.subtitleText}>
+              {t('quiz.days_left', {days: 5})}
+            </Text>
+          </View>
+        </>
       }
       TrailingIcon={
         <ChevronSmallIcon style={styles.chevron} color={COLORS.primaryDark} />
@@ -63,29 +67,27 @@ const styles = StyleSheet.create({
   container: {
     marginHorizontal: SCREEN_SIDE_OFFSET,
     marginTop: rem(26),
+    height: rem(76),
   },
   leadingIconContainer: {
-    width: rem(60),
+    width: rem(64),
     backgroundColor: COLORS.transparent,
   },
   icon: {
-    width: rem(72),
-    height: rem(69),
+    width: rem(77),
+    height: rem(74),
     position: 'absolute',
-    bottom: -rem(6),
+    bottom: -rem(10),
     left: -rem(8),
   },
-  subtitle: {
-    marginTop: rem(6),
+  subtitleRow: {
+    marginTop: rem(4),
     flexDirection: 'row',
     alignItems: 'center',
   },
   retriesIcon: {
     marginTop: rem(2),
-    marginRight: rem(3),
-  },
-  retriesText: {
-    marginRight: rem(14),
+    marginRight: rem(1),
   },
   subtitleText: {
     ...font(12, 15, 'regular', 'secondary'),
