@@ -11,6 +11,7 @@ import {ClockIcon} from '@svg/ClockIcon';
 import {EyeIcon} from '@svg/EyeIcon';
 import {NewsFeaturedNewBadge} from '@svg/NewsFeaturedNewBadge';
 import {t} from '@translations/i18n';
+import {getImageUriForSize} from '@utils/file';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
@@ -19,7 +20,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import Animated, {SharedValue} from 'react-native-reanimated';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {useSelector} from 'react-redux';
-import {rem} from 'rn-units';
+import {rem, screenWidth} from 'rn-units';
 
 import {useLayoutAnimation} from './hooks/useLayoutAnimation';
 
@@ -70,7 +71,7 @@ export const FeaturedNewsArticle = memo(
         <Image
           style={StyleSheet.absoluteFill}
           source={{
-            uri: imageUrl,
+            uri: getImageUriForSize(imageUrl, {width: screenWidth}),
           }}
         />
 
