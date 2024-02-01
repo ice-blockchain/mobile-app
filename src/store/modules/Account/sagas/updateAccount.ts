@@ -57,6 +57,8 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
         userInfo.miningBlockchainAccountAddress = unchecksummAddress(
           userInfo.miningBlockchainAccountAddress,
         );
+      } else if (user.miningBlockchainAccountAddress) {
+        userInfo.clearMiningBlockchainAccountAddress = true;
       }
     }
 
@@ -65,6 +67,12 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
         validateSolanaMiningBlockchainAccountAddress,
         userInfo.solanaMiningBlockchainAccountAddress,
       );
+      if (
+        !userInfo.solanaMiningBlockchainAccountAddress &&
+        user.solanaMiningBlockchainAccountAddress
+      ) {
+        userInfo.clearSolanaMiningBlockchainAccountAddress = true;
+      }
     }
 
     const modifiedUser: SagaReturnType<typeof Api.user.updateAccount> =

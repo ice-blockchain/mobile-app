@@ -118,6 +118,12 @@ export type ClientData = {
   quiz?: QuizData | null;
 };
 
+export type ClearActions = {
+  clearHiddenProfileElements: true;
+  clearMiningBlockchainAccountAddress: true;
+  clearSolanaMiningBlockchainAccountAddress: true;
+};
+
 export type UserBlockchainAddressField =
   | 'miningBlockchainAccountAddress'
   | 'solanaMiningBlockchainAccountAddress';

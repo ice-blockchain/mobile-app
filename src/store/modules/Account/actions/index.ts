@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {FeatureToggleConfig} from '@api/auth/types';
-import {User} from '@api/user/types';
+import {ClearActions, User} from '@api/user/types';
 import {
   SignInUserInfo,
   SocialSignInProvider,
@@ -102,7 +102,7 @@ const UPDATE_REF_BY_USERNAME = createAction('UPDATE_REF_BY_USERNAME', {
 
 const UPDATE_ACCOUNT = createAction('UPDATE_ACCOUNT', {
   START: (
-    userInfo: Partial<User>,
+    userInfo: Partial<User & ClearActions>,
     raceConditionStrategy: (
       user: User,
     ) => Generator<CallEffect<void>, {retry: boolean}, void> = function* () {
