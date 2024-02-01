@@ -75,6 +75,10 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
       }
     }
 
+    if (userInfo.hiddenProfileElements?.length === 0) {
+      userInfo.clearHiddenProfileElements = true;
+    }
+
     const modifiedUser: SagaReturnType<typeof Api.user.updateAccount> =
       yield Api.user.updateAccount(user.id, userInfo);
     yield put(
