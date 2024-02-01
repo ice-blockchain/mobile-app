@@ -75,6 +75,7 @@ export type User = {
   repeatableKYCSteps?: Record<string, string>;
 
   miningBlockchainAccountAddress?: string;
+  solanaBlockchainAccountAddress?: string;
 
   verified?: boolean | null;
 };

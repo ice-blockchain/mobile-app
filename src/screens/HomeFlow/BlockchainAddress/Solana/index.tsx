@@ -9,10 +9,10 @@ import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {AddressActionButton} from '@screens/HomeFlow/BscAddress/components/AddressActionButton';
-import {WalletCard} from '@screens/HomeFlow/BscAddress/components/WalletCard';
-import {useSetBscAddress} from '@screens/HomeFlow/BscAddress/hooks/useSetBscAddress';
-import {useValidatorsWarning} from '@screens/HomeFlow/BscAddress/hooks/useValidatorsWarning';
+import {useValidatorsWarning} from '@screens/HomeFlow/BlockchainAddress/Bsc/hooks/useValidatorsWarning';
+import {AddressActionButton} from '@screens/HomeFlow/BlockchainAddress/components/AddressActionButton';
+import {WalletCard} from '@screens/HomeFlow/BlockchainAddress/components/WalletCard';
+import {useSetBlockchainAddress} from '@screens/HomeFlow/BlockchainAddress/hooks/useSetBlockchainAddress';
 import {BscBookIcon} from '@svg/BscBookIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -20,7 +20,7 @@ import React, {memo} from 'react';
 import {Image, ScrollView, StyleSheet, Text} from 'react-native';
 import {rem} from 'rn-units';
 
-export const BscAddress = memo(() => {
+export const SolanaAddress = memo(() => {
   useFocusStatusBar({style: 'dark-content'});
   const {bottom: bottomInset} = useSafeAreaInsets();
   const {scrollRef} = useScrollEndOnKeyboardShown();
@@ -28,7 +28,10 @@ export const BscAddress = memo(() => {
   const {showWarning, needToShowWarning} = useValidatorsWarning();
 
   const {address, loading, error, onAddressChange, onSubmit, isRemoveAction} =
-    useSetBscAddress();
+    useSetBlockchainAddress({
+      addressUserField: 'miningBlockchainAccountAddress',
+      confirmTitle: t('bsc_address.enter_address_confirmation'),
+    });
 
   return (
     <KeyboardAvoider>
@@ -59,7 +62,13 @@ export const BscAddress = memo(() => {
           onChange={needToShowWarning ? showWarning : undefined}
           showChangeLabel={false}
         />
-        {!isKeyboardShown && <WalletCard style={styles.walletCard} />}
+        {!isKeyboardShown && (
+          <WalletCard
+            logoImageSource={Images.card.wallet}
+            description={t('bsc_address.walletDescription')}
+            style={styles.walletCard}
+          />
+        )}
         <AddressActionButton
           style={styles.button}
           onPress={onSubmit}
