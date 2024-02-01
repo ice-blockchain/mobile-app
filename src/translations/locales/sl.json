@@ -1237,7 +1237,7 @@
     "enter_address_confirmation": "Ste prepričani, da je vaš naslov BNB Smart Chain pravilen?",
     "validators_warning_title": "Potrdite Naslov",
     "validators_warning_text": "Opozorilo: Osebe, ki so dodale naslov BNB Smart Chain na svoj račun, niso upravičene postati eden od 300 glavnih validatojev, kot je navedeno v našem beli knjigi za zagon glavne mreže.",
-    "walletDescription": "Priporočamo uporabo samoupravljajoče denarnice, kot je [[:bold]]Metamask[[/:bold]] ali [[:bold]]Trust Wallet[[/:bold]].\n\nProsimo, preverite svoj naslov denarnice dvakrat, da se prepričate, da boste prejeli distribucijo."
+    "wallet_description": "Priporočamo uporabo samoupravljajoče denarnice, kot je [[:bold]]Metamask[[/:bold]] ali [[:bold]]Trust Wallet[[/:bold]].\n\nProsimo, preverite svoj naslov denarnice dvakrat, da se prepričate, da boste prejeli distribucijo."
   },
   "social_kyc": {
     "header": "Preverjanje",

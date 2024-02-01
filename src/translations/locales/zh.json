@@ -1237,7 +1237,7 @@
     "enter_address_confirmation": "您确定您的BNB Smart Chain地址是正确的吗？",
     "validators_warning_title": "确认地址",
     "validators_warning_text": "请注意：将BNB Smart Chain地址添加到其帐户的个人不有资格成为我们白皮书中主网启动的300个主验证者之一。",
-    "walletDescription": "我们建议使用自我保管的钱包，例如 [[:bold]]Metamask[[/:bold]] 或 [[:bold]]Trust Wallet[[/:bold]]。\n\n请确保您检查您的钱包地址两次，以确保您将收到分发。"
+    "wallet_description": "我们建议使用自我保管的钱包，例如 [[:bold]]Metamask[[/:bold]] 或 [[:bold]]Trust Wallet[[/:bold]]。\n\n请确保您检查您的钱包地址两次，以确保您将收到分发。"
   },
   "social_kyc": {
     "header": "验证",

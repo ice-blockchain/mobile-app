@@ -1244,7 +1244,7 @@
     "enter_address_confirmation": "האם אתה בטוח שכתובת BNB Smart Chain היא נכונה?",
     "validators_warning_title": "אשר כתובת",
     "validators_warning_text": "שים לב שאנשים שהוסיפו כתובת BNB Smart Chain לחשבונם אינם זכאים להפוך לאחד מ-300 הבודקים העליונים כמו שמפורט בספר הלבן שלנו לשקת הרשת הראשית.",
-    "walletDescription": "אנחנו ממליצים להשתמש בארנק בעל הגנה עצמית כמו [[:bold]]Metamask[[/:bold]] או [[:bold]]Trust Wallet[[/:bold]].\n\nאנא הוודא שאתה בודק את כתובת הארנק שלך פעמיים כדי לוודא שתקבל את ההפצה."
+    "wallet_description": "אנחנו ממליצים להשתמש בארנק בעל הגנה עצמית כמו [[:bold]]Metamask[[/:bold]] או [[:bold]]Trust Wallet[[/:bold]].\n\nאנא הוודא שאתה בודק את כתובת הארנק שלך פעמיים כדי לוודא שתקבל את ההפצה."
   },
   "social_kyc": {
     "header": "אימות",

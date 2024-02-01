@@ -1237,7 +1237,7 @@
     "enter_address_confirmation": "BNB Smart Chain ünvanının düzgün olduğundan əminsinizmi?",
     "validators_warning_title": "Ünvanı Təsdiq Et",
     "validators_warning_text": "Xüsusiylə öz hesabına BNB Smart Chain ünvanını əlavə edən şəxslər, əsas şəbəkə işə salınmasına görə ağın ən yaxşı 300 təsdiqləyicisindən biri olmağa layiq deyillər.",
-    "walletDescription": "[[:bold]]Metamask[[/:bold]] və ya [[:bold]]Trust Wallet[[/:bold]] kimi özünün nəzarətində olan bir cüzdan istifadə etməyinizi tövsiyə edirik.\n\nXahiş edirik, cüzdan ünvanınızı qəbul edəcəyinizdən əmin olmaq üçün iki dəfə yoxlayasınız."
+    "wallet_description": "[[:bold]]Metamask[[/:bold]] və ya [[:bold]]Trust Wallet[[/:bold]] kimi özünün nəzarətində olan bir cüzdan istifadə etməyinizi tövsiyə edirik.\n\nXahiş edirik, cüzdan ünvanınızı qəbul edəcəyinizdən əmin olmaq üçün iki dəfə yoxlayasınız."
   },
   "social_kyc": {
     "header": "Doğrulama",

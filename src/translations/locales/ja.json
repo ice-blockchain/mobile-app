@@ -1237,7 +1237,7 @@
     "enter_address_confirmation": "BNB Smart Chainアドレスが正しいことを確認していますか？",
     "validators_warning_title": "アドレスを確認",
     "validators_warning_text": "アカウントにBNB Smart Chainアドレスを追加した個人は、メインネットの発売に関するホワイトペーパーに従ってトップ300バリデータの1つになる資格がありません。",
-    "walletDescription": "[[:bold]]Metamask[[/:bold]] または [[:bold]]Trust Wallet[[/:bold]] のようなセルフカストディアルウォレットの使用をお勧めします。\n\n配布を受け取ることを確認するために、ウォレットアドレスを2回確認してください。"
+    "wallet_description": "[[:bold]]Metamask[[/:bold]] または [[:bold]]Trust Wallet[[/:bold]] のようなセルフカストディアルウォレットの使用をお勧めします。\n\n配布を受け取ることを確認するために、ウォレットアドレスを2回確認してください。"
   },
   "social_kyc": {
     "header": "認証",

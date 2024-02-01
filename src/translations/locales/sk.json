@@ -1237,7 +1237,7 @@
     "enter_address_confirmation": "Ste si istí, že vaša adresa BNB Smart Chain je správna?",
     "validators_warning_title": "Potvrdenie Adresy",
     "validators_warning_text": "Všimnite si, že osoby, ktoré pridali adresu BNB Smart Chain do svojho účtu, nie sú oprávnené stať sa jedným z 300 hlavných validátorov, ako je uvedené v našom whitepaper pre spustenie hlavnej siete.",
-    "walletDescription": "Odporúčame používať samostatný peňaženku, ako je [[:bold]]Metamask[[/:bold]] alebo [[:bold]]Trust Wallet[[/:bold]].\n\nProsím, uistite sa, že dvakrát skontrolujete svoju peňaženku, aby ste mali istotu, že dostanete distribúciu."
+    "wallet_description": "Odporúčame používať samostatný peňaženku, ako je [[:bold]]Metamask[[/:bold]] alebo [[:bold]]Trust Wallet[[/:bold]].\n\nProsím, uistite sa, že dvakrát skontrolujete svoju peňaženku, aby ste mali istotu, že dostanete distribúciu."
   },
   "social_kyc": {
     "header": "Overenie",

@@ -1237,7 +1237,7 @@
     "enter_address_confirmation": "Apakah Anda yakin bahwa alamat BNB Smart Chain ini benar?",
     "validators_warning_title": "Konfirmasi Alamat",
     "validators_warning_text": "Harap dicatat bahwa individu yang telah menambahkan alamat BNB Smart Chain ke akun mereka tidak memenuhi syarat untuk menjadi salah satu validator teratas sesuai dengan whitepaper kami untuk peluncuran mainnet.",
-    "walletDescription": "Kami menyarankan menggunakan dompet self-custodial seperti [[:bold]]Metamask[[/:bold]] atau [[:bold]]Trust Wallet[[/:bold]].\n\nPastikan Anda memeriksa alamat dompet Anda dua kali untuk memastikan Anda akan menerima distribusi."
+    "wallet_description": "Kami menyarankan menggunakan dompet self-custodial seperti [[:bold]]Metamask[[/:bold]] atau [[:bold]]Trust Wallet[[/:bold]].\n\nPastikan Anda memeriksa alamat dompet Anda dua kali untuk memastikan Anda akan menerima distribusi."
   },
   "social_kyc": {
     "header": "Verifikasi",

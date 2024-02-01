@@ -1237,7 +1237,7 @@
     "enter_address_confirmation": "Er du sikker på at BNB Smart Chain-adressen din er riktig?",
     "validators_warning_title": "Bekreft Adresse",
     "validators_warning_text": "Vennligst merk: Personer som har lagt til en BNB Smart Chain-adresse i kontoen sin, er ikke kvalifisert til å bli en av de øverste 300 validatorer som angitt i vår whitepaper for hovednettets lansering.",
-    "walletDescription": "Vi rår deg til å bruke ein sjølvstyrande lommebok som [[:bold]]Metamask[[/:bold]] eller [[:bold]]Trust Wallet[[/:bold]].\n\nVer vennleg å dobbeltsjekke lommebokadressa di for å forsikre deg om at du vil motta distribusjonen."
+    "wallet_description": "Vi rår deg til å bruke ein sjølvstyrande lommebok som [[:bold]]Metamask[[/:bold]] eller [[:bold]]Trust Wallet[[/:bold]].\n\nVer vennleg å dobbeltsjekke lommebokadressa di for å forsikre deg om at du vil motta distribusjonen."
   },
   "social_kyc": {
     "header": "Verifisering",

@@ -1237,7 +1237,7 @@
     "enter_address_confirmation": "A jeni të sigurt se adresa juaj BNB Smart Chain është e saktë?",
     "validators_warning_title": "Konfirmo Adresën",
     "validators_warning_text": "Ju lutem vini re: Personat që kanë shtuar një adresë BNB Smart Chain në llogarinë e tyre nuk janë të kualifikuar për të bërë një prej 300 validatoreve kryesorë, sipas specifikimeve në whitepaper tonë për lëshimin e rrjetit kryesor.",
-    "walletDescription": "Ne rekomandojmë përdorimin e një xhepi me vetëmbrojtje si [[:bold]]Metamask[[/:bold]] ose [[:bold]]Trust Wallet[[/:bold]].\n\nJu lutemi sigurohuni që të kontrolloni dy herë adresën tuaj të xhepit për të siguruar që do të merrni distributën."
+    "wallet_description": "Ne rekomandojmë përdorimin e një xhepi me vetëmbrojtje si [[:bold]]Metamask[[/:bold]] ose [[:bold]]Trust Wallet[[/:bold]].\n\nJu lutemi sigurohuni që të kontrolloni dy herë adresën tuaj të xhepit për të siguruar që do të merrni distributën."
   },
   "social_kyc": {
     "header": "Verifikimi",

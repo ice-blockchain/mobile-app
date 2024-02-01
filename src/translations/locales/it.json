@@ -1237,7 +1237,7 @@
     "enter_address_confirmation": "Sei sicuro che l'indirizzo BNB Smart Chain sia corretto?",
     "validators_warning_title": "Conferma Indirizzo",
     "validators_warning_text": "Si prega di notare che le persone che hanno aggiunto un indirizzo BNB Smart Chain al loro account non sono idonee a diventare uno dei primi 300 validatori come indicato nel nostro whitepaper per il lancio del Mainnet.",
-    "walletDescription": "Consigliamo di utilizzare un portafoglio auto custodito come [[:bold]]Metamask[[/:bold]] o [[:bold]]Trust Wallet[[/:bold]].\n\nAssicurati di verificare due volte il tuo indirizzo del portafoglio per essere sicuro di ricevere la distribuzione."
+    "wallet_description": "Consigliamo di utilizzare un portafoglio auto custodito come [[:bold]]Metamask[[/:bold]] o [[:bold]]Trust Wallet[[/:bold]].\n\nAssicurati di verificare due volte il tuo indirizzo del portafoglio per essere sicuro di ricevere la distribuzione."
   },
   "social_kyc": {
     "header": "Verifica",

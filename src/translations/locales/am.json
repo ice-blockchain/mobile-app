@@ -1237,7 +1237,7 @@
     "enter_address_confirmation": "እርስዎ የ BNB Smart Chain አድራሻ ነው የሚያመለክተው ነውም፣ በማለት ይጎብኛልን?",
     "validators_warning_title": "አድራሻ አረጋግጥ",
     "validators_warning_text": "እባክዎን ባንዳርነት በህክም አድራሻ አድርገዋል ከእኛው አይምሰልሽም፣ ብኛው የምርምርን ቅርጸ ከከባድ የተመለከተውን አግባብ በማድረግ ልክ ልንሄድ ትችላላችሁ።",
-    "walletDescription": "እኛንኳ ምርት-ሜርሳክ ወይም ትሪስት ዋልት እንዲሁም ለራስ-ቡቦውን የሚሰጥ ወደ [[:bold]]Metamask[[/:bold]] ወይም [[:bold]]Trust Wallet[[/:bold]] መግባት ይፈልጋሉ።\n\nእባክዎት ትንሽት አስተያየታችሁን ደፍና ስልኩን ማስቀመጥ አይፈልጉም።"
+    "wallet_description": "እኛንኳ ምርት-ሜርሳክ ወይም ትሪስት ዋልት እንዲሁም ለራስ-ቡቦውን የሚሰጥ ወደ [[:bold]]Metamask[[/:bold]] ወይም [[:bold]]Trust Wallet[[/:bold]] መግባት ይፈልጋሉ።\n\nእባክዎት ትንሽት አስተያየታችሁን ደፍና ስልኩን ማስቀመጥ አይፈልጉም።"
   },
   "social_kyc": {
     "header": "ማረጋገጫ",

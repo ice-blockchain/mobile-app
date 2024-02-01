@@ -1239,14 +1239,14 @@
     "enter_address_confirmation": "Are you sure that the BNB Smart Chain address is correct?",
     "validators_warning_title": "Confirm Address",
     "validators_warning_text": "Please note that individuals who have added a BNB Smart Chain address to their account are not eligible to become one of the top 300 validators as per our whitepaper for the mainnet launch.",
-    "walletDescription": "We advise using a self-custodial wallet such as [[:bold]]Metamask[[/:bold]] or [[:bold]]Trust Wallet[[/:bold]].\n\nPlease ensure that you double-check your wallet address to make sure you will receive the distribution."
+    "wallet_description": "We advise using a self-custodial wallet such as [[:bold]]Metamask[[/:bold]] or [[:bold]]Trust Wallet[[/:bold]].\n\nPlease ensure that you double-check your wallet address to make sure you will receive the distribution."
   },
   "solana_address": {
     "title": "Solana address",
     "enter_address_title": "Enter your\nSolana address",
     "enter_address_description": "Add your Solana address below to become eligible for exclusive airdrops of our meme coins and exciting tokens on the Solana network. Get ready to unlock surprises and rewards as we bring the crypto adventure to you.",
     "enter_address_confirmation": "Are you sure that the Solana address is correct?",
-    "walletDescription": "We advise using a self-custodial wallet such as [[:bold]]Phantom[[/:bold]] or [[:bold]]Trust Wallet[[/:bold]].\n\nPlease ensure that you double-check your wallet address to make sure you will receive the airdrops."
+    "wallet_description": "We advise using a self-custodial wallet such as [[:bold]]Phantom[[/:bold]] or [[:bold]]Trust Wallet[[/:bold]].\n\nPlease ensure that you double-check your wallet address to make sure you will receive the airdrops."
   },
   "social_kyc": {
     "header": "Verification",

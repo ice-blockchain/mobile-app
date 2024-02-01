@@ -65,7 +65,7 @@ export const BscAddress = memo(() => {
         {!isKeyboardShown && (
           <WalletCard
             logoImageSource={Images.card.bscWallets}
-            description={t('bsc_address.walletDescription')}
+            description={t('bsc_address.wallet_description')}
             style={styles.walletCard}
           />
         )}

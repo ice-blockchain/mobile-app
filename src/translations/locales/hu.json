@@ -1237,7 +1237,7 @@
     "enter_address_confirmation": "Biztos benne, hogy a BNB Smart Chain cím helyes?",
     "validators_warning_title": "Cím megerősítése",
     "validators_warning_text": "Kérjük, vegye figyelembe, hogy azok az egyének, akik hozzáadtak egy BNB Smart Chain címet a fiókjukhoz, nem jogosultak arra, hogy a whitepaperünk szerint a Mainnet indulásához tartozó top 300 validátor egyike legyenek.",
-    "walletDescription": "A [[:bold]]Metamask[[/:bold]] vagy [[:bold]]Trust Wallet[[/:bold]] használatát ajánljuk. Kérjük, ellenőrizze kétszer a pénztárcacímét, hogy biztos legyen benne, hogy megkapja a kiosztást."
+    "wallet_description": "A [[:bold]]Metamask[[/:bold]] vagy [[:bold]]Trust Wallet[[/:bold]] használatát ajánljuk. Kérjük, ellenőrizze kétszer a pénztárcacímét, hogy biztos legyen benne, hogy megkapja a kiosztást."
   },
   "social_kyc": {
     "header": "Ellenőrzés",

@@ -61,7 +61,7 @@ export const SolanaAddress = memo(() => {
         {!isKeyboardShown && (
           <WalletCard
             logoImageSource={Images.card.solanaWallets}
-            description={t('solana_address.walletDescription')}
+            description={t('solana_address.wallet_description')}
             style={styles.walletCard}
           />
         )}
