@@ -549,7 +549,8 @@
     "stake_now": "立即预质押！",
     "balance_label": "质押余额",
     "confirm_title": "确认预质押",
-    "confirm_subtitle": "您确定要预质押您的硬币吗？确认后，此操作将无法撤消。"
+    "confirm_subtitle": "您确定要预质押您的硬币吗？确认后，此操作将无法撤消。",
+    "remove_pre_staking": "移除预先押注"
   },
   "stats": {
     "header_title": "统计数据",

@@ -549,7 +549,8 @@
     "stake_now": "Pré-staker maintenant !",
     "balance_label": "Solde staké",
     "confirm_title": "Confirmer le pré-staking",
-    "confirm_subtitle": "Êtes-vous sûr de vouloir pré-staker vos pièces ? Cette action ne pourra pas être annulée après avoir été confirmée."
+    "confirm_subtitle": "Êtes-vous sûr de vouloir pré-staker vos pièces ? Cette action ne pourra pas être annulée après avoir été confirmée.",
+    "remove_pre_staking": "Supprimer le Pré-Staking"
   },
   "stats": {
     "header_title": "Statistiques",

@@ -549,7 +549,8 @@
     "stake_now": "Effettua subito una puntata in anticipo!",
     "balance_label": "Saldo della puntata",
     "confirm_title": "Conferma la puntata anticipata",
-    "confirm_subtitle": "Sei sicuro di voler puntare in anticipo le tue monete? Una volta confermata, quest'azione non sarà reversibile."
+    "confirm_subtitle": "Sei sicuro di voler puntare in anticipo le tue monete? Una volta confermata, quest'azione non sarà reversibile.",
+    "remove_pre_staking": "Rimuovi il Pre-Staking"
   },
   "stats": {
     "header_title": "Statistiche",

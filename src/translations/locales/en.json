@@ -546,6 +546,7 @@
     "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions.",
     "terms_agree": "I agree to the [[:ice]] [[:link]]Staking Terms[[/:link]]. Your Ice holdings will be locked for the selected period.",
     "stake_now": "Pre-Stake Now!",
+    "remove_pre_staking": "Remove Pre-Staking",
     "balance_label": "Staked balance",
     "confirm_title": "Confirm Pre-Stake",
     "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm."

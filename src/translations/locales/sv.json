@@ -549,7 +549,8 @@
     "stake_now": "Pre-staka nu!",
     "balance_label": "Stakat saldo",
     "confirm_title": "Bekräfta pre-stake",
-    "confirm_subtitle": "Är du säker på att du vill pre-staka dina mynt? Detta kan inte ångras när du väl har bekräftat."
+    "confirm_subtitle": "Är du säker på att du vill pre-staka dina mynt? Detta kan inte ångras när du väl har bekräftat.",
+    "remove_pre_staking": "Ta bort Pre-Staking"
   },
   "stats": {
     "header_title": "Statistik",

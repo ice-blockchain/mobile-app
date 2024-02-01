@@ -549,7 +549,8 @@
     "stake_now": "Jetzt Pre-Stake starten!",
     "balance_label": "Eingesetztes Guthaben",
     "confirm_title": "Pre-Stake bestätigen",
-    "confirm_subtitle": "Sind Sie sicher, dass Sie Ihre Münzen einsetzen und sperren wollen? Dies kann, sobald Sie bestätigt haben, nicht rückgängig gemacht werden."
+    "confirm_subtitle": "Sind Sie sicher, dass Sie Ihre Münzen einsetzen und sperren wollen? Dies kann, sobald Sie bestätigt haben, nicht rückgängig gemacht werden.",
+    "remove_pre_staking": "Vor-Staking entfernen"
   },
   "stats": {
     "header_title": "Statistiken",

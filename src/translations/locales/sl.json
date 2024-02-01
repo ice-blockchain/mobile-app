@@ -549,7 +549,8 @@
     "stake_now": "Vnaprej zastavite zdaj!",
     "balance_label": "Zastavljeno stanje",
     "confirm_title": "Potrdite vnaprejšnje zastavljanje",
-    "confirm_subtitle": "Ali ste prepričani, da želite vnaprej zastaviti svoje kovance? Ko potrdite, tega ni mogoče razveljaviti."
+    "confirm_subtitle": "Ali ste prepričani, da želite vnaprej zastaviti svoje kovance? Ko potrdite, tega ni mogoče razveljaviti.",
+    "remove_pre_staking": "Odstrani predstavljanje stavkov"
   },
   "stats": {
     "header_title": "Statistika",

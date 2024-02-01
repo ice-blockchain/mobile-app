@@ -549,7 +549,8 @@
     "stake_now": "立刻預先質押！",
     "balance_label": "質押餘額",
     "confirm_title": "確認預先質押",
-    "confirm_subtitle": "確定要預先質押您的貨幣嗎？ 一旦確認便無法撤銷。"
+    "confirm_subtitle": "確定要預先質押您的貨幣嗎？ 一旦確認便無法撤銷。",
+    "remove_pre_staking": "移除預先賭注"
   },
   "stats": {
     "header_title": "數據",

@@ -377,6 +377,7 @@ export type Translations = {
   'staking.description': null;
   'staking.terms_agree': null;
   'staking.stake_now': null;
+  'staking.remove_pre_staking': null;
   'staking.balance_label': null;
   'staking.confirm_title': null;
   'staking.confirm_subtitle': null;

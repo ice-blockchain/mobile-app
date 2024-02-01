@@ -549,7 +549,8 @@
     "stake_now": "Előzetes letétbe helyezés most!",
     "balance_label": "Letétbe helyezett egyenleg",
     "confirm_title": "Előzetes letétbe helyezés megerősítése",
-    "confirm_subtitle": "Biztosan előzetes letétbe szeretnéd helyezne a coinjaidat? Ez a megerősítés után nem vonható vissza."
+    "confirm_subtitle": "Biztosan előzetes letétbe szeretnéd helyezne a coinjaidat? Ez a megerősítés után nem vonható vissza.",
+    "remove_pre_staking": "Előzetes Staking Eltávolítása"
   },
   "stats": {
     "header_title": "Statisztikák",

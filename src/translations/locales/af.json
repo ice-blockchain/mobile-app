@@ -549,7 +549,8 @@
     "stake_now": "Speel nou vooraf!",
     "balance_label": "Afgepende balans",
     "confirm_title": "Bevestig vooraf-inset",
-    "confirm_subtitle": "Is jy seker jy wil jou munte vooraf inspan? Dit kan nie ontdoen word sodra jy bevestig het nie."
+    "confirm_subtitle": "Is jy seker jy wil jou munte vooraf inspan? Dit kan nie ontdoen word sodra jy bevestig het nie.",
+    "remove_pre_staking": "Verwyder Vooraf-Inset"
   },
   "stats": {
     "header_title": "Statistieke",

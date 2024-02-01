@@ -549,7 +549,8 @@
     "stake_now": "지금 사전 스테이킹하세요!",
     "balance_label": "스테이킹 잔액",
     "confirm_title": "사전 스테이킹 확인",
-    "confirm_subtitle": "정말 코인을 사전 스테이킹하시겠습니까? 한 번 확인하면 되돌릴 수 없습니다."
+    "confirm_subtitle": "정말 코인을 사전 스테이킹하시겠습니까? 한 번 확인하면 되돌릴 수 없습니다.",
+    "remove_pre_staking": "사전 스테이킹 해제"
   },
   "stats": {
     "header_title": "통계",

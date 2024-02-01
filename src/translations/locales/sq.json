@@ -549,7 +549,8 @@
     "stake_now": "Pre-Stake tani!",
     "balance_label": "Shuma e vënë në staking",
     "confirm_title": "Konfirmo Pre-Stake",
-    "confirm_subtitle": "Je i sigurt që dëshiron t'i vësh në pre-stake monedhat? Kjo nuk mund të zhbëhet pasi të konfirmosh."
+    "confirm_subtitle": "Je i sigurt që dëshiron t'i vësh në pre-stake monedhat? Kjo nuk mund të zhbëhet pasi të konfirmosh.",
+    "remove_pre_staking": "Hiq Pre-Staking"
   },
   "stats": {
     "header_title": "Statistikat",

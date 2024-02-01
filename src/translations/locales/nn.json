@@ -549,7 +549,8 @@
     "stake_now": "Forhånds-stake nå!",
     "balance_label": "Staket saldo",
     "confirm_title": "Bekreft forhånds-staking",
-    "confirm_subtitle": "Er du sikker på at du vil forhånds-stake myntene dine? Dette kan ikke angres etter at du har bekreftet."
+    "confirm_subtitle": "Er du sikker på at du vil forhånds-stake myntene dine? Dette kan ikke angres etter at du har bekreftet.",
+    "remove_pre_staking": "Fjern Pre-Staking"
   },
   "stats": {
     "header_title": "Statistikk",

@@ -549,7 +549,8 @@
     "stake_now": "Giữ và khóa sớm ngay!",
     "balance_label": "Số dư giữ và khóa",
     "confirm_title": "Xác nhận giữ và khóa sớm",
-    "confirm_subtitle": "Bạn có chắc chắn muốn giữ và khóa sớm số đồng tiền của mình không? Không thể hoàn tác sau khi bạn xác nhận."
+    "confirm_subtitle": "Bạn có chắc chắn muốn giữ và khóa sớm số đồng tiền của mình không? Không thể hoàn tác sau khi bạn xác nhận.",
+    "remove_pre_staking": "Xóa Trước Khi Stake"
   },
   "stats": {
     "header_title": "Thống kê",
