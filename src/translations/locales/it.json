@@ -74,7 +74,8 @@
     "remove_address": "Rimuovi indirizzo",
     "start": "Inizia",
     "faq": "Domande frequenti",
-    "knowledge_base": "Base di conoscenza"
+    "knowledge_base": "Base di conoscenza",
+    "skip": "Salta"
   },
   "team": {
     "contacts_tab": "Contatti",
@@ -374,6 +375,10 @@
     },
     "verified_tooltip": {
       "title": "KYC Verificato"
+    },
+    "solana_address": {
+      "title": "Indirizzo Solana",
+      "subtitle": "Inserisci il tuo indirizzo Solana qui."
     }
   },
   "settings": {
@@ -1322,9 +1327,16 @@
     "description2": "Questo passaggio ci aiuta a garantire la sicurezza e l'autenticità del tuo account. Grazie per la tua collaborazione!"
   },
   "quiz": {
-    "title": "Quiz",
-    "intro": {
+    "title": "Passaggio KYC #3",
+    "terms": {
       "description": "In Ice, crediamo nel promuovere una comunità di membri attivi e informati. La nostra missione è assicurare che le monete Ice vengano distribuite a coloro che sono realmente coinvolti e in sintonia con la nostra visione.",
+      "knowledge_verification": {
+        "title": "💡 Verifica della conoscenza",
+        "description": "Per assicurare che la nostra comunità sia ben informata e in linea con la nostra visione:",
+        "point1": "Ti verranno presentate 21 domande derivate dalle nostre risorse complete.",
+        "point2": "Un quiz superato conferma la tua comprensione e dedizione.",
+        "point3": "Un quiz fallito indica la necessità di ulteriori interazioni con i nostri materiali."
+      },
       "community_engagement": {
         "title": "🙌 Coinvolgimento attivo nella comunità",
         "description": "Il tuo coinvolgimento nell'Ecosistema Ice influenza direttamente le tue capacità di mining:",
@@ -1333,25 +1345,20 @@
         "point3": "Interazioni sociali: Aumenta la tua presenza mettendo like, condividendo, seguendo o pubblicando informazioni su Ice.",
         "bottom_description": "Più sei coinvolto, più alto sarà il tuo punteggio di interazione positiva, consentendoti di superare il processo KYC."
       },
-      "terms_privacy": "Capisco e accetto i [[:link]]Termini e Condizioni[[/:link]].",
-      "knowledge_check": {
-        "title": "🧠 Verifica delle Conoscenze",
-        "point2": "Per superare il quiz, è necessario rispondere correttamente a almeno 18 domande.",
-        "point3": "Un quiz fallito indica la necessità di un ulteriore coinvolgimento con i nostri materiali.",
-        "point4": "C'è una scadenza per superare il quiz. Puoi vedere quanti giorni ti rimangono fino alla data di scadenza nella tua homepage nella sezione del quiz.",
-        "point5": "Hai 3 tentativi disponibili prima della scadenza. Se fallisci il quiz 3 volte o se la data di scadenza passa, non sarai in grado di fare mining ulteriormente e il tuo account verrà penalizzato.",
-        "point6": "📚 Tutte le informazioni su questo quiz possono essere lette [[:link]]qui[[/:link]].",
-        "description": "Per assicurare che la nostra comunità sia ben informata e in linea con la nostra visione:",
-        "point1": "Ti verranno presentate 21 domande derivate dalle nostre risorse complete."
-      },
-      "why_quiz": {
-        "title": "💡 Perché il Quiz?",
-        "description": "Il nostro impegno per la conoscenza e la comprensione è al centro della nostra comunità. Con il nostro quiz, miriamo a garantire che Ice finisca nelle mani giuste, coloro che comprendono e condividono veramente la visione del nostro progetto."
-      }
+      "terms_privacy": "Capisco e accetto i [[:link]]Termini e Condizioni[[/:link]]."
     },
-    "quiz_failure": {
+    "intro": {
+      "knowledge_check": "🧠 Controllo della conoscenza:",
+      "point1": "Ci sono in totale 21 domande.",
+      "point2": "Per superare il quiz, devi rispondere correttamente a almeno 18 domande.",
+      "point3": "Ops, quiz fallito? Riprova la prossima settimana.",
+      "point4": "📚 Tutte le informazioni per questo quiz possono essere lette [[:link]]qui[[/:link]].",
+      "why_quiz": "Perché il Quiz?",
+      "why_quiz_description": "Siamo tutti per il mining intelligente, sicuro e informato. Questo piccolo passo assicura che la nostra comunità Ice prosperi con conoscenza e comprensione!"
+    },
+    "mining_disabled": {
       "title": "Quiz Fallito",
-      "description": "Non hai risposto correttamente a più di 18 domande, quindi non puoi superare il quiz.",
+      "description": "Non hai risposto correttamente a più di 18 domande, quindi non puoi superare il Passaggio KYC #3. Puoi riprovare la prossima settimana.",
       "check_faq": "Per rispondere correttamente la prossima volta, ti consigliamo di familiarizzare con la nostra base di conoscenza e le nostre domande frequenti."
     },
     "quiz_questionnaire": {
@@ -1363,20 +1370,12 @@
     "confirmation_popup": {
       "title": "Conferma",
       "start_description": "Sei sicuro di voler iniziare il quiz?",
-      "cancel_description": "Saltando il quiz, userai uno dei tuoi 3 tentativi disponibili. Sei sicuro di voler saltare il quiz adesso?"
+      "cancel_description": "Sei sicuro di voler annullare il quiz?"
     },
     "quiz_success": {
       "title": "Verifica Completata",
       "description": "Congratulazioni, hai completato con successo il tuo KYC. Le tue risposte corrette costanti hanno dimostrato la tua dedizione e conoscenza. Sei ora verificato."
-    },
-    "mining_disabled_popup": {
-      "title": "❌ Mining Disabilitato",
-      "description": "Il tuo accesso al mining è stato disabilitato a causa di tre fallimenti consecutivi al quiz o alla scadenza del tempo assegnato, come richiesto dal nostro processo KYC."
-    },
-    "action": "Completa il quiz",
-    "reminder": "Si prega di notare che è necessario completare il quiz per essere idonei a continuare l'estrazione e evitare penalizzazioni.",
-    "days_left": "Giorni rimasti: {{days}}",
-    "retries_left": "Tentativi rimasti: {{number}}"
+    }
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1389,7 +1388,11 @@
       }
     }
   },
-  "buttons": {
-    "skip": "Salta"
+  "solana_address": {
+    "title": "Indirizzo Solana",
+    "enter_address_title": "Inserisci il tuo\nindirizzo Solana",
+    "enter_address_description": "Aggiungi il tuo indirizzo Solana qui sotto per diventare idoneo per gli airdrop esclusivi delle nostre monete meme e token emozionanti sulla rete Solana. Preparati a sbloccare sorprese e ricompense mentre portiamo l'avventura cripto a te.",
+    "enter_address_confirmation": "Sei sicuro che l'indirizzo Solana sia corretto?",
+    "wallet_description": "Consigliamo di utilizzare un portafoglio auto-custodito come [[:bold]]Phantom[[/:bold]] o [[:bold]]Trust Wallet[[/:bold]].\n\nAssicurati di verificare due volte il tuo indirizzo del portafoglio per assicurarti di ricevere gli airdrop."
   }
 }

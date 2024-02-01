@@ -74,7 +74,8 @@
     "remove_address": "Adresi Kaldır",
     "start": "Başla",
     "faq": "SSS",
-    "knowledge_base": "Bilgi Tabanı"
+    "knowledge_base": "Bilgi Tabanı",
+    "skip": "Atla"
   },
   "team": {
     "contacts_tab": "Kişiler",
@@ -374,6 +375,10 @@
     },
     "verified_tooltip": {
       "title": "KYC Onaylandı"
+    },
+    "solana_address": {
+      "title": "Solana Adresi",
+      "subtitle": "Lütfen Solana adresinizi buraya girin."
     }
   },
   "settings": {
@@ -1322,9 +1327,16 @@
     "description2": "Bu adım, hesabınızın güvenliği ve gerçekliğini sağlamamıza yardımcı olur. İşbirliğiniz için teşekkür ederiz!"
   },
   "quiz": {
-    "title": "Quiz",
-    "intro": {
+    "title": "KYC Adımı #3",
+    "terms": {
       "description": "Ice'de, aktif ve bilgili üyelerin bir topluluğunu teşvik etmeye inanıyoruz. Misyonumuz, Ice coin'lerin, gerçekten bağlı ve vizyonumuzla uyumlu olanlara dağıtılmasını sağlamaktır.",
+      "knowledge_verification": {
+        "title": "💡 Bilgi Doğrulama",
+        "description": "Topluluğumuzun iyi bilgilendirilmiş ve vizyonumuzla uyumlu olduğundan emin olmak için:",
+        "point1": "Kapsamlı kaynaklarımızdan türetilen 21 soru ile karşılaşacaksınız.",
+        "point2": "Başarılı bir sınav, anlayışınızı ve bağlılığınızı doğrular.",
+        "point3": "Başarısız bir sınav, materyallerimizle daha fazla etkileşim gerektirdiğini gösterir."
+      },
       "community_engagement": {
         "title": "🙌 Aktif Topluluk Katılımı",
         "description": "Ice Ekosistemi içindeki katılımınız, madencilik yeteneklerinizi doğrudan etkiler:",
@@ -1333,25 +1345,20 @@
         "point3": "Sosyal Etkileşimler: Ice hakkında beğenme, paylaşma, takip etme veya paylaşma yaparak varlığınızı artırın.",
         "bottom_description": "Daha fazla katıldıkça, pozitif etkileşim puanınız o kadar yüksek olur ve KYC sürecini geçmenizi sağlar."
       },
-      "terms_privacy": "[[:link]]Kullanım Koşulları ve Gizlilik Politikamızı[[/:link]] anladım ve kabul ediyorum.",
-      "knowledge_check": {
-        "title": "🧠 Bilgi Kontrolü",
-        "point2": "Quiz'i geçmek için en az 18 soruyu doğru cevaplamalısınız.",
-        "point3": "Başarısız bir quiz, materyallerimizle daha fazla ilgilenme gerekliliğini işaret eder.",
-        "point4": "Quiz'i tamamlamak için bir süre sınırlaması vardır. Ana sayfanızda quiz bölümünde son kullanma tarihine ne kadar süre kaldığınızı görebilirsiniz.",
-        "point5": "Son kullanma tarihinden önce 3 deneme hakkınız vardır. Quiz'i 3 kez başaramazsanız veya son kullanma tarihi geçerse, madencilik yapamayacak ve hesabınız kesintiye uğrayacaktır.",
-        "point6": "📚 Bu quiz hakkındaki tüm bilgilere [[:link]]buradan[[/:link]] ulaşabilirsiniz.",
-        "description": "Topluluğumuzun iyi bilgilendirilmiş ve vizyonumuzla uyumlu olduğundan emin olmak için:",
-        "point1": "Kapsamlı kaynaklarımızdan türetilen 21 soru ile karşılaşacaksınız."
-      },
-      "why_quiz": {
-        "title": "💡 Neden Quiz?",
-        "description": "Bilgi ve anlayışa olan bağlılığımız, topluluğumuzun en önündedir. Quiz ile Ice'ın doğru ellerde, projemizin vizyonuyla gerçekten uyum sağlayan kişilere ulaşmasını amaçlıyoruz."
-      }
+      "terms_privacy": "[[:link]]Kullanım Koşulları ve Gizlilik Politikamızı[[/:link]] anladım ve kabul ediyorum."
     },
-    "quiz_failure": {
+    "intro": {
+      "knowledge_check": "🧠 Bilgi Kontrolü:",
+      "point1": "Toplamda 21 soru bulunmaktadır.",
+      "point2": "Sınavı geçmek için en az 18 soruya doğru cevap vermelisiniz.",
+      "point3": "Hata yaptınız mı? Bir sonraki hafta tekrar deneyin.",
+      "point4": "Bu sınavla ilgili tüm bilgileri buradan [[[:link]]] okuyabilirsiniz.",
+      "why_quiz": "Neden Sınav?",
+      "why_quiz_description": "Biz, akıllı, güvenli ve bilgilendirilmiş madencilik hakkında her şeyiz. Bu küçük adım, Ice topluluğumuzun bilgi ve anlayışla gelişmesini sağlar!"
+    },
+    "mining_disabled": {
       "title": "Başarısız Sınav",
-      "description": "18'den fazla soruya doğru cevap vermediniz, bu nedenle sınavı geçemezsiniz.",
+      "description": "18 sorudan daha azını doğru cevaplamadığınız için KYC Adımı #3'ü geçemezsiniz. Bir hafta sonra tekrar deneyebilirsiniz.",
       "check_faq": "Bir sonraki sefer doğru cevap vermek için, bilgi tabanımızı ve Sıkça Sorulan Soruları incelemenizi öneririz."
     },
     "quiz_questionnaire": {
@@ -1363,20 +1370,12 @@
     "confirmation_popup": {
       "title": "Onay",
       "start_description": "Sınavı başlatmak istediğinizden emin misiniz?",
-      "cancel_description": "Quiz'i atlayarak kullanabileceğiniz 3 denemeden birini kullanacaksınız. Quiz'i şimdi atlamak istediğinizden emin misiniz?"
+      "cancel_description": "Sınavı iptal etmek istediğinizden emin misiniz?"
     },
     "quiz_success": {
       "title": "Doğrulama Tamamlandı",
       "description": "Tebrikler, KYC'nizi başarıyla tamamladınız. Sürekli doğru cevaplarınız bağlılığınızı ve bilginizi kanıtladı. Şimdi doğrulandınız."
-    },
-    "mining_disabled_popup": {
-      "title": "❌ Madencilik Devre Dışı Bırakıldı",
-      "description": "KYC sürecimiz gereği üç ardışık quiz başarısızlığı veya tahsis edilen sürenin sona ermesi nedeniyle madencilik erişiminiz devre dışı bırakılmıştır."
-    },
-    "action": "Quiz'i Tamamlayın",
-    "reminder": "Lütfen madenciliğe devam etmek ve kesmeyi önlemek için sınavı tamamlamanız gerektiğini unutmayın.",
-    "days_left": "Kalan Gün: {{days}}",
-    "retries_left": "Kalan deneme sayısı: {{number}}"
+    }
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1389,7 +1388,11 @@
       }
     }
   },
-  "buttons": {
-    "skip": "Atla"
+  "solana_address": {
+    "title": "Solana Adresi",
+    "enter_address_title": "Solana\nadresinizi girin",
+    "enter_address_description": "Solana ağındaki meme coinlerimiz ve heyecan verici tokenlar için özel airdrop'lara hak kazanmak için Solana adresinizi aşağıya ekleyin. Size kripto macerayı getirirken sürprizler ve ödüller açmaya hazır olun.",
+    "enter_address_confirmation": "Solana adresinin doğru olduğundan emin misiniz?",
+    "wallet_description": "Phantom veya Trust Wallet gibi self-custodial bir cüzdan kullanmanızı öneririz.\n\nAirdrop'ları alacağınızdan emin olmak için cüzdan adresinizi iki kez kontrol edin."
   }
 }

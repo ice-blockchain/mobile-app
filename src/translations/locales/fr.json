@@ -74,7 +74,8 @@
     "remove_address": "Supprimer l'adresse",
     "start": "Commencer",
     "faq": "FAQ",
-    "knowledge_base": "Base de Connaissances"
+    "knowledge_base": "Base de Connaissances",
+    "skip": "Passer"
   },
   "team": {
     "contacts_tab": "Contacts",
@@ -374,6 +375,10 @@
     },
     "verified_tooltip": {
       "title": "KYC Vérifié"
+    },
+    "solana_address": {
+      "title": "Adresse Solana",
+      "subtitle": "Veuillez entrer votre adresse Solana ici."
     }
   },
   "settings": {
@@ -1322,9 +1327,16 @@
     "description2": "Cette étape nous aide à garantir la sécurité et l'authenticité de votre compte. Merci pour votre coopération !"
   },
   "quiz": {
-    "title": "Quiz",
-    "intro": {
+    "title": "Étape KYC #3",
+    "terms": {
       "description": "Chez Ice, nous croyons en favoriser une communauté de membres actifs et informés. Notre mission est de garantir que les jetons Ice soient distribués à ceux qui sont réellement engagés et alignés avec notre vision.",
+      "knowledge_verification": {
+        "title": "💡 Vérification des Connaissances",
+        "description": "Pour nous assurer que notre communauté est bien informée et alignée avec notre vision :",
+        "point1": "Vous serez présenté avec 21 questions tirées de nos ressources complètes.",
+        "point2": "Un quiz réussi confirme votre compréhension et votre dévouement.",
+        "point3": "Un quiz échoué indique un besoin d'engagement supplémentaire avec nos documents."
+      },
       "community_engagement": {
         "title": "🙌 Engagement Actif dans la Communauté",
         "description": "Votre engagement au sein de l'Écosystème Ice influence directement vos capacités de minage :",
@@ -1333,25 +1345,20 @@
         "point3": "Interactions Sociales : Boostez votre présence en aimant, partageant, suivant ou en publiant sur Ice.",
         "bottom_description": "Plus vous êtes engagé, plus votre score d'interaction positive est élevé, vous permettant de passer par le processus KYC."
       },
-      "terms_privacy": "Je comprends et j'accepte les [[:link]]Termes et Conditions[[/:link]].",
-      "knowledge_check": {
-        "title": "🧠 Test de Connaissances",
-        "point2": "Pour réussir le quiz, vous devez répondre correctement à au moins 18 questions.",
-        "point3": "Un quiz échoué indique le besoin d'une meilleure compréhension de nos documents.",
-        "point4": "Il y a une date limite pour réussir le quiz. Vous pouvez voir combien de jours il vous reste jusqu'à la date d'expiration sur votre page d'accueil dans la section quiz.",
-        "point5": "Vous disposez de 3 essais avant la date d'expiration. Si vous échouez 3 fois au quiz ou si la date d'expiration est dépassée, vous ne pourrez plus miner et votre compte sera pénalisé.",
-        "point6": "📚 Toutes les informations sur ce quiz peuvent être lues [[:link]]ici[[/:link]].",
-        "description": "Pour nous assurer que notre communauté est bien informée et alignée avec notre vision :",
-        "point1": "Vous serez présenté avec 21 questions tirées de nos ressources complètes."
-      },
-      "why_quiz": {
-        "title": "💡 Pourquoi le Quiz ?",
-        "description": "Notre engagement envers la connaissance et la compréhension est au cœur de notre communauté. Avec notre quiz, nous visons à nous assurer qu'Ice parvienne entre les bonnes mains, celles qui comprennent réellement et adhèrent à la vision de notre projet."
-      }
+      "terms_privacy": "Je comprends et j'accepte les [[:link]]Termes et Conditions[[/:link]]."
     },
-    "quiz_failure": {
+    "intro": {
+      "knowledge_check": "🧠 Vérification des Connaissances :",
+      "point1": "Il y a un total de 21 questions.",
+      "point2": "Pour réussir le quiz, vous devez répondre correctement à au moins 18 questions.",
+      "point3": "Oops, quiz échoué ? Réessayez la semaine prochaine.",
+      "point4": "📚 Toutes les informations pour ce quiz peuvent être lues [[:link]]ici[[/:link]].",
+      "why_quiz": "Pourquoi le Quiz ?",
+      "why_quiz_description": "Nous mettons l'accent sur le minage intelligent, sûr et informé. Cette petite étape assure que notre communauté Ice prospère avec connaissance et compréhension !"
+    },
+    "mining_disabled": {
       "title": "Quiz Échoué",
-      "description": "Vous n'avez pas répondu correctement à plus de 18 questions, vous ne pouvez donc pas réussir le quiz.",
+      "description": "Vous n'avez pas répondu correctement à plus de 18 questions, donc vous ne pouvez pas passer l'Étape KYC #3. Vous pouvez réessayer la semaine prochaine.",
       "check_faq": "Pour répondre correctement la prochaine fois, nous vous suggérons de vous familiariser avec notre base de connaissances et notre FAQ."
     },
     "quiz_questionnaire": {
@@ -1363,20 +1370,12 @@
     "confirmation_popup": {
       "title": "Confirmation",
       "start_description": "Êtes-vous sûr de vouloir commencer le quiz ?",
-      "cancel_description": "En sautant le quiz, vous utiliserez l'un de vos essais disponibles. Êtes-vous sûr de vouloir sauter le quiz maintenant ?"
+      "cancel_description": "Êtes-vous sûr de vouloir annuler le quiz ?"
     },
     "quiz_success": {
       "title": "Vérification Terminée",
       "description": "Félicitations, vous avez terminé avec succès votre KYC. Vos réponses correctes constantes ont prouvé votre dévouement et vos connaissances. Vous êtes maintenant vérifié."
-    },
-    "mining_disabled_popup": {
-      "title": "❌ Minage désactivé",
-      "description": "Votre accès au minage a été désactivé en raison de trois échecs consécutifs au quiz ou de l'expiration du temps imparti, conformément à notre processus KYC."
-    },
-    "action": "Compléter le quiz",
-    "reminder": "Veuillez noter que vous devez compléter le quiz pour être éligible à la poursuite du minage et éviter les sanctions.",
-    "days_left": "Jours restants : {{days}}",
-    "retries_left": "Tentatives restantes : {{number}}"
+    }
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1389,7 +1388,11 @@
       }
     }
   },
-  "buttons": {
-    "skip": "Passer"
+  "solana_address": {
+    "title": "Adresse Solana",
+    "enter_address_title": "Entrez votre\nadresse Solana",
+    "enter_address_description": "Ajoutez votre adresse Solana ci-dessous pour être éligible aux airdrops exclusifs de nos jetons meme et des tokens excitants sur le réseau Solana. Préparez-vous à débloquer des surprises et des récompenses alors que nous vous apportons l'aventure crypto.",
+    "enter_address_confirmation": "Êtes-vous sûr que l'adresse Solana est correcte ?",
+    "wallet_description": "Nous vous recommandons d'utiliser un portefeuille self-custodial tel que [[:bold]]Phantom[[/:bold]] ou [[:bold]]Trust Wallet[[/:bold]].\n\nVeuillez vous assurer de vérifier votre adresse de portefeuille deux fois pour vous assurer de recevoir les airdrops."
   }
 }

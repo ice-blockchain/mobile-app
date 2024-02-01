@@ -74,7 +74,8 @@
     "remove_address": "Fjern adresse",
     "start": "Start",
     "faq": "FAQ",
-    "knowledge_base": "Kunnskapsbase"
+    "knowledge_base": "Kunnskapsbase",
+    "skip": "Hopp over"
   },
   "team": {
     "contacts_tab": "Kontakter",
@@ -374,6 +375,10 @@
     },
     "verified_tooltip": {
       "title": "KYC Verifisert"
+    },
+    "solana_address": {
+      "title": "Solana-adresse",
+      "subtitle": "Vennligst skriv inn Solana-adressen din her."
     }
   },
   "settings": {
@@ -1322,9 +1327,16 @@
     "description2": "Dette trinnet hjelper oss med å sikre sikkerheten og autentisiteten til kontoen din. Takk for samarbeidet ditt!"
   },
   "quiz": {
-    "title": "Quiz",
-    "intro": {
+    "title": "KYC Trinn #3",
+    "terms": {
       "description": "I Ice tror vi på å fremme et fellesskap av aktive og informerte medlemmer. Vår misjon er å sikre at Ice-mynter blir distribuert til de som virkelig engasjerer seg og er i tråd med vår visjon.",
+      "knowledge_verification": {
+        "title": "💡 Kunnskapsverifisering",
+        "description": "For å sikre at vårt fellesskap er godt informert og i tråd med vår visjon:",
+        "point1": "Du vil bli presentert med 21 spørsmål basert på våre omfattende ressurser.",
+        "point2": "Bestått quiz bekrefter din forståelse og dedikasjon.",
+        "point3": "En mislykket quiz indikerer behovet for ytterligere engasjement med våre materialer."
+      },
       "community_engagement": {
         "title": "🙌 Aktivt Fellesskapsengasjement",
         "description": "Ditt engasjement i Ice-økosystemet påvirker direkte din gruvedriftsevne:",
@@ -1333,25 +1345,20 @@
         "point3": "Sosiale Interaksjoner: Øk din tilstedeværelse ved å like, dele, følge eller poste om Ice.",
         "bottom_description": "Jo mer engasjert du er, desto høyere blir din positive interaksjonsscore, og du kan gå gjennom KYC-prosessen."
       },
-      "terms_privacy": "Jeg forstår og godtar [[:link]]Vilkår og betingelser[[/:link]].",
-      "knowledge_check": {
-        "title": "🧠 Kunnskapssjekk",
-        "point2": "For å bestå quizen, må du svare riktig på minst 18 spørsmål.",
-        "point3": "En mislykket quiz indikerer behov for ytterligere engasjement med vårt materiale.",
-        "point4": "Det er en tidsbegrensning for å bestå quizen. Du kan se hvor mange dager du har igjen til utløpsdatoen på hjemmesiden din i quizseksjonen.",
-        "point5": "Du har 3 forsøk tilgjengelig før utløpsdatoen. Hvis du mislykkes i quizen 3 ganger eller hvis utløpsdatoen passerer, vil du ikke kunne mine mer, og kontoen din vil bli sanksjonert.",
-        "point6": "📚 All informasjon om denne quizen kan leses [[:link]]her[[/:link]].",
-        "description": "For å sikre at vårt fellesskap er godt informert og i tråd med vår visjon:",
-        "point1": "Du vil bli presentert med 21 spørsmål basert på våre omfattende ressurser."
-      },
-      "why_quiz": {
-        "title": "💡 Hvorfor Quiz?",
-        "description": "Vårt engasjement for kunnskap og forståelse er i forkant av vårt samfunn. Med vår quiz ønsker vi å sikre at Ice havner i riktige hender, de som virkelig forstår og er i tråd med vårt prosjekts visjon."
-      }
+      "terms_privacy": "Jeg forstår og godtar [[:link]]Vilkår og betingelser[[/:link]]."
     },
-    "quiz_failure": {
+    "intro": {
+      "knowledge_check": "🧠 Kunnskapssjekk:",
+      "point1": "Det er totalt 21 spørsmål.",
+      "point2": "For å bestå quizen, må du svare riktig på minst 18 spørsmål.",
+      "point3": "Oops, mislyktes quizen? Prøv igjen neste uke.",
+      "point4": "📚 All informasjon om denne quizen kan leses [[:link]]her[[/:link]].",
+      "why_quiz": "Hvorfor Quizen?",
+      "why_quiz_description": "Vi handler alle om smart, trygg og informert gruvedrift. Dette lille trinnet sikrer at Ice-fellesskapet vårt trives med kunnskap og forståelse!"
+    },
+    "mining_disabled": {
       "title": "Mislykket Quiz",
-      "description": "Du har ikke svart riktig på mer enn 18 spørsmål, så du kan ikke bestå quizen.",
+      "description": "Du svarte ikke riktig på mer enn 18 spørsmål, så du kan ikke bestå KYC Trinn #3. Du kan prøve igjen neste uke.",
       "check_faq": "For å svare riktig neste gang, anbefaler vi at du blir kjent med vår kunnskapsbase og FAQ."
     },
     "quiz_questionnaire": {
@@ -1363,20 +1370,12 @@
     "confirmation_popup": {
       "title": "Bekreftelse",
       "start_description": "Er du sikker på at du vil starte quizen?",
-      "cancel_description": "Ved å hoppe over quizen vil du bruke ett tilgjengelig forsøk. Er du sikker på at du vil hoppe over quizen nå?"
+      "cancel_description": "Er du sikker på at du vil avbryte quizen?"
     },
     "quiz_success": {
       "title": "Verifikasjon Fullført",
       "description": "Gratulerer, du har fullført KYC på en vellykket måte. Dine konsekvente riktige svar har bevist din dedikasjon og kunnskap. Du er nå verifisert."
-    },
-    "mining_disabled_popup": {
-      "title": "❌ Mining deaktivert",
-      "description": "Din mining-tilgang har blitt deaktivert på grunn av tre påfølgende quiz-feil eller utløp av tildelt tid, som kreves av vår KYC-prosess."
-    },
-    "action": "Fullfør quizen",
-    "reminder": "Vennligst merk at du må fullføre quizen for å være kvalifisert for å fortsette gruvedrift og unngå straff.",
-    "days_left": "Dager igjen: {{days}}",
-    "retries_left": "Forsøk igjen: {{number}}"
+    }
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1389,7 +1388,11 @@
       }
     }
   },
-  "buttons": {
-    "skip": "Hopp over"
+  "solana_address": {
+    "title": "Solana-adresse",
+    "enter_address_title": "Skriv inn din\nSolana-adresse",
+    "enter_address_description": "Legg til din Solana-adresse nedenfor for å være kvalifisert for eksklusive airdrops av våre meme-mynter og spennende tokens på Solana-nettverket. Gjør deg klar til å låse opp overraskelser og belønninger mens vi bringer kryptoeventyret til deg.",
+    "enter_address_confirmation": "Er du sikker på at Solana-adressen er riktig?",
+    "wallet_description": "Vi anbefaler å bruke en selvstyrt lommebok som [[:bold]]Phantom[[/:bold]] eller [[:bold]]Trust Wallet[[/:bold]].\n\nSørg for å dobbeltsjekke lommebokadressen din for å sikre at du vil motta airdrops."
   }
 }
