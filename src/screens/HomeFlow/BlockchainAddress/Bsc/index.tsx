@@ -44,7 +44,7 @@ export const BscAddress = memo(() => {
         ]}
         keyboardShouldPersistTaps={'handled'}
         showsVerticalScrollIndicator={false}>
-        <Image style={styles.icon} source={Images.chains.bscBlue} />
+        <Image style={styles.icon} source={Images.blockchains.bscBlue} />
         <Text style={styles.titleText}>
           {t('bsc_address.enter_address_title')}
         </Text>
@@ -64,7 +64,7 @@ export const BscAddress = memo(() => {
         />
         {!isKeyboardShown && (
           <WalletCard
-            logoImageSource={Images.card.wallet}
+            logoImageSource={Images.card.bscWallets}
             description={t('bsc_address.walletDescription')}
             style={styles.walletCard}
           />
@@ -73,6 +73,7 @@ export const BscAddress = memo(() => {
           style={styles.button}
           onPress={onSubmit}
           loading={loading}
+          disabled={!isRemoveAction && !address}
           isRemoveAction={isRemoveAction}
         />
       </ScrollView>

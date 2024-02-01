@@ -31,7 +31,9 @@ export const BscAddress = memo(() => {
       <ActionListItem
         onPress={onPress}
         containerStyle={styles.container}
-        LeadingIcon={<Image source={Images.chains.bsc} style={styles.icon} />}
+        LeadingIcon={
+          <Image source={Images.blockchains.bsc} style={styles.icon} />
+        }
         title={t('home.bsc_address.title')}
         subtitle={
           user.miningBlockchainAccountAddress ? (

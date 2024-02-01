@@ -23,7 +23,7 @@ export const SolanaAddress = memo(() => {
 
   const user = useSelector(unsafeUserSelector);
 
-  const onPress = () => navigation.navigate('BscAddress');
+  const onPress = () => navigation.navigate('SolanaAddress');
 
   return (
     <>
@@ -32,16 +32,16 @@ export const SolanaAddress = memo(() => {
         onPress={onPress}
         containerStyle={styles.container}
         LeadingIcon={
-          <Image source={Images.chains.solana} style={styles.icon} />
+          <Image source={Images.blockchains.solana} style={styles.icon} />
         }
         title={t('home.solana_address.title')}
         subtitle={
-          user.miningBlockchainAccountAddress ? (
+          user.solanaBlockchainAccountAddress ? (
             <Text
               style={styles.subtitleText}
               numberOfLines={1}
               ellipsizeMode={'middle'}>
-              {user.miningBlockchainAccountAddress}
+              {user.solanaBlockchainAccountAddress}
             </Text>
           ) : (
             t('home.solana_address.subtitle')

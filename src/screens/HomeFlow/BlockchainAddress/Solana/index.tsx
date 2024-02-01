@@ -9,11 +9,10 @@ import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {useValidatorsWarning} from '@screens/HomeFlow/BlockchainAddress/Bsc/hooks/useValidatorsWarning';
 import {AddressActionButton} from '@screens/HomeFlow/BlockchainAddress/components/AddressActionButton';
 import {WalletCard} from '@screens/HomeFlow/BlockchainAddress/components/WalletCard';
 import {useSetBlockchainAddress} from '@screens/HomeFlow/BlockchainAddress/hooks/useSetBlockchainAddress';
-import {BscBookIcon} from '@svg/BscBookIcon';
+import {SolanaBookIcon} from '@svg/SolanaBookIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
@@ -25,17 +24,16 @@ export const SolanaAddress = memo(() => {
   const {bottom: bottomInset} = useSafeAreaInsets();
   const {scrollRef} = useScrollEndOnKeyboardShown();
   const isKeyboardShown = useIsKeyboardShown();
-  const {showWarning, needToShowWarning} = useValidatorsWarning();
 
   const {address, loading, error, onAddressChange, onSubmit, isRemoveAction} =
     useSetBlockchainAddress({
-      addressUserField: 'miningBlockchainAccountAddress',
-      confirmTitle: t('bsc_address.enter_address_confirmation'),
+      addressUserField: 'solanaBlockchainAccountAddress',
+      confirmTitle: t('solana_address.enter_address_confirmation'),
     });
 
   return (
     <KeyboardAvoider>
-      <Header title={t('bsc_address.title')} />
+      <Header title={t('solana_address.title')} />
       <ScrollView
         ref={scrollRef}
         contentContainerStyle={[
@@ -44,28 +42,26 @@ export const SolanaAddress = memo(() => {
         ]}
         keyboardShouldPersistTaps={'handled'}
         showsVerticalScrollIndicator={false}>
-        <Image style={styles.icon} source={Images.chains.bscBlue} />
+        <Image style={styles.icon} source={Images.blockchains.solanaBlue} />
         <Text style={styles.titleText}>
-          {t('bsc_address.enter_address_title')}
+          {t('solana_address.enter_address_title')}
         </Text>
         <Text style={styles.descriptionText}>
-          {t('bsc_address.enter_address_description')}
+          {t('solana_address.enter_address_description')}
         </Text>
         <CommonInput
-          icon={<BscBookIcon />}
-          label={t('bsc_address.title')}
+          icon={<SolanaBookIcon />}
+          label={t('solana_address.title')}
           value={address}
           onChangeText={onAddressChange}
           containerStyle={styles.input}
           editable={!loading}
           errorText={error}
-          onChange={needToShowWarning ? showWarning : undefined}
-          showChangeLabel={false}
         />
         {!isKeyboardShown && (
           <WalletCard
-            logoImageSource={Images.card.wallet}
-            description={t('bsc_address.walletDescription')}
+            logoImageSource={Images.card.solanaWallets}
+            description={t('solana_address.walletDescription')}
             style={styles.walletCard}
           />
         )}
@@ -73,6 +69,7 @@ export const SolanaAddress = memo(() => {
           style={styles.button}
           onPress={onSubmit}
           loading={loading}
+          disabled={!isRemoveAction && !address}
           isRemoveAction={isRemoveAction}
         />
       </ScrollView>

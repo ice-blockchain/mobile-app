@@ -191,17 +191,18 @@ export const Images = {
   },
   card: {
     joinMainnet: require('./card/joinMainnet.png'),
-    wallet: require('./card/wallet.png'),
+    bscWallets: require('./card/bsc_wallets.png'),
+    solanaWallets: require('./card/solana_wallets.png'),
   },
   quiz: {
     quizFailed: require('./quiz/quiz_failed.png'),
     quiz: require('./quiz/quiz.png'),
     quiz_small: require('./quiz/quiz_small.png'),
   },
-  chains: {
-    solana: require('./chains/solana.png'),
-    solanaBlue: require('./chains/solana_blue.png'),
-    bsc: require('./chains/bsc.png'),
-    bscBlue: require('./chains/bsc_blue.png'),
+  blockchains: {
+    solana: require('./blockchains/solana.png'),
+    solanaBlue: require('./blockchains/solana_blue.png'),
+    bsc: require('./blockchains/bsc.png'),
+    bscBlue: require('./blockchains/bsc_blue.png'),
   },
 } as const;

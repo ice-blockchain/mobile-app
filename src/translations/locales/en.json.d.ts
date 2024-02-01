@@ -761,6 +761,11 @@ export type Translations = {
   'bsc_address.validators_warning_title': null;
   'bsc_address.validators_warning_text': null;
   'bsc_address.walletDescription': null;
+  'solana_address.title': null;
+  'solana_address.enter_address_title': null;
+  'solana_address.enter_address_description': null;
+  'solana_address.enter_address_confirmation': null;
+  'solana_address.walletDescription': null;
   'social_kyc.header': null;
   'social_kyc.verify_with_title': {method: number | string};
   'social_kyc.select_method_step.title': null;
