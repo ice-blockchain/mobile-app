@@ -59,11 +59,8 @@ export const Home = memo(() => {
             <View style={isLightDesign ? styles.section : undefined}>
               <Team />
             </View>
-<<<<<<< HEAD
             <Quiz />
-=======
             <SolanaAddress />
->>>>>>> 1d2cd64a (feat: add solana home button)
             <BscAddress />
             <Roadmap />
             <JoinMainnet />
