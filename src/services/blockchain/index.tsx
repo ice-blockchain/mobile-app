@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {PublicKey} from '@solana/web3.js';
 import {
   Address,
   createPublicClient,
@@ -13,7 +14,15 @@ export const isValidBscAddress = (address: string): boolean => {
   return isAddress(address);
 };
 
-export const bscClient = createPublicClient({
+export const isValidSolanaAddress = (address: string): boolean => {
+  try {
+    return PublicKey.isOnCurve(new PublicKey(address));
+  } catch {
+    return false;
+  }
+};
+
+const bscClient = createPublicClient({
   chain: bsc,
   transport: http(),
 });

@@ -27,7 +27,7 @@ export const SolanaAddress = memo(() => {
 
   const {address, loading, error, onAddressChange, onSubmit, isRemoveAction} =
     useSetBlockchainAddress({
-      addressUserField: 'solanaBlockchainAccountAddress',
+      addressUserField: 'solanaMiningBlockchainAccountAddress',
       confirmTitle: t('solana_address.enter_address_confirmation'),
     });
 

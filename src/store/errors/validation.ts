@@ -8,6 +8,7 @@ export enum ValidationErrorCode {
   SameEmail = 'SameEmail',
   InvalidPhone = 'InvalidPhone',
   InvalidBscAddress = 'InvalidBscAddress',
+  InvalidSolanaAddress = 'InvalidSolanaAddress',
   BscAddressIsNotEoa = 'BscAddressIsNotEoa',
   UnableToValidateBscAddressEoa = 'UnableToValidateBscAddressEoa',
 }
@@ -18,6 +19,7 @@ const validationErrorMessages: {[code in ValidationErrorCode]: string} = {
   InvalidPhone: t('errors.invalid_phone'),
   SamePhoneNumber: t('errors.same_phone_error'),
   InvalidBscAddress: t('errors.invalid_blockchain_address'),
+  InvalidSolanaAddress: t('errors.invalid_blockchain_address'),
   BscAddressIsNotEoa: t('errors.address_not_eoa'),
   UnableToValidateBscAddressEoa: t('errors.unable_to_validate_bsc_addr_eoa'),
 };

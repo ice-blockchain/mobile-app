@@ -36,12 +36,12 @@ export const SolanaAddress = memo(() => {
         }
         title={t('home.solana_address.title')}
         subtitle={
-          user.solanaBlockchainAccountAddress ? (
+          user.solanaMiningBlockchainAccountAddress ? (
             <Text
               style={styles.subtitleText}
               numberOfLines={1}
               ellipsizeMode={'middle'}>
-              {user.solanaBlockchainAccountAddress}
+              {user.solanaMiningBlockchainAccountAddress}
             </Text>
           ) : (
             t('home.solana_address.subtitle')

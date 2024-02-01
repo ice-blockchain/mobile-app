@@ -23,7 +23,7 @@ export const useSetBlockchainAddress = ({
 }: {
   addressUserField:
     | 'miningBlockchainAccountAddress'
-    | 'solanaBlockchainAccountAddress';
+    | 'solanaMiningBlockchainAccountAddress';
   confirmTitle: string;
 }) => {
   const navigation =
