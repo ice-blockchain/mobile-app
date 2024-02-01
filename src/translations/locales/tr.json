@@ -549,7 +549,8 @@
     "stake_now": "Şimdi ön hisselendirme yap!",
     "balance_label": "Hisselendirme bakiyesi",
     "confirm_title": "Ön Hisselendirmeyi Onayla",
-    "confirm_subtitle": "Coinlarını ön hisselendirmek istediğinden emin misin? Onayladıktan sonra bu işlem geri alınamaz."
+    "confirm_subtitle": "Coinlarını ön hisselendirmek istediğinden emin misin? Onayladıktan sonra bu işlem geri alınamaz.",
+    "remove_pre_staking": "Ön-Yatırımı Kaldır"
   },
   "stats": {
     "header_title": "İstatistikler",

@@ -549,7 +549,8 @@
     "stake_now": "今すぐ事前ステーキングをしよう！",
     "balance_label": "ステーキングした通貨量",
     "confirm_title": "事前ステーキングの確定",
-    "confirm_subtitle": "本当にコインの事前ステーキングを行いますか？一度確定すると取り消すことはできません。"
+    "confirm_subtitle": "本当にコインの事前ステーキングを行いますか？一度確定すると取り消すことはできません。",
+    "remove_pre_staking": "プリステーキングの解除"
   },
   "stats": {
     "header_title": "成績",

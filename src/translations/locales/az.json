@@ -549,7 +549,8 @@
     "stake_now": "İndi Əvvəldən Kilidlə!",
     "balance_label": "Kilidlənmiş balans",
     "confirm_title": "Əvvəldən Kilidləməni təsdiq et",
-    "confirm_subtitle": "Sikkələrini əvvəldən kilidləmək istədiyinə əminsən? Təsdiq etdikdən sonra geriyə dönüş yoxdur."
+    "confirm_subtitle": "Sikkələrini əvvəldən kilidləmək istədiyinə əminsən? Təsdiq etdikdən sonra geriyə dönüş yoxdur.",
+    "remove_pre_staking": "Əvvəlki İcmalı çıxart"
   },
   "stats": {
     "header_title": "Statistika",

@@ -549,7 +549,8 @@
     "stake_now": "Participe já do pré-staking!",
     "balance_label": "Saldo em staking",
     "confirm_title": "Confirmar pré-staking",
-    "confirm_subtitle": "Tem certeza de que deseja alocar suas moedas em pré-staking? Isso será irreversível após a sua confirmação."
+    "confirm_subtitle": "Tem certeza de que deseja alocar suas moedas em pré-staking? Isso será irreversível após a sua confirmação.",
+    "remove_pre_staking": "Remover Pré-Staking"
   },
   "stats": {
     "header_title": "Estatísticas",

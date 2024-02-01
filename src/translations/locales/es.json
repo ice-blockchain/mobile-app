@@ -549,7 +549,8 @@
     "stake_now": "¡Preapuesta ahora!",
     "balance_label": "Saldo apostado",
     "confirm_title": "Confirmar preapuesta",
-    "confirm_subtitle": "¿Seguro que quieres preapostar tus monedas? Esta acción no se puede deshacer una vez que la confirmes."
+    "confirm_subtitle": "¿Seguro que quieres preapostar tus monedas? Esta acción no se puede deshacer una vez que la confirmes.",
+    "remove_pre_staking": "Eliminar Pre-Staking"
   },
   "stats": {
     "header_title": "Estadísticas",

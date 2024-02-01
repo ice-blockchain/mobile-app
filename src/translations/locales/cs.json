@@ -549,7 +549,8 @@
     "stake_now": "Pre-stakujte právě teď!",
     "balance_label": "Stakovaný zůstatek",
     "confirm_title": "Potvrdit pre-staking",
-    "confirm_subtitle": "Opravdu chcete své coiny pre-stakovat? Tuto akci po potvrzení již nebudete moci odvolat."
+    "confirm_subtitle": "Opravdu chcete své coiny pre-stakovat? Tuto akci po potvrzení již nebudete moci odvolat.",
+    "remove_pre_staking": "Odstranit představování sázek"
   },
   "stats": {
     "header_title": "Statistiky",

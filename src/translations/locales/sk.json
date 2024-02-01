@@ -549,7 +549,8 @@
     "stake_now": "Pre-stakuj teraz!",
     "balance_label": "Stav stakovania",
     "confirm_title": "Potrvdiť pre-stake",
-    "confirm_subtitle": "Určite chceš pre-stakovať mince? Po potvrdení nie je možné sa vrátiť."
+    "confirm_subtitle": "Určite chceš pre-stakovať mince? Po potvrdení nie je možné sa vrátiť.",
+    "remove_pre_staking": "Odstráňte predstavenie stávok"
   },
   "stats": {
     "header_title": "Štatistiky",

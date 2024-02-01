@@ -21,14 +21,16 @@ import {isAndroid, rem} from 'rn-units';
 
 type Props = {
   parameters: RefObject<{years: number; allocation: number} | null>;
+  calculatedResults: {miningRate: number; bonus: number} | null;
 };
 
-export const Footer = memo(({parameters}: Props) => {
+export const Footer = memo(({parameters, calculatedResults}: Props) => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
   const {preStakingLoading, confirmPreStaking} = usePreStaking();
   const [termsAccepted, setTermsAccepted] = useState(false);
   const buttonDisabled = !termsAccepted;
+  const isRemoveAction = calculatedResults?.bonus === 0;
 
   const onStakePress = () => {
     navigation.navigate({
@@ -86,7 +88,11 @@ export const Footer = memo(({parameters}: Props) => {
       <PrimaryButton
         onPress={onStakePress}
         disabled={buttonDisabled}
-        text={t('staking.stake_now')}
+        text={
+          isRemoveAction
+            ? t('staking.remove_pre_staking')
+            : t('staking.stake_now')
+        }
         textStyle={styles.buttonText}
         style={[styles.button, buttonDisabled && styles.button_disabled]}
         icon={

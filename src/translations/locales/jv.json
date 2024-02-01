@@ -538,7 +538,8 @@
     "stake_now": "Pre-Stake Now!",
     "balance_label": "Staked balance",
     "confirm_title": "Confirm Pre-Stake",
-    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm"
+    "confirm_subtitle": "Are you sure you want to pre-stake your coins? This cannot be undone once you confirm",
+    "remove_pre_staking": "Lèpaskan Staking Awal"
   },
   "stats": {
     "header_title": "Stats",

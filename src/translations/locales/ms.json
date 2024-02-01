@@ -549,7 +549,8 @@
     "stake_now": "Prataruh Sekarang!",
     "balance_label": "Baki ditaruh",
     "confirm_title": "Sahkan Prataruh",
-    "confirm_subtitle": "Adakah anda pasti anda ingin membuat prataruh syiling anda? Ini tidak boleh dibuat asal sebaik sahaja anda mengesahkannya."
+    "confirm_subtitle": "Adakah anda pasti anda ingin membuat prataruh syiling anda? Ini tidak boleh dibuat asal sebaik sahaja anda mengesahkannya.",
+    "remove_pre_staking": "Alihkan Pre-Staking"
   },
   "stats": {
     "header_title": "Statistik",

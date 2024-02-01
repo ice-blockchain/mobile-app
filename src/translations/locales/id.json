@@ -549,7 +549,8 @@
     "stake_now": "Kunci Terlebih Dahulu Sekarang!",
     "balance_label": "Saldo dikunci",
     "confirm_title": "Konfirmasikan Prapenguncian",
-    "confirm_subtitle": "Yakin kunci koin Anda terlebih dahulu? Tindakan ini tidak dapat diurungkan setelah dikonfirmasi."
+    "confirm_subtitle": "Yakin kunci koin Anda terlebih dahulu? Tindakan ini tidak dapat diurungkan setelah dikonfirmasi.",
+    "remove_pre_staking": "Hapus Pre-Staking"
   },
   "stats": {
     "header_title": "Statistik",

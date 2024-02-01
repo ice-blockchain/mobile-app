@@ -549,7 +549,8 @@
     "stake_now": "Mizează anticipat acum!",
     "balance_label": "Sold mizat",
     "confirm_title": "Confirmă mizarea anticipată",
-    "confirm_subtitle": "Sigur vrei să îți mizezi anticipat monedele? Această acțiune nu poate fi anulată odată ce confirmi."
+    "confirm_subtitle": "Sigur vrei să îți mizezi anticipat monedele? Această acțiune nu poate fi anulată odată ce confirmi.",
+    "remove_pre_staking": "Eliminați Pre-Staking"
   },
   "stats": {
     "header_title": "Statistici",

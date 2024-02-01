@@ -51,7 +51,10 @@ export const Staking = memo(() => {
             onParametersChange={onParametersChange}
             calculatedResults={calculatedResults}
           />
-          <Footer parameters={parameters} />
+          <Footer
+            parameters={parameters}
+            calculatedResults={calculatedResults}
+          />
         </View>
       </Animated.ScrollView>
     </View>

@@ -549,7 +549,8 @@
     "stake_now": "Pre-stake'uj teraz!",
     "balance_label": "Stake'owane saldo",
     "confirm_title": "Potwierdź pre-stake",
-    "confirm_subtitle": "Czy na pewno chcesz pre-stake'ować swoje monety? Po potwierdzeniu nie można tego cofnąć."
+    "confirm_subtitle": "Czy na pewno chcesz pre-stake'ować swoje monety? Po potwierdzeniu nie można tego cofnąć.",
+    "remove_pre_staking": "Usuń Pre-Staking"
   },
   "stats": {
     "header_title": "Statystyki",
