@@ -117,3 +117,7 @@ export type ClientData = {
   rate?: RateData | null;
   quiz?: QuizData | null;
 };
+
+export type UserBlockchainAddressField =
+  | 'miningBlockchainAccountAddress'
+  | 'solanaMiningBlockchainAccountAddress';

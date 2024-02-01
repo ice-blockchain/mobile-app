@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {UserBlockchainAddressField} from '@api/user/types';
 import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -21,9 +22,7 @@ export const useSetBlockchainAddress = ({
   addressUserField,
   confirmTitle,
 }: {
-  addressUserField:
-    | 'miningBlockchainAccountAddress'
-    | 'solanaMiningBlockchainAccountAddress';
+  addressUserField: UserBlockchainAddressField;
   confirmTitle: string;
 }) => {
   const navigation =
@@ -33,7 +32,10 @@ export const useSetBlockchainAddress = ({
   const [address, setAddress] = useState(user[addressUserField] ?? '');
   const submittedRef = useRef(false);
 
-  useGoBackIfAddressSet({isFormSubmitted: submittedRef.current});
+  useGoBackIfAddressSet({
+    addressUserField,
+    isFormSubmitted: submittedRef.current,
+  });
 
   const error = useSelector(
     failedReasonSelector.bind(null, AccountActions.UPDATE_ACCOUNT),
