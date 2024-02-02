@@ -57,6 +57,7 @@ export const useCancelQuiz = () => {
               }),
             );
             dispatch(QuizActions.RESET_QUIZ.RESET.create());
+            dispatch(QuizActions.CHECK_QUIZ_STATUS.START.create());
             navigation.goBack();
           },
         },
