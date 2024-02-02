@@ -6,6 +6,7 @@ import {MiningButtonTooltip} from '@navigation/components/MainTabBar/components/
 import {useMiningState} from '@navigation/components/MainTabBar/components/TabBarMiningItem/components/MiningButton/hooks/useMiningState';
 import {useStackingModal} from '@navigation/components/MainTabBar/components/TabBarMiningItem/components/MiningButton/hooks/useStackingModal';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
+import {openMiningDisabled} from '@store/modules/Tokenomics/utils/openMiningDisabled';
 import React, {useEffect, useRef} from 'react';
 import {View} from 'react-native';
 
@@ -21,7 +22,6 @@ export const MiningButton = ({onPress, onPressCallback}: Props) => {
     miningStateTooltipSeen,
     closeTooltip,
     startMiningSession,
-    showDisabledPopup,
   } = useMiningState();
 
   const {lottieWrapperRef, showStackingModal} = useStackingModal();
@@ -71,7 +71,7 @@ export const MiningButton = ({onPress, onPressCallback}: Props) => {
       }
 
       if (gestureConfig.showDisabledPopup) {
-        showDisabledPopup();
+        openMiningDisabled();
       }
 
       if (!miningStateTooltipSeen) {
