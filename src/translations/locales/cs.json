@@ -1322,16 +1322,9 @@
     "description2": "Tento krok nám pomáhá zajistit bezpečnost a autentičnost Vašeho účtu. Děkujeme za spolupráci!"
   },
   "quiz": {
-    "title": "KYC Krok #3",
-    "terms": {
+    "title": "Kvíz",
+    "intro": {
       "description": "V Ice věříme v podporu aktivního a informovaného společenství. Naším cílem je zajistit, že mince Ice jsou distribuovány těm, kteří jsou opravdu angažovaní a sdílejí naši vizi.",
-      "knowledge_verification": {
-        "title": "💡 Ověření znalostí",
-        "description": "Pro zajištění toho, že naše společenství je dobře informované a sdílí naši vizi:",
-        "point1": "Budete vystaveni 21 otázkám odvozeným z našich komplexních zdrojů.",
-        "point2": "Úspěšné složení kvízu potvrzuje vaše porozumění a odhodlání.",
-        "point3": "Neúspěšný kvíz naznačuje potřebu dalšího zapojení se s naším materiálem."
-      },
       "community_engagement": {
         "title": "🙌 Aktivní zapojení do komunity",
         "description": "Vaše zapojení v rámci ekosystému Ice přímo ovlivňuje vaše těžební schopnosti:",
@@ -1340,16 +1333,21 @@
         "point3": "Sociální interakce: Zvyšte svou přítomnost tím, že budete líbit, sdílet, sledovat nebo přispívat o Ice.",
         "bottom_description": "Čím více se angažujete, tím vyšší je vaše skóre pozitivní interakce, což vám umožní projít KYC procesem."
       },
-      "terms_privacy": "Rozumím a souhlasím s [[:link]]Podmínkami a pravidly[[/:link]]."
-    },
-    "intro": {
-      "knowledge_check": "🧠 Kontrola znalostí:",
-      "point1": "Celkem je 21 otázek.",
-      "point2": "Chcete-li projít kvízem, musíte správně odpovědět na nejméně 18 otázek.",
-      "point3": "Oops, selhal kvíz? Zkuste to znovu příští týden.",
-      "point4": "📚 Všechny informace k tomuto kvízu můžete číst [[:link]]zde[[/:link]].",
-      "why_quiz": "Proč kvíz?",
-      "why_quiz_description": "Jsme zde pro inteligentní, bezpečné a informované těžení. Tento malý krok zajišťuje, že naše společenství Ice roste s vědomím a porozuměním!"
+      "terms_privacy": "Rozumím a souhlasím s [[:link]]Podmínkami a pravidly[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Test znalostí",
+        "point2": "Pro úspěšné absolvování kvízu musíte správně zodpovědět alespoň 18 otázek.",
+        "point3": "Neúspěch v kvízu naznačuje potřebu dalšího seznámení se s naším materiálem.",
+        "point4": "Pro úspěšné absolvování kvízu existuje časový limit. Můžete si zjistit, kolik dnů vám zbývá do data uzávěrky na domovské stránce v sekci kvíz.",
+        "point5": "Před vypršením časového limitu máte k dispozici 3 pokusy. Pokud nezvládnete kvíz 3krát nebo dojde ke dni uzávěrky, nebudete moci těžit a váš účet bude označen jako nesprávný.",
+        "point6": "📚 Veškeré informace o tomto kvízu můžete přečíst [[:link]]zde[[/:link]].",
+        "description": "Pro zajištění toho, že naše společenství je dobře informované a sdílí naši vizi:",
+        "point1": "Budete vystaveni 21 otázkám odvozeným z našich komplexních zdrojů."
+      },
+      "why_quiz": {
+        "title": "💡 Proč kvíz?",
+        "description": "Naše oddanost znalostem a porozumění je naším hlavním cílem v komunitě. Kvízem chceme zajistit, že Ice najde cestu ke správným rukám těm, kteří opravdu rozumí a souzní s vizi našeho projektu."
+      }
     },
     "mining_disabled": {
       "title": "Selhal kvíz",
@@ -1365,12 +1363,20 @@
     "confirmation_popup": {
       "title": "Potvrzení",
       "start_description": "Jste si jisti, že chcete začít kvíz?",
-      "cancel_description": "Jste si jisti, že chcete zrušit kvíz?"
+      "cancel_description": "Přeskočením kvízu použijete jeden ze svých dostupných pokusů. Opravdu chcete kvíz nyní přeskočit?"
     },
     "quiz_success": {
       "title": "Ověření dokončeno",
       "description": "Gratulujeme, úspěšně jste dokončili svůj KYC. Vaše stále správné odpovědi potvrdily vaše odhodlání a znalosti. Jste nyní ověřeni."
-    }
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Těžba zakázána",
+      "description": "Váš přístup k těžbě byl zakázán kvůli třem po sobě jdoucím neúspěšným pokusům v kvízu nebo vypršení stanoveného časového limitu, jak je vyžadováno naším procesem KYC."
+    },
+    "action": "Dokončit kvíz",
+    "reminder": "Rádi vás připomeneme, že kvíz musíte dokončit, abyste mohli dostávat mince.",
+    "retries": "Opakování: {{number}}",
+    "days_left": "Zbývající dny: {{days}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1382,5 +1388,8 @@
         "description": "Gratulujeme, úspěšně jste dokončili svou verifikaci. Nyní máte nárok na udržování svého měsíčního statusu distribuce BNB Smart Chain."
       }
     }
+  },
+  "buttons": {
+    "skip": "Přeskočit"
   }
 }

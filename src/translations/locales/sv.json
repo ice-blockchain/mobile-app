@@ -1322,16 +1322,9 @@
     "description2": "Det här steget hjälper oss att säkerställa säkerheten och äktheten av ditt konto. Tack för ditt samarbete!"
   },
   "quiz": {
-    "title": "KYC Steg #3",
-    "terms": {
+    "title": "Quiz",
+    "intro": {
       "description": "På Ice tror vi på att främja en gemenskap av aktiva och informerade medlemmar. Vår mission är att se till att Ice-mynten fördelas till de som verkligen engagerar sig och delar vår vision.",
-      "knowledge_verification": {
-        "title": "💡 Kunskapsverifiering",
-        "description": "För att säkerställa att vår gemenskap är väl informerad och delar vår vision:",
-        "point1": "Du kommer att presenteras med 21 frågor som härrör från våra omfattande resurser.",
-        "point2": "Ett godkänt quiz bekräftar din förståelse och engagemang.",
-        "point3": "Ett misslyckat quiz indikerar behovet av ytterligare engagemang med vårt material."
-      },
       "community_engagement": {
         "title": "🙌 Aktivt gemenskapsengagemang",
         "description": "Ditt engagemang inom Ice-ekosystemet påverkar direkt din gruvkapacitet:",
@@ -1340,16 +1333,21 @@
         "point3": "Sociala interaktioner: Öka din närvaro genom att gilla, dela, följa eller posta om Ice.",
         "bottom_description": "Ju mer engagerade du är, desto högre blir din positiva interaktionspoäng, vilket möjliggör KYC-processen."
       },
-      "terms_privacy": "Jag förstår och godkänner [[:link]]Användarvillkoren och sekretesspolicyn[[/:link]]."
-    },
-    "intro": {
-      "knowledge_check": "🧠 Kunskapskontroll:",
-      "point1": "Det finns sammanlagt 21 frågor.",
-      "point2": "För att klara quizen måste du svara rätt på minst 18 frågor.",
-      "point3": "Hoppsan, misslyckades quiz? Försök igen nästa vecka.",
-      "point4": "📚 All information om detta quiz kan läsas [[:link]]här[[/:link]].",
-      "why_quiz": "Varför quizen?",
-      "why_quiz_description": "Vi handlar om smart, säker och informerad gruvdrift. Detta lilla steg säkerställer att vår Ice-gemenskap blomstrar med kunskap och förståelse!"
+      "terms_privacy": "Jag förstår och godkänner [[:link]]Användarvillkoren och sekretesspolicyn[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Kunskapskontroll",
+        "point2": "För att klara quizen måste du svara rätt på minst 18 frågor.",
+        "point3": "Ett misslyckat quiz indikerar behovet av ett djupare engagemang med vårt material.",
+        "point4": "Det finns en tidsbegränsning för att slutföra quizen. Du kan se hur många dagar som återstår till utgångsdatumet på din startsida under quiz-avsnittet.",
+        "point5": "Du har 3 försök tillgängliga innan utgångsdatumet. Om du misslyckas med quizen 3 gånger eller om utgångsdatumet passerar kommer du inte längre att kunna bryta, och ditt konto kommer att straffas.",
+        "point6": "📚 All information om denna quiz kan läsas [[:link]]här[[/:link]].",
+        "description": "För att säkerställa att vår gemenskap är väl informerad och delar vår vision:",
+        "point1": "Du kommer att presenteras med 21 frågor som härrör från våra omfattande resurser."
+      },
+      "why_quiz": {
+        "title": "💡 Varför Quizen?",
+        "description": "Vårt åtagande för kunskap och förståelse är i framkant av vår gemenskap. Med vår quiz strävar vi efter att säkerställa att Ice når rätt händer, de som verkligen förstår och är i linje med vår projektvision."
+      }
     },
     "mining_disabled": {
       "title": "Misslyckad quiz",
@@ -1365,12 +1363,20 @@
     "confirmation_popup": {
       "title": "Bekräftelse",
       "start_description": "Är du säker på att du vill starta quizen?",
-      "cancel_description": "Är du säker på att du vill avbryta quizen?"
+      "cancel_description": "Genom att hoppa över quizen kommer du att använda en av de 3 tillgängliga försöken. Är du säker på att du vill hoppa över quizen nu?"
     },
     "quiz_success": {
       "title": "Verifiering slutförd",
       "description": "Grattis, du har framgångsrikt slutfört din KYC. Dina konsekvent rätta svar har bevisat ditt engagemang och din kunskap. Du är nu verifierad."
-    }
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Brytning Inaktiverad",
+      "description": "Din tillgång till brytning har inaktiverats på grund av tre på varandra följande misslyckade quizar eller utgång av den tilldelade tiden, enligt vårt KYC-process."
+    },
+    "action": "Slutför quizen",
+    "reminder": "Vi påminner dig om att du måste slutföra testet för att kunna ta emot mynt.",
+    "retries": "Försök kvar: {{number}}",
+    "days_left": "Dagar kvar: {{days}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1382,5 +1388,8 @@
         "description": "Grattis, du har framgångsrikt slutfört din verifiering. Du är nu berättigad att behålla din månatliga status för distribution av BNB Smart Chain."
       }
     }
+  },
+  "buttons": {
+    "skip": "Hoppa över"
   }
 }

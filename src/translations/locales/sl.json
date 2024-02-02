@@ -1322,16 +1322,9 @@
     "description2": "Ta korak nam pomaga zagotoviti varnost in avtentičnost vašega računa. Hvala za sodelovanje!"
   },
   "quiz": {
-    "title": "KYC Korak #3",
-    "terms": {
+    "title": "Kviz",
+    "intro": {
       "description": "V podjetju Ice verjamemo v spodbujanje skupnosti aktivnih in informiranih članov. Naša misija je zagotoviti distribucijo Ice kovancev tistim, ki so resnično vključeni in delijo našo vizijo.",
-      "knowledge_verification": {
-        "title": "💡 Preverjanje znanja",
-        "description": "Da bi zagotovili, da je naša skupnost dobro obveščena in se zavzema za našo vizijo:",
-        "point1": "Predstavili vam bomo 21 vprašanj, izpeljanih iz naših obsežnih virov.",
-        "point2": "Uspešen kviz potrjuje vaše razumevanje in zavezanost.",
-        "point3": "Neuspešen kviz kaže na potrebo po večjem sodelovanju z našimi materiali."
-      },
       "community_engagement": {
         "title": "🙌 Aktivno sodelovanje v skupnosti",
         "description": "Vaše sodelovanje v ekosistemu Ice neposredno vpliva na vaše zmogljivosti rudarjenja:",
@@ -1340,16 +1333,21 @@
         "point3": "Družbene interakcije: Povečajte svojo prisotnost s všečkanjem, deljenjem, sledenjem ali objavljanjem o Ice.",
         "bottom_description": "Bolj ko ste aktivni, višja je vaša pozitivna ocena interakcije, kar vam omogoča, da opravite postopek KYC."
       },
-      "terms_privacy": "Razumem in se strinjam s [[:link]]Pogoji uporabe in politiko zasebnosti[[/:link]]."
-    },
-    "intro": {
-      "knowledge_check": "🧠 Preverjanje znanja:",
-      "point1": "Skupno je 21 vprašanj.",
-      "point2": "Da uspešno opravite kviz, morate pravilno odgovoriti na vsaj 18 vprašanj.",
-      "point3": "Opa, kviz ni uspel? Poskusite znova naslednji teden.",
-      "point4": "📚 Vse informacije o tem kvizu so na voljo [[:link]]tukaj[[/:link]].",
-      "why_quiz": "Zakaj kviz?",
-      "why_quiz_description": "Zavzemamo se za pametno, varno in informirano rudarjenje. Ta majhen korak zagotavlja, da bo skupnost Ice cvetela z znanjem in razumevanjem!"
+      "terms_privacy": "Razumem in se strinjam s [[:link]]Pogoji uporabe in politiko zasebnosti[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Preverjanje Znanja",
+        "point2": "Za uspešno opravljanje kviza morate pravilno odgovoriti na vsaj 18 vprašanj.",
+        "point3": "Neuspešen kviz kaže na potrebo po večjem vključevanju z našimi gradivi.",
+        "point4": "Za dokončanje kviza velja časovna omejitev. Število preostalih dni lahko vidite na svoji začetni strani v razdelku za kviz.",
+        "point5": "Pred datumom izteka veljavnosti imate na voljo 3 poskuse. Če kviza ne opravite 3-krat ali če preteče datum izteka veljavnosti, ne boste več mogli rudariti, in vaš račun bo kaznovan.",
+        "point6": "📚 Vse informacije o tem kvizu lahko preberete [[:link]]tukaj[[/:link]].",
+        "description": "Da bi zagotovili, da je naša skupnost dobro obveščena in se zavzema za našo vizijo:",
+        "point1": "Predstavili vam bomo 21 vprašanj, izpeljanih iz naših obsežnih virov."
+      },
+      "why_quiz": {
+        "title": "💡 Zakaj Kviz?",
+        "description": "Naše zavezništvo s znanjem in razumevanjem je na čelu naše skupnosti. Z našim kvizom si prizadevamo zagotoviti, da bo Ice prišel v prave roke, tistih, ki resnično razumejo in se strinjajo z vizijo našega projekta."
+      }
     },
     "mining_disabled": {
       "title": "Kviz ni uspel",
@@ -1365,12 +1363,20 @@
     "confirmation_popup": {
       "title": "Potrditev",
       "start_description": "Ste prepričani, da želite začeti kviz?",
-      "cancel_description": "Ste prepričani, da želite preklicati kviz?"
+      "cancel_description": "S preskakovanjem kviza boste uporabili enega od 3 razpoložljivih poskusov. Ste prepričani, da želite kviz preskočiti zdaj?"
     },
     "quiz_success": {
       "title": "Preverjanje je uspešno zaključeno",
       "description": "Čestitamo, uspešno ste zaključili KYC. Vaši dosledni pravilni odgovori so dokazali vašo predanost in znanje. Sedaj ste preverjeni."
-    }
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Onemogočeno Rudarjenje",
+      "description": "Vaš dostop do rudarjenja je bil onemogočen zaradi treh zaporednih neuspelih kvizov ali poteka časa, kot je zahtevano v našem postopku KYC."
+    },
+    "action": "Dokončajte kviz",
+    "reminder": "Spomnimo vas, da morate opraviti test, da lahko prejmete kovance.",
+    "retries": "Preostali poskusi: {{number}}",
+    "days_left": "Preostali dnevi: {{days}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1382,5 +1388,8 @@
         "description": "Čestitke, uspešno ste opravili svojo preverjanje. Zdaj ste upravičeni do vzdrževanja svojega mesečnega statusa razdeljevanja BNB Smart Chain."
       }
     }
+  },
+  "buttons": {
+    "skip": "Preskoči"
   }
 }

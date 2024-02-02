@@ -1322,16 +1322,9 @@
     "description2": "Dieser Schritt hilft uns, die Sicherheit und Authentizität Ihres Kontos sicherzustellen. Vielen Dank für Ihre Mitarbeit!"
   },
   "quiz": {
-    "title": "KYC Schritt #3",
-    "terms": {
+    "title": "Quiz",
+    "intro": {
       "description": "Bei Ice setzen wir auf die Förderung einer Gemeinschaft aktiver und informierter Mitglieder. Unsere Mission ist es sicherzustellen, dass Ice Coins an diejenigen verteilt werden, die wirklich engagiert sind und unsere Vision teilen.",
-      "knowledge_verification": {
-        "title": "💡 Wissensüberprüfung",
-        "description": "Um sicherzustellen, dass unsere Gemeinschaft gut informiert ist und unsere Vision teilt:",
-        "point1": "Ihnen werden 21 Fragen aus unseren umfassenden Ressourcen gestellt.",
-        "point2": "Ein bestandener Test bestätigt Ihr Verständnis und Ihre Hingabe.",
-        "point3": "Ein nicht bestandener Test zeigt den Bedarf an weiterem Engagement mit unseren Materialien auf."
-      },
       "community_engagement": {
         "title": "🙌 Aktives Gemeinschaftsengagement",
         "description": "Ihr Engagement innerhalb des Ice-Ökosystems beeinflusst direkt Ihre Mining-Fähigkeiten:",
@@ -1340,16 +1333,21 @@
         "point3": "Soziale Interaktionen: Steigern Sie Ihre Präsenz, indem Sie Ice liken, teilen, folgen oder darüber posten.",
         "bottom_description": "Je aktiver Sie sind, desto höher ist Ihre positive Interaktionsbewertung, was Ihnen ermöglicht, den KYC-Prozess zu durchlaufen."
       },
-      "terms_privacy": "Ich verstehe und stimme den [[:link]]Nutzungsbedingungen und Datenschutzbestimmungen[[/:link]] zu."
-    },
-    "intro": {
-      "knowledge_check": "🧠 Wissensüberprüfung:",
-      "point1": "Insgesamt gibt es 21 Fragen.",
-      "point2": "Um den Test zu bestehen, müssen Sie mindestens 18 Fragen korrekt beantworten.",
-      "point3": "Oops, Test nicht bestanden? Versuchen Sie es nächste Woche erneut.",
-      "point4": "📚 Alle Informationen zu diesem Test können [[:link]]hier[[/:link]] nachgelesen werden.",
-      "why_quiz": "Warum der Test?",
-      "why_quiz_description": "Wir setzen auf intelligentes, sicheres und informiertes Mining. Dieser kleine Schritt gewährleistet, dass unsere Ice-Community mit Wissen und Verständnis wächst!"
+      "terms_privacy": "Ich verstehe und stimme den [[:link]]Nutzungsbedingungen und Datenschutzbestimmungen[[/:link]] zu.",
+      "knowledge_check": {
+        "title": "🧠 Wissensüberprüfung",
+        "point2": "Um das Quiz erfolgreich zu bestehen, müssen Sie mindestens 18 Fragen richtig beantworten.",
+        "point3": "Ein nicht bestandenes Quiz deutet auf die Notwendigkeit weiterer Beschäftigung mit unserem Material hin.",
+        "point4": "Für das Bestehen des Quiz gibt es eine zeitliche Begrenzung. Sie können sehen, wie viele Tage Ihnen bis zum Ablaufdatum auf Ihrer Startseite im Quiz-Bereich verbleiben.",
+        "point5": "Sie haben 3 Versuche, bevor die zeitliche Begrenzung erreicht ist. Wenn Sie das Quiz 3 Mal nicht bestehen oder die zeitliche Begrenzung abläuft, können Sie nicht mehr minen, und Ihr Konto wird gekennzeichnet.",
+        "point6": "📚 Alle Informationen zu diesem Quiz können Sie [[:link]]hier[[/:link]] nachlesen.",
+        "description": "Um sicherzustellen, dass unsere Gemeinschaft gut informiert ist und unsere Vision teilt:",
+        "point1": "Ihnen werden 21 Fragen aus unseren umfassenden Ressourcen gestellt."
+      },
+      "why_quiz": {
+        "title": "💡 Warum das Quiz?",
+        "description": "Unser Engagement für Wissen und Verständnis steht im Mittelpunkt unserer Community. Mit unserem Quiz möchten wir sicherstellen, dass Ice den Weg in die richtigen Hände findet, nämlich in diejenigen, die unser Projektvision wirklich verstehen und teilen."
+      }
     },
     "mining_disabled": {
       "title": "Test nicht bestanden",
@@ -1365,12 +1363,20 @@
     "confirmation_popup": {
       "title": "Bestätigung",
       "start_description": "Sind Sie sicher, dass Sie den Test starten möchten?",
-      "cancel_description": "Sind Sie sicher, dass Sie den Test abbrechen möchten?"
+      "cancel_description": "Wenn Sie das Quiz überspringen, verwenden Sie einen Ihrer verfügbaren Versuche. Sind Sie sicher, dass Sie das Quiz jetzt überspringen möchten?"
     },
     "quiz_success": {
       "title": "Überprüfung abgeschlossen",
       "description": "Herzlichen Glückwunsch, Sie haben Ihre KYC erfolgreich abgeschlossen. Ihre konstant richtigen Antworten haben Ihr Engagement und Wissen bewiesen. Sie sind jetzt verifiziert."
-    }
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Mining deaktiviert",
+      "description": "Ihr Zugang zum Mining wurde aufgrund von drei aufeinander folgenden Quizfehlern oder dem Ablauf der festgelegten Zeit, wie es unser KYC-Verfahren erfordert, deaktiviert."
+    },
+    "action": "Quiz abschließen",
+    "reminder": "Wir erinnern Sie daran, dass Sie das Quiz abschließen müssen, um Münzen zu erhalten.",
+    "retries": "Versuche: {{number}}",
+    "days_left": "Verbleibende Tage: {{days}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1382,5 +1388,8 @@
         "description": "Herzlichen Glückwunsch, Sie haben Ihre Verifizierung erfolgreich abgeschlossen. Sie sind jetzt berechtigt, Ihren monatlichen Status der BNB Smart Chain-Verteilung aufrechtzuerhalten."
       }
     }
+  },
+  "buttons": {
+    "skip": "Überspringen"
   }
 }

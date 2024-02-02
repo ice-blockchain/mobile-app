@@ -1325,16 +1325,9 @@
     "description2": "Hierdie stap help ons om die veiligheid en egtheid van u rekening te verseker. Dankie vir u samewerking!"
   },
   "quiz": {
-    "title": "KYC Stap #3",
-    "terms": {
+    "title": "Toets",
+    "intro": {
       "description": "By Ice, glo ons in die bevordering van 'n gemeenskap van aktiewe en ingeligte lede. Ons missie is om te verseker dat Ice-munte aan dié wat werklik betrokke is en ooreenstem met ons visie, uitgedeel word.",
-      "knowledge_verification": {
-        "title": "💡 Kennis Verifikasie",
-        "description": "Om te verseker dat ons gemeenskap goed ingelig is en ooreenstem met ons visie:",
-        "point1": "Jy sal voorgele word met 21 vrae wat uit ons omvattende bronne afgelei is.",
-        "point2": " 'n Geslaagde toets bevestig jou begrip en toewyding.",
-        "point3": " 'n Mislukte toets dui op 'n behoefte aan verdere betrokkenheid met ons materiaal."
-      },
       "community_engagement": {
         "title": "🙌 Aktiewe Gemeenskapsbetrokkenheid",
         "description": "Jou betrokkenheid binne die Ice-ekosisteem beïnvloed direk jou mynboumoontlikhede:",
@@ -1343,16 +1336,21 @@
         "point3": "Sosiale interaksies: Verbeter jou teenwoordigheid deur te like, deel, volg, of pos te plaas oor Ice.",
         "bottom_description": "Hoe meer betrokke jy is, hoe hoër jou positiewe interaksiesyfer, wat jou in staat stel om die KYC-proses te deurloop."
       },
-      "terms_privacy": "Ek verstaan ​​en stem in met die [[:link]]Algemene Voorwaardes[[/:link]]."
-    },
-    "intro": {
-      "knowledge_check": "🧠 Kennistoets:",
-      "point1": "Daar is in totaal 21 vrae.",
-      "point2": "Om die toets te slaag, moet jy ten minste 18 vrae korrek beantwoord.",
-      "point3": "Oeps, mislukte toets? Probeer volgende week weer.",
-      "point4": "📚 Alle inligting vir hierdie toets kan [[:link]]hier[[/:link]] gelees word.",
-      "why_quiz": "Hoekom die Toets?",
-      "why_quiz_description": "Ons is almal oor slim, veilige en ingeligte mynbou. Hierdie klein stap verseker dat ons Ice-gemeenskap met kennis en begrip floreer!"
+      "terms_privacy": "Ek verstaan ​​en stem in met die [[:link]]Algemene Voorwaardes[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Kennistoets",
+        "point2": "Om die toets te slaag, moet jy ten minste 18 vrae korrek beantwoord.",
+        "point3": "’n Mislukte toets dui op ’n behoefte aan verdere interaksie met ons materiaal.",
+        "point4": "Daar is ’n datumbeperking vir die slaag van die toets. Jy kan sien hoeveel dae jy oor het tot die vervaldatum op jou tuisblad in die toetsafdeling.",
+        "point5": "Jy het 3 herhalings beskikbaar voordat die vervaldatum verstryk. As jy die toets 3 keer misluk of as die vervaldatum verloop, sal jy nie meer kan myn nie en jou rekening sal in snyfase gaan.",
+        "point6": "📚 Alle inligting vir hierdie toets kan [[:link]]hier[[/:link]] gelees word.",
+        "description": "Om te verseker dat ons gemeenskap goed ingelig is en ooreenstem met ons visie:",
+        "point1": "Jy sal voorgele word met 21 vrae wat uit ons omvattende bronne afgelei is."
+      },
+      "why_quiz": {
+        "title": "💡 Waarom die Toets?",
+        "description": "Ons toewyding tot kennis en begrip is aan die voorpunt van ons gemeenskap. Met ons toets mik ons daarop om te verseker dat Ice sy pad vind na die regte hande, dié die werklik verstaan en ooreenstem met ons projek se visie."
+      }
     },
     "mining_disabled": {
       "title": "Mislukte Toets",
@@ -1368,12 +1366,20 @@
     "confirmation_popup": {
       "title": "Bevestiging",
       "start_description": "Is jy seker jy wil die toets begin?",
-      "cancel_description": "Is jy seker jy wil die toets kanselleer?"
+      "cancel_description": "Deur die toets oor te slaan, sal jy een beskikbare herhaalpoging gebruik. Is jy seker jy wil die toets nou oorslaan?"
     },
     "quiz_success": {
       "title": "Verifikasie Voltooi",
       "description": "Gelukwens, jy het jou KYC suksesvol voltooi. Jou konsekwente korrekte antwoorde het jou toewyding en kennis bewys. Jy is nou geverifieer."
-    }
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Mynbou gedeaktiveer",
+      "description": "Jou mynboutoegang is gedeaktiveer as gevolg van drie agtereenvolgende toetsmislukkings of die verstryking van die toegelate tyd, soos vereis deur ons KYC-proses."
+    },
+    "action": "Voltooi die toets",
+    "reminder": "Ons herinner jou dat jy die toets moet voltooi om munte te kan ontvang.",
+    "retries": "Herhalings: {{number}}",
+    "days_left": "Dae oor: {{days}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1385,5 +1391,8 @@
         "description": "Gelukwens, jy het jou verifikasie suksesvol voltooi. Jy is nou geregtig om jou maandelikse BNB Slim Kettingverspreidingsstatus te handhaaf."
       }
     }
+  },
+  "buttons": {
+    "skip": "Overslaan"
   }
 }

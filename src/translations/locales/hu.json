@@ -1322,16 +1322,9 @@
     "description2": "Ez a lépés segít nekünk biztosítani fiókja biztonságát és hitelességét. Köszönjük együttműködését!"
   },
   "quiz": {
-    "title": "KYC 3. lépés",
-    "terms": {
+    "title": "Kvíz",
+    "intro": {
       "description": "Az Ice-nál hiszünk abban, hogy elősegítjük a aktív és tájékozott tagok közösségét. A missziónk, hogy a Ice coinokat azokhoz juttassuk el, akik valóban elkötelezettek és együttérzők a víziónkkal.",
-      "knowledge_verification": {
-        "title": "💡 Tudás Ellenőrzés",
-        "description": "Annak érdekében, hogy közösségünk jól informált és összhangban legyen a víziónkkal:",
-        "point1": "21 kérdést fogunk feltenni, amelyeket teljes körű forrásainkból származtatunk.",
-        "point2": "Egy sikeres kvíz megerősíti a megértést és elkötelezettséget.",
-        "point3": "Egy sikertelen kvíz arra utal, hogy szükség van további anyagokkal való foglalkozásra."
-      },
       "community_engagement": {
         "title": "🙌 Aktív Közösségi Részvétel",
         "description": "Az Ice Együttműködés közvetlenül befolyásolja a bányászati képességeidet:",
@@ -1340,16 +1333,21 @@
         "point3": "Közösségi interakciók: Növeld jelenlétedet, kedveléssel, megosztással, követéssel vagy posztolással az Ice-ról.",
         "bottom_description": "Minél aktívabb vagy, annál magasabb a pozitív interakció pontszámod, ami lehetővé teszi a KYC folyamat elvégzését."
       },
-      "terms_privacy": "Értem és elfogadom a [[:link]]Felhasználási Feltételeket[[/:link]]."
-    },
-    "intro": {
-      "knowledge_check": "🧠 Tudás Ellenőrzés:",
-      "point1": "Összesen 21 kérdés van.",
-      "point2": "A kvíz sikeres teljesítéséhez legalább 18 kérdést kell helyesen megválaszolni.",
-      "point3": "Hoppá, sikertelen kvíz? Próbáld újra jövő héten.",
-      "point4": "📚 Minden információ a kvízhez [[:link]]itt[[/:link]] található.",
-      "why_quiz": "Miért a Kvíz?",
-      "why_quiz_description": "Az okos, biztonságos és informált bányászat a célunk. Ez a kis lépés biztosítja, hogy az Ice közösségünk tudással és megértéssel virágozzon!"
+      "terms_privacy": "Értem és elfogadom a [[:link]]Felhasználási Feltételeket[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Tudásvizsgálat",
+        "point2": "A kvíz teljesítéséhez legalább 18 kérdésre kell helyes választ adnod.",
+        "point3": "Egy sikertelen kvíz arra utal, hogy szükség van a mi anyagaink további megértésére.",
+        "point4": "A kvíz teljesítésére határidő van. A kezdőlapodon a kvíz szakaszban láthatod, hány napod van még a lejáratig.",
+        "point5": "Három újrapróbálkozási lehetőséged van a lejárat előtt. Ha háromszor bukik meg a kvíz, vagy lejár a határidő, nem leszel képes tovább bányászni, és a fiókod megbüntetésre kerül.",
+        "point6": "📚 Az összes információ a kvízről [[:link]]itt[[/:link]] olvasható.",
+        "description": "Annak érdekében, hogy közösségünk jól informált és összhangban legyen a víziónkkal:",
+        "point1": "21 kérdést fogunk feltenni, amelyeket teljes körű forrásainkból származtatunk."
+      },
+      "why_quiz": {
+        "title": "💡 Miért a Kvíz?",
+        "description": "Elkötelezettségünk a tudás és megértés iránt közösségünk középpontjában áll. A kvízzel azt szeretnénk biztosítani, hogy az Ice a megfelelő kezekbe kerüljön, azokhoz, akik valóban megértik és azonosulnak a projektünk víziójával."
+      }
     },
     "mining_disabled": {
       "title": "Sikertelen Kvíz",
@@ -1365,12 +1363,20 @@
     "confirmation_popup": {
       "title": "Megerősítés",
       "start_description": "Biztos vagy benne, hogy el szeretnéd kezdeni a kvízt?",
-      "cancel_description": "Biztos vagy benne, hogy le szeretnéd mondani a kvízt?"
+      "cancel_description": "Ha kihagyod a kvízt, felhasználsz egy rendelkezésre álló újrapróbálkozási lehetőséget. Biztos vagy benne, hogy most kihagyni szeretnéd a kvízt?"
     },
     "quiz_success": {
       "title": "Sikeres Megerősítés",
       "description": "Gratulálunk, sikeresen teljesítetted a KYC folyamatot. Állandóan helyes válaszaid alátámasztották elkötelezettségedet és tudásodat. Most már megerősítettél."
-    }
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Bányászat letiltva",
+      "description": "A bányászati hozzáférésedet három egymást követő kvíz bukás vagy a megszabott idő lejárta miatt letiltottuk, amint azt a KYC folyamatunk megköveteli."
+    },
+    "action": "Végezze el a kvízt",
+    "reminder": "Emlékeztetünk rá, hogy a tokenek fogadásához be kell fejezned a tesztet.",
+    "retries": "Újrapróbálkozások: {{number}}",
+    "days_left": "Hátralévő napok: {{days}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1382,5 +1388,8 @@
         "description": "Gratulálunk, sikeresen befejezted az azonosításodat. Most jogosult vagy fenntartani a havi BNB Smart Chain osztási státuszodat."
       }
     }
+  },
+  "buttons": {
+    "skip": "Kihagyás"
   }
 }

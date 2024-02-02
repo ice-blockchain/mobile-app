@@ -1322,16 +1322,9 @@
     "description2": "這一步幫助我們確保您的帳戶的安全性和真實性。感謝您的合作！"
   },
   "quiz": {
-    "title": "KYC 第三步",
-    "terms": {
+    "title": "測驗",
+    "intro": {
       "description": "在Ice，我們堅信要培養一個充滿活力和知情的社區。我們的使命是確保Ice幣分發給那些真正參與並與我們的願景相符的人。",
-      "knowledge_verification": {
-        "title": "💡 知識驗證",
-        "description": "為了確保我們的社區充分了解並與我們的願景一致：",
-        "point1": "您將收到21個問題，這些問題源自我們的全面資源。",
-        "point2": "通過的測驗實了您的理解和奉獻。",
-        "point3": "未通過的測試表明需要進一步與我們的材料互動。"
-      },
       "community_engagement": {
         "title": "🙌 積極社區參與",
         "description": "您在Ice生態系統內的參與直接影響著您的挖掘能力：",
@@ -1340,16 +1333,21 @@
         "point3": "社交互動：通過點贊、分享、關注或發布關於Ice的內容來增加您的存在感。",
         "bottom_description": "您參與越積極，您的積極互動得分越高，使您能夠通過KYC流程。"
       },
-      "terms_privacy": "我理解並同意[[:link]]使用條款和隱私政策[[/:link]]。"
-    },
-    "intro": {
-      "knowledge_check": "🧠 知識檢查：",
-      "point1": "總共有21個問題。",
-      "point2": "要通過測試，您需要至少正確回答18個問題。",
-      "point3": "糟糕，測試未通過？請下週再試。",
-      "point4": "📚 關於此測試的所有信息都可以在[[:link]]這裡[[/:link]]閱讀。",
-      "why_quiz": "為什麼有測試？",
-      "why_quiz_description": "我們一直支持智能、安全和知情的挖掘。這一小步確保了我們的Ice社區充滿知識和理解！"
+      "terms_privacy": "我理解並同意[[:link]]使用條款和隱私政策[[/:link]]。",
+      "knowledge_check": {
+        "title": "🧠 知識測試",
+        "point2": "要通過測驗，您需要至少正確回答 18 個問題。",
+        "point3": "測驗不及格表示您需要進一步深入研究我們的材料。",
+        "point4": "測驗有一個完成期限。您可以在測驗部分的首頁上看到距離到期日還有多少天。",
+        "point5": "在到期日期之前，您有 3 次重試的機會。如果您在測驗中連續失敗 3 次或到期日期過了，您將無法再進行挖礦，您的帳戶將被削減。",
+        "point6": "📚 關於此測驗的所有信息都可以在這裡閱讀 [[:link]]這裡[[/:link]]。",
+        "description": "為了確保我們的社區充分了解並與我們的願景一致：",
+        "point1": "您將收到21個問題，這些問題源自我們的全面資源。"
+      },
+      "why_quiz": {
+        "title": "💡 為什麼要測驗？",
+        "description": "我們對知識和理解的承諾位於我們社區的前沿。通過我們的測驗，我們旨在確保 Ice 落入合適的手中，那些真正理解並與我們項目的願景相一致的人手中。"
+      }
     },
     "mining_disabled": {
       "title": "測試未通過",
@@ -1365,12 +1363,20 @@
     "confirmation_popup": {
       "title": "確認",
       "start_description": "您確定要開始測試嗎？",
-      "cancel_description": "您確定要取消測試嗎？"
+      "cancel_description": "跳過測驗將使用您可用的 3 次重試之一。您確定要立即跳過測驗嗎？"
     },
     "quiz_success": {
       "title": "驗證完成",
       "description": "恭喜，您已成功完成KYC。您持續的正確回答證明了您的奉獻和知識。您現在已經驗證。"
-    }
+    },
+    "mining_disabled_popup": {
+      "title": "❌ 停用挖礦",
+      "description": "由於連續三次測驗失敗或到期時間到期，根據我們的 KYC 流程要求，已停用您的挖礦訪問權限。"
+    },
+    "action": "完成測驗",
+    "reminder": "我們提醒您，您需要完成測試才能接收硬幣。",
+    "retries": "重試次數剩餘：{{number}}",
+    "days_left": "剩餘天數：{{days}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1382,5 +1388,8 @@
         "description": "恭喜您成功完成了您的驗證。現在您有資格保持每月BNB智能鏈分配狀態。"
       }
     }
+  },
+  "buttons": {
+    "skip": "跳過"
   }
 }
