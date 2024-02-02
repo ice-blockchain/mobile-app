@@ -30,7 +30,7 @@ export const Quiz = memo(() => {
       leadingIconContainerStyle={styles.leadingIconContainer}
       title={t('quiz.action')}
       subtitle={
-        <>
+        <View style={styles.subtitle}>
           <View style={styles.subtitleRow}>
             <RestartIcon
               color={COLORS.secondary}
@@ -53,7 +53,7 @@ export const Quiz = memo(() => {
               {t('quiz.days_left', {days: 5})}
             </Text>
           </View>
-        </>
+        </View>
       }
       TrailingIcon={
         <ChevronSmallIcon style={styles.chevron} color={COLORS.primaryDark} />
@@ -80,10 +80,15 @@ const styles = StyleSheet.create({
     bottom: -rem(10),
     left: -rem(8),
   },
+  subtitle: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
   subtitleRow: {
     marginTop: rem(4),
     flexDirection: 'row',
     alignItems: 'center',
+    marginRight: rem(14),
   },
   retriesIcon: {
     marginTop: rem(2),
