@@ -11,6 +11,7 @@ import {getErrorMessage} from '@utils/errors';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
 type Action = ReturnType<
+  | typeof QuizActions.CHECK_QUIZ_STATUS.START.create
   | typeof AccountActions.USER_STATE_CHANGE.SUCCESS.create
   | typeof QuizActions.START_OR_CONTINUE_QUIZ.SUCCESS.create
 >;

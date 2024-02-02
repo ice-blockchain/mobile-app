@@ -5,6 +5,7 @@ import {USER_GROWTH_STATS_PERIOD} from '@screens/HomeFlow/Home/components/Overvi
 import {AccountActions} from '@store/modules/Account/actions';
 import {AchievementsActions} from '@store/modules/Achievements/actions';
 import {AchievementsSelectors} from '@store/modules/Achievements/selectors';
+import {QuizActions} from '@store/modules/Quiz/actions';
 import {ReferralsActions} from '@store/modules/Referrals/actions';
 import {getIsInitialStartAction} from '@store/modules/Referrals/utils/utils';
 import {StatsActions} from '@store/modules/Stats/actions';
@@ -31,6 +32,7 @@ const REFRESH_ACTIONS = [
     },
   },
   AchievementsActions.LEVELS_AND_ROLES_LOAD,
+  QuizActions.CHECK_QUIZ_STATUS,
 ];
 
 export const useHomeRefresh = () => {

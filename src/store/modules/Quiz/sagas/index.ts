@@ -13,6 +13,7 @@ export const quizWatchers = [
   ),
   takeLatest(
     [
+      QuizActions.CHECK_QUIZ_STATUS.START.type,
       AccountActions.USER_STATE_CHANGE.SUCCESS.type,
       QuizActions.START_OR_CONTINUE_QUIZ.SUCCESS.type,
     ],

@@ -11,6 +11,7 @@ const START_OR_CONTINUE_QUIZ = createAction('START_OR_CONTINUE_QUIZ', {
 });
 
 const CHECK_QUIZ_STATUS = createAction('CHECK_QUIZ_STATUS', {
+  START: true,
   SUCCESS: (payload: {status: QuizStatus}) => payload,
   FAILED: (errorMessage: string) => ({errorMessage}),
 });

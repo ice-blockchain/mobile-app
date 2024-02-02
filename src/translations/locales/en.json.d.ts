@@ -831,6 +831,8 @@ export type Translations = {
   'quiz.confirmation_popup.cancel_description': null;
   'quiz.quiz_success.title': null;
   'quiz.quiz_success.description': null;
+  'quiz.mining_disabled_popup.title': null;
+  'quiz.mining_disabled_popup.description': null;
   'quiz.action': null;
   'quiz.reminder': null;
   'quiz.retries': {number: number | string};
