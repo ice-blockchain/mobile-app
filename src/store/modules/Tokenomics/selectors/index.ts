@@ -7,6 +7,10 @@ import {MiningState} from '@store/modules/Tokenomics/types';
 import {RootState} from '@store/rootReducer';
 
 export const miningStateSelector = (state: RootState): MiningState => {
+  if (typeof state.tokenomics.miningSummary?.kycStepBlocked === 'number') {
+    return 'disabled';
+  }
+
   if (!state.tokenomics.miningSummary?.miningSession) {
     return 'inactive';
   }
@@ -81,4 +85,8 @@ export const getTotalCoinsStatsSelector =
 
 export const totalCoinsSelector = (state: RootState) => {
   return state.tokenomics.totalCoins.total;
+};
+
+export const kycStepBlockedSelector = (state: RootState) => {
+  return state.tokenomics.miningSummary?.kycStepBlocked;
 };

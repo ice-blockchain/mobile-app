@@ -38,7 +38,6 @@ export const PopUpButton = ({
       customBackground={preset !== 'default'}
       textStyle={[
         styles.labelText,
-        preset === 'destructive' && styles.labelTextDestructive,
         preset === 'outlined' && styles.labelTextOutlined,
         textStyle,
       ]}
@@ -67,17 +66,12 @@ const styles = StyleSheet.create({
     borderColor: COLORS.secondary,
   },
   buttonDestructive: {
-    backgroundColor: COLORS.white,
-    borderWidth: 1,
-    borderColor: COLORS.attentionDark,
+    backgroundColor: COLORS.attention,
   },
   labelText: {
     ...font(14, 19, 'black', 'white', 'center'),
   },
   labelTextOutlined: {
     color: COLORS.secondary,
-  },
-  labelTextDestructive: {
-    color: COLORS.attentionDark,
   },
 });

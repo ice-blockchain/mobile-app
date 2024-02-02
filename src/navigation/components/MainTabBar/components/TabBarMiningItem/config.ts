@@ -9,6 +9,7 @@ import {t} from '@translations/i18n';
 type GestureConfig = {
   showStackingModal?: boolean;
   startMining?: boolean;
+  showDisabledPopup?: boolean;
 };
 
 export const MiningButtonConfig: {
@@ -87,6 +88,12 @@ export const MiningButtonConfig: {
     },
     onLongPress: {
       startMining: true,
+    },
+  },
+  disabled: {
+    animation: LottieAnimations.miningDisabled,
+    onTap: {
+      showDisabledPopup: true,
     },
   },
 };

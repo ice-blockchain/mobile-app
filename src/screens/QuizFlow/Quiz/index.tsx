@@ -7,13 +7,13 @@ import {useOnHardwareBack} from '@hooks/useOnHardwareBack';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {useCancelQuiz} from '@screens/QuizFlow/hooks/useCancelQuiz';
 import {
   ANSWER_STARTS_HEIGHT,
   AnswerStats,
 } from '@screens/QuizFlow/Quiz/components/AnswerStats';
 import {QuestionPage} from '@screens/QuizFlow/Quiz/components/QuestionPage';
 import {TimeOver} from '@screens/QuizFlow/Quiz/components/TimeOver';
+import {useCancelQuiz} from '@screens/QuizFlow/Quiz/hooks/useCancelQuiz';
 import {useQuestionTimeCounter} from '@screens/QuizFlow/Quiz/hooks/useQuestionTimeCounter';
 import {useQuizQuestionnaire} from '@screens/QuizFlow/Quiz/hooks/useQuizQuestionnaire';
 import {t} from '@translations/i18n';

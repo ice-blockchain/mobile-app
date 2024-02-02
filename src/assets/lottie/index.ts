@@ -11,6 +11,7 @@ export const LottieAnimations = {
   miningHolidayActive: require('./mining-holiday-active.json'),
   miningHolidayRestart: require('./mining-holiday-restart.json'),
   miningHolidayExpire: require('./mining-holiday-expire.json'),
+  miningDisabled: require('./mining-disabled.json'),
   loadingLogoBlue: require('./loading-logo-blue.json'),
   bonusBig: require('./bonus-big.json'),
   bonusMedium: require('./bonus-medium.json'),

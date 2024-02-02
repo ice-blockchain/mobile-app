@@ -4,12 +4,10 @@ import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
 import {commonStyles} from '@constants/styles';
-import {useOnHardwareBack} from '@hooks/useOnHardwareBack';
 import {useScrollShadow} from '@hooks/useScrollShadow';
 import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {useCancelQuiz} from '@screens/QuizFlow/hooks/useCancelQuiz';
 import {BulletDescription} from '@screens/QuizFlow/QuizIntro/components/BulletDescription';
 import {PrivacyTerms} from '@screens/QuizFlow/QuizIntro/components/PrivacyTerms';
 import {useSetQuizTerms} from '@screens/QuizFlow/QuizIntro/hooks/useSetQuizTerms';
@@ -22,15 +20,12 @@ import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
 export const QuizIntro = () => {
   useFocusStatusBar({style: 'dark-content'});
+
   const {shadowStyle} = useScrollShadow();
 
   const {termsAccepted, setTermsAccepted} = useSetQuizTerms();
 
   const {startQuiz, startQuizLoading} = useStartQuiz();
-
-  const {cancelQuiz} = useCancelQuiz();
-
-  useOnHardwareBack({callback: cancelQuiz, preventDefault: true});
 
   return (
     <View style={commonStyles.flexOne}>
@@ -38,8 +33,6 @@ export const QuizIntro = () => {
         containerStyle={shadowStyle}
         color={COLORS.primaryDark}
         title={t('quiz.title')}
-        onGoBack={cancelQuiz}
-        preventDefaultAction={true}
       />
       <ScrollView
         contentContainerStyle={styles.contentContainer}

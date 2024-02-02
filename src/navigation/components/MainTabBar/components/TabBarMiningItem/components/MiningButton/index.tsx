@@ -21,6 +21,7 @@ export const MiningButton = ({onPress, onPressCallback}: Props) => {
     miningStateTooltipSeen,
     closeTooltip,
     startMiningSession,
+    showDisabledPopup,
   } = useMiningState();
 
   const {lottieWrapperRef, showStackingModal} = useStackingModal();
@@ -67,6 +68,10 @@ export const MiningButton = ({onPress, onPressCallback}: Props) => {
           tapToMineActionType:
             gesture === 'onLongPress' ? 'Extended' : 'Default',
         });
+      }
+
+      if (gestureConfig.showDisabledPopup) {
+        showDisabledPopup();
       }
 
       if (!miningStateTooltipSeen) {
