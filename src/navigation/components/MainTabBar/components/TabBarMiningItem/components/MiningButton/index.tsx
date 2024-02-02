@@ -5,7 +5,9 @@ import {MiningButtonHandlers} from '@navigation/components/MainTabBar/components
 import {MiningButtonTooltip} from '@navigation/components/MainTabBar/components/TabBarMiningItem/components/MiningButton/components/MiningButtonTooltip';
 import {useMiningState} from '@navigation/components/MainTabBar/components/TabBarMiningItem/components/MiningButton/hooks/useMiningState';
 import {useStackingModal} from '@navigation/components/MainTabBar/components/TabBarMiningItem/components/MiningButton/hooks/useStackingModal';
+import {store} from '@store/configureStore';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
+import {kycStepBlockedSelector} from '@store/modules/Tokenomics/selectors';
 import {openMiningDisabled} from '@store/modules/Tokenomics/utils/openMiningDisabled';
 import React, {useEffect, useRef} from 'react';
 import {View} from 'react-native';
@@ -71,7 +73,9 @@ export const MiningButton = ({onPress, onPressCallback}: Props) => {
       }
 
       if (gestureConfig.showDisabledPopup) {
-        openMiningDisabled();
+        openMiningDisabled({
+          kycStepBlocked: kycStepBlockedSelector(store.getState()) ?? 0,
+        });
       }
 
       if (!miningStateTooltipSeen) {

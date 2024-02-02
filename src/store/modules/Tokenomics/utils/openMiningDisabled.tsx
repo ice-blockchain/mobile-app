@@ -2,15 +2,15 @@
 
 import {Images} from '@images';
 import {navigate} from '@navigation/utils';
-import {store} from '@store/configureStore';
-import {kycStepBlockedSelector} from '@store/modules/Tokenomics/selectors';
 import {t} from '@translations/i18n';
 
-export const openMiningDisabled = () => {
+export const openMiningDisabled = ({
+  kycStepBlocked,
+}: {
+  kycStepBlocked: number;
+}) => {
   let resultResolve: () => void;
   const resultPromise = new Promise<void>(r => (resultResolve = r));
-
-  const kycStepBlocked = kycStepBlockedSelector(store.getState());
 
   const message =
     kycStepBlocked === 4 ? t('quiz.mining_disabled_popup.description') : null;

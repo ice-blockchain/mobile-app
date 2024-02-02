@@ -147,23 +147,23 @@ export function* startMiningSessionSaga(
         }
       }
     } else if (isApiError(error, 403, 'MINING_DISABLED')) {
-      const errorData = error?.response?.data?.data;
-      if (errorData && typeof errorData.kycStepBlocked === 'number') {
+      const kycStepBlocked = error?.response?.data?.data?.kycStepBlocked;
+      if (typeof kycStepBlocked === 'number') {
         if (
-          errorData.kycStepBlocked === SELFIE_KYC_STEP ||
-          errorData.kycStepBlocked === EMOTIONS_KYC_STEP
+          kycStepBlocked === SELFIE_KYC_STEP ||
+          kycStepBlocked === EMOTIONS_KYC_STEP
         ) {
           yield removeScreenByName('Tooltip').catch();
           navigate({
             name: 'FaceRecognition',
             params: {
-              kycSteps: [errorData.kycStepBlocked],
-              kycStepBlocked: errorData.kycStepBlocked,
+              kycSteps: [kycStepBlocked],
+              kycStepBlocked,
             },
           });
           return;
         } else {
-          yield call(openMiningDisabled);
+          yield call(openMiningDisabled, {kycStepBlocked});
         }
       }
     } else {
