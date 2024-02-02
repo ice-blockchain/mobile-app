@@ -616,7 +616,9 @@
     "wallet_update_interval": "elke uur opgedateer",
     "blockchain_update_interval": "elke 28 dae opgedateer",
     "list_end_label": "dit is die laaste inskrywing van die balansgeskiedenis.",
-    "no_data": "Daar is geen data om vir die gespesifiseerde tydperk te vertoon nie."
+    "no_data": "Daar is geen data om vir die gespesifiseerde tydperk te vertoon nie.",
+    "you": "jy",
+    "contribution": "bydrae"
   },
   "pop_up": {
     "update_now": "Opdateer Nou",

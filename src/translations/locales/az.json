@@ -616,7 +616,9 @@
     "wallet_update_interval": "hər saat yenilənir",
     "blockchain_update_interval": "hər 28 gün yenilənir",
     "list_end_label": "bu balans tarixinin son əməliyyatıdır.",
-    "no_data": "Seçilmiş müddət üzrə göstərməyə məlumat yoxdur."
+    "no_data": "Seçilmiş müddət üzrə göstərməyə məlumat yoxdur.",
+    "you": "siz",
+    "contribution": "əməkdaşlıq"
   },
   "pop_up": {
     "update_now": "İndi yenilə",

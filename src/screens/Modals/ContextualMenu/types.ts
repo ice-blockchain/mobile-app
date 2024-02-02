@@ -8,10 +8,3 @@ export type ContextualMenuButton = {
   onPress: () => void;
   id?: 'help' | 'staking' | 'notifications' | 'stats' | 'tips';
 };
-
-export type Coordinates = {
-  top?: number;
-  right?: number;
-  bottom?: number;
-  left?: number;
-};

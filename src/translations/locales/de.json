@@ -616,7 +616,9 @@
     "wallet_update_interval": "Stündlich aktualisiert",
     "blockchain_update_interval": "alle 28 Tage aktualisiert",
     "list_end_label": "Dies ist der letzte Eintrag im Guthabenverlauf.",
-    "no_data": "Für den angegebenen Zeitraum gibt es keine Daten, die angezeigt werden können."
+    "no_data": "Für den angegebenen Zeitraum gibt es keine Daten, die angezeigt werden können.",
+    "you": "du",
+    "contribution": "Beitrag"
   },
   "pop_up": {
     "update_now": "Jetzt aktualisieren",

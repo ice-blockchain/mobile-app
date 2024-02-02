@@ -616,7 +616,9 @@
     "wallet_update_interval": "uppdateras varje timme",
     "blockchain_update_interval": "uppdateras varje 28 dagar",
     "list_end_label": "detta är den sista posten i saldohistoriken.",
-    "no_data": "Det finns inga data att visa för den angivna perioden."
+    "no_data": "Det finns inga data att visa för den angivna perioden.",
+    "you": "du",
+    "contribution": "bidrag"
   },
   "pop_up": {
     "update_now": "Uppdatera nu",

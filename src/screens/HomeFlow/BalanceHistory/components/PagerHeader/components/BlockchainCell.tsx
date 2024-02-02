@@ -3,7 +3,11 @@
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
+import {HomeTabStackParamList, MainStackParamList} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {DataCell} from '@screens/HomeFlow/BalanceHistory/components/PagerHeader/components/DataCell';
+import {Coordinates} from '@screens/Modals/types';
 import {LogoIcon} from '@svg/LogoIcon';
 import {isRTL, t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -17,6 +21,15 @@ type Props = {
 };
 
 export const BlockchainCell = ({value, currency}: Props) => {
+  const navigation =
+    useNavigation<
+      NativeStackNavigationProp<MainStackParamList & HomeTabStackParamList>
+    >();
+  const onInfoPress = (coordinates: Coordinates) => {
+    navigation.navigate('BalanceHistoryTooltip', {
+      coords: coordinates,
+    });
+  };
   return (
     <DataCell
       icon={
@@ -43,6 +56,7 @@ export const BlockchainCell = ({value, currency}: Props) => {
           <IceLabel reversed={isRTL} iconOffsetY={3.5} color={COLORS.white} />
         )
       }
+      onInfoIconPressed={onInfoPress}
     />
   );
 };

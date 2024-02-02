@@ -616,7 +616,9 @@
     "wallet_update_interval": "يتم التحديث كل ساعة",
     "blockchain_update_interval": "تحديث كل 28 يومًا",
     "list_end_label": "هذا هو الإدخال الأخير لسجل الرصيد.",
-    "no_data": "لا توجد بيانات لعرضها للفترة المحددة."
+    "no_data": "لا توجد بيانات لعرضها للفترة المحددة.",
+    "you": "أنت",
+    "contribution": "مساهمة"
   },
   "pop_up": {
     "update_now": "تحديث الآن",

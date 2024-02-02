@@ -20,8 +20,6 @@ import {rem} from 'rn-units';
 // PixelRatio.roundToNearestPixel here is to avoid a small gap between the container and the BottomBump component
 export const PAGER_HEADER_HEIGHT = PixelRatio.roundToNearestPixel(rem(116));
 export const PAGER_HEADER_BUMP_HEIGHT = rem(8);
-export const PAGER_HEADER_OUTER_HEIGHT =
-  PAGER_HEADER_HEIGHT + PAGER_HEADER_BUMP_HEIGHT;
 
 export const PagerHeader = () => {
   const [activeIndex, setActiveIndex] = useState(0);

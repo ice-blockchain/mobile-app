@@ -616,7 +616,9 @@
     "wallet_update_interval": "diperbarui setiap jam",
     "blockchain_update_interval": "diperbarui setiap 28 hari",
     "list_end_label": "ini adalah entri terakhir dari riwayat saldo.",
-    "no_data": "Data untuk periode yang ditentukan kosong."
+    "no_data": "Data untuk periode yang ditentukan kosong.",
+    "you": "kamu",
+    "contribution": "kontribusi"
   },
   "pop_up": {
     "update_now": "Perbarui Sekarang",

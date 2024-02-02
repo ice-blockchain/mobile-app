@@ -616,7 +616,9 @@
     "wallet_update_interval": "每小時更新",
     "blockchain_update_interval": "每28天更新一次",
     "list_end_label": "這是餘額歷史的最後一條項目。",
-    "no_data": "指定期間內沒有可以顯示的資料。"
+    "no_data": "指定期間內沒有可以顯示的資料。",
+    "you": "你",
+    "contribution": "貢獻"
   },
   "pop_up": {
     "update_now": "立即更新",

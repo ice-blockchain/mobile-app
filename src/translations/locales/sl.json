@@ -616,7 +616,9 @@
     "wallet_update_interval": "posodobljeno vsako uro",
     "blockchain_update_interval": "posodobi se vsakih 28 dni",
     "list_end_label": "to je zadnji vnos v zgodovino stanja.",
-    "no_data": "Za navedeno obdobje ni podatkov za prikaz."
+    "no_data": "Za navedeno obdobje ni podatkov za prikaz.",
+    "you": "vi",
+    "contribution": "prispevek"
   },
   "pop_up": {
     "update_now": "Posodobi zdaj",

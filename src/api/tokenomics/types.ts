@@ -44,6 +44,7 @@ export type BalanceSummary = {
   total: string;
   totalReferrals: string;
   totalMiningBlockchain: string;
+  totalMainnetRewardPoolContribution: string;
 };
 
 export type ResurrectRequiredData = {

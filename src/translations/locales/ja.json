@@ -616,7 +616,9 @@
     "wallet_update_interval": "1時間ごとに更新",
     "blockchain_update_interval": "28日ごとに更新",
     "list_end_label": "これが残高履歴の最後のエントリです。",
-    "no_data": "指定された期間に表示するデータがありません。"
+    "no_data": "指定された期間に表示するデータがありません。",
+    "you": "あなた",
+    "contribution": "貢献"
   },
   "pop_up": {
     "update_now": "今すぐアップデート",

@@ -3,10 +3,8 @@
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
-import {
-  ContextualMenuButton,
-  Coordinates,
-} from '@screens/Modals/ContextualMenu/types';
+import {ContextualMenuButton} from '@screens/Modals/ContextualMenu/types';
+import {Coordinates} from '@screens/Modals/types';
 import {RoundedTriangle} from '@svg/RoundedTriangle';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';

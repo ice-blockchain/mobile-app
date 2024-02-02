@@ -616,7 +616,9 @@
     "wallet_update_interval": "updated every hour",
     "blockchain_update_interval": "updated every 28 days",
     "list_end_label": "this is the last entry of the balance history.",
-    "no_data": "There is no data to display for the specified period."
+    "no_data": "There is no data to display for the specified period.",
+    "you": "you",
+    "contribution": "contribution"
   },
   "pop_up": {
     "update_now": "Update Now",
