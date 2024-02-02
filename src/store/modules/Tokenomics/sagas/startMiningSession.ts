@@ -24,7 +24,6 @@ import {
 } from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
-import {QuizActions} from '@store/modules/Quiz/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {
   isMiningActiveSelector,
@@ -130,7 +129,7 @@ export function* startMiningSessionSaga(
           });
           return;
         } else if (errorData.kycSteps.includes(QUIZ_KYC_STEP)) {
-          yield put(QuizActions.START_OR_CONTINUE_QUIZ_FLOW.STATE.create());
+          navigate({name: 'QuizIntro', params: undefined});
           return;
         } else {
           const kycStep = errorData.kycSteps?.[0] ?? 0;

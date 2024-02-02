@@ -95,7 +95,7 @@ export const distributionXPostLinkSelector = (state: RootState) =>
 
 export const quizTermsAcceptedSelector = (state: RootState) => {
   const user = userSelector(state);
-  return user?.clientData?.quiz?.quizTermsAccepted;
+  return user?.clientData?.quiz?.quizTermsAccepted ?? false;
 };
 
 export const dynamicDistributionDataSelector = (state: RootState) =>

@@ -2,7 +2,7 @@
 
 import {COLORS} from '@constants/colors';
 import {font} from '@utils/styles';
-import React from 'react';
+import React, {ReactNode} from 'react';
 import {
   StyleProp,
   StyleSheet,
@@ -16,7 +16,7 @@ import {rem} from 'rn-units';
 const BULLET_SIDE_DIMENSION = rem(6);
 
 type Props = {
-  text: String | React.ReactNodeArray;
+  text: string | ReactNode;
   style?: StyleProp<ViewStyle>;
   bulletContainerStyle?: StyleProp<ViewStyle>;
   bulletStyle?: StyleProp<ViewStyle>;
@@ -24,10 +24,10 @@ type Props = {
 };
 export const BulletDescription = ({
   text,
-  style = {},
-  bulletContainerStyle = {},
-  bulletStyle = {},
-  textStyle = {},
+  style,
+  bulletContainerStyle,
+  bulletStyle,
+  textStyle,
   ...props
 }: Props) => {
   return (

@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {BulletDescription} from '@components/BulletDescription';
-import {PopUpButton} from '@components/Buttons/PopUpButton';
+import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {COLORS} from '@constants/colors';
 import {LINKS} from '@constants/links';
 import {commonStyles} from '@constants/styles';
@@ -11,6 +10,9 @@ import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {useCancelQuiz} from '@screens/QuizFlow/hooks/useCancelQuiz';
+import {BulletDescription} from '@screens/QuizFlow/QuizIntro/components/BulletDescription';
+import {PrivacyTerms} from '@screens/QuizFlow/QuizIntro/components/PrivacyTerms';
+import {useSetQuizTerms} from '@screens/QuizFlow/QuizIntro/hooks/useSetQuizTerms';
 import {useStartQuiz} from '@screens/QuizFlow/QuizIntro/hooks/useStartQuiz';
 import {replaceString, t, tagRegex} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
@@ -18,10 +20,11 @@ import {font} from '@utils/styles';
 import React from 'react';
 import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
-
 export const QuizIntro = () => {
   useFocusStatusBar({style: 'dark-content'});
   const {shadowStyle} = useScrollShadow();
+
+  const {termsAccepted, setTermsAccepted} = useSetQuizTerms();
 
   const {startQuiz, startQuizLoading} = useStartQuiz();
 
@@ -42,37 +45,48 @@ export const QuizIntro = () => {
         contentContainerStyle={styles.contentContainer}
         showsVerticalScrollIndicator={false}>
         <Image source={Images.quiz.quiz} style={styles.icon} />
-        <Text style={styles.title}>{t('quiz.title')}</Text>
-        <Text style={styles.subtitle}>{t('quiz.intro.knowledge_check')}</Text>
-        <View style={styles.bulletsContainer}>
-          {points.map((point, index) => (
-            <BulletDescription
-              text={point}
-              style={styles.bulletContainer}
-              textStyle={styles.bulletText}
-              bulletStyle={styles.bullet}
-              key={index}
-            />
-          ))}
-        </View>
-        <Text style={styles.subtitle}>{t('quiz.intro.why_quiz')}</Text>
-        <Text style={styles.whyQuizDescription}>
-          {t('quiz.intro.why_quiz_description')}
+        <Text style={styles.subtitle}>{t('quiz.title')}</Text>
+        <Text style={[styles.sectionBody, styles.sectionText]}>
+          {t('quiz.intro.description')}
         </Text>
+        <Text style={styles.subtitle}>
+          {t('quiz.intro.knowledge_check.title')}
+        </Text>
+        <Text style={[styles.sectionBody, styles.sectionText]}>
+          {t('quiz.intro.knowledge_check.description')}
+        </Text>
+        {knowledgeCheckPoints.map((point, index) => (
+          <BulletDescription text={point} key={`kc_${index}`} />
+        ))}
+        <Text style={styles.subtitle}>{t('quiz.intro.why_quiz.title')}</Text>
+        <Text style={[styles.sectionBody, styles.sectionText]}>
+          {t('quiz.intro.why_quiz.description')}
+        </Text>
+        <Text style={styles.subtitle}>
+          {t('quiz.intro.community_engagement.title')}
+        </Text>
+        <Text style={[styles.sectionBody, styles.sectionText]}>
+          {t('quiz.intro.community_engagement.description')}
+        </Text>
+        {communityEngagementPoints.map((point, index) => (
+          <BulletDescription text={point} key={`ce_${index}`} />
+        ))}
+        <Text style={[styles.sectionBody, styles.sectionText]}>
+          {t('quiz.intro.community_engagement.bottom_description')}
+        </Text>
+        <PrivacyTerms
+          onCheckBoxPress={setTermsAccepted}
+          termsAccepted={termsAccepted}
+        />
       </ScrollView>
       <View style={[styles.buttonsContainer, commonStyles.shadow]}>
-        <PopUpButton
-          text={t('button.not_now')}
-          preset="outlined"
-          onPress={cancelQuiz}
-          style={styles.button}
-        />
-        <PopUpButton
+        <PrimaryButton
           text={t('button.start')}
           onPress={startQuiz}
-          style={styles.button}
-          disabled={startQuizLoading}
+          disabled={!termsAccepted || startQuizLoading}
           loading={startQuizLoading}
+          style={styles.button}
+          textStyle={styles.buttonText}
         />
       </View>
     </View>
@@ -86,56 +100,48 @@ const styles = StyleSheet.create({
     width: rem(243),
     height: rem(232),
   },
-  title: {
-    ...font(24, 30, 'bold', 'primaryDark', 'left'),
-    marginTop: rem(24),
-  },
   contentContainer: {
     paddingHorizontal: rem(16),
     paddingBottom: rem(20),
     flexGrow: 1,
   },
   subtitle: {
-    ...font(17, 21, 'bold', 'primaryDark', 'left'),
-    marginTop: rem(24),
+    ...font(24, 34, 'bold', 'primaryDark', 'left'),
+    marginTop: rem(30),
   },
   buttonsContainer: {
-    flexDirection: 'row',
     justifyContent: 'center',
     backgroundColor: COLORS.white,
     paddingTop: rem(16),
     paddingBottom: rem(34),
+    paddingHorizontal: rem(16),
   },
-  button: {
-    width: '40%',
-  },
-  bulletsContainer: {
-    marginTop: rem(4),
-  },
-  bulletContainer: {
-    marginTop: rem(12),
-  },
-  bullet: {
-    backgroundColor: COLORS.emperor,
-  },
-  whyQuizDescription: {
-    ...font(14, 18, 'medium', 'secondary', 'left'),
+  sectionBody: {
     marginTop: rem(16),
   },
-  bulletText: {
-    color: COLORS.secondary,
+  sectionText: {
+    ...font(14, 18, 'medium', 'secondary', 'left'),
   },
   link: {
-    ...font(14, 18, 'medium', 'socialLink'),
+    color: COLORS.socialLink,
+  },
+  button: {
+    height: rem(40),
+    borderRadius: rem(16),
+  },
+  buttonText: {
+    ...font(14, 17, 'black'),
   },
 });
 
-const points = [
-  t('quiz.intro.point1'),
-  t('quiz.intro.point2'),
-  t('quiz.intro.point3'),
+const knowledgeCheckPoints = [
+  t('quiz.intro.knowledge_check.point1'),
+  t('quiz.intro.knowledge_check.point2'),
+  t('quiz.intro.knowledge_check.point3'),
+  t('quiz.intro.knowledge_check.point4'),
+  t('quiz.intro.knowledge_check.point5'),
   replaceString(
-    t('quiz.intro.point4'),
+    t('quiz.intro.knowledge_check.point6'),
     tagRegex('link', false),
     (match, index) => {
       return (
@@ -148,4 +154,10 @@ const points = [
       );
     },
   ),
+];
+
+const communityEngagementPoints = [
+  t('quiz.intro.community_engagement.point1'),
+  t('quiz.intro.community_engagement.point2'),
+  t('quiz.intro.community_engagement.point3'),
 ];

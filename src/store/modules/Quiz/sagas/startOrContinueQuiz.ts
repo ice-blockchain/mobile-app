@@ -2,29 +2,49 @@
 
 import {isApiError} from '@api/client';
 import {Api} from '@api/index';
+import {User} from '@api/user/types';
 import {START_QUIZ_CODE} from '@constants/quiz';
 import {navigate} from '@navigation/utils';
-import {unsafeUserSelector} from '@store/modules/Account/selectors';
+import {AccountActions} from '@store/modules/Account/actions';
+import {updateAccountSaga} from '@store/modules/Account/sagas/updateAccount';
+import {
+  quizTermsAcceptedSelector,
+  unsafeUserSelector,
+} from '@store/modules/Account/selectors';
 import {QuizActions} from '@store/modules/Quiz/actions';
 import {quizSelector} from '@store/modules/Quiz/selectors';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {getErrorMessage, showError} from '@utils/errors';
-import {call, put, SagaReturnType, select, spawn} from 'redux-saga/effects';
+import {
+  call,
+  CallEffect,
+  put,
+  SagaReturnType,
+  select,
+  spawn,
+} from 'redux-saga/effects';
 
 type Actions = ReturnType<
   typeof QuizActions.START_OR_CONTINUE_QUIZ.START.create
 >;
 
 export function* startOrContinueQuizSaga({payload}: Actions) {
-  const user: SagaReturnType<typeof unsafeUserSelector> = yield select(
-    unsafeUserSelector,
-  );
-
-  const currentQuiz: SagaReturnType<typeof quizSelector> = yield select(
-    quizSelector,
-  );
-
   try {
+    const user: SagaReturnType<typeof unsafeUserSelector> = yield select(
+      unsafeUserSelector,
+    );
+
+    const currentQuiz: SagaReturnType<typeof quizSelector> = yield select(
+      quizSelector,
+    );
+
+    const quizTermsAccepted: SagaReturnType<typeof quizTermsAcceptedSelector> =
+      yield select(quizTermsAcceptedSelector);
+
+    if (!quizTermsAccepted) {
+      yield call(saveQuizTermsAccepted, user);
+    }
+
     const nextQuestionNumber = currentQuiz?.progress?.nextQuestion.number;
 
     if (payload && nextQuestionNumber == null) {
@@ -64,4 +84,26 @@ export function* startOrContinueQuizSaga({payload}: Actions) {
       throw error;
     }
   }
+}
+
+function* saveQuizTermsAccepted(user: User) {
+  yield call(
+    updateAccountSaga,
+    AccountActions.UPDATE_ACCOUNT.START.create(
+      {
+        clientData: {
+          ...(user.clientData ?? {}),
+          quiz: {quizTermsAccepted: true},
+        },
+      },
+      function* (
+        freshUser,
+      ): Generator<CallEffect<void>, {retry: boolean}, void> {
+        if (!freshUser.clientData?.quiz?.quizTermsAccepted) {
+          yield call(saveQuizTermsAccepted, freshUser);
+        }
+        return {retry: false};
+      },
+    ),
+  );
 }

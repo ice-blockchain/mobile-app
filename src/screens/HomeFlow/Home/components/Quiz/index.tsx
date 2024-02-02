@@ -4,7 +4,9 @@ import {ActionListItem} from '@components/ListItems/ActionListItem';
 import {COLORS} from '@constants/colors';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
-import {QuizActions} from '@store/modules/Quiz/actions';
+import {MainStackParamList} from '@navigation/Main';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {ChevronSmallIcon} from '@svg/ChevronSmallIcon';
 import {ClockIcon} from '@svg/ClockIcon';
 import {RestartIcon} from '@svg/RestartIcon';
@@ -13,13 +15,14 @@ import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
-import {useDispatch} from 'react-redux';
 import {rem} from 'rn-units';
 
 export const Quiz = memo(() => {
-  const dispatch = useDispatch();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<MainStackParamList>>();
+
   const onPress = () => {
-    dispatch(QuizActions.START_OR_CONTINUE_QUIZ_FLOW.STATE.create());
+    navigation.navigate('QuizIntro');
   };
 
   if (false) {

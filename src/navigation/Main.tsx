@@ -66,7 +66,6 @@ import {Quiz} from '@screens/QuizFlow/Quiz';
 import {QuizFailure} from '@screens/QuizFlow/QuizFailure';
 import {QuizIntro} from '@screens/QuizFlow/QuizIntro';
 import {QuizSuccess} from '@screens/QuizFlow/QuizSuccess';
-import {QuizTerms} from '@screens/QuizFlow/QuizTerms';
 import {ConfirmEmail} from '@screens/SettingsFlow/ConfirmEmail';
 import {ConfirmPhoneNumber} from '@screens/SettingsFlow/ConfirmPhoneNumber';
 import {LanguageSettings} from '@screens/SettingsFlow/LanguageSettings';
@@ -170,7 +169,6 @@ export type MainStackParamList = {
     correctiveOffset?: number;
   };
   TopMiners: undefined;
-  QuizTerms: undefined;
   QuizIntro: undefined;
   Quiz: undefined;
   QuizFailure: undefined;
@@ -467,7 +465,6 @@ export function MainNavigator() {
         options={modalOptions}
       />
       <MainStack.Screen name="TopMiners" component={TopMiners} />
-      <MainStack.Screen name="QuizTerms" component={QuizTerms} />
       <MainStack.Screen name="QuizIntro" component={QuizIntro} />
       <MainStack.Screen name="Quiz" component={Quiz} />
       <MainStack.Screen name="QuizFailure" component={QuizFailure} />
