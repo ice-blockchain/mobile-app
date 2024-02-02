@@ -1361,11 +1361,15 @@
     "confirmation_popup": {
       "title": "Confirmation",
       "start_description": "Are you sure you want to start the quiz?",
-      "cancel_description": "By skipping the quiz, you will use one retry available. Are you sure you want to skip the quiz now??"
+      "cancel_description": "By skipping the quiz, you will use one retry available. Are you sure you want to skip the quiz now?"
     },
     "quiz_success": {
       "title": "Verification Completed",
       "description": "Congratulations, you have successfully completed your KYC. Your consistent correct answers have proven your dedication and knowledge. You are now verified."
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Mining disabled",
+      "description": "Your mining access has been disabled due to three consecutive quiz failures or the expiration of the allotted time, as required by our KYC process."
     },
     "action": "Complete the quiz",
     "reminder": "We remind you that you need to complete the test in order to be able to receive coins.",

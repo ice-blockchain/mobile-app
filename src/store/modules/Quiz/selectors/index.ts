@@ -33,3 +33,7 @@ export const expiresAtSelector = (state: RootState) => {
 export const quizResultSelector = (state: RootState) => {
   return state.quiz.quiz?.result;
 };
+
+export const quizStatusSelector = (state: RootState) => {
+  return state.quiz.status;
+};

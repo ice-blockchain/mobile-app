@@ -7,14 +7,17 @@ import {Images} from '@images';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {quizStatusSelector} from '@store/modules/Quiz/selectors';
 import {ChevronSmallIcon} from '@svg/ChevronSmallIcon';
 import {ClockIcon} from '@svg/ClockIcon';
 import {RestartIcon} from '@svg/RestartIcon';
 import {isRTL, t} from '@translations/i18n';
+import {daysFromNow} from '@utils/date';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
+import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 export const Quiz = memo(() => {
@@ -25,12 +28,22 @@ export const Quiz = memo(() => {
     navigation.navigate('QuizIntro');
   };
 
-  if (false) {
+  const quizStatus = useSelector(quizStatusSelector);
+
+  if (quizStatus === null) {
     return (
       <SkeletonPlaceholder borderRadius={rem(16)}>
         <View style={styles.container} />
       </SkeletonPlaceholder>
     );
+  }
+
+  if (
+    !quizStatus.kycQuizAvailable ||
+    quizStatus.kycQuizCompleted ||
+    quizStatus.kycQuizDisabled
+  ) {
+    return null;
   }
 
   return (
@@ -51,7 +64,9 @@ export const Quiz = memo(() => {
               style={styles.retriesIcon}
             />
             <Text style={styles.subtitleText}>
-              {t('quiz.retries', {number: 2})}
+              {t('quiz.retries', {
+                number: quizStatus.kycQuizRemainingAttempts,
+              })}
             </Text>
           </View>
           <View style={styles.subtitleRow}>
@@ -62,7 +77,9 @@ export const Quiz = memo(() => {
               style={styles.timeLeftIcon}
             />
             <Text style={styles.subtitleText}>
-              {t('quiz.days_left', {days: 5})}
+              {t('quiz.days_left', {
+                days: daysFromNow(quizStatus.kycQuizAvailabilityEndedAt),
+              })}
             </Text>
           </View>
         </View>

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Quiz} from '@api/kyc/types';
+import {Quiz, QuizStatus} from '@api/kyc/types';
 import {createAction} from '@store/utils/actions/createAction';
 
 const START_OR_CONTINUE_QUIZ = createAction('START_OR_CONTINUE_QUIZ', {
@@ -10,12 +10,10 @@ const START_OR_CONTINUE_QUIZ = createAction('START_OR_CONTINUE_QUIZ', {
   RESET: true,
 });
 
-const START_OR_CONTINUE_QUIZ_FLOW = createAction(
-  'START_OR_CONTINUE_QUIZ_FLOW',
-  {
-    STATE: true,
-  },
-);
+const CHECK_QUIZ_STATUS = createAction('CHECK_QUIZ_STATUS', {
+  SUCCESS: (payload: {status: QuizStatus}) => payload,
+  FAILED: (errorMessage: string) => ({errorMessage}),
+});
 
 const RESET_QUIZ = createAction('RESET_QUIZ', {
   RESET: true,
@@ -23,6 +21,6 @@ const RESET_QUIZ = createAction('RESET_QUIZ', {
 
 export const QuizActions = Object.freeze({
   START_OR_CONTINUE_QUIZ,
-  START_OR_CONTINUE_QUIZ_FLOW,
+  CHECK_QUIZ_STATUS,
   RESET_QUIZ,
 });
