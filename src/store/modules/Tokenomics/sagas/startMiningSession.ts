@@ -32,6 +32,7 @@ import {
 import {openConfirmResurrect} from '@store/modules/Tokenomics/utils/openConfirmResurrect';
 import {openConfirmResurrectNo} from '@store/modules/Tokenomics/utils/openConfirmResurrectNo';
 import {openConfirmResurrectYes} from '@store/modules/Tokenomics/utils/openConfirmResurrectYes';
+import {openMiningDisabled} from '@store/modules/Tokenomics/utils/openMiningDisabled';
 import {hapticFeedback} from '@utils/device';
 import {getErrorMessage, showError} from '@utils/errors';
 import {
@@ -161,6 +162,8 @@ export function* startMiningSessionSaga(
             },
           });
           return;
+        } else {
+          yield call(openMiningDisabled);
         }
       }
     } else {
