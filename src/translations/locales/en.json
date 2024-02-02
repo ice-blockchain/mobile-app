@@ -55,6 +55,7 @@
     "apply": "Apply",
     "reset": "Reset",
     "skip_all": "Skip all",
+    "skip": "Skip",
     "done": "Done",
     "confirm": "Confirm",
     "do_this_later": "Do this later",
@@ -1360,7 +1361,7 @@
     "confirmation_popup": {
       "title": "Confirmation",
       "start_description": "Are you sure you want to start the quiz?",
-      "cancel_description": "Are you sure you want to cancel the quiz?"
+      "cancel_description": "By skipping the quiz, you will use one retry available. Are you sure you want to skip the quiz now??"
     },
     "quiz_success": {
       "title": "Verification Completed",

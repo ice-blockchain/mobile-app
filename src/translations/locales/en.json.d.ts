@@ -38,6 +38,7 @@ export type Translations = {
   'button.apply': null;
   'button.reset': null;
   'button.skip_all': null;
+  'button.skip': null;
   'button.done': null;
   'button.confirm': null;
   'button.do_this_later': null;
