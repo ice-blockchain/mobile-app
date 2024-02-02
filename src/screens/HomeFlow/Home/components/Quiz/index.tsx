@@ -12,6 +12,7 @@ import {isRTL, t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
+import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {useDispatch} from 'react-redux';
 import {rem} from 'rn-units';
 
@@ -20,6 +21,14 @@ export const Quiz = memo(() => {
   const onPress = () => {
     dispatch(QuizActions.START_OR_CONTINUE_QUIZ_FLOW.STATE.create());
   };
+
+  if (false) {
+    return (
+      <SkeletonPlaceholder borderRadius={rem(16)}>
+        <View style={styles.container} />
+      </SkeletonPlaceholder>
+    );
+  }
 
   return (
     <ActionListItem
