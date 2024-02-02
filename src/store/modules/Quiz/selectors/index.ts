@@ -37,3 +37,7 @@ export const quizResultSelector = (state: RootState) => {
 export const quizStatusSelector = (state: RootState) => {
   return state.quiz.status;
 };
+
+export const quizAttemptsLeftSelector = (state: RootState) => {
+  return state.quiz.status?.kycQuizRemainingAttempts;
+};

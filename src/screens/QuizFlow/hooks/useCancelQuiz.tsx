@@ -6,20 +6,21 @@ import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {QuizActions} from '@store/modules/Quiz/actions';
+import {quizAttemptsLeftSelector} from '@store/modules/Quiz/selectors';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {RestartIcon} from '@svg/RestartIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {useCallback} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 export const useCancelQuiz = () => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainStackParamList>>();
   const dispatch = useDispatch();
-  const retries = 2; //TODO::
+  const quizAttemptsLeft = useSelector(quizAttemptsLeftSelector);
 
   const cancelQuiz = useCallback(() => {
     navigation.navigate('PopUp', {
@@ -37,7 +38,7 @@ export const useCancelQuiz = () => {
               style={styles.retriesIcon}
             />
             <Text style={styles.retriesText}>
-              {t('quiz.retries', {number: retries})}
+              {t('quiz.retries', {number: quizAttemptsLeft ?? 0})}
             </Text>
           </View>
         </View>
@@ -61,7 +62,7 @@ export const useCancelQuiz = () => {
         },
       ],
     });
-  }, [dispatch, navigation]);
+  }, [dispatch, navigation, quizAttemptsLeft]);
 
   return {
     cancelQuiz,
