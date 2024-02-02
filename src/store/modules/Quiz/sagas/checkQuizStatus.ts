@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {Api} from '@api/index';
-import {AccountActions} from '@store/modules/Account/actions';
 import {
   isAuthorizedSelector,
   unsafeUserSelector,
@@ -10,29 +9,13 @@ import {QuizActions} from '@store/modules/Quiz/actions';
 import {getErrorMessage} from '@utils/errors';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
-type Action = ReturnType<
-  | typeof QuizActions.CHECK_QUIZ_STATUS.START.create
-  | typeof AccountActions.USER_STATE_CHANGE.SUCCESS.create
-  | typeof QuizActions.START_OR_CONTINUE_QUIZ.SUCCESS.create
->;
-
-export function* checkQuizStatusSaga(action: Action) {
+export function* checkQuizStatusSaga() {
   try {
     const isAuthorized: ReturnType<typeof isAuthorizedSelector> = yield select(
       isAuthorizedSelector,
     );
 
     if (!isAuthorized) {
-      return;
-    }
-
-    /**
-     * Run quiz status check upon quiz completion
-     */
-    if (
-      action.type === QuizActions.START_OR_CONTINUE_QUIZ.SUCCESS.type &&
-      !action.payload.quiz.result
-    ) {
       return;
     }
 

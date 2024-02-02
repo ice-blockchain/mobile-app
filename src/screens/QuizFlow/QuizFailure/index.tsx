@@ -43,7 +43,7 @@ export const QuizFailure = () => {
   };
 
   const handleClose = () => {
-    dispatch(QuizActions.RESET_QUIZ.RESET.create());
+    dispatch(QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.create());
     dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
     navigation.popToTop();
   };

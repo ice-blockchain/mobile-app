@@ -56,8 +56,7 @@ export const useCancelQuiz = () => {
                 skipKYCStep: QUIZ_KYC_STEP,
               }),
             );
-            dispatch(QuizActions.RESET_QUIZ.RESET.create());
-            dispatch(QuizActions.CHECK_QUIZ_STATUS.START.create());
+            dispatch(QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.create());
             navigation.goBack();
           },
         },

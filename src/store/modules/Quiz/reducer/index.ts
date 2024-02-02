@@ -12,7 +12,7 @@ export interface State {
 
 type Actions = ReturnType<
   | typeof QuizActions.START_OR_CONTINUE_QUIZ.SUCCESS.create
-  | typeof QuizActions.RESET_QUIZ.RESET.create
+  | typeof QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.create
   | typeof QuizActions.CHECK_QUIZ_STATUS.SUCCESS.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
 >;
@@ -32,7 +32,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
         draft.status = action.payload.status;
         break;
       case AccountActions.SIGN_OUT.SUCCESS.type:
-      case QuizActions.RESET_QUIZ.RESET.type:
+      case QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.type:
         return {...INITIAL_STATE};
     }
   });

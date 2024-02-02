@@ -72,7 +72,7 @@ export function* startOrContinueQuizSaga({payload}: Actions) {
         name: 'HomeTab',
         params: {screen: 'Home'},
       });
-      yield put(QuizActions.START_OR_CONTINUE_QUIZ.RESET.create());
+      yield put(QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.create());
       yield put(TokenomicsActions.START_MINING_SESSION.START.create());
     } else {
       yield put(
