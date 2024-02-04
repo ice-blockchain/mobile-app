@@ -1,8 +1,10 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {AccountActions} from '@store/modules/Account/actions';
+import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {QuizActions} from '@store/modules/Quiz/actions';
 import {checkQuizStatusSaga} from '@store/modules/Quiz/sagas/checkQuizStatus';
+import {showQuizNotificationSaga} from '@store/modules/Quiz/sagas/showQuizNotication';
 import {startOrContinueQuizSaga} from '@store/modules/Quiz/sagas/startOrContinueQuiz';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {takeLatest} from 'redux-saga/effects';
@@ -21,5 +23,12 @@ export const quizWatchers = [
       TokenomicsActions.START_MINING_SESSION.FAILED.type,
     ],
     checkQuizStatusSaga,
+  ),
+  takeLatest(
+    [
+      AppCommonActions.APP_LOADED.STATE.type,
+      AppCommonActions.APP_STATE_CHANGE.STATE.type,
+    ],
+    showQuizNotificationSaga,
   ),
 ];

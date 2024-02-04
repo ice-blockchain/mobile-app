@@ -22,6 +22,7 @@ export type Question = {
 };
 
 export type QuizStatus = {
+  kycQuizAvailabilityStartedAt: string;
   kycQuizAvailabilityEndedAt: string;
   kycQuizAvailable: boolean;
   kycQuizCompleted: boolean;
