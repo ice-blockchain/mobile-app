@@ -12,7 +12,6 @@ import {MainNavigationParams} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {QuizActions} from '@store/modules/Quiz/actions';
-import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
@@ -30,7 +29,6 @@ export const QuizSuccess = () => {
 
   const handleContinue = () => {
     dispatch(QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.create());
-    dispatch(TokenomicsActions.START_MINING_SESSION.START.create());
     navigation.popToTop();
   };
 
