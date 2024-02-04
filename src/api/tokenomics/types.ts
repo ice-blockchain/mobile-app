@@ -82,6 +82,13 @@ export type DistributionKycStep = 5;
 
 export type FaceAuthKycNumber = SelfieKycStep | EmotionsKycStep;
 
+export type KycStep =
+  | SelfieKycStep
+  | EmotionsKycStep
+  | VerifySocialAccountKycStep
+  | QuizKycStep
+  | DistributionKycStep;
+
 export type SocialKycStepNumber = number;
 
 export type TotalCoins = {

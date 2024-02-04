@@ -52,8 +52,8 @@ export const useCancelQuiz = () => {
           text: t('button.skip'),
           onPress: () => {
             dispatch(
-              TokenomicsActions.START_MINING_SESSION.START.create({
-                skipKYCStep: QUIZ_KYC_STEP,
+              TokenomicsActions.TRY_RESET_KYC_STEPS.START.create({
+                skipKYCSteps: [QUIZ_KYC_STEP],
               }),
             );
             dispatch(QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.create());
