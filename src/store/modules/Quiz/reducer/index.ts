@@ -1,13 +1,16 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {Quiz, QuizStatus} from '@api/kyc/types';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {AccountActions} from '@store/modules/Account/actions';
 import {QuizActions} from '@store/modules/Quiz/actions';
 import produce from 'immer';
+import {persistReducer} from 'redux-persist';
 
 export interface State {
   quiz: Quiz | null;
   status: QuizStatus | null;
+  quizNotificationShownIndex: number;
 }
 
 type Actions = ReturnType<
@@ -15,11 +18,13 @@ type Actions = ReturnType<
   | typeof QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.create
   | typeof QuizActions.CHECK_QUIZ_STATUS.SUCCESS.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
+  | typeof QuizActions.SET_QUIZ_NOTIFICATION_SHOWN.STATE.create
 >;
 
 const INITIAL_STATE: State = {
   quiz: null,
   status: null,
+  quizNotificationShownIndex: -1,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -31,6 +36,9 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case QuizActions.CHECK_QUIZ_STATUS.SUCCESS.type:
         draft.status = action.payload.status;
         break;
+      case QuizActions.SET_QUIZ_NOTIFICATION_SHOWN.STATE.type:
+        draft.quizNotificationShownIndex = action.payload.index;
+        break;
       case AccountActions.SIGN_OUT.SUCCESS.type:
       case QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.type:
         return {...INITIAL_STATE};
@@ -38,4 +46,11 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
   });
 }
 
-export const quizReducer = reducer;
+export const quizReducer = persistReducer(
+  {
+    key: 'quiz',
+    storage: AsyncStorage,
+    whitelist: ['quizNotificationShownIndex'],
+  },
+  reducer,
+);

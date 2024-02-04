@@ -16,7 +16,15 @@ const CHECK_QUIZ_STATUS = createAction('CHECK_QUIZ_STATUS', {
   FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
+const SET_QUIZ_NOTIFICATION_SHOWN = createAction(
+  'SET_QUIZ_NOTIFICATION_SHOWN',
+  {
+    STATE: (payload: {index: number}) => payload,
+  },
+);
+
 export const QuizActions = Object.freeze({
   START_OR_CONTINUE_QUIZ,
   CHECK_QUIZ_STATUS,
+  SET_QUIZ_NOTIFICATION_SHOWN,
 });
