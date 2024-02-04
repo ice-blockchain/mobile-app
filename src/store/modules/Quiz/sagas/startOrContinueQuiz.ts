@@ -13,7 +13,6 @@ import {
 } from '@store/modules/Account/selectors';
 import {QuizActions} from '@store/modules/Quiz/actions';
 import {quizSelector} from '@store/modules/Quiz/selectors';
-import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {getErrorMessage, showError} from '@utils/errors';
 import {
   call,
@@ -73,7 +72,6 @@ export function* startOrContinueQuizSaga({payload}: Actions) {
         params: {screen: 'Home'},
       });
       yield put(QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.create());
-      yield put(TokenomicsActions.START_MINING_SESSION.START.create());
     } else {
       yield put(
         QuizActions.START_OR_CONTINUE_QUIZ.FAILED.create(

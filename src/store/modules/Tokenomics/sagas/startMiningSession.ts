@@ -148,12 +148,12 @@ export function* startMiningSessionSaga(
       }
     } else if (isApiError(error, 403, 'MINING_DISABLED')) {
       const kycStepBlocked = error?.response?.data?.data?.kycStepBlocked;
+      yield removeScreenByName('Tooltip').catch();
       if (typeof kycStepBlocked === 'number') {
         if (
           kycStepBlocked === SELFIE_KYC_STEP ||
           kycStepBlocked === EMOTIONS_KYC_STEP
         ) {
-          yield removeScreenByName('Tooltip').catch();
           navigate({
             name: 'FaceRecognition',
             params: {
