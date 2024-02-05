@@ -1374,9 +1374,9 @@
       "description": "Tu acceso a la minería ha sido deshabilitado debido a tres fallos consecutivos en el cuestionario o al vencimiento del tiempo asignado, según lo requiere nuestro proceso de KYC."
     },
     "action": "Completar el cuestionario",
-    "reminder": "Te recordamos que debes completar el cuestionario para poder recibir monedas.",
-    "retries": "Reintentos: {{number}}",
-    "days_left": "Días restantes: {{days}}"
+    "reminder": "Por favor, ten en cuenta que debes completar el cuestionario para ser elegible para continuar con la minería y evitar sanciones.",
+    "days_left": "Días restantes: {{days}}",
+    "retries_left": "Intentos restantes: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

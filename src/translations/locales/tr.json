@@ -1374,9 +1374,9 @@
       "description": "KYC sürecimiz gereği üç ardışık quiz başarısızlığı veya tahsis edilen sürenin sona ermesi nedeniyle madencilik erişiminiz devre dışı bırakılmıştır."
     },
     "action": "Quiz'i Tamamlayın",
-    "reminder": "Size paraları alabilmeniz için testi tamamlamanız gerektiğini hatırlatırız.",
-    "retries": "Kalan Deneme: {{number}}",
-    "days_left": "Kalan Gün: {{days}}"
+    "reminder": "Lütfen madenciliğe devam etmek ve kesmeyi önlemek için sınavı tamamlamanız gerektiğini unutmayın.",
+    "days_left": "Kalan Gün: {{days}}",
+    "retries_left": "Kalan deneme sayısı: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

@@ -1374,9 +1374,9 @@
       "description": "3回連続でクイズに失敗したか、指定された期間が切れたため、マイニングアクセスが無効になりました。これは私たちのKYCプロセスで必要とされるものです。"
     },
     "action": "クイズを完了する",
-    "reminder": "コインを受け取るには、テストを完了する必要があることをお知らせいたします。",
-    "retries": "リトライ回数: {{number}}",
-    "days_left": "残り日数: {{days}}"
+    "reminder": "マイニングの継続とスラッシングを回避するために、クイズを完了する必要があることに注意してください。",
+    "days_left": "残り日数: {{days}}",
+    "retries_left": "残りの試行回数：{{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

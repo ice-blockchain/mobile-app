@@ -1377,9 +1377,9 @@
       "description": "Jou mynboutoegang is gedeaktiveer as gevolg van drie agtereenvolgende toetsmislukkings of die verstryking van die toegelate tyd, soos vereis deur ons KYC-proses."
     },
     "action": "Voltooi die toets",
-    "reminder": "Ons herinner jou dat jy die toets moet voltooi om munte te kan ontvang.",
-    "retries": "Herhalings: {{number}}",
-    "days_left": "Dae oor: {{days}}"
+    "reminder": "Let daarop dat jy die vraelys moet voltooi om in aanmerking te kom om voort te gaan met mynbou en snyding te voorkom.",
+    "days_left": "Dae oor: {{days}}",
+    "retries_left": "Pogings oor: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

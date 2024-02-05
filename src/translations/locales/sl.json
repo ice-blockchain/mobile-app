@@ -1374,9 +1374,9 @@
       "description": "Vaš dostop do rudarjenja je bil onemogočen zaradi treh zaporednih neuspelih kvizov ali poteka časa, kot je zahtevano v našem postopku KYC."
     },
     "action": "Dokončajte kviz",
-    "reminder": "Spomnimo vas, da morate opraviti test, da lahko prejmete kovance.",
-    "retries": "Preostali poskusi: {{number}}",
-    "days_left": "Preostali dnevi: {{days}}"
+    "reminder": "Opomba: da bi nadaljevali z rudarjenjem in se izognili zmanjšanju nagrade, morate končati kviz.",
+    "days_left": "Preostali dnevi: {{days}}",
+    "retries_left": "Preostali poskusi: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

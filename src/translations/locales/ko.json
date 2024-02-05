@@ -1374,9 +1374,9 @@
       "description": "퀴즈 3회 연속 실패 또는 지정된 시간 만료로 인해 채굴 액세스가 비활성화되었습니다. 이는 저희 KYC 프로세스에 따른 것입니다."
     },
     "action": "퀴즈 완료하기",
-    "reminder": "동전을 받으려면 테스트를 완료해야 함을 상기시켜 드립니다.",
-    "retries": "재시도 횟수: {{number}}",
-    "days_left": "남은 일수: {{days}}"
+    "reminder": "채굴을 계속하고 벌점을 피하려면 퀴즈를 완료해야 함을 주의하세요.",
+    "days_left": "남은 일수: {{days}}",
+    "retries_left": "남은 재시도 횟수: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

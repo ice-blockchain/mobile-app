@@ -1374,9 +1374,9 @@
       "description": "A bányászati hozzáférésedet három egymást követő kvíz bukás vagy a megszabott idő lejárta miatt letiltottuk, amint azt a KYC folyamatunk megköveteli."
     },
     "action": "Végezze el a kvízt",
-    "reminder": "Emlékeztetünk rá, hogy a tokenek fogadásához be kell fejezned a tesztet.",
-    "retries": "Újrapróbálkozások: {{number}}",
-    "days_left": "Hátralévő napok: {{days}}"
+    "reminder": "Kérjük, vegye figyelembe, hogy a bányászat folytatásához és az elvágás elkerüléséhez be kell fejeznie a kvízt.",
+    "days_left": "Hátralévő napok: {{days}}",
+    "retries_left": "Hátralévő próbálkozások: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

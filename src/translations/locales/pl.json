@@ -1374,9 +1374,9 @@
       "description": "Dostęp do wydobywania został wyłączony ze względu na trzy kolejne nieudane quizy lub wygaśnięcie przyznanej daty, zgodnie z naszym procesem KYC."
     },
     "action": "Ukończ quiz",
-    "reminder": "Przypominamy, że musisz ukończyć test, aby móc otrzymywać monety.",
-    "retries": "Ponów próbę: {{number}}",
-    "days_left": "Pozostało dni: {{days}}"
+    "reminder": "Proszę zauważyć, że musisz ukończyć quiz, aby być uprawnionym do kontynuacji wydobywania i uniknięcia kary.",
+    "days_left": "Pozostało dni: {{days}}",
+    "retries_left": "Pozostałe próby: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

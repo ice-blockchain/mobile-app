@@ -1374,9 +1374,9 @@
       "description": "Truy cập đào tiền của bạn đã bị vô hiệu hóa do ba lần thất bại liên tiếp trong bài kiểm tra hoặc hết thời gian quy định, theo quy trình KYC của chúng tôi."
     },
     "action": "Hoàn thành bài kiểm tra",
-    "reminder": "Chúng tôi nhắc bạn rằng bạn cần hoàn thành bài kiểm tra để có thể nhận được tiền.",
-    "retries": "Số lần thử lại còn lại: {{number}}",
-    "days_left": "Số ngày còn lại: {{days}}"
+    "reminder": "Vui lòng lưu ý rằng bạn cần hoàn thành bài kiểm tra để được tiếp tục đào và tránh bị trừ điểm.",
+    "days_left": "Số ngày còn lại: {{days}}",
+    "retries_left": "Các lần thử lại còn lại: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

@@ -1374,9 +1374,9 @@
       "description": "Kimlik yoxlama prosesimiz tələb edildiyi kimi üç artıq test uğursuz keçmə oğurluğu və ya təyin olunan vaxtın bitməsinə görə gəlirinə girişinizi deaktiv etdi."
     },
     "action": "Testi tamamla",
-    "reminder": "Sizə xatırladırıq ki, pul qəbul etmək üçün testi tamamlamanız lazımdır.",
-    "retries": "Təkrarlar: {{number}}",
-    "days_left": "Qalan gün: {{days}}"
+    "reminder": "Xahiş edirəm qeyd edin ki, təhrifatdan qorunmaq üçün madencilikə davam etmək üçün sualnəməni tamamlamanız lazımdır.",
+    "days_left": "Qalan gün: {{days}}",
+    "retries_left": "Qalan cəhd sayı: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

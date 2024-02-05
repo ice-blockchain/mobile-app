@@ -3,6 +3,7 @@
 import {isLightDesign} from '@constants/featureFlags';
 import {AccountActions} from '@store/modules/Account/actions';
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
+import {QuizActions} from '@store/modules/Quiz/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {getBalanceHistorySaga} from '@store/modules/Tokenomics/sagas/getBalanceHistory';
 import {getBalanceSummarySaga} from '@store/modules/Tokenomics/sagas/getBalanceSummary';
@@ -23,6 +24,7 @@ export const tokenomicsWatchers = [
       AccountActions.USER_STATE_CHANGE.SUCCESS.type,
       TokenomicsActions.GET_MINING_SUMMARY.START.type,
       TokenomicsActions.START_OR_UPDATE_PRE_STAKING.SUCCESS.type,
+      QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.type,
     ],
     getMiningSummarySaga,
   ),

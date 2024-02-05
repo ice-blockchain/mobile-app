@@ -1374,9 +1374,9 @@
       "description": "Akses perlombongan anda telah dilumpuhkan kerana tiga kegagalan kuis berturut-turut atau tamat tempoh yang ditetapkan, seperti yang diperlukan oleh proses KYC kami."
     },
     "action": "Selesaikan kuis",
-    "reminder": "Kami mengingatkan anda bahawa anda perlu menyelesaikan ujian ini untuk dapat menerima koin.",
-    "retries": "Percubaan Semula: {{number}}",
-    "days_left": "Hari yang tinggal: {{days}}"
+    "reminder": "Sila ambil perhatian bahawa anda perlu menyelesaikan kuiz untuk layak meneruskan perlombongan dan mengelakkan pemotongan.",
+    "days_left": "Hari yang tinggal: {{days}}",
+    "retries_left": "Percubaan yang tinggal: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

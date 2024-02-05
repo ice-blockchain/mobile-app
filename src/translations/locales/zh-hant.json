@@ -1374,9 +1374,9 @@
       "description": "由於連續三次測驗失敗或到期時間到期，根據我們的 KYC 流程要求，已停用您的挖礦訪問權限。"
     },
     "action": "完成測驗",
-    "reminder": "我們提醒您，您需要完成測試才能接收硬幣。",
-    "retries": "重試次數剩餘：{{number}}",
-    "days_left": "剩餘天數：{{days}}"
+    "reminder": "请注意，您需要完成测验才能继续挖矿并避免惩罚。",
+    "days_left": "剩餘天數：{{days}}",
+    "retries_left": "剩余尝试次数：{{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

@@ -1374,9 +1374,9 @@
       "description": "Accesul dvs. la minerit a fost dezactivat din cauza a trei eșecuri consecutive la quiz sau a expirării timpului alocat, conform cerințelor procesului nostru KYC."
     },
     "action": "Completați quiz-ul",
-    "reminder": "Vă reamintim că trebuie să completați testul pentru a putea primi monede.",
-    "retries": "Încercări rămase: {{number}}",
-    "days_left": "Zile rămase: {{days}}"
+    "reminder": "Vă rugăm să rețineți că trebuie să completați chestionarul pentru a fi eligibil pentru a continua mineritul și pentru a evita tăierea.",
+    "days_left": "Zile rămase: {{days}}",
+    "retries_left": "Încercări rămase: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

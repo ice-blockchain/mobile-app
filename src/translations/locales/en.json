@@ -1372,9 +1372,9 @@
       "description": "Your mining access has been disabled due to three consecutive quiz failures or the expiration of the allotted time, as required by our KYC process."
     },
     "action": "Complete the quiz",
-    "reminder": "We remind you that you need to complete the test in order to be able to receive coins.",
-    "retries": "Retries: {{number}}",
-    "days_left": "Days left: {{days}}"
+    "reminder": "Please note that you need to complete the quiz in order to be eligible to continue mining and avoid slashing.",
+    "days_left": "Days left: {{days}}",
+    "retries_left": "Retries left: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

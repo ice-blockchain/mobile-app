@@ -1374,9 +1374,9 @@
       "description": "Seu acesso à mineração foi desativado devido a três falhas consecutivas no quiz ou ao vencimento do tempo alocado, conforme exigido pelo nosso processo KYC."
     },
     "action": "Complete o quiz",
-    "reminder": "Lembramos que você precisa concluir o teste para poder receber moedas.",
-    "retries": "Tentativas restantes: {{number}}",
-    "days_left": "Dias restantes: {{days}}"
+    "reminder": "Por favor, note que é necessário completar o questionário para ser elegível para continuar a mineração e evitar penalizações.",
+    "days_left": "Dias restantes: {{days}}",
+    "retries_left": "Tentativas restantes: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

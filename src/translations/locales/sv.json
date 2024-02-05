@@ -1374,9 +1374,9 @@
       "description": "Din tillgång till brytning har inaktiverats på grund av tre på varandra följande misslyckade quizar eller utgång av den tilldelade tiden, enligt vårt KYC-process."
     },
     "action": "Slutför quizen",
-    "reminder": "Vi påminner dig om att du måste slutföra testet för att kunna ta emot mynt.",
-    "retries": "Försök kvar: {{number}}",
-    "days_left": "Dagar kvar: {{days}}"
+    "reminder": "Observera att du måste slutföra quizzen för att vara berättigad att fortsätta gruvdriften och undvika nedskärningar.",
+    "days_left": "Dagar kvar: {{days}}",
+    "retries_left": "Återstående försök: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

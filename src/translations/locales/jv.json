@@ -1281,9 +1281,9 @@
       "description": "Akses mining sampeyan wis dimatèni amarga tresna kuis sing tiga kali nyabot utawa lewat wanci kang ditentangake, kaya sing diwajibaké déning prosès KYC kita."
     },
     "action": "Delengake kuis",
-    "reminder": "Kita nggumantaran manèh sampeyan butuh deleng kui kanggo bisa nerima koin.",
-    "retries": "Percobaan manèh: {{number}}",
-    "days_left": "Dina sing mbènyu: {{days}}"
+    "reminder": "Tolong perhatikan bahwa Anda perlu menyelesaikan kuis untuk memenuhi syarat untuk melanjutkan penambangan dan menghindari pemotongan.",
+    "days_left": "Dina sing mbènyu: {{days}}",
+    "retries_left": "Percobaan tersisa: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

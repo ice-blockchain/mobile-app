@@ -1374,9 +1374,9 @@
       "description": "Akses penambangan Anda telah dinonaktifkan karena tiga kegagalan kuis berturut-turut atau berakhirnya waktu yang ditentukan, sesuai dengan proses KYC kami."
     },
     "action": "Selesaikan kuis",
-    "reminder": "Kami mengingatkan Anda bahwa Anda perlu menyelesaikan tes ini untuk dapat menerima koin.",
-    "retries": "Coba lagi: {{number}}",
-    "days_left": "Hari tersisa: {{days}}"
+    "reminder": "Harap perhatikan bahwa Anda perlu menyelesaikan kuis untuk memenuhi syarat untuk melanjutkan penambangan dan menghindari pemotongan.",
+    "days_left": "Hari tersisa: {{days}}",
+    "retries_left": "Percobaan tersisa: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

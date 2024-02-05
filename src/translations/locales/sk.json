@@ -1374,9 +1374,9 @@
       "description": "Váš prístup k ťažbe bol zakázaný z dôvodu troch po sebe nasledujúcich neúspešných kvízov alebo uplynutia prideleného času, ako to vyžaduje náš KYC proces."
     },
     "action": "Dokončiť kvíz",
-    "reminder": "Pripomíname vám, že kvôli získaniu mincí musíte dokončiť test.",
-    "retries": "Zostávajúce pokusy: {{number}}",
-    "days_left": "Dni do konca: {{days}}"
+    "reminder": "Upozorňujeme, že musíte dokončit kvíz, abyste byli oprávnění pokračovat v těžbě a vyhnuli se snižování.",
+    "days_left": "Dni do konca: {{days}}",
+    "retries_left": "Zostávajúce pokusy: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

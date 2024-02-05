@@ -38,7 +38,7 @@ export const useCancelQuiz = () => {
               style={styles.retriesIcon}
             />
             <Text style={styles.retriesText}>
-              {t('quiz.retries', {number: quizAttemptsLeft ?? 0})}
+              {t('quiz.retries_left', {number: quizAttemptsLeft ?? 0})}
             </Text>
           </View>
         </View>

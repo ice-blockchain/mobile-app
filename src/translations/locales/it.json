@@ -1374,9 +1374,9 @@
       "description": "Il tuo accesso al mining è stato disabilitato a causa di tre fallimenti consecutivi al quiz o alla scadenza del tempo assegnato, come richiesto dal nostro processo KYC."
     },
     "action": "Completa il quiz",
-    "reminder": "Ti ricordiamo che devi completare il test per poter ricevere le monete.",
-    "retries": "Ritentativi: {{number}}",
-    "days_left": "Giorni rimasti: {{days}}"
+    "reminder": "Si prega di notare che è necessario completare il quiz per essere idonei a continuare l'estrazione e evitare penalizzazioni.",
+    "days_left": "Giorni rimasti: {{days}}",
+    "retries_left": "Tentativi rimasti: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

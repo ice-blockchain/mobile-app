@@ -1374,9 +1374,9 @@
       "description": "Din mining-tilgang har blitt deaktivert på grunn av tre påfølgende quiz-feil eller utløp av tildelt tid, som kreves av vår KYC-prosess."
     },
     "action": "Fullfør quizen",
-    "reminder": "Vi minner deg om at du må fullføre testen for å kunne motta mynter.",
-    "retries": "Forsøk igjen: {{number}}",
-    "days_left": "Dager igjen: {{days}}"
+    "reminder": "Vennligst merk at du må fullføre quizen for å være kvalifisert for å fortsette gruvedrift og unngå straff.",
+    "days_left": "Dager igjen: {{days}}",
+    "retries_left": "Forsøk igjen: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

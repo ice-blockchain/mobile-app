@@ -1374,9 +1374,9 @@
       "description": "Aksesimi juaj në minieratë është çaktivizuar për shkak të tre dështimeve të radhës në quiz ose skadimit të kohës të caktuar, sipas kërkesave të procesit tonë KYC."
     },
     "action": "Përfundoni quiz-in",
-    "reminder": "Ju kujtojmë që duhet ta kryeni testin për të marrë monedha.",
-    "retries": "Tentativa të mbetura: {{number}}",
-    "days_left": "Ditë të mbetura: {{days}}"
+    "reminder": "Ju lutemi vini re se duhet të përfundoni ankandën për të qenë në gjendje të vazhdoni minierën dhe të shmangni goditjen.",
+    "days_left": "Ditë të mbetura: {{days}}",
+    "retries_left": "Përpjekjet e mbetura: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

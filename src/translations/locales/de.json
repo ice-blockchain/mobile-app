@@ -1374,9 +1374,9 @@
       "description": "Ihr Zugang zum Mining wurde aufgrund von drei aufeinander folgenden Quizfehlern oder dem Ablauf der festgelegten Zeit, wie es unser KYC-Verfahren erfordert, deaktiviert."
     },
     "action": "Quiz abschließen",
-    "reminder": "Wir erinnern Sie daran, dass Sie das Quiz abschließen müssen, um Münzen zu erhalten.",
-    "retries": "Versuche: {{number}}",
-    "days_left": "Verbleibende Tage: {{days}}"
+    "reminder": "Bitte beachten Sie, dass Sie den Test abschließen müssen, um für den Fortsetzung des Minings und zur Vermeidung von Strafen berechtigt zu sein.",
+    "days_left": "Verbleibende Tage: {{days}}",
+    "retries_left": "Übrige Versuche: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {

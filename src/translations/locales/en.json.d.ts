@@ -835,8 +835,8 @@ export type Translations = {
   'quiz.mining_disabled_popup.description': null;
   'quiz.action': null;
   'quiz.reminder': null;
-  'quiz.retries': {number: number | string};
   'quiz.days_left': {days: number | string};
+  'quiz.retries_left': {number: number | string};
   'distribution_kyc_dynamic.select_method_step.title': null;
   'distribution_kyc_dynamic.select_method_step.description': null;
   'distribution_kyc_dynamic.results_step.success.description': null;

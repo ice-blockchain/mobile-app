@@ -1374,9 +1374,9 @@
       "description": "Votre accès au minage a été désactivé en raison de trois échecs consécutifs au quiz ou de l'expiration du temps imparti, conformément à notre processus KYC."
     },
     "action": "Compléter le quiz",
-    "reminder": "Nous vous rappelons que vous devez réussir le test pour pouvoir recevoir des pièces.",
-    "retries": "Essais : {{number}}",
-    "days_left": "Jours restants : {{days}}"
+    "reminder": "Veuillez noter que vous devez compléter le quiz pour être éligible à la poursuite du minage et éviter les sanctions.",
+    "days_left": "Jours restants : {{days}}",
+    "retries_left": "Tentatives restantes : {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
