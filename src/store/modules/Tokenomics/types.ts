@@ -9,7 +9,8 @@ export type MiningState =
   | 'expire'
   | 'holidayActive'
   | 'holidayRestart'
-  | 'holidayExpire';
+  | 'holidayExpire'
+  | 'disabled';
 
 export type TotalCoinsBarGraphData = {
   blockchainData: BarGraphData[];

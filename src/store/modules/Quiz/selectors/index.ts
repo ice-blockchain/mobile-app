@@ -33,3 +33,19 @@ export const expiresAtSelector = (state: RootState) => {
 export const quizResultSelector = (state: RootState) => {
   return state.quiz.quiz?.result;
 };
+
+export const quizStatusSelector = (state: RootState) => {
+  return state.quiz.status;
+};
+
+export const quizAttemptsLeftSelector = (state: RootState) => {
+  return state.quiz.status?.kycQuizRemainingAttempts;
+};
+
+export const quizNotificationShownIndexSelector = (state: RootState) => {
+  return state.quiz.quizNotificationShownIndex;
+};
+
+export const hasUnfinishedQuizSelector = (state: RootState) => {
+  return state.quiz.hasUnfinishedQuiz;
+};

@@ -24,7 +24,6 @@ import {
 } from '@store/modules/Account/selectors';
 import {AnalyticsActions} from '@store/modules/Analytics/actions';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
-import {QuizActions} from '@store/modules/Quiz/actions';
 import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {
   isMiningActiveSelector,
@@ -33,6 +32,7 @@ import {
 import {openConfirmResurrect} from '@store/modules/Tokenomics/utils/openConfirmResurrect';
 import {openConfirmResurrectNo} from '@store/modules/Tokenomics/utils/openConfirmResurrectNo';
 import {openConfirmResurrectYes} from '@store/modules/Tokenomics/utils/openConfirmResurrectYes';
+import {openMiningDisabled} from '@store/modules/Tokenomics/utils/openMiningDisabled';
 import {hapticFeedback} from '@utils/device';
 import {getErrorMessage, showError} from '@utils/errors';
 import {
@@ -130,7 +130,7 @@ export function* startMiningSessionSaga(
           });
           return;
         } else if (errorData.kycSteps.includes(QUIZ_KYC_STEP)) {
-          yield put(QuizActions.START_OR_CONTINUE_QUIZ_FLOW.STATE.create());
+          navigate({name: 'QuizIntro', params: undefined});
           return;
         } else {
           const kycStep = errorData.kycSteps?.[0] ?? 0;
@@ -147,21 +147,23 @@ export function* startMiningSessionSaga(
         }
       }
     } else if (isApiError(error, 403, 'MINING_DISABLED')) {
-      const errorData = error?.response?.data?.data;
-      if (errorData && typeof errorData.kycStepBlocked === 'number') {
+      const kycStepBlocked = error?.response?.data?.data?.kycStepBlocked;
+      yield removeScreenByName('Tooltip').catch();
+      if (typeof kycStepBlocked === 'number') {
         if (
-          errorData.kycStepBlocked === SELFIE_KYC_STEP ||
-          errorData.kycStepBlocked === EMOTIONS_KYC_STEP
+          kycStepBlocked === SELFIE_KYC_STEP ||
+          kycStepBlocked === EMOTIONS_KYC_STEP
         ) {
-          yield removeScreenByName('Tooltip').catch();
           navigate({
             name: 'FaceRecognition',
             params: {
-              kycSteps: [errorData.kycStepBlocked],
-              kycStepBlocked: errorData.kycStepBlocked,
+              kycSteps: [kycStepBlocked],
+              kycStepBlocked,
             },
           });
           return;
+        } else {
+          yield call(openMiningDisabled, {kycStepBlocked});
         }
       }
     } else {

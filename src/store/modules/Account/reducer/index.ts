@@ -6,6 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {SignInUserInfo} from '@services/auth/signin/types';
 import {AuthToken} from '@services/auth/types';
 import {AccountActions} from '@store/modules/Account/actions';
+import {QuizActions} from '@store/modules/Quiz/actions';
 import produce from 'immer';
 import {persistReducer} from 'redux-persist';
 
@@ -35,6 +36,7 @@ type Actions = ReturnType<
   | typeof AccountActions.GET_AUTH_CONFIG.SUCCESS.create
   | typeof AccountActions.SET_INSTALL_REFERRER.STATE.create
   | typeof AccountActions.SET_BSC_ADDR_WARNING_CONFIRMED.STATE.create
+  | typeof QuizActions.RESET_QUIZ_KYC_STEP.SUCCESS.create
 >;
 
 const INITIAL_STATE: AccountState = {
@@ -61,6 +63,7 @@ function reducer(state = INITIAL_STATE, action: Actions): AccountState {
       case AccountActions.USER_STATE_CHANGE.SUCCESS.type:
       case AccountActions.GET_ACCOUNT.SUCCESS.type:
       case AccountActions.UPDATE_ACCOUNT.SUCCESS.type:
+      case QuizActions.RESET_QUIZ_KYC_STEP.SUCCESS.type:
         draft.user = action.payload.user;
         if (action.type === AccountActions.USER_STATE_CHANGE.SUCCESS.type) {
           draft.isAdmin = action.payload.isAdmin;

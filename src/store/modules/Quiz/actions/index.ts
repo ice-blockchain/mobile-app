@@ -1,35 +1,38 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {Quiz} from '@api/kyc/types';
+import {Quiz, QuizStatus} from '@api/kyc/types';
+import {User} from '@api/user/types';
 import {createAction} from '@store/utils/actions/createAction';
 
 const START_OR_CONTINUE_QUIZ = createAction('START_OR_CONTINUE_QUIZ', {
   START: (payload?: {selectedOption: number}) => payload,
   SUCCESS: (payload: {quiz: Quiz}) => payload,
   FAILED: (errorMessage: string) => ({errorMessage}),
-  RESET: true,
+  COMPLETED: true,
 });
 
-const START_OR_CONTINUE_QUIZ_FLOW = createAction(
-  'START_OR_CONTINUE_QUIZ_FLOW',
-  {
-    STATE: true,
-  },
-);
-
-const ACCEPT_QUIZ_TERMS = createAction('ACCEPT_QUIZ_TERMS', {
+const CHECK_QUIZ_STATUS = createAction('CHECK_QUIZ_STATUS', {
   START: true,
-  SUCCESS: true,
+  SUCCESS: (payload: {status: QuizStatus}) => payload,
   FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
-const RESET_QUIZ = createAction('RESET_QUIZ', {
-  RESET: true,
+const SET_QUIZ_NOTIFICATION_SHOWN = createAction(
+  'SET_QUIZ_NOTIFICATION_SHOWN',
+  {
+    STATE: (payload: {index: number}) => payload,
+  },
+);
+
+const RESET_QUIZ_KYC_STEP = createAction('RESET_QUIZ_KYC_STEP', {
+  START: true,
+  SUCCESS: (params: {user: User}) => params,
+  FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
 export const QuizActions = Object.freeze({
   START_OR_CONTINUE_QUIZ,
-  START_OR_CONTINUE_QUIZ_FLOW,
-  ACCEPT_QUIZ_TERMS,
-  RESET_QUIZ,
+  CHECK_QUIZ_STATUS,
+  SET_QUIZ_NOTIFICATION_SHOWN,
+  RESET_QUIZ_KYC_STEP,
 });

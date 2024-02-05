@@ -1322,16 +1322,9 @@
     "description2": "Ky hap na ndihmon të sigurojmë sigurinë dhe autenticitetin e llogarisë suaj. Ju falenderojmë për bashkëpunimin!"
   },
   "quiz": {
-    "title": "Hapi KYC #3",
-    "terms": {
+    "title": "Quiz",
+    "intro": {
       "description": "Në Ice, besojmë në nxitjen e një komuniteti të anëtarëve aktivë dhe të informuar. Misioni ynë është të sigurojmë që monedhat Ice të ndahen për ata që janë vërtetë të angazhuar dhe të pajisur me qëllimet tona.",
-      "knowledge_verification": {
-        "title": "💡 Verifikimi i njohurive",
-        "description": "Për të siguruar që komuniteti ynë është i informuar mirë dhe i pajisur me qëllimet tona:",
-        "point1": "Ju do t'ju prezantohen 21 pyetje të nxjerra nga burimet tona të pasura.",
-        "point2": "Një quiz i kaluar konfirmon kuptimin dhe përkushtimin tuaj.",
-        "point3": "Një quiz i dështuar tregon nevojën për angazhim të mëtejshëm me materialet tona."
-      },
       "community_engagement": {
         "title": "🙌 Angazhimi aktiv në komunitet",
         "description": "Angazhimi juaj në Ekosistemin Ice ndikon drejtpërdrejt në aftësitë tuaja të minierës:",
@@ -1340,20 +1333,25 @@
         "point3": "Ndërkime sociale: Rrisni praninë tuaj duke dhënë like, ndarë, ndjekur, ose postuar rreth Ice.",
         "bottom_description": "Sa më shumë të angazhoheni, aq më e larta është vlerësimi pozitiv i ndërveprimit tuaj, duke ju lejuar të kaloni procesin KYC."
       },
-      "terms_privacy": "Unë kuptoj dhe pajtohem me [[:link]]Kushtet dhe Kushtet e Privatësisë[[/:link]]."
+      "terms_privacy": "Unë kuptoj dhe pajtohem me [[:link]]Kushtet dhe Kushtet e Privatësisë[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Kontrolli i Dijes",
+        "point2": "Për të kaluar quiz-in, duhet të përgjigjeni saktësisht të paktën 18 pyetje.",
+        "point3": "Quiz-i i dështuar tregon nevojën për angazhim më të thellë me materialet tona.",
+        "point4": "Ka një kufi kohor për të kryer quiz-in. Mund të shihni sa ditë ju mbeten deri në datën e skadimit në faqen tuaj të fillimit në seksionin e quiz-it.",
+        "point5": "Keni në dispozicion 3 tentativa para datës së skadimit. Nëse nuk e kryeni quiz-in 3 herë ose datës së skadimit i ka kaluar afati, nuk do të mund të minoni më, dhe llogaria juaj do të ndëshkohet.",
+        "point6": "📚 Te gjitha informacionet për këtë quiz mund të lexohen [[:link]]këtu[[/:link]].",
+        "description": "Për të siguruar që komuniteti ynë është i informuar mirë dhe i pajisur me qëllimet tona:",
+        "point1": "Ju do t'ju prezantohen 21 pyetje të nxjerra nga burimet tona të pasura."
+      },
+      "why_quiz": {
+        "title": "💡 Pse Quiz-i?",
+        "description": "Angazhimi ynë për dijeninë dhe kuptimin është në krye të komunitetit tonë. Me anë të quiz-it tonë, synojmë të sigurojmë që Ice të arrijë në duart e duhura, atyre që vërtet e kuptojnë dhe përputhen me vizionin e projektit tonë."
+      }
     },
-    "intro": {
-      "knowledge_check": "🧠 Kontrolli i njohurive:",
-      "point1": "Ka gjithsej 21 pyetje.",
-      "point2": "Për të kaluar testin, ju duhet të përgjigjeni saktësisht në të paktën 18 pyetje.",
-      "point3": "Oops, testi dështoi? Provoni përsëri javën e ardhshme.",
-      "point4": "📚 Të gjitha informacionet për këtë quiz mund të lexohen [[:link]]këtu[[/:link]].",
-      "why_quiz": "Pse Quiz?",
-      "why_quiz_description": "Ne jemi të angazhuar për minierën e mençur, të sigurt dhe të informuar. Ky hap i vogël siguron që komuniteti i Ice progreson me njohuri dhe kuptim!"
-    },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Testi dështoi",
-      "description": "Ju nuk keni përgjigjur më shumë se 18 pyetje saktë, kështu që nuk mund të kaloni Hapin KYC #3. Mund ta provoni përsëri në një javë.",
+      "description": "Ju nuk keni përgjigjur saktë më shumë se 18 pyetje, kështu që nuk mund të kaloni testin.",
       "check_faq": "Për të përgjigjur saktë herën tjetër, ju sugjerojmë të njiheni me bazën tonë të njohurive dhe pyetjet e shpeshta."
     },
     "quiz_questionnaire": {
@@ -1365,12 +1363,20 @@
     "confirmation_popup": {
       "title": "Konfirmim",
       "start_description": "A jeni të sigurt që doni të filloni quiz-in?",
-      "cancel_description": "A jeni të sigurt që doni të anuloni quiz-in?"
+      "cancel_description": "Duke kaluar quiz-in, do të përdorni një nga 3 tentativat e disponueshme. A jeni të sigurt se doni ta kalojini quiz-in tani?"
     },
     "quiz_success": {
       "title": "Verifikimi i Përfunduar",
       "description": "Urime, keni përfunduar me sukses KYC tuaj. Përgjigjet tuaja të vazhdueshme të sakta kanë provuar përkushtimin dhe njohuritë tuaja. Tani jeni të verifikuar."
-    }
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Minieratë e Çaktivizuar",
+      "description": "Aksesimi juaj në minieratë është çaktivizuar për shkak të tre dështimeve të radhës në quiz ose skadimit të kohës të caktuar, sipas kërkesave të procesit tonë KYC."
+    },
+    "action": "Përfundoni quiz-in",
+    "reminder": "Ju lutemi vini re se duhet të përfundoni ankandën për të qenë në gjendje të vazhdoni minierën dhe të shmangni goditjen.",
+    "days_left": "Ditë të mbetura: {{days}}",
+    "retries_left": "Përpjekjet e mbetura: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1382,5 +1388,8 @@
         "description": "Urime, keni përfunduar me sukses verifikimin tuaj. Tani keni të drejtë të mbani statusin tuaj mujor të shpërndarjes së BNB Smart Chain."
       }
     }
+  },
+  "buttons": {
+    "skip": "Kalo"
   }
 }

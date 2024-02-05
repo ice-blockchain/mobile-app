@@ -55,6 +55,7 @@
     "apply": "Apply",
     "reset": "Reset",
     "skip_all": "Skip all",
+    "skip": "Skip",
     "done": "Done",
     "confirm": "Confirm",
     "do_this_later": "Do this later",
@@ -1319,15 +1320,22 @@
     "description2": "This step helps us ensure the security and authenticity of your account. Thank you for your cooperation!"
   },
   "quiz": {
-    "title": "KYC Step #3",
-    "terms": {
+    "title": "Quiz",
+    "intro": {
       "description": "At Ice, we believe in fostering a community of active and informed members. Our mission is to ensure that Ice coins are distributed to those who are genuinely engaged and aligned with our vision.",
-      "knowledge_verification": {
-        "title": "💡 Knowledge Verification",
+      "knowledge_check": {
+        "title": "🧠 Knowledge Check",
         "description": "To ensure our community is well-informed and aligned with our vision:",
         "point1": "You'll be presented with 21 questions derived from our comprehensive resources.",
-        "point2": "A passed quiz confirms your understanding and dedication.",
-        "point3": "A failed quiz indicates a need for further engagement with our materials."
+        "point2": "To pass the quiz, you need to answer at least 18 questions correctly.",
+        "point3": "A failed quiz indicates a need for further engagement with our materials.",
+        "point4": "There is a date limit for passing the quiz. You can see how many days left you have until the expiration date on your homepage in the quiz section.",
+        "point5": "You have 3 retries available before the expiration date. If you fail the quiz 3 times or if the expiration date passes, you will not be able to mine anymore and your account will go into slashing.",
+        "point6": "📚 All info for this quiz can be read [[:link]]here[[/:link]]."
+      },
+      "why_quiz": {
+        "title": "💡 Why the Quiz?",
+        "description": "Our commitment to knowledge and understanding is at the forefront of our community. With our quiz, we aim to ensure that Ice finds its way into the right hands, those who genuinely comprehend and align with our project's vision."
       },
       "community_engagement": {
         "title": "🙌 Active Community Engagement",
@@ -1339,18 +1347,9 @@
       },
       "terms_privacy": "I understand & I agree with the [[:link]]Terms and Conditions.[[/:link]]"
     },
-    "intro": {
-      "knowledge_check": "🧠 Knowledge Check:",
-      "point1": "There are 21 questions in total.",
-      "point2": "To pass the quiz, you need to answer at least 18 questions correctly.",
-      "point3": "Oops, failed quiz? Try again next week.",
-      "point4": "📚 All info for this quiz can be read [[:link]]here[[/:link]].",
-      "why_quiz": "Why the Quiz?",
-      "why_quiz_description": "We're all about smart, safe, and informed mining. This small step ensures our Ice community thrives with knowledge and understanding!"
-    },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Failed Quiz",
-      "description": "You didn't answer more than 18 questions correctly, so you can't pass the KYC Step #3. You can try again in one week.",
+      "description": "You didn't answer more than 18 questions correctly, so you can't pass the quiz.",
       "check_faq": "In order to answer correctly next time, we suggest you familiarize yourself with our knowledge base and FAQ."
     },
     "quiz_questionnaire": {
@@ -1362,12 +1361,20 @@
     "confirmation_popup": {
       "title": "Confirmation",
       "start_description": "Are you sure you want to start the quiz?",
-      "cancel_description": "Are you sure you want to cancel the quiz?"
+      "cancel_description": "By skipping the quiz, you will use one retry available. Are you sure you want to skip the quiz now?"
     },
     "quiz_success": {
       "title": "Verification Completed",
       "description": "Congratulations, you have successfully completed your KYC. Your consistent correct answers have proven your dedication and knowledge. You are now verified."
-    }
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Mining disabled",
+      "description": "Your mining access has been disabled due to three consecutive quiz failures or the expiration of the allotted time, as required by our KYC process."
+    },
+    "action": "Complete the quiz",
+    "reminder": "Please note that you need to complete the quiz in order to be eligible to continue mining and avoid slashing.",
+    "days_left": "Days left: {{days}}",
+    "retries_left": "Retries left: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1379,5 +1386,8 @@
         "description": "Congratulations, you have successfully completed your verification. You are now eligible to maintain your monthly BNB Smart Chain distribution status."
       }
     }
+  },
+  "buttons": {
+    "skip": "Skip"
   }
 }

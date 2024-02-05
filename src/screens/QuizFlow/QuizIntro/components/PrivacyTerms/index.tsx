@@ -11,16 +11,16 @@ import {rem} from 'rn-units';
 
 type Props = {
   onCheckBoxPress: (value: boolean) => void;
-  isAgreeWithTerms: boolean;
+  termsAccepted: boolean;
 };
 
-export const PrivacyTerms = ({onCheckBoxPress, isAgreeWithTerms}: Props) => {
+export const PrivacyTerms = ({onCheckBoxPress, termsAccepted}: Props) => {
   const handlePress = () => {
     openLinkWithInAppBrowser({url: LINKS.TERMS});
   };
 
   const text = replaceString(
-    t('quiz.terms.terms_privacy'),
+    t('quiz.intro.terms_privacy'),
     tagRegex('link', false),
     (match, index) => {
       return (
@@ -34,7 +34,7 @@ export const PrivacyTerms = ({onCheckBoxPress, isAgreeWithTerms}: Props) => {
   return (
     <View style={styles.container}>
       <View style={styles.checkboxContainer}>
-        <CheckBox checked={isAgreeWithTerms} onValueChange={onCheckBoxPress} />
+        <CheckBox checked={termsAccepted} onValueChange={onCheckBoxPress} />
       </View>
       <Text style={styles.text}>{text}</Text>
     </View>

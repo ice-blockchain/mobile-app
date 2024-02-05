@@ -195,5 +195,6 @@ export const Images = {
   quiz: {
     quizFailed: require('./quiz/quiz_failed.png'),
     quiz: require('./quiz/quiz.png'),
+    quiz_small: require('./quiz/quiz_small.png'),
   },
 } as const;

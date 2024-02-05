@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {dayjs} from '@services/dayjs';
 import {t} from '@translations/i18n';
 import {Duration} from 'dayjs/plugin/duration';
 
@@ -18,4 +19,8 @@ export const getDurationString = (duration: Duration, numberOfUnits = 2) => {
     .filter(({value}) => value > 0)
     .map(({value, unit}) => value + unit)
     .join(' ');
+};
+
+export const daysFromNow = (date: string | number | Date) => {
+  return Math.ceil(dayjs(date).diff(dayjs(), 'd', true));
 };

@@ -1322,16 +1322,9 @@
     "description2": "Langkah ini membantu kami memastikan keamanan dan otentisitas akun Anda. Terima kasih atas kerjasamanya!"
   },
   "quiz": {
-    "title": "Langkah KYC #3",
-    "terms": {
+    "title": "Kuis",
+    "intro": {
       "description": "Di Ice, kami percaya dalam memupuk komunitas anggota yang aktif dan terinformasi. Misi kami adalah memastikan bahwa koin Ice didistribusikan kepada mereka yang benar-benar terlibat dan sejalan dengan visi kami.",
-      "knowledge_verification": {
-        "title": "💡 Verifikasi Pengetahuan",
-        "description": "Untuk memastikan komunitas kami terinformasi dengan baik dan sejalan dengan visi kami:",
-        "point1": "Anda akan disajikan dengan 21 pertanyaan yang berasal dari sumber daya kami yang komprehensif.",
-        "point2": "Kuis yang lulus mengkonfirmasi pemahaman dan dedikasi Anda.",
-        "point3": "Kuis yang gagal menunjukkan kebutuhan untuk lebih berinteraksi dengan materi kami."
-      },
       "community_engagement": {
         "title": "🙌 Keterlibatan Komunitas Aktif",
         "description": "Keterlibatan Anda dalam Ekosistem Ice secara langsung memengaruhi kemampuan penambangan Anda:",
@@ -1340,20 +1333,25 @@
         "point3": "Interaksi Sosial: Tingkatkan kehadiran Anda dengan menyukai, berbagi, mengikuti, atau memposting tentang Ice.",
         "bottom_description": "Semakin aktif Anda, semakin tinggi skor interaksi positif Anda, memungkinkan Anda melewati proses KYC."
       },
-      "terms_privacy": "Saya memahami & Saya setuju dengan [[:link]]Syarat dan Ketentuan[[/:link]]."
+      "terms_privacy": "Saya memahami & Saya setuju dengan [[:link]]Syarat dan Ketentuan[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Pemeriksaan Pengetahuan",
+        "point2": "Untuk lulus kuis ini, Anda perlu menjawab setidaknya 18 pertanyaan dengan benar.",
+        "point3": "Kuis yang gagal menunjukkan perlunya keterlibatan lebih lanjut dengan materi kami.",
+        "point4": "Ada batas waktu untuk menyelesaikan kuis ini. Anda dapat melihat berapa hari tersisa hingga tanggal kedaluwarsa di halaman utama Anda pada bagian kuis.",
+        "point5": "Anda memiliki 3 kesempatan untuk mencoba lagi sebelum tanggal kedaluwarsa. Jika Anda gagal kuis 3 kali atau jika tanggal kedaluwarsa berlalu, Anda tidak akan dapat melakukan penambangan lagi dan akun Anda akan dimatikan.",
+        "point6": "📚 Semua informasi untuk kuis ini dapat dibaca [[:link]]di sini[[/:link]].",
+        "description": "Untuk memastikan komunitas kami terinformasi dengan baik dan sejalan dengan visi kami:",
+        "point1": "Anda akan disajikan dengan 21 pertanyaan yang berasal dari sumber daya kami yang komprehensif."
+      },
+      "why_quiz": {
+        "title": "💡 Mengapa Kuis Ini?",
+        "description": "Komitmen kami terhadap pengetahuan dan pemahaman berada di garis depan komunitas kami. Dengan kuis ini, kami bertujuan untuk memastikan bahwa Ice mencapai tangan yang tepat, yaitu mereka yang benar-benar memahami dan sejalan dengan visi proyek kami."
+      }
     },
-    "intro": {
-      "knowledge_check": "🧠 Pemeriksaan Pengetahuan:",
-      "point1": "Ada 21 pertanyaan secara total.",
-      "point2": "Untuk lulus kuis, Anda perlu menjawab setidaknya 18 pertanyaan dengan benar.",
-      "point3": "Oops, gagal kuis? Coba lagi minggu depan.",
-      "point4": "📚 Semua informasi untuk kuis ini dapat dibaca [[:link]]di sini[[/:link]].",
-      "why_quiz": "Mengapa Kuis Ini?",
-      "why_quiz_description": "Kami peduli tentang penambangan yang cerdas, aman, dan terinformasi. Langkah kecil ini memastikan komunitas Ice kami berkembang dengan pengetahuan dan pemahaman!"
-    },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Kuis Gagal",
-      "description": "Anda tidak menjawab lebih dari 18 pertanyaan dengan benar, sehingga Anda tidak dapat melewati Langkah KYC #3. Anda dapat mencoba lagi dalam satu minggu.",
+      "description": "Anda tidak menjawab lebih dari 18 pertanyaan dengan benar, jadi Anda tidak dapat lulus ujian.",
       "check_faq": "Untuk menjawab dengan benar next time, kami sarankan Anda mengenal lebih dekat basis pengetahuan kami dan FAQ kami."
     },
     "quiz_questionnaire": {
@@ -1365,12 +1363,20 @@
     "confirmation_popup": {
       "title": "Konfirmasi",
       "start_description": "Apakah Anda yakin ingin memulai kuis?",
-      "cancel_description": "Apakah Anda yakin ingin membatalkan kuis?"
+      "cancel_description": "Dengan melewati kuis ini, Anda akan menggunakan satu kesempatan mencoba lagi yang tersedia. Apakah Anda yakin ingin melewati kuis ini sekarang?"
     },
     "quiz_success": {
       "title": "Verifikasi Selesai",
       "description": "Selamat, Anda telah berhasil menyelesaikan KYC Anda. Jawaban yang benar secara konsisten telah membuktikan dedikasi dan pengetahuan Anda. Anda sekarang diverifikasi."
-    }
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Penambangan Dinonaktifkan",
+      "description": "Akses penambangan Anda telah dinonaktifkan karena tiga kegagalan kuis berturut-turut atau berakhirnya waktu yang ditentukan, sesuai dengan proses KYC kami."
+    },
+    "action": "Selesaikan kuis",
+    "reminder": "Harap perhatikan bahwa Anda perlu menyelesaikan kuis untuk memenuhi syarat untuk melanjutkan penambangan dan menghindari pemotongan.",
+    "days_left": "Hari tersisa: {{days}}",
+    "retries_left": "Percobaan tersisa: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1382,5 +1388,8 @@
         "description": "Selamat, Anda telah berhasil menyelesaikan verifikasi Anda. Anda sekarang berhak untuk mempertahankan status distribusi BNB Smart Chain bulanan Anda."
       }
     }
+  },
+  "buttons": {
+    "skip": "Lewati"
   }
 }

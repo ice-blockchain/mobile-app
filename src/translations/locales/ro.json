@@ -1322,16 +1322,9 @@
     "description2": "Acest pas ne ajută să asigurăm securitatea și autenticitatea contului dvs. Vă mulțumim pentru colaborare!"
   },
   "quiz": {
-    "title": "Pasul KYC #3",
-    "terms": {
+    "title": "Quiz",
+    "intro": {
       "description": "La Ice, credem în promovarea unei comunități de membri activi și informați. Misiunea noastră este să asigurăm distribuirea monedelor Ice către cei cu adevărat angajați și aliniați cu viziunea noastră.",
-      "knowledge_verification": {
-        "title": "💡 Verificarea Cunoștințelor",
-        "description": "Pentru a ne asigura că comunitatea noastră este bine informată și aliniată cu viziunea noastră:",
-        "point1": "Veți fi prezentat cu 21 de întrebări derivate din resursele noastre cuprinzătoare.",
-        "point2": "Un quiz trecut confirmă înțelegerea și dedicarea dvs.",
-        "point3": "Un quiz eșuat indică necesitatea unui angajament mai mare cu materialele noastre."
-      },
       "community_engagement": {
         "title": "🙌 Angajament Activ în Comunitate",
         "description": "Angajamentul dvs. în Ecosistemul Ice influențează direct capacitățile dvs. de minerit:",
@@ -1340,20 +1333,25 @@
         "point3": "Interacțiuni Sociale: Creșteți prezența dvs. printr-un like, share, follow sau postare despre Ice.",
         "bottom_description": "Cu cât sunteți mai implicați, cu atât scorul dvs. de interacțiune pozitivă este mai mare, permițându-vă să treceți prin procesul KYC."
       },
-      "terms_privacy": "Înțeleg și sunt de acord cu [[:link]]Termenii și Condițiile[[/:link]]."
+      "terms_privacy": "Înțeleg și sunt de acord cu [[:link]]Termenii și Condițiile[[/:link]].",
+      "knowledge_check": {
+        "title": "🧠 Verificarea Cunoștințelor",
+        "point2": "Pentru a trece testul, trebuie să răspundeți corect la cel puțin 18 întrebări.",
+        "point3": "Un test eșuat indică necesitatea unei mai mari implicări cu materialele noastre.",
+        "point4": "Există o limită de timp pentru a trece testul. Puteți vedea câte zile vă mai rămân până la data de expirare pe pagina de start în secțiunea de quiz.",
+        "point5": "Aveți la dispoziție 3 încercări înainte de data de expirare. Dacă nu treceți testul de 3 ori sau dacă data de expirare a trecut, nu veți mai putea să mineritul și contul dvs. va fi penalizat.",
+        "point6": "📚 Toate informațiile pentru acest quiz pot fi citite [[:link]]aici[[/:link]].",
+        "description": "Pentru a ne asigura că comunitatea noastră este bine informată și aliniată cu viziunea noastră:",
+        "point1": "Veți fi prezentat cu 21 de întrebări derivate din resursele noastre cuprinzătoare."
+      },
+      "why_quiz": {
+        "title": "💡 De Ce Quiz-ul?",
+        "description": "Angajamentul nostru față de cunoaștere și înțelegere se află în fruntea comunității noastre. Cu ajutorul acestui quiz, ne propunem să ne asigurăm că Ice ajunge în mâinile potrivite, ale celor care înțeleg cu adevărat și se aliniază cu viziunea proiectului nostru."
+      }
     },
-    "intro": {
-      "knowledge_check": "🧠 Verificare Cunoștințe:",
-      "point1": "Sunt în total 21 de întrebări.",
-      "point2": "Pentru a trece testul, trebuie să răspundeți corect la cel puțin 18 întrebări.",
-      "point3": "Ups, testul a fost eșuat? Încercați din nou săptămâna viitoare.",
-      "point4": "📚 Toate informațiile despre acest quiz pot fi citite [[:link]]aici[[/:link]].",
-      "why_quiz": "De ce Quiz-ul?",
-      "why_quiz_description": "Suntem dedicați minatului inteligent, sigur și informat. Acest mic pas asigură că comunitatea Ice prosperează cu cunoștințe și înțelegere!"
-    },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Quiz Eșuat",
-      "description": "Nu ați răspuns corect la mai mult de 18 întrebări, așa că nu puteți trece de Etapa KYC #3. Puteți încerca din nou în săptămâna următoare.",
+      "description": "Nu ai răspuns corect la mai mult de 18 întrebări, deci nu poți trece testul.",
       "check_faq": "Pentru a răspunde corect data viitoare, vă sugerăm să vă familiarizați cu Baza noastră de Cunoștințe și Întrebările Frecvente."
     },
     "quiz_questionnaire": {
@@ -1365,12 +1363,20 @@
     "confirmation_popup": {
       "title": "Confirmare",
       "start_description": "Sunteți sigur că doriți să începeți quiz-ul?",
-      "cancel_description": "Sunteți sigur că doriți să anulați quiz-ul?"
+      "cancel_description": "Sărind peste quiz, veți folosi una dintre cele 3 încercări disponibile. Sunteți sigur că doriți să săriți peste quiz acum?"
     },
     "quiz_success": {
       "title": "Verificare Completă",
       "description": "Felicitări, ați finalizat cu succes KYC-ul dvs. Răspunsurile dvs. corecte și constante au dovedit dedicația și cunoștințele dvs. Acum sunteți verificat."
-    }
+    },
+    "mining_disabled_popup": {
+      "title": "❌ Minerit Dezactivat",
+      "description": "Accesul dvs. la minerit a fost dezactivat din cauza a trei eșecuri consecutive la quiz sau a expirării timpului alocat, conform cerințelor procesului nostru KYC."
+    },
+    "action": "Completați quiz-ul",
+    "reminder": "Vă rugăm să rețineți că trebuie să completați chestionarul pentru a fi eligibil pentru a continua mineritul și pentru a evita tăierea.",
+    "days_left": "Zile rămase: {{days}}",
+    "retries_left": "Încercări rămase: {{number}}"
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1382,5 +1388,8 @@
         "description": "Felicitări, ați finalizat cu succes verificarea dumneavoastră. Acum sunteți eligibil pentru a vă menține statutul de distribuție lunară a BNB Smart Chain."
       }
     }
+  },
+  "buttons": {
+    "skip": "Sari peste"
   }
 }

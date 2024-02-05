@@ -20,3 +20,12 @@ export type Question = {
   options: string[];
   text: string;
 };
+
+export type QuizStatus = {
+  kycQuizAvailabilityStartedAt: string;
+  kycQuizAvailabilityEndedAt: string;
+  kycQuizAvailable: boolean;
+  kycQuizCompleted: boolean;
+  kycQuizDisabled: boolean;
+  kycQuizRemainingAttempts?: number;
+};

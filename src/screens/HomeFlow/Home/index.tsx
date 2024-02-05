@@ -11,6 +11,7 @@ import {HomeHeader} from '@screens/HomeFlow/Home/components/Header';
 import {JoinMainnet} from '@screens/HomeFlow/Home/components/JoinMainnet';
 import {Overview} from '@screens/HomeFlow/Home/components/Overview';
 import {PAGE_HEIGHT, Pager} from '@screens/HomeFlow/Home/components/Pager';
+import {Quiz} from '@screens/HomeFlow/Home/components/Quiz';
 import {Roadmap} from '@screens/HomeFlow/Home/components/Roadmap';
 import {SocialLinks} from '@screens/HomeFlow/Home/components/SocialLinks';
 import {Tasks} from '@screens/HomeFlow/Home/components/Tasks';
@@ -57,6 +58,7 @@ export const Home = memo(() => {
             <View style={isLightDesign ? styles.section : undefined}>
               <Team />
             </View>
+            <Quiz />
             <BscAddress />
             <Roadmap />
             <JoinMainnet />
