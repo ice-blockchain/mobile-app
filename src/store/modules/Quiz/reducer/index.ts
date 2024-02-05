@@ -39,8 +39,10 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case QuizActions.SET_QUIZ_NOTIFICATION_SHOWN.STATE.type:
         draft.quizNotificationShownIndex = action.payload.index;
         break;
-      case AccountActions.SIGN_OUT.SUCCESS.type:
       case QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.type:
+        draft.quiz = null;
+        break;
+      case AccountActions.SIGN_OUT.SUCCESS.type:
         return {...INITIAL_STATE};
     }
   });
