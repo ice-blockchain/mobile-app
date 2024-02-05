@@ -27,10 +27,7 @@ export const quizWatchers = [
     checkQuizStatusSaga,
   ),
   takeLatest(
-    [
-      AppCommonActions.APP_LOADED.STATE.type,
-      AppCommonActions.APP_STATE_CHANGE.STATE.type,
-    ],
+    TokenomicsActions.START_MINING_SESSION.SUCCESS.type,
     showQuizNotificationSaga,
   ),
   takeLatest(

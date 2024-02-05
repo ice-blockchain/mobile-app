@@ -2,14 +2,12 @@
 
 import {ENV} from '@constants/env';
 import {dayjs} from '@services/dayjs';
-import {isAppActiveSelector} from '@store/modules/AppCommon/selectors';
 import {QuizActions} from '@store/modules/Quiz/actions';
 import {
   quizNotificationShownIndexSelector,
   quizStatusSelector,
 } from '@store/modules/Quiz/selectors';
 import {openQuizNotification} from '@store/modules/Quiz/utils/openQuizNotification';
-import {waitForSelector} from '@store/utils/sagas/effects';
 import {daysFromNow} from '@utils/date';
 import {findLastIndex} from 'lodash';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
@@ -23,18 +21,6 @@ import {call, put, SagaReturnType, select} from 'redux-saga/effects';
  * If a timeout occurs, all the previous ones are skipped (looking from the end).
  */
 export function* showQuizNotificationSaga() {
-  const isAppActive: ReturnType<typeof isAppActiveSelector> = yield select(
-    isAppActiveSelector,
-  );
-
-  if (!isAppActive) {
-    return;
-  }
-
-  yield call(waitForSelector, state => quizStatusSelector(state) !== null, {
-    takePattern: QuizActions.CHECK_QUIZ_STATUS.SUCCESS.type,
-  });
-
   const quizStatus: SagaReturnType<typeof quizStatusSelector> = yield select(
     quizStatusSelector,
   );
