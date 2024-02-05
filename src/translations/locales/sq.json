@@ -1351,7 +1351,7 @@
     },
     "quiz_failure": {
       "title": "Testi dështoi",
-      "description": "Ju nuk keni përgjigjur më shumë se 18 pyetje saktë, kështu që nuk mund të kaloni Hapin KYC #3. Mund ta provoni përsëri në një javë.",
+      "description": "Ju nuk keni përgjigjur saktë më shumë se 18 pyetje, kështu që nuk mund të kaloni testin.",
       "check_faq": "Për të përgjigjur saktë herën tjetër, ju sugjerojmë të njiheni me bazën tonë të njohurive dhe pyetjet e shpeshta."
     },
     "quiz_questionnaire": {

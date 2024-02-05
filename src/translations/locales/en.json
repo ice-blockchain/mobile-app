@@ -1349,7 +1349,7 @@
     },
     "quiz_failure": {
       "title": "Failed Quiz",
-      "description": "You didn’t answer more than 18 questions correctly, so you can’t pass the quiz.",
+      "description": "You didn't answer more than 18 questions correctly, so you can't pass the quiz.",
       "check_faq": "In order to answer correctly next time, we suggest you familiarize yourself with our knowledge base and FAQ."
     },
     "quiz_questionnaire": {

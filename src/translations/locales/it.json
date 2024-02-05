@@ -1351,7 +1351,7 @@
     },
     "quiz_failure": {
       "title": "Quiz Fallito",
-      "description": "Non hai risposto correttamente a più di 18 domande, quindi non puoi superare il Passaggio KYC #3. Puoi riprovare la prossima settimana.",
+      "description": "Non hai risposto correttamente a più di 18 domande, quindi non puoi superare il quiz.",
       "check_faq": "Per rispondere correttamente la prossima volta, ti consigliamo di familiarizzare con la nostra base di conoscenza e le nostre domande frequenti."
     },
     "quiz_questionnaire": {

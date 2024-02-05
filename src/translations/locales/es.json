@@ -1351,7 +1351,7 @@
     },
     "quiz_failure": {
       "title": "Cuestionario No Aprobado",
-      "description": "No respondió más de 18 preguntas correctamente, por lo que no puede pasar el Paso KYC #3. Puede intentarlo nuevamente en una semana.",
+      "description": "No respondiste correctamente más de 18 preguntas, por lo que no puedes pasar el cuestionario.",
       "check_faq": "Para responder correctamente la próxima vez, le sugerimos que se familiarice con nuestra base de conocimientos y preguntas frecuentes."
     },
     "quiz_questionnaire": {

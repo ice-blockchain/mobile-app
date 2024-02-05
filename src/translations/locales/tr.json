@@ -1351,7 +1351,7 @@
     },
     "quiz_failure": {
       "title": "Başarısız Sınav",
-      "description": "18 sorudan daha azını doğru cevaplamadığınız için KYC Adımı #3'ü geçemezsiniz. Bir hafta sonra tekrar deneyebilirsiniz.",
+      "description": "18'den fazla soruya doğru cevap vermediniz, bu nedenle sınavı geçemezsiniz.",
       "check_faq": "Bir sonraki sefer doğru cevap vermek için, bilgi tabanımızı ve Sıkça Sorulan Soruları incelemenizi öneririz."
     },
     "quiz_questionnaire": {

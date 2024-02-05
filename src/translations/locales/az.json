@@ -1351,7 +1351,7 @@
     },
     "quiz_failure": {
       "title": "Test Uğursuz Oldu",
-      "description": "18-dən çox suala düzgün cavab verməmisiniz, buna görə KYC Mərhələsi #3-ü keçə bilməyəcəksiniz. Bir həftə sonra yenidən cəhd edə bilərsiniz.",
+      "description": "18-dən çox sualı düzgün cavablandırmamısınız, beləliklə, sınaqı keçə bilməzsiniz.",
       "check_faq": "Növbəti dəfə düzgün cavab verə bilmək üçün, bilik bazamız və FAQ ilə tanış olmağınızı tövsiyə edirik."
     },
     "quiz_questionnaire": {

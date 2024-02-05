@@ -1351,7 +1351,7 @@
     },
     "quiz_failure": {
       "title": "Quiz Reprovado",
-      "description": "Você não respondeu corretamente a mais de 18 perguntas, então você não pode passar na Etapa KYC #3. Você pode tentar novamente na próxima semana.",
+      "description": "Você não respondeu corretamente a mais de 18 perguntas, portanto, não pode passar no quiz.",
       "check_faq": "Para responder corretamente na próxima vez, sugerimos que você se familiarize com nossa Base de Conhecimento e Perguntas Frequentes."
     },
     "quiz_questionnaire": {

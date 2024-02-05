@@ -1351,7 +1351,7 @@
     },
     "quiz_failure": {
       "title": "Quiz Eșuat",
-      "description": "Nu ați răspuns corect la mai mult de 18 întrebări, așa că nu puteți trece de Etapa KYC #3. Puteți încerca din nou în săptămâna următoare.",
+      "description": "Nu ai răspuns corect la mai mult de 18 întrebări, deci nu poți trece testul.",
       "check_faq": "Pentru a răspunde corect data viitoare, vă sugerăm să vă familiarizați cu Baza noastră de Cunoștințe și Întrebările Frecvente."
     },
     "quiz_questionnaire": {

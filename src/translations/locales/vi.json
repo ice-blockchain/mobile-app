@@ -1351,7 +1351,7 @@
     },
     "quiz_failure": {
       "title": "Bài kiểm tra không đỗ",
-      "description": "Bạn đã không trả lời đúng hơn 18 câu hỏi, vì vậy bạn không thể hoàn thành Bước KYC #3. Bạn có thể thử lại vào tuần sau.",
+      "description": "Bạn không trả lời đúng hơn 18 câu hỏi, vì vậy bạn không thể qua bài kiểm tra.",
       "check_faq": "Để trả lời đúng vào lần sau, chúng tôi đề xuất bạn tìm hiểu về cơ sở kiến thức và Câu hỏi thường gặp của chúng tôi."
     },
     "quiz_questionnaire": {

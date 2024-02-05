@@ -1351,7 +1351,7 @@
     },
     "quiz_failure": {
       "title": "Test nicht bestanden",
-      "description": "Sie haben weniger als 18 Fragen korrekt beantwortet, daher können Sie den KYC Schritt #3 nicht bestehen. Sie können es in einer Woche erneut versuchen.",
+      "description": "Sie haben mehr als 18 Fragen nicht richtig beantwortet, daher können Sie den Test nicht bestehen.",
       "check_faq": "Um beim nächsten Mal richtig zu antworten, empfehlen wir Ihnen, sich mit unserer Wissensdatenbank und den FAQ vertraut zu machen."
     },
     "quiz_questionnaire": {

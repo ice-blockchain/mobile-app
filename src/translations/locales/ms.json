@@ -1351,7 +1351,7 @@
     },
     "quiz_failure": {
       "title": "Gagal Kuis",
-      "description": "Anda tidak menjawab lebih daripada 18 soalan dengan betul, jadi anda tidak dapat lulus Langkah KYC #3. Anda boleh mencuba lagi dalam seminggu.",
+      "description": "Anda tidak menjawab lebih daripada 18 soalan dengan betul, jadi anda tidak boleh lulus ujian.",
       "check_faq": "Untuk menjawab dengan betul pada masa akan datang, kami mencadangkan anda untuk lebih memahami Pusat Pengetahuan kami dan Soalan Lazim kami."
     },
     "quiz_questionnaire": {

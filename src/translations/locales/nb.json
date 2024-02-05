@@ -1351,7 +1351,7 @@
     },
     "quiz_failure": {
       "title": "Mislykket Quiz",
-      "description": "Du svarte ikke riktig på mer enn 18 spørsmål, så du kan ikke bestå KYC Trinn #3. Du kan prøve igjen neste uke.",
+      "description": "Du har ikke svart riktig på mer enn 18 spørsmål, så du kan ikke bestå quizen.",
       "check_faq": "For å svare riktig neste gang, anbefaler vi at du blir kjent med vår kunnskapsbase og FAQ."
     },
     "quiz_questionnaire": {

@@ -1351,7 +1351,7 @@
     },
     "quiz_failure": {
       "title": "Neúspešný kvíz",
-      "description": "Nesprávne ste odpovedali na viac ako 18 otázok, takže nemôžete prejsť KYC Krok #3. Môžete to skúsiť znovu o týždeň.",
+      "description": "Neodpovedali ste správne na viac ako 18 otázok, preto nemôžete prejsť testom.",
       "check_faq": "Ak chcete správne odpovedať nabudúce, odporúčame sa oboznámiť s našou základnou znalosťou a často kladenými otázkami."
     },
     "quiz_questionnaire": {

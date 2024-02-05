@@ -1351,7 +1351,7 @@
     },
     "quiz_failure": {
       "title": "Sikertelen Kvíz",
-      "description": "Nem válaszoltál 18-nál több kérdésre helyesen, így nem tudod teljesíteni a KYC 3. lépést. Jövő héten újra próbálkozhatsz.",
+      "description": "Nem válaszoltál több mint 18 kérdésre helyesen, így nem tudod teljesíteni a kvízt.",
       "check_faq": "Hogy legközelebb helyesen válaszolj, javasoljuk, hogy ismerkedj meg tudásbázisunkkal és gyakran ismételt kérdéseinkkel."
     },
     "quiz_questionnaire": {
