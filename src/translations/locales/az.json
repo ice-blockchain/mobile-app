@@ -1349,7 +1349,7 @@
         "description": "Bilə və başa düşməyə olan əməyimiz cəmiyyətimizin önündədir. Bizim testimizlə, Ice-ın doğru əllərə, layiq və bizim layihənin visionu ilə uyğun gələn əllərə düşməsini təmin etməyi hədəfləyirik."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Test Uğursuz Oldu",
       "description": "18-dən çox suala düzgün cavab verməmisiniz, buna görə KYC Mərhələsi #3-ü keçə bilməyəcəksiniz. Bir həftə sonra yenidən cəhd edə bilərsiniz.",
       "check_faq": "Növbəti dəfə düzgün cavab verə bilmək üçün, bilik bazamız və FAQ ilə tanış olmağınızı tövsiyə edirik."

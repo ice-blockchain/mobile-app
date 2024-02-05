@@ -1349,7 +1349,7 @@
         "description": "Il nostro impegno per la conoscenza e la comprensione è al centro della nostra comunità. Con il nostro quiz, miriamo a garantire che Ice finisca nelle mani giuste, coloro che comprendono e condividono veramente la visione del nostro progetto."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Quiz Fallito",
       "description": "Non hai risposto correttamente a più di 18 domande, quindi non puoi superare il Passaggio KYC #3. Puoi riprovare la prossima settimana.",
       "check_faq": "Per rispondere correttamente la prossima volta, ti consigliamo di familiarizzare con la nostra base di conoscenza e le nostre domande frequenti."

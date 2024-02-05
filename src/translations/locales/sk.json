@@ -1349,7 +1349,7 @@
         "description": "Naše záväzky voči poznaniu a porozumeniu sú na čele našej komunity. S naším kvízom sa snažíme zabezpečiť, aby sa Ice dostalo do správnych rúk, tých, ktorí naozaj rozumejú a stotožňujú sa s víziou nášho projektu."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Neúspešný kvíz",
       "description": "Nesprávne ste odpovedali na viac ako 18 otázok, takže nemôžete prejsť KYC Krok #3. Môžete to skúsiť znovu o týždeň.",
       "check_faq": "Ak chcete správne odpovedať nabudúce, odporúčame sa oboznámiť s našou základnou znalosťou a často kladenými otázkami."

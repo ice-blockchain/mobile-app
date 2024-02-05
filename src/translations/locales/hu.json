@@ -1349,7 +1349,7 @@
         "description": "Elkötelezettségünk a tudás és megértés iránt közösségünk középpontjában áll. A kvízzel azt szeretnénk biztosítani, hogy az Ice a megfelelő kezekbe kerüljön, azokhoz, akik valóban megértik és azonosulnak a projektünk víziójával."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Sikertelen Kvíz",
       "description": "Nem válaszoltál 18-nál több kérdésre helyesen, így nem tudod teljesíteni a KYC 3. lépést. Jövő héten újra próbálkozhatsz.",
       "check_faq": "Hogy legközelebb helyesen válaszolj, javasoljuk, hogy ismerkedj meg tudásbázisunkkal és gyakran ismételt kérdéseinkkel."

@@ -1349,7 +1349,7 @@
         "description": "Naše zavezništvo s znanjem in razumevanjem je na čelu naše skupnosti. Z našim kvizom si prizadevamo zagotoviti, da bo Ice prišel v prave roke, tistih, ki resnično razumejo in se strinjajo z vizijo našega projekta."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Kviz ni uspel",
       "description": "Niste pravilno odgovorili na več kot 18 vprašanj, zato ne morete opraviti KYC Koraka #3. Poskusite znova naslednji teden.",
       "check_faq": "Da boste naslednjič pravilno odgovorili, vam priporočamo, da se seznanite z našim osnovnim znanjem in pogostimi vprašanji."

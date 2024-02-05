@@ -1349,7 +1349,7 @@
         "description": "Nosso compromisso com o conhecimento e a compreensão está na vanguarda de nossa comunidade. Com nosso quiz, buscamos garantir que o Ice chegue às mãos certas, daqueles que realmente compreendem e se alinham com a visão de nosso projeto."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Quiz Reprovado",
       "description": "Você não respondeu corretamente a mais de 18 perguntas, então você não pode passar na Etapa KYC #3. Você pode tentar novamente na próxima semana.",
       "check_faq": "Para responder corretamente na próxima vez, sugerimos que você se familiarize com nossa Base de Conhecimento e Perguntas Frequentes."

@@ -816,9 +816,9 @@ export type Translations = {
   'quiz.intro.community_engagement.point3': null;
   'quiz.intro.community_engagement.bottom_description': null;
   'quiz.intro.terms_privacy': null;
-  'quiz.mining_disabled.title': null;
-  'quiz.mining_disabled.description': null;
-  'quiz.mining_disabled.check_faq': null;
+  'quiz.quiz_failure.title': null;
+  'quiz.quiz_failure.description': null;
+  'quiz.quiz_failure.check_faq': null;
   'quiz.quiz_questionnaire.navigation_title': {
     current: number | string;
     total: number | string;

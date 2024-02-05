@@ -1349,7 +1349,7 @@
         "description": "Vårt engasjement for kunnskap og forståing er i spissen for vårt samfunn. Med quizen vår ønskjer vi å sikre at Ice kjem til rette hender, dei som verkeleg forstår og er i tråd med visjonen til prosjektet vårt."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Mislukka Quiz",
       "description": "Du svara ikkje rett på meir enn 18 spørsmål, så du kan ikkje gjennomføre KYC Stad #3. Du kan prøve igjen neste veke.",
       "check_faq": "For å svara rett neste gong, tilrådar vi at du blir kjent med kunnskapsbasen vår og dei ofte stilte spørsmåla våre."

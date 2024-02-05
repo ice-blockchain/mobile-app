@@ -1349,7 +1349,7 @@
         "description": "Komitmen kami terhadap pengetahuan dan pemahaman berada di hadapan komuniti kami. Dengan kuis kami, kami bertujuan untuk memastikan bahawa Ice sampai ke tangan yang betul, mereka yang benar-benar memahami dan sejajar dengan visi projek kami."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Gagal Kuis",
       "description": "Anda tidak menjawab lebih daripada 18 soalan dengan betul, jadi anda tidak dapat lulus Langkah KYC #3. Anda boleh mencuba lagi dalam seminggu.",
       "check_faq": "Untuk menjawab dengan betul pada masa akan datang, kami mencadangkan anda untuk lebih memahami Pusat Pengetahuan kami dan Soalan Lazim kami."

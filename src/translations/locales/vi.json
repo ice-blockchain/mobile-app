@@ -1349,7 +1349,7 @@
         "description": "Sự cam kết của chúng tôi đối với kiến thức và sự hiểu biết đang ở hàng đầu của cộng đồng của chúng tôi. Với bài kiểm tra, chúng tôi muốn đảm bảo rằng Ice sẽ đi vào tay đúng người, những người thực sự hiểu và đồng tình với tầm nhìn của dự án của chúng tôi."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Bài kiểm tra không đỗ",
       "description": "Bạn đã không trả lời đúng hơn 18 câu hỏi, vì vậy bạn không thể hoàn thành Bước KYC #3. Bạn có thể thử lại vào tuần sau.",
       "check_faq": "Để trả lời đúng vào lần sau, chúng tôi đề xuất bạn tìm hiểu về cơ sở kiến thức và Câu hỏi thường gặp của chúng tôi."

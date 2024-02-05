@@ -1349,7 +1349,7 @@
         "description": "Bilgi ve anlayışa olan bağlılığımız, topluluğumuzun en önündedir. Quiz ile Ice'ın doğru ellerde, projemizin vizyonuyla gerçekten uyum sağlayan kişilere ulaşmasını amaçlıyoruz."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Başarısız Sınav",
       "description": "18 sorudan daha azını doğru cevaplamadığınız için KYC Adımı #3'ü geçemezsiniz. Bir hafta sonra tekrar deneyebilirsiniz.",
       "check_faq": "Bir sonraki sefer doğru cevap vermek için, bilgi tabanımızı ve Sıkça Sorulan Soruları incelemenizi öneririz."

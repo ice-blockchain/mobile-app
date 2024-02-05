@@ -1349,7 +1349,7 @@
         "description": "Vårt engasjement for kunnskap og forståelse er i forkant av vårt samfunn. Med vår quiz ønsker vi å sikre at Ice havner i riktige hender, de som virkelig forstår og er i tråd med vårt prosjekts visjon."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Mislykket Quiz",
       "description": "Du svarte ikke riktig på mer enn 18 spørsmål, så du kan ikke bestå KYC Trinn #3. Du kan prøve igjen neste uke.",
       "check_faq": "For å svare riktig neste gang, anbefaler vi at du blir kjent med vår kunnskapsbase og FAQ."

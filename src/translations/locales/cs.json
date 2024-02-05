@@ -1349,7 +1349,7 @@
         "description": "Naše oddanost znalostem a porozumění je naším hlavním cílem v komunitě. Kvízem chceme zajistit, že Ice najde cestu ke správným rukám těm, kteří opravdu rozumí a souzní s vizi našeho projektu."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Selhal kvíz",
       "description": "Nesprávně jste odpověděli na více než 18 otázek, takže nemůžete projít KYC Krokem #3. Můžete to zkusit znovu za týden.",
       "check_faq": "Abyste příště odpovídali správně, doporučujeme se seznámit s našimi základními znalostmi a FAQ."

@@ -1352,7 +1352,7 @@
         "description": "Ons toewyding tot kennis en begrip is aan die voorpunt van ons gemeenskap. Met ons toets mik ons daarop om te verseker dat Ice sy pad vind na die regte hande, dié die werklik verstaan en ooreenstem met ons projek se visie."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Mislukte Toets",
       "description": "Jy het nie meer as 18 vrae korrek beantwoord nie, so jy kan nie die KYC-stap #3 slaag nie. Jy kan weer in een week probeer.",
       "check_faq": "Om volgende keer reg te antwoord, stel ons voor dat jy jou bekendstel met ons kennisbank en FAQ."

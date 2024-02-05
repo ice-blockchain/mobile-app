@@ -63,13 +63,13 @@ export const QuizFailure = () => {
         showsVerticalScrollIndicator={false}>
         <View style={commonStyles.flexOne}>
           <Image source={Images.quiz.quizFailed} style={styles.icon} />
-          <Text style={styles.title}>{t('quiz.mining_disabled.title')}</Text>
+          <Text style={styles.title}>{t('quiz.quiz_failure.title')}</Text>
           <View style={styles.description}>
             <Text style={styles.descriptionText}>
-              {t('quiz.mining_disabled.description')}
+              {t('quiz.quiz_failure.description')}
             </Text>
             <Text style={styles.descriptionText}>
-              {t('quiz.mining_disabled.check_faq')}
+              {t('quiz.quiz_failure.check_faq')}
             </Text>
           </View>
         </View>

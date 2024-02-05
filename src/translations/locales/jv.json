@@ -1256,7 +1256,7 @@
         "description": "Komitmèn kita nganggo kanthi pangertèn lan kawruh ana ing pangrungguming kita. Karo kuis kita, kita tujon kanggo pastiake sing Ice bakal dadi ing tangan sing cocog, wong-wong sing bener-bener ngerti lan nampa karo visi proyèk kita."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Kuis Gagal",
       "description": "Sampeyan ora ngganti luwih saka 18 pitakonan karo bener, uga sampeyan ora bisa ngganti Langkah KYC #3. Sampeyan bisa coba maning seminggu niki.",
       "check_faq": "Kanggo ngganti bener sak durunge, kita sarankan sampeyan ngerti kanthi apik karo basis pengetahuan kita lan FAQ kita."

@@ -1349,7 +1349,7 @@
         "description": "Angazhimi ynë për dijeninë dhe kuptimin është në krye të komunitetit tonë. Me anë të quiz-it tonë, synojmë të sigurojmë që Ice të arrijë në duart e duhura, atyre që vërtet e kuptojnë dhe përputhen me vizionin e projektit tonë."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Testi dështoi",
       "description": "Ju nuk keni përgjigjur më shumë se 18 pyetje saktë, kështu që nuk mund të kaloni Hapin KYC #3. Mund ta provoni përsëri në një javë.",
       "check_faq": "Për të përgjigjur saktë herën tjetër, ju sugjerojmë të njiheni me bazën tonë të njohurive dhe pyetjet e shpeshta."

@@ -1349,7 +1349,7 @@
         "description": "Vårt åtagande för kunskap och förståelse är i framkant av vår gemenskap. Med vår quiz strävar vi efter att säkerställa att Ice når rätt händer, de som verkligen förstår och är i linje med vår projektvision."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Misslyckad quiz",
       "description": "Du svarade inte rätt på mer än 18 frågor, så du kan inte klara KYC Steg #3. Du kan försöka igen om en vecka.",
       "check_faq": "För att svara rätt nästa gång föreslår vi att du bekantar dig med vår kunskapsbas och vanliga frågor."

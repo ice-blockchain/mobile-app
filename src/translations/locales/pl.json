@@ -1349,7 +1349,7 @@
         "description": "Nasze zaangażowanie w wiedzę i zrozumienie znajduje się na czele naszej społeczności. Poprzez nasz quiz chcemy zapewnić, że Ice trafia do właściwych rąk, tych, którzy naprawdę rozumieją i podzielają wizję naszego projektu."
       }
     },
-    "mining_disabled": {
+    "quiz_failure": {
       "title": "Niezdany Quiz",
       "description": "Nie odpowiedziałeś na więcej niż 18 pytań poprawnie, więc nie możesz zaliczyć KYC Krok #3. Możesz spróbować ponownie za tydzień.",
       "check_faq": "Aby odpowiedzieć poprawnie następnym razem, zalecamy zapoznanie się z naszą bazą wiedzy i FAQ."
