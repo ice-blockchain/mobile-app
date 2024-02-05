@@ -11,6 +11,7 @@ import {
 import {openQuizNotification} from '@store/modules/Quiz/utils/openQuizNotification';
 import {waitForSelector} from '@store/utils/sagas/effects';
 import {daysFromNow} from '@utils/date';
+import {findLastIndex} from 'lodash';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
 /**
@@ -42,7 +43,6 @@ export function* showQuizNotificationSaga() {
   const quizNotificationShownIndex: SagaReturnType<
     typeof quizNotificationShownIndexSelector
   > = yield select(quizNotificationShownIndexSelector);
-
   if (
     timeouts &&
     quizNotificationShownIndex < timeouts.length - 1 &&
@@ -51,24 +51,22 @@ export function* showQuizNotificationSaga() {
     !quizStatus.kycQuizCompleted &&
     !quizStatus.kycQuizDisabled
   ) {
-    const timeoutToShowIndex = timeouts
-      .slice()
-      .reverse()
-      .findIndex(timeout => {
-        if (timeout > 0) {
-          const minutesPassedFromStart = dayjs().diff(
-            dayjs(quizStatus.kycQuizAvailabilityStartedAt),
-            'minute',
-            true,
-          );
-          return minutesPassedFromStart > timeout;
-        } else {
-          const minutesLeftTillEnd = dayjs(
-            quizStatus.kycQuizAvailabilityEndedAt,
-          ).diff(dayjs(), 'minute', true);
-          return minutesLeftTillEnd < -timeout;
-        }
-      });
+    const minutesPassedFromStart = dayjs().diff(
+      dayjs(quizStatus.kycQuizAvailabilityStartedAt),
+      'minute',
+      true,
+    );
+    const minutesLeftTillEnd = dayjs(
+      quizStatus.kycQuizAvailabilityEndedAt,
+    ).diff(dayjs(), 'minute', true);
+
+    const timeoutToShowIndex = findLastIndex(timeouts, timeout => {
+      if (timeout > 0) {
+        return minutesPassedFromStart > timeout;
+      } else {
+        return minutesLeftTillEnd < -timeout;
+      }
+    });
 
     if (
       timeoutToShowIndex !== -1 &&
