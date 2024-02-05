@@ -34,7 +34,6 @@ export type MiningSummary = {
   remainingFreeMiningSessions?: number;
   availableExtraBonus?: number;
   miningStarted?: boolean;
-  kycStepBlocked?: number;
 };
 
 export type BalanceSummary = {

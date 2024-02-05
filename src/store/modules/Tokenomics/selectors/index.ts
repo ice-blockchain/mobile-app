@@ -89,7 +89,3 @@ export const getTotalCoinsStatsSelector =
 export const totalCoinsSelector = (state: RootState) => {
   return state.tokenomics.totalCoins.total;
 };
-
-export const kycStepBlockedSelector = (state: RootState) => {
-  return state.tokenomics.miningSummary?.kycStepBlocked;
-};
