@@ -40,7 +40,7 @@ export const openQuizNotification = ({
                 style={styles.retriesIcon}
               />
               <Text style={styles.quizDataText}>
-                {t('quiz.retries_left', {number: retries})}
+                {t('quiz.retries_left', {number: retries ?? 0})}
               </Text>
             </View>
             <View style={styles.subtitleRow}>

@@ -65,7 +65,7 @@ export const Quiz = memo(() => {
             />
             <Text style={styles.subtitleText}>
               {t('quiz.retries_left', {
-                number: quizStatus.kycQuizRemainingAttempts,
+                number: quizStatus.kycQuizRemainingAttempts ?? 0,
               })}
             </Text>
           </View>

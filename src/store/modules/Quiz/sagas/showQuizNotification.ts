@@ -80,7 +80,7 @@ export function* showQuizNotificationSaga() {
         }),
       );
       yield call(openQuizNotification, {
-        retries: quizStatus.kycQuizRemainingAttempts,
+        retries: quizStatus.kycQuizRemainingAttempts ?? 0,
         daysLeft: daysFromNow(quizStatus.kycQuizAvailabilityEndedAt),
       });
     }

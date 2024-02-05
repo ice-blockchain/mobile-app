@@ -2,20 +2,23 @@
 
 import {TotalCoinsTimeSeries} from '@api/tokenomics/types';
 import {dayjs} from '@services/dayjs';
+import {quizStatusSelector} from '@store/modules/Quiz/selectors';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {MiningState} from '@store/modules/Tokenomics/types';
 import {RootState} from '@store/rootReducer';
 
 export const miningStateSelector = (state: RootState): MiningState => {
-  if (typeof state.tokenomics.miningSummary?.kycStepBlocked === 'number') {
+  const quizStatus = quizStatusSelector(state);
+
+  if (quizStatus?.kycQuizDisabled) {
     return 'disabled';
   }
 
-  if (!state.tokenomics.miningSummary?.miningSession) {
+  const miningSession = miningSessionSelector(state);
+
+  if (!miningSession) {
     return 'inactive';
   }
-
-  const miningSession = state.tokenomics.miningSummary.miningSession;
 
   if (dayjs().isAfter(miningSession.warnAboutExpirationStartingAt)) {
     return miningSession.free ? 'holidayExpire' : 'expire';

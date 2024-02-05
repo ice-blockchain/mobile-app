@@ -27,6 +27,6 @@ export type QuizStatus = {
   kycQuizAvailable: boolean;
   kycQuizCompleted: boolean;
   kycQuizDisabled: boolean;
-  kycQuizRemainingAttempts: number;
+  kycQuizRemainingAttempts?: number;
   kycQuizResetAt: string[];
 };
