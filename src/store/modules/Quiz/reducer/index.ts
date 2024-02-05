@@ -15,10 +15,11 @@ export interface State {
 
 type Actions = ReturnType<
   | typeof QuizActions.START_OR_CONTINUE_QUIZ.SUCCESS.create
-  | typeof QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.create
+  | typeof QuizActions.START_OR_CONTINUE_QUIZ.COMPLETED.create
   | typeof QuizActions.CHECK_QUIZ_STATUS.SUCCESS.create
   | typeof AccountActions.SIGN_OUT.SUCCESS.create
   | typeof QuizActions.SET_QUIZ_NOTIFICATION_SHOWN.STATE.create
+  | typeof QuizActions.RESET_QUIZ_KYC_STEP.START.create
 >;
 
 const INITIAL_STATE: State = {
@@ -39,7 +40,8 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case QuizActions.SET_QUIZ_NOTIFICATION_SHOWN.STATE.type:
         draft.quizNotificationShownIndex = action.payload.index;
         break;
-      case QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.type:
+      case QuizActions.START_OR_CONTINUE_QUIZ.COMPLETED.type:
+      case QuizActions.RESET_QUIZ_KYC_STEP.START.type:
         draft.quiz = null;
         break;
       case AccountActions.SIGN_OUT.SUCCESS.type:

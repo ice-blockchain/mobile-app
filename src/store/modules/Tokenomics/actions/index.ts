@@ -4,7 +4,6 @@ import {
   BalanceHistoryPoint,
   BalanceSummary,
   FaceAuthKycNumber,
-  KycStep,
   MiningSummary,
   PreStakingSummary,
   QuizKycStep,
@@ -12,7 +11,6 @@ import {
   SocialKycStepNumber,
   TotalCoins,
 } from '@api/tokenomics/types';
-import {User} from '@api/user/types';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {createAction} from '@store/utils/actions/createAction';
 
@@ -89,12 +87,6 @@ const GET_TOTAL_COINS_STATS = createAction('GET_TOTAL_COINS_STATS', {
   FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
-const TRY_RESET_KYC_STEPS = createAction('TRY_RESET_KYC_STEPS', {
-  START: (params: {skipKYCSteps: KycStep[]}) => params,
-  SUCCESS: (params: {user: User}) => params,
-  FAILED: (errorMessage: string) => ({errorMessage}),
-});
-
 export const TokenomicsActions = Object.freeze({
   GET_MINING_SUMMARY,
   GET_BALANCE_SUMMARY,
@@ -105,5 +97,4 @@ export const TokenomicsActions = Object.freeze({
   START_OR_UPDATE_PRE_STAKING,
   CLAIM_DAILY_BONUS,
   GET_TOTAL_COINS_STATS,
-  TRY_RESET_KYC_STEPS,
 });

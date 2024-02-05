@@ -42,7 +42,7 @@ export const QuizFailure = () => {
   };
 
   const handleClose = () => {
-    dispatch(QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.create());
+    dispatch(QuizActions.START_OR_CONTINUE_QUIZ.COMPLETED.create());
     navigation.popToTop();
   };
 

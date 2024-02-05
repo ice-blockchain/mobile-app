@@ -28,7 +28,7 @@ export const QuizSuccess = () => {
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
 
   const handleContinue = () => {
-    dispatch(QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.create());
+    dispatch(QuizActions.START_OR_CONTINUE_QUIZ.COMPLETED.create());
     navigation.popToTop();
   };
 

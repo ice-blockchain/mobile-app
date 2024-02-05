@@ -71,7 +71,7 @@ export function* startOrContinueQuizSaga({payload}: Actions) {
         name: 'HomeTab',
         params: {screen: 'Home'},
       });
-      yield put(QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.create());
+      yield put(QuizActions.START_OR_CONTINUE_QUIZ.COMPLETED.create());
     } else {
       yield put(
         QuizActions.START_OR_CONTINUE_QUIZ.FAILED.create(

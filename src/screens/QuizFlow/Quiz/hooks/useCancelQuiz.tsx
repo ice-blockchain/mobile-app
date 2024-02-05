@@ -1,13 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {QUIZ_KYC_STEP} from '@api/tokenomics/constants';
 import {COLORS} from '@constants/colors';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {QuizActions} from '@store/modules/Quiz/actions';
 import {quizAttemptsLeftSelector} from '@store/modules/Quiz/selectors';
-import {TokenomicsActions} from '@store/modules/Tokenomics/actions';
 import {RestartIcon} from '@svg/RestartIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
@@ -51,12 +49,7 @@ export const useCancelQuiz = () => {
         {
           text: t('button.skip'),
           onPress: () => {
-            dispatch(
-              TokenomicsActions.TRY_RESET_KYC_STEPS.START.create({
-                skipKYCSteps: [QUIZ_KYC_STEP],
-              }),
-            );
-            dispatch(QuizActions.START_OR_CONTINUE_QUIZ.COMPLETE.create());
+            dispatch(QuizActions.RESET_QUIZ_KYC_STEP.START.create());
             navigation.goBack();
           },
         },
