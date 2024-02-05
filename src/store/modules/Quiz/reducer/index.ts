@@ -11,6 +11,7 @@ export interface State {
   quiz: Quiz | null;
   status: QuizStatus | null;
   quizNotificationShownIndex: number;
+  hasUnfinishedQuiz: boolean;
 }
 
 type Actions = ReturnType<
@@ -26,6 +27,7 @@ const INITIAL_STATE: State = {
   quiz: null,
   status: null,
   quizNotificationShownIndex: -1,
+  hasUnfinishedQuiz: false,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): State {
@@ -33,6 +35,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
     switch (action.type) {
       case QuizActions.START_OR_CONTINUE_QUIZ.SUCCESS.type:
         draft.quiz = action.payload.quiz;
+        draft.hasUnfinishedQuiz = true;
         break;
       case QuizActions.CHECK_QUIZ_STATUS.SUCCESS.type:
         draft.status = action.payload.status;
@@ -43,6 +46,7 @@ function reducer(state = INITIAL_STATE, action: Actions): State {
       case QuizActions.START_OR_CONTINUE_QUIZ.COMPLETED.type:
       case QuizActions.RESET_QUIZ_KYC_STEP.START.type:
         draft.quiz = null;
+        draft.hasUnfinishedQuiz = false;
         break;
       case AccountActions.SIGN_OUT.SUCCESS.type:
         return {...INITIAL_STATE};
@@ -54,7 +58,7 @@ export const quizReducer = persistReducer(
   {
     key: 'quiz',
     storage: AsyncStorage,
-    whitelist: ['quizNotificationShownIndex'],
+    whitelist: ['quizNotificationShownIndex', 'hasUnfinishedQuiz'],
   },
   reducer,
 );

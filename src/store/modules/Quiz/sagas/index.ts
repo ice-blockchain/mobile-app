@@ -33,5 +33,11 @@ export const quizWatchers = [
     ],
     showQuizNotificationSaga,
   ),
-  takeLatest(QuizActions.RESET_QUIZ_KYC_STEP.START.type, resetQuizKycStepSaga),
+  takeLatest(
+    [
+      AppCommonActions.APP_INITIALIZED.SUCCESS.type,
+      QuizActions.RESET_QUIZ_KYC_STEP.START.type,
+    ],
+    resetQuizKycStepSaga,
+  ),
 ];

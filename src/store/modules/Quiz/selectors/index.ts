@@ -45,3 +45,7 @@ export const quizAttemptsLeftSelector = (state: RootState) => {
 export const quizNotificationShownIndexSelector = (state: RootState) => {
   return state.quiz.quizNotificationShownIndex;
 };
+
+export const hasUnfinishedQuizSelector = (state: RootState) => {
+  return state.quiz.hasUnfinishedQuiz;
+};

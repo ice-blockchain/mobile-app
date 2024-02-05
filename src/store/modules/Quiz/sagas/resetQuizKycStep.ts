@@ -2,12 +2,38 @@
 
 import {Api} from '@api/index';
 import {QUIZ_KYC_STEP} from '@api/tokenomics/constants';
-import {userIdSelector} from '@store/modules/Account/selectors';
+import {
+  isAuthorizedSelector,
+  userIdSelector,
+} from '@store/modules/Account/selectors';
+import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {QuizActions} from '@store/modules/Quiz/actions';
+import {hasUnfinishedQuizSelector} from '@store/modules/Quiz/selectors';
 import {getErrorMessage} from '@utils/errors';
 import {call, put, SagaReturnType, select} from 'redux-saga/effects';
 
-export function* resetQuizKycStepSaga() {
+type Action = ReturnType<
+  | typeof AppCommonActions.APP_INITIALIZED.SUCCESS.create
+  | typeof QuizActions.RESET_QUIZ_KYC_STEP.START.create
+>;
+
+export function* resetQuizKycStepSaga(action: Action) {
+  const isAuthorized: ReturnType<typeof isAuthorizedSelector> = yield select(
+    isAuthorizedSelector,
+  );
+
+  if (!isAuthorized) {
+    return;
+  }
+
+  if (action.type === AppCommonActions.APP_INITIALIZED.SUCCESS.type) {
+    const hasUnfinishedQuiz: ReturnType<typeof hasUnfinishedQuizSelector> =
+      yield select(hasUnfinishedQuizSelector);
+    if (!hasUnfinishedQuiz) {
+      return;
+    }
+  }
+
   const userId: ReturnType<typeof userIdSelector> = yield select(
     userIdSelector,
   );
