@@ -603,7 +603,9 @@
     "wallet_update_interval": "updated every hour",
     "blockchain_update_interval": "diperbarui saben 28 dino",
     "list_end_label": "this is the last entry of the balance history",
-    "no_data": "There is no data to display \nfor the specified period"
+    "no_data": "There is no data to display \nfor the specified period",
+    "you": "sampeyan",
+    "contribution": "sumbangan"
   },
   "pop_up": {
     "update_now": "Update Now",

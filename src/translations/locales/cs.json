@@ -616,7 +616,9 @@
     "wallet_update_interval": "aktualizováno každou hodinu",
     "blockchain_update_interval": "aktualizováno každých 28 dnů",
     "list_end_label": "toto je poslední položka v historii zůstatku.",
-    "no_data": "Pro zvolené období nejsou k dispozici žádné údaje."
+    "no_data": "Pro zvolené období nejsou k dispozici žádné údaje.",
+    "you": "ty",
+    "contribution": "příspěvek"
   },
   "pop_up": {
     "update_now": "Aktualizovat nyní",

@@ -616,7 +616,9 @@
     "wallet_update_interval": "מתעדכן כל שעה",
     "blockchain_update_interval": "מתעדכן כל 28 ימים",
     "list_end_label": "זוהי הרשומה האחרונה בהיסטוריית היתרה.",
-    "no_data": "אין נתונים להצגה עבור התקופה שצוינה."
+    "no_data": "אין נתונים להצגה עבור התקופה שצוינה.",
+    "you": "אתה",
+    "contribution": "תרומה"
   },
   "pop_up": {
     "update_now": "לעדכן עכשיו",

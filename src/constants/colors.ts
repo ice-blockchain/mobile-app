@@ -20,6 +20,7 @@ export const COLORS = {
   attention: '#FD4E4E',
   attentionDark: '#F53333',
   gulfBlue: '#080754',
+  midnightSapphire: '#061B4B',
   madison: '#0D256B',
   mariner: '#2D62D9',
   periwinkleGray: '#C1CDE1',

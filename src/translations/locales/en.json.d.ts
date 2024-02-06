@@ -430,6 +430,8 @@ export type Translations = {
   'balance_history.blockchain_update_interval': null;
   'balance_history.list_end_label': null;
   'balance_history.no_data': null;
+  'balance_history.you': null;
+  'balance_history.contribution': null;
   'pop_up.update_now': null;
   'pop_up.please_update': null;
   'pop_up.update_now_text': null;

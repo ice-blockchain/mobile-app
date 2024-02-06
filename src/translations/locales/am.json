@@ -616,7 +616,9 @@
     "wallet_update_interval": "በየሰዓቱ ይዘምናል",
     "blockchain_update_interval": "ቅዳሜ 28 ቀን ይጠቀምያል",
     "list_end_label": "ይህ የሂሳብ ታሪክ የመጨረሻው ግቤት ነው።",
-    "no_data": "ለተገለጸው ጊዜ የሚታይ ምንም ውሂብ የለም።"
+    "no_data": "ለተገለጸው ጊዜ የሚታይ ምንም ውሂብ የለም።",
+    "you": "እሷ",
+    "contribution": "ምንቸሎች"
   },
   "pop_up": {
     "update_now": "አሁን አዘምን",

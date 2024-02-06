@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {COLORS} from '@constants/colors';
+import {InfoButton} from '@screens/HomeFlow/BalanceHistory/components/PagerHeader/components/InfoButton';
+import {Coordinates} from '@screens/Modals/types';
 import {isRTL} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {ReactNode} from 'react';
@@ -12,13 +14,23 @@ type Props = {
   label: string;
   value: string | ReactNode;
   currency?: string | ReactNode;
+  onInfoIconPressed?: (coordinates: Coordinates) => void;
 };
 
-export const DataCell = ({icon, label, value, currency}: Props) => {
+export const DataCell = ({
+  icon,
+  label,
+  value,
+  currency,
+  onInfoIconPressed,
+}: Props) => {
   return (
     <View style={styles.container}>
       <View style={styles.iconWrapper}>{icon}</View>
-      <Text style={styles.labelText}>{label}</Text>
+      <Text style={styles.labelText}>
+        {label}
+        <InfoButton onInfoIconPressed={onInfoIconPressed} />
+      </Text>
       <View style={styles.value}>
         {typeof value === 'string' ? (
           <Text style={styles.valueText}>{value}</Text>

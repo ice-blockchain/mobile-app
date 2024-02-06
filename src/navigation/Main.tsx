@@ -40,11 +40,9 @@ import {InviteFriend} from '@screens/InviteFlow/InviteFriend';
 import {InviteShare} from '@screens/InviteFlow/InviteShare';
 import {QRCodeShare} from '@screens/InviteFlow/QRCodeShare';
 import {ActionSheet} from '@screens/Modals/ActionSheet';
+import {BalanceHistoryTooltip} from '@screens/Modals/BalanceHistoryTooltip';
 import {ContextualMenu} from '@screens/Modals/ContextualMenu';
-import {
-  ContextualMenuButton,
-  Coordinates,
-} from '@screens/Modals/ContextualMenu/types';
+import {ContextualMenuButton} from '@screens/Modals/ContextualMenu/types';
 import {CountrySelect} from '@screens/Modals/CountrySelect';
 import {DateSelect} from '@screens/Modals/DateSelector';
 import {JoinTelegramPopUp} from '@screens/Modals/JoinTelegramPopUp';
@@ -56,6 +54,7 @@ import {ProfilePrivacyEditStep3} from '@screens/Modals/ProfilePrivacyEdit/step3'
 import {ReferralCountInfo} from '@screens/Modals/ReferralCountInfo';
 import {RepostExample} from '@screens/Modals/RepostExample';
 import {Tooltip} from '@screens/Modals/Tooltip';
+import {Coordinates} from '@screens/Modals/types';
 import {VerifiedTooltipPopUp} from '@screens/Modals/VerifiedTooltipPopUp';
 import {News} from '@screens/News';
 import {Badges} from '@screens/ProfileFlow/Badges';
@@ -145,6 +144,9 @@ export type MainStackParamList = {
     coords: Coordinates;
     buttons: ContextualMenuButton[];
     onClose?: () => void;
+  };
+  BalanceHistoryTooltip: {
+    coords: Coordinates;
   };
   ReferralCountInfo: {
     hostViewParams: ViewMeasurementsResult;
@@ -408,6 +410,11 @@ export function MainNavigator() {
       <MainStack.Screen
         name="ContextualMenu"
         component={ContextualMenu}
+        options={modalOptions}
+      />
+      <MainStack.Screen
+        name="BalanceHistoryTooltip"
+        component={BalanceHistoryTooltip}
         options={modalOptions}
       />
       <MainStack.Screen

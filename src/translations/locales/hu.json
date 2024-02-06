@@ -616,7 +616,9 @@
     "wallet_update_interval": "frissítve óránként",
     "blockchain_update_interval": "28 naponta frissítve",
     "list_end_label": "ez az egyenlegelőzmények utolsó bejegyzése.",
-    "no_data": "A meghatározott időszakra nincs megjeleníthető adat."
+    "no_data": "A meghatározott időszakra nincs megjeleníthető adat.",
+    "you": "te",
+    "contribution": "hozzájárulás"
   },
   "pop_up": {
     "update_now": "Frissítsd most",

@@ -616,7 +616,9 @@
     "wallet_update_interval": "mise à jour toutes les heures",
     "blockchain_update_interval": "mis à jour tous les 28 jours",
     "list_end_label": "il s’agit de la dernière entrée de l’historique du solde.",
-    "no_data": "Il n’y a pas de données à afficher pour la période spécifiée."
+    "no_data": "Il n’y a pas de données à afficher pour la période spécifiée.",
+    "you": "vous",
+    "contribution": "contribution"
   },
   "pop_up": {
     "update_now": "Mettre à jour maintenant",
