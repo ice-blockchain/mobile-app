@@ -10,6 +10,7 @@ import {ClockIcon} from '@svg/ClockIcon';
 import {EyeIcon} from '@svg/EyeIcon';
 import {NewsNewBadge} from '@svg/NewsNewBadge';
 import {t} from '@translations/i18n';
+import {getImageUriForSize} from '@utils/file';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
@@ -22,6 +23,8 @@ import {rem} from 'rn-units';
 type Props = {
   newsArticleId: string;
 };
+
+const IMAGE_WIDTH = rem(80);
 
 export const NewsArticle = memo(({newsArticleId}: Props) => {
   const newsArticle = useSelector(NewsSelectors.getNewsArticle(newsArticleId));
@@ -43,7 +46,7 @@ export const NewsArticle = memo(({newsArticleId}: Props) => {
         <Image
           style={styles.image}
           source={{
-            uri: imageUrl,
+            uri: getImageUriForSize(imageUrl, {width: IMAGE_WIDTH}),
           }}
         />
 
@@ -135,7 +138,7 @@ const styles = StyleSheet.create({
   },
 
   image: {
-    width: rem(80),
+    width: IMAGE_WIDTH,
     height: rem(72),
     justifyContent: 'center',
     alignItems: 'center',
