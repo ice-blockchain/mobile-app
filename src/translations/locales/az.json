@@ -74,7 +74,8 @@
     "remove_address": "Ünvanı sil",
     "start": "Başla",
     "faq": "FAQ",
-    "knowledge_base": "Bilik bazası"
+    "knowledge_base": "Bilik bazası",
+    "skip": "Keç"
   },
   "team": {
     "contacts_tab": "Kontaktlar",
@@ -374,6 +375,10 @@
     },
     "verified_tooltip": {
       "title": "KYC Təsdiqləndi"
+    },
+    "solana_address": {
+      "title": "Solana ünvanı",
+      "subtitle": "Xahiş edirik Solana ünvanınızı buraya daxil edin."
     }
   },
   "settings": {
@@ -1239,7 +1244,7 @@
     "enter_address_confirmation": "BNB Smart Chain ünvanının düzgün olduğundan əminsinizmi?",
     "validators_warning_title": "Ünvanı Təsdiq Et",
     "validators_warning_text": "Xüsusiylə öz hesabına BNB Smart Chain ünvanını əlavə edən şəxslər, əsas şəbəkə işə salınmasına görə ağın ən yaxşı 300 təsdiqləyicisindən biri olmağa layiq deyillər.",
-    "walletDescription": "[[:bold]]Metamask[[/:bold]] və ya [[:bold]]Trust Wallet[[/:bold]] kimi özünün nəzarətində olan bir cüzdan istifadə etməyinizi tövsiyə edirik.\n\nXahiş edirik, cüzdan ünvanınızı qəbul edəcəyinizdən əmin olmaq üçün iki dəfə yoxlayasınız."
+    "wallet_description": "[[:bold]]Metamask[[/:bold]] və ya [[:bold]]Trust Wallet[[/:bold]] kimi özünün nəzarətində olan bir cüzdan istifadə etməyinizi tövsiyə edirik.\n\nXahiş edirik, cüzdan ünvanınızı qəbul edəcəyinizdən əmin olmaq üçün iki dəfə yoxlayasınız."
   },
   "social_kyc": {
     "header": "Doğrulama",
@@ -1324,9 +1329,16 @@
     "description2": "Bu addım bizə hesabınızın təhlükəsizliyini və asılılığını təmin etməyimizə kömək edir. Sizin əməyiniz üçün təşəkkür edirik!"
   },
   "quiz": {
-    "title": "Test",
-    "intro": {
+    "title": "KYC Mərhələsi #3",
+    "terms": {
       "description": "Ice şirkətində, fəal və bilikli üzvlər cəmiyyətinin tərəqqi üçün inanırıq. Missiyamız Ice koinlərinin təqdimatının yalnız cəmiyyət üzvlərinə edilməsi üçündür, onlara aid olmağı və bizim visionumuza uyğunlaşmağı təmin etməkdir.",
+      "knowledge_verification": {
+        "title": "💡 Bilik Təsdiqi",
+        "description": "Cəmiyyətimizin bilikli və bizim visionumuzla uyğun olduğunu təmin etmək üçün:",
+        "point1": "Sizə bizim ətraflı resurslarımızdan gələn 21 sual veriləcəkdir.",
+        "point2": "Uğurlu bir test sizi məlumatlandırmağınızı və təqdir etməyinizə dair təsdiq edir.",
+        "point3": "Sifariş olunan test sizin bizim materiallarımızla daha dərin əlaqə yaratmağınızı göstərir."
+      },
       "community_engagement": {
         "title": "🙌 Aktiv Cəmiyyət İştirakı",
         "description": "Ice Ekosistemindəki əlaqələriniz direkt olaraq qazmaq qabiliyyətinizi təsir edir:",
@@ -1335,25 +1347,20 @@
         "point3": "Sosial İşlər: Ice haqqında like, paylaş, izləmə və ya paylaşmaq sureti ilə özünüzü inkişaf etdirin.",
         "bottom_description": "Siz neçə çox əlaqə yaratırsanız, cəmiyyətdə pozitiv interaksiya nisbətiniz o qədər yüksəlir ki, KYC prosesini keçməyə imkan yaradır."
       },
-      "terms_privacy": "[[:link]]Əməliyyat Şərtləri və Qaydalarına[[/:link]] razıyam.",
-      "knowledge_check": {
-        "title": "🧠 Bilik Yoxlama",
-        "point2": "Testi uğurla keçmək üçün ən azı 18 sualı düzgün cavablandırmağınız tələb olunur.",
-        "point3": "Səsiz test daha çox materialımızla əlaqə yaratmağınızı göstərir.",
-        "point4": "Testi keçmək üçün müəyyən bir tarix limiti var. Sizin test bölməsində ev səhifənizdə tarix limitinə qədər neçə gününüz qaldığını görmək olar.",
-        "point5": "Sizə verilmiş müəyyən tarix limiti öncəsində 3 təkrarınız mövcuddur. Əgər 3 dəfə testi uğurla keçə bilməzsinizsə və ya tarix limiti bitdikdə, artıq daha çox qazanmağa və hesabınızı kəsməyə icazə verilmir.",
-        "point6": "📚 Bu test üçün bütün məlumatları [[:link]]buradan[[/:link]] oxuya bilərsiniz.",
-        "description": "Cəmiyyətimizin bilikli və bizim visionumuzla uyğun olduğunu təmin etmək üçün:",
-        "point1": "Sizə bizim ətraflı resurslarımızdan gələn 21 sual veriləcəkdir."
-      },
-      "why_quiz": {
-        "title": "💡 Test Nə İçindir?",
-        "description": "Bilə və başa düşməyə olan əməyimiz cəmiyyətimizin önündədir. Bizim testimizlə, Ice-ın doğru əllərə, layiq və bizim layihənin visionu ilə uyğun gələn əllərə düşməsini təmin etməyi hədəfləyirik."
-      }
+      "terms_privacy": "[[:link]]Əməliyyat Şərtləri və Qaydalarına[[/:link]] razıyam."
     },
-    "quiz_failure": {
+    "intro": {
+      "knowledge_check": "🧠 Bilik Yoxlama:",
+      "point1": "Ümumi olaraq, 21 sual var.",
+      "point2": "Testi keçmək üçün ən azı 18 sualı düzgün cavab verməlisiniz.",
+      "point3": "Oopss, testi uğursuz etdi? Gələn həftə yenidən cəhd edin.",
+      "point4": "📚 Bu testə aid bütün məlumatlar [[:link]]burada[[/:link]] oxuna bilər.",
+      "why_quiz": "Niyə Test?",
+      "why_quiz_description": "Biz smart, təhlükəsiz və bilikli qazmağa aidik. Bu kiçik addım bizim Ice cəmiyyətinin bilik və başa düşmə ilə inkşaf etdiyini təmin edir!"
+    },
+    "mining_disabled": {
       "title": "Test Uğursuz Oldu",
-      "description": "18-dən çox sualı düzgün cavablandırmamısınız, beləliklə, sınaqı keçə bilməzsiniz.",
+      "description": "18-dən çox suala düzgün cavab verməmisiniz, buna görə KYC Mərhələsi #3-ü keçə bilməyəcəksiniz. Bir həftə sonra yenidən cəhd edə bilərsiniz.",
       "check_faq": "Növbəti dəfə düzgün cavab verə bilmək üçün, bilik bazamız və FAQ ilə tanış olmağınızı tövsiyə edirik."
     },
     "quiz_questionnaire": {
@@ -1365,20 +1372,12 @@
     "confirmation_popup": {
       "title": "Təsdiq",
       "start_description": "Testi başlamaq istədiyinizə əminsiniz?",
-      "cancel_description": "Testi keçmək üçün bir təkrarı istifadə edəcəksiniz. Testi indi keçmək istədiyinizə əminsiniz?"
+      "cancel_description": "Testi ləğv etmək istədiyinizə əminsiniz?"
     },
     "quiz_success": {
       "title": "Təsdiq Başa Çatdı",
       "description": "Təbriklər, siz KYC-nizi uğurla başa çatdırdınız. Sizin sürətli düzgün cavablarınız sizin həsrətinizi və bilikinizi sübut etdi. Siz artıq təsdiqləndiniz."
-    },
-    "mining_disabled_popup": {
-      "title": "❌ Qazma deaktiv edildi",
-      "description": "Kimlik yoxlama prosesimiz tələb edildiyi kimi üç artıq test uğursuz keçmə oğurluğu və ya təyin olunan vaxtın bitməsinə görə gəlirinə girişinizi deaktiv etdi."
-    },
-    "action": "Testi tamamla",
-    "reminder": "Xahiş edirəm qeyd edin ki, təhrifatdan qorunmaq üçün madencilikə davam etmək üçün sualnəməni tamamlamanız lazımdır.",
-    "days_left": "Qalan gün: {{days}}",
-    "retries_left": "Qalan cəhd sayı: {{number}}"
+    }
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1391,7 +1390,11 @@
       }
     }
   },
-  "buttons": {
-    "skip": "Keç"
+  "solana_address": {
+    "title": "Solana ünvanı",
+    "enter_address_title": "Solana ünvanınızı daxil edin",
+    "enter_address_description": "Solana şəbəkəsindəki memo valyutalarımız və maraqlı tokenlarımızın eksklüziv hava paylanmalarına layiq olmaq üçün Solana ünvanınızı aşağıda əlavə edin. Biz kripto macərasını sizə gətirərkən sürprizləri və mükafatları açmağa hazır olun.",
+    "enter_address_confirmation": "Solana ünvanının düzgün olduğundan əminsinizmi?",
+    "wallet_description": "[[:bold]]Phantom[[/:bold]] və ya [[:bold]]Trust Wallet[[/:bold]] kimi özünüzün nəzarətində olan bir çantadan istifadə etməyi tövsiyə edirik.\n\nZəhmət olmasa çantanızın ünvanını qəbul etdiyiniz hava paylanmalarını alacağınızdan əmin olmaq üçün iki dəfə yoxlayın."
   }
 }

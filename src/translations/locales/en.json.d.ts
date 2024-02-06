@@ -251,6 +251,8 @@ export type Translations = {
   'home.join_mainnet.subtitle': null;
   'home.bsc_address.title': null;
   'home.bsc_address.subtitle': null;
+  'home.solana_address.title': null;
+  'home.solana_address.subtitle': null;
   'home.verified_tooltip.title': null;
   'settings.title': null;
   'settings.profile': null;
@@ -760,7 +762,12 @@ export type Translations = {
   'bsc_address.enter_address_confirmation': null;
   'bsc_address.validators_warning_title': null;
   'bsc_address.validators_warning_text': null;
-  'bsc_address.walletDescription': null;
+  'bsc_address.wallet_description': null;
+  'solana_address.title': null;
+  'solana_address.enter_address_title': null;
+  'solana_address.enter_address_description': null;
+  'solana_address.enter_address_confirmation': null;
+  'solana_address.wallet_description': null;
   'social_kyc.header': null;
   'social_kyc.verify_with_title': {method: number | string};
   'social_kyc.select_method_step.title': null;
@@ -842,5 +849,4 @@ export type Translations = {
   'distribution_kyc_dynamic.select_method_step.title': null;
   'distribution_kyc_dynamic.select_method_step.description': null;
   'distribution_kyc_dynamic.results_step.success.description': null;
-  'buttons.skip': null;
 };

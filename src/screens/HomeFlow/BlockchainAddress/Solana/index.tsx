@@ -1,38 +1,39 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {FramedBscIcon} from '@components/FramedBscIcon';
 import {CommonInput} from '@components/Inputs/CommonInput';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
 import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
+import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
-import {AddressActionButton} from '@screens/HomeFlow/BscAddress/components/AddressActionButton';
-import {WalletCard} from '@screens/HomeFlow/BscAddress/components/WalletCard';
-import {useSetBscAddress} from '@screens/HomeFlow/BscAddress/hooks/useSetBscAddress';
-import {useValidatorsWarning} from '@screens/HomeFlow/BscAddress/hooks/useValidatorsWarning';
-import {BscBookIcon} from '@svg/BscBookIcon';
+import {AddressActionButton} from '@screens/HomeFlow/BlockchainAddress/components/AddressActionButton';
+import {WalletCard} from '@screens/HomeFlow/BlockchainAddress/components/WalletCard';
+import {useSetBlockchainAddress} from '@screens/HomeFlow/BlockchainAddress/hooks/useSetBlockchainAddress';
+import {SolanaBookIcon} from '@svg/SolanaBookIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
-import {ScrollView, StyleSheet, Text} from 'react-native';
+import {Image, ScrollView, StyleSheet, Text} from 'react-native';
 import {rem} from 'rn-units';
 
-export const BscAddress = memo(() => {
+export const SolanaAddress = memo(() => {
   useFocusStatusBar({style: 'dark-content'});
   const {bottom: bottomInset} = useSafeAreaInsets();
   const {scrollRef} = useScrollEndOnKeyboardShown();
   const isKeyboardShown = useIsKeyboardShown();
-  const {showWarning, needToShowWarning} = useValidatorsWarning();
 
   const {address, loading, error, onAddressChange, onSubmit, isRemoveAction} =
-    useSetBscAddress();
+    useSetBlockchainAddress({
+      addressUserField: 'solanaMiningBlockchainAccountAddress',
+      confirmTitle: t('solana_address.enter_address_confirmation'),
+    });
 
   return (
     <KeyboardAvoider>
-      <Header title={t('bsc_address.title')} />
+      <Header title={t('solana_address.title')} />
       <ScrollView
         ref={scrollRef}
         contentContainerStyle={[
@@ -41,29 +42,34 @@ export const BscAddress = memo(() => {
         ]}
         keyboardShouldPersistTaps={'handled'}
         showsVerticalScrollIndicator={false}>
-        <FramedBscIcon style={styles.icon} />
+        <Image style={styles.icon} source={Images.blockchains.solanaBlue} />
         <Text style={styles.titleText}>
-          {t('bsc_address.enter_address_title')}
+          {t('solana_address.enter_address_title')}
         </Text>
         <Text style={styles.descriptionText}>
-          {t('bsc_address.enter_address_description')}
+          {t('solana_address.enter_address_description')}
         </Text>
         <CommonInput
-          icon={<BscBookIcon />}
-          label={t('bsc_address.title')}
+          icon={<SolanaBookIcon />}
+          label={t('solana_address.title')}
           value={address}
           onChangeText={onAddressChange}
           containerStyle={styles.input}
           editable={!loading}
           errorText={error}
-          onChange={needToShowWarning ? showWarning : undefined}
-          showChangeLabel={false}
         />
-        {!isKeyboardShown && <WalletCard style={styles.walletCard} />}
+        {!isKeyboardShown && (
+          <WalletCard
+            logoImageSource={Images.card.solanaWallets}
+            description={t('solana_address.wallet_description')}
+            style={styles.walletCard}
+          />
+        )}
         <AddressActionButton
           style={styles.button}
           onPress={onSubmit}
           loading={loading}
+          disabled={!isRemoveAction && !address}
           isRemoveAction={isRemoveAction}
         />
       </ScrollView>
@@ -79,6 +85,8 @@ const styles = StyleSheet.create({
   icon: {
     marginTop: rem(24),
     alignSelf: 'center',
+    width: rem(54),
+    height: rem(54),
   },
   titleText: {
     marginTop: rem(16),

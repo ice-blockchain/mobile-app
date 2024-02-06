@@ -95,6 +95,7 @@ export const Images = {
     referralsCardBg: require('./backgrounds/referralsCardBg.png'),
     walkthroughBg: require('./backgrounds/walkthrough.png'),
     darkListItem: require('./backgrounds/darkListItem.png'),
+    lightListItem: require('./backgrounds/lightListItem.png'),
     blueSquaresBg: require('./backgrounds/blueSquaresBg.png'),
   },
   popUp: {
@@ -190,11 +191,18 @@ export const Images = {
   },
   card: {
     joinMainnet: require('./card/joinMainnet.png'),
-    wallet: require('./card/wallet.png'),
+    bscWallets: require('./card/bsc_wallets.png'),
+    solanaWallets: require('./card/solana_wallets.png'),
   },
   quiz: {
     quizFailed: require('./quiz/quiz_failed.png'),
     quiz: require('./quiz/quiz.png'),
     quiz_small: require('./quiz/quiz_small.png'),
+  },
+  blockchains: {
+    solana: require('./blockchains/solana.png'),
+    solanaBlue: require('./blockchains/solana_blue.png'),
+    bsc: require('./blockchains/bsc.png'),
+    bscBlue: require('./blockchains/bsc_blue.png'),
   },
 } as const;

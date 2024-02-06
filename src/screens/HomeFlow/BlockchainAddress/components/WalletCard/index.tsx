@@ -2,11 +2,12 @@
 
 import {commonStyles} from '@constants/styles';
 import {Images} from '@images';
-import {replaceString, t, tagRegex} from '@translations/i18n';
+import {replaceString, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {
   Image,
+  ImageSourcePropType,
   StyleProp,
   StyleSheet,
   Text,
@@ -16,10 +17,12 @@ import {
 import {rem} from 'rn-units';
 
 type Props = {
+  logoImageSource: ImageSourcePropType;
+  description: string;
   style?: StyleProp<ViewStyle>;
 };
 
-export const WalletCard = ({style}: Props) => {
+export const WalletCard = ({logoImageSource, description, style}: Props) => {
   return (
     <View style={[commonStyles.flexOne, style]}>
       <View style={styles.card}>
@@ -28,10 +31,10 @@ export const WalletCard = ({style}: Props) => {
           style={[StyleSheet.absoluteFill, styles.backgroundImage]}
           resizeMode={'repeat'}
         />
-        <Image source={Images.card.wallet} style={styles.logoImage} />
+        <Image source={logoImageSource} style={styles.logoImage} />
         <Text style={styles.descriptionText}>
           {replaceString(
-            t('bsc_address.walletDescription'),
+            description,
             tagRegex('bold', false),
             (match, index) => (
               <Text key={match + index} style={styles.boldDescriptionText}>

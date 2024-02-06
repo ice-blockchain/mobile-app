@@ -6,8 +6,9 @@ import {
   EoaBscAddressError,
   isEoaBscAddress,
   isValidBscAddress,
+  isValidSolanaAddress,
   unchecksummAddress,
-} from '@services/bsc';
+} from '@services/blockchain';
 import {logError} from '@services/logging';
 import {
   isValidationError,
@@ -56,7 +57,26 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
         userInfo.miningBlockchainAccountAddress = unchecksummAddress(
           userInfo.miningBlockchainAccountAddress,
         );
+      } else if (user.miningBlockchainAccountAddress) {
+        userInfo.clearMiningBlockchainAccountAddress = true;
       }
+    }
+
+    if (checkProp(userInfo, 'solanaMiningBlockchainAccountAddress')) {
+      yield call(
+        validateSolanaMiningBlockchainAccountAddress,
+        userInfo.solanaMiningBlockchainAccountAddress,
+      );
+      if (
+        !userInfo.solanaMiningBlockchainAccountAddress &&
+        user.solanaMiningBlockchainAccountAddress
+      ) {
+        userInfo.clearSolanaMiningBlockchainAccountAddress = true;
+      }
+    }
+
+    if (userInfo.hiddenProfileElements?.length === 0) {
+      userInfo.clearHiddenProfileElements = true;
     }
 
     const modifiedUser: SagaReturnType<typeof Api.user.updateAccount> =
@@ -128,26 +148,20 @@ export function* updateAccountSaga(action: ReturnType<typeof actionCreator>) {
   }
 }
 
-function* validateMiningBlockchainAccountAddress(
-  miningBlockchainAccountAddress?: string,
-) {
+function* validateMiningBlockchainAccountAddress(address?: string) {
   const user: ReturnType<typeof unsafeUserSelector> = yield select(
     unsafeUserSelector,
   );
-  const isAddrRemoveAction =
-    !miningBlockchainAccountAddress && !!user.miningBlockchainAccountAddress;
+  const isAddrRemoveAction = !address && !!user.miningBlockchainAccountAddress;
   if (!isAddrRemoveAction) {
-    if (
-      !miningBlockchainAccountAddress ||
-      !isValidBscAddress(miningBlockchainAccountAddress)
-    ) {
+    if (!address || !isValidBscAddress(address)) {
       throw new ValidationError(ValidationErrorCode.InvalidBscAddress);
     }
 
     try {
       const isEoa: SagaReturnType<typeof isEoaBscAddress> = yield call(
         isEoaBscAddress,
-        miningBlockchainAccountAddress,
+        address,
       );
       if (!isEoa) {
         throw new ValidationError(ValidationErrorCode.BscAddressIsNotEoa);
@@ -169,5 +183,16 @@ function* validateMiningBlockchainAccountAddress(
         ValidationErrorCode.UnableToValidateBscAddressEoa,
       );
     }
+  }
+}
+
+function* validateSolanaMiningBlockchainAccountAddress(address?: string) {
+  const user: ReturnType<typeof unsafeUserSelector> = yield select(
+    unsafeUserSelector,
+  );
+  const isAddrRemoveAction =
+    !address && !!user.solanaMiningBlockchainAccountAddress;
+  if (!isAddrRemoveAction && (!address || !isValidSolanaAddress(address))) {
+    throw new ValidationError(ValidationErrorCode.InvalidSolanaAddress);
   }
 }

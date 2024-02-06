@@ -74,7 +74,8 @@
     "remove_address": "Usuń adres",
     "start": "Rozpocznij",
     "faq": "FAQ",
-    "knowledge_base": "Baza wiedzy"
+    "knowledge_base": "Baza wiedzy",
+    "skip": "Pomiń"
   },
   "team": {
     "contacts_tab": "Kontakty",
@@ -374,6 +375,10 @@
     },
     "verified_tooltip": {
       "title": "KYC Zweryfikowane"
+    },
+    "solana_address": {
+      "title": "Adres Solana",
+      "subtitle": "Proszę wprowadzić swój adres Solana tutaj."
     }
   },
   "settings": {
@@ -1239,7 +1244,7 @@
     "enter_address_confirmation": "Czy jesteś pewien, że Twój adres BNB Smart Chain jest poprawny?",
     "validators_warning_title": "Potwierdź Adres",
     "validators_warning_text": "Proszę zwrócić uwagę: Osoby, które dodały adres BNB Smart Chain do swojego konta, nie kwalifikują się do zostania jednym z najlepszych 300 walidatorów, zgodnie z naszym whitepaperem dotyczącym uruchomienia głównego łańcucha.",
-    "walletDescription": "Zalecamy korzystanie z portfela samodzielnie zarządzanego, takiego jak [[:bold]]Metamask[[/:bold]] lub [[:bold]]Trust Wallet[[/:bold]].\n\nProszę upewnij się, że dwukrotnie sprawdzisz swój adres portfela, aby mieć pewność, że otrzymasz dystrybucję."
+    "wallet_description": "Zalecamy korzystanie z portfela samodzielnie zarządzanego, takiego jak [[:bold]]Metamask[[/:bold]] lub [[:bold]]Trust Wallet[[/:bold]].\n\nProszę upewnij się, że dwukrotnie sprawdzisz swój adres portfela, aby mieć pewność, że otrzymasz dystrybucję."
   },
   "social_kyc": {
     "header": "Weryfikacja",
@@ -1324,9 +1329,16 @@
     "description2": "Ten krok pomaga nam zapewnić bezpieczeństwo i autentyczność twojego konta. Dziękujemy za współpracę!"
   },
   "quiz": {
-    "title": "Quiz",
-    "intro": {
+    "title": "KYC Krok #3",
+    "terms": {
       "description": "W Ice wierzymy w tworzenie społeczności aktywnych i dobrze poinformowanych członków. Nasza misja polega na zapewnieniu, że monety Ice trafiają do tych, którzy naprawdę zaangażowani są i współgrają z naszą wizją.",
+      "knowledge_verification": {
+        "title": "💡 Weryfikacja wiedzy",
+        "description": "Aby upewnić się, że nasza społeczność jest dobrze poinformowana i zgadza się z naszą wizją:",
+        "point1": "Otrzymasz 21 pytań opartych na naszych obszernych zasobach.",
+        "point2": "Zaliczenie quizu potwierdza Twoje zrozumienie i zaangażowanie.",
+        "point3": "Niezdany quiz wskazuje konieczność dalszego zapoznania się z naszymi materiałami."
+      },
       "community_engagement": {
         "title": "🙌 Aktywne zaangażowanie społeczności",
         "description": "Twoje zaangażowanie w ekosystemie Ice ma bezpośredni wpływ na Twoje możliwości wydobywcze:",
@@ -1335,25 +1347,20 @@
         "point3": "Interakcje społeczne: Zwiększ swoją obecność, lubiąc, udostępniając, śledząc lub publikując treści o Ice.",
         "bottom_description": "Im bardziej jesteś zaangażowany, tym wyższy jest Twój wynik pozytywnych interakcji, co umożliwia przejście procesu KYC."
       },
-      "terms_privacy": "Rozumiem i zgadzam się z [[:link]]Regulaminem[[/:link]].",
-      "knowledge_check": {
-        "title": "🧠 Sprawdzenie Wiedzy",
-        "point2": "Aby zdać quiz, musisz udzielić poprawnej odpowiedzi na co najmniej 18 pytań.",
-        "point3": "Nieudany quiz wskazuje na konieczność dalszego zaangażowania się w nasze materiały.",
-        "point4": "Istnieje limit czasowy na zaliczenie quizu. Możesz sprawdzić, ile dni zostało do daty wygaśnięcia na swojej stronie głównej w sekcji quizu.",
-        "point5": "Masz 3 próby dostępne przed datą wygaśnięcia. Jeśli nie zdasz quizu 3 razy lub data wygaśnięcia minie, nie będziesz mógł już wydobywać i Twoje konto zostanie ukarane.",
-        "point6": "📚 Wszystkie informacje dotyczące tego quizu można przeczytać [[:link]]tutaj[[/:link]].",
-        "description": "Aby upewnić się, że nasza społeczność jest dobrze poinformowana i zgadza się z naszą wizją:",
-        "point1": "Otrzymasz 21 pytań opartych na naszych obszernych zasobach."
-      },
-      "why_quiz": {
-        "title": "💡 Dlaczego Quiz?",
-        "description": "Nasze zaangażowanie w wiedzę i zrozumienie znajduje się na czele naszej społeczności. Poprzez nasz quiz chcemy zapewnić, że Ice trafia do właściwych rąk, tych, którzy naprawdę rozumieją i podzielają wizję naszego projektu."
-      }
+      "terms_privacy": "Rozumiem i zgadzam się z [[:link]]Regulaminem[[/:link]]."
     },
-    "quiz_failure": {
+    "intro": {
+      "knowledge_check": "🧠 Sprawdzenie wiedzy:",
+      "point1": "W sumie jest 21 pytań.",
+      "point2": "Aby zaliczyć quiz, musisz poprawnie odpowiedzieć na co najmniej 18 pytań.",
+      "point3": "Oops, nie zdałeś quizu? Spróbuj ponownie w następnym tygodniu.",
+      "point4": "📚 Wszystkie informacje o tym quizie można przeczytać [[:link]]tutaj[[/:link]].",
+      "why_quiz": "Dlaczego quiz?",
+      "why_quiz_description": "Jesteśmy zwolennikami inteligentnego, bezpiecznego i dobrze poinformowanego wydobycia. Ten mały krok zapewnia, że społeczność Ice kwitnie wiedzą i zrozumieniem!"
+    },
+    "mining_disabled": {
       "title": "Niezdany Quiz",
-      "description": "Nie odpowiedziałeś poprawnie na więcej niż 18 pytań, więc nie możesz zdać quizu.",
+      "description": "Nie odpowiedziałeś na więcej niż 18 pytań poprawnie, więc nie możesz zaliczyć KYC Krok #3. Możesz spróbować ponownie za tydzień.",
       "check_faq": "Aby odpowiedzieć poprawnie następnym razem, zalecamy zapoznanie się z naszą bazą wiedzy i FAQ."
     },
     "quiz_questionnaire": {
@@ -1365,20 +1372,12 @@
     "confirmation_popup": {
       "title": "Potwierdzenie",
       "start_description": "Czy na pewno chcesz rozpocząć quiz?",
-      "cancel_description": "Pomijając quiz, zużyjesz jedną dostępną próbę. Czy na pewno chcesz teraz pominąć quiz?"
+      "cancel_description": "Czy na pewno chcesz anulować quiz?"
     },
     "quiz_success": {
       "title": "Zakończono Weryfikację",
       "description": "Gratulacje, zakończyłeś pomyślnie swoje KYC. Twoje ciągłe poprawne odpowiedzi potwierdziły Twoje zaangażowanie i wiedzę. Jesteś teraz zweryfikowany."
-    },
-    "mining_disabled_popup": {
-      "title": "❌ Wyłączona Wydobywanie",
-      "description": "Dostęp do wydobywania został wyłączony ze względu na trzy kolejne nieudane quizy lub wygaśnięcie przyznanej daty, zgodnie z naszym procesem KYC."
-    },
-    "action": "Ukończ quiz",
-    "reminder": "Proszę zauważyć, że musisz ukończyć quiz, aby być uprawnionym do kontynuacji wydobywania i uniknięcia kary.",
-    "days_left": "Pozostało dni: {{days}}",
-    "retries_left": "Pozostałe próby: {{number}}"
+    }
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1391,7 +1390,11 @@
       }
     }
   },
-  "buttons": {
-    "skip": "Pomiń"
+  "solana_address": {
+    "title": "Adres Solana",
+    "enter_address_title": "Wprowadź swój\nadres Solana",
+    "enter_address_description": "Dodaj swój adres Solana poniżej, aby zakwalifikować się do ekskluzywnych airdropów naszych monet memów oraz ekscytujących tokenów na sieci Solana. Bądź gotów odblokować niespodzianki i nagrody, gdy przyniesiemy ci przygodę kryptowalutową.",
+    "enter_address_confirmation": "Czy jesteś pewien, że adres Solana jest poprawny?",
+    "wallet_description": "Zalecamy korzystanie z portfela typu self-custodial, takiego jak [[:bold]]Phantom[[/:bold]] lub [[:bold]]Trust Wallet[[/:bold]].\n\nUpewnij się, że dwukrotnie sprawdzisz swój adres portfela, aby zapewnić otrzymanie airdropów."
   }
 }

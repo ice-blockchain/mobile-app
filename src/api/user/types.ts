@@ -75,6 +75,7 @@ export type User = {
   repeatableKYCSteps?: Record<string, string>;
 
   miningBlockchainAccountAddress?: string;
+  solanaMiningBlockchainAccountAddress?: string;
 
   verified?: boolean | null;
 };
@@ -116,3 +117,13 @@ export type ClientData = {
   rate?: RateData | null;
   quiz?: QuizData | null;
 };
+
+export type ClearActions = {
+  clearHiddenProfileElements: true;
+  clearMiningBlockchainAccountAddress: true;
+  clearSolanaMiningBlockchainAccountAddress: true;
+};
+
+export type UserBlockchainAddressField =
+  | 'miningBlockchainAccountAddress'
+  | 'solanaMiningBlockchainAccountAddress';

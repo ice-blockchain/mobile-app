@@ -156,11 +156,7 @@ export const buildFormData = (entity: {[key: string]: unknown}) => {
   for (let key in entity) {
     const value = entity[key];
     if (Array.isArray(value)) {
-      if (value.length === 0 && key === 'hiddenProfileElements') {
-        formData.append('clearHiddenProfileElements', true);
-      } else {
-        value.forEach(v => formData.append(key, v));
-      }
+      value.forEach(v => formData.append(key, v));
     } else if (
       typeof value === 'object' &&
       value !== null &&
@@ -168,11 +164,7 @@ export const buildFormData = (entity: {[key: string]: unknown}) => {
     ) {
       formData.append(key, JSON.stringify(value));
     } else {
-      if (!value && key === 'miningBlockchainAccountAddress') {
-        formData.append('clearMiningBlockchainAccountAddress', true);
-      } else {
-        formData.append(key, value);
-      }
+      formData.append(key, value);
     }
   }
   return formData;

@@ -74,7 +74,8 @@
     "remove_address": "Adresse entfernen",
     "start": "Start",
     "faq": "FAQ",
-    "knowledge_base": "Wissensdatenbank"
+    "knowledge_base": "Wissensdatenbank",
+    "skip": "Überspringen"
   },
   "team": {
     "contacts_tab": "Kontakte",
@@ -374,6 +375,10 @@
     },
     "verified_tooltip": {
       "title": "KYC Verifiziert"
+    },
+    "solana_address": {
+      "title": "Solana-Adresse",
+      "subtitle": "Bitte geben Sie hier Ihre Solana-Adresse ein."
     }
   },
   "settings": {
@@ -1239,7 +1244,7 @@
     "enter_address_confirmation": "Sind Sie sicher, dass die BNB Smart Chain Adresse korrekt ist?",
     "validators_warning_title": "Adresse bestätigen",
     "validators_warning_text": "Bitte beachten Sie, dass Personen, die ihrer Konto eine BNB Smart Chain Adresse hinzugefügt haben, gemäß unserem Whitepaper für den Start des Mainnets nicht berechtigt sind, einer der Top 300 Validatoren zu werden.",
-    "walletDescription": "Wir empfehlen die Verwendung einer selbstverwalteten Geldbörse wie [[:bold]]Metamask[[/:bold]] oder [[:bold]]Trust Wallet[[/:bold]].\n\nBitte stellen Sie sicher, dass Sie Ihre Geldbörsenadresse zweimal überprüfen, um sicherzustellen, dass Sie die Verteilung erhalten."
+    "wallet_description": "Wir empfehlen die Verwendung einer selbstverwalteten Geldbörse wie [[:bold]]Metamask[[/:bold]] oder [[:bold]]Trust Wallet[[/:bold]].\n\nBitte stellen Sie sicher, dass Sie Ihre Geldbörsenadresse zweimal überprüfen, um sicherzustellen, dass Sie die Verteilung erhalten."
   },
   "social_kyc": {
     "header": "Verifizierung",
@@ -1324,9 +1329,16 @@
     "description2": "Dieser Schritt hilft uns, die Sicherheit und Authentizität Ihres Kontos sicherzustellen. Vielen Dank für Ihre Mitarbeit!"
   },
   "quiz": {
-    "title": "Quiz",
-    "intro": {
+    "title": "KYC Schritt #3",
+    "terms": {
       "description": "Bei Ice setzen wir auf die Förderung einer Gemeinschaft aktiver und informierter Mitglieder. Unsere Mission ist es sicherzustellen, dass Ice Coins an diejenigen verteilt werden, die wirklich engagiert sind und unsere Vision teilen.",
+      "knowledge_verification": {
+        "title": "💡 Wissensüberprüfung",
+        "description": "Um sicherzustellen, dass unsere Gemeinschaft gut informiert ist und unsere Vision teilt:",
+        "point1": "Ihnen werden 21 Fragen aus unseren umfassenden Ressourcen gestellt.",
+        "point2": "Ein bestandener Test bestätigt Ihr Verständnis und Ihre Hingabe.",
+        "point3": "Ein nicht bestandener Test zeigt den Bedarf an weiterem Engagement mit unseren Materialien auf."
+      },
       "community_engagement": {
         "title": "🙌 Aktives Gemeinschaftsengagement",
         "description": "Ihr Engagement innerhalb des Ice-Ökosystems beeinflusst direkt Ihre Mining-Fähigkeiten:",
@@ -1335,25 +1347,20 @@
         "point3": "Soziale Interaktionen: Steigern Sie Ihre Präsenz, indem Sie Ice liken, teilen, folgen oder darüber posten.",
         "bottom_description": "Je aktiver Sie sind, desto höher ist Ihre positive Interaktionsbewertung, was Ihnen ermöglicht, den KYC-Prozess zu durchlaufen."
       },
-      "terms_privacy": "Ich verstehe und stimme den [[:link]]Nutzungsbedingungen und Datenschutzbestimmungen[[/:link]] zu.",
-      "knowledge_check": {
-        "title": "🧠 Wissensüberprüfung",
-        "point2": "Um das Quiz erfolgreich zu bestehen, müssen Sie mindestens 18 Fragen richtig beantworten.",
-        "point3": "Ein nicht bestandenes Quiz deutet auf die Notwendigkeit weiterer Beschäftigung mit unserem Material hin.",
-        "point4": "Für das Bestehen des Quiz gibt es eine zeitliche Begrenzung. Sie können sehen, wie viele Tage Ihnen bis zum Ablaufdatum auf Ihrer Startseite im Quiz-Bereich verbleiben.",
-        "point5": "Sie haben 3 Versuche, bevor die zeitliche Begrenzung erreicht ist. Wenn Sie das Quiz 3 Mal nicht bestehen oder die zeitliche Begrenzung abläuft, können Sie nicht mehr minen, und Ihr Konto wird gekennzeichnet.",
-        "point6": "📚 Alle Informationen zu diesem Quiz können Sie [[:link]]hier[[/:link]] nachlesen.",
-        "description": "Um sicherzustellen, dass unsere Gemeinschaft gut informiert ist und unsere Vision teilt:",
-        "point1": "Ihnen werden 21 Fragen aus unseren umfassenden Ressourcen gestellt."
-      },
-      "why_quiz": {
-        "title": "💡 Warum das Quiz?",
-        "description": "Unser Engagement für Wissen und Verständnis steht im Mittelpunkt unserer Community. Mit unserem Quiz möchten wir sicherstellen, dass Ice den Weg in die richtigen Hände findet, nämlich in diejenigen, die unser Projektvision wirklich verstehen und teilen."
-      }
+      "terms_privacy": "Ich verstehe und stimme den [[:link]]Nutzungsbedingungen und Datenschutzbestimmungen[[/:link]] zu."
     },
-    "quiz_failure": {
+    "intro": {
+      "knowledge_check": "🧠 Wissensüberprüfung:",
+      "point1": "Insgesamt gibt es 21 Fragen.",
+      "point2": "Um den Test zu bestehen, müssen Sie mindestens 18 Fragen korrekt beantworten.",
+      "point3": "Oops, Test nicht bestanden? Versuchen Sie es nächste Woche erneut.",
+      "point4": "📚 Alle Informationen zu diesem Test können [[:link]]hier[[/:link]] nachgelesen werden.",
+      "why_quiz": "Warum der Test?",
+      "why_quiz_description": "Wir setzen auf intelligentes, sicheres und informiertes Mining. Dieser kleine Schritt gewährleistet, dass unsere Ice-Community mit Wissen und Verständnis wächst!"
+    },
+    "mining_disabled": {
       "title": "Test nicht bestanden",
-      "description": "Sie haben mehr als 18 Fragen nicht richtig beantwortet, daher können Sie den Test nicht bestehen.",
+      "description": "Sie haben weniger als 18 Fragen korrekt beantwortet, daher können Sie den KYC Schritt #3 nicht bestehen. Sie können es in einer Woche erneut versuchen.",
       "check_faq": "Um beim nächsten Mal richtig zu antworten, empfehlen wir Ihnen, sich mit unserer Wissensdatenbank und den FAQ vertraut zu machen."
     },
     "quiz_questionnaire": {
@@ -1365,20 +1372,12 @@
     "confirmation_popup": {
       "title": "Bestätigung",
       "start_description": "Sind Sie sicher, dass Sie den Test starten möchten?",
-      "cancel_description": "Wenn Sie das Quiz überspringen, verwenden Sie einen Ihrer verfügbaren Versuche. Sind Sie sicher, dass Sie das Quiz jetzt überspringen möchten?"
+      "cancel_description": "Sind Sie sicher, dass Sie den Test abbrechen möchten?"
     },
     "quiz_success": {
       "title": "Überprüfung abgeschlossen",
       "description": "Herzlichen Glückwunsch, Sie haben Ihre KYC erfolgreich abgeschlossen. Ihre konstant richtigen Antworten haben Ihr Engagement und Wissen bewiesen. Sie sind jetzt verifiziert."
-    },
-    "mining_disabled_popup": {
-      "title": "❌ Mining deaktiviert",
-      "description": "Ihr Zugang zum Mining wurde aufgrund von drei aufeinander folgenden Quizfehlern oder dem Ablauf der festgelegten Zeit, wie es unser KYC-Verfahren erfordert, deaktiviert."
-    },
-    "action": "Quiz abschließen",
-    "reminder": "Bitte beachten Sie, dass Sie den Test abschließen müssen, um für den Fortsetzung des Minings und zur Vermeidung von Strafen berechtigt zu sein.",
-    "days_left": "Verbleibende Tage: {{days}}",
-    "retries_left": "Übrige Versuche: {{number}}"
+    }
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1391,7 +1390,11 @@
       }
     }
   },
-  "buttons": {
-    "skip": "Überspringen"
+  "solana_address": {
+    "title": "Solana-Adresse",
+    "enter_address_title": "Geben Sie Ihre\nSolana-Adresse ein",
+    "enter_address_description": "Fügen Sie unten Ihre Solana-Adresse hinzu, um sich für exklusive Airdrops unserer Meme-Münzen und aufregenden Token im Solana-Netzwerk zu qualifizieren. Machen Sie sich bereit, Überraschungen und Belohnungen freizuschalten, während wir das Krypto-Abenteuer zu Ihnen bringen.",
+    "enter_address_confirmation": "Sind Sie sicher, dass die Solana-Adresse korrekt ist?",
+    "wallet_description": "Wir empfehlen die Verwendung einer selbstverwalteten Wallet wie [[:bold]]Phantom[[/:bold]] oder [[:bold]]Trust Wallet[[/:bold]].\n\nBitte stellen Sie sicher, dass Sie Ihre Wallet-Adresse zweimal überprüfen, um sicherzustellen, dass Sie die Airdrops erhalten."
   }
 }

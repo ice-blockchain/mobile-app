@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {UserBlockchainAddressField} from '@api/user/types';
 import {removeScreenByName} from '@navigation/utils';
 import {AccountActions} from '@store/modules/Account/actions';
 import {
@@ -11,8 +12,10 @@ import {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 export const useGoBackIfAddressSet = ({
+  addressUserField,
   isFormSubmitted,
 }: {
+  addressUserField: UserBlockchainAddressField;
   isFormSubmitted: boolean;
 }) => {
   const isSuccessUpdate = useSelector(
@@ -28,9 +31,13 @@ export const useGoBackIfAddressSet = ({
       isFormSubmitted &&
       isSuccessUpdate &&
       checkProp(updatePayload, 'userInfo') &&
-      checkProp(updatePayload.userInfo, 'miningBlockchainAccountAddress')
+      checkProp(updatePayload.userInfo, addressUserField)
     ) {
-      removeScreenByName('BscAddress');
+      removeScreenByName(
+        addressUserField === 'miningBlockchainAccountAddress'
+          ? 'BscAddress'
+          : 'SolanaAddress',
+      );
     }
-  }, [isFormSubmitted, isSuccessUpdate, updatePayload]);
+  }, [addressUserField, isFormSubmitted, isSuccessUpdate, updatePayload]);
 };

@@ -70,7 +70,8 @@
     "remove_address": "Mbuwuh alamat",
     "start": "Mulai",
     "faq": "FAQ",
-    "knowledge_base": "Basis Pengetahuan"
+    "knowledge_base": "Basis Pengetahuan",
+    "skip": "Lèwati"
   },
   "team": {
     "contacts_tab": "Contacts",
@@ -363,6 +364,10 @@
     },
     "verified_tooltip": {
       "title": "KYC Terferifikasi"
+    },
+    "solana_address": {
+      "title": "Alamat Solana",
+      "subtitle": "Tolong masukkan alamat Solana Anda di sini."
     }
   },
   "settings": {
@@ -1139,7 +1144,7 @@
     "enter_address_confirmation": "Apakah Anda yakin bahwa alamat BNB Smart Chain ini benar?",
     "validators_warning_title": "Konfirmasi Alamat",
     "validators_warning_text": "Harap dicatat bahwa individu yang telah menambahkan alamat BNB Smart Chain ke akun mereka tidak memenuhi syarat untuk menjadi salah satu validator teratas sesuai dengan whitepaper kami untuk peluncuran mainnet.",
-    "walletDescription": "Kami mrekomendasikan nganggo dompet self-custodial kaya [[:bold]]Metamask[[/:bold]] utawa [[:bold]]Trust Wallet[[/:bold]].\n\nMangga pastikan sampeyan nggonakake alamat dompet sampeyan loro kali supaya pasti sampeyan bakal nerima distribusi."
+    "wallet_description": "Kami mrekomendasikan nganggo dompet self-custodial kaya [[:bold]]Metamask[[/:bold]] utawa [[:bold]]Trust Wallet[[/:bold]].\n\nMangga pastikan sampeyan nggonakake alamat dompet sampeyan loro kali supaya pasti sampeyan bakal nerima distribusi."
   },
   "social_kyc": {
     "header": "Verifikasi",
@@ -1231,9 +1236,16 @@
     "description2": "Langkah iki nglakokake kita ngamotasi keamanan lan otentisitas akun sampeyan. Matur nuwun kanggo kerjasamane!"
   },
   "quiz": {
-    "title": "Kuis",
-    "intro": {
+    "title": "Langkah KYC #3",
+    "terms": {
       "description": "Ing Ice, kita percaya ing ngembangake komunitas anggota sing aktif lan informasi. Misi kita yaiku ngasupake koin Ice menyang wong-wong sing beneran terlibat lan nganggo pandangan kita.",
+      "knowledge_verification": {
+        "title": "💡 Verifikasi Pengetahuan",
+        "description": "Kanggo pastiake komunitas kita terinformasi lan njaluk kesamaan karo pandangan kita:",
+        "point1": "Sampeyan bakal diterangake 21 pitakonan sing diambil saka sumber daya komprehensif kita.",
+        "point2": "Kuis sing lulus bakal ngetokake pemahaman lan kepaten sampeyan.",
+        "point3": "Kuis sing gagal njunjukake kebutuhan kanggo nganggo sumber kita luwih lanjut."
+      },
       "community_engagement": {
         "title": "🙌 Pangeling-eling Komunitas Aktif",
         "description": "Kemungkinan sampeyan ing Ecosistem Ice saééng langsung ngaransang kemampuan pertambangan sampeyan:",
@@ -1242,25 +1254,20 @@
         "point3": "Interaksi Sosial: Ora bebarengan karo carane nyukuri, ngliputi, nggandeng utawa nemtokake babagan Ice.",
         "bottom_description": "Semakin aktif sampeyan, semakin dhuwur skor interaksi positif sampeyan, nglampahi proses KYC."
       },
-      "terms_privacy": "Aku ngerti lan aku setuju karo [[:link]]Syarat lan Ketentuan[[/:link]].",
-      "knowledge_check": {
-        "title": "🧠 Cek Pengetahuan",
-        "point2": "Supaya bisa lulus kuis, sampeyan kudu bisa jawab setidakna 18 pitakonan sing bener.",
-        "point3": "Kuis sing gagal nuduhake butuh nalika sampeyan luwih lanjut amargi bahan kita.",
-        "point4": "Ana wanci tangga kanggo lulus kuis iki. Sampeyan bisa deleng dewe panjenengan ana pira dina sampek tanggal tanggal lewat ing halaman awal sampeyan ing bagian kuis.",
-        "point5": "Sampeyan duwe 3 percobaan tumraping tanggal lewat. Yen sampeyan gagal kuis 3 wanci utawa yen tanggal lewat, sampeyan ora bakal bisa maca maneh lan akun sampeyan bakal dicekel.",
-        "point6": "📚 Kabeh informasi kanggo kuis iki bisa dibaca [[:link]]kéné[[/:link]].",
-        "description": "Kanggo pastiake komunitas kita terinformasi lan njaluk kesamaan karo pandangan kita:",
-        "point1": "Sampeyan bakal diterangake 21 pitakonan sing diambil saka sumber daya komprehensif kita."
-      },
-      "why_quiz": {
-        "title": "💡 Kok Kuis iki?",
-        "description": "Komitmèn kita nganggo kanthi pangertèn lan kawruh ana ing pangrungguming kita. Karo kuis kita, kita tujon kanggo pastiake sing Ice bakal dadi ing tangan sing cocog, wong-wong sing bener-bener ngerti lan nampa karo visi proyèk kita."
-      }
+      "terms_privacy": "Aku ngerti lan aku setuju karo [[:link]]Syarat lan Ketentuan[[/:link]]."
     },
-    "quiz_failure": {
+    "intro": {
+      "knowledge_check": "🧠 Cek Pengetahuan:",
+      "point1": "Ana 21 pitakonan sabenipun.",
+      "point2": "Kanggo lulus kuis, sampeyan perlu ngganti setidak-tidaké 18 pitakonan karo bener.",
+      "point3": "Oops, kuis gagal? Coba maning seminggu niki.",
+      "point4": "📚 Kabeh informasi kanggo kuis iki bisa dibaca [[:link]]ing kéné[[/:link]].",
+      "why_quiz": "Napa Kuis?",
+      "why_quiz_description": "Kita kabeh ngenalake pertambangan sing cerdas, aman, lan terinformasi. Langkah cilik iki bakal njamin komunitas Ice kita ngembang karo pengetahuan lan pemahaman!"
+    },
+    "mining_disabled": {
       "title": "Kuis Gagal",
-      "description": "Sampeyan ora ngrampungake luwih saka 18 pitakon sah, jadi sampeyan ora bisa lulus kuis.",
+      "description": "Sampeyan ora ngganti luwih saka 18 pitakonan karo bener, uga sampeyan ora bisa ngganti Langkah KYC #3. Sampeyan bisa coba maning seminggu niki.",
       "check_faq": "Kanggo ngganti bener sak durunge, kita sarankan sampeyan ngerti kanthi apik karo basis pengetahuan kita lan FAQ kita."
     },
     "quiz_questionnaire": {
@@ -1272,20 +1279,12 @@
     "confirmation_popup": {
       "title": "Konfirmasi",
       "start_description": "Apa sampeyan yakin pengen mulai kuis?",
-      "cancel_description": "Dhawuhake kuis, sampeyan bakal nggunakaké siji percobaan kanggo nganti. Apakah sampeyan yakin sampeyan pengin dhawuhake kuis saiki?"
+      "cancel_description": "Apa sampeyan yakin pengen nutup kuis?"
     },
     "quiz_success": {
       "title": "Verifikasi Rampung",
       "description": "Selamat, sampeyan wis rampung verifikasi KYC sampeyan. Jawaban sing bener terus menerus udikake dedikasi lan pengetahuan sampeyan. Sampeyan saiki wis diverifikasi."
-    },
-    "mining_disabled_popup": {
-      "title": "❌ Mining Dimateni",
-      "description": "Akses mining sampeyan wis dimatèni amarga tresna kuis sing tiga kali nyabot utawa lewat wanci kang ditentangake, kaya sing diwajibaké déning prosès KYC kita."
-    },
-    "action": "Delengake kuis",
-    "reminder": "Tolong perhatikan bahwa Anda perlu menyelesaikan kuis untuk memenuhi syarat untuk melanjutkan penambangan dan menghindari pemotongan.",
-    "days_left": "Dina sing mbènyu: {{days}}",
-    "retries_left": "Percobaan tersisa: {{number}}"
+    }
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1298,7 +1297,11 @@
       }
     }
   },
-  "buttons": {
-    "skip": "Lèwati"
+  "solana_address": {
+    "title": "Alamat Solana",
+    "enter_address_title": "Masukkan\nalamat Solana Anda",
+    "enter_address_description": "Tambahkan alamat Solana Anda di bawah ini untuk memenuhi syarat untuk airdrop eksklusif koin meme kami dan token menarik di jaringan Solana. Siapkan diri untuk membuka kejutan dan hadiah saat kami membawa petualangan kripto ke Anda.",
+    "enter_address_confirmation": "Apakah Anda yakin bahwa alamat Solana ini benar?",
+    "wallet_description": "Kami menyarankan menggunakan dompet self-custodial seperti [[:bold]]Phantom[[/:bold]] atau [[:bold]]Trust Wallet[[/:bold]].\n\nPastikan Anda memeriksa alamat dompet Anda dua kali untuk memastikan bahwa Anda akan menerima airdrop."
   }
 }

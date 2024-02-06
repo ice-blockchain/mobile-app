@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {FramedBscIcon} from '@components/FramedBscIcon';
 import {ActionListItem} from '@components/ListItems/ActionListItem';
 import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
@@ -14,12 +13,9 @@ import {ChevronSmallIcon} from '@svg/ChevronSmallIcon';
 import {isRTL, t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {Image, StyleSheet, Text} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
-
-const ICON_CONTAINER_SIZE = rem(36);
-const ICON_SIZE = rem(24);
 
 export const BscAddress = memo(() => {
   const navigation =
@@ -36,11 +32,7 @@ export const BscAddress = memo(() => {
         onPress={onPress}
         containerStyle={styles.container}
         LeadingIcon={
-          <FramedBscIcon
-            iconColor={COLORS.goldenZest}
-            style={styles.iconStyle}
-            iconSize={ICON_SIZE}
-          />
+          <Image source={Images.blockchains.bsc} style={styles.icon} />
         }
         title={t('home.bsc_address.title')}
         subtitle={
@@ -59,7 +51,6 @@ export const BscAddress = memo(() => {
           <ChevronSmallIcon style={styles.chevron} color={COLORS.white} />
         }
         backgroundImageSource={Images.backgrounds.darkListItem}
-        leadingIconContainerStyle={styles.leadingIconContainer}
         titleTextStyle={styles.text}
         subtitleTextStyle={styles.text}
       />
@@ -75,9 +66,6 @@ const styles = StyleSheet.create({
   chevron: {
     transform: [{rotateZ: isRTL ? '90deg' : '-90deg'}],
   },
-  leadingIconContainer: {
-    backgroundColor: COLORS.white,
-  },
   text: {
     color: COLORS.white,
   },
@@ -86,10 +74,8 @@ const styles = StyleSheet.create({
     marginTop: rem(4),
     ...font(12, 14.4, 'medium', 'white'),
   },
-  iconStyle: {
-    width: ICON_CONTAINER_SIZE,
-    height: ICON_CONTAINER_SIZE,
-    borderRadius: rem(10),
-    backgroundColor: COLORS.white,
+  icon: {
+    width: rem(36),
+    height: rem(36),
   },
 });

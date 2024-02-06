@@ -14,6 +14,7 @@ import {PAGE_HEIGHT, Pager} from '@screens/HomeFlow/Home/components/Pager';
 import {Quiz} from '@screens/HomeFlow/Home/components/Quiz';
 import {Roadmap} from '@screens/HomeFlow/Home/components/Roadmap';
 import {SocialLinks} from '@screens/HomeFlow/Home/components/SocialLinks';
+import {SolanaAddress} from '@screens/HomeFlow/Home/components/SolanaAddress';
 import {Tasks} from '@screens/HomeFlow/Home/components/Tasks';
 import {Team} from '@screens/HomeFlow/Home/components/Team';
 import {useAchievementsWalkthrough} from '@screens/HomeFlow/Home/hooks/useAchievementsWalkthrough';
@@ -59,6 +60,7 @@ export const Home = memo(() => {
               <Team />
             </View>
             <Quiz />
+            <SolanaAddress />
             <BscAddress />
             <Roadmap />
             <JoinMainnet />

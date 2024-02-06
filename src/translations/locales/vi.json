@@ -74,7 +74,8 @@
     "remove_address": "Xóa địa chỉ",
     "start": "Bắt đầu",
     "faq": "Câu hỏi thường gặp",
-    "knowledge_base": "Cơ sở kiến thức"
+    "knowledge_base": "Cơ sở kiến thức",
+    "skip": "Bỏ qua"
   },
   "team": {
     "contacts_tab": "Danh bạ",
@@ -374,6 +375,10 @@
     },
     "verified_tooltip": {
       "title": "KYC Đã Xác Minh"
+    },
+    "solana_address": {
+      "title": "Địa chỉ Solana",
+      "subtitle": "Vui lòng nhập địa chỉ Solana của bạn ở đây."
     }
   },
   "settings": {
@@ -1239,7 +1244,7 @@
     "enter_address_confirmation": "Bạn có chắc rằng địa chỉ BNB Smart Chain của bạn là chính xác không?",
     "validators_warning_title": "Xác Nhận Địa Chỉ",
     "validators_warning_text": "Vui lòng lưu ý: Những người đã thêm địa chỉ BNB Smart Chain vào tài khoản của họ không được phép trở thành một trong 300 người xác minh chính theo whitepaper của chúng tôi cho sự ra mắt mạng chính.",
-    "walletDescription": "Chúng tôi khuyên bạn nên sử dụng một ví tự quản lý như [[:bold]]Metamask[[/:bold]] hoặc [[:bold]]Trust Wallet[[/:bold]].\n\nVui lòng đảm bảo bạn kiểm tra địa chỉ ví của mình hai lần để đảm bảo bạn sẽ nhận được phân phối."
+    "wallet_description": "Chúng tôi khuyên bạn nên sử dụng một ví tự quản lý như [[:bold]]Metamask[[/:bold]] hoặc [[:bold]]Trust Wallet[[/:bold]].\n\nVui lòng đảm bảo bạn kiểm tra địa chỉ ví của mình hai lần để đảm bảo bạn sẽ nhận được phân phối."
   },
   "social_kyc": {
     "header": "Xác minh",
@@ -1324,9 +1329,16 @@
     "description2": "Bước này giúp chúng tôi đảm bảo tính bảo mật và xác thực của tài khoản của bạn. Cảm ơn sự hợp tác của bạn!"
   },
   "quiz": {
-    "title": "Kiểm tra",
-    "intro": {
+    "title": "KYC Bước #3",
+    "terms": {
       "description": "Tại Ice, chúng tôi tin tưởng trong việc tạo dựng một cộng đồng thành viên hoạt động và thông tin. Sứ mệnh của chúng tôi là đảm bảo rằng các đồng Ice được phân phối cho những người thực sự tham gia và chia sẻ tầm nhìn của chúng tôi.",
+      "knowledge_verification": {
+        "title": "💡 Xác minh kiến thức",
+        "description": "Để đảm bảo cộng đồng của chúng tôi được thông tin và đồng lòng với tầm nhìn của chúng tôi:",
+        "point1": "Bạn sẽ được đặt ra 21 câu hỏi dựa trên nguồn tài liệu phong phú của chúng tôi.",
+        "point2": "Kết quả đạt được từ bài kiểm tra xác minh hiểu biết và tận tụy của bạn.",
+        "point3": "Kết quả kiểm tra không đạt cho thấy cần phải tương tác thêm với tài liệu của chúng tôi."
+      },
       "community_engagement": {
         "title": "🙌 Tương tác cộng đồng tích cực",
         "description": "Sự tham gia của bạn trong Hệ sinh thái Ice ảnh hưởng trực tiếp đến khả năng đào của bạn:",
@@ -1335,25 +1347,20 @@
         "point3": "Tương tác xã hội: Tăng sự hiện diện của bạn bằng cách thích, chia sẻ, theo dõi hoặc đăng bài về Ice.",
         "bottom_description": "Bạn càng tương tác tích cực, điểm tương tác tích cực càng cao, giúp bạn đi qua quy trình KYC."
       },
-      "terms_privacy": "Tôi hiểu và tôi đồng ý với [[:link]]Điều khoản và Điều kiện[[/:link]] cùng với Chính sách bảo mật[[/:link]].",
-      "knowledge_check": {
-        "title": "🧠 Kiểm tra kiến thức",
-        "point2": "Để đậu bài kiểm tra, bạn cần trả lời ít nhất 18 câu hỏi đúng.",
-        "point3": "Bài kiểm tra không đạt nghĩa là bạn cần tiếp tục nghiên cứu tài liệu của chúng tôi thêm.",
-        "point4": "Có giới hạn thời gian để hoàn thành bài kiểm tra. Bạn có thể xem còn bao nhiêu ngày trước ngày hết hạn trên trang chủ của bạn trong phần kiểm tra.",
-        "point5": "Bạn có 3 lần thử lại trước ngày hết hạn. Nếu bạn trượt bài kiểm tra 3 lần hoặc qua ngày hết hạn, bạn sẽ không thể đào tiền nữa và tài khoản của bạn sẽ bị giảm điểm.",
-        "point6": "📚 Tất cả thông tin về bài kiểm tra này có thể đọc tại đây [[:link]]ở đây[[/:link]].",
-        "description": "Để đảm bảo cộng đồng của chúng tôi được thông tin và đồng lòng với tầm nhìn của chúng tôi:",
-        "point1": "Bạn sẽ được đặt ra 21 câu hỏi dựa trên nguồn tài liệu phong phú của chúng tôi."
-      },
-      "why_quiz": {
-        "title": "💡 Tại sao lại có bài kiểm tra?",
-        "description": "Sự cam kết của chúng tôi đối với kiến thức và sự hiểu biết đang ở hàng đầu của cộng đồng của chúng tôi. Với bài kiểm tra, chúng tôi muốn đảm bảo rằng Ice sẽ đi vào tay đúng người, những người thực sự hiểu và đồng tình với tầm nhìn của dự án của chúng tôi."
-      }
+      "terms_privacy": "Tôi hiểu và tôi đồng ý với [[:link]]Điều khoản và Điều kiện[[/:link]] cùng với Chính sách bảo mật[[/:link]]."
     },
-    "quiz_failure": {
+    "intro": {
+      "knowledge_check": "🧠 Kiểm tra kiến thức:",
+      "point1": "Tổng cộng có 21 câu hỏi.",
+      "point2": "Để đậu bài kiểm tra, bạn cần trả lời ít nhất 18 câu hỏi đúng.",
+      "point3": "Rất tiếc, bài kiểm tra không đỗ? Hãy thử lại vào tuần sau.",
+      "point4": "📚 Tất cả thông tin về bài kiểm tra này có thể đọc [[:link]]tại đây[[/:link]].",
+      "why_quiz": "Tại sao có bài kiểm tra?",
+      "why_quiz_description": "Chúng tôi luôn ủng hộ việc đào mỏ thông minh, an toàn và được thông tin đầy đủ. Bước nhỏ này đảm bảo cộng đồng Ice của chúng tôi phát triển với kiến thức và hiểu biết!"
+    },
+    "mining_disabled": {
       "title": "Bài kiểm tra không đỗ",
-      "description": "Bạn không trả lời đúng hơn 18 câu hỏi, vì vậy bạn không thể qua bài kiểm tra.",
+      "description": "Bạn đã không trả lời đúng hơn 18 câu hỏi, vì vậy bạn không thể hoàn thành Bước KYC #3. Bạn có thể thử lại vào tuần sau.",
       "check_faq": "Để trả lời đúng vào lần sau, chúng tôi đề xuất bạn tìm hiểu về cơ sở kiến thức và Câu hỏi thường gặp của chúng tôi."
     },
     "quiz_questionnaire": {
@@ -1365,20 +1372,12 @@
     "confirmation_popup": {
       "title": "Xác nhận",
       "start_description": "Bạn có chắc chắn muốn bắt đầu bài kiểm tra không?",
-      "cancel_description": "Bằng cách bỏ qua bài kiểm tra, bạn sẽ sử dụng một trong số 3 lần thử lại có sẵn. Bạn có chắc chắn muốn bỏ qua bài kiểm tra ngay bây giờ không?"
+      "cancel_description": "Bạn có chắc chắn muốn hủy bài kiểm tra không?"
     },
     "quiz_success": {
       "title": "Xác minh Hoàn tất",
       "description": "Xin chúc mừng, bạn đã hoàn thành thành công KYC của bạn. Các câu trả lời chính xác liên tục của bạn đã chứng minh sự tận tụy và kiến thức của bạn. Bây giờ bạn đã được xác minh."
-    },
-    "mining_disabled_popup": {
-      "title": "❌ Không thể đào tiền",
-      "description": "Truy cập đào tiền của bạn đã bị vô hiệu hóa do ba lần thất bại liên tiếp trong bài kiểm tra hoặc hết thời gian quy định, theo quy trình KYC của chúng tôi."
-    },
-    "action": "Hoàn thành bài kiểm tra",
-    "reminder": "Vui lòng lưu ý rằng bạn cần hoàn thành bài kiểm tra để được tiếp tục đào và tránh bị trừ điểm.",
-    "days_left": "Số ngày còn lại: {{days}}",
-    "retries_left": "Các lần thử lại còn lại: {{number}}"
+    }
   },
   "distribution_kyc_dynamic": {
     "select_method_step": {
@@ -1391,7 +1390,11 @@
       }
     }
   },
-  "buttons": {
-    "skip": "Bỏ qua"
+  "solana_address": {
+    "title": "Địa chỉ Solana",
+    "enter_address_title": "Nhập địa chỉ\nSolana của bạn",
+    "enter_address_description": "Thêm địa chỉ Solana của bạn dưới đây để đủ điều kiện tham gia airdrop độc quyền của các đồng tiền meme của chúng tôi và các token thú vị trên mạng lưới Solana. Hãy sẵn sàng mở khóa những điều bất ngờ và phần thưởng khi chúng tôi mang cuộc phiêu lưu tiền điện tử đến bạn.",
+    "enter_address_confirmation": "Bạn có chắc rằng địa chỉ Solana là chính xác không?",
+    "wallet_description": "Chúng tôi khuyên bạn nên sử dụng ví tự quản lý như [[:bold]]Phantom[[/:bold]] hoặc [[:bold]]Trust Wallet[[/:bold]].\n\nVui lòng đảm bảo kiểm tra địa chỉ ví của bạn hai lần để đảm bảo bạn sẽ nhận được airdrop."
   }
 }
