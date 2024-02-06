@@ -17,7 +17,7 @@ import {Image, StyleSheet, Text} from 'react-native';
 import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
-export const BscAddress = memo(() => {
+export const SolanaAddress = memo(() => {
   const navigation =
     useNavigation<NativeStackNavigationProp<MainNavigationParams>>();
 
@@ -27,12 +27,14 @@ export const BscAddress = memo(() => {
 
   return (
     <>
-      <SectionHeader title={t('home.bsc_address.title')} />
+      <SectionHeader title={t('home.solana_address.title')} />
       <ActionListItem
         onPress={onPress}
         containerStyle={styles.container}
-        LeadingIcon={<Image source={Images.chains.bsc} style={styles.icon} />}
-        title={t('home.bsc_address.title')}
+        LeadingIcon={
+          <Image source={Images.chains.solana} style={styles.icon} />
+        }
+        title={t('home.solana_address.title')}
         subtitle={
           user.miningBlockchainAccountAddress ? (
             <Text
@@ -42,13 +44,13 @@ export const BscAddress = memo(() => {
               {user.miningBlockchainAccountAddress}
             </Text>
           ) : (
-            t('home.bsc_address.subtitle')
+            t('home.solana_address.subtitle')
           )
         }
         TrailingIcon={
           <ChevronSmallIcon style={styles.chevron} color={COLORS.white} />
         }
-        backgroundImageSource={Images.backgrounds.darkListItem}
+        backgroundImageSource={Images.backgrounds.lightListItem}
         titleTextStyle={styles.text}
         subtitleTextStyle={styles.text}
       />

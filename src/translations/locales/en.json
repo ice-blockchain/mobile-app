@@ -372,6 +372,10 @@
       "title": "BNB Smart Chain address",
       "subtitle": "Please enter your BSC address here."
     },
+    "solana_address": {
+      "title": "Solana address",
+      "subtitle": "Please enter your Solana address here."
+    },
     "verified_tooltip": {
       "title": "KYC Verified"
     }

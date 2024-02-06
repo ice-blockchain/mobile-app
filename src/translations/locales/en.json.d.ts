@@ -251,6 +251,8 @@ export type Translations = {
   'home.join_mainnet.subtitle': null;
   'home.bsc_address.title': null;
   'home.bsc_address.subtitle': null;
+  'home.solana_address.title': null;
+  'home.solana_address.subtitle': null;
   'home.verified_tooltip.title': null;
   'settings.title': null;
   'settings.profile': null;

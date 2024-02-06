@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {FramedBscIcon} from '@components/FramedBscIcon';
 import {CommonInput} from '@components/Inputs/CommonInput';
 import {KeyboardAvoider} from '@components/KeyboardAvoider';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import useIsKeyboardShown from '@hooks/useIsKeyboardShown';
 import {useSafeAreaInsets} from '@hooks/useSafeAreaInsets';
 import {useScrollEndOnKeyboardShown} from '@hooks/useScrollEndOnKeyboardShown';
+import {Images} from '@images';
 import {Header} from '@navigation/components/Header';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import {AddressActionButton} from '@screens/HomeFlow/BscAddress/components/AddressActionButton';
@@ -17,7 +17,7 @@ import {BscBookIcon} from '@svg/BscBookIcon';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo} from 'react';
-import {ScrollView, StyleSheet, Text} from 'react-native';
+import {Image, ScrollView, StyleSheet, Text} from 'react-native';
 import {rem} from 'rn-units';
 
 export const BscAddress = memo(() => {
@@ -41,7 +41,7 @@ export const BscAddress = memo(() => {
         ]}
         keyboardShouldPersistTaps={'handled'}
         showsVerticalScrollIndicator={false}>
-        <FramedBscIcon style={styles.icon} />
+        <Image style={styles.icon} source={Images.chains.bscBlue} />
         <Text style={styles.titleText}>
           {t('bsc_address.enter_address_title')}
         </Text>
@@ -79,6 +79,8 @@ const styles = StyleSheet.create({
   icon: {
     marginTop: rem(24),
     alignSelf: 'center',
+    width: rem(54),
+    height: rem(54),
   },
   titleText: {
     marginTop: rem(16),
