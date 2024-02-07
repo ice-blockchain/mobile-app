@@ -70,7 +70,7 @@ export const LevelRow = React.memo(
               <Text style={styles.valueText}>
                 {formatNumberString(item.baseMiningRate, {
                   minimumFractionDigits: 0,
-                  maximumFractionDigits: 3,
+                  maximumFractionDigits: 6,
                 })}
               </Text>
               <View style={styles.leftIconContainer}>
