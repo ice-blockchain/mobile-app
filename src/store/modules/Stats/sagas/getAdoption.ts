@@ -20,10 +20,26 @@ const MILESTONES_BY_DATE = [
   },
   {
     baseMiningRate: '0.5',
-    achievementDate: '2024-06-01',
+    achievementDate: '2024-04-01',
   },
   {
     baseMiningRate: '0.25',
+    achievementDate: '2024-05-01',
+  },
+  {
+    baseMiningRate: '0.125',
+    achievementDate: '2024-06-01',
+  },
+  {
+    baseMiningRate: '0.0625',
+    achievementDate: '2024-07-01',
+  },
+  {
+    baseMiningRate: '0.03125',
+    achievementDate: '2024-08-01',
+  },
+  {
+    baseMiningRate: '0.015625',
     achievementDate: '2024-09-01',
   },
 ];
