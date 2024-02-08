@@ -1260,7 +1260,7 @@
     },
     "quiz_failure": {
       "title": "Kuis Gagal",
-      "description": "Sampeyan ora ngrampungake luwih saka 18 pitakon sah, jadi sampeyan ora bisa lulus kuis.",
+      "description": "Sampeyan ora ngrampungake luwih saka 18 pitakon sah utawa waktune abis, saben sampeyan ora bisa lulus kuis.",
       "check_faq": "Kanggo ngganti bener sak durunge, kita sarankan sampeyan ngerti kanthi apik karo basis pengetahuan kita lan FAQ kita."
     },
     "quiz_questionnaire": {

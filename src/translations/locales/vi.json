@@ -1353,7 +1353,7 @@
     },
     "quiz_failure": {
       "title": "Bài kiểm tra không đỗ",
-      "description": "Bạn không trả lời đúng hơn 18 câu hỏi, vì vậy bạn không thể qua bài kiểm tra.",
+      "description": "Bạn không trả lời đúng hơn 18 câu hỏi hoặc hết thời gian, vì vậy bạn không thể qua bài kiểm tra.",
       "check_faq": "Để trả lời đúng vào lần sau, chúng tôi đề xuất bạn tìm hiểu về cơ sở kiến thức và Câu hỏi thường gặp của chúng tôi."
     },
     "quiz_questionnaire": {

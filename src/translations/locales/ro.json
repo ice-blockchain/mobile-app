@@ -1353,7 +1353,7 @@
     },
     "quiz_failure": {
       "title": "Quiz Eșuat",
-      "description": "Nu ai răspuns corect la mai mult de 18 întrebări, deci nu poți trece testul.",
+      "description": "Nu ai răspuns corect la mai mult de 18 întrebări sau timpul a expirat, deci nu poți trece testul.",
       "check_faq": "Pentru a răspunde corect data viitoare, vă sugerăm să vă familiarizați cu Baza noastră de Cunoștințe și Întrebările Frecvente."
     },
     "quiz_questionnaire": {

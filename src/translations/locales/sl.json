@@ -1353,7 +1353,7 @@
     },
     "quiz_failure": {
       "title": "Kviz ni uspel",
-      "description": "Niste pravilno odgovorili na več kot 18 vprašanj, zato testa ne morete opraviti.",
+      "description": "Niste pravilno odgovorili na več kot 18 vprašanj ali je čas potekel, zato testa ne morete opraviti.",
       "check_faq": "Da boste naslednjič pravilno odgovorili, vam priporočamo, da se seznanite z našim osnovnim znanjem in pogostimi vprašanji."
     },
     "quiz_questionnaire": {

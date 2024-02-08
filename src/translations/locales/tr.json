@@ -1353,7 +1353,7 @@
     },
     "quiz_failure": {
       "title": "Başarısız Sınav",
-      "description": "18'den fazla soruya doğru cevap vermediniz, bu nedenle sınavı geçemezsiniz.",
+      "description": "18'den fazla soruya doğru cevap vermediniz veya süre doldu, bu nedenle sınavı geçemezsiniz.",
       "check_faq": "Bir sonraki sefer doğru cevap vermek için, bilgi tabanımızı ve Sıkça Sorulan Soruları incelemenizi öneririz."
     },
     "quiz_questionnaire": {

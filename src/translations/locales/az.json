@@ -1353,7 +1353,7 @@
     },
     "quiz_failure": {
       "title": "Test Uğursuz Oldu",
-      "description": "18-dən çox sualı düzgün cavablandırmamısınız, beləliklə, sınaqı keçə bilməzsiniz.",
+      "description": "Siz 18-dən çox sualı düzgün cavablandırmadınız və ya vaxt bitdi, beləliklə, sınaqı keçə bilməzsiniz.",
       "check_faq": "Növbəti dəfə düzgün cavab verə bilmək üçün, bilik bazamız və FAQ ilə tanış olmağınızı tövsiyə edirik."
     },
     "quiz_questionnaire": {

@@ -1353,7 +1353,7 @@
     },
     "quiz_failure": {
       "title": "Sikertelen Kvíz",
-      "description": "Nem válaszoltál több mint 18 kérdésre helyesen, így nem tudod teljesíteni a kvízt.",
+      "description": "Nem válaszoltál több mint 18 kérdésre helyesen, vagy lejárt az idő, így nem tudod teljesíteni a kvízt.",
       "check_faq": "Hogy legközelebb helyesen válaszolj, javasoljuk, hogy ismerkedj meg tudásbázisunkkal és gyakran ismételt kérdéseinkkel."
     },
     "quiz_questionnaire": {

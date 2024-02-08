@@ -1353,7 +1353,7 @@
     },
     "quiz_failure": {
       "title": "Selhal kvíz",
-      "description": "Neměli jste správně zodpovězeno více než 18 otázek, takže nemůžete test projít.",
+      "description": "Nedokázal jsi odpovědět správně na více než 18 otázek nebo čas vypršel, takže nemůžeš projít testem.",
       "check_faq": "Abyste příště odpovídali správně, doporučujeme se seznámit s našimi základními znalostmi a FAQ."
     },
     "quiz_questionnaire": {
