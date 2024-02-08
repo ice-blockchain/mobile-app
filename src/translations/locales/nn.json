@@ -1353,7 +1353,7 @@
     },
     "quiz_failure": {
       "title": "Mislukka Quiz",
-      "description": "Du har ikkje svara rett på meir enn 18 spørsmål, så du kan ikkje bestå quizen.",
+      "description": "Du har ikkje svara rett på meir enn 18 spørsmål, eller tida har gått ut, så du kan ikkje bestå quizen.",
       "check_faq": "For å svara rett neste gong, tilrådar vi at du blir kjent med kunnskapsbasen vår og dei ofte stilte spørsmåla våre."
     },
     "quiz_questionnaire": {

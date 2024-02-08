@@ -1353,7 +1353,7 @@
     },
     "quiz_failure": {
       "title": "አስተዳደረ ፈቃደኛ",
-      "description": "እንዴት ከሰአት 18 ግራም ተገኝተሽ ከሆነሽ ልጓል መሆን አለበት።"
+      "description": "እንዴት ከሰአት 18 ግራም ተገኝተሽ ከሆነሽ ወደፊት ተገኝቷል ወይም ያለ ጊዜ ተገኝቷል። በዚህም ከፍተኛ አይነት እንዳይቀረው ምንድን ነው የሚያሳየው።"
     },
     "quiz_questionnaire": {
       "navigation_title": "ጥያቄ {{current}} ከ {{total}}",

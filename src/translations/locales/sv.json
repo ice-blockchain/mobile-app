@@ -1353,7 +1353,7 @@
     },
     "quiz_failure": {
       "title": "Misslyckad quiz",
-      "description": "Du har inte svarat korrekt på mer än 18 frågor, så du kan inte klara testet.",
+      "description": "Du har inte svarat korrekt på mer än 18 frågor eller tiden har gått ut, så du kan inte klara testet.",
       "check_faq": "För att svara rätt nästa gång föreslår vi att du bekantar dig med vår kunskapsbas och vanliga frågor."
     },
     "quiz_questionnaire": {

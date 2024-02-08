@@ -1353,7 +1353,7 @@
     },
     "quiz_failure": {
       "title": "Mislykket Quiz",
-      "description": "Du har ikke svart riktig på mer enn 18 spørsmål, så du kan ikke bestå quizen.",
+      "description": "Du har ikke svart riktig på mer enn 18 spørsmål, eller tiden har utløpt, så du kan ikke bestå quizen.",
       "check_faq": "For å svare riktig neste gang, anbefaler vi at du blir kjent med vår kunnskapsbase og FAQ."
     },
     "quiz_questionnaire": {

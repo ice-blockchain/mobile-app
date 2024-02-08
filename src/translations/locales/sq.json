@@ -1353,7 +1353,7 @@
     },
     "quiz_failure": {
       "title": "Testi dështoi",
-      "description": "Ju nuk keni përgjigjur saktë më shumë se 18 pyetje, kështu që nuk mund të kaloni testin.",
+      "description": "Ju nuk keni përgjigjur saktë më shumë se 18 pyetje ose ka skaduar koha, kështu që nuk mund të kaloni testin.",
       "check_faq": "Për të përgjigjur saktë herën tjetër, ju sugjerojmë të njiheni me bazën tonë të njohurive dhe pyetjet e shpeshta."
     },
     "quiz_questionnaire": {

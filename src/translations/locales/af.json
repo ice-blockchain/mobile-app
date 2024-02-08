@@ -1356,7 +1356,7 @@
     },
     "quiz_failure": {
       "title": "Mislukte Toets",
-      "description": "Jy het nie meer as 18 vrae korrek beantwoord nie, sodat jy nie die kwis kan slaag nie.",
+      "description": "Jy het nie meer as 18 vrae korrek beantwoord of die tyd het verstreke nie, dus jy kan nie die kwis slaag nie.",
       "check_faq": "Om volgende keer reg te antwoord, stel ons voor dat jy jou bekendstel met ons kennisbank en FAQ."
     },
     "quiz_questionnaire": {
