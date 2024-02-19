@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {Api} from '@api/index';
+import {isLightDesign} from '@constants/featureFlags';
 import {
   isAuthorizedSelector,
   userSelector,
@@ -17,7 +18,7 @@ export function* checkStatusNoticeSaga() {
   const isAppActive: ReturnType<typeof isAppActiveSelector> = yield select(
     isAppActiveSelector,
   );
-  if (!isAuthorized || !isAppActive) {
+  if (!isAuthorized || !isAppActive || isLightDesign) {
     return null;
   }
 
