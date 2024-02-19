@@ -3,6 +3,7 @@
 import {Avatar} from '@components/Avatar/Avatar';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -34,7 +35,9 @@ export const TeamMember = memo(({userId}: Props) => {
   );
 
   return (
-    <Touchable onPress={() => navigation.navigate('UserProfile', {userId})}>
+    <Touchable
+      disabled={isLightDesign}
+      onPress={() => navigation.navigate('UserProfile', {userId})}>
       <View>
         <Avatar
           uri={profilePictureUrl}

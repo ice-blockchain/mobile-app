@@ -4,6 +4,7 @@ import {Avatar} from '@components/Avatar/Avatar';
 import {stopPropagation} from '@components/KeyboardDismiss';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {isLightDesign} from '@constants/featureFlags';
 import {CountryFlagAbbreviation, flags} from '@flags';
 import {MainStackParamList} from '@navigation/Main';
 import {useNavigation} from '@react-navigation/native';
@@ -51,7 +52,7 @@ export const UserListItem = memo(
         <Touchable
           style={styles.touchArea}
           onPress={() => navigation.navigate('UserProfile', {userId})}
-          disabled={disabled}>
+          disabled={isLightDesign || disabled}>
           <View style={styles.imageContainer}>
             {user.profilePictureUrl && (
               <Avatar
