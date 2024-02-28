@@ -5,7 +5,7 @@ import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
 import {isLightDesign} from '@constants/featureFlags';
 import {LINKS} from '@constants/links';
-import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
+import {commonStyles, POPUP_SIDE_OFFSET} from '@constants/styles';
 import {ChevronSmallIcon} from '@svg/ChevronSmallIcon';
 import {PaperIcon} from '@svg/PaperIcon';
 import {isRTL, t} from '@translations/i18n';
@@ -40,7 +40,7 @@ export const Roadmap = memo(() => {
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: SCREEN_SIDE_OFFSET,
+    marginHorizontal: POPUP_SIDE_OFFSET,
     marginTop: rem(16),
   },
   chevron: {

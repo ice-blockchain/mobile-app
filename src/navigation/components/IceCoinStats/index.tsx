@@ -5,6 +5,8 @@ import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {IceLogo} from '@navigation/components/IceCoinStats/components/IceLogo';
 import {JoinMainnet} from '@navigation/components/IceCoinStats/components/JoinMainnet';
+import {Notice} from '@navigation/components/IceCoinStats/components/Notice';
+import {Platforms} from '@navigation/components/IceCoinStats/components/Platforms';
 import {Roadmap} from '@navigation/components/IceCoinStats/components/Roadmap';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import React from 'react';
@@ -20,6 +22,8 @@ export const IceCoinStats = () => {
       <SafeAreaView style={commonStyles.flexOne} edges={['top']}>
         <ScrollView contentContainerStyle={styles.scrollContent}>
           <IceLogo />
+          <Notice />
+          <Platforms />
           <View style={commonStyles.baseSubScreen}>
             <Roadmap />
             <JoinMainnet />

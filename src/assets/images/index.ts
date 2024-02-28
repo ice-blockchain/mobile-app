@@ -96,6 +96,7 @@ export const Images = {
     walkthroughBg: require('./backgrounds/walkthrough.png'),
     darkListItem: require('./backgrounds/darkListItem.png'),
     blueSquaresBg: require('./backgrounds/blueSquaresBg.png'),
+    roundedStroke: require('./backgrounds/roundedStroke.png'),
   },
   popUp: {
     updateRequired: require('./popup/please_update.png'),
@@ -196,5 +197,18 @@ export const Images = {
     quizFailed: require('./quiz/quiz_failed.png'),
     quiz: require('./quiz/quiz.png'),
     quiz_small: require('./quiz/quiz_small.png'),
+  },
+  platforms: {
+    okx: require('./platforms/okx.png'),
+    kucoin: require('./platforms/kucoin.png'),
+    gate: require('./platforms/gate.png'),
+    mexc: require('./platforms/mexc.png'),
+    bitget: require('./platforms/bitget.png'),
+    bitmart: require('./platforms/bitmart.png'),
+    bingx: require('./platforms/bingx.png'),
+    bitrue: require('./platforms/bitrue.png'),
+    pancake: require('./platforms/pancake.png'),
+    uniswap: require('./platforms/uniswap.png'),
+    poloneix: require('./platforms/poloneix.png'),
   },
 } as const;
