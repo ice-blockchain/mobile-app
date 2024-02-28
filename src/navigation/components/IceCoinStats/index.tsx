@@ -1,44 +1,42 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {LinesBackground} from '@components/LinesBackground';
 import {COLORS} from '@constants/colors';
-import {Images} from '@images';
-import {iceCoinStatsSelector} from '@store/modules/Stats/selectors';
-import {font} from '@utils/styles';
+import {commonStyles} from '@constants/styles';
+import {IceLogo} from '@navigation/components/IceCoinStats/components/IceLogo';
+import {JoinMainnet} from '@navigation/components/IceCoinStats/components/JoinMainnet';
+import {Roadmap} from '@navigation/components/IceCoinStats/components/Roadmap';
+import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
-import {useSelector} from 'react-redux';
-import {rem} from 'rn-units';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 export const IceCoinStats = () => {
-  const config = useSelector(iceCoinStatsSelector);
-
+  // const config = useSelector(iceCoinStatsSelector);
+  useFocusStatusBar({style: 'light-content'});
   return (
     <View style={styles.container}>
-      <Image
-        resizeMode={'contain'}
-        style={styles.image}
-        source={Images.popUp.error}
-      />
-      <Text>{config?.team?.enabled.toString()}</Text>
-      <Text style={styles.messageText}>:(</Text>
+      <LinesBackground />
+      <SafeAreaView style={commonStyles.flexOne} edges={['top']}>
+        <ScrollView contentContainerStyle={styles.scrollContent}>
+          <IceLogo />
+          <View style={commonStyles.baseSubScreen}>
+            <Roadmap />
+            <JoinMainnet />
+          </View>
+          <Text>STATS!</Text>
+        </ScrollView>
+      </SafeAreaView>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
-    alignItems: 'center',
     flex: 1,
-    backgroundColor: COLORS.white,
-    paddingHorizontal: rem(40),
+    backgroundColor: COLORS.primaryLight,
   },
-  image: {
-    width: rem(250),
-    height: rem(230),
-  },
-  messageText: {
-    ...font(14, 20, 'medium', 'secondary', 'center'),
-    marginTop: rem(16),
+  scrollContent: {
+    flexGrow: 1,
   },
 });
