@@ -27,10 +27,6 @@ const platforms: Platform[] = [
 export const Platforms = () => {
   return (
     <View style={styles.container}>
-      <Image
-        source={Images.backgrounds.roundedStroke}
-        style={StyleSheet.absoluteFill}
-      />
       <View style={styles.body}>
         {platforms.map(platform => {
           return (
@@ -47,6 +43,10 @@ export const Platforms = () => {
           );
         })}
       </View>
+      <Image
+        source={Images.backgrounds.roundedStroke}
+        style={StyleSheet.absoluteFill}
+      />
     </View>
   );
 };

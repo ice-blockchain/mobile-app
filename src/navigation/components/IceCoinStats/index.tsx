@@ -12,6 +12,7 @@ import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import {rem} from 'rn-units';
 
 export const IceCoinStats = () => {
   // const config = useSelector(iceCoinStatsSelector);
@@ -24,7 +25,7 @@ export const IceCoinStats = () => {
           <IceLogo />
           <Notice />
           <Platforms />
-          <View style={commonStyles.baseSubScreen}>
+          <View style={[commonStyles.baseSubScreen, styles.subScreen]}>
             <Roadmap />
             <JoinMainnet />
           </View>
@@ -42,5 +43,8 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     flexGrow: 1,
+  },
+  subScreen: {
+    marginTop: rem(16),
   },
 });
