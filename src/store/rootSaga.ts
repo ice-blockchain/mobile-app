@@ -5,67 +5,19 @@ import {isAuthError} from '@services/auth';
 import {logError} from '@services/logging';
 import {isValidationError} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
-import {authWatchers} from '@store/modules/Account/sagas';
-import {achievementsWatchers} from '@store/modules/Achievements/sagas';
-import {analyticsWatchers} from '@store/modules/Analytics/sagas';
 import {appCommonWatchers} from '@store/modules/AppCommon/sagas';
-import {appUpdateWatchers} from '@store/modules/AppUpdate/sagas';
-import {backgroundTasksWatchers} from '@store/modules/BackgroundTasks/sagas';
-import {collectionsWatchers} from '@store/modules/Collections/sagas';
-import {teamWatchers} from '@store/modules/Contacts/sagas';
-import {creativeLibraryWatchers} from '@store/modules/CreativeLibrary/sagas';
-import {devicesWatchers} from '@store/modules/Devices/sagas';
-import {faceRecognitionWatchers} from '@store/modules/FaceRecognition/sagas';
-import {inAppNotificationsWatchers} from '@store/modules/InAppNotifications/sagas';
 import {linkingWatchers} from '@store/modules/Linking/sagas';
-import {newsWatchers} from '@store/modules/News/sagas';
-import {notificationsWatchers} from '@store/modules/Notifications/sagas';
-import {permissionsWatchers} from '@store/modules/Permissions/sagas';
 import {pushNotificationsWatchers} from '@store/modules/PushNotifications/sagas';
-import {quizWatchers} from '@store/modules/Quiz/sagas';
-import {rateAppWatchers} from '@store/modules/RateApp/sagas';
-import {referralsWatchers} from '@store/modules/Referrals/sagas';
-import {socialKycWatchers} from '@store/modules/SocialKyc/sagas';
-import {socialsWatchers} from '@store/modules/Socials/sagas';
 import {statsWatchers} from '@store/modules/Stats/sagas';
-import {statusNoticeWatchers} from '@store/modules/StatusNotice/sagas';
-import {tokenomicsWatchers} from '@store/modules/Tokenomics/sagas';
-import {usersWatchers} from '@store/modules/Users/sagas';
-import {validationWatchers} from '@store/modules/Validation/sagas';
-import {walkthroughWatchers} from '@store/modules/Walkthrough/sagas';
 import {AppState} from 'react-native';
 import {SagaIterator} from 'redux-saga';
 import {all, call, cancel, spawn, take} from 'redux-saga/effects';
 
 const watchers = [
-  ...authWatchers,
-  ...newsWatchers,
-  ...statsWatchers,
-  ...analyticsWatchers,
-  ...faceRecognitionWatchers,
-  ...permissionsWatchers,
-  ...referralsWatchers,
-  ...collectionsWatchers,
-  ...teamWatchers,
-  ...validationWatchers,
-  ...devicesWatchers,
-  ...linkingWatchers,
-  ...socialKycWatchers,
-  ...pushNotificationsWatchers,
   ...appCommonWatchers,
-  ...creativeLibraryWatchers,
-  ...usersWatchers,
-  ...tokenomicsWatchers,
-  ...statusNoticeWatchers,
-  ...rateAppWatchers,
-  ...walkthroughWatchers,
-  ...achievementsWatchers,
-  ...appUpdateWatchers,
-  ...notificationsWatchers,
-  ...inAppNotificationsWatchers,
-  ...backgroundTasksWatchers,
-  ...socialsWatchers,
-  ...quizWatchers,
+  ...linkingWatchers,
+  ...pushNotificationsWatchers,
+  ...statsWatchers,
 ];
 
 export function* rootSaga(): SagaIterator {

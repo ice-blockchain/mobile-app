@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {FeatureToggleConfig} from '@api/auth/types';
 import {Adoption, UserGrowth} from '@api/statistics/types';
 import {StatsPeriod} from '@store/modules/Stats/types';
 import {createAction} from '@store/utils/actions/createAction';
@@ -19,7 +20,13 @@ const GET_ADOPTION = createAction('GET_ADOPTION', {
   FAILED: (errorMessage: string) => ({errorMessage}),
 });
 
+const GET_ICE_COIN_STATS = createAction('GET_ICE_COIN_STATS', {
+  SUCCESS: (payload: {config: FeatureToggleConfig}) => payload,
+  FAILED: (errorMessage: string) => ({errorMessage}),
+});
+
 export const StatsActions = Object.freeze({
   GET_USER_GROWTH_STATS,
   GET_ADOPTION,
+  GET_ICE_COIN_STATS,
 });

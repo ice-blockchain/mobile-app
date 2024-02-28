@@ -17,3 +17,5 @@ export const totalUsersSelector = (state: RootState) =>
   state.stats.userGrowth.total;
 
 export const adoptionSelector = (state: RootState) => state.stats.adoption;
+
+export const iceCoinStatsSelector = (state: RootState) => state.stats.iceCoin;

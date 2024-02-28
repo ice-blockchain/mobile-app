@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {FeatureToggleConfig} from '@api/auth/types';
 import {Adoption, UserGrowthTimeSeries} from '@api/statistics/types';
 import {StatsActions} from '@store/modules/Stats/actions';
 import produce from 'immer';
@@ -11,11 +12,13 @@ export interface StatsState {
     total: number;
   };
   adoption: Adoption | null;
+  iceCoin: FeatureToggleConfig | null;
 }
 
 type Actions = ReturnType<
   | typeof StatsActions.GET_USER_GROWTH_STATS.SUCCESS.create
   | typeof StatsActions.GET_ADOPTION.SUCCESS.create
+  | typeof StatsActions.GET_ICE_COIN_STATS.SUCCESS.create
 >;
 
 const INITIAL_STATE: StatsState = {
@@ -25,6 +28,7 @@ const INITIAL_STATE: StatsState = {
     total: 0,
   },
   adoption: null,
+  iceCoin: null,
 };
 
 function reducer(state = INITIAL_STATE, action: Actions): StatsState {
@@ -38,6 +42,9 @@ function reducer(state = INITIAL_STATE, action: Actions): StatsState {
         draft.userGrowth.total = userGrowth.total;
         break;
       }
+      case StatsActions.GET_ICE_COIN_STATS.SUCCESS.type:
+        draft.iceCoin = action.payload.config;
+        break;
       case StatsActions.GET_ADOPTION.SUCCESS.type: {
         draft.adoption = action.payload.adoption;
         break;

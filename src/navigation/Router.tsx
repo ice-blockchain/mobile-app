@@ -1,18 +1,12 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {AuthNavigator} from '@navigation/Auth';
+import {IceCoinStats} from '@navigation/components/IceCoinStats';
 import {InitializationError} from '@navigation/components/InitializationError';
 import {useRouteNameChange} from '@navigation/hooks/useRouteNameChange';
-import {MainNavigator} from '@navigation/Main';
 import {theme} from '@navigation/theme';
 import {navigationReadyResolver, navigationRef} from '@navigation/utils';
-import {WelcomeNavigator} from '@navigation/Welcome';
 import {NavigationContainer} from '@react-navigation/native';
 import {routingInstrumentation} from '@services/logging';
-import {
-  isRegistrationCompleteSelector,
-  userSelector,
-} from '@store/modules/Account/selectors';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {useAppStateListener} from '@store/modules/AppCommon/hooks/useAppStateListener';
 import {appInitStateSelector} from '@store/modules/AppCommon/selectors';
@@ -23,8 +17,6 @@ import React, {useCallback, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 function ActiveNavigator() {
-  const user = useSelector(userSelector);
-  const isRegistrationComplete = useSelector(isRegistrationCompleteSelector);
   const appInitState = useSelector(appInitStateSelector);
 
   useEffect(() => {
@@ -41,15 +33,7 @@ function ActiveNavigator() {
     return <InitializationError />;
   }
 
-  if (!user) {
-    return <AuthNavigator />;
-  }
-
-  if (!isRegistrationComplete) {
-    return <WelcomeNavigator />;
-  }
-
-  return <MainNavigator />;
+  return <IceCoinStats />;
 }
 
 export function Router() {

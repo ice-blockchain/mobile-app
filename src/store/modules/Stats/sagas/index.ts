@@ -4,6 +4,7 @@ import {AccountActions} from '@store/modules/Account/actions';
 import {AppCommonActions} from '@store/modules/AppCommon/actions';
 import {StatsActions} from '@store/modules/Stats/actions';
 import {getAdoptionSaga} from '@store/modules/Stats/sagas/getAdoption';
+import {getIceCoinStatsSaga} from '@store/modules/Stats/sagas/getIceCoinStats';
 import {getUserGrowthStats} from '@store/modules/Stats/sagas/getUserGrowthStats';
 import {takeLatest} from 'redux-saga/effects';
 
@@ -17,5 +18,12 @@ export const statsWatchers = [
       StatsActions.GET_ADOPTION.START.type,
     ],
     getAdoptionSaga,
+  ),
+  takeLatest(
+    [
+      AppCommonActions.APP_LOADED.STATE.type,
+      AppCommonActions.APP_STATE_CHANGE.STATE.type,
+    ],
+    getIceCoinStatsSaga,
   ),
 ];
