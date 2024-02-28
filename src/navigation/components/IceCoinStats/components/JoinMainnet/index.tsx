@@ -4,7 +4,7 @@ import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
 import {isLightDesign} from '@constants/featureFlags';
 import {LINKS} from '@constants/links';
-import {commonStyles, POPUP_SIDE_OFFSET} from '@constants/styles';
+import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
 import {t} from '@translations/i18n';
 import {openLinkWithInAppBrowser} from '@utils/device';
@@ -36,7 +36,7 @@ export const JoinMainnet = memo(() => {
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: POPUP_SIDE_OFFSET,
+    marginHorizontal: SCREEN_SIDE_OFFSET,
     backgroundColor: COLORS.white,
     borderRadius: rem(16),
     marginTop: rem(24),

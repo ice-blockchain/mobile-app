@@ -8,6 +8,7 @@ import {JoinMainnet} from '@navigation/components/IceCoinStats/components/JoinMa
 import {Notice} from '@navigation/components/IceCoinStats/components/Notice';
 import {Platforms} from '@navigation/components/IceCoinStats/components/Platforms';
 import {Roadmap} from '@navigation/components/IceCoinStats/components/Roadmap';
+import {Stats} from '@navigation/components/IceCoinStats/components/Stats';
 import {useFocusStatusBar} from '@navigation/hooks/useFocusStatusBar';
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
@@ -15,23 +16,23 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {rem} from 'rn-units';
 
 export const IceCoinStats = () => {
-  // const config = useSelector(iceCoinStatsSelector);
   useFocusStatusBar({style: 'light-content'});
   return (
     <View style={styles.container}>
       <LinesBackground />
-      <SafeAreaView style={commonStyles.flexOne} edges={['top']}>
-        <ScrollView contentContainerStyle={styles.scrollContent}>
+      <ScrollView contentContainerStyle={styles.scrollContent}>
+        <SafeAreaView style={commonStyles.flexOne} edges={['top']}>
           <IceLogo />
           <Notice />
           <Platforms />
           <View style={[commonStyles.baseSubScreen, styles.subScreen]}>
+            <Stats />
             <Roadmap />
             <JoinMainnet />
           </View>
           <Text>STATS!</Text>
-        </ScrollView>
-      </SafeAreaView>
+        </SafeAreaView>
+      </ScrollView>
     </View>
   );
 };
@@ -46,5 +47,6 @@ const styles = StyleSheet.create({
   },
   subScreen: {
     marginTop: rem(16),
+    paddingBottom: rem(16),
   },
 });
