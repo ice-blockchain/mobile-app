@@ -11,22 +11,48 @@ import {rem} from 'rn-units';
 type Platform = {logo: ImageSourcePropType; link: string};
 
 const platforms: Platform[] = [
-  {logo: Images.platforms.okx, link: 'https://google.com1'},
-  {logo: Images.platforms.kucoin, link: 'https://google.com2'},
-  {logo: Images.platforms.gate, link: 'https://google.com3'},
-  {logo: Images.platforms.mexc, link: 'https://google.com4'},
-  {logo: Images.platforms.bitget, link: 'https://google.com5'},
-  {logo: Images.platforms.bitmart, link: 'https://google.com6'},
-  {logo: Images.platforms.poloneix, link: 'https://google.com11'},
-  {logo: Images.platforms.bingx, link: 'https://google.com7'},
-  {logo: Images.platforms.bitrue, link: 'https://google.com8'},
-  {logo: Images.platforms.uniswap, link: 'https://google.com10'},
-  {logo: Images.platforms.pancake, link: 'https://google.com9'},
+  {logo: Images.platforms.okx, link: 'https://www.okx.com/trade-spot/ice-usdt'},
+  {
+    logo: Images.platforms.kucoin,
+    link: 'https://www.kucoin.com/trade/ICE-USDT',
+  },
+  {logo: Images.platforms.gate, link: 'https://www.gate.io/trade/ICE_USDT'},
+  {
+    logo: Images.platforms.mexc,
+    link: 'https://www.mexc.com/exchange/ICENETWORK_USDT',
+  },
+  {logo: Images.platforms.bitget, link: 'https://www.bitget.com/spot/ICEUSDT'},
+  {
+    logo: Images.platforms.bitmart,
+    link: 'https://www.bitmart.com/trade/en-US?symbol=ICENETWORK_USDT',
+  },
+  {
+    logo: Images.platforms.poloneix,
+    link: 'https://poloniex.com/trade/ICENETWORK_USDT/?type=spot',
+  },
+  {logo: Images.platforms.bingx, link: 'https://bingx.com/en-gb/spot/ICEUSDT/'},
+  {
+    logo: Images.platforms.bitrue,
+    link: 'https://www.bitrue.com/trade/ice1_usdt',
+  },
+  {
+    logo: Images.platforms.uniswap,
+    link: 'https://app.uniswap.org/tokens/ethereum/0x79f05c263055ba20ee0e814acd117c20caa10e0c',
+  },
+  {
+    logo: Images.platforms.pancake,
+    link: 'https://pancakeswap.finance/swap?outputCurrency=0xc335Df7C25b72eEC661d5Aa32a7c2B7b2a1D1874&inputCurrency=0x55d398326f99059fF775485246999027B3197955',
+  },
 ];
 
 export const Platforms = () => {
   return (
     <View style={styles.container}>
+      <Image
+        source={Images.backgrounds.roundedStroke}
+        style={[StyleSheet.absoluteFill, styles.background]}
+        resizeMode={'stretch'}
+      />
       <View style={styles.body}>
         {platforms.map(platform => {
           return (
@@ -43,11 +69,6 @@ export const Platforms = () => {
           );
         })}
       </View>
-      <Image
-        source={Images.backgrounds.roundedStroke}
-        style={[StyleSheet.absoluteFill, styles.background]}
-        resizeMode={'stretch'}
-      />
     </View>
   );
 };
