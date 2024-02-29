@@ -6,7 +6,7 @@ export const isPluralizationNode = node => {
   if (typeof node !== 'object') {
     return false;
   }
-  return Object.keys(node).every(
+  return Object.keys(node).some(
     key => PLURALIZATION_KEYS.includes(key) && typeof node[key] === 'string',
   );
 };

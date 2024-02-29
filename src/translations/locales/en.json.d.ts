@@ -407,6 +407,7 @@ export type Translations = {
   'general.minutes_short': null;
   'general.hours_short': null;
   'general.days_short': null;
+  'general.hour': {count: number};
   'news.news_feed': null;
   'news.read_more': null;
   'news.no_more_news': null;

@@ -583,7 +583,12 @@
     "seconds_short": "с",
     "minutes_short": "м",
     "hours_short": "ч",
-    "days_short": "д"
+    "days_short": "д",
+    "hour": {
+      "one": "час",
+      "few": "часа",
+      "many": "часов"
+    }
   },
   "news": {
     "news_feed": "Новостная лента",

@@ -583,7 +583,12 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
-    "days_short": "d"
+    "days_short": "d",
+    "hour": {
+      "zero": "",
+      "one": "hour",
+      "other": "hours"
+    }
   },
   "news": {
     "news_feed": "News Feed",
