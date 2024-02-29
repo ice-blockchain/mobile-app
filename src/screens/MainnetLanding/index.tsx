@@ -13,6 +13,7 @@ import {Platforms} from '@screens/MainnetLanding/components/Platforms';
 import {Roadmap} from '@screens/MainnetLanding/components/Roadmap';
 import {Stats} from '@screens/MainnetLanding/components/Stats';
 import {useRefresh} from '@screens/MainnetLanding/hooks/useRefresh';
+import {useRequestNotificationPermissions} from '@screens/MainnetLanding/hooks/useRequestNotificationPermissions';
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import Animated from 'react-native-reanimated';
@@ -21,6 +22,8 @@ import {rem} from 'rn-units';
 
 export const MainnetLanding = () => {
   useFocusStatusBar({style: 'light-content'});
+
+  useRequestNotificationPermissions();
 
   const {onRefresh, refreshing} = useRefresh();
 

@@ -7,6 +7,7 @@ import {isValidationError} from '@store/errors/validation';
 import {AccountActions} from '@store/modules/Account/actions';
 import {appCommonWatchers} from '@store/modules/AppCommon/sagas';
 import {linkingWatchers} from '@store/modules/Linking/sagas';
+import {permissionsWatchers} from '@store/modules/Permissions/sagas';
 import {pushNotificationsWatchers} from '@store/modules/PushNotifications/sagas';
 import {statsWatchers} from '@store/modules/Stats/sagas';
 import {AppState} from 'react-native';
@@ -18,6 +19,7 @@ const watchers = [
   ...linkingWatchers,
   ...pushNotificationsWatchers,
   ...statsWatchers,
+  ...permissionsWatchers,
 ];
 
 export function* rootSaga(): SagaIterator {
