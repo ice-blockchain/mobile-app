@@ -2,7 +2,7 @@
 
 import {SectionHeader} from '@components/SectionHeader';
 import {SCREEN_SIDE_OFFSET} from '@constants/styles';
-import {StatListItem} from '@navigation/components/IceCoinStats/components/Stats/components/StatListItem';
+import {StatListItem} from '@screens/MainnetLanding/components/Stats/components/StatListItem';
 import {AlignIcon} from '@svg/new/Align';
 import {DiamondIcon} from '@svg/new/Diamond';
 import {GraphIcon} from '@svg/new/Graph';

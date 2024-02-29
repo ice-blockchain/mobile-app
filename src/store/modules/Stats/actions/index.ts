@@ -21,6 +21,7 @@ const GET_ADOPTION = createAction('GET_ADOPTION', {
 });
 
 const GET_ICE_COIN_STATS = createAction('GET_ICE_COIN_STATS', {
+  START: true,
   SUCCESS: (payload: {config: FeatureToggleConfig}) => payload,
   FAILED: (errorMessage: string) => ({errorMessage}),
 });

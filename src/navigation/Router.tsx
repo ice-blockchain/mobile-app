@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {IceCoinStats} from '@navigation/components/IceCoinStats';
 import {InitializationError} from '@navigation/components/InitializationError';
 import {useRouteNameChange} from '@navigation/hooks/useRouteNameChange';
 import {theme} from '@navigation/theme';
 import {navigationReadyResolver, navigationRef} from '@navigation/utils';
 import {NavigationContainer} from '@react-navigation/native';
+import {MainnetLanding} from '@screens/MainnetLanding';
 import {routingInstrumentation} from '@services/logging';
 import {AnalyticsEventLogger} from '@store/modules/Analytics/constants';
 import {useAppStateListener} from '@store/modules/AppCommon/hooks/useAppStateListener';
@@ -33,7 +33,7 @@ function ActiveNavigator() {
     return <InitializationError />;
   }
 
-  return <IceCoinStats />;
+  return <MainnetLanding />;
 }
 
 export function Router() {

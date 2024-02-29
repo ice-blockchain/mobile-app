@@ -21,6 +21,7 @@ export const statsWatchers = [
   ),
   takeLatest(
     [
+      StatsActions.GET_ICE_COIN_STATS.START.type,
       AppCommonActions.APP_LOADED.STATE.type,
       AppCommonActions.APP_STATE_CHANGE.STATE.type,
     ],
