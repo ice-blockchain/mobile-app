@@ -585,8 +585,10 @@
     "hours_short": "h",
     "days_short": "d",
     "hour": {
-      "zero": "",
       "one": "hour",
+      "two": "hours",
+      "few": "hours",
+      "many": "hours",
       "other": "hours"
     }
   },
