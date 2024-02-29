@@ -3,19 +3,15 @@
 import {COLORS} from '@constants/colors';
 import {POPUP_SIDE_OFFSET} from '@constants/styles';
 import {RoundedTriangle} from '@svg/RoundedTriangle';
+import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {rem} from 'rn-units';
-
 export const Notice = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.labelText}>
-        Ice mining activity has ended. As we gear up for the mainnet launch on
-        October 7th, 2024, keep the app installed for exclusive updates and
-        early access to mainnet app.
-      </Text>
+      <Text style={styles.labelText}>{t('mainnet_landing.header')}</Text>
       <RoundedTriangle
         fill={COLORS.primaryDark}
         style={styles.chevron}

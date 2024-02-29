@@ -2,7 +2,6 @@
 
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
-import {isLightDesign} from '@constants/featureFlags';
 import {LINKS} from '@constants/links';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Images} from '@images';
@@ -23,11 +22,11 @@ export const JoinMainnet = memo(() => {
       style={[styles.container, commonStyles.shadow]}>
       <Image source={Images.card.joinMainnet} style={styles.image} />
       <View style={styles.body}>
-        <Text style={styles.titleText}>{t('home.join_mainnet.title')}</Text>
+        <Text style={styles.titleText}>
+          {t('mainnet_landing.join_mainnet.title')}
+        </Text>
         <Text style={styles.subtitleText}>
-          {isLightDesign
-            ? t('override.home.join_mainnet.subtitle')
-            : t('home.join_mainnet.subtitle')}
+          {t('mainnet_landing.join_mainnet.subtitle')}
         </Text>
       </View>
     </Touchable>

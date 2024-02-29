@@ -5,6 +5,7 @@ import {useCountdown} from '@hooks/useCountdown';
 import {TimerPart} from '@navigation/components/IceCoinStats/components/LaunchCountdown/components/TimerPart';
 import {dayjs} from '@services/dayjs';
 import {RocketIcon} from '@svg/new/Rocket';
+import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo, useMemo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -26,7 +27,9 @@ export const LaunchCountdown = memo(() => {
     <View style={styles.container}>
       <View style={styles.header}>
         <RocketIcon />
-        <Text style={styles.headerText}>Ice Mainnet Launch</Text>
+        <Text style={styles.headerText}>
+          {t('mainnet_landing.countdown.header')}
+        </Text>
       </View>
       <View style={styles.timer}>
         <TimerPart label={'days'} value={days} />

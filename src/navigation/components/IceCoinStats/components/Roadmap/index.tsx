@@ -3,7 +3,6 @@
 import {ActionListItem} from '@components/ListItems/ActionListItem';
 import {SectionHeader} from '@components/SectionHeader';
 import {COLORS} from '@constants/colors';
-import {isLightDesign} from '@constants/featureFlags';
 import {LINKS} from '@constants/links';
 import {commonStyles, SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {ChevronSmallIcon} from '@svg/ChevronSmallIcon';
@@ -19,16 +18,12 @@ export const Roadmap = memo(() => {
 
   return (
     <>
-      <SectionHeader title={t('home.roadmap.title')} />
+      <SectionHeader title={t('mainnet_landing.roadmap.title')} />
       <ActionListItem
         onPress={onPress}
         LeadingIcon={<PaperIcon />}
-        title={t('home.roadmap.button_title')}
-        subtitle={
-          isLightDesign
-            ? t('override.home.roadmap.button_subtitle')
-            : t('home.roadmap.button_subtitle')
-        }
+        title={t('mainnet_landing.roadmap.title')}
+        subtitle={t('mainnet_landing.roadmap.subtitle')}
         TrailingIcon={
           <ChevronSmallIcon style={styles.chevron} color={COLORS.primaryDark} />
         }

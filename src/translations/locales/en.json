@@ -1398,5 +1398,28 @@
   },
   "buttons": {
     "skip": "Skip"
+  },
+  "mainnet_landing": {
+    "header": "Ice mining activity has ended. As we gear up for the mainnet launch on October 7th, 2024, keep the app installed for exclusive updates and early access to mainnet app.",
+    "stats": {
+      "header": "Ice stats",
+      "circulating_supply": "Circulating Supply",
+      "total_supply": "Total Supply",
+      "price": "Price",
+      "market_cap": "Market Cap",
+      "daily_trading_volume": "24h Trading Volume",
+      "dilluted_market_cap": "Fully dilluted market cap"
+    },
+    "countdown": {
+      "header": "Ice Mainnet Launch"
+    },
+    "roadmap": {
+      "title": "Roadmap",
+      "subtitle": "Learn more about our vision at Ice."
+    },
+    "join_mainnet": {
+      "title": "Join The Decentralized Future",
+      "subtitle": "Get a sneak peak of our upcoming Mainnet app and its unique features."
+    }
   }
 }

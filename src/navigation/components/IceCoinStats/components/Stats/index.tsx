@@ -17,40 +17,40 @@ import {StyleSheet, View} from 'react-native';
 export const Stats = memo(() => {
   return (
     <>
-      <SectionHeader title={'Ice Stats'} />
+      <SectionHeader title={t('mainnet_landing.stats.header')} />
       <View style={styles.list}>
         <StatListItem
           Icon={<RefreshIcon />}
-          label={'Circulating Supply'}
+          label={t('mainnet_landing.stats.circulating_supply')}
           value={`${formatNumber(1060855721)} ${t(
             'general.ice',
           ).toUpperCase()}`}
         />
         <StatListItem
           Icon={<PieIcon />}
-          label={'Total Supply'}
+          label={t('mainnet_landing.stats.total_supply')}
           value={`${formatNumber(30060855721)} ${t(
             'general.ice',
           ).toUpperCase()}`}
         />
         <StatListItem
           Icon={<GraphIcon />}
-          label={'Price'}
+          label={t('mainnet_landing.stats.price')}
           value={`$${0.12312312}`}
         />
         <StatListItem
           Icon={<DiamondIcon />}
-          label={'Market Cap'}
+          label={t('mainnet_landing.stats.market_cap')}
           value={`$${formatNumber(13081729)}`}
         />
         <StatListItem
           Icon={<AlignIcon />}
-          label={'24h Trading Volume'}
+          label={t('mainnet_landing.stats.daily_trading_volume')}
           value={`$${formatNumber(13081729)}`}
         />
         <StatListItem
           Icon={<StructureIcon />}
-          label={'Fully dilluted market cap'}
+          label={t('mainnet_landing.stats.dilluted_market_cap')}
           value={`$${formatNumber(13081729)}`}
         />
       </View>
