@@ -47,7 +47,6 @@ target 'ice' do
   pod 'Permission-Contacts', :path => "#{permissions_path}/Contacts"
   pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
   pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications"
-  pod 'ReactNativeMoEngage', :path => '../node_modules/react-native-moengage'
 
   pod 'Firebase', :modular_headers => true
   pod 'FirebaseCore', :modular_headers => true
@@ -93,7 +92,6 @@ target 'ice' do
 end
 
 target 'NotificationService' do
-  pod 'MoEngageRichNotification'
   pod 'GoogleUtilities', :modular_headers => true
   pod 'Firebase/Messaging'
 end
