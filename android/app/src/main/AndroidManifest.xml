@@ -38,9 +38,7 @@
       android:icon="@mipmap/ic_launcher"
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
-      android:theme="@style/BootTheme"
-      android:fullBackupContent="@xml/com_moengage_backup_descriptor"
-      android:dataExtractionRules="@xml/com_moengage_data_extraction_rules">
+      android:theme="@style/BootTheme">
 
       <!--
         Disabling Sentry ANR reporting, since there are a lot of Background ANR reports
@@ -62,12 +60,6 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/splashscreen_bg"
             tools:replace="android:resource"/>
-      <service android:name="com.moengage.firebase.MoEFireBaseMessagingService"
-               android:exported="false">
-          <intent-filter>
-              <action android:name="com.google.firebase.MESSAGING_EVENT" />
-          </intent-filter>
-      </service>
 
       <activity
         android:name=".MainActivity"

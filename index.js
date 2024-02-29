@@ -5,6 +5,4 @@ import 'react-native-url-polyfill/auto';
 import {name as appName} from './app.json';
 import {App} from './src/App';
 
-import {LoggingWrapper} from '@services/logging';
-
-AppRegistry.registerComponent(appName, () => LoggingWrapper(App));
+AppRegistry.registerComponent(appName, () => App);
