@@ -2,7 +2,6 @@
 
 import {InitializationError} from '@navigation/components/InitializationError';
 import {theme} from '@navigation/theme';
-import {navigationRef} from '@navigation/utils';
 import {NavigationContainer} from '@react-navigation/native';
 import {MainnetLanding} from '@screens/MainnetLanding';
 import {useAppStateListener} from '@store/modules/AppCommon/hooks/useAppStateListener';
@@ -31,7 +30,7 @@ export function Router() {
   useAppStateListener();
   useSubscribeToPushNotifications();
   return (
-    <NavigationContainer ref={navigationRef} theme={theme}>
+    <NavigationContainer theme={theme}>
       <ActiveNavigator />
     </NavigationContainer>
   );

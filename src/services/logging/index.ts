@@ -1,11 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {isApiError} from '@api/client';
 import {ENV} from '@constants/env';
 import {AnyAction} from '@reduxjs/toolkit';
 import * as Sentry from '@sentry/react-native';
-import {store} from '@store/configureStore';
-import {userSelector} from '@store/modules/Account/selectors';
 import {getErrorMessage} from '@utils/errors';
 import {checkProp} from '@utils/guards';
 import * as React from 'react';
@@ -59,25 +56,9 @@ export function logError(error: unknown, extra: Record<string, unknown> = {}) {
       extra,
     );
   } else {
-    const user = userSelector(store.getState());
     Sentry.withScope(function (scope) {
-      if (user) {
-        scope.setUser({
-          id: user.id,
-          username: user.username,
-        });
-      } else {
-        scope.setUser(null);
-      }
-      Sentry.captureException(
-        error,
-        isApiError(error)
-          ? {
-              extra: {responseData: error.response?.data, ...extra},
-              tags: {api: error.response?.status},
-            }
-          : {extra},
-      );
+      scope.setUser(null);
+      Sentry.captureException(error, {extra});
     });
   }
 }

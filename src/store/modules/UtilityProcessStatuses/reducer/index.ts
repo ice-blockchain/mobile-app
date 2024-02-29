@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {AccountActions} from '@store/modules/Account/actions';
 import {ACTION_DIVIDER} from '@store/utils/actions/createAction';
 import lodashHead from 'lodash/head';
 import lodashLast from 'lodash/last';
@@ -48,10 +47,6 @@ function reduceAction(
 }
 
 export function processStatusesReducer(state = INITIAL_STATE, action: Action) {
-  if (action.type === AccountActions.SIGN_OUT.SUCCESS.type) {
-    return INITIAL_STATE;
-  }
-
   const actionParts = action.type.split(ACTION_DIVIDER);
 
   if (actionParts.length < 1) {

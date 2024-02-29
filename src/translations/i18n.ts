@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {setCalendarLocale} from '@services/calendar';
 import {setDayjsLocale} from '@services/dayjs';
 import {getPluralizer} from '@translations/getPluralizer';
 import {localeConfig, SupportedLocale} from '@translations/localeConfig';
@@ -25,7 +24,6 @@ export const setLocale = (newLocale: SupportedLocale) => {
     useMakePlural({pluralizer: getPluralizer(newLocale), includeZero: false}),
   );
   setDayjsLocale(newLocale);
-  setCalendarLocale(newLocale);
 };
 
 export const getLocale = (): SupportedLocale => {
