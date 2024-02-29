@@ -4,7 +4,7 @@ import {MAINNET_LAUNCH_DATE} from '@constants/mainnet';
 import {useCountdown} from '@hooks/useCountdown';
 import {TimerPart} from '@screens/MainnetLanding/components/LaunchCountdown/components/TimerPart';
 import {dayjs} from '@services/dayjs';
-import {RocketIcon} from '@svg/new/Rocket';
+import {RocketIcon} from '@svg/Rocket';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo, useMemo} from 'react';
