@@ -1,10 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {StatsActions} from '@store/modules/Stats/actions';
+import {IceCoinStats} from '@store/modules/Stats/types';
 import produce from 'immer';
 
 export interface StatsState {
-  iceCoin: unknown | null;
+  iceCoin: IceCoinStats | null;
 }
 
 type Actions = ReturnType<
@@ -19,7 +20,7 @@ function reducer(state = INITIAL_STATE, action: Actions): StatsState {
   return produce(state, draft => {
     switch (action.type) {
       case StatsActions.GET_ICE_COIN_STATS.SUCCESS.type:
-        draft.iceCoin = action.payload.config;
+        draft.iceCoin = action.payload.stats;
         break;
     }
   });

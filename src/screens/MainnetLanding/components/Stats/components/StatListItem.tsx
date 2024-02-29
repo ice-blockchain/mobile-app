@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   body: {
+    flex: 1,
     marginStart: rem(12),
   },
   labelText: {

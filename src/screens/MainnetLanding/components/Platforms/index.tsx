@@ -45,7 +45,8 @@ export const Platforms = () => {
       </View>
       <Image
         source={Images.backgrounds.roundedStroke}
-        style={StyleSheet.absoluteFill}
+        style={[StyleSheet.absoluteFill, styles.background]}
+        resizeMode={'stretch'}
       />
     </View>
   );
@@ -55,13 +56,13 @@ const styles = StyleSheet.create({
   container: {
     marginTop: rem(8),
     marginHorizontal: POPUP_SIDE_OFFSET,
-    paddingHorizontal: rem(10),
-    paddingVertical: rem(6),
   },
   body: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    paddingHorizontal: rem(10),
+    paddingVertical: rem(6),
   },
   logo: {
     width: '50%',
@@ -71,5 +72,9 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: '100%',
+  },
+  background: {
+    width: undefined,
+    height: undefined,
   },
 });

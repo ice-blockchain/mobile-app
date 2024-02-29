@@ -64,10 +64,6 @@ PODS:
     - FBSDKCoreKit (= 15.0.0)
   - FBSDKShareKit (15.0.0):
     - FBSDKCoreKit (= 15.0.0)
-  - ffmpeg-kit-ios-video (6.0)
-  - ffmpeg-kit-react-native/video (6.0.0):
-    - ffmpeg-kit-ios-video (= 6.0)
-    - React-Core
   - Firebase (10.20.0):
     - Firebase/Core (= 10.20.0)
   - Firebase/AnalyticsWithoutAdIdSupport (10.20.0):
@@ -885,7 +881,6 @@ DEPENDENCIES:
   - ExpoModulesCore (from `../node_modules/expo-modules-core`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
-  - ffmpeg-kit-react-native/video (from `../node_modules/ffmpeg-kit-react-native/ffmpeg-kit-react-native.podspec`)
   - Firebase
   - Firebase/Messaging
   - FirebaseCore
@@ -1003,7 +998,6 @@ SPEC REPOS:
     - FBSDKGamingServicesKit
     - FBSDKLoginKit
     - FBSDKShareKit
-    - ffmpeg-kit-ios-video
     - Firebase
     - FirebaseAnalytics
     - FirebaseAppCheckInterop
@@ -1076,8 +1070,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/FBLazyVector"
   FBReactNativeSpec:
     :path: "../node_modules/react-native/React/FBReactNativeSpec"
-  ffmpeg-kit-react-native:
-    :podspec: "../node_modules/ffmpeg-kit-react-native/ffmpeg-kit-react-native.podspec"
   glog:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
   hermes-engine:
@@ -1258,8 +1250,6 @@ SPEC CHECKSUMS:
   FBSDKGamingServicesKit: e0766514d64d26a9f846e793c0a44bc4a236723b
   FBSDKLoginKit: 11995469cd7da16fd4d5245e8d2ec61060479270
   FBSDKShareKit: 9501792c3024580809f811a8a549868699d9bd32
-  ffmpeg-kit-ios-video: d3a8a535570063b717f88da68f9089e213aa21ba
-  ffmpeg-kit-react-native: a8aa8b5bed0a53ae573617e790984075bee2c716
   Firebase: 10c8cb12fb7ad2ae0c09ffc86cd9c1ab392a0031
   FirebaseAnalytics: a2731bf3670747ce8f65368b118d18aa8e368246
   FirebaseAppCheckInterop: e81bdb1cdb82f8e0cef353ba5018a8402682032c
@@ -1378,6 +1368,6 @@ SPEC CHECKSUMS:
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
   ZXingObjC: fdbb269f25dd2032da343e06f10224d62f537bdb
 
-PODFILE CHECKSUM: 63d2fc0fc5753f2bd77dd80c3aa10b9a91ff85f5
+PODFILE CHECKSUM: 8067a8dad58e9d795400789b2440f9bfc6719bb0
 
 COCOAPODS: 1.14.3
