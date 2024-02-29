@@ -583,7 +583,25 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
-    "days_short": "d"
+    "days_short": "d",
+    "hour": {
+      "zero": "godzin",
+      "one": "godzina",
+      "two": "godziny",
+      "few": "godziny",
+      "many": "godzin",
+      "other": "godzin"
+    },
+    "day": {
+      "zero": "dni",
+      "one": "dzień",
+      "two": "dni",
+      "few": "dni",
+      "many": "dni",
+      "other": "dni"
+    },
+    "minutes_abbr": "min",
+    "seconds_abbr": "sek"
   },
   "news": {
     "news_feed": "Kanał informacyjny",

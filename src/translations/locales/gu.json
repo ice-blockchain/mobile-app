@@ -583,7 +583,25 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
-    "days_short": "d"
+    "days_short": "d",
+    "hour": {
+      "zero": "કલાક",
+      "one": "કલાક",
+      "two": "કલાક",
+      "few": "કલાક",
+      "many": "કલાક",
+      "other": "કલાક"
+    },
+    "day": {
+      "zero": "દિવસ",
+      "one": "દિવસ",
+      "two": "દિવસ",
+      "few": "દિવસ",
+      "many": "દિવસ",
+      "other": "દિવસ"
+    },
+    "minutes_abbr": "મિન",
+    "seconds_abbr": "સેક"
   },
   "news": {
     "news_feed": "ન્યૂઝ ફીડ",

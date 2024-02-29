@@ -583,7 +583,25 @@
     "seconds_short": "mp",
     "minutes_short": "p",
     "hours_short": "ó",
-    "days_short": "n"
+    "days_short": "n",
+    "hour": {
+      "zero": "óra",
+      "one": "óra",
+      "two": "óra",
+      "few": "óra",
+      "many": "óra",
+      "other": "óra"
+    },
+    "day": {
+      "zero": "nap",
+      "one": "nap",
+      "two": "nap",
+      "few": "nap",
+      "many": "nap",
+      "other": "nap"
+    },
+    "minutes_abbr": "perc",
+    "seconds_abbr": "mp"
   },
   "news": {
     "news_feed": "Hírfolyam",

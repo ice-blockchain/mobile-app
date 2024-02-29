@@ -32,10 +32,10 @@ export const LaunchCountdown = memo(() => {
         </Text>
       </View>
       <View style={styles.timer}>
-        <TimerPart label={'days'} value={days} />
-        <TimerPart label={'hours'} value={hours} />
-        <TimerPart label={'min'} value={minutes} />
-        <TimerPart label={'sec'} value={seconds} />
+        <TimerPart label={t('general.day', {count: days})} value={days} />
+        <TimerPart label={t('general.hour', {count: days})} value={hours} />
+        <TimerPart label={t('general.minutes_abbr')} value={minutes} />
+        <TimerPart label={t('general.seconds_abbr')} value={seconds} />
       </View>
     </View>
   );

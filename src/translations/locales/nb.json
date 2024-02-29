@@ -583,7 +583,25 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "t",
-    "days_short": "d"
+    "days_short": "d",
+    "hour": {
+      "zero": "timer",
+      "one": "time",
+      "two": "timer",
+      "few": "timer",
+      "many": "timer",
+      "other": "timer"
+    },
+    "day": {
+      "zero": "dager",
+      "one": "dag",
+      "two": "dager",
+      "few": "dager",
+      "many": "dager",
+      "other": "dager"
+    },
+    "minutes_abbr": "min",
+    "seconds_abbr": "sek"
   },
   "news": {
     "news_feed": "Nyhetsfeed",

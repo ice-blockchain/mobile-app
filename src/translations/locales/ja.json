@@ -583,7 +583,25 @@
     "seconds_short": "秒",
     "minutes_short": "分",
     "hours_short": "時",
-    "days_short": "日"
+    "days_short": "日",
+    "hour": {
+      "zero": "時間",
+      "one": "時間",
+      "two": "時間",
+      "few": "時間",
+      "many": "時間",
+      "other": "時間"
+    },
+    "day": {
+      "zero": "日",
+      "one": "日",
+      "two": "日",
+      "few": "日",
+      "many": "日",
+      "other": "日"
+    },
+    "minutes_abbr": "分",
+    "seconds_abbr": "秒"
   },
   "news": {
     "news_feed": "ニュースフィード",

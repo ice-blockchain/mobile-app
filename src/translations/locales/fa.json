@@ -583,7 +583,25 @@
     "seconds_short": "ثانیه",
     "minutes_short": "دقیقه",
     "hours_short": "ساعت",
-    "days_short": "روز"
+    "days_short": "روز",
+    "hour": {
+      "zero": "ساعت",
+      "one": "ساعت",
+      "two": "ساعت",
+      "few": "ساعت",
+      "many": "ساعت",
+      "other": "ساعت"
+    },
+    "day": {
+      "zero": "روز",
+      "one": "روز",
+      "two": "روز",
+      "few": "روز",
+      "many": "روز",
+      "other": "روز"
+    },
+    "minutes_abbr": "دق",
+    "seconds_abbr": "ثانیه"
   },
   "news": {
     "news_feed": "سرویس خبری",

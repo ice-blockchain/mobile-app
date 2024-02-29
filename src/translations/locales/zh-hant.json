@@ -583,7 +583,25 @@
     "seconds_short": "秒",
     "minutes_short": "分",
     "hours_short": "時",
-    "days_short": "天"
+    "days_short": "天",
+    "hour": {
+      "zero": "小時",
+      "one": "小時",
+      "two": "小時",
+      "few": "小時",
+      "many": "小時",
+      "other": "小時"
+    },
+    "day": {
+      "zero": "天",
+      "one": "天",
+      "two": "天",
+      "few": "天",
+      "many": "天",
+      "other": "天"
+    },
+    "minutes_abbr": "分鐘",
+    "seconds_abbr": "秒"
   },
   "news": {
     "news_feed": "新聞饋送",

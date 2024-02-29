@@ -583,7 +583,25 @@
     "seconds_short": "秒",
     "minutes_short": "分钟",
     "hours_short": "小时",
-    "days_short": "天"
+    "days_short": "天",
+    "hour": {
+      "zero": "小时",
+      "one": "小时",
+      "two": "小时",
+      "few": "小时",
+      "many": "小时",
+      "other": "小时"
+    },
+    "day": {
+      "zero": "天",
+      "one": "天",
+      "two": "天",
+      "few": "天",
+      "many": "天",
+      "other": "天"
+    },
+    "minutes_abbr": "分",
+    "seconds_abbr": "秒"
   },
   "news": {
     "news_feed": "新闻速递",

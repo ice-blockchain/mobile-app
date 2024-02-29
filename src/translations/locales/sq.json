@@ -583,7 +583,25 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "o",
-    "days_short": "d"
+    "days_short": "d",
+    "hour": {
+      "zero": "orë",
+      "one": "orë",
+      "two": "orë",
+      "few": "orë",
+      "many": "orë",
+      "other": "orë"
+    },
+    "day": {
+      "zero": "ditë",
+      "one": "ditë",
+      "two": "ditë",
+      "few": "ditë",
+      "many": "ditë",
+      "other": "ditë"
+    },
+    "minutes_abbr": "min",
+    "seconds_abbr": "sek"
   },
   "news": {
     "news_feed": "Lista e lajmeve",

@@ -583,7 +583,25 @@
     "seconds_short": "سکینڈ",
     "minutes_short": "منٹ",
     "hours_short": "گھنٹہ",
-    "days_short": "دن"
+    "days_short": "دن",
+    "hour": {
+      "zero": "گھنٹے",
+      "one": "گھنٹہ",
+      "two": "گھنٹے",
+      "few": "گھنٹے",
+      "many": "گھنٹے",
+      "other": "گھنٹے"
+    },
+    "day": {
+      "zero": "دن",
+      "one": "دن",
+      "two": "دن",
+      "few": "دن",
+      "many": "دن",
+      "other": "دن"
+    },
+    "minutes_abbr": "منٹ",
+    "seconds_abbr": "سیکنڈ"
   },
   "news": {
     "news_feed": "نیوز فیڈ",

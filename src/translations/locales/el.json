@@ -583,7 +583,25 @@
     "seconds_short": "δευτ",
     "minutes_short": "λεπ",
     "hours_short": "ω",
-    "days_short": "ημ"
+    "days_short": "ημ",
+    "hour": {
+      "zero": "ώρες",
+      "one": "ώρα",
+      "two": "ώρες",
+      "few": "ώρες",
+      "many": "ώρες",
+      "other": "ώρες"
+    },
+    "day": {
+      "zero": "ημέρες",
+      "one": "ημέρα",
+      "two": "ημέρες",
+      "few": "ημέρες",
+      "many": "ημέρες",
+      "other": "ημέρες"
+    },
+    "minutes_abbr": "λεπ",
+    "seconds_abbr": "δευτ"
   },
   "news": {
     "news_feed": "Ροή ειδήσεων",

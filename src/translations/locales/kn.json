@@ -583,7 +583,25 @@
     "seconds_short": " ಎಸ್",
     "minutes_short": " ಎಮ್",
     "hours_short": "ಹೆಚ್",
-    "days_short": "ಡಿ"
+    "days_short": "ಡಿ",
+    "hour": {
+      "zero": "ಗಂಟೆಗಳು",
+      "one": "ಗಂಟೆ",
+      "two": "ಗಂಟೆಗಳು",
+      "few": "ಗಂಟೆಗಳು",
+      "many": "ಗಂಟೆಗಳು",
+      "other": "ಗಂಟೆಗಳು"
+    },
+    "day": {
+      "zero": "ದಿನಗಳು",
+      "one": "ದಿನ",
+      "two": "ದಿನಗಳು",
+      "few": "ದಿನಗಳು",
+      "many": "ದಿನಗಳು",
+      "other": "ದಿನಗಳು"
+    },
+    "minutes_abbr": "ನಿಮಿ",
+    "seconds_abbr": "ಸೆಕ್"
   },
   "news": {
     "news_feed": "ಸುದ್ದಿ ವರದಿಗಳು",

@@ -583,7 +583,25 @@
     "seconds_short": "से",
     "minutes_short": "मि",
     "hours_short": "ता",
-    "days_short": "दि"
+    "days_short": "दि",
+    "hour": {
+      "zero": "तास",
+      "one": "तास",
+      "two": "तास",
+      "few": "तास",
+      "many": "तास",
+      "other": "तास"
+    },
+    "day": {
+      "zero": "दिवस",
+      "one": "दिवस",
+      "two": "दिवस",
+      "few": "दिवस",
+      "many": "दिवस",
+      "other": "दिवस"
+    },
+    "minutes_abbr": "मिनि",
+    "seconds_abbr": "सेकं"
   },
   "news": {
     "news_feed": "न्यूज फीड",

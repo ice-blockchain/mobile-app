@@ -583,7 +583,25 @@
     "seconds_short": "san",
     "minutes_short": "dəq",
     "hours_short": "saat",
-    "days_short": "gün"
+    "days_short": "gün",
+    "hour": {
+      "zero": "saat",
+      "one": "saat",
+      "two": "saat",
+      "few": "saat",
+      "many": "saat",
+      "other": "saat"
+    },
+    "day": {
+      "zero": "gün",
+      "one": "gün",
+      "two": "gün",
+      "few": "gün",
+      "many": "gün",
+      "other": "gün"
+    },
+    "minutes_abbr": "dəq",
+    "seconds_abbr": "san"
   },
   "news": {
     "news_feed": "Xəbər lenti",

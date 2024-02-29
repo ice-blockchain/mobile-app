@@ -583,7 +583,25 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "j",
-    "days_short": "h"
+    "days_short": "h",
+    "hour": {
+      "zero": "jam",
+      "one": "jam",
+      "two": "jam",
+      "few": "jam",
+      "many": "jam",
+      "other": "jam"
+    },
+    "day": {
+      "zero": "hari",
+      "one": "hari",
+      "two": "hari",
+      "few": "hari",
+      "many": "hari",
+      "other": "hari"
+    },
+    "minutes_abbr": "min",
+    "seconds_abbr": "saat"
   },
   "news": {
     "news_feed": "Suapan Berita",

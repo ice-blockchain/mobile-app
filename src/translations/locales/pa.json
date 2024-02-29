@@ -583,7 +583,25 @@
     "seconds_short": "ਸਕਿੰਟ",
     "minutes_short": "ਮਿੰਟ",
     "hours_short": "ਘੰਟਾ",
-    "days_short": "ਦਿਨ "
+    "days_short": "ਦਿਨ ",
+    "hour": {
+      "zero": "ਘੰਟੇ",
+      "one": "ਘੰਟਾ",
+      "two": "ਘੰਟੇ",
+      "few": "ਘੰਟੇ",
+      "many": "ਘੰਟੇ",
+      "other": "ਘੰਟੇ"
+    },
+    "day": {
+      "zero": "ਦਿਨ",
+      "one": "ਦਿਨ",
+      "two": "ਦਿਨ",
+      "few": "ਦਿਨ",
+      "many": "ਦਿਨ",
+      "other": "ਦਿਨ"
+    },
+    "minutes_abbr": "ਮਿੰ",
+    "seconds_abbr": "ਸੈ"
   },
   "news": {
     "news_feed": "ਨਿਊਜ਼ ਫੀਡ",

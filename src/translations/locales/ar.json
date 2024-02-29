@@ -583,7 +583,25 @@
     "seconds_short": "ثانية",
     "minutes_short": "دقيقة",
     "hours_short": "ساعة",
-    "days_short": "يوم"
+    "days_short": "يوم",
+    "hour": {
+      "zero": "ساعات",
+      "one": "ساعة",
+      "two": "ساعتان",
+      "few": "ساعات",
+      "many": "ساعات",
+      "other": "ساعات"
+    },
+    "day": {
+      "zero": "أيام",
+      "one": "يوم",
+      "two": "يومين",
+      "few": "أيام",
+      "many": "أيام",
+      "other": "أيام"
+    },
+    "minutes_abbr": "دق",
+    "seconds_abbr": "ثان"
   },
   "news": {
     "news_feed": "موجز الأخبار",

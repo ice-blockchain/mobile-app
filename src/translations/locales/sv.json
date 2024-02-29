@@ -583,7 +583,25 @@
     "seconds_short": "sek",
     "minutes_short": "min",
     "hours_short": "tim",
-    "days_short": "dag"
+    "days_short": "dag",
+    "hour": {
+      "zero": "timmar",
+      "one": "timme",
+      "two": "timmar",
+      "few": "timmar",
+      "many": "timmar",
+      "other": "timmar"
+    },
+    "day": {
+      "zero": "dagar",
+      "one": "dag",
+      "two": "dagar",
+      "few": "dagar",
+      "many": "dagar",
+      "other": "dagar"
+    },
+    "minutes_abbr": "min",
+    "seconds_abbr": "sek"
   },
   "news": {
     "news_feed": "Nyhetsflöde",

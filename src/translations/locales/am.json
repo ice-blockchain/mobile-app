@@ -583,7 +583,25 @@
     "seconds_short": "ሴ",
     "minutes_short": "ደ",
     "hours_short": "ሰ",
-    "days_short": "ቀ"
+    "days_short": "ቀ",
+    "hour": {
+      "zero": "ሰዓቶች",
+      "one": "ሰዓት",
+      "two": "ሰዓቶች",
+      "few": "ሰዓቶች",
+      "many": "ሰዓቶች",
+      "other": "ሰዓቶች"
+    },
+    "day": {
+      "zero": "ቀንዶች",
+      "one": "ቀን",
+      "two": "ቀንዶች",
+      "few": "ቀንዶች",
+      "many": "ቀንዶች",
+      "other": "ቀንዶች"
+    },
+    "minutes_abbr": "ደቂቃ",
+    "seconds_abbr": "ሰከንድ"
   },
   "news": {
     "news_feed": "የዜና ምገባ",

@@ -583,7 +583,25 @@
     "seconds_short": "s",
     "minutes_short": "min",
     "hours_short": "h",
-    "days_short": "d"
+    "days_short": "d",
+    "hour": {
+      "zero": "hodin",
+      "one": "hodina",
+      "two": "hodiny",
+      "few": "hodiny",
+      "many": "hodin",
+      "other": "hodin"
+    },
+    "day": {
+      "zero": "dní",
+      "one": "den",
+      "two": "dny",
+      "few": "dny",
+      "many": "dní",
+      "other": "dní"
+    },
+    "minutes_abbr": "min",
+    "seconds_abbr": "sek"
   },
   "news": {
     "news_feed": "Kanál aktualit",

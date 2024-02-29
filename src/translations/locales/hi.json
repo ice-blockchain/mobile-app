@@ -583,7 +583,25 @@
     "seconds_short": "सेकंड",
     "minutes_short": "मिनट",
     "hours_short": "घंटे",
-    "days_short": "दिन"
+    "days_short": "दिन",
+    "hour": {
+      "zero": "घंटे",
+      "one": "घंटा",
+      "two": "घंटे",
+      "few": "घंटे",
+      "many": "घंटे",
+      "other": "घंटे"
+    },
+    "day": {
+      "zero": "दिन",
+      "one": "दिन",
+      "two": "दिन",
+      "few": "दिन",
+      "many": "दिन",
+      "other": "दिन"
+    },
+    "minutes_abbr": "मिन",
+    "seconds_abbr": "सेक"
   },
   "news": {
     "news_feed": "समाचार फ़ीड",

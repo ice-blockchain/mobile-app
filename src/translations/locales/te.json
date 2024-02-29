@@ -583,7 +583,25 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
-    "days_short": "d"
+    "days_short": "d",
+    "hour": {
+      "zero": "గంటలు",
+      "one": "గంట",
+      "two": "గంటలు",
+      "few": "గంటలు",
+      "many": "గంటలు",
+      "other": "గంటలు"
+    },
+    "day": {
+      "zero": "రోజులు",
+      "one": "రోజు",
+      "two": "రోజులు",
+      "few": "రోజులు",
+      "many": "రోజులు",
+      "other": "రోజులు"
+    },
+    "minutes_abbr": "నిమి",
+    "seconds_abbr": "సెకన్"
   },
   "news": {
     "news_feed": "న్యూస్ ఫీడ్",

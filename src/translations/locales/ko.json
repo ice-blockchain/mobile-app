@@ -583,7 +583,25 @@
     "seconds_short": "초",
     "minutes_short": "분",
     "hours_short": "시",
-    "days_short": "일"
+    "days_short": "일",
+    "hour": {
+      "zero": "시간",
+      "one": "시간",
+      "two": "시간",
+      "few": "시간",
+      "many": "시간",
+      "other": "시간"
+    },
+    "day": {
+      "zero": "일",
+      "one": "일",
+      "two": "일",
+      "few": "일",
+      "many": "일",
+      "other": "일"
+    },
+    "minutes_abbr": "분",
+    "seconds_abbr": "초"
   },
   "news": {
     "news_feed": "뉴스 피드",

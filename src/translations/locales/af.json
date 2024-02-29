@@ -583,7 +583,25 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
-    "days_short": "d"
+    "days_short": "d",
+    "hour": {
+      "zero": "ure",
+      "one": "uur",
+      "two": "ure",
+      "few": "ure",
+      "many": "ure",
+      "other": "ure"
+    },
+    "day": {
+      "zero": "dae",
+      "one": "dag",
+      "two": "dae",
+      "few": "dae",
+      "many": "dae",
+      "other": "dae"
+    },
+    "minutes_abbr": "min",
+    "seconds_abbr": "sek"
   },
   "news": {
     "news_feed": "Nuusvoer",

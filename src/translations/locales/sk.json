@@ -583,7 +583,25 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
-    "days_short": "d"
+    "days_short": "d",
+    "hour": {
+      "zero": "hodín",
+      "one": "hodina",
+      "two": "hodiny",
+      "few": "hodiny",
+      "many": "hodín",
+      "other": "hodín"
+    },
+    "day": {
+      "zero": "dní",
+      "one": "deň",
+      "two": "dni",
+      "few": "dni",
+      "many": "dní",
+      "other": "dní"
+    },
+    "minutes_abbr": "min",
+    "seconds_abbr": "s"
   },
   "news": {
     "news_feed": "Spravodajský kanál",

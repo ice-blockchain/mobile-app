@@ -572,7 +572,25 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
-    "days_short": "d"
+    "days_short": "d",
+    "hour": {
+      "zero": "jam",
+      "one": "jam",
+      "two": "jam",
+      "few": "jam",
+      "many": "jam",
+      "other": "jam"
+    },
+    "day": {
+      "zero": "dina",
+      "one": "dina",
+      "two": "dina",
+      "few": "dina",
+      "many": "dina",
+      "other": "dina"
+    },
+    "minutes_abbr": "menit",
+    "seconds_abbr": "dtk"
   },
   "news": {
     "news_feed": "News Feed",

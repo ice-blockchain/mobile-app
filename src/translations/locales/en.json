@@ -589,8 +589,19 @@
       "two": "hours",
       "few": "hours",
       "many": "hours",
-      "other": "hours"
-    }
+      "other": "hours",
+      "zero": "hours"
+    },
+    "day": {
+      "zero": "days",
+      "one": "day",
+      "two": "days",
+      "few": "days",
+      "many": "days",
+      "other": "days"
+    },
+    "minutes_abbr": "min",
+    "seconds_abbr": "sec"
   },
   "news": {
     "news_feed": "News Feed",

@@ -583,7 +583,25 @@
     "seconds_short": "с",
     "minutes_short": "м",
     "hours_short": "ч",
-    "days_short": "д"
+    "days_short": "д",
+    "hour": {
+      "zero": "часа",
+      "one": "час",
+      "two": "часа",
+      "few": "часа",
+      "many": "часа",
+      "other": "часа"
+    },
+    "day": {
+      "zero": "дни",
+      "one": "ден",
+      "two": "дни",
+      "few": "дни",
+      "many": "дни",
+      "other": "дни"
+    },
+    "minutes_abbr": "мин",
+    "seconds_abbr": "сек"
   },
   "news": {
     "news_feed": "Новинарски канал",

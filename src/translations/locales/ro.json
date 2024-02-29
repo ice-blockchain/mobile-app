@@ -583,7 +583,25 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
-    "days_short": "z"
+    "days_short": "z",
+    "hour": {
+      "zero": "ore",
+      "one": "oră",
+      "two": "ore",
+      "few": "ore",
+      "many": "ore",
+      "other": "ore"
+    },
+    "day": {
+      "zero": "zile",
+      "one": "zi",
+      "two": "zile",
+      "few": "zile",
+      "many": "zile",
+      "other": "zile"
+    },
+    "minutes_abbr": "min",
+    "seconds_abbr": "sec"
   },
   "news": {
     "news_feed": "Flux de știri",

@@ -583,7 +583,25 @@
     "seconds_short": "שנ'",
     "minutes_short": "דק'",
     "hours_short": "שע'",
-    "days_short": "י'"
+    "days_short": "י'",
+    "hour": {
+      "zero": "שעות",
+      "one": "שעה",
+      "two": "שעתיים",
+      "few": "שעתיים",
+      "many": "שעות",
+      "other": "שעות"
+    },
+    "day": {
+      "zero": "ימים",
+      "one": "יום",
+      "two": "יומיים",
+      "few": "ימים",
+      "many": "ימים",
+      "other": "ימים"
+    },
+    "minutes_abbr": "דק",
+    "seconds_abbr": "שנייה"
   },
   "news": {
     "news_feed": "פיד חדשות",

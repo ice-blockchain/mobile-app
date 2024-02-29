@@ -583,7 +583,25 @@
     "seconds_short": "сек",
     "minutes_short": "хв",
     "hours_short": "год",
-    "days_short": "дн"
+    "days_short": "дн",
+    "hour": {
+      "zero": "годин",
+      "one": "година",
+      "two": "години",
+      "few": "години",
+      "many": "годин",
+      "other": "годин"
+    },
+    "day": {
+      "zero": "днів",
+      "one": "день",
+      "two": "дні",
+      "few": "дні",
+      "many": "днів",
+      "other": "днів"
+    },
+    "minutes_abbr": "хв",
+    "seconds_abbr": "с"
   },
   "news": {
     "news_feed": "Стрічка новин",

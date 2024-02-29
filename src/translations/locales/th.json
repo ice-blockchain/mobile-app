@@ -584,7 +584,25 @@
     "seconds_short": "วิ",
     "minutes_short": "น",
     "hours_short": "ชม.",
-    "days_short": "วัน"
+    "days_short": "วัน",
+    "hour": {
+      "zero": "ชั่วโมง",
+      "one": "ชั่วโมง",
+      "two": "ชั่วโมง",
+      "few": "ชั่วโมง",
+      "many": "ชั่วโมง",
+      "other": "ชั่วโมง"
+    },
+    "day": {
+      "zero": "วัน",
+      "one": "วัน",
+      "two": "วัน",
+      "few": "วัน",
+      "many": "วัน",
+      "other": "วัน"
+    },
+    "minutes_abbr": "นาที",
+    "seconds_abbr": "วินาที"
   },
   "news": {
     "news_feed": "ฟีดข่าว",

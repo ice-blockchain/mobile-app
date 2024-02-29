@@ -583,7 +583,25 @@
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
-    "days_short": "d"
+    "days_short": "d",
+    "hour": {
+      "zero": "horas",
+      "one": "hora",
+      "two": "horas",
+      "few": "horas",
+      "many": "horas",
+      "other": "horas"
+    },
+    "day": {
+      "zero": "dias",
+      "one": "dia",
+      "two": "dias",
+      "few": "dias",
+      "many": "dias",
+      "other": "dias"
+    },
+    "minutes_abbr": "min",
+    "seconds_abbr": "seg"
   },
   "news": {
     "news_feed": "Feed de notícias",

@@ -583,7 +583,25 @@
     "seconds_short": "giây",
     "minutes_short": "phút",
     "hours_short": "giờ",
-    "days_short": "ngày"
+    "days_short": "ngày",
+    "hour": {
+      "zero": "giờ",
+      "one": "giờ",
+      "two": "giờ",
+      "few": "giờ",
+      "many": "giờ",
+      "other": "giờ"
+    },
+    "day": {
+      "zero": "ngày",
+      "one": "ngày",
+      "two": "ngày",
+      "few": "ngày",
+      "many": "ngày",
+      "other": "ngày"
+    },
+    "minutes_abbr": "ph",
+    "seconds_abbr": "giây"
   },
   "news": {
     "news_feed": "Nguồn cấp tin tức",
