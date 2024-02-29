@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "La actividad de minería de Ice ha terminado. Mientras nos preparamos para el lanzamiento de la red principal el 7 de octubre de 2024, mantén la aplicación instalada para obtener actualizaciones exclusivas y acceso temprano a la aplicación de la red principal.",
+    "stats": {
+      "header": "Estadísticas de Ice",
+      "circulating_supply": "Suministro Circulante",
+      "total_supply": "Suministro Total",
+      "price": "Precio",
+      "market_cap": "Capitalización de Mercado",
+      "daily_trading_volume": "Volumen de Trading de 24 horas",
+      "dilluted_market_cap": "Capitalización de Mercado Diluida"
+    },
+    "countdown": {
+      "header": "Lanzamiento de la Red Principal de Ice"
+    },
+    "roadmap": {
+      "header": "Nuestra Visión",
+      "title": "Whitepaper",
+      "subtitle": "Obtén más información sobre nuestra visión en Ice."
+    },
+    "join_mainnet": {
+      "title": "Únete al Futuro Descentralizado",
+      "subtitle": "Obtén un adelanto de nuestra próxima aplicación de red principal y sus características únicas."
+    }
   }
 }

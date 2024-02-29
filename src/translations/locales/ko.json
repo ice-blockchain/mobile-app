@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Ice 채굴 활동이 종료되었습니다. 2024년 10월 7일 메인넷 론칭을 준비하는 동안, 독점적인 업데이트 및 메인넷 앱의 초기 액세스를 위해 앱을 설치한 채로 유지하십시오.",
+    "stats": {
+      "header": "Ice 통계",
+      "circulating_supply": "유통 공급량",
+      "total_supply": "총 공급량",
+      "price": "가격",
+      "market_cap": "시가 총액",
+      "daily_trading_volume": "24시간 거래량",
+      "dilluted_market_cap": "희석된 시가 총액"
+    },
+    "countdown": {
+      "header": "Ice 메인넷 론칭"
+    },
+    "roadmap": {
+      "header": "우리의 비전",
+      "title": "Whitepaper",
+      "subtitle": "Ice에서 우리의 비전에 대해 자세히 알아보세요."
+    },
+    "join_mainnet": {
+      "title": "분산형 미래에 참여하세요",
+      "subtitle": "다가오는 메인넷 앱과 그 독특한 기능을 미리 만나보세요."
+    }
   }
 }

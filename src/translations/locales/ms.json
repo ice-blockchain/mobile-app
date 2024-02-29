@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Aktiviti perlombongan Ice telah berakhir. Sementara kami bersiap untuk pelancaran mainnet pada 7 Oktober 2024, pastikan aplikasi dipasang untuk kemas kini eksklusif dan akses awal kepada aplikasi mainnet.",
+    "stats": {
+      "header": "Statistik Ice",
+      "circulating_supply": "Bekalan Tersebar",
+      "total_supply": "Bekalan Keseluruhan",
+      "price": "Harga",
+      "market_cap": "Kapitalisasi Pasaran",
+      "daily_trading_volume": "Isipadu Perdagangan 24 Jam",
+      "dilluted_market_cap": "Kapitalisasi Pasaran Terdilusi"
+    },
+    "countdown": {
+      "header": "Pelancaran Utama Ice"
+    },
+    "roadmap": {
+      "header": "Visi Kami",
+      "title": "Whitepaper",
+      "subtitle": "Dapatkan maklumat lanjut tentang visi kami di Ice."
+    },
+    "join_mainnet": {
+      "title": "Sertai Masa Depan Terdesentralisasi",
+      "subtitle": "Dapatkan gambaran ringkas tentang aplikasi Mainnet akan datang kami dan ciri-ciri uniknya."
+    }
   }
 }

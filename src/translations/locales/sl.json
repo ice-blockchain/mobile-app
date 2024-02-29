@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Rudarjenje Ice je končalo. Medtem ko se pripravljamo na zagon glavnega omrežja 7. oktobra 2024, ohranite nameščeno aplikacijo za ekskluzivne posodobitve in zgodnji dostop do aplikacije glavnega omrežja.",
+    "stats": {
+      "header": "Statistika Ice",
+      "circulating_supply": "Cirkulirajoča Dobava",
+      "total_supply": "Skupna Dobava",
+      "price": "Cena",
+      "market_cap": "Tržna Kapitalizacija",
+      "daily_trading_volume": "Dnevni Trgovalni Obseg",
+      "dilluted_market_cap": "Razredčena Tržna Kapitalizacija"
+    },
+    "countdown": {
+      "header": "Zagon Glavnega Omrežja Ice"
+    },
+    "roadmap": {
+      "header": "Naša Vizija",
+      "title": "Whitepaper",
+      "subtitle": "Več izvedite o naši viziji v Ice."
+    },
+    "join_mainnet": {
+      "title": "Pridružite se Decentralizirani Prihodnosti",
+      "subtitle": "Pridobite predogled naše prihajajoče aplikacije Mainnet in njenih edinstvenih funkcij."
+    }
   }
 }

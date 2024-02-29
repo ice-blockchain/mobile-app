@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "L'activité de minage d'Ice est terminée. Alors que nous nous préparons au lancement du réseau principal le 7 octobre 2024, gardez l'application installée pour des mises à jour exclusives et un accès anticipé à l'application du réseau principal.",
+    "stats": {
+      "header": "Statistiques d'Ice",
+      "circulating_supply": "Offre Circulante",
+      "total_supply": "Offre Totale",
+      "price": "Prix",
+      "market_cap": "Capitalisation Boursière",
+      "daily_trading_volume": "Volume de Trading sur 24h",
+      "dilluted_market_cap": "Capitalisation Boursière Diluée"
+    },
+    "countdown": {
+      "header": "Lancement du Réseau Principal Ice"
+    },
+    "roadmap": {
+      "header": "Notre Vision",
+      "title": "Whitepaper",
+      "subtitle": "Apprenez-en plus sur notre vision chez Ice."
+    },
+    "join_mainnet": {
+      "title": "Rejoignez le Futur Décentralisé",
+      "subtitle": "Obtenez un aperçu de notre prochaine application de réseau principal et de ses fonctionnalités uniques."
+    }
   }
 }

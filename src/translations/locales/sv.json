@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Gruvaktiviteten Ice har avslutats. Medan vi förbereder oss för huvudnätets lansering den 7 oktober 2024, behåll appen installerad för exklusiva uppdateringar och tidig tillgång till huvudnätets app.",
+    "stats": {
+      "header": "Ice Statistik",
+      "circulating_supply": "Cirkulerande Tillgång",
+      "total_supply": "Total Tillgång",
+      "price": "Pris",
+      "market_cap": "Marknadsvärde",
+      "daily_trading_volume": "24-timmars Handelsvolym",
+      "dilluted_market_cap": "Förtunnat Marknadsvärde"
+    },
+    "countdown": {
+      "header": "Ice Huvudnäts Lansering"
+    },
+    "roadmap": {
+      "header": "Vår Vision",
+      "title": "Whitepaper",
+      "subtitle": "Lär dig mer om vår vision på Ice."
+    },
+    "join_mainnet": {
+      "title": "Gå med i Den Decentraliserade Framtiden",
+      "subtitle": "Få en förhandsvisning av vår kommande Huvudnätsapp och dess unika funktioner."
+    }
   }
 }

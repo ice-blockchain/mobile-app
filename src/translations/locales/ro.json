@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Activitatea de minare Ice s-a încheiat. În timp ce ne pregătim pentru lansarea mainnet pe 7 octombrie 2024, mențineți aplicația instalată pentru actualizări exclusive și acces timpuriu la aplicația mainnet.",
+    "stats": {
+      "header": "Statistici Ice",
+      "circulating_supply": "Ofertă Circulantă",
+      "total_supply": "Ofertă Totală",
+      "price": "Preț",
+      "market_cap": "Capitalizare de Piață",
+      "daily_trading_volume": "Volum de Tranzacționare 24h",
+      "dilluted_market_cap": "Capitalizare de Piață Diluată"
+    },
+    "countdown": {
+      "header": "Lansarea Mainnet Ice"
+    },
+    "roadmap": {
+      "header": "Viziunea Noastră",
+      "title": "Whitepaper",
+      "subtitle": "Aflați mai multe despre viziunea noastră la Ice."
+    },
+    "join_mainnet": {
+      "title": "Alăturați-vă Viitorului Descentralizat",
+      "subtitle": "Obțineți o previzualizare a următoarei noastre aplicații Mainnet și a caracteristicilor sale unice."
+    }
   }
 }

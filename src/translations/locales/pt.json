@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "A atividade de mineração da Ice terminou. Enquanto nos preparamos para o lançamento da mainnet em 7 de outubro de 2024, mantenha o aplicativo instalado para atualizações exclusivas e acesso antecipado ao aplicativo da mainnet.",
+    "stats": {
+      "header": "Estatísticas da Ice",
+      "circulating_supply": "Oferta Circulante",
+      "total_supply": "Oferta Total",
+      "price": "Preço",
+      "market_cap": "Capitalização de Mercado",
+      "daily_trading_volume": "Volume de Negociação 24h",
+      "dilluted_market_cap": "Capitalização de Mercado Diluída"
+    },
+    "countdown": {
+      "header": "Lançamento da Mainnet Ice"
+    },
+    "roadmap": {
+      "header": "Nossa Visão",
+      "title": "Whitepaper",
+      "subtitle": "Saiba mais sobre nossa visão na Ice."
+    },
+    "join_mainnet": {
+      "title": "Junte-se ao Futuro Descentralizado",
+      "subtitle": "Obtenha uma prévia do nosso próximo aplicativo Mainnet e de suas características únicas."
+    }
   }
 }

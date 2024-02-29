@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Działalność górnicza Ice została zakończona. W trakcie przygotowań do uruchomienia głównego łańcucha 7 października 2024 roku, zachowaj zainstalowaną aplikację, aby otrzymywać ekskluzywne aktualizacje i wczesny dostęp do aplikacji głównego łańcucha.",
+    "stats": {
+      "header": "Statystyki Ice",
+      "circulating_supply": "Cyrkulująca Podaż",
+      "total_supply": "Całkowita Podaż",
+      "price": "Cena",
+      "market_cap": "Kapitalizacja rynkowa",
+      "daily_trading_volume": "Wolumen obrotu 24h",
+      "dilluted_market_cap": "Rozcieńczona Kapitalizacja Rynkowa"
+    },
+    "countdown": {
+      "header": "Uruchomienie Głównego Łańcucha Ice"
+    },
+    "roadmap": {
+      "header": "Nasza Wizja",
+      "title": "Whitepaper",
+      "subtitle": "Dowiedz się więcej o naszej wizji w Ice."
+    },
+    "join_mainnet": {
+      "title": "Dołącz do Zdecentralizowanej Przyszłości",
+      "subtitle": "Otrzymaj zapowiedź naszej nadchodzącej aplikacji Głównego Łańcucha i jej unikalnych funkcji."
+    }
   }
 }

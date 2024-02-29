@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Těžební činnost Ice skončila. Při přípravě na spuštění hlavní sítě dne 7. října 2024 si nechte aplikaci nainstalovanou pro exkluzivní aktualizace a časný přístup k aplikaci hlavní sítě.",
+    "stats": {
+      "header": "Statistiky Ice",
+      "circulating_supply": "Cirkulující zásoba",
+      "total_supply": "Celková zásoba",
+      "price": "Cena",
+      "market_cap": "Tržní kapitalizace",
+      "daily_trading_volume": "Obchodní objem za 24 hodin",
+      "dilluted_market_cap": "Plně zředěná tržní kapitalizace"
+    },
+    "countdown": {
+      "header": "Spuštění hlavní sítě Ice"
+    },
+    "roadmap": {
+      "header": "Naše vize",
+      "title": "Whitepaper",
+      "subtitle": "Dozvězte se více o naší vizi v Ice."
+    },
+    "join_mainnet": {
+      "title": "Připojte se k decentralizované budoucnosti",
+      "subtitle": "Podívejte se na náš nadcházející aplikaci hlavní sítě a její jedinečné funkce."
+    }
   }
 }

@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Isgruveaktiviteten er avslutta. Medan vi førebur oss på hovudnett-lanseringa den 7. oktober 2024, bør du halde appen installert for eksklusive oppdateringar og tidleg tilgang til hovudnettappen.",
+    "stats": {
+      "header": "Is-statistikk",
+      "circulating_supply": "Omløpande Tilbod",
+      "total_supply": "Totalt Tilbod",
+      "price": "Pris",
+      "market_cap": "Markedsverdi",
+      "daily_trading_volume": "24-timers handelsvolum",
+      "dilluted_market_cap": "Utynna Markedsverdi"
+    },
+    "countdown": {
+      "header": "Is Hovudnettlansering"
+    },
+    "roadmap": {
+      "header": "Vår Visjon",
+      "title": "Whitepaper",
+      "subtitle": "Lær meir om vår visjon på Ice."
+    },
+    "join_mainnet": {
+      "title": "Bli med i Den Desentraliserte Framtida",
+      "subtitle": "Få ein sniktitt på vår komande Hovudnettapplikasjon og dens unike funksjonar."
+    }
   }
 }

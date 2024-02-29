@@ -18,7 +18,7 @@ export const Roadmap = memo(() => {
 
   return (
     <>
-      <SectionHeader title={t('mainnet_landing.roadmap.title')} />
+      <SectionHeader title={t('mainnet_landing.roadmap.header')} />
       <ActionListItem
         onPress={onPress}
         LeadingIcon={<PaperIcon />}

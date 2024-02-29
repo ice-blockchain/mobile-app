@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Ice mynbou-aktiwiteit het geëindig. Terwyl ons ons voorberei vir die hoofnet-lancering op 7 Oktober 2024, hou die program geïnstalleer vir eksklusiewe opdaterings en vroeë toegang tot die hoofnet-program.",
+    "stats": {
+      "header": "Ice statistieke",
+      "circulating_supply": "Omgangende Voorsiening",
+      "total_supply": "Totale Voorsiening",
+      "price": "Prys",
+      "market_cap": "Markkapitalisering",
+      "daily_trading_volume": "24 uur Handelsvolume",
+      "dilluted_market_cap": "Volledig verwaterde markkap"
+    },
+    "countdown": {
+      "header": "Ice Hoofnet-lansering"
+    },
+    "roadmap": {
+      "header": "Ons visie",
+      "title": "Whitepaper",
+      "subtitle": "Leer meer oor ons visie by Ice."
+    },
+    "join_mainnet": {
+      "title": "Sluit aan by die Gedesentraliseerde Toekoms",
+      "subtitle": "Kry 'n voorskou van ons aankomende hoofnet-program en sy unieke kenmerke."
+    }
   }
 }

@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Az Ice bányászati ​​tevékenysége véget ért. Ahogy felkészülünk az Ice főhálózatának 2024. október 7-i indulására, tartsa telepítve az alkalmazást az exkluzív frissítésekhez és a főhálózat alkalmazás korai hozzáféréséhez.",
+    "stats": {
+      "header": "Ice statisztikák",
+      "circulating_supply": "Keringő Kínálat",
+      "total_supply": "Teljes Kínálat",
+      "price": "Ár",
+      "market_cap": "Piaci Tőke",
+      "daily_trading_volume": "24 órás Kereskedési Forgalom",
+      "dilluted_market_cap": "Teljesen Híján Lévő Piaci Tőke"
+    },
+    "countdown": {
+      "header": "Ice Főhálózat Indítása"
+    },
+    "roadmap": {
+      "header": "A Mi Víziónk",
+      "title": "Whitepaper",
+      "subtitle": "Tudj meg többet a mi víziónkról az Ice-nál."
+    },
+    "join_mainnet": {
+      "title": "Csatlakozz a decentralizált jövőhöz",
+      "subtitle": "Nézd meg a közelgő Főhálózati alkalmazásunkat és annak egyedi jellemzőit."
+    }
   }
 }

@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "انتهت نشاط تعدين Ice. أثناء استعدادنا لإطلاق الشبكة الرئيسية في 7 أكتوبر 2024، حافظ على تثبيت التطبيق للحصول على تحديثات حصرية والوصول المبكر إلى تطبيق الشبكة الرئيسية.",
+    "stats": {
+      "header": "إحصائيات Ice",
+      "circulating_supply": "العرض المتداول",
+      "total_supply": "إجمالي العرض",
+      "price": "السعر",
+      "market_cap": "القيمة السوقية",
+      "daily_trading_volume": "حجم التداول خلال 24 ساعة",
+      "dilluted_market_cap": "القيمة السوقية المخففة بالكامل"
+    },
+    "countdown": {
+      "header": "إطلاق شبكة Ice الرئيسية"
+    },
+    "roadmap": {
+      "header": "رؤيتنا",
+      "title": "Whitepaper",
+      "subtitle": "تعرّف على المزيد عن رؤيتنا في Ice."
+    },
+    "join_mainnet": {
+      "title": "انضم إلى المستقبل المتمركز",
+      "subtitle": "احصل على لمحة عن تطبيقنا الرئيسي القادم وميزاته الفريدة."
+    }
   }
 }

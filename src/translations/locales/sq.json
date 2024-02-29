@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Aktiviteti i minierës Ice ka përfunduar. Ndërsa ne po përgatitemi për lansimin e rrjetit kryesor më 7 tetor 2024, mbani aplikacionin e instaluar për përditësime ekskluzive dhe qasje të hershme në aplikacionin e rrjetit kryesor.",
+    "stats": {
+      "header": "Statistikat e Ice",
+      "circulating_supply": "Oferta Qarkulluese",
+      "total_supply": "Oferta Totale",
+      "price": "Çmimi",
+      "market_cap": "Kapitalizimi i Tregut",
+      "daily_trading_volume": "Volumi i Tregtisë 24h",
+      "dilluted_market_cap": "Kapitalizimi i Tregut të Dilatuar"
+    },
+    "countdown": {
+      "header": "Nisja e Rrjetit Kryesor Ice"
+    },
+    "roadmap": {
+      "header": "Vizioni Ynë",
+      "title": "Whitepaper",
+      "subtitle": "Mësoni më shumë për vizionin tonë në Ice."
+    },
+    "join_mainnet": {
+      "title": "Bashkohuni me të Ardhmen e Padecentralizuar",
+      "subtitle": "Merrni një shikim paraprak të aplikacionit tonë të ardhshëm të Rrjetit Kryesor dhe karakteristikave unike."
+    }
   }
 }

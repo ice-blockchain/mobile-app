@@ -131,6 +131,7 @@ export type Translations = {
   'mainnet_landing.stats.daily_trading_volume': null;
   'mainnet_landing.stats.dilluted_market_cap': null;
   'mainnet_landing.countdown.header': null;
+  'mainnet_landing.roadmap.header': null;
   'mainnet_landing.roadmap.title': null;
   'mainnet_landing.roadmap.subtitle': null;
   'mainnet_landing.join_mainnet.title': null;

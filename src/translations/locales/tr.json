@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Ice madencilik faaliyeti sona erdi. 7 Ekim 2024 tarihinde ana ağı başlatmaya hazırlanırken, uygulamayı özel güncellemeler ve ana ağ uygulamasına erken erişim için kurulu tutun.",
+    "stats": {
+      "header": "Ice İstatistikleri",
+      "circulating_supply": "Dolaşımdaki Arz",
+      "total_supply": "Toplam Arz",
+      "price": "Fiyat",
+      "market_cap": "Piyasa Değeri",
+      "daily_trading_volume": "24 Saatlik İşlem Hacmi",
+      "dilluted_market_cap": "Sulandırılmış Piyasa Değeri"
+    },
+    "countdown": {
+      "header": "Ice Ana Ağı Başlatma"
+    },
+    "roadmap": {
+      "header": "Vizyonumuz",
+      "title": "Whitepaper",
+      "subtitle": "Ice'teki vizyonumuz hakkında daha fazla bilgi edinin."
+    },
+    "join_mainnet": {
+      "title": "Merkezi Olmayan Geleceğe Katılın",
+      "subtitle": "Yaklaşan Ana Ağ uygulamamızı ve benzersiz özelliklerini önceden görüntüleyin."
+    }
   }
 }

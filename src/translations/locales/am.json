@@ -200,5 +200,29 @@
         }
       }
     }
+  },
+  "mainnet_landing": {
+    "header": "የአይስ ተራብያ ሙያ መሰረታዊ አስተካክለት ነበር። የ2024ዓምሪ 7ት በመስመር ዋሻ አዲስ አስተካክለትን በተጠቀሙት አፕ ወደምታይን ይሰጣል።",
+    "stats": {
+      "header": "የአይስ መረጃዎች",
+      "circulating_supply": "አንድነት የምርት መንገድ",
+      "total_supply": "አጠቃላይ የምርት መንገድ",
+      "price": "ዋጋ",
+      "market_cap": "የገንዘብ ጭምር",
+      "daily_trading_volume": "24 ሰዓት የምረት ብር መጠን",
+      "dilluted_market_cap": "አጥቂያ የገንዘብ ጭምር"
+    },
+    "countdown": {
+      "header": "የአይስ ዋና ላይክ"
+    },
+    "roadmap": {
+      "header": "የእኛ አስተካክል",
+      "title": "Whitepaper",
+      "subtitle": "የእኛ አስተካክል ስለኛ ዝርዝር በአይስ ተናጋሪዎች."
+    },
+    "join_mainnet": {
+      "title": "በተመለከተ የተሰራ መረጃ",
+      "subtitle": "የተመለከተውን የአይስ ዋና አፕ እና በመከፋፈል የኛ መረጃን ይቀንስል።"
+    }
   }
 }

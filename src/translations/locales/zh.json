@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Ice 的挖矿活动已结束。在我们准备于2024年10月7日启动主网时，请保持应用程序安装，以获取专属更新和对主网应用程序的早期访问。",
+    "stats": {
+      "header": "Ice 统计数据",
+      "circulating_supply": "流通供应量",
+      "total_supply": "总供应量",
+      "price": "价格",
+      "market_cap": "市值",
+      "daily_trading_volume": "24小时交易量",
+      "dilluted_market_cap": "稀释市值"
+    },
+    "countdown": {
+      "header": "Ice 主网启动倒计时"
+    },
+    "roadmap": {
+      "header": "我们的愿景",
+      "title": "Whitepaper",
+      "subtitle": "了解更多关于我们在 Ice 的愿景。"
+    },
+    "join_mainnet": {
+      "title": "加入去中心化的未来",
+      "subtitle": "提前了解我们即将推出的主网应用程序及其独特功能。"
+    }
   }
 }

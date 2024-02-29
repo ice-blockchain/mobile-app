@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Iceのマイニング活動は終了しました。2024年10月7日のメインネットのローンチに向けて準備を進める中、独占的なアップデートやメインネットアプリへの早期アクセスを得るためにアプリをインストールしたままにしてください。",
+    "stats": {
+      "header": "Iceの統計",
+      "circulating_supply": "流通供給量",
+      "total_supply": "総供給量",
+      "price": "価格",
+      "market_cap": "時価総額",
+      "daily_trading_volume": "24時間取引量",
+      "dilluted_market_cap": "希釈時価総額"
+    },
+    "countdown": {
+      "header": "Iceメインネットローンチ"
+    },
+    "roadmap": {
+      "header": "私たちのビジョン",
+      "title": "Whitepaper",
+      "subtitle": "Iceにおける私たちのビジョンについて詳しく知る。"
+    },
+    "join_mainnet": {
+      "title": "分散型未来に参加する",
+      "subtitle": "今後のメインネットアプリとそのユニークな機能のプレビューを入手。"
+    }
   }
 }

@@ -159,5 +159,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Aktivitas pertambangan Ice wis rampung. Saiki kita sedang ngomongake babagan liris Mainnet ing 7 Oktober 2024, tetepna pasang aplikasi kanggo pembaruan eksklusif lan akses dhuwur kanggo aplikasi Mainnet.",
+    "stats": {
+      "header": "Statistik Ice",
+      "circulating_supply": "Suplai Wulan",
+      "total_supply": "Suplai Kabeh",
+      "price": "Harga",
+      "market_cap": "Kapitalisasi Pasar",
+      "daily_trading_volume": "Volume Dagang 24 jam",
+      "dilluted_market_cap": "Kapitalisasi Pasar Dilluted"
+    },
+    "countdown": {
+      "header": "Liris Mainnet Ice"
+    },
+    "roadmap": {
+      "header": "Pangandharan Kita",
+      "title": "Whitepaper",
+      "subtitle": "Kenalan luwih jauh ngenani pangandharan kita ing Ice."
+    },
+    "join_mainnet": {
+      "title": "Gabung ing Masa Depan Desentralisasi",
+      "subtitle": "Dapatkan pandangan singkat aplikasi Mainnet kita mbiyen lan fitur-fitur uniké."
+    }
   }
 }

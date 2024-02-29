@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Ice qazma fəaliyyəti başa çatdı. 2024-cü ilin oktyabr ayının 7-də başlayacaq əsas şəbəkəyə hazırlaşarkən, proqramı quraşdırılmış saxla, eksklüziv yeniləmələr və əsas şəbəkə proqramına erkən daxil olmaq üçün.",
+    "stats": {
+      "header": "Ice statistikaları",
+      "circulating_supply": "Dövriyyədə olan təchizat",
+      "total_supply": "Ümumi təchizat",
+      "price": "Qiymət",
+      "market_cap": "Market kapitalı",
+      "daily_trading_volume": "24 saat ərzində ticarət həcmi",
+      "dilluted_market_cap": "Tam qarışdırılmış market kapitalı"
+    },
+    "countdown": {
+      "header": "Ice Əsas Şəbəkə Başlanğıcı"
+    },
+    "roadmap": {
+      "header": "Viziyamız",
+      "title": "Whitepaper",
+      "subtitle": "Ice-da viziyamız haqqında daha çox məlumat alın."
+    },
+    "join_mainnet": {
+      "title": "Mərkəzi olmayan gələcəyə qoşulun",
+      "subtitle": "Gələn Əsas Şəbəkə proqramımız və onun unikal xüsusiyyətləri üçün bir göz atın."
+    }
   }
 }

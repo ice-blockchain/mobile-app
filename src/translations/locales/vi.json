@@ -151,5 +151,29 @@
     "privacy": "https://ice.io/privacy/",
     "terms": "https://ice.io/terms/",
     "main": "https://ice.io/"
+  },
+  "mainnet_landing": {
+    "header": "Hoạt động đào Ice đã kết thúc. Trong khi chúng tôi chuẩn bị cho việc ra mắt mạng chính vào ngày 7 tháng 10 năm 2024, hãy giữ ứng dụng được cài đặt để nhận cập nhật độc quyền và truy cập sớm vào ứng dụng mạng chính.",
+    "stats": {
+      "header": "Thống kê Ice",
+      "circulating_supply": "Cung cấp lưu hành",
+      "total_supply": "Tổng cung",
+      "price": "Giá",
+      "market_cap": "Vốn hóa thị trường",
+      "daily_trading_volume": "Khối lượng giao dịch hàng ngày 24 giờ",
+      "dilluted_market_cap": "Vốn hóa thị trường thực tế"
+    },
+    "countdown": {
+      "header": "Khởi động Mạng chính Ice"
+    },
+    "roadmap": {
+      "header": "Tầm nhìn của chúng tôi",
+      "title": "Whitepaper",
+      "subtitle": "Tìm hiểu thêm về tầm nhìn của chúng tôi tại Ice."
+    },
+    "join_mainnet": {
+      "title": "Tham gia Tương lai Phi trung gian",
+      "subtitle": "Nhận một cái nhìn trước về ứng dụng Mạng chính sắp tới của chúng tôi và các tính năng độc đáo của nó."
+    }
   }
 }
