@@ -1,14 +1,17 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {COLORS} from '@constants/colors';
 import {MAINNET_LAUNCH_DATE} from '@constants/mainnet';
 import {useCountdown} from '@hooks/useCountdown';
 import {TimerPart} from '@screens/MainnetLanding/components/LaunchCountdown/components/TimerPart';
+import {useContainerOffset} from '@screens/MainnetLanding/components/LaunchCountdown/hooks/useContainerOffset';
 import {dayjs} from '@services/dayjs';
 import {RocketIcon} from '@svg/Rocket';
 import {t} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {memo, useMemo} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 import {rem} from 'rn-units';
 
 export const LaunchCountdown = memo(() => {
@@ -18,13 +21,19 @@ export const LaunchCountdown = memo(() => {
 
   const {durationLeft, isCountdownOver} = useCountdown(launchDuration);
 
+  const containerOffset = useContainerOffset();
+
   const days = isCountdownOver ? 0 : Math.floor(durationLeft.asDays());
   const hours = isCountdownOver ? 0 : durationLeft.hours();
   const minutes = isCountdownOver ? 0 : durationLeft.minutes();
   const seconds = isCountdownOver ? 0 : durationLeft.seconds();
 
   return (
-    <View style={styles.container}>
+    <View style={containerOffset.current}>
+      <LinearGradient
+        colors={[COLORS.toreaBay, COLORS.primaryLight]}
+        style={StyleSheet.absoluteFill}
+      />
       <View style={styles.header}>
         <RocketIcon />
         <Text style={styles.headerText}>
@@ -42,10 +51,6 @@ export const LaunchCountdown = memo(() => {
 });
 
 const styles = StyleSheet.create({
-  container: {
-    marginTop: rem(10),
-    marginBottom: rem(34),
-  },
   header: {
     flexDirection: 'row',
     alignItems: 'center',

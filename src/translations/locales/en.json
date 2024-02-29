@@ -159,7 +159,7 @@
       "price": "Price",
       "market_cap": "Market Cap",
       "daily_trading_volume": "24h Trading Volume",
-      "dilluted_market_cap": "Fully dilluted market cap"
+      "dilluted_market_cap": "Fully diluted market cap"
     },
     "countdown": {
       "header": "Ice Mainnet Launch"

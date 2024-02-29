@@ -33,7 +33,7 @@ export const COLORS = {
   downriver: '#0A2155',
   gullGray: '#98A4BB',
   royalBlue: '#6556EE',
-  toreaBay: '#0E3794',
+  toreaBay: '#11359C',
   blueViolet: '#5F5DB1',
   gallery: '#EBEBEB',
   scorpion: '#575757',

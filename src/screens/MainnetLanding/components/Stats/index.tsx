@@ -49,7 +49,9 @@ export const Stats = memo(() => {
           <StatListItem
             Icon={<GraphIcon />}
             label={t('mainnet_landing.stats.price')}
-            value={`$${iceCoinStats.price}`}
+            value={`$${formatNumber(iceCoinStats.price, {
+              maximumFractionDigits: 5,
+            })}`}
           />
         )}
         {!!iceCoinStats.marketCap && (
@@ -66,11 +68,11 @@ export const Stats = memo(() => {
             value={`$${formatNumber(iceCoinStats['24hTradingVolume'])}`}
           />
         )}
-        {!!iceCoinStats.marketCap && (
+        {!!iceCoinStats.fullyDilutedMarketCap && (
           <StatListItem
             Icon={<StructureIcon />}
             label={t('mainnet_landing.stats.dilluted_market_cap')}
-            value={`$${formatNumber(iceCoinStats.marketCap)}`}
+            value={`$${formatNumber(iceCoinStats.fullyDilutedMarketCap)}`}
           />
         )}
       </View>

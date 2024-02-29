@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     marginHorizontal: rem(10),
   },
   labelText: {
-    ...font(10, undefined, 'regular', 'periwinkleGray'),
+    ...font(12, undefined, 'regular', 'periwinkleGray'),
   },
   valueText: {
     ...font(15, undefined, 'bold', 'white'),

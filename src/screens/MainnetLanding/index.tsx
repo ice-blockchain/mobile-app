@@ -45,10 +45,10 @@ export const MainnetLanding = () => {
               <Roadmap />
               <JoinMainnet />
             </View>
-            <LaunchCountdown />
           </SafeAreaView>
         </Animated.ScrollView>
       </PullToRefreshContainer>
+      <LaunchCountdown />
     </View>
   );
 };
