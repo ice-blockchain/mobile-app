@@ -1,10 +1,8 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {useFocusEffect, useNavigation} from '@react-navigation/native';
-import {statusNoticeHeightSelector} from '@store/modules/StatusNotice/selectors';
+import {useFocusEffect} from '@react-navigation/native';
 import {useCallback} from 'react';
 import {Keyboard, StatusBar, StatusBarStyle} from 'react-native';
-import {useSelector} from 'react-redux';
 import {isAndroid, isIOS} from 'rn-units';
 
 type Props = {
@@ -13,16 +11,9 @@ type Props = {
 };
 
 export const useFocusStatusBar = ({style, animated}: Props) => {
-  const statusNoticeHeight = useSelector(statusNoticeHeightSelector);
-  const navigation = useNavigation();
-  const isRootLevelScreen = !navigation.getParent();
-  const isStatusNoticeRendered = !!statusNoticeHeight && !isRootLevelScreen;
   useFocusEffect(
     useCallback(() => {
-      StatusBar.setBarStyle(
-        isStatusNoticeRendered ? 'light-content' : style,
-        animated,
-      );
+      StatusBar.setBarStyle(style, animated);
 
       if (isAndroid) {
         StatusBar.setBackgroundColor('transparent', animated);
@@ -39,6 +30,6 @@ export const useFocusStatusBar = ({style, animated}: Props) => {
           subscription.remove();
         };
       }
-    }, [animated, isStatusNoticeRendered, style]),
+    }, [animated, style]),
   );
 };

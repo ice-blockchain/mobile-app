@@ -103,7 +103,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: rem(12),
-    flex: 1,
   },
   backgroundImage: {
     borderRadius: rem(16),
