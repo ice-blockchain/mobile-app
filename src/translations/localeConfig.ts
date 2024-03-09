@@ -3,7 +3,7 @@
 import {Translations} from '@translations/locales/en.json';
 
 /**
- * uncomment locales which you add then take look @services/dayjs/index.ts and @services/dayjs/calendarLocales.ts
+ * Uncomment locales which you add then take look @services/dayjs/index.ts and @services/dayjs/calendarLocales.ts
  */
 
 export type SupportedLocale =
