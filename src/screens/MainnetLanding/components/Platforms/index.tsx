@@ -17,6 +17,7 @@ const platforms: Platform[] = [
     link: 'https://www.kucoin.com/trade/ICE-USDT',
   },
   {logo: Images.platforms.gate, link: 'https://www.gate.io/trade/ICE_USDT'},
+  {logo: Images.platforms.htx, link: 'http://htx.com/trade/ice_usdt'},
   {
     logo: Images.platforms.mexc,
     link: 'https://www.mexc.com/exchange/ICENETWORK_USDT',
@@ -30,18 +31,38 @@ const platforms: Platform[] = [
     logo: Images.platforms.poloneix,
     link: 'https://poloniex.com/trade/ICENETWORK_USDT/?type=spot',
   },
-  {logo: Images.platforms.bingx, link: 'https://bingx.com/en-gb/spot/ICEUSDT/'},
   {
     logo: Images.platforms.bitrue,
     link: 'https://www.bitrue.com/trade/ice1_usdt',
   },
   {
-    logo: Images.platforms.uniswap,
-    link: 'https://app.uniswap.org/tokens/ethereum/0x79f05c263055ba20ee0e814acd117c20caa10e0c',
+    logo: Images.platforms.tokero,
+    link: 'https://tokero.com/en/exchange/buy/ice/eur/',
+  },
+  {logo: Images.platforms.bingx, link: 'https://bingx.com/en-gb/spot/ICEUSDT/'},
+  {
+    logo: Images.platforms.bitconomy,
+    link: 'https://www.biconomy.com/exchange/ICE_USDT',
   },
   {
     logo: Images.platforms.pancake,
     link: 'https://pancakeswap.finance/swap?outputCurrency=0xc335Df7C25b72eEC661d5Aa32a7c2B7b2a1D1874&inputCurrency=0x55d398326f99059fF775485246999027B3197955',
+  },
+  {
+    logo: Images.platforms.raydium,
+    link: 'https://raydium.io/swap/?inputCurrency=sol&outputCurrency=E9aPbhb5xRVGP2L6qJixfJC5qWAzECpUFUxnGx3wUiND&fixed=in',
+  },
+  {
+    logo: Images.platforms.uniswapEthereum,
+    link: 'https://app.uniswap.org/tokens/ethereum/0x79f05c263055ba20ee0e814acd117c20caa10e0c',
+  },
+  {
+    logo: Images.platforms.uniswapArbitrum,
+    link: 'https://app.uniswap.org/explore/tokens/arbitrum/0xab8ebcc9eecc20bd30c7b75c7b4e8fcccfbf01ab',
+  },
+  {
+    logo: Images.platforms.jupiter,
+    link: 'https://jup.ag/swap/SOL-E9aPbhb5xRVGP2L6qJixfJC5qWAzECpUFUxnGx3wUiND',
   },
 ];
 
