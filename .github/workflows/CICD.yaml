@@ -40,7 +40,7 @@ jobs:
             then
                echo "APP_ENV=production" >> $GITHUB_ENV
             else
-               echo "APP_ENV=staging" >> $GITHUB_ENV
+               echo "APP_ENV=production" >> $GITHUB_ENV
           fi
       - name: Configure APP environment
         id: setup-env
@@ -295,7 +295,7 @@ jobs:
             then
                echo "APP_ENV=production" >> $GITHUB_ENV
             else
-               echo "APP_ENV=staging" >> $GITHUB_ENV
+               echo "APP_ENV=production" >> $GITHUB_ENV
           fi
           echo "BUILD_NUMBER=$(echo $((GITHUB_RUN_NUMBER+2000)))" >> $GITHUB_ENV
       - name: Bump version to v${{ env.APP_VERSION }}
@@ -388,7 +388,7 @@ jobs:
               echo "APP_ENV=production" >> $GITHUB_ENV
               echo "RELEASE_STATUS=completed" >> $GITHUB_ENV
             else
-              echo "APP_ENV=staging" >> $GITHUB_ENV
+              echo "APP_ENV=production" >> $GITHUB_ENV
               echo "RELEASE_STATUS=draft" >> $GITHUB_ENV
           fi
           echo "BUILD_NUMBER=$(echo $((GITHUB_RUN_NUMBER+2000)))" >> $GITHUB_ENV
