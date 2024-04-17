@@ -1,21 +1,21 @@
 {
   "welcome": {
     "page1": {
-      "title": "Selamat datang ke Ice",
-      "description": "[[:ice]] ialah mata wang digital yang anda boleh peroleh dengan telefon anda. Ice dimiliki dan dikendalikan oleh pengguna setiap hari seperti diri anda."
+      "title": "Selamat datang ke [[:project]]",
+      "description": "[[:coin_with_logo]] ialah mata wang digital yang anda boleh peroleh dengan telefon anda. [[:coin]] dimiliki dan dikendalikan oleh pengguna setiap hari seperti diri anda."
     },
     "page2": {
       "title": "Planet Mesra",
-      "description": "[[:ice]] secara alami adalah lebih cekap tenaga berbanding BTC kerana ia menggunakan mekanisme sepersetujuan “Bukti Taruhan”. Dengan bukti taruhan (POS), pemilik mata wang kripto mengesahkan transaksi blok berdasarkan bilangan syiling seorang pengesah menaruh."
+      "description": "[[:coin_with_logo]] secara alami adalah lebih cekap tenaga berbanding BTC kerana ia menggunakan mekanisme sepersetujuan “Bukti Taruhan”. Dengan bukti taruhan (POS), pemilik mata wang kripto mengesahkan transaksi blok berdasarkan bilangan syiling seorang pengesah menaruh."
     },
     "page3": {
       "title": "Syiling Rakyat",
       "description_part1": "Kuasa di tangan anda.",
-      "description_part2": "Segala-gala yang kami bangunkan di [[:ice]] akan menjadi sumber terbuka & dikawal oleh Organisasi Autonomi Dinyahpusat (DAO)."
+      "description_part2": "Segala-gala yang kami bangunkan di [[:project_with_logo]] akan menjadi sumber terbuka & dikawal oleh Organisasi Autonomi Dinyahpusat (DAO)."
     },
     "page4": {
       "title": "Kekal Bersambung",
-      "description": "Ketik [[:iceLogo]] untuk semak masuk harian anda dengan aplikasi mudah alih ringan tenaga kami yang percuma. Ketikan harian anda memastikan bahawa Ice berada di tangan orang sebenar, bukan robot."
+      "description": "Ketik [[:logo]] untuk semak masuk harian anda dengan aplikasi mudah alih ringan tenaga kami yang percuma. Ketikan harian anda memastikan bahawa [[:coin]] berada di tangan orang sebenar, bukan robot."
     },
     "page5": {
       "title": "Rujuk & Peroleh",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Pemberitahuan",
-      "description_part1": "[[:ice]] semak masuk hanya berlangsung selama 24 jam. Adakah anda ingin menerima pemberitahuan apabila sesi semasa anda tamat?",
+      "description_part1": "[[:project_with_logo]] semak masuk hanya berlangsung selama 24 jam. Adakah anda ingin menerima pemberitahuan apabila sesi semasa anda tamat?",
       "description_part2": "Jangan bimbang, kami tidak akan spam anda!",
       "not_now": "Bukan sekarang"
     }
@@ -35,7 +35,7 @@
     "view_all": "lihat semua",
     "invite_friend": {
       "title": "Jemput Rakan",
-      "description": "Peroleh [[:ice]] tambahan dengan menjemput rakan-rakan anda."
+      "description": "Peroleh [[:coin_with_logo]] tambahan dengan menjemput rakan-rakan anda."
     },
     "see_all": "lihat semua",
     "no": "Tidak",
@@ -88,9 +88,9 @@
       "team": "Anda tidak mempunyai sebarang ahli pasukan pada masa ini!"
     },
     "contacts": {
-      "empty_title": "[[:ice]] lebih bagus bersama rakan",
+      "empty_title": "[[:project_with_logo]] lebih bagus bersama rakan",
       "empty_button_title": "Benarkan semua akses kenalan",
-      "empty_description": "Segerakkan kenalan anda dan lihat siapa yang telah sedia ada dalam [[:ice]]. Pada masa akan datang, anda boleh menghantar Ice kepada mana-mana kenalan anda."
+      "empty_description": "Segerakkan kenalan anda dan lihat siapa yang telah sedia ada dalam [[:project_with_logo]]. Pada masa akan datang, anda boleh menghantar [[:coin]] kepada mana-mana kenalan anda."
     },
     "header": {
       "search_placeholder": "Cari pengguna",
@@ -113,7 +113,7 @@
       },
       "all_contacts": "Semua kenalan",
       "invite": "jemput",
-      "invitation_text": "Hai {{name}}, saya ingin menjemput anda untuk menyertai Ice."
+      "invitation_text": "Hai {{name}}, saya ingin menjemput anda untuk menyertai [[:project]]."
     },
     "tier_one": {
       "header_list": {
@@ -131,7 +131,7 @@
     "phone": "Telefon",
     "or": "atau",
     "reset_password": "Tetapkan semula kata laluan",
-    "welcome": "Selamat datang ke Ice",
+    "welcome": "Selamat datang ke [[:project]]",
     "email": "E-mel",
     "slogan": "Masa Depan Terdesentralisasi",
     "privacy": "Dengan meneruskan, anda bersetuju dengan [[:link]]Syarat Perkhidmatan[[/:link]] dan [[:link]]Dasar Privasi[[/:link]] kami"
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "KEDUDUKAN GLOBAL",
       "referrals": "RUJUKAN",
-      "description": "Rujuk lebih ramai pengguna dan peroleh lebih banyak [[:ice]]."
+      "description": "Rujuk lebih ramai pengguna dan peroleh lebih banyak [[:coin_with_logo]]."
     },
     "referrals": {
       "title": "RUJUKAN",
@@ -362,7 +362,7 @@
     "roadmap": {
       "title": "VISI KAMI",
       "button_title": "Whitepaper",
-      "button_subtitle": "Ketahui lebih lanjut tentang visi kami di Ice."
+      "button_subtitle": "Ketahui lebih lanjut tentang visi kami di [[:project]]."
     },
     "join_mainnet": {
       "title": "Sertai Masa Depan Terdesentralisasi",
@@ -396,7 +396,7 @@
     "feedback_title": "Hantar Maklum Balas",
     "feedback_description": "Kongsi buah fikiran anda dengan kami.",
     "invite_title": "Jemput Rakan",
-    "invite_description": "Peroleh Ice tambahan dengan menjemput rakan-rakan anda.",
+    "invite_description": "Peroleh [[:coin]] tambahan dengan menjemput rakan-rakan anda.",
     "delete_title": "Padam Akaun",
     "delete_description": "Padam akaun anda.",
     "delete_confirmation_title": "Adakah anda pasti anda mahu mengalih keluar akaun?",
@@ -459,7 +459,7 @@
         },
         "system": {
           "title": "Sistem",
-          "description": "Terima pemberitahuan penting mengenai aplikasi Ice."
+          "description": "Terima pemberitahuan penting mengenai aplikasi [[:project]]."
         }
       }
     },
@@ -498,9 +498,9 @@
     "copy_link": "Salin pautan",
     "more": "Lagi",
     "copied": "DISALIN",
-    "share_message": "Hai Orang Salji ☃️ ! Sertai pasukan saya dalam Ice dan terima 10 syiling Ice apabila anda mendaftar menggunakan kod rujukan saya:",
-    "share_subject": "Sertai pasukan saya di Ice",
-    "description": "Sebarkan khabar berita dan jemput rakan-rakan anda. Anda memperoleh [[:ice]] untuk setiap rujkan baharu yang anda bawa.",
+    "share_message": "Hai Orang Salji ☃️ ! Sertai pasukan saya dalam [[:project]] dan terima 10 syiling [[:coin]] apabila anda mendaftar menggunakan kod rujukan saya:",
+    "share_subject": "Sertai pasukan saya di [[:project]]",
+    "description": "Sebarkan khabar berita dan jemput rakan-rakan anda. Anda memperoleh [[:coin_with_logo]] untuk setiap rujkan baharu yang anda bawa.",
     "share": "Kongsi"
   },
   "users": {
@@ -538,14 +538,14 @@
     "time_left": "Masa Yang Tinggal",
     "mining_rate": "Kadar Perolehan",
     "appeal": "Rangsangkan kadar perolehan anda",
-    "benefits_description": "Prataruh ganjaran Ice anda sehingga 5 tahun dan tingkatkan kadar perolehan anda sehingga 250%.",
+    "benefits_description": "Prataruh ganjaran [[:coin]] anda sehingga 5 tahun dan tingkatkan kadar perolehan anda sehingga 250%.",
     "bonus_label": "Bonus Prataruh",
     "period_label": "Tempoh Ditaruh",
     "title": "Prataruhan",
     "current_rate": "Kadar Semasa",
     "allocation": "Peruntukan",
     "description": "Menaruh adalah proses yang melibatkan peletakan aset kripto anda untuk menyokong rangkaian blockchain dan mengesahkan transaksi.",
-    "terms_agree": "Saya bersetuju dengan [[:ice]] [[:link]]Syarat Taruhan[[/:link]]. Pegangan Ice anda akan dikunci untuk tempoh yang dipilih.",
+    "terms_agree": "Saya bersetuju dengan [[:coin_with_logo]] [[:link]]Syarat Taruhan[[/:link]]. Pegangan [[:coin]] anda akan dikunci untuk tempoh yang dipilih.",
     "stake_now": "Prataruh Sekarang!",
     "balance_label": "Baki ditaruh",
     "confirm_title": "Sahkan Prataruh",
@@ -578,8 +578,8 @@
     "good_morning": "Selamat pagi",
     "good_afternoon": "Selamat tengah hari",
     "good_evening": "Selamat petang",
-    "ice": "Ice",
-    "ice_per_hour": "Ice/j",
+    "ice": "[[:coin]]",
+    "ice_per_hour": "[[:coin]]/j",
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "j",
@@ -592,7 +592,7 @@
     "views": "{{viewsCount}} paparan"
   },
   "search": {
-    "empty": "Cari kenalan, rakan Ice dan ahli komuniti mikro anda.",
+    "empty": "Cari kenalan, rakan [[:project]] dan ahli komuniti mikro anda.",
     "nothing_is_found": "Tiada apa-apa yang dijumpai untuk pertanyaan anda.",
     "search_by_country": "Cari mengikut negara",
     "search_for_users": "Cari pengguna",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Jemput Rakan",
     "button_title": "Jemput rakan",
-    "description": "Rakan anda masih belum berada di [[:ice]]. Hantar jemputan kepada dia!"
+    "description": "Rakan anda masih belum berada di [[:project_with_logo]]. Hantar jemputan kepada dia!"
   },
   "balance_history": {
     "title": "Sejarah Baki",
@@ -633,7 +633,7 @@
     "resurrection_no_confirm_message": "Anda akan kehilangan syiling [[:amount]] anda buat selama-lamanya. Adakah anda pasti ingin meneruskan?",
     "resurrection_yes_confirm_message": "Anda hanya boleh dihidupkan semula sekali sahaja! Adakah anda pasti ingin meneruskan? Syiling [[:amount]] akan dikembalikan ke baki anda dalam jam seterusnya.",
     "delete_account_confirmation_title": "Sahkan Pemadaman",
-    "delete_account_confirmation_text": "Memadamkan akaun anda akan memadamkan semua data anda secara kekal, termasuk baki Ice anda. Adakah anda ingin meneruskan?",
+    "delete_account_confirmation_text": "Memadamkan akaun anda akan memadamkan semua data anda secara kekal, termasuk baki [[:coin]] anda. Adakah anda ingin meneruskan?",
     "registration_update_title": "Kemas kini Pendaftaran",
     "registration_update_text": "Kami telah menangguhkan penciptaan akaun baru menggunakan nombor telefon. Untuk terus, anda perlu memilih sama ada alamat emel atau log masuk melalui rangkaian sosial.",
     "link_email_title": "Sambung alamat emel anda",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Ganjaran alu-aluan",
-    "description": "Tahniah, anda telah menerima [[:value]] [[:ice]] syiling pertama anda yang membiktikan [[:bold]]Kepercayaan[[/:bold]] kami dalam [[:bold]]Anda[[/:bold]].",
+    "description": "Tahniah, anda telah menerima [[:value]] [[:coin_with_logo]] syiling pertama anda yang membiktikan [[:bold]]Kepercayaan[[/:bold]] kami dalam [[:bold]]Anda[[/:bold]].",
     "balance_label": "Baki semasa anda"
   },
   "country_select": {
@@ -728,7 +728,7 @@
     "snowman": {
       "title": "Orang Salji",
       "subtitle": "Bina empayar salji",
-      "description": "Peroleh dengan menyemak masuk setiap 24 jam untuk menunjukkan komitmen anda kepada rangkaian Ice dan buktikan anda manusia, bukan robot."
+      "description": "Peroleh dengan menyemak masuk setiap 24 jam untuk menunjukkan komitmen anda kepada rangkaian [[:project]] dan buktikan anda manusia, bukan robot."
     },
     "ambassador": {
       "title": "Duta",
@@ -748,7 +748,7 @@
     "overrides": {
       "home": {
         "team": {
-          "description": "[[:ice]] lebih baik dengan rakan-rakan. Di halaman ini, anda boleh melihat status ahli pasukan anda. Anda juga boleh menghantar pesanan kepada mereka dari sini."
+          "description": "[[:project]] lebih baik dengan rakan-rakan. Di halaman ini, anda boleh melihat status ahli pasukan anda. Anda juga boleh menghantar pesanan kepada mereka dari sini."
         },
         "referralscard": {
           "title": "Kad Pasukan",
@@ -758,7 +758,7 @@
       "team": {
         "segmented_control_tier_one": {
           "title": "Pasukan",
-          "description": "Di sini anda boleh melihat senarai orang yang anda telah jemput untuk menyertai Rangkaian Ice. Anda boleh dengan mudah mengesan status mereka dari sini dan menghantar pemberitahuan kepada mereka yang tidak aktif."
+          "description": "Di sini anda boleh melihat senarai orang yang anda telah jemput untuk menyertai Rangkaian [[:project]]. Anda boleh dengan mudah mengesan status mereka dari sini dan menghantar pemberitahuan kepada mereka yang tidak aktif."
         },
         "active_users": {
           "description": "Ini adalah status semasa aktiviti check-in ahli pasukan anda. Mereka dianggap aktif apabila mereka mempunyai sesi check-in yang aktif."
@@ -787,15 +787,15 @@
     "team": {
       "allow_contacts": {
         "title": "Benarkan kenalan",
-        "description": "Segerakkan kenalan anda dan lihat siapa yang telah sedia ada dalam [[:ice]]. Pada masa akan datang anda boleh menghantar [[:ice]] kepada mana-mana kenalan anda."
+        "description": "Segerakkan kenalan anda dan lihat siapa yang telah sedia ada dalam [[:project_with_logo]]. Pada masa akan datang anda boleh menghantar [[:project_with_logo]] kepada mana-mana kenalan anda."
       },
       "confirm_phone": {
         "title": "Sahkan telefon",
-        "description": "Sahkan identiti anda dan benarkan kenalan anda untuk mengetahui bahawa anda juga ahli rangkaian Ice. Nombor telefon anda tidak akan dikongsikan dengan pihak ketiga lain."
+        "description": "Sahkan identiti anda dan benarkan kenalan anda untuk mengetahui bahawa anda juga ahli rangkaian [[:project]]. Nombor telefon anda tidak akan dikongsikan dengan pihak ketiga lain."
       },
       "contacts_list": {
         "title": "Senarai kenalan",
-        "description": "Ini ialah senarai semua kenalan anda, mereka yang telah pun menyertai rangkaian [[:ice]] yang dipaparkan di bahagian teratas senarai."
+        "description": "Ini ialah senarai semua kenalan anda, mereka yang telah pun menyertai rangkaian [[:project_with_logo]] yang dipaparkan di bahagian teratas senarai."
       },
       "referrals": {
         "title": "Rujukan",
@@ -831,7 +831,7 @@
     "home": {
       "home": {
         "title": "Utama",
-        "description": "Selamat datang ke [[:ice]]. Di skrin utama anda boleh mendapatkan semua statitik tentang baki anda, kadar pendapatan semasa, kedudukan global anda bersama-sama dengan pasukan anda."
+        "description": "Selamat datang ke [[:project_with_logo]]. Di skrin utama anda boleh mendapatkan semua statitik tentang baki anda, kadar pendapatan semasa, kedudukan global anda bersama-sama dengan pasukan anda."
       },
       "invite": {
         "title": "jemput",
@@ -839,7 +839,7 @@
       },
       "team": {
         "title": "Pasukan",
-        "description": "[[:ice]] lebih bagus bersama rakan. Di halaman ini anda boleh melihat status ahli pasukan anda daripada kedua-dua Tahap 1 dan Tahap 2. Anda juga boleh ping mereka dari sini."
+        "description": "[[:project_with_logo]] lebih bagus bersama rakan. Di halaman ini anda boleh melihat status ahli pasukan anda daripada kedua-dua Tahap 1 dan Tahap 2. Anda juga boleh ping mereka dari sini."
       },
       "news": {
         "title": "Berita",
@@ -850,11 +850,11 @@
         "description": "Suaikan butiran profil anda dan lihat semua pencapaian dan lencana yang anda telah peroleh. Gunakan pengira dari sini, supaya anda boleh menganggarkan pendapatan anda."
       },
       "earningicestart": {
-        "title": "Memperoleh Ice",
-        "description": "Anda boleh memulakan sesi semak masuk [[:ice]] setiap 24 jam dengan menekan butang ini. Jangan lupa untuk kembali setiap hari dan mula memperoleh!"
+        "title": "Memperoleh [[:coin]]",
+        "description": "Anda boleh memulakan sesi semak masuk [[:project_with_logo]] setiap 24 jam dengan menekan butang ini. Jangan lupa untuk kembali setiap hari dan mula memperoleh!"
       },
       "earningiceseemore": {
-        "title": "Memeperoleh Ice",
+        "title": "Memeperoleh [[:coin]]",
         "description": "Ketik sekali lagi dan lihat lebih banyak butiran tentang sesi semak masuk semasa anda."
       },
       "stats": {
@@ -871,7 +871,7 @@
       },
       "wallet": {
         "title": "Kad Dompet",
-        "description": "Anda boleh mendapatkan di sini baki [[:ice]] semasa anda, bersama-sama dengan kadar pendapatan. Lebih ramai rujukan daripada pasukan anda berada dalam talian, lebih tinggi kadar pendapatan anda."
+        "description": "Anda boleh mendapatkan di sini baki [[:coin_with_logo]] semasa anda, bersama-sama dengan kadar pendapatan. Lebih ramai rujukan daripada pasukan anda berada dalam talian, lebih tinggi kadar pendapatan anda."
       },
       "earning": {
         "title": "Kad Pendapatan",
@@ -891,7 +891,7 @@
       },
       "adoptioncard": {
         "title": "Kad Guna Pakai",
-        "description": "Berdasarkan purata jumlah Orang Salji yang aktif minggu lepas, anda boleh melihat kadar pendapatan [[:ice]] semasa. Kadar pendapatan dipotong separuh apabila ambang seterusnya dicapai."
+        "description": "Berdasarkan purata jumlah Orang Salji yang aktif minggu lepas, anda boleh melihat kadar pendapatan [[:coin_with_logo]] semasa. Kadar pendapatan dipotong separuh apabila ambang seterusnya dicapai."
       },
       "nickname": {
         "title": "Nama Samaran",
@@ -899,7 +899,7 @@
       },
       "balancehistory": {
         "title": "Sejarah Baki",
-        "description": "Anda boleh mendapatkan di sini baki [[:ice]] semasa anda dalam dompet tempatan dan blockchain. Baki dompet tempatan dikemas kini setiap jam, sementara baki blockchain dikemas kini setiap 24 jam."
+        "description": "Anda boleh mendapatkan di sini baki [[:coin_with_logo]] semasa anda dalam dompet tempatan dan blockchain. Baki dompet tempatan dikemas kini setiap jam, sementara baki blockchain dikemas kini setiap 24 jam."
       },
       "achievements": {
         "title": "Pencapaian",
@@ -949,33 +949,33 @@
   "social_media": {
     "tiktok": {
       "title": "Sertai kami di TikTok",
-      "description": "Kami sekadar mahu menjangkau anda dan memaklumkan kepada anda tentang komuniti baharu kami di TikTok. Kami berkongsi kandungan ceria dan bermaklumat tentang mata wang digital kami, Ice, dan kami ingin anda untuk menyertai kami!"
+      "description": "Kami sekadar mahu menjangkau anda dan memaklumkan kepada anda tentang komuniti baharu kami di TikTok. Kami berkongsi kandungan ceria dan bermaklumat tentang mata wang digital kami, [[:coin]], dan kami ingin anda untuk menyertai kami!"
     },
     "youtube": {
       "title": "Sertai kami di YouTube",
-      "description": "Dari tutorial tentang bagaimana hendak memperoleh Ice, hingga ke kemas kini tentang ciri-ciri baharu, dan juga kandungan komuniti cerita, saluran YouTube kami ialah tempat terbaik untuk kekal terkini."
+      "description": "Dari tutorial tentang bagaimana hendak memperoleh [[:coin]], hingga ke kemas kini tentang ciri-ciri baharu, dan juga kandungan komuniti cerita, saluran YouTube kami ialah tempat terbaik untuk kekal terkini."
     },
     "linkedin": {
       "title": "Sertai kami di LinkedIn",
-      "description": "Menyertai komuniti Ice di LinkedIn adalah satu cara bagus untuk kekal bermaklumat tentang perkembangan terkini dan berhubung dengan individu yang berfikiran sama yang juga mempunyai minat yang sama tentang masa depan mata wang digital dengan anda."
+      "description": "Menyertai komuniti [[:project]] di LinkedIn adalah satu cara bagus untuk kekal bermaklumat tentang perkembangan terkini dan berhubung dengan individu yang berfikiran sama yang juga mempunyai minat yang sama tentang masa depan mata wang digital dengan anda."
     },
     "facebook": {
       "title": "Sertai kami di Facebook",
       "description_part1": "Kami amat mengesyorkan anda mengikuti halaman Facebook kami.",
-      "description_part2": "Bukan sahaja ia akan membantu anda untuk kekal terkini dengan semua yang berlaku dengan projek Ice, tetapi juga ia cara bagus untuk berhubung dengan komuniti kami dan menjadi sebahagian perbualan."
+      "description_part2": "Bukan sahaja ia akan membantu anda untuk kekal terkini dengan semua yang berlaku dengan projek [[:project]], tetapi juga ia cara bagus untuk berhubung dengan komuniti kami dan menjadi sebahagian perbualan."
     },
     "instagram": {
       "title": "Sertai kami di Instagram",
-      "description_part1": "Menyertai kami di Instagram ialah cara bagus untuk kekal dalam gegelung dan berhubung dengan pengguna lain yang juga berkongsi minat yang sama tentang Ice",
+      "description_part1": "Menyertai kami di Instagram ialah cara bagus untuk kekal dalam gegelung dan berhubung dengan pengguna lain yang juga berkongsi minat yang sama tentang [[:project]]",
       "description_part2": "Dan juga, anda akan menjadi orang pertama yang mengetahui tentang apa-apa ciri baharu atau promosi yang kami lancarkan."
     },
     "reddit": {
       "title": "Sertai Kami di Reddit",
-      "description": "Cari komuniti Ice di Reddit, di mana individu-individu yang sefikiran berkumpul untuk berkongsi pemikiran mereka.\n\nSertai perbualan, ajukan soalan, dan teroka perbincangan menarik mengenai penambangan Ice, ciri-ciri, dan banyak lagi."
+      "description": "Cari komuniti [[:project]] di Reddit, di mana individu-individu yang sefikiran berkumpul untuk berkongsi pemikiran mereka.\n\nSertai perbualan, ajukan soalan, dan teroka perbincangan menarik mengenai penambangan [[:coin]], ciri-ciri, dan banyak lagi."
     },
     "discord": {
       "title": "Sertai Kami di Discord",
-      "description": "Sertai komuniti Discord yang bertenaga kami dan terlibat dalam perbincangan dan pandangan eksklusif mengenai Ice.\n\nTerlibat dalam perbualan yang aktif, kekal dimaklumkan tentang berita berkaitan Ice, dan menjadi sebahagian daripada komuniti yang berkongsi minat anda."
+      "description": "Sertai komuniti Discord yang bertenaga kami dan terlibat dalam perbincangan dan pandangan eksklusif mengenai [[:project]].\n\nTerlibat dalam perbualan yang aktif, kekal dimaklumkan tentang berita berkaitan [[:project]], dan menjadi sebahagian daripada komuniti yang berkongsi minat anda."
     },
     "ice_founder_twitter": {
       "title": "Ikuti Zeus di X",
@@ -987,12 +987,12 @@
     "title": "Sila tunggu sementara kami ping semua rakan anda · {{count}}"
   },
   "creative_library": {
-    "title": "Pustaka Kreatif Ice",
-    "share": "Bina pasukan impian anda di rangkaian Ice!",
+    "title": "Pustaka Kreatif [[:project]]",
+    "share": "Bina pasukan impian anda di rangkaian [[:project]]!",
     "get_started": {
       "header": "Bina pasukan impian anda",
-      "subtitle": "Mula di Ice dan bina komuniti mikro yang berkembang pesat",
-      "description": "Sertai jumlah pengguna Ice yang semakin bertambah pesat yang sedang membina komuniti mikro mereka sendiri dan mendapatkan lebih banyak ganjaran. Alat promosi, panduan, dan tip kami menjadikan mudah untuk menyebarkan mesej dan membina komuniti yang berjaya.",
+      "subtitle": "Mula di [[:project]] dan bina komuniti mikro yang berkembang pesat",
+      "description": "Sertai jumlah pengguna [[:project]] yang semakin bertambah pesat yang sedang membina komuniti mikro mereka sendiri dan mendapatkan lebih banyak ganjaran. Alat promosi, panduan, dan tip kami menjadikan mudah untuk menyebarkan mesej dan membina komuniti yang berjaya.",
       "get_started": "Mula",
       "carousel": {
         "01": {
@@ -1001,11 +1001,11 @@
         },
         "02": {
           "title": "Jemput",
-          "description": "Jemput penonton anda untuk menyertai Ice dan bekerjasama untuk membuka ganjaran tambahan.\n\nSelain itu, anda akan membantu menyebarkan mesej tentang kelebihan desentralisasi dan masa depan kewangan."
+          "description": "Jemput penonton anda untuk menyertai [[:project]] dan bekerjasama untuk membuka ganjaran tambahan.\n\nSelain itu, anda akan membantu menyebarkan mesej tentang kelebihan desentralisasi dan masa depan kewangan."
         },
         "03": {
           "title": "Peroleh",
-          "description": "Kembangkan ganjaran anda dengan memperluas rangkaian anda dan memberangsangkan orang lain untuk menyertai komuniti Ice.\n\nBersama kami dalam misi kami untuk merevolusi masa depan kewangan melalui desentralisasi dan autonomi."
+          "description": "Kembangkan ganjaran anda dengan memperluas rangkaian anda dan memberangsangkan orang lain untuk menyertai komuniti [[:project]].\n\nBersama kami dalam misi kami untuk merevolusi masa depan kewangan melalui desentralisasi dan autonomi."
         }
       }
     },
@@ -1022,14 +1022,14 @@
       },
       "03": {
         "title": "Banner Ditanam",
-        "description": "Dengan banner ditanam kami, anda boleh dengan mudah mempromosikan Ice kepada pelawat laman web anda dan menjemput mereka untuk menyertai komuniti mikro anda.",
+        "description": "Dengan banner ditanam kami, anda boleh dengan mudah mempromosikan [[:project]] kepada pelawat laman web anda dan menjemput mereka untuk menyertai komuniti mikro anda.",
         "action": "Pasang banner"
       }
     },
     "social_section": {
       "share": {
         "title": "Kongsi Cerita Anda",
-        "description": "Kongsi perjalanan anda dengan rangkaian Ice dan kelebihannya yang banyak dengan menulis artikel dalam bahasa anda.\n\nKongsi artikel di Blog, Medium, Reddit, Quora, Blogger dan banyak lagi.\n\nAnda boleh mencari segala-galanya tentang Ice dan ciri-ciri uniknya di [[/:link]]Pusat Pengetahuan[[/:link]], [[/:link]]Laman Utama[[/:link]], dan [[/:link]]Halaman Soalan Lazim[[/:link]]."
+        "description": "Kongsi perjalanan anda dengan rangkaian [[:project]] dan kelebihannya yang banyak dengan menulis artikel dalam bahasa anda.\n\nKongsi artikel di Blog, Medium, Reddit, Quora, Blogger dan banyak lagi.\n\nAnda boleh mencari segala-galanya tentang [[:project]] dan ciri-ciri uniknya di [[/:link]]Pusat Pengetahuan[[/:link]], [[/:link]]Laman Utama[[/:link]], dan [[/:link]]Halaman Soalan Lazim[[/:link]]."
       },
       "spread": {
         "title": "Sebarkan Mesej",
@@ -1043,12 +1043,12 @@
     "promo_section": {
       "web": {
         "title": "Plug & Main untuk Pemilik Laman Web",
-        "description": "Benamkan rangkaian Ice terus ke laman web anda dengan banner JS yang mudah dan fleksibel kami. Ia adalah pemasangan yang cepat dan mudah yang boleh disesuaikan dengan jenama laman web anda. Ia diterjemahkan ke dalam 50 bahasa dan serasi dengan mana-mana platform laman web.\n\nSalin dan tampal kod ke laman web anda, dan mulakan mempromosikan rangkaian Ice kepada pengunjung anda hari ini.",
+        "description": "Benamkan rangkaian [[:project]] terus ke laman web anda dengan banner JS yang mudah dan fleksibel kami. Ia adalah pemasangan yang cepat dan mudah yang boleh disesuaikan dengan jenama laman web anda. Ia diterjemahkan ke dalam 50 bahasa dan serasi dengan mana-mana platform laman web.\n\nSalin dan tampal kod ke laman web anda, dan mulakan mempromosikan rangkaian [[:project]] kepada pengunjung anda hari ini.",
         "action": "Pasang banner"
       },
       "mobile": {
         "title": "Pustaka untuk Aplikasi Mudah Alih",
-        "description": "Integrasikan pustaka mudah digunakan kami ke dalam aplikasi mudah alih anda dan jemput pengguna anda untuk menyertai komuniti mikro anda dan memulakan perlombongan.\n\nDengan sokongan terjemahan dan pilihan penyediaan fleksibel, anda boleh memastikan semua pengguna anda mempunyai akses kepada pengalaman Ice yang hebat yang sama, di mana jua mereka berada di dunia.",
+        "description": "Integrasikan pustaka mudah digunakan kami ke dalam aplikasi mudah alih anda dan jemput pengguna anda untuk menyertai komuniti mikro anda dan memulakan perlombongan.\n\nDengan sokongan terjemahan dan pilihan penyediaan fleksibel, anda boleh memastikan semua pengguna anda mempunyai akses kepada pengalaman [[:project]] yang hebat yang sama, di mana jua mereka berada di dunia.",
         "action1": "Pustaka Android",
         "action2": "Pustaka React Native"
       }
@@ -1059,7 +1059,7 @@
         "rules": {
           "01": {
             "title": "Menjadi Autentik",
-            "description": "Tulis dari pengalaman dan perspektif peribadi anda. Kongsi pemikiran dan perasaan ikhlas anda tentang rangkaian Ice."
+            "description": "Tulis dari pengalaman dan perspektif peribadi anda. Kongsi pemikiran dan perasaan ikhlas anda tentang rangkaian [[:project]]."
           },
           "02": {
             "title": "Gunakan Tone Mesra",
@@ -1067,7 +1067,7 @@
           },
           "03": {
             "title": "Berkreativiti",
-            "description": "Jangan takut untuk bereksperimen dengan pelbagai jenis kandungan, seperti catatan blog, video, atau kemas kini media sosial. Bersenang-senanglah dan berinovasi dalam cara anda mempromosikan rangkaian Ice kepada audiens anda."
+            "description": "Jangan takut untuk bereksperimen dengan pelbagai jenis kandungan, seperti catatan blog, video, atau kemas kini media sosial. Bersenang-senanglah dan berinovasi dalam cara anda mempromosikan rangkaian [[:project]] kepada audiens anda."
           }
         }
       },
@@ -1080,11 +1080,11 @@
           },
           "02": {
             "title": "Jangan Menyesatkan Orang",
-            "description": "Projek Ice tidak membayar pengguna dengan wang tunai, tetapi memberikan ganjaran dengan mata wang Ice. Sila elakkan daripada menghasilkan kandungan seperti \"Tukarkan Ice anda menjadi wang tunai\" atau \"Bagaimana untuk mendapatkan $100 dengan Ice\" dan sebagainya."
+            "description": "Projek [[:project]] tidak membayar pengguna dengan wang tunai, tetapi memberikan ganjaran dengan mata wang [[:project]]. Sila elakkan daripada menghasilkan kandungan seperti \"Tukarkan [[:project]] anda menjadi wang tunai\" atau \"Bagaimana untuk mendapatkan $100 dengan [[:project]]\" dan sebagainya."
           },
           "03": {
             "title": "Jangan Terlibat dalam Aktiviti Penipuan",
-            "description": "Kami menghargai ketelusan dan kejujuran dalam komuniti kami. Sebarang aktiviti penipuan seperti mencipta akaun berbilang atau cuba memanipulasi rangkaian Ice tidak akan ditoleransi."
+            "description": "Kami menghargai ketelusan dan kejujuran dalam komuniti kami. Sebarang aktiviti penipuan seperti mencipta akaun berbilang atau cuba memanipulasi rangkaian [[:project]] tidak akan ditoleransi."
           }
         }
       }
@@ -1094,7 +1094,7 @@
     "header": "Pengesahan Wajah",
     "title": "Langkah KYC #1",
     "description": "Untuk pengalaman yang lancar, kami menambah pengesahan wajah. Langkah ini berperanan sebagai [[:bold]]Langkah #1 KYC awal[[/:bold]], menyediakan anda untuk pengesahan yang lebih pantas di dalam Mainnet masa depan. \n\nSahkan identiti anda hari ini untuk memastikan perjalanan yang lancar ke hadapan!",
-    "consent": "Saya bersetuju dengan [[:link]]Terma dan Syarat KYC Ice[[/:link]].",
+    "consent": "Saya bersetuju dengan [[:link]]Terma dan Syarat KYC [[:project]][[/:link]].",
     "confirmation": "Saya mengesahkan bahawa identiti yang saya gunakan untuk pengesahan ini adalah sama dengan yang berkaitan dengan akaun ini, dan pilihan ini tidak boleh diubah kemudian.",
     "auth_status": {
       "loading": {
@@ -1184,7 +1184,7 @@
         "view_team": "lihat rakan-rakan"
       },
       "roadmap": {
-        "button_subtitle": "Dapatkan maklumat lanjut tentang wawasan masa depan kami di Ice."
+        "button_subtitle": "Dapatkan maklumat lanjut tentang wawasan masa depan kami di [[:project]]."
       },
       "join_mainnet": {
         "subtitle": "Dapatkan gambaran awal tentang aplikasi Mainnet kami yang akan datang dan ciri-ciri uniknya yang akan dilancarkan pada penghujung 2024."
@@ -1194,12 +1194,12 @@
       "invite_description": "Kembangkan pasukan anda dengan ahli baru"
     },
     "profile": {
-      "invite_friends_engage": "Sebarkan berita dan jemput rakan anda untuk menyertai komuniti Rangkaian Ice!"
+      "invite_friends_engage": "Sebarkan berita dan jemput rakan anda untuk menyertai komuniti Rangkaian [[:project]]!"
     },
     "walkthrough": {
       "home": {
         "invite": {
-          "description": "Gunakan ciri ini untuk menjemput rakan-rakan anda untuk menyertai komuniti Ice. Luaskan rangkaian anda, kongsi pengalaman, dan bina hubungan yang berpanjangan bersama-sama."
+          "description": "Gunakan ciri ini untuk menjemput rakan-rakan anda untuk menyertai komuniti [[:project]]. Luaskan rangkaian anda, kongsi pengalaman, dan bina hubungan yang berpanjangan bersama-sama."
         },
         "wallet": {
           "description": "Anda boleh mencari baki Ice semasa ini di sini, bersama dengan kadar pendapatan anda."
@@ -1218,7 +1218,7 @@
       }
     },
     "claimUsername": {
-      "description": "Rakan-rakan anda perlu menggunakan nama panggilan ini apabila menyertai [[:ice]]."
+      "description": "Rakan-rakan anda perlu menggunakan nama panggilan ini apabila menyertai [[:project]]."
     },
     "users": {
       "team": "Rakan-rakan"
@@ -1228,14 +1228,14 @@
         "team": "Pada masa ini, anda tidak mempunyai rakan-rakan!"
       },
       "contacts": {
-        "empty_description": "Selaraskan kenalan anda dan lihat siapa yang sudah ada di [[:ice]]."
+        "empty_description": "Selaraskan kenalan anda dan lihat siapa yang sudah ada di [[:project_with_logo]]."
       }
     }
   },
   "bsc_address": {
     "title": "Alamat BNB Smart Chain",
     "enter_address_title": "Masukkan alamat\nBNB Smart Chain anda",
-    "enter_address_description": "Semasa Fasa Satu, token ICE akan dikeluarkan di atas rangkaian blockchain BNB Smart Chain. Setelah dilancarkan, token boleh ditukar dari BNB Smart Chain ke rangkaian Ice Open Network (ION).",
+    "enter_address_description": "Semasa Fasa Satu, token [[:coin]] akan dikeluarkan di atas rangkaian blockchain BNB Smart Chain. Setelah dilancarkan, token boleh ditukar dari BNB Smart Chain ke rangkaian Ice Open Network (ION).",
     "enter_address_confirmation": "Adakah anda pasti alamat BNB Smart Chain anda betul?",
     "validators_warning_title": "Sahkan Alamat",
     "validators_warning_text": "Sila ambil perhatian bahawa individu yang telah menambah alamat BNB Smart Chain ke dalam akaun mereka tidak layak menjadi salah satu validator teratas seperti yang dinyatakan dalam whitepaper kami untuk pelancaran mainnet.",
@@ -1301,7 +1301,7 @@
   "distribution_kyc": {
     "select_method_step": {
       "title": "Pembahagian BNB Smart Chain",
-      "description": "Terima koin ICE BNB Smart Chain anda dengan memverifikasi akaun anda dengan mudah menggunakan profil X sedia ada."
+      "description": "Terima koin [[:coin]] BNB Smart Chain anda dengan memverifikasi akaun anda dengan mudah menggunakan profil X sedia ada."
     },
     "instructions_step": {
       "x": {
@@ -1326,13 +1326,13 @@
   "quiz": {
     "title": "Kuis",
     "intro": {
-      "description": "Di Ice, kami percaya dalam memupuk komuniti ahli yang aktif dan berpengetahuan. Misi kami adalah memastikan koin Ice disebarkan kepada mereka yang benar-benar terlibat dan sejajar dengan visi kami.",
+      "description": "Di [[:project]], kami percaya dalam memupuk komuniti ahli yang aktif dan berpengetahuan. Misi kami adalah memastikan koin [[:coin]] disebarkan kepada mereka yang benar-benar terlibat dan sejajar dengan visi kami.",
       "community_engagement": {
         "title": "🙌 Penglibatan Komuniti Aktif",
-        "description": "Penglibatan anda dalam Ekosistem Ice secara langsung mempengaruhi keupayaan perlombongan anda:",
+        "description": "Penglibatan anda dalam Ekosistem [[:project]] secara langsung mempengaruhi keupayaan perlombongan anda:",
         "point1": "Tetap Terkini: Terlibat dengan artikel berita dan video kami.",
         "point2": "Sertai Aktif: Sertai Program Pembangunan Peribadi kami dan sesi langsung di YouTube atau Twitter Space.",
-        "point3": "Interaksi Sosial: Tingkatkan kehadiran anda dengan menyukai, berkongsi, mengikuti, atau memposting tentang Ice.",
+        "point3": "Interaksi Sosial: Tingkatkan kehadiran anda dengan menyukai, berkongsi, mengikuti, atau memposting tentang [[:project]].",
         "bottom_description": "Semakin aktif anda, semakin tinggi skor interaksi positif anda, membolehkan anda melalui proses KYC."
       },
       "terms_privacy": "Saya faham & Saya bersetuju dengan [[:link]]Terma dan Syarat.[[/:link]]",
@@ -1348,7 +1348,7 @@
       },
       "why_quiz": {
         "title": "💡 Mengapa Kuis?",
-        "description": "Komitmen kami terhadap pengetahuan dan pemahaman berada di hadapan komuniti kami. Dengan kuis kami, kami bertujuan untuk memastikan bahawa Ice sampai ke tangan yang betul, mereka yang benar-benar memahami dan sejajar dengan visi projek kami."
+        "description": "Komitmen kami terhadap pengetahuan dan pemahaman berada di hadapan komuniti kami. Dengan kuis kami, kami bertujuan untuk memastikan bahawa [[:coin]] sampai ke tangan yang betul, mereka yang benar-benar memahami dan sejajar dengan visi projek kami."
       }
     },
     "quiz_failure": {
@@ -1383,7 +1383,7 @@
   "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "Pembahagian BNB Smart Chain",
-      "description": "Mengekalkan kelayakan pembahagian syiling ICE BNB Smart Chain bulanan anda dengan menyokong dengan aktifnya pengumuman-pengumuman pertukaran terkini di X."
+      "description": "Mengekalkan kelayakan pembahagian syiling [[:coin]] BNB Smart Chain bulanan anda dengan menyokong dengan aktifnya pengumuman-pengumuman pertukaran terkini di X."
     },
     "results_step": {
       "success": {

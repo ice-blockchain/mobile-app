@@ -1,21 +1,21 @@
 {
   "welcome": {
     "page1": {
-      "title": "欢迎来到 Ice",
-      "description": "[[:ice]] 是一种可以通过手机赚取收益的数字货币。Ice 由像您一样的日常用户拥有并运营。"
+      "title": "欢迎来到 [[:project]]",
+      "description": "[[:coin_with_logo]] 是一种可以通过手机赚取收益的数字货币。[[:coin]] 由像您一样的日常用户拥有并运营。"
     },
     "page2": {
       "title": "环境友善",
-      "description": "[[:ice]] 本质上比 BTC 更节能，因为它使用“权益证明”共识机制。通过权益证明 (POS)，加密货币持有者根据验证者权益的硬币数量来验证区块交易。"
+      "description": "[[:coin_with_logo]] 本质上比 BTC 更节能，因为它使用“权益证明”共识机制。通过权益证明 (POS)，加密货币持有者根据验证者权益的硬币数量来验证区块交易。"
     },
     "page3": {
       "title": "人民的硬币",
       "description_part1": "权力掌握在您的手中。",
-      "description_part2": "[[:ice]] 开发的一切内容都将完全开源，并由分散式自治组织 (DAO) 控制。"
+      "description_part2": "[[:project_with_logo]] 开发的一切内容都将完全开源，并由分散式自治组织 (DAO) 控制。"
     },
     "page4": {
       "title": "保持联系",
-      "description": "使用我们免费的节能移动应用，点击 [[:iceLogo]] 即可完成每日签到。每日点击签到可确保 Ice 由真人操作，而不是机器人。"
+      "description": "使用我们免费的节能移动应用，点击 [[:logo]] 即可完成每日签到。每日点击签到可确保 [[:coin]] 由真人操作，而不是机器人。"
     },
     "page5": {
       "title": "推荐并赚取收益",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "通知",
-      "description_part1": "[[:ice]] 签到会话仅持续 24 小时。是否希望在当前签到会话结束时收到通知?",
+      "description_part1": "[[:project_with_logo]] 签到会话仅持续 24 小时。是否希望在当前签到会话结束时收到通知?",
       "description_part2": "别担心，我们不会向您发送垃圾邮件！",
       "not_now": "以后再说"
     }
@@ -35,7 +35,7 @@
     "view_all": "查看全部",
     "invite_friend": {
       "title": "邀请好友",
-      "description": "邀请好友即可额外赚取 [[:ice]]。"
+      "description": "邀请好友即可额外赚取 [[:coin_with_logo]]。"
     },
     "see_all": "查看全部",
     "no": "否",
@@ -88,9 +88,9 @@
       "team": "目前您没有团队成员！"
     },
     "contacts": {
-      "empty_title": "[[:ice]] 和朋友在一起更好玩",
+      "empty_title": "[[:project_with_logo]] 和朋友在一起更好玩",
       "empty_button_title": "允许访问联系人",
-      "empty_description": "同步您的联系人，查看谁已经注册了 [[:ice]]。将来，您可以向任何联系人发送 Ice。"
+      "empty_description": "同步您的联系人，查看谁已经注册了 [[:project_with_logo]]。将来，您可以向任何联系人发送 [[:coin]]。"
     },
     "header": {
       "search_placeholder": "搜索用户",
@@ -113,7 +113,7 @@
       },
       "all_contacts": "所有联系人",
       "invite": "邀请",
-      "invitation_text": "{{name}}，您好！我想邀请您加入 Ice。"
+      "invitation_text": "{{name}}，您好！我想邀请您加入 [[:project]]。"
     },
     "tier_one": {
       "header_list": {
@@ -131,7 +131,7 @@
     "phone": "电话",
     "or": "或",
     "reset_password": "重置密码",
-    "welcome": "欢迎来到 Ice",
+    "welcome": "欢迎来到 [[:project]]",
     "email": "电子邮箱",
     "slogan": "去中心化的未来",
     "privacy": "继续操作即表示您同意我们的[[:link]]服务条款[[/:link]]和[[:link]]隐私政策[[/:link]]"
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "全球排名",
       "referrals": "推荐人",
-      "description": "推荐越多，赚的 [[:ice]] 就越多。"
+      "description": "推荐越多，赚的 [[:coin_with_logo]] 就越多。"
     },
     "referrals": {
       "title": "推荐人",
@@ -362,7 +362,7 @@
     "roadmap": {
       "title": "我们的愿景",
       "button_title": "白皮书",
-      "button_subtitle": "在Ice了解更多关于我们的愿景。"
+      "button_subtitle": "在[[:project]]了解更多关于我们的愿景。"
     },
     "join_mainnet": {
       "title": "加入去中心化的未来",
@@ -396,7 +396,7 @@
     "feedback_title": "发送反馈",
     "feedback_description": "与我们分享您的想法。",
     "invite_title": "邀请好友",
-    "invite_description": "邀请好友，赚取额外的 Ice。",
+    "invite_description": "邀请好友，赚取额外的 [[:coin]]。",
     "delete_title": "删除帐户",
     "delete_description": "删除您的帐户。",
     "delete_confirmation_title": "确定要删除该帐户吗？",
@@ -459,7 +459,7 @@
         },
         "system": {
           "title": "系统",
-          "description": "接收有关 Ice 应用的重要通知。"
+          "description": "接收有关 [[:project]] 应用的重要通知。"
         }
       }
     },
@@ -498,9 +498,9 @@
     "copy_link": "复制链接",
     "more": "更多",
     "copied": "已复制",
-    "share_message": "嗨，☃️ 雪人！加入我的 Ice 团队，使用我的推荐码注册即可获得 10 个 Ice 硬币：",
-    "share_subject": "加入我的 Ice 团队",
-    "description": "宣传并邀请您的朋友。每邀请一位新好友，即可赚取 [[:ice]]。",
+    "share_message": "嗨，☃️ 雪人！加入我的 [[:project]] 团队，使用我的推荐码注册即可获得 10 个 [[:coin]] 硬币：",
+    "share_subject": "加入我的 [[:project]] 团队",
+    "description": "宣传并邀请您的朋友。每邀请一位新好友，即可赚取 [[:coin_with_logo]]。",
     "share": "分享"
   },
   "users": {
@@ -538,14 +538,14 @@
     "time_left": "剩余时间",
     "mining_rate": "收益率",
     "appeal": "提高您的收益率",
-    "benefits_description": "预质押您的 Ice 奖励长达 5 年，可提高收益率最多 250%。",
+    "benefits_description": "预质押您的 [[:coin]] 奖励长达 5 年，可提高收益率最多 250%。",
     "bonus_label": "预质押奖金",
     "period_label": "质押期间",
     "title": "预质押",
     "current_rate": "当前收益率",
     "allocation": "分配",
     "description": "质押是一个涉及提交您的加密资产以支持区块链网络并确认交易的过程。",
-    "terms_agree": "我同意[[:ice]][[:link]]质押条款[[/:link]]。在选定的时间段内，您的 Ice 持有量将被锁定。",
+    "terms_agree": "我同意[[:coin_with_logo]][[:link]]质押条款[[/:link]]。在选定的时间段内，您的 [[:coin]] 持有量将被锁定。",
     "stake_now": "立即预质押！",
     "balance_label": "质押余额",
     "confirm_title": "确认预质押",
@@ -578,8 +578,8 @@
     "good_morning": "早上好",
     "good_afternoon": "下午好",
     "good_evening": "晚上好",
-    "ice": "Ice",
-    "ice_per_hour": "Ice/小时",
+    "ice": "[[:coin]]",
+    "ice_per_hour": "[[:coin]]/小时",
     "seconds_short": "秒",
     "minutes_short": "分钟",
     "hours_short": "小时",
@@ -592,7 +592,7 @@
     "views": "{{viewsCount}} 次浏览"
   },
   "search": {
-    "empty": "搜索联系人、Ice 好友和微社区成员。",
+    "empty": "搜索联系人、[[:project]] 好友和微社区成员。",
     "nothing_is_found": "无法找到所查找的内容。",
     "search_by_country": "搜索国家/地区",
     "search_for_users": "搜索用户",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "邀请好友",
     "button_title": "邀请好友",
-    "description": "您的好友尚未加入 [[:ice]]。给他发个邀请吧！"
+    "description": "您的好友尚未加入 [[:project_with_logo]]。给他发个邀请吧！"
   },
   "balance_history": {
     "title": "余额历史记录",
@@ -633,7 +633,7 @@
     "resurrection_no_confirm_message": "您将永远失去您的 [[:amount]] 枚硬币。确定要继续吗？",
     "resurrection_yes_confirm_message": "您只能复活一次！确定要继续吗？[[:amount]] 枚硬币将在一小时内返回您的余额。",
     "delete_account_confirmation_title": "确认删除",
-    "delete_account_confirmation_text": "删除您的帐户将永久删除您的所有数据，包括您的 Ice 余额。要继续吗？",
+    "delete_account_confirmation_text": "删除您的帐户将永久删除您的所有数据，包括您的 [[:coin]] 余额。要继续吗？",
     "registration_update_title": "注册更新",
     "registration_update_text": "我们暂时停止使用电话号码创建新帐户。要继续，您需要选择电子邮件地址或通过社交网络登录。",
     "link_email_title": "链接您的电子邮件",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "欢迎奖励",
-    "description": "恭喜，您收到了第一批 [[:value]] 枚 [[:ice]] 硬币，证明我们对[[:bold]]您的[[/:bold]][[:bold]]信任[[/:bold]]。",
+    "description": "恭喜，您收到了第一批 [[:value]] 枚 [[:coin_with_logo]] 硬币，证明我们对[[:bold]]您的[[/:bold]][[:bold]]信任[[/:bold]]。",
     "balance_label": "当前余额"
   },
   "country_select": {
@@ -728,7 +728,7 @@
     "snowman": {
       "title": "雪人",
       "subtitle": "建立冰雪帝国",
-      "description": "每 24 小时签到一次，以表明您对 Ice 网络的承诺，并证明您是人类，而不是机器人。"
+      "description": "每 24 小时签到一次，以表明您对 [[:project]] 网络的承诺，并证明您是人类，而不是机器人。"
     },
     "ambassador": {
       "title": "大使",
@@ -748,7 +748,7 @@
     "overrides": {
       "home": {
         "team": {
-          "description": "[[:ice]] 与朋友一起更好。在这个页面上，您可以查看您的团队成员的状态。您还可以从这里向他们发送消息。"
+          "description": "[[:project]] 与朋友一起更好。在这个页面上，您可以查看您的团队成员的状态。您还可以从这里向他们发送消息。"
         },
         "referralscard": {
           "title": "团队卡片",
@@ -758,7 +758,7 @@
       "team": {
         "segmented_control_tier_one": {
           "title": "团队",
-          "description": "在这里，您可以查看您邀请加入Ice Network的人员名单。您可以从这里轻松跟踪他们的状态，并向不活跃的人发送通知。"
+          "description": "在这里，您可以查看您邀请加入[[:project]] Network的人员名单。您可以从这里轻松跟踪他们的状态，并向不活跃的人发送通知。"
         },
         "active_users": {
           "description": "这是您的团队成员在其签到会话中的当前活动状态。当他们有活动的签到会话时，他们被视为活跃。"
@@ -787,15 +787,15 @@
     "team": {
       "allow_contacts": {
         "title": "允许访问联系人",
-        "description": "同步您的联系人，查看谁已经注册了 [[:ice]]。将来，您可以向任何联系人发送 [[:ice]]。"
+        "description": "同步您的联系人，查看谁已经注册了 [[:project_with_logo]]。将来，您可以向任何联系人发送 [[:project_with_logo]]。"
       },
       "confirm_phone": {
         "title": "确认电话号码",
-        "description": "确认您的身份，让您的联系人知道您也是 Ice 网络的成员。您的电话号码不会与其他第三方共享。"
+        "description": "确认您的身份，让您的联系人知道您也是 [[:project]] 网络的成员。您的电话号码不会与其他第三方共享。"
       },
       "contacts_list": {
         "title": "联系人列表",
-        "description": "这是包含您所有联系人的列表，已加入 [[:ice]] 网络的联系人将显示在列表的顶部。"
+        "description": "这是包含您所有联系人的列表，已加入 [[:project_with_logo]] 网络的联系人将显示在列表的顶部。"
       },
       "referrals": {
         "title": "推荐人",
@@ -831,7 +831,7 @@
     "home": {
       "home": {
         "title": "首页",
-        "description": "欢迎来到 [[:ice]]。在主屏幕上，您可以找到有关您的余额、当前收益率、全球排名以及团队的所有统计数据。"
+        "description": "欢迎来到 [[:project_with_logo]]。在主屏幕上，您可以找到有关您的余额、当前收益率、全球排名以及团队的所有统计数据。"
       },
       "invite": {
         "title": "邀请",
@@ -839,7 +839,7 @@
       },
       "team": {
         "title": "团队",
-        "description": "[[:ice]] 和朋友在一起更好玩。在此页面上，您可以查看 1 级和 2 级团队成员的状态。您也可以从这里给他们发送消息。"
+        "description": "[[:project_with_logo]] 和朋友在一起更好玩。在此页面上，您可以查看 1 级和 2 级团队成员的状态。您也可以从这里给他们发送消息。"
       },
       "news": {
         "title": "新闻资讯",
@@ -850,11 +850,11 @@
         "description": "自定义您的个人资料详细信息，并查看您获得的所有成就和徽章。使用此处的计算器，以便您可以估算收益。"
       },
       "earningicestart": {
-        "title": "赚取 Ice",
-        "description": "您可以点击此按钮每 24 小时启动一次 [[:ice]] 签到会话。别忘了每天签到，开始赚取收益！"
+        "title": "赚取 [[:coin]]",
+        "description": "您可以点击此按钮每 24 小时启动一次 [[:project_with_logo]] 签到会话。别忘了每天签到，开始赚取收益！"
       },
       "earningiceseemore": {
-        "title": "赚取 Ice",
+        "title": "赚取 [[:coin]]",
         "description": "再次点击，查看有关当前签到会话的更多详细信息。"
       },
       "stats": {
@@ -871,7 +871,7 @@
       },
       "wallet": {
         "title": "钱包卡片",
-        "description": "您可以在此处查看您的 [[:ice]] 当前余额以及收益率。来自您团队的在线推荐人越多，收益率就越高。"
+        "description": "您可以在此处查看您的 [[:coin_with_logo]] 当前余额以及收益率。来自您团队的在线推荐人越多，收益率就越高。"
       },
       "earning": {
         "title": "收益率卡片",
@@ -891,7 +891,7 @@
       },
       "adoptioncard": {
         "title": "采用率卡片",
-        "description": "根据上周活跃雪人总数的平均值，您可以查看当前 [[:ice]] 收益率。达到下一个门槛时，收益率将减半。"
+        "description": "根据上周活跃雪人总数的平均值，您可以查看当前 [[:coin_with_logo]] 收益率。达到下一个门槛时，收益率将减半。"
       },
       "nickname": {
         "title": "昵称",
@@ -899,7 +899,7 @@
       },
       "balancehistory": {
         "title": "余额历史记录",
-        "description": "您可以在本地钱包和区块链上找到您的 [[:ice]] 当前余额。本地钱包余额每小时更新一次，而区块链余额每 24 小时更新一次。"
+        "description": "您可以在本地钱包和区块链上找到您的 [[:coin_with_logo]] 当前余额。本地钱包余额每小时更新一次，而区块链余额每 24 小时更新一次。"
       },
       "achievements": {
         "title": "成就",
@@ -949,33 +949,33 @@
   "social_media": {
     "tiktok": {
       "title": "关注我们的 TikTok",
-      "description": "我们只是想与您建立联系，让您了解我们在 TikTok 上令人兴奋的新社区。我们正在分享有关数字货币 Ice 有趣且丰富的内容，我们希望您能加入我们！"
+      "description": "我们只是想与您建立联系，让您了解我们在 TikTok 上令人兴奋的新社区。我们正在分享有关数字货币 [[:coin]] 有趣且丰富的内容，我们希望您能加入我们！"
     },
     "youtube": {
       "title": "关注我们的 YouTube",
-      "description": "从有关如何赚取 Ice 的教程，到有关新功能的更新，甚至是有趣的社区内容，我们的 YouTube 频道是了解最新信息的理想场所。"
+      "description": "从有关如何赚取 [[:coin]] 的教程，到有关新功能的更新，甚至是有趣的社区内容，我们的 YouTube 频道是了解最新信息的理想场所。"
     },
     "linkedin": {
       "title": "关注我们的 LinkedIn",
-      "description": "加入 LinkedIn 上的 Ice 社区是了解最新进展并与志同道合的人建立联系的好方法，他们对数字货币的未来充满热情。"
+      "description": "加入 LinkedIn 上的 [[:project]] 社区是了解最新进展并与志同道合的人建立联系的好方法，他们对数字货币的未来充满热情。"
     },
     "facebook": {
       "title": "关注我们的 Facebook",
       "description_part1": "强烈建议您关注我们的 Facebook 页面。",
-      "description_part2": "不仅可以帮助您及时了解 Ice 项目的最新动态，而且还是与我们的社区建立联系并参与对话的好方法。"
+      "description_part2": "不仅可以帮助您及时了解 [[:project]] 项目的最新动态，而且还是与我们的社区建立联系并参与对话的好方法。"
     },
     "instagram": {
       "title": "关注我们的 Instagram",
-      "description_part1": "在 Instagram 上关注我们是了解最新动态并与其他也对 Ice 充满热情的用户建立联系的好方法",
+      "description_part1": "在 Instagram 上关注我们是了解最新动态并与其他也对 [[:project]] 充满热情的用户建立联系的好方法",
       "description_part2": "此外，您将会第一时间了解我们即将推出的任何新功能或优惠活动。"
     },
     "reddit": {
       "title": "在Reddit上加入我们",
-      "description": "在Reddit上探索Ice社区，那里志同道合的人聚在一起分享他们的想法。\n\n加入讨论，提出问题，并探索有关Ice挖掘、功能等引人入胜的讨论。"
+      "description": "在Reddit上探索[[:project]]社区，那里志同道合的人聚在一起分享他们的想法。\n\n加入讨论，提出问题，并探索有关[[:coin]]挖掘、功能等引人入胜的讨论。"
     },
     "discord": {
       "title": "在Discord上加入我们",
-      "description": "加入我们充满活力的Discord社区，深入讨论和Ice相关的见解。\n\n参与活跃的对话，了解与Ice相关的新闻，并成为一个与您共享激情的社区的一部分。"
+      "description": "加入我们充满活力的Discord社区，深入讨论和[[:project]]相关的见解。\n\n参与活跃的对话，了解与[[:project]]相关的新闻，并成为一个与您共享激情的社区的一部分。"
     },
     "ice_founder_twitter": {
       "title": "在X上关注Zeus",
@@ -1094,7 +1094,7 @@
     "header": "人脸认证",
     "title": "KYC 步骤 #1",
     "description": "为了提供无缝的体验，我们正在添加人脸认证。这一步将作为您的 [[:bold]]早期步骤 #1 KYC[[/:bold]]，为您未来 Mainnet 的简化验证做好准备。\n\n今天确认您的身份，以确保未来的旅程顺畅！",
-    "consent": "我同意 Ice 的 [[:link]]KYC 条款和条件[[/:link]]。",
+    "consent": "我同意 [[:project]] 的 [[:link]]KYC 条款和条件[[/:link]]。",
     "confirmation": "我确认我用于此认证的身份将与此帐户关联的相同，此选择不能在以后更改。",
     "auth_status": {
       "loading": {
@@ -1184,7 +1184,7 @@
         "view_team": "查看朋友"
       },
       "roadmap": {
-        "button_subtitle": "了解更多关于我们在 Ice 的未来愿景。"
+        "button_subtitle": "了解更多关于我们在 [[:project]] 的未来愿景。"
       },
       "join_mainnet": {
         "subtitle": "提前了解我们即将推出的 Mainnet 应用程序及其独特功能，将于 2024 年底发布。"
@@ -1194,12 +1194,12 @@
       "invite_description": "与新成员一起发展您的团队"
     },
     "profile": {
-      "invite_friends_engage": "传播消息并邀请您的朋友加入 Ice Network 社群！"
+      "invite_friends_engage": "传播消息并邀请您的朋友加入 [[:project]] Network 社群！"
     },
     "walkthrough": {
       "home": {
         "invite": {
-          "description": "使用此功能邀请您的朋友加入 Ice 社群。扩展您的网络，分享经验并共同建立持久的联系。"
+          "description": "使用此功能邀请您的朋友加入 [[:project]] 社群。扩展您的网络，分享经验并共同建立持久的联系。"
         },
         "wallet": {
           "description": "您可以在这里找到您当前的 Ice 余额，以及您的收益率。"
@@ -1218,7 +1218,7 @@
       }
     },
     "claimUsername": {
-      "description": "您的朋友加入 [[:ice]] 时必须使用此昵称。"
+      "description": "您的朋友加入 [[:project]] 时必须使用此昵称。"
     },
     "users": {
       "team": "朋友"
@@ -1228,14 +1228,14 @@
         "team": "目前您没有朋友！"
       },
       "contacts": {
-        "empty_description": "同步您的联系人并查看谁已经在 [[:ice]] 上。"
+        "empty_description": "同步您的联系人并查看谁已经在 [[:project_with_logo]] 上。"
       }
     }
   },
   "bsc_address": {
     "title": "BNB Smart Chain地址",
     "enter_address_title": "在此处输入您的\nBNB Smart Chain地址",
-    "enter_address_description": "在第一阶段期间，ICE代币将在BNB Smart Chain区块链上发布。在Mainnet启动后，您可以将代币从BNB Smart Chain交换到Ice Open Network（ION）区块链。",
+    "enter_address_description": "在第一阶段期间，[[:coin]]代币将在BNB Smart Chain区块链上发布。在Mainnet启动后，您可以将代币从BNB Smart Chain交换到Ice Open Network（ION）区块链。",
     "enter_address_confirmation": "您确定您的BNB Smart Chain地址是正确的吗？",
     "validators_warning_title": "确认地址",
     "validators_warning_text": "请注意：将BNB Smart Chain地址添加到其帐户的个人不有资格成为我们白皮书中主网启动的300个主验证者之一。",
@@ -1301,7 +1301,7 @@
   "distribution_kyc": {
     "select_method_step": {
       "title": "BNB Smart Chain分发",
-      "description": "通过使用您现有的X个人资料轻松验证您的帐户，接收您在BNB Smart Chain上的ICE代币。"
+      "description": "通过使用您现有的X个人资料轻松验证您的帐户，接收您在BNB Smart Chain上的[[:coin]]代币。"
     },
     "instructions_step": {
       "x": {
@@ -1326,13 +1326,13 @@
   "quiz": {
     "title": "测验",
     "intro": {
-      "description": "在Ice，我们坚信要培养一个充满活力和知情的社区。我们的使命是确保Ice币分发给那些真正参与并与我们的愿景相符的人。",
+      "description": "在[[:project]]，我们坚信要培养一个充满活力和知情的社区。我们的使命是确保[[:coin]]币分发给那些真正参与并与我们的愿景相符的人。",
       "community_engagement": {
         "title": "🙌 积极社区参与",
-        "description": "您在Ice生态系统内的参与直接影响着您的挖掘能力：",
+        "description": "您在[[:project]]生态系统内的参与直接影响着您的挖掘能力：",
         "point1": "保持更新：参与我们的新闻文章和视频。",
         "point2": "积极参与：加入我们的个人发展计划以及YouTube或Twitter Space上的直播会话。",
-        "point3": "社交互动：通过点赞、分享、关注或发布关于Ice的内容来增加您的存在感。",
+        "point3": "社交互动：通过点赞、分享、关注或发布关于[[:project]]的内容来增加您的存在感。",
         "bottom_description": "您参与越积极，您的积极互动得分越高，使您能够通过KYC流程。"
       },
       "terms_privacy": "我理解并同意[[:link]]使用条款和隐私政策[[/:link]]。",
@@ -1348,7 +1348,7 @@
       },
       "why_quiz": {
         "title": "💡 为什么要测验？",
-        "description": "我们对知识和理解的承诺位于我们社区的前沿。通过我们的测验，我们旨在确保 Ice 落入合适的手中，那些真正理解并与我们项目的愿景相一致的人手中。"
+        "description": "我们对知识和理解的承诺位于我们社区的前沿。通过我们的测验，我们旨在确保 [[:coin]] 落入合适的手中，那些真正理解并与我们项目的愿景相一致的人手中。"
       }
     },
     "quiz_failure": {
@@ -1383,7 +1383,7 @@
   "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "BNB智能链分配",
-      "description": "通过积极支持X上最新的交易所公告，保持您每月BNB智能链ICE币分配资格。"
+      "description": "通过积极支持X上最新的交易所公告，保持您每月BNB智能链[[:coin]]币分配资格。"
     },
     "results_step": {
       "success": {

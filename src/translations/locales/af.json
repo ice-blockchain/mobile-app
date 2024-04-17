@@ -1,21 +1,21 @@
 {
   "welcome": {
     "page1": {
-      "title": "Welkom by Ice",
-      "description": "[[:ice]] is 'n digitale geldeenheid wat jy met jou foon kan verdien. Ice word besit en bedryf deur alledaagse gebruikers soos jy."
+      "title": "Welkom by [[:project]]",
+      "description": "[[:coin_with_logo]] is 'n digitale geldeenheid wat jy met jou foon kan verdien. [[:coin]] word besit en bedryf deur alledaagse gebruikers soos jy."
     },
     "page2": {
       "title": "Planeet Vriendelik",
-      "description": "[[:ice]] is inherent meer energiedoeltreffend as BTC, aangesien dit 'n \"Proof of Stake\"-konsensusmeganisme gebruik. Met proof-of-stake (POS), valideer kripto-geldeenheid-eienaars bloktransaksies gebaseer op die aantal munte wat 'n valideerder insit."
+      "description": "[[:coin_with_logo]] is inherent meer energiedoeltreffend as BTC, aangesien dit 'n \"Proof of Stake\"-konsensusmeganisme gebruik. Met proof-of-stake (POS), valideer kripto-geldeenheid-eienaars bloktransaksies gebaseer op die aantal munte wat 'n valideerder insit."
     },
     "page3": {
       "title": "Mense se Muntstuk",
       "description_part1": "Die krag is in jou hande.",
-      "description_part2": "Alles wat ons by [[:ice]] ontwikkel sal oopbron wees en beheer word deur die Gedesentraliseerde outonome organisasie (DAO)."
+      "description_part2": "Alles wat ons by [[:project_with_logo]] ontwikkel sal oopbron wees en beheer word deur die Gedesentraliseerde outonome organisasie (DAO)."
     },
     "page4": {
       "title": "Bly gekonnekteer",
-      "description": "Tik [[:iceLogo]] vir jou daaglikse inklok met ons gratis, energie-lig mobiele toepassing. Jou daaglikse kraan verseker dat ys in die hande van regte mense beland, nie bots nie."
+      "description": "Tik [[:logo]] vir jou daaglikse inklok met ons gratis, energie-lig mobiele toepassing. Jou daaglikse kraan verseker dat ys in die hande van regte mense beland, nie bots nie."
     },
     "page5": {
       "title": "Verwys & Verdien",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Kennisgewings",
-      "description_part1": "[[:ice]] inkloksessies duur net vir 24 uur. Wil jy 'n kennisgewing ontvang wanneer jou huidige sessie eindig?",
+      "description_part1": "[[:project_with_logo]] inkloksessies duur net vir 24 uur. Wil jy 'n kennisgewing ontvang wanneer jou huidige sessie eindig?",
       "description_part2": "Moenie bekommerd wees nie, ons sal jou nie strooipos nie!",
       "not_now": "Nie nou nie"
     }
@@ -35,7 +35,7 @@
     "view_all": "bekyk alles",
     "invite_friend": {
       "title": "Nooi Vriende",
-      "description": "Verdien ekstra [[:ice]] deur jou vriende te nooi."
+      "description": "Verdien ekstra [[:coin_with_logo]] deur jou vriende te nooi."
     },
     "see_all": "sien alles",
     "no": "Nee",
@@ -88,9 +88,9 @@
       "team": "Jy het tans geen spanlede nie!"
     },
     "contacts": {
-      "empty_title": "[[:ice]] is beter met vriende",
+      "empty_title": "[[:project_with_logo]] is beter met vriende",
       "empty_button_title": "Laat kontakte toegang toe",
-      "empty_description": "Sinkroniseer jou kontakte en kyk wie reeds aan is [[:ice]]. In die toekoms sal jy Ice na enige van jou kontakte kan stuur."
+      "empty_description": "Sinkroniseer jou kontakte en kyk wie reeds aan is [[:project_with_logo]]. In die toekoms sal jy [[:coin]] na enige van jou kontakte kan stuur."
     },
     "header": {
       "search_placeholder": "Soek vir gebruikers",
@@ -113,7 +113,7 @@
       },
       "all_contacts": "Alle kontakte",
       "invite": "nooi",
-      "invitation_text": "Hallo {{name}}, ek wil jou uitnooi om by Ice aan te sluit."
+      "invitation_text": "Hallo {{name}}, ek wil jou uitnooi om by [[:project]] aan te sluit."
     },
     "tier_one": {
       "header_list": {
@@ -131,7 +131,7 @@
     "phone": "Foon",
     "or": "of",
     "reset_password": "Herstel wagwoord",
-    "welcome": "Welkom by Ice",
+    "welcome": "Welkom by [[:project]]",
     "email": "E-pos",
     "slogan": "Die Gedesentraliseerde Toekoms",
     "privacy": "Deur voort te gaan, stem jy in tot ons [[:link]] Diensbepalings [[/:link]] en [[:link]] Privaatheidsbeleid[[/:link]]"
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "GLOBALE RANGORDE",
       "referrals": "VERWYSINGS",
-      "description": "Verwys meer gebruikers en verdien meer [[:ice]]."
+      "description": "Verwys meer gebruikers en verdien meer [[:coin_with_logo]]."
     },
     "referrals": {
       "title": "VERWYSINGS",
@@ -362,7 +362,7 @@
     "roadmap": {
       "title": "ONS VISIE",
       "button_title": "Witboek",
-      "button_subtitle": "Meer te weten komen over onze visie bij Ice."
+      "button_subtitle": "Meer te weten komen over onze visie bij [[:project]]."
     },
     "join_mainnet": {
       "title": "Sluit aan by die Gedesentraliseerde Toekoms",
@@ -396,7 +396,7 @@
     "feedback_title": "Stuur terugvoering",
     "feedback_description": "Deel jou gedagtes met ons.",
     "invite_title": "Nooi vriende",
-    "invite_description": "Verdien ekstra Ice deur jou vriende te nooi.",
+    "invite_description": "Verdien ekstra [[:coin]] deur jou vriende te nooi.",
     "delete_title": "Skrap Rekening",
     "delete_description": "Verwyder jou rekening.",
     "delete_confirmation_title": "Is jy seker jy wil die rekening verwyder?",
@@ -459,7 +459,7 @@
         },
         "system": {
           "title": "Stelsel",
-          "description": "Ontvang belangrike kennisgewings oor die Ice toepassing."
+          "description": "Ontvang belangrike kennisgewings oor die [[:project]] toepassing."
         }
       }
     },
@@ -498,9 +498,9 @@
     "copy_link": "Kopieer skakel",
     "more": "Meer",
     "copied": "GEKOPIEER",
-    "share_message": "Hallo ☃️ Sneeuman! Sluit aan by my span op Ice en ontvang 10 Ice munte wanneer jy inteken met my verwysingskode:",
-    "share_subject": "Sluit aan by my span op Ice",
-    "description": "Versprei die woord en nooi jou vriende. Jy verdien [[:ice]] vir elke nuwe verwysing wat jy bring.",
+    "share_message": "Hallo ☃️ Sneeuman! Sluit aan by my span op [[:project]] en ontvang 10 [[:coin]] munte wanneer jy inteken met my verwysingskode:",
+    "share_subject": "Sluit aan by my span op [[:project]]",
+    "description": "Versprei die woord en nooi jou vriende. Jy verdien [[:coin_with_logo]] vir elke nuwe verwysing wat jy bring.",
     "share": "Deel"
   },
   "users": {
@@ -538,14 +538,14 @@
     "time_left": "Tyd oor",
     "mining_rate": "Verdienkoers",
     "appeal": "Verhoog jou verdienstekoers",
-    "benefits_description": "Speel jou Ice belonings vooraf vir tot 5 jaar in en verhoog jou verdienstekoers met tot 250%.",
+    "benefits_description": "Speel jou [[:coin]] belonings vooraf vir tot 5 jaar in en verhoog jou verdienstekoers met tot 250%.",
     "bonus_label": " Vooraf-Staking Bonus",
     "period_label": "Afgepende tydperk",
     "title": " Vooraf-Staking",
     "current_rate": "Huidige koers",
     "allocation": "Toekenning",
     "description": "Insette is 'n proses wat behels dat jy jou kripto-bates verbind om 'n blokkettingnetwerk te ondersteun en transaksies te bevestig.",
-    "terms_agree": "Ek stem in tot die [[:ice]] [[:link]]Staking-[[/:link]]bepalings. Jou Ice-besit sal vir die geselekteerde tydperk gesluit wees.",
+    "terms_agree": "Ek stem in tot die [[:coin_with_logo]] [[:link]]Staking-[[/:link]]bepalings. Jou [[:coin]]-besit sal vir die geselekteerde tydperk gesluit wees.",
     "stake_now": "Speel nou vooraf!",
     "balance_label": "Afgepende balans",
     "confirm_title": "Bevestig vooraf-inset",
@@ -578,8 +578,8 @@
     "good_morning": "Goeie more",
     "good_afternoon": "Goeie middag",
     "good_evening": "Goeienaand",
-    "ice": "Ice",
-    "ice_per_hour": "Ice/h",
+    "ice": "[[:coin]]",
+    "ice_per_hour": "[[:coin]]/h",
     "seconds_short": "s",
     "minutes_short": "m",
     "hours_short": "h",
@@ -592,7 +592,7 @@
     "views": "{{viewsCount}} kyke"
   },
   "search": {
-    "empty": "Soek na kontakte, Ice vriende en lede van jou mikro-gemeenskap.",
+    "empty": "Soek na kontakte, [[:project]] vriende en lede van jou mikro-gemeenskap.",
     "nothing_is_found": "Niks is vir jou navraag gevind nie.",
     "search_by_country": "Soek volgens land",
     "search_for_users": "Soek vir gebruikers",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Nooi 'n vriend",
     "button_title": "Nooi 'n vriend",
-    "description": "Jou vriend is nog nie op nie [[:ice]]. Stuur vir hom 'n uitnodiging!"
+    "description": "Jou vriend is nog nie op nie [[:project_with_logo]]. Stuur vir hom 'n uitnodiging!"
   },
   "balance_history": {
     "title": "Balans Geskiedenis",
@@ -633,7 +633,7 @@
     "resurrection_no_confirm_message": "Jy sal jou [[:amount]] munte vir ewig verloor. Is jy seker jy wil voortgaan?",
     "resurrection_yes_confirm_message": "Jy kan net een keer opstaan! Is jy seker jy wil voortgaan? Die [[:amount]] munte sal binne die volgende uur na jou balans terugkeer.",
     "delete_account_confirmation_title": "Bevestig Skrap",
-    "delete_account_confirmation_text": "As jy jou rekening skrap, sal al jou data permanent uitgevee word, insluitend jou Ice balans. Wil jy voortgaan?",
+    "delete_account_confirmation_text": "As jy jou rekening skrap, sal al jou data permanent uitgevee word, insluitend jou [[:coin]] balans. Wil jy voortgaan?",
     "registration_update_title": "Registrasie opdateer",
     "registration_update_text": "Ons het die skep van nuwe rekeninge met behulp van die telefoonnommer opgeskort. Om voort te gaan, sal u 'n e-posadres of 'n aanmelding in 'n sosiale netwerk moet kies.",
     "link_email_title": "Koppel u e-pos",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Welkom beloning",
-    "description": "Baie geluk, jy het jou eerste [[:value]] [[:ice]] munte ontvang wat bewys dat ons [[:bold]] Vertrou [[/:bold]] in [[:bold]]Jou[[/:bold]].",
+    "description": "Baie geluk, jy het jou eerste [[:value]] [[:coin_with_logo]] munte ontvang wat bewys dat ons [[:bold]] Vertrou [[/:bold]] in [[:bold]]Jou[[/:bold]].",
     "balance_label": "Jou huidige balaans"
   },
   "country_select": {
@@ -728,7 +728,7 @@
     "snowman": {
       "title": "Sneeuman",
       "subtitle": "Bou 'n sneeu-ryk",
-      "description": "Verdien deur elke 24 uur in te klok om jou verbintenis tot die Ice netwerk te wys en te bewys dat jy 'n mens is, nie 'n robot nie."
+      "description": "Verdien deur elke 24 uur in te klok om jou verbintenis tot die [[:project]] netwerk te wys en te bewys dat jy 'n mens is, nie 'n robot nie."
     },
     "ambassador": {
       "title": "Ambassadeur",
@@ -751,7 +751,7 @@
           "description": "Gebruik hierdie funksie om jou vriende uit te nooi om by die Ice-gemeenskap aan te sluit. Vergroot jou netwerk, deel ervarings en verdien saam belonings."
         },
         "team": {
-          "description": "[[:ice]] is beter met vriende. Op hierdie bladsy kan jy die status van jou spanlede sien. Jy kan hulle ook van hier af kontak maak."
+          "description": "[[:project]] is beter met vriende. Op hierdie bladsy kan jy die status van jou spanlede sien. Jy kan hulle ook van hier af kontak maak."
         },
         "referralscard": {
           "title": "Spankaart",
@@ -761,7 +761,7 @@
       "team": {
         "segmented_control_tier_one": {
           "title": "Span",
-          "description": "Hier kan jy die lys van die mense wat jy uitgenooi het om by die Ice-netwerk aan te sluit, sien. Jy kan maklik hulle status van hier af volg en kennisgewings aan die onaktiewe lede stuur."
+          "description": "Hier kan jy die lys van die mense wat jy uitgenooi het om by die [[:project]]-netwerk aan te sluit, sien. Jy kan maklik hulle status van hier af volg en kennisgewings aan die onaktiewe lede stuur."
         },
         "active_users": {
           "description": "Dit is die huidige status van jou spanlede se inloopaktiwiteit. Hulle tel as aktief wanneer hulle 'n aktiewe inloopsessie het."
@@ -790,15 +790,15 @@
     "team": {
       "allow_contacts": {
         "title": "Laat kontakte toe",
-        "description": "Sinkroniseer jou kontakte en kyk wie reeds aan is [[:ice]]. In die toekoms sal jy Ice na enige van jou kontakte kan stuur.[[:ice]]"
+        "description": "Sinkroniseer jou kontakte en kyk wie reeds aan is [[:project_with_logo]]. In die toekoms sal jy Ice na enige van jou kontakte kan stuur.[[:project_with_logo]]"
       },
       "confirm_phone": {
         "title": "Bevestig Foon",
-        "description": "Bevestig jou identiteit en laat jou kontakte toe om te weet dat jy ook 'n lid van die Ice netwerk is. Jou foonnommer sal nie met ander derde partye gedeel word nie."
+        "description": "Bevestig jou identiteit en laat jou kontakte toe om te weet dat jy ook 'n lid van die [[:project]] netwerk is. Jou foonnommer sal nie met ander derde partye gedeel word nie."
       },
       "contacts_list": {
         "title": "Lys van kontakte",
-        "description": "Dit is die lys met al jou kontakte, diegene wat reeds by die [[:ice]] netwerk aangesluit het, word bo-aan die lys vertoon."
+        "description": "Dit is die lys met al jou kontakte, diegene wat reeds by die [[:project_with_logo]] netwerk aangesluit het, word bo-aan die lys vertoon."
       },
       "referrals": {
         "title": "Verwysings",
@@ -834,7 +834,7 @@
     "home": {
       "home": {
         "title": "Tuis",
-        "description": "Welkom by [[:ice]]. Op die tuisskerm kan jy al die statistieke oor jou saldo, die huidige verdienstekoers, jou globale rangorde saam met jou span vind."
+        "description": "Welkom by [[:project_with_logo]]. Op die tuisskerm kan jy al die statistieke oor jou saldo, die huidige verdienstekoers, jou globale rangorde saam met jou span vind."
       },
       "invite": {
         "title": "nooi",
@@ -842,7 +842,7 @@
       },
       "team": {
         "title": "Span",
-        "description": "[[:ice]] is beter met vriende Op hierdie bladsy kan jy die status van jou spanlede van beide Vlak 1- en Vlak 2-vlakke sien Jy kan hulle ook van hier af ping."
+        "description": "[[:project_with_logo]] is beter met vriende Op hierdie bladsy kan jy die status van jou spanlede van beide Vlak 1- en Vlak 2-vlakke sien Jy kan hulle ook van hier af ping."
       },
       "news": {
         "title": "Nuus",
@@ -853,11 +853,11 @@
         "description": "Pas jou profielbesonderhede aan en sien al jou prestasies en kentekens wat jy verdien het. Gebruik die sakrekenaar van hier af, sodat jy jou verdienste kan skat."
       },
       "earningicestart": {
-        "title": "Verdien Ice",
-        "description": "Jy kan die [[:ice]] inkloksessie elke 24 uur begin deur hierdie knoppie te tik. Moenie vergeet om elke dag terug te kom en te begin verdien nie!"
+        "title": "Verdien [[:coin]]",
+        "description": "Jy kan die [[:project_with_logo]] inkloksessie elke 24 uur begin deur hierdie knoppie te tik. Moenie vergeet om elke dag terug te kom en te begin verdien nie!"
       },
       "earningiceseemore": {
-        "title": "Verdien Ice",
+        "title": "Verdien [[:coin]]",
         "description": "Tik weer en sien meer besonderhede oor jou huidige inkloksessie."
       },
       "stats": {
@@ -874,7 +874,7 @@
       },
       "wallet": {
         "title": "Beursiekaart",
-        "description": "Jy kan jou huidige [[:ice]] balans hier vind, tesame met die verdienstekoers. Hoe meer verwysings van jou span aanlyn is, hoe hoër is die verdienstekoers."
+        "description": "Jy kan jou huidige [[:coin_with_logo]] balans hier vind, tesame met die verdienstekoers. Hoe meer verwysings van jou span aanlyn is, hoe hoër is die verdienstekoers."
       },
       "earning": {
         "title": "Verdien Kaart",
@@ -894,7 +894,7 @@
       },
       "adoptioncard": {
         "title": "Aannemingskaart",
-        "description": "Gebaseer op die gemiddelde van die afgelope week se totaal van aktiewe sneeumanne, kan jy die huidige [[:ice]] verdienstekoers sien. Die verdienstekoers word gehalveer wanneer die volgende drempel bereik word."
+        "description": "Gebaseer op die gemiddelde van die afgelope week se totaal van aktiewe sneeumanne, kan jy die huidige [[:coin_with_logo]] verdienstekoers sien. Die verdienstekoers word gehalveer wanneer die volgende drempel bereik word."
       },
       "nickname": {
         "title": "Bynaam",
@@ -902,7 +902,7 @@
       },
       "balancehistory": {
         "title": "Balans Geskiedenis",
-        "description": "Jy kan hier jou huidige [[:ice]] balans op plaaslike beursie en blockchain vind. Die plaaslike beursiebalans word elke uur opgedateer, terwyl die blokkettingbalans elke 24 uur bygewerk word."
+        "description": "Jy kan hier jou huidige [[:coin_with_logo]] balans op plaaslike beursie en blockchain vind. Die plaaslike beursiebalans word elke uur opgedateer, terwyl die blokkettingbalans elke 24 uur bygewerk word."
       },
       "achievements": {
         "title": "Prestasies",
@@ -956,29 +956,29 @@
     },
     "youtube": {
       "title": "Sluit by ons aan op YouTube",
-      "description": "Van tutoriale oor hoe om Ice te verdien, tot opdaterings oor nuwe kenmerke, en selfs prettige gemeenskapsinhoud, ons YouTube-kanaal is die perfekte plek om op hoogte te bly."
+      "description": "Van tutoriale oor hoe om [[:coin]] te verdien, tot opdaterings oor nuwe kenmerke, en selfs prettige gemeenskapsinhoud, ons YouTube-kanaal is die perfekte plek om op hoogte te bly."
     },
     "linkedin": {
       "title": "Sluit by ons aan op LinkedIn",
-      "description": "Om by die Ice gemeenskap op LinkedIn aan te sluit is 'n goeie manier om op hoogte te bly van die jongste ontwikkelings en om met eendersdenkende individue te skakel wat net so passievol is oor die toekoms van digitale geldeenhede soos jy."
+      "description": "Om by die [[:project]] gemeenskap op LinkedIn aan te sluit is 'n goeie manier om op hoogte te bly van die jongste ontwikkelings en om met eendersdenkende individue te skakel wat net so passievol is oor die toekoms van digitale geldeenhede soos jy."
     },
     "facebook": {
       "title": "Sluit aan by ons op Facebook",
       "description_part1": "Ons beveel sterk aan om ons Facebook-blad te volg.",
-      "description_part2": "Nie net sal dit jou help om op hoogte te bly van alles wat met die Ice projek gebeur nie, maar dit is ook 'n goeie manier om met ons gemeenskap te skakel en deel te wees van die gesprek."
+      "description_part2": "Nie net sal dit jou help om op hoogte te bly van alles wat met die [[:project]] projek gebeur nie, maar dit is ook 'n goeie manier om met ons gemeenskap te skakel en deel te wees van die gesprek."
     },
     "instagram": {
       "title": "Sluit by ons aan op Instagram",
-      "description_part1": "Om ons op Instagram te volg is 'n goeie manier om op hoogte te bly en kontak te maak met ander gebruikers wat ook passievol is oor Ice",
+      "description_part1": "Om ons op Instagram te volg is 'n goeie manier om op hoogte te bly en kontak te maak met ander gebruikers wat ook passievol is oor [[:project]]",
       "description_part2": "Boonop sal jy die eerste wees wat weet van enige nuwe kenmerke of promosies wat ons bekendstel."
     },
     "reddit": {
       "title": "Sluit by ons aan op Reddit",
-      "description": "Ontdek die Ice-gemeenskap op Reddit, waar soortgelykdenkende individue saamkom om hul gedagtes te deel.\n\nSluit aan by die gesprek, vra vrae, en verken boeiende besprekings oor Ice-myne, kenmerke, en meer."
+      "description": "Ontdek die [[:project]]-gemeenskap op Reddit, waar soortgelykdenkende individue saamkom om hul gedagtes te deel.\n\nSluit aan by die gesprek, vra vrae, en verken boeiende besprekings oor [[:coin]]-myne, kenmerke, en meer."
     },
     "discord": {
       "title": "Sluit by ons aan op Discord",
-      "description": "Sluit aan by ons lewendige Discord-gemeenskap en duik in gesprekke en eksklusiewe insigte oor Ice.\n\nNeem deel aan lewendige geselskappe, bly op hoogte van nuus oor ice, en wees deel van 'n gemeenskap wat jou passie deel."
+      "description": "Sluit aan by ons lewendige Discord-gemeenskap en duik in gesprekke en eksklusiewe insigte oor [[:project]].\n\nNeem deel aan lewendige geselskappe, bly op hoogte van nuus oor [[:project]], en wees deel van 'n gemeenskap wat jou passie deel."
     },
     "ice_founder_twitter": {
       "title": "Volg Zeus op X",
@@ -990,12 +990,12 @@
     "title": "Wag asseblief terwyl ons al jou vriende ping · {{count}}"
   },
   "creative_library": {
-    "title": "Kreatiewe Ice Biblioteek",
-    "share": "Bou jou droomspan op die Ice-netwerk!",
+    "title": "Kreatiewe [[:project]] Biblioteek",
+    "share": "Bou jou droomspan op die [[:project]]-netwerk!",
     "get_started": {
       "header": "Bou jou droomspan",
-      "subtitle": "Begin op Ice en bou jou florerende mikrogemeenskap",
-      "description": "Sluit aan by die vinnig groeiende aantal Ice-gebruikers wat hul eie mikrogemeenskappe bou en meer belonings verdien. Ons promosiehulpmiddels, gidse en wenke maak dit maklik om die woord te versprei en 'n suksesvolle gemeenskap te bou.",
+      "subtitle": "Begin op [[:project]] en bou jou florerende mikrogemeenskap",
+      "description": "Sluit aan by die vinnig groeiende aantal [[:project]]-gebruikers wat hul eie mikrogemeenskappe bou en meer belonings verdien. Ons promosiehulpmiddels, gidse en wenke maak dit maklik om die woord te versprei en 'n suksesvolle gemeenskap te bou.",
       "get_started": "Begin",
       "carousel": {
         "01": {
@@ -1004,11 +1004,11 @@
         },
         "02": {
           "title": "Nooi uit",
-          "description": "Nooi jou gehoor uit om aan Ice deel te neem en saam te werk om addisionele belonings vry te stel.\n\nDaarbenewens sal jy help om die woord oor die voordele van desentralisasie en die toekoms van finansies te versprei."
+          "description": "Nooi jou gehoor uit om aan [[:project]] deel te neem en saam te werk om addisionele belonings vry te stel.\n\nDaarbenewens sal jy help om die woord oor die voordele van desentralisasie en die toekoms van finansies te versprei."
         },
         "03": {
           "title": "Verdien",
-          "description": "Groei jou belonings deur jou netwerk uit te brei en ander aan te moedig om by die Ice-gemeenskap aan te sluit.\n\nSluit by ons aan in ons missie om die toekoms van finansies deur desentralisasie en outonomie te revolusioneer."
+          "description": "Groei jou belonings deur jou netwerk uit te brei en ander aan te moedig om by die [[:project]]-gemeenskap aan te sluit.\n\nSluit by ons aan in ons missie om die toekoms van finansies deur desentralisasie en outonomie te revolusioneer."
         }
       }
     },
@@ -1025,14 +1025,14 @@
       },
       "03": {
         "title": "Ingebedde Banier",
-        "description": "Met ons ingebedde banier kan jy Ice maklik aan jou webwerfbesoekers bevorder en hulle uitnooi om by jou mikrogemeenskap aan te sluit.",
+        "description": "Met ons ingebedde banier kan jy [[:project]] maklik aan jou webwerfbesoekers bevorder en hulle uitnooi om by jou mikrogemeenskap aan te sluit.",
         "action": "Installeer die banier"
       }
     },
     "social_section": {
       "share": {
         "title": "Deel jou Storie",
-        "description": "Deel jou reis met die Ice-netwerk en sy vele voordele deur 'n artikel in jou taal te skryf.\n\nDeel dit op jou Blog, Medium, Reddit, Quora, Blogger en meer.\n\nJy kan alles oor Ice en sy unieke kenmerke op ons [[:link]]Kennisbasis[[/:link]], [[:link]]Tuisblad[[/:link]], en [[:link]]Veelgestelde Vrae[[/:link]]-bladsy vind."
+        "description": "Deel jou reis met die [[:project]]-netwerk en sy vele voordele deur 'n artikel in jou taal te skryf.\n\nDeel dit op jou Blog, Medium, Reddit, Quora, Blogger en meer.\n\nJy kan alles oor [[:project]] en sy unieke kenmerke op ons [[:link]]Kennisbasis[[/:link]], [[:link]]Tuisblad[[/:link]], en [[:link]]Veelgestelde Vrae[[/:link]]-bladsy vind."
       },
       "spread": {
         "title": "Versprei die Woord",
@@ -1046,12 +1046,12 @@
     "promo_section": {
       "web": {
         "title": "Prop & Speel vir Webwerf-eienaars",
-        "description": "Laat Ice-netwerk direk op jou webwerf met ons eenvoudige en buigsame JS-banier. Dit is 'n vinnige en maklike opstelling wat aangepas kan word om by jou webwerf se handelsmerk pas. Dit is vertaal na 50 tale en is versoenbaar met enige webwerfplatform.\n\nKopieer en plak die kode in jou webwerf, en begin vandag met die bevordering van Ice-netwerk aan jou besoekers.",
+        "description": "Laat [[:project]]-netwerk direk op jou webwerf met ons eenvoudige en buigsame JS-banier. Dit is 'n vinnige en maklike opstelling wat aangepas kan word om by jou webwerf se handelsmerk pas. Dit is vertaal na 50 tale en is versoenbaar met enige webwerfplatform.\n\nKopieer en plak die kode in jou webwerf, en begin vandag met die bevordering van [[:project]]-netwerk aan jou besoekers.",
         "action": "Installeer die banier"
       },
       "mobile": {
         "title": "Biblioteek vir Mobiele Apps",
-        "description": "Integreer ons maklik-te-gebruik-biblioteek in jou mobiele app en nooi jou gebruikers uit om by jou mikrogemeenskap aan te sluit en te begin myn.\n\nMet vertaalondesteuning en buigbare opstellingsopsies, kan jy verseker dat al jou gebruikers toegang het tot dieselfde fantastiese Ice-ervaring, maak nie saak waar hulle in die wêreld is nie.",
+        "description": "Integreer ons maklik-te-gebruik-biblioteek in jou mobiele app en nooi jou gebruikers uit om by jou mikrogemeenskap aan te sluit en te begin myn.\n\nMet vertaalondesteuning en buigbare opstellingsopsies, kan jy verseker dat al jou gebruikers toegang het tot dieselfde fantastiese [[:project]]-ervaring, maak nie saak waar hulle in die wêreld is nie.",
         "action1": "Android-biblioteek",
         "action2": "React Native-biblioteek"
       }
@@ -1062,7 +1062,7 @@
         "rules": {
           "01": {
             "title": "Wees egentlik",
-            "description": "Skryf uit jou persoonlike ervaring en perspektief. Deel jou eerlike gedagtes en gevoelens oor Ice-netwerk."
+            "description": "Skryf uit jou persoonlike ervaring en perspektief. Deel jou eerlike gedagtes en gevoelens oor [[:project]]-netwerk."
           },
           "02": {
             "title": "Gebruik 'n vriendelike toon",
@@ -1070,7 +1070,7 @@
           },
           "03": {
             "title": "Wees kreatief",
-            "description": "Moenie bang wees om te eksperimenteer met verskillende soorte inhoud nie, soos blogpos, videos, of sosiale media-opdaterings. Het pret en wees innoverend in die manier waarop jy Ice-netwerk aan jou gehoor bevorder."
+            "description": "Moenie bang wees om te eksperimenteer met verskillende soorte inhoud nie, soos blogpos, videos, of sosiale media-opdaterings. Het pret en wees innoverend in die manier waarop jy [[:project]]-netwerk aan jou gehoor bevorder."
           }
         }
       },
@@ -1083,11 +1083,11 @@
           },
           "02": {
             "title": "Mislei mense nie",
-            "description": "Die Ice-projek betaal nie gebruikers enige kontant nie, ons beloon slegs met Ice-munte. Moet asseblief nie inhoud plaas soos \"Verander jou Ice in kontant\" nie. \"Hoe om $100 met Ice te verdien\" en so aan."
+            "description": "Die [[:project]]-projek betaal nie gebruikers enige kontant nie, ons beloon slegs met [[:project]]-munte. Moet asseblief nie inhoud plaas soos \"Verander jou [[:project]] in kontant\" nie. \"Hoe om $100 met [[:project]] te verdien\" en so aan."
           },
           "03": {
             "title": "Neem nie deel aan bedrieglike aktiwiteite nie",
-            "description": "Ons waardeer deursigtigheid en eerlikheid in ons gemeenskap. Enige bedrieglike aktiwiteite, soos die skep van meervoudige rekeninge of die probeer manipuleer van die Ice-netwerk, sal nie geduld word nie."
+            "description": "Ons waardeer deursigtigheid en eerlikheid in ons gemeenskap. Enige bedrieglike aktiwiteite, soos die skep van meervoudige rekeninge of die probeer manipuleer van die [[:project]]-netwerk, sal nie geduld word nie."
           }
         }
       }
@@ -1097,7 +1097,7 @@
     "header": "Gesigsautentifikasie",
     "title": "KYC Stap #1",
     "description": "Vir 'n naadloose ervaring voeg ons gesigsautentifikasie by. Hierdie stap tree op as jou [[:bold]]vroeë Stap #1 KYC[[/:bold]], wat jou voorberei vir 'n gestroomlynde verifikasie vir die toekomstige Mainnet. \n\nBevestig jou identiteit vandag om 'n gladdeloopende reis te verseker!",
-    "consent": "Ek stem in met die Ice [[:link]]KYC-terme en -voorwaardes[[/:link]].",
+    "consent": "Ek stem in met die [[:project]] [[:link]]KYC-terme en -voorwaardes[[/:link]].",
     "confirmation": "Ek bevestig dat die identiteit wat ek vir hierdie stawing gebruik dieselfde een sal wees wat met hierdie rekening geassosieer word, en hierdie keuse kan nie later verander word nie.",
     "auth_status": {
       "loading": {
@@ -1187,7 +1187,7 @@
         "view_team": "sien vriende"
       },
       "roadmap": {
-        "button_subtitle": "Leer meer oor ons toekomstige visie by Ice."
+        "button_subtitle": "Leer meer oor ons toekomstige visie by [[:project]]."
       },
       "join_mainnet": {
         "subtitle": "Kry 'n voorsmaak van ons toekomstige Mainnet-app en sy unieke eienskappe, wat aan die einde van 2024 vrygestel sal word."
@@ -1197,12 +1197,12 @@
       "invite_description": "Bou jou span uit met nuwe lede"
     },
     "profile": {
-      "invite_friends_engage": "Versprei die woord en nooi jou vriende uit om deel te word van die Ice Network-gemeenskap!"
+      "invite_friends_engage": "Versprei die woord en nooi jou vriende uit om deel te word van die [[:project]] Network-gemeenskap!"
     },
     "walkthrough": {
       "home": {
         "invite": {
-          "description": "Gebruik hierdie funksie om jou vriende uit te nooi om deel te word van die Ice-gemeenskap. Brei jou netwerk uit, deel ervarings en bou saam blywende verbindings."
+          "description": "Gebruik hierdie funksie om jou vriende uit te nooi om deel te word van die [[:project]]-gemeenskap. Brei jou netwerk uit, deel ervarings en bou saam blywende verbindings."
         },
         "wallet": {
           "description": "Jy kan hier jou huidige Ice-balans vind, saam met die verdienkoers."
@@ -1221,7 +1221,7 @@
       }
     },
     "claimUsername": {
-      "description": "Jou vriende sal hierdie bynaam moet gebruik wanneer hulle by [[:ice]] aansluit."
+      "description": "Jou vriende sal hierdie bynaam moet gebruik wanneer hulle by [[:project]] aansluit."
     },
     "users": {
       "team": "Vriende"
@@ -1231,14 +1231,14 @@
         "team": "Jy het tans nie enige vriende nie!"
       },
       "contacts": {
-        "empty_description": "Synchroniseer jou kontakte en sien wie is reeds op [[:ice]]."
+        "empty_description": "Synchroniseer jou kontakte en sien wie is reeds op [[:project_with_logo]]."
       }
     }
   },
   "bsc_address": {
     "title": "BNB Smart Chain-adres",
     "enter_address_title": "Voer jou\nBNB Smart Chain-adres in",
-    "enter_address_description": "Tydens Fase Een sal die ICE-tokens op die BNB Smart Chain blockchain vrygestel word. Sodra die hoofnet geloods is, sal die tokens vanaf die BNB Smart Chain na die Ice Open Network (ION) blockchain geruil kan word.",
+    "enter_address_description": "Tydens Fase Een sal die [[:coin]]-tokens op die BNB Smart Chain blockchain vrygestel word. Sodra die hoofnet geloods is, sal die tokens vanaf die BNB Smart Chain na die Ice Open Network (ION) blockchain geruil kan word.",
     "enter_address_confirmation": "Is jy seker dat die BNB Smart Chain-adres korrek is?",
     "validators_warning_title": "Bevestig Adres",
     "validators_warning_text": "Let daarop dat individue wat 'n BNB Smart Chain-adres bygevoeg het tot hul rekening, nie in aanmerking kom om een van die top 300-valideerders te word nie, soos uiteengesit in ons whitepaper vir die hoofnet-lansering nie.",
@@ -1304,7 +1304,7 @@
   "distribution_kyc": {
     "select_method_step": {
       "title": "BNB Smart Chain-verspreiding",
-      "description": "Ontvang jou BNB Smart Chain ICE-munte deur jou rekening maklik te verifieer met behulp van jou bestaande X-profiel."
+      "description": "Ontvang jou BNB Smart Chain [[:coin]]-munte deur jou rekening maklik te verifieer met behulp van jou bestaande X-profiel."
     },
     "instructions_step": {
       "x": {
@@ -1329,13 +1329,13 @@
   "quiz": {
     "title": "Toets",
     "intro": {
-      "description": "By Ice, glo ons in die bevordering van 'n gemeenskap van aktiewe en ingeligte lede. Ons missie is om te verseker dat Ice-munte aan dié wat werklik betrokke is en ooreenstem met ons visie, uitgedeel word.",
+      "description": "By [[:project]], glo ons in die bevordering van 'n gemeenskap van aktiewe en ingeligte lede. Ons missie is om te verseker dat [[:coin]]-munte aan dié wat werklik betrokke is en ooreenstem met ons visie, uitgedeel word.",
       "community_engagement": {
         "title": "🙌 Aktiewe Gemeenskapsbetrokkenheid",
-        "description": "Jou betrokkenheid binne die Ice-ekosisteem beïnvloed direk jou mynboumoontlikhede:",
+        "description": "Jou betrokkenheid binne die [[:project]]-ekosisteem beïnvloed direk jou mynboumoontlikhede:",
         "point1": "Bly op hoogte: Betrokkenheid met ons nuusartikels en video's.",
         "point2": "Neem aktief deel: Sluit aan by ons Persoonlike Ontwikkelingsprogram en lewende sessies op YouTube of Twitter Space.",
-        "point3": "Sosiale interaksies: Verbeter jou teenwoordigheid deur te like, deel, volg, of pos te plaas oor Ice.",
+        "point3": "Sosiale interaksies: Verbeter jou teenwoordigheid deur te like, deel, volg, of pos te plaas oor [[:project]].",
         "bottom_description": "Hoe meer betrokke jy is, hoe hoër jou positiewe interaksiesyfer, wat jou in staat stel om die KYC-proses te deurloop."
       },
       "terms_privacy": "Ek verstaan ​​en stem in met die [[:link]]Algemene Voorwaardes[[/:link]].",
@@ -1351,7 +1351,7 @@
       },
       "why_quiz": {
         "title": "💡 Waarom die Toets?",
-        "description": "Ons toewyding tot kennis en begrip is aan die voorpunt van ons gemeenskap. Met ons toets mik ons daarop om te verseker dat Ice sy pad vind na die regte hande, dié die werklik verstaan en ooreenstem met ons projek se visie."
+        "description": "Ons toewyding tot kennis en begrip is aan die voorpunt van ons gemeenskap. Met ons toets mik ons daarop om te verseker dat [[:coin]] sy pad vind na die regte hande, dié die werklik verstaan en ooreenstem met ons projek se visie."
       }
     },
     "quiz_failure": {
@@ -1386,7 +1386,7 @@
   "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "BNB Slim Kettingverspreiding",
-      "description": "Handhaaf jou maandelikse BNB Slim Ketting ICE-muntenverspreidingsgeregtigheid deur aktief die nuutste Ruil-aankondigings op X te ondersteun."
+      "description": "Handhaaf jou maandelikse BNB Slim Ketting [[:coin]]-muntenverspreidingsgeregtigheid deur aktief die nuutste Ruil-aankondigings op X te ondersteun."
     },
     "results_step": {
       "success": {
