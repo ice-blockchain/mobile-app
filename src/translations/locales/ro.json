@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "Bun venit la [[:project]]",
-      "description": "[[:coin_with_logo]] este o monedă digitală pe care o poți câștiga cu telefonul tău. [[:coin]] este deținută și administrată de utilizatori obișnuiți ca tine."
+      "description": "[[:coin]] este o monedă digitală pe care o poți câștiga cu telefonul tău. [[:coin]] este deținută și administrată de utilizatori obișnuiți ca tine."
     },
     "page2": {
       "title": "Prietenoasă cu planeta",
-      "description": "[[:coin_with_logo]] are în mod inerent o eficiență energetică mai mare decât BTC, deoarece utilizează un mecanism de consens de tip „dovada mizei”. Cu dovada mizei (POS), deținătorii de criptomonede validează tranzacțiile în bloc pe baza numărului de monede mizate de un validator."
+      "description": "[[:coin]] are în mod inerent o eficiență energetică mai mare decât BTC, deoarece utilizează un mecanism de consens de tip „dovada mizei”. Cu dovada mizei (POS), deținătorii de criptomonede validează tranzacțiile în bloc pe baza numărului de monede mizate de un validator."
     },
     "page3": {
       "title": "Moneda oamenilor",
       "description_part1": "Puterea este în mâinile tale.",
-      "description_part2": "Tot ce dezvoltăm la [[:project_with_logo]] va fi cu sursă deschisă și controlat de Organizația Autonomă Descentralizată (DAO)."
+      "description_part2": "Tot ce dezvoltăm la [[:project]] va fi cu sursă deschisă și controlat de Organizația Autonomă Descentralizată (DAO)."
     },
     "page4": {
       "title": "Rămâi conectat",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Notificări",
-      "description_part1": "[[:project_with_logo]] sesiunile de vizită durează doar 24 de ore. Dorești să primești o notificare când se încheie sesiunea ta actuală?",
+      "description_part1": "[[:project]] sesiunile de vizită durează doar 24 de ore. Dorești să primești o notificare când se încheie sesiunea ta actuală?",
       "description_part2": "Nu-ți face griji, nu îți vom trimite spam!",
       "not_now": "Nu acum"
     }
@@ -35,7 +35,7 @@
     "view_all": "vizualizează toate",
     "invite_friend": {
       "title": "Invită prieteni",
-      "description": "Câștigă [[:coin_with_logo]] în plus invitându-ți prietenii."
+      "description": "Câștigă [[:coin]] în plus invitându-ți prietenii."
     },
     "see_all": "vezi toate",
     "no": "Nu",
@@ -88,9 +88,9 @@
       "team": "În prezent, nu aveți niciun membru în echipă!"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] este mai bun cu prietenii",
+      "empty_title": "[[:project]] este mai bun cu prietenii",
       "empty_button_title": "Permite accesul la contacte",
-      "empty_description": "Sincronizează-ți contactele și vezi cine se află deja pe [[:project_with_logo]]. În viitor, vei putea să trimiți [[:coin]] către oricare dintre contactele tale."
+      "empty_description": "Sincronizează-ți contactele și vezi cine se află deja pe [[:project]]. În viitor, vei putea să trimiți [[:coin]] către oricare dintre contactele tale."
     },
     "header": {
       "search_placeholder": "Caută utilizatori",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "POZIȚIA GLOBALĂ",
       "referrals": "RECOMANDĂRI",
-      "description": "Recomandă-ne mai multor utilizatori și câștigă mai mult [[:coin_with_logo]]."
+      "description": "Recomandă-ne mai multor utilizatori și câștigă mai mult [[:coin]]."
     },
     "referrals": {
       "title": "RECOMANDĂRI",
@@ -500,7 +500,7 @@
     "copied": "COPIAT",
     "share_message": "Bună, ☃️ Om de zăpadă! Alătură-te echipei mele pe [[:project]] și vei primi 10 monede [[:coin]] atunci când te vei înregistra folosind codul meu de recomandare:",
     "share_subject": "Alătură-te echipei mele pe [[:project]]",
-    "description": "Dă informația mai departe și invită-ți prietenii. Câștigi [[:coin_with_logo]] pentru fiecare nouă recomandare pe care o faci.",
+    "description": "Dă informația mai departe și invită-ți prietenii. Câștigi [[:coin]] pentru fiecare nouă recomandare pe care o faci.",
     "share": "Distribuie"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "Rata actuală",
     "allocation": "Alocare",
     "description": "Mizarea este un proces care presupune să îți dedici criptoactivele susținerii unei rețele blockchain și confirmării tranzacțiilor.",
-    "terms_agree": "Sunt de acord cu [[:coin_with_logo]] [[:link]]Condițiile de mizare[[/:link]]. Pachetul tău de [[:coin]] va fi blocat pentru perioada selectată.",
+    "terms_agree": "Sunt de acord cu [[:coin]] [[:link]]Condițiile de mizare[[/:link]]. Pachetul tău de [[:coin]] va fi blocat pentru perioada selectată.",
     "stake_now": "Mizează anticipat acum!",
     "balance_label": "Sold mizat",
     "confirm_title": "Confirmă mizarea anticipată",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Invită prietenul",
     "button_title": "Invită prietenul",
-    "description": "Prietenul tău încă nu este pe [[:project_with_logo]]. Trimite-i o invitație!"
+    "description": "Prietenul tău încă nu este pe [[:project]]. Trimite-i o invitație!"
   },
   "balance_history": {
     "title": "Istoricul soldului",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Recompensă de bun venit",
-    "description": "Felicitări, ți-ai primit primele [[:value]] monede [[:coin_with_logo]], ceea ce demonstrează [[:bold]]încrederea[[/:bold]] pe care o avem în [[:bold]]tine[[/:bold]].",
+    "description": "Felicitări, ți-ai primit primele [[:value]] monede [[:coin]], ceea ce demonstrează [[:bold]]încrederea[[/:bold]] pe care o avem în [[:bold]]tine[[/:bold]].",
     "balance_label": "Soldul tău actual"
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "Permite contactele",
-        "description": "Sincronizează-ți contactele și vezi cine se află deja pe [[:project_with_logo]]. În viitor, vei putea să trimiți [[:project_with_logo]] către oricare dintre contactele tale."
+        "description": "Sincronizează-ți contactele și vezi cine se află deja pe [[:project]]. În viitor, vei putea să trimiți [[:project]] către oricare dintre contactele tale."
       },
       "confirm_phone": {
         "title": "Confirmă telefonul",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "Lista de contacte",
-        "description": "Aceasta este lista cu toate contactele tale, cei care s-au alăturat deja rețelei [[:project_with_logo]] fiind afișați în capul listei."
+        "description": "Aceasta este lista cu toate contactele tale, cei care s-au alăturat deja rețelei [[:project]] fiind afișați în capul listei."
       },
       "referrals": {
         "title": "Recomandări",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "Nivelul 1",
-        "description": "Aici poți vedea lista recomandărilor tale pentru Nivelul 1. Pentru fiecare prieten care vizitează simultan cu tine, vei primi 25% în plus la actuala rată de bază a câștigului din adoptare. [[:link]]Citește mai mult[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Aici poți vedea lista recomandărilor tale pentru Nivelul 1. Pentru fiecare prieten care vizitează simultan cu tine, vei primi 25% în plus la actuala rată de bază a câștigului din adoptare. [[:link]]Citește mai mult[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "Nivelul 2",
-        "description": "Aici poți vedea lista tuturor recomandărilor tale pentru Nivelul 2. Pentru fiecare prieten care vizitează simultan cu tine, vei primi 5% în plus la actuala rată de bază a câștigului din adoptare. [[:link]]Citește mai mult[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Aici poți vedea lista tuturor recomandărilor tale pentru Nivelul 2. Pentru fiecare prieten care vizitează simultan cu tine, vei primi 5% în plus la actuala rată de bază a câștigului din adoptare. [[:link]]Citește mai mult[[/:link]]"
       },
       "active_users": {
         "title": "Utilizatori activi",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "Acasă",
-        "description": "Bun venit la [[:project_with_logo]]. Pe ecranul de pornire poți găsi toate statisticile despre soldul tău, rata actuală a câștigului, poziția ta globală alături de echipa ta."
+        "description": "Bun venit la [[:project]]. Pe ecranul de pornire poți găsi toate statisticile despre soldul tău, rata actuală a câștigului, poziția ta globală alături de echipa ta."
       },
       "invite": {
         "title": "Invită",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "Echipa",
-        "description": "[[:project_with_logo]] este mai bun cu prietenii. Pe această pagină poți vedea starea membrilor echipei tale de la Nivelul 1, precum și de la Nivelul 2. Poți, de asemenea, să le dai ping de aici."
+        "description": "[[:project]] este mai bun cu prietenii. Pe această pagină poți vedea starea membrilor echipei tale de la Nivelul 1, precum și de la Nivelul 2. Poți, de asemenea, să le dai ping de aici."
       },
       "news": {
         "title": "Noutăți",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "Cum câștigi [[:coin]]",
-        "description": "Poți începe sesiunea de vizitare a [[:project_with_logo]] o dată la 24 de ore atingând acest buton. Nu uita să revii în fiecare zi și să începi să câștigi!"
+        "description": "Poți începe sesiunea de vizitare a [[:project]] o dată la 24 de ore atingând acest buton. Nu uita să revii în fiecare zi și să începi să câștigi!"
       },
       "earningiceseemore": {
         "title": "Cum câștigi [[:coin]]",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "Ajutor",
-        "description": "Ai întrebări? Aruncă o privire la lista noastră de întrebări frecvente. Dacă nu găsești ceea ce cauți, nu ezita să iei legătura cu noi la hi@ice.io."
+        "description": "Ai întrebări? Aruncă o privire la lista noastră de întrebări frecvente. Dacă nu găsești ceea ce cauți, nu ezita să iei legătura cu noi la {{email}}."
       },
       "preStaking": {
         "title": "Mizare anticipată",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "Fișă portofel",
-        "description": "Aici poți găsi soldul tău [[:coin_with_logo]] actual, alături de rata câștigului. Cu cât sunt online mai mulți utilizatori invitați din echipa ta, cu atât este mai mare rata câștigului."
+        "description": "Aici poți găsi soldul tău [[:coin]] actual, alături de rata câștigului. Cu cât sunt online mai mulți utilizatori invitați din echipa ta, cu atât este mai mare rata câștigului."
       },
       "earning": {
         "title": "Fișă câștiguri",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "Fișă adoptare",
-        "description": "Pe baza mediei numărului total de Oameni de zăpadă activi săptămâna trecută, poți vedea rata actuală a câștigului pe [[:coin_with_logo]]. Rata câștigului se înjumătățește când se atinge pragul următor."
+        "description": "Pe baza mediei numărului total de Oameni de zăpadă activi săptămâna trecută, poți vedea rata actuală a câștigului pe [[:coin]]. Rata câștigului se înjumătățește când se atinge pragul următor."
       },
       "nickname": {
         "title": "Pseudonim",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "Istoricul soldului",
-        "description": "Aici poți găsi soldul tău [[:coin_with_logo]] actual din portofelul local și blockchain. Soldul portofelului local este actualizat o dată pe oră, în timp ce soldul blockchain-ului este actualizat o dată la 24 de ore."
+        "description": "Aici poți găsi soldul tău [[:coin]] actual din portofelul local și blockchain. Soldul portofelului local este actualizat o dată pe oră, în timp ce soldul blockchain-ului este actualizat o dată la 24 de ore."
       },
       "achievements": {
         "title": "Realizări",
@@ -927,12 +925,6 @@
         "message": "Sigur vrei să închei sesiunea de conectare prin {{providerName}} de pe acest dispozitiv?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "Bonusul de astăzi",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ Minerit dezactivat",
-        "description": "Am identificat că identitatea dumneavoastră este asociată cu un alt cont. Dacă credeți că este o eroare, vă rugăm să trimiteți un e-mail la [[:bold]]feedback@ice.io[[/:bold]] cu porecla și un selfie de înaltă calitate.",
+        "description": "Am identificat că identitatea dumneavoastră este asociată cu un alt cont. Dacă credeți că este o eroare, vă rugăm să trimiteți un e-mail la [[:bold]]{{email}}[[/:bold]] cu porecla și un selfie de înaltă calitate.",
         "action": "Închideți"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "Momentan nu aveți niciun prieten!"
       },
       "contacts": {
-        "empty_description": "Sincronizați contactele și vedeți cine este deja pe [[:project_with_logo]]."
+        "empty_description": "Sincronizați contactele și vedeți cine este deja pe [[:project]]."
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "Arată exemplu",
       "example_title": "Exemplu de repostare",
       "x": {
-        "1": "Deschide X și caută contul [[:bold]]@ice_blockchain[[/:bold]].",
+        "1": "Deschide X și caută contul [[:bold]]{{account}}[[/:bold]].",
         "2": "Găsește postarea fixată, care este prima postare în profil.",
         "3": "❤️ Dă like și 🔄 Repostează cu [[:bold]]Citat[[/:bold]] folosind textul [[:bold]]EXACT[[/:bold]] de mai jos.",
         "pop_up": {

@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "Üdv az [[:project]]-nál",
-      "description": "[[:coin_with_logo]] egy digitális valuta, amelyre a telefonoddal tehetsz szert. Az [[:coin]]-t a hozzád hasonló mindennapi felhasználók birtokolják és működtetik."
+      "description": "[[:coin]] egy digitális valuta, amelyre a telefonoddal tehetsz szert. Az [[:coin]]-t a hozzád hasonló mindennapi felhasználók birtokolják és működtetik."
     },
     "page2": {
       "title": "Bolygóbarát",
-      "description": "[[:coin_with_logo]] eleve energiatakarékosabb, mint a BTC, mivel a \"Proof of Stake\" konszenzus elvet használja. A proof-of-stake (POS) segítségével a kriptopénzek tulajdonosai a blokk tranzakciókat a validáló által lekötött coinok száma alapján érvényesítik."
+      "description": "[[:coin]] eleve energiatakarékosabb, mint a BTC, mivel a \"Proof of Stake\" konszenzus elvet használja. A proof-of-stake (POS) segítségével a kriptopénzek tulajdonosai a blokk tranzakciókat a validáló által lekötött coinok száma alapján érvényesítik."
     },
     "page3": {
       "title": "Az emberek digitális valutája",
       "description_part1": "Az erő a te kezeitekben van.",
-      "description_part2": "Minden, amit fejlesztünk, [[:project_with_logo]]nyílt forráskódú és a Decentralizált Autonóm Szervezet (DAO) által ellenőrzött."
+      "description_part2": "Minden, amit fejlesztünk, [[:project]]nyílt forráskódú és a Decentralizált Autonóm Szervezet (DAO) által ellenőrzött."
     },
     "page4": {
       "title": "Maradj kapcsolatban",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Értesítések",
-      "description_part1": "[[:project_with_logo]] a bejelentkezési időszakok mindössze 24 órán át tartanak. Szeretnél értesítést kapni a jelenlegi időszakod lejártakor?",
+      "description_part1": "[[:project]] a bejelentkezési időszakok mindössze 24 órán át tartanak. Szeretnél értesítést kapni a jelenlegi időszakod lejártakor?",
       "description_part2": "Ne aggódj, nem halmozunk el levélszeméttel!",
       "not_now": "Ne most"
     }
@@ -35,7 +35,7 @@
     "view_all": "összes megtekintése",
     "invite_friend": {
       "title": "Barátok meghívása",
-      "description": "Szerezz extra [[:coin_with_logo]]-t barátaid meghívásával."
+      "description": "Szerezz extra [[:coin]]-t barátaid meghívásával."
     },
     "see_all": "lásd az összeset",
     "no": "Nem",
@@ -88,9 +88,9 @@
       "team": "Jelenleg nincsenek csapattagjaid!"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] jobb barátokkal",
+      "empty_title": "[[:project]] jobb barátokkal",
       "empty_button_title": "Hozzáférés engedélyezése a kapcsolatokhoz",
-      "empty_description": "Szinkronizáld a kapcsolataidat és nézd meg, ki használja már a(z) [[:project_with_logo]]-t. A jövőben tudsz majd [[:coin]]-t küldeni a kapcsolataidnak."
+      "empty_description": "Szinkronizáld a kapcsolataidat és nézd meg, ki használja már a(z) [[:project]]-t. A jövőben tudsz majd [[:coin]]-t küldeni a kapcsolataidnak."
     },
     "header": {
       "search_placeholder": "Keresés felhasználókra",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "GLOBÁLIS HELYEZÉS",
       "referrals": "Ajánlások",
-      "description": "Ajánlj több felhasználót és szerezz több [[:coin_with_logo]]-t."
+      "description": "Ajánlj több felhasználót és szerezz több [[:coin]]-t."
     },
     "referrals": {
       "title": "Ajánlások",
@@ -500,7 +500,7 @@
     "copied": "MÁSOLVA",
     "share_message": "Üdv ☃️ Hóember! Csatlakozz a csapatomhoz és szerezz 10 [[:project]] coint, ha az ajánló kódom használatával iratkozol fel:",
     "share_subject": "Csatlakozz csapatomhoz az [[:project]]-on",
-    "description": "Terjeszd a hírt és hívd meg a barátaidat. [[:coin_with_logo]]-t keresel minden egyes új ajánlás után, amit hozzánk hozol.",
+    "description": "Terjeszd a hírt és hívd meg a barátaidat. [[:coin]]-t keresel minden egyes új ajánlás után, amit hozzánk hozol.",
     "share": "Megosztás"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "Jelenlegi ráta",
     "allocation": "Kiosztás",
     "description": "A letétbe helyezés (staking) egy olyan folyamat, amelynek során a kriptoeszközöket a blokklánc hálózat támogatására és a tranzakciók megerősítésére kötelezed el.",
-    "terms_agree": "Elfogadom a [[:coin_with_logo]] [[:link]]letétbe helyezés feltételeit[[/:link]]. [[:coin]] jövedelmeid a kiválasztott időszakra le lesznek kötve.",
+    "terms_agree": "Elfogadom a [[:coin]] [[:link]]letétbe helyezés feltételeit[[/:link]]. [[:coin]] jövedelmeid a kiválasztott időszakra le lesznek kötve.",
     "stake_now": "Előzetes letétbe helyezés most!",
     "balance_label": "Letétbe helyezett egyenleg",
     "confirm_title": "Előzetes letétbe helyezés megerősítése",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Barát meghívása",
     "button_title": "Barát meghívása",
-    "description": "A barátod még nincs fent itt: [[:project_with_logo]]. Küldj neki egy meghívót!"
+    "description": "A barátod még nincs fent itt: [[:project]]. Küldj neki egy meghívót!"
   },
   "balance_history": {
     "title": "Egyenlegelőzmények",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Üdvözlő jutalom",
-    "description": "Gratulálunk, szert tettél az elsőt [[:value]] [[:coin_with_logo]] coinjaidra, ami bizonyítja a [[:bold]]beléd[[/:bold]] vetett [[:bold]]bizalmunkat[[/:bold]].",
+    "description": "Gratulálunk, szert tettél az elsőt [[:value]] [[:coin]] coinjaidra, ami bizonyítja a [[:bold]]beléd[[/:bold]] vetett [[:bold]]bizalmunkat[[/:bold]].",
     "balance_label": "Jelenlegi egyenleged"
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "Kapcsolatok engedélyezése",
-        "description": "Szinkronizáld a kapcsolataidat és nézd meg, ki használja már a(z) [[:project_with_logo]]-t. A jövőben tudsz majd Ice-t küldeni bármelyik kapcsolatodnak.[[:project_with_logo]]"
+        "description": "Szinkronizáld a kapcsolataidat és nézd meg, ki használja már a(z) [[:project]]-t. A jövőben tudsz majd Ice-t küldeni bármelyik kapcsolatodnak.[[:project]]"
       },
       "confirm_phone": {
         "title": "Telefon megerősítése",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "Kapcsolatok listája",
-        "description": "Ez az összes kapcsolatod listája, azok, akik már csatlakoztak a(z) [[:project_with_logo]] hálózathoz, a lista legtetején találhatóak."
+        "description": "Ez az összes kapcsolatod listája, azok, akik már csatlakoztak a(z) [[:project]] hálózathoz, a lista legtetején találhatóak."
       },
       "referrals": {
         "title": "Ajánlások",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "1. szint",
-        "description": "Itt láthatod az 1. szintű ajánlásaid listáját. Az összes barátod után, akivel egyidőben csekkoltok be, extra 25%-t kapsz a jelenlegi alap kereseti rátádon felül. [[:link]]Tudj meg többet[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Itt láthatod az 1. szintű ajánlásaid listáját. Az összes barátod után, akivel egyidőben csekkoltok be, extra 25%-t kapsz a jelenlegi alap kereseti rátádon felül. [[:link]]Tudj meg többet[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "2. szint",
-        "description": "Itt láthatod a 2. szintű ajánlásaid listáját. Az összes barátod után, akivel egyidőben csekkoltok be, extra 5%-t kapsz a jelenlegi alap kereseti rátádon felül. [[:link]]Tudj meg többet[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Itt láthatod a 2. szintű ajánlásaid listáját. Az összes barátod után, akivel egyidőben csekkoltok be, extra 5%-t kapsz a jelenlegi alap kereseti rátádon felül. [[:link]]Tudj meg többet[[/:link]]"
       },
       "active_users": {
         "title": "Aktív felhasználók",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "Kezdőlap",
-        "description": "Üdv a [[:project_with_logo]]-nál. A kezdőképernyőn az összes statisztikát megtalálhatod az egyenlegedről, a jelenlegi kereseti rátádról, a saját globális helyezésedet, a csapatodéval együtt."
+        "description": "Üdv a [[:project]]-nál. A kezdőképernyőn az összes statisztikát megtalálhatod az egyenlegedről, a jelenlegi kereseti rátádról, a saját globális helyezésedet, a csapatodéval együtt."
       },
       "invite": {
         "title": "Meghívás",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "Csapat",
-        "description": "[[:project_with_logo]] jobb barátokkal. Ezen az oldalon 1. és 2. szintű csapattagjaid állapotát tekintheted meg. Innen meg is pingelheted őket."
+        "description": "[[:project]] jobb barátokkal. Ezen az oldalon 1. és 2. szintű csapattagjaid állapotát tekintheted meg. Innen meg is pingelheted őket."
       },
       "news": {
         "title": "Hírek",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "Keress [[:coin]]-t",
-        "description": "A [[:project_with_logo]] bejelentkezési időszakot 24 óránként az erre a gombra való érintéssel indíthatod el. Ne felejts el minden nap visszatérni és elkezdeni pénzt keresni."
+        "description": "A [[:project]] bejelentkezési időszakot 24 óránként az erre a gombra való érintéssel indíthatod el. Ne felejts el minden nap visszatérni és elkezdeni pénzt keresni."
       },
       "earningiceseemore": {
         "title": "Keress [[:coin]]-t",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "Segítség",
-        "description": "Vannak kérdéseid? Tekintsd meg a gyakran ismételt kérdések listáját. Ha nem találod, amit keresel, ne hezitálj kapcsolatba lépni velünk a hi@ice.io e-mail-címen."
+        "description": "Vannak kérdéseid? Tekintsd meg a gyakran ismételt kérdések listáját. Ha nem találod, amit keresel, ne hezitálj kapcsolatba lépni velünk a {{email}} e-mail-címen."
       },
       "preStaking": {
         "title": "Pre-Staking",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "Tárca kártya",
-        "description": "Itt megtalálhatod a jelenlegi [[:coin_with_logo]] egyenlegedet, a kereseti rátával együtt. Minél több ajánlásod online a csapatodból, annál magasabb a kereseti rátád."
+        "description": "Itt megtalálhatod a jelenlegi [[:coin]] egyenlegedet, a kereseti rátával együtt. Minél több ajánlásod online a csapatodból, annál magasabb a kereseti rátád."
       },
       "earning": {
         "title": "Kereseti kártya",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "Átvételi kártya",
-        "description": "Az elmúlt hét összes aktív hóemberének átlagát alapul véve itt láthatod a jelenlegi [[:coin_with_logo]] kereseti rátát. A kereseti ráta megfeleződik, amikor eléred a következő szint küszöbét."
+        "description": "Az elmúlt hét összes aktív hóemberének átlagát alapul véve itt láthatod a jelenlegi [[:coin]] kereseti rátát. A kereseti ráta megfeleződik, amikor eléred a következő szint küszöbét."
       },
       "nickname": {
         "title": "Nicknév",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "Egyenlegelőzmények",
-        "description": "Itt találod meg a helyi pénztárcád és blokkláncod [[:coin_with_logo]] egyenlegét. A helyi pénztárcád egyenlege óránként, míg a blokklánc egyenlege 24 óránként kerül frissítésre."
+        "description": "Itt találod meg a helyi pénztárcád és blokkláncod [[:coin]] egyenlegét. A helyi pénztárcád egyenlege óránként, míg a blokklánc egyenlege 24 óránként kerül frissítésre."
       },
       "achievements": {
         "title": "EREDMÉNYEK",
@@ -927,12 +925,6 @@
         "message": "Biztosan szeretnéd befejezni ezen eszköz {{providerName}} bejelentkezési időszakát?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "Mai bónusz",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ Bányászat Letiltva",
-        "description": "Azonosítottuk, hogy az azonossága egy másik fiókhoz van társítva. Ha úgy gondolja, hogy ez egy hiba, kérjük, küldjön egy e-mailt a [[:bold]]feedback@ice.io[[/:bold]] címre a becenévével és egy magas minőségű selfie-val.",
+        "description": "Azonosítottuk, hogy az azonossága egy másik fiókhoz van társítva. Ha úgy gondolja, hogy ez egy hiba, kérjük, küldjön egy e-mailt a [[:bold]]{{email}}[[/:bold]] címre a becenévével és egy magas minőségű selfie-val.",
         "action": "Bezárás"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "Jelenleg nincsenek barátaid!"
       },
       "contacts": {
-        "empty_description": "Szinkronizáld a kapcsolataidat, és nézd meg, ki van már [[:project_with_logo]]-on."
+        "empty_description": "Szinkronizáld a kapcsolataidat, és nézd meg, ki van már [[:project]]-on."
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "Példa mutatása",
       "example_title": "A megosztás példája",
       "x": {
-        "1": "Nyisd meg az X-et, és keress rá a [[:bold]]@ice_blockchain[[/:bold]] fiókra.",
+        "1": "Nyisd meg az X-et, és keress rá a [[:bold]]{{account}}[[/:bold]] fiókra.",
         "2": "Keresd meg a rögzített bejegyzést, ami az első bejegyzés a profilban.",
         "3": "❤️ Like-olj és 🔄 Oszd meg újra [[:bold]]Idézet[[/:bold]] használatával a lentebb található [[:bold]]PONTOS[[/:bold]] szöveggel.",
         "pop_up": {

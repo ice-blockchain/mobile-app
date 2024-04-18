@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "Mirë se vjen në [[:project]]",
-      "description": "[[:coin_with_logo]] është një valutë dixhitare që mund ta fitosh me anë të telefonit tënd. [[:coin]] zotërohet dhe operohet nga përdorues të përditshëm si puna jote."
+      "description": "[[:coin]] është një valutë dixhitare që mund ta fitosh me anë të telefonit tënd. [[:coin]] zotërohet dhe operohet nga përdorues të përditshëm si puna jote."
     },
     "page2": {
       "title": "Miqësore për planetin",
-      "description": "[[:coin_with_logo]] është vetvetiu më efikas në energji se BTC pasi përdor një mekanizëm konsensusi “Proof of Stake” (vërtetim rrezikshmërie). Me proof-of-stake (POS), zotëruesit e kriptovalutës vleftësojnë transaksione në blloqe bazuar në numrin e monedhave "
+      "description": "[[:coin]] është vetvetiu më efikas në energji se BTC pasi përdor një mekanizëm konsensusi “Proof of Stake” (vërtetim rrezikshmërie). Me proof-of-stake (POS), zotëruesit e kriptovalutës vleftësojnë transaksione në blloqe bazuar në numrin e monedhave "
     },
     "page3": {
       "title": "Monedha e njerëzve",
       "description_part1": "Fuqinë e ke në duar.",
-      "description_part2": "Gjithçka që zhvillojmë në [[:project_with_logo]] do të jetë burim i hapur dhe nën kontrollin e Decentralized Autonomous Organization (DAO)."
+      "description_part2": "Gjithçka që zhvillojmë në [[:project]] do të jetë burim i hapur dhe nën kontrollin e Decentralized Autonomous Organization (DAO)."
     },
     "page4": {
       "title": "Qëndro lidhur",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Njoftime",
-      "description_part1": "[[:project_with_logo]] seancat e paraqitjes zgjasin vetëm 24 orë. Dëshiron të marrësh njoftim kur të përfundojë seanca aktuale?",
+      "description_part1": "[[:project]] seancat e paraqitjes zgjasin vetëm 24 orë. Dëshiron të marrësh njoftim kur të përfundojë seanca aktuale?",
       "description_part2": "Mos u merakos, nuk të çojmë spam!",
       "not_now": "Jo tani"
     }
@@ -35,7 +35,7 @@
     "view_all": "shiko të gjitha",
     "invite_friend": {
       "title": "Fto miq",
-      "description": "Fito ekstra [[:coin_with_logo]] duke ftuar miqtë e tu."
+      "description": "Fito ekstra [[:coin]] duke ftuar miqtë e tu."
     },
     "see_all": "shiko të gjitha",
     "no": "Jo",
@@ -88,9 +88,9 @@
       "team": "Në këtë moment nuk keni asnjë anëtar ekipi!"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] është më mirë me miq",
+      "empty_title": "[[:project]] është më mirë me miq",
       "empty_button_title": "Lejo qasje te kontaktet",
-      "empty_description": "Sinkronizo kontaktet dhe shiko se kush tjetër është i anëtarësuar [[:project_with_logo]]. Në të ardhmen, do të kesh mundësi t'i dërgosh [[:coin]] kujtdo nga kontaktet e tua."
+      "empty_description": "Sinkronizo kontaktet dhe shiko se kush tjetër është i anëtarësuar [[:project]]. Në të ardhmen, do të kesh mundësi t'i dërgosh [[:coin]] kujtdo nga kontaktet e tua."
     },
     "header": {
       "search_placeholder": "Kërko për përdorues",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "RANGU GLOBAL",
       "referrals": "REFERIME",
-      "description": "Refero më shumë përdorues dhe fito më shumë [[:coin_with_logo]]."
+      "description": "Refero më shumë përdorues dhe fito më shumë [[:coin]]."
     },
     "referrals": {
       "title": "REFERIME",
@@ -500,7 +500,7 @@
     "copied": "U KOPJUA",
     "share_message": "Ç'kemi, ☃️Burrë Dëbore! Bashkoju ekipit tim në [[:project]] dhe merr 10 monedha [[:coin]] kur të regjistrohesh duke përdorur kodin tim të referimit:",
     "share_subject": "Bashkoju ekipit tim në [[:project]]",
-    "description": "Përhap fjalën dhe fto miqtë. Ti fiton [[:coin_with_logo]] për çdo referim të ri që sjell.",
+    "description": "Përhap fjalën dhe fto miqtë. Ti fiton [[:coin]] për çdo referim të ri që sjell.",
     "share": "Ndaj"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "Norma aktuale",
     "allocation": "Përpjesëtimi",
     "description": "Staking është një proces që përfshin lënien në zotim të kripto-aseteve të tua për të mbështetur një rrjet me zinxhir blloqesh dhe konfirmuar transaksionet.",
-    "terms_agree": "Pajtohem me [[:coin_with_logo]] [[:link]]Kushtet e Staking[[/:link]]. Zotërimet e tua [[:coin]] do të mbyllen për një periudhë të caktuar.",
+    "terms_agree": "Pajtohem me [[:coin]] [[:link]]Kushtet e Staking[[/:link]]. Zotërimet e tua [[:coin]] do të mbyllen për një periudhë të caktuar.",
     "stake_now": "Pre-Stake tani!",
     "balance_label": "Shuma e vënë në staking",
     "confirm_title": "Konfirmo Pre-Stake",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Fto mikun",
     "button_title": "Fto mikun",
-    "description": "Miku yt nuk është ende pjesë [[:project_with_logo]]. Dërgoji një ftesë!"
+    "description": "Miku yt nuk është ende pjesë [[:project]]. Dërgoji një ftesë!"
   },
   "balance_history": {
     "title": "Historiku i shumës në gjendje",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Shpërblim mirëseardhës",
-    "description": "Përgëzime, ke marrë monedhat [[:value]] [[:coin_with_logo]] e para, gjë që dëshmon për [[:bold]]besimin[[/:bold]] që kemi te [[:bold]] ti[[/:bold]].",
+    "description": "Përgëzime, ke marrë monedhat [[:value]] [[:coin]] e para, gjë që dëshmon për [[:bold]]besimin[[/:bold]] që kemi te [[:bold]] ti[[/:bold]].",
     "balance_label": "Shuma aktuale që ke në gjendje"
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "Lejo kontaktet",
-        "description": "Sinkronizo kontaktet dhe shiko se kush tjetër është pjesë [[:project_with_logo]]. Në të ardhmen, do të kesh mundësi t'i dërgosh [[:project_with_logo]] kujtdo nga kontaktet e tua."
+        "description": "Sinkronizo kontaktet dhe shiko se kush tjetër është pjesë [[:project]]. Në të ardhmen, do të kesh mundësi t'i dërgosh [[:project]] kujtdo nga kontaktet e tua."
       },
       "confirm_phone": {
         "title": "Konfirmo telefonin",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "Lista e kontakteve",
-        "description": "Kjo është lista me të gjitha kontaktet e tua, ata që i janë bashkuar tashmë [[:project_with_logo]] rrjetit shfaqen në krye të listës."
+        "description": "Kjo është lista me të gjitha kontaktet e tua, ata që i janë bashkuar tashmë [[:project]] rrjetit shfaqen në krye të listës."
       },
       "referrals": {
         "title": "Referime",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "Niveli 1",
-        "description": "Këtu mund të shohësh listën e referimeve të tua për Nivelin 1. Për secilin mik që paraqitet në të njëjtën kohë me ty, do të marrësh 25% shtesë mbi normën adoptive aktuale bazë të fitimit. [[:link]]Lexo më shumë[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Këtu mund të shohësh listën e referimeve të tua për Nivelin 1. Për secilin mik që paraqitet në të njëjtën kohë me ty, do të marrësh 25% shtesë mbi normën adoptive aktuale bazë të fitimit. [[:link]]Lexo më shumë[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "Niveli 2",
-        "description": "Këtu mund të shohësh listën e referimeve të tua për Nivelin 1. Për secilin mik që paraqitet në të njëjtën kohë me ty, do të marrësh 5% shtesë mbi normën adoptive aktuale bazë të fitimit. [[:link]]Lexo më shumë[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Këtu mund të shohësh listën e referimeve të tua për Nivelin 1. Për secilin mik që paraqitet në të njëjtën kohë me ty, do të marrësh 5% shtesë mbi normën adoptive aktuale bazë të fitimit. [[:link]]Lexo më shumë[[/:link]]"
       },
       "active_users": {
         "title": "Përdorues aktivë",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "Faqja kryesore",
-        "description": "Mirë se erdhe [[:project_with_logo]]. Në ekranin bazë do të gjesh të gjitha statistikat rreth teje, normën aktuale të fitimit, rangun tënd global bashkë me të ekipit."
+        "description": "Mirë se erdhe [[:project]]. Në ekranin bazë do të gjesh të gjitha statistikat rreth teje, normën aktuale të fitimit, rangun tënd global bashkë me të ekipit."
       },
       "invite": {
         "title": "fto",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "Ekipi",
-        "description": "[[:project_with_logo]] është më mirë me miq Në këtë faqe mund të shikosh statusin e anëtarëve të ekipit si nga nivelet e Nivelit 1 dhe Nivelit 2. Mund t'u dërgosh ping edhe nga këtu."
+        "description": "[[:project]] është më mirë me miq Në këtë faqe mund të shikosh statusin e anëtarëve të ekipit si nga nivelet e Nivelit 1 dhe Nivelit 2. Mund t'u dërgosh ping edhe nga këtu."
       },
       "news": {
         "title": "Lajme",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "Nxjerrja e fitimit [[:coin]]",
-        "description": "Mund ta nisësh seancën [[:project_with_logo]] e paraqitjes çdo 24 orë duke cekur këtë buton. Mos harro të kthehesh përditë dhe të fillosh të nxjerrësh fitime!"
+        "description": "Mund ta nisësh seancën [[:project]] e paraqitjes çdo 24 orë duke cekur këtë buton. Mos harro të kthehesh përditë dhe të fillosh të nxjerrësh fitime!"
       },
       "earningiceseemore": {
         "title": "Nxjerrja e fitimit [[:coin]]",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "Ndihmë",
-        "description": "A keni pyetje? Kontrolloni listën tonë për pyetje të shpeshta. Nëse nuk e gjen dot atë që po kërkon, mos ngurro të na drejtohesh te hi@ice.io."
+        "description": "A keni pyetje? Kontrolloni listën tonë për pyetje të shpeshta. Nëse nuk e gjen dot atë që po kërkon, mos ngurro të na drejtohesh te {{email}}."
       },
       "preStaking": {
         "title": "Pre-Staking",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "Karta e kuletës",
-        "description": "Këtu mund të gjesh shumën që ke aktualisht [[:coin_with_logo]] në gjendje, bashkë me normën e fitimit. Sa më shumë nga të referuarit nga ekipi ynë të jenë online, aq më e lartë norma e fitimit."
+        "description": "Këtu mund të gjesh shumën që ke aktualisht [[:coin]] në gjendje, bashkë me normën e fitimit. Sa më shumë nga të referuarit nga ekipi ynë të jenë online, aq më e lartë norma e fitimit."
       },
       "earning": {
         "title": "Kartë fitimi",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "Kartë adoptimi",
-        "description": "Bazuar në mesataren e totalit të javës së kaluar për Burrin e Dëborës aktiv, mund të shohësh normën aktuale [[:coin_with_logo]] të fitimit. Norma e fitimit përgjysmohet kur arrihet pragu i radhës."
+        "description": "Bazuar në mesataren e totalit të javës së kaluar për Burrin e Dëborës aktiv, mund të shohësh normën aktuale [[:coin]] të fitimit. Norma e fitimit përgjysmohet kur arrihet pragu i radhës."
       },
       "nickname": {
         "title": "Pseudonimi",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "Historiku i shumës në gjendje",
-        "description": "Këtu mund të gjesh shumën që ke aktualisht [[:coin_with_logo]] në gjendje në kuletën vendore dhe në zinxhirin bllok. Shuma në gjendje në kuletën vendore përditësohet çdo orë, ndërsa shuma në gjendje në zinxhirin bllok përditësohet çdo 24 orë."
+        "description": "Këtu mund të gjesh shumën që ke aktualisht [[:coin]] në gjendje në kuletën vendore dhe në zinxhirin bllok. Shuma në gjendje në kuletën vendore përditësohet çdo orë, ndërsa shuma në gjendje në zinxhirin bllok përditësohet çdo 24 orë."
       },
       "achievements": {
         "title": "Arritjet",
@@ -927,12 +925,6 @@
         "message": "Je i sigurt se dëshiron ta përfundosh {{providerName}} seancën e identifikimit nga kjo pajisjeje?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "Bonusi i sotëm",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ Minimizimi i çaktivizuar",
-        "description": "Kemi identifikuar që identiteti juaj është i lidhur me një llogari tjetër. Nëse mendoni se është një gabim, ju lutem dërgoni një email në adresën [[:bold]]feedback@ice.io[[/:bold]] me emrin tuaj të përdoruesit dhe një selfi cilësie të lartë.",
+        "description": "Kemi identifikuar që identiteti juaj është i lidhur me një llogari tjetër. Nëse mendoni se është një gabim, ju lutem dërgoni një email në adresën [[:bold]]{{email}}[[/:bold]] me emrin tuaj të përdoruesit dhe një selfi cilësie të lartë.",
         "action": "Mbyll"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "Momentalisht nuk keni miq!"
       },
       "contacts": {
-        "empty_description": "Sinkronizoni kontaktet tuaja dhe shikoni kush është već në [[:project_with_logo]]."
+        "empty_description": "Sinkronizoni kontaktet tuaja dhe shikoni kush është već në [[:project]]."
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "Shfaq shembullin",
       "example_title": "Shembulli i shpërndarjes",
       "x": {
-        "1": "Hapni X dhe kërkoni llogarinë [[:bold]]@ice_blockchain[[/:bold]].",
+        "1": "Hapni X dhe kërkoni llogarinë [[:bold]]{{account}}[[/:bold]].",
         "2": "Gjeni postimin e fiksuar, i cili është postimi i parë në profil.",
         "3": "❤️ Pëlqeni & 🔄 Shpërndani atë me [[:bold]]Citat[[/:bold]] duke përdorur tekstin [[:bold]]PËRFAKS[[/:bold]] më poshtë.",
         "pop_up": {

@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "Bienvenue dans [[:project]]",
-      "description": "[[:coin_with_logo]] est une monnaie numérique que vous pouvez gagner avec votre téléphone. [[:coin]] est détenue et gérée par des utilisateurs du quotidien, comme vous."
+      "description": "[[:coin]] est une monnaie numérique que vous pouvez gagner avec votre téléphone. [[:coin]] est détenue et gérée par des utilisateurs du quotidien, comme vous."
     },
     "page2": {
       "title": "Respectueuse de l’environnement",
-      "description": "[[:coin_with_logo]] est intrinsèquement plus économe en énergie que BTC car elle utilise un mécanisme de consensus « Preuve d’enjeu », ou « proof-of-stake » (PoS). Avec le PoS, les propriétaires de crypto-monnaie valident les transactions de bloc en fonction du nombre de pièces misées par un validateur."
+      "description": "[[:coin]] est intrinsèquement plus économe en énergie que BTC car elle utilise un mécanisme de consensus « Preuve d’enjeu », ou « proof-of-stake » (PoS). Avec le PoS, les propriétaires de crypto-monnaie valident les transactions de bloc en fonction du nombre de pièces misées par un validateur."
     },
     "page3": {
       "title": "La monnaie du peuple",
       "description_part1": "Le pouvoir est entre vos mains.",
-      "description_part2": "Tout ce que nous développons chez [[:project_with_logo]] sera open source et contrôlé par l’Organisation Autonome Décentralisée (DAO)."
+      "description_part2": "Tout ce que nous développons chez [[:project]] sera open source et contrôlé par l’Organisation Autonome Décentralisée (DAO)."
     },
     "page4": {
       "title": "Restez connecté",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Notifications",
-      "description_part1": "[[:project_with_logo]] propose des sessions d’enregistrement ne durant que 24 heures. Souhaitez-vous recevoir une notification à la fin de votre session en cours ?",
+      "description_part1": "[[:project]] propose des sessions d’enregistrement ne durant que 24 heures. Souhaitez-vous recevoir une notification à la fin de votre session en cours ?",
       "description_part2": "Ne vous inquiétez pas, nous ne vous spammerons pas !",
       "not_now": "Pas maintenant"
     }
@@ -35,7 +35,7 @@
     "view_all": "afficher tout",
     "invite_friend": {
       "title": "Inviter des amis",
-      "description": "Gagnez de l’[[:coin_with_logo]] supplémentaire en invitant vos amis."
+      "description": "Gagnez de l’[[:coin]] supplémentaire en invitant vos amis."
     },
     "see_all": "voir tout",
     "no": "Non",
@@ -88,9 +88,9 @@
       "team": "Vous n'avez actuellement aucun membre dans l'équipe !"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] , c’est encore mieux avec des amis",
+      "empty_title": "[[:project]] , c’est encore mieux avec des amis",
       "empty_button_title": "Autoriser l’accès aux contacts",
-      "empty_description": "Synchronisez vos contacts et voyez qui est déjà sur [[:project_with_logo]]. À l’avenir, vous pourrez envoyer de l’[[:coin]] à n’importe quel contact."
+      "empty_description": "Synchronisez vos contacts et voyez qui est déjà sur [[:project]]. À l’avenir, vous pourrez envoyer de l’[[:coin]] à n’importe quel contact."
     },
     "header": {
       "search_placeholder": "Rechercher des utilisateurs",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "CLASSEMENT MONDIAL",
       "referrals": "PARRAINAGES",
-      "description": "Parrainez plus d’utilisateurs et gagnez plus d’[[:coin_with_logo]]."
+      "description": "Parrainez plus d’utilisateurs et gagnez plus d’[[:coin]]."
     },
     "referrals": {
       "title": "PARRAINAGES",
@@ -500,7 +500,7 @@
     "copied": "COPIÉ",
     "share_message": "Salut ☃️ bonhomme de neige ! Rejoignez mon équipe sur [[:project]] et recevez 10 pièces [[:coin]] en vous inscrivant avec mon code de parrainage :",
     "share_subject": "Rejoignez mon équipe sur [[:project]].",
-    "description": "Faites passer le mot et invitez vos amis. Vous gagnez de l’[[:coin_with_logo]] pour chaque nouvelle personne parrainée.",
+    "description": "Faites passer le mot et invitez vos amis. Vous gagnez de l’[[:coin]] pour chaque nouvelle personne parrainée.",
     "share": "Partager"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "Taux actuel",
     "allocation": "Allocation",
     "description": "Le staking est un processus qui implique l’engagement de vos actifs cryptographiques pour prendre en charge un réseau blockchain et confirmer les transactions.",
-    "terms_agree": "J’accepte les [[:link]]conditions de staking[[/:link]] de [[:coin_with_logo]]. Vos positions [[:coin]] seront verrouillées pour la période sélectionnée.",
+    "terms_agree": "J’accepte les [[:link]]conditions de staking[[/:link]] de [[:coin]]. Vos positions [[:coin]] seront verrouillées pour la période sélectionnée.",
     "stake_now": "Pré-staker maintenant !",
     "balance_label": "Solde staké",
     "confirm_title": "Confirmer le pré-staking",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Inviter un ami",
     "button_title": "Inviter un ami",
-    "description": "Votre ami n’est pas encore sur [[:project_with_logo]]. Envoyez-lui une invitation !"
+    "description": "Votre ami n’est pas encore sur [[:project]]. Envoyez-lui une invitation !"
   },
   "balance_history": {
     "title": "Historique des soldes",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Récompense de bienvenue",
-    "description": "Félicitations, vous avez reçu vos premières pièces de [[:value]] [[:coin_with_logo]], ce qui prouve notre [[:bold]]confiance[[/:bold]] en [[:bold]]vous[[/:bold]].",
+    "description": "Félicitations, vous avez reçu vos premières pièces de [[:value]] [[:coin]], ce qui prouve notre [[:bold]]confiance[[/:bold]] en [[:bold]]vous[[/:bold]].",
     "balance_label": "Votre solde actuel"
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "Autoriser les contacts",
-        "description": "Synchronisez vos contacts et voyez qui est déjà sur [[:project_with_logo]]. À l’avenir, vous pourrez envoyer de l’[[:project_with_logo]] à n’importe quel contact."
+        "description": "Synchronisez vos contacts et voyez qui est déjà sur [[:project]]. À l’avenir, vous pourrez envoyer de l’[[:project]] à n’importe quel contact."
       },
       "confirm_phone": {
         "title": "Confirmer le téléphone",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "Liste des contacts",
-        "description": "Il s’agit de la liste de tous vos contacts. Ceux qui ont déjà rejoint le réseau [[:project_with_logo]] apparaissent en premier."
+        "description": "Il s’agit de la liste de tous vos contacts. Ceux qui ont déjà rejoint le réseau [[:project]] apparaissent en premier."
       },
       "referrals": {
         "title": "Parrainages",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "Niveau 1",
-        "description": "Ici, vous pouvez voir la liste de vos parrainages de niveau 1. Pour chaque ami qui s’enregistre en même temps avec vous, vous obtiendrez 25 % supplémentaire sur votre taux de gain d’adoption actuel de base. [[:link]]En savoir plus[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Ici, vous pouvez voir la liste de vos parrainages de niveau 1. Pour chaque ami qui s’enregistre en même temps avec vous, vous obtiendrez 25 % supplémentaire sur votre taux de gain d’adoption actuel de base. [[:link]]En savoir plus[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "Niveau 2",
-        "description": "Ici, vous pouvez voir la liste de vos parrainages de niveau 2. Pour chaque ami qui s’enregistre en même temps avec vous, vous obtiendrez 5 % supplémentaire sur votre taux de gain d’adoption actuel de base. [[:link]]En savoir plus[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Ici, vous pouvez voir la liste de vos parrainages de niveau 2. Pour chaque ami qui s’enregistre en même temps avec vous, vous obtiendrez 5 % supplémentaire sur votre taux de gain d’adoption actuel de base. [[:link]]En savoir plus[[/:link]]"
       },
       "active_users": {
         "title": "Utilisateurs actifs",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "Accueil",
-        "description": "Bienvenue sur [[:project_with_logo]]. Sur l’écran d’accueil, vous pouvez trouver toutes les statistiques sur votre solde, le taux de gain actuel, votre classement mondial avec votre équipe."
+        "description": "Bienvenue sur [[:project]]. Sur l’écran d’accueil, vous pouvez trouver toutes les statistiques sur votre solde, le taux de gain actuel, votre classement mondial avec votre équipe."
       },
       "invite": {
         "title": "Inviter",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "Équipe",
-        "description": "[[:project_with_logo]] , c’est encore mieux avec des amis. Sur cette page, vous pouvez voir l’état des membres de votre équipe des niveaux 1 et 2. Vous pouvez également les pinger à partir d’ici."
+        "description": "[[:project]] , c’est encore mieux avec des amis. Sur cette page, vous pouvez voir l’état des membres de votre équipe des niveaux 1 et 2. Vous pouvez également les pinger à partir d’ici."
       },
       "news": {
         "title": "Actualités",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "Gagner de l’[[:coin]]",
-        "description": "Vous pouvez démarrer la session d’enregistrement [[:project_with_logo]] toutes les 24 heures en appuyant sur ce bouton. N’oubliez pas de revenir chaque jour pour commencer à gagner !"
+        "description": "Vous pouvez démarrer la session d’enregistrement [[:project]] toutes les 24 heures en appuyant sur ce bouton. N’oubliez pas de revenir chaque jour pour commencer à gagner !"
       },
       "earningiceseemore": {
         "title": "Gagner de l’[[:coin]]",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "Aide",
-        "description": "Vous avez des questions ? Consultez notre foire aux questions. Si vous ne trouvez pas ce que vous cherchez, n’hésitez pas à nous contacter à l’adresse hi@ice.io."
+        "description": "Vous avez des questions ? Consultez notre foire aux questions. Si vous ne trouvez pas ce que vous cherchez, n’hésitez pas à nous contacter à l’adresse {{email}}."
       },
       "preStaking": {
         "title": "Pré-staking",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "Carte de portefeuille",
-        "description": "Vous trouverez ici votre solde actuel de [[:coin_with_logo]], ainsi que le taux de gain. Plus les parrainages de votre équipe sont actifs, plus le taux de gains est élevé."
+        "description": "Vous trouverez ici votre solde actuel de [[:coin]], ainsi que le taux de gain. Plus les parrainages de votre équipe sont actifs, plus le taux de gains est élevé."
       },
       "earning": {
         "title": "Carte de gain",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "Carte d’adoption",
-        "description": "Sur la base de la moyenne du nombre total de bonhommes de neige actifs au cours de la dernière semaine, vous pouvez voir le taux actuel de [[:coin_with_logo]] gagnés. Le taux de gain est réduit de moitié lorsque le seuil suivant est atteint."
+        "description": "Sur la base de la moyenne du nombre total de bonhommes de neige actifs au cours de la dernière semaine, vous pouvez voir le taux actuel de [[:coin]] gagnés. Le taux de gain est réduit de moitié lorsque le seuil suivant est atteint."
       },
       "nickname": {
         "title": "Pseudo",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "Historique de solde",
-        "description": "Vous pouvez trouver ici votre solde actuel de [[:coin_with_logo]]sur le portefeuille local et la blockchain. Le solde du portefeuille local est mis à jour toutes les heures, le solde de la blockchain toutes les 24 heures."
+        "description": "Vous pouvez trouver ici votre solde actuel de [[:coin]]sur le portefeuille local et la blockchain. Le solde du portefeuille local est mis à jour toutes les heures, le solde de la blockchain toutes les 24 heures."
       },
       "achievements": {
         "title": "Réalisations",
@@ -927,12 +925,6 @@
         "message": "Voulez-vous vraiment mettre fin à la session de connexion {{providerName}}à partir de cet appareil ?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "Bonus du jour",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ Mining désactivé",
-        "description": "Nous avons identifié que votre identité est associée à un autre compte. Si vous pensez qu'il s'agit d'une erreur, veuillez envoyer un e-mail à [[:bold]]feedback@ice.io[[/:bold]] avec votre pseudonyme et un selfie de haute qualité.",
+        "description": "Nous avons identifié que votre identité est associée à un autre compte. Si vous pensez qu'il s'agit d'une erreur, veuillez envoyer un e-mail à [[:bold]]{{email}}[[/:bold]] avec votre pseudonyme et un selfie de haute qualité.",
         "action": "Fermer"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "Vous n'avez actuellement aucun ami !"
       },
       "contacts": {
-        "empty_description": "Synchronisez vos contacts et voyez qui est déjà sur [[:project_with_logo]]."
+        "empty_description": "Synchronisez vos contacts et voyez qui est déjà sur [[:project]]."
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "Afficher l'exemple",
       "example_title": "Exemple de retransmission",
       "x": {
-        "1": "Ouvrez X et recherchez le compte [[:bold]]@ice_blockchain[[/:bold]].",
+        "1": "Ouvrez X et recherchez le compte [[:bold]]{{account}}[[/:bold]].",
         "2": "Trouvez la publication épinglée, qui est la première publication sur le profil.",
         "3": "❤️ Aimez & 🔄 Retransmettez-la avec une [[:bold]]Citation[[/:bold]] en utilisant le texte [[:bold]]EXACT[[/:bold]] ci-dessous.",
         "pop_up": {

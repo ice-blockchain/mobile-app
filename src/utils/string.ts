@@ -17,3 +17,9 @@ export const stringToColor = (input: string = '') => {
   }
   return colour;
 };
+
+export function replaceAll(str: string, oldValue: string, newValue: string) {
+  const escapedSearch = oldValue.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const regex = new RegExp(escapedSearch, 'g');
+  return str.replace(regex, newValue);
+}

@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "Vítá vás [[:project]]",
-      "description": "[[:coin_with_logo]] je digitální měna, kterou můžete vydělávat přes svůj telefon. [[:coin]] vlastní a provozují běžní uživatelé, jako jste vy."
+      "description": "[[:coin]] je digitální měna, kterou můžete vydělávat přes svůj telefon. [[:coin]] vlastní a provozují běžní uživatelé, jako jste vy."
     },
     "page2": {
       "title": "Šetrný k planetě",
-      "description": "[[:coin_with_logo]] je ze své podstaty energeticky účinnější než BTC, protože využívá mechanismus konsenzu zvaný „Proof of Stake“. U mechanismu Proof of Stake (PoS) ověřují vlastníci kryptoměny transakce v blocích na základě toho, kolik coinů ověřovatel stakuje."
+      "description": "[[:coin]] je ze své podstaty energeticky účinnější než BTC, protože využívá mechanismus konsenzu zvaný „Proof of Stake“. U mechanismu Proof of Stake (PoS) ověřují vlastníci kryptoměny transakce v blocích na základě toho, kolik coinů ověřovatel stakuje."
     },
     "page3": {
       "title": "Coin pro lidi",
       "description_part1": "Moc máte ve svých rukou.",
-      "description_part2": "Vše, co [[:project_with_logo]] vyvíjí, bude open source a pod kontrolou decentralizované autonomní organizace (DAO)."
+      "description_part2": "Vše, co [[:project]] vyvíjí, bude open source a pod kontrolou decentralizované autonomní organizace (DAO)."
     },
     "page4": {
       "title": "Zůstaňte ve spojení",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Oznámení",
-      "description_part1": "[[:project_with_logo]] ohlašovací relace trvá vždy jen 24 hodin. Chcete dostávat oznámení, když bude vaše aktuální relace končit?",
+      "description_part1": "[[:project]] ohlašovací relace trvá vždy jen 24 hodin. Chcete dostávat oznámení, když bude vaše aktuální relace končit?",
       "description_part2": "Nebojte se, nebude to spamování!",
       "not_now": "Teď ne"
     }
@@ -35,7 +35,7 @@
     "view_all": "zobrazit vše",
     "invite_friend": {
       "title": "Pozvěte přátele",
-      "description": "Pozvěte přátele a vydělejte další [[:coin_with_logo]]."
+      "description": "Pozvěte přátele a vydělejte další [[:coin]]."
     },
     "see_all": "zobrazit vše",
     "no": "Ne",
@@ -88,9 +88,9 @@
       "team": "V současné době nemáte žádné členy týmu!"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] je lepší s přáteli",
+      "empty_title": "[[:project]] je lepší s přáteli",
       "empty_button_title": "Povolit přístup ke kontaktům",
-      "empty_description": "Synchronizujte kontakty a zjistěte, kdo už [[:project_with_logo]] má. V budoucnu budete moci poslat [[:coin]] komukoliv z vašich kontaktů."
+      "empty_description": "Synchronizujte kontakty a zjistěte, kdo už [[:project]] má. V budoucnu budete moci poslat [[:coin]] komukoliv z vašich kontaktů."
     },
     "header": {
       "search_placeholder": "Hledat uživatele",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "CELOSVĚTOVÁ PŘÍČKA",
       "referrals": "DOPORUČENÍ LIDÉ",
-      "description": "Doporučte víc lidí a vydělejte si víc [[:coin_with_logo]]."
+      "description": "Doporučte víc lidí a vydělejte si víc [[:coin]]."
     },
     "referrals": {
       "title": "DOPORUČENÍ LIDÉ",
@@ -500,7 +500,7 @@
     "copied": "ZKOPÍROVÁNO",
     "share_message": "Ahoj ☃️ sněhuláku! Přidej se ke mně do týmu na [[:project]]. Když při registraci použiješ tenhle referenční kód, dostaneš 10 [[:coin]] coinů:",
     "share_subject": "Přidej se do mého [[:project]] týmu",
-    "description": "Šiř informace a zvi svoje kámoše. Za každého přivedeného člověka si vyděláš [[:coin_with_logo]].",
+    "description": "Šiř informace a zvi svoje kámoše. Za každého přivedeného člověka si vyděláš [[:coin]].",
     "share": "Sdílet"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "Aktuální sazba",
     "allocation": "Alokace",
     "description": "Staking je proces, při kterém svá krypto aktiva svěřujete na určitou dobu do úschovy a podporujete tak blockchainovou síť a potvrzování transakcí.",
-    "terms_agree": "Souhlasím s [[:link]]Podmínkami stakingu[[/:link]] [[:coin_with_logo]]. Vaše prostředky [[:coin]] budou na zvolenou dobu uzamčeny.",
+    "terms_agree": "Souhlasím s [[:link]]Podmínkami stakingu[[/:link]] [[:coin]]. Vaše prostředky [[:coin]] budou na zvolenou dobu uzamčeny.",
     "stake_now": "Pre-stakujte právě teď!",
     "balance_label": "Stakovaný zůstatek",
     "confirm_title": "Potvrdit pre-staking",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Pozvěte přátele",
     "button_title": "Pozvěte přátele",
-    "description": "Tohle je kamarád/ka, co ještě není na [[:project_with_logo]]. To chce poslat pozvánku!"
+    "description": "Tohle je kamarád/ka, co ještě není na [[:project]]. To chce poslat pozvánku!"
   },
   "balance_history": {
     "title": "Historie zůstatku",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Uvítací odměna",
-    "description": "Gratulujeme, přišlo vám prvních [[:value]] [[:coin_with_logo]] coinů, což potvrzuje, že ve [[:bold]]Vás[[/:bold]] vkládáme svou [[:bold]]Důvěru[[/:bold]].",
+    "description": "Gratulujeme, přišlo vám prvních [[:value]] [[:coin]] coinů, což potvrzuje, že ve [[:bold]]Vás[[/:bold]] vkládáme svou [[:bold]]Důvěru[[/:bold]].",
     "balance_label": "Váš aktuální zůstatek"
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "Povolit kontakty",
-        "description": "Synchronizujte kontakty a zjistěte, kdo už [[:project_with_logo]] má. V budoucnu budete moci poslat [[:project_with_logo]] komukoliv z vašich kontaktů."
+        "description": "Synchronizujte kontakty a zjistěte, kdo už [[:project]] má. V budoucnu budete moci poslat [[:project]] komukoliv z vašich kontaktů."
       },
       "confirm_phone": {
         "title": "Potvrzení telefonu",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "Seznam kontaktů",
-        "description": "Toto je seznam všech vašich kontaktů. Ti, kdo už se k síti [[:project_with_logo]] přidali, se zobrazují v horní části seznamu."
+        "description": "Toto je seznam všech vašich kontaktů. Ti, kdo už se k síti [[:project]] přidali, se zobrazují v horní části seznamu."
       },
       "referrals": {
         "title": "Doporučení lidé",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "Úroveň 1",
-        "description": "Tady se zobrazuje seznam vámi doporučených lidí na úrovni 1. Každý z přátel, kdo se bude ohlašovat spolu s vámi, vám zajistí 25% bonus na aktuální výdělkovou sazbu odvíjející se od míry přijetí. [[:link]]Přečtěte si více[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Tady se zobrazuje seznam vámi doporučených lidí na úrovni 1. Každý z přátel, kdo se bude ohlašovat spolu s vámi, vám zajistí 25% bonus na aktuální výdělkovou sazbu odvíjející se od míry přijetí. [[:link]]Přečtěte si více[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "Úroveň 2",
-        "description": "Tady se zobrazuje seznam vámi doporučených lidí na úrovni 2. Každý z přátel, kdo se bude ohlašovat spolu s vámi, vám zajistí 5% bonus na aktuální výdělkovou sazbu odvíjející se od míry přijetí. [[:link]]Přečtěte si více[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Tady se zobrazuje seznam vámi doporučených lidí na úrovni 2. Každý z přátel, kdo se bude ohlašovat spolu s vámi, vám zajistí 5% bonus na aktuální výdělkovou sazbu odvíjející se od míry přijetí. [[:link]]Přečtěte si více[[/:link]]"
       },
       "active_users": {
         "title": "Aktivní uživatelé",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "Domovská obrazovka",
-        "description": "Vítá vás [[:project_with_logo]]. Na domovské obrazovce najdete všechny statistiky o vašem zůstatku, aktuální výdělkovou sazbu, celosvětovou příčku a váš tým."
+        "description": "Vítá vás [[:project]]. Na domovské obrazovce najdete všechny statistiky o vašem zůstatku, aktuální výdělkovou sazbu, celosvětovou příčku a váš tým."
       },
       "invite": {
         "title": "Pozvat",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "Tým",
-        "description": "[[:project_with_logo]] je lepší s přáteli. Na téhle stránce můžete vidět stav členů vašeho týmu na úrovních 1 i 2. Také je odsud můžete šťouchnout."
+        "description": "[[:project]] je lepší s přáteli. Na téhle stránce můžete vidět stav členů vašeho týmu na úrovních 1 i 2. Také je odsud můžete šťouchnout."
       },
       "news": {
         "title": "Aktuality",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "Vydělávání [[:coin]]",
-        "description": "Každých 24 hodin můžete klepnutím na toto tlačítko zahájit ohlašovací relaci [[:project_with_logo]]. Nezapomeňte se každý den vrátit a začít vydělávat!"
+        "description": "Každých 24 hodin můžete klepnutím na toto tlačítko zahájit ohlašovací relaci [[:project]]. Nezapomeňte se každý den vrátit a začít vydělávat!"
       },
       "earningiceseemore": {
         "title": "Vydělávání [[:coin]]",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "Nápověda",
-        "description": "Nějaké otázky? Mrkněte do našeho přehledu častých dotazů. Pokud se vám nedaří najít, co potřebujete, neváhejte a napište nám na hi@ice.io."
+        "description": "Nějaké otázky? Mrkněte do našeho přehledu častých dotazů. Pokud se vám nedaří najít, co potřebujete, neváhejte a napište nám na {{email}}."
       },
       "preStaking": {
         "title": "Pre-Staking",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "Karta peněženky",
-        "description": "Tady najdete svůj aktuální zůstatek [[:coin_with_logo]] a také výdělkovou sazbu. Čím víc doporučených lidí z vašeho týmu bude online, tím vyšší budete mít výdělkovou sazbu."
+        "description": "Tady najdete svůj aktuální zůstatek [[:coin]] a také výdělkovou sazbu. Čím víc doporučených lidí z vašeho týmu bude online, tím vyšší budete mít výdělkovou sazbu."
       },
       "earning": {
         "title": "Karta výdělků",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "Karta přijetí",
-        "description": "Tady můžete vidět aktuální výdělkovou sazbu [[:coin_with_logo]], která se odvíjí od celkového počtu sněhuláků aktivních v posledním týdnu. Při dosažení další hranice dojde ke snížení výdělkové sazby na polovinu."
+        "description": "Tady můžete vidět aktuální výdělkovou sazbu [[:coin]], která se odvíjí od celkového počtu sněhuláků aktivních v posledním týdnu. Při dosažení další hranice dojde ke snížení výdělkové sazby na polovinu."
       },
       "nickname": {
         "title": "Přezdívka",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "Historie zůstatku",
-        "description": "Tady zjistíte svůj aktuální zůstatek [[:coin_with_logo]] v lokální peněžence a na blockchainu. Zůstatek v lokální peněžence se aktualizuje každou hodinu a zůstatek na blockchainu každých 24 hodin."
+        "description": "Tady zjistíte svůj aktuální zůstatek [[:coin]] v lokální peněžence a na blockchainu. Zůstatek v lokální peněžence se aktualizuje každou hodinu a zůstatek na blockchainu každých 24 hodin."
       },
       "achievements": {
         "title": "Úspěchy",
@@ -927,12 +925,6 @@
         "message": "Opravdu chcete na tomto zařízení ukončit relaci přihlášenou přes {{providerName}}?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "Dnešní bonus",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ Těžba zakázána",
-        "description": "Zjistili jsme, že vaše identita je spojena s jiným účtem. Pokud si myslíte, že se jedná o chybu, pošlete e-mail na adresu [[:bold]]feedback@ice.io[[/:bold]] se svým přezdívkou a kvalitní selfie.",
+        "description": "Zjistili jsme, že vaše identita je spojena s jiným účtem. Pokud si myslíte, že se jedná o chybu, pošlete e-mail na adresu [[:bold]]{{email}}[[/:bold]] se svým přezdívkou a kvalitní selfie.",
         "action": "Zavřít"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "Momentálně nemáte žádné přátele!"
       },
       "contacts": {
-        "empty_description": "Synchronizujte své kontakty a zjistěte, kdo je již na [[:project_with_logo]]."
+        "empty_description": "Synchronizujte své kontakty a zjistěte, kdo je již na [[:project]]."
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "Zobrazit příklad",
       "example_title": "Příklad opětovného sdílení",
       "x": {
-        "1": "Otevřete X a vyhledejte profil [[:bold]]@ice_blockchain[[/:bold]].",
+        "1": "Otevřete X a vyhledejte profil [[:bold]]{{account}}[[/:bold]].",
         "2": "Najděte připnutý příspěvek, což je první příspěvek na profilu.",
         "3": "❤️ Lajkněte a 🔄 sdílejte ho s [[:bold]]Citací[[/:bold]] s použitím [[:bold]]PŘESNÉHO[[/:bold]] textu níže.",
         "pop_up": {

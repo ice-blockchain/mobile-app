@@ -87,7 +87,7 @@ const coinDescription = () => {
 const stayConnectedDescription = () => {
   let text = replaceString(
     t('welcome.page4.description'),
-    tagRegex('iceLogo'),
+    tagRegex('logo'),
     (match, index) => <TextIceLabel key={match + index} label={null} />,
   );
 

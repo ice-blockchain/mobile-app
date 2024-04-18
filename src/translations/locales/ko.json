@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "ice에 오신 것을 환영합니다",
-      "description": "[[:coin_with_logo]] 는 휴대폰으로 수익을 올릴 수 있는 디지털 통화입니다. ice는 여러분과 같은 일상적인 사용자가 소유하고 운영하고 있습니다."
+      "description": "[[:coin]] 는 휴대폰으로 수익을 올릴 수 있는 디지털 통화입니다. ice는 여러분과 같은 일상적인 사용자가 소유하고 운영하고 있습니다."
     },
     "page2": {
       "title": "환경 친화적",
-      "description": "[[:coin_with_logo]] 는 \"지분 증명\"이라는 합의 메커니즘을 사용하기 때문에 본질적으로 BTC보다 에너지 효율적입니다. 지분증명(Proof of Stake, POS)이란 검증인이 스테이킹한 코인의 수를 통해 암호화폐 소유자의 블록 거래를 검증하는 것입니다."
+      "description": "[[:coin]] 는 \"지분 증명\"이라는 합의 메커니즘을 사용하기 때문에 본질적으로 BTC보다 에너지 효율적입니다. 지분증명(Proof of Stake, POS)이란 검증인이 스테이킹한 코인의 수를 통해 암호화폐 소유자의 블록 거래를 검증하는 것입니다."
     },
     "page3": {
       "title": "모두의 코인",
       "description_part1": "힘은 여러분의 손에 있습니다.",
-      "description_part2": "[[:project_with_logo]]에서 개발하는 모든 것은 오픈 소스 기반이며 분산형 자율 조직(Decentralized Autonomous Organization, DAO)이 통제합니다."
+      "description_part2": "[[:project]]에서 개발하는 모든 것은 오픈 소스 기반이며 분산형 자율 조직(Decentralized Autonomous Organization, DAO)이 통제합니다."
     },
     "page4": {
       "title": "참여하세요",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "알림",
-      "description_part1": "[[:project_with_logo]] 등록 세션은 24시간 동안만 지속됩니다. 현재 세션이 종료될 때 알림을 보내드릴까요?",
+      "description_part1": "[[:project]] 등록 세션은 24시간 동안만 지속됩니다. 현재 세션이 종료될 때 알림을 보내드릴까요?",
       "description_part2": "걱정하지 마세요. 스팸 메일은 보내지 않습니다!   ",
       "not_now": "나중에"
     }
@@ -35,7 +35,7 @@
     "view_all": "모두 보기",
     "invite_friend": {
       "title": "친구 초대",
-      "description": "친구를 초대하여 [[:coin_with_logo]]를 추가로 받으세요."
+      "description": "친구를 초대하여 [[:coin]]를 추가로 받으세요."
     },
     "see_all": "모두 보기",
     "no": "아니요",
@@ -88,9 +88,9 @@
       "team": "현재 팀 멤버가 없습니다!"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] 는 친구와 함께할 때 더욱 좋습니다",
+      "empty_title": "[[:project]] 는 친구와 함께할 때 더욱 좋습니다",
       "empty_button_title": "연락처 액세스를 허용하세요",
-      "empty_description": "연락처를 동기화하여 누가 이미 [[:project_with_logo]]에 가입했는지 알아보세요. 앞으로는 원하는 연락처에 ice를 보낼 수 있게 됩니다."
+      "empty_description": "연락처를 동기화하여 누가 이미 [[:project]]에 가입했는지 알아보세요. 앞으로는 원하는 연락처에 ice를 보낼 수 있게 됩니다."
     },
     "header": {
       "search_placeholder": "사용자 검색",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "글로벌 순위",
       "referrals": "추천인",
-      "description": "더 많이 추천하고 더 많은 [[:coin_with_logo]]를 적립하세요."
+      "description": "더 많이 추천하고 더 많은 [[:coin]]를 적립하세요."
     },
     "referrals": {
       "title": "추천인",
@@ -500,7 +500,7 @@
     "copied": "복사 완료",
     "share_message": "안녕 ☃️ 스노우맨! ice의 우리 팀에 가입해요. 내가 보내는 추천 코드를 이용하여 등록하면 10 [[:project]] 코인을 받을 수 있어요:",
     "share_subject": "ice의 우리 팀에 가입",
-    "description": "널리 홍보하고 친구를 초대하세요. 새로운 추천 대상이 가입할 때마다 [[:coin_with_logo]]를 받게 됩니다.",
+    "description": "널리 홍보하고 친구를 초대하세요. 새로운 추천 대상이 가입할 때마다 [[:coin]]를 받게 됩니다.",
     "share": "공유"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "현재 수익률",
     "allocation": "할당",
     "description": "스테이킹은 블록체인 네트워크를 지원하고 거래를 확인하기 위해 암호화 자산을 맡기는 절차입니다.",
-    "terms_agree": "본인은 [[:coin_with_logo]] [[:link]]스테이킹 이용약관[[/:link]]에 동의합니다. 회원님의 보유 ice는 선택한 기간 동안 잠금 처리될 것입니다.",
+    "terms_agree": "본인은 [[:coin]] [[:link]]스테이킹 이용약관[[/:link]]에 동의합니다. 회원님의 보유 ice는 선택한 기간 동안 잠금 처리될 것입니다.",
     "stake_now": "지금 사전 스테이킹하세요!",
     "balance_label": "스테이킹 잔액",
     "confirm_title": "사전 스테이킹 확인",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "친구 초대",
     "button_title": "친구 초대",
-    "description": "친구가 아직 [[:project_with_logo]]에 가입하지 않았습니다. 친구에게 초대장을 보내세요."
+    "description": "친구가 아직 [[:project]]에 가입하지 않았습니다. 친구에게 초대장을 보내세요."
   },
   "balance_history": {
     "title": "잔액 내역",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "환영 보상",
-    "description": "축하합니다. [[:bold]]회원님[[/:bold]]에 대한 [[:bold]]신뢰[[/:bold]]의 표시로 [[:value]] [[:coin_with_logo]] 코인이 주어졌습니다.",
+    "description": "축하합니다. [[:bold]]회원님[[/:bold]]에 대한 [[:bold]]신뢰[[/:bold]]의 표시로 [[:value]] [[:coin]] 코인이 주어졌습니다.",
     "balance_label": "현재 잔액"
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "모든 연락처",
-        "description": "연락처를 동기화하여 누가 이미 [[:project_with_logo]]에 가입했는지 알아보세요. 앞으로는 원하는 연락처에 [[:project_with_logo]]를 보낼 수 있게 됩니다."
+        "description": "연락처를 동기화하여 누가 이미 [[:project]]에 가입했는지 알아보세요. 앞으로는 원하는 연락처에 [[:project]]를 보낼 수 있게 됩니다."
       },
       "confirm_phone": {
         "title": "전화 확인",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "연락처 목록",
-        "description": "이것은 모든 연락처의 목록입니다. 이미 [[:project_with_logo]] 네트워크에 가입한 사람이 목록 맨 위에 표시됩니다."
+        "description": "이것은 모든 연락처의 목록입니다. 이미 [[:project]] 네트워크에 가입한 사람이 목록 맨 위에 표시됩니다."
       },
       "referrals": {
         "title": "추천",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "티어 1",
-        "description": "여기서 회원님의 티어 1 추천 목록을 보실 수 있습니다. 친구와 회원님과 같은 시간에 체크인할 때마다 해당 친구와 회원님은 현재 채택된 수익률에 따라 기본 수익의 최대 25%의 보너스를 받을 것입니다. [[:link]]더 보기[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "여기서 회원님의 티어 1 추천 목록을 보실 수 있습니다. 친구와 회원님과 같은 시간에 체크인할 때마다 해당 친구와 회원님은 현재 채택된 수익률에 따라 기본 수익의 최대 25%의 보너스를 받을 것입니다. [[:link]]더 보기[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "티어 2",
-        "description": "여기서 회원님의 티어 2 추천 목록을 보실 수 있습니다. 친구와 회원님과 같은 시간에 체크인할 때마다 해당 친구와 회원님은 현재 채택된 수익률에 따라 기본 수익의 최대 5%의 보너스를 받을 것입니다. [[:link]]더 보기[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "여기서 회원님의 티어 2 추천 목록을 보실 수 있습니다. 친구와 회원님과 같은 시간에 체크인할 때마다 해당 친구와 회원님은 현재 채택된 수익률에 따라 기본 수익의 최대 5%의 보너스를 받을 것입니다. [[:link]]더 보기[[/:link]]"
       },
       "active_users": {
         "title": "활동 중인 사용자",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "홈",
-        "description": "[[:project_with_logo]]에 오신 것을 환영합니다. 홈 화면에서 잔액과 현재 수익률 및 팀과 회원님의 글로벌 순위에 대한 모든 통계를 확인할 수 있습니다."
+        "description": "[[:project]]에 오신 것을 환영합니다. 홈 화면에서 잔액과 현재 수익률 및 팀과 회원님의 글로벌 순위에 대한 모든 통계를 확인할 수 있습니다."
       },
       "invite": {
         "title": "초대",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "팀",
-        "description": "[[:project_with_logo]] 는 친구와 함께할 때 더욱 좋습니다 이 페이지에서는 티어 1과 티어 2 레벨의 팀원 현황을 볼 수 있습니다. 또한 여기서 그들에게 핑을 보낼 수 있습니다."
+        "description": "[[:project]] 는 친구와 함께할 때 더욱 좋습니다 이 페이지에서는 티어 1과 티어 2 레벨의 팀원 현황을 볼 수 있습니다. 또한 여기서 그들에게 핑을 보낼 수 있습니다."
       },
       "news": {
         "title": "뉴스",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "[[:coin]] 적립",
-        "description": "이 버튼을 탭하여 24시간마다 [[:project_with_logo]]에 체크인하고 세션을 시작할 수 있습니다. 매일 여기로 돌아와서 수익을 올리는 것을 잊지 마세요!"
+        "description": "이 버튼을 탭하여 24시간마다 [[:project]]에 체크인하고 세션을 시작할 수 있습니다. 매일 여기로 돌아와서 수익을 올리는 것을 잊지 마세요!"
       },
       "earningiceseemore": {
         "title": "[[:coin]] 적립",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "도움말",
-        "description": "질문이 있으신가요? 자주 묻는 질문 목록을 확인하세요. hi@ice.io.원하는 것을 찾을 수 없다면 주저하지 말고 hi@ice.io로 문의하세요."
+        "description": "질문이 있으신가요? 자주 묻는 질문 목록을 확인하세요. {{email}}.원하는 것을 찾을 수 없다면 주저하지 말고 {{email}}로 문의하세요."
       },
       "preStaking": {
         "title": "사전 스테이킹",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "지갑 카드",
-        "description": "여기에서 적립률과 함께 현재 [[:coin_with_logo]] 잔액을 확인할 수 있습니다. 회원님의 팀원에서 추천이 많아질 수록 수익률이 높아집니다."
+        "description": "여기에서 적립률과 함께 현재 [[:coin]] 잔액을 확인할 수 있습니다. 회원님의 팀원에서 추천이 많아질 수록 수익률이 높아집니다."
       },
       "earning": {
         "title": "수익 카드",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "채택 카드",
-        "description": "지난주에 활동한 총 스노우맨의 평균 인원수를 기준으로 현재의 [[:coin_with_logo]] 수익률을 확인할 수 있습니다. 다음 임계값에 도달하면 수익률이 절반으로 줄어듭니다."
+        "description": "지난주에 활동한 총 스노우맨의 평균 인원수를 기준으로 현재의 [[:coin]] 수익률을 확인할 수 있습니다. 다음 임계값에 도달하면 수익률이 절반으로 줄어듭니다."
       },
       "nickname": {
         "title": "닉네임",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "잔액 내역",
-        "description": "여기서 로컬 지갑과 블록체인에 있는 현재의 [[:coin_with_logo]] 잔액을 확인할 수 있습니다. 블록체인 잔액은 24시간마다 업데이트되지만 로컬 지갑의 잔액은 매시간 업데이트됩니다."
+        "description": "여기서 로컬 지갑과 블록체인에 있는 현재의 [[:coin]] 잔액을 확인할 수 있습니다. 블록체인 잔액은 24시간마다 업데이트되지만 로컬 지갑의 잔액은 매시간 업데이트됩니다."
       },
       "achievements": {
         "title": "성취 내역",
@@ -927,12 +925,6 @@
         "message": "이 기기에서 {{providerName}} 로그인 세션을 종료하기 원하나요?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "오늘의 보너스",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ 채굴 비활성화",
-        "description": "당신의 신원이 다른 계정과 연관되어 있음을 확인했습니다. 이것이 오류라고 생각한다면 [[:bold]]feedback@ice.io[[/:bold]]로 닉네임과 고품질 셀피를 포함한 이메일을 보내 주세요.",
+        "description": "당신의 신원이 다른 계정과 연관되어 있음을 확인했습니다. 이것이 오류라고 생각한다면 [[:bold]]{{email}}[[/:bold]]로 닉네임과 고품질 셀피를 포함한 이메일을 보내 주세요.",
         "action": "닫기"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "현재 친구가 없습니다!"
       },
       "contacts": {
-        "empty_description": "연락처를 동기화하고 이미 [[:project_with_logo]]에 있는 사람을 확인하십시오."
+        "empty_description": "연락처를 동기화하고 이미 [[:project]]에 있는 사람을 확인하십시오."
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "예시 표시",
       "example_title": "리포스트 예시",
       "x": {
-        "1": "X를 열고 [[:bold]]@ice_blockchain[[/:bold]] 계정을 검색합니다.",
+        "1": "X를 열고 [[:bold]]{{account}}[[/:bold]] 계정을 검색합니다.",
         "2": "프로필에서 고정된 게시물을 찾습니다. 이는 프로필의 첫 번째 게시물입니다.",
         "3": "❤️ 좋아요를 누르고 [[:bold]]인용[[/:bold]]을 사용하여 아래의 [[:bold]]정확한[[/:bold]] 텍스트로 리포스트합니다.",
         "pop_up": {

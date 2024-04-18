@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "Chào mừng đến với [[:project]]",
-      "description": "[[:coin_with_logo]] là một loại tiền kỹ thuật số mà bạn có thể kiếm được bằng điện thoại của mình. [[:coin]] được sở hữu và vận hành bởi những người dùng hàng ngày như bạn."
+      "description": "[[:coin]] là một loại tiền kỹ thuật số mà bạn có thể kiếm được bằng điện thoại của mình. [[:coin]] được sở hữu và vận hành bởi những người dùng hàng ngày như bạn."
     },
     "page2": {
       "title": "Hành tinh thân thiện",
-      "description": "[[:coin_with_logo]] vốn đã tiết kiệm năng lượng hơn BTC vì nó sử dụng cơ chế đồng thuận “Proof of Stake” (Bằng chứng cổ phần). Với bằng chứng cổ phần (POS), chủ sở hữu tiền mã hóa xác thực các giao dịch khối dựa trên số lượng đồng tiền mà người xác thực giữ và khóa."
+      "description": "[[:coin]] vốn đã tiết kiệm năng lượng hơn BTC vì nó sử dụng cơ chế đồng thuận “Proof of Stake” (Bằng chứng cổ phần). Với bằng chứng cổ phần (POS), chủ sở hữu tiền mã hóa xác thực các giao dịch khối dựa trên số lượng đồng tiền mà người xác thực giữ và khóa."
     },
     "page3": {
       "title": "Đồng tiền của mọi người",
       "description_part1": "Sức mạnh nằm trong tay bạn.",
-      "description_part2": "Mọi thứ chúng tôi phát triển tại [[:project_with_logo]] sẽ là mã nguồn mở và được kiểm soát bởi Tổ chức tự trị phi tập trung (DAO)."
+      "description_part2": "Mọi thứ chúng tôi phát triển tại [[:project]] sẽ là mã nguồn mở và được kiểm soát bởi Tổ chức tự trị phi tập trung (DAO)."
     },
     "page4": {
       "title": "Luôn kết nối",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Thông báo",
-      "description_part1": "[[:project_with_logo]] có các phiên điểm danh chỉ kéo dài trong 24 giờ. Bạn có muốn nhận thông báo khi phiên hiện tại của bạn kết thúc không?",
+      "description_part1": "[[:project]] có các phiên điểm danh chỉ kéo dài trong 24 giờ. Bạn có muốn nhận thông báo khi phiên hiện tại của bạn kết thúc không?",
       "description_part2": "Đừng lo, chúng tôi sẽ không gửi thông báo rác cho bạn!",
       "not_now": "Không phải bây giờ"
     }
@@ -35,7 +35,7 @@
     "view_all": "xem tất cả",
     "invite_friend": {
       "title": "Mời bạn bè",
-      "description": "Kiếm thêm [[:coin_with_logo]] bằng cách mời bạn bè của bạn."
+      "description": "Kiếm thêm [[:coin]] bằng cách mời bạn bè của bạn."
     },
     "see_all": "xem tất cả",
     "no": "Không",
@@ -88,9 +88,9 @@
       "team": "Hiện tại bạn không có thành viên trong nhóm nào!"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] sẽ tốt hơn khi có nhiều bạn bè",
+      "empty_title": "[[:project]] sẽ tốt hơn khi có nhiều bạn bè",
       "empty_button_title": "Cho phép truy cập danh bạ",
-      "empty_description": "Đồng bộ danh bạ của bạn và xem ai đã tham gia [[:project_with_logo]]. Trong tương lai, bạn sẽ có thể gửi [[:coin]] cho bất kỳ địa chỉ liên hệ nào của mình."
+      "empty_description": "Đồng bộ danh bạ của bạn và xem ai đã tham gia [[:project]]. Trong tương lai, bạn sẽ có thể gửi [[:coin]] cho bất kỳ địa chỉ liên hệ nào của mình."
     },
     "header": {
       "search_placeholder": "Tìm kiếm người dùng",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "XẾP HẠNG TOÀN CẦU",
       "referrals": "LƯỢT GIỚI THIỆU",
-      "description": "Giới thiệu thêm người dùng và kiếm được nhiều [[:coin_with_logo]] hơn."
+      "description": "Giới thiệu thêm người dùng và kiếm được nhiều [[:coin]] hơn."
     },
     "referrals": {
       "title": "LƯỢT GIỚI THIỆU",
@@ -500,7 +500,7 @@
     "copied": "ĐÃ SAO CHÉP",
     "share_message": "Xin chào Người tuyết ☃️! Tham gia nhóm của tôi trên [[:project]] và nhận 10 đồng [[:coin]] khi bạn đăng ký bằng mã giới thiệu của tôi:",
     "share_subject": "Tham gia nhóm của tôi trên [[:project]]",
-    "description": "Lan tỏa và mời bạn bè của bạn. Bạn kiếm được [[:coin_with_logo]] cho mỗi lượt giới thiệu mà bạn mang lại.",
+    "description": "Lan tỏa và mời bạn bè của bạn. Bạn kiếm được [[:coin]] cho mỗi lượt giới thiệu mà bạn mang lại.",
     "share": "Chia sẻ"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "Lãi suất hiện tại",
     "allocation": "Phân bổ",
     "description": "Giữ và khóa là một quá trình liên quan đến việc cam kết tài sản tiền mã hóa của bạn để hỗ trợ mạng chuỗi khối và xác nhận giao dịch.",
-    "terms_agree": "Tôi đồng ý với [[:coin_with_logo]] [[:link]]Điều khoản giữ và khóa[[/:link]]. Lượng [[:coin]] mà bạn nắm giữ sẽ bị khóa trong khoảng thời gian đã chọn.",
+    "terms_agree": "Tôi đồng ý với [[:coin]] [[:link]]Điều khoản giữ và khóa[[/:link]]. Lượng [[:coin]] mà bạn nắm giữ sẽ bị khóa trong khoảng thời gian đã chọn.",
     "stake_now": "Giữ và khóa sớm ngay!",
     "balance_label": "Số dư giữ và khóa",
     "confirm_title": "Xác nhận giữ và khóa sớm",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Mời bạn bè",
     "button_title": "Mời bạn bè",
-    "description": "Bạn bè của bạn chưa tham gia [[:project_with_logo]]. Hãy gửi cho họ một lời mời!"
+    "description": "Bạn bè của bạn chưa tham gia [[:project]]. Hãy gửi cho họ một lời mời!"
   },
   "balance_history": {
     "title": "Lịch sử số dư",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Phần thưởng chào mừng",
-    "description": "Xin chúc mừng, bạn đã nhận được [[:value]] đồng [[:coin_with_logo]] đầu tiên, điều này chứng tỏ chúng tôi [[:bold]]Tin tưởng[[/:bold]] [[:bold]]Bạn[[/:bold]].",
+    "description": "Xin chúc mừng, bạn đã nhận được [[:value]] đồng [[:coin]] đầu tiên, điều này chứng tỏ chúng tôi [[:bold]]Tin tưởng[[/:bold]] [[:bold]]Bạn[[/:bold]].",
     "balance_label": "Số dư hiện tại của bạn"
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "Cho phép truy cập danh bạ",
-        "description": "Đồng bộ danh bạ của bạn và xem ai đã tham gia [[:project_with_logo]]. Trong tương lai, bạn sẽ có thể gửi [[:project_with_logo]] cho bất kỳ địa chỉ liên hệ nào của mình."
+        "description": "Đồng bộ danh bạ của bạn và xem ai đã tham gia [[:project]]. Trong tương lai, bạn sẽ có thể gửi [[:project]] cho bất kỳ địa chỉ liên hệ nào của mình."
       },
       "confirm_phone": {
         "title": "Xác nhận số điện thoại",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "Danh sách địa chỉ liên hệ",
-        "description": "Đây là danh sách tất cả các địa chỉ liên hệ của bạn, những người đã tham gia mạng [[:project_with_logo]] sẽ được hiển thị ở đầu danh sách."
+        "description": "Đây là danh sách tất cả các địa chỉ liên hệ của bạn, những người đã tham gia mạng [[:project]] sẽ được hiển thị ở đầu danh sách."
       },
       "referrals": {
         "title": "Lượt giới thiệu",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "Bậc 1",
-        "description": "Tại đây, bạn có thể xem danh sách các lượt giới thiệu Bậc 1 của mình. Đối với mỗi người bạn điểm danh cùng lúc với bạn, bạn sẽ nhận được thêm 25% trên lãi suất cơ bản hiện được áp dụng. [[:link]]Đọc thêm[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Tại đây, bạn có thể xem danh sách các lượt giới thiệu Bậc 1 của mình. Đối với mỗi người bạn điểm danh cùng lúc với bạn, bạn sẽ nhận được thêm 25% trên lãi suất cơ bản hiện được áp dụng. [[:link]]Đọc thêm[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "Bậc 2",
-        "description": "Tại đây, bạn có thể xem danh sách các lượt giới thiệu Bậc 2 của mình. Đối với mỗi người bạn điểm danh cùng lúc với bạn, bạn sẽ nhận được thêm 5% trên lãi suất cơ bản hiện được áp dụng. [[:link]]Đọc thêm[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Tại đây, bạn có thể xem danh sách các lượt giới thiệu Bậc 2 của mình. Đối với mỗi người bạn điểm danh cùng lúc với bạn, bạn sẽ nhận được thêm 5% trên lãi suất cơ bản hiện được áp dụng. [[:link]]Đọc thêm[[/:link]]"
       },
       "active_users": {
         "title": "Người dùng đang hoạt động",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "Trang chủ",
-        "description": "Chào mừng đến với [[:project_with_logo]]. Trên màn hình chính, bạn có thể tìm thấy tất cả số liệu thống kê về số dư, lãi suất hiện tại, xếp hạng toàn cầu của bạn cùng với nhóm của bạn."
+        "description": "Chào mừng đến với [[:project]]. Trên màn hình chính, bạn có thể tìm thấy tất cả số liệu thống kê về số dư, lãi suất hiện tại, xếp hạng toàn cầu của bạn cùng với nhóm của bạn."
       },
       "invite": {
         "title": "Mời",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "Nhóm",
-        "description": "[[:project_with_logo]] sẽ tốt hơn khi có nhiều bạn bè. Trên trang này, bạn có thể xem trạng thái của các thành viên trong nhóm từ cả cấp độ Bậc 1 và Bậc 2. Bạn cũng có thể ping họ tại đây."
+        "description": "[[:project]] sẽ tốt hơn khi có nhiều bạn bè. Trên trang này, bạn có thể xem trạng thái của các thành viên trong nhóm từ cả cấp độ Bậc 1 và Bậc 2. Bạn cũng có thể ping họ tại đây."
       },
       "news": {
         "title": "Tin tức",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "Kiếm [[:coin]]",
-        "description": "Bạn có thể bắt đầu phiên điểm danh [[:project_with_logo]] sau mỗi 24 giờ bằng cách nhấn vào nút này. Đừng quên quay lại mỗi ngày và bắt đầu kiếm tiền!"
+        "description": "Bạn có thể bắt đầu phiên điểm danh [[:project]] sau mỗi 24 giờ bằng cách nhấn vào nút này. Đừng quên quay lại mỗi ngày và bắt đầu kiếm tiền!"
       },
       "earningiceseemore": {
         "title": "Kiếm [[:coin]]",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "Trợ giúp",
-        "description": "Bạn có câu hỏi nào không? Xem danh sách các câu hỏi thường gặp của chúng tôi. Nếu bạn không tìm được thông tin cần tìm, đừng ngần ngại liên hệ với chúng tôi tại hi@ice.io."
+        "description": "Bạn có câu hỏi nào không? Xem danh sách các câu hỏi thường gặp của chúng tôi. Nếu bạn không tìm được thông tin cần tìm, đừng ngần ngại liên hệ với chúng tôi tại {{email}}."
       },
       "preStaking": {
         "title": "Giữ và khóa sớm",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "Thẻ ví",
-        "description": "Tại đây bạn có thể tìm số dư [[:coin_with_logo]] hiện tại của mình cùng với lãi suất. Càng có nhiều lượt giới thiệu đang hoạt động từ nhóm của bạn, thì lãi suất càng cao."
+        "description": "Tại đây bạn có thể tìm số dư [[:coin]] hiện tại của mình cùng với lãi suất. Càng có nhiều lượt giới thiệu đang hoạt động từ nhóm của bạn, thì lãi suất càng cao."
       },
       "earning": {
         "title": "Thẻ thu nhập",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "Thẻ áp dụng",
-        "description": "Dựa trên mức trung bình của tổng số Người tuyết đang hoạt động trong tuần trước, bạn có thể xem lãi suất [[:coin_with_logo]] hiện tại. Lãi suất giảm một nửa khi đạt đến ngưỡng tiếp theo."
+        "description": "Dựa trên mức trung bình của tổng số Người tuyết đang hoạt động trong tuần trước, bạn có thể xem lãi suất [[:coin]] hiện tại. Lãi suất giảm một nửa khi đạt đến ngưỡng tiếp theo."
       },
       "nickname": {
         "title": "Biệt danh",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "Lịch sử số dư",
-        "description": "Tại đây bạn có thể tìm thấy số dư [[:coin_with_logo]] hiện tại của mình trên ví cục bộ và chuỗi khối. Số dư ví cục bộ được cập nhật mỗi giờ, trong khi số dư chuỗi khối được cập nhật 24 giờ một lần."
+        "description": "Tại đây bạn có thể tìm thấy số dư [[:coin]] hiện tại của mình trên ví cục bộ và chuỗi khối. Số dư ví cục bộ được cập nhật mỗi giờ, trong khi số dư chuỗi khối được cập nhật 24 giờ một lần."
       },
       "achievements": {
         "title": "Thành tựu",
@@ -927,12 +925,6 @@
         "message": "Bạn có chắc chắn muốn kết thúc phiên đăng nhập {{providerName}} từ thiết bị này không?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "Tiền thưởng hôm nay",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ Tắt chức năng đào tiền",
-        "description": "Chúng tôi đã xác định rằng danh tính của bạn liên quan đến một tài khoản khác. Nếu bạn nghĩ đó là một lỗi, vui lòng gửi email đến [[:bold]]feedback@ice.io[[/:bold]] với biệt danh và một bức ảnh tự sướng chất lượng cao.",
+        "description": "Chúng tôi đã xác định rằng danh tính của bạn liên quan đến một tài khoản khác. Nếu bạn nghĩ đó là một lỗi, vui lòng gửi email đến [[:bold]]{{email}}[[/:bold]] với biệt danh và một bức ảnh tự sướng chất lượng cao.",
         "action": "Đóng"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "Hiện tại bạn không có bạn bè nào!"
       },
       "contacts": {
-        "empty_description": "Đồng bộ hóa danh bạ của bạn và xem ai đã có trong [[:project_with_logo]]."
+        "empty_description": "Đồng bộ hóa danh bạ của bạn và xem ai đã có trong [[:project]]."
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "Hiển thị ví dụ",
       "example_title": "Ví dụ về bài đăng lại",
       "x": {
-        "1": "Mở X và tìm kiếm tài khoản [[:bold]]@ice_blockchain[[/:bold]]",
+        "1": "Mở X và tìm kiếm tài khoản [[:bold]]{{account}}[[/:bold]]",
         "2": "Tìm bài đăng đã ghim, đó là bài đăng đầu tiên trên hồ sơ.",
         "3": "❤️ Thích & 🔄 Đăng lại nó với [[:bold]]Trích dẫn[[/:bold]] bằng cách sử dụng văn bản [[:bold]]CHÍNH XÁC[[/:bold]] dưới đây.",
         "pop_up": {

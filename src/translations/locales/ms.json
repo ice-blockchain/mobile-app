@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "Selamat datang ke [[:project]]",
-      "description": "[[:coin_with_logo]] ialah mata wang digital yang anda boleh peroleh dengan telefon anda. [[:coin]] dimiliki dan dikendalikan oleh pengguna setiap hari seperti diri anda."
+      "description": "[[:coin]] ialah mata wang digital yang anda boleh peroleh dengan telefon anda. [[:coin]] dimiliki dan dikendalikan oleh pengguna setiap hari seperti diri anda."
     },
     "page2": {
       "title": "Planet Mesra",
-      "description": "[[:coin_with_logo]] secara alami adalah lebih cekap tenaga berbanding BTC kerana ia menggunakan mekanisme sepersetujuan “Bukti Taruhan”. Dengan bukti taruhan (POS), pemilik mata wang kripto mengesahkan transaksi blok berdasarkan bilangan syiling seorang pengesah menaruh."
+      "description": "[[:coin]] secara alami adalah lebih cekap tenaga berbanding BTC kerana ia menggunakan mekanisme sepersetujuan “Bukti Taruhan”. Dengan bukti taruhan (POS), pemilik mata wang kripto mengesahkan transaksi blok berdasarkan bilangan syiling seorang pengesah menaruh."
     },
     "page3": {
       "title": "Syiling Rakyat",
       "description_part1": "Kuasa di tangan anda.",
-      "description_part2": "Segala-gala yang kami bangunkan di [[:project_with_logo]] akan menjadi sumber terbuka & dikawal oleh Organisasi Autonomi Dinyahpusat (DAO)."
+      "description_part2": "Segala-gala yang kami bangunkan di [[:project]] akan menjadi sumber terbuka & dikawal oleh Organisasi Autonomi Dinyahpusat (DAO)."
     },
     "page4": {
       "title": "Kekal Bersambung",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Pemberitahuan",
-      "description_part1": "[[:project_with_logo]] semak masuk hanya berlangsung selama 24 jam. Adakah anda ingin menerima pemberitahuan apabila sesi semasa anda tamat?",
+      "description_part1": "[[:project]] semak masuk hanya berlangsung selama 24 jam. Adakah anda ingin menerima pemberitahuan apabila sesi semasa anda tamat?",
       "description_part2": "Jangan bimbang, kami tidak akan spam anda!",
       "not_now": "Bukan sekarang"
     }
@@ -35,7 +35,7 @@
     "view_all": "lihat semua",
     "invite_friend": {
       "title": "Jemput Rakan",
-      "description": "Peroleh [[:coin_with_logo]] tambahan dengan menjemput rakan-rakan anda."
+      "description": "Peroleh [[:coin]] tambahan dengan menjemput rakan-rakan anda."
     },
     "see_all": "lihat semua",
     "no": "Tidak",
@@ -88,9 +88,9 @@
       "team": "Anda tidak mempunyai sebarang ahli pasukan pada masa ini!"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] lebih bagus bersama rakan",
+      "empty_title": "[[:project]] lebih bagus bersama rakan",
       "empty_button_title": "Benarkan semua akses kenalan",
-      "empty_description": "Segerakkan kenalan anda dan lihat siapa yang telah sedia ada dalam [[:project_with_logo]]. Pada masa akan datang, anda boleh menghantar [[:coin]] kepada mana-mana kenalan anda."
+      "empty_description": "Segerakkan kenalan anda dan lihat siapa yang telah sedia ada dalam [[:project]]. Pada masa akan datang, anda boleh menghantar [[:coin]] kepada mana-mana kenalan anda."
     },
     "header": {
       "search_placeholder": "Cari pengguna",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "KEDUDUKAN GLOBAL",
       "referrals": "RUJUKAN",
-      "description": "Rujuk lebih ramai pengguna dan peroleh lebih banyak [[:coin_with_logo]]."
+      "description": "Rujuk lebih ramai pengguna dan peroleh lebih banyak [[:coin]]."
     },
     "referrals": {
       "title": "RUJUKAN",
@@ -500,7 +500,7 @@
     "copied": "DISALIN",
     "share_message": "Hai Orang Salji ☃️ ! Sertai pasukan saya dalam [[:project]] dan terima 10 syiling [[:coin]] apabila anda mendaftar menggunakan kod rujukan saya:",
     "share_subject": "Sertai pasukan saya di [[:project]]",
-    "description": "Sebarkan khabar berita dan jemput rakan-rakan anda. Anda memperoleh [[:coin_with_logo]] untuk setiap rujkan baharu yang anda bawa.",
+    "description": "Sebarkan khabar berita dan jemput rakan-rakan anda. Anda memperoleh [[:coin]] untuk setiap rujkan baharu yang anda bawa.",
     "share": "Kongsi"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "Kadar Semasa",
     "allocation": "Peruntukan",
     "description": "Menaruh adalah proses yang melibatkan peletakan aset kripto anda untuk menyokong rangkaian blockchain dan mengesahkan transaksi.",
-    "terms_agree": "Saya bersetuju dengan [[:coin_with_logo]] [[:link]]Syarat Taruhan[[/:link]]. Pegangan [[:coin]] anda akan dikunci untuk tempoh yang dipilih.",
+    "terms_agree": "Saya bersetuju dengan [[:coin]] [[:link]]Syarat Taruhan[[/:link]]. Pegangan [[:coin]] anda akan dikunci untuk tempoh yang dipilih.",
     "stake_now": "Prataruh Sekarang!",
     "balance_label": "Baki ditaruh",
     "confirm_title": "Sahkan Prataruh",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Jemput Rakan",
     "button_title": "Jemput rakan",
-    "description": "Rakan anda masih belum berada di [[:project_with_logo]]. Hantar jemputan kepada dia!"
+    "description": "Rakan anda masih belum berada di [[:project]]. Hantar jemputan kepada dia!"
   },
   "balance_history": {
     "title": "Sejarah Baki",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Ganjaran alu-aluan",
-    "description": "Tahniah, anda telah menerima [[:value]] [[:coin_with_logo]] syiling pertama anda yang membiktikan [[:bold]]Kepercayaan[[/:bold]] kami dalam [[:bold]]Anda[[/:bold]].",
+    "description": "Tahniah, anda telah menerima [[:value]] [[:coin]] syiling pertama anda yang membiktikan [[:bold]]Kepercayaan[[/:bold]] kami dalam [[:bold]]Anda[[/:bold]].",
     "balance_label": "Baki semasa anda"
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "Benarkan kenalan",
-        "description": "Segerakkan kenalan anda dan lihat siapa yang telah sedia ada dalam [[:project_with_logo]]. Pada masa akan datang anda boleh menghantar [[:project_with_logo]] kepada mana-mana kenalan anda."
+        "description": "Segerakkan kenalan anda dan lihat siapa yang telah sedia ada dalam [[:project]]. Pada masa akan datang anda boleh menghantar [[:project]] kepada mana-mana kenalan anda."
       },
       "confirm_phone": {
         "title": "Sahkan telefon",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "Senarai kenalan",
-        "description": "Ini ialah senarai semua kenalan anda, mereka yang telah pun menyertai rangkaian [[:project_with_logo]] yang dipaparkan di bahagian teratas senarai."
+        "description": "Ini ialah senarai semua kenalan anda, mereka yang telah pun menyertai rangkaian [[:project]] yang dipaparkan di bahagian teratas senarai."
       },
       "referrals": {
         "title": "Rujukan",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "Tahap 1",
-        "description": "Di sini anda boleh melihat senarai rujukan Tahap 1 anda. Untuk setiap rakan yang menyemak masuk serentak dengan anda, anda akan mendapat 25% tambahan ke atas kadar pendapatan kesesuaian semasa asas anda. [[:link]]Baca lebih lanjut[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Di sini anda boleh melihat senarai rujukan Tahap 1 anda. Untuk setiap rakan yang menyemak masuk serentak dengan anda, anda akan mendapat 25% tambahan ke atas kadar pendapatan kesesuaian semasa asas anda. [[:link]]Baca lebih lanjut[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "Tahap 2",
-        "description": "Di sini anda boleh melihat senarai rujukan Tahap 2 anda. Untuk setiap rakan yang menyemak masuk serentak dengan anda, anda akan mendapat 5% tambahan ke atas kadar pendapatan kesesuaian semasa asas anda. [[:link]]Baca lebih lanjut[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Di sini anda boleh melihat senarai rujukan Tahap 2 anda. Untuk setiap rakan yang menyemak masuk serentak dengan anda, anda akan mendapat 5% tambahan ke atas kadar pendapatan kesesuaian semasa asas anda. [[:link]]Baca lebih lanjut[[/:link]]"
       },
       "active_users": {
         "title": "Pengguna Aktif",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "Utama",
-        "description": "Selamat datang ke [[:project_with_logo]]. Di skrin utama anda boleh mendapatkan semua statitik tentang baki anda, kadar pendapatan semasa, kedudukan global anda bersama-sama dengan pasukan anda."
+        "description": "Selamat datang ke [[:project]]. Di skrin utama anda boleh mendapatkan semua statitik tentang baki anda, kadar pendapatan semasa, kedudukan global anda bersama-sama dengan pasukan anda."
       },
       "invite": {
         "title": "jemput",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "Pasukan",
-        "description": "[[:project_with_logo]] lebih bagus bersama rakan. Di halaman ini anda boleh melihat status ahli pasukan anda daripada kedua-dua Tahap 1 dan Tahap 2. Anda juga boleh ping mereka dari sini."
+        "description": "[[:project]] lebih bagus bersama rakan. Di halaman ini anda boleh melihat status ahli pasukan anda daripada kedua-dua Tahap 1 dan Tahap 2. Anda juga boleh ping mereka dari sini."
       },
       "news": {
         "title": "Berita",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "Memperoleh [[:coin]]",
-        "description": "Anda boleh memulakan sesi semak masuk [[:project_with_logo]] setiap 24 jam dengan menekan butang ini. Jangan lupa untuk kembali setiap hari dan mula memperoleh!"
+        "description": "Anda boleh memulakan sesi semak masuk [[:project]] setiap 24 jam dengan menekan butang ini. Jangan lupa untuk kembali setiap hari dan mula memperoleh!"
       },
       "earningiceseemore": {
         "title": "Memeperoleh [[:coin]]",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "Bantuan",
-        "description": "Adakah anda mempunyai sebarang pertanyaan? Cuba lihat senarai soalan lazim kami. Sekiranya anda tidak dapat mencari apa yang anda cari, jangan ragu-ragu untuk menghubungi kami di hi@ice.io."
+        "description": "Adakah anda mempunyai sebarang pertanyaan? Cuba lihat senarai soalan lazim kami. Sekiranya anda tidak dapat mencari apa yang anda cari, jangan ragu-ragu untuk menghubungi kami di {{email}}."
       },
       "preStaking": {
         "title": "Prataruhan",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "Kad Dompet",
-        "description": "Anda boleh mendapatkan di sini baki [[:coin_with_logo]] semasa anda, bersama-sama dengan kadar pendapatan. Lebih ramai rujukan daripada pasukan anda berada dalam talian, lebih tinggi kadar pendapatan anda."
+        "description": "Anda boleh mendapatkan di sini baki [[:coin]] semasa anda, bersama-sama dengan kadar pendapatan. Lebih ramai rujukan daripada pasukan anda berada dalam talian, lebih tinggi kadar pendapatan anda."
       },
       "earning": {
         "title": "Kad Pendapatan",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "Kad Guna Pakai",
-        "description": "Berdasarkan purata jumlah Orang Salji yang aktif minggu lepas, anda boleh melihat kadar pendapatan [[:coin_with_logo]] semasa. Kadar pendapatan dipotong separuh apabila ambang seterusnya dicapai."
+        "description": "Berdasarkan purata jumlah Orang Salji yang aktif minggu lepas, anda boleh melihat kadar pendapatan [[:coin]] semasa. Kadar pendapatan dipotong separuh apabila ambang seterusnya dicapai."
       },
       "nickname": {
         "title": "Nama Samaran",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "Sejarah Baki",
-        "description": "Anda boleh mendapatkan di sini baki [[:coin_with_logo]] semasa anda dalam dompet tempatan dan blockchain. Baki dompet tempatan dikemas kini setiap jam, sementara baki blockchain dikemas kini setiap 24 jam."
+        "description": "Anda boleh mendapatkan di sini baki [[:coin]] semasa anda dalam dompet tempatan dan blockchain. Baki dompet tempatan dikemas kini setiap jam, sementara baki blockchain dikemas kini setiap 24 jam."
       },
       "achievements": {
         "title": "Pencapaian",
@@ -927,12 +925,6 @@
         "message": "Adakah anda pasti anda mahu menamatkan sesi log masuk {{providerName}} dari peranti ini?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "Bonus Hari Ini",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ Penambangan Dinonaktifkan",
-        "description": "Kami telah mengenal pasti bahawa identiti anda berkaitan dengan akaun lain. Jika anda menganggap ini kesalahan, sila hantar emel kepada [[:bold]]feedback@ice.io[[/:bold]] dengan nama panggilan anda dan selfie berkualiti tinggi.",
+        "description": "Kami telah mengenal pasti bahawa identiti anda berkaitan dengan akaun lain. Jika anda menganggap ini kesalahan, sila hantar emel kepada [[:bold]]{{email}}[[/:bold]] dengan nama panggilan anda dan selfie berkualiti tinggi.",
         "action": "Tutup"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "Pada masa ini, anda tidak mempunyai rakan-rakan!"
       },
       "contacts": {
-        "empty_description": "Selaraskan kenalan anda dan lihat siapa yang sudah ada di [[:project_with_logo]]."
+        "empty_description": "Selaraskan kenalan anda dan lihat siapa yang sudah ada di [[:project]]."
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "Tunjukkan contoh",
       "example_title": "Contoh repost",
       "x": {
-        "1": "Buka X dan cari akaun [[:bold]]@ice_blockchain[[/:bold]].",
+        "1": "Buka X dan cari akaun [[:bold]]{{account}}[[/:bold]].",
         "2": "Cari pos yang telah dipasang, iaitu pos pertama dalam profil.",
         "3": "❤️ Suka & 🔄 Repost dengan [[:bold]]Quote[[/:bold]] menggunakan teks [[:bold]]TEPAT[[/:bold]] di bawah.",
         "pop_up": {

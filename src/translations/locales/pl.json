@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "Witamy w [[:project]]",
-      "description": "[[:coin_with_logo]] to cyfrowa waluta, którą można gromadzić za pomocą telefonu. [[:coin]] należy do użytkowników takich jak Ty i jest przez nich używana."
+      "description": "[[:coin]] to cyfrowa waluta, którą można gromadzić za pomocą telefonu. [[:coin]] należy do użytkowników takich jak Ty i jest przez nich używana."
     },
     "page2": {
       "title": "Przyjazny dla planety",
-      "description": "[[:coin_with_logo]] jest z natury bardziej energooszczędny niż BTC, ponieważ wykorzystuje mechanizm konsensusu „Proof of Stake”. W przypadku proof-of-stake (POS) właściciele kryptowalut walidują transakcje blokowe na podstawie liczby coinów stakowanych przez walidatora."
+      "description": "[[:coin]] jest z natury bardziej energooszczędny niż BTC, ponieważ wykorzystuje mechanizm konsensusu „Proof of Stake”. W przypadku proof-of-stake (POS) właściciele kryptowalut walidują transakcje blokowe na podstawie liczby coinów stakowanych przez walidatora."
     },
     "page3": {
       "title": "Moneta ludzi",
       "description_part1": "Moc jest w twoich rękach.",
-      "description_part2": "Wszystko, co rozwijamy w [[:project_with_logo]], będzie open source oraz będzie kontrolowane przez zdecentralizowaną autonomiczną organizację (DAO)."
+      "description_part2": "Wszystko, co rozwijamy w [[:project]], będzie open source oraz będzie kontrolowane przez zdecentralizowaną autonomiczną organizację (DAO)."
     },
     "page4": {
       "title": "Bądź na bieżąco",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Powiadomienia",
-      "description_part1": "[[:project_with_logo]] sesje meldunkowe trwają tylko 24 godziny. Czy chcesz otrzymywać powiadomienia o zakończeniu bieżącej sesji?",
+      "description_part1": "[[:project]] sesje meldunkowe trwają tylko 24 godziny. Czy chcesz otrzymywać powiadomienia o zakończeniu bieżącej sesji?",
       "description_part2": "Nie martw się, nie będziemy wysyłać spamu!",
       "not_now": "Nie teraz"
     }
@@ -35,7 +35,7 @@
     "view_all": "zobacz wszystko",
     "invite_friend": {
       "title": "Zaproś znajomych",
-      "description": "Zarabiaj dodatkowe [[:coin_with_logo]], zapraszając znajomych."
+      "description": "Zarabiaj dodatkowe [[:coin]], zapraszając znajomych."
     },
     "see_all": "zobacz wszystko",
     "no": "Nie",
@@ -88,9 +88,9 @@
       "team": "Obecnie nie masz żadnych członków zespołu!"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] działa lepiej ze znajomymi",
+      "empty_title": "[[:project]] działa lepiej ze znajomymi",
       "empty_button_title": "Zezwalaj na dostęp do kontaktów",
-      "empty_description": "Zsynchronizuj swoje kontakty i zobacz, kto jest już w [[:project_with_logo]]. W przyszłości będzie można wysyłać [[:coin]] do dowolnych kontaktów."
+      "empty_description": "Zsynchronizuj swoje kontakty i zobacz, kto jest już w [[:project]]. W przyszłości będzie można wysyłać [[:coin]] do dowolnych kontaktów."
     },
     "header": {
       "search_placeholder": "Wyszukiwanie użytkowników",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "RANKING GLOBALNY",
       "referrals": "POLECENIA",
-      "description": "Poleć więcej użytkowników i zarabiaj więcej [[:coin_with_logo]]."
+      "description": "Poleć więcej użytkowników i zarabiaj więcej [[:coin]]."
     },
     "referrals": {
       "title": "POLECENIA",
@@ -500,7 +500,7 @@
     "copied": "SKOPIOWANO",
     "share_message": "Hej ☃️ Bałwanek! Dołącz do mojego zespołu w [[:project]] i otrzymaj 10 monet [[:coin]] przy rejestracji używając mojego kodu polecającego:",
     "share_subject": "Dołącz do mojego zespołu w [[:project]]",
-    "description": "Przekazuj dalej i zapraszaj znajomych. Zarabiasz [[:coin_with_logo]] za każdą nową osobę poleconą.",
+    "description": "Przekazuj dalej i zapraszaj znajomych. Zarabiasz [[:coin]] za każdą nową osobę poleconą.",
     "share": "Udostępnij"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "Aktualna stawka",
     "allocation": "Przydział",
     "description": "Staking to proces, który polega na zaangażowaniu posiadanych aktywów krypto w celu wsparcia sieci blockchain i potwierdzenia transakcji.",
-    "terms_agree": "Zgadzam się na [[:link]]Warunki Stakingu[[/:link]] [[:coin_with_logo]]. Twoje zasoby [[:coin]] zostaną zablokowane na wybrany okres.",
+    "terms_agree": "Zgadzam się na [[:link]]Warunki Stakingu[[/:link]] [[:coin]]. Twoje zasoby [[:coin]] zostaną zablokowane na wybrany okres.",
     "stake_now": "Pre-stake'uj teraz!",
     "balance_label": "Stake'owane saldo",
     "confirm_title": "Potwierdź pre-stake",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Zaproś znajomego",
     "button_title": "Zaproś znajomego",
-    "description": "Twój znajomy nie jest jeszcze w [[:project_with_logo]]. Wyślij mu zaproszenie!"
+    "description": "Twój znajomy nie jest jeszcze w [[:project]]. Wyślij mu zaproszenie!"
   },
   "balance_history": {
     "title": "Historia salda",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Nagroda powitalna",
-    "description": "Gratulacje, zdobywasz swoje pierwsze [[:value]] monet(y) [[:coin_with_logo]], co świadczy o naszym [[:bold]]zaufaniu[[/:bold]] do [[:bold]]Ciebie[[/:bold]].",
+    "description": "Gratulacje, zdobywasz swoje pierwsze [[:value]] monet(y) [[:coin]], co świadczy o naszym [[:bold]]zaufaniu[[/:bold]] do [[:bold]]Ciebie[[/:bold]].",
     "balance_label": "Bieżące saldo"
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "Zezwalaj na dostęp do kontaktów",
-        "description": "Zsynchronizuj swoje kontakty i zobacz, kto już jest w [[:project_with_logo]]. W przyszłości będzie można wysyłać [[:project_with_logo]] do dowolnego ze swoich kontaktów."
+        "description": "Zsynchronizuj swoje kontakty i zobacz, kto już jest w [[:project]]. W przyszłości będzie można wysyłać [[:project]] do dowolnego ze swoich kontaktów."
       },
       "confirm_phone": {
         "title": "Potwierdź telefon",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "Lista kontaktów",
-        "description": "Jest to lista ze wszystkimi kontaktami, z których te, które już dołączyły do sieci [[:project_with_logo]], są wyświetlane na górze listy."
+        "description": "Jest to lista ze wszystkimi kontaktami, z których te, które już dołączyły do sieci [[:project]], są wyświetlane na górze listy."
       },
       "referrals": {
         "title": "Polecenia",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "Poziom 1",
-        "description": "Tutaj możesz zobaczyć listę poleconych na poziomie 1. Za każdego znajomego, który zamelduje się w tym samym czasie co Ty, otrzymasz dodatkowe 25% do podstawowej stawki zarobków wdrażania projektu. [[:link]]Czytaj więcej[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Tutaj możesz zobaczyć listę poleconych na poziomie 1. Za każdego znajomego, który zamelduje się w tym samym czasie co Ty, otrzymasz dodatkowe 25% do podstawowej stawki zarobków wdrażania projektu. [[:link]]Czytaj więcej[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "Poziom 2",
-        "description": "Tutaj możesz zobaczyć listę poleconych na poziomie 2. Za każdego znajomego, który zamelduje się w tym samym czasie co Ty, otrzymasz dodatkowe 5% do podstawowej stawki zarobków wdrażania projektu. [[:link]]Czytaj więcej[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Tutaj możesz zobaczyć listę poleconych na poziomie 2. Za każdego znajomego, który zamelduje się w tym samym czasie co Ty, otrzymasz dodatkowe 5% do podstawowej stawki zarobków wdrażania projektu. [[:link]]Czytaj więcej[[/:link]]"
       },
       "active_users": {
         "title": "Aktywni użytkownicy",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "Strona główna",
-        "description": "Witamy w [[:project_with_logo]]. Na ekranie głównym można znaleźć wszystkie statystyki dotyczące salda, bieżącego wskaźnika zarobków, globalnej pozycji oraz zespołu."
+        "description": "Witamy w [[:project]]. Na ekranie głównym można znaleźć wszystkie statystyki dotyczące salda, bieżącego wskaźnika zarobków, globalnej pozycji oraz zespołu."
       },
       "invite": {
         "title": "Zaproszenie",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "Zespół",
-        "description": "[[:project_with_logo]] jest lepszy ze znajomymi. Na tej stronie można sprawdzić status członków zespołu z poziomów 1 i 2. Możesz również wysłać do nich powiadomienie z tego miejsca."
+        "description": "[[:project]] jest lepszy ze znajomymi. Na tej stronie można sprawdzić status członków zespołu z poziomów 1 i 2. Możesz również wysłać do nich powiadomienie z tego miejsca."
       },
       "news": {
         "title": "Aktualności",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "Zarabianie [[:coin]]",
-        "description": "Możesz rozpocząć sesję meldunku [[:project_with_logo]] co 24 godziny, dotykając tego przycisku. Nie zapomnij wrócić każdego dnia i zacząć zarabiać!"
+        "description": "Możesz rozpocząć sesję meldunku [[:project]] co 24 godziny, dotykając tego przycisku. Nie zapomnij wrócić każdego dnia i zacząć zarabiać!"
       },
       "earningiceseemore": {
         "title": "Zarabianie [[:coin]]",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "Pomoc",
-        "description": "Czy masz jakieś pytania? Sprawdź naszą listę często zadawanych pytań. Jeśli nie możesz znaleźć tego, czego szukasz, nie wahaj się skontaktować z nami pod adresem hi@ice.io."
+        "description": "Czy masz jakieś pytania? Sprawdź naszą listę często zadawanych pytań. Jeśli nie możesz znaleźć tego, czego szukasz, nie wahaj się skontaktować z nami pod adresem {{email}}."
       },
       "preStaking": {
         "title": "Pre-staking",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "Karta portfelowa",
-        "description": "Tutaj można znaleźć aktualne saldo [[:coin_with_logo]] wraz ze stawką zarobków. Im więcej poleconych z Twojego zespołu jest online, tym wyższa stawka zarobków."
+        "description": "Tutaj można znaleźć aktualne saldo [[:coin]] wraz ze stawką zarobków. Im więcej poleconych z Twojego zespołu jest online, tym wyższa stawka zarobków."
       },
       "earning": {
         "title": "Karta zarabiania",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "Karta wrażania",
-        "description": "W oparciu o średnią z ostatniego tygodnia wszystkich aktywnych bałwanków, można zobaczyć aktualną stawkę zarobków [[:coin_with_logo]]. Stawka zarobków jest zmniejszana o połowę po osiągnięciu kolejnego progu."
+        "description": "W oparciu o średnią z ostatniego tygodnia wszystkich aktywnych bałwanków, można zobaczyć aktualną stawkę zarobków [[:coin]]. Stawka zarobków jest zmniejszana o połowę po osiągnięciu kolejnego progu."
       },
       "nickname": {
         "title": "Pseudonim",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "Historia salda",
-        "description": "Tutaj można znaleźć aktualne saldo [[:coin_with_logo]] w lokalnym portfelu i blockchainie. Saldo lokalnego portfela jest aktualizowane co godzinę, podczas gdy saldo blockchain jest aktualizowane co 24 godziny."
+        "description": "Tutaj można znaleźć aktualne saldo [[:coin]] w lokalnym portfelu i blockchainie. Saldo lokalnego portfela jest aktualizowane co godzinę, podczas gdy saldo blockchain jest aktualizowane co 24 godziny."
       },
       "achievements": {
         "title": "Osiągnięcia",
@@ -927,12 +925,6 @@
         "message": "Czy na pewno chcesz zakończyć sesję logowania {{providerName}} z tego urządzenia?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "Dzisiejszy bonus",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ Wyłączono kopanie",
-        "description": "Zidentyfikowaliśmy, że twoja tożsamość jest powiązana z innym kontem. Jeśli uważasz, że to błąd, prześlij e-mail na adres [[:bold]]feedback@ice.io[[/:bold]] ze swoim pseudonimem i wysokiej jakości zdjęciem selfie.",
+        "description": "Zidentyfikowaliśmy, że twoja tożsamość jest powiązana z innym kontem. Jeśli uważasz, że to błąd, prześlij e-mail na adres [[:bold]]{{email}}[[/:bold]] ze swoim pseudonimem i wysokiej jakości zdjęciem selfie.",
         "action": "Zamknij"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "Obecnie nie masz żadnych przyjaciół!"
       },
       "contacts": {
-        "empty_description": "Synchronizuj swoje kontakty i zobacz, kto jest już na [[:project_with_logo]]."
+        "empty_description": "Synchronizuj swoje kontakty i zobacz, kto jest już na [[:project]]."
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "Pokaż przykład",
       "example_title": "Przykład repostu",
       "x": {
-        "1": "Otwórz X i wyszukaj konto [[:bold]]@ice_blockchain[[/:bold]].",
+        "1": "Otwórz X i wyszukaj konto [[:bold]]{{account}}[[/:bold]].",
         "2": "Znajdź przypięty post, który jest pierwszym postem na profilu.",
         "3": "❤️ Polub & 🔄 Zarepostuj go z [[:bold]]cytat[[/:bold]] używając [[:bold]]DOKŁADNEGO[[/:bold]] tekstu poniżej.",
         "pop_up": {

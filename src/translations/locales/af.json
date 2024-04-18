@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "Welkom by [[:project]]",
-      "description": "[[:coin_with_logo]] is 'n digitale geldeenheid wat jy met jou foon kan verdien. [[:coin]] word besit en bedryf deur alledaagse gebruikers soos jy."
+      "description": "[[:coin]] is 'n digitale geldeenheid wat jy met jou foon kan verdien. [[:coin]] word besit en bedryf deur alledaagse gebruikers soos jy."
     },
     "page2": {
       "title": "Planeet Vriendelik",
-      "description": "[[:coin_with_logo]] is inherent meer energiedoeltreffend as BTC, aangesien dit 'n \"Proof of Stake\"-konsensusmeganisme gebruik. Met proof-of-stake (POS), valideer kripto-geldeenheid-eienaars bloktransaksies gebaseer op die aantal munte wat 'n valideerder insit."
+      "description": "[[:coin]] is inherent meer energiedoeltreffend as BTC, aangesien dit 'n \"Proof of Stake\"-konsensusmeganisme gebruik. Met proof-of-stake (POS), valideer kripto-geldeenheid-eienaars bloktransaksies gebaseer op die aantal munte wat 'n valideerder insit."
     },
     "page3": {
       "title": "Mense se Muntstuk",
       "description_part1": "Die krag is in jou hande.",
-      "description_part2": "Alles wat ons by [[:project_with_logo]] ontwikkel sal oopbron wees en beheer word deur die Gedesentraliseerde outonome organisasie (DAO)."
+      "description_part2": "Alles wat ons by [[:project]] ontwikkel sal oopbron wees en beheer word deur die Gedesentraliseerde outonome organisasie (DAO)."
     },
     "page4": {
       "title": "Bly gekonnekteer",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Kennisgewings",
-      "description_part1": "[[:project_with_logo]] inkloksessies duur net vir 24 uur. Wil jy 'n kennisgewing ontvang wanneer jou huidige sessie eindig?",
+      "description_part1": "[[:project]] inkloksessies duur net vir 24 uur. Wil jy 'n kennisgewing ontvang wanneer jou huidige sessie eindig?",
       "description_part2": "Moenie bekommerd wees nie, ons sal jou nie strooipos nie!",
       "not_now": "Nie nou nie"
     }
@@ -35,7 +35,7 @@
     "view_all": "bekyk alles",
     "invite_friend": {
       "title": "Nooi Vriende",
-      "description": "Verdien ekstra [[:coin_with_logo]] deur jou vriende te nooi."
+      "description": "Verdien ekstra [[:coin]] deur jou vriende te nooi."
     },
     "see_all": "sien alles",
     "no": "Nee",
@@ -88,9 +88,9 @@
       "team": "Jy het tans geen spanlede nie!"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] is beter met vriende",
+      "empty_title": "[[:project]] is beter met vriende",
       "empty_button_title": "Laat kontakte toegang toe",
-      "empty_description": "Sinkroniseer jou kontakte en kyk wie reeds aan is [[:project_with_logo]]. In die toekoms sal jy [[:coin]] na enige van jou kontakte kan stuur."
+      "empty_description": "Sinkroniseer jou kontakte en kyk wie reeds aan is [[:project]]. In die toekoms sal jy [[:coin]] na enige van jou kontakte kan stuur."
     },
     "header": {
       "search_placeholder": "Soek vir gebruikers",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "GLOBALE RANGORDE",
       "referrals": "VERWYSINGS",
-      "description": "Verwys meer gebruikers en verdien meer [[:coin_with_logo]]."
+      "description": "Verwys meer gebruikers en verdien meer [[:coin]]."
     },
     "referrals": {
       "title": "VERWYSINGS",
@@ -500,7 +500,7 @@
     "copied": "GEKOPIEER",
     "share_message": "Hallo ☃️ Sneeuman! Sluit aan by my span op [[:project]] en ontvang 10 [[:coin]] munte wanneer jy inteken met my verwysingskode:",
     "share_subject": "Sluit aan by my span op [[:project]]",
-    "description": "Versprei die woord en nooi jou vriende. Jy verdien [[:coin_with_logo]] vir elke nuwe verwysing wat jy bring.",
+    "description": "Versprei die woord en nooi jou vriende. Jy verdien [[:coin]] vir elke nuwe verwysing wat jy bring.",
     "share": "Deel"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "Huidige koers",
     "allocation": "Toekenning",
     "description": "Insette is 'n proses wat behels dat jy jou kripto-bates verbind om 'n blokkettingnetwerk te ondersteun en transaksies te bevestig.",
-    "terms_agree": "Ek stem in tot die [[:coin_with_logo]] [[:link]]Staking-[[/:link]]bepalings. Jou [[:coin]]-besit sal vir die geselekteerde tydperk gesluit wees.",
+    "terms_agree": "Ek stem in tot die [[:coin]] [[:link]]Staking-[[/:link]]bepalings. Jou [[:coin]]-besit sal vir die geselekteerde tydperk gesluit wees.",
     "stake_now": "Speel nou vooraf!",
     "balance_label": "Afgepende balans",
     "confirm_title": "Bevestig vooraf-inset",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Nooi 'n vriend",
     "button_title": "Nooi 'n vriend",
-    "description": "Jou vriend is nog nie op nie [[:project_with_logo]]. Stuur vir hom 'n uitnodiging!"
+    "description": "Jou vriend is nog nie op nie [[:project]]. Stuur vir hom 'n uitnodiging!"
   },
   "balance_history": {
     "title": "Balans Geskiedenis",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Welkom beloning",
-    "description": "Baie geluk, jy het jou eerste [[:value]] [[:coin_with_logo]] munte ontvang wat bewys dat ons [[:bold]] Vertrou [[/:bold]] in [[:bold]]Jou[[/:bold]].",
+    "description": "Baie geluk, jy het jou eerste [[:value]] [[:coin]] munte ontvang wat bewys dat ons [[:bold]] Vertrou [[/:bold]] in [[:bold]]Jou[[/:bold]].",
     "balance_label": "Jou huidige balaans"
   },
   "country_select": {
@@ -790,7 +790,7 @@
     "team": {
       "allow_contacts": {
         "title": "Laat kontakte toe",
-        "description": "Sinkroniseer jou kontakte en kyk wie reeds aan is [[:project_with_logo]]. In die toekoms sal jy Ice na enige van jou kontakte kan stuur.[[:project_with_logo]]"
+        "description": "Sinkroniseer jou kontakte en kyk wie reeds aan is [[:project]]. In die toekoms sal jy Ice na enige van jou kontakte kan stuur.[[:project]]"
       },
       "confirm_phone": {
         "title": "Bevestig Foon",
@@ -798,7 +798,7 @@
       },
       "contacts_list": {
         "title": "Lys van kontakte",
-        "description": "Dit is die lys met al jou kontakte, diegene wat reeds by die [[:project_with_logo]] netwerk aangesluit het, word bo-aan die lys vertoon."
+        "description": "Dit is die lys met al jou kontakte, diegene wat reeds by die [[:project]] netwerk aangesluit het, word bo-aan die lys vertoon."
       },
       "referrals": {
         "title": "Verwysings",
@@ -810,13 +810,11 @@
       },
       "segmented_control_tier_one": {
         "title": "Vlak 1",
-        "description": "Hier kan jy die lys van jou Vlak 1-verwysings sien. Vir elke vriend wat op dieselfde tyd saam met jou inklok, sal jy ekstra 25% kry op jou basis huidige aanneming verdienstekoers. [[:link]]Lees meer[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Hier kan jy die lys van jou Vlak 1-verwysings sien. Vir elke vriend wat op dieselfde tyd saam met jou inklok, sal jy ekstra 25% kry op jou basis huidige aanneming verdienstekoers. [[:link]]Lees meer[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "Vlak 2",
-        "description": "Hier kan jy die lys van jou Vlak 1-verwysings sien. Vir elke vriend wat op dieselfde tyd saam met jou inklok, sal jy ekstra 5% kry op jou basis huidige aanneming verdienstekoers. [[:link]]Lees meer[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Hier kan jy die lys van jou Vlak 1-verwysings sien. Vir elke vriend wat op dieselfde tyd saam met jou inklok, sal jy ekstra 5% kry op jou basis huidige aanneming verdienstekoers. [[:link]]Lees meer[[/:link]]"
       },
       "active_users": {
         "title": "Aktiewe gebruiker",
@@ -834,7 +832,7 @@
     "home": {
       "home": {
         "title": "Tuis",
-        "description": "Welkom by [[:project_with_logo]]. Op die tuisskerm kan jy al die statistieke oor jou saldo, die huidige verdienstekoers, jou globale rangorde saam met jou span vind."
+        "description": "Welkom by [[:project]]. Op die tuisskerm kan jy al die statistieke oor jou saldo, die huidige verdienstekoers, jou globale rangorde saam met jou span vind."
       },
       "invite": {
         "title": "nooi",
@@ -842,7 +840,7 @@
       },
       "team": {
         "title": "Span",
-        "description": "[[:project_with_logo]] is beter met vriende Op hierdie bladsy kan jy die status van jou spanlede van beide Vlak 1- en Vlak 2-vlakke sien Jy kan hulle ook van hier af ping."
+        "description": "[[:project]] is beter met vriende Op hierdie bladsy kan jy die status van jou spanlede van beide Vlak 1- en Vlak 2-vlakke sien Jy kan hulle ook van hier af ping."
       },
       "news": {
         "title": "Nuus",
@@ -854,7 +852,7 @@
       },
       "earningicestart": {
         "title": "Verdien [[:coin]]",
-        "description": "Jy kan die [[:project_with_logo]] inkloksessie elke 24 uur begin deur hierdie knoppie te tik. Moenie vergeet om elke dag terug te kom en te begin verdien nie!"
+        "description": "Jy kan die [[:project]] inkloksessie elke 24 uur begin deur hierdie knoppie te tik. Moenie vergeet om elke dag terug te kom en te begin verdien nie!"
       },
       "earningiceseemore": {
         "title": "Verdien [[:coin]]",
@@ -866,7 +864,7 @@
       },
       "help": {
         "title": "Help",
-        "description": "Het jy enige vrae? Kyk na ons lys van gereelde vrae. As jy nie kan kry waarna jy soek nie, moet asseblief nie huiwer om ons by hi@ice.io te kontak nie."
+        "description": "Het jy enige vrae? Kyk na ons lys van gereelde vrae. As jy nie kan kry waarna jy soek nie, moet asseblief nie huiwer om ons by {{email}} te kontak nie."
       },
       "preStaking": {
         "title": " Vooraf-Staking",
@@ -874,7 +872,7 @@
       },
       "wallet": {
         "title": "Beursiekaart",
-        "description": "Jy kan jou huidige [[:coin_with_logo]] balans hier vind, tesame met die verdienstekoers. Hoe meer verwysings van jou span aanlyn is, hoe hoër is die verdienstekoers."
+        "description": "Jy kan jou huidige [[:coin]] balans hier vind, tesame met die verdienstekoers. Hoe meer verwysings van jou span aanlyn is, hoe hoër is die verdienstekoers."
       },
       "earning": {
         "title": "Verdien Kaart",
@@ -894,7 +892,7 @@
       },
       "adoptioncard": {
         "title": "Aannemingskaart",
-        "description": "Gebaseer op die gemiddelde van die afgelope week se totaal van aktiewe sneeumanne, kan jy die huidige [[:coin_with_logo]] verdienstekoers sien. Die verdienstekoers word gehalveer wanneer die volgende drempel bereik word."
+        "description": "Gebaseer op die gemiddelde van die afgelope week se totaal van aktiewe sneeumanne, kan jy die huidige [[:coin]] verdienstekoers sien. Die verdienstekoers word gehalveer wanneer die volgende drempel bereik word."
       },
       "nickname": {
         "title": "Bynaam",
@@ -902,7 +900,7 @@
       },
       "balancehistory": {
         "title": "Balans Geskiedenis",
-        "description": "Jy kan hier jou huidige [[:coin_with_logo]] balans op plaaslike beursie en blockchain vind. Die plaaslike beursiebalans word elke uur opgedateer, terwyl die blokkettingbalans elke 24 uur bygewerk word."
+        "description": "Jy kan hier jou huidige [[:coin]] balans op plaaslike beursie en blockchain vind. Die plaaslike beursiebalans word elke uur opgedateer, terwyl die blokkettingbalans elke 24 uur bygewerk word."
       },
       "achievements": {
         "title": "Prestasies",
@@ -930,12 +928,6 @@
         "message": "Is jy seker jy wil die {{providerName}}aanmeldsessie vanaf hierdie toestel beëindig?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "Vandag se bonus",
@@ -1125,7 +1117,7 @@
       },
       "banned": {
         "title": "❌ Mynbou gedeaktiveer",
-        "description": "Ons het vasgestel dat jou identiteit verband hou met 'n ander rekening. As jy dink dit is 'n fout, stuur asseblief 'n e-pos na [[:bold]]feedback@ice.io[[/:bold]] met jou bynaam en 'n hoëgehalte-selfie.",
+        "description": "Ons het vasgestel dat jou identiteit verband hou met 'n ander rekening. As jy dink dit is 'n fout, stuur asseblief 'n e-pos na [[:bold]]{{email}}[[/:bold]] met jou bynaam en 'n hoëgehalte-selfie.",
         "action": "Sluit af"
       }
     },
@@ -1231,7 +1223,7 @@
         "team": "Jy het tans nie enige vriende nie!"
       },
       "contacts": {
-        "empty_description": "Synchroniseer jou kontakte en sien wie is reeds op [[:project_with_logo]]."
+        "empty_description": "Synchroniseer jou kontakte en sien wie is reeds op [[:project]]."
       }
     }
   },
@@ -1255,7 +1247,7 @@
       "show_example": "Wys voorbeeld",
       "example_title": "Voorbeeld van die herpos",
       "x": {
-        "1": "Maak X oop en soek vir [[:bold]]@ice_blockchain[[/:bold]] rekening.",
+        "1": "Maak X oop en soek vir [[:bold]]{{account}}[[/:bold]] rekening.",
         "2": "Vind die vasgepenste pos, wat die eerste pos op die profiel is.",
         "3": "❤️ Hou van & 🔄 Herpos dit met [[:bold]]Aanhaling[[/:bold]] deur die [[:bold]]PRESIES[[/:bold]] teks hieronder te gebruik.",
         "pop_up": {

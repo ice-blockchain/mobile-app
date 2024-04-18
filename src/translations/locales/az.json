@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "[[:project]]-a xoş gəlmisiniz",
-      "description": "[[:coin_with_logo]] telefonunuzla qazana biləcəyiniz rəqəmsal valyutadır. [[:coin]] sizin kimi hər gün istifadə edən istifadəçilərə məxsusdur və onlar tərəfindən idarə edilir."
+      "description": "[[:coin]] telefonunuzla qazana biləcəyiniz rəqəmsal valyutadır. [[:coin]] sizin kimi hər gün istifadə edən istifadəçilərə məxsusdur və onlar tərəfindən idarə edilir."
     },
     "page2": {
       "title": "Planetə dostdur",
-      "description": "[[:coin_with_logo]] BTC-dən daha artıq enerji səmərəliliyinə malikdir çünki \"Proof of Stake\" (Hissə sübutu) konsensus mexanizmindən istifadə edir. POS ilə kriptovalyuta sahibləri blok əməliyyatlarını dəyərləndiricinin ortaya qoyduğu sikkələrin sayına əsasən dəyərləndirirlər."
+      "description": "[[:coin]] BTC-dən daha artıq enerji səmərəliliyinə malikdir çünki \"Proof of Stake\" (Hissə sübutu) konsensus mexanizmindən istifadə edir. POS ilə kriptovalyuta sahibləri blok əməliyyatlarını dəyərləndiricinin ortaya qoyduğu sikkələrin sayına əsasən dəyərləndirirlər."
     },
     "page3": {
       "title": "İnsanların Sikkəsi",
       "description_part1": "Güc əlinizdədir",
-      "description_part2": " [[:project_with_logo]] -da yaratdığımızhər bir şey açıq mənbə olacaq və Mərkəzləşdirilməmiş Avtonom Təşkilat (DAO) tərəfindən nəzarət ediləcək. "
+      "description_part2": " [[:project]] -da yaratdığımızhər bir şey açıq mənbə olacaq və Mərkəzləşdirilməmiş Avtonom Təşkilat (DAO) tərəfindən nəzarət ediləcək. "
     },
     "page4": {
       "title": "Qoşulu qalın",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Bildirişlər",
-      "description_part1": "[[:project_with_logo]] giriş sessiyası yalnız 24 saat davam edir. Cari sessiya bitdikdə bildiriş almaq istərdinizmi?",
+      "description_part1": "[[:project]] giriş sessiyası yalnız 24 saat davam edir. Cari sessiya bitdikdə bildiriş almaq istərdinizmi?",
       "description_part2": "Narahat olmayın, biz sizi spam etməyəcəyik!",
       "not_now": "İndi deyil"
     }
@@ -35,7 +35,7 @@
     "view_all": "hamısına bax",
     "invite_friend": {
       "title": "Dostlarını dəvət et ",
-      "description": "Dostlarını dəvət etməklə əlavə [[:coin_with_logo]] qazan."
+      "description": "Dostlarını dəvət etməklə əlavə [[:coin]] qazan."
     },
     "see_all": "hamısına bax",
     "no": "Xeyr",
@@ -88,9 +88,9 @@
       "team": "Hazırda hər hansı bir komanda üzvu yoxdur!"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] dostlarla daha yaxşıdır",
+      "empty_title": "[[:project]] dostlarla daha yaxşıdır",
       "empty_button_title": "Kontaktlara girişə icazə ver",
-      "empty_description": "Kontaktlarını sinxronizə et və kimin artıq [[:project_with_logo]]-da olduğunu gör.  Gələcəkdə [[:coin]]-ı istənilən kontaktlarına göndərə biləcəksən. "
+      "empty_description": "Kontaktlarını sinxronizə et və kimin artıq [[:project]]-da olduğunu gör.  Gələcəkdə [[:coin]]-ı istənilən kontaktlarına göndərə biləcəksən. "
     },
     "header": {
       "search_placeholder": "İstifadəçi axtar",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "QLOBAL DƏRƏCƏ",
       "referrals": "İSTİNADLAR",
-      "description": "Daha çox istifadəçi yönəlt və daha çox qazan[[:coin_with_logo]]."
+      "description": "Daha çox istifadəçi yönəlt və daha çox qazan[[:coin]]."
     },
     "referrals": {
       "title": "İSTİNADLAR",
@@ -500,7 +500,7 @@
     "copied": "KOPYALANDI",
     "share_message": "Salam ☃️ Qaradamı! [[:project]]-da komandama qoşul və mənim istinad kodumdan istifadə edərək qeydiyyatdan keçməklə 10 [[:coin]] sikkə əldə et:  ",
     "share_subject": "[[:project]]-da komandama qoşul",
-    "description": "Xəbər yay və dostlarını dəvət et. Yönləndirdiyin hər yeni adam üçün [[:coin_with_logo]] qazanacaqsan.",
+    "description": "Xəbər yay və dostlarını dəvət et. Yönləndirdiyin hər yeni adam üçün [[:coin]] qazanacaqsan.",
     "share": "Paylaş"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "Cari Faiz",
     "allocation": "Vəsait",
     "description": "Kilidləmə kripto aktivlərin blokçeyn şəbəkəsini dəstəkləmək və əməliyyatları təsdiq etmək üçün isifadəsi prosesidir.",
-    "terms_agree": " [[:coin_with_logo]] [[:link]]Kilidləmə Şərtləri[[/:link]] ilə razıyam. [[:coin]] mülkiyyətlərin seçilmiş müddətə kilidlənəcək.",
+    "terms_agree": " [[:coin]] [[:link]]Kilidləmə Şərtləri[[/:link]] ilə razıyam. [[:coin]] mülkiyyətlərin seçilmiş müddətə kilidlənəcək.",
     "stake_now": "İndi Əvvəldən Kilidlə!",
     "balance_label": "Kilidlənmiş balans",
     "confirm_title": "Əvvəldən Kilidləməni təsdiq et",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Dost dəvət et",
     "button_title": "Dost dəvət et",
-    "description": "Dostun hələ onlayn deyil [[:project_with_logo]]. Ona dəvət göndər!"
+    "description": "Dostun hələ onlayn deyil [[:project]]. Ona dəvət göndər!"
   },
   "balance_history": {
     "title": "Balans Tarixi",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Salamlama mükafatı",
-    "description": "Təbriklər,  [[:bold]] Sənə olan[[/:bold]] [[:bold]]Etimadımızı[[/:bold]] sübut edən ilk  [[:value]] [[:coin_with_logo]] sikkələrini qazandın.",
+    "description": "Təbriklər,  [[:bold]] Sənə olan[[/:bold]] [[:bold]]Etimadımızı[[/:bold]] sübut edən ilk  [[:value]] [[:coin]] sikkələrini qazandın.",
     "balance_label": "CARİ BALANS "
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "Bütün kontaktlar",
-        "description": "Kontaktlarını sinxronizə et və kimin artıq [[:project_with_logo]]-da olduğunu gör.  Gələcəkdə [[:project_with_logo]] istənilən kontaktına göndərə biləcəksən. "
+        "description": "Kontaktlarını sinxronizə et və kimin artıq [[:project]]-da olduğunu gör.  Gələcəkdə [[:project]] istənilən kontaktına göndərə biləcəksən. "
       },
       "confirm_phone": {
         "title": "Telefonu təsdiq et ",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "Kontaktların siyahısı",
-        "description": "Bu bütün kontaktların siyahısıdır, [[:project_with_logo]] şəbəkəsinə qoşulanlar siyahının üstündə görünürlər."
+        "description": "Bu bütün kontaktların siyahısıdır, [[:project]] şəbəkəsinə qoşulanlar siyahının üstündə görünürlər."
       },
       "referrals": {
         "title": "İstinadlar",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "1-ci Pillə",
-        "description": "burada 1-ci Pillə istinadlarının siyahısını görə bilərsən. Səninlə eyni vaxtda daxil olan hər bir dostun üçün cari baza qazanc faizinin üzərinə ekstra 25 % əldə edəcəksən. [[:link]]Daha ətraflı oxu[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "burada 1-ci Pillə istinadlarının siyahısını görə bilərsən. Səninlə eyni vaxtda daxil olan hər bir dostun üçün cari baza qazanc faizinin üzərinə ekstra 25 % əldə edəcəksən. [[:link]]Daha ətraflı oxu[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "2-ci Pillə",
-        "description": "burada 2-ci Pillə istinadlarının siyahısını görə bilərsən. Səninlə eyni vaxtda daxil olan hər bir dostun üçün cari baza qazanc faizinin üzərinə ekstra 5 % əldə edəcəksən. [[:link]]Daha ətraflı oxu[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "burada 2-ci Pillə istinadlarının siyahısını görə bilərsən. Səninlə eyni vaxtda daxil olan hər bir dostun üçün cari baza qazanc faizinin üzərinə ekstra 5 % əldə edəcəksən. [[:link]]Daha ətraflı oxu[[/:link]]"
       },
       "active_users": {
         "title": "Aktiv istifadəçilər",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "Ev",
-        "description": "Xoş Gəlmisiniz [[:project_with_logo]] Ev ekranında balansın, cari qazanc faizin, komandanla birlikdə qlobal pillən haqqında statistikanı tapa bilərsən."
+        "description": "Xoş Gəlmisiniz [[:project]] Ev ekranında balansın, cari qazanc faizin, komandanla birlikdə qlobal pillən haqqında statistikanı tapa bilərsən."
       },
       "invite": {
         "title": "dəvət et ",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "Komanda",
-        "description": "[[:project_with_logo]] dostlarla daha yaxşıdır Bu səhifədə həm 1-ci həm də 2-ci Pillədən olan komanda üzvlərinin statusunu görə bilərsən. Buradan onları ping də edə bilərsən."
+        "description": "[[:project]] dostlarla daha yaxşıdır Bu səhifədə həm 1-ci həm də 2-ci Pillədən olan komanda üzvlərinin statusunu görə bilərsən. Buradan onları ping də edə bilərsən."
       },
       "news": {
         "title": "Xəbərlər",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "[[:coin]] qazancı",
-        "description": "bu düyməni basmaqla hər 24 saatdan bir [[:project_with_logo]] giriş sessiyasını başlada bilərsən. Hər gün geri qayıtmağı və qazanmağa başlamağı unutma!"
+        "description": "bu düyməni basmaqla hər 24 saatdan bir [[:project]] giriş sessiyasını başlada bilərsən. Hər gün geri qayıtmağı və qazanmağa başlamağı unutma!"
       },
       "earningiceseemore": {
         "title": "[[:coin]] qazancı",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "Kömək ",
-        "description": "Sualınız var? Tez-tez verilən suallar siyahısına bax. Axtardığın cavabı tapmasan, hi@ice.io vasitəsilə bizimlə ilə əlaqə qurmaqdan çəkinmə."
+        "description": "Sualınız var? Tez-tez verilən suallar siyahısına bax. Axtardığın cavabı tapmasan, {{email}} vasitəsilə bizimlə ilə əlaqə qurmaqdan çəkinmə."
       },
       "preStaking": {
         "title": "Əvvəldən Kilidləmə",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "Pulkisəsi kartı",
-        "description": "Burada qazanc faizi ilə birlikdə cari [[:coin_with_logo]] balansını görə bilərsiniz. Komandandan olan istinadlar nə qədər çox onlayn olarsa, qazanc dərəcən o qədər yüksək olar."
+        "description": "Burada qazanc faizi ilə birlikdə cari [[:coin]] balansını görə bilərsiniz. Komandandan olan istinadlar nə qədər çox onlayn olarsa, qazanc dərəcən o qədər yüksək olar."
       },
       "earning": {
         "title": "Qazanc Kartı",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "Qəbuletmə Kartı",
-        "description": "Aktiv Qaradamlarının keçən həftə ümumi yekununa əsasən cari [[:coin_with_logo]] qazanc faizini görə bilərsən. Növbəti həddi keçdikdə qazanc dərəcəsi yarıya endirilir."
+        "description": "Aktiv Qaradamlarının keçən həftə ümumi yekununa əsasən cari [[:coin]] qazanc faizini görə bilərsən. Növbəti həddi keçdikdə qazanc dərəcəsi yarıya endirilir."
       },
       "nickname": {
         "title": "Ləqəb",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "Balans Tarixi",
-        "description": "Burada yerli qulqabında və blokçeyndə olan cari [[:coin_with_logo]] balansını görə bilərsən. Yerli pulqabı balansı hər saatdan bir, blokçeyn balansı isə 24 saatdan bir yenilənir."
+        "description": "Burada yerli qulqabında və blokçeyndə olan cari [[:coin]] balansını görə bilərsən. Yerli pulqabı balansı hər saatdan bir, blokçeyn balansı isə 24 saatdan bir yenilənir."
       },
       "achievements": {
         "title": "Nailiyyətlər",
@@ -927,12 +925,6 @@
         "message": "Bu cihazdan {{providerName}} giriş sessiyasını kəsmək istədiyindən əminsən?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "Bugünün Bonusu",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ Qazmaq söndürüldü",
-        "description": "Sizin kimliyinizin başqa bir hesabla əlaqələndirildiyini müəyyən etdik. Bu səhv olduğunu düşünürsünüzsə, xahiş edirik [[:bold]]feedback@ice.io[[/:bold]] ünvanına adınızı və yüksək keyfiyyətli şəklinizi göndərin.",
+        "description": "Sizin kimliyinizin başqa bir hesabla əlaqələndirildiyini müəyyən etdik. Bu səhv olduğunu düşünürsünüzsə, xahiş edirik [[:bold]]{{email}}[[/:bold]] ünvanına adınızı və yüksək keyfiyyətli şəklinizi göndərin.",
         "action": "Bağlayın"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "Sizdə hazırda heç bir dostunuz yoxdur!"
       },
       "contacts": {
-        "empty_description": "Əlaqələrinizi sinxronlaşdırın və kimin [[:project_with_logo]]-də olduğunu görün."
+        "empty_description": "Əlaqələrinizi sinxronlaşdırın və kimin [[:project]]-də olduğunu görün."
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "Nümunəni göstər",
       "example_title": "Yenidən paylaşmanın nümunəsi",
       "x": {
-        "1": "X tətbiqini açın və [[:bold]]@ice_blockchain[[/:bold]] hesabını axtarın.",
+        "1": "X tətbiqini açın və [[:bold]]{{account}}[[/:bold]] hesabını axtarın.",
         "2": "İlkin profil üzərində olan sabit yazını tapın.",
         "3": "❤️ Bəyənin və 🔄 yenidən paylaşın, [[:bold]]İstifadə[[/:bold]] edərək aşağıdakı [[:bold]]DÜZGÜN[[/:bold]] mətni istifadə edin.",
         "pop_up": {
@@ -1383,7 +1375,7 @@
   "distribution_kyc_dynamic": {
     "select_method_step": {
       "title": "BNB Smart Chain Təqdimatı",
-      "description": "BNB Smart Chain [[:coin]] koinlərinin aylıq təqdimat elanlarını aktiv şəkildə dəstəkləyərək aylıq BNB Smart Chain ICE koinlərinin təqdimatı üçün əhalinin elanlarını aktiv şəkildə dəstəkləyərək aylıq BNB Smart Chain ICE koinlərinin təqdimatı üçün əhalinin elanlarını aktiv şəkildə dəstəkləyin."
+      "description": "BNB Smart Chain [[:coin]] koinlərinin aylıq təqdimat elanlarını aktiv şəkildə dəstəkləyərək aylıq BNB Smart Chain [[:coin]] koinlərinin təqdimatı üçün əhalinin elanlarını aktiv şəkildə dəstəkləyərək aylıq BNB Smart Chain [[:coin]] koinlərinin təqdimatı üçün əhalinin elanlarını aktiv şəkildə dəstəkləyin."
     },
     "results_step": {
       "success": {

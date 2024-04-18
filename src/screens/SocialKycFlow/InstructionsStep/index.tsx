@@ -5,6 +5,7 @@ import {SocialKycStepNumber} from '@api/tokenomics/types';
 import {PrimaryButton} from '@components/Buttons/PrimaryButton';
 import {Touchable} from '@components/Touchable';
 import {COLORS} from '@constants/colors';
+import {LINKS} from '@constants/links';
 import {commonStyles} from '@constants/styles';
 import {useOnHardwareBack} from '@hooks/useOnHardwareBack';
 import {Header} from '@navigation/components/Header';
@@ -134,7 +135,9 @@ export function InstructionsStep({
             description={
               isDistributionFlow
                 ? t('distribution_kyc.instructions_step.x.1')
-                : t('social_kyc.instructions_step.x.1')
+                : t('social_kyc.instructions_step.x.1', {
+                    account: LINKS.X_ACCOUNT,
+                  })
             }
             onPress={onStepOne}
           />

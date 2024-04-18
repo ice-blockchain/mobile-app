@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "欢迎来到 [[:project]]",
-      "description": "[[:coin_with_logo]] 是一种可以通过手机赚取收益的数字货币。[[:coin]] 由像您一样的日常用户拥有并运营。"
+      "description": "[[:coin]] 是一种可以通过手机赚取收益的数字货币。[[:coin]] 由像您一样的日常用户拥有并运营。"
     },
     "page2": {
       "title": "环境友善",
-      "description": "[[:coin_with_logo]] 本质上比 BTC 更节能，因为它使用“权益证明”共识机制。通过权益证明 (POS)，加密货币持有者根据验证者权益的硬币数量来验证区块交易。"
+      "description": "[[:coin]] 本质上比 BTC 更节能，因为它使用“权益证明”共识机制。通过权益证明 (POS)，加密货币持有者根据验证者权益的硬币数量来验证区块交易。"
     },
     "page3": {
       "title": "人民的硬币",
       "description_part1": "权力掌握在您的手中。",
-      "description_part2": "[[:project_with_logo]] 开发的一切内容都将完全开源，并由分散式自治组织 (DAO) 控制。"
+      "description_part2": "[[:project]] 开发的一切内容都将完全开源，并由分散式自治组织 (DAO) 控制。"
     },
     "page4": {
       "title": "保持联系",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "通知",
-      "description_part1": "[[:project_with_logo]] 签到会话仅持续 24 小时。是否希望在当前签到会话结束时收到通知?",
+      "description_part1": "[[:project]] 签到会话仅持续 24 小时。是否希望在当前签到会话结束时收到通知?",
       "description_part2": "别担心，我们不会向您发送垃圾邮件！",
       "not_now": "以后再说"
     }
@@ -35,7 +35,7 @@
     "view_all": "查看全部",
     "invite_friend": {
       "title": "邀请好友",
-      "description": "邀请好友即可额外赚取 [[:coin_with_logo]]。"
+      "description": "邀请好友即可额外赚取 [[:coin]]。"
     },
     "see_all": "查看全部",
     "no": "否",
@@ -88,9 +88,9 @@
       "team": "目前您没有团队成员！"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] 和朋友在一起更好玩",
+      "empty_title": "[[:project]] 和朋友在一起更好玩",
       "empty_button_title": "允许访问联系人",
-      "empty_description": "同步您的联系人，查看谁已经注册了 [[:project_with_logo]]。将来，您可以向任何联系人发送 [[:coin]]。"
+      "empty_description": "同步您的联系人，查看谁已经注册了 [[:project]]。将来，您可以向任何联系人发送 [[:coin]]。"
     },
     "header": {
       "search_placeholder": "搜索用户",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "全球排名",
       "referrals": "推荐人",
-      "description": "推荐越多，赚的 [[:coin_with_logo]] 就越多。"
+      "description": "推荐越多，赚的 [[:coin]] 就越多。"
     },
     "referrals": {
       "title": "推荐人",
@@ -500,7 +500,7 @@
     "copied": "已复制",
     "share_message": "嗨，☃️ 雪人！加入我的 [[:project]] 团队，使用我的推荐码注册即可获得 10 个 [[:coin]] 硬币：",
     "share_subject": "加入我的 [[:project]] 团队",
-    "description": "宣传并邀请您的朋友。每邀请一位新好友，即可赚取 [[:coin_with_logo]]。",
+    "description": "宣传并邀请您的朋友。每邀请一位新好友，即可赚取 [[:coin]]。",
     "share": "分享"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "当前收益率",
     "allocation": "分配",
     "description": "质押是一个涉及提交您的加密资产以支持区块链网络并确认交易的过程。",
-    "terms_agree": "我同意[[:coin_with_logo]][[:link]]质押条款[[/:link]]。在选定的时间段内，您的 [[:coin]] 持有量将被锁定。",
+    "terms_agree": "我同意[[:coin]][[:link]]质押条款[[/:link]]。在选定的时间段内，您的 [[:coin]] 持有量将被锁定。",
     "stake_now": "立即预质押！",
     "balance_label": "质押余额",
     "confirm_title": "确认预质押",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "邀请好友",
     "button_title": "邀请好友",
-    "description": "您的好友尚未加入 [[:project_with_logo]]。给他发个邀请吧！"
+    "description": "您的好友尚未加入 [[:project]]。给他发个邀请吧！"
   },
   "balance_history": {
     "title": "余额历史记录",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "欢迎奖励",
-    "description": "恭喜，您收到了第一批 [[:value]] 枚 [[:coin_with_logo]] 硬币，证明我们对[[:bold]]您的[[/:bold]][[:bold]]信任[[/:bold]]。",
+    "description": "恭喜，您收到了第一批 [[:value]] 枚 [[:coin]] 硬币，证明我们对[[:bold]]您的[[/:bold]][[:bold]]信任[[/:bold]]。",
     "balance_label": "当前余额"
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "允许访问联系人",
-        "description": "同步您的联系人，查看谁已经注册了 [[:project_with_logo]]。将来，您可以向任何联系人发送 [[:project_with_logo]]。"
+        "description": "同步您的联系人，查看谁已经注册了 [[:project]]。将来，您可以向任何联系人发送 [[:project]]。"
       },
       "confirm_phone": {
         "title": "确认电话号码",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "联系人列表",
-        "description": "这是包含您所有联系人的列表，已加入 [[:project_with_logo]] 网络的联系人将显示在列表的顶部。"
+        "description": "这是包含您所有联系人的列表，已加入 [[:project]] 网络的联系人将显示在列表的顶部。"
       },
       "referrals": {
         "title": "推荐人",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "1 级",
-        "description": "在这里，您可以看到 1 级推荐人列表。对于每位与您同时签到的好友，您将在当前基准采用收益率的基础上额外获得 25% 奖励。[[:link]]阅读更多内容[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "在这里，您可以看到 1 级推荐人列表。对于每位与您同时签到的好友，您将在当前基准采用收益率的基础上额外获得 25% 奖励。[[:link]]阅读更多内容[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "2 级",
-        "description": "在这里，您可以看到 2 级推荐人列表。对于每位与您同时签到的好友，您将在当前基准采用收益率的基础上额外获得 5% 奖励。[[:link]]阅读更多内容[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "在这里，您可以看到 2 级推荐人列表。对于每位与您同时签到的好友，您将在当前基准采用收益率的基础上额外获得 5% 奖励。[[:link]]阅读更多内容[[/:link]]"
       },
       "active_users": {
         "title": "活跃用户",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "首页",
-        "description": "欢迎来到 [[:project_with_logo]]。在主屏幕上，您可以找到有关您的余额、当前收益率、全球排名以及团队的所有统计数据。"
+        "description": "欢迎来到 [[:project]]。在主屏幕上，您可以找到有关您的余额、当前收益率、全球排名以及团队的所有统计数据。"
       },
       "invite": {
         "title": "邀请",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "团队",
-        "description": "[[:project_with_logo]] 和朋友在一起更好玩。在此页面上，您可以查看 1 级和 2 级团队成员的状态。您也可以从这里给他们发送消息。"
+        "description": "[[:project]] 和朋友在一起更好玩。在此页面上，您可以查看 1 级和 2 级团队成员的状态。您也可以从这里给他们发送消息。"
       },
       "news": {
         "title": "新闻资讯",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "赚取 [[:coin]]",
-        "description": "您可以点击此按钮每 24 小时启动一次 [[:project_with_logo]] 签到会话。别忘了每天签到，开始赚取收益！"
+        "description": "您可以点击此按钮每 24 小时启动一次 [[:project]] 签到会话。别忘了每天签到，开始赚取收益！"
       },
       "earningiceseemore": {
         "title": "赚取 [[:coin]]",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "帮助",
-        "description": "有什么问题吗？查看我们的常见问题列表。如果您找不到所需内容，请随时通过 hi@ice.io 联系我们。"
+        "description": "有什么问题吗？查看我们的常见问题列表。如果您找不到所需内容，请随时通过 {{email}} 联系我们。"
       },
       "preStaking": {
         "title": "预质押",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "钱包卡片",
-        "description": "您可以在此处查看您的 [[:coin_with_logo]] 当前余额以及收益率。来自您团队的在线推荐人越多，收益率就越高。"
+        "description": "您可以在此处查看您的 [[:coin]] 当前余额以及收益率。来自您团队的在线推荐人越多，收益率就越高。"
       },
       "earning": {
         "title": "收益率卡片",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "采用率卡片",
-        "description": "根据上周活跃雪人总数的平均值，您可以查看当前 [[:coin_with_logo]] 收益率。达到下一个门槛时，收益率将减半。"
+        "description": "根据上周活跃雪人总数的平均值，您可以查看当前 [[:coin]] 收益率。达到下一个门槛时，收益率将减半。"
       },
       "nickname": {
         "title": "昵称",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "余额历史记录",
-        "description": "您可以在本地钱包和区块链上找到您的 [[:coin_with_logo]] 当前余额。本地钱包余额每小时更新一次，而区块链余额每 24 小时更新一次。"
+        "description": "您可以在本地钱包和区块链上找到您的 [[:coin]] 当前余额。本地钱包余额每小时更新一次，而区块链余额每 24 小时更新一次。"
       },
       "achievements": {
         "title": "成就",
@@ -927,12 +925,6 @@
         "message": "确定要从此设备结束 {{providerName}} 登录会话吗？"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "今日奖金",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ 禁止挖矿",
-        "description": "我们发现您的身份与另一个帐户相关联。如果您认为这是错误的，请发送电子邮件至 [[:bold]]feedback@ice.io[[/:bold]]，提供您的昵称和高质量的自拍照片。",
+        "description": "我们发现您的身份与另一个帐户相关联。如果您认为这是错误的，请发送电子邮件至 [[:bold]]{{email}}[[/:bold]]，提供您的昵称和高质量的自拍照片。",
         "action": "关闭"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "目前您没有朋友！"
       },
       "contacts": {
-        "empty_description": "同步您的联系人并查看谁已经在 [[:project_with_logo]] 上。"
+        "empty_description": "同步您的联系人并查看谁已经在 [[:project]] 上。"
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "显示示例",
       "example_title": "转发示例",
       "x": {
-        "1": "打开 X 并搜索 [[:bold]]@ice_blockchain[[/:bold]] 帐户。",
+        "1": "打开 X 并搜索 [[:bold]]{{account}}[[/:bold]] 帐户。",
         "2": "找到固定的帖子，这是个人资料上的第一篇帖子。",
         "3": "❤️ 点赞 & 🔄 转发，使用下面的[[:bold]]引用[[/:bold]]文本，确保文本[[:bold]]完全一致[[/:bold]]。",
         "pop_up": {

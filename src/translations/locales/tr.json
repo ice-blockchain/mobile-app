@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "[[:project]]'e hoşgeldin",
-      "description": "[[:coin_with_logo]] telefonunla kazanabileceğin bir dijital para birimidir. [[:coin]], senin gibi günlük kullanıcılara aittir ve onlar tarafından işletilmektedir."
+      "description": "[[:coin]] telefonunla kazanabileceğin bir dijital para birimidir. [[:coin]], senin gibi günlük kullanıcılara aittir ve onlar tarafından işletilmektedir."
     },
     "page2": {
       "title": "Gezegen Dostu",
-      "description": "[[:coin_with_logo]] bir \"Hisse İspatı (PoS)\" mutabakat mekanizması kullandığından doğası gereği BTC'den daha enerji verimlidir. Hisse İspatı (PoS) ile kripto para sahipleri, blok işlemlerini bir doğrulayıcının yatırdığı coin sayısına göre onaylar."
+      "description": "[[:coin]] bir \"Hisse İspatı (PoS)\" mutabakat mekanizması kullandığından doğası gereği BTC'den daha enerji verimlidir. Hisse İspatı (PoS) ile kripto para sahipleri, blok işlemlerini bir doğrulayıcının yatırdığı coin sayısına göre onaylar."
     },
     "page3": {
       "title": "Halkın Coin'u",
       "description_part1": "Güç senin ellerinde.",
-      "description_part2": "[[:project_with_logo]]'da geliştirdiğimiz her şey açık kaynak olacak ve Merkezi Olmayan Otonom Organizasyon (DAO) tarafından kontrol edilecek."
+      "description_part2": "[[:project]]'da geliştirdiğimiz her şey açık kaynak olacak ve Merkezi Olmayan Otonom Organizasyon (DAO) tarafından kontrol edilecek."
     },
     "page4": {
       "title": "Bağlantıda kal",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Bildirimler",
-      "description_part1": "[[:project_with_logo]] check-in seansları sadece 24 saat sürmektedir. Mevcut oturumun sona erdiğinde bir bildirim almak ister misin?",
+      "description_part1": "[[:project]] check-in seansları sadece 24 saat sürmektedir. Mevcut oturumun sona erdiğinde bir bildirim almak ister misin?",
       "description_part2": "Endişelenme, sana spam göndermeyeceğiz!",
       "not_now": "Şimdi değil"
     }
@@ -35,7 +35,7 @@
     "view_all": "hepsini görüntüle",
     "invite_friend": {
       "title": "Arkadaşlarını Davet Et",
-      "description": "Arkadaşlarını davet ederek ekstra [[:coin_with_logo]] kazan."
+      "description": "Arkadaşlarını davet ederek ekstra [[:coin]] kazan."
     },
     "see_all": "hepsini görüntüle",
     "no": "Hayır",
@@ -88,9 +88,9 @@
       "team": "Şu anda takım üyeniz yok!"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] arkadaşlarla daha iyi",
+      "empty_title": "[[:project]] arkadaşlarla daha iyi",
       "empty_button_title": "Kişilere erişime izin ver",
-      "empty_description": "Kişilerini senkronize et ve kimlerin halihazırda [[:project_with_logo]]'da olduğunu gör. Gelecekte, kişilerine [[:coin]] gönderebileceksin."
+      "empty_description": "Kişilerini senkronize et ve kimlerin halihazırda [[:project]]'da olduğunu gör. Gelecekte, kişilerine [[:coin]] gönderebileceksin."
     },
     "header": {
       "search_placeholder": "Kullanıcı ara",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "KÜRESEL SIRALAMA",
       "referrals": "REFERANSLAR",
-      "description": "Daha fazla kullanıcıya referans ol ve daha fazla kazan [[:coin_with_logo]]."
+      "description": "Daha fazla kullanıcıya referans ol ve daha fazla kazan [[:coin]]."
     },
     "referrals": {
       "title": "REFERANSLAR",
@@ -500,7 +500,7 @@
     "copied": "KOPYALANDI",
     "share_message": "Merhaba ☃️ Kar Adam! [[:project]]'teki ekibime katıl ve referans kodumu kullanarak kaydolduğunda 10 [[:coin]] coin kazan:",
     "share_subject": "[[:project]]'teki ekibime katıl",
-    "description": "Haberi yay ve arkadaşlarını davet et. Getirdiğin her yeni referans için [[:coin_with_logo]] kazanırsın.",
+    "description": "Haberi yay ve arkadaşlarını davet et. Getirdiğin her yeni referans için [[:coin]] kazanırsın.",
     "share": "Paylaş"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "Mevcut Oran",
     "allocation": "Tahsislendirme",
     "description": "Hisselendirme, bir blok zincir ağını desteklemek ve işlemleri onaylamak için kripto varlıklarını taahhüt etmeyi içeren bir süreçtir.",
-    "terms_agree": "Ben [[:coin_with_logo]] [[:link]]Hisselendirme Koşullarını[[/:link]] kabul ediyorum. [[:coin]] stokların seçilen süre boyunca kilitlenecektir.",
+    "terms_agree": "Ben [[:coin]] [[:link]]Hisselendirme Koşullarını[[/:link]] kabul ediyorum. [[:coin]] stokların seçilen süre boyunca kilitlenecektir.",
     "stake_now": "Şimdi ön hisselendirme yap!",
     "balance_label": "Hisselendirme bakiyesi",
     "confirm_title": "Ön Hisselendirmeyi Onayla",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Arkadaşını Davet Et",
     "button_title": "Arkadaşını Davet Et",
-    "description": "Arkadaşın henüz [[:project_with_logo]]'da değil. Ona bir davetiye gönder!"
+    "description": "Arkadaşın henüz [[:project]]'da değil. Ona bir davetiye gönder!"
   },
   "balance_history": {
     "title": "Bakiye Geçmişi",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Hoş geldin ödülü",
-    "description": "Tebrikler, [[:bold]]Sana[[/:bold]] olan [[:bold]]Güvenimizi[[/:bold]] kanıtlayan ilk [[:value]] [[:coin_with_logo]] coinunu aldın.",
+    "description": "Tebrikler, [[:bold]]Sana[[/:bold]] olan [[:bold]]Güvenimizi[[/:bold]] kanıtlayan ilk [[:value]] [[:coin]] coinunu aldın.",
     "balance_label": "GÜNCEL BAKİYEN"
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "Tüm kişiler",
-        "description": "Kişilerini senkronize et ve kimlerin halihazırda [[:project_with_logo]]'da olduğunu gör. Gelecekte kişilerinin herhangi birine [[:project_with_logo]] gönderebileceksin."
+        "description": "Kişilerini senkronize et ve kimlerin halihazırda [[:project]]'da olduğunu gör. Gelecekte kişilerinin herhangi birine [[:project]] gönderebileceksin."
       },
       "confirm_phone": {
         "title": "Telefonu onayla",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "Kişi listesi",
-        "description": "Bu, tüm kişilerinizi içeren listedir, [[:project_with_logo]] ağına katılmış olanlar listenin başında gösteriliyor."
+        "description": "Bu, tüm kişilerinizi içeren listedir, [[:project]] ağına katılmış olanlar listenin başında gösteriliyor."
       },
       "referrals": {
         "title": "Referanslar",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "Kademe 1",
-        "description": "Burada Kademe 1 referanslarının listesini görebilirsin. Seninle aynı anda check-in yapan her arkadaşın için, temel mevcut benimseme kazanç oranına göre ekstra %25 alacaksın. [[:link]]Devamını oku[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Burada Kademe 1 referanslarının listesini görebilirsin. Seninle aynı anda check-in yapan her arkadaşın için, temel mevcut benimseme kazanç oranına göre ekstra %25 alacaksın. [[:link]]Devamını oku[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "Kademe 2",
-        "description": "Burada Kademe 2 referanslarının listesini görebilirsin. Seninle aynı anda check-in yapan her arkadaşın için, temel mevcut benimseme kazanç oranına göre ekstra %5 alacaksın. [[:link]]Devamını oku[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Burada Kademe 2 referanslarının listesini görebilirsin. Seninle aynı anda check-in yapan her arkadaşın için, temel mevcut benimseme kazanç oranına göre ekstra %5 alacaksın. [[:link]]Devamını oku[[/:link]]"
       },
       "active_users": {
         "title": "Aktif Kullanıcılar",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "Ana Sayfa",
-        "description": "[[:project_with_logo]]'a Hoş Geldin. Ana ekranda, bakiyen, mevcut kazanç oranın, global sıralaman ve ekibinle ilgili tüm istatistikleri bulabilirsin."
+        "description": "[[:project]]'a Hoş Geldin. Ana ekranda, bakiyen, mevcut kazanç oranın, global sıralaman ve ekibinle ilgili tüm istatistikleri bulabilirsin."
       },
       "invite": {
         "title": "Davet et",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "Ekip",
-        "description": "[[:project_with_logo]] arkadaşlarla daha iyi. Bu sayfada ekip üyelerinin durumlarını hem Kademe 1 hem de Kademe 2 seviyesinde görebilirsin. Onlara buradan da ping atabilirsin."
+        "description": "[[:project]] arkadaşlarla daha iyi. Bu sayfada ekip üyelerinin durumlarını hem Kademe 1 hem de Kademe 2 seviyesinde görebilirsin. Onlara buradan da ping atabilirsin."
       },
       "news": {
         "title": "Heberler",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "[[:coin]] kazanmak",
-        "description": "Bu düğmeye dokunarak [[:project_with_logo]] check-in oturumunu 24 saatte bir başlatabilirsin. Her gün geri gelmeyi ve kazanmaya başlamayı unutma!"
+        "description": "Bu düğmeye dokunarak [[:project]] check-in oturumunu 24 saatte bir başlatabilirsin. Her gün geri gelmeyi ve kazanmaya başlamayı unutma!"
       },
       "earningiceseemore": {
         "title": "[[:coin]] kazanmak",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "Yardım",
-        "description": "Sormak istediğin bir şey var mı? Sık sorulan sorular listemize göz at. Aradığınızı bulamıyorsan hi@ice.io adresinden bize ulaşmaktan çekinme."
+        "description": "Sormak istediğin bir şey var mı? Sık sorulan sorular listemize göz at. Aradığınızı bulamıyorsan {{email}} adresinden bize ulaşmaktan çekinme."
       },
       "preStaking": {
         "title": "Ön Hisselendirme",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "Cüzdan Kartı",
-        "description": "Kazanç oranıyla birlikte mevcut [[:coin_with_logo]] bakiyeni burada bulabilirsin. Ekibinden ne kadar çok referans çevrimiçi olursa, kazanma oranı o kadar yüksek olur."
+        "description": "Kazanç oranıyla birlikte mevcut [[:coin]] bakiyeni burada bulabilirsin. Ekibinden ne kadar çok referans çevrimiçi olursa, kazanma oranı o kadar yüksek olur."
       },
       "earning": {
         "title": "Kazanç Kartı",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "Benimseme Kartı",
-        "description": "Geçen hafta toplam aktif Kardan Adamların ortalamasına göre, mevcut [[:coin_with_logo]] kazanç oranını görebilirsin. Bir sonraki eşiğe ulaşıldığında kazanç oranı yarıya iner."
+        "description": "Geçen hafta toplam aktif Kardan Adamların ortalamasına göre, mevcut [[:coin]] kazanç oranını görebilirsin. Bir sonraki eşiğe ulaşıldığında kazanç oranı yarıya iner."
       },
       "nickname": {
         "title": "Takma Ad",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "Bakiye Geçmişi",
-        "description": "Yerel cüzdan ve blok zincirindeki mevcut [[:coin_with_logo]] bakiyeni burada bulabilirsin. Yerel cüzdan bakiyesi her saat güncellenirken, blok zincir bakiyesi her 24 saatte bir güncellenir."
+        "description": "Yerel cüzdan ve blok zincirindeki mevcut [[:coin]] bakiyeni burada bulabilirsin. Yerel cüzdan bakiyesi her saat güncellenirken, blok zincir bakiyesi her 24 saatte bir güncellenir."
       },
       "achievements": {
         "title": "Başarılar",
@@ -927,12 +925,6 @@
         "message": "Bu cihazdan {{providerName}} oturumunu sonlandırmak istediğinden emin misin?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "Bugünün Bonusu",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ Madencilik Devre Dışı Bırakıldı",
-        "description": "Kimliğinizin başka bir hesapla ilişkilendirildiğini tespit ettik. Bu bir hata olduğunu düşünüyorsanız, lütfen [[:bold]]feedback@ice.io[[/:bold]] adresine kullanıcı adınızı ve yüksek kaliteli bir selfie ekleyerek bir e-posta gönderin.",
+        "description": "Kimliğinizin başka bir hesapla ilişkilendirildiğini tespit ettik. Bu bir hata olduğunu düşünüyorsanız, lütfen [[:bold]]{{email}}[[/:bold]] adresine kullanıcı adınızı ve yüksek kaliteli bir selfie ekleyerek bir e-posta gönderin.",
         "action": "Kapat"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "Şu anda hiç arkadaşınız yok!"
       },
       "contacts": {
-        "empty_description": "Kişilerinizi senkronize edin ve [[:project_with_logo]]'de kimin olduğunu görün."
+        "empty_description": "Kişilerinizi senkronize edin ve [[:project]]'de kimin olduğunu görün."
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "Örnek Göster",
       "example_title": "Repost Örneği",
       "x": {
-        "1": "X'i açın ve [[:bold]]@ice_blockchain[[/:bold]] hesabını arayın.",
+        "1": "X'i açın ve [[:bold]]{{account}}[[/:bold]] hesabını arayın.",
         "2": "Profildeki ilk gönderi olan sabitlenmiş gönderiyi bulun.",
         "3": "❤️ Beğenin ve [[:bold]]Alıntı[[/:bold]] kullanarak aşağıdaki [[:bold]]KESİNLİKLE[[/:bold]] metni kullanarak yeniden paylaşın.",
         "pop_up": {

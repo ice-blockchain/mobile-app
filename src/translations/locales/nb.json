@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "Velkommen til [[:project]]",
-      "description": "[[:coin_with_logo]] er en digital valuta som du kan tjene med telefonen. [[:coin]] eies og drives av hverdagsbrukere som deg selv."
+      "description": "[[:coin]] er en digital valuta som du kan tjene med telefonen. [[:coin]] eies og drives av hverdagsbrukere som deg selv."
     },
     "page2": {
       "title": "Planetvennlig",
-      "description": "[[:coin_with_logo]] er skapt mer energieffektiv enn BTC ettersom den bruker en «Proof of Stake»-konsensusmekanisme. Med proof-of-stake (POS) validerer eiere av kryptovaluta blokktransaksjoner basert på antall mynter som en validator staker."
+      "description": "[[:coin]] er skapt mer energieffektiv enn BTC ettersom den bruker en «Proof of Stake»-konsensusmekanisme. Med proof-of-stake (POS) validerer eiere av kryptovaluta blokktransaksjoner basert på antall mynter som en validator staker."
     },
     "page3": {
       "title": "People’s Coin",
       "description_part1": "Makten er i dine hender.",
-      "description_part2": "Alt vi utvikler hos [[:project_with_logo]] vil bruke åpen kildekode og være kontrollert av den desentraliserte autonome organisasjonen (DAO)."
+      "description_part2": "Alt vi utvikler hos [[:project]] vil bruke åpen kildekode og være kontrollert av den desentraliserte autonome organisasjonen (DAO)."
     },
     "page4": {
       "title": "Hold deg tilkoblet",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Varslinger",
-      "description_part1": "[[:project_with_logo]] innsjekkingsøkter varer bare i 24 timer. Vil du motta et varsel når den nåværende økten avsluttes?",
+      "description_part1": "[[:project]] innsjekkingsøkter varer bare i 24 timer. Vil du motta et varsel når den nåværende økten avsluttes?",
       "description_part2": "Ikke bekymre deg, vi vil ikke spamme deg!",
       "not_now": "Ikke nå"
     }
@@ -35,7 +35,7 @@
     "view_all": "se alle",
     "invite_friend": {
       "title": "Inviter venner",
-      "description": "Tjen ekstra [[:coin_with_logo]] ved å invitere vennene dine."
+      "description": "Tjen ekstra [[:coin]] ved å invitere vennene dine."
     },
     "see_all": "se alle",
     "no": "Nei",
@@ -88,9 +88,9 @@
       "team": "Du har for øyeblikket ingen lagmedlemmer!"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] er bedre med venner",
+      "empty_title": "[[:project]] er bedre med venner",
       "empty_button_title": "Tillat kontakttilgang",
-      "empty_description": "Synkroniser kontaktene dine og se hvem som allerede er på [[:project_with_logo]]. I fremtiden vil du kunne sende [[:coin]] til alle kontaktene dine."
+      "empty_description": "Synkroniser kontaktene dine og se hvem som allerede er på [[:project]]. I fremtiden vil du kunne sende [[:coin]] til alle kontaktene dine."
     },
     "header": {
       "search_placeholder": "Søk etter brukere",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "GLOBAL RANGERING",
       "referrals": "HENVISNINGER",
-      "description": "Henvis flere brukere og tjen flere [[:coin_with_logo]]."
+      "description": "Henvis flere brukere og tjen flere [[:coin]]."
     },
     "referrals": {
       "title": "HENVISNINGER",
@@ -500,7 +500,7 @@
     "copied": "KOPIERT",
     "share_message": "Hei ☃️ snømann! Bli med teamet mitt på [[:project]] og motta 10 [[:coin]]-coins når du registrerer deg ved hjelp av henvisningskoden min:",
     "share_subject": "Bli med teamet mitt på [[:project]]",
-    "description": "Spre ordet og inviter vennene dine. Du tjener [[:coin_with_logo]] for hver nye henvisning du tar med.",
+    "description": "Spre ordet og inviter vennene dine. Du tjener [[:coin]] for hver nye henvisning du tar med.",
     "share": "Del"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "Nåværende rate",
     "allocation": "Tildeling",
     "description": "Staking er en prosess som innebærer å forplikte krypto-aktivaene dine til å støtte et blockchain-nettverk og bekrefte transaksjoner.",
-    "terms_agree": "Jeg godtar[[:coin_with_logo]] [[:link]]Staking-vilkårene[[/:link]]. [[:coin]]-beholdningen din vil bli låst for den valgte perioden.",
+    "terms_agree": "Jeg godtar[[:coin]] [[:link]]Staking-vilkårene[[/:link]]. [[:coin]]-beholdningen din vil bli låst for den valgte perioden.",
     "stake_now": "Forhånds-stake nå!",
     "balance_label": "Staket saldo",
     "confirm_title": "Bekreft forhånds-staking",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Inviter venn",
     "button_title": "Inviter venn",
-    "description": "Vennen din er ennå ikke på [[:project_with_logo]]. Send ham en invitasjon!"
+    "description": "Vennen din er ennå ikke på [[:project]]. Send ham en invitasjon!"
   },
   "balance_history": {
     "title": "Balansehistorikk",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Velkomstbelønning",
-    "description": "Gratulerer, du har mottatt dine første [[:value]] [[:coin_with_logo]]-mynter som beviser vår [[:bold]]tillit[[/:bold]]til[[:bold]]deg[[/:bold]].",
+    "description": "Gratulerer, du har mottatt dine første [[:value]] [[:coin]]-mynter som beviser vår [[:bold]]tillit[[/:bold]]til[[:bold]]deg[[/:bold]].",
     "balance_label": "Din nåværende saldo"
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "Tillat kontakter",
-        "description": "Synkroniser kontaktene dine og se hvem som allerede er på [[:project_with_logo]]. I fremtiden vil du kunne sende [[:project_with_logo]] til noen av kontaktene dine."
+        "description": "Synkroniser kontaktene dine og se hvem som allerede er på [[:project]]. I fremtiden vil du kunne sende [[:project]] til noen av kontaktene dine."
       },
       "confirm_phone": {
         "title": "Bekreft telefon",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "Liste over kontakter",
-        "description": "Dette er listen med alle kontaktene dine – de som allerede har blitt med i [[:project_with_logo]]-nettverket, vises øverst på listen."
+        "description": "Dette er listen med alle kontaktene dine – de som allerede har blitt med i [[:project]]-nettverket, vises øverst på listen."
       },
       "referrals": {
         "title": "Henvisninger",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "Nivå 1",
-        "description": "Her kan du se listen over dine Tier 1-henvisninger. For hver venn som sjekker inn samtidig med deg, vil du få 25 % ekstra på din nåværende, grunnleggende adopsjonsinntekt. [[:link]]Les mer[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Her kan du se listen over dine Tier 1-henvisninger. For hver venn som sjekker inn samtidig med deg, vil du få 25 % ekstra på din nåværende, grunnleggende adopsjonsinntekt. [[:link]]Les mer[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "Nivå 2",
-        "description": "Her kan du se listen over dine Tier 2-henvisninger. For hver venn som sjekker inn samtidig med deg, vil du få 5 % ekstra på din nåværende basisinntektsrate. [[:link]]Les mer[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Her kan du se listen over dine Tier 2-henvisninger. For hver venn som sjekker inn samtidig med deg, vil du få 5 % ekstra på din nåværende basisinntektsrate. [[:link]]Les mer[[/:link]]"
       },
       "active_users": {
         "title": "Aktive brukere",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "Hjem",
-        "description": "Velkommen til [[:project_with_logo]]. På startskjermen kan du finne all statistikk om saldoen din, gjeldende inntjeningsrate, din globale rangering sammen med teamet ditt."
+        "description": "Velkommen til [[:project]]. På startskjermen kan du finne all statistikk om saldoen din, gjeldende inntjeningsrate, din globale rangering sammen med teamet ditt."
       },
       "invite": {
         "title": "Inviter",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "Team",
-        "description": "[[:project_with_logo]] er bedre med venner. På denne siden kan du se statusen til teammedlemmene dine på både nivå 1 og nivå 2. Du kan også pinge dem herfra."
+        "description": "[[:project]] er bedre med venner. På denne siden kan du se statusen til teammedlemmene dine på både nivå 1 og nivå 2. Du kan også pinge dem herfra."
       },
       "news": {
         "title": "Nyheter",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "Tjen penger på [[:coin]]",
-        "description": "Du kan starte[[:project_with_logo]]innsjekkingsøkten hver 24. time ved å trykke på denne knappen. Ikke glem å komme tilbake hver dag og begynne å tjene penger!"
+        "description": "Du kan starte[[:project]]innsjekkingsøkten hver 24. time ved å trykke på denne knappen. Ikke glem å komme tilbake hver dag og begynne å tjene penger!"
       },
       "earningiceseemore": {
         "title": "Tjen penger på [[:coin]]",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "Hjelp",
-        "description": "Har du spørsmål? Sjekk ut vår liste over ofte stilte spørsmål. Ikke nøl med å ta kontakt med oss på hi@ice.io hvis du ikke finner det du leter etter."
+        "description": "Har du spørsmål? Sjekk ut vår liste over ofte stilte spørsmål. Ikke nøl med å ta kontakt med oss på {{email}} hvis du ikke finner det du leter etter."
       },
       "preStaking": {
         "title": "Forhånds-staking",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "Lommebokkort",
-        "description": "Her finner du din nåværende saldo for [[:coin_with_logo]], sammen med inntjeningsraten. Jo flere henvisninger fra teamet ditt som er på nett, jo høyere er inntjeningsraten."
+        "description": "Her finner du din nåværende saldo for [[:coin]], sammen med inntjeningsraten. Jo flere henvisninger fra teamet ditt som er på nett, jo høyere er inntjeningsraten."
       },
       "earning": {
         "title": "Inntjeningskort",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "Adopsjonskort",
-        "description": "Basert på gjennomsnittet av den siste ukens totale aktive snømenn, kan du se gjeldende inntjeningsrate for [[:coin_with_logo]]. Inntektsraten halveres når neste terskel nås."
+        "description": "Basert på gjennomsnittet av den siste ukens totale aktive snømenn, kan du se gjeldende inntjeningsrate for [[:coin]]. Inntektsraten halveres når neste terskel nås."
       },
       "nickname": {
         "title": "Kallenavn",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "Balansehistorikk",
-        "description": "Her finner du din nåværende [[:coin_with_logo]] saldo på lokal lommebok og blockchain. Den lokale lommeboksaldoen oppdateres hver time, mens blokkjedebalansen oppdateres hver 24. time."
+        "description": "Her finner du din nåværende [[:coin]] saldo på lokal lommebok og blockchain. Den lokale lommeboksaldoen oppdateres hver time, mens blokkjedebalansen oppdateres hver 24. time."
       },
       "achievements": {
         "title": "Prestasjoner",
@@ -927,12 +925,6 @@
         "message": "Er du sikker på at du vil avslutte{{providerName}}-påloggingsøkten fra denne enheten?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "Dagens bonus",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ Mining Deaktivert",
-        "description": "Vi har identifisert at identiteten din er knyttet til en annen konto. Hvis du tror dette er en feil, vennligst send en e-post til [[:bold]]feedback@ice.io[[/:bold]] med ditt kallenavn og en høykvalitets selfie.",
+        "description": "Vi har identifisert at identiteten din er knyttet til en annen konto. Hvis du tror dette er en feil, vennligst send en e-post til [[:bold]]{{email}}[[/:bold]] med ditt kallenavn og en høykvalitets selfie.",
         "action": "Lukk"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "Du har for øyeblikket ingen venner!"
       },
       "contacts": {
-        "empty_description": "Synkroniser kontaktene dine og se hvem som allerede er på [[:project_with_logo]]."
+        "empty_description": "Synkroniser kontaktene dine og se hvem som allerede er på [[:project]]."
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "Vis eksempel",
       "example_title": "Eksempel på repost",
       "x": {
-        "1": "Åpne X og søk etter [[:bold]]@ice_blockchain[[/:bold]]-kontoen.",
+        "1": "Åpne X og søk etter [[:bold]]{{account}}[[/:bold]]-kontoen.",
         "2": "Finn den festede posten, som er den første posten på profilen.",
         "3": "❤️ Liker & 🔄 Repost den med [[:bold]]Quote[[/:bold]] ved å bruke den [[:bold]]NØYAKTIGE[[/:bold]] teksten nedenfor.",
         "pop_up": {

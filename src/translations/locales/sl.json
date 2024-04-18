@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "Dobrodošli v [[:project]]",
-      "description": "[[:coin_with_logo]] je digitalna valuta, ki jo lahko zaslužite s svojim telefonom. [[:coin]] je v lasti in upravljanju vsakdanjih uporabnikov, kot ste vi."
+      "description": "[[:coin]] je digitalna valuta, ki jo lahko zaslužite s svojim telefonom. [[:coin]] je v lasti in upravljanju vsakdanjih uporabnikov, kot ste vi."
     },
     "page2": {
       "title": "Planetu prijazen",
-      "description": "[[:coin_with_logo]] je sam po sebi energijsko učinkovitejši od BTC, saj uporablja mehanizem soglasja »Dokaz o vložku«. Z dokazilom o vložku (DOV) lastniki kriptovalut potrdijo blokovne transakcije glede na število kovancev, ki jih vloži validator."
+      "description": "[[:coin]] je sam po sebi energijsko učinkovitejši od BTC, saj uporablja mehanizem soglasja »Dokaz o vložku«. Z dokazilom o vložku (DOV) lastniki kriptovalut potrdijo blokovne transakcije glede na število kovancev, ki jih vloži validator."
     },
     "page3": {
       "title": "Ljudski kovanec",
       "description_part1": "Moč je v vaših rokah.",
-      "description_part2": "Vse, kar razvijamo [[:project_with_logo]], bo odprtokodno in pod nadzorom decentralizirane avtonomne organizacije (DAO)."
+      "description_part2": "Vse, kar razvijamo [[:project]], bo odprtokodno in pod nadzorom decentralizirane avtonomne organizacije (DAO)."
     },
     "page4": {
       "title": "Ostanite povezani",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Obvestila",
-      "description_part1": "[[:project_with_logo]] prijave trajajo samo 24 ur. Ali želite prejeti obvestilo, ko se vaša trenutna seja zaključi?",
+      "description_part1": "[[:project]] prijave trajajo samo 24 ur. Ali želite prejeti obvestilo, ko se vaša trenutna seja zaključi?",
       "description_part2": "Ne skrbite, ne bomo vam pošiljali vsiljene pošte!",
       "not_now": "Ne zdaj"
     }
@@ -35,7 +35,7 @@
     "view_all": "Poglej vse",
     "invite_friend": {
       "title": "Povabi prijatelje",
-      "description": "Zaslužite dodatno [[:coin_with_logo]] tako, da povabite svoje prijatelje."
+      "description": "Zaslužite dodatno [[:coin]] tako, da povabite svoje prijatelje."
     },
     "see_all": "Poglej vse",
     "no": "Ne",
@@ -88,9 +88,9 @@
       "team": "Trenutno nimate nobenih članov ekipe!"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] bolje je s prijatelji",
+      "empty_title": "[[:project]] bolje je s prijatelji",
       "empty_button_title": "Dovoli dostop do stikov",
-      "empty_description": "Sinhroniziraj svoje stike in si oglej, kdo je že na [[:project_with_logo]]. V prihodnosti boste lahko pošiljali [[:coin]] vsem svojim stikom."
+      "empty_description": "Sinhroniziraj svoje stike in si oglej, kdo je že na [[:project]]. V prihodnosti boste lahko pošiljali [[:coin]] vsem svojim stikom."
     },
     "header": {
       "search_placeholder": "Iskanje uporabnikov",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "GLOBALNA UVRSTITEV",
       "referrals": "PRIPOROČILA",
-      "description": "Priporočite več uporabnikov in zaslužite več [[:coin_with_logo]]."
+      "description": "Priporočite več uporabnikov in zaslužite več [[:coin]]."
     },
     "referrals": {
       "title": "PRIPOROČILA",
@@ -500,7 +500,7 @@
     "copied": "KOPIRANO",
     "share_message": "Živijo ☃️ Snežak! Pridružite se moji ekipi v aplikaciji [[:project]] in prejmite 10 kovancev [[:coin]], ko se prijavite z mojo priporočilno kodo:",
     "share_subject": "Pridružite se moji ekipi v aplikaciji [[:project]]",
-    "description": "Razširite novico in povabite svoje prijatelje. Zaslužiš za [[:coin_with_logo]] vsako novo priporočilo, ki ga prineseš.",
+    "description": "Razširite novico in povabite svoje prijatelje. Zaslužiš za [[:coin]] vsako novo priporočilo, ki ga prineseš.",
     "share": "Deli"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "Trenutna stopnja",
     "allocation": "Dodelitev",
     "description": "Zastavljanje je postopek, ki vključuje dodelitev vaših kripto sredstev za podporo omrežju blockchain in potrjevanje transakcij.",
-    "terms_agree": "Strinjam se s [[:coin_with_logo]] [[:link]]Pogoji zastavljanja[[/:link]]. Vaše zaloge [[:coin]] bodo za izbrano obdobje zaklenjene.",
+    "terms_agree": "Strinjam se s [[:coin]] [[:link]]Pogoji zastavljanja[[/:link]]. Vaše zaloge [[:coin]] bodo za izbrano obdobje zaklenjene.",
     "stake_now": "Vnaprej zastavite zdaj!",
     "balance_label": "Zastavljeno stanje",
     "confirm_title": "Potrdite vnaprejšnje zastavljanje",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Povabi prijatelja",
     "button_title": "Povabi prijatelja",
-    "description": "Vaš prijatelj še ni vključen [[:project_with_logo]]. Pošljite mu vabilo!"
+    "description": "Vaš prijatelj še ni vključen [[:project]]. Pošljite mu vabilo!"
   },
   "balance_history": {
     "title": "Zgodovina stanja",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "Nagrada dobrodošlice",
-    "description": "Čestitamo, prejeli ste svoje prve [[:value]] [[:coin_with_logo]] kovance, kar dokazuje naše [[:bold]]zaupanje[[/:bold]] v [[:bold]]vas[[/:bold]].",
+    "description": "Čestitamo, prejeli ste svoje prve [[:value]] [[:coin]] kovance, kar dokazuje naše [[:bold]]zaupanje[[/:bold]] v [[:bold]]vas[[/:bold]].",
     "balance_label": "Vaše trenutno stanje"
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "Dovolite stike",
-        "description": "Sinhroniziraj svoje stike in si oglej, kdo je že na [[:project_with_logo]]. V prihodnosti boste lahko pošiljali Ice vsem svojim stikom. [[:project_with_logo]]"
+        "description": "Sinhroniziraj svoje stike in si oglej, kdo je že na [[:project]]. V prihodnosti boste lahko pošiljali Ice vsem svojim stikom. [[:project]]"
       },
       "confirm_phone": {
         "title": "Potrdite telefon",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "Seznam stikov",
-        "description": "To je seznam z vsemi vašimi stiki, tisti, ki so se že pridružili [[:project_with_logo]] omrežju, so prikazani na vrhu seznama."
+        "description": "To je seznam z vsemi vašimi stiki, tisti, ki so se že pridružili [[:project]] omrežju, so prikazani na vrhu seznama."
       },
       "referrals": {
         "title": "Priporočila",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "Stopnja 1",
-        "description": "Tukaj si lahko ogledate seznam svojih priporočil Stopnje 1. Za vsakega prijatelja, ki se prijavi hkrati z vami, boste prejeli dodatnih 25 % na svojo osnovno trenutno stopnjo zaslužka pri prevzemu. [[:link]]Preberite več[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Tukaj si lahko ogledate seznam svojih priporočil Stopnje 1. Za vsakega prijatelja, ki se prijavi hkrati z vami, boste prejeli dodatnih 25 % na svojo osnovno trenutno stopnjo zaslužka pri prevzemu. [[:link]]Preberite več[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "Stopnja 2",
-        "description": "Tukaj si lahko ogledate seznam svojih priporočil Stopnje 2. Za vsakega prijatelja, ki se prijavi hkrati z vami, boste prejeli dodatnih 5 % na svojo osnovno trenutno stopnjo zaslužka pri prevzemu. [[:link]]Preberite več[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Tukaj si lahko ogledate seznam svojih priporočil Stopnje 2. Za vsakega prijatelja, ki se prijavi hkrati z vami, boste prejeli dodatnih 5 % na svojo osnovno trenutno stopnjo zaslužka pri prevzemu. [[:link]]Preberite več[[/:link]]"
       },
       "active_users": {
         "title": "Aktivnih uporabnikov",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "Domov",
-        "description": "Dobrodošli v [[:project_with_logo]]. Na začetnem zaslonu lahko najdete vse statistične podatke o svojem stanju, trenutni stopnji zaslužka, vaši globalni uvrstitvi in vaši ekipi."
+        "description": "Dobrodošli v [[:project]]. Na začetnem zaslonu lahko najdete vse statistične podatke o svojem stanju, trenutni stopnji zaslužka, vaši globalni uvrstitvi in vaši ekipi."
       },
       "invite": {
         "title": "Povabi",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "Ekipa",
-        "description": "[[:project_with_logo]] bolje je s prijatelji. Na tej strani si lahko ogledate status članov svoje ekipe na nivoju Tier 1 in Tier 2. Od tu jih lahko tudi pingate."
+        "description": "[[:project]] bolje je s prijatelji. Na tej strani si lahko ogledate status članov svoje ekipe na nivoju Tier 1 in Tier 2. Od tu jih lahko tudi pingate."
       },
       "news": {
         "title": "Novice",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "Zaslužek [[:coin]]",
-        "description": "[[:project_with_logo]] Sejo prijave lahko začnete vsakih 24 ur, tako da tapnete ta gumb. Ne pozabite se vrniti vsak dan in začnite služiti!"
+        "description": "[[:project]] Sejo prijave lahko začnete vsakih 24 ur, tako da tapnete ta gumb. Ne pozabite se vrniti vsak dan in začnite služiti!"
       },
       "earningiceseemore": {
         "title": "Zaslužek [[:coin]]",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "Pomoč",
-        "description": "Imate kakšno vprašanje? Oglejte si naš seznam pogostih vprašanj. Če ne najdete tistega, kar iščete, ne oklevajte in nas kontaktirajte na hi@ice.io."
+        "description": "Imate kakšno vprašanje? Oglejte si naš seznam pogostih vprašanj. Če ne najdete tistega, kar iščete, ne oklevajte in nas kontaktirajte na {{email}}."
       },
       "preStaking": {
         "title": "Vnaprejšnje zastavljanje",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "Kartica denarnice",
-        "description": "Tukaj lahko najdete svoje trenutno [[:coin_with_logo]] stanje skupaj s stopnjo zaslužka. Več priporočil iz vaše ekipe je na spletu, višja je stopnja zaslužka."
+        "description": "Tukaj lahko najdete svoje trenutno [[:coin]] stanje skupaj s stopnjo zaslužka. Več priporočil iz vaše ekipe je na spletu, višja je stopnja zaslužka."
       },
       "earning": {
         "title": "Kartica zaslužka",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "Kartica prevzemov",
-        "description": "Na podlagi povprečja skupnega števila aktivnih Snežakov v zadnjem tednu si lahko ogledate trenutno [[:coin_with_logo]] stopnjo zaslužka. Stopnja zaslužka se prepolovi, ko je dosežen naslednji prag."
+        "description": "Na podlagi povprečja skupnega števila aktivnih Snežakov v zadnjem tednu si lahko ogledate trenutno [[:coin]] stopnjo zaslužka. Stopnja zaslužka se prepolovi, ko je dosežen naslednji prag."
       },
       "nickname": {
         "title": "Vzdevek",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "Zgodovina stanja",
-        "description": "Tukaj lahko najdete svoje trenutno [[:coin_with_logo]] stanje v lokalni denarnici in blockchainu. Stanje lokalne denarnice se posodobi vsako uro, stanje blockchaina pa vsakih 24 ur."
+        "description": "Tukaj lahko najdete svoje trenutno [[:coin]] stanje v lokalni denarnici in blockchainu. Stanje lokalne denarnice se posodobi vsako uro, stanje blockchaina pa vsakih 24 ur."
       },
       "achievements": {
         "title": "Dosežki",
@@ -927,12 +925,6 @@
         "message": "Ali ste prepričani, da želite končati {{providerName}}sejo prijave s te naprave?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "Današnji bonus",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ Onemogočena rudarjenja",
-        "description": "Ugotovili smo, da je vaša identiteta povezana z drugim računom. Če menite, da gre za napako, pošljite e-pošto na naslov [[:bold]]feedback@ice.io[[/:bold]] s svojim vzdevkom in selfijem visoke kakovosti.",
+        "description": "Ugotovili smo, da je vaša identiteta povezana z drugim računom. Če menite, da gre za napako, pošljite e-pošto na naslov [[:bold]]{{email}}[[/:bold]] s svojim vzdevkom in selfijem visoke kakovosti.",
         "action": "Zapri"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "Trenutno nimate prijateljev!"
       },
       "contacts": {
-        "empty_description": "Sinhronizirajte svoje stike in poglejte, kdo je že na [[:project_with_logo]]."
+        "empty_description": "Sinhronizirajte svoje stike in poglejte, kdo je že na [[:project]]."
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "Pokaži primer",
       "example_title": "Primer deljenja",
       "x": {
-        "1": "Odpri X in poišči račun [[:bold]]@ice_blockchain[[/:bold]].",
+        "1": "Odpri X in poišči račun [[:bold]]{{account}}[[/:bold]].",
         "2": "Najdi pripenjeno objavo, ki je prva objava na profilu.",
         "3": "❤️ Všečkaj & 🔄 Ponovno deli s [[:bold]]Citatom[[/:bold]] in uporabi [[:bold]]TOČEN[[/:bold]] besedilo spodaj.",
         "pop_up": {

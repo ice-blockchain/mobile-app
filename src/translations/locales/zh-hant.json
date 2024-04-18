@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "歡迎來到 [[:project]]",
-      "description": "[[:coin_with_logo]] 是一款能用手機賺取的虛擬貨幣。[[:coin]] 被像您一樣的日常使用者擁有與管理。"
+      "description": "[[:coin]] 是一款能用手機賺取的虛擬貨幣。[[:coin]] 被像您一樣的日常使用者擁有與管理。"
     },
     "page2": {
       "title": "環境友善",
-      "description": "[[:coin_with_logo]] 的能源效率比 BTC 更佳，因為它使用「權益證明」共識機制。 權益證明（POS）是一種加密貨幣的驗證方式，會根據驗證者抵押的貨幣數量來驗證區塊交易。"
+      "description": "[[:coin]] 的能源效率比 BTC 更佳，因為它使用「權益證明」共識機制。 權益證明（POS）是一種加密貨幣的驗證方式，會根據驗證者抵押的貨幣數量來驗證區塊交易。"
     },
     "page3": {
       "title": "民眾貨幣",
       "description_part1": "權力掌握在您手中。",
-      "description_part2": "我們在 [[:project_with_logo]] 開發的所有東西皆為開源，並由去中心化自治組織（DAO）控制。"
+      "description_part2": "我們在 [[:project]] 開發的所有東西皆為開源，並由去中心化自治組織（DAO）控制。"
     },
     "page4": {
       "title": "保持聯繫",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "通知",
-      "description_part1": "[[:project_with_logo]] 簽到時段只持續 24 小時。 想在當前時段結束時收到通知嗎？",
+      "description_part1": "[[:project]] 簽到時段只持續 24 小時。 想在當前時段結束時收到通知嗎？",
       "description_part2": "別擔心，您不會被通知轟炸！",
       "not_now": "現在不要"
     }
@@ -35,7 +35,7 @@
     "view_all": "檢視所有",
     "invite_friend": {
       "title": "邀請好友",
-      "description": "邀請好友，賺取額外 [[:coin_with_logo]]。"
+      "description": "邀請好友，賺取額外 [[:coin]]。"
     },
     "see_all": "查看所有",
     "no": "不要",
@@ -88,9 +88,9 @@
       "team": "目前您沒有團隊成員！"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] 與好友一起更有趣",
+      "empty_title": "[[:project]] 與好友一起更有趣",
       "empty_button_title": "允許存取聯絡人",
-      "empty_description": "同步聯絡人，看看有誰已在使用 [[:project_with_logo]]。 之後您將能傳送 [[:coin]] 給任何一個聯絡人。"
+      "empty_description": "同步聯絡人，看看有誰已在使用 [[:project]]。 之後您將能傳送 [[:coin]] 給任何一個聯絡人。"
     },
     "header": {
       "search_placeholder": "尋找使用者",
@@ -278,7 +278,7 @@
     "pioneer": {
       "rank": "全球排名",
       "referrals": "推薦",
-      "description": "推薦更多使用者，賺取更多 [[:coin_with_logo]]。"
+      "description": "推薦更多使用者，賺取更多 [[:coin]]。"
     },
     "referrals": {
       "title": "推薦",
@@ -500,7 +500,7 @@
     "copied": "已複製",
     "share_message": "嗨☃️ 雪人！ 加入我的 [[:project]] 團隊，使用我的推薦碼註冊，即可獲得 10 [[:coin]] 幣：",
     "share_subject": "加入我的 [[:project]] 團隊",
-    "description": "分享出去並邀請好友。 每推薦一個新人加入都能賺取 [[:coin_with_logo]]。",
+    "description": "分享出去並邀請好友。 每推薦一個新人加入都能賺取 [[:coin]]。",
     "share": "分享"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "目前利率",
     "allocation": "分配",
     "description": "質押是一段會將您的加密資產用於支持區塊鏈網路和確認交易的過程。",
-    "terms_agree": "我同意[[:coin_with_logo]][[:link]]質押條款[[/:link]]。 選定期間內，您持有的 [[:coin]] 將被鎖定。",
+    "terms_agree": "我同意[[:coin]][[:link]]質押條款[[/:link]]。 選定期間內，您持有的 [[:coin]] 將被鎖定。",
     "stake_now": "立刻預先質押！",
     "balance_label": "質押餘額",
     "confirm_title": "確認預先質押",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "邀請一個好友",
     "button_title": "邀請一個好友",
-    "description": "您的好友還沒加入 [[:project_with_logo]]。 對他發送邀請！"
+    "description": "您的好友還沒加入 [[:project]]。 對他發送邀請！"
   },
   "balance_history": {
     "title": "餘額歷史",
@@ -718,7 +718,7 @@
   },
   "ice_bonus": {
     "title": "歡迎獎勵",
-    "description": "恭喜，您已第一次收到 [[:value]][[:coin_with_logo]] 幣，這證明了我們對[[:bold]]您[[/:bold]]的[[:bold]]信任[[/:bold]]。",
+    "description": "恭喜，您已第一次收到 [[:value]][[:coin]] 幣，這證明了我們對[[:bold]]您[[/:bold]]的[[:bold]]信任[[/:bold]]。",
     "balance_label": "您當前的餘額"
   },
   "country_select": {
@@ -787,7 +787,7 @@
     "team": {
       "allow_contacts": {
         "title": "允許聯絡人",
-        "description": "同步聯絡人，看看有誰已在使用 [[:project_with_logo]]。 之後您將能傳送 [[:project_with_logo]] 給任何一個聯絡人。"
+        "description": "同步聯絡人，看看有誰已在使用 [[:project]]。 之後您將能傳送 [[:project]] 給任何一個聯絡人。"
       },
       "confirm_phone": {
         "title": "確認電話",
@@ -795,7 +795,7 @@
       },
       "contacts_list": {
         "title": "聯絡人清單",
-        "description": "這是您所有聯絡人的清單，已加入 [[:project_with_logo]] 網路的聯絡人顯示於清單最上方。"
+        "description": "這是您所有聯絡人的清單，已加入 [[:project]] 網路的聯絡人顯示於清單最上方。"
       },
       "referrals": {
         "title": "推薦人",
@@ -807,13 +807,11 @@
       },
       "segmented_control_tier_one": {
         "title": "1 階",
-        "description": "您可以從這裡看到您的 1 階推薦人清單。 每有一個好友跟您同時簽到，您當前的基礎採用收益率就增加 25%。 [[:link]]閱讀更多[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "您可以從這裡看到您的 1 階推薦人清單。 每有一個好友跟您同時簽到，您當前的基礎採用收益率就增加 25%。 [[:link]]閱讀更多[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "2 階",
-        "description": "您可以從這裡看到您的 2 階推薦人清單。 每有一個好友跟您同時簽到，您當前的基礎採用收益率就增加 25%。 [[:link]]閱讀更多[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "您可以從這裡看到您的 2 階推薦人清單。 每有一個好友跟您同時簽到，您當前的基礎採用收益率就增加 25%。 [[:link]]閱讀更多[[/:link]]"
       },
       "active_users": {
         "title": "活躍使用者",
@@ -831,7 +829,7 @@
     "home": {
       "home": {
         "title": "首頁",
-        "description": "歡迎來到 [[:project_with_logo]]。 您能在首頁找到關於您的餘額、當前收益率、您的全球排名，以及您的團隊的所有數據。"
+        "description": "歡迎來到 [[:project]]。 您能在首頁找到關於您的餘額、當前收益率、您的全球排名，以及您的團隊的所有數據。"
       },
       "invite": {
         "title": "邀請",
@@ -839,7 +837,7 @@
       },
       "team": {
         "title": "團隊",
-        "description": "[[:project_with_logo]] 與好友一起更有趣 您可以在這個頁面查看 1 階和 2 階團隊成員的狀態。 也可以從這裡 PING 他們。"
+        "description": "[[:project]] 與好友一起更有趣 您可以在這個頁面查看 1 階和 2 階團隊成員的狀態。 也可以從這裡 PING 他們。"
       },
       "news": {
         "title": "新消息",
@@ -851,7 +849,7 @@
       },
       "earningicestart": {
         "title": "賺取 [[:coin]]",
-        "description": "點擊此按鈕，每 24 小時開始一次 [[:project_with_logo]] 簽到時段。 別忘了每天回來並開始賺錢！"
+        "description": "點擊此按鈕，每 24 小時開始一次 [[:project]] 簽到時段。 別忘了每天回來並開始賺錢！"
       },
       "earningiceseemore": {
         "title": "賺取 [[:coin]]",
@@ -863,7 +861,7 @@
       },
       "help": {
         "title": "說明",
-        "description": "您有問題嗎？ 查看我們的常見問題清單。 如果您找不到您要的答案，請不吝前往 hi@ice.io 與我們聯絡。"
+        "description": "您有問題嗎？ 查看我們的常見問題清單。 如果您找不到您要的答案，請不吝前往 {{email}} 與我們聯絡。"
       },
       "preStaking": {
         "title": "預先質押",
@@ -871,7 +869,7 @@
       },
       "wallet": {
         "title": "錢包區塊",
-        "description": "您可以在此找到您當前的 [[:coin_with_logo]] 餘額，以及您的收益率。 您的團隊中有越多推薦人上線，收益率就越高。"
+        "description": "您可以在此找到您當前的 [[:coin]] 餘額，以及您的收益率。 您的團隊中有越多推薦人上線，收益率就越高。"
       },
       "earning": {
         "title": "收益區塊",
@@ -891,7 +889,7 @@
       },
       "adoptioncard": {
         "title": "採用區塊",
-        "description": "根據過去一週活躍雪人的總數，您可以查看當前的 [[:coin_with_logo]] 收益率。 達到下一個閾值時，收益率將減半。"
+        "description": "根據過去一週活躍雪人的總數，您可以查看當前的 [[:coin]] 收益率。 達到下一個閾值時，收益率將減半。"
       },
       "nickname": {
         "title": "暱稱",
@@ -899,7 +897,7 @@
       },
       "balancehistory": {
         "title": "餘額歷史",
-        "description": "您能在此找到您在本地錢包和區塊鏈上當前的 [[:coin_with_logo]] 餘額。 本地錢包餘額每小時更新，區塊鏈餘額每 24 小時更新。"
+        "description": "您能在此找到您在本地錢包和區塊鏈上當前的 [[:coin]] 餘額。 本地錢包餘額每小時更新，區塊鏈餘額每 24 小時更新。"
       },
       "achievements": {
         "title": "成就",
@@ -927,12 +925,6 @@
         "message": "確定要從此裝置終止 {{providerName}} 的登入時段？"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "今日獎勵",
@@ -1122,7 +1114,7 @@
       },
       "banned": {
         "title": "❌ 禁止挖礦",
-        "description": "我們發現您的身份與另一個帳戶相關聯。如果您認為這是錯誤的，請發送電子郵件至 [[:bold]]feedback@ice.io[[/:bold]]，提供您的暱稱和高質量的自拍照片。",
+        "description": "我們發現您的身份與另一個帳戶相關聯。如果您認為這是錯誤的，請發送電子郵件至 [[:bold]]{{email}}[[/:bold]]，提供您的暱稱和高質量的自拍照片。",
         "action": "關閉"
       }
     },
@@ -1228,7 +1220,7 @@
         "team": "目前您沒有朋友！"
       },
       "contacts": {
-        "empty_description": "同步您的聯絡人並查看誰已經在 [[:project_with_logo]] 上。"
+        "empty_description": "同步您的聯絡人並查看誰已經在 [[:project]] 上。"
       }
     }
   },
@@ -1252,7 +1244,7 @@
       "show_example": "顯示示例",
       "example_title": "轉發示例",
       "x": {
-        "1": "打開 X 並搜索 [[:bold]]@ice_blockchain[[/:bold]] 帳戶。",
+        "1": "打開 X 並搜索 [[:bold]]{{account}}[[/:bold]] 帳戶。",
         "2": "找到固定的帖子，這是個人檔案上的第一篇帖子。",
         "3": "❤️ 點贊 & 🔄 轉發，使用下面的[[:bold]]引用[[/:bold]]文本，確保文本[[:bold]]完全一致[[/:bold]]。",
         "pop_up": {

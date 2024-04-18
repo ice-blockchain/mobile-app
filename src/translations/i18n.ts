@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
+import {COIN_NAME, PROJECT_NAME} from '@constants/names';
 import {setCalendarLocale} from '@services/calendar';
 import {setDayjsLocale} from '@services/dayjs';
 import {localeConfig, SupportedLocale} from '@translations/localeConfig';
 import {Translations} from '@translations/locales/en.json';
+import {replaceAll} from '@utils/string';
 // eslint-disable-next-line no-restricted-imports
 import {I18n, TranslateOptions} from 'i18n-js';
 import {I18nManager} from 'react-native';
@@ -53,7 +55,12 @@ export function t<K extends keyof Translations, O extends Translations[K]>(
     ? Parameters<(key: K, options?: TranslateOptions) => string>
     : Parameters<(key: K, options: O & TranslateOptions) => string>
 ) {
-  return i18n.t(args[0], args[1]);
+  const result = i18n.t(args[0], args[1]);
+  return replaceAll(
+    replaceAll(result, '[[:project]]', PROJECT_NAME),
+    '[[:coin]]',
+    COIN_NAME,
+  );
 }
 
 export const tagRegex = (tag: string, isSingular = true) => {

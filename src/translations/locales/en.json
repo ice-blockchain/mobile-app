@@ -2,16 +2,16 @@
   "welcome": {
     "page1": {
       "title": "Welcome to [[:project]]",
-      "description": "[[:coin_with_logo]] is a digital currency that you can earn with your phone. [[:coin]] is owned and operated by every day users like yourself."
+      "description": "[[:coin]] is a digital currency that you can earn with your phone. [[:coin]] is owned and operated by every day users like yourself."
     },
     "page2": {
       "title": "Planet Friendly",
-      "description": "[[:coin_with_logo]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "description": "[[:coin]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
     },
     "page3": {
       "title": "People’s Coin",
       "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:project_with_logo]] is open-source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "description_part2": "Everything that we develop at [[:project]] is open-source & controlled by the Decentralized Autonomous Organization (DAO)."
     },
     "page4": {
       "title": "Stay Connected",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Notifications",
-      "description_part1": "[[:project_with_logo]] check-in sessions only last for 24 hours. Would you like to receive a notification when your current session ends?",
+      "description_part1": "[[:project]] check-in sessions only last for 24 hours. Would you like to receive a notification when your current session ends?",
       "description_part2": "Don’t worry, we will not spam you!",
       "not_now": "Not now"
     }
@@ -35,7 +35,7 @@
     "view_all": "view all",
     "invite_friend": {
       "title": "Invite Friends",
-      "description": "Earn extra [[:coin_with_logo]] by inviting your friends."
+      "description": "Earn extra [[:coin]] by inviting your friends."
     },
     "see_all": "see all",
     "no": "No",
@@ -89,9 +89,9 @@
       "t1": "You currently don't have any T1 referrals!"
     },
     "contacts": {
-      "empty_title": "[[:project_with_logo]] is better with friends",
+      "empty_title": "[[:project]] is better with friends",
       "empty_button_title": "Allow contacts access",
-      "empty_description": "Sync your contacts and see who is already on [[:project_with_logo]]. In the future, you will be able to send [[:coin]] to any of your contacts."
+      "empty_description": "Sync your contacts and see who is already on [[:project]]. In the future, you will be able to send [[:coin]] to any of your contacts."
     },
     "header": {
       "search_placeholder": "Search for users",
@@ -275,7 +275,7 @@
     "pioneer": {
       "rank": "GLOBAL RANK",
       "referrals": "REFERRALS",
-      "description": "Refer more users and earn more [[:coin_with_logo]]."
+      "description": "Refer more users and earn more [[:coin]]."
     },
     "referrals": {
       "title": "REFERRALS",
@@ -500,7 +500,7 @@
     "copied": "COPIED",
     "share_message": "Hi ☃️ Snowman! Join my team on [[:project]] and receive 10 [[:coin]] coins when you sign-up using my referral code:",
     "share_subject": "Join my team on [[:project]]",
-    "description": "Spread the word and invite your friends. You earn [[:coin_with_logo]] for each new referral you bring.",
+    "description": "Spread the word and invite your friends. You earn [[:coin]] for each new referral you bring.",
     "share": "Share"
   },
   "users": {
@@ -545,7 +545,7 @@
     "current_rate": "Current Rate",
     "allocation": "Allocation",
     "description": "Staking is a process that involves committing your crypto assets to support a blockchain network and confirm transactions.",
-    "terms_agree": "I agree to the [[:coin_with_logo]] [[:link]]Staking Terms[[/:link]]. Your [[:coin]] holdings will be locked for the selected period.",
+    "terms_agree": "I agree to the [[:coin]] [[:link]]Staking Terms[[/:link]]. Your [[:coin]] holdings will be locked for the selected period.",
     "stake_now": "Pre-Stake Now!",
     "remove_pre_staking": "Remove Pre-Staking",
     "balance_label": "Staked balance",
@@ -607,7 +607,7 @@
   "invite_friend": {
     "invite_button": "Invite Friend",
     "button_title": "Invite Friend",
-    "description": "Your friend is not yet on [[:project_with_logo]]. Send him an invitation!"
+    "description": "Your friend is not yet on [[:project]]. Send him an invitation!"
   },
   "balance_history": {
     "title": "Balance History",
@@ -716,7 +716,7 @@
   },
   "ice_bonus": {
     "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:coin_with_logo]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]].",
+    "description": "Congratulations, you have received your first [[:value]] [[:coin]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]].",
     "balance_label": "Your current balance"
   },
   "country_select": {
@@ -785,7 +785,7 @@
     "team": {
       "allow_contacts": {
         "title": "Allow contacts",
-        "description": "Sync your contacts and see who is already on [[:project_with_logo]]. In the future you will be able to send [[:project_with_logo]] to any of your contacts."
+        "description": "Sync your contacts and see who is already on [[:project]]. In the future you will be able to send [[:project]] to any of your contacts."
       },
       "confirm_phone": {
         "title": "Confirm phone",
@@ -793,7 +793,7 @@
       },
       "contacts_list": {
         "title": "List of contacts",
-        "description": "This is the list with all your contacts, those who already joined the [[:project_with_logo]] network being displayed on top of the list."
+        "description": "This is the list with all your contacts, those who already joined the [[:project]] network being displayed on top of the list."
       },
       "referrals": {
         "title": "Referrals",
@@ -805,13 +805,11 @@
       },
       "segmented_control_tier_one": {
         "title": "Tier 1",
-        "description": "Here you can see the list of your Tier 1 referrals. For each friend checking-in at the same time with you, you will get extra 25% on your base current adoption earning rate. [[:link]]Read more[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Here you can see the list of your Tier 1 referrals. For each friend checking-in at the same time with you, you will get extra 25% on your base current adoption earning rate. [[:link]]Read more[[/:link]]"
       },
       "segmented_control_tier_two": {
         "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each friend checking-in at the same time with you, you will get extra 5% on your base current adoption earning rate. [[:link]]Read more[[/:link]]",
-        "url": "https://ice.io/team"
+        "description": "Here you can see the list of your Tier 2 referrals. For each friend checking-in at the same time with you, you will get extra 5% on your base current adoption earning rate. [[:link]]Read more[[/:link]]"
       },
       "active_users": {
         "title": "Active Users",
@@ -829,7 +827,7 @@
     "home": {
       "home": {
         "title": "Home",
-        "description": "Welcome to [[:project_with_logo]]. On the home screen you can find all the statistics about your balance, the current earning rate, your global rank along with your team."
+        "description": "Welcome to [[:project]]. On the home screen you can find all the statistics about your balance, the current earning rate, your global rank along with your team."
       },
       "invite": {
         "title": "Invite",
@@ -837,7 +835,7 @@
       },
       "team": {
         "title": "Team",
-        "description": "[[:project_with_logo]] is better with friends. On this page you can see the status of your team members from both Tier 1 and Tier 2 levels. You can also ping them from here."
+        "description": "[[:project]] is better with friends. On this page you can see the status of your team members from both Tier 1 and Tier 2 levels. You can also ping them from here."
       },
       "news": {
         "title": "News",
@@ -849,7 +847,7 @@
       },
       "earningicestart": {
         "title": "Earning [[:coin]]",
-        "description": "You can start the [[:project_with_logo]] check-in session every 24 hours by tapping this button. Don’t forget to come back each day and start earning!"
+        "description": "You can start the [[:project]] check-in session every 24 hours by tapping this button. Don’t forget to come back each day and start earning!"
       },
       "earningiceseemore": {
         "title": "Earning [[:coin]]",
@@ -861,7 +859,7 @@
       },
       "help": {
         "title": "Help",
-        "description": "Do you have any questions? Check out our list of frequently asked questions. If you can't find what you're looking for, don't hesitate to reach out to us at hi@ice.io."
+        "description": "Do you have any questions? Check out our list of frequently asked questions. If you can't find what you're looking for, don't hesitate to reach out to us at {{email}}."
       },
       "preStaking": {
         "title": "Pre-Staking",
@@ -869,7 +867,7 @@
       },
       "wallet": {
         "title": "Wallet Card",
-        "description": "You can find here your current [[:coin_with_logo]] balance, together with the earning rate. The more referrals from your team are online, the higher the earning rate."
+        "description": "You can find here your current [[:coin]] balance, together with the earning rate. The more referrals from your team are online, the higher the earning rate."
       },
       "earning": {
         "title": "Earning Card",
@@ -889,7 +887,7 @@
       },
       "adoptioncard": {
         "title": "Adoption Card",
-        "description": "Based on the average of the last week total of active Snowmen, you can see the current [[:coin_with_logo]] earning rate. The earning rate is halved when reached the next threshold."
+        "description": "Based on the average of the last week total of active Snowmen, you can see the current [[:coin]] earning rate. The earning rate is halved when reached the next threshold."
       },
       "nickname": {
         "title": "Nickname",
@@ -897,7 +895,7 @@
       },
       "balancehistory": {
         "title": "Balance History",
-        "description": "You can find here your current [[:coin_with_logo]] balance on local wallet and blockchain. The local wallet balance is updated every hour, while the blockchain balance is updated every 24 hours."
+        "description": "You can find here your current [[:coin]] balance on local wallet and blockchain. The local wallet balance is updated every hour, while the blockchain balance is updated every 24 hours."
       },
       "achievements": {
         "title": "Achievements",
@@ -925,12 +923,6 @@
         "message": "Are you sure you want to end the {{providerName}} login session from this device?"
       }
     }
-  },
-  "links": {
-    "pre_staking": "https://ice.io/pre-staking/",
-    "privacy": "https://ice.io/privacy/",
-    "terms": "https://ice.io/terms/",
-    "main": "https://ice.io/"
   },
   "extra_bonus": {
     "claim_title": "Today’s Bonus",
@@ -1120,7 +1112,7 @@
       },
       "banned": {
         "title": "❌ Mining disabled",
-        "description": "We have identified that your identity is associated with another account. If you think this is an error, please send an email to [[:bold]]feedback@ice.io[[/:bold]] with your nickname and a high-quality selfie.",
+        "description": "We have identified that your identity is associated with another account. If you think this is an error, please send an email to [[:bold]]{{email}}[[/:bold]] with your nickname and a high-quality selfie.",
         "action": "Close"
       }
     },
@@ -1199,7 +1191,7 @@
         "team": "You currently don't have any friends!"
       },
       "contacts": {
-        "empty_description": "Sync your contacts and see who is already on [[:project_with_logo]]."
+        "empty_description": "Sync your contacts and see who is already on [[:project]]."
       }
     },
     "settings": {
@@ -1250,7 +1242,7 @@
       "show_example": "Show example",
       "example_title": "Example of the repost",
       "x": {
-        "1": "Open X and search for [[:bold]]@ice_blockchain[[/:bold]] account.",
+        "1": "Open X and search for [[:bold]]{{account}}[[/:bold]] account.",
         "2": "Find the pinned post, which is the first post on the profile.",
         "3": "❤️ Like & 🔄 Repost it with [[:bold]]Quote[[/:bold]] using the [[:bold]]EXACT[[/:bold]] text below.",
         "pop_up": {
