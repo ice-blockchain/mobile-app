@@ -45,6 +45,18 @@ const platforms: Platform[] = [
     link: 'https://www.biconomy.com/exchange/ICE_USDT',
   },
   {
+    logo: Images.platforms.xtcom,
+    link: 'https://www.xt.com/en/trade/ice_usdt',
+  },
+  {
+    logo: Images.platforms.onus,
+    link: 'https://goonus.io/en/markets/ICE_USD/',
+  },
+  {
+    logo: Images.platforms.bifinance,
+    link: 'https://www.bifinance.com/trade?symbol=ICE/USDT',
+  },
+  {
     logo: Images.platforms.pancake,
     link: 'https://pancakeswap.finance/swap?outputCurrency=0xc335Df7C25b72eEC661d5Aa32a7c2B7b2a1D1874&inputCurrency=0x55d398326f99059fF775485246999027B3197955',
   },

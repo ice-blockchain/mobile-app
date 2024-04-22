@@ -23,6 +23,9 @@ export const Images = {
     jupiter: require('./platforms/jupiter.png'),
     htx: require('./platforms/htx.png'),
     bitconomy: require('./platforms/bitconomy.png'),
+    onus: require('./platforms/onus.png'),
+    bifinance: require('./platforms/bifinance.png'),
+    xtcom: require('./platforms/xtcom.png'),
   },
   card: {
     joinMainnet: require('./card/joinMainnet.png'),
