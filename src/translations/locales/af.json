@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Kontakte",
-    "tierOne_tab": "Vlak 1",
-    "tierTwo_tab": "Vlak 2",
     "empty": {
       "contacts": "Jy het tans geen kontakte in die telefoonboek nie.",
       "button_title": "Nooi vriende",
-      "t1": "Jy het tans geen T1 verwysings nie!",
-      "t2": "Jy het tans geen T2 verwysings nie!",
       "team": "Jy het tans geen spanlede nie!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Vlak 1-verdienste"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Vlak 2-verdienste"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Jy sal verdien",
     "active_inviter": "Aktiewe nooier",
     "tier_1_ref": "Vlak 1 verwysings",
-    "tier_2_ref": "Vlak 2 verwysings",
     "active_miners": "Aktiewe verwysings",
     "team_members": "Spanlede",
     "active_team_members": "Aktiewe spanlede"
@@ -508,8 +498,6 @@
     "active": "Aktief",
     "inactive": "Onaktief",
     "referralType": {
-      "T1": "Vlak 1",
-      "T2": "Vlak 2",
       "team": "Spanlede"
     },
     "team": "Span"
@@ -759,10 +747,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Span",
-          "description": "Hier kan jy die lys van die mense wat jy uitgenooi het om by die [[:project]]-netwerk aan te sluit, sien. Jy kan maklik hulle status van hier af volg en kennisgewings aan die onaktiewe lede stuur."
-        },
         "active_users": {
           "description": "Dit is die huidige status van jou spanlede se inloopaktiwiteit. Hulle tel as aktief wanneer hulle 'n aktiewe inloopsessie het."
         },
@@ -811,10 +795,6 @@
       "segmented_control_tier_one": {
         "title": "Vlak 1",
         "description": "Hier kan jy die lys van jou Vlak 1-verwysings sien. Vir elke vriend wat op dieselfde tyd saam met jou inklok, sal jy ekstra 25% kry op jou basis huidige aanneming verdienstekoers. [[:link]]Lees meer[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Vlak 2",
-        "description": "Hier kan jy die lys van jou Vlak 1-verwysings sien. Vir elke vriend wat op dieselfde tyd saam met jou inklok, sal jy ekstra 5% kry op jou basis huidige aanneming verdienstekoers. [[:link]]Lees meer[[/:link]]"
       },
       "active_users": {
         "title": "Aktiewe gebruiker",

@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Kontaktlar",
-    "tierOne_tab": "1-ci Pillə",
-    "tierTwo_tab": "2-ci Pillə",
     "empty": {
       "contacts": "Hal-hazırda telefon kitabçanızda heç bir kontakt yoxdur.",
       "button_title": "Dostlarını dəvət et ",
-      "t1": "Hazırda hər hansı bir T1 istiqrazınız yoxdur!",
-      "t2": "Hazırda hər hansı bir T2 istiqrazınız yoxdur!",
       "team": "Hazırda hər hansı bir komanda üzvu yoxdur!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "1-ci Pillə qazancı"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "2-ci Pillə qazancı"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Qazanacaqsan",
     "active_inviter": "Aktiv dəvət edən",
     "tier_1_ref": "1-ci Pillə istinadları",
-    "tier_2_ref": "2-ci Pillə istinadları",
     "active_miners": "Aktiv istinadlar",
     "team_members": "Komanda üzvləri",
     "active_team_members": "Aktiv komanda üzvləri"
@@ -508,8 +498,6 @@
     "active": "Aktiv",
     "inactive": "Qeyri-aktiv",
     "referralType": {
-      "T1": "1-ci Pillə",
-      "T2": "2-ci Pillə",
       "team": "Komanda üzvləri"
     },
     "team": "Komanda"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Komanda",
-          "description": "Bu yerə İce Şəbəkəsinə dəvət etdiyiniz insanların siyahısını görmək mümkündür. Onların vəziyyətini buradan asanlıqla izləyə və fəal olmayanlara bildiriş göndərə bilərsiniz."
-        },
         "active_users": {
           "description": "Bu, komanda üzvlərinizin onların yoxlama sessiyasının fəal vəziyyətidir. Onlar fəal yoxlama sessiyası keçirdikdə fəal hesab edilir."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "1-ci Pillə",
         "description": "burada 1-ci Pillə istinadlarının siyahısını görə bilərsən. Səninlə eyni vaxtda daxil olan hər bir dostun üçün cari baza qazanc faizinin üzərinə ekstra 25 % əldə edəcəksən. [[:link]]Daha ətraflı oxu[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "2-ci Pillə",
-        "description": "burada 2-ci Pillə istinadlarının siyahısını görə bilərsən. Səninlə eyni vaxtda daxil olan hər bir dostun üçün cari baza qazanc faizinin üzərinə ekstra 5 % əldə edəcəksən. [[:link]]Daha ətraflı oxu[[/:link]]"
       },
       "active_users": {
         "title": "Aktiv istifadəçilər",

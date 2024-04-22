@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "聯絡人",
-    "tierOne_tab": " 1 階",
-    "tierTwo_tab": " 2 階",
     "empty": {
       "contacts": "您的電話簿中目前沒有任何聯絡人。",
       "button_title": "邀請好友",
-      "t1": "目前您沒有T1推薦！",
-      "t2": "目前您沒有T2推薦！",
       "team": "目前您沒有團隊成員！"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": " 1 階收益"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": " 2 階收益"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "您將賺取",
     "active_inviter": "活躍邀請人",
     "tier_1_ref": "1 階推薦人",
-    "tier_2_ref": "2 階推薦人",
     "active_miners": "活躍推薦人",
     "team_members": "團隊成員",
     "active_team_members": "活躍團隊成員"
@@ -508,8 +498,6 @@
     "active": "活躍",
     "inactive": "閒置",
     "referralType": {
-      "T1": " 1 階",
-      "T2": "  2 階",
       "team": "團隊成員"
     },
     "team": "團隊"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "團隊",
-          "description": "在這裡，您可以查看您邀請加入[[:project]] Network的人員名單。您可以從這裡輕鬆跟踪他們的狀態，並向不活躍的人發送通知。"
-        },
         "active_users": {
           "description": "這是您的團隊成員在其簽到會話中的當前活動狀態。當他們有活動的簽到會話時，他們被視為活躍。"
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "1 階",
         "description": "您可以從這裡看到您的 1 階推薦人清單。 每有一個好友跟您同時簽到，您當前的基礎採用收益率就增加 25%。 [[:link]]閱讀更多[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "2 階",
-        "description": "您可以從這裡看到您的 2 階推薦人清單。 每有一個好友跟您同時簽到，您當前的基礎採用收益率就增加 25%。 [[:link]]閱讀更多[[/:link]]"
       },
       "active_users": {
         "title": "活躍使用者",

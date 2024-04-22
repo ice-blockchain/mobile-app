@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Kontakte",
-    "tierOne_tab": "Tier-1",
-    "tierTwo_tab": "Tier-2",
     "empty": {
       "contacts": "Sie haben derzeit keine Kontakte im Telefonbuch.",
       "button_title": "Freunde einladen",
-      "t1": "Du hast derzeit keine T1-Empfehlungen!",
-      "t2": "Du hast derzeit keine T2-Empfehlungen!",
       "team": "Du hast derzeit keine Teammitglieder!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Tier-1-Verdienste"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Tier-2-Verdienste"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Sie werden verdienen",
     "active_inviter": "Aktiver Einlader",
     "tier_1_ref": "Tier-1-Empfehlungen",
-    "tier_2_ref": "Tier-2-Empfehlungen",
     "active_miners": "Aktive Empfehlungen",
     "team_members": "Teammitglieder",
     "active_team_members": "Aktive Teammitglieder"
@@ -508,8 +498,6 @@
     "active": "Aktiv",
     "inactive": "Inaktiv",
     "referralType": {
-      "T1": "Tier-1",
-      "T2": "Tier-2",
       "team": "Teammitglieder"
     },
     "team": "Team"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Team",
-          "description": "Hier können Sie die Liste der Personen sehen, die Sie zur Teilnahme am [[:project]]-Netzwerk eingeladen haben. Sie können ihren Status von hier aus leicht verfolgen und Benachrichtigungen an die inaktiven Mitglieder senden."
-        },
         "active_users": {
           "description": "Dies ist der aktuelle Status der Check-in-Aktivität Ihrer Teammitglieder. Sie gelten als aktiv, wenn sie eine aktive Check-in-Sitzung haben."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Tier-1",
         "description": "Hier können Sie die Liste Ihrer Tier-1-Empfehlungen einsehen. Für jeden Freund, der zur gleichen Zeit wie Sie das Check-in macht, erhalten Sie zusätzliche 25 % auf Ihre aktuelle Grundadoptionsverdienstquote. [[:link]]Mehr lesen[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Tier-2",
-        "description": "Hier können Sie die Liste Ihrer Tier-2-Empfehlungen einsehen. Für jeden Freund, der zur gleichen Zeit wie Sie das Check-in macht, erhalten Sie zusätzliche 25 % auf Ihre aktuelle Grundadoptionsverdienstquote. [[:link]]Mehr lesen[[/:link]]"
       },
       "active_users": {
         "title": "Aktive Nutzer",

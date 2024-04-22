@@ -79,7 +79,7 @@ export type User = {
   verified?: boolean | null;
 };
 
-export type ReferralType = 'CONTACTS' | 'T1' | 'T2' | 'TEAM';
+export type ReferralType = 'CONTACTS' | 'T1';
 export type AgendaType = 'AGENDA';
 export type TeamUserType = ReferralType | AgendaType;
 

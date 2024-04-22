@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "連絡先",
-    "tierOne_tab": "Tier1",
-    "tierTwo_tab": "Tier2",
     "empty": {
       "contacts": "現在、電話帳に連絡先がありません。",
       "button_title": "友達を招待",
-      "t1": "現在、T1の紹介はありません！",
-      "t2": "現在、T2の紹介はありません！",
       "team": "現在、チームメンバーはいません！"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Tier1収益"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Tier2収益"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "以下の収益が手に入ります：",
     "active_inviter": "アクティブな紹介者",
     "tier_1_ref": "Tier1紹介者",
-    "tier_2_ref": "Tier2紹介",
     "active_miners": "アクティブな紹介者",
     "team_members": "チームメンバー",
     "active_team_members": "アクティブなチームメンバー"
@@ -508,8 +498,6 @@
     "active": "アクティブ",
     "inactive": "非アクティブ",
     "referralType": {
-      "T1": "Tier1",
-      "T2": "Tier2",
       "team": "チームメンバー"
     },
     "team": "チーム"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "チーム",
-          "description": "ここでは、[[:project]]ネットワークに招待した人々のリストを見ることができます。ここから簡単に彼らのステータスを追跡し、非アクティブなメンバーに通知を送信できます。"
-        },
         "active_users": {
           "description": "これはあなたのチームメンバーのチェックインアクティビティの現在のステータスです。アクティブなチェックインセッションがある場合、それらはアクティブとみなされます。"
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Tier1",
         "description": "ここではTier1紹介者のリストを確認することができます。同時にチェックインした友達1人につき、現在採用されている基本収益率に25％が上乗せされます。[[:link]]続きを読む[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "第2段",
-        "description": "ここではTier2紹介者のリストを確認することができます。同時にチェックインした友達1人につき、現在採用されている基本収益率に5％が上乗せされます。[[:link]]続きを読む[[/:link]]"
       },
       "active_users": {
         "title": "アクティブユーザー",

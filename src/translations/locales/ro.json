@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Contacte",
-    "tierOne_tab": "Nivelul 1",
-    "tierTwo_tab": "Nivelul 2",
     "empty": {
       "contacts": "Momentan nu ai contacte în agenda telefonică.",
       "button_title": "Invită prieteni",
-      "t1": "În prezent, nu aveți nicio recomandare T1!",
-      "t2": "În prezent, nu aveți nicio recomandare T2!",
       "team": "În prezent, nu aveți niciun membru în echipă!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Câștiguri Nivel 1"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Câștiguri Nivel 2"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Vei câștiga",
     "active_inviter": "Invitator activ",
     "tier_1_ref": "Recomandări nivel 1",
-    "tier_2_ref": "Recomandări nivel 2",
     "active_miners": "Recomandări active",
     "team_members": "Membrii echipei",
     "active_team_members": "Membrii activi ai echipei"
@@ -508,8 +498,6 @@
     "active": "Activ",
     "inactive": "Inactiv",
     "referralType": {
-      "T1": "Nivelul 1",
-      "T2": "Nivelul 2",
       "team": "Membrii ai echipei"
     },
     "team": "Echipă"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Echipa",
-          "description": "Aici puteți vedea lista persoanelor pe care le-ați invitat să se alăture Rețelei [[:project]]. Puteți urmări cu ușurință starea lor de aici și puteți trimite notificări celor inactivi."
-        },
         "active_users": {
           "description": "Aceasta este starea actuală a activității de check-in a membrilor echipei dvs. Sunt considerați activi atunci când au o sesiune de check-in activă."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Nivelul 1",
         "description": "Aici poți vedea lista recomandărilor tale pentru Nivelul 1. Pentru fiecare prieten care vizitează simultan cu tine, vei primi 25% în plus la actuala rată de bază a câștigului din adoptare. [[:link]]Citește mai mult[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Nivelul 2",
-        "description": "Aici poți vedea lista tuturor recomandărilor tale pentru Nivelul 2. Pentru fiecare prieten care vizitează simultan cu tine, vei primi 5% în plus la actuala rată de bază a câștigului din adoptare. [[:link]]Citește mai mult[[/:link]]"
       },
       "active_users": {
         "title": "Utilizatori activi",

@@ -36,10 +36,6 @@ function getTitleByUserConnection(userConnection: TeamUserType) {
     case 'CONTACTS':
       return <IceFriendsTitle />;
     case 'T1':
-      return t('users.referralType.T1');
-    case 'T2':
-      return t('users.referralType.T2');
-    case 'TEAM':
       return t('users.referralType.team');
   }
   return null;

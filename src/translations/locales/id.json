@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Kontak",
-    "tierOne_tab": "Tingkat 1",
-    "tierTwo_tab": "Tingkat 2",
     "empty": {
       "contacts": "Saat ini Anda tidak memiliki kontak di buku telepon.",
       "button_title": "Undang Teman",
-      "t1": "Saat ini Anda tidak memiliki referensi T1 apa pun!",
-      "t2": "Saat ini Anda tidak memiliki referensi T2 apa pun!",
       "team": "Saat ini Anda tidak memiliki anggota tim apa pun!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Pendapatan Tingkat 1"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Pendapatan Tingkat 2"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Anda akan mendapatkan",
     "active_inviter": "Pengundang aktif",
     "tier_1_ref": "Rujukan tingkat 1",
-    "tier_2_ref": "Rujukan tingkat 2",
     "active_miners": "Rujukan aktif",
     "team_members": "Anggota tim",
     "active_team_members": "Anggota tim aktif"
@@ -508,8 +498,6 @@
     "active": "Aktif",
     "inactive": "Tidak aktif",
     "referralType": {
-      "T1": "Tingkat 1",
-      "T2": "Tingkat 2",
       "team": "Anggota tim"
     },
     "team": "Tim"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Tim",
-          "description": "Di sini Anda dapat melihat daftar orang yang telah Anda undang untuk bergabung dengan Jaringan [[:project]]. Anda dapat dengan mudah melacak status mereka dari sini dan mengirim pemberitahuan kepada yang tidak aktif."
-        },
         "active_users": {
           "description": "Ini adalah status aktivitas check-in anggota tim Anda saat ini. Mereka dianggap aktif ketika mereka memiliki sesi check-in aktif."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Tingkat 1",
         "description": "Lihat daftar rujukan Tingkat 1 di sini. Untuk setiap teman yang lapor masuk pada waktu yang sama, Anda akan mendapatkan tambahan 25% dari nilai pendapatan adopsi dasar saat ini. [[:link]]Baca selengkapnya[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Tingkat 2",
-        "description": "Lihat daftar rujukan Tingkat 2 di sini. Untuk setiap teman yang lapor masuk pada waktu yang sama, Anda akan mendapatkan tambahan 5% dari nilai pendapatan adopsi dasar saat ini. [[:link]]Baca selengkapnya[[/:link]]"
       },
       "active_users": {
         "title": "Pengguna Aktif",

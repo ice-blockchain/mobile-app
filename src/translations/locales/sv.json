@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Kontakter",
-    "tierOne_tab": "Nivå 1",
-    "tierTwo_tab": "Nivå 2",
     "empty": {
       "contacts": "Du har för närvarande inga kontakter i telefonboken.",
       "button_title": "Bjud in vänner",
-      "t1": "Du har för närvarande inga T1-hänvisningar!",
-      "t2": "Du har för närvarande inga T2-hänvisningar!",
       "team": "Du har för närvarande inga lagmedlemmar!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Nivå 1-intäkter"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Nivå 2-intäkter"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Du kommer att tjäna",
     "active_inviter": "Aktiv inbjudare",
     "tier_1_ref": "Nivå 1-värvningar",
-    "tier_2_ref": "Nivå 2-värvningar",
     "active_miners": "Aktiva värvningar",
     "team_members": "Lagmedlemmar",
     "active_team_members": "Aktiva lagmedlemmar"
@@ -508,8 +498,6 @@
     "active": "Aktiv",
     "inactive": "Inaktiv",
     "referralType": {
-      "T1": "Nivå 1",
-      "T2": "Nivå 2",
       "team": "Lagmedlemmar"
     },
     "team": "Lag"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Team",
-          "description": "Här kan du se listan över personer du har bjudit in att ansluta till [[:project]] Network. Du kan enkelt följa deras status här och skicka meddelanden till de inaktiva."
-        },
         "active_users": {
           "description": "Detta är den nuvarande statusen för dina teammedlemmars incheckningsaktivitet. De räknas som aktiva när de har en aktiv incheckningssession."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Nivå 1",
         "description": "Här kan du se listan över dina nivå 1-värvningar. För varje vän som checkar in samtidigt med dig får du ytterligare 25 % på din aktuella basintäktshastighet för antagande. [[:link]]Läs mer[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Nivå 2",
-        "description": "Här kan du se listan över dina nivå 2-värvningar. För varje vän som checkar in samtidigt med dig får du ytterligare 5 % på din aktuella basintäktshastighet för antagande. [[:link]]Läs mer[[/:link]]"
       },
       "active_users": {
         "title": "Aktiva användare",

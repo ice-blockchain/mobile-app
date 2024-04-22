@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Kişiler",
-    "tierOne_tab": "Kademe 1",
-    "tierTwo_tab": "Kademe 2",
     "empty": {
       "contacts": "Şu anda telefon rehberinde herhangi bir kişi yok.",
       "button_title": "Arkadaşlarını Davet Et",
-      "t1": "Şu anda T1 yönlendirmeniz yok!",
-      "t2": "Şu anda T2 yönlendirmeniz yok!",
       "team": "Şu anda takım üyeniz yok!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Kademe 1 Kazançları"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Kademe 2 Kazançları"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Kazanacaksın",
     "active_inviter": "Aktif davetçi",
     "tier_1_ref": "Kademe 1 referansları",
-    "tier_2_ref": "Kademe 2 referansları",
     "active_miners": "Aktif referanslar",
     "team_members": "Takım Üyeleri",
     "active_team_members": "Aktif Takım Üyeleri"
@@ -508,8 +498,6 @@
     "active": "Aktif",
     "inactive": "Aktif Değil",
     "referralType": {
-      "T1": "Kademe 1",
-      "T2": "Kademe 2",
       "team": "Takım Üyeleri"
     },
     "team": "Takım"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Takım",
-          "description": "Burada [[:project]] Network'e katılmaları için davet ettiğiniz kişilerin listesini görebilirsiniz. Onların durumunu buradan kolayca takip edebilir ve pasif olanlara bildirimler gönderebilirsiniz."
-        },
         "active_users": {
           "description": "Bu, takım üyelerinizin giriş aktivitesinin mevcut durumudur. Aktif bir giriş oturumu yaptıklarında aktif olarak kabul edilirler."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Kademe 1",
         "description": "Burada Kademe 1 referanslarının listesini görebilirsin. Seninle aynı anda check-in yapan her arkadaşın için, temel mevcut benimseme kazanç oranına göre ekstra %25 alacaksın. [[:link]]Devamını oku[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Kademe 2",
-        "description": "Burada Kademe 2 referanslarının listesini görebilirsin. Seninle aynı anda check-in yapan her arkadaşın için, temel mevcut benimseme kazanç oranına göre ekstra %5 alacaksın. [[:link]]Devamını oku[[/:link]]"
       },
       "active_users": {
         "title": "Aktif Kullanıcılar",

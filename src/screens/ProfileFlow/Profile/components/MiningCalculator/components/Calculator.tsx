@@ -7,7 +7,6 @@ import {COLORS} from '@constants/colors';
 import {commonStyles} from '@constants/styles';
 import {MiningIcon} from '@svg/MiningIcon';
 import {TierOneIcon} from '@svg/TierOneIcon';
-import {TierTwoIcon} from '@svg/TierTwoIcon';
 import {isRTL, t} from '@translations/i18n';
 import {formatNumber} from '@utils/numbers';
 import {font} from '@utils/styles';
@@ -26,9 +25,6 @@ import {isAndroid, rem} from 'rn-units';
 const TIER_ONE_MIN = 0;
 const TIER_ONE_MAX = 30;
 const TIER_ONE_DEFAULT = 10;
-const TIER_TWO_MIN = 0;
-const TIER_TWO_MAX = 20;
-const TIER_TWO_DEFAULT = 15;
 const ACTIVE_MINERS_MIN = 0;
 const ACTIVE_MINERS_MAX = 100;
 const ACTIVE_MINERS_DEFAULT = 30;
@@ -36,7 +32,6 @@ const ACTIVE_MINERS_DEFAULT = 30;
 type Props = {
   onParametersChange: (data: {
     tierOneValue: number;
-    tierTwoValue: number;
     activeMinersPerc: number;
   }) => void;
   result: number | null;
@@ -46,10 +41,8 @@ type Props = {
 export const Calculator = memo(
   ({result, onParametersChange, loading}: Props) => {
     const tierOneElementRef = useRef<TextInput | null>(null);
-    const tierTwoElementRef = useRef<TextInput | null>(null);
     const activeMinersElementRef = useRef<TextInput | null>(null);
     const tierOneValueRef = useRef(TIER_ONE_DEFAULT);
-    const tierTwoValueRef = useRef(TIER_TWO_DEFAULT);
     const activeMinersValueRef = useRef(ACTIVE_MINERS_DEFAULT);
 
     const setParameters = useMemo(
@@ -57,7 +50,6 @@ export const Calculator = memo(
         throttle(() => {
           onParametersChange({
             tierOneValue: tierOneValueRef.current,
-            tierTwoValue: tierTwoValueRef.current,
             activeMinersPerc: activeMinersValueRef.current,
           });
         }, 200),
@@ -118,30 +110,6 @@ export const Calculator = memo(
             setParameters();
             tierOneValueRef.current = value;
             tierOneElementRef.current?.setNativeProps({text: value.toString()});
-          }}
-        />
-        <View style={styles.sliderInfo}>
-          <TierTwoIcon />
-          <Text style={styles.sliderLabelText}>
-            {t('mining_calculator.tier_2_ref')}
-          </Text>
-          <TextInput
-            style={styles.sliderValueText}
-            ref={tierTwoElementRef}
-            editable={false}
-            defaultValue={tierTwoValueRef.current.toString()}
-          />
-        </View>
-        <Slider
-          style={styles.slider}
-          progress={useSharedValue(TIER_TWO_DEFAULT)}
-          minimumValue={useSharedValue(TIER_TWO_MIN)}
-          maximumValue={useSharedValue(TIER_TWO_MAX)}
-          step={TIER_TWO_MAX}
-          onValueChange={value => {
-            setParameters();
-            tierTwoValueRef.current = value;
-            tierTwoElementRef.current?.setNativeProps({text: value.toString()});
           }}
         />
         <View style={styles.sliderInfo}>

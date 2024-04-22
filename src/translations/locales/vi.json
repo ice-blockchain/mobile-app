@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Danh bạ",
-    "tierOne_tab": "Bậc 1",
-    "tierTwo_tab": "Bậc 2",
     "empty": {
       "contacts": "Hiện bạn không có bất kỳ địa chỉ liên hệ nào trong danh bạ.",
       "button_title": "Mời bạn bè",
-      "t1": "Hiện tại bạn không có giới thiệu T1 nào!",
-      "t2": "Hiện tại bạn không có giới thiệu T2 nào!",
       "team": "Hiện tại bạn không có thành viên trong nhóm nào!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Thu nhập Bậc 1"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Thu nhập Bậc 2"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Bạn sẽ kiếm được",
     "active_inviter": "Người mời đang hoạt động",
     "tier_1_ref": "Lượt giới thiệu bậc 1",
-    "tier_2_ref": "Lượt giới thiệu bậc 2",
     "active_miners": "Lượt giới thiệu đang hoạt động",
     "team_members": "Thành viên nhóm",
     "active_team_members": "Thành viên nhóm hoạt động"
@@ -508,8 +498,6 @@
     "active": "Đang hoạt động",
     "inactive": "Không hoạt động",
     "referralType": {
-      "T1": "Bậc 1",
-      "T2": "Bậc 2",
       "team": "Thành viên nhóm"
     },
     "team": "Nhóm"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Đội",
-          "description": "Ở đây, bạn có thể xem danh sách những người bạn đã mời tham gia [[:project]] Network. Bạn có thể dễ dàng theo dõi tình trạng của họ từ đây và gửi thông báo cho những người không hoạt động."
-        },
         "active_users": {
           "description": "Đây là trạng thái hiện tại của hoạt động kiểm tra của các thành viên trong đội của bạn. Họ được coi là hoạt động khi có phiên kiểm tra hoạt động."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Bậc 1",
         "description": "Tại đây, bạn có thể xem danh sách các lượt giới thiệu Bậc 1 của mình. Đối với mỗi người bạn điểm danh cùng lúc với bạn, bạn sẽ nhận được thêm 25% trên lãi suất cơ bản hiện được áp dụng. [[:link]]Đọc thêm[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Bậc 2",
-        "description": "Tại đây, bạn có thể xem danh sách các lượt giới thiệu Bậc 2 của mình. Đối với mỗi người bạn điểm danh cùng lúc với bạn, bạn sẽ nhận được thêm 5% trên lãi suất cơ bản hiện được áp dụng. [[:link]]Đọc thêm[[/:link]]"
       },
       "active_users": {
         "title": "Người dùng đang hoạt động",

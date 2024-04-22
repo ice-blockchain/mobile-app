@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Contatti",
-    "tierOne_tab": "Livello 1",
-    "tierTwo_tab": "Livello 2",
     "empty": {
       "contacts": "Al momento non ci sono contatti nella rubrica.",
       "button_title": "Invita amici",
-      "t1": "Attualmente non hai alcun riferimento T1!",
-      "t2": "Attualmente non hai alcun riferimento T2!",
       "team": "Attualmente non hai alcun membro del team!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Guadagni di 1° livello"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Guadagni di 2° livello"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Guadagnerai",
     "active_inviter": "Mittente attivo",
     "tier_1_ref": "Affiliazioni di 1° livello",
-    "tier_2_ref": "Affiliazioni di 2° livello",
     "active_miners": "Affiliazioni attive",
     "team_members": "Membri del team",
     "active_team_members": "Membri attivi del team"
@@ -508,8 +498,6 @@
     "active": "Attivo",
     "inactive": "Inattivo",
     "referralType": {
-      "T1": "Livello 1",
-      "T2": "Livello 2",
       "team": "Membri del team"
     },
     "team": "Team"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Team",
-          "description": "Qui puoi vedere l'elenco delle persone che hai invitato a unirsi alla rete [[:project]]. Puoi seguire facilmente il loro stato da qui e inviare notifiche ai membri inattivi."
-        },
         "active_users": {
           "description": "Questa è la situazione attuale dell'attività di check-in dei membri del tuo team. Sono considerati attivi quando hanno una sessione di check-in attiva."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Livello 1",
         "description": "Qui puoi vedere l'elenco dei tuoi affiliati di 1° livello. Per ogni amico che effettuerà l'accesso in contemporanea con te, riceverai un 25% extra sulla tua attuale percentuale di guadagno relativa all'adozione attuale. [[:link]]Continua a leggere[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Livello 2",
-        "description": "Qui puoi vedere l'elenco dei tuoi affiliati di 2° livello. Per ogni amico che effettuerà l'accesso in contemporanea con te, riceverai un 5% extra sulla tua attuale percentuale di guadagno relativa all'adozione attuale. [[:link]]Continua a leggere[[/:link]]"
       },
       "active_users": {
         "title": "Utenti attivi",

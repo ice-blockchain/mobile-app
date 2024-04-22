@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Kontakty",
-    "tierOne_tab": "Poziom 1",
-    "tierTwo_tab": "Poziom 2",
     "empty": {
       "contacts": "Obecnie w książce telefonicznej nie ma żadnych kontaktów.",
       "button_title": "Zaproś znajomych",
-      "t1": "Obecnie nie masz żadnych poleceń T1!",
-      "t2": "Obecnie nie masz żadnych poleceń T2!",
       "team": "Obecnie nie masz żadnych członków zespołu!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Zarobki na poziomie 1"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Zarobki na poziomie 2"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Zarobisz",
     "active_inviter": "Aktywny zapraszający",
     "tier_1_ref": "Polecenia poziomu 1",
-    "tier_2_ref": "Polecenia poziomu 2",
     "active_miners": "Aktywne polecenia",
     "team_members": "Członkowie zespołu",
     "active_team_members": "Aktywni członkowie zespołu"
@@ -508,8 +498,6 @@
     "active": "Aktywny",
     "inactive": "Nieaktywny",
     "referralType": {
-      "T1": "Poziom 1",
-      "T2": "Poziom 2",
       "team": "Członkowie zespołu"
     },
     "team": "Zespół"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Zespół",
-          "description": "Tutaj możesz zobaczyć listę osób, które zaprosiłeś do dołączenia do Sieci [[:project]]. Łatwo śledź ich status stąd i wysyłaj powiadomienia do tych nieaktywnych."
-        },
         "active_users": {
           "description": "To jest aktualny status aktywności członków Twojego zespołu podczas sesji meldunkowej. Są uważani za aktywnych, gdy mają aktywną sesję meldunkową."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Poziom 1",
         "description": "Tutaj możesz zobaczyć listę poleconych na poziomie 1. Za każdego znajomego, który zamelduje się w tym samym czasie co Ty, otrzymasz dodatkowe 25% do podstawowej stawki zarobków wdrażania projektu. [[:link]]Czytaj więcej[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Poziom 2",
-        "description": "Tutaj możesz zobaczyć listę poleconych na poziomie 2. Za każdego znajomego, który zamelduje się w tym samym czasie co Ty, otrzymasz dodatkowe 5% do podstawowej stawki zarobków wdrażania projektu. [[:link]]Czytaj więcej[[/:link]]"
       },
       "active_users": {
         "title": "Aktywni użytkownicy",

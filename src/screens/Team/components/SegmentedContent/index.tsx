@@ -9,18 +9,15 @@ import {SCREEN_SIDE_OFFSET} from '@constants/styles';
 import {Contacts} from '@screens/Team/components/Contacts';
 import {useSegmentedControlWalkthrough} from '@screens/Team/components/SegmentedContent/hooks/useSegmentedControlWalkthrough';
 import {
-  LiteSegmentIndex,
   SegmentIndex,
   useSegmentedMethods,
 } from '@screens/Team/components/SegmentedContent/hooks/useSegmentedMethods';
 import {TierList} from '@screens/Team/components/TierList';
 import {Listener} from '@screens/Team/types';
-import {isTeamEnabledSelector} from '@store/modules/Account/selectors';
 import {t} from '@translations/i18n';
 import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import PagerView from 'react-native-pager-view';
-import {useSelector} from 'react-redux';
 import {rem} from 'rn-units';
 
 import {SEGMENTS} from './segments';
@@ -43,8 +40,6 @@ export const SegmentedContent = memo(
       pagerRef,
     } = useSegmentedMethods();
 
-    const isTeamEnabled = useSelector(isTeamEnabledSelector);
-
     const {
       elementRef: segmentedControlRef,
       onElementLayout: onSegmentedControlLayout,
@@ -57,41 +52,24 @@ export const SegmentedContent = memo(
           style={styles.flex}
           ref={pagerRef}
           onPageSelected={onPageChange}>
-          <View style={styles.flex}>
+          <View style={styles.flex} key={'contacts'}>
             <Contacts
               focused={activeIndex === SegmentIndex.ContactList}
               addCollapsedSnapPointListener={addCollapsedSnapPointListener}
             />
           </View>
-          {isLiteTeam ? (
-            <View style={styles.flex}>
-              <TierList
-                referralType={isLiteTeam && isTeamEnabled ? 'TEAM' : 'T1'}
-                emptyTitle={t('override.team.empty.team')}
-                focused={activeIndex === LiteSegmentIndex.Team}
-                addCollapsedSnapPointListener={addCollapsedSnapPointListener}
-              />
-            </View>
-          ) : (
-            [
-              <View style={styles.flex} key={'T1'}>
-                <TierList
-                  referralType="T1"
-                  emptyTitle={t('team.empty.t1')}
-                  focused={activeIndex === SegmentIndex.Tier1List}
-                  addCollapsedSnapPointListener={addCollapsedSnapPointListener}
-                />
-              </View>,
-              <View style={styles.flex} key={'T2'}>
-                <TierList
-                  referralType="T2"
-                  emptyTitle={t('team.empty.t2')}
-                  focused={activeIndex === SegmentIndex.Tier2List}
-                  addCollapsedSnapPointListener={addCollapsedSnapPointListener}
-                />
-              </View>,
-            ]
-          )}
+          <View style={styles.flex} key={'team'}>
+            <TierList
+              referralType={'T1'}
+              emptyTitle={
+                isLiteTeam
+                  ? t('override.team.empty.team')
+                  : t('team.empty.team')
+              }
+              focused={activeIndex === SegmentIndex.Team}
+              addCollapsedSnapPointListener={addCollapsedSnapPointListener}
+            />
+          </View>
         </PagerView>
         <View
           ref={segmentedControlRef}

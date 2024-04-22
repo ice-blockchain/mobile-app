@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Kontakty",
-    "tierOne_tab": "Úroveň 1",
-    "tierTwo_tab": "Úroveň 2",
     "empty": {
       "contacts": "V telefonním seznamu aktuálně nemáte žádné přátele.",
       "button_title": "Pozvěte přátele",
-      "t1": "V současné době nemáte žádné T1 doporučení!",
-      "t2": "V současné době nemáte žádné T2 doporučení!",
       "team": "V současné době nemáte žádné členy týmu!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Výdělky úrovně 1"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Výdělky úrovně 2"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Vyděláte si",
     "active_inviter": "Aktivní v doporučování",
     "tier_1_ref": "Doporučení lidé úrovně 1",
-    "tier_2_ref": "Doporučení lidé úrovně 2",
     "active_miners": "Aktivní doporučení lidé",
     "team_members": "Členové týmu",
     "active_team_members": "Aktivní členové týmu"
@@ -508,8 +498,6 @@
     "active": "Aktivní",
     "inactive": "Neaktivní",
     "referralType": {
-      "T1": "Úroveň 1",
-      "T2": "Úroveň 2",
       "team": "Členové týmu"
     },
     "team": "Tým"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Tým",
-          "description": "Zde můžete vidět seznam lidí, které jste pozvali, aby se připojili k síti [[:project]]. Z této stránky můžete snadno sledovat jejich stav a odesílat oznámení neaktivním členům."
-        },
         "active_users": {
           "description": "Toto je aktuální stav činnosti přihlášených členů vašeho týmu. Jsou považováni za aktivní, když mají aktivní relaci."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Úroveň 1",
         "description": "Tady se zobrazuje seznam vámi doporučených lidí na úrovni 1. Každý z přátel, kdo se bude ohlašovat spolu s vámi, vám zajistí 25% bonus na aktuální výdělkovou sazbu odvíjející se od míry přijetí. [[:link]]Přečtěte si více[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Úroveň 2",
-        "description": "Tady se zobrazuje seznam vámi doporučených lidí na úrovni 2. Každý z přátel, kdo se bude ohlašovat spolu s vámi, vám zajistí 5% bonus na aktuální výdělkovou sazbu odvíjející se od míry přijetí. [[:link]]Přečtěte si více[[/:link]]"
       },
       "active_users": {
         "title": "Aktivní uživatelé",

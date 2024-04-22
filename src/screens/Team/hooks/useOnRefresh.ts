@@ -17,7 +17,6 @@ const REFRESH_ACTIONS = [
   AccountActions.GET_ACCOUNT,
   getIsInitialStartAction('CONTACTS'),
   getIsInitialStartAction('T1'),
-  getIsInitialStartAction('T2'),
 ];
 
 export const useOnRefresh = (animatedIndex: SharedValue<number>) => {

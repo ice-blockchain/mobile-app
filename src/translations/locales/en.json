@@ -79,14 +79,10 @@
   },
   "team": {
     "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
     "empty": {
-      "t2": "You currently don't have any T2 referrals!",
       "team": "You currently don't have any team members!",
       "contacts": "You currently don't have any contacts in the phonebook.",
-      "button_title": "Invite Friends",
-      "t1": "You currently don't have any T1 referrals!"
+      "button_title": "Invite Friends"
     },
     "contacts": {
       "empty_title": "[[:project]] is better with friends",
@@ -119,11 +115,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Tier 1 Earnings"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Tier 2 Earnings"
       }
     }
   },
@@ -261,7 +252,6 @@
     "result_label": "You will earn",
     "active_inviter": "Active inviter",
     "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
     "active_miners": "Active referrals",
     "team_members": "Team members",
     "active_team_members": "Active team members"
@@ -509,8 +499,6 @@
     "inactive": "Inactive",
     "team": "Team",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2",
       "team": "Team members"
     }
   },
@@ -754,10 +742,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Team",
-          "description": "Here you can see the list of the people you have invited to join the [[:project]] Network. You can easily track their status from here and send notifications to the inactive ones."
-        },
         "active_users": {
           "description": "This is the current status of your team members check-in activity. They count as active when they have an active check-in session."
         },
@@ -806,10 +790,6 @@
       "segmented_control_tier_one": {
         "title": "Tier 1",
         "description": "Here you can see the list of your Tier 1 referrals. For each friend checking-in at the same time with you, you will get extra 25% on your base current adoption earning rate. [[:link]]Read more[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each friend checking-in at the same time with you, you will get extra 5% on your base current adoption earning rate. [[:link]]Read more[[/:link]]"
       },
       "active_users": {
         "title": "Active Users",

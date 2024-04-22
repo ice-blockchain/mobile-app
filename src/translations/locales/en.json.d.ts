@@ -60,13 +60,9 @@ export type Translations = {
   'button.faq': null;
   'button.knowledge_base': null;
   'team.contacts_tab': null;
-  'team.tierOne_tab': null;
-  'team.tierTwo_tab': null;
-  'team.empty.t2': null;
   'team.empty.team': null;
   'team.empty.contacts': null;
   'team.empty.button_title': null;
-  'team.empty.t1': null;
   'team.contacts.empty_title': null;
   'team.contacts.empty_button_title': null;
   'team.contacts.empty_description': null;
@@ -84,7 +80,6 @@ export type Translations = {
   'team.contacts_list.invite': null;
   'team.contacts_list.invitation_text': {name: number | string};
   'team.tier_one.header_list.title_earnings': null;
-  'team.tier_two.header_list.title_earnings': null;
   'signIn.logInSignUp': null;
   'signIn.phone': null;
   'signIn.or': null;
@@ -186,7 +181,6 @@ export type Translations = {
   'mining_calculator.result_label': null;
   'mining_calculator.active_inviter': null;
   'mining_calculator.tier_1_ref': null;
-  'mining_calculator.tier_2_ref': null;
   'mining_calculator.active_miners': null;
   'mining_calculator.team_members': null;
   'mining_calculator.active_team_members': null;
@@ -349,8 +343,6 @@ export type Translations = {
   'users.active': null;
   'users.inactive': null;
   'users.team': null;
-  'users.referralType.T1': null;
-  'users.referralType.T2': null;
   'users.referralType.team': null;
   'personal_information.first_name': null;
   'personal_information.last_name': null;
@@ -521,8 +513,6 @@ export type Translations = {
   'walkthrough.overrides.home.team.description': null;
   'walkthrough.overrides.home.referralscard.title': null;
   'walkthrough.overrides.home.referralscard.description': null;
-  'walkthrough.overrides.team.segmented_control_tier_one.title': null;
-  'walkthrough.overrides.team.segmented_control_tier_one.description': null;
   'walkthrough.overrides.team.active_users.description': null;
   'walkthrough.overrides.team.ping.description': null;
   'walkthrough.profile.hidden_data.title': null;
@@ -543,10 +533,6 @@ export type Translations = {
   'walkthrough.team.earnings.description': null;
   'walkthrough.team.segmented_control_tier_one.title': null;
   'walkthrough.team.segmented_control_tier_one.description': null;
-  'walkthrough.team.segmented_control_tier_one.url': null;
-  'walkthrough.team.segmented_control_tier_two.title': null;
-  'walkthrough.team.segmented_control_tier_two.description': null;
-  'walkthrough.team.segmented_control_tier_two.url': null;
   'walkthrough.team.active_users.title': null;
   'walkthrough.team.active_users.description': null;
   'walkthrough.team.tier_one_earnings.title': null;
@@ -570,7 +556,7 @@ export type Translations = {
   'walkthrough.home.stats.title': null;
   'walkthrough.home.stats.description': null;
   'walkthrough.home.help.title': null;
-  'walkthrough.home.help.description': null;
+  'walkthrough.home.help.description': {email: number | string};
   'walkthrough.home.preStaking.title': null;
   'walkthrough.home.preStaking.description': null;
   'walkthrough.home.wallet.title': null;
@@ -606,10 +592,6 @@ export type Translations = {
   'ActiveSessionsScreen.dialogs.endSession.message': {
     providerName: number | string;
   };
-  'links.pre_staking': null;
-  'links.privacy': null;
-  'links.terms': null;
-  'links.main': null;
   'extra_bonus.claim_title': null;
   'extra_bonus.claim_message': null;
   'extra_bonus.link': null;
@@ -705,7 +687,7 @@ export type Translations = {
   'face_auth.auth_status.continue.description': null;
   'face_auth.auth_status.continue.action': null;
   'face_auth.auth_status.banned.title': null;
-  'face_auth.auth_status.banned.description': null;
+  'face_auth.auth_status.banned.description': {email: number | string};
   'face_auth.auth_status.banned.action': null;
   'face_auth.emotions_recognition.start': null;
   'face_auth.emotions_recognition.please_show_this': null;
@@ -767,7 +749,7 @@ export type Translations = {
   'social_kyc.select_method_step.description': null;
   'social_kyc.instructions_step.show_example': null;
   'social_kyc.instructions_step.example_title': null;
-  'social_kyc.instructions_step.x.1': null;
+  'social_kyc.instructions_step.x.1': {account: number | string};
   'social_kyc.instructions_step.x.2': null;
   'social_kyc.instructions_step.x.3': null;
   'social_kyc.instructions_step.x.pop_up.title': null;

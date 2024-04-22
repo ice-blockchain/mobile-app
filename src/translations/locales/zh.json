@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "联系人",
-    "tierOne_tab": "1 级",
-    "tierTwo_tab": "2 级",
     "empty": {
       "contacts": "您当前通讯录中没有任何联系人。",
       "button_title": "邀请好友",
-      "t1": "目前您没有T1推荐！",
-      "t2": "目前您没有T2推荐！",
       "team": "目前您没有团队成员！"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "1 级收益"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "2 级收益"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "您将赚取",
     "active_inviter": "有效邀请人",
     "tier_1_ref": "1 级推荐人",
-    "tier_2_ref": "2 级推荐人",
     "active_miners": "有效推荐人",
     "team_members": "团队成员",
     "active_team_members": "活跃团队成员"
@@ -508,8 +498,6 @@
     "active": "活跃",
     "inactive": "不活跃",
     "referralType": {
-      "T1": "1 级",
-      "T2": "2 级",
       "team": "团队成员"
     },
     "team": "团队"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "团队",
-          "description": "在这里，您可以查看您邀请加入[[:project]] Network的人员名单。您可以从这里轻松跟踪他们的状态，并向不活跃的人发送通知。"
-        },
         "active_users": {
           "description": "这是您的团队成员在其签到会话中的当前活动状态。当他们有活动的签到会话时，他们被视为活跃。"
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "1 级",
         "description": "在这里，您可以看到 1 级推荐人列表。对于每位与您同时签到的好友，您将在当前基准采用收益率的基础上额外获得 25% 奖励。[[:link]]阅读更多内容[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "2 级",
-        "description": "在这里，您可以看到 2 级推荐人列表。对于每位与您同时签到的好友，您将在当前基准采用收益率的基础上额外获得 5% 奖励。[[:link]]阅读更多内容[[/:link]]"
       },
       "active_users": {
         "title": "活跃用户",

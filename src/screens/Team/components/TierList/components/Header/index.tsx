@@ -40,7 +40,7 @@ export const ListHeader = ({referralType, focused}: Props) => {
         </View>
         {!isLiteTeam && (
           <View ref={earningsElementRef} onLayout={onEarningsElementLayout}>
-            <Earnings referralType={referralType} />
+            <Earnings />
           </View>
         )}
       </View>

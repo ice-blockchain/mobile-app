@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {TeamUserType, User} from '@api/user/types';
-import {isLiteTeam} from '@constants/featureFlags';
 import {useFetchCollection} from '@hooks/useFetchCollection';
 import {AGENDA} from '@screens/Team/constants';
 import {isTeamEnabledSelector} from '@store/modules/Account/selectors';
@@ -40,14 +39,7 @@ export function useGetSearchResultsSegments() {
       const usersByReferralType = new Map<TeamUserType, (User | Contact)[]>();
       data.forEach((user: User) => {
         if (user.referralType) {
-          if (user.referralType === 'T2' && isLiteTeam && !isTeamEnabled) {
-            return;
-          }
-          const segmentKey =
-            isLiteTeam &&
-            (user.referralType === 'T1' || user.referralType === 'T2')
-              ? 'TEAM'
-              : user.referralType;
+          const segmentKey = user.referralType;
           const segment = usersByReferralType.get(segmentKey) ?? [];
           segment.push(user);
           usersByReferralType.set(segmentKey, segment);

@@ -13,11 +13,7 @@ export const Tiers = () => {
     <View style={styles.body}>
       <View style={styles.tierContainer}>
         <CircleIcon fill={COLORS.shamrock} />
-        <Text style={styles.tier1Text}>{t('users.referralType.T1')}</Text>
-      </View>
-      <View style={styles.tierContainer}>
-        <CircleIcon fill={COLORS.white} />
-        <Text style={styles.tier2Text}>{t('users.referralType.T2')}</Text>
+        <Text style={styles.tier1Text}>{t('users.referralType.team')}</Text>
       </View>
     </View>
   );
@@ -36,8 +32,5 @@ const styles = StyleSheet.create({
   },
   tier1Text: {
     ...font(12, 16, 'medium', 'shamrock'),
-  },
-  tier2Text: {
-    ...font(12, 16, 'medium', 'white'),
   },
 });

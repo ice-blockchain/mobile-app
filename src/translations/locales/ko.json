@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "연락처",
-    "tierOne_tab": "티어 1",
-    "tierTwo_tab": "티어 2",
     "empty": {
       "contacts": "아직 전화번호부에 아무 연락처도 없습니다.",
       "button_title": "친구 초대",
-      "t1": "현재 T1 추천이 없습니다!",
-      "t2": "현재 T2 추천이 없습니다!",
       "team": "현재 팀 멤버가 없습니다!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "티어 1 수익"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "티어 2 수익"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "예정 수익:",
     "active_inviter": "활동 중인 초대자",
     "tier_1_ref": "티어 1 추천인",
-    "tier_2_ref": "티어 1 추천인",
     "active_miners": "유효한 추천인",
     "team_members": "팀 멤버",
     "active_team_members": "활동 중인 팀 멤버"
@@ -508,8 +498,6 @@
     "active": "활성",
     "inactive": "비활성",
     "referralType": {
-      "T1": "티어 1",
-      "T2": "티어 2",
       "team": "팀 멤버"
     },
     "team": "팀"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "팀",
-          "description": "이곳에서 [[:project]] 네트워크에 초대한 사람들의 목록을 볼 수 있습니다. 여기서 그들의 상태를 쉽게 추적하고 비활성 멤버에게 알림을 보낼 수 있습니다."
-        },
         "active_users": {
           "description": "이것은 팀 멤버의 체크인 활동 현황입니다. 활성 체크인 세션을 진행하면 활성으로 간주됩니다."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "티어 1",
         "description": "여기서 회원님의 티어 1 추천 목록을 보실 수 있습니다. 친구와 회원님과 같은 시간에 체크인할 때마다 해당 친구와 회원님은 현재 채택된 수익률에 따라 기본 수익의 최대 25%의 보너스를 받을 것입니다. [[:link]]더 보기[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "티어 2",
-        "description": "여기서 회원님의 티어 2 추천 목록을 보실 수 있습니다. 친구와 회원님과 같은 시간에 체크인할 때마다 해당 친구와 회원님은 현재 채택된 수익률에 따라 기본 수익의 최대 5%의 보너스를 받을 것입니다. [[:link]]더 보기[[/:link]]"
       },
       "active_users": {
         "title": "활동 중인 사용자",

@@ -16,11 +16,9 @@ export const useMiningCalculator = () => {
   const onParametersChange = useCallback(
     ({
       tierOneValue,
-      tierTwoValue,
       activeMinersPerc,
     }: {
       tierOneValue: number;
-      tierTwoValue: number;
       activeMinersPerc: number;
     }) => {
       if (!miningRates) {
@@ -31,7 +29,6 @@ export const useMiningCalculator = () => {
       const {miningRate} = calculateMiningRate({
         baseMiningRate,
         tierOneReferralsCount: tierOneValue,
-        tierTwoReferralsCount: tierTwoValue,
         activeMinersPercentage: activeMinersPerc,
       });
 

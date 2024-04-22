@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Kontakti",
-    "tierOne_tab": "Stopnja 1",
-    "tierTwo_tab": "Stopnja 2",
     "empty": {
       "contacts": "Trenutno nimaš nobenih stikov v imeniku.",
       "button_title": "Povabi prijatelje",
-      "t1": "Trenutno nimate nobenih napotitev T1!",
-      "t2": "Trenutno nimate nobenih napotitev T2!",
       "team": "Trenutno nimate nobenih članov ekipe!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Stopnja 1 Zaslužki"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Stopnja 2 Zaslužki"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Zaslužili boste",
     "active_inviter": "Aktiven vabitelj",
     "tier_1_ref": "Priporočila stopnje 1 ",
-    "tier_2_ref": "Priporočila stopnje 2",
     "active_miners": "Aktivna priporočila",
     "team_members": "Člani ekipe",
     "active_team_members": "Aktivni člani ekipe"
@@ -508,8 +498,6 @@
     "active": "Aktiven",
     "inactive": "Neaktiven",
     "referralType": {
-      "T1": "Stopnja 1",
-      "T2": "Stopnja 2",
       "team": "Člani ekipe"
     },
     "team": "Ekipa"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Ekipa",
-          "description": "Tukaj lahko vidite seznam ljudi, ki ste jih povabili, da se pridružijo omrežju [[:project]]. Lahko enostavno spremljate njihov status od tu in pošiljate obvestila neaktivnim."
-        },
         "active_users": {
           "description": "To je trenutni status aktivnosti članov vaše ekipe med prijavo. Veljajo za aktivne, ko imajo aktivno prijavo."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Stopnja 1",
         "description": "Tukaj si lahko ogledate seznam svojih priporočil Stopnje 1. Za vsakega prijatelja, ki se prijavi hkrati z vami, boste prejeli dodatnih 25 % na svojo osnovno trenutno stopnjo zaslužka pri prevzemu. [[:link]]Preberite več[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Stopnja 2",
-        "description": "Tukaj si lahko ogledate seznam svojih priporočil Stopnje 2. Za vsakega prijatelja, ki se prijavi hkrati z vami, boste prejeli dodatnih 5 % na svojo osnovno trenutno stopnjo zaslužka pri prevzemu. [[:link]]Preberite več[[/:link]]"
       },
       "active_users": {
         "title": "Aktivnih uporabnikov",

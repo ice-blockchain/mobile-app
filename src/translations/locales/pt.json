@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Contatos",
-    "tierOne_tab": "Nível 1",
-    "tierTwo_tab": "Nível 2",
     "empty": {
       "contacts": "No momento, você não tem nenhum contato na agenda.",
       "button_title": "Convidar amigos",
-      "t1": "Atualmente, você não tem nenhuma indicação T1!",
-      "t2": "Atualmente, você não tem nenhuma indicação T2!",
       "team": "Atualmente, você não tem nenhum membro na equipe!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Rendimentos de nível 1"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Rendimentos de nível 2"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Você ganhará",
     "active_inviter": "Convocador ativo",
     "tier_1_ref": "Indicados de nível 1",
-    "tier_2_ref": "Indicados de nível 2",
     "active_miners": "Indicados ativos",
     "team_members": "Membros da equipe",
     "active_team_members": "Membros ativos da equipe"
@@ -508,8 +498,6 @@
     "active": "Ativo",
     "inactive": "Inativo",
     "referralType": {
-      "T1": "Nível 1",
-      "T2": "Nível 2",
       "team": "Membros da equipe"
     },
     "team": "Equipe"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Equipe",
-          "description": "Aqui você pode ver a lista das pessoas que você convidou para se juntarem à Rede [[:project]]. Você pode acompanhar facilmente o status delas daqui e enviar notificações para os inativos."
-        },
         "active_users": {
           "description": "Este é o status atual da atividade de check-in dos membros de sua equipe. Eles são considerados ativos quando têm uma sessão de check-in ativa."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Nível 1",
         "description": "Aqui você pode ver a lista dos seus indicados de Nível 1. Para cada amigo que fizer o check-in ao mesmo tempo com você, você receberá 25% a mais em sua taxa básica de rendimentos atual de adoção. [[:link]]Leia mais[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Nível 2",
-        "description": "Aqui você pode ver a lista dos seus indicados de Nível 2. Para cada amigo que fizer o check-in ao mesmo tempo com você, você receberá 5% a mais em sua taxa básica de rendimentos atual de adoção. [[:link]]Leia mais[[/:link]]"
       },
       "active_users": {
         "title": "Usuários ativos",

@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Kontakty",
-    "tierOne_tab": "Úroveň 1",
-    "tierTwo_tab": "Úroveň 2",
     "empty": {
       "contacts": "V súčasnosti nemáš v telefónnom zozname žiadne kontakty.",
       "button_title": "Pozvať priateľov",
-      "t1": "Momentálne nemáte žiadne odporúčania T1!",
-      "t2": "Momentálne nemáte žiadne odporúčania T2!",
       "team": "Momentálne nemáte žiadnych členov tímu!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Zárobky Úrovne 1"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Zárobky Úrovne 2"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Zarobíš",
     "active_inviter": "Aktívny pozývateľ",
     "tier_1_ref": "Odporúčania Úrovne 1",
-    "tier_2_ref": "Odporúčania Úrovne 2",
     "active_miners": "Aktívne odporúčania",
     "team_members": "Členovia tímu",
     "active_team_members": "Aktívni členovia tímu"
@@ -508,8 +498,6 @@
     "active": "Aktívne",
     "inactive": "Neaktívne",
     "referralType": {
-      "T1": "Úroveň 1",
-      "T2": "Úroveň 2",
       "team": "Členovia tímu"
     },
     "team": "Tím"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Tím",
-          "description": "Tu môžete vidieť zoznam ľudí, ktorých ste pozvali, aby sa pripojili k sieti [[:project]]. Ľahko môžete sledovať ich stav odtiaľto a posielať oznámenia neaktívnym."
-        },
         "active_users": {
           "description": "Ide o aktuálny stav aktivity členov vášho tímu počas relácie kontroly. Sú považovaní za aktívnych, keď majú aktívnu reláciu kontroly."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Úroveň 1",
         "description": "Tu si môžeš pozrieť zoznam svojich odporúčaní Úrovne 1. Za každého priateľa, ktorý sa prihlási v rovnakom čase ako ty, získaš navyše 25 % k základnej aktuálnej sadzbe za prijatie. [[:link]]Čítať viac[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Úroveň 2",
-        "description": "Tu si môžeš pozrieť zoznam svojich odporúčaní Úrovne 2. Za každého priateľa, ktorý sa prihlási v rovnakom čase ako ty, získaš navyše 5 % k základnej aktuálnej sadzbe za prijatie. [[:link]]Čítať viac[[/:link]]"
       },
       "active_users": {
         "title": "Aktívni používatelia",

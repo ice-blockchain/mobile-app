@@ -25,8 +25,7 @@ export type TeamWalkthroughStepKey =
   | 'contactsList'
   | 'referrals'
   | 'earnings'
-  | 'segmentedControlTierOne'
-  | 'segmentedControlTierTwo'
+  | 'segmentedControlTeam'
   | 'activeUsers'
   | 'tierOneEarnings'
   | 'ping';
@@ -90,31 +89,11 @@ export const TEAM_WALKTHROUGH_STEPS: WalkthroughStepStaticData<TeamWalkthroughSt
       ),
     },
     {
-      key: 'segmentedControlTierOne',
-      version: 1,
-      Icon: isLiteTeam ? (
-        <TierTwoIcon width={rem(32)} height={rem(32)} />
-      ) : (
-        <TierOneIcon width={rem(32)} height={rem(32)} />
-      ),
-      title: t(
-        isLiteTeam
-          ? 'walkthrough.overrides.team.segmented_control_tier_one.title'
-          : 'walkthrough.team.segmented_control_tier_one.title',
-      ),
-      description: t(
-        isLiteTeam
-          ? 'walkthrough.overrides.team.segmented_control_tier_one.description'
-          : 'walkthrough.team.segmented_control_tier_one.description',
-      ),
-      link: LINKS.TEAM,
-    },
-    {
-      key: 'segmentedControlTierTwo',
+      key: 'segmentedControlTeam',
       version: 1,
       Icon: <TierTwoIcon width={rem(32)} height={rem(32)} />,
-      title: t('walkthrough.team.segmented_control_tier_two.title'),
-      description: t('walkthrough.team.segmented_control_tier_two.description'),
+      title: t('walkthrough.team.segmented_control_tier_one.title'),
+      description: t('walkthrough.team.segmented_control_tier_one.description'),
       link: LINKS.TEAM,
     },
     {

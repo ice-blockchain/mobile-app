@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Kontakter",
-    "tierOne_tab": "Nivå 1",
-    "tierTwo_tab": "Nivå 2",
     "empty": {
       "contacts": "Du har for øyeblikket ingen kontakter i telefonboken.",
       "button_title": "Inviter venner",
-      "t1": "Du har for tida ingen T1-henvisningar!",
-      "t2": "Du har for tida ingen T2-henvisningar!",
       "team": "Du har for tida ingen lagmedlemmar!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Nivå 1-inntekter"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Nivå 2-inntekter"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Du vil tjene",
     "active_inviter": "Aktiv invitasjon",
     "tier_1_ref": "Nivå 1-henvisninger",
-    "tier_2_ref": "Nivå 2-henvisninger",
     "active_miners": "Aktive henvisninger",
     "team_members": "Lagmedlemmar",
     "active_team_members": "Aktive lagmedlemmar"
@@ -508,8 +498,6 @@
     "active": "Aktiv",
     "inactive": "Inaktiv",
     "referralType": {
-      "T1": "Nivå 1",
-      "T2": "Nivå 2",
       "team": "Lagmedlemmar"
     },
     "team": "Team"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Lag",
-          "description": "Her kan du se listen over personene du har invitert til å bli med i [[:project]]-nettverket. Du kan enkelt følge med på statusen deres her og sende varsler til de inaktive."
-        },
         "active_users": {
           "description": "Dette er den nåværende statusen for aktiviteten til teammedlemmene dine ved innmeldingssjekken. De regnes som aktive når de har en aktiv innmeldingssesjon."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Nivå 1",
         "description": "Her kan du se listen over dine Tier 1-henvisninger. For hver venn som sjekker inn samtidig med deg, vil du få 25 % ekstra på din nåværende, grunnleggende adopsjonsinntekt. [[:link]]Les mer[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Nivå 2",
-        "description": "Her kan du se listen over dine Tier 2-henvisninger. For hver venn som sjekker inn samtidig med deg, vil du få 5 % ekstra på din nåværende basisinntektsrate. [[:link]]Les mer[[/:link]]"
       },
       "active_users": {
         "title": "Aktive brukere",

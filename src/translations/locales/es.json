@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Contactos",
-    "tierOne_tab": "Nivel 1",
-    "tierTwo_tab": "Nivel 2",
     "empty": {
       "contacts": "Actualmente no tienes ningún contacto en la guía telefónica.",
       "button_title": "Invita a tus amigos",
-      "t1": "¡Actualmente no tienes ninguna referencia de T1!",
-      "t2": "¡Actualmente no tienes ninguna referencia de T2!",
       "team": "¡Actualmente no tienes ningún miembro en el equipo!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Ganancias de nivel 1"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Ganancias de nivel 2"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Ganarás",
     "active_inviter": "Invitador activo",
     "tier_1_ref": "Recomendaciones de nivel 1",
-    "tier_2_ref": "Recomendaciones de nivel 2",
     "active_miners": "Recomendaciones activas",
     "team_members": "Miembros del equipo",
     "active_team_members": "Miembros activos del equipo"
@@ -508,8 +498,6 @@
     "active": "Activo",
     "inactive": "Inactivo",
     "referralType": {
-      "T1": "Nivel 1",
-      "T2": "Nivel 2",
       "team": "Miembros del equipo"
     },
     "team": "Equipo"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Equipo",
-          "description": "Aquí puede ver la lista de personas que ha invitado a unirse a la Red [[:project]]. Puede realizar un seguimiento de su estado fácilmente desde aquí y enviar notificaciones a los miembros inactivos."
-        },
         "active_users": {
           "description": "Este es el estado actual de la actividad de check-in de los miembros de su equipo. Se consideran activos cuando tienen una sesión de check-in activa."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "Nivel 1",
         "description": "Aquí puedes ver la lista de tus recomendaciones de nivel 1. Por cada amigo que fiche al mismo tiempo que tú, obtendrás un 25 % adicional sobre tu tasa base de ganancias de adopción actual. [[:link]]Sigue leyendo[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Nivel 2",
-        "description": "Aquí puedes ver la lista de tus recomendaciones de nivel 2. Por cada amigo que fiche al mismo tiempo que tú, obtendrás un 5 % adicional sobre tu tasa base de ganancias de adopción actual. [[:link]]Sigue leyendo[[/:link]]"
       },
       "active_users": {
         "title": "Usuarios activos",

@@ -104,19 +104,9 @@ export const ReferralCountInfo = () => {
           style={[styles.container, containerStyle]}
           onLayout={onContainerLayout}>
           <View style={styles.cell}>
-            <Text style={styles.label}>{t('users.referralType.T1')}</Text>
+            <Text style={styles.label}>{t('users.referralType.team')}</Text>
             <Text style={styles.value}>
               {formatNumber(user?.t1ReferralCount ?? 0, {
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 0,
-              })}
-            </Text>
-          </View>
-          <View style={styles.divider} />
-          <View style={styles.cell}>
-            <Text style={styles.label}>{t('users.referralType.T2')}</Text>
-            <Text style={styles.value}>
-              {formatNumber(user?.t2ReferralCount ?? 0, {
                 minimumFractionDigits: 0,
                 maximumFractionDigits: 0,
               })}
@@ -156,11 +146,5 @@ const styles = StyleSheet.create({
   value: {
     marginTop: rem(2),
     ...font(20, null, 'bold', 'white'),
-  },
-  divider: {
-    marginVertical: rem(5),
-    alignSelf: 'stretch',
-    width: rem(1),
-    backgroundColor: COLORS.periwinkleGray,
   },
 });

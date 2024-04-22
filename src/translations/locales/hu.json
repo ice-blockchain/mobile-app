@@ -78,13 +78,9 @@
   },
   "team": {
     "contacts_tab": "Kapcsolatok",
-    "tierOne_tab": "1. szint",
-    "tierTwo_tab": "2. szint",
     "empty": {
       "contacts": "Jelenleg egy kapcsolatod sincs a telefonkönyvben.",
       "button_title": "Barátok meghívása",
-      "t1": "Jelenleg nincsenek T1 ajánlásaid!",
-      "t2": "Jelenleg nincsenek T2 ajánlásaid!",
       "team": "Jelenleg nincsenek csapattagjaid!"
     },
     "contacts": {
@@ -118,11 +114,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "1. szintű keresetek"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "2. szintű keresetek"
       }
     }
   },
@@ -264,7 +255,6 @@
     "result_label": "Ennyit fogsz keresni",
     "active_inviter": "Aktív meghívó",
     "tier_1_ref": "1. szintű ajánlások",
-    "tier_2_ref": "2. szintű ajánlások",
     "active_miners": "Aktív ajánlások",
     "team_members": "Csapattagok",
     "active_team_members": "Aktív csapattagok"
@@ -508,8 +498,6 @@
     "active": "Aktív",
     "inactive": "Inaktív",
     "referralType": {
-      "T1": "1. szint",
-      "T2": "2. szint",
       "team": "Csapattagok"
     },
     "team": "Csapat"
@@ -756,10 +744,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Csapat",
-          "description": "Itt láthatja azoknak az embereknek a listáját, akiket meghívott az [[:project]] Hálózathoz. Innen könnyen nyomon követheti az állapotukat, és értesítéseket küldhet a nem aktív tagoknak."
-        },
         "active_users": {
           "description": "Ez az Ön csapatának tagjainak jelenlegi bejelentkezési aktivitásának állapota. Aktívnak számítanak, amikor aktív bejelentkezési munkamenetük van."
         },
@@ -808,10 +792,6 @@
       "segmented_control_tier_one": {
         "title": "1. szint",
         "description": "Itt láthatod az 1. szintű ajánlásaid listáját. Az összes barátod után, akivel egyidőben csekkoltok be, extra 25%-t kapsz a jelenlegi alap kereseti rátádon felül. [[:link]]Tudj meg többet[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "2. szint",
-        "description": "Itt láthatod a 2. szintű ajánlásaid listáját. Az összes barátod után, akivel egyidőben csekkoltok be, extra 5%-t kapsz a jelenlegi alap kereseti rátádon felül. [[:link]]Tudj meg többet[[/:link]]"
       },
       "active_users": {
         "title": "Aktív felhasználók",

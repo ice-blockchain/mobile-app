@@ -45,7 +45,7 @@ export const useEarningsWalkthrough = ({
               <WalkthroughElementContainer
                 outerStyle={[styles.outerContainer, {left}]}
                 innerStyle={styles.innerContainer}>
-                <Earnings referralType={referralType} />
+                <Earnings />
               </WalkthroughElementContainer>
             );
           },

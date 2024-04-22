@@ -74,13 +74,9 @@
   },
   "team": {
     "contacts_tab": "Contacts",
-    "tierOne_tab": "Tier 1",
-    "tierTwo_tab": "Tier 2",
     "empty": {
       "title_part2": " referrals!",
       "button_title": "Invite Friends",
-      "t1": "Saiki sampeyan ora duwe referensi T1!",
-      "t2": "Saiki sampeyan ora duwe referensi T2!",
       "team": "Saiki sampeyan ora duwe anggota tim maneh!"
     },
     "contacts": {
@@ -114,11 +110,6 @@
     "tier_one": {
       "header_list": {
         "title_earnings": "Tier 1 Earnings"
-      }
-    },
-    "tier_two": {
-      "header_list": {
-        "title_earnings": "Tier 2 Earnings"
       }
     }
   },
@@ -259,7 +250,6 @@
     "result_label": "You will earn",
     "active_inviter": "Active inviter",
     "tier_1_ref": "Tier 1 referrals",
-    "tier_2_ref": "Tier 2 referrals",
     "active_miners": "Active referrals",
     "team_members": "Anggota tim",
     "active_team_members": "Anggota tim aktif"
@@ -496,8 +486,6 @@
     "active": "Active",
     "inactive": "Inactive",
     "referralType": {
-      "T1": "Tier 1",
-      "T2": "Tier 2",
       "team": "Anggota tim"
     },
     "team": "Tim"
@@ -746,10 +734,6 @@
         }
       },
       "team": {
-        "segmented_control_tier_one": {
-          "title": "Tim",
-          "description": "Ing kene sampeyan bisa nampa daftar wong sing sampeyan undang kanggo gabung karo Jaringan [[:project]]. Sampeyan bisa gampang nguntungake statusipun saka ing kene lan ngirimi notifikasi kanggo anggota sing ora aktif."
-        },
         "active_users": {
           "description": "Iki manggonake status aktifitas check-in anggota tim sampeyan saiki. Sampeyan dianggo aktif nalika ana sesi check-in aktif."
         },
@@ -792,10 +776,6 @@
       "segmented_control_tier_one": {
         "title": "Tier 1",
         "description": "Here you can see the list of your Tier 1 referrals. For each friend checking-in at the same time with you, you will get extra 25% on your base current adoption earning rate. [[:link]]Read more[[/:link]]"
-      },
-      "segmented_control_tier_two": {
-        "title": "Tier 2",
-        "description": "Here you can see the list of your Tier 2 referrals. For each friend checking-in at the same time with you, you will get extra 5% on your base current adoption earning rate. [[:link]]Read more[[/:link]]"
       },
       "active_users": {
         "title": "Active Users",

@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {ReferralType} from '@api/user/types';
 import {FormattedNumber} from '@components/Labels/FormattedNumber';
 import {IceLabel} from '@components/Labels/IceLabel';
 import {COLORS} from '@constants/colors';
@@ -13,16 +12,11 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {useSelector} from 'react-redux';
 
-type Props = {referralType: ReferralType};
-
-export const Earnings = ({referralType}: Props) => {
+export const Earnings = () => {
   const isEnglishLocale = useIsEnglishLocale();
   const balanceSummary = useSelector(balanceSummarySelector);
-  const balance = balanceSummary?.[referralType === 'T1' ? 't1' : 't2'];
-  const title =
-    referralType === 'T1'
-      ? t('team.tier_one.header_list.title_earnings')
-      : t('team.tier_two.header_list.title_earnings');
+  const balance = balanceSummary?.t1;
+  const title = t('team.tier_one.header_list.title_earnings');
   return (
     <View style={styles.container}>
       {isEnglishLocale ? <Text style={styles.label}>{`${title}:`}</Text> : null}
