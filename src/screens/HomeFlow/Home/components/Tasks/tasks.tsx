@@ -24,7 +24,7 @@ export const TASKS: {[key in TaskType]: TaskInfo} = {
   },
   start_mining: {
     iconBgColor: COLORS.downriver,
-    icon: <LogoIcon color={COLORS.white} width={rem(24)} height={rem(24)} />,
+    icon: <LogoIcon width={rem(24)} height={rem(24)} />,
   },
   upload_profile_picture: {
     iconBgColor: COLORS.primaryLight,

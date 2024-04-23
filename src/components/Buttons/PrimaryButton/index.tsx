@@ -40,6 +40,10 @@ export const PrimaryButton = ({
   customBackground = false,
   ...touchableProps
 }: PrimaryButtonProps) => {
+  const angle = 256;
+  const radians = ((angle - 90) * Math.PI) / 180; // Adjusting by 90 degrees because CSS gradients start from the bottom
+  const x1 = Math.cos(radians); // end point x (cosine)
+  const y1 = Math.sin(radians); // end point y (sine)
   return (
     <Touchable
       onPress={!loading ? onPress : undefined}
@@ -51,10 +55,13 @@ export const PrimaryButton = ({
         !disabled &&
         !customBackground && (
           <LinearGradient
+            start={{x: 0.5, y: 0.5}} // center
+            end={{x: 0.5 + x1, y: 0.5 + y1}} // calculating end point based on the center
             colors={[
               COLORS.primaryButtonGradientStart,
               COLORS.primaryButtonGradientEnd,
             ]}
+            locations={[0, 0.5]}
             style={StyleSheet.absoluteFill}
           />
         )}

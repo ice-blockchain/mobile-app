@@ -75,13 +75,7 @@ export const MiningInfo = ({oneColumn}: Props) => {
         <DataCellSeparator />
       )}
       <DataCell
-        icon={
-          <LogoIcon
-            width={rem(24)}
-            height={rem(24)}
-            color={COLORS.primaryLight}
-          />
-        }
+        icon={<LogoIcon width={rem(24)} height={rem(24)} />}
         label={t('staking.mining_rate')}
         value={
           miningRates && (

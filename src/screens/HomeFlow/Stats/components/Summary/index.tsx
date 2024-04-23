@@ -19,7 +19,7 @@ export const Summary = memo(() => {
   return (
     <View style={styles.container}>
       <View style={styles.cell}>
-        <LogoIcon color={COLORS.white} width={rem(32)} height={rem(32)} />
+        <LogoIcon width={rem(32)} height={rem(32)} />
         <View style={styles.cellData}>
           <Text style={styles.labelText}>{t('stats.active')}</Text>
           <View style={styles.value}>

@@ -69,9 +69,7 @@ export function PictureSentStep({
       {faceAuthStatus === 'LOADING' ? (
         <StatusOverlay
           description={t('face_auth.auth_status.loading.description')}
-          titleIcon={
-            <LogoIcon color={COLORS.white} width={rem(70)} height={rem(70)} />
-          }
+          titleIcon={<LogoIcon width={rem(70)} height={rem(70)} />}
         />
       ) : null}
       {faceAuthStatus === 'SUCCESS' ||

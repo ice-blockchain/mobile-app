@@ -32,13 +32,7 @@ export const BlockchainCell = ({value, currency}: Props) => {
   };
   return (
     <DataCell
-      icon={
-        <LogoIcon
-          width={rem(24)}
-          height={rem(24)}
-          color={COLORS.primaryLight}
-        />
-      }
+      icon={<LogoIcon width={rem(24)} height={rem(24)} />}
       label={t('balance_history.blockchain')}
       value={
         typeof value === 'string' ? (

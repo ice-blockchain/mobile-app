@@ -111,9 +111,7 @@ export function EmotionsSentStep({
         <StatusOverlay
           onLightBackground
           description={t('face_auth.auth_status.loading.description')}
-          titleIcon={
-            <LogoIcon color={COLORS.primary} width={rem(70)} height={rem(70)} />
-          }
+          titleIcon={<LogoIcon width={rem(70)} height={rem(70)} />}
         />
       ) : null}
       {emotionsAuthStatus === 'SUCCESS' ? (

@@ -120,11 +120,8 @@
   },
   "signIn": {
     "logInSignUp": "Log in / Sign up",
-    "phone": "Phone",
-    "or": "or",
     "welcome": "Welcome to [[:project]]",
-    "email": "Email",
-    "slogan": "The Decentralized Future",
+    "slogan": "THE Global Currency Reset",
     "privacy": "By continuing, you agree to our [[:link]]Terms of Service[[/:link]] and [[:link]]Privacy Policy[[/:link]]"
   },
   "claimUsername": {

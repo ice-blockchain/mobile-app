@@ -81,10 +81,7 @@ export type Translations = {
   'team.contacts_list.invitation_text': {name: number | string};
   'team.tier_one.header_list.title_earnings': null;
   'signIn.logInSignUp': null;
-  'signIn.phone': null;
-  'signIn.or': null;
   'signIn.welcome': null;
-  'signIn.email': null;
   'signIn.slogan': null;
   'signIn.privacy': null;
   'claimUsername.title': null;

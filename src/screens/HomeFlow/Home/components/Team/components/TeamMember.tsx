@@ -47,7 +47,7 @@ export const TeamMember = memo(({userId}: Props) => {
         />
         {!!phoneNumber && (
           <View style={styles.friendIcon}>
-            <LogoIcon color={COLORS.white} width={rem(15)} height={rem(15)} />
+            <LogoIcon width={rem(15)} height={rem(15)} />
           </View>
         )}
       </View>

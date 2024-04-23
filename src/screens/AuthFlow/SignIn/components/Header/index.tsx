@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {COLORS} from '@constants/colors';
 import {windowWidth} from '@constants/styles';
 import {useTopOffsetStyle} from '@hooks/useTopOffsetStyle';
 import {Images} from '@images';
@@ -22,12 +21,7 @@ export const Header = () => {
         resizeMode={'cover'}
       />
       <View style={styles.body}>
-        <LogoIcon
-          color={COLORS.white}
-          width={rem(90)}
-          height={rem(90)}
-          style={styles.icon}
-        />
+        <LogoIcon width={rem(90)} height={rem(90)} style={styles.icon} />
         <Text style={styles.welcomeText}>{t('signIn.welcome')}</Text>
         <Text style={styles.sloganText}>{t('signIn.slogan')}</Text>
       </View>

@@ -11,12 +11,7 @@ type Props = {
   logoSizePercentage?: number;
 };
 
-export const QRCodeLogo = ({
-  size,
-  matrix,
-  color,
-  logoSizePercentage = 30,
-}: Props) => {
+export const QRCodeLogo = ({size, matrix, logoSizePercentage = 30}: Props) => {
   const matrixLength = matrix.length;
   const cellSize = size / matrixLength;
   const approxLogoCells = Math.floor((matrixLength * logoSizePercentage) / 100);
@@ -28,7 +23,7 @@ export const QRCodeLogo = ({
 
   return (
     <View style={[styles.container, {width: logoSize, height: logoSize}]}>
-      <LogoIcon color={color} width={'70%'} height={'70%'} />
+      <LogoIcon width={'70%'} height={'70%'} />
     </View>
   );
 };
