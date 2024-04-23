@@ -32,7 +32,7 @@ export const CurrentBalance = ({value}: Props) => {
             decimalsStyle={styles.valueDecimalsText}
           />
           <IceLabel
-            iconSize={20}
+            iconSize={rem(24)}
             style={styles.iceLabel}
             textStyle={styles.iceLabelText}
             iconOffsetY={1}
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
     width: rem(170),
     height: rem(170),
     left: rem(20),
+    tintColor: COLORS.blazeOrange,
     top: 0,
   },
   body: {

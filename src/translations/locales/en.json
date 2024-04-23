@@ -2,20 +2,20 @@
   "welcome": {
     "page1": {
       "title": "Welcome to [[:project]]",
-      "description": "[[:coin]] is a digital currency that you can earn with your phone. [[:coin]] is owned and operated by every day users like yourself."
+      "description": "[[:bold]][[:project]][[/:bold]] is the newest digital currency that you can earn with your phone. [[:bold]][[:project]][[/:bold]] is owned and operated by every day users like yourself."
     },
     "page2": {
       "title": "Planet Friendly",
-      "description": "[[:coin]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
+      "description": "[[:bold]][[:project]][[/:bold]] is inherently more energy efficient than BTC as it uses a “Proof of Stake” consensus mechanism. With proof-of-stake (POS), cryptocurrency owners validate block transactions based on the number of coins a validator stakes."
     },
     "page3": {
-      "title": "People’s Coin",
+      "title": "Part of Ice Open Network ",
       "description_part1": "The power is in your hands.",
-      "description_part2": "Everything that we develop at [[:project]] is open-source & controlled by the Decentralized Autonomous Organization (DAO)."
+      "description_part2": "Everything that we develop at [[:bold]][[:project]][[/:bold]] is open source & controlled by the Decentralized Autonomous Organization (DAO)."
     },
     "page4": {
       "title": "Stay Connected",
-      "description": "Tap [[:logo]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that [[:coin]] ends up in the hands of real humans, not bots."
+      "description": "Tap [[:logo]] [[:coin]] for your daily check-in with our free, energy-light mobile app. Your daily tap ensures that ice ends up in the hands of real humans, not bots."
     },
     "page5": {
       "title": "Refer & Earn",
@@ -23,7 +23,7 @@
     },
     "page6": {
       "title": "Notifications",
-      "description_part1": "[[:project]] check-in sessions only last for 24 hours. Would you like to receive a notification when your current session ends?",
+      "description_part1": "[[:bold]][[:project]][[/:bold]] check-in sessions only lasts for 24 hours. Would you like to receive a notification when your current session ends?",
       "description_part2": "Don’t worry, we will not spam you!",
       "not_now": "Not now"
     }
@@ -701,7 +701,7 @@
   },
   "ice_bonus": {
     "title": "Welcome reward",
-    "description": "Congratulations, you have received your first [[:value]] [[:coin]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]].",
+    "description": "Congratulations, you have received your first [[:value]] [[:logo]] coins which proves our [[:bold]]Trust[[/:bold]] in [[:bold]]You[[/:bold]].",
     "balance_label": "Your current balance"
   },
   "country_select": {

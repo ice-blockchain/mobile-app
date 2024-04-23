@@ -23,6 +23,7 @@ export const ActivityIndicator = ({style, theme}: Props) => (
     }
     autoPlay
     loop
+    speed={0.5}
   />
 );
 

@@ -20,7 +20,7 @@ export const IceBonus = () => {
 
     text = replaceString(
       t('ice_bonus.description'),
-      tagRegex('ice'),
+      tagRegex('logo'),
       (match, index) => (
         <IceLabel
           key={match + index}

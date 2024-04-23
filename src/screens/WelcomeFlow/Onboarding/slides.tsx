@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: ice License 1.0
 
 import {IceLabel, IceLabelProps} from '@components/Labels/IceLabel';
-import {isRTL, replaceString, t, tagRegex} from '@translations/i18n';
+import {replaceString, t, tagRegex} from '@translations/i18n';
 import {font} from '@utils/styles';
 import React, {ReactNode} from 'react';
 import {ImageSourcePropType, StyleSheet, Text} from 'react-native';
 import {isAndroid, rem} from 'rn-units';
 
 const ICON_Y_OFFSET = isAndroid ? rem(6) : rem(2);
-const ICON_SIZE = rem(23);
+const ICON_SIZE = rem(20);
 
 const styles = StyleSheet.create({
   stub: {
@@ -54,8 +54,12 @@ const DescriptionWrapper = ({children}: DescriptionWrapperProps) => {
 const welcomeDescription = () => {
   let text = replaceString(
     t('welcome.page1.description'),
-    tagRegex('ice'),
-    (match, index) => <TextIceLabel reversed={isRTL} key={match + index} />,
+    tagRegex('bold', false),
+    (match, index) => (
+      <Text key={match + index} style={styles.boldStyle}>
+        {match}
+      </Text>
+    ),
   );
   return <DescriptionWrapper>{text}</DescriptionWrapper>;
 };
@@ -63,8 +67,12 @@ const welcomeDescription = () => {
 const planetDescription = () => {
   let text = replaceString(
     t('welcome.page2.description'),
-    tagRegex('ice'),
-    (match, index) => <TextIceLabel reversed={isRTL} key={match + index} />,
+    tagRegex('bold', false),
+    (match, index) => (
+      <Text key={match + index} style={styles.boldStyle}>
+        {match}
+      </Text>
+    ),
   );
   return <DescriptionWrapper>{text}</DescriptionWrapper>;
 };
@@ -72,8 +80,12 @@ const planetDescription = () => {
 const coinDescription = () => {
   let text = replaceString(
     t('welcome.page3.description_part2'),
-    tagRegex('ice'),
-    (match, index) => <TextIceLabel key={match + index} />,
+    tagRegex('bold', false),
+    (match, index) => (
+      <Text key={match + index} style={styles.boldStyle}>
+        {match}
+      </Text>
+    ),
   );
   return (
     <DescriptionWrapper>
@@ -103,8 +115,12 @@ const stayConnectedDescription = () => {
 const notificationDescription = () => {
   let text = replaceString(
     t('welcome.page6.description_part1', {value: 24}),
-    tagRegex('ice'),
-    (match, index) => <TextIceLabel key={match + index} />,
+    tagRegex('bold', false),
+    (match, index) => (
+      <Text key={match + index} style={styles.boldStyle}>
+        {match}
+      </Text>
+    ),
   );
   return (
     <DescriptionWrapper>
@@ -118,13 +134,13 @@ const notificationDescription = () => {
 export const onboardingSlides: OnboardingSlide[] = [
   {
     key: 'welcomeToIce',
-    image: require('./assets/images/welcomeToIce.png'),
+    image: require('./assets/images/welcometoice.png'),
     title: t('welcome.page1.title'),
     description: welcomeDescription(),
   },
   {
     key: 'planetFriendly',
-    image: require('./assets/images/planetFriendly.png'),
+    image: require('./assets/images/planetfriendly.png'),
     title: t('welcome.page2.title'),
     description: planetDescription(),
   },

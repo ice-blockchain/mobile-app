@@ -1,8 +1,11 @@
 // SPDX-License-Identifier: ice License 1.0
 
-import {t} from '@translations/i18n';
+import {COLORS} from '@constants/colors';
+import {SmallLogoIcon} from '@svg/SmallLogoIcon';
+import {isRTL, t} from '@translations/i18n';
 import React, {memo} from 'react';
-import {StyleProp, Text, TextStyle, ViewStyle} from 'react-native';
+import {StyleProp, StyleSheet, Text, TextStyle, ViewStyle} from 'react-native';
+import {rem} from 'rn-units';
 
 export type IceLabelProps = {
   style?: StyleProp<ViewStyle>;
@@ -16,7 +19,40 @@ export type IceLabelProps = {
 };
 
 export const IceLabel = memo(
-  ({textStyle, label = t('general.ice')}: IceLabelProps) => (
-    <Text style={textStyle}>{label} </Text>
-  ),
+  ({
+    style,
+    textStyle,
+    color = COLORS.white,
+    iconSize = 18,
+    iconOffsetY = 2,
+    label = t('general.ice'),
+    reversed,
+  }: IceLabelProps) =>
+    reversed ? (
+      <>
+        {!!label && <Text style={textStyle}>{label} </Text>}
+        <SmallLogoIcon
+          color={color}
+          width={rem(iconSize)}
+          height={rem(iconSize)}
+          style={[{transform: [{translateY: iconOffsetY}]}, style]}
+        />
+      </>
+    ) : (
+      <>
+        <SmallLogoIcon
+          color={color}
+          width={rem(iconSize)}
+          height={rem(iconSize)}
+          style={[{transform: [{translateY: iconOffsetY}]}, style]}
+        />
+        {!!label && <Text style={[styles.text, textStyle]}> {label}</Text>}
+      </>
+    ),
 );
+
+const styles = StyleSheet.create({
+  text: {
+    marginLeft: isRTL ? rem(6) : 0,
+  },
+});

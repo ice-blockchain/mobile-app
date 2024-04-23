@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   value: {
-    backgroundColor: COLORS.shamrock,
+    backgroundColor: COLORS.blazeOrange,
     borderRadius: rem(4),
   },
 });
