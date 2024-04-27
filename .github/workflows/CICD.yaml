@@ -1,17 +1,43 @@
 name: CI/CD
 on:
   push:
-    branches:
-      - master
-      - 'release/v*'
   pull_request:
-    branches:
-      - master
-      - 'release/v*'
+  workflow_dispatch:
+    inputs:
+      android:
+        description: 'Android'
+        required: true
+        default: true
+        type: boolean
+      ios:
+        description: 'iOS'
+        required: true
+        default: true
+        type: boolean
+      environment:
+        description: 'Environment'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+      deployment:
+        description: 'Deployment target'
+        required: true
+        default: 'firebase'
+        type: choice
+        options:
+          - firebase
+          - store
+      version:
+        description: 'App version'
+        default: '9.9.9'
+        required: true
+
 jobs:
   react-native:
     name: React Native -- verify, build, test
-    if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
     runs-on: macOS-latest
     steps:
       - name: Setup Node
@@ -36,12 +62,7 @@ jobs:
       - name: Detect APP environment and set it to ENV
         id: detect-env
         run: |
-          if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
-            then
-               echo "APP_ENV=production" >> $GITHUB_ENV
-            else
-               echo "APP_ENV=staging" >> $GITHUB_ENV
-          fi
+          echo "APP_ENV=${{ inputs.environment }}" >> $GITHUB_ENV
       - name: Configure APP environment
         id: setup-env
         run: |
@@ -91,7 +112,7 @@ jobs:
           path: ./*
           key: ${{ github.sha }}_${{ github.ref_name }}
       - name: Slack Notification
-        if: ${{ github.event_name == 'push' && success() == false}}
+        if: ${{ success() == false}}
         uses: act10ns/slack@v2
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.FRONTEND_SLACK_WEBHOOK }}
@@ -240,7 +261,7 @@ jobs:
     # TODO: uncomment this when we start testing.
     # needs: [ios-e2e-test]
     needs: [react-native]
-    if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
+    if: ${{ inputs.ios  }}
     runs-on: macOS-latest
     env:
       FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 180
@@ -275,29 +296,19 @@ jobs:
         env:
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
         run: |
-          if [[ ${{ github.event_name == 'pull_request' && github.event.pull_request.draft == false}} == true ]]
+          if [[ ${{ inputs.deployment == 'firebase' }} == true ]]
             then
               echo "IOS_SIGN_TYPE=adhoc" >> $GITHUB_ENV
               echo "DEPLOY_TARGET=firebase" >> $GITHUB_ENV
               echo "APP_VERSION=9.9.9" >> $GITHUB_ENV
-              echo "RELEASE_NOTES=release_notes:${{ github.head_ref }}" >> $GITHUB_ENV
+              echo "RELEASE_NOTES=${{ github.ref_name }}" >> $GITHUB_ENV
             else
               echo "IOS_SIGN_TYPE=appstore" >> $GITHUB_ENV
               echo "DEPLOY_TARGET=testflight" >> $GITHUB_ENV
-              if [[ ${{ github.ref_name == 'master' }} == true ]]
-                then
-                  echo "APP_VERSION=9.9.9" >> $GITHUB_ENV
-                else
-                  echo "APP_VERSION=$(echo ${GITHUB_REF_NAME#*v})" >> $GITHUB_ENV
-              fi
+              echo "APP_VERSION=${{ inputs.version }}" >> $GITHUB_ENV
           fi
-          if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
-            then
-               echo "APP_ENV=production" >> $GITHUB_ENV
-            else
-               echo "APP_ENV=staging" >> $GITHUB_ENV
-          fi
-          echo "BUILD_NUMBER=$(echo $((GITHUB_RUN_NUMBER+2000)))" >> $GITHUB_ENV
+          echo "APP_ENV=${{ inputs.environment }}" >> $GITHUB_ENV
+          echo "BUILD_NUMBER=$(echo $((GITHUB_RUN_NUMBER)))" >> $GITHUB_ENV
       - name: Bump version to v${{ env.APP_VERSION }}
         id: bump-version
         run: |
@@ -328,7 +339,7 @@ jobs:
     # TODO: uncomment this after android-e2e-test gets fixed.
     # needs: [android-e2e-test]
     needs: [react-native]
-    if: ${{ (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.event_name == 'push'  }}
+    if: ${{ inputs.android  }}
     runs-on: macOS-latest
     steps:
       - uses: actions/cache@v3
@@ -367,31 +378,20 @@ jobs:
         env:
           GITHUB_RUN_NUMBER: ${{ github.run_number }}
         run: |
-          if [[ ${{ github.event_name == 'pull_request' && github.event.pull_request.draft == false}} == true ]]
+          if [[ ${{ inputs.deployment == 'firebase' }} == true ]]
             then
               echo "ANDROID_ARCHIVE_TYPE=apk" >> $GITHUB_ENV
               echo "DEPLOY_TARGET=firebase" >> $GITHUB_ENV
               echo "APP_VERSION=9.9.9" >> $GITHUB_ENV
-              echo "RELEASE_NOTES=release_notes:${{ github.head_ref }}" >> $GITHUB_ENV
+              echo "RELEASE_NOTES=release_notes:${{ github.ref_name }}" >> $GITHUB_ENV
             else
-              echo "ANDROID_ARCHIVE_TYPE=bundle" >> $GITHUB_ENV
+              echo "ANDROID_ARCHIVE_TYPE=appbundle" >> $GITHUB_ENV
               echo "DEPLOY_TARGET=playstore" >> $GITHUB_ENV
-              if [[ ${{ github.ref_name == 'master' }} == true ]]
-                then
-                  echo "APP_VERSION=9.9.9" >> $GITHUB_ENV
-                else
-                  echo "APP_VERSION=$(echo ${GITHUB_REF_NAME#*v})" >> $GITHUB_ENV
-              fi
+              echo "APP_VERSION=${{ inputs.version }}" >> $GITHUB_ENV
           fi
-          if [[ ${{ github.event_name == 'push' && github.ref_name != 'master' }} == true ]]
-            then
-              echo "APP_ENV=production" >> $GITHUB_ENV
-              echo "RELEASE_STATUS=completed" >> $GITHUB_ENV
-            else
-              echo "APP_ENV=staging" >> $GITHUB_ENV
-              echo "RELEASE_STATUS=draft" >> $GITHUB_ENV
-          fi
-          echo "BUILD_NUMBER=$(echo $((GITHUB_RUN_NUMBER+2000)))" >> $GITHUB_ENV
+          echo "APP_ENV=${{ inputs.environment }}" >> $GITHUB_ENV
+          echo "RELEASE_STATUS=draft" >> $GITHUB_ENV
+          echo "BUILD_NUMBER=$(echo $((GITHUB_RUN_NUMBER)))" >> $GITHUB_ENV
       - name: Bump version to v${{ env.APP_VERSION }}
         id: bump-version
         run: |
